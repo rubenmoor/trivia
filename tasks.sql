@@ -22764,8 +22764,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:11:10Z', '2026-10-13T18:32:41Z', 903);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (937, 117, 'create tasks for plan 117', 'split', 'done', 1000, '2026-10-13, tasks.sql: tasks 967–972 for plan 117', 'Split plan 117 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:14:43Z', '2026-10-13T18:33:36Z', 904);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (938, 118, 'create tasks for plan 118', 'split', 'open', 1000, NULL, 'Split plan 118 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:16:58Z', NULL, 905);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (938, 118, 'create tasks for plan 118', 'split', 'done', 1000, '2026-10-13, tasks 973–976 for plan 118', 'Split plan 118 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:16:58Z', '2026-10-13T18:34:25Z', 905);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (939, 119, 'create tasks for plan 119', 'split', 'open', 1000, NULL, 'Split plan 119 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:19:27Z', NULL, 907);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (940, 120, 'create tasks for plan 120', 'split', 'open', 1000, NULL, 'Split plan 120 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -23183,6 +23183,70 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `directory.md`: `lib/mods.ts`, `game/screens/registry.ts`, `game/screens/DomScreen.svelte`.
 
 Done when: docs name decisions 130, 131 and the file paths, matching the code as built; per-commit checks pass.', '2026-10-13T18:33:34Z', NULL, 937);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (973, 118, 'Shell: mods notice, crash marker, safe start, restart, ready', 'work', 'open', NULL, NULL, 'Plan 118 task 1. Shell side of the mods screen: one-time notice flag, crash marker with safe start, restart to apply, page ready signal. Read plan 118 ("Choices", "Shell") in full first.
+
+After: task 950 (mods.mjs), task 952 (main.mjs wiring, `--no-mods`), task 956 (`mods:list`/`mods:set` bridge), task 967 (bridge rename to `window.triviaShell`, decision 130), task 969 (page loader, `ready` event, decision 131). If 969 isn''t done, send ready after `App` mounts in `main.ts`.
+
+## What
+- `app/desktop/mods.mjs` (pure Node):
+  - `notice` (`true` + date) in `mods.json` settings
+  - `arrange`: while `notice` is missing, newly discovered mods are appended `on: false`; after it, plan 112''s rule (new = on, at the end); accepting never touches existing rows
+  - marker helpers for `<userData>/mods-start.json` (dev `state/desktop/`): read, write atomic (like `writeSettings`), clear
+- `app/desktop/main.mjs`:
+  - start: marker found → delete it, no layers this run, `safeStart = { reason: "crashed", mods: marker.mods }`; `--no-mods` → `safeStart = { reason: "flag" }`; stderr line each; normal start → `safeStart = null`
+  - before `win.loadURL` with layers ≠ []: write marker `{ at, mods: [active ids] }`
+  - clear marker on `mods:ready` IPC, or 20 s after `did-finish-load` without `render-process-gone`/`unresponsive`; not on quit
+  - `render-process-gone` / page load failure while marker set → `app.relaunch()` (args as for restart) + `app.exit(0)`
+  - IPC: `mods:notice` (set flag, return list), `mods:restart` (await queued save writes, `app.relaunch({ args })` dropping our own `--no-mods` and `--import-save`, keeping Electron/Steam args; `app.exit(0)`), `mods:ready`; `mods:list` also returns `safeStart`
+- `app/desktop/preload.cjs`: `mods: { list, set, notice, restart, ready }`
+- `app/client/src/lib/desktop.ts`: `ModsBridge` gains `safeStart`, `notice`, `restart`, `ready`
+- page: on plan 117''s `ready` event, `desktop?.mods?.ready()` (`main.ts` or `lib/mods.ts`)
+
+## Decisions
+`pm decision record` four choices from plan 118 "Choices": notice per install in `mods.json` + hold-off of new mods; manual safe start only via `--no-mods` (Steam launch options), no key/pad, no second launch option; marker file `mods-start.json`, cleared on ready or after 20 s; restart drops our own flags.
+
+## Done when
+Throw-away checks under `trivia-desktop` (`TRIVIA_DEV_STEAM_USER=1`, temp `TRIVIA_MODS_DIR`):
+- fresh `mods.json` holds a new mod off until `triviaShell.mods.notice()` from devtools, then new mods come on
+- a mod with a fine `style.css` clears the marker (file gone after start)
+- a mod that blocks or crashes the page (`while(true){}` in `setup`, or `chrome://crash` if not blocked; pick one that works) → next start safe, `mods.list().safeStart.reason === "crashed"`, the start after loads mods again
+- `mods.restart()` relaunches with the new order active and without `--no-mods`
+- per-commit checks pass', '2026-10-13T18:34:22Z', NULL, 938);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (974, 118, 'Mods screen, start button, Esc menu row, notice dialog, mods.* strings', 'work', 'open', NULL, NULL, 'Plan 118 task 2. The page side: `ModsScreen`, entry points, one-time notice dialog, strings. Read plan 118 ("Screen", "One-time notice", "Strings") in full first; it is the spec.
+
+After: task 973 (bridge: `safeStart`, `notice`, `restart`, `ready`), task 969 (`modErrors()`, `loadedMods()`); plan 116 (Game.svelte split) if done decides the path.
+
+## What
+- Screen: `app/client/src/game/screens/Mods.svelte` if plan 116 ran, else `game/ModsScreen.svelte`; full-screen layer like `Credits.svelte`, own input scope, `data-focus-default` (IN-1..IN-5 in `plans/04-ui-tv-display.md` "Input"; key hints only via `<Prompt>`)
+- Rows per `ModEntry` in load order (invalid/pending at the end, no move controls): name, version, source (Local / Workshop + published file id), kind badges, languages (endonyms; none = all languages); state line incl. «on/off after restart» (`on ≠ active`), downloading, disabled, no_user; warnings (plan 112 codes, `needs_update`, `workshop_id_mismatch`, `modErrors()` codes); focused row detail: description, local folder name
+- Controls, each a visible button: on/off, ▲▼ move (existing intents in `input.svelte.ts`, no new keys if possible), Refresh, All off, Restart to apply (enabled when any `on ≠ active` or order differs from this run), Back (Esc/Backspace/B). Every change calls `mods:set` at once
+- Top lines: safe start (crashed: names the mods, «All off» focused; flag: `--no-mods`), no valid user (decision 111: rows still toggle), empty list (where to put mods, guide mentioned, no link)
+- Entry points only when `desktop?.mods`: start screen `secondary` button «Mods» (+ loaded count) and hint line «N mods found, off until you allow them» while notice missing; Esc menu general column row after Credits (`Overlay.svelte`); auto-open before the start screen on `safeStart.reason === "crashed"`
+- Notice dialog (confirm-dialog pattern, focus default Cancel): on first enabling or «Restart to apply» with any on while notice missing; Allow → `mods.notice()` then the action; Cancel → nothing
+- Strings `mods.*`, `mods.error.*`, `mods.warning.*`, `mods.state.*` in es, en, de (+ es-ES where it differs); unknown code shows the code; read `locales/style/<locale>.md` first if task 799 is done; de without plural address
+
+## Done when
+Under `trivia-desktop` with a temp mods dir (one theme, one code mod, one invalid, one `game` mismatch, one `TRIVIA_DEV_WORKSHOP_DIR` item, one `.downloading`): every row shows its state and warning; on/off, up/down, refresh, all off, restart work keyboard only, pad only (fake pad as in task 352, or real) and mouse only; Back returns to where it came from; `npm run dev -w app/client` shows no Mods entry; `check:literals` and per-commit checks pass.', '2026-10-13T18:34:23Z', NULL, 938);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (975, 118, 'Mods screen: TV and Deck check, gallery steps, restart under Steam', 'work', 'open', NULL, NULL, 'Plan 118 task 3. After task 974.
+
+## What
+- Mods screen and notice dialog at 1920×1080 and 1280×800 (Deck), es, en, de; long names and 20 mods scroll with the focus ring visible; fix what overflows
+- Gallery (plan 100): task 802 open → `pm task set 802` adds the Mods screen and notice dialog steps (bridge stub with a sample `mods` list); 802 done → add the steps in `authoring/tools/gallery.py` yourself
+- Restart under Steam (Spacewar 480 is enough): Shift+Tab overlay and rich presence still work after «Restart to apply» on Linux; Windows if a machine is at hand, else `pm task add 104 …` a manual row for the release checklist
+
+## Done when
+Shots for es, en, de look right (no overflow, no plural address in de); restart under Steam checked on Linux, Windows checked or its follow-up exists; per-commit checks pass.', '2026-10-13T18:34:23Z', NULL, 938);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (976, 118, 'Docs: mods screen, notice, crash marker, safe start', 'work', 'open', NULL, NULL, 'Plan 118 task 4. After tasks 973–975.
+
+## What
+- `plans/04-ui-tv-display.md`: Mods screen, start screen button + hint, Esc menu row, notice dialog
+- `plans/18-steam-integration.md` "Modding": notice flag and hold-off, crash marker `mods-start.json` and 20 s, `safeStart`, IPC `mods:notice`/`mods:restart`/`mods:ready`, restart args, "play without mods" via Steam launch options (`--no-mods`)
+- `directory.md`: the screen file, `mods-start.json`
+- AGENTS.md "Commands" `trivia-desktop` line: `--no-mods` safe start, if plan 112 (task 954) hasn''t added it
+- cite the decisions task 973 recorded
+
+## Done when
+Docs name the recorded decisions and paths; per-commit checks pass.', '2026-10-13T18:34:23Z', NULL, 938);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -25294,6 +25358,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (790, 935, '2026-10-13T18:30:53Z', '2026-10-13T18:32:04Z', 'done', NULL, 0, '6ed610ae94194b5becfecbb71f98a1d58a0d7536', 'claude-opus-5-5[1m]', '4a0ce6ce-bc1d-47d8-8db6-9c9e6be70fce', 8, 16, 7028, 266512, 33401, 0.46113440000000006, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (791, 936, '2026-10-13T18:32:05Z', '2026-10-13T18:32:48Z', 'done', NULL, 0, '69bb230a1f178bb2e0527fd499f678f07fe89115', 'claude-opus-5-5[1m]', 'e5d245ab-38f1-4abb-98f4-963e1aaea3d6', 5, 10, 4488, 156529, 31520, 0.37326579999999993, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (792, 937, '2026-10-13T18:32:48Z', '2026-10-13T18:33:42Z', 'done', NULL, 0, '84dffcbdda7ac0f6ebbf55dfd6e7583d236b226f', 'claude-opus-5-5[1m]', '12d7eb88-9475-4d60-a04a-1e0700140010', 5, 10, 5738, 164634, 33893, 0.4188708, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (793, 938, '2026-10-13T18:33:43Z', '2026-10-13T18:34:31Z', 'done', NULL, 0, '57632e244f77f55def36d6fe40f0d9dec87a649c', 'claude-opus-5-5[1m]', 'ac401352-461a-49b6-9b9f-0e219ed95866', 6, 12, 4684, 199234, 33382, 0.40063080000000007, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
