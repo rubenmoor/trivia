@@ -20732,8 +20732,101 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm decision consequences` on decisions 118–121 where the built result differs or adds facts; check milestone 14''s "Done when" and plan 101''s; a gap → follow-up task. Per-commit checks (AGENTS.md).
 
 Done when: no doc says "no telemetry" or "never phones home"; docs, how-tos and decision consequences match the built telemetry.', '2026-10-13T17:43:24Z', NULL, 883);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (898, 102, 'create tasks for plan 102', 'split', 'open', 1000, NULL, 'Split plan 102 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:46:00Z', NULL, 834);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (898, 102, 'create tasks for plan 102', 'split', 'done', 1000, '2026-10-13, tasks 899–910 (plan tasks for parts 1–12; 906 waits for decision 123)', 'Split plan 102 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:46:00Z', '2026-10-13T17:47:31Z', 834);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (899, 102, 'write plan: Readable client build', 'plan', 'open', 1000, NULL, 'Write the plan for part 1 of masterplan 15 (plan 102): "Readable client build". Read plan 102 (ground rules apply), milestone 15, `app/client/vite.config.ts`, the `credits` plugin, `app/desktop/main.mjs`/`resolve.mjs`. Create it with `pm plan add 15 "Readable client build" --priority 560 < body.md` (runs first among the parts'' work: parts 4, 10, 11 name module paths; adjust the priority if `pm plan list` says otherwise).
+
+Cover part 1''s list:
+- `preserveModules` + `preserveModulesRoot: "src"`, no hashes, `minify: false`, `sourcemap: true`; the naming rule for Svelte components (e.g. `game/Game.svelte.js`), recorded with `pm decision record`.
+- What can''t be overridden by path (shared chunks, CSS extraction): pick per-component CSS or one `style.css`, whichever lets a theme mod replace or add CSS.
+- Stale files across updates: Electron''s HTTP cache for `app://` (check, disable or key by version).
+- Impact checks: build size, start time on the Steam Deck, `credits` plugin, `credits_check.mjs`, `smoke.mjs`, `trivia-desktop-build` (asar), plan 99''s dev server.
+- Docs: `plans/18-steam-integration.md` or `plans/01-architecture.md` build bullet.
+- Tasks for the work, each with a done-when.', '2026-10-13T17:47:23Z', NULL, 898);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (900, 102, 'write plan: Mod format, local mods/ and the app:// overlay', 'plan', 'open', 1000, NULL, 'Write the plan for part 2 of masterplan 15 (plan 102): "Mod format, local `mods/` and the `app://` overlay". Read plan 102 (ground rules: page only, path safety, offline), milestone 15, `app/desktop/main.mjs`, `resolve.mjs` (`makeResolver`, `contained()`), the part 1 plan (`pm plan list`). Create it with `pm plan add 15 "Mod format, local mods/ and the app:// overlay" --priority 700 < body.md`.
+
+Cover part 2''s list:
+- `mod.json` schema (`id`, `name`, `description`, `version`, `game`, `languages`, optional `entry`, optional `kind` hints); validator in pure Node `app/desktop/mods.mjs`, testable like `resolve.mjs`; JSON Schema text for the guide.
+- Discovery: dev repo `mods/` (gitignored), packaged `<userData>/mods/`, `TRIVIA_MODS_DIR`; a hook for part 3''s Workshop folders; invalid mods listed with the reason, never loaded.
+- Mod settings `<userData>/mods.json` (enabled ids + load order, per machine, not the save; confirm), read once at start.
+- Overlay: ordered roots (enabled mods in load order, then `dist`; same for `/data/`, part 5 decides which data files), first hit wins; a mod''s `index.html` = full conversion; how the mods screen stays reachable (part 6''s safe start).
+- Mod files as bytes only, MIME by extension; tests for `..`, absolute paths, symlinks in a mod.
+- `game` ≠ running version: loaded, warning for part 6.
+- Tasks for the work, each with a done-when; `directory.md` for new paths.', '2026-10-13T17:47:23Z', NULL, 898);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (901, 102, 'write plan: Workshop source: subscribed items in the shell', 'plan', 'open', 1000, NULL, 'Write the plan for part 3 of masterplan 15 (plan 102): "Workshop source: subscribed items in the shell". Read plan 102, milestone 15, decision 111: Steam only, plan 85 (Steamworks binding, `steamworks-ffi-node`''s Workshop manager), the part 2 plan. Create it with `pm plan add 15 "Workshop source: subscribed items in the shell" --priority 690 < body.md` (after part 2''s plan at 700).
+
+Cover part 3''s list:
+- At start with a valid Steam user: `getSubscribedItems` → `getItemState`/`getItemInstallInfo` → install folders as mod sources (`mod.json` at the root required); downloading items listed, not loaded this run.
+- New subscriptions while running: refresh (`ItemInstalled` callback or re-query when the mods screen opens), loaded next start.
+- Default for newly subscribed items (enabled at the end of the load order; confirm against part 6).
+- Bridge additions: mod list (source, state, errors), enable/disable/reorder writing `mods.json` via IPC with the existing origin check.
+- Gamemaster setup as a pm decision (kind once; workers never log in): enable Workshop in Steamworks, visibility, tags, legal agreement notice, content descriptors, a second Steam account for the "Done when".
+- Tasks for the work, each with a done-when.', '2026-10-13T17:47:23Z', NULL, 898);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (902, 102, 'write plan: Bundles from mods: one bundle loader', 'plan', 'open', 1000, NULL, 'Write the plan for part 5 of masterplan 15 (plan 102): "Bundles from mods: one bundle loader". Read plan 102 (ground rules: no second path, our data stays ours), milestone 15, decisions 33, 38, 51, 66, 110, 112 (bundles, base bundle, packs), plan 93 (reports), plan 106 (telemetry recording), `app/data/bundles.json`, `lib/data.ts` `loadEngineData()`, `BundleSelector.svelte`, `authoring/tools/save_file.py`, the part 2 plan. Create it with `pm plan add 15 "Bundles from mods: one bundle loader" --priority 600 < body.md`.
+
+Cover part 5''s list:
+- One bundle format for ours and theirs: split `bundles.json` into per-bundle `bundle.json` (then `qgen export`, `qgen validate`, `categories.py`, `release_check.py`, `stage-media.mjs`, `steam.py stage` follow) or the shell merges mods'' lists into one served `bundles.json`; overlaying one shared file is not an option. Record the choice.
+- `loadEngineData()` reads all sources in one path; `source: "mod"` + mod id at runtime; selector marks player-made (icon + text, `t()`).
+- Namespaced question ids (`<mod id>:<id>`); save checks (seen counts, burns, blocked, flags, `parseSave`); removing a mod leaves a playable save.
+- Media inside the mod folder via the overlay, no downloads; credits for mod media (plan decides).
+- Not ours: `save_file.py`/`qgen` ignore namespaced ids; flag action hidden for player questions; telemetry per question skips them.
+- Which player bundle kinds are allowed (non-base, base replacing ours per decision 38), per-language availability.
+- Tasks for the work, each with a done-when.', '2026-10-13T17:47:23Z', NULL, 898);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (903, 102, 'write plan: Split Game.svelte and Question.svelte (optional)', 'plan', 'open', 1000, NULL, 'Write the plan for part 11 of masterplan 15 (plan 102): "Split `Game.svelte` and `Question.svelte`". Read plan 102, `code-review.md` (part 5 candidates), `app/client/src/game/Game.svelte` and `app/client/src/game/Question.svelte`, the part 1 plan (module paths). Decide whether the split is worth it now (mods replace small files; part 4''s screen list and part 10''s examples name these modules). If yes: `pm plan add 15 "Split Game.svelte and Question.svelte" --priority 520 < body.md` (before part 4''s work), with tasks: screen state machine vs. per-screen pieces; media, answers, reveal, jokers as own modules; no behaviour change; per-commit checks and a smoke game per task. If not: record why with `pm decision record` and drop this task with the reason.', '2026-10-13T17:47:23Z', NULL, 898);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (904, 102, 'write plan: Code add-ons: mods.js and the window.trivia mod API', 'plan', 'open', 1000, NULL, 'Write the plan for part 4 of masterplan 15 (plan 102): "Code add-ons: `mods.js` and the `window.trivia` mod API". Read plan 102 (ground rules: page only, no stability promise), milestone 15, `app/desktop/preload.cjs`, `lib/desktop.ts`, `index.html`, the plans of parts 1, 2 and 11 (if written). Create it with `pm plan add 15 "Code add-ons: mods.js and the window.trivia mod API" --priority 500 < body.md`.
+
+Cover part 4''s list:
+- Rename the preload bridge (e.g. `window.triviaShell`; `lib/desktop.ts` the only reader) so `window.trivia` becomes the mod API; record it (`pm decision record`).
+- `mods.js`: generated by the shell vs. a static file fetching a list (pick one); loaded before mount; each entry `import()`ed; a throwing mod is reported (part 6) and skipped, the game still starts.
+- `window.trivia` (`lib/mods.ts`): engine actions and data hooks, catalogs (strings per locale, new locale), screens (by name, replace or add), events (game start/end, question shown/answered), version; list exactly what and where.
+- Order: mods run after data load and before mount, or a `ready` callback; fix it.
+- Tasks for the work, each with a done-when.', '2026-10-13T17:47:24Z', NULL, 898);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (905, 102, 'write plan: Mods screen and safe start', 'plan', 'open', 1000, NULL, 'Write the plan for part 6 of masterplan 15 (plan 102): "Mods screen and safe start". Read plan 102, milestone 15, plans of parts 2–4, IN-1..IN-5 input rules, plan 100 (TV-check). Create it with `pm plan add 15 "Mods screen and safe start" --priority 400 < body.md`.
+
+Cover part 6''s list:
+- Screen from the start menu and the Esc menu: list (name, version, source, kind, languages, warnings: version mismatch, invalid, download pending, failed at load), on/off, load order (up/down), «restart to apply» (`app.relaunch()`).
+- One-time notice before the first mod is enabled (mods run code with access to save and Steam features), stored per install.
+- Crashed start: marker before loading the page with mods, cleared on page ready (or after N seconds); found next start → start without mods, mods screen opens with the reason. Manual: `--no-mods` launch flag and/or a key/pad button at start (pick).
+- Strings via `t()` in es, en, de (+ es-ES); pad, keyboard, mouse; TV-check.
+- Tasks for the work, each with a done-when.', '2026-10-13T17:47:24Z', NULL, 898);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (906, 102, 'write plan: Achievements, flags and telemetry with mods on', 'plan', 'open', 1000, NULL, 'Write the plan for part 7 of masterplan 15 (plan 102): "Achievements, flags and telemetry with mods on". Waits for decision 123: Achievements in games with mods on: allowed or off? Read plan 102, milestone 15, decision 123''s answer, decisions 19, 73, 74 (qualifying games), decision 102 (additive save fields), plan 86 (`earned(save, data)`, unlock gate), plan 93 (reports), plans 106/107 (telemetry), the plans of parts 2 and 5. Create it with `pm plan add 15 "Achievements, flags and telemetry with mods on" --priority 590 < body.md`.
+
+Cover part 7''s list:
+- Apply decision 123 in `earned()` and the unlock gate via a per-run `modsActive` (+ kinds) from the shell; games with mods recorded in the game row (additive save field) so the retroactive pass stays correct.
+- Flags hidden for player questions; reports and per-question telemetry only for our questions; a "mods on" count in the telemetry summary.
+- Rich presence: unchanged or "modded" (pick).
+- Tasks for the work, each with a done-when.', '2026-10-13T17:47:24Z', NULL, 898);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (907, 102, 'write plan: Publishing: upload a mod folder as a Workshop item', 'plan', 'open', 1000, NULL, 'Write the plan for part 8 of masterplan 15 (plan 102): "Publishing: upload a mod folder as a Workshop item". Read plan 102 (page-only rule: the command reads the folder, never runs it), milestone 15, decision 111, plan 85 (Workshop manager calls), the plans of parts 2 and 3. Create it with `pm plan add 15 "Publishing: upload a mod folder as a Workshop item" --priority 670 < body.md`.
+
+Cover part 8''s list:
+- `trivia --publish-mod <folder> [--changenote …] [--visibility …] [--dry-run]`, headless in the main process; part 2''s validator; create the item on first publish (published file id into `mod.json` or a sidecar: pick); `startItemUpdate` → content, title, description, preview, tags, languages → `submitItemUpdate`, progress on stdout.
+- Valid Steam user + Steam client required; Workshop legal agreement result shown with its URL.
+- In-game button: out of scope, a backlog row.
+- Docs: guide section, README how-to; `trivia-steam` stays for our builds.
+- Tasks for the work, each with a done-when.', '2026-10-13T17:47:24Z', NULL, 898);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (908, 102, 'write plan: Player bundle kit: format doc, template, AI prompt', 'plan', 'open', 1000, NULL, 'Write the plan for part 9 of masterplan 15 (plan 102): "Player bundle kit: format doc, template, AI prompt". Read plan 102, milestone 15, the part 5 plan (final bundle format), `app/data/age-groups.json`, `authoring/tools/prompts/` (house style), the part 8 plan (validator). Create it with `pm plan add 15 "Player bundle kit: format doc, template, AI prompt" --priority 350 < body.md`.
+
+Cover part 9''s list:
+- Bundle format for players (fields, categories, names, pool file, media, languages, difficulty 1–15, age groups).
+- Template mod folder (one small bundle, two languages, one image question) that loads as is.
+- Standalone AI prompt (no `qgen`, no web search assumed): asks topic, audience, language; outputs our pool format; how a player checks the result (mods screen errors or `trivia --check-mod <folder>` sharing part 8''s validator: pick).
+- Where: part 10''s guide folder; shipped in the install folder or only online (pick).
+- Tasks for the work, each with a done-when.', '2026-10-13T17:47:24Z', NULL, 898);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (909, 102, 'write plan: Modding guide, examples and the store link', 'plan', 'open', 1000, NULL, 'Write the plan for part 10 of masterplan 15 (plan 102): "Modding guide, examples and the store link". Read plan 102, milestone 15, the plans of parts 1–9 (and 11), plan 88 (store page, `plans/17a-store-page.md`). Create it with `pm plan add 15 "Modding guide, examples and the store link" --priority 300 < body.md`.
+
+Cover part 10''s list:
+- Guide path (e.g. `modding/README.md`; pick), linked from `README.md` and `directory.md`: format, sources and load order, overlay rules, `window.trivia`, mods screen and safe start, publishing, player bundles, no stability promise, page-only rule.
+- Four example mods loading from `mods/` as is: a bundle, a CSS theme, a rules tweak (code add-on), a minimal full conversion.
+- Store page link in `plans/17a-store-page.md` and the Workshop description; store feature bullet text as a pm decision (as plan 88''s).
+- Tasks for the work, each with a done-when.', '2026-10-13T17:47:24Z', NULL, 898);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (910, 102, 'write plan: Modding end-to-end check and close-out', 'plan', 'open', 1000, NULL, 'Write the plan for part 12 of masterplan 15 (plan 102): "End-to-end check and close-out". Read plan 102, milestone 15 ("Done when"), the plans of all other parts, plan 104 (release checklist). Create it with `pm plan add 15 "Modding end-to-end check and close-out" --priority 150 < body.md` (last).
+
+Cover part 12''s list:
+- The four example mods load from `mods/` and, published by part 8, from the Workshop on a second Steam account: gamemaster checklist as a pm decision (kind once).
+- Store page shows the guide link (gamemaster confirms).
+- Release check: a mods row (`--no-mods` and with the examples)? If so, a task in plan 104.
+- Docs: `plans/18-steam-integration.md` (Workshop, bridge rename, IPC), `plans/01-architecture.md` (overlay), `plans/11-steam.md`, `plans/project.md`, `README.md`, AGENTS.md "Commands" (publish flag, `TRIVIA_MODS_DIR`).
+- Tasks for the work, each with a done-when.', '2026-10-13T17:47:25Z', NULL, 898);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -22785,6 +22878,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (754, 882, '2026-10-13T17:42:14Z', '2026-10-13T17:42:49Z', 'done', NULL, 0, '87c8b88dccef6a5289a475cb6756449bab0ece7d', 'claude-opus-5-5[1m]', '8d94d4cf-74ba-443b-94e6-01ed6883a0eb', 5, 10, 3455, 154300, 30003, 0.34002400000000005, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (755, 883, '2026-10-13T17:42:50Z', '2026-10-13T17:43:40Z', 'done', NULL, 0, 'b32a59ecc44be09b4f561a95a1cedef5e4081fb0', 'claude-opus-5-5[1m]', '03c61314-a472-4d41-812a-94e32d83a6ce', 7, 14, 5446, 240373, 32608, 0.41791459999999991, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (756, 834, '2026-10-13T17:43:40Z', '2026-10-13T17:46:21Z', 'done', NULL, 0, 'ce63d42ef7949c50de8de474a19b300efaeb3a1f', 'claude-opus-5-5[1m]', 'a785f30d-97d0-46ae-a92b-f9764a3a80b5', 15, 30, 14215, 898731, 75075, 1.0647662, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (757, 898, '2026-10-13T17:46:22Z', '2026-10-13T17:47:38Z', 'done', NULL, 0, 'bbf766f229212cd7ee47c0b0e11255a941f6d196', 'claude-opus-5-5[1m]', '716c918b-cb6f-439a-98e4-7fcaf4abef3d', 8, 14, 8367, 272753, 43515, 0.5700666, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -23000,6 +23094,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (866, 117);
 INSERT INTO task_decision (task_id, decision_id) VALUES (868, 117);
 INSERT INTO task_decision (task_id, decision_id) VALUES (884, 117);
 INSERT INTO task_decision (task_id, decision_id) VALUES (885, 117);
+INSERT INTO task_decision (task_id, decision_id) VALUES (906, 123);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
