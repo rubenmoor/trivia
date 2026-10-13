@@ -67,6 +67,9 @@ export async function contained(root, rel) {
 
 const sameFile = process.platform === "win32" ? (a, b) => a.toLowerCase() === b.toLowerCase() : (a, b) => a === b;
 
+// Client files: no hashes in their names (decision 124), so never reused unchecked.
+const CLIENT = { "cache-control": "no-cache" };
+
 // First hit in the layers; a mod's own mod.json never.
 async function firstHit(roots, rel, mods) {
   for (const root of roots) {
@@ -93,9 +96,9 @@ function parseRange(header, size) {
 
 const body = (file, opts) => Readable.toWeb(createReadStream(file, opts));
 
-async function sendFile(file, request) {
+async function sendFile(file, request, extra = {}) {
   const { size } = await stat(file);
-  const headers = { "content-type": mimeOf(file), "accept-ranges": "bytes" };
+  const headers = { "content-type": mimeOf(file), "accept-ranges": "bytes", ...extra };
   const range = parseRange(request.headers.get("range"), size);
   if (range === false)
     return new Response(null, { status: 416, headers: { ...headers, "content-range": `bytes */${size}` } });
@@ -206,6 +209,6 @@ export function makeResolver({ dist, data, media, layers = [], mods = [] }) {
     }
     const file =
       (rel !== "/" && (await firstHit(distRoots, rel, modDirs))) || (await firstHit(distRoots, "index.html", modDirs));
-    return sendFile(file || path.join(dist, "index.html"), request);
+    return sendFile(file || path.join(dist, "index.html"), request, CLIENT);
   };
 }
