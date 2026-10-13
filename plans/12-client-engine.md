@@ -51,6 +51,20 @@ With the engine in the client, the correct answer is in memory before the player
 - v2 → v3 (D-82, plan 65): `parseSave` turns each `burned` row with a player into one `seen` row and `player_id: null` into `blocked`; `save.py` only checks the envelope (D-67). The Python referee `game.py` keeps its SQLite burn rules until plan 51 deletes it (divergence, D-82).
 - `SaveData.version` makes later migrations possible (game modes in 13, multiple locales in 15).
 
+## Saves across patches
+A content patch changes the pool under an existing save (plan 91). The save keeps its shape; the engine adapts a running game to the new pool on load, so a family's save never breaks on an update.
+
+- A patch may add, fix or drop questions (drop = status change); never delete or reuse an id (`qgen validate` guards it against the last `v*` tag, task 692).
+- Engine guarantee: `game.ts` `repair(save, data, io)`, called once in `lib/engine.ts` `ready()` against the newest game's locale pool; written with the next action.
+  - Only the newest running game; ids its locale's pool lacks:
+  - `options` missing → redrawn for the level (no seen row); level can't refill → the card goes
+  - `current` missing → `select`, same level; history, jokers used kept
+  - `last` missing → `null`; `undo` referencing a missing id → `null`
+  - Untouched: finished games, `seen` (a dropped id that comes back keeps its count), `blocked`, `flags` (flag list: `question: null`)
+  - Idempotent; nothing missing → the same save
+- Shape change in a later patch: `SAVE_VERSION + 1` + an `UPGRADES` entry + a `save.test.ts` case; never silent.
+- Beta vs. default: a newer save on an older build is backed up, the game starts empty (`store.ts`); so a save version bump ships to `default` in the same release the family tested on `beta`; testers don't switch back to `default` before it.
+
 ## Tasks
 - [x] PORT-1 Scenario recorder for `app/server/game.py` + `app/server/selection.py`; commit the fixtures. Done 2026-10-11 (plan 18): `authoring/tools/record_fixtures.py` (`--check`), fixtures + README in `app/client/src/engine/fixtures/`.
 - [x] PORT-2 `engine/selection.ts`: supply check and draw (GF-2, D-25), fixture-tested.

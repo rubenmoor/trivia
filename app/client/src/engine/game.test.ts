@@ -4,6 +4,7 @@ import { readdirSync } from "node:fs";
 import { join } from "node:path";
 import type { Category } from "../lib/types.ts";
 import { deletePlayer, gameAction, getGame, getPlayers } from "./api.ts";
+import { repair } from "./game.ts";
 import type { PoolQuestion } from "./pool.ts";
 import { emptySave, engineData, type EngineData, type SaveData } from "./state.ts";
 import { fixture, realAgeGroups, realBundles } from "./test/fixtures.ts";
@@ -77,4 +78,22 @@ test("supply (plan 65): seen questions come back in the next game, only blocked 
   const short = gameAction(save, d, io, "new", { player: "Bea" });
   assert.equal(short.status, 409);
   assert.equal((short.body as { error: string }).error, "supply_short");
+});
+
+test("repair (plan 91): a running game whose question was dropped goes back to select, nothing seen", () => {
+  const d = dataFor("main");
+  const io = { rng: seededRng(1), now: "2026-01-01T00:00:00" };
+  let save = gameAction(emptySave(), d, io, "new", { player: "Ana" }).save;
+  save = gameAction(save, d, io, "pick", { index: 0 }).save;
+  const { current, options } = latestState(save)!;
+  const patched = engineData(d.pool.filter((q) => q.id !== current), categories, bundles, ageGroups);
+  const out = repair(save, patched, io);
+  const state = latestState(out)!;
+  assert.equal(state.phase, "select");
+  assert.equal(state.current, null);
+  assert.deepEqual(state.options.slice(1), options.slice(1));
+  assert.ok(patched.byId.has(state.options[0]));
+  assert.deepEqual(out.seen, save.seen);
+  assert.equal(repair(out, patched, io), out);
+  assert.equal(gameAction(out, patched, io, "pick", { index: 0 }).status, 200);
 });

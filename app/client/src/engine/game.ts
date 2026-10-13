@@ -6,7 +6,7 @@ import { bundlesFor, categoryOf } from "./pool.ts";
 import { casefold, pyLen, pySplitJoin, pyTruthy } from "./pycompat.ts";
 import * as selection from "./selection.ts";
 import type { EngineData, GameRow, GameState, Io, Outcome, SaveData } from "./state.ts";
-import { GameError, SPANISH, UNLIMITED, nextId, transact, trial, withDefaults } from "./state.ts";
+import { GameError, SPANISH, UNLIMITED, gameLocale, nextId, transact, trial, withDefaults } from "./state.ts";
 
 export { GameError, UNLIMITED };
 
@@ -849,6 +849,43 @@ export function abandon(save: SaveData, io: Io): { save: SaveData } {
     const game = latest(work);
     if (game && game.row.result === null) saveGame(game.row, game.state, io, "abandoned");
   });
+}
+
+/** Question ids a game state needs (table, screen, last answer) that the pool lacks. */
+function lacks(state: GameState | null, data: EngineData): boolean {
+  const gone = (id: string | null) => id !== null && !data.byId.has(id);
+  return state !== null && (state.options.some(gone) || gone(state.current) || gone(state.last?.question_id ?? null));
+}
+
+/** After a patch (plan 91): the running game drops ids its pool lacks; no seen rows; the same save if none. */
+export function repair(save: SaveData, data: EngineData, io: Io): SaveData {
+  const game = latest(save);
+  if (!game || game.row.result !== null || gameLocale(game.row) !== data.locale) return save;
+  if (!lacks(game.state, data) && !lacks(game.state.undo, data)) return save;
+  return transact(save, (work) => {
+    const { row, state } = running(work);
+    const has = (id: string) => data.byId.has(id);
+    if (state.current !== null && !has(state.current)) {
+      const jokers = state.jokers;
+      state.phase = "select";
+      leaveQuestion(state);
+      state.jokers = jokers;
+    }
+    if (state.last && !has(state.last.question_id)) state.last = null;
+    if (lacks(state.undo, data)) state.undo = null;
+    const missing = state.options.filter((i) => !has(i)).length;
+    if (missing) {
+      let fresh: string[] = [];
+      try {
+        fresh = draw(work, state, data, io, missing, state.options.filter(has).map((i) => data.byId.get(i)!));
+      } catch (e) {
+        if (!(e instanceof GameError)) throw e;
+      }
+      state.options = state.options.flatMap((i) => (has(i) ? [i] : fresh.splice(0, 1)));
+    }
+    if (state.options.length) openIfNoCards(state, data, io);
+    saveGame(row, state, io);
+  }).save;
 }
 
 /** The newest game as the TV sees it: no correct answer before the final answer. */

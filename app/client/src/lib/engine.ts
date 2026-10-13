@@ -1,7 +1,7 @@
 // The TS referee in the browser (plan 50, PORT-7): data and save loaded once per page, one action at a time.
 import type { ErrorBody, Reply } from "../engine/api.ts";
 import { randomSeed, seededRng } from "../engine/rng.ts";
-import { supply } from "../engine/game.ts";
+import { repair, supply } from "../engine/game.ts";
 import { defaultLanguage, parseSave } from "../engine/save.ts";
 import { gameLocale, type EngineData, type Io, type Language, type SaveData } from "../engine/state.ts";
 import { GameError } from "./api.ts";
@@ -62,7 +62,8 @@ export function ready(): Promise<Loaded> {
       if (!locales.includes(language.questions)) language = { ...language, questions: "es" }; // pool gone
       const fresh = !save.language;
       const loaded = { save: { ...save, language }, locales, fresh, offer: fresh ? await localOffer() : null };
-      await dataFor(loaded, "game"); // a missing data file fails here, not on the first action
+      const data = await dataFor(loaded, "game"); // a missing data file fails here, not on the first action
+      loaded.save = { ...repair(loaded.save, data, io()), language }; // dropped questions (plan 91); written with the next action
       return loaded;
     },
     (e) => {
