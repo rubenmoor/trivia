@@ -13,6 +13,13 @@ contextBridge.exposeInMainWorld("trivia", {
     list: () => ipcRenderer.invoke("mods:list"),
     set: (order) => ipcRenderer.invoke("mods:set", order),
   },
+  // Plan 106: consent and this run's session buffer.
+  telemetry: {
+    state: () => ipcRenderer.invoke("telemetry:state"),
+    setConsent: (yes) => ipcRenderer.invoke("telemetry:consent", yes),
+    load: () => ipcRenderer.invoke("telemetry:load"),
+    record: (buffer) => ipcRenderer.invoke("telemetry:record", buffer),
+  },
   // Plan 85: the binding lives in main; the flag comes from main's additionalArguments.
   steam: {
     available: process.argv.includes("--trivia-steam"),

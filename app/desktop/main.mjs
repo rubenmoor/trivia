@@ -8,6 +8,7 @@ import { arrange, discover, ID as MOD_ID, readSettings, writeSettings } from "./
 import { describe, itemUrl, preparePublish, publish, VISIBILITY } from "./publish.mjs";
 import { makeResolver } from "./resolve.mjs";
 import { makeSaveFile } from "./save.mjs";
+import { makeTelemetry } from "./telemetry.mjs";
 import { fakeUgc, workshopItems } from "./workshop.mjs";
 
 const ORIGIN = "app://trivia/";
@@ -50,6 +51,12 @@ function modsDir() {
 /** Per machine, not in the save (decision 136). */
 function modsSettingsFile() {
   return app.isPackaged ? path.join(app.getPath("userData"), "mods.json") : path.join(REPO, "state", "desktop", "mods.json");
+}
+
+/** Telemetry (plan 106): per install, outside Auto-Cloud's `save/`. */
+function telemetryDir() {
+  if (process.env.TRIVIA_TELEMETRY_DIR) return process.env.TRIVIA_TELEMETRY_DIR;
+  return app.isPackaged ? path.join(app.getPath("userData"), "telemetry") : path.join(REPO, "state", "telemetry");
 }
 
 /** Valid user's folder (plan 87, decision 114): `<steamid64>/`, `dev/` under the dev switch; `TRIVIA_SAVE_DIR` as is. */
@@ -121,6 +128,8 @@ let validUser = false; // decision 111: Steam user with a SteamID, or the dev sw
 let overlay = false; // Windows only: the native window Steam's overlay draws into (D-92)
 let activeDirs = new Set(); // this run's overlay layers (plan 112): fixed until restart
 let saveFile = null; // set in start(), after Steam; stays null without a valid user
+let telemetry = null; // likewise (decision 111)
+let telemetryStamped = false;
 let writing = Promise.resolve();
 let pending = 0;
 
@@ -159,9 +168,11 @@ if (args.error) {
   });
   app.on("window-all-closed", () => app.quit());
   app.on("before-quit", (event) => {
-    if (!pending) return;
+    const stamp = telemetry && !telemetryStamped;
+    if (!pending && !stamp) return;
     event.preventDefault();
-    writing.then(() => app.quit());
+    telemetryStamped = true;
+    Promise.all([writing, stamp && telemetry.finish().catch(telemetryError)]).then(() => app.quit());
   });
   app.on("will-quit", stopSteam);
   app.whenReady()
@@ -340,6 +351,8 @@ async function start() {
     saveFile = makeSaveFile(userSaveDir());
     console.error(`trivia: save ${saveFile.file}`);
     await saveFile.dropStaleTemp();
+    telemetry = makeTelemetry(telemetryDir(), { version: app.getVersion() });
+    await telemetry.start().catch(telemetryError);
   } else console.error("trivia: no Steam user, progress not saved");
   if (args.importSave) {
     if (!saveFile) {
@@ -499,6 +512,28 @@ async function setMods(order) {
   return listMods();
 }
 
+/** Code only: paths and bodies carry ids. */
+function telemetryError(err) {
+  console.error(`trivia: telemetry: ${err?.code ?? "error"}`);
+}
+
+const plain = (v) => v !== null && typeof v === "object" && Object.getPrototypeOf(v) === Object.prototype;
+
+/** `{ games, index }` from the page: plain objects, parallel arrays, ≤ 1 MiB. */
+function telemetryArg(arg) {
+  const ok =
+    plain(arg) &&
+    Array.isArray(arg.games) &&
+    Array.isArray(arg.index) &&
+    arg.games.length === arg.index.length &&
+    arg.games.length <= 200 &&
+    arg.games.every((g) => plain(g) && (g.answers === undefined || Array.isArray(g.answers))) &&
+    arg.index.every((e) => plain(e) && typeof e.key === "string" && e.key.length <= 200 && Number.isInteger(e.from) && e.from >= 0) &&
+    Buffer.byteLength(JSON.stringify(arg), "utf8") <= 1024 * 1024;
+  if (!ok) throw new Error("bad_telemetry");
+  return { games: arg.games, index: arg.index };
+}
+
 /** IPC for preload.cjs; only our own page may call. */
 function bridge() {
   const handle = (channel, fn) =>
@@ -513,6 +548,17 @@ function bridge() {
   handle("save:load", () => (saveFile ? queued(() => saveFile.read()) : null));
   handle("save:write", (text) => (saveFile ? queued(() => saveFile.write(text)) : refused()));
   handle("save:backup", (kind) => (saveFile ? queued(() => saveFile.backup(kind)) : refused()));
+  // Telemetry (plan 106): no-ops without a valid user; record rejects bad_telemetry.
+  handle("telemetry:state", () => telemetry?.state() ?? { available: false, consent: null });
+  handle("telemetry:consent", (yes) => {
+    if (!telemetry) return { available: false, consent: null };
+    if (typeof yes !== "boolean") throw new Error("bad_telemetry");
+    return telemetry.setConsent(yes);
+  });
+  handle("telemetry:load", () => telemetry?.load() ?? null);
+  handle("telemetry:record", async (arg) => {
+    if (telemetry) await telemetry.record(telemetryArg(arg));
+  });
   // Mods (plan 114): fresh list per call; set rejects bad_mods, writes mods.json, applies next start.
   handle("mods:list", listMods);
   handle("mods:set", setMods);

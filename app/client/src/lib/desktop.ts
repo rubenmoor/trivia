@@ -14,6 +14,8 @@ export interface DesktopBridge {
   readonly steam: SteamBridge;
   /** Missing in the dev server's shim. */
   readonly mods?: ModsBridge;
+  /** Missing in the browser game and the dev server's shim (plan 106). */
+  readonly telemetry?: TelemetryBridge;
   /** Set by the dev server's page shim (plan 99): its save dir is the dev switch. */
   readonly devServer?: true;
 }
@@ -80,6 +82,29 @@ export interface ModEntry {
   dir: string | null;
 }
 
+/** Opt-in telemetry store in the shell (plan 106); no-ops without a valid user. */
+export interface TelemetryBridge {
+  /** Ask when `available && consent === null`. */
+  state(): Promise<TelemetryState>;
+  /** Yes: install id, session starts; no: id and every session file deleted. */
+  setConsent(yes: boolean): Promise<TelemetryState>;
+  /** This run's current session buffer; null without a yes. */
+  load(): Promise<TelemetryBuffer | null>;
+  /** Replaces this run's games (index parallel); ignored without a yes; rejects `bad_telemetry`. */
+  record(buffer: TelemetryBuffer): Promise<void>;
+}
+
+export interface TelemetryState {
+  available: boolean;
+  consent: boolean | null;
+}
+
+/** `games`: plan 105's contract games; `index[i]` is the page's bookkeeping for `games[i]`, never sent. */
+export interface TelemetryBuffer {
+  games: object[];
+  index: { key: string; from: number }[];
+}
+
 /** Window position in device pixels. */
 export interface TextFieldRect {
   x: number;
@@ -97,6 +122,7 @@ declare global {
 export const desktop: DesktopBridge | null = window.trivia ?? null;
 export const steam: SteamBridge | null = desktop?.steam ?? null;
 export const mods: ModsBridge | null = desktop?.mods ?? null;
+export const telemetry: TelemetryBridge | null = desktop?.telemetry ?? null;
 /** Saves and flags allowed (decision 111); the only check plan 87 and the flag UI read. */
 export const validUser: boolean = steam?.user === true || desktop?.devServer === true;
 /** Dev switch or dev server (plan 85): «Ir a pregunta…»; a real Steam user is not dev mode. */

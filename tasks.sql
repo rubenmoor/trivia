@@ -21384,7 +21384,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - AGENTS.md "Commands": the `trivia-report-server` line mentions `seed-telemetry [N]`.
 
 Done when: `seed-telemetry 50` against `trivia-report-server dev` stores 50 sessions that `GET /telemetry` returns (mind `limit` max 200, `RATE_TELEMETRY_TOTAL`); a non-localhost URL is refused; AGENTS.md per-commit checks pass.', '2026-10-13T17:40:12Z', NULL, 878);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (886, 106, 'Shell: telemetry store (install.json, session file, IPC)', 'work', 'open', NULL, NULL, 'Plan 106, task 1. The shell side of opt-in telemetry recording: consent + install id per install and one session buffer file per app run; no network (plan 107 sends). Follow plan 106 "Install id and consent storage", "Session buffer" and "Bridge" exactly. Binding: decision 119: Telemetry recording: derived from the save into a per-install side file; decision 121: Telemetry consent: stored per install, not in the save; decision 111: Steam only.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (886, 106, 'Shell: telemetry store (install.json, session file, IPC)', 'work', 'done', NULL, '2026-10-13, app/desktop/telemetry.mjs (new), app/desktop/main.mjs, app/desktop/preload.cjs, app/client/src/lib/desktop.ts, plans/18-steam-integration.md, directory.md', 'Plan 106, task 1. The shell side of opt-in telemetry recording: consent + install id per install and one session buffer file per app run; no network (plan 107 sends). Follow plan 106 "Install id and consent storage", "Session buffer" and "Bridge" exactly. Binding: decision 119: Telemetry recording: derived from the save into a per-install side file; decision 121: Telemetry consent: stored per install, not in the save; decision 111: Steam only.
 
 ## What
 - New `app/desktop/telemetry.mjs`:
@@ -21412,7 +21412,7 @@ Throw-away script or `trivia-desktop` with `TRIVIA_DEV_STEAM_USER=1`, `TRIVIA_TE
 
 ## Docs
 - `plans/18-steam-integration.md` IPC list
-- `directory.md`: `app/desktop/telemetry.mjs`, `state/telemetry/`', '2026-10-13T17:40:48Z', NULL, 879);
+- `directory.md`: `app/desktop/telemetry.mjs`, `state/telemetry/`', '2026-10-13T17:40:48Z', '2026-10-13T19:42:58Z', 879);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (887, 106, 'Page: telemetry recording from the save', 'work', 'open', NULL, NULL, 'Plan 106, task 2, after task 886 (shell telemetry store). The page derives this run''s telemetry games from the save after every action and hands them to the shell; the save''s shape doesn''t change. Follow plan 106 "What a game becomes" and "Bridge" exactly. Binding: decision 119: Telemetry recording: derived from the save into a per-install side file; decision 121: Telemetry consent: stored per install, not in the save; plan 105''s contract (v1) field names and limits.
 
 ## What
@@ -25674,6 +25674,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (811, 979, '2026-10-13T19:37:14Z', '2026-10-13T19:38:11Z', 'done', NULL, 0, '428c115afaefca6c7c32f3740e7da78eef8ca98f', 'claude-opus-5-5[1m]', '4ed5fab6-2cb6-493c-bfce-11d12a8dbb3f', 12, 16, 4361, 334257, 43926, 0.5055434, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (812, 786, '2026-10-13T19:38:11Z', '2026-10-13T19:38:40Z', 'blocked', NULL, 0, 'b833d8c711d66e1268b49e7e861b7451f747ecc5', 'claude-opus-5-5[1m]', '737926d4-d353-491b-9f3a-b833dd175eb5', 8, 18, 2017, 301232, 35153, 0.3818823999999999, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (813, 932, '2026-10-13T19:38:41Z', '2026-10-13T19:39:42Z', 'done', NULL, 0, '9799355621b5f8c5c4fb6fa0678d4cd9096bc3e5', 'claude-opus-5-5[1m]', 'c1d4c095-fb44-4fba-a2e9-a1da41f9032f', 9, 18, 3067, 332990, 33116, 0.392938, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (814, 886, '2026-10-13T19:39:42Z', '2026-10-13T19:43:10Z', 'done', NULL, 0, '5800f12a38472f2addb181599a8515d5b50556cb', 'claude-opus-5-5[1m]', 'ad5aafa8-2144-44fd-9c65-7ab600d74703', 27, 50, 17158, 1498112, 64130, 1.1560223999999997, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

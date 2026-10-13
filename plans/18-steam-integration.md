@@ -179,6 +179,21 @@ Modders publish a mod folder as a Workshop item with the game itself (pm plan 11
 - Windows (packaged): no console; every line also to `<folder>/../<id>-publish.log` (beside the mod, not inside), result in a message box (ok: URL; failed: reason + log path). Linux/Deck: stdout/stderr only.
 - `trivia-steam` is for our own builds only, never for mods.
 
+## Telemetry store
+Opt-in telemetry's shell side (pm plan 106, decisions 119, 121): consent, install id and one session buffer per run, per install, never in the Steam Cloud save; no network here (plan 107 sends).
+- Code: `app/desktop/telemetry.mjs` (`makeTelemetry(dir, { version })`; pure `node:fs`), wiring in `main.mjs`.
+- Folder: `TRIVIA_TELEMETRY_DIR`, packaged `<userData>/telemetry` (sibling of `save/`, outside Auto-Cloud), dev `state/telemetry/`.
+- `install.json`: `{"consent": true, "install": "<uuid v4>"}`, `{"consent": false}`, missing = never asked.
+- `sessions/<session>.json`: plan 105's body minus `ticket`, plus `index` (page bookkeeping); `length_s` stamped per write and in `before-quit`; atomic, own queue, `before-quit` waits for it.
+- Rollover past 30 games, 500 answers or 60 KiB: new session file, sealed games dropped from later records this run; ≤ 100 answers per game; ≤ 5 `*.json` files, oldest by mtime deleted.
+- `pending()` export: earlier runs' files for plan 107, no IPC.
+- Only with a valid user (decision 111); without one every call is a no-op and nothing is created. Logs error codes only, never ids or bodies.
+- IPC (`handle()`, sender origin `app://trivia/`), bridge `telemetry` in `preload.cjs`, typed optional `telemetry: TelemetryBridge` in `app/client/src/lib/desktop.ts`:
+  - `telemetry:state` → `{ available, consent }` (`{ false, null }` without a valid user).
+  - `telemetry:consent(yes)` → state; yes: id if missing, session starts; no: `{"consent": false}`, `sessions/` deleted.
+  - `telemetry:load` → current session's `{ games, index }` or null.
+  - `telemetry:record({ games, index })`: parallel arrays, plain objects, ≤ 200 games, ≤ 1 MiB, else rejects `bad_telemetry`; ignored without a yes.
+
 ## Modding: `mod.json`
 A mod is a folder with a `mod.json` (pm plan 112). The validator `readManifest` in `app/desktop/mods.mjs` is the source of truth; this schema is for the modding guide (plan 121) and editors.
 - Also checked by the validator, not by the schema: file ≤ 64 KB UTF-8; `entry` exists inside the mod (symlinks resolved); unknown keys and unknown `languages` tags are warnings; `game` ≠ running version: warning `game_version`, still loaded.
