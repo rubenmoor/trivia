@@ -22768,8 +22768,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:16:58Z', '2026-10-13T18:34:25Z', 905);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (939, 119, 'create tasks for plan 119', 'split', 'done', 1000, '2026-10-13, tasks 977–980; task 980 waits for decision 135', 'Split plan 119 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:19:27Z', '2026-10-13T18:35:06Z', 907);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (940, 120, 'create tasks for plan 120', 'split', 'open', 1000, NULL, 'Split plan 120 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:22:27Z', NULL, 908);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (940, 120, 'create tasks for plan 120', 'split', 'done', 1000, '2026-10-13, tasks.sql: tasks 981–986 for plan 120, no new decisions', 'Split plan 120 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:22:27Z', '2026-10-13T18:36:12Z', 908);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (941, 121, 'create tasks for plan 121', 'split', 'open', 1000, NULL, 'Split plan 121 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:24:44Z', NULL, 909);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (942, 104, 'Release check: mods step and Workshop row (milestone 15)', 'work', 'open', 160, NULL, 'Plan 102 part 12 (plan "Modding end-to-end check and close-out", milestone 15) decided that every release candidate checks mods: an automated step `mods` (always) and a manual row `workshop` (full only). This task adds both to `trivia-release-check`. Priority 160: it runs after milestone 15''s parts, which it needs.
@@ -23281,6 +23281,105 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
   - on Windows: the log file beside the mod folder and the message box appear
 - Options "all ok" (recommended) / "problems: …"; `pm task-pending-decision <this task> <id>`; close with the answer
 - Done when: the gamemaster answers; a follow-up task in plan 119 for every failure.', '2026-10-13T18:35:04Z', NULL, 939);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (981, 120, 'modPool: text-only questions and per-question drop reasons', 'work', 'open', NULL, NULL, 'Part 1 of plan 120 (player bundle kit). After `task 960: Loader: mod packs, namespaced ids, media, modIssues()` (plan 115 task 2).
+
+Why: player bundles (and the AI prompt, task 4 of this plan) produce questions without media; `trivia --check-mod` (next task) must list every dropped question with a reason. One validator for loader, check and publish (plan 102, decision 133: Player bundle kit: check with trivia --check-mod, kit in modding/ shipped in the install folder).
+
+## What
+- `app/client/src/engine/pool.ts` `modPool`:
+  - `media` missing or `null` → normalized to a decorative image with `file_url: null`
+  - returns the dropped questions with reason codes: `no_text`, `wrong_answers`, `hints`, `difficulty`, `subcategory`, `status`, `bad_id`, `duplicate_id`, `bad_media`
+  - raw id rule `^[a-z0-9][a-z0-9-]{0,63}$` (before the `<mod id>:` prefix, decision 128: Bundles from mods), unique within the mod
+  - `modIssues()` keeps its counts (plan 118''s mods screen shows them)
+- `Question.svelte`: the «media missing» line only when a file was set and failed, or the role is essential; our questions unchanged (they always have media).
+- Must stay importable from plain Node via the built `engine/pool.js` (decision 124 output paths): the check in task 2 imports it, no browser-only imports in that module.
+
+## Done when
+- A `pool.test.ts` case covers a text-only question and each reason code.
+- A text-only mod question plays in `trivia-desktop` (dev switch `TRIVIA_DEV_STEAM_USER=1`, mod in a temp `TRIVIA_MODS_DIR`) with no missing-media line; temp mod deleted.
+- Per-commit checks pass.', '2026-10-13T18:36:02Z', NULL, 940);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (982, 120, 'trivia --check-mod <folder>: headless mod check in the shell', 'work', 'open', NULL, NULL, 'Part 2 of plan 120. After task 1 of this plan (modPool reasons), plan 111 (readable build, `task 944: Readable build config: preserveModules, decision 124 names, stable cssHash`) and plan 119 tasks 1–2 (`task 977: publish.mjs: validate, stage, upload; workshopId in mods.mjs`, `task 978: main.mjs: --publish-mod flags, headless branch, Windows output`).
+
+Why: decision 133: Player bundle kit: check with trivia --check-mod, kit in modding/ shipped in the install folder — players check a mod folder headless, same validators as the loader.
+
+## What
+- `app/desktop/check-mod.mjs`, pure Node (no Electron), exports `checkMod(folder)`:
+  - `readManifest` (plan 112, `mods.mjs`), `bundleRows` (plan 115)
+  - per bundle and language: `categories.json`, pool file (a missing pool file = not offered in that locale, decision 112: a warning, not an error), `modPool` imported from **our** built `engine/pool.js` (dev `app/client/dist/`, packaged `resources/client/`; never the mod''s copy)
+  - media files present and inside the folder (`contained()` from `resolve.mjs`); web URLs reported as dropped
+  - reads mod files as data only, never runs them (plan 102: page only)
+- Output: errors and warnings with codes and plain text; per bundle and language: questions ok, dropped (id + reason); difficulty coverage per age group from `app/data/age-groups.json` (questions in its window, levels with none); last line "loads as is" or "fix the errors above".
+- `app/desktop/main.mjs`: `--check-mod <folder>` in `parseArgs` (`OWN`, `USAGE`); headless branch before the instance lock, no window, no Steam (like `--publish-mod --dry-run`); exit 0 no errors, 1 errors, 2 usage; Windows packaged: plan 119''s log file beside the folder + message box, via the output helper shared with plan 119 (factor it out if it isn''t yet).
+
+## Done when
+- `trivia-desktop --check-mod <tmp mod>` on a throw-away mod (bad `mod.json` field, a bad bundle row, two bad questions, a missing image, an absolute URL) lists each with its code and exits 1; fixed, it exits 0.
+- A packaged Linux build (`trivia-desktop-build --dir`, `linux-unpacked/`) runs the same.
+- Temp mod deleted; per-commit checks pass.', '2026-10-13T18:36:02Z', NULL, 940);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (983, 120, 'modding/bundles.md and modding/template-bundle/', 'work', 'open', NULL, NULL, 'Part 3 of plan 120. After task 2 of this plan (`--check-mod`). Read plan 120''s sections "Format doc" and "Template" for the full list; the essentials:
+
+## `modding/bundles.md`
+- English, AGENTS.md doc style (intro paragraph, then bullets); for players, no repo knowledge assumed.
+- Folder layout: `mod.json` (plan 112''s fields, `kind: ["bundle"]` optional; `workshopId` named, decision 132), `data/bundles.json`, `data/bundles/<bundle>/categories.json`, `names.<locale>.json` (optional), `pool.json` (es) / `pool.<locale>.json`, media below the bundle folder.
+- `bundles.json` row: `id`, `kind` (`base` replaces ours for that game, decision 38; anything else adds to ours, off on configure / on in solo, decisions 33, 51; when to pick which), `languages`, `name`, `description` (player text, no translation keys). Ids get the `<mod id>:` prefix (decision 128).
+- `categories.json`, `names.<locale>.json`; every question''s `subcategory` listed.
+- Pool file: `version: 1`, `questions[]` with the `PoolQuestion` fields; id rule from task 1 (`^[a-z0-9][a-z0-9-]{0,63}$`, unique in the mod); exactly 3 `wrong_answers`, exactly 3 `hints` (vague → strong); `media` optional, `background` audio only; `status` optional. Same ids across languages = translation; missing pool file = not offered in that locale (decision 112).
+- Difficulty 1–15 anchors (from `authoring/tools/prompts/house-style.md`, adapted) and the age-group windows table from `app/data/age-groups.json`; coverage advice (kids: 1–6 evenly).
+- Media: relative `file_url`, `role` (essential / illustrative / decorative), `credit` required for files the modder didn''t make (decision 129), images ≤ 1920 px and ≤ 500 KB, web URLs dropped; no media: leave `media` out.
+- Writing advice: one breath, four options of the same form, no giveaways, real-world superlatives, family-friendly.
+- Where it goes: `mods/` / `<userData>/mods/`, restart, mods screen; `trivia --check-mod <folder>` and what its output means (reason codes); publishing: plan 119''s command, one line; change the template''s id before publishing (decision 127).
+- No stability promise.
+
+## `modding/template-bundle/`
+- `mod.json`: id `template-bundle`, languages `es`, `en`, no `workshopId`.
+- One non-base bundle (e.g. `solar-system`, «El sistema solar» / "The solar system"), 1 category, 2–3 subcategories, `names.en.json`.
+- `pool.json` (es) and `pool.en.json`: 15 questions, one per difficulty 1–15, same ids; written by hand in house style from facts you are sure of (no `qgen`: player content never enters `authoring/` or our pool).
+- One image question: `img/<name>.png` made by a throw-away script or by hand (ours, CC0), credit «¡Trivia! template · CC0»; the rest text-only.
+
+## Done when
+- `trivia-desktop --check-mod modding/template-bundle` exits 0 with 15 ok per language.
+- A copy in a temp `TRIVIA_MODS_DIR` loads in `trivia-desktop` (`TRIVIA_DEV_STEAM_USER=1`): the bundle shows marked player-made, a game with it on plays its image question, the Credits screen lists the image; temp copy deleted.
+- Per-commit checks pass.', '2026-10-13T18:36:02Z', NULL, 940);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (984, 120, 'modding/bundle-prompt.md: AI prompt for player bundles, tested once', 'work', 'open', NULL, NULL, 'Part 4 of plan 120. After task 3 of this plan (`bundles.md`, template). See plan 120''s section "AI prompt".
+
+## What
+- One file `modding/bundle-prompt.md`: a short "how to use" header for the player (paste into your AI, answer its questions, save its files, run `trivia --check-mod`), then the prompt in one fenced block.
+- Prompt in English; the AI talks with the player in the player''s language. It is standalone: everything inline, no links to our repo files.
+  1. Asks first, in one message: topic, audience (age group → difficulty window, table from `app/data/age-groups.json` inline), question language(s) from ours (es, en, de), how many (suggest 30–60), bundle name, base or add-on (default add-on).
+  2. Writes: `bundles.json` row, `categories.json`, `names.<locale>.json` if more than one language, `pool[.<locale>].json`; each in its own fenced JSON block with its file path above it.
+  3. Rules inline: our pool fields (as in `bundles.md`), house-style digest adapted from `authoring/tools/prompts/house-style.md` (options, hints, short, no giveaways, real-world clues, family-friendly), difficulty anchors, spread over the window, no media (the player adds images by hand per `bundles.md`), unique ids `<topic>-001`.
+  4. No web search assumed: only facts it is sure of; drop a question rather than guess; no numbers it can''t vouch for.
+  5. Big sets in parts ("say ''next'' for the next 20"), ids continue.
+
+## Done when
+- Run once through an AI at hand (e.g. `claude -p`), answering its questions with the sample "dinosaurs, kids, en + de, 20 questions"; save its files into a temp mod with a `mod.json`; `trivia-desktop --check-mod <temp mod>` passes with ≤ 2 dropped (else fix the prompt and rerun); the coverage line shows the kids window (1–6) filled.
+- Temp mod deleted; one line on the result in the done note.
+- Per-commit checks pass.', '2026-10-13T18:36:02Z', NULL, 940);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (985, 120, 'Ship modding/ in the install folder; modkit step in trivia-release-check', 'work', 'open', NULL, NULL, 'Part 5 of plan 120. After task 3 (template exists) and task 2 (`--check-mod`). Decision 133: the kit ships in the install folder as `modding/`; decision 134: the modding guide `modding/README.md` and `modding/examples/` live there too (part 10, plan 121), so ship the whole folder.
+
+## What
+- `app/desktop/electron-builder.yml` `extraFiles`: `../../modding` → `modding` (beside the executable, both Windows and Linux).
+- `credits_check.mjs`: the template image either listed as ours (CC0) or `modding/` excluded with a short comment.
+- `trivia-steam stage`: copies `modding/` with the unpacked builds (check it does once it''s in `{win,linux}-unpacked/`).
+- `trivia-release-check`: new step `modkit`: the packaged executable''s `--check-mod <unpacked>/modding/template-bundle` exits 0 (keeps the template valid across updates); skippable with `--skip modkit`.
+- If `task 977: publish.mjs: validate, stage, upload; workshopId in mods.mjs` is done: `preparePublish` calls `checkMod` (its errors/warnings shown as warnings only). If not done yet: add a follow-up task in plan 119 for it.
+
+## Done when
+- `trivia-desktop-build --dir` has `modding/` in `linux-unpacked/` and `win-unpacked/`.
+- `trivia-release-check --skip tag` passes its `modkit` and `credits` steps.
+- Per-commit checks pass.', '2026-10-13T18:36:03Z', NULL, 940);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (986, 120, 'Docs: player bundle kit, --check-mod; decision 133 consequences', 'work', 'open', NULL, NULL, 'Part 6 of plan 120, last. After tasks 1–5 of this plan.
+
+## What
+- `directory.md`: rows `modding/` (player kit: `bundles.md`, `bundle-prompt.md`, `template-bundle/`; shipped in the install folder) and `app/desktop/check-mod.mjs`.
+- `README.md`: how-to "Make your own question bundle" (three lines: copy the template or use the prompt, `trivia --check-mod <folder>`, `mods/`).
+- AGENTS.md "Commands": the `trivia-desktop` line gains `--check-mod <folder>`.
+- `plans/22-bundles.md` "Player bundles (mods)" (plan 115): link to `modding/bundles.md`; `plans/18-steam-integration.md` "Modding": `--check-mod`, kit shipped in the install folder.
+- `pm decision consequences 133 "…"`: files and commands that implement it.
+- Cite `decision 133: Player bundle kit: check with trivia --check-mod, kit in modding/ shipped in the install folder` where the docs explain the choice.
+
+## Done when
+- Docs name decision 133 and the paths; part 10 (plan 121) can link `modding/bundles.md` and `modding/bundle-prompt.md`.
+- Per-commit checks pass.', '2026-10-13T18:36:03Z', NULL, 940);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -25394,6 +25493,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (792, 937, '2026-10-13T18:32:48Z', '2026-10-13T18:33:42Z', 'done', NULL, 0, '84dffcbdda7ac0f6ebbf55dfd6e7583d236b226f', 'claude-opus-5-5[1m]', '12d7eb88-9475-4d60-a04a-1e0700140010', 5, 10, 5738, 164634, 33893, 0.4188708, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (793, 938, '2026-10-13T18:33:43Z', '2026-10-13T18:34:31Z', 'done', NULL, 0, '57632e244f77f55def36d6fe40f0d9dec87a649c', 'claude-opus-5-5[1m]', 'ac401352-461a-49b6-9b9f-0e219ed95866', 6, 12, 4684, 199234, 33382, 0.40063080000000007, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (794, 939, '2026-10-13T18:34:31Z', '2026-10-13T18:35:12Z', 'done', NULL, 0, '67541dba9c2e1d52cead551335b4074d1b3e7935', 'claude-opus-5-5[1m]', 'fbef0ea5-c975-4025-bfae-eeb3e063726f', 5, 10, 4014, 146797, 27300, 0.3280794, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (795, 940, '2026-10-13T18:35:12Z', '2026-10-13T18:36:18Z', 'done', NULL, 0, '99c6277f44e7dfce4732984defce207184298985', 'claude-opus-5-5[1m]', '9f8f863d-1a87-43db-8c92-919322e90b98', 8, 16, 6748, 294375, 35059, 0.47437099999999993, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
