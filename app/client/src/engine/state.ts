@@ -225,6 +225,8 @@ export interface Names {
   bundles: Record<string, { name: string; description?: string }>;
   categories: Record<string, string>;
   subcategories: Record<string, string>;
+  /** Age-group id → name (decision 48). */
+  age_groups: Record<string, string>;
 }
 
 /** Per pool: built once by engineData. */
@@ -242,7 +244,7 @@ export interface EngineData {
   groupById: Map<string, AgeGroup>;
 }
 
-export const NO_NAMES: Names = { bundles: {}, categories: {}, subcategories: {} };
+export const NO_NAMES: Names = { bundles: {}, categories: {}, subcategories: {}, age_groups: {} };
 
 export function engineData(
   pool: PoolQuestion[], categories: Category[], bundles: Bundle[], ageGroups: AgeGroup[],

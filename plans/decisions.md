@@ -683,7 +683,7 @@ Template:
   - **`stale`:** derived (hash ≠ source's current hash), never stored; left out of the export until re-translated; `validate` warns per locale.
   - **`translatable: false`** on a source question (absent = translatable): wordplay, questions about Spanish, Colombian-only answers; a non-rejected translation of it is a `validate` error.
   - **Export:** `app/data/pool.<locale>.json`, same shape as `pool.json`: source play fields (`id`, `subcategory`, `bundle`, `media`, `background`) + translated text and `difficulty`; only when source approved and translatable, translation approved and not stale. No `pool.es.json`; `pool.json` unchanged.
-  - **Names:** Spanish subcategory names stay the keys everywhere. Hand-maintained, shipped `app/data/names.<locale>.json` (`bundles`, `categories`, `subcategories`) and `app/data/bundles/<id>/names.<locale>.json` (same without `bundles`), mirroring D-43.
+  - **Names:** Spanish subcategory names stay the keys everywhere. Hand-maintained, shipped `app/data/names.<locale>.json` (`bundles`, `categories`, `subcategories`, `age_groups` by id, pm decision 48) and `app/data/bundles/<id>/names.<locale>.json` (same without `bundles`, `age_groups`), mirroring D-43.
 - Consequences: `authoring/tools/translations.py` is the one reader/writer; `qgen validate` checks locale files, names and export staleness. Whole-pool rewrites of the source (`qgen tighten`, neutral Spanish) stale every touched translation, so full translation runs come after them.
 - Supersedes / related: D-35, D-36, D-38, D-39, D-43, D-78; plans 15, 15b, 62, 63
 

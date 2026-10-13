@@ -11,6 +11,12 @@
       "description": "Für alle mit Bezug zu Kolumbien: Orte, Essen, Bräuche, Menschen, Musik und Wörter von dort."
     }
   },
+  "age_groups": {
+    "kids": "Kinder",
+    "young_teens": "Jugendliche",
+    "young_adults": "Junge Erwachsene",
+    "adults": "Erwachsene"
+  },
   "categories": {
     "fiestas-tradiciones": "Feste und Bräuche",
     "comida-bebida": "Essen und Trinken",

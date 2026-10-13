@@ -105,7 +105,7 @@ export interface GameActionBody {
 }
 
 /** What the Choice screen offers (plan 29): age groups in file order, the new game's locale's bundles
- * (plan 71) with their names in that locale. */
+ * (plan 71), both with their names in that locale. */
 export interface ChoiceOptions {
   groups: { id: string; name: string; ages: readonly [number, number | null] }[];
   bundles: { id: string; base: boolean; name: string; description: string }[];
@@ -113,7 +113,7 @@ export interface ChoiceOptions {
 
 export async function fetchChoiceOptions(): Promise<ChoiceOptions> {
   return read((save, data) => {
-    const groups = data.ageGroups.map(({ id, name, ages }) => ({ id, name, ages }));
+    const groups = data.ageGroups.map(({ id, name, ages }) => ({ id, name: data.names.age_groups[id] ?? name, ages }));
     const bundles = bundlesFor(data).map((b) => {
       const n = data.names.bundles[b.id];
       return { id: b.id, base: b.kind === "base", name: n?.name ?? b.name, description: n?.description ?? b.description };
@@ -127,7 +127,7 @@ export async function fetchChoiceOptions(): Promise<ChoiceOptions> {
 export async function fetchGameChoice(settings: Game["settings"]): Promise<{ group: string | null; difficulty: Difficulty | null; bundles: string[] }> {
   return read((save, data) => {
     const c = gameChoice({ settings }, data);
-    const group = c.age_group === null ? null : (data.groupById.get(c.age_group)?.name ?? c.age_group);
+    const group = c.age_group === null ? null : (data.names.age_groups[c.age_group] ?? data.groupById.get(c.age_group)?.name ?? c.age_group);
     const on = data.bundles.filter((b) => c.bundles.includes(b.id));
     const bundles = [...on.filter((b) => b.kind === "base"), ...on.filter((b) => b.kind !== "base")]
       .map((b) => data.names.bundles[b.id]?.name ?? b.name);

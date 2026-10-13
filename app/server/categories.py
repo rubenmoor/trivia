@@ -46,9 +46,9 @@ def bundle_of(sub):
 
 
 def load_names(locale):
-    """{"bundles", "categories", "subcategories"}: display names in a locale (D-81), base's file
+    """{"bundles", "categories", "subcategories", "age_groups"}: display names in a locale (D-81), base's file
     merged with every bundle's; keys are bundle ids, category slugs and Spanish subcategory names."""
-    out = {"bundles": {}, "categories": {}, "subcategories": {}}
+    out = {"bundles": {}, "categories": {}, "subcategories": {}, "age_groups": {}}
     for b in bundle_ids():
         p = paths.names(locale, b)
         if p.exists():

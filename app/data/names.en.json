@@ -11,6 +11,12 @@
       "description": "For anyone with ties to Colombia: its places, food, customs, people, music and words."
     }
   },
+  "age_groups": {
+    "kids": "Kids",
+    "young_teens": "Teens",
+    "young_adults": "Young adults",
+    "adults": "Adults"
+  },
   "categories": {
     "fiestas-tradiciones": "Holidays and traditions",
     "comida-bebida": "Food and drink",

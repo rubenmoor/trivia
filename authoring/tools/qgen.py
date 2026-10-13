@@ -3799,13 +3799,15 @@ def names_problems(data):
                      "subcategories": set(categories.subcategories(b))}
             if b == "base":
                 known["bundles"] = set(categories.bundle_ids())
-            elif "bundles" in doc:
-                errors.append(f"{rel}: bundle names go in {layout.NAMES(l).relative_to(ROOT)}")
+                known["age_groups"] = {g["id"] for g in load_age_groups()["groups"]}
+            for k in ["bundles", "age_groups"]:
+                if b != "base" and k in doc:
+                    errors.append(f"{rel}: {k} names go in {layout.NAMES(l).relative_to(ROOT)}")
             for k, keys in known.items():
                 names = doc.get(k) or {}
                 bad = sorted(set(names) - keys)
                 if bad:
-                    errors.append(f"{rel}: {k} not in the categories/bundles files: {first_ids(bad)}")
+                    errors.append(f"{rel}: {k} not in the categories/bundles/age-groups files: {first_ids(bad)}")
                 empty = sorted(n for n, v in names.items() if not name_ok(v, k == "bundles"))
                 if empty:
                     errors.append(f"{rel}: {k} with an empty or malformed name: {first_ids(empty)}")
@@ -3839,9 +3841,10 @@ def names_warnings():
         names = categories.load_names(l)
         n = (len(set(categories.bundle_ids()) - set(names["bundles"]))
              + len({c["slug"] for c in cats} - set(names["categories"]))
-             + len(set(categories.subcategories()) - set(names["subcategories"])))
+             + len(set(categories.subcategories()) - set(names["subcategories"]))
+             + len({g["id"] for g in load_age_groups()["groups"]} - set(names["age_groups"])))
         if n:
-            out.append(f"{l}: {n} bundle/category/subcategory name(s) missing in the names.{l}.json files")
+            out.append(f"{l}: {n} bundle/category/subcategory/age-group name(s) missing in the names.{l}.json files")
     return out
 
 

@@ -44,12 +44,13 @@ export async function availableLocales(base = ""): Promise<string[]> {
 
 /** Base's names file merged with every bundle's; none (es) → empty. */
 function mergeNames(files: unknown[]): Names {
-  const out: Names = { bundles: {}, categories: {}, subcategories: {} };
+  const out: Names = { bundles: {}, categories: {}, subcategories: {}, age_groups: {} };
   for (const f of files as (Partial<Names> | null)[]) {
     if (!f) continue;
     Object.assign(out.bundles, f.bundles);
     Object.assign(out.categories, f.categories);
     Object.assign(out.subcategories, f.subcategories);
+    Object.assign(out.age_groups, f.age_groups);
   }
   return out;
 }
