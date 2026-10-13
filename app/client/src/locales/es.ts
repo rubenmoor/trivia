@@ -1,5 +1,5 @@
-// The Spanish catalog (plans/15a-ui-translation.md, LUI-1, D-70). Players are addressed as
-// «ustedes» (Colombian usage, D-6). Leaves: a string, a plural map ({ one, other, … }) or a
+// The Spanish catalog (plans/15a-ui-translation.md, LUI-1, D-70): neutral Latin American (es-419, D-78).
+// Players are addressed as «ustedes» (D-6). Leaves: a string, a plural map ({ one, other, … }) or a
 // string[] of variants. `error` holds the engine's refusals by code (plan 22).
 
 const es = {
@@ -59,7 +59,7 @@ const es = {
     fullscreen: "Pantalla completa",
     restart: "Volver al inicio (termina la partida)",
     quit: "Salir del juego",
-    confirm: "¿Seguro? Pulsa otra vez",
+    confirm: "¿Seguro? Presiona otra vez",
     sound: "Sonido",
     music: "Música",
     effects: "Efectos",
@@ -285,7 +285,7 @@ const es = {
       ],
       9: [
         "¡Nivel {n}! Eso es más alto que la mayoría de las torres.",
-        "¡Qué berraquera! Llegaron al nivel {n}.",
+        "¡Qué maravilla! Llegaron al nivel {n}.",
         "Nivel {n}: desde allá arriba ya se veían las nubes.",
       ],
       12: [

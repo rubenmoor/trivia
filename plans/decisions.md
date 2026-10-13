@@ -812,3 +812,15 @@ Template:
   - **Packaged `.#app`** needs `TRIVIA_MEDIA` pointing at a synced cache (its `$XDG_DATA_HOME/trivia/media` starts empty); accepted for a pre-Steam test build, the Steam build bundles media (plan 34).
 - Consequences: `trivia-media sync --status approved` before game night is required, not optional. `qgen report` and the authoring start page need Node. `state/game.sqlite` and `state/flags.json` stay on disk as backups; only `migrate()` reads them. D-4's SQLite state is history.
 - Supersedes / related: D-4 (SQLite state), D-17 (download on miss in the game), D-25, D-35, D-47, D-59, D-60, D-67, D-69; plan 51; pm decisions 4, 5, 25
+
+## D-91: Shortcut keys per UI language; German joker names
+- Date: 2026-10-12
+- Context: LUI-4, LUI-5 (pm plan 69); pm decisions 53–59
+- Decision:
+  - **Keys per catalog** (pm decision 53): `joker.<id>.key`, `flag.key`, `screen.question.replayKey`, `screen.start.newKey`, `mode.*Key`, `customize.openKey`; mnemonic for the name. `toIntent` matches `e.key`, so letters work on QWERTZ/AZERTY.
+  - **Rule** (`npm run check:literals -w app/client`): single letter, unique per screen with `flag.key`, not `A`–`D` on the Question screen, no digit.
+  - **Joker keys**: `es`/`es-ES` `S P F T X` (unchanged), `en` Hint `H`, Pass & Purge `P`, Fairy `F`, Ms Picky `K`, Trick Shot `T`; `de` see below.
+  - **German joker names** (pm decisions 54–58): Zaunpfahl `Z`, Näxt `N`, Gang runter `G`, Wunschzeit `W`, Finte `F`.
+  - **Neutral `es`** (pm decision 59): «¡Qué maravilla!» for «¡Qué berraquera!», «Presiona otra vez» for «Pulsa otra vez» (`es-ES` keeps «Pulsa»).
+- Consequences: `app/client/src/locales/{es,es-ES,en,de}.ts`; D-89's "keys stay `S P F T X`" no longer holds for `en`. `picker.letters` per catalog (`de` + `ÄÖÜß`, `en` + `-'`), read by `LetterPicker.svelte`.
+- Supersedes / related: D-6, D-78, D-89; LUI-4, LUI-5; pm decisions 53, 54, 55, 56, 57, 58, 59

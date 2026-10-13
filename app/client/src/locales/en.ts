@@ -109,15 +109,14 @@ export const en = {
     video: "Video",
     background: "Background",
   },
-  // Shortcut keys stay the `es` letters for now; keys per language are LUI-4.
   joker: {
-    hint: { name: "Hint", key: "S" },
+    hint: { name: "Hint", key: "H" },
     skip: { name: "Pass & Purge", key: "P", pass: "Just pass", stamp: "GONE", purge: "Pass & Purge: goodbye to “{name}”" },
     easier: { name: "Fairy", key: "F", dial: "Difficulty" },
-    category: { name: "Ms Picky", key: "T", title: "Ms Picky: which topic do you want?" },
+    category: { name: "Ms Picky", key: "K", title: "Ms Picky: which topic do you want?" },
     snipe: {
       name: "Trick Shot",
-      key: "X",
+      key: "T",
       aim: "Pick the answer you think is",
       false: "wrong",
       shoot: "fire",

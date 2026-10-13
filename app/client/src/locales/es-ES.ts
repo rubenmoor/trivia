@@ -4,7 +4,7 @@ import type { Override } from "./es";
 
 export const esES = {
   overlay: {
-    /** Stays «Pulsa» if `es` moves to «Presiona» (decision 59). */
+    /** `es`: «Presiona» (decision 59). */
     confirm: "¿Seguro? Pulsa otra vez",
     media: "Audio y vídeo de las preguntas",
   },

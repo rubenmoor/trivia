@@ -36,7 +36,8 @@ English first (D-74); Spanish forms for `es`. Only «Solo o en grupo» is fixed;
   - `easier` «Bájale» (pm decision 42): Dial Down (matches the dial animation), Ease Up, Go Easy, Simmer Down, Baby Steps.
   - `category` «Cambiazo» (pm decision 43): Switcheroo (sneaky swap), Topic Hop, Plot Twist, Swap Shop.
   - `snipe` «Francotirador» (pm decision 44): Trick Shot (shooting a wrong answer), Sharpshooter, Long Shot, Pot Shot.
-- [ ] LUI-4 Joker keys per language or neutral keys (pm decision 53; pm plan 69). Recommended: keys in the catalog per language, mnemonic; collision rule per catalog (single letter, unique per screen, not `A`–`D` where answers show, no digit).
+- [x] LUI-4 Joker keys per language or neutral keys (pm decision 53; pm plan 69): keys in the catalog per language, mnemonic; collision rule per catalog (single letter, unique per screen, not `A`–`D` where answers show, no digit).
+  - Done 2026-10-12 (pm task 455, D-91): `es`/`es-ES` `S P F T X`, `en` `H P F K T`, `de` `Z N G W F`; replay `R`, flag `M`, new game `N` everywhere.
 - [ ] LUI-5 Launch catalogs (D-78): `es` (neutral Latin American, es-419), `es-ES` override (only differing strings: regionalisms, `vosotros`), `en`, `de`; native-speaker playtest each (pm plan 69). Later: `zh-Hans`, `ru`, `pt-BR` (milestone 12; need CJK/Cyrillic fonts).
   - German joker name candidates (2026-10-12, pm task 453), recommended first, ≤ 13 characters, mnemonic key in brackets:
   - `hint` «Soplo» (pm decision 54): Spickzettel (S), Psst! (P), Zaunpfahl (Z), Eselsbrücke (E).
@@ -45,6 +46,7 @@ English first (D-74); Spanish forms for `es`. Only «Solo o en grupo» is fixed;
   - `category` «Cambiazo» (pm decision 57): Extrawurst (E), Wunschthema (W), Kehrtwende (K), Themenhopser (T).
   - `snipe` «Francotirador» (pm decision 58): Scharfschütze (X), Kunstschuss (K), Blattschuss (X), Meisterschuss (X).
   - Neutral `es` (pm decision 59): «¡Qué berraquera!» → «¡Qué maravilla!» (`copy.consolation.9`); «Pulsa otra vez» → «Presiona otra vez» (`overlay.confirm`, `es-ES` keeps «Pulsa»).
+  - Answered (pm task 455, D-91): Zaunpfahl (Z), Näxt (N), Gang runter (G), Wunschzeit (W), Finte (F); neutral `es` both applied.
   - `es-ES` joker names: no decision; «Soplo», «Paso», «Bájale», «Cambiazo», «Francotirador» all read fine in Spain.
   - Shipping (2026-10-12, pm task 454): `de.ts` draft (recommended joker names, `es` key letters until LUI-4), `es-ES.ts` override (`vosotros`, «vídeo», «Pulsa»), all four in `CATALOGS`, `xx` dev-only; first-start screen now shows on a fresh save. `check:literals`: keys per screen, `{param}` sets, untranslated leaves. Fonts cover every catalog. Walk `de`/`es-ES` at 1920 × 1080 and 1280 × 800 (full `de` game to victory, jokers, overlay, wrong, customize, report list; fresh save; family save copy → no screen, nothing written): no overflow.
 - [ ] LUI-6 Store page texts per language (with PUB-8). S5, not milestone 9 (S4).

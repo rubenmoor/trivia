@@ -1,5 +1,5 @@
 // German catalog (plans/15a-ui-translation.md, LUI-5): Claude's draft, native-speaker check in the
-// playtest. Players are addressed as «ihr». Joker names: the recommended candidates of pm decisions 54–58.
+// playtest. Players are addressed as «ihr». Joker names: pm decisions 54–58.
 import type { Catalog } from "./es";
 
 export const de = {
@@ -109,15 +109,14 @@ export const de = {
     video: "Video",
     background: "Hintergrund",
   },
-  // Shortcut keys stay the `es` letters for now; keys per language are LUI-4 (decision 53).
   joker: {
-    hint: { name: "Spickzettel", key: "S" },
-    skip: { name: "Weg damit!", key: "P", pass: "Nur passen", stamp: "WEG", purge: "Weg damit! Tschüss, Thema „{name}“" },
-    easier: { name: "Gang runter", key: "F", dial: "Schwierigkeit" },
-    category: { name: "Extrawurst", key: "T", title: "Extrawurst: Welches Thema wollt ihr?" },
+    hint: { name: "Zaunpfahl", key: "Z" },
+    skip: { name: "Näxt", key: "N", pass: "Nur passen", stamp: "WEG", purge: "Näxt, und tschüss, Thema „{name}“" },
+    easier: { name: "Gang runter", key: "G", dial: "Schwierigkeit" },
+    category: { name: "Wunschzeit", key: "W", title: "Wunschzeit: Welches Thema wollt ihr?" },
     snipe: {
-      name: "Scharfschütze",
-      key: "X",
+      name: "Finte",
+      key: "F",
       aim: "Zielt auf die",
       false: "falsche Antwort",
       shoot: "schießen",
@@ -225,7 +224,7 @@ export const de = {
       topic: "Thema: {name}",
       replay: "nochmal",
       replayKey: "R",
-      hint: "Spickzettel {n}",
+      hint: "Zaunpfahl {n}",
       mediaMissing: "Medium nicht verfügbar (fehlt `trivia-media sync`?)",
       sendFailed: "Die Antwort konnte nicht gesendet werden: {error}",
       final: "Endgültige Antwort",
@@ -288,11 +287,11 @@ export const de = {
     snipe_no_repeat: "wenn ihr die richtige trefft, sind keine Fragen übrig, um die Stufe zu wiederholen",
     joker_not_question: "Joker gibt es nur bei einer Frage",
     joker_spent: {
-      hint: "keine Spickzettel mehr übrig",
-      skip: "kein „Weg damit!“ mehr übrig",
+      hint: "kein Zaunpfahl mehr übrig",
+      skip: "kein „Näxt“ mehr übrig",
       easier: "kein „Gang runter“ mehr übrig",
-      category: "keine Extrawurst mehr übrig",
-      snipe: "keine Scharfschützen mehr übrig",
+      category: "keine „Wunschzeit“ mehr übrig",
+      snipe: "keine Finte mehr übrig",
     },
     age_group_unknown: "unbekannte Altersgruppe: „{group}“",
     bundle_unknown: "unbekanntes Paket: „{bundle}“",
