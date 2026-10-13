@@ -13326,8 +13326,81 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 * delete code that isn''t actually used
 * check pending decisions if they are still relevant and really pending
 * check other milestones if their contents are up-to-date and update them if necessary', '2026-10-13T06:23:15Z', '2026-10-13T06:24:50Z', NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (675, 89, 'create tasks for plan 89', 'split', 'open', 1000, NULL, 'Split plan 89 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T06:52:57Z', NULL, 261);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (675, 89, 'create tasks for plan 89', 'split', 'done', 1000, '2026-10-13, tasks 676–683 for plan 89 (no files)', 'Split plan 89 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T06:52:57Z', '2026-10-13T06:54:26Z', 261);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (676, 89, 'SteamCMD, config and VDF templates', 'work', 'open', NULL, NULL, 'Plan 89 task 1. Decision 84: SteamCMD source and depot split for Steam uploads (binding).
+
+- `flake.nix`: `steamcmd` (nixpkgs, unfree, FHS wrapper) in the dev shell; extend `allowUnfreePredicate` with it (and `steam-unwrapped`/`steam-run` etc. if nix asks).
+- Check `steamcmd +quit` runs on NixOS. If not: fallback = the SDK''s `tools/ContentBuilder/builder_linux/steamcmd.sh` from the flake''s `steamSdk` fetchzip, run through `steam-run`; record which one in the D-entry. SteamCMD self-updates into its own home (`~/.local/share/Steam` or `~/Steam`), never the repo.
+- New `authoring/steam/` (never ships, like `authoring/store/`):
+  - `steam.json`: `{"appid": null, "depots": {"windows": null, "linux": null, "content": null}}` (filled by task 6 once part 2, SW-7, has the IDs)
+  - `app_build.vdf.in`: `AppID`, `Desc`, `Preview`, `SetLive` (`beta` only, never `default`), `ContentRoot`, `BuildOutput` → `work/steam/<tag>/output`, `Depots` → the three depot VDFs
+  - `depot_build.vdf.in`: `DepotID`, `ContentRoot`, `FileMapping` `*` → `.` recursive; `FileExclusion` `resources/media` in the OS depots, `*.pdb`, `steam_appid.txt`
+  - `steam.py` or `steam.mjs` = `trivia-steam` (flake wrapper, `fromCheckout`-style), subcommand `vdf --out <dir> [--appid N --depots W,L,C] [--tag T] [--preview]`: renders the templates with absolute paths (OS depots: `app/desktop/release/{win,linux}-unpacked/`; content: `app/desktop/build/media/`)
+- Generated files only under `work/steam/<tag>/` (gitignored by `work/`). No secrets anywhere.
+- Check: `trivia-steam vdf --appid 480 --depots 481,482,483 --out /tmp/x`; VDFs SteamCMD-parseable (`steamcmd +run_app_build -preview <abs vdf> +quit` without login fails only on login, or compare with Valve''s ContentBuilder `scripts/` examples).
+- D-entry (next D number in `plans/decisions.md` or wherever D-entries live) summarising plan 89''s "Decisions taken here"; `pm decision consequences 84 "…"`.', '2026-10-13T06:54:19Z', NULL, 675);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (677, 89, 'Unpacked builds for the depots (trivia-desktop-build --dir, trivia-steam stage)', 'work', 'open', NULL, NULL, 'Plan 89 task 2. Needs task 1 (`authoring/steam/`, `trivia-steam`). Does not need task 650 (Steam binding).
+
+- `trivia-desktop-build --dir`: electron-builder `dir` target producing `app/desktop/release/win-unpacked/` and `linux-unpacked/` alongside the zip/tar.gz (archives stay for hand-copied builds). Without `--dir` the command behaves as before (D-59).
+- `after-pack.mjs` must apply to `linux-unpacked` too: launcher `trivia` → `trivia-bin --no-sandbox`.
+- Media stays outside the asar at `resources/media` (from `stage-media.mjs` → `app/desktop/build/media/`).
+- `trivia-steam stage`: checks `release/{win,linux}-unpacked/` and `app/desktop/build/media/` exist and match: (OS depot files minus `resources/media/`) ∪ (content depot under `resources/media/`) = the archive''s file list per OS. Exit 1 with the difference. Content depot root stays `app/desktop/build/media/` whatever part 6 (task 260, media bundle) later does.
+- Check: build with `--dir`, run `trivia-steam stage` green; throw-away script compares with the tar.gz/zip listing; delete it after.', '2026-10-13T06:54:19Z', NULL, 675);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (678, 89, 'Packaged smoke game (authoring/steam/smoke.mjs)', 'work', 'open', NULL, NULL, 'Plan 89 task 3 = release-check step 6. Needs task 2 (`release/linux-unpacked/`).
+
+- `authoring/steam/smoke.mjs`, runnable alone: `node authoring/steam/smoke.mjs <unpacked dir>`.
+- Runs the packaged Linux build under `unshare -rn` (offline), `env -i` + FHS runtime (`steam-run`), `xvfb-run`, temp `HOME` (task 330''s recipe, now permanent). `TRIVIA_DEVTOOLS=1` + `--remote-debugging-port` as in plan 54; share CDP helpers with `authoring/store/screenshots.mjs` where cheap.
+- Script: new player → play to level 3 with an image, an audio and a video question; no missing-media notice; quit; restart → player resumes. Exit 1 with the failed step''s name.
+- Check: passes on today''s Linux build offline; fails (exit 1, message) with a media file renamed away (rename back afterwards).
+- No new npm dependency (AGENTS.md "Minimal dependencies").', '2026-10-13T06:54:20Z', NULL, 675);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (679, 89, 'trivia-release-check (SW-6)', 'work', 'open', NULL, NULL, 'Plan 89 task 4. Needs tasks 1–3. Decision 14: CI builds (SW-6) and decision 15: Release quality bar are binding.
+
+- `authoring/steam/release_check.{py,mjs}` + flake wrapper `trivia-release-check` (`fromCheckout`-style; `authoring/` may call `app/`).
+- Steps in order, each ✓/✗ with duration:
+  1. `npm run check`, `npm test`, `npm run build`, `qgen validate`
+  2. `trivia-media licenses` (exit 1 = files to replace)
+  3. `qgen report --qc` "Release bar" ✓ for the last two batches (decision 15)
+  4. `nix build .#app` (D-59)
+  5. `trivia-desktop-build --dir` (both OSes, unpacked + archives) + media check (stage-media''s missing-file check; part 6, task 260, later wires its budget check in here)
+  6. `node authoring/steam/smoke.mjs app/desktop/release/linux-unpacked`
+  7. Manual checklist: start test on a clean Windows machine and the Deck (from the archives or the last beta), sound, the timed-competitive red frame. Asked interactively (y/n/note) or read from `--manual <file>`; a "no" fails. Later parts append rows.
+- `--skip <step>` (repeatable) for a known-broken step; printed in the report (and later in the build `Desc`, task 5).
+- Report `work/steam/<tag-or-sha>/release-check.md`: commit, date, steps, skips, manual rows. Exit 1 on any ✗. Make the pass/fail and the commit machine-readable enough for `trivia-steam upload --checked` (task 5) to reuse it.
+- Check: runs green on a clean main; in the worker''s run the manual rows are answered "skipped (worker)" via `--manual`; say so in the done note.
+- Docs: `plans/18-steam-integration.md` "Builds and depots": SW-6 text rewritten to the command; README how-to (when to run it); AGENTS.md "Commands" line; `directory.md` (`authoring/steam/`).', '2026-10-13T06:54:20Z', NULL, 675);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (680, 89, 'trivia-steam upload --branch beta', 'work', 'open', NULL, NULL, 'Plan 89 task 5. Needs tasks 1–4. Decision 84: SteamCMD source and depot split for Steam uploads (SetLive beta only).
+
+- `trivia-steam upload --branch beta` (only `beta`; `--branch default` or any other is refused), `--preview` (Valve''s `Preview 1`: manifests only, no upload), `--dry-run` (no SteamCMD at all), `--checked` (reuse a passing `release-check.md` of the same commit instead of re-running).
+- Gates: `git status --porcelain` empty (gitignored media/work don''t count); HEAD carries tag `v<version>` (`app/desktop/package.json` `version`; never create or push tags); `steam.json` IDs not null; release check ✓. `--preview`/`--dry-run` skip the tag gate (dry-run also the null-ID gate, using placeholders).
+- Flow: release check (or `--checked`) → `trivia-steam stage` → `trivia-steam vdf` into `work/steam/<tag>/` → `steamcmd +login $TRIVIA_STEAM_ACCOUNT +run_app_build <abs app vdf> +quit`. Account via `TRIVIA_STEAM_ACCOUNT` or a prompt; password/Steam Guard only typed into SteamCMD. Prints BuildID and SteamCMD''s log path.
+- `Desc`: `<tag> <short sha>` plus `skipped: <steps>` if the release check skipped any.
+- Check: `--dry-run` on a clean main writes `work/steam/<sha>/` with VDFs pointing at the staged folders; `--branch default` refused; an unclean tree refused.
+- Docs: `plans/18-steam-integration.md` "Builds and depots" (S5 bullets from "Later" to the commands, depots, branches, what''s gitignored); README "Upload to Steam"; AGENTS.md "Commands"; `directory.md`.', '2026-10-13T06:54:20Z', NULL, 675);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (681, 89, 'First beta upload: checklist and decision', 'work', 'open', 220, NULL, 'Plan 89 task 6. Needs: tasks 676–680; task 650 (Steam binding packaged in both builds); part 2 of masterplan 10 (task 254: write plan: Steamworks app configuration (SW-7)) with its "values entered" decision answered (App ID + depot IDs, `beta` branch).
+- If part 2''s decision exists but is pending: `pm task-pending-decision <this task> <that decision>`, stage, stop. If it doesn''t exist yet or task 650 isn''t done: stop and say so (don''t close). Low priority on purpose so it runs after those.
+
+Work:
+- Fill `authoring/steam/steam.json` (appid, depots windows/linux/content).
+- Write the checklist into `plans/18-steam-integration.md` "Builds and depots" → "First upload":
+  - build account in Steamworks (Users & Permissions: own account, only "Edit App Metadata" + "Publish App Changes To Steam" for this app; Valve''s recommendation)
+  - `steamcmd +login <account>` once, with Steam Guard
+  - `beta` branch + password in Steamworks (App Admin → SteamPipe → Builds); password never in a file
+  - tag `v<version>` on a clean main
+  - `trivia-steam upload --branch beta`
+  - check the build appears on `beta` and installs on the author''s machine via the beta password
+- `pm decision add "First beta upload done? BuildID?"` with the checklist as body, options "uploaded (BuildID …)", "failed (paste the error)"; `pm task-pending-decision` on task 682: Record the first beta upload.', '2026-10-13T06:54:20Z', NULL, 675);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (682, 89, 'Record the first beta upload', 'work', 'open', 210, NULL, 'Plan 89 task 7. Waits for the decision "First beta upload done? BuildID?" added by task 681: First beta upload: checklist and decision. If it isn''t answered (or doesn''t exist yet): link with `pm task-pending-decision` if it exists, else stop and say so.
+
+- Pass: `plans/18-steam-integration.md` SW-10 `[x]` and SW-6 `[x]` with date, BuildID, files; `plans/project.md`; `pm decision consequences <id> "…"`.
+- Failure: one fix task in plan 89 per error (`pm task add 89 …`), a re-try decision (`pm decision add`), this task pending on it; stage and stop without closing.', '2026-10-13T06:54:20Z', NULL, 675);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (683, 89, 'Windows exe icon and metadata (B-11)', 'work', 'open', 290, NULL, 'Plan 89 task 8. `Trivia.exe` has Electron''s icon and file metadata (`win.signAndEditExecutable: false`, no wine), `plans/backlog.md` B-11.
+
+- Needs a game icon. Look for one from plan 88 (Store page and AI disclosure; capsules/logo, community icon) or elsewhere in the repo. If none: `pm decision add` who makes it (options e.g. derive from the store logo / gamemaster provides a master file), make this task pending on it, stop. Low priority on purpose: runs after plan 88''s asset tasks.
+- Tool: wine in the dev shell for electron-builder''s rcedit (`signAndEditExecutable: true`), or a pure-JS resource editor in `after-pack.mjs`. A new npm dependency needs `pm decision add` first (AGENTS.md "Minimal dependencies").
+- Set icon, `ProductName`, `FileDescription`, `CompanyName`, `FileVersion`/`ProductVersion` from `app/desktop/package.json`.
+- Check: exe resources show the icon and `ProductName`/`FileVersion` (`wrestool` or a throw-away script). `trivia-desktop-build` with and without `--dir` still works.
+- Signing: not required by Steam; note it in B-11 and plan 18. Close B-11 in `plans/backlog.md`.', '2026-10-13T06:54:20Z', NULL, 675);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -14858,6 +14931,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (508, 150, '2026-10-13T06:49:58Z', '2026-10-13T06:50:11Z', 'blocked', NULL, 0, '2f435d0837cd9b025639b9854c433b968d61502a', 'claude-opus-5-5[1m]', '2ad0b52b-95cb-4f95-a3f6-e3bc3134f186', 4, 8, 812, 103140, 22562, 0.217396, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (509, 260, '2026-10-13T06:50:12Z', '2026-10-13T06:50:25Z', 'blocked', NULL, 0, '08ba561a34574718479d810609b18b6154e87158', 'claude-opus-5-5[1m]', '5f8ef1bd-72de-4f41-baa4-31f5ce004872', 4, 8, 749, 136158, 40550, 0.3666436, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (510, 261, '2026-10-13T06:50:25Z', '2026-10-13T06:53:24Z', 'done', NULL, 0, '3e051b1a8f5b90bb7831e9451f2c892c870ab6d8', 'claude-opus-5-5[1m]', '1ce7b77f-6003-4472-885b-f0e8628bb136', 16, 28, 14196, 819572, 74649, 1.0451384000000001, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (511, 675, '2026-10-13T06:53:24Z', '2026-10-13T06:54:36Z', 'done', NULL, 0, '4e0e48820b631b95e46f58809573186fa54cf13c', 'claude-opus-5-5[1m]', '5d4305e3-360b-45f2-bb82-5e9da5ad3f28', 9, 18, 7678, 345873, 36861, 0.5176946, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
