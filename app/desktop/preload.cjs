@@ -8,6 +8,11 @@ contextBridge.exposeInMainWorld("trivia", {
   loadSave: () => ipcRenderer.invoke("save:load"),
   writeSave: (text) => ipcRenderer.invoke("save:write", text),
   backupSave: (kind) => ipcRenderer.invoke("save:backup", kind),
+  // Plan 114: mod list and mods.json writes.
+  mods: {
+    list: () => ipcRenderer.invoke("mods:list"),
+    set: (order) => ipcRenderer.invoke("mods:set", order),
+  },
   // Plan 85: the binding lives in main; the flag comes from main's additionalArguments.
   steam: {
     available: process.argv.includes("--trivia-steam"),

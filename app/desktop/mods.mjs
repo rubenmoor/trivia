@@ -4,7 +4,7 @@ import path from "node:path";
 
 const MAX_BYTES = 64 * 1024;
 const MAX_WALK = 10000;
-const ID = /^[a-z0-9][a-z0-9-]{1,63}$/;
+export const ID = /^[a-z0-9][a-z0-9-]{1,63}$/;
 const SEMVER = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)$/;
 const WORKSHOP_ID = /^[1-9]\d{0,19}$/;
 // UI_LANGS in app/client/src/lib/i18n.ts.

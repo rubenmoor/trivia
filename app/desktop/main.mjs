@@ -4,7 +4,7 @@ import { existsSync, mkdirSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { arrange, discover, readSettings, writeSettings } from "./mods.mjs";
+import { arrange, discover, ID as MOD_ID, readSettings, writeSettings } from "./mods.mjs";
 import { makeResolver } from "./resolve.mjs";
 import { makeSaveFile } from "./save.mjs";
 import { fakeUgc, workshopItems } from "./workshop.mjs";
@@ -103,7 +103,7 @@ let steamTimer = null;
 let steamInput = false;
 let validUser = false; // decision 111: Steam user with a SteamID, or the dev switch; fixed for the session
 let overlay = false; // Windows only: the native window Steam's overlay draws into (D-92)
-let mods = []; // arrange()'s list for this run (plan 112), for the bridge of parts 3/6
+let activeDirs = new Set(); // this run's overlay layers (plan 112): fixed until restart
 let saveFile = null; // set in start(), after Steam; stays null without a valid user
 let writing = Promise.resolve();
 let pending = 0;
@@ -294,11 +294,10 @@ async function start() {
 /** Discovery, mods.json, load order → overlay layers, fixed for the run; none with --no-mods. */
 async function loadMods() {
   const file = modsSettingsFile();
-  const found = await discover({ local: modsDir(), workshop: workshopSource() }, app.getVersion());
-  const arranged = arrange(found, await readSettings(file), { validUser });
+  const arranged = await arrangeMods(true);
   if (arranged.changed)
     await writeSettings(file, arranged.settings).catch((err) => console.error(`trivia: mods: ${file}: ${err.message}`));
-  mods = arranged.list;
+  const mods = arranged.list;
   for (const mod of mods)
     if (mod.source === "workshop")
       console.error(`trivia: mod ${mod.id ?? "?"} workshop ${mod.publishedFileId} ${mod.dir ? "installed" : mod.state}`);
@@ -314,21 +313,71 @@ async function loadMods() {
   }
   if (mods.length)
     console.error(`trivia: mods: ${Object.entries(count).map(([state, n]) => `${n} ${state}`).join(", ")}`);
+  activeDirs = new Set(arranged.layers);
   return arranged.layers;
 }
 
+/** Fresh discovery (local + Workshop re-query) arranged against mods.json; at start and per `mods:list`. */
+async function arrangeMods(log = false) {
+  const found = await discover({ local: modsDir(), workshop: workshopSource(log) }, app.getVersion());
+  return arrange(found, await readSettings(modsSettingsFile()), { validUser });
+}
+
 /** Subscribed items (plan 114): real user only (decision 111); dev switch + `TRIVIA_DEV_WORKSHOP_DIR`: a fake folder. */
-function workshopSource() {
+function workshopSource(log) {
   try {
     if (hasSteamId()) return workshopItems(steam.workshop);
     const dir = process.env.TRIVIA_DEV_WORKSHOP_DIR;
     if (!dir || process.env.TRIVIA_DEV_STEAM_USER !== "1") return [];
-    console.error(`trivia: dev Workshop folder ${dir} (TRIVIA_DEV_WORKSHOP_DIR)`);
+    if (log) console.error(`trivia: dev Workshop folder ${dir} (TRIVIA_DEV_WORKSHOP_DIR)`);
     return workshopItems(fakeUgc(dir));
   } catch (err) {
     console.error(`trivia: workshop unavailable: ${err.message}`);
     return [];
   }
+}
+
+/** Page's view of one list entry: plain JSON, no disk paths but the folder's basename. */
+function modEntry(mod) {
+  const m = mod.manifest ?? {};
+  return {
+    id: mod.id,
+    name: m.name ?? null,
+    version: m.version ?? null,
+    description: m.description ?? null,
+    source: mod.source,
+    publishedFileId: mod.publishedFileId,
+    kind: mod.kind,
+    languages: Array.isArray(m.languages) ? m.languages : [],
+    on: mod.on,
+    active: !!mod.dir && activeDirs.has(mod.dir),
+    position: mod.position,
+    state: mod.state,
+    warnings: mod.warnings.map((w) => w.code),
+    error: mod.error ? { code: mod.error.code, ...(mod.error.field ? { field: mod.error.field } : {}) } : null,
+    dir: mod.dir ? path.basename(mod.dir) : null,
+  };
+}
+
+async function listMods() {
+  const { list } = await arrangeMods();
+  return { mods: list.filter((e) => e.state !== "missing").map(modEntry), noMods: args.noMods, validUser };
+}
+
+
+/** `[{ id, on }]` in load order; ids left out keep their order after them. Next run's overlay only. */
+async function setMods(order) {
+  const ok =
+    Array.isArray(order) &&
+    order.length <= 500 &&
+    order.every((e) => e !== null && typeof e === "object" && typeof e.id === "string" && MOD_ID.test(e.id) && typeof e.on === "boolean") &&
+    new Set(order.map((e) => e.id)).size === order.length;
+  if (!ok) throw new Error("bad_mods");
+  const { settings } = await arrangeMods();
+  const given = new Set(order.map((e) => e.id));
+  const mods = [...order.map(({ id, on }) => ({ id, on })), ...settings.mods.filter((e) => !given.has(e.id))];
+  await writeSettings(modsSettingsFile(), { ...settings, mods });
+  return listMods();
 }
 
 /** IPC for preload.cjs; only our own page may call. */
@@ -345,6 +394,9 @@ function bridge() {
   handle("save:load", () => (saveFile ? queued(() => saveFile.read()) : null));
   handle("save:write", (text) => (saveFile ? queued(() => saveFile.write(text)) : refused()));
   handle("save:backup", (kind) => (saveFile ? queued(() => saveFile.backup(kind)) : refused()));
+  // Mods (plan 114): fresh list per call; set rejects bad_mods, writes mods.json, applies next start.
+  handle("mods:list", listMods);
+  handle("mods:set", setMods);
   // Steam (plan 85): pass-throughs; null/false without Steam.
   handle("steam:steam-id", () => steam?.getStatus().steamId ?? null);
   handle("steam:language", () => steam?.apps.getCurrentGameLanguage() ?? null);

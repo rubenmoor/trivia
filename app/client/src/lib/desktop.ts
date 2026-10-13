@@ -12,6 +12,8 @@ export interface DesktopBridge {
   /** Moves the save to `save/backup/`; the new path. */
   backupSave(kind: BackupKind): Promise<string>;
   readonly steam: SteamBridge;
+  /** Missing in the dev server's shim. */
+  readonly mods?: ModsBridge;
   /** Set by the dev server's page shim (plan 99): its save dir is the dev switch. */
   readonly devServer?: true;
 }
@@ -38,6 +40,46 @@ export interface SteamBridge {
   unlock(id: string): Promise<boolean>;
 }
 
+/** Mods in the shell (plan 114); changes apply on the next start. */
+export interface ModsBridge {
+  /** Fresh discovery per call: new subscriptions and finished downloads show up. */
+  list(): Promise<ModList>;
+  /** Load order, top first; ids left out keep their order after these. Rejects `bad_mods`. */
+  set(order: { id: string; on: boolean }[]): Promise<ModList>;
+}
+
+export interface ModList {
+  mods: ModEntry[];
+  /** `--no-mods`: nothing loaded this run. */
+  noMods: boolean;
+  validUser: boolean;
+}
+
+/** One row; `id`, `name`, `version`, `description` null when unknown (downloading, no or bad `mod.json`). */
+export interface ModEntry {
+  id: string | null;
+  name: string | null;
+  version: string | null;
+  description: string | null;
+  source: "local" | "workshop";
+  publishedFileId: string | null;
+  kind: string[];
+  languages: string[];
+  /** Setting in `mods.json`. */
+  on: boolean;
+  /** In this run's overlay; differs from `on` until restart. */
+  active: boolean;
+  /** Load order index (0 = top, wins); null outside the order. */
+  position: number | null;
+  /** loaded, off, no_user, invalid, downloading, disabled. */
+  state: string;
+  /** Codes: needs_update, workshop_id_mismatch, game_version, unknown_key, unknown_language. */
+  warnings: string[];
+  error: { code: string; field?: string } | null;
+  /** Folder basename, for the dev log. */
+  dir: string | null;
+}
+
 /** Window position in device pixels. */
 export interface TextFieldRect {
   x: number;
@@ -54,6 +96,7 @@ declare global {
 
 export const desktop: DesktopBridge | null = window.trivia ?? null;
 export const steam: SteamBridge | null = desktop?.steam ?? null;
+export const mods: ModsBridge | null = desktop?.mods ?? null;
 /** Saves and flags allowed (decision 111); the only check plan 87 and the flag UI read. */
 export const validUser: boolean = steam?.user === true || desktop?.devServer === true;
 /** Dev switch or dev server (plan 85): «Ir a pregunta…»; a real Steam user is not dev mode. */
