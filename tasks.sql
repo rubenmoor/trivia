@@ -20389,8 +20389,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:30:43Z', '2026-10-13T17:40:50Z', 873);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (880, 107, 'create tasks for plan 107', 'split', 'done', 1000, '2026-10-13, tasks.sql', 'Split plan 107 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:33:00Z', '2026-10-13T17:41:26Z', 874);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (881, 108, 'create tasks for plan 108', 'split', 'open', 1000, NULL, 'Split plan 108 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:34:46Z', NULL, 875);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (881, 108, 'create tasks for plan 108', 'split', 'done', 1000, '2026-10-13, tasks.sql: tasks 889, 890', 'Split plan 108 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:34:46Z', '2026-10-13T17:42:08Z', 875);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (882, 109, 'create tasks for plan 109', 'split', 'open', 1000, NULL, 'Split plan 109 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:37:28Z', NULL, 876);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (883, 110, 'create tasks for plan 110', 'split', 'open', 1000, NULL, 'Split plan 110 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -20509,6 +20509,50 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Not here
 - Consent question and Esc toggle (plan 108), pull (plan 109), deploy and Steam-side close checks (Steam "Stop" Linux/Deck/Windows, Deck sleep; plan 110).', '2026-10-13T17:41:25Z', NULL, 880);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (889, 108, 'Privacy texts for telemetry (PRIVACY.md, ST-5 store text, on-screen drafts)', 'work', 'open', NULL, NULL, 'Part of plan 108: Telemetry consent UI and privacy texts. Describe opt-in telemetry in the privacy texts and draft the short on-screen strings for task 2 of this plan.
+
+## Needs first
+- `task 867: Report server: privacy texts (PRIVACY.md, store, dialog)` done (creates `PRIVACY.md` in every launch language and ST-5 "Privacy" in `plans/11-steam.md`). If still open: stop, it runs first by priority.
+- Read plans 105 (`Telemetry API and server`), 106 (`Telemetry recording in the game`), 107 (`Telemetry send from the shell`) as built (code) or planned; decisions 118 (server storage, 30 days), 119 (recording), 120 (send at quit, one later try), 121 (consent per install).
+
+## Do
+- `PRIVACY.md`, every language section: new sub-section "Anonymous gameplay data (opt-in)" / «Datos de juego anónimos (opcional)» / «Anonyme Spieldaten (freiwillig)»; content exactly as plan 108 "Privacy texts" lists (off by default, asked once, Esc menu, off deletes unsent data + install id; fields sent per session/game/question; not sent; Steam ticket check, salted-hash daily counter; ≤ 30 days, then only aggregates per question; processors Cloudflare, Valve).
+- Rewrite the "no other data leaves the game; no analytics" line → "nothing else is sent; no third-party analytics, no ads" (every language).
+- ST-5 "Privacy" in `plans/11-steam.md`: same section, short, per store language; gamemaster step: store text updated in the same release as the first build with telemetry.
+- Not here: `plans/11-steam.md` principle 3 / other "no telemetry" lines (task 877''s plan).
+- Fields: check against plan 105''s contract (`app/` / server code) and plan 106''s builder; texts follow the code; note differences in the done note.
+- Style guides `app/client/src/locales/style/<locale>.md` (plan 100, task 799) if they exist.
+- `.md` style per AGENTS.md.
+
+## Hand-off to task 2
+- Done note (or a short block in the done note) with drafted strings per language es, es-ES (only where different), en, de for keys `consent.title`, `consent.body`, `consent.noNames`, `consent.change`, `consent.no`, `consent.yes`, `overlay.telemetryOn`, `overlay.telemetryOff`, `overlay.telemetryInfo`. Plan 108 "Consent screen" has the es draft; de infinitive style, no plural address. Nothing promised on screen that isn''t in `PRIVACY.md`.
+
+## Done when
+- `PRIVACY.md` and ST-5 describe telemetry in every launch language, matching the code; drafts in the done note.
+- Per-commit checks (AGENTS.md) pass.', '2026-10-13T17:42:06Z', NULL, 881);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (890, 108, 'Consent screen and Esc menu toggle for telemetry', 'work', 'open', NULL, NULL, 'Part of plan 108: Telemetry consent UI and privacy texts. The first-start yes/no and the Esc menu row; spec in plan 108 "Consent screen", "Esc menu row", "Strings".
+
+## Needs first
+- task 889 (privacy texts; its done note has the string drafts: `pm show 889`).
+- `task 886: Shell: telemetry store (install.json, session file, IPC)` and `task 887: Page: telemetry recording from the save` (bridge `telemetry.state()` / `setConsent()`, consent cache in `app/client/src/lib/telemetry.ts`). Don''t rebuild them.
+- Decision 121: Telemetry consent: stored per install, not in the save.
+
+## Do
+- `app/client/src/game/ConsentScreen.svelte`, layout like `LanguageScreen.svelte`: title, body, 2 lines, buttons «No» (first, `data-focus-default`, focused on mount) and «Sí»; arrows, Enter/Space/pad A, mouse, `pick` 1/2; `back` = No; `menu` swallowed; scope `name: "consent"`. Press → await `setConsent(yes)` (buttons disabled) → `go("start", "whoosh")`; failure: dev console log only, go to start.
+- `Game.svelte`: screen `"consent"`; check `available && consent === null` in `refresh()` after `askLanguage()`; the language screen''s `onpicked` goes to consent instead of start when it applies.
+- `Overlay.svelte` general column, settings group: toggle row (label from state, `null` = no; `run` → `setConsent(!on)`) + read-only info line; only when `available`.
+- Catalog keys `consent.*`, `overlay.telemetryOn|Off|Info` in `es.ts`, `en.ts`, `de.ts`, `es-ES.ts` only where different; style guides `app/client/src/locales/style/<locale>.md` if they exist.
+- Docs: one line in `plans/12-client-engine.md` "Telemetry recording" section; `directory.md` row for `ConsentScreen.svelte`.
+- `trivia-gallery`: if it exists, add the consent screen and the Esc menu with the row to its step list; if not, append that to `task 802: trivia-gallery: render every screen and dialog per UI language` with `pm task set 802 --body -` (keep its text).
+
+## Check
+- `trivia-desktop`, `TRIVIA_DEV_STEAM_USER=1`, `TRIVIA_TELEMETRY_DIR` and `TRIVIA_SAVE_DIR` in `/tmp`: fresh save → language → consent (focus «No», Enter → start, `install.json` `{"consent": false}`); delete `install.json`, existing save → consent before start; «Sí» via pad/mouse/key 2 → install id; Esc row flips both ways, `sessions/` gone on off.
+- No valid user (switch off, no Steam) → no screen, no row; browser/dev server → no screen, no row.
+- `?lang=xx`, `en`, `de` fit on 1920 × 1080 and 1280 × 800.
+- `npm run check` (incl. `check:literals`), `npm test`, `npm run build`, `qgen validate`.
+
+## Done when
+- Plan 108 "Done when" first two points hold.', '2026-10-13T17:42:06Z', NULL, 881);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -22555,6 +22599,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (750, 878, '2026-10-13T17:39:46Z', '2026-10-13T17:40:18Z', 'done', NULL, 0, '469660a11bc4c056061d3e04c287eba2aa4eecbd', 'claude-opus-5-5[1m]', '8e30facf-9116-4129-a160-6d232154d949', 5, 10, 2953, 158856, 30153, 0.3320952, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (751, 879, '2026-10-13T17:40:19Z', '2026-10-13T17:40:56Z', 'done', NULL, 0, '026e8ed36ea613d4e15098efdf32e5e9f10b9bb3', 'claude-opus-5-5[1m]', '2f22575e-dceb-4777-b2c0-26402df3e896', 5, 10, 3661, 162808, 32795, 0.3681816, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (752, 880, '2026-10-13T17:40:56Z', '2026-10-13T17:41:33Z', 'done', NULL, 0, 'f196fab8fb7f84e097c6fa0dd5dc3c80b34c659f', 'claude-opus-5-5[1m]', '73b339d9-5478-463e-900f-1b1ca03df636', 6, 12, 2790, 167412, 23143, 0.27447439999999995, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (753, 881, '2026-10-13T17:41:34Z', '2026-10-13T17:42:14Z', 'done', NULL, 0, 'b3cac869b5ac9a2a015f196227bb10308a9553da', 'claude-opus-5-5[1m]', 'edd86372-bf2f-47c5-b3e7-b332f4d62460', 5, 10, 4029, 156853, 30579, 0.3566226, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
