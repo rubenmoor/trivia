@@ -2,9 +2,8 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { parseSave, setFlag } from "./save.ts";
 import { emptySave, SAVE_VERSION, SPANISH, type SaveData } from "./state.ts";
-import { MemoryStore } from "./store.ts";
 import { fixture } from "./test/fixtures.ts";
-import { snapshot, upgradeDb } from "./test/save.ts";
+import { MemoryStore, snapshot, upgradeDb } from "./test/save.ts";
 
 const { steps } = fixture("game/abandon.json") as { steps: { db?: Parameters<typeof upgradeDb>[0] }[] };
 const v2 = steps.findLast((s) => s.db)!.db!;

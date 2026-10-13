@@ -6,7 +6,7 @@ import { broadOf, byId } from "./pool.ts";
 import { pyRepr } from "./pycompat.ts";
 import type { Rng } from "./rng.ts";
 
-export const SAVE_VERSION = 4; // bump app/server/save.py VERSION/LISTS too
+export const SAVE_VERSION = 4; // bump app/server/save.py VERSION/LISTS and authoring/tools/save_file.py too
 
 export type { Language };
 
@@ -57,7 +57,7 @@ export interface GameRow {
 
 export const gameLocale = (row: GameRow): string => row.locale ?? "es";
 
-export interface SeenRow {
+interface SeenRow {
   question_id: string;
   /** 0: the game was deleted (GF-7); game IDs get reused. */
   game_id: number;
@@ -68,7 +68,7 @@ export interface SeenRow {
 export type Outcome = "skipped" | "easier" | "category" | "sniped" | "admin_skip" | "admin_block" | "admin_burn" | "admin_replace";
 
 /** An answered question has `correct`; a replaced or skipped one `outcome`. */
-export interface HistoryEntry {
+interface HistoryEntry {
   level: number;
   question_id: string;
   correct?: boolean;
@@ -77,7 +77,7 @@ export interface HistoryEntry {
   jokers?: JokerName[];
 }
 
-export interface LastAnswer {
+interface LastAnswer {
   question_id: string;
   chosen: number;
   correct: boolean;
@@ -116,8 +116,7 @@ export function emptySave(): SaveData {
 }
 
 /** Fill in the joker fields for games saved before JK-2 (game.with_defaults); mutates and returns. */
-export function withDefaults(state: GameState): GameState {
-  const s = state;
+export function withDefaults(s: GameState): GameState {
   s.purged ??= [];
   s.hints_shown ??= 0;
   s.struck ??= [];
@@ -135,7 +134,7 @@ export function nextId(rows: { id: number }[]): number {
 }
 
 // Error codes (D-57), as in the former game.py's ERRORS; English for logs.
-type Params = Record<string, any>;
+type Params = Record<string, unknown>;
 const ERRORS: Record<string, string | ((p: Params) => string)> = {
   name_missing: "player name missing",
   name_too_long: (p) => `name too long (at most ${p.max} letters)`,

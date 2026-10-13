@@ -104,7 +104,7 @@ export function outlook(save: SaveData, data: EngineData, body: Record<string, u
     const choice = game.resolveChoice(data, pick(body, game.CHOICE_KEYS));
     const mode = body.mode ?? "gamemaster";
     if (!(game.MODES as unknown[]).includes(mode)) throw new GameError("mode_unknown", { mode: String(mode) });
-    const players = Number.isInteger(body.players) && (body.players as number) > 0 ? body.players as number : 1;
+    const players = typeof body.players === "number" && Number.isInteger(body.players) && body.players > 0 ? body.players : 1;
     return { save, status: 200, body: outlookOf(save, data, { ...choice, mode: mode as GameMode, players }) };
   });
 }

@@ -1,5 +1,6 @@
 import { parseSave } from "../save.ts";
-import type { PlayerRow, SaveData } from "../state.ts";
+import { emptySave, type PlayerRow, type SaveData } from "../state.ts";
+import type { Store } from "../store.ts";
 
 type Tables = Pick<SaveData, "players" | "games" | "seen" | "blocked">;
 
@@ -22,4 +23,21 @@ export function snapshot(save: Tables): Tables {
   const seen = [...save.seen].sort((a, b) =>
     a.game_id - b.game_id || (a.question_id < b.question_id ? -1 : a.question_id > b.question_id ? 1 : 0));
   return { players: byId(save.players), games: byId(save.games), seen, blocked: [...save.blocked].sort() };
+}
+
+/** In memory, for tests; copies in and out, so callers can't touch the stored document. */
+export class MemoryStore implements Store {
+  private data: SaveData | null;
+
+  constructor(data: SaveData | null = null) {
+    this.data = data && structuredClone(data);
+  }
+
+  async load(): Promise<SaveData> {
+    return structuredClone(this.data ?? emptySave());
+  }
+
+  async save(data: SaveData): Promise<void> {
+    this.data = structuredClone(data);
+  }
 }
