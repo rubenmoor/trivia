@@ -222,6 +222,7 @@ export interface Overview {
     bundles: { id: string; name: string; questions: number; unreviewed: number }[];
   };
   llm_approved: number;
+  /** `qgen batch` runs, then `tr-<locale>-<n>` runs of `qgen batch --translate`. */
   unfinished_runs: string[];
   batches: {
     name: string;

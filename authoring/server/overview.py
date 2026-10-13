@@ -1,5 +1,6 @@
 """GET /api/overview: everything the authoring start page shows except the statistics
 (plans/08-review-tool.md, "Start page", RV-12). Computed fresh from the pool on every call."""
+import json, re
 from collections import Counter
 
 import layout  # authoring/tools/layout.py; makes app/server importable
@@ -20,6 +21,13 @@ def supply(pool):
     anyc, unseen = engine.supplies((avail, blocked), ([q for q in avail if not seen[q["id"]]], blocked))
     return {"blocked": len(blocked), "unseen": by_seen[0], "seen_once": by_seen[1], "seen_twice": by_seen[2],
             "per_level": anyc["per_level"], "rows": [{"label": "any", "levels": anyc["supply"]}, {"label": "unseen", "levels": unseen["supply"]}]}
+
+
+def unfinished_translate_runs():
+    """Unfinished `qgen batch --translate` runs (tr-<locale>-<n>, = qgen.next_translate_run), sorted."""
+    names = re.compile(rf"tr-({'|'.join(map(re.escape, translations.LOCALES))})-\d+")
+    return sorted(p.parent.name for p in layout.WORK.glob("tr-*/run.json")
+                  if names.fullmatch(p.parent.name) and not (json.loads(p.read_text(encoding="utf-8")) or {}).get("done"))
 
 
 def batch_rows(pool, locale=None):
@@ -96,7 +104,7 @@ def build(pool, bundles):
             "bundles": bundle_rows,
         },
         "llm_approved": sum((q.get("review") or {}).get("reviewer") == "llm" for q in approved),
-        "unfinished_runs": batches.unfinished_runs(),
+        "unfinished_runs": batches.unfinished_runs() + unfinished_translate_runs(),
         "batches": [r for l in translations.LOCALES for r in batch_rows(translations.load(l)["questions"], l)]
                    + batch_rows(pool),
         "locales": locale_rows(pool),

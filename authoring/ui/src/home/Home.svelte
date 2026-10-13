@@ -46,7 +46,12 @@
     if (!overview) return [];
     const q = overview.queues;
     const out: Task[] = [
-      ...overview.unfinished_runs.map((run) => ({ count: 1, text: `unfinished batch ${run}: resume it with`, command: "qgen batch" })),
+      ...overview.unfinished_runs.map((run) => {
+        const locale = /^tr-(.+)-\d+$/.exec(run)?.[1];
+        return locale
+          ? { count: 1, text: `unfinished translation run ${run}: resume it with`, command: `qgen batch --translate ${locale}` }
+          : { count: 1, text: `unfinished batch ${run}: resume it with`, command: "qgen batch" };
+      }),
       {
         count: q.needs_work,
         text: `${q.needs_work === 1 ? "question needs" : "questions need"} work: approve, reject or give new feedback`,
