@@ -1066,6 +1066,31 @@ Plan 79 reviews `authoring/tools/qgen.py` section by section, then its module st
 
 | file | finding | category | severity | status |
 |---|---|---|---|---|
+| `authoring/tools/qgen.py` module docstring (= `qgen -h`) | command list missed `qgen batch --translate`, `qgen health ack`, `report --locale`/`--exit-check`; now listed; AGENTS.md's qgen commands all exist | inconsistency | low | fixed (task 557) |
+| `authoring/tools/qgen.py` imports | `import layout  # noqa: F401` claimed unused, but `layout.AGE_GROUPS`/`BUNDLES`/`LOCALE_POOL` are read: comment now says what it is for; `difflib`, `urllib.parse`, `random`, `Counter` all used | inconsistency | low | fixed (task 557) |
+| `authoring/tools/qgen.py` `LEVEL_WEIGHTS` | hard-coded copy of `app/data/age-groups.json` young_teens `level_weights` (its `about` says so); `target_weights` could read the focus group's weights; changes AG-8's stop | complexity | low | follow-up task 558 |
+| `authoring/tools/qgen.py` `RUBRIC`, `HARD_CRITERIA`, `SOFT_CRITERIA` | no findings: all read (rate schema, merge, `soft_score`, `health.py`) | — | — | — |
+| `authoring/tools/qgen.py` `load_json` | a malformed file raised `JSONDecodeError` naming no file; now the path is in the message (same exception type, `except json.JSONDecodeError` callers unaffected) | practice | low | fixed (task 557) |
+| `authoring/tools/qgen.py` `save_json` | atomic (`.tmp` + `replace`), one lock for all paths in the process; cross-process races: part 1 row "writers lock per process only" | practice | low | handed to part 10 |
+| `authoring/tools/qgen.py` `slug`, `norm` | identical to `concepts._slug` and `concepts.key` (same stopword list); qgen already imports `concepts`: duplication candidate for part 10 | complexity | low | handed to part 10 |
+| `authoring/tools/qgen.py` `load_age_groups`, `focus_group`, `ages_text` | `age-groups.json` re-read on every call (~12 call sites, twice per `prompt()`) | performance | low | won't fix: small file, keeps hand edits visible; < 1 ms |
+| `authoring/tools/qgen.py` `VOICE`, `load_bundles`, `bundles_text`, `voices_text`, `bundle_text`, `check_bundle`, `not_in_bundle` | `bundle_text` raises `StopIteration` for an unknown bundle | bug | low | won't fix: `cmd_draft` runs `check_bundle` first |
+| `authoring/tools/qgen.py` `prompt()` | no findings: placeholders filled after the files are joined; `{age_groups}` join assumes ≥ 2 groups (4 in `age-groups.json`) | — | — | — |
+| `authoring/tools/qgen.py` `run_dir` | no findings | — | — | — |
+| `authoring/tools/qgen.py` `parallel()` | Ctrl-C left the executor running every queued item to the end (checked: 12 of 12 items after Ctrl-C at 0.5 s, 3 jobs), and interrupted `claude` children were retried; now pending items are cancelled and running `claude()` calls don't retry (`_interrupted`); the failure label also shadowed the `label` parameter (renamed `what`) | bug | medium | fixed (task 557) |
+| `authoring/tools/qgen.py` `UsageLimit`, `LIMIT_WORDS`, `RESET_RE`, `limit_reset` | no findings: checked 12am/12pm, a named month across the year end, unknown zone (falls back to local), invalid day/hour (None) | — | — | — |
+| `authoring/tools/qgen.py` `limit_reset` | part 1 rows "broad 10 (… except `nasa.py:80` and `qgen.py:238`, both with a `noqa: BLE001` reason)" and "silent `return None` … `qgen.py:257` `ValueError` on an unparsable reset date" | practice | low | won't fix: both are the documented fallbacks (local time; None = no wait, `qgen batch` exits `EXIT_LIMIT`) |
+| `authoring/tools/qgen.py` `wait_for_reset`, `LIMIT_MARGIN` | no findings: sleeps in ≤ 60 s steps on the wall clock, aware datetimes throughout | — | — | — |
+| `authoring/tools/qgen.py` `main()`, `run_steps` | exit code 75 (RUNBOOK's usage-limit stop) as a bare number in two places; now `EXIT_LIMIT` | practice | low | fixed (task 557) |
+| `authoring/tools/qgen.py` `main_model` | no findings | — | — | — |
+| `authoring/tools/qgen.py` `claude()` | the 1800 s subprocess timeout was a bare number; now `CLAUDE_TIMEOUT`. A timeout raises `TimeoutExpired` without retry (counted as a failed item by `parallel`) | practice | low | fixed (task 557) |
+| `authoring/tools/qgen.py` `claude()` | costs of failed attempts (`is_error`, no `structured_output`) are never written to `costs.log`: run costs undercount retried calls; logging them also changes `health.py`'s call counts | bug | low | follow-up task 731 |
+| `authoring/tools/qgen.py` `claude()` | usage limits are recognised only in a JSON `is_error` result; a limit message on stderr with non-JSON stdout would be retried, then fail as `RuntimeError` | bug | low | won't fix: all 59 limit failures in `work/*.log` came as JSON results |
+| `authoring/tools/qgen.py` `claude()` | no findings: `costs.log` goes to `cwd`; every caller passes a `work/` directory (the run, its `audit/`, `work/concepts`, `work/bundles`) | — | — | — |
+| `authoring/tools/qgen.py` `MEDIA_SCHEMA`, `QUESTION_SCHEMA`, `DRAFT_SCHEMA`, `RATE_SCHEMA`, `REVISE_SCHEMA`, `FACT_SCHEMA`, `TRANSLATE_SCHEMA`, `TRAVEL_REASONS`, `CONCEPT_ITEM`, `TOPUP_SCHEMA` | no findings: every schema is used | — | — | — |
+| `authoring/tools/qgen.py` `REVISED_SCHEMA` | hand-written copy of `QUESTION_SCHEMA` minus `slot`/`option`/`needs_fact_check`; now derived from it (`json.dumps` byte-identical, so the same `--json-schema`) | complexity | low | fixed (task 557) |
+| `authoring/tools/qgen.py` `TRANSLATE_SCHEMA` | `required` uses `translations.TEXT_FIELDS`, `properties` lists the same fields by hand | complexity | low | won't fix: each field needs its own type; a new text field touches the schema anyway |
+| `authoring/tools/qgen.py` `main()` argparse | no unread flags (part 1 `subflags.py`); `--jobs` hidden for `rework`/`tighten`/`neutralize`/`batch` but shown for the step commands; step subcommands have no `help=` in `qgen -h` | inconsistency | low | won't fix: hidden on the commands the gamemaster/RUNBOOK use, visible on debugging steps |
 
 ## Part 8: Other authoring tools
 

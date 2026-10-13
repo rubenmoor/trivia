@@ -5,6 +5,7 @@ An LLM makes a batch with exactly one command (authoring/RUNBOOK.md):
 
     qgen batch                      # writes base questions (D-41)
     qgen batch --bundle colombia    # only when the user names a bundle
+    qgen batch --translate en       # only when the user names a language (plan 66)
 
 It runs these steps in a fixed order; they stay available one by one for debugging:
 
@@ -17,11 +18,13 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen media | sheets | review [--round 2] | fix | research | record | sync | batch-report --run <run>
     qgen audit [--batch <batch>]    # a second LLM reader of a seeded sample (plan 16); changes nothing
     qgen audit --backlog [--slice N] [--dry-run]   # the next slice of unaudited approved questions from before D-56 (plan 57)
+    qgen health ack <batch> <note>  # clears a failing batch's stop of `qgen batch` (D-55)
     qgen rework [--batch <batch>] [--model fable]   # needs_work questions once more through fix and review (QG-23)
     qgen tighten                    # find long-winded questions in the whole pool, shorten and review them (QG-24)
     qgen neutralize [--dry-run]     # reword Colombian usage in base into neutral Spanish (plan 64)
     qgen export                     # app/data/pool.json from authoring/data/questions.json
-    qgen report [--run <run>] [--bundle <id>] [--subcategories] [--calibration [<batch>…]] [--overlaps] [--batches [<batch>…]]
+    qgen report [--run <run>] [--bundle <id>] [--locale <locale>] [--subcategories] [--calibration [<batch>…]]
+                [--overlaps] [--batches [<batch>…]] [--exit-check]
     qgen report --qc [<batch> [--changes "<task ids>"]]   # spot check vs. LLM review and audit (plan 16)
     qgen report --simulate [--locale …] [--mode …|all] [--json]   # games per new player; exit 1 below D-75's target (plan 62)
     qgen report --cost [--json]     # $ per approved by run kind, projection per launch language (plan 70)
@@ -41,7 +44,7 @@ import urllib.parse
 from pathlib import Path
 from collections import Counter
 
-import layout  # noqa: F401  (paths; also makes app/server importable, D-35)
+import layout  # paths; also makes app/server importable (D-35)
 from layout import PROMPTS, REPO as ROOT, SOURCE_POOL as POOL, WORK
 import age_groups  # authoring/tools/age_groups.py: level ranges per group (plan 27)
 import batches  # authoring/tools/batches.py: what the next batch does (D-36)
@@ -74,7 +77,12 @@ SOFT_CRITERIA = ["distractors", "age_fit", "fun", "description"]
 # --- helpers -----------------------------------------------------------------
 
 def load_json(path, default=None):
-    return json.loads(path.read_text(encoding="utf-8")) if path.exists() else default
+    if not path.exists():
+        return default
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as e:
+        raise json.JSONDecodeError(f"{path}: {e.msg}", e.doc, e.pos) from None
 
 _save_lock = threading.Lock()
 
@@ -173,6 +181,9 @@ def run_dir(args):
     d.mkdir(parents=True, exist_ok=True)
     return d
 
+_interrupted = threading.Event()  # Ctrl-C in parallel(): running claude() calls don't retry
+
+
 def parallel(fn, items, jobs, label="items", unit="items"):
     """Run fn over items with a progress bar; report failures without stopping the others.
     Claude's usage limit stops the whole step instead, reported once. Returns the errors."""
@@ -187,26 +198,31 @@ def parallel(fn, items, jobs, label="items", unit="items"):
 
     with progress.Bar(label, len(items), unit) as bar, concurrent.futures.ThreadPoolExecutor(max_workers=jobs) as ex:
         futures = {ex.submit(run, it): it for it in items}
-        for f in concurrent.futures.as_completed(futures):
-            if f.cancelled():
-                continue
-            try:
-                f.result()
-                bar.finished()
-            except UsageLimit as e:
-                bar.finished(ok=False)
-                if not limit:  # the first one stops the rest; the others say the same thing
-                    limit.append(e)
-                    for other in futures:
-                        other.cancel()
-            except Exception as e:  # noqa: BLE001 — keep the batch going
-                bar.finished(ok=False)
-                errors.append(e)
-                it = futures[f]
-                label = (name(it[0]) if isinstance(it, tuple)  # list: grouped() files or a group of questions
-                         else ", ".join(name(x[0] if isinstance(x, tuple) else x) for x in it)
-                         if isinstance(it, list) else name(it))
-                print(f"  FAILED {label}: {e}", file=sys.stderr)
+        try:
+            for f in concurrent.futures.as_completed(futures):
+                if f.cancelled():
+                    continue
+                try:
+                    f.result()
+                    bar.finished()
+                except UsageLimit as e:
+                    bar.finished(ok=False)
+                    if not limit:  # the first one stops the rest; the others say the same thing
+                        limit.append(e)
+                        for other in futures:
+                            other.cancel()
+                except Exception as e:  # noqa: BLE001 — keep the batch going
+                    bar.finished(ok=False)
+                    errors.append(e)
+                    it = futures[f]
+                    what = (name(it[0]) if isinstance(it, tuple)  # list: grouped() files or a group of questions
+                            else ", ".join(name(x[0] if isinstance(x, tuple) else x) for x in it)
+                            if isinstance(it, list) else name(it))
+                    print(f"  FAILED {what}: {e}", file=sys.stderr)
+        except KeyboardInterrupt:
+            _interrupted.set()
+            ex.shutdown(wait=False, cancel_futures=True)
+            raise
     if limit:  # the caller reports it (main, cmd_batch)
         return errors + limit
     if errors:
@@ -223,6 +239,7 @@ LIMIT_WORDS = ("usage limit", "session limit", "rate limit", "hit your limit")
 RESET_RE = re.compile(r"resets\s+(?:(?P<mon>[a-z]{3})[a-z]*\.?\s+(?P<day>\d{1,2}),?\s+(?:at\s+)?)?"
                       r"(?P<h>\d{1,2})(?::(?P<m>\d{2}))?\s*(?P<ap>[ap]\.?m\.?)?(?:\s*\((?P<tz>[^)]+)\))?", re.I)
 LIMIT_MARGIN = datetime.timedelta(minutes=5)  # resume this long after the reset (QG-21)
+EXIT_LIMIT = 75  # exit code: stopped at the usage limit (RUNBOOK)
 
 
 def limit_reset(msg, now=None):
@@ -282,6 +299,9 @@ def main_model(out):
     return max(usage, key=lambda m: usage[m].get("outputTokens", 0)) if usage else None
 
 
+CLAUDE_TIMEOUT = 1800  # seconds per `claude -p` call
+
+
 def claude(system, user, schema, model, cwd, web=False, retries=2, read=False, with_model=False):
     """One fresh `claude -p` session returning structured output (and the model id if asked).
     read=True lets the session open files under cwd with the Read tool (contact sheets)."""
@@ -295,8 +315,10 @@ def claude(system, user, schema, model, cwd, web=False, retries=2, read=False, w
         cmd += ["--tools", ""]
     last = None
     for attempt in range(retries + 1):
+        if attempt and _interrupted.is_set():
+            break
         with progress.waiting(f"claude {model}" + (f" (retry {attempt})" if attempt else "")):
-            p = subprocess.run(cmd, input=user, capture_output=True, text=True, cwd=cwd, timeout=1800)
+            p = subprocess.run(cmd, input=user, capture_output=True, text=True, cwd=cwd, timeout=CLAUDE_TIMEOUT)
         try:
             out = json.loads(p.stdout)
         except json.JSONDecodeError:
@@ -343,12 +365,10 @@ RATE_SCHEMA = {"type": "object", "required": ["ratings"], "properties": {"rating
         "properties": {"id": STR, **{k: INT for k in RUBRIC}, "overlap_with": STR,
                        "difficulty_estimate": INT, "notes": STR}}}}}
 
-REVISED_SCHEMA = {"type": "object", "required": [
-    "difficulty", "description", "question", "answer", "wrong_answers", "hints", "media", "fun_fact",
-    "needs_media", "background_query"], "properties": {
-    "difficulty": INT, "description": STR, "question": STR, "answer": STR, "wrong_answers": STR_LIST,
-    "hints": STR_LIST, "media": MEDIA_SCHEMA, "fun_fact": STR, "needs_media": {"type": "boolean"},
-    "background_query": STR}}
+_DRAFT_ONLY = {"slot", "option", "needs_fact_check"}
+REVISED_SCHEMA = {"type": "object",
+                  "required": [k for k in QUESTION_SCHEMA["required"] if k not in _DRAFT_ONLY],
+                  "properties": {k: v for k, v in QUESTION_SCHEMA["properties"].items() if k not in _DRAFT_ONLY}}
 
 REVISE_SCHEMA = {"type": "object", "required": ["results"], "properties": {"results": {
     "type": "array", "items": {"type": "object", "required": ["id", "action", "reason", "question"],
@@ -3084,7 +3104,7 @@ def run_steps(steps, again, run=None):
         if limit:
             print(f"\nStopped at `{name}`: Claude's usage limit ({limit}).\n"
                   f"Wait for the reset, then run `{again}` again.", file=sys.stderr)
-            sys.exit(75)
+            sys.exit(EXIT_LIMIT)
         if errors:
             print(f"\nStopped at `{name}` with {len(errors)} error(s). Run `{again}` again; "
                   "if the same step fails three times in a row, stop and report the output.", file=sys.stderr)
@@ -4123,7 +4143,7 @@ def main():
     limit = next((e for e in errors if isinstance(e, UsageLimit)), None) if isinstance(errors, list) else None
     if limit:
         print(f"\nStopped: Claude's usage limit ({limit}).\nWait for the reset, then rerun.", file=sys.stderr)
-        sys.exit(75)
+        sys.exit(EXIT_LIMIT)
 
 
 if __name__ == "__main__":

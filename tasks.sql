@@ -11655,7 +11655,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - Every file in `app/desktop/` now is listed in `## Part 6` (no-findings rows included) and in the inventory, every finding with a status (fixes: `fixed (task N)`); every part 1 row `handed to part 6` has its final status.', '2026-10-12T23:06:35Z', '2026-10-13T11:41:01Z', 518);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (557, 79, 'Review qgen helpers, claude() wrapper, schemas and CLI', 'work', 'open', NULL, NULL, 'Task 1 of `plan 79: qgen review (code review part 7)`: review this section of `authoring/tools/qgen.py`, fix what is cheap, log every function and finding in `## Part 7` of `code-review.md`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (557, 79, 'Review qgen helpers, claude() wrapper, schemas and CLI', 'work', 'done', NULL, '2026-10-13, authoring/tools/qgen.py, code-review.md', 'Task 1 of `plan 79: qgen review (code review part 7)`: review this section of `authoring/tools/qgen.py`, fix what is cheap, log every function and finding in `## Part 7` of `code-review.md`.
 
 ## First
 - Needs `code-review.md` with `## Part 7` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so.
@@ -11684,7 +11684,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `main()` argparse: every subparser/flag read, hidden flags, help text vs. AGENTS.md command list.
 
 ## Done when
-- Every helper, schema and the CLI listed in `## Part 7` with findings and status (no-findings rows included).', '2026-10-12T23:07:25Z', NULL, 519);
+- Every helper, schema and the CLI listed in `## Part 7` with findings and status (no-findings rows included).', '2026-10-12T23:07:25Z', '2026-10-13T11:50:58Z', 519);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (558, 79, 'Review qgen concepts, bundles and draft', 'work', 'open', NULL, NULL, 'Task 2 of `plan 79: qgen review (code review part 7)`: review this section of `authoring/tools/qgen.py`, fix what is cheap, log every function and finding in `## Part 7` of `code-review.md`.
 
 ## First
@@ -11708,6 +11708,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## What
 - ≈lines 371–800: `axes_schema`/`facets_schema`/`list_schema`, `cmd_concepts`, `finalize_concepts`, `cmd_bundles` (`BUNDLE_GROUP`), `target_weights`, `level_counts`, `assign_difficulties` (seed, `rounds`), `draw_slots`, `existing_answers`, `cmd_draft`, `retire`, `option_key`, `check_question_shape`, `drafts`.
 - Overlap with `targets.py`/`batches.py` (log as duplication candidate).
+- From task 557: `LEVEL_WEIGHTS` (qgen.py top) is a hard-coded copy of `app/data/age-groups.json` young_teens `level_weights` (its `about` says so; `age_groups.py` checks the JSON''s formula). `target_weights` could read the focus group''s `level_weights` instead (AG-8''s stop then moot): same weights today, but changed behaviour when the focus window changes → decision or won''t fix; the row is in `## Part 7` with status `follow-up task 558`.
 
 ## Done when
 - Every function of the section listed in `## Part 7` with findings and status.', '2026-10-12T23:07:25Z', NULL, 519);
@@ -14199,6 +14200,21 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - The smoke shell runs under `env -i` (no `LANG`), and the first screen clicks `.language .option.current`. Once a locale pool (`pool.en.json`, …) ships, the questions language may not be `es`: the es answer isn''t among the on-screen answers (`indexOf` −1 → `nth-child(0)` matches nothing) or the id is missing in that pool → the smoke fails although the game is fine.
 - Fix: after the language step, read `save.language.questions` from the save, load that locale''s pool (`es` → `pool.json`, else `pool.<locale>.json`, as `app/client/src/lib/data.ts` `poolFile`) for both the picks and the answer text.
 - Check: `node authoring/steam/smoke.mjs` on `app/desktop/release/linux-unpacked` (dev shell; temp HOME is built in).', '2026-10-13T11:43:21Z', '2026-10-13T11:46:09Z', 720);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (731, 79, 'qgen claude(): log the cost of failed attempts in costs.log', 'work', 'open', NULL, NULL, 'Follow-up of `task 557: Review qgen helpers, claude() wrapper, schemas and CLI` (code review part 7).
+
+## Problem
+- `claude()` in `authoring/tools/qgen.py` appends `<model>\t<total_cost_usd>` to `<cwd>/costs.log` only on success.
+- A result with `is_error` or without `structured_output` (schema not met, max turns) is retried (`retries=2`) and its `total_cost_usd`, if any, is never logged: run costs (`qgen report --cost`, `health.py` "cost $", batch reports) undercount retried calls.
+- `health.py` also counts lines as "calls" / "calls per approved": logging failed attempts changes those numbers too (more calls, now real ones).
+
+## What
+- Check what a failed `claude -p --output-format json` result carries (`total_cost_usd` on `is_error`?) from a real error JSON if one is at hand (work/*.log); no LLM calls just to find out.
+- If failed attempts cost money: log them (same line format), so cost reports are complete; decide whether "calls" should count them (one line = one `claude -p` process is the simplest reading).
+- Log the change in `## Part 7` of `code-review.md` (row of task 557: cost of failed attempts).
+
+## Check
+- Stubbed `subprocess.run` in a /tmp script: success, `is_error` with a cost, non-JSON stdout → expected costs.log lines.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-13T11:49:43Z', NULL, 557);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -15919,6 +15935,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (602, 556, '2026-10-13T11:37:33Z', '2026-10-13T11:41:11Z', 'done', NULL, 0, 'b882754585727f7a6c2fcb51e93a15ba75624ba7', 'claude-opus-5-5[1m]', 'd4de585d-6869-48df-b8fe-8639bab7f627', 25, 48, 17179, 1533645, 76844, 1.265253, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (603, 720, '2026-10-13T11:41:11Z', '2026-10-13T11:44:21Z', 'done', NULL, 0, 'd901fa5bfbb15bddae0505b1a6a12aa1731d9be4', 'claude-opus-5-5[1m]', '181fb2f3-8ba9-4bdc-ae3a-b7d95d1e2e1b', 22, 38, 16938, 1406012, 83423, 1.2874984000000003, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (604, 730, '2026-10-13T11:44:21Z', '2026-10-13T11:46:15Z', 'done', NULL, 0, 'eaec848bde27acc77739a35a22b97ba24e1392df', 'claude-opus-5-5[1m]', '3d605bb3-66c8-4af4-ae59-40e125e45842', 8, 16, 2118, 259470, 27557, 0.31477400000000005, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (605, 557, '2026-10-13T11:46:16Z', '2026-10-13T11:51:07Z', 'done', NULL, 0, '9b4b7ea1e73b9066f8ba41fd39a2cbee92204612', 'claude-opus-5-5[1m]', 'e74d5c18-50c1-4e8e-a386-60796edc8074', 45, 78, 27075, 3263187, 97929, 1.9778814000000005, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
