@@ -14,8 +14,8 @@ Steps, each ✓/✗ with its time; all automated steps run, exit 1 on any ✗:
   smoke     node authoring/steam/smoke.mjs app/desktop/release/linux-unpacked (with packs: again without them)
   media-budget  always skipped until masterplan 10 part 6 (task 260) adds its check
   manual    the rows of MANUAL, asked y/n/note or read from --manual FILE (`<row>: <answer>` per line);
-            "n…" fails, "y…" passes, anything else is a note and counts as skipped; on a content-only
-            patch full-only rows are answered "skipped: content-only since <tag>"; beta-save only when
+            "n…" fails, "y…" passes (deck: also "no Deck…", decision 125), anything else is a note and
+            counts as skipped; on a content-only patch full-only rows are answered "skipped: content-only since <tag>"; beta-save only when
             SAVE_VERSION changed (plans/11-steam.md "Release checklist (ST-4)")
 
 Report header: version, every shipped pool's hash (app/data/pool.json = es, pool.<locale>.json, a pack's as <locale>/<bundle>), previous tag (newest v* reachable from HEAD, not HEAD's own), kind
@@ -51,13 +51,16 @@ MANUAL = {
     "offline": ("always", "beta install, network off, Steam not running: full game to level 12 or a won checkpoint",
                 "beta install, network off, Steam not running: a game to level 3 that hits new questions"),
     "windows": ("full", "start test on a clean Windows machine from Steam (beta)", None),
-    "deck": ("full", "Steam Deck checklist (plan 90, SW-12; plans/18-steam-integration.md \"Steam Deck Verified\")", None),
+    "deck": ("full", "Steam Deck: answer `no Deck (decision 125)` until the gamemaster has one; then plan 90's real-Deck "
+             "checklist from the `beta` branch (plans/18-steam-integration.md \"Steam Deck Verified\")", None),
     "cloud": ("full", "Cloud A→B (plan 87): play on A, quit, B shows the same players and seen counts", None),
     "sound": ("full", "sound: music, effects, audio and video questions", None),
     "red-frame": ("full", "timed competitive: pulsing red frame in the last 3 s", None),
     "beta-save": ("save", "save version changed: testers stay on beta until this build is on default", None),
     "signoff": ("always", "the family plays the candidate from beta", "the gamemaster's OK"),
 }
+# Row → answer prefix that passes (best effort, decision 125).
+PASS = {"deck": "no deck"}
 
 
 def quality(out: str) -> str | None:
@@ -216,7 +219,8 @@ def main() -> None:
         todo = checklist(kd, prev, save["changed"])
         answers = manual(todo, args.manual, all(s != "✗" for _, s, _, _ in steps))
         for k, a in answers.items():
-            st = "✓" if a[:1].lower() == "y" else "✗" if a[:1].lower() == "n" else "skipped"
+            ok_prefix = k in PASS and a.lower().startswith(PASS[k])
+            st = "✓" if ok_prefix or a[:1].lower() == "y" else "✗" if a[:1].lower() == "n" else "skipped"
             rows.append((k, todo[k][0], st, a))
             print(f"{'–' if st == 'skipped' else st} manual {k}: {a or '(no answer)'}")
         failed = [k for k, _, s, _ in rows if s == "✗"]

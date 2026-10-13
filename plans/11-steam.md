@@ -95,7 +95,7 @@ On the `beta` branch, installed through Steam. Scope: always, full (full release
 |---|---|---|
 | `offline` | always | Network off, Steam not running, start the installed game: full release: a full game to level 12 or a won checkpoint; content-only patch: a game to level 3 that hits new questions |
 | `windows` | full | Clean Windows machine (no dev tools), install from Steam `beta`, start: no warning, game fullscreen, a few questions with a pad |
-| `deck` | full | Plan 90's (SW-12) Deck checklist on the real Deck: `plans/18-steam-integration.md` "Steam Deck Verified" (until plan 90 writes it there: pm plan 90) |
+| `deck` | full | Best effort (decision 125): `no Deck (decision 125)` passes until the gamemaster has a Deck; then plan 90's (SW-12) Deck checklist on the real Deck: `plans/18-steam-integration.md` "Steam Deck Verified" (until plan 90 writes it there: pm plan 90) |
 | `cloud` | full | Short A→B run of plan 87's table (`plans/18-steam-integration.md` "Steam Cloud test", first row): play on A, quit, B shows the same players and seen counts |
 | `sound` | full | Music, effects, an audio and a video question play |
 | `red-frame` | full | Timed competitive: the red frame pulses in the last 3 s |
