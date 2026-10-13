@@ -42,6 +42,13 @@
         '';
       };
 
+      # Steamworks SDK 1.62 libs for `trivia-desktop` in dev (plan 85; Valve licence, never shipped).
+      # nixpkgs has no package for them; URL and hash as nixpkgs' rimsort. x86_64-linux only.
+      steamSdk = pkgs: pkgs.fetchzip {
+        url = "https://web.archive.org/web/20250527013243/https://partner.steamgames.com/downloads/steamworks_sdk_162.zip";
+        hash = "sha256-yDA92nGj3AKTNI4vnoLaa+7mDqupQv0E4YKRRUWqyZw=";
+      };
+
       authoringTools = pkgs: rec {
         qgen = fromCheckout pkgs "qgen" "authoring/tools/qgen.py" [ pkgs.claude-code pkgs.imagemagick pkgs.nodejs_22 ];
         trivia-media = fromCheckout pkgs "trivia-media" "authoring/tools/media.py" [ pkgs.imagemagick ];
@@ -57,6 +64,7 @@
             if [ ! -f "$root/app/desktop/main.mjs" ]; then
               echo "trivia-desktop: $root is not the trivia repository (no app/desktop/main.mjs)" >&2; exit 2
             fi
+            ${pkgs.lib.optionalString (pkgs.system == "x86_64-linux") ''export TRIVIA_STEAM_SDK=''${TRIVIA_STEAM_SDK:-${steamSdk pkgs}}''}
             exec electron "$root/app/desktop" "$@"
           '';
         };

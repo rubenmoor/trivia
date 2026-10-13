@@ -1,4 +1,6 @@
 // The Electron shell's bridge (plan 54, SW-2): app/desktop/preload.cjs. Null in the browser.
+import type { PadStyle } from "./gamepad";
+
 export interface DesktopBridge {
   readonly desktop: true;
   toggleFullscreen(): Promise<void>;
@@ -9,9 +11,32 @@ export interface DesktopBridge {
   writeSave(text: string): Promise<void>;
   /** Moves the save to `save/backup/`; the new path. */
   backupSave(kind: BackupKind): Promise<string>;
+  readonly steam: SteamBridge;
 }
 
 export type BackupKind = "corrupt" | "newer";
+
+/** Steam client calls (plan 85, SW-8); everything null/false when `available` is false. */
+export interface SteamBridge {
+  readonly available: boolean;
+  steamId(): Promise<string | null>;
+  /** Steam's API language name (`german`, `latam`, …): the game's in Steam, else the client's. */
+  language(): Promise<string | null>;
+  overlay: { enabled(): Promise<boolean> };
+  /** Steam's on-screen keyboard at the field; false when Steam shows none. */
+  showTextInput(field: TextFieldRect, current: string): Promise<boolean>;
+  inputTypes(): Promise<PadStyle[] | null>;
+  setPresence(key: string, values: Record<string, string>): Promise<void>;
+  /** Achievement API name; true when Steam took it. */
+  unlock(id: string): Promise<boolean>;
+}
+
+export interface TextFieldRect {
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+}
 
 declare global {
   interface Window {
@@ -20,3 +45,4 @@ declare global {
 }
 
 export const desktop: DesktopBridge | null = window.trivia ?? null;
+export const steam: SteamBridge | null = desktop?.steam ?? null;

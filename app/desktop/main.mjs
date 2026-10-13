@@ -11,6 +11,7 @@ const ORIGIN = "app://trivia/";
 const BACKGROUND = "#0b1120"; // --night-900
 
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
+const STEAM_APP_ID = 480; // Spacewar until the real App ID (plan 85)
 
 function roots() {
   if (app.isPackaged) {
@@ -34,6 +35,13 @@ function saveDir() {
   return app.isPackaged ? path.join(app.getPath("userData"), "save") : path.join(REPO, "state", "desktop");
 }
 
+/** Folder holding `redistributable_bin/` (Valve licence, not in git); dev falls back to the flake's. */
+function steamSdkDir() {
+  if (app.isPackaged) return path.join(process.resourcesPath, "steamworks_sdk");
+  const local = path.join(REPO, "app", "desktop", "steamworks_sdk");
+  return existsSync(path.join(local, "redistributable_bin")) ? local : process.env.TRIVIA_STEAM_SDK || local;
+}
+
 /** `--import-save <file>` from argv, or null. */
 function importArg() {
   const i = process.argv.indexOf("--import-save");
@@ -49,6 +57,8 @@ Menu.setApplicationMenu(null);
 if (app.isPackaged) app.setPath("userData", path.join(app.getPath("appData"), "trivia"));
 
 let win = null;
+let steam = null; // the binding, only while Steam is up
+let steamTimer = null;
 const saveFile = makeSaveFile(saveDir());
 let writing = Promise.resolve();
 let pending = 0;
@@ -75,7 +85,44 @@ if (!app.requestSingleInstanceLock()) {
     event.preventDefault();
     writing.then(() => app.quit());
   });
+  app.on("will-quit", stopSteam);
   app.whenReady().then(start);
+}
+
+/** Optional: any failure leaves `steam` null with one stderr line. No restart through Steam, no DRM. */
+async function startSteam() {
+  // A Steam launch sets SteamAppId; dev may override the constant.
+  const appId = Number(process.env.SteamAppId || process.env.TRIVIA_STEAM_APPID || STEAM_APP_ID);
+  const { log, warn, error } = console;
+  let reason = null;
+  try {
+    const { SteamworksSDK } = await import("steamworks-ffi-node");
+    const s = SteamworksSDK.getInstance();
+    s.setSdkPath(steamSdkDir());
+    // The binding logs several lines per failure; keep its first error only.
+    console.log = console.warn = () => {};
+    console.error = (...args) => {
+      reason ??= args.join(" ").replace("[Steamworks] ", "").split("\n")[0];
+    };
+    if (!s.init({ appId })) throw new Error(reason ?? "init failed");
+    steam = s;
+  } catch (err) {
+    Object.assign(console, { log, warn, error });
+    console.error(`trivia: steam unavailable: ${err.message}`);
+    return;
+  }
+  Object.assign(console, { log, warn, error });
+  steamTimer = setInterval(() => steam.runCallbacks(), 100);
+  console.error(
+    `trivia: steam available, app ${appId}, user ${steam.getStatus().steamId}, language ${steam.apps.getCurrentGameLanguage()}`,
+  );
+}
+
+function stopSteam() {
+  if (!steam) return;
+  clearInterval(steamTimer);
+  steam.shutdown();
+  steam = null;
 }
 
 async function importSave(file) {
@@ -96,6 +143,7 @@ async function start() {
   const importFrom = importArg();
   if (importFrom) await importSave(importFrom);
 
+  await startSteam();
   const dirs = roots();
   if (!existsSync(path.join(dirs.dist, "index.html"))) {
     dialog.showErrorBox("¡Trivia!", "client not built: run `npm run build -w app/client`");
@@ -123,6 +171,7 @@ async function start() {
       nodeIntegration: false,
       preload: path.join(path.dirname(fileURLToPath(import.meta.url)), "preload.cjs"),
       devTools: process.env.TRIVIA_DEVTOOLS === "1",
+      additionalArguments: steam ? ["--trivia-steam"] : [],
     },
   });
   win.once("ready-to-show", () => win.show());
@@ -157,4 +206,14 @@ function bridge() {
   handle("save:load", () => queued(() => saveFile.read()));
   handle("save:write", (text) => queued(() => saveFile.write(text)));
   handle("save:backup", (kind) => queued(() => saveFile.backup(kind)));
+  // Steam (plan 85): pass-throughs; null/false without Steam. Stubs filled by later tasks.
+  handle("steam:steam-id", () => steam?.getStatus().steamId ?? null);
+  handle("steam:language", () => steam?.apps.getCurrentGameLanguage() ?? null);
+  handle("steam:unlock", (id) =>
+    steam && typeof id === "string" ? steam.achievements.unlockAchievement(id) : false,
+  );
+  handle("steam:overlay-enabled", () => false);
+  handle("steam:show-text-input", () => false);
+  handle("steam:input-types", () => null);
+  handle("steam:set-presence", () => {});
 }

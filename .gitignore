@@ -19,3 +19,6 @@ state/
 # Desktop builds (plan 56): staged media, artefacts.
 app/desktop/build/
 app/desktop/release/
+
+# Steamworks SDK libs (Valve licence; plan 85): from the SDK zip.
+app/desktop/steamworks_sdk/redistributable_bin/
