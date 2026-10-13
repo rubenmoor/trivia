@@ -22122,8 +22122,18 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 
 ## Out of scope (from the milestone)
 - Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T17:59:23Z', NULL, 913);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (931, 89, 'create tasks for plan 89', 'split', 'open', 1000, NULL, 'Split plan 89 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:01:58Z', NULL, 929);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (931, 89, 'create tasks for plan 89', 'split', 'done', 1000, '2026-10-13, tasks.sql: task 932 for plan 89 task 11 (Deck row, decision 125); tasks 681-683, 786 still in line', 'Split plan 89 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:01:58Z', '2026-10-13T18:02:27Z', 929);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (932, 89, 'Deck row best effort in the release check (decision 125)', 'work', 'open', NULL, NULL, 'Plan 89 task 11 (decision 125: Steam Deck: best effort, review without a Deck at hand). No real Deck yet, so the release check''s manual `deck` row must not fail.
+
+Today (`authoring/steam/release_check.py`, `MANUAL`, line ~54): `"deck": ("full", "Steam Deck checklist (plan 90, SW-12; …)", None)`; `manual()` treats an answer starting with "n" as ✗, so "no Deck (decision 125)" fails the check.
+
+Work:
+- `deck` row text: "Steam Deck: answer `no Deck (decision 125)` until the gamemaster has one; then plan 90''s real-Deck checklist from the `beta` branch (plans/18-steam-integration.md \"Steam Deck Verified\")".
+- An answer `no Deck…` passes (✓ with the note in the report), not ✗ and not "skipped"; any other "n…" still fails. Keep it tiny (e.g. a per-row pass prefix), no new mechanism for other rows.
+- Interactive prompt shows the hint; `--manual FILE` reads `deck: no Deck (decision 125)`.
+- Docs: `plans/18-steam-integration.md` "Builds and depots" / SW-6 row text: the Deck row is best effort per decision 125.
+- Check: `trivia-release-check --manual <file>` with `deck: no Deck (decision 125)` (other steps `--skip`ped as needed) shows the row ✓; `deck: n` still ✗. Per-commit checks pass.', '2026-10-13T18:02:25Z', NULL, 931);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -24196,6 +24206,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (772, 927, '2026-10-13T18:00:49Z', '2026-10-13T18:01:01Z', 'done', NULL, 0, 'aacd5c3031c371fec872587f7f494d608f9ad86a', 'claude-opus-5-5[1m]', '3fb8bca7-c419-413d-8868-22808dd88506', 3, 6, 965, 85703, 29050, 0.2688646, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (773, 928, '2026-10-13T18:01:02Z', '2026-10-13T18:01:25Z', 'done', NULL, 0, 'b9d13f8f5f4181e52289ca5d744990318a2a59ca', 'claude-opus-5-5[1m]', 'ae5eefcc-91e2-478f-bc42-fb1b3c3d7582', 4, 8, 1351, 133496, 32155, 0.3109912, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (774, 929, '2026-10-13T18:01:26Z', '2026-10-13T18:02:06Z', 'done', NULL, 0, '915ed98a89fcc02fdc3c3bcb88e42fc244cf9f72', 'claude-opus-5-5[1m]', '749f7612-c168-46c9-921e-8791cd0213dd', 10, 20, 3422, 403199, 37394, 0.4483118, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (775, 931, '2026-10-13T18:02:06Z', '2026-10-13T18:02:32Z', 'done', NULL, 0, 'b744762dec03ff02261c3c9d9f4f4f091e00b938', 'claude-opus-5-5[1m]', '48e09ffd-fe88-4f6b-9018-7048ed0c2575', 6, 12, 2041, 247209, 45507, 0.45436580000000004, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
