@@ -40,6 +40,56 @@ The shell's own code stays tiny: create a fullscreen window, load `app/client/di
 - **Mute** (plan 123): muted when `PM_WORKER` is set or `TRIVIA_MUTE=1`; `TRIVIA_SOUND=1` overrides both (`app/desktop/mute.mjs` `muteReason`). Shell: `webContents.setAudioMuted(true)`, one stderr line `trivia: muted (PM_WORKER)`; session only, `trivia.volumes` and the Esc-menu volume UI unchanged. Smoke game runs with `TRIVIA_MUTE=1` (checks load, not audio).
 - **No DRM:** the game runs without Steam running (offline living room). Steam binding calls are optional; the game works without them.
 
+## Achievements in Steamworks
+Values for Steamworks → Stats & Achievements → Achievements (plan 86, SW-11; list per decision 73: Achievement list (SW-11)?), entered by the developer once the real App ID exists (SW-7). Texts are drafts; the developer checks them all in the SW-11 close-out (task 658).
+- Every achievement: Hidden no, Set by Client, no progress stat, achieved/unachieved icon `app/desktop/achievements/png/<API>_achieved.png` / `<API>_unachieved.png` (256×256, `render.sh`).
+- Order: enter them in the table's order (= `ACHIEVEMENTS` in `engine/achievements.ts`); the edit form takes the English name and description.
+- Localization: upload `app/desktop/steam-achievements.vdf` (latam, spanish, english, german). Its tokens `NEW_ACHIEVEMENT_1_<n>_NAME/_DESC` assume Steamworks' ids for that order on a fresh app; compare with Steamworks' localization download first and rename tokens if they differ.
+- Then publish (Steamworks → Publish).
+- Wording: infinitive, no address, so latam/spanish and German need no plural form; joker names from the catalogs (es Soplo/Paso/Bájale/Cambiazo/Francotirador, en Hint/Pass & Purge/Fairy/Ms Picky/Trick Shot, de Zaunpfahl/Näxt/Gang runter/Wunschzeit/Finte).
+- `SUPER_PICKY` in English isn't «Super Picky»: Ms Picky is a different joker.
+
+### Now (25)
+Name / description per language.
+
+| API name | latam | spanish | english | german |
+|---|---|---|---|---|
+| `FIRST_WIN` | «¡A la cima!» / «Ganar una partida: 12 preguntas, hasta arriba de la torre.» | = latam | «To the Top!» / «Win a game: 12 questions, all the way up the tower.» | «Auf dem Gipfel!» / «Ein Spiel gewinnen: 12 Fragen, ganz nach oben.» |
+| `WINS_10` | «Diez cimas» / «Ganar 10 partidas.» | = latam | «Ten Summits» / «Win 10 games.» | «Zehn Gipfel» / «10 Spiele gewinnen.» |
+| `WINS_50` | «Alpinista» / «Ganar 50 partidas.» | = latam | «Mountaineer» / «Win 50 games.» | «Höhenluft» / «50 Spiele gewinnen.» |
+| `WIN_ADULTS` | «Ligas mayores» / «Ganar una partida en el grupo de edad Adultos.» | «Primera división» / «Ganar una partida en el grupo de edad Adultos.» | «Big League» / «Win a game in the Adults age group.» | «Oberliga» / «Ein Spiel in der Altersgruppe Erwachsene gewinnen.» |
+| `WIN_ALL_AGES` | «Para todas las edades» / «Ganar una partida en cada grupo de edad.» | = latam | «For All Ages» / «Win a game in every age group.» | «Für jedes Alter» / «In jeder Altersgruppe ein Spiel gewinnen.» |
+| `FIRST_SOPLO` | «Una ayudita» / «Usar el Soplo por primera vez.» | = latam | «A Little Help» / «Play the Hint joker for the first time.» | «Mit dem Zaunpfahl» / «Zum ersten Mal den Zaunpfahl spielen.» |
+| `FIRST_PASO` | «¡Paso!» / «Usar el Paso por primera vez.» | = latam | «Pass!» / «Play Pass & Purge for the first time.» | «Näxt!» / «Zum ersten Mal Näxt spielen.» |
+| `FIRST_BAJALE` | «Más suavecito» / «Usar Bájale por primera vez.» | «Más suave» / «Usar Bájale por primera vez.» | «Fairy Dust» / «Play the Fairy for the first time.» | «Einen Gang runter» / «Zum ersten Mal „Gang runter“ spielen.» |
+| `FIRST_CAMBIAZO` | «Otro tema, por favor» / «Usar el Cambiazo por primera vez.» | = latam | «Another Topic, Please» / «Play Ms Picky for the first time.» | «Lieber was anderes» / «Zum ersten Mal die Wunschzeit spielen.» |
+| `FIRST_FRANCOTIRADOR` | «En la mira» / «Usar el Francotirador por primera vez.» | = latam | «Take Aim» / «Play the Trick Shot for the first time.» | «Im Visier» / «Zum ersten Mal die Finte spielen.» |
+| `ALL_HINTS` | «Soplo completo» / «Ver todas las pistas de una pregunta con el Soplo.» | = latam | «Every Last Hint» / «See every hint of one question with the Hint joker.» | «Mit allen Zaunpfählen» / «Alle Hinweise einer Frage mit dem Zaunpfahl aufdecken.» |
+| `PURGE` | «Pasar no era suficiente» / «Usar el Paso y sacar todo el tema del juego.» | = latam | «Passing Just Wasn't Enough» / «Play Pass & Purge and send the whole topic out of the game.» | «Passen reichte nicht» / «Mit Näxt das ganze Thema aus dem Spiel werfen.» |
+| `SUPER_PICKY` | «Súper exigente» / «Usar el Paso y Bájale en la misma pregunta.» | = latam | «Not That One Either» / «Play Pass & Purge and the Fairy on the same question.» | «Superwählerisch» / «Näxt und „Gang runter“ bei derselben Frage spielen.» |
+| `WIN_NO_JOKERS` | «Sin comodines» / «Ganar una partida sin usar ni un solo comodín.» | = latam | «No Jokers Needed» / «Win a game without playing a single joker.» | «Ganz ohne Joker» / «Ein Spiel gewinnen, ohne einen einzigen Joker zu spielen.» |
+| `ALL_JOKERS_WIN` | «Baraja completa» / «Ganar una partida usando los cinco comodines.» | = latam | «Full Deck» / «Win a game playing all five jokers.» | «Volles Blatt» / «Ein Spiel gewinnen und dabei alle fünf Joker spielen.» |
+| `SNIPER_TOP` | «Fuego amigo» / «Darle a la respuesta correcta con el Francotirador en el último nivel.» | = latam | «Friendly Fire» / «Hit the right answer with the Trick Shot on the last level.» | «Eigentor» / «Auf der letzten Stufe mit der Finte die richtige Antwort treffen.» |
+| `SOPLO_SAVE` | «Salvado por el Soplo» / «Ganar la última pregunta después de un Soplo.» | = latam | «Saved by the Hint» / «Win the last question right after a Hint.» | «Der Wink zum Sieg» / «Die letzte Frage nach einem Zaunpfahl gewinnen.» |
+| `ALL_CATEGORIES` | «De todo un poco» / «Acertar al menos una pregunta de cada tema.» | = latam | «Jack of All Topics» / «Answer at least one question right in every topic.» | «Von allem etwas» / «In jedem Thema mindestens eine Frage richtig beantworten.» |
+| `SPECIALIST` | «Especialista» / «Acertar 50 preguntas de un mismo tema.» | = latam | «Specialist» / «Answer 50 questions right in one topic.» | «Fachgebiet» / «50 Fragen aus einem Thema richtig beantworten.» |
+| `QUESTIONS_1000` | «Mil preguntas» / «Ver 1000 preguntas distintas.» | = latam | «A Thousand Questions» / «See 1000 different questions.» | «Tausend Fragen» / «1000 verschiedene Fragen sehen.» |
+| `POLYGLOT` | «Políglota» / «Ganar partidas con preguntas en dos idiomas.» | = latam | «Polyglot» / «Win games with questions in two languages.» | «Sprachtalent» / «Spiele mit Fragen in zwei Sprachen gewinnen.» |
+| `GAME_NIGHTS` | «Noche de juegos» / «Jugar en 7 días distintos.» | = latam | «Game Night» / «Play on 7 different days.» | «Spieleabend» / «An 7 verschiedenen Tagen spielen.» |
+| `CHRISTMAS` | «Trivia navideña» / «Jugar una partida el 24 o el 25 de diciembre.» | = latam | «Christmas Quiz» / «Play a game on 24 or 25 December.» | «Weihnachtsquiz» / «Am 24. oder 25. Dezember ein Spiel spielen.» |
+| `NIGHT_OWL` | «Búho nocturno» / «Ganar una partida después de medianoche.» | = latam | «Night Owl» / «Win a game after midnight.» | «Nachteule» / «Nach Mitternacht ein Spiel gewinnen.» |
+| `FIRST_FLAG` | «Ojo crítico» / «Marcar una pregunta.» | = latam | «Sharp Eye» / «Flag a question.» | «Adlerauge» / «Eine Frage melden.» |
+
+### Later
+Not entered now: Steam shows every defined achievement, unreachable ones look broken (`inSteamworks()`). Each one goes into the VDF when it's entered.
+
+| API name | with | latam | spanish | english | german |
+|---|---|---|---|---|---|
+| `WIN_RR_COOP` | MD-8 | «Todos a una» / «Ganar una partida Por turnos en equipo.» | = latam | «All for One» / «Win a round-robin co-op game.» | «Alle für einen» / «Ein Spiel reihum im Team gewinnen.» |
+| `WIN_RR_COMPETITIVE` | MD-8 | «El último en pie» / «Ganar una partida Por turnos, todos contra todos.» | = latam | «Last One Standing» / «Win a round-robin game, everyone against everyone.» | «Wer zuletzt lacht» / «Ein Spiel reihum, jeder gegen jeden, gewinnen.» |
+| `WIN_TIMED` | MD-8 | «Contra el reloj» / «Ganar una partida Contrarreloj.» | = latam | «Beat the Clock» / «Win a timed game.» | «Gegen die Uhr» / «Ein Spiel auf Zeit gewinnen.» |
+| `BUNDLE_COLOMBIA` | colombia DLC | «¡Qué chévere!» / «Acertar 50 preguntas del paquete Colombia.» | = latam | «Colombia, Mi Amor» / «Answer 50 questions right from the Colombia pack.» | «Kolumbien-Kenner» / «50 Fragen aus dem Kolumbien-Paket richtig beantworten.» |
+
 ## Platforms and display
 - **Windows** (x64) and **Linux** (x64) native builds; the **Deck** runs the Linux build. macOS later (needs a $99/year developer account and notarization).
 - **Resolutions:** 720p to 4K. The size unit `--u` scales with the width (D-29), so a 16:10 screen (Deck, 1280×800) has more height. Check every screen at 1280×800 and at 1280×720 (smallest). Valve's Deck legibility guideline is text ≥ 9 px at 1280×800.
