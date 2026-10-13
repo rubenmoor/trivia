@@ -53,6 +53,7 @@ import progress  # authoring/tools/progress.py: progress bars (QG-18)
 import categories  # authoring/tools/categories.py: every bundle's categories (D-19, D-43)
 import media_cache as media  # app/server/media_cache.py: the media cache (D-17)
 import download  # authoring/tools/download.py: fills the media cache
+import media as media_tool  # authoring/tools/media.py: candidates, sheets, picks (`media` is the cache)
 import providers  # authoring/tools/providers/: where candidates come from (D-45)
 import engine  # authoring/tools/engine.py: the TS engine under Node (D-60), e.g. the supply check (GF-5)
 import save_file  # authoring/tools/save_file.py: the game's save, read-only (D-59)
@@ -72,9 +73,11 @@ RUBRIC = ["correct", "unambiguous", "no_giveaway", "no_overlap", "distractors", 
 # no_overlap (plan 15): asks a fact the pool or an earlier draft already asks; dropped, not revised.
 HARD_CRITERIA = ["correct", "unambiguous", "no_giveaway", "no_overlap"]
 SOFT_CRITERIA = ["distractors", "age_fit", "fun", "description"]
+FACT_FIELDS = ["question", "answer", "wrong_answers", "hints", "fun_fact"]
+QUESTION_FIELDS = ["difficulty", "description", *FACT_FIELDS]  # a question's text, in prompt order
 
 
-# --- helpers -----------------------------------------------------------------
+# --- helpers ------------------------------------------------------------------
 
 def load_json(path, default=None):
     if not path.exists():
@@ -102,6 +105,23 @@ def norm(text):
     text = re.sub(r"[^a-z0-9 ]+", " ", text)
     words = [w for w in text.split() if w not in {"el", "la", "los", "las", "un", "una", "de", "del"}]
     return " ".join(words)
+
+def split_list(text):
+    """"a, b,,c" → ["a", "b", "c"] (comma-separated flag values)."""
+    return [x.strip() for x in (text or "").split(",") if x.strip()]
+
+
+def natural_key(s):
+    return [int(x) if x.isdigit() else x for x in re.split(r"(\d+)", s)]
+
+
+def write_report(run, lines):
+    """authoring/reports/<run>.md; returns its path."""
+    out = layout.REPORTS / f"{run}.md"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    return out
+
 
 def load_age_groups():
     return load_json(layout.AGE_GROUPS)
@@ -336,7 +356,15 @@ def claude(system, user, schema, model, cwd, web=False, retries=2, read=False, w
     raise RuntimeError(last)
 
 
-# --- schemas -----------------------------------------------------------------
+def costs(path):
+    """Dollar amounts in a costs.log, one per Claude call."""
+    if not path.exists():
+        return []
+    cells = [line.split("\t") for line in path.read_text(encoding="utf-8").splitlines()]
+    return [float(c[1]) for c in cells if len(c) == 2 and c[1] not in ("None", "")]
+
+
+# --- schemas ------------------------------------------------------------------
 
 STR = {"type": "string"}
 INT = {"type": "integer"}
@@ -391,7 +419,7 @@ TRANSLATE_SCHEMA = {"type": "object", "required": ["items"], "properties": {"ite
                        "description": STR, "fun_fact": STR, "notes": STR}}}}}
 
 
-# --- steps -------------------------------------------------------------------
+# --- steps: concepts, bundles, draft ------------------------------------------
 
 CONCEPT_ITEM = {"type": "object", "required": ["name", "facet", "known_at"],
                 "properties": {"name": STR, "facet": STR, "known_at": INT}}
@@ -429,7 +457,7 @@ def cmd_concepts(args):
     d = WORK / "concepts"
     d.mkdir(parents=True, exist_ok=True)
     if args.subcategories:
-        subs = [s.strip() for s in args.subcategories.split(",") if s.strip()]
+        subs = split_list(args.subcategories)
     elif getattr(args, "run", None):
         subs = load_json(WORK / args.run / "run.json")["subcategories"]
     else:
@@ -730,7 +758,7 @@ def cmd_draft(args):
         if not args.subcategories:
             sys.exit("First call for a run needs --subcategories.")
         check_bundle(args.bundle)
-        cfg = {"bundle": args.bundle, "subcategories": [s.strip() for s in args.subcategories.split(",") if s.strip()]}
+        cfg = {"bundle": args.bundle, "subcategories": split_list(args.subcategories)}
         unknown = not_in_bundle(cfg["subcategories"], args.bundle)
         if unknown:
             sys.exit(f"Not in {categories.path(args.bundle).relative_to(ROOT)} (add them there first): {', '.join(unknown)}")
@@ -823,7 +851,7 @@ def drafts(d):
         yield f.stem, load_json(f)["questions"]
 
 
-# --- translation runs (plan 66, D-81) -------------------------------------------
+# --- translation runs (plan 66, D-81) -----------------------------------------
 
 LANGUAGES = {"en": "English", "de": "German"}
 TRANSLATE_CHUNK = 15  # questions per translate call, one subcategory each
@@ -868,7 +896,6 @@ def translated_drafts(d):
 
 def media_title(q, slot="media"):
     """The picked file's title from its candidates, if they are still cached."""
-    import media as media_tool
     found = media_tool.load_candidates(q["id"], slot) or {"candidates": []}
     url = q[slot].get("source_url")
     return next((c["title"] for c in found["candidates"] if url and c.get("page_url") == url), None)
@@ -893,7 +920,7 @@ def cmd_translate(args):
             sys.exit(f"{args.run} has no run.json: give --locale and --ids")
         if args.locale not in translations.LOCALES:
             sys.exit(f"--locale must be one of {', '.join(translations.LOCALES)}")
-        cfg = {"mode": "translate", "locale": args.locale, "ids": [i.strip() for i in args.ids.split(",") if i.strip()],
+        cfg = {"mode": "translate", "locale": args.locale, "ids": split_list(args.ids),
                "started": datetime.date.today().isoformat()}
         save_json(d / "run.json", cfg)
     locale, src = cfg["locale"], {q["id"]: q for q in load_json(POOL)["questions"]}
@@ -1001,7 +1028,13 @@ def tmp_ids(d):
     return {v: k for k, v in load_json(d / "ids.json", {}).items()}
 
 
+# --- steps: rate, fact check, dedupe, merge -----------------------------------
+
 GROUP_SIZE = 10  # questions per rate/revise/fix call and per imported or revised draft file (PE-1, PE-2)
+
+
+def chunks(items, size=GROUP_SIZE):
+    return [items[i:i + size] for i in range(0, len(items), size)]
 
 
 def grouped(files, size=GROUP_SIZE):
@@ -1197,7 +1230,6 @@ def soft_score(r):
 
 
 def cmd_merge(args):
-    import media as media_tool  # authoring/tools/media.py
     d = run_dir(args)
     if run_locale(d):
         return merge_translations(d)
@@ -1254,7 +1286,7 @@ def cmd_merge(args):
     print(f"merged {len(added)} question(s) into {POOL.relative_to(ROOT)}; {len(dropped)} dropped in total (see dropped.json)")
 
 
-# --- revising pool questions (QG-13) -------------------------------------------
+# --- revising pool questions (QG-13) ------------------------------------------
 
 REVISABLE = ["difficulty", "description", "question", "answer", "wrong_answers", "hints", "media", "fun_fact",
              "needs_media", "background"]
@@ -1275,8 +1307,7 @@ def cmd_import(args):
     qs = [q for q in data["questions"] if q.get("batch") == args.batch and q["status"] in ("draft", "needs_work")]
     work = []
     for q in qs:
-        w = {k: q[k] for k in ["difficulty", "description", "question", "answer", "wrong_answers", "hints",
-                               "fun_fact"]}
+        w = {k: q[k] for k in QUESTION_FIELDS}
         w.update(tmp_id=q["id"], style=q.get("style"), axes=q.get("axes"), concept=q.get("concept"), bundle=q.get("bundle"),
                  subcategory=q.get("subcategory"),
                  media={k: q["media"][k] for k in ["type", "role", "query", "note"]},
@@ -1363,7 +1394,6 @@ def cmd_revise(args):
 def revise_in_pool(q, new, reason, today):
     """Write a revised question into pool question q; `revision.previous` keeps what changed
     (the review tool shows it). Returns the changed keys."""
-    import media as media_tool  # authoring/tools/media.py
     new_media = {**q["media"], **new["media"], "note": new["media"]["note"] or None}
     media_changed = any(new_media[k] != q["media"][k] for k in ["type", "query"])
     if media_changed:
@@ -1375,8 +1405,7 @@ def revise_in_pool(q, new, reason, today):
             "query": bgq, "source_url": None, "file_url": None, "credit": None}
     else:
         new_bg = None
-    proposed = {**{k: new[k] for k in ["difficulty", "description", "question", "answer", "wrong_answers",
-                                       "hints", "fun_fact", "needs_media"]},
+    proposed = {**{k: new[k] for k in [*QUESTION_FIELDS, "needs_media"]},
                 "media": new_media, "background": new_bg}
     previous = {k: q.get(k) for k in REVISABLE if proposed[k] != q.get(k)}
     if "difficulty" in previous and q.get("difficulty_original") is None:
@@ -1437,9 +1466,6 @@ def cmd_apply(args):
           + f". Next: trivia-media fetch --batch {cfg['batch']}")
 
 
-FACT_FIELDS = ["question", "answer", "wrong_answers", "hints", "fun_fact"]
-
-
 def apply_to_drafts(d, revisions, applied):
     """New drafts (not yet merged): revised questions move to a new draft file and lose their
     rating and fact-check, so `rate` and `factcheck` judge the new version before `merge`.
@@ -1463,8 +1489,7 @@ def apply_to_drafts(d, revisions, applied):
                 counts["malformed"] += 1
                 rest.append(q)
                 continue
-            keys = ["difficulty", "description", "question", "answer", "wrong_answers", "hints", "fun_fact",
-                    "needs_media", "background_query"]
+            keys = [*QUESTION_FIELDS, "needs_media", "background_query"]
             moved.append({**q, **{k: new[k] for k in keys if k in new},
                           "media": {**new["media"], "note": new["media"]["note"] or None},
                           "needs_fact_check": True, "revision_reason": rev["reason"]})
@@ -1492,6 +1517,8 @@ def apply_to_drafts(d, revisions, applied):
     print("applied: " + ", ".join(f"{k} {v}" for k, v in counts.items() if v)
           + ". Next: rate and factcheck (revised drafts only), then merge")
 
+
+# --- qgen report --------------------------------------------------------------
 
 def count(items, key):
     out = {}
@@ -2052,10 +2079,6 @@ def cost_runs(pool):
     return runs, skipped
 
 
-def natural_key(s):
-    return [int(x) if x.isdigit() else x for x in re.split(r"(\d+)", s)]
-
-
 def cost_report(pool):
     """{runs, rates, projection, skipped} for `qgen report --cost` (plan 70, CT-3)."""
     runs, skipped = cost_runs(pool)
@@ -2197,7 +2220,7 @@ def cmd_report(args):
             print(f"  by axes.{a}: {count(qs, lambda q, a=a: (q.get('axes') or {}).get(a))}")
 
 
-# --- the LLM batch (D-36, plans/19-repo-layout.md) ----------------------------------------------
+# --- the LLM batch's steps: media, sheets, review, fix, research, record (D-36) 
 
 BATCH_SLOTS = 18  # draft slots per subcategory (D-46); base: 57 × 18 slots, about 700 merged questions
 REVIEW_MODEL = "opus"
@@ -2261,7 +2284,6 @@ def sheet_path(d, qid, slot):
 
 def cmd_media(args):
     """Fetch media candidates for every slot of the run's merged questions."""
-    import media as media_tool  # authoring/tools/media.py
     errors = []
     todo = [(q, slot) for q in batch_questions(args.run) for slot in slots_of(q)
             if media_tool.load_candidates(q["id"], slot) is None]
@@ -2280,7 +2302,6 @@ def cmd_media(args):
 
 def cmd_sheets(args):
     """One contact sheet per slot (ImageMagick), for the review step to look at."""
-    import media as media_tool
     d = run_dir(args)
     errors = []
     todo = [(sheet_path(d, q["id"], slot), found) for q in batch_questions(args.run) for slot in slots_of(q)
@@ -2313,7 +2334,6 @@ def related_questions(q, pool):
 
 
 def slot_input(d, q, slot):
-    import media as media_tool
     found = media_tool.load_candidates(q["id"], slot) or {"candidates": []}
     spec = q["media"] if slot == "media" else q["background"]
     sheet = sheet_path(d, q["id"], slot)
@@ -2376,8 +2396,7 @@ def cmd_review(args):
         q, r = item
         tmp = tmp_of.get(q["id"])
         payload = translation_payload(q, r, tmp) if locale else {
-            "question": {k: q[k] for k in ["id", "bundle", "subcategory", "difficulty", "description", "question",
-                                           "answer", "wrong_answers", "hints", "fun_fact"]},
+            "question": {k: q[k] for k in ["id", "bundle", "subcategory", *QUESTION_FIELDS]},
             "rater_notes": (ratings.get(tmp) or {}).get("notes") or (q.get("quality") or {}).get("notes"),
             "fact_check": ({k: check[k] for k in ["verdict", "problem", "correction"]}
                            if (check := fact_check(r, checks.get(tmp))) else "not needed (no number, date or record)"),
@@ -2533,10 +2552,6 @@ def cmd_fix(args):
     return errors + parallel(check, chunks(recheck), args.jobs, "fix factcheck", "calls")
 
 
-def chunks(items, size=GROUP_SIZE):
-    return [items[i:i + size] for i in range(0, len(items), size)]
-
-
 def fix_issue(q, r, rework):
     """What the reviser has to fix, or None."""
     if rework:
@@ -2559,7 +2574,6 @@ def needs_recheck(fix, rework):
 
 def cmd_research(args):
     """One new media search for questions whose round-1 review found no adequate media."""
-    import media as media_tool
     d = run_dir(args)
     errors, todo = [], []
     for q in batch_questions(args.run):
@@ -2597,7 +2611,6 @@ def cmd_record(args):
     """Write the reviews (D-33: reviewer llm + model) and the picks into the pool. Fixed rules on
     top of the model's decision: no adequate media, a pick whose licence verdict is replace, or a fact check that isn't confirmed, means
     needs_work. Picks are recorded without downloading; `sync` fills the cache."""
-    import media as media_tool
     d = run_dir(args)
     if run_locale(d):
         return record_translations(args, d)
@@ -2717,6 +2730,8 @@ def record_translations(args, d):
     return []
 
 
+# --- audit and back-audit (plan 16, D-56) -------------------------------------
+
 AUDIT_SAMPLE = 60  # questions per batch the audit reads (plan 16)
 AUDIT_SCHEMA = {"type": "object", "required": ["verdict", "problems", "severity", "difficulty_estimate", "notes"],
     "properties": {"verdict": {"type": "string", "enum": ["ok", "problem"]},
@@ -2827,15 +2842,13 @@ def run_questions(run):
 
 def audit_input(q, pool):
     """The question as played (plan 16): no review, fix, rater notes or fact check; a translation with its source."""
-    import media as media_tool
 
     def slot(spec, name):
         found = (media_tool.load_candidates(q["id"], name) or {"candidates": []})["candidates"]
         pick = next((c for c in found if spec.get("source_url") and c.get("page_url") == spec["source_url"]), None)
         return {"type": spec.get("type", "image"), "role": spec.get("role", "decorative"),
                 "title": pick["title"] if pick else None}
-    return {"question": {k: q[k] for k in ["id", "bundle", "subcategory", "difficulty", "description", "question",
-                                           "answer", "wrong_answers", "hints", "fun_fact"]},
+    return {"question": {k: q[k] for k in ["id", "bundle", "subcategory", *QUESTION_FIELDS]},
             "media": slot(q["media"], "media"),
             "background": slot(q["background"], "background") if q.get("background") else None,
             "related": related_questions(q, pool), **({"source": q["source"]} if q.get("source") else {})}
@@ -2940,18 +2953,7 @@ def write_backaudit_report(run):
              f"- Questions: {len(ids)} ({ids[0]}…{ids[-1]})",
              "- Batches: " + ", ".join(f"{b} {n}" for b, n in Counter(by_id[i].get("batch") for i in ids if i in by_id).items()),
              "", *audit_section(run), *qc_section(run)]
-    out = layout.REPORTS / f"{run}.md"
-    out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text("\n".join(lines) + "\n", encoding="utf-8")
-    return out
-
-
-def costs(path):
-    """Dollar amounts in a costs.log, one per Claude call."""
-    if not path.exists():
-        return []
-    cells = [line.split("\t") for line in path.read_text(encoding="utf-8").splitlines()]
-    return [float(c[1]) for c in cells if len(c) == 2 and c[1] not in ("None", "")]
+    return write_report(run, lines)
 
 
 def audit_section(run):
@@ -2987,6 +2989,8 @@ def audit_section(run):
               for i, a in found.items() if is_major(a) and dec.get(i) == "approved"] or ["None."]
     return lines + [""]
 
+
+# --- qgen batch: sync, batch report, orchestration (D-36) ---------------------
 
 def cmd_sync_run(args):
     """Download the run's picked files into the media cache. Rate limits don't fail the batch."""
@@ -3037,9 +3041,7 @@ def cmd_batch_report(args):
               for a in concepts.AXES]
     lines += ["", "## Dropped by the pipeline", ""]
     lines += [f"- {x['tmp_id']}: {x['reason']}: {x['question']} → {x['answer']}" for x in dropped] or ["None."]
-    out = layout.REPORTS / f"{args.run}.md"
-    out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    out = write_report(args.run, lines)
     print(f"  report: {out.relative_to(ROOT)}")
     print(f"  report: {health.write_batches_md().relative_to(ROOT)}")
     return []
@@ -3124,7 +3126,7 @@ def cmd_batch(args):
             sys.exit(EXIT_HEALTH)
         check_bundle(args.bundle)
         if args.subcategories:
-            subs = [s.strip() for s in args.subcategories.split(",") if s.strip()]
+            subs = split_list(args.subcategories)
             unknown = not_in_bundle(subs, args.bundle)
             if unknown:
                 sys.exit(f"Not in {categories.path(args.bundle).relative_to(ROOT)}: {', '.join(unknown)}")
@@ -3177,6 +3179,8 @@ def cmd_batch(args):
           f"  git commit -m \"{run}: {len(qs)} {'' if args.bundle == 'base' else args.bundle + ' '}questions, "
           f"{n_ok} approved (qgen batch)\"")
 
+
+# --- qgen batch --translate (plan 66, decision 45) ----------------------------
 
 TRANSLATE_SIZE = 300  # sources per `qgen batch --translate` run (plan 66)
 TRANSLATE_PILOT = 50  # the first run of a locale (QT-5)
@@ -3270,7 +3274,7 @@ def cmd_translate_batch(args):
             print(stop, file=sys.stderr)
             sys.exit(EXIT_HEALTH)
         if args.ids:
-            ids, stale = [i.strip() for i in args.ids.split(",") if i.strip()], []
+            ids, stale = split_list(args.ids), []
         else:
             pilot = not translations.path(locale).exists()
             ids, stale = translate_selection(locale, args.count or (TRANSLATE_PILOT if pilot else TRANSLATE_SIZE))
@@ -3350,11 +3354,10 @@ def write_translate_report(run):
     gone = {x["id"] for x in away}
     lines += [f"- {i}: {qs[i]['status'] if i in qs else 'not travelling' if i in gone else 'not merged'}"
               for i in cfg.get("stale", [])] or ["None."]
-    out = layout.REPORTS / f"{run}.md"
-    out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text("\n".join(lines) + "\n", encoding="utf-8")
-    return out
+    return write_report(run, lines)
 
+
+# --- health ack, rework, scans: tighten, neutralize ---------------------------
 
 def cmd_health_ack(args):
     """The gamemaster has looked at a failing batch: clears the stop of `qgen batch` (D-55)."""
@@ -3424,7 +3427,7 @@ def cmd_rework(args):
 SCAN_SCHEMA = {"type": "object", "required": ["flagged"], "properties": {"flagged": {"type": "array", "items": {
     "type": "object", "required": ["id", "issue"], "properties": {"id": STR, "issue": STR}}}}}
 SCAN_CHUNK = 50
-NEUTRAL_FIELDS = ["description", "question", "answer", "wrong_answers", "hints", "fun_fact"]
+NEUTRAL_FIELDS = ["description", *FACT_FIELDS]
 SCANS = {  # run mode: scan prompt, questions read, their input, the reviser's issue prefix (QG-24, plan 64)
     "tighten": {"prompt": "tighten", "bundle": None, "issue": "too long", "schema": SCAN_SCHEMA,
                 "item": lambda q: {"id": q["id"], "clue": (q.get("axes") or {}).get("clue"), "question": q["question"]}},
@@ -3506,7 +3509,7 @@ def cmd_neutralize(args):
     if resuming:
         print(f"Resuming {run}" + (" (--ids ignored)" if args.ids else "") + ".", flush=True)
     else:
-        only = [i.strip() for i in (args.ids or "").split(",") if i.strip()]
+        only = split_list(args.ids)
         save_json(WORK / run / "run.json", {"mode": "neutralize", "started": datetime.date.today().isoformat(),
                                             **({"only": only} if only else {})})
         print(f"Starting {run}: reading the base bundle" + (f" ({len(only)} ids)" if only else "") + ".", flush=True)
@@ -3601,13 +3604,10 @@ def write_neutralize_report(run, revised):
     lines += [f"- {f['id']}: {f['words']}" for f in scan_extras(run)] or ["None."]
     lines += ["", *audit_section(run), *qc_section(run), "## Needs work", ""]
     lines += [f"- **{i}** {by_id[i]['question']} → {by_id[i]['answer']}: {by_id[i]['review']['feedback']}" for i in work] or ["None."]
-    out = layout.REPORTS / f"{run}.md"
-    out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text("\n".join(lines) + "\n", encoding="utf-8")
-    return out
+    return write_report(run, lines)
 
 
-# --- export (D-35) --------------------------------------------------------------
+# --- export, validate, bundle new (D-35) --------------------------------------
 
 def cmd_export(args):
     pool = load_json(POOL)
@@ -3973,6 +3973,8 @@ def cmd_validate(args):
     print("\n".join(errors) or f"OK: {len(load_json(POOL)['questions'])} questions")
     sys.exit(1 if errors else 0)
 
+
+# --- CLI ----------------------------------------------------------------------
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
