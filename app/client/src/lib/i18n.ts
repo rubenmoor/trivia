@@ -23,6 +23,9 @@ const CATALOGS: Record<string, Catalog> = { es, "es-ES": merge(es, esES), en, de
 /** UI languages a player can pick (plan 68): every catalog but the `xx` pseudo-locale. */
 export const UI_LANGS = Object.keys(CATALOGS).filter((l) => l !== "xx");
 
+/** A shipping catalog by tag, `es` if unknown; for pages that show one language without `initLang` (`/comodines`). */
+export const catalogFor = (l: string): Catalog => CATALOGS[l] ?? es;
+
 /** Dev-only catalogs, loaded on demand: `xx` (LUI-2). */
 const DEV_LANGS = ["xx"];
 

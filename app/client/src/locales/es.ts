@@ -124,10 +124,15 @@ const es = {
   },
   /** `key`: the keyboard shortcut (case-insensitive). */
   joker: {
-    hint: { name: "Soplo", key: "S" },
-    skip: { name: "Paso", key: "P", pass: "Paso", stamp: "ELIMINADO", purge: "Paso, y fuera el tema «{name}»" },
-    easier: { name: "Bájale", key: "F", dial: "Dificultad" },
-    category: { name: "Cambiazo", key: "T", title: "Cambiazo: ¿qué tema quieren?" },
+    /** `rule`: the one line on the printed card (JK-11). */
+    hint: { name: "Soplo", key: "S", rule: "Muestra una pista de la pregunta. Hasta tres por pregunta." },
+    skip: { name: "Paso", key: "P", pass: "Paso", stamp: "ELIMINADO", purge: "Paso, y fuera el tema «{name}»",
+      rule: "Cambia la pregunta por otra carta. Si quieren, ese tema sale del juego.",
+    },
+    easier: { name: "Bájale", key: "F", dial: "Dificultad", rule: "Cambia la pregunta por una más fácil del mismo tema." },
+    category: { name: "Cambiazo", key: "T", title: "Cambiazo: ¿qué tema quieren?",
+      rule: "Ustedes eligen otro tema; la dificultad sigue parecida.",
+    },
     snipe: {
       name: "Francotirador",
       key: "X",
@@ -136,10 +141,17 @@ const es = {
       false: "falsa",
       shoot: "dispara",
       hit: "¡Le dieron a la correcta! Este nivel se repite.",
+      rule: "Disparen a una respuesta falsa y queda tachada. Si le dan a la correcta, el nivel se repite.",
     },
     /** The armed token's bubble. */
     arm: "¿Usar {name}?",
     aria: "{name} ({key})",
+  },
+  /** The printable joker cards (`/comodines`, JK-11); `{scale}` is «100 %» in bold. */
+  cards: {
+    title: "Comodines para imprimir",
+    intro: "Una hoja carta: 4 × {hint} y 2 × cada otro comodín. Imprimir al {scale} (sin «ajustar a la página»), luego recortar por las líneas.",
+    print: "Imprimir",
   },
   /** The Choice screen (plan 29): age group and bundles before a game. */
   choice: {

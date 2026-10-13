@@ -1,19 +1,14 @@
 <script lang="ts">
-  // Printable joker cards (plans/09-jokers.md, JK-11): one US Letter sheet with 4 × Soplo and
+  // Printable joker cards (plans/09-jokers.md, JK-11): one sheet with 4 × the hint joker and
   // 2 × each other joker, 12 cards of 2.5 in in a 3 × 4 grid, with dashed cut lines. White
   // cards to save ink; the token, name and key match the game's tray (JokerTray.svelte).
+  // `?lang=es|es-ES|en|de` (LUI-5): texts from the app catalogs; Letter for es/en, A4 for de/es-ES.
   import "$app/game/theme.css"; // the fonts (Baloo 2, Nunito)
   import Icon from "$app/game/Icon.svelte";
   import { TOKENS } from "$app/game/JokerTray.svelte";
+  import { catalogFor, endonym, fill, UI_LANGS } from "$app/lib/i18n";
   import type { JokerName } from "$app/lib/types";
 
-  const RULES: Record<JokerName, string> = {
-    hint: "Muestra una pista de la pregunta. Hasta tres por pregunta.",
-    skip: "Cambia la pregunta por otra carta. Si quieren, ese tema sale del juego.",
-    easier: "Cambia la pregunta por una más fácil del mismo tema.",
-    category: "Ustedes eligen otro tema; la dificultad sigue parecida.",
-    snipe: "Disparen a una respuesta falsa y queda tachada. Si le dan a la correcta, el nivel se repite.",
-  };
   /** Per joker, its colour on paper (the tray is amber on night blue; paper needs more contrast). */
   const INK: Record<JokerName, string> = {
     hint: "#c98a00",
@@ -23,37 +18,53 @@
     snipe: "#d6304e",
   };
   const COPIES: Record<JokerName, number> = { hint: 4, skip: 2, easier: 2, category: 2, snipe: 2 };
+  /** `@page`: the grid is 7.5 × 10 in; A4 (8.27 × 11.69 in) leaves less side margin. */
+  const PAGE: Record<string, string> = {
+    es: "size: letter; margin: 0.5in",
+    en: "size: letter; margin: 0.5in",
+    "es-ES": "size: A4; margin: 0.84in 0.38in",
+    de: "size: A4; margin: 0.84in 0.38in",
+  };
 
+  const q = new URLSearchParams(location.search).get("lang");
+  const lang = q && UI_LANGS.includes(q) ? q : "es";
+  const c = catalogFor(lang);
+  const [before, after] = fill(c.cards.intro, { hint: c.joker.hint.name }).split("{scale}");
+  $effect(() => {
+    const page = Object.assign(document.createElement("style"), { textContent: `@page { ${PAGE[lang]}; }` });
+    document.head.append(page);
+    return () => page.remove();
+  });
   const cards = TOKENS.flatMap((t) => Array.from({ length: COPIES[t.name] }, () => t));
 </script>
 
-<svelte:head><title>Comodines para imprimir</title></svelte:head>
+<svelte:head>
+  <title>{c.cards.title}</title>
+</svelte:head>
 
-<div class="screen-only">
-  <h1>Comodines para imprimir</h1>
-  <p>
-    Una hoja carta: 4 × Soplo y 2 × cada otro comodín. Imprimir al <b>100 %</b> (sin «ajustar a la página»),
-    luego recortar por las líneas.
-  </p>
-  <button onclick={() => print()}>Imprimir</button>
+<div class="screen-only" {lang}>
+  <nav>
+    {#each UI_LANGS as l (l)}
+      <a href="?lang={l}" class:on={l === lang} lang={l}>{endonym(l, "ui")}</a>
+    {/each}
+  </nav>
+  <h1>{c.cards.title}</h1>
+  <p>{before}<b>100 %</b>{after}</p>
+  <button onclick={() => print()}>{c.cards.print}</button>
 </div>
 
-<main class="sheet">
+<main class="sheet" {lang}>
   {#each cards as t, i (i)}
     <section class="card" style:--ink={INK[t.name]}>
       <div class="chip"><span class="face"><Icon name={t.icon} size="100%" /></span></div>
-      <h2>{t.label}</h2>
-      <p class="rule">{RULES[t.name]}</p>
-      <span class="key">{t.key}</span>
+      <h2>{c.joker[t.name].name}</h2>
+      <p class="rule">{c.joker[t.name].rule}</p>
+      <span class="key">{c.joker[t.name].key}</span>
     </section>
   {/each}
 </main>
 
 <style>
-  @page {
-    size: letter;
-    margin: 0.5in;
-  }
   /* Only on this page: every authoring page shares one stylesheet (the others are dark). */
   :global(body:has(.sheet)) {
     background: #e9e6df;
@@ -63,6 +74,17 @@
     max-width: 7.5in;
     margin: 0.4in auto 0.2in;
     font-family: "Nunito", system-ui, sans-serif;
+  }
+  .screen-only nav {
+    display: flex;
+    gap: 1em;
+  }
+  .screen-only nav a {
+    color: inherit;
+  }
+  .screen-only nav a.on {
+    font-weight: 800;
+    text-decoration: none;
   }
   .screen-only h1 {
     margin: 0 0 0.3em;
@@ -79,7 +101,7 @@
     cursor: pointer;
   }
 
-  /* 3 × 2.5 in by 4 × 2.5 in: exactly the printable area of a Letter sheet with 0.5 in margins. */
+  /* 3 × 2.5 in by 4 × 2.5 in: the printable area of Letter with 0.5 in margins; A4 fits with PAGE's. */
   .sheet {
     display: grid;
     grid-template-columns: repeat(3, 2.5in);

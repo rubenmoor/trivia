@@ -9183,14 +9183,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Rows → `done`.
 
 Done when: no overflow in `de`/`xx` at both sizes, language screen included; `npm run check`, `npm run build` pass.', '2026-10-12T19:44:17Z', '2026-10-13T04:32:18Z', 452);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (457, 69, 'LUI-5: /comodines per language', 'work', 'open', 360, NULL, 'Make the printable joker cards (`authoring/ui/src/print/JokerCards.svelte`, JK-11) work in every launch language.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (457, 69, 'LUI-5: /comodines per language', 'work', 'done', 360, '2026-10-12, authoring/ui/src/print/JokerCards.svelte, app/client/src/locales/{es,es-ES,en,de}.ts (joker.<id>.rule, cards.*), app/client/src/lib/i18n.ts (catalogFor), plans/15a-ui-translation.md, plans/09-jokers.md; four Chrome print previews: one page, 12 cards (Letter es/en, A4 de/es-ES)', 'Make the printable joker cards (`authoring/ui/src/print/JokerCards.svelte`, JK-11) work in every launch language.
 
 - `?lang=es|es-ES|en|de`; names and keys from the app catalogs (`authoring/` may import from `app/`).
 - One-line rules into the catalogs as `joker.<id>.rule` (new keys, all four catalogs); `RULES` leaves the component; page text via the catalog too.
 - Paper: Letter for `es`/`en`, A4 for `de`/`es-ES` (`@page size`); 3 × 4 grid of 2.5 in cards on both.
 - Print-preview check per language: one page, 12 cards.
 
-Done when: four print previews correct; `npm run check`, `check:literals`, `npm run build` pass.', '2026-10-12T19:44:17Z', NULL, 452);
+Done when: four print previews correct; `npm run check`, `check:literals`, `npm run build` pass.', '2026-10-12T19:44:17Z', '2026-10-13T04:45:44Z', 452);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (458, 69, 'LUI-5: playtest checklist and decisions', 'work', 'open', 350, NULL, 'Prepare the native-speaker playtest per catalog (`es` the family, `es-ES`, `en`, `de`), arranged by the gamemaster.
 
 - "Playtest" section in `plans/15a-ui-translation.md`:
@@ -13769,6 +13769,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (453, 391, '2026-10-13T03:58:00Z', '2026-10-13T04:08:01Z', 'done', NULL, 0, '35e3932d19e9cad51844fd7d4f4b2fcae3e76c5b', 'claude-opus-5-5[1m]', '07fa9884-8f14-472c-a6ea-9508562f1fb5', 69, 136, 43046, 6870285, 130054, 3.275953, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (454, 456, '2026-10-13T04:08:01Z', '2026-10-13T04:32:28Z', 'done', NULL, 0, 'd56b17bf3d991f8c7798a4d8de4d5668ef441c4d', 'claude-opus-5-5[1m]', 'ee16e069-0c8d-4e76-8edc-10a108701330', 104, 186, 35691, 8200837, 135783, 3.4409954, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (455, 629, '2026-10-13T04:32:29Z', '2026-10-13T04:42:31Z', 'done', NULL, 0, '3ba91647d649f2c27d06f95d86a2a62dccc19d79', 'claude-opus-5-5[1m]', 'cae7ea88-239c-4629-8152-09ed6e8006d6', 44, 86, 15762, 2416266, 64113, 1.3117411999999995, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (456, 457, '2026-10-13T04:42:31Z', '2026-10-13T04:45:59Z', 'done', NULL, 0, '7498a8c829bd2f09893224d4f3272232e66d37bd', 'claude-opus-5-5[1m]', '9cb3280e-f5f9-432f-890c-46d70728b3a7', 26, 48, 13588, 1256690, 53830, 0.95393000000000006, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

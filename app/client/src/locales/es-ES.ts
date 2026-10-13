@@ -17,11 +17,16 @@ export const esES = {
     video: "Vídeo",
   },
   joker: {
-    category: { title: "Cambiazo: ¿qué tema queréis?" },
+    skip: { rule: "Cambia la pregunta por otra carta. Si queréis, ese tema sale del juego." },
+    category: { title: "Cambiazo: ¿qué tema queréis?", rule: "Elegís otro tema; la dificultad sigue parecida." },
     snipe: {
       aim: "Elegid la respuesta que creéis que es",
       hit: "¡Habéis dado a la correcta! Este nivel se repite.",
+      rule: "Disparad a una respuesta falsa y queda tachada. Si dais a la correcta, el nivel se repite.",
     },
+  },
+  cards: {
+    intro: "Una hoja A4: 4 × {hint} y 2 × cada otro comodín. Imprimir al {scale} (sin «ajustar a la página»), luego recortar por las líneas.",
   },
   picker: {
     title: "Escribid vuestro nombre",
