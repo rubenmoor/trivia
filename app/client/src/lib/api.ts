@@ -3,7 +3,7 @@ import { gameChoice, jokersUsed, playerMode } from "../engine/game.ts";
 import type { Outlook } from "../engine/outlook.ts";
 export type { Outlook };
 import { bundlesFor } from "../engine/pool.ts";
-import { setFlag as saveFlag, type FlagInput } from "../engine/save.ts";
+import { setFlag as saveFlag, setReported, type FlagInput } from "../engine/save.ts";
 import { newest, withDefaults, type EngineData, type SaveData } from "../engine/state.ts";
 import { messageOf } from "./http.ts";
 import { language as fetchLanguage, localeSupply, read, run, type DataScope } from "./engine.ts";
@@ -45,6 +45,18 @@ export async function setFlag(id: string, flag: FlagInput): Promise<Flagged[]> {
       const q = data.byId.get(id);
       const shown = q && { question: q.question, answer: q.answer, wrong_answers: q.wrong_answers };
       const out = saveFlag(save, id, flag && { ...flag, locale: data.locale, ...(shown ? { shown } : {}) }, io.now);
+      return { save: out, status: 200, body: flagList(out, data) };
+    } catch (e) {
+      return { save, status: 400, body: { error: "flag_invalid", message: messageOf(e) } };
+    }
+  });
+}
+
+/** A report of `id` was sent (plan 93); returns every flagged question. */
+export async function markReported(id: string): Promise<Flagged[]> {
+  return run((save, data, io) => {
+    try {
+      const out = setReported(save, id, io.now);
       return { save: out, status: 200, body: flagList(out, data) };
     } catch (e) {
       return { save, status: 400, body: { error: "flag_invalid", message: messageOf(e) } };

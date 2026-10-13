@@ -108,3 +108,10 @@ export function setFlag(save: SaveData, qid: string, flag: FlagInput, now: strin
   } else delete flags[qid];
   return { ...save, flags };
 }
+
+/** A report of a flagged question went out (plan 93): `reported_on` on its entry, nothing else. */
+export function setReported(save: SaveData, qid: string, now: string): SaveData {
+  const entry = save.flags[qid];
+  if (!entry) throw new Error("the question isn't flagged");
+  return { ...save, flags: { ...save.flags, [qid]: { ...entry, reported_on: now } } };
+}

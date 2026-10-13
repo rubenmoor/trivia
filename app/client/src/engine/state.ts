@@ -39,6 +39,8 @@ export interface FlagEntry {
   locale?: string;
   /** The question as the player saw it, in `locale` (decision 102); missing in older flags. */
   shown?: FlagText;
+  /** Last successful report send (plan 93); additive, no version bump. */
+  reported_on?: string;
 }
 
 export interface FlagText {

@@ -743,7 +743,7 @@
     />
   {/if}
   {#if overlayOpen && flagListOpen}
-    <FlagList {flags} onclose={() => (flagListOpen = false)} />
+    <FlagList bind:flags onclose={() => (flagListOpen = false)} />
   {/if}
   {#if flagOpen && flagTarget}
     <FlagDialog

@@ -119,6 +119,8 @@ export interface Flagged {
   note?: string;
   /** The game's question locale (decision 102); missing = es. */
   locale?: string;
+  /** Last successful report send (plan 93). */
+  reported_on?: string;
   /** As the player saw it, else the current pool's text. */
   question: string | null;
   answer: string | null;

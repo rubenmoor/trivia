@@ -11,6 +11,9 @@ export const esES = {
   flag: {
     pickerTitle: "Escribid una nota",
     copyFailed: "No se ha podido copiar: seleccionad el texto y copiadlo.",
+    sendOffline: "Sin conexión: no se ha podido enviar.",
+    sendTomorrow: "Demasiados envíos: probad mañana.",
+    sendFailed: "No se ha podido enviar.",
   },
   credits: {
     media: "Imágenes, audio y vídeo de las preguntas",

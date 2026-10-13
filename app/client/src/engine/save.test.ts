@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { parseSave, setFlag } from "./save.ts";
+import { parseSave, setFlag, setReported } from "./save.ts";
 import { emptySave, SAVE_VERSION, SPANISH, type SaveData } from "./state.ts";
 import { fixture } from "./test/fixtures.ts";
 import { snapshot, upgradeDb } from "./test/save.ts";
@@ -83,4 +83,12 @@ test("setFlag keeps the first flagged_on, edits the note, unflag removes it, inp
   assert.deepEqual(full, before);
   assert.throws(() => setFlag(full, "", { player: null }, "2026-10-02T20:00:00"));
   assert.throws(() => setFlag(full, "q3", { player: null, note: "x".repeat(501) }, "2026-10-02T20:00:00"));
+});
+
+test("setReported adds reported_on (no version bump); it survives parse and a re-note", () => {
+  const a = setReported(full, "q1", "2026-11-02T21:00:00");
+  assert.deepEqual(a.flags.q1, { ...full.flags.q1, reported_on: "2026-11-02T21:00:00" });
+  assert.deepEqual(parseSave(JSON.parse(JSON.stringify(a))), a);
+  assert.equal(setFlag(a, "q1", { player: "Bo", note: "x" }, "2026-11-03T20:00:00").flags.q1.reported_on, "2026-11-02T21:00:00");
+  assert.throws(() => setReported(full, "q9", "2026-11-02T21:00:00"));
 });
