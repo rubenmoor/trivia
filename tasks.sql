@@ -5602,14 +5602,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Done when:
 - `grep -rn PLACEHOLDER app/client/src` is empty; `npm run check`, `npm run build` pass.
 - Missing media file still shows the notice in the dev browser.', '2026-10-12T00:35:30Z', '2026-10-12T05:29:00Z', 137);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (142, 32, 'Audition aid /?efectos with recorded/synth toggle', 'work', 'open', NULL, NULL, 'First task of plan 32, so every later pick can be compared on the TV.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (142, 32, 'Audition aid /?efectos with recorded/synth toggle', 'work', 'done', NULL, '2026-10-13, app/client/src/game/sound.svelte.ts (sfx opts.synth, effects() list from RECIPES/SAMPLE_FOR), EffectsDemo.svelte (/?efectos: grabado/sintetizado per cue), Game.svelte (?efectos on Start)', 'First task of plan 32, so every later pick can be compared on the TV.
 
 - `app/client/src/game/sound.svelte.ts`: a way to force the synth path, e.g. an optional flag on `sfx(name, { synth: true })` or an exported helper; default behaviour unchanged.
 - `app/client/src/game/Game.svelte`: `/?efectos` on the Start screen, next to the `?fuegos` preview: a small list of every effect name (the names `RECIPES` / `SAMPLE_FOR` match, incl. the 13 existing recordings), each with «grabado» and «sintetizado» buttons.
 - Minimal, plain styling; dev/check only, not in the admin overlay (B-3 «Demo de efectos» stays backlog).
 - Keep the effect list in one place so later tasks (and plan 33''s music loops) just add entries.
 
-Done when: `/?efectos` plays every effect both ways (recorded where a file exists); `npm run check` and `npm run build` pass.', '2026-10-12T00:36:02Z', NULL, 138);
+Done when: `/?efectos` plays every effect both ways (recorded where a file exists); `npm run check` and `npm run build` pass.', '2026-10-12T00:36:02Z', '2026-10-13T06:25:47Z', 138);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (143, 32, 'Recorded whooshes, pops, menu blips, desbloqueado, hola', 'work', 'open', NULL, NULL, 'Replace the synthesized UI effects with CC0 recordings (plan 32 "Sources", "Pipeline", "Wiring").
 
 - Effects: `whoosh`, «swoosh que sube», `swoosh|escoba` («escoba: fuuush»), `pop|carta`, `menú abierto` / `menú cerrado`, `desbloqueado`, `listo|hola`.
@@ -14718,6 +14718,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (496, 259, '2026-10-13T06:22:20Z', '2026-10-13T06:22:33Z', 'blocked', NULL, 0, '931556d7af58b9d5a66509aa30cb860b972ebc6f', 'claude-opus-5-5[1m]', '3f5349a4-c2de-4ef4-a5f6-fb98e2183377', 4, 8, 745, 115814, 29381, 0.2731428, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (497, 105, '2026-10-13T06:22:33Z', '2026-10-13T06:23:15Z', 'done', NULL, 0, '3d9a02a33b1bea9fff8f3c67ca19405d8ca07324', 'claude-opus-5-5[1m]', 'a8b8056b-e98a-469d-8af2-238c06de28db', 9, 18, 2435, 266696, 23535, 0.29039119999999996, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (498, 674, '2026-10-13T06:23:15Z', '2026-10-13T06:24:58Z', 'done', NULL, 0, 'f16ed33ebc79c0c808a79949684be5fc3b69586e', 'claude-opus-5-5[1m]', 'a714677e-3dad-4e43-b7db-1b7dab7dbbdd', 25, 42, 6300, 1176862, 63150, 0.86674039999999974, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (499, 142, '2026-10-13T06:24:59Z', '2026-10-13T06:25:53Z', 'done', NULL, 0, '6286ea96202fdf9cf7f22b24a550d45fe0c5b0ee', 'claude-opus-5-5[1m]', '3d666b14-c92d-436c-857a-26ffebef47c4', 12, 18, 3934, 345636, 35857, 0.43473520000000004, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

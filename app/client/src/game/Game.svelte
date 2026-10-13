@@ -15,6 +15,7 @@
   import Choice from "./Choice.svelte";
   import { consolation, milestone } from "./copy";
   import Fireworks from "./Fireworks.svelte";
+  import EffectsDemo from "./EffectsDemo.svelte";
   import FlagDialog from "./FlagDialog.svelte";
   import FlagList from "./FlagList.svelte";
   import Hud from "./Hud.svelte";
@@ -510,6 +511,8 @@
 
   /** /?fuegos=<variant> or ?fuegos=finale plays fireworks over the Start screen (preview, UI-9). */
   const preview = new URLSearchParams(location.search).get("fuegos");
+  /** /?efectos lists every effect, recorded and synthesized (audition aid, UI-10). */
+  const effectsDemo = new URLSearchParams(location.search).has("efectos");
 
   /** Each card's tilt, within ±3° (10, "Cards"); fixed per game and level, so a re-render keeps it. */
   function tilt(i: number) {
@@ -531,6 +534,7 @@
   {:else if screen === "start"}
     <Stage />
     {#if preview}<Fireworks mode={preview === "finale" ? "finale" : "single"} variant={preview} />{/if}
+    {#if effectsDemo}<EffectsDemo />{/if}
     <section class="start">
       <h1 class="wordmark"><span class="bang">{t("screen.start.open")}</span>{t("screen.start.name")}<span class="bang">{t("screen.start.close")}</span></h1>
       <p class="subtitle">{t("screen.start.subtitle", { n: levelsOf(game) })}</p>

@@ -382,11 +382,11 @@ export type Cue =
   | "unlocked" | "joker-armed" | "joker-open" | "joker-activate" | "whistle-down" | "stamp" | "shredder"
   | "heartbeat" | "tick" | "glass-break";
 
-/** Play a short effect; `level` sets the pitch of "block" (the tower's height). */
-export function sfx(cue: Cue, level = 1) {
+/** Play a short effect; `level` sets the pitch of "block" (the tower's height); `synth` skips the recording. */
+export function sfx(cue: Cue, level = 1, opts: { synth?: boolean } = {}) {
   if (!ctx || ctx.state !== "running") return;
   const [key, rate] = SAMPLE_FOR[cue] ?? [];
-  const buffer = key && samples[key];
+  const buffer = key && !opts.synth && samples[key];
   if (buffer) {
     const src = ctx.createBufferSource();
     src.buffer = buffer;
@@ -396,6 +396,11 @@ export function sfx(cue: Cue, level = 1) {
     return;
   }
   RECIPES[cue](ctx, fxBus, ctx.currentTime + 0.01, level);
+}
+
+/** Every effect with its recording's file name, if any (the `/?efectos` audition list, UI-10). */
+export function effects(): { cue: Cue; file?: string }[] {
+  return (Object.keys(RECIPES) as Cue[]).map((cue) => ({ cue, file: SAMPLE_FOR[cue]?.[0] }));
 }
 
 type Recipe = (c: AudioContext, out: AudioNode, t: number, level: number) => void;
