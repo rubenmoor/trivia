@@ -6016,7 +6016,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Note: editing plan 42''s subject/body queues a new "create tasks for plan 42"; that run only has to confirm the tasks still match.
 
 Done when: each OQ number is used once; every Freesound reference uses the new number.', '2026-10-12T00:50:35Z', '2026-10-12T18:51:07Z', 180);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (204, 42, 'Freesound: facts, options, write the decision', 'work', 'open', NULL, NULL, 'Part 2 of plan 42. Prepare the Freesound decision; no code, no picks, never contact Freesound/UPF.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (204, 42, 'Freesound: facts, options, write the decision', 'work', 'done', NULL, '2026-10-13, decision 82 (no files)', 'Part 2 of plan 42. Prepare the Freesound decision; no code, no picks, never contact Freesound/UPF.
 
 - Facts (ultra-short, one source line each):
   - Freesound API terms of use and the commercial-licence page: what counts as "commercial use of the API"; whether an internal authoring tool for a paid product counts. CC0/CC BY sound licences themselves allow commercial use (CC BY with credit).
@@ -6029,7 +6029,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm decision add` (subject names the OQ number from the previous task), body = context + facts + trade-offs, ultra-short; names plan 39 as a dependency.
 - `pm task-pending-decision` on the next task of plan 42 (record the answer).
 
-Done when: the decision exists with facts, sources and the email draft; the follow-up task waits on it.', '2026-10-12T00:50:35Z', NULL, 180);
+Done when: the decision exists with facts, sources and the email draft; the follow-up task waits on it.', '2026-10-12T00:50:35Z', '2026-10-13T06:42:44Z', 180);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (205, 42, 'Freesound: record the answer', 'work', 'open', NULL, NULL, 'Part 3 of plan 42. Waits for the Freesound decision from the previous task.
 
 - D-entry in `plans/decisions.md` (next free D-number).
@@ -14233,6 +14233,41 @@ Kept synthesized
 
 Answer
 - «approve», or «changes:» per effect: swap (another recording), back to synth, louder/quieter, pitch.', NULL, NULL, '2026-10-13T06:41:19Z', NULL, 146, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (82, 'Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?', 'pending', '["(a) Replace the 2 Freesound picks from Commons before release; drop Freesound from the audio order", "(b) Ask Freesound/UPF with the drafted email; keep Freesound until the reply", "(c) Keep Freesound for the family only; exclude its picks from the Steam media bundle (SW-9)"]', 'OQ-45 (Freesound), plan 42. The authoring pipeline uses Freesound''s API only to find sounds (MP-6, `authoring/tools/providers/freesound.py`, audio order `commons → freesound`); the game ships the picked CC0/CC BY MP3 previews, never the API. Is a paid Steam release a problem? **Depends on plan 39 / decision 66: Price model (OQ-33)** (paid = commercial).
+
+**Caveat:** this worker had no web access (WebFetch/WebSearch denied). Terms below are from memory; ≈ marks what to re-check on the pages before answering.
+
+## Facts
+- API terms ≈: the API is free for non-commercial use; commercial use needs a separate licence from the MTG (Universitat Pompeu Fabra), arranged by contacting them. Source: freesound.org/help/tos_api/ and freesound.org/docs/api/ ("API terms of use").
+- What counts as commercial ≈: an app or service that is sold or earns revenue and uses the API. The terms don''t (≈) address an internal authoring tool whose output feeds a paid product: grey zone. Same source.
+- The sound licences are separate from the API: CC0 needs nothing, CC BY allows commercial use with credit. Files already downloaded keep their licence whatever the API terms say. Source: creativecommons.org/publicdomain/zero/1.0/, creativecommons.org/licenses/by/4.0/.
+- Count (2026-10-13; `freesound` provider or `freesound.org` URL):
+  - `authoring/data/questions.json` (1211): 2, both approved, both CC0: q-0752 (mosquito, «El zancudo»), q-1016 (turkey, «Pavo»). The 2026-10-11 count (2) holds; the masterplan''s 9/6 was wrong. (q-0749 only mentions Freesound in a note; its pick is Commons.)
+  - `app/data/pool.json` (1136): the same 2.
+  - Audio picks overall: 17 (15 Commons, 2 Freesound) → ≈12 % of audio, ≈0.2 % of questions.
+  - Batches: batch-7 (the only one with providers; MP-11): picks Commons 602, Openverse 2, Freesound 2. Base deficit ≈3,800 questions → at today''s rates ≈6–10 more Freesound slots for `base`, more with translations/bundles.
+- Commons alternatives (provider search, `commons.search(…, "audio")`, no picks, D-36):
+  - q-0752: "File:Mosquito attack.ogg", CC0, 88 s (needs a listen; the rest are pronunciation clips).
+  - q-1016: xeno-canto wild turkey recordings, CC BY-SA 3.0, e.g. "Meleagris gallopavo - Wild Turkey XC134744.ogg" (29 s); wild, not domestic, and longer clips.
+  - Openverse isn''t asked for audio (mostly music, D-13).
+
+## Options
+- **(a) Replace (recommended):** re-pick the 2 slots from Commons in the review tool before release; drop `freesound` from `providers.ORDER["audio"]` (or keep it for the family pool only until release batches start). Cost: 2 re-picks, slightly fewer good everyday sounds later. Plan 39: works for paid and free; no contact with UPF.
+- **(b) Ask Freesound/UPF:** the gamemaster sends the draft below; Freesound stays until the reply. Plan 39: needed only if paid; a refusal or a fee falls back to (a). Wait time unknown.
+- **(c) Family only:** tag Freesound picks (`provider` already exists, plan 26) and exclude them from the Steam media bundle (SW-9, `plans/18-steam-integration.md`); those questions don''t ship or get another pick. Plan 39: paid release ships without them; free release still counts as distribution, so same rule. Adds a filter to SW-9 for 2 questions.
+
+## Email draft (option b)
+To: freesound@freesound.org (≈ check the contact on the API terms page)
+Subject: Freesound API in an internal authoring tool for a paid game?
+
+Hello,
+
+I''m making a small family trivia game that I plan to sell on Steam. An internal authoring tool (not shipped) uses the Freesound API (token auth, text search) to find sound effects for questions; a person then picks one. The game ships only the picked files (CC0 or CC BY, with credits), never the API or any Freesound access. Expected volume: a few dozen sounds in total, a few hundred API searches a year.
+
+Does this count as commercial use of the API that needs a licence? If so, what would it cost?
+
+Thank you,
+Ruben Moor', NULL, NULL, '2026-10-13T06:42:42Z', NULL, 204, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -14741,6 +14776,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (501, 144, '2026-10-13T06:31:17Z', '2026-10-13T06:35:39Z', 'done', NULL, 0, '5d30f0370722c0ea1e568b566915df04033ae898', 'claude-opus-5-5[1m]', '9f775c48-66b8-46ac-9856-564ad4b4a99c', 35, 68, 18063, 2502292, 94101, 1.6147984000000004, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (502, 145, '2026-10-13T06:35:39Z', '2026-10-13T06:41:05Z', 'done', NULL, 0, 'e0b57dac5488b26e1827c96205d3387dbc42937a', 'claude-opus-5-5[1m]', '8ed280bf-1d6b-4a0e-9d10-6d7aed97c1ef', 25, 42, 11511, 1208203, 66081, 1.0006766, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (503, 146, '2026-10-13T06:41:05Z', '2026-10-13T06:41:28Z', 'blocked', NULL, 0, '74e7780c3646097867bf44938bb142a180d696a6', 'claude-opus-5-5[1m]', 'e172be46-4a4b-4fb4-baba-c2e97764cc45', 7, 14, 1839, 189470, 21057, 0.24318599999999999, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (504, 204, '2026-10-13T06:41:28Z', '2026-10-13T06:42:52Z', 'done', NULL, 0, '2411c4123730ed66bb0d35f1176e19b28b3a83c2', 'claude-opus-5-5[1m]', 'afa200e8-4e7c-4065-aa47-3c674f401287', 15, 28, 6889, 525927, 36981, 0.53892539999999989, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -14791,6 +14827,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (199, 66);
 INSERT INTO task_decision (task_id, decision_id) VALUES (200, 66);
 INSERT INTO task_decision (task_id, decision_id) VALUES (202, 23);
 INSERT INTO task_decision (task_id, decision_id) VALUES (202, 24);
+INSERT INTO task_decision (task_id, decision_id) VALUES (205, 82);
 INSERT INTO task_decision (task_id, decision_id) VALUES (209, 12);
 INSERT INTO task_decision (task_id, decision_id) VALUES (210, 12);
 INSERT INTO task_decision (task_id, decision_id) VALUES (211, 12);
