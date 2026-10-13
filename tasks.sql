@@ -22919,7 +22919,7 @@ Temp `TRIVIA_MODS_DIR`, `TRIVIA_DEV_STEAM_USER=1`, mods:
 
 ## Done when
 - Each case behaves as described; `--no-mods` brings back our game with the conversion installed; one line per case in the done note; temp mods deleted. Bugs found → follow-up tasks in plan 112.', '2026-10-13T18:29:51Z', '2026-10-13T18:53:03Z', 914);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (954, 112, 'Docs: mod overlay in directory.md, plans/18, plans/01, AGENTS.md', 'work', 'open', NULL, NULL, 'Plan 112, task 5 (last). Document the mod format and overlay.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (954, 112, 'Docs: mod overlay in directory.md, plans/18, plans/01, AGENTS.md', 'work', 'done', NULL, '2026-10-13, directory.md (app/desktop row: mods.mjs, resolve.test.mjs, layers; mods/ row; state/desktop/mods.json), plans/18-steam-integration.md (section Modding, cites decision 136), plans/01-architecture.md (overlay bullet), AGENTS.md (trivia-desktop: TRIVIA_MODS_DIR, --no-mods)', 'Plan 112, task 5 (last). Document the mod format and overlay.
 
 - `directory.md`: `app/desktop/` row gains `mods.mjs`, `resolve.test.mjs`, layers in `resolve.mjs`; new row `mods/` (local mods for development, gitignored; `TRIVIA_MODS_DIR`); `state/desktop/mods.json`.
 - `plans/18-steam-integration.md`: section "Modding" (sources local/Workshop, `<userData>/mods.json` and top-wins load order, layers mirror the URL space, what isn''t overlaid: `/media`, `/api/*`, `mod.json`; `--no-mods`; symlink rule; the `mod.json` schema section from the `mods.mjs` task; cite the recorded mod settings decision).
@@ -22928,7 +22928,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Style: bullets, ultra-concise (AGENTS.md rules).
 
 ## Done when
-- Docs name plan 112''s paths and the recorded decision; per-commit checks pass.', '2026-10-13T18:29:51Z', NULL, 914);
+- Docs name plan 112''s paths and the recorded decision; per-commit checks pass.', '2026-10-13T18:29:51Z', '2026-10-13T18:53:57Z', 914);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (955, 114, 'workshop.mjs, fake Workshop dir and the start wiring', 'work', 'open', NULL, NULL, 'Plan 114 task 1. Needs plan 112''s tasks 950–952 (`mods.mjs`, `resolve.mjs`, `main.mjs` mods wiring) done first.
 
 - `app/desktop/workshop.mjs` (pure: no Electron, no binding import):
@@ -25662,6 +25662,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (800, 951, '2026-10-13T18:46:03Z', '2026-10-13T18:48:05Z', 'done', NULL, 0, '3c631dc5778bb80172647a624f9a97a87e9e42d6', 'claude-opus-5-5[1m]', '46bd12b3-e744-4504-af70-97ca95b796f0', 19, 36, 9992, 735572, 38015, 0.6512184, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (801, 952, '2026-10-13T18:48:06Z', '2026-10-13T18:51:22Z', 'done', NULL, 0, 'e67015b0e47af363dd683b476a344aab4497b45b', 'claude-opus-5-5[1m]', '1f901555-7e41-4913-a3dc-d034dcbd7ba5', 20, 38, 10047, 863546, 44626, 0.7308092, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (802, 953, '2026-10-13T18:51:23Z', '2026-10-13T18:53:10Z', 'done', NULL, 0, '94a6602e8b44d67544f1aa93dbe6e7d744885e49', 'claude-opus-5-5[1m]', 'b9fed11c-f135-4ca6-ac5a-fcebf014f3ef', 12, 24, 7598, 494666, 39808, 0.5694532, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (803, 954, '2026-10-13T18:53:11Z', '2026-10-13T18:54:04Z', 'done', NULL, 0, 'd2cada2b86150a7655d58900ff4a082bdfb0e0fb', 'claude-opus-5-5[1m]', 'bd4dafc3-1ed6-4901-b075-b5c0d0349c3c', 12, 16, 3827, 304940, 36717, 0.43132800000000005, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

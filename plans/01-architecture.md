@@ -14,6 +14,8 @@ flowchart LR
   App --> State[Save: state/game.json via /api/save]
 ```
 
+- Mod overlay (desktop only, plan 112): the Electron shell's `app://` resolver serves enabled mods' folders before our client and data, first hit wins; `18-steam-integration.md` "Modding".
+
 ## Decisions needed
 - ~~Frontend~~ Svelte 5 + Vite + TypeScript, built to static files served by the Python server (D-5).
 - ~~Persistence: JSON file through a small local server vs. browser localStorage vs. a git-tracked file.~~ Local server agreed (D-3). Storage: ~~SQLite for state~~ (since PORT-8 a JSON save, `state/game.json`, D-67, D-90), a JSON file for questions (D-4).
