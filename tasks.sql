@@ -296,23 +296,31 @@ Five modes; there is no "default mode". Mode names are written in English first;
 - OQ-29..OQ-37 (and OQ-45) are resolved in `decisions.md`, and the later phases in `plans/11-steam.md` are updated to match.
 
 Plan files: `plans/11-steam.md`, `plans/13-game-modes.md`, `plans/15-i18n.md`, `plans/16-content-target.md`, `plans/17-publishing.md`, `plans/18-steam-integration.md`.', '2026-10-11T21:54:56Z', NULL);
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (8, 'Steam S3: playable desktop build', 'open', 'A local desktop build of the game that a family can play without the gamemaster''s dev setup: desktop shell, file saves, controller, Steam Deck layout, credits. Needs the TypeScript engine (the shell loads the client without Python) and the shell decision (OQ-29).
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (8, 'Steam S3: playable desktop build', 'open', 'A local desktop build of the game that a family can play without the gamemaster''s dev setup: desktop shell, file saves, controller, Steam Deck layout, credits. Needs the TypeScript engine (the shell loads the client without Python) and the shell decision (OQ-29). The desktop build replaces the browser game now: the Python game server goes, and the game is Node/TS only (decision 111: Steam only).
 
 ## Outcome
 - Desktop shell and builds (SW-1..SW-6, `plans/18-steam-integration.md`).
 - Controller support and Deck layout (IN-2..IN-5, `plans/14-input.md`).
 - Credits screen (PUB-5, `plans/17-publishing.md`).
+- Browser game and Python game server retired (supersedes D-59''s bridge):
+  - family''s `state/game.json` imported into the desktop save (`trivia-desktop --import-save`); family plays `trivia-desktop`, later the Steam beta
+  - deleted: `app/server/main.py`, `ServerStore` and `/api/save` (incl. task 724''s backup endpoint), the `trivia` command, `nix build .#app` and its `trivia-release-check` step
+  - authoring''s Python moves into `authoring/`: `app/server/paths.py`, `save.py`, `media_cache.py`, `http_base.py` (whatever authoring still imports) become authoring modules; `app/` has no Python left
+  - browser checks for workers: a small Node dev server (e.g. Vite middleware for the save and `/media` from the cache, temp state dir), replacing "walk it on `trivia` with a temp `TRIVIA_STATE`" in AGENTS.md, plan files and open tasks
+  - docs: AGENTS.md, README.md, directory.md, `plans/decisions.md` (D-59 superseded by decision 111)
 
 ## Constraints
 - Offline, no accounts, no telemetry (AGENTS.md).
-- The current game (`trivia`, Python server + browser) keeps working until this build replaces it (D-59).
+- Steam only (decision 111): no checks or fixes for running the builds outside Steam; the local build start test is covered by the Steam beta test (decision 39).
 - Minimal dependencies: a shell and a Steamworks binding; anything else needs a decision.
 
 ## Out of scope
 - Steamworks features, store page (S5); translations (S4).
+- Porting authoring''s Python (qgen, `trivia-authoring`) to Node/TS: later, own milestone.
 
 ## Done when
 - A local build runs on Windows, Linux and the Deck with a controller only.
+- No Python under `app/`; the family''s save lives in the desktop build; workers check UI changes with the Node dev server.
 
 Plan files: `plans/11-steam.md`, `plans/18-steam-integration.md`, `plans/14-input.md`, `plans/17-publishing.md`.', '2026-10-11T21:55:09Z', NULL);
 INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (9, 'Steam S4: content for release', 'open', 'Enough questions, in every launch language, for a stranger''s family to play many evenings. Depends on the launch languages (OQ-31) and the content target (OQ-32).
@@ -14485,6 +14493,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/16-content-target.md`: the simulation numbers from the RG-5 decision''s body (`base` vs `base,colombia`, es).
 
 Done when: docs in sync, 15c done, plan 98''s Done-when bullets all hold.', '2026-10-13T15:02:21Z', NULL, 747);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (753, 8, 'revise the masterplan', 'masterplan', 'open', 1000, NULL, 'The milestone changed. Bring plan 8, the masterplan, in line with it (`pm plan edit 8 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-13T15:11:31Z', NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
