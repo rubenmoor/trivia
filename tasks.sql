@@ -13328,14 +13328,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Approval: `pm decision add "AI disclosure approved?"`. Entry is part 9''s (PUB-9, `task 259`), not this task''s.
 
 Done when: draft in 17a, approval decision added.', '2026-10-13T06:07:03Z', NULL, 665);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (668, 88, 'System requirements, supported languages, controller flags', 'work', 'open', 170, NULL, 'Plan 88 task 3. Needs part 7''s first packaged builds (`task 261: write plan: Builds, depots and upload` and its plan) and part 6''s media bundle (`task 260`). If they aren''t built yet: `pm task-pending-decision` on the decision that blocks their open tasks (`pm show` them) and stop; if none blocks: `pm decision add "Packaged builds ready for the store requirements?"`, pend on it and stop.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (668, 88, 'System requirements, supported languages, controller flags', 'work', 'done', 170, '2026-10-13, plans/17a-store-page.md (requirements per OS, languages table, controller flags; depots measured from the local --dir build: 2.95 GB installed); decision 90 for the gamemaster (incl. real-pad run); follow-up task 688 (apply answer, storage after media bundle) pending on it', 'Plan 88 task 3. Needs part 7''s first packaged builds (`task 261: write plan: Builds, depots and upload` and its plan) and part 6''s media bundle (`task 260`). If they aren''t built yet: `pm task-pending-decision` on the decision that blocks their open tasks (`pm show` them) and stop; if none blocks: `pm decision add "Packaged builds ready for the store requirements?"`, pend on it and stop.
 
 - In `plans/17a-store-page.md`, minimum/recommended per OS: Windows 10/11 x64; SteamOS / Linux x64 (distro the Linux build was tested on); CPU, RAM, GPU from what plays smoothly on the test machines (ask the gamemaster in a decision if unknown); disk = installed size of the depots (today''s plan 56 builds ~2.5 GB each only as a placeholder).
 - Supported-languages table: interface + subtitles ✓ for English, Spanish – Latin America, Spanish – Spain, German; full audio ✗.
 - Controller flags: "full controller support" only if a pad-only game passes start to victory incl. a new player (name entry: plan 46 letter picker, SW-8 floating keyboard, plan 85); else "partial". PlayStation/Xbox glyph flags per plan 45. Deck compatibility is part 10''s (`task 262`), not this task''s.
 - Gamemaster check: `pm decision add` with the values (pad-only run result included); options approve / fix.
 
-Done when: values in 17a, decision added.', '2026-10-13T06:07:03Z', NULL, 665);
+Done when: values in 17a, decision added.', '2026-10-13T06:07:03Z', '2026-10-13T08:23:16Z', 665);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (669, 88, 'Capsules and logo: render per store language', 'work', 'open', NULL, NULL, 'Plan 88 task 4. Needs decision 77: Store capsule art (pending → `pm task-pending-decision` on it and stop). Option 4 or 3 change the work: follow the answer.
 
 - Valve''s current graphical-asset list, checked today and cited in `plans/17a-store-page.md` (2024 reference: header 920×430, small 462×174, main 1232×706, vertical 748×896, page background 1438×810, library capsule 600×900, library hero 3840×1240, library logo 1280×720 PNG, library header 920×430, community icon 184×184; recheck sizes and text-area/safe-zone rules).
@@ -13481,6 +13481,10 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Only after release / coming soon: no request now; `plans/11-steam.md` ST-4 gains "request Deck review (SW-12), Valve''s timing: …"; masterplan 11 (plan 11) gets a dated note via `pm plan edit 11 --body -` only if it''s written and doesn''t list it.
 - Docs: plan 18 SW-12 `[x]` (review result, or "test passed; review in S6" with reason); `plans/14-input.md` Steam Deck line (real-Deck result); `plans/project.md` in sync.
 - Done when: review result recorded or S6 note in place, and SW-12 ticked.', '2026-10-13T08:20:04Z', NULL, 684);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (688, 88, 'Store requirements: apply decision 90 and the media bundle''s size', 'work', 'open', NULL, NULL, 'Follow-up of `task 668`. `plans/17a-store-page.md`, "System requirements, languages, controller".
+- Decision 90 (Store requirements, languages and controller flags?): apply the answer (fixes, Full vs Partial controller support, en/de language rows); `pm decision consequences 90`.
+- Storage: after part 6''s media bundle (SW-9, `task 260`, decision 82) rebuild `trivia-desktop-build --dir`, `du -sb` the three depots (`release/{win,linux}-unpacked` minus `resources/media`, `app/desktop/build/media`), set "Storage" to the installed size rounded up; update "Measured".
+- Linux OS row: replace "Ubuntu 22.04" with the distro of the first non-Nix start test (18, "Local build start test") once filled.', '2026-10-13T08:23:13Z', NULL, 668);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -14512,6 +14516,24 @@ Needed:
 - depot IDs: windows, linux, content (one install folder; media in content, plan 89)
 - `beta` branch created in Steamworks (App Admin → SteamPipe → Builds); password stays out of files
 Answer once these are entered and task 650 is done.', NULL, NULL, '2026-10-13T08:17:37Z', NULL, 681, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (90, 'Store requirements, languages and controller flags?', 'pending', '["approve (real-pad run passed: Full controller support)", "approve with Partial controller support (real-pad run failed or not done)", "fix (say what)"]', 'Plan 88 task 3 (task 668). Values in `plans/17a-store-page.md`, "System requirements, languages, controller". Please check and answer.
+
+Requirements (min / recommended, Windows and SteamOS+Linux):
+- OS: Windows 10 64-bit / Windows 11; SteamOS 3 or Ubuntu 22.04+ (untested: only NixOS + steam-run so far)
+- CPU: 64-bit dual-core 2 GHz / quad-core
+- RAM: 4 GB / 8 GB
+- GPU: DirectX 11 (Windows) or OpenGL/Vulkan, H.264 video decode / any GPU from 2018 on
+- Storage: 3 GB (measured 2.95 GB installed; placeholder until the media bundle, decision 82)
+- Network: none; notes: plays offline, 1280×720+, keyboard/mouse/pads, best on a TV
+- Unknown to me: what plays smoothly on weaker machines. Only the author''s laptop (i5-12500H, 64 GB) is known. If you have an older/weaker machine that played fine, name it and I lower or keep the minimum.
+
+Languages: English, Spanish - Latin America, Spanish - Spain, German: Interface ✓, Subtitles ✓, Full audio ✗. English and German question pools are not exported yet (decision 80): tick them only once they ship, or accept interface-only for the beta.
+
+Controller:
+- Xbox: Full controller support if a real-pad run passes; else Partial. Pad-only result so far: automated (headless, faked pad) whole game start → existing player → every joker → wrong + victory (task 352) and new-player letter picker (plan 46): pass. Real pad: not run yet. Please play one game pad only: start → new player (letter picker; under Steam the floating keyboard) → victory, and say pass/fail.
+- PlayStation: supported, PlayStation glyphs shown ✓
+- Steam Input API: glyph type only; Gamepad recommended: no
+- Field names are from memory (no web access); recheck in Steamworks at entry.', NULL, NULL, '2026-10-13T08:23:08Z', NULL, 668, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -15042,6 +15064,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (523, 686, '2026-10-13T08:20:38Z', '2026-10-13T08:20:55Z', 'blocked', NULL, 0, 'fd547b63e38e6b32cd13fd8eb677dee10b5a3f26', 'claude-opus-5-5[1m]', '88014b6b-b7c3-455e-9fe0-1c9acce83ff3', 5, 10, 1012, 141049, 24158, 0.2417538, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (524, 687, '2026-10-13T08:20:55Z', '2026-10-13T08:21:13Z', 'blocked', NULL, 0, '1e26b7986b07b068c29211a90b999b0e375e2491', 'claude-opus-5-5[1m]', '575c7a71-3010-469a-9b3c-a032ae97fd26', 5, 10, 1158, 135463, 25560, 0.2547726, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (525, 263, '2026-10-13T08:21:14Z', '2026-10-13T08:21:36Z', 'blocked', NULL, 0, '15ad91dd57b67f060e768b71af515548cf183fc6', 'claude-opus-5-5[1m]', 'dabc3cab-60a4-4e9c-b7e9-9a42b62a535d', 4, 8, 1302, 114192, 27952, 0.2725264, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (526, 668, '2026-10-13T08:21:36Z', '2026-10-13T08:23:27Z', 'done', NULL, 0, '5171242c36db77d5182baeffb23827eb5f2eb42a', 'claude-opus-5-5[1m]', '9dfed8c0-1062-48c8-ab34-122fee29ce57', 19, 38, 9780, 906003, 50558, 0.78141660000000013, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -15196,5 +15219,6 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (686, 72);
 INSERT INTO task_decision (task_id, decision_id) VALUES (686, 89);
 INSERT INTO task_decision (task_id, decision_id) VALUES (687, 72);
 INSERT INTO task_decision (task_id, decision_id) VALUES (687, 89);
+INSERT INTO task_decision (task_id, decision_id) VALUES (688, 90);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
