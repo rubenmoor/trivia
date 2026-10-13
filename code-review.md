@@ -1667,6 +1667,12 @@ Plan 82 consolidates the duplication candidates of parts 2–9, checks naming an
 | `.gitignore`, `app/client/.gitignore`, `authoring/ui/.gitignore` | the two sub-files only repeated the root's `node_modules/`, `dist/` (unanchored, match at any depth) | unused | low | fixed (task 586): deleted, `directory.md` updated; `git status --ignored` after `npm run build`: every generated path ignored, nothing untracked |
 | `.gitignore` | stale entries? `work/` (`TRIVIA_WORK` default), `*.tmp` (atomic writers' `<name>.tmp`, task 583), `result`/`result-*` (`nix build`, multi-output builds) | — | — | no findings: all live |
 | `.envrc`, `.gitignore` | `.env.local` "secrets" vs. AGENTS.md "No secrets, accounts or telemetry" | inconsistency | low | won't fix: the keys are optional authoring provider credentials (`COMMONS_ACCESS_TOKEN`, `FREESOUND_API_KEY`, Openverse; README, IMG-15, D-45), gitignored, never read by `app/` (grep) or shipped; the rule is about the game and the repo. Clearer AGENTS.md wording is a rule change: part 11 (plan 83) |
+| `directory.md` | part 1's `dircheck.py` re-run (task 620): 14 `MISSING`, all named in a file-keyed row (`node.d.ts`, `supply.ts`, `sim/*.ts`, `authoring/tools/package.json`) or by the `*.test.ts` glob; 42 `STALE?`, none stale (gitignored, generated, relative or deleted names as in part 1) | — | — | no findings |
+| `directory.md` | `authoring/ui/` row still listed `.gitignore` (deleted by task 586); `stats/` components only as "charts, tables"; tracked `README.md`, `tasks.sql`, `project-manager.toml` in no row; `timing.ts`, `translations.py` descriptions predate tasks 583/584 (`reducedMotion()`, the locale lists, `run_locale`) | inconsistency | low | fixed (task 620) |
+| `AGENTS.md`, `CLAUDE.md` | commands: each is a flake wrapper in the dev shell (`trivia-steam`, `trivia-release-check`: x86_64-linux), each flag named exists (`--dir`, `--skip`, `--manual`, `--branch`, `--checked`, `--preview`, `--dry-run`, `-h`), `qgen report --cost` runs (runs, kinds, projection per launch language; writes nothing), `/review?licence=replace` answers 200; `nix build .#app`: task 586 (no flake change since). Rules: `app/` names `authoring` only in comments and the overlay's links (`VITE_AUTHORING_URL`, port 8001), no import or read; network: `app/client` fetches only same-origin files and the API, `main.mjs` blocks `http(s)`/`ws(s)` (decision 4); no `.github/` (D-73). Lint pass as tasks 616/617 left it: `npm run check` (strict flags), ESLint pending (decision 106, task 744) | — | — | no findings |
+| `README.md` | dev shell list missed Xvfb, `trivia-steam`, `trivia-release-check`, `steamcmd`; `npm run check` said "type-check" only (also strict flags + literals); dev proxies listed `/api`, `/media` (also `/data`, authoring `/reports`); "plans are the source of truth" predates `pm` (AGENTS.md); `qgen report` options without `--cost`, `--batches`, `--simulate` | inconsistency | low | fixed (task 620) |
+| `README.md` | run as written on temp `TRIVIA_STATE`/`TRIVIA_MEDIA`/`TRIVIA_WORK`: `trivia --port`, `trivia-authoring --port` (`/`, `/data/pool.json`, `/api/overview`, `/review?licence=replace`, `/stats/media`, `/comodines`: 200; nothing written), `trivia-media` subcommands, `qgen audit --backlog --slice --dry-run`, `qgen bundle new`, `qgen health ack` flags; env vars: the 10 read in code (`TRIVIA_*`, `VITE_AUTHORING_URL`) = the 10 documented | — | — | no findings |
+| `app/client/src/game/*.svelte` | cluster 25 leftovers no task 584 row names: `.menu-button`/`.flag-button` share size, hover, transition (`Game.svelte`); other keyframes (`bob`, `shake`, `pop`, `pulse`, `spin`, `deal`); `JokerFlight`'s token look ↔ `JokerTray` `.token`; field background `rgba(11, 17, 32, 0.6)` ×3; `Choice`'s `:global(.bundle .description)` (part 5 rows `Game`, `Question`, `JokerFlight`, `LetterPicker`/…, `Choice`/`BundleSelector`) | complexity | low | won't fix: the two buttons are siblings in one file (a grouped selector saves ~10 lines, needs a decision 6 pixel run); every other keyframe name now occurs once or differs (`deal` ×2: rise vs. tilted fall); the flying token copies the tray's look on purpose (a WAAPI clone); the field colour is `--night-900` at an alpha (row "~25 `rgba` copies"); the `:global` is one state style of the configure screen |
 
 ### Python ↔ Node/TS parity
 
@@ -1733,6 +1739,21 @@ Task 580 collected every "duplication candidate" row of parts 2–9 and every pa
 | 37 | `LEVEL_WEIGHTS` | `qgen.py` ↔ `app/data/age-groups.json` | part 7 list: `qgen.LEVEL_WEIGHTS` "won't fix: D-76, AG-8; task 558" | won't fix (task 558): D-76 |
 | 38 | `Names` (task 580 grep, unlogged) | `authoring/ui/src/lib/types.ts` `Names` ↔ `app/client/src/engine/state.ts` `Names` (bundle `description` required vs. optional) | — | task 581 |
 
+### Part 10 close
+
+Task 620 (2026-10-13) checked that every part 1 row `handed to part 10` and every duplication row of parts 2–9 has a final status here, and listed the files added since part 1 in the inventory.
+
+- Duplication rows of parts 2–9: each is a source row of one cluster above (1–38, task 580's grep re-run: no new one); each cluster has its status in the table or the clusters list; leftovers of cluster 25: the last table row
+- Still open from part 10: `task 721: Part 10: review the build-time credits plugin: app/client/credits.ts, node.d.ts` (cluster 36), `task 740: Cross-process writes to the authoring pool, translations and spot checks: no lost updates` (cluster 22), `task 743: Type-check the engine tests and authoring/tools TS in npm run check` (cluster 34), `task 626: Vite native config loader warning: import extensions in config files`, `task 627: trivia-desktop: unknown command-line flags fail loudly`
+- Waiting for the gamemaster: decision 104 → task 741 (twins parity), decision 105 → task 742 (configure screen steppers), decision 106 → task 744 (ESLint)
+- Open follow-ups of parts 4–9, each waiting for a pending decision (no part 10 overlap): task 724 (decision 98), 727 (99), 729 (100), 736 (102), 739 (103)
+
+| part 1 row (quoted) | final status |
+|---|---|
+| `app/client/src/app.css`, `authoring/ui/src/app.css` "identical 27-line colour token files" | won't fix (cluster 24, task 584 row): 15 shared lines in two bundles; the missing authoring tokens added |
+| `app/client/credits.ts` "`buildCredits` exported, used only inside `credits.ts`" | follow-up task 721 (cluster 36) |
+| `authoring/server/main.py`, `spot_checks.py`, `qgen.py` "`questions.json`, `questions.<locale>.json` and `spot-checks.json` writers lock per process only" | follow-up task 740 (cluster 22) |
+
 ### Linter evaluation
 
 Task 616 evaluated a linter for the TypeScript trees (`app/client/src`, `authoring/ui/src`, `app/desktop` `.mjs`/`.cjs`; 48 `.ts`, 34 `.svelte`, 6 desktop scripts, ~14.9k lines) on 2026-10-12. Parts 2–9 had logged no findings yet, so the evidence is the trial run alone: every diagnostic of every candidate was triaged by hand.
@@ -1790,11 +1811,13 @@ Every `git ls-files` path in scope, mapped to the one part that reviews it (2026
 | `app/server/` (`http_base.py`, `main.py`, `media_cache.py`, `paths.py`, `save.py`) | 2 | 532, 533 |
 | `authoring/tools/categories.py` | 2 | 534 |
 | `app/client/src/engine/` (10 modules + `choice.ts` split from `game.ts` in task 535, 8 `*.test.ts`, `test/` 3 helpers; not `fixtures/`) | 3 | 535–538 |
+| `app/client/src/engine/settings.test.ts` (added by task 723) | 3 | 723 |
 | `app/client/src/lib/` (`input.svelte.ts`, `gamepad.ts`, `gamepad.svelte.ts`, `focus.ts`) | 4 | 539 |
 | `app/client/src/lib/` (`engine.ts`, `store.ts`, `data.ts`, `desktop.ts`), `src/main.ts`, `src/App.svelte`, `src/app.css`, `src/vite-env.d.ts` | 4 | 540 |
 | `app/client/src/lib/` (`api.ts`, `types.ts`, `errors.ts`, `names.svelte.ts`) | 4 | 541 |
 | `app/client/src/lib/i18n.ts`, `app/client/src/locales/` (5 files), `app/client/scripts/check-literals.mjs` | 4 | 542 |
 | `app/client/src/lib/build.ts` | 4 | 722 |
+| `app/client/src/lib/http.ts` (added by task 581) | 10 | 581 |
 | `app/client/src/game/` (36 files) | 5 | 543–552; not reviewed by those: 553 (Choice group), 728 (the rest: `LetterPicker`, `letters.ts`, `GameSettings`, `Credits`, `FlagDialog`, `LocalProgress`, `EffectsDemo`) |
 | `app/desktop/` (`main.mjs`, `preload.cjs`, `resolve.mjs`) | 6 | 554 |
 | `app/desktop/save.mjs` | 6 | 555 |
@@ -1807,6 +1830,8 @@ Every `git ls-files` path in scope, mapped to the one part that reviews it (2026
 | `authoring/tools/` (`media.py`, `download.py`) | 8 | 570 |
 | `authoring/tools/providers/` (5 files) | 8 | 571 |
 | `authoring/tools/` (`engine.py`, `supply.ts`, `sim/` 2 files, `package.json`; added since plan 80: `cdp.mjs`, `patch_notes.py`) | 8 | 572 |
+| `app/client/src/game/Envelopes.svelte` (split from `Game.svelte` by task 726) | 5 | 726 |
+| `app/client/src/game/` (`difficulty.ts`, `jokers.ts`: added by task 584) | 10 | 584 |
 | `authoring/tools/atomic.py` (added by task 583) | 10 | 583 |
 | `authoring/server/main.py` | 9 | 573 |
 | `authoring/server/` (`overview.py`, `spot_checks.py`, `media_stats.py`) | 9 | 574 |
@@ -1819,7 +1844,7 @@ Every `git ls-files` path in scope, mapped to the one part that reviews it (2026
 | `flake.nix`, `flake.lock`, `package.json`, `package-lock.json`, `.envrc`, `.gitignore` | 10 | 586 |
 | `app/client/` (`package.json`, `tsconfig.json`, `vite.config.ts`, `svelte.config.js`, `index.html`, `.gitignore` deleted by task 586) | 10 | 586 |
 | `app/client/credits.ts`, `app/client/node.d.ts` | 10 | 721 |
-| `directory.md`, `AGENTS.md` (vs. the code only) | 10 | 620 |
+| `directory.md`, `AGENTS.md`, `CLAUDE.md`, `README.md` (vs. the code only) | 10 | 620 |
 
 Out of scope (milestone 13 "Scope", plan 72):
 - `*.json` data and fixtures (226: pools, concepts, bundles, `app/client/src/engine/fixtures/`, `app/data/`); in scope: `package*.json`, `tsconfig.json`, `authoring/steam/steam.json`

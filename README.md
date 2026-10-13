@@ -17,7 +17,7 @@ Milestones, plans and open tasks: `pm status` (`tasks.sql`); the older overview 
 
 ## Getting started
 
-You need [Nix](https://nixos.org/) with flakes. The dev shell has Node 22, Python 3, ImageMagick and Claude Code, plus Electron and the commands `trivia`, `trivia-desktop`, `trivia-desktop-build`, `trivia-authoring`, `qgen` and `trivia-media`, which run this checkout's scripts, and `pm` ([project-manager](https://github.com/rubenmoor/project-manager)).
+You need [Nix](https://nixos.org/) with flakes. The dev shell has Node 22, Python 3, ImageMagick and Claude Code, plus Electron and the commands `trivia`, `trivia-desktop`, `trivia-desktop-build`, `trivia-authoring`, `qgen` and `trivia-media`, which run this checkout's scripts, Xvfb, on x86_64 Linux also `trivia-steam`, `trivia-release-check` and `steamcmd`, and `pm` ([project-manager](https://github.com/rubenmoor/project-manager)).
 
 ```sh
 git clone https://github.com/rubenmoor/trivia.git && cd trivia
@@ -105,7 +105,7 @@ Media comes from Wikimedia Commons first, then NASA (space only), Openverse and 
 ```sh
 qgen validate            # checks the source pool, and that app/data/pool.json is its current export
 qgen export              # rewrites app/data/pool.json (the authoring server does this after every change); reload the game page
-qgen report              # supply per level, difficulty and category; progress vs. targets (--bundle <id>, --player <name>, --subcategories, --calibration [<batch>…], --overlaps, --exit-check, --qc [<batch>])
+qgen report              # supply per level, difficulty and category; progress vs. targets (--bundle <id>, --player <name>, --subcategories, --calibration [<batch>…], --overlaps, --exit-check, --qc [<batch>], --cost, --batches, --simulate; all: -h)
 qgen patch-notes [<from-tag> [<to-tag>]]   # a content patch's counts-only notes + Steam event drafts (default: newest v* tag → working tree)
 ```
 
@@ -114,13 +114,13 @@ qgen patch-notes [<from-tag> [<to-tag>]]   # a content patch's counts-only notes
 ```sh
 trivia & npm run dev -w app/client                 # game UI with hot reload
 trivia-authoring & npm run dev -w authoring/ui     # authoring UI with hot reload (port 5174)
-npm run check                                      # type-check both clients
+npm run check                                      # type-check both clients (strict tsconfig flags) + on-screen literals
 npm test                                           # game engine tests (node:test)
 npm run check:literals -w app/client               # on-screen literals outside the UI catalog (src/game by default)
 npm run build -w app/client && trivia-desktop      # the game in the Electron desktop shell, no Python (save: state/desktop/local/game.json)
 ```
 
-The dev servers forward `/api` and `/media` to the Python servers, so run both. Before changing anything, read [`plans/README.md`](plans/README.md): plans are the source of truth, and decisions (D-numbers) are logged in [`plans/decisions.md`](plans/decisions.md).
+The dev servers forward the Python servers' routes (`/api`, `/data`, `/media`; authoring also `/reports`), so run both. Before changing anything: milestones, plans, tasks and decisions are in `pm` (`pm status`, `pm decision list --answered`; [`AGENTS.md`](AGENTS.md)); older plans and D-numbers in [`plans/README.md`](plans/README.md), [`plans/decisions.md`](plans/decisions.md).
 
 Environment variables (empty = unset):
 - `TRIVIA_STATE`, `TRIVIA_MEDIA`: save folder and media cache (default `state/`, `media/`; packaged: `$XDG_DATA_HOME/trivia/`)
