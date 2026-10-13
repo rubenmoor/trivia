@@ -2,14 +2,16 @@
   // The Player screen (plans/04-ui-tv-display.md, "Player", D-28, UI-16): «¿Quién juega?» with the
   // known names (most recent first, keys 1–9) and a field for a new name. Names are labels; what the
   // family saw counts for the whole save (plan 65). Each name can be deleted with its games, after a
-  // confirmation (GF-7); its seen questions stay seen. The Choice screen comes next (plan 29).
+  // confirmation (GF-7); its seen questions stay seen. The Choice screen comes next (plan 29). With a pad,
+  // A on the field opens the letter picker (plan 46).
   import { onMount } from "svelte";
   import { deletePlayer, fetchPlayers } from "../lib/api";
   import { errorText } from "../lib/errors";
   import { t } from "../lib/i18n";
-  import { focusControl, pushScope } from "../lib/input.svelte";
+  import { focusControl, lastDevice, pushScope } from "../lib/input.svelte";
   import type { Player } from "../lib/types";
   import Icon from "./Icon.svelte";
+  import LetterPicker from "./LetterPicker.svelte";
   import Prompt from "./Prompt.svelte";
 
   let {
@@ -36,6 +38,8 @@
   let cancelButton = $state<HTMLButtonElement>();
   let section = $state<HTMLElement>();
   let dialog = $state<HTMLDivElement>();
+  let picking = $state(false);
+  let onField = $state(false);
 
   onMount(async () => {
     try {
@@ -88,7 +92,10 @@
       text: () => input,
       handle: (a) => {
         if (a.type === "pick" && a.n <= shown.length) onchoose(shown[a.n - 1].name);
-        else if (a.type === "confirm" && document.activeElement === input) submit();
+        else if (a.type === "confirm" && document.activeElement === input) {
+          if (a.device === "gamepad") picking = true;
+          else submit();
+        }
         else return false;
         return true;
       },
@@ -144,13 +151,23 @@
           placeholder={t("screen.player.placeholder")}
           disabled={busy}
           data-focus-default
+          onfocus={() => (onField = true)}
+          onblur={() => (onField = false)}
         />
+        {#if lastDevice.current === "gamepad"}
+          <button class="secondary" type="button" onclick={() => (picking = true)} disabled={busy} data-nofocus tabindex="-1">
+            <Prompt action="confirm" fixed off={!onField} />
+            {t("picker.write")}
+          </button>
+        {/if}
         <button class="candy" type="submit" disabled={busy || !typed}>{t("screen.player.submit")} <Prompt action="confirm" off={!typed} /></button>
       </div>
     </form>
   {/if}
 
   {#if error}<p class="error">{error}</p>{/if}
+
+  {#if picking}<LetterPicker bind:name {busy} onsubmit={submit} onclose={() => (picking = false)} />{/if}
 
   {#if doomed}
     <div class="backdrop">

@@ -21,7 +21,7 @@ The shell's own code stays tiny: create a fullscreen window, load `app/client/di
 - **Steam Cloud:** the save (12) is one JSON file, `<userData>/save/game.json` (`%APPDATA%\trivia`, `~/.config/trivia`; D-72). Steam Auto-Cloud syncs it with no code: root `save/`, non-recursive, pattern `game.json` (the `.tmp` and `backup/` stay local).
 - **Overlay:** the Steam binding needs a call to enable it in Electron; test on Windows and the Deck (fallback on the Deck: the Windows build via Proton).
 - **Achievements:** a few that fit the game (first victory, a win without jokers, a win on Experto, every broad category answered, reaching level 12 in each preset). No grind achievements.
-- **On-screen keyboard:** `ShowFloatingGamepadTextInput` for the player name on the Deck / Big Picture (IN, Deck Verified).
+- **On-screen keyboard:** `ShowFloatingGamepadTextInput` for the player name on the Deck / Big Picture (IN, Deck Verified). SW-8 may let it replace the in-game letter picker under Steam (plan 46); the picker stays the fallback without Steam.
 - **Language:** the default UI and question language come from the Steam client language (I18N-2, D-86): wire it into `guessTag()` in `lib/engine.ts`.
 - **Rich presence** (optional): «Nivel 7 de 12».
 - **Remote Play Together:** enabled in Steamworks once multi-controller input works (IN-6).

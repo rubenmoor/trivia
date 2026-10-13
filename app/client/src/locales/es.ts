@@ -180,6 +180,14 @@ const es = {
     reset: "Estándar",
     done: "Listo",
   },
+  /** The letter picker: a new name with a pad only (plan 46). */
+  picker: {
+    title: "Escriban su nombre",
+    write: "Escribir",
+    space: "Espacio",
+    erase: "Borrar",
+    done: "Listo",
+  },
   screen: {
     loading: "Cargando…",
     noData: "Esta pantalla no tiene datos.",

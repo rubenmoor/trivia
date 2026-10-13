@@ -80,6 +80,12 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 - «¿Quién juega?»: the known player names as big buttons (most recent first, keys `1`–`9`), plus «Nuevo jugador» with a text field (the TV machine's keyboard, OQ-11).
 - A chosen name goes to the Choice screen; the supply check is there.
 - Each name can be deleted with all its games and progress (GF-7): a small trash button on hover or keyboard focus, then a confirmation.
+- Letter picker for a pad (plan 46, SW-4): `game/LetterPicker.svelte`, modal over the screen; keyboard and mouse never see it.
+  - Opens on pad A with the field focused, or the «Ⓐ Escribir» button next to the field (shown only when the pad was last).
+  - 9-column grid `A`–`Z`, `Ñ`, `Á É Í Ó Ú Ü`, `-`; row «Espacio», «⌫ Borrar», «Listo»; spatial focus, default «A».
+  - Auto-capital (`game/letters.ts`): first letter and after space or `-` upper case, rest lower; 30 chars.
+  - A types; B deletes, on an empty name closes; Start closes; text stays in the field. «Listo» = «¡A jugar!».
+  - Mouse clicks on keys; physical letters, `Backspace`, `Enter` (focused key), `Esc` (close) while open.
 - Idle animation so the TV doesn't look frozen, e.g. the empty foundation slowly breathing, or floating question marks.
 
 ### Choice (plan 29, AG-7, BN-6)

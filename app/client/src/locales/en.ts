@@ -157,6 +157,13 @@ export const en = {
     reset: "Standard",
     done: "Done",
   },
+  picker: {
+    title: "Type your name",
+    write: "Type",
+    space: "Space",
+    erase: "Delete",
+    done: "Done",
+  },
   screen: {
     loading: "Loading…",
     noData: "This screen has no data.",
