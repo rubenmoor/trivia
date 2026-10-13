@@ -13005,8 +13005,46 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Failures from the check → follow-up tasks in plan 85.
 
 Done when: decision answered as passed and the docs updated.', '2026-10-13T05:18:18Z', NULL, 644);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (653, 86, 'create tasks for plan 86', 'split', 'open', 1000, NULL, 'Split plan 86 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T05:47:45Z', NULL, 257);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (653, 86, 'create tasks for plan 86', 'split', 'done', 1000, '2026-10-13, tasks 654-658 (tasks.sql)', 'Split plan 86 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T05:47:45Z', '2026-10-13T05:48:42Z', 257);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (654, 86, 'Achievement list as a pm decision', 'work', 'open', NULL, NULL, 'Plan 86 task 1: get the achievement list approved by the gamemaster before code, icons and Steamworks values.
+
+- `pm decision add "Achievement list (SW-11)?"`: body = the plan''s table (API name, trigger) plus exact display name + description per Steam language: `latam`, `spanish` (only es-ES word differences, else "same as latam"), `english`, `german`; tone of the game''s catalogs (`app/client/src/locales/`), joker names as in the catalogs where referenced. Mark which go into Steamworks now (modes in `BUILT_MODES`, `engine/game.ts`) and which wait for MD-8.
+  - option 1 (recommended): the plan''s draft
+  - option 2: draft + one cheap, non-grind extra (e.g. a win in each age group) only if it really is cheap; else leave out
+- `pm decision record "Gamemaster mode earns no achievements" --answer "…" --body "…"`: undo, skip, replace, any joker budget (D-74, D-88; decision 20: Default mode: which admin actions in the Esc menu); only qualifying games per decision 19: Default mode: presets, checkpoints and won levels.
+- `pm task-pending-decision <this task> <list decision>`; stop. After the answer: `pm decision consequences` with the final list, done.
+
+Done when: list decision answered, gamemaster rule recorded.', '2026-10-13T05:48:40Z', NULL, 653);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (655, 86, 'Achievements engine and page wiring', 'work', 'open', NULL, NULL, 'Plan 86 task 2. Needs the answered list decision from task 654 (`pm decision list --answered --grep chievement`); if it''s still pending: `pm task-pending-decision` on it and stop.
+
+- `app/client/src/engine/achievements.ts`: `ACHIEVEMENTS` (API name, mode or none), `qualifies(row)` (plan 86 "Rules": not gamemaster, `!settings.customized`, no `settings.difficulty`, `levels` missing or 12, `cards` missing or 4), pure `earned(save, data) → AchievementId[]` over all players'' game rows; `ALL_CATEGORIES` per the plan (base bundle categories with questions in the loaded pool''s locale; questions not in the pool ignored). Only ids in Steamworks now get unlocked (mode wins for unbuilt modes stay in the list, filtered by `BUILT_MODES`).
+- Page: unlock `earned()` minus ids sent this session via `steam.unlock` (`lib/desktop.ts`), only when `steam?.available`: at game end (won/lost/abandoned) and once after the save loads. Pattern: rich presence in `Game.svelte`. No save field, no UI of our own, no stats.
+- `app/desktop/main.mjs`: stderr log when `unlockAchievement` returns false.
+- Optional: one `node:test` over a fixture save (qualifying/customized/gamemaster/categories) if it stays useful.
+
+Done when: without Steam the game and save are unchanged; with Steam (480 or real App ID) the unlock calls go out (stderr shows false on 480 — expected); `npm run check`, `npm test`, `npm run build` pass.', '2026-10-13T05:48:40Z', NULL, 653);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (656, 86, 'Achievement icons and render script', 'work', 'open', NULL, NULL, 'Plan 86 task 3 ("Icons"). Needs the answered list decision from task 654; if pending: `pm task-pending-decision` on it and stop.
+
+- Original SVGs, one per achievement in the approved list, `app/desktop/achievements/<API>.svg`, house style of `Icon.svelte` / `Glyph.svelte`, palette of `plans/10-visual-design.md`.
+- Script renders achieved PNG + unachieved (greyscale, dimmed) at the size Steamworks asks for today (check Valve''s docs; plan says 64×64 or 256×256). Renderer offline from the dev shell (`rsvg-convert`/`resvg` from the flake or Electron headless); no npm dependency.
+- PNGs gitignored, or committed if the script can''t run in every dev shell: decide, note it in `directory.md`.
+- Credits (`app/client/credits.ts`): achievement icons under the game''s own art, like the glyphs.
+
+Done when: PNG pairs exist for every achievement going into Steamworks now; checks pass.', '2026-10-13T05:48:40Z', NULL, 653);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (657, 86, 'Steamworks achievement setup values and VDF', 'work', 'open', NULL, NULL, 'Plan 86 task 4 ("Steamworks setup"). Needs the answered list (task 654) and the icons (task 656).
+
+- `plans/18-steam-integration.md`: per achievement API name, display name + description per language (latam, spanish, english, german), Hidden = no, achieved/unachieved icon file, Set by Client, no stat; only the ones for built modes now (others: with MD-8).
+- `app/desktop/steam-achievements.vdf` in Steamworks'' achievement-localization upload format (check Valve''s docs; like `steam-presence.vdf`) if Steamworks accepts an upload; otherwise only the table in plan 18.
+- `pm decision add "Achievements entered and published in Steamworks?"` (steps: enter, upload icons/VDF, publish; needs the real App ID from SW-7, `task 254: write plan: Steamworks app configuration (SW-7)` — say so in the body); `pm task-pending-decision` this task; after the answer record consequences and finish.
+
+Done when: values documented, decision answered.', '2026-10-13T05:48:40Z', NULL, 653);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (658, 86, 'SW-11 close-out: gamemaster check and docs', 'work', 'open', NULL, NULL, 'Plan 86 task 5. After tasks 655, 657.
+
+- `pm decision add` one gamemaster check under Steam with the real App ID (fresh account or reset stats): win a solo game → `FIRST_WIN` toast; customized game and gamemaster game unlock nothing; a save from a no-Steam session unlocks on the next start under Steam; without Steam game and save unchanged. Options: passes (recommended) / issues. Pending this task on it.
+- Docs: `plans/18-steam-integration.md` SW-11 `[x]` with note; rewrite the "Achievements" bullet under "Steam features" (drop presets/Experto wording, per decision 19: Default mode: presets, checkpoints and won levels); `plans/13-game-modes.md` MD-8 note (enter the mode-win achievements in Steamworks when the mode ships); `plans/project.md`; `directory.md` (achievements dir, script, VDF).
+
+Done when: check passed, docs updated; issues → follow-up tasks.', '2026-10-13T05:48:40Z', NULL, 653);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -14324,6 +14362,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (476, 651, '2026-10-13T05:43:08Z', '2026-10-13T05:44:55Z', 'done', NULL, 0, '6a101ec69c3e07982026d8da3aa01ae00474952f', 'claude-opus-5-5[1m]', '438ebddd-f512-4419-8189-c3de852b78b5', 17, 34, 6523, 688437, 40179, 0.5897154, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (477, 652, '2026-10-13T05:44:55Z', '2026-10-13T05:46:06Z', 'blocked', NULL, 0, '633b175a8e5cfcd43383eeaeea2e999c5d37006f', 'claude-opus-5-5[1m]', '665737b0-d2d1-4fc7-965a-138380ed5cec', 14, 26, 5826, 524214, 40767, 0.5476028, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (478, 257, '2026-10-13T05:46:06Z', '2026-10-13T05:47:57Z', 'done', NULL, 0, '81193a8e0ebfcfe009466a707ece9fea944f813d', 'claude-opus-5-5[1m]', '9033df1b-7e77-493c-bb8a-9f1f45c5bc3f', 13, 24, 9747, 598056, 63518, 0.82279120000000017, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (479, 653, '2026-10-13T05:47:58Z', '2026-10-13T05:48:50Z', 'done', NULL, 0, 'e5eee1d350aff5ae2615524b3ef1412e5f62394d', 'claude-opus-5-5[1m]', '6f704a62-9bbc-42f1-8893-0256cff0b751', 6, 12, 4486, 186898, 29439, 0.36265959999999997, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
