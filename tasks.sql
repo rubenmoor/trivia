@@ -6295,7 +6295,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/17-publishing.md`: PUB-4 `[x]` with a note.
 
 Done when: licence file(s) exist, linked from `README.md` and `directory.md`; `nix build .#app` passes; PUB-4 `[x]`.', '2026-10-12T00:49:21Z', '2026-10-12T00:49:31Z', 178);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (198, 40, 'Licence: facts, options, write the decision(s) (OQ-35)', 'work', 'open', NULL, NULL, 'Part 1 of plan 40. Prepare the OQ-35 decision(s); no code, no licence files, never contact a lawyer. Not legal advice: name where a professional must check.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (198, 40, 'Licence: facts, options, write the decision(s) (OQ-35)', 'work', 'done', NULL, '2026-10-13, decisions 107 (licence) and 108 (release content public); tasks 199, 200 wait on both', 'Part 1 of plan 40. Prepare the OQ-35 decision(s); no code, no licence files, never contact a lawyer. Not legal advice: name where a professional must check.
 
 - First: OQ-33 (plan 39, task 193 writes its decision(s)). If OQ-33 is not answered yet: gather the facts, then `pm task-pending-decision` this task and the next two tasks of plan 40 on the OQ-33 decision, stage nothing permanent and stop. The OQ-35 decision is written only once OQ-33 is answered and recorded (D-entry from plan 39).
 - Facts (one line each, with source):
@@ -6314,7 +6314,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm decision add`, body = context + facts + trade-offs, ultra-short.
 - `pm task-pending-decision` on the next two tasks of plan 40 (record the answer; licence files) for each decision.
 
-Done when: the decision(s) exist with facts and sources; both follow-up tasks wait on them.', '2026-10-12T00:49:40Z', NULL, 178);
+Done when: the decision(s) exist with facts and sources; both follow-up tasks wait on them.', '2026-10-12T00:49:40Z', '2026-10-13T14:59:27Z', 178);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (199, 40, 'Licence: record the answer (OQ-35)', 'work', 'open', NULL, NULL, 'Part 2 of plan 40. Waits for the OQ-35 decision(s) from the previous task.
 
 - D-entry in `plans/decisions.md` (next free D-number): code licence, question licence, what stays public; professional checks still owed. Amends D-17 if the pool or release content goes private.
@@ -15517,6 +15517,48 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 - Biome, oxlint: no bug caught (no type info). JokerCards `PAGE` bug: only `noUncheckedIndexedAccess` (~300 errors, rejected by task 616).
 - Cost: ESLint + typescript-eslint + eslint-plugin-svelte = 132 packages in `package-lock.json` (minimal-dependencies rule, `npmDepsHash`), ~6 s per run.
 - Recommended: no. 1 low bug among 42 hits does not pay for 132 packages.', NULL, NULL, '2026-10-13T14:30:26Z', NULL, 617, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (107, 'Licence (OQ-35): which licence for the code and for the questions?', 'pending', '["Code MIT; questions all rights reserved (personal, non-commercial play from the repo allowed): LICENSE + LICENSE-content.md", "Code MIT; questions CC BY-NC-SA 4.0", "Code GPL-3.0 with a Steamworks linking exception; questions all rights reserved", "Code MIT; questions CC BY-SA 4.0 (anyone may resell them)", "Everything all rights reserved (as today, stated in a LICENSE)"]', 'OQ-35, plan 40. Public repo, no `LICENSE`: today all rights reserved. Game is paid, $9.99 one-time, bundles free DLC, Workshop/modding later (decision 66: Price model (OQ-33)). Not legal advice.
+
+At stake (qgen report, 2026-10-13): 1,136 approved questions (base 1,034, colombia 102), es only; en/de translations not started. Each with hint, explanation, media picks: the paid generation work.
+
+Never covered by any repo licence: media (own licence per file, plan 26, PUB-2), fonts (OFL, `app/client/public/fonts/OFL-*.txt`), UI audio (`CREDITS.md`), npm deps.
+
+Facts
+- No licence on GitHub: others may view and fork on GitHub (ToS D.5), nothing else (docs.github.com "Licensing a repository"; choosealicense.com/no-permission)
+- MIT: anyone may reuse, sell, ship a closed fork; only keep the notice (opensource.org/license/mit)
+- GPL-3.0: anyone may build and redistribute (also sell) the game, must pass on source under GPL (gnu.org/licenses/gpl-3.0). Steamworks SDK (decision 28: steamworks-ffi-node) is proprietary: GPL needs our own linking exception (FSF GPL FAQ "GPLIncompatibleLibs")
+- AGPL-3.0: adds a network clause; meaningless for an offline game
+- CC BY-SA 4.0: anyone may copy and resell the questions with credit and same licence (creativecommons.org/licenses/by-sa/4.0)
+- CC BY-NC(-SA) 4.0: copying and sharing allowed, commercial use not (creativecommons.org/licenses/by-nc-sa/4.0); "NC" is fuzzy at the edges
+- Facts aren''t protected; a selection/arrangement and the wording of hints and explanations can be (US: Feist v. Rural, 1991; EU: Directive 96/9/EC, plus sui-generis database right for substantial investment)
+- AI drafted, human reviewed: US Copyright Office (Part 2 report, Jan 2025; Thaler v. Perlmutter, D.C. Cir. 2025): AI output alone not protectable, human selection/editing can be; EU: "author''s own intellectual creation" (Infopaq). Uncertain: professional check (PUB-10)
+- The shipped game holds `pool.json` in plain JSON: every buyer can read it; only the licence forbids reuse
+- Licence grants are irrevocable for the versions they come with; commits public without licence stay unlicensed (copies exist, no rights granted)
+
+Trade-offs
+- MIT code: the value is the content, not the code; easy for modders and Workshop (decision 66); a closed fork still needs its own questions
+- Questions reserved: forbids reselling the pool; personal play from a clone allowed by a line in `LICENSE-content.md`
+- NC-SA: friendlier, but anyone may host a free copy of the pool
+- GPL: blocks closed forks, but an exception for Steamworks, and anyone may legally sell the full game if the pool is GPL too
+
+Effect on the build: none for any option (`LICENSE`, `LICENSE-content.md` copied into `result/` and the desktop builds; credits get a "Game" section, PUB-2).
+
+Questions for a lawyer (gamemaster''s country + US)
+- Is the AI-drafted, human-reviewed pool protectable (copyright, database right)? Does our review count as authorship?
+- Wording of "all rights reserved, personal play allowed" for the questions next to MIT code in one public repo
+- Anthropic terms: commercial use of outputs under the plan the pipeline runs on (PUB-10)
+- Any implied licence for forks of the unlicensed commits?', NULL, NULL, '2026-10-13T14:59:13Z', NULL, 198, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (108, 'Is release content public (OQ-35)?', 'pending', '["Whole repo public, release content included (D-17 stays; the licence protects it)", "Public code + today''s pool; release content (new batches, translations, bundles) in a private submodule", "Whole repo private before release"]', 'OQ-35, plan 40; goes with decision 107 (licence). D-17: "the source code and the question pool are public". Release content = new batches, en/de translations (decision 26), bundles shipped as free DLC (decision 66). Today: 1,136 approved es questions public; no translations yet.
+
+Facts
+- Every buyer gets `pool.json` in plain JSON; a private repo only hides content from non-buyers, the licence (decision 107) is what forbids reuse
+- What is public now stays copyable: clones and forks exist, whatever licence applied to those commits stays
+- Public repo with the full pool: anyone with Node/Nix can build and play the full game free; Steam buyers pay for convenience, Steam features, updates
+
+Options
+1. Whole repo public (D-17 stays). Build unchanged. Simplest; open for modders and Workshop (decision 66). Cost: the full translated pool is free to anyone who builds from source.
+2. Public code + current pool; release content in a private repo as a git submodule (e.g. `content/`). D-17 amended (pool public up to a cut-off). `qgen` and `qgen export` read/write the submodule; `nix build .#app` needs `?submodules=1` and access to the private repo, else builds with the public pool only; `trivia-desktop-build` and `trivia-release-check` need the submodule checked out. Two repos to commit, pm workers need access. Backlog row, S4/S5.
+3. Whole repo private before release. D-17 superseded; existing clones keep the current state. No build change. Ends public code: no outside contributors, modding docs must live elsewhere.', NULL, NULL, '2026-10-13T14:59:23Z', NULL, 198, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -16175,6 +16217,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (651, 736, '2026-10-13T14:49:50Z', '2026-10-13T14:52:01Z', 'done', NULL, 0, '1b44a9bec4d7fe65fe4ff864b92e10f8c45bfb73', 'claude-opus-5-5[1m]', '2eab283c-6b26-427e-af4c-9d1041b8195d', 24, 46, 11395, 1330484, 63963, 1.0058848, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (652, 739, '2026-10-13T14:52:02Z', '2026-10-13T14:54:05Z', 'done', NULL, 0, '2b6cb68ac4b714e0e658ca64a068c4e25942363b', 'claude-opus-5-5[1m]', '4103510b-c876-4a82-8453-fcd1d12b46c6', 22, 44, 9594, 1085945, 50564, 0.813757, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (653, 740, '2026-10-13T14:54:05Z', '2026-10-13T14:57:59Z', 'done', NULL, 0, '56be7426f4e8a0488848c748f39bdf103d43a1b2', 'claude-opus-5-5[1m]', 'd51b23a8-a113-430e-82bd-22f635518ee2', 26, 52, 14246, 1739608, 79069, 1.2656016000000003, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (654, 198, '2026-10-13T14:58:00Z', '2026-10-13T14:59:36Z', 'done', NULL, 0, '813601b0f4134a8ac65f5a3ca4092814bf311299', 'claude-opus-5-5[1m]', '70140d8d-c2f5-41ea-a6bd-cefd2c2d321f', 11, 22, 8092, 440586, 40775, 0.57624520000000012, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -16225,7 +16268,11 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (194, 66);
 INSERT INTO task_decision (task_id, decision_id) VALUES (194, 67);
 INSERT INTO task_decision (task_id, decision_id) VALUES (198, 66);
 INSERT INTO task_decision (task_id, decision_id) VALUES (199, 66);
+INSERT INTO task_decision (task_id, decision_id) VALUES (199, 107);
+INSERT INTO task_decision (task_id, decision_id) VALUES (199, 108);
 INSERT INTO task_decision (task_id, decision_id) VALUES (200, 66);
+INSERT INTO task_decision (task_id, decision_id) VALUES (200, 107);
+INSERT INTO task_decision (task_id, decision_id) VALUES (200, 108);
 INSERT INTO task_decision (task_id, decision_id) VALUES (202, 23);
 INSERT INTO task_decision (task_id, decision_id) VALUES (202, 24);
 INSERT INTO task_decision (task_id, decision_id) VALUES (205, 82);
