@@ -10387,7 +10387,10 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - `code-review.md` has intro, summary placeholder, format (incl. `(lint: …)` tags, "no findings" rows), Part 1–11 sections (Part 10 with `### Linter evaluation`) and a complete inventory; `directory.md` lists it.
-- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T23:02:54Z', NULL, 513);
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+
+## Note (task 616)
+- `code-review.md` already exists: it holds `## Part 10` → `### Linter evaluation` (table, adopted `tsconfig` flags, findings rows) from task 616, which ran early. Keep that content as it is; build the intro, format, other parts and inventory around it (replace its stub intro).', '2026-10-12T23:02:54Z', NULL, 513);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (525, 73, 'Scan: directory.md vs git ls-files', 'work', 'open', NULL, NULL, 'Task 2 of `plan 73: Baseline scans and report skeleton (code review part 1)`; needs the `code-review.md` skeleton (task 1 of plan 73). Rules: plan 73 "Rules for this plan".
 
 ## What
@@ -11610,7 +11613,10 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - `Review.svelte` listed in `## Part 9`, every finding with a status.
-- Checks pass; review page clicked through on the temp server (keys, decision, undo, sample mode) or noted why not.', '2026-10-12T23:09:08Z', NULL, 521);
+- Checks pass; review page clicked through on the temp server (keys, decision, undo, sample mode) or noted why not.
+
+## Note (task 616)
+- Known bug, logged in `## Part 10` of `code-review.md` as handed to this task: `undo()` pops `undoStack` before `if (!last || busy) return`, so an undo pressed while a save is in flight is lost. Fix (check `busy` before popping) and log it in `## Part 9`.', '2026-10-12T23:09:08Z', NULL, 521);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (576, 81, 'Review the review panels: MediaPanel.svelte, RevisionPanel.svelte', 'work', 'open', NULL, NULL, 'Task 4 of `plan 81: Authoring server and UI review (code review part 9)`: review these files, fix what is cheap, log every file and finding in `## Part 9` of `code-review.md` (no-findings rows included).
 
 ## First
@@ -12440,7 +12446,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:42:53Z', '2026-10-12T23:43:19Z', 603);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (615, 82, 'create tasks for plan 82', 'split', 'done', 1000, '2026-10-12, tasks.sql: added task 616 (linter), replaced 587 with 617 (queues after 616), task 580 assignee numbering', 'Split plan 82 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:43:49Z', '2026-10-12T23:44:52Z', 604);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (616, 82, 'Part 10: linter for TypeScript, evaluate and adopt if useful', 'work', 'open', 1000, NULL, 'Task 8 of `plan 82: Cross-cutting duplication, consistency and build config (code review part 10)`: evaluate a TypeScript linter (milestone 13 "Linter for TypeScript"), adopt it if useful. Runs after `task 586: Part 10: review build and package config` (same build config), before `task 617: Part 10: docs vs. code, close part 10`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (616, 82, 'Part 10: linter for TypeScript, evaluate and adopt if useful', 'work', 'done', 1000, '2026-10-12, code-review.md (Part 10 Linter evaluation), app/client/tsconfig.json, authoring/ui/tsconfig.json (5 strict flags = lint pass in npm run check), Question.svelte (2 noImplicitReturns), AGENTS.md; ran early (no review findings yet): re-check is task 617, close moved to task 620; Biome/oxlint/ESLint not adopted (0 bugs)', 'Task 8 of `plan 82: Cross-cutting duplication, consistency and build config (code review part 10)`: evaluate a TypeScript linter (milestone 13 "Linter for TypeScript"), adopt it if useful. Runs after `task 586: Part 10: review build and package config` (same build config), before `task 617: Part 10: docs vs. code, close part 10`.
 
 ## First
 - Needs `code-review.md` with `## Part 10` and parts 2–9 done (plans 74–81), and task 586 done; else stop and say so.
@@ -12474,20 +12480,39 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass, plus the lint pass if adopted.
 
 ## Done when
-- `### Linter evaluation` written; adopted (pass in `AGENTS.md` and `project-manager.toml`, passes, follow-up fix task added), or a decision + pending adoption task, or reasons for not adopting; staged.', '2026-10-12T23:44:22Z', NULL, 615);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (617, 82, 'Part 10: docs vs. code, close part 10', 'work', 'open', NULL, NULL, 'Task 9 of `plan 82: Cross-cutting duplication, consistency and build config (code review part 10)`: check the docs against the code last, then close the part. Runs after tasks 580–586, `task 616: Part 10: linter for TypeScript, evaluate and adopt if useful` and every fix of parts 2–9.
+- `### Linter evaluation` written; adopted (pass in `AGENTS.md` and `project-manager.toml`, passes, follow-up fix task added), or a decision + pending adoption task, or reasons for not adopting; staged.', '2026-10-12T23:44:22Z', '2026-10-13T00:00:29Z', 615);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (617, 82, 'Re-check the linter evaluation against the findings of parts 2–9', 'work', 'open', NULL, NULL, '`task 616: Part 10: linter for TypeScript, evaluate and adopt if useful` ran before parts 1–9 had findings: it trialled stricter `tsconfig` flags, Biome, oxlint and ESLint (+ typescript-eslint, eslint-plugin-svelte) on the code alone, found 0 bugs for any linter, and adopted only five `tsconfig` flags (`### Linter evaluation` in `## Part 10` of `code-review.md`).
+
+## What
+- Runs after parts 2–9 (plans 74–81), before `task 620: Part 10: docs vs. code, close part 10`.
+- Count the `(lint: …)` tags in `code-review.md` per rule; list the logged bugs a linter rule would have caught (rule, candidate), and those none would.
+- If ESLint/typescript-eslint, Biome or oxlint would have caught real bugs (not style): `pm decision add` (options, recommended first; minimal-dependencies rule, packages per candidate from the table) + `pm task add 82` adoption task with `pm task-pending-decision`; nothing installed here.
+- Otherwise: one bullet under `### Linter evaluation` confirming the result with the counts.
+- Trials only in a temp copy under `/tmp` (deleted afterwards).
+
+## Done when
+- `### Linter evaluation` updated with the evidence from parts 2–9; decision + pending task if a new linter is worth it.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T23:44:45Z', NULL, 615);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (618, 83, 'create tasks for plan 83', 'split', 'done', 1000, '2026-10-12, tasks.sql: tasks 588-591 aligned with revised plan 83 (linter evaluation check, no duplicate of linter outcome in process decisions, linter line in summary, lint pass in final checks); no decisions needed now', 'Split plan 83 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:45:19Z', '2026-10-12T23:46:01Z', 605);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (619, 29, 'Age-group names per question locale on the Choice screen', 'work', 'open', NULL, NULL, 'The Choice screen (`app/client/src/game/Choice.svelte`, task 474) and the overlay line (task 475) show each age group''s `name` from `app/data/age-groups.json`, which is Spanish only («Niños», «Adolescentes», «Jóvenes», «Adultos»). In en/de the bundles already show localized names (`names.<locale>.json` → `bundles`, read in `fetchChoiceOptions`, `app/client/src/lib/api.ts`), the groups don''t.
+
+- Pick where the names live: UI catalog (`locales/es.ts` / `en.ts`, `choice.group.<id>`, since group names are UI text, not pool data) or the names files (`names.<locale>.json` → `age_groups`). Check `pm decision list --answered --grep names --grep age` first; record the choice (`pm decision record`).
+- Read them in `fetchChoiceOptions` (and the overlay line), falling back to the file''s `name`.
+- Check: `npm run check`, `check:literals`; `?lang=en` with a temp en setup shows English group names.', '2026-10-12T23:54:23Z', NULL, 474);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (620, 82, 'Part 10: docs vs. code, close part 10', 'work', 'open', NULL, NULL, 'Task 9 of `plan 82: Cross-cutting duplication, consistency and build config (code review part 10)`: check the docs against the code last, then close the part. Runs after tasks 580–586, `task 616: Part 10: linter for TypeScript, evaluate and adopt if useful`, `task 617: Re-check the linter evaluation against the findings of parts 2–9` and every fix of parts 2–9.
 
 ## First
 - Needs `code-review.md` with `## Part 10` (`plan 73: Baseline scans and report skeleton (code review part 1)`) and parts 2–9 done (plans 74–81); if missing or still open, stop and say so.
 - `pm show <id>` / `pm queue` for open work on these files: `task 302: Delete the Python referee` (pending decision 25), tasks 309/310, 443–446, 477 (plans 51, 53, 67, 30); still open → findings only, status `superseded by task N`, no conflicting refactor.
 - `pm decision list --answered --grep <file or term>` before every consolidation; binding (plan 82 "Depends on"): decision 4, decision 5, decision 12, D-59, D-70, D-71/D-72, D-73, AGENTS.md "Layout" (`authoring/` may import `app/`, never the reverse).
-- Tasks 580–586 and 616 done, and no open task in plans 73–81 that still changes code; else stop and say so.
+- Tasks 580–586, 616 and 617 done, and no open task in plans 73–81 that still changes code; else stop and say so.
 
 ## What
 - `directory.md`: every tracked code/config path and directory present (`git ls-files`), descriptions true after this milestone''s fixes and moves, `code-review.md` listed.
 - `AGENTS.md`/`CLAUDE.md`: commands exist and do what it says (`qgen report --cost`, `trivia-desktop-build`, `nix build .#app`); rules hold in the code (layout direction: grep `app/` for `authoring` imports/reads; no telemetry/network beyond decision 4).
 - `README.md`: commands and env vars run as written (temp dirs).
-- `AGENTS.md`/`README.md` mention the lint pass as task 616 left it (or nothing, if not adopted).
+- `AGENTS.md`/`README.md` mention the lint pass as tasks 616 and 617 left it (or nothing, if not adopted).
 - Doc-only fixes here (style per AGENTS.md); rule changes to `AGENTS.md` → decision (plan 72 part 11 proposes process rules: don''t pre-empt).
 - Close: every part 1 row `handed to part 10` (quoted) and every duplication row of parts 2–9 has a final status in `## Part 10`; every part 10 inventory file listed (no-findings rows included); files added since part 1 under these paths added to the inventory; remaining clusters each a follow-up task or decision.
 
@@ -12497,14 +12522,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass, plus the lint pass if task 616 adopted one.
 
 ## Done when
-- Plan 82 "Done when" holds: all statuses set, docs match the code; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass (plus `nix build .#app` if flake or lockfiles changed in this part, plus the lint pass if adopted); staged.', '2026-10-12T23:44:45Z', NULL, 615);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (618, 83, 'create tasks for plan 83', 'split', 'done', 1000, '2026-10-12, tasks.sql: tasks 588-591 aligned with revised plan 83 (linter evaluation check, no duplicate of linter outcome in process decisions, linter line in summary, lint pass in final checks); no decisions needed now', 'Split plan 83 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:45:19Z', '2026-10-12T23:46:01Z', 605);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (619, 29, 'Age-group names per question locale on the Choice screen', 'work', 'open', NULL, NULL, 'The Choice screen (`app/client/src/game/Choice.svelte`, task 474) and the overlay line (task 475) show each age group''s `name` from `app/data/age-groups.json`, which is Spanish only («Niños», «Adolescentes», «Jóvenes», «Adultos»). In en/de the bundles already show localized names (`names.<locale>.json` → `bundles`, read in `fetchChoiceOptions`, `app/client/src/lib/api.ts`), the groups don''t.
-
-- Pick where the names live: UI catalog (`locales/es.ts` / `en.ts`, `choice.group.<id>`, since group names are UI text, not pool data) or the names files (`names.<locale>.json` → `age_groups`). Check `pm decision list --answered --grep names --grep age` first; record the choice (`pm decision record`).
-- Read them in `fetchChoiceOptions` (and the overlay line), falling back to the file''s `name`.
-- Check: `npm run check`, `check:literals`; `?lang=en` with a temp en setup shows English group names.', '2026-10-12T23:54:23Z', NULL, 474);
+- Plan 82 "Done when" holds: all statuses set, docs match the code; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass (plus `nix build .#app` if flake or lockfiles changed in this part, plus the lint pass if adopted); staged.', '2026-10-12T23:59:34Z', NULL, 616);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -13557,6 +13575,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (420, 605, '2026-10-12T23:45:00Z', '2026-10-12T23:45:27Z', 'done', NULL, 0, '1d86ed35657f9c6ddb39f80b8bc2782018356e31', 'claude-opus-5-5[1m]', 'b68e736a-4b2e-443f-914e-58cf8efa256e', 5, 10, 2917, 153556, 29018, 0.3212352, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (421, 618, '2026-10-12T23:45:28Z', '2026-10-12T23:46:08Z', 'done', NULL, 0, '161c599aee90edd2266693e6dfaf634c3d9c11c8', 'claude-opus-5-5[1m]', '4cb11fa8-7979-47d2-bd45-2a99e48344f1', 6, 12, 4439, 172880, 26943, 0.338948, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (422, 474, '2026-10-12T23:46:08Z', '2026-10-12T23:54:41Z', 'done', NULL, 0, '5b9d1956e890451c5688fcd1a7fcd80dbbf759a1', 'claude-opus-5-5[1m]', 'c2a917f0-8f48-4042-a8c8-8a5b0d71c9eb', 57, 104, 37824, 5964660, 151176, 3.1592359999999995, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (423, 616, '2026-10-12T23:54:41Z', '2026-10-13T00:00:41Z', 'done', NULL, 0, 'e29159b5a3dc28979eeddb66b18f97f8a4a24e08', 'claude-opus-5-5[1m]', 'df66d21c-b78b-479d-807e-87489f41a7c7', 58, 112, 26126, 3478273, 84810, 1.8971026000000002, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

@@ -275,7 +275,7 @@
       sfx(name === "snipe" ? "heartbeat" : "joker-open");
       return;
     }
-    if (armed === name) return fire({ joker: name });
+    if (armed === name) return void fire({ joker: name });
     disarm();
     armed = name;
     sfx("joker-armed");
@@ -339,7 +339,7 @@
 
   function aim(i: number) {
     if (question.struck.includes(i)) return;
-    if (target === i) return fire({ joker: "snipe", index: i });
+    if (target === i) return void fire({ joker: "snipe", index: i });
     target = i;
     sfx("tick");
   }

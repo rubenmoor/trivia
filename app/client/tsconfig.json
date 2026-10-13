@@ -8,7 +8,12 @@
     "noEmit": true,
     "types": ["svelte", "vite/client"],
     "allowImportingTsExtensions": true,
-    "erasableSyntaxOnly": true
+    "erasableSyntaxOnly": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noImplicitOverride": true
   },
   "include": ["src/**/*.ts", "src/**/*.svelte", "vite.config.ts"],
   "exclude": ["src/**/*.test.ts", "src/engine/test/"]
