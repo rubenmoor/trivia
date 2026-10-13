@@ -13152,13 +13152,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `trivia-authoring` (`apply_flags` in `authoring/server/main.py`): needs-work feedback includes the note: «Marcada en el juego (player, date): <note>»
 - Catalog: es/en/de/xx leaves for the dialog; drop unused `report.*` leaves; `check:literals` passes
 - Docs: README line on `M` (also says it marks «needs work» on the next `trivia-authoring` start), plans 04 and 13 (MD-6, GM-5)', '2026-10-13T02:50:43Z', '2026-10-13T03:45:14Z', NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (626, 82, 'Vite native config loader warning: import extensions in config files', 'work', 'open', NULL, NULL, 'Gamemaster saw on `npm run build -w app/client` (2026-10-13):
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (626, 82, 'Vite native config loader warning: import extensions in config files', 'work', 'done', NULL, '2026-10-13, app/client/credits.ts: .ts extension on the types import; vite.config.ts of app/client and authoring/ui have no other extensionless relative imports; npm run build prints no configLoader warning', 'Gamemaster saw on `npm run build -w app/client` (2026-10-13):
 
 > (!) Your Vite config uses features that are unsupported by `configLoader: ''native''` … import "./src/lib/types" without a file extension (credits.ts:5:76). Add the file extension
 
 - `app/client/credits.ts:5`: `"./src/lib/types"` → `"./src/lib/types.ts"`
 - Check every file `vite.config.ts` pulls in (app/client, authoring/ui) for extensionless imports
-- Done when `npm run build` prints no `configLoader` warning; don''t set `VITE_CONFIG_NATIVE_IGNORE_WARNING`', '2026-10-13T02:52:56Z', NULL, NULL);
+- Done when `npm run build` prints no `configLoader` warning; don''t set `VITE_CONFIG_NATIVE_IGNORE_WARNING`', '2026-10-13T02:52:56Z', '2026-10-13T14:37:14Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (627, 82, 'trivia-desktop: unknown command-line flags fail loudly', 'work', 'open', NULL, NULL, 'Gamemaster (2026-10-13): `trivia-desktop --import-save-state state/game.json` (typo for `--import-save`) started the game without importing and without any message.
 
 - `app/desktop/main.mjs`: parse argv for our own flags (`--import-save <file>`, anything else ours); an unknown `--import*`/own-looking flag or a missing value → error on stderr naming the flag and the known ones, exit non-zero, no window
@@ -16137,6 +16137,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (641, 586, '2026-10-13T14:24:31Z', '2026-10-13T14:29:10Z', 'done', NULL, 0, 'f43fcba08aadab864fdb2a3567dd950b08a41c1d', 'claude-opus-5-5[1m]', '2f0838a6-dafc-4f63-8ac9-e50601b52d7f', 35, 68, 17653, 2797850, 94320, 1.6674620000000002, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (642, 617, '2026-10-13T14:29:10Z', '2026-10-13T14:31:23Z', 'done', NULL, 0, 'c5e5e44f86a183584c1cc4f3496b18ac01ad28b8', 'claude-opus-5-5[1m]', 'fbb0d4a8-c07e-40bd-9354-70d617ae8b89', 19, 36, 9307, 1007047, 60458, 0.87135740000000017, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (643, 620, '2026-10-13T14:31:24Z', '2026-10-13T14:36:41Z', 'done', NULL, 0, 'e64bf320faf2661b7ccb1583ee3b32cc3158992d', 'claude-opus-5-5[1m]', 'da5a4346-ae9e-491a-8a9d-18a6adb73afa', 48, 92, 23087, 4354863, 123025, 2.3172806000000006, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (644, 626, '2026-10-13T14:36:41Z', '2026-10-13T14:37:18Z', 'done', NULL, 0, '19763dfba8b8e78439c05b6ec241c90b676df3a6', 'claude-opus-5-5[1m]', 'd76a4a58-026e-4f38-a133-7b4b236bab5a', 6, 12, 1181, 186320, 25627, 0.265948, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

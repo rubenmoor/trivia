@@ -2,7 +2,7 @@
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import type { Plugin } from "vite";
-import type { Credits, CreditKind as Kind, MediaCredit, SoundCredit } from "./src/lib/types";
+import type { Credits, CreditKind as Kind, MediaCredit, SoundCredit } from "./src/lib/types.ts";
 
 const client = fileURLToPath(new URL(".", import.meta.url));
 const repo = `${client}../../`;
