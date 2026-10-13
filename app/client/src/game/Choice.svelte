@@ -138,6 +138,8 @@
 
   const ready = $derived(!!options && !!supply?.ok && !reason);
   const shownRefusal = $derived(refused && !stale ? refused : null);
+  /** A supply report is shown: tighter gaps, so a long one fits at 720p (plan 46). */
+  const reporting = $derived(!!shownRefusal?.supply || (!shownRefusal && !reason && supply?.ok === false));
 
   function start() {
     if (!ready || busy) return;
@@ -195,7 +197,7 @@
   );
 </script>
 
-<section class="choice" bind:this={section}>
+<section class="choice" class:reporting bind:this={section}>
   {#if greeting}
     <h1 class="title hello">{t("screen.player.helloOpen")}<span class="name">{greeting}</span>{t("screen.player.helloClose")}</h1>
   {:else}
@@ -324,6 +326,9 @@
     gap: calc(1.2 * var(--u));
     padding: var(--safe-y) var(--safe-x);
     text-align: center;
+  }
+  .choice.reporting {
+    gap: calc(0.8 * var(--u));
   }
   .title {
     animation: arrive 0.6s var(--spring) backwards;

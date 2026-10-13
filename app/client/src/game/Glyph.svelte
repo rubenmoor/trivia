@@ -55,7 +55,7 @@
     {/if}
 
     {#if label}
-      <text x="12" y={shape === "trigger" ? 15.6 : 15} text-anchor="middle" fill="currentColor" stroke="none">{label}</text>
+      <text x="12" y="16.6" text-anchor="middle" font-size="13.5" letter-spacing="-0.4" fill="currentColor" stroke="none">{label}</text>
     {:else if shape === "a"}
       <path d="M8.5 17l3.5-10 3.5 10M9.8 13.5h4.4" />
     {:else if shape === "b"}
@@ -93,7 +93,6 @@
   }
   text {
     font-family: var(--font-display);
-    font-size: 10.5px;
     font-weight: 800;
   }
 </style>

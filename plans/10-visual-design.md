@@ -65,9 +65,10 @@ One unit, `--u = 100vw / 120` (16 px at 1920 px wide; it scales with the screen,
 | Card description | 1.6 u | 26 | 36 |
 | Body (fun fact, consolation) | 1.5 u | 24 | 36 |
 | Labels, key hints, HUD | 1.1 u | 18 | 18–30 |
-| Credit line, debug ID | 0.8 u | 13 | 15 |
+| Credit line, debug ID, key chips | 0.9 u | 14 | 15 |
 
-- Nothing goes below 0.8 u. Whether this reads well from the couch is checked on the TV (VD-9, UI-6); change the unit, not the individual sizes.
+- **Size rule (SW-4, plan 46):** no `font-size` below 0.9 u (9.6 px at 1280 wide, above Valve's 9 px at 800p); no `px`/`rem` font sizes in `app/client/src/game/` (SVG text in viewBox units as an attribute). Fixes are bigger multiples of `--u`, never a media query or a Deck layout; 1280×720 is the 1080p layout scaled, 1280×800 adds 80 px of height.
+- Whether this reads well from the couch is checked on the TV (VD-9, UI-6); change the unit, not the individual sizes.
 - The question is at most ~55 characters per line, with `text-wrap: balance`. Long questions shrink one step (2.1 u) instead of growing to three lines.
 - Text on glass gets a soft shadow (`0 1px 2px rgba(0, 0, 0, 0.5)`).
 

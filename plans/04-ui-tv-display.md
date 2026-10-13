@@ -242,6 +242,7 @@ Everything works with a mouse and with the keyboard of the TV machine (OQ-11): `
 - The game is the start page `/`; the review tool lives at `/review` (D-25). It is a Svelte state machine (`app/client/src/game/`), and each state is a component.
 - **Placeholders (D-25):** none left (2026-10-12, plan 31); `grep -rn PLACEHOLDER app/client/src` is empty. The «medio no disponible» chip in `Question.svelte` is a runtime fallback for a missing media file, not a placeholder. A `Transition` wrapper owns the black layer and the audio fades.
 - Game state lives on the server (SQLite, D-4) and is written on every final answer, so a page reload or crash resumes at the same level (GF-4).
+- **Size rule (SW-4, plan 46):** font sizes only as multiples of `--u`, at least 0.9 u (10, "Scale"); no media queries or separate Deck layout. Checked at 1280×800, 1280×720, 1920×1080 and 4K with a throw-away Playwright walk (pm decision 6). Only the credit line and the bottom of «Respuesta final» sit in the 4 % margin (pm decision 52).
 - Animations use CSS transitions or keyframes plus the canvas for fireworks. They respect a "reduced motion" admin toggle (no effect on sound).
 
 ## Tasks

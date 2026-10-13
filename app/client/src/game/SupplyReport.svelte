@@ -4,13 +4,14 @@
   import type { Supply } from "../lib/types";
 
   let { supply }: { supply: Supply } = $props();
+  const short = $derived(supply.levels.filter((l) => l.missing));
 </script>
 
 {#if !supply.ok}
   <div class="supply glass">
     <p>{t("supply.short", { n: supply.available })}</p>
-    <ul>
-      {#each supply.levels.filter((l) => l.missing) as l (l.level)}
+    <ul class:many={short.length > 4}>
+      {#each short as l (l.level)}
         <li>{t("supply.level", { level: l.level, lo: l.range[0], hi: l.range[1], missing: l.missing })}</li>
       {/each}
     </ul>
@@ -29,5 +30,15 @@
   }
   .supply ul {
     margin: calc(0.4 * var(--u)) 0 0;
+  }
+  /* Many short levels: in columns, so Choice fits at 720p (plan 46). */
+  .supply ul.many {
+    columns: 4;
+    column-gap: calc(2 * var(--u));
+    padding: 0;
+    list-style: none;
+  }
+  .supply li {
+    break-inside: avoid;
   }
 </style>

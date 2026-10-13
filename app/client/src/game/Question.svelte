@@ -665,12 +665,12 @@
 <style>
   .media-missing {
     margin: 0;
-    padding: 0.2rem 0.6rem;
-    border: 0.15rem dashed var(--placeholder);
-    border-radius: 0.6rem;
+    padding: calc(0.2 * var(--u)) calc(0.6 * var(--u));
+    border: calc(0.15 * var(--u)) dashed var(--placeholder);
+    border-radius: calc(0.6 * var(--u));
     color: #ffb8ec;
     background: rgba(60, 10, 50, 0.55);
-    font-size: 1rem;
+    font-size: var(--u);
   }
   .question-screen {
     position: absolute;
@@ -1194,7 +1194,7 @@
     margin: 0;
     padding: calc(0.15 * var(--u)) calc(0.7 * var(--u));
     border-radius: calc(0.6 * var(--u));
-    font-size: calc(0.8 * var(--u));
+    font-size: calc(0.9 * var(--u));
     color: var(--slate-200);
   }
 
