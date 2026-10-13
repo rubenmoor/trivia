@@ -1,4 +1,4 @@
-// Pool and category data (PORT-2): parsed JSON in, typed data out. Mirrors app/server/categories.py.
+// Pool and category data (PORT-2): parsed JSON in, typed data out. Mirrors authoring/tools/categories.py.
 import type { Background, Category, Media, Status } from "../lib/types.ts";
 
 /** One entry of app/data/pool.json, with the answer (the client is the referee). */

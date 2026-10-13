@@ -6,17 +6,25 @@ Subcategory names and slugs are unique across bundles, so a subcategory names it
 import json
 
 import layout  # noqa: F401  (makes app/server importable)
-import paths  # app/server/paths.py
-from paths import BUNDLES, BUNDLE_DATA, CATEGORIES
+from paths import BUNDLES, BUNDLE_DATA, CATEGORIES, names  # app/server/paths.py
 
 
 def path(bundle):
     return CATEGORIES if bundle == "base" else BUNDLE_DATA / bundle / "categories.json"
 
 
+def _read(p, key=None):
+    """A JSON file (its `key`); errors name the file."""
+    try:
+        doc = json.loads(p.read_text(encoding="utf-8"))
+        return doc[key] if key else doc
+    except (ValueError, KeyError, TypeError) as e:
+        raise ValueError(f"{p}: {type(e).__name__}: {e}") from e
+
+
 def bundle_ids():
     """The bundles in app/data/bundles.json order (base first)."""
-    return [b["id"] for b in json.loads(BUNDLES.read_text(encoding="utf-8"))["bundles"]]
+    return [b["id"] for b in _read(BUNDLES, "bundles")]
 
 
 def load(bundle=None):
@@ -26,7 +34,7 @@ def load(bundle=None):
     for b in [bundle] if bundle else bundle_ids():
         p = path(b)
         if p.exists():
-            out += [{**c, "bundle": b} for c in json.loads(p.read_text(encoding="utf-8"))["categories"]]
+            out += [{**c, "bundle": b} for c in _read(p, "categories")]
     return out
 
 
@@ -51,9 +59,9 @@ def load_names(locale):
     merged with every bundle's; keys are bundle ids, category slugs and Spanish subcategory names."""
     out = {"bundles": {}, "categories": {}, "subcategories": {}, "age_groups": {}}
     for b in bundle_ids():
-        p = paths.names(locale, b)
+        p = names(locale, b)
         if p.exists():
-            doc = json.loads(p.read_text(encoding="utf-8"))
+            doc = _read(p)
             for k in out:
                 out[k].update(doc.get(k) or {})
     return out
