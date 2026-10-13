@@ -11113,7 +11113,7 @@ Rewritten by `task 628: post-milestone cleanup`: `task 302: Delete the Python re
 ## Done when
 - Every file of `app/server/` (today''s 5, plus the 3 removed ones as `removed (task 302)`) and `authoring/tools/categories.py` listed in `## Part 2`, every finding with a status; every part 1 row `handed to part 2` has its final status there.
 - Status per finding as in plan 72 "Report format": `fixed (task 534)` / `follow-up task N` / `decision N` / `won''t fix: <why>`; files without findings get a "no findings" row.', '2026-10-12T23:03:30Z', '2026-10-13T09:51:48Z', 514);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (535, 75, 'Review game.ts', 'work', 'open', NULL, NULL, 'Task 1 of `plan 75: TS engine review (code review part 3)`. Needs `code-review.md` with `## Part 3` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 75 "Rules for this plan".
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (535, 75, 'Review game.ts', 'work', 'done', NULL, '2026-10-13, app/client/src/engine/{game,choice}.ts, lib/api.ts, game/Overlay.svelte, code-review.md, directory.md', 'Task 1 of `plan 75: TS engine review (code review part 3)`. Needs `code-review.md` with `## Part 3` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 75 "Rules for this plan".
 
 ## First
 - `pm queue` + grep open task bodies for `game.ts`: if an open task still changes it (e.g. `task 499`, `378`/`379`, `391`, `392`, `474`/`475`), findings only, no refactor (`superseded by task N` where that task rewrites it).
@@ -11137,7 +11137,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `npm run check`, `npm test` (unchanged), `npm run build`, `qgen validate` pass (plus the lint pass, if part 10 has adopted one by then).
 
 ## Done when
-- `game.ts` listed in `## Part 3`, every finding with a status.', '2026-10-12T23:04:10Z', NULL, 515);
+- `game.ts` listed in `## Part 3`, every finding with a status.', '2026-10-12T23:04:10Z', '2026-10-13T09:57:36Z', 515);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (536, 75, 'Review state.ts, save.ts, store.ts, api.ts', 'work', 'open', NULL, NULL, 'Task 2 of `plan 75: TS engine review (code review part 3)`. Needs `code-review.md` with `## Part 3`; if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 75 "Rules for this plan".
 
 ## First
@@ -15793,6 +15793,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (573, 532, '2026-10-13T09:44:16Z', '2026-10-13T09:46:57Z', 'done', NULL, 0, 'ab31a334489a8ea8b79056de35c399e81c2d3baa', 'claude-opus-5-5[1m]', 'b9aec8d8-946c-432d-859a-236ce3b94f6c', 19, 36, 12802, 831862, 50224, 0.8243484, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (574, 533, '2026-10-13T09:46:58Z', '2026-10-13T09:50:00Z', 'done', NULL, 0, '4eec29d386e9161ce0f4290def0a124e47c2067c', 'claude-opus-5-5[1m]', 'ad79bfb9-b5a0-4e1a-b16f-7d225e9b2a23', 25, 42, 16669, 1118375, 59904, 1.0364550000000001, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (575, 534, '2026-10-13T09:50:00Z', '2026-10-13T09:51:55Z', 'done', NULL, 0, '821c960150d580dc5a348e401c54d92ed7403d29', 'claude-opus-5-5[1m]', 'd4825464-720c-437a-aeeb-6da1a03cdefc', 17, 34, 8188, 761298, 44368, 0.6710996, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (576, 535, '2026-10-13T09:51:56Z', '2026-10-13T09:57:48Z', 'done', NULL, 0, '1a0a4133dee63c5aa37918fdbaf045bfdac27bc1', 'claude-opus-5-5[1m]', 'a744c27e-244c-4876-95a5-027ab1be40cb', 41, 72, 35064, 3596394, 132268, 2.4789907999999992, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

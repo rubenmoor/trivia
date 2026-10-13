@@ -4,7 +4,7 @@
   // the cheats apart (skip, block, undo, replace, jump to level, difficulty and bundles, jokers left).
   // ↑/↓ choose, Enter runs, ←/→ change a value (else the next column), Esc closes. Outside gamemaster
   // mode no cheats (D-74), the jokers left read-only. Language rows (plan 68) only with ≥2 options.
-  import { fetchGameChoice, fetchJokersUsed, fetchLanguage, localeSupply, setLanguage, type GameActionBody } from "../lib/api";
+  import { CARDS, fetchGameChoice, fetchJokersUsed, fetchLanguage, localeSupply, setLanguage, type GameActionBody } from "../lib/api";
   import { desktop } from "../lib/desktop";
   import { flush } from "../lib/engine";
   import { endonym, t } from "../lib/i18n";
@@ -45,8 +45,6 @@
     { key: "media", label: t("overlay.media") },
   ];
   const STEP = 0.1;
-  /** «Como las cartas»: the printed card set (JK-11); the same as `CARDS` in engine/game.ts. */
-  const CARDS: JokerBudget = { hint: 4, skip: 2, easier: 2, category: 2, snipe: 2 };
   /** Uses left for ←/→: 0 to 9, then unlimited (null). */
   const MAX_USES = 9;
 

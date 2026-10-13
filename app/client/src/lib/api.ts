@@ -221,4 +221,4 @@ export async function setLanguage(language: Language): Promise<Language> {
 }
 
 /** The age group of a choice without one (plan 27). */
-export { BUILT_MODES, CARDS_MAX, DEFAULT_AGE_GROUP, DIFFICULTY_MAX, LEVELS_MAX, STANDARD_JOKERS } from "../engine/game.ts";
+export { BUILT_MODES, CARDS, CARDS_MAX, DEFAULT_AGE_GROUP, DIFFICULTY_MAX, LEVELS_MAX, STANDARD_JOKERS } from "../engine/game.ts";
