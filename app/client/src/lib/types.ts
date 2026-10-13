@@ -117,6 +117,9 @@ export interface Flagged {
   player: string | null;
   level?: number;
   note?: string;
+  /** The game's question locale (decision 102); missing = es. */
+  locale?: string;
+  /** As the player saw it, else the current pool's text. */
   question: string | null;
   answer: string | null;
 }

@@ -7,7 +7,8 @@ printable joker cards, with the question API. Never ships (D-35).
 It edits authoring/data/questions.json (translations: questions.<locale>.json) and re-exports
 app/data/pool.json (pool.<locale>.json) after every change, so the game (port 8000) sees reviews at once.
 At startup it turns the questions flagged in the game (state/game.json's flags) into needs-work reviews
-(D-47) and prints the link to every question that isn't approved (/review?status=!approved, RV-22).
+(D-47; a flag from an en/de game: of that translation, decision 102) and prints the link to every
+question that isn't approved (/review?status=!approved, RV-22).
 
 API:
     GET  /api/categories                           every bundle's broad categories with subcategories (D-19, D-43)
@@ -381,22 +382,32 @@ def reject(t):
 
 def apply_flags():
     """Questions flagged in the game become human needs-work reviews (GM-5, D-47); returns their IDs.
-    Runs only at startup: a question that left the pool while on screen would break a running game.
-    The flags stay in game.json; state/flags-applied.json records the applied ones (D-59)."""
+    A flag from an en/de game reviews that translation, else the source (decision 102); the feedback quotes
+    the question as the player saw it. Runs only at startup: a question that left the pool while on screen
+    would break a running game. The flags stay in game.json; state/flags-applied.json records the applied ones (D-59)."""
     ledger = save_file.applied()
     pending = {k: v for k, v in save_file.flags().items() if ledger.get(k) != save_file.stamp(v)}
-    known = {q["id"]: q for q in load_pool()["questions"]}
+    known = {"es": {q["id"]: q for q in load_pool()["questions"]}}
     done = []
     for qid, flag in pending.items():
-        if qid not in known:
-            print(f"Flag for unknown question {qid} dropped", file=sys.stderr)
+        locale = flag.get("locale") or "es"
+        if locale not in known and locale in translations.LOCALES:
+            known[locale] = {t["id"]: t for t in translations.load(locale)["questions"]}
+        q = known.get(locale, {}).get(qid)
+        if q is None:
+            print(f"Flag for unknown question {qid} ({locale}) dropped", file=sys.stderr)
             continue
-        who = f"{flag['player']}, " if flag.get("player") else ""
+        where = ", ".join([*filter(None, [flag.get("player"), flag["flagged_on"][:10]]),
+                           *([locale] if locale != "es" else [])])
         note = f": {flag['note']}" if flag.get("note") else "."
-        feedback = f"Marcada en el juego ({who}{flag['flagged_on'][:10]}){note}"
-        old = (known[qid].get("review") or {}).get("feedback")
-        set_review(qid, {"decision": "needs_work", "feedback": f"{feedback} Antes: {old}" if old else feedback})
-        done.append(qid)
+        shown = flag.get("shown")
+        seen = (f" · Vista: «{shown['question']}» Respuesta: «{shown['answer']}»; otras: "
+                f"{' / '.join(f'«{w}»' for w in shown['wrong_answers'])}." if shown else "")
+        feedback = f"Marcada en el juego ({where}){note}{seen}"
+        old = (q.get("review") or {}).get("feedback")
+        set_review(qid, {"decision": "needs_work", "feedback": f"{feedback} Antes: {old}" if old else feedback},
+                   update_translation(locale) if locale != "es" else update_question)
+        done.append(qid if locale == "es" else f"{qid} ({locale})")
     if pending:
         save_file.record_applied({k: save_file.stamp(v) for k, v in pending.items()})
     return done

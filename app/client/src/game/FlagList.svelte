@@ -15,7 +15,8 @@
 
   const when = (iso: string) => iso.slice(0, 16).replace("T", " ");
   const answerOf = (f: Flagged) => f.answer ?? t("flag.hidden");
-  const meta = (f: Flagged) => [f.player ?? "—", ...(f.level ? [t("flag.level", { n: f.level })] : [])].join(" · ");
+  const meta = (f: Flagged) =>
+    [f.player ?? "—", ...(f.level ? [t("flag.level", { n: f.level })] : []), f.locale ?? "es"].join(" · ");
 
   const text = $derived(
     flags

@@ -1,6 +1,6 @@
 // The save document on disk (plan 49, PORT-4): parse/upgrade and flags.
 import { pyLen } from "./pycompat.ts";
-import { SAVE_VERSION, SPANISH, type FlagEntry, type Language, type SaveData } from "./state.ts";
+import { SAVE_VERSION, SPANISH, type FlagEntry, type FlagText, type Language, type SaveData } from "./state.ts";
 
 const isObject = (v: unknown): v is Record<string, any> => typeof v === "object" && v !== null && !Array.isArray(v);
 
@@ -81,20 +81,27 @@ export function defaultLanguage(tag: string, ui: readonly string[], questions: r
   return { ui: best(ui), questions: best(questions) };
 }
 
-/** What the flag dialog sends; `null` unflags. */
-export type FlagInput = { player: string | null; level?: number; note?: string } | null;
+/** What the flag dialog sends; `null` unflags. `locale`/`shown`: the game's question (decision 102). */
+export type FlagInput = { player: string | null; level?: number; note?: string; locale?: string; shown?: FlagText } | null;
 
 /** Longest flag note, in code points. */
 export const MAX_NOTE = 500;
 
-/** Flag, re-note or unflag one question: a new save; a reflag keeps the first `flagged_on`, player and level. */
+/** Flag, re-note or unflag one question: a new save; a reflag keeps the first `flagged_on`, player, level, locale and text. */
 export function setFlag(save: SaveData, qid: string, flag: FlagInput, now: string): SaveData {
   if (typeof qid !== "string" || !qid) throw new Error("id must be a question ID");
   const note = flag?.note?.trim() ?? "";
   if (pyLen(note) > MAX_NOTE) throw new Error(`the note is longer than ${MAX_NOTE} letters`);
   const flags = { ...save.flags };
   if (flag) {
-    const entry: FlagEntry = { ...(flags[qid] ?? { flagged_on: now, player: flag.player, ...(flag.level ? { level: flag.level } : {}) }) };
+    const first: FlagEntry = {
+      flagged_on: now,
+      player: flag.player,
+      ...(flag.level ? { level: flag.level } : {}),
+      ...(flag.locale ? { locale: flag.locale } : {}),
+      ...(flag.shown ? { shown: flag.shown } : {}),
+    };
+    const entry: FlagEntry = { ...(flags[qid] ?? first) };
     if (note) entry.note = note;
     else delete entry.note;
     flags[qid] = entry;

@@ -45,7 +45,8 @@ def seen_counts():
 
 
 def flags():
-    """Flagged questions {"<id>": {"flagged_on", "player", "level"?, "note"?}}; a v3 save's reports read as
+    """Flagged questions {"<id>": {"flagged_on", "player", "level"?, "note"?, "locale"?, "shown"?}} (decision 102:
+    the game's question locale, absent = es; shown = {question, answer, wrong_answers}); a v3 save's reports read as
     engine/save.ts upgrades them (decision 60)."""
     doc = _doc()
     if doc is None:

@@ -35,6 +35,16 @@ export interface FlagEntry {
   /** Missing in flags from before version 4. */
   level?: number;
   note?: string;
+  /** The game's question locale (decision 102); missing = es. */
+  locale?: string;
+  /** The question as the player saw it, in `locale` (decision 102); missing in older flags. */
+  shown?: FlagText;
+}
+
+export interface FlagText {
+  question: string;
+  answer: string;
+  wrong_answers: string[];
 }
 
 export interface PlayerRow {

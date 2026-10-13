@@ -27,8 +27,9 @@ function flagList(save: SaveData, data: EngineData): Flagged[] {
   const live = g?.result === null && g.state.phase === "question" ? g.state.current : null;
   return Object.entries(save.flags)
     .map(([id, f]) => {
-      const q = data.byId.get(id);
-      return { ...f, question_id: id, question: q?.question ?? null, answer: id === live ? null : (q?.answer ?? null) };
+      const { shown, ...rest } = f;
+      const q = shown ?? data.byId.get(id);
+      return { ...rest, question_id: id, question: q?.question ?? null, answer: id === live ? null : (q?.answer ?? null) };
     })
     .sort((a, b) => (a.flagged_on < b.flagged_on ? 1 : a.flagged_on > b.flagged_on ? -1 : 0));
 }
@@ -41,7 +42,9 @@ export async function fetchFlags(): Promise<Flagged[]> {
 export async function setFlag(id: string, flag: FlagInput): Promise<Flagged[]> {
   return run((save, data, io) => {
     try {
-      const out = saveFlag(save, id, flag, io.now);
+      const q = data.byId.get(id);
+      const shown = q && { question: q.question, answer: q.answer, wrong_answers: q.wrong_answers };
+      const out = saveFlag(save, id, flag && { ...flag, locale: data.locale, ...(shown ? { shown } : {}) }, io.now);
       return { save: out, status: 200, body: flagList(out, data) };
     } catch (e) {
       return { save, status: 400, body: { error: "flag_invalid", message: messageOf(e) } };

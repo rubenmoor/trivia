@@ -385,8 +385,8 @@ Template:
 - Date: 2026-10-08
 - Context: The gamemaster wants to flag a question for review during a game night (it needs work), without leaving the game. The game must not write `authoring/data/` (D-35), and a question that leaves the pool while it is on screen breaks the running game.
 - Decision: The game writes flags to `flags.json` in the game state (`TRIVIA_STATE`, default `state/`): one entry per question with the player and the date; flagging again removes the flag. `trivia-authoring` applies the flags **when it starts**: each flagged question gets a human `needs_work` review with the feedback «Marcada en el juego …» (any earlier feedback is kept in the text), and the applied flags are removed from the file. The review tool lists every question that isn't approved, across batches, at `/review?status=!approved`; the server prints that link with the count at startup.
-- Consequences: A flagged question stays playable until `trivia-authoring` is (re)started, so the game never loses its question on screen. The packaged game has no authoring server; its flags stay in its state directory. When M7 moves the game state to the client, flags move with it (PORT-4's store).
-- Supersedes / related: D-30, D-33, D-35; GM-5, RV-22
+- Consequences: A flagged question stays playable until `trivia-authoring` is (re)started, so the game never loses its question on screen. The packaged game has no authoring server; its flags stay in its state directory. When M7 moves the game state to the client, flags move with it (PORT-4's store). Decision 102: a flag records the game's question locale and the text shown (`locale`, `shown`); an en/de flag reviews that translation, not the source.
+- Supersedes / related: D-30, D-33, D-35; GM-5, RV-22; decision 102
 
 ## D-48: 4K is the image target
 - Date: 2026-10-08
