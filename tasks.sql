@@ -1,5 +1,5 @@
 -- pm database. Change it with pm; after a hand edit run `pm validate`.
-PRAGMA user_version = 13;
+PRAGMA user_version = 14;
 
 CREATE TABLE milestone (
     id             INTEGER PRIMARY KEY,
@@ -8,6 +8,7 @@ CREATE TABLE milestone (
     body           TEXT NOT NULL DEFAULT '',               -- Markdown
     created_at     TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')),
     implemented_at TEXT,
+    queue_index    INTEGER NOT NULL DEFAULT 0,             -- its tasks are queued lowest index first, then by priority
     CONSTRAINT "implemented_at is set exactly when implemented" CHECK ((status = 'implemented') = (implemented_at IS NOT NULL))
 ) STRICT;
 
@@ -117,9 +118,9 @@ JOIN milestone m ON m.id = p.milestone_id
 WHERE m.status = 'open' AND t.status = 'open'
   AND NOT EXISTS (SELECT 1 FROM task_decision td JOIN decision d ON d.id = td.decision_id
                   WHERE td.task_id = t.id AND d.status = 'pending')
-ORDER BY priority DESC, m.id, p.id, t.id;
+ORDER BY m.queue_index, priority DESC, m.id, p.id, t.id;
 
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (1, 'Enough content for game nights', 'open', 'we want 5000 questions in the base bundle. note the current difficulty scale (i think from 1 to 15). it''s okay to have fewer questions for higher difficulties, but currently there are way too few questions at high difficulties.
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (1, 'Enough content for game nights', 'open', 'we want 5000 questions in the base bundle. note the current difficulty scale (i think from 1 to 15). it''s okay to have fewer questions for higher difficulties, but currently there are way too few questions at high difficulties.
 
  `qgen batch` creates new questions, so it''s just a matter of running it a couple of times, but there might be improvements necessary along the way. E.g. we are currently assuming that our list of categories is complete. Creating more subcategories might be useful, though. Any task that runs qgen batch should be prioritized at -100. The idea is that any implementation task has higher priority and only when all tasks are blocked by pending decision new questions can be generated.
 
@@ -131,8 +132,8 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 
  cf. those past plans for reference:
 
- Plan files: `plans/02-question-pool.md`, `plans/06-images.md`, `plans/07-question-generation.md`, `plans/20-pipeline-efficiency.md`, `plans/21-age-groups.md`, `plans/23-media-providers.md`.', '2026-10-11T20:08:18Z', NULL);
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (2, 'Game engine in TypeScript', 'implemented', 'The game referee moves from Python (`app/server/game.py`, `selection.py`) to `app/client/src/engine/` with the same rules and the family''s saves kept. The game then runs without Python, which the Steam desktop shell needs (S3).
+ Plan files: `plans/02-question-pool.md`, `plans/06-images.md`, `plans/07-question-generation.md`, `plans/20-pipeline-efficiency.md`, `plans/21-age-groups.md`, `plans/23-media-providers.md`.', '2026-10-11T20:08:18Z', NULL, 0);
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (2, 'Game engine in TypeScript', 'implemented', 'The game referee moves from Python (`app/server/game.py`, `selection.py`) to `app/client/src/engine/` with the same rules and the family''s saves kept. The game then runs without Python, which the Steam desktop shell needs (S3).
 
 ## Outcome
 - Scenario recorder for the Python referee; fixtures committed (PORT-1).
@@ -153,8 +154,8 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 - The family plays a test night on the TS engine.
 - `trivia` serves static files plus `/api/save` only.
 
-Plan files: `plans/12-client-engine.md`.', '2026-10-11T21:54:55Z', '2026-10-13T03:56:22Z');
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (3, 'UI strings in a catalog', 'implemented', 'Every on-screen string comes from a catalog, with no visible change. This is the groundwork for translations. Bundles (the other half of the old M9) are done in the pipeline; only the gamemaster''s check of the `colombia` proposals is left.
+Plan files: `plans/12-client-engine.md`.', '2026-10-11T21:54:55Z', '2026-10-13T03:56:22Z', 0);
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (3, 'UI strings in a catalog', 'implemented', 'Every on-screen string comes from a catalog, with no visible change. This is the groundwork for translations. Bundles (the other half of the old M9) are done in the pipeline; only the gamemaster''s check of the `colombia` proposals is left.
 
 ## Outcome
 - `t()` helper and the `es` catalog; every string moved into it (LUI-1).
@@ -173,8 +174,8 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 - No Spanish literals left in `app/client/src/game` outside the catalog.
 - Every question has `bundle`, checked by `qgen validate`.
 
-Plan files: `plans/15a-ui-translation.md`, `plans/22-bundles.md`.', '2026-10-11T21:54:55Z', '2026-10-13T06:24:58Z');
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (4, 'Media license audit', 'open', 'The full license data of every media file is known and stored, and files with unclear licenses (PD-US only, GFDL) are replaced. Commons restriction flags (personality rights, trademark) are kept (D-61, decision 8). Needed before any public release; small and independent of the other milestones.
+Plan files: `plans/15a-ui-translation.md`, `plans/22-bundles.md`.', '2026-10-11T21:54:55Z', '2026-10-13T06:24:58Z', 0);
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (4, 'Media license audit', 'open', 'The full license data of every media file is known and stored, and files with unclear licenses (PD-US only, GFDL) are replaced. Commons restriction flags (personality rights, trademark) are kept (D-61, decision 8). Needed before any public release; small and independent of the other milestones.
 
 ## Outcome
 - `media.py licenses` report listing the files to replace (PUB-1).
@@ -192,8 +193,8 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 - `qgen validate` requires license data for approved questions.
 - The audit''s replacement list is empty.
 
-Plan files: `plans/17-publishing.md`.', '2026-10-11T21:54:55Z', NULL);
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (5, 'Age groups and bundles in the game', 'open', 'Before a session, players choose their age group and which bundles to play; selection uses the group''s window on the shared difficulty scale 1–15 and only the active bundles. The family''s default stays young teens with every bundle on, so nothing changes unless they opt in. Easier after the TypeScript engine, since it changes selection.
+Plan files: `plans/17-publishing.md`.', '2026-10-11T21:54:55Z', NULL, 0);
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (5, 'Age groups and bundles in the game', 'open', 'Before a session, players choose their age group and which bundles to play; selection uses the group''s window on the shared difficulty scale 1–15 and only the active bundles. The family''s default stays young teens with every bundle on, so nothing changes unless they opt in. Easier after the TypeScript engine, since it changes selection.
 
 ## Outcome
 - Choose an age group; levels map to the group''s window; windows and per-group level weights tuned (AG-7, D-38).
@@ -219,8 +220,8 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 - In en and de, the game offers only the bundles listed for that language.
 - The draft windows are tuned.
 
-Plan files: `plans/21-age-groups.md`, `plans/22-bundles.md`.', '2026-10-11T21:54:56Z', NULL);
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (6, 'Screen polish leftovers', 'open', 'Two leftovers from the finished visual and sound milestones (M3, M4).
+Plan files: `plans/21-age-groups.md`, `plans/22-bundles.md`.', '2026-10-11T21:54:56Z', NULL, 0);
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (6, 'Screen polish leftovers', 'open', 'Two leftovers from the finished visual and sound milestones (M3, M4).
 
 ## Outcome
 - The next screen''s media is preloaded before it fades in; `PLACEHOLDER(UI-7)` is gone (UI-7).
@@ -233,8 +234,8 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 - `grep -rn PLACEHOLDER app/client/src` is empty.
 - The gamemaster approves the new sounds on the TV.
 
-Plan files: `plans/04-ui-tv-display.md`.', '2026-10-11T21:54:56Z', NULL);
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (7, 'Steam S2: product definition', 'open', 'The first phase of the Steam track (D-34) is decisions, not code: what the product is before anything Steam-specific gets built. It can run alongside the other milestones.
+Plan files: `plans/04-ui-tv-display.md`.', '2026-10-11T21:54:56Z', NULL, 0);
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (7, 'Steam S2: product definition', 'open', 'The first phase of the Steam track (D-34) is decisions, not code: what the product is before anything Steam-specific gets built. It can run alongside the other milestones.
 
 ## Outcome
 Answers, each recorded in `plans/decisions.md`, to:
@@ -295,8 +296,8 @@ Five modes; there is no "default mode". Mode names are written in English first;
 ## Done when
 - OQ-29..OQ-37 (and OQ-45) are resolved in `decisions.md`, and the later phases in `plans/11-steam.md` are updated to match.
 
-Plan files: `plans/11-steam.md`, `plans/13-game-modes.md`, `plans/15-i18n.md`, `plans/16-content-target.md`, `plans/17-publishing.md`, `plans/18-steam-integration.md`.', '2026-10-11T21:54:56Z', NULL);
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (8, 'Steam S3: playable desktop build', 'open', 'A local desktop build of the game that a family can play without the gamemaster''s dev setup: desktop shell, file saves, controller, Steam Deck layout, credits. Needs the TypeScript engine (the shell loads the client without Python) and the shell decision (OQ-29). The desktop build replaces the browser game now: the Python game server goes, and the game is Node/TS only (decision 111: Steam only).
+Plan files: `plans/11-steam.md`, `plans/13-game-modes.md`, `plans/15-i18n.md`, `plans/16-content-target.md`, `plans/17-publishing.md`, `plans/18-steam-integration.md`.', '2026-10-11T21:54:56Z', NULL, 0);
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (8, 'Steam S3: playable desktop build', 'open', 'A local desktop build of the game that a family can play without the gamemaster''s dev setup: desktop shell, file saves, controller, Steam Deck layout, credits. Needs the TypeScript engine (the shell loads the client without Python) and the shell decision (OQ-29). The desktop build replaces the browser game now: the Python game server goes, and the game is Node/TS only (decision 111: Steam only).
 
 ## Outcome
 - Desktop shell and builds (SW-1..SW-6, `plans/18-steam-integration.md`).
@@ -322,8 +323,8 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 - A local build runs on Windows, Linux and the Deck with a controller only.
 - No Python under `app/`; the family''s save lives in the desktop build; workers check UI changes with the Node dev server.
 
-Plan files: `plans/11-steam.md`, `plans/18-steam-integration.md`, `plans/14-input.md`, `plans/17-publishing.md`.', '2026-10-11T21:55:09Z', NULL);
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (9, 'Steam S4: content for release', 'open', 'Enough questions, in every launch language, for a stranger''s family to play many evenings. Depends on the launch languages (OQ-31) and the content target (OQ-32).
+Plan files: `plans/11-steam.md`, `plans/18-steam-integration.md`, `plans/14-input.md`, `plans/17-publishing.md`.', '2026-10-11T21:55:09Z', NULL, 0);
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (9, 'Steam S4: content for release', 'open', 'Enough questions, in every launch language, for a stranger''s family to play many evenings. Depends on the launch languages (OQ-31) and the content target (OQ-32).
 
 ## Outcome
 - Translated UI catalogs (LUI-4..LUI-6, `plans/15a-ui-translation.md`).
@@ -362,8 +363,8 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 - `colombia` has 2000 approved in es and en (may land after launch), the pilot''s effort is recorded and the follow-up decision answered.
 - Style guides exist for every UI locale; the TV-check fixes are in; the gamemaster has reviewed the screen gallery in every UI language.
 
-Plan files: `plans/11-steam.md`, `plans/15-i18n.md`, `plans/15a-ui-translation.md`, `plans/15b-question-translation.md`, `plans/15c-regional-questions.md`, `plans/16-content-target.md`.', '2026-10-11T21:55:09Z', NULL);
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (10, 'Steam S5: Steamworks and store', 'open', 'The game on Steam as a beta: Steamworks app, Cloud saves, achievements, depots, beta branch, store page and disclosures. Steam only (decision 111): the Steam integration is the reason to buy, and no effort goes into running the game outside Steam. Price model and account holder: decisions 66 and 67 (OQ-33); licence: OQ-35.
+Plan files: `plans/11-steam.md`, `plans/15-i18n.md`, `plans/15a-ui-translation.md`, `plans/15b-question-translation.md`, `plans/15c-regional-questions.md`, `plans/16-content-target.md`.', '2026-10-11T21:55:09Z', NULL, 0);
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (10, 'Steam S5: Steamworks and store', 'open', 'The game on Steam as a beta: Steamworks app, Cloud saves, achievements, depots, beta branch, store page and disclosures. Steam only (decision 111): the Steam integration is the reason to buy, and no effort goes into running the game outside Steam. Price model and account holder: decisions 66 and 67 (OQ-33); licence: OQ-35.
 
 ## Outcome
 - Steamworks integration and depots (SW-7..SW-14, `plans/18-steam-integration.md`).
@@ -395,8 +396,8 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 - The beta branch is installed from Steam on a second machine and played by the family.
 - Without a Steam user nothing persists and flags are off; with one, saves sync through Steam Cloud.
 
-Plan files: `plans/11-steam.md`, `plans/17-publishing.md`, `plans/18-steam-integration.md`.', '2026-10-11T21:55:09Z', NULL);
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (11, 'Steam S6: release', 'open', 'The public release and what follows it.
+Plan files: `plans/11-steam.md`, `plans/17-publishing.md`, `plans/18-steam-integration.md`.', '2026-10-11T21:55:09Z', NULL, 0);
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (11, 'Steam S6: release', 'open', 'The public release and what follows it.
 
 ## Outcome
 - "Coming soon" page live (ST-3).
@@ -425,8 +426,8 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 - Released; content updates go out as patches.
 - A flag sent from the released game under Steam arrives via `qgen flag --pull` as a needs_work review; without the server the copy fallback works.
 
-Plan files: `plans/11-steam.md`.', '2026-10-11T21:55:09Z', NULL);
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (12, 'Conquer the world', 'on-hold', 'After the launch in English, Spanish and German (pm decision 26), the game ships in Simplified Chinese, Russian and Brazilian Portuguese: the three next-largest language groups on Steam. The Chinese version gets its own base bundle, `chinese-base`: a Chinese family plays China-centric questions instead of a Spanish-speaking world''s. A session has one base bundle (milestone 5), so `chinese-base` takes `base`''s place.
+Plan files: `plans/11-steam.md`.', '2026-10-11T21:55:09Z', NULL, 0);
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (12, 'Conquer the world', 'on-hold', 'After the launch in English, Spanish and German (pm decision 26), the game ships in Simplified Chinese, Russian and Brazilian Portuguese: the three next-largest language groups on Steam. The Chinese version gets its own base bundle, `chinese-base`: a Chinese family plays China-centric questions instead of a Spanish-speaking world''s. A session has one base bundle (milestone 5), so `chinese-base` takes `base`''s place.
 
 ## Outcome
 - Questions, UI and store page in Simplified Chinese, Russian and Portuguese (Brazil), each with its own approved pool meeting the content target (pm decision 21: 5000 per language with D-53''s mix).
@@ -458,8 +459,8 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 
 ## Done when
 - All three languages playable in the released game, store pages localized, content target met per language.
-- zh game plays `chinese-base` (5000 approved) instead of `base`.', '2026-10-12T16:46:08Z', NULL);
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (13, 'Code quality', 'open', 'The code grew fast through many pm workers (milestones 1–11, ~24k lines in `app/` and `authoring/`) and nobody has read it as a whole. This milestone reviews it file by file, fixes what is cheap to fix and writes everything down in one report for the gamemaster.
+- zh game plays `chinese-base` (5000 approved) instead of `base`.', '2026-10-12T16:46:08Z', NULL, 0);
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (13, 'Code quality', 'open', 'The code grew fast through many pm workers (milestones 1–11, ~24k lines in `app/` and `authoring/`) and nobody has read it as a whole. This milestone reviews it file by file, fixes what is cheap to fix and writes everything down in one report for the gamemaster.
 
 ## Priority
 - Every plan and task of this milestone runs at priority 0: after the other milestones'' work (only the planning tasks stay at 1000).
@@ -503,8 +504,8 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 - Every code file in scope is reviewed and listed in `code-review.md`.
 - Every finding has a status; the executive summary is on top.
 - Linter evaluated; if adopted: the lint pass runs before every commit touching TypeScript and reports no issues.
-- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T22:44:46Z', NULL);
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (14, 'Opt-in telemetry', 'open', 'Anonymous, opt-in gameplay data to tune difficulty and see how the game is played. Builds on milestone 11''s report server. In the launch build if ready in time, else the first patch after launch; the launch doesn''t wait for it.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T22:44:46Z', NULL, 0);
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (14, 'Opt-in telemetry', 'open', 'Anonymous, opt-in gameplay data to tune difficulty and see how the game is played. Builds on milestone 11''s report server. In the launch build if ready in time, else the first patch after launch; the launch doesn''t wait for it.
 
 ## Outcome
 - consent: a first-start question (default off), changeable in the Esc menu; nothing is sent without a yes
@@ -519,8 +520,8 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 - a failed send never shows an error to the player
 
 ## Done when
-- an opted-in session''s data arrives; `qgen report` shows played vs. rated difficulty', '2026-10-13T16:24:16Z', NULL);
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (15, 'Modding and Steam Workshop', 'open', 'Players mod the game, from question bundles to full conversions, and share mods on the Steam Workshop. Part of the launch: milestone 11 waits for it. We make modding easy by shipping readable code and loading mods as file overlays; what mods do is up to the modders.
+- an opted-in session''s data arrives; `qgen report` shows played vs. rated difficulty', '2026-10-13T16:24:16Z', NULL, 0);
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (15, 'Modding and Steam Workshop', 'open', 'Players mod the game, from question bundles to full conversions, and share mods on the Steam Workshop. Part of the launch: milestone 11 waits for it. We make modding easy by shipping readable code and loading mods as file overlays; what mods do is up to the modders.
 
 ## Outcome
 - Readable build: the client builds without hashes, one output file per source module (Vite/Rollup `preserveModules`), unminified, with source maps; a mod can replace any single module by its path
@@ -545,7 +546,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 
 ## Done when
 - A bundle mod, a CSS theme mod, a code add-on and a minimal full conversion each load from `mods/` and from the Workshop on a second Steam account
-- The modding guide is linked on the store page', '2026-10-13T16:55:00Z', NULL);
+- The modding guide is linked on the store page', '2026-10-13T16:55:00Z', NULL, 0);
 
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (1, 1, 'masterplan', 1000, 'Milestone 1 grows the `base` bundle from about 1000 to **5000 approved questions** (D-52), with clearly fewer questions at the top of the difficulty scale (1–15, D-38) but still enough of them. It also sets up quality control after every batch, and on the generation process itself, so we can tell whether quality holds as the pool grows.
 
