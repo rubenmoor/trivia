@@ -12325,7 +12325,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - Every tracked file of `authoring/server/` and `authoring/ui/` listed in `## Part 9` (no-findings rows included) and in the inventory, every finding with a status; every part 1 row `handed to part 9` has its final status.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T23:09:09Z', '2026-10-13T13:25:32Z', 521);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (580, 82, 'Part 10 triage: duplication clusters table', 'work', 'open', NULL, NULL, 'Task 1 of `plan 82: Cross-cutting duplication, consistency and build config (code review part 10)`: one table the next tasks work from. No code changes.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (580, 82, 'Part 10 triage: duplication clusters table', 'work', 'done', NULL, '2026-10-13, code-review.md (### Duplication clusters: 38 clusters assigned to tasks 581–586, 721, new follow-up task 740)', 'Task 1 of `plan 82: Cross-cutting duplication, consistency and build config (code review part 10)`: one table the next tasks work from. No code changes.
 
 ## First
 - Needs `code-review.md` with `## Part 10` (`plan 73: Baseline scans and report skeleton (code review part 1)`) and parts 2–9 done (plans 74–81); if missing or still open, stop and say so.
@@ -12344,7 +12344,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
 
 ## Done when
-- `### Duplication clusters` lists every source row exactly once, each with an assignee; staged.', '2026-10-12T23:10:17Z', NULL, 522);
+- `### Duplication clusters` lists every source row exactly once, each with an assignee; staged.', '2026-10-12T23:10:17Z', '2026-10-13T13:35:38Z', 522);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (581, 82, 'Part 10: consolidate client types and API clients', 'work', 'open', NULL, NULL, 'Task 2 of `plan 82: Cross-cutting duplication, consistency and build config (code review part 10)`: the clusters assigned to "task 2" in `### Duplication clusters` (`## Part 10`, `code-review.md`); work from that table, not this list.
 
 ## First
@@ -14302,6 +14302,24 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Check
 - Temp server (`TRIVIA_WORK`/`TRIVIA_STATE`/`TRIVIA_MEDIA` temp dirs), `curl /api/overview` before/after, start page opened; `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-13T13:19:12Z', NULL, 578);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (740, 82, 'Cross-process writes to the authoring pool, translations and spot checks: no lost updates', 'work', 'open', NULL, NULL, 'Follow-up of `task 580: Part 10 triage: duplication clusters table` (cluster "cross-process write locks" in `code-review.md` `## Part 10` `### Duplication clusters`).
+
+## Problem
+- Writers of `authoring/data/questions.json`, `questions.<locale>.json` and `work/<run>/spot-checks.json` lock per process only: `authoring/server/main.py` `_lock`, `authoring/server/spot_checks.py` `_lock`, `authoring/tools/qgen.py` `_pool_lock`/`_save_lock` (`save_json`), `authoring/tools/translations.py` `save` (caller''s lock).
+- A `qgen batch`/`fix` merging while the gamemaster reviews in `trivia-authoring` can lose one side''s read-modify-write (no file lock, no mtime check).
+- Source rows: part 1 "writers lock per process only" (Sync IO and globals), part 7 `save_json` and module-level state rows, part 8 `translations.save` row, part 9 `spot_checks.py` `_lock` row.
+
+## What
+- Read `pm decision list --answered --grep lock --grep save` first.
+- Pick the smallest fix that stays offline, stdlib only and Windows-safe (Steam build; `fcntl` is POSIX only): e.g. a lock file next to the target (`os.open(O_CREAT|O_EXCL)` with stale-lock timeout), or re-read + compare mtime before replace and retry the merge.
+- One helper in `authoring/tools/` (next to the atomic writer consolidated by `task 583: Part 10: authoring tools'' shared logic and constant copies`, if done), used by all four writers.
+- Formats unchanged (pool JSON, translations, spot checks byte-identical for the same input).
+- If it needs a behaviour choice (e.g. the review page reports "pool changed, reload" vs. silent merge): `pm decision add`, options, recommended first.
+
+## Check
+- Throw-away script on a temp `TRIVIA_WORK` and a temp copy of `authoring/data/`: two processes doing read-modify-write in a loop, no lost update; never the real data.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`.
+- Row in `code-review.md` `## Part 10` with status `fixed (task N)`.', '2026-10-13T13:34:26Z', NULL, 580);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -16055,6 +16073,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (632, 579, '2026-10-13T13:20:20Z', '2026-10-13T13:25:42Z', 'done', NULL, 0, '68cca6bd98979cd08edb39ea4185228c3b8b0ddc', 'claude-opus-5-5[1m]', '3bd1448a-7fb1-41ed-8d24-f7a1c0a190c1', 49, 98, 25184, 4240384, 105097, 2.1929248, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (633, 737, '2026-10-13T13:25:43Z', '2026-10-13T13:26:51Z', 'done', NULL, 0, 'ac120f6cb1b77b738d9deb9d6eece78d40f1c1a6', 'claude-opus-5-5[1m]', '0e0e3b34-1df1-474b-85b0-68eca91eb76e', 12, 24, 3933, 431620, 31114, 0.41399199999999997, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (634, 738, '2026-10-13T13:26:51Z', '2026-10-13T13:33:07Z', 'done', NULL, 0, 'cb5992614f399a4d486b2d6a84b2d5fa6206804d', 'claude-opus-5-5[1m]', '992c2016-bc52-441f-9454-d81d54e0b4cf', 41, 78, 24951, 2978590, 94542, 1.8513859999999998, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (635, 580, '2026-10-13T13:33:08Z', '2026-10-13T13:35:47Z', 'done', NULL, 0, 'a0fabba6a5951356511393d7763eb84bcaf420e2', 'claude-opus-5-5[1m]', '9a4797a0-420b-43a3-805e-a03458f7fdef', 15, 30, 14244, 816706, 64812, 0.96683720000000006, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
