@@ -4896,6 +4896,40 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - `plans/11-steam.md` "Content updates (ST-5)" holds the cadence, the patch and hotfix path and cited Valve rules; `qgen patch-notes` drafts the notes from two tags.
 - The first content patch after launch passed ST-4, is live on `default`, and its "live? date, build id" decision is answered and recorded (milestone 11 "Done when").
 - D-59: `trivia` and `nix build .#app` unchanged.', '2026-10-13T09:13:38Z', 270);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (97, 11, 'S6 close-out', 120, 'Part 7 of masterplan 11 (S6), the last one: once the release (plan 95) and the first content patch (plan 96) are recorded, bring the plan files, indexes and the human how-tos in line, move what S6 leaves for later to `plans/backlog.md`, and confirm milestone 11''s "Done when" (released; content updates go out as patches). Docs and pm only; no code. Gaps found here become tasks in their owning plan, not fixes in this one.
+
+## Depends on (every task waits)
+- Plans 91 "Version numbers and patch-safe saves", 92 "Release checklist (ST-4)", 93 "Question reports by hand (ST-5)", 94 "Coming soon page (ST-3)", 95 "Launch", 96 "Content updates as patches (ST-5)": all their tasks done or dropped. The two results that close the milestone: decision "Released? date, build id" (recorded by `task 710: Record the release and the first week`) and decision "Content patch v<x> live? date, build id" (recorded by `task 716: Record the first content patch`).
+- Guard at the start of each task: `pm show` of this plan and `pm plans list`. If another milestone-11 plan still has open tasks: if one waits for a pending decision, `pm task-pending-decision <this task> <that decision>`; otherwise stop without changes and say so (the queue brings the task back). Never close or drop tasks of other plans.
+- Not the milestone''s "post-milestone cleanup" (pm queues it once nothing is open); this plan doesn''t set the milestone status.
+
+## What the other plans already write (check, don''t redo)
+- `plans/11-steam.md`: ST-4 `[x]` (plan 92), ST-3 `[x]` with live date (plan 94, task 704), "Launch (S6)" and S6 row note with date, version, BuildID (plan 95, task 710), "Content updates (ST-5)" and ST-5 `[x]` with the first patch (plan 96, tasks 713/716; reports half: plan 93, task 701).
+- `README.md`: "Upload to Steam" release-check line (plan 92), "Steam build is the release" / D-59 note (task 710), "a player sent a report" (`qgen flag`, task 700), "Send a content patch" (task 713), `qgen patch-notes` line (task 712).
+- `plans/project.md`: S6 rows per part (each plan''s close-out).
+- Version and tag rules: decision 91: Game version: single source of truth (`app/desktop/package.json`, tag `v<version>`); decision 92: Pool version.
+
+## Tasks to split into
+1. **Plan files and backlog**
+   - Guard (above).
+   - `plans/11-steam.md`: ST-3, ST-4, ST-5 `[x]` with dated notes (fill only what''s missing, cite the decision ids); ST-1 checked against `plans/decisions.md`/`pm decision list --answered` (tick with a note, or note what is left and where); S6 phase row: exit met (release date, first patch version and date); `**Status:**` line (e.g. `released`, with the date); the "Later" phase row points to the backlog rows below.
+   - `plans/17-publishing.md` and `plans/18-steam-integration.md`: every open `[ ]` row (today PUB-3, PUB-4, PUB-6..PUB-11, SW-5..SW-7, SW-9..SW-14) either `[x]` with a dated note and source (the task, decision or section that did it) or left open with "*Deferred (S6 close-out, <date>): <why>, see backlog B-<n>*". A row still open that a release needs (e.g. PUB-4 if decision 66/OQ-35 is still pending) is not deferred: it becomes a `pm task add` in its owning plan, named in the task note. Status lines (`**Status:**`) brought up to date.
+   - `plans/backlog.md`, new rows (origin `S6 close-out`, status `later`), each naming where the spec lives so nobody re-plans it: competitive and multiplayer modes (MD-8, MD-9 in `13-game-modes.md`; decision 23: Competitive format (OQ-37)); couch co-op input (IN-6 in `14-input.md`; decision 24: Multiplayer input and couch co-op (OQ-37)); more regions and languages (`15-i18n.md`, `15c-regional-questions.md`; decision 27: Spanish variety (OQ-31) for later regional bundles); SW-13 Remote Play Together (after IN-6); SW-14 macOS build (developer account, notarization). Plus the first week''s and the first patch''s leftovers if plans 95/96 didn''t already file them (check `pm show 710`, `pm show 716` notes).
+   - Done when: no open row in 11/17/18 lacks a note; the backlog rows exist; `qgen validate` unaffected.
+2. **Indexes, how-tos and the milestone check** (after task 1)
+   - `plans/README.md`: status column for `11-steam.md`, `17-publishing.md`, `17a-store-page.md`, `18-steam-integration.md` (and 13/14/15* only if S6 changed them) to match their `**Status:**` lines.
+   - `plans/project.md`: "Steam track" paragraph says S6 done (release date, first patch); each S6 part row present and `[x]`; open-questions rows that S6 resolved removed; "Later" points to the backlog rows.
+   - `README.md`: "Status" says the game is released on Steam (D-59: the Steam build is the release; `trivia` stays for game night); "How to …" has, commands only, "Cut a release" (bump `version` in `app/desktop/package.json`, `qgen validate`, commit, `git tag v<x>`, `trivia-steam upload --branch beta`, `trivia-release-check --manual FILE`, then the Steamworks steps by hand: link to `plans/11-steam.md` "Release checklist (ST-4)" and "Launch (S6)") and "Send a content patch" (from task 713; add only if missing; link "Content updates (ST-5)"). No duplicate of a how-to the earlier plans wrote: merge into one.
+   - `directory.md`: files S6 added (e.g. `authoring/steam/release_check.py`, the `qgen flag`/`patch-notes` modules) listed; check, don''t rewrite.
+   - Milestone check: in the task note cite the answered "Released? date, build id" and "Content patch v<x> live? …" decisions (ids, dates, version, BuildID). If either isn''t answered, don''t close: `pm task-pending-decision` on it, stage what''s done, stop.
+   - Done when: the milestone''s "Done when" holds and is cited in the task note; `npm run check`, `qgen validate` pass (docs only, so expected unchanged).
+
+## Out of scope
+- Any code, Steamworks step or new decision about later features; the backlog rows only point at the existing specs.
+
+## Done when
+- `plans/11-steam.md` ST-3..ST-5 `[x]`, S6 row done, status current; 17/18 leftovers done or deferred with a note; `plans/README.md`, `plans/project.md`, `README.md` in sync; backlog holds competitive mode, couch co-op, more regions/languages, SW-13, SW-14.
+- Milestone 11''s "Done when" holds: released, and the first content patch went out as a patch (both decisions cited).', '2026-10-13T09:20:44Z', 271);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -6811,12 +6845,12 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Patch = new version (part 2) + part 3 + upload; new approved questions via `qgen batch`, fixes from part 5, dropped questions; never changes rules or saves silently.
 - Patch notes: a `qgen` command that diffs the pool between two tags (added/fixed/dropped per language and category) and drafts the note; gamemaster posts it as a Steam event.
 - Done when: the first content patch after launch went out this way (pm decision with version and date). Owner `plans/11-steam.md` (ST-5), `plans/16-content-target.md`.', '2026-10-12T01:16:13Z', '2026-10-13T09:13:40Z', 264);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (271, 11, 'write plan: S6 close-out', 'plan', 'open', 130, NULL, 'Write the plan for part 7 of the masterplan (plan 11): `pm plan add 11 "S6 close-out" --priority 120`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (271, 11, 'write plan: S6 close-out', 'plan', 'done', 130, '2026-10-13, pm plan 97: S6 close-out (priority 120; plan files, backlog rows, indexes, README how-tos, milestone check)', 'Write the plan for part 7 of the masterplan (plan 11): `pm plan add 11 "S6 close-out" --priority 120`.
 
 - Last part; write it after the other parts'' plans exist (or were dropped).
 - Content: `plans/11-steam.md` ST-3..ST-5 `[x]`, S6 row done, status; leftovers in `plans/17-publishing.md` and `plans/18-steam-integration.md` done or deferred with a note; `plans/project.md`, `plans/README.md`; `README.md`: how to cut a release and send a patch (commands for humans).
 - Leftovers to `plans/backlog.md`: competitive mode, couch co-op, more regions/languages, SW-13, SW-14.
-- Done when: the milestone''s "Done when" holds (released, first content patch out).', '2026-10-12T01:16:13Z', NULL, 264);
+- Done when: the milestone''s "Done when" holds (released, first content patch out).', '2026-10-12T01:16:13Z', '2026-10-13T09:20:46Z', 264);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (272, 13, 'create tasks for plan 13', 'split', 'dropped', 1000, 'queued by task 29''s baseline edit to plan 13; plan 13 is already split (task 20), the tasks are unchanged', 'Split plan 13 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T01:28:12Z', '2026-10-12T01:28:17Z', 29);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (273, 15, 'create tasks for plan 15', 'split', 'done', 1000, '2026-10-11, tasks.sql: task 41 re-added as 274 (batch-8 guard per plan, overlap_candidates(), priority 710); 42, 44, 45 match the plan; threshold decision stays with task 45 (needs the baseline), task 44 waits on decision 1', 'Split plan 15 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -13987,6 +14021,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `not yet (blocker)`: same pattern as plan 95''s "Record the release and the first week": a task per blocker in its owning plan, then a new candidate (shape of "First content patch candidate") if code or content changed, else a fresh live decision and a new record task pending on it.
 
 Done when: the first content patch is recorded as live (milestone 11 "Done when": content updates go out as patches).', '2026-10-13T09:14:43Z', NULL, 711);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (717, 97, 'create tasks for plan 97', 'split', 'open', 1000, NULL, 'Split plan 97 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T09:20:44Z', NULL, 271);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -15660,6 +15696,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (558, 716, '2026-10-13T09:18:48Z', '2026-10-13T09:19:04Z', 'blocked', NULL, 0, '48b3fdf16d298aee1302514c32360b4048fe80cf', 'claude-opus-5-5[1m]', '21036d9e-b9b9-4671-97af-07168de11631', 4, 8, 862, 109518, 24768, 0.2373196, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (559, 236, '2026-10-13T09:19:04Z', '2026-10-13T09:19:19Z', 'blocked', NULL, 0, '19e1cc745e1a262779cf225cb7ec2b0eec2d01f2', 'claude-opus-5-5[1m]', '36ea3010-4302-46d3-abb5-2412bc45544a', 5, 10, 859, 133268, 21931, 0.2193216, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (560, 237, '2026-10-13T09:19:20Z', '2026-10-13T09:19:40Z', 'blocked', NULL, 0, '39d5b832112d3357f8f17f5ef510812f7b6ae009', 'claude-opus-5-5[1m]', 'e4400beb-ebea-454f-b109-d2ac799f75ef', 4, 8, 715, 98463, 20397, 0.1972006, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (561, 271, '2026-10-13T09:19:40Z', '2026-10-13T09:20:53Z', 'done', NULL, 0, '24f4fd42aba1a1acb024523de2af2ac80ad5cdb5', 'claude-opus-5-5[1m]', '906cc97b-42cb-4c73-b8ef-373a896b56ca', 13, 26, 6492, 567712, 57465, 0.7032064, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
