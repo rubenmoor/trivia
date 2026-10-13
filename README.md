@@ -147,7 +147,7 @@ The package contains only `app/`. It keeps its saves and media cache in `$XDG_DA
 trivia-media sync --status approved   # the pool's media must be in the cache
 trivia-desktop-build                  # → app/desktop/release/Trivia-<version>-win-x64.zip, …-linux-x64.tar.gz
 trivia-desktop-build --dir            # also win-unpacked/, linux-unpacked/ for the Steam depots
-trivia-steam stage                    # depot folders + build/media = the archives
+trivia-steam stage                    # stages build/dlc/<pack>/; depot folders + build/media + DLC = the archives
 ```
 
 Before every Steam upload, on a clean, tagged commit: `trivia-release-check` (~15 min; per-commit checks, licences, release quality bar, `nix build .#app`, both desktop builds, a smoke game in `linux-unpacked`, then asks the manual checklist). Exit 1 on any ✗; `--skip <step>` for a known-broken step, `--manual <file>` for answers (`<row>: y|n|note` per line). Report: `work/steam/<tag>/release-check.md`.

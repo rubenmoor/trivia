@@ -871,3 +871,16 @@ Template:
   - **Release tools:** release check lists a pack's hash as `<locale>/<id>`; patch notes and `released_ids` merge pack files into their locale.
 - Consequences: removing `app/data/bundles/colombia/pool.json` → es offers only `base`, the family's save plays on; restoring it → offered again. DLC depots (plan 89, task 748): `resources/data/bundles/<id>/` + `pack-media.json`'s files under `resources/media/`.
 - Supersedes / related: D-35, D-39, D-43, D-81, D-85, D-92, D-93; pm decisions 38, 66; plans 89, 98
+
+## D-95: DLC depots for packs
+- Date: 2026-10-13
+- Context: pm decision 66 (bundles ship as free DLC, optional install), D-94 (pack = `app/data/bundles/<id>/` + `build/pack-media.json`), D-93 (three depots); plan 89 task 748. Launching packs: `colombia` (pm decision 110).
+- Decision:
+  - **One depot per pack**, listed in `authoring/steam/steam.json` `dlc: {<id>: {appid, depot}}` (`null` until SW-7); uploaded with the base app's build VDF (DLC depots belong to the base app; the DLC App ID isn't in any VDF, only kept for the record).
+  - **Staged folder** `app/desktop/build/dlc/<id>/` (gitignored, hard links), written by `trivia-steam stage`: `resources/data/bundles/<id>/` from `linux-unpacked` plus `pack-media.json`'s files under `resources/media/`; depot path `.`.
+  - **Exclusions:** OS depots `resources/data/bundles/<id>/*`; `content` each pack-only media file name.
+  - **Checks:** `trivia-steam stage` fails unless packs in the build = `pack-media.json` = `steam.json` `dlc` (every shipped bundle is DLC), and OS depot + content + DLC depots = each archive. `--depots W,L,C,<packs in steam.json order>`; `--dry-run` placeholders 480 / 481… per depot.
+  - **Smoke game:** with packs in the build, a second run on a hard-link copy without the packs' data and media; each run checks gamemaster mode's bundle selector offers exactly the packs with a pool file in the questions locale. Shell started with `--lang=es` (the packs' language).
+  - The game itself never asks Steam about DLC (D-94: files present = pack offered).
+- Consequences: a new pack needs a `steam.json` `dlc` entry before `trivia-steam stage` passes; a pack's media shared with `base` or another pack stays in `content`.
+- Supersedes / related: D-93, D-94; pm decisions 66, 109, 110, 112; plans 89, 98

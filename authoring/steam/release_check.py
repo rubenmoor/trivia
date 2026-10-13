@@ -11,7 +11,7 @@ Steps, each ✓/✗ with its time; all automated steps run, exit 1 on any ✗:
   nix       nix build .#app (D-59)
   desktop   trivia-desktop-build --dir (stage-media's missing-file check) + trivia-steam stage
   credits   node authoring/steam/credits_check.mjs on both unpacked builds: files ↔ credits.json, both ways
-  smoke     node authoring/steam/smoke.mjs app/desktop/release/linux-unpacked
+  smoke     node authoring/steam/smoke.mjs app/desktop/release/linux-unpacked (with packs: again without them)
   media-budget  always skipped until masterplan 10 part 6 (task 260) adds its check
   manual    the rows of MANUAL, asked y/n/note or read from --manual FILE (`<row>: <answer>` per line);
             "n…" fails, "y…" passes, anything else is a note and counts as skipped; on a content-only

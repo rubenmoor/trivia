@@ -2,8 +2,9 @@
 // Packaged smoke game (plan 89, release check step 6): the unpacked Linux build offline, clean env, temp HOME.
 // Usage (dev shell): node authoring/steam/smoke.mjs [app/desktop/release/linux-unpacked]; DEBUG=1 shows the shell's stderr
 // New player → levels 1–3 with an image, audio and video question → quit → restart resumes. Exit 1 names the step.
-import { spawn } from "node:child_process";
-import { accessSync, constants, existsSync, readFileSync } from "node:fs";
+// With packs (DLC depots, decision 66): once as built (packs offered), once without their files (not offered).
+import { spawn, spawnSync } from "node:child_process";
+import { accessSync, constants, existsSync, readdirSync, readFileSync } from "node:fs";
 import { mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -11,7 +12,8 @@ import { cacheName } from "../../app/desktop/resolve.mjs";
 import { connectPipe, pageHelpers, sleep, startXvfb, visibleEl } from "../tools/cdp.mjs";
 
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
-const DIR = path.resolve(process.argv[2] ?? path.join(REPO, "app", "desktop", "release", "linux-unpacked"));
+const BUILD = path.resolve(process.argv[2] ?? path.join(REPO, "app", "desktop", "release", "linux-unpacked"));
+const BUNDLES = path.join("resources", "data", "bundles");
 const TYPES = ["image", "audio", "video"]; // levels 1–3
 const PLAYER = "Smoke";
 
@@ -30,6 +32,11 @@ function which(cmd) {
   throw new Error(`${cmd} not found: run from the dev shell`);
 }
 
+/** Packs whose pool file for `locale` is in the build (as data.ts poolFile). */
+const packsFor = (locale) =>
+  packs().filter((b) => existsSync(path.join(DIR, BUNDLES, b, locale === "es" ? "pool.json" : `pool.${locale}.json`)));
+const packs = () => (existsSync(path.join(DIR, BUNDLES)) ? readdirSync(path.join(DIR, BUNDLES)) : []);
+
 /** The first question per media type in the shipped pool of `locale` (as data.ts poolFile); their media files. */
 function pickQuestions(locale) {
   const file = locale === "es" ? "pool.json" : `pool.${locale}.json`;
@@ -42,7 +49,7 @@ function pickQuestions(locale) {
   });
 }
 
-let page, h, home, display;
+let DIR, page, h, home, display;
 const procs = [];
 
 const saveFile = () => path.join(home, ".config", "trivia", "save", "local", "game.json");
@@ -63,7 +70,7 @@ async function launch() {
   const steamRun = which("steam-run");
   const env = [`HOME=${home}`, `DISPLAY=${display}`, "TRIVIA_DEVTOOLS=1"];
   // unshare -rn: no network; env -i + steam-run: no Nix shell env, an FHS runtime like a Steam Linux machine.
-  const shell = spawn("unshare", ["-rn", "env", "-i", ...env, steamRun, path.join(DIR, "trivia"), "--remote-debugging-pipe"], {
+  const shell = spawn("unshare", ["-rn", "env", "-i", ...env, steamRun, path.join(DIR, "trivia"), "--lang=es", "--remote-debugging-pipe"], {
     stdio: ["ignore", "ignore", "pipe", "pipe", "pipe"],
   });
   shell.stderr.on("data", (d) => process.env.DEBUG && process.stderr.write(d));
@@ -126,68 +133,110 @@ async function playLevel(level, { type, q }) {
   await h.click(".level .hint");
 }
 
+/** `BUILD` without the packs' files (data and media, build/pack-media.json): hard links under `tmp`. */
+function withoutPacks(tmp) {
+  const media = JSON.parse(readFileSync(path.join(REPO, "app", "desktop", "build", "pack-media.json"), "utf8"));
+  const dir = path.join(tmp, "linux-unpacked");
+  const cp = spawnSync("cp", ["-al", BUILD, dir]);
+  if (cp.status) throw new Error(`cp -al: ${cp.stderr}`);
+  for (const b of Object.keys(media)) {
+    spawnSync("rm", ["-rf", path.join(dir, BUNDLES, b)]);
+    for (const f of media[b]) spawnSync("rm", ["-f", path.join(dir, "resources", "media", f)]);
+  }
+  return dir;
+}
+
 async function main() {
-  if (!existsSync(path.join(DIR, "trivia-bin"))) throw new Error(`${DIR}: no unpacked Linux build (trivia-desktop-build --dir)`);
+  if (!existsSync(path.join(BUILD, "trivia-bin"))) throw new Error(`${BUILD}: no unpacked Linux build (trivia-desktop-build --dir)`);
+  DIR = BUILD;
   pickQuestions("es"); // fail early on a pool without media questions
 
   // Not /tmp: steam-run's sandbox has its own.
   await mkdir(path.join(REPO, "work"), { recursive: true });
-  home = await mkdtemp(path.join(REPO, "work", "smoke-"));
+  const tmp = await mkdtemp(path.join(REPO, "work", "smoke-"));
   try {
     at("Xvfb");
     const x = await startXvfb(which("Xvfb"), 1920, 1080);
     display = x.display;
     procs.push(x.proc);
-
-    at("start");
-    let shell = await launch();
-    await h.waitFor(`${visibleEl(".language .option")} || ${visibleEl('[data-focus-id="main"]')}`, "first screen", 30000);
-    if (await h.evaluate(visibleEl(".language .option"))) {
-      at("language");
-      await h.click(".language .option.current");
+    const built = packs();
+    console.log(built.length ? `with packs ${built.join(", ")}` : "no packs");
+    await game(path.join(tmp, "home"));
+    if (built.length) {
+      at("without packs");
+      DIR = withoutPacks(tmp);
+      if (packs().length) throw new Error(`packs left: ${packs().join(", ")}`);
+      await game(path.join(tmp, "home-nopacks"));
     }
-    at("new player");
-    await h.click('[data-focus-id="main"]');
-    await h.waitFor(visibleEl("#new-player"), "player screen");
-    await h.evaluate(`(() => {
-      const i = document.querySelector("#new-player");
-      i.value = ${JSON.stringify(PLAYER)};
-      i.dispatchEvent(new Event("input", { bubbles: true }));
-    })()`);
-    await h.click('.new button[type="submit"]');
-    at("mode");
-    await h.click('[data-focus-id="mode-solo"]');
-    await h.click('[data-focus-id="group-young_teens"]');
-    await h.click('[data-focus-id="start"]');
-    await h.click(".level .hint");
-    // The questions language picked on the first screen (engine default es).
-    const locale = (await saved((s) => s.games?.length, "new game")).language?.questions ?? "es";
-    const picks = pickQuestions(locale);
-    for (const p of picks) console.log(`  ${locale} ${p.type}: ${p.q.id} ${p.files.join(" ")}`);
-    for (const [i, p] of picks.entries()) await playLevel(i + 1, p);
-
-    at("quit");
-    await saved((s) => running(s).level === 4 && running(s).phase === "select", "level 4");
-    await quit(shell);
-
-    at("restart");
-    shell = await launch();
-    await h.waitFor(visibleEl('[data-focus-id="main"]'), "start screen", 30000);
-    const label = await h.evaluate(`document.querySelector('[data-focus-id="main"]').textContent`);
-    if (!label.includes(PLAYER)) throw new Error(`no resume for ${PLAYER}: "${label.trim()}"`);
-    at("resume");
-    await h.click('[data-focus-id="main"]');
-    await h.waitFor(`${visibleEl(".level .hint")} || ${visibleEl(".cards .card")}`, "level 4");
-    const level = await h.evaluate(`document.querySelector(".level .title, .hud")?.textContent ?? ""`);
-    if (!/4/.test(level)) throw new Error(`resumed at "${level.trim()}", not level 4`);
-    await quit(shell);
     console.log("smoke: ok");
   } finally {
     page?.close();
     for (const p of procs.reverse()) if (p.exitCode === null) p.kill();
     await sleep(500);
-    await rm(home, { recursive: true, force: true });
+    await rm(tmp, { recursive: true, force: true });
   }
+}
+
+/** One game in DIR with a fresh HOME: new player, levels 1–3, quit, restart resumes. */
+async function game(dir) {
+  home = dir;
+  await mkdir(home);
+  at("start");
+  let shell = await launch();
+  await h.waitFor(`${visibleEl(".language .option")} || ${visibleEl('[data-focus-id="main"]')}`, "first screen", 30000);
+  if (await h.evaluate(visibleEl(".language .option"))) {
+    at("language");
+    await h.click(".language .option.current");
+  }
+  at("new player");
+  await h.click('[data-focus-id="main"]');
+  await h.waitFor(visibleEl("#new-player"), "player screen");
+  await h.evaluate(`(() => {
+    const i = document.querySelector("#new-player");
+    i.value = ${JSON.stringify(PLAYER)};
+    i.dispatchEvent(new Event("input", { bubbles: true }));
+  })()`);
+  await h.click('.new button[type="submit"]');
+  at("mode");
+  // Packs show in gamemaster mode's bundle selector.
+  await h.click('[data-focus-id="mode-gamemaster"]');
+  await h.waitFor(visibleEl(".bundles"), "bundle selector");
+  const offered = await h.evaluate(`JSON.stringify([...document.querySelectorAll(".bundles [data-focus-id^='bundle-']")]
+    .map((b) => b.dataset.focusId.slice(7)))`);
+  await h.click('[data-focus-id="mode-solo"]');
+  await h.click('[data-focus-id="group-young_teens"]');
+  await h.click('[data-focus-id="start"]');
+  await h.click(".level .hint");
+  // The questions language picked on the first screen (engine default es).
+  const locale = (await saved((s) => s.games?.length, "new game")).language?.questions ?? "es";
+  at("packs");
+  const want = packsFor(locale).sort().join(", ") || "none";
+  const { bundles } = JSON.parse(readFileSync(path.join(DIR, "resources", "data", "bundles.json"), "utf8"));
+  const base = new Set(bundles.filter((b) => b.kind === "base").map((b) => b.id));
+  const got = JSON.parse(offered).filter((b) => !base.has(b)).sort().join(", ") || "none";
+  if (got !== want) throw new Error(`${locale} packs offered: ${got}; expected ${want}`);
+  console.log(`  ${locale} packs offered: ${got}`);
+  const picks = pickQuestions(locale);
+  for (const p of picks) console.log(`  ${locale} ${p.type}: ${p.q.id} ${p.files.join(" ")}`);
+  for (const [i, p] of picks.entries()) await playLevel(i + 1, p);
+
+  at("quit");
+  await saved((s) => running(s).level === 4 && running(s).phase === "select", "level 4");
+  await quit(shell);
+
+  at("restart");
+  shell = await launch();
+  await h.waitFor(visibleEl('[data-focus-id="main"]'), "start screen", 30000);
+  const label = await h.evaluate(`document.querySelector('[data-focus-id="main"]').textContent`);
+  if (!label.includes(PLAYER)) throw new Error(`no resume for ${PLAYER}: "${label.trim()}"`);
+  at("resume");
+  await h.click('[data-focus-id="main"]');
+  await h.waitFor(`${visibleEl(".level .hint")} || ${visibleEl(".cards .card")}`, "level 4");
+  const level = await h.evaluate(`document.querySelector(".level .title, .hud")?.textContent ?? ""`);
+  if (!/4/.test(level)) throw new Error(`resumed at "${level.trim()}", not level 4`);
+  await quit(shell);
+  page.close();
+  page = null;
 }
 
 main().catch((e) => {

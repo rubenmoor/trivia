@@ -1,4 +1,5 @@
 {
   "appid": null,
-  "depots": {"windows": null, "linux": null, "content": null}
+  "depots": {"windows": null, "linux": null, "content": null},
+  "dlc": {"colombia": {"appid": null, "depot": null}}
 }
