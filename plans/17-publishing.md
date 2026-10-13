@@ -45,7 +45,7 @@ Steam requires developers to disclose AI-generated content on the store page (co
 - **Name (D-50):** «Living Room Trivia», with the Steam localized name «Trivia en Familia» for Spanish (Steamworks → General Application Settings; same limits as a name change, so set both before the coming-soon page). Check both names on Steam, in trademark registers and for a domain (PUB-7).
 - **Store page:** capsule images in the required sizes, screenshots, a trailer (optional but strongly advised; S6 or later: backlog B-21), short and long description per language (LUI-6), system requirements, supported languages table, controller support flags, Steam Deck compatibility.
 - **Content survey / age rating:** the Steam questionnaire (no violence, no gambling; kid-friendly). IARC is optional on Steam.
-- **Privacy:** the game collects nothing and sends nothing. Say so on the store page. Player names stay on the device (and in Steam Cloud).
+- **Privacy:** the game sends nothing on its own; only a question report on the player's «Enviar» (plan 103). Texts: public `PRIVACY.md` (en, es, de); store-page paragraph per language and the Steamworks steps in `11-steam.md` "Privacy (ST-5)" (task 867). Player names stay on the device (and in Steam Cloud).
 - **"Coming soon" page** at least two weeks before release (Valve rule, partner.steamgames.com/doc/store/coming_soon, read 2026-10-13), better months, to collect wishlists. Rules and gamemaster checklist: `11-steam.md` "Coming soon page (ST-3)".
 - **Launch:** preconditions, timeline, release candidate, launch-day checklist (build live on `default`, price, launch discount, languages, report thread, Release, announcement), first week: `11-steam.md` "Launch (S6)" (pm plan 95).
 

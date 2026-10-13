@@ -67,6 +67,7 @@ What lives where. The repo is split into what ships and what doesn't ([`plans/19
 |---|---|
 | `plans/` | Plans, decisions, open questions, backlog; start at [`plans/README.md`](plans/README.md) |
 | `README.md` | Human how-tos: setup, commands, environment variables |
+| `PRIVACY.md` | Public privacy policy (en, es, de): question reports to the report server (plan 103) |
 | `tasks.sql`, `project-manager.toml` | `pm`: milestones, plans, tasks, decisions (edit only through `pm`); its config |
 | `CLAUDE.md` | Imports `AGENTS.md` for Claude Code |
 | `AGENTS.md` | Guide for AI coding assistants |

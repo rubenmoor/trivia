@@ -322,6 +322,41 @@ Eine Frage ist falsch oder unklar? Markiert sie im Spiel (Fahnen-Symbol oder M),
 - Hotfix (wrong answer, crash): version bump (`1.0.1`), commit, new tag, ST-4 checklist (content-only if only `app/data/` changed), `beta`, then `default`; patch flow = `task 270: write plan: Content updates as patches (ST-5)`'s plan.
 - Result via decision "First week after launch: what came in?" (plan 95 task 5).
 
+## Privacy (ST-5)
+Texts for question reports sent to the report server (plan 103, written by task 867 on 2026-10-13 from plan 103's API contract, "Data" and "Retention"; the Worker wasn't built yet: task 865/866 must keep to it or edit these texts). The long version is the public `PRIVACY.md` at the repo root; the store text and the in-game dialog text are short versions of it. Telemetry (milestone 14) adds its own section later (plan 108).
+
+### Where it goes on Steam
+- Valve's public Steamworks docs name no privacy-policy field (checked 2026-10-13: the `partner.steamgames.com/doc` store, onboarding and marketing pages; "privacy policy" appears only as Steam's own policy in the Rules & Guidelines).
+- Steps for the gamemaster (before the build with «Enviar» goes to `default`):
+  - Steamworks → app → Edit Store Page: look for a privacy-policy or EULA/legal field (tabs "Basic Info", "Special Configuration"); if one takes a URL: `https://github.com/rubenmoor/trivia/blob/main/PRIVACY.md`
+  - in any case: Edit Store Page → "Description" → "About This Game", per language (English, Spanish – Latin America, Spanish – Spain, German): append the store text below as the last paragraph (heading in Steam's BBCode `[h2]`)
+  - Preview, then Publish; the store review sees it with the next change
+- Plan 95's launch-day checklist checks it is on the page in every store language.
+- A full EU privacy notice may need the controller's name and contact; `PRIVACY.md` names the game's Steam Discussions as contact. Add an address there if the gamemaster wants one.
+
+### Store text
+English:
+```
+[h2]Privacy[/h2]
+The game runs offline. Only if you press "Send" on a marked question does it send a report: question id and language, the question as shown, your note, game and pool version, and a one-time Steam ticket that proves a real copy. Kept: those fields, without Steam account id, IP address or name, until the developer downloads them, at most 90 days. Cloudflare hosts the server, Valve checks the ticket. No analytics, no ads. Full text: PRIVACY.md in the game's repository.
+```
+Spanish (es-419 and es-ES, no deltas):
+```
+[h2]Privacidad[/h2]
+El juego funciona sin internet. Solo al presionar «Enviar» en una pregunta marcada envía un reporte: id e idioma de la pregunta, la pregunta tal como se vio, la nota, versión del juego y del banco de preguntas, y un ticket de Steam de un solo uso que demuestra una copia real. Se guardan esos datos, sin id de la cuenta de Steam, sin dirección IP ni nombre, hasta que el desarrollador los descarga, como máximo 90 días. Cloudflare aloja el servidor y Valve verifica el ticket. Sin analítica ni publicidad. Texto completo: PRIVACY.md en el repositorio del juego.
+```
+German:
+```
+[h2]Datenschutz[/h2]
+Das Spiel läuft offline. Nur bei „Senden“ an einer markierten Frage geht eine Meldung hinaus: ID und Sprache der Frage, die Frage wie angezeigt, die Notiz, Spiel- und Poolversion sowie ein einmaliges Steam-Ticket als Nachweis einer echten Kopie. Gespeichert werden diese Angaben ohne Steam-Konto-ID, IP-Adresse oder Namen, bis der Entwickler sie abruft, höchstens 90 Tage. Cloudflare betreibt den Server, Valve prüft das Ticket. Keine Analyse, keine Werbung. Volltext: PRIVACY.md im Repository des Spiels.
+```
+
+### Dialog text (plan 93's send confirmation)
+- Impersonal, so `es` and `es-ES` share one text (no `es-ES` key).
+- es: «Se envían la pregunta tal como se vio, la nota, el idioma y la versión del juego, con un ticket de Steam de un solo uso.» / «No se guarda la cuenta de Steam ni la IP; se borra al descargarse, a más tardar en 90 días.»
+- en: "Sends the question as shown, the note, its language and the game version, with a one-time Steam ticket." / "No Steam account or IP is kept; deleted once downloaded, after 90 days at most."
+- de: „Gesendet werden die Frage wie angezeigt, die Notiz, die Sprache und die Spielversion, dazu ein einmaliges Steam-Ticket.“ / „Steam-Konto und IP werden nicht gespeichert; gelöscht nach dem Abruf, spätestens nach 90 Tagen.“
+
 ## Tasks
 - [ ] ST-1 Resolve OQ-29..OQ-37 and record each answer in `decisions.md` (phase S2).
 - [x] ST-2 Add the new files to `README.md`, the Steam track to `project.md`, the questions to `open-questions.md` and D-34. *2026-10-07: done with this plan; keep `project.md` in sync from now on.*
@@ -329,3 +364,4 @@ Eine Frage ist falsch oder unklar? Markiert sie im Spiel (Fahnen-Symbol oder M),
 - [x] ST-4 Release checklist: build from a tagged commit, `qgen.py validate` clean, credits complete, offline test, Deck test, family sign-off. *Done 2026-10-13 (pm plan 92): "Release checklist (ST-4)" above; `trivia-release-check` tag gate, kind full/content-only, credits both ways, manual rows. First full run: part 4's release candidate (task 269).*
   - S6 part 2 done 2026-10-13 (pm plan 91: Version numbers and patch-safe saves; no ST-row of its own): one version in `app/desktop/package.json`, pool hash, both on the credits screen; running games survive dropped questions; `qgen validate` guards id continuity against the newest `v*` tag (`18`, `12`).
 - [ ] ST-5 Post-release: content update cadence, how question reports are collected (no telemetry, so by hand: a Steam discussions thread or an email link).
+  - Privacy texts done 2026-10-13 (task 867): `PRIVACY.md`, "Privacy (ST-5)" above (store text, dialog text, Steamworks steps).
