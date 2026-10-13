@@ -54,7 +54,7 @@ Steam requires developers to disclose AI-generated content on the store page (co
 - [x] PUB-5 Credits screen and a generated `CREDITS.md` in the build (media, audio, fonts, glyphs, libraries). *Done 2026-10-12 (pm plan 47): `app/client/credits.ts` writes `dist/credits.json` + `dist/CREDITS.md` (1,102 media, 13 sounds, fonts, glyphs, Svelte); Credits screen from the ☰ overlay. Open: Electron entry (task 621), `CREDITS.md` at the desktop artefact root, Game section after OQ-35.*
 - [ ] PUB-6 Steamworks signup, tax and identity; pay the app credit (OQ-33).
 - [ ] PUB-7 Name and trademark check for «Living Room Trivia» and «Trivia en Familia» (D-50); if it fails, OQ-34 reopens.
-- [ ] PUB-8 Store page: texts, capsules, screenshots, trailer, AI disclosure, privacy line.
+- [ ] PUB-8 Store page: texts, capsules, screenshots, trailer, AI disclosure, privacy line. *Plan: pm plan 88 (drafts in `17a-store-page.md`, capsule art: pm decision 77, scripted screenshots, trailer → backlog).*
 - [ ] PUB-9 Content survey and age rating.
 - [ ] PUB-10 Check Anthropic's commercial-use terms for the generated content.
 - [ ] PUB-11 Price and regional pricing (OQ-33).
