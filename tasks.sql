@@ -14268,6 +14268,30 @@ Does this count as commercial use of the API that needs a licence? If so, what w
 
 Thank you,
 Ruben Moor', NULL, NULL, '2026-10-13T06:42:42Z', NULL, 204, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (83, 'Recorded music loops: approve on the TV?', 'pending', '["approve", "changes: <track / cut / level> → <what''s wrong>"]', 'Plan 33 replaced the three generated music loops with one matched CC0 set; please listen on the TV.
+
+Recorded (OpenGameArt «Music loop variations», obscure music, CC0; 100 bpm, 4/4, 8 bars = 19.2 s each, −18 LUFS like `redoble`)
+- `normal` (Start/Level/Select): `level1-step1` (calm, F major) → `musica-normal.m4a`
+- `question`: `level1-step2-evil` (tense, F minor) → `musica-pregunta.m4a`
+- `submitted`: `level1-step3-evil` (most tense, F minor) → `musica-enviada.m4a`
+- 707 kB together; folder 2.8 MB (budget 3.5 MB); `CREDITS.md` rows
+
+Kept synthesized
+- none of the loops; the generated loops stay only as fallback when a file is missing.
+- `roll`, `victory` were already recordings (unchanged).
+
+Settings picked by measurement, not by ear
+- Level: `MUSIC_LEVEL` 1.6 (a guess) against effects and question media.
+- Seam: loop 0 → 19.2 s; 5 ms fades at each 4-bar end against a jump at the wrap.
+- Cut `question` ↔ `submitted` (~80 ms): continues at the old loop''s position, so the beat goes on (alternative: restart at 0).
+- `normal` → `question` changes key (major → minor) only across the 600/800 ms fades.
+
+How to check
+- TV: `/?efectos` → music: «grabado» / «sintetizado» per loop, «corte» toggles `question` ↔ `submitted`, «parar»; let a loop run > 20 s to hear the seam.
+- A real game: Start → Level → Select → question → lock-in → «Respuesta final»; level vs. effects and question media.
+
+Answer
+- «approve», or «changes:» per item: louder/quieter, click at the seam, cut from 0 instead of continuing, swap a loop (alternative from the same pack: the «good» step2/step3 in F major, calmer, no key change), back to synth.', NULL, NULL, '2026-10-13T06:49:49Z', NULL, 149, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -14779,6 +14803,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (504, 204, '2026-10-13T06:41:28Z', '2026-10-13T06:42:52Z', 'done', NULL, 0, '2411c4123730ed66bb0d35f1176e19b28b3a83c2', 'claude-opus-5-5[1m]', 'afa200e8-4e7c-4065-aa47-3c674f401287', 15, 28, 6889, 525927, 36981, 0.53892539999999989, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (505, 147, '2026-10-13T06:42:52Z', '2026-10-13T06:46:17Z', 'done', NULL, 0, '1cc540854f524aa5a8b054f2611050b8bbd2e6c9', 'claude-opus-5-5[1m]', '7b25f208-4721-4849-8382-59a6f905594f', 26, 48, 16160, 1261345, 60250, 1.0576610000000002, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (506, 148, '2026-10-13T06:46:18Z', '2026-10-13T06:49:31Z', 'done', NULL, 0, '084167fcbd0b3573a3bd29121e658596edc4c2cc', 'claude-opus-5-5[1m]', 'ae55a020-7e1a-4f21-9b03-c92d38094de3', 27, 36, 13567, 1005480, 59174, 0.94597199999999992, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (507, 149, '2026-10-13T06:49:31Z', '2026-10-13T06:49:58Z', 'blocked', NULL, 0, '965d74409f8f9d51c66eae353b0c482ef2038cf0', 'claude-opus-5-5[1m]', '61daf73b-2591-47fd-99b0-2bb0a7f7e15a', 5, 10, 1984, 153100, 29185, 0.30382000000000003, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -14812,6 +14837,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (109, 8);
 INSERT INTO task_decision (task_id, decision_id) VALUES (113, 10);
 INSERT INTO task_decision (task_id, decision_id) VALUES (127, 22);
 INSERT INTO task_decision (task_id, decision_id) VALUES (146, 81);
+INSERT INTO task_decision (task_id, decision_id) VALUES (149, 83);
 INSERT INTO task_decision (task_id, decision_id) VALUES (183, 12);
 INSERT INTO task_decision (task_id, decision_id) VALUES (185, 19);
 INSERT INTO task_decision (task_id, decision_id) VALUES (185, 20);
