@@ -1,7 +1,7 @@
 <script lang="ts" module>
   // The night stage behind every screen without media (plans/10-visual-design.md, VD-6): a radial
   // gradient, an amber spotlight from the top, faint «?» drifting upwards. Variants per screen.
-  export type StageMood = "calm" | "correct" | "wrong" | "victory";
+  type StageMood = "calm" | "correct" | "wrong" | "victory";
 
   /** Fixed positions, so the glyphs don't jump when the screen changes. */
   const GLYPHS = Array.from({ length: 18 }, (_, i) => ({
@@ -40,7 +40,6 @@
     inset: 0;
     overflow: hidden;
     background: radial-gradient(ellipse at 50% 35%, var(--night-800), var(--night-900) 75%);
-    transition: filter 1.2s;
   }
   .spotlight {
     position: absolute;
@@ -52,9 +51,6 @@
     background: radial-gradient(ellipse 50% 60% at 50% 0%, rgba(255, 184, 28, 0.16), transparent 70%);
     clip-path: polygon(38% 0, 62% 0, 100% 100%, 0 100%);
     filter: blur(calc(2 * var(--u)));
-    transition:
-      opacity 1.2s,
-      background 1.2s;
   }
   .glyph {
     position: absolute;
@@ -77,11 +73,9 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
-    transition: box-shadow 1.2s;
   }
 
   .correct .spotlight {
-    opacity: 1.4;
     background: radial-gradient(ellipse 50% 60% at 50% 0%, rgba(47, 227, 154, 0.2), transparent 70%);
   }
   .correct .rim {

@@ -21,7 +21,8 @@ export const JOKER_FLY_MS = 450;
 export const JOKER_BURST_MS = 250;
 /** Each half of the card flip when Bájale or Cambiazo swaps the question (JK-7). */
 export const FLIP_MS = 320;
-/** Bájale's dial: one step per difficulty, then it stays a moment. */
+/** Bájale's dial: a pause, one step per difficulty, then it stays a moment. */
+export const DIAL_START_MS = 300;
 export const DIAL_STEP_MS = 280;
 export const DIAL_HOLD_MS = 1600;
 /** «Paso»: the stamp scene before the shredder, the shredder, and the sweep off the screen (JK-6). */

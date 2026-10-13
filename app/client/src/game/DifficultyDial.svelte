@@ -2,8 +2,9 @@
   // «Bájale»'s difficulty dial (plans/09-jokers.md, "Bájale", JK-7): a staircase in the corner
   // that ticks down from the old difficulty to the new one, then fades away.
   import { onMount } from "svelte";
+  import { DIFFICULTY_MAX } from "../engine/choice";
   import { t } from "../lib/i18n";
-  import { DIAL_HOLD_MS, DIAL_STEP_MS } from "./timing";
+  import { DIAL_HOLD_MS, DIAL_START_MS, DIAL_STEP_MS } from "./timing";
 
   let { from, to }: { from: number; to: number } = $props();
 
@@ -13,16 +14,16 @@
   onMount(() => {
     shown = from;
     const timers: ReturnType<typeof setTimeout>[] = [];
-    for (let d = from - 1, i = 1; d >= to; d--, i++) timers.push(setTimeout(() => (shown = d), 300 + i * DIAL_STEP_MS));
-    timers.push(setTimeout(() => (gone = true), 300 + (from - to) * DIAL_STEP_MS + DIAL_HOLD_MS));
+    for (let d = from - 1, i = 1; d >= to; d--, i++) timers.push(setTimeout(() => (shown = d), DIAL_START_MS + i * DIAL_STEP_MS));
+    timers.push(setTimeout(() => (gone = true), DIAL_START_MS + (from - to) * DIAL_STEP_MS + DIAL_HOLD_MS));
     return () => timers.forEach(clearTimeout);
   });
 </script>
 
 <div class="dial glass-strong" class:gone aria-hidden="true">
   <span class="label">{t("joker.easier.dial")}</span>
-  <span class="stairs">
-    {#each Array.from({ length: 10 }, (_, i) => i + 1) as d (d)}
+  <span class="stairs" style:--n={DIFFICULTY_MAX}>
+    {#each Array.from({ length: DIFFICULTY_MAX }, (_, i) => i + 1) as d (d)}
       <span class="step" class:lit={d <= shown} class:now={d === shown} style:--h={d}></span>
     {/each}
   </span>
@@ -57,7 +58,7 @@
   }
   .step {
     width: calc(0.55 * var(--u));
-    height: calc(var(--h) * 0.26 * var(--u));
+    height: calc(var(--h) * 2.6 / var(--n) * var(--u));
     border-radius: calc(0.1 * var(--u));
     background: var(--slate-600);
     transition: background 0.2s;
