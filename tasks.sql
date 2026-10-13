@@ -4774,6 +4774,34 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - A flag''s copied text carries id, language, version and pool hash, and the list says where to send it; nothing opens or loads without a click; overlay only under Steam.
 - Pasting that text into `qgen flag` puts the question to `needs_work` with the report as feedback; `qgen rework` picks it up.
 - The local family path (`apply_flags` from `state/game.json`) works as before.', '2026-10-13T08:59:50Z', 267);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (94, 11, 'Coming soon page (ST-3)', 450, 'Part 1 of masterplan 11 (ST-3): the Steam store page goes public as "Coming soon", so it collects wishlists and follows before the release. Almost everything here is the gamemaster''s in Steamworks; workers write the checklist with Valve''s current rules (cited), raise one pm decision for the result and record it. The live date sets the earliest release date for part 4 (`task 269: write plan: Launch`).
+
+## Inputs (don''t redo them)
+- Store page: plan 88 (`Store page and AI disclosure (PUB-8, LUI-6)`), drafts and entry checklist in `plans/17a-store-page.md`; its `task 672: Store page entry checklist and PUB-8 close-out` gets "Store page entered for the beta?" answered.
+- App ID, names, partner account: masterplan 10 part 1 (`task 253: write plan: Partner account, name check and AI terms`, PUB-6/7/10) and part 2 (`task 254: write plan: Steamworks app configuration (SW-7)`); names per D-50 («Living Room Trivia», «Trivia en Familia»), set before the page goes public (`plans/17-publishing.md` "Steamworks and store").
+- Content survey and price: masterplan 10 part 9 (`task 259: write plan: Content survey, rating and price (PUB-9, PUB-11)`); OQ-33 (plan 39).
+- None of these plans may be done when this plan''s tasks run: the gamemaster''s decision gates the result, not task order.
+
+## Rules
+- Gamemaster does every Steamworks step (submit for review, fix, publish "Coming soon", set the date); workers never log in, enter credentials or contact Valve.
+- Wishlists: only Steam''s own wishlist and follow buttons. No mailing list, own website, social accounts or marketing (milestone 11 out of scope).
+- Release date on the page: "to be announced" (or a coarse "Q<n> <year>" if Steam offers it) until part 4 fixes the date; recommended, because the date depends on the content target (milestone 9) and the beta test (milestone 10).
+- Timing: Valve''s minimum between "Coming soon" live and release (two weeks per the masterplan and `17-publishing.md`; verify); aim for months. Part 4''s release date counts from the live date.
+
+## Tasks
+1. **ST-3 checklist and decision**
+   - Check the current Steamworks docs (e.g. partner.steamgames.com/doc/store/coming_soon, /doc/store/review_process, /doc/store/releasing): minimum "Coming soon" time before release; store page review lead time (business days); prerequisites for "Coming soon" (app credit paid, store page and content survey complete, capsules, names, ratings); release-date formats allowed (exact, month, quarter, year, "to be announced") and how often they may change. Cite each page with the date read in a new section "Coming soon page (ST-3)" in `plans/11-steam.md` (bullets). If the docs can''t be read from the worker''s environment, mark each rule "unverified (gamemaster: check <URL>)" instead of guessing.
+   - Same section: gamemaster checklist, in order: prerequisites done (store page entered, `task 672`''s decision; names; survey; app credit) → Steamworks "Mark as ready for review" for the store page → wait for Valve''s review → fix what Valve returns (each fix: which file in `17a-store-page.md`, which plan owns it) → publish "Coming soon" with "to be announced" → note the live date.
+   - `plans/17-publishing.md` "Coming soon page" bullet: point to the new section, add the cited source.
+   - Raise pm decision "Coming soon page live? date?": body = short checklist + prerequisites + link to the section; options: `live since <date>, release date shown: <TBA|…>` (recommended), `submitted, Valve returned fixes (list)`, `not yet (what blocks)`. `pm task-pending-decision` on task 2.
+2. **Record the result** (waits for the decision)
+   - Live: ST-3 `[x]` in `plans/11-steam.md` with the live date, the date shown and the earliest release date (live + Valve''s minimum); `plans/project.md` in sync; note for part 4 in the S6 row.
+   - Fixes from Valve: one task per fix in the plan that owns it (texts/capsules/screenshots: plan 88; survey: part 9''s plan; names: part 1''s plan), then a fresh "Coming soon page live? date?" decision and a new record task pending on it.
+   - Not yet: leave ST-3 open, new decision with the blocker named, task pending on it.
+   - `pm decision consequences` with what changed.
+
+## Done when
+- The page is live as "Coming soon"; ST-3 `[x]` with the date; Valve''s rules cited in `plans/11-steam.md`; part 4 can read the earliest release date there.', '2026-10-13T09:01:34Z', 268);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -6668,13 +6696,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Client: per report and for all, a "copy" text (question id, language, version + pool version, the player''s reason) plus where to send it; no automatic network request, `mailto:`/Steam overlay URL only on a click (overlay only under Steam); strings via `t()` for every launch language. Owner in-game: `plans/13-game-modes.md` (MD-6).
 - Authoring: turn a pasted report into a `needs_work` flag with the report as review note (a `qgen` command or the review tool''s form), fix via `qgen rework`; no new storage beyond `authoring/data/questions.json`.
 - Never phones home. Owner `plans/11-steam.md` (ST-5).', '2026-10-12T01:16:13Z', '2026-10-13T08:59:54Z', 264);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (268, 11, 'write plan: Coming soon page (ST-3)', 'plan', 'open', 155, NULL, 'Write the plan for part 1 of the masterplan (plan 11): `pm plan add 11 "Coming soon page (ST-3)" --priority 450`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (268, 11, 'write plan: Coming soon page (ST-3)', 'plan', 'done', 155, '2026-10-13, plan 94: Coming soon page (ST-3); plans/11-steam.md ST-3 note', 'Write the plan for part 1 of the masterplan (plan 11): `pm plan add 11 "Coming soon page (ST-3)" --priority 450`.
 
 - Needs masterplan 10 part 8 (store page, PUB-8, task 258), part 1 (App ID, names, task 253), part 9 (survey, task 259). Read their plans if they exist; the plan''s tasks wait on the gamemaster''s approval of the store page, not this task.
 - Content: checklist for the gamemaster (store page complete → Valve''s store review → fixes → "Coming soon" with a date or "to be announced"); result via pm decision "Coming soon page live? date?".
 - Timing: Valve''s current minimum between "Coming soon" and release (two weeks in the masterplan; check the Steamworks docs, cite the source in `plans/11-steam.md`); aim for longer; part 4''s release date counts from the live date.
 - Wishlists: only Steam''s own wishlist/follow; no mailing list, own website or marketing.
-- Gamemaster does the Steamworks steps; workers never enter credentials or contact Valve. Owner `plans/11-steam.md` (ST-3), store texts in `plans/17-publishing.md` (PUB-8).', '2026-10-12T01:16:13Z', NULL, 264);
+- Gamemaster does the Steamworks steps; workers never enter credentials or contact Valve. Owner `plans/11-steam.md` (ST-3), store texts in `plans/17-publishing.md` (PUB-8).', '2026-10-12T01:16:13Z', '2026-10-13T09:01:37Z', 264);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (269, 11, 'write plan: Launch', 'plan', 'open', 150, NULL, 'Write the plan for part 4 of the masterplan (plan 11): `pm plan add 11 "Launch" --priority 160`.
 
 - Needs: the plans of parts 1, 2, 3, 5 (write after them, refer to their tasks); OQ-33 price (plan 39, task 194 records it); milestone 9''s content target met for every launch language (plan 38, `qgen report --simulate`): the release task waits for it.
@@ -13732,6 +13760,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Draft the pinned thread''s title and body in es, en, de (how to flag in the game, where «Preguntas marcadas» is, copy and paste the text, no account data needed) in `plans/11-steam.md` ST-5, for task 269 to pin. If email was chosen: a short "how to report" line for store page/credits in `plans/17-publishing.md`.
 - Notes: `plans/11-steam.md` ST-5 (reports half done; cadence = part 6, task 270), `plans/13-game-modes.md` MD-6, `plans/04-ui-tv-display.md` flag list section, `directory.md` (new files, e.g. `app/client/src/lib/report.ts`), `plans/project.md` in sync.
 - `pm decision consequences 93 "…"`.', '2026-10-13T09:00:36Z', NULL, 698);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (702, 94, 'create tasks for plan 94', 'split', 'open', 1000, NULL, 'Split plan 94 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T09:01:34Z', NULL, 268);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -15332,6 +15362,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (538, 697, '2026-10-13T08:56:12Z', '2026-10-13T08:58:03Z', 'done', NULL, 0, '1414f53f18c6d3b0838312f4b9e553ba7eaee324', 'claude-opus-5-5[1m]', '9885d7a6-e844-4148-a45f-9739238586a5', 12, 24, 10512, 598673, 53690, 0.75959059999999989, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (539, 267, '2026-10-13T08:58:03Z', '2026-10-13T09:00:03Z', 'done', NULL, 0, 'efd77958cf4923a8e8bed15abb38a27cb3d02e38', 'claude-opus-5-5[1m]', '82c8e341-421c-478b-a29a-46ba9f63a66e', 11, 20, 8494, 464881, 55965, 0.71065620000000007, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (540, 698, '2026-10-13T09:00:03Z', '2026-10-13T09:00:44Z', 'done', NULL, 0, 'e4ae7b3bb45a56e9929a4e8d8bdf4645a05a4d2c', 'claude-opus-5-5[1m]', 'f45c5473-a76a-436e-a317-3af38a2ea481', 7, 14, 3705, 211937, 27944, 0.34009540000000005, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (541, 268, '2026-10-13T09:00:45Z', '2026-10-13T09:01:44Z', 'done', NULL, 0, '45b75731d57722246150184670e1a58c8ad6185f', 'claude-opus-5-5[1m]', '4b12f563-9a7b-44e9-be04-b42134e21ca8', 11, 22, 5243, 443532, 45383, 0.5567184, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
