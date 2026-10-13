@@ -5284,6 +5284,144 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - Store page texts (LUI-6, S5); question translations (plans 66, 84); a wording lint; languages beyond the four catalogs.', '2026-10-13T15:41:11Z', 796);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (101, 14, 'masterplan', 1000, 'tbd.', '2026-10-13T16:24:16Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (102, 15, 'masterplan', 1000, 'tbd.', '2026-10-13T16:55:00Z', NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (103, 11, 'Report server (POST /reports)', 700, 'Part 8 of masterplan 11 (S6, ST-5 server half): a small server that takes question reports sent from the game on the player''s click (decision 93: Question reports: where do players send them? → own endpoint) and hands them to `qgen flag --pull`. Only valid Steam users may send (decision 111: Steam only): the game sends a Steam Web API ticket, the server checks it with Steam and stores no SteamID and no IP. Plan 93 (part 5: client, shell, `qgen flag`) builds on the API contract below; it is fixed here first and changed only by editing this plan. Owner: `plans/11-steam.md` (ST-5, server half); code in a new top-level directory `report-server/` (listed in `directory.md`).
+
+## Builds on (don''t rebuild)
+- Plan 85: shell Steam bridge in `app/desktop/main.mjs` (steamworks-ffi-node, decision 28); plan 93 adds `GetAuthTicketForWebApi` there, not this plan.
+- Plan 91: `buildInfo()` → `{version, pool}` (decision 91: Game version: single source of truth; decision 92: Pool version: export hash in pool.json); sent with each report.
+- Plan 93: report text format (header `¡Trivia! #<id> · <lang> · v<version> · pool <hash> · <date>`), copy fallback, `qgen flag`, pulled-ids ledger.
+- Steamworks account and App ID (decision 67: Steamworks account holder: person; masterplan 10 part 1); `authoring/steam/steam.json` holds the App ID.
+
+## Hosting: Cloudflare Workers + D1 (kept)
+Brief comparison (free tiers as known mid-2026; task 1 re-checks the numbers on Cloudflare''s pricing pages and notes them in ST-5):
+- **Workers + D1** (chosen): free plan ≈ 100k requests/day, 10 ms CPU per request (our handler is ms; the Steam call is wall time, not CPU), D1 5 GB, ≈ 5M rows read and 100k rows written per day, cron triggers included; no server to patch. Lock-in low: one `fetch` handler + plain SQLite SQL; moving = same code on any JS runtime + SQLite. URL on `<name>.<account>.workers.dev` or a custom domain.
+- Deno Deploy + KV: similar free tier and code shape; KV instead of SQL, smaller ecosystem; no gain.
+- Small VPS (≈ €4/month): costs money, OS updates and TLS are ours; against "no own infrastructure to maintain".
+- Fly.io / Render / Supabase: no lasting free tier or a heavier platform (accounts, Postgres) for a few rows a day.
+- Expected load: a few reports a day; worst case abuse is capped by the rate limits below, far under the free limits.
+- No pm decision needed (the masterplan''s default holds).
+
+## Tooling
+- `wrangler` (Cloudflare CLI: deploy, local dev with Miniflare + local D1, D1 migrations, secrets): decision 117: Report server tooling: wrangler from nixpkgs in the flake? (pending; recommended: nixpkgs `pkgs.wrangler` in a flake wrapper, nothing in any `package.json`, hand-written Worker types). Tasks 1, 2 and 4 wait on it (`pm task-pending-decision` by the split); task 3 doesn''t.
+- No other dependency: Worker in TypeScript, Web APIs only (`fetch`, `crypto.subtle`), no framework, no router package.
+- Type-check: `report-server/tsconfig.json` (strict flags as the repo''s), `env.d.ts` with the few D1/Worker types used; `npm run check` covers it (a root script step or a workspace without dependencies; the task picks the smaller change).
+
+## Layout (`report-server/`)
+- `src/index.ts`: the Worker (`fetch` + `scheduled`), `src/steam.ts`: ticket check, `src/validate.ts`: body checks (pure, testable under `node`).
+- `migrations/0001_init.sql`: D1 schema (wrangler D1 migrations).
+- `wrangler.toml`: name, D1 binding `DB` (database id is not a secret), cron, vars `STEAM_APP_ID`, `TICKET_IDENTITY`; `[observability] enabled = false`; no secrets.
+- `.dev.vars` (gitignored, local only) for dev; `.wrangler/` gitignored.
+- Flake wrapper `trivia-report-server` (flake app + dev shell): `dev` (local server on :8787, local D1, migrations applied, dev switch on, prints a dev pull token), `deploy` (gamemaster: `wrangler d1 migrations apply --remote` then `wrangler deploy`), `tail` (live errors, no bodies logged).
+
+## Data (D1)
+- `reports(id INTEGER PRIMARY KEY, received_at TEXT, question_id TEXT, lang TEXT, text TEXT, note TEXT, version TEXT, pool TEXT)`: no SteamID, no user hash, no IP, no headers.
+- `rate(user_hash TEXT, day TEXT, count INTEGER, PRIMARY KEY(user_hash, day))`: `user_hash` = HMAC-SHA256(`HASH_SALT`, SteamID64) hex; `day` = UTC `YYYY-MM-DD`; only for the per-user limit.
+- `rate` also holds one global row (`user_hash = ''*''`) for the daily total cap.
+
+## Retention
+- A report is deleted when `qgen flag --pull` acknowledges it (the gamemaster''s copy is the `needs_work` review in `authoring/data/questions.json`).
+- Unacknowledged reports: deleted 90 days after `received_at`.
+- `rate` rows: deleted once their day is over (daily cron, `scheduled` handler, 03:00 UTC).
+- Worker logs: observability off; `console.*` never prints bodies, tickets, SteamIDs or hashes. Cloudflare''s own request handling (IP at the edge) is named in the privacy text.
+
+## API contract (v1)
+Base URL = the deployed Worker (config in the build, see "Endpoint URL"). JSON in and out, UTF-8. Every error body: `{"error": "<code>", "field"?: "<name>", "detail"?: "<short English text>"}`. No CORS headers: the game sends from the shell''s main process (plan 93), not the page; browsers can''t call it.
+
+### `POST /reports` (the game, on the player''s click)
+Request: `Content-Type: application/json`, body ≤ 16 KiB:
+```json
+{
+  "question": "q-0001",
+  "lang": "es",
+  "text": "¿Qué bebida caliente…? (the text the player saw, plan 93''s report text)",
+  "note": "La respuesta está mal",
+  "version": "1.0.0",
+  "pool": "1f30d10c",
+  "ticket": "14000000…(hex)"
+}
+```
+| Field | Rule |
+|---|---|
+| `question` | required, 1–64 chars `[A-Za-z0-9._:-]` (our `q-0001`; mod ids allowed, milestone 15) |
+| `lang` | required, BCP 47-ish `^[a-z]{2,3}(-[A-Za-z0-9]{2,8})*$`, ≤ 16 chars (question language, not UI) |
+| `text` | required, 1–4000 chars after trim |
+| `note` | optional, string ≤ 1000 chars; `""` or absent = no note |
+| `version` | required, `^\d+\.\d+\.\d+([-+][0-9A-Za-z.-]+)?$`, ≤ 32 chars |
+| `pool` | required, `^[0-9a-f]{8}$` or `null` (old pool without hash) |
+| `ticket` | required, hex, 2–4096 chars: `GetAuthTicketForWebApi("trivia-reports")`, fresh per send |
+Unknown fields: ignored. Control characters except `\n` and `\t` stripped from `text`/`note`.
+
+Order of checks: size/JSON/fields → ticket with Steam → rate limits → insert.
+
+| Status | Body | Client (plan 93) |
+|---|---|---|
+| `201` | `{"id": 123}` | flag shows «enviada» |
+| `400` | `{"error": "bad_request", "field": "lang"}` (also invalid JSON) | failed → copy fallback |
+| `401` | `{"error": "invalid_ticket"}` (Steam says not OK, wrong app, banned by publisher) | failed → copy fallback |
+| `413` | `{"error": "too_large"}` | failed → copy fallback |
+| `415` | `{"error": "unsupported_media_type"}` | failed → copy fallback |
+| `429` | `{"error": "rate_limited", "retry_after": <seconds to next UTC day>}` + `Retry-After` header | failed, "try tomorrow" → copy fallback |
+| `502` | `{"error": "steam_unavailable"}` (Steam Web API error or timeout 5 s) | failed → copy fallback |
+| `503` | `{"error": "closed"}` (`REPORTS_OPEN` var `"0"`: kill switch) | failed → copy fallback |
+| `500` | `{"error": "internal"}` | failed → copy fallback |
+No automatic retry by the client (masterplan rule); a new click is a new request with a new ticket.
+
+Rate limits (per UTC day): 20 reports per user (salted SteamID hash), 1000 in total; both as Worker vars (`RATE_USER`, `RATE_TOTAL`), not code.
+
+### `GET /reports?limit=N` (`qgen flag --pull`)
+- `Authorization: Bearer <PULL_TOKEN>`; wrong/missing → `401 {"error": "unauthorized"}` (constant-time compare).
+- `limit` default 100, max 500; oldest first.
+- `200 {"reports": [{"id": 123, "received_at": "2026-11-02T18:04:11Z", "question": "q-0001", "lang": "es", "text": "…", "note": "…", "version": "1.0.0", "pool": "1f30d10c"}], "more": false}`; `note` is `""` when none, `pool` may be `null`.
+- Read-only: pulling twice returns the same reports until acknowledged.
+
+### `POST /reports/ack` (`qgen flag --pull`, after it wrote the reviews)
+- Same bearer token; body `{"ids": [123, 124]}` (1–500 integers).
+- `200 {"acked": 2}`: deletes those reports; unknown or already deleted ids count 0, not an error (idempotent).
+- `400 bad_request`, `401 unauthorized` as above.
+
+### `GET /health`
+- `200 {"ok": true, "api": 1}`; no auth, no data. For the gamemaster''s setup check and `trivia-release-check`''s optional reachability row (plan 92''s owner decides).
+
+Any other method/path: `404 {"error": "not_found"}` / `405 {"error": "method_not_allowed"}`.
+
+## Steam ticket check
+- `GET https://partner.steam-api.com/ISteamUserAuth/AuthenticateUserTicket/v1/?key=<STEAM_WEB_API_KEY>&appid=<STEAM_APP_ID>&ticket=<hex>&identity=trivia-reports` (publisher key → partner host; task 2 re-checks Valve''s docs: partner.steamgames.com/doc/webapi/ISteamUserAuth and /doc/features/auth "Web API tickets").
+- Valid = `response.params.result == "OK"` and `publisherbanned` false; SteamID64 = `params.steamid` (family-shared copies: `ownersteamid` differs, still valid). `response.error` → 401; HTTP error/timeout → 502.
+- The SteamID lives only in memory for the HMAC; never stored, logged or returned.
+- `identity` string `trivia-reports` is the same constant in the shell (plan 93) and `TICKET_IDENTITY` var.
+
+## Secrets (Worker secrets only, never in git, never in the build)
+- `STEAM_WEB_API_KEY` (publisher Web API key, Steamworks → Users & Permissions → Manage Groups → Web API key), `PULL_TOKEN` (random 32 bytes, base64url), `HASH_SALT` (random 32 bytes).
+- Set by the gamemaster with `wrangler secret put <NAME>` (through `trivia-report-server`); the pull token also goes into the gamemaster''s local gitignored file or env that plan 93''s `qgen flag --pull` reads.
+- Rotating `HASH_SALT` only resets today''s per-user counts; rotating `PULL_TOKEN` = new secret + new local file.
+
+## Endpoint URL (config, not a secret)
+- One value, e.g. `reportUrl` next to the version in `app/desktop/package.json` or a small `app/desktop/report.json` (plan 93 picks the place, the shell reads it; the page never sees a URL it could change). Dev override env `TRIVIA_REPORT_URL` (local server) honoured only with the dev switch of plan 85.
+- Empty until the gamemaster''s setup is done → the game shows only the copy fallback (plan 93).
+- `workers.dev` vs. own domain: the setup decision (task 4) asks; an own domain lets the server move away from Cloudflare later without a game patch.
+
+## Local dev mode
+- `trivia-report-server dev`: `wrangler dev --local` on `127.0.0.1:8787`, local D1 under `report-server/.wrangler/`, migrations applied first, `.dev.vars` written if missing with `DEV_FAKE_TICKETS=1`, a random `PULL_TOKEN` (printed) and `HASH_SALT`.
+- Fake ticket check: only when `DEV_FAKE_TICKETS == "1"` **and** the request host is `localhost`/`127.0.0.1`; tickets `dev-<anything>` → fake SteamID derived from the string (so rate limits can be tested per "user"), `dev-invalid` → 401, `dev-steamdown` → 502. Never in `wrangler.toml`, never deployed.
+- The shell side (plan 93) sends `dev-<random>` as ticket under `TRIVIA_DEV_STEAM_USER=1` + `TRIVIA_REPORT_URL`; workers test client and `qgen flag --pull` with no Steam and no Cloudflare account.
+
+## Privacy text
+- What is sent (only on «Enviar»): question id and language, the question text shown, the player''s note, game version, pool version, a one-time Steam ticket. What is kept: those fields (no Steam account id, no IP address, no name), until the developer downloads the report, at most 90 days; a daily counter per anonymised (salted hash) account, deleted after the day. What Cloudflare (host) and Valve (ticket check) process. No other data leaves the game; no analytics.
+- Two lengths per launch language (es-419, es-ES deltas if any, en, de; decision 26/27): a store-page text and a 1–2 line dialog text for plan 93''s send confirmation (plan 93 puts it into the catalogs via `t()`).
+- Home: `plans/11-steam.md` ST-5 "Privacy" + a public `PRIVACY.md` at the repo root (code is public; the store page can link to or quote it). Where Steamworks takes it (store page field or the "About" text): task 3 checks Steamworks docs and says; the gamemaster publishes it, plan 95''s launch-day checklist checks it.
+
+## Tasks to split into
+1. **Worker, schema and local dev mode** (waits on decision 117) — `report-server/` per "Layout", "Data", the full API contract except the real Steam check (fake check behind the dev switch only; without it every ticket → 502 until task 2), size/field/status rules, rate limits from vars, kill switch, `/health`, retention cron. Flake: `trivia-report-server` (`dev`, `deploy`, `tail`) in apps and the dev shell; `.gitignore` (`.dev.vars`, `.wrangler/`); `npm run check` type-checks it. Check with a throw-away curl script against `trivia-report-server dev`: every status row of `POST /reports`, pull → ack → pull empty, 21st report of one fake user → 429, cron run (`wrangler dev --test-scheduled`, `/__scheduled`) deletes a backdated row. Docs: `directory.md` row for `report-server/`, AGENTS.md "Commands" one line, ST-5 note.
+2. **Steam ticket check** (waits on decision 117) — `src/steam.ts` per "Steam ticket check", re-checked against Valve''s docs (URL, params, response shape; note the source in ST-5); 5 s timeout; HMAC with `HASH_SALT`; nothing logged. Check: `validate`/`steam` logic with a stubbed `fetch` in a throw-away script (OK, error, banned, timeout, wrong JSON). The real round trip is task 4''s test report.
+3. **Privacy texts** — per "Privacy text": `PRIVACY.md` (public, all launch languages) and ST-5 "Privacy" (store text + dialog text per language); check Steamworks docs for where a privacy policy goes on the store page and write the exact field/steps for the gamemaster; hand the dialog text to plan 93 (task 699''s body or a follow-up task there if 699 is closed). Note in `plans/17-publishing.md` (store page) that the privacy text exists.
+4. **Gamemaster setup and first test report** (waits on decision 117 and tasks 1–2) — `pm decision add` (kind once) with the checklist: Cloudflare account (free plan; 2FA on); endpoint name: `workers.dev` or own domain (options, recommended first; a domain costs ≈ $10/year, makes a later move possible); `wrangler login`; `trivia-report-server deploy` (creates the D1 database: the task writes the exact `wrangler d1 create` step and where its id goes into `wrangler.toml`); secrets via `wrangler secret put` (publisher Web API key from Steamworks, needs decision 67''s account; pull token and salt from a given `openssl rand` line); save the pull token where `qgen flag --pull` reads it; `curl <url>/health`; a test report from a `beta` build under Steam → `qgen flag --pull` shows it (or before plan 93 lands: the API key check by a `curl` with a ticket from the dev menu, if plan 93 provides one). Answer = URL + date. After the answer: put the URL into the build config (plan 93''s place), record the URL in ST-5, consequences on the decision. Workers never log in or enter credentials.
+5. **Close-out** — `plans/11-steam.md` ST-5 server half `[x]` with a note (API v1, hosting, retention, URL), `plans/18-steam-integration.md` one line (shell sends reports; ticket identity), `directory.md`, `README.md` how-to ("run the report server locally", "deploy / rotate secrets"), `plans/project.md` in sync; decision 93 and 117 consequences.
+
+## Done when
+- `report-server/` runs locally with fake tickets: a report posted to it is pulled and acknowledged by `curl` (and by `qgen flag --pull` once plan 93 has it); `npm run check` covers it.
+- The API contract above is unchanged or edited here before plan 93''s client/`--pull` tasks build on it.
+- Deployed by the gamemaster with secrets only as Worker secrets; a test report with a real Steam ticket arrives; the endpoint URL is in the build config.
+- Privacy text exists in every launch language, with the steps for the store page.', '2026-10-13T17:07:40Z', 854);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -19495,7 +19633,7 @@ Milestone 11 is S6 of the Steam track (D-34, `plans/11-steam.md`, ST-3..ST-5): t
 ## Out of scope (from the milestone)
 - Competitive mode, couch co-op, more regions and languages (later); Remote Play Together (SW-13), macOS (SW-14); marketing beyond Steam''s own wishlist and follow features; telemetry and any network request other than the clicked report.', '2026-10-13T17:03:31Z', NULL, 831);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (853, 11, 'write plan: Report server (POST /reports)', 'plan', 'dropped', 1000, 'duplicate: task 847 (create tasks for plan 11) creates the part 8 plan task', 'Write the plan for part 8 of masterplan 11 (plan 11): "Report server (`POST /reports`)". Read plan 11 (`pm show p11`), milestone 11 (`pm milestone show 11`), decision 93: Question reports: where do players send them?, decision 111: Steam only, and plan 93 (the client and `qgen flag` side, which consumes this server''s API). Create it with `pm plan add 11 "Report server (POST /reports)" --priority 700 < body.md`. Cover what part 8 lists: hosting choice (Cloudflare Workers + D1 unless better), the `POST /reports` and pull/acknowledge API contract (written first, plan 93 builds on it), Steam ticket verification via Steam''s Web API, rate limit by a salted SteamID hash, no SteamIDs/IPs stored, retention, secrets only as Worker secrets, tooling dependency as a pm decision, local dev mode, privacy policy text per launch language, and the gamemaster setup checklist (Cloudflare account, domain, publisher Web API key). Gamemaster steps become pm decisions or checklists, never worker actions with credentials.', '2026-10-13T17:03:31Z', '2026-10-13T17:03:36Z', 831);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (854, 11, 'write plan: Report server (POST /reports)', 'plan', 'open', 1000, NULL, 'Write the plan for part 8 of masterplan 11 (plan 11): "Report server (`POST /reports`)". Create it with `pm plan add 11 "Report server (POST /reports)" --priority 700 < body.md` (backend; above plan 93 at 550, which consumes its API).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (854, 11, 'write plan: Report server (POST /reports)', 'plan', 'done', 1000, '2026-10-13, plan 103 (Report server, priority 700) with API contract v1; decision 117 (wrangler tooling) pending', 'Write the plan for part 8 of masterplan 11 (plan 11): "Report server (`POST /reports`)". Create it with `pm plan add 11 "Report server (POST /reports)" --priority 700 < body.md` (backend; above plan 93 at 550, which consumes its API).
 
 Read first: plan 11 part 8 and "Rules for every part" (`pm show p11`), milestone 11 (`pm milestone show 11`), decision 93: Question reports: where do players send them?, decision 111: Steam only, decision 67: Steamworks account holder (OQ-33): person or company?, plan 93 (client + `qgen flag` side; its revision is task 848), plan 85 (shell Steam bridge, where `GetAuthTicketForWebApi` goes), plan 91 (version + pool hash sent with each report). `pm plan list` first: don''t duplicate an open plan.
 
@@ -19510,7 +19648,7 @@ The plan covers what part 8 lists:
 - Privacy policy text (store page + the game''s report dialog): what is sent, what is kept, how long; every launch language; the gamemaster publishes it (plan 95 checks it).
 - Gamemaster setup checklist (Cloudflare account, domain, publisher Web API key, deploy command, a test report) as a pm decision or a checklist in the plan file; workers never enter credentials. Endpoint URL baked into the build as config, not a secret.
 
-Done when: the plan exists with priority 700, its API contract section is complete enough for plan 93 to build on, and every dependency or gamemaster step is a pm decision or a listed task.', '2026-10-13T17:04:31Z', NULL, 847);
+Done when: the plan exists with priority 700, its API contract section is complete enough for plan 93 to build on, and every dependency or gamemaster step is a pm decision or a listed task.', '2026-10-13T17:04:31Z', '2026-10-13T17:07:43Z', 847);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (855, 11, 'write plan: Release checklist rows for reports and Steam offline (part 3 update)', 'plan', 'open', 1000, NULL, 'Plan 92 (Release checklist, ST-4) is done, so it can''t take the revised part 3 of masterplan 11 (task 831). Write a small plan for the gap: `pm plan add 11 "Release checklist: report rows and Steam offline" --priority 540 < body.md` (after plan 93 at 550: the rows check its feature; before plan 95 Launch at 160).
 
 The gap (checked 2026-10-13):
@@ -19520,6 +19658,8 @@ The gap (checked 2026-10-13):
 - The per-candidate decision template''s rows table in `plans/11-steam.md` and the `failed` routing (report row → plan 93 / the report server plan) need the same change.
 
 Read: plan 11 part 3, plan 92 (decisions taken, content-only rule), plan 93 and the report server plan (part 8; written by the sibling task "write plan: Report server (POST /reports)"), decision 111: Steam only. Likely one work task; the plan says so.', '2026-10-13T17:04:31Z', NULL, 847);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (856, 103, 'create tasks for plan 103', 'split', 'open', 1000, NULL, 'Split plan 103 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:07:40Z', NULL, 854);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -20796,6 +20936,14 @@ On failure name the failing rows; the worker adds follow-ups in plan 85 (drop th
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (114, 'Desktop save folder under the dev switch without a SteamID', 'answered', '[]', 'decision 111 drops plan 87''s local/ folder; TRIVIA_DEV_STEAM_USER (plan 85) needs a fixed folder when no SteamID exists. dev/ keeps dev saves apart from real Steam users'' folders and outside Auto-Cloud''s {64BitSteamID} path. Plan 87.', 'TRIVIA_SAVE_DIR if set, else <save base>/dev/game.json; no valid user → no save file at all', NULL, '2026-10-13T15:28:12Z', '2026-10-13T15:28:12Z', 771, NULL, 'rule', 771, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (115, 'Screen gallery: how does trivia-gallery drive a browser?', 'answered', '[]', 'Plan for part 13 of plan 9 (task 796). Decision 6''s throw-away Playwright already worked for plans 21, 23, 69 walks, but the gallery must be re-runnable by the gamemaster with one command. A flake wrapper (fromCheckout, authoring/tools/gallery.py) pins the same nixpkgs packages, so no npm devDependency, no download at run time, offline; dev shell only, never shipped. Known quirk from decision 6: unset LD_LIBRARY_PATH for the browser (dev shell''s alsa-lib vs the browser''s glibc).', 'nixpkgs Playwright (python3 playwright + playwright-driver.browsers) in a flake wrapper trivia-gallery, like qgen''s pinned tools; nothing in package.json', NULL, '2026-10-13T15:40:34Z', '2026-10-13T15:40:34Z', 796, NULL, 'rule', 796, '2026-10-13, task 796: 2026-10-13, task 796: plan 100 (UI wording: style guides, TV-check fixes, screen gallery) builds trivia-gallery this way (task 4 of its split).');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (116, 'Store media: render screenshots and trailer now?', 'pending', '["go: UI final, render now", "not yet (say what''s missing)"]', 'Plan 88 (decisions 79, 80): store screenshots and trailers render late: after milestone 9''s UI wording fixes (plan 100) and UI translations (plan 69), right before the store page goes to Valve''s review; nothing rendered or approved before that. The scripts are built earlier (authoring/store/screenshots.mjs, trivia-trailer). Answer when the UI wording and translations are final and the store page is about to go to review; the render task then renders es/es-ES (7 shots + trailer) and en/de (5 menu shots), and asks for approval. en/de question shots and trailers additionally wait for their pools (decision 80).', NULL, NULL, '2026-10-13T17:00:10Z', NULL, 842, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (117, 'Report server tooling: wrangler from nixpkgs in the flake?', 'pending', '["wrangler from nixpkgs (pkgs.wrangler, 4.141 in our pin) in a flake wrapper trivia-report-server; nothing in any package.json; Worker types written by hand (no @cloudflare/workers-types)", "npx wrangler@<pinned> from the wrapper (downloads from npm at first run, not pinned by the flake lock)", "wrangler + @cloudflare/workers-types as devDependencies of a report-server/ npm workspace"]', 'Plan "Report server (POST /reports)" (masterplan 11 part 8, decision 93: Question reports: where do players send them?) runs a Cloudflare Worker + D1. Deploying, running it locally (`wrangler dev --local`: Miniflare + local D1, no account needed) and applying the D1 schema all need Cloudflare''s CLI `wrangler`. AGENTS.md: minimal dependencies, a new one needs a pm decision.
+
+- Authoring/ops tool only: never in the game build, never in `app/`.
+- nixpkgs has `wrangler` (4.141.0 in our flake''s nixpkgs pin), so the flake can pin it like qgen''s tools (decision 115: Screen gallery: how does trivia-gallery drive a browser? did the same for Playwright).
+- Type-checking the Worker (`npm run check`) works with a small hand-written `env.d.ts` (D1 binding, `ExportedHandler` shapes we use) instead of the `@cloudflare/workers-types` package.
+- Licence: wrangler is MIT/Apache-2.0; not shipped, so no CREDITS entry.
+
+Waiting on this: the plan''s tasks that run wrangler (server code, local dev mode, deploy wrapper).', NULL, NULL, '2026-10-13T17:06:32Z', NULL, 854, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -21529,6 +21677,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (726, 841, '2026-10-13T17:01:51Z', '2026-10-13T17:02:16Z', 'done', NULL, 0, '926293eab4892722a2a7632c93e3f12998515653', 'claude-opus-5-5[1m]', 'e297d5ed-11ad-48bc-ba05-70fe5d35afc8', 6, 12, 1784, 209598, 31674, 0.33103960000000005, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (727, 831, '2026-10-13T17:02:16Z', '2026-10-13T17:03:46Z', 'done', NULL, 0, '6efb91301b34094ed4eb49d6c8484afc8673a2bc', 'claude-opus-5-5[1m]', '2287ea7b-389a-49a0-aae6-5f414b54f2d8', 6, 12, 9145, 205901, 37900, 0.5273282, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (728, 847, '2026-10-13T17:03:47Z', '2026-10-13T17:04:39Z', 'done', NULL, 0, '7233c6a9b1b63b664a2c70c0c2ce4d63ab83cded', 'claude-opus-5-5[1m]', 'd4d34e27-735f-4062-bd85-090c11d6f365', 8, 16, 4537, 335107, 46065, 0.5263454, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (729, 854, '2026-10-13T17:04:40Z', '2026-10-13T17:07:55Z', 'done', NULL, 0, '7ea1b2f97cb647cff16765fab9a30967e178830b', 'claude-opus-5-5[1m]', '30f65e16-5e63-409b-a5fb-c3f43505bdcd', 10, 20, 15013, 528528, 69397, 0.96122160000000012, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
