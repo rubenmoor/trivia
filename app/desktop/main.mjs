@@ -1,10 +1,11 @@
 // Electron shell (plan 54, D-63): plays app/client/dist over app://trivia/, no Python, no network.
 import { app, BrowserWindow, dialog, ipcMain, Menu, protocol, session } from "electron";
-import { existsSync, mkdirSync } from "node:fs";
+import { appendFileSync, existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { arrange, discover, ID as MOD_ID, readSettings, writeSettings } from "./mods.mjs";
+import { describe, itemUrl, preparePublish, publish, VISIBILITY } from "./publish.mjs";
 import { makeResolver } from "./resolve.mjs";
 import { makeSaveFile } from "./save.mjs";
 import { fakeUgc, workshopItems } from "./workshop.mjs";
@@ -64,27 +65,42 @@ function steamSdkDir() {
   return existsSync(path.join(local, "redistributable_bin")) ? local : process.env.TRIVIA_STEAM_SDK || local;
 }
 
-const USAGE = "known flags: --import-save <file>, --no-mods";
+const USAGE =
+  "known flags: --import-save <file>, --no-mods, --publish-mod <folder> [--changenote <text>] [--visibility public|friends|unlisted|private] [--content-only] [--dry-run]";
 // Our flags' namespace; anything else (Electron/Chromium switches, the dev app path, Steam's) passes.
-const OWN = /^--(import|export|save|trivia|no-mods)/;
+const OWN = /^--(import|export|save|trivia|no-mods|publish|changenote|visibility|content-only|dry-run)/;
+const VALUE = { "--import-save": "a file", "--publish-mod": "a folder", "--changenote": "a text", "--visibility": "a value" };
+const SWITCH = new Set(["--no-mods", "--content-only", "--dry-run"]);
 
-/** Our flags from argv: `{ importSave, noMods }`, or `{ error }` for an unknown own-looking flag or a missing value. */
+/** Our flags from argv: `{ importSave, noMods, publish }`, or `{ error }` for an unknown own-looking flag or a missing value. */
 function parseArgs(argv) {
-  let importSave = null;
-  let noMods = false;
+  const v = {};
   for (let i = 1; i < argv.length; i++) {
     const [flag, inline] = argv[i].split(/=(.*)/s);
     if (!OWN.test(flag)) continue;
-    if (flag === "--no-mods" && inline === undefined) {
-      noMods = true;
+    if (SWITCH.has(flag) && inline === undefined) {
+      v[flag] = true;
       continue;
     }
-    if (flag !== "--import-save") return { error: `unknown flag ${flag}; ${USAGE}` };
+    if (!VALUE[flag]) return { error: `unknown flag ${flag}; ${USAGE}` };
     const value = inline ?? argv[++i];
-    if (!value || value.startsWith("--")) return { error: `--import-save needs a file; ${USAGE}` };
-    importSave = value;
+    if (!value || value.startsWith("--")) return { error: `${flag} needs ${VALUE[flag]}; ${USAGE}` };
+    v[flag] = value;
   }
-  return { importSave, noMods };
+  const extra = ["--changenote", "--visibility", "--content-only", "--dry-run"].filter((f) => v[f]);
+  if (!v["--publish-mod"] && extra.length) return { error: `${extra[0]} needs --publish-mod; ${USAGE}` };
+  if (v["--publish-mod"] && (v["--import-save"] || v["--no-mods"]))
+    return { error: `--publish-mod runs alone; ${USAGE}` };
+  if (v["--visibility"] && !(v["--visibility"] in VISIBILITY))
+    return { error: `--visibility: public, friends, unlisted or private; ${USAGE}` };
+  const publish = v["--publish-mod"] && {
+    folder: path.resolve(v["--publish-mod"]),
+    changenote: v["--changenote"] ?? null,
+    visibility: v["--visibility"] ?? null,
+    contentOnly: !!v["--content-only"],
+    dryRun: !!v["--dry-run"],
+  };
+  return { importSave: v["--import-save"] ?? null, noMods: !!v["--no-mods"], publish: publish || null };
 }
 
 const args = parseArgs(process.argv);
@@ -125,6 +141,14 @@ if (args.error) {
       app.exit(2);
     });
   else app.exit(2);
+} else if (args.publish) {
+  publishMod(args.publish).then(
+    (code) => app.exit(code),
+    (err) => {
+      console.error(`trivia: --publish-mod: ${err.stack ?? err}`);
+      app.exit(1);
+    },
+  );
 } else if (!app.requestSingleInstanceLock()) {
   app.quit();
 } else {
@@ -149,9 +173,8 @@ if (args.error) {
 }
 
 /** Optional: any failure leaves `steam` null with one stderr line. No restart through Steam, no DRM. */
-async function startSteam() {
-  // A Steam launch sets SteamAppId; dev may override the constant.
-  const appId = Number(process.env.SteamAppId || process.env.TRIVIA_STEAM_APPID || STEAM_APP_ID);
+async function startSteam({ input = true } = {}) {
+  const appId = steamAppId();
   const { log, warn, error } = console;
   let reason = null;
   try {
@@ -172,11 +195,16 @@ async function startSteam() {
   }
   Object.assign(console, { log, warn, error });
   // Steam Input for the pads' real types only (glyphs); runCallbacks drives its frames.
-  steamInput = steam.input.init(false);
+  steamInput = input && steam.input.init(false);
   steamTimer = setInterval(() => steam.runCallbacks(), 100);
   console.error(
     `trivia: steam available, app ${appId}, user ${steam.getStatus().steamId} ${hasSteamId() ? "valid" : "none"}, language ${steam.apps.getCurrentGameLanguage()}`,
   );
+}
+
+/** A Steam launch sets SteamAppId; dev may override the constant. */
+function steamAppId() {
+  return Number(process.env.SteamAppId || process.env.TRIVIA_STEAM_APPID || STEAM_APP_ID);
 }
 
 function hasSteamId() {
@@ -199,6 +227,97 @@ function stopSteam() {
   steam.richPresence.clearRichPresence();
   steam.shutdown();
   steam = null;
+}
+
+// EResult codes the binding reports for createItem/submitItemUpdate.
+const ERESULT = {
+  2: "generic failure",
+  8: "invalid parameter",
+  9: "file not found",
+  15: "access denied: not the item's owner, or the Workshop isn't enabled for this app",
+  16: "timeout",
+  25: "limit exceeded: Workshop storage quota",
+};
+
+/** `--publish-mod` (plan 119): headless, no window, no instance lock; the folder is only read and copied. → exit code. */
+async function publishMod(opts) {
+  // Packaged Windows has no console: a log file beside the mod and a message box.
+  const winOut = app.isPackaged && process.platform === "win32";
+  const early = [];
+  let logFile = null;
+  const toLog = (line) => {
+    try {
+      appendFileSync(logFile, `${line}\n`);
+    } catch {}
+  };
+  const out = (line, isError = false) => {
+    (isError ? process.stderr : process.stdout).write(`${line}\n`);
+    if (!winOut) return;
+    if (logFile) toLog(line);
+    else early.push(line);
+  };
+
+  const p = await preparePublish(opts.folder, app.getVersion());
+  if (winOut) {
+    logFile = path.join(path.dirname(opts.folder), `${p.manifest?.id ?? path.basename(opts.folder)}-publish.log`);
+    try {
+      writeFileSync(logFile, "");
+    } catch {}
+    early.forEach(toLog);
+  }
+  for (const w of p.warnings) out(`warning: ${w}`, true);
+  let result;
+  if (p.error) {
+    out(`error: ${p.error}`, true);
+    result = { code: 1, text: p.error };
+  } else {
+    try {
+      result = await upload(p, opts, out);
+    } finally {
+      await p.dispose();
+      stopSteam();
+    }
+  }
+  if (winOut) {
+    await app.whenReady();
+    await dialog.showMessageBox({
+      type: result.code ? "error" : "info",
+      title: "¡Trivia!",
+      message: result.code ? `${result.text}\n\nlog: ${logFile}` : result.text,
+    });
+  }
+  return result.code;
+}
+
+/** Dry-run summary, or Steam + publish; the binding's warn/error lines pass through. → { code, text }. */
+async function upload(p, opts, out) {
+  for (const line of describe(p, opts)) out(line);
+  if (opts.dryRun) return { code: 0, text: `dry run ok: ${p.manifest.id}` };
+  await startSteam({ input: false });
+  // Real user only (decision 111): the dev switch doesn't publish.
+  if (!hasSteamId()) {
+    const text = "publishing needs the Steam client running and logged in";
+    out(`error: ${text}`, true);
+    return { code: 1, text };
+  }
+  const { log, warn, error } = console;
+  let reason = null;
+  const pass = (...args) => {
+    let line = args.join(" ").replace("[Steamworks] ", "").split("\n")[0];
+    const code = /result: (\d+)$/.exec(line)?.[1];
+    if (ERESULT[code]) line += ` (${ERESULT[code]})`;
+    reason = line;
+    out(`steam: ${line}`, true);
+  };
+  console.log = () => {};
+  console.warn = console.error = pass;
+  try {
+    const r = await publish(steam.workshop, steamAppId(), p, opts, out);
+    if (r.ok) return { code: 0, text: `published ${itemUrl(r.workshopId)}` };
+    return { code: 1, text: `publishing failed${reason ? `: ${reason}` : ""}` };
+  } finally {
+    Object.assign(console, { log, warn, error });
+  }
 }
 
 async function importSave(file) {
