@@ -14,7 +14,9 @@ Steps, each ✓/✗ with its time; all automated steps run, exit 1 on any ✗:
   smoke     node authoring/steam/smoke.mjs app/desktop/release/linux-unpacked
   media-budget  always skipped until masterplan 10 part 6 (task 260) adds its check
   manual    the rows of MANUAL, asked y/n/note or read from --manual FILE (`<row>: <answer>` per line);
-            "n…" fails, "y…" passes, anything else is a note and counts as skipped
+            "n…" fails, "y…" passes, anything else is a note and counts as skipped; on a content-only
+            patch full-only rows are answered "skipped: content-only since <tag>"; beta-save only when
+            SAVE_VERSION changed (plans/11-steam.md "Release checklist (ST-4)")
 
 Report header: version, pool hash, previous tag (newest v* reachable from HEAD, not HEAD's own), kind
 (`full`, or `content-only` when nothing shipped but app/data/ changed since it) and SAVE_VERSION change.
@@ -43,12 +45,18 @@ STEPS = {
 SHIPPED = ("app/", "flake.nix", "flake.lock", "package.json", "package-lock.json")
 STATE_TS = "app/client/src/engine/state.ts"
 MEDIA_BUDGET = "masterplan 10 part 6, task 260"
-# Later parts append rows here.
+# Row → (scope, check, check on a content-only patch); scope: always, full (full release only), save
+# (only when SAVE_VERSION changed). Steps: plans/11-steam.md "Release checklist (ST-4)".
 MANUAL = {
-    "windows": "start test on a clean Windows machine (archive or last beta)",
-    "deck": "start test on the Steam Deck (archive or last beta)",
-    "sound": "sound: music, effects, audio questions",
-    "red-frame": "timed competitive: pulsing red frame in the last 3 s",
+    "offline": ("always", "beta install, network off, Steam not running: full game to level 12 or a won checkpoint",
+                "beta install, network off, Steam not running: a game to level 3 that hits new questions"),
+    "windows": ("full", "start test on a clean Windows machine from Steam (beta)", None),
+    "deck": ("full", "Steam Deck checklist (plan 90, SW-12; plans/18-steam-integration.md \"Steam Deck Verified\")", None),
+    "cloud": ("full", "Cloud A→B (plan 87): play on A, quit, B shows the same players and seen counts", None),
+    "sound": ("full", "sound: music, effects, audio and video questions", None),
+    "red-frame": ("full", "timed competitive: pulsing red frame in the last 3 s", None),
+    "beta-save": ("save", "save version changed: testers stay on beta until this build is on default", None),
+    "signoff": ("always", "the family plays the candidate from beta", "the gamemaster's OK"),
 }
 
 
@@ -116,16 +124,32 @@ def run(name: str, logs: Path) -> str | None:
     return None
 
 
-def manual(path: str | None, ask: bool) -> dict[str, str]:
-    """Answers per manual row: from FILE, else asked on the terminal (only if ask)."""
+def checklist(kd: str, prev: str | None, save_changed: bool) -> dict[str, tuple[str, str | None]]:
+    """Manual rows for this candidate: row → (check, automatic answer or None)."""
+    rows = {}
+    for k, (scope, text, patch) in MANUAL.items():
+        if scope == "save" and not save_changed:
+            continue
+        auto = f"skipped: content-only since {prev}" if scope == "full" and kd == "content-only" else None
+        rows[k] = (patch if patch and kd == "content-only" else text, auto)
+    return rows
+
+
+def manual(rows: dict[str, tuple[str, str | None]], path: str | None, ask: bool) -> dict[str, str]:
+    """Answers per manual row: automatic, from FILE, else asked on the terminal (only if ask)."""
+    open_rows = {k: text for k, (text, auto) in rows.items() if auto is None}
     if path:
         lines = [l.split(":", 1) for l in Path(path).read_text().splitlines() if ":" in l]
         given = {k.strip(): v.strip() for k, v in lines}
-        return {k: given.get(k, "") for k in MANUAL}
-    if not ask:
-        return {k: "not asked (automated ✗)" for k in MANUAL}
-    print("Manual checklist (y / n / a note):")
-    return {k: input(f"  {k}: {text}? ").strip() for k, text in MANUAL.items()}
+        for k in given.keys() - MANUAL.keys():
+            print(f"  {path}: unknown row {k!r}", file=sys.stderr)
+        answers = {k: given.get(k, "") for k in open_rows}
+    elif not ask:
+        answers = {k: "not asked (automated ✗)" for k in open_rows}
+    else:
+        print("Manual checklist (y / n / a note):")
+        answers = {k: input(f"  {k}: {text}? ").strip() for k, text in open_rows.items()}
+    return {k: auto or answers[k] for k, (_, auto) in rows.items()}
 
 
 def main() -> None:
@@ -173,23 +197,26 @@ def main() -> None:
     steps.append(("media-budget", "skipped", 0, MEDIA_BUDGET))
     print(f"– media-budget: skipped ({MEDIA_BUDGET})")
 
-    rows = []  # (row, status, answer)
+    rows = []  # (row, check, status, answer)
     if "manual" in args.skip:
         steps.append(("manual", "skipped", 0, "--skip"))
     else:
-        answers = manual(args.manual, all(s != "✗" for _, s, _, _ in steps))
+        todo = checklist(kd, prev, save["changed"])
+        answers = manual(todo, args.manual, all(s != "✗" for _, s, _, _ in steps))
         for k, a in answers.items():
-            rows.append((k, "✓" if a[:1].lower() == "y" else "✗" if a[:1].lower() == "n" else "skipped", a))
-        failed = [k for k, s, _ in rows if s == "✗"]
+            st = "✓" if a[:1].lower() == "y" else "✗" if a[:1].lower() == "n" else "skipped"
+            rows.append((k, todo[k][0], st, a))
+            print(f"{'–' if st == 'skipped' else st} manual {k}: {a or '(no answer)'}")
+        failed = [k for k, _, s, _ in rows if s == "✗"]
         steps.append(("manual", "✗" if failed else "✓", 0, ", ".join(failed)))
 
-    skipped = [n for n, s, _, _ in steps if s == "skipped"] + [f"manual:{k}" for k, s, _ in rows if s == "skipped"]
+    skipped = [n for n, s, _, _ in steps if s == "skipped"] + [f"manual:{k}" for k, _, s, _ in rows if s == "skipped"]
     ok = all(s != "✗" for _, s, _, _ in steps)
     report = {"commit": commit, "tag": tag, "clean": clean, "date": started.isoformat(timespec="seconds"),
               "version": version(), "pool_hash": pool_hash, "previous_tag": prev, "kind": kd, "save_version": save,
               "ok": ok, "skipped": skipped,
               "steps": [{"name": n, "status": s, "seconds": round(dt), "note": note} for n, s, dt, note in steps],
-              "manual": [{"row": k, "status": s, "answer": a} for k, s, a in rows]}
+              "manual": [{"row": k, "status": s, "answer": a} for k, _, s, a in rows]}
     (out / "release-check.json").write_text(json.dumps(report, ensure_ascii=False, indent=1) + "\n")
     md = [f"# Release check {tag}", "",
           f"- Result: {'✓ pass' if ok else '✗ fail'}",
@@ -203,7 +230,7 @@ def main() -> None:
           "| step | | time | note |", "|---|---|---:|---|",
           *[f"| {n} | {s} | {dt:.0f} s | {note} |" for n, s, dt, note in steps], "",
           "## Manual", "", "| row | check | | answer |", "|---|---|---|---|",
-          *[f"| {k} | {MANUAL[k]} | {s} | {a} |" for k, s, a in rows], ""]
+          *[f"| {k} | {text} | {s} | {a} |" for k, text, s, a in rows], ""]
     (out / "release-check.md").write_text("\n".join(md))
     print(f"{'✓ pass' if ok else '✗ fail'}{', skipped: ' + ', '.join(skipped) if skipped else ''}"
           f" → {(out / 'release-check.md').relative_to(REPO)}")

@@ -78,10 +78,55 @@ Logged in [`open-questions.md`](open-questions.md) (frozen 2026-10-12; questions
 - **Engine port regressions:** the referee has subtle supply and matching rules. 12 builds fixtures from the Python engine before the port.
 - **Scope creep:** competitive mode and couch co-op are explicitly "Later". The release doesn't wait for them.
 
+## Release checklist (ST-4)
+Every public build — the launch and every later patch — passes one checklist before its build goes from `beta` to `default`: the automated `trivia-release-check` (plan 18 "Builds and depots", SW-6) plus the manual rows below, which the gamemaster runs on the Steam-installed `beta` build. Each release candidate gets one pm decision with the result (template below); parts 4 (launch, task 269) and 6 (patches, task 270) create it, nothing else does.
+
+### How to run
+- Bump `version` in `app/desktop/package.json` if needed, commit, `git tag v<x>` (the check never tags).
+- `trivia-steam upload --branch beta`: runs `trivia-release-check` (tag gate, per-commit checks, licences, release bar, `nix build .#app`, desktop builds, credits both ways, smoke game), then stages and uploads; prints the BuildID.
+- Manual rows need the `beta` build, so at upload time answer the prompt with a note (e.g. `later`: counts as skipped, named in the build Desc).
+- Then the gamemaster runs the rows below on `beta` and answers the candidate decision; `trivia-release-check --manual FILE` (one `<row>: <answer>` per line; `y…` passes, `n…` fails, anything else = note, counts as skipped) records the answers in the report.
+- Report: `work/steam/v<x>/release-check.md` (header: version, pool hash, previous tag, kind, save version change; every skip).
+
+### Manual rows
+On the `beta` branch, installed through Steam. Scope: always, full (full release only), save (only when `SAVE_VERSION` changed since the previous tag).
+
+| row | scope | steps |
+|---|---|---|
+| `offline` | always | Network off, Steam not running, start the installed game: full release: a full game to level 12 or a won checkpoint; content-only patch: a game to level 3 that hits new questions |
+| `windows` | full | Clean Windows machine (no dev tools), install from Steam `beta`, start: no warning, game fullscreen, a few questions with a pad |
+| `deck` | full | Plan 90's (SW-12) Deck checklist on the real Deck: `plans/18-steam-integration.md` "Steam Deck Verified" (until plan 90 writes it there: pm plan 90) |
+| `cloud` | full | Short A→B run of plan 87's table (`plans/18-steam-integration.md` "Steam Cloud test", first row): play on A, quit, B shows the same players and seen counts |
+| `sound` | full | Music, effects, an audio and a video question play |
+| `red-frame` | full | Timed competitive: the red frame pulses in the last 3 s |
+| `beta-save` | save | Save version changed: testers stay on `beta` until this build is on `default` (an older build can't read the new save) |
+| `signoff` | always | Launch and full release: the family plays the candidate from `beta`; content-only patch: the gamemaster's OK |
+
+### Patch variant
+- Kind, set by the check: `content-only` when, since the newest earlier `v*` tag, `git diff --name-only` touches nothing that ships except `app/data/` (shipped = `app/`, `flake.nix`, `flake.lock`, root `package*.json`); else `full`. No earlier tag = full.
+- Why: a content-only patch changes no code, so platform behaviour (Windows/Deck start, Cloud, sound, red frame) can't change; what it can break (questions, media, licences, credits, pool loading) stays covered by every automated step plus `offline` and `signoff`.
+- Full-only rows are answered "skipped: content-only since <tag>" automatically and listed in the report.
+
+### Decision per release candidate
+- Subject: `Release candidate v<x> passed?`
+- Body: tag `v<x>`, BuildID, report path `work/steam/v<x>/release-check.md`, kind, then the rows table to fill:
+
+  | row | result ✓/✗/n/a | note (✗: how to reproduce) |
+  |---|---|---|
+  | offline | | |
+  | … every row the report lists, auto-skipped ones pre-filled | | |
+
+- Options: `passed` (recommended), `passed with minor issues (list)`, `failed (rows)`.
+- Worker on the answer:
+  - `passed`: `trivia-release-check --manual FILE` with the answers so the report holds them; the build may go to `default` (by hand, Steamworks).
+  - `passed with minor issues`: as passed; each issue a bullet in `plans/backlog.md`.
+  - `failed`: one task per failing row in the owning plan (Deck → plan 90/18, Cloud → plan 87/18, sound, red frame, offline → the plan of the code involved); after the fixes a new tag and a new candidate decision.
+- Review request for Deck Verified: plan 90 (task 687) decides whether it moves here.
+
 ## Tasks
 - [ ] ST-1 Resolve OQ-29..OQ-37 and record each answer in `decisions.md` (phase S2).
 - [x] ST-2 Add the new files to `README.md`, the Steam track to `project.md`, the questions to `open-questions.md` and D-34. *2026-10-07: done with this plan; keep `project.md` in sync from now on.*
 - [ ] ST-3 Steam "Coming soon" page live (after PUB-8, SW-7).
-- [ ] ST-4 Release checklist: build from a tagged commit, `qgen.py validate` clean, credits complete, offline test, Deck test, family sign-off.
+- [x] ST-4 Release checklist: build from a tagged commit, `qgen.py validate` clean, credits complete, offline test, Deck test, family sign-off. *Done 2026-10-13 (pm plan 92): "Release checklist (ST-4)" above; `trivia-release-check` tag gate, kind full/content-only, credits both ways, manual rows. First full run: part 4's release candidate (task 269).*
   - S6 part 2 done 2026-10-13 (pm plan 91: Version numbers and patch-safe saves; no ST-row of its own): one version in `app/desktop/package.json`, pool hash, both on the credits screen; running games survive dropped questions; `qgen validate` guards id continuity against the newest `v*` tag (`18`, `12`).
 - [ ] ST-5 Post-release: content update cadence, how question reports are collected (no telemetry, so by hand: a Steam discussions thread or an email link).

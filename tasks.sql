@@ -13648,7 +13648,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/17-*.md` "Credits in the game" (PUB-5): one bullet.
 - `plans/18-steam-integration.md` SW-6 step list: `credits`.
 - `directory.md`: `credits_check.mjs`.', '2026-10-13T08:38:34Z', '2026-10-13T08:56:00Z', 694);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (697, 92, 'Manual rows, decision template and ST-4 checklist', 'work', 'open', NULL, NULL, 'Plan 92 task 3. Needs task "Release check: tag gate, patch detection and report header" (kind, save version change) done first.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (697, 92, 'Manual rows, decision template and ST-4 checklist', 'work', 'done', NULL, '2026-10-13, authoring/steam/release_check.py (MANUAL rows with scope, auto-skip on content-only, beta-save on save change), plans/11-steam.md (Release checklist (ST-4), ST-4 [x]), plans/18-steam-integration.md, plans/project.md, README.md', 'Plan 92 task 3. Needs task "Release check: tag gate, patch detection and report header" (kind, save version change) done first.
 
 ## What
 - `MANUAL` in `authoring/steam/release_check.py`: each row flagged full-only or always:
@@ -13666,7 +13666,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Check
 - A `--manual` file with every row answered parses.
-- A content-only run (throw-away clone with a local tag, as in task 1) lists the auto-skipped rows with the reason.', '2026-10-13T08:38:34Z', NULL, 694);
+- A content-only run (throw-away clone with a local tag, as in task 1) lists the auto-skipped rows with the reason.', '2026-10-13T08:38:34Z', '2026-10-13T08:57:53Z', 694);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -15260,6 +15260,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (535, 694, '2026-10-13T08:38:01Z', '2026-10-13T08:38:42Z', 'done', NULL, 0, 'e1776b0351bf6aa84e45fa05d3a5cb3af8b56260', 'claude-opus-5-5[1m]', '3408ede4-b31b-4ad0-8393-62a2fd4a161b', 5, 10, 3988, 152358, 30099, 0.3510636, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (536, 695, '2026-10-13T08:38:42Z', '2026-10-13T08:40:29Z', 'done', NULL, 0, 'b274db8ead82c418c5b6e4aed4f52f8445cdd925', 'claude-opus-5-5[1m]', 'f8759113-4cda-451f-aec9-3e1d19d8cbdf', 15, 30, 10041, 614921, 41027, 0.65214020000000006, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (537, 696, '2026-10-13T08:40:30Z', '2026-10-13T08:56:12Z', 'done', NULL, 0, 'abe9055c7d9ec4f1789f5ddddefa90d41fe35c84', 'claude-opus-5-5[1m]', '69d88e17-e607-4e2e-b357-4fc1431b9d3d', 25, 50, 16715, 1484736, 67370, 1.1704071999999997, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (538, 697, '2026-10-13T08:56:12Z', '2026-10-13T08:58:03Z', 'done', NULL, 0, '1414f53f18c6d3b0838312f4b9e553ba7eaee324', 'claude-opus-5-5[1m]', '9885d7a6-e844-4148-a45f-9739238586a5', 12, 24, 10512, 598673, 53690, 0.75959059999999989, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
