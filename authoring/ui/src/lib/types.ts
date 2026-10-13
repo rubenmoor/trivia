@@ -1,8 +1,10 @@
 // Mirrors the question schema of authoring/data/questions.json (plans/02-question-pool.md).
 // The play fields come from the game's types (app/client/src/lib/types.ts, D-35).
+import type { AgeGroup, Bundle as PoolBundle } from "$app/engine/pool";
 import type { Background as PlayBackground, Media as PlayMedia, Status } from "$app/lib/types";
 
 export type { Category, Status } from "$app/lib/types";
+export type { Names } from "$app/engine/state";
 export type Decision = Exclude<Status, "draft">;
 
 /** A picked file's licence record (plan 26); missing on slots picked before it. */
@@ -176,30 +178,18 @@ export type SourceText = Pick<
   "question" | "answer" | "wrong_answers" | "hints" | "description" | "fun_fact" | "difficulty" | "status"
 >;
 
-/** GET /api/names?locale=: display names keyed by bundle id, category slug, Spanish subcategory (D-81). */
-export interface Names {
-  bundles: Record<string, { name: string; description: string }>;
-  categories: Record<string, string>;
-  subcategories: Record<string, string>;
-  age_groups: Record<string, string>;
+/** A question bundle (app/data/bundles.json, D-39): the engine's fields plus `rule`. */
+export interface Bundle extends PoolBundle {
+  kind: "base" | "region" | "theme";
+  rule: string;
 }
 
-/** A question bundle (app/data/bundles.json, D-39). */
-export type Bundle = {
-  id: string;
-  kind: "base" | "region" | "theme";
-  languages: string[];
-  name: string;
-  description: string;
-  rule: string;
-};
-
 /** app/data/age-groups.json (D-38): one shared difficulty scale, a window of it per age group. */
-export type AgeGroups = {
+export interface AgeGroups {
   scale: [number, number];
   focus: string | null;
-  groups: { id: string; name: string; ages: [number, number | null]; window: [number, number] }[];
-};
+  groups: AgeGroup[];
+}
 
 /** A bundle's targets in authoring/data/targets.json (D-53): approved questions in total and per difficulty. */
 export interface BundleTargets {

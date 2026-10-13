@@ -12345,7 +12345,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - `### Duplication clusters` lists every source row exactly once, each with an assignee; staged.', '2026-10-12T23:10:17Z', '2026-10-13T13:35:38Z', 522);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (581, 82, 'Part 10: consolidate client types and API clients', 'work', 'open', NULL, NULL, 'Task 2 of `plan 82: Cross-cutting duplication, consistency and build config (code review part 10)`: the clusters assigned to "task 2" in `### Duplication clusters` (`## Part 10`, `code-review.md`); work from that table, not this list.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (581, 82, 'Part 10: consolidate client types and API clients', 'work', 'done', NULL, '2026-10-13, app/client/src/lib/http.ts (new), lib/{api,engine,errors,store,data}.ts, game/{Game,Choice}.svelte, authoring/ui/src/lib/{api,types}.ts, Home/Stats/Review.svelte, code-review.md, directory.md', 'Task 2 of `plan 82: Cross-cutting duplication, consistency and build config (code review part 10)`: the clusters assigned to "task 2" in `### Duplication clusters` (`## Part 10`, `code-review.md`); work from that table, not this list.
 
 ## First
 - Needs `code-review.md` with `## Part 10` (`plan 73: Baseline scans and report skeleton (code review part 1)`) and parts 2–9 done (plans 74–81); if missing or still open, stop and say so.
@@ -12368,7 +12368,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `npm run check`, `npm run build`; bundle sizes of `app/client/dist` and `authoring/ui/dist` vs. part 1''s baseline (importing from `$app` must not pull game code into the authoring bundle).
 
 ## Done when
-- Every "task 2" cluster has a final status; checks pass; staged.', '2026-10-12T23:10:17Z', NULL, 522);
+- Every "task 2" cluster has a final status; checks pass; staged.', '2026-10-12T23:10:17Z', '2026-10-13T13:38:38Z', 522);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (582, 82, 'Part 10: Python ↔ Node/TS twins (save, paths, media cache, static serving)', 'work', 'open', NULL, NULL, 'Task 3 of `plan 82: Cross-cutting duplication, consistency and build config (code review part 10)`: the clusters assigned to "task 3" in `### Duplication clusters` (`## Part 10`, `code-review.md`).
 
 ## First
@@ -16074,6 +16074,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (633, 737, '2026-10-13T13:25:43Z', '2026-10-13T13:26:51Z', 'done', NULL, 0, 'ac120f6cb1b77b738d9deb9d6eece78d40f1c1a6', 'claude-opus-5-5[1m]', '0e0e3b34-1df1-474b-85b0-68eca91eb76e', 12, 24, 3933, 431620, 31114, 0.41399199999999997, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (634, 738, '2026-10-13T13:26:51Z', '2026-10-13T13:33:07Z', 'done', NULL, 0, 'cb5992614f399a4d486b2d6a84b2d5fa6206804d', 'claude-opus-5-5[1m]', '992c2016-bc52-441f-9454-d81d54e0b4cf', 41, 78, 24951, 2978590, 94542, 1.8513859999999998, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (635, 580, '2026-10-13T13:33:08Z', '2026-10-13T13:35:47Z', 'done', NULL, 0, 'a0fabba6a5951356511393d7763eb84bcaf420e2', 'claude-opus-5-5[1m]', '9a4797a0-420b-43a3-805e-a03458f7fdef', 15, 30, 14244, 816706, 64812, 0.96683720000000006, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (636, 581, '2026-10-13T13:35:48Z', '2026-10-13T13:38:47Z', 'done', NULL, 0, '7372ec3fc7d86c9e909f1e7b6861887fc2767a83', 'claude-opus-5-5[1m]', '308295d1-feac-4898-b45a-f6bec6092ac3', 34, 66, 15786, 2373183, 83796, 1.4609886, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

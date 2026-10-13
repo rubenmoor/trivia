@@ -4,7 +4,7 @@ import { randomSeed, seededRng } from "../engine/rng.ts";
 import { repair, supply } from "../engine/game.ts";
 import { defaultLanguage, parseSave } from "../engine/save.ts";
 import { gameLocale, newest, type EngineData, type Io, type Language, type SaveData } from "../engine/state.ts";
-import { GameError } from "./api.ts";
+import { GameError, messageOf } from "./http.ts";
 import type { Supply } from "./types.ts";
 import { availableLocales, loadEngineData } from "./data.ts";
 import { desktop, steam } from "./desktop.ts";
@@ -58,7 +58,7 @@ async function guessTag(): Promise<string> {
 export function ready(): Promise<Loaded> {
   loading ??= load().catch((e) => {
     loading = null;
-    throw new Error(`can't load the game: ${e instanceof Error ? e.message : String(e)}`);
+    throw new Error(`can't load the game: ${messageOf(e)}`);
   });
   return loading;
 }
@@ -167,7 +167,7 @@ async function exec<T>(route: Route<T>, write: boolean, scope: Scope): Promise<T
   try {
     reply = route(loaded.save, data, io());
   } catch (e) {
-    throw new GameError("server_error", {}, `engine error: ${e instanceof Error ? e.message : String(e)}`, null);
+    throw new GameError("server_error", {}, `engine error: ${messageOf(e)}`, null);
   }
   if (reply.status !== 200) {
     const b = reply.body as ErrorBody;

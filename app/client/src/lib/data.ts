@@ -1,7 +1,7 @@
 // The game data from /data/ (app/data/, read-only: app/server/main.py or the desktop protocol; plan 50, PORT-7).
 import { loadCategories, parseAgeGroups, parseBundles, parsePool, poolHash } from "../engine/pool.ts";
 import { engineData, NO_NAMES, type EngineData, type Names } from "../engine/state.ts";
-import { call } from "./api.ts";
+import { call } from "./http.ts";
 
 /** A data file's JSON; null on 404 if `optional`, else a readable Error. */
 async function get(file: string, optional = false): Promise<unknown> {

@@ -2,7 +2,7 @@
 import { parseSave, SaveNewerError } from "../engine/save.ts";
 import { emptySave, type SaveData } from "../engine/state.ts";
 import type { Store } from "../engine/store.ts";
-import { call, GameError, json } from "./api.ts";
+import { call, GameError, json, messageOf } from "./http.ts";
 import type { BackupKind, DesktopBridge } from "./desktop.ts";
 
 /** One write in flight; saves made meanwhile coalesce to the newest, so an older document never wins. */
@@ -80,7 +80,7 @@ export class FileStore implements Store {
       try {
         await bridge.writeSave(text);
       } catch (e) {
-        const msg = e instanceof Error ? e.message : String(e);
+        const msg = messageOf(e);
         throw new GameError(msg.includes("bad_save") ? "bad_save" : "save_locked", {}, `can't save: ${msg}`, null);
       }
     });

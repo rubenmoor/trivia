@@ -6,6 +6,7 @@
   // ?locale=en|de: the locale's playing translations with their own difficulty, its names (plan 67).
   import { onMount } from "svelte";
   import { LOCALES } from "$app/lib/data";
+  import { messageOf } from "$app/lib/http";
   import { fetchAgeGroups, fetchBundles, fetchCategories, fetchMediaStats, fetchNames, fetchOverview, fetchQuestions, fetchTargets } from "../lib/api";
   import type { AgeGroups, Bundle, BundleTargets, Category, MediaStats as MediaStatsData, Names, Question } from "../lib/types";
   import Nav from "../lib/Nav.svelte";
@@ -75,7 +76,7 @@
         locale ? fetchNames(locale) : null,
       ]);
     } catch (e) {
-      error = e instanceof Error ? e.message : String(e);
+      error = messageOf(e);
     } finally {
       loading = false;
     }

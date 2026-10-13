@@ -3,6 +3,7 @@
   // for the gamemaster, the batches, game readiness and the approved pool at a glance. Read-only:
   // every number links to the page or review queue that works it off.
   import { onMount } from "svelte";
+  import { messageOf } from "$app/lib/http";
   import { fetchAgeGroups, fetchCategories, fetchOverview, fetchQuestions } from "../lib/api";
   import Nav from "../lib/Nav.svelte";
   import type { AgeGroups, Category, Overview, Question } from "../lib/types";
@@ -26,7 +27,7 @@
         fetchAgeGroups(),
       ]);
     } catch (e) {
-      error = e instanceof Error ? e.message : String(e);
+      error = messageOf(e);
     }
   });
 

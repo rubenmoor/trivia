@@ -1,6 +1,7 @@
 <script lang="ts">
   // Review tool (plans/08-review-tool.md): one question per screen, single-key decisions.
   import { onMount } from "svelte";
+  import { messageOf } from "$app/lib/http";
   import {
     fetchBundles,
     fetchNames,
@@ -58,7 +59,7 @@
   let errorSeq = 0;
 
   function reportError(what: string, e: unknown) {
-    const message = e instanceof Error ? e.message : String(e);
+    const message = messageOf(e);
     const time = new Date().toLocaleTimeString();
     errors = [...errors, { id: ++errorSeq, time, what, message }];
   }
@@ -116,7 +117,7 @@
       finished = !singleId && questions.length > 0 && fromUrl === -1 && firstOpen === -1;
       index = fromUrl !== -1 ? fromUrl : Math.max(firstOpen, 0);
     } catch (e) {
-      error = e instanceof Error ? e.message : String(e);
+      error = messageOf(e);
     } finally {
       loading = false;
     }

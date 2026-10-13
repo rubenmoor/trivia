@@ -1,10 +1,15 @@
 // The authoring server's question API (authoring/server/main.py, port 8001).
-import { call, json, post } from "$app/lib/api";
+import { call, json, post } from "$app/lib/http";
 import type { AgeGroups, Bundle, Category, MediaStats, Names, Overview, Question, Review, Slot, SpotCheckItem, SpotChecks, Status, Targets } from "./types";
+
+const SERVER = "the authoring server (`trivia-authoring`)";
+
+const get = async <T>(url: string): Promise<T> => json(await call(url, undefined, SERVER));
+const send = <T>(url: string, body: unknown): Promise<T> => post(url, body, SERVER);
 
 /** Every bundle's broad categories with subcategories (D-19, D-43). */
 export async function fetchCategories(): Promise<Category[]> {
-  return json(await call("/api/categories"));
+  return get("/api/categories");
 }
 
 /** Filters of GET /api/questions; all optional (authoring/server/main.py). */
@@ -38,7 +43,7 @@ export async function fetchQuestions(filter: QuestionFilter = {}): Promise<Quest
   const params = new URLSearchParams();
   for (const [key, value] of Object.entries(filter)) if (value) params.set(key, value);
   const query = params.size ? `?${params}` : "";
-  return json(await call(`/api/questions${query}`));
+  return get(`/api/questions${query}`);
 }
 
 /** review: a new decision, or null to reset the question to draft. */
@@ -47,57 +52,57 @@ export async function saveReview(
   review: Pick<Review, "decision" | "feedback" | "problems"> | Review | null,
   locale: string | null = null,
 ): Promise<Question> {
-  return post(`/api/questions/${encodeURIComponent(id)}/review`, { review, locale });
+  return send(`/api/questions/${encodeURIComponent(id)}/review`, { review, locale });
 }
 
 /** Download candidate `index` (0-based) into the slot. */
 export async function pickMedia(id: string, index: number, slot: Slot = "media"): Promise<Question> {
-  return post(`/api/questions/${encodeURIComponent(id)}/media`, { index, slot });
+  return send(`/api/questions/${encodeURIComponent(id)}/media`, { index, slot });
 }
 
 /** Save a new search term for the slot and fetch fresh candidates; `all`: ask every provider (plan 53). */
 export async function searchMedia(id: string, query: string, slot: Slot = "media", all = false): Promise<Question> {
-  return post(`/api/questions/${encodeURIComponent(id)}/media/search`, { query, slot, all });
+  return send(`/api/questions/${encodeURIComponent(id)}/media/search`, { query, slot, all });
 }
 
 /** The question bundles (app/data/bundles.json, D-39). */
 export async function fetchBundles(): Promise<Bundle[]> {
-  return json(await call("/api/bundles"));
+  return get("/api/bundles");
 }
 
 /** Move a question to another bundle. */
 export async function setBundle(id: string, bundle: string): Promise<Question> {
-  return post(`/api/questions/${encodeURIComponent(id)}/bundle`, { bundle });
+  return send(`/api/questions/${encodeURIComponent(id)}/bundle`, { bundle });
 }
 
 /** Set the difficulty (1–15, D-38); the server keeps the first original value. */
 export async function setDifficulty(id: string, difficulty: number, locale: string | null = null): Promise<Question> {
-  return post(`/api/questions/${encodeURIComponent(id)}/difficulty`, { difficulty, locale });
+  return send(`/api/questions/${encodeURIComponent(id)}/difficulty`, { difficulty, locale });
 }
 
 /** The source's translatable flag; false rejects its translations ("no viaja", plan 67). */
 export async function setTranslatable(id: string, translatable: boolean, locale: string | null = null): Promise<Question> {
-  return post(`/api/questions/${encodeURIComponent(id)}/translatable`, { translatable, locale });
+  return send(`/api/questions/${encodeURIComponent(id)}/translatable`, { translatable, locale });
 }
 
 /** Display names in a translation locale (names.<locale>.json, D-81); null for Spanish. */
 export async function fetchNames(locale: string): Promise<Names | null> {
-  return json(await call(`/api/names?${new URLSearchParams({ locale })}`));
+  return get(`/api/names?${new URLSearchParams({ locale })}`);
 }
 
 /** The difficulty scale and the age groups' windows (app/data/age-groups.json, D-38). */
 export async function fetchAgeGroups(): Promise<AgeGroups> {
-  return json(await call("/api/age-groups"));
+  return get("/api/age-groups");
 }
 
 /** Pool targets per bundle (authoring/data/targets.json, D-53). */
 export async function fetchTargets(): Promise<Targets> {
-  return json(await call("/api/targets"));
+  return get("/api/targets");
 }
 
 /** Everything the start page shows except the statistics (RV-12). */
 export async function fetchOverview(): Promise<Overview> {
-  return json(await call("/api/overview"));
+  return get("/api/overview");
 }
 
 /** Approved questions per media role and image resolution (RV-23); with locale its playing translations' sources. */
@@ -105,20 +110,20 @@ export async function fetchMediaStats(bundle: string | null, locale: string | nu
   const params = new URLSearchParams();
   if (bundle) params.set("bundle", bundle);
   if (locale) params.set("locale", locale);
-  return json(await call(`/api/stats/media${params.size ? `?${params}` : ""}`));
+  return get(`/api/stats/media${params.size ? `?${params}` : ""}`);
 }
 
 /** Spot-check size, problem kinds and every recorded spot check (plan 16). */
 export async function fetchSpotChecks(): Promise<SpotChecks> {
-  return json(await call("/api/spot-checks"));
+  return get("/api/spot-checks");
 }
 
 /** Record the spot check from the question's (just saved) human review. */
 export async function recordSpotCheck(batch: string, id: string, mediaChanged: boolean): Promise<SpotCheckItem> {
-  return post(`/api/spot-checks/${encodeURIComponent(batch)}/${encodeURIComponent(id)}`, { media_changed: mediaChanged });
+  return send(`/api/spot-checks/${encodeURIComponent(batch)}/${encodeURIComponent(id)}`, { media_changed: mediaChanged });
 }
 
 /** Undo: remove the question's spot check. */
 export async function removeSpotCheck(batch: string, id: string): Promise<null> {
-  return post(`/api/spot-checks/${encodeURIComponent(batch)}/${encodeURIComponent(id)}`, { undo: true });
+  return send(`/api/spot-checks/${encodeURIComponent(batch)}/${encodeURIComponent(id)}`, { undo: true });
 }

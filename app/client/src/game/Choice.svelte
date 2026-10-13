@@ -20,9 +20,10 @@
   // player's newest game (every field), else the defaults. ↑/↓ move between lines, ←/→ change a value.
   import { onMount } from "svelte";
   import {
-    BUILT_MODES, CARDS_MAX, DEFAULT_AGE_GROUP, DIFFICULTY_MAX, fetchChoice, fetchChoiceOptions, fetchOutlook, fetchPlayerMode, GameError,
+    BUILT_MODES, CARDS_MAX, DEFAULT_AGE_GROUP, DIFFICULTY_MAX, fetchChoice, fetchChoiceOptions, fetchOutlook, fetchPlayerMode,
     LEVELS_MAX, STANDARD_JOKERS, type ChoiceBody, type ChoiceOptions, type Outlook,
   } from "../lib/api";
+  import { GameError } from "../lib/http";
   import { errorText } from "../lib/errors";
   import { candidates, show } from "../lib/focus";
   import { t } from "../lib/i18n";

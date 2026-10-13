@@ -1,5 +1,5 @@
 // Server error codes → catalog texts `error.<code>` (D-57, plan 22).
-import { GameError } from "./api";
+import { GameError, messageOf } from "./http";
 import { has, t, type Params } from "./i18n";
 import type { ErrorInfo } from "./types";
 
@@ -21,7 +21,7 @@ function text({ code, params }: ErrorInfo): string | null {
 /** What the corner error line shows for a caught error. */
 export function errorText(e: unknown): string {
   if (e instanceof GameError) return text(e) ?? e.message;
-  return e instanceof Error ? e.message : String(e);
+  return messageOf(e);
 }
 
 /** Why a joker can't be played right now. */

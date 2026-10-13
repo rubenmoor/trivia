@@ -3,7 +3,8 @@
   // screens Start → Player → Choice → Level → Select → Question → Correct / Wrong → … → Victory, with one
   // transition routine and the admin overlay on Esc. The engine keeps the game (engine/, lib/api.ts).
   import { onDestroy, onMount, tick } from "svelte";
-  import { fetchFlags, fetchGame, gameAction, GameError, noteExhausted, playJoker, setFlag, type GameActionBody } from "../lib/api";
+  import { fetchFlags, fetchGame, gameAction, noteExhausted, playJoker, setFlag, type GameActionBody } from "../lib/api";
+  import { GameError } from "../lib/http";
   import { steam } from "../lib/desktop";
   import { language, saveError, takeLocalOffer, takeSaveNotice, type LocalOffer } from "../lib/engine";
   import { errorText } from "../lib/errors";

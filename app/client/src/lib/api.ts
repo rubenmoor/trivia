@@ -5,63 +5,11 @@ export type { Outlook };
 import { bundlesFor } from "../engine/pool.ts";
 import { setFlag as saveFlag, type FlagInput } from "../engine/save.ts";
 import { newest, withDefaults, type EngineData, type SaveData } from "../engine/state.ts";
+import { messageOf } from "./http.ts";
 import { language as fetchLanguage, localeSupply, read, run, type Scope } from "./engine.ts";
-import type { Choice, Difficulty, ErrorInfo, Flagged, Game, GameMode, JokerBudget, JokerEvent, JokerName, Language, Player, Supply } from "./types";
+import type { Choice, Difficulty, Flagged, Game, GameMode, JokerBudget, JokerEvent, JokerName, Language, Player, Supply } from "./types";
 
 // The game's only door to the referee: the TS engine on an in-memory save, persisted by lib/store.ts (plan 50, PORT-7).
-
-/** A refused request (D-57): `code` and `params` for errorText(), `message` in English; `supply` is set
- * when the pool can't fill a new game (GF-5). */
-export class GameError extends Error implements ErrorInfo {
-  readonly code: string;
-  readonly params: ErrorInfo["params"];
-  readonly supply: Supply | null;
-
-  constructor(code: string, params: ErrorInfo["params"], message: string, supply: Supply | null) {
-    super(message);
-    this.code = code;
-    this.params = params;
-    this.supply = supply;
-  }
-}
-
-/** The JSON error body of a refused request (engine/api.ts `ErrorBody`, app/server, authoring/server). */
-interface ErrorJson {
-  error?: unknown;
-  params?: ErrorInfo["params"];
-  message?: string;
-  supply?: Supply | null;
-}
-
-/** The error of a failed response: GameError if the body has `error`, else a plain Error. */
-function failure(res: Response, body: ErrorJson): Error {
-  if (typeof body.error !== "string") return new Error(`HTTP ${res.status} ${res.statusText}`);
-  return new GameError(body.error, body.params ?? {}, body.message ?? body.error, body.supply ?? null);
-}
-
-export async function json<T>(res: Response): Promise<T> {
-  if (!res.ok) throw failure(res, await res.json().catch(() => ({})));
-  return res.json();
-}
-
-/** fetch() that turns "server not running" into a readable error. */
-export async function call(url: string, init?: RequestInit): Promise<Response> {
-  try {
-    return await fetch(url, init);
-  } catch {
-    throw new Error("server not reachable — is the game server (`trivia`) running?");
-  }
-}
-
-export async function post<T>(url: string, body: unknown): Promise<T> {
-  return json(
-    await call(url, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(body),
-    }),
-  );
-}
 
 /** Known players, the most recent first (D-28). */
 export async function fetchPlayers(): Promise<Player[]> {
@@ -96,8 +44,7 @@ export async function setFlag(id: string, flag: FlagInput): Promise<Flagged[]> {
       const out = saveFlag(save, id, flag, io.now);
       return { save: out, status: 200, body: flagList(out, data) };
     } catch (e) {
-      const message = e instanceof Error ? e.message : String(e);
-      return { save, status: 400, body: { error: "flag_invalid", message } };
+      return { save, status: 400, body: { error: "flag_invalid", message: messageOf(e) } };
     }
   });
 }
