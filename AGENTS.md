@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Family trivia party game, shown on a TV: the family plays against the gamemaster, 12 questions to victory. It runs offline; the code is public, media files are a gitignored cache. A Steam release is in the works.
+Family trivia party game, shown on a TV: the family plays against the gamemaster, 12 questions to victory. The code is public, media files are a gitignored cache. A Steam release is in the works.
 
 ## Work: `pm`
 - Milestones, plans, tasks, decisions: all in `tasks.sql`, only through `pm`. Read `pm instructions` first.
@@ -22,7 +22,7 @@ Family trivia party game, shown on a TV: the family plays against the gamemaster
 - Don't write tests by default. Keep only the few, if any, that stay useful long-term; don't verify too much either, use throw-away scripts to verify genuinely complex issues only.
 - Style of `.md` files: bullet points, ultra-concise, no full sentences needed. Exception: an intro paragraph in full sentences at the top of the document and under each top-level heading.
 - Stop background processes by PID (`kill $!`), never `pkill -f`: the pattern can match your own `claude` process.
-- Minimal dependencies; must run offline. No secrets, accounts or telemetry.
+- Minimal dependencies. No secrets in the repo, no accounts of our own; telemetry only opt-in.
 - Unpolished game parts: `PLACEHOLDER(<task id>)` in code and on screen.
 
 ## Making questions
