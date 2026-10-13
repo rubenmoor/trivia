@@ -3,7 +3,7 @@
   // the screen, hand-written particles, no library. Five variants, one picked at random on
   // ¡Correcto!; Victory plays the finale (all of them in sequence, then a last volley).
   // Preview on the Start screen: /?fuegos=rockets|confetti|shapes|sparklers|stars|finale
-  export type FireworksMode = "single" | "finale";
+  type FireworksMode = "single" | "finale";
 </script>
 
 <script lang="ts">
@@ -157,7 +157,7 @@
       for (let i = 0; i < 9; i++) rocket(11.4 + i * 0.18, rand(0.1, 0.9) * W, rand(0.1, 0.35) * H, (x, y) => burst(x, y, 110, 30));
       at(12.2, () => VARIANTS.confetti(12.2));
     } else {
-      VARIANTS[variant && variant in VARIANTS ? variant : pick(Object.keys(VARIANTS))](0.1);
+      VARIANTS[variant && Object.hasOwn(VARIANTS, variant) ? variant : pick(Object.keys(VARIANTS))](0.1);
     }
     events.sort((a, b) => a.t - b.t);
 
@@ -230,7 +230,6 @@
       }
       g.globalAlpha = 1;
       if (events.length || particles.length) raf = requestAnimationFrame(frame);
-      else g.clearRect(0, 0, W, H);
     };
     raf = requestAnimationFrame((now) => {
       start = last = now;

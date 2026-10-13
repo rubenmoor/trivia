@@ -1,7 +1,7 @@
 <script lang="ts">
   // The common joker play animation (plans/09-jokers.md, "Common play animation", JK-5): the token
   // flies out of the tray to the centre of the screen, grows and spins, then bursts into sparkles.
-  // Short on purpose (jokers are unlimited, D-27); with reduced motion it is a quick fade.
+  // Short on purpose (a joker plays many times a game); with reduced motion it is a quick fade.
   import { onMount } from "svelte";
   import Icon, { type IconName } from "./Icon.svelte";
   import { JOKER_BURST_MS, JOKER_FLY_MS } from "./timing";
@@ -26,12 +26,16 @@
           ],
       { duration: reduced ? 150 : JOKER_FLY_MS, easing: "cubic-bezier(0.3, 0, 0.2, 1)", fill: "forwards" },
     );
-    flight.finished.then(async () => {
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    flight.onfinish = () => {
       if (reduced) return ondone();
       burst = true;
-      setTimeout(ondone, JOKER_BURST_MS);
-    });
-    return () => flight.cancel();
+      timer = setTimeout(ondone, JOKER_BURST_MS);
+    };
+    return () => {
+      flight.cancel();
+      clearTimeout(timer);
+    };
   });
 </script>
 
@@ -44,6 +48,7 @@
     style:top="{from.top}px"
     style:width="{from.width}px"
     style:height="{from.height}px"
+    style:--burst="{JOKER_BURST_MS}ms"
   >
     <span class="face"><Icon name={icon} size="100%" /></span>
   </div>
@@ -76,7 +81,7 @@
     box-shadow: 0 0 calc(2 * var(--u)) rgba(255, 184, 28, 0.55);
   }
   .chip.burst {
-    animation: pop-out var(--burst, 0.25s) ease-out forwards;
+    animation: pop-out var(--burst) ease-out forwards;
   }
   .face {
     width: 52%;
