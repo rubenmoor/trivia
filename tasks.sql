@@ -4389,13 +4389,15 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - Linter evaluated in `code-review.md`; if adopted: the lint pass runs before every commit touching TypeScript and reports no issues, no baseline left.
 - Executive summary at the top of `code-review.md`, no `PLACEHOLDER` left.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass (plus the lint pass if adopted).', '2026-10-12T23:02:07Z', 512);
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (84, 9, 'Release content runs', -110, 'Part 11 of the masterplan (plan 9): the recurring `qgen` runs that fill the release content, each one followed by D-56''s QC. Neutral Spanish rewrite (part 8, plan 64), translation pilot per language (QT-5), full translation per language (QT-6), regional pack batches (part 10, once its plan and RG-5 exist), and `es` `base` top-ups where the `en`/`de` source shortfall needs them. Priority -110: below plan 17''s batch runs (-100) and plan 70''s budget decision (task 463, -95), so implementation work and milestone 1''s batches go first. Owners: `plans/15b-question-translation.md` (QT-5, QT-6), `plans/16-content-target.md` (progress per locale).
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (84, 9, 'Release content runs', -110, 'Part 11 of the masterplan (plan 9): the recurring `qgen` runs that fill the release content, each one followed by D-56''s QC. Neutral Spanish rewrite (part 8, plan 64), translation pilot per language (QT-5), full translation per language (QT-6), the regional pilot `colombia` (part 10, plan 98; decision 110: Regional packs at launch (RG-5, OQ-46)), and `es` `base` top-ups where the `en`/`de` source shortfall needs them. Priority -110: below plan 17''s batch runs (-100) and plan 70''s budget decision (task 463, -95), so implementation work and milestone 1''s batches go first. Owners: `plans/15b-question-translation.md` (QT-5, QT-6), `plans/16-content-target.md` (progress per locale), `plans/15c-regional-questions.md` (pilot effort).
 
 ## Builds on
 - D-36: workers only run `qgen batch` (and `qgen neutralize` when the gamemaster asks); no prompt, pool, media or `qgen.py` changes inside a run or QC task.
 - Decision 27 (D-78): `base` in `es-419` via `qgen neutralize` (plan 64, D-83); `colombia` keeps its voice. Decision 26: launch languages `es`, `en`, `de`.
 - Plan 66 / D-87: `qgen batch --translate <locale>`, runs `tr-<locale>-<n>`, 300 sources, first run = 50-source pilot; the next run exits 2 until the gamemaster''s `qgen health ack tr-<locale>-1`. Decision 45: health thresholds for `tr-*` runs. Decision 35: text in media is never a problem.
 - Decision 21 (D-75) / decision 37 (D-84): target 5000 approved per launch language with D-53''s mix, deficits per locale; once `es` meets 5000, the `en`/`de` source shortfall drives `es` drafting. Simulation games numbers are information only.
+- Decision 110: Regional packs at launch (RG-5, OQ-46) (partly supersedes decision 37''s "packs have no target"): every regional bundle 2000 approved, region''s language + en (`colombia`: es + en); pilot `colombia` 102 → 2000 with its effort measured ($ per approved, gamemaster''s review time per 100); more bundles only after a new decision with those numbers (candidates `mexico`, `argentina`); launch doesn''t wait for the pilot (ships what `colombia` has; content updates, plan 96, bring the rest).
+- Plan 98 (part 10) provides, before the regional chain runs: `colombia`''s own subcategories (gamemaster''s list by pm decision, `qgen` migration of the 19 questions on `base` subcategories), the bundle target (2000) in `targets.json`, `qgen batch --translate <locale> --bundle <id>`, and the review-time line in `qgen report`. Its task subjects may change in its revision; look them up with `pm show p98`.
 - Decision 2 / D-56 / decision 15 (D-79): 30-question blind spot check, ≥ 90 % agreement; a run below it only feeds QC step 4. Decision 3: `qgen rework` once after each `es` batch''s QC.
 - `authoring/QC.md`: steps 1–5; sections "Neutralize runs" and "Translation runs" (native-speaker spot check at `/review?batch=tr-<locale>-<n>&locale=<locale>&sample=1`).
 - Plan 17 "Batch tasks under pm run": `tasks.sql` alone isn''t a dirty tree; stage exactly the printed `git add` paths, don''t commit; exit 75, exit 2, other codes or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines, `pm task-pending-decision`, stage nothing, stop. Applies to every run task here, whether or not plan 17''s RUNBOOK task (task 50) is done yet.
@@ -4423,18 +4425,26 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
      - The run selected fewer than 300 sources, or `--cost`/`--locale` shows an `es` source shortfall (D-84) → add an `es` top-up pair (chain 4) before the next translation pair.
      - Else the next pair `tr-<locale>-<n+1>`.
 4. **`es` top-ups** (priority -110): `run batch-<n>` (`qgen batch`, no arguments: D-84''s weights aim it at the shortfall) + `QC batch-<n>` (plan 17''s pattern, decision 3''s rework). Only if task 463''s budget decision allows growing `es` `base` past 5000; if it says no, `pm decision add` "Source shortfall for <locale> at levels …: lower the target or grow es?" instead. The top-up''s QC adds the next translation pair back.
-5. **Regional packs** (priority -110): one task "Regional pack runs per RG-5": waits for part 10''s plan (task 249, pending on decision 66) and its RG-5 decision; pend on the open one. Then per launching bundle with a gap: `qgen batch --bundle <id>` run/QC pairs (the RG-5 answer is the gamemaster naming the bundle, RUNBOOK); translated bundles per RG-5: `--translate` pairs once part 10''s plan makes the selection take that bundle (if it doesn''t, a follow-up task in part 10''s plan, not here). Part 10 dropped or RG-5 says no packs → drop with that reason.
+5. **Regional pilot `colombia`** (priority -110; decision 110):
+   - Start task: needs plan 98''s `colombia` subcategories migrated and its bundle target in `targets.json`; if that plan task is open, pend on the decision blocking it (or plan 98''s earliest open decision), stop. Then add the first es pair.
+   - es pairs: `run batch-<n>` (`qgen batch --bundle colombia`, RUNBOOK: the bundle named by decision 110) + `QC batch-<n>` (QC.md steps 1–4, decision 3''s `qgen rework` once). The QC task adds the next es pair until `qgen report --bundle colombia` shows 2000 approved (es).
+   - Spent on `colombia` (`qgen report --cost`, per bundle) ≥ a bundle budget task 463 set (if any) → `pm decision add "colombia over budget: continue?"`, next pair waits on it.
+   - At 2000 es, the closing QC adds two tasks:
+     - **Pilot effort and next bundles**: $ per approved (`qgen report --cost`, per bundle) and the gamemaster''s review time per 100 (plan 98''s `qgen report` line) recorded in `plans/15c-regional-questions.md` and `16-content-target.md`; `pm decision add "More regional bundles at launch?"` with the numbers (options: none until after launch (recommended unless the numbers are cheap), `mexico`, `argentina`, both). A "yes" → per bundle `pm task add 98` (`qgen bundle new` + taxonomy decision) and `pm task add 84` "Regional runs <id>" (this chain''s pattern, in the region''s language, then en).
+     - The first en pair: `run tr-en-<n>` with `qgen batch --translate en --bundle colombia` + `QC tr-en-<n>` (QC.md "Translation runs", native English speaker). Needs plan 98''s `--translate --bundle` done and the en pilot acked (chain 2); else pend on the blocking decision. The QC adds the next pair until `qgen report --bundle colombia --locale en` (or the report plan 98 names) shows 2000 approved en; then `plans/15c` notes `colombia` es + en done.
+   - One open pair per language of the bundle; run names come from `qgen` (`batch-<n>`, `tr-en-<n>` shared with chains 3, 4).
+   - Launch (milestone 11) doesn''t wait for this chain.
 
 ## Tasks (for the split)
 1. `run neutralize-1` (-85) and 2. `QC neutralize-1` (-85).
 3. `run tr-en-1`, 4. `QC tr-en-1`, 5. `run tr-de-1`, 6. `QC tr-de-1` (-90).
 7. Pilot go/no-go (-90).
 8. `run tr-en-2`, 9. `QC tr-en-2`, 10. `run tr-de-2`, 11. `QC tr-de-2` (-110).
-12. Regional pack runs per RG-5 (-110).
-- Later pairs and top-ups are added by the QC tasks, not the split. Every task body repeats the pm-run rules above (stage, exit codes) and names its run.
+12. Regional pilot `colombia`: start (-110; replaces "Regional pack runs per RG-5").
+- Later pairs, top-ups, the `colombia` en pairs and the pilot effort task are added by the QC tasks, not the split. Every task body repeats the pm-run rules above (stage, exit codes) and names its run.
 
 ## Done when
-- Both translation chains end at their target (or with an answered decision that stops them), QT-5 and QT-6 `[x]` in 15b, regional runs done or dropped per RG-5, `qgen report --locale <L>` for `es`, `en`, `de` recorded in plan 16. The close-out check (`qgen report --simulate`) is part 12 (task 251).
+- Both translation chains end at their target (or with an answered decision that stops them), QT-5 and QT-6 `[x]` in 15b, `colombia` at 2000 approved in es and en, the pilot''s effort recorded and "More regional bundles at launch?" answered (may land after launch; new bundles'' chains, if any, are their own tasks), `qgen report --locale <L>` for `es`, `en`, `de` recorded in plan 16. The close-out check (`qgen report --simulate`) is part 12 (task 251).
 
 ## Out of scope
 - Prompt or code changes (QC change tasks go to plans 64, 66, 70 or new ones); the back-audit (plan 57); store texts (S5); later languages (milestone 12).', '2026-10-13T05:13:28Z', 250);
@@ -17579,7 +17589,7 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 
 ## Out of scope (from the milestone)
 - Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-13T15:56:46Z', '2026-10-13T15:59:27Z', 815);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (820, 84, 'revise plan 84', 'plan', 'open', 1000, NULL, 'Plan 9, the plan above plan 84, changed; it is quoted below. Bring plan 84 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (820, 84, 'revise plan 84', 'plan', 'done', 1000, '2026-10-13, tasks.sql: plan 84 chain 5 → regional pilot colombia per decision 110 (es pairs to 2000, en pairs, effort record + ''More regional bundles at launch?''); builds on plan 98''s taxonomy/target/--translate --bundle; done-when updated', 'Plan 9, the plan above plan 84, changed; it is quoted below. Bring plan 84 in line with it
 (`pm plan edit 84 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -17706,7 +17716,7 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 - Part 2 any time after plan 16. Part 12 last.
 
 ## Out of scope (from the milestone)
-- Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-13T15:56:46Z', NULL, 815);
+- Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-13T15:56:46Z', '2026-10-13T16:00:46Z', 815);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (821, 98, 'revise plan 98', 'plan', 'open', 1000, NULL, 'Plan 9, the plan above plan 98, changed; it is quoted below. Bring plan 98 in line with it
 (`pm plan edit 98 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
@@ -17965,6 +17975,8 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 - Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-13T15:56:46Z', NULL, 815);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (823, 70, 'create tasks for plan 70', 'split', 'done', 1000, '2026-10-13, tasks.sql: task 463 body gets the colombia row (decision 110); tasks 461, 462 done, no new tasks or decisions', 'Split plan 70 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:59:25Z', '2026-10-13T15:59:48Z', 819);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (824, 84, 'create tasks for plan 84', 'split', 'open', 1000, NULL, 'Split plan 84 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T16:00:43Z', NULL, 820);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -19936,6 +19948,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (707, 818, '2026-10-13T15:57:36Z', '2026-10-13T15:58:53Z', 'done', NULL, 0, 'ae5dbd3bd37bbfdf9597f9496054da43e45730eb', 'claude-opus-5-5[1m]', 'c94a5617-bf65-44fb-a076-1f02de3b22b9', 4, 8, 973, 125391, 28879, 0.2756022, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (708, 819, '2026-10-13T15:58:53Z', '2026-10-13T15:59:34Z', 'done', NULL, 0, '07278a22ca9ee402c1604f356d9728ea618a47fe', 'claude-opus-5-5[1m]', '73ea77a6-292c-4893-9651-d40a735fef50', 7, 14, 2868, 293899, 41878, 0.4512198, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (709, 823, '2026-10-13T15:59:34Z', '2026-10-13T15:59:52Z', 'done', NULL, 0, '62e67f8a6672a178b8b527c10ef8abdabf35e2be', 'claude-opus-5-5[1m]', '28b3701a-18d4-4088-b971-5f347ae70122', 5, 10, 1599, 144847, 29302, 0.2954054, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (710, 820, '2026-10-13T15:59:53Z', '2026-10-13T16:00:54Z', 'done', NULL, 0, '72c5367733e4faa8fcedcb165174f3a7aa06ab6b', 'claude-opus-5-5[1m]', '5f7349f6-0287-474c-a0d4-96fc21a897fd', 7, 14, 5963, 301254, 44904, 0.5387988, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
