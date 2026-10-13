@@ -8099,14 +8099,15 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Owner `plans/17-publishing.md` ("Steamworks and store", "AI disclosure").', '2026-10-12T01:13:55Z', NULL, 252);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (254, 10, 'write plan: Steamworks app configuration (SW-7)', 'plan', 'open', 240, NULL, 'Write the plan for part 2 of the masterplan (plan 10): `pm plan add 10 "Steamworks app configuration (SW-7)" --priority 700`.
 
-- Needs decision 67: Steamworks account holder (this task waits on it) and part 1''s plan (App ID decision); write against them.
-- Read and reuse, don''t duplicate: plan 85 (binding, language, rich presence), plan 86 (achievement values), plan 87 (Auto-Cloud values), plan 89 (depots, decision 84; `steam.json`; decision 89 already asks for App ID, depot IDs, beta branch), plan 88 (store texts; decision 90 asks for requirements, languages, controller flags). Fold their Steamworks values into one checklist; where an open decision already asks the gamemaster, refer to it instead of a second one.
+- Write against decision 67 (account holder: person) and part 1''s plan (App ID decision, task 253).
+- Read and reuse, don''t duplicate: plan 85 (binding, language, rich presence), plan 86 (achievement values), plan 87 (Auto-Cloud values), plan 89 (depots, decision 84; `steam.json`; decision 89 already asks for App ID, depot IDs, beta branch), plan 88 (store texts; decision 90 asks for requirements, languages, controller flags), plan 90 (Deck review). Fold their Steamworks values into one checklist; where an open decision already asks the gamemaster, refer to it instead of a second one.
 - Content: checklist with exact values in `plans/18-steam-integration.md`:
-  - App ID, localized names (D-50), launch options per OS (executable, args), supported languages (decision 26/27: es-419 + es-ES, en, de), branches `default` (empty until S6) + password-protected `beta`, controller support flags, Steam Input default config, Deck settings, achievements (plan 86).
+  - App ID, localized names (D-50), launch options per OS (executable, args), supported languages (decision 26/27: es-419 + es-ES, en, de), branches `default` (empty until S6) + password-protected `beta`, controller support flags, Deck settings, achievements (plan 86).
+  - **Steam Input default config = the Gamepad template** (decision 125: Steam Deck: best effort, review without a Deck at hand): the Deck''s controls arrive as a virtual Xbox pad; exact Steamworks field and value; a precondition of plan 90''s review request.
   - Depots per plan 89 / decision 84 (windows, linux, content) plus **one free DLC app per shipped non-base bundle** (decision 66; decision 112: `app/data/bundles/<id>/` + its media): price free, own depot, optional install, store name per language; the base app lists them. Only bundles milestone 9 ships (e.g. `colombia`).
   - Steam Cloud: Auto-Cloud root/pattern/quota/conflict note per plan 87 (one save per Steam user, `{64BitSteamID}` folder, `game.json`, non-recursive). `steam_appid.txt` for dev runs.
 - Steam only (decision 111): no values for running outside Steam; no DRM / `restartAppIfNecessary`.
-- Done when (of the plan): gamemaster confirms the values are entered (pm decision); plan 18 holds them.
+- Done when (of the plan): gamemaster confirms the values are entered, Gamepad template default included (pm decision); plan 18 holds them.
 - Owner `plans/18-steam-integration.md` ("Builds and depots", "Steam features").', '2026-10-12T01:13:55Z', NULL, 252);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (255, 10, 'write plan: Steamworks binding in the shell (SW-8)', 'plan', 'done', 240, '2026-10-13, pm plan 85 (priority 690); plans/18-steam-integration.md SW-8 pointer', 'Write the plan for part 3 of the masterplan (plan 10): `pm plan add 10 "Steamworks binding in the shell (SW-8)" --priority 690`.
 
@@ -8165,12 +8166,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Owner `plans/18-steam-integration.md` ("Steam Deck Verified"), `plans/14-input.md`.', '2026-10-12T01:13:56Z', '2026-10-13T08:19:30Z', 252);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (263, 10, 'write plan: Beta test and S5 close-out', 'plan', 'open', 170, NULL, 'Write the plan for part 11 of the masterplan (plan 10): `pm plan add 10 "Beta test and S5 close-out" --priority 130`.
 
-- Last part; write it after the other parts'' plans exist (or were dropped). Waits on decision 67 and decision 82.
+- Last part; write it after the other parts'' plans exist (or were dropped). Write against decision 67 and decision 82.
 - Beta checklist in `plans/18-steam-integration.md` (builds on plans 87, 89, 90 test rows; no copies):
   - gamemaster installs the `beta` branch and the free DLC (decision 66) from Steam on a second machine, starts with the network off (Steam offline mode), the family plays a full game; this is also the clean-machine start test (decision 39)
   - Cloud carries the save to another machine (one save per Steam user)
   - Steam not running / no valid user (decision 111): full game, notice that progress needs Steam, no flag action, nothing written
 - Result via pm decision "S5 beta test passed?"; failures → tasks in the owning parts.
+- Deck (decision 125: Steam Deck: best effort, review without a Deck at hand): the review request and Valve''s result in plan 18 (plan 90) count toward close-out; the real-Deck test doesn''t, it stays open for when a Deck is at hand.
 - Docs: `plans/11-steam.md` S5 row done; SW-13 (Remote Play Together), SW-14 (macOS) deferred with a note; online co-op later (decision 111); statuses in 17, 18, 15a, 14; `plans/project.md`, `plans/README.md`; note in plan 11 (masterplan of milestone 11) if S5 changed S6''s scope.
 - Done when (of the plan): the milestone''s "Done when" holds.', '2026-10-12T01:13:56Z', NULL, 252);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (264, 11, 'create tasks for plan 11', 'split', 'done', 1000, '2026-10-11, tasks 265–271 (plan-writing for parts 2, 3, 5, 1, 4, 6, 7); priorities 165–130 put them after milestone 10''s plan tasks; no new decisions (parts raise their own: coming-soon date, report channel, cadence, released)', 'Split plan 11 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -21335,8 +21337,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Delete the throw-away script.
 
 Done when: at 1280×800 every image question''s picture can be seen whole via the peek (milestone 8); the owning plan files carry the notes. Check: `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-13T17:58:50Z', NULL, 920);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (924, 10, 'create tasks for plan 10', 'split', 'open', 1000, NULL, 'Split plan 10 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:59:23Z', NULL, 913);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (924, 10, 'create tasks for plan 10', 'split', 'done', 1000, '2026-10-13, tasks.sql: tasks 254 (Gamepad template default) and 263 (Deck review counts, real-Deck test doesn''t) per decision 125; plans 85-90 already queued for revision (tasks 925-930)', 'Split plan 10 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:59:23Z', '2026-10-13T18:00:01Z', 913);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (925, 85, 'revise plan 85', 'plan', 'open', 1000, NULL, 'Plan 10, the plan above plan 85, changed; it is quoted below. Bring plan 85 in line with it
 (`pm plan edit 85 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
@@ -24183,6 +24185,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (766, 918, '2026-10-13T17:58:04Z', '2026-10-13T17:58:24Z', 'done', NULL, 0, 'daa23093e2fc464945947de7f7f37e7ce62fa7a7', 'claude-opus-5-5[1m]', 'e36b491e-51aa-4546-ab93-20b522e8a071', 4, 8, 1364, 117049, 25817, 0.2572578, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (767, 920, '2026-10-13T17:58:24Z', '2026-10-13T17:58:58Z', 'done', NULL, 0, '28f55cd4a0802c4cfeaed1446d4cf0abcfc33c34', 'claude-opus-5-5[1m]', '86bd6c17-f772-498a-bb7a-55e1f2ca9fe7', 6, 12, 3203, 167439, 22767, 0.27973180000000003, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (768, 913, '2026-10-13T17:58:58Z', '2026-10-13T17:59:31Z', 'done', NULL, 0, '6e08d67affdf4e0e725fa36ecfa85654df653464', 'claude-opus-5-5[1m]', 'ca308be4-2b10-447d-aa26-43f91cd5fcb9', 8, 16, 2941, 289986, 33952, 0.38849720000000004, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (769, 924, '2026-10-13T17:59:31Z', '2026-10-13T18:00:06Z', 'done', NULL, 0, 'c6a3996b5ea431a504b9d26745a3c20f63298baa', 'claude-opus-5-5[1m]', 'b91cc581-292e-4363-8cd7-c27579e94920', 7, 12, 3041, 243532, 42670, 0.4509344, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
