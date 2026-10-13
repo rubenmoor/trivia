@@ -13689,7 +13689,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Upload step for the gamemaster via `pm decision add`.
 
 Done when: file drafted, presence set on level change under Steam, nothing without Steam. Local CI passes.', '2026-10-13T05:18:18Z', '2026-10-13T05:44:48Z', 644);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (652, 85, 'SW-8 close-out: gamemaster check and docs', 'work', 'open', NULL, NULL, 'Plan 85 task 8, after tasks 1–7 and 9 (task 776: Valid Steam user check and dev switch).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (652, 85, 'SW-8 close-out: gamemaster check and docs', 'work', 'open', NULL, NULL, 'Plan 85 task 8, after tasks 1–7, 9 (task 776: Valid Steam user check and dev switch) and 10 (task 813: Dev mode «Ir a pregunta…»).
 
 - Gamemaster check: decision 113 (SW-8 check under Steam, replaces decision 72; decision 72''s "Without Steam" rows are void under decision 111: Steam only: no effort outside Steam). No "without Steam" rows.
 - Overlay part (D-92, task 647): Windows build only (Linux has no overlay by design). Windows zip from `trivia-desktop-build` (task 650), launched through Steam (App ID or non-Steam shortcut with 480).
@@ -13697,7 +13697,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Keyboard part (task 648): if letters don''t reach the field: follow-up task in plan 85 to switch `steam:show-text-input` in `app/desktop/main.mjs` to `showGamepadTextInput` + `getEnteredGamepadTextInput` (wait for the dismiss, return the text; the bridge then returns `string | null` and `Player.svelte` sets `name`); note it in `plans/14-input.md` (Steam Deck line).
 - Glyphs part (task 649): if Steam Input init breaks pad input in Chromium or always reports Xbox: follow-up task in plan 85 to drop `steam.input.init` in `app/desktop/main.mjs` (`steam:input-types` → null) and note it in `plans/14-input.md`.
 - Valid-user part (task 776): if a logged-in user isn''t valid: follow-up task in plan 85.
-- Docs: `plans/18-steam-integration.md` SW-8 `[x]` with note and "Steam features" updated (overlay: Windows only, D-92; valid user + `TRIVIA_DEV_STEAM_USER`); `plans/14-input.md` (glyphs, keyboard); `plans/15-i18n.md` ("Model", I18N-2 note: Steam language wired); `plans/project.md`; `directory.md` (`steamworks_sdk/`, new lib files).
+- Docs: `plans/18-steam-integration.md` SW-8 `[x]` with note and "Steam features" updated (overlay: Windows only, D-92; valid user + `TRIVIA_DEV_STEAM_USER`; dev mode «Ir a pregunta…»); `plans/14-input.md` (glyphs, keyboard); `plans/15-i18n.md` ("Model", I18N-2 note: Steam language wired); `plans/project.md`; `directory.md` (`steamworks_sdk/`, new lib files).
 - Failures from the check → follow-up tasks in plan 85.
 
 Done when: decision 113 answered as passed and the docs updated.', '2026-10-13T05:18:18Z', NULL, 644);
@@ -17156,8 +17156,22 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 
 ## Out of scope (from the milestone)
 - Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T15:44:24Z', NULL, 789);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (812, 85, 'create tasks for plan 85', 'split', 'open', 1000, NULL, 'Split plan 85 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:45:26Z', NULL, 806);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (812, 85, 'create tasks for plan 85', 'split', 'done', 1000, '2026-10-13, tasks.sql: task 813 added (plan 85 task 10), task 652 body updated', 'Split plan 85 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:45:26Z', '2026-10-13T15:46:20Z', 806);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (813, 85, 'Dev mode «Ir a pregunta…» (open a question by id)', 'work', 'open', NULL, NULL, 'Plan 85 task 10, after task 776: Valid Steam user check and dev switch (TRIVIA_DEV_STEAM_USER). For testing media questions (e.g. the 3 video questions) by id.
+
+- Dev mode = `TRIVIA_DEV_STEAM_USER=1` or plan 99''s dev server; a real Steam user is not dev mode.
+  - `app/desktop/main.mjs`: `--trivia-dev` in `additionalArguments` beside `--trivia-user` when the dev switch is set (not for a real user).
+  - `app/desktop/preload.cjs`: `steam.dev` from `process.argv`; `SteamBridge.dev` in `app/client/src/lib/desktop.ts`.
+  - `lib/desktop.ts` exports one `devMode: boolean` = `steam?.dev === true || desktop?.devServer === true`. Separate from `validUser`.
+- Engine: `goTo(save, data, io, id)` in `app/client/src/engine/game.ts` beside `replace` (reuse `replaceCurrent`''s logging/undo path): that question replaces the current one at the current level; old one logged `admin_replace`, not seen; ignores level range, age group, bundle selection and seen; undo snapshot as for `replace`. Every mode (not `gamemasterOnly`; decision 34: Gamemaster menu: which cheats? keeps cheats gamemaster-only, this is a test tool, not a cheat). Wire through `engine/api.ts` (`action: "goto"`, `lib/api.ts` union) like `level`.
+- Unknown id or not in the loaded pool (other language, pack not installed) → new `GameError` code, game unchanged; message via `t()`.
+- Ids are `q-0001`-style: accept the full id and a bare number (`7` → `q-0007`) so pad users can type digits in the letter picker/keyboard.
+- UI: row «Ir a pregunta…» in `app/client/src/game/Overlay.svelte`, general part, only when `devMode` and a question is on screen; dialog with a text field (pad: letter picker / Steam keyboard as for names), submit → `request("goto", { id })` in `Game.svelte`; error shown in the dialog.
+- Strings via `t()` in every catalog (es, es-ES where it differs, en, de); `check:literals` passes.
+- Docs: `README.md` and AGENTS.md "Commands" `trivia-desktop` line: `TRIVIA_DEV_STEAM_USER=1` also shows «Ir a pregunta…».
+
+Done when: under the dev server or `TRIVIA_DEV_STEAM_USER=1`, a video question''s id opens it at the current level and an unknown id shows the message; without dev mode (plain `trivia-desktop`, or a real Steam user without the switch) the row is absent. Local CI passes.', '2026-10-13T15:46:09Z', NULL, 812);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -19111,6 +19125,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (693, 789, '2026-10-13T15:43:57Z', '2026-10-13T15:44:30Z', 'done', NULL, 0, '57753031a37de15d4f56add9e4e7ace977524f36', 'claude-opus-5-5[1m]', '5dcc7b76-2b62-44d7-894a-05a98371b977', 9, 18, 2731, 321221, 33885, 0.39001620000000004, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (694, 805, '2026-10-13T15:44:30Z', '2026-10-13T15:44:51Z', 'done', NULL, 0, '5b369234675dbf560f147162d03386bcaf446c46', 'claude-opus-5-5[1m]', '52ed1fc2-cb1d-4681-9c30-3ca2c859e649', 5, 10, 1199, 172468, 37864, 0.3614256, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (695, 806, '2026-10-13T15:44:51Z', '2026-10-13T15:45:35Z', 'done', NULL, 0, 'dba1ca51a0c0b1219642de5c0d71f997d04e73a8', 'claude-opus-5-5[1m]', 'f6d1b173-90fa-4c10-bf53-0f6b2678a58d', 8, 16, 3862, 315439, 37363, 0.4392958, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (696, 812, '2026-10-13T15:45:35Z', '2026-10-13T15:46:29Z', 'done', NULL, 0, '25650a17102bffa1c6544d143a7d2bb8c1e9b4b3', 'claude-opus-5-5[1m]', '8ddbfcf0-7002-40ca-b1c0-d7a3cc4282e6', 14, 28, 5084, 532400, 34680, 0.48571200000000003, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
