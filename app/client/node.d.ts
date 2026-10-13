@@ -1,4 +1,4 @@
-// The few Node APIs credits.ts uses; no @types/node (minimal dependencies).
+// The few Node APIs credits.ts and vite.config.ts use; no @types/node (minimal dependencies).
 declare module "node:fs" {
   export function existsSync(path: string): boolean;
   export function readdirSync(path: string): string[];

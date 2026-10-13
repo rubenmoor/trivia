@@ -6,9 +6,11 @@ import type { Credits, CreditKind as Kind, MediaCredit, SoundCredit } from "./sr
 
 const client = fileURLToPath(new URL(".", import.meta.url));
 const repo = `${client}../../`;
-const defaultPool = `${client}../data/pool.json`;
+const pool = `${client}../data/pool.json`;
 
 const KINDS: Kind[] = ["image", "audio", "video", "background"];
+// Same file rules as authoring/steam/credits_check.mjs.
+const AUDIO = /\.(m4a|mp3|ogg|oga|opus|wav)$/i;
 const PROVIDERS: Record<string, string> = { commons: "Wikimedia Commons", freesound: "Freesound", openverse: "Openverse" };
 
 interface Slot {
@@ -39,16 +41,17 @@ function title(sourceUrl: string): string {
   return path.split("/").filter(Boolean).pop() ?? sourceUrl;
 }
 
-function media(poolPath: string, warnings: string[]): MediaCredit[] {
-  const pool = JSON.parse(readFileSync(poolPath, "utf8")) as {
+function media(warnings: string[]): MediaCredit[] {
+  const data = JSON.parse(readFileSync(pool, "utf8")) as {
     questions: { id: string; media: Slot; background: Slot | null }[];
   };
   const byFile = new Map<string, MediaCredit>();
   const missing: string[] = [];
   const gfdl = new Set<string>();
-  for (const q of pool.questions) {
+  for (const q of data.questions) {
     for (const [slot, kind] of [[q.media, q.media.type], [q.background, "background"]] as const) {
       if (!slot?.file_url) continue;
+      if (!KINDS.includes(kind as Kind)) throw new Error(`credits: ${q.id}: unknown media type ${kind}`);
       if (!slot.license || !slot.source_url) {
         missing.push(`${q.id} (${kind === "background" ? "background" : "media"})`);
         continue;
@@ -71,11 +74,11 @@ function media(poolPath: string, warnings: string[]): MediaCredit[] {
   if (missing.length) throw new Error(`credits: media without license or source_url: ${missing.join(", ")}`);
   if (gfdl.size) warnings.push(`credits: GFDL media (needs the full text; PUB-3 replaces them): ${[...gfdl].join(", ")}`);
   return [...byFile.values()].sort(
-    (a, b) => KINDS.indexOf(a.kind) - KINDS.indexOf(b.kind) || a.title.localeCompare(b.title),
+    (a, b) => KINDS.indexOf(a.kind) - KINDS.indexOf(b.kind) || a.title.localeCompare(b.title, "en"),
   );
 }
 
-/** Rows of public/audio/CREDITS.md; every .m4a needs one. */
+/** Rows of public/audio/CREDITS.md, one per sound file. */
 function sounds(): { entries: SoundCredit[]; md: string[] } {
   const dir = `${client}public/audio/`;
   const rows = readFileSync(`${dir}CREDITS.md`, "utf8")
@@ -95,8 +98,10 @@ function sounds(): { entries: SoundCredit[]; md: string[] } {
     };
   });
   const listed = new Set(entries.map((e) => e.file));
-  const unlisted = readdirSync(dir).filter((f) => f.endsWith(".m4a") && !listed.has(f));
+  const unlisted = readdirSync(dir).filter((f) => AUDIO.test(f) && !listed.has(f));
   if (unlisted.length) throw new Error(`credits: sounds without a row in public/audio/CREDITS.md: ${unlisted.join(", ")}`);
+  const absent = [...listed].filter((f) => !existsSync(dir + f));
+  if (absent.length) throw new Error(`credits: rows in public/audio/CREDITS.md without a file: ${absent.join(", ")}`);
   return { entries, md: rows };
 }
 
@@ -177,7 +182,7 @@ function desktopPackages(): { entries: Library[]; texts: { name: string; text: s
       .replace(/^(github:)?([\w.-]+\/[\w.-]+)$/, "https://github.com/$2");
   const entries: Library[] = [];
   const texts: { name: string; text: string }[] = [];
-  for (const [name, { pkg, dir, versions }] of [...found].sort(([a], [b]) => a.localeCompare(b))) {
+  for (const [name, { pkg, dir, versions }] of [...found].sort(([a], [b]) => a.localeCompare(b, "en"))) {
     entries.push({
       name,
       version: [...versions].join(", "),
@@ -275,10 +280,11 @@ function markdown(
   return out.join("\n");
 }
 
-export function buildCredits(poolPath = defaultPool): { json: Credits; md: string; warnings: string[] } {
+function buildCredits(): { json: Credits; md: string; warnings: string[] } {
   const warnings: string[] = [];
   for (const f of FONTS) {
-    if (!existsSync(`${client}public/${f.license_file}`)) throw new Error(`credits: missing ${f.license_file}`);
+    for (const file of [f.file, f.license_file])
+      if (!existsSync(`${client}public/${file}`)) throw new Error(`credits: missing public/${file}`);
   }
   const s = sounds();
   const lib = svelte();
@@ -287,7 +293,7 @@ export function buildCredits(poolPath = defaultPool): { json: Credits; md: strin
   const json: Credits = {
     version: 1,
     game: game(),
-    media: media(poolPath, warnings),
+    media: media(warnings),
     sounds: { entries: s.entries, note: ELGAR },
     fonts: FONTS,
     glyphs: existsSync(`${client}src/game/Glyph.svelte`),
