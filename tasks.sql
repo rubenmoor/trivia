@@ -14358,6 +14358,29 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Existing hits (~42 in `app/client/src` per task 617''s trial, many in `authoring/ui`): mark deliberate fire-and-forget calls `void`, fix the rest; behaviour unchanged.
 - Hook into `npm run check` (already in the pre-commit checks, AGENTS.md, D-73); update `### Linter evaluation`.
 - `nix build .#app` with updated `npmDepsHash`; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-13T14:30:26Z', NULL, 617);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (745, 82, 'Credits screen: Elgar note as a t() string, not English text from credits.json', 'work', 'open', NULL, NULL, '`app/client/credits.ts` puts the English sentence `ELGAR` ("Victory march: Pomp and Circumstance No. 1 …") into `credits.json` as `sounds.note`; `app/client/src/game/Credits.svelte` shows it as is, so the Spanish/German Credits screen has one English paragraph. Breaks `decision 49: credits.json carries no UI text`. Found by task 721.
+
+## What
+- Drop `sounds.note` from `credits.json` (`Credits` type in `app/client/src/lib/types.ts`); `Credits.svelte` shows a new `credits.elgar` string from the locales (`es`, `en`, `de`; `es-ES` only if it differs), same content.
+- `CREDITS.md` keeps the English sentence (decision 49: CREDITS.md uses English): keep `ELGAR` in `credits.ts` for the markdown only.
+- `credits.json` `version` stays 1 unless something reads it (it is generated with the bundle; nothing old to read).
+
+## Check
+- `npm run check` (incl. `check:literals`), `npm test`, `npm run build`, `qgen validate`; `dist/CREDITS.md` byte-identical before/after; Credits screen shows the note in each UI language.', '2026-10-13T14:40:10Z', NULL, 721);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (746, 77, 'Joker presets on the pre-game screens per decision 99', 'work', 'open', NULL, NULL, 'Follow-up of `decision 99` (partly supersedes `decision 33`, jokers field only). `task 727` removes the gamemaster menu''s preset row and `CARDS`; this task adds the presets on the screens shown before a game starts.
+
+## What
+- Presets: **Estándar** (`STANDARD_JOKERS`) | **Sin límite** (every joker `null` = ∞) | **Personalizado** (the per-joker inputs).
+  - Picking Estándar or Sin límite fills the inputs; editing an input shows Personalizado; a budget equal to a preset shows that preset (so a saved choice opens on the right one).
+- `app/client/src/game/Choice.svelte` (gamemaster configure screen): a preset row above the per-joker steppers; keyboard/pad reachable like the other rows (←/→ cycles).
+- `app/client/src/game/Customize.svelte` («Personalizar partida», solo/group): the same preset row; its «reset» button becomes redundant with Estándar (drop it if so).
+- One shared helper (e.g. in `game/jokers.ts`: `presetOf(budget)`, `PRESETS`) for both screens, no copy.
+- Strings in es, es-ES, en, de (reuse the `overlay.*` keys freed by task 727 only if the names fit, else `configure.*`).
+- Engine/save: no change; presets are UI only.
+- Update the `plans/13-game-modes.md` "Configure game screen" spec: jokers field has presets again (decision 99).
+
+## Check
+- Walk both screens on `trivia` with a temp `TRIVIA_STATE` (mouse and keyboard only); `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client`.', '2026-10-13T14:40:28Z', NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
