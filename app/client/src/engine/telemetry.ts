@@ -1,6 +1,7 @@
 // Opt-in telemetry (plan 106, decision 119): this run's games from the save → plan 105's contract games.
 import type { Difficulty, JokerName } from "../lib/types.ts";
 import { gameChoice, JOKERS } from "./choice.ts";
+import { isOurs } from "./pool.ts";
 import { gameLocale, type EngineData, type GameRow, type SaveData } from "./state.ts";
 
 export interface TelemetryAnswer {
@@ -39,7 +40,6 @@ export interface Telemetry {
 /** History length per game key when the session began; running games only count. */
 export type TelemetryStart = Map<string, number>;
 
-const OUR_ID = /^q-\d{4,6}$/;
 const MAX_GAME_ANSWERS = 100;
 
 export const gameKey = (row: GameRow): string => `${row.id}@${row.started_on}`;
@@ -55,9 +55,9 @@ function counts(jokers: readonly JokerName[] | undefined): Partial<Record<JokerN
   return out;
 }
 
-/** Ours and shipped (milestone 15 excludes mod/player bundles here). */
+/** Ours and shipped; mod questions never (decision 128). */
 function ourQuestion(id: string, data: EngineData): boolean {
-  const bundle = OUR_ID.test(id) ? data.byId.get(id)?.bundle : undefined;
+  const bundle = isOurs(id) ? data.byId.get(id)?.bundle : undefined;
   return bundle !== undefined && data.bundles.some((b) => b.id === bundle);
 }
 

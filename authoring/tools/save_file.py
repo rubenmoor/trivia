@@ -23,7 +23,8 @@ def _doc():
 
 
 def _seen_blocked():
-    """(seen question IDs, one per event; blocked IDs); a v2 save is read as engine/save.ts upgrades it."""
+    """(seen question IDs, one per event; blocked IDs); a v2 save is read as engine/save.ts upgrades it. Mod ids
+    (`<mod>:<id>`, decision 128) dropped: player content never enters our counts."""
     doc = _doc()
     if doc is None:
         return [], set()
@@ -31,7 +32,8 @@ def _seen_blocked():
         burned = doc["burned"]
         return ([b["question_id"] for b in burned if b["player_id"] is not None],
                 {b["question_id"] for b in burned if b["player_id"] is None})
-    return [s["question_id"] for s in doc["seen"]], set(doc["blocked"])
+    return ([s["question_id"] for s in doc["seen"] if ":" not in s["question_id"]],
+            {b for b in doc["blocked"] if ":" not in b})
 
 
 def blocked_ids():
@@ -47,7 +49,7 @@ def seen_counts():
 def flags():
     """Flagged questions {"<id>": {"flagged_on", "player", "level"?, "note"?, "locale"?, "shown"?}} (decision 102:
     the game's question locale, absent = es; shown = {question, answer, wrong_answers}); a v3 save's reports read as
-    engine/save.ts upgrades them (decision 60)."""
+    engine/save.ts upgrades them (decision 60). Mod ids dropped (decision 128: no flags for player content)."""
     doc = _doc()
     if doc is None:
         return {}
@@ -59,7 +61,7 @@ def flags():
             note = " · ".join(n for n in ((old or {}).get("note"), r.get("note")) if n)
             out[r["question_id"]] = {**(old or {"flagged_on": r["reported_on"], "player": names.get(r["player_id"]),
                                                 "level": r["level"]}), **({"note": note} if note else {})}
-    return out
+    return {k: v for k, v in out.items() if ":" not in k}
 
 
 def stamp(flag):
