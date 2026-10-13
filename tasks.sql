@@ -10508,14 +10508,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - The three files listed in `## Part 2` (or "no findings"), every finding with a status.
 - Status per finding as in plan 72 "Report format": `fixed (task 533)` / `follow-up task N` / `decision N` / `superseded by task 302` / `won''t fix: <why>`; files without findings get a "no findings" row.', '2026-10-12T23:03:30Z', NULL, 514);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (534, 74, 'Short review of game.py, selection.py, flags.py; review categories.py', 'work', 'open', NULL, NULL, 'Task 3 of `plan 74: Python game server review (code review part 2)`; last task of the plan. Ground rules: plan 72 "Ground rules for every part"; plan 74 "Rules for this plan".
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (534, 74, 'Review categories.py (moved to authoring/tools/); log the deleted referee files', 'work', 'open', NULL, NULL, 'Task 3 of `plan 74: Python game server review (code review part 2)`; last task of the plan. Ground rules: plan 72 "Ground rules for every part"; plan 74 "Rules for this plan".
+
+Rewritten by `task 628: post-milestone cleanup`: `task 302: Delete the Python referee` is done. `app/server/game.py`, `selection.py`, `flags.py` and `authoring/tools/record_fixtures.py` are deleted; `categories.py` now lives at `authoring/tools/categories.py`; `app/server/` has 5 files (`main.py`, `save.py`, `paths.py`, `http_base.py`, `media_cache.py`).
 
 ## What
-- `app/server/game.py` (619), `selection.py` (130), `flags.py` (41): short review per the task 302 rule (`task 302: Delete the Python referee` deletes them). One row per file; findings only if task 302 must know them; everything else `superseded by task 302`.
-- Check task 302''s body against `decision 4: After the engine port, which routes does the Python game server keep besides static files and /api/save?` and today''s imports: `grep -rn "import \(game\|selection\|flags\|categories\)\|from \(game\|selection\|flags\|categories\) import" app/ authoring/` (known: `save_file.py` → `flags`, `selection`; `record_fixtures.py` → `game`, `selection`; `authoring/server/main.py` → `flags`).
-- Gaps (something authoring still needs that task 302''s body misses): `pm task set 302 --body -` with the addition if task 302 is open and not running; else a follow-up task in plan 51.
-- `app/server/categories.py` (58): full review (it survives, moved to `authoring/tools/` by task 302): caching, bundle/locale handling, errors on missing/malformed `categories.json`. Small fixes here only if they don''t conflict with the move; otherwise a follow-up task in plan 74 noting it runs after task 302.
-- Duplication candidates (log for part 10): `selection.py` ↔ `app/client/src/engine/selection.ts`; `categories.py` ↔ the client''s category loading.
+- `game.py`, `selection.py`, `flags.py`: one row each in `## Part 2`, status `removed (task 302)`; no review.
+- `authoring/tools/categories.py` (59): full review: caching, bundle/locale handling, errors on missing/malformed `categories.json`, its callers (`grep -rn categories authoring/`). The game reads categories as static files (D-90).
+- Duplication candidate (log for part 10): `categories.py` ↔ the client''s category loading (`app/client/src/lib/data.ts`, `engine/pool.ts`).
 - Part 1 rows `handed to part 2` for these files: re-check, final status in `## Part 2`, quoting the part 1 row.
 
 ## Check
@@ -10523,8 +10523,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
 
 ## Done when
-- All 9 files of `app/server/` are listed in `## Part 2`, every finding with a status; every part 1 row `handed to part 2` has its final status there.
-- Status per finding as in plan 72 "Report format": `fixed (task 534)` / `follow-up task N` / `decision N` / `superseded by task 302` / `won''t fix: <why>`; files without findings get a "no findings" row.', '2026-10-12T23:03:30Z', NULL, 514);
+- Every file of `app/server/` (today''s 5, plus the 3 removed ones as `removed (task 302)`) and `authoring/tools/categories.py` listed in `## Part 2`, every finding with a status; every part 1 row `handed to part 2` has its final status there.
+- Status per finding as in plan 72 "Report format": `fixed (task 534)` / `follow-up task N` / `decision N` / `won''t fix: <why>`; files without findings get a "no findings" row.', '2026-10-12T23:03:30Z', NULL, 514);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (535, 75, 'Review game.ts', 'work', 'open', NULL, NULL, 'Task 1 of `plan 75: TS engine review (code review part 3)`. Needs `code-review.md` with `## Part 3` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 75 "Rules for this plan".
 
 ## First
@@ -11398,7 +11398,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - Both files listed in `## Part 8` with findings and status.', '2026-10-12T23:08:16Z', NULL, 520);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (569, 80, 'Review data and path helpers: layout.py, translations.py, pool_export.py, save_file.py; short review of record_fixtures.py', 'work', 'open', NULL, NULL, 'Task 3 of `plan 80: Other authoring tools review (code review part 8)`: review these files, fix what is cheap, log every file and finding in `## Part 8` of `code-review.md` (no-findings rows included).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (569, 80, 'Review data and path helpers: layout.py, translations.py, pool_export.py, save_file.py', 'work', 'open', NULL, NULL, 'Task 3 of `plan 80: Other authoring tools review (code review part 8)`: review these files, fix what is cheap, log every file and finding in `## Part 8` of `code-review.md` (no-findings rows included).
 
 ## First
 - Needs `code-review.md` with `## Part 8` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so.
@@ -11422,12 +11422,12 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `layout.py` (≈38 lines): paths vs. `directory.md`; `TRIVIA_WORK` vs. `app/server/paths.py` env handling; Windows paths; `sys.path` tricks to import `app/server`; docstring → task 303 while open.
 - `translations.py` (≈100): `save()` atomic + lock (shared with `authoring/server`); `source_hash` field set vs. `TEXT_FIELDS`; `is_stale`; `LOCALES` (D-78); `yield_rate` division by zero; server locale helpers → task 443 while open.
 - `pool_export.py` (≈41): byte-stable output (key order, `ensure_ascii`, trailing newline); `write` atomicity; `exports` vs. `translations.exports`; `MEDIA_PLAY_FIELDS`/`BACKGROUND_PLAY_FIELDS` → task 232 while open.
-- `save_file.py` (≈85): read-only per D-59; `record_applied` atomicity; missing/corrupt `game.json`; `_legacy` → `superseded by task 302`; burns → task 427 while open.
-- `record_fixtures.py` (852, short): task 302 rule: one pass for anything that breaks `npm test` today; other rows `superseded by task 302`.
+- `save_file.py` (≈85): read-only per D-59; `record_applied` atomicity; missing/corrupt `game.json`; burns → task 427 while open.
+- `record_fixtures.py`: deleted by task 302 (done); one row `removed (task 302)`, no review.
 - Duplication candidates: `layout.py` ↔ `app/server/paths.py`; `save_file.py` ↔ `app/server/save.py` / `app/desktop/save.mjs` (envelope, path); `pool_export.py`/`translations.export_text` ↔ qgen `cmd_export`; `translations.LOCALES` ↔ qgen `LANGUAGES`/`LAUNCH_LOCALES`.
 
 ## Done when
-- The five files listed in `## Part 8` with findings and status.', '2026-10-12T23:08:16Z', NULL, 520);
+- The four files and the removed `record_fixtures.py` listed in `## Part 8` with findings and status.', '2026-10-12T23:08:16Z', NULL, 520);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (570, 80, 'Review media tooling: media.py, download.py', 'work', 'open', NULL, NULL, 'Task 4 of `plan 80: Other authoring tools review (code review part 8)`: review these files, fix what is cheap, log every file and finding in `## Part 8` of `code-review.md` (no-findings rows included).
 
 ## First
@@ -12573,12 +12573,12 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Don''t break flags we don''t own: Electron/Chromium switches (`--no-sandbox`, `--enable-features=…`, `--inspect`), the app path Electron puts in argv in dev, and whatever Steam passes at launch later (SW-8); either allow-list those or reject only `--`-flags no one knows (check `app.commandLine`/Chromium switch list)
 - Same for the `trivia-desktop` wrapper in `flake.nix` if it passes argv on
 - Packaged build: same behaviour (no console on Windows: show an error dialog instead of stderr only)', '2026-10-13T02:54:13Z', NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (628, 2, 'post-milestone cleanup', 'cleanup', 'open', NULL, NULL, '* rewrite top-level .md files to reflect the current state of the project
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (628, 2, 'post-milestone cleanup', 'cleanup', 'done', NULL, '2026-10-12, README.md (status, intro, save migration), directory.md (state/); tasks 534, 569 rewritten for the deleted referee files', '* rewrite top-level .md files to reflect the current state of the project
 * remove files that have become redundant
 * suggest entirely new files, if necessary
 * delete code that isn''t actually used
 * check pending decisions if they are still relevant and really pending
-* check other milestones if their contents are up-to-date and update them if necessary', '2026-10-13T03:54:07Z', NULL, NULL);
+* check other milestones if their contents are up-to-date and update them if necessary', '2026-10-13T03:54:07Z', '2026-10-13T03:56:13Z', NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -13754,6 +13754,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (448, 355, '2026-10-13T03:45:23Z', '2026-10-13T03:45:33Z', 'done', NULL, 0, '2ef2043174fc5a2d1f154d07c3a1df7406db9864', 'claude-opus-5-5[1m]', '52678d37-c139-4973-ad8c-12d76e02127d', 3, 6, 781, 71419, 21812, 0.2044238, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (449, 302, '2026-10-13T03:45:33Z', '2026-10-13T03:50:40Z', 'done', NULL, 0, 'c3b683f16f5fb191c476aec0765fd368fe1a0fef', 'claude-opus-5-5[1m]', 'a70e1722-0cb9-4e85-aa25-9294acceb408', 37, 72, 17325, 2269505, 74075, 1.393289, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (450, 303, '2026-10-13T03:50:40Z', '2026-10-13T03:54:07Z', 'done', NULL, 0, '17e9e17d61aa69ac567d0815c690efa3c27e5b80', 'claude-opus-5-5[1m]', 'd93f24fb-f792-49d0-afa6-8b41193fb7b4', 42, 82, 17549, 2683725, 79305, 1.522493, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (451, 628, '2026-10-13T03:54:07Z', '2026-10-13T03:56:22Z', 'done', NULL, 0, '0dd1792af553214f03ce6e08de78ec41de5ded39', 'claude-opus-5-5[1m]', '83921fff-b94a-490f-a0bf-e89cd4373958', 28, 52, 9878, 1636710, 71522, 1.0972859999999998, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

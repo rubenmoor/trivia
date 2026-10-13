@@ -2,17 +2,18 @@
 
 A family trivia party game for the living-room TV. The family plays as one team against the gamemaster: answer 12 questions of rising difficulty to win, with jokers to get out of a tight spot. Questions are in Spanish. They are drafted, fact-checked and illustrated with Claude, and the gamemaster reviews them. Images, audio and video come from Wikimedia Commons.
 
-Everything runs locally and offline: a small Python server (standard library only) serves a Svelte client and the question pool. Media files aren't in the repo; they are downloaded once into a local cache.
+Everything runs locally and offline: the game (a Svelte client with the game engine) runs in the browser, served with the question pool by a small Python server (standard library only), or in the Electron desktop shell without Python. Media files aren't in the repo; they are downloaded once into a local cache.
 
 ## Status
 
 **The family game is done** (October 2026): a full game night on the TV with sound, jokers and the final look, played by player name without touching code.
 
-- **Questions:** about 480 approved, on a difficulty scale tuned for young teens. The top levels (9–10) are thin, and more batches are being made.
-- **Media:** about 360 approved questions have a picked image, audio or video; about 120 still have none.
-- **Next:** more content, a game engine in TypeScript (so the game runs without Python), UI strings in a catalog, a media license audit, and age groups and bundles in the game. A public Steam release is a separate, later track.
+- **Questions:** about 1,140 approved on the shared difficulty scale 1–15 (D-38), each with a picked image, audio or video; more batches are being made. Players choose an age group and bundles before a game.
+- **Engine:** the referee runs in the browser (TypeScript, `app/client/src/engine/`); the Python server only serves files and the save (D-90).
+- **UI:** every on-screen string comes from a catalog (`es`, `es-ES`, `en`, `de`); question translations aren't shipped yet.
+- **Next:** more content, screen polish, code quality, and the Steam release track (desktop build, store, release).
 
-Milestones and open tasks: [`plans/project.md`](plans/project.md). Where each file lives: [`directory.md`](directory.md).
+Milestones, plans and open tasks: `pm status` (`tasks.sql`); the older overview is [`plans/project.md`](plans/project.md). Where each file lives: [`directory.md`](directory.md).
 
 ## Getting started
 
@@ -39,7 +40,7 @@ Open the page on the TV's browser and go fullscreen. Pick or type a player name 
 
 - `Esc` (or the menu button) opens the admin menu: skip, undo, restart, fullscreen, volume, joker budget. It links to the review tool and stats while the authoring server runs.
 - `M` (or the faint flag next to the menu button) flags the question for review: a dialog with an optional note, `Enter` flags, `Esc` cancels; on a flagged question it edits the note or unflags. The next start of `trivia-authoring` marks it «needs work» with the note; the menu's «Preguntas marcadas» lists the flags with «Copiar» for players without authoring tools.
-- Game saves, burned questions (questions a player has already seen) and flags live in `state/game.json`. Delete it to reset everything. The first start after PORT-7 migrates `state/game.sqlite` + `flags.json` into it; both stay as backups.
+- Game saves, burned questions (questions a player has already seen) and flags live in `state/game.json`. Delete it to reset everything. An old `state/game.sqlite` + `flags.json` is migrated into it once at start; both stay as backups.
 - The game loads the pool once per page: reload the page (F5) after `qgen export` or a review session.
 - Desktop shell (`trivia-desktop`, packaged builds): the save is `save/game.json` in `%APPDATA%\trivia` (Windows) or `~/.config/trivia` (Linux, Steam Deck); in this checkout `state/desktop/game.json`; `TRIVIA_SAVE_DIR` overrides. A broken or newer save moves to `save/backup/` and the game starts fresh.
 - Bring the browser game's save over: `trivia-desktop --import-save state/game.json` (only when no desktop save exists yet), or copy `state/game.json` into the save folder.

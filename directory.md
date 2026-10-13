@@ -63,7 +63,7 @@ What lives where. The repo is split into what ships and what doesn't ([`plans/19
 | `AGENTS.md` | Guide for AI coding assistants |
 | `flake.nix`, `flake.lock` | Dev shell and packages (D-18) |
 | `package.json` | npm workspaces: `app/client`, `authoring/ui` |
-| `state/` | Game saves (gitignored): `game.sqlite` (until the switch-over, then the backup), `game.json` (players, games, burns, flags; plan 49), `flags.json` (flags before the switch-over), `flags-applied.json` (flags already turned into reviews, written by `trivia-authoring`), `desktop/` (`trivia-desktop`'s save in dev: `game.json`, `backup/`; D-72) |
+| `state/` | Game saves (gitignored): `game.json` (players, games, burns, flags; plan 49), `game.sqlite` + `flags.json` (pre-engine saves, kept as backups after the one-time migration), `flags-applied.json` (flags already turned into reviews, written by `trivia-authoring`), `desktop/` (`trivia-desktop`'s save in dev: `game.json`, `backup/`; D-72) |
 | `media/` | Media cache (gitignored, D-17) |
 | `work/` | Pipeline work files, one folder per run (gitignored) |
 | `work/tr-<locale>-<n>/` | One translation run (D-87): `run.json` (`mode: translate`, `locale`, `ids`, `stale`), `translations/`, `not-travelling.json`, the review, record and audit files |
