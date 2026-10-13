@@ -10036,8 +10036,10 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Done when: checklist written, four decisions linked.', '2026-10-12T19:44:17Z', '2026-10-13T05:09:01Z', 452);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (459, 69, 'LUI-5: playtest fixes and close-out', 'work', 'open', 340, NULL, 'Apply the playtest answers and close LUI-4/LUI-5.
 
+- Plan 100 (UI wording: style guides, TV-check fixes, screen gallery) runs first: its TV-check fixes and gallery-flag fixes are in; don''t redo them. If its gallery fixes task is still open, stop with a note.
+- Read the locale style guide `app/client/src/locales/style/<locale>.md` first; fixes follow it.
 - Fixes from the "Playtest passed? (<lang>)" answers: catalogs only; anything bigger → `pm task add`.
-- Fixes follow the locale style guide `app/client/src/locales/style/<locale>.md` (part 13 of plan 9) once it exists; new bad patterns found go into it.
+- New bad patterns found in the playtest go into the locale''s guide.
 - `pm decision consequences` on each playtest decision.
 - `plans/15a-ui-translation.md`: LUI-4, LUI-5 `[x]` with notes (date, what changed); status line.
 - `plans/project.md`; `plans/11-steam.md` row 15 if 15a is done.
@@ -16340,8 +16342,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Order: style guides and TV-check fixes first, then gallery, then review.', '2026-10-13T15:39:07Z', '2026-10-13T15:41:14Z', 790);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (797, 100, 'create tasks for plan 100', 'split', 'open', 1000, NULL, 'Split plan 100 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:41:11Z', NULL, 796);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (798, 69, 'create tasks for plan 69', 'split', 'open', 1000, NULL, 'Split plan 69 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:41:54Z', NULL, 792);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (798, 69, 'create tasks for plan 69', 'split', 'done', 1000, '2026-10-13, task 459 body aligned with plan 69 revision (plan 100 first, style guide)', 'Split plan 69 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:41:54Z', '2026-10-13T15:42:16Z', 792);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -18287,6 +18289,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (685, 796, '2026-10-13T15:39:20Z', '2026-10-13T15:41:23Z', 'done', NULL, 0, '916d0be89604b46f7cf16115b1deb77e313f457c', 'claude-opus-5-5[1m]', 'e88cd6f4-1e3f-4fb3-8c6d-095b9c665189', 14, 26, 11100, 714564, 66169, 0.8943688, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (686, 791, '2026-10-13T15:41:23Z', '2026-10-13T15:41:36Z', 'done', NULL, 0, '123f95f9c72ca78f5312b7287730b7228e2ff080', 'claude-opus-5-5[1m]', '61b60124-758e-4a7c-a59c-b1983aa93d22', 3, 6, 857, 78456, 23932, 0.2243112, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (687, 792, '2026-10-13T15:41:36Z', '2026-10-13T15:42:04Z', 'done', NULL, 0, '98c85d8cb971aa34f83fef76413fb94193733131', 'claude-opus-5-5[1m]', '58088217-a62a-4445-9539-77d1b1bf7af5', 7, 14, 1672, 251134, 30887, 0.3308188, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (688, 798, '2026-10-13T15:42:04Z', '2026-10-13T15:42:23Z', 'done', NULL, 0, '2e303f4b7a28179d10964a4d3324798b98850caf', 'claude-opus-5-5[1m]', 'ff29e625-6d70-4481-8387-ece2962b9c0e', 5, 10, 1506, 158422, 29171, 0.2952124, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
