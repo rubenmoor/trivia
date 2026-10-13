@@ -231,6 +231,19 @@ export interface Overview {
     human: number;
     llm_approved: number;
     report: string | null;
+    /** A translation run (tr-*): its locale (plan 67); null for Spanish batches. */
+    locale: string | null;
+  }[];
+  /** Per locale with a translation file (plan 67); untranslated, not_translatable: approved sources. */
+  locales: {
+    locale: string;
+    approved: number;
+    needs_work: number;
+    draft: number;
+    rejected: number;
+    stale: number;
+    not_translatable: number;
+    untranslated: number;
   }[];
   /** The profile (= the save, plan 65), pool minus blocked. */
   supply: {

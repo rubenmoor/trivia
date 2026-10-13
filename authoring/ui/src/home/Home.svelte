@@ -77,7 +77,7 @@
     return out.filter((t) => t.count > 0);
   });
 
-  const llmBatches = $derived(overview?.batches.filter((b) => b.llm_approved > 0) ?? []);
+  const llmBatches = $derived(overview?.batches.filter((b) => !b.locale && b.llm_approved > 0) ?? []);
 
   /** "123", "q-123" or "q-0123" → "q-0123". */
   function questionId(input: string): string | null {
@@ -158,7 +158,12 @@
           <tbody>
             {#each overview.batches as b (b.name)}
               <tr>
-                <td><a href={review({ batch: b.name })}>{b.name === "none" ? "(no batch)" : b.name}</a></td>
+                <td>
+                  <a href={review(b.locale ? { batch: b.name, locale: b.locale } : { batch: b.name })}
+                    >{b.name === "none" ? "(no batch)" : b.name}</a
+                  >
+                  {#if b.locale}<a class="muted small" href={review({ batch: b.name, locale: b.locale, sample: "1" })}>sample</a>{/if}
+                </td>
                 <td class="muted">{b.date ?? "–"}</td>
                 <td class="num">{b.merged}</td>
                 <td class="num">{b.approved}</td>
@@ -173,6 +178,50 @@
         </table>
       </div>
     </section>
+
+    {#if overview.locales.length}
+      <section class="panel">
+        <h2>Translations</h2>
+        <p class="muted small">
+          Per locale its translations by status; stale: the Spanish text changed since. Approved sources not
+          translatable or without a translation yet.
+        </p>
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Locale</th>
+                <th class="num">Approved</th>
+                <th class="num">Needs work</th>
+                <th class="num">Draft</th>
+                <th class="num">Rejected</th>
+                <th class="num">Stale</th>
+                <th class="num">Not translatable</th>
+                <th class="num">Untranslated</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              {#each overview.locales as l (l.locale)}
+                <tr>
+                  <td><a href={review({ locale: l.locale })}>{l.locale}</a></td>
+                  <td class="num"><a href={review({ locale: l.locale, status: "approved" })}>{l.approved}</a></td>
+                  <td class="num" class:warn={l.needs_work > 0}
+                    ><a href={review({ locale: l.locale, status: "needs_work" })}>{l.needs_work}</a></td
+                  >
+                  <td class="num" class:warn={l.draft > 0}><a href={review({ locale: l.locale, status: "draft" })}>{l.draft}</a></td>
+                  <td class="num"><a href={review({ locale: l.locale, status: "rejected" })}>{l.rejected}</a></td>
+                  <td class="num" class:warn={l.stale > 0}><a href={review({ locale: l.locale, stale: "1" })}>{l.stale}</a></td>
+                  <td class="num">{l.not_translatable}</td>
+                  <td class="num">{l.untranslated}</td>
+                  <td><a href="/stats/difficulty?{new URLSearchParams({ locale: l.locale })}">stats</a></td>
+                </tr>
+              {/each}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    {/if}
 
     <section class="panel">
       <h2>Game readiness</h2>

@@ -29,7 +29,8 @@ API:
                                                    source (Spanish text, difficulty, status), stale, locale; batch, status,
                                                    reviewer, sample, audit filter the translation (audit: its own,
                                                    work/<batch>/audit/<id>.json), bundle, subcategory, media, licence the
-                                                   source; stale=1 only stale ones (plan 67)
+                                                   source; stale=1 only stale ones, plays=1 only playing ones
+                                                   (translations.plays: the stats pages) (plan 67)
     POST /api/questions/<id>/review                body {"review": null | {"decision", "feedback"}}
                                                    sets review + status as a human review (D-33), returns
                                                    the question; undo sends back a whole earlier review
@@ -53,7 +54,8 @@ API:
                                                    tr-<locale>-<n>: its translation, item with "locale" (plan 67)
     GET  /api/overview                             what the start page shows (RV-12, authoring/server/overview.py)
     GET  /api/stats/media?bundle=colombia          approved questions per media role and image resolution
-                                                   (RV-23, authoring/server/media_stats.py)
+         &locale=en                                (RV-23, authoring/server/media_stats.py); locale: the sources of
+                                                   its playing translations (plan 67)
     GET  /reports/<batch>.md                       a batch report (authoring/reports/), as plain text
     GET  /media?url=<file_url>                     a picked media file from the cache (any question in the
                                                    source pool, approved or not); downloaded first on a miss
@@ -190,6 +192,8 @@ def locale_questions(locale, query):
         pairs = [(t, q) for t, q in pairs if media.to_replace(q)]
     if query.get("stale") == "1":
         pairs = [(t, q) for t, q in pairs if translations.is_stale(t, q)]
+    if query.get("plays") == "1":
+        pairs = [(t, q) for t, q in pairs if translations.plays(t, q)]
     if query.get("sample") and query.get("batch"):
         by_id = {t["id"]: (t, q) for t, q in pairs}
         pairs = [by_id[i] for i in spot_checks.sample(query["batch"]) if i in by_id]
@@ -413,9 +417,17 @@ class Handler(BaseHandler):
         if url.path == "/api/overview":
             return self.send_json(200, overview.build(load_pool()["questions"], load_bundles()))
         if url.path == "/api/stats/media":
-            bundle = parse_qs(url.query).get("bundle", [None])[0]
+            query = {k: v[0] for k, v in parse_qs(url.query).items()}
+            try:
+                locale = locale_of(query.get("locale"))
+            except ValueError as e:
+                return self.send_json(400, {"error": str(e)})
+            bundle = query.get("bundle")
             qs = [q for q in load_pool()["questions"]
                   if q["status"] == "approved" and (not bundle or q.get("bundle") == bundle)]
+            if locale:
+                tr = {t["id"]: t for t in translations.load(locale)["questions"]}
+                qs = [q for q in qs if q["id"] in tr and translations.plays(tr[q["id"]], q)]
             return self.send_json(200, media_stats.build(qs))
         if url.path == "/api/age-groups":
             return self.send_json(200, json.loads(layout.AGE_GROUPS.read_text(encoding="utf-8")))

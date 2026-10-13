@@ -2,7 +2,7 @@
   // Sparse areas of the approved pool, worst first (RV-20): categories with fewer questions
   // than a game asks, and subcategories a player sees whole in a game or two. A subcategory the
   // next `qgen batch` will pick (the 30 with the fewest approved questions) is marked.
-  import type { Category, Question } from "../lib/types";
+  import type { Category, Names, Question } from "../lib/types";
   import { breakdown, reviewLink, SPARSE_CATEGORY, SPARSE_SUBCATEGORY } from "./breakdown";
   import "./chart.css";
 
@@ -11,17 +11,26 @@
     categories,
     nextBatch,
     compact = false,
-  }: { questions: Question[]; categories: Category[]; nextBatch: string[] | null; compact?: boolean } = $props();
+    names = null,
+    locale = null,
+  }: {
+    questions: Question[];
+    categories: Category[];
+    nextBatch: string[] | null;
+    compact?: boolean;
+    names?: Names | null;
+    locale?: string | null;
+  } = $props();
 
   /** In compact form (start page) the subcategory list stops here and links to the full page. */
   const COMPACT_ROWS = 8;
 
-  const rows = $derived(breakdown(questions, categories));
+  const rows = $derived(breakdown(questions, categories, names));
   // Stable sorts: ties keep the order of app/data/categories.json.
   const sparseCategories = $derived(rows.filter((r) => r.count < SPARSE_CATEGORY).sort((a, b) => a.count - b.count));
   const sparseSubs = $derived(
     rows
-      .flatMap((r) => r.subs.map((s) => ({ ...s, category: r.name })))
+      .flatMap((r) => r.subs.map((s) => ({ ...s, category: r.label })))
       .filter((s) => s.count < SPARSE_SUBCATEGORY)
       .sort((a, b) => a.count - b.count),
   );
@@ -44,7 +53,7 @@
       {#if sparseCategories.length}
         <ul>
           {#each sparseCategories as c (c.name)}
-            <li><span>{c.name}</span><span class="num">{c.count}</span></li>
+            <li><span title={names ? c.name : undefined}>{c.label}</span><span class="num">{c.count}</span></li>
           {/each}
         </ul>
       {:else}
@@ -58,7 +67,7 @@
           {#each shownSubs as s (s.name)}
             <li>
               <span>
-                <a href={reviewLink(s.name)}>{s.name}</a>
+                <a href={reviewLink(s.name, locale)} title={names ? s.name : undefined}>{s.label}</a>
                 {#if !compact}<span class="cat">{s.category}</span>{/if}
                 {#if picked.has(s.name)}<span class="next">next batch</span>{/if}
               </span>

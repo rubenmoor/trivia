@@ -1,7 +1,7 @@
 <script lang="ts">
   // Histogram: questions per difficulty over the whole shared scale 1–15 (D-38), with the default
   // age group's window (young teens) shaded (RV-18); with targets a tick per level (D-53).
-  import type { AgeGroups, BundleTargets, Question } from "../lib/types";
+  import type { AgeGroups, BundleTargets, Names, Question } from "../lib/types";
   import "./chart.css";
 
   let {
@@ -9,7 +9,14 @@
     ageGroups,
     targets = null,
     compact = false,
-  }: { questions: Question[]; ageGroups: AgeGroups; targets?: BundleTargets | null; compact?: boolean } = $props();
+    names = null,
+  }: {
+    questions: Question[];
+    ageGroups: AgeGroups;
+    targets?: BundleTargets | null;
+    compact?: boolean;
+    names?: Names | null;
+  } = $props();
 
   /** The default age group (engine DEFAULT_AGE_GROUP). */
   const PLAYED_GROUP = "young_teens";
@@ -56,7 +63,7 @@
   <h2>Questions per difficulty</h2>
   <p class="sub">
     {total} questions · average difficulty {mean.toFixed(1)} · {LEVELS[0]} = easiest, {LEVELS[LEVELS.length - 1]} = hardest
-    {#if played}· shaded: {played.window[0]}–{played.window[1]}, the default age group's window ({played.name}){/if}
+    {#if played}· shaded: {played.window[0]}–{played.window[1]}, the default age group's window ({names?.age_groups[played.id] ?? played.name}){/if}
     {#if targets}· tick: target ({total} / {targets.total} approved){/if}
   </p>
 

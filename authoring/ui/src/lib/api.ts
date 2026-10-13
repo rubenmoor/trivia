@@ -30,6 +30,8 @@ export interface QuestionFilter {
   locale?: string | null;
   /** With locale: "1" = only stale translations. */
   stale?: string | null;
+  /** With locale: "1" = only playing translations (translations.plays). */
+  plays?: string | null;
 }
 
 export async function fetchQuestions(filter: QuestionFilter = {}): Promise<Question[]> {
@@ -98,9 +100,12 @@ export async function fetchOverview(): Promise<Overview> {
   return json(await call("/api/overview"));
 }
 
-/** Approved questions per media role and image resolution (RV-23). */
-export async function fetchMediaStats(bundle: string | null): Promise<MediaStats> {
-  return json(await call(`/api/stats/media${bundle ? `?${new URLSearchParams({ bundle })}` : ""}`));
+/** Approved questions per media role and image resolution (RV-23); with locale its playing translations' sources. */
+export async function fetchMediaStats(bundle: string | null, locale: string | null = null): Promise<MediaStats> {
+  const params = new URLSearchParams();
+  if (bundle) params.set("bundle", bundle);
+  if (locale) params.set("locale", locale);
+  return json(await call(`/api/stats/media${params.size ? `?${params}` : ""}`));
 }
 
 /** Spot-check size, problem kinds and every recorded spot check (plan 16). */

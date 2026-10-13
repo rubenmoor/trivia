@@ -4,9 +4,11 @@
   // and media (RV-23).
   // URL: /stats/categories, /stats/subcategories, /stats/difficulty or /stats/media; ?bundle=colombia counts one
   // bundle only (RV-21), without it every bundle (the family's default, D-39).
+  // ?locale=en|de: the locale's playing translations with their own difficulty, its names (plan 67).
   import { onMount } from "svelte";
-  import { fetchAgeGroups, fetchBundles, fetchCategories, fetchMediaStats, fetchOverview, fetchQuestions, fetchTargets } from "../lib/api";
-  import type { AgeGroups, Bundle, BundleTargets, Category, MediaStats as MediaStatsData, Question } from "../lib/types";
+  import { LOCALES } from "$app/lib/data";
+  import { fetchAgeGroups, fetchBundles, fetchCategories, fetchMediaStats, fetchNames, fetchOverview, fetchQuestions, fetchTargets } from "../lib/api";
+  import type { AgeGroups, Bundle, BundleTargets, Category, MediaStats as MediaStatsData, Names, Question } from "../lib/types";
   import Nav from "../lib/Nav.svelte";
   import CategoryChart from "./CategoryChart.svelte";
   import DifficultyChart from "./DifficultyChart.svelte";
@@ -21,10 +23,13 @@
       : location.pathname.startsWith("/stats/media")
         ? "media"
         : "categories";
-  const bundle = new URLSearchParams(location.search).get("bundle");
-  /** Link to a stats page or bundle, keeping the other choice. */
-  function href(path: string, b: string | null = bundle) {
-    return b ? `${path}?${new URLSearchParams({ bundle: b })}` : path;
+  const params = new URLSearchParams(location.search);
+  const bundle = params.get("bundle");
+  const locale = params.get("locale") === "es" ? null : params.get("locale");
+  /** Link to a stats page, bundle or locale, keeping the other choices. */
+  function href(path: string, b: string | null = bundle, l: string | null = locale) {
+    const q = new URLSearchParams({ ...(b ? { bundle: b } : {}), ...(l && l !== "es" ? { locale: l } : {}) });
+    return q.size ? `${path}?${q}` : path;
   }
   const path = `/stats/${page}`;
 
@@ -33,6 +38,7 @@
   let ageGroups = $state<AgeGroups | null>(null);
   let bundles = $state<Bundle[]>([]);
   let mediaStats = $state<MediaStatsData | null>(null);
+  let names = $state<Names | null>(null);
   /** The subcategories the next `qgen batch` picks; null until loaded or when it fails. */
   let nextBatch = $state<string[] | null>(null);
   /** The selected bundle's targets (D-53); null for all bundles or a bundle without targets. */
@@ -41,7 +47,7 @@
   let error = $state<string | null>(null);
 
   onMount(async () => {
-    if (page === "subcategories") {
+    if (page === "subcategories" && !locale) {
       // Only for the "next batch" marks: the page works without it.
       fetchOverview().then((o) => (nextBatch = o.next_batch_subcategories), () => {});
     }
@@ -51,14 +57,19 @@
     }
     try {
       if (page === "media") {
-        [mediaStats, bundles] = await Promise.all([fetchMediaStats(bundle), fetchBundles()]);
+        [mediaStats, bundles, names] = await Promise.all([
+          fetchMediaStats(bundle, locale),
+          fetchBundles(),
+          locale ? fetchNames(locale) : null,
+        ]);
         return;
       }
-      [questions, categories, ageGroups, bundles] = await Promise.all([
-        fetchQuestions({ status: "approved", bundle }),
+      [questions, categories, ageGroups, bundles, names] = await Promise.all([
+        fetchQuestions(locale ? { locale, plays: "1", bundle } : { status: "approved", bundle }),
         fetchCategories(),
         fetchAgeGroups(),
         fetchBundles(),
+        locale ? fetchNames(locale) : null,
       ]);
     } catch (e) {
       error = e instanceof Error ? e.message : String(e);
@@ -79,9 +90,13 @@
   </nav>
 
   <p class="scope muted">
-    Approved questions only · bundles:
+    {locale ? "Playing translations only" : "Approved questions only"} · bundles:
     <a href={href(path, null)} class:current={!bundle}>all</a>
-    {#each bundles as b (b.id)}{" · "}<a href={href(path, b.id)} class:current={bundle === b.id}>{b.name}</a>{/each}
+    {#each bundles as b (b.id)}{" · "}<a href={href(path, b.id)} class:current={bundle === b.id}
+        >{names?.bundles[b.id]?.name ?? b.name}</a
+      >{/each}
+    · language:
+    {#each LOCALES as l, k}{k ? " · " : ""}<a href={href(path, bundle, l)} class:current={l === (locale ?? "es")}>{l}</a>{/each}
   </p>
 
   {#if loading}
@@ -89,14 +104,14 @@
   {:else if error}
     <p class="error">{error}</p>
   {:else if page === "categories"}
-    <CategoryChart {questions} {categories} {targets} {bundle} />
+    <CategoryChart {questions} {categories} {targets} {bundle} {names} {locale} />
   {:else if page === "subcategories"}
-    <SparseList {questions} {categories} {nextBatch} />
-    <SubcategoryTable {questions} {categories} />
+    <SparseList {questions} {categories} {nextBatch} {names} {locale} />
+    <SubcategoryTable {questions} {categories} {names} {locale} />
   {:else if page === "media"}
     {#if mediaStats}<MediaStats stats={mediaStats} />{/if}
   {:else if ageGroups}
-    <DifficultyChart {questions} {ageGroups} {targets} />
+    <DifficultyChart {questions} {ageGroups} {targets} {names} />
   {/if}
 </main>
 

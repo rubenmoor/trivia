@@ -1,7 +1,7 @@
 <script lang="ts">
   // Questions per broad category (D-19), most first. Click a bar to open its subcategories
   // (RV-19); each one links to its approved questions in the review tool. With targets: approved / derived share (D-53).
-  import type { BundleTargets, Category, Question } from "../lib/types";
+  import type { BundleTargets, Category, Names, Question } from "../lib/types";
   import { breakdown, reviewLink, type CategoryRow } from "./breakdown";
   import "./chart.css";
 
@@ -11,6 +11,8 @@
     targets = null,
     bundle = null,
     compact = false,
+    names = null,
+    locale = null,
   }: {
     questions: Question[];
     categories: Category[];
@@ -18,10 +20,13 @@
     targets?: BundleTargets | null;
     bundle?: string | null;
     compact?: boolean;
+    /** A translation locale's names and code (plan 67): labels and review links. */
+    names?: Names | null;
+    locale?: string | null;
   } = $props();
 
   // Stable sort: ties keep the order of app/data/categories.json.
-  const rows = $derived(breakdown(questions, categories).sort((a, b) => b.count - a.count));
+  const rows = $derived(breakdown(questions, categories, names).sort((a, b) => b.count - a.count));
   const max = $derived(Math.max(1, ...rows.map((r) => r.count)));
   /** Subcategory bars share one scale across categories, so they compare. */
   const subMax = $derived(Math.max(1, ...rows.flatMap((r) => r.subs.map((s) => s.count))));
@@ -62,7 +67,7 @@
     {#each rows as row (row.name)}
       <li>
         <button class="row" aria-expanded={open.has(row.name)} onclick={() => toggle(row)}>
-          <span class="label">{row.name}</span>
+          <span class="label" title={names ? row.name : undefined}>{row.label}</span>
           <span class="track">
             {#if row.count > 0}
               <span class="bar" style:width="{(row.count / max) * 100}%"></span>
@@ -75,7 +80,7 @@
           <ol class="subs">
             {#each bySize(row) as s (s.name)}
               <li class="row">
-                <a class="label" href={reviewLink(s.name)} title="Review its approved questions">{s.name}</a>
+                <a class="label" href={reviewLink(s.name, locale)} title="Review its approved questions{names ? ` (${s.name})` : ''}">{s.label}</a>
                 <span class="track">
                   {#if s.count > 0}
                     <span class="bar sub-bar" style:width="{(s.count / subMax) * 100}%"></span>

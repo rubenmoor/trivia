@@ -1,13 +1,18 @@
 <script lang="ts">
   // Every subcategory with its approved questions, grouped by broad category in
   // app/data/categories.json order (RV-19). Each one links to its questions in the review tool.
-  import type { Category, Question } from "../lib/types";
+  import type { Category, Names, Question } from "../lib/types";
   import { breakdown, reviewLink, SPARSE_SUBCATEGORY } from "./breakdown";
   import "./chart.css";
 
-  let { questions, categories }: { questions: Question[]; categories: Category[] } = $props();
+  let {
+    questions,
+    categories,
+    names = null,
+    locale = null,
+  }: { questions: Question[]; categories: Category[]; names?: Names | null; locale?: string | null } = $props();
 
-  const rows = $derived(breakdown(questions, categories));
+  const rows = $derived(breakdown(questions, categories, names));
   const subMax = $derived(Math.max(1, ...rows.flatMap((r) => r.subs.map((s) => s.count))));
   const subCount = $derived(rows.reduce((n, r) => n + r.subs.length, 0));
 </script>
@@ -22,12 +27,12 @@
   <div class="groups">
     {#each rows as row (row.name)}
       <section class="group">
-        <h3>{row.name} <span class="total">{row.count}</span></h3>
+        <h3 title={names ? row.name : undefined}>{row.label} <span class="total">{row.count}</span></h3>
         <table>
           <tbody>
             {#each row.subs as s (s.name)}
               <tr>
-                <td class="name"><a href={reviewLink(s.name)}>{s.name}</a></td>
+                <td class="name"><a href={reviewLink(s.name, locale)} title={names ? s.name : undefined}>{s.label}</a></td>
                 <td class="bar-cell">
                   {#if s.count > 0}<span class="bar" style:width="{(s.count / subMax) * 100}%"></span>{/if}
                 </td>
