@@ -127,6 +127,7 @@ function stopSteam() {
   clearInterval(steamTimer);
   if (steamInput) steam.input.shutdown();
   steamInput = false;
+  steam.richPresence.clearRichPresence();
   steam.shutdown();
   steam = null;
 }
@@ -239,5 +240,11 @@ function bridge() {
           .map((h) => ([5, 12, 13].includes(steam.input.getInputTypeForHandle(h)) ? "playstation" : "xbox"))
       : null,
   );
-  handle("steam:set-presence", () => {});
+  // Rich presence: values first, then the steam_display token; "" clears. Tokens: steam-presence.vdf.
+  handle("steam:set-presence", (key, values) => {
+    if (!steam) return;
+    if (!key || typeof key !== "string") return steam.richPresence.clearRichPresence();
+    for (const [k, v] of Object.entries(values ?? {})) steam.richPresence.setRichPresence(k, String(v));
+    steam.richPresence.setRichPresence("steam_display", key);
+  });
 }

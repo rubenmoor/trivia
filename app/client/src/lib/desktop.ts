@@ -26,6 +26,7 @@ export interface SteamBridge {
   /** Steam's floating keyboard at the field (types into the focused input); false outside Big Picture/Deck. */
   showTextInput(field: TextFieldRect, current: string): Promise<boolean>;
   inputTypes(): Promise<PadStyle[] | null>;
+  /** Rich presence token (`#Level`) and its values; `""` clears. */
   setPresence(key: string, values: Record<string, string>): Promise<void>;
   /** Achievement API name; true when Steam took it. */
   unlock(id: string): Promise<boolean>;

@@ -1,0 +1,33 @@
+// Steam rich presence tokens (plan 85): upload in Steamworks, Community > Rich Presence.
+// From the catalogs: screen.level.kicker + screen.level.of (es, es-ES, en, de).
+"lang"
+{
+	"latam"
+	{
+		"tokens"
+		{
+			"#Level"	"Nivel %level% de %levels%"
+		}
+	}
+	"spanish"
+	{
+		"tokens"
+		{
+			"#Level"	"Nivel %level% de %levels%"
+		}
+	}
+	"english"
+	{
+		"tokens"
+		{
+			"#Level"	"Level %level% of %levels%"
+		}
+	}
+	"german"
+	{
+		"tokens"
+		{
+			"#Level"	"Stufe %level% von %levels%"
+		}
+	}
+}

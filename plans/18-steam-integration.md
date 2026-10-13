@@ -23,7 +23,7 @@ The shell's own code stays tiny: create a fullscreen window, load `app/client/di
 - **Achievements:** a few that fit the game (first victory, a win without jokers, a win on Experto, every broad category answered, reaching level 12 in each preset). No grind achievements.
 - **On-screen keyboard:** `ShowFloatingGamepadTextInput` for the player name on the Deck / Big Picture (IN, Deck Verified). SW-8 may let it replace the in-game letter picker under Steam (plan 46); the picker stays the fallback without Steam.
 - **Language:** the default UI and question language come from the Steam client language (I18N-2, D-86): wire it into `guessTag()` in `lib/engine.ts`.
-- **Rich presence** (optional): «Nivel 7 de 12».
+- **Rich presence:** «Nivel 7 de 12» while a level is on screen (`#Level`, values `level`, `levels`), cleared otherwise and on quit; Steam shows only uploaded tokens: `app/desktop/steam-presence.vdf` (latam, spanish, english, german; from `screen.level.kicker` + `screen.level.of`), uploaded by the gamemaster in Steamworks.
 - **Remote Play Together:** enabled in Steamworks once multi-controller input works (IN-6).
 - **No DRM:** the game runs without Steam running (offline living room). Steam binding calls are optional; the game works without them.
 

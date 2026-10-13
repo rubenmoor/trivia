@@ -4,6 +4,7 @@
   // transition routine and the admin overlay on Esc. The engine keeps the game (engine/, lib/api.ts).
   import { onDestroy, onMount, tick } from "svelte";
   import { fetchFlags, fetchGame, gameAction, GameError, noteExhausted, playJoker, setFlag, type GameActionBody } from "../lib/api";
+  import { steam } from "../lib/desktop";
   import { language, saveError, takeSaveNotice } from "../lib/engine";
   import { errorText } from "../lib/errors";
   import { t } from "../lib/i18n";
@@ -464,6 +465,16 @@
       root: () => main,
       keep: on === "start",
     });
+  });
+
+  // Steam rich presence «Nivel 7 de 12» while playing (plan 85).
+  let presence = "";
+  $effect(() => {
+    const level = ["level", "select", "question", "correct"].includes(screen) ? game?.level : undefined;
+    const next = level ? `${level}/${levels}` : "";
+    if (!steam?.available || next === presence) return;
+    presence = next;
+    void steam.setPresence(level ? "#Level" : "", level ? { level: String(level), levels: String(levels) } : {});
   });
 
   onMount(() => listen({ busy: () => busy, first: onclick }));
