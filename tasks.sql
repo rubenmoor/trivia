@@ -5647,7 +5647,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/project.md` in sync; `plans/11-steam.md` S4 exit names the target if it mentions one.
 
 Done when: D-entry exists; OQ-32 resolved; CT-1 `[x]`; 16''s target section decided.', '2026-10-12T00:48:28Z', '2026-10-12T16:49:08Z', 176);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (193, 39, 'Price model and account holder: facts, options, write the decision(s) (OQ-33)', 'work', 'open', NULL, NULL, 'Part 1 of plan 39. Prepare the OQ-33 decision(s); no code, no contact with Valve or an advisor. Not legal or tax advice: name where a professional must check.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (193, 39, 'Price model and account holder: facts, options, write the decision(s) (OQ-33)', 'work', 'done', NULL, '2026-10-13, pm decisions 66 (price model) and 67 (account holder); task 194 waits on both; facts from knowledge (no web access), ≈ marked for re-check at PUB-6/PUB-11', 'Part 1 of plan 39. Prepare the OQ-33 decision(s); no code, no contact with Valve or an advisor. Not legal or tax advice: name where a professional must check.
 
 - Facts (numbers in the decision body, one-line source each; Valve''s Steamworks docs first):
   - fees and payout: revenue share 30 % → 25 % above $10 M → 20 % above $50 M; $100 app credit per app (recouped after $1,000 gross); DLC: no app credit; monthly payout threshold and timing; refunds (2 h / 14 days); VAT/sales tax handled by Valve
@@ -5663,7 +5663,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm decision add`, body = context + facts + trade-offs, ultra-short.
 - `pm task-pending-decision <record task> <decision id>` for each decision (the record task is the next one in plan 39).
 
-Done when: the decision(s) exist with facts and sources; the record task waits on each.', '2026-10-12T00:48:50Z', NULL, 177);
+Done when: the decision(s) exist with facts and sources; the record task waits on each.', '2026-10-12T00:48:50Z', '2026-10-13T05:10:50Z', 177);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (194, 39, 'Price model and account holder: record the answer (OQ-33, PUB-6, PUB-11)', 'work', 'open', NULL, NULL, 'Part 2 of plan 39. Waits for the OQ-33 decision(s) from the previous task.
 
 - D-entry in `plans/decisions.md` (next free D-number): price model and account holder, consequences for OQ-35 (plan 40) and OQ-45 (plan 42), professional checks still owed.
@@ -13316,6 +13316,80 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (63, 'Playtest passed? (es-ES)', 'pending', '["passed", "passed with fixes listed", "failed"]', 'Native-speaker playtest of the `es-ES` UI catalog, checklist: plans/15a-ui-translation.md, section Playtest. If fixes: list them (screen, text, suggested fix).', NULL, NULL, '2026-10-13T05:08:58Z', NULL, 458, NULL, 'once', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (64, 'Playtest passed? (en)', 'pending', '["passed", "passed with fixes listed", "failed"]', 'Native-speaker playtest of the `en` UI catalog, checklist: plans/15a-ui-translation.md, section Playtest. If fixes: list them (screen, text, suggested fix).', NULL, NULL, '2026-10-13T05:08:58Z', NULL, 458, NULL, 'once', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (65, 'Playtest passed? (de)', 'pending', '["passed", "passed with fixes listed", "failed"]', 'Native-speaker playtest of the `de` UI catalog, checklist: plans/15a-ui-translation.md, section Playtest. If fixes: list them (screen, text, suggested fix).', NULL, NULL, '2026-10-13T05:08:58Z', NULL, 458, NULL, 'once', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (66, 'Price model (OQ-33): how is the game sold on Steam?', 'pending', '["Paid, low band $4.99–$7.99 (e.g. $6.99) with Valve''s regional pricing and a 10–20 % launch discount; bundles as free updates, paid DLC bundles only later once one is big enough", "Paid base + paid DLC bundles from launch (colombia as DLC)", "Free base + paid DLC bundles", "Free"]', 'OQ-33, plan 39. How «Living Room Trivia» / «Trivia en Familia» (D-50) is sold on Steam. Signup and price setting stay S5 (PUB-6, PUB-11). Not legal or tax advice.
+
+**Caveat:** this worker had no web access (WebFetch/WebSearch denied). Figures are from Valve''s docs as known mid-2026; ≈ marks numbers to re-check at PUB-11 (Steamworks pricing tool, store pages).
+
+## Facts
+- Revenue share: Valve 30 % up to $10 M gross per app, 25 % $10–50 M, 20 % above. Source: Valve, "Steam Distribution Agreement updates", Nov 2018 (steamcommunity.com/groups/steamworks).
+- App credit: $100 per app, non-refundable, recouped once the app grossed $1,000 (store + in-game). DLC: no app credit. Source: partner.steamgames.com/doc/gettingstarted/appfee.
+- Free apps pay the $100 too (never recouped without revenue). Same source.
+- Payout: monthly, ≈30 days after month end; balance under $100 rolls over. Source: partner.steamgames.com/doc/finance/payments_salesreporting.
+- Refunds: any reason within 14 days of purchase and under 2 h playtime. A 12-question game takes ≈20–40 min: a family can finish several games and still refund. Source: store.steampowered.com/steam_refunds.
+- VAT/GST/US sales tax: Valve collects and remits where required; the developer gets net of tax. Source: partner.steamgames.com/doc/finance/taxfaq.
+- Regional pricing: Valve''s recommended matrix per USD price, ≈ (to verify in the tool):
+  - EUR: about the same number ($6.99 → ≈€6.99)
+  - MXN: ≈55–65 % of US in USD terms
+  - COP: ≈45–55 %
+  - ARS: Argentina sells in USD (LATAM-USD region since 2023), ≈35–50 %
+  - Source: partner.steamgames.com/doc/store/pricing (and the "Pricing" page in Steamworks).
+- Discounts: launch discount allowed; 30-day cooldown between discounts (≈, check partner.steamgames.com/doc/marketing/discounts).
+
+## Comparable trivia/party games (≈, verify at PUB-11)
+| Title | Price | Reviews | Question DLC |
+|---|---|---|---|
+| Jackbox Party Pack 3 (Trivia Murder Party) | $24.99 | ≈25k, very positive | no |
+| Jackbox Party Pack 6 (TMP 2) | $29.99 | ≈15k, very positive | no |
+| You Don''t Know Jack (2011) | ≈$19.99 | ≈1–2k | yes (episode packs, delisted) |
+| Who Wants To Be A Millionaire (Microids, 2020) | ≈$19.99 | ≈1k, mixed | yes (themed packs) |
+| Trivial Pursuit Live! (Ubisoft) | ≈$14.99 | ≈few hundred, mixed | no |
+| SongPop Party | ≈$14.99 | ≈few hundred | yes (song packs) |
+| Trivia Vault series (Ripknot) | $0.99–2.99 | tens–hundreds each | separate apps per topic |
+- Pattern: big party titles sell one paid pack, no DLC; smaller quiz titles sell paid packs/DLC; free trivia apps mostly live on mobile, not Steam.
+
+## Free on Steam
+- Wishlists and coming-soon visibility work the same as paid.
+- No refunds needed, lower barrier; reviews from people with no stake (≈ more negative for small titles).
+- Free + paid DLC = "free to play with in-app purchases" label; needs a reason to buy (here: bundles).
+- `colombia` today: 102 approved questions, Spanish only, Colombian voice (D-39, D-49, D-78) → too small and too narrow to carry a paid DLC at launch.
+
+## Consequences per option
+- **Plan 40 (OQ-35 licence):** paid + public pool → anyone can copy the content, the store sells convenience; free → a public pool costs nothing.
+- **Plan 42 (OQ-45 Freesound):** paid base or paid DLC → "commercial" under Freesound API / CC NC terms; free still counts as distribution (CC BY credits stay required either way).
+
+## Options
+1. Paid, low band $4.99–$7.99 (e.g. $6.99), Valve''s regional matrix, launch discount 10–20 %; bundles ship as free updates; paid DLC bundles only later once one is big enough (≥ ≈500 questions, translated). One-time purchase, no store/IAP code, fits a living-room game; recoups the $100 at ≈$1,000 gross.
+2. Paid base + paid DLC bundles from launch (`colombia` as DLC ≈$1.99): extra depot/app ID per bundle (plan 18), small pack, Spanish-only buyers.
+3. Free base + paid DLC bundles: biggest reach; revenue depends on packs that don''t exist yet; F2P label.
+4. Free: no revenue, $100 lost; simplest licence story (plan 40), still distribution for plan 42.', NULL, NULL, '2026-10-13T05:10:46Z', NULL, 193, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (67, 'Steamworks account holder (OQ-33): person or company?', 'pending', '["Person, after an advisor check; store Developer/Publisher as a label; switch to a company via app transfer if revenue, a partner or the DSA address requires it", "Company from the start"]', 'OQ-33, plan 39. Who signs the Steam Distribution Agreement and gets paid. PUB-6 (S5) does the signup. Not legal or tax advice; the advisor questions below are for the gamemaster to ask.
+
+**Caveat:** no web access for this worker; facts from Valve''s docs as known mid-2026, re-check at PUB-6.
+
+## Facts
+- Partner signup: legal name, address, bank, identity check, tax interview; person or company both allowed. Source: partner.steamgames.com/doc/gettingstarted/onboarding.
+- Tax interview: person → W-8BEN, company → W-8BEN-E (non-US). Valve withholds 30 % US tax on US-sourced sales unless a tax treaty lowers it (e.g. Germany–US: 0 % on royalties; Colombia has no US income tax treaty → 30 % on US sales). Source: partner.steamgames.com/doc/finance/taxfaq.
+- Store "Developer" and "Publisher" are free-text labels, independent of the account holder (a person can publish as e.g. a label name). Source: partner.steamgames.com/doc/store/editing (basic info).
+- EU Digital Services Act: Valve asks whether the partner is a "trader"; a trader''s name, address, phone and email are shown to EU customers on the store page (≈, since 2024; check the Steamworks DSA page). For a person that may mean a home address in public: a c/o address or a company avoids it.
+- App transfer: an app can be moved to another partner account on request, both sides agree (partner.steamgames.com/doc/gettingstarted, "transferring apps"; ≈ check). Switching later is possible, not free of paperwork.
+- Company: formation cost and yearly bookkeeping/filing (≈ hundreds to a few thousand €/year depending on country, e.g. German UG/GmbH, Colombian SAS); limits liability; W-8BEN-E.
+- Liability is low for this game (offline, no data collected, no accounts); main risks: media licences (PUB-1..PUB-3), names (PUB-7), AI content terms (PUB-10).
+
+## Advisor questions (text for the gamemaster)
+- "I live in <country>. I want to sell a small video game on Steam (Valve, USA) as a private person. Expected revenue: a few hundred to a few thousand USD per year."
+- "Do I need to register a business (Gewerbe / RUT / equivalent) for this, or is it hobby income?"
+- "Which form for Valve: W-8BEN as an individual; which treaty article and rate apply to US sales; can I credit US withholding at home?"
+- "VAT: Valve collects VAT from customers; do I still owe VAT or a filing at home (small-business threshold, e.g. German §19 UStG Kleinunternehmer: €25,000 previous year / €100,000 current; reverse charge on Valve''s fee)?"
+- "Income tax: how is it declared, and from what amount does it pay to form a company?"
+- "Must my private address be public as an EU ''trader'' (DSA)? Can I use a c/o or business address?"
+
+## Consequences
+- Plan 40/42: none directly; "commercial" depends on the price decision, not the holder.
+- PUB-6 gets the holder, the form (W-8BEN or W-8BEN-E), the $100 app credit and the advisor check before signup.
+
+## Options
+1. Person (recommended for a hobby launch): cheapest, fastest; W-8BEN; store labels as Developer/Publisher; advisor check before signup; switch to a company (app transfer) if revenue passes the advisor''s threshold, a second person joins, or the DSA address can''t be kept private.
+2. Company from the start: W-8BEN-E, limited liability, no private address in public; formation and bookkeeping cost before any revenue.', NULL, NULL, '2026-10-13T05:10:47Z', NULL, 193, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -13781,6 +13855,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (458, 623, '2026-10-13T04:59:20Z', '2026-10-13T05:08:08Z', 'done', NULL, 0, '36bd2b7a24a5814d288e17c25178aff4a8c9c7bd', 'claude-opus-5-5[1m]', 'd6de72b0-4206-4ecc-be33-837dc80b288f', 51, 98, 28175, 4277223, 107622, 2.2803125999999985, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (459, 630, '2026-10-13T05:08:09Z', '2026-10-13T05:08:23Z', 'done', NULL, 0, '9886d4be4437c0677660ad8f103e6ed8595a20ea', 'claude-opus-5-5[1m]', '7b287351-4ac0-4ea0-a10b-94f84e85a2f5', 4, 8, 1043, 103703, 24306, 0.2360806, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (460, 458, '2026-10-13T05:08:23Z', '2026-10-13T05:09:07Z', 'done', NULL, 0, 'c78c106d84564626f5046e9c53d899f4b7cdae67', 'claude-opus-5-5[1m]', '15c82dd4-7d1b-46d3-a617-df5aeba2eb45', 12, 22, 3238, 369045, 28414, 0.36596899999999993, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (461, 193, '2026-10-13T05:09:07Z', '2026-10-13T05:11:00Z', 'done', NULL, 0, '56c82bf5150b123ea20d664ebccfe1e172e9ca6a', 'claude-opus-5-5[1m]', 'b4e409e3-9f09-4fab-9cd3-a2ed5655c8c7', 16, 20, 10463, 423408, 46358, 0.66488560000000008, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -13823,6 +13898,8 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (187, 20);
 INSERT INTO task_decision (task_id, decision_id) VALUES (190, 26);
 INSERT INTO task_decision (task_id, decision_id) VALUES (190, 27);
 INSERT INTO task_decision (task_id, decision_id) VALUES (192, 21);
+INSERT INTO task_decision (task_id, decision_id) VALUES (194, 66);
+INSERT INTO task_decision (task_id, decision_id) VALUES (194, 67);
 INSERT INTO task_decision (task_id, decision_id) VALUES (202, 23);
 INSERT INTO task_decision (task_id, decision_id) VALUES (202, 24);
 INSERT INTO task_decision (task_id, decision_id) VALUES (209, 12);
