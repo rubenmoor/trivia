@@ -14143,7 +14143,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## What
 - `error.bad_save` in `app/client/src/locales/es.ts`, `en.ts`, `de.ts` (es-ES inherits): short, says the save could not be written and the game goes on; ask the gamemaster for the wording with `pm decision add` if unsure.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass; update the `code-review.md` row''s status.', '2026-10-13T10:23:30Z', '2026-10-13T10:29:34Z', 541);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (726, 77, 'Split the Select screen out of Game.svelte', 'work', 'open', NULL, NULL, 'Follow-up of `task 543: Review Game.svelte` (code review part 5, `code-review.md` `## Part 5`).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (726, 77, 'Split the Select screen out of Game.svelte', 'work', 'done', NULL, '2026-10-13, app/client/src/game/Envelopes.svelte (new), Game.svelte, code-review.md, directory.md; decision 6 pixel diff of Select/mid-pick/fresh: 0 px', 'Follow-up of `task 543: Review Game.svelte` (code review part 5, `code-review.md` `## Part 5`).
 
 ## Why
 - `app/client/src/game/Game.svelte` (≈1310 lines) holds the screen state machine plus the markup and ≈200 lines of CSS of the Select screen (paper envelopes: `.cards`, `.card`, `.flap`, `.tear`, `.letter-slot`, `.letter`, `.seal`, `.new-badge`, keyframes `deal`, `chosen`, `seal-crack`, `flap-off`, `tear-show`, `letter-up`, `gone`) and `tilt()`.
@@ -14158,7 +14158,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Check
 - `decision 6: Plan 21 (LUI-1): how to check the screens show no visible change?`: before/after pixel diff of the Select screen (also mid-pick, and with a `fresh` card after a «Paso») with a temp `TRIVIA_STATE`.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client`.
-- Log the result as a row in `## Part 5` of `code-review.md`.', '2026-10-13T10:36:48Z', NULL, 543);
+- Log the result as a row in `## Part 5` of `code-review.md`.', '2026-10-13T10:36:48Z', '2026-10-13T11:28:26Z', 543);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (727, 77, 'Gamemaster menu joker preset row per decision 99', 'work', 'open', NULL, NULL, 'Follow-up of `task 545: Review Overlay.svelte`. Do what `decision 99` answered for the preset row of the gamemaster menu''s jokers column.
 
 ## What
@@ -15899,6 +15899,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (595, 551, '2026-10-13T11:12:39Z', '2026-10-13T11:15:05Z', 'done', NULL, 0, '248c4ae206beb379b5f97cda68c368cbefd1464d', 'claude-opus-5-5[1m]', 'd420568a-a76f-44f1-b2b1-183f3a226f8b', 24, 46, 9736, 1155115, 54954, 0.865559, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (596, 552, '2026-10-13T11:15:06Z', '2026-10-13T11:17:33Z', 'done', NULL, 0, 'b99c5965a70714954288a3c5309e8bf1a1f3d70a', 'claude-opus-5-5[1m]', 'c63a5a16-c4fc-47eb-b94b-1d31680db1be', 24, 46, 12356, 1262558, 59165, 0.9731356, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (597, 553, '2026-10-13T11:17:33Z', '2026-10-13T11:19:56Z', 'done', NULL, 0, '98611217f879da206a9521f8c45a0af756cd26d1', 'claude-opus-5-5[1m]', 'bdcadd3d-c633-41bd-b48f-b60727e52399', 22, 32, 11512, 1054818, 81451, 1.0929396, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (598, 726, '2026-10-13T11:19:56Z', '2026-10-13T11:28:33Z', 'done', NULL, 0, '166ad52477ed15cb22bcb41af4cfea1ff8c3ce0c', 'claude-opus-5-5[1m]', 'fb308012-5c8d-4ae0-a628-49955a0f3eca', 53, 90, 16008, 3074772, 80472, 1.5792503999999998, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
