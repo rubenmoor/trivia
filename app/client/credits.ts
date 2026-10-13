@@ -2,12 +2,12 @@
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import type { Plugin } from "vite";
+import type { Credits, CreditKind as Kind, MediaCredit, SoundCredit } from "./src/lib/types";
 
 const client = fileURLToPath(new URL(".", import.meta.url));
 const repo = `${client}../../`;
 const defaultPool = `${client}../data/pool.json`;
 
-type Kind = "image" | "audio" | "video" | "background";
 const KINDS: Kind[] = ["image", "audio", "video", "background"];
 const PROVIDERS: Record<string, string> = { commons: "Wikimedia Commons", freesound: "Freesound", openverse: "Openverse" };
 
@@ -21,39 +21,6 @@ interface Slot {
   license_url?: string | null;
   author?: string | null;
   author_url?: string | null;
-}
-
-export interface MediaCredit {
-  kind: Kind;
-  title: string;
-  /** null: unknown author (the screen shows its own text). */
-  author: string | null;
-  author_url: string | null;
-  license: string;
-  license_url: string | null;
-  source_url: string;
-  provider: string | null;
-}
-
-export interface SoundCredit {
-  file: string;
-  used_for: string;
-  source: string;
-  source_url: string | null;
-  author: string;
-  license: string;
-}
-
-export interface Credits {
-  version: 1;
-  /** Licence files at the repo root (plan 40), with their first line. */
-  game: { file: string; title: string }[];
-  media: MediaCredit[];
-  sounds: { entries: SoundCredit[]; note: string };
-  fonts: { name: string; license: string; license_file: string }[];
-  /** Controller glyphs drawn for the game (Glyph.svelte). */
-  glyphs: boolean;
-  libraries: { name: string; version: string; license: string; url: string }[];
 }
 
 const ELGAR =

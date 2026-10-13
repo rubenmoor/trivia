@@ -100,6 +100,27 @@ const es = {
     /** The answer of the question still on screen stays hidden. */
     hidden: "(en juego)",
   },
+  /** The Credits screen (PUB-5, plan 47); its data is credits.json from the build. */
+  credits: {
+    open: "Créditos",
+    title: "Créditos",
+    loading: "Cargando…",
+    failed: "No se pudieron cargar los créditos.",
+    scroll: "Desplazar",
+    jump: "Sección",
+    game: "Juego",
+    media: "Imágenes, audio y video de las preguntas",
+    sounds: "Sonidos",
+    fonts: "Fuentes",
+    glyphs: "Botones del control",
+    glyphsText: "Originales, dibujados para el juego",
+    libraries: "Bibliotecas",
+    unknownAuthor: "Autor desconocido",
+    image: "Imagen",
+    audio: "Audio",
+    video: "Video",
+    background: "Fondo",
+  },
   /** `key`: the keyboard shortcut (case-insensitive). */
   joker: {
     hint: { name: "Soplo", key: "S" },

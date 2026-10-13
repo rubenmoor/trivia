@@ -10,6 +10,7 @@
   import { flush } from "../lib/engine";
   import { endonym, t } from "../lib/i18n";
   import { focusControl, pushScope, type Action } from "../lib/input.svelte";
+  import Credits from "./Credits.svelte";
   import Prompt from "./Prompt.svelte";
   import type { Game, GameMode, JokerBudget, JokerName, Language, Supply } from "../lib/types";
   import { TOKENS } from "./JokerTray.svelte";
@@ -103,6 +104,8 @@
 
   const gamemaster = $derived(mode === "gamemaster");
 
+  /** The Credits screen (PUB-5) is open over the game; the menu hides. */
+  let creditsOpen = $state(false);
   /** «¿Reportar esta pregunta?» is open. */
   let asking = $state(false);
   let dialog = $state<HTMLDivElement>();
@@ -234,6 +237,7 @@
       : []),
     ...reportItems,
     { label: t("overlay.fullscreen"), enabled: true, run: fullscreen },
+    { label: t("credits.open"), enabled: true, run: () => (creditsOpen = true) },
     { label: t("overlay.restart"), enabled: canRestart, run: onrestart, confirm: true },
     ...(desktop ? [{ label: t("overlay.quit"), enabled: true, run: quit }] : []),
     ...CHANNELS.map((c) => ({ label: c.label, enabled: true, run: () => {}, volume: c.key, right: true })),
@@ -353,8 +357,8 @@
   {/if}
 {/snippet}
 
-<div class="overlay">
-  <div class="menu">
+<div class="overlay" class:clear={creditsOpen}>
+  <div class="menu" class:hidden={creditsOpen}>
     <h2>{t("overlay.title")}</h2>
     <div class="columns">
       <div class="column">
@@ -406,6 +410,9 @@
       </p>
     {/if}
   </div>
+  {#if creditsOpen}
+    <Credits onclose={() => (creditsOpen = false)} />
+  {/if}
   {#if asking}
     <div class="backdrop">
       <div class="menu dialog" bind:this={dialog} role="alertdialog" aria-labelledby="report-title">
@@ -428,6 +435,12 @@
     display: grid;
     place-items: center;
     background: rgba(5, 8, 16, 0.72);
+  }
+  .overlay.clear {
+    background: none;
+  }
+  .hidden {
+    visibility: hidden;
   }
   .menu {
     display: flex;

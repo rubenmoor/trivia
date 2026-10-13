@@ -171,3 +171,39 @@ export interface Game {
     fun_fact: string;
   } | null;
 }
+
+/** credits.json, made by app/client/credits.ts at build time (PUB-5, plan 47). */
+export type CreditKind = "image" | "audio" | "video" | "background";
+
+export interface MediaCredit {
+  kind: CreditKind;
+  title: string;
+  /** null: unknown author (the screen shows its own text). */
+  author: string | null;
+  author_url: string | null;
+  license: string;
+  license_url: string | null;
+  source_url: string;
+  provider: string | null;
+}
+
+export interface SoundCredit {
+  file: string;
+  used_for: string;
+  source: string;
+  source_url: string | null;
+  author: string;
+  license: string;
+}
+
+export interface Credits {
+  version: 1;
+  /** Licence files at the repo root (plan 40), with their first line. */
+  game: { file: string; title: string }[];
+  media: MediaCredit[];
+  sounds: { entries: SoundCredit[]; note: string };
+  fonts: { name: string; license: string; license_file: string }[];
+  /** Controller glyphs drawn for the game (Glyph.svelte). */
+  glyphs: boolean;
+  libraries: { name: string; version: string; license: string; url: string }[];
+}
