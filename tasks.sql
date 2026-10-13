@@ -6690,6 +6690,89 @@ trivia --publish-mod <folder> [--changenote <text>] [--visibility public|friends
 
 ## Order
 Plan 112''s tasks 1–3 first (validator, `contained()`); then 1 → 2 → 4; 3 after 2 and plan 114''s setup decision. Part 9 may reuse `--dry-run` for players'' checks; part 12 publishes the four example mods with this command.', '2026-10-13T18:19:27Z', 907);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (120, 15, 'Player bundle kit: format doc, template, AI prompt', 350, 'Part 9 of masterplan 102 (milestone 15: Modding and Steam Workshop). Players make their own question bundles, with or without their own AI: a format doc for players, a template mod folder that loads as is, and a standalone AI prompt that writes the pool in our format. They check the result with `trivia --check-mod <folder>`, which runs the same validators as the loader and lists every dropped question with its reason. The kit lives in the repo''s `modding/` folder (part 10''s guide folder) and ships in the game''s install folder.
+
+## Binding
+- Plan 102''s ground rules: page only (the check reads mod files as data in main, never runs them), no second path (one validator for loader, check and publish), our data stays ours (template and player pools never enter `authoring/`, `qgen` or our pool), Steam only, strings via `t()`, per-commit checks.
+- decision 133: Player bundle kit: check with `trivia --check-mod`, kit in `modding/` shipped in the install folder (this plan''s choices).
+- decision 128: Bundles from mods: the shell merges `bundles.json`; mod ids namespaced `<mod id>:<id>` (the format documented here); decision 129: Credits for mod media (runtime section; the doc tells modders to fill `credit`).
+- decision 38: one base bundle per game, offered per `languages`; decision 33 / decision 51: non-base off on the configure screen, on in solo; decision 112: a missing pool file = not offered in that locale.
+- decision 124: output paths (`lib/data.ts` → `lib/data.js`): the check imports our built `engine/pool.js`.
+- decision 132: `workshopId` in `mod.json` (the doc names it, the template leaves it out).
+- Plan 112: `readManifest`, error/warning codes, `TRIVIA_MODS_DIR`, `<userData>/mods/`. Plan 115: mod bundle format, `bundleRows`, `modPool` (checks, media rewrite), `modIssues()`. Plan 119: headless branch before the instance lock, exit codes, Windows log file + message box. Plan 118: mods screen shows `modIssues()` counts.
+- `app/data/age-groups.json`: scale 1–15, groups kids 1–6, young_teens 1–10, young_adults 4–13, adults 5–15 (windows), 12 levels each.
+- House style: `authoring/tools/prompts/house-style.md` (adapted, not linked: the prompt is standalone).
+- Not here: the modding guide, example mods and store link (part 10, task 909), in-game publish button (backlog), achievements with mods (part 7).
+
+## Format doc: `modding/bundles.md`
+- English, AGENTS.md doc style; for players, no repo knowledge assumed.
+- Folder layout: `mod.json` (fields of plan 112, `kind: ["bundle"]` optional), `data/bundles.json`, `data/bundles/<bundle>/categories.json`, `names.<locale>.json` (optional), `pool.json` (es) / `pool.<locale>.json`, media below the bundle folder.
+- `bundles.json` row: `id`, `kind` (`base` replaces ours for that game, anything else adds to ours; when to pick which), `languages`, `name`, `description` (player text, no translation keys).
+- `categories.json`: categories with slug, name, subcategories; every question''s `subcategory` must be listed; `names.<locale>.json` for category names in other languages.
+- Pool file: `version: 1`, `questions[]` with the `PoolQuestion` fields: `id` (rule from task 1, unique in the mod, the game prefixes `<mod id>:`), `difficulty`, `subcategory`, `description`, `question`, `answer`, exactly 3 `wrong_answers`, exactly 3 `hints` (vague → strong), `fun_fact`, `media` (optional), `background` (audio only); `status` optional (`approved`). One file per language, same ids across languages (a translation = same id).
+- Difficulty 1–15 "who can answer it" (the house style''s anchors) and the age-group windows table from `age-groups.json`; what to cover for which audience (e.g. a kids bundle: 1–6 spread evenly).
+- Media: image/audio/video files in the bundle folder, relative `file_url`, `role` (essential: the question needs it; illustrative; decorative), `credit` required for files the modder didn''t make (decision 129); size advice (images ≤ 1920 px, ≤ 500 KB); no web URLs (dropped). No media: leave `media` out (task 1).
+- Writing advice: short house-style rules (one breath, four options of the same form, no giveaways, real-world superlatives, family-friendly).
+- Where it goes: `mods/` / `<userData>/mods/`, restart, mods screen; checking with `--check-mod`; publishing (plan 119''s command, one line).
+- No stability promise (plan 102).
+
+## Template: `modding/template-bundle/`
+- `mod.json`: id `template-bundle`, languages `es`, `en`; a one-line note in `bundles.md` to change the id before publishing (decision 127: the id is the key).
+- One non-base bundle (e.g. `solar-system`, «El sistema solar» / "The solar system"), 1 category, 2–3 subcategories, `names.en.json`.
+- `pool.json` (es) and `pool.en.json`: 15 questions, one per difficulty 1–15, same ids; written by the worker in house style from facts it is sure of (no `qgen`: player content, never our pool); one image question (`img/<name>.png`, made by us, credit «¡Trivia! template · CC0»), the rest text-only.
+- Loads as is: copy into `mods/`, restart, the bundle shows on the configure screen.
+
+## AI prompt: `modding/bundle-prompt.md`
+- One file: a short "how to use" header for the player (paste into your AI, answer its questions, save its files, run `--check-mod`), then the prompt in a fenced block.
+- Prompt (English instructions; the AI talks with the player in the player''s language):
+  1. Asks first, one message: topic, audience (age group → difficulty window, table inline), question language(s) from ours (es, en, de), how many questions (suggest 30–60), bundle name, base or add-on (default add-on).
+  2. Writes: `bundles.json` row, `categories.json`, `names.<locale>.json` if more than one language, `pool[.<locale>].json`, each in its own fenced JSON block with its file path above it.
+  3. Rules inline: our pool fields, house-style digest (options, hints, short, no giveaways, real-world clues, family-friendly), difficulty anchors, spread over the window, no media (the player adds images by hand per `bundles.md`), unique ids `<topic>-001`.
+  4. No web search assumed: only facts it is sure of; drop a question rather than guess; no numbers it can''t vouch for.
+  5. Big sets in parts ("say ''next'' for the next 20"), same ids continue.
+- Tested once by the worker (task 4).
+
+## Check: `trivia --check-mod <folder>`
+- Headless, before the instance lock, no window, no Steam (like plan 119''s `--dry-run`); exit 0 no errors, 1 errors, 2 usage. Windows packaged: plan 119''s log file beside the folder + message box.
+- `app/desktop/check-mod.mjs` (pure Node, no Electron): `readManifest` (plan 112), `bundleRows` (plan 115), per bundle and language: `categories.json`, pool file, `modPool` imported from our built `engine/pool.js` (dev `app/client/dist/`, packaged `resources/client/`; our file, never the mod''s), media files present and inside the folder (`contained()`).
+- Output: errors and warnings with codes and plain text; per bundle and language: questions ok, dropped (id + reason); difficulty coverage per age group (questions in its window, levels with none); "loads as is" / "fix the errors above".
+- Plan 119''s `preparePublish` may call it (task 5 adds that if plan 119 task 1 is done, else a line in plan 119''s docs task).
+
+## Tasks
+
+### 1. Text-only questions and per-question reasons (client, after plan 115 task 2)
+- `modPool` (`engine/pool.ts`): `media` missing or null → normalized to a decorative image with `file_url: null`; returns dropped questions with reason codes (`no_text`, `wrong_answers`, `hints`, `difficulty`, `subcategory`, `status`, `bad_id`, `duplicate_id`, `bad_media`); raw id rule `^[a-z0-9][a-z0-9-]{0,63}$`, unique within the mod; `modIssues()` keeps its counts.
+- `Question.svelte`: the «media missing» line only when a file was set and failed or the role is essential (ours unchanged: they always have media).
+- Done when: a `pool.test.ts` case covers a text-only question and each reason code; a text-only mod question plays in `trivia-desktop` (dev switch) with no missing-media line; per-commit checks pass.
+
+### 2. `--check-mod` (shell, after task 1, plan 111 and plan 119 task 2)
+- `check-mod.mjs` as above; `main.mjs` `parseArgs` (`OWN`, `USAGE`), headless branch, output helper shared with plan 119.
+- Done when: `trivia-desktop --check-mod <tmp mod>` on a throw-away mod (bad `mod.json` field, a bad bundle row, two bad questions, a missing image, an absolute URL) lists each with its code and exits 1; fixed, it exits 0; a packaged Linux build (`trivia-desktop-build --dir`) runs the same; per-commit checks pass.
+
+### 3. Format doc and template (after task 2)
+- `modding/bundles.md` and `modding/template-bundle/` as above; the image made by a throw-away script or by hand (PNG, CC0, ours).
+- Done when: `--check-mod modding/template-bundle` exits 0 with 15 ok per language; a copy in a temp `TRIVIA_MODS_DIR` loads in `trivia-desktop`: the bundle shows marked player-made, a game with it on plays its image question, the Credits screen lists the image; temp copy deleted; per-commit checks pass.
+
+### 4. AI prompt (after task 3)
+- `modding/bundle-prompt.md` as above.
+- Done when: the worker runs the prompt once through an AI at hand (e.g. `claude -p`, answering its questions with a sample: "dinosaurs, kids, en + de, 20 questions"), saves the files into a temp mod with a `mod.json`, and `--check-mod` passes with ≤ 2 dropped (else the prompt is fixed and rerun); coverage line shows the kids window filled; temp mod deleted; one line on the result in the done note.
+
+### 5. Ship in the install folder, release check
+- `app/desktop/electron-builder.yml` `extraFiles`: `../../modding` → `modding` (beside the executable); `credits_check.mjs`: the template image either listed as ours (CC0) or `modding/` excluded with a comment; `trivia-steam stage` copies it with the unpacked builds.
+- `trivia-release-check`: a step `modkit`: the packaged executable''s `--check-mod <unpacked>/modding/template-bundle` exits 0 (keeps the template valid across updates).
+- Plan 119''s `preparePublish` calls `checkMod` (warnings only) if plan 119 task 1 is done.
+- Done when: `trivia-desktop-build --dir` has `modding/` in `linux-unpacked/` and `win-unpacked/`; `trivia-release-check --skip tag` passes its `modkit` and `credits` steps; per-commit checks pass.
+
+### 6. Docs
+- `directory.md`: rows `modding/` (player kit: `bundles.md`, `bundle-prompt.md`, `template-bundle/`; shipped in the install folder), `app/desktop/check-mod.mjs`.
+- `README.md`: how-to "Make your own question bundle" (three lines: copy the template or use the prompt, `--check-mod`, `mods/`).
+- AGENTS.md "Commands": `trivia-desktop` line gains `--check-mod <folder>`.
+- `plans/22-bundles.md` "Player bundles (mods)" (plan 115): link to `modding/bundles.md`; `plans/18-steam-integration.md` "Modding": `--check-mod`, kit shipped in the install folder.
+- `pm decision consequences 133 "…"`.
+- Done when: docs name decision 133 and the paths; part 10 (task 909) can link `modding/bundles.md` and `bundle-prompt.md`; per-commit checks pass.
+
+## Order
+After plan 115 tasks 1–2, plan 111 and plan 119 tasks 1–2. 1 → 2 → 3 → 4 → 5 → 6. Part 10''s guide links this kit; part 12 may publish the template as the bundle example.', '2026-10-13T18:22:27Z', 908);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -21448,14 +21531,14 @@ Cover part 8''s list:
 - In-game button: out of scope, a backlog row.
 - Docs: guide section, README how-to; `trivia-steam` stays for our builds.
 - Tasks for the work, each with a done-when.', '2026-10-13T17:47:24Z', '2026-10-13T18:19:40Z', 898);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (908, 102, 'write plan: Player bundle kit: format doc, template, AI prompt', 'plan', 'open', 1000, NULL, 'Write the plan for part 9 of masterplan 15 (plan 102): "Player bundle kit: format doc, template, AI prompt". Read plan 102, milestone 15, the part 5 plan (final bundle format), `app/data/age-groups.json`, `authoring/tools/prompts/` (house style), the part 8 plan (validator). Create it with `pm plan add 15 "Player bundle kit: format doc, template, AI prompt" --priority 350 < body.md`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (908, 102, 'write plan: Player bundle kit: format doc, template, AI prompt', 'plan', 'done', 1000, '2026-10-13, plan 120: Player bundle kit (tasks.sql); decision 133 recorded', 'Write the plan for part 9 of masterplan 15 (plan 102): "Player bundle kit: format doc, template, AI prompt". Read plan 102, milestone 15, the part 5 plan (final bundle format), `app/data/age-groups.json`, `authoring/tools/prompts/` (house style), the part 8 plan (validator). Create it with `pm plan add 15 "Player bundle kit: format doc, template, AI prompt" --priority 350 < body.md`.
 
 Cover part 9''s list:
 - Bundle format for players (fields, categories, names, pool file, media, languages, difficulty 1–15, age groups).
 - Template mod folder (one small bundle, two languages, one image question) that loads as is.
 - Standalone AI prompt (no `qgen`, no web search assumed): asks topic, audience, language; outputs our pool format; how a player checks the result (mods screen errors or `trivia --check-mod <folder>` sharing part 8''s validator: pick).
 - Where: part 10''s guide folder; shipped in the install folder or only online (pick).
-- Tasks for the work, each with a done-when.', '2026-10-13T17:47:24Z', NULL, 898);
+- Tasks for the work, each with a done-when.', '2026-10-13T17:47:24Z', '2026-10-13T18:22:30Z', 898);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (909, 102, 'write plan: Modding guide, examples and the store link', 'plan', 'open', 1000, NULL, 'Write the plan for part 10 of masterplan 15 (plan 102): "Modding guide, examples and the store link". Read plan 102, milestone 15, the plans of parts 1–9 (and 11), plan 88 (store page, `plans/17a-store-page.md`). Create it with `pm plan add 15 "Modding guide, examples and the store link" --priority 300 < body.md`.
 
 Cover part 10''s list:
@@ -22559,6 +22642,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:16:58Z', NULL, 905);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (939, 119, 'create tasks for plan 119', 'split', 'open', 1000, NULL, 'Split plan 119 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:19:27Z', NULL, 907);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (940, 120, 'create tasks for plan 120', 'split', 'open', 1000, NULL, 'Split plan 120 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:22:27Z', NULL, 908);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -23858,6 +23943,7 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (130, 'Preload bridge renamed window.trivia → window.triviaShell; window.trivia is the mod API', 'answered', '[]', 'contextBridge objects are frozen and the name window.trivia is the natural public mod API (milestone 15). The bridge has one reader (lib/desktop.ts), so the rename is cheap; hiding the bridge from mod code isn''t possible in one page and isn''t a goal (page-only rule protects the PC, not the save). Plan 117''s task 1 (task 904''s plan).', 'The shell''s contextBridge object moves to window.triviaShell (lib/desktop.ts its only reader, plus plan 99''s dev page shim); window.trivia becomes the page''s mod API (lib/mods.ts). Mods can still reach window.triviaShell: accepted, the one-time notice says mods run with the game''s access.', NULL, '2026-10-13T18:13:46Z', '2026-10-13T18:13:46Z', 904, NULL, 'rule', 904, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (131, 'Code add-ons: shell-generated /mods.js, entry default export setup(trivia), mods run before data and language load', 'answered', '[]', 'Generated by the shell: the shell already has the arranged, validated list (plan 112), so no extra IPC or list file, and a full conversion can import /mods.js too; outside the shell /mods.js is missing and the game runs without mods. Before data load: data hooks and new UI locales must be in place before lib/engine.ts ready() and initLang() run; a ready event covers what needs the mounted game. Per-mod namespace /mods/<id>/ keeps two mods'' main.js apart and gives import.meta.url a stable base.', 'The shell generates /mods.js per run (an ES module exporting the loaded mods in run order: bottom of the load order first, with entry and style URLs under /mods/<id>/); main.ts imports it first, links each mod''s root style.css, imports each entry and awaits its default export setup(trivia) with a per-mod view of the API (5 s timeout); a failing or slow mod is reported and skipped, the game still starts. Everything a mod changes is a registration (data hooks, action hooks, catalogs, screens, events); a ready event fires after mount. /mods/<id>/<rel> serves only that mod''s folder.', NULL, '2026-10-13T18:13:46Z', '2026-10-13T18:13:46Z', 904, NULL, 'rule', 904, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (132, 'Workshop publishing: where the published file id lives', 'answered', '[]', 'Plan 119 (task 907). setItemContent uploads the whole folder, so a sidecar would ship anyway; in mod.json the id travels to subscribers, where plan 114''s workshop_id_mismatch warning checks it. Optional field in plan 112''s validator, ^[1-9]\d{0,19}$; delete it to publish as a new item. First publish defaults to private visibility; updates change visibility only with --visibility.', 'mod.json field workshopId (decimal string), written by trivia --publish-mod on first publish; first publish private', NULL, '2026-10-13T18:19:35Z', '2026-10-13T18:19:35Z', 907, NULL, 'rule', 907, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (133, 'Player bundle kit: check with trivia --check-mod, kit in modding/ shipped in the install folder', 'answered', '[]', 'Plan 102 part 9 (task 908). An AI-made pool needs per-question reasons a player can act on; the mods screen (plan 118) shows only counts per bundle and needs the mod installed and a restart. One validator for loader, check and publish keeps no second path. The game runs offline and the template must be copied into mods/: shipping a few KB of text and one small image next to the executable (Steam''s Browse local files) needs no network and no GitHub; the repo copy is what the store page links.', 'Players check a mod folder with trivia --check-mod <folder> (headless, no Steam, same validators as the loader: readManifest, bundleRows, modPool with per-question reasons), not only the mods screen; the kit (modding/bundles.md, modding/bundle-prompt.md, modding/template-bundle/) lives in the repo''s modding/ (part 10''s guide folder) and ships in the game''s install folder as modding/ (electron-builder extraFiles), also readable online in the public repo', NULL, '2026-10-13T18:21:44Z', '2026-10-13T18:21:44Z', 908, NULL, 'rule', 908, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -24646,6 +24732,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (781, 904, '2026-10-13T18:11:21Z', '2026-10-13T18:14:56Z', 'done', NULL, 0, '5ecbdc67ff0213a20c9b61503af23ab5f5a90a02', 'claude-opus-5-5[1m]', '9d92b906-9c6b-4861-a110-03c2d8f93959', 16, 32, 17097, 1012480, 91040, 1.2728839999999997, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (782, 905, '2026-10-13T18:14:57Z', '2026-10-13T18:17:09Z', 'done', NULL, 0, '9e0b3417d656dadd42509b5178ac3ff8b86fc976', 'claude-opus-5-5[1m]', 'c5f7dc3d-977c-4259-b110-b8c41537c659', 11, 22, 11628, 611818, 71046, 0.92337960000000008, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (783, 907, '2026-10-13T18:17:10Z', '2026-10-13T18:19:53Z', 'done', NULL, 0, 'e97f7cc7a9c314d7ea48d3805946e49143f896f9', 'claude-opus-5-5[1m]', '2a24021f-577c-4a02-9ffe-e254726b8576', 14, 26, 12173, 745164, 67738, 0.9345008, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (784, 908, '2026-10-13T18:19:54Z', '2026-10-13T18:22:39Z', 'done', NULL, 0, '141d5b973e70407726304e1647044f0007eee35e', 'claude-opus-5-5[1m]', 'cf4e86bf-7824-40d6-adcc-17dac2365360', 15, 28, 13216, 825600, 68912, 0.98084799999999994, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
