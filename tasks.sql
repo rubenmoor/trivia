@@ -13849,18 +13849,19 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `Desc`: `<tag> <short sha>` plus `skipped: <steps>` if the release check skipped any.
 - Check: `--dry-run` on a clean main writes `work/steam/<sha>/` with VDFs pointing at the staged folders; `--branch default` refused; an unclean tree refused.
 - Docs: `plans/18-steam-integration.md` "Builds and depots" (S5 bullets from "Later" to the commands, depots, branches, what''s gitignored); README "Upload to Steam"; AGENTS.md "Commands"; `directory.md`.', '2026-10-13T06:54:20Z', '2026-10-13T08:01:20Z', 675);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (681, 89, 'First beta upload: checklist and decision', 'work', 'open', 220, NULL, 'Plan 89 task 6. Needs: tasks 676–680; task 650 (Steam binding packaged in both builds); part 2 of masterplan 10 (task 254: write plan: Steamworks app configuration (SW-7)) with its "values entered" decision answered (App ID + depot IDs, `beta` branch).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (681, 89, 'First beta upload: checklist and decision', 'work', 'open', 220, NULL, 'Plan 89 task 6. Needs: tasks 676–680; task 650 (Steam binding packaged in both builds); part 2 of masterplan 10 (task 254: write plan: Steamworks app configuration (SW-7)) with its "values entered" decision answered (App ID + depot IDs incl. the DLC ones, `beta` branch).
 - If part 2''s decision exists but is pending: `pm task-pending-decision <this task> <that decision>`, stage, stop. If it doesn''t exist yet or task 650 isn''t done: stop and say so (don''t close). Low priority on purpose so it runs after those.
 
 Work:
-- Fill `authoring/steam/steam.json` (appid, depots windows/linux/content).
+- Fill `authoring/steam/steam.json` (appid, depots windows/linux/content; `dlc` entries if task 748: DLC depots for packs is done).
 - Write the checklist into `plans/18-steam-integration.md` "Builds and depots" → "First upload":
   - build account in Steamworks (Users & Permissions: own account, only "Edit App Metadata" + "Publish App Changes To Steam" for this app; Valve''s recommendation)
   - `steamcmd +login <account>` once, with Steam Guard
   - `beta` branch + password in Steamworks (App Admin → SteamPipe → Builds); password never in a file
   - tag `v<version>` on a clean main
   - `trivia-steam upload --branch beta`
-  - check the build appears on `beta` and installs on the author''s machine via the beta password
+  - check the build appears on `beta` and installs on the author''s machine via the beta password (and a free DLC installs, if shipped)
+  - Steam only (decision 111): no checks of the archives or a start without Steam
 - `pm decision add "First beta upload done? BuildID?"` with the checklist as body, options "uploaded (BuildID …)", "failed (paste the error)"; `pm task-pending-decision` on task 682: Record the first beta upload.', '2026-10-13T06:54:20Z', NULL, 675);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (682, 89, 'Record the first beta upload', 'work', 'open', 210, NULL, 'Plan 89 task 7. Waits for the decision "First beta upload done? BuildID?" added by task 681: First beta upload: checklist and decision. If it isn''t answered (or doesn''t exist yet): link with `pm task-pending-decision` if it exists, else stop and say so.
 
@@ -14546,15 +14547,16 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Walk both screens on `trivia` with a temp `TRIVIA_STATE` (mouse and keyboard only); `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client`.', '2026-10-13T14:40:28Z', '2026-10-13T14:46:53Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (747, 98, 'create tasks for plan 98', 'split', 'done', 1000, '2026-10-13, tasks.sql: tasks 749-752 for plan 98; DLC depots already task 748 (plan 89), pack runs task 643 (plan 84)', 'Split plan 98 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:01:21Z', '2026-10-13T15:02:26Z', 249);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (748, 89, 'DLC depots for packs (decision 66)', 'work', 'open', 620, NULL, 'decision 66: Price model (OQ-33): bundles (non-base packs, e.g. `colombia`) ship as free DLC with their own store entries and optional install. Plan 89''s "Depots" says no bundle depots unless decision 66 asks: it does.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (748, 89, 'DLC depots for packs (decision 66)', 'work', 'open', 620, NULL, 'Plan 89 task 9. decision 66: Price model (OQ-33): bundles (non-base packs, e.g. `colombia`) ship as free DLC with their own store entries and optional install. Pack layout per decision 112 (Pack layout: a pool file per bundle): `app/data/bundles/<id>/` pool files, `build/pack-media.json`; a missing pack file = pack not offered, no Steam call.
 
-- Depends on plan 98 (Regional packs) task "Packs as optional installs": each non-base bundle''s files (`app/data/bundles/<id>/…` pool files, its media key list) apart from `base`, and the game offers a pack only when its files are present. Not done yet → stop and say so.
-- Which packs launch: plan 98''s RG-5 decision. DLC App IDs and depot IDs: Steamworks (part 2, task 254 pattern), `null` placeholders in `authoring/steam/steam.json` (e.g. `dlc: {<bundle id>: {appid, depot}}`) until entered.
-- Per launching pack: one DLC depot (pack data files + its media only), added to the app build VDF; `windows`/`linux` depots exclude the pack''s files, the `content` depot excludes its media. `trivia-steam stage` checks: union of all depots = the full build.
-- Release check: packaged smoke game once without the pack''s files (pack not offered, game plays) and once with them.
+- Depends on plan 98 (Regional packs) task 751 "Packs as optional installs" (decision 109 pending). Not done → stop and say so.
+- Which packs launch: plan 98''s RG-5 decision. Pack-only media: part 6 (task 260, SW-9) splits media per depot; until it lands, derive the pack''s media from `build/pack-media.json`.
+- DLC App IDs and depot IDs: Steamworks (part 2, task 254), `null` placeholders in `authoring/steam/steam.json` as `dlc: {<bundle id>: {appid, depot}}` until entered.
+- Per launching pack: one depot VDF (pack data files + its media only), added to the app build VDF (`authoring/steam/steam.py`, `*.vdf.in`); `windows`/`linux` depots exclude the pack''s `resources/data/bundles/<id>/`, `content` excludes its media. `trivia-steam stage`: union of all depots = the full build.
+- Smoke game (`authoring/steam/smoke.mjs`, release check step 6): once with the pack''s files (pack offered) and once without (not offered, game plays).
 - Docs: plan 18 "Builds and depots" (DLC depots), D-entry.
 
-Done when: `trivia-steam upload --dry-run` renders a DLC depot per launching pack with placeholder IDs, and the stage check passes.', '2026-10-13T15:01:28Z', NULL, 249);
+Done when: `trivia-steam upload --dry-run` renders a DLC depot per launching pack with placeholder IDs, the stage check passes, both smoke runs pass.', '2026-10-13T15:01:28Z', NULL, 249);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (749, 98, 'RG-5 decision (OQ-46 folded in) and 15c marking', 'work', 'done', NULL, '2026-10-13, plans/15c-regional-questions.md (RG-1..RG-4 [x] with BN mapping), plans/22-bundles.md (Model: kind base, languages, exactly one base bundle); decision 110 with facts (colombia 102/109, 19 on base subcategories, cost, es simulation); tasks 750 and 643 pend on it', 'Plan 98 part 1. Docs + facts + one pm decision; no code changes.
 
 - `plans/15c-regional-questions.md`: RG-1..RG-4 `[x]` with the mapping (RG-1, RG-2 = BN-2, BN-3, D-39; RG-3 = BN-6 (plans 27, 29, 30) + plan 62''s `qgen report --simulate --bundles`; RG-4 = BN-11 `qgen batch --bundle`); status line stays "superseded by 22".
@@ -15602,8 +15604,23 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/17a-store-page.md` "Screenshots": one line naming the switch.
 
 Done when: the script renders the demo-save screens under the gate.', '2026-10-13T15:32:28Z', NULL, 782);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (785, 89, 'create tasks for plan 89', 'split', 'open', 1000, NULL, 'Split plan 89 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:33:51Z', NULL, 773);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (785, 89, 'create tasks for plan 89', 'split', 'done', 1000, '2026-10-13, tasks.sql: task 786 (smoke game under TRIVIA_DEV_STEAM_USER, manual rows per decision 111) added; tasks 681, 748 brought in line with plan 89', 'Split plan 89 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:33:51Z', '2026-10-13T15:34:46Z', 773);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (786, 89, 'Smoke game under the dev switch (TRIVIA_DEV_STEAM_USER)', 'work', 'open', NULL, NULL, 'Plan 89 task 10 (decision 111: Steam only: no effort outside Steam; Steam features are the reason to buy). The packaged smoke game (task 678, `authoring/steam/smoke.mjs`) runs without a Steam session; once plan 87''s save gate lands, saves need a valid Steam user, so the smoke game must run under the dev switch to save and resume.
+
+Needs (stop and say so if not done; don''t close):
+- task 776: Valid Steam user check and dev switch (TRIVIA_DEV_STEAM_USER)
+- task 779: Shell: save folder per valid Steam user, drop local/ and the first-start offer
+- task 780: Page: memory-only save and notice without a Steam user, flag action hidden
+
+Work:
+- `authoring/steam/smoke.mjs`: add `TRIVIA_DEV_STEAM_USER=1` to the `env -i` list (line ~64). Save lands under the temp `HOME` in `<save base>/dev/game.json` (decision 114: Desktop save folder under the dev switch without a SteamID); assert that file exists after quit.
+- Assert no «progress needs Steam» notice (task 780''s element/string; find its selector or test id) on the first start and after the restart; the restart resumes the player (already asserted, keep).
+- `authoring/steam/release_check.py`:
+  - smoke step''s docstring row names the dev switch.
+  - `MANUAL` rows in line with decision 111 (no "without Steam" rows): `offline` → "beta install from Steam, network off (Steam offline mode): full game to level 12 or a won checkpoint" (content-only variant likewise, level 3); no row says "Steam not running". Other rows already say "from Steam (beta)".
+- `plans/18-steam-integration.md` "Builds and depots": the smoke row says it runs under `TRIVIA_DEV_STEAM_USER=1`, network off; no start test without Steam and without the switch (decision 39).
+- Check: `node authoring/steam/smoke.mjs app/desktop/release/linux-unpacked` passes (build with `trivia-desktop-build --dir` first); a throw-away run with the switch removed fails at the resume step (not a release-check row, don''t keep it). Per-commit checks pass.', '2026-10-13T15:34:31Z', NULL, 785);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -17539,6 +17556,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (676, 772, '2026-10-13T15:29:31Z', '2026-10-13T15:30:58Z', 'done', NULL, 0, 'e34b36d8484d158883332c0cdeb5e895968fc01a', 'claude-opus-5-5[1m]', '3d23965d-d314-4b51-b012-397971f6d23e', 12, 24, 5399, 503465, 43848, 0.559553, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (677, 782, '2026-10-13T15:30:59Z', '2026-10-13T15:32:51Z', 'done', NULL, 0, 'dcb92b5d2cc3818451d06a10508919fa207f9122', 'claude-opus-5-5[1m]', '6cc21f27-4452-4012-b220-06e2c997535f', 18, 36, 10937, 928385, 56126, 0.853569, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (678, 773, '2026-10-13T15:32:51Z', '2026-10-13T15:33:58Z', 'done', NULL, 0, '7c36ba35112eb5a73f26f1f56be98bf72413007f', 'claude-opus-5-5[1m]', '646118d9-2f5b-470a-8fc8-59b813b0d81a', 10, 20, 6333, 443158, 52344, 0.6341236, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (679, 785, '2026-10-13T15:33:59Z', '2026-10-13T15:34:54Z', 'done', NULL, 0, '8f7ac7535b208ead6e4a5bc5802268b8b39812b3', 'claude-opus-5-5[1m]', '0cae5ebb-368e-4c5f-8c4b-16f1c986b89c', 11, 22, 5152, 446059, 43553, 0.5407638, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
