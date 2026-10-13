@@ -14565,30 +14565,38 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Into `plans/11-steam.md` "Launch (S6)" → "Announcement texts"; the gamemaster posts them (Steamworks events tool). Workers never post.
 
 Done when: titles, bodies and "what''s new" lines exist for es (es-419, es-ES deltas), en, de with `<n>` placeholders.', '2026-10-13T09:07:02Z', '2026-10-13T09:11:10Z', 705);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (708, 95, 'Release candidate v1.0.0', 'work', 'open', NULL, NULL, 'Plan 95 task 3. Waits for the decision "Start the launch release candidate v1.0.0?" (raised by task "Launch section, Valve''s rules and the go decision"); read it with `pm show`. If it isn''t raised or answered yet, don''t proceed: stop.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (708, 95, 'Release candidate v1.0.0', 'work', 'open', NULL, NULL, 'Plan 95 task 3. Waits for decision 95 "Start the launch release candidate v1.0.0?" and `task 862: Launch section: report server, store facts, modding gate`; read them with `pm show`. Decision not answered or task 862 not done → stop. The "Preconditions" table in `plans/11-steam.md` "Launch (S6)" wins over decision 95''s older body.
 
-- `go`: `app/desktop/package.json` `version` → `1.0.0` (the one edit, decision 91: Game version: single source of truth), staged; fill the `<n>` counts in "Announcement texts" (`plans/11-steam.md` "Launch (S6)") from `qgen report` per locale. Run the per-commit checks (AGENTS.md).
+- `go`: `app/desktop/package.json` `version` → `1.0.0` (the one edit, decision 91: Game version: single source of truth), staged; fill the `<n>` counts in "Announcement texts" from `qgen report` per locale. Run the per-commit checks (AGENTS.md).
 - `not yet`: new decision naming the blocker (`pm decision add`, kind once, options as the go decision), this task pending on it (`pm task-pending-decision`), stop.
-- Raise the ST-4 candidate decision `Release candidate v1.0.0 passed?` exactly per the template in `plans/11-steam.md` "Release checklist (ST-4)", with the gamemaster''s steps first: tag this task''s commit (`task <this id>: Release candidate v1.0.0`) as `v1.0.0`; `trivia-steam upload --branch beta`; manual rows on `beta`; family sign-off from `beta`. Release date in the body ≥ the earliest from ST-3.
-- `pm task-pending-decision <id of "Record the candidate; release decision" in plan 95> <did>`.
+- Raise the ST-4 candidate decision `Release candidate v1.0.0 passed?` exactly per the template in `plans/11-steam.md` "Release checklist (ST-4)", incl. plan 104''s `report` and Steam-offline rows; the gamemaster''s steps first:
+  - tag this task''s commit (`task <this id>: Release candidate v1.0.0`) as `v1.0.0`
+  - `trivia-steam upload --branch beta`
+  - manual rows on `beta`, incl. `report`: a flag sent from the candidate arrives via `qgen flag --pull`
+  - the store facts run sheet ("Store facts on the release candidate", decision 90)
+  - family sign-off from `beta`
+  - after the ST-4 rows, a "Store facts" section with the run sheet''s answer slots (installed size base + each DLC, weak machine, Steam Deck, pad-only → controller flag)
+  - release date in the body ≥ the earliest from ST-3
+- `pm task-pending-decision 709 <did>`.
 - A failed candidate never reuses its tag (plan 95 rules). Never upload, log in or tag on the gamemaster''s behalf.
 
-Done when: version is `1.0.0` staged, counts filled, candidate decision raised and the record task waits on it (or, not yet: blocker decision raised, this task pending).', '2026-10-13T09:07:02Z', NULL, 705);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (709, 95, 'Record the candidate; release decision', 'work', 'open', NULL, NULL, 'Plan 95 task 4. Waits for `Release candidate v1.0.0 passed?` (raised by "Release candidate v1.0.0"); read the answer with `pm show`. Not raised/answered yet → stop.
+Done when: version is `1.0.0` staged, counts filled, candidate decision raised and task 709 waits on it (or, not yet: blocker decision raised, this task pending).', '2026-10-13T09:07:02Z', NULL, 705);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (709, 95, 'Record the candidate and the store facts; release decision', 'work', 'open', NULL, NULL, 'Plan 95 task 4. Waits for `Release candidate v1.0.0 passed?` (raised by `task 708: Release candidate v1.0.0`); read the answer with `pm show`. Not raised/answered yet → stop.
 
 Per ST-4''s "Worker on the answer" (`plans/11-steam.md` "Release checklist (ST-4)"):
 - `passed` / `minor issues`: `trivia-release-check --manual FILE` with the answers (needs the tag on HEAD; if the tree has moved, record the answers in `work/steam/v1.0.0/` as the template says and note it). Minor issues → rows in `plans/backlog.md`.
-- `failed`: one `pm task add` per failing row in its owning plan (`pm plan list`), plus a new task in plan 95 "Release candidate v1.0.<n+1>" (shape of "Release candidate v1.0.0", with a version bump; never reuse a tag); stop.
-- Then raise `Released? date, build id` (kind once) with the launch-day checklist from "Launch (S6)" as the body (release date ≥ earliest from ST-3; build review submitted in time per the timeline); options `released on <date>, BuildID <n>` (recommended), `Valve''s build review returned issues (list)`, `not yet (blocker)`. `pm task-pending-decision <id of "Record the release and the first week" in plan 95> <did>`.
+- `failed`: one `pm task add` per failing row in its owning plan (`pm plan list`), plus a new task in plan 95 "Release candidate v1.0.<n+1>" (shape of task 708, with a version bump; never reuse a tag); stop.
+- Store facts (the decision''s "Store facts" section): field values into `plans/17a-store-page.md` "System requirements, languages, controller" (final, measured on `v1.0.x`, date); `pm decision consequences 90 "…"`. A store fact that fails the store''s own rules (e.g. requirements too high for the Deck) → a task in its owning plan.
+- Then raise `Released? date, build id` (kind once) with the launch-day checklist from "Launch (S6)" as the body (release date ≥ earliest from ST-3; build review submitted in time per the timeline; store facts entered); options `released on <date>, BuildID <n>` (recommended), `Valve''s build review returned issues (list)`, `not yet (blocker)`. `pm task-pending-decision 710 <did>`.
 - `pm decision consequences` on the candidate decision.
 
-Done when: the candidate result is recorded and either the "Released?" decision waits on the record task, or (failed) the fix tasks and the next candidate task exist.', '2026-10-13T09:07:02Z', NULL, 705);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (710, 95, 'Record the release and the first week', 'work', 'open', NULL, NULL, 'Plan 95 task 5. Waits for `Released? date, build id` (raised by "Record the candidate; release decision"); read the answer with `pm show`. Not raised/answered yet → stop.
+Done when: the candidate result and store facts are recorded and either the "Released?" decision waits on task 710, or (failed) the fix tasks and the next candidate task exist.', '2026-10-13T09:07:02Z', NULL, 705);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (710, 95, 'Record the release and the first week', 'work', 'open', NULL, NULL, 'Plan 95 task 5. Waits for `Released? date, build id` (raised by task 709); read the answer with `pm show`. Not raised/answered yet → stop.
 
-- Released: `plans/11-steam.md` S6 row and a "Launch (S6)" note with date, version, BuildID, price; rows the launch closes in `plans/17-publishing.md` (PUB-11 live) and `plans/18-steam-integration.md` (SW-12 review if requested) noted; `plans/project.md` and `README.md` in sync (the Steam build is the release; D-59: `trivia` keeps working); `pm decision consequences <did> "…"`.
-- Build review issues: one `pm task add` per issue in its owning plan; then a new candidate task in plan 95 (shape of "Release candidate v1.0.0", version bump) if code or content changed, else a fresh "Released? date, build id" decision and a new "Record the release and the first week" task pending on it.
+- Released: `plans/11-steam.md` S6 row and a "Launch (S6)" note with date, version, BuildID, price, report URL; rows the launch closes in `plans/17-publishing.md` (PUB-11 live) and `plans/18-steam-integration.md` (SW-12 review if requested) noted; `plans/project.md` and `README.md` in sync (the Steam build is the release; no browser-game note: plan 99 retires it); `pm decision consequences <did> "…"`.
+- Build review issues: one `pm task add` per issue in its owning plan; then a new candidate task in plan 95 (shape of task 708, version bump) if code or content changed, else a fresh "Released? date, build id" decision and a new "Record the release and the first week" task pending on it.
 - Not yet: same as above with the blocker named.
-- On released: raise `First week after launch: what came in?` (kind once; body: the first-week steps from "Launch (S6)"; options `nothing to fix`, `issues (list: reports, bugs, review themes)`), and add a task in plan 95 "Triage the first week after launch" pending on it, body: each bug → a task in its owning plan or a `plans/backlog.md` row; pasted reports → `qgen flag` (plan 93); a wrong-answer or crash fix → a hotfix candidate via the patch path (`task 270`''s plan, content updates as patches) and the ST-4 checklist.
+- On released: raise `First week after launch: what came in?` (kind once; body: the first-week steps from "Launch (S6)"; options `nothing to fix`, `issues (list: reports, bugs, review themes)`), and add a task in plan 95 "Triage the first week after launch" pending on it, body: each bug → a task in its owning plan or a `plans/backlog.md` row; reports are already `needs_work` via `qgen flag --pull` / `qgen flag` (plan 93) and go through `qgen batch` review; a wrong-answer or crash fix → a hotfix candidate via plan 96''s patch path and ST-4.
 - Docs only; never log in to Steamworks or contact players.
 
 Done when: the release is recorded in the plan files and the first-week decision waits on its triage task (or the issue/blocker path is set up).', '2026-10-13T09:07:02Z', NULL, 705);
@@ -19736,8 +19744,34 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Summary line: pulled, applied, skipped.
 - Check against `trivia-report-server dev` with the reports from task 859''s check (or a few posted with `dev-*` tickets): applied as `needs_work`, second pull empty; `qgen validate`; per-commit checks.
 - Docs: `qgen.py` usage line.', '2026-10-13T17:14:27Z', NULL, 858);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (861, 95, 'create tasks for plan 95', 'split', 'open', 1000, NULL, 'Split plan 95 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:16:27Z', NULL, 850);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (861, 95, 'create tasks for plan 95', 'split', 'done', 1000, '2026-10-13, tasks.sql: added task 862 (plan 95 task 6), revised tasks 708-710 to the revised plan', 'Split plan 95 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:16:27Z', '2026-10-13T17:17:39Z', 850);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (862, 95, 'Launch section: report server, store facts, modding gate', 'work', 'open', NULL, NULL, 'Plan 95 task 6. Docs only; runs now, before "Release candidate v1.0.0". Revise `plans/11-steam.md` "Launch (S6)" (tasks 706, 707 wrote it); don''t rewrite it.
+
+- Valve''s rules: retry the unverified pages (partner.steamgames.com/doc/store/review_process, /doc/store/releasing, /doc/sdk/uploading, /doc/marketing/discounts, /doc/marketing/event_tools); cite with the date read; still unreadable → keep "unverified (gamemaster: check <URL>)".
+- "Preconditions" table, add:
+  - milestone 15 (Modding and Steam Workshop) done: `pm milestone list` shows it implemented; modding guide URL on the store page
+  - report server live: plan 103''s gamemaster setup decision (its task 4) answered with the URL; URL in the build config per plan 93; `curl <url>/health` → `{"ok": true, "api": 1}`
+  - plan 93 done (tasks 699, 859, 700, 860, 701)
+  - plan 104 done (ST-4 has the `report` and Steam-offline rows)
+  - privacy text written (plan 103 task 3)
+  - weak machine (older laptop) and Steam Deck at hand for the store facts runs
+  - drop the thread-text row (task 701 no longer writes one)
+  - one-line note: decision 95''s body predates this revision, the table wins (consequences only go on answered decisions)
+- New subsection "Store facts on the release candidate" (decision 90), the gamemaster''s run sheet on the candidate installed from `beta`:
+  - installed size: Steam → game → Properties → Installed Files, base alone and each pack DLC on (decision 110: Regional packs at launch); also `du -sh` of the install folder on Linux; rounded up to the next 0.5 GB per store field
+  - weak machine (name CPU, RAM, GPU, OS): a full game with video questions on; per row: starts, menus smooth, video without stutter, load times; result → minimum requirements
+  - Steam Deck (borrowed or bought): the same full game; reuse plan 90''s Deck rows where they overlap
+  - pad-only: a full game, menus and the flag list with a pad only, no keyboard/mouse; passes → controller "Full", else "Partial" with what failed
+  - results → field values: minimum = the weak machine if it passed, else the author''s laptop with a note; recommended unchanged unless a run says otherwise; values listed per Steamworks field (`plans/17a-store-page.md` "System requirements, languages, controller"); the gamemaster enters them before the build review
+- "Release candidate steps": after the manual rows, the store facts run sheet; the candidate decision gets a "Store facts" section (the run sheet''s answers) after the ST-4 rows.
+- "Launch-day checklist": drop the report thread row (discussions open stays); add rows: privacy policy on the store page (plan 103 task 3''s field/steps); modding guide link on the store page (milestone 15); store facts entered (installed size base + DLC, requirements, controller flag) matching the recorded run sheet; report server answers `curl <url>/health` on launch day.
+- "Announcement texts" (es-419, es-ES deltas, en, de): report paragraph → the in-game send (flag, «Preguntas marcadas», «Enviar»; «Copiar» when sending fails); `<thread>` placeholder gone; one factual line that mods load from the Workshop, no claims; privacy: one sentence pointing to the store page''s privacy policy.
+- "First week": incoming reports via `qgen flag --pull` (daily, plan 93), pasted ones from the copy fallback via `qgen flag`; watch the server (`trivia-report-server tail` if plan 103 provides it; 429/5xx counts); drop the thread reading.
+- `plans/project.md` in sync if it lists the launch preconditions.
+- Steam only (decision 111): no "without Steam" rows. Never log in, post or contact anyone.
+
+Done when: "Launch (S6)" has the cited (or marked) rules, the new preconditions, the store facts run sheet, the updated candidate steps, launch-day rows, announcement texts and first week.', '2026-10-13T17:17:21Z', NULL, 861);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -21761,6 +21795,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (732, 858, '2026-10-13T17:13:30Z', '2026-10-13T17:14:47Z', 'done', NULL, 0, '660b1be3cc2275782474a76aa250a2e6560f37ed', 'claude-opus-5-5[1m]', '3512019a-b386-4d40-860c-17789a460ec9', 8, 16, 6315, 258163, 31245, 0.42795659999999991, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (733, 849, '2026-10-13T17:14:47Z', '2026-10-13T17:15:04Z', 'done', NULL, 0, '89ea1463aa8ca3d4bc2c38eb46cf11b22c5d9b7c', 'claude-opus-5-5[1m]', 'ba7469df-ed98-4dd3-a179-9f6f29fc6eb2', 4, 8, 1361, 115797, 26948, 0.2659954, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (734, 850, '2026-10-13T17:15:05Z', '2026-10-13T17:16:44Z', 'done', NULL, 0, '81fab26167577fda43fea5b9e4a92869c9c3387c', 'claude-opus-5-5[1m]', '1d34e431-0b4f-4bfd-9bd5-643b214c2be9', 11, 22, 9825, 525211, 56342, 0.7523662000000001, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (735, 861, '2026-10-13T17:16:44Z', '2026-10-13T17:17:47Z', 'done', NULL, 0, 'e61b9cef61b744d859999fce1e835ddbb28c82ae', 'claude-opus-5-5[1m]', '2c1bdc12-3088-4463-92dc-406b8eb36316', 9, 18, 6262, 300210, 33148, 0.450538, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
