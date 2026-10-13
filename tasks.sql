@@ -16340,10 +16340,71 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
   - screen gallery: one re-runnable command (e.g. `trivia-gallery`) renders every screen and dialog in every UI language from a demo save, output under `work/`; the plan decides headless browser vs. decision 6''s throw-away Playwright (minimal deps, dev only); a `trivia-authoring` page shows the shots with each visible text''s catalog key, the gamemaster flags strings with a note; a fix task reads the flags.
   - one `pm decision add --once` per UI language "Screen gallery reviewed?"; its flags become a fix task.
 - Order: style guides and TV-check fixes first, then gallery, then review.', '2026-10-13T15:39:07Z', '2026-10-13T15:41:14Z', 790);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (797, 100, 'create tasks for plan 100', 'split', 'open', 1000, NULL, 'Split plan 100 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:41:11Z', NULL, 796);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (797, 100, 'create tasks for plan 100', 'split', 'done', 1000, '2026-10-13, tasks 799-804 for plan 100; no files', 'Split plan 100 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:41:11Z', '2026-10-13T15:43:51Z', 796);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (798, 69, 'create tasks for plan 69', 'split', 'done', 1000, '2026-10-13, task 459 body aligned with plan 69 revision (plan 100 first, style guide)', 'Split plan 69 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:41:54Z', '2026-10-13T15:42:16Z', 792);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (799, 100, 'Style guides per UI locale (en, es, es-ES, de)', 'work', 'open', NULL, NULL, 'Plan 100, task 1. Write the four style guides so every worker that touches UI strings has fixed terms and address rules.
+
+- Files (new): `app/client/src/locales/style/{en,es,es-ES,de}.md`; repo `.md` style (intro paragraph, then bullets).
+- Content per guide (plan 100 "Design → Style guides"):
+  - Glossary from the current catalogs (`app/client/src/locales/*.ts`) and plans 24/69 decisions (joker names/keys D-91): mode names (de «Spielleitermodus», en «Gamemaster mode», es «Modo anfitrión»), «Spielleitung»/«anfitrión», level, bundle, flag, question/answer, Esc menu rows («Back to main menu» / «Volver al menú principal» / «Zurück zum Hauptmenü»; «Quit game» / «Salir del juego» / «Spiel beenden»); Steam''s own terms («Steam achievements» / «logros de Steam» / «Steam-Erfolge»; Steam Cloud, Steam Deck as Steam writes them).
+  - Address: `es` ustedes/tú as the catalog does today; `es-ES` vosotros where `es` addresses the group; `en` you; `de` never plural, infinitive style for prompts and buttons («Frage wählen», not «Wählt eine Frage»), no «ihr/euch/euer», «du» only where infinitive can''t work (note which strings).
+  - Buttons/prompts: verb first, length, capitalisation, punctuation («…» for dialogs, «¡…!» in `es`), how keys are shown.
+  - Bad patterns (wrong → right): plural address in `de`, «End game (set up another)», bare «achievements». Guidance, not a lint.
+- `AGENTS.md` Rules: "Changing UI strings (`app/client/src/locales/`): read `locales/style/<locale>.md` first; new bad patterns found go into it."
+- `directory.md`: entry for `app/client/src/locales/style/` with the same rule.
+- `plans/15a-ui-translation.md`: new section "Wording and review" (guides, TV-check fixes, screen gallery, flag → fix loop).
+
+Done when: the four guides exist with the TV-check bad patterns; AGENTS.md and directory.md point to them; 15a has the section. Catalogs unchanged here (task "TV-check fixes").', '2026-10-13T15:43:48Z', NULL, 797);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (800, 100, 'TV-check fixes: catalogs, Esc «Back to main menu», quit colour, de plural sweep', 'work', 'open', NULL, NULL, 'Plan 100, task 2 (after the style guides task). Apply the gamemaster''s TV-check fixes (2026-10-13) per `app/client/src/locales/style/<locale>.md`.
+
+- Catalogs `app/client/src/locales/{es,es-ES,en,de}.ts`:
+  - `de` `mode.gamemaster` → «Spielleitermodus» (en/es stay).
+  - Every achievements mention (today `customize.body`; grep all catalogs) → «Steam achievements» / «logros de Steam» / «Steam-Erfolge».
+  - `overlay.restart` → «Back to main menu» / «Volver al menú principal» / «Zurück zum Hauptmenü»; `overlay.quit` → «Quit game» / «Salir del juego» / «Spiel beenden».
+  - `de` plural sweep: every «ihr/euch/euer/wählt/habt/seid…» string (17 hits today) and pronoun-less plural imperatives rewritten per the de guide (infinitive style; «du» only where noted).
+  - `es-ES` overrides only where it differs; `es` changes only in the strings above (D-59).
+- Behaviour: the Esc row `overlay.restart` still abandons the game (confirm as today) but goes to the start screen, not the configure screen (`Game.svelte`/`Overlay.svelte`; milestone 9 replaces decision 34''s "restart = configure screen"). Note it as a consequence on decision 34 (`pm decision consequences 34 …`).
+- `overlay.quit` (desktop only) gets its own colour: new `--u` token in `theme.css` (e.g. muted red, D-29), distinct from every other button in all states (focus, hover, pad).
+- Docs: `plans/04-ui-tv-display.md` Esc menu spec; 15a "Wording and review" notes. `pm decision consequences 74 …` if the achievement wording touches decision 74.
+- New bad patterns found → the guides.
+
+Done when: `npm run check:literals` (or the repo''s literal check), `npm run check`, `npm test`, `npm run build`, `qgen validate` pass; a throw-away Playwright walk (decision 6) of the Esc menu with the desktop bridge stubbed and of the `de` screens shows the new strings, the quit colour and the start-screen target.', '2026-10-13T15:43:48Z', NULL, 797);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (801, 100, 'Translation prompts follow the style guides (decision draft)', 'work', 'open', 370, NULL, 'Plan 100, task 3. Question texts address players too (hints, wording), so the locale prompts `authoring/tools/prompts/locale-<l>.md` should carry the style guide''s address rules and glossary (`app/client/src/locales/style/<locale>.md`, from the style guides task).
+
+- Draft the change: either a `{style}` placeholder filled from the guide by `prompt(..., locale=)` in the qgen prompt code, or a short block pasted into each `locale-<l>.md`; propose one with the reason.
+- Prompts are the gamemaster''s (like decision 35: Translation prompts and markets per locale): `pm decision add "Translation prompts: add the style guide''s address and glossary?" --body <draft> --option "approve as drafted" --option …`, then `pm task-pending-decision <this task> <decision>`, stage nothing beyond what''s done, stop.
+- Once answered: apply exactly the answer, `qgen validate`, `pm decision consequences <id> …`.
+
+Done when: the prompts follow the answer and `qgen validate` passes.', '2026-10-13T15:43:48Z', NULL, 797);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (802, 100, 'trivia-gallery: render every screen and dialog per UI language', 'work', 'open', 375, NULL, 'Plan 100, task 4. One command for the gamemaster that screenshots every screen and dialog in every UI language with the catalog key of each visible text (plan 100 "Design → Screen gallery"; decision 115: Screen gallery: how does trivia-gallery drive a browser?).
+
+- `lib/i18n.ts` (client): with `?gallery` in the URL (any build), `t()` records rendered text → key on `window` for the script; no effect otherwise.
+- `authoring/tools/gallery.py` + flake wrapper `trivia-gallery` (fromCheckout, pinned `python3` with `playwright`, `playwright-driver.browsers`, `LD_LIBRARY_PATH` unset for the browser; nothing in package.json).
+  - Builds the client if stale (`npm run build`), starts `trivia` on a free port with `TRIVIA_STATE` in a temp dir; never touches `state/`; stops it by PID.
+  - Demo save per UI language written by the script (players, `language: {ui, questions: es}`, game history for victory/outlook); no save file for the language screen. No `?lang=`.
+  - Step list for every screen and dialog: language, start, player, choice/configure, customize, level, select, question incl. each joker, correct, wrong, victory, Esc menu general + gamemaster cheats, confirm dialogs, flag dialog, flag list, credits, supply notice/report, letter picker, game settings. Desktop bridge stubbed via `addInitScript` (valid Steam user) so desktop-only rows (quit, Steam notice) show. 1920 × 1080. Options `--locale`, `--only <shot>`. Missing media fine.
+  - Per shot: visible text nodes and `aria-label`/`title`/`placeholder` matched against the trace → key, text, box; unmatched visible text listed as such.
+  - Output `work/gallery/<locale>/<shot>.png` + `work/gallery/manifest.json` (shots, keys, boxes, run date, git commit); overwrites.
+- Docs: README how-to, AGENTS.md Commands line, `directory.md` (`authoring/tools/gallery.py`, `work/gallery/`).
+
+Done when: a full run for en, es, es-ES, de produces every step''s shot, keys found for the visible text (unmatched listed); `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-13T15:43:48Z', NULL, 797);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (803, 100, '/gallery page with per-string flags', 'work', 'open', 375, NULL, 'Plan 100, task 5 (after the trivia-gallery task). The gamemaster reviews the gallery in `trivia-authoring` and flags strings for the next fix pass.
+
+- `authoring/server/main.py`: `GET /api/gallery` (manifest from `work/gallery/manifest.json` + flags), `GET /gallery/<locale>/<shot>.png` from `work/gallery/`, `POST /api/gallery/flags` (add/edit/remove).
+- Flags in `authoring/data/ui-flags.json` (tracked): `[{id, locale, key, text, shot, note, flagged_on, fixed_on?}]`; fixed ones hidden by default.
+- `authoring/ui`: `/gallery` page: per language the shots; hover/click a text box → key and text; flag with a note; edit/remove; list of open flags per language; link from the authoring start page. No manifest yet → a hint to run `trivia-gallery`.
+- Docs: `directory.md` (`ui-flags.json`, page), README line.
+
+Done when: `npm run check`, `npm run build` pass; browser check: flag, edit, remove, reload keeps the state in `ui-flags.json`.', '2026-10-13T15:43:48Z', NULL, 797);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (804, 100, 'Screen gallery review decisions per UI language', 'work', 'open', 370, NULL, 'Plan 100, task 6 (after the /gallery page task). Ask the gamemaster to review the gallery in every UI language.
+
+- Run `trivia-gallery` (all four locales); stage nothing from `work/`.
+- Four `pm decision add --once "Screen gallery reviewed? (<lang>)"` for en, es, es-ES, de, body with the how-to (`trivia-gallery`, `trivia-authoring` → `/gallery`, flag strings with a note), options "reviewed, flags in /gallery" (recommended) and "reviewed, nothing to fix".
+- Add task 7 of plan 100: `pm task add 100 "Gallery fixes from the review flags" --priority 360` with a body: read open flags in `authoring/data/ui-flags.json`, fix catalogs per `app/client/src/locales/style/<locale>.md`, add new bad patterns to the guides, set `fixed_on`; re-run `trivia-gallery --only` for changed shots; anything beyond catalogs → `pm task add`; consequences on the four decisions; 15a "Wording and review" marked done. Make it pending on all four decisions (`pm task-pending-decision`).
+
+Done when: the four decisions and the pending fix task exist.', '2026-10-13T15:43:48Z', NULL, 797);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -18293,6 +18354,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (689, 793, '2026-10-13T15:42:24Z', '2026-10-13T15:42:35Z', 'done', NULL, 0, 'd02db40b075506f0af515300b8eea1b916afc7dd', 'claude-opus-5-5[1m]', '5df054d1-4d22-4501-83f6-5ff516042d45', 3, 6, 751, 80420, 25743, 0.237072, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (690, 794, '2026-10-13T15:42:35Z', '2026-10-13T15:42:50Z', 'done', NULL, 0, 'acaa542890f917033749b252137ad918a743bf40', 'claude-opus-5-5[1m]', 'd2638622-64e6-49aa-9710-dc7c0d2def45', 3, 6, 967, 82371, 25388, 0.23894220000000002, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (691, 795, '2026-10-13T15:42:51Z', '2026-10-13T15:43:07Z', 'done', NULL, 0, '9879872fd77639104757d4a5ddb14183243751ce', 'claude-opus-5-5[1m]', '846f8751-6c15-48d6-8761-9a9256503382', 4, 8, 955, 117154, 25664, 0.2478748, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (692, 797, '2026-10-13T15:43:08Z', '2026-10-13T15:43:56Z', 'done', NULL, 0, '6bdc1cf4fc3ca199dcfe3930e586dd841c2b8849', 'claude-opus-5-5[1m]', '01f66255-7c2e-4917-88b1-f0e3dddb66f4', 5, 10, 5123, 161436, 32780, 0.39702719999999997, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
