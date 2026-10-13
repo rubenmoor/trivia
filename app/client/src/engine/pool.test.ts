@@ -2,7 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import type { Category } from "../lib/types.ts";
 import {
-  broadOf, bundleOf, byId, categoryOf, loadCategories, parseAgeGroups, parseBundles, parsePool, subcategories,
+  broadOf, byId, categoryOf, loadCategories, parseAgeGroups, parseBundles, parsePool, subcategories,
 } from "./pool.ts";
 import { data, fixture, realCategories } from "./test/fixtures.ts";
 
@@ -40,10 +40,9 @@ test("real categories: base first, every subcategory once", () => {
   assert.equal(subcategories(cats, "base").length + subcategories(cats, "colombia").length, subs.length);
   const broad = broadOf(cats);
   assert.equal(broad.get("Bebidas")?.slug, "comida-bebida");
-  assert.equal(bundleOf(cats, "Bebidas"), "base");
   assert.equal(broad.get("Regiones de Colombia")?.slug, "colombia-pais");
-  assert.equal(bundleOf(cats, "Regiones de Colombia"), "colombia");
-  assert.equal(bundleOf(cats, "Nada"), null);
+  assert.equal(broad.get("Regiones de Colombia")?.bundle, "colombia");
+  assert.equal(broad.get("Nada"), undefined);
 });
 
 test("fixture categories: broadOf, categoryOf", () => {
@@ -56,7 +55,6 @@ test("fixture categories: broadOf, categoryOf", () => {
   assert.equal(cat({ subcategory: "Nada" }), null);
   assert.equal(cat({ subcategory: null }), null);
   assert.equal(cat({}), null);
-  assert.equal(bundleOf(cats, "Comida colombiana"), "colombia");
 });
 
 // D-22, written out; checked once against the table in the former app/server/selection.py.

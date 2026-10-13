@@ -11,14 +11,14 @@ const JOKER_SEEN = Object.entries(STANDARD_JOKERS).reduce((s, [j, n]) => (j === 
 
 /** Seen events per level per game (D-75, D-77): one game = its levels + the standard set's; rr-competitive
  * × N players; timed: one shared question per round, no jokers. Gamemaster as solo. */
-export function seenPerLevel(mode: GameMode, players = 1, levels = LEVELS): number {
+function seenPerLevel(mode: GameMode, players = 1, levels = LEVELS): number {
   const game = (levels + JOKER_SEEN) / levels;
   if (mode === "rr-competitive") return game * players;
   if (mode === "timed") return 1;
   return game;
 }
 
-export interface OutlookChoice extends Choice {
+interface OutlookChoice extends Choice {
   mode: GameMode;
   /** rr-competitive: players in the game. */
   players?: number;
@@ -129,7 +129,7 @@ function exhaustedSubs(save: SaveData, data: EngineData, choice: Choice): string
   const count = countOf(save);
   const state = new Map<string, boolean>(); // subcategory → every question seen
   for (const q of availableFor(save, data, choice)) {
-    if (q.subcategory === null || q.difficulty < lo || q.difficulty > hi) continue;
+    if (q.difficulty < lo || q.difficulty > hi) continue;
     state.set(q.subcategory, (state.get(q.subcategory) ?? true) && count(q) > 0);
   }
   return subcategories(data.categories).filter((s) => state.get(s));

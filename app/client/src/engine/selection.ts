@@ -11,8 +11,8 @@ export const PER_LEVEL = 4;
 export const levelsOf = (ranges: LevelRanges): number[] => Array.from({ length: ranges.length }, (_, i) => i + 1);
 
 type Q = Pick<PoolQuestion, "id" | "difficulty">;
-export type CategoryKey = string | null;
-export type SupplyLevel = Supply["levels"][number];
+type CategoryKey = string | null;
+type SupplyLevel = Supply["levels"][number];
 
 export function inRange(q: Pick<PoolQuestion, "difficulty">, level: number, ranges: LevelRanges): boolean {
   const [lo, hi] = ranges[level - 1];

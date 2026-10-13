@@ -344,7 +344,7 @@ function backToSelect(
   dropCurrent(work, gid, state, outcome, io, outcome === "admin_block");
   const removed = new Set([state.current!]);
   if (purge) {
-    state.purged.push(sub as string);
+    state.purged.push(sub);
     for (const i of state.options) if (question(data, i).subcategory === sub) removed.add(i);
   }
   const keep = state.options.filter((i) => !removed.has(i)).map((i) => question(data, i));
@@ -538,7 +538,7 @@ function jokersView(work: SaveData, row: GameRow, state: GameState, data: Engine
   const hint = check(playHint), skipJ = check(playSkip), easier = check(playEasier);
   // Availability tries the worst case, a hit; the client only learns yes or no.
   const snipe = check(playSnipe, { index: state.answers.indexOf(cur.answer) });
-  const purge = { ...check(playSkip, { purge: true }), subcategory: cur.subcategory as string };
+  const purge = { ...check(playSkip, { purge: true }), subcategory: cur.subcategory };
 
   const avail = availableNow(work, state, data);
   const ranges = rangesOf(state, data);
@@ -599,7 +599,7 @@ function replaceCurrent(work: SaveData, gid: number, state: GameState, data: Eng
   const fill = laterFill(avail, state.level, ranges, cardsOf(state));
   const pickFrom = (cands: PoolQuestion[]) => replacement(avail, state.level, ranges, cands,
     (q) => Math.abs(q.difficulty - cur.difficulty), countOf(work), io, fill, cardsOf(state));
-  const fresh = pickFrom(categoryCandidates(avail, state.level, ranges, cur.subcategory as string))
+  const fresh = pickFrom(categoryCandidates(avail, state.level, ranges, cur.subcategory))
     ?? pickFrom(avail.filter((q) => q.subcategory !== cur.subcategory && selection.inRange(q, state.level, ranges)));
   if (!fresh) throw new GameError("replace_empty");
   if (seen) see(work, cur.id, gid, io);

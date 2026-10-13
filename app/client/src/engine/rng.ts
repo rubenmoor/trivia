@@ -1,6 +1,6 @@
 // Referee randomness (D-58): every shuffle goes through an injected Rng.
 export interface Rng {
-  // In place, like Python's random.shuffle; site = calling Python function.
+  // In place; site: the caller's tape label (fixtures/README.md).
   shuffle<T>(xs: T[], site: string): void;
 }
 

@@ -6,7 +6,8 @@ export interface PoolQuestion {
   id: string;
   status: Status;
   difficulty: number;
-  subcategory: string | null;
+  /** Always one of the categories' subcategories (qgen validate). */
+  subcategory: string;
   bundle: string;
   description: string;
   question: string;
@@ -71,7 +72,7 @@ export interface AgeGroup {
 }
 
 /** Weight per difficulty of the window: round(12 × Σ 1/(hi − lo + 1)) over the levels containing it (D-31, D-76). */
-export function levelWeights(window: readonly [number, number], levels: LevelRanges): Record<string, number> {
+function levelWeights(window: readonly [number, number], levels: LevelRanges): Record<string, number> {
   const out: Record<string, number> = {};
   for (let d = window[0]; d <= window[1]; d++)
     out[d] = Math.round(12 * levels.reduce((s, [lo, hi]) => (lo <= d && d <= hi ? s + 1 / (hi - lo + 1) : s), 0));
@@ -122,12 +123,7 @@ export function broadOf(cats: Category[]): Map<string, Category> {
   return new Map(cats.flatMap((c) => c.subcategories.map((s) => [s, c] as const)));
 }
 
-/** The bundle whose list has this subcategory, or null. */
-export function bundleOf(cats: Category[], sub: string): string | null {
-  return broadOf(cats).get(sub)?.bundle ?? null;
-}
-
-/** question → broad category slug, or null (game.category_of). */
+/** question → broad category slug, or null. */
 export function categoryOf(broad: Map<string, Category>): (q: { subcategory?: string | null }) => string | null {
   return (q) => (q.subcategory != null ? broad.get(q.subcategory)?.slug ?? null : null);
 }

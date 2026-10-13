@@ -11159,7 +11159,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - The 4 files listed in `## Part 3` (or "no findings"), every finding with a status.', '2026-10-12T23:04:10Z', '2026-10-13T10:01:58Z', 515);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (537, 75, 'Review selection.ts, pool.ts, outlook.ts, rng.ts, pycompat.ts', 'work', 'open', NULL, NULL, 'Task 3 of `plan 75: TS engine review (code review part 3)`. Needs `code-review.md` with `## Part 3`; if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 75 "Rules for this plan".
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (537, 75, 'Review selection.ts, pool.ts, outlook.ts, rng.ts, pycompat.ts', 'work', 'done', NULL, '2026-10-13, app/client/src/engine/{selection,pool,outlook,rng,game}.ts, pool.test.ts, code-review.md', 'Task 3 of `plan 75: TS engine review (code review part 3)`. Needs `code-review.md` with `## Part 3`; if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 75 "Rules for this plan".
 
 ## First
 - `pm queue` + grep open task bodies for these files (e.g. `task 474`/`475` → `pool.ts`, `task 427` → `outlook.ts`); a file an open task still changes: findings only (`superseded by task N`).
@@ -11181,7 +11181,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `npm run check`, `npm test` (unchanged), `npm run build`, `qgen validate` pass (plus the lint pass, if part 10 has adopted one by then).
 
 ## Done when
-- The 5 files listed in `## Part 3` (or "no findings"), every finding with a status.', '2026-10-12T23:04:11Z', NULL, 515);
+- The 5 files listed in `## Part 3` (or "no findings"), every finding with a status.', '2026-10-12T23:04:11Z', '2026-10-13T10:05:27Z', 515);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (538, 75, 'Review the engine tests and test helpers', 'work', 'open', NULL, NULL, 'Task 4 of `plan 75: TS engine review (code review part 3)`. Needs `code-review.md` with `## Part 3`; if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 75 "Rules for this plan". Last task of plan 75: also check its "Done when".
 
 ## What
@@ -15795,6 +15795,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (575, 534, '2026-10-13T09:50:00Z', '2026-10-13T09:51:55Z', 'done', NULL, 0, '821c960150d580dc5a348e401c54d92ed7403d29', 'claude-opus-5-5[1m]', 'd4825464-720c-437a-aeeb-6da1a03cdefc', 17, 34, 8188, 761298, 44368, 0.6710996, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (576, 535, '2026-10-13T09:51:56Z', '2026-10-13T09:57:48Z', 'done', NULL, 0, '1a0a4133dee63c5aa37918fdbaf045bfdac27bc1', 'claude-opus-5-5[1m]', 'a744c27e-244c-4876-95a5-027ab1be40cb', 41, 72, 35064, 3596394, 132268, 2.4789907999999992, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (577, 536, '2026-10-13T09:57:49Z', '2026-10-13T10:02:08Z', 'done', NULL, 0, 'e9a9410228b78d13b0d89b0bbfa1cf168705d261', 'claude-opus-5-5[1m]', '12a7ab41-ae1d-4f7a-96c9-0b68de12c969', 33, 60, 20308, 2117279, 82163, 1.4871597999999997, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (578, 537, '2026-10-13T10:02:08Z', '2026-10-13T10:05:37Z', 'done', NULL, 0, '3c27dffc24d8d26dfb64044f1d13cf141850b084', 'claude-opus-5-5[1m]', 'bcaa5bb6-c59d-47f4-90de-df269433e718', 33, 64, 18178, 2329349, 87309, 1.5281577999999996, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
