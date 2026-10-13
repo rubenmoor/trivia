@@ -344,10 +344,10 @@ const es = {
       ],
     },
   },
-  /** The desktop's save file couldn't be used (plan 55); {path}: the backup. */
+  /** The save file couldn't be used (plan 55, decision 98); {path}: the backup. */
   save: {
-    corrupt: "No se pudo leer la partida guardada. Se guardó una copia en {path} y empieza una partida nueva.",
-    newer: "La partida guardada es de una versión más nueva del juego. Se guardó una copia en {path} y empieza una partida nueva.",
+    corrupt: "El archivo de la partida guardada está dañado. Se guardó como copia de seguridad en {path} y empieza una partida nueva.",
+    newer: "El archivo de la partida guardada es de una versión más nueva del juego. Se guardó como copia de seguridad en {path} y empieza una partida nueva.",
     /** First Steam start (plan 87): the save of this computer without Steam; {players}, {games}: the counts. */
     local: {
       title: "Progreso en este equipo",

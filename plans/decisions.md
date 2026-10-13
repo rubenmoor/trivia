@@ -526,6 +526,7 @@ Template:
 - Context: The TS engine (PORT-3) runs the rules in the browser; the Python server becomes a store (PORT-4). Today's state is `state/game.sqlite` plus `state/flags.json` (D-47).
 - Decision: `state/game.json` `{version: 1, players, games, burned, flags}`. The client writes it whole via `PUT /api/save`; the server checks only the envelope (object, `version` 1, three lists, `flags` object, ≤ 10 MB), no game logic, no merge. Atomic write (tmp + fsync + replace, retry on Windows locks → 503 `save_locked`). Flags live in the document. Authoring reads it, never writes it, and keeps its own applied-flags ledger (`state/flags-applied.json`). Migration from SQLite runs once on a copy; `game.sqlite` and `flags.json` stay as the backup.
 - Consequences: One writer (one TV tab), no revision check; `ServerStore` serializes its PUTs. `migrate()` is wired into startup only at the switch-over (PORT-7). The desktop shell's `FileStore` writes the same document.
+- Consequence (pm decision 98, 2026-10-13): a `game.json` the client can't parse (corrupt, newer version) moves via `POST /api/save/backup?kind=corrupt|newer` to `state/backup/game-<kind>-<stamp>.json`, as on the desktop (D-72); the game starts fresh and names the backup path once on the start screen.
 - Supersedes / related: D-4, D-25, D-47, D-59, D-66; plans 12, 49 (PORT-4, PORT-5)
 
 ## D-68: Age group and bundles are settings per game

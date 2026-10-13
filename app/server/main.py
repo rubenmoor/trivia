@@ -20,7 +20,10 @@ API:
     PUT  /api/save                                 body: the whole save document; replaces it. Envelope check
                                                    only: 400 "bad_save"; 503 "save_locked" when the file stays locked
                                                    or can't be written (disk full)
-Any other /api/ path, or POST: 404 {"error": "not_found"}; other methods: 501 (http.server).
+    POST /api/save/backup?kind=corrupt|newer      moves game.json to state/backup/game-<kind>-<stamp>.json
+                                                   (decision 98, as the desktop): {"path": <absolute path>};
+                                                   404 when there is no file, 400 "bad_request" for another kind
+Any other /api/ path or POST: 404 {"error": "not_found"}; other methods: 501 (http.server).
 Files are streamed; a single Range gets 206 (video seeking).
 """
 import argparse
@@ -60,7 +63,18 @@ class Handler(BaseHandler):
         return self.send_static(url.path)
 
     def do_POST(self):
-        return self.send_json(404, NOT_FOUND)
+        url = urlparse(self.path)
+        if url.path != "/api/save/backup":
+            return self.send_json(404, NOT_FOUND)
+        try:
+            path = save.backup(parse_qs(url.query).get("kind", [""])[0])
+        except save.SaveError as e:
+            return self.send_json(e.status, {"error": e.code, "message": str(e)})
+        except OSError as e:
+            return self.send_json(503, {"error": "save_locked", "message": f"can't back up the save: {e}"})
+        if path is None:
+            return self.send_json(404, NOT_FOUND)
+        return self.send_json(200, {"path": path})
 
     def do_PUT(self):
         if urlparse(self.path).path != "/api/save":

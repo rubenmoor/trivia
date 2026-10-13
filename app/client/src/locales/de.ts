@@ -300,8 +300,8 @@ export const de = {
     },
   },
   save: {
-    corrupt: "Der Spielstand konnte nicht gelesen werden. Eine Kopie liegt unter {path}, und ein neues Spiel beginnt.",
-    newer: "Der Spielstand stammt aus einer neueren Version des Spiels. Eine Kopie liegt unter {path}, und ein neues Spiel beginnt.",
+    corrupt: "Die Spielstand-Datei ist beschädigt. Sie wurde als Sicherung nach {path} verschoben, und ein neues Spiel beginnt.",
+    newer: "Die Spielstand-Datei stammt aus einer neueren Version des Spiels. Sie wurde als Sicherung nach {path} verschoben, und ein neues Spiel beginnt.",
     local: {
       title: "Fortschritt auf diesem Computer",
       body: "Auf diesem Computer gibt es einen Spielstand ohne Steam: {players}, {games}. Mit diesem Steam-Konto weiterspielen?",

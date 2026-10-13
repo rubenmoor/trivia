@@ -41,18 +41,35 @@ class WriteQueue {
   }
 }
 
-export class ServerStore implements Store {
-  private readonly queue = new WriteQueue(async (body) => {
-    await json(await call("/api/save", { method: "PUT", headers: { "Content-Type": "application/json" }, body }));
-  });
+/** A save file that couldn't be used: moved to `path`, the game starts fresh. */
+export interface SaveNotice {
+  kind: BackupKind;
+  path: string;
+}
 
+/** Text in, parseSave here; a corrupt or newer file goes to the backup with a notice (D-72, decision 98). */
+abstract class TextStore implements Store {
+  notice: SaveNotice | null = null;
+  protected abstract readonly queue: WriteQueue;
+  /** The stored text, null when there is none. */
+  protected abstract read(): Promise<string | null>;
+  /** Moves the file away; the backup's path. */
+  protected abstract backup(kind: BackupKind): Promise<string>;
+
+  /** If the backup fails, this throws and nothing is written. */
   async load(): Promise<SaveData> {
-    const res = await call("/api/save");
-    if (res.status === 404) return emptySave();
-    return parseSave(await json<unknown>(res));
+    const text = await this.read();
+    if (text === null) return emptySave();
+    let kind: BackupKind;
+    try {
+      return parseSave(JSON.parse(text));
+    } catch (e) {
+      kind = e instanceof SaveNewerError ? "newer" : "corrupt";
+    }
+    this.notice = { kind, path: await this.backup(kind) };
+    return emptySave();
   }
 
-  /** Throws with the server's `error` code. */
   save(data: SaveData): Promise<void> {
     return this.queue.push(JSON.stringify(data));
   }
@@ -62,19 +79,33 @@ export class ServerStore implements Store {
   }
 }
 
-/** A save file that couldn't be used: moved to `path`, the game starts fresh. */
-export interface SaveNotice {
-  kind: BackupKind;
-  path: string;
+/** The game server's `state/game.json`; writes throw with the server's `error` code. */
+export class ServerStore extends TextStore {
+  protected readonly queue = new WriteQueue(async (body) => {
+    await json(await call("/api/save", { method: "PUT", headers: { "Content-Type": "application/json" }, body }));
+  });
+
+  protected async read(): Promise<string | null> {
+    const res = await call("/api/save");
+    if (res.status === 404) return null;
+    if (!res.ok) await json(res); // throws
+    return res.text();
+  }
+
+  protected async backup(kind: BackupKind): Promise<string> {
+    const res = await call(`/api/save/backup?kind=${kind}`, { method: "POST" });
+    return (await json<{ path: string }>(res)).path;
+  }
 }
 
-/** The desktop shell's save file; main only stores text, validation is parseSave here (D-72). */
-export class FileStore implements Store {
-  notice: SaveNotice | null = null;
+/** The desktop shell's save file; main only stores text (D-72). Writes throw GameError("save_locked"); the
+ * caller keeps the save and writes it whole next time. */
+export class FileStore extends TextStore {
+  protected readonly queue: WriteQueue;
   private readonly bridge: DesktopBridge;
-  private readonly queue: WriteQueue;
 
   constructor(bridge: DesktopBridge) {
+    super();
     this.bridge = bridge;
     this.queue = new WriteQueue(async (text) => {
       try {
@@ -86,26 +117,11 @@ export class FileStore implements Store {
     });
   }
 
-  /** A broken or newer file goes to the backup first; if that fails, this throws and nothing is written. */
-  async load(): Promise<SaveData> {
-    const text = await this.bridge.loadSave();
-    if (text === null) return emptySave();
-    let kind: BackupKind;
-    try {
-      return parseSave(JSON.parse(text));
-    } catch (e) {
-      kind = e instanceof SaveNewerError ? "newer" : "corrupt";
-    }
-    this.notice = { kind, path: await this.bridge.backupSave(kind) };
-    return emptySave();
+  protected read(): Promise<string | null> {
+    return this.bridge.loadSave();
   }
 
-  /** Throws GameError("save_locked"); the caller keeps the save and writes it whole next time. */
-  save(data: SaveData): Promise<void> {
-    return this.queue.push(JSON.stringify(data));
-  }
-
-  flush(): Promise<void> {
-    return this.queue.flush();
+  protected backup(kind: BackupKind): Promise<string> {
+    return this.bridge.backupSave(kind);
   }
 }

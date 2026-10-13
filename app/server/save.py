@@ -9,6 +9,7 @@ and writes version 4 back.
 
 The server only checks the envelope; the game rules live in the client's engine.
 `migrate()` carries game.sqlite + flags.json over once (PORT-5) at server start; nothing else reads them.
+A file the client can't use (corrupt, newer version) moves to backup/ (decision 98, as app/desktop/save.mjs).
 """
 import json, os, sqlite3, tempfile, threading, time
 
@@ -20,6 +21,8 @@ MIGRATE_VERSION = 2  # what migrate() writes
 LISTS = {2: ("players", "games", "burned", "reports"), 3: ("players", "games", "seen", "blocked", "reports"),
          4: ("players", "games", "seen", "blocked")}
 MAX_BYTES = 10 * 1024 * 1024
+BACKUPS = paths.STATE / "backup"
+KINDS = ("corrupt", "newer")
 RETRIES, RETRY_SLEEP = 10, 0.1  # Windows: antivirus/backup may hold the file
 _lock = threading.Lock()  # one writer of game.json.tmp
 
@@ -66,15 +69,38 @@ def write(doc):
             f.write(raw)
             f.flush()
             os.fsync(f.fileno())
-        for attempt in range(RETRIES + 1):
-            try:
-                os.replace(tmp, FILE)
-                return
-            except PermissionError:
-                if attempt < RETRIES:
-                    time.sleep(RETRY_SLEEP)
-        tmp.unlink(missing_ok=True)
-        raise SaveError(503, "save_locked", "game.json is locked by another program")
+        try:
+            _replace(tmp, FILE)
+        except SaveError:
+            tmp.unlink(missing_ok=True)
+            raise
+
+
+def _replace(src, dst):
+    """os.replace, retried while Windows holds a file → SaveError 503."""
+    for attempt in range(RETRIES + 1):
+        try:
+            return os.replace(src, dst)
+        except PermissionError:
+            if attempt < RETRIES:
+                time.sleep(RETRY_SLEEP)
+    raise SaveError(503, "save_locked", "game.json is locked by another program")
+
+
+def backup(kind):
+    """Move game.json to backup/game-<kind>-<stamp>.json; its absolute path, or None when there is no file."""
+    if kind not in KINDS:
+        raise SaveError(400, "bad_request", f"kind must be one of {list(KINDS)}")
+    with _lock:
+        if not FILE.exists():
+            return None
+        BACKUPS.mkdir(parents=True, exist_ok=True)
+        base = f"game-{kind}-{time.strftime('%Y%m%d-%H%M%S')}"
+        n = 1
+        while (target := BACKUPS / (f"{base}.json" if n == 1 else f"{base}-{n}.json")).exists():
+            n += 1
+        _replace(FILE, target)
+        return str(target.resolve())
 
 
 def _upgrade(con):

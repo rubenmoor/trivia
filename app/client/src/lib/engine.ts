@@ -100,9 +100,8 @@ export async function adoptLocal(): Promise<void> {
   location.reload();
 }
 
-/** The notice of a backed-up save file (plan 55), once; null after that and in the browser. */
+/** The notice of a backed-up save file (plan 55, decision 98), once; null after that. */
 export function takeSaveNotice(): SaveNotice | null {
-  if (!(store instanceof FileStore)) return null;
   const notice = store.notice;
   store.notice = null;
   return notice;

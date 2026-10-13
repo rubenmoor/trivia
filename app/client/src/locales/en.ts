@@ -301,8 +301,8 @@ export const en = {
     },
   },
   save: {
-    corrupt: "Couldn't read the saved game. A copy was kept at {path}, and a new game starts.",
-    newer: "The saved game is from a newer version of the game. A copy was kept at {path}, and a new game starts.",
+    corrupt: "The saved game file is damaged. It was backed up to {path}, and a new game starts.",
+    newer: "The saved game file is from a newer version of the game. It was backed up to {path}, and a new game starts.",
     local: {
       title: "Progress on this computer",
       body: "This computer has progress saved without Steam: {players}, {games}. Use it with this Steam account?",
