@@ -12,7 +12,7 @@ The road from today onward: milestones, every open task, every open question. Th
 ## Where we stand (2026-10-07)
 
 - **Pool:** 513 questions in `authoring/data/questions.json`: 483 approved (190 reviewed by the gamemaster, 293 by Claude, D-33), 20 `needs_work`, 9 rejected, 1 draft. Batches `first-120`, `pilot`, `batch-3`, `batch-4`, `batch-5`. `base`: 28 categories / 184 subcategories; `colombia`: 6 / 27 (D-19, D-43). Exported for the game to `app/data/pool.json` (D-35).
-- **Bundles (D-39):** every question is in one bundle. Approved: 404 in `base`, 79 in `colombia` (proposed by an LLM pass, not yet checked by the gamemaster). Since 2026-10-08 a batch writes for one bundle named by the command, and `colombia` has its own 27 subcategories, which left `base` (D-41, D-43).
+- **Bundles (D-39):** every question is in one bundle. Approved (2026-10-13): 1034 in `base`, 102 in `colombia`; the 84 LLM proposals checked by the gamemaster, all kept (decision 7). Since 2026-10-08 a batch writes for one bundle named by the command, and `colombia` has its own 27 subcategories, which left `base` (D-41, D-43).
 - **Difficulty supply (approved, shared scale D-38; young teens play 1–10):** 1: 27 · 2: 41 · 3: 67 · 4: 66 · 5: 79 · 6: 91 · 7: 55 · 8: 29 · 9: 26 · 10: **2**. The top of the ladder is thin (level 12 draws only 9–10).
 - **Media:** 361 approved questions have a picked file; 122 don't (115 in `batch-3`, 7 in `pilot`).
 - **Pipeline:** one command, `qgen batch` (D-36, [`authoring/RUNBOOK.md`](../authoring/RUNBOOK.md)); repo split into `app/` (ships) and `authoring/` (doesn't), both packaged by the flake (D-35, [`19`](19-repo-layout.md)). Since 2026-10-07: grouped rating and revising (PE-1..PE-5); drafts start from stored concept lists and question axes (D-37; only Espacio has a list yet, the batch makes the others as needed); prompts write for a focus age group, young teens (D-38); the command names the batch's bundle, `base` by default (D-41).
@@ -112,7 +112,7 @@ No family-specific questions (D-30).
 - [x] LUI-2 Pseudo-locale for length and missing-string tests (2026-10-12, pm plan 23; overflow: B-17, B-18) — [`15a`](15a-ui-translation.md)
 - [x] LUI-3 Draft `en` catalog with English joker names (2026-10-12, pm plan 24, D-89) — [`15a`](15a-ui-translation.md)
 - [x] BN-2..BN-5 Bundles (replace RG-1, RG-2): `bundle` on every question, `colombia` proposed by an LLM pass (D-39) — [`22`](22-bundles.md)
-- [ ] Gamemaster checks the 84 `colombia` proposals at `/review?bundle=colombia` (key `n` moves one back to base) — [`22`](22-bundles.md)
+- [x] Gamemaster checks the 84 `colombia` proposals at `/review?bundle=colombia` (key `n` moves one back to base) — [`22`](22-bundles.md)
 
 ### M10 — Media license audit
 **Goal:** the full license data of every media file is known and stored, and files with unclear licenses (PD-US only, GFDL, flagged) are replaced.

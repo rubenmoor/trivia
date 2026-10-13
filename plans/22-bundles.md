@@ -56,7 +56,7 @@ The gamemaster's direction (2026-10-07): a batch writes for **one bundle, chosen
 ## Tasks
 - [x] BN-1 Decision D-39 and this plan; 15c's `region` replaced by bundles
 - [x] BN-2 `app/data/bundles.json` (base, colombia); `bundle` on every question (`base`); `validate` and `export`
-- [x] BN-3 `qgen bundles`: an LLM pass proposes `colombia` for existing questions and writes it. *2026-10-07: 504 questions (rejected ones skipped), 26 calls; 84 moved to `colombia`. Proposals and reasons in `work/bundles/proposals.json`. For the gamemaster to check: `/review?bundle=colombia`.*
+- [x] BN-3 `qgen bundles`: an LLM pass proposes `colombia` for existing questions and writes it. *2026-10-07: 504 questions (rejected ones skipped), 26 calls; 84 moved to `colombia`. Proposals and reasons in `work/bundles/proposals.json`. For the gamemaster to check: `/review?bundle=colombia`. 2026-10-13: checked by the gamemaster (decision 7): 84 kept in `colombia`, 0 moved to `base`.*
 - [x] BN-4 `draft` picks the bundle by the rules; house style explains bundles
 - [x] BN-5 `report` per bundle; review tool shows the bundle, filters by it (`?bundle=`) and lets the gamemaster change it. *Key `n` moves a question to the next bundle. The server also accepts difficulty 1–15 now (D-38); the review tool's digit keys still set 1–10.*
 - [ ] BN-6 The game: choose bundles before a session; selection filters by them *(start screen: plan 29)*
