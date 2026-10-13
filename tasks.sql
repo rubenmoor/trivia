@@ -4394,12 +4394,14 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 ## Out of scope
 - Prompt or code changes (QC change tasks go to plans 64, 66, 70 or new ones); the back-audit (plan 57); store texts (S5); later languages (milestone 12).', '2026-10-13T05:13:28Z', 250);
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (85, 10, 'Steamworks binding in the shell (SW-8)', 690, 'SW-8 (masterplan 10 part 3): the Electron shell talks to the local Steam client through steamworks-ffi-node (decision 28: Steam binding for the Electron shell; D-63). Overlay, the on-screen keyboard for the player name, per-device glyphs and Steam''s language as the first-start guess. Every call is optional: without Steam (offline living room, browser game, dev without Steam) the game behaves exactly as in S3. Owner: `plans/18-steam-integration.md` ("Steam features", SW-8); touches `14-input.md`, `15-i18n.md`.
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (85, 10, 'Steamworks binding in the shell (SW-8)', 690, 'SW-8 (masterplan 10 part 3): the Electron shell talks to the local Steam client through steamworks-ffi-node (decision 28: Steam binding for the Electron shell; D-63). Overlay, the on-screen keyboard for the player name, per-device glyphs, Steam''s language as the first-start guess and the valid-Steam-user check that gates saves and flags. Steam only (decision 111: Steam only: no effort outside Steam): init failure must not crash, but no work, checks or done-whens for running without Steam; fallbacks that also serve under Steam stay (letter picker, `Gamepad.id` glyphs, `navigator.language`). Owner: `plans/18-steam-integration.md` ("Steam features", SW-8); touches `14-input.md`, `15-i18n.md`.
 
 ## Builds on (don''t rebuild)
 - Shell: `app/desktop/main.mjs`, `preload.cjs` (bridge `window.trivia`, sender-origin check), `app/client/src/lib/desktop.ts` (D-71, plan 54); `FileStore` (D-72, plan 55); builds `electron-builder.yml`, `trivia-desktop-build` (D-73, plan 56).
 - Glyphs: `lib/gamepad.ts` `styleOf(Gamepad.id)`, `Glyph.svelte` (plan 45). Letter picker: `LetterPicker.svelte` (plan 46). Language: `guessTag()` + `ready()` in `lib/engine.ts`, `defaultLanguage()` in `engine/save.ts` (plan 68, D-86).
-- Sibling parts of masterplan 10: App ID and `steam_appid.txt` values (parts 1–2, tasks 253/254); Cloud saves per SteamID (part 4, task 433) and achievements (part 5, task 257) call this bridge; builds/upload (part 7, task 261).
+- Sibling parts of masterplan 10: App ID and `steam_appid.txt` values (parts 1–2, tasks 253/254); Cloud saves and the Steam-user gate (part 4, plan 87) and achievements (part 5, plan 86) call this bridge; builds/upload (part 7, plan 89).
+- Done here (tasks 645–649, 651): binding, `steam.available` via `--trivia-steam`, `steamId()`, `language()`, `unlock()`, overlay (decision 70: Steam overlay in the Electron shell: Windows only, D-92), keyboard, glyphs, rich presence.
+- Dev server of plan 99 (Vite, page shim for the save half of the bridge, `TRIVIA_SAVE_DIR` or a temp dir).
 
 ## Rules
 - Binding in the main process only; the page sees one optional object `window.trivia.steam` (and `lib/desktop.ts` exports `steam: SteamBridge | null`). The page checks `steam?.available`; no Node, no FFI in the page.
@@ -4410,7 +4412,14 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - Strings via `t()` in every catalog (es, es-ES where it differs, en, de); `check:literals` passes.
 
 ## Bridge (shape; the first task fixes it)
-`steam: { available, steamId(), language(), overlay: {…}, showTextInput(field rect, current) → Promise<boolean>, inputTypes() → PadStyle[] | null, setPresence(key, values) , unlock(id) }` over fixed IPC channels `steam:*`, same origin check as `save:*`. `unlock` and `steamId` are for parts 4 and 5; this plan only exposes them (plain pass-through, no logic).
+`steam: { available, user, steamId(), language(), overlay: {…}, showTextInput(field rect, current) → Promise<boolean>, inputTypes() → PadStyle[] | null, setPresence(key, values) , unlock(id) }` over fixed IPC channels `steam:*`, same origin check as `save:*`. `unlock` and `steamId` are for parts 4 and 5; this plan only exposes them (plain pass-through, no logic).
+
+## Valid Steam user and dev switch (decision 111)
+- Valid user = `steam.available` and a non-zero SteamID, or the dev switch. Computed once in `main.mjs` at start (the SteamID doesn''t change in a session) and passed to the page like `available` (`additionalArguments`, e.g. `--trivia-user`): `steam.user` boolean.
+- Dev switch: env `TRIVIA_DEV_STEAM_USER=1` → `steam.user` true even without Steam (saves and flags on); one stderr line `trivia: dev Steam user (TRIVIA_DEV_STEAM_USER)`. Honoured in packaged builds too (soft check, patchable, accepted; part 7''s smoke game uses it); never set by `trivia-desktop-build`, launch options or VDFs. Under the switch without Steam `steamId()` stays null; the save folder is plan 87''s call (`TRIVIA_SAVE_DIR` or a fixed dev folder).
+- Page: `lib/desktop.ts` exports one `validUser: boolean` = `steam?.user === true`, or true under plan 99''s dev server shim (its `TRIVIA_SAVE_DIR`/temp save counts as the dev switch). Plan 87 (save gate, notice) and the flag UI read only `validUser`, never their own Steam test.
+- No DRM, no `restartAppIfNecessary`, no anti-tamper, no ownership check beyond this.
+- Docs: `README.md` and AGENTS.md "Commands" (`trivia-desktop` line) name `TRIVIA_DEV_STEAM_USER`; `plans/18-steam-integration.md` "Steam features".
 
 ## Language guess (milestone outcome)
 - `guessTag()` becomes `async` (only `ready()` calls it): `steam?.available ? fromSteam(await steam.language()) : null` ?? `navigator.language` ?? `es`. `steam.language()` = `ISteamApps::GetCurrentGameLanguage` (the game''s language set in Steam, else the client''s).
@@ -4419,13 +4428,12 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - 15-i18n.md "Model" and I18N-2 note: Steam language wired.
 
 ## Overlay
-- steamworks-ffi-node''s overlay is experimental (offscreen render into a native OpenGL window Steam hooks; X11 only, ~1 frame latency, untested with `<video>`/`<audio>`). Spike first on Linux (X11 and the Deck''s gamescope) and Windows: overlay opens with Shift+Tab, video and audio questions play, frame rate fine, fullscreen/F11 still work.
-- If the OSR path breaks video/audio or the Deck: overlay on Windows only, Linux without overlay; the Deck runs the Windows build via Proton as the fallback (D-63, SW-12). Record the result as a D-entry in `plans/decisions.md` (`pm decision record`).
+- Decided (decision 70: Steam overlay in the Electron shell, D-92): Windows only (`addElectronSteamOverlay` on win32); Linux without overlay (native GL window freezes the game on XWayland); Deck via Proton. Gamemaster check on Windows in the close-out.
 - Game pauses nothing on overlay open (no timer outside `timed`; `timed` pause on `GameOverlayActivated` is a follow-up only if mode `timed` exists by then).
 
 ## On-screen keyboard (player name)
 - Under Steam with a pad: the name field opens `ShowFloatingGamepadTextInput` (keystrokes into the focused `<input>`) at the field''s rect; returns false outside Big Picture/Deck → the letter picker (plan 46) as today. If keystrokes don''t reach Chromium, use `ShowGamepadTextInput` + `GetEnteredGamepadTextInput` (returns the text) instead; note which in 14-input.md.
-- Keyboard/mouse users keep the plain field; the picker stays the fallback without Steam.
+- Keyboard/mouse users keep the plain field; the picker stays the fallback outside Big Picture/Deck.
 
 ## Glyphs
 - With Steam Input on, every pad is a virtual Xbox pad, so `Gamepad.id` says Xbox. `steam.inputTypes()` = `GetInputTypeForHandle` of the connected handles (Steam Input init in main); one PlayStation-type pad → `playstation` glyphs; Steam Deck / Steam Controller / others → Xbox (no Deck glyph set without a pm decision). Several pads of mixed types: Xbox (per-player glyphs come with IN-6).
@@ -4437,7 +4445,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 ## Packaging
 - `electron-builder.yml`: `asarUnpack` for `node_modules/steamworks-ffi-node/**`, `node_modules/koffi/**`, `node_modules/@koromix/koffi-*/**` and the SDK folder (`extraResources` or unpacked), as the binding''s docs say. Cross-build risk: npm installs only the host''s optional `@koromix/koffi-*` package, so the Windows zip built on Linux needs the win32-x64 one too (`npm install --os=win32 --cpu=x64 …` or the doc''s way); check the zip content lists `steam_api64.dll` and the win32 koffi binary.
 - `CREDITS.md`: steamworks-ffi-node (MIT), koffi (MIT), Steamworks SDK redistributable (Valve) through `app/client/credits.ts` (plan 47).
-- Dev: `trivia-desktop` with the Steam client running and `TRIVIA_STEAM_APPID=480` (or the real App ID); `steam_appid.txt` beside the Electron binary only in dev, never in `release/` unless part 2 says so.
+- Dev: `trivia-desktop` with the Steam client running and `TRIVIA_STEAM_APPID=480` (or the real App ID), or `TRIVIA_DEV_STEAM_USER=1` for checks without a Steam session; `steam_appid.txt` beside the Electron binary only in dev, never in `release/` unless part 2 says so.
 
 ## Tasks (suggested order)
 1. Binding spike + bridge: dependency, SDK folder (gitignored) + flake lib for dev, init/shutdown/callbacks in `main.mjs`, `steam` object in `preload.cjs`, `SteamBridge` type in `lib/desktop.ts`; `available`, `steamId()`, `language()`, `unlock()` pass-through. Check: under Steam (480) `available` true, SteamID and language printed; without Steam a full game plays (D-72 save untouched); browser game unchanged. If the SDK isn''t there yet: gamemaster step as a pm decision ("Steamworks SDK zip downloaded to …?").
@@ -4445,13 +4453,14 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 3. Overlay spike and wiring (Linux X11, Windows; the Deck goes into part 10''s checklist): result as a D-entry; gamemaster check via pm decision where a real Steam session is needed.
 4. On-screen keyboard for the player name (Player screen, `LetterPicker` fallback).
 5. Glyphs via `GetInputTypeForHandle`.
-6. Packaging: `asarUnpack`, win32 koffi in the cross build, SDK libs in both artefacts, credits; packaged Linux build starts with and without Steam.
+6. Packaging: `asarUnpack`, win32 koffi in the cross build, SDK libs in both artefacts, credits; packaged Linux build starts under Steam (480) and `available` is true (no start test without Steam, decision 39).
 7. Rich presence (optional, lowest priority; drop if the token upload isn''t worth it).
-8. Close-out: gamemaster check under Steam (overlay opens, keyboard fills the name, fresh save preselects Steam''s language) and without Steam (full game as in S3) as one pm decision; `18-steam-integration.md` SW-8 `[x]` with note and "Steam features" updated, `14-input.md` (glyphs, keyboard), `15-i18n.md` (I18N-2 note), `plans/project.md`, `directory.md`.
+8. Close-out: gamemaster check under Steam (overlay opens on Windows, keyboard fills the name, fresh save preselects Steam''s language, PlayStation glyphs) as one pm decision, no "without Steam" rows; `18-steam-integration.md` SW-8 `[x]` with note and "Steam features" updated, `14-input.md` (glyphs, keyboard), `15-i18n.md` (I18N-2 note), `plans/project.md`, `directory.md`.
+9. Valid-user check and dev switch (new; before plan 87''s gate task): `steam.user` + `--trivia-user` in `main.mjs`/`preload.cjs`, `SteamBridge.user` and `validUser` in `lib/desktop.ts` (dev-server shim → true), `TRIVIA_DEV_STEAM_USER`, README + AGENTS.md "Commands". Check: under Spacewar (480) logged in → true; `TRIVIA_DEV_STEAM_USER=1` without Steam → true; neither → false (stderr lines show it); dev server → true. No consumers here (plan 87 and the flag UI).
 
 ## Done when
-- Under Steam: the overlay opens, the keyboard fills the name, a fresh save preselects Steam''s language.
-- Without Steam: a full game plays as in S3; browser game (`trivia`) unchanged.', '2026-10-13T05:17:09Z', 255);
+- Under Steam: the overlay opens (Windows), the keyboard fills the name, a fresh save preselects Steam''s language.
+- `steam.user` / `validUser` true with a logged-in Steam user and with the dev switch, false otherwise.', '2026-10-13T05:17:09Z', 255);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (86, 10, 'Achievements (SW-11)', 590, 'SW-11 (masterplan 10 part 5): a few Steam achievements, no grind, earned only in games that play by the standard rules. Owner: `plans/18-steam-integration.md` ("Steam features", SW-11); touches `13-game-modes.md` (MD-8 note), `17-publishing.md` (credits).
 
 ## Builds on (don''t rebuild)
@@ -14793,7 +14802,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Done when: no open task body or pending decision tells a worker or the gamemaster to use the removed commands/endpoints; list what changed in the done note.', '2026-10-13T15:19:48Z', NULL, 759);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (768, 10, 'create tasks for plan 10', 'split', 'done', 1000, '2026-10-13, tasks.sql: open plan tasks 253, 254, 259, 260, 263 aligned with revised plan 10 (decision 111 Steam only, valid-user gate, free DLC depots per decision 66/112); plans 85-90 get revise tasks 769-774', 'Split plan 10 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:21:16Z', '2026-10-13T15:22:16Z', 754);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (769, 85, 'revise plan 85', 'plan', 'open', 1000, NULL, 'Plan 10, the plan above plan 85, changed; it is quoted below. Bring plan 85 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (769, 85, 'revise plan 85', 'plan', 'done', 1000, '2026-10-13, plan 85 body: valid-user check steam.user/validUser + dev switch TRIVIA_DEV_STEAM_USER (new task 9), overlay per decision 70, Steam-only done-whens and close-out/packaging rows', 'Plan 10, the plan above plan 85, changed; it is quoted below. Bring plan 85 in line with it
 (`pm plan edit 85 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -14913,7 +14922,7 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 - Part 11 last.
 
 ## Out of scope (from the milestone)
-- Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T15:21:16Z', NULL, 754);
+- Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T15:21:16Z', '2026-10-13T15:23:25Z', 754);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (770, 86, 'revise plan 86', 'plan', 'open', 1000, NULL, 'Plan 10, the plan above plan 86, changed; it is quoted below. Bring plan 86 in line with it
 (`pm plan edit 86 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
@@ -15519,6 +15528,8 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 
 ## Out of scope (from the milestone)
 - Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T15:21:16Z', NULL, 754);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (775, 85, 'create tasks for plan 85', 'split', 'open', 1000, NULL, 'Split plan 85 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:23:25Z', NULL, 769);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -17416,6 +17427,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (667, 759, '2026-10-13T15:19:00Z', '2026-10-13T15:20:03Z', 'done', NULL, 0, '6c7a588520c61867e4c98728b1306f04b670e24f', 'claude-opus-5-5[1m]', 'f2a31e20-27f3-4a0c-b040-fc87238f901d', 6, 12, 6336, 213122, 37426, 0.4688004, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (668, 754, '2026-10-13T15:20:03Z', '2026-10-13T15:21:26Z', 'done', NULL, 0, '0814642bb9b527f2be0cb61f525360726244b82c', 'claude-opus-5-5[1m]', '9e835dd1-1c92-47fa-b137-461fb490eff7', 7, 14, 8710, 323625, 56738, 0.692885, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (669, 768, '2026-10-13T15:21:27Z', '2026-10-13T15:22:23Z', 'done', NULL, 0, '3ec68f014c7991be7b54dc18961fd832fc9571f1', 'claude-opus-5-5[1m]', 'b9671991-ca65-4a22-a7a9-eb40536a4847', 8, 16, 5296, 314317, 41725, 0.5026474, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (670, 769, '2026-10-13T15:22:23Z', '2026-10-13T15:23:32Z', 'done', NULL, 0, 'ca0f51f6be195a47ca694283f15d24c8c10b0746', 'claude-opus-5-5[1m]', '9050678e-2bd4-425f-982e-0bf4d71b3d39', 8, 16, 6771, 367051, 52234, 0.6267662, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
