@@ -14426,8 +14426,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Check
 - Walk both screens on `trivia` with a temp `TRIVIA_STATE` (mouse and keyboard only); `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client`.', '2026-10-13T14:40:28Z', '2026-10-13T14:46:53Z', NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (747, 98, 'create tasks for plan 98', 'split', 'open', 1000, NULL, 'Split plan 98 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:01:21Z', NULL, 249);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (747, 98, 'create tasks for plan 98', 'split', 'done', 1000, '2026-10-13, tasks.sql: tasks 749-752 for plan 98; DLC depots already task 748 (plan 89), pack runs task 643 (plan 84)', 'Split plan 98 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:01:21Z', '2026-10-13T15:02:26Z', 249);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (748, 89, 'DLC depots for packs (decision 66)', 'work', 'open', NULL, NULL, 'decision 66: Price model (OQ-33): bundles (non-base packs, e.g. `colombia`) ship as free DLC with their own store entries and optional install. Plan 89''s "Depots" says no bundle depots unless decision 66 asks: it does.
 
 - Depends on plan 98 (Regional packs) task "Packs as optional installs": each non-base bundle''s files (`app/data/bundles/<id>/…` pool files, its media key list) apart from `base`, and the game offers a pack only when its files are present. Not done yet → stop and say so.
@@ -14437,6 +14437,54 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Docs: plan 18 "Builds and depots" (DLC depots), D-entry.
 
 Done when: `trivia-steam upload --dry-run` renders a DLC depot per launching pack with placeholder IDs, and the stage check passes.', '2026-10-13T15:01:28Z', NULL, 249);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (749, 98, 'RG-5 decision (OQ-46 folded in) and 15c marking', 'work', 'open', NULL, NULL, 'Plan 98 part 1. Docs + facts + one pm decision; no code changes.
+
+- `plans/15c-regional-questions.md`: RG-1..RG-4 `[x]` with the mapping (RG-1, RG-2 = BN-2, BN-3, D-39; RG-3 = BN-6 (plans 27, 29, 30) + plan 62''s `qgen report --simulate --bundles`; RG-4 = BN-11 `qgen batch --bundle`); status line stays "superseded by 22".
+- `plans/22-bundles.md` Model bullets in line with D-85 / decision 38: Base bundles and bundle languages (`kind: base`, `languages`; no `always_on`; "base is always on" → "exactly one base bundle").
+- Facts via a throw-away script (delete it after), numbers go into the decision body:
+  - `colombia` approved/total (2026-10-13: 102/109)
+  - `colombia` questions on a `base` subcategory (19 approved: Historia 3, Piratas 2, Desiertos 2, Navidad 2, Mundiales de fútbol 2, 8 single ones); list them
+  - cost of a 100-question pack batch and of translating 100 (`qgen report --cost`, plan 70''s `$ per approved`)
+  - `qgen report --simulate --bundles base` vs `--bundles base,colombia` for es (games until first repeat), as information
+- `pm decision add "Regional packs at launch (RG-5, OQ-46)"`, one decision with four lettered questions, recommended option first in each, and the answer format in the body (e.g. "a1 b1 c1 d1"):
+  - (a) Packs at launch: `colombia` only (recommended: exists and reviewed; `mexico`/`argentina` after launch; en/de packs left to Workshop/modding, decision 66: Price model (OQ-33)) / plus new packs before launch (name them; each needs `qgen bundle new` + taxonomy approval + batches).
+  - (b) Languages of `colombia`: es only (recommended: Colombian connection and voice, decision 27: Spanish variety; es-ES players see it too) / also translated to en/de (needs `--translate --bundle`, re-rating for a Colombian-connected player).
+  - (c) Default on: off on the configure screen for every locale (decision 33, unchanged; recommended), the family''s save and old games keep D-85''s es default (D-59) / on for es.
+  - (d) OQ-46: `colombia` questions use `colombia` subcategories (recommended: «Cambiazo» on «Historia» shouldn''t serve a Colombian question when a base category was picked; new subcategories e.g. «Historia de Colombia», «Fútbol colombiano», «Navidad en Colombia», the 19 move there) / keep as is.
+  - Options as whole-answer combos: "1) all recommended (a1 b1 c1 d1)" first, "2) other (write e.g. a2 mexico, b1, c1, d2)".
+- `pm task-pending-decision 750 <decision id>`; also `pm task-pending-decision 643 <decision id>` (plan 84''s "Regional pack runs per RG-5").
+
+Done when: 15c/22 edits staged, the decision exists with the facts, the record task and task 643 pend on it.', '2026-10-13T15:02:21Z', NULL, 747);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (750, 98, 'Record RG-5', 'work', 'open', NULL, NULL, 'Plan 98 part 2. Waits on the RG-5 decision from the plan''s task "RG-5 decision (OQ-46 folded in) and 15c marking". No answered RG-5 decision in `pm show` → pend on it if it exists (`pm task-pending-decision`), else stop and say so.
+
+- D-entry in `plans/decisions.md` (packs at launch, languages, default on/off, OQ-46); `plans/15c-regional-questions.md` RG-5 `[x]`; OQ-46 → "Resolved" in `plans/open-questions.md`; `plans/22-bundles.md` "Later"/BN notes; `plans/project.md` in sync.
+- `qgen report --simulate`: default `--bundles` per the answer (packs off by default → `base` for every locale; packs on for es → `base,colombia` for es); help text drops "until RG-5"; note in plan 62''s file / `plans/16-content-target.md`.
+- `pm decision consequences <id> "…"`.
+- Follow-up tasks in plan 98, only those the answer needs (bodies self-contained):
+  - OQ-46 yes: «`colombia` subcategories (OQ-46)»: proposed subcategory list as a pm decision (taxonomy is the gamemaster''s), then a `qgen` migration step like BN-13 moving the 19 questions (no hand edits of the pool), `qgen validate` rule "a `colombia` question uses a `colombia` subcategory", concept lists via the batch.
+  - per new pack: «`<id>` bundle»: `qgen bundle new <id>` + proposed taxonomy as a pm decision; batches go to plan 84 (task 643).
+  - `colombia` translated: «`--translate --bundle <id>`»: `translate_selection` (qgen.py) takes the bundle''s approved sources, `languages` in `app/data/bundles.json` gains the locale once its target count is approved; runs go to plan 84.
+
+Done when: docs and `qgen report` default match the answer, follow-ups added, `qgen validate` and the per-commit checks pass.', '2026-10-13T15:02:21Z', NULL, 747);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (751, 98, 'Packs as optional installs (decision 66, game side)', 'work', 'open', NULL, NULL, 'Plan 98 part 3. decision 66: Price model (OQ-33): non-base bundles ship as free DLC with optional install. Independent of RG-5''s answer. Plan 89''s task 748 (DLC depots) waits on this.
+
+- Today `app/data/pool.json` (and `pool.<locale>.json`) holds every bundle and media sit in one content folder: a DLC depot can''t carry a pack.
+- `qgen export`: each non-base bundle''s questions in its own file (e.g. `app/data/bundles/<id>/pool[.<locale>].json`, next to its `categories.json` and names); `base`''s pool keeps only base questions. `qgen validate`''s stale-pool check covers the new files.
+- Loader (game client): merges the pack files that exist. A pack whose file is missing is not offered (same path as `bundle_not_offered`, no error); a stored choice naming it reads as the locale''s defaults (D-85, decision 38: Base bundles and bundle languages; never written back). The browser game (`trivia`, `nix build .#app`) ships every pack; check the flake/app packaging picks up the new folder.
+- Media: a list of each pack''s media keys (in `stage-media.mjs` or written by export) so task 748''s DLC depot can carry them; media shared with `base` stay in the content depot.
+- Check: `colombia` pack file removed → es offers only `base`, the family''s save (no `language` field, es) still loads and plays with the choice falling back; file back → offered again. `qgen validate`, `npm test`, per-commit checks.
+- D-entry (layout) in `plans/decisions.md`; `directory.md`; `plans/22-bundles.md` layout table.
+
+Done when: a pack is an optional file set the game offers only when present, and the checks above pass.', '2026-10-13T15:02:21Z', NULL, 747);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (752, 98, 'Close-out of regional packs', 'work', 'open', NULL, NULL, 'Plan 98 part 4. Runs after the plan''s tasks "Record RG-5" and "Packs as optional installs" (and any follow-ups they added) are done; one still open → stop and say so.
+
+- `plans/15c-regional-questions.md`: status done (superseded by 22), RG-1..RG-5 `[x]`.
+- `plans/22-bundles.md`: BN-6 status per task 479 (plan 30 close-out); if 479 is still open, leave BN-6 as is and say so in the note.
+- Plan 84''s task 643 (Regional pack runs per RG-5): no longer pending, or dropped if RG-5 says no new batches; check `pm show 643`, don''t run it.
+- `plans/11-steam.md` S4 row: notes packs (which launch, optional install); S5 row points at task 748 (DLC depots).
+- `plans/16-content-target.md`: the simulation numbers from the RG-5 decision''s body (`base` vs `base,colombia`, es).
+
+Done when: docs in sync, 15c done, plan 98''s Done-when bullets all hold.', '2026-10-13T15:02:21Z', NULL, 747);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -16275,6 +16323,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (653, 740, '2026-10-13T14:54:05Z', '2026-10-13T14:57:59Z', 'done', NULL, 0, '56be7426f4e8a0488848c748f39bdf103d43a1b2', 'claude-opus-5-5[1m]', 'd51b23a8-a113-430e-82bd-22f635518ee2', 26, 52, 14246, 1739608, 79069, 1.2656016000000003, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (654, 198, '2026-10-13T14:58:00Z', '2026-10-13T14:59:36Z', 'done', NULL, 0, '813601b0f4134a8ac65f5a3ca4092814bf311299', 'claude-opus-5-5[1m]', '70140d8d-c2f5-41ea-a6bd-cefd2c2d321f', 11, 22, 8092, 440586, 40775, 0.57624520000000012, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (655, 249, '2026-10-13T14:59:37Z', '2026-10-13T15:01:39Z', 'done', NULL, 0, 'cf687de6b19fc97d61c393df73959e788806a523', 'claude-opus-5-5[1m]', 'e4be8b24-4cc4-4e3c-954f-bf4851ab4aa0', 17, 34, 10758, 1036504, 69192, 0.9761328, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (656, 747, '2026-10-13T15:01:39Z', '2026-10-13T15:02:33Z', 'done', NULL, 0, 'bdbe93318bd99991a6ba8ff0587cb7fcadc3e042', 'claude-opus-5-5[1m]', '7505c27a-cfcc-493d-b6e1-93ef1364759e', 7, 14, 5054, 242511, 33756, 0.4196862, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
