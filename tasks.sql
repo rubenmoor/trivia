@@ -12886,8 +12886,71 @@ Done when: the pairs are added (or the task is dropped per RG-5); note lists the
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop. Applies whether or not plan 17''s task 50 (RUNBOOK: batch runs under pm run) is done.
 - Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-13T05:14:54Z', NULL, 631);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (644, 85, 'create tasks for plan 85', 'split', 'open', 1000, NULL, 'Split plan 85 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T05:17:09Z', NULL, 255);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (644, 85, 'create tasks for plan 85', 'split', 'done', 1000, '2026-10-13, tasks.sql: tasks 645–652 for plan 85, decision 68 (SDK download), task 650 pending on it', 'Split plan 85 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T05:17:09Z', '2026-10-13T05:18:20Z', 255);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (645, 85, 'Steam binding spike and bridge (steamworks-ffi-node)', 'work', 'open', NULL, NULL, 'Plan 85 task 1. Wire steamworks-ffi-node (decision 28: Steam binding for the Electron shell) into the Electron main process and expose one optional bridge to the page.
+
+- `app/desktop/package.json`: `steamworks-ffi-node` pinned in `dependencies`, nothing else new.
+- SDK libs: gitignore `app/desktop/steamworks_sdk/redistributable_bin/`; `setSdkPath` to it. Dev on NixOS: add nixpkgs `steamworks-sdk-redist` (unfree) to the flake dev shell and point the path there when the folder is missing (decision 68: Steamworks SDK downloaded for the Steam binding?).
+- `main.mjs`: `STEAM_APP_ID = 480` (Spacewar) until part 1 answers the App ID; `TRIVIA_STEAM_APPID` overrides in dev; the client''s `SteamAppId` env wins under a Steam launch. `init` in try/catch: any failure → `available: false`, one stderr line, nothing on screen. No `restartAppIfNecessary`, no DRM, `webRequest` block stays. `runCallbacks` on a timer only while Steam is up; stop on quit; `shutdown()` in `will-quit`.
+- IPC channels `steam:*` with the same sender-origin check as `save:*`; `preload.cjs` adds `window.trivia.steam`; `app/client/src/lib/desktop.ts` exports `steam: SteamBridge | null` with the full shape of plan 85 "Bridge" (`available`, `steamId()`, `language()`, `overlay`, `showTextInput(rect, current)`, `inputTypes()`, `setPresence(key, values)`, `unlock(id)`); this task implements `available`, `steamId()`, `language()` (`GetCurrentGameLanguage`), `unlock()` as plain pass-throughs; the rest are stubs returning false/null that later tasks fill.
+- No Node/FFI in the page.
+
+Done when: under a running Steam client with 480, `trivia-desktop` logs `available` true, SteamID and language; without Steam a full game plays and the D-72 save is untouched; browser game (`trivia`) unchanged; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-13T05:18:17Z', NULL, 644);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (646, 85, 'Steam language as the first-start guess', 'work', 'open', NULL, NULL, 'Plan 85 task 2 (milestone 10 outcome). Needs the bridge of task 1 (`steam.language()`).
+
+- `guessTag()` in `app/client/src/lib/engine.ts` becomes `async` (only `ready()` calls it): `steam?.available ? fromSteam(await steam.language()) : null` ?? `navigator.language` ?? `es`.
+- Pure mapping (in `lib/engine.ts` or a small `lib/steamlang.ts`): `latam` → `es`, `spanish` → `es-ES` (decision 27: Spanish variety; questions `es` via `defaultLanguage()`''s language-part match in `engine/save.ts`), `english` → `en`, `german` → `de`, `schinese` → `zh-Hans`, `russian` → `ru`, `brazilian` → `pt-BR` (fall through best match until milestone 12''s locales exist); unknown → `null`.
+- Only the fresh-save preselection: `save.language` always wins; the first-start screen still asks (D-86).
+- One small `node:test` for the mapping only if it stays useful.
+
+Done when: fresh save with Steam language `german` preselects de/de, `spanish` es-ES/es, `latam` es/es, unknown → navigator; existing save unchanged; without Steam behaviour as before. Local CI passes.', '2026-10-13T05:18:18Z', NULL, 644);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (647, 85, 'Steam overlay spike and wiring', 'work', 'open', NULL, NULL, 'Plan 85 task 3. steamworks-ffi-node''s overlay is experimental (offscreen render into a native OpenGL window; X11 only, ~1 frame latency, untested with `<video>`/`<audio>`).
+
+- Spike on Linux X11 and Windows (the Deck/gamescope goes into masterplan 10 part 10''s checklist): overlay opens with Shift+Tab, video and audio questions play, frame rate fine, fullscreen/F11 still work.
+- If OSR breaks video/audio: overlay on Windows only, Linux without overlay; Deck runs the Windows build via Proton (D-63, SW-12).
+- Wire the chosen path in `main.mjs` behind `steam.available`; fill the bridge''s `overlay` part. The game pauses nothing on overlay open.
+- Record the result: `pm decision record "Steam overlay in the Electron shell" …` and a D-entry in `plans/decisions.md`.
+- Where a real Steam session on a machine the worker can''t drive is needed, ask the gamemaster with `pm decision add` (concrete steps, expected result) and make this task pending on it.
+
+Done when: overlay result recorded; chosen path wired; without Steam nothing changes. Local CI passes.', '2026-10-13T05:18:18Z', NULL, 644);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (648, 85, 'Steam on-screen keyboard for the player name', 'work', 'open', NULL, NULL, 'Plan 85 task 4. Player screen name field under Steam with a pad.
+
+- Bridge `showTextInput(rect, current) → Promise<boolean>`: `ShowFloatingGamepadTextInput` at the field''s rect (keystrokes into the focused `<input>`); false outside Big Picture/Deck → `LetterPicker.svelte` (plan 46) as today.
+- If keystrokes don''t reach Chromium: `ShowGamepadTextInput` + `GetEnteredGamepadTextInput` (returns the text, the page sets the field) instead; note which in `plans/14-input.md`.
+- Keyboard/mouse users keep the plain field; the picker stays the fallback without Steam.
+- New strings via `t()` in every catalog (es, es-ES where it differs, en, de); `check:literals` passes.
+
+Done when: under Big Picture/Deck the keyboard fills the name (gamemaster check via `pm decision add` if the worker can''t run it); elsewhere the picker as before. Local CI passes.', '2026-10-13T05:18:18Z', NULL, 644);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (649, 85, 'Pad glyphs from Steam Input types', 'work', 'open', NULL, NULL, 'Plan 85 task 5. With Steam Input on, every pad is a virtual Xbox pad, so `styleOf(Gamepad.id)` in `app/client/src/lib/gamepad.ts` says Xbox.
+
+- Steam Input init in main; bridge `inputTypes() → PadStyle[] | null` = `GetInputTypeForHandle` of the connected handles.
+- One PlayStation-type pad → `playstation` glyphs (`Glyph.svelte`); Steam Deck / Steam Controller / others → Xbox (no Deck glyph set without a pm decision); mixed types → Xbox (per-player glyphs come with IN-6). `null` or no Steam → `Gamepad.id` as today.
+- If the binding doesn''t expose Steam Input: keep `Gamepad.id`, note it in `plans/14-input.md`, no follow-up.
+
+Done when: a DualShock/DualSense under Steam shows PlayStation glyphs (gamemaster check via `pm decision add` if needed); without Steam unchanged. Local CI passes.', '2026-10-13T05:18:18Z', NULL, 644);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (650, 85, 'Package the Steam binding in both builds', 'work', 'open', NULL, NULL, 'Plan 85 task 6. Needs the SDK libs (decision 68: Steamworks SDK downloaded for the Steam binding?).
+
+- `app/desktop/electron-builder.yml`: `asarUnpack` for `node_modules/steamworks-ffi-node/**`, `node_modules/koffi/**`, `node_modules/@koromix/koffi-*/**`; SDK folder via `extraResources` (or unpacked) per the binding''s docs; `setSdkPath` resolves it in the packaged app.
+- Cross build: npm installs only the host''s optional `@koromix/koffi-*`; get the win32-x64 one into the Windows zip built on Linux (`npm install --os=win32 --cpu=x64 …` or the docs'' way) in `trivia-desktop-build`.
+- `steam_appid.txt` only in dev, never in `release/` unless masterplan 10 part 2 (task 254) says so.
+- Credits: steamworks-ffi-node (MIT), koffi (MIT), Steamworks SDK redistributable (Valve) in `CREDITS.md` through `app/client/credits.ts` (plan 47).
+
+Done when: zip content lists `steam_api64.dll` and the win32 koffi binary, tar.gz has `libsteam_api.so` and the linux koffi binary; packaged Linux build starts with and without Steam. Local CI passes.', '2026-10-13T05:18:18Z', NULL, 644);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (651, 85, 'Steam rich presence (optional)', 'work', 'open', NULL, NULL, 'Plan 85 task 7, optional and lowest priority: drop it (`pm task drop`) if the token upload isn''t worth it.
+
+- Steam shows `steam_display` tokens from a localization file uploaded in Steamworks, not our strings. Draft the token file (`#Level` = «Nivel %level% de %levels%» per launch language, from the catalogs'' `t()` strings) as a file for the gamemaster to upload (path noted in `plans/18-steam-integration.md`).
+- Page calls bridge `setPresence(key, values)` on level change; cleared on quit.
+- Upload step for the gamemaster via `pm decision add`.
+
+Done when: file drafted, presence set on level change under Steam, nothing without Steam. Local CI passes.', '2026-10-13T05:18:18Z', NULL, 644);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (652, 85, 'SW-8 close-out: gamemaster check and docs', 'work', 'open', NULL, NULL, 'Plan 85 task 8, after tasks 1–7.
+
+- One `pm decision add` for the gamemaster: under Steam (overlay opens, keyboard fills the name, fresh save preselects Steam''s language) and without Steam (full game as in S3, browser game unchanged); make this task pending on it.
+- Docs: `plans/18-steam-integration.md` SW-8 `[x]` with note and "Steam features" updated; `plans/14-input.md` (glyphs, keyboard); `plans/15-i18n.md` ("Model", I18N-2 note: Steam language wired); `plans/project.md`; `directory.md` (`steamworks_sdk/`, new lib files).
+- Failures from the check → follow-up tasks in plan 85.
+
+Done when: decision answered as passed and the docs updated.', '2026-10-13T05:18:18Z', NULL, 644);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -13691,6 +13754,7 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 ## Options
 1. Person (recommended for a hobby launch): cheapest, fastest; W-8BEN; store labels as Developer/Publisher; advisor check before signup; switch to a company (app transfer) if revenue passes the advisor''s threshold, a second person joins, or the DSA address can''t be kept private.
 2. Company from the start: W-8BEN-E, limited liability, no private address in public; formation and bookkeeping cost before any revenue.', NULL, NULL, '2026-10-13T05:10:47Z', NULL, 193, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (68, 'Steamworks SDK downloaded for the Steam binding?', 'pending', '["Done: SDK unzipped to app/desktop/steamworks_sdk/redistributable_bin/ (version …)", "Not yet: build the Linux side from nixpkgs, Windows packaging waits"]', 'Plan 85 (SW-8) needs Valve''s Steamworks SDK `redistributable_bin` (Valve licence, not in git): `linux64/libsteam_api.so` and `win64/steam_api64.dll`. Download the SDK zip from partner.steamgames.com/downloads (Steam login; partner account per decision 67 if Valve asks for one) and unzip `sdk/redistributable_bin/` to `app/desktop/steamworks_sdk/redistributable_bin/` (gitignored). Linux dev can start without it (nixpkgs `steamworks-sdk-redist`, unfree), but the Windows zip (packaging task) needs the dll. Answer with the SDK version.', NULL, NULL, '2026-10-13T05:17:49Z', NULL, 644, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -14165,6 +14229,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (467, 253, '2026-10-13T05:15:23Z', '2026-10-13T05:15:33Z', 'blocked', NULL, 0, '391cd9cb76dbfc62e2314615b5f5c9895f7a129e', 'claude-opus-5-5[1m]', 'ea72de53-18e7-487e-baf7-12241fe32acb', 3, 6, 582, 83377, 30497, 0.2723154, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (468, 254, '2026-10-13T05:15:33Z', '2026-10-13T05:15:48Z', 'blocked', NULL, 0, 'b269dd94b4ec901a16e05979d6e2804a4c21a9e7', 'claude-opus-5-5[1m]', 'fb09a1d6-2976-405c-830c-29eac7bc796b', 4, 8, 980, 113646, 25479, 0.2461932, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (469, 255, '2026-10-13T05:15:48Z', '2026-10-13T05:17:22Z', 'done', NULL, 0, 'ae048df099816d9d1049c437f21f69cd26957ee8', 'claude-opus-5-5[1m]', '63292e0b-2154-46ee-8e7f-dd2eaf374a9a', 9, 18, 8937, 418702, 61438, 0.7540564, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (470, 644, '2026-10-13T05:17:22Z', '2026-10-13T05:18:26Z', 'done', NULL, 0, '83b6d60029a60079fe019153f25013fa1eb92112', 'claude-opus-5-5[1m]', 'c3b6a72d-0e22-4221-b67e-a6994a3bdd00', 9, 18, 6566, 273362, 28436, 0.41355239999999993, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -14286,5 +14351,6 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (459, 64);
 INSERT INTO task_decision (task_id, decision_id) VALUES (459, 65);
 INSERT INTO task_decision (task_id, decision_id) VALUES (464, 35);
 INSERT INTO task_decision (task_id, decision_id) VALUES (479, 50);
+INSERT INTO task_decision (task_id, decision_id) VALUES (650, 68);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
