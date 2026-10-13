@@ -35,7 +35,7 @@ DEPOTS = {
 }
 EXCLUDE = ["*.pdb", "steam_appid.txt"]
 EXCLUDE_OS = ["resources/media/*"]
-PLACEHOLDER_IDS = (480, "481,482,483")  # Spacewar, for --dry-run without steam.json IDs
+DRY_RUN_IDS = (480, "481,482,483")  # Spacewar, for --dry-run without steam.json IDs
 
 
 def git(*args: str) -> str:
@@ -43,9 +43,9 @@ def git(*args: str) -> str:
 
 
 def head_tag() -> str:
-    """`v<version>` on HEAD, else the short sha."""
-    tags = git("tag", "--points-at", "HEAD").split()
-    return next((t for t in tags if t.startswith("v")), None) or git("rev-parse", "--short", "HEAD")
+    """`v<version>` on HEAD (else another v* tag there), else the short sha."""
+    tags, want = git("tag", "--points-at", "HEAD").split(), f"v{version()}"
+    return want if want in tags else next((t for t in tags if t.startswith("v")), None) or git("rev-parse", "--short", "HEAD")
 
 
 def ids(args) -> tuple[int, dict[str, int]]:
@@ -154,7 +154,7 @@ def cmd_upload(args) -> None:
     if args.dry_run and not args.appid and not args.depots:
         conf = json.loads((HERE / "steam.json").read_text())
         if not conf["appid"] or not all(conf["depots"].values()):
-            args.appid, args.depots = PLACEHOLDER_IDS
+            args.appid, args.depots = DRY_RUN_IDS
             print(f"dry run: placeholder IDs {args.appid}, {args.depots}")
     appid, depots = ids(args)
 

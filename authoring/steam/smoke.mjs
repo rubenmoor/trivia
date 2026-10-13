@@ -75,7 +75,9 @@ async function launch() {
 async function quit(shell) {
   const exited = new Promise((r) => shell.once("exit", r));
   await h.evaluate("window.trivia.quit()").catch(() => {}); // the page goes away mid-call
-  await Promise.race([exited, sleep(10000).then(() => Promise.reject(new Error("shell didn't exit")))]);
+  let timer;
+  const timeout = new Promise((_, reject) => (timer = setTimeout(() => reject(new Error("shell didn't exit")), 10000)));
+  await Promise.race([exited, timeout]).finally(() => clearTimeout(timer));
 }
 
 /** Wait for the question's media; a missing-media notice or a broken element fails. */

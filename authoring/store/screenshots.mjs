@@ -18,6 +18,7 @@ import { emptySave, engineData, SAVE_VERSION } from "../../app/client/src/engine
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
 const DATA = path.join(REPO, "app", "data");
 const OUT = path.join(REPO, "authoring", "store", "out", "screenshots");
+const MEDIA = process.env.TRIVIA_MEDIA || path.join(REPO, "media"); // as the shell's roots()
 const W = 1920;
 const H = 1080;
 
@@ -202,7 +203,7 @@ async function main() {
   for (const id of Object.values(Q)) {
     const url = es.byId.get(id)?.media?.file_url;
     if (!url) throw new Error(`${id}: not in the pool or no media; pick another in Q`);
-    if (!existsSync(path.join(REPO, "media", cacheName(url)))) throw new Error(`${id}: media not cached: trivia-media sync --status approved`);
+    if (!existsSync(path.join(MEDIA, cacheName(url)))) throw new Error(`${id}: media not cached: trivia-media sync --status approved`);
   }
 
   const tmp = await mkdtemp(path.join(os.tmpdir(), "trivia-shots-"));
