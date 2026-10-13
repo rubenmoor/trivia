@@ -4,7 +4,7 @@
   #   nix build .#app              the game as it ships: built client + Python server, run with `trivia`
   #   nix run .#qgen -- batch      the LLM question batch (authoring/RUNBOOK.md, D-36)
   #   nix develop / direnv allow   everything for development, incl. `trivia`, `trivia-authoring`,
-  #                                `qgen`, `trivia-media`, `trivia-desktop` and `trivia-desktop-build` running from this checkout
+  #                                `qgen`, `trivia-media`, `trivia-desktop`, `trivia-desktop-build` and `trivia-steam` running from this checkout
   #
   # The authoring tools edit files in the checkout (authoring/data, app/data/pool.json, work/), so
   # they are wrappers that run the checkout's scripts with pinned Python, ImageMagick and Claude Code.
@@ -24,8 +24,8 @@
       systems = [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
       forAll = f: nixpkgs.lib.genAttrs systems (system: f (import nixpkgs {
         inherit system;
-        # Claude Code is the one unfree package the pipeline needs (D-35).
-        config.allowUnfreePredicate = pkg: nixpkgs.lib.getName pkg == "claude-code";
+        # Claude Code for the pipeline (D-35); SteamCMD for Steam uploads (D-93).
+        config.allowUnfreePredicate = pkg: builtins.elem (nixpkgs.lib.getName pkg) [ "claude-code" "steamcmd" "steam-unwrapped" ];
       }));
 
       # A command that runs a script from the repo checkout it is called in.
@@ -68,6 +68,16 @@
             exec electron "$root/app/desktop" "$@"
           '';
         };
+        # SteamCMD (D-93) in its own HOME, so its self-update and login cache stay out of the Steam client's root.
+        steamcmd = pkgs.writeShellApplication {
+          name = "steamcmd";
+          text = ''
+            home=''${TRIVIA_STEAMCMD_HOME:-''${XDG_DATA_HOME:-$HOME/.local/share}/trivia/steamcmd}
+            mkdir -p "$home"
+            HOME=$home exec ${pkgs.steamcmd}/bin/steamcmd "$@"
+          '';
+        };
+        trivia-steam = fromCheckout pkgs "trivia-steam" "authoring/steam/steam.py" [ steamcmd ];
         # Local builds for Windows and Linux (plan 56): pool check, client, staged media, electron-builder.
         trivia-desktop-build = pkgs.writeShellApplication {
           name = "trivia-desktop-build";
@@ -132,7 +142,8 @@
               tools.qgen tools.trivia-media tools.trivia-authoring tools.trivia-dev tools.trivia-desktop
               tools.trivia-desktop-build
               pkgs.xvfb  # authoring/store/screenshots.mjs
-            ] ++ nixpkgs.lib.optional (pm.packages ? ${pkgs.system}) pm.packages.${pkgs.system}.default;
+            ] ++ nixpkgs.lib.optionals (pkgs.system == "x86_64-linux") [ tools.trivia-steam tools.steamcmd ]  # SteamCMD: x86_64-linux only
+              ++ nixpkgs.lib.optional (pm.packages ? ${pkgs.system}) pm.packages.${pkgs.system}.default;
           };
         });
     };

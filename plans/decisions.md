@@ -840,3 +840,20 @@ Template:
   - Windows result pending a gamemaster check (pm decision); if it fails there too: no overlay anywhere, achievements still show Steam's own toast.
 - Consequences: `app/desktop/main.mjs`; without Steam nothing changes.
 - Supersedes / related: D-63, D-71; SW-8, SW-12; pm decision 28, plan 85
+
+## D-93: Steam uploads: SteamCMD, three depots, `beta` only
+- Date: 2026-10-13
+- Context: SW-10, SW-6, pm plan 89 (task 676); pm decision 84
+- Decision:
+  - **SteamCMD from nixpkgs** (`steamcmd`, FHS via `steam-run`; unfree: `steamcmd`, `steam-unwrapped`), dev shell, x86_64-linux only; `steamcmd +quit` runs on NixOS, so no SDK ContentBuilder fallback.
+  - **Own HOME for SteamCMD:** the dev shell's `steamcmd` wraps nixpkgs' with `HOME=${TRIVIA_STEAMCMD_HOME:-$XDG_DATA_HOME/trivia/steamcmd}`; nixpkgs' default `~/.local/share/Steam` is the Steam client's root, whose `linux32/` SteamCMD would overwrite. Self-update, login cache, logs live there, never in the repo.
+  - **Three depots, one install folder:** `windows` (`release/win-unpacked/`), `linux` (`release/linux-unpacked/`), both minus `resources/media/*`; `content` (`app/desktop/build/media/`, `DepotPath` `resources/media`), shared by both OSes. All exclude `*.pdb`, `steam_appid.txt`. No language/bundle depots.
+  - **Unpacked folders** from electron-builder's `dir` target (`trivia-desktop-build --dir`), archives stay for hand-copied builds.
+  - **Files in git** (`authoring/steam/`, never ships): `steam.json` (IDs, `null` until SW-7), `app_build.vdf.in`, `depot_build.vdf.in`, `steam.py` (`trivia-steam`), later `release_check`, `smoke.mjs`. Generated VDFs (`work/steam/<tag>/vdf/`), `BuildOutput` (`work/steam/<tag>/output`), logs, the release-check report: `work/steam/<tag>/`, gitignored.
+  - **No secrets in files:** account via `TRIVIA_STEAM_ACCOUNT` or a prompt; password, Steam Guard only typed into SteamCMD; beta password only in Steamworks.
+  - **`SetLive` `beta` only**, fixed in the template; `default` never from the repo (Steamworks web UI, S6).
+  - **`Desc`:** `<tag> <short sha>` (+ `skipped: <steps>` from the release check).
+  - **Release check:** every automated step fails it; `--skip <step>` (repeatable) shows in the report and `Desc`; manual rows interactive or `--manual <file>`, a "no" fails.
+  - **Clean tagged commit** for an upload: empty `git status --porcelain`, `v<version>` on HEAD; never creates/pushes tags; `--preview` (`Preview 1`) and `--dry-run` skip the tag gate.
+- Consequences: `flake.nix` (`steamcmd`, `trivia-steam`, unfree predicate); `trivia-steam vdf` renders the VDFs with absolute paths; SteamCMD parses them (`+run_app_build -preview` without login stops at "Not logged on").
+- Supersedes / related: D-59, D-63, D-73; SW-6, SW-10; pm decisions 14, 84; plans 56, 89

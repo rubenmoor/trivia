@@ -1,0 +1,12 @@
+"DepotBuild"
+{
+	"DepotID" "$depotid"
+	"ContentRoot" "$content_root"
+	"FileMapping"
+	{
+		"LocalPath" "*"
+		"DepotPath" "$depot_path"
+		"Recursive" "1"
+	}
+$exclusions
+}
