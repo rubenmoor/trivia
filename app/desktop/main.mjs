@@ -572,9 +572,12 @@ function bridge() {
   // Steam (plan 85): pass-throughs; null/false without Steam.
   handle("steam:steam-id", () => steam?.getStatus().steamId ?? null);
   handle("steam:language", () => steam?.apps.getCurrentGameLanguage() ?? null);
-  handle("steam:unlock", (id) =>
-    steam && typeof id === "string" ? steam.achievements.unlockAchievement(id) : false,
-  );
+  handle("steam:unlock", async (id) => {
+    if (!steam || typeof id !== "string") return false;
+    const ok = await steam.achievements.unlockAchievement(id);
+    if (!ok) console.error(`trivia: steam: unlock ${id} refused`);
+    return ok;
+  });
   handle("steam:overlay-enabled", () => overlay && steam?.utils.isOverlayEnabled() === true);
   // Floating keyboard types into the focused field; Steam shows it only in Big Picture or on the Deck.
   handle("steam:show-text-input", (rect) => {

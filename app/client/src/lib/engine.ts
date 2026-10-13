@@ -12,6 +12,7 @@ import { UI_LANGS } from "./i18n.ts";
 import { useNames } from "./names.svelte.ts";
 import { FileStore, ServerStore, type SaveNotice } from "./store.ts";
 import { telemetryCheckpoint, telemetryLoad } from "./telemetry.ts";
+import { achievementsCheckpoint, achievementsLoad } from "./achievements.ts";
 
 interface Loaded {
   save: SaveData & { language: Language };
@@ -66,6 +67,7 @@ async function load(): Promise<Loaded> {
   const data = await dataFor(loaded, "game"); // a missing data file fails here, not on the first action
   loaded.save = { ...repair(loaded.save, data, io()), language }; // dropped questions (plan 91); written with the next action
   telemetryLoad(loaded.save);
+  achievementsLoad(loaded.save, data);
   return loaded;
 }
 
@@ -145,6 +147,7 @@ async function exec<T>(route: Route<T>, write: boolean, scope: DataScope): Promi
     loaded.save = { ...reply.save, language: reply.save.language ?? loaded.save.language };
     loaded.fresh = false;
     telemetryCheckpoint(loaded.save);
+    achievementsCheckpoint(loaded.save, data);
     try {
       await store.save(reply.save); // on failure the new save stays; the next action PUTs it again
       lastSaveError = null;

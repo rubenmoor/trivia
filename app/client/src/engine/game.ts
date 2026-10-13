@@ -21,7 +21,7 @@ export const MODES: readonly GameMode[] = ["gamemaster", "solo", "rr-coop", "rr-
 export const BUILT_MODES: readonly GameMode[] = ["gamemaster", "solo"];
 
 /** The game's mode; missing = gamemaster (games from before plan 36). */
-const gameMode = (state: GameState): GameMode => state.settings.mode ?? "gamemaster";
+export const gameMode = (state: GameState): GameMode => state.settings.mode ?? "gamemaster";
 
 /** Undo, skip, joker budget and the other cheats: gamemaster mode only (D-74, D-88). */
 function gamemasterOnly(state: GameState, what: string): void {
