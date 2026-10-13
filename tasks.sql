@@ -3682,6 +3682,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - Plan 45 (done): `Prompt.svelte`, `Glyph.svelte`, `KEY_LABELS` in `lib/input.svelte.ts`. Pad glyphs are language-independent; only key letters and text labels vary.
 - Plan 46 (SW-4, 380, before this plan): `LetterPicker.svelte` with Spanish letters (`Ñ Á É Í Ó Ú Ü`); task 3 stops with a note if it doesn''t exist yet.
 - Plan 64 (neutral Spanish for questions); this plan does the UI side of D-78 (`es.ts` neutral, `es-ES` override).
+- Plan 100 (part 13, 380, before task 7): locale style guides `app/client/src/locales/style/<locale>.md`, TV-check fixes, screen gallery. Its fixes and gallery flags land before the playtest close-out; task 7 doesn''t redo them.
 
 ## Design
 - **Shipping catalogs**: `CATALOGS` = `es`, `es-ES`, `en`, `de`, statically imported (a few KB each; no lazy loading); `xx` stays dev-only. `en.ts`/`de.ts`: `satisfies Catalog`. `es-ES.ts`: `DeepPartial<Catalog>`, only differing leaves (`vosotros` for plural addressing, regionalisms), merged over `es` at boot; plural maps and variant arrays replaced whole, not merged per item.
@@ -3718,7 +3719,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
    - "Playtest" section in 15a: first start on a fresh save (language screen: guess preselected, pick another, asked once), full game in each mode available, every joker, overlay/Esc menu incl. language rows, keyboard and pad prompts, victory and wrong, report dialog, `/comodines` printout; what to note (wrong tone, too long, wrong register, unclear rule).
    - Four `pm decision add --once` "Playtest passed? (<lang>)"; link task 7 to them.
 7. **Playtest fixes and close-out** (priority 340; waits for task 6''s decisions)
-   - Apply the fixes from the answers (catalogs only; anything bigger → `pm task add`). LUI-4, LUI-5 `[x]` in 15a with notes; 15a status; `plans/project.md`; `plans/11-steam.md` 15 row if done.
+   - Read the locale''s style guide first (plan 100); apply the fixes from the answers per the guide (catalogs only; anything bigger → `pm task add`); new bad patterns from the playtest go into the guide. LUI-4, LUI-5 `[x]` in 15a with notes; 15a status; `plans/project.md`; `plans/11-steam.md` 15 row if done.
 
 ## Done when
 - `es`, `es-ES`, `en`, `de` ship in the production build, pass `npm run check` and `check:literals`, have no overflow at 1920 × 1080 and 1280 × 800, and passed a native-speaker playtest each; the family''s Spanish game looks and plays as before except decided wording or key changes.', '2026-10-12T19:43:19Z', 247);
@@ -15853,7 +15854,7 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 
 ## Out of scope (from the milestone)
 - Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-13T15:38:25Z', '2026-10-13T15:41:32Z', 788);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (792, 69, 'revise plan 69', 'plan', 'open', 1000, NULL, 'Plan 9, the plan above plan 69, changed; it is quoted below. Bring plan 69 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (792, 69, 'revise plan 69', 'plan', 'done', 1000, '2026-10-13, plan 69 body: plan 100 in Builds on; task 7 follows the locale style guides', 'Plan 9, the plan above plan 69, changed; it is quoted below. Bring plan 69 in line with it
 (`pm plan edit 69 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -15970,7 +15971,7 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 - Part 2 any time after plan 16. Part 12 last.
 
 ## Out of scope (from the milestone)
-- Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-13T15:38:25Z', NULL, 788);
+- Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-13T15:38:25Z', '2026-10-13T15:41:54Z', 788);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (793, 70, 'revise plan 70', 'plan', 'open', 1000, NULL, 'Plan 9, the plan above plan 70, changed; it is quoted below. Bring plan 70 in line with it
 (`pm plan edit 70 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
@@ -16339,6 +16340,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Order: style guides and TV-check fixes first, then gallery, then review.', '2026-10-13T15:39:07Z', '2026-10-13T15:41:14Z', 790);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (797, 100, 'create tasks for plan 100', 'split', 'open', 1000, NULL, 'Split plan 100 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:41:11Z', NULL, 796);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (798, 69, 'create tasks for plan 69', 'split', 'open', 1000, NULL, 'Split plan 69 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:41:54Z', NULL, 792);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -18283,6 +18286,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (684, 790, '2026-10-13T15:38:34Z', '2026-10-13T15:39:19Z', 'done', NULL, 0, '36f8cd41617c645b72d3e67bc3c5d9f2427f37ce', 'claude-opus-5-5[1m]', '2447a806-5f66-4eb6-b3e1-f3b58b08bfe6', 8, 16, 3438, 318942, 39142, 0.44574840000000005, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (685, 796, '2026-10-13T15:39:20Z', '2026-10-13T15:41:23Z', 'done', NULL, 0, '916d0be89604b46f7cf16115b1deb77e313f457c', 'claude-opus-5-5[1m]', 'e88cd6f4-1e3f-4fb3-8c6d-095b9c665189', 14, 26, 11100, 714564, 66169, 0.8943688, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (686, 791, '2026-10-13T15:41:23Z', '2026-10-13T15:41:36Z', 'done', NULL, 0, '123f95f9c72ca78f5312b7287730b7228e2ff080', 'claude-opus-5-5[1m]', '61b60124-758e-4a7c-a59c-b1983aa93d22', 3, 6, 857, 78456, 23932, 0.2243112, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (687, 792, '2026-10-13T15:41:36Z', '2026-10-13T15:42:04Z', 'done', NULL, 0, '98c85d8cb971aa34f83fef76413fb94193733131', 'claude-opus-5-5[1m]', '58088217-a62a-4445-9539-77d1b1bf7af5', 7, 14, 1672, 251134, 30887, 0.3308188, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
