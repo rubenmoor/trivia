@@ -347,23 +347,31 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 - A fresh save asks for the language once; an existing save doesn''t.
 
 Plan files: `plans/11-steam.md`, `plans/15-i18n.md`, `plans/15a-ui-translation.md`, `plans/15b-question-translation.md`, `plans/15c-regional-questions.md`, `plans/16-content-target.md`.', '2026-10-11T21:55:09Z', NULL);
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (10, 'Steam S5: Steamworks and store', 'open', 'The game on Steam as a beta: Steamworks app, Cloud saves, achievements, depots, beta branch, store page and disclosures. Depends on the price model and account holder (OQ-33) and the license decision (OQ-35).
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (10, 'Steam S5: Steamworks and store', 'open', 'The game on Steam as a beta: Steamworks app, Cloud saves, achievements, depots, beta branch, store page and disclosures. Steam only (decision 111): the Steam integration is the reason to buy, and no effort goes into running the game outside Steam. Price model and account holder: decisions 66 and 67 (OQ-33); licence: OQ-35.
 
 ## Outcome
 - Steamworks integration and depots (SW-7..SW-14, `plans/18-steam-integration.md`).
 - Language guess from Steam (SW-8): `ISteamApps::GetCurrentGameLanguage` (the game''s language in Steam, else the client''s) replaces `navigator.language` as the first-start guess (milestone 9); only the preselection, the player still confirms.
   - mapping of Steam''s API names (`latam`, `spanish`, `english`, `german`, later `schinese`, `russian`, `brazilian`) to our locales
-  - without Steam: `navigator.language` as before
+- Steam user required for saves and flags (decision 111):
+  - valid Steam user = `steam.available` and a non-zero SteamID
+  - saves per Steam user with Steam Cloud (plan 87); without a valid user the game plays with a memory-only save and a short notice that progress needs Steam; plan 87''s `local/` save folder and its S3 migration dialog go
+  - flagging questions (plan 93) only with a valid user; else the flag action is hidden
+  - soft check in the shell, no DRM, no anti-tamper; an explicit dev switch (env var) keeps dev runs and worker checks saving and flagging
+- Bundles ship as free DLC (decision 66): own DLC entry and depot per non-base bundle, optional install; base price $9.99.
 - Store page, AI disclosure, rating and the rest of publishing (PUB-6..PUB-11, `plans/17-publishing.md`).
 
 ## Constraints
 - The game never phones home; Steam only distributes and syncs saves.
+- Steam only (decision 111): no "without Steam" rows in checklists, done-whens or decisions; existing fallbacks that also serve under Steam (letter picker in desktop mode) stay.
 
 ## Out of scope
 - Public release and marketing (S6).
+- Online co-op (decision 111: eventually, not planned).
 
 ## Done when
 - The beta branch is installed from Steam on a second machine and played by the family.
+- Without a Steam user nothing persists and flags are off; with one, saves sync through Steam Cloud.
 
 Plan files: `plans/11-steam.md`, `plans/17-publishing.md`, `plans/18-steam-integration.md`.', '2026-10-11T21:55:09Z', NULL);
 INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (11, 'Steam S6: release', 'open', 'The public release and what follows it.
@@ -14494,6 +14502,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 Done when: docs in sync, 15c done, plan 98''s Done-when bullets all hold.', '2026-10-13T15:02:21Z', NULL, 747);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (753, 8, 'revise the masterplan', 'masterplan', 'open', 1000, NULL, 'The milestone changed. Bring plan 8, the masterplan, in line with it (`pm plan edit 8 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-13T15:11:31Z', NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (754, 10, 'revise the masterplan', 'masterplan', 'open', 1000, NULL, 'The milestone changed. Bring plan 10, the masterplan, in line with it (`pm plan edit 10 --body -`), or
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-13T15:11:31Z', NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
