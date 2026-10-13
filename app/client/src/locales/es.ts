@@ -181,6 +181,22 @@ const es = {
     reset: "Estándar",
     done: "Listo",
   },
+  /** The configure game screen (MD-11, D-88): gamemaster mode's fields on the Choice screen. */
+  configure: {
+    game: "Partida",
+    difficulty: "Dificultad",
+    /** The difficulty row's value after the age groups: start and end set by hand. */
+    custom: "A medida",
+    start: "Desde",
+    end: "Hasta",
+    levels: "Niveles",
+    cards: "Cartas por nivel",
+    /** 0 cards: the question shows at once. */
+    noCards: "pregunta directa",
+    video: "Preguntas con video",
+    audio: "Preguntas con audio",
+    jokers: "Comodines",
+  },
   /** The letter picker: a new name with a pad only (plan 46). */
   picker: {
     /** The keys, in order; `marks`: extra keys for a note. */

@@ -253,7 +253,7 @@
   }
 
   /** The Choice screen's «¡A jugar!»: start the game, greet, then the Level screen. */
-  async function startGame(choice: { mode: GameMode; age_group: string; bundles: string[]; jokers?: JokerBudget }) {
+  async function startGame(choice: GameActionBody & { mode: GameMode }) {
     if (busy || chosen === null) return;
     busy = true;
     try {

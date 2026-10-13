@@ -116,16 +116,22 @@ export interface GameActionBody {
   level?: number;
 }
 
+/** A configuration for `choice` and `new` (D-88): a missing field comes from the player's newest game. */
+export type ChoiceBody = Pick<GameActionBody, "age_group" | "difficulty" | "bundles" | "levels" | "cards" | "video" | "audio" | "jokers">;
+
 /** What the Choice screen offers (plan 29): age groups in file order, the new game's locale's bundles
  * (plan 71), both with their names in that locale. */
 export interface ChoiceOptions {
-  groups: { id: string; name: string; ages: readonly [number, number | null] }[];
+  /** `span`: lowest and highest difficulty of its levels (the «Custom» start, D-88). */
+  groups: { id: string; name: string; ages: readonly [number, number | null]; span: readonly [number, number] }[];
   bundles: { id: string; base: boolean; name: string; description: string }[];
 }
 
 export async function fetchChoiceOptions(): Promise<ChoiceOptions> {
   return read((save, data) => {
-    const groups = data.ageGroups.map(({ id, name, ages }) => ({ id, name: data.names.age_groups[id] ?? name, ages }));
+    const groups = data.ageGroups.map(({ id, name, ages, levels }) => ({
+      id, name: data.names.age_groups[id] ?? name, ages, span: [levels[0][0], levels[levels.length - 1][1]] as const,
+    }));
     const bundles = bundlesFor(data).map((b) => {
       const n = data.names.bundles[b.id];
       return { id: b.id, base: b.kind === "base", name: n?.name ?? b.name, description: n?.description ?? b.description };
@@ -149,7 +155,7 @@ export async function fetchGameChoice(settings: Game["settings"]): Promise<{ gro
 
 /** The player's preset (missing fields) and the supply of a choice (plan 27's `choice` route); a
  * refused choice throws GameError (`base_bundle_count`, `bundle_not_offered`). */
-export async function fetchChoice(body: { player?: string; age_group?: string; bundles?: string[] }): Promise<{ choice: Choice; supply: Supply }> {
+export async function fetchChoice(body: ChoiceBody & { player?: string }): Promise<{ choice: Choice; supply: Supply }> {
   return read((save, data) => engine.choice(save, data, { ...body }), "next");
 }
 
@@ -190,4 +196,4 @@ export async function setLanguage(language: Language): Promise<Language> {
 }
 
 /** The age group of a choice without one (plan 27). */
-export { BUILT_MODES, DEFAULT_AGE_GROUP, STANDARD_JOKERS } from "../engine/game.ts";
+export { BUILT_MODES, CARDS_MAX, DEFAULT_AGE_GROUP, DIFFICULTY_MAX, LEVELS_MAX, STANDARD_JOKERS } from "../engine/game.ts";

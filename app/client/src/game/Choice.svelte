@@ -14,24 +14,25 @@
 
 <script lang="ts">
   // The Choice screen (plans/04-ui-tv-display.md, "Choice"; plan 29, AG-7, BN-6): «¿Cómo juega …?»,
-  // between Player and Level. Mode row (MD-7), age group (1–4); gamemaster mode: exactly one base bundle
-  // and the other bundles (letter keys) of the new game's language; «Solo o en grupo»: the language's
-  // default bundles and «Personalizar partida» (joker counts). Preset: `?mode=`, the player's newest game, else the defaults.
+  // between Player and Level. Mode row (MD-7); gamemaster mode: the configure game screen (MD-11, D-88):
+  // difficulty, bundles (letter keys), levels, cards, video, audio, jokers; «Solo o en grupo»: age group (1–4),
+  // the language's default bundles and «Personalizar partida» (joker counts). Preset: `?mode=`, the
+  // player's newest game (every field), else the defaults. ↑/↓ move between lines, ←/→ change a value.
   import { onMount } from "svelte";
   import {
-    BUILT_MODES, DEFAULT_AGE_GROUP, fetchChoice, fetchChoiceOptions, fetchPlayerMode, GameError, STANDARD_JOKERS,
-    type ChoiceOptions,
+    BUILT_MODES, CARDS_MAX, DEFAULT_AGE_GROUP, DIFFICULTY_MAX, fetchChoice, fetchChoiceOptions, fetchPlayerMode, GameError,
+    LEVELS_MAX, STANDARD_JOKERS, type ChoiceBody, type ChoiceOptions,
   } from "../lib/api";
   import { errorText } from "../lib/errors";
+  import { candidates, show } from "../lib/focus";
   import { t } from "../lib/i18n";
   import { pushScope, type Keys } from "../lib/input.svelte";
-  import type { GameMode, JokerBudget, Supply } from "../lib/types";
+  import type { Difficulty, GameMode, JokerBudget, JokerName, Supply } from "../lib/types";
+  import BundleSelector, { toggled, type Bundle } from "./BundleSelector.svelte";
   import Customize from "./Customize.svelte";
   import { TOKENS } from "./JokerTray.svelte";
   import Prompt from "./Prompt.svelte";
   import SupplyReport from "./SupplyReport.svelte";
-
-  type Bundle = ChoiceOptions["bundles"][number];
 
   let {
     player,
@@ -47,7 +48,7 @@
     greeting: string | null;
     /** Why the last `new` was refused (supply, `base_bundle_count`, `bundle_not_offered`), or null. */
     refused: GameError | null;
-    onstart: (choice: { mode: GameMode; age_group: string; bundles: string[]; jokers?: JokerBudget }) => void;
+    onstart: (choice: ChoiceBody & { mode: GameMode }) => void;
     onback: () => void;
   } = $props();
 
@@ -58,6 +59,14 @@
   /** «Solo o en grupo»'s joker counts; a difference from the standard set makes the game customized. */
   let jokers = $state<JokerBudget>({ ...STANDARD_JOKERS });
   let customizing = $state(false);
+  /** Gamemaster mode's fields (D-88); `custom`: the difficulty instead of the group. */
+  let custom = $state(false);
+  let difficulty = $state<Difficulty>({ start: 1, end: DIFFICULTY_MAX });
+  let levels = $state(12);
+  let cards = $state(CARDS_MAX);
+  let video = $state(true);
+  let audio = $state(true);
+  let budget = $state<JokerBudget>({ ...STANDARD_JOKERS });
   /** The supply of the current choice; null while unknown or refused. */
   let supply = $state<Supply | null>(null);
   /** Why the engine refuses the current choice (zero or two base bundles). */
@@ -76,8 +85,13 @@
       options = opts;
       const launch = new URLSearchParams(location.search).get("mode") as GameMode | null;
       mode = launch && BUILT_MODES.includes(launch) ? launch : last;
-      group = preset.choice.age_group ?? DEFAULT_AGE_GROUP;
-      bundles = preset.choice.bundles;
+      const c = preset.choice;
+      group = c.age_group ?? DEFAULT_AGE_GROUP;
+      custom = c.difficulty !== null;
+      difficulty = c.difficulty ?? spanOf(group);
+      bundles = c.bundles;
+      ({ levels, cards, video, audio } = c);
+      budget = { ...c.jokers };
       await check();
     } catch (e) {
       error = errorText(e);
@@ -93,10 +107,10 @@
   async function check() {
     if (!options) return;
     const n = ++seq;
-    const wanted = active();
+    const wanted = mode === "gamemaster" ? { ...config(), jokers: undefined } : { age_group: group, bundles: active() };
     const [mine, ...each] = await Promise.allSettled([
-      fetchChoice({ age_group: group, bundles: wanted }),
-      ...options.groups.map((g) => fetchChoice({ age_group: g.id, bundles: wanted })),
+      fetchChoice(wanted),
+      ...options.groups.map((g) => fetchChoice({ ...wanted, age_group: g.id, difficulty: undefined })),
     ]);
     if (n !== seq) return;
     supply = mine.status === "fulfilled" ? mine.value.supply : null;
@@ -125,15 +139,81 @@
   function pickGroup(id: string) {
     if (busy) return;
     group = id;
+    custom = false;
     changed();
   }
 
-  /** A base bundle replaces the other base bundle; another bundle toggles. */
-  function toggle(b: Bundle) {
-    if (busy || !options) return;
-    const on = (x: Bundle) => (b.base && x.base ? x.id === b.id : x.id === b.id ? !bundles.includes(x.id) : bundles.includes(x.id));
-    bundles = options.bundles.filter(on).map((x) => x.id);
+  function pickBundles(ids: string[]) {
+    if (busy) return;
+    bundles = ids;
     changed();
+  }
+
+  /** Gamemaster mode's whole configuration, every field (D-88). */
+  function config(): ChoiceBody {
+    return {
+      ...(custom ? { difficulty: { ...difficulty } } : { age_group: group }),
+      bundles: [...bundles], levels, cards, video, audio, jokers: { ...budget },
+    };
+  }
+
+  /** A group's lowest and highest difficulty: where «Custom» starts. */
+  function spanOf(id: string): Difficulty {
+    const [start, end] = options?.groups.find((g) => g.id === id)?.span ?? [1, DIFFICULTY_MAX];
+    return { start, end };
+  }
+
+  const clamp = (n: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, n));
+  const JOKER_MAX = 99;
+
+  /** A joker's count by one: 0–99, then ∞, wrapping both ways. */
+  function stepJoker(name: JokerName, by: number) {
+    const now = budget[name] ?? JOKER_MAX + 1;
+    const next = (now + by + JOKER_MAX + 2) % (JOKER_MAX + 2);
+    budget = { ...budget, [name]: next > JOKER_MAX ? null : next };
+  }
+
+  /** ←/→ or −/+ on a configure line (`data-step`). */
+  function step(id: string, by: number) {
+    if (busy || !options) return;
+    const ids = [...options.groups.map((g) => g.id), ""];
+    if (id === "difficulty") {
+      const at = custom ? ids.length - 1 : ids.indexOf(group);
+      const next = ids[(at + by + ids.length) % ids.length];
+      if (next) [group, custom] = [next, false];
+      else [custom, difficulty] = [true, spanOf(group)];
+    } else if (id === "start") {
+      const start = clamp(difficulty.start + by, 1, DIFFICULTY_MAX);
+      difficulty = { start, end: Math.max(start, difficulty.end) };
+    } else if (id === "end") difficulty = { ...difficulty, end: clamp(difficulty.end + by, difficulty.start, DIFFICULTY_MAX) };
+    else if (id === "levels") levels = clamp(levels + by, 1, LEVELS_MAX);
+    else if (id === "cards") cards = clamp(cards + by, 0, CARDS_MAX);
+    else if (id === "video") video = !video;
+    else if (id === "audio") audio = !audio;
+    else if (id.startsWith("joker-")) return stepJoker(id.slice(6) as JokerName, by);
+    changed();
+  }
+
+  /** ↑/↓: the previous or next line (`data-line`), its control nearest across; false outside a line. */
+  function moveLine(dir: "up" | "down"): boolean {
+    const el = document.activeElement;
+    if (!section || !(el instanceof HTMLElement)) return false;
+    const all = candidates(section);
+    const inLine = (l: HTMLElement) => all.filter((c) => l.contains(c));
+    const lines = [...section.querySelectorAll<HTMLElement>("[data-line]")].filter((l) => inLine(l).length);
+    const at = lines.findIndex((l) => l.contains(el));
+    if (at < 0) return false;
+    const next = lines[at + (dir === "down" ? 1 : -1)];
+    if (!next) {
+      show(el);
+      return true;
+    }
+    const x = (r: DOMRect) => r.left + r.width / 2;
+    const from = x(el.getBoundingClientRect());
+    const list = inLine(next);
+    const near = list.reduce((m, c) => (Math.abs(x(c.getBoundingClientRect()) - from) < Math.abs(x(m.getBoundingClientRect()) - from) ? c : m));
+    show(near, "choice", section);
+    return true;
   }
 
   const ready = $derived(!!options && !!supply?.ok && !reason);
@@ -143,12 +223,10 @@
 
   function start() {
     if (!ready || busy) return;
-    if (mode === "gamemaster") onstart({ mode, age_group: group, bundles: [...bundles] });
+    if (mode === "gamemaster") onstart({ mode, ...config() });
     else onstart({ mode, age_group: group, bundles: active(), ...(customized ? { jokers: { ...jokers } } : {}) });
   }
 
-  const base = $derived(options?.bundles.filter((b) => b.base) ?? []);
-  const others = $derived(options?.bundles.filter((b) => !b.base) ?? []);
   const MODE_ROW: { id: GameMode; name: string; about: string; key: string }[] = [
     { id: "gamemaster", name: t("mode.gamemaster"), about: t("mode.gamemasterAbout"), key: t("mode.gamemasterKey").toLowerCase() },
     { id: "solo", name: t("mode.solo"), about: t("mode.soloAbout"), key: t("mode.soloKey").toLowerCase() },
@@ -174,20 +252,25 @@
   }
 
   // A mode's letter picks it, 1–4 pick a group, a bundle's letter selects or toggles it (gamemaster mode), the
-  // customize letter opens the dialog (solo); Enter starts, Backspace goes back; Esc falls through to the overlay.
+  // customize letter opens the dialog (solo); ↑/↓ lines, ←/→ a configure value; Enter starts (on a switch: toggles),
+  // Backspace goes back; Esc falls through to the overlay.
   $effect(() =>
     pushScope({
       name: "choice",
       root: () => section,
+      pressable: (el) => !(el instanceof HTMLDivElement && el.dataset.step),
       get keys() {
         return keys;
       },
       handle: (a) => {
-        if (a.type === "letter" && modes.some((m) => m.key === a.key)) pickMode(modes.find((m) => m.key === a.key)!.id);
+        const stepping = document.activeElement instanceof HTMLElement ? document.activeElement.dataset.step : undefined;
+        if (a.type === "navigate" && (a.dir === "up" || a.dir === "down")) return moveLine(a.dir);
+        if (a.type === "navigate" && stepping) step(stepping, a.dir === "right" ? 1 : -1);
+        else if (a.type === "letter" && modes.some((m) => m.key === a.key)) pickMode(modes.find((m) => m.key === a.key)!.id);
         else if (a.type === "letter" && mode !== "gamemaster" && a.key === CUSTOMIZE_KEY) customizing = !busy;
         else if (a.type === "pick" && options && a.n <= options.groups.length) pickGroup(options.groups[a.n - 1].id);
         else if (a.type === "letter" && mode === "gamemaster" && options?.bundles.some((b) => keyOf(b) === a.key))
-          toggle(options.bundles.find((b) => keyOf(b) === a.key)!);
+          pickBundles(toggled(options.bundles, bundles, options.bundles.find((b) => keyOf(b) === a.key)!));
         else if (a.type === "confirm") start();
         else if (a.type === "back") onback();
         else return false;
@@ -206,7 +289,7 @@
     {#if options}
       {#if modes.length > 1}
         <p class="label heading" style:--i={0}>{t("mode.heading")}</p>
-        <div class="row" role="radiogroup">
+        <div class="row" role="radiogroup" data-line>
           {#each modes as m, i (m.id)}
             <button
               class="tile mode glass"
@@ -226,44 +309,54 @@
         </div>
       {/if}
 
-      <p class="label heading" style:--i={0}>{t("choice.groups")}</p>
-      <div class="row" role="radiogroup">
-        {#each options.groups as g, i (g.id)}
-          <button
-            class="tile glass"
-            class:on={g.id === group}
-            class:short={short[g.id]}
-            style:--i={i + 1}
-            role="radio"
-            aria-checked={g.id === group}
-            onclick={() => pickGroup(g.id)}
-            disabled={busy}
-            data-focus-id="group-{g.id}"
-          >
-            <Prompt action={{ type: "pick", n: i + 1 }} hold />
-            <span class="name-text">{g.name}</span>
-            <span class="label">{ages(g.ages)}</span>
-            {#if short[g.id]}<span class="label warn">{t("choice.short")}</span>{/if}
-          </button>
-        {/each}
-      </div>
-
       {#if mode === "gamemaster"}
-        <p class="label heading" style:--i={5}>{t("choice.bundles")}</p>
-        <div class="row" role="radiogroup">
-          {#each base as b, i (b.id)}
-            {@render bundle(b, "radio", 6 + i)}
-          {/each}
-        </div>
-        {#if others.length}
-          <div class="row">
-            {#each others as b, i (b.id)}
-              {@render bundle(b, "switch", 6 + base.length + i)}
+        {@const g = options.groups.find((x) => x.id === group)}
+        <div class="config">
+          <div class="lines">
+            <p class="label heading">{t("configure.game")}</p>
+            {@render stepper("difficulty", t("configure.difficulty"), custom ? t("configure.custom") : (g?.name ?? group),
+              custom ? "" : g ? ages(g.ages) : "", !custom && short[group])}
+            {#if custom}
+              {@render stepper("start", t("configure.start"), String(difficulty.start))}
+              {@render stepper("end", t("configure.end"), String(difficulty.end))}
+            {/if}
+            {@render stepper("levels", t("configure.levels"), String(levels))}
+            {@render stepper("cards", t("configure.cards"), String(cards), cards ? "" : t("configure.noCards"))}
+            {@render toggle("video", t("configure.video"), video)}
+            {@render toggle("audio", t("configure.audio"), audio)}
+          </div>
+          <div class="lines">
+            <p class="label heading">{t("configure.jokers")}</p>
+            {#each TOKENS as token (token.name)}
+              {@render stepper(`joker-${token.name}`, token.label, String(budget[token.name] ?? "∞"))}
             {/each}
           </div>
-        {/if}
+        </div>
+        <p class="label heading" style:--i={5}>{t("choice.bundles")}</p>
+        <BundleSelector bundles={options.bundles} selected={bundles} {busy} {keyOf} first={6} onchange={pickBundles} />
       {:else}
-        <div class="row">
+        <p class="label heading" style:--i={0}>{t("choice.groups")}</p>
+        <div class="row" role="radiogroup" data-line>
+          {#each options.groups as g, i (g.id)}
+            <button
+              class="tile glass"
+              class:on={g.id === group}
+              class:short={short[g.id]}
+              style:--i={i + 1}
+              role="radio"
+              aria-checked={g.id === group}
+              onclick={() => pickGroup(g.id)}
+              disabled={busy}
+              data-focus-id="group-{g.id}"
+            >
+              <Prompt action={{ type: "pick", n: i + 1 }} hold />
+              <span class="name-text">{g.name}</span>
+              <span class="label">{ages(g.ages)}</span>
+              {#if short[g.id]}<span class="label warn">{t("choice.short")}</span>{/if}
+            </button>
+          {/each}
+        </div>
+        <div class="row" data-line>
           <button class="secondary customize" onclick={() => (customizing = true)} disabled={busy} data-focus-id="customize">
             {t("customize.open")} <Prompt action={{ type: "letter", key: CUSTOMIZE_KEY }} />
           </button>
@@ -271,7 +364,7 @@
         </div>
       {/if}
 
-      <div class="row actions">
+      <div class="row actions" data-line>
         <button class="secondary" onclick={onback} disabled={busy} data-focus-id="back">{t("action.back")} <Prompt action="back" /></button>
         <button class="candy" onclick={start} disabled={busy || !ready} data-focus-default data-focus-id="start">{t("choice.start")} <Prompt action="confirm" off={!ready} /></button>
       </div>
@@ -295,23 +388,20 @@
   <Customize {jokers} standard={STANDARD_JOKERS} onchange={(j) => (jokers = j)} onclose={() => (customizing = false)} />
 {/if}
 
-{#snippet bundle(b: Bundle, role: "radio" | "switch", i: number)}
-  {@const on = bundles.includes(b.id)}
-  {@const key = keyOf(b)}
-  <button
-    class="tile bundle glass"
-    class:on
-    style:--i={i}
-    {role}
-    aria-checked={on}
-    onclick={() => toggle(b)}
-    disabled={busy}
-    data-focus-id="bundle-{b.id}"
-  >
-    {#if key}<Prompt action={{ type: "letter", key }} hold />{/if}
-    <span class="name-text">{b.name}</span>
-    {#if role === "switch"}<span class="switch label">{t(on ? "choice.on" : "choice.off")}</span>{/if}
-    <span class="label description">{b.description}</span>
+{#snippet stepper(id: string, label: string, value: string, note = "", warn = false)}
+  <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
+  <div class="line glass" data-line data-step={id} data-focusable data-focus-id="config-{id}" tabindex="0" role="group" aria-label={label}>
+    <span class="label line-name">{label}</span>
+    <button class="step" onclick={() => step(id, -1)} disabled={busy} tabindex="-1" aria-label={t("overlay.less")}>−</button>
+    <span class="value">{value}{#if note}<span class="label note" class:warn>{note}</span>{/if}</span>
+    <button class="step" onclick={() => step(id, 1)} disabled={busy} tabindex="-1" aria-label={t("overlay.more")}>+</button>
+  </div>
+{/snippet}
+
+{#snippet toggle(id: string, label: string, on: boolean)}
+  <button class="line glass" class:on data-line data-step={id} data-focus-id="config-{id}" role="switch" aria-checked={on} onclick={() => step(id, 1)} disabled={busy}>
+    <span class="label line-name">{label}</span>
+    <span class="value switch">{t(on ? "choice.on" : "choice.off")}</span>
   </button>
 {/snippet}
 
@@ -329,6 +419,9 @@
   }
   .choice.reporting {
     gap: calc(0.8 * var(--u));
+  }
+  .choice.reporting :global(.bundle .description) {
+    display: none;
   }
   .title {
     animation: arrive 0.6s var(--spring) backwards;
@@ -387,27 +480,83 @@
   .row:has(.customize) {
     align-items: center;
   }
+  .config {
+    display: flex;
+    gap: calc(2.4 * var(--u));
+    align-items: flex-start;
+    animation: arrive 0.5s 0.2s var(--spring) backwards;
+  }
+  .lines {
+    display: flex;
+    flex-direction: column;
+    gap: calc(0.5 * var(--u));
+    width: calc(36 * var(--u));
+  }
+  .lines .heading {
+    margin: 0;
+    animation: none;
+  }
+  .line {
+    display: grid;
+    grid-template-columns: 1fr calc(2.4 * var(--u)) calc(14 * var(--u)) calc(2.4 * var(--u));
+    align-items: center;
+    gap: calc(0.8 * var(--u));
+    padding: calc(0.4 * var(--u)) calc(1.2 * var(--u));
+    border-color: var(--slate-600);
+    font-size: calc(1.3 * var(--u));
+    font-weight: 700;
+    text-align: left;
+    outline: none;
+  }
+  .line:focus,
+  .line:global([data-nav]),
+  .line:hover {
+    border-color: var(--amber);
+  }
+  button.line {
+    grid-template-columns: 1fr calc(14 * var(--u)) calc(2.4 * var(--u));
+  }
+  button.line .value {
+    grid-column: 2;
+  }
+  .line-name {
+    color: var(--slate-200);
+  }
+  .value {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.1;
+  }
+  .value .note {
+    font-size: calc(0.9 * var(--u));
+  }
+  .line.on .switch {
+    color: var(--sky);
+  }
+  .line:not(.on) .switch {
+    color: var(--slate-400);
+  }
+  .step {
+    display: grid;
+    place-items: center;
+    height: calc(2.2 * var(--u));
+    padding: 0;
+    border-radius: calc(0.8 * var(--u));
+    background: var(--slate-600);
+    font-size: calc(1.4 * var(--u));
+    font-weight: 700;
+  }
   .row .customize {
     padding: calc(0.5 * var(--u)) calc(1.2 * var(--u));
     font-size: calc(1.1 * var(--u));
-  }
-  .bundle {
-    max-width: calc(34 * var(--u));
-  }
-  .bundle:not(.on) .name-text {
-    color: var(--slate-400);
   }
   .name-text {
     font-family: var(--font-display);
     font-size: calc(2 * var(--u));
     font-weight: 800;
     line-height: 1.1;
-  }
-  .switch {
-    color: var(--sky);
-  }
-  .bundle:not(.on) .switch {
-    color: var(--slate-400);
   }
   .warn {
     color: var(--amber);
