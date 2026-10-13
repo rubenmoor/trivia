@@ -2226,14 +2226,6 @@ def guess_problems(feedback):
     return [p for p, rx in _GUESS if re.search(rx, text)] or ["other"]
 
 
-def review_problems(q):
-    """(problems, guessed) of a needs_work question; guessed when the review has no `problems`."""
-    rv = q.get("review") or {}
-    if rv.get("problems"):
-        return rv["problems"], False
-    return guess_problems(rv.get("feedback")), True
-
-
 def batch_questions(run, statuses=("draft",)):
     """The pool's questions of this run that are still waiting for the given steps.
     A `qgen rework` run's questions are the ids in its run.json (QG-23); a translation run's are its
@@ -2247,10 +2239,6 @@ def batch_questions(run, statuses=("draft",)):
 
 def run_mode(run):
     return (load_json(WORK / run / "run.json", {}) or {}).get("mode")
-
-
-def is_rework(run):
-    return run_mode(run) == "rework"
 
 
 def update_pool(changes):
@@ -2431,8 +2419,8 @@ def cmd_fix(args):
     A translation run (plan 66): the reviser sees the Spanish source; only the translated text and
     difficulty are taken (media stays the source's), `fix.previous` keeps the old text."""
     d = run_dir(args)
-    rework = is_rework(args.run)
     mode = run_mode(args.run)
+    rework = mode == "rework"
     locale = run_locale(d)
     scanned = load_json(d / "run.json", {}).get("issues") if mode in SCANS else None
     tmp_of = tmp_ids(d)
@@ -2450,83 +2438,77 @@ def cmd_fix(args):
         elif fix and "factcheck" not in fix and needs_recheck(fix, rework):
             recheck.append((q, path, r))
 
-    def work(group):
-        items = []
-        for q, _, _, issue in group:
-            issues = [issue]
-            c = checks.get(tmp_of.get(q["id"]))
-            if c and c["verdict"] != "confirmed":
-                issues.append(f"fact-check {c['verdict']}: {c['problem']} correction: {c['correction']}")
-            items.append({**for_review({**q, "tmp_id": q["id"]}), "issues": issues,
-                          "background_query": (q.get("background") or {}).get("query", ""),
-                          "needs_media": q.get("needs_media", False)})
+    def issues_of(issue, c):
+        return [issue] + ([f"fact-check {c['verdict']}: {c['problem']} correction: {c['correction']}"]
+                          if c and c["verdict"] != "confirmed" else [])
+
+    def ask(group, items):
+        """(q, path, r, rev, fix) per answered question; a malformed revision becomes action `malformed`."""
         out = claude(system, "## Questions with issues\n" + json.dumps(items, ensure_ascii=False), REVISE_SCHEMA,
                      args.model, d)
         got = {x["id"]: x for x in out["results"]}
+        answered = []
         for q, path, r, _ in group:
-            rev = got.get(q["id"])
-            if rev is None:
+            if (rev := got.get(q["id"])) is None:
                 continue
             fix = {"action": rev["action"], "reason": rev["reason"]}
             if rev["action"] == "revise" and (bad := check_question_shape(rev["question"])):
                 fix["action"], fix["reason"] = "malformed", "; ".join(bad)
-            changed = []
+            answered.append((q, path, r, rev, fix))
+        return answered, [q["id"] for q, *_ in group if q["id"] not in got]
+
+    def done(q, path, r, fix, rework):
+        r["fix"] = fix
+        save_json(path, r)
+        if needs_recheck(fix, rework):
+            recheck.append((q, path, r))
+        progress.detail(f"  fix: {q['id']}: {fix['action']}" + (f" {', '.join(fix['changed'])}" if fixed(r) else ""))
+
+    def work(group):
+        answered, missing = ask(group, [
+            {**for_review({**q, "tmp_id": q["id"]}), "issues": issues_of(issue, checks.get(tmp_of.get(q["id"]))),
+             "background_query": (q.get("background") or {}).get("query", ""),
+             "needs_media": q.get("needs_media", False)} for q, _, _, issue in group])
+        changes, changed = {}, {}
+        for q, _, _, rev, fix in answered:
             if fix["action"] == "revise" or (rework and fix["action"] == "keep"):
                 def change(x, rev=rev, fix=fix):
                     if fix["action"] == "revise":
-                        changed.extend(revise_in_pool(x, rev["question"], rev["reason"], today))
+                        changed[x["id"]] = revise_in_pool(x, rev["question"], rev["reason"], today)
                     if rework or scanned:
                         x["status"], x["review"] = "draft", None
-                with _pool_lock:
-                    update_pool({q["id"]: change})
+                changes[q["id"]] = change
+        if changes:
+            with _pool_lock:
+                update_pool(changes)
+        for q, path, r, _, fix in answered:
             if fix["action"] == "revise":
-                fix["changed"] = sorted(changed)
+                fix["changed"] = sorted(changed.get(q["id"], []))
                 for slot in ("media", "background"):
-                    if slot in changed:
+                    if slot in fix["changed"]:
                         sheet_path(d, q["id"], slot).unlink(missing_ok=True)
-            r["fix"] = fix
-            save_json(path, r)
-            if needs_recheck(fix, rework):
-                recheck.append((q, path, r))
-            progress.detail(f"  fix: {q['id']}: {fix['action']}" + (f" {', '.join(fix['changed'])}" if fixed(r) else ""))
-        missing = [q["id"] for q, *_ in group if q["id"] not in got]
+            done(q, path, r, fix, rework)
         if missing:
             raise RuntimeError(f"no fix result for {', '.join(missing)}")
 
     def work_translation(group):
-        items = []
-        for q, _, _, issue in group:
-            issues = [f"translation into {LANGUAGES[locale]} of the Spanish `source`, which stays as it is; {issue}"]
-            c = checks.get(q["id"])
-            if c and c["verdict"] != "confirmed":
-                issues.append(f"fact-check {c['verdict']}: {c['problem']} correction: {c['correction']}")
-            items.append({**for_review({**q, "tmp_id": q["id"]}), "source": q["source"], "issues": issues,
-                          "background_query": "", "needs_media": False})
-        out = claude(system, "## Questions with issues\n" + json.dumps(items, ensure_ascii=False), REVISE_SCHEMA,
-                     args.model, d)
-        got = {x["id"]: x for x in out["results"]}
+        answered, missing = ask(group, [
+            {**for_review({**q, "tmp_id": q["id"]}), "source": q["source"],
+             "issues": issues_of(f"translation into {LANGUAGES[locale]} of the Spanish `source`, which stays as it is; {issue}",
+                                 checks.get(q["id"])),
+             "background_query": "", "needs_media": False} for q, _, _, issue in group])
         changes = {}
-        for q, path, r, _ in group:
-            rev = got.get(q["id"])
-            if rev is None:
-                continue
-            fix = {"action": rev["action"], "reason": rev["reason"]}
-            if rev["action"] == "revise" and (bad := check_question_shape(rev["question"])):
-                fix["action"], fix["reason"] = "malformed", "; ".join(bad)
+        for q, path, r, rev, fix in answered:
             if fix["action"] == "revise":
                 new = {**{k: rev["question"][k] for k in translations.TEXT_FIELDS},
                        "difficulty": min(hi, max(lo, rev["question"]["difficulty"]))}
                 fix["changed"] = sorted(k for k in new if new[k] != q[k])
                 fix["previous"] = {k: q[k] for k in fix["changed"]}
                 changes[q["id"]] = lambda t, new=new: t.update(new)
-            r["fix"] = fix
-            save_json(path, r)
-            if needs_recheck(fix, False):
-                recheck.append((q, path, r))
-            progress.detail(f"  fix: {q['id']}: {fix['action']}" + (f" {', '.join(fix['changed'])}" if fixed(r) else ""))
+            done(q, path, r, fix, False)
         with _pool_lock:
             update_translations(locale, changes)
-        if missing := [q["id"] for q, *_ in group if q["id"] not in got]:
+        if missing:
             raise RuntimeError(f"no fix result for {', '.join(missing)}")
 
     def check(group):
@@ -2644,7 +2626,7 @@ def cmd_record(args):
                 continue
             fields[slot] = media_tool.pick_fields(found[n - 1], slot)
             verdict, reasons = providers.licence_verdict(fields[slot])
-            if verdict == "replace" and decision != "rejected":  # plan 53
+            if verdict == "replace":  # plan 53
                 decision = "needs_work"
                 kinds.add("media")
                 problems.append(("La imagen elegida" if slot == "media" else "La imagen de fondo elegida")
