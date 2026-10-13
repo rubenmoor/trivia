@@ -22,7 +22,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen rework [--batch <batch>] [--model fable]   # needs_work questions once more through fix and review (QG-23)
     qgen tighten                    # find long-winded questions in the whole pool, shorten and review them (QG-24)
     qgen neutralize [--dry-run]     # reword Colombian usage in base into neutral Spanish (plan 64)
-    qgen export                     # app/data/pool.json from authoring/data/questions.json
+    qgen export                     # app/data/pool.json (+ packs' bundles/<id>/pool.json) from authoring/data/questions.json
     qgen report [--run <run>] [--bundle <id>] [--locale <locale>] [--subcategories] [--calibration [<batch>…]]
                 [--overlaps] [--batches [<batch>…]] [--exit-check]
     qgen report --qc [<batch> [--changes "<task ids>"]]   # spot check vs. LLM review and audit (plan 16)
@@ -3184,7 +3184,7 @@ def cmd_batch(args):
           f"(took {progress.duration(time.monotonic() - t0)}).")
     concept_dir = concepts.concepts_dir(args.bundle).relative_to(ROOT).as_posix()
     print("Commit exactly this:\n"
-          f"  git add authoring/data/questions.json app/data/pool.json {concept_dir}/ authoring/reports/{run}.md\n"
+          f"  git add authoring/data/questions.json app/data/pool.json app/data/bundles/ {concept_dir}/ authoring/reports/{run}.md\n"
           f"  git commit -m \"{run}: {len(qs)} {'' if args.bundle == 'base' else args.bundle + ' '}questions, "
           f"{n_ok} approved (qgen batch)\"")
 
@@ -3322,7 +3322,7 @@ def cmd_translate_batch(args):
           f"(took {progress.duration(time.monotonic() - t0)}).")
     if run == f"tr-{locale}-1":
         print(f"Pilot: the next `{again}` waits for the gamemaster's go (`qgen health ack {run} \"<note>\"`).")
-    files = [translations.path(locale), layout.LOCALE_POOL(locale), out]
+    files = [translations.path(locale), layout.LOCALE_POOL(locale), layout.BUNDLE_DATA, out]
     if h["not travelling confirmed"]:
         files.insert(1, POOL)
     print("Commit exactly this:\n  git add " + " ".join(f.relative_to(ROOT).as_posix() for f in files) + "\n"
@@ -3430,7 +3430,7 @@ def cmd_rework(args):
     print(f"\nDone: {run}: {n_ok} of {len(qs)} approved, {len(qs) - n_ok} still need work "
           f"(took {progress.duration(time.monotonic() - t0)}).")
     by_id = {q["id"]: q for q in load_json(POOL)["questions"]}
-    files = ["authoring/data/questions.json", "app/data/pool.json", *stale_lines(set(cfg["ids"]), by_id)]
+    files = ["authoring/data/questions.json", "app/data/pool.json", "app/data/bundles/", *stale_lines(set(cfg["ids"]), by_id)]
     print(f"Commit exactly this:\n  git add {' '.join(files)}\n"
           f"  git commit -m \"{run}: {n_ok} of {len(qs)} needs_work questions fixed and approved (qgen rework)\"")
 
@@ -3508,7 +3508,7 @@ def cmd_tighten(args):
     n_ok = sum(by_id[i]["status"] == "approved" for i in revised if i in by_id)
     print(f"\nDone: {run}: {len(cfg.get('ids', []))} flagged, {len(revised)} shortened, {n_ok} of those approved, "
           f"{len(revised) - n_ok} need work (took {progress.duration(time.monotonic() - t0)}).")
-    files = ["authoring/data/questions.json", "app/data/pool.json", *stale_lines(revised, by_id)]
+    files = ["authoring/data/questions.json", "app/data/pool.json", "app/data/bundles/", *stale_lines(revised, by_id)]
     print(f"Commit exactly this:\n  git add {' '.join(files)}\n"
           f"  git commit -m \"{run}: {len(revised)} long-winded questions shortened, {n_ok} approved (qgen tighten)\"")
 
@@ -3565,7 +3565,7 @@ def cmd_neutralize(args):
     out = write_neutralize_report(run, revised)
     print(f"\nDone: {run}: {len(cfg['ids'])} flagged, {len(revised)} reworded, {n_ok} of those approved, "
           f"{len(revised) - n_ok} need work (took {progress.duration(time.monotonic() - t0)}).")
-    files = ["authoring/data/questions.json", "app/data/pool.json", out.relative_to(ROOT).as_posix(),
+    files = ["authoring/data/questions.json", "app/data/pool.json", "app/data/bundles/", out.relative_to(ROOT).as_posix(),
              *stale_lines(revised, by_id)]
     print(f"Commit exactly this:\n  git add {' '.join(files)}\n"
           f"  git commit -m \"{run}: {len(revised)} base questions reworded into neutral Spanish, {n_ok} approved (qgen neutralize)\"")
@@ -3632,12 +3632,14 @@ def write_neutralize_report(run, revised):
 def cmd_export(args):
     pool = load_json(POOL)
     pool_export.write(pool)
-    n = sum(q["status"] == "approved" for q in pool["questions"])
-    print(f"exported {n} approved question(s) to {layout.EXPORT.relative_to(ROOT)}")
+    n = Counter(q["bundle"] for q in pool["questions"] if q["status"] == "approved")
+    print(f"exported {n.pop('base', 0)} approved question(s) to {layout.EXPORT.relative_to(ROOT)}")
+    for b, k in n.items():
+        print(f"exported {k} approved question(s) to {layout.POOL_FILE('es', b).relative_to(ROOT)}")
     for l in translations.LOCALES:
         if translations.path(l).exists():
             c = translations.counts(l, pool)
-            print(f"exported {c['exported']} {l} question(s) to {layout.LOCALE_POOL(l).relative_to(ROOT)}; "
+            print(f"exported {c['exported']} {l} question(s) to {layout.LOCALE_POOL(l).relative_to(ROOT)} and the packs'; "
                   f"{c['stale']} stale, {c['left_out']} left out (source not approved or not translatable)")
 
 
@@ -3727,6 +3729,8 @@ def validate_pool():
     for path, text in pool_export.exports(data).items():
         if (path.read_text(encoding="utf-8") if path.exists() else None) != text:
             errors.append(f"{path.relative_to(ROOT)} is not the current export of the pool: run `qgen export`")
+    for p in pool_export.stale_packs(pool_export.exports(data)):
+        errors.append(f"{p.relative_to(ROOT)}: not written by `qgen export` (pack without questions); delete it")
     for l in translations.LOCALES:
         if layout.LOCALE_POOL(l).exists() and not translations.path(l).exists():
             errors.append(f"{layout.LOCALE_POOL(l).relative_to(ROOT)}: no {translations.path(l).relative_to(ROOT)}; delete it")
@@ -3739,7 +3743,7 @@ def validate_pool():
 
 
 def released_ids():
-    """(newest v* tag, ids in its app/data/pool*.json), or (None, None) without a tag or git (plan 91)."""
+    """(newest v* tag, ids in its app/data/[bundles/<id>/]pool*.json), or (None, None) without a tag or git (plan 91)."""
     def git(*a):
         return subprocess.run(["git", *a], cwd=ROOT, capture_output=True, text=True)
     try:
@@ -3748,10 +3752,10 @@ def released_ids():
         return None, None
     if not tags:
         return None, None
-    files = git("ls-tree", "--name-only", tags[0], "app/data/").stdout.split()
+    files = git("ls-tree", "-r", "--name-only", tags[0], "app/data/").stdout.split()
     ids = set()
     for f in files:
-        if re.fullmatch(r"app/data/pool(\.[A-Za-z-]+)?\.json", f):
+        if re.fullmatch(r"app/data/(bundles/[^/]+/)?pool(\.[A-Za-z-]+)?\.json", f):
             ids |= {q["id"] for q in json.loads(git("show", f"{tags[0]}:{f}").stdout)["questions"]}
     return tags[0], ids
 
@@ -3956,7 +3960,7 @@ def bundle_problems(bundles):
         if l == "es":  # the source: every bundle starts there (`qgen bundle new`)
             continue
         path = layout.LOCALE_POOL(l)
-        pool = load_json(path)["questions"] if path.exists() else []
+        pool = [q for p in layout.POOL_FILES() if p.name == path.name for q in load_json(p)["questions"]]
         have = {q.get("bundle") or "base" for q in pool if q.get("status", "approved") == "approved"}
         warnings += [f"{path.name}: no approved {b} question; {b} is listed for {l}" for b in sorted(listed[l] - have)]
         warnings += [f"{path.name}: approved {b} questions, but {b} isn't listed for {l}" for b in sorted(have - listed[l])]

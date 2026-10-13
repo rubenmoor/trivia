@@ -39,6 +39,9 @@ The gamemaster's direction (2026-10-07): a batch writes for **one bundle, chosen
 | What | `base` | Another bundle `<id>` |
 |---|---|---|
 | Categories (ship) | `app/data/categories.json` | `app/data/bundles/<id>/categories.json` |
+| Pool (ship, `qgen export`, D-94) | `app/data/pool.json`, `pool.<locale>.json` (`base`'s questions only) | `app/data/bundles/<id>/pool.json`, `pool.<locale>.json`; missing = not offered (optional install, pm decision 66) |
+| Names (ship) | `app/data/names.<locale>.json` | `app/data/bundles/<id>/names.<locale>.json` |
+| Media | content depot | `build/pack-media.json` lists the media only it uses (`stage-media.mjs`) |
 | Concept lists | `authoring/data/concepts/` | `authoring/data/bundles/<id>/concepts/` |
 | Question axes | `authoring/data/question-axes.json` | `authoring/data/bundles/<id>/question-axes.json`, if present; otherwise `base`'s |
 

@@ -103,11 +103,28 @@ export function parseAgeGroups(json: unknown): AgeGroup[] {
   return out;
 }
 
-/** The pool file of a locale in app/data/ (D-81): es is pool.json. */
-export const poolFile = (locale: string): string => (locale === "es" ? "pool.json" : `pool.${locale}.json`);
-
 /** A bundle's own file in app/data/ (D-43): base's at the top, another's in bundles/<id>/. */
 export const bundleFile = (bundle: string, name: string): string => (bundle === "base" ? name : `bundles/${bundle}/${name}`);
+
+/** A bundle's pool file of a locale in app/data/ (D-81, decision 66): es is pool.json; a pack's in bundles/<id>/. */
+export const poolFile = (locale: string, bundle = "base"): string =>
+  bundleFile(bundle, locale === "es" ? "pool.json" : `pool.${locale}.json`);
+
+/** Packs: the bundles besides base offered in `locale`, each with its own pool file (decision 66). */
+export const packsFor = (bundles: Bundle[], locale: string): Bundle[] =>
+  bundles.filter((b) => b.id !== "base" && b.languages.includes(locale));
+
+/** base's pool plus the packs' pools of `locale` (packsFor order); a pack without a file (null) isn't
+ * offered there: `locale` leaves its languages, so a stored choice naming it reads as the defaults. */
+export function withPacks(
+  pool: PoolQuestion[], bundles: Bundle[], locale: string, packs: Record<string, unknown>,
+): { pool: PoolQuestion[]; bundles: Bundle[] } {
+  return {
+    pool: [...pool, ...packsFor(bundles, locale).flatMap((b) => (packs[b.id] ? parsePool(packs[b.id]) : []))],
+    bundles: bundles.map((b) =>
+      packsFor([b], locale).length && !packs[b.id] ? { ...b, languages: b.languages.filter((l) => l !== locale) } : b),
+  };
+}
 
 /** app/data/bundles.json and each bundle's categories file → categories in display order, base first.
  * A bundle without a file has none. */

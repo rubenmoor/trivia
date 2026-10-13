@@ -82,13 +82,14 @@ def play_entries(locale, source_pool):
     return out
 
 
-def export_text(locale, source_pool):
-    return pool_export.pool_text(play_entries(locale, source_pool))
+def export_texts(locale, source_pool):
+    """{path: text}: pool.<locale>.json and the packs' (decision 66)."""
+    return pool_export.split(play_entries(locale, source_pool), locale)
 
 
 def exports(source_pool):
     """{path: text} for every locale with a translation file (no pool.es.json)."""
-    return {layout.LOCALE_POOL(l): export_text(l, source_pool) for l in LOCALES if path(l).exists()}
+    return {p: t for l in LOCALES if path(l).exists() for p, t in export_texts(l, source_pool).items()}
 
 
 def yield_rate(locale):

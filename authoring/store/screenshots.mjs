@@ -11,7 +11,7 @@ import { fileURLToPath } from "node:url";
 import { cacheName } from "../../app/desktop/resolve.mjs";
 import { connectPort, freePort, pageHelpers, sleep, startXvfb, visibleEl } from "../tools/cdp.mjs";
 import { answer, newGame, pick } from "../../app/client/src/engine/game.ts";
-import { bundleFile, loadCategories, parseAgeGroups, parseBundles, parsePool, poolFile } from "../../app/client/src/engine/pool.ts";
+import { bundleFile, loadCategories, packsFor, parseAgeGroups, parseBundles, parsePool, poolFile, withPacks } from "../../app/client/src/engine/pool.ts";
 import { seededRng } from "../../app/client/src/engine/rng.ts";
 import { emptySave, engineData, mergeNames, SAVE_VERSION } from "../../app/client/src/engine/state.ts";
 
@@ -42,15 +42,17 @@ function loadData(locale) {
   const file = poolFile(locale);
   if (!existsSync(path.join(DATA, file))) return null;
   const bundles = json("bundles.json");
-  const parsed = parseBundles(bundles);
   const optional = (f) => (existsSync(path.join(DATA, f)) ? json(f) : null);
+  const all = parseBundles(bundles);
+  const packs = Object.fromEntries(packsFor(all, locale).map((b) => [b.id, optional(poolFile(locale, b.id))]));
+  const { pool, bundles: parsed } = withPacks(parsePool(json(file)), all, locale, packs);
   const byBundle = {};
   for (const b of parsed) {
     const cats = optional(bundleFile(b.id, "categories.json"));
     if (cats) byBundle[b.id] = cats;
   }
   return engineData(
-    parsePool(json(file)), loadCategories(bundles, byBundle), parsed, parseAgeGroups(json("age-groups.json")), locale,
+    pool, loadCategories(bundles, byBundle), parsed, parseAgeGroups(json("age-groups.json")), locale,
     locale === "es" ? undefined : mergeNames(parsed.map((b) => optional(bundleFile(b.id, `names.${locale}.json`)))),
   );
 }

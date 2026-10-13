@@ -7,7 +7,7 @@ server serves only URLs that a question in the pool uses (`pool_urls`) and never
 import hashlib, json, re, urllib.parse
 from pathlib import Path
 
-from paths import MEDIA, POOL
+from paths import MEDIA, pool_files
 
 
 def cache_path(url):
@@ -29,8 +29,11 @@ def picked(q):
 _urls = {}  # pool path -> (mtime_ns, size, urls)
 
 
-def pool_urls(pool=POOL):
-    """Every file_url in the pool: the server only serves these. Re-read when the file changes."""
+def pool_urls(pool=None):
+    """Every file_url in the pool (None: every exported pool file, packs too): the server only serves these.
+    Re-read when the file changes."""
+    if pool is None:
+        return set().union(*map(pool_urls, pool_files()))
     st = Path(pool).stat()
     key = (st.st_mtime_ns, st.st_size)
     hit = _urls.get(str(pool))

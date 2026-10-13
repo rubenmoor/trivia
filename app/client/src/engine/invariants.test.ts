@@ -1,18 +1,17 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { broadOf, categoryOf, parsePool } from "./pool.ts";
+import { broadOf, categoryOf } from "./pool.ts";
 import { seededRng } from "./rng.ts";
 import { assign, available, draw, inRange, LEVELS, PER_LEVEL, supply } from "./selection.ts";
-import { data, realAgeGroups, realCategories } from "./test/fixtures.ts";
+import { realAgeGroups, realCategories, realPool } from "./test/fixtures.ts";
 
 const SEEDS = 50;
-const json = data("pool.json");
 const BUNDLE_SETS = [["base"], ["base", "colombia"]];
 
 for (const group of realAgeGroups()) {
   for (const set of BUNDLE_SETS) {
     test(`12-level walk on the real pool, ${group.id} × {${set}}: 4 cards per level, lowest seen count first`, () => {
-      const pool = parsePool(json);
+      const pool = realPool();
       const cat = categoryOf(broadOf(realCategories()));
       const ranges = group.levels;
       const bundles = new Set(set);

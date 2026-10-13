@@ -16,7 +16,7 @@ sys.path.insert(0, str(ROOT / "authoring" / "steam"))
 import release_check  # noqa: E402
 
 FIXED_FIELDS = ["question", "answer", "wrong_answers", "hints", "fun_fact", "difficulty", "subcategory", "media"]
-POOL_RE = re.compile(r"app/data/pool(?:\.([A-Za-z-]+))?\.json")
+POOL_RE = re.compile(r"app/data/(bundles/[^/]+/)?pool(?:\.([A-Za-z-]+))?\.json")  # a pack's in bundles/<id>/ (decision 66)
 CATS_RE = re.compile(r"app/data/(?:bundles/[^/]+/)?categories\.json")
 NAMES_RE = re.compile(r"app/data/(?:bundles/[^/]+/)?names\.([A-Za-z-]+)\.json")
 LAUNCH = translations.LAUNCH  # D-78; EVENT needs each one (qgen validate)
@@ -63,7 +63,13 @@ def read(ref, path):
 def snapshot(ref):
     """{"version", "pools": {locale: pool}, "sub": {subcategory: slug}, "names": {locale: {slug: name}}}."""
     fs = files(ref)
-    pools = {(m.group(1) or "es"): read(ref, f) for f in fs if (m := POOL_RE.fullmatch(f))}
+    pools = {}  # per locale: base's questions and the packs', base's hash
+    for f in fs:
+        if m := POOL_RE.fullmatch(f):
+            p, pool = read(ref, f), pools.setdefault(m.group(2) or "es", {"hash": None, "questions": []})
+            pool["questions"] += p["questions"]
+            if not m.group(1):
+                pool["hash"] = p.get("hash")
     sub, names = {}, {"es": {}}
     for f in sorted(f for f in fs if CATS_RE.fullmatch(f)):
         for c in read(ref, f)["categories"]:

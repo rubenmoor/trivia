@@ -26,7 +26,7 @@ def parse_range(header, size):
 class BaseHandler(BaseHTTPRequestHandler):
     """JSON, files, the built client and /media. The authoring server reuses it."""
     dist = paths.DIST
-    pool_file = paths.POOL  # /media serves only URLs of questions in this file
+    pool_file = None  # /media serves only URLs of questions in this file (None: every exported pool)
     build_hint = "client not built: run `npm run build -w app/client`"
 
     def send_json(self, status, body):

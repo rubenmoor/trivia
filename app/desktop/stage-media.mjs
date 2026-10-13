@@ -1,5 +1,6 @@
 // Pool media → build/media for a packaged build (plan 56): hard links (or copies) from the cache.
-import { copyFileSync, linkSync, mkdirSync, readFileSync, rmSync, statSync } from "node:fs";
+// build/pack-media.json: per pack, the media only it uses (its DLC depot carries them, decision 66).
+import { copyFileSync, linkSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { cacheName, poolUrls } from "./resolve.mjs";
@@ -10,9 +11,22 @@ const allowMissing = process.argv.includes("--allow-missing");
 const cache = process.env.TRIVIA_MEDIA || path.join(REPO, "media");
 const out = path.join(HERE, "build", "media");
 
-const urls = poolUrls(JSON.parse(readFileSync(path.join(REPO, "app", "data", "pool.json"), "utf8")));
+const DATA = path.join(REPO, "app", "data");
+const read = (file) => poolUrls(JSON.parse(readFileSync(file, "utf8")));
+const packs = readdirSync(path.join(DATA, "bundles"))
+  .filter((b) => statSync(path.join(DATA, "bundles", b, "pool.json"), { throwIfNoEntry: false }))
+  .map((b) => [b, read(path.join(DATA, "bundles", b, "pool.json"))]);
+const urls = read(path.join(DATA, "pool.json"));
+const owners = new Map();
+for (const [b, own] of packs) for (const u of own) owners.set(u, urls.has(u) || owners.has(u) ? null : b);
+const packMedia = Object.fromEntries(packs.map(([b]) => [b, []]));
+for (const [u, b] of [...owners].sort()) {
+  urls.add(u);
+  if (b) packMedia[b].push(cacheName(u));
+}
 rmSync(out, { recursive: true, force: true });
 mkdirSync(out, { recursive: true });
+writeFileSync(path.join(HERE, "build", "pack-media.json"), JSON.stringify(packMedia, null, 2) + "\n");
 
 let count = 0;
 let bytes = 0;

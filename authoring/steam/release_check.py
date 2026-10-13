@@ -18,7 +18,7 @@ Steps, each ✓/✗ with its time; all automated steps run, exit 1 on any ✗:
             patch full-only rows are answered "skipped: content-only since <tag>"; beta-save only when
             SAVE_VERSION changed (plans/11-steam.md "Release checklist (ST-4)")
 
-Report header: version, every shipped pool's hash (app/data/pool.json = es, pool.<locale>.json), previous tag (newest v* reachable from HEAD, not HEAD's own), kind
+Report header: version, every shipped pool's hash (app/data/pool.json = es, pool.<locale>.json, a pack's as <locale>/<bundle>), previous tag (newest v* reachable from HEAD, not HEAD's own), kind
 (`full`, or `content-only` when nothing shipped but app/data/ changed since it) and SAVE_VERSION change.
 `--skip STEP` (repeatable): a known-broken step, ✗ → "skipped" in the report (and the build Desc).
 Run from the dev shell (nix, steam-run, Xvfb). Report: work/steam/<tag-or-sha>/release-check.md,
@@ -154,11 +154,13 @@ def manual(rows: dict[str, tuple[str, str | None]], path: str | None, ask: bool)
 
 
 def pools() -> dict[str, str | None]:
-    """{locale: hash} of every shipped pool, es first."""
+    """{locale: hash} of every shipped pool, es first; a pack's (decision 66) as <locale>/<bundle>."""
+    data = REPO / "app" / "data"
+    files = [*data.glob("pool*.json"), *data.glob("bundles/*/pool*.json")]
     out = {}
-    for f in sorted((REPO / "app" / "data").glob("pool*.json"), key=lambda f: (f.name != "pool.json", f.name)):
+    for f in sorted(files, key=lambda f: (f.parent != data, f.parent.name, f.name != "pool.json", f.name)):
         loc = "es" if f.name == "pool.json" else f.name.removeprefix("pool.").removesuffix(".json")
-        out[loc] = json.loads(f.read_text()).get("hash")
+        out[loc if f.parent == data else f"{loc}/{f.parent.name}"] = json.loads(f.read_text()).get("hash")
     return out
 
 

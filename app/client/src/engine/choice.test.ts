@@ -2,16 +2,15 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { choice, gameAction } from "./api.ts";
 import * as game from "./game.ts";
-import { parsePool } from "./pool.ts";
 import { seededRng } from "./rng.ts";
 import { inRange } from "./selection.ts";
 import { emptySave, engineData, type EngineData, type GameState, type SaveData } from "./state.ts";
-import { data as appData, realAgeGroups, realBundles, realCategories } from "./test/fixtures.ts";
+import { realAgeGroups, realBundles, realCategories, realPool } from "./test/fixtures.ts";
 
 const NOW = "2026-10-11T00:00:00Z";
 const io = (seed: number) => ({ rng: seededRng(seed), now: NOW });
 
-const data: EngineData = engineData(parsePool(appData("pool.json")), realCategories(), realBundles(), realAgeGroups());
+const data: EngineData = engineData(realPool(), realCategories(), realBundles(), realAgeGroups());
 const stateOf = (save: SaveData): GameState => save.games.at(-1)!.state;
 
 /** Play one game to the end with correct answers, each joker once where available; checks every card. */

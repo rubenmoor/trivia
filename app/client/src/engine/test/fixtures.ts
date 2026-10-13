@@ -1,7 +1,9 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import type { Category } from "../../lib/types.ts";
-import { type AgeGroup, type Bundle, loadCategories, parseAgeGroups, parseBundles } from "../pool.ts";
+import {
+  type AgeGroup, type Bundle, loadCategories, packsFor, parseAgeGroups, parseBundles, parsePool, poolFile, type PoolQuestion, withPacks,
+} from "../pool.ts";
 
 const ENGINE = join(import.meta.dirname, "..");
 const DATA = join(ENGINE, "../../../data");
@@ -24,3 +26,9 @@ export function realCategories(): Category[] {
 /** The real app/data/ bundles and age groups. */
 export const realBundles = (): Bundle[] => parseBundles(data("bundles.json"));
 export const realAgeGroups = (): AgeGroup[] => parseAgeGroups(data("age-groups.json"));
+
+/** The real es pool: base's and the packs' (decision 66). */
+export function realPool(): PoolQuestion[] {
+  const packs = Object.fromEntries(packsFor(realBundles(), "es").map((b) => [b.id, data(poolFile("es", b.id))]));
+  return withPacks(parsePool(data("pool.json")), realBundles(), "es", packs).pool;
+}

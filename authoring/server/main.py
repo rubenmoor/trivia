@@ -121,7 +121,7 @@ def update_question(qid, change):
 
 
 def update_translation(locale):
-    """update_question for questions.<locale>.json; re-exports pool.<locale>.json (plan 67)."""
+    """update_question for questions.<locale>.json; re-exports pool.<locale>.json and the packs' (plan 67)."""
     def update(qid, change):
         with atomic.locked(POOL), translations.locked(locale):  # POOL: the export reads it
             doc = translations.load(locale)
@@ -129,7 +129,7 @@ def update_translation(locale):
                 if t["id"] == qid:
                     change(t)
                     translations.save(locale, doc)
-                    atomic.write_text(layout.LOCALE_POOL(locale), translations.export_text(locale, load_pool()))
+                    pool_export.write_texts(translations.export_texts(locale, load_pool()), locale)
                     return t
         raise NoQuestion(qid)
     return update

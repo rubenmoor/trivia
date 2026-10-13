@@ -1,7 +1,7 @@
 // app:// URL → file (plan 54). Web Request/Response only, so plain `node` can test it.
 import { createHash } from "node:crypto";
 import { createReadStream } from "node:fs";
-import { readFile, stat } from "node:fs/promises";
+import { readdir, readFile, stat } from "node:fs/promises";
 import path from "node:path";
 import { Readable } from "node:stream";
 
@@ -91,24 +91,34 @@ export function cacheName(url) {
 export const poolUrls = ({ questions }) =>
   new Set(questions.flatMap((q) => [q.media?.file_url, q.background?.file_url]).filter(Boolean));
 
-// The pool's URLs, re-read when pool.json changes (qgen export in dev); broken: empty, one stderr line.
+// es pool files in data/: base's and every installed pack's (decision 66).
+export async function poolFiles(data) {
+  const packs = await readdir(path.join(data, "bundles")).catch(() => []);
+  return [path.join(data, "pool.json"), ...packs.map((b) => path.join(data, "bundles", b, "pool.json"))];
+}
+
+// The pool's URLs, re-read when a pool file changes (qgen export in dev); a broken one: skipped, one stderr line.
 function pooledUrls(data) {
-  const file = path.join(data, "pool.json");
-  let key = null;
-  let urls = new Set();
+  const seen = new Map(); // file → { key, urls }
   return async () => {
-    try {
-      const { mtimeMs, size } = await stat(file);
-      if (key !== `${mtimeMs}:${size}`) {
-        urls = poolUrls(JSON.parse(await readFile(file, "utf8")));
-        key = `${mtimeMs}:${size}`;
+    const out = new Set();
+    for (const file of await poolFiles(data)) {
+      let hit = seen.get(file);
+      try {
+        const { mtimeMs, size } = await stat(file);
+        if (hit?.key !== `${mtimeMs}:${size}`) {
+          hit = { key: `${mtimeMs}:${size}`, urls: poolUrls(JSON.parse(await readFile(file, "utf8"))) };
+          seen.set(file, hit);
+        }
+      } catch (err) {
+        if (err.code === "ENOENT" && file !== path.join(data, "pool.json")) continue; // a pack folder without a pool
+        if (hit?.key !== "bad") console.error(`trivia: ${file}: ${err.message}`);
+        hit = { key: "bad", urls: new Set() };
+        seen.set(file, hit);
       }
-    } catch (err) {
-      if (key !== "bad") console.error(`trivia: ${file}: ${err.message}`);
-      key = "bad";
-      urls = new Set();
+      for (const u of hit.urls) out.add(u);
     }
-    return urls;
+    return out;
   };
 }
 

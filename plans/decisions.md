@@ -858,3 +858,16 @@ Template:
   - **Clean tagged commit** for an upload: empty `git status --porcelain`, `v<version>` on HEAD; never creates/pushes tags; `--preview` (`Preview 1`) and `--dry-run` skip the tag gate.
 - Consequences: `flake.nix` (`steamcmd`, `trivia-steam`, unfree predicate); `trivia-steam vdf` renders the VDFs with absolute paths; SteamCMD parses them (`+run_app_build -preview` without login stops at "Not logged on"). Task 680: `trivia-steam upload --branch beta` applies the gates; `--checked` only accepts a passing `release-check.json` of HEAD on a clean tree; `--dry-run` uses placeholder IDs 480/481–483 while `steam.json` is null; tracked files changed by the release check refuse the upload.
 - Supersedes / related: D-59, D-63, D-73; SW-6, SW-10; pm decisions 14, 84; plans 56, 89
+
+## D-94: Packs as optional file sets (pool per bundle)
+- Date: 2026-10-13
+- Context: pm decision 66 (bundles ship as free DLC, optional install); plan 98 task 751. One `pool.json` with every bundle and one media folder: a DLC depot couldn't carry a pack.
+- Decision:
+  - **Pack** = every bundle besides `base`; its files all live in `app/data/bundles/<id>/`: `categories.json`, `names.<locale>.json`, and now `pool.json` / `pool.<locale>.json`.
+  - **`qgen export`** splits per bundle: `app/data/pool[.<locale>].json` keeps only `base`'s questions (always written); a pack's file only when it has questions in that locale; a pack file that would no longer be written is deleted (`qgen validate`: error). Each file has its own `hash` (D-92); the game's pool hash (Credits) stays `base`'s.
+  - **Loader** (`lib/data.ts`, `withPacks` in `engine/pool.ts`; also `sim/load.ts`, store screenshots): `base`'s pool plus each pack offered in the locale whose file exists. Missing file: the locale leaves the pack's `languages`, so it isn't offered and a stored choice naming it reads as the defaults (D-85, pm decision 38), never written back; no error.
+  - **Media:** `/media` (Python server, desktop `resolve.mjs`) serves URLs of every pool file present. `stage-media.mjs` still stages every pack's media into `build/media/` and writes `build/pack-media.json` (`{<id>: [cache file names]}`): media only that pack uses, for its DLC depot; media shared with `base` or another pack stay in the content depot.
+  - **Browser game** (`trivia`, `nix build .#app`) and desktop builds ship every pack (`app/data/` copied whole).
+  - **Release tools:** release check lists a pack's hash as `<locale>/<id>`; patch notes and `released_ids` merge pack files into their locale.
+- Consequences: removing `app/data/bundles/colombia/pool.json` → es offers only `base`, the family's save plays on; restoring it → offered again. DLC depots (plan 89, task 748): `resources/data/bundles/<id>/` + `pack-media.json`'s files under `resources/media/`.
+- Supersedes / related: D-35, D-39, D-43, D-81, D-85, D-92, D-93; pm decisions 38, 66; plans 89, 98

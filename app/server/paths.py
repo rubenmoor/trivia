@@ -22,6 +22,17 @@ def locale_pool(locale):
     return DATA / f"pool.{locale}.json"
 
 
+def pool(locale="es", bundle="base"):
+    """A bundle's pool in a locale: base's at the top, a pack's in bundles/<id>/ (decision 66)."""
+    name = "pool.json" if locale == "es" else f"pool.{locale}.json"
+    return DATA / name if bundle == "base" else BUNDLE_DATA / bundle / name
+
+
+def pool_files():
+    """Every exported pool file that exists: every locale, base and packs."""
+    return sorted([*DATA.glob("pool*.json"), *BUNDLE_DATA.glob("*/pool*.json")])
+
+
 def names(locale, bundle="base"):
     """Display names in a locale (D-81): names.<locale>.json, a bundle's in bundles/<id>/."""
     return DATA / f"names.{locale}.json" if bundle == "base" else BUNDLE_DATA / bundle / f"names.{locale}.json"

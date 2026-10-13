@@ -1,5 +1,5 @@
 // The game data from /data/ (app/data/, read-only: app/server/main.py or the desktop protocol; plan 50, PORT-7).
-import { bundleFile, loadCategories, parseAgeGroups, parseBundles, parsePool, poolFile, poolHash } from "../engine/pool.ts";
+import { bundleFile, loadCategories, packsFor, parseAgeGroups, parseBundles, parsePool, poolFile, poolHash, withPacks } from "../engine/pool.ts";
 import { engineData, mergeNames, NO_NAMES, type EngineData } from "../engine/state.ts";
 import { call } from "./http.ts";
 
@@ -38,13 +38,16 @@ export async function availableLocales(): Promise<string[]> {
   return LOCALES.filter((_, i) => found[i]);
 }
 
-/** The locale's pool, bundles.json, age-groups.json, every bundle's categories file and names files → engineData.
- * A bundle without a categories file has none (categories.load()). */
+/** The locale's pool and its packs' (decision 66), bundles.json, age-groups.json, every bundle's categories file
+ * and names files → engineData. A bundle without a categories file has none (categories.load()); a pack
+ * without a pool file isn't offered (withPacks). */
 async function load(locale: string): Promise<EngineData> {
   const [pool, bundles, ageGroups] = await Promise.all(
     [poolFile(locale), "bundles.json", "age-groups.json"].map((f) => get(f)),
   );
-  const parsed = parseBundles(bundles);
+  const all = parseBundles(bundles);
+  const packFiles = await Promise.all(packsFor(all, locale).map(async (b) => [b.id, await get(poolFile(locale, b.id), true)]));
+  const { pool: questions, bundles: parsed } = withPacks(parsePool(pool), all, locale, Object.fromEntries(packFiles));
   const files = await Promise.all(
     parsed.map((b) => get(bundleFile(b.id, "categories.json"), true)),
   );
@@ -52,5 +55,5 @@ async function load(locale: string): Promise<EngineData> {
     parsed.map((b) => get(bundleFile(b.id, `names.${locale}.json`), true)),
   ));
   const byBundle = Object.fromEntries(parsed.flatMap((b, i) => (files[i] ? [[b.id, files[i]]] : [])));
-  return engineData(parsePool(pool), loadCategories(bundles, byBundle), parsed, parseAgeGroups(ageGroups), locale, names, poolHash(pool));
+  return engineData(questions, loadCategories(bundles, byBundle), parsed, parseAgeGroups(ageGroups), locale, names, poolHash(pool));
 }

@@ -6,7 +6,12 @@ import type { Credits, CreditKind as Kind, MediaCredit, SoundCredit } from "./sr
 
 const client = fileURLToPath(new URL(".", import.meta.url));
 const repo = `${client}../../`;
-const pool = `${client}../data/pool.json`;
+const dataDir = `${client}../data/`;
+/** es pool files: base's and every pack's (decision 66). */
+const pools = (): string[] => [
+  `${dataDir}pool.json`,
+  ...readdirSync(`${dataDir}bundles`).map((b) => `${dataDir}bundles/${b}/pool.json`).filter((f) => existsSync(f)),
+];
 
 const KINDS: Kind[] = ["image", "audio", "video", "background"];
 // Same file rules as authoring/steam/credits_check.mjs.
@@ -42,13 +47,13 @@ function title(sourceUrl: string): string {
 }
 
 function media(warnings: string[]): MediaCredit[] {
-  const data = JSON.parse(readFileSync(pool, "utf8")) as {
+  const questions = pools().flatMap((f) => (JSON.parse(readFileSync(f, "utf8")) as {
     questions: { id: string; media: Slot; background: Slot | null }[];
-  };
+  }).questions);
   const byFile = new Map<string, MediaCredit>();
   const missing: string[] = [];
   const gfdl = new Set<string>();
-  for (const q of data.questions) {
+  for (const q of questions) {
     for (const [slot, kind] of [[q.media, q.media.type], [q.background, "background"]] as const) {
       if (!slot?.file_url) continue;
       if (!KINDS.includes(kind as Kind)) throw new Error(`credits: ${q.id}: unknown media type ${kind}`);
