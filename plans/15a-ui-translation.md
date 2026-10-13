@@ -52,3 +52,26 @@ English first (D-74); Spanish forms for `es`. Only «Solo o en grupo» is fixed;
   - Overflow fixes (2026-10-12, pm task 456): B-17 (Esc menu capped at the screen, scrolls, selected row in view; «quedan {n}» one line), B-18 (error line beside the flag/menu buttons). `hyphens: auto` for `de` only (decision 61). Re-walk `es`/`es-ES`/`en`/`de`/`xx` at 1920 × 1080 and 1280 × 800 incl. the language screen: no overflow; `es` pixel-identical except those two spots.
   - `/comodines` per language (2026-10-12, pm task 457): `?lang=es|es-ES|en|de`, language links on screen; names, keys, `joker.<id>.rule` and `cards.*` page text from the app catalogs (`catalogFor` in `lib/i18n.ts`); `@page` Letter (0.5 in) for `es`/`en`, A4 (0.84 in × 0.38 in) for `de`/`es-ES`. Chrome print preview: one page, 12 cards each.
 - [ ] LUI-6 Store page texts per language (with PUB-8). S5, not milestone 9 (S4).
+
+## Playtest
+One native speaker per launch catalog (`es` the family, `es-ES`, `en`, `de`), arranged by the gamemaster, plays the real game rather than reading the catalog. The answer goes into that language's pm decision "Playtest passed? (<lang>)"; fixes go to pm task 459 (pm decisions 62 `es`, 63 `es-ES`, 64 `en`, 65 `de`).
+
+- **Setup**: `trivia` (or `trivia-desktop`), media synced; browser/OS language set to the tester's language (`navigator.language`, e.g. `de-DE`, `es-ES`, `en-US`); `es` family: their own save, untouched.
+- **First start** (fresh save: move `state/game.json` aside, put it back afterwards):
+  - language screen opens, the guess preselected
+  - pick another language → screen switches; pick back, confirm
+  - reload → no language screen again
+  - family save (no `language` field) → never sees the screen
+- **Full game** in each mode: Gamemaster mode, Alone or as group; customize dialog, difficulty and bundles
+- **Every joker** (`hint`, `skip` incl. the plain pass, `easier`, `category`, `snipe`): name, key letter, prompt, effect line
+- **Overlay / Esc menu**: every row incl. the language rows (UI and question language, «not enough questions»)
+- **Prompts**: keyboard (key letters match the names) and pad (glyphs + text)
+- **Endings**: victory, wrong answer, milestone and consolation lines (several levels)
+- **Report dialog**: mark a question (`M`), note, list of marked questions, copy
+- **`/comodines?lang=<lang>`** (authoring, :8001): print preview, one page, 12 cards; names, keys, rules read right
+- **What to note** (screen + text + suggested fix):
+  - wrong tone (stiff, rude, not playful)
+  - too long (cut off, wrapped badly, overflows)
+  - wrong register (`du`/`Sie`, `tú`/`usted`/`vosotros`, regionalisms)
+  - unclear rule (joker or mode not understood without help)
+  - anything else that reads like a translation

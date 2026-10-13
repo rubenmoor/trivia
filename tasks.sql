@@ -9190,7 +9190,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Print-preview check per language: one page, 12 cards.
 
 Done when: four print previews correct; `npm run check`, `check:literals`, `npm run build` pass.', '2026-10-12T19:44:17Z', '2026-10-13T04:45:44Z', 452);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (458, 69, 'LUI-5: playtest checklist and decisions', 'work', 'open', 350, NULL, 'Prepare the native-speaker playtest per catalog (`es` the family, `es-ES`, `en`, `de`), arranged by the gamemaster.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (458, 69, 'LUI-5: playtest checklist and decisions', 'work', 'done', 350, '2026-10-13, plans/15a-ui-translation.md (Playtest section); decisions 62-65, task 459 pending on them', 'Prepare the native-speaker playtest per catalog (`es` the family, `es-ES`, `en`, `de`), arranged by the gamemaster.
 
 - "Playtest" section in `plans/15a-ui-translation.md`:
   - first start on a fresh save: language screen with the guess preselected (`navigator.language` set to the tester''s language), pick another, confirm; asked once (reload → no screen); the family''s save never sees it
@@ -9199,7 +9199,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Four `pm decision add --once` "Playtest passed? (<lang>)", options: passed / passed with fixes listed / failed.
 - Link the task "LUI-5: playtest fixes and close-out" (task 459) to all four (`pm task-pending-decision`).
 
-Done when: checklist written, four decisions linked.', '2026-10-12T19:44:17Z', NULL, 452);
+Done when: checklist written, four decisions linked.', '2026-10-12T19:44:17Z', '2026-10-13T05:09:01Z', 452);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (459, 69, 'LUI-5: playtest fixes and close-out', 'work', 'open', 340, NULL, 'Apply the playtest answers and close LUI-4/LUI-5.
 
 - Fixes from the "Playtest passed? (<lang>)" answers: catalogs only; anything bigger → `pm task add`.
@@ -13312,6 +13312,10 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 
 2026-10-13, task 625: 2026-10-13, task 625: FlagDialog.svelte (flag icon / M / pad Select: optional note, Enter flags, Esc/⌫ cancel; flagged: save note or «Quitar marca»; pad: LetterPicker note mode with picker.letters/marks per catalog); overlay item and engine action report gone; FlagList.svelte «Preguntas marcadas» with notes + Copiar; save v4: reports merged into flags {flagged_on, player, level?, note?} (parseSave, save.py, save_file.flags for v3); apply_flags feedback «Marcada en el juego (player, date): <note>», ledger stamp includes the note so an edited note applies again');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (61, 'hyphens: auto only for German UI (LUI-5)', 'answered', '[]', 'Plan 69 asks for hyphens: auto on text blocks and no per-language CSS unless unavoidable. Chromium hyphenates Spanish line ends too (checked in headless Chromium 147), so a global rule would rehyphenate the family''s es screens (question cards, explanations); es must stay pixel-identical. Scoping to :lang(de) is the one exception; <html lang> comes from plan 68.', '.game:lang(de) { hyphens: auto } in theme.css; es/en keep no hyphenation', NULL, '2026-10-13T04:31:46Z', '2026-10-13T04:31:46Z', 456, NULL, 'rule', 456, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (62, 'Playtest passed? (es)', 'pending', '["passed", "passed with fixes listed", "failed"]', 'Native-speaker playtest of the `es` UI catalog, checklist: plans/15a-ui-translation.md, section Playtest. If fixes: list them (screen, text, suggested fix).', NULL, NULL, '2026-10-13T05:08:57Z', NULL, 458, NULL, 'once', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (63, 'Playtest passed? (es-ES)', 'pending', '["passed", "passed with fixes listed", "failed"]', 'Native-speaker playtest of the `es-ES` UI catalog, checklist: plans/15a-ui-translation.md, section Playtest. If fixes: list them (screen, text, suggested fix).', NULL, NULL, '2026-10-13T05:08:58Z', NULL, 458, NULL, 'once', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (64, 'Playtest passed? (en)', 'pending', '["passed", "passed with fixes listed", "failed"]', 'Native-speaker playtest of the `en` UI catalog, checklist: plans/15a-ui-translation.md, section Playtest. If fixes: list them (screen, text, suggested fix).', NULL, NULL, '2026-10-13T05:08:58Z', NULL, 458, NULL, 'once', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (65, 'Playtest passed? (de)', 'pending', '["passed", "passed with fixes listed", "failed"]', 'Native-speaker playtest of the `de` UI catalog, checklist: plans/15a-ui-translation.md, section Playtest. If fixes: list them (screen, text, suggested fix).', NULL, NULL, '2026-10-13T05:08:58Z', NULL, 458, NULL, 'once', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -13776,6 +13780,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (457, 392, '2026-10-13T04:45:59Z', '2026-10-13T04:59:20Z', 'done', NULL, 0, '2b8735b983def638a0cbd9bc14bc01fbb5c536f1', 'claude-opus-5-5[1m]', 'f6bdc15a-6c79-4387-a830-a9e5b538ca42', 111, 210, 61076, 15134845, 190233, 5.771193000000002, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (458, 623, '2026-10-13T04:59:20Z', '2026-10-13T05:08:08Z', 'done', NULL, 0, '36bd2b7a24a5814d288e17c25178aff4a8c9c7bd', 'claude-opus-5-5[1m]', 'd6de72b0-4206-4ecc-be33-837dc80b288f', 51, 98, 28175, 4277223, 107622, 2.2803125999999985, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (459, 630, '2026-10-13T05:08:09Z', '2026-10-13T05:08:23Z', 'done', NULL, 0, '9886d4be4437c0677660ad8f103e6ed8595a20ea', 'claude-opus-5-5[1m]', '7b287351-4ac0-4ea0-a10b-94f84e85a2f5', 4, 8, 1043, 103703, 24306, 0.2360806, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (460, 458, '2026-10-13T05:08:23Z', '2026-10-13T05:09:07Z', 'done', NULL, 0, 'c78c106d84564626f5046e9c53d899f4b7cdae67', 'claude-opus-5-5[1m]', '15c82dd4-7d1b-46d3-a617-df5aeba2eb45', 12, 22, 3238, 369045, 28414, 0.36596899999999993, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -13880,6 +13885,10 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (455, 56);
 INSERT INTO task_decision (task_id, decision_id) VALUES (455, 57);
 INSERT INTO task_decision (task_id, decision_id) VALUES (455, 58);
 INSERT INTO task_decision (task_id, decision_id) VALUES (455, 59);
+INSERT INTO task_decision (task_id, decision_id) VALUES (459, 62);
+INSERT INTO task_decision (task_id, decision_id) VALUES (459, 63);
+INSERT INTO task_decision (task_id, decision_id) VALUES (459, 64);
+INSERT INTO task_decision (task_id, decision_id) VALUES (459, 65);
 INSERT INTO task_decision (task_id, decision_id) VALUES (464, 35);
 INSERT INTO task_decision (task_id, decision_id) VALUES (479, 50);
 
