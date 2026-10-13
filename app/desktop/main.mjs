@@ -382,6 +382,8 @@ async function start() {
   );
   ses.setPermissionRequestHandler((_wc, permission, callback) => callback(permission === "fullscreen"));
   ses.setPermissionCheckHandler((_wc, permission) => permission === "fullscreen");
+  // No dictionary download (task 1003).
+  ses.setSpellCheckerLanguages([]);
 
   win = new BrowserWindow({
     fullscreen: true,
