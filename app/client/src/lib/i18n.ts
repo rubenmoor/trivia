@@ -1,16 +1,30 @@
 // UI strings from a typed catalog (plans/15a-ui-translation.md, LUI-1, D-70). No library.
-import es, { type Catalog, type Plural, type TextKey, type VariantsKey } from "../locales/es";
+import { de } from "../locales/de";
+import { en } from "../locales/en";
+import es, { type Catalog, type Override, type Plural, type TextKey, type VariantsKey } from "../locales/es";
+import { esES } from "../locales/es-ES";
 
 export type { Key, TextKey, VariantsKey } from "../locales/es";
 export type Params = Record<string, string | number>;
 
-const CATALOGS: Record<string, Catalog> = { es };
+const isBranch = (v: unknown): v is Record<string, unknown> =>
+  !!v && typeof v === "object" && !Array.isArray(v) && !("other" in v);
+
+/** `over` on `base`, branch by branch; leaves (plural maps and variant arrays too) replaced whole. */
+function merge(base: Catalog, over: Override): Catalog {
+  const go = (b: unknown, o: unknown): unknown =>
+    isBranch(b) && isBranch(o) ? { ...b, ...Object.fromEntries(Object.entries(o).map(([k, v]) => [k, go(b[k], v)])) } : o;
+  return go(base, over) as Catalog;
+}
+
+/** Shipping catalogs (LUI-5, D-78): `es` is neutral Latin American Spanish, `es-ES` overrides it. */
+const CATALOGS: Record<string, Catalog> = { es, "es-ES": merge(es, esES), en, de };
 
 /** UI languages a player can pick (plan 68): every catalog but the `xx` pseudo-locale. */
 export const UI_LANGS = Object.keys(CATALOGS).filter((l) => l !== "xx");
 
-/** Dev-only catalogs, loaded on demand: `xx` (LUI-2), `en` draft (LUI-3). */
-const DEV_LANGS = ["xx", "en"];
+/** Dev-only catalogs, loaded on demand: `xx` (LUI-2). */
+const DEV_LANGS = ["xx"];
 
 /** The save's UI language; `?lang=` overrides it in dev only (also `DEV_LANGS`). Unknown → `es`. */
 function pickLang(saved?: string): string {
@@ -33,7 +47,6 @@ let plurals = new Intl.PluralRules(real(lang));
 export async function initLang(saved?: string): Promise<void> {
   lang = pickLang(saved);
   if (import.meta.env?.DEV && lang === "xx" && !CATALOGS.xx) CATALOGS.xx = (await import("../locales/xx")).pseudo(es);
-  if (import.meta.env?.DEV && lang === "en" && !CATALOGS.en) CATALOGS.en = (await import("../locales/en")).en;
   catalog = CATALOGS[lang];
   numbers = new Intl.NumberFormat(real(lang));
   plurals = new Intl.PluralRules(real(lang));

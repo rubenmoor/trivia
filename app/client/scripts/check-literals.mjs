@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-// Flags on-screen literals outside the catalog (plans/15a-ui-translation.md, LUI-1).
+// Flags on-screen literals outside the catalog (plans/15a-ui-translation.md, LUI-1), and checks
+// the shipping catalogs against `es`: shortcut keys, `{param}` sets, untranslated leaves (LUI-5).
 // Usage: node scripts/check-literals.mjs [path…]  (default src/game; relative to app/client)
 import { readdirSync, readFileSync, statSync } from "node:fs";
 import { dirname, join, relative, resolve } from "node:path";
@@ -120,7 +121,63 @@ for (const file of paths.flatMap(files)) {
     failed++;
   }
 }
-if (failed) {
-  console.error(`${failed} literal(s) outside the catalog (src/locales/es.ts).`);
-  process.exit(1);
+if (failed) console.error(`${failed} literal(s) outside the catalog (src/locales/es.ts).`);
+
+const es = (await import("../src/locales/es.ts")).default;
+const CATALOGS = {
+  es,
+  "es-ES": (await import("../src/locales/es-ES.ts")).esES,
+  en: (await import("../src/locales/en.ts")).en,
+  de: (await import("../src/locales/de.ts")).de,
+};
+/** Shortcut keys live together; `flag.key` works on every screen. */
+const SCREENS = {
+  question: ["joker.hint.key", "joker.skip.key", "joker.easier.key", "joker.category.key", "joker.snipe.key", "screen.question.replayKey"],
+  start: ["screen.start.newKey"],
+  choice: ["mode.gamemasterKey", "mode.soloKey", "customize.openKey"],
+};
+/** Screens that show answers `A`–`D`. */
+const ANSWERS = ["question"];
+/** Leaves that may read as in `es`: names, shortcut keys, symbols. */
+const SAME_OK = [/^app\.title$/, /^screen\.start\.(name|close)$/, /^credits\.(audio|video)$/, /\.key$/, /Key$/];
+
+const isLeaf = (v) => typeof v === "string" || Array.isArray(v) || "other" in v;
+const texts = (v) => (typeof v === "string" ? [v] : Object.values(v));
+const params = (v) => [...new Set(texts(v).flatMap((s) => [...s.matchAll(/\{(\w+)\}/g)].map((m) => m[1])))].sort().join(",");
+
+function leaves(node, path = "", out = new Map()) {
+  for (const [k, v] of Object.entries(node)) {
+    const p = path ? `${path}.${k}` : k;
+    if (isLeaf(v)) out.set(p, v);
+    else leaves(v, p, out);
+  }
+  return out;
 }
+
+const base = leaves(es);
+const problems = [];
+for (const [lang, catalog] of Object.entries(CATALOGS)) {
+  const own = leaves(catalog);
+  const full = lang === "es-ES" ? new Map([...base, ...own]) : own;
+  for (const [p, v] of own) {
+    const b = base.get(p);
+    if (b === undefined) problems.push(`${lang}: ${p} is not in es`);
+    else if (params(v) !== params(b)) problems.push(`${lang}: ${p} has {${params(v)}}, es {${params(b)}}`);
+    else if ((lang === "en" || lang === "de") && JSON.stringify(v) === JSON.stringify(b) && !SAME_OK.some((r) => r.test(p))
+      && /\p{L}/u.test(texts(v).join("").replace(/\{\w+\}/g, "")))
+      problems.push(`${lang}: ${p} is the same as in es`);
+  }
+  for (const [screen, keys] of Object.entries(SCREENS)) {
+    const live = [...keys, "flag.key"].map((p) => [p, full.get(p)]);
+    const seen = new Map();
+    for (const [p, k] of live) {
+      if (typeof k !== "string" || !/^\p{L}$/u.test(k)) problems.push(`${lang}: ${p} «${k}» is not a single letter`);
+      else if (ANSWERS.includes(screen) && /^[a-d]$/i.test(k)) problems.push(`${lang}: ${p} «${k}» is an answer key`);
+      else if (seen.has(k.toLowerCase())) problems.push(`${lang}: ${p} «${k}» = ${seen.get(k.toLowerCase())} (${screen})`);
+      else seen.set(k.toLowerCase(), p);
+    }
+  }
+}
+for (const p of problems) console.log(`src/locales: ${p}`);
+if (problems.length) console.error(`${problems.length} catalog problem(s).`);
+if (failed || problems.length) process.exit(1);

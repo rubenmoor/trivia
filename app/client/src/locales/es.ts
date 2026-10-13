@@ -358,6 +358,10 @@ type Widen<T> = T extends string
 /** Shape every catalog has; wording and variant counts may differ. */
 export type Catalog = Widen<typeof es>;
 
+type Partial_<T> = T extends string | readonly string[] | Plural ? T : { [K in keyof T]?: Partial_<T[K]> };
+/** A regional override (`es-ES`): only the differing leaves; plural maps and variant arrays whole. */
+export type Override = Partial_<Catalog>;
+
 type Paths<T, Leaf> = {
   [K in keyof T & (string | number)]: T[K] extends Leaf
     ? `${K}`

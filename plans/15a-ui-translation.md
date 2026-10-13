@@ -46,4 +46,5 @@ English first (D-74); Spanish forms for `es`. Only «Solo o en grupo» is fixed;
   - `snipe` «Francotirador» (pm decision 58): Scharfschütze (X), Kunstschuss (K), Blattschuss (X), Meisterschuss (X).
   - Neutral `es` (pm decision 59): «¡Qué berraquera!» → «¡Qué maravilla!» (`copy.consolation.9`); «Pulsa otra vez» → «Presiona otra vez» (`overlay.confirm`, `es-ES` keeps «Pulsa»).
   - `es-ES` joker names: no decision; «Soplo», «Paso», «Bájale», «Cambiazo», «Francotirador» all read fine in Spain.
+  - Shipping (2026-10-12, pm task 454): `de.ts` draft (recommended joker names, `es` key letters until LUI-4), `es-ES.ts` override (`vosotros`, «vídeo», «Pulsa»), all four in `CATALOGS`, `xx` dev-only; first-start screen now shows on a fresh save. `check:literals`: keys per screen, `{param}` sets, untranslated leaves. Fonts cover every catalog. Walk `de`/`es-ES` at 1920 × 1080 and 1280 × 800 (full `de` game to victory, jokers, overlay, wrong, customize, report list; fresh save; family save copy → no screen, nothing written): no overflow.
 - [ ] LUI-6 Store page texts per language (with PUB-8). S5, not milestone 9 (S4).
