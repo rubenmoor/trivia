@@ -20391,8 +20391,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:33:00Z', '2026-10-13T17:41:26Z', 874);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (881, 108, 'create tasks for plan 108', 'split', 'done', 1000, '2026-10-13, tasks.sql: tasks 889, 890', 'Split plan 108 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:34:46Z', '2026-10-13T17:42:08Z', 875);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (882, 109, 'create tasks for plan 109', 'split', 'open', 1000, NULL, 'Split plan 109 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:37:28Z', NULL, 876);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (882, 109, 'create tasks for plan 109', 'split', 'done', 1000, '2026-10-13, tasks 891–893; no new decisions (decision 122 covers the model)', 'Split plan 109 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:37:28Z', '2026-10-13T17:42:45Z', 876);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (883, 110, 'create tasks for plan 110', 'split', 'open', 1000, NULL, 'Split plan 110 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:39:31Z', NULL, 877);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (884, 105, 'Telemetry server: routes, migration and validation', 'work', 'open', NULL, NULL, 'Plan 105 task 1: the server half of opt-in telemetry in `report-server/` (plan 103''s Worker + D1), exactly per plan 105''s "API contract (v1)", "Storage", "Retention", "Ticket identity, vars, secrets". Read plan 105 (`pm show p105`) first; the contract is fixed, change it only by editing the plan.
@@ -20553,6 +20553,38 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - Plan 108 "Done when" first two points hold.', '2026-10-13T17:42:06Z', NULL, 881);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (891, 109, 'qgen telemetry --pull and the played store', 'work', 'open', NULL, NULL, 'Plan 109 part 1. Run after task 884: Telemetry server: routes, migration and validation, task 885: Telemetry server: dev seed command and task 860: qgen flag --pull: server reports become needs_work (wait if any is open).
+
+- `authoring/tools/played.py`: fold `GET /telemetry` sessions into `state/played/stats.json` exactly per plan 109 "Local store" (version 1; `answers`, `levels`, `games`, `sessions`, `pending_ack`, `unknown`; atomic write via `atomic.py`); clean = no `hint`/`snipe` joker on the question; group = age group id or `custom`; date = session `received_day`.
+- Privacy (decision 121, plan 108 text): no raw body, no install id, no session id on disk beyond `pending_ack`.
+- `qgen.py` (decision 101: only wiring): subcommand `telemetry --pull [--dry-run] [--from <file>] [--url <base>]`.
+  - Loop: ack leftover `pending_ack` → `GET /telemetry?limit=200` → fold page + ids into `pending_ack` (one write) → `POST /telemetry/ack` → clear `pending_ack` (write) → repeat while `more`.
+  - `--dry-run`: one page, print counts, no write, no ack. `--from`: `{"sessions": [...]}` file, no ack.
+  - URL/token: share task 860''s helpers (`--url`, else `reportUrl` in `app/desktop/package.json`; `TRIVIA_REPORT_TOKEN`, else `state/report-token`); move them into one function if inlined.
+  - Summary line: sessions, games, answers folded, pages, acked; failure: one line, exit 1, nothing half-written.
+- Check: `trivia-report-server dev` + `seed-telemetry 50` → pull folds 50, acks; second pull folds 0; throw-away raise after the write → next run acks, no double counts; `--from report-server/fixtures/telemetry-session.json` folds 1 session; grep `stats.json` for install/session ids after ack: none.
+- Docs: `qgen.py` usage docstring; `directory.md` (`state/played/`, `played.py`).', '2026-10-13T17:42:40Z', NULL, 882);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (892, 109, 'Calibration and qgen report --played', 'work', 'open', NULL, NULL, 'Plan 109 part 2, after task 891: qgen telemetry --pull and the played store.
+
+- `played.py`: calibration per plan 109 "Calibration model" and decision 122: Played difficulty: calibration model for qgen report --played.
+  - Constants at module top: `MIN_N = 12`, `BUCKET_MIN = 30`, `GROUP_MIN = 300`, `SHRINK = 4`, `DELTA = 2`, `Z = 1.645`, `HELP_JOKERS = {"hint", "snipe"}`.
+  - Per group: curve `p_g(d)` over rated difficulty (locale''s own `difficulty`, D-81) of clean answers, PAV monotone non-increasing, buckets < 30 merged into a neighbour, linear between; group < 300 clean answers → "not enough data". Windows from `app/data/age-groups.json` (`authoring/tools/age_groups.py`).
+  - Cell `(id, locale, group)`: clean answers on/after the entry''s `review.reviewed_on`; shrunk rate, inverse interpolation (1 decimal, `≤ lo` / `≥ hi`); outlier: n ≥ 12, |Δ| ≥ 2, 90 % Wilson interval excludes `p_g(rated)`; too easy / too hard / mixed (mixed: not a candidate).
+  - `custom` games: session stats and per-level table only, no curve.
+  - A function the review server can call (task 893) returning outlier cells and per-question `played` data.
+- `qgen report --played` in `cmd_report`: options `--locale es|en|de|all`, `--age-group`, `--mode`, `--since`, `--all`, `--json`; sections data, sessions, age group × level, curves, outliers, last line `review candidates: N → http://localhost:8001/review?played=outliers[&locale=…]`; no `stats.json` → "no played data: qgen telemetry --pull", exit 0.
+- Check: throw-away generator (in `/tmp`, not kept) writing sessions from `app/data/pool.json` with right rates from rated difficulty plus a few planted mis-rated ids, folded via `--pull --from`: planted ids are outliers in the right direction, no others; also on seeded dev-server data. Keep the generated data in `state/` or `/tmp` for task 893.
+- If constants change: `pm decision consequences 122 "…"`.
+- Docs: `authoring/QC.md` one bullet (played outliers as review input); `plans/21-age-groups.md` short note (played vs. rated, per-level table).', '2026-10-13T17:42:40Z', NULL, 882);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (893, 109, '/review?played=outliers and the «Datos de juego» line', 'work', 'open', NULL, NULL, 'Plan 109 part 3, after task 892: Calibration and qgen report --played.
+
+- `authoring/server/main.py`:
+  - `GET /api/questions?played=outliers[&locale=…]` in `source_questions` and `locale_questions` (model: `licence=replace`), sorted by |Δ|, using task 892''s `played.py` function.
+  - `with_extras`: `played: [{group, n, right, rated, observed}]` on every question with data; `stats.json` loaded once per request.
+- `authoring/ui`: types; `Review.svelte` `reviewUrl()` keeps `?played=outliers`; panel line «Datos de juego: adultos 37 resp., 92 % bien, dificultad 11 → jugada ≤ 7». A question stays listed after a difficulty change until reload (like `licence=replace`).
+- No automatic `needs_work`, no `qgen rework` (decision 122).
+- Check with task 892''s generated data: filter lists the planted ids for es and en; a difficulty change there removes the id from the next `qgen report --played`; `/review` without the filter shows the line on a question with data. `npm run check`, `npm run build`.
+- Docs: `main.py` route docstring; `plans/08-review-tool.md` filter list.', '2026-10-13T17:42:40Z', NULL, 882);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -22600,6 +22632,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (751, 879, '2026-10-13T17:40:19Z', '2026-10-13T17:40:56Z', 'done', NULL, 0, '026e8ed36ea613d4e15098efdf32e5e9f10b9bb3', 'claude-opus-5-5[1m]', '2f22575e-dceb-4777-b2c0-26402df3e896', 5, 10, 3661, 162808, 32795, 0.3681816, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (752, 880, '2026-10-13T17:40:56Z', '2026-10-13T17:41:33Z', 'done', NULL, 0, 'f196fab8fb7f84e097c6fa0dd5dc3c80b34c659f', 'claude-opus-5-5[1m]', '73b339d9-5478-463e-900f-1b1ca03df636', 6, 12, 2790, 167412, 23143, 0.27447439999999995, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (753, 881, '2026-10-13T17:41:34Z', '2026-10-13T17:42:14Z', 'done', NULL, 0, 'b3cac869b5ac9a2a015f196227bb10308a9553da', 'claude-opus-5-5[1m]', 'edd86372-bf2f-47c5-b3e7-b332f4d62460', 5, 10, 4029, 156853, 30579, 0.3566226, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (754, 882, '2026-10-13T17:42:14Z', '2026-10-13T17:42:49Z', 'done', NULL, 0, '87c8b88dccef6a5289a475cb6756449bab0ece7d', 'claude-opus-5-5[1m]', '8d94d4cf-74ba-443b-94e6-01ed6883a0eb', 5, 10, 3455, 154300, 30003, 0.34002400000000005, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
