@@ -357,5 +357,6 @@ export const de = {
     level_invalid: "Stufe: {min} bis {max}",
     cheat_not_select: "nur möglich, solange die Karten auf dem Tisch liegen",
     save_locked: "Speichern ging nicht. Beim nächsten Zug wird es erneut versucht.",
+    bad_save: "Das Spiel konnte nicht gespeichert werden. Es geht trotzdem weiter.",
   },
 } satisfies Catalog;

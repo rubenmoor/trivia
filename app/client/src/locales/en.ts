@@ -358,5 +358,6 @@ export const en = {
     level_invalid: "level: {min} to {max}",
     cheat_not_select: "only possible with the cards on the table",
     save_locked: "Couldn't save. Trying again with the next move.",
+    bad_save: "Couldn't save the game. Play goes on.",
   },
 } satisfies Catalog;

@@ -14132,7 +14132,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## If "Keep as is"
 - README: one bullet how to move a broken `state/game.json` away; nothing else.', '2026-10-13T10:18:58Z', NULL, 540);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (725, 76, 'Catalog text for the bad_save error', 'work', 'open', NULL, NULL, 'Follow-up of `task 541: Review API client, types and errors` (`code-review.md` `## Part 4`).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (725, 76, 'Catalog text for the bad_save error', 'work', 'done', NULL, '2026-10-13, app/client/src/locales/es.ts, en.ts, de.ts, code-review.md', 'Follow-up of `task 541: Review API client, types and errors` (`code-review.md` `## Part 4`).
 
 ## Why
 - A failed save write with code `bad_save` (`lib/store.ts`: desktop `writeSave` rejects, or `/api/save` 400 from `app/server/save.py`: invalid JSON, save over 10 MB) is thrown to the screen; `lib/errors.ts` `errorText` finds no `error.bad_save` key and shows the English `can''t save: …` message on a Spanish/German TV.
@@ -14140,7 +14140,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## What
 - `error.bad_save` in `app/client/src/locales/es.ts`, `en.ts`, `de.ts` (es-ES inherits): short, says the save could not be written and the game goes on; ask the gamemaster for the wording with `pm decision add` if unsure.
-- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass; update the `code-review.md` row''s status.', '2026-10-13T10:23:30Z', NULL, 541);
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass; update the `code-review.md` row''s status.', '2026-10-13T10:23:30Z', '2026-10-13T10:29:34Z', 541);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -15840,6 +15840,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (583, 541, '2026-10-13T10:20:25Z', '2026-10-13T10:24:25Z', 'done', NULL, 0, 'c91ed9ffefa4f0610444506da96bbf738459d322', 'claude-opus-5-5[1m]', '06bb6a03-b4ba-479d-819f-5f84c512dba0', 35, 66, 18317, 2221032, 80305, 1.4532504000000004, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (584, 542, '2026-10-13T10:24:26Z', '2026-10-13T10:27:34Z', 'done', NULL, 0, 'ae859b6097e5ed44606381ace7ad02a919284f99', 'claude-opus-5-5[1m]', '50230266-cee6-4ad0-80ae-a1a4e433db6e', 36, 66, 16856, 2261711, 82557, 1.4501821999999998, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (585, 722, '2026-10-13T10:27:35Z', '2026-10-13T10:29:02Z', 'done', NULL, 0, 'f300b7145bef3f01cc8159030f91fc343a0aa6f3', 'claude-opus-5-5[1m]', '03bfacaf-997d-49f6-b750-8cd85812c029', 19, 36, 6626, 783155, 42761, 0.63138300000000014, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (586, 725, '2026-10-13T10:29:02Z', '2026-10-13T10:29:39Z', 'done', NULL, 0, '144f5db6f7a28a9735517f8fd0e61a52e21dfb43', 'claude-opus-5-5[1m]', '49784496-0e7c-4c19-be86-2e10f450566c', 7, 14, 1875, 207323, 24233, 0.27288460000000003, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

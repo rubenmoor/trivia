@@ -407,6 +407,7 @@ const es = {
     level_invalid: "nivel: de {min} a {max}",
     cheat_not_select: "solo se puede con las cartas en la mesa",
     save_locked: "No se pudo guardar. Se intenta de nuevo con la próxima jugada.",
+    bad_save: "No se pudo guardar la partida. El juego sigue.",
   },
 } as const;
 
