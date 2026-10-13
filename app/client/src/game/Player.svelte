@@ -48,6 +48,13 @@
       error = errorText(e);
     }
     loaded = true;
+  });
+
+  // With no players the field gets focus once, after the fade-in (`busy` disables it until then).
+  let focused = false;
+  $effect(() => {
+    if (!loaded || busy || focused) return;
+    focused = true;
     if (players.length === 0) input?.focus();
   });
 
