@@ -1,10 +1,26 @@
 """Shared request handling for the game server and the authoring server: JSON, files,
 the built client (single-page app) and /media from the cache only (D-17, plan 51)."""
-import json, mimetypes
+import json, mimetypes, re
 from http.server import BaseHTTPRequestHandler
 
 import media_cache
 import paths
+
+CHUNK = 1 << 20
+
+
+def parse_range(header, size):
+    """(start, end) of a single `bytes=` range; None = whole file, False = unsatisfiable.
+    Same as app/desktop/resolve.mjs parseRange."""
+    m = re.fullmatch(r"bytes=(\d*)-(\d*)", (header or "").strip())
+    if not m or m[1] == m[2] == "":
+        return None
+    if m[1] == "":
+        start, end = max(0, size - int(m[2])), size - 1
+    else:
+        start = int(m[1])
+        end = size - 1 if m[2] == "" else min(int(m[2]), size - 1)
+    return False if start > end or start >= size else (start, end)
 
 
 class BaseHandler(BaseHTTPRequestHandler):
@@ -22,16 +38,36 @@ class BaseHandler(BaseHTTPRequestHandler):
         self.wfile.write(raw)
 
     def send_file(self, path):
-        raw = path.read_bytes()
-        self.send_response(200)
+        """Streamed in chunks; a single `Range` gets 206 (video seeking)."""
+        size = path.stat().st_size
+        rng = parse_range(self.headers.get("Range"), size)
+        if rng is False:
+            self.send_response(416)
+            self.send_header("Content-Range", f"bytes */{size}")
+            self.send_header("Content-Length", "0")
+            self.end_headers()
+            return
+        start, end = rng or (0, size - 1)
+        self.send_response(206 if rng else 200)
         self.send_header("Content-Type", mimetypes.guess_type(path.name)[0] or "application/octet-stream")
-        self.send_header("Content-Length", str(len(raw)))
+        self.send_header("Accept-Ranges", "bytes")
+        if rng:
+            self.send_header("Content-Range", f"bytes {start}-{end}/{size}")
+        self.send_header("Content-Length", str(end - start + 1))
         self.end_headers()
-        self.wfile.write(raw)
+        left = end - start + 1
+        try:
+            with path.open("rb") as f:
+                f.seek(start)
+                while left > 0 and (chunk := f.read(min(left, CHUNK))):
+                    self.wfile.write(chunk)
+                    left -= len(chunk)
+        except ConnectionError:  # the browser dropped a video it no longer needs
+            pass
 
     def send_media(self, file_url):
         if file_url not in media_cache.pool_urls(self.pool_file):  # not an open proxy: only files questions use
-            return self.send_json(404, {"error": "not a media file of any question"})
+            return self.send_json(404, {"error": "not_found", "message": "not a media file of any question"})
         path = media_cache.cache_path(file_url)
         if not path.is_file():
             return self.send_json(404, {"error": "media_missing", "message": "not in the media cache; run trivia-media sync"})
@@ -39,15 +75,23 @@ class BaseHandler(BaseHTTPRequestHandler):
 
     def send_static(self, url_path):
         rel = url_path.lstrip("/")
-        if not self.dist.exists():
-            return self.send_json(503, {"error": self.build_hint})
+        index = self.dist / "index.html"
+        if not index.is_file():
+            return self.send_json(503, {"error": "not_built", "message": self.build_hint})
         path = (self.dist / rel).resolve()
         if rel and path.is_file() and path.is_relative_to(self.dist):
             return self.send_file(path)
-        return self.send_file(self.dist / "index.html")  # single-page app
+        return self.send_file(index)  # single-page app
+
+    def content_length(self):
+        """The request's Content-Length; ValueError when it isn't a number >= 0."""
+        n = int(self.headers.get("Content-Length") or 0)
+        if n < 0:
+            raise ValueError("negative Content-Length")
+        return n
 
     def read_body(self):
-        return json.loads(self.rfile.read(int(self.headers.get("Content-Length", 0))) or b"{}")
+        return json.loads(self.rfile.read(self.content_length()) or b"{}")
 
     def log_message(self, fmt, *args):
         if not self.path.startswith("/assets/"):

@@ -19,7 +19,8 @@ API:
                                                    {"error": "not_found"} (plan 49, D-67)
     PUT  /api/save                                 body: the whole save document; replaces it. Envelope check
                                                    only: 400 "bad_save"; 503 "save_locked" when the file stays locked
-Any other /api/ path or method: 404 {"error": "not_found"}.
+Any other /api/ path, or POST: 404 {"error": "not_found"}; other methods: 501 (http.server).
+Files are streamed; a single Range gets 206 (video seeking).
 """
 import argparse
 from http.server import ThreadingHTTPServer
@@ -63,7 +64,10 @@ class Handler(BaseHandler):
     def do_PUT(self):
         if urlparse(self.path).path != "/api/save":
             return self.send_json(404, NOT_FOUND)
-        length = int(self.headers.get("Content-Length", 0))
+        try:
+            length = self.content_length()
+        except ValueError:
+            return self.send_json(400, {"error": "bad_save", "message": "bad Content-Length"})
         if length > save.MAX_BYTES:
             while length > 0:  # drain, so the client reads the answer instead of a reset
                 chunk = self.rfile.read(min(length, 1 << 20))

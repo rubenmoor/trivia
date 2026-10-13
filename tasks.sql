@@ -11076,7 +11076,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - `save.py` and `paths.py` listed in `## Part 2` (or "no findings"), every finding with a status.
 - Status per finding as in plan 72 "Report format": `fixed (task 532)` / `follow-up task N` / `decision N` / `superseded by task 302` / `won''t fix: <why>`; files without findings get a "no findings" row.', '2026-10-12T23:03:30Z', '2026-10-13T09:46:45Z', 514);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (533, 74, 'Review main.py, http_base.py, media_cache.py', 'work', 'open', NULL, NULL, 'Task 2 of `plan 74: Python game server review (code review part 2)`; after task 1 of the plan. Ground rules: plan 72 "Ground rules for every part"; plan 74 "Rules for this plan".
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (533, 74, 'Review main.py, http_base.py, media_cache.py', 'work', 'done', NULL, '2026-10-13, app/server/http_base.py, main.py, media_cache.py, code-review.md', 'Task 2 of `plan 74: Python game server review (code review part 2)`; after task 1 of the plan. Ground rules: plan 72 "Ground rules for every part"; plan 74 "Rules for this plan".
 
 ## What
 - `app/server/main.py` (206), `http_base.py` (54), `media_cache.py` (32 lines).
@@ -11095,7 +11095,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - The three files listed in `## Part 2` (or "no findings"), every finding with a status.
-- Status per finding as in plan 72 "Report format": `fixed (task 533)` / `follow-up task N` / `decision N` / `superseded by task 302` / `won''t fix: <why>`; files without findings get a "no findings" row.', '2026-10-12T23:03:30Z', NULL, 514);
+- Status per finding as in plan 72 "Report format": `fixed (task 533)` / `follow-up task N` / `decision N` / `superseded by task 302` / `won''t fix: <why>`; files without findings get a "no findings" row.', '2026-10-12T23:03:30Z', '2026-10-13T09:49:50Z', 514);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (534, 74, 'Review categories.py (moved to authoring/tools/); log the deleted referee files', 'work', 'open', NULL, NULL, 'Task 3 of `plan 74: Python game server review (code review part 2)`; last task of the plan. Ground rules: plan 72 "Ground rules for every part"; plan 74 "Rules for this plan".
 
 Rewritten by `task 628: post-milestone cleanup`: `task 302: Delete the Python referee` is done. `app/server/game.py`, `selection.py`, `flags.py` and `authoring/tools/record_fixtures.py` are deleted; `categories.py` now lives at `authoring/tools/categories.py`; `app/server/` has 5 files (`main.py`, `save.py`, `paths.py`, `http_base.py`, `media_cache.py`).
@@ -15791,6 +15791,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (571, 530, '2026-10-13T09:40:14Z', '2026-10-13T09:42:31Z', 'done', NULL, 0, 'b9d5978d5c242327d0d9d7b6a27c2f82b034c94c', 'claude-opus-5-5[1m]', '009c7567-d047-42be-9491-346056e8654a', 21, 38, 12369, 1260697, 79956, 1.1393193999999998, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (572, 531, '2026-10-13T09:42:31Z', '2026-10-13T09:44:15Z', 'done', NULL, 0, '43bfb757844fe2a5cacc7b2af215cda7145a8b96', 'claude-opus-5-5[1m]', 'fc967a71-1a6e-4b86-82fc-965864030922', 15, 30, 8785, 620956, 41964, 0.6357232, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (573, 532, '2026-10-13T09:44:16Z', '2026-10-13T09:46:57Z', 'done', NULL, 0, 'ab31a334489a8ea8b79056de35c399e81c2d3baa', 'claude-opus-5-5[1m]', 'b9aec8d8-946c-432d-859a-236ce3b94f6c', 19, 36, 12802, 831862, 50224, 0.8243484, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (574, 533, '2026-10-13T09:46:58Z', '2026-10-13T09:50:00Z', 'done', NULL, 0, '4eec29d386e9161ce0f4290def0a124e47c2067c', 'claude-opus-5-5[1m]', 'ad79bfb9-b5a0-4e1a-b16f-7d225e9b2a23', 25, 42, 16669, 1118375, 59904, 1.0364550000000001, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

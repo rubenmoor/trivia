@@ -26,7 +26,17 @@ def picked(q):
     return [(label, url) for label, url in out if url]
 
 
+_urls = {}  # pool path -> (mtime_ns, size, urls)
+
+
 def pool_urls(pool=POOL):
-    """Every file_url in the pool: the server only serves these."""
+    """Every file_url in the pool: the server only serves these. Re-read when the file changes."""
+    st = Path(pool).stat()
+    key = (st.st_mtime_ns, st.st_size)
+    hit = _urls.get(str(pool))
+    if hit and hit[0] == key:
+        return hit[1]
     qs = json.loads(Path(pool).read_text(encoding="utf-8"))["questions"]
-    return {url for q in qs for _, url in picked(q)}
+    urls = {url for q in qs for _, url in picked(q)}
+    _urls[str(pool)] = (key, urls)
+    return urls
