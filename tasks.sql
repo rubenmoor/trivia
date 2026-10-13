@@ -13879,6 +13879,73 @@ Without Steam (Steam closed; Windows zip and Linux tar.gz):
 - browser game (`trivia`) unchanged
 
 On failure name the failing rows; the worker adds follow-ups in plan 85 (drop the Windows overlay, switch to ShowGamepadTextInput, or drop Steam Input).', NULL, NULL, '2026-10-13T05:45:41Z', NULL, 652, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (73, 'Achievement list (SW-11)?', 'pending', '["The draft: 6 achievements as listed, 3 in Steamworks now, the 3 mode wins with MD-8, texts as written", "Draft + WIN_ALL_AGES (a win in each of the 4 age groups), in Steamworks now"]', 'Plan 86 (SW-11). Steam achievements, earned only in qualifying games (decision 19: Default mode: presets, checkpoints and won levels): not gamemaster mode, not customized, no custom difficulty, 12 levels, 4 cards. Derived from the save over all its players, any age group. No hidden ones, no progress pop-ups, Steam''s toast only. Texts go into Steamworks, not into `t()`.
+
+Wording: infinitive / impersonal, so latam and es-ES need no ustedes/vosotros split; tower/top imagery from the catalogs («¡Ganaron!», «llegó a la cima», «Gewonnen!», «auf dem Gipfel»). Mode names = the proposals in `13-game-modes.md`.
+
+## Steamworks now (modes in `BUILT_MODES`: gamemaster, solo)
+
+| API name | Trigger |
+|---|---|
+| `FIRST_WIN` | any qualifying game with `result === "won"` (also solo''s win) |
+| `WIN_NO_JOKERS` | won game with no joker played (`state.jokers` empty), in a mode with jokers |
+| `ALL_CATEGORIES` | every broad category of `base` with questions in the loaded pool''s locale has ≥ 1 correct answer across all qualifying games, any result (28 today: ~4–6 games) |
+
+## In the code list, entered in Steamworks with MD-8
+
+| API name | Trigger |
+|---|---|
+| `WIN_RR_COOP` | won game, mode `rr-coop` |
+| `WIN_RR_COMPETITIVE` | a player''s game in `rr-competitive` won |
+| `WIN_TIMED` | won game, mode `timed` |
+
+## Texts
+
+`FIRST_WIN`
+- latam: «¡A la cima!» / «Ganar una partida: 12 preguntas, hasta arriba de la torre.»
+- spanish: same as latam
+- english: «To the Top!» / «Win a game: 12 questions, all the way up the tower.»
+- german: «Auf dem Gipfel!» / «Ein Spiel gewinnen: 12 Fragen, ganz nach oben.»
+
+`WIN_NO_JOKERS`
+- latam: «Sin comodines» / «Ganar una partida sin usar ni un solo comodín.»
+- spanish: same as latam
+- english: «No Jokers Needed» / «Win a game without playing a single joker.»
+- german: «Ganz ohne Joker» / «Ein Spiel gewinnen, ohne einen einzigen Joker zu spielen.»
+
+`ALL_CATEGORIES`
+- latam: «De todo un poco» / «Acertar al menos una pregunta de cada tema.»
+- spanish: same as latam
+- english: «Jack of All Topics» / «Answer at least one question right in every topic.»
+- german: «Von allem etwas» / «In jedem Thema mindestens eine Frage richtig beantworten.»
+
+`WIN_RR_COOP` (MD-8)
+- latam: «Todos a una» / «Ganar una partida Por turnos en equipo.»
+- spanish: same as latam
+- english: «All for One» / «Win a round-robin co-op game.»
+- german: «Alle für einen» / «Ein Spiel reihum im Team gewinnen.»
+
+`WIN_RR_COMPETITIVE` (MD-8)
+- latam: «El último en pie» / «Ganar una partida Por turnos, todos contra todos.»
+- spanish: same as latam
+- english: «Last One Standing» / «Win a round-robin game, everyone against everyone.»
+- german: «Wer zuletzt lacht» / «Ein Spiel reihum, jeder gegen jeden, gewinnen.»
+
+`WIN_TIMED` (MD-8)
+- latam: «Contra el reloj» / «Ganar una partida Contrarreloj.»
+- spanish: same as latam
+- english: «Beat the Clock» / «Win a timed game.»
+- german: «Gegen die Uhr» / «Ein Spiel auf Zeit gewinnen.»
+
+## Option 2''s extra
+
+`WIN_ALL_AGES`: a won qualifying game in each of the 4 age groups (`kids`, `young_teens`, `young_adults`, `adults`; `settings.age_group`), any players of the save. Cheap in code (one field), but needs 4 wins, the adult one hard for kids: close to grind for a solo player, natural for a family. Not recommended.
+- latam / spanish: «Para todas las edades» / «Ganar una partida en cada grupo de edad.»
+- english: «For All Ages» / «Win a game in every age group.»
+- german: «Für jedes Alter» / «In jeder Altersgruppe ein Spiel gewinnen.»
+
+Answer with the option, plus any wording changes per line.', NULL, NULL, '2026-10-13T05:49:32Z', NULL, 654, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (74, 'Gamemaster mode earns no achievements', 'answered', '[]', 'Gamemaster mode has undo, skip, replace, jump to level and any joker budget mid-game (D-74, D-88; decision 34: Gamemaster menu: which cheats?), while outside it a question can never be skipped and nothing changes mid-game (decision 20: Default mode: which admin actions in the Esc menu). Achievements would be free there. Qualifying = decision 19: Default mode: presets, checkpoints and won levels (uncustomized games only), plan 86. earned() skips rows with gameMode() === ''gamemaster''.', 'Gamemaster mode never earns Steam achievements; only qualifying games (decision 19) count', NULL, '2026-10-13T05:49:36Z', '2026-10-13T05:49:36Z', 654, NULL, 'rule', 654, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -14363,6 +14430,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (477, 652, '2026-10-13T05:44:55Z', '2026-10-13T05:46:06Z', 'blocked', NULL, 0, '633b175a8e5cfcd43383eeaeea2e999c5d37006f', 'claude-opus-5-5[1m]', '665737b0-d2d1-4fc7-965a-138380ed5cec', 14, 26, 5826, 524214, 40767, 0.5476028, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (478, 257, '2026-10-13T05:46:06Z', '2026-10-13T05:47:57Z', 'done', NULL, 0, '81193a8e0ebfcfe009466a707ece9fea944f813d', 'claude-opus-5-5[1m]', '9033df1b-7e77-493c-bb8a-9f1f45c5bc3f', 13, 24, 9747, 598056, 63518, 0.82279120000000017, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (479, 653, '2026-10-13T05:47:58Z', '2026-10-13T05:48:50Z', 'done', NULL, 0, 'e5eee1d350aff5ae2615524b3ef1412e5f62394d', 'claude-opus-5-5[1m]', '6f704a62-9bbc-42f1-8893-0256cff0b751', 6, 12, 4486, 186898, 29439, 0.36265959999999997, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (480, 654, '2026-10-13T05:48:50Z', '2026-10-13T05:49:44Z', 'blocked', NULL, 0, '82c3b717710bf8e67fe785674e5e6dde839b17fe', 'claude-opus-5-5[1m]', '671684aa-1bb2-4cb7-a254-1c6dfe4c7c01', 8, 16, 4370, 268105, 31879, 0.396117, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -14486,5 +14554,6 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (464, 35);
 INSERT INTO task_decision (task_id, decision_id) VALUES (479, 50);
 INSERT INTO task_decision (task_id, decision_id) VALUES (650, 68);
 INSERT INTO task_decision (task_id, decision_id) VALUES (652, 72);
+INSERT INTO task_decision (task_id, decision_id) VALUES (654, 73);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
