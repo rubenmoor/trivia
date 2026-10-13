@@ -83,6 +83,7 @@ let win = null;
 let steam = null; // the binding, only while Steam is up
 let steamTimer = null;
 let steamInput = false;
+let validUser = false; // decision 111: Steam user with a SteamID, or the dev switch; fixed for the session
 let overlay = false; // Windows only: the native window Steam's overlay draws into (D-92)
 let saveFile = null; // set in start(), after Steam
 let localFile = null; // `local/`'s save under Steam: offered once (plan 87)
@@ -156,8 +157,20 @@ async function startSteam() {
   steamInput = steam.input.init(false);
   steamTimer = setInterval(() => steam.runCallbacks(), 100);
   console.error(
-    `trivia: steam available, app ${appId}, user ${steam.getStatus().steamId}, language ${steam.apps.getCurrentGameLanguage()}`,
+    `trivia: steam available, app ${appId}, user ${steam.getStatus().steamId} ${hasSteamId() ? "valid" : "none"}, language ${steam.apps.getCurrentGameLanguage()}`,
   );
+}
+
+function hasSteamId() {
+  return steam !== null && /^[1-9]\d*$/.test(String(steam.getStatus().steamId));
+}
+
+/** Soft check, no DRM (decision 111); `TRIVIA_DEV_STEAM_USER=1` stands in for a user, packaged too. */
+function checkUser() {
+  if (hasSteamId()) return true;
+  if (process.env.TRIVIA_DEV_STEAM_USER !== "1") return false;
+  console.error("trivia: dev Steam user (TRIVIA_DEV_STEAM_USER)");
+  return true;
 }
 
 function stopSteam() {
@@ -185,6 +198,7 @@ async function importSave(file) {
 
 async function start() {
   await startSteam();
+  validUser = checkUser();
   const dir = await userSaveDir();
   saveFile = makeSaveFile(dir);
   if (path.basename(dir) !== "local" && !process.env.TRIVIA_SAVE_DIR)
@@ -220,7 +234,7 @@ async function start() {
       nodeIntegration: false,
       preload: path.join(path.dirname(fileURLToPath(import.meta.url)), "preload.cjs"),
       devTools: process.env.TRIVIA_DEVTOOLS === "1",
-      additionalArguments: steam ? ["--trivia-steam"] : [],
+      additionalArguments: [...(steam ? ["--trivia-steam"] : []), ...(validUser ? ["--trivia-user"] : [])],
     },
   });
   win.once("ready-to-show", () => win.show());

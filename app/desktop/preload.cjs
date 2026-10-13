@@ -13,6 +13,7 @@ contextBridge.exposeInMainWorld("trivia", {
   // Plan 85: the binding lives in main; the flag comes from main's additionalArguments.
   steam: {
     available: process.argv.includes("--trivia-steam"),
+    user: process.argv.includes("--trivia-user"),
     steamId: () => ipcRenderer.invoke("steam:steam-id"),
     language: () => ipcRenderer.invoke("steam:language"),
     overlay: { enabled: () => ipcRenderer.invoke("steam:overlay-enabled") },
