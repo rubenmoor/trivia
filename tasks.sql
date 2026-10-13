@@ -13605,8 +13605,68 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Check
 - `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-13T08:26:18Z', '2026-10-13T08:35:15Z', 689);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (694, 92, 'create tasks for plan 92', 'split', 'open', 1000, NULL, 'Split plan 92 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T08:37:48Z', NULL, 266);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (694, 92, 'create tasks for plan 92', 'split', 'done', 1000, '2026-10-13, tasks.sql: tasks 695, 696, 697; no decisions needed', 'Split plan 92 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T08:37:48Z', '2026-10-13T08:38:36Z', 266);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (695, 92, 'Release check: tag gate, patch detection and report header', 'work', 'open', NULL, NULL, 'Plan 92 task 1. Extend `authoring/steam/release_check.py` (`task 679: trivia-release-check (SW-6)`) and `authoring/steam/steam.py`; no new tool.
+
+## What
+- New first step `tag`: clean tree (`git status --porcelain` empty) and HEAD tagged `v` + `app/desktop/package.json` version (decision 91: Game version: single source of truth). Else ✗ with what to do: commit, `git tag v<version>`. The check never creates tags.
+- Previous tag: newest `v*` tag reachable from HEAD other than HEAD''s own (none = full release).
+- Kind: `full` / `content-only patch since <tag>`. Content-only = `git diff --name-only <prev>..HEAD` touches nothing shipped except `app/data/`; shipped = `app/`, `flake.nix`, `flake.lock`, root `package*.json`. Expose the kind so task "Manual rows, decision template and ST-4 checklist" can auto-answer full-only rows.
+- Save version: `SAVE_VERSION` (find where it lives, e.g. `app/client/src/engine/save.ts`) at HEAD vs previous tag; record "changed"/"unchanged" (task 3 adds the `beta-save` row on change).
+- Skipped row "media budget" with note "masterplan 10 part 6, task 260" until part 6''s check exists (so it shows in the Desc like any skip).
+- Report header (`work/steam/<tag>/release-check.{md,json}`): version, pool hash (`app/data/pool.json` `"hash"`, decision 92: Pool version: export hash in pool.json), previous tag, kind, save version change.
+- `steam.py`: `--preview` / `--dry-run` pass `--skip tag` to the check (they already skip the upload''s own tag gate).
+- All automated steps stay hard failures; `--skip` the only escape, shown in report and Desc.
+
+## Check
+- On today''s main: `trivia-release-check --skip checks --skip nix --skip desktop --skip smoke --skip quality --skip licenses --skip manual` → `tag` ✗ (untagged), kind `full`.
+- Throw-away clone (under `work/` or /tmp, delete after) with a local tag `v0.0.1`: a commit touching only `app/data/pool.json` → content-only since v0.0.1; one touching `app/client/` → full. Never push tags.
+
+## Docs
+- `plans/18-steam-integration.md` "Builds and depots": SW-6 step list (`tag` first, kind, header).
+- AGENTS.md "Commands" `trivia-release-check` line: `tag` step, patch variant.', '2026-10-13T08:38:34Z', NULL, 694);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (696, 92, 'Credits complete both ways (credits step in the release check)', 'work', 'open', NULL, NULL, 'Plan 92 task 2. Today credits are checked one way only, inside the Vite build (`app/client/credits.ts`, plan 47): nothing checks what lands in the packaged build or credits entries without a shipped file.
+
+## What
+- New `authoring/steam/credits_check.mjs <unpacked dir>` (Node, no new dependency; read `app.asar` via `@electron/asar`, already installed with electron-builder, or its `asar list`). Compares the packaged Linux build from `trivia-desktop-build --dir` (Windows unpacked too where cheap) with its own `resources/client/credits.json` (packaged path as built):
+  - every file in `resources/media/` ↔ exactly one media entry (`cacheName(file_url)` from `app/desktop/resolve.mjs`); no media entry without a file
+  - every sound file in the client''s `audio/` ↔ a sound row
+  - every font file ↔ a font entry, its OFL text present
+  - every runtime package in the asar''s `node_modules` and every file group in `resources/steamworks_sdk/` (decision 69: Steamworks SDK libs for dev and the bridge''s SDK path) ↔ a library entry
+  - `CREDITS.md` present in the build
+  - prints missing/extra by name, exit 1 on any.
+- New step `credits` in `authoring/steam/release_check.py`, after `desktop` (hard failure; `--skip credits` possible).
+- Expected gaps today: `steamworks-ffi-node` (decision 28: Steam binding for the Electron shell?) and the Steamworks API redistributable. Add both to the libraries in `app/client/credits.ts` (licence text from the package; Steamworks SDK: Valve''s SDK licence, name and link) so the check passes. Decision 49: credits.json carries no UI text.
+
+## Check
+- Passes on today''s `--dir` build.
+- Renaming a media file away, or adding a stray file under `resources/media/`, fails naming the file (throw-away, restore after).
+- D-59: `trivia`, `nix build .#app`, `trivia-desktop-build` without `--dir` unchanged.
+
+## Docs
+- `plans/17-*.md` "Credits in the game" (PUB-5): one bullet.
+- `plans/18-steam-integration.md` SW-6 step list: `credits`.
+- `directory.md`: `credits_check.mjs`.', '2026-10-13T08:38:34Z', NULL, 694);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (697, 92, 'Manual rows, decision template and ST-4 checklist', 'work', 'open', NULL, NULL, 'Plan 92 task 3. Needs task "Release check: tag gate, patch detection and report header" (kind, save version change) done first.
+
+## What
+- `MANUAL` in `authoring/steam/release_check.py`: each row flagged full-only or always:
+  - `offline` (always): beta install, network off, Steam not running: full game to level 12 or a won checkpoint; content-only patch: a game to level 3 that hits new questions
+  - `windows` (full)
+  - `deck` (full): points at plan 90''s (SW-12) checklist in `plans/18-steam-integration.md`; if plan 90 isn''t written there yet, point at plan 90. If plan 90 moved "request Deck review" to ST-4, add a launch-only note.
+  - `cloud` (full): short A→B run of plan 87''s "Steam Cloud test" table (play on A, quit, B shows players and seen counts); a reference, not a copy
+  - `sound` (full), `red-frame` (full)
+  - `beta-save`: only when the save version changed vs the previous tag (task 1): testers stay on `beta` until this build is on `default`
+  - `signoff` (always): launch and full releases: the family plays the candidate from `beta`; content-only patch: the gamemaster''s OK
+- Content-only patch: full-only rows auto-answered "skipped: content-only since <tag>", listed in the report.
+- `--manual FILE` (`<row>: <answer>` per line) parses all rows.
+- `plans/11-steam.md` new section "Release checklist (ST-4)": intro paragraph; how to run (`git tag v<x>`, `trivia-steam upload --branch beta`, then the manual rows via `--manual FILE` from the gamemaster''s answers or the prompt); the rows with exact steps; the patch variant and its reason (plan 92 "Decisions taken here"); the decision template: subject "Release candidate v<x> passed?", body: tag, BuildID, report path, rows table to fill; options `passed`, `passed with minor issues (list)`, `failed (rows)`; what a worker does with each answer (failures → tasks in the owning plan, minor issues → `plans/backlog.md`). Parts 4 (task 269) and 6 (task 270) must be able to use it unchanged; create no decision here.
+- ST-4 `[x]` with date and note "first full run: part 4''s release candidate (task 269)"; `plans/project.md` in sync; README "Upload to Steam": one line pointing at the section.
+
+## Check
+- A `--manual` file with every row answered parses.
+- A content-only run (throw-away clone with a local tag, as in task 1) lists the auto-skipped rows with the reason.', '2026-10-13T08:38:34Z', NULL, 694);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -15197,6 +15257,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (532, 693, '2026-10-13T08:34:33Z', '2026-10-13T08:35:22Z', 'done', NULL, 0, 'a6fa15695b9ed31bfa5c2c52a9ecd4bf1c8a3fc8', 'claude-opus-5-5[1m]', '2722a6d4-ba40-4770-816e-53e3dd6c5731', 7, 14, 3123, 231830, 30890, 0.356002, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (533, 672, '2026-10-13T08:35:22Z', '2026-10-13T08:35:40Z', 'blocked', NULL, 0, '20a539421817da92f48f1821af718b3e116f3f36', 'claude-opus-5-5[1m]', '4bbd7944-4aa0-41c5-8941-4e6fb59bf897', 4, 8, 1215, 101174, 22884, 0.2276388, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (534, 266, '2026-10-13T08:35:40Z', '2026-10-13T08:38:01Z', 'done', NULL, 0, '9a2313a20d1cf7eae47cf953a4554e224f5c67c9', 'claude-opus-5-5[1m]', '59fd6331-0828-4254-b2b3-4d53a70299fb', 18, 32, 10629, 745543, 57379, 0.8208486, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (535, 694, '2026-10-13T08:38:01Z', '2026-10-13T08:38:42Z', 'done', NULL, 0, 'e1776b0351bf6aa84e45fa05d3a5cb3af8b56260', 'claude-opus-5-5[1m]', '3408ede4-b31b-4ad0-8393-62a2fd4a161b', 5, 10, 3988, 152358, 30099, 0.3510636, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
