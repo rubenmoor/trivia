@@ -588,15 +588,16 @@ def cmd_bundles(args):
         user = "## Bundles\n" + bundles_text() + "\n\n## Questions\n" + json.dumps(items, ensure_ascii=False)
         out = claude(system, user, BUNDLE_SCHEMA, args.model, d)
         got = {r["id"]: r for r in out["questions"] if r["bundle"] in ids}
-        missing = [q["id"] for q in group if q["id"] not in got]
+        asked = {q["id"] for q in group}
+        unanswered = [q["id"] for q in group if q["id"] not in got]
         with lock:
             proposals.update({i: {"bundle": got[i]["bundle"], "reason": got[i]["reason"], "applied": False}
-                              for i in got if i in {q["id"] for q in group}})
+                              for i in got if i in asked})
             save_json(d / "proposals.json", proposals)
         print(f"  bundles: {group[0]['id']}…{group[-1]['id']}: "
               + ", ".join(f"{b} {sum(1 for i in got if got[i]['bundle'] == b)}" for b in sorted(ids)), flush=True)
-        if missing:
-            raise RuntimeError(f"no bundle for {', '.join(missing)}")
+        if unanswered:
+            raise RuntimeError(f"no bundle for {', '.join(unanswered)}")
 
     errors = parallel(work, [todo[i:i + BUNDLE_GROUP] for i in range(0, len(todo), BUNDLE_GROUP)],
                       args.jobs, "bundles", "calls")
@@ -720,6 +721,8 @@ def existing_answers(pool, sub):
 
 
 def cmd_draft(args):
+    """Draft questions for the run's slots (PE-10): slots drawn once into slots.json, one call per
+    subcategory into drafts/; malformed questions dropped, skips may retire concepts."""
     d = run_dir(args)
     cfg = load_json(d / "run.json")
     if cfg is None:

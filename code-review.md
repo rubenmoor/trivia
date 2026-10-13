@@ -1091,6 +1091,23 @@ Plan 79 reviews `authoring/tools/qgen.py` section by section, then its module st
 | `authoring/tools/qgen.py` `REVISED_SCHEMA` | hand-written copy of `QUESTION_SCHEMA` minus `slot`/`option`/`needs_fact_check`; now derived from it (`json.dumps` byte-identical, so the same `--json-schema`) | complexity | low | fixed (task 557) |
 | `authoring/tools/qgen.py` `TRANSLATE_SCHEMA` | `required` uses `translations.TEXT_FIELDS`, `properties` lists the same fields by hand | complexity | low | won't fix: each field needs its own type; a new text field touches the schema anyway |
 | `authoring/tools/qgen.py` `main()` argparse | no unread flags (part 1 `subflags.py`); `--jobs` hidden for `rework`/`tighten`/`neutralize`/`batch` but shown for the step commands; step subcommands have no `help=` in `qgen -h` | inconsistency | low | won't fix: hidden on the commands the gamemaster/RUNBOOK use, visible on debugging steps |
+| `authoring/tools/qgen.py` `LEVEL_WEIGHTS`, `target_weights` | task 557's row: reading the focus group's `level_weights` from `age-groups.json` | complexity | low | won't fix: D-76 keeps `LEVEL_WEIGHTS` until AG-8 (backlog B-12); `focus` is null, so the constant is unused today |
+| `authoring/tools/qgen.py` `CONCEPT_ITEM`, `TOPUP_SCHEMA`, `axes_schema`, `facets_schema`, `list_schema`, `subcategory_header` | no findings: all used by `cmd_concepts`/`cmd_draft` | — | — | — |
+| `authoring/tools/qgen.py` `cmd_concepts` | `getattr(args, "run"/"fill"/"bundle", …)`: `qgen batch`'s namespace lacks `fill`/`bundle` | practice | low | won't fix: the getattr defaults are the batch's values; changing `run_steps`' namespaces is task 563's section |
+| `authoring/tools/qgen.py` `cmd_concepts`, `cmd_draft` | comma-list parsing `[s.strip() for s in x.split(",") if s.strip()]` repeated 5× in qgen (also translate, batch, rework/tighten `--ids`) | complexity | low | handed to task 566 (duplicated helpers) |
+| `authoring/tools/qgen.py` `cmd_concepts` | no findings otherwise: raw results saved after each call (resume skips done parts), untagged existing questions raise instead of looking unused | — | — | — |
+| `authoring/tools/qgen.py` `finalize_concepts` | a tagged concept whose `concepts.key` is empty (stopwords only, non-Latin) is skipped in the list, then `own[…]` raises `KeyError` | bug | low | won't fix: concept names are Spanish (es source); never seen in `authoring/data/concepts/` |
+| `authoring/tools/qgen.py` `finalize_concepts` | `"Otros"` facet for concepts of existing questions, hard-coded | practice | low | won't fix: es source language, one use |
+| `authoring/tools/qgen.py` `cmd_bundles`, `BUNDLE_SCHEMA`, `BUNDLE_GROUP` | inner `missing` shadowed the outer one, group id set rebuilt per answer; now `unanswered`/`asked` | complexity | low | fixed (task 558) |
+| `authoring/tools/qgen.py` `cmd_bundles` | closing line says "moved out of base" for any bundle change | inconsistency | low | won't fix: output text stays (plan 79 rule); all proposals start from `base` |
+| `authoring/tools/qgen.py` `target_weights` | overlap with `batches.subcategories`: both weigh by `targets.draft_gaps`, no copied logic | — | — | — |
+| `authoring/tools/qgen.py` `level_counts` | `ZeroDivisionError` if all weights are 0 | bug | low | won't fix: unreachable, `draft_gaps` returns None when all gaps are 0, `LEVEL_WEIGHTS` > 0 |
+| `authoring/tools/qgen.py` `assign_difficulties` | no findings: seeded (`random.Random(seed)`), `rounds=50` IPF iterations named as a parameter, zero rows/columns guarded, a level no list carries falls back to distance | — | — | — |
+| `authoring/tools/qgen.py` `draw_slots` | `already_asked` scans the whole pool per slot (pool × slots) | performance | low | won't fix: ~4k × 18 per batch, milliseconds |
+| `authoring/tools/qgen.py` `existing_answers` | no findings | — | — | — |
+| `authoring/tools/qgen.py` `cmd_draft` | only step command without a docstring; added | inconsistency | low | fixed (task 558) |
+| `authoring/tools/qgen.py` `cmd_draft` | no findings otherwise: slots drawn once (rerun drafts the same), per-subcategory draft files make it resumable, malformed slot/option dropped with a message | — | — | — |
+| `authoring/tools/qgen.py` `retire`, `option_key`, `check_question_shape`, `drafts` | no findings: `check_question_shape` shared by draft, translate, revise, fix and validate; `drafts` used by `health.py` (public name) | — | — | — |
 
 ## Part 8: Other authoring tools
 
