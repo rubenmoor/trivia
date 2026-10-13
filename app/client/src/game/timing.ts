@@ -10,7 +10,7 @@ export const PRELOAD_MAX_MS = 2000;
 export const GREETING_MS = 1300;
 /** The picked card pulses and tears open while the others slide off, before the transition (UI-11). */
 export const PICK_MS = 1000;
-/** When the flap of the picked card tears off (the CSS in Game.svelte follows this). */
+/** When the flap of the picked card tears off (the CSS in Envelopes.svelte follows this). */
 export const TEAR_MS = 300;
 /** Suspense beat plus the padlock moving away before «Respuesta final» appears (UI-12). */
 export const PADLOCK_MS = 1400;

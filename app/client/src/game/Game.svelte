@@ -12,31 +12,31 @@
   import { t } from "../lib/i18n.ts";
   import { listenPads } from "../lib/gamepad.svelte.ts";
   import { listen, pushScope, type Action } from "../lib/input.svelte.ts";
-  import { questionLocale } from "../lib/names.svelte.ts";
   import type { Game, GameMode, JokerBudget, JokerEvent, Flagged, Supply } from "../lib/types.ts";
-  import Choice from "./Choice.svelte";
-  import { consolation, milestone } from "./copy.ts";
-  import Fireworks from "./Fireworks.svelte";
-  import EffectsDemo from "./EffectsDemo.svelte";
-  import Envelopes from "./Envelopes.svelte";
   import FlagDialog from "./FlagDialog.svelte";
   import FlagList from "./FlagList.svelte";
   import Hud from "./Hud.svelte";
-  import Icon from "./Icon.svelte";
   import Prompt from "./Prompt.svelte";
   import JokerTray from "./JokerTray.svelte";
   import { levelsOf, onTwelve } from "./levels.ts";
-  import LanguageScreen from "./LanguageScreen.svelte";
   import Overlay from "./Overlay.svelte";
-  import Player from "./Player.svelte";
   import Question, { type JokerPlay } from "./Question.svelte";
   import { music, sfx, unlock, type Cue, type Track } from "./sound.svelte.ts";
   import Stage from "./Stage.svelte";
-  import SupplyReport from "./SupplyReport.svelte";
   import { swap } from "./swap.ts";
+  import CornerButtons from "./CornerButtons.svelte";
+  import Choice from "./screens/Choice.svelte";
+  import Correct from "./screens/Correct.svelte";
+  import Language from "./screens/Language.svelte";
+  import Level from "./screens/Level.svelte";
+  import Player from "./screens/Player.svelte";
+  import Select from "./screens/Select.svelte";
+  import Start from "./screens/Start.svelte";
+  import Victory from "./screens/Victory.svelte";
+  import Wrong from "./screens/Wrong.svelte";
   import "./theme.css";
   import { BLOCK_DROP_MS, FADE_MS, FLIP_MS, GREETING_MS, PICK_MS, PRELOAD_MAX_MS, TEAR_MS, sleep } from "./timing.ts";
-  import Tower from "./Tower.svelte";
+  import Veil from "./Veil.svelte";
 
   type Screen = "language" | "start" | "player" | "choice" | "level" | "select" | "question" | "correct" | "wrong" | "victory";
 
@@ -531,12 +531,6 @@
   }
 
   const NEW_KEY = t("screen.start.newKey").toLowerCase();
-  const FLAG_KEY = t("flag.key");
-
-  /** /?fuegos=<variant> or ?fuegos=finale plays fireworks over the Start screen (preview, UI-9). */
-  const preview = new URLSearchParams(location.search).get("fuegos");
-  /** /?efectos lists every effect, recorded and synthesized (audition aid, UI-10). */
-  const effectsDemo = new URLSearchParams(location.search).has("efectos");
 </script>
 
 <main class="game" bind:this={main}>
@@ -545,34 +539,10 @@
     <p class="center label">{t("screen.loading")}</p>
   {:else if screen === "language"}
     <Stage />
-    <LanguageScreen onpicked={() => go("start", "whoosh")} />
+    <Language onpicked={() => go("start", "whoosh")} />
   {:else if screen === "start"}
     <Stage />
-    {#if preview}<Fireworks mode={preview === "finale" ? "finale" : "single"} variant={preview} />{/if}
-    {#if effectsDemo}<EffectsDemo />{/if}
-    <section class="start">
-      <h1 class="wordmark"><span class="bang">{t("screen.start.open")}</span>{t("screen.start.name")}<span class="bang">{t("screen.start.close")}</span></h1>
-      <p class="subtitle">{t("screen.start.subtitle", { n: levels })}</p>
-      <div class="buttons">
-        {#if notice}
-          <div class="notice glass">
-            <p>{t(notice.kind === "newer" ? "save.newer" : "save.corrupt", { path: notice.path })}</p>
-            <button class="candy" onclick={() => (notice = null)} data-focus-default data-focus-id="notice">{t("action.next")} <Prompt action="confirm" /></button>
-          </div>
-        {:else if running}
-          <button class="candy breathe" onclick={resume} disabled={busy} data-focus-default data-focus-id="main">
-            {game?.player
-              ? t("screen.start.resumePlayer", { name: game.player, level: game.level })
-              : t("screen.start.resume", { level: game?.level ?? 0 })}
-            <Prompt action="confirm" />
-          </button>
-          <button class="secondary" onclick={newGame} disabled={busy} data-focus-id="new">{t("screen.start.new")} <Prompt action="new" /></button>
-        {:else}
-          <button class="candy breathe" onclick={newGame} disabled={busy} data-focus-default data-focus-id="main">{t("screen.start.play")} <Prompt action="confirm" /></button>
-        {/if}
-      </div>
-      {#if supply}<SupplyReport {supply} />{/if}
-    </section>
+    <Start {game} {running} {levels} {supply} {notice} {busy} onresume={resume} onnew={newGame} ondismiss={() => (notice = null)} />
   {:else if screen === "player"}
     <Stage />
     <Player {busy} onchoose={choosePlayer} ondeleted={refresh} />
@@ -583,31 +553,12 @@
     <Stage />
     <div class="corner-hud"><Hud level={null} player={game.player} /></div>
     <aside class="side-tray"><JokerTray readonly left={game.jokers_left} /></aside>
-    <section class="level">
-      <Tower filled={blocks} {levels} drop={previous === "correct"} />
-      <div class="level-text">
-        <p class="kicker">{t("screen.level.kicker")}</p>
-        <h1 class="title big">{game.level} <span class="of">{t("screen.level.of", { n: levels })}</span></h1>
-        {#if game.repeat}
-          <p class="milestone again">{t("screen.level.again")}</p>
-        {:else}
-          {@const line = milestone(game.level, levels, game.id)}
-          {#if line}<p class="milestone">{line}</p>{/if}
-        {/if}
-        <button class="secondary hint" onclick={() => go(table(game), "paper")} disabled={busy} data-focus-default>{t("action.next")} <Prompt action="confirm" /></button>
-      </div>
-    </section>
+    <Level {game} {levels} {blocks} drop={previous === "correct"} {busy} onnext={() => go(table(game), "paper")} />
   {:else if screen === "select" && game}
     <Stage />
     <div class="corner-hud"><Hud level={game.level} {levels} player={game.player} /></div>
     <aside class="side-tray"><JokerTray readonly left={game.jokers_left} /></aside>
-    <section class="select">
-      <h2 class="title">{t("screen.select.title")}</h2>
-      {#if game.options.length === 0}
-        <p class="error-box">{t("screen.select.empty")} <Prompt action="menu" /> → {t("action.home")}.</p>
-      {/if}
-      <Envelopes options={game.options} {picked} {fresh} {busy} seed={{ id: game.id, level: game.level }} onpick={pick} />
-    </section>
+    <Select {game} {picked} {fresh} {busy} onpick={pick} />
   {:else if screen === "question" && game?.question}
     {#key game.question.id}
       <Question
@@ -628,93 +579,26 @@
     {/key}
   {:else if screen === "correct" && game?.last}
     <Stage mood="correct" />
-    <section class="result">
-      <Fireworks />
-      <h1 class="title good">{t("screen.result.correct")}</h1>
-      <div class="panel glass" lang={questionLocale()}>
-        <p class="answer"><span class="badge good-badge"><Icon name="check" /></span>{game.last.answer}</p>
-        <p class="fun-fact">{game.last.fun_fact}</p>
-      </div>
-      <button class="secondary hint" onclick={toLevel} disabled={busy} data-focus-default>{t("action.next")} <Prompt action="confirm" /></button>
-    </section>
+    <Correct last={game.last} {busy} onnext={toLevel} />
   {:else if screen === "wrong" && game?.last}
     <Stage mood="wrong" />
-    <section class="result wrong">
-      <div class="columns">
-        <Tower filled={blocks} {levels} small crumble />
-        <div class="stack">
-          <h1 class="title bad">{t("screen.result.wrong")}</h1>
-          <div class="panel glass">
-            <p class="label">{t("screen.result.answerWas")}</p>
-            <p class="answer" lang={questionLocale()}><span class="badge good-badge"><Icon name="check" /></span>{game.last.answer}</p>
-            <p class="fun-fact" lang={questionLocale()}>{game.last.fun_fact}</p>
-          </div>
-          <p class="consolation">{consolation(game.level, levels, game.id)}</p>
-        </div>
-      </div>
-      <button class="candy" onclick={toStart} disabled={busy} data-focus-default>{t("action.home")} <Prompt action="confirm" /></button>
-    </section>
+    <Wrong {game} last={game.last} {levels} {blocks} {busy} onhome={toStart} />
   {:else if screen === "victory" && game}
     <Stage mood="victory" />
-    <Fireworks mode="finale" />
-    <section class="result victory">
-      <Tower filled={levels} {levels} drop />
-      <div class="stack">
-        <h1 class="title big gold">{t("screen.victory.title")}</h1>
-        {#if game.player}<p class="milestone">{t("screen.victory.top", { name: game.player })}</p>{/if}
-        {#if game.last}
-          <div class="panel glass" lang={questionLocale()}>
-            <p class="answer"><span class="badge good-badge"><Icon name="check" /></span>{game.last.answer}</p>
-            <p class="fun-fact">{game.last.fun_fact}</p>
-          </div>
-        {/if}
-
-        <button class="candy breathe" onclick={toStart} disabled={busy} data-focus-default>{t("action.home")} <Prompt action="confirm" /></button>
-      </div>
-    </section>
+    <Victory {game} {levels} {busy} onhome={toStart} />
   {:else}
     <Stage />
     <p class="center">{t("screen.noData")} <Prompt action="menu" /> → {t("action.home")}.</p>
   {/if}
 
-  {#if error}
-    <div class="error-box corner">{error}</div>
-  {/if}
-
-  {#if !loading && !overlayOpen && !flagOpen && flagTarget}
-    <!-- Flag for review (GM-5): as faint as the menu button; no focus, like it. -->
-    <button
-      class="flag-button"
-      class:on={flagged.has(flagTarget)}
-      onclick={openFlag}
-      onmousedown={(e) => e.preventDefault()}
-      tabindex="-1"
-      data-nofocus
-      aria-label={t(flagged.has(flagTarget) ? "flag.on" : "flag.off", { key: FLAG_KEY })}
-      title={t(flagged.has(flagTarget) ? "flag.on" : "flag.off", { key: FLAG_KEY })}
-    >
-      <Icon name="flag" />
-    </button>
-  {/if}
-
-  {#if !loading && !overlayOpen && screen !== "language"}
-    <!-- The overlay for the mouse (IN-1); no focus, so a later Enter can't open it. -->
-    <button
-      class="menu-button"
-      onclick={openOverlay}
-      onmousedown={(e) => e.preventDefault()}
-      tabindex="-1"
-      data-nofocus
-      aria-label={t("a11y.menu")}
-      title={t("a11y.menu")}
-    >
-      <span></span><span></span><span></span>
-    </button>
-  {/if}
-
-  <div class="black {veil}" class:on={black} style:transition-duration="{FADE_MS}ms">
-    {#if veil === "rewind"}<span class="rewind-mark">◀◀</span>{/if}
-  </div>
+  <CornerButtons
+    {error}
+    flagged={!loading && !overlayOpen && !flagOpen && flagTarget ? flagged.has(flagTarget) : null}
+    menu={!loading && !overlayOpen && screen !== "language"}
+    onflag={openFlag}
+    onmenu={openOverlay}
+  />
+  <Veil on={black} kind={veil} />
 
   {#if overlayOpen}
     <Overlay
@@ -763,61 +647,6 @@
     inset: 0;
     overflow: hidden;
   }
-  section {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: calc(1.4 * var(--u));
-    padding: var(--safe-y) var(--safe-x);
-    text-align: center;
-  }
-  p {
-    margin: 0;
-  }
-
-  /* Start */
-  .wordmark {
-    margin: 0;
-    font-family: var(--font-display);
-    font-size: calc(11 * var(--u));
-    font-weight: 800;
-    line-height: 1;
-    color: var(--paper);
-    text-shadow:
-      0 calc(0.4 * var(--u)) 0 var(--slate-600),
-      0 calc(0.8 * var(--u)) calc(2.5 * var(--u)) rgba(0, 0, 0, 0.5);
-    animation: arrive 0.9s var(--spring) backwards;
-  }
-  .bang {
-    display: inline-block;
-    color: var(--amber);
-    animation: bob 3s ease-in-out infinite;
-  }
-  .bang:last-child {
-    animation-delay: -1.5s;
-  }
-  .subtitle {
-    font-size: calc(1.6 * var(--u));
-    color: var(--slate-200);
-  }
-  .buttons {
-    display: flex;
-    align-items: center;
-    gap: calc(1.6 * var(--u));
-    margin-top: calc(2 * var(--u));
-  }
-  .notice {
-    max-width: calc(48 * var(--u));
-    padding: calc(1 * var(--u)) calc(1.6 * var(--u));
-    font-size: calc(1.1 * var(--u));
-    color: var(--amber);
-    overflow-wrap: anywhere;
-  }
-
-  /* Level */
   .corner-hud {
     position: absolute;
     top: var(--safe-y);
@@ -831,254 +660,10 @@
     transform: translateY(-50%);
     z-index: 1;
   }
-  .milestone.again {
-    color: var(--coral);
-  }
-  .level {
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-  .level-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: calc(0.8 * var(--u));
-    min-width: calc(34 * var(--u));
-  }
-  .kicker {
-    font-family: var(--font-display);
-    font-size: calc(1.8 * var(--u));
-    color: var(--slate-200);
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-  }
-  .big {
-    font-size: calc(7 * var(--u));
-    color: var(--amber);
-    animation: arrive 0.7s 0.3s var(--spring) backwards;
-  }
-  .of {
-    font-size: 0.45em;
-    color: var(--slate-200);
-  }
-  .milestone {
-    font-family: var(--font-display);
-    font-size: calc(2 * var(--u));
-    font-weight: 700;
-    color: var(--sky);
-    animation: arrive 0.7s 0.9s var(--spring) backwards;
-  }
-  .hint {
-    margin-top: calc(1.5 * var(--u));
-  }
-
-  /* Results */
-  .panel {
-    max-width: calc(64 * var(--u));
-    padding: calc(1.4 * var(--u)) calc(2.4 * var(--u));
-    display: flex;
-    flex-direction: column;
-    gap: calc(0.6 * var(--u));
-    animation: arrive 0.6s 0.25s var(--spring) backwards;
-  }
-  .result .answer {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: calc(0.8 * var(--u));
-    font-family: var(--font-display);
-    font-size: calc(2.6 * var(--u));
-    font-weight: 800;
-  }
-  .good-badge {
-    display: grid;
-    place-items: center;
-    width: calc(2.6 * var(--u));
-    height: calc(2.6 * var(--u));
-    border-radius: 50%;
-    background: var(--mint);
-    color: var(--night-900);
-    font-size: calc(1.6 * var(--u));
-  }
-  .fun-fact {
-    font-size: calc(1.5 * var(--u));
-    color: var(--slate-200);
-  }
-  .result .title {
-    animation: arrive 0.6s var(--spring) backwards;
-  }
-  .good {
-    color: var(--mint);
-  }
-  .bad {
-    color: var(--coral);
-  }
-  .gold {
-    color: var(--amber);
-  }
-  .columns {
-    display: flex;
-    align-items: center;
-    gap: calc(4 * var(--u));
-  }
-  .stack {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: calc(1.4 * var(--u));
-  }
-  .victory {
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-  .consolation {
-    max-width: calc(56 * var(--u));
-    font-family: var(--font-display);
-    font-size: calc(2 * var(--u));
-    font-weight: 600;
-    color: var(--paper);
-    animation: arrive 0.6s 1.2s var(--spring) backwards;
-  }
-
   .center {
     position: absolute;
     inset: 0;
     display: grid;
     place-items: center;
-  }
-  .error-box {
-    color: var(--coral);
-    background: rgba(40, 10, 18, 0.9);
-    border: 1px solid var(--coral);
-    border-radius: calc(0.6 * var(--u));
-    padding: calc(0.5 * var(--u)) calc(1 * var(--u));
-    font-size: calc(1.1 * var(--u));
-  }
-  .menu-button {
-    position: fixed;
-    top: calc(var(--safe-y) * 0.5);
-    right: calc(var(--safe-x) * 0.5);
-    z-index: 30;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: calc(0.35 * var(--u));
-    width: calc(3.2 * var(--u));
-    height: calc(3.2 * var(--u));
-    padding: 0 calc(0.8 * var(--u));
-    border: 1px solid transparent;
-    border-radius: calc(0.8 * var(--u));
-    background: transparent;
-    opacity: 0.35;
-    transition:
-      opacity 0.2s,
-      background 0.2s;
-  }
-  .menu-button:hover {
-    opacity: 1;
-    background: var(--glass-strong);
-    border-color: var(--slate-400);
-  }
-  .menu-button span {
-    height: calc(0.25 * var(--u));
-    border-radius: calc(0.15 * var(--u));
-    background: var(--paper);
-  }
-  .flag-button {
-    position: fixed;
-    top: calc(var(--safe-y) * 0.5);
-    right: calc(var(--safe-x) * 0.5 + 3.8 * var(--u));
-    z-index: 30;
-    display: grid;
-    place-items: center;
-    width: calc(3.2 * var(--u));
-    height: calc(3.2 * var(--u));
-    padding: 0;
-    border: 1px solid transparent;
-    border-radius: calc(0.8 * var(--u));
-    background: transparent;
-    color: var(--paper);
-    font-size: calc(1.6 * var(--u));
-    opacity: 0.35;
-    transition:
-      opacity 0.2s,
-      background 0.2s;
-  }
-  .flag-button:hover {
-    opacity: 1;
-    background: var(--glass-strong);
-    border-color: var(--slate-400);
-  }
-  .flag-button.on {
-    --flag-fill: 1;
-    color: var(--amber);
-    opacity: 0.7;
-  }
-  /* Beside the flag and menu buttons, above the question card (B-18). */
-  .corner {
-    position: fixed;
-    top: calc(var(--safe-y) * 0.5);
-    right: calc(var(--safe-x) * 0.5 + 7.6 * var(--u));
-    max-width: 55vw;
-    min-height: calc(3.2 * var(--u));
-    display: flex;
-    align-items: center;
-    z-index: 35;
-  }
-  .black {
-    position: fixed;
-    inset: 0;
-    background: #000;
-    opacity: 0;
-    pointer-events: none;
-    transition-property: opacity;
-    z-index: 20;
-  }
-  .black.on {
-    opacity: 1;
-    pointer-events: all;
-  }
-  /* VHS rewind (09, "Francotirador"): scanlines rushing up, a jittering ◀◀. */
-  .black.rewind {
-    display: grid;
-    place-items: center;
-    background:
-      repeating-linear-gradient(rgba(238, 241, 246, 0.07) 0 2px, transparent 2px 6px),
-      linear-gradient(rgba(76, 201, 240, 0.12), rgba(255, 84, 112, 0.12)),
-      var(--night-900);
-    background-size:
-      100% 6px,
-      100% 100%,
-      100% 100%;
-    animation: scan 0.25s linear infinite;
-  }
-  .rewind-mark {
-    font-family: var(--font-display);
-    font-size: calc(9 * var(--u));
-    font-weight: 800;
-    color: var(--paper);
-    text-shadow:
-      calc(0.4 * var(--u)) 0 rgba(255, 84, 112, 0.8),
-      calc(-0.4 * var(--u)) 0 rgba(76, 201, 240, 0.8);
-    animation: jitter 0.18s steps(2) infinite;
-  }
-  @keyframes scan {
-    to {
-      background-position:
-        0 -60px,
-        0 0,
-        0 0;
-    }
-  }
-  @keyframes jitter {
-    50% {
-      transform: translate(calc(0.3 * var(--u)), calc(-0.2 * var(--u))) skewX(-6deg);
-    }
-  }
-
-  @keyframes bob {
-    50% {
-      transform: translateY(calc(-0.6 * var(--u))) rotate(-6deg);
-    }
   }
 </style>

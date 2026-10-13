@@ -22,21 +22,21 @@
   import {
     BUILT_MODES, CARDS_MAX, DEFAULT_AGE_GROUP, DIFFICULTY_MAX, fetchChoice, fetchChoiceOptions, fetchOutlook, fetchPlayerMode,
     LEVELS_MAX, STANDARD_JOKERS, type ChoiceBody, type ChoiceOptions, type Outlook,
-  } from "../lib/api.ts";
-  import { GameError } from "../lib/http.ts";
-  import { errorText } from "../lib/errors.ts";
-  import { candidates, show } from "../lib/focus.ts";
-  import { t } from "../lib/i18n.ts";
-  import { pushScope, type Keys } from "../lib/input.svelte.ts";
-  import type { Difficulty, GameMode, JokerBudget, JokerName, Supply } from "../lib/types.ts";
-  import BundleSelector, { toggled, type Bundle } from "./BundleSelector.svelte";
-  import Customize from "./Customize.svelte";
-  import { presetOf, stepPreset, TOKENS } from "./jokers.ts";
-  import { clamp, spanOf, stepDifficulty } from "./difficulty.ts";
-  import { DEFAULT_LEVELS } from "./levels.ts";
-  import Prompt from "./Prompt.svelte";
-  import SupplyNotice, { worthShowing } from "./SupplyNotice.svelte";
-  import SupplyReport from "./SupplyReport.svelte";
+  } from "../../lib/api.ts";
+  import { GameError } from "../../lib/http.ts";
+  import { errorText } from "../../lib/errors.ts";
+  import { candidates, show } from "../../lib/focus.ts";
+  import { t } from "../../lib/i18n.ts";
+  import { pushScope, type Keys } from "../../lib/input.svelte.ts";
+  import type { Difficulty, GameMode, JokerBudget, JokerName, Supply } from "../../lib/types.ts";
+  import BundleSelector, { toggled, type Bundle } from "../BundleSelector.svelte";
+  import Customize from "../Customize.svelte";
+  import { presetOf, stepPreset, TOKENS } from "../jokers.ts";
+  import { clamp, spanOf, stepDifficulty } from "../difficulty.ts";
+  import { DEFAULT_LEVELS } from "../levels.ts";
+  import Prompt from "../Prompt.svelte";
+  import SupplyNotice, { worthShowing } from "../SupplyNotice.svelte";
+  import SupplyReport from "../SupplyReport.svelte";
 
   let {
     player,

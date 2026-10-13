@@ -5,16 +5,16 @@
   // confirmation (GF-7); its seen questions stay seen. The Choice screen comes next (plan 29). With a pad,
   // A on the field opens Steam's floating keyboard (Big Picture/Deck, plan 85), else the letter picker (plan 46).
   import { onMount } from "svelte";
-  import { deletePlayer, fetchPlayers } from "../lib/api.ts";
-  import { steam } from "../lib/desktop.ts";
-  import { errorText } from "../lib/errors.ts";
-  import { t } from "../lib/i18n.ts";
-  import { focusControl, lastDevice, pushScope } from "../lib/input.svelte.ts";
-  import type { Player } from "../lib/types.ts";
-  import Icon from "./Icon.svelte";
-  import { MAX_NAME } from "./letters.ts";
-  import LetterPicker from "./LetterPicker.svelte";
-  import Prompt from "./Prompt.svelte";
+  import { deletePlayer, fetchPlayers } from "../../lib/api.ts";
+  import { steam } from "../../lib/desktop.ts";
+  import { errorText } from "../../lib/errors.ts";
+  import { t } from "../../lib/i18n.ts";
+  import { focusControl, lastDevice, pushScope } from "../../lib/input.svelte.ts";
+  import type { Player } from "../../lib/types.ts";
+  import Icon from "../Icon.svelte";
+  import { MAX_NAME } from "../letters.ts";
+  import LetterPicker from "../LetterPicker.svelte";
+  import Prompt from "../Prompt.svelte";
 
   let {
     busy,

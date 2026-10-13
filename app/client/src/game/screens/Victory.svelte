@@ -1,0 +1,66 @@
+<script lang="ts">
+  // «¡Ganaron!»: the full tower with its crown, the finale fireworks, the last answer.
+  import { t } from "../../lib/i18n.ts";
+  import type { Game } from "../../lib/types.ts";
+  import AnswerPanel from "../AnswerPanel.svelte";
+  import Fireworks from "../Fireworks.svelte";
+  import Prompt from "../Prompt.svelte";
+  import Tower from "../Tower.svelte";
+
+  let { game, levels, busy, onhome }: { game: Game; levels: number; busy: boolean; onhome: () => void } = $props();
+</script>
+
+<Fireworks mode="finale" />
+<section class="result victory">
+  <Tower filled={levels} {levels} drop />
+  <div class="stack">
+    <h1 class="title big gold">{t("screen.victory.title")}</h1>
+    {#if game.player}<p class="milestone">{t("screen.victory.top", { name: game.player })}</p>{/if}
+    {#if game.last}<AnswerPanel last={game.last} />{/if}
+
+    <button class="candy breathe" onclick={onhome} disabled={busy} data-focus-default>{t("action.home")} <Prompt action="confirm" /></button>
+  </div>
+</section>
+
+<style>
+  section {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: calc(1.4 * var(--u));
+    padding: var(--safe-y) var(--safe-x);
+    text-align: center;
+  }
+  p {
+    margin: 0;
+  }
+  .title.big {
+    font-size: calc(7 * var(--u));
+  }
+  .title {
+    animation: arrive 0.6s var(--spring) backwards;
+  }
+  .gold {
+    color: var(--amber);
+  }
+  .milestone {
+    font-family: var(--font-display);
+    font-size: calc(2 * var(--u));
+    font-weight: 700;
+    color: var(--sky);
+    animation: arrive 0.7s 0.9s var(--spring) backwards;
+  }
+  .stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(1.4 * var(--u));
+  }
+  .victory {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+</style>

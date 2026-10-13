@@ -1,0 +1,40 @@
+<script lang="ts">
+  // «¡Correcto!»: fireworks, the answer and its fun fact; next the Level screen.
+  import { t } from "../../lib/i18n.ts";
+  import type { Game } from "../../lib/types.ts";
+  import AnswerPanel from "../AnswerPanel.svelte";
+  import Fireworks from "../Fireworks.svelte";
+  import Prompt from "../Prompt.svelte";
+
+  let { last, busy, onnext }: { last: NonNullable<Game["last"]>; busy: boolean; onnext: () => void } = $props();
+</script>
+
+<section class="result">
+  <Fireworks />
+  <h1 class="title good">{t("screen.result.correct")}</h1>
+  <AnswerPanel {last} />
+  <button class="secondary hint" onclick={onnext} disabled={busy} data-focus-default>{t("action.next")} <Prompt action="confirm" /></button>
+</section>
+
+<style>
+  section {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: calc(1.4 * var(--u));
+    padding: var(--safe-y) var(--safe-x);
+    text-align: center;
+  }
+  .title {
+    animation: arrive 0.6s var(--spring) backwards;
+  }
+  .good {
+    color: var(--mint);
+  }
+  .hint {
+    margin-top: calc(1.5 * var(--u));
+  }
+</style>
