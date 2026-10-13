@@ -23,6 +23,8 @@ The non-rejected questions use 1,129 distinct files (1,102 for approved only). T
   - Build fails on a slot without `license` or `source_url` (ids listed); warns on GFDL.
   - `credits.json` carries no UI text (pm decision 49): unknown author is `null`, the screen's strings go through `t()`; `CREDITS.md` is English.
   - Screen: `app/client/src/game/Credits.svelte`, from the ☰ overlay («Créditos»); fetches `credits.json` on first open.
+  - Desktop builds also: every runtime package of `app/desktop` (transitively, with licence texts) and «Steamworks SDK» (Valve's agreement) once `steamworks-ffi-node` ships; `credits.json` media rows carry `file_url`, fonts their `file`.
+  - Checked both ways in the packaged build: `authoring/steam/credits_check.mjs` (release check step `credits`, plan 92): media files ↔ entries (`cacheName(file_url)`), sounds, fonts + OFL texts, asar packages and `resources/steamworks_sdk/` ↔ libraries, `CREDITS.md` present.
   - Shipped: `CREDITS.md` in `dist/`, so in `nix build .#app` (`share/trivia/app/client/dist/`) and the desktop build (`resources/client/`); at the artefact root: 18 "Builds and depots".
 - **Audio:** `app/client/public/audio/CREDITS.md` (UI-10): CC0 / CC BY. Elgar's «Pomp and Circumstance» by the US Marine Band: a US government work, public domain in the US and generally treated as free elsewhere. Note it in the credits.
 - **Fonts:** Baloo 2 and Nunito are OFL. Ship the license texts with them.

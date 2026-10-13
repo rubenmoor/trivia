@@ -184,6 +184,8 @@ export interface MediaCredit {
   license_url: string | null;
   source_url: string;
   provider: string | null;
+  /** Packaged file: cacheName(file_url) (credits_check.mjs). */
+  file_url: string;
 }
 
 export interface SoundCredit {
@@ -201,7 +203,7 @@ export interface Credits {
   game: { file: string; title: string }[];
   media: MediaCredit[];
   sounds: { entries: SoundCredit[]; note: string };
-  fonts: { name: string; license: string; license_file: string }[];
+  fonts: { name: string; file: string; license: string; license_file: string }[];
   /** Controller glyphs drawn for the game (Glyph.svelte). */
   glyphs: boolean;
   libraries: { name: string; version: string; license: string; url: string }[];

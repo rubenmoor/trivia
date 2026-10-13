@@ -10,6 +10,7 @@ Steps, each ✓/✗ with its time; all automated steps run, exit 1 on any ✗:
   quality   qgen report --qc: release bar ✓ for the last two batches (pm decision 15)
   nix       nix build .#app (D-59)
   desktop   trivia-desktop-build --dir (stage-media's missing-file check) + trivia-steam stage
+  credits   node authoring/steam/credits_check.mjs on both unpacked builds: files ↔ credits.json, both ways
   smoke     node authoring/steam/smoke.mjs app/desktop/release/linux-unpacked
   media-budget  always skipped until masterplan 10 part 6 (task 260) adds its check
   manual    the rows of MANUAL, asked y/n/note or read from --manual FILE (`<row>: <answer>` per line);
@@ -29,12 +30,14 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from steam import REPO, git, head_tag, version  # noqa: E402
 
 UNPACKED = "app/desktop/release/linux-unpacked"
+UNPACKED_WIN = "app/desktop/release/win-unpacked"
 STEPS = {
     "checks": [["npm", "run", "check"], ["npm", "test"], ["npm", "run", "build"], ["qgen", "validate"]],
     "licenses": [["trivia-media", "licenses", "--status", "approved"]],
     "quality": [["qgen", "report", "--qc"]],
     "nix": [["nix", "build", ".#app", "--no-link"]],
     "desktop": [["trivia-desktop-build", "--dir"], ["trivia-steam", "stage"]],
+    "credits": [["node", "authoring/steam/credits_check.mjs", UNPACKED, UNPACKED_WIN]],
     "smoke": [["node", "authoring/steam/smoke.mjs", UNPACKED]],
 }
 SHIPPED = ("app/", "flake.nix", "flake.lock", "package.json", "package-lock.json")

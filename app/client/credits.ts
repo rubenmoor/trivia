@@ -28,8 +28,8 @@ const ELGAR =
   "recording by the United States Marine Band, a US government work (public domain).";
 
 const FONTS = [
-  { name: "Baloo 2", license: "SIL OFL 1.1", license_file: "fonts/OFL-Baloo2.txt" },
-  { name: "Nunito", license: "SIL OFL 1.1", license_file: "fonts/OFL-Nunito.txt" },
+  { name: "Baloo 2", file: "fonts/baloo-2.woff2", license: "SIL OFL 1.1", license_file: "fonts/OFL-Baloo2.txt" },
+  { name: "Nunito", file: "fonts/nunito.woff2", license: "SIL OFL 1.1", license_file: "fonts/OFL-Nunito.txt" },
 ];
 
 function title(sourceUrl: string): string {
@@ -64,6 +64,7 @@ function media(poolPath: string, warnings: string[]): MediaCredit[] {
         license_url: slot.license_url ?? null,
         source_url: slot.source_url,
         provider: slot.provider ? (PROVIDERS[slot.provider] ?? slot.provider) : null,
+        file_url: slot.file_url,
       });
     }
   }
@@ -129,11 +130,78 @@ function electron(): { entries: Credits["libraries"]; text: string } | null {
   };
 }
 
+type Library = Credits["libraries"][number];
+
+const STEAMWORKS_SDK: Library = {
+  name: "Steamworks SDK",
+  version: "",
+  license: "Valve Steamworks SDK Access Agreement",
+  url: "https://partner.steamgames.com/documentation/sdk_access_agreement",
+};
+
+/** The shell's runtime packages (app/desktop dependencies, transitively, as installed), with licence texts. */
+function desktopPackages(): { entries: Library[]; texts: { name: string; text: string }[] } {
+  const root = `${repo}app/desktop/`;
+  if (!existsSync(`${root}node_modules`)) return { entries: [], texts: [] };
+  type Pkg = { name: string; version: string; license?: string; homepage?: string; repository?: string | { url: string } };
+  const found = new Map<string, { pkg: Pkg; dir: string; versions: Set<string> }>();
+  const walk = (from: string, deps: Record<string, string>, optional: boolean) => {
+    for (const name of Object.keys(deps)) {
+      let dir = from;
+      while (!existsSync(`${dir}node_modules/${name}/package.json`) && dir !== root)
+        dir = dir.replace(/node_modules\/(@[^/]+\/)?[^/]+\/$/, "");
+      const at = `${dir}node_modules/${name}/`;
+      if (!existsSync(`${at}package.json`)) {
+        if (optional) continue;
+        throw new Error(`credits: desktop package ${name} not installed (npm ci in app/desktop)`);
+      }
+      const pkg = JSON.parse(readFileSync(`${at}package.json`, "utf8")) as Pkg & {
+        dependencies?: Record<string, string>;
+        optionalDependencies?: Record<string, string>;
+      };
+      const seen = found.get(name);
+      if (seen?.versions.has(pkg.version)) continue;
+      if (seen) seen.versions.add(pkg.version);
+      else found.set(name, { pkg, dir: at, versions: new Set([pkg.version]) });
+      walk(at, pkg.dependencies ?? {}, false);
+      walk(at, pkg.optionalDependencies ?? {}, true);
+    }
+  };
+  const top = JSON.parse(readFileSync(`${root}package.json`, "utf8")) as { dependencies?: Record<string, string> };
+  walk(root, top.dependencies ?? {}, false);
+  const repoUrl = (r: Pkg["repository"]) =>
+    (typeof r === "string" ? r : r?.url)
+      ?.replace(/^git\+/, "")
+      .replace(/\.git$/, "")
+      .replace(/^git:/, "https:")
+      .replace(/^(github:)?([\w.-]+\/[\w.-]+)$/, "https://github.com/$2");
+  const entries: Library[] = [];
+  const texts: { name: string; text: string }[] = [];
+  for (const [name, { pkg, dir, versions }] of [...found].sort(([a], [b]) => a.localeCompare(b))) {
+    entries.push({
+      name,
+      version: [...versions].join(", "),
+      license: pkg.license ?? "see package",
+      url: pkg.homepage ?? repoUrl(pkg.repository) ?? `https://www.npmjs.com/package/${name}`,
+    });
+    const file = readdirSync(dir).find((f) => /^(LICEN[CS]E|COPYING)/i.test(f));
+    if (file) texts.push({ name, text: readFileSync(dir + file, "utf8").trim() });
+  }
+  if (found.has("steamworks-ffi-node")) entries.push(STEAMWORKS_SDK);
+  return { entries, texts };
+}
+
 const cell = (s: string) => s.replace(/\|/g, "\\|").replace(/\n/g, " ");
 const link = (text: string, url: string | null) =>
   url ? `[${cell(text).replace(/([[\]])/g, "\\$1")}](${url.replace(/\(/g, "%28").replace(/\)/g, "%29").replace(/ /g, "%20")})` : cell(text);
 
-function markdown(c: Credits, soundRows: string[], svelteLicence: string, electronLicence: string | null): string {
+function markdown(
+  c: Credits,
+  soundRows: string[],
+  svelteLicence: string,
+  electronLicence: string | null,
+  packageLicences: { name: string; text: string }[],
+): string {
   const out = [
     "# Credits",
     "",
@@ -191,6 +259,19 @@ function markdown(c: Credits, soundRows: string[], svelteLicence: string, electr
       "",
     );
   }
+  if (packageLicences.length) {
+    out.push("### Desktop runtime package licences", "", "Desktop build only, inside `resources/app.asar`.", "");
+    for (const p of packageLicences) out.push(`#### ${p.name}`, "", p.text, "");
+  }
+  if (c.libraries.includes(STEAMWORKS_SDK)) {
+    out.push(
+      "### Steamworks SDK",
+      "",
+      "Desktop build only: Valve's Steamworks API redistributable (`steam_api64.dll`, `libsteam_api.so`) in " +
+        `\`resources/steamworks_sdk/\`, under the Steamworks SDK Access Agreement: ${STEAMWORKS_SDK.url}.`,
+      "",
+    );
+  }
   return out.join("\n");
 }
 
@@ -202,6 +283,7 @@ export function buildCredits(poolPath = defaultPool): { json: Credits; md: strin
   const s = sounds();
   const lib = svelte();
   const shell = electron();
+  const desktop = desktopPackages();
   const json: Credits = {
     version: 1,
     game: game(),
@@ -209,9 +291,9 @@ export function buildCredits(poolPath = defaultPool): { json: Credits; md: strin
     sounds: { entries: s.entries, note: ELGAR },
     fonts: FONTS,
     glyphs: existsSync(`${client}src/game/Glyph.svelte`),
-    libraries: [lib.entry, ...(shell?.entries ?? [])],
+    libraries: [lib.entry, ...(shell?.entries ?? []), ...desktop.entries],
   };
-  return { json, md: markdown(json, s.md, lib.text, shell?.text ?? null), warnings };
+  return { json, md: markdown(json, s.md, lib.text, shell?.text ?? null, desktop.texts), warnings };
 }
 
 /** Emits credits.json and CREDITS.md into dist/; serves /credits.json in dev. */
