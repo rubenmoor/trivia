@@ -13607,7 +13607,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-13T08:26:18Z', '2026-10-13T08:35:15Z', 689);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (694, 92, 'create tasks for plan 92', 'split', 'done', 1000, '2026-10-13, tasks.sql: tasks 695, 696, 697; no decisions needed', 'Split plan 92 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T08:37:48Z', '2026-10-13T08:38:36Z', 266);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (695, 92, 'Release check: tag gate, patch detection and report header', 'work', 'open', NULL, NULL, 'Plan 92 task 1. Extend `authoring/steam/release_check.py` (`task 679: trivia-release-check (SW-6)`) and `authoring/steam/steam.py`; no new tool.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (695, 92, 'Release check: tag gate, patch detection and report header', 'work', 'done', NULL, '2026-10-13, authoring/steam/release_check.py (tag step, previous tag, kind full/content-only, save version, media-budget skipped row, report header; JSON kind/previous_tag/save_version), authoring/steam/steam.py (--preview/--dry-run → --skip tag), plans/18-steam-integration.md, AGENTS.md', 'Plan 92 task 1. Extend `authoring/steam/release_check.py` (`task 679: trivia-release-check (SW-6)`) and `authoring/steam/steam.py`; no new tool.
 
 ## What
 - New first step `tag`: clean tree (`git status --porcelain` empty) and HEAD tagged `v` + `app/desktop/package.json` version (decision 91: Game version: single source of truth). Else ✗ with what to do: commit, `git tag v<version>`. The check never creates tags.
@@ -13625,7 +13625,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Docs
 - `plans/18-steam-integration.md` "Builds and depots": SW-6 step list (`tag` first, kind, header).
-- AGENTS.md "Commands" `trivia-release-check` line: `tag` step, patch variant.', '2026-10-13T08:38:34Z', NULL, 694);
+- AGENTS.md "Commands" `trivia-release-check` line: `tag` step, patch variant.', '2026-10-13T08:38:34Z', '2026-10-13T08:40:20Z', 694);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (696, 92, 'Credits complete both ways (credits step in the release check)', 'work', 'open', NULL, NULL, 'Plan 92 task 2. Today credits are checked one way only, inside the Vite build (`app/client/credits.ts`, plan 47): nothing checks what lands in the packaged build or credits entries without a shipped file.
 
 ## What
@@ -15258,6 +15258,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (533, 672, '2026-10-13T08:35:22Z', '2026-10-13T08:35:40Z', 'blocked', NULL, 0, '20a539421817da92f48f1821af718b3e116f3f36', 'claude-opus-5-5[1m]', '4bbd7944-4aa0-41c5-8941-4e6fb59bf897', 4, 8, 1215, 101174, 22884, 0.2276388, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (534, 266, '2026-10-13T08:35:40Z', '2026-10-13T08:38:01Z', 'done', NULL, 0, '9a2313a20d1cf7eae47cf953a4554e224f5c67c9', 'claude-opus-5-5[1m]', '59fd6331-0828-4254-b2b3-4d53a70299fb', 18, 32, 10629, 745543, 57379, 0.8208486, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (535, 694, '2026-10-13T08:38:01Z', '2026-10-13T08:38:42Z', 'done', NULL, 0, 'e1776b0351bf6aa84e45fa05d3a5cb3af8b56260', 'claude-opus-5-5[1m]', '3408ede4-b31b-4ad0-8393-62a2fd4a161b', 5, 10, 3988, 152358, 30099, 0.3510636, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (536, 695, '2026-10-13T08:38:42Z', '2026-10-13T08:40:29Z', 'done', NULL, 0, 'b274db8ead82c418c5b6e4aed4f52f8445cdd925', 'claude-opus-5-5[1m]', 'f8759113-4cda-451f-aec9-3e1d19d8cbdf', 15, 30, 10041, 614921, 41027, 0.65214020000000006, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

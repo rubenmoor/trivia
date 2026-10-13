@@ -15,7 +15,7 @@ OS depot without resources/media plus the content depot at resources/media = the
 installed at resources/media. IDs from steam.json unless given. SetLive is always `beta`.
 
 `upload` (SW-10): gates (branch `beta` only; clean tree; tag v<version> on HEAD unless --preview/--dry-run;
-steam.json IDs, placeholders with --dry-run) → trivia-release-check (or --checked: its passing
+steam.json IDs, placeholders with --dry-run) → trivia-release-check (--skip tag with --preview/--dry-run; or --checked: its passing
 release-check.json of this commit) → stage → VDFs in work/steam/<tag>/vdf → steamcmd +login
 $TRIVIA_STEAM_ACCOUNT +run_app_build. --dry-run stops before SteamCMD. The password and Steam Guard
 code are only typed into SteamCMD. Desc: `<tag> <sha>` plus `skipped: <steps>`.
@@ -161,7 +161,8 @@ def cmd_upload(args) -> None:
     if args.checked:
         report = checked(commit, tag)
     else:
-        cmd = [sys.executable, str(HERE / "release_check.py"), *(a for s in args.skip for a in ("--skip", s))]
+        skip = [*args.skip, *(["tag"] if args.preview or args.dry_run else [])]
+        cmd = [sys.executable, str(HERE / "release_check.py"), *(a for s in dict.fromkeys(skip) for a in ("--skip", s))]
         if args.manual:
             cmd += ["--manual", args.manual]
         gate(subprocess.run(cmd, cwd=REPO).returncode == 0, "release check failed")

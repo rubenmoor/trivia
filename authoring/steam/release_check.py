@@ -4,15 +4,19 @@
     trivia-release-check [--skip STEP]... [--manual FILE]
 
 Steps, each ✓/✗ with its time; all automated steps run, exit 1 on any ✗:
+  tag       clean tree, HEAD tagged v<version> (app/desktop/package.json, pm decision 91); never tags
   checks    npm run check, npm test, npm run build, qgen validate
   licenses  trivia-media licenses --status approved (exit 1 = files to replace)
   quality   qgen report --qc: release bar ✓ for the last two batches (pm decision 15)
   nix       nix build .#app (D-59)
   desktop   trivia-desktop-build --dir (stage-media's missing-file check) + trivia-steam stage
   smoke     node authoring/steam/smoke.mjs app/desktop/release/linux-unpacked
+  media-budget  always skipped until masterplan 10 part 6 (task 260) adds its check
   manual    the rows of MANUAL, asked y/n/note or read from --manual FILE (`<row>: <answer>` per line);
             "n…" fails, "y…" passes, anything else is a note and counts as skipped
 
+Report header: version, pool hash, previous tag (newest v* reachable from HEAD, not HEAD's own), kind
+(`full`, or `content-only` when nothing shipped but app/data/ changed since it) and SAVE_VERSION change.
 `--skip STEP` (repeatable): a known-broken step, ✗ → "skipped" in the report (and the build Desc).
 Run from the dev shell (nix, steam-run, Xvfb). Report: work/steam/<tag-or-sha>/release-check.md,
 release-check.json for `trivia-steam upload --checked` (commit, clean, ok, skipped), logs/<step>.log.
@@ -22,7 +26,7 @@ from datetime import datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from steam import REPO, git, head_tag  # noqa: E402
+from steam import REPO, git, head_tag, version  # noqa: E402
 
 UNPACKED = "app/desktop/release/linux-unpacked"
 STEPS = {
@@ -33,6 +37,9 @@ STEPS = {
     "desktop": [["trivia-desktop-build", "--dir"], ["trivia-steam", "stage"]],
     "smoke": [["node", "authoring/steam/smoke.mjs", UNPACKED]],
 }
+SHIPPED = ("app/", "flake.nix", "flake.lock", "package.json", "package-lock.json")
+STATE_TS = "app/client/src/engine/state.ts"
+MEDIA_BUDGET = "masterplan 10 part 6, task 260"
 # Later parts append rows here.
 MANUAL = {
     "windows": "start test on a clean Windows machine (archive or last beta)",
@@ -54,6 +61,37 @@ def quality(out: str) -> str | None:
         return f"{len(batches)} batch(es) with a QC column, need 2"
     bad = [f"{r} {v}" for r, v in batches if v != "✓"]
     return "; ".join(bad) or None
+
+
+def tag_gate() -> str | None:
+    """Failure of the tag step: dirty tree or HEAD without v<version>."""
+    want = f"v{version()}"
+    fails = ["uncommitted changes: commit"] if git("status", "--porcelain") else []
+    if want not in git("tag", "--points-at", "HEAD").split():
+        fails.append(f"HEAD not tagged {want}: `git tag {want}` (or bump app/desktop/package.json)")
+    return "; ".join(fails) or None
+
+
+def previous_tag() -> str | None:
+    """Newest v* tag reachable from HEAD, other than HEAD's own."""
+    own = set(git("tag", "--points-at", "HEAD").split())
+    tags = git("tag", "--merged", "HEAD", "--list", "v*", "--sort=-v:refname").split()
+    return next((t for t in tags if t not in own), None)
+
+
+def kind(prev: str | None) -> str:
+    """`full`, or `content-only` if nothing shipped outside app/data/ changed since prev."""
+    if not prev:
+        return "full"
+    changed = git("diff", "--name-only", f"{prev}..HEAD").splitlines()
+    code = [f for f in changed if f.startswith(SHIPPED) and not f.startswith("app/data/")]
+    return "full" if code else "content-only"
+
+
+def save_version(rev: str) -> int | None:
+    src = git("show", f"{rev}:{STATE_TS}")
+    m = re.search(r"SAVE_VERSION = (\d+)", src)
+    return int(m.group(1)) if m else None
 
 
 def run(name: str, logs: Path) -> str | None:
@@ -89,19 +127,36 @@ def manual(path: str | None, ask: bool) -> dict[str, str]:
 
 def main() -> None:
     p = argparse.ArgumentParser(prog="trivia-release-check", description=__doc__.split("\n")[0])
-    p.add_argument("--skip", action="append", default=[], choices=[*STEPS, "manual"], help="known-broken step")
+    p.add_argument("--skip", action="append", default=[], choices=["tag", *STEPS, "manual"], help="known-broken step")
     p.add_argument("--manual", metavar="FILE", help="manual answers, `<row>: <answer>` per line")
     args = p.parse_args()
 
     commit, tag = git("rev-parse", "HEAD"), head_tag()
     clean = not git("status", "--porcelain")
+    prev = previous_tag()
+    kd = kind(prev)
+    save = {"head": save_version("HEAD"), "previous": save_version(prev) if prev else None}
+    save["changed"] = bool(prev) and save["head"] != save["previous"]
+    m = re.search(r'"hash": "(\w+)"', (REPO / "app" / "data" / "pool.json").read_text()[:1000])
+    pool_hash = m.group(1) if m else None
+    kind_text = f"content-only patch since {prev}" if kd == "content-only" else "full"
+    save_text = (f"changed ({save['previous']} → {save['head']})" if save["changed"]
+                 else f"unchanged ({save['head']})" if prev else f"{save['head']} (no earlier tag)")
     out = REPO / "work" / "steam" / tag
     logs = out / "logs"
     logs.mkdir(parents=True, exist_ok=True)
     started = datetime.now().astimezone()
     print(f"release check {tag} ({commit[:7]}{'' if clean else ', uncommitted changes'})")
+    print(f"  version {version()}, pool {pool_hash}, previous tag {prev or 'none'}, {kind_text}, save version {save_text}")
 
     steps = []  # (name, status ✓/✗/skipped, seconds, note)
+    if "tag" in args.skip:
+        steps.append(("tag", "skipped", 0, "--skip"))
+        print("– tag: skipped")
+    else:
+        fail = tag_gate()
+        steps.append(("tag", "✗" if fail else "✓", 0, fail or ""))
+        print(f"{'✗' if fail else '✓'} tag{': ' + fail if fail else ''}")
     for name in STEPS:
         if name in args.skip:
             steps.append((name, "skipped", 0, "--skip"))
@@ -112,6 +167,8 @@ def main() -> None:
         dt = time.monotonic() - t
         steps.append((name, "✗" if fail else "✓", dt, fail or ""))
         print(f"{'✗' if fail else '✓'} {name} ({dt:.0f} s){': ' + fail + f' (log {logs / name}.log)' if fail else ''}")
+    steps.append(("media-budget", "skipped", 0, MEDIA_BUDGET))
+    print(f"– media-budget: skipped ({MEDIA_BUDGET})")
 
     rows = []  # (row, status, answer)
     if "manual" in args.skip:
@@ -126,6 +183,7 @@ def main() -> None:
     skipped = [n for n, s, _, _ in steps if s == "skipped"] + [f"manual:{k}" for k, s, _ in rows if s == "skipped"]
     ok = all(s != "✗" for _, s, _, _ in steps)
     report = {"commit": commit, "tag": tag, "clean": clean, "date": started.isoformat(timespec="seconds"),
+              "version": version(), "pool_hash": pool_hash, "previous_tag": prev, "kind": kd, "save_version": save,
               "ok": ok, "skipped": skipped,
               "steps": [{"name": n, "status": s, "seconds": round(dt), "note": note} for n, s, dt, note in steps],
               "manual": [{"row": k, "status": s, "answer": a} for k, s, a in rows]}
@@ -134,6 +192,10 @@ def main() -> None:
           f"- Result: {'✓ pass' if ok else '✗ fail'}",
           f"- Commit: {commit}{'' if clean else ' (uncommitted changes)'}",
           f"- Date: {report['date']}",
+          f"- Version: {version()}, pool hash {pool_hash}",
+          f"- Previous tag: {prev or 'none'}",
+          f"- Kind: {kind_text}",
+          f"- Save version: {save_text}",
           f"- Skipped: {', '.join(skipped) or 'none'}", "",
           "| step | | time | note |", "|---|---|---:|---|",
           *[f"| {n} | {s} | {dt:.0f} s | {note} |" for n, s, dt, note in steps], "",
