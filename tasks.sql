@@ -12210,7 +12210,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Note (task 616)
 - Known bug, logged in `## Part 10` of `code-review.md` as handed to this task: `undo()` pops `undoStack` before `if (!last || busy) return`, so an undo pressed while a save is in flight is lost. Fix (check `busy` before popping) and log it in `## Part 9`.', '2026-10-12T23:09:08Z', '2026-10-13T13:09:07Z', 521);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (576, 81, 'Review the review panels: MediaPanel.svelte, RevisionPanel.svelte', 'work', 'open', NULL, NULL, 'Task 4 of `plan 81: Authoring server and UI review (code review part 9)`: review these files, fix what is cheap, log every file and finding in `## Part 9` of `code-review.md` (no-findings rows included).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (576, 81, 'Review the review panels: MediaPanel.svelte, RevisionPanel.svelte', 'work', 'done', NULL, '2026-10-13, authoring/ui/src/review/{MediaPanel,RevisionPanel,Review}.svelte, code-review.md', 'Task 4 of `plan 81: Authoring server and UI review (code review part 9)`: review these files, fix what is cheap, log every file and finding in `## Part 9` of `code-review.md` (no-findings rows included).
 
 ## First
 - Needs `code-review.md` with `## Part 9` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so.
@@ -12236,7 +12236,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - Both files listed in `## Part 9`, every finding with a status.
-- Checks pass; panels clicked through on the temp server (search stubbed) or noted why not.', '2026-10-12T23:09:08Z', NULL, 521);
+- Checks pass; panels clicked through on the temp server (search stubbed) or noted why not.', '2026-10-12T23:09:08Z', '2026-10-13T13:12:48Z', 521);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (577, 81, 'Review the stats pages: authoring/ui/src/stats/*', 'work', 'open', NULL, NULL, 'Task 5 of `plan 81: Authoring server and UI review (code review part 9)`: review these files, fix what is cheap, log every file and finding in `## Part 9` of `code-review.md` (no-findings rows included).
 
 ## First
@@ -16039,6 +16039,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (626, 573, '2026-10-13T12:56:10Z', '2026-10-13T13:01:49Z', 'done', NULL, 0, '49961e00acb99cdd6efa92af5bd8c4d03be6b16d', 'claude-opus-5-5[1m]', '313bf369-90cd-480f-a025-c225a792cc2c', 33, 62, 28440, 2458305, 97003, 1.8367330000000002, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (627, 574, '2026-10-13T13:01:49Z', '2026-10-13T13:04:51Z', 'done', NULL, 0, '031d070667783e781f0e756150fa5701dbe25e71', 'claude-opus-5-5[1m]', '3d5221f1-574d-42b8-9890-ad84bf1961a4', 22, 44, 13319, 1106305, 52666, 0.909145, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (628, 575, '2026-10-13T13:04:51Z', '2026-10-13T13:09:16Z', 'done', NULL, 0, 'cd92281bb8c412a4f485db3a34884a8d549de5be', 'claude-opus-5-5[1m]', '2dee639e-748e-4583-911c-d99abc1dcd25', 29, 58, 18273, 1993275, 79142, 1.397483, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (629, 576, '2026-10-13T13:09:16Z', '2026-10-13T13:12:57Z', 'done', NULL, 0, '9e90bf24105074ccc845afdc8b3fa0ca23f43752', 'claude-opus-5-5[1m]', '607f19c5-e0ba-4fae-9662-47862723eabb', 35, 66, 15884, 2006241, 71427, 1.2906082, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

@@ -3,7 +3,7 @@
   // what is picked or suggested, plus the alternatives from the media providers (plans/06-images.md, D-45).
   import type { LicenceRecord, LicenceVerdict, MediaCandidate } from "../lib/types";
 
-  interface Slot extends LicenceRecord {
+  interface MediaSlot extends LicenceRecord {
     type: "image" | "audio" | "video";
     query: string;
     note?: string | null;
@@ -24,7 +24,7 @@
     readonly = false,
   }: {
     title: string;
-    slot: Slot;
+    slot: MediaSlot;
     /** Decorative images get the blurred "?" overlay, as on the TV (D-15). */
     decorative: boolean;
     candidates: MediaCandidate[] | null;

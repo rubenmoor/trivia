@@ -623,7 +623,7 @@
       </div>
     {/if}
 
-    {#if current.revision && !blind && !locale}<RevisionPanel question={current} />{/if}
+    {#if current.revision && !blind && !locale}<RevisionPanel question={current} revision={current.revision} />{/if}
 
     <article>
       {#if locale}

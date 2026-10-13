@@ -1,11 +1,10 @@
 <script lang="ts">
   // What `qgen.py revise` changed in a question, and why (plans/08-review-tool.md, RV-9).
-  import type { Question } from "../lib/types";
+  import type { Question, Revision } from "../lib/types";
 
-  let { question }: { question: Question } = $props();
+  let { question, revision }: { question: Question; revision: Revision } = $props();
 
-  const revision = $derived(question.revision!);
-  const changes = $derived(Object.entries(revision.previous ?? {}));
+  const changes = $derived(Object.entries(revision.previous));
 
   const LABELS: Record<string, string> = {
     difficulty: "Difficulty",
