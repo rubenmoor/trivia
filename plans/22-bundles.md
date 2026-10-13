@@ -53,6 +53,20 @@ The gamemaster's direction (2026-10-07): a batch writes for **one bundle, chosen
 
 - **One house style for every bundle** (D-44): a session mixes questions from all active bundles, so a bundle's own axes may change *what* is asked, never *how* it is written.
 
+## Player bundles (mods)
+Mods carry bundles in our own format, loaded by our own loader (pm plan 115, decision 128: Bundles from mods: the shell merges bundles.json; mod ids namespaced <mod id>:<id>). Player content never mixes with our ids, seen counts, flags, reports or telemetry.
+- Format: `<mod>/data/bundles.json` (rows as ours: `id`, `kind`, `languages`, `name`, `description`; `rule`, `voice`, `about` ignored); `<mod>/data/bundles/<id>/`: `categories.json`, `names.<locale>.json` (optional), `pool.json` / `pool.<locale>.json` (`version: 1`), media anywhere below; base bundles too.
+- Row checks: `bundleRows()` in `app/desktop/mods.mjs` (≤ 256 KB, slugs, structure); bad row dropped, warning `bundle_row`; bad file `bundle_json`. A mod with bundles has `kind` `bundle`.
+- Namespacing: bundle and question ids → `<mod id>:<id>`; `:` never in our ids: `isModId()` / `isOurs()` in `app/client/src/engine/pool.ts`.
+- Merge: the shell serves one `/data/bundles.json`: ours first, then loaded mods' rows in load order, tagged `source: "mod"`, `mod`, `modName` (`app/desktop/resolve.mjs`).
+- Loading: mod bundles are packs (`withPacks`) in `app/client/src/lib/data.ts`; `modPool()` namespaces, rewrites media, drops invalid questions; offered in `languages` ∩ `LOCALES` with a pool file.
+- Kinds and defaults: a non-base mod bundle is a pack: off on the configure screen (decision 33), on in solo (decision 51); a base mod bundle is a second choice in the base radio group, ours stays the default (decision 38). Mod removed: its bundles vanish, stored choices fall back to defaults.
+- Media: relative `file_url` inside the bundle folder (`img/owl.jpg`) → `/data/bundles/<mod>:<id>/img/owl.jpg`; never downloaded; absolute URL or `..` → media dropped, `role: essential` question dropped.
+- Credits (decision 129: Credits for mod media: runtime section on the Credits screen from the mod's own pool): `Credits.svelte` adds a section per loaded mod bundle from its questions' `credit` + `source_url` (deduped); `credits.json`, `CREDITS.md` stay ours.
+- Marker: `BundleSelector.svelte` shows «Hecho por jugadores · {mod}» (`bundles.playerMade`); flag action hidden for mod questions.
+- `modIssues()` (`lib/data.ts`, per mod and bundle, with count): `bad_question`, `bad_media`, `bad_categories`, `no_pool`, `bundle_language`, `taxonomy_clash` (until pm task 995); a broken mod bundle is left out, never breaks the load.
+- Save: mod ids stored as strings, no format change; removed mods' rows ignored; `authoring/tools/save_file.py` drops ids with `:`; telemetry keeps `isOurs` only.
+
 ## Later
 - **The game** (BN-6): a choice of bundles before a session, exactly one base bundle (D-38); selection filters by the active bundles. Engine: plan 27; Choice screen and overlay line: plan 29.
 

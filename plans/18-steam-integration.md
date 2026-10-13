@@ -132,7 +132,11 @@ Mods are folders the shell serves over `app://trivia/` before our own client and
 - Sources: local folder (`TRIVIA_MODS_DIR`, else packaged `<userData>/mods/`, created at start; dev repo `mods/`, gitignored), then Workshop (below); each direct subfolder with a `mod.json` is a mod; local before Workshop on a duplicate id (decision 127).
 - Only with a valid Steam user (decision 111): otherwise listed `no_user`, no layers.
 - Settings (decision 136: Mod settings: per machine in <userData>/mods.json, one ordered list, top wins): `<userData>/mods.json` (dev `state/desktop/mods.json`); one ordered list = load order, index 0 = top = wins; new mods appended `on`; unknown ids kept (`missing`); read once per run, changes on restart; atomic writes.
-- Layers: enabled valid mods top first, ours last; mod root mirrors the URL space (`app://trivia/<rel>` → `<mod>/<rel>`, `/data/<rel>` → `<mod>/data/<rel>`); first hit wins, whole files.
+- Layers: enabled valid mods top first, ours last; mod root mirrors the URL space (`app://trivia/<rel>` → `<mod>/<rel>`); first hit wins, whole files.
+- `/data/` (decision 128: Bundles from mods: the shell merges bundles.json; mod ids namespaced <mod id>:<id>; details in `plans/22-bundles.md` "Player bundles (mods)"):
+  - `/data/bundles.json`: merged, ours then loaded mods' rows (`bundleRows()`), ids `<mod>:<id>`; built once per run.
+  - `/data/bundles/<mod>:<bundle>/<rel>` → `<mod dir>/data/bundles/<bundle>/<rel>` via `contained()`, only for a loaded mod that lists that bundle; else 404; no colon reaches the file system.
+  - Every other `/data/` file: ours only, never overlaid (a mod's `data/pool.json` isn't served).
 - Full conversion: a mod's `index.html` wins the SPA fallback too.
 - Not overlaid: `/media?url=…`, `/api/*` (404), a mod's `mod.json`.
 - `--no-mods`: no layers this run (way back from a full conversion).
