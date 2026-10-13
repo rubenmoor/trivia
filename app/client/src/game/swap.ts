@@ -2,7 +2,7 @@
 // Game.svelte sets `swap.active` just before the new question mounts; the transitions below only
 // run then, so ordinary screen changes (behind the fade to black) stay instant.
 import { cubicIn, cubicOut } from "svelte/easing";
-import { FLIP_MS } from "./timing";
+import { FLIP_MS, REDUCED_FADE_MS } from "./timing";
 
 export const swap = { active: false };
 
@@ -11,13 +11,13 @@ const reduced = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
 /** The old side turns away (out) or the new side turns in after it (in), around the Y axis. */
 export function cardFlip(_node: Element, { side }: { side: "in" | "out" }) {
   if (!swap.active) return { duration: 0 };
-  if (reduced()) return { duration: 150, css: (t: number) => `opacity: ${t}` };
+  if (reduced()) return { duration: REDUCED_FADE_MS, css: (t: number) => `opacity: ${t}` };
   return {
     delay: side === "in" ? FLIP_MS : 0,
     duration: FLIP_MS,
     easing: side === "in" ? cubicOut : cubicIn,
     css: (t: number) =>
-      `transform: perspective(${1600}px) rotateY(${(1 - t) * (side === "in" ? -90 : 90)}deg); backface-visibility: hidden`,
+      `transform: perspective(1600px) rotateY(${(1 - t) * (side === "in" ? -90 : 90)}deg); backface-visibility: hidden`,
   };
 }
 

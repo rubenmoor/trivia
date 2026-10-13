@@ -25,6 +25,7 @@
     AFTER_REVEAL_MS,
     ARM_MS,
     PADLOCK_MS,
+    POP_BACK_MS,
     REVEAL_WAIT_S,
     SHATTER_MS,
     SNIPE_BEAT_MS,
@@ -306,7 +307,7 @@
     flight = null;
     popping = body.joker;
     sfx("token-back");
-    setTimeout(() => (popping = null), 500);
+    setTimeout(() => (popping = null), POP_BACK_MS);
     if (!res) {
       jokerBusy = false;
       shot = null;

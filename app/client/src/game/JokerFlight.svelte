@@ -4,7 +4,7 @@
   // Short on purpose (a joker plays many times a game); with reduced motion it is a quick fade.
   import { onMount } from "svelte";
   import Icon, { type IconName } from "./Icon.svelte";
-  import { JOKER_BURST_MS, JOKER_FLY_MS } from "./timing";
+  import { JOKER_BURST_MS, JOKER_FLY_MS, REDUCED_FADE_MS } from "./timing";
 
   let { from, icon, ondone }: { from: DOMRect; icon: IconName; ondone: () => void } = $props();
 
@@ -24,7 +24,7 @@
             { transform: `translate(${dx}px, ${dy}px) scale(2.6) rotate(1turn)`, offset: 0.85 },
             { transform: `translate(${dx}px, ${dy}px) scale(2.4) rotate(1turn)` },
           ],
-      { duration: reduced ? 150 : JOKER_FLY_MS, easing: "cubic-bezier(0.3, 0, 0.2, 1)", fill: "forwards" },
+      { duration: reduced ? REDUCED_FADE_MS : JOKER_FLY_MS, easing: "cubic-bezier(0.3, 0, 0.2, 1)", fill: "forwards" },
     );
     let timer: ReturnType<typeof setTimeout> | undefined;
     flight.onfinish = () => {

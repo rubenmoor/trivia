@@ -4,7 +4,7 @@
   import { onMount } from "svelte";
   import { t } from "../lib/i18n";
   import { sfx } from "./sound.svelte";
-  import { SHRED_MS, STAMP_MS } from "./timing";
+  import { SHRED_MS, STAMP_LAND_MS, STAMP_MS } from "./timing";
 
   let { name, lang, ondone }: { name: string; lang: string; ondone: () => void } = $props();
 
@@ -17,7 +17,7 @@
       setTimeout(() => {
         stamped = true;
         sfx("stamp");
-      }, 350),
+      }, STAMP_LAND_MS),
       setTimeout(() => {
         shredding = true;
         sfx("shredder");

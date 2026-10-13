@@ -2,6 +2,8 @@
 
 /** Fade to black and back, each way. */
 export const FADE_MS = 400;
+/** A new tower block drops in after the fade (`drop` in Tower.svelte follows this). */
+export const BLOCK_DROP_MS = 750;
 /** The fade-in waits at most this long for the next question's media to load (UI-7). */
 export const PRELOAD_MAX_MS = 2000;
 /** «¡Hola, …!» on the Player screen before the transition to Level (UI-16). */
@@ -16,9 +18,13 @@ export const PADLOCK_MS = 1400;
 export const REVEAL_WAIT_S = [3, 3, 4, 4, 5, 5, 6, 6, 8, 8, 10, 12];
 /** An armed joker token drops back after this long (09, "Arming"). */
 export const ARM_MS = 4000;
-/** A played joker token flies to the centre, then bursts (JK-5); kept short, jokers are unlimited. */
+/** A played joker token flies to the centre, then bursts (JK-5); kept short, a joker plays many times a game. */
 export const JOKER_FLY_MS = 450;
 export const JOKER_BURST_MS = 250;
+/** The token pops back into the tray after its joker (`pop-back` in JokerTray.svelte follows this). */
+export const POP_BACK_MS = 500;
+/** With reduced motion, the joker flight and the card flip are a quick fade. */
+export const REDUCED_FADE_MS = 150;
 /** Each half of the card flip when Bájale or Cambiazo swaps the question (JK-7). */
 export const FLIP_MS = 320;
 /** Bájale's dial: a pause, one step per difficulty, then it stays a moment. */
@@ -27,6 +33,8 @@ export const DIAL_STEP_MS = 280;
 export const DIAL_HOLD_MS = 1600;
 /** «Paso»: the stamp scene before the shredder, the shredder, and the sweep off the screen (JK-6). */
 export const STAMP_MS = 1300;
+/** When the stamp lands (its `arrive` in Shredder.svelte follows this). */
+export const STAMP_LAND_MS = 350;
 export const SHRED_MS = 1100;
 export const SWEEP_MS = 550;
 /** Francotirador (JK-8): the beat of silence before the shot lands grows with the level; the shatter of a miss. */

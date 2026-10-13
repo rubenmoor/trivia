@@ -33,7 +33,7 @@
   import SupplyReport from "./SupplyReport.svelte";
   import { swap } from "./swap";
   import "./theme.css";
-  import { FADE_MS, FLIP_MS, GREETING_MS, PICK_MS, PRELOAD_MAX_MS, TEAR_MS, sleep } from "./timing";
+  import { BLOCK_DROP_MS, FADE_MS, FLIP_MS, GREETING_MS, PICK_MS, PRELOAD_MAX_MS, TEAR_MS, sleep } from "./timing";
   import Tower from "./Tower.svelte";
 
   type Screen = "language" | "start" | "player" | "choice" | "level" | "select" | "question" | "correct" | "wrong" | "victory";
@@ -242,7 +242,7 @@
   /** After «¡Correcto!»: the Level screen, where the new block drops and lands with a thud. */
   async function toLevel() {
     const level = blocks;
-    const landed = sleep(FADE_MS * 2 + 750).then(() => sfx("block", onTwelve(level, levels))); // the fall in Tower.svelte
+    const landed = sleep(FADE_MS * 2 + BLOCK_DROP_MS).then(() => sfx("block", onTwelve(level, levels))); // the fall in Tower.svelte
     await go("level", "whoosh");
     await landed;
   }
