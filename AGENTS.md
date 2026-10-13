@@ -39,6 +39,7 @@ Family trivia party game, shown on a TV: the family plays against the gamemaster
 Dev shell from the flake: `direnv allow` or `nix develop`. Human how-tos: `README.md`.
 - `trivia` (game, :8000; static files + `/api/save` only, engine in the browser; serves `app/data/` at `/data/`, media from the cache only; save `state/game.json`, no SQLite; `game.sqlite`, `flags.json` kept as backups), `trivia-authoring` (authoring pages, :8001); `/review?licence=replace`: media files to replace (licence)
 - `trivia-desktop` (Electron shell), `trivia-desktop-build` (Windows zip + Linux tar.gz → `app/desktop/release/`; `--dir`: also `{win,linux}-unpacked/` for the Steam depots, checked by `trivia-steam stage`)
+- `trivia-release-check` (before every Steam upload, SW-6: per-commit checks, licences, release bar, `nix build .#app`, desktop builds, smoke game, manual rows; `--skip <step>`, `--manual <file>`; report `work/steam/<tag>/release-check.md`)
 - `npm run build`, `npm run check` (type-check + lint: strict `tsconfig` flags, `code-review.md` "Linter evaluation"), `npm run dev -w app/client|authoring/ui`
 - `qgen validate` (also flags a stale `app/data/pool.json`), `qgen export` (the game loads the pool once per page: reload it), `qgen report` (`-h` for its options; needs Node, dev shell); `qgen report --cost` for $ per approved and the projection per language
 - `trivia-media sync --status approved` (required before play: the game never downloads media)

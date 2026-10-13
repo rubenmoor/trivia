@@ -4,7 +4,7 @@
   #   nix build .#app              the game as it ships: built client + Python server, run with `trivia`
   #   nix run .#qgen -- batch      the LLM question batch (authoring/RUNBOOK.md, D-36)
   #   nix develop / direnv allow   everything for development, incl. `trivia`, `trivia-authoring`,
-  #                                `qgen`, `trivia-media`, `trivia-desktop`, `trivia-desktop-build` and `trivia-steam` running from this checkout
+  #                                `qgen`, `trivia-media`, `trivia-desktop`, `trivia-desktop-build`, `trivia-steam` and `trivia-release-check` running from this checkout
   #
   # The authoring tools edit files in the checkout (authoring/data, app/data/pool.json, work/), so
   # they are wrappers that run the checkout's scripts with pinned Python, ImageMagick and Claude Code.
@@ -97,6 +97,9 @@
             exec npm run "$script" --prefix "$root/app/desktop" -- "$@"
           '';
         };
+        # Before every Steam upload (SW-6, plan 89); nix, steam-run and Xvfb from the dev shell.
+        trivia-release-check = fromCheckout pkgs "trivia-release-check" "authoring/steam/release_check.py"
+          [ pkgs.nodejs_22 qgen trivia-media trivia-desktop-build trivia-steam ];
       };
     in {
       packages = forAll (pkgs:
@@ -146,7 +149,7 @@
               tools.trivia-desktop-build
               pkgs.xvfb  # authoring/store/screenshots.mjs, authoring/steam/smoke.mjs
             ] ++ nixpkgs.lib.optionals (pkgs.system == "x86_64-linux") [
-              tools.trivia-steam tools.steamcmd  # SteamCMD: x86_64-linux only
+              tools.trivia-steam tools.trivia-release-check tools.steamcmd  # SteamCMD: x86_64-linux only
               # smoke.mjs: an FHS runtime like Steam's, plus what Electron links
               (pkgs.steam.override { extraLibraries = p: with p; [ nss nspr gtk3 atk at-spi2-atk at-spi2-core xorg.libXcomposite ]; }).run
             ]
