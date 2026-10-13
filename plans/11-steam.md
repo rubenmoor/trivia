@@ -156,6 +156,83 @@ In order; workers never log in, enter credentials or contact Valve (plan 94).
 7. Note the live date and the date shown; answer the pm decision "Coming soon page live? date?".
 - Wishlists: only Steam's own wishlist and follow buttons; no mailing list, own website, social accounts or marketing.
 
+## Launch (S6)
+The release candidate `v1.0.0` goes from `beta` through the release checklist (ST-4), the family's sign-off and Valve's build review to `default`, and the gamemaster presses Release on a date the "Coming soon" rules (ST-3) allow. Then a launch-day checklist and a first week of watching by hand. Every Steamworks step is the gamemaster's; workers write the texts, raise the decisions and record the answers (pm plan 95).
+
+### Valve's rules
+2026-10-13, task 706: no web access for the worker (WebFetch/WebSearch denied); rules already read for ST-3 (same day) are reused, the rest is unverified. Valve's wording wins.
+- Release date and lock: exact intended date set in Steamworks, changeable until two weeks before it, then locked; earliest release = later of (Coming soon live + 14 days, app fee paid + 21 days). Source: ST-3 "Valve's rules" above (/doc/store/release_dates, /doc/store/coming_soon, /doc/gettingstarted/onboarding, read 2026-10-13).
+- Permissions for releasing: "Publish app changes to Steam" and "Manage pricing and discounts". Source: /doc/store/releasing (read 2026-10-13, ST-3).
+- At release Steam e-mails everyone who wishlisted. Source: /doc/store/coming_soon (read 2026-10-13, ST-3).
+- Community Hub: starts when the page is posted as Coming soon (/doc/store/coming_soon, read 2026-10-13, ST-3); whether the Discussions forum is open to players before release: unverified (gamemaster: check the app's Community Hub after posting).
+- Build review lead time: unverified (gamemaster: check https://partner.steamgames.com/doc/store/review_process). ST-3 only verified the store page review (3–5 business days, submit ≥ 7 before); this plan assumes the same buffer for the build until confirmed.
+- What the build review checks (starts, matches the store page, no placeholder content, which branch it reads): unverified (gamemaster: check https://partner.steamgames.com/doc/store/review_process). Rule here anyway: no `PLACEHOLDER(` in the candidate (AGENTS.md; ST-3's store review rule).
+- Setting a build live on `default`, the Release button and a scheduled release (time of day, whether it fires by itself): unverified (gamemaster: check https://partner.steamgames.com/doc/store/releasing and https://partner.steamgames.com/doc/sdk/uploading).
+- Launch discount (max %, duration, setup deadline, cooldown after it): unverified (gamemaster: check https://partner.steamgames.com/doc/marketing/discounts); decision 66's draft noted a 30-day cooldown between discounts, also unverified.
+- Announcements (event types, per-language texts, scheduling): unverified (gamemaster: check https://partner.steamgames.com/doc/marketing/event_tools).
+
+### Preconditions
+All ✓ before the go decision (`Start the launch release candidate v1.0.0?`).
+| precondition | how it's checked |
+|---|---|
+| Coming soon live; earliest release date known | ST-3 `[x]` above with live date and earliest release date (`task 704: Record the Coming soon result (ST-3)`, decision "Coming soon page live? date?") |
+| Content target per launch language (decision 21, decision 37, D-75) | `qgen export && qgen report --simulate --locale es,en,de`: ✓ for every language, exit 0 (`app/data/pool.json`, `pool.en.json`, `pool.de.json` vs. `targets.json`; milestone 9 "Done when") |
+| Beta test passed (masterplan 10 part 11) | `task 263: write plan: Beta test and S5 close-out`'s plan done, its "S5 beta test passed?" answered passed; S5 row done above |
+| Price and account (decision 66, decision 67) | both answered; `task 194` done; PUB-11 in `plans/17-publishing.md` holds price, regional pricing, launch discount |
+| Question reports (plan 93) | tasks 699, 700, 701 done: copy text + "where to send" in the build, `qgen flag`, thread texts per language in ST-5 |
+| Deck review timing (plan 90) | `task 687` done: SW-12 `[x]` in `plans/18-steam-integration.md`; if it says "review in S6", the launch-day row below applies |
+| Steamworks app ready | SW-7 `[x]` (App ID, depots, `beta` branch; decision 89); first `beta` upload recorded |
+| No placeholders | `grep -rn 'PLACEHOLDER(' app/` empty |
+
+### Timeline
+Backwards from the release date R (a weekday ≥ the earliest release date):
+- R − 2 weeks: exact date locks (ST-3); set R as the exact date and display it before then.
+- R − ≥ 7 business days (until Valve's figure is verified): build submitted for review; so the candidate has passed ST-4 before.
+- Before that: candidate on `beta`, manual rows and family sign-off (allow a weekend for the family game).
+- Go decision answered → candidate built the same week.
+
+### Release candidate steps
+1. Go decision answered `go`.
+2. `app/desktop/package.json` `version` → `1.0.0` (decision 91: Game version: single source of truth); commit.
+3. `git tag v1.0.0` on that commit (the check never tags).
+4. `trivia-steam upload --branch beta` (runs `trivia-release-check`; prints the BuildID; manual prompt: `later`).
+5. Manual rows on the Steam-installed `beta` ("Manual rows" above), full release: all of them.
+6. Family sign-off: a family game from `beta` (row `signoff`).
+7. Candidate decision `Release candidate v1.0.0 passed?` per "Decision per release candidate"; answers recorded with `trivia-release-check --manual FILE`.
+- Failed: fixes → `1.0.1`, new tag, new candidate decision; a tag is never reused.
+
+### Launch-day checklist
+In order, Steamworks (partner.steamgames.com, the app's landing page); menu names as known 2026-10, Valve's UI wins.
+| row | steps |
+|---|---|
+| Build review passed | App landing page: build review status passed for the candidate's BuildID; issues → answer "Released?" with `Valve's build review returned issues` |
+| Candidate live on `default` | SteamPipe → Builds → the passed candidate's BuildID (Desc `v1.0.x <sha>`) → "Set build live on branch" `default` → Preview → Set live; never from the repo (decision 84: SteamCMD source and depot split). Check: `default` and `beta` show the same BuildID |
+| Price | Store & release / Pricing: base price and regional prices per PUB-11 (`plans/17-publishing.md`, decision 66) |
+| Launch discount (if PUB-11 has one) | Marketing & Visibility → Discounting → launch discount scheduled for R, % and length per PUB-11 and Valve's rules (unverified above) |
+| Store languages = shipped | Store page → Supported languages: tick exactly what the build ships (see "Languages to compare") |
+| Discussions and report thread | Community Hub → Discussions: open; one thread per language with ST-5's text (`task 701`), each pinned ("Make sticky") |
+| Deck review | Only if SW-12 says "review in S6" (plan 90): app → Steam Deck Compatibility → request review; result → plan 18 |
+| Release | App landing page → Release: press Release on R (or check the scheduled release fired); store page shows the game buyable |
+| Announcement | Community → Events & Announcements → new event, type release/launch, texts per language from "Announcement texts" (plan 95 task 2) |
+
+### Languages to compare
+- Store (`plans/17a-store-page.md` "Supported languages", decision 26, decision 27): English, Spanish – Latin America, Spanish – Spain, German; interface ✓, subtitles ✓, audio ✗.
+- Shipped UI catalogs (`app/client/src/locales/`, `UI_LANGS`): `es`, `es-ES`, `en`, `de` (`xx` dev only).
+- Shipped question pools (`app/data/`): `pool.json` (es); `pool.en.json`, `pool.de.json` missing on 2026-10-13. A language without its pool can't be ticked as a launch language (precondition "content target").
+
+### Announcement texts
+Per language, written by plan 95 task 2 (`task 707`); posted by the gamemaster on launch day.
+
+### First week
+- Gamemaster daily: Community Hub discussions (every report thread) and the store reviews.
+- To pm:
+  - question reports: paste the text into `qgen flag` (plan 93), or into a pm task if unsure;
+  - bugs: steps to reproduce, version and pool hash from the credits screen, platform (Windows, Linux, Deck);
+  - review themes: one line each.
+- Each bug → a task in its owning plan or a `plans/backlog.md` row.
+- Hotfix (wrong answer, crash): version bump (`1.0.1`), commit, new tag, ST-4 checklist (content-only if only `app/data/` changed), `beta`, then `default`; patch flow = `task 270: write plan: Content updates as patches (ST-5)`'s plan.
+- Result via decision "First week after launch: what came in?" (plan 95 task 5).
+
 ## Tasks
 - [ ] ST-1 Resolve OQ-29..OQ-37 and record each answer in `decisions.md` (phase S2).
 - [x] ST-2 Add the new files to `README.md`, the Steam track to `project.md`, the questions to `open-questions.md` and D-34. *2026-10-07: done with this plan; keep `project.md` in sync from now on.*

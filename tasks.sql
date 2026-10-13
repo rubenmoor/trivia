@@ -13830,7 +13830,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Done when: the answer is recorded as above; on "live", part 4 can read the earliest release date in `plans/11-steam.md`.', '2026-10-13T09:02:03Z', NULL, 702);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (705, 95, 'create tasks for plan 95', 'split', 'done', 1000, '2026-10-13, tasks 706–710 in plan 95 (tasks.sql only)', 'Split plan 95 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T09:06:07Z', '2026-10-13T09:07:06Z', 269);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (706, 95, 'Launch section, Valve''s rules and the go decision', 'work', 'open', NULL, NULL, 'Plan 95 task 1. Docs + one decision; can run now. Never log in to Steamworks or contact Valve.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (706, 95, 'Launch section, Valve''s rules and the go decision', 'work', 'done', NULL, '2026-10-13, plans/11-steam.md (Launch (S6)), plans/17-publishing.md; decision 95, task 708 pending on it; Valve docs unreadable (no web access): marked unverified', 'Plan 95 task 1. Docs + one decision; can run now. Never log in to Steamworks or contact Valve.
 
 **Valve''s rules** (read the docs, cite each URL with the date read; unreadable → "unverified (gamemaster: check <URL>)", no guessing):
 - partner.steamgames.com/doc/store/releasing, /doc/store/review_process (build review), /doc/marketing/discounts (launch discount), /doc/store/release_dates, /doc/marketing/event_tools (announcements).
@@ -13847,7 +13847,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 **Go decision** (kind once): `did=$(pm decision add "Start the launch release candidate v1.0.0?" --body … --option "go: all preconditions met, release date <date>" --option "not yet (which)")` with the preconditions as a checklist (current state of each) and the earliest release date. Then `pm task-pending-decision <id of "Release candidate v1.0.0" in plan 95> $did`.
 
-Done when: the section holds the cited rules, preconditions, timeline, launch-day checklist and first-week steps; the go decision is raised and the candidate task waits for it.', '2026-10-13T09:07:02Z', NULL, 705);
+Done when: the section holds the cited rules, preconditions, timeline, launch-day checklist and first-week steps; the go decision is raised and the candidate task waits for it.', '2026-10-13T09:07:02Z', '2026-10-13T09:09:06Z', 705);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (707, 95, 'Launch announcement and store "what''s new" texts', 'work', 'open', NULL, NULL, 'Plan 95 task 2. Docs; can run now (after task "Launch section, Valve''s rules and the go decision" has created "Launch (S6)" in `plans/11-steam.md`; if it''s missing, add the subsection at the end of ST-3''s neighbour and note it).
 
 - Draft per launch language (decision 26: es, en, de; es neutral es-419 per decision 27, with an es-ES variant only where a word differs):
@@ -14954,6 +14954,29 @@ Checklist:
 4. "Post as Coming Soon"; note the live date
 
 Earliest release = later of live + 14 days, app fee + 21 days.', NULL, NULL, '2026-10-13T09:03:32Z', NULL, 703, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (95, 'Start the launch release candidate v1.0.0?', 'pending', '["go: all preconditions met, release date <date>", "not yet (which)"]', 'Plan 95 (Launch). Answer `go` only when every row below is ✓; the release date you name must be ≥ the earliest release date and leave room for the timeline. Details: `plans/11-steam.md` "Launch (S6)".
+
+**Earliest release date:** not known yet = later of (Coming soon live date + 14 days, app fee paid + 21 days); comes from decision 94 "Coming soon page live? date?" (task 704). Timeline back from the date R: build review submitted ≥ 7 business days before R (Valve''s figure unverified: check partner.steamgames.com/doc/store/review_process); exact date locks at R − 2 weeks; candidate passed ST-4 on `beta` before the review.
+
+## Preconditions (state 2026-10-13)
+- [ ] Coming soon page live, earliest release date recorded (ST-3): ✗ decision 94 pending, task 704 open
+- [ ] Content target per launch language (decision 21, decision 37): ✗ `qgen export && qgen report --simulate --locale es,en,de` must end ✓ for es, en, de; today es 1136/5000 approved in `app/data/pool.json`, no `pool.en.json` / `pool.de.json`
+- [ ] Beta test passed (masterplan 10 part 11): ✗ `task 263` (write plan: Beta test and S5 close-out) open, waits on decisions 66, 67, 82
+- [ ] Price and account answered, PUB-11 written: ✗ decisions 66 and 67 pending; `task 194` open
+- [ ] Question reports in the build (plan 93): ✗ tasks 699, 700, 701 open, wait on decision 93
+- [ ] Deck review timing settled (plan 90): ✗ `task 687` open; if it says "review in S6", the request is a launch-day row
+- [ ] Steamworks app and first `beta` upload (SW-7, decision 89): ✗ decision 89 pending
+- [ ] No `PLACEHOLDER(` left in `app/`
+
+## Also check before go
+- Valve''s rules marked "unverified" in "Launch (S6)" → "Valve''s rules" (build review lead time and checks, launch discount, Release button / scheduled release, announcements): read the linked pages and note anything that changes the timeline in your answer.
+
+## On go
+Task 708 bumps `version` to `1.0.0`, fills the question counts in the announcement texts and raises `Release candidate v1.0.0 passed?` with your steps (tag `v1.0.0`, `trivia-steam upload --branch beta`, manual rows, family sign-off).
+
+## Options
+- `go: all preconditions met, release date <date>`
+- `not yet (which)`: name the missing rows; a new decision follows when they are done.', NULL, NULL, '2026-10-13T09:09:01Z', NULL, 706, NULL, 'once', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -15507,6 +15530,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (546, 238, '2026-10-13T09:04:24Z', '2026-10-13T09:04:38Z', 'blocked', NULL, 0, '4ebea933d81be7ba5fc4e9de119ded0219fd740b', 'claude-opus-5-5[1m]', '5d3c8e3f-aeba-44be-9659-20a0bec7d33f', 5, 10, 870, 137296, 23867, 0.23583520000000002, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (547, 269, '2026-10-13T09:04:39Z', '2026-10-13T09:06:20Z', 'done', NULL, 0, 'ffcc285c2d5285642699c14f584e6639e9b95e52', 'claude-opus-5-5[1m]', '717b6449-0e1b-4955-8d9f-2f784b9693bc', 13, 24, 8874, 611896, 63380, 0.80699520000000014, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (548, 705, '2026-10-13T09:06:20Z', '2026-10-13T09:07:14Z', 'done', NULL, 0, 'b8a58d94af60aed14105cde2dbe1012eacbf0e7b', 'claude-opus-5-5[1m]', 'bd19f22c-6922-473b-bd57-c01b91fec0b0', 5, 10, 5137, 150784, 30490, 0.3768568, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (549, 706, '2026-10-13T09:07:14Z', '2026-10-13T09:09:16Z', 'done', NULL, 0, 'a1bd82b4ea5f4583fb0b5a3878939749b92f6853', 'claude-opus-5-5[1m]', 'dd498cca-611e-4ea0-9fe5-24838ebda999', 27, 42, 11467, 1296334, 72106, 1.0656228, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -15678,5 +15702,6 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (699, 93);
 INSERT INTO task_decision (task_id, decision_id) VALUES (700, 93);
 INSERT INTO task_decision (task_id, decision_id) VALUES (701, 93);
 INSERT INTO task_decision (task_id, decision_id) VALUES (704, 94);
+INSERT INTO task_decision (task_id, decision_id) VALUES (708, 95);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
