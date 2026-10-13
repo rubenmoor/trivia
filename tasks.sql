@@ -24948,6 +24948,13 @@ Steps:
 - Not now: WIN_RR_COOP, WIN_RR_COMPETITIVE, WIN_TIMED (MD-8), BUNDLE_COLOMBIA (with its DLC).
 
 Texts are drafts; their wording check is task 658''s (SW-11 close-out), so a wording change later only means re-uploading the VDF.', NULL, NULL, '2026-10-13T20:34:53Z', NULL, 657, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (141, 'Achievements check under Steam (SW-11)', 'pending', '["passes", "issues (describe them)"]', 'Developer check for `plan 86: Achievements (SW-11)`, after decision 140: Achievements entered and published in Steamworks? (needs the real App ID, SW-7). Under Steam with a logged-in user, fresh account or stats reset (`steam://` console `reset_all_stats <appid>` or `ResetAllStats`):
+- Texts: read all 25 names/descriptions in Steamworks (latam, spanish, english, german; table in `plans/18-steam-integration.md` "Achievements in Steamworks"); wording changes go in the answer.
+- Win a solo game (standard settings) → Steam toast `FIRST_WIN` (plus the joker ones played on the way).
+- A customized solo game (Personalizar partida) and a gamemaster-mode game: nothing new unlocks.
+- A save with earlier qualifying wins (e.g. the family''s save via `trivia-desktop --import-save`, plan 99), stats reset: its achievements unlock on the next start.
+- A refused unlock logs `trivia: steam: unlock <id> refused` on stderr.
+Answer passes, or issues with what went wrong (each becomes a follow-up task).', NULL, NULL, '2026-10-13T20:35:45Z', NULL, 658, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -25781,6 +25788,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (826, 656, '2026-10-13T20:26:04Z', '2026-10-13T20:30:29Z', 'done', NULL, 0, 'febb40b2e94c0c30039202bcf6c22a4c57918db5', 'claude-opus-5-5[1m]', 'dae5f40f-43c6-4616-af35-1231405e6f98', 24, 46, 23318, 1279541, 66377, 1.2534682000000001, 1704996);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (827, 1001, '2026-10-13T20:30:30Z', '2026-10-13T20:33:01Z', 'done', NULL, 0, '8cf8fd9038f5385e169d0cc75f39fafbf02da7a6', 'claude-opus-5-5[1m]', 'c8fefe62-d8d8-4076-9ecc-6a7452e6c58b', 21, 40, 10610, 1533787, 89986, 1.2390054000000002, 1704996);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (828, 657, '2026-10-13T20:33:02Z', '2026-10-13T20:35:05Z', 'blocked', NULL, 0, '9fbfd9e6be58b159584e2816df7226df831701ef', 'claude-opus-5-5[1m]', '63db93a0-0701-451c-bedc-4cd5276a662e', 21, 42, 12884, 1039149, 57515, 0.92579779999999989, 1704996);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (829, 658, '2026-10-13T20:35:05Z', '2026-10-13T20:35:56Z', 'blocked', NULL, 0, '055df5164c4be1949b8ab927971c7a775eb87bab', 'claude-opus-5-5[1m]', '27ed082f-ce99-42bf-bfac-abd34ba68714', 10, 20, 4095, 492850, 54476, 0.616358, 1704996);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -25935,6 +25943,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (656, 73);
 INSERT INTO task_decision (task_id, decision_id) VALUES (657, 73);
 INSERT INTO task_decision (task_id, decision_id) VALUES (657, 140);
 INSERT INTO task_decision (task_id, decision_id) VALUES (658, 73);
+INSERT INTO task_decision (task_id, decision_id) VALUES (658, 141);
 INSERT INTO task_decision (task_id, decision_id) VALUES (664, 75);
 INSERT INTO task_decision (task_id, decision_id) VALUES (666, 78);
 INSERT INTO task_decision (task_id, decision_id) VALUES (667, 66);
