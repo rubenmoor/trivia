@@ -83,24 +83,25 @@ def tag_gate() -> str | None:
     return "; ".join(fails) or None
 
 
-def previous_tag() -> str | None:
-    """Newest v* tag reachable from HEAD, other than HEAD's own."""
-    own = set(git("tag", "--points-at", "HEAD").split())
-    tags = git("tag", "--merged", "HEAD", "--list", "v*", "--sort=-v:refname").split()
-    return next((t for t in tags if t not in own), None)
+def previous_tag(rev: str = "HEAD", own: bool = False) -> str | None:
+    """Newest v* tag reachable from rev, other than rev's own unless own (also used by qgen patch-notes)."""
+    skip = set() if own else set(git("tag", "--points-at", rev).split())
+    tags = git("tag", "--merged", rev, "--list", "v*", "--sort=-v:refname").split()
+    return next((t for t in tags if t not in skip), None)
 
 
-def kind(prev: str | None) -> str:
-    """`full`, or `content-only` if nothing shipped outside app/data/ changed since prev."""
+def kind(prev: str | None, rev: str | None = "HEAD") -> str:
+    """`full`, or `content-only` if nothing shipped outside app/data/ changed from prev to rev (None: working tree)."""
     if not prev:
         return "full"
-    changed = git("diff", "--name-only", f"{prev}..HEAD").splitlines()
+    changed = git("diff", "--name-only", prev, *([rev] if rev else [])).splitlines()
     code = [f for f in changed if f.startswith(SHIPPED) and not f.startswith("app/data/")]
     return "full" if code else "content-only"
 
 
-def save_version(rev: str) -> int | None:
-    src = git("show", f"{rev}:{STATE_TS}")
+def save_version(rev: str | None) -> int | None:
+    """SAVE_VERSION at rev (None: working tree)."""
+    src = git("show", f"{rev}:{STATE_TS}") if rev else (REPO / STATE_TS).read_text()
     m = re.search(r"SAVE_VERSION = (\d+)", src)
     return int(m.group(1)) if m else None
 

@@ -26,6 +26,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen report --simulate [--locale …] [--mode …|all] [--json]   # games per new player; exit 1 below D-75's target (plan 62)
     qgen report --cost [--json]     # $ per approved by run kind, projection per launch language (plan 70)
     qgen validate
+    qgen patch-notes [<from-ref> [<to-ref>]] [--out FILE] [--json]   # counts-only notes of a content patch (plan 96)
 
 Writing steps call `claude -p --json-schema` with prompts from authoring/tools/prompts/. Work files
 live in work/<run>/ and every step skips what is already done, so a run can be resumed.
@@ -54,6 +55,7 @@ import engine  # authoring/tools/engine.py: the TS engine under Node (D-60), e.g
 import save_file  # authoring/tools/save_file.py: the game's save, read-only (D-59)
 import targets  # authoring/tools/targets.py: pool targets (D-53)
 import pool_export  # authoring/tools/pool_export.py (D-35)
+import patch_notes  # authoring/tools/patch_notes.py: `qgen patch-notes` (plan 96)
 import translations  # authoring/tools/translations.py: translated questions (D-81)
 
 # Target share per difficulty level (07, "Difficulty target", D-31): what the 12 levels'
@@ -4067,6 +4069,13 @@ def main():
     rp.add_argument("--changes", help="with --qc <batch>: the report's \"Changes from this QC\" line (QC step 4)")
     add("validate", cmd_validate, run=False)
     add("export", cmd_export, run=False)
+    pn = sub.add_parser("patch-notes", help="a content patch's notes: added/fixed/dropped per locale and category, "
+                        "Steam event drafts (plan 96); counts only")
+    pn.set_defaults(fn=patch_notes.cmd_patch_notes)
+    pn.add_argument("from_ref", nargs="?", metavar="from-ref", help="default: the newest v* tag")
+    pn.add_argument("to_ref", nargs="?", metavar="to-ref", help="default: the working tree")
+    pn.add_argument("--out", metavar="FILE", help="also write the Markdown here (default for a tag: work/steam/<tag>/patch-notes.md)")
+    pn.add_argument("--json", action="store_true", help="JSON on stdout")
     # the LLM batch (D-36): `batch` runs all of these in order; the others are for debugging
     add("media", cmd_media)
     add("sheets", cmd_sheets)

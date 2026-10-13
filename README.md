@@ -106,6 +106,7 @@ Media comes from Wikimedia Commons first, then NASA (space only), Openverse and 
 qgen validate            # checks the source pool, and that app/data/pool.json is its current export
 qgen export              # rewrites app/data/pool.json (the authoring server does this after every change); reload the game page
 qgen report              # supply per level, difficulty and category; progress vs. targets (--bundle <id>, --player <name>, --subcategories, --calibration [<batch>…], --overlaps, --exit-check, --qc [<batch>])
+qgen patch-notes [<from-tag> [<to-tag>]]   # a content patch's counts-only notes + Steam event drafts (default: newest v* tag → working tree)
 ```
 
 ### Work on the code
