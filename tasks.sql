@@ -14215,6 +14215,24 @@ en and de (5 each): 01-start … 05-tower only. There are no en/de question pool
 
 Valve''s minimum is 5 per language. Pick the set (numbers), or ask for other questions/screens.', NULL, NULL, '2026-10-13T06:21:11Z', NULL, 670, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (80, 'en/de question pools exported (pool.en.json, pool.de.json)?', 'pending', '["Yes, both exported", "Drop the en/de question screenshots for the beta (keep the 5 menu/tower shots)"]', 'task 673 re-renders the en/de store screenshots (cards, image/video question, Francotirador, victory) and needs app/data/pool.en.json and pool.de.json. As of 2026-10-13 neither exists: translations (qgen batch --translate en|de, then qgen export) haven''t run; plan 70''s release budget (task 463) and the translation pilot gate them. Answer once both pools are exported with approved translations of q-0030, q-0055, q-0019, q-0053 (or say which questions to use instead).', NULL, NULL, '2026-10-13T06:22:14Z', NULL, 673, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (81, 'Recorded sound effects: approve on the TV?', 'pending', '["approve", "changes: <effect> → <what''s wrong>"]', 'Plan 32 replaced every synthesized effect with a CC0 recording; none kept synthesized. Picked by spectrogram, not by ear, so please listen.
+
+How to check
+- TV: `/?efectos` → each effect has «grabado» / «sintetizado» buttons for A/B.
+- `/?fuegos=finale` for the fireworks.
+- A real game: Paso, card pick, menu, jokers, Soplo note, token pop-back.
+
+Replaced (recorded)
+- UI: whoosh, «swoosh que sube», escoba (Paso; quiet source boosted +20 dB, check first), pop/carta (pitch varies), menú abierto / cerrado, desbloqueado, listo/hola.
+- Jokers: comodín shimmer, preparado, abrir (card fan), silbato (swanee whistle), trituradora, latido, rebobinar, mira: tic (pitch varies), corcho, rasgado.
+- New, previously silent: Soplo paper rustle (+11 dB), token pop-back (chip lay).
+- Fireworks: cohete, cañón de confeti (pitch varies), bengalas (quiet source +19 dB), estrellas (pitch varies).
+
+Kept synthesized
+- none (synth recipes stay as fallback only).
+
+Answer
+- «approve», or «changes:» per effect: swap (another recording), back to synth, louder/quieter, pitch.', NULL, NULL, '2026-10-13T06:41:19Z', NULL, 146, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -14722,6 +14740,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (500, 143, '2026-10-13T06:25:53Z', '2026-10-13T06:31:17Z', 'done', NULL, 0, 'b729f58f7ef67bd9af416b7fff6f69f22c6f6877', 'claude-opus-5-5[1m]', 'de5f5838-7174-4224-a363-913af2bbf90c', 33, 66, 17891, 2337561, 92119, 1.5625482, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (501, 144, '2026-10-13T06:31:17Z', '2026-10-13T06:35:39Z', 'done', NULL, 0, '5d30f0370722c0ea1e568b566915df04033ae898', 'claude-opus-5-5[1m]', '9f775c48-66b8-46ac-9856-564ad4b4a99c', 35, 68, 18063, 2502292, 94101, 1.6147984000000004, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (502, 145, '2026-10-13T06:35:39Z', '2026-10-13T06:41:05Z', 'done', NULL, 0, 'e0b57dac5488b26e1827c96205d3387dbc42937a', 'claude-opus-5-5[1m]', '8ed280bf-1d6b-4a0e-9d10-6d7aed97c1ef', 25, 42, 11511, 1208203, 66081, 1.0006766, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (503, 146, '2026-10-13T06:41:05Z', '2026-10-13T06:41:28Z', 'blocked', NULL, 0, '74e7780c3646097867bf44938bb142a180d696a6', 'claude-opus-5-5[1m]', 'e172be46-4a4b-4fb4-baba-c2e97764cc45', 7, 14, 1839, 189470, 21057, 0.24318599999999999, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -14754,6 +14773,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (108, 8);
 INSERT INTO task_decision (task_id, decision_id) VALUES (109, 8);
 INSERT INTO task_decision (task_id, decision_id) VALUES (113, 10);
 INSERT INTO task_decision (task_id, decision_id) VALUES (127, 22);
+INSERT INTO task_decision (task_id, decision_id) VALUES (146, 81);
 INSERT INTO task_decision (task_id, decision_id) VALUES (183, 12);
 INSERT INTO task_decision (task_id, decision_id) VALUES (185, 19);
 INSERT INTO task_decision (task_id, decision_id) VALUES (185, 20);
