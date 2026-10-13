@@ -126,6 +126,37 @@ Date: · Build commit:
 ## Steam Deck Verified
 Requirements to plan for: full controller support with correct glyphs (IN), legible text at 800p, the on-screen keyboard for text entry, no launcher, working default settings, no warnings on start. Test on a real Deck before applying.
 
+## Modding: `mod.json`
+A mod is a folder with a `mod.json` (pm plan 112). The validator `readManifest` in `app/desktop/mods.mjs` is the source of truth; this schema is for the modding guide (plan 121) and editors.
+- Also checked by the validator, not by the schema: file ≤ 64 KB UTF-8; `entry` exists inside the mod (symlinks resolved); unknown keys and unknown `languages` tags are warnings; `game` ≠ running version: warning `game_version`, still loaded.
+- Errors: `no_manifest`, `bad_json`, `bad_field` (+ field), `duplicate_id` (+ other folder; local before Workshop, then lower published file id, decision 127), `entry_missing`, `not_a_folder`.
+- `kind` when missing: `data/bundles/` or `data/bundles.json` → `bundle`, any `.css` → `theme`, `entry` → `code`, root `index.html` → `conversion`.
+- Settings: `<userData>/mods.json` (dev `state/desktop/mods.json`), `{ "version": 1, "mods": [{ "id", "on" }] }`, index 0 = top = wins.
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "mod.json",
+  "type": "object",
+  "required": ["id", "name", "description", "version", "game"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{1,63}$" },
+    "name": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "description": { "type": "string", "maxLength": 2000 },
+    "version": { "type": "string", "minLength": 1, "maxLength": 32 },
+    "game": { "type": "string", "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$" },
+    "languages": { "type": "array", "items": { "type": "string", "enum": ["es", "es-ES", "en", "de"] } },
+    "entry": { "type": "string", "pattern": "\\.m?js$" },
+    "kind": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "enum": ["bundle", "theme", "code", "conversion"] }
+    },
+    "workshopId": { "type": "string", "pattern": "^[1-9][0-9]{0,19}$" }
+  }
+}
+```
+
 ## Tasks
 - [x] SW-1 Decide the shell (OQ-29); record it in `decisions.md`. *Done 2026-10-12: Electron (D-63).*
 - [x] SW-2 Electron shell skeleton: window, fullscreen toggle, loads `app/client/dist/`, preload bridge; pick the Steam binding (steamworks-ffi-node or steamworks.js: maintenance, overlay, Electron version). *Done 2026-10-12 (pm plan 54, D-71): `app/desktop/` (`main.mjs`, `resolve.mjs`, `preload.cjs`, `package.json`), `app/client/src/lib/desktop.ts`, `lib/engine.ts` (`MemoryStore`), `Overlay.svelte`, `flake.nix` (`trivia-desktop`, `pkgs.electron` 43); whole game without Python checked over CDP under Xvfb (task 318: level 12, every joker, undo, abandon, media, samples, clean console). Gamemaster play test: plays fine (pm decision 29, 2026-10-13). Binding: steamworks-ffi-node (pm decision 28, D-63; task 353).*
