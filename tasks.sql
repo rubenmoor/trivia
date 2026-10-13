@@ -22871,7 +22871,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - Throw-away script over a temp folder (valid mod, bad JSON, missing field, duplicate id, missing entry, version mismatch, folder without manifest) prints the expected list; script deleted.
 - Per-commit checks pass (`npm run check`, `npm test`, `npm run build`, `qgen validate`).', '2026-10-13T18:29:50Z', '2026-10-13T18:45:54Z', 914);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (951, 112, 'resolve.mjs: mod layers, symlink-safe contained(), MIME, resolve.test.mjs', 'work', 'open', NULL, NULL, 'Plan 112, task 2 (after the `mods.mjs` task). Overlay in `app/desktop/resolve.mjs`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (951, 112, 'resolve.mjs: mod layers, symlink-safe contained(), MIME, resolve.test.mjs', 'work', 'done', NULL, '2026-10-13, app/desktop/resolve.mjs (layers, realpath-safe contained(), MIME), app/desktop/resolve.test.mjs (9 cases), package.json test runs node --test ''app/desktop/*.test.mjs'' (Node 22 doesn''t take a dir); resolver smoke over real dist/data/media unchanged; follow-up: mods.mjs missing from electron-builder.yml files', 'Plan 112, task 2 (after the `mods.mjs` task). Overlay in `app/desktop/resolve.mjs`.
 
 - `makeResolver({ dist, data, media, layers = [] })`: `dist` lookups and the SPA `index.html` fallback go through `[...layers, dist]`; `/data/` through `[...layers.map((d) => d + "/data"), data]` (plan 115 later narrows `/data/` to the bundles merge, decision 128); first hit wins, whole files; `mod.json` at a layer root never served; `/media?url=…` and `/api/*` unchanged (not overlaid).
 - `contained(root, rel)`: symlink-safe for every root, ours included: `realpath` of the file must stay inside the root''s `realpath` (computed once per root); files only (directories miss); `..`, `%2e%2e`, absolute paths, drive letters (`/C:/…`, `\\`) stay inside or miss.
@@ -22883,7 +22883,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Root `package.json` `test`: append `&& node --test app/desktop/` so `npm test` runs it (D-73).
 
 ## Done when
-- Test passes; `trivia-desktop` without mods plays as before; per-commit checks pass.', '2026-10-13T18:29:50Z', NULL, 914);
+- Test passes; `trivia-desktop` without mods plays as before; per-commit checks pass.', '2026-10-13T18:29:50Z', '2026-10-13T18:47:51Z', 914);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (952, 112, 'main.mjs: discover mods, mods.json, layers into the resolver, --no-mods', 'work', 'open', NULL, NULL, 'Plan 112, task 3 (after the `mods.mjs` and `resolve.mjs` tasks). Wire mods into `app/desktop/main.mjs`.
 
 - `modsDir()`: `TRIVIA_MODS_DIR` → packaged `<userData>/mods/` (create if missing) → dev `REPO/mods/`.
@@ -23526,6 +23526,10 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - Plans 18, 01, 11, `project.md`, README, AGENTS.md, directory.md describe modding as built; example ids committed. Per-commit checks (AGENTS.md) pass.', '2026-10-13T18:37:57Z', NULL, 943);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (994, 112, 'electron-builder.yml: ship mods.mjs in the packaged shell', 'work', 'open', NULL, NULL, '- `app/desktop/electron-builder.yml` `files:` lists `main.mjs`, `resolve.mjs`, `save.mjs`, `preload.cjs` only; `mods.mjs` (task 950) is missing.
+- Once `main.mjs` imports `./mods.mjs` (task 952), the packaged build fails at start (module not found).
+- Add `- mods.mjs` to `files:`; don''t ship `*.test.mjs`.
+- Done when: `trivia-desktop-build --dir` then the unpacked Linux build starts and logs the `trivia: mods: …` summary; per-commit checks pass.', '2026-10-13T18:47:51Z', NULL, 951);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -25645,6 +25649,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (797, 943, '2026-10-13T18:37:09Z', '2026-10-13T18:38:18Z', 'done', NULL, 0, 'e3b08e317453ddf5cb2bbdb34453d8ddd855aac5', 'claude-opus-5-5[1m]', '8e833561-f740-4a59-9cef-992d6b033101', 8, 16, 6508, 320177, 41909, 0.5295314, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (798, 867, '2026-10-13T18:38:19Z', '2026-10-13T18:43:49Z', 'done', NULL, 0, '27a192ea1870215791dde00e3b4e972c8baffda0', 'claude-opus-5-5[1m]', 'f76d687a-1f2b-42a1-8e47-c99849a6a715', 32, 60, 16568, 1840209, 72899, 1.2828337999999997, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (799, 950, '2026-10-13T18:43:49Z', '2026-10-13T18:46:02Z', 'done', NULL, 0, '75d3f0143fe0cd2a3656d94dbb34ac2b84230443', 'claude-opus-5-5[1m]', '09d995e1-8b25-4f69-9302-380e77da0a18', 11, 20, 12021, 454345, 48605, 0.720209, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (800, 951, '2026-10-13T18:46:03Z', '2026-10-13T18:48:05Z', 'done', NULL, 0, '3c631dc5778bb80172647a624f9a97a87e9e42d6', 'claude-opus-5-5[1m]', '46bd12b3-e744-4504-af70-97ca95b796f0', 19, 36, 9992, 735572, 38015, 0.6512184, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

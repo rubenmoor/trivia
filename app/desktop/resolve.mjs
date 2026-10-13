@@ -1,16 +1,24 @@
 // app:// URL → file (plan 54). Web Request/Response only, so plain `node` can test it.
 import { createHash } from "node:crypto";
 import { createReadStream } from "node:fs";
-import { readdir, readFile, stat } from "node:fs/promises";
+import { readdir, readFile, realpath, stat } from "node:fs/promises";
 import path from "node:path";
 import { Readable } from "node:stream";
 
 const MIME = {
   ".html": "text/html; charset=utf-8",
   ".js": "text/javascript; charset=utf-8",
+  ".mjs": "text/javascript; charset=utf-8",
+  ".map": "application/json; charset=utf-8",
+  ".txt": "text/plain; charset=utf-8",
   ".css": "text/css; charset=utf-8",
   ".json": "application/json; charset=utf-8",
   ".woff2": "font/woff2",
+  ".woff": "font/woff",
+  ".ttf": "font/ttf",
+  ".otf": "font/otf",
+  ".ico": "image/x-icon",
+  ".wasm": "application/wasm",
   ".m4a": "audio/mp4",
   ".mp3": "audio/mpeg",
   ".ogg": "audio/ogg",
@@ -33,15 +41,39 @@ const mimeOf = (file) => MIME[path.extname(file).toLowerCase()] ?? "application/
 const json = (status, body) =>
   new Response(JSON.stringify(body), { status, headers: { "content-type": MIME[".json"] } });
 
-// File under root, or null (no escape, files only).
+// Root's realpath, once per root (a missing root: retried).
+const roots = new Map();
+async function realRoot(root) {
+  if (!roots.has(root)) {
+    const real = await realpath(root).catch(() => null);
+    if (!real) return null;
+    roots.set(root, real);
+  }
+  return roots.get(root);
+}
+
+// File under root, or null (no escape, symlinks included; files only).
 async function contained(root, rel) {
-  const file = path.resolve(root, "." + path.posix.normalize("/" + rel));
-  if (file !== root && !file.startsWith(root + path.sep)) return null;
+  const real = await realRoot(root);
+  if (!real) return null;
   try {
+    const file = await realpath(path.resolve(root, "." + path.posix.normalize("/" + rel)));
+    if (!file.startsWith(real + path.sep)) return null;
     return (await stat(file)).isFile() ? file : null;
   } catch {
     return null;
   }
+}
+
+const sameFile = process.platform === "win32" ? (a, b) => a.toLowerCase() === b.toLowerCase() : (a, b) => a === b;
+
+// First hit in the layers; a mod's own mod.json never.
+async function firstHit(roots, rel, mods) {
+  for (const root of roots) {
+    const file = await contained(root, rel);
+    if (file && !(mods.has(root) && sameFile(file, path.join(await realRoot(root), "mod.json")))) return file;
+  }
+  return null;
 }
 
 // Single range only; null = whole file, false = unsatisfiable.
@@ -122,10 +154,14 @@ function pooledUrls(data) {
   };
 }
 
-export function makeResolver({ dist, data, media }) {
+// layers: enabled mods' folders, top first (plan 112); ours last.
+export function makeResolver({ dist, data, media, layers = [] }) {
   dist = path.resolve(dist);
   data = path.resolve(data);
   media = path.resolve(media);
+  const mods = new Set(layers.map((d) => path.resolve(d)));
+  const distRoots = [...mods, dist];
+  const dataRoots = [...[...mods].map((d) => path.join(d, "data")), data];
   const urls = pooledUrls(data);
   return async (request) => {
     const url = new URL(request.url);
@@ -137,7 +173,7 @@ export function makeResolver({ dist, data, media }) {
     }
     if (rel === "/api" || rel.startsWith("/api/")) return json(404, { error: "not_found" });
     if (rel.startsWith("/data/")) {
-      const file = await contained(data, rel.slice("/data/".length));
+      const file = await firstHit(dataRoots, rel.slice("/data/".length), mods);
       return file ? sendFile(file, request) : json(404, { error: "not_found" });
     }
     if (rel === "/media") {
@@ -146,7 +182,7 @@ export function makeResolver({ dist, data, media }) {
       const file = await contained(media, cacheName(fileUrl));
       return file ? sendFile(file, request) : json(404, { error: "media_missing" });
     }
-    const file = rel !== "/" && (await contained(dist, rel));
+    const file = (rel !== "/" && (await firstHit(distRoots, rel, mods))) || (await firstHit(distRoots, "index.html", mods));
     return sendFile(file || path.join(dist, "index.html"), request);
   };
 }

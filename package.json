@@ -8,6 +8,6 @@
   "scripts": {
     "build": "npm run build --workspaces",
     "check": "npm run check --workspaces",
-    "test": "npm run test --workspaces --if-present"
+    "test": "npm run test --workspaces --if-present && node --test 'app/desktop/*.test.mjs'"
   }
 }
