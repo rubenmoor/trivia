@@ -138,6 +138,7 @@ Everything that only matters for a release on Steam (desktop shell, controller, 
 - [x] S3: SW-3 File saves: `save/game.json` in the user's config folder, atomic writes, backups, `--import-save` (2026-10-12, pm plan 55, D-72) — [`18`](18-steam-integration.md)
 - [x] S3: SW-6 resolved: no GitHub Actions; CI = local per-commit checks (AGENTS.md), release check moved to S5 (2026-10-12, pm decision 14, D-73) — [`18`](18-steam-integration.md)
 - [x] S3: IN-4, IN-5 Gamepad input and button glyphs (Xbox/PlayStation, drawn in-house) (2026-10-12, pm plan 45; real-pad check pending) — [`14`](14-input.md)
+- [x] S3: PUB-5 Credits screen from the ☰ overlay and generated `credits.json` + `CREDITS.md` in `dist/` (2026-10-12, pm plan 47) — [`17`](17-publishing.md)
 - [x] S4: CT-2 `qgen report --simulate`: games per new player on the engine (information only); exit 1 unless every launch language meets D-75's 5000 (2026-10-12, pm plan 62) — [`16`](16-content-target.md)
 - [x] S4: B-13 tooling: `base` voice es-419, `colombia` Colombian; `qgen neutralize` rewrites Colombian wording in `base` (2026-10-12, pm plan 64, D-83); the run belongs to masterplan part 11 — [`15`](15-i18n.md)
 - [x] S4: I18N-2 Language setting: UI and question language in the save, per-locale pool and names, Esc menu rows, first-start language screen for a fresh save; Steam's language via `guessTag()` in milestone 10 (2026-10-12, pm plan 68, D-86) — [`15`](15-i18n.md)

@@ -17,7 +17,13 @@ The non-rejected questions use 1,129 distinct files (1,102 for approved only). T
 | GFDL 1.2 (off allowlist) | 1 | Needs the full GFDL text shipped. Replaced instead (PUB-3). |
 
 - **Non-copyright restrictions:** Commons marks some files with *personality rights* (identifiable people) or *trademark* warnings. They don't stop editorial use in a quiz; the gamemaster checked them: keep every flagged file (D-61). The audit lists them for information only.
-- **Credits in the game:** each question already shows its `credit` (06). The release also needs a **credits screen** listing every file with author, license and source link, generated from the pool at build time, plus `CREDITS.md` in the shipped files.
+- **Credits in the game** (PUB-5, pm plan 47): each question shows its `credit` (06); the full list is generated at build time.
+  - Generator: Vite plugin `app/client/credits.ts` (`vite.config.ts`), no Python. `npm run build` writes `credits.json` and `CREDITS.md` to the root of `app/client/dist/`; `npm run dev` serves `/credits.json`.
+  - Content: every distinct media file in `app/data/pool.json` (title, author, licence, source link, provider; slot fields from PUB-2), sounds parsed from `app/client/public/audio/CREDITS.md` (incl. the Elgar note), fonts (OFL texts shipped in `fonts/`), controller glyphs (if `Glyph.svelte` exists), Svelte with its MIT text; a "Game" section once `LICENSE` exists (OQ-35). Electron's entry: task 621.
+  - Build fails on a slot without `license` or `source_url` (ids listed); warns on GFDL.
+  - `credits.json` carries no UI text (pm decision 49): unknown author is `null`, the screen's strings go through `t()`; `CREDITS.md` is English.
+  - Screen: `app/client/src/game/Credits.svelte`, from the ☰ overlay («Créditos»); fetches `credits.json` on first open.
+  - Shipped: `CREDITS.md` in `dist/`, so in `nix build .#app` (`share/trivia/app/client/dist/`) and the desktop build (`resources/client/`); at the artefact root: 18 "Builds and depots".
 - **Audio:** `app/client/public/audio/CREDITS.md` (UI-10): CC0 / CC BY. Elgar's «Pomp and Circumstance» by the US Marine Band: a US government work, public domain in the US and generally treated as free elsewhere. Note it in the credits.
 - **Fonts:** Baloo 2 and Nunito are OFL. Ship the license texts with them.
 - **Controller glyphs** (IN-5): original, drawn for the game (`Glyph.svelte`). Console makers' button art can't be used freely.
@@ -45,7 +51,7 @@ Steam requires developers to disclose AI-generated content on the store page (co
 - [x] PUB-2 Store the full license data per media item (license URL, author link, restrictions) in the pool, not just the `credit` string; `validate` requires it for approved questions. *pm plan 26, 2026-10-11: all 1,202 picks migrated; validate errors (q-0021, GFDL only, set to needs_work until part 3 replaces it; decision 10).*
 - [ ] PUB-3 Replace the problem files from PUB-1 in the review tool. *Plan: pm plan 53 (`/review?licence=replace`, validate gate).*
 - [ ] PUB-4 Decide the code and content license (OQ-35); add a `LICENSE` file.
-- [ ] PUB-5 Credits screen and a generated `CREDITS.md` in the build (media, audio, fonts, glyphs, libraries). *Plan: pm plan 47 (Vite plugin writes `credits.json` + `CREDITS.md` into `dist/`; screen from the ☰ overlay).*
+- [x] PUB-5 Credits screen and a generated `CREDITS.md` in the build (media, audio, fonts, glyphs, libraries). *Done 2026-10-12 (pm plan 47): `app/client/credits.ts` writes `dist/credits.json` + `dist/CREDITS.md` (1,102 media, 13 sounds, fonts, glyphs, Svelte); Credits screen from the ☰ overlay. Open: Electron entry (task 621), `CREDITS.md` at the desktop artefact root, Game section after OQ-35.*
 - [ ] PUB-6 Steamworks signup, tax and identity; pay the app credit (OQ-33).
 - [ ] PUB-7 Name and trademark check for «Living Room Trivia» and «Trivia en Familia» (D-50); if it fails, OQ-34 reopens.
 - [ ] PUB-8 Store page: texts, capsules, screenshots, trailer, AI disclosure, privacy line.
