@@ -10954,7 +10954,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:01:18Z', '2026-10-12T23:10:22Z', 511);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (523, 83, 'create tasks for plan 83', 'split', 'done', 1000, '2026-10-12, tasks.sql: tasks 588-591 for plan 83; no decisions needed now (process decisions are task 589''s job)', 'Split plan 83 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:02:07Z', '2026-10-12T23:10:59Z', 512);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (524, 73, 'code-review.md skeleton, inventory and directory.md entry', 'work', 'open', NULL, NULL, 'Task 1 of `plan 73: Baseline scans and report skeleton (code review part 1)`; read plan 73 and `plan 72: masterplan` ("Ground rules for every part", "Parts") first.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (524, 73, 'code-review.md skeleton, inventory and directory.md entry', 'work', 'done', NULL, '2026-10-13, code-review.md (intro, format, parts 1–11, inventory around task 616''s linter section), directory.md; follow-ups 720 (steam/store tooling, part 6), 721 (credits.ts, part 10), 722 (lib/build.ts, part 4)', 'Task 1 of `plan 73: Baseline scans and report skeleton (code review part 1)`; read plan 73 and `plan 72: masterplan` ("Ground rules for every part", "Parts") first.
 
 ## What
 - Create `code-review.md` at the repo root:
@@ -10979,7 +10979,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
 
 ## Note (task 616)
-- `code-review.md` already exists: it holds `## Part 10` → `### Linter evaluation` (table, adopted `tsconfig` flags, findings rows) from task 616, which ran early. Keep that content as it is; build the intro, format, other parts and inventory around it (replace its stub intro).', '2026-10-12T23:02:54Z', NULL, 513);
+- `code-review.md` already exists: it holds `## Part 10` → `### Linter evaluation` (table, adopted `tsconfig` flags, findings rows) from task 616, which ran early. Keep that content as it is; build the intro, format, other parts and inventory around it (replace its stub intro).', '2026-10-12T23:02:54Z', '2026-10-13T09:25:26Z', 513);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (525, 73, 'Scan: directory.md vs git ls-files', 'work', 'open', NULL, NULL, 'Task 2 of `plan 73: Baseline scans and report skeleton (code review part 1)`; needs the `code-review.md` skeleton (task 1 of plan 73). Rules: plan 73 "Rules for this plan".
 
 ## What
@@ -14063,6 +14063,48 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - Milestone 11''s "Done when" (released; content updates go out as patches) holds and is cited in the task note.
 - `npm run check`, `qgen validate` pass.', '2026-10-13T09:21:14Z', NULL, 717);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (720, 78, 'Review Steam release and store tooling: authoring/steam/, authoring/store/', 'work', 'open', NULL, NULL, 'Part 6 (`plan 78: Desktop shell and packaging review (code review part 6)`) covers `app/desktop/` only; the Steam release and store tooling outside it has no review task. Found by `task 524: code-review.md skeleton, inventory and directory.md entry` (inventory assigns these files to part 6).
+
+## What
+- Review, fix what is cheap, log every file and finding in `## Part 6` of `code-review.md` (no-findings rows included): `authoring/steam/steam.py` (≈225 lines, `trivia-steam`), `release_check.py` (≈242, `trivia-release-check`), `smoke.mjs` (≈191), `credits_check.mjs` (≈93), `app_build.vdf.in`, `depot_build.vdf.in`, `steam.json`; `authoring/store/screenshots.mjs` (≈256).
+- Checklist: plan 72 "Ground rules for every part" (six categories, AGENTS.md rules, `pm decision list --answered --grep steam|release|screenshot`); subprocess error paths, exit codes, clean-tree/tag gates (SW-6), Windows/Linux path handling, temp dirs cleaned, offline except `steamcmd`, no secrets in files or logs (AGENTS.md).
+- Duplication candidates (e.g. CDP code in `smoke.mjs`/`screenshots.mjs` vs. `authoring/tools/cdp.mjs`, credit logic vs. `app/client/credits.ts`): log only, for part 10.
+- Lint tags on `.mjs` findings, e.g. `(lint: no-floating-promises)`.
+- Part 1 rows `handed to part 6` for these files: final status in `## Part 6`, quoting the row.
+
+## Rules
+- No real upload: `trivia-steam upload --dry-run`/`--preview` at most; never a real `state/`, `work/steam/` of a real release, or the media cache (temp `TRIVIA_STATE`/`TRIVIA_MEDIA`).
+- Behaviour/format change (CLI flags, report layout, VDF output) → `pm decision add` + follow-up task linked with `pm task-pending-decision`.
+- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate`.
+
+## Done when
+- Every file above listed in `## Part 6`, every finding with a status; checks pass; staged.', '2026-10-13T09:24:04Z', NULL, 524);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (721, 82, 'Part 10: review the build-time credits plugin: app/client/credits.ts, node.d.ts', 'work', 'open', NULL, NULL, '`app/client/credits.ts` (≈322 lines, Vite plugin building `credits.json` and `CREDITS.md`, PUB-5/plan 47) and `app/client/node.d.ts` (its Node API stubs) have no review task: part 10''s `task 586: Part 10: review build and package config` lists only the config files. Found by `task 524: code-review.md skeleton, inventory and directory.md entry` (inventory assigns them to part 10).
+
+## What
+- Review both, fix what is cheap, log every file and finding in `## Part 10` of `code-review.md` (no-findings rows included).
+- Checklist: plan 72 "Ground rules for every part"; `pm decision list --answered --grep credits`; build-time errors (missing/invalid credit files fail loudly or are swallowed?), sync IO is fine at build time, output deterministic (same input → same `dist/credits.json`), licence fields vs. what the Credits screen and `authoring/steam/credits_check.mjs` expect, `node.d.ts` stubs match the calls (no `@types/node` per minimal dependencies).
+- Duplication with `authoring/steam/credits_check.mjs` or `authoring/tools` media licence code: log, consolidate per plan 82 rules.
+- Lint tags on findings, e.g. `(lint: noUnusedLocals)`.
+
+## Rules
+- Behaviour unchanged: `app/client/dist/credits.json` and `CREDITS.md` byte-identical before/after a fix (diff two builds).
+- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate`.
+
+## Done when
+- Both files listed in `## Part 10`, every finding with a status; checks pass; staged.', '2026-10-13T09:24:04Z', NULL, 524);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (722, 76, 'Review lib/build.ts and other part 4 files added after the inventory', 'work', 'open', NULL, NULL, '`app/client/src/lib/build.ts` (≈11 lines: game version D-91 and pool hash D-92, plan 91; used by `game/Credits.svelte`) was added after plan 76''s tasks were written and no part 4 task lists it. Found by `task 524: code-review.md skeleton, inventory and directory.md entry` (inventory assigns it to part 4).
+
+## What
+- Review it, fix what is cheap, log it in `## Part 4` of `code-review.md` (a "no findings" row if clean).
+- Checklist: plan 72 "Ground rules for every part"; `pm decision list --answered --grep version --grep hash`; version source vs. `package.json`/`trivia-release-check` header, hash vs. `qgen export`''s pool hash, dependency on `names.svelte.ts`.
+- Also: `git ls-files app/client/src/lib app/client/src/locales app/client/src/*` vs. the part 4 rows; any other file without a row → reviewed here too.
+
+## Rules
+- Before finishing: `npm run check`, `npm test`, `npm run build`, `qgen validate`.
+
+## Done when
+- `lib/build.ts` (and any other unlisted part 4 file) in `## Part 4` with a status; checks pass; staged.', '2026-10-13T09:24:04Z', NULL, 524);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -15740,6 +15782,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (562, 717, '2026-10-13T09:20:53Z', '2026-10-13T09:21:23Z', 'done', NULL, 0, '0e2971a86b8d2d551d78f1a85fb922cbe1d6136e', 'claude-opus-5-5[1m]', 'b30f0a0c-6a9c-40ea-a1ec-bdd9af2be1a5', 5, 10, 2923, 136798, 24373, 0.2808436, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (563, 718, '2026-10-13T09:21:23Z', '2026-10-13T09:21:49Z', 'blocked', NULL, 0, '83be637336a7d4ddaa6c869a1fcbcb1b3f183c2f', 'claude-opus-5-5[1m]', '4e2f481f-7430-47f4-827f-fae943712b0c', 7, 14, 1514, 215985, 30027, 0.313749, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (564, 719, '2026-10-13T09:21:49Z', '2026-10-13T09:22:09Z', 'blocked', NULL, 0, 'bd4907bca97418695ccc384138d50bc0eceb7321', 'claude-opus-5-5[1m]', '1d682667-c789-4d8c-9499-3089504371ee', 6, 12, 1302, 161812, 21073, 0.2270344, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (565, 524, '2026-10-13T09:22:09Z', '2026-10-13T09:25:38Z', 'done', NULL, 0, 'b23aa1a757fdb5ac2e0e1049c96160cfc21776ae', 'claude-opus-5-5[1m]', 'bd5585a2-c29a-40df-8d97-682dcb77da65', 24, 46, 15673, 1238604, 62027, 1.0575808000000002, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

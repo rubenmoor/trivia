@@ -66,6 +66,7 @@ What lives where. The repo is split into what ships and what doesn't ([`plans/19
 | `plans/` | Plans, decisions, open questions, backlog; start at [`plans/README.md`](plans/README.md) |
 | `CLAUDE.md` | Imports `AGENTS.md` for Claude Code |
 | `AGENTS.md` | Guide for AI coding assistants |
+| `code-review.md` | Code review report of milestone 13: findings per part, file inventory, linter evaluation |
 | `flake.nix`, `flake.lock` | Dev shell and packages (D-18) |
 | `package.json` | npm workspaces: `app/client`, `authoring/ui` |
 | `state/` | Game saves (gitignored): `game.json` (players, games, burns, flags; plan 49), `game.sqlite` + `flags.json` (pre-engine saves, kept as backups after the one-time migration), `flags-applied.json` (flags already turned into reviews, written by `trivia-authoring`), `desktop/` (`trivia-desktop`'s save in dev: `local/` without Steam, `<steamid64>/` per Steam user, each `game.json` + `backup/`; D-72) |
