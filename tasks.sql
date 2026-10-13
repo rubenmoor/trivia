@@ -13763,6 +13763,33 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (69, 'Steamworks SDK libs for dev and the bridge''s SDK path', 'answered', '[]', 'nixpkgs has no steamworks-sdk-redist (plan 85 and decision 68 assumed one). steamworks-ffi-node binds the newest exported interface versions, so 1.62 works in dev (checked: Spacewar 480, SteamID and language). Never shipped: the release builds take the gamemaster''s SDK download (decision 68); task 650 puts redistributable_bin under resources/steamworks_sdk/, the path main.mjs reads when packaged. Bridge: availability reaches the sandboxed preload as --trivia-steam in additionalArguments (Steam init runs before the window); overlay stub is overlay.enabled().', 'Dev: flake fetchzip of SDK 1.62 (archive.org URL+hash as nixpkgs rimsort) as TRIVIA_STEAM_SDK in trivia-desktop; app/desktop/steamworks_sdk/ wins when present; packaged: resources/steamworks_sdk/', NULL, '2026-10-13T05:27:05Z', '2026-10-13T05:27:05Z', 645, NULL, 'rule', 645, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (70, 'Steam overlay in the Electron shell', 'answered', '[]', 'Spike task 647 (D-92): steamworks-ffi-node''s frame copy gets no frames before did-finish-load; with the native window attached the Linux main process freezes (windowed and fullscreen, COSMIC/XWayland, Intel Mesa); frame copy far below 60 fps. Wired: addElectronSteamOverlay on win32 after did-finish-load, only with Steam; overlay.enabled() = attached && IsOverlayEnabled. Windows pending a gamemaster check.', 'Windows only; Linux without overlay (native GL window freezes the game on XWayland); Deck via Proton', NULL, '2026-10-13T05:39:35Z', '2026-10-13T05:39:35Z', 647, NULL, 'rule', 647, '2026-10-13, task 647: 2026-10-13, task 647: app/desktop/main.mjs attaches addElectronSteamOverlay on win32 after did-finish-load (Steam up only); steam:overlay-enabled = attached && IsOverlayEnabled; Linux unchanged. D-92 in plans/decisions.md. Windows check folded into task 652''s gamemaster decision (needs task 650''s packaged build).');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (71, 'Upload the rich presence tokens in Steamworks?', 'pending', '["Uploaded once the App ID exists; presence shows", "Skip rich presence (remove the calls)"]', 'Task 651: the game sets Steam rich presence «Nivel 7 de 12» (token #Level, values level/levels) while a level is on screen. Steam only shows tokens uploaded in Steamworks: App Admin > Community > Rich Presence, upload app/desktop/steam-presence.vdf (latam, spanish, english, german). Needs the real App ID (part 1); under 480 (Spacewar) nothing shows. Check afterwards: a friend''s Steam list shows «Nivel N de 12» during play.', NULL, NULL, '2026-10-13T05:44:44Z', NULL, 651, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (72, 'SW-8 check under Steam and without Steam', 'pending', '["all pass", "issues (name the rows)"]', 'Gamemaster check for plan 85 (Steamworks binding, SW-8). Needs task 650''s packaged builds (`trivia-desktop-build` → app/desktop/release/) and the Steamworks SDK libs (decision 68). App ID 480 (Spacewar) until SW-7: launch through Steam as a non-Steam shortcut with `SteamAppId=480` (or `TRIVIA_STEAM_APPID=480`), or under the real App ID. stderr shows `trivia: steam available, app …, user …, language …`.
+
+Overlay (Windows zip only; Linux has none by design, D-92):
+- Shift+Tab opens the overlay and closes it again
+- a video and an audio question play smoothly with sound; animations not choppy
+- F11 toggles fullscreen; the overlay still opens afterwards
+- keyboard and pad still reach the game after closing the overlay
+
+On-screen keyboard (Big Picture on Linux or Windows, or the Deck; a pad):
+- Player screen, focus the name field, A (or «Escribir»): Steam''s floating keyboard opens near the field
+- typed letters appear in the field; its Enter submits the name
+- desktop Steam (not Big Picture) and without Steam: A opens the letter picker as before
+
+Glyphs (under Steam, desktop or Big Picture):
+- one DualShock/DualSense: pressing a button shows PlayStation glyphs (prompt chips, answer tiles)
+- an Xbox pad or the Deck: Xbox glyphs; one PS + one Xbox pad: Xbox
+- pads still work in the game at all (Steam Input on)
+
+Language (fresh save: delete or move save/game.json first):
+- Steam''s language German → first-start screen preselects Deutsch/Deutsch; Spanish – Spain → es-ES/es; Spanish – Latin America → es/es
+- an existing save keeps its language
+
+Without Steam (Steam closed; Windows zip and Linux tar.gz):
+- full game as in S3 (to level 3 with image, audio, video; quit, restart, player still there); save untouched
+- browser game (`trivia`) unchanged
+
+On failure name the failing rows; the worker adds follow-ups in plan 85 (drop the Windows overlay, switch to ShowGamepadTextInput, or drop Steam Input).', NULL, NULL, '2026-10-13T05:45:41Z', NULL, 652, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -14244,6 +14271,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (474, 648, '2026-10-13T05:40:20Z', '2026-10-13T05:41:46Z', 'done', NULL, 0, 'be76d97bd29faff986ef703f19bb6efae6de4522', 'claude-opus-5-5[1m]', '8e763ec5-fb00-46d1-95d2-de2f76b82d70', 18, 30, 7566, 721990, 49118, 0.688782, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (475, 649, '2026-10-13T05:41:47Z', '2026-10-13T05:43:08Z', 'done', NULL, 0, 'b7cb90b81a32e0dc0abd7018ff7b291590a731e0', 'claude-opus-5-5[1m]', '38276a0a-70cd-4313-b9ea-d5a588335e61', 13, 26, 6714, 521636, 40528, 0.56293520000000008, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (476, 651, '2026-10-13T05:43:08Z', '2026-10-13T05:44:55Z', 'done', NULL, 0, '6a101ec69c3e07982026d8da3aa01ae00474952f', 'claude-opus-5-5[1m]', '438ebddd-f512-4419-8189-c3de852b78b5', 17, 34, 6523, 688437, 40179, 0.5897154, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (477, 652, '2026-10-13T05:44:55Z', '2026-10-13T05:46:06Z', 'blocked', NULL, 0, '633b175a8e5cfcd43383eeaeea2e999c5d37006f', 'claude-opus-5-5[1m]', '665737b0-d2d1-4fc7-965a-138380ed5cec', 14, 26, 5826, 524214, 40767, 0.5476028, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -14366,5 +14394,6 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (459, 65);
 INSERT INTO task_decision (task_id, decision_id) VALUES (464, 35);
 INSERT INTO task_decision (task_id, decision_id) VALUES (479, 50);
 INSERT INTO task_decision (task_id, decision_id) VALUES (650, 68);
+INSERT INTO task_decision (task_id, decision_id) VALUES (652, 72);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');

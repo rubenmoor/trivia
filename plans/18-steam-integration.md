@@ -19,10 +19,11 @@ The shell's own code stays tiny: create a fullscreen window, load `app/client/di
 
 ## Steam features
 - **Steam Cloud:** the save (12) is one JSON file, `<userData>/save/game.json` (`%APPDATA%\trivia`, `~/.config/trivia`; D-72). Steam Auto-Cloud syncs it with no code: root `save/`, non-recursive, pattern `game.json` (the `.tmp` and `backup/` stay local).
-- **Overlay:** the Steam binding needs a call to enable it in Electron; test on Windows and the Deck (fallback on the Deck: the Windows build via Proton).
+- **Overlay:** Windows only (D-92): `addElectronSteamOverlay` on win32 while Steam is up; Linux without overlay (the native GL window froze the game on XWayland); the Deck runs the Windows build via Proton (SW-12). No pause on overlay open.
 - **Achievements:** a few that fit the game (first victory, a win without jokers, a win on Experto, every broad category answered, reaching level 12 in each preset). No grind achievements.
-- **On-screen keyboard:** `ShowFloatingGamepadTextInput` for the player name on the Deck / Big Picture (IN, Deck Verified). SW-8 may let it replace the in-game letter picker under Steam (plan 46); the picker stays the fallback without Steam.
-- **Language:** the default UI and question language come from the Steam client language (I18N-2, D-86): wire it into `guessTag()` in `lib/engine.ts`.
+- **On-screen keyboard:** `ShowFloatingGamepadTextInput` for the player name in Big Picture / on the Deck (14, Deck Verified): A on the name field opens it at the field; elsewhere and without Steam the letter picker (plan 46).
+- **Glyphs:** Steam Input's `GetInputTypeForHandle` picks PlayStation or Xbox glyphs under Steam (14); without Steam `Gamepad.id`.
+- **Language:** a fresh save preselects Steam's language (`GetCurrentGameLanguage`: the game's language in Steam, else the client's) through `guessTag()` in `lib/engine.ts` (`latam` → es, `spanish` → es-ES, `english` → en, `german` → de; unknown → `navigator.language`); the first-start screen still asks (I18N-2, D-86).
 - **Rich presence:** «Nivel 7 de 12» while a level is on screen (`#Level`, values `level`, `levels`), cleared otherwise and on quit; Steam shows only uploaded tokens: `app/desktop/steam-presence.vdf` (latam, spanish, english, german; from `screen.level.kicker` + `screen.level.of`), uploaded by the gamemaster in Steamworks.
 - **Remote Play Together:** enabled in Steamworks once multi-controller input works (IN-6).
 - **No DRM:** the game runs without Steam running (offline living room). Steam binding calls are optional; the game works without them.
@@ -91,7 +92,7 @@ Requirements to plan for: full controller support with correct glyphs (IN), legi
 - [ ] SW-5 Local Windows and Linux builds with electron-builder; offline start test on a clean Windows machine. *Plan: pm plan 56 (Windows zip + Linux tar.gz, media staged from the pool, `trivia-desktop-build`, start-test checklist).*
 - [ ] SW-6 Local CI: per-commit checks (AGENTS.md) and a release check before every Steam upload ("Builds and depots"); no GitHub Actions. *Moved to S5 (pm decision 14, D-73); per-commit checks in AGENTS.md since 2026-10-12; release check: pm plan 10 part 7 (task 261).*
 - [ ] SW-7 Steamworks app: App ID, depots, launch options, supported languages, Cloud path.
-- [ ] SW-8 Steam binding steamworks-ffi-node (D-63): overlay, achievements, on-screen keyboard, language; the game runs without Steam. *Plan: pm plan 85 (bridge `window.trivia.steam`, Steam language → `guessTag()`, overlay spike, on-screen keyboard, `GetInputTypeForHandle` glyphs, packaging); achievements: SW-11.*
+- [x] SW-8 Steam binding steamworks-ffi-node (D-63): overlay, achievements, on-screen keyboard, language; the game runs without Steam. *Done 2026-10-13 (pm plan 85): bridge `window.trivia.steam` (`main.mjs` init/callbacks/shutdown, `preload.cjs`, `lib/desktop.ts` `SteamBridge`; App ID 480 until SW-7, `TRIVIA_STEAM_APPID`; SDK libs gitignored in `app/desktop/steamworks_sdk/` or the flake's SDK 1.62, decision 69), Steam language → `guessTag()`, overlay Windows only (D-92), floating keyboard for the name, `GetInputTypeForHandle` glyphs, rich presence (`steam-presence.vdf`); `unlock()`/`steamId()` pass-through for SW-11 and Cloud. Packaging: task 650. Gamemaster check under Steam: pm task 652's decision.*
 - [ ] SW-9 Media bundle: resize, re-encode, size budget; checked by `media.py`.
 - [ ] SW-10 SteamCMD upload script; build account; beta branch.
 - [ ] SW-11 Achievements: list, icons, Steamworks setup.
