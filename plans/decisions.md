@@ -824,3 +824,19 @@ Template:
   - **Neutral `es`** (pm decision 59): «¡Qué maravilla!» for «¡Qué berraquera!», «Presiona otra vez» for «Pulsa otra vez» (`es-ES` keeps «Pulsa»).
 - Consequences: `app/client/src/locales/{es,es-ES,en,de}.ts`; D-89's "keys stay `S P F T X`" no longer holds for `en`. `picker.letters` per catalog (`de` + `ÄÖÜß`, `en` + `-'`), read by `LetterPicker.svelte`.
 - Supersedes / related: D-6, D-78, D-89; LUI-4, LUI-5; pm decisions 53, 54, 55, 56, 57, 58, 59
+
+## D-92: Steam overlay in the Electron shell: Windows only
+- Date: 2026-10-13
+- Context: SW-8, pm plan 85 task 647. steamworks-ffi-node 0.11.3 `addElectronSteamOverlay` copies every frame (`beginFrameSubscription` + `getBitmap`) into a native OpenGL window Steam hooks; experimental (D-63).
+- Spike (Linux, NixOS, COSMIC Wayland → XWayland via `--ozone-platform=x11`, Intel Iris Xe/Mesa 26, Electron 43.7.7, Steam 480):
+  - Subscribing before the page load gets no frames at all; after `did-finish-load` frames arrive.
+  - With the native window attached the main process freezes within seconds (window stops painting, timers stop, SIGTERM ignored); windowed and fullscreen alike.
+  - Gameoverlayrenderer preloaded outside a Steam launch: Electron dies at start. Shift+Tab, video and audio not reachable on Linux.
+  - Frame copy rate in a bare test page: far below 60 fps (≈ 0.2–9 fps), so even a working Linux path would lag.
+- Decision:
+  - **Overlay on Windows only** (`process.platform === "win32"`), attached after `did-finish-load`, only while Steam is up; `steam.overlay.enabled()` = attached and `ISteamUtils::IsOverlayEnabled`.
+  - **Linux without overlay** (no native window, no X11 switch); the Deck plays the Windows build via Proton when the overlay is wanted there (D-63, SW-12); Deck check in masterplan 10 part 10.
+  - Nothing pauses on overlay open (no timer outside `timed`).
+  - Windows result pending a gamemaster check (pm decision); if it fails there too: no overlay anywhere, achievements still show Steam's own toast.
+- Consequences: `app/desktop/main.mjs`; without Steam nothing changes.
+- Supersedes / related: D-63, D-71; SW-8, SW-12; pm decision 28, plan 85

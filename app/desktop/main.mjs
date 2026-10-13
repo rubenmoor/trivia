@@ -59,6 +59,7 @@ if (app.isPackaged) app.setPath("userData", path.join(app.getPath("appData"), "t
 let win = null;
 let steam = null; // the binding, only while Steam is up
 let steamTimer = null;
+let overlay = false; // Windows only: the native window Steam's overlay draws into (D-92)
 const saveFile = makeSaveFile(saveDir());
 let writing = Promise.resolve();
 let pending = 0;
@@ -175,6 +176,11 @@ async function start() {
     },
   });
   win.once("ready-to-show", () => win.show());
+  // After the load: a frame subscription made before it gets no frames.
+  if (steam && process.platform === "win32")
+    win.webContents.once("did-finish-load", () => {
+      overlay = steam.addElectronSteamOverlay(win, { title: "¡Trivia!" });
+    });
   win.on("closed", () => (win = null));
 
   const wc = win.webContents;
@@ -212,7 +218,7 @@ function bridge() {
   handle("steam:unlock", (id) =>
     steam && typeof id === "string" ? steam.achievements.unlockAchievement(id) : false,
   );
-  handle("steam:overlay-enabled", () => false);
+  handle("steam:overlay-enabled", () => overlay && steam?.utils.isOverlayEnabled() === true);
   handle("steam:show-text-input", () => false);
   handle("steam:input-types", () => null);
   handle("steam:set-presence", () => {});
