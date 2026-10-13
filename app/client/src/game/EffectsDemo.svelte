@@ -1,18 +1,39 @@
 <script lang="ts">
   // /?efectos: every effect, recorded and synthesized, to compare on the TV (dev aid, UI-10).
-  import { effects, sfx, unlock, type Cue } from "./sound.svelte";
+  import { effects, music, sfx, sound, unlock, type Cue, type Track } from "./sound.svelte";
 
   const list = effects();
+  const loops: Track[] = ["normal", "question", "submitted"];
+  let synth = $state(false);
 
   function play(cue: Cue, synth: boolean) {
     unlock();
     sfx(cue, 5, { synth });
+  }
+
+  /** The loops keep looping, so the seam can be heard. */
+  function loop(track: Track | null, s = synth) {
+    unlock();
+    synth = s;
+    music(track, { synth });
   }
 </script>
 
 <aside class="efectos">
   <table>
     <tbody>
+      {#each loops as track (track)}
+        <tr class:on={sound.music === track}>
+          <td>música {track}</td>
+          <td><button onclick={() => loop(track, false)}>grabado</button></td>
+          <td><button onclick={() => loop(track, true)}>sintetizado</button></td>
+        </tr>
+      {/each}
+      <tr>
+        <td>{synth ? "sintetizado" : "grabado"}</td>
+        <td><button onclick={() => loop(sound.music === "question" ? "submitted" : "question")}>corte</button></td>
+        <td><button onclick={() => loop(null)}>parar</button></td>
+      </tr>
       {#each list as { cue, file } (cue)}
         <tr>
           <td>{cue}</td>
@@ -39,5 +60,8 @@
   }
   td {
     padding: 0.1rem 0.4rem;
+  }
+  .on {
+    color: gold;
   }
 </style>

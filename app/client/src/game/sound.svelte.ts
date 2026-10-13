@@ -1,8 +1,8 @@
 // The audio engine (plans/04-ui-tv-display.md, "Audio", UI-8, D-21/D-22): one AudioContext,
 // three channels (music, effects, question media) under a master gain, fades and crossfades.
 // Recorded sounds live in app/client/public/audio/ (free licences, CREDITS.md, UI-10) and replace the
-// synthesized ones they cover; everything else is synthesized: the music loops are generated
-// (same key and tempo family, rising intensity) and each effect cue maps to a recipe below.
+// synthesized ones they cover, the three music loops included. Still synthesized: the effect cues
+// without a recording (recipes below) and the generated loops, the fallback when a file is missing.
 
 /** normal: Start/Level/Select; question: a question on screen; submitted: an answer locked in;
  * roll: the drum roll from «Respuesta final» until the reveal; victory: «Pomp and Circumstance»
@@ -39,10 +39,12 @@ const SAMPLE_NAMES = [
   "papel", "vidrio", "sello", "golpe", "estallido", "victoria", "whoosh", "swoosh-sube", "escoba", "pop",
   "menu-abre", "menu-cierra", "desbloqueado", "hola", "comodin", "comodin-preparado", "comodin-abre", "silbato",
   "trituradora", "latido", "rebobinar", "mira-tic", "corcho", "rasgado", "susurro-papel", "ficha", "cohete",
-  "canon-confeti", "bengalas", "estrellas",
+  "canon-confeti", "bengalas", "estrellas", "musica-normal", "musica-pregunta", "musica-enviada",
 ] as const;
 type Sample = (typeof SAMPLE_NAMES)[number];
 const samples: Partial<Record<Sample, AudioBuffer>> = {};
+let samplesLoaded: Promise<void> = Promise.resolve();
+let samplesReady = false;
 /** Effects played from a recording; `rate` changes the pitch. */
 const SAMPLE_FOR: Partial<Record<Cue, [Sample, ((level: number) => number)?]>> = {
   "applause-big": ["aplausos-gran"],
@@ -110,9 +112,9 @@ export function unlock() {
   const data = noiseBuffer.getChannelData(0);
   for (let i = 0; i < data.length; i++) data[i] = Math.random() * 2 - 1;
   sound.unlocked = true;
-  loadSamples(ctx);
+  samplesLoaded = loadSamples(ctx).then(() => void (samplesReady = true));
   applyVolumes();
-  if (sound.music) startTrack(sound.music, 0.8);
+  if (sound.music) startTrack(sound.music, 0.8, { synth: synthMusic });
 }
 
 export function setVolumes(v: Partial<Volumes>) {
@@ -146,21 +148,29 @@ export function duck(on: boolean) {
 
 // Music ------------------------------------------------------------------------------------------
 
-type Loop = { gain: GainNode; stop: () => void };
+/** `position`: where a recorded loop is, in seconds. */
+type Loop = { gain: GainNode; stop: () => void; position?: () => number };
 let current: Loop | null = null;
+/** `/?efectos`: play the generated loops even if the recordings decoded. */
+let synthMusic = false;
 
 /** Switch the music loop; null = silence. Screen changes fade out and in (04, "Transitions");
  * on the Question screen the changes are sharp cuts: locking in, unlocking, the drum roll, the
  * reveal (gamemaster feedback: the music has to jump when an answer is clicked). */
-export function music(track: Track | null) {
-  if (track === sound.music) return;
+export function music(track: Track | null, opts: { synth?: boolean } = {}) {
+  const synth = opts.synth ?? false;
+  if (track === sound.music && synth === synthMusic) return;
   const from = sound.music;
   sound.music = track;
+  synthMusic = synth;
   if (!ctx) return;
   const inQuestion = (t: Track | null) => t === "question" || t === "submitted" || t === "roll";
   const sharp = inQuestion(from) && (inQuestion(track) || track === null);
+  // question ↔ submitted share tempo and length: the new loop picks up the old one's beat.
+  const beatGoesOn = (from === "question" || from === "submitted") && (track === "question" || track === "submitted");
+  const offset = beatGoesOn ? current?.position?.() : undefined;
   fadeOut(sharp ? (from === "roll" ? 0.15 : 0.08) : 0.6);
-  if (track) startTrack(track, sharp ? 0.05 : 0.8);
+  if (track) startTrack(track, sharp ? 0.05 : 0.8, { synth, offset });
 }
 
 function fadeOut(seconds: number) {
@@ -187,22 +197,25 @@ const ROLL_HZ = 22;
 const ROLL_BUILD_S = 6;
 const hz = (midi: number) => 440 * 2 ** ((midi - 69) / 12);
 
-function startTrack(track: Track, fadeIn: number) {
+/** The recorded loops (OpenGameArt «Music loop variations», CC0): 8 bars at 100 bpm, 19.2 s each,
+ * so a cut between `question` and `submitted` keeps the beat. */
+const MUSIC_FILE = { normal: "musica-normal", question: "musica-pregunta", submitted: "musica-enviada" } as const;
+const LOOP_END = 19.2; // AAC pads the end: loop on the bars, not the file length
+const MUSIC_LEVEL = 1.6; // the music bus is set for the soft generated loops
+
+function startTrack(track: Track, fadeIn: number, opts: { synth?: boolean; offset?: number } = {}) {
   if (!ctx) return;
   const c = ctx;
   const gain = c.createGain();
   gain.gain.setValueAtTime(0, c.currentTime);
   gain.gain.linearRampToValueAtTime(1, c.currentTime + fadeIn);
   gain.connect(musicBus);
-  const beat = 60 / TEMPO[track];
   let next = c.currentTime + 0.05;
-  let step = 0; // eighth notes
   const voices = new Set<AudioScheduledSourceNode>();
   const keep = (n: AudioScheduledSourceNode) => {
     voices.add(n);
     n.onended = () => voices.delete(n);
   };
-  // A lookahead scheduler: notes are placed slightly ahead of time, so the loop never stutters.
   if (track === "victory") {
     // Elgar's finale (US Marine Band, public domain), once and loud: it is the moment, not a
     // background loop. Without the file the Victory screen keeps its cheers only.
@@ -273,6 +286,47 @@ function startTrack(track: Track, fadeIn: number) {
     };
     return;
   }
+  // The three loops: the recording if it decoded (samples load after the unlock: wait for them),
+  // else the generated version.
+  let stopped = false;
+  let stopLoop = () => {};
+  const loop: Loop = {
+    gain,
+    stop: () => {
+      stopped = true;
+      stopLoop();
+      voices.forEach((v) => v.stop());
+      gain.disconnect();
+    },
+  };
+  const begin = () => {
+    if (stopped) return;
+    const buffer = !opts.synth && samples[MUSIC_FILE[track as keyof typeof MUSIC_FILE]];
+    if (!buffer) return void (stopLoop = generate(c, gain, track, keep));
+    const src = c.createBufferSource();
+    src.buffer = buffer;
+    src.loop = true;
+    src.loopEnd = LOOP_END;
+    const level = c.createGain();
+    level.gain.value = MUSIC_LEVEL;
+    src.connect(level).connect(gain);
+    const offset = (opts.offset ?? 0) % LOOP_END;
+    src.start(c.currentTime, offset);
+    keep(src);
+    const startedAt = c.currentTime - offset;
+    loop.position = () => (c.currentTime - startedAt) % LOOP_END;
+  };
+  if (samplesReady) begin();
+  else void samplesLoaded.then(begin);
+  current = loop;
+}
+
+/** The generated loop (fallback): a lookahead scheduler on `gain`; returns its stop. */
+function generate(c: AudioContext, gain: GainNode, track: Track, keep: Keep) {
+  const beat = 60 / TEMPO[track];
+  let next = c.currentTime + 0.05;
+  let step = 0; // eighth notes
+  // A lookahead scheduler: notes are placed slightly ahead of time, so the loop never stutters.
   const timer = setInterval(() => {
     while (next < c.currentTime + 0.2) {
       const bar = Math.floor(step / 8) % 4;
@@ -293,14 +347,7 @@ function startTrack(track: Track, fadeIn: number) {
       step++;
     }
   }, 50);
-  current = {
-    gain,
-    stop: () => {
-      clearInterval(timer);
-      voices.forEach((v) => v.stop());
-      gain.disconnect();
-    },
-  };
+  return () => clearInterval(timer);
 }
 
 type Keep = (n: AudioScheduledSourceNode) => void;
