@@ -11317,7 +11317,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - `Game.svelte` listed in `## Part 5` with every finding and a status.
 - Status per finding (plan 72 report format): `fixed (task <this task>)` / `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`.', '2026-10-12T23:05:49Z', '2026-10-13T10:37:26Z', 517);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (544, 77, 'Review Question.svelte', 'work', 'open', NULL, NULL, 'Task 2 of `plan 77: Game screens review (code review part 5)`. Needs `code-review.md` with `## Part 5` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 77 "Rules for this plan" (screens look, sound and time the same; Spanish UI byte-identical). Read the findings of plans 75/76 on `lib/`, don''t redo them; log a screen''s misuse of a `lib/` API here.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (544, 77, 'Review Question.svelte', 'work', 'done', NULL, '2026-10-13, app/client/src/game/Question.svelte (busy() covers jokers in flight; failed audio/video brings the music back, replay skips it; --sweep from SWEEP_MS; dead/duplicate CSS), theme.css (--placeholder → --pink), code-review.md Part 5 (12 rows); hand-offs added to tasks 545 (restart/budget gating) and 552 (500 ms literal); checks pass; no browser walk-through', 'Task 2 of `plan 77: Game screens review (code review part 5)`. Needs `code-review.md` with `## Part 5` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 77 "Rules for this plan" (screens look, sound and time the same; Spanish UI byte-identical). Read the findings of plans 75/76 on `lib/`, don''t redo them; log a screen''s misuse of a `lib/` API here.
 
 ## First
 - `pm queue` + grep open task bodies for `Question.svelte`: a file an open task still changes gets findings only, no refactor (`superseded by task N`).
@@ -11342,7 +11342,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - `Question.svelte` listed in `## Part 5` with every finding and a status.
-- Status per finding (plan 72 report format): `fixed (task <this task>)` / `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`.', '2026-10-12T23:05:49Z', NULL, 517);
+- Status per finding (plan 72 report format): `fixed (task <this task>)` / `follow-up task N` / `decision N` / `superseded by task N` / `won''t fix: <why>`.', '2026-10-12T23:05:49Z', '2026-10-13T10:40:52Z', 517);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (545, 77, 'Review Overlay.svelte', 'work', 'open', NULL, NULL, 'Task 3 of `plan 77: Game screens review (code review part 5)`. Needs `code-review.md` with `## Part 5` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 77 "Rules for this plan" (screens look, sound and time the same; Spanish UI byte-identical). Read the findings of plans 75/76 on `lib/`, don''t redo them; log a screen''s misuse of a `lib/` API here.
 
 ## First
@@ -11360,6 +11360,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Part 1 rows `handed to part 5` for these files: re-check, final status in `## Part 5`, quoting the part 1 row.
 - Duplication (theme/style copies, animation helpers, phase/copy logic across `Game`/`Overlay`/`Hud`/`copy.ts`): log as candidate for part 10, don''t merge across files here.
 - Core design issue (rewires state between screens, changes behaviour/format): `pm decision add` (recommended option first) + follow-up task in plan 77 linked with `pm task-pending-decision`.
+- Handed from task 544 (`## Part 5` row): «Reiniciar» (`canRestart`) and the joker budget aren''t gated by `questionBusy()`; restart during the reveal wait or a joker animation abandons the game, then Question''s `onanswered`/`onplayed` hands the old game to `Game.svelte`. Gate them (or make `Game.svelte` drop stale callbacks) and log the status.
 
 ## Check
 - Pure logic: throw-away script in `/tmp` for every fix.
@@ -11543,6 +11544,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Part 1 rows `handed to part 5` for these files: re-check, final status in `## Part 5`, quoting the part 1 row.
 - Duplication (theme/style copies, animation helpers, phase/copy logic across `Game`/`Overlay`/`Hud`/`copy.ts`): log as candidate for part 10, don''t merge across files here.
 - Core design issue (rewires state between screens, changes behaviour/format): `pm decision add` (recommended option first) + follow-up task in plan 77 linked with `pm task-pending-decision`.
+- Handed from task 544: `Question.svelte`''s literal 500 ms `popping` reset (coupled to `JokerTray`''s pop-back CSS).
 
 ## Check
 - Pure logic: throw-away script in `/tmp` for every fix.
@@ -15858,6 +15860,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (585, 722, '2026-10-13T10:27:35Z', '2026-10-13T10:29:02Z', 'done', NULL, 0, 'f300b7145bef3f01cc8159030f91fc343a0aa6f3', 'claude-opus-5-5[1m]', '03bfacaf-997d-49f6-b750-8cd85812c029', 19, 36, 6626, 783155, 42761, 0.63138300000000014, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (586, 725, '2026-10-13T10:29:02Z', '2026-10-13T10:29:39Z', 'done', NULL, 0, '144f5db6f7a28a9735517f8fd0e61a52e21dfb43', 'claude-opus-5-5[1m]', '49784496-0e7c-4c19-be86-2e10f450566c', 7, 14, 1875, 207323, 24233, 0.27288460000000003, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (587, 543, '2026-10-13T10:29:39Z', '2026-10-13T10:37:36Z', 'done', NULL, 0, 'e9257b7f4a2cb56334cbed2be5f32e628f2f1b69', 'claude-opus-5-5[1m]', '338e2c88-ea3e-4f6f-99be-ae0517709cfb', 31, 58, 25111, 2400406, 100436, 1.7860211999999998, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (588, 544, '2026-10-13T10:37:36Z', '2026-10-13T10:41:01Z', 'done', NULL, 0, 'a7e2d8ca39b622f2e7656aa1f0e75d6181f230a1', 'claude-opus-5-5[1m]', 'cba6088d-375c-4fe6-8e17-253759d99695', 24, 46, 16880, 1751509, 91262, 1.4181818000000002, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

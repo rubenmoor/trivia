@@ -167,9 +167,9 @@
     player.play().catch(() => {});
   });
 
-  /** True while the final answer is out: nothing may change the question (the overlay checks it). */
+  /** True while the final answer or a joker is out: nothing may change the question (the overlay checks it). */
   export function busy() {
-    return submitted;
+    return submitted || jokerBusy;
   }
 
   onMount(() => {
@@ -187,6 +187,12 @@
 
   function mediaEnded() {
     if (!submitted) music(locked !== null ? "submitted" : "question");
+  }
+
+  /** A missing audio/video: the music comes back as if it had ended. */
+  function playerFailed() {
+    fail();
+    mediaEnded();
   }
 
   /** The music follows the lock (gamemaster feedback): locked in = the intense loop, unlocked =
@@ -251,7 +257,7 @@
   }
 
   function replay() {
-    if (!player) return;
+    if (!player || mediaFailed) return;
     player.currentTime = 0;
     if (!submitted) music(null);
     player.play().catch(() => {});
@@ -467,7 +473,7 @@
   }
 </script>
 
-<div class="question-screen" bind:this={screenEl} class:dark={submitted && !revealed} class:sweeping>
+<div class="question-screen" bind:this={screenEl} class:dark={submitted && !revealed} class:sweeping style:--sweep="{SWEEP_MS}ms">
   <div class="backdrop" in:crossfade|global out:crossfade|global>
     {#if media.type === "video" && media.file_url}
       <!-- svelte-ignore a11y_media_has_caption -->
@@ -477,7 +483,7 @@
         preload="auto"
         oncanplaythrough={() => settle("player")}
         onended={mediaEnded}
-        onerror={fail}
+        onerror={playerFailed}
       ></video>
     {:else if picture && !mediaFailed && decorative}
       <img src={picture} alt="" class="blurred" onload={() => settle("picture")} onerror={fail} />
@@ -503,7 +509,7 @@
       preload="auto"
       oncanplaythrough={() => settle("player")}
       onended={mediaEnded}
-      onerror={fail}
+      onerror={playerFailed}
     ></audio>
   {/if}
 
@@ -632,7 +638,6 @@
             <span class="badge"><Icon name="check" /></span>
           {:else if question.struck.includes(i)}
             <span class="badge"><Icon name="cross" /></span>
-
           {:else if revealed && result && i === result.correct_index}
             <span class="badge"><Icon name="check" /></span>
           {:else if revealed && result && i === result.chosen}
@@ -668,7 +673,7 @@
   .media-missing {
     margin: 0;
     padding: calc(0.2 * var(--u)) calc(0.6 * var(--u));
-    border: calc(0.15 * var(--u)) dashed var(--placeholder);
+    border: calc(0.15 * var(--u)) dashed var(--pink);
     border-radius: calc(0.6 * var(--u));
     color: #ffb8ec;
     background: rgba(60, 10, 50, 0.55);
@@ -781,8 +786,8 @@
   .sweeping .middle,
   .sweeping footer {
     transition:
-      transform var(--sweep, 0.55s) cubic-bezier(0.6, 0, 0.9, 0.5),
-      opacity var(--sweep, 0.55s);
+      transform var(--sweep) cubic-bezier(0.6, 0, 0.9, 0.5),
+      opacity var(--sweep);
     transform: translateX(-120vw) rotate(-8deg);
     opacity: 0;
   }
@@ -933,6 +938,7 @@
     font-size: calc(1.9 * var(--u));
     font-weight: 700;
     text-align: left;
+    position: relative;
     transition:
       transform 0.2s var(--spring),
       opacity 0.3s,
@@ -1056,13 +1062,8 @@
       box-shadow: 0 0 0 200vmax rgba(5, 8, 16, 0);
     }
   }
-  .answer {
-    position: relative;
-  }
   .answer.shatter {
     z-index: 7;
-  }
-  .answer.shatter {
     background: var(--coral);
     animation: shake 0.3s ease-in-out 2;
   }
@@ -1093,10 +1094,6 @@
   .answer.target {
     border: calc(0.25 * var(--u)) solid var(--coral);
     box-shadow: 0 0 calc(1.6 * var(--u)) rgba(255, 84, 112, 0.45);
-  }
-  .crosshair {
-    color: var(--coral);
-    animation: spin 2.5s linear infinite;
   }
   @keyframes spin {
     to {
