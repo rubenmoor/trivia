@@ -5,9 +5,9 @@ printable joker cards, with the question API. Never ships (D-35).
     trivia-authoring [--port 8001] [--host 127.0.0.1]   (or: python3 authoring/server/main.py)
 
 It edits authoring/data/questions.json (translations: questions.<locale>.json) and re-exports
-app/data/pool.json (pool.<locale>.json) after every change, so the game (port 8000) sees reviews at once. At startup it turns the questions flagged in the
-game (state/game.json's flags) into needs-work reviews (D-47) and prints the link to every question
-that isn't approved (/review?status=!approved, RV-22).
+app/data/pool.json (pool.<locale>.json) after every change, so the game (port 8000) sees reviews at once.
+At startup it turns the questions flagged in the game (state/game.json's flags) into needs-work reviews
+(D-47) and prints the link to every question that isn't approved (/review?status=!approved, RV-22).
 
 API:
     GET  /api/categories                           every bundle's broad categories with subcategories (D-19, D-43)
@@ -60,6 +60,7 @@ API:
     GET  /reports/<batch>.md                       a batch report (authoring/reports/), as plain text
     GET  /media?url=<file_url>                     a picked media file from the cache (any question in the
                                                    source pool, approved or not); downloaded first on a miss
+    Other /api/ paths: 404; a bad body or query: 400; a crash: 500 {"error": "server error: …"}.
 Questions in responses carry `media_candidates` and `background_candidates`
 (from work/media/, or null if not fetched) and `audit` (the newest back-audit, else work/<batch>/audit/<id>.json,
 or null; plans 16, 57) and `licence`: per picked slot {"verdict": "ok"|"replace", "reasons": [...]}
@@ -95,6 +96,10 @@ REVIEWERS = {"human", "llm"}
 _lock = threading.Lock()
 
 
+class NoQuestion(KeyError):
+    """No question (or translation) with this id: 404."""
+
+
 def load_pool():
     return json.loads(POOL.read_text(encoding="utf-8"))
 
@@ -115,7 +120,7 @@ def update_question(qid, change):
                 change(q)
                 save_pool(data)
                 return q
-    raise KeyError(qid)
+    raise NoQuestion(qid)
 
 
 def update_translation(locale):
@@ -127,10 +132,12 @@ def update_translation(locale):
                 if t["id"] == qid:
                     change(t)
                     translations.save(locale, doc)
-                    text = translations.export_text(locale, load_pool())
-                    layout.LOCALE_POOL(locale).write_text(text, encoding="utf-8")
+                    out = layout.LOCALE_POOL(locale)
+                    tmp = out.with_suffix(".tmp")
+                    tmp.write_text(translations.export_text(locale, load_pool()), encoding="utf-8")
+                    tmp.replace(out)
                     return t
-        raise KeyError(qid)
+        raise NoQuestion(qid)
     return update
 
 
@@ -166,7 +173,7 @@ def item_of(qid, locale):
         return with_extras(q)
     t = next((t for t in translations.load(locale)["questions"] if t["id"] == qid), None)
     if t is None:
-        raise KeyError(qid)
+        raise NoQuestion(qid)
     return locale_item(t, q, locale)
 
 
@@ -202,6 +209,58 @@ def locale_questions(locale, query):
     return [locale_item(t, q, locale) for t, q in pairs]
 
 
+def source_questions(query):
+    """GET /api/questions without a locale: the source pool, filtered."""
+    qs = load_pool()["questions"]
+    if "batch" in query:
+        want = None if query["batch"] == "none" else query["batch"]
+        qs = [q for q in qs if q.get("batch") == want]
+    if "run" in query:
+        ids = spot_checks.run_ids(query["run"]) or []
+        by_id = {q["id"]: q for q in qs}
+        qs = [by_id[i] for i in ids if i in by_id]
+    if "status" in query:
+        qs = [q for q in qs if matches_status(q, query["status"])]
+    if "bundle" in query:
+        qs = [q for q in qs if q.get("bundle") == query["bundle"]]
+    if "reviewer" in query:
+        want = None if query["reviewer"] == "none" else query["reviewer"]
+        qs = [q for q in qs if (q.get("review") or {}).get("reviewer") == want]
+    if "subcategory" in query:
+        qs = [q for q in qs if q["subcategory"] == query["subcategory"]]
+    if query.get("media") == "missing":
+        qs = [q for q in qs if not q["media"].get("file_url")]
+    if query.get("sample") and (group := query.get("batch") or query.get("run")):
+        by_id = {q["id"]: q for q in qs}
+        qs = [by_id[i] for i in spot_checks.sample(group) if i in by_id]
+    if query.get("licence") == "replace":
+        qs = [q for q in qs if media.to_replace(q)]
+    if query.get("audit") == "flagged":
+        qs = [q for q in qs if (a := spot_checks.audit_of(q)) and is_major(a)]
+    return [with_extras(q) for q in qs]
+
+
+def questions_of(query):
+    locale = locale_of(query.get("locale"))
+    return locale_questions(locale, query) if locale else source_questions(query)
+
+
+def media_stats_of(query):
+    """GET /api/stats/media: a bundle's approved questions; with a locale the sources of its playing translations."""
+    locale = locale_of(query.get("locale"))
+    bundle = query.get("bundle")
+    qs = [q for q in load_pool()["questions"] if q["status"] == "approved" and (not bundle or q.get("bundle") == bundle)]
+    if locale:
+        tr = {t["id"]: t for t in translations.load(locale)["questions"]}
+        qs = [q for q in qs if q["id"] in tr and translations.plays(tr[q["id"]], q)]
+    return media_stats.build(qs)
+
+
+def names_of(query):
+    locale = locale_of(query.get("locale"))
+    return categories.load_names(locale) if locale else None
+
+
 def slot_of(body):
     slot = body.get("slot", "media")
     if slot not in media.SLOTS:
@@ -219,7 +278,7 @@ def find_question(qid):
     for q in load_pool()["questions"]:
         if q["id"] == qid:
             return q
-    raise KeyError(qid)
+    raise NoQuestion(qid)
 
 
 def pick_media(qid, index, slot):
@@ -253,7 +312,7 @@ def set_bundle(qid, bundle):
 
 def set_difficulty(qid, difficulty, update=update_question):
     lo, hi = json.loads(layout.AGE_GROUPS.read_text(encoding="utf-8"))["scale"]
-    if not isinstance(difficulty, int) or not lo <= difficulty <= hi:
+    if type(difficulty) is not int or not lo <= difficulty <= hi:  # bool is an int subclass
         raise ValueError(f"difficulty must be an integer from {lo} to {hi}")
 
     def change(q):
@@ -265,7 +324,7 @@ def set_difficulty(qid, difficulty, update=update_question):
 
 
 def set_review(qid, review, update=update_question):
-    """Re-read the pool, change one question, write atomically (08, "API").
+    """Set or reset one question's review, or with `update` its translation's.
     A new decision is a human review; it keeps the LLM review it replaces as `previous` (D-33).
     A review that names its reviewer is an undo putting an earlier review back as it was."""
     restore = review is not None and "reviewer" in review
@@ -300,7 +359,7 @@ def set_translatable(qid, value):
         data = load_pool()
         q = next((q for q in data["questions"] if q["id"] == qid), None)
         if q is None:
-            raise KeyError(qid)
+            raise NoQuestion(qid)
         if value:
             q.pop("translatable", None)
         else:
@@ -352,6 +411,19 @@ def matches_status(q, want):
     return q["status"] != want[1:] if want.startswith("!") else q["status"] == want
 
 
+GET_API = {
+    "/api/questions": questions_of,
+    "/api/categories": lambda query: categories.load(),
+    "/api/spot-checks": lambda query: {"size": spot_checks.size(), "problems": PROBLEMS, "checks": spot_checks.load()},
+    "/api/overview": lambda query: overview.build(load_pool()["questions"], load_bundles()),
+    "/api/stats/media": media_stats_of,
+    "/api/age-groups": lambda query: json.loads(layout.AGE_GROUPS.read_text(encoding="utf-8")),
+    "/api/bundles": lambda query: load_bundles(),
+    "/api/names": names_of,
+    "/api/targets": lambda query: targets.load_all(),
+}
+
+
 class Handler(BaseHandler):
     dist = layout.DIST
     pool_file = POOL
@@ -370,72 +442,17 @@ class Handler(BaseHandler):
 
     def do_GET(self):
         url = urlparse(self.path)
-        if url.path == "/api/questions":
-            query = {k: v[0] for k, v in parse_qs(url.query).items()}
+        route = GET_API.get(url.path)
+        if route:
             try:
-                locale = locale_of(query.get("locale"))
+                body = route({k: v[0] for k, v in parse_qs(url.query).items()})
             except ValueError as e:
                 return self.send_json(400, {"error": str(e)})
-            if locale:
-                return self.send_json(200, locale_questions(locale, query))
-            qs = load_pool()["questions"]
-            if "batch" in query:
-                want = None if query["batch"] == "none" else query["batch"]
-                qs = [q for q in qs if q.get("batch") == want]
-            if "run" in query:
-                ids = spot_checks.run_ids(query["run"]) or []
-                by_id = {q["id"]: q for q in qs}
-                qs = [by_id[i] for i in ids if i in by_id]
-            if "status" in query:
-                qs = [q for q in qs if matches_status(q, query["status"])]
-            if "bundle" in query:
-                qs = [q for q in qs if q.get("bundle") == query["bundle"]]
-            if "reviewer" in query:
-                want = None if query["reviewer"] == "none" else query["reviewer"]
-                qs = [q for q in qs if (q.get("review") or {}).get("reviewer") == want]
-            if "subcategory" in query:
-                qs = [q for q in qs if q["subcategory"] == query["subcategory"]]
-            if query.get("media") == "missing":
-                qs = [q for q in qs if not q["media"].get("file_url")]
-            if query.get("sample") and (group := query.get("batch") or query.get("run")):
-                by_id = {q["id"]: q for q in qs}
-                qs = [by_id[i] for i in spot_checks.sample(group) if i in by_id]
-            if query.get("licence") == "replace":
-                qs = [q for q in qs if media.to_replace(q)]
-            if query.get("audit") == "flagged":
-                qs = [q for q in qs if (a := spot_checks.audit_of(q)) and is_major(a)]
-            return self.send_json(200, [with_extras(q) for q in qs])
-        if url.path == "/api/categories":
-            return self.send_json(200, categories.load())
-        if url.path == "/api/spot-checks":
-            return self.send_json(200, {"size": spot_checks.size(), "problems": PROBLEMS, "checks": spot_checks.load()})
-        if url.path == "/api/overview":
-            return self.send_json(200, overview.build(load_pool()["questions"], load_bundles()))
-        if url.path == "/api/stats/media":
-            query = {k: v[0] for k, v in parse_qs(url.query).items()}
-            try:
-                locale = locale_of(query.get("locale"))
-            except ValueError as e:
-                return self.send_json(400, {"error": str(e)})
-            bundle = query.get("bundle")
-            qs = [q for q in load_pool()["questions"]
-                  if q["status"] == "approved" and (not bundle or q.get("bundle") == bundle)]
-            if locale:
-                tr = {t["id"]: t for t in translations.load(locale)["questions"]}
-                qs = [q for q in qs if q["id"] in tr and translations.plays(tr[q["id"]], q)]
-            return self.send_json(200, media_stats.build(qs))
-        if url.path == "/api/age-groups":
-            return self.send_json(200, json.loads(layout.AGE_GROUPS.read_text(encoding="utf-8")))
-        if url.path == "/api/bundles":
-            return self.send_json(200, load_bundles())
-        if url.path == "/api/names":
-            try:
-                locale = locale_of(parse_qs(url.query).get("locale", [None])[0])
-            except ValueError as e:
-                return self.send_json(400, {"error": str(e)})
-            return self.send_json(200, categories.load_names(locale) if locale else None)
-        if url.path == "/api/targets":
-            return self.send_json(200, targets.load_all())
+            except Exception as e:  # noqa: BLE001 — an answer, not a dropped connection
+                return self.send_json(500, {"error": f"server error: {type(e).__name__}: {e}"})
+            return self.send_json(200, body)
+        if url.path.startswith("/api/"):
+            return self.send_json(404, {"error": "not found"})
         if url.path.startswith("/reports/"):
             return self.send_report(url.path.removeprefix("/reports/"))
         if url.path == "/media":
@@ -497,14 +514,14 @@ class Handler(BaseHandler):
             else:
                 return self.send_json(404, {"error": "not found"})
             return self.send_json(200, with_extras(q))
-        except KeyError:
+        except NoQuestion:
             return self.send_json(404, {"error": f"no question {qid}"})
         except (ValueError, TypeError, AttributeError) as e:
             return self.send_json(400, {"error": str(e)})
         except download.RateLimited as e:
             return self.send_json(429, {"error": str(e)})
         except OSError as e:  # network problems talking to a media provider (D-45)
-            return self.send_json(502, {"error": f"media search: {e}"})
+            return self.send_json(502, {"error": f"media provider: {e}"})
         except Exception as e:  # noqa: BLE001 — never leave the review tool without an answer
             return self.send_json(500, {"error": f"server error: {type(e).__name__}: {e}"})
 
