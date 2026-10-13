@@ -8,7 +8,7 @@ import { categoryOf } from "./pool.ts";
 import { casefold, pyLen, pySplitJoin, pyTruthy } from "./pycompat.ts";
 import * as selection from "./selection.ts";
 import type { EngineData, GameRow, GameState, Io, Outcome, SaveData } from "./state.ts";
-import { GameError, SPANISH, UNLIMITED, gameLocale, nextId, transact, trial, withDefaults } from "./state.ts";
+import { GameError, SPANISH, UNLIMITED, gameLocale, newest, nextId, transact, trial, withDefaults } from "./state.ts";
 
 export { GameError, UNLIMITED };
 export {
@@ -84,7 +84,7 @@ interface Latest {
 
 /** The newest game with its state (a copy, defaults filled in), or null. */
 function latest(work: SaveData): Latest | null {
-  const row = work.games.reduce<GameRow | null>((m, g) => (m === null || g.id > m.id ? g : m), null);
+  const row = newest(work.games);
   return row ? { row, state: withDefaults(structuredClone(row.state)) } : null;
 }
 
@@ -186,7 +186,7 @@ export interface ChoiceArgs extends ChoiceInput {
 function newestGame(save: SaveData, player?: unknown): GameRow | null {
   const pid = player ? playerId(save, cleanName(player)) : null;
   return pid === null ? null
-    : save.games.filter((g) => g.player_id === pid).reduce<GameRow | null>((m, g) => (m === null || g.id > m.id ? g : m), null);
+    : newest(save.games.filter((g) => g.player_id === pid));
 }
 
 /** The mode of the player's newest game if built, else gamemaster (MD-7). */

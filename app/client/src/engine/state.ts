@@ -57,6 +57,10 @@ export interface GameRow {
 
 export const gameLocale = (row: GameRow): string => row.locale ?? "es";
 
+/** The game with the highest id, or null. */
+export const newest = (games: readonly GameRow[]): GameRow | null =>
+  games.reduce<GameRow | null>((m, g) => (m === null || g.id > m.id ? g : m), null);
+
 interface SeenRow {
   question_id: string;
   /** 0: the game was deleted (GF-7); game IDs get reused. */

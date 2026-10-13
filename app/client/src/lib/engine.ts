@@ -3,7 +3,7 @@ import type { ErrorBody, Reply } from "../engine/api.ts";
 import { randomSeed, seededRng } from "../engine/rng.ts";
 import { repair, supply } from "../engine/game.ts";
 import { defaultLanguage, parseSave } from "../engine/save.ts";
-import { gameLocale, type EngineData, type Io, type Language, type SaveData } from "../engine/state.ts";
+import { gameLocale, newest, type EngineData, type Io, type Language, type SaveData } from "../engine/state.ts";
 import { GameError } from "./api.ts";
 import type { Supply } from "./types.ts";
 import { availableLocales, loadEngineData } from "./data.ts";
@@ -153,8 +153,8 @@ export async function localeSupply(): Promise<Record<string, Supply>> {
 export type Scope = "game" | "next";
 
 function dataFor({ save }: Loaded, scope: Scope): Promise<EngineData> {
-  const newest = save.games.reduce<SaveData["games"][number] | null>((m, g) => (m && m.id > g.id ? m : g), null);
-  return loadEngineData(scope === "game" && newest ? gameLocale(newest) : save.language.questions);
+  const row = newest(save.games);
+  return loadEngineData(scope === "game" && row ? gameLocale(row) : save.language.questions);
 }
 
 export type Route<T> = (save: SaveData, data: EngineData, io: Io) => Reply<T>;

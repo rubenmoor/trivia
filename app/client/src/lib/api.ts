@@ -4,11 +4,11 @@ import type { Outlook } from "../engine/outlook.ts";
 export type { Outlook };
 import { bundlesFor } from "../engine/pool.ts";
 import { setFlag as saveFlag, type FlagInput } from "../engine/save.ts";
-import { withDefaults, type EngineData, type SaveData } from "../engine/state.ts";
+import { newest, withDefaults, type EngineData, type SaveData } from "../engine/state.ts";
 import { language as fetchLanguage, localeSupply, read, run, type Scope } from "./engine.ts";
 import type { Choice, Difficulty, ErrorInfo, Flagged, Game, GameMode, JokerBudget, JokerEvent, JokerName, Language, Player, Supply } from "./types";
 
-// The game's only door to the referee: the TS engine on an in-memory save, persisted via /api/save (plan 50, PORT-7).
+// The game's only door to the referee: the TS engine on an in-memory save, persisted by lib/store.ts (plan 50, PORT-7).
 
 /** A refused request (D-57): `code` and `params` for errorText(), `message` in English; `supply` is set
  * when the pool can't fill a new game (GF-5). */
@@ -25,8 +25,16 @@ export class GameError extends Error implements ErrorInfo {
   }
 }
 
+/** The JSON error body of a refused request (engine/api.ts `ErrorBody`, app/server, authoring/server). */
+interface ErrorJson {
+  error?: unknown;
+  params?: ErrorInfo["params"];
+  message?: string;
+  supply?: Supply | null;
+}
+
 /** The error of a failed response: GameError if the body has `error`, else a plain Error. */
-function failure(res: Response, body: Record<string, any>): Error {
+function failure(res: Response, body: ErrorJson): Error {
   if (typeof body.error !== "string") return new Error(`HTTP ${res.status} ${res.statusText}`);
   return new GameError(body.error, body.params ?? {}, body.message ?? body.error, body.supply ?? null);
 }
@@ -67,8 +75,8 @@ export async function deletePlayer(name: string): Promise<Player[]> {
 
 /** Flagged questions (GM-5, decision 60), newest first; the running question's answer stays hidden. */
 function flagList(save: SaveData, data: EngineData): Flagged[] {
-  const newest = save.games.reduce<SaveData["games"][number] | null>((m, g) => (m && m.id > g.id ? m : g), null);
-  const live = newest?.result === null && newest.state.phase === "question" ? newest.state.current : null;
+  const g = newest(save.games);
+  const live = g?.result === null && g.state.phase === "question" ? g.state.current : null;
   return Object.entries(save.flags)
     .map(([id, f]) => {
       const q = data.byId.get(id);
@@ -89,7 +97,7 @@ export async function setFlag(id: string, flag: FlagInput): Promise<Flagged[]> {
       return { save: out, status: 200, body: flagList(out, data) };
     } catch (e) {
       const message = e instanceof Error ? e.message : String(e);
-      return { save, status: 400, body: { error: message, message } };
+      return { save, status: 400, body: { error: "flag_invalid", message } };
     }
   });
 }
@@ -163,7 +171,7 @@ export async function fetchGameSettings(settings: Game["settings"]): Promise<Cho
 /** Joker uses so far in the running game (MD-12: the menu edits uses left), null without one. */
 export async function fetchJokersUsed(): Promise<Record<JokerName, number> | null> {
   return read((save) => {
-    const g = save.games.reduce<SaveData["games"][number] | null>((m, x) => (m && m.id > x.id ? m : x), null);
+    const g = newest(save.games);
     return { save, status: 200, body: g?.result === null ? jokersUsed(withDefaults(structuredClone(g.state))) : null };
   });
 }
@@ -220,5 +228,5 @@ export async function setLanguage(language: Language): Promise<Language> {
   return (await run((save) => engine.setLanguage(save, { ...language }, { ui, questions }))).language;
 }
 
-/** The age group of a choice without one (plan 27). */
+/** Choice limits and defaults for the configure screen and overlay (engine/choice.ts). */
 export { BUILT_MODES, CARDS, CARDS_MAX, DEFAULT_AGE_GROUP, DIFFICULTY_MAX, LEVELS_MAX, STANDARD_JOKERS } from "../engine/game.ts";

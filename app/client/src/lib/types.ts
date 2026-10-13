@@ -1,5 +1,5 @@
-// Mirrors the playable pool, app/data/pool.json (plans/02-question-pool.md, D-35). The authoring
-// side (authoring/ui/src/lib/types.ts) extends these with the review and pipeline fields.
+// Shared types: the playable pool, app/data/pool.json (plans/02-question-pool.md, D-35), the engine's views
+// and credits.json. The authoring side (authoring/ui/src/lib/types.ts) extends the pool types with review fields.
 
 export type Status = "draft" | "approved" | "rejected" | "needs_work";
 

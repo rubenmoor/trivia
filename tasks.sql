@@ -11247,7 +11247,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - All eight files listed in `## Part 4` (no-findings rows included), every finding with a status.', '2026-10-12T23:05:00Z', '2026-10-13T10:20:15Z', 516);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (541, 76, 'Review API client, types and errors', 'work', 'open', NULL, NULL, 'Task 3 of `plan 76: Client lib, locales and boot review (code review part 4)`. Needs `code-review.md` with `## Part 4` (plan 73); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 76 "Rules for this plan". Read plan 75''s `## Part 3` findings on `engine/api.ts` and `engine/state.ts` errors first; don''t redo them.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (541, 76, 'Review API client, types and errors', 'work', 'done', NULL, '2026-10-13, app/client/src/lib/api.ts, lib/engine.ts, lib/types.ts, engine/state.ts, engine/game.ts, code-review.md', 'Task 3 of `plan 76: Client lib, locales and boot review (code review part 4)`. Needs `code-review.md` with `## Part 4` (plan 73); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 76 "Rules for this plan". Read plan 75''s `## Part 3` findings on `engine/api.ts` and `engine/state.ts` errors first; don''t redo them.
 
 ## First
 - `pm queue` + grep open task bodies for `lib/api.ts`, `types.ts`, `errors.ts`, `names.svelte.ts`: a file an open task still changes (e.g. `task 474`/`475`, `task 391: Configure game screen (MD-11 UI)`, `task 392: Gamemaster menu (MD-12 UI)`) gets findings only (`superseded by task N`).
@@ -11268,7 +11268,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client` pass, plus the lint pass if part 10 (plan 82) has adopted one by then.
 
 ## Done when
-- All four files listed in `## Part 4` (no-findings rows included), every finding with a status.', '2026-10-12T23:05:00Z', NULL, 516);
+- All four files listed in `## Part 4` (no-findings rows included), every finding with a status.', '2026-10-12T23:05:00Z', '2026-10-13T10:24:16Z', 516);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (542, 76, 'Review i18n, locales and the literal check', 'work', 'open', NULL, NULL, 'Task 4 of `plan 76: Client lib, locales and boot review (code review part 4)`, the last of part 4. Needs `code-review.md` with `## Part 4` (plan 73); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 76 "Rules for this plan".
 
 ## First
@@ -14130,6 +14130,15 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## If "Keep as is"
 - README: one bullet how to move a broken `state/game.json` away; nothing else.', '2026-10-13T10:18:58Z', NULL, 540);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (725, 76, 'Catalog text for the bad_save error', 'work', 'open', NULL, NULL, 'Follow-up of `task 541: Review API client, types and errors` (`code-review.md` `## Part 4`).
+
+## Why
+- A failed save write with code `bad_save` (`lib/store.ts`: desktop `writeSave` rejects, or `/api/save` 400 from `app/server/save.py`: invalid JSON, save over 10 MB) is thrown to the screen; `lib/errors.ts` `errorText` finds no `error.bad_save` key and shows the English `can''t save: …` message on a Spanish/German TV.
+- The other codes without a key (`answer_invalid`, `budget_*`, `card_invalid`, `joker_unknown`, `language_unknown`, `no_cards`, `no_game`, `no_question`, `nothing_to_undo`, `skip_not_question`, `server_error`, `flag_invalid`) are internal/guarded by the UI: leave them.
+
+## What
+- `error.bad_save` in `app/client/src/locales/es.ts`, `en.ts`, `de.ts` (es-ES inherits): short, says the save could not be written and the game goes on; ask the gamemaster for the wording with `pm decision add` if unsure.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass; update the `code-review.md` row''s status.', '2026-10-13T10:23:30Z', NULL, 541);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -15826,6 +15835,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (580, 723, '2026-10-13T10:08:33Z', '2026-10-13T10:10:45Z', 'done', NULL, 0, '057178421e0f47eceaac25a387af27982dcd1c0a', 'claude-opus-5-5[1m]', 'ddfe6b33-c97b-4b8b-9cf2-bb4796d9d6e8', 19, 34, 11158, 1082708, 71562, 1.0123336, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (581, 539, '2026-10-13T10:10:46Z', '2026-10-13T10:14:18Z', 'done', NULL, 0, '3444b98ed8e444bc5edcfd83e6669f29201ff9bc', 'claude-opus-5-5[1m]', '332c0e88-56d6-4859-a590-5e80d4b7b38f', 28, 48, 17312, 1509770, 74028, 1.2406100000000002, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (582, 540, '2026-10-13T10:14:19Z', '2026-10-13T10:20:24Z', 'done', NULL, 0, '017075430d190167a786e10ac51f11bb49255a2b', 'claude-opus-5-5[1m]', 'ff27966f-8675-4fd5-9954-0c917c1ef2be', 56, 100, 28554, 3649514, 90520, 2.0255428, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (583, 541, '2026-10-13T10:20:25Z', '2026-10-13T10:24:25Z', 'done', NULL, 0, 'c91ed9ffefa4f0610444506da96bbf738459d322', 'claude-opus-5-5[1m]', '06bb6a03-b4ba-479d-819f-5f84c512dba0', 35, 66, 18317, 2221032, 80305, 1.4532504000000004, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
