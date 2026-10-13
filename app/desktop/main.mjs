@@ -5,7 +5,7 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { makeResolver } from "./resolve.mjs";
-import { makeSaveFile } from "./save.mjs";
+import { makeSaveFile, migrateToLocal } from "./save.mjs";
 
 const ORIGIN = "app://trivia/";
 const BACKGROUND = "#0b1120"; // --night-900
@@ -35,6 +35,15 @@ function saveDir() {
   return app.isPackaged ? path.join(app.getPath("userData"), "save") : path.join(REPO, "state", "desktop");
 }
 
+/** One folder per Steam user, `local/` without Steam (plan 87); `TRIVIA_SAVE_DIR` is the folder itself. */
+async function userSaveDir() {
+  const base = saveDir();
+  if (process.env.TRIVIA_SAVE_DIR) return base;
+  await migrateToLocal(base);
+  const id = steam ? String(steam.getStatus().steamId) : "";
+  return path.join(base, /^[1-9]\d*$/.test(id) ? id : "local");
+}
+
 /** Folder holding `redistributable_bin/` (Valve licence, not in git); dev falls back to the flake's. */
 function steamSdkDir() {
   if (app.isPackaged) return path.join(process.resourcesPath, "steamworks_sdk");
@@ -61,7 +70,7 @@ let steam = null; // the binding, only while Steam is up
 let steamTimer = null;
 let steamInput = false;
 let overlay = false; // Windows only: the native window Steam's overlay draws into (D-92)
-const saveFile = makeSaveFile(saveDir());
+let saveFile = null; // set in start(), after Steam
 let writing = Promise.resolve();
 let pending = 0;
 
@@ -146,11 +155,13 @@ async function importSave(file) {
 }
 
 async function start() {
+  await startSteam();
+  saveFile = makeSaveFile(await userSaveDir());
+  console.error(`trivia: save ${saveFile.file}`);
   await saveFile.dropStaleTemp();
   const importFrom = importArg();
   if (importFrom) await importSave(importFrom);
 
-  await startSteam();
   const dirs = roots();
   if (!existsSync(path.join(dirs.dist, "index.html"))) {
     dialog.showErrorBox("¡Trivia!", "client not built: run `npm run build -w app/client`");

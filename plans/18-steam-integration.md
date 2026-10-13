@@ -18,7 +18,7 @@ The shell's own code stays tiny: create a fullscreen window, load `app/client/di
 - Credits: the shell adds its own entry (Electron, MIT, plus the Chromium licence file Electron ships) to the generator `app/client/credits.ts` (PUB-5, plan 47).
 
 ## Steam features
-- **Steam Cloud:** the save (12) is one JSON file, `<userData>/save/game.json` (`%APPDATA%\trivia`, `~/.config/trivia`; D-72). Steam Auto-Cloud syncs it with no code: root `save/`, non-recursive, pattern `game.json` (the `.tmp` and `backup/` stay local).
+- **Steam Cloud:** the save (12) is one JSON file per Steam user, `<userData>/save/<steamid64>/game.json` (`%APPDATA%\trivia`, `~/.config/trivia`; D-72, plan 87); without Steam `save/local/game.json`, S3's `save/game.json` migrated there at start. Steam Auto-Cloud syncs it with no code: subdirectory `trivia/save/{64BitSteamID}`, non-recursive, pattern `game.json` (the `.tmp`, `backup/`, `local/` and other users' folders stay local).
 - **Overlay:** Windows only (D-92): `addElectronSteamOverlay` on win32 while Steam is up; Linux without overlay (the native GL window froze the game on XWayland); the Deck runs the Windows build via Proton (SW-12). No pause on overlay open.
 - **Achievements:** a few that fit the game (first victory, a win without jokers, a win on Experto, every broad category answered, reaching level 12 in each preset). No grind achievements.
 - **On-screen keyboard:** `ShowFloatingGamepadTextInput` for the player name in Big Picture / on the Deck (14, Deck Verified): A on the name field opens it at the field; elsewhere and without Steam the letter picker (plan 46).
@@ -65,7 +65,7 @@ Date: · Build commit:
 | Starts fullscreen; F11 toggles | | |
 | Keyboard-only game to level 3, with an image, an audio and a video question; sound plays | | |
 | «Salir del juego», restart: the player is still there | | |
-| Save at `%APPDATA%\trivia\save\game.json` | | |
+| Save at `%APPDATA%\trivia\save\<steamid64 or local>\game.json` | | |
 | `CREDITS.md` in the folder | | |
 
 ### Linux x64 (no Nix)
@@ -78,7 +78,7 @@ Date: · Build commit:
 | Starts fullscreen; F11 toggles | | |
 | Keyboard-only game to level 3, with an image, an audio and a video question; sound plays | | |
 | «Salir del juego», restart: the player is still there | | |
-| Save at `~/.config/trivia/save/game.json` | | |
+| Save at `~/.config/trivia/save/<steamid64 or local>/game.json` | | |
 | `CREDITS.md` in the folder | | |
 
 ## Steam Deck Verified

@@ -42,7 +42,7 @@ Open the page on the TV's browser and go fullscreen. Pick or type a player name 
 - `M` (or the faint flag next to the menu button) flags the question for review: a dialog with an optional note, `Enter` flags, `Esc` cancels; on a flagged question it edits the note or unflags. The next start of `trivia-authoring` marks it «needs work» with the note; the menu's «Preguntas marcadas» lists the flags with «Copiar» for players without authoring tools.
 - Game saves, burned questions (questions a player has already seen) and flags live in `state/game.json`. Delete it to reset everything. An old `state/game.sqlite` + `flags.json` is migrated into it once at start; both stay as backups.
 - The game loads the pool once per page: reload the page (F5) after `qgen export` or a review session.
-- Desktop shell (`trivia-desktop`, packaged builds): the save is `save/game.json` in `%APPDATA%\trivia` (Windows) or `~/.config/trivia` (Linux, Steam Deck); in this checkout `state/desktop/game.json`; `TRIVIA_SAVE_DIR` overrides. A broken or newer save moves to `save/backup/` and the game starts fresh.
+- Desktop shell (`trivia-desktop`, packaged builds): the save is `save/<steamid64>/game.json` per Steam user, `save/local/game.json` without Steam, in `%APPDATA%\trivia` (Windows) or `~/.config/trivia` (Linux, Steam Deck); in this checkout `state/desktop/<steamid64 or local>/game.json`; `TRIVIA_SAVE_DIR` overrides (the save is then `$TRIVIA_SAVE_DIR/game.json`). An older `save/game.json` moves to `save/local/` at start. A broken or newer save moves to `backup/` beside it and the game starts fresh.
 - Bring the browser game's save over: `trivia-desktop --import-save state/game.json` (only when no desktop save exists yet), or copy `state/game.json` into the save folder.
 - The game never downloads media: sync before game night (next section). `trivia` prints at start how many pool files are missing from the cache; a missing file shows the question's media-failed state.
 
@@ -116,7 +116,7 @@ trivia-authoring & npm run dev -w authoring/ui     # authoring UI with hot reloa
 npm run check                                      # type-check both clients
 npm test                                           # game engine tests (node:test)
 npm run check:literals -w app/client               # on-screen literals outside the UI catalog (src/game by default)
-npm run build -w app/client && trivia-desktop      # the game in the Electron desktop shell, no Python (save: state/desktop/game.json)
+npm run build -w app/client && trivia-desktop      # the game in the Electron desktop shell, no Python (save: state/desktop/local/game.json)
 ```
 
 The dev servers forward `/api` and `/media` to the Python servers, so run both. Before changing anything, read [`plans/README.md`](plans/README.md): plans are the source of truth, and decisions (D-numbers) are logged in [`plans/decisions.md`](plans/decisions.md).
