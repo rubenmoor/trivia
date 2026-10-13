@@ -68,7 +68,8 @@ async function saved(test, what) {
 
 async function launch() {
   const steamRun = which("steam-run");
-  const env = [`HOME=${home}`, `DISPLAY=${display}`, "TRIVIA_DEVTOOLS=1"];
+  // Muted: checks media load, not audio; sound is a manual row.
+  const env = [`HOME=${home}`, `DISPLAY=${display}`, "TRIVIA_DEVTOOLS=1", "TRIVIA_MUTE=1"];
   // unshare -rn: no network; env -i + steam-run: no Nix shell env, an FHS runtime like a Steam Linux machine.
   const shell = spawn("unshare", ["-rn", "env", "-i", ...env, steamRun, path.join(DIR, "trivia"), "--lang=es", "--remote-debugging-pipe"], {
     stdio: ["ignore", "ignore", "pipe", "pipe", "pipe"],

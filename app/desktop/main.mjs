@@ -5,6 +5,7 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { arrange, discover, ID as MOD_ID, readSettings, writeSettings } from "./mods.mjs";
+import { muteReason } from "./mute.mjs";
 import { describe, itemUrl, preparePublish, publish, VISIBILITY } from "./publish.mjs";
 import { makeResolver } from "./resolve.mjs";
 import { makeSaveFile } from "./save.mjs";
@@ -408,6 +409,11 @@ async function start() {
   win.on("closed", () => (win = null));
 
   const wc = win.webContents;
+  const muted = muteReason(process.env);
+  if (muted) {
+    wc.setAudioMuted(true);
+    console.error(`trivia: muted (${muted})`);
+  }
   wc.on("will-navigate", (event, url) => {
     if (!url.startsWith(ORIGIN)) event.preventDefault();
   });

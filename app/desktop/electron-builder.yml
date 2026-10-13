@@ -9,6 +9,7 @@ files:
   - package.json
   - main.mjs
   - mods.mjs
+  - mute.mjs
   - workshop.mjs
   - publish.mjs
   - resolve.mjs
