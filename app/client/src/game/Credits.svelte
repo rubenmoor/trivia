@@ -14,6 +14,7 @@
 <script lang="ts">
   // Credits (PUB-5, plan 47): credits.json from the build, over the overlay. Read-only, no focusable
   // rows: ↑/↓ scroll ~70 %, ←/→ jump between sections, Esc/⌫ go back.
+  import { fetchModCredits } from "../lib/api.ts";
   import { buildInfo } from "../lib/build.ts";
   import { t } from "../lib/i18n.ts";
   import { focusControl, pushScope, type Action } from "../lib/input.svelte.ts";
@@ -32,6 +33,8 @@
     (c) => (credits = c),
     () => (failed = true),
   );
+  /** Mod bundles' media (decision 129), after ours. */
+  const modCredits = fetchModCredits().catch(() => []);
 
   function jump(step: 1 | -1) {
     const box = scroller;
@@ -124,6 +127,16 @@
           {#each credits.libraries as l (l.name)}{@render row(`${l.name} ${l.version}`, "", l.license, null, l.url)}{/each}
         </ul>
       </section>
+      {#await modCredits then mods}
+        {#each mods as m (m.bundle)}
+          <section>
+            <h3>{t("credits.playerMade", { mod: m.mod })} · {m.name} <small>{m.items.length}</small></h3>
+            <ul>
+              {#each m.items as c, i (i)}{@render row(c.credit ?? t("credits.unknownAuthor"), "", "", null, c.url)}{/each}
+            </ul>
+          </section>
+        {/each}
+      {/await}
     {/if}
   </div>
 </div>

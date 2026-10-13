@@ -85,7 +85,8 @@ export type ChoiceBody = Pick<GameActionBody, "age_group" | "difficulty" | "bund
 export interface ChoiceOptions {
   /** `span`: lowest and highest difficulty of its levels (the «Custom» start, D-88). */
   groups: { id: string; name: string; ages: readonly [number, number | null]; span: readonly [number, number] }[];
-  bundles: { id: string; base: boolean; name: string; description: string }[];
+  /** `source`/`modName`: a mod's bundle (decision 128), marked player-made. */
+  bundles: { id: string; base: boolean; name: string; description: string; source?: "mod"; modName?: string }[];
 }
 
 export async function fetchChoiceOptions(scope: DataScope = "next"): Promise<ChoiceOptions> {
@@ -95,10 +96,31 @@ export async function fetchChoiceOptions(scope: DataScope = "next"): Promise<Cho
     }));
     const bundles = bundlesFor(data).map((b) => {
       const n = data.names.bundles[b.id];
-      return { id: b.id, base: b.kind === "base", name: n?.name ?? b.name, description: n?.description ?? b.description };
+      return {
+        id: b.id, base: b.kind === "base", name: n?.name ?? b.name, description: n?.description ?? b.description,
+        ...(b.source === "mod" && { source: b.source, modName: b.modName ?? b.mod ?? b.id }),
+      };
     });
     return { save, status: 200, body: { groups, bundles } };
   }, scope);
+}
+
+/** Credits of the loaded mod bundles' media (decision 129): per bundle, deduped credit + source_url. */
+export async function fetchModCredits(): Promise<{ bundle: string; name: string; mod: string; items: { credit: string | null; url: string | null }[] }[]> {
+  return read((save, data) => {
+    const body = data.bundles.filter((b) => b.source === "mod").flatMap((b) => {
+      const seen = new Map<string, { credit: string | null; url: string | null }>();
+      for (const q of data.pool) {
+        if (q.bundle !== b.id) continue;
+        for (const m of [q.media, q.background]) {
+          if (!m?.file_url || (!m.credit && !m.source_url)) continue;
+          seen.set(`${m.credit}\n${m.source_url}`, { credit: m.credit, url: m.source_url });
+        }
+      }
+      return seen.size ? [{ bundle: b.id, name: data.names.bundles[b.id]?.name ?? b.name, mod: b.modName ?? b.mod ?? b.id, items: [...seen.values()] }] : [];
+    });
+    return { save, status: 200, body };
+  });
 }
 
 /** The running game's choice for the overlay (plan 29): group name or custom difficulty, active bundle

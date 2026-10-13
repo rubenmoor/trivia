@@ -14,6 +14,7 @@
   // Shared bundle selector (D-88): the base bundles as a radio group, apart from the others (toggles);
   // exactly one base bundle (D-85). Configure screen; the gamemaster menu reuses it (MD-12).
   import { t } from "../lib/i18n.ts";
+  import Icon from "./Icon.svelte";
   import Prompt from "./Prompt.svelte";
 
   let {
@@ -76,6 +77,7 @@
     <span class="name-text">{b.name}</span>
     {#if role === "switch"}<span class="switch label">{t(on ? "choice.on" : "choice.off")}</span>{/if}
     <span class="label description">{b.description}</span>
+    {#if b.source === "mod"}<span class="label made"><Icon name="puzzle" /> {t("bundles.playerMade", { mod: b.modName ?? "" })}</span>{/if}
   </button>
 {/snippet}
 
@@ -116,7 +118,7 @@
     animation: arrive 0.5s calc(0.15s + var(--i) * 0.05s) var(--spring) backwards;
   }
   .tile > :global(kbd) {
-    grid-row: span 3;
+    grid-row: span 4;
   }
   .tile > :not(:global(kbd)) {
     grid-column: 2;
@@ -141,5 +143,8 @@
   }
   .switch {
     color: var(--sky);
+  }
+  .made {
+    color: var(--amber);
   }
 </style>

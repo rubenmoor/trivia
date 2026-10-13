@@ -117,6 +117,7 @@ export const en = {
     audio: "Audio",
     video: "Video",
     background: "Background",
+    playerMade: "Player-made · {mod}",
   },
   joker: {
     hint: { name: "Hint", key: "H", rule: "Shows a hint for the question. Up to three per question." },
@@ -143,6 +144,9 @@ export const en = {
     title: "Joker cards to print",
     intro: "One Letter sheet: 4 × {hint} and 2 × each other joker. Print at {scale} (no “fit to page”), then cut along the lines.",
     print: "Print",
+  },
+  bundles: {
+    playerMade: "Player-made · {mod}",
   },
   choice: {
     titleOpen: "How does ",

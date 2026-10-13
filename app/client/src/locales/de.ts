@@ -117,6 +117,7 @@ export const de = {
     audio: "Audio",
     video: "Video",
     background: "Hintergrund",
+    playerMade: "Von Spielern · {mod}",
   },
   joker: {
     hint: { name: "Zaunpfahl", key: "Z", rule: "Zeigt einen Hinweis zur Frage. Bis zu drei pro Frage." },
@@ -143,6 +144,9 @@ export const de = {
     title: "Jokerkarten zum Ausdrucken",
     intro: "Ein A4-Blatt: 4 × {hint} und je 2 × die anderen Joker. Mit {scale} drucken (nicht „An Seite anpassen“), dann an den Linien ausschneiden.",
     print: "Drucken",
+  },
+  bundles: {
+    playerMade: "Von Spielern · {mod}",
   },
   choice: {
     titleOpen: "Wie spielt ",

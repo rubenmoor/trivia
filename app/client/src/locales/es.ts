@@ -134,6 +134,8 @@ const es = {
     audio: "Audio",
     video: "Video",
     background: "Fondo",
+    /** A mod bundle's media section (decision 129). */
+    playerMade: "Hecho por jugadores · {mod}",
   },
   /** `key`: the keyboard shortcut (case-insensitive). */
   joker: {
@@ -165,6 +167,10 @@ const es = {
     title: "Comodines para imprimir",
     intro: "Una hoja carta: 4 × {hint} y 2 × cada otro comodín. Imprimir al {scale} (sin «ajustar a la página»), luego recortar por las líneas.",
     print: "Imprimir",
+  },
+  /** Bundles from mods (decision 128); `mod`: the mod's name. */
+  bundles: {
+    playerMade: "Hecho por jugadores · {mod}",
   },
   /** The Choice screen (plan 29): age group and bundles before a game. */
   choice: {

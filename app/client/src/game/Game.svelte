@@ -4,6 +4,7 @@
   // transition routine and the admin overlay on Esc. The engine keeps the game (engine/, lib/api.ts).
   import { onDestroy, onMount, tick } from "svelte";
   import { fetchFlags, fetchGame, gameAction, noteExhausted, playJoker, setFlag, type GameActionBody } from "../lib/api.ts";
+  import { isOurs } from "../engine/pool.ts";
   import { GameError } from "../lib/http.ts";
   import { steam } from "../lib/desktop.ts";
   import { language, saveError, takeSaveNotice } from "../lib/engine.ts";
@@ -98,13 +99,14 @@
 
   const running = $derived(game !== null && game.result === null);
   /** The question the flag button acts on: the one on screen, or the one just answered. */
-  const flagTarget = $derived(
-    screen === "question"
+  const flagTarget = $derived.by(() => {
+    const id = screen === "question"
       ? (game?.question?.id ?? null)
       : ["correct", "wrong", "victory"].includes(screen)
         ? (game?.last?.question_id ?? null)
-        : null,
-  );
+        : null;
+    return id && isOurs(id) ? id : null; // mod questions: no flags, no reports (plan 93)
+  });
   const mode = $derived(game?.settings.mode ?? "gamemaster");
   const levels = $derived(levelsOf(game));
   /** Blocks on the tower: correct answers in this game. */

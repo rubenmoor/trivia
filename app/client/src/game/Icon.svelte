@@ -2,7 +2,7 @@
   // The game's icons (plans/10-visual-design.md, VD-8): small inline SVGs in one rounded style,
   // drawn in currentColor. No emoji on the TV: they look different on every system.
   export type IconName = "lock" | "unlock" | "speaker" | "film" | "check" | "cross" | "crown" | "trash"
-    | "flag" | "bulb" | "door" | "stairs" | "compass" | "crosshair";
+    | "flag" | "bulb" | "door" | "stairs" | "compass" | "crosshair" | "puzzle";
 </script>
 
 <script lang="ts">
@@ -68,6 +68,8 @@
     <circle cx="12" cy="12" r="7.5" />
     <path d="M12 2v5M12 17v5M2 12h5M17 12h5" />
     <circle cx="12" cy="12" r="1.5" fill="currentColor" />
+  {:else if name === "puzzle"}
+    <path d="M4 8h4a2 2 0 1 1 4 0h4v4a2 2 0 1 1 0 4v4h-4a2 2 0 1 0-4 0H4v-4a2 2 0 1 0 0-4z" fill="currentColor" fill-opacity="0.2" />
   {/if}
 </svg>
 
