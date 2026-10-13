@@ -11003,7 +11003,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - Both scans ran, every finding a row with a status and its `(lint: …)` tag where it applies; commands and per-flag/per-project counts recorded.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T23:02:54Z', '2026-10-13T09:32:33Z', 513);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (527, 73, 'Scan: unused Python code', 'work', 'open', NULL, NULL, 'Task 4 of `plan 73: Baseline scans and report skeleton (code review part 1)`; needs the `code-review.md` skeleton (task 1 of plan 73). Rules: plan 73 "Rules for this plan".
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (527, 73, 'Scan: unused Python code', 'work', 'done', NULL, '2026-10-13, code-review.md (Unused Python code), authoring/tools/{qgen,media,batches,health,targets}.py, providers/{commons,freesound,nasa,openverse}.py', 'Task 4 of `plan 73: Baseline scans and report skeleton (code review part 1)`; needs the `code-review.md` skeleton (task 1 of plan 73). Rules: plan 73 "Rules for this plan".
 
 ## What
 - `def`/`class`/module-level names in `app/server/*.py`, `authoring/server/*.py`, `authoring/tools/**/*.py` never referenced elsewhere: grep script in `/tmp`; `vulture` only if already in the flake (no new dependency).
@@ -11013,7 +11013,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - Scan ran, every finding a row with a status; commands recorded.
-- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T23:02:55Z', NULL, 513);
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T23:02:55Z', '2026-10-13T09:36:04Z', 513);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (528, 73, 'Scan: PLACEHOLDER and TODO/FIXME markers', 'work', 'open', NULL, NULL, 'Task 5 of `plan 73: Baseline scans and report skeleton (code review part 1)`; needs the `code-review.md` skeleton (task 1 of plan 73). Rules: plan 73 "Rules for this plan".
 
 ## What
@@ -15785,6 +15785,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (565, 524, '2026-10-13T09:22:09Z', '2026-10-13T09:25:38Z', 'done', NULL, 0, 'b23aa1a757fdb5ac2e0e1049c96160cfc21776ae', 'claude-opus-5-5[1m]', 'bd5585a2-c29a-40df-8d97-682dcb77da65', 24, 46, 15673, 1238604, 62027, 1.0575808000000002, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (566, 525, '2026-10-13T09:25:38Z', '2026-10-13T09:27:58Z', 'done', NULL, 0, '3fc9358ecb5fa92ee2bd09730afa0bafceb1fcfd', 'claude-opus-5-5[1m]', '8defc05c-a0e3-4747-a88d-361fa961dd79', 23, 44, 12404, 1187190, 56472, 0.93747, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (567, 526, '2026-10-13T09:27:58Z', '2026-10-13T09:32:41Z', 'done', NULL, 0, '00807baa9cba026120375407f581ee9a81a6f1c6', 'claude-opus-5-5[1m]', '7387067f-5002-42d0-8a7f-5a492172a8b4', 38, 76, 24007, 2184768, 72187, 1.4948935999999997, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (568, 527, '2026-10-13T09:32:41Z', '2026-10-13T09:36:16Z', 'done', NULL, 0, 'd49c75245070b81a646a63f3f73fce2ac21e8d27', 'claude-opus-5-5[1m]', 'd1cbb8cc-5df8-48fb-9c91-7da23c9851c8', 29, 58, 16346, 1718865, 65607, 1.195781, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

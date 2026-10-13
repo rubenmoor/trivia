@@ -3,7 +3,6 @@ Shared by `qgen batch-report`, `qgen report --batches` and plan 12's exit check.
 import datetime, json, re
 from collections import Counter
 
-import layout  # noqa: F401  (paths; also makes app/server importable, D-35)
 from layout import HEALTH_ACKS, REPORTS, SOURCE_POOL as POOL, WORK
 import concepts  # authoring/tools/concepts.py
 import targets  # authoring/tools/targets.py

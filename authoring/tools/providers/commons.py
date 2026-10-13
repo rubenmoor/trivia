@@ -4,7 +4,6 @@ API calls are throttled here; `download.http_get` adds the account token (IMG-15
 """
 import html, json, re, threading, time, urllib.parse
 
-import layout  # noqa: F401  (makes app/server importable)
 from download import API_URL, http_get
 
 ID = "commons"

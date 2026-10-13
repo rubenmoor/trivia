@@ -21,10 +21,9 @@ while the replacement list isn't empty.
 """
 import argparse, itertools, json, re, sys
 
-import layout  # noqa: F401  (also makes app/server importable)
 from layout import CANDIDATES, SOURCE_POOL as POOL
-from download import RateLimited, USER_AGENT, cached, http_get  # noqa: F401
-from media_cache import MEDIA, cache_path, picked, pool_urls  # noqa: F401
+from download import RateLimited, cached, http_get
+from media_cache import MEDIA, cache_path, picked, pool_urls
 import categories  # authoring/tools/categories.py (D-19, D-43)
 import progress  # authoring/tools/progress.py: the bar says what a step waits for (QG-20)
 import providers  # authoring/tools/providers/: Commons and the other media providers (D-45)

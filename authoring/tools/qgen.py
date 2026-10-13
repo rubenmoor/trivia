@@ -1707,7 +1707,7 @@ def spot_agreement(batch, checks):
     return len(items), sum((i["llm"] == "approved") == (i["human"] == "approved") for i in items)
 
 
-def qc_stats(batch, checks, pool):
+def qc_stats(batch, checks):
     """Spot check and audit numbers of a batch (plan 16); counts, rates are left to the reader."""
     items = {i: it for i, it in (checks.get(batch) or {}).get("items", {}).items() if it.get("human")}
     n, agreed = spot_agreement(batch, checks)
@@ -1758,7 +1758,7 @@ def qc_section(batch, pool=None):
         return []
     pool = pool if pool is not None else run_questions(batch)
     by_id = {q["id"]: q for q in pool}
-    s, q = qc_stats(batch, checks, pool), targets.load_quality()
+    s, q = qc_stats(batch, checks), targets.load_quality()
     n = s["human_n"]
     verdict = "" if s["passes"] is None else (
         f" {'✓' if s['passes'] else '✗'} (bar: ≥ {q['spot_check_size']} questions, ≥ {100 * q['min_agreement']:.0f} %)")
@@ -1828,7 +1828,7 @@ def qc_trend(pool=None):
     if not runs:
         return []
     pool = pool if pool is not None else load_json(POOL)["questions"]
-    cols = [qc_stats(r, checks, pool) for r in runs]
+    cols = [qc_stats(r, checks) for r in runs]
     q = targets.load_quality()
     pct = lambda n, of: f"{100 * n / of:.0f} %" if of else "–"
     rows = [("audit n", lambda s: str(s["audit_n"])),
@@ -3205,7 +3205,6 @@ def translate_selection(locale, n):
     deficit per pick so far (D-84, D'Hondt); levels without deficit last."""
     pool = load_json(POOL)["questions"]
     have = {t["id"]: t for t in translations.load(locale)["questions"]}
-    src = {q["id"]: q for q in pool}
     open_, stale, done = [], [], Counter()
     for q in pool:
         if (q.get("bundle") or "base") != "base":
@@ -3715,7 +3714,7 @@ def validate_pool():
     if unlicensed:  # plans/26
         errors.append(f"{len(unlicensed)} approved pick(s) without a complete, allowlisted licence record: "
                         f"{', '.join(unlicensed[:5])}{' …' if len(unlicensed) > 5 else ''}")
-    e, w = translation_problems(data, (lo, hi))
+    e, w = translation_problems(data)
     errors += e
     warnings += w
     for path, text in pool_export.exports(data).items():
@@ -3771,10 +3770,9 @@ def first_ids(ids, n=5):
     return f"{', '.join(ids[:n])}{' …' if len(ids) > n else ''}"
 
 
-def translation_problems(data, scale):
+def translation_problems(data):
     """(errors, warnings) for authoring/data/questions.<locale>.json and the names files (D-81)."""
     errors, warnings = [], []
-    lo, hi = scale
     src = {q.get("id"): q for q in data["questions"]}
     for p in sorted(layout.translations("*").parent.glob("questions.*.json")):
         if p.name.split(".")[1] not in translations.LOCALES:

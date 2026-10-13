@@ -1,7 +1,6 @@
 """What the next `qgen batch` does (D-36): shared by qgen.py and the authoring start page (RV-12)."""
 import json, math
 
-import layout  # noqa: F401  (paths; also makes app/server importable, D-35)
 from layout import WORK
 import categories  # authoring/tools/categories.py: app/data/categories.json (D-19)
 import targets  # authoring/tools/targets.py: pool targets (D-53)

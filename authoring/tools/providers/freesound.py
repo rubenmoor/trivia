@@ -5,7 +5,6 @@ MP3 preview, which the CDN serves without a key. The API is free for non-commerc
 """
 import json, os, re, threading, time
 
-import layout  # noqa: F401  (makes app/server importable)
 from download import http_get
 
 ID = "freesound"

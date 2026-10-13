@@ -2,7 +2,6 @@
 import json, math
 from collections import Counter
 
-import layout  # noqa: F401  (paths; also makes app/server importable, D-35)
 from layout import TARGETS
 import categories  # authoring/tools/categories.py
 import translations  # authoring/tools/translations.py (D-81)

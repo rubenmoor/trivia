@@ -215,6 +215,187 @@ for f in files:
 | `package.json`, `app/client/package.json`, `app/desktop/package.json`, `authoring/tools/package.json`, `authoring/ui/package.json` | no findings: every dependency used, none undeclared, no extraneous lockfile entry | — | — | — |
 | Svelte components (36 with `$props()`) | no findings: every prop passed by at least one caller | — | — | — |
 
+### Unused Python code
+
+Task 527, 2026-10-13, run from the repo root over all 32 tracked `.py` files (`app/server`, `authoring/server`, `authoring/tools/**`, `authoring/steam`). No `vulture` or `pyflakes` in the flake or Python env, so throw-away `ast` scripts in `/tmp` (deleted after; reproduced below).
+
+- `python3 pyscan.py`: top-level `def`/`class`/assignments with no other mention in any tracked `.py`/`.ts`/`.mjs`/`.svelte`/`.nix` file (`DEAD`: 0), imports never loaded, function locals stored but never loaded, parameters never read
+- `python3 precise.py`: same names, but a hit elsewhere must be `mod.name` or `from mod import name` (generic names like `save`, `load`, `build`): 4 `download_url` and 16 `CHECK` hits, all in `providers/*.py`: the provider protocol, called as `PROVIDERS[p].<name>` (`providers/__init__.py`); no dead name
+- `python3 flags.py` (each `add_argument` dest vs. `args.<dest>` in its file; 93 flags in 6 files) and `python3 subflags.py` (per `qgen` subcommand: flags vs. what its handler and the `qgen`/`patch_notes` functions it calls read, transitively): every flag read
+- Raw hits not findings: `cmd_export`/`cmd_validate`/`cmd_stage(args)` (argparse dispatch), `pd_reasons(candidate)` in `freesound.py`/`nasa.py` (protocol), `import layout  # noqa: F401` in `categories.py`, `download.py`, `save_file.py` (side effect: puts `app/server` on `sys.path`, D-35; they import `paths`/`media_cache`/`save`)
+- Task 302 rule (`task 302: Delete the Python referee`): `app/server/game.py`, `selection.py`, `flags.py`, `authoring/tools/record_fixtures.py` already deleted by task 303 (decision 25: Family test night on the TS engine); nothing to scan
+
+| file | finding | category | severity | status |
+|---|---|---|---|---|
+| `app/server/game.py`, `app/server/selection.py`, `app/server/flags.py`, `authoring/tools/record_fixtures.py` | Python referee: deleted (task 303), not scanned | unused | — | superseded by task 302 |
+| `authoring/tools/media.py` | `USER_AGENT` imported from `download`, never used; `# noqa: F401` on both re-export lines hid it, though every other name there is used | unused | low | fixed (task 527) |
+| `authoring/tools/qgen.py` | `translation_problems(data, scale)`: `scale` unpacked into `lo, hi`, never read; caller passed `(lo, hi)` | unused | low | fixed (task 527) |
+| `authoring/tools/qgen.py` | `translate_selection`: local `src` built, never read (a dict over the whole pool per call) | unused | low | fixed (task 527) |
+| `authoring/tools/qgen.py` | `qc_stats(batch, checks, pool)`: `pool` never read; 2 callers | unused | low | fixed (task 527) |
+| `authoring/tools/` (`batches.py`, `health.py`, `media.py`, `targets.py`, `providers/commons.py`, `freesound.py`, `nasa.py`, `openverse.py`) | redundant `import layout  # noqa: F401`: the module also does `from layout import …`, or (providers) imports `download`, which imports `layout` first; the noqa hid it | unused | low | fixed (task 527) |
+| `app/server/*.py` (5), `authoring/server/*.py` (4), `authoring/steam/*.py` (2), `authoring/tools/` other `.py` | no findings: no dead `def`/`class`/constant, unused import, dead local or unread CLI flag | — | — | — |
+
+```python
+# pyscan.py: unused top-level names, unused imports, unused locals (ast)
+import ast, re, subprocess, sys
+files = [f for f in subprocess.check_output(['git','ls-files','*.py']).decode().split()]
+other = [f for f in subprocess.check_output(['git','ls-files']).decode().split()
+         if re.search(r'\.(nix|ts|mjs|cjs|svelte|html|toml|yml|sh)$', f) or f in ('.envrc',)]
+src = {f: open(f).read() for f in files}
+osrc = {f: open(f, errors='ignore').read() for f in other}
+for f in files:
+    tree = ast.parse(src[f])
+    names = []
+    for n in tree.body:
+        if isinstance(n, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)): names.append((n.name, n.lineno, 'def'))
+        elif isinstance(n, ast.Assign):
+            for t in n.targets:
+                for e in ast.walk(t):
+                    if isinstance(e, ast.Name): names.append((e.id, n.lineno, 'var'))
+        elif isinstance(n, ast.AnnAssign) and isinstance(n.target, ast.Name): names.append((n.target.id, n.lineno, 'var'))
+    for name, ln, kind in names:
+        if name in ('main', '__all__') or name.startswith('__'): continue
+        pat = re.compile(r'\b' + re.escape(name) + r'\b')
+        own = len(pat.findall(src[f]))
+        ext = [g for g in files if g != f and pat.search(src[g])] + [g for g in other if pat.search(osrc[g])]
+        if own <= 1 and not ext: print(f'DEAD     {f}:{ln} {kind} {name}')
+        elif own <= 1: print(f'EXTONLY? {f}:{ln} {kind} {name} <- {ext[:3]}')
+    # unused imports
+    used = {n.id for n in ast.walk(tree) if isinstance(n, ast.Name)} | {n.value.id for n in ast.walk(tree) if isinstance(n, ast.Attribute) and isinstance(n.value, ast.Name)}
+    strs = ' '.join(n.value for n in ast.walk(tree) if isinstance(n, ast.Constant) and isinstance(n.value, str))
+    for n in ast.walk(tree):
+        if isinstance(n, (ast.Import, ast.ImportFrom)):
+            for a in n.names:
+                nm = (a.asname or a.name).split('.')[0]
+                if nm not in used and nm != '*' and nm != 'annotations':
+                    print(f'IMPORT   {f}:{n.lineno} {nm}' + (' (in str)' if nm in strs else ''))
+    # unused locals in functions
+    for fn in ast.walk(tree):
+        if isinstance(fn, (ast.FunctionDef, ast.AsyncFunctionDef)):
+            stores, loads = {}, set()
+            for n in ast.walk(fn):
+                if isinstance(n, ast.Name):
+                    if isinstance(n.ctx, ast.Store): stores.setdefault(n.id, n.lineno)
+                    else: loads.add(n.id)
+            nonlocal_ = {x for n in ast.walk(fn) if isinstance(n, (ast.Global, ast.Nonlocal)) for x in n.names}
+            for v, ln in stores.items():
+                if v not in loads and v != '_' and not v.startswith('_') and v not in nonlocal_:
+                    print(f'LOCAL    {f}:{ln} {fn.name}.{v}')
+            # unused params
+            for a in fn.args.args + fn.args.kwonlyargs:
+                if a.arg not in loads and a.arg not in ('self', 'cls') and not a.arg.startswith('_'):
+                    print(f'PARAM    {f}:{fn.lineno} {fn.name}({a.arg})')
+```
+
+```python
+# precise.py: top-level names never used in own module, nor as `mod.name` / `from mod import name` elsewhere
+import ast, re, subprocess
+files = subprocess.check_output(['git','ls-files','*.py']).decode().split()
+other = [f for f in subprocess.check_output(['git','ls-files']).decode().split() if re.search(r'\.(nix|ts|mjs|svelte|sh)$', f)]
+src = {f: open(f).read() for f in files}
+osrc = '\n'.join(open(f, errors='ignore').read() for f in other)
+for f in files:
+    mod = f.rsplit('/', 1)[1][:-3]
+    if mod == '__init__': mod = f.split('/')[-2]
+    tree = ast.parse(src[f])
+    defs = {}
+    for n in tree.body:
+        if isinstance(n, (ast.FunctionDef, ast.ClassDef)): defs[n.name] = n.lineno
+        elif isinstance(n, ast.Assign):
+            for t in n.targets:
+                if isinstance(t, ast.Name): defs[t.id] = n.lineno
+    loads = {n.id for n in ast.walk(tree) if isinstance(n, ast.Name) and isinstance(n.ctx, ast.Load)}
+    for name, ln in defs.items():
+        if name in loads or name == 'main' or name.startswith('__'): continue
+        hits = []
+        for g in files:
+            if g == f: continue
+            s = src[g]
+            aliases = [mod] + re.findall(r'import\s+' + mod + r'\s+as\s+(\w+)', s)
+            if any(re.search(r'\b' + a + r'\.' + name + r'\b', s) for a in aliases): hits.append(g)
+            elif re.search(r'from\s+(\S*\.)?' + mod + r'\s+import\s+\(?[^)\n]*\b' + name + r'\b', s): hits.append(g)
+            elif re.search(r'getattr\(', s) and re.search(r'["\']' + name + r'["\']', s): hits.append(g + '(getattr)')
+        if re.search(r'\b' + name + r'\b', osrc) and not hits: hits.append('non-py?')
+        if not hits: print(f'UNUSED {f}:{ln} {name}')
+        elif hits == ['non-py?']: print(f'CHECK  {f}:{ln} {name}')
+```
+
+```python
+# flags.py: argparse dests never read as args.<dest> / getattr(args, "<dest>")
+import re, subprocess, sys
+for f in subprocess.check_output(['git','ls-files','*.py']).decode().split():
+    s = open(f).read()
+    for m in re.finditer(r'add_argument\(([^)]*)\)', s):
+        a = m.group(1)
+        d = re.search(r'dest\s*=\s*["\'](\w+)', a)
+        opts = re.findall(r'["\'](-{1,2}[\w-]+|[a-z_]\w*)["\']', a.split('help=')[0])
+        if d: dest = d.group(1)
+        else:
+            longs = [o for o in opts if o.startswith('--')]
+            pos = [o for o in opts if not o.startswith('-')]
+            dest = (longs[0][2:] if longs else pos[0] if pos else opts[0].lstrip('-')).replace('-', '_')
+        ln = s[:m.start()].count('\n') + 1
+        n = len(re.findall(r'\.' + dest + r'\b', s)) + len(re.findall(r'["\']' + dest + r'["\']', s))
+        if n == 0: print(f'UNREAD {f}:{ln} {dest}')
+        else: print(f'ok     {f}:{ln} {dest} {n}', file=sys.stderr)
+```
+
+```python
+# subflags.py: per qgen subcommand, flags its handler (and qgen/patch_notes functions it calls, transitively) never read
+import ast, re
+srcs = {m: open(f'authoring/tools/{m}.py').read() for m in ('qgen', 'patch_notes')}
+funcs = {}
+for m, s in srcs.items():
+    for n in ast.parse(s).body:
+        if isinstance(n, ast.FunctionDef): funcs[n.name] = n
+def reach(name, seen):
+    if name in seen or name not in funcs: return
+    seen.add(name)
+    for c in ast.walk(funcs[name]):
+        if isinstance(c, ast.Name) and c.id in funcs: reach(c.id, seen)
+        if isinstance(c, ast.Attribute) and c.attr in funcs: reach(c.attr, seen)
+def reads(names):
+    out = set()
+    for n in names:
+        for c in ast.walk(funcs[n]):
+            if isinstance(c, ast.Attribute) and isinstance(c.value, ast.Name) and c.value.id == 'args': out.add(c.attr)
+            if isinstance(c, ast.Call) and getattr(c.func, 'id', '') == 'getattr' and len(c.args) > 1 and isinstance(c.args[1], ast.Constant): out.add(c.args[1].value)
+            if isinstance(c, ast.Call) and getattr(c.func, 'id', '') == 'vars': out.add('*')
+    return out
+main = funcs['main']; s = ast.unparse(main)
+parsers = {}  # var -> (cmd name, handler, [dests])
+for st in ast.walk(main):
+    if isinstance(st, ast.Call) and isinstance(st.func, ast.Name) and st.func.id == 'add':
+        name, fn = st.args[0].value, st.args[1].id
+        model = len(st.args) > 2 or any(k.arg == 'model' for k in st.keywords)
+        run = not any(k.arg == 'run' and k.value.value is False for k in st.keywords)
+        parsers[id(st)] = (name, fn, (['run'] if run else []) + (['model', 'jobs'] if model else []))
+# map variables to add() calls / sub-parsers
+var = {}
+for st in ast.walk(main):
+    if isinstance(st, ast.Assign) and isinstance(st.targets[0], ast.Name) and isinstance(st.value, ast.Call):
+        var[st.targets[0].id] = st.value
+handler = {}
+for st in ast.walk(main):
+    if isinstance(st, ast.Call) and isinstance(st.func, ast.Attribute) and st.func.attr == 'set_defaults':
+        tgt = st.func.value
+        for k in st.keywords:
+            if k.arg == 'fn': handler[tgt.id if isinstance(tgt, ast.Name) else id(tgt)] = ast.unparse(k.value).split('.')[-1]
+for st in ast.walk(main):
+    if isinstance(st, ast.Call) and isinstance(st.func, ast.Attribute) and st.func.attr == 'add_argument':
+        tgt = st.func.value
+        opts = [a.value for a in st.args if isinstance(a, ast.Constant)]
+        dest = next((k.value.value for k in st.keywords if k.arg == 'dest'), None) or next((o[2:] for o in opts if o.startswith('--')), opts[0]).replace('-', '_')
+        if isinstance(tgt, ast.Call) and id(tgt) in parsers: parsers[id(tgt)][2].append(dest)
+        elif isinstance(tgt, ast.Name) and tgt.id in var and id(var[tgt.id]) in parsers: parsers[id(var[tgt.id])][2].append(dest)
+        elif isinstance(tgt, ast.Name) and tgt.id in handler: parsers.setdefault(tgt.id, (tgt.id, handler[tgt.id], []))[2].append(dest)
+        else: print('?', ast.unparse(st))
+for name, fn, dests in parsers.values():
+    seen = set(); reach(fn, seen); r = reads(seen)
+    miss = [d for d in dests if d not in r and '*' not in r]
+    print(f'{name:12} {fn:20} {len(seen):3} fns  flags {dests}  UNREAD {miss}' if miss else f'{name:12} ok ({len(dests)})')
+```
+
 ## Part 2: Python game server
 
 Plan 74 reviews `app/server/` and `authoring/tools/categories.py`, and logs the referee files deleted by task 302.
