@@ -22762,8 +22762,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:09:32Z', '2026-10-13T18:31:56Z', 902);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (936, 116, 'create tasks for plan 116', 'split', 'done', 1000, '2026-10-13, tasks 964, 965, 966 in plan 116; no open decisions', 'Split plan 116 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:11:10Z', '2026-10-13T18:32:41Z', 903);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (937, 117, 'create tasks for plan 117', 'split', 'open', 1000, NULL, 'Split plan 117 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:14:43Z', NULL, 904);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (937, 117, 'create tasks for plan 117', 'split', 'done', 1000, '2026-10-13, tasks.sql: tasks 967–972 for plan 117', 'Split plan 117 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:14:43Z', '2026-10-13T18:33:36Z', 904);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (938, 118, 'create tasks for plan 118', 'split', 'open', 1000, NULL, 'Split plan 118 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:16:58Z', NULL, 905);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (939, 119, 'create tasks for plan 119', 'split', 'open', 1000, NULL, 'Split plan 119 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -23118,6 +23118,71 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - `grep -rn "Game.svelte\|Question.svelte\|LanguageScreen"` outside `plans/decisions.md`, `code-review.md` history and the controllers'' own files shows only current paths.
 - Per-commit checks pass.', '2026-10-13T18:32:39Z', NULL, 936);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (967, 117, 'Bridge rename: window.trivia → window.triviaShell', 'work', 'open', NULL, NULL, 'Plan 117 task 1, decision 130: Preload bridge renamed window.trivia → window.triviaShell; window.trivia is the mod API. Frees the name `window.trivia` for the mod API (later tasks of plan 117).
+
+- `app/desktop/preload.cjs`: `contextBridge.exposeInMainWorld("triviaShell", …)`; header comment.
+- `app/client/src/lib/desktop.ts`: `Window.triviaShell?: DesktopBridge`, `desktop = window.triviaShell ?? null` (the only reader).
+- Plan 99''s dev page shim (task 762): if task 762 is still open, `pm task set 762 --body -` so its shim sets `window.triviaShell`; if done, edit the shim in code.
+- Docs and open task bodies naming the bridge `window.trivia`: `grep -rn "window\.trivia\b" app/ plans/ directory.md` and `pm` task bodies (plans 99, 106, 114; `plans/18-steam-integration.md`, `directory.md`); open tasks via `pm task set`.
+- No mod API code here.
+
+Done when: the grep shows only history; `TRIVIA_DEV_STEAM_USER=1 trivia-desktop` saves, toggles fullscreen, quits and sets presence as before; per-commit checks pass.', '2026-10-13T18:33:33Z', NULL, 937);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (968, 117, 'Shell: generated /mods.js and /mods/<id>/ routes', 'work', 'open', NULL, NULL, 'Plan 117 task 2, decision 131: Code add-ons: shell-generated /mods.js, entry default export setup(trivia), mods run before data and language load. Needs plan 112 tasks 950–952 (`mods.mjs` `arrange` → `list`/`layers`, `resolve.mjs` layers and `contained()`, `main.mjs` wiring).
+
+- `app/desktop/mods.mjs`: pure `modsScript(list)` → ES module text `export default [ { "id", "name", "version", "entry", "style" }, … ];`
+  - only mods with state `loaded` this run, run order = bottom of the load order first (top mod patches last)
+  - `entry`: `/mods/<id>/<mod.json entry>` or null; `style`: `/mods/<id>/style.css` if the mod has a root `style.css`, else null
+  - values JSON-encoded; no disk paths; `--no-mods`, no valid user (decision 111), no mods → `export default [];`
+- `app/desktop/resolve.mjs`:
+  - `/mods.js` served ahead of all layers (a mod can''t override it); our `dist/` has no root `mods.js`
+  - `/mods/<id>/<rel>` → that mod''s dir via `contained()` (symlink-safe), files only, only for mods loaded this run, `mod.json` never served; else 404; `dist/` has no `mods/` folder (reserved)
+  - `.js`/`.mjs` → `text/javascript` (plan 112''s MIME table)
+- `app/desktop/main.mjs`: pass the run''s `list` to the resolver.
+- Page only (plan 102): the shell never imports/requires/evals mod files.
+- Extend `resolve.test.mjs`: `/mods.js` for zero and two mods (bottom-up order, `style` only when the file exists), `/mods/<id>/` for a loaded mod, 404 for an off/invalid mod, `..` and symlink escapes, `mod.json` not served.
+
+Done when: the test passes in `npm test`; `trivia-desktop` with a repo `mods/` mod (`TRIVIA_DEVTOOLS=1`) shows the right `/mods.js` in devtools; per-commit checks pass.', '2026-10-13T18:33:33Z', NULL, 937);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (969, 117, 'Page loader: lib/mods.ts, loadMods() in main.ts, window.trivia core', 'work', 'open', NULL, NULL, 'Plan 117 task 3, decision 131. Needs this plan''s shell task (`/mods.js`, `/mods/<id>/`) and the bridge rename (`window.trivia` free). See plan 117 "Page loader" and "`window.trivia`" for the full spec.
+
+- `app/client/src/lib/mods.ts` (new):
+  - `loadMods()`: `import(/* @vite-ignore */ "/mods.js")`, failure → `[]`; sets `window.trivia`; per mod in order: append `<link rel=stylesheet href=style>` after ours, then `import(entry)`; if `default` is a function, `await setup(view)`; import + setup race a 5 s timeout
+  - scoped view per mod: `view.mod = { id, name, version }`; registrations tagged with the mod id
+  - failure (`load_failed` | `setup_failed` | `timeout`) → entry in `modErrors()` `{ id, code, message }`, `console.error`, that mod''s registrations removed (also later ones from a timed-out setup); next mod loads; the game always starts
+  - registration store with removal per mod; `hookFailed(id, err)` helper (code `hook_failed`, removes that registration) for the hook tasks
+  - `window.trivia` members here: `version` (`buildInfo().version`, decision 91), `mods`, `mod` (scoped), `modules` (`api`, `engine` `read`/`run`, `game`, `i18n` `t`/`lang`/`fill`, `input` `pushScope`/`lastDevice`, `sound` `sfx`/`music`, `svelte` `mount`/`unmount`/`flushSync`), `on(event, fn) → off` with `ready`, `css(href)`
+  - export type `TriviaApi`; internals `loadedMods()`, `modErrors()` (not on `window.trivia`; for plan 118 and achievements)
+- `app/client/src/main.ts`: `await loadMods()` first, before `language()` and `initLang`; after mounting `App` emit `ready`.
+- Event payloads `structuredClone`d; listener errors → `hookFailed`. Error codes stay codes (no UI, no `t()` here).
+- Outside the shell (`npm run dev -w app/client`): no `/mods.js` → no mods, normal start.
+
+Done when: throw-away mods in a temp `TRIVIA_MODS_DIR` under `trivia-desktop` (`TRIVIA_DEV_STEAM_USER=1`): a `style.css`-only mod recolours; an entry logs `trivia.version` and `trivia.mod.id` on `ready`; one throwing in `setup`, one importing a missing file, one hanging 10 s → each in `modErrors()` (console), game starts within ~5 s; no mods → start unchanged; dev server starts; per-commit checks pass. Delete the throw-away mods.', '2026-10-13T18:33:33Z', NULL, 937);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (970, 117, 'Mod hooks: data, actions, i18n.add, game events', 'work', 'open', NULL, NULL, 'Plan 117 task 4. Needs the page loader task (`lib/mods.ts` registration store, `hookFailed`, `on`) and plan 115''s mod-pool step in `lib/data.ts`. Spec: plan 117 "`window.trivia`".
+
+- `data(fn)` in `app/client/src/lib/data.ts` `load()`: after parsing and plan 115''s mod-pool step, before `engineData(...)`: `fn({ locale, questions, bundles, ageGroups }) → void | partial replacement`; per locale load (cached as today), run order. Mod questions arrive with `<mod id>:<id>` ids (decision 128).
+- `actions.before(fn)` / `actions.after(fn)` in `lib/api.ts` `gameAction()` and `playJoker()`: `before(action, body) → body | void`; `after(action, game)` gets a read-only clone. The engine still validates the body.
+- Events from `lib/api.ts` game diffs: `game:start` (`{ game }` after a successful `new`), `game:end` (`{ game, result }` when `result` goes null → won/lost/abandoned), `question:answered` (`{ id, level, index, correct }` after `answer`). From `Game.svelte`: `screen` (`{ name }` after the switch in `go()`), `question:shown` (`{ id, level }` after the Question screen''s `ready()`). (Use plan 116''s file layout if it has landed.)
+- `i18n.add(locale, catalog, opts?)` in `lib/i18n.ts`: existing locale → `merge()` over it; new locale (`opts.endonym`, `opts.base` default `en`) → `merge(base, catalog)` into `CATALOGS`, `UI_LANGS`, `ENDONYMS` (made extendable before `initLang`); UI language only, question locales stay `LOCALES`. Type doc: call in `setup`; later calls apply after a reload.
+- A hook that throws → caught at the call site, `hook_failed` with the mod id, registration removed, game goes on with the unhooked value.
+
+Done when: throw-away mods: a data hook dropping all audio questions (none in a game); `before("new")` giving 2 Soplo via `body.jokers` (tray shows 2); a catalog override rewording `app.title`; a partial new UI locale `fr` (falls back to `en`, selectable in the language screen, `<html lang="fr">`); an event logger printing start → shown → answered → end over a `levels` 3 game; a throwing data hook leaves the pool intact with `hook_failed`; per-commit checks and `check:literals` pass. Delete the throw-away mods.', '2026-10-13T18:33:33Z', NULL, 937);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (971, 117, 'Mod screens and Esc menu rows: registry, DomScreen, screens.show, menu.add', 'work', 'open', NULL, NULL, 'Plan 117 task 5. After plan 116 (tasks 964–966: screens in `game/screens/*`); if plan 116 is dropped, work on the current files. Needs the page loader task. Spec: plan 117 "`window.trivia`" (`screens`, `menu`).
+
+- `app/client/src/game/screens/registry.ts`: `screenFor(name, ours)`, `replace(name, component)`, `dom(name, render)`; names = the `game/screens/*` files (`Start`, `Language`, `Player`, `Choice`, `Level`, `Select`, `Question`, `Correct`, `Wrong`, `Victory`; exact list from plan 116''s result); last registration (top mod) wins; read once at mount.
+- `game/screens/DomScreen.svelte`: wrapper for `render(el, props) → cleanup?`.
+- `Game.svelte`: mount every screen through `screenFor(...)`; replacements get the same props as ours.
+- `screens.show(render)` → `{ close() }`: a mod''s full-screen layer (`DomScreen` in a modal layer in `Game.svelte`, own input scope via `input.pushScope`).
+- `menu.add({ label, onselect })`: extra rows in the Esc menu (`Overlay.svelte`), own column after ours; labels are mod text (not `t()`).
+- Render/setup errors → `hookFailed`, fall back to our screen.
+- Expose on `window.trivia` (`screens`, `menu`) via `lib/mods.ts`.
+
+Done when: throw-away mods: `dom("Victory", …)` shows a plain-DOM victory page with a button back to the start (pad A / Enter / click); a precompiled Svelte component (throw-away script with `svelte/compiler`, imports rewritten to `/vendor/svelte/…`) replaces `Correct`; an Esc menu row opens a mod layer that pad B / Esc closes; without mods every screen unchanged (smoke game: `authoring/steam/smoke.mjs` on a `trivia-desktop-build --dir`); per-commit checks pass. Delete the throw-away mods and scripts.', '2026-10-13T18:33:34Z', NULL, 937);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (972, 117, 'Docs: code add-ons, window.trivia members, file paths', 'work', 'open', NULL, NULL, 'Plan 117 task 6, after the other plan 117 tasks. Bullet style per AGENTS.md.
+
+- `plans/18-steam-integration.md` "Modding": bridge name `window.triviaShell` (decision 130), `/mods.js`, `/mods/<id>/`, load order and timing (before data and language, bottom-up, 5 s timeout, `ready` after mount), error codes `load_failed`/`setup_failed`/`timeout`/`hook_failed` (decision 131); a "Modding: `window.trivia`" list of every member with its call site (for plan 121''s guide); no stability promise.
+- `plans/12-client-engine.md`: hooks at `lib/data.ts` (`data`) and `lib/api.ts` (`actions`, game events).
+- `directory.md`: `lib/mods.ts`, `game/screens/registry.ts`, `game/screens/DomScreen.svelte`.
+
+Done when: docs name decisions 130, 131 and the file paths, matching the code as built; per-commit checks pass.', '2026-10-13T18:33:34Z', NULL, 937);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -25228,6 +25293,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (789, 934, '2026-10-13T18:30:01Z', '2026-10-13T18:30:53Z', 'done', NULL, 0, '9adaa29063c707da81ca93388f20a0d3d57267dc', 'claude-opus-5-5[1m]', '255dfe1b-b16a-420c-92ad-be2754f546bd', 6, 12, 5167, 200885, 32732, 0.405421, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (790, 935, '2026-10-13T18:30:53Z', '2026-10-13T18:32:04Z', 'done', NULL, 0, '6ed610ae94194b5becfecbb71f98a1d58a0d7536', 'claude-opus-5-5[1m]', '4a0ce6ce-bc1d-47d8-8db6-9c9e6be70fce', 8, 16, 7028, 266512, 33401, 0.46113440000000006, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (791, 936, '2026-10-13T18:32:05Z', '2026-10-13T18:32:48Z', 'done', NULL, 0, '69bb230a1f178bb2e0527fd499f678f07fe89115', 'claude-opus-5-5[1m]', 'e5d245ab-38f1-4abb-98f4-963e1aaea3d6', 5, 10, 4488, 156529, 31520, 0.37326579999999993, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (792, 937, '2026-10-13T18:32:48Z', '2026-10-13T18:33:42Z', 'done', NULL, 0, '84dffcbdda7ac0f6ebbf55dfd6e7583d236b226f', 'claude-opus-5-5[1m]', '12d7eb88-9475-4d60-a04a-1e0700140010', 5, 10, 5738, 164634, 33893, 0.4188708, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
