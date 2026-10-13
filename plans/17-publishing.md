@@ -41,7 +41,7 @@ Steam requires developers to disclose AI-generated content on the store page (co
 ## Steamworks and store
 - **Account:** Steamworks partner signup, identity and tax interview (bank details, a W-8BEN for non-US individuals or the company equivalent), and a **$100 app credit** per game (recouped after $1,000 revenue). Person or company: OQ-33.
 - **Name (D-50):** «Living Room Trivia», with the Steam localized name «Trivia en Familia» for Spanish (Steamworks → General Application Settings; same limits as a name change, so set both before the coming-soon page). Check both names on Steam, in trademark registers and for a domain (PUB-7).
-- **Store page:** capsule images in the required sizes, screenshots, a trailer (optional but strongly advised), short and long description per language (LUI-6), system requirements, supported languages table, controller support flags, Steam Deck compatibility.
+- **Store page:** capsule images in the required sizes, screenshots, a trailer (optional but strongly advised; S6 or later: backlog B-21), short and long description per language (LUI-6), system requirements, supported languages table, controller support flags, Steam Deck compatibility.
 - **Content survey / age rating:** the Steam questionnaire (no violence, no gambling; kid-friendly). IARC is optional on Steam.
 - **Privacy:** the game collects nothing and sends nothing. Say so on the store page. Player names stay on the device (and in Steam Cloud).
 - **"Coming soon" page** at least two weeks before release (Valve rule), better months, to collect wishlists.

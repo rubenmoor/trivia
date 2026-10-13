@@ -13252,12 +13252,12 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Approval: `pm decision add "Store screenshots: which set?"` with the paths; the gamemaster picks.
 
 Done when: script runs offline from the dev shell, PNGs per language, decision added.', '2026-10-13T06:07:04Z', '2026-10-13T06:21:17Z', 665);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (671, 88, 'Store trailer: backlog item', 'work', 'open', NULL, NULL, 'Plan 88 task 6. Trailer not cheap enough for the beta (editing, music rights checks).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (671, 88, 'Store trailer: backlog item', 'work', 'done', NULL, '2026-10-13, plans/backlog.md (B-21 store trailer), plans/17-publishing.md (store bullet: trailer → B-21)', 'Plan 88 task 6. Trailer not cheap enough for the beta (editing, music rights checks).
 
 - Add an item to `plans/backlog.md`: "store trailer, S6 or later; scripted capture via CDP `Page.startScreencast` + ffmpeg as a start"; reference PUB-8 and plan 88.
 - `plans/17-publishing.md` store bullet: trailer → backlog.
 
-Done when: backlog item in place.', '2026-10-13T06:07:04Z', NULL, 665);
+Done when: backlog item in place.', '2026-10-13T06:07:04Z', '2026-10-13T06:21:52Z', 665);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (672, 88, 'Store page entry checklist and PUB-8 close-out', 'work', 'open', 160, NULL, 'Plan 88 task 7. After tasks of this plan for texts, AI disclosure, requirements, capsules, screenshots (all approved; else pend on their open decisions and stop).
 
 - Checklist in `plans/17a-store-page.md` for the gamemaster: Steamworks → Store page admin field by field: names (incl. localized), descriptions per language, tags suggestion, supported languages, system requirements, controller support, graphical assets, screenshots; AI disclosure goes with part 9''s content survey (PUB-9, `task 259`''s plan). Workers never log into Steamworks.
@@ -14706,6 +14706,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (491, 258, '2026-10-13T06:03:38Z', '2026-10-13T06:05:39Z', 'done', NULL, 0, 'c8a83c868cf731617b4b719166459da1669b7bc0', 'claude-opus-5-5[1m]', 'fcb042d4-2ace-4711-b784-78f9d43c9820', 16, 30, 10881, 788061, 59463, 0.8510562, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (492, 665, '2026-10-13T06:05:39Z', '2026-10-13T06:07:18Z', 'done', NULL, 0, '5a0e06839186497c511a076c7ebe008c68edb903', 'claude-opus-5-5[1m]', '756ddd23-e516-47c3-aa79-5465b897eb59', 11, 22, 9396, 448188, 42804, 0.6200776, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (493, 670, '2026-10-13T06:07:18Z', '2026-10-13T06:21:41Z', 'done', NULL, 0, '5a3959f59e2e0f006796b7ec719f50b1cf0af2e2', 'claude-opus-5-5[1m]', '98a8e7c4-35f2-4c38-affe-263a5ecb08ca', 46, 84, 27442, 3923205, 126464, 2.3455289999999991, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (494, 671, '2026-10-13T06:21:41Z', '2026-10-13T06:21:56Z', 'done', NULL, 0, '78ee2b52689cff3383b96ba9ecd46ed49f52ef60', 'claude-opus-5-5[1m]', 'b7ffbfaa-f478-4a6f-a05b-28a072beb387', 5, 10, 1138, 130144, 19937, 0.20832480000000003, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
