@@ -6118,6 +6118,88 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 ## Order
 1 → 2 → 3 → 4 → 6; 5 after 1 (needs a build on the Deck; may wait for the next beta upload, it doesn''t block parts 2–4).', '2026-10-13T17:49:39Z', 899);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (112, 15, 'Mod format, local mods/ and the app:// overlay', 700, 'Part 2 of masterplan 102 (milestone 15: Modding and Steam Workshop). Mods become folders with a `mod.json`; the shell finds them (local `mods/` now, Workshop folders via part 3), validates them, keeps the player''s on/off and load order per machine, and serves enabled mods'' files over `app://trivia/` before our own client and data: first hit wins. A mod''s `index.html` makes it a full conversion. The shell only reads mod files as bytes; mod code runs only in the page.
+
+## Binding
+- Plan 102''s ground rules: page only (no mod file is `require`d, `import`ed or `eval`ed by Node; the shell reads bytes and serves them), no second path (our client = the last layer), offline (the request block in `main.mjs` stays), path safety (`contained()` per layer), per-commit checks.
+- decision 111: Steam only: mods load only with a valid user (`validUser`: real SteamID or the dev switch `TRIVIA_DEV_STEAM_USER=1`); without one they''re listed as off with reason `no_user`. No "without Steam" work.
+- decision 91: game version = `app/desktop/package.json` `version` (semver): what `mod.json`''s `game` is compared with.
+- decision 121 (precedent): per-install settings live under `<userData>`, not in the Steam Cloud save.
+- decision 124: module paths a mod overrides (plan 111: Readable client build); this plan doesn''t depend on plan 111''s output (the overlay serves any `dist`), so it may run first.
+- Not here: Workshop sources (part 3), bridge/IPC to the page and writes of `mods.json` (part 3, part 6), `mods.js` and `window.trivia` (part 4), which `/data/` files merge instead of overlay (part 5), mods screen, crash marker, one-time notice (part 6). The browser `trivia` server (`app/server/`) gets no mods (decision 111, plan 99 retires it).
+
+## `mod.json`
+```json
+{ "id": "big-text", "name": "Big text", "description": "Larger answer buttons", "version": "1.0.0",
+  "game": "0.1.0", "languages": ["es", "en"], "entry": "main.js", "kind": ["theme", "code"] }
+```
+- `id`: required, slug `^[a-z0-9][a-z0-9-]{1,63}$`, unique among discovered mods; folder name doesn''t matter. Part 3 states how a Workshop item''s published file id relates to it.
+- `name` (1–80 chars), `description` (≤ 2000 chars, may be empty), `version` (free string ≤ 32 chars, the modder''s), `game` (semver `x.y.z`): required.
+- `languages`: optional, array of our locale tags (`es`, `en`, `de`, `es-ES`, … as `lib/i18n.ts` knows them; unknown tags: warning, not error); missing or `[]` = language-independent.
+- `entry`: optional, relative path to a `.js`/`.mjs` file inside the mod (must exist, `contained()`); part 4 loads it.
+- `kind`: optional hints for the UI, subset of `bundle`, `theme`, `code`, `conversion`; derived when missing: `index.html` at the root → `conversion`, `entry` → `code`, any `.css` → `theme`, bundle files (rule from part 5; until then `data/bundles/`) → `bundle`.
+- Unknown top-level keys: warning (typos), not error. File ≤ 64 KB, UTF-8 JSON object.
+- `mod.json` is metadata: the overlay never serves it.
+- Version check: `game` ≠ running version → loaded, warning `game_version` (part 6 shows it); invalid semver → error.
+
+## Discovery and sources
+- Local folder: `TRIVIA_MODS_DIR` if set, else packaged `<userData>/mods/` (created at start if missing, so the guide can point at it), dev repo `mods/` (gitignored). Each direct subfolder with a `mod.json` is a mod; subfolders without one: ignored (one stderr line).
+- Hook for part 3: `discover({ local, workshop })`, `workshop` = list of `{ dir, publishedFileId, state }` from Steam; part 3 fills it. Source order local before Workshop: a duplicate id later in that order is invalid (`duplicate_id`, naming the other folder), so a local copy shadows its Workshop original while developing.
+- Each discovered mod: `{ id, dir, source: "local" | "workshop", manifest, kind, warnings[], error | null }`. Errors (codes for part 6''s `t()` texts): `no_manifest`, `bad_json`, `bad_field` (+ field), `duplicate_id`, `entry_missing`, `not_a_folder`. Invalid mods are listed, never served.
+
+## Mod settings: `<userData>/mods.json`
+- Per machine, not in the save (the save is Steam Cloud''s and per user; mods are files on this machine; decision 121''s precedent). Dev: `state/desktop/mods.json` (next to the dev save).
+- `{ "version": 1, "mods": [{ "id": "big-text", "on": true }, …] }`: one ordered list = load order; index 0 is the top. Part 6 may add its notice flag here.
+- Top wins: the overlay looks up the top enabled mod first; part 4 runs entry scripts bottom-up so the top mod also patches last.
+- Discovered mods missing from the list: appended at the end, `on: true` (putting a folder in `mods/` or subscribing is the opt-in; part 3 confirms for Workshop, part 6 may hold new ones off until the one-time notice). Listed ids not found: kept in the file (a Workshop item still downloading keeps its place), not loaded.
+- Read once at start; the overlay is fixed for the run; changes (part 3''s IPC, part 6''s screen) apply on restart. Unreadable file: treated as empty, one stderr line, left as is until the next write. Writes atomic (temp + rename, like `save.mjs`).
+
+## Overlay
+- Layers for a run: enabled valid mods in load order, then ours. Mod root mirrors the URL space: `app://trivia/<rel>` → `<mod>/<rel>`, also `/data/<rel>` → `<mod>/data/<rel>`; ours: `dist/<rel>`, `data/<rel>`.
+- First hit wins, per request, whole files (no merging; part 5 adds exceptions for files that must merge, e.g. bundle lists, in `resolve.mjs`).
+- Not overlaid: `/media?url=…` (pool URLs → our cache; part 5 decides mod media), `/api/*` (404 as today), `mod.json`.
+- SPA fallback: unknown path → `/index.html` through the same layers, so a mod''s `index.html` wins and is a full conversion.
+- Mods screen reachable with a full conversion on: our client isn''t reachable while the conversion owns `/index.html`, so the way back is starting without mods: this plan adds the launch flag `--no-mods` (no layers this run, stderr line); part 6 adds the crash marker, a held key/pad button, the Steam launch option and the screen. A conversion may link to nothing of ours: accepted.
+- Path safety per layer: `contained()` becomes symlink-safe: the file''s `realpath` must stay inside the layer root''s `realpath` (today a symlink inside `dist`/`data` to outside is followed: fix applies to every root); files only; `..`, `%2e%2e`, absolute paths and drive letters (`/C:/…`, `\\`) stay inside or miss.
+- Bytes only: `sendFile` streams the file; MIME by extension from the `MIME` table (add `.mjs`, `.map`, `.ttf`, `.otf`, `.woff`, `.txt`, `.ico`, `.wasm`); unknown → `application/octet-stream` (Chromium won''t run it as a module script: good).
+- Paths are case-sensitive as URLs; on Windows the file system isn''t: accepted, the guide says "match case".
+- Start cost: discovery reads one `mod.json` per folder; each request tries ≤ (mods + 1) `stat`s: fine for tens of mods.
+
+## Tasks
+
+### 1. `app/desktop/mods.mjs`: manifest validator, discovery, settings
+- Pure Node (`node:fs/promises`, `node:path`), no Electron import, like `resolve.mjs` and `save.mjs`: `readManifest(dir, gameVersion)`, `discover({ local, workshop }, gameVersion)`, `readSettings(file)`, `writeSettings(file, settings)`, `arrange(mods, settings, { validUser })` → `{ list, layers }` (list: every mod with `on`, position, state `loaded | off | invalid | no_user | missing`; layers: dirs of loaded mods in load order).
+- Field rules and error/warning codes as above; semver compare without a dependency (three integers).
+- JSON Schema text of `mod.json` (draft 2020-12) as a section "Modding: `mod.json`" in `plans/18-steam-integration.md` for part 10''s guide; the validator is the source of truth, the section says so.
+- Record the choices: `pm decision record "Mod settings: per machine in <userData>/mods.json, one ordered list, top wins" --answer … --body …`.
+- Done when: a throw-away script over a temp folder (valid mod, bad JSON, missing field, duplicate id, missing entry, version mismatch, folder without manifest) prints the expected list; `npm run check` etc. pass.
+
+### 2. `resolve.mjs`: layers, symlink-safe `contained()`, MIME, test
+- `makeResolver({ dist, data, media, layers = [] })`: `dist` lookups and the `index.html` fallback go through `[...layers, dist]`; `/data/` through `[...layers.map((d) => d + "/data"), data]`; `mod.json` at a layer root skipped; `/media` unchanged.
+- `contained()`: `realpath` check against the root''s `realpath` (computed once per root); MIME additions.
+- One lasting test, `app/desktop/resolve.test.mjs` (`node --test`, temp dirs, no Electron): `..` and encoded `..`, absolute and drive-letter paths, a symlink in a mod to a file outside it and to a folder outside it, a directory request, layer order (top mod wins, ours last), mod `index.html` as fallback, `mod.json` not served, `/data/` layering. Root `package.json` `test` runs it too (`… && node --test app/desktop/`), so `npm test` covers it (D-73).
+- Done when: the test passes; `trivia-desktop` without mods plays as before; per-commit checks pass.
+
+### 3. Wire it into `main.mjs`
+- `modsDir()` (`TRIVIA_MODS_DIR` → packaged `<userData>/mods/`, created → dev `REPO/mods/`), `modsSettingsFile()` (packaged `<userData>/mods.json`, dev `state/desktop/mods.json`).
+- `parseArgs`: `--no-mods` (extend `OWN` and `USAGE`).
+- In `start()` after `checkUser()`: discover (workshop `[]` until part 3), read settings, append new mods and write back, `arrange`, pass `layers` to `makeResolver`; with `--no-mods` or no valid user: no layers. One stderr line per mod (`trivia: mod <id> <state> [warnings]`) and a summary (`trivia: mods: 2 loaded, 1 invalid`).
+- Keep the result (`list`) in a module variable for part 3/6''s bridge; no IPC here.
+- `.gitignore`: `mods/` (repo root, with a short comment).
+- Done when: `trivia-desktop` with a repo `mods/` holding a CSS override mod starts with the changed colour; `--no-mods` starts plain; without the dev switch and without Steam the mod is `no_user`; per-commit checks pass.
+
+### 4. End-to-end check in the shell (throw-away mods)
+- Temp `TRIVIA_MODS_DIR` with: a theme mod (`game/theme.css` colour), a JS override of one component (path per decision 124 if plan 111 is done, else the current hashed name), two mods overriding the same file (order in `mods.json` decides; swap and restart), a full conversion (`index.html` "Hello"), an invalid mod, a mod with a symlink to `~/.ssh/…`-style outside file (served 404/fallback, never the file).
+- Done when: each behaves as above in `trivia-desktop` (dev switch on), `--no-mods` brings back our game with the conversion installed; one line per case in the done note; temp mods deleted.
+
+### 5. Docs
+- `directory.md`: `app/desktop/` row: `mods.mjs`, `resolve.test.mjs`, layers in `resolve.mjs`; new row `mods/` (local mods for development, gitignored; `TRIVIA_MODS_DIR`); `state/desktop/mods.json`.
+- `plans/18-steam-integration.md`: section "Modding" (sources, `mods.json`, layers and top-wins, what isn''t overlaid, `--no-mods`, symlink rule; the schema from task 1); `plans/01-architecture.md` one bullet (overlay).
+- AGENTS.md "Commands": `trivia-desktop` line gains `TRIVIA_MODS_DIR`, `--no-mods`.
+- Done when: docs name this plan''s paths and the recorded decision; per-commit checks pass.
+
+## Order
+1 → 2 → 3 → 4 → 5. Part 3 (Workshop) fills `discover`''s `workshop` and adds the bridge; part 5 adds `/data/` merge exceptions; part 6 builds on `list`, `--no-mods` and `mods.json`.', '2026-10-13T17:52:37Z', 900);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -20820,7 +20902,7 @@ Cover part 1''s list:
 - Impact checks: build size, start time on the Steam Deck, `credits` plugin, `credits_check.mjs`, `smoke.mjs`, `trivia-desktop-build` (asar), plan 99''s dev server.
 - Docs: `plans/18-steam-integration.md` or `plans/01-architecture.md` build bullet.
 - Tasks for the work, each with a done-when.', '2026-10-13T17:47:23Z', '2026-10-13T17:49:41Z', 898);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (900, 102, 'write plan: Mod format, local mods/ and the app:// overlay', 'plan', 'open', 1000, NULL, 'Write the plan for part 2 of masterplan 15 (plan 102): "Mod format, local `mods/` and the `app://` overlay". Read plan 102 (ground rules: page only, path safety, offline), milestone 15, `app/desktop/main.mjs`, `resolve.mjs` (`makeResolver`, `contained()`), the part 1 plan (`pm plan list`). Create it with `pm plan add 15 "Mod format, local mods/ and the app:// overlay" --priority 700 < body.md`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (900, 102, 'write plan: Mod format, local mods/ and the app:// overlay', 'plan', 'done', 1000, '2026-10-13, plan 112 (Mod format, local mods/ and the app:// overlay)', 'Write the plan for part 2 of masterplan 15 (plan 102): "Mod format, local `mods/` and the `app://` overlay". Read plan 102 (ground rules: page only, path safety, offline), milestone 15, `app/desktop/main.mjs`, `resolve.mjs` (`makeResolver`, `contained()`), the part 1 plan (`pm plan list`). Create it with `pm plan add 15 "Mod format, local mods/ and the app:// overlay" --priority 700 < body.md`.
 
 Cover part 2''s list:
 - `mod.json` schema (`id`, `name`, `description`, `version`, `game`, `languages`, optional `entry`, optional `kind` hints); validator in pure Node `app/desktop/mods.mjs`, testable like `resolve.mjs`; JSON Schema text for the guide.
@@ -20829,7 +20911,7 @@ Cover part 2''s list:
 - Overlay: ordered roots (enabled mods in load order, then `dist`; same for `/data/`, part 5 decides which data files), first hit wins; a mod''s `index.html` = full conversion; how the mods screen stays reachable (part 6''s safe start).
 - Mod files as bytes only, MIME by extension; tests for `..`, absolute paths, symlinks in a mod.
 - `game` ≠ running version: loaded, warning for part 6.
-- Tasks for the work, each with a done-when; `directory.md` for new paths.', '2026-10-13T17:47:23Z', NULL, 898);
+- Tasks for the work, each with a done-when; `directory.md` for new paths.', '2026-10-13T17:47:23Z', '2026-10-13T17:52:39Z', 898);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (901, 102, 'write plan: Workshop source: subscribed items in the shell', 'plan', 'open', 1000, NULL, 'Write the plan for part 3 of masterplan 15 (plan 102): "Workshop source: subscribed items in the shell". Read plan 102, milestone 15, decision 111: Steam only, plan 85 (Steamworks binding, `steamworks-ffi-node`''s Workshop manager), the part 2 plan. Create it with `pm plan add 15 "Workshop source: subscribed items in the shell" --priority 690 < body.md` (after part 2''s plan at 700).
 
 Cover part 3''s list:
@@ -20910,6 +20992,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-13T17:52:25Z', NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (913, 10, 'revise the masterplan', 'masterplan', 'open', 1000, NULL, 'The milestone changed. Bring plan 10, the masterplan, in line with it (`pm plan edit 10 --body -`), or
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-13T17:52:25Z', NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (914, 112, 'create tasks for plan 112', 'split', 'open', 1000, NULL, 'Split plan 112 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:52:37Z', NULL, 900);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -22965,7 +23049,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (756, 834, '2026-10-13T17:43:40Z', '2026-10-13T17:46:21Z', 'done', NULL, 0, 'ce63d42ef7949c50de8de474a19b300efaeb3a1f', 'claude-opus-5-5[1m]', 'a785f30d-97d0-46ae-a92b-f9764a3a80b5', 15, 30, 14215, 898731, 75075, 1.0647662, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (757, 898, '2026-10-13T17:46:22Z', '2026-10-13T17:47:38Z', 'done', NULL, 0, 'bbf766f229212cd7ee47c0b0e11255a941f6d196', 'claude-opus-5-5[1m]', '716c918b-cb6f-439a-98e4-7fcaf4abef3d', 8, 14, 8367, 272753, 43515, 0.5700666, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (758, 899, '2026-10-13T17:47:39Z', '2026-10-13T17:49:49Z', 'done', NULL, 0, '8b4234b5912a1386f5b055f0647d291f63501bd0', 'claude-opus-5-5[1m]', '562b18ff-47a8-4515-b1ed-5e3eb4a4676b', 17, 32, 11688, 885334, 71825, 0.98555480000000006, 1575243);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (759, 900, '2026-10-13T17:49:50Z', NULL, 'running', NULL, NULL, 'a5669bb36c9c08234cc4da36a0746d84227b0193', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (759, 900, '2026-10-13T17:49:50Z', '2026-10-13T17:52:50Z', 'done', NULL, 0, 'a5669bb36c9c08234cc4da36a0746d84227b0193', 'claude-opus-5-5[1m]', '02859917-17ac-4286-8149-aa5b664cec5e', 9, 18, 12652, 408597, 57987, 0.7987274, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
