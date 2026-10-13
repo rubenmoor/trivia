@@ -115,11 +115,25 @@ function svelte(): { entry: Credits["libraries"][number]; text: string } {
   };
 }
 
+/** Only where the shell's deps are installed (not in the nix build, which ships no Electron). */
+function electron(): { entries: Credits["libraries"]; text: string } | null {
+  const dir = `${repo}app/desktop/node_modules/electron/`;
+  if (!existsSync(`${dir}package.json`)) return null;
+  const pkg = JSON.parse(readFileSync(`${dir}package.json`, "utf8")) as { version: string; license: string };
+  return {
+    entries: [
+      { name: "Electron", version: pkg.version, license: pkg.license, url: "https://www.electronjs.org" },
+      { name: "Chromium", version: "", license: "BSD-3-Clause and others", url: "https://www.chromium.org" },
+    ],
+    text: readFileSync(`${dir}LICENSE`, "utf8").trim(),
+  };
+}
+
 const cell = (s: string) => s.replace(/\|/g, "\\|").replace(/\n/g, " ");
 const link = (text: string, url: string | null) =>
   url ? `[${cell(text).replace(/([[\]])/g, "\\$1")}](${url.replace(/\(/g, "%28").replace(/\)/g, "%29").replace(/ /g, "%20")})` : cell(text);
 
-function markdown(c: Credits, soundRows: string[], svelteLicence: string): string {
+function markdown(c: Credits, soundRows: string[], svelteLicence: string, electronLicence: string | null): string {
   const out = [
     "# Credits",
     "",
@@ -164,8 +178,19 @@ function markdown(c: Credits, soundRows: string[], svelteLicence: string): strin
   out.push("");
   if (c.glyphs) out.push("## Controller glyphs", "", "Original, drawn for the game.", "");
   out.push("## Libraries", "");
-  for (const l of c.libraries) out.push(`- ${l.name} ${l.version} (${l.url}): ${l.license}`);
+  for (const l of c.libraries) out.push(`- ${[l.name, l.version].filter(Boolean).join(" ")} (${l.url}): ${l.license}`);
   out.push("", "### Svelte licence", "", svelteLicence, "");
+  if (electronLicence) {
+    out.push(
+      "### Electron licence",
+      "",
+      "Desktop build only. Chromium's third-party licences ship as `LICENSES.chromium.html` next to the executable; " +
+        "Electron's licence also as `LICENSE.electron.txt`.",
+      "",
+      electronLicence,
+      "",
+    );
+  }
   return out.join("\n");
 }
 
@@ -176,6 +201,7 @@ export function buildCredits(poolPath = defaultPool): { json: Credits; md: strin
   }
   const s = sounds();
   const lib = svelte();
+  const shell = electron();
   const json: Credits = {
     version: 1,
     game: game(),
@@ -183,9 +209,9 @@ export function buildCredits(poolPath = defaultPool): { json: Credits; md: strin
     sounds: { entries: s.entries, note: ELGAR },
     fonts: FONTS,
     glyphs: existsSync(`${client}src/game/Glyph.svelte`),
-    libraries: [lib.entry],
+    libraries: [lib.entry, ...(shell?.entries ?? [])],
   };
-  return { json, md: markdown(json, s.md, lib.text), warnings };
+  return { json, md: markdown(json, s.md, lib.text, shell?.text ?? null), warnings };
 }
 
 /** Emits credits.json and CREDITS.md into dist/; serves /credits.json in dev. */
