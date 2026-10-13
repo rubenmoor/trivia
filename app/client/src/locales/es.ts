@@ -199,7 +199,6 @@ const es = {
     body: "Una partida personalizada no gana logros.",
     standard: "Comodines estándar",
     custom: "Comodines personalizados",
-    reset: "Estándar",
     done: "Listo",
   },
   /** The configure game screen (MD-11, D-88): gamemaster mode's fields on the Choice screen. */
@@ -217,6 +216,9 @@ const es = {
     video: "Preguntas con video",
     audio: "Preguntas con audio",
     jokers: "Comodines",
+    /** The jokers preset row (decision 99): picking one fills the counts; edited counts show `custom`. */
+    preset: "Conjunto",
+    presets: { standard: "Estándar", unlimited: "Sin límite", custom: "Personalizado" },
   },
   /** The supply notice before level 1 (plan 65, decision 31): informational, «¡A jugar!» stays. */
   outlook: {

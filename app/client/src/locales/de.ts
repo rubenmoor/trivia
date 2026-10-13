@@ -170,7 +170,6 @@ export const de = {
     body: "Ein angepasstes Spiel bringt keine Erfolge.",
     standard: "Standard-Joker",
     custom: "Eigene Joker",
-    reset: "Standard",
     done: "Fertig",
   },
   configure: {
@@ -185,6 +184,8 @@ export const de = {
     video: "Videofragen",
     audio: "Audiofragen",
     jokers: "Joker",
+    preset: "Vorgabe",
+    presets: { standard: "Standard", unlimited: "Unbegrenzt", custom: "Eigene" },
   },
   outlook: {
     title: "Vor dem Start",

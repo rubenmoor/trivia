@@ -170,7 +170,6 @@ export const en = {
     body: "A customized game earns no achievements.",
     standard: "Standard jokers",
     custom: "Custom jokers",
-    reset: "Standard",
     done: "Done",
   },
   configure: {
@@ -185,6 +184,8 @@ export const en = {
     video: "Video questions",
     audio: "Audio questions",
     jokers: "Jokers",
+    preset: "Preset",
+    presets: { standard: "Standard", unlimited: "Unlimited", custom: "Custom" },
   },
   outlook: {
     title: "Before you start",

@@ -1,28 +1,29 @@
 <script lang="ts">
   // «Personalizar partida» (MD-7): joker counts for a «Solo o en grupo» game, 0–9 or ∞ like the
-  // overlay's budget (MD-4). ↑/↓ move, ←/→ or −/+ change a count, Enter/Esc/⌫ close.
+  // overlay's budget (MD-4), below a preset row (decision 99). ↑/↓ move, ←/→ or −/+ change a count or the
+  // preset, Enter/Esc/⌫ close.
   import { t } from "../lib/i18n.ts";
   import { focusControl, pushScope } from "../lib/input.svelte.ts";
   import type { JokerBudget, JokerName } from "../lib/types.ts";
-  import { stepUses, TOKENS } from "./jokers.ts";
+  import { PRESETS, presetOf, stepPreset, stepUses, TOKENS } from "./jokers.ts";
   import Prompt from "./Prompt.svelte";
 
   let {
     jokers,
-    standard,
     onchange,
     onclose,
-  }: { jokers: JokerBudget; standard: JokerBudget; onchange: (jokers: JokerBudget) => void; onclose: () => void } = $props();
+  }: { jokers: JokerBudget; onchange: (jokers: JokerBudget) => void; onclose: () => void } = $props();
 
   let dialog = $state<HTMLDivElement>();
 
-  function step(name: JokerName, by: number) {
+  function step(name: JokerName | "preset", by: number) {
+    if (name === "preset") return onchange(stepPreset(jokers, by));
     const now = jokers[name];
     const next = stepUses(now, by);
     if (next !== now) onchange({ ...jokers, [name]: next });
   }
 
-  const jokerOf = (el: Element | null) => (el instanceof HTMLElement ? (el.dataset.joker as JokerName | undefined) : undefined);
+  const jokerOf = (el: Element | null) => (el instanceof HTMLElement ? (el.dataset.joker as JokerName | "preset" | undefined) : undefined);
 
   $effect(() => {
     const pop = pushScope({
@@ -47,18 +48,24 @@
   <div class="dialog" bind:this={dialog} role="dialog" aria-labelledby="customize-title">
     <h2 id="customize-title">{t("customize.title")}</h2>
     <p class="note">{t("customize.body")}</p>
-    {#each TOKENS as token, i (token.name)}
+    <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
+    <div class="row" data-joker="preset" data-focusable data-focus-default tabindex="0" role="group">
+      <span>{t("configure.preset")}</span>
+      <button class="step" onclick={() => step("preset", -1)} tabindex="-1" aria-label={t("overlay.less")}>−</button>
+      <span class="value">{t(`configure.presets.${presetOf(jokers)}`)}</span>
+      <button class="step" onclick={() => step("preset", 1)} tabindex="-1" aria-label={t("overlay.more")}>+</button>
+    </div>
+    {#each TOKENS as token (token.name)}
       {@const name = token.name}
       <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
-      <div class="row" data-joker={name} data-focusable data-focus-default={i === 0 || undefined} tabindex="0" role="group">
+      <div class="row" data-joker={name} data-focusable tabindex="0" role="group">
         <span>{token.label}</span>
         <button class="step" onclick={() => step(name, -1)} tabindex="-1" aria-label={t("overlay.less")}>−</button>
-        <span class="value" class:changed={jokers[name] !== standard[name]}>{jokers[name] ?? "∞"}</span>
+        <span class="value" class:changed={jokers[name] !== PRESETS.standard[name]}>{jokers[name] ?? "∞"}</span>
         <button class="step" onclick={() => step(name, 1)} tabindex="-1" aria-label={t("overlay.more")}>+</button>
       </div>
     {/each}
     <div class="choices">
-      <button class="secondary" onclick={() => onchange({ ...standard })}>{t("customize.reset")}</button>
       <button class="candy" onclick={onclose}>{t("customize.done")} <Prompt action="confirm" /></button>
     </div>
   </div>
@@ -98,7 +105,7 @@
   }
   .row {
     display: grid;
-    grid-template-columns: 1fr calc(2.4 * var(--u)) calc(2.4 * var(--u)) calc(2.4 * var(--u));
+    grid-template-columns: 1fr calc(2.4 * var(--u)) calc(12 * var(--u)) calc(2.4 * var(--u));
     align-items: center;
     gap: calc(1 * var(--u));
     padding: calc(0.45 * var(--u)) calc(1.4 * var(--u));

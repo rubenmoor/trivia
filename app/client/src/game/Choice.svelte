@@ -31,7 +31,7 @@
   import type { Difficulty, GameMode, JokerBudget, JokerName, Supply } from "../lib/types.ts";
   import BundleSelector, { toggled, type Bundle } from "./BundleSelector.svelte";
   import Customize from "./Customize.svelte";
-  import { TOKENS } from "./jokers.ts";
+  import { presetOf, stepPreset, TOKENS } from "./jokers.ts";
   import { clamp, spanOf, stepDifficulty } from "./difficulty.ts";
   import { DEFAULT_LEVELS } from "./levels.ts";
   import Prompt from "./Prompt.svelte";
@@ -183,6 +183,7 @@
     else if (id === "cards") cards = clamp(cards + by, 0, CARDS_MAX);
     else if (id === "video") video = !video;
     else if (id === "audio") audio = !audio;
+    else if (id === "preset") return void (budget = stepPreset(budget, by));
     else if (id.startsWith("joker-")) return stepJoker(id.slice(6) as JokerName, by);
     changed();
   }
@@ -252,7 +253,7 @@
       ...(mode === "gamemaster" ? letters.filter(Boolean).map(letter) : [letter(CUSTOMIZE_KEY)]),
     ]),
   );
-  const customized = $derived(TOKENS.some((tok) => jokers[tok.name] !== STANDARD_JOKERS[tok.name]));
+  const customized = $derived(presetOf(jokers) !== "standard");
 
   function ages([lo, hi]: readonly [number, number | null]) {
     return hi === null ? t("choice.agesFrom", { lo }) : t("choice.ages", { lo, hi });
@@ -334,6 +335,7 @@
           </div>
           <div class="lines">
             <p class="label heading">{t("configure.jokers")}</p>
+            {@render stepper("preset", t("configure.preset"), t(`configure.presets.${presetOf(budget)}`))}
             {#each TOKENS as token (token.name)}
               {@render stepper(`joker-${token.name}`, token.label, String(budget[token.name] ?? "∞"))}
             {/each}
@@ -396,7 +398,7 @@
 {/if}
 
 {#if customizing}
-  <Customize {jokers} standard={STANDARD_JOKERS} onchange={(j) => (jokers = j)} onclose={() => (customizing = false)} />
+  <Customize {jokers} onchange={(j) => (jokers = j)} onclose={() => (customizing = false)} />
 {/if}
 
 {#snippet stepper(id: string, label: string, value: string, note = "", warn = false)}
