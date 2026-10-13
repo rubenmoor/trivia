@@ -3722,7 +3722,30 @@ def validate_pool():
     for l in translations.LOCALES:
         if layout.LOCALE_POOL(l).exists() and not translations.path(l).exists():
             errors.append(f"{layout.LOCALE_POOL(l).relative_to(ROOT)}: no {translations.path(l).relative_to(ROOT)}; delete it")
+    tag, released = released_ids()
+    gone = sorted(released - ids, key=natural_key) if tag else []
+    if gone:
+        errors.append(f"{len(gone)} id(s) of {tag}'s pool missing from authoring/data/questions.json "
+                      f"(drop = status change, never deletion; plan 91): {', '.join(gone)}")
     return errors, warnings
+
+
+def released_ids():
+    """(newest v* tag, ids in its app/data/pool*.json), or (None, None) without a tag or git (plan 91)."""
+    def git(*a):
+        return subprocess.run(["git", *a], cwd=ROOT, capture_output=True, text=True)
+    try:
+        tags = git("tag", "--list", "v*", "--sort=-v:refname").stdout.split()
+    except OSError:
+        return None, None
+    if not tags:
+        return None, None
+    files = git("ls-tree", "--name-only", tags[0], "app/data/").stdout.split()
+    ids = set()
+    for f in files:
+        if re.fullmatch(r"app/data/pool(\.[A-Za-z-]+)?\.json", f):
+            ids |= {q["id"] for q in json.loads(git("show", f"{tags[0]}:{f}").stdout)["questions"]}
+    return tags[0], ids
 
 
 def review_problems(q):
@@ -3960,6 +3983,8 @@ def cmd_validate(args):
     if warnings:
         print("\n".join(f"warning: {w}" for w in warnings))
         print(f"({len(warnings)} warning(s); `trivia-media sync --status approved` fills the cache)")
+    tag, _ = released_ids()
+    print(f"id continuity: checked against {tag}" if tag else "id continuity: skipped, no v* tag")
     print("\n".join(errors) or f"OK: {len(load_json(POOL)['questions'])} questions")
     sys.exit(1 if errors else 0)
 

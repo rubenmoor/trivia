@@ -59,3 +59,4 @@ A `qgen batch --translate <locale>` run (D-87) gets the same steps, with `tr-<lo
 - Change prompts, house style or `qgen.py` inside a batch run or a QC task; only in the change tasks of step 4.
 - Answer the spot-check decision or spot-check questions as an LLM; the spot check is the gamemaster's.
 - Approve or reject questions because of an audit finding; the gamemaster decides them in the review tool.
+- Delete a question from `authoring/data/questions.json`; dropping one = status change (`rejected`), so ids are never reused; `qgen validate` fails on an id of the newest `v*` tag's pool that is gone (plan 91).

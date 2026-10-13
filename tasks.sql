@@ -13549,7 +13549,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Docs
 - `plans/12-client-engine.md` new section "Saves across patches": what a patch may do (add, fix, drop questions; never delete or reuse ids), what the engine guarantees (above), the rule for later patches (shape change = `SAVE_VERSION + 1` + an `UPGRADES` entry + a `save.test.ts` case; never silent), and the beta/default note (a newer save on an older build is backed up and the game starts empty, so a save version bump ships to `default` in the same release the family tested on `beta`; testers don''t switch back to `default` before it).', '2026-10-13T08:26:18Z', '2026-10-13T08:33:02Z', 689);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (692, 91, 'qgen validate: question ids never vanish after a release tag', 'work', 'open', NULL, NULL, 'Plan 91 part 3. Seen counts are per id and never pruned, and `qgen draft` allocates `max(id) + 1` over `authoring/data/questions.json`; if an id vanishes from that file it can be reused and an old save would treat a new question as seen (or a dropped one as new).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (692, 91, 'qgen validate: question ids never vanish after a release tag', 'work', 'done', NULL, '2026-10-13, authoring/tools/qgen.py (released_ids, validate_pool id continuity, cmd_validate note), authoring/QC.md, plans/18-steam-integration.md', 'Plan 91 part 3. Seen counts are per id and never pruned, and `qgen draft` allocates `max(id) + 1` over `authoring/data/questions.json`; if an id vanishes from that file it can be reused and an old save would treat a new question as seen (or a dropped one as new).
 
 ## What
 - `qgen validate` fails when an id in the newest `v*` tag''s `app/data/pool.json` (`git show <tag>:app/data/pool.json`; newest by version sort, e.g. `git tag --list ''v*'' --sort=-v:refname`) is missing from `authoring/data/questions.json` (any status). Error lists the missing ids and the tag.
@@ -13562,7 +13562,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Docs
 - `authoring/RUNBOOK.md` or `authoring/QC.md`: one bullet: dropping a question = status change, never deletion; validate guards it against the last release tag.
-- `plans/18-steam-integration.md` **Version** bullet (written by the "One version and pool hash" task) mentions the guard.', '2026-10-13T08:26:18Z', NULL, 689);
+- `plans/18-steam-integration.md` **Version** bullet (written by the "One version and pool hash" task) mentions the guard.', '2026-10-13T08:26:18Z', '2026-10-13T08:34:23Z', 689);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (693, 91, 'Close-out of plan 91: docs and decision consequences', 'work', 'open', NULL, NULL, 'Plan 91 part 4, after the other plan 91 tasks are done.
 
 ## What
@@ -15161,6 +15161,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (528, 689, '2026-10-13T08:25:42Z', '2026-10-13T08:26:27Z', 'done', NULL, 0, '8a302f76fb8a114517b12bf49ef6b43dacecd51f', 'claude-opus-5-5[1m]', 'f705d620-cf9d-42e2-971e-64601ae89e28', 6, 12, 4377, 177672, 27562, 0.3436184, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (529, 690, '2026-10-13T08:26:27Z', '2026-10-13T08:30:22Z', 'done', NULL, 0, '206722a3f08c6574d0ad4d88ee9cd7add81c1279', 'claude-opus-5-5[1m]', '3fdea2f1-cb5a-45d5-8e4f-a78a34d84ce8', 32, 64, 12807, 1559873, 55425, 1.0117706, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (530, 691, '2026-10-13T08:30:22Z', '2026-10-13T08:33:12Z', 'done', NULL, 0, '69269999f9ffbe2948cf25394790bcb6b2aba669', 'claude-opus-5-5[1m]', '4fd77c8d-9d46-49fe-b4d4-7893a0e34e66', 30, 50, 13649, 1719163, 77240, 1.2349325999999998, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (531, 692, '2026-10-13T08:33:12Z', '2026-10-13T08:34:33Z', 'done', NULL, 0, '6e37cf215c33c7bf88a004752b54ba1d932ca055', 'claude-opus-5-5[1m]', 'da3233f3-e3c1-4e78-8cb0-91a0ded29e2c', 20, 38, 5951, 752281, 37040, 0.56594820000000012, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
