@@ -36,7 +36,8 @@ let noiseBuffer: AudioBuffer;
 /** Recorded sounds (UI-10), decoded once after the unlock; a missing one falls back to synthesis. */
 const SAMPLE_NAMES = [
   "aplausos", "aplausos-gran", "redoble", "fanfarria", "trombon-triste", "candado-cierra", "candado-abre",
-  "papel", "vidrio", "sello", "golpe", "estallido", "victoria",
+  "papel", "vidrio", "sello", "golpe", "estallido", "victoria", "whoosh", "swoosh-sube", "escoba", "pop",
+  "menu-abre", "menu-cierra", "desbloqueado", "hola",
 ] as const;
 type Sample = (typeof SAMPLE_NAMES)[number];
 const samples: Partial<Record<Sample, AudioBuffer>> = {};
@@ -54,6 +55,14 @@ const SAMPLE_FOR: Partial<Record<Cue, [Sample, ((level: number) => number)?]>> =
   // The block landing: the higher the tower, the higher the thud (04, "Block arrival").
   block: ["golpe", (level) => 0.75 + level * 0.06],
   burst: ["estallido", () => 0.85 + Math.random() * 0.3],
+  whoosh: ["whoosh"],
+  "swoosh-up": ["swoosh-sube"],
+  swoosh: ["escoba"],
+  pop: ["pop", () => 0.9 + Math.random() * 0.25],
+  "menu-open": ["menu-abre"],
+  "menu-close": ["menu-cierra"],
+  unlocked: ["desbloqueado"],
+  ready: ["hola"],
 };
 
 async function loadSamples(c: AudioContext) {

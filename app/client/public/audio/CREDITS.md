@@ -19,3 +19,11 @@ Everything not listed here is synthesized in `app/client/src/game/sound.svelte.t
 | `golpe.m4a` | The new block landing on the tower (pitched up with the level) | [Dull thud.ogg](https://commons.wikimedia.org/wiki/File:Dull_thud.ogg) (from pdsounds.org) | gregoryweir | Public domain |
 | `estallido.m4a` | Firework bursts (pitch varied) | [Fireworks simulation so.ogg](https://commons.wikimedia.org/wiki/File:Fireworks_simulation_so.ogg) (from pdsounds.org) | mary905 | Public domain |
 | `victoria.m4a` | Victory: the last 98 s of the march (the «Land of Hope and Glory» tune in full force, then the coda) | [ELGAR Pomp and Circumstance in D, Opus 39, No. 1 – United States Marine Band.mp3](https://commons.wikimedia.org/wiki/File:ELGAR_Pomp_and_Circumstance_in_D,_Opus_39,_No._1_-_United_States_Marine_Band.mp3) | Edward Elgar (music), United States Marine Band | Public domain (composition and US government recording) |
+| `whoosh.m4a` | Whoosh between screens | [Whoosh](https://freesound.org/people/qubodup/sounds/60013/) (Freesound) | qubodup | CC0 |
+| `swoosh-sube.m4a` | Cambiazo: the card flip («swoosh que sube») | [Backwards Whoosh](https://freesound.org/people/SlavicMagic/sounds/446010/) (Freesound) | SlavicMagic | CC0 |
+| `escoba.m4a` | Paso: the broom sweeping the question away (first stroke) | [broom sweep.wav](https://freesound.org/people/semccab/sounds/154376/) (Freesound) | semccab | CC0 |
+| `pop.m4a` | Picking a card (pitch varied) | [Cartoon Pop (Clean)](https://freesound.org/people/unfa/sounds/245645/) (Freesound) | unfa | CC0 |
+| `menu-abre.m4a` | Opening the menu or a dialog | `maximize_001.ogg`, [Interface Sounds](https://kenney.nl/assets/interface-sounds) | Kenney | CC0 |
+| `menu-cierra.m4a` | Closing the menu or a dialog | `minimize_001.ogg`, [Interface Sounds](https://kenney.nl/assets/interface-sounds) | Kenney | CC0 |
+| `desbloqueado.m4a` | The first click: audio unlocked | `glass_001.ogg`, [Interface Sounds](https://kenney.nl/assets/interface-sounds) | Kenney | CC0 |
+| `hola.m4a` | «¡Hola, …!» and «listo» into level 1 | `confirmation_001.ogg`, [Interface Sounds](https://kenney.nl/assets/interface-sounds) | Kenney | CC0 |
