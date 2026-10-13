@@ -14,12 +14,21 @@ export type Volumes = { music: number; effects: number; media: number; muted: bo
 const STORE = "trivia.volumes";
 const DEFAULTS: Volumes = { music: 0.3, effects: 0.7, media: 1, muted: false };
 
+/** A stored value that isn't a level in 0..1 (or a boolean for `muted`) falls back to the default. */
 function loadVolumes(): Volumes {
+  let saved: Partial<Record<keyof Volumes, unknown>> = {};
   try {
-    return { ...DEFAULTS, ...JSON.parse(localStorage.getItem(STORE) ?? "{}") };
+    saved = JSON.parse(localStorage.getItem(STORE) ?? "{}") ?? {};
   } catch {
-    return { ...DEFAULTS };
+    /* corrupt: defaults */
   }
+  const level = (v: unknown, d: number) => (typeof v === "number" && v >= 0 && v <= 1 ? v : d);
+  return {
+    music: level(saved.music, DEFAULTS.music),
+    effects: level(saved.effects, DEFAULTS.effects),
+    media: level(saved.media, DEFAULTS.media),
+    muted: typeof saved.muted === "boolean" ? saved.muted : DEFAULTS.muted,
+  };
 }
 
 /** Reactive settings (the admin overlay edits them) and what is playing. */
@@ -86,15 +95,17 @@ const SAMPLE_FOR: Partial<Record<Cue, [Sample, ((level: number) => number)?]>> =
 };
 
 async function loadSamples(c: AudioContext) {
+  const failed: string[] = [];
   await Promise.all(
     SAMPLE_NAMES.map(async (key) => {
       try {
         samples[key] = await c.decodeAudioData(await (await fetch(`/audio/${key}.m4a`)).arrayBuffer());
       } catch {
-        /* offline or not supported: the synthesized version plays instead */
+        failed.push(key); // missing or not decodable: the synthesized version plays instead
       }
     }),
   );
+  if (failed.length) console.warn(`audio: synthesized instead of ${failed.join(", ")}`);
 }
 
 /** The first click or key press unlocks audio in the browser (04, "Start"). */
@@ -191,7 +202,7 @@ const CHORDS = [
   [55, 60, 64],
   [52, 56, 59],
 ];
-const TEMPO: Record<Track, number> = { normal: 76, question: 96, submitted: 120, roll: 120, victory: 120 };
+const TEMPO: Record<LoopTrack, number> = { normal: 76, question: 96, submitted: 120 };
 /** The drum roll: hits per second, and how long it takes to build to full strength. */
 const ROLL_HZ = 22;
 const ROLL_BUILD_S = 6;
@@ -200,6 +211,7 @@ const hz = (midi: number) => 440 * 2 ** ((midi - 69) / 12);
 /** The recorded loops (OpenGameArt «Music loop variations», CC0): 8 bars at 100 bpm, 19.2 s each,
  * so a cut between `question` and `submitted` keeps the beat. */
 const MUSIC_FILE = { normal: "musica-normal", question: "musica-pregunta", submitted: "musica-enviada" } as const;
+type LoopTrack = keyof typeof MUSIC_FILE;
 const LOOP_END = 19.2; // AAC pads the end: loop on the bars, not the file length
 const MUSIC_LEVEL = 1.6; // the music bus is set for the soft generated loops
 
@@ -210,84 +222,12 @@ function startTrack(track: Track, fadeIn: number, opts: { synth?: boolean; offse
   gain.gain.setValueAtTime(0, c.currentTime);
   gain.gain.linearRampToValueAtTime(1, c.currentTime + fadeIn);
   gain.connect(musicBus);
-  let next = c.currentTime + 0.05;
   const voices = new Set<AudioScheduledSourceNode>();
   const keep = (n: AudioScheduledSourceNode) => {
     voices.add(n);
     n.onended = () => voices.delete(n);
   };
-  if (track === "victory") {
-    // Elgar's finale (US Marine Band, public domain), once and loud: it is the moment, not a
-    // background loop. Without the file the Victory screen keeps its cheers only.
-    if (samples.victoria) {
-      const src = c.createBufferSource();
-      src.buffer = samples.victoria;
-      const level = c.createGain();
-      level.gain.value = 3;
-      src.connect(level).connect(gain);
-      src.start(c.currentTime + 0.05);
-      keep(src);
-    }
-    current = {
-      gain,
-      stop: () => {
-        voices.forEach((v) => v.stop());
-        gain.disconnect();
-      },
-    };
-    return;
-  }
-  if (track === "roll") {
-    // Crescendo from soft to full over ROLL_BUILD_S, then keep rolling at full strength.
-    const swell = c.createGain();
-    swell.gain.setValueAtTime(0.3, c.currentTime);
-    swell.gain.linearRampToValueAtTime(1, c.currentTime + ROLL_BUILD_S);
-    swell.connect(gain);
-    if (samples.redoble) {
-      // The recorded roll (US Air Force Band, public domain), looped if the wait is longer.
-      const src = c.createBufferSource();
-      src.buffer = samples.redoble;
-      src.loop = true;
-      const level = c.createGain();
-      level.gain.value = 2.2; // the music bus is set for soft loops; the roll is the music here
-      src.connect(level).connect(swell);
-      src.start();
-      keep(src);
-      current = {
-        gain,
-        stop: () => {
-          voices.forEach((v) => v.stop());
-          gain.disconnect();
-        },
-      };
-      return;
-    }
-    const rumble = c.createOscillator();
-    rumble.frequency.value = hz(33);
-    const rg = c.createGain();
-    rg.gain.value = 0.12;
-    rumble.connect(rg).connect(swell);
-    rumble.start();
-    keep(rumble);
-    let i = 0;
-    const timer = setInterval(() => {
-      while (next < c.currentTime + 0.2) {
-        snare(c, swell, next, 0.5 + (i++ % 2) * 0.12 + Math.random() * 0.1, keep);
-        next += 1 / ROLL_HZ;
-      }
-    }, 40);
-    current = {
-      gain,
-      stop: () => {
-        clearInterval(timer);
-        voices.forEach((v) => v.stop());
-        gain.disconnect();
-      },
-    };
-    return;
-  }
-  // The three loops: the recording if it decoded (samples load after the unlock: wait for them),
-  // else the generated version.
+  // The recording if it decoded (samples load after the unlock: wait for them), else the generated version.
   let stopped = false;
   let stopLoop = () => {};
   const loop: Loop = {
@@ -301,7 +241,57 @@ function startTrack(track: Track, fadeIn: number, opts: { synth?: boolean; offse
   };
   const begin = () => {
     if (stopped) return;
-    const buffer = !opts.synth && samples[MUSIC_FILE[track as keyof typeof MUSIC_FILE]];
+    if (track === "victory") {
+      // Elgar's finale (US Marine Band, public domain), once and loud: it is the moment, not a
+      // background loop. Without the file the Victory screen keeps its cheers only.
+      if (samples.victoria) {
+        const src = c.createBufferSource();
+        src.buffer = samples.victoria;
+        const level = c.createGain();
+        level.gain.value = 3;
+        src.connect(level).connect(gain);
+        src.start(c.currentTime + 0.05);
+        keep(src);
+      }
+      return;
+    }
+    if (track === "roll") {
+      // Crescendo from soft to full over ROLL_BUILD_S, then keep rolling at full strength.
+      const swell = c.createGain();
+      swell.gain.setValueAtTime(0.3, c.currentTime);
+      swell.gain.linearRampToValueAtTime(1, c.currentTime + ROLL_BUILD_S);
+      swell.connect(gain);
+      if (samples.redoble) {
+        // The recorded roll (US Air Force Band, public domain), looped if the wait is longer.
+        const src = c.createBufferSource();
+        src.buffer = samples.redoble;
+        src.loop = true;
+        const level = c.createGain();
+        level.gain.value = 2.2; // the music bus is set for soft loops; the roll is the music here
+        src.connect(level).connect(swell);
+        src.start();
+        keep(src);
+        return;
+      }
+      const rumble = c.createOscillator();
+      rumble.frequency.value = hz(33);
+      const rg = c.createGain();
+      rg.gain.value = 0.12;
+      rumble.connect(rg).connect(swell);
+      rumble.start();
+      keep(rumble);
+      let next = c.currentTime + 0.05;
+      let i = 0;
+      const timer = setInterval(() => {
+        while (next < c.currentTime + 0.2) {
+          snare(c, swell, next, 0.5 + (i++ % 2) * 0.12 + Math.random() * 0.1, keep);
+          next += 1 / ROLL_HZ;
+        }
+      }, 40);
+      stopLoop = () => clearInterval(timer);
+      return;
+    }
+    const buffer = !opts.synth && samples[MUSIC_FILE[track]];
     if (!buffer) return void (stopLoop = generate(c, gain, track, keep));
     const src = c.createBufferSource();
     src.buffer = buffer;
@@ -322,7 +312,7 @@ function startTrack(track: Track, fadeIn: number, opts: { synth?: boolean; offse
 }
 
 /** The generated loop (fallback): a lookahead scheduler on `gain`; returns its stop. */
-function generate(c: AudioContext, gain: GainNode, track: Track, keep: Keep) {
+function generate(c: AudioContext, gain: GainNode, track: LoopTrack, keep: Keep) {
   const beat = 60 / TEMPO[track];
   let next = c.currentTime + 0.05;
   let step = 0; // eighth notes
@@ -352,7 +342,7 @@ function generate(c: AudioContext, gain: GainNode, track: Track, keep: Keep) {
 
 type Keep = (n: AudioScheduledSourceNode) => void;
 
-function pad(c: AudioContext, out: AudioNode, chord: number[], t: number, len: number, track: Track, keep: Keep) {
+function pad(c: AudioContext, out: AudioNode, chord: number[], t: number, len: number, track: LoopTrack, keep: Keep) {
   const filter = c.createBiquadFilter();
   filter.type = "lowpass";
   filter.frequency.value = track === "normal" ? 700 : track === "question" ? 1100 : 1600;
