@@ -23,7 +23,7 @@ export interface SteamBridge {
   /** Steam's API language name (`german`, `latam`, …): the game's in Steam, else the client's. */
   language(): Promise<string | null>;
   overlay: { enabled(): Promise<boolean> };
-  /** Steam's on-screen keyboard at the field; false when Steam shows none. */
+  /** Steam's floating keyboard at the field (types into the focused input); false outside Big Picture/Deck. */
   showTextInput(field: TextFieldRect, current: string): Promise<boolean>;
   inputTypes(): Promise<PadStyle[] | null>;
   setPresence(key: string, values: Record<string, string>): Promise<void>;
@@ -31,6 +31,7 @@ export interface SteamBridge {
   unlock(id: string): Promise<boolean>;
 }
 
+/** Window position in device pixels. */
 export interface TextFieldRect {
   x: number;
   y: number;

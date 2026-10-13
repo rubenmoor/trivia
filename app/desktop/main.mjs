@@ -219,7 +219,13 @@ function bridge() {
     steam && typeof id === "string" ? steam.achievements.unlockAchievement(id) : false,
   );
   handle("steam:overlay-enabled", () => overlay && steam?.utils.isOverlayEnabled() === true);
-  handle("steam:show-text-input", () => false);
+  // Floating keyboard types into the focused field; Steam shows it only in Big Picture or on the Deck.
+  handle("steam:show-text-input", (rect) => {
+    if (!steam || !(steam.utils.isSteamInBigPictureMode() || steam.utils.isSteamRunningOnSteamDeck())) return false;
+    const px = (v) => Math.round(Number(v) || 0);
+    // 0: EFloatingGamepadTextInputMode.SingleLine
+    return steam.utils.showFloatingGamepadTextInput(0, px(rect?.x), px(rect?.y), px(rect?.width), px(rect?.height));
+  });
   handle("steam:input-types", () => null);
   handle("steam:set-presence", () => {});
 }

@@ -3,9 +3,10 @@
   // known names (most recent first, keys 1–9) and a field for a new name. Names are labels; what the
   // family saw counts for the whole save (plan 65). Each name can be deleted with its games, after a
   // confirmation (GF-7); its seen questions stay seen. The Choice screen comes next (plan 29). With a pad,
-  // A on the field opens the letter picker (plan 46).
+  // A on the field opens Steam's floating keyboard (Big Picture/Deck, plan 85), else the letter picker (plan 46).
   import { onMount } from "svelte";
   import { deletePlayer, fetchPlayers } from "../lib/api";
+  import { steam } from "../lib/desktop";
   import { errorText } from "../lib/errors";
   import { t } from "../lib/i18n";
   import { focusControl, lastDevice, pushScope } from "../lib/input.svelte";
@@ -66,6 +67,18 @@
     if (typed && !busy) onchoose(typed);
   }
 
+  /** Steam's keyboard when it shows one, else the letter picker. */
+  async function write() {
+    if (input && steam?.available) {
+      input.focus();
+      const r = input.getBoundingClientRect();
+      const d = window.devicePixelRatio;
+      const rect = { x: r.x * d, y: r.y * d, width: r.width * d, height: r.height * d };
+      if (await steam.showTextInput(rect, name).catch(() => false)) return;
+    }
+    picking = true;
+  }
+
   function games(p: Player) {
     if (p.games === 0) return t("screen.player.gamesNone");
     const n = t("screen.player.games", { n: p.games });
@@ -100,7 +113,7 @@
       handle: (a) => {
         if (a.type === "pick" && a.n <= shown.length) onchoose(shown[a.n - 1].name);
         else if (a.type === "confirm" && document.activeElement === input) {
-          if (a.device === "gamepad") picking = true;
+          if (a.device === "gamepad") void write();
           else submit();
         }
         else return false;
@@ -162,7 +175,7 @@
           onblur={() => (onField = false)}
         />
         {#if lastDevice.current === "gamepad"}
-          <button class="secondary" type="button" onclick={() => (picking = true)} disabled={busy} data-nofocus tabindex="-1">
+          <button class="secondary" type="button" onclick={() => void write()} disabled={busy} data-nofocus tabindex="-1">
             <Prompt action="confirm" fixed off={!onField} />
             {t("picker.write")}
           </button>
