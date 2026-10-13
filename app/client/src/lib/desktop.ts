@@ -11,10 +11,6 @@ export interface DesktopBridge {
   writeSave(text: string): Promise<void>;
   /** Moves the save to `save/backup/`; the new path. */
   backupSave(kind: BackupKind): Promise<string>;
-  /** Under Steam with no save of this user's: `local/game.json`'s text, else null (plan 87). */
-  localSave(): Promise<string | null>;
-  /** Copies `local/game.json` into this user's folder (`local/` stays); its text. */
-  adoptLocalSave(): Promise<string>;
   readonly steam: SteamBridge;
   /** Set by the dev server's page shim (plan 99): its save dir is the dev switch. */
   readonly devServer?: true;

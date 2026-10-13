@@ -37,25 +37,6 @@ const exists = (p) =>
     () => false,
   );
 
-/** S3's single save `base/game.json` (+ `backup/`) → `base/local/` (plan 87); never overwrites. */
-export async function migrateToLocal(base) {
-  const local = path.join(base, "local");
-  await fs.rm(path.join(base, "game.json.tmp"), { force: true });
-  const moves = [];
-  for (const name of ["game.json", "backup"]) {
-    const from = path.join(base, name);
-    if (!(await exists(from))) continue;
-    if (await exists(path.join(local, name))) {
-      if (name === "game.json") console.error(`trivia: ${from} left in place: ${path.join(local, name)} exists`);
-      continue;
-    }
-    await fs.mkdir(local, { recursive: true });
-    await fs.rename(from, path.join(local, name));
-    moves.push(name);
-  }
-  if (moves.length) console.error(`trivia: moved ${moves.join(", ")} from ${base} → ${local}`);
-}
-
 export function makeSaveFile(dir, { rename = fs.rename } = {}) {
   const file = path.join(dir, "game.json");
   const tmp = file + ".tmp";

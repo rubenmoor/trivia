@@ -5,7 +5,7 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { makeResolver } from "./resolve.mjs";
-import { makeSaveFile, migrateToLocal } from "./save.mjs";
+import { makeSaveFile } from "./save.mjs";
 
 const ORIGIN = "app://trivia/";
 const BACKGROUND = "#0b1120"; // --night-900
@@ -35,13 +35,10 @@ function saveDir() {
   return app.isPackaged ? path.join(app.getPath("userData"), "save") : path.join(REPO, "state", "desktop");
 }
 
-/** One folder per Steam user, `local/` without Steam (plan 87); `TRIVIA_SAVE_DIR` is the folder itself. */
-async function userSaveDir() {
-  const base = saveDir();
-  if (process.env.TRIVIA_SAVE_DIR) return base;
-  await migrateToLocal(base);
-  const id = steam ? String(steam.getStatus().steamId) : "";
-  return path.join(base, /^[1-9]\d*$/.test(id) ? id : "local");
+/** Valid user's folder (plan 87, decision 114): `<steamid64>/`, `dev/` under the dev switch; `TRIVIA_SAVE_DIR` as is. */
+function userSaveDir() {
+  if (process.env.TRIVIA_SAVE_DIR) return process.env.TRIVIA_SAVE_DIR;
+  return path.join(saveDir(), hasSteamId() ? String(steam.getStatus().steamId) : "dev");
 }
 
 /** Folder holding `redistributable_bin/` (Valve licence, not in git); dev falls back to the flake's. */
@@ -85,8 +82,7 @@ let steamTimer = null;
 let steamInput = false;
 let validUser = false; // decision 111: Steam user with a SteamID, or the dev switch; fixed for the session
 let overlay = false; // Windows only: the native window Steam's overlay draws into (D-92)
-let saveFile = null; // set in start(), after Steam
-let localFile = null; // `local/`'s save under Steam: offered once (plan 87)
+let saveFile = null; // set in start(), after Steam; stays null without a valid user
 let writing = Promise.resolve();
 let pending = 0;
 
@@ -199,13 +195,19 @@ async function importSave(file) {
 async function start() {
   await startSteam();
   validUser = checkUser();
-  const dir = await userSaveDir();
-  saveFile = makeSaveFile(dir);
-  if (path.basename(dir) !== "local" && !process.env.TRIVIA_SAVE_DIR)
-    localFile = makeSaveFile(path.join(path.dirname(dir), "local"));
-  console.error(`trivia: save ${saveFile.file}`);
-  await saveFile.dropStaleTemp();
-  if (args.importSave) await importSave(args.importSave);
+  if (validUser) {
+    saveFile = makeSaveFile(userSaveDir());
+    console.error(`trivia: save ${saveFile.file}`);
+    await saveFile.dropStaleTemp();
+  } else console.error("trivia: no Steam user, progress not saved");
+  if (args.importSave) {
+    if (!saveFile) {
+      console.error("trivia: --import-save needs a Steam user (or TRIVIA_DEV_STEAM_USER=1)");
+      app.exit(1);
+      return;
+    }
+    await importSave(args.importSave);
+  }
 
   const dirs = roots();
   if (!existsSync(path.join(dirs.dist, "index.html"))) {
@@ -274,21 +276,11 @@ function bridge() {
     });
   handle("trivia:toggle-fullscreen", () => win?.setFullScreen(!win.isFullScreen()));
   handle("trivia:quit", () => app.quit());
-  // Rejections carry the code as the message: bad_save, save_locked.
-  handle("save:load", () => queued(() => saveFile.read()));
-  handle("save:write", (text) => queued(() => saveFile.write(text)));
-  handle("save:backup", (kind) => queued(() => saveFile.backup(kind)));
-  // First Steam start (plan 87): `local/`'s text while this user has no save; adopt copies it, `local/` stays.
-  const localOffer = async () => (localFile && (await saveFile.read()) === null ? localFile.read() : null);
-  handle("save:local-offer", () => queued(localOffer));
-  handle("save:adopt-local", () =>
-    queued(async () => {
-      const text = await localOffer();
-      if (text === null) throw new Error("no_local_save");
-      await saveFile.write(text);
-      return text;
-    }),
-  );
+  // Rejections carry the code as the message: bad_save, save_locked, no_user (decision 111: memory-only).
+  const refused = () => Promise.reject(new Error("no_user"));
+  handle("save:load", () => (saveFile ? queued(() => saveFile.read()) : null));
+  handle("save:write", (text) => (saveFile ? queued(() => saveFile.write(text)) : refused()));
+  handle("save:backup", (kind) => (saveFile ? queued(() => saveFile.backup(kind)) : refused()));
   // Steam (plan 85): pass-throughs; null/false without Steam.
   handle("steam:steam-id", () => steam?.getStatus().steamId ?? null);
   handle("steam:language", () => steam?.apps.getCurrentGameLanguage() ?? null);
