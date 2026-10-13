@@ -177,7 +177,7 @@
     <section class="panel">
       <h2>Game readiness</h2>
       <p class="muted small">
-        Candidates per game level (approved, not blocked); a game needs {overview.per_level} per level (D-22).
+        Candidates per game level for young teens with every bundle (approved, not blocked); a game needs {overview.per_level} per level (D-22).
         "unseen": questions this save never saw; once they run out, games repeat the least-seen ones (plan 65). Red: the
         level can't be filled.
       </p>

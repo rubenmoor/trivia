@@ -1479,23 +1479,25 @@ def count(items, key):
 def report_subcategories(avail, ranges):
     """Supply per subcategory × difficulty (JK-10): where «Bájale» (an easier question of the same
     subcategory) and «Cambiazo» (a subcategory with a question in the level's range) run dry (09)."""
+    lo, hi = load_age_groups()["scale"]
+    scale = range(lo, hi + 1)
     by_sub = {}
     for q in avail:
         by_sub.setdefault(q.get("subcategory"), []).append(q["difficulty"])
     print("supply per subcategory × difficulty (JK-10; '.' = none):")
-    print(f"  {'':34}" + "".join(f"{d:>3}" for d in range(1, 11)) + "  total")
+    print(f"  {'':34}" + "".join(f"{d:>3}" for d in scale) + "  total")
     for c in categories.load():
         print(f"  {c['name']}" + (f" ({c['bundle']})" if c["bundle"] != "base" else ""))
         for sub in c["subcategories"]:
             ds = by_sub.get(sub, [])
-            cells = "".join(f"{ds.count(d) or '.':>3}" for d in range(1, 11))
+            cells = "".join(f"{ds.count(d) or '.':>3}" for d in scale)
             print(f"    {sub[:32]:32}{cells}  {len(ds):5}{'  EMPTY' if not ds else ''}")
     empty = sum(1 for c in categories.load() for sub in c["subcategories"] if sub not in by_sub)
     easier = sum(1 for q in avail if any(d < q["difficulty"] for d in by_sub[q.get("subcategory")]))
     print(f"  empty subcategories: {empty}")
     print(f"  «Bájale» possible on {easier} of {len(avail)} questions "
           f"({easier * 100 // max(len(avail), 1)} %): an easier one exists in the same subcategory")
-    print("  «Cambiazo» choices per level (subcategories with a question in the level's range):")
+    print("  «Cambiazo» choices per level, young teens (subcategories with a question in the level's range):")
     for level, (lo, hi) in ((int(l), r) for l, r in ranges.items()):
         n = sum(1 for ds in by_sub.values() if any(lo <= d <= hi for d in ds))
         print(f"    level {level:2} (difficulty {lo}–{hi}): {n:3}")
@@ -2146,7 +2148,7 @@ def cmd_report(args):
     print(f"  by category: {count(avail, lambda q: broad[q['subcategory']]['slug'] if q.get('subcategory') in broad else None)}")
     print(f"  by difficulty: {count(avail, lambda q: q['difficulty'])}")
     print(f"  by bundle: {count(avail, lambda q: q.get('bundle'))}")
-    print("supply per level (a game needs 4 per level, D-22):")
+    print("supply per level, young teens, every bundle (a game needs 4 per level, D-22):")
     for l in checked["supply"]:
         lo, hi = l["range"]
         flag = f"  MISSING {l['missing']}" if l["missing"] else ""

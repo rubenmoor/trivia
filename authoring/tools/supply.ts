@@ -1,6 +1,6 @@
 // Supply check for qgen report and the authoring start page (plan 51, D-60): selection.ts under Node.
 // stdin: {questions, burned, age_group?, bundles?} or an array of them; stdout: {per_level, ranges, supply} per input.
-// Defaults: young_teens, every bundle (the family's default game).
+// Defaults: young_teens (the default age group), every bundle.
 import { stdin } from "node:process";
 import ageGroups from "../../app/data/age-groups.json" with { type: "json" };
 import { parseAgeGroups, type PoolQuestion } from "../../app/client/src/engine/pool.ts";
