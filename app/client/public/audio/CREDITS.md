@@ -43,3 +43,6 @@ Everything not listed here is synthesized in `app/client/src/game/sound.svelte.t
 | `canon-confeti.m4a` | The confetti cannon (pitch varied) | [Balloon Pop / Christmas cracker / Confetti Cannon](https://freesound.org/people/Breviceps/sounds/458398/) (Freesound) | Breviceps | CC0 |
 | `bengalas.m4a` | Sparklers crackling (2.4 s cut) | [sparkler_fuse_nm.wav](https://freesound.org/people/Alex_hears_things/sounds/316682/) (Freesound) | Alex_hears_things | CC0 |
 | `estrellas.m4a` | Falling stars twinkling (pitch varied, high-passed) | [Sparkling Star 01.wav](https://freesound.org/people/LilMati/sounds/462095/) (Freesound) | LilMati | CC0 |
+| `musica-normal.m4a` | Music loop `normal` (8 bars, 100 bpm, F major) | `level1-step1.wav`, [Music loop variations](https://opengameart.org/content/music-loop-variations) (OpenGameArt) | obscure music | CC0 |
+| `musica-pregunta.m4a` | Music loop `question` (8 bars, 100 bpm, F minor) | `level1-step2-evil.wav`, [Music loop variations](https://opengameart.org/content/music-loop-variations) (OpenGameArt) | obscure music | CC0 |
+| `musica-enviada.m4a` | Music loop `submitted` (8 bars, 100 bpm, F minor) | `level1-step3-evil.wav`, [Music loop variations](https://opengameart.org/content/music-loop-variations) (OpenGameArt) | obscure music | CC0 |
