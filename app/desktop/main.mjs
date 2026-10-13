@@ -98,7 +98,12 @@ if (!app.requestSingleInstanceLock()) {
     writing.then(() => app.quit());
   });
   app.on("will-quit", stopSteam);
-  app.whenReady().then(start);
+  app.whenReady()
+    .then(start)
+    .catch((err) => {
+      dialog.showErrorBox("¡Trivia!", err.stack ?? String(err));
+      app.quit();
+    });
 }
 
 /** Optional: any failure leaves `steam` null with one stderr line. No restart through Steam, no DRM. */
@@ -210,7 +215,7 @@ async function start() {
   });
   wc.setWindowOpenHandler(() => ({ action: "deny" }));
   wc.on("before-input-event", (event, input) => {
-    if (input.type === "keyDown" && input.key === "F11") {
+    if (input.type === "keyDown" && input.key === "F11" && !input.isAutoRepeat) {
       event.preventDefault();
       win.setFullScreen(!win.isFullScreen());
     }
@@ -244,7 +249,7 @@ function bridge() {
       return text;
     }),
   );
-  // Steam (plan 85): pass-throughs; null/false without Steam. Stubs filled by later tasks.
+  // Steam (plan 85): pass-throughs; null/false without Steam.
   handle("steam:steam-id", () => steam?.getStatus().steamId ?? null);
   handle("steam:language", () => steam?.apps.getCurrentGameLanguage() ?? null);
   handle("steam:unlock", (id) =>

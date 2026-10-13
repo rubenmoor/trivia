@@ -1,7 +1,7 @@
 // app:// URL → file (plan 54). Web Request/Response only, so plain `node` can test it.
 import { createHash } from "node:crypto";
-import { createReadStream, readFileSync } from "node:fs";
-import { stat } from "node:fs/promises";
+import { createReadStream } from "node:fs";
+import { readFile, stat } from "node:fs/promises";
 import path from "node:path";
 import { Readable } from "node:stream";
 
@@ -28,7 +28,7 @@ const MIME = {
   ".avif": "image/avif",
 };
 
-export const mimeOf = (file) => MIME[path.extname(file).toLowerCase()] ?? "application/octet-stream";
+const mimeOf = (file) => MIME[path.extname(file).toLowerCase()] ?? "application/octet-stream";
 
 const json = (status, body) =>
   new Response(JSON.stringify(body), { status, headers: { "content-type": MIME[".json"] } });
@@ -91,19 +91,32 @@ export function cacheName(url) {
 export const poolUrls = ({ questions }) =>
   new Set(questions.flatMap((q) => [q.media?.file_url, q.background?.file_url]).filter(Boolean));
 
-function readPoolUrls(data) {
-  try {
-    return poolUrls(JSON.parse(readFileSync(path.join(data, "pool.json"), "utf8")));
-  } catch {
-    return new Set();
-  }
+// The pool's URLs, re-read when pool.json changes (qgen export in dev); broken: empty, one stderr line.
+function pooledUrls(data) {
+  const file = path.join(data, "pool.json");
+  let key = null;
+  let urls = new Set();
+  return async () => {
+    try {
+      const { mtimeMs, size } = await stat(file);
+      if (key !== `${mtimeMs}:${size}`) {
+        urls = poolUrls(JSON.parse(await readFile(file, "utf8")));
+        key = `${mtimeMs}:${size}`;
+      }
+    } catch (err) {
+      if (key !== "bad") console.error(`trivia: ${file}: ${err.message}`);
+      key = "bad";
+      urls = new Set();
+    }
+    return urls;
+  };
 }
 
 export function makeResolver({ dist, data, media }) {
   dist = path.resolve(dist);
   data = path.resolve(data);
   media = path.resolve(media);
-  const urls = readPoolUrls(data);
+  const urls = pooledUrls(data);
   return async (request) => {
     const url = new URL(request.url);
     let rel;
@@ -119,7 +132,7 @@ export function makeResolver({ dist, data, media }) {
     }
     if (rel === "/media") {
       const fileUrl = url.searchParams.get("url") ?? "";
-      if (!urls.has(fileUrl)) return json(404, { error: "not_found" });
+      if (!(await urls()).has(fileUrl)) return json(404, { error: "not_found" });
       const file = await contained(media, cacheName(fileUrl));
       return file ? sendFile(file, request) : json(404, { error: "media_missing" });
     }
