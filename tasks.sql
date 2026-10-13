@@ -13703,13 +13703,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - When answered with issues: one task per failing row in plan 87 (`pm task add 87 …`).
 
 Done when: the checklist is in plan 18 and the decision is open with the close-out waiting on it.', '2026-10-13T05:52:56Z', '2026-10-13T06:03:30Z', 659);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (664, 87, 'Steam Cloud close-out: docs', 'work', 'open', NULL, NULL, 'Plan 87 part 5: close out after the gamemaster''s "Steam Cloud test passed?" decision (this task waits on it, linked by the checklist task). If the answer was "issues", the fix tasks must be done first; if any is still open, add nothing and stop with a note.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (664, 87, 'Steam Cloud close-out: docs', 'work', 'open', 420, NULL, 'Plan 87 step 4: close out after decision 75 "Steam Cloud test passed?" (this task waits on it), read against plan 18''s revised "Steam Cloud test" table (the decision body''s `local/`/«Usar el progreso de este equipo» row is void, decision 111: Steam only). Runs after plan 87''s docs task. If the answer was "issues": each failing row becomes a task in plan 87; if any is still open, add nothing and stop with a note.
 
-- `plans/18-steam-integration.md`: the Steam Cloud row/bullet `[x]` with date and a short note (the SW id plan 18 uses for Cloud, else the "Steam features" bullet); test table filled from the answer.
-- `plans/12-client-engine.md`: Store bullet notes "one save per Steam user" (`save/<steamid64>/`, `local/` without Steam).
-- `plans/decisions.md` D-72 matches what shipped.
+- `plans/18-steam-integration.md`: Steam Cloud row/bullet `[x]` with date and a short note; test table filled from the answer.
+- `plans/12-client-engine.md` Store bullet: "one save per Steam user" (`save/<steamid64>/`), memory-only without one.
+- `plans/decisions.md` D-72 matches what shipped (per SteamID, `dev/`, no `local/`).
 - `plans/project.md` S5 Cloud line, `directory.md`, `README.md` desktop save line in sync.
-- `pm decision consequences <id> "…"` on the test decision.', '2026-10-13T05:52:56Z', NULL, 659);
+- `pm decision consequences 75 "…"`.', '2026-10-13T05:52:56Z', NULL, 659);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (665, 88, 'create tasks for plan 88', 'split', 'done', 1000, '2026-10-13, pm tasks 666-672, pm decision 78', 'Split plan 88 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T06:05:26Z', '2026-10-13T06:07:10Z', 258);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (666, 88, 'Store texts per language in 17a (LUI-6)', 'work', 'open', NULL, NULL, 'Plan 88 task 1. Needs decision 78: German store name (pending → `pm task-pending-decision` on it and stop).
@@ -15534,8 +15534,43 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Check (stderr lines): `TRIVIA_DEV_STEAM_USER=1 trivia-desktop` without Steam → user true; plain `trivia-desktop` without Steam → false; dev server → `validUser` true (if task 762 is done). Under Spacewar (480) logged in → true goes into the close-out gamemaster check (task 652). Per-commit checks pass.', '2026-10-13T15:24:43Z', NULL, 775);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (777, 86, 'create tasks for plan 86', 'split', 'done', 1000, '2026-10-13, tasks 654, 655, 656, 658 aligned with revised plan 86 (validUser, dev switch, retroactive unlock, decision 74 recorded, Steam-only check rows); 657 unchanged', 'Split plan 86 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:26:04Z', '2026-10-13T15:26:48Z', 770);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (778, 87, 'create tasks for plan 87', 'split', 'open', 1000, NULL, 'Split plan 87 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:28:08Z', NULL, 771);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (778, 87, 'create tasks for plan 87', 'split', 'done', 1000, '2026-10-13, tasks.sql: tasks 779-781 added, task 664 aligned', 'Split plan 87 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:28:08Z', '2026-10-13T15:29:24Z', 771);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (779, 87, 'Shell: save folder per valid Steam user, drop local/ and the first-start offer', 'work', 'open', NULL, NULL, 'Plan 87 step 1 (decision 111: Steam only: no effort outside Steam; decision 114: Desktop save folder under the dev switch without a SteamID). Runs after `task 776: Valid Steam user check and dev switch (TRIVIA_DEV_STEAM_USER)`; reads only its `steam.user` value (`--trivia-user`) and the SteamID, no own Steam test.
+
+- `app/desktop/main.mjs`:
+  - remove `migrateToLocal` call, `localFile`, `save:local-offer`, `save:adopt-local`
+  - save folder (`userSaveDir()`), base `B` = `TRIVIA_SAVE_DIR` if set (as is, no subfolder), else packaged `<userData>/save`, dev `state/desktop`:
+    - valid user with SteamID → `B/<steamid64>/game.json`
+    - dev switch without SteamID → `TRIVIA_SAVE_DIR` if set, else `B/dev/game.json`; one stderr line naming it
+    - no valid user → no `saveFile`, no folder created; `save:*` load → null, write/backup → refused (soft); one stderr line `trivia: no Steam user, progress not saved`
+  - `--import-save` without a valid user → stderr "needs a Steam user", exit non-zero, nothing written
+  - existing `B/local/` and `B/game.json` (S3): never read, moved or deleted
+- `app/desktop/save.mjs`: drop `migrateToLocal`.
+- `app/desktop/preload.cjs`: drop `localSave`, `adoptLocalSave`.
+- Page side of the offer goes too (so `npm run check` stays green): `app/client/src/lib/desktop.ts` (`localSave`, `adoptLocalSave`), `app/client/src/lib/engine.ts` (`localOffer`, `adoptLocal`, `takeLocalOffer`, `LocalOffer`, `offer` in `ready()`), `app/client/src/game/LocalProgress.svelte` (delete) and its use in `Game.svelte`, its strings in every catalog.
+- Plan 99''s `task 763: trivia-desktop --import-save …`: if still open and its body says `local/`, `pm task set 763 --body -` with target = the user''s folder, `dev/` or `TRIVIA_SAVE_DIR`, and "needs a valid user (or `TRIVIA_DEV_STEAM_USER=1`)".
+- Check (stderr + `ls`, temp `TRIVIA_SAVE_DIR` or temp `B`): `TRIVIA_DEV_STEAM_USER=1 trivia-desktop` without Steam → `dev/game.json` (or `TRIVIA_SAVE_DIR`); plain without Steam → nothing written under `B`, stderr line; `--import-save` without a user → refused. Spacewar (480) logged in → `<steamid64>/game.json` only if Steam is available here, else note it for the Steam Cloud test (decision 75).
+- Per-commit checks pass.', '2026-10-13T15:29:13Z', NULL, 778);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (780, 87, 'Page: memory-only save and notice without a Steam user, flag action hidden', 'work', 'open', 440, NULL, 'Plan 87 step 2 (decision 111: Steam only: saves and flags need a valid Steam user; without one memory-only save, short notice, flag action hidden). Priority 440: runs after plan 99''s `task 762: Node dev server for browser checks` (450), whose shim makes `validUser` true; and after this plan''s shell task (drops `LocalProgress`).
+
+- `app/client/src/lib/store.ts`: `MemoryStore` (load → null, write → keeps the text in memory, nothing on disk, backup → no-op).
+- `ready()` in `app/client/src/lib/engine.ts`: `validUser` (from `lib/desktop.ts`, task 776) → `FileStore` (desktop bridge or dev shim); else `MemoryStore`. Fresh save → D-86 first-start language screen as usual, every start.
+- Notice: one short line «Sin Steam no se guarda el progreso» (final wording yours; es, es-ES where it differs, en, de; `check:literals` passes), once per start, in the save notice spot (`takeSaveNotice` path in `Game.svelte`), dismissable with keyboard, mouse, pad.
+- Flags hidden when `!validUser`: flag icon, `M` key, pad Select, «Preguntas marcadas» menu entry; `FlagDialog`/`FlagList` not reachable (`Game.svelte`, `Overlay.svelte`, input/action maps). With a valid user unchanged.
+- Check on the dev server (valid: saves and flags as before) and with the shim forced off (e.g. temporary `validUser = false` or a query/env hook if task 762 offers one; not committed): notice shown, no flag icon/key/menu entry, a game plays a few levels, nothing written to the save dir. Throw-away Playwright (decision 6).
+- Per-commit checks pass.', '2026-10-13T15:29:13Z', NULL, 778);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (781, 87, 'Docs: Steam Cloud saves per Steam user, memory-only without one', 'work', 'open', 430, NULL, 'Plan 87 step 3, after the shell and page tasks of plan 87. Binding: decision 111: Steam only; decision 114: Desktop save folder under the dev switch without a SteamID.
+
+- `plans/18-steam-integration.md`:
+  - "Steam features" Steam Cloud bullet: no `local/`, no migration; no valid user → memory-only, notice, flags hidden; dev switch folder (`dev/` or `TRIVIA_SAVE_DIR`)
+  - "Steam Cloud test" table: drop the `local/`/«Usar el progreso de este equipo» and "second machine → no question" rows; add "Steam not running → full game, notice shown, no flag action, nothing written under `save/`"; listing row: "only `game.json`, never `.tmp`, `backup/`, `dev/`"
+- `plans/decisions.md` D-72: path per SteamID, `dev/`, no `local/`, memory-only without a valid user.
+- `plans/12-client-engine.md` Store bullet: "one save per Steam user; memory-only without one" (`MemoryStore`).
+- `README.md` desktop save line; `directory.md` (`state/desktop/<steamid>|dev/`, no `local/`).
+- Then `pm decision consequences 111 "…"` with what changed (save folder, memory-only, notice, flags hidden, `local/` and the offer gone).
+- Decision 75 "Steam Cloud test passed?" body still lists the old `local/` row: note in the consequence that plan 18''s table is what counts.
+- Per-commit checks pass.', '2026-10-13T15:29:14Z', NULL, 778);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -17467,6 +17502,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (672, 770, '2026-10-13T15:25:24Z', '2026-10-13T15:26:14Z', 'done', NULL, 0, 'd384b00298cec6cbf003f69fe96ed496758bf8d0', 'claude-opus-5-5[1m]', '13cf023d-ebec-4fff-8e2b-c7d2ccd6da8f', 5, 10, 5501, 174516, 37134, 0.4420352, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (673, 777, '2026-10-13T15:26:14Z', '2026-10-13T15:26:56Z', 'done', NULL, 0, '60fe84e3ba14543dea5124ef6c43fe41ef213318', 'claude-opus-5-5[1m]', 'a426e153-ca5f-4b1f-9839-c9edd376ef7c', 7, 14, 4004, 214100, 29022, 0.355132, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (674, 771, '2026-10-13T15:26:57Z', '2026-10-13T15:28:22Z', 'done', NULL, 0, '441eeedfe6bafa9fe18d654089b7604f7916d0fc', 'claude-opus-5-5[1m]', '0f991789-d506-4caa-bb3a-b3aab683a3b2', 10, 20, 6912, 495260, 53126, 0.66238000000000008, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (675, 778, '2026-10-13T15:28:23Z', '2026-10-13T15:29:30Z', 'done', NULL, 0, '5ef25d3a0660bb3594aafc48370077b70ccb12a4', 'claude-opus-5-5[1m]', 'c09a1cfb-57af-4a63-9c3d-8da6ece4a936', 14, 26, 6321, 475790, 36368, 0.51262599999999992, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
