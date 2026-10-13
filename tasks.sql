@@ -23468,7 +23468,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## What
 - Install folder: `modding/README.md` and `modding/examples/` land via plan 120''s electron-builder `extraFiles` for `modding/` (decision 133); check `app/desktop/release/linux-unpacked/modding/` and `win-unpacked/modding/`. `credits_check.mjs`: unaffected (no media) or adjusted.
 - `trivia-release-check` step `modkit` (plan 120 task 5): also runs `--check-mod` on each `modding/examples/*`.
-- Links: `README.md` how-to "Mod the game" (two lines: guide link, examples); `directory.md` `modding/` row names `README.md` and `examples/`; `plans/18-steam-integration.md` "Modding" and `plans/22-bundles.md` link the guide; `LICENSE-content.md`: if its paths could be read as covering `modding/template-bundle/`, state `modding/` is MIT (decision 107).
+- Links: `README.md`: replace "Publish a mod to the Workshop" with "Mod the game": one line + link to `modding/README.md` (decision 144: README.md is customer-facing); `directory.md` `modding/` row names `README.md` and `examples/`; `plans/18-steam-integration.md` "Modding" and `plans/22-bundles.md` link the guide; `LICENSE-content.md`: if its paths could be read as covering `modding/template-bundle/`, state `modding/` is MIT (decision 107).
 - `pm decision consequences 134 "…"` (decision 134: Modding guide: path, language, examples): what shipped where.
 
 ## Done when
@@ -25850,6 +25850,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (846, 893, '2026-10-13T22:03:11Z', '2026-10-13T22:03:31Z', 'blocked', NULL, 0, 'cfb1348f8e253ddd75c16a6fdc57734d72689fc2', 'claude-opus-5-5[1m]', '5305d9e9-5bc7-48da-8099-361fbe94df07', 6, 12, 1130, 192574, 30280, 0.3034028, 1704996);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (847, 964, '2026-10-13T22:03:31Z', '2026-10-13T23:27:54Z', 'failed', 'the worker left changes that are not staged:
  M README.md', 0, '49e37e358773d40d493b9ccea23f1ef2d0747654', 'claude-opus-5-5[1m]', '65b1a9f3-b565-420c-8587-1d565f01125f', 80, 136, 49596, 7561114, 153967, 3.7364227999999993, 1704996);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (848, 965, '2026-10-13T23:31:25Z', NULL, 'running', NULL, NULL, 'c946d3c267a1173a3ee5a96a6c47b29ee6b2cc2d', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1836295);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
