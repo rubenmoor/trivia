@@ -336,6 +336,17 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
   - changeable later in the Esc menu (task 450, done)
   - the family''s save (no `language` field = es) never sees the screen
 
+- UI wording and review (gamemaster''s TV check, 2026-10-13):
+  - style guide per locale: `app/client/src/locales/style/<locale>.md` (en, es, es-ES, de): fixed terms (glossary), how players are addressed, button conventions, Steam''s own term where Steam has one; plus a list of bad patterns seen so far, to inform workers and translation prompts (guidance, not a lint)
+  - German: never assume plural; infinitive style («Frage wählen», not «Wählt eine Frage»); other locales keep their address form unless their guide says otherwise
+  - every worker that adds or changes UI strings reads the locale''s guide; new bad patterns found in review go into it
+  - screen gallery: one command for the gamemaster (e.g. `trivia-gallery`) renders every screen and dialog in every UI language from a demo save; an authoring page (`trivia-authoring`) shows them with each text''s catalog key, where the gamemaster flags a string with a note for the next fix pass; re-runnable any time
+  - fixes from the TV check:
+    - de mode name «Spielleitermodus» (en «Gamemaster mode», es «Modo anfitrión» stay)
+    - «Steam achievements» / «logros de Steam» / «Steam-Erfolge» wherever achievements are mentioned
+    - Esc menu: «Back to main menu» / «Volver al menú principal» / «Zurück zum Hauptmenü» (goes to the start screen) instead of «End game (set up another)»; «Quit game» / «Salir del juego» / «Spiel beenden»; the quit button in its own colour, apart from all other buttons
+    - de catalog without plural address (all «ihr»/«euch»/«wählt»-style strings)
+
 ## Constraints
 - Questions only through `qgen batch` (D-36); the quality bar in plan 16 applies.
 
@@ -345,6 +356,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VA
 ## Done when
 - `qgen report --simulate` meets the target for every launch language.
 - A fresh save asks for the language once; an existing save doesn''t.
+- Style guides exist for every UI locale; the TV-check fixes are in; the gamemaster has reviewed the screen gallery in every UI language.
 
 Plan files: `plans/11-steam.md`, `plans/15-i18n.md`, `plans/15a-ui-translation.md`, `plans/15b-question-translation.md`, `plans/15c-regional-questions.md`, `plans/16-content-target.md`.', '2026-10-11T21:55:09Z', NULL);
 INSERT INTO milestone (id, subject, status, body, created_at, implemented_at) VALUES (10, 'Steam S5: Steamworks and store', 'open', 'The game on Steam as a beta: Steamworks app, Cloud saves, achievements, depots, beta branch, store page and disclosures. Steam only (decision 111): the Steam integration is the reason to buy, and no effort goes into running the game outside Steam. Price model and account holder: decisions 66 and 67 (OQ-33); licence: OQ-35.
@@ -15652,6 +15664,8 @@ Work:
 - Check: `node authoring/steam/smoke.mjs app/desktop/release/linux-unpacked` passes (build with `trivia-desktop-build --dir` first); a throw-away run with the switch removed fails at the resume step (not a release-check row, don''t keep it). Per-commit checks pass.', '2026-10-13T15:34:31Z', NULL, 785);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (787, 90, 'create tasks for plan 90', 'split', 'done', 1000, '2026-10-13, tasks 685-687 bodies in line with revised plan 90: binding decisions 111/66/112, valid-user and DLC rows, DLC/achievement guards, decision 113, store-page guard on 687', 'Split plan 90 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:35:19Z', '2026-10-13T15:36:12Z', 774);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (788, 9, 'revise the masterplan', 'masterplan', 'open', 1000, NULL, 'The milestone changed. Bring plan 9, the masterplan, in line with it (`pm plan edit 9 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-13T15:36:56Z', NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -17590,6 +17604,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (679, 785, '2026-10-13T15:33:59Z', '2026-10-13T15:34:54Z', 'done', NULL, 0, '8f7ac7535b208ead6e4a5bc5802268b8b39812b3', 'claude-opus-5-5[1m]', '0cae5ebb-368e-4c5f-8c4b-16f1c986b89c', 11, 22, 5152, 446059, 43553, 0.5407638, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (680, 774, '2026-10-13T15:34:54Z', '2026-10-13T15:35:30Z', 'done', NULL, 0, '461ec6368acc18e04e848c052ab3035cad6164a1', 'claude-opus-5-5[1m]', '7feecfe7-320d-4b7e-9434-c927bd7c7f45', 6, 12, 3213, 208087, 33090, 0.3706454, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (681, 787, '2026-10-13T15:35:30Z', '2026-10-13T15:36:18Z', 'done', NULL, 0, 'b592a409953b43ffe9aca5dae11bb900df0a0808', 'claude-opus-5-5[1m]', 'c154563f-791d-4b46-b9c6-fb63cfbc1b25', 9, 18, 4868, 294932, 33743, 0.42636240000000003, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (682, 776, '2026-10-13T15:36:18Z', NULL, 'running', NULL, NULL, 'edabdba3e4186c727dc5135087dcebefc9138605', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
