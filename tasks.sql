@@ -4930,6 +4930,51 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 ## Done when
 - `plans/11-steam.md` ST-3..ST-5 `[x]`, S6 row done, status current; 17/18 leftovers done or deferred with a note; `plans/README.md`, `plans/project.md`, `README.md` in sync; backlog holds competitive mode, couch co-op, more regions/languages, SW-13, SW-14.
 - Milestone 11''s "Done when" holds: released, and the first content patch went out as a patch (both decisions cited).', '2026-10-13T09:20:44Z', 271);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (98, 9, 'Regional packs (RG-3..RG-5)', 300, 'Part 10 of the masterplan (plan 9): which question packs (non-base bundles) the Steam release ships, in which languages, on or off by default, and how a pack becomes an optional free DLC. Regions are bundles (D-39), so most of 15c''s tasks are already done under other names; what remains is the RG-5 choice, the `colombia` taxonomy question (OQ-46), and the game side of "bundles ship as free DLC". Owners: `plans/15c-regional-questions.md`, `plans/22-bundles.md`.
+
+## Builds on
+- decision 26: Launch languages (OQ-31): es, en, de. decision 27: Spanish variety (OQ-31): `base` es-419, es-ES variant, `colombia` keeps its voice, regional flavour via bundles (later e.g. `mexico`, `argentina`).
+- decision 66: Price model (OQ-33): bundles ship as free DLC (own store entries, optional install), never paid; player-made bundles via Workshop/modding in their own milestone.
+- D-85 / decision 38: bundles offered per locale (`languages` in `app/data/bundles.json`; `colombia`: es); decision 33 (D-88): configure screen default = first base bundle, non-base off; old games and the family''s save keep D-85''s default (es → base + colombia, D-59). decision 51: solo/group plays the locale''s default bundles.
+- decision 37 / decision 21: target 5000 per launch language is `base`''s; packs have no target of their own.
+- BN-9 `qgen bundle new`, BN-11 `qgen batch --bundle <id>` (done); `qgen batch --translate` picks `base` sources only (`translate_selection`, qgen.py).
+- Plan 62: `qgen report --simulate --bundles` exists; its default says "until RG-5" (every bundle for es, base elsewhere).
+- Plan 30 task 479 closes BN-6 (engine + choice screen); plan 84 task "Regional pack runs per RG-5" runs the batches; plan 89 builds the depots (S5).
+
+## RG mapping (15c)
+- RG-1, RG-2: done as BN-2, BN-3 (D-39). RG-3 = BN-6 (plan 27 engine, plan 29 screen, plan 30 close-out) + plan 62''s `--simulate --bundles`. RG-4 = BN-11 (`qgen batch --bundle`). RG-5: this plan''s decision.
+
+## Tasks
+1. **RG-5 decision (OQ-46 folded in) and 15c marking**
+   - 15c: RG-1..RG-4 `[x]` with the mapping above; status line stays "superseded by 22"; `22-bundles.md` Model bullets brought in line with D-85 (`kind: base`, `languages`; no `always_on`, "base is always on" → "exactly one base bundle").
+   - Facts (throw-away script, numbers in the body): `colombia` approved/total (2026-10-13: 102/109); `colombia` questions on a `base` subcategory (19 approved: Historia 3, Piratas 2, Desiertos 2, Navidad 2, Mundiales de fútbol 2, 8 single ones); cost of a 100-question pack batch and of translating 100 (plan 70''s `$ per approved`, `--cost`); simulation `--bundles base` vs `base,colombia` for es (games until first repeat) as information.
+   - Questions in one decision, recommended option first:
+     - (a) Packs at launch: `colombia` only (recommended: it exists and is reviewed; new Spanish packs `mexico`/`argentina` after launch, en/de packs left to Workshop/modding, decision 66) / plus new packs before launch (named; each needs `qgen bundle new` + taxonomy approval + batches).
+     - (b) Languages of `colombia`: es only (recommended: its point is the Colombian connection and voice, decision 27; es-ES players see it too) / also translated to en/de (needs `--translate --bundle`, re-rating for a Colombian-connected player).
+     - (c) Default on: off on the configure screen for every locale (decision 33, unchanged; recommended), the family''s save and old games keep D-85''s es default (D-59) / on for es.
+     - (d) OQ-46: yes, `colombia` questions use `colombia` subcategories (recommended: «Cambiazo» on «Historia» shouldn''t serve a Colombian question when the player picked a base category; new subcategories e.g. «Historia de Colombia», «Fútbol colombiano», «Navidad en Colombia», the 19 move there) / no, keep as is.
+   - `pm task-pending-decision` on task 2.
+2. **Record RG-5** (waits on task 1''s decision)
+   - D-entry in `plans/decisions.md`; 15c RG-5 `[x]`; OQ-46 → "Resolved" in `plans/open-questions.md`; `22-bundles.md` "Later"/BN notes; `plans/project.md` in sync.
+   - `qgen report --simulate` default `--bundles` per the answer (help text drops "until RG-5"; plan 62 / `16-content-target.md` note).
+   - Follow-up tasks in this plan, only those the answer needs:
+     - OQ-46 yes: «`colombia` subcategories (OQ-46)»: proposed subcategory list as a pm decision (taxonomy is the gamemaster''s), then a `qgen` migration step like BN-13 moving the 19 questions (no hand edits of the pool), `validate` rule "a `colombia` question uses a `colombia` subcategory", concept lists via the batch.
+     - new packs: per pack «`<id>` bundle»: `qgen bundle new <id>` + proposed taxonomy as a pm decision; batches go to plan 84.
+     - `colombia` translated: «`--translate --bundle <id>`»: `translate_selection` takes the bundle''s approved sources, `languages` gains the locale once its target count is approved; runs go to plan 84.
+3. **Packs as optional installs (decision 66, game side)**
+   - Today `app/data/pool.json` (and `pool.<locale>.json`) holds every bundle, media sit in one content folder: a DLC depot can''t carry a pack.
+   - `qgen export` writes each non-base bundle''s questions to its own file (e.g. `app/data/bundles/<id>/pool[.<locale>].json`, next to its `categories.json`, names); `base`''s pool keeps only base questions; the loader merges the pack files that exist. A pack whose file is missing is not offered (same path as `bundle_not_offered`, no error), and a stored choice naming it reads as the defaults (D-85). The browser game (`trivia`, `nix build .#app`) ships every pack.
+   - Media: a list of each pack''s media keys (`stage-media.mjs` or export) so plan 89''s DLC depot can carry them; media shared with `base` stay in the content depot.
+   - Check: `colombia` file removed → es offers only `base`, the family''s save still loads and plays (choice falls back), file back → offered again; `qgen validate`, `npm test`.
+   - D-entry (layout); `directory.md`, `22-bundles.md` layout table.
+4. **Close-out**
+   - 15c and 22 statuses: 15c done (superseded), 22''s BN-6 per task 479; plan 84''s regional task can run (or drops if RG-5 says no new batches); `plans/11-steam.md` S4 row notes packs; result of task 1''s simulation numbers in `16-content-target.md`.
+
+## Done when
+- RG-5 answered and recorded; OQ-46 resolved; 15c RG-1..RG-5 `[x]`; a pack is an optional file set the game offers only when present; plan 89 has a DLC depot task.
+
+## Out of scope
+- Steam DLC app IDs, store entries and depots (S5: plan 89 / backlog row from task 194); Workshop and player-made bundles (own milestone, decision 66); running batches (plan 84).', '2026-10-13T15:01:21Z', 249);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -6713,13 +6758,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Needs part 1''s plan (simulation, its bottleneck output): if its task is pending or open, stop the same way on it. Reuse plans 12 (`targets.json`, D-53) and 13 (gap-aimed drafting, D-54); no new mechanism if theirs covers it.
 - Content: cost per approved and per translated question from `costs.log` (translated: from part 11''s pilot); release budget per language as a pm decision before full runs; simulation bottlenecks → targets per language/age group in `authoring/data/targets.json`, read by `draft` and `--translate`.
 - Owner `plans/16-content-target.md` ("Cost").', '2026-10-12T01:10:56Z', '2026-10-12T19:46:11Z', 239);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (249, 9, 'write plan: Regional packs (RG-3..RG-5)', 'plan', 'open', 280, NULL, 'Write the plan for part 10 of the masterplan (plan 9): `pm plan add 9 "Regional packs (RG-3..RG-5)" --priority 300`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (249, 9, 'write plan: Regional packs (RG-3..RG-5)', 'plan', 'done', 280, '2026-10-13, pm plan 98 (Regional packs), task 748 in plan 89', 'Write the plan for part 10 of the masterplan (plan 9): `pm plan add 9 "Regional packs (RG-3..RG-5)" --priority 300`.
 
 - Needs OQ-31 (plan 37): task 189 writes the decision "launch languages", task 190 records it (D-entry, I18N-1). If it is still pending, `pm task-pending-decision <this task> <its id>`, stage nothing, stop.
 - Needs OQ-33 (plan 39: task 193 writes the decision, 194 records it; DLC or free). Still pending: link it the same way and stop. Task priority 280 puts this after task 194 (300).
 - OQ-46 (`colombia` subcategories, `plans/open-questions.md`): answered first or folded into RG-5''s decision.
 - Content: mark RG-3 (= BN-6, plan 27, + part 1''s `--bundles`) and RG-4 (= BN-11, done); RG-5 pm decision with a recommendation (which packs launch, default on per language, is `colombia` translated); new bundles via `qgen bundle new`, taxonomy approved by the gamemaster; batches go to part 11.
-- Owner `plans/15c-regional-questions.md`, `plans/22-bundles.md`.', '2026-10-12T01:10:56Z', NULL, 239);
+- Owner `plans/15c-regional-questions.md`, `plans/22-bundles.md`.', '2026-10-12T01:10:56Z', '2026-10-13T15:01:30Z', 239);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (250, 9, 'write plan: Release content runs', 'plan', 'done', 270, '2026-10-13, plan 84 (Release content runs), plans/15b-question-translation.md', 'Write the plan for part 11 of the masterplan (plan 9): `pm plan add 9 "Release content runs" --priority -110`.
 
 - Needs the plans of parts 4, 8 and 10 (their `qgen batch` modes) and part 9''s plan (budget, targets): write against those that exist; a dropped part means no runs for it.
@@ -14381,6 +14426,17 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Check
 - Walk both screens on `trivia` with a temp `TRIVIA_STATE` (mouse and keyboard only); `npm run check`, `npm test`, `npm run build`, `qgen validate`, `npm run check:literals -w app/client`.', '2026-10-13T14:40:28Z', '2026-10-13T14:46:53Z', NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (747, 98, 'create tasks for plan 98', 'split', 'open', 1000, NULL, 'Split plan 98 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:01:21Z', NULL, 249);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (748, 89, 'DLC depots for packs (decision 66)', 'work', 'open', NULL, NULL, 'decision 66: Price model (OQ-33): bundles (non-base packs, e.g. `colombia`) ship as free DLC with their own store entries and optional install. Plan 89''s "Depots" says no bundle depots unless decision 66 asks: it does.
+
+- Depends on plan 98 (Regional packs) task "Packs as optional installs": each non-base bundle''s files (`app/data/bundles/<id>/…` pool files, its media key list) apart from `base`, and the game offers a pack only when its files are present. Not done yet → stop and say so.
+- Which packs launch: plan 98''s RG-5 decision. DLC App IDs and depot IDs: Steamworks (part 2, task 254 pattern), `null` placeholders in `authoring/steam/steam.json` (e.g. `dlc: {<bundle id>: {appid, depot}}`) until entered.
+- Per launching pack: one DLC depot (pack data files + its media only), added to the app build VDF; `windows`/`linux` depots exclude the pack''s files, the `content` depot excludes its media. `trivia-steam stage` checks: union of all depots = the full build.
+- Release check: packaged smoke game once without the pack''s files (pack not offered, game plays) and once with them.
+- Docs: plan 18 "Builds and depots" (DLC depots), D-entry.
+
+Done when: `trivia-steam upload --dry-run` renders a DLC depot per launching pack with placeholder IDs, and the stage check passes.', '2026-10-13T15:01:28Z', NULL, 249);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -16218,6 +16274,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (652, 739, '2026-10-13T14:52:02Z', '2026-10-13T14:54:05Z', 'done', NULL, 0, '2b6cb68ac4b714e0e658ca64a068c4e25942363b', 'claude-opus-5-5[1m]', '4103510b-c876-4a82-8453-fcd1d12b46c6', 22, 44, 9594, 1085945, 50564, 0.813757, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (653, 740, '2026-10-13T14:54:05Z', '2026-10-13T14:57:59Z', 'done', NULL, 0, '56be7426f4e8a0488848c748f39bdf103d43a1b2', 'claude-opus-5-5[1m]', 'd51b23a8-a113-430e-82bd-22f635518ee2', 26, 52, 14246, 1739608, 79069, 1.2656016000000003, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (654, 198, '2026-10-13T14:58:00Z', '2026-10-13T14:59:36Z', 'done', NULL, 0, '813601b0f4134a8ac65f5a3ca4092814bf311299', 'claude-opus-5-5[1m]', '70140d8d-c2f5-41ea-a6bd-cefd2c2d321f', 11, 22, 8092, 440586, 40775, 0.57624520000000012, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (655, 249, '2026-10-13T14:59:37Z', '2026-10-13T15:01:39Z', 'done', NULL, 0, 'cf687de6b19fc97d61c393df73959e788806a523', 'claude-opus-5-5[1m]', 'e4be8b24-4cc4-4e3c-954f-bf4851ab4aa0', 17, 34, 10758, 1036504, 69192, 0.9761328, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
