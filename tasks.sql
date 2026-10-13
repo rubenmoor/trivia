@@ -6412,6 +6412,55 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 ## Order
 After plan 112 tasks 1–3 (and plan 114''s list for warnings, optional). 1 → 2 → 3 → 4 → 5. Part 7 (plan from task 906) uses `isModId` for achievements and the telemetry summary; part 9 (task 908) documents this format and reuses `modPool`''s checks for `--check-mod`.', '2026-10-13T18:09:32Z', 902);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (116, 15, 'Split Game.svelte and Question.svelte', 520, 'Part 11 of masterplan 102 (milestone 15: Modding and Steam Workshop). `Game.svelte` (1082 lines) and `Question.svelte` (1243 lines) become a thin controller each plus small per-screen and per-piece components, before part 4 (`window.trivia` screen list, task 904) and part 10 (guide, examples, task 909) name module paths. Worth it now: with plan 111''s readable build a mod overrides one file by path (decision 124), so a theme or a screen tweak would otherwise copy ~1100 lines of markup and CSS and break on every update; paths aren''t public yet, so moving them now costs no mod anything. No behaviour change.
+
+## Binding
+- decision 124: Readable client build: output naming rule for mod overrides: new files land at `game/screens/Start.svelte.js` / `.svelte.css` etc.; class names stable per component path.
+- Plan 102''s ground rules: per-commit checks (AGENTS.md, D-73) green per task; `trivia-release-check` steps (smoke game, desktop builds) keep passing.
+- decision 106: no new lint tooling, no new dependencies.
+- Code review precedent (`code-review.md`, `engine/game.ts` row): don''t spread one state machine over files; only markup + CSS + local logic move, shared state stays in one controller.
+- `code-review.md` row (`lib/input.svelte.ts`): the Francotirador modal relies on Question''s `KEYS` for A–D aim: the snipe scope stays in `Question.svelte`.
+
+## Rules for the split
+- Controller keeps the state: `Game.svelte` keeps `screen`, `go` (transitions, veil, `busy`), `act`/`request`, overlay and flag handling, music per screen, rich presence, `listen`/`listenPads`, the top input scope. `Question.svelte` keeps `locked`/`finalReady`/`submitted`/`revealed`/`result`, joker `armed`/`mode`/`fire`, timers and its input scopes (question, armed, snipe).
+- Pieces get props down, callbacks up (the existing style: `onstart`, `onback`, …); no new store, no context API.
+- CSS moves with its markup; shared rules (`.corner-hud`, `.side-tray`, the black veil, transitions) stay in the controller or `theme.css`; no visual change (compare screens before/after: screen gallery of plan 100 if built, else screenshots by hand on the same states).
+- Modal pieces with their own root may push their own scope (as `CategoryPicker.svelte` does), e.g. the Paso dialog.
+- Paths: full screens in `game/screens/` (one folder = the modder''s screen list; part 4 exposes them by these names), pieces of the Question screen in `game/question/`. Existing full screens move there too: `Player.svelte`, `Choice.svelte`, `LanguageScreen.svelte` → `screens/Language.svelte`, `Question.svelte` → `screens/Question.svelte`. Small shared widgets (`Hud`, `Prompt`, `Icon`, `JokerTray`, `Tower`, …) stay in `game/`.
+- Target size: each controller ≤ ~500 lines including style; a piece ≤ ~300. A piece that needs more than ~5 callbacks or setters to work stays in the controller (note it in the done note).
+- `PLACEHOLDER(<task id>)` markers, `t()` keys, `data-focus-*` attributes and `check-literals.mjs` `SCREENS` keep working (keys are per screen name, not file).
+- Comments that name `Game.svelte`/`Question.svelte` (`swap.ts`, `timing.ts`, `lib/input.svelte.ts`, `lib/gamepad.svelte.ts`) updated to the new file.
+
+## Tasks
+
+### 1. Game.svelte: one component per screen
+- New `game/screens/`: `Start.svelte` (wordmark, resume/new/play, save notice, `SupplyReport`, fireworks/effects preview), `Level.svelte` (tower, kicker, milestone line), `Select.svelte` (envelopes), `Correct.svelte`, `Wrong.svelte` (consolation), `Victory.svelte`; markup + CSS from `Game.svelte`''s `{#if screen === …}` branches.
+- Move `Player.svelte`, `Choice.svelte`, `LanguageScreen.svelte` (→ `Language.svelte`) into `game/screens/`; fix imports.
+- `Game.svelte` keeps the controller (see Rules) and the `{#if}` chain that mounts one screen each.
+- Done when: `Game.svelte` ≤ ~500 lines; every screen looks and behaves as before (keys, pad, mouse; transitions, music, the block drop on Level after Correct, deal of envelopes, victory fireworks); per-commit checks pass; a smoke game (`trivia-desktop-build --dir`, then `authoring/steam/smoke.mjs`, or `trivia-release-check --skip tag` limited to its smoke step) passes; a manual game in `trivia-desktop` (`TRIVIA_DEV_STEAM_USER=1`) through start → player → choice → level → select → question → correct/wrong → victory (Esc menu «Ir a pregunta…» to reach level 12).
+
+### 2. Question.svelte: media, answers, final answer, joker pieces
+- Move `Question.svelte` to `game/screens/Question.svelte`.
+- New `game/question/`:
+  - `Media.svelte`: backdrop picture/video, audio element, decorative mark, ready/settle (UI-7), `mediaFailed`, replay, media volume; exposes `ready()` and `replay()`; the credit line.
+  - `Card.svelte`: question card (topic, text, long-question step, replay button), hints notes, media-missing line.
+  - `Answers.svelte`: the four tiles (classes, badges, shards, pad glyphs, snipe hover); `tiles` handed back for the scope/hole.
+  - `FinalAnswer.svelte`: final button, padlock, waiting/error lines.
+  - `SkipDialog.svelte` (Paso: plain/purge/cancel; own modal scope), `Scope.svelte` (Francotirador hole + aim/hit hints).
+- Reveal: the submit → wait → sweep → reveal sequence stays in `Question.svelte` (shared state); if a pure helper falls out (e.g. `answerClass` as a function of state), it goes to `question/reveal.ts`.
+- Joker flow (`press`, `fire`, flight, shredder, snipe animation) stays in `Question.svelte` unless it moves cleanly to `question/jokers.ts` (rule: ≤ ~5 callbacks).
+- Done when: `screens/Question.svelte` ≤ ~500 lines; image, audio, video and missing-media questions; lock/unlock, final answer, reveal; every joker (Soplo, Paso both options, Bájale with the dial, Cambiazo with the picker and shredder, Francotirador aim/shoot/cancel with keys, pad, mouse); overlay pause during the wait; per-commit checks, smoke game and a manual game in `trivia-desktop` as in task 1.
+
+### 3. Docs and paths
+- `directory.md`: `game/screens/`, `game/question/` rows; moved files.
+- `plans/04-ui-tv-display.md`, `plans/09-jokers.md`, `plans/10-visual-design.md`, `plans/05-gamemaster-controls.md`, `plans/14-input.md`, `plans/backlog.md`: references to `Game.svelte`/`Question.svelte` pointing at what moved (historic entries in `plans/decisions.md` stay).
+- `code-review.md`: rows that named these files get no rewrite; one line in part 5''s section: split done by this plan.
+- Open plans whose tasks name `Question.svelte`/`Game.svelte` (e.g. plan 113: Image peek on image questions, plan 106: Telemetry recording in the game, plan 86: Achievements (SW-11), plan 100: UI wording) : update open task bodies with the new paths (`pm task set`) where they name the old file.
+- Note for part 4 (task 904) and part 10 (task 909): the screen list = `game/screens/*`, Question pieces = `game/question/*`; one bullet in `plans/18-steam-integration.md` "Modding: module paths" if plan 111 task 6 created it, else in this task''s done note.
+- Done when: `grep -rn "Game.svelte\|Question.svelte\|LanguageScreen"` outside `plans/decisions.md`, `code-review.md` history and the controllers'' own files shows only current paths; per-commit checks pass.
+
+## Order
+After plan 111 task 1 (readable build; not strictly needed, but path names follow decision 124); 1 → 2 → 3; before plan for part 4 (task 904) writes its screen list. Conflicts: plan 113 (priority 400) edits the Question screen: it runs after this plan and targets the new files.', '2026-10-13T18:11:10Z', 903);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -21138,7 +21187,7 @@ Cover part 5''s list:
 - Not ours: `save_file.py`/`qgen` ignore namespaced ids; flag action hidden for player questions; telemetry per question skips them.
 - Which player bundle kinds are allowed (non-base, base replacing ours per decision 38), per-language availability.
 - Tasks for the work, each with a done-when.', '2026-10-13T17:47:23Z', '2026-10-13T18:09:43Z', 898);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (903, 102, 'write plan: Split Game.svelte and Question.svelte (optional)', 'plan', 'open', 1000, NULL, 'Write the plan for part 11 of masterplan 15 (plan 102): "Split `Game.svelte` and `Question.svelte`". Read plan 102, `code-review.md` (part 5 candidates), `app/client/src/game/Game.svelte` and `app/client/src/game/Question.svelte`, the part 1 plan (module paths). Decide whether the split is worth it now (mods replace small files; part 4''s screen list and part 10''s examples name these modules). If yes: `pm plan add 15 "Split Game.svelte and Question.svelte" --priority 520 < body.md` (before part 4''s work), with tasks: screen state machine vs. per-screen pieces; media, answers, reveal, jokers as own modules; no behaviour change; per-commit checks and a smoke game per task. If not: record why with `pm decision record` and drop this task with the reason.', '2026-10-13T17:47:23Z', NULL, 898);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (903, 102, 'write plan: Split Game.svelte and Question.svelte (optional)', 'plan', 'done', 1000, '2026-10-13, plan 116: Split Game.svelte and Question.svelte (priority 520; worth it now: paths not public yet, mods override per file)', 'Write the plan for part 11 of masterplan 15 (plan 102): "Split `Game.svelte` and `Question.svelte`". Read plan 102, `code-review.md` (part 5 candidates), `app/client/src/game/Game.svelte` and `app/client/src/game/Question.svelte`, the part 1 plan (module paths). Decide whether the split is worth it now (mods replace small files; part 4''s screen list and part 10''s examples name these modules). If yes: `pm plan add 15 "Split Game.svelte and Question.svelte" --priority 520 < body.md` (before part 4''s work), with tasks: screen state machine vs. per-screen pieces; media, answers, reveal, jokers as own modules; no behaviour change; per-commit checks and a smoke game per task. If not: record why with `pm decision record` and drop this task with the reason.', '2026-10-13T17:47:23Z', '2026-10-13T18:11:13Z', 898);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (904, 102, 'write plan: Code add-ons: mods.js and the window.trivia mod API', 'plan', 'open', 1000, NULL, 'Write the plan for part 4 of masterplan 15 (plan 102): "Code add-ons: `mods.js` and the `window.trivia` mod API". Read plan 102 (ground rules: page only, no stability promise), milestone 15, `app/desktop/preload.cjs`, `lib/desktop.ts`, `index.html`, the plans of parts 1, 2 and 11 (if written). Create it with `pm plan add 15 "Code add-ons: mods.js and the window.trivia mod API" --priority 500 < body.md`.
 
 Cover part 4''s list:
@@ -22273,6 +22322,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:05:51Z', NULL, 901);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (935, 115, 'create tasks for plan 115', 'split', 'open', 1000, NULL, 'Split plan 115 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:09:32Z', NULL, 902);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (936, 116, 'create tasks for plan 116', 'split', 'open', 1000, NULL, 'Split plan 116 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T18:11:10Z', NULL, 903);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -24353,6 +24404,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (777, 933, '2026-10-13T18:03:19Z', '2026-10-13T18:04:15Z', 'done', NULL, 0, 'd98ef480eee7d05c723500742612a4d08fe16559', 'claude-opus-5-5[1m]', '8e13d9a1-1c62-4839-bd96-473c7d811e51', 9, 18, 4710, 291503, 31600, 0.40537259999999997, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (778, 901, '2026-10-13T18:04:16Z', '2026-10-13T18:06:03Z', 'done', NULL, 0, 'cf1a61fb79f62c88e5190832e37c0422402cb943', 'claude-opus-5-5[1m]', '1832ecda-904d-474a-b856-334cf6bc51a8', 13, 24, 9816, 640393, 62375, 0.82349460000000019, 1575243);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (779, 902, '2026-10-13T18:06:03Z', '2026-10-13T18:09:52Z', 'done', NULL, 0, '017e094ba4d1b3314d00bd48ed6abe4a31c25e4d', 'claude-opus-5-5[1m]', '4b5064b6-403b-4e32-9040-71b167624609', 22, 44, 20255, 1441575, 87507, 1.3936469999999999, 1575243);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (780, 903, '2026-10-13T18:09:53Z', '2026-10-13T18:11:20Z', 'done', NULL, 0, '11895dc345034801a1a182d2b38e30e35e6ebe14', 'claude-opus-5-5[1m]', '85c68046-287d-4173-88f4-0c57557d705f', 12, 24, 8231, 642608, 63322, 0.7998135999999999, 1575243);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
