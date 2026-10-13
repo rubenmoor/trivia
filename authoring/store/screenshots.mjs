@@ -5,11 +5,11 @@
 import { spawn } from "node:child_process";
 import { existsSync, readFileSync } from "node:fs";
 import { mkdir, mkdtemp, rm, writeFile } from "node:fs/promises";
-import { createServer } from "node:net";
 import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { cacheName } from "../../app/desktop/resolve.mjs";
+import { connectPort, freePort, pageHelpers, sleep, visibleEl } from "../tools/cdp.mjs";
 import { answer, newGame, pick } from "../../app/client/src/engine/game.ts";
 import { loadCategories, parseAgeGroups, parseBundles, parsePool } from "../../app/client/src/engine/pool.ts";
 import { seededRng } from "../../app/client/src/engine/rng.ts";
@@ -34,7 +34,6 @@ const opt = (name) => {
 const LANGS = (opt("--lang") ?? "en,es,es-ES,de").split(",");
 const visible = args.includes("--visible");
 
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const json = (file) => JSON.parse(readFileSync(path.join(DATA, file), "utf8"));
 
 /** data.ts's load(), from disk; null if the locale has no pool. */
@@ -89,75 +88,9 @@ function gameAt(data, ui, level, qid) {
   return save;
 }
 
-// CDP ----------------------------------------------------------------------------------------
-
-function freePort() {
-  return new Promise((resolve) => {
-    const srv = createServer().listen(0, "127.0.0.1", () => {
-      const { port } = srv.address();
-      srv.close(() => resolve(port));
-    });
-  });
-}
-
-async function connect(port) {
-  for (let i = 0; i < 100; i++) {
-    try {
-      const list = await (await fetch(`http://127.0.0.1:${port}/json/list`)).json();
-      const page = list.find((t) => t.type === "page" && t.url.startsWith("app://"));
-      if (page) return cdp(page.webSocketDebuggerUrl);
-    } catch {}
-    await sleep(200);
-  }
-  throw new Error("no page target on the debugging port");
-}
-
-function cdp(url) {
-  const ws = new WebSocket(url);
-  let id = 0;
-  const waiting = new Map();
-  ws.onmessage = (ev) => {
-    const msg = JSON.parse(ev.data);
-    const w = msg.id && waiting.get(msg.id);
-    if (!w) return;
-    waiting.delete(msg.id);
-    msg.error ? w.reject(new Error(msg.error.message)) : w.resolve(msg.result);
-  };
-  const send = (method, params = {}) =>
-    new Promise((resolve, reject) => {
-      waiting.set(++id, { resolve, reject });
-      ws.send(JSON.stringify({ id, method, params }));
-    });
-  return new Promise((resolve, reject) => {
-    ws.onopen = () => resolve({ send, close: () => ws.close() });
-    ws.onerror = () => reject(new Error(`can't open ${url}`));
-  });
-}
-
 // Page helpers -------------------------------------------------------------------------------
 
-let page;
-
-async function evaluate(expr) {
-  const { result, exceptionDetails } = await page.send("Runtime.evaluate", { expression: expr, awaitPromise: true, returnByValue: true });
-  if (exceptionDetails) throw new Error(`${expr}: ${exceptionDetails.exception?.description ?? exceptionDetails.text}`);
-  return result.value;
-}
-
-async function waitFor(expr, what, ms = 15000) {
-  for (const end = Date.now() + ms; Date.now() < end; await sleep(100)) {
-    if (await evaluate(expr).catch(() => false)) return;
-  }
-  throw new Error(`timeout: ${what}`);
-}
-
-const q = (sel) => JSON.stringify(sel);
-const visibleEl = (sel) => `(() => { const e = document.querySelector(${q(sel)}); return !!e && !e.disabled && e.getClientRects().length > 0; })()`;
-
-async function click(sel) {
-  await waitFor(visibleEl(sel), sel);
-  await evaluate(`document.querySelector(${q(sel)}).click()`);
-}
+let page, evaluate, waitFor, click;
 
 /** Images decoded, media able to play. */
 const mediaReady = `[...document.images].every((i) => i.complete) && [...document.querySelectorAll("video, audio")].every((m) => m.readyState >= 2)`;
@@ -290,7 +223,8 @@ async function main() {
     });
     shell.stderr.on("data", (d) => process.env.DEBUG && process.stderr.write(d));
     procs.push(shell);
-    page = await connect(port);
+    page = await connectPort(port);
+    ({ evaluate, waitFor, click } = pageHelpers(page));
     await page.send("Page.enable");
     await page.send("Emulation.setDeviceMetricsOverride", { width: W, height: H, deviceScaleFactor: 1, mobile: false });
 

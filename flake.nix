@@ -144,8 +144,12 @@
               pkgs.nodejs_22 pkgs.python3 pkgs.imagemagick pkgs.claude-code pkgs.electron
               tools.qgen tools.trivia-media tools.trivia-authoring tools.trivia-dev tools.trivia-desktop
               tools.trivia-desktop-build
-              pkgs.xvfb  # authoring/store/screenshots.mjs
-            ] ++ nixpkgs.lib.optionals (pkgs.system == "x86_64-linux") [ tools.trivia-steam tools.steamcmd ]  # SteamCMD: x86_64-linux only
+              pkgs.xvfb  # authoring/store/screenshots.mjs, authoring/steam/smoke.mjs
+            ] ++ nixpkgs.lib.optionals (pkgs.system == "x86_64-linux") [
+              tools.trivia-steam tools.steamcmd  # SteamCMD: x86_64-linux only
+              # smoke.mjs: an FHS runtime like Steam's, plus what Electron links
+              (pkgs.steam.override { extraLibraries = p: with p; [ nss nspr gtk3 atk at-spi2-atk at-spi2-core xorg.libXcomposite ]; }).run
+            ]
               ++ nixpkgs.lib.optional (pm.packages ? ${pkgs.system}) pm.packages.${pkgs.system}.default;
           };
         });
