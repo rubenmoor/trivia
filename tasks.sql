@@ -13137,7 +13137,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Under Spacewar (480) with only `local/` → dialog; «Usar…» → same players and seen counts, `local/game.json` byte-identical; «Empezar de cero» → language screen, and the dialog again next start if nothing was written.
 - With a Steam save → no dialog; without Steam → no dialog; browser game (`trivia`) unchanged.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-13T05:52:56Z', '2026-10-13T06:02:06Z', 659);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (662, 87, 'Auto-Cloud values into plan 18', 'work', 'open', NULL, NULL, 'Plan 87 part 3: write the Steam Auto-Cloud values into `plans/18-steam-integration.md` ("Steam features" Steam Cloud bullet and/or "Builds and depots"), so part 2 of masterplan 10 (`task 254: write plan: Steamworks app configuration (SW-7)`) enters them in Steamworks. Doc only.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (662, 87, 'Auto-Cloud values into plan 18', 'work', 'done', NULL, '2026-10-13, plans/18-steam-integration.md', 'Plan 87 part 3: write the Steam Auto-Cloud values into `plans/18-steam-integration.md` ("Steam features" Steam Cloud bullet and/or "Builds and depots"), so part 2 of masterplan 10 (`task 254: write plan: Steamworks app configuration (SW-7)`) enters them in Steamworks. Doc only.
 
 ## Values
 - Root `WinAppDataRoaming`, subdirectory `trivia/save/{64BitSteamID}`, pattern `game.json`, OS all, non-recursive.
@@ -13151,7 +13151,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Also
 - If `task 254` is done by the time this runs (its plan entered the Steamworks values already): `pm decision add "Auto-Cloud values entered in Steamworks?"` with the exact values above in the body (options: entered (recommended) / not yet), and link this plan''s gamemaster test task to it (`pm task-pending-decision`). If task 254 is still open, nothing more: its plan reads plan 18.
 
-Done when: plan 18 holds the values; `plans/project.md` unchanged.', '2026-10-13T05:52:56Z', NULL, 659);
+Done when: plan 18 holds the values; `plans/project.md` unchanged.', '2026-10-13T05:52:56Z', '2026-10-13T06:03:01Z', 659);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (663, 87, 'Steam Cloud test checklist and gamemaster decision', 'work', 'open', NULL, NULL, 'Plan 87 part 4: the gamemaster tests Steam Cloud on real machines. Workers write the checklist and record the result; they don''t test with Steam themselves.
 
 ## Do
@@ -14568,6 +14568,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (486, 659, '2026-10-13T05:51:52Z', '2026-10-13T05:53:09Z', 'done', NULL, 0, 'bfd9ee3973e3760847f0fc387bd9f8474fb23549', 'claude-opus-5-5[1m]', 'a0adc75f-2679-46b6-a58c-0ff744013959', 11, 20, 7642, 369732, 46354, 0.5976984, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (487, 660, '2026-10-13T05:53:09Z', '2026-10-13T05:58:57Z', 'done', NULL, 0, '3708ffa26e208ba367b469000d42d47463f4c70c', 'claude-opus-5-5[1m]', 'e5861d4f-26ac-4623-828c-b633338de000', 26, 50, 9661, 1073022, 42792, 0.75036039999999993, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (488, 661, '2026-10-13T05:58:57Z', '2026-10-13T06:02:15Z', 'done', NULL, 0, '32091cce2dee0fcc44502cc51a22df4fc6f8aed3', 'claude-opus-5-5[1m]', 'e5889ce3-be39-4332-a385-1482307b9157', 31, 58, 13485, 1672466, 62627, 1.1054411999999998, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (489, 662, '2026-10-13T06:02:15Z', '2026-10-13T06:03:06Z', 'done', NULL, 0, 'bc4d19cc9b5e4e0a43531fa6f72ebc85a54c7a6b', 'claude-opus-5-5[1m]', 'f28e885a-74c0-407f-b19a-2841094b9673', 10, 20, 3046, 308204, 25423, 0.3260248, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

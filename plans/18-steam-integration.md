@@ -19,6 +19,15 @@ The shell's own code stays tiny: create a fullscreen window, load `app/client/di
 
 ## Steam features
 - **Steam Cloud:** the save (12) is one JSON file per Steam user, `<userData>/save/<steamid64>/game.json` (`%APPDATA%\trivia`, `~/.config/trivia`; D-72, plan 87); without Steam `save/local/game.json`, S3's `save/game.json` migrated there at start. Steam Auto-Cloud syncs it with no code: subdirectory `trivia/save/{64BitSteamID}`, non-recursive, pattern `game.json` (the `.tmp`, `backup/`, `local/` and other users' folders stay local).
+  - Auto-Cloud values for SW-7 (plan 87; entered in Steamworks → Steam Cloud by the gamemaster):
+    - Quota: 1 file, 20 MB (envelope ≤ 10 MB, D-72).
+    - Root path: root `WinAppDataRoaming`, subdirectory `trivia/save/{64BitSteamID}`, pattern `game.json`, OS all, recursive off.
+    - Root override: original `WinAppDataRoaming`, OS Linux, new root `LinuxXdgConfigHome` (`~/.config`), path unchanged; if Steamworks doesn't list it: `LinuxHome` with `.config/` prepended. Check Valve's current list on entry.
+    - Deck: Linux build → the override; Windows build via Proton (D-92) → Windows path inside the prefix, no override.
+  - Expected cloud listing: only `game.json`. If Steam picks up `game.json.tmp` mid-write: rename the temp outside the pattern (small `save.mjs` change), no Cloud API.
+  - Conflict (both machines changed offline): Steam's own dialog at launch; the picked side wins whole; no code.
+  - Family Sharing borrower: own SteamID → own folder and cloud slot.
+  - Dev: `steam_appid.txt` / `TRIVIA_STEAM_APPID` as SW-8 left it (480 until SW-7).
 - **Overlay:** Windows only (D-92): `addElectronSteamOverlay` on win32 while Steam is up; Linux without overlay (the native GL window froze the game on XWayland); the Deck runs the Windows build via Proton (SW-12). No pause on overlay open.
 - **Achievements:** a few that fit the game (first victory, a win without jokers, a win on Experto, every broad category answered, reaching level 12 in each preset). No grind achievements.
 - **On-screen keyboard:** `ShowFloatingGamepadTextInput` for the player name in Big Picture / on the Deck (14, Deck Verified): A on the name field opens it at the field; elsewhere and without Steam the letter picker (plan 46).
