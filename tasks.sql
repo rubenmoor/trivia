@@ -16210,7 +16210,7 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 
 ## Out of scope (from the milestone)
 - Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-13T15:38:25Z', '2026-10-13T15:42:46Z', 788);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (795, 98, 'revise plan 98', 'plan', 'open', 1000, NULL, 'Plan 9, the plan above plan 98, changed; it is quoted below. Bring plan 98 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (795, 98, 'revise plan 98', 'plan', 'done', 1000, '2026-10-13, no change: plan 9''s part 10 (regional packs) unchanged; masterplan change is parts 6 and 13, plan 98 still fits', 'Plan 9, the plan above plan 98, changed; it is quoted below. Bring plan 98 in line with it
 (`pm plan edit 98 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -16327,7 +16327,7 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 - Part 2 any time after plan 16. Part 12 last.
 
 ## Out of scope (from the milestone)
-- Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-13T15:38:25Z', NULL, 788);
+- Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-13T15:38:25Z', '2026-10-13T15:43:03Z', 788);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (796, 9, 'write plan: UI wording: style guides, TV-check fixes, screen gallery', 'plan', 'done', 1000, '2026-10-13, plan 100 (UI wording: style guides, TV-check fixes, screen gallery), decision 115', 'Write the plan for part 13 of the masterplan (plan 9): `pm plan add 9 "UI wording: style guides, TV-check fixes, screen gallery" --priority 380`.
 
 - Source: milestone 9 "UI wording and review" (gamemaster''s TV check, 2026-10-13), part 13 of plan 9.
@@ -18292,6 +18292,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (688, 798, '2026-10-13T15:42:04Z', '2026-10-13T15:42:23Z', 'done', NULL, 0, '2e303f4b7a28179d10964a4d3324798b98850caf', 'claude-opus-5-5[1m]', 'ff29e625-6d70-4481-8387-ece2962b9c0e', 5, 10, 1506, 158422, 29171, 0.2952124, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (689, 793, '2026-10-13T15:42:24Z', '2026-10-13T15:42:35Z', 'done', NULL, 0, 'd02db40b075506f0af515300b8eea1b916afc7dd', 'claude-opus-5-5[1m]', '5df054d1-4d22-4501-83f6-5ff516042d45', 3, 6, 751, 80420, 25743, 0.237072, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (690, 794, '2026-10-13T15:42:35Z', '2026-10-13T15:42:50Z', 'done', NULL, 0, 'acaa542890f917033749b252137ad918a743bf40', 'claude-opus-5-5[1m]', 'd2638622-64e6-49aa-9710-dc7c0d2def45', 3, 6, 967, 82371, 25388, 0.23894220000000002, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (691, 795, '2026-10-13T15:42:51Z', '2026-10-13T15:43:07Z', 'done', NULL, 0, '9879872fd77639104757d4a5ddb14183243751ce', 'claude-opus-5-5[1m]', '846f8751-6c15-48d6-8761-9a9256503382', 4, 8, 955, 117154, 25664, 0.2478748, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
