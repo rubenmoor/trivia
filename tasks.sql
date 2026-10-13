@@ -11047,7 +11047,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - Every per-request sync IO site and module global listed with a status; commands recorded.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T23:02:55Z', '2026-10-13T09:42:22Z', 513);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (531, 73, 'Baseline: bundle size and build output', 'work', 'open', NULL, NULL, 'Task 8 of `plan 73: Baseline scans and report skeleton (code review part 1)`; needs the `code-review.md` skeleton (task 1 of plan 73). Rules: plan 73 "Rules for this plan".
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (531, 73, 'Baseline: bundle size and build output', 'work', 'done', NULL, '2026-10-13, code-review.md (### Bundle baseline: build 1.66 s, client 264 kB JS/90 kB gz, authoring 157 kB/54 kB gz, desktop 2.8 GB; 3 findings handed to parts 6/9, 1 won''t fix)', 'Task 8 of `plan 73: Baseline scans and report skeleton (code review part 1)`; needs the `code-review.md` skeleton (task 1 of plan 73). Rules: plan 73 "Rules for this plan".
 
 ## What
 - `npm run build` (both Vite builds): per-chunk raw and gzip sizes of `app/client/dist` and `authoring/ui/dist`; largest modules (`npx vite-bundle-visualizer` only if available offline; else rollup manifest / source sizes); assets copied to `dist` (fonts, audio) with sizes; `npm run build` wall time.
@@ -11056,7 +11056,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - Baseline table in `code-review.md`; every bloat finding a row with a status.
-- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T23:02:55Z', NULL, 513);
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T23:02:55Z', '2026-10-13T09:44:07Z', 513);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (532, 74, 'Review save.py and paths.py', 'work', 'open', NULL, NULL, 'Task 1 of `plan 74: Python game server review (code review part 2)`. Needs `code-review.md` with `## Part 2` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so. Ground rules: plan 72 "Ground rules for every part"; plan 74 "Rules for this plan".
 
 ## What
@@ -15789,6 +15789,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (569, 528, '2026-10-13T09:36:16Z', '2026-10-13T09:37:30Z', 'done', NULL, 0, '9e733557e44180058f1ec56e168ecd3d5f25b907', 'claude-opus-5-5[1m]', 'e6831dc9-70e6-4d16-8645-49ceaf9be941', 14, 22, 4060, 387065, 32901, 0.42190900000000009, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (570, 529, '2026-10-13T09:37:30Z', '2026-10-13T09:40:13Z', 'done', NULL, 0, '9315f5d6cbd17c6e976840406bb591c8facdf728', 'claude-opus-5-5[1m]', '128ccb9f-46ec-48ae-a1e1-c2fe97f20e09', 21, 40, 15764, 1016108, 56420, 0.97002160000000015, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (571, 530, '2026-10-13T09:40:14Z', '2026-10-13T09:42:31Z', 'done', NULL, 0, 'b9d5978d5c242327d0d9d7b6a27c2f82b034c94c', 'claude-opus-5-5[1m]', '009c7567-d047-42be-9491-346056e8654a', 21, 38, 12369, 1260697, 79956, 1.1393193999999998, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (572, 531, '2026-10-13T09:42:31Z', '2026-10-13T09:44:15Z', 'done', NULL, 0, '43bfb757844fe2a5cacc7b2af215cda7145a8b96', 'claude-opus-5-5[1m]', 'fc967a71-1a6e-4b86-82fc-965864030922', 15, 30, 8785, 620956, 41964, 0.6357232, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

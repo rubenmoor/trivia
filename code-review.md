@@ -617,6 +617,40 @@ Module-level mutable state (constant tables such as schemas, field lists, `LISTS
 | `authoring/tools/supply.ts` | `raw` (stdin buffer) | 8 |
 | `authoring/store/screenshots.mjs`, `authoring/steam/smoke.mjs` | `seed`, `page`/`evaluate`/`waitFor`/`click`; `step`, `page`/`h`/`home`/`display` (scripts) | 6 |
 
+### Bundle baseline
+
+Task 531, 2026-10-13, run from the repo root, Vite 8.3.3. Per-module sizes from a throw-away script (`/tmp`, deleted): Vite's `build()` API with each project's `vite.config.ts`, `outDir` in `/tmp` and a `generateBundle` plugin summing `chunk.modules[id].renderedLength` (tree-shaken, before minification) per module, directory and package; `vite-bundle-visualizer` not installed (offline). Desktop sizes from the existing `app/desktop/release/` (0.1.0, built 2026-10-13 03:42), no packaging run; `app.asar` contents from its JSON header.
+
+- Build: `/usr/bin/env time -f "%e s wall" npm run build` → 1.66 s wall (client 652 ms, authoring 398 ms)
+- Dist sizes: `du -sh app/client/dist/* authoring/ui/dist/*`, `find app/client/dist -type f | xargs du -b | sort -n`
+- Desktop: `du -sh app/desktop/release/*-unpacked app/desktop/release/*-unpacked/resources/*`, `ls -la app/desktop/release`
+
+| output | raw | gzip | notes |
+|---|---|---|---|
+| `app/client/dist/assets/App-*.js` | 142.7 kB | 45.7 kB | screens (lazy chunk); largest pre-minify: `Game.svelte` 39.8, `Question.svelte` 33.2, `Choice.svelte` 26.6, `Overlay.svelte` 25.6, `sound.svelte.ts` 19.7 kB |
+| `app/client/dist/assets/engine-*.js` | 121.3 kB | 43.8 kB | engine + Svelte runtime + 4 locales; `engine/game.ts` 30.5, `locales/{de,es,en}.ts` ≈ 11.5 each pre-minify |
+| `app/client/dist/assets/index-*.js` | 2.5 kB | 1.2 kB | boot |
+| `app/client/dist/assets/App-*.css` | 70.6 kB | 12.4 kB | component styles; no inlined `data:` URLs |
+| `app/client/dist/credits.json` | 687.7 kB | 95.8 kB | made by `credits.ts`; fetched only by the Credits screen |
+| `app/client/dist/CREDITS.md` | 382.0 kB | — | shipped licence file |
+| `app/client/dist/audio/` (public) | 2.8 MB | — | 26 `.m4a`; `victoria.m4a` 1.20 MB, three `musica-*.m4a` 0.24 MB each, `redoble.m4a` 0.20 MB |
+| `app/client/dist/fonts/` (public) | 96 kB | — | `nunito.woff2` 39 kB, `baloo-2.woff2` 33 kB |
+| client modules by source (pre-minify) | — | — | `src/game/` 255.9, `svelte` 146.9, `src/engine/` 55.9, `src/locales/` 36.8, `src/lib/` 27.6 kB |
+| `authoring/ui/dist/assets/index-*.js` | 157.4 kB | 53.8 kB | one chunk; `Review.svelte` 50.3, `Home.svelte` 21.5, `MediaPanel.svelte` 12.9 kB pre-minify; game locales via `$app` 36.9 kB |
+| `authoring/ui/dist/assets/index-*.css` | 26.2 kB | 6.1 kB | |
+| `authoring/ui/dist/{audio,fonts}/` | 2.9 MB | — | the game's whole `public/` (`publicDir`) |
+| `app/desktop/release/linux-unpacked` | 2.8 GB | — | 335 MB without `resources/media` (2.4 GB, 1102 files); `trivia-bin` 215 MB, `app.asar` 7.9 MB, `app.asar.unpacked` 4.4 MB, `resources/client` 4.3 MB, `resources/data` 1.9 MB |
+| `app/desktop/release/win-unpacked` | 2.8 GB | — | 380 MB without media; `Trivia.exe` 229 MB, rest as Linux |
+| `Trivia-0.1.0-linux-x64.tar.gz` / `-win-x64.zip` | 2.66 / 2.68 GB | — | media is already compressed |
+
+| file | finding | category | severity | status |
+|---|---|---|---|---|
+| `app/client/dist`, `app/client/src` | no findings: one lazy `App` chunk for the screens, `credits.json` loaded on demand, no library pulled in for one function (only runtime dependency: `svelte`); the 4 eager locales (~13 kB gzip) are negligible offline | — | — | — |
+| `authoring/ui/vite.config.ts` | `publicDir: "../../app/client/public"` copies the game's 2.8 MB `audio/` into `authoring/ui/dist/` as well, but the authoring pages need only `fonts/` (its own comment); built output only, not shipped | performance | low | handed to part 9 |
+| `app/desktop/electron-builder.yml` | `app.asar` (7.9 MB) carries ~6 MB of build tooling from `steamworks-ffi-node`'s optional/transitive deps (`node-gyp`, `tar`, `undici` incl. `docs/`, `minipass`, `node-addon-api` headers, `koffi` `src/`, `doc/`, `vendor/`) never loaded at runtime; `files` exclusions would drop them (<0.3 % of the package, media dominates) | performance | low | handed to part 6 |
+| `app/desktop/electron-builder.yml` | `CREDITS.md` (382 kB) shipped twice: `resources/client/CREDITS.md` (from `extraResources` `../client/dist`) and the install root (`extraFiles`) | inconsistency | low | handed to part 6 |
+| `app/client/public/audio/victoria.m4a` | 1.2 MB, 43 % of all game audio; probably long or high bitrate (no `ffprobe` in the dev shell to check); re-encode only if the gamemaster wants it smaller | performance | low | won't fix: audio content is out of scope (milestone 13), 1.2 MB is nothing next to 2.4 GB media |
+
 ## Part 2: Python game server
 
 Plan 74 reviews `app/server/` and `authoring/tools/categories.py`, and logs the referee files deleted by task 302.
