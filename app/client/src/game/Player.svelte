@@ -12,6 +12,7 @@
   import { focusControl, lastDevice, pushScope } from "../lib/input.svelte";
   import type { Player } from "../lib/types";
   import Icon from "./Icon.svelte";
+  import { MAX_NAME } from "./letters";
   import LetterPicker from "./LetterPicker.svelte";
   import Prompt from "./Prompt.svelte";
 
@@ -130,7 +131,11 @@
       modal: true,
       whileBusy: true,
       root: () => dialog,
-      handle: (a) => (a.type === "back" || a.type === "menu") && ((doomed = null), true),
+      handle: (a) => {
+        if (a.type !== "back" && a.type !== "menu") return false;
+        doomed = null;
+        return true;
+      },
     });
     focusControl(cancelButton); // a stray Enter must not delete anyone
     return pop;
@@ -165,7 +170,7 @@
           id="new-player"
           bind:this={input}
           bind:value={name}
-          maxlength="30"
+          maxlength={MAX_NAME}
           autocomplete="off"
           spellcheck="false"
           placeholder={t("screen.player.placeholder")}

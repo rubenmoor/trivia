@@ -1,8 +1,8 @@
 <script lang="ts" module>
   // The joker tray (plans/09-jokers.md, "Joker tray", JK-4): five tokens down the left edge of the
   // Question screen, read-only and smaller on Level and Select. A token is either playable or
-  // disabled right now, with the engine's reason. Jokers are unlimited by default (D-27); with a
-  // budget (13-game-modes.md, MD-3) a limited token carries a badge with the uses left.
+  // disabled right now, with the engine's reason. With a budget (13-game-modes.md, MD-3; the standard
+  // set by default, D-88) a limited token carries a badge with the uses left; ∞ has none.
   import type { IconName } from "./Icon.svelte";
   import type { JokerName } from "../lib/types";
   import { t } from "../lib/i18n";
@@ -64,6 +64,7 @@
   {#each TOKENS as tok (tok.name)}
     {@const state = jokers?.[tok.name]}
     {@const off = !readonly && !state?.available}
+    {@const uses = left?.[tok.name]}
     <div class="slot">
       <button
         class="token"
@@ -79,7 +80,7 @@
         <span class="face"><Icon name={tok.icon} size="100%" /></span>
         {#if !readonly && lastDevice.current !== "gamepad"}<span class="key">{tok.key}</span>{/if}
         {#if off}<span class="lock"><Icon name="lock" size="100%" /></span>{/if}
-        {#if left?.[tok.name] != null}<span class="count" class:empty={left[tok.name] === 0}>{left[tok.name]}</span>{/if}
+        {#if uses != null}<span class="count" class:empty={uses === 0}>{uses}</span>{/if}
         {#if tok.name === "hint" && !readonly}
           <span class="pips">
             {#each [0, 1, 2] as p (p)}<span class="pip" class:full={p < hintsLeft}></span>{/each}
@@ -290,7 +291,6 @@
     border: 1px solid var(--sky);
     pointer-events: auto;
     cursor: pointer;
-    border-color: var(--sky);
     color: var(--sky);
   }
   @keyframes shimmer {
