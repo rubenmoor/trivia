@@ -13511,8 +13511,70 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Decision 90 (Store requirements, languages and controller flags?): apply the answer (fixes, Full vs Partial controller support, en/de language rows); `pm decision consequences 90`.
 - Storage: after part 6''s media bundle (SW-9, `task 260`, decision 82) rebuild `trivia-desktop-build --dir`, `du -sb` the three depots (`release/{win,linux}-unpacked` minus `resources/media`, `app/desktop/build/media`), set "Storage" to the installed size rounded up; update "Measured".
 - Linux OS row: replace "Ubuntu 22.04" with the distro of the first non-Nix start test (18, "Local build start test") once filled.', '2026-10-13T08:23:13Z', NULL, 668);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (689, 91, 'create tasks for plan 91', 'split', 'open', 1000, NULL, 'Split plan 91 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T08:25:30Z', NULL, 265);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (689, 91, 'create tasks for plan 91', 'split', 'done', 1000, '2026-10-13, tasks.sql: tasks 690-693 for plan 91; no new decisions (91, 92 already answered)', 'Split plan 91 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T08:25:30Z', '2026-10-13T08:26:20Z', 265);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (690, 91, 'One version and pool hash, shown in the game', 'work', 'open', NULL, NULL, 'Plan 91 part 1. Follows decision 91: Game version: single source of truth and decision 92: Pool version: export hash in pool.json.
+
+## What
+- `flake.nix`: app `version` (now hard-coded `"0.1.0"`, ~line 111) = `(builtins.fromJSON (builtins.readFile ./app/desktop/package.json)).version`.
+- `app/client/vite.config.ts`: `define: { __APP_VERSION__: JSON.stringify(<version from ../desktop/package.json>) }`; typed `declare const __APP_VERSION__: string` (e.g. in a `.d.ts` the client already uses).
+- `authoring/tools/pool_export.py` `pool_text`: add `"hash"`: first 8 hex of sha256 over the exported questions (stable serialization, e.g. the `questions` JSON as written). Pool format stays `version: 1`. Applies to every export, incl. `pool.<locale>.json` and bundle pools if they go through `pool_text`. Re-export `app/data/` (`qgen export`); `qgen validate` must stay clean (staleness check compares text, so it covers the hash).
+- `app/client/src/engine/pool.ts`: keep `hash` (optional; absent in old pools = `null`).
+- `app/client/src/lib/`: small `buildInfo()` → `{ version, pool }` (pool = hash of the loaded pool for the current locale, or `null`). Used by the credits screen now and by part 5''s report text (task 267) later.
+- `app/client/src/game/Credits.svelte`: one line "Versión 1.0.0 · preguntas 3fa2c1d0" via `t()`; strings in es/en/de catalogs (+ es-ES only if it overrides). Without a hash: version only.
+
+## Check
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`, `nix build .#app`.
+- Browser game (`trivia`): credits screen shows version + hash.
+- Bump the version in `app/desktop/package.json` in a scratch edit: flake app (`nix eval` of the version), client build and `steam.py` `version()` all follow; revert.
+
+## Docs
+- `plans/18-steam-integration.md` "Builds and depots": a **Version** bullet: source `app/desktop/package.json`, tag `v<version>`, build Desc `<tag> <sha>`, how to bump (edit `package.json`, commit, `git tag v<version>`), semver meaning (patch = content-only or bug fix; minor = new feature or save version bump; `1.0.0` = launch), pool hash in credits.
+- `README.md`: one line under "Upload to Steam" on how to bump the version.', '2026-10-13T08:26:18Z', NULL, 689);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (691, 91, 'Running games survive a patch (dropped question ids)', 'work', 'open', NULL, NULL, 'Plan 91 part 2. Today a running game whose current card was dropped by a patch throws `KeyError` on the next answer (`app/client/src/engine/game.ts` `question()`, ~line 105). No save version bump: the repair doesn''t change the shape.
+
+## What
+- A repair on load, where a running game is first read against a pool (`engine/game.ts`, e.g. `view`/`running`, or a `repair(save, data)` pass in `engine/api.ts`''s load; pick the simplest single place). For the newest running game, ids missing from its pool (per the game''s locale: a translation dropped from one locale''s pool counts too):
+  - phase `select`: missing `options` redrawn for the level (no seen row written)
+  - phase `question` with a missing `current` → back to `select` for the same level, fresh options (no seen row; jokers and history unchanged)
+  - `last`, `swapped_to` with missing ids → `null`
+  - `undo` referencing missing ids → `null`
+- Untouched: finished games, `seen`, `blocked`, `flags` (unknown ids stay; `view()`/`askedCategories` already skip them).
+- Must be idempotent and not write anything when nothing is missing.
+
+## Check
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`.
+- Throw-away script (not committed): build a v4 save against today''s pool (players, finished games, a running game in `select` and another save with one in `question`, flags, blocked, seen); make a pool with 10 % of the save''s ids dropped incl. the running game''s cards, then re-add one dropped id; load → no throw, game playable to the next level, re-added id keeps its seen count, dropped ids never drawn, flags list shows the dropped id with `question: null`. Same with a v2 save (`save.py` `migrate()` output) against the new pool.
+- A test only if one stays useful long-term (e.g. one `game.test.ts` case: running game in `question` with a dropped `current`).
+
+## Docs
+- `plans/12-client-engine.md` new section "Saves across patches": what a patch may do (add, fix, drop questions; never delete or reuse ids), what the engine guarantees (above), the rule for later patches (shape change = `SAVE_VERSION + 1` + an `UPGRADES` entry + a `save.test.ts` case; never silent), and the beta/default note (a newer save on an older build is backed up and the game starts empty, so a save version bump ships to `default` in the same release the family tested on `beta`; testers don''t switch back to `default` before it).', '2026-10-13T08:26:18Z', NULL, 689);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (692, 91, 'qgen validate: question ids never vanish after a release tag', 'work', 'open', NULL, NULL, 'Plan 91 part 3. Seen counts are per id and never pruned, and `qgen draft` allocates `max(id) + 1` over `authoring/data/questions.json`; if an id vanishes from that file it can be reused and an old save would treat a new question as seen (or a dropped one as new).
+
+## What
+- `qgen validate` fails when an id in the newest `v*` tag''s `app/data/pool.json` (`git show <tag>:app/data/pool.json`; newest by version sort, e.g. `git tag --list ''v*'' --sort=-v:refname`) is missing from `authoring/data/questions.json` (any status). Error lists the missing ids and the tag.
+- No tag (today) or no git: skip and say so in the output ("id continuity: skipped, no v* tag").
+- Also the tag''s `pool.<locale>.json` files only if their ids can differ from `pool.json`''s; otherwise `pool.json` is enough.
+
+## Check
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` (prints "skipped" on today''s tree).
+- Temp repo/copy with a `v*` tag, delete a tagged id from `questions.json` → validate fails naming the id. Clean up temp tags/copies (never push or leave a tag in the real repo).
+
+## Docs
+- `authoring/RUNBOOK.md` or `authoring/QC.md`: one bullet: dropping a question = status change, never deletion; validate guards it against the last release tag.
+- `plans/18-steam-integration.md` **Version** bullet (written by the "One version and pool hash" task) mentions the guard.', '2026-10-13T08:26:18Z', NULL, 689);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (693, 91, 'Close-out of plan 91: docs and decision consequences', 'work', 'open', NULL, NULL, 'Plan 91 part 4, after the other plan 91 tasks are done.
+
+## What
+- `plans/18-steam-integration.md`: "Builds and depots" **Version** bullet complete (source, tag, Desc, bump, semver meaning, pool hash, id-continuity guard in `qgen validate`).
+- `plans/12-client-engine.md`: "Saves across patches" section present and matches the code.
+- `plans/11-steam.md`: note S6 part 2 done (no ST-row of its own; cite `plan 91: Version numbers and patch-safe saves`).
+- `plans/project.md` in sync.
+- `pm decision consequences 91 "…"` and `pm decision consequences 92 "…"`: date, task, files changed.
+- Check every "Done when" of plan 91; add follow-up tasks for gaps.
+
+## Check
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-13T08:26:18Z', NULL, 689);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -15096,6 +15158,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (525, 263, '2026-10-13T08:21:14Z', '2026-10-13T08:21:36Z', 'blocked', NULL, 0, '15ad91dd57b67f060e768b71af515548cf183fc6', 'claude-opus-5-5[1m]', 'dabc3cab-60a4-4e9c-b7e9-9a42b62a535d', 4, 8, 1302, 114192, 27952, 0.2725264, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (526, 668, '2026-10-13T08:21:36Z', '2026-10-13T08:23:27Z', 'done', NULL, 0, '5171242c36db77d5182baeffb23827eb5f2eb42a', 'claude-opus-5-5[1m]', '9dfed8c0-1062-48c8-ab34-122fee29ce57', 19, 38, 9780, 906003, 50558, 0.78141660000000013, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (527, 265, '2026-10-13T08:23:27Z', '2026-10-13T08:25:41Z', 'done', NULL, 0, 'e69f5427fa4f1ac36c7e01fe52932f2500c806f9', 'claude-opus-5-5[1m]', '11670bdf-dae3-4749-b1a3-dbf7b7ba2c9d', 19, 36, 11632, 936085, 60579, 0.90463299999999991, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (528, 689, '2026-10-13T08:25:42Z', '2026-10-13T08:26:27Z', 'done', NULL, 0, '8a302f76fb8a114517b12bf49ef6b43dacecd51f', 'claude-opus-5-5[1m]', 'f705d620-cf9d-42e2-971e-64601ae89e28', 6, 12, 4377, 177672, 27562, 0.3436184, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
