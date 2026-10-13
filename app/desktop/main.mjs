@@ -51,11 +51,25 @@ function steamSdkDir() {
   return existsSync(path.join(local, "redistributable_bin")) ? local : process.env.TRIVIA_STEAM_SDK || local;
 }
 
-/** `--import-save <file>` from argv, or null. */
-function importArg() {
-  const i = process.argv.indexOf("--import-save");
-  return i >= 0 ? process.argv[i + 1] ?? null : null;
+const USAGE = "known flags: --import-save <file>";
+// Our flags' namespace; anything else (Electron/Chromium switches, the dev app path, Steam's) passes.
+const OWN = /^--(import|export|save|trivia)/;
+
+/** Our flags from argv: `{ importSave }`, or `{ error }` for an unknown own-looking flag or a missing value. */
+function parseArgs(argv) {
+  let importSave = null;
+  for (let i = 1; i < argv.length; i++) {
+    const [flag, inline] = argv[i].split(/=(.*)/s);
+    if (!OWN.test(flag)) continue;
+    if (flag !== "--import-save") return { error: `unknown flag ${flag}; ${USAGE}` };
+    const value = inline ?? argv[++i];
+    if (!value || value.startsWith("--")) return { error: `--import-save needs a file; ${USAGE}` };
+    importSave = value;
+  }
+  return { importSave };
 }
+
+const args = parseArgs(process.argv);
 
 protocol.registerSchemesAsPrivileged([
   { scheme: "app", privileges: { standard: true, secure: true, supportFetchAPI: true, stream: true } },
@@ -83,7 +97,16 @@ function queued(fn) {
   return p;
 }
 
-if (!app.requestSingleInstanceLock()) {
+if (args.error) {
+  console.error(`trivia: ${args.error}`);
+  // No console on Windows: a dialog too when packaged.
+  if (app.isPackaged)
+    app.whenReady().then(() => {
+      dialog.showErrorBox("¡Trivia!", args.error);
+      app.exit(2);
+    });
+  else app.exit(2);
+} else if (!app.requestSingleInstanceLock()) {
   app.quit();
 } else {
   app.on("second-instance", () => {
@@ -168,8 +191,7 @@ async function start() {
     localFile = makeSaveFile(path.join(path.dirname(dir), "local"));
   console.error(`trivia: save ${saveFile.file}`);
   await saveFile.dropStaleTemp();
-  const importFrom = importArg();
-  if (importFrom) await importSave(importFrom);
+  if (args.importSave) await importSave(args.importSave);
 
   const dirs = roots();
   if (!existsSync(path.join(dirs.dist, "index.html"))) {
