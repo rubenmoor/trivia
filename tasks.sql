@@ -24979,6 +24979,23 @@ Pregunta: ¿Qué bebida caliente, hecha con granos tostados, hace famosa a Colom
 Respuesta: El café
 Nota: la respuesta está mal
 Code: app/client/src/game/report.ts.', 'One block per flag, blocks separated by one blank line; header: ¡Trivia! #<id> · <lang> · v<version> · pool <hash or ?> · <YYYY-MM-DD flag date>; then <Question>: …, <Answer>: …, optional <Note>: … with labels in the UI language', NULL, '2026-10-13T20:44:05Z', '2026-10-13T20:44:05Z', 859, NULL, 'rule', 859, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (143, 'Readable build: start time on the Steam Deck ok?', 'pending', '["ok (≤ +0.5 s)", "too slow: bundle the Svelte runtime", "too slow: other"]', '`plan 111: Readable client build` part 5, `task 948: Start time on the Steam Deck: gamemaster check (decision once)`. The readable client (`task 944: Readable build config: preserveModules, decision 124 names, stable cssHash`) loads ~200 modules over `app://` instead of 3 files; this may slow the start. Budget: ≤ +0.5 s on the Deck.
+
+No Deck at hand (`decision 125: Steam Deck: best effort, review without a Deck at hand`): time on your PC now, the Deck later; answer from the PC numbers if the Deck must wait.
+
+Builds to compare
+- previous (hashed): commit `c17aaa7` (last before `task 944`); readable: `main`
+- with the next beta upload: install the beta build under Steam (`trivia-steam upload --branch beta`), compare with the build before it
+- no beta upload due: `git worktree add /tmp/hashed c17aaa7`, `trivia-desktop-build --dir` in both trees; on the Deck only as a non-Steam test, copy `app/desktop/release/win-unpacked/`
+
+Steps (each build, three times)
+- start the game (`TRIVIA_MUTE=1`), time launch → start menu visible (stopwatch or screen recording)
+- note the median per build and machine; compare readable − hashed
+
+Options
+- ok (≤ +0.5 s): keep the readable build as is
+- too slow: bundle the Svelte runtime: one `vendor/svelte.js`, our modules still one file each (follow-up task in plan 111)
+- too slow: other: say what in the answer', NULL, NULL, '2026-10-13T21:49:32Z', NULL, 948, NULL, 'once', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -25819,6 +25836,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (833, 945, '2026-10-13T21:05:07Z', '2026-10-13T21:10:31Z', 'done', NULL, 0, 'bbba12e407257569ec25e36999eb8eae0020d639', 'claude-opus-5-5[1m]', 'aef1e8f7-2eaf-4a80-9958-28e054504fe3', 31, 60, 10920, 1596992, 64305, 1.0524784, 1704996);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (834, 946, '2026-10-13T21:10:32Z', '2026-10-13T21:15:38Z', 'done', NULL, 0, 'cc62e64d3f4da08cf03f17a7cebeb2248b2548b9', 'claude-opus-5-5[1m]', '33dd168e-ca38-4513-92c2-c6eeaf1cc779', 21, 42, 8476, 921555, 42829, 0.69663100000000022, 1704996);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (835, 947, '2026-10-13T21:15:38Z', '2026-10-13T21:49:16Z', 'done', NULL, 0, '0f125b2dd7f632ba56065ec16cada3f89c6d9c21', 'claude-opus-5-5[1m]', 'd7eecd64-f3db-423e-896f-dc974a370689', 37, 68, 9249, 1548182, 48704, 0.88452040000000021, 1704996);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (836, 948, '2026-10-13T21:49:16Z', '2026-10-13T21:49:39Z', 'blocked', NULL, 0, 'ffa855426b405f97f66e8de9c6b086b1bfdcadd4', 'claude-opus-5-5[1m]', 'bf48fc65-1afe-4546-b775-5b0a380295cf', 5, 10, 1718, 150678, 26523, 0.27671959999999995, 1704996);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -26039,6 +26057,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (869, 117);
 INSERT INTO task_decision (task_id, decision_id) VALUES (884, 117);
 INSERT INTO task_decision (task_id, decision_id) VALUES (885, 117);
 INSERT INTO task_decision (task_id, decision_id) VALUES (906, 123);
+INSERT INTO task_decision (task_id, decision_id) VALUES (948, 143);
 INSERT INTO task_decision (task_id, decision_id) VALUES (958, 135);
 INSERT INTO task_decision (task_id, decision_id) VALUES (980, 135);
 
