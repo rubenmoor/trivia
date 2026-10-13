@@ -157,6 +157,28 @@ Subscribed Workshop items are mod sources next to the local folder (pm plan 114)
 - Dev: `TRIVIA_DEV_WORKSHOP_DIR=<dir>`, only with `TRIVIA_DEV_STEAM_USER=1` (one stderr line): `<dir>/<numeric id>/` installed item, `<dir>/<id>.downloading/` downloading.
 - Steam updating files while running: accepted; restart after updates.
 
+## Modding: Publishing
+Modders publish a mod folder as a Workshop item with the game itself (pm plan 119); Steam's client uploads, we make no network calls of our own. The folder is only read and copied, never run. The modding guide (pm plan 121) copies this section.
+- Command: `trivia --publish-mod <folder> [--changenote <text>] [--visibility public|friends|unlisted|private] [--content-only] [--dry-run]`; dev `trivia-desktop --publish-mod …`; packaged: the game executable (Linux `trivia`, Windows `Trivia.exe`) from a terminal, Steam client running.
+- Flags: `--changenote`, `--visibility`, `--content-only`, `--dry-run` only with `--publish-mod`; `--publish-mod` not with `--import-save`/`--no-mods`.
+- Headless: before the instance lock (game may be closed), no window; exit 0 ok, 1 failed, 2 usage.
+- Code: `app/desktop/publish.mjs` (`preparePublish`, `describe`, `publish`, `writeWorkshopId`, `WORKSHOP_TAGS`; pure, no Electron, no binding import), `publishMod` in `main.mjs`.
+- Steps:
+  1. `readManifest`: errors stop (code + field), warnings printed (`game_version`, unknown keys/languages).
+  2. Preview: first of `preview.png`/`.jpg`/`.gif` at the root; > 1 MB → error; none → warning on first publish (Steam placeholder).
+  3. Stage: copy into a temp dir; skipped: dot files and dot folders (`.git`, `.DS_Store`), symlinks out of the folder or looping (warning); preview stays; prints file count + size; the upload is the copy; temp dir removed at the end.
+  4. Tags: kinds + `languages` base tags (`es-ES` → `es`), only names in `WORKSHOP_TAGS` (the list entered in Steamworks), others dropped with a warning.
+  5. `--dry-run` stops: item id or "new", title, description length, visibility, tags, preview, file count/size; no Steam needed.
+  6. Steam: real Steam user only (`hasSteamId()`, decision 111); `TRIVIA_DEV_STEAM_USER=1` doesn't count; else "publishing needs the Steam client running and logged in", exit 1.
+  7. First publish (no `workshopId`): `createItem`, `workshopId` written into `mod.json` (only that key, atomic) and the staged copy, item URL printed.
+  8. Update: content; unless `--content-only` also title (`name`), description, tags, preview; visibility on first publish (default private) or with `--visibility` only (an update never flips a public item back); change note from `--changenote`.
+  9. Progress: `preparing config`, `preparing content`, `uploading 40 % (12.3 / 30.1 MB)`, `uploading preview`, `committing` (on status or 10 % step change).
+  10. Result: item URL; failure: the binding's reason (e.g. not the item's owner, Workshop off for the app), exit 1. The binding waits 30 s on submit: a longer upload is polled to the end and reported "submitted, check the item page".
+- `workshopId` (decision 132: Workshop publishing: where the published file id lives): `mod.json` field, decimal string, written on first publish; travels to subscribers (warning `workshop_id_mismatch` on a copy under another item); failed first publish keeps it (next run updates the empty item); delete it for a fresh item.
+- Legal agreement: after every create/submit the command prints `https://steamcommunity.com/sharedfiles/workshoplegalagreement`; the item stays hidden until the modder accepts it.
+- Windows (packaged): no console; every line also to `<folder>/../<id>-publish.log` (beside the mod, not inside), result in a message box (ok: URL; failed: reason + log path). Linux/Deck: stdout/stderr only.
+- `trivia-steam` is for our own builds only, never for mods.
+
 ## Modding: `mod.json`
 A mod is a folder with a `mod.json` (pm plan 112). The validator `readManifest` in `app/desktop/mods.mjs` is the source of truth; this schema is for the modding guide (plan 121) and editors.
 - Also checked by the validator, not by the schema: file ≤ 64 KB UTF-8; `entry` exists inside the mod (symlinks resolved); unknown keys and unknown `languages` tags are warnings; `game` ≠ running version: warning `game_version`, still loaded.
