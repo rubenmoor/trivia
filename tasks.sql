@@ -12020,7 +12020,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - The four files and the removed `record_fixtures.py` listed in `## Part 8` with findings and status.', '2026-10-12T23:08:16Z', '2026-10-13T12:45:17Z', 520);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (570, 80, 'Review media tooling: media.py, download.py', 'work', 'open', NULL, NULL, 'Task 4 of `plan 80: Other authoring tools review (code review part 8)`: review these files, fix what is cheap, log every file and finding in `## Part 8` of `code-review.md` (no-findings rows included).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (570, 80, 'Review media tooling: media.py, download.py', 'work', 'done', NULL, '2026-10-13, authoring/tools/media.py, authoring/tools/download.py, code-review.md', 'Task 4 of `plan 80: Other authoring tools review (code review part 8)`: review these files, fix what is cheap, log every file and finding in `## Part 8` of `code-review.md` (no-findings rows included).
 
 ## First
 - Needs `code-review.md` with `## Part 8` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so.
@@ -12047,7 +12047,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Duplication candidates: `MIN_API_INTERVAL`/rate limiting ↔ `providers/*`; `media.py` `cmd_sync` ↔ `app/server/media_cache.py`.
 
 ## Done when
-- Both files listed in `## Part 8` with findings and status.', '2026-10-12T23:08:16Z', NULL, 520);
+- Both files listed in `## Part 8` with findings and status.', '2026-10-12T23:08:16Z', '2026-10-13T12:48:20Z', 520);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (571, 80, 'Review media providers: providers/__init__.py, commons.py, nasa.py, openverse.py, freesound.py', 'work', 'open', NULL, NULL, 'Task 5 of `plan 80: Other authoring tools review (code review part 8)`: review these files, fix what is cheap, log every file and finding in `## Part 8` of `code-review.md` (no-findings rows included).
 
 ## First
@@ -16000,6 +16000,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (620, 567, '2026-10-13T12:36:33Z', '2026-10-13T12:40:38Z', 'done', NULL, 0, '2444c70632aa5da52cafee66b718550a703e5eb0', 'claude-opus-5-5[1m]', '85eefad7-d498-4375-8f20-4030821453a4', 31, 56, 22262, 1963203, 79532, 1.4743606000000002, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (621, 568, '2026-10-13T12:40:38Z', '2026-10-13T12:43:03Z', 'done', NULL, 0, '30b1216ef1131e0b87d328601bae1cd34453453c', 'claude-opus-5-5[1m]', '536fc2ba-aa14-4611-97e3-bb10b3d3ab8f', 17, 34, 9530, 804354, 48388, 0.73871080000000011, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (622, 569, '2026-10-13T12:43:03Z', '2026-10-13T12:45:25Z', 'done', NULL, 0, '4de364e40c1cfabfd5bb138adc09e6480ad951ac', 'claude-opus-5-5[1m]', '66c84551-7518-49bd-ac97-323cea4a7cf3', 19, 36, 12369, 941879, 58103, 0.9007238, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (623, 570, '2026-10-13T12:45:26Z', '2026-10-13T12:48:35Z', 'done', NULL, 0, 'c174bf2fa9935dc0f0fd461358dd11353c6fbdfd', 'claude-opus-5-5[1m]', '9a3d81af-7bbc-4d29-9058-ce97f5995a0d', 26, 40, 14840, 1207874, 69090, 1.0912548, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

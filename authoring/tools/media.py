@@ -11,15 +11,15 @@ questions (D-14). The review tool and `qgen review` choose among them; `download
 `pick_fields()` turn a chosen candidate into the fields stored in the pool.
 
 Picked files live in the media cache (app/server/media_cache.py, D-17); downloads go through
-authoring/tools/download.py. `sync` downloads
-every picked file that isn't cached yet, ahead of game night.
+authoring/tools/download.py. `sync` downloads every picked file that isn't cached yet, ahead
+of game night.
 
 `licenses` (plans/52, PUB-1) checks the stored licence record of every picked file (no network):
 files to replace before a public release, grouped by reason (providers.licence_verdict),
 restriction flags for information, and a tally per licence. Skips rejected questions; exits 1
 while the replacement list isn't empty.
 """
-import argparse, itertools, json, re, sys
+import argparse, hashlib, itertools, json, re, subprocess, sys
 
 from layout import CANDIDATES, SOURCE_POOL as POOL
 from download import RateLimited, cached, http_get
@@ -69,7 +69,7 @@ def find_candidates(media, category=None, every=False):
     """Up to MAX_CANDIDATES for a question's media, from the providers in order (D-45): each one
     with ever shorter queries until there are ENOUGH; the next provider is only asked while there
     are fewer. `every` (a licence replacement, plans/53): every provider is asked as if it were
-    the first, and the candidates alternate between them. Videos fall back to images.
+    the first, and the candidates alternate between them. Videos are topped up with images.
     A rate-limited provider is skipped; if that leaves nothing, RateLimited is raised so a rerun
     retries instead of storing an empty result. `category` is the broad category's slug."""
     kinds = [media["type"]] + (["image"] if media["type"] == "video" else [])
@@ -149,7 +149,10 @@ def fetch_for(q, slot="media", every=False):
     found = find_candidates(spec, category_of(q), every)
     CANDIDATES.mkdir(parents=True, exist_ok=True)
     data = {"query": spec["query"], "type": spec["type"], "candidates": found}
-    candidates_path(q["id"], slot).write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    path = candidates_path(q["id"], slot)
+    tmp = path.with_name(path.name + ".tmp")
+    tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    tmp.replace(path)  # a torn file would count as fetched
     return data
 
 
@@ -191,13 +194,12 @@ def make_sheet(candidates, out, thumbs):
     """A contact sheet for an LLM review (D-36): every candidate's 500 px preview in a numbered
     grid, made with ImageMagick. Audio candidates have no picture and are left out (the review
     sees their titles). Returns the numbers on the sheet, or [] when there was nothing to show."""
-    import subprocess
     thumbs.mkdir(parents=True, exist_ok=True)
     args, shown = [], []
     for i, c in enumerate(candidates, 1):
         if c["type"] == "audio" or not c.get("preview_url"):
             continue
-        f = thumbs / f"{i}.img"
+        f = thumbs / (hashlib.sha1(c["preview_url"].encode("utf-8")).hexdigest()[:16] + ".img")  # not by number: a new search renumbers
         if not f.exists():
             with progress.waiting(f"{providers.provider_of(c).NAME} preview"):
                 f.write_bytes(http_get(c["preview_url"]))
@@ -207,8 +209,10 @@ def make_sheet(candidates, out, thumbs):
         return []
     out.parent.mkdir(parents=True, exist_ok=True)
     with progress.waiting("ImageMagick"):
-        subprocess.run(["magick", "montage", *args, "-tile", "3x", "-geometry", "400x300+6+6",
-                        "-pointsize", "28", str(out)], check=True, capture_output=True)
+        r = subprocess.run(["magick", "montage", *args, "-tile", "3x", "-geometry", "400x300+6+6",
+                            "-pointsize", "28", str(out)], capture_output=True, text=True)
+    if r.returncode:
+        raise RuntimeError(f"magick montage: {r.stderr.strip() or f'exit {r.returncode}'}")
     return shown
 
 
@@ -234,6 +238,37 @@ def cmd_sync(args):
     if failed:
         print(f"failed: {', '.join(failed)} (rerun to retry)")
         sys.exit(1)
+
+
+def cmd_fetch(args):
+    qs = json.loads(POOL.read_text(encoding="utf-8"))["questions"]
+    if args.batch:
+        qs = [q for q in qs if q.get("batch") == (None if args.batch == "none" else args.batch)]
+    if args.ids:
+        wanted = set(args.ids.split(","))
+        qs = [q for q in qs if q["id"] in wanted]
+
+    def needed(q, slot):
+        target = q["media"] if slot == "media" else q.get("background")
+        return target is not None and not target["file_url"] and (args.force or not candidates_path(q["id"], slot).exists())
+
+    todo = [(q, slot) for q in qs for slot in SLOTS if needed(q, slot)]
+    print(f"fetching candidates for {len(todo)} slot(s)", flush=True)
+    empty = []
+    for q, slot in todo:
+        label = q["id"] if slot == "media" else f"{q['id']} background"
+        try:
+            data = fetch_for(q, slot)
+        except Exception as e:  # noqa: BLE001 — keep going; rerun retries the rest
+            print(f"  {label}: FAILED {e}", file=sys.stderr)
+            continue
+        kinds = sorted({c["type"] for c in data["candidates"]})
+        print(f"  {label}: {len(data['candidates'])} ({', '.join(kinds) or '-'}) for “{data['query']}”", flush=True)
+        if not data["candidates"]:
+            empty.append(label)
+    if empty:
+        print(f"no candidates for: {', '.join(empty)} (try a new search term in the review tool, key m)")
+
 
 
 def licence_rows(qs):
@@ -342,37 +377,7 @@ def main():
     lc.add_argument("--status", help="only questions with this status, e.g. approved")
     lc.add_argument("--json", action="store_true", help="rows as JSON")
     args = ap.parse_args()
-    if args.cmd == "sync":
-        return cmd_sync(args)
-    if args.cmd == "licenses":
-        return cmd_licenses(args)
-
-    qs = json.loads(POOL.read_text(encoding="utf-8"))["questions"]
-    if args.batch:
-        qs = [q for q in qs if q.get("batch") == (None if args.batch == "none" else args.batch)]
-    if args.ids:
-        wanted = set(args.ids.split(","))
-        qs = [q for q in qs if q["id"] in wanted]
-    def needed(q, slot):
-        target = q["media"] if slot == "media" else q.get("background")
-        return target is not None and not target["file_url"] and (args.force or not candidates_path(q["id"], slot).exists())
-
-    todo = [(q, slot) for q in qs for slot in SLOTS if needed(q, slot)]
-    print(f"fetching candidates for {len(todo)} slot(s)", flush=True)
-    empty = []
-    for q, slot in todo:
-        label = q["id"] if slot == "media" else f"{q['id']} background"
-        try:
-            data = fetch_for(q, slot)
-        except Exception as e:  # noqa: BLE001 — keep going; rerun retries the rest
-            print(f"  {label}: FAILED {e}", file=sys.stderr)
-            continue
-        kinds = sorted({c["type"] for c in data["candidates"]})
-        print(f"  {label}: {len(data['candidates'])} ({', '.join(kinds) or '-'}) for “{data['query']}”", flush=True)
-        if not data["candidates"]:
-            empty.append(label)
-    if empty:
-        print(f"no candidates for: {', '.join(empty)} (try a new search term in the review tool, key m)")
+    {"fetch": cmd_fetch, "sync": cmd_sync, "licenses": cmd_licenses}[args.cmd](args)
 
 
 if __name__ == "__main__":

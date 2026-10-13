@@ -44,7 +44,8 @@ def http_get(url, params=None, headers=None, wait=None):
         except urllib.error.HTTPError as e:
             if e.code != 429:
                 raise
-            seconds = int(e.headers.get("Retry-After") or 0) or 15 * (attempt + 1)
+            retry = e.headers.get("Retry-After") or ""
+            seconds = (int(retry) if retry.isdigit() else 0) or 15 * (attempt + 1)  # may be an HTTP date
             host = urllib.parse.urlparse(url).hostname
             if not wait or attempt == 4:
                 raise RateLimited(seconds, host) from e
