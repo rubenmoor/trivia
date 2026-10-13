@@ -15,7 +15,6 @@ BACKGROUND_PLAY_FIELDS = ["file_url", "source_url", "credit", "provider", "licen
 def play_entry(q):
     """An approved question with only what play needs (no reviews, ratings, revisions or pipeline fields)."""
     e = {k: q[k] for k in PLAY_FIELDS}
-    e["status"] = "approved"
     e["media"] = {k: q["media"].get(k) for k in MEDIA_PLAY_FIELDS}
     e["background"] = ({k: q["background"].get(k) for k in BACKGROUND_PLAY_FIELDS}
                        if q.get("background") else None)
@@ -23,7 +22,7 @@ def play_entry(q):
 
 
 def pool_text(entries):
-    """hash: first 8 hex of sha256 over the questions as written (D-92)."""
+    """hash: first 8 hex of sha256 over the questions' own JSON (indent 2, D-92)."""
     questions = json.dumps(entries, ensure_ascii=False, indent=2)
     digest = hashlib.sha256(questions.encode("utf-8")).hexdigest()[:8]
     return json.dumps({"version": 1, "hash": digest, "questions": entries}, ensure_ascii=False, indent=2) + "\n"
@@ -41,6 +40,8 @@ def exports(pool):
 
 
 def write(pool):
-    """Write the exports for this source pool (the parsed authoring/data/questions.json)."""
+    """Write the exports for this source pool (the parsed authoring/data/questions.json); atomic per file."""
     for path, text in exports(pool).items():
-        path.write_text(text, encoding="utf-8")
+        tmp = path.with_suffix(".tmp")
+        tmp.write_text(text, encoding="utf-8")
+        tmp.replace(path)

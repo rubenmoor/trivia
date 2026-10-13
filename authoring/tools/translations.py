@@ -22,7 +22,10 @@ def load(locale):
     p = path(locale)
     if not p.exists():
         return {"version": 1, "locale": locale, "questions": []}
-    return json.loads(p.read_text(encoding="utf-8"))
+    try:
+        return json.loads(p.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as e:  # name the file, as qgen.load_json (circular import)
+        raise json.JSONDecodeError(f"{p}: {e.msg}", e.doc, e.pos) from None
 
 
 def save(locale, doc):

@@ -1,6 +1,6 @@
 """The game's save, read-only for authoring (plans/49, D-59, D-67).
 
-Reads state/game.json; without it: no players, burns or flags (game.sqlite/flags.json are backups,
+Reads state/game.json; without it: no seen counts, blocked questions or flags (game.sqlite/flags.json are backups,
 read only by save.migrate()). Never writes the save; only its own ledger:
 
     flags-applied.json   {"<question id>": "<flagged_on>[ <note>]"}   flags already turned into reviews (stamp())
