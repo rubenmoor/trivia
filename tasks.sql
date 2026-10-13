@@ -11852,7 +11852,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - Every function of the section listed in `## Part 7` with findings and status.', '2026-10-12T23:07:25Z', '2026-10-13T12:17:52Z', 519);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (564, 79, 'Review qgen health ack, rework, scan, tighten, neutralize', 'work', 'open', NULL, NULL, 'Task 8 of `plan 79: qgen review (code review part 7)`: review this section of `authoring/tools/qgen.py`, fix what is cheap, log every function and finding in `## Part 7` of `code-review.md`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (564, 79, 'Review qgen health ack, rework, scan, tighten, neutralize', 'work', 'done', NULL, '2026-10-13, authoring/tools/qgen.py (mode_run, revise_steps, SCAN_CHUNK, scan id dedupe, tighten uses fixed()), code-review.md Part 7 rows; follow-up task 734', 'Task 8 of `plan 79: qgen review (code review part 7)`: review this section of `authoring/tools/qgen.py`, fix what is cheap, log every function and finding in `## Part 7` of `code-review.md`.
 
 ## First
 - Needs `code-review.md` with `## Part 7` (`plan 73: Baseline scans and report skeleton (code review part 1)`); if missing, stop and say so.
@@ -11877,7 +11877,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Shared shape with `cmd_batch`/`cmd_translate_batch` (run.json / report / "Commit exactly this" repeated per run mode): merge into one helper if output stays byte-identical, else follow-up task.
 
 ## Done when
-- Every function of the section listed in `## Part 7` with findings and status.', '2026-10-12T23:07:25Z', NULL, 519);
+- Every function of the section listed in `## Part 7` with findings and status.', '2026-10-12T23:07:25Z', '2026-10-13T12:21:20Z', 519);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (565, 79, 'Review qgen export and validate', 'work', 'open', NULL, NULL, 'Task 9 of `plan 79: qgen review (code review part 7)`: review this section of `authoring/tools/qgen.py`, fix what is cheap, log every function and finding in `## Part 7` of `code-review.md`.
 
 ## First
@@ -14241,6 +14241,16 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `main()`: exit 1 on non-limit errors.
 - Check RUNBOOK''s exit code table still fits (exit 1 = stop and report).
 - Verify with a stubbed run (no LLM calls): `qgen audit --batch <run without recorded review>` prints the reason and exits 1; a `parallel` failure is printed once.', '2026-10-13T12:17:11Z', NULL, 563);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (734, 79, 'qgen tighten/neutralize: stale-translation lines, commit list and cost estimate', 'work', 'open', NULL, NULL, 'Found by `task 564: Review qgen health ack, rework, scan, tighten, neutralize`. Output text changes, so not done in the review (plan 79 rules).
+
+## What
+- `cmd_tighten` rewrites approved questions too, which stales their translations (D-81, derived via `translations.is_stale`), but prints nothing about it; `cmd_neutralize` prints "  <locale>: N translation(s) stale from this run (D-81)". Give tighten the same lines (shared helper with neutralize).
+- `cmd_neutralize`''s "Commit exactly this" adds every existing `authoring/data/questions.<locale>.json`, although the run never writes them (staleness is derived): drop them from the `git add` list unless a step does write them (check `cmd_record`/`revise_in_pool` first).
+- `print_neutralize_scan`''s estimate: `per_q` averages whole `costs.log`s of past rework/tighten/neutralize runs, so tighten''s and neutralize''s scan costs (the whole pool / bundle) count as per-flagged cost (overestimate); the text says "past rework/tighten runs" but neutralize runs count too. Exclude the scan step''s calls if `costs.log` tells the step apart, else fix the wording.
+
+## Check
+- Throw-away script on a temp `work/` and `authoring/reports/` with stubbed `run_steps`/`claude()` (no LLM calls); `npm run check`, `npm test`, `npm run build`, `qgen validate`.
+- Log in `## Part 7` of `code-review.md` (update the task 564 rows'' status).', '2026-10-13T12:20:58Z', NULL, 564);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -15968,6 +15978,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (609, 561, '2026-10-13T12:03:19Z', '2026-10-13T12:10:29Z', 'done', NULL, 0, 'b9f312ae168e832c0b03a6d20dab57c5bdd7e3a9', 'claude-opus-5-5[1m]', '8de62665-bf46-4c51-bace-38d3764a5fbf', 25, 46, 18654, 1776730, 85836, 1.415298, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (610, 562, '2026-10-13T12:10:30Z', '2026-10-13T12:15:27Z', 'done', NULL, 0, '46b463a84118a7bf702b2e427c2590e5ce0aca35', 'claude-opus-5-5[1m]', '04480eb1-bf26-4d36-9216-6bc1013ebb48', 34, 58, 25525, 2239154, 93754, 1.7085948000000002, 662821);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (611, 563, '2026-10-13T12:15:27Z', '2026-10-13T12:18:00Z', 'done', NULL, 0, 'a3482bc61eeba6ef2bc6a6b8e0cb4affb34422a1', 'claude-opus-5-5[1m]', '9a3c773c-5798-4076-84b7-bc7bf1c0869a', 20, 34, 14148, 1147306, 74021, 1.1047252, 662821);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (612, 564, '2026-10-13T12:18:01Z', '2026-10-13T12:21:30Z', 'done', NULL, 0, '01dda886688db8e41a3d473cd31a9ea50e7d2049', 'claude-opus-5-5[1m]', '4b63edba-afd5-4036-90ec-cc284d114b17', 27, 48, 20662, 1506138, 76889, 1.3297716000000004, 662821);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

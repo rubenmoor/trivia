@@ -2806,6 +2806,15 @@ def run_number(name):
     return int(tail) if tail.isdigit() else 0
 
 
+def mode_run(mode):
+    """(run, resuming): the oldest unfinished `<mode>-<n>` run, else the next number."""
+    open_runs = sorted((p.parent.name for p in WORK.glob(f"{mode}-*/run.json") if not load_json(p).get("done")),
+                       key=run_number)
+    if open_runs:
+        return open_runs[0], True
+    return f"{mode}-{max((run_number(p.name) for p in WORK.glob(f'{mode}-*')), default=0) + 1}", False
+
+
 def is_major(a):
     return a["verdict"] == "problem" and a["severity"] == "major"
 
@@ -2889,18 +2898,14 @@ def cmd_backaudit(args):
     """`qgen audit --backlog` (plan 57): the audit of the next slice of approved questions from before D-56
     into work/backaudit-<k>/, then authoring/reports/backaudit-<k>.md. Resumes an unfinished run first.
     Never changes the pool."""
-    open_runs = sorted((p.parent.name for p in WORK.glob("backaudit-*/run.json") if not load_json(p).get("done")),
-                       key=run_number)
-    if open_runs:
-        run = open_runs[0]
+    run, resuming = mode_run("backaudit")
+    if resuming:
         ids = load_json(WORK / run / "run.json")["ids"]
         print(f"Resuming {run}: {len(ids)} question(s)" + (" (--slice ignored)" if args.slice else "") + ".", flush=True)
     else:
         ids = backlog(args.slice or BACKAUDIT_SLICE)
         if not ids:
             sys.exit("No approved question from before D-56 without an audit.")
-        numbers = [run_number(p.name) for p in WORK.glob("backaudit-*")]
-        run = f"backaudit-{max(numbers, default=0) + 1}"
         if not args.dry_run:
             save_json(WORK / run / "run.json", {"mode": "backaudit", "ids": ids,
                                                 "started": datetime.date.today().isoformat()})
@@ -3364,12 +3369,25 @@ def cmd_health_ack(args):
     print(f"  report: {health.write_batches_md().relative_to(ROOT)}")
 
 
+def revise_steps(ns, model, review_model):
+    """fix → fact check → review with a new media search → record: rework and the scan modes (QG-23)."""
+    return [
+        ("fix", cmd_fix, ns(model=model, check_model="sonnet")),
+        ("media", cmd_media, ns()),
+        ("sheets", cmd_sheets, ns()),
+        ("review 1", cmd_review, ns(model=review_model, round=1)),
+        ("research", cmd_research, ns()),
+        ("sheets", cmd_sheets, ns()),
+        ("review 2", cmd_review, ns(model=REVIEW_MODEL, round=2)),
+        ("record", cmd_record, ns()),
+    ]
+
+
 def cmd_rework(args):
     """Every needs_work question with feedback (of one batch with --batch) once more through
     fix → fact check → review with a new media search → record (QG-23). Rerunning continues."""
-    open_runs = sorted(p.parent.name for p in WORK.glob("rework-*/run.json") if not load_json(p).get("done"))
-    if open_runs:
-        run = open_runs[0]
+    run, resuming = mode_run("rework")
+    if resuming:
         ignored = [f for f, v in (("--batch", args.batch), ("--model", args.model)) if v]
         print(f"Resuming {run}" + (f" ({', '.join(ignored)} ignored)" if ignored else "") + ".", flush=True)
     else:
@@ -3377,8 +3395,6 @@ def cmd_rework(args):
                and (q.get("review") or {}).get("feedback") and (not args.batch or q.get("batch") == args.batch)]
         if not ids:
             sys.exit("No needs_work questions with feedback.")
-        numbers = [int(p.name.split("-")[1]) for p in WORK.glob("rework-*") if p.name.split("-")[1].isdigit()]
-        run = f"rework-{max(numbers, default=0) + 1}"
         save_json(WORK / run / "run.json", {"mode": "rework", "ids": ids, "batch": args.batch,
                                             "model": args.model or "opus",
                                             "started": datetime.date.today().isoformat()})
@@ -3391,14 +3407,7 @@ def cmd_rework(args):
         return argparse.Namespace(run=run, jobs=args.jobs, **kw)
 
     t0 = run_steps([
-        ("fix", cmd_fix, ns(model=model, check_model="sonnet")),
-        ("media", cmd_media, ns()),
-        ("sheets", cmd_sheets, ns()),
-        ("review 1", cmd_review, ns(model=model, round=1)),
-        ("research", cmd_research, ns()),
-        ("sheets", cmd_sheets, ns()),
-        ("review 2", cmd_review, ns(model=REVIEW_MODEL, round=2)),
-        ("record", cmd_record, ns()),
+        *revise_steps(ns, model, model),
         ("export", lambda a: cmd_export(a) or [], ns()),
         ("sync", cmd_sync_run, ns()),
     ], "qgen rework")
@@ -3414,6 +3423,7 @@ def cmd_rework(args):
 
 SCAN_SCHEMA = {"type": "object", "required": ["flagged"], "properties": {"flagged": {"type": "array", "items": {
     "type": "object", "required": ["id", "issue"], "properties": {"id": STR, "issue": STR}}}}}
+SCAN_CHUNK = 50
 NEUTRAL_FIELDS = ["description", "question", "answer", "wrong_answers", "hints", "fun_fact"]
 SCANS = {  # run mode: scan prompt, questions read, their input, the reviser's issue prefix (QG-24, plan 64)
     "tighten": {"prompt": "tighten", "bundle": None, "issue": "too long", "schema": SCAN_SCHEMA,
@@ -3427,7 +3437,7 @@ SCANS = {  # run mode: scan prompt, questions read, their input, the reviser's i
 
 
 def cmd_scan(args):
-    """Claude reads every approved and needs_work question of the run's scope in chunks of 50 and flags
+    """Claude reads every approved and needs_work question of the run's scope in chunks of SCAN_CHUNK and flags
     those its mode's prompt asks for (SCANS); run.json gets their ids and issues."""
     d = run_dir(args)
     cfg = load_json(d / "run.json", {})
@@ -3436,7 +3446,7 @@ def cmd_scan(args):
     scan, only = SCANS[cfg["mode"]], set(cfg.get("only") or [])
     qs = [q for q in load_json(POOL)["questions"] if q["status"] in ("approved", "needs_work")
           and (not scan["bundle"] or (q.get("bundle") or "base") == scan["bundle"]) and (not only or q["id"] in only)]
-    groups = [g for g in chunks(qs, 50) if not (d / "scan" / f"{g[0]['id']}.json").exists()]
+    groups = [g for g in chunks(qs, SCAN_CHUNK) if not (d / "scan" / f"{g[0]['id']}.json").exists()]
     system = prompt("house-style", scan["prompt"])
 
     def work(group):
@@ -3450,23 +3460,19 @@ def cmd_scan(args):
 
     errors = parallel(work, groups, args.jobs, "scan", "calls")
     if not errors:
-        flagged = [f for p in sorted((d / "scan").glob("*.json")) for f in load_json(p)]
-        save_json(d / "run.json", {**cfg, "ids": [f["id"] for f in flagged], "scanned": len(qs),
-                                   "issues": {f["id"]: f["issue"] for f in flagged}})
-        print(f"  {len(flagged)} of {len(qs)} questions flagged", flush=True)
+        issues = {f["id"]: f["issue"] for p in sorted((d / "scan").glob("*.json")) for f in load_json(p)}
+        save_json(d / "run.json", {**cfg, "ids": list(issues), "scanned": len(qs), "issues": issues})
+        print(f"  {len(issues)} of {len(qs)} questions flagged", flush=True)
     return errors
 
 
 def cmd_tighten(args):
     """Find long-winded questions in the whole pool, approved ones included, then shorten, fact-check,
     review and record them like `qgen rework` (QG-24). Kept and dropped ones stay as they were."""
-    open_runs = sorted(p.parent.name for p in WORK.glob("tighten-*/run.json") if not load_json(p).get("done"))
-    if open_runs:
-        run = open_runs[0]
+    run, resuming = mode_run("tighten")
+    if resuming:
         print(f"Resuming {run}.", flush=True)
     else:
-        numbers = [int(p.name.split("-")[1]) for p in WORK.glob("tighten-*") if p.name.split("-")[1].isdigit()]
-        run = f"tighten-{max(numbers, default=0) + 1}"
         save_json(WORK / run / "run.json", {"mode": "tighten", "started": datetime.date.today().isoformat()})
         print(f"Starting {run}: reading the whole pool.", flush=True)
     d = WORK / run
@@ -3477,22 +3483,14 @@ def cmd_tighten(args):
 
     t0 = run_steps([
         ("scan", cmd_scan, ns(model="opus")),
-        ("fix", cmd_fix, ns(model="opus", check_model="sonnet")),
-        ("media", cmd_media, ns()),
-        ("sheets", cmd_sheets, ns()),
-        ("review 1", cmd_review, ns(model=REVIEW_MODEL, round=1)),
-        ("research", cmd_research, ns()),
-        ("sheets", cmd_sheets, ns()),
-        ("review 2", cmd_review, ns(model=REVIEW_MODEL, round=2)),
-        ("record", cmd_record, ns()),
+        *revise_steps(ns, "opus", REVIEW_MODEL),
         ("export", lambda a: cmd_export(a) or [], ns()),
         ("sync", cmd_sync_run, ns()),
     ], "qgen tighten")
     cfg = load_json(d / "run.json")
     save_json(d / "run.json", {**cfg, "done": datetime.date.today().isoformat()})
-    fixes = {p.stem: (load_json(p).get("fix") or {}).get("action") for p in (d / "reviews").glob("*.json")}
+    revised = [p.stem for p in (d / "reviews").glob("*.json") if fixed(load_json(p))]
     by_id = {q["id"]: q for q in load_json(POOL)["questions"]}
-    revised = [i for i, a in fixes.items() if a == "revise"]
     n_ok = sum(by_id[i]["status"] == "approved" for i in revised if i in by_id)
     print(f"\nDone: {run}: {len(cfg.get('ids', []))} flagged, {len(revised)} shortened, {n_ok} of those approved, "
           f"{len(revised) - n_ok} need work (took {progress.duration(time.monotonic() - t0)}).")
@@ -3504,13 +3502,10 @@ def cmd_neutralize(args):
     """Rewrite Colombian and other national wording in `base` into neutral Spanish (plan 64, D-78):
     scan → fix → review → record → audit → export, like `qgen tighten`. --dry-run: the scan only, then
     the flagged ids and a cost estimate; the next run continues from that scan."""
-    open_runs = sorted((p.parent.name for p in WORK.glob("neutralize-*/run.json") if not load_json(p).get("done")),
-                       key=run_number)
-    if open_runs:
-        run = open_runs[0]
+    run, resuming = mode_run("neutralize")
+    if resuming:
         print(f"Resuming {run}" + (" (--ids ignored)" if args.ids else "") + ".", flush=True)
     else:
-        run = f"neutralize-{max((run_number(p.name) for p in WORK.glob('neutralize-*')), default=0) + 1}"
         only = [i.strip() for i in (args.ids or "").split(",") if i.strip()]
         save_json(WORK / run / "run.json", {"mode": "neutralize", "started": datetime.date.today().isoformat(),
                                             **({"only": only} if only else {})})
@@ -3529,14 +3524,7 @@ def cmd_neutralize(args):
         return []
     if cfg["ids"]:
         run_steps([
-            ("fix", cmd_fix, ns(model="opus", check_model="sonnet")),
-            ("media", cmd_media, ns()),
-            ("sheets", cmd_sheets, ns()),
-            ("review 1", cmd_review, ns(model=REVIEW_MODEL, round=1)),
-            ("research", cmd_research, ns()),
-            ("sheets", cmd_sheets, ns()),
-            ("review 2", cmd_review, ns(model=REVIEW_MODEL, round=2)),
-            ("record", cmd_record, ns()),
+            *revise_steps(ns, "opus", REVIEW_MODEL),
             ("audit", lambda a: cmd_audit(a) if load_json(d / "recorded.json") else [], ns(model="opus", batch=run)),
             ("export", lambda a: cmd_export(a) or [], ns()),
             ("sync", cmd_sync_run, ns()),
