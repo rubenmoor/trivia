@@ -9,7 +9,7 @@ const SEEDS = 50;
 const json = data("pool.json");
 const BUNDLE_SETS = [["base"], ["base", "colombia"]];
 
-for (const group of json === undefined ? [] : realAgeGroups()) {
+for (const group of realAgeGroups()) {
   for (const set of BUNDLE_SETS) {
     test(`12-level walk on the real pool, ${group.id} × {${set}}: 4 cards per level, lowest seen count first`, () => {
       const pool = parsePool(json);
@@ -59,5 +59,3 @@ for (const group of json === undefined ? [] : realAgeGroups()) {
     });
   }
 }
-
-if (json === undefined) test("12-level walks on the real pool", { skip: "app/data/pool.json absent (qgen export)" }, () => {});

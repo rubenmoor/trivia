@@ -7,7 +7,7 @@ export interface TapeEntry {
   perm: number[];
 }
 
-export interface TapeRng extends Rng {
+interface TapeRng extends Rng {
   done(): void;
 }
 

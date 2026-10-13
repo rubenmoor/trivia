@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { parseSave, setFlag } from "./save.ts";
 import { emptySave, SAVE_VERSION, SPANISH, type SaveData } from "./state.ts";
 import { fixture } from "./test/fixtures.ts";
-import { MemoryStore, snapshot, upgradeDb } from "./test/save.ts";
+import { snapshot, upgradeDb } from "./test/save.ts";
 
 const { steps } = fixture("game/abandon.json") as { steps: { db?: Parameters<typeof upgradeDb>[0] }[] };
 const v2 = steps.findLast((s) => s.db)!.db!;
@@ -83,16 +83,4 @@ test("setFlag keeps the first flagged_on, edits the note, unflag removes it, inp
   assert.deepEqual(full, before);
   assert.throws(() => setFlag(full, "", { player: null }, "2026-10-02T20:00:00"));
   assert.throws(() => setFlag(full, "q3", { player: null, note: "x".repeat(501) }, "2026-10-02T20:00:00"));
-});
-
-test("MemoryStore round trip and isolation", async () => {
-  assert.deepEqual(await new MemoryStore().load(), emptySave());
-  const doc = structuredClone(full);
-  const store = new MemoryStore();
-  await store.save(doc);
-  doc.players.push({ id: 99, name: "X", created_on: "2026-10-01T20:00:00" });
-  const out = await store.load();
-  assert.deepEqual(out, full);
-  out.flags = {};
-  assert.deepEqual(await store.load(), full);
 });

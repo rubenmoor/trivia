@@ -1,4 +1,4 @@
-// Where the save lives (plan 49, PORT-4). ServerStore, FileStore: lib/store.ts; MemoryStore: test/save.ts.
+// Where the save lives (plan 49, PORT-4). ServerStore, FileStore: lib/store.ts.
 import type { SaveData } from "./state.ts";
 
 export interface Store {

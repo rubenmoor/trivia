@@ -12,7 +12,7 @@ interface Case {
   fn: "in_range" | "assign" | "supply" | "draw";
   args: Record<string, any>;
   tape: TapeEntry[];
-  result: any;
+  result: unknown;
 }
 
 const pools: Record<string, PoolQuestion[]> = {

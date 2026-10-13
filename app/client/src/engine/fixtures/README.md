@@ -8,7 +8,7 @@ The referee and the recorder are gone; the fixtures stay as they are and `npm te
 - To re-record: check out that commit, run `python3 authoring/tools/record_fixtures.py` (`--check`: diff only), copy the fixtures back
 
 ## Files
-Fixtures are self-contained: synthetic categories and pools, never the real `app/data/`.
+Synthetic categories and pools, never the real pool; the replays take bundles and age groups from the real `app/data/` (`young_teens` = D-22, pinned in `pool.test.ts`).
 - `categories.json`: `categories.load()` output (with `bundle`); 2 bundles (`base`, `colombia`), 3 broad categories, 6 subcategories
 - `pools/main.json`, `pools/tight.json`: `{"questions": [...]}`, `pool.json` entries
   - `main`: several games per player, with jokers
@@ -37,7 +37,7 @@ One step = one HTTP request, recorded as `main.py` answers it.
   - an error leaves it unchanged (rollback); the engine must do the same
   - `soak-<n>`: only on every 10th and the last step (size)
 - IDs: SQLite gives max+1 after a delete; the `players` scenario pins it
-- Save v3 (plan 65): the engine stores `seen` rows and `blocked`, the recordings `burned`; `test/save.ts` compares on v3
+- Save v3+ (plan 65): the engine stores `seen` rows and `blocked`, the recordings `burned`; `test/save.ts` compares those tables
   - `upgradeDb`: the recorded `db` through `parseSave`'s v2 → v3 upgrade; history outcome `admin_burn` → `admin_block`
   - `withoutOrphans`: GF-7 now keeps the player's seen rows (`game_id` 0), Python deleted the burns; compared without them
 - Selection by seen count (plan 65): Python excluded burned questions, the engine offers them again, lowest count first; the recorder stays frozen (plan 51)
@@ -62,13 +62,14 @@ All referee randomness is `random.shuffle`; the recorder replaces it and logs ev
   - a missing entry (more shuffles than recorded) or a leftover one (fewer)
 - So shuffles must happen at the same points, in the same order, on arrays of the same length
   - including those inside `view` → `jokers_view` → `trial`: hint, skip, easier, snipe, skip+purge, then Cambiazo's `replacement` per subcategory in `categories.load()` order
-- Production `rng.ts`: any seedable PRNG (e.g. mulberry32 + Fisher–Yates)
+- Production `rng.ts`: mulberry32 + Fisher–Yates
 
 ## Scenarios
 Scripted ones pin one rule each; soak walks catch paths they miss.
 - `win`, `lose-undo`, `hint`, `skip-purge`, `easier`, `category`, `snipe`, `budget`: rules and jokers; every joker has an available and an unavailable case
 - `admin-skip`, `players`, `abandon`, `supply`, `errors`: players, admin skip, supply failures, errors
 - `soak-1` … `soak-10`: seeded random walks of legal actions, 30–40 steps (choices from `random.Random("soak-<n>")`, not the tape); `soak-10` on `tight`
+- Not covered: the configure settings and gamemaster cheats (D-88), newer than the recordings: task 723
 
 ## Notes for the port (parts 2/3)
 - Python `sort` and JS `Array.prototype.sort` are both stable; keep the same sort keys (booleans: False < True)
