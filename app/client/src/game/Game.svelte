@@ -747,7 +747,8 @@
       canSkip={screen === "question" && !questionBusy()}
       canTable={running && (game?.phase === "select" || (screen === "question" && game?.settings.cards === 0 && !questionBusy()))}
       canUndo={!!game?.can_undo && !questionBusy()}
-      canRestart={running || screen !== "start"}
+      canRestart={(running || screen !== "start") && !questionBusy()}
+      canBudget={!questionBusy()}
       onflags={openFlagList}
       onclose={closeOverlay}
       onskip={() => skip(false)}

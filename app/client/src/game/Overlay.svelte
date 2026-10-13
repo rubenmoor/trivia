@@ -11,6 +11,7 @@
   import { pushScope, type Action } from "../lib/input.svelte";
   import Credits from "./Credits.svelte";
   import GameSettings from "./GameSettings.svelte";
+  import { levelsOf } from "./levels";
   import Prompt from "./Prompt.svelte";
   import type { Game, GameMode, JokerBudget, JokerName, Language, Supply } from "../lib/types";
   import { TOKENS } from "./JokerTray.svelte";
@@ -68,6 +69,7 @@
     canTable,
     canUndo,
     canRestart,
+    canBudget,
     onclose,
     onskip,
     onskipall,
@@ -92,6 +94,8 @@
     canTable: boolean;
     canUndo: boolean;
     canRestart: boolean;
+    /** Off while the question's answer or a joker is out: its callback would bring back the old budget. */
+    canBudget: boolean;
     onclose: () => void;
     onskip: () => void;
     /** «Bloquear pregunta»: a broken or wrong question, never offered again (plan 65). */
@@ -130,7 +134,7 @@
   $effect(() => {
     target = game?.level ?? 1;
   });
-  const levels = $derived(game?.settings.levels ?? 12);
+  const levels = $derived(levelsOf(game));
 
   /** Uses so far per joker (MD-12: the rows edit uses left; limit = used + left). */
   let used = $state<Record<JokerName, number> | null>(null);
@@ -148,7 +152,7 @@
   const current = $derived(budget && (pending ?? budget));
 
   function setBudget(change: Partial<JokerBudget>) {
-    if (!current) return;
+    if (!current || !canBudget) return;
     pending = { ...current, ...change };
     onbudget(change);
   }
@@ -191,7 +195,7 @@
       const supply = l.questions.length > 1 ? await localeSupply() : {};
       langs = { ...l, supply };
       shown = l.language;
-    })().catch(() => {});
+    })().catch((e) => console.warn("language rows", e));
   });
   const langKinds = $derived(langs ? (["ui", "questions"] as const).filter((k) => langs![k].length > 1) : []);
 
@@ -271,8 +275,8 @@
       : []),
     ...(cheats && budget
       ? [
-          { label: t("overlay.jokers"), enabled: true, run: cyclePreset, preset: true, col: 2 as const },
-          ...TOKENS.map((t) => ({ label: t.label, enabled: !!used, run: () => {}, joker: t.name, col: 2 as const })),
+          { label: t("overlay.jokers"), enabled: canBudget, run: cyclePreset, preset: true, col: 2 as const },
+          ...TOKENS.map((t) => ({ label: t.label, enabled: !!used && canBudget, run: () => {}, joker: t.name, col: 2 as const })),
         ]
       : []),
   ]);
@@ -294,10 +298,10 @@
   /** ←/→ on an item without a value: the enabled item at about the same height in the next column. */
   function across(by: number): boolean {
     const here = items[selected];
-    const cols = [...new Set(items.map((x) => x.col))].sort();
+    const cols = [...new Set(items.map((x) => x.col))].sort((a, b) => a - b);
     const to = cols[cols.indexOf(here.col) + by];
     if (to === undefined) return false;
-    const y = (i: number) => document.querySelector(`[data-item="${i}"]`)?.getBoundingClientRect().top ?? 0;
+    const y = (i: number) => menu?.querySelector(`[data-item="${i}"]`)?.getBoundingClientRect().top ?? 0;
     const from = y(selected);
     const list = items.flatMap((x, i) => (x.col === to && x.enabled ? [i] : []));
     if (!list.length) return false;
@@ -323,8 +327,11 @@
     else if (by) across(by);
     else if (a.type === "confirm") activate(selected);
     else if (a.type === "menu") onclose();
-    else if (a.type === "back" && a.device === "gamepad") confirming === null ? onclose() : (confirming = null); // B leaves
-    else return false;
+    else if (a.type === "back" && a.device === "gamepad") {
+      // B leaves
+      if (confirming === null) onclose();
+      else confirming = null;
+    } else return false;
     return true;
   }
 
