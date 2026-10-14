@@ -259,13 +259,13 @@ Modders publish a mod folder as a Workshop item with the game itself (pm plan 11
 - `trivia-steam` is for our own builds only, never for mods.
 
 ## Telemetry store
-Opt-in telemetry's shell side (pm plan 106, decisions 119, 121): consent, install id and one session buffer per run, per install, never in the Steam Cloud save; no network here (plan 107 sends).
+Opt-in telemetry's shell side (pm plan 106, decisions 119, 121): consent, install id and one session buffer per run, per install, never in the Steam Cloud save; sent by main ("Telemetry send").
 - Code: `app/desktop/telemetry.mjs` (`makeTelemetry(dir, { version })`; pure `node:fs`), wiring in `main.mjs`.
 - Folder: `TRIVIA_TELEMETRY_DIR`, packaged `<userData>/telemetry` (sibling of `save/`, outside Auto-Cloud), dev `state/telemetry/`.
 - `install.json`: `{"consent": true, "install": "<uuid v4>"}`, `{"consent": false}`, missing = never asked.
 - `sessions/<session>.json`: plan 105's body minus `ticket`, plus `index` (page bookkeeping); `length_s` stamped per write and in `before-quit`; atomic, own queue, `before-quit` waits for it.
 - Rollover past 30 games, 500 answers or 60 KiB: new session file, sealed games dropped from later records this run; ≤ 100 answers per game; ≤ 5 `*.json` files, oldest by mtime deleted.
-- `pending()` export: earlier runs' files for plan 107, no IPC.
+- `pending()` export: earlier runs' files (incl. `.retry.json`), no IPC; `close()`, `outgoing()`, `settle()`: the send's file side.
 - Only with a valid user (decision 111); without one every call is a no-op and nothing is created. Logs error codes only, never ids or bodies.
 - IPC (`handle()`, sender origin `app://trivia/`), bridge `telemetry` in `preload.cjs`, typed optional `telemetry: TelemetryBridge` in `app/client/src/lib/desktop.ts`:
   - `telemetry:state` → `{ available, consent }` (`{ false, null }` without a valid user).
@@ -273,9 +273,21 @@ Opt-in telemetry's shell side (pm plan 106, decisions 119, 121): consent, instal
   - `telemetry:load` → current session's `{ games, index }` or null.
   - `telemetry:record({ games, index })`: parallel arrays, plain objects, ≤ 200 games, ≤ 1 MiB, else rejects `bad_telemetry`; ignored without a yes.
 
+## Telemetry send
+Main posts each session file to plan 105's `POST /telemetry` (pm plan 107, decision 120: Telemetry send: at quit, one later try at the next start); silent, nothing to the page, no IPC. The page's request block stays.
+- Code: `flush`, `sendLeftovers`, `sendSession`, `withTicket` in `main.mjs`; `postJson`, `TELEMETRY_IDENTITY` in `report.mjs`.
+- Gate per send: valid user, `install.json` yes, URL set; closed → no ticket, no request; one start line `trivia: telemetry off` if closed at start.
+- URL: the reports' base (`reportUrl`, dev `TRIVIA_REPORT_URL`) + `/telemetry`.
+- Ticket: fresh per request, `getAuthTicketForWebApi({ genericString: "trivia-telemetry" })` (= server `TELEMETRY_IDENTITY`), cancelled after; no callback in 2 s → status 0 (reports too).
+- Body: session file minus `index`, `install` from `install.json`, `ticket`; > 64 KiB → deleted unsent; unreadable → deleted.
+- Quit: `before-quit` → window hidden, save queue + last stamp, this run's file sent; 4 s for ticket + request, then quit anyway. `SIGTERM` reaches `before-quit` on its own (checked on Linux).
+- Answers: `201`, `200` (duplicate), `400`, `413`, `415`, `503` → deleted; `401`, `429`, `500`, `502`, status 0 → `<session>.retry.json`.
+- Next start: 30 s after the page loads, every `pending()` file, oldest first, one at a time, 5 s/10 s timeouts; deleted after this try whatever the answer.
+- stderr: `trivia: telemetry → <status> kept|dropped`; never body, ticket, ids or URL.
+
 ## Question reports
 The shell's half of question reports (pm plan 93, decision 93, decision 111): main posts one report to plan 103's `POST /reports` per player click; the page passes fields, never a URL, and never sees the ticket. The page's request block stays.
-- Code: `app/desktop/report.mjs` (`reportTarget`, `reportFields`, `postReport`, `IDENTITY`; pure Node `http`/`https`, no Electron), `sendReport` in `main.mjs`.
+- Code: `app/desktop/report.mjs` (`reportTarget`, `reportFields`, `postReport`, `IDENTITY`; pure Node `http`/`https`, no Electron), `sendReport` + `withTicket` (shared with telemetry) in `main.mjs`.
 - URL: `reportUrl` beside `version` in `app/desktop/package.json` (base URL, `/reports` appended); empty = no send, copy only. Dev override `TRIVIA_REPORT_URL` only with `TRIVIA_DEV_STEAM_USER=1`, then `dev-<random>` tickets (plan 103's dev check); dev switch without a SteamID: dev tickets too.
 - Ticket: fresh per send, `getAuthTicketForWebApi({ genericString: "trivia-reports" })` (= server `TICKET_IDENTITY`), cancelled after the response; never logged.
 - Timeouts: 5 s connect, 10 s total; no retry, no request at start, no health check.

@@ -1,24 +1,27 @@
-// Question reports (plan 93, decision 93): one POST to plan 103's `/reports` on the player's click; pure Node, no Electron.
+// Report server client (plans 93, 107): `/reports` on the player's click, `/telemetry` at quit and next start; pure Node, no Electron.
 import { randomBytes } from "node:crypto";
 import http from "node:http";
 import https from "node:https";
 
 /** Plan 103's ticket identity; the server's `TICKET_IDENTITY`. */
 export const IDENTITY = "trivia-reports";
+/** Plan 105's; the server's `TELEMETRY_IDENTITY`. */
+export const TELEMETRY_IDENTITY = "trivia-telemetry";
 
 const CONNECT_MS = 5000;
 const TOTAL_MS = 10000;
 const MAX_BODY = 16 * 1024;
+export const MAX_TELEMETRY_BODY = 64 * 1024;
 const MAX_RESPONSE = 64 * 1024;
 
-/** `{ url, dev }`: `TRIVIA_REPORT_URL` only with the dev switch (then dev tickets), else `configured`; null when empty or not http(s). */
-export function reportTarget(configured, env) {
+/** `{ url, dev }`: `<base>/<route>`; base `TRIVIA_REPORT_URL` only with the dev switch (then dev tickets), else `configured`; null when empty or not http(s). */
+export function reportTarget(configured, env, route = "reports") {
   const dev = env.TRIVIA_DEV_STEAM_USER === "1" && !!env.TRIVIA_REPORT_URL;
   const raw = dev ? env.TRIVIA_REPORT_URL : configured;
   if (typeof raw !== "string" || !raw) return null;
   let url;
   try {
-    url = new URL("reports", raw.endsWith("/") ? raw : `${raw}/`);
+    url = new URL(route, raw.endsWith("/") ? raw : `${raw}/`);
   } catch {
     return null;
   }
@@ -55,9 +58,15 @@ export function reportFields(arg) {
 }
 
 /** POST `{ ...fields, ticket }`; `{ ok, id }` or `{ ok: false, status, error, retryAfter? }`, `status: 0` without a response. No retry. */
-export function postReport(url, fields, ticket, { connectMs = CONNECT_MS, totalMs = TOTAL_MS } = {}) {
-  const body = Buffer.from(JSON.stringify({ ...fields, ticket }), "utf8");
-  if (body.length > MAX_BODY) return Promise.resolve({ ok: false, status: 0, error: "too_large" });
+export async function postReport(url, fields, ticket, opts) {
+  const r = await postJson(url, { ...fields, ticket }, { maxBody: MAX_BODY, ...opts });
+  return r.res ? result(r.res, r.text) : r;
+}
+
+/** One JSON POST: `{ res, text }`, or `{ ok: false, status: 0, error }` without a response (`too_large`: not sent). */
+export function postJson(url, payload, { maxBody, connectMs = CONNECT_MS, totalMs = TOTAL_MS }) {
+  const body = Buffer.from(JSON.stringify(payload), "utf8");
+  if (body.length > maxBody) return Promise.resolve({ ok: false, status: 0, error: "too_large" });
   const mod = url.protocol === "https:" ? https : http;
   return new Promise((resolve) => {
     let done = false;
@@ -88,7 +97,7 @@ export function postReport(url, fields, ticket, { connectMs = CONNECT_MS, totalM
         if (size <= MAX_RESPONSE) chunks.push(chunk);
       });
       res.on("error", () => finish({ ok: false, status: res.statusCode ?? 0, error: "no_connection" }));
-      res.on("end", () => finish(result(res, Buffer.concat(chunks).toString("utf8"))));
+      res.on("end", () => finish({ res, text: Buffer.concat(chunks).toString("utf8") }));
     });
     req.end(body);
   });

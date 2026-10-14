@@ -1,4 +1,4 @@
-// Opt-in telemetry store (plan 106, decisions 119, 121): consent + install id, one session file per run; no network.
+// Opt-in telemetry store (plan 106, decisions 119, 121): consent + install id, one session file per run; the send's file side (plan 107, decision 120); no network.
 import { randomUUID } from "node:crypto";
 import fs from "node:fs/promises";
 import path from "node:path";
@@ -11,6 +11,8 @@ const MAX_GAME_ANSWERS = 100;
 const MAX_BYTES = 60 * 1024;
 const MAX_FILES = 5;
 const MAX_LENGTH_S = 86400;
+// Plan 105's answers worth the one later try; status 0: no answer.
+const RETRY = new Set([0, 401, 429, 500, 502]);
 
 async function atomicWrite(file, text) {
   const tmp = `${file}.tmp`;
@@ -177,5 +179,36 @@ export function makeTelemetry(dir, { version, uptime = () => process.uptime() })
     return out;
   }
 
-  return { dir, start, state, setConsent, load, record, finish, pending };
+  /** Plan 107's gate, file side: a stored yes. */
+  const consented = () => consent === true && install !== null;
+
+  /** At quit: last stamp, then this run's file leaves the store (later records are dropped); its path or null. */
+  const close = () =>
+    queued(async () => {
+      if (!current) return null;
+      await writeCurrent();
+      const file = path.join(sessions, `${current.session}.json`);
+      current = null;
+      return file;
+    });
+
+  /** Request body without the ticket: `index` dropped, `install` the current one; null when unreadable. */
+  async function outgoing(file) {
+    try {
+      const { index: _, ...doc } = JSON.parse(await fs.readFile(file, "utf8"));
+      return { ...doc, install };
+    } catch {
+      return null;
+    }
+  }
+
+  /** After a try: kept as `<session>.retry.json` on a retryable answer to a first try, else deleted. */
+  async function settle(file, status, final) {
+    const retry = !final && RETRY.has(status);
+    if (retry) await fs.rename(file, file.replace(/\.json$/, ".retry.json")).catch(() => {});
+    else await fs.rm(file, { force: true });
+    return retry;
+  }
+
+  return { dir, start, state, setConsent, load, record, finish, pending, consented, close, outgoing, settle };
 }

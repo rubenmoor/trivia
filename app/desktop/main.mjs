@@ -7,7 +7,16 @@ import { fileURLToPath } from "node:url";
 import { arrange, discover, ID as MOD_ID, modsScript, readSettings, writeSettings } from "./mods.mjs";
 import { muteReason } from "./mute.mjs";
 import { describe, itemUrl, preparePublish, publish, VISIBILITY } from "./publish.mjs";
-import { devTicket, IDENTITY, postReport, reportFields, reportTarget } from "./report.mjs";
+import {
+  devTicket,
+  IDENTITY,
+  MAX_TELEMETRY_BODY,
+  postJson,
+  postReport,
+  reportFields,
+  reportTarget,
+  TELEMETRY_IDENTITY,
+} from "./report.mjs";
 import { makeResolver } from "./resolve.mjs";
 import { makeSaveFile } from "./save.mjs";
 import { makeTelemetry } from "./telemetry.mjs";
@@ -131,7 +140,8 @@ let overlay = false; // Windows only: the native window Steam's overlay draws in
 let activeDirs = new Set(); // this run's overlay layers (plan 112): fixed until restart
 let saveFile = null; // set in start(), after Steam; stays null without a valid user
 let telemetry = null; // likewise (decision 111)
-let telemetryStamped = false;
+let flushing = null; // the quit's save + telemetry flush (plan 107)
+let flushed = false;
 let writing = Promise.resolve();
 let pending = 0;
 
@@ -170,11 +180,14 @@ if (args.error) {
   });
   app.on("window-all-closed", () => app.quit());
   app.on("before-quit", (event) => {
-    const stamp = telemetry && !telemetryStamped;
-    if (!pending && !stamp) return;
+    if (flushed || (!pending && !telemetry)) return;
     event.preventDefault();
-    telemetryStamped = true;
-    Promise.all([writing, stamp && telemetry.finish().catch(telemetryError)]).then(() => app.quit());
+    flushing ??= flush()
+      .catch(telemetryError)
+      .finally(() => {
+        flushed = true;
+        app.quit();
+      });
   });
   app.on("will-quit", stopSteam);
   app.whenReady()
@@ -356,6 +369,7 @@ async function start() {
     telemetry = makeTelemetry(telemetryDir(), { version: app.getVersion() });
     await telemetry.start().catch(telemetryError);
   } else console.error("trivia: no Steam user, progress not saved");
+  if (!telemetryOn()) console.error("trivia: telemetry off");
   if (args.importSave) {
     if (!saveFile) {
       console.error("trivia: --import-save needs a Steam user (or TRIVIA_DEV_STEAM_USER=1)");
@@ -404,6 +418,7 @@ async function start() {
     },
   });
   win.once("ready-to-show", () => win.show());
+  if (telemetry) win.webContents.once("did-finish-load", () => setTimeout(sendLeftovers, LEFTOVERS_MS));
   // After the load: a frame subscription made before it gets no frames.
   if (steam && process.platform === "win32")
     win.webContents.once("did-finish-load", () => {
@@ -548,14 +563,22 @@ function telemetryArg(arg) {
   return { games: arg.games, index: arg.index };
 }
 
-/** Plan 93: `reportUrl` beside `version` in package.json, or the dev override; null = copy only. */
-function reportConfig() {
-  let configured = "";
+/** Plans 93, 107: the server's base URL, `reportUrl` beside `version` in package.json; read once. */
+let configuredUrl;
+function serverBase() {
+  if (configuredUrl !== undefined) return configuredUrl;
+  configuredUrl = "";
   try {
-    configured = JSON.parse(readFileSync(path.join(app.getAppPath(), "package.json"), "utf8")).reportUrl ?? "";
+    configuredUrl = JSON.parse(readFileSync(path.join(app.getAppPath(), "package.json"), "utf8")).reportUrl ?? "";
   } catch (err) {
     console.error(`trivia: report: package.json: ${err.message}`);
   }
+  return configuredUrl;
+}
+
+/** `<base>/reports`, or the dev override; null = copy only. */
+function reportConfig() {
+  const configured = serverBase();
   const target = reportTarget(configured, process.env);
   if (configured && !target) console.error("trivia: report: reportUrl is not an http(s) URL");
   if (target?.dev) console.error(`trivia: report: dev URL ${target.url.href} (TRIVIA_REPORT_URL)`);
@@ -580,24 +603,100 @@ async function sendReport(arg) {
   }
   if (!reportAvailable()) return { ok: false, status: 0, error: "unavailable" };
   const { url, dev } = reportTargetCache;
-  let ticket = null;
-  if (dev || !hasSteamId()) ticket = { ticketHex: devTicket(), authTicket: null };
-  else {
-    const t = await steam.user.getAuthTicketForWebApi({ genericString: IDENTITY }).catch(() => null);
-    if (t?.success && t.ticketHex) ticket = t;
-    else if (t?.authTicket) steam?.user.cancelAuthTicket(t.authTicket);
-  }
-  if (!ticket) {
+  const r = await withTicket(IDENTITY, dev, (ticket) => postReport(url, fields, ticket));
+  if (!r) {
     console.error("trivia: report: no Steam ticket");
     return { ok: false, status: 0, error: "no_ticket" };
   }
+  console.error(`trivia: report: ${r.ok ? "sent" : `failed ${r.status} ${r.error}`}`);
+  return r;
+}
+
+const TICKET_MS = 2000;
+
+/** `fn(ticketHex)` with a fresh ticket for `identity` (dev: `dev-<random>`), cancelled after; null without a ticket in 2 s. */
+async function withTicket(identity, dev, fn) {
+  let ticket = null;
+  if (dev || !hasSteamId()) ticket = { ticketHex: devTicket(), authTicket: null };
+  else {
+    const t = await steamTicket(identity);
+    if (t?.success && t.ticketHex) ticket = t;
+    else if (t?.authTicket) steam?.user.cancelAuthTicket(t.authTicket);
+  }
+  if (!ticket) return null;
   try {
-    const r = await postReport(url, fields, ticket.ticketHex);
-    console.error(`trivia: report: ${r.ok ? "sent" : `failed ${r.status} ${r.error}`}`);
-    return r;
+    return await fn(ticket.ticketHex);
   } finally {
     if (ticket.authTicket) steam?.user.cancelAuthTicket(ticket.authTicket);
   }
+}
+
+/** The binding's callback, or null after `TICKET_MS`; a late ticket is cancelled. */
+function steamTicket(identity) {
+  const p = steam.user.getAuthTicketForWebApi({ genericString: identity }).catch(() => null);
+  return new Promise((resolve) => {
+    const timer = setTimeout(() => {
+      resolve(null);
+      p.then((t) => t?.authTicket && steam?.user.cancelAuthTicket(t.authTicket));
+    }, TICKET_MS);
+    p.then((t) => {
+      clearTimeout(timer);
+      resolve(t);
+    });
+  });
+}
+
+// Plan 107, decision 120: one send at quit, one later try at the next start.
+const QUIT_BUDGET_MS = 4000;
+const LEFTOVERS_MS = 30000;
+
+let telemetryTargetCache;
+/** Gate: valid user, a stored yes, a server URL. */
+function telemetryOn() {
+  if (!validUser || !telemetry?.consented()) return false;
+  telemetryTargetCache ??= reportTarget(serverBase(), process.env, "telemetry");
+  return telemetryTargetCache !== null;
+}
+
+/** Save queue, the last stamp, then this run's session: one try within `QUIT_BUDGET_MS`, window hidden. */
+async function flush() {
+  if (!telemetry) return void (await writing);
+  const on = telemetryOn();
+  if (on) win?.hide();
+  const [, file] = await Promise.all([writing, on ? telemetry.close() : telemetry.finish()]);
+  if (file) await sendSession(file, false, Date.now() + QUIT_BUDGET_MS);
+}
+
+/** Once per run: files left by earlier runs, oldest first, each deleted after this try. */
+async function sendLeftovers() {
+  try {
+    for (const { file } of await telemetry.pending()) {
+      if (flushing || !telemetryOn()) return;
+      await sendSession(file, true);
+    }
+  } catch (err) {
+    telemetryError(err);
+  }
+}
+
+/** One POST of a session file; silent but one dev line, never ids, ticket or body. */
+async function sendSession(file, final, deadline) {
+  const body = await telemetry.outgoing(file);
+  if (!body) {
+    await telemetry.settle(file, 0, true);
+    console.error("trivia: telemetry: unreadable session dropped");
+    return;
+  }
+  const { url, dev } = telemetryTargetCache;
+  const r = await withTicket(TELEMETRY_IDENTITY, dev, (ticket) => {
+    const left = deadline && Math.max(1, deadline - Date.now());
+    const timeouts = left ? { connectMs: Math.min(left, 5000), totalMs: left } : {};
+    return postJson(url, { ...body, ticket }, { maxBody: MAX_TELEMETRY_BODY, ...timeouts });
+  });
+  const tooLarge = r?.error === "too_large";
+  const status = r?.res?.statusCode ?? 0;
+  const kept = await telemetry.settle(file, status, final || tooLarge);
+  console.error(`trivia: telemetry → ${tooLarge ? "too_large" : status} ${kept ? "kept" : "dropped"}`);
 }
 
 /** IPC for preload.cjs; only our own page may call. */
