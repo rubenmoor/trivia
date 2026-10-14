@@ -35,10 +35,11 @@ function oneEntryScript(): Plugin {
   };
 }
 
-export default defineConfig({
+/** Readable build; `--mode optimized`: Vite's defaults (hashed, minified), to measure the readable build's cost (decision 143). */
+export default defineConfig(({ mode }) => ({
   define: { __APP_VERSION__: JSON.stringify(version) },
-  plugins: [svelte(), credits(), oneEntryScript(), devServer()],
-  build: {
+  plugins: [svelte(), credits(), ...(mode === "optimized" ? [] : [oneEntryScript()]), devServer()],
+  build: mode === "optimized" ? {} : {
     minify: false,
     sourcemap: true,
     cssCodeSplit: true,
@@ -70,4 +71,4 @@ export default defineConfig({
   },
   server: { port: 5173, strictPort: true },
   preview: { port: 4173, strictPort: true },
-});
+}));

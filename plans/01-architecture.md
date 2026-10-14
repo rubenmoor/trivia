@@ -14,7 +14,7 @@ flowchart LR
   App --> State[Save: state/game.json via /api/save]
 ```
 
-- Readable client build (plan 111, decision 124: Readable client build: output naming rule for mod overrides): Vite `preserveModules`, one unminified, unhashed file per source module, source maps, stable scoped class names; why: mods replace any module, component CSS or stylesheet by its path; `18-steam-integration.md` "Modding: module paths".
+- Readable client build (plan 111, decision 124: Readable client build: output naming rule for mod overrides): Vite `preserveModules`, one unminified, unhashed file per source module, source maps, stable scoped class names; why: mods replace any module, component CSS or stylesheet by its path; `18-steam-integration.md` "Modding: module paths". Cost (task 948, 2026-10-13, developer's PC, Xvfb, repo shell, median of 20): launch → start menu 527 ms readable vs. 388 ms hashed (+0.14 s); `npm run build:optimized -w app/client` (Vite defaults: hashed, minified, no mods' by-path overrides) builds the hashed variant into `dist/` for such comparisons, never shipped.
 - Mod overlay (desktop only, plan 112): the Electron shell's `app://` resolver serves enabled mods' folders before our client and data, first hit wins; `18-steam-integration.md` "Modding".
 
 ## Decisions needed
