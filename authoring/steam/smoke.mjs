@@ -199,13 +199,19 @@ async function game(dir) {
   await mkdir(home);
   at("start");
   let shell = await launch();
-  await h.waitFor(`${visibleEl(".language .option")} || ${visibleEl('[data-focus-id="main"]')} || ${visibleEl(".start .notice")}`, "first screen", 30000);
+  const start = `${visibleEl('[data-focus-id="main"]')} || ${visibleEl(".start .notice")}`;
+  await h.waitFor(`${visibleEl(".language .option")} || ${visibleEl(".consent .option")} || ${start}`, "first screen", 30000);
   if (await h.evaluate(visibleEl(".language .option"))) {
     at("language");
     await h.click(".language .option.current");
+    await h.waitFor(`${visibleEl(".consent .option")} || ${start}`, "after language");
+  }
+  if (await h.evaluate(visibleEl(".consent .option"))) {
+    at("consent");
+    await h.click(".consent .option[data-focus-default]");
   }
   at("start screen");
-  await h.waitFor(`${visibleEl('[data-focus-id="main"]')} || ${visibleEl(".start .notice")}`, "start screen");
+  await h.waitFor(start, "start screen");
   await noNotice();
   at("new player");
   await h.click('[data-focus-id="main"]');
