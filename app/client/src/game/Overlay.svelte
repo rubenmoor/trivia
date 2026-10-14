@@ -53,8 +53,10 @@
 
   // The review tool and stats pages run on the authoring server (D-35). A build made with
   // VITE_AUTHORING_URL="" (the packaged game) and the desktop shell have none and hide the links.
+  // The dev server's shim (plan 99) is no shell: links on, no quit.
+  const shell = desktop?.devServer ? null : desktop;
   const env = import.meta.env.VITE_AUTHORING_URL;
-  const authoring = desktop ? "" : (env ?? `${location.protocol}//${location.hostname}:8001`);
+  const authoring = shell ? "" : (env ?? `${location.protocol}//${location.hostname}:8001`);
 
   function change(key: Channel, by: number) {
     const v = Math.round(Math.min(1, Math.max(0, sound.volumes[key] + by)) * 10) / 10;
@@ -255,7 +257,7 @@
     { label: t("overlay.fullscreen"), enabled: true, run: fullscreen, col: 0 },
     { label: t("credits.open"), enabled: true, run: () => (creditsOpen = true), col: 0 },
     { label: t("overlay.restart"), enabled: canRestart, run: onrestart, confirm: true, col: 0 },
-    ...(desktop ? [{ label: t("overlay.quit"), enabled: true, run: quit, col: 0 as const }] : []),
+    ...(shell ? [{ label: t("overlay.quit"), enabled: true, run: quit, col: 0 as const }] : []),
     ...CHANNELS.map((c) => ({ label: c.label, enabled: true, run: () => {}, volume: c.key, col: 0 as const, sound: true })),
     {
       label: t(sound.volumes.muted ? "overlay.muted" : "overlay.unmuted"),

@@ -5,6 +5,7 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     "strict": true,
+    "allowJs": true,
     "noEmit": true,
     "types": ["svelte", "vite/client"],
     "allowImportingTsExtensions": true,
@@ -15,6 +16,6 @@
     "noImplicitReturns": true,
     "noImplicitOverride": true
   },
-  "include": ["src/**/*.ts", "src/**/*.svelte", "vite.config.ts", "credits.ts", "node.d.ts"],
+  "include": ["src/**/*.ts", "src/**/*.svelte", "vite.config.ts", "credits.ts", "devserver.ts", "node.d.ts"],
   "exclude": ["src/**/*.test.ts", "src/engine/test/"]
 }

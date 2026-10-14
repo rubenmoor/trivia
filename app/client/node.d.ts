@@ -1,4 +1,4 @@
-// The few Node APIs credits.ts and vite.config.ts use; no @types/node (minimal dependencies).
+// The few Node APIs credits.ts, devserver.ts and vite.config.ts use; no @types/node (minimal dependencies).
 declare module "node:fs" {
   export function existsSync(path: string): boolean;
   export function readdirSync(path: string): string[];
@@ -7,3 +7,15 @@ declare module "node:fs" {
 declare module "node:url" {
   export function fileURLToPath(url: URL): string;
 }
+declare module "node:fs" {
+  export function mkdtempSync(prefix: string): string;
+  export function globSync(pattern: string, options: { cwd: string; exclude: string[] }): string[];
+}
+declare module "node:os" {
+  export function tmpdir(): string;
+}
+declare module "node:path" {
+  export function join(...parts: string[]): string;
+}
+declare const process: { env: Record<string, string | undefined> };
+declare const Buffer: { concat(chunks: Uint8Array[]): { toString(encoding: "utf8"): string } };

@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "serve": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json && node scripts/check-literals.mjs",
     "check:literals": "node scripts/check-literals.mjs",
     "test": "node --test 'src/engine/**/*.test.ts'"
