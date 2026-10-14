@@ -142,7 +142,7 @@ const SCREENS = {
 /** Screens that show answers `A`–`D`. */
 const ANSWERS = ["question"];
 /** Leaves that may read as in `es`: names, shortcut keys, symbols. */
-const SAME_OK = [/^app\.title$/, /^overlay\.mods$/, /^consent\.no$/, /^screen\.start\.(name|close)$/, /^credits\.(audio|video)$/, /\.key$/, /Key$/];
+const SAME_OK = [/^app\.title$/, /^overlay\.mods$/, /^mods\.(open|title)$/, /^consent\.no$/, /^screen\.start\.(name|close)$/, /^credits\.(audio|video)$/, /\.key$/, /Key$/];
 
 const isLeaf = (v) => typeof v === "string" || Array.isArray(v) || "other" in v;
 const texts = (v) => (typeof v === "string" ? [v] : Object.values(v));

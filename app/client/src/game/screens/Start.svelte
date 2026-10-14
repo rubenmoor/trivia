@@ -1,5 +1,6 @@
 <script lang="ts">
-  // Start (04, "Start"): wordmark, resume or new game, the save notice (plan 55), the supply report (GF-5).
+  // Start (04, "Start"): wordmark, resume or new game, the save notice (plan 55), the supply report (GF-5),
+  // the Mods button in the shell (plan 118).
   import type { takeSaveNotice } from "../../lib/engine.ts";
   import { t } from "../../lib/i18n.ts";
   import type { Game, Supply } from "../../lib/types.ts";
@@ -15,9 +16,11 @@
     supply,
     notice,
     busy,
+    mods = null,
     onresume,
     onnew,
     ondismiss,
+    onmods,
   }: {
     game: Game | null;
     running: boolean;
@@ -25,9 +28,12 @@
     supply: Supply | null;
     notice: ReturnType<typeof takeSaveNotice>;
     busy: boolean;
+    /** Null outside the shell: no Mods button. */
+    mods?: { loaded: number; held: number } | null;
     onresume: () => void;
     onnew: () => void;
     ondismiss: () => void;
+    onmods?: () => void;
   } = $props();
 
   /** /?fuegos=<variant> or ?fuegos=finale plays fireworks over the Start screen (preview, UI-9). */
@@ -58,7 +64,13 @@
     {:else}
       <button class="candy breathe" onclick={onnew} disabled={busy} data-focus-default data-focus-id="main">{t("screen.start.play")} <Prompt action="confirm" /></button>
     {/if}
+    {#if mods && !notice}
+      <button class="secondary" onclick={onmods} disabled={busy} data-focus-id="mods">
+        {t("mods.open")}{#if mods.loaded}<span class="count">{mods.loaded}</span>{/if}
+      </button>
+    {/if}
   </div>
+  {#if mods?.held && !notice}<p class="held">{t("mods.held", { n: mods.held })}</p>{/if}
   {#if supply}<SupplyReport {supply} />{/if}
 </section>
 
@@ -106,6 +118,16 @@
     align-items: center;
     gap: calc(1.6 * var(--u));
     margin-top: calc(2 * var(--u));
+  }
+  .count {
+    margin-left: calc(0.6 * var(--u));
+    padding: 0 calc(0.6 * var(--u));
+    border-radius: calc(0.6 * var(--u));
+    background: var(--slate-600);
+  }
+  .held {
+    font-size: calc(1.2 * var(--u));
+    color: var(--amber);
   }
   .notice {
     max-width: calc(48 * var(--u));

@@ -62,6 +62,8 @@ export interface ModsBridge {
 
 export interface ModList {
   mods: ModEntry[];
+  /** One-time notice accepted on this machine; until then new mods are held off. */
+  notice: boolean;
   /** Safe start: nothing loaded this run. */
   noMods: boolean;
   /** Why this run has no mods; null on a normal start. */
@@ -77,6 +79,8 @@ export interface ModEntry {
   id: string | null;
   name: string | null;
   version: string | null;
+  /** `mod.json` `game`: the version it was made for. */
+  game: string | null;
   description: string | null;
   source: "local" | "workshop";
   publishedFileId: string | null;

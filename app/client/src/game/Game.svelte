@@ -6,14 +6,14 @@
   import { fetchFlags, fetchGame, gameAction, noteExhausted, playJoker, setFlag, type GameActionBody } from "../lib/api.ts";
   import { isOurs } from "../engine/pool.ts";
   import { GameError } from "../lib/http.ts";
-  import { steam, validUser } from "../lib/desktop.ts";
+  import { steam, validUser, type ModList } from "../lib/desktop.ts";
   import { language, saveError, takeSaveNotice } from "../lib/engine.ts";
   import { errorText } from "../lib/errors.ts";
   import { telemetryState } from "../lib/telemetry.ts";
   import { t } from "../lib/i18n.ts";
   import { listenPads } from "../lib/gamepad.svelte.ts";
   import { listen, pushScope, type Action } from "../lib/input.svelte.ts";
-  import { emit, watchLayers, type ModLayer } from "../lib/mods.ts";
+  import { emit, loadedMods, watchLayers, type ModLayer } from "../lib/mods.ts";
   import type { Game, GameMode, JokerBudget, JokerEvent, Flagged, Supply } from "../lib/types.ts";
   import FlagDialog from "./FlagDialog.svelte";
   import FlagList from "./FlagList.svelte";
@@ -32,6 +32,7 @@
   import DomScreen from "./screens/DomScreen.svelte";
   import Language from "./screens/Language.svelte";
   import Level from "./screens/Level.svelte";
+  import Mods, { fetchModList, heldOff } from "./screens/Mods.svelte";
   import Player from "./screens/Player.svelte";
   import Question, { type JokerPlay } from "./screens/Question.svelte";
   import { screenFailed, screenFor } from "./screens/registry.ts";
@@ -110,6 +111,12 @@
   let flagBusy = $state(false);
   /** «Preguntas marcadas» opens over the overlay, so the screen below stays mounted. */
   let flagListOpen = $state(false);
+  /** The shell's mod list (plan 118); null outside the shell. */
+  let modList = $state<ModList | null>(null);
+  /** The Mods screen, over Start or the overlay. */
+  let modsOpen = $state(false);
+  /** Start screen's Mods button: loaded this run, held off until the notice. */
+  const startMods = $derived(modList ? { loaded: loadedMods().length, held: heldOff(modList) } : null);
 
   const running = $derived(game !== null && game.result === null);
   /** The question the flag button acts on: the one on screen, or the one just answered. */
@@ -130,7 +137,19 @@
     music(MUSIC.start);
     refresh();
     loadFlags();
+    fetchModList().then(
+      (l) => {
+        modList = l;
+        if (l?.safeStart?.reason === "crashed") modsOpen = true; // before the start screen
+      },
+      (e) => console.error("mods:list", e),
+    );
   });
+
+  function closeMods(l: ModList | null) {
+    modList = l ?? modList;
+    modsOpen = false;
+  }
 
   async function loadFlags() {
     flags = await fetchFlags().catch(() => flags);
@@ -583,7 +602,7 @@
       <Consent ondone={() => go("start", "whoosh")} />
     {:else if screen === "start"}
       <Stage />
-      <S.Start {game} {running} {levels} {supply} {notice} {busy} onresume={resume} onnew={newGame} ondismiss={() => (notice = null)} />
+      <S.Start {game} {running} {levels} {supply} {notice} {busy} mods={startMods} onmods={() => (modsOpen = true)} onresume={resume} onnew={newGame} ondismiss={() => (notice = null)} />
     {:else if screen === "player"}
       <Stage />
       <S.Player {busy} onchoose={choosePlayer} ondeleted={refresh} />
@@ -659,6 +678,7 @@
       canRestart={(running || screen !== "start") && !questionBusy()}
       canBudget={!questionBusy()}
       onflags={validUser ? openFlagList : null}
+      onmods={modList ? () => (modsOpen = true) : null}
       onclose={closeOverlay}
       onskip={() => skip(false)}
       onskipall={() => skip(true)}
@@ -673,6 +693,9 @@
   {/if}
   {#if overlayOpen && flagListOpen && validUser}
     <FlagList bind:flags onclose={() => (flagListOpen = false)} />
+  {/if}
+  {#if modsOpen}
+    <Mods onclose={closeMods} />
   {/if}
   {#if flagOpen && flagTarget}
     <FlagDialog

@@ -10,6 +10,7 @@ import {
   discover,
   ID as MOD_ID,
   modsScript,
+  noticed,
   readMarker,
   readSettings,
   withNotice,
@@ -602,15 +603,17 @@ function workshopSource(log) {
 /** Page's view of one list entry: plain JSON, no disk paths but the folder's basename. */
 function modEntry(mod) {
   const m = mod.manifest ?? {};
+  const text = (v) => (typeof v === "string" ? v : null); // an invalid mod.json may have anything
   return {
     id: mod.id,
-    name: m.name ?? null,
-    version: m.version ?? null,
-    description: m.description ?? null,
+    name: text(m.name),
+    version: text(m.version),
+    game: text(m.game),
+    description: text(m.description),
     source: mod.source,
     publishedFileId: mod.publishedFileId,
     kind: mod.kind,
-    languages: Array.isArray(m.languages) ? m.languages : [],
+    languages: Array.isArray(m.languages) ? m.languages.filter((l) => typeof l === "string") : [],
     on: mod.on,
     active: !!mod.dir && activeDirs.has(mod.dir),
     position: mod.position,
@@ -622,9 +625,10 @@ function modEntry(mod) {
 }
 
 async function listMods() {
-  const { list } = await arrangeMods();
+  const { list, settings } = await arrangeMods();
   return {
     mods: list.filter((e) => e.state !== "missing").map(modEntry),
+    notice: noticed(settings),
     noMods: safeStart !== null,
     safeStart,
     validUser,

@@ -25,6 +25,13 @@ export const esES = {
     video: "Vídeo",
     achievements: "Iconos de logros de Steam",
   },
+  mods: {
+    held: { one: "1 mod encontrado, apagado hasta que lo permitáis", other: "{n} mods encontrados, apagados hasta que los permitáis" },
+    empty: "No hay mods. Suscribíos a mods en el Workshop de Steam o poned carpetas de mods en la carpeta local de mods; la guía de modding explica dónde.",
+    notice: {
+      body: "Los mods los hacen otros jugadores y ejecutan código con el mismo acceso que el juego: partida guardada, logros y funciones de Steam. Encended solo mods de confianza.",
+    },
+  },
   joker: {
     skip: { rule: "Cambia la pregunta por otra carta. Si queréis, ese tema sale del juego." },
     category: { title: "Cambiazo: ¿qué tema queréis?", rule: "Elegís otro tema; la dificultad sigue parecida." },

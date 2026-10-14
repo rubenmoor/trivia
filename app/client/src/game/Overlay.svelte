@@ -87,6 +87,7 @@
     onrestart,
     onbudget,
     onflags,
+    onmods,
   }: {
     mode: GameMode;
     /** The newest game (running or finished), or null. */
@@ -121,6 +122,8 @@
     /** «Preguntas marcadas» opens over the overlay. */
     /** Null without a valid Steam user (decision 111): no «Preguntas marcadas». */
     onflags: (() => void) | null;
+    /** The Mods screen (plan 118); null outside the shell. */
+    onmods: (() => void) | null;
   } = $props();
 
   const gamemaster = $derived(mode === "gamemaster");
@@ -272,6 +275,7 @@
     ...(devMode && questionOn ? [{ label: t("overlay.goTo"), enabled: canSkip, run: () => (goToOpen = true), col: 0 as const }] : []),
     { label: t("overlay.fullscreen"), enabled: true, run: fullscreen, col: 0 },
     { label: t("credits.open"), enabled: true, run: () => (creditsOpen = true), col: 0 },
+    ...(onmods ? [{ label: t("mods.open"), enabled: true, run: onmods, col: 0 as const }] : []),
     { label: t("overlay.restart"), enabled: canRestart, run: onrestart, confirm: true, col: 0 },
     ...(shell ? [{ label: t("overlay.quit"), enabled: true, run: quit, col: 0 as const }] : []),
     ...CHANNELS.map((c) => ({ label: c.label, enabled: true, run: () => {}, volume: c.key, col: 0 as const, sound: true })),
