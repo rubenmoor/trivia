@@ -10,7 +10,7 @@ import { accessSync, constants, existsSync, readdirSync, readFileSync } from "no
 import { mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { cacheName } from "../../app/desktop/resolve.mjs";
+import { cacheName, shippedName } from "../../app/desktop/resolve.mjs";
 import { connectPipe, pageHelpers, sleep, startXvfb, visibleEl } from "../tools/cdp.mjs";
 
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
@@ -47,8 +47,14 @@ function pickQuestions(locale) {
     const q = pool.questions.find((x) => x.media?.type === type && x.media.file_url);
     if (!q) throw new Error(`no ${type} question in the pool`);
     const urls = [q.media.file_url, q.background?.file_url].filter(Boolean);
-    return { type, q, files: urls.map((u) => path.join("resources", "media", cacheName(u))) };
+    return { type, q, files: urls.map((u) => mediaFile(u)) };
   });
+}
+
+/** A media file in the build: the raw cacheName, else shippedName (as resolve.mjs /media). */
+function mediaFile(url) {
+  const raw = path.join("resources", "media", cacheName(url));
+  return existsSync(path.join(DIR, raw)) ? raw : path.join("resources", "media", shippedName(url));
 }
 
 let DIR, page, h, home, display;

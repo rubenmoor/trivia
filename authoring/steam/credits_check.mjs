@@ -4,7 +4,7 @@
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { createRequire } from "node:module";
 import path from "node:path";
-import { cacheName } from "../../app/desktop/resolve.mjs";
+import { cacheName, shippedName } from "../../app/desktop/resolve.mjs";
 
 const asar = createRequire(new URL("../../app/desktop/package.json", import.meta.url))("@electron/asar");
 
@@ -42,12 +42,12 @@ function check(root) {
   const problems = [];
   const credits = JSON.parse(readFileSync(path.join(client, "credits.json"), "utf8"));
 
+  const shipped = new Set(files(path.join(res, "media")));
   const media = new Map();
   for (const m of credits.media) {
-    const name = cacheName(m.file_url);
+    const name = shipped.has(cacheName(m.file_url)) ? cacheName(m.file_url) : shippedName(m.file_url);
     media.set(name, (media.get(name) ?? 0) + 1);
   }
-  const shipped = new Set(files(path.join(res, "media")));
   for (const f of shipped) if (!media.has(f)) problems.push(`media file without credit: media/${f}`);
   for (const [f, n] of media) {
     if (!shipped.has(f)) problems.push(`media credit without file: media/${f}`);

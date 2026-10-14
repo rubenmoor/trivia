@@ -5,7 +5,7 @@ import { tmpdir } from "node:os";
 import path from "node:path";
 import { after, test } from "node:test";
 import { arrange, bundleRows, modsScript, readManifest } from "./mods.mjs";
-import { makeResolver } from "./resolve.mjs";
+import { cacheName, makeResolver, shippedName } from "./resolve.mjs";
 
 const tmp = mkdtempSync(path.join(tmpdir(), "trivia-resolve-"));
 after(() => rmSync(tmp, { recursive: true, force: true }));
@@ -258,4 +258,24 @@ test("a mod's entry and root style.css never shadow ours (decision 148)", async 
   assert.equal(await text(resolve, "/mods/ee/main.js"), "ee main");
   assert.equal(await text(resolve, "/mods/ee/style.css"), "ee style");
   assert.equal(await text(coded, "/src/main.js"), "ours index");
+});
+
+test("/media: cacheName (raw cache), else shippedName (packaged)", async () => {
+  const raw = "https://x.org/a/Owl.JPG";
+  const enc = "https://x.org/b/song.mp3";
+  const gif = "https://x.org/c/dance.gif";
+  assert.equal(shippedName(raw), cacheName(raw).replace(/\.jpg$/, ".webp"));
+  assert.equal(shippedName(enc), cacheName(enc).replace(/\.mp3$/, ".opus"));
+  assert.equal(shippedName(gif), cacheName(gif));
+  put("mdata/pool.json", JSON.stringify({ questions: [{ media: { file_url: raw }, background: { file_url: enc } }] }));
+  put(`mmedia/${cacheName(raw)}`, "raw owl");
+  put(`mmedia/${shippedName(raw)}`, "webp owl");
+  put(`mmedia/${shippedName(enc)}`, "opus song");
+  const resolve = makeResolver({ ...dirs, data: path.join(tmp, "mdata"), media: path.join(tmp, "mmedia") });
+  const media = (u) => get(resolve, "/media?url=" + encodeURIComponent(u));
+  assert.equal((await media(raw)).text, "raw owl");
+  const song = await media(enc);
+  assert.equal(song.text, "opus song");
+  assert.equal(song.type, "audio/ogg");
+  assert.equal((await media(gif)).status, 404);
 });

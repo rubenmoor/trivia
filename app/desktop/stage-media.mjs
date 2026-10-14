@@ -11,6 +11,9 @@ const allowMissing = process.argv.includes("--allow-missing");
 const cache = process.env.TRIVIA_MEDIA || path.join(REPO, "media");
 const out = path.join(HERE, "build", "media");
 
+// Raw files until encoded (task 1054): = shippedName only where the extension stays.
+const staged = cacheName;
+
 const DATA = path.join(REPO, "app", "data");
 const read = (file) => poolUrls(JSON.parse(readFileSync(file, "utf8")));
 const packs = readdirSync(path.join(DATA, "bundles"))
@@ -22,7 +25,7 @@ for (const [b, own] of packs) for (const u of own) owners.set(u, urls.has(u) || 
 const packMedia = Object.fromEntries(packs.map(([b]) => [b, []]));
 for (const [u, b] of [...owners].sort()) {
   urls.add(u);
-  if (b) packMedia[b].push(cacheName(u));
+  if (b) packMedia[b].push(staged(u));
 }
 rmSync(out, { recursive: true, force: true });
 mkdirSync(out, { recursive: true });
@@ -32,8 +35,8 @@ let count = 0;
 let bytes = 0;
 const missing = [];
 for (const url of [...urls].sort()) {
-  const name = cacheName(url);
-  const src = path.join(cache, name);
+  const name = staged(url);
+  const src = path.join(cache, cacheName(url));
   let size;
   try {
     size = statSync(src).size;

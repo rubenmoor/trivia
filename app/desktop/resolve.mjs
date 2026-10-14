@@ -130,6 +130,18 @@ export function cacheName(url) {
   return createHash("sha1").update(url, "utf8").digest("hex").slice(0, 16) + ext;
 }
 
+// Packaged name (decision 185): cacheName's stem + the encoded format's extension.
+const SHIPPED = {
+  ...Object.fromEntries([".jpg", ".jpeg", ".png"].map((e) => [e, ".webp"])),
+  ...Object.fromEntries([".mp3", ".ogg", ".oga", ".wav", ".flac", ".m4a"].map((e) => [e, ".opus"])),
+  ...Object.fromEntries([".mp4", ".mov", ".ogv", ".mkv"].map((e) => [e, ".webm"])),
+};
+export function shippedName(url) {
+  const name = cacheName(url);
+  const ext = path.posix.extname(name);
+  return name.slice(0, -ext.length) + (SHIPPED[ext] ?? ext);
+}
+
 // Every picked file_url in the pool, like media_cache.pool_urls; stage-media.mjs ships the same set.
 export const poolUrls = ({ questions }) =>
   new Set(questions.flatMap((q) => [q.media?.file_url, q.background?.file_url]).filter(Boolean));
@@ -223,7 +235,7 @@ export function makeResolver({ dist, data, media, layers = [], mods = [], modsJs
     if (rel === "/media") {
       const fileUrl = url.searchParams.get("url") ?? "";
       if (!(await urls()).has(fileUrl)) return json(404, { error: "not_found" });
-      const file = await contained(media, cacheName(fileUrl));
+      const file = (await contained(media, cacheName(fileUrl))) ?? (await contained(media, shippedName(fileUrl)));
       return file ? sendFile(file, request) : json(404, { error: "media_missing" });
     }
     const file =

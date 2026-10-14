@@ -190,7 +190,7 @@ export interface MediaCredit {
   license_url: string | null;
   source_url: string;
   provider: string | null;
-  /** Packaged file: cacheName(file_url) (credits_check.mjs). */
+  /** Packaged file: shippedName(file_url) (resolve.mjs, credits_check.mjs). */
   file_url: string;
 }
 
