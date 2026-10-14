@@ -1,1 +1,11 @@
-[]
+[
+  {
+    "id": 1,
+    "locale": "en",
+    "key": "outlook.exhausted",
+    "text": "You've seen every question of: Comida latinoamericana, Bebidas, Capitales del mundo",
+    "shot": "supply-notice",
+    "note": "this should be: this bundle is running out of questions: Regional: Colombia",
+    "flagged_on": "2026-10-14"
+  }
+]
