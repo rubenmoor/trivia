@@ -52,7 +52,6 @@ export const scopes = $state({ version: 0 });
 const bump = () => untrack(() => scopes.version++);
 
 const ARROWS: Record<string, Dir> = { ArrowUp: "up", ArrowDown: "down", ArrowLeft: "left", ArrowRight: "right" };
-const FLAG_KEY = t("flag.key").toLowerCase();
 
 type Key = Pick<KeyboardEvent, "key" | "ctrlKey" | "metaKey" | "altKey">;
 
@@ -69,7 +68,7 @@ function toIntent(e: Key, keys: Keys = {}, text = false): Intent | null {
   const k = e.key.toLowerCase();
   if (k in keys) return keys[k];
   if (/^[1-9]$/.test(k)) return { type: "pick", n: Number(k) };
-  if (k === FLAG_KEY) return { type: "flag" };
+  if (k === t("flag.key").toLowerCase()) return { type: "flag" };
   return null;
 }
 
