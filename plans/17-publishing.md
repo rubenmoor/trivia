@@ -1,6 +1,6 @@
 # 17 — Publishing: Licenses, Disclosures, Store
 
-**Status:** stub
+**Status:** in progress: PUB-10 done; PUB-7 waits on pm decision 176, PUB-6 on pm decision 177 (pm plan 129)
 
 Part of the Steam plan ([11](11-steam.md)). Everything that has to be true legally and on paper before the game is sold or given away on Steam. Not legal advice: where it matters (tax, a company, contested licenses), check with a professional or with Valve's documentation.
 
