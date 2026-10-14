@@ -207,6 +207,7 @@ The client ships as a readable tree, so a mod replaces any single module, compon
   - `.map` next to each JS file; no hashes; `public/` files where they are (`audio/`, `fonts/`)
 - `index.html`: one `<script type="module" src="/main.js">` + `app.css`; the browser follows imports; a full conversion replaces it.
 - Scoped class names: `svelte-<component path>` (e.g. `svelte-game-hud`), stable per component path, not per CSS content: a theme's selectors survive our CSS changes.
+- Screen list (plan 116): `game/screens/*.svelte` (one file per full screen, `Game.svelte` mounts them); Question pieces: `game/question/*`; for `window.trivia`'s screen list (task 904) and the guide (task 909).
 - Not overridable by path (no file of their own):
   - inlined `__APP_VERSION__` and other `define`s
   - the preload helper's dependency list inside `main.js` (a mod adding a module imports it itself)

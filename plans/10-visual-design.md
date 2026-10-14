@@ -154,10 +154,10 @@ The picture should stay visible; the interface floats over it.
 - [x] VD-1 Developer confirms the palette, fonts and type scale from the implementation (D-30). *2026-10-06: confirmed («visual design is great»).*
 - [x] VD-2 Theme file: tokens, `--u`, glass classes; replace raw colours and `vw` sizes in `app/client/src/game/`. *2026-10-06: `app/client/src/game/theme.css`, scoped to `.game`.*
 - [x] VD-3 Ship Baloo 2 and Nunito (`woff2` + OFL licence) in `app/client/public/fonts/`. *2026-10-06: variable fonts, Latin subset (from Fontsource), with `OFL-*.txt`.*
-- [x] VD-4 Question screen layout: floating question card, 70 % answer grid, safe area, HUD chip, free strip for the joker tray (with UI-2, JK-4). *2026-10-06: `Question.svelte`, `Hud.svelte`.*
+- [x] VD-4 Question screen layout: floating question card, 70 % answer grid, safe area, HUD chip, free strip for the joker tray (with UI-2, JK-4). *2026-10-06: `Question.svelte`, `Hud.svelte`; since plan 116 `game/screens/Question.svelte` + `game/question/`.*
 - [x] VD-5 Candy buttons and answer tile states, with ✓/✗ badges. *2026-10-06: also the envelope cards on Select.*
 - [x] VD-6 Stage backgrounds: spotlight, drifting «?», Correct/Wrong/Victory variants. *2026-10-06: `Stage.svelte`.*
 - [x] VD-7 Tower materials by height (with UI-3). *2026-10-06: `Tower.svelte`: materials, drop-and-settle, wobble, crown, crumble on Wrong.*
 - [x] VD-8 SVG icon set (padlock, replay, speaker, ✓, ✗; joker tokens with JK-4). *2026-10-06: `Icon.svelte` (also film, crown, star); joker tokens come with JK-4.*
 - [x] VD-9 TV check: legibility of the smaller scale from the couch, glass contrast over bright images, `backdrop-filter` performance and the no-blur fallback (with UI-6). *2026-10-07: living-room ready (developer).*
-- [x] VD-10 Sharp images fit the screen without upscaling, centred on the stage with a rounded edge fade (D-51). *2026-10-11: `Question.svelte`.*
+- [x] VD-10 Sharp images fit the screen without upscaling, centred on the stage with a rounded edge fade (D-51). *2026-10-11: `Question.svelte` (now `game/question/Media.svelte`).*

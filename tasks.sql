@@ -15473,7 +15473,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Gamemaster check: decision 113 (SW-8 check under Steam, replaces decision 72; decision 72''s "Without Steam" rows are void under decision 111: Steam only: no effort outside Steam). No "without Steam" rows.
 - Overlay part (D-92, task 647): Windows build only (Linux has no overlay by design). Windows zip from `trivia-desktop-build` (task 650), launched through Steam (App ID or non-Steam shortcut with 480).
 - If the Windows overlay fails: follow-up task in plan 85 to drop it (remove `addElectronSteamOverlay` in `app/desktop/main.mjs`, `overlay.enabled()` false) and amend D-92 in `plans/decisions.md` ("no overlay anywhere").
-- Keyboard part (task 648): if letters don''t reach the field: follow-up task in plan 85 to switch `steam:show-text-input` in `app/desktop/main.mjs` to `showGamepadTextInput` + `getEnteredGamepadTextInput` (wait for the dismiss, return the text; the bridge then returns `string | null` and `Player.svelte` sets `name`); note it in `plans/14-input.md` (Steam Deck line).
+- Keyboard part (task 648): if letters don''t reach the field: follow-up task in plan 85 to switch `steam:show-text-input` in `app/desktop/main.mjs` to `showGamepadTextInput` + `getEnteredGamepadTextInput` (wait for the dismiss, return the text; the bridge then returns `string | null` and `game/screens/Player.svelte` sets `name`); note it in `plans/14-input.md` (Steam Deck line).
 - Glyphs part (task 649): if Steam Input init breaks pad input in Chromium or always reports Xbox: follow-up task in plan 85 to drop `steam.input.init` in `app/desktop/main.mjs` (`steam:input-types` → null) and note it in `plans/14-input.md`.
 - Valid-user part (task 776): if a logged-in user isn''t valid: follow-up task in plan 85.
 - Docs: `plans/18-steam-integration.md` SW-8 `[x]` with note and "Steam features" updated (overlay: Windows only, D-92; valid user + `TRIVIA_DEV_STEAM_USER`; dev mode «Ir a pregunta…»); `plans/14-input.md` (glyphs, keyboard); `plans/15-i18n.md` ("Model", I18N-2 note: Steam language wired); `plans/project.md`; `directory.md` (`steamworks_sdk/`, new lib files).
@@ -16426,7 +16426,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Break one side on purpose (throw-away edit) → validate fails; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-13T13:41:36Z', NULL, 582);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (742, 82, 'Joker steppers: apply decision 105 on the configure screen', 'work', 'open', NULL, NULL, 'Apply `decision 105: Joker steppers: one rule on the configure screen too?`.
 
-- Files: `app/client/src/game/Choice.svelte` (`JOKER_MAX`, `stepJoker`), `app/client/src/game/jokers.ts` (`MAX_USES`, `stepUses`, used by `Customize.svelte` and `Overlay.svelte` since task 584).
+- Files: `app/client/src/game/screens/Choice.svelte` (`JOKER_MAX`, `stepJoker`), `app/client/src/game/jokers.ts` (`MAX_USES`, `stepUses`, used by `Customize.svelte` and `Overlay.svelte` since task 584).
 - Option 1: `stepJoker` calls `stepUses`; `JOKER_MAX` goes. Option 2: `stepUses` becomes 0–99 wrapping, Customize/Overlay follow. Option 3: nothing to change; note in `code-review.md` `## Part 10` (cluster 26 row) and drop this task.
 - Plans: `plans/13-game-modes.md` stepper wording if it states the range.
 - Check: `npm run check`, `npm test`, `npm run build`; try the configure screen''s joker lines by keyboard (←/→ at 0, at the max, at ∞).
@@ -17502,8 +17502,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 - `app/client/src/lib/store.ts`: `MemoryStore` (load → null, write → keeps the text in memory, nothing on disk, backup → no-op).
 - `ready()` in `app/client/src/lib/engine.ts`: `validUser` (from `lib/desktop.ts`, task 776) → `FileStore` (desktop bridge or dev shim); else `MemoryStore`. Fresh save → D-86 first-start language screen as usual, every start.
-- Notice: one short line «Sin Steam no se guarda el progreso» (final wording yours; es, es-ES where it differs, en, de; `check:literals` passes), once per start, in the save notice spot (`takeSaveNotice` path in `Game.svelte`), dismissable with keyboard, mouse, pad.
-- Flags hidden when `!validUser`: flag icon, `M` key, pad Select, «Preguntas marcadas» menu entry; `FlagDialog`/`FlagList` not reachable (`Game.svelte`, `Overlay.svelte`, input/action maps). With a valid user unchanged.
+- Notice: one short line «Sin Steam no se guarda el progreso» (final wording yours; es, es-ES where it differs, en, de; `check:literals` passes), once per start, in the save notice spot (`takeSaveNotice` in `Game.svelte`, shown by `game/screens/Start.svelte`), dismissable with keyboard, mouse, pad.
+- Flags hidden when `!validUser`: flag icon, `M` key, pad Select, «Preguntas marcadas» menu entry; `FlagDialog`/`FlagList` not reachable (`Game.svelte`, `CornerButtons.svelte`, `Overlay.svelte`, input/action maps). With a valid user unchanged.
 - Check on the dev server (valid: saves and flags as before) and with the shim forced off (e.g. temporary `validUser = false` or a query/env hook if task 762 offers one; not committed): notice shown, no flag icon/key/menu entry, a game plays a few levels, nothing written to the save dir. Throw-away Playwright (decision 6).
 - Per-commit checks pass.', '2026-10-13T15:29:13Z', NULL, 778);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (781, 87, 'Docs: Steam Cloud saves per Steam user, memory-only without one', 'work', 'open', 430, NULL, 'Plan 87 step 3, after the shell and page tasks of plan 87. Binding: decision 111: Steam only; decision 114: Desktop save folder under the dev switch without a SteamID.
@@ -21519,7 +21519,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Decision 121: Telemetry consent: stored per install, not in the save.
 
 ## Do
-- `app/client/src/game/ConsentScreen.svelte`, layout like `LanguageScreen.svelte`: title, body, 2 lines, buttons «No» (first, `data-focus-default`, focused on mount) and «Sí»; arrows, Enter/Space/pad A, mouse, `pick` 1/2; `back` = No; `menu` swallowed; scope `name: "consent"`. Press → await `setConsent(yes)` (buttons disabled) → `go("start", "whoosh")`; failure: dev console log only, go to start.
+- `app/client/src/game/screens/Consent.svelte` (plan 116: full screens in `game/screens/`), layout like `screens/Language.svelte`: title, body, 2 lines, buttons «No» (first, `data-focus-default`, focused on mount) and «Sí»; arrows, Enter/Space/pad A, mouse, `pick` 1/2; `back` = No; `menu` swallowed; scope `name: "consent"`. Press → await `setConsent(yes)` (buttons disabled) → `go("start", "whoosh")`; failure: dev console log only, go to start.
 - `Game.svelte`: screen `"consent"`; check `available && consent === null` in `refresh()` after `askLanguage()`; the language screen''s `onpicked` goes to consent instead of start when it applies.
 - `Overlay.svelte` general column, settings group: toggle row (label from state, `null` = no; `run` → `setConsent(!on)`) + read-only info line; only when `available`.
 - Catalog keys `consent.*`, `overlay.telemetryOn|Off|Info` in `es.ts`, `en.ts`, `de.ts`, `es-ES.ts` only where different; style guides `app/client/src/locales/style/<locale>.md` if they exist.
@@ -21961,7 +21961,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
   - Safety release (`down: false` if held): window `blur`, `visibilitychange` hidden, pad loop "not active" branch (`lib/gamepad.svelte.ts`), pad disconnect, scope change (menu/flag opening a modal).
   - `busy`: release always goes through; press while busy dropped.
   - `KEY_LABELS.peek` = `t("screen.question.peekKey")`; `keyLabel`/`padButton` match peek regardless of `down`.
-- **Question screen** (`Question.svelte`):
+- **Question screen** (`game/screens/Question.svelte`; pieces in `game/question/`: `Media.svelte` backdrop and credit, `Card.svelte`, `Answers.svelte`, `FinalAnswer.svelte`):
   - Allowed only when `media.type === "image"`, not `decorative`, not `mediaFailed`, no modal mode open.
   - `peeking` class on `.question-screen`: every panel (Hud/`.top`, header card, answers, joker tray, prompts, «Respuesta final», topic, dial, credit line) fades out (opacity 0, `visibility: hidden` after ~150 ms); backdrop picture stays, dark/dim filters off. No layout change; DOM focus untouched.
   - Other actions pass through while peeking. Timed mode clock keeps running; if MD-8 has no clock yet, say so in the done note.
@@ -23142,7 +23142,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `screens/Question.svelte` ≤ ~500 lines.
 - Works as before: image, audio, video and missing-media questions; lock/unlock, final answer, reveal; every joker (Soplo, Paso both options, Bájale with the dial, Cambiazo with picker and shredder, Francotirador aim/shoot/cancel with keys, pad, mouse); overlay pause during the wait.
 - Per-commit checks pass; smoke game (`trivia-desktop-build --dir` + `authoring/steam/smoke.mjs`); manual game in `trivia-desktop` (`TRIVIA_DEV_STEAM_USER=1`, Esc menu «Ir a pregunta…»).', '2026-10-13T18:32:39Z', '2026-10-14T00:04:08Z', 936);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (966, 116, 'Split of Game/Question: docs, paths and open task bodies', 'work', 'open', NULL, NULL, 'Plan 116, part 3. After the two split tasks of plan 116 (`game/screens/`, `game/question/`). Bring docs and open pm tasks in line with the new paths.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (966, 116, 'Split of Game/Question: docs, paths and open task bodies', 'work', 'done', NULL, '2026-10-13: directory.md (game/screens/, game/question/ rows), plans/04, 05, 09, 10, backlog (moved paths), plans/18-steam-integration.md ''Modding: module paths'' (screen list bullet for task 904, task 909), code-review.md part 5 line; open task bodies 652, 742, 780, 890, 922, 970, 974, 981 updated; Game.svelte refs left where still current (controller)', 'Plan 116, part 3. After the two split tasks of plan 116 (`game/screens/`, `game/question/`). Bring docs and open pm tasks in line with the new paths.
 
 ## What
 - `directory.md`: rows for `app/client/src/game/screens/` and `game/question/`; moved files (`Player`, `Choice`, `LanguageScreen` → `screens/Language.svelte`, `Question` → `screens/Question.svelte`).
@@ -23153,7 +23153,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - `grep -rn "Game.svelte\|Question.svelte\|LanguageScreen"` outside `plans/decisions.md`, `code-review.md` history and the controllers'' own files shows only current paths.
-- Per-commit checks pass.', '2026-10-13T18:32:39Z', NULL, 936);
+- Per-commit checks pass.', '2026-10-13T18:32:39Z', '2026-10-14T00:06:37Z', 936);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (967, 117, 'Bridge rename: window.trivia → window.triviaShell', 'work', 'open', NULL, NULL, 'Plan 117 task 1, decision 130: Preload bridge renamed window.trivia → window.triviaShell; window.trivia is the mod API. Frees the name `window.trivia` for the mod API (later tasks of plan 117).
 
 - `app/desktop/preload.cjs`: `contextBridge.exposeInMainWorld("triviaShell", …)`; header comment.
@@ -23196,7 +23196,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 - `data(fn)` in `app/client/src/lib/data.ts` `load()`: after parsing and plan 115''s mod-pool step, before `engineData(...)`: `fn({ locale, questions, bundles, ageGroups }) → void | partial replacement`; per locale load (cached as today), run order. Mod questions arrive with `<mod id>:<id>` ids (decision 128).
 - `actions.before(fn)` / `actions.after(fn)` in `lib/api.ts` `gameAction()` and `playJoker()`: `before(action, body) → body | void`; `after(action, game)` gets a read-only clone. The engine still validates the body.
-- Events from `lib/api.ts` game diffs: `game:start` (`{ game }` after a successful `new`), `game:end` (`{ game, result }` when `result` goes null → won/lost/abandoned), `question:answered` (`{ id, level, index, correct }` after `answer`). From `Game.svelte`: `screen` (`{ name }` after the switch in `go()`), `question:shown` (`{ id, level }` after the Question screen''s `ready()`). (Use plan 116''s file layout if it has landed.)
+- Events from `lib/api.ts` game diffs: `game:start` (`{ game }` after a successful `new`), `game:end` (`{ game, result }` when `result` goes null → won/lost/abandoned), `question:answered` (`{ id, level, index, correct }` after `answer`). From `Game.svelte`: `screen` (`{ name }` after the switch in `go()`), `question:shown` (`{ id, level }` after the Question screen''s `ready()`, `game/screens/Question.svelte`).
 - `i18n.add(locale, catalog, opts?)` in `lib/i18n.ts`: existing locale → `merge()` over it; new locale (`opts.endonym`, `opts.base` default `en`) → `merge(base, catalog)` into `CATALOGS`, `UI_LANGS`, `ENDONYMS` (made extendable before `initLang`); UI language only, question locales stay `LOCALES`. Type doc: call in `setup`; later calls apply after a reload.
 - A hook that throws → caught at the call site, `hook_failed` with the mod id, registration removed, game goes on with the unhooked value.
 
@@ -23250,7 +23250,7 @@ Throw-away checks under `trivia-desktop` (`TRIVIA_DEV_STEAM_USER=1`, temp `TRIVI
 - per-commit checks pass', '2026-10-13T18:34:22Z', NULL, 938);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (974, 118, 'Mods screen, start button, Esc menu row, notice dialog, mods.* strings', 'work', 'open', NULL, NULL, 'Plan 118 task 2. The page side: `ModsScreen`, entry points, one-time notice dialog, strings. Read plan 118 ("Screen", "One-time notice", "Strings") in full first; it is the spec.
 
-After: task 973 (bridge: `safeStart`, `notice`, `restart`, `ready`), task 969 (`modErrors()`, `loadedMods()`); plan 116 (Game.svelte split) if done decides the path.
+After: task 973 (bridge: `safeStart`, `notice`, `restart`, `ready`), task 969 (`modErrors()`, `loadedMods()`); plan 116 (Game.svelte split, done): the Mods screen goes to `game/screens/Mods.svelte`.
 
 ## What
 - Screen: `app/client/src/game/screens/Mods.svelte` if plan 116 ran, else `game/ModsScreen.svelte`; full-screen layer like `Credits.svelte`, own input scope, `data-focus-default` (IN-1..IN-5 in `plans/04-ui-tv-display.md` "Input"; key hints only via `<Prompt>`)
@@ -23327,7 +23327,7 @@ Why: player bundles (and the AI prompt, task 4 of this plan) produce questions w
   - returns the dropped questions with reason codes: `no_text`, `wrong_answers`, `hints`, `difficulty`, `subcategory`, `status`, `bad_id`, `duplicate_id`, `bad_media`
   - raw id rule `^[a-z0-9][a-z0-9-]{0,63}$` (before the `<mod id>:` prefix, decision 128: Bundles from mods), unique within the mod
   - `modIssues()` keeps its counts (plan 118''s mods screen shows them)
-- `Question.svelte`: the «media missing» line only when a file was set and failed, or the role is essential; our questions unchanged (they always have media).
+- `game/question/Card.svelte` (shown from `game/screens/Question.svelte`): the «media missing» line only when a file was set and failed, or the role is essential; our questions unchanged (they always have media).
 - Must stay importable from plain Node via the built `engine/pool.js` (decision 124 output paths): the check in task 2 imports it, no browser-only imports in that module.
 
 ## Done when
@@ -25851,6 +25851,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (847, 964, '2026-10-13T22:03:31Z', '2026-10-13T23:27:54Z', 'failed', 'the worker left changes that are not staged:
  M README.md', 0, '49e37e358773d40d493b9ccea23f1ef2d0747654', 'claude-opus-5-5[1m]', '65b1a9f3-b565-420c-8587-1d565f01125f', 80, 136, 49596, 7561114, 153967, 3.7364227999999993, 1704996);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (848, 965, '2026-10-13T23:31:25Z', '2026-10-14T00:04:18Z', 'done', NULL, 0, 'c946d3c267a1173a3ee5a96a6c47b29ee6b2cc2d', 'claude-opus-5-5[1m]', '6cb23551-52da-45fa-b2f1-85b05b95a5c8', 66, 116, 49476, 6322141, 141577, 3.3870281999999996, 1836295);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (849, 966, '2026-10-14T00:04:18Z', '2026-10-14T00:06:44Z', 'done', NULL, 0, 'cd01783e00871e7a749e142968ad3177734f89e4', 'claude-opus-5-5[1m]', 'f40049aa-fc37-4dce-a405-5af754236e82', 24, 48, 9964, 1129707, 50050, 0.82581339999999992, 1836295);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

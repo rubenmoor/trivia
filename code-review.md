@@ -838,6 +838,7 @@ Plan 76 reviews `app/client/src/lib/`, `locales/`, `main.ts`, `App.svelte`, `app
 ## Part 5: Game screens
 
 Plan 77 reviews `app/client/src/game/`.
+- Split of `Game.svelte` and `Question.svelte` done by plan 116 (`game/screens/`, `game/question/`); rows below keep the paths of their time.
 
 | file | finding | category | severity | status |
 |---|---|---|---|---|
