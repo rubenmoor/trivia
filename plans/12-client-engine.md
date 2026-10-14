@@ -77,6 +77,7 @@ Opt-in telemetry (plan 106, decision 119) is derived from the save, never stored
 - Side file in the shell (`app/desktop/telemetry.mjs`, `<userData>/telemetry/`); no save field, no `SAVE_VERSION` bump
 - `games[].mods`: this run's `/mods.js` overlay isn't empty (`lib/mods.ts` `modsOn()`, failed setups included; `--no-mods`/safe start → `false`), passed into `buildTelemetry()`; per run, so per session slice; no save field (decision 146: Achievements, mods screen and rich presence with mods on; decision 123: Achievements in games with mods on: allowed or off?)
 - Consent gate: no bridge (browser game, dev shim), no valid user or consent not `true` → the builder never runs, no IPC beyond `state()`
+- Consent UI (plan 108, decision 121): `screens/Consent.svelte` when `available && consent === null` (after the language screen, else before start; «No» focused, Backspace/pad B = no, not mod-replaceable); Esc menu toggle «Datos anónimos» + info line, only when `available`
 
 ## Tasks
 - [x] PORT-1 Scenario recorder for `app/server/game.py` + `app/server/selection.py`; commit the fixtures. Done 2026-10-11 (plan 18): `authoring/tools/record_fixtures.py` (`--check`), fixtures + README in `app/client/src/engine/fixtures/`.

@@ -78,6 +78,10 @@ const es = {
     media: "Audio y video de las preguntas",
     muted: "Sonido: apagado",
     unmuted: "Sonido: encendido",
+    /** Opt-in telemetry (plan 108); only with a valid Steam user. */
+    telemetryOn: "Datos anónimos: activados",
+    telemetryOff: "Datos anónimos: desactivados",
+    telemetryInfo: "Al cerrar: respuestas, niveles y comodines; sin nombres ni cuenta de Steam.",
     budget: "Comodines de esta partida",
     less: "menos",
     more: "más",
@@ -124,6 +128,15 @@ const es = {
     /** First-start screen (fresh save): heading and confirm prompt. */
     choose: "Elige el idioma",
     confirm: "Aceptar",
+  },
+  /** First-start telemetry question (plan 108; PRIVACY.md has the long version). */
+  consent: {
+    title: "¿Nos ayudas a mejorar el juego?",
+    body: "Si aceptas, al cerrarse el juego envía datos anónimos de las partidas: qué preguntas se respondieron, si bien o mal, nivel, grupo de edad y comodines.",
+    noNames: "Sin nombres, sin cuenta de Steam, sin dirección IP.",
+    change: "Lo puedes cambiar en el menú (Esc).",
+    no: "No",
+    yes: "Sí, enviar datos",
   },
   /** The Credits screen (PUB-5, plan 47); its data is credits.json from the build. */
   credits: {

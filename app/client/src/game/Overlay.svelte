@@ -11,6 +11,7 @@
   import { endonym, t } from "../lib/i18n.ts";
   import { pushScope, type Action } from "../lib/input.svelte.ts";
   import { menuRows } from "../lib/mods.ts";
+  import { setTelemetryConsent, telemetryState } from "../lib/telemetry.ts";
   import Credits from "./Credits.svelte";
   import GameSettings from "./GameSettings.svelte";
   import GoToDialog from "./GoToDialog.svelte";
@@ -223,6 +224,20 @@
     location.reload();
   }
 
+  /** Opt-in telemetry (plan 108): null without a valid Steam user in the shell (no row); `null` consent shows as off. */
+  let telemetryOn = $state<boolean | null>(null);
+  telemetryState()
+    .then((s) => (telemetryOn = s.available ? s.consent === true : null))
+    .catch(() => {});
+
+  async function toggleTelemetry() {
+    try {
+      telemetryOn = (await setTelemetryConsent(!telemetryOn)).consent === true;
+    } catch (e) {
+      console.warn("telemetry consent:", e);
+    }
+  }
+
   /** «Adolescentes · Básico, Colombia»; null without a running game. */
   let choiceLine = $state<string | null>(null);
   $effect(() => {
@@ -275,6 +290,12 @@
       col: 0 as const,
       sound: true,
     })),
+    ...(telemetryOn === null
+      ? []
+      : [
+          { label: t(telemetryOn ? "overlay.telemetryOn" : "overlay.telemetryOff"), enabled: true, run: toggleTelemetry, col: 0 as const, sound: true },
+          { label: t("overlay.telemetryInfo"), enabled: false, run: () => {}, info: true, col: 0 as const, sound: true },
+        ]),
     ...(cheats
       ? [
           { label: t("overlay.skip"), enabled: canSkip, run: onskip, col: 1 as const },

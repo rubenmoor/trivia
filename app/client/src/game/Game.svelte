@@ -9,6 +9,7 @@
   import { steam, validUser } from "../lib/desktop.ts";
   import { language, saveError, takeSaveNotice } from "../lib/engine.ts";
   import { errorText } from "../lib/errors.ts";
+  import { telemetryState } from "../lib/telemetry.ts";
   import { t } from "../lib/i18n.ts";
   import { listenPads } from "../lib/gamepad.svelte.ts";
   import { listen, pushScope, type Action } from "../lib/input.svelte.ts";
@@ -26,6 +27,7 @@
   import { swap } from "./swap.ts";
   import CornerButtons from "./CornerButtons.svelte";
   import Choice from "./screens/Choice.svelte";
+  import Consent from "./screens/Consent.svelte";
   import Correct from "./screens/Correct.svelte";
   import DomScreen from "./screens/DomScreen.svelte";
   import Language from "./screens/Language.svelte";
@@ -41,10 +43,11 @@
   import { BLOCK_DROP_MS, FADE_MS, FLIP_MS, GREETING_MS, PICK_MS, PRELOAD_MAX_MS, TEAR_MS, sleep } from "./timing.ts";
   import Veil from "./Veil.svelte";
 
-  type Screen = "language" | "start" | "player" | "choice" | "level" | "select" | "question" | "correct" | "wrong" | "victory";
+  type Screen = "language" | "consent" | "start" | "player" | "choice" | "level" | "select" | "question" | "correct" | "wrong" | "victory";
 
   const MUSIC: Record<Screen, Track | null> = {
     language: "normal",
+    consent: "normal",
     start: "normal",
     player: "normal",
     choice: "normal",
@@ -146,9 +149,20 @@
     }
   }
 
-  /** A fresh save picks its language once (plan 68). */
+  /** A fresh save picks its language once (plan 68); then the install's telemetry answer, once (plan 108). */
   async function askLanguage() {
     if ((await language()).ask) screen = "language";
+    else if (await askConsent()) screen = "consent";
+  }
+
+  /** Valid Steam user in the shell, never answered on this install (decision 121). */
+  async function askConsent(): Promise<boolean> {
+    const { available, consent } = await telemetryState();
+    return available && consent === null;
+  }
+
+  async function languagePicked() {
+    await go((await askConsent()) ? "consent" : "start", "whoosh");
   }
 
   /** A save that couldn't be written stays in the corner until one is (plan 55). */
@@ -520,7 +534,7 @@
 
   $effect(() => {
     const on = screen;
-    if (on === "language" || on === "player" || on === "choice" || on === "question") return; // they push their own
+    if (on === "language" || on === "consent" || on === "player" || on === "choice" || on === "question") return; // they push their own
     return pushScope({
       name: on,
       keys: on === "start" ? { [NEW_KEY]: { type: "new" } } : undefined,
@@ -563,7 +577,10 @@
       <p class="center label">{t("screen.loading")}</p>
     {:else if screen === "language"}
       <Stage />
-      <S.Language onpicked={() => go("start", "whoosh")} />
+      <S.Language onpicked={languagePicked} />
+    {:else if screen === "consent"}
+      <Stage />
+      <Consent ondone={() => go("start", "whoosh")} />
     {:else if screen === "start"}
       <Stage />
       <S.Start {game} {running} {levels} {supply} {notice} {busy} onresume={resume} onnew={newGame} ondismiss={() => (notice = null)} />
@@ -619,7 +636,7 @@
   <CornerButtons
     {error}
     flagged={!loading && !overlayOpen && !flagOpen && flagTarget ? flagged.has(flagTarget) : null}
-    menu={!loading && !overlayOpen && screen !== "language"}
+    menu={!loading && !overlayOpen && screen !== "language" && screen !== "consent"}
     onflag={openFlag}
     onmenu={openOverlay}
   />
