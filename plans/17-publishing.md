@@ -112,13 +112,48 @@ This section records what a worker found for the three store names: «Living Roo
     - «Trivia Family - En Español» on the Spanish App Store.
     - For «Wohnzimmer-Quiz», nothing close; «Wohnzimmer» is a common word in German marks.
 
+## Steamworks signup (PUB-6)
+This is the developer's checklist for becoming a Steamworks partner as a person (decision 67, D-98) and creating the app. Workers only research and write it; every step below is the developer's. Valve's order is paperwork, then the fee, then bank, tax and identity, so the advisor check comes before the first step. Once done, report it in pm decision 177 "Steamworks app created? App ID?" (pm plan 129). Not legal or tax advice.
+- Sources (read 2026-10-14):
+  - partner.steamgames.com/doc/gettingstarted (overview)
+  - /doc/gettingstarted/onboarding (paperwork, legal name, bank, tax, the 21-day rule)
+  - /doc/gettingstarted/appfee (Steam Direct fee)
+  - /doc/finance/taxfaq and /doc/gettingstarted/faq (withholding, W-8BEN, TIN, VAT)
+  - /doc/store/application/dlc (DLC apps)
+- Facts from those pages:
+  - Individual: company form «Sole Proprietorship», legal first and last name as the company name, no alias or "doing business as" name. The bank account holder must match that name.
+  - Tax interview: a W-8BEN-like questionnaire for treaty countries. Withholding on US sales is 0–30%. Treaty rates need a foreign TIN or a US TIN (ITIN or EIN). There are no refunds for amounts withheld before a TIN is added. A third party verifies the answers in 10–15 business days, and nothing can be changed until it's done.
+  - Fee: $100 (or the local equivalent) per app. It's paid in the Steam store from the developer's own Steam account (not with wallet funds), and VAT may be added. It isn't refundable. It's recouped in the payment after the app reaches $1,000 adjusted gross revenue. The invoice goes to the Steam user who paid.
+  - DLC: created from the base app ("All Associated Packages, DLC, Demos And Tools" → "Add New DLC"). Neither the fee page nor the DLC page asks for a fee, so free DLC packs (decision 66) need no app credit.
+  - First titles: ≥ 21 days between paying the fee and release, and ≥ 2 weeks of public "Coming soon" (`11-steam.md` "Coming soon page (ST-3)").
+  - VAT: Valve collects and remits VAT/GST in the countries on its list. Prices include it. The developer's own obligations are the advisor's question.
+  - The DSA trader address isn't on these pages; that's an advisor question.
+
+### Checklist
+- [ ] **Advisor check first** (decision 67). Questions for the tax advisor:
+  - Do I have to register as a sole trader (self-employed) in my country before the first sale? Which form, and when?
+  - US withholding: does my country have a US tax treaty, and what is its rate for royalties (copyright)? Is my national tax ID enough for the W-8BEN, or do I need an ITIN or EIN? Can I credit the US tax I pay against my own?
+  - VAT/OSS: Valve collects and remits EU VAT on Steam sales. Do I still owe VAT on my revenue share from Valve (a B2B service from a US company: reverse charge? small-business exemption?), and do I need an OSS registration?
+  - DSA trader: is the address shown on the store page my home address? Is a business or c/o address acceptable?
+  - When should I switch to a company (revenue threshold, liability, the DSA address)? Steam allows an app transfer later (D-98).
+  - Income tax: how is Steam revenue booked (monthly payments, fee recoupment)? Is the $100 fee deductible?
+- [ ] **Partner signup** (partner.steamgames.com, logged in with the developer's Steam account): legal first and last name, company form «Sole Proprietorship», address, contact e-mail; sign the NDA and the Steam Distribution Agreement electronically; identity verification.
+- [ ] **Pay the $100 app credit** (Steam Direct fee, part of the paperwork). Note the payment date: release comes ≥ 21 days later (`11-steam.md` "Coming soon page (ST-3)").
+- [ ] **Bank details**: an account in the developer's legal name (routing number, account number, bank address).
+- [ ] **Tax interview**: the W-8BEN questionnaire for a non-US individual. Enter the TIN the advisor named to get the treaty rate. Then wait 10–15 business days for verification and watch e-mail for document requests.
+- [ ] **Store Developer/Publisher label**: the developer's choice, e.g. a studio label. It's only a label, not a company and not the legal name. It's set on the store page later; decide it now so the decision answer can carry it.
+- [ ] **Create the app** with the app credit: name «Living Room Trivia» if PUB-7 passed (pm decision "Store names pass PUB-7?"), else a working name, which can change before "Coming soon". Note the App ID.
+  - DLC apps (one per shipped pack, decision 66) are created later from the base app, with no app credit: `task 254: write plan: Steamworks app configuration (SW-7)`.
+- Not here: the build account and its permissions (`plan 89: Builds, depots and upload (SW-10, SW-6)`); the switch from Spacewar 480 to the real App ID (SW-7).
+- Report in the pm decision: App ID, payment date of the app credit, Developer/Publisher label.
+
 ## Tasks
 - [x] PUB-1 Media license audit: a `media.py licenses` report per file (license, PD reason, Commons restriction templates); list the files to replace (PD-US-only, GFDL); restriction flags are listed, not replaced (D-61). *pm plan 52, 2026-10-11: 1,129 distinct files (non-rejected); 3 to replace: off-allowlist 1 (q-0021, GFDL 1.2), PD-US only 2 (q-1100, q-1194); 23 restriction flags on 21 files (personality 14, trademarked 5, design 2, fan-art 1, insignia 1).*
 - [x] PUB-2 Store the full license data per media item (license URL, author link, restrictions) in the pool, not just the `credit` string; `validate` requires it for approved questions. *pm plan 26, 2026-10-11: all 1,202 picks migrated; validate errors (q-0021, GFDL only, set to needs_work until part 3 replaces it; decision 10).*
 - [x] PUB-3 Replace the problem files from PUB-1 in the review tool. *pm plan 53, 2026-10-14: no replacement pass (decision 47): q-0021 (GFDL 1.2, Container_Ship.jpg), q-1100 (PD-US-not renewed, HitComicsNo19.jpg), q-1194 (PD-Harris-Ewing, PD-US-no notice, LCCN2016872269.jpg) are needs_work, out of the export; new files when they're reworked. Gate: `qgen validate` errors on an approved pick with verdict `replace`, reasons in the message; `/review?licence=replace` stays as the list's view.*
 - [x] PUB-4 Decide the code and content license (OQ-35); add a `LICENSE` file. *pm plan 40, 2026-10-14 (D-102): `LICENSE` (MIT), `LICENSE-content.md` (questions reserved; `modding/` MIT; media, fonts, sounds excluded); both at the desktop artefact root (`electron-builder.yml` `extraFiles`), in the credits' "Game" section; README "License", `directory.md`.*
 - [x] PUB-5 Credits screen and a generated `CREDITS.md` in the build (media, audio, fonts, glyphs, libraries). *Done 2026-10-12 (pm plan 47): `app/client/credits.ts` writes `dist/credits.json` + `dist/CREDITS.md` (1,102 media, 13 sounds, fonts, glyphs, Svelte); Credits screen from the ☰ overlay. Open: Electron entry (task 621), `CREDITS.md` at the desktop artefact root, Game section after OQ-35.*
-- [ ] PUB-6 Steamworks signup as a private person (D-98): tax advisor check first (pm decision 67's questions: registration, treaty rate, VAT, DSA address); identity, bank, W-8BEN tax interview; store Developer/Publisher label; pay the $100 app credit (DLC packs need none).
+- [ ] PUB-6 Steamworks signup as a private person (D-98): tax advisor check first (pm decision 67's questions: registration, treaty rate, VAT, DSA address); identity, bank, W-8BEN tax interview; store Developer/Publisher label; pay the $100 app credit (DLC packs need none). *Checklist: "Steamworks signup (PUB-6)" (pm plan 129); waits on pm decision 177.*
 - [ ] PUB-7 Name and trademark check for «Living Room Trivia» and «Trivia en Familia» (D-50); if it fails, OQ-34 reopens.
 - [ ] PUB-8 Store page: texts, capsules, screenshots, trailer, AI disclosure, privacy line. *Plan: pm plan 88 (drafts in `17a-store-page.md`, capsule art: pm decision 77, scripted screenshots, scripted trailer `trivia-trailer`).*
 - [ ] PUB-9 Content survey and age rating.

@@ -24138,7 +24138,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Fail (any name): new `pm decision add` for OQ-34 with new name candidates, each with a quick pre-check (Steam search, EUIPO/USPTO exact hit, `.com`); note in plan 17 that store names, capsules (`plan 88: Store page and AI disclosure (PUB-8, LUI-6)`) and the exe''s `ProductName` (`plans/18-steam-integration.md` "Exe metadata") wait.
 - `plans/17-publishing.md`: result under "Name check (PUB-7)"; PUB-7 `[x]` with the result (names in that row: all three).
 - `pm decision consequences` on the answered decision.', '2026-10-14T21:36:30Z', NULL, 1036);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1040, 129, 'PUB-6 Steamworks signup checklist and App ID decision', 'work', 'open', NULL, NULL, 'Part 3 of `plan 129: Partner account, name check and AI terms (PUB-6, PUB-7, PUB-10)`. Research and write; never log in, pay or contact Valve or an advisor.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1040, 129, 'PUB-6 Steamworks signup checklist and App ID decision', 'work', 'done', NULL, '2026-10-14, plans/17-publishing.md: section ''Steamworks signup (PUB-6)'' (Valve pages read 2026-10-14, advisor questions, checklist); PUB-6 row points to it; decision 177 ''Steamworks app created? App ID?'' pending, task 1041 waits on it', 'Part 3 of `plan 129: Partner account, name check and AI terms (PUB-6, PUB-7, PUB-10)`. Research and write; never log in, pay or contact Valve or an advisor.
 
 - Read Valve''s current pages: partner.steamgames.com/doc/gettingstarted, /doc/gettingstarted/onboarding, /doc/gettingstarted/appfee, Steamworks tax interview help; note URL + read date.
 - `plans/17-publishing.md`: new section "Steamworks signup (PUB-6)", short intro, checklist in order for the developer:
@@ -24154,7 +24154,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm decision add "Steamworks app created? App ID?"`: body = link to the section, what to report (App ID, app credit payment date, Developer/Publisher label); options: created (App ID …, paid on …, label …) / not yet.
 - `pm task-pending-decision 1041 <decision id>`.
 
-Done when: the checklist is in plan 17, the decision is pending and the result task waits on it.', '2026-10-14T21:36:30Z', NULL, 1036);
+Done when: the checklist is in plan 17, the decision is pending and the result task waits on it.', '2026-10-14T21:36:30Z', '2026-10-14T21:45:19Z', 1036);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1041, 129, 'PUB-6 result: App ID and payment date into the plans', 'work', 'open', 710, NULL, 'Part 3 of `plan 129: Partner account, name check and AI terms (PUB-6, PUB-7, PUB-10)`, after the developer answers "Steamworks app created? App ID?" (added by `task 1040: PUB-6 Steamworks signup checklist and App ID decision`; this task is made pending on it there).
 
 - Created: App ID, app credit payment date and Developer/Publisher label into `plans/17-publishing.md` (PUB-6 `[x]` with the note) and `plans/11-steam.md` (S5 prerequisites).
@@ -25814,6 +25814,12 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 - Gaps: WIPO Global Brand Database (captcha; Madrid marks covered via TMview), BoardGameGeek (blocked) and a general web search for the es/de names weren''t reachable.
 
 Pass → D-50 and OQ-34 final, `task 1039: PUB-7 result: store names final or OQ-34 reopened` updates the plans. Fail → OQ-34 reopens as a new decision with new name candidates.', NULL, NULL, '2026-10-14T21:43:29Z', NULL, 1038, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (177, 'Steamworks app created? App ID?', 'pending', '["Created: App ID …, app credit paid on YYYY-MM-DD, label …", "Not yet"]', 'The checklist is in plans/17-publishing.md, section "Steamworks signup (PUB-6)" (`plan 129: Partner account, name check and AI terms (PUB-6, PUB-7, PUB-10)`). Start with the advisor check (`decision 67: Steamworks account holder (OQ-33): person or company?`); the questions are ready there. Then: partner signup, the $100 app credit, bank details, tax interview (W-8BEN), app creation (the name follows PUB-7''s decision).
+Report in the answer:
+- App ID
+- payment date of the app credit (release comes ≥ 21 days later)
+- store Developer/Publisher label
+`task 1041: PUB-6 result: App ID and payment date into the plans` waits on this answer.', NULL, NULL, '2026-10-14T21:44:54Z', NULL, 1040, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -26782,6 +26788,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (958, 1036, '2026-10-14T21:35:52Z', '2026-10-14T21:36:48Z', 'done', NULL, 0, '54436cedfb21f60851baf9907c776164a93a9cc1', 'claude-opus-5-5[1m]', '9fc26efe-b5eb-4af4-8621-f811fdc13e65', 7, 14, 6047, 260997, 36627, 0.4662114, 2296074);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (959, 1037, '2026-10-14T21:36:48Z', '2026-10-14T21:38:15Z', 'done', NULL, 0, '4ec9ad3d3b7dd84a4155f43d5c73bb9dad4a2eac', 'claude-opus-5-5[1m]', '718980ed-5649-4d1e-a7ac-1848cdeabd43', 25, 38, 8300, 846432, 49183, 0.72890240000000017, 2296074);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (960, 1038, '2026-10-14T21:38:15Z', '2026-10-14T21:43:44Z', 'done', NULL, 0, 'fb682ed80d51d3ba40412427ed0072cece7c202c', 'claude-opus-5-5[1m]', '15060c82-b6db-4563-8258-13345ee77904', 38, 70, 19346, 1862068, 68417, 1.3069495999999996, 2296074);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (961, 1040, '2026-10-14T21:43:44Z', '2026-10-14T21:45:28Z', 'done', NULL, 0, '87c28d6bf8a86c94adad586f7f89140963a6fbb2', 'claude-opus-5-5[1m]', '45d68859-0a66-4eaa-9998-88feb4108e45', 23, 34, 8391, 905645, 57650, 0.810285, 2296074);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -27028,6 +27035,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1026, 163);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1026, 164);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1028, 174);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1039, 176);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1041, 177);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
