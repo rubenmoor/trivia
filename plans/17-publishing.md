@@ -5,16 +5,16 @@
 Part of the Steam plan ([11](11-steam.md)). Everything that has to be true legally and on paper before the game is sold or given away on Steam. Not legal advice: where it matters (tax, a company, contested licenses), check with a professional or with Valve's documentation.
 
 ## Media licenses
-The non-rejected questions use 1,129 distinct files (1,102 for approved only). Tally from `trivia-media licenses` (2026-10-11):
+The non-rejected questions use 1,129 distinct files (1,100 for approved only). Tally from `trivia-media licenses` (2026-10-14; unchanged since 2026-10-11, the 3 replace files sit on needs_work questions):
 
 | License | Files | What a commercial worldwide release needs |
 |---|---|---|
 | CC BY-SA 4.0 / 3.0 / 2.5 / 2.0 (incl. `at`, `de`, `igo`, `lu`, `nl` ports) | 631 | Credit (author, license, link) and the license name. ShareAlike applies to *adaptations*: the blurred decorative images (D-15) and crops may count as adaptations, which then must be offered under the same license. Shipping them as separate files with their license next to them meets that. |
 | CC BY 4.0 / 3.0 / 2.5 / 2.0 (incl. `br`, `de`, `pl` ports) | 253 | Credit and a license link. |
-| Public domain | 137 | Verdict per file from its PD reasons (`providers.licence_verdict`, D-62): `PD-USGov*` ok; PD-US only (`PD-US*`, `PD-1923`, `PD-Harris-Ewing`) is replaced (2 files). |
+| Public domain | 137 | Verdict per file from its PD reasons (`providers.licence_verdict`, D-62): `PD-USGov*` ok; PD-US only (`PD-US*`, `PD-1923`, `PD-Harris-Ewing`) is replaced (2 files, on needs_work questions). |
 | CC0, "No restrictions" | 105 | Nothing (a credit is still nice). |
 | FAL (Free Art License) | 2 | Credit and a license link; copyleft like BY-SA. |
-| GFDL 1.2 (off allowlist) | 1 | Needs the full GFDL text shipped. Replaced instead (PUB-3). |
+| GFDL 1.2 (off allowlist) | 1 | Needs the full GFDL text shipped. Replaced instead (PUB-3; its question is needs_work). |
 
 - **Non-copyright restrictions:** Commons marks some files with *personality rights* (identifiable people) or *trademark* warnings. They don't stop editorial use in a quiz; the developer checked them: keep every flagged file (D-61). The audit lists them for information only.
 - **Credits in the game** (PUB-5, pm plan 47): each question shows its `credit` (06); the full list is generated at build time.
@@ -52,7 +52,7 @@ Steam requires developers to disclose AI-generated content on the store page (co
 ## Tasks
 - [x] PUB-1 Media license audit: a `media.py licenses` report per file (license, PD reason, Commons restriction templates); list the files to replace (PD-US-only, GFDL); restriction flags are listed, not replaced (D-61). *pm plan 52, 2026-10-11: 1,129 distinct files (non-rejected); 3 to replace: off-allowlist 1 (q-0021, GFDL 1.2), PD-US only 2 (q-1100, q-1194); 23 restriction flags on 21 files (personality 14, trademarked 5, design 2, fan-art 1, insignia 1).*
 - [x] PUB-2 Store the full license data per media item (license URL, author link, restrictions) in the pool, not just the `credit` string; `validate` requires it for approved questions. *pm plan 26, 2026-10-11: all 1,202 picks migrated; validate errors (q-0021, GFDL only, set to needs_work until part 3 replaces it; decision 10).*
-- [ ] PUB-3 Replace the problem files from PUB-1 in the review tool. *Plan: pm plan 53 (`/review?licence=replace`, validate gate).*
+- [x] PUB-3 Replace the problem files from PUB-1 in the review tool. *pm plan 53, 2026-10-14: no replacement pass (decision 47): q-0021 (GFDL 1.2, Container_Ship.jpg), q-1100 (PD-US-not renewed, HitComicsNo19.jpg), q-1194 (PD-Harris-Ewing, PD-US-no notice, LCCN2016872269.jpg) are needs_work, out of the export; new files when they're reworked. Gate: `qgen validate` errors on an approved pick with verdict `replace`, reasons in the message; `/review?licence=replace` stays as the list's view.*
 - [ ] PUB-4 Decide the code and content license (OQ-35); add a `LICENSE` file.
 - [x] PUB-5 Credits screen and a generated `CREDITS.md` in the build (media, audio, fonts, glyphs, libraries). *Done 2026-10-12 (pm plan 47): `app/client/credits.ts` writes `dist/credits.json` + `dist/CREDITS.md` (1,102 media, 13 sounds, fonts, glyphs, Svelte); Credits screen from the ☰ overlay. Open: Electron entry (task 621), `CREDITS.md` at the desktop artefact root, Game section after OQ-35.*
 - [ ] PUB-6 Steamworks signup, tax and identity; pay the app credit (OQ-33).

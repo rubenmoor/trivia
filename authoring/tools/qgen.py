@@ -3893,12 +3893,6 @@ def cmd_export(args):
                   f"{c['stale']} stale, {c['left_out']} left out (source not approved or not translatable)")
 
 
-def licence_problem(slot):
-    """True when a picked slot's licence record (plans/26) is missing or off the allowlist.
-    PD-US only and PD without a reason aren't errors yet (plans/53)."""
-    return any(r.startswith(("missing-data:", "off-allowlist:")) for r in providers.licence_verdict(slot)[1])
-
-
 def validate_pool():
     """(errors, warnings) for the whole source pool and its export (QP-7)."""
     data = load_json(POOL)
@@ -3947,8 +3941,9 @@ def validate_pool():
                     warnings.append(f"{qid}: approved but no {label} picked")
                 elif not media.cache_path(slot["file_url"]).is_file():
                     warnings.append(f"{qid}: {label} not cached")
-                if slot.get("file_url") and licence_problem(slot):
-                    unlicensed.append(qid if label == "media" else f"{qid} background")
+                verdict, reasons = providers.licence_verdict(slot) if slot.get("file_url") else ("ok", [])
+                if verdict == "replace":  # plans/26, plans/53
+                    unlicensed.append(f"{qid} {label} ({'; '.join(reasons)})")
         if all(k in q for k in ["wrong_answers", "hints", "difficulty", "answer"]):
             errors += [f"{qid}: {p}" for p in check_question_shape(q)]
         if q.get("axes") is not None:  # D-37
@@ -3971,8 +3966,8 @@ def validate_pool():
                if not isinstance(c.get("known_at"), int) or not lo <= c["known_at"] <= hi]
         if bad:
             errors.append(f"{concepts.path(sub).relative_to(ROOT)}: known_at missing or not {lo}–{hi} (D-38): {first_ids(bad)}")
-    if unlicensed:  # plans/26
-        errors.append(f"{len(unlicensed)} approved pick(s) without a complete, allowlisted licence record: {first_ids(unlicensed)}")
+    if unlicensed:
+        errors.append(f"{len(unlicensed)} approved pick(s) on the licence replace list (needs_work and a new file, decision 47): {first_ids(unlicensed)}")
     e, w = translation_problems(data)
     errors += e
     warnings += w
