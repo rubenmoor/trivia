@@ -83,7 +83,7 @@ async function launch() {
 
 async function quit(shell) {
   const exited = new Promise((r) => shell.once("exit", r));
-  await h.evaluate("window.trivia.quit()").catch(() => {}); // the page goes away mid-call
+  await h.evaluate("window.triviaShell.quit()").catch(() => {}); // the page goes away mid-call
   let timer;
   const timeout = new Promise((_, reject) => (timer = setTimeout(() => reject(new Error("shell didn't exit")), 10000)));
   await Promise.race([exited, timeout]).finally(() => clearTimeout(timer));

@@ -141,11 +141,11 @@ export interface TextFieldRect {
 
 declare global {
   interface Window {
-    trivia?: DesktopBridge;
+    triviaShell?: DesktopBridge;
   }
 }
 
-export const desktop: DesktopBridge | null = window.trivia ?? null;
+export const desktop: DesktopBridge | null = window.triviaShell ?? null;
 export const steam: SteamBridge | null = desktop?.steam ?? null;
 export const mods: ModsBridge | null = desktop?.mods ?? null;
 export const telemetry: TelemetryBridge | null = desktop?.telemetry ?? null;
