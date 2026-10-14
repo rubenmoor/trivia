@@ -79989,7 +79989,7 @@
     },
     {
       "id": "q-1100",
-      "status": "approved",
+      "status": "needs_work",
       "difficulty": 11,
       "description": "Un villano tan presumido que se dejó bigote de galán y se puso un anillo del color de un bombillo.",
       "question": "Soy Sinestro, el gran enemigo de Linterna Verde, y llevo un anillo amarillo. ¿Qué emoción le da poder a mi anillo?",
@@ -80048,9 +80048,9 @@
       "needs_media": false,
       "batch": "batch-7",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "reviewed_on": "2026-10-10",
+        "decision": "needs_work",
+        "feedback": "Licencia: imagen de dominio público solo en EE. UU. (PD-US-not renewed); cambiarla por un archivo libre en todo el mundo o reformular la pregunta.",
+        "reviewed_on": "2026-10-13",
         "reviewer": "human",
         "model": null,
         "previous": {
@@ -86919,7 +86919,7 @@
     },
     {
       "id": "q-1194",
-      "status": "approved",
+      "status": "needs_work",
       "difficulty": 7,
       "description": "Un huevo que se quita la armadura y queda listo para rebotar.",
       "question": "Vinagre, jugo de limón y gaseosa de cola: ¿qué tienen en común, que si dejas un huevo crudo en ellos varios días le van deshaciendo la cáscara?",
@@ -86979,12 +86979,19 @@
       "needs_media": false,
       "batch": "batch-7",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "reviewed_on": "2026-10-10",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "decision": "needs_work",
+        "feedback": "Licencia: imagen de dominio público solo en EE. UU. (PD-Harris-Ewing, PD-US-no notice); cambiarla por un archivo libre en todo el mundo o reformular la pregunta.",
+        "reviewed_on": "2026-10-13",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-10",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "background": null

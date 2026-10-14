@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "1f30d10c",
+  "hash": "3a0df165",
   "questions": [
     {
       "id": "q-0001",
@@ -31708,40 +31708,6 @@
       "background": null
     },
     {
-      "id": "q-1100",
-      "status": "approved",
-      "difficulty": 11,
-      "subcategory": "Villanos famosos",
-      "bundle": "base",
-      "description": "Un villano tan presumido que se dejó bigote de galán y se puso un anillo del color de un bombillo.",
-      "question": "Soy Sinestro, el gran enemigo de Linterna Verde, y llevo un anillo amarillo. ¿Qué emoción le da poder a mi anillo?",
-      "answer": "El miedo",
-      "wrong_answers": [
-        "La tristeza",
-        "La alegría",
-        "La envidia"
-      ],
-      "hints": [
-        "El anillo verde funciona con la fuerza de voluntad.",
-        "El Espantapájaros, enemigo de Batman, también usa esta emoción como arma.",
-        "Mis seguidores asustan a la gente para ser más fuertes."
-      ],
-      "fun_fact": "Antes de volverse villano, Sinestro fue un Linterna Verde y hasta fue maestro de Hal Jordan.",
-      "media": {
-        "type": "image",
-        "role": "decorative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/HitComicsNo19.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AHitComicsNo19.jpg",
-        "credit": "Reed Crandall · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Reed Crandall",
-        "author_url": null
-      },
-      "background": null
-    },
-    {
       "id": "q-1101",
       "status": "approved",
       "difficulty": 6,
@@ -34730,40 +34696,6 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0/",
         "author": "somegeekintn",
         "author_url": "https://www.flickr.com/photos/66335021@N00"
-      },
-      "background": null
-    },
-    {
-      "id": "q-1194",
-      "status": "approved",
-      "difficulty": 7,
-      "subcategory": "Trucos",
-      "bundle": "base",
-      "description": "Un huevo que se quita la armadura y queda listo para rebotar.",
-      "question": "Vinagre, jugo de limón y gaseosa de cola: ¿qué tienen en común, que si dejas un huevo crudo en ellos varios días le van deshaciendo la cáscara?",
-      "answer": "Son ácidos",
-      "wrong_answers": [
-        "Son bases",
-        "Son aceites",
-        "Son sales"
-      ],
-      "hints": [
-        "Piensa en su sabor.",
-        "Los tres son agrios o saben un poquito así.",
-        "Es lo contrario de una sustancia alcalina."
-      ],
-      "fun_fact": "El ácido disuelve el carbonato de calcio de la cáscara soltando burbujitas, y el huevo queda blandito y rebota si lo dejas caer desde poca altura.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/...%29_yolk_is_weighted_and_put_into_a_jar_%28...%29_rest_of_the_egg_LCCN2016872269.jpg/3840px-...%29_yolk_is_weighted_and_put_into_a_jar_%28...%29_rest_of_the_egg_LCCN2016872269.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3A...%29_yolk_is_weighted_and_put_into_a_jar_%28...%29_rest_of_the_egg_LCCN2016872269.jpg",
-        "credit": "Harris & Ewing, photographer · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Harris & Ewing, photographer",
-        "author_url": null
       },
       "background": null
     },
