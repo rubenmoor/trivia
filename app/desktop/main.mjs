@@ -4,7 +4,18 @@ import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } fr
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { arrange, discover, ID as MOD_ID, modsScript, readSettings, writeSettings } from "./mods.mjs";
+import {
+  arrange,
+  clearMarker,
+  discover,
+  ID as MOD_ID,
+  modsScript,
+  readMarker,
+  readSettings,
+  withNotice,
+  writeMarker,
+  writeSettings,
+} from "./mods.mjs";
 import { muteReason } from "./mute.mjs";
 import { describe, itemUrl, preparePublish, publish, VISIBILITY } from "./publish.mjs";
 import {
@@ -62,6 +73,11 @@ function modsDir() {
 /** Per machine, not in the save (decision 136). */
 function modsSettingsFile() {
   return app.isPackaged ? path.join(app.getPath("userData"), "mods.json") : path.join(REPO, "state", "desktop", "mods.json");
+}
+
+/** Crash marker (plan 118), beside mods.json. */
+function modsMarkerFile() {
+  return path.join(path.dirname(modsSettingsFile()), "mods-start.json");
 }
 
 /** Telemetry (plan 106): per install, outside Auto-Cloud's `save/`. */
@@ -122,6 +138,17 @@ function parseArgs(argv) {
   return { importSave: v["--import-save"] ?? null, force: !!v["--force"], noMods: !!v["--no-mods"], publish: publish || null };
 }
 
+/** argv for a relaunch: our own flags dropped (with their values), Electron's and Steam's kept. */
+function relaunchArgs(argv) {
+  const out = [];
+  for (let i = 1; i < argv.length; i++) {
+    const [flag, inline] = argv[i].split(/=(.*)/s);
+    if (!OWN.test(flag)) out.push(argv[i]);
+    else if (VALUE[flag] && inline === undefined) i++;
+  }
+  return out;
+}
+
 const args = parseArgs(process.argv);
 
 protocol.registerSchemesAsPrivileged([
@@ -139,6 +166,10 @@ let steamInput = false;
 let validUser = false; // decision 111: Steam user with a SteamID, or the dev switch; fixed for the session
 let overlay = false; // Windows only: the native window Steam's overlay draws into (D-92)
 let activeDirs = new Set(); // this run's overlay layers (plan 112): fixed until restart
+let safeStart = null; // plan 118: { reason: "crashed", mods } | { reason: "flag" } | null
+let marker = false; // this run wrote mods-start.json and the start isn't confirmed yet
+let markerTimer = null;
+let leaving = false; // quitting or relaunching: no more marker reactions
 let saveFile = null; // set in start(), after Steam; stays null without a valid user
 let telemetry = null; // likewise (decision 111)
 let flushing = null; // the quit's save + telemetry flush (plan 107)
@@ -181,6 +212,7 @@ if (args.error) {
   });
   app.on("window-all-closed", () => app.quit());
   app.on("before-quit", (event) => {
+    leaving = true;
     if (flushed || (!pending && !telemetry)) return;
     event.preventDefault();
     flushing ??= flush()
@@ -449,7 +481,65 @@ async function start() {
   });
 
   bridge();
+  if (layers.length) await watchStart(wc, mods.map((m) => m.id));
   win.loadURL(ORIGIN);
+}
+
+const CONFIRM_MS = 20000;
+const PING_MS = 3000;
+
+/** Plan 118: marker before the load; confirmed by `mods:ready` or a page alive 20 s after the load; a crash or hang relaunches. */
+async function watchStart(wc, ids) {
+  try {
+    await writeMarker(modsMarkerFile(), ids);
+    marker = true;
+  } catch (err) {
+    console.error(`trivia: mods: ${modsMarkerFile()}: ${err.message}`);
+    return;
+  }
+  wc.once("did-finish-load", () => {
+    markerTimer = setTimeout(async () => {
+      const alive = await Promise.race([
+        wc.executeJavaScript("0").then(() => true, () => false),
+        new Promise((resolve) => setTimeout(() => resolve(false), PING_MS)),
+      ]);
+      if (alive) confirmStart("alive");
+      else startFailed("not responding");
+    }, CONFIRM_MS);
+  });
+  wc.on("render-process-gone", (_e, { reason }) => reason !== "clean-exit" && startFailed(`page ${reason}`));
+  wc.on("did-fail-load", (_e, code, desc, _url, mainFrame) => {
+    if (mainFrame && code !== -3) startFailed(`load failed: ${desc}`);
+  });
+}
+
+async function confirmStart(how) {
+  if (!marker) return;
+  marker = false;
+  clearTimeout(markerTimer);
+  await clearMarker(modsMarkerFile()).then(
+    () => console.error(`trivia: mods: start confirmed (${how})`),
+    (err) => console.error(`trivia: mods: ${modsMarkerFile()}: ${err.message}`),
+  );
+}
+
+/** Marker stays: the next start is safe. */
+function startFailed(why) {
+  if (!marker || leaving) return;
+  marker = false;
+  clearTimeout(markerTimer);
+  console.error(`trivia: mods: start failed (${why}), relaunching without mods`);
+  relaunch();
+}
+
+/** Save queue and telemetry flushed, then a fresh process without our own flags. */
+async function relaunch() {
+  if (leaving) return;
+  leaving = true;
+  app.relaunch({ args: relaunchArgs(process.argv) });
+  flushing ??= flush().catch(telemetryError);
+  await flushing;
+  app.exit(0);
 }
 
 /** Discovery, mods.json, load order → overlay layers, loaded mods' bundles and `/mods.js`, fixed for the run; none with --no-mods. */
@@ -462,10 +552,16 @@ async function loadMods() {
   for (const mod of mods)
     if (mod.source === "workshop")
       console.error(`trivia: mod ${mod.id ?? "?"} workshop ${mod.publishedFileId} ${mod.dir ? "installed" : mod.state}`);
-  if (args.noMods) {
+  const crashed = await readMarker(modsMarkerFile());
+  if (crashed) {
+    await clearMarker(modsMarkerFile()).catch((err) => console.error(`trivia: mods: ${modsMarkerFile()}: ${err.message}`));
+    safeStart = { reason: "crashed", mods: crashed.mods };
+    console.error(`trivia: mods: last start with mods didn't finish (${crashed.mods.join(", ") || "?"}): no mods this run`);
+  } else if (args.noMods) {
+    safeStart = { reason: "flag" };
     console.error("trivia: --no-mods: no mods this run");
-    return { layers: [], mods: [], modsJs: modsScript([]) };
   }
+  if (safeStart) return { layers: [], mods: [], modsJs: modsScript([]) };
   const count = {};
   for (const mod of mods) {
     count[mod.state] = (count[mod.state] ?? 0) + 1;
@@ -527,9 +623,27 @@ function modEntry(mod) {
 
 async function listMods() {
   const { list } = await arrangeMods();
-  return { mods: list.filter((e) => e.state !== "missing").map(modEntry), noMods: args.noMods, validUser };
+  return {
+    mods: list.filter((e) => e.state !== "missing").map(modEntry),
+    noMods: safeStart !== null,
+    safeStart,
+    validUser,
+  };
 }
 
+/** One-time notice accepted (plan 118): new mods come on from now; existing rows kept. */
+async function acceptNotice() {
+  const { settings } = await arrangeMods();
+  await writeSettings(modsSettingsFile(), withNotice(settings));
+  return listMods();
+}
+
+/** Plan 118: «Restart to apply». */
+async function restart() {
+  console.error("trivia: mods: restart");
+  await confirmStart("restart");
+  await relaunch();
+}
 
 /** `[{ id, on }]` in load order; ids left out keep their order after them. Next run's overlay only. */
 async function setMods(order) {
@@ -732,6 +846,10 @@ function bridge() {
   // Mods (plan 114): fresh list per call; set rejects bad_mods, writes mods.json, applies next start.
   handle("mods:list", listMods);
   handle("mods:set", setMods);
+  // Plan 118: notice, restart, the page's ready (clears the crash marker).
+  handle("mods:notice", acceptNotice);
+  handle("mods:restart", restart);
+  handle("mods:ready", () => confirmStart("ready"));
   // Reports (plan 93): main posts, the page passes fields only; send rejects bad_report.
   handle("report:available", reportAvailable);
   handle("report:send", sendReport);

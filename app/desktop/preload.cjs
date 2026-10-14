@@ -8,10 +8,13 @@ contextBridge.exposeInMainWorld("triviaShell", {
   loadSave: () => ipcRenderer.invoke("save:load"),
   writeSave: (text) => ipcRenderer.invoke("save:write", text),
   backupSave: (kind) => ipcRenderer.invoke("save:backup", kind),
-  // Plan 114: mod list and mods.json writes.
+  // Plans 114, 118: mod list, mods.json writes, notice, restart, start confirmed.
   mods: {
     list: () => ipcRenderer.invoke("mods:list"),
     set: (order) => ipcRenderer.invoke("mods:set", order),
+    notice: () => ipcRenderer.invoke("mods:notice"),
+    restart: () => ipcRenderer.invoke("mods:restart"),
+    ready: () => ipcRenderer.invoke("mods:ready"),
   },
   // Plan 106: consent and this run's session buffer.
   telemetry: {

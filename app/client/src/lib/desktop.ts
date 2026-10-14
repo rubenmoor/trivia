@@ -52,14 +52,25 @@ export interface ModsBridge {
   list(): Promise<ModList>;
   /** Load order, top first; ids left out keep their order after these. Rejects `bad_mods`. */
   set(order: { id: string; on: boolean }[]): Promise<ModList>;
+  /** One-time notice accepted (plan 118): new mods come on from now; existing rows unchanged. */
+  notice(): Promise<ModList>;
+  /** Relaunch to apply the list; resolves never. */
+  restart(): Promise<void>;
+  /** Start confirmed: clears the crash marker. */
+  ready(): Promise<void>;
 }
 
 export interface ModList {
   mods: ModEntry[];
-  /** `--no-mods`: nothing loaded this run. */
+  /** Safe start: nothing loaded this run. */
   noMods: boolean;
+  /** Why this run has no mods; null on a normal start. */
+  safeStart: SafeStart | null;
   validUser: boolean;
 }
+
+/** `crashed`: the last start with mods didn't finish (`mods`: active then); `flag`: `--no-mods`. */
+export type SafeStart = { reason: "crashed"; mods: string[] } | { reason: "flag" };
 
 /** One row; `id`, `name`, `version`, `description` null when unknown (downloading, no or bad `mod.json`). */
 export interface ModEntry {

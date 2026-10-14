@@ -227,14 +227,24 @@ export async function readSettings(file) {
   return { ...doc, mods: doc.mods.filter((e) => !seen.has(e.id) && seen.add(e.id)) };
 }
 
+/** One-time notice accepted on this machine (plan 118). */
+export const noticed = (settings) => settings.notice === true;
+
+/** Settings with the notice accepted now; rows untouched. */
+export const withNotice = (settings) => ({ ...settings, notice: true, noticeAt: new Date().toISOString() });
+
 /** Atomic: temp + rename. */
-export async function writeSettings(file, settings) {
+export function writeSettings(file, settings) {
+  return writeJson(file, settings);
+}
+
+async function writeJson(file, value) {
   const tmp = file + ".tmp";
   await fs.mkdir(path.dirname(file), { recursive: true });
   try {
     const fd = await fs.open(tmp, "w");
     try {
-      await fd.writeFile(JSON.stringify(settings, null, 2) + "\n", "utf8");
+      await fd.writeFile(JSON.stringify(value, null, 2) + "\n", "utf8");
       await fd.sync();
     } finally {
       await fd.close();
@@ -246,13 +256,41 @@ export async function writeSettings(file, settings) {
   }
 }
 
+/** Crash marker `mods-start.json` (plan 118): `{ at, mods }`; any file there counts, unreadable → `mods: []`; none → null. */
+export async function readMarker(file) {
+  let text;
+  try {
+    text = await fs.readFile(file, "utf8");
+  } catch (err) {
+    if (err.code === "ENOENT") return null;
+    return { at: null, mods: [] };
+  }
+  try {
+    const doc = JSON.parse(text);
+    const mods = Array.isArray(doc?.mods) ? doc.mods.filter((id) => typeof id === "string" && ID.test(id)) : [];
+    return { at: typeof doc?.at === "string" ? doc.at : null, mods };
+  } catch {
+    return { at: null, mods: [] };
+  }
+}
+
+/** Atomic like the settings. */
+export function writeMarker(file, ids) {
+  return writeJson(file, { at: new Date().toISOString(), mods: ids });
+}
+
+export function clearMarker(file) {
+  return fs.rm(file, { force: true });
+}
+
 /**
  * Discovered mods + settings → { list, layers, settings, changed }.
- * New ids appended `on`; unknown ids kept (`missing`); layers: loaded dirs, index 0 = top = wins.
+ * New ids appended `on`, `off` until the notice is accepted; unknown ids kept (`missing`); layers: loaded dirs, index 0 = top = wins.
  */
 export function arrange(mods, settings, { validUser }) {
   const known = new Set(settings.mods.map((e) => e.id));
-  const added = mods.filter((m) => m.id && !known.has(m.id) && known.add(m.id)).map((m) => ({ id: m.id, on: true }));
+  const on = noticed(settings);
+  const added = mods.filter((m) => m.id && !known.has(m.id) && known.add(m.id)).map((m) => ({ id: m.id, on }));
   const next = added.length ? { ...settings, mods: [...settings.mods, ...added] } : settings;
   const primary = new Map(mods.filter((m) => m.id && m.error?.code !== "duplicate_id").map((m) => [m.id, m]));
   const list = next.mods.map(({ id, on }, position) => {
