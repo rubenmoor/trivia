@@ -23682,8 +23682,30 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
   - keep every export of `src/**` (e.g. every source module as an extra input, or a plugin that marks exports as used; check the output naming in `outPath` and that `dist/index.html` still has only `/main.js`, decision 124)
   - or document in the modding guide (plan 121) that by-path imports only see exports the game uses, `window.trivia.modules` is the stable route.
 - Done when: either `dist/lib/mods.js` exports `modErrors` (and an unused export of e.g. `engine/game.ts` survives), or the guide/plan 117 text states the limit; per-commit checks pass.', '2026-10-14T01:30:39Z', NULL, 971);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1006, 124, 'create tasks for plan 124: Achievements, flags and telemetry with mods on', 'split', 'open', 1000, NULL, 'Split plan 124 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-14T01:32:38Z', NULL, 906);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1006, 124, 'create tasks for plan 124: Achievements, flags and telemetry with mods on', 'split', 'done', 1000, '2026-10-13, tasks.sql: tasks 1007, 1008', 'Split plan 124 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-14T01:32:38Z', '2026-10-14T01:33:17Z', 906);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1007, 124, 'Telemetry: games[].mods from this run''s overlay', 'work', 'open', NULL, NULL, '`plan 124: Achievements, flags and telemetry with mods on`, part 1. Telemetry''s `games[].mods` is hard-coded `false` (`engine/telemetry.ts` `telemetryGame()`). "Mods on" = this run''s `/mods.js` overlay isn''t empty (`decision 146: Achievements, mods screen and rich presence with mods on`, `decision 123: Achievements in games with mods on: allowed or off?`). Per run, no save field (`decision 119: Telemetry recording: derived from the save into a per-install side file`).
+
+- `app/client/src/lib/mods.ts`: keep the `/mods.js` row count from `loadMods()` (rows of `fetchList()`, including mods whose setup failed); export `modsOn(): boolean` (rows > 0). Fix `loadedMods()`''s comment: drop "achievements, plan 118".
+- `app/client/src/engine/telemetry.ts`: `telemetryGame(row, from, data, mods)` and `buildTelemetry(…, mods)` take the flag (engine stays pure).
+- `app/client/src/lib/telemetry.ts` `record()`: passes `modsOn()`. A recorded game whose row is gone keeps its stored value, as now.
+- No change to achievements, the unlock gate, the save or the mods screen.
+
+Done when, under `trivia-desktop` with `TRIVIA_DEV_STEAM_USER=1`, `TRIVIA_TELEMETRY_DIR` in `/tmp`, consent `true` in `install.json`:
+- one question played with a throw-away theme mod (`style.css` only) enabled → the session file''s game has `mods: true`;
+- with `--no-mods` → `mods: false`;
+- no `answers` row carries a `<mod>:` id after a mod bundle question was played.
+- Temp mod and dir deleted; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-14T01:33:15Z', NULL, 1006);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1008, 124, 'Docs: achievements, flags, telemetry, presence with mods on', 'work', 'open', NULL, NULL, '`plan 124: Achievements, flags and telemetry with mods on`, part 2; after the telemetry task of the same plan. State the rules from `decision 123: Achievements in games with mods on: allowed or off?` and `decision 146: Achievements, mods screen and rich presence with mods on`.
+
+- `plans/18-steam-integration.md`:
+  - "Achievements in Steamworks": allowed with mods on (decision 123); player questions count except `BUNDLE_*` (our regional bundles) and `ALL_CATEGORIES` (our base).
+  - "Modding": one bullet: achievements as above; flags hidden on player questions; reports ours only; telemetry keeps `isOurs` answers only, `games[].mods` = this run''s overlay non-empty; rich presence unchanged (decision 146).
+- `plans/12-client-engine.md` "Telemetry recording": the `mods` flag line (`lib/mods.ts` `modsOn()`, per run, no save field).
+- `plans/22-bundles.md` "Player bundles (mods)": an achievements line if the section lists "not ours" rules.
+- Not here: the modding guide (`modding/README.md`, plan 121 takes it from these docs).
+
+Done when: those docs name decision 123 and decision 146; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-14T01:33:15Z', NULL, 1006);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -25929,6 +25951,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (855, 970, '2026-10-14T00:33:59Z', '2026-10-14T00:43:50Z', 'done', NULL, 0, 'dc083d96e7a264ad288eeabefc0d3821492fe845', 'claude-opus-5-5[1m]', 'a933d1eb-9ce5-4bba-b98f-2b2e3f0b07e9', 65, 128, 37839, 5679797, 114751, 2.8112594000000004, 1836295);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (856, 971, '2026-10-14T00:43:51Z', '2026-10-14T01:31:10Z', 'done', NULL, 0, 'dc5fab5aa5be3b9e0b575366d5c4957e064bd48e', 'claude-opus-5-5[1m]', '22e838c3-080a-4efb-8e6e-e64f81927f0f', 73, 138, 45412, 8059360, 151175, 3.7300640000000009, 1836295);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (857, 906, '2026-10-14T01:31:11Z', '2026-10-14T01:32:58Z', 'done', NULL, 0, 'd55c42be41275e87ffcbdc17faca2ca391615102', 'claude-opus-5-5[1m]', '21537d08-0fb8-4a16-986a-f5d26c144db0', 14, 28, 9722, 964688, 89219, 1.1012416, 1836295);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (858, 1006, '2026-10-14T01:32:58Z', '2026-10-14T01:33:22Z', 'done', NULL, 0, '24f00a771e0a14f36ab99dca7b286d02737e4313', 'claude-opus-5-5[1m]', '4355c797-10d2-4845-b7f6-d32558c73b0f', 5, 10, 2290, 137025, 23248, 0.259229, 1836295);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
