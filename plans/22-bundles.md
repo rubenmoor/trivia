@@ -9,6 +9,7 @@ A **bundle** is a named set of questions that players can switch on or off befor
 - **Every question is in exactly one bundle**: the field `bundle`, default `"base"`.
 - Bundles **add** questions; they don't own a topic. A sports question can be in `base`; a sports bundle later just adds many more. "¿Cuál es la capital de Colombia?" stays in `base`; only questions that need a real connection to Colombia go into `colombia`.
 - **Exactly one base bundle** (`kind: base`) per session (D-85, decision 38); `base` is the first and today the only one. Non-base bundles are off by default on the configure screen (decision 33).
+- **Regional packs** (D-99, pm decision 110): 2000 approved each, in the region's language + en (`colombia`: es + en), free DLC; pilot `colombia`, more packs only after a decision with its effort numbers (plan 98, plan 84).
 - A session plays the questions of the active bundles. Difficulty, age groups (D-38) and burning (D-28) work as before inside that set.
 
 ## The first bundles
@@ -45,8 +46,8 @@ The developer's direction (2026-10-07): a batch writes for **one bundle, chosen 
 | Concept lists | `authoring/data/concepts/` | `authoring/data/bundles/<id>/concepts/` |
 | Question axes | `authoring/data/question-axes.json` | `authoring/data/bundles/<id>/question-axes.json`, if present; otherwise `base`'s |
 
-- Subcategory names and broad-category slugs are unique across all bundles (`validate`), so a subcategory names its bundle's taxonomy. Question ids are global; concept names are unique within a bundle.
-- The taxonomy steers generation; `bundle` steers play. A `base` question uses a subcategory from `base`'s own list (D-49): "¿Cuál es la capital de Colombia?" is in `base` under «Capitales del mundo», not under a Colombian subcategory. A `colombia` question may still use a `base` subcategory (OQ-46).
+- Subcategory names and broad-category slugs are unique across all bundles (`validate`), so a subcategory names its bundle's taxonomy. *D-99: unique within a bundle only, identity = bundle + name; code follows in plan 98 task 826.* Question ids are global; concept names are unique within a bundle.
+- The taxonomy steers generation; `bundle` steers play. A `base` question uses a subcategory from `base`'s own list (D-49): "¿Cuál es la capital de Colombia?" is in `base` under «Capitales del mundo», not under a Colombian subcategory. A `colombia` question uses a `colombia` subcategory too (OQ-46, D-99): every bundle has its own taxonomy, names may repeat across bundles (plan 98 tasks 826, 827).
 - `app/server/categories.py` reads every bundle's categories (each broad category carries its `bundle`), and the engine's «Cambiazo» picker shows only the categories of the game's active bundles (plan 27).
 - `colombia`'s list: the 27 Colombian subcategories that were in `base` (Colombia, Fiestas colombianas, Platos típicos colombianos, Selección Colombia, Palabras colombianas, …) in 6 broad categories. Their concept lists moved with them.
 - A `base` batch keeps Colombia-only content out through the prompt alone (OQ-43); the developer moves the rest with `n`.

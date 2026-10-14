@@ -358,7 +358,7 @@ Template:
 - Context: Batch-6 wrote `base` questions with a Colombian flavour because 27 of `base`'s subcategories are about Colombia (OQ-42). D-41 gives each bundle its own taxonomy but left the layout open (OQ-41).
 - Decision: `base`'s categories stay in `app/data/categories.json`. Another bundle's categories are in `app/data/bundles/<id>/categories.json`. They ship because the game's «Cambiazo» picker shows every bundle's categories while the game plays every bundle (until BN-6). Its concept lists are in `authoring/data/bundles/<id>/concepts/`, and its optional question axes in `authoring/data/bundles/<id>/question-axes.json` (otherwise `base`'s). Subcategory names and broad-category slugs are unique across all bundles, and question ids stay global. Concept names are unique within a bundle. The taxonomy steers generation; the question's `bundle` steers play. A question may keep a subcategory from another bundle's list (a well-known fact about Colombia stays in `base`). The 27 Colombian subcategories move into `colombia`'s own list (6 broad categories), and their concept lists move with them. Existing questions keep their bundle. A `base` batch keeps Colombia-only content out through the prompt alone (OQ-43); the developer moves the rest with `n` in the review tool.
 - Consequences: `qgen batch` picks from `base`'s 113 subcategories; `qgen batch --bundle colombia` picks from the 27 Colombian ones. `qgen bundle new <id>` creates the entry and an empty `categories.json`. `validate` checks the uniqueness rules. The game's picker gets 6 more tiles (29 broad categories).
-- Supersedes / related: D-19, D-37, D-39, D-41; OQ-41, OQ-42, OQ-43; BN-8..BN-12
+- Supersedes / related: D-19, D-37, D-39, D-41; OQ-41, OQ-42, OQ-43; BN-8..BN-12; amended by D-49, D-99 (names unique per bundle only; a `colombia` question uses a `colombia` subcategory)
 
 ## D-44: One house style for every bundle
 - Date: 2026-10-08
@@ -428,7 +428,7 @@ Template:
 - Context: D-52 sets 5000 approved `base` questions with a target per difficulty (pm milestone 1, part 1). `qgen` (report, `draft`'s gap weighting) and the authoring server (`/stats/difficulty`) both need the numbers; the game doesn't.
 - Decision: A new file `authoring/data/targets.json`, keyed by bundle: `{"base": {"total": 5000, "difficulty": {"1": n, …, "15": n}}}`. Authoring-only, so not in `app/data/age-groups.json` (D-35: what the game doesn't need stays in `authoring/`). Per-category targets aren't stored: they follow from the total and the bundle's subcategory count. A bundle without an entry has no targets.
 - Consequences: `qgen validate` checks the file (levels match the scale, sum = total). The authoring server serves it at `/api/targets`. The difficulty numbers come from pm decision 1.
-- Supersedes / related: D-35, D-38, D-40, D-52
+- Supersedes / related: D-35, D-38, D-40, D-52; amended by D-99 (every regional bundle: 2000)
 
 ## D-54: `draft` aims at the gaps to the pool targets
 - Date: 2026-10-11
@@ -726,7 +726,7 @@ Template:
   - `draft` and the subcategory ranking for `base`: the `es` deficit while any (D-54); then the source shortfall, so `es` drafting goes past its target; even weights (D-40) when both are zero.
   - Simulation bottlenecks are information, not weights.
 - Consequences: `qgen report --locale L`, `--simulate`'s target check and `--cost` (`es` sources past the target) use it. Whether `es` grows past 5000 is part of the release budget (plan 70 task 463).
-- Supersedes / related: D-40, D-53, D-54 (amends), D-75, D-78, D-81; pm decision 37
+- Supersedes / related: D-40, D-53, D-54 (amends), D-75, D-78, D-81; pm decision 37; amended by D-99 (regional bundles: 2000 approved each)
 
 ## D-85: Base bundles and bundle languages
 - Date: 2026-10-12
@@ -924,3 +924,18 @@ Template:
   - $100 app credit recouped at $1,000 gross; free DLC costs no app credit.
   - Professional checks still owed before PUB-6 signup: tax advisor (business registration, W-8BEN treaty rate, VAT/small-business threshold, income tax, DSA address); re-check the ≈ figures (regional matrix, discount rules, comparable prices) in Steamworks at PUB-11.
 - Supersedes / related: D-50, D-94, D-95; OQ-33; PUB-6, PUB-11; pm decisions 66, 67; plans 39, 40, 42
+
+## D-99: Regional packs: 2000 approved each, region's language + en, bundle-scoped taxonomy
+- Date: 2026-10-14
+- Context: RG-5 (15c) with OQ-46 folded in; pm decision 110 (Regional packs at launch (RG-5, OQ-46)), plan 98 (tasks 749, 750). Packs ship as free DLC (pm decision 66, D-98).
+- Decision:
+  - **Target:** every regional bundle 2000 approved questions (`targets.json` entry per bundle, plan 98 task 828). Amends pm decision 37 / D-84's "packs have no target" and D-53's "a bundle without an entry has no targets" for regional bundles.
+  - **Languages:** the region's language + en (`colombia`: es + en); en via `qgen batch --translate en --bundle <id>` (plan 98 task 829).
+  - **Default:** off on the configure screen in every locale (pm decision 33, D-97 unchanged); the family's save keeps base + `colombia` (D-85, D-59).
+  - **Free DLC**, optional install (D-94, D-95, D-98).
+  - **Bundle-scoped taxonomy:** a category or subcategory is bundle + name; names may repeat verbatim across bundles («Historia» in `base` and in `colombia`), still separate entries; unique within a bundle. The 19 `colombia` questions on `base` subcategories move to `colombia`'s own (plan 98 tasks 826, 827).
+  - **Pilot `colombia`:** 102 → 2000 via `qgen batch --bundle colombia`, then its en translation; effort measured: $ per approved (`qgen report --cost`) and the developer's review time per 100 (review tool timestamps, plan 98 task 830).
+  - **More packs** (candidates `mexico`, `argentina`): a new pm decision "More regional bundles at launch?" after the pilot, with its numbers (plan 84).
+  - **Launch doesn't wait:** it ships what `colombia` has then; updates bring the rest.
+- Consequences: `qgen report --simulate` defaults to the locale's default game (`base` for every locale); `--bundles` for packs. Plan 98 builds the rest (taxonomy, `colombia` list, target, `--translate --bundle`, effort report).
+- Supersedes / related: D-43 (uniqueness across bundles), D-49, D-53, D-84 (amends); D-39, D-85, D-94, D-95, D-97, D-98; OQ-46; RG-5; pm decisions 33, 37, 66, 110; plans 84, 98

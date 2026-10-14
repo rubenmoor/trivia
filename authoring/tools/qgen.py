@@ -1991,14 +1991,16 @@ def target_check(locale, pool=None):
 def report_simulate(args):
     """Games per new player until the first repeat (plan 62, CT-2; plan 65), information only; exit code = D-75's target check."""
     locales = args.locale.split(",") if args.locale else translations.LAUNCH
-    all_bundles = [b["id"] for b in load_json(layout.BUNDLES)["bundles"]]
+    bundles = load_json(layout.BUNDLES)["bundles"]
+    default = {l: [next((b["id"] for b in bundles if b.get("kind") == "base" and l in b.get("languages", [])), "base")]
+               for l in locales}  # the locale's default game: its first base bundle, packs off (D-99)
     modes = SIM_MODES if args.mode == "all" else (args.mode or "solo").split(",")
     groups = args.age_group.split(",") if args.age_group else [g["id"] for g in load_age_groups()["groups"]]
     player = args.player or "both"
     if player not in ("strong", "typical", "both") or set(modes) - set(SIM_MODES):
         sys.exit(f"--simulate: --player strong|typical|both, --mode {'|'.join(SIM_MODES)}|all")
     models = ["strong", "typical"] if player == "both" else [player]
-    cells = [{"locale": l, "bundles": args.bundles.split(",") if args.bundles else all_bundles if l == "es" else ["base"],
+    cells = [{"locale": l, "bundles": args.bundles.split(",") if args.bundles else default[l],
               "mode": m, "players": (args.players or 4) if m in SIM_MULTI else 1, "age_group": g, "player": p,
               "seeds": args.seeds}
              for l in locales for m in modes for g in groups for p in models]
@@ -4300,7 +4302,7 @@ def main():
                     help="games per new player until the first repeat on the engine (plan 62, plan 65, information only); exit 1 if a launch language misses D-75's target")
     rp.add_argument("--locale", help="progress vs. targets for this locale (default es); with --simulate: "
                     "comma-separated (default: es,en,de, D-78)")
-    rp.add_argument("--bundles", help="with --simulate: comma-separated (default: es every bundle, else base; until RG-5)")
+    rp.add_argument("--bundles", help="with --simulate: comma-separated (default: the locale's first base bundle, packs off)")
     rp.add_argument("--age-group", help="with --simulate: comma-separated (default: all four)")
     rp.add_argument("--mode", help="with --simulate: solo|rr-coop|rr-competitive|timed|all (default solo); "
                     "with --played: one mode (default every mode)")
