@@ -64,6 +64,20 @@ const ENDONYMS: Record<string, string> = {
   de: "Deutsch",
 };
 
+/** A mod's catalog (plan 117): merged over a UI language, or a new UI language on `base` (default `en`).
+ * Before `initLang`; question locales stay `LOCALES`. */
+export function addCatalog(locale: string, over: Record<string, unknown>, opts: { endonym?: string; base?: string } = {}): void {
+  if (Object.hasOwn(CATALOGS, locale)) {
+    CATALOGS[locale] = merge(CATALOGS[locale], over as Override);
+    return;
+  }
+  const base = CATALOGS[opts.base ?? "en"];
+  if (!base) throw new Error(`i18n.add: unknown base ${opts.base}`);
+  CATALOGS[locale] = merge(base, over as Override);
+  UI_LANGS.push(locale);
+  ENDONYMS[locale] = opts.endonym ?? locale;
+}
+
 export function endonym(tag: string, kind: "ui" | "questions"): string {
   return kind === "questions" && tag === "es" ? "Español" : (ENDONYMS[tag] ?? tag);
 }

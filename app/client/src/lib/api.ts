@@ -1,12 +1,14 @@
 import * as engine from "../engine/api.ts";
-import { gameChoice, jokersUsed, playerMode } from "../engine/game.ts";
+import { gameChoice, jokersUsed, playerMode, view } from "../engine/game.ts";
+import { seededRng } from "../engine/rng.ts";
 import type { Outlook } from "../engine/outlook.ts";
 export type { Outlook };
 import { bundlesFor } from "../engine/pool.ts";
 import { setFlag as saveFlag, setReported, type FlagInput } from "../engine/save.ts";
 import { newest, withDefaults, type EngineData, type SaveData } from "../engine/state.ts";
 import { messageOf } from "./http.ts";
-import { language as fetchLanguage, localeSupply, read, run, type DataScope } from "./engine.ts";
+import { language as fetchLanguage, localeSupply, read, run, type DataScope, type Route } from "./engine.ts";
+import { emit, runAfter, runBefore } from "./mods.ts";
 import type { Choice, Difficulty, Flagged, Game, GameMode, JokerBudget, JokerEvent, JokerName, Language, Player, Supply } from "./types.ts";
 
 // The game's only door to the referee: the TS engine on an in-memory save, persisted by lib/store.ts (plan 50, PORT-7).
@@ -189,10 +191,50 @@ export async function playJoker(body: {
   subcategory?: string;
   index?: number;
 }): Promise<{ game: Game; event: JokerEvent }> {
-  return run((save, data, io) => engine.gameAction(save, data, io, "joker", { ...body })) as Promise<{
-    game: Game;
-    event: JokerEvent;
-  }>;
+  return hooked("joker", body, "game") as Promise<{ game: Game; event: JokerEvent }>;
+}
+
+/** The newest game as it was before an action, for the mods' events (plan 117). */
+interface Before {
+  id: number;
+  result: Game["result"];
+  question: string | null;
+  level: number;
+  /** The running game's view, kept only when a `new` abandons it. */
+  game: Game | null;
+}
+
+/** An engine action between the mods' `before` and `after` hooks; emits the game events. */
+async function hooked(action: string, input: object, scope: DataScope): Promise<{ game: Game | null; event?: JokerEvent }> {
+  const body = runBefore(action, { ...input });
+  const seen: { before: Before | null } = { before: null };
+  const route: Route<{ game: Game | null; event?: JokerEvent }> = (save, data, io) => {
+    const row = newest(save.games);
+    if (row) {
+      const running = row.result === null;
+      // A throwaway rng: the view's joker trials mustn't use up the action's.
+      const game = action === "new" && running ? view(save, data, { ...io, rng: seededRng(0) }) : null;
+      seen.before = { id: row.id, result: row.result, question: row.state.current ?? null, level: row.state.level, game };
+    }
+    return engine.gameAction(save, data, io, action, body as Record<string, unknown>);
+  };
+  const out = await run(route, scope);
+  events(action, body, seen.before, out.game);
+  runAfter(action, out.game);
+  return out;
+}
+
+function events(action: string, body: GameActionBody, before: Before | null, game: Game | null): void {
+  if (before?.result === null && before.game && game && game.id !== before.id) {
+    emit("game:end", { game: { ...before.game, result: "abandoned" }, result: "abandoned" });
+  }
+  if (action === "answer" && before?.question && game?.last) {
+    emit("question:answered", { id: before.question, level: before.level, index: body.index ?? -1, correct: game.last.correct });
+  }
+  if (action === "new" && game) emit("game:start", { game });
+  if (game && before?.id === game.id && before.result === null && game.result !== null) {
+    emit("game:end", { game, result: game.result });
+  }
 }
 
 /** A game action on the engine (engine/api.ts); returns the game afterwards. */
@@ -201,7 +243,7 @@ export async function gameAction(
   body: GameActionBody = {},
 ): Promise<Game | null> {
   const scope = action === "new" ? "next" : "game";
-  return (await run((save, data, io) => engine.gameAction(save, data, io, action, { ...body }), scope)).game;
+  return (await hooked(action, body, scope)).game;
 }
 
 /** The stored UI and question language, and the options (plan 68). */

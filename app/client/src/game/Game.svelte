@@ -12,6 +12,7 @@
   import { t } from "../lib/i18n.ts";
   import { listenPads } from "../lib/gamepad.svelte.ts";
   import { listen, pushScope, type Action } from "../lib/input.svelte.ts";
+  import { emit } from "../lib/mods.ts";
   import type { Game, GameMode, JokerBudget, JokerEvent, Flagged, Supply } from "../lib/types.ts";
   import FlagDialog from "./FlagDialog.svelte";
   import FlagList from "./FlagList.svelte";
@@ -167,6 +168,8 @@
       await tick();
       await Promise.race([questionRef?.ready() ?? Promise.resolve(), sleep(PRELOAD_MAX_MS)]);
     }
+    emit("screen", { name: next[0].toUpperCase() + next.slice(1) });
+    if (next === "question" && game?.question) emit("question:shown", { id: game.question.id, level: game.level });
     black = false;
     await sleep(FADE_MS);
     busy = false;

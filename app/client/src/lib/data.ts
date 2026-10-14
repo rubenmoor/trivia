@@ -4,6 +4,7 @@ import {
 } from "../engine/pool.ts";
 import { engineData, mergeNames, NO_NAMES, type EngineData } from "../engine/state.ts";
 import { call } from "./http.ts";
+import { runDataHooks } from "./mods.ts";
 
 /** A data file's JSON; null on 404 if `optional`, else a readable Error. */
 async function get(file: string, optional = false): Promise<unknown> {
@@ -77,7 +78,7 @@ function modSubcategories(file: unknown): { slugs: string[]; subs: string[] } | 
 /** The locale's pool and its packs' (decision 66), bundles.json, age-groups.json, every bundle's categories file
  * and names files → engineData. A bundle without a categories file has none (categories.load()); a pack
  * without a pool file isn't offered (withPacks). Mod bundles (decision 128) are packs checked by modPool;
- * a broken one is left out like a pack without a file, its issues in modIssues(). */
+ * a broken one is left out like a pack without a file, its issues in modIssues(). Then the mods' data hooks (plan 117). */
 async function load(locale: string): Promise<EngineData> {
   const [pool, bundles, ageGroups] = await Promise.all(
     [poolFile(locale), "bundles.json", "age-groups.json"].map((f) => get(f)),
@@ -123,12 +124,15 @@ async function load(locale: string): Promise<EngineData> {
     tax.slugs.forEach((s) => slugs.add(s));
     tax.subs.forEach((s) => subs.add(s));
   });
-  const { pool: questions, bundles: parsed } = withPacks(parsePool(pool), all, locale, packs);
+  const packed = withPacks(parsePool(pool), all, locale, packs);
+  const { questions, bundles: parsed, ageGroups: groups } = runDataHooks({
+    locale, questions: packed.pool, bundles: packed.bundles, ageGroups: parseAgeGroups(ageGroups),
+  });
   const names = locale === "es" ? NO_NAMES : mergeNames(await Promise.all(
     parsed.filter((b) => b.source !== "mod" || byBundle[b.id]).map((b) => {
       const file = bundleFile(b.id, `names.${locale}.json`);
       return b.source === "mod" ? modGet(file) : get(file, true);
     }),
   ));
-  return engineData(questions, loadCategories(bundles, byBundle), parsed, parseAgeGroups(ageGroups), locale, names, poolHash(pool));
+  return engineData(questions, loadCategories(bundles, byBundle), parsed, groups, locale, names, poolHash(pool));
 }

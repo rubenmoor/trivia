@@ -4,11 +4,13 @@ import { flushSync, mount, unmount } from "svelte";
 import * as game from "../engine/game.ts";
 import { music, sfx } from "../game/sound.svelte.ts";
 import * as api from "./api.ts";
+import type { AgeGroup, Bundle, PoolQuestion } from "../engine/pool.ts";
 import { buildInfo } from "./build.ts";
 import { read, run } from "./engine.ts";
 import { messageOf } from "./http.ts";
-import { fill, lang, t } from "./i18n.ts";
+import { addCatalog, fill, lang, t } from "./i18n.ts";
 import { lastDevice, pushScope } from "./input.svelte.ts";
+import type { Game } from "./types.ts";
 
 export interface ModInfo {
   id: string;
@@ -34,7 +36,33 @@ export interface ModError {
 export interface ModEvents {
   /** After the game is mounted. */
   ready: Record<string, never>;
+  /** After a screen switch; `name` as in `game/screens/` (`Question`). */
+  screen: { name: string };
+  /** After a successful `new`. */
+  "game:start": { game: Game };
+  /** A game's `result` went from null to won/lost/abandoned (a `new` abandons the running game). */
+  "game:end": { game: Game; result: NonNullable<Game["result"]> };
+  /** The Question screen is shown, its media ready. */
+  "question:shown": { id: string; level: number };
+  /** After `answer`; `index` as chosen. */
+  "question:answered": { id: string; level: number; index: number; correct: boolean };
 }
+
+/** What a data hook sees per locale load; mod questions have `<mod id>:<id>` ids (decision 128). */
+export interface ModData {
+  locale: string;
+  questions: PoolQuestion[];
+  bundles: Bundle[];
+  ageGroups: AgeGroup[];
+}
+
+/** Gets a copy: change it in place or return a partial replacement (arrays filtered, mapped, extended). */
+export type DataHook = (data: ModData) => Partial<Omit<ModData, "locale">> | void;
+/** `action`: a `gameAction` name or `joker`; gets a copy of the body: change it in place or return a new one.
+ * The engine still validates it. */
+export type BeforeHook = (action: string, body: Record<string, unknown>) => Record<string, unknown> | void;
+/** A copy of the game after the action; null after some actions. */
+export type AfterHook = (action: string, game: Game | null) => void;
 
 /** Same instances as importing our modules by path (`/lib/api.js`); exports are read-only. */
 export interface ModModules {
@@ -56,6 +84,15 @@ export interface TriviaApi {
   mod?: ModInfo;
   modules: ModModules;
   on<E extends keyof ModEvents>(event: E, fn: (payload: ModEvents[E]) => void): () => void;
+  /** Runs per locale load (lib/data.ts), in run order; a throw leaves the data as it was. */
+  data(fn: DataHook): () => void;
+  /** Around game actions and jokers (lib/api.ts). */
+  actions: { before(fn: BeforeHook): () => void; after(fn: AfterHook): () => void };
+  i18n: {
+    /** A catalog over a UI language (deep merge; `es-ES` is its own), or a new UI language (`opts.endonym`)
+     * on `opts.base` (default `en`); question languages stay ours. Call in `setup`: later calls apply after a reload. */
+    add(locale: string, catalog: Record<string, unknown>, opts?: { endonym?: string; base?: string }): void;
+  };
   /** A stylesheet after ours: `trivia.css(new URL("./x.css", import.meta.url))`. */
   css(href: string | URL): void;
 }
@@ -99,6 +136,7 @@ export function registrations<F>(kind: string): Registration<F>[] {
 }
 
 function register(mod: string, kind: string, fn: unknown): () => void {
+  if (typeof fn !== "function" && kind !== "i18n") throw new TypeError(`${kind}: not a function`);
   if (failed.has(mod)) return () => {};
   const reg: Registration = { mod, kind, fn };
   regs.push(reg);
@@ -122,6 +160,70 @@ export function emit<E extends keyof ModEvents>(event: E, payload: ModEvents[E])
     } catch (e) {
       hookFailed(reg, e);
     }
+  }
+}
+
+/** A sync hook's result; a Promise counts as a failure. */
+function sync(out: unknown): unknown {
+  if (out instanceof Promise) throw new TypeError("hook must not be async");
+  return out;
+}
+
+const isObject = (v: unknown): v is Record<string, unknown> => !!v && typeof v === "object" && !Array.isArray(v);
+
+/** lib/data.ts, before engineData: each data hook on a copy, in run order. */
+export function runDataHooks(data: ModData): ModData {
+  let out = data;
+  for (const reg of registrations<DataHook>("data")) {
+    try {
+      const copy = structuredClone(out);
+      const r = sync(reg.fn(copy));
+      const next = { ...copy, ...(isObject(r) ? r : {}), locale: out.locale };
+      if (![next.questions, next.bundles, next.ageGroups].every(Array.isArray)) throw new TypeError("data hook: not arrays");
+      out = next;
+    } catch (e) {
+      hookFailed(reg, e);
+    }
+  }
+  return out;
+}
+
+/** lib/api.ts: the body after every `before` hook. */
+export function runBefore<B extends object>(action: string, body: B): B {
+  let out = body;
+  for (const reg of registrations<BeforeHook>("actions:before")) {
+    try {
+      const copy = structuredClone(out) as Record<string, unknown>;
+      const r = sync(reg.fn(action, copy));
+      if (r !== undefined && !isObject(r)) throw new TypeError("before hook: not an object");
+      out = (r ?? copy) as B;
+    } catch (e) {
+      hookFailed(reg, e);
+    }
+  }
+  return out;
+}
+
+/** lib/api.ts: each `after` hook with its own copy of the game. */
+export function runAfter(action: string, game: Game | null): void {
+  for (const reg of registrations<AfterHook>("actions:after")) {
+    try {
+      const out: unknown = reg.fn(action, structuredClone(game));
+      if (out instanceof Promise) out.catch((e: unknown) => hookFailed(reg, e));
+    } catch (e) {
+      hookFailed(reg, e);
+    }
+  }
+}
+
+type CatalogReg = { locale: string; catalog: Record<string, unknown>; opts?: { endonym?: string; base?: string } };
+let catalogsApplied = false;
+
+function applyCatalog(reg: Registration<CatalogReg>): void {
+  try {
+    addCatalog(reg.fn.locale, reg.fn.catalog, reg.fn.opts);
+  } catch (e) {
+    hookFailed(reg, e);
   }
 }
 
@@ -157,6 +259,19 @@ function view(mod: ModInfo | null): TriviaApi {
     ...(mod && { mod }),
     modules,
     on: (event, fn) => register(tag(), `on:${event}`, fn),
+    data: (fn) => register(tag(), "data", fn),
+    actions: {
+      before: (fn) => register(tag(), "actions:before", fn),
+      after: (fn) => register(tag(), "actions:after", fn),
+    },
+    i18n: {
+      add(locale, catalog, opts) {
+        Intl.getCanonicalLocales(locale);
+        if (!isObject(catalog)) throw new TypeError("i18n.add: catalog not an object");
+        if (catalogsApplied) addCatalog(locale, catalog, opts);
+        else register(tag(), "i18n", { locale, catalog, opts });
+      },
+    },
     css: linkStyle,
   };
 }
@@ -210,4 +325,7 @@ export async function loadMods(): Promise<void> {
     }
   }
   current = null;
+  // Catalogs of mods that set up fine, before language() and initLang.
+  for (const reg of registrations<CatalogReg>("i18n")) applyCatalog(reg);
+  catalogsApplied = true;
 }
