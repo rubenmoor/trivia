@@ -7009,6 +7009,16 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 ## Checks
 - `npm run check`, `npm test`, `npm run build`, `qgen validate`.
 - Browser: fresh save → language screen; Start flag switches es/en/de (reload); en/de play the Spanish pool with `es` bundles; Esc menu has no language rows; an old save with `{ui, questions}` loads.', '2026-10-14T07:42:09Z', 479);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (127, 5, 'Age group and bundle names in the UI language', 400, 'Seen in `task 1022: In-game «Dificultad y paquetes»: «Desde»/«Hasta» always visible, read-only for age groups`''s browser check: en UI (no en pool, so `decision 156: One language for UI and questions` plays the es pool), Esc → «Dificultad y paquetes» shows the age groups as «Adolescentes», «Jóvenes», «Adultos», «Niños» next to English labels. Runs before `plan 30: Play-test and close-out of age groups and bundles`.
+
+## Fix (one task)
+- Cause: `app/client/src/lib/data.ts` (~line 131) loads `names.<locale>.json` for the question locale (es → `NO_NAMES`), so `app/data/names.en.json` / `names.de.json` (age_groups, bundles) go unused when the pool falls back to es.
+- Age group and bundle display names follow the UI language (`names.<ui language>.json` when it exists); category/subcategory names may stay with the questions.
+- Places: Choice screen, `GameSettings.svelte`, `BundleSelector.svelte`, overlay choice line, credits.
+
+## Checks
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`.
+- Browser: en and de UI show group and bundle names in that language; es unchanged.', '2026-10-14T08:22:43Z', 1022);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -23850,11 +23860,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm decision consequences 50 "…"` for item 7: what changed, by which tasks.
 
 Done when: no doc describes a separate question language setting or Esc menu language rows; `npm run check` passes (docs only otherwise).', '2026-10-14T07:44:37Z', '2026-10-14T07:54:45Z', 1012);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1022, 125, 'In-game «Dificultad y paquetes»: «Desde»/«Hasta» always visible, read-only for age groups', 'work', 'open', NULL, NULL, 'Follow-up of `task 1018: Difficulty: «Desde»/«Hasta» always visible, read-only for age groups`, which did it only on the Choice screen''s configure lines.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1022, 125, 'In-game «Dificultad y paquetes»: «Desde»/«Hasta» always visible, read-only for age groups', 'work', 'done', NULL, '2026-10-14, app/client/src/game/GameSettings.svelte', 'Follow-up of `task 1018: Difficulty: «Desde»/«Hasta» always visible, read-only for age groups`, which did it only on the Choice screen''s configure lines.
 
 - `app/client/src/game/GameSettings.svelte` (Esc menu «Dificultad y paquetes», gamemaster mode) still shows the «Desde»/«Hasta» rows only with «A medida» (`{#if custom}`).
 - Same rule as `Choice.svelte` now (`stepper(…, fixed)`): always show them; with an age group, the group''s span (`spanOf(options.groups, group)`), read-only: −/+ disabled and hidden, no `data-step`/`data-focusable`/`tabindex`, so arrows and the focus ring skip them; editable only with «A medida».
-- Check: browser, a gamemaster game, Esc → «Dificultad y paquetes»: each group shows its window, arrows skip the read-only rows, «A medida» edits by keyboard and mouse.', '2026-10-14T08:20:14Z', NULL, 1018);
+- Check: browser, a gamemaster game, Esc → «Dificultad y paquetes»: each group shows its window, arrows skip the read-only rows, «A medida» edits by keyboard and mouse.', '2026-10-14T08:20:14Z', '2026-10-14T08:22:28Z', 1018);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1023, 127, 'create tasks for plan 127: Age group and bundle names in the UI language', 'split', 'open', 1000, NULL, 'Split plan 127 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-14T08:22:43Z', NULL, 1022);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -26259,6 +26271,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (907, 1016, '2026-10-14T08:05:31Z', '2026-10-14T08:09:27Z', 'done', NULL, 0, 'b65dd323306c550e8b920830d4ac5f998f3938de', 'claude-opus-5-5[1m]', 'a1a90b8f-31e0-43e4-952d-68cc802f8936', 25, 50, 7774, 897511, 32336, 0.59387020000000024, 2040245);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (908, 1017, '2026-10-14T08:09:27Z', '2026-10-14T08:16:15Z', 'done', NULL, 0, '7c83622a85cdb64924f7a14aa6d3c0bb714effe1', 'claude-opus-5-5[1m]', 'a136d091-18f2-4e39-9b47-c96eda01f9df', 37, 74, 15744, 2251174, 71669, 1.3387628, 2040245);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (909, 1018, '2026-10-14T08:16:15Z', '2026-10-14T08:20:21Z', 'done', NULL, 0, '5586510bc833a27d45ecc11ea693d1ed2de2f004', 'claude-opus-5-5[1m]', '8d741a29-f17a-402e-a1f7-f8e318146607', 32, 58, 10737, 1524704, 56254, 0.96994479999999994, 2040245);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (910, 1022, '2026-10-14T08:20:21Z', '2026-10-14T08:22:50Z', 'done', NULL, 0, 'de79f584968b0efa0b300174831e754e68666411', 'claude-opus-5-5[1m]', '7c60809e-6b5d-4d62-88f8-5516322fc4be', 22, 44, 9441, 913866, 42206, 0.70941720000000008, 2040245);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

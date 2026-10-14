@@ -87,6 +87,7 @@
   });
 
   const g = $derived(options?.groups.find((x) => x.id === group));
+  const span = $derived(custom || !options ? difficulty : spanOf(options.groups, group));
 </script>
 
 <div class="backdrop">
@@ -96,10 +97,8 @@
     {#if options}
       <div class="lines">
         {@render stepper("difficulty", t("configure.difficulty"), custom ? t("configure.custom") : (g?.name ?? ""), true)}
-        {#if custom}
-          {@render stepper("start", t("configure.start"), String(difficulty.start))}
-          {@render stepper("end", t("configure.end"), String(difficulty.end))}
-        {/if}
+        {@render stepper("start", t("configure.start"), String(span.start), false, !custom)}
+        {@render stepper("end", t("configure.end"), String(span.end), false, !custom)}
       </div>
       <BundleSelector bundles={options.bundles} selected={bundles} {busy} onchange={(ids) => ((bundles = ids), (error = null))} />
     {/if}
@@ -111,13 +110,15 @@
   </div>
 </div>
 
-{#snippet stepper(id: string, label: string, value: string, first = false)}
+<!-- `fixed`: read-only, out of the focus ring and ↑/↓ -->
+{#snippet stepper(id: string, label: string, value: string, first = false, fixed = false)}
   <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
-  <div class="row" data-step={id} data-focusable data-focus-default={first || undefined} tabindex="0" role="group" aria-label={label}>
+  <div class="row" class:fixed data-step={fixed ? undefined : id} data-focusable={!fixed || undefined}
+    data-focus-default={first || undefined} tabindex={fixed ? undefined : 0} role="group" aria-label={label}>
     <span>{label}</span>
-    <button class="step" onclick={() => step(id, -1)} disabled={busy} tabindex="-1" aria-label={t("overlay.less")}>−</button>
+    <button class="step" onclick={() => step(id, -1)} disabled={busy || fixed} tabindex="-1" aria-label={t("overlay.less")}>−</button>
     <span class="value">{value}</span>
-    <button class="step" onclick={() => step(id, 1)} disabled={busy} tabindex="-1" aria-label={t("overlay.more")}>+</button>
+    <button class="step" onclick={() => step(id, 1)} disabled={busy || fixed} tabindex="-1" aria-label={t("overlay.more")}>+</button>
   </div>
 {/snippet}
 
@@ -173,10 +174,16 @@
     font-weight: 700;
     outline: none;
   }
-  .row:focus,
-  .row:global([data-nav]),
-  .row:hover {
+  .row:not(.fixed):focus,
+  .row:not(.fixed):global([data-nav]),
+  .row:not(.fixed):hover {
     border-color: var(--amber);
+  }
+  .row.fixed .value {
+    color: var(--slate-400);
+  }
+  .row.fixed .step {
+    visibility: hidden;
   }
   .value {
     text-align: center;
