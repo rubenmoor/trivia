@@ -33,6 +33,10 @@ extraResources:
 extraFiles:
   - from: ../client/dist/CREDITS.md
     to: CREDITS.md
+  - from: ../../LICENSE  # D-102
+    to: LICENSE
+  - from: ../../LICENSE-content.md
+    to: LICENSE-content.md
   - from: ../../modding  # player kit and guide (decisions 133, 134)
     to: modding
 npmRebuild: false

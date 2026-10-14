@@ -5,6 +5,7 @@
   "reportUrl": "",
   "description": "Desktop shell for ¡Trivia! (plan 54, SW-2)",
   "author": "Ruben Moor",
+  "license": "MIT",
   "main": "main.mjs",
   "type": "module",
   "scripts": {

@@ -114,7 +114,7 @@ function game(): Credits["game"] {
   return readdirSync(repo)
     .filter((f) => /^LICEN[CS]E/i.test(f))
     .sort()
-    .map((file) => ({ file, title: readFileSync(repo + file, "utf8").trim().split("\n")[0].trim() }));
+    .map((file) => ({ file, title: readFileSync(repo + file, "utf8").trim().split("\n")[0].replace(/^#+/, "").trim() }));
 }
 
 function svelte(): { entry: Credits["libraries"][number]; text: string } {

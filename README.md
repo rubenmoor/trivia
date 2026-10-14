@@ -202,3 +202,10 @@ Question bundles, themes, rules tweaks and full conversions, shared on the Steam
 
 - `nix flake update` updates Node, Python, ImageMagick, Claude Code and `pm` (`flake.lock`); `direnv reload` after editing `flake.nix`.
 - After changing `package-lock.json`, update `npmDepsHash` in `flake.nix` (`nix run nixpkgs#prefetch-npm-deps -- package-lock.json`).
+
+## License
+
+The code is MIT, the questions are not; media, fonts and sounds keep their own licences (D-102).
+- Code, `modding/`: MIT, [`LICENSE`](LICENSE)
+- Questions (`authoring/data/`, `app/data/`): all rights reserved, personal non-commercial play allowed, [`LICENSE-content.md`](LICENSE-content.md)
+- Media, fonts, sounds: per file, `CREDITS.md` in the build
