@@ -9334,14 +9334,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `did=$(pm decision add "Local builds start offline?" --body "<checklist, build commit>" --option "both pass" --option "issues (fill the tables)")`; `pm task-pending-decision 332 "$did"`.
 
 Done when: section written and task 332 waits on the decision.', '2026-10-12T03:48:58Z', '2026-10-12T21:18:49Z', 323);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (332, 56, 'Local builds: record the start test', 'work', 'open', NULL, NULL, 'Part 4 of plan 56. Decision 39 is answered: start test skipped (Steam only, decision 111); nothing to wait for.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (332, 56, 'Local builds: record the start test', 'work', 'done', NULL, '2026-10-13, plans/18-steam-integration.md (start test recorded as skipped per decision 39, SW-5 [x]), plans/project.md (SW-5 row)', 'Part 4 of plan 56. Decision 39 is answered: start test skipped (Steam only, decision 111); nothing to wait for.
 
 - `plans/18-steam-integration.md` "Local build start test": replace the tables'' result column with «skipped, decision 39 (Steam only, decision 111); covered by the Steam beta test (task 263)», date 2026-10-13, build commit 06c39dc. No Windows / non-Nix Linux rows to fill.
 - SW-5 `[x]` in plan 18 with date, files and «start test outside Steam skipped (decision 39)»; drop "offline start test on a clean Windows machine" from SW-5''s line.
 - `plans/project.md` to match.
 - No follow-up tasks, no re-test decision.
 
-Done when: the section records the start test as skipped (not failed), SW-5 `[x]`, `plans/project.md` matches.', '2026-10-12T03:48:58Z', NULL, 323);
+Done when: the section records the start test as skipped (not failed), SW-5 `[x]`, `plans/project.md` matches.', '2026-10-12T03:48:58Z', '2026-10-14T03:53:14Z', 323);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (333, 56, 'Local builds: CI (SW-6) per decision 14', 'work', 'done', NULL, '2026-10-12, AGENTS.md, plans/18-steam-integration.md, plans/11-steam.md, plans/decisions.md (D-73), plans/backlog.md (B-11), plans/project.md; task 261 body: release check owner', 'Part 5 of plan 56. Waits for decision 14 "CI builds (SW-6): in S3 or S5, and with or without media?". Options 2 and 3 also need task 329 done.
 
 - "Move SW-6 to S5" → SW-6 note in `plans/18-steam-integration.md` («moved to S5, decision 14»); `plans/11-steam.md` S3 row SW-1..SW-5, S5 row gains SW-6; line in plan 56''s decision entry in `plans/decisions.md`; `plans/project.md`. No code.
@@ -26032,6 +26032,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (874, 972, '2026-10-14T03:46:51Z', '2026-10-14T03:48:30Z', 'done', NULL, 0, '135347ef7b5659c6b8912c35b922aa1ae7436cd7', 'claude-opus-5-5[1m]', 'ba3bbaec-1007-4e66-85c6-cffa90e41a7b', 16, 26, 7488, 752833, 65799, 0.82682259999999985, 1963349);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (875, 1004, '2026-10-14T03:48:31Z', '2026-10-14T03:51:25Z', 'done', NULL, 0, '9a8a4e9a18c828f6456daf051fe96651742aba97', 'claude-opus-5-5[1m]', 'f258e6f2-54a2-4b2f-ad87-dbe24874713f', 25, 50, 8719, 1254603, 48158, 0.8107646, 1963349);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (876, 1005, '2026-10-14T03:51:25Z', '2026-10-14T03:52:47Z', 'done', NULL, 0, '30ade1edbbefa4f373961a64cc261b4ea3886332', 'claude-opus-5-5[1m]', 'd62e9c83-b952-487e-98cd-6493d622456c', 16, 32, 5077, 621410, 36082, 0.5146059999999999, 1963349);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (877, 332, '2026-10-14T03:52:48Z', '2026-10-14T03:53:18Z', 'done', NULL, 0, 'ef577b6bee5c1aa2a6151d51b77d32998976712e', 'claude-opus-5-5[1m]', '51a9304b-b401-4dbe-966c-9580d1a57980', 10, 18, 2856, 317003, 34756, 0.39864060000000007, 1963349);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

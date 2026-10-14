@@ -127,37 +127,37 @@ Local builds since S3 (SW-5, D-73); the release check (SW-6) and Steam uploads (
   - Report `work/steam/<tag-or-sha>/release-check.{md,json}` (header: version, pool hash, previous tag, kind, save version change; commit, clean tree, result, skips) + `logs/<step>.log`; the JSON is what `trivia-steam upload --checked` reuses.
 
 ## Local build start test
-The developer's check that the local builds start and play offline on machines without the dev setup (SW-5; pm plan 56 task 3). Plan 48 merges it into the S3 platform test. Fill one table per machine, with date and build commit.
+The developer's check that the local builds start and play offline on machines without the dev setup (SW-5; pm plan 56 task 3). Skipped, not failed: decision 39 (Steam only, decision 111); the clean-machine start test is covered by the Steam beta test (task 263). Tables kept as the checklist for that test.
 - **Artefacts:** `trivia-desktop-build` → `app/desktop/release/Trivia-<version>-win-x64.zip`, `Trivia-<version>-linux-x64.tar.gz`; or copy those two files over (USB stick, ~2.5 GB each).
 - **Machines:** Windows x64 without Node/Python; Linux x64 without Nix (e.g. Ubuntu 24.04).
-- **Result:** ✓, ✗ or n/a; a ✗ gets a note on how to reproduce.
+- **Result:** «skipped, decision 39 (Steam only, decision 111); covered by the Steam beta test (task 263)», every row; no rows to fill.
 
 ### Windows x64
-Date: · Build commit:
+Date: 2026-10-13 · Build commit: 06c39dc
 
 | check | result | note |
 |---|---|---|
-| Network off before unpacking | | |
-| Unpack the zip, start `Trivia.exe` (SmartScreen «More info → Run anyway» expected: unsigned) | | |
-| No console window | | |
-| Starts fullscreen; F11 toggles | | |
-| Keyboard-only game to level 3, with an image, an audio and a video question; sound plays | | |
-| «Salir del juego», restart: the player is still there | | |
-| Save at `%APPDATA%\trivia\save\<steamid64 or local>\game.json` | | |
-| `CREDITS.md` in the folder | | |
+| Network off before unpacking | skipped (decision 39) | |
+| Unpack the zip, start `Trivia.exe` (SmartScreen «More info → Run anyway» expected: unsigned) | skipped (decision 39) | |
+| No console window | skipped (decision 39) | |
+| Starts fullscreen; F11 toggles | skipped (decision 39) | |
+| Keyboard-only game to level 3, with an image, an audio and a video question; sound plays | skipped (decision 39) | |
+| «Salir del juego», restart: the player is still there | skipped (decision 39) | |
+| Save at `%APPDATA%\trivia\save\<steamid64 or local>\game.json` | skipped (decision 39) | |
+| `CREDITS.md` in the folder | skipped (decision 39) | |
 
 ### Linux x64 (no Nix)
-Date: · Build commit:
+Date: 2026-10-13 · Build commit: 06c39dc
 
 | check | result | note |
 |---|---|---|
-| Network off before unpacking | | |
-| `tar xzf`, `cd Trivia-<version>-linux-x64`, `./trivia` | | |
-| Starts fullscreen; F11 toggles | | |
-| Keyboard-only game to level 3, with an image, an audio and a video question; sound plays | | |
-| «Salir del juego», restart: the player is still there | | |
-| Save at `~/.config/trivia/save/<steamid64 or local>/game.json` | | |
-| `CREDITS.md` in the folder | | |
+| Network off before unpacking | skipped (decision 39) | |
+| `tar xzf`, `cd Trivia-<version>-linux-x64`, `./trivia` | skipped (decision 39) | |
+| Starts fullscreen; F11 toggles | skipped (decision 39) | |
+| Keyboard-only game to level 3, with an image, an audio and a video question; sound plays | skipped (decision 39) | |
+| «Salir del juego», restart: the player is still there | skipped (decision 39) | |
+| Save at `~/.config/trivia/save/<steamid64 or local>/game.json` | skipped (decision 39) | |
+| `CREDITS.md` in the folder | skipped (decision 39) | |
 
 ## Steam Cloud test
 The developer's check that Auto-Cloud syncs one save per Steam user between machines (plan 87 part 4). Fill the table once, with date and build commit; agents don't run it.
@@ -361,7 +361,7 @@ A mod is a folder with a `mod.json` (pm plan 112). The validator `readManifest` 
 - [x] SW-2 Electron shell skeleton: window, fullscreen toggle, loads `app/client/dist/`, preload bridge; pick the Steam binding (steamworks-ffi-node or steamworks.js: maintenance, overlay, Electron version). *Done 2026-10-12 (pm plan 54, D-71): `app/desktop/` (`main.mjs`, `resolve.mjs`, `preload.cjs`, `package.json`), `app/client/src/lib/desktop.ts`, `lib/engine.ts` (`MemoryStore`), `Overlay.svelte`, `flake.nix` (`trivia-desktop`, `pkgs.electron` 43); whole game without Python checked over CDP under Xvfb (task 318: level 12, every joker, undo, abandon, media, samples, clean console). Developer play test: plays fine (pm decision 29, 2026-10-13). Binding: steamworks-ffi-node (pm decision 28, D-63; task 353).*
 - [x] SW-3 `FileStore` for the save in the user data folder (atomic writes, Windows retry). *Done 2026-10-12 (pm plan 55, D-72): `app/desktop/save.mjs`, `main.mjs` (userData path, `save:*` IPC, write queue, quit wait, `--import-save`), `preload.cjs`, `lib/desktop.ts`, `lib/store.ts` (`FileStore`, shared `WriteQueue`), `lib/engine.ts` (store choice, notice, `saveError()`), `engine/save.ts` (`SaveNewerError`), start-screen notice, «Salir» flush, `es` catalog; kill loop (60 × `SIGKILL` of main mid-write, 1–5 MB documents): `game.json` always one of the documents sent, stale `.tmp` dropped, no backup.*
 - [x] SW-4 Screen check at 1280×800 and 1280×720; fixes. *Done 2026-10-12 (pm plan 46): letter picker for a pad (`LetterPicker.svelte`); throw-away Playwright walk (pm decision 6) of every screen and state at 1280×800, 1280×720, 1920×1080, 3840×2160, keyboard prompts and Xbox glyphs (faked standard pad), longest pool content, 9 names of 30 characters, 11 levels short, error box; computed font sizes < 9 px reported. Fixes: credit line 0.8 → 0.9 u; «medio no disponible» chip `rem` → `--u`; pad glyph labels (LB/RB/LT/RT) 10.5 → 13.5 viewBox units (7 → 9.2 px at 1280); supply report in four columns when more than 4 levels are short, Choice gaps 0.8 u while it shows (the title left the screen at 720p and 1080p). 1080p unchanged elsewhere (ImageMagick `compare`). Credit line and «Respuesta final» stay in the bottom margin (pm decision 52). Real Deck check: plan 48.*
-- [ ] SW-5 Local Windows and Linux builds with electron-builder; offline start test on a clean Windows machine. *Plan: pm plan 56 (Windows zip + Linux tar.gz, media staged from the pool, `trivia-desktop-build`, start-test checklist).*
+- [x] SW-5 Local Windows and Linux builds with electron-builder. *Done 2026-10-13 (pm plan 56, D-73): `app/desktop/electron-builder.yml`, `stage-media.mjs`, `after-pack.mjs` (Linux `--no-sandbox` launcher), own `package-lock.json`, `main.mjs` `roots()` packaged branch, `flake.nix` (`trivia-desktop-build`); Windows zip + Linux tar.gz, media staged from the pool; packaged Linux build played offline (task 330); start test outside Steam skipped (decision 39).*
 - [ ] SW-6 Local CI: per-commit checks (AGENTS.md) and a release check before every Steam upload ("Builds and depots"); no GitHub Actions. *Moved to S5 (pm decision 14, D-73); per-commit checks in AGENTS.md since 2026-10-12; release check: `trivia-release-check` (2026-10-13, task 679); upload: `trivia-steam upload --branch beta` (2026-10-13, task 680).*
 - [ ] SW-7 Steamworks app: App ID, depots, launch options, supported languages, Cloud path.
 - [x] SW-8 Steam binding steamworks-ffi-node (D-63): overlay, achievements, on-screen keyboard, language; the game runs without Steam. *Done 2026-10-13 (pm plan 85): bridge `window.trivia.steam` (`main.mjs` init/callbacks/shutdown, `preload.cjs`, `lib/desktop.ts` `SteamBridge`; App ID 480 until SW-7, `TRIVIA_STEAM_APPID`; SDK libs gitignored in `app/desktop/steamworks_sdk/` or the flake's SDK 1.62, decision 69), Steam language → `guessTag()`, overlay Windows only (D-92), floating keyboard for the name, `GetInputTypeForHandle` glyphs, rich presence (`steam-presence.vdf`); `unlock()`/`steamId()` pass-through for SW-11 and Cloud. Packaging: task 650. Developer check under Steam: pm task 652's decision.*

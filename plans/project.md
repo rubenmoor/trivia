@@ -136,6 +136,7 @@ Everything that only matters for a release on Steam (desktop shell, controller, 
 
 - [x] S3: SW-2 Electron desktop shell skeleton, `trivia-desktop`, whole game without Python (2026-10-12, pm plan 54, D-71; pending: play test decision 29, Steam binding decision 28) — [`18`](18-steam-integration.md)
 - [x] S3: SW-3 File saves: `save/game.json` in the user's config folder, atomic writes, backups, `--import-save` (2026-10-12, pm plan 55, D-72) — [`18`](18-steam-integration.md)
+- [x] S3: SW-5 Local builds: Windows zip + Linux tar.gz, media staged from the pool, `trivia-desktop-build`; packaged Linux build plays offline; start test outside Steam skipped (2026-10-13, pm plan 56, D-73, decision 39) — [`18`](18-steam-integration.md)
 - [x] S3: SW-6 resolved: no GitHub Actions; CI = local per-commit checks (AGENTS.md), release check moved to S5 (2026-10-12, pm decision 14, D-73) — [`18`](18-steam-integration.md)
 - [x] S3: IN-4, IN-5 Gamepad input and button glyphs (Xbox/PlayStation, drawn in-house) (2026-10-12, pm plan 45; real-pad check pending) — [`14`](14-input.md)
 - [x] S3: SW-4 Deck layout: letter picker for names with a pad, screen check at 1280×800/720 and 4K, size rule ≥ 0.9 u (2026-10-12, pm plan 46; real Deck: plan 48) — [`18`](18-steam-integration.md)
