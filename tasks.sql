@@ -7259,6 +7259,38 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - `trivia-desktop-build --dir` ships WebP/Opus/re-encoded WebM under the shipped names; images fit 3840×2160; the content and each DLC depot are within budget; the smoke game and `credits_check.mjs` pass.
 - `trivia-release-check`''s `media-budget` step runs and fails over budget or on a missing file.
 - Dev runs against the raw cache still play every media type.', '2026-10-14T22:12:22Z', 260);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (133, 5, 'No supply report on the Start screen', 400, 'Part 6 of `plan 5: masterplan` (milestone 5: Age groups and bundles in the game). Start shows `SupplyReport` («No hay suficientes preguntas para una partida completa…», GF-5) for `defaultChoice`, before any player, group or bundle is chosen: it checks a choice nobody made, and it confused the developer. Start never shows a supply report; the supply check stays on the Choice screen, where the choice is made. Runs before `plan 30: Play-test and close-out of age groups and bundles` (390), whose `task 479: Close out AG-7 and BN-6` waits on the repeated play-test.
+
+## Today
+- `app/client/src/game/Game.svelte`: `supply` state from `fetchGame()` (`refresh`, line ~160) and from a refused action''s `GameError.supply` (`request`, line ~263); passed to `S.Start` (line ~617).
+- `app/client/src/game/screens/Start.svelte`: `supply` prop, `{#if supply}<SupplyReport {supply} />{/if}`, header comment names GF-5.
+- `app/client/src/lib/api.ts` `fetchGame()` → `engine/api.ts` `getGame()`: `{ game, supply: game.supply(save, data) }`, a full supply matching on every refresh.
+- Other readers of `getGame`''s `supply` (checked 2026-10-14):
+  - `engine/game.test.ts`: fixture replay compares recorded `get_game` responses (Python recordings, `fixtures/game/*.json`, ~20 files with `supply`); the plan 65 test asserts `getGame(...).body.supply.ok`.
+  - No other: `lib/engine.ts` `nextLocale` calls `game.supply` directly; `authoring/tools/supply.ts` uses `selection.supply`; desktop, achievements, `modding/` docs don''t read it.
+- Choice screen (`game/screens/Choice.svelte`): own supply via `fetchChoice`, its `SupplyReport`, «¡A jugar!» disabled while short, `refused` (`GameError`, carries `supply`) for a refused `new`.
+
+## Change
+- `Start.svelte`: drop the `supply` prop, the `SupplyReport` import and markup, `Supply` type import, GF-5 in the comment.
+- `Game.svelte`: drop the `supply` state, its `Supply` import if unused, `{supply}` on `S.Start`; `request` no longer sets it from `GameError.supply` (a refused `new` shows on the Choice screen via `refused`; mid-game `settings` refusals stay in `GameSettings.svelte`).
+- `getGame` / `fetchGame`: drop `supply` (no reader left; saves a matching per refresh): `Reply<{ game: Game | null }>`, `Promise<{ game: Game | null }>`; doc comment "view first, then supply" updated.
+  - `game.test.ts` replay: strip `supply` from recorded `get_game` bodies always (as it already does when `seen` is set); fixtures stay untouched.
+  - Plan 65 test: `game.supply(save, d).ok` instead of `getGame(...).body.supply.ok`.
+- Stays: `GameError.supply`, `errors.ts` `supply_short`, `SupplyReport.svelte` (Choice), `SupplyNotice` unchanged (`decision 31: Low-supply warning: below how many fresh games left (K) should the game start warn?`), `nextLocale`''s supply check (`decision 156: One language for UI and questions`).
+
+## Specs and docs
+- `plans/03-game-flow.md`: "Supply check" bullet: the Choice screen (not Start) reports which levels lack questions; GF-5''s note: `GET /api/game` → `supply` on Start retired, the check lives on the Choice screen (this plan).
+- `plans/04-ui-tv-display.md` "Start": one bullet: no supply report; the supply check is on the Choice screen ("Choice" section already says so).
+- `directory.md`: `Start.svelte` entry without `SupplyReport`; `SupplyReport.svelte` entry: Choice screen.
+- `trivia-gallery`: drop the `start-supply-report` shot (`authoring/tools/gallery.py` `start()` and the shot list), keep `choice-supply-report`; `authoring/tools/gallery_saves.mjs` comment of `saves.blocked`: Choice only.
+
+## Checks
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`.
+- Browser (`TRIVIA_MUTE=1`, `npm run dev -w app/client`, `TRIVIA_SAVE_DIR` with every question blocked, e.g. the gallery''s `blocked` save): Start shows no report; «¡Jugar!» → player → Choice shows the report, «¡A jugar!» disabled; by mouse and keyboard (IN-1).
+- `trivia-gallery --only choice-supply-report` still shoots.
+
+## Tasks
+- One task: the change, specs, docs and gallery above (small, one commit).', '2026-10-14T23:12:01Z', 1061);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -24498,11 +24530,13 @@ Milestone 5 lets players choose an age group and the bundles to play before a se
 - Batches per age group (AG-8), targets from the windows (D-53).
 - Mixed-age sessions; log in `plans/open-questions.md` if it comes up.', '2026-10-14T23:10:12Z', NULL, 1057, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1060, 5, 'write plan: No supply report on the Start screen', 'plan', 'dropped', 1000, 'duplicate: task 1058 (create tasks for plan 5) adds the plan-writing task for part 6', 'Write the plan for part 6 of `plan 5: masterplan` (milestone 5: Age groups and bundles in the game): Start never shows a supply report; the supply check stays on the Choice screen only. Details, files and checks: the masterplan''s "Part 6". `pm plan add 5 "No supply report on the Start screen" --priority 400`, so it runs before `plan 30: Play-test and close-out of age groups and bundles` (390), whose `task 479: Close out AG-7 and BN-6` waits on the repeated play-test.', '2026-10-14T23:10:12Z', '2026-10-14T23:10:17Z', 1057, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1061, 5, 'write plan: No supply report on the Start screen', 'plan', 'open', 1000, NULL, 'Write the plan for part 6 of `plan 5: masterplan` (milestone 5: Age groups and bundles in the game): Start never shows a supply report; the supply check stays on the Choice screen only. Why, today''s code, the change, what stays, specs and checks: the masterplan''s "Part 6".
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1061, 5, 'write plan: No supply report on the Start screen', 'plan', 'done', 1000, '2026-10-14, plan 133: No supply report on the Start screen (tasks.sql only)', 'Write the plan for part 6 of `plan 5: masterplan` (milestone 5: Age groups and bundles in the game): Start never shows a supply report; the supply check stays on the Choice screen only. Why, today''s code, the change, what stays, specs and checks: the masterplan''s "Part 6".
 - `pm plan add 5 "No supply report on the Start screen" --priority 400`, so it runs before `plan 30: Play-test and close-out of age groups and bundles` (390), whose `task 479: Close out AG-7 and BN-6` waits on the repeated play-test (decision 155, pending).
 - Files are under `app/client/src/game/` (`screens/Start.svelte`, `screens/Choice.svelte`, `Game.svelte`), not `app/client/src/screens/` as the masterplan says.
 - The plan checks the other readers of `fetchGame()`''s `supply` (achievements, `trivia-gallery` demo saves, desktop, tests) and drops it only if unused.
-- Binding: `decision 31: Low-supply warning: below how many fresh games left (K) should the game start warn?` (`SupplyNotice` unchanged).', '2026-10-14T23:10:57Z', NULL, 1058, 0);
+- Binding: `decision 31: Low-supply warning: below how many fresh games left (K) should the game start warn?` (`SupplyNotice` unchanged).', '2026-10-14T23:10:57Z', '2026-10-14T23:12:03Z', 1058, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1062, 133, 'create tasks for plan 133: No supply report on the Start screen', 'split', 'open', 1000, NULL, 'Split plan 133 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-14T23:12:01Z', NULL, 1061, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -27232,6 +27266,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (980, 1054, '2026-10-14T22:16:05Z', '2026-10-14T23:07:47Z', 'failed', 'interrupted', NULL, 'c01ab62f15b90417523403ccff6d5c38e087046f', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2296074);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (981, 1057, '2026-10-14T23:09:23Z', '2026-10-14T23:10:24Z', 'done', NULL, 0, '6fcd1ff53b6661c03824a0c0ab53be59b52faa9c', 'claude-opus-5-5[1m]', '99b7772f-7059-4267-9348-4e66a3c1a073', 12, 22, 5960, 446693, 46004, 0.57665859999999991, 2472458);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (982, 1058, '2026-10-14T23:10:24Z', '2026-10-14T23:11:06Z', 'done', NULL, 0, 'adb4aec262e3962918081f981d1fcc24fec0c361', 'claude-opus-5-5[1m]', 'f1802c00-311a-4de5-b19f-76ec823d6c2e', 9, 18, 2200, 343942, 35293, 0.3952044, 2472458);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (983, 1061, '2026-10-14T23:11:06Z', '2026-10-14T23:12:11Z', 'done', NULL, 0, '1eef62babf10627ef9bb9f70176a12c47d966d92', 'claude-opus-5-5[1m]', '9d562137-89a7-4b3c-8a94-d737b0711814', 16, 30, 6375, 688821, 51241, 0.6753122, 2472458);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
