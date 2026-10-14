@@ -85,6 +85,7 @@ export const en = {
     statsCategories: "categories",
     statsDifficulty: "difficulty",
     cheats: "Gamemaster cheats",
+    mods: "Mods",
     replace: "Replace question",
     seen: "seen",
     unseen: "not seen",

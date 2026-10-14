@@ -41,6 +41,14 @@ export default defineConfig({
     cssCodeSplit: true,
     modulePreload: false,
     rolldownOptions: {
+      // Svelte's runtime with every export: precompiled mod components import it from `/vendor/svelte/…` (plan 117).
+      input: {
+        index: `${client}index.html`,
+        "svelte-index": "svelte",
+        "svelte-client": "svelte/internal/client",
+        "svelte-version": "svelte/internal/disclose-version",
+      },
+      preserveEntrySignatures: "strict",
       output: {
         preserveModules: true,
         preserveModulesRoot: "src",

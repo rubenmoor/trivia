@@ -85,6 +85,7 @@ export const de = {
     statsCategories: "Themen",
     statsDifficulty: "Schwierigkeit",
     cheats: "Tricks der Spielleitung",
+    mods: "Mods",
     replace: "Frage tauschen",
     seen: "gesehen",
     unseen: "nicht gesehen",

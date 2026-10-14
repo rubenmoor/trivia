@@ -1,6 +1,6 @@
 // Code add-ons (plan 117, decision 131): the shell's /mods.js, each mod's style and entry, `window.trivia`.
 // No stability promise: members and module paths may change between versions.
-import { flushSync, mount, unmount } from "svelte";
+import { flushSync, mount, unmount, type Component } from "svelte";
 import * as game from "../engine/game.ts";
 import { music, sfx } from "../game/sound.svelte.ts";
 import * as api from "./api.ts";
@@ -64,6 +64,24 @@ export type BeforeHook = (action: string, body: Record<string, unknown>) => Reco
 /** A copy of the game after the action; null after some actions. */
 export type AfterHook = (action: string, game: Game | null) => void;
 
+/** `game/screens/*`: the names `screens.replace` and `screens.dom` take. */
+export const SCREENS = ["Start", "Language", "Player", "Choice", "Level", "Select", "Question", "Correct", "Wrong", "Victory"] as const;
+export type ScreenName = (typeof SCREENS)[number];
+/** Plain DOM: draw into `el`; `props` live, as our screen gets them; may return a cleanup. */
+export type DomRender = (el: HTMLElement, props: Record<string, unknown>) => (() => void) | void;
+/** A `screen:<name>` registration. */
+export type ScreenReg = { component: Component<never> } | { render: DomRender };
+export interface MenuRow {
+  label: string;
+  onselect: () => void;
+}
+/** A `screens.show` layer over the game (Game.svelte). */
+export interface ModLayer {
+  render: DomRender;
+  close(): void;
+  fail(e: unknown): void;
+}
+
 /** Same instances as importing our modules by path (`/lib/api.js`); exports are read-only. */
 export interface ModModules {
   api: typeof api;
@@ -93,6 +111,17 @@ export interface TriviaApi {
      * on `opts.base` (default `en`); question languages stay ours. Call in `setup`: later calls apply after a reload. */
     add(locale: string, catalog: Record<string, unknown>, opts?: { endonym?: string; base?: string }): void;
   };
+  screens: {
+    /** Our screen `name` → a compiled Svelte component on our runtime (`/vendor/svelte/…`), same props as ours
+     * (`game/screens/<name>.svelte`); top mod wins. Call in `setup`: read when the game mounts. */
+    replace(name: ScreenName, component: Component<never>): () => void;
+    /** Our screen `name` → plain DOM, without a Svelte compiler. */
+    dom(name: ScreenName, render: DomRender): () => void;
+    /** A full-screen layer over the game with its own input; Esc and pad B close it; `props.close` too. */
+    show(render: DomRender): { close(): void };
+  };
+  /** A row in the Esc menu, in a column after ours; `label` is shown as is. */
+  menu: { add(row: MenuRow): () => void };
   /** A stylesheet after ours: `trivia.css(new URL("./x.css", import.meta.url))`. */
   css(href: string | URL): void;
 }
@@ -135,8 +164,11 @@ export function registrations<F>(kind: string): Registration<F>[] {
   return regs.filter((r) => r.kind === kind) as Registration<F>[];
 }
 
+/** Registrations whose `fn` is data, not a function. */
+const DATA = /^(i18n|menu|screen:.*)$/;
+
 function register(mod: string, kind: string, fn: unknown): () => void {
-  if (typeof fn !== "function" && kind !== "i18n") throw new TypeError(`${kind}: not a function`);
+  if (typeof fn !== "function" && !DATA.test(kind)) throw new TypeError(`${kind}: not a function`);
   if (failed.has(mod)) return () => {};
   const reg: Registration = { mod, kind, fn };
   regs.push(reg);
@@ -216,6 +248,54 @@ export function runAfter(action: string, game: Game | null): void {
   }
 }
 
+/** Overlay.svelte: the mods' rows, in run order; a throwing `onselect` drops its row. */
+export function menuRows(): { label: string; select: () => void }[] {
+  return registrations<MenuRow>("menu").map((reg) => ({
+    label: reg.fn.label,
+    select() {
+      try {
+        reg.fn.onselect();
+      } catch (e) {
+        hookFailed(reg, e);
+      }
+    },
+  }));
+}
+
+let layers: readonly ModLayer[] = [];
+let layersChanged: ((l: readonly ModLayer[]) => void) | null = null;
+
+/** Game.svelte: the open layers now and on every change. */
+export function watchLayers(fn: (l: readonly ModLayer[]) => void): () => void {
+  layersChanged = fn;
+  fn(layers);
+  return () => (layersChanged = null);
+}
+
+function setLayers(next: readonly ModLayer[]): void {
+  layers = next;
+  layersChanged?.(next);
+}
+
+function show(mod: string, render: DomRender): { close(): void } {
+  if (typeof render !== "function") throw new TypeError("screens.show: not a function");
+  const layer: ModLayer = {
+    render,
+    close: () => setLayers(layers.filter((l) => l !== layer)),
+    fail(e) {
+      report(mod, "hook_failed", e);
+      layer.close();
+    },
+  };
+  setLayers([...layers, layer]);
+  return { close: layer.close };
+}
+
+function screen(name: string): ScreenName {
+  if (!(SCREENS as readonly string[]).includes(name)) throw new TypeError(`screens: no screen ${name}`);
+  return name as ScreenName;
+}
+
 type CatalogReg = { locale: string; catalog: Record<string, unknown>; opts?: { endonym?: string; base?: string } };
 let catalogsApplied = false;
 
@@ -270,6 +350,23 @@ function view(mod: ModInfo | null): TriviaApi {
         if (!isObject(catalog)) throw new TypeError("i18n.add: catalog not an object");
         if (catalogsApplied) addCatalog(locale, catalog, opts);
         else register(tag(), "i18n", { locale, catalog, opts });
+      },
+    },
+    screens: {
+      replace(name, component) {
+        if (typeof component !== "function") throw new TypeError("screens.replace: not a component");
+        return register(tag(), `screen:${screen(name)}`, { component });
+      },
+      dom(name, render) {
+        if (typeof render !== "function") throw new TypeError("screens.dom: not a function");
+        return register(tag(), `screen:${screen(name)}`, { render });
+      },
+      show: (render) => show(tag(), render),
+    },
+    menu: {
+      add(row) {
+        if (typeof row.label !== "string" || typeof row.onselect !== "function") throw new TypeError("menu.add: { label, onselect }");
+        return register(tag(), "menu", { label: row.label, onselect: row.onselect });
       },
     },
     css: linkStyle,

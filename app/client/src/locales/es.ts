@@ -93,6 +93,8 @@ const es = {
     statsDifficulty: "dificultad",
     /** The gamemaster cheats, apart from the general part (MD-12, D-88). */
     cheats: "Trucos del anfitrión",
+    /** Rows that code mods add (plan 117). */
+    mods: "Mods",
     /** «Cambiar pregunta»: ‹ › toggles whether the old one counts as seen. */
     replace: "Cambiar pregunta",
     seen: "vista",

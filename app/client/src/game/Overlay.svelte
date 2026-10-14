@@ -4,11 +4,13 @@
   // the cheats apart (skip, block, undo, replace, jump to level, difficulty and bundles, jokers left).
   // ↑/↓ choose, Enter runs, ←/→ change a value (else the next column), Esc closes. Outside gamemaster
   // mode no cheats (D-74), the jokers left read-only. Language rows (plan 68) only with ≥2 options.
+  // Code mods' rows (plan 117) in a last column.
   import { fetchGameChoice, fetchJokersUsed, fetchLanguage, localeSupply, setLanguage, type GameActionBody } from "../lib/api.ts";
   import { desktop, devMode } from "../lib/desktop.ts";
   import { flush } from "../lib/engine.ts";
   import { endonym, t } from "../lib/i18n.ts";
   import { pushScope, type Action } from "../lib/input.svelte.ts";
+  import { menuRows } from "../lib/mods.ts";
   import Credits from "./Credits.svelte";
   import GameSettings from "./GameSettings.svelte";
   import GoToDialog from "./GoToDialog.svelte";
@@ -22,8 +24,10 @@
     label: string;
     enabled: boolean;
     run: () => void;
-    /** 0 general, 1 cheats, 2 jokers. */
-    col: 0 | 1 | 2;
+    /** 0 general, 1 cheats, 2 jokers, 3 mods. */
+    col: 0 | 1 | 2 | 3;
+    /** Mod rows: their labels may repeat. */
+    key?: string;
     /** General part, under «Sonido»: volumes, mute, languages. */
     sound?: boolean;
     confirm?: boolean;
@@ -235,6 +239,15 @@
     await desktop?.quit();
   }
 
+  /** Read once per opening; a row closes the menu, then runs. */
+  const modRows: Item[] = menuRows().map((r, i) => ({
+    label: r.label,
+    enabled: true,
+    run: () => (onclose(), r.select()),
+    col: 3,
+    key: `mod:${i}`,
+  }));
+
   const items = $derived<Item[]>([
     { label: t("overlay.continue"), enabled: true, run: onclose, col: 0 },
     { label: t("flag.list"), enabled: true, run: onflags, col: 0 },
@@ -275,6 +288,7 @@
           ...TOKENS.map((t) => ({ label: t.label, enabled: !!used && canBudget, run: () => {}, joker: t.name, col: 2 as const })),
         ]
       : []),
+    ...modRows,
   ]);
 
   let selected = $state(0);
@@ -409,7 +423,7 @@
 {/snippet}
 
 {#snippet column(col: number, sound = false)}
-  {#each items as item, i (item.joker ?? item.volume ?? item.lang ?? item.label)}
+  {#each items as item, i (item.joker ?? item.volume ?? item.lang ?? item.key ?? item.label)}
     {#if item.col === col && !!item.sound === sound}{@render row(item, i)}{/if}
   {/each}
 {/snippet}
@@ -446,6 +460,12 @@
             </p>
           {/each}
           {#if choiceLine}<p class="row readonly info">{choiceLine}</p>{/if}
+        </div>
+      {/if}
+      {#if modRows.length}
+        <div class="column">
+          <h3>{t("overlay.mods")}</h3>
+          {@render column(3)}
         </div>
       {/if}
     </div>

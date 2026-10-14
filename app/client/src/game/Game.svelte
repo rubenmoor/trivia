@@ -12,7 +12,7 @@
   import { t } from "../lib/i18n.ts";
   import { listenPads } from "../lib/gamepad.svelte.ts";
   import { listen, pushScope, type Action } from "../lib/input.svelte.ts";
-  import { emit } from "../lib/mods.ts";
+  import { emit, watchLayers, type ModLayer } from "../lib/mods.ts";
   import type { Game, GameMode, JokerBudget, JokerEvent, Flagged, Supply } from "../lib/types.ts";
   import FlagDialog from "./FlagDialog.svelte";
   import FlagList from "./FlagList.svelte";
@@ -27,10 +27,12 @@
   import CornerButtons from "./CornerButtons.svelte";
   import Choice from "./screens/Choice.svelte";
   import Correct from "./screens/Correct.svelte";
+  import DomScreen from "./screens/DomScreen.svelte";
   import Language from "./screens/Language.svelte";
   import Level from "./screens/Level.svelte";
   import Player from "./screens/Player.svelte";
   import Question, { type JokerPlay } from "./screens/Question.svelte";
+  import { screenFailed, screenFor } from "./screens/registry.ts";
   import Select from "./screens/Select.svelte";
   import Start from "./screens/Start.svelte";
   import Victory from "./screens/Victory.svelte";
@@ -53,6 +55,14 @@
     wrong: null,
     victory: "victory", // «Pomp and Circumstance», over the cheers
   };
+
+  const OURS = { Start, Language, Player, Choice, Level, Select, Question, Correct, Wrong, Victory };
+  type Name = keyof typeof OURS;
+  /** Each screen: ours or a mod's (plan 117), read once; a failing one falls back to ours. */
+  let S = $state.raw(Object.fromEntries(Object.entries(OURS).map(([n, c]) => [n, screenFor(n as Name, c)])) as typeof OURS);
+  /** Mod layers over the game (`trivia.screens.show`). */
+  let layers = $state.raw<readonly ModLayer[]>([]);
+  onMount(() => watchLayers((l) => (layers = l)));
 
   let screen = $state<Screen>("start");
   /** The screen before this one: the Level screen drops the new block only after Correct. */
@@ -166,13 +176,23 @@
     if (next !== "select") fresh = new Set();
     if (next === "question") {
       await tick();
-      await Promise.race([questionRef?.ready() ?? Promise.resolve(), sleep(PRELOAD_MAX_MS)]);
+      await Promise.race([questionRef?.ready?.() ?? Promise.resolve(), sleep(PRELOAD_MAX_MS)]);
     }
-    emit("screen", { name: next[0].toUpperCase() + next.slice(1) });
+    emit("screen", { name: nameOf(next) });
     if (next === "question" && game?.question) emit("question:shown", { id: game.question.id, level: game.level });
     black = false;
     await sleep(FADE_MS);
     busy = false;
+  }
+
+  const nameOf = (s: Screen) => (s[0].toUpperCase() + s.slice(1)) as Name;
+
+  /** The screens' boundary: a mod's screen threw, ours instead. */
+  function screenError(e: unknown, reset: () => void) {
+    const name = nameOf(screen);
+    if (!screenFailed(name, e)) throw e;
+    S = { ...S, [name]: OURS[name] };
+    queueMicrotask(reset);
   }
 
   /** Run a server action; errors show in the corner and leave the screen as it is. */
@@ -467,7 +487,7 @@
   }
 
   /** The question's final answer is out: skip and undo would race the reveal. */
-  const questionBusy = () => screen === "question" && (questionRef?.busy() ?? false);
+  const questionBusy = () => screen === "question" && (questionRef?.busy?.() ?? false);
 
   // Input (04, "Input"; lib/input.svelte.ts) ------------------------------------------------
 
@@ -537,62 +557,64 @@
 </script>
 
 <main class="game" bind:this={main}>
-  {#if loading}
-    <Stage />
-    <p class="center label">{t("screen.loading")}</p>
-  {:else if screen === "language"}
-    <Stage />
-    <Language onpicked={() => go("start", "whoosh")} />
-  {:else if screen === "start"}
-    <Stage />
-    <Start {game} {running} {levels} {supply} {notice} {busy} onresume={resume} onnew={newGame} ondismiss={() => (notice = null)} />
-  {:else if screen === "player"}
-    <Stage />
-    <Player {busy} onchoose={choosePlayer} ondeleted={refresh} />
-  {:else if screen === "choice" && chosen !== null}
-    <Stage />
-    <Choice player={chosen} {busy} {greeting} {refused} onstart={startGame} onback={() => go("player", "whoosh")} />
-  {:else if screen === "level" && game}
-    <Stage />
-    <div class="corner-hud"><Hud level={null} player={game.player} /></div>
-    <aside class="side-tray"><JokerTray readonly left={game.jokers_left} /></aside>
-    <Level {game} {levels} {blocks} drop={previous === "correct"} {busy} onnext={() => go(table(game), "paper")} />
-  {:else if screen === "select" && game}
-    <Stage />
-    <div class="corner-hud"><Hud level={game.level} {levels} player={game.player} /></div>
-    <aside class="side-tray"><JokerTray readonly left={game.jokers_left} /></aside>
-    <Select {game} {picked} {fresh} {busy} onpick={pick} />
-  {:else if screen === "question" && game?.question}
-    {#key game.question.id}
-      <Question
-        bind:this={questionRef}
-        question={game.question}
-        level={game.level}
-        {levels}
-        playerName={game.player}
-        paused={overlayOpen}
-        shown={!black}
-        jokers={game.jokers}
-        jokersLeft={game.jokers_left}
-        {swappedBy}
-        play={playJokerAction}
-        onplayed={jokerPlayed}
-        onanswered={answered}
-      />
-    {/key}
-  {:else if screen === "correct" && game?.last}
-    <Stage mood="correct" />
-    <Correct last={game.last} {busy} onnext={toLevel} />
-  {:else if screen === "wrong" && game?.last}
-    <Stage mood="wrong" />
-    <Wrong {game} last={game.last} {levels} {blocks} {busy} onhome={toStart} />
-  {:else if screen === "victory" && game}
-    <Stage mood="victory" />
-    <Victory {game} {levels} {busy} onhome={toStart} />
-  {:else}
-    <Stage />
-    <p class="center">{t("screen.noData")} <Prompt action="menu" /> → {t("action.home")}.</p>
-  {/if}
+  <svelte:boundary onerror={screenError}>
+    {#if loading}
+      <Stage />
+      <p class="center label">{t("screen.loading")}</p>
+    {:else if screen === "language"}
+      <Stage />
+      <S.Language onpicked={() => go("start", "whoosh")} />
+    {:else if screen === "start"}
+      <Stage />
+      <S.Start {game} {running} {levels} {supply} {notice} {busy} onresume={resume} onnew={newGame} ondismiss={() => (notice = null)} />
+    {:else if screen === "player"}
+      <Stage />
+      <S.Player {busy} onchoose={choosePlayer} ondeleted={refresh} />
+    {:else if screen === "choice" && chosen !== null}
+      <Stage />
+      <S.Choice player={chosen} {busy} {greeting} {refused} onstart={startGame} onback={() => go("player", "whoosh")} />
+    {:else if screen === "level" && game}
+      <Stage />
+      <div class="corner-hud"><Hud level={null} player={game.player} /></div>
+      <aside class="side-tray"><JokerTray readonly left={game.jokers_left} /></aside>
+      <S.Level {game} {levels} {blocks} drop={previous === "correct"} {busy} onnext={() => go(table(game), "paper")} />
+    {:else if screen === "select" && game}
+      <Stage />
+      <div class="corner-hud"><Hud level={game.level} {levels} player={game.player} /></div>
+      <aside class="side-tray"><JokerTray readonly left={game.jokers_left} /></aside>
+      <S.Select {game} {picked} {fresh} {busy} onpick={pick} />
+    {:else if screen === "question" && game?.question}
+      {#key game.question.id}
+        <S.Question
+          bind:this={questionRef}
+          question={game.question}
+          level={game.level}
+          {levels}
+          playerName={game.player}
+          paused={overlayOpen}
+          shown={!black}
+          jokers={game.jokers}
+          jokersLeft={game.jokers_left}
+          {swappedBy}
+          play={playJokerAction}
+          onplayed={jokerPlayed}
+          onanswered={answered}
+        />
+      {/key}
+    {:else if screen === "correct" && game?.last}
+      <Stage mood="correct" />
+      <S.Correct last={game.last} {busy} onnext={toLevel} />
+    {:else if screen === "wrong" && game?.last}
+      <Stage mood="wrong" />
+      <S.Wrong {game} last={game.last} {levels} {blocks} {busy} onhome={toStart} />
+    {:else if screen === "victory" && game}
+      <Stage mood="victory" />
+      <S.Victory {game} {levels} {busy} onhome={toStart} />
+    {:else}
+      <Stage />
+      <p class="center">{t("screen.noData")} <Prompt action="menu" /> → {t("action.home")}.</p>
+    {/if}
+  </svelte:boundary>
 
   <CornerButtons
     {error}
@@ -602,6 +624,9 @@
     onmenu={openOverlay}
   />
   <Veil on={black} kind={veil} />
+  {#each layers as layer (layer)}
+    <DomScreen render={layer.render} props={{ close: layer.close }} onclose={layer.close} onerror={layer.fail} />
+  {/each}
 
   {#if overlayOpen}
     <Overlay
