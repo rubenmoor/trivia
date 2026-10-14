@@ -23,7 +23,7 @@ Family trivia party game, shown on a TV: the family plays against the gamemaster
 - Style of `.md` files: bullet points, ultra-concise, no full sentences needed. Exception: an intro paragraph in full sentences at the top of the document and under each top-level heading.
 - Game is muted under `PM_WORKER`; outside pm, launch with `TRIVIA_MUTE=1` unless the work is about sound; `TRIVIA_SOUND=1` for sound checks.
 - Stop background processes by PID (`kill $!`), never `pkill -f`: the pattern can match your own `claude` process.
-- Minimal dependencies. No secrets in the repo, no accounts of our own; telemetry only opt-in.
+- No secrets in the repo, no accounts of our own; telemetry only opt-in.
 - Unpolished game parts: `PLACEHOLDER(<task id>)` in code and on screen.
 - "Gamemaster": only the in-game role (Gamemaster mode); the human is "the developer".
   - Older text (`tasks.sql`: milestones, plans, tasks, decisions) still says "the gamemaster" for the developer: read it as "the developer"; new text says "the developer".
