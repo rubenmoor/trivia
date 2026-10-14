@@ -962,3 +962,18 @@ Template:
   - **Read by** `--bundle` drafting (`target_weights`, the subcategory ranking) and `qgen report --bundle <id> [--locale L]`. No `es` source shortfall for packs (`base` only, D-84).
 - Consequences: `qgen report --bundle colombia` shows progress vs. 2000; `qgen batch --bundle colombia` aims at its deficits.
 - Supersedes / related: D-53 (amends: a regional bundle always has an entry), D-54, D-84, D-99; pm decisions 37, 110; plan 98
+
+## D-102: Code MIT; questions all rights reserved; whole repo stays public
+- Date: 2026-10-14
+- Context: OQ-35, plan 40 (task 198 prep, task 199); pm decisions 107 (Licence (OQ-35)), 108 (Is release content public (OQ-35)). Paid game, packs as free DLC (D-98). Not legal advice.
+- Decision:
+  - **Code:** MIT, in `LICENSE` at the repo root; covers `modding/` and its examples too (pm decision 134).
+  - **Questions:** all rights reserved, in `LICENSE-content.md`: `authoring/data/`, `app/data/` (pool, bundles, translations); personal, non-commercial play from the repo allowed.
+  - **Never covered** by either: media (own licence per file, PUB-2), fonts (OFL), UI audio (`CREDITS.md`), npm dependencies.
+  - **Public:** the whole repo, release content included (new batches, translations, packs); D-17 stays: the licence, not a private repo, protects the pool.
+- Consequences:
+  - Files: `LICENSE`, `LICENSE-content.md`, README "License", `directory.md`; both copied into `result/` and the desktop builds; credits "Game" section (PUB-4, PUB-5; plan 40 task 3).
+  - No build change; no private content repo, no backlog row.
+  - Commits public before `LICENSE` stay unlicensed: copies exist, no rights granted.
+  - Professional checks still owed (lawyer, the developer's country + US): is the AI-drafted, human-reviewed pool protectable (copyright, database right); wording of "reserved, personal play allowed" next to MIT code; implied licence for forks of unlicensed commits; Anthropic's terms for commercial use of outputs (PUB-10).
+- Supersedes / related: D-17 (confirms), D-98; OQ-35; PUB-4, PUB-10; pm decisions 66, 107, 108, 134; plan 40

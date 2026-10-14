@@ -31,8 +31,12 @@ The non-rejected questions use 1,129 distinct files (1,100 for approved only). T
 - **Controller glyphs** (IN-5): original, drawn for the game (`Glyph.svelte`). Console makers' button art can't be used freely.
 
 ## Code and content license (OQ-35)
-- The repo has **no license file** today, which means "all rights reserved" by default, even though it is public. Options: keep it like that; MIT/GPL for the code with the questions under a separate license (e.g. CC BY-SA, or reserved); or make the repo private before release.
-- The question pool is public on GitHub. Anyone could copy it into another game. Decide whether new release content (translations, new batches) stays public.
+Decided (D-102): MIT code, reserved questions, one public repo.
+- **Code:** MIT, `LICENSE` at the root; `modding/` included.
+- **Questions:** all rights reserved, `LICENSE-content.md` (`authoring/data/`, `app/data/`); personal, non-commercial play from the repo allowed.
+- **Not covered:** media (per file), fonts (OFL), UI audio, npm deps.
+- **Public:** whole repo, release content included (D-17 stays); buyers get `pool.json` in plain JSON anyway, the licence forbids reuse.
+- **Lawyer check owed:** protectability of the AI-drafted, human-reviewed pool; wording next to MIT; forks of unlicensed commits; PUB-10.
 
 ## AI disclosure
 Steam requires developers to disclose AI-generated content on the store page (content survey). For this game:
