@@ -175,7 +175,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 - Every question has `bundle`, checked by `qgen validate`.
 
 Plan files: `plans/15a-ui-translation.md`, `plans/22-bundles.md`.', '2026-10-11T21:54:55Z', '2026-10-13T06:24:58Z', 0);
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (4, 'Media license audit', 'open', 'The full license data of every media file is known and stored, and files with unclear licenses (PD-US only, GFDL) are replaced. Commons restriction flags (personality rights, trademark) are kept (D-61, decision 8). Needed before any public release; small and independent of the other milestones.
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (4, 'Media license audit', 'implemented', 'The full license data of every media file is known and stored, and files with unclear licenses (PD-US only, GFDL) are replaced. Commons restriction flags (personality rights, trademark) are kept (D-61, decision 8). Needed before any public release; small and independent of the other milestones.
 
 ## Outcome
 - `media.py licenses` report listing the files to replace (PUB-1).
@@ -193,7 +193,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 - `qgen validate` requires license data for approved questions.
 - The audit''s replacement list is empty.
 
-Plan files: `plans/17-publishing.md`.', '2026-10-11T21:54:55Z', NULL, 0);
+Plan files: `plans/17-publishing.md`.', '2026-10-11T21:54:55Z', '2026-10-14T05:12:00Z', 0);
 INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (5, 'Age groups and bundles in the game', 'open', 'Before a session, players choose their age group and which bundles to play; selection uses the group''s window on the shared difficulty scale 1–15 and only the active bundles. The family''s default stays young teens with every bundle on, so nothing changes unless they opt in. Easier after the TypeScript engine, since it changes selection.
 
 ## Outcome
