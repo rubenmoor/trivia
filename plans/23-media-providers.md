@@ -19,7 +19,7 @@ The pipeline finds all media on Wikimedia Commons (D-13). Commons' rate limits a
 | Wikimedia Commons | everything, as now | per file; add the allowlist check | done (`COMMONS_ACCESS_TOKEN`) | Phase-2 limits; higher with the token |
 | **Openverse** | images collected from Flickr, Smithsonian, museums and others. Most are Flickr's 1024 px size: enough for essential images (800 px), rarely for decorative ones (1920 px). Its audio is mostly music (Jamendo, ccMixter), which D-13 rules out, so audio isn't used | `license=cc0,pdm,by,by-sa`; `excluded_source=wikimedia` (Commons is asked directly) | none to start; registering through the API (name, description, email) raises the limit | anonymous 20/min, 200/day (response headers, 2026-10-08); registered 10,000/day |
 | Pexels (paused) | decorative and illustrative photos; short videos | all content is under the Pexels License | free account, then an API key at pexels.com/api. *2026-10-08: new keys are paused* | 200/h, 20,000/month; more on request |
-| **Freesound** | sounds: nature, machines, everyday noises | only `Creative Commons 0` and `Attribution`; at most 60 s | free account, then an API key at freesound.org/apiv2/apply (`FREESOUND_API_KEY`) | token auth is enough for the 128 kbps MP3 previews, which is what the game plays. The API is free for non-commercial use; commercial apps need a licence (OQ-45) |
+| **Freesound** | sounds: nature, machines, everyday noises | only `Creative Commons 0` and `Attribution`; at most 60 s | free account, then an API key at freesound.org/apiv2/apply (`FREESOUND_API_KEY`) | token auth is enough for the 128 kbps MP3 previews, which is what the game plays. The API is free for non-commercial use; commercial apps need a licence: out of the audio order before release, its 2 picks re-picked (D-103) |
 | **NASA Image and Video Library** | space: photos and videos (MP4), only for the Espacio category | NASA media is mostly public domain; items credited to someone other than NASA (a company, ESA, a news agency) are skipped | none | generous |
 | Pixabay (later) | decorative photos, videos | Pixabay Content License | free account; key on pixabay.com/api/docs | a normal key gets 1280 px at most, below the 1920 px for decorative images; full access (1920 px and originals) on request |
 
@@ -31,7 +31,7 @@ Not used: Unsplash (requires hotlinking), xeno-canto (mostly CC BY-NC-SA), iNatu
 | Slot | Order |
 |---|---|
 | image (any role) | Commons → NASA (Espacio only) → Openverse |
-| audio | Commons → Freesound |
+| audio | Commons (Freesound until its removal, D-103) |
 | video | Commons → NASA (Espacio only); then images as now |
 
 Commons stays first: its file descriptions are precise, its images are large, and the review prompt is tuned on it. Each provider is asked with the shortened query variants until there are 3 candidates; the next provider is asked only while there are fewer (this spares Openverse's daily limit and keeps Commons' results as they were wherever Commons has enough). At most 6. When Pexels or Pixabay come, they go first for decorative images, which only need to look good and not give anything away.
@@ -63,7 +63,7 @@ Only for gaps the free ones leave, and only once a Steam release is real (11): e
 - [x] MP-3 Per-provider throttle; a rate-limited provider is skipped for the current search; provider order per slot. *2026-10-08: `providers.ORDER`, cooldown per provider from `Retry-After`; `media_cache.http_get(…, headers, wait)`; a search left empty by a limit raises so a rerun retries.*
 - [x] MP-4 Openverse (images); anonymous, with optional `OPENVERSE_CLIENT_ID`/`OPENVERSE_CLIENT_SECRET` for the higher limit. *2026-10-08: `providers/openverse.py`; credits name the original site ("Flickr via Openverse").*
 - [ ] MP-5 Pexels (images, videos), once new API keys are issued again
-- [x] MP-6 Freesound (audio previews). *2026-10-08: `providers/freesound.py`, `FREESOUND_API_KEY`; CC0 and CC BY only, ≤ 60 s, the HQ MP3 preview.*
+- [x] MP-6 Freesound (audio previews). *2026-10-08: `providers/freesound.py`, `FREESOUND_API_KEY`; CC0 and CC BY only, ≤ 60 s, the HQ MP3 preview. 2026-10-14: dropped before release (D-103, plan 42); the module stays, unasked.*
 - [x] MP-7 NASA Image and Video Library (space photos and videos, Espacio only; third-party items skipped). *2026-10-08: `providers/nasa.py`; videos as MP4 (`~large`). The third-party check reads the credit fields only: footage filmed by a company but credited to NASA staff still gets through, so the review has to watch for it.*
 - [x] MP-8 Pool fields `provider`, `license`, `license_url`, `author` per picked slot; migrate existing picks; `validate` checks the allowlist; credit names the provider (shared with PUB-2). *Done in pm plan 26 (tasks 111–113): 1,202 picks migrated on 2026-10-11.*
 - [x] MP-9 Review tool: provider and licence on candidates; search modal over all providers. *2026-10-08; the LLM review also sees each candidate's source.*

@@ -8682,7 +8682,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm task-pending-decision` on the next task of plan 42 (record the answer).
 
 Done when: the decision exists with facts, sources and the email draft; the follow-up task waits on it.', '2026-10-12T00:50:35Z', '2026-10-13T06:42:44Z', 180);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (205, 42, 'Freesound: record the answer', 'work', 'open', NULL, NULL, 'Part 3 of plan 42. Waits for the Freesound decision from the previous task.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (205, 42, 'Freesound: record the answer', 'work', 'done', NULL, '2026-10-14, plans/decisions.md (D-103), open-questions.md, project.md, 11-steam.md, 23-media-providers.md; follow-up task 1051', 'Part 3 of plan 42. Waits for the Freesound decision from the previous task.
 
 - D-entry in `plans/decisions.md` (next free D-number).
 - The Freesound OQ → "Resolved" in `plans/open-questions.md` with the D-number; `plans/project.md` and `plans/11-steam.md`''s open-questions row in sync.
@@ -8691,7 +8691,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - If (b): `pm task add 42` "send the Freesound email and record the reply", pending on a decision for the gamemaster (`pm task-pending-decision`); the provider stays until the reply.
 - If (c): add the exclusion rule to SW-9 in `plans/18-steam-integration.md`.
 
-Done when: D-entry exists; OQ resolved; plan 23 (and the provider order, if (a)) reflect the answer; any follow-up is a task in plan 42.', '2026-10-12T00:50:35Z', NULL, 180);
+Done when: D-entry exists; OQ resolved; plan 23 (and the provider order, if (a)) reflect the answer; any follow-up is a task in plan 42.', '2026-10-12T00:50:35Z', '2026-10-14T22:07:58Z', 180);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (206, 43, 'S2 close-out: plans/11-steam.md to the answers (ST-1)', 'work', 'dropped', NULL, 'superseded by the revised plan 43 (task 369): five game modes, achievements, plan 14, new guard tasks', 'Plan 43 task 1. Brings `plans/11-steam.md` in line with the S2 answers in `plans/decisions.md`. Docs only.
 
 **Guard first:** `pm show` a follow-up task of each of plans 34, 35, 37–42 (e.g. 183, 185, 190, 192, 194, 199, 202, 205). If a decision is still pending: `pm task-pending-decision <this task> <decision id>` and stop. If answered but its record-the-answer task is still open: stop without changes, don''t drop; the queue brings it back. Plan 36 (MD-6, MD-7) is not waited for.
@@ -24375,6 +24375,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - PUB-9 and PUB-11 ticked; the launch discount waits only for the launch day (`plan 95: Launch`).', '2026-10-14T21:56:10Z', NULL, 1046);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1051, 42, 'Freesound: re-pick its 2 audio slots from Commons, drop it from the audio order', 'work', 'open', NULL, NULL, 'Follow-up of `task 205: Freesound: record the answer`; `decision 82: Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?` → (a), D-103 in `plans/decisions.md`.
+
+- Remove `freesound` from `providers.ORDER["audio"]` in `authoring/tools/providers/__init__.py` (audio: Commons only); can go first, so new batches stop picking it. Keep `providers/freesound.py` (unasked). Check the review tool''s search modal and `PROVIDERS` users still work without it in the order.
+- Re-pick the 2 Freesound audio slots from allowlisted sources (D-45) through the review tool''s search modal (D-36); never edit the pool by hand. The developer picks: raise a pm decision with the candidates if no `qgen` path re-picks.
+  - q-0752 (mosquito, «El zancudo»): Commons "File:Mosquito attack.ogg", CC0, 88 s (needs a listen).
+  - q-1016 (turkey, «Pavo»): xeno-canto wild turkey clips on Commons, CC BY-SA 3.0, e.g. "Meleagris gallopavo - Wild Turkey XC134744.ogg" (wild, not domestic, long).
+- Afterwards: no pick with `provider: freesound` or a `freesound.org` URL in `authoring/data/questions.json` and `app/data/pool.json` (`qgen export`); `qgen validate` passes; `trivia-media sync --status approved`.
+- Docs: `plans/23-media-providers.md` audio row → "Commons" only; MP-6 note.', '2026-10-14T22:07:55Z', NULL, 205);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -25403,7 +25411,7 @@ I''m making a small family trivia game that I plan to sell on Steam. An internal
 Does this count as commercial use of the API that needs a licence? If so, what would it cost?
 
 Thank you,
-Ruben Moor', '(a) Replace the 2 Freesound picks from Commons before release; drop Freesound from the audio order', NULL, '2026-10-13T06:42:42Z', '2026-10-13T16:05:18Z', 204, NULL, 'rule', NULL, '');
+Ruben Moor', '(a) Replace the 2 Freesound picks from Commons before release; drop Freesound from the audio order', NULL, '2026-10-13T06:42:42Z', '2026-10-13T16:05:18Z', 204, NULL, 'rule', NULL, '2026-10-14, task 205: 2026-10-14, task 205: D-103 in plans/decisions.md; OQ-45 (Freesound) resolved (open-questions.md, project.md, 11-steam.md); plans/23-media-providers.md Freesound row, audio order, MP-6 note; follow-up task 1051: Freesound: re-pick its 2 audio slots from Commons, drop it from the audio order');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (83, 'Recorded music loops: approve on the TV?', 'pending', '["approve", "changes: <track / cut / level> → <what''s wrong>"]', 'Plan 33 replaced the three generated music loops with one matched CC0 set; please listen on the TV.
 
 Recorded (OpenGameArt «Music loop variations», obscure music, CC0; 100 bpm, 4/4, 8 bars = 19.2 s each, −18 LUFS like `redoble`)
@@ -27082,6 +27090,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (972, 1047, '2026-10-14T21:56:22Z', '2026-10-14T22:01:33Z', 'done', NULL, 0, 'b75cc13155aa6a2d30ad9da6680b777e49d30ac0', 'claude-opus-5-5[1m]', '641c4d39-7684-426c-b596-ee5bab7af8ae', 44, 82, 25224, 2977957, 103678, 1.9298234, 2296074);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (973, 1048, '2026-10-14T22:01:33Z', '2026-10-14T22:06:06Z', 'done', NULL, 0, '8d2b4fed84571771c93b7198874510b0904678e8', 'claude-opus-5-5[1m]', '3c983925-b362-4c0c-a2c3-942776d0f28e', 38, 66, 16634, 2240581, 91173, 1.5104442000000002, 2296074);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (974, 1049, '2026-10-14T22:06:07Z', '2026-10-14T22:07:18Z', 'done', NULL, 0, '00512b3f9bdcb4e018062243f306dcf2c6232f0c', 'claude-opus-5-5[1m]', '58f059d1-14b5-4bf8-8a74-6a73f85d6dae', 13, 22, 5243, 483355, 45141, 0.562747, 2296074);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (975, 205, '2026-10-14T22:07:18Z', '2026-10-14T22:08:08Z', 'done', NULL, 0, '902b0774dea2803bc6ac583c3937a2e31cc6e19c', 'claude-opus-5-5[1m]', '695ef689-cda3-4756-977b-a63c3804c25b', 11, 22, 4949, 425742, 36454, 0.47584839999999995, 2296074);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

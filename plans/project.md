@@ -165,4 +165,4 @@ Pending questions are `pm` decisions (`pm decision list`). Left over from the fr
 
 | ID | Question | Blocks |
 |----|----------|--------|
-| OQ-45 | Freesound API for a commercial release | Steam S5 (23, 17) |
+| OQ-45 | ~~Freesound API for a commercial release~~ answered: re-pick its 2 picks from Commons, drop Freesound from the audio order (D-103) | Steam S5 (23, 17) |

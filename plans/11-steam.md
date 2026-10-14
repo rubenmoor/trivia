@@ -70,6 +70,7 @@ Logged in [`open-questions.md`](open-questions.md) (frozen 2026-10-12; questions
 | OQ-35 | ~~Code and content license~~ answered: code MIT, questions all rights reserved; whole repo stays public (D-102) | 17 |
 | OQ-36 | ~~Audience~~ answered: four age groups on one shared scale (D-38) | 13, 16 |
 | OQ-37 | ~~Competitive and couch co-op~~ answered: round-robin co-op, round-robin competitive, competitive (timed); per-player gamepads + shared keyboard, no phones (D-77; timed revised D-80) | 13, 14 |
+| OQ-45 | ~~Freesound API for a commercial release~~ answered: re-pick its 2 picks from Commons, drop Freesound from the audio order (D-103) | 23, 17 |
 
 ## Risks
 - **Content volume and factual errors** are the most likely reason for bad reviews. A wrong answer in a public product costs more than at home. See 16 (quality bar) and 13 (a "report this question" action instead of the gamemaster's «Saltar y quemar para todos»).

@@ -3,12 +3,10 @@
 Frozen on 2026-10-12: this file is history. New questions for the developer are `pm` decisions (`pm decision add`, see `pm instructions`); answers that set a lasting rule still go to `decisions.md`. Old OQ ids stay valid where they are cited. The questions below were still open when the file was frozen; the `pm` plan or task named with each one raises it as a `pm` decision.
 
 ## Open when frozen
-- OQ-45 (Freesound): plan 42, tasks 204–205
-
-### Added 2026-10-08 (media providers, D-45, [`23`](23-media-providers.md))
-- **OQ-45** Freesound's API is free for non-commercial use, and commercial apps need a licence from UPF. Our pipeline uses the API only to find sounds; the game ships the CC0/CC BY files, never the API. Before a paid Steam release: ask Freesound whether that counts as commercial use of the API, or replace the Freesound picks.
+None.
 
 ## Resolved
+- **OQ-45** (Freesound) Freesound's API needs a UPF licence for commercial use: no asking; its 2 picks are re-picked from Commons before release and Freesound leaves the audio order (D-103).
 - **OQ-35** Code MIT; questions all rights reserved (personal, non-commercial play allowed); the whole repo stays public, release content included (D-102).
 - **OQ-46** Yes: every bundle has its own categories and subcategories (names may repeat across bundles); the 19 `colombia` questions on `base` subcategories move to `colombia`'s own (D-99, pm decision 110, plan 98).
 - **OQ-33** Paid one-time purchase, $9.99 (final check PUB-11), regional pricing, launch discount; packs as free DLC, never paid; the developer holds the Steamworks account as a person after an advisor check, company later via app transfer (D-98).
