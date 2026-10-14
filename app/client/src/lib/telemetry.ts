@@ -4,6 +4,7 @@ import { buildTelemetry, sessionRows, telemetryStart, type Telemetry, type Telem
 import { gameLocale, type EngineData, type SaveData } from "../engine/state.ts";
 import { loadEngineData } from "./data.ts";
 import { telemetry, type TelemetryState } from "./desktop.ts";
+import { modsOn } from "./mods.ts";
 
 const OFF: TelemetryState = { available: false, consent: null };
 
@@ -67,7 +68,7 @@ async function record(save: SaveData): Promise<void> {
   }
   const locales = new Set(sessionRows(save, buffer, start).flatMap(({ row }) => (row ? [gameLocale(row)] : [])));
   const data = new Map<string, EngineData>(await Promise.all([...locales].map(async (l) => [l, await loadEngineData(l)] as const)));
-  const next = buildTelemetry(save, buffer, start, data);
+  const next = buildTelemetry(save, buffer, start, data, modsOn());
   await telemetry.record(next);
   buffer = next;
 }

@@ -61,7 +61,8 @@ function ourQuestion(id: string, data: EngineData): boolean {
   return bundle !== undefined && data.bundles.some((b) => b.id === bundle);
 }
 
-export function telemetryGame(row: GameRow, from: number, data: EngineData): TelemetryGame {
+/** `mods`: this run's overlay isn't empty (decision 146). */
+export function telemetryGame(row: GameRow, from: number, data: EngineData, mods: boolean): TelemetryGame {
   const { state } = row;
   const choice = gameChoice(state, data);
   const levels = state.settings.levels ?? 12;
@@ -82,7 +83,7 @@ export function telemetryGame(row: GameRow, from: number, data: EngineData): Tel
     reached: row.result === "won" ? levels : state.level,
     result: row.result ?? "open",
     customized: state.settings.customized ?? false,
-    mods: false,
+    mods,
     jokers,
     answers,
   };
@@ -102,10 +103,10 @@ export function sessionRows(save: SaveData, prev: Telemetry, start: TelemetrySta
 }
 
 /** Rebuilds every session row; a recorded game whose row is gone stays as it was. `data`: per game locale. */
-export function buildTelemetry(save: SaveData, prev: Telemetry, start: TelemetryStart, data: ReadonlyMap<string, EngineData>): Telemetry {
+export function buildTelemetry(save: SaveData, prev: Telemetry, start: TelemetryStart, data: ReadonlyMap<string, EngineData>, mods: boolean): Telemetry {
   const out: Telemetry = { games: [], index: [] };
   sessionRows(save, prev, start).forEach(({ key, from, row }, i) => {
-    out.games.push(row ? telemetryGame(row, from, data.get(gameLocale(row))!) : prev.games[i]!);
+    out.games.push(row ? telemetryGame(row, from, data.get(gameLocale(row))!, mods) : prev.games[i]!);
     out.index.push({ key, from });
   });
   return out;

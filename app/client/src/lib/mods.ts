@@ -145,12 +145,15 @@ const MODS_JS = "/mods.js";
 const loaded: ModInfo[] = [];
 const errors: ModError[] = [];
 const failed = new Set<string>();
+let rowCount = 0;
 let regs: Registration[] = [];
 /** The mod whose entry runs now: registrations through the global view are tagged with it. */
 let current: string | null = null;
 
-/** Mods whose entry (if any) set up fine, in run order (achievements, plan 118). */
+/** Mods whose entry (if any) set up fine, in run order. */
 export const loadedMods = (): readonly ModInfo[] => loaded;
+/** This run's overlay isn't empty, failed setups included (telemetry, decision 146). */
+export const modsOn = (): boolean => rowCount > 0;
 /** Failures this run (mods screen, plan 118). */
 export const modErrors = (): readonly ModError[] => errors;
 
@@ -401,6 +404,7 @@ async function start(row: ModRow, mod: ModInfo): Promise<void> {
 /** main.ts, before data and language load: each mod's style, then its entry's `setup(trivia)`. */
 export async function loadMods(): Promise<void> {
   const rows = await fetchList();
+  rowCount = rows.length;
   window.trivia = view(null);
   for (const row of rows) {
     const mod = { id: row.id, name: row.name, version: row.version };
