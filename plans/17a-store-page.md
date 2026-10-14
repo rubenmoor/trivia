@@ -286,7 +286,46 @@ Store and Workshop texts for modding (milestone 15, plan 121): one feature bulle
   > Mods für Wohnzimmer-Quiz: Fragenpakete, Themes, Regeländerungen und komplette Umbauten. Abonnieren, im Mods-Bildschirm des Spiels einschalten und neu starten. Eigene Mods bauen: Die Modding-Anleitung (auf Englisch) erklärt Format, Beispiele und das Veröffentlichen hier: https://github.com/rubenmoor/trivia/blob/main/modding/README.md
 
 ## AI disclosure
-- Steam content-survey AI section and store wording per language: `task 667: AI disclosure text (Steam survey + store wording)`
+Steamworks content survey, section "AI Generated Content", and the text Steam shows from it on the store page. Drafted 2026-10-14 (`task 667`); approved through pm decision "AI disclosure approved?"; entered with the survey by part 9 (PUB-9, `task 259`). Terms of use for the outputs: plan 17 "AI disclosure" (PUB-10).
+
+### Valve's rules
+- From memory: the task had no web access; recheck at entry and cite the page with its date here
+  - Valve, "AI Content on Steam" (Steam news, 2024-01-09): two kinds, **pre-generated** (made with AI tools during development) and **live-generated** (made by AI while the game runs; needs guardrails and an in-game report tool); the developer describes both, Steam shows the description on the store page
+  - Survey update (reported January 2026): efficiency gains from AI-powered dev tools (code assistants) aren't the focus; disclose AI-generated content players see or hear: in the game, on the store page, in marketing
+  - Pages to check: partner.steamgames.com/doc/gettingstarted/contentsurvey, the survey form in Steamworks
+- Open (decision body): whether the description is localized (one text field or per language); its length limit; whether each DLC app has its own survey
+- Trademark (plan 17, PUB-10): no "Claude" or "Anthropic" in public text; "AI language model", "AI coding assistant"
+
+### Facts behind the text
+- Questions (question, answers, hints, fun fact) drafted by an LLM, fact-checked by an LLM with web search (D-7, D-10); translations the same way (D-87)
+- Approval: 1,134 approved `base` questions on 2026-10-14: 389 reviewed by the developer, 745 by an LLM review only (D-32, D-33; `review.reviewer`); D-56's independent LLM audit runs per batch; blind human spot checks: none recorded yet (no `authoring/data/spot-checks.json`); player reports → `needs_work` (`qgen flag`, plan 103)
+- `colombia` (102 approved es): same pipeline
+- UI texts and their translations: drafted with the LLM, checked against `locales/style/<locale>.md`
+- Code: written with an AI coding assistant; includes what the code draws or plays: the tower, controller glyphs, the capsule and icon template (`task 669`, decision 77), and the short UI effects synthesized in `app/client/src/game/sound.svelte.ts`
+- Not AI: pictures, videos, recorded sounds, music (Wikimedia Commons, Freesound via Commons, US government recordings, public domain), fonts (Baloo 2, Nunito, OFL); credited in the game's Credits screen and `CREDITS.md`
+- Live-generated: none; no AI runs in the game, nothing is generated while you play
+
+### Survey answers
+- Pre-generated: yes; description = the store text below (`en`, or per language if the field is localized)
+- Live-generated: no
+- Adult-content live generation: no
+
+### Store text: English (`en`)
+> The trivia questions (questions, answers, hints, fun facts), the interface texts and their translations were drafted by an AI language model, which also fact-checks the questions against web sources. Every question is reviewed before it ships, by the developer or by a separate AI review; the developer keeps checking AI-reviewed questions and fixes or removes the ones players report. The game's code was written with an AI coding assistant, including the graphics and short sound effects the code draws and synthesizes, and the typographic store art. Pictures, videos, recorded sounds, music and fonts are not AI-generated: they are people's work from Wikimedia Commons and other free sources, credited in the game. Nothing is generated while you play.
+
+### Store text: Spanish – Latin America (`es`)
+> Las preguntas (preguntas, respuestas, pistas, datos curiosos), los textos de la interfaz y sus traducciones los redactó un modelo de lenguaje de IA, que además verifica las preguntas con fuentes de la web. Cada pregunta se revisa antes de publicarse, por el desarrollador o por una revisión aparte con IA; el desarrollador sigue revisando las preguntas aprobadas por IA y corrige o quita las que reportan los jugadores. El código del juego se escribió con un asistente de programación con IA, incluidos los gráficos y los efectos de sonido cortos que el código dibuja y sintetiza, y el arte tipográfico de la tienda. Las imágenes, videos, sonidos grabados, la música y las fuentes no son generados con IA: son obra de personas, de Wikimedia Commons y otras fuentes libres, con créditos en el juego. Nada se genera mientras juegan.
+
+### Store text: Spanish – Spain (`es-ES`)
+- `es` with «videos» → «vídeos», «mientras juegan» → «mientras jugáis»
+
+### Store text: German (`de`)
+> Die Quizfragen (Fragen, Antworten, Hinweise, Wissenswertes), die Texte der Oberfläche und ihre Übersetzungen hat ein KI-Sprachmodell entworfen, das die Fragen auch mit Quellen aus dem Web prüft. Jede Frage wird vor der Veröffentlichung geprüft, vom Entwickler oder von einer separaten KI-Prüfung; der Entwickler kontrolliert die von der KI freigegebenen Fragen weiter und korrigiert oder entfernt die, die Spieler melden. Der Code des Spiels wurde mit einem KI-Programmierassistenten geschrieben, einschließlich der Grafiken und kurzen Soundeffekte, die der Code zeichnet und erzeugt, und der typografischen Shop-Grafiken. Bilder, Videos, aufgenommene Töne, Musik und Schriften sind nicht KI-generiert: Sie sind Werke von Menschen, von Wikimedia Commons und anderen freien Quellen, im Spiel genannt. Während des Spiels wird nichts generiert.
+
+### Free DLC (`colombia`)
+- Only if the DLC app has its own survey (recheck at entry); else the base game's disclosure covers it
+- es: «Las preguntas de este paquete las redactó y verificó con fuentes de la web un modelo de lenguaje de IA; cada una se revisa antes de publicarse, por el desarrollador o por una revisión aparte con IA. Las imágenes y sonidos son obra de personas, de Wikimedia Commons y otras fuentes libres, con créditos en el juego. Nada se genera mientras juegan.»
+- en (once the en pack pool ships): "This bundle's questions were drafted by an AI language model, which also fact-checks them against web sources; each one is reviewed before it ships, by the developer or by a separate AI review. Pictures and sounds are people's work from Wikimedia Commons and other free sources, credited in the game. Nothing is generated while you play."
 
 ## Capsules and icon
 Typographic capsules, library art and the game icon (decision 77: store capsule art, decision 87: Windows exe icon), rendered 2026-10-14 (`task 669`) by a script, no image generation; approved through pm decision "Capsules and icon approved?". Template: the tower of 12 blocks in its materials with the crown, the amber spotlight, faint «?» glyphs, the store name in Baloo 2 (`plans/10-visual-design.md`).
