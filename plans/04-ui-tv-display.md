@@ -58,7 +58,7 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 |---|---|---|---|
 | Language | First start (D-86) or Start's language button (D-96): «Elige el idioma», languages by endonym, guess preselected | Click / `Enter` / pad A / `1`–`n`; from Start: «Atrás» / `Backspace` / pad B | Normal |
 | Start | Title, «¡Jugar!», "continue game" if one is running | Click / `Enter` | Normal |
-| Player | «¿Quién juega?»: known names, new name | Click a name / type + `Enter` | Normal |
+| Player | «¿Quién juega?»: known names, new name | Click a name / `1`–`9` / `Enter` (most recent name, nothing focused) / type + `Enter` | Normal |
 | Choice | «¿Cómo juega …?»: mode (MD-7); gamemaster mode: the configure game screen (MD-11: difficulty, levels, cards, video, audio, jokers, bundles); «Solo o en grupo»: age group, «Personalizar partida» | «¡A jugar!» / `Enter`; «Atrás» / `Backspace` | Normal |
 | Level | The tower, «Nivel N de 12» | Click / `Enter` / `Space` | Normal |
 | Select | 4 description cards | Click a card / `1`–`4` | Normal |

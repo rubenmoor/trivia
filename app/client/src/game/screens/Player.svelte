@@ -9,7 +9,7 @@
   import { steam } from "../../lib/desktop.ts";
   import { errorText } from "../../lib/errors.ts";
   import { t } from "../../lib/i18n.ts";
-  import { focusControl, lastDevice, pushScope } from "../../lib/input.svelte.ts";
+  import { focusControl, lastDevice, pushScope, scopes } from "../../lib/input.svelte.ts";
   import type { Player } from "../../lib/types.ts";
   import Icon from "../Icon.svelte";
   import { MAX_NAME } from "../letters.ts";
@@ -62,6 +62,11 @@
 
   const shown = $derived(players.slice(0, MAX_SHOWN));
   const typed = $derived(name.trim().replace(/\s+/g, " "));
+  /** Nothing on the screen has focus: Enter picks the most recent name. */
+  const free = $derived.by(() => {
+    void scopes.version;
+    return shown.length > 0 && !section?.contains(document.activeElement);
+  });
 
   function submit(e?: Event) {
     e?.preventDefault();
@@ -105,7 +110,8 @@
     }
   }
 
-  // 1–9 pick a name; Enter in the field sends it; a letter elsewhere goes into the field (input.svelte.ts).
+  // 1–9 pick a name; Enter in the field sends it, with nothing focused the most recent name; a letter
+  // elsewhere goes into the field (input.svelte.ts).
   $effect(() =>
     pushScope({
       name: "player",
@@ -117,6 +123,7 @@
           if (a.device === "gamepad") void write();
           else submit();
         }
+        else if (a.type === "confirm" && free && !busy) onchoose(shown[0].name);
         else return false;
         return true;
       },
@@ -151,7 +158,7 @@
         <div class="entry" style:--i={i}>
           <button class="name-button glass" onclick={() => onchoose(p.name)} disabled={busy} data-focus-default>
             <Prompt action={{ type: "pick", n: i + 1 }} hold />
-            <span class="who">{p.name}</span>
+            <span class="who">{p.name}{#if i === 0 && free}<Prompt action="confirm" />{/if}</span>
             <span class="label">{games(p)}</span>
           </button>
           <button class="delete" onclick={() => askDelete(p)} disabled={busy} title={t("screen.player.delete", { name: p.name })}>
@@ -343,6 +350,10 @@
     font-size: calc(2.2 * var(--u));
     font-weight: 800;
     line-height: 1.1;
+  }
+  .who :global(kbd) {
+    margin-left: 0.5em;
+    vertical-align: middle;
   }
   .new {
     display: flex;
