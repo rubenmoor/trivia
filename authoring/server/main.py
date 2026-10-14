@@ -332,7 +332,7 @@ def reject(t):
     old = t.get("review") or {}
     t.update(status="rejected", review={
         "decision": "rejected", "feedback": "no viaja", "reviewed_on": datetime.date.today().isoformat(),
-        "reviewer": "human", "model": None, "previous": old if old.get("reviewer") == "llm" else old.get("previous")})
+        "reviewed_at": reviews.now(), "reviewer": "human", "model": None, "previous": old if old.get("reviewer") == "llm" else old.get("previous")})
 
 
 def apply_flags():

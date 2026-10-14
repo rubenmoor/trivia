@@ -55,10 +55,16 @@ def update_translation(locale):
     return update
 
 
-def set_review(qid, review, update=update_question):
+def now():
+    """`reviewed_at`: local ISO time of a human verdict (plan 98, review time per 100)."""
+    return datetime.datetime.now().isoformat(timespec="seconds")
+
+
+def set_review(qid, review, update=update_question, timed=True):
     """Set or reset one question's review, or with `update` its translation's.
     A new decision is a human review; it keeps the LLM review it replaces as `previous` (D-33).
-    A review that names its reviewer is an undo putting an earlier review back as it was."""
+    A review that names its reviewer is an undo putting an earlier review back as it was.
+    `timed`: a new decision gets `reviewed_at` (not for player reports)."""
     restore = review is not None and "reviewer" in review
     if review is not None:
         if review.get("decision") not in DECISIONS:
@@ -72,6 +78,9 @@ def set_review(qid, review, update=update_question):
                   "reviewed_on": review.get("reviewed_on") or datetime.date.today().isoformat(),
                   "reviewer": review.get("reviewer", "human"), "model": review.get("model"),
                   "previous": review.get("previous"), **({"problems": review["problems"]} if review.get("problems") else {})}
+        at = review.get("reviewed_at") if restore else now() if timed else None
+        if at:
+            review["reviewed_at"] = at
 
     def change(q):
         if review is not None and not restore:
@@ -105,7 +114,8 @@ def needs_work(qid, locale, feedback, known, dry_run=False):
         return ""
     new = f"{feedback} Antes: {old}" if old else feedback
     known[locale][qid] = {**q, "review": {**(q.get("review") or {}), "feedback": new}} if dry_run else set_review(
-        qid, {"decision": "needs_work", "feedback": new}, update_translation(locale) if locale != "es" else update_question)
+        qid, {"decision": "needs_work", "feedback": new}, update_translation(locale) if locale != "es" else update_question,
+        timed=False)
     return new
 
 

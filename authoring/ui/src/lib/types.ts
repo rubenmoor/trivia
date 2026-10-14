@@ -90,6 +90,8 @@ export interface Review {
   decision: Decision;
   feedback: string | null;
   reviewed_on: string;
+  /** Local ISO time of a human verdict (plan 98); absent on older and player-report reviews. */
+  reviewed_at?: string;
   reviewer: Reviewer;
   /** The model behind an LLM review; null for a human. */
   model: string | null;

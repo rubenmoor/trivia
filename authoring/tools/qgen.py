@@ -30,7 +30,8 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
                 [--overlaps] [--batches [<batch>…]] [--exit-check]
     qgen report --qc [<batch> [--changes "<task ids>"]]   # spot check vs. LLM review and audit (plan 16)
     qgen report --simulate [--locale …] [--mode …|all] [--json]   # games per new player; exit 1 below D-75's target (plan 62)
-    qgen report --cost [--json]     # $ per approved by run kind, projection per launch language (plan 70)
+    qgen report --cost [--json]     # $ per approved by run kind, projection per launch language and regional bundle (plan 70)
+    qgen report --review-time [--bundle <id>] [--run <run>] [--json]   # review minutes per 100 verdicts (plan 98)
     qgen report --played [--locale es|en|de|all] [--age-group …] [--mode …] [--since YYYY-MM-DD] [--all] [--json]
                                     # played vs. rated difficulty, outliers → /review?played=outliers (plan 109)
     qgen validate
@@ -2090,6 +2091,7 @@ def cost_runs(pool):
             skipped.append(f"{run}: no costs.log")
             continue
         approved, locale = None, None
+        bundle = (load_json(d / "run.json", {}) or {}).get("bundle", "base") if kind in ("batch", "translation") else None
         if kind == "batch":
             if run in merged:
                 approved = health.batch_health(run, pool)["approved"]
@@ -2103,7 +2105,7 @@ def cost_runs(pool):
             approved = sum(status.get(i) == "approved" for i in ids)
         elif any(q.get("batch") == run for q in pool):
             approved = sum(q.get("batch") == run and q["status"] == "approved" for q in pool)
-        runs.append({"run": run, "kind": kind, "locale": locale, "calls": len(own) + len(audit), "cost": sum(own),
+        runs.append({"run": run, "kind": kind, "bundle": bundle, "locale": locale, "calls": len(own) + len(audit), "cost": sum(own),
                      "audit": sum(audit), "approved": approved, "merged": kind != "batch" or run in merged,
                      "per_approved": sum(own) / approved if approved else None})
     have = {r["run"] for r in runs}
@@ -2141,9 +2143,32 @@ def cost_report(pool):
                            "note": None if l == "es" or tr[l] else "no pilot yet",
                            "spent": spent[l], "budget": budget.get(l)})
     rate = rates["draft"]
+    by_bundle = bundle_costs(pool, runs, rates, ratio)
     sources = {"count": extra, "per_approved": rate, "yield": {l: translations.yield_rate(l) for l in translations.LOCALES},
                "cost": extra * rate * (1 + (ratio or 0)) if rate is not None else None}
-    return {"runs": runs, "rates": rates, "projection": projection, "es_sources": sources, "skipped": skipped}
+    return {"runs": runs, "rates": rates, "projection": projection, "bundles": by_bundle, "es_sources": sources,
+            "skipped": skipped}
+
+
+def bundle_costs(pool, runs, rates, ratio):
+    """Rows per regional bundle × es, en (decision 110; base is the projection): $ per approved of its --bundle
+    and --translate --bundle runs, deficit to its target, projection; no own run yet → base's rate."""
+    rows = []
+    for b in load_bundles():
+        if b.get("kind") != "region":
+            continue
+        for l in ["es", "en"]:
+            own = [r for r in runs if r["bundle"] == b["id"] and r["merged"]
+                   and (r["kind"] == "batch" if l == "es" else r["locale"] == l)]
+            n = sum(r["approved"] or 0 for r in own)
+            rate = sum(r["cost"] for r in own) / n if n else None
+            use = rate if rate is not None else rates["draft"] if l == "es" else rates["translation"].get(l)
+            deficit = sum((targets.deficits(pool, b["id"], l) or {}).values())
+            rows.append({"bundle": b["id"], "locale": l, "runs": [r["run"] for r in own], "approved": n,
+                         "cost": sum(r["cost"] + r["audit"] for r in own), "per_approved": rate, "deficit": deficit,
+                         "projection": deficit * use * (1 + (ratio or 0)) if use is not None else None,
+                         "base_rate": rate is None and use is not None})
+    return rows
 
 
 def report_cost(args):
@@ -2175,10 +2200,64 @@ def report_cost(args):
     x = r["es_sources"]
     print(f"  es sources past es's target for en/de (yield {', '.join(f'{l} {y:.2f}' for l, y in x['yield'].items())}): "
           f"{x['count']} × {usd(x['per_approved'])} → {usd(x['cost'])}")
+    print("per regional bundle (its --bundle and --translate --bundle runs; deficit to its target, decision 110; "
+          "projection as above, * = base's rate, no own run yet):")
+    for x in r["bundles"]:
+        proj = usd(x["projection"]) + ("*" if x["base_rate"] else "")
+        print(f"  {x['bundle']} {x['locale']}: {len(x['runs'])} runs, {x['approved']} approved, spent {usd(x['cost'])}, "
+              f"{usd(x['per_approved'])} per approved; {x['deficit']} to go → {proj}")
     if r["skipped"]:
         print("skipped (work/ is local):")
         for s in r["skipped"]:
             print(f"  {s}")
+
+
+REVIEW_GAP_MIN = 10  # a longer pause between verdicts starts a new review session
+
+
+def review_time(pool, bundle=None, run=None):
+    """The developer's review time (plan 98, decision 110): human verdicts of the sources and every translation
+    with `reviewed_at`, gaps on the whole timeline (filters don't make gaps), a session's first verdict has none."""
+    src = {q["id"]: q for q in pool}
+    items = [(q, q, "es") for q in pool] + [(t, src.get(t["id"], {}), l) for l in translations.LOCALES
+                                            for t in translations.load(l)["questions"]]
+    stamped, untimed = [], 0
+    for x, q, l in items:
+        rv = x.get("review") or {}
+        if rv.get("reviewer") != "human":
+            continue
+        keep = (bundle is None or (q.get("bundle") or "base") == bundle) and (run is None or x.get("batch") == run)
+        if rv.get("reviewed_at"):
+            stamped.append((datetime.datetime.fromisoformat(rv["reviewed_at"]), keep))
+        else:
+            untimed += keep
+    stamped.sort(key=lambda s: s[0])
+    gaps, sessions, prev = [], 0, None
+    for at, keep in stamped:
+        gap = (at - prev).total_seconds() / 60 if prev else None
+        prev = at
+        if gap is not None and gap <= REVIEW_GAP_MIN:
+            gaps += [gap] if keep else []
+        elif keep:
+            sessions += 1
+    timed = sum(k for _, k in stamped)
+    return {"timed": timed, "untimed": untimed, "sessions": sessions, "gaps": len(gaps), "minutes": sum(gaps),
+            "per_100": 100 * sum(gaps) / len(gaps) if gaps else None}
+
+
+def report_review_time(args):
+    r = review_time(load_json(POOL)["questions"], args.bundle, args.run)
+    if args.json:
+        return print(json.dumps(r))
+    what = " ".join(filter(None, [args.bundle and f"bundle {args.bundle}", args.run and f"run {args.run}"])) or "all"
+    print(f"review time ({what}; human verdicts, sources and translations; gap > {REVIEW_GAP_MIN} min = new session):")
+    if not r["timed"]:
+        print(f"  0 timed verdicts (reviewed_at): nothing to measure yet; {r['untimed']} without a timestamp skipped")
+        return
+    per = "–" if r["per_100"] is None else f"{r['per_100']:.0f} min"
+    print(f"  {r['timed']} timed verdicts in {r['sessions']} sessions; {r['minutes']:.0f} min over {r['gaps']} gaps "
+          f"(a session's first verdict has none) → {per} per 100 verdicts")
+    print(f"  {r['untimed']} verdicts without a timestamp skipped")
 
 
 def _quantile(hist, order, q):
@@ -2307,10 +2386,12 @@ def cmd_report(args):
         return report_played(args)
     if args.cost:
         return report_cost(args)
+    if args.review_time:
+        return report_review_time(args)
     if args.simulate:
         return report_simulate(args)
     if args.exit_check:
-        return report_exit_check(load_json(POOL)["questions"], args.bundle)
+        return report_exit_check(load_json(POOL)["questions"], args.bundle or "base")
     if args.qc is not None:
         return report_qc(args.qc, args.changes)
     if args.calibration is not None:
@@ -2351,10 +2432,10 @@ def cmd_report(args):
         flag = f"  MISSING {l['missing']}" if l["missing"] else ""
         print(f"  level {l['level']:2} (difficulty {lo}–{hi}): {l['candidates']:3} candidates{flag}")
     for l in (args.locale or "es").split(","):
-        report_progress(pool, args.bundle, l)
+        report_progress(pool, args.bundle or "base", l)
     if args.subcategories:
         report_subcategories(avail, checked["ranges"])
-        report_saturation(pool, args.bundle)
+        report_saturation(pool, args.bundle or "base")
     if args.run:
         d = run_dir(args)
         ratings, checks = collect(d)
@@ -4347,14 +4428,19 @@ def main():
     rp.add_argument("--players", type=int, help="with --simulate: players in rr-competitive and timed (default 4)")
     rp.add_argument("--seeds", type=int, default=40, help="with --simulate: runs per cell")
     rp.add_argument("--cost", action="store_true",
-                    help="$ per run and per approved by run kind, projection per launch language (plan 70, CT-3)")
-    rp.add_argument("--json", action="store_true", help="with --simulate, --cost or --played: JSON on stdout")
+                    help="$ per run and per approved by run kind, projection per launch language and per regional bundle "
+                    "(plan 70, CT-3; plan 98)")
+    rp.add_argument("--json", action="store_true", help="with --simulate, --cost, --review-time or --played: JSON on stdout")
     rp.add_argument("--played", action="store_true",
                     help="played vs. rated difficulty from opt-in telemetry, outliers as review candidates (plan 109, "
                     "decision 122); --locale es|en|de|all, --age-group, --mode, --since, --all")
     rp.add_argument("--since", metavar="YYYY-MM-DD", help="with --played: answers received on or after this day")
     rp.add_argument("--all", action="store_true", help=f"with --played: every cell with n ≥ {played.MIN_N}, not only outliers")
-    rp.add_argument("--bundle", default="base", help="progress vs. targets and saturation for this bundle (plans 12, 14)")
+    rp.add_argument("--bundle", help="progress vs. targets and saturation for this bundle (default base; plans 12, 14); "
+                    "with --review-time: only its verdicts (default every bundle)")
+    rp.add_argument("--review-time", action="store_true",
+                    help=f"the developer's review minutes per 100 verdicts from reviewed_at (plan 98): mean gap between "
+                    f"consecutive verdicts, a gap > {REVIEW_GAP_MIN} min starts a new session; --bundle, --run filter")
     rp.add_argument("--subcategories", action="store_true",
                     help="supply per subcategory × difficulty, for the jokers (JK-10); saturation flags (plan 14)")
     rp.add_argument("--calibration", nargs="*", metavar="BATCH",
