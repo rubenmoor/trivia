@@ -1,0 +1,9 @@
+{
+  "id": "template-bundle",
+  "name": "Template: The solar system",
+  "description": "A question bundle to copy: 15 questions about the solar system in Spanish and English. Change the id before you publish your own.",
+  "version": "1.0.0",
+  "game": "0.1.0",
+  "languages": ["es", "en"],
+  "kind": ["bundle"]
+}

@@ -1,0 +1,9 @@
+{
+  "categories": [
+    {"slug": "solar-system", "name": "El sistema solar", "subcategories": [
+      "Planetas",
+      "El Sol y las lunas",
+      "Viajes espaciales"
+    ]}
+  ]
+}

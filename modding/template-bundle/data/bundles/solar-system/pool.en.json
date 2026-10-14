@@ -1,0 +1,236 @@
+{
+  "version": 1,
+  "questions": [
+    {
+      "id": "solar-001",
+      "difficulty": 1,
+      "subcategory": "El Sol y las lunas",
+      "description": "The only lamp nobody has to switch off at night.",
+      "question": "What gives us light and warmth during the day?",
+      "answer": "The Sun",
+      "wrong_answers": ["The Moon", "Mars", "Jupiter"],
+      "hints": [
+        "It's a star.",
+        "We can't see it at night.",
+        "It's why we wear sunglasses and sunscreen."
+      ],
+      "fun_fact": "More than a million planets the size of Earth would fit inside the Sun."
+    },
+    {
+      "id": "solar-002",
+      "difficulty": 2,
+      "subcategory": "Planetas",
+      "description": "A planet that never leaves the house without its jewellery.",
+      "question": "Look at the picture: which planet is this?",
+      "answer": "Saturn",
+      "wrong_answers": ["Mars", "Venus", "Mercury"],
+      "hints": [
+        "It's a gas giant.",
+        "It's the sixth planet from the Sun.",
+        "Its rings are made of ice and rock."
+      ],
+      "fun_fact": "Saturn is so light for its size that it would float in a giant bathtub full of water.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "img/planet.png",
+        "credit": "¡Trivia! template · CC0"
+      }
+    },
+    {
+      "id": "solar-003",
+      "difficulty": 3,
+      "subcategory": "Planetas",
+      "description": "A planet that went rusty because nobody dried it after the rain.",
+      "question": "Which planet is known as the Red Planet?",
+      "answer": "Mars",
+      "wrong_answers": ["Venus", "Jupiter", "Mercury"],
+      "hints": [
+        "It's our neighbour.",
+        "Several robot rovers drive around on it.",
+        "It's named after the Roman god of war."
+      ],
+      "fun_fact": "Mars has Olympus Mons, the tallest volcano in the solar system."
+    },
+    {
+      "id": "solar-004",
+      "difficulty": 4,
+      "subcategory": "Planetas",
+      "description": "A big family that keeps walking around the same stove.",
+      "question": "How many planets are there in the solar system?",
+      "answer": "8",
+      "wrong_answers": ["7", "9", "10"],
+      "hints": [
+        "Pluto doesn't count any more.",
+        "Four are rocky and four are giants.",
+        "It's the number of legs a spider has."
+      ],
+      "fun_fact": "The four planets closest to the Sun are rocky; the four farthest away are giants of gas and ice."
+    },
+    {
+      "id": "solar-005",
+      "difficulty": 5,
+      "subcategory": "Planetas",
+      "description": "The big brother who got the biggest bedroom.",
+      "question": "What is the largest planet in the solar system?",
+      "answer": "Jupiter",
+      "wrong_answers": ["Saturn", "Neptune", "Uranus"],
+      "hints": [
+        "It's a gas giant.",
+        "It's the fifth planet from the Sun.",
+        "It has a huge red spot that is a storm."
+      ],
+      "fun_fact": "More than a thousand Earths would fit inside Jupiter."
+    },
+    {
+      "id": "solar-006",
+      "difficulty": 6,
+      "subcategory": "Viajes espaciales",
+      "description": "Footprints nobody has swept away in more than fifty years.",
+      "question": "Who was the first person to walk on the Moon?",
+      "answer": "Neil Armstrong",
+      "wrong_answers": ["Yuri Gagarin", "Buzz Aldrin", "John Glenn"],
+      "hints": [
+        "He was American.",
+        "He flew on the Apollo 11 mission.",
+        "He said: \"That's one small step for man, one giant leap for mankind.\""
+      ],
+      "fun_fact": "Astronauts' footprints can last millions of years on the Moon, because there is no wind to blow them away."
+    },
+    {
+      "id": "solar-007",
+      "difficulty": 7,
+      "subcategory": "Planetas",
+      "description": "The one who sat so close to the fireplace that its toes went numb.",
+      "question": "Which planet is closest to the Sun?",
+      "answer": "Mercury",
+      "wrong_answers": ["Venus", "Mars", "Earth"],
+      "hints": [
+        "It's the smallest planet.",
+        "It has no moons at all.",
+        "It's named after the swift messenger of the Roman gods."
+      ],
+      "fun_fact": "A year on Mercury lasts only 88 Earth days."
+    },
+    {
+      "id": "solar-008",
+      "difficulty": 8,
+      "subcategory": "Viajes espaciales",
+      "description": "A trip around the world without a single stopover.",
+      "question": "Who was the first person to travel into space?",
+      "answer": "Yuri Gagarin",
+      "wrong_answers": ["Neil Armstrong", "Valentina Tereshkova", "John Glenn"],
+      "hints": [
+        "It happened in 1961.",
+        "He was Soviet.",
+        "His spacecraft was called Vostok 1."
+      ],
+      "fun_fact": "Gagarin's flight lasted about 108 minutes: a single trip around the Earth."
+    },
+    {
+      "id": "solar-009",
+      "difficulty": 9,
+      "subcategory": "Planetas",
+      "description": "A sauna so extreme it melts lead.",
+      "question": "What is the hottest planet in the solar system?",
+      "answer": "Venus",
+      "wrong_answers": ["Mercury", "Mars", "Jupiter"],
+      "hints": [
+        "It's not the closest to the Sun.",
+        "Its thick clouds trap the heat like a greenhouse.",
+        "It's called the morning star."
+      ],
+      "fun_fact": "On Venus a day is longer than a year: it takes longer to spin once than to go around the Sun."
+    },
+    {
+      "id": "solar-010",
+      "difficulty": 10,
+      "subcategory": "El Sol y las lunas",
+      "description": "The fastest messenger in the universe, and still it's late.",
+      "question": "How long does sunlight take to reach the Earth?",
+      "answer": "About 8 minutes",
+      "wrong_answers": ["About 8 seconds", "About 8 hours", "About 8 days"],
+      "hints": [
+        "Light travels about 300,000 kilometres per second.",
+        "The Sun is about 150 million kilometres away.",
+        "Long enough to boil an egg, too short to watch a film."
+      ],
+      "fun_fact": "Moonlight, on the other hand, takes just over a second to reach us."
+    },
+    {
+      "id": "solar-011",
+      "difficulty": 11,
+      "subcategory": "Viajes espaciales",
+      "description": "A year when half of humanity sat glued to the TV watching grey dust.",
+      "question": "In which year did a human first set foot on the Moon?",
+      "answer": "1969",
+      "wrong_answers": ["1961", "1965", "1975"],
+      "hints": [
+        "It was during the space race.",
+        "It was near the end of a decade.",
+        "The Woodstock festival took place the same year."
+      ],
+      "fun_fact": "Twelve people have walked on the Moon, all of them between 1969 and 1972."
+    },
+    {
+      "id": "solar-012",
+      "difficulty": 12,
+      "subcategory": "Planetas",
+      "description": "Kicked out of the group chat, and nobody told it.",
+      "question": "Since 2006, what do astronomers call Pluto?",
+      "answer": "A dwarf planet",
+      "wrong_answers": ["An asteroid", "A comet", "A moon"],
+      "hints": [
+        "It still goes around the Sun.",
+        "It's round, but shares its orbit with many other bodies.",
+        "Ceres and Eris have the same label."
+      ],
+      "fun_fact": "Pluto is smaller than our Moon."
+    },
+    {
+      "id": "solar-013",
+      "difficulty": 13,
+      "subcategory": "Planetas",
+      "description": "A planet that lay down for a nap and never got up again.",
+      "question": "Which planet spins almost lying down, its axis tipped on its side?",
+      "answer": "Uranus",
+      "wrong_answers": ["Neptune", "Saturn", "Jupiter"],
+      "hints": [
+        "It's an ice giant.",
+        "It was the first planet discovered with a telescope.",
+        "It's the seventh planet from the Sun."
+      ],
+      "fun_fact": "William Herschel discovered Uranus in 1781 and wanted to name it after King George III."
+    },
+    {
+      "id": "solar-014",
+      "difficulty": 14,
+      "subcategory": "Viajes espaciales",
+      "description": "A spacecraft that popped out for bread in the seventies and is still on its way.",
+      "question": "Which spacecraft is the farthest human-made object from Earth?",
+      "answer": "Voyager 1",
+      "wrong_answers": ["Voyager 2", "Pioneer 10", "New Horizons"],
+      "hints": [
+        "It was launched in 1977.",
+        "It flew past Jupiter and Saturn.",
+        "In 2012 it became the first spacecraft to reach interstellar space."
+      ],
+      "fun_fact": "Both Voyager spacecraft carry a golden record with sounds and greetings from Earth."
+    },
+    {
+      "id": "solar-015",
+      "difficulty": 15,
+      "subcategory": "El Sol y las lunas",
+      "description": "A moon that thinks it's a planet.",
+      "question": "What is the largest moon in the solar system?",
+      "answer": "Ganymede",
+      "wrong_answers": ["Titan", "Io", "Callisto"],
+      "hints": [
+        "It's bigger than the planet Mercury.",
+        "It orbits Jupiter.",
+        "In Greek myth he was the cupbearer of the gods."
+      ],
+      "fun_fact": "Galileo discovered it in 1610, along with three other moons of Jupiter."
+    }
+  ]
+}

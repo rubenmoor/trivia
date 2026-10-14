@@ -1,0 +1,236 @@
+{
+  "version": 1,
+  "questions": [
+    {
+      "id": "solar-001",
+      "difficulty": 1,
+      "subcategory": "El Sol y las lunas",
+      "description": "El único foco que nadie tiene que apagar por la noche.",
+      "question": "¿Qué astro nos da luz y calor durante el día?",
+      "answer": "El Sol",
+      "wrong_answers": ["La Luna", "Marte", "Júpiter"],
+      "hints": [
+        "Es una estrella.",
+        "Por la noche no lo vemos.",
+        "Por él usamos gafas oscuras y protector solar."
+      ],
+      "fun_fact": "Dentro del Sol cabrían más de un millón de planetas como la Tierra."
+    },
+    {
+      "id": "solar-002",
+      "difficulty": 2,
+      "subcategory": "Planetas",
+      "description": "Un planeta que nunca sale de casa sin sus joyas.",
+      "question": "Mira la imagen: ¿qué planeta es este?",
+      "answer": "Saturno",
+      "wrong_answers": ["Marte", "Venus", "Mercurio"],
+      "hints": [
+        "Es un gigante de gas.",
+        "Es el sexto planeta desde el Sol.",
+        "Sus anillos están hechos de hielo y roca."
+      ],
+      "fun_fact": "Saturno es tan poco denso que flotaría en una bañera gigante llena de agua.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "img/planet.png",
+        "credit": "¡Trivia! template · CC0"
+      }
+    },
+    {
+      "id": "solar-003",
+      "difficulty": 3,
+      "subcategory": "Planetas",
+      "description": "Un planeta que se quedó oxidado por no secarse después de la lluvia.",
+      "question": "¿Qué planeta es conocido como el planeta rojo?",
+      "answer": "Marte",
+      "wrong_answers": ["Venus", "Júpiter", "Mercurio"],
+      "hints": [
+        "Es nuestro vecino.",
+        "Varios robots exploradores andan por su superficie.",
+        "Su nombre es el del dios romano de la guerra."
+      ],
+      "fun_fact": "En Marte está el Monte Olimpo, el volcán más alto del sistema solar."
+    },
+    {
+      "id": "solar-004",
+      "difficulty": 4,
+      "subcategory": "Planetas",
+      "description": "Una familia numerosa que da vueltas alrededor de la misma estufa.",
+      "question": "¿Cuántos planetas tiene el sistema solar?",
+      "answer": "8",
+      "wrong_answers": ["7", "9", "10"],
+      "hints": [
+        "Plutón ya no cuenta.",
+        "Cuatro son rocosos y cuatro son gigantes.",
+        "Es el número de patas de una araña."
+      ],
+      "fun_fact": "Los cuatro planetas más cercanos al Sol son rocosos; los cuatro más lejanos son gigantes de gas y hielo."
+    },
+    {
+      "id": "solar-005",
+      "difficulty": 5,
+      "subcategory": "Planetas",
+      "description": "El hermano mayor que se quedó con la habitación más grande.",
+      "question": "¿Cuál es el planeta más grande del sistema solar?",
+      "answer": "Júpiter",
+      "wrong_answers": ["Saturno", "Neptuno", "Urano"],
+      "hints": [
+        "Es un gigante de gas.",
+        "Es el quinto planeta desde el Sol.",
+        "Tiene una enorme mancha roja que es una tormenta."
+      ],
+      "fun_fact": "Dentro de Júpiter cabrían más de mil planetas como la Tierra."
+    },
+    {
+      "id": "solar-006",
+      "difficulty": 6,
+      "subcategory": "Viajes espaciales",
+      "description": "Unas pisadas que nadie ha barrido en más de cincuenta años.",
+      "question": "¿Quién fue la primera persona en caminar sobre la Luna?",
+      "answer": "Neil Armstrong",
+      "wrong_answers": ["Yuri Gagarin", "Buzz Aldrin", "John Glenn"],
+      "hints": [
+        "Era estadounidense.",
+        "Viajó en la misión Apolo 11.",
+        "Dijo: «Es un pequeño paso para el hombre, pero un gran salto para la humanidad»."
+      ],
+      "fun_fact": "Las huellas de los astronautas pueden durar millones de años en la Luna, porque allí no hay viento que las borre."
+    },
+    {
+      "id": "solar-007",
+      "difficulty": 7,
+      "subcategory": "Planetas",
+      "description": "El que se sentó tan cerca de la chimenea que ya no siente los pies.",
+      "question": "¿Cuál es el planeta más cercano al Sol?",
+      "answer": "Mercurio",
+      "wrong_answers": ["Venus", "Marte", "La Tierra"],
+      "hints": [
+        "Es el planeta más pequeño.",
+        "No tiene ninguna luna.",
+        "Se llama como el mensajero veloz de los dioses romanos."
+      ],
+      "fun_fact": "Un año en Mercurio dura solo 88 días terrestres."
+    },
+    {
+      "id": "solar-008",
+      "difficulty": 8,
+      "subcategory": "Viajes espaciales",
+      "description": "Un viaje de ida y vuelta alrededor del mundo sin una sola escala.",
+      "question": "¿Quién fue la primera persona en viajar al espacio?",
+      "answer": "Yuri Gagarin",
+      "wrong_answers": ["Neil Armstrong", "Valentina Tereshkova", "John Glenn"],
+      "hints": [
+        "Lo hizo en 1961.",
+        "Era soviético.",
+        "Su nave se llamaba Vostok 1."
+      ],
+      "fun_fact": "El vuelo de Gagarin duró unos 108 minutos: una sola vuelta a la Tierra."
+    },
+    {
+      "id": "solar-009",
+      "difficulty": 9,
+      "subcategory": "Planetas",
+      "description": "Un sauna tan exagerado que derrite el plomo.",
+      "question": "¿Cuál es el planeta más caliente del sistema solar?",
+      "answer": "Venus",
+      "wrong_answers": ["Mercurio", "Marte", "Júpiter"],
+      "hints": [
+        "No es el más cercano al Sol.",
+        "Sus nubes espesas atrapan el calor como un invernadero.",
+        "Lo llaman el lucero de la mañana."
+      ],
+      "fun_fact": "En Venus un día dura más que un año: tarda más en girar sobre sí mismo que en dar la vuelta al Sol."
+    },
+    {
+      "id": "solar-010",
+      "difficulty": 10,
+      "subcategory": "El Sol y las lunas",
+      "description": "El mensajero más rápido del universo, y aun así llega tarde.",
+      "question": "¿Cuánto tarda la luz del Sol en llegar a la Tierra?",
+      "answer": "Unos 8 minutos",
+      "wrong_answers": ["Unos 8 segundos", "Unas 8 horas", "Unos 8 días"],
+      "hints": [
+        "La luz viaja a unos 300 000 kilómetros por segundo.",
+        "El Sol está a unos 150 millones de kilómetros.",
+        "Da tiempo de hervir un huevo, pero no de ver una película."
+      ],
+      "fun_fact": "La luz de la Luna, en cambio, tarda poco más de un segundo en llegar hasta nosotros."
+    },
+    {
+      "id": "solar-011",
+      "difficulty": 11,
+      "subcategory": "Viajes espaciales",
+      "description": "Un año en el que media humanidad se quedó pegada al televisor mirando polvo gris.",
+      "question": "¿En qué año pisó un ser humano la Luna por primera vez?",
+      "answer": "1969",
+      "wrong_answers": ["1961", "1965", "1975"],
+      "hints": [
+        "Fue durante la carrera espacial.",
+        "Fue a finales de una década.",
+        "Ese mismo año se celebró el festival de Woodstock."
+      ],
+      "fun_fact": "Doce personas han caminado sobre la Luna, todas entre 1969 y 1972."
+    },
+    {
+      "id": "solar-012",
+      "difficulty": 12,
+      "subcategory": "Planetas",
+      "description": "Lo sacaron del grupo de amigos y nadie le avisó.",
+      "question": "Desde 2006, ¿qué es Plutón según los astrónomos?",
+      "answer": "Un planeta enano",
+      "wrong_answers": ["Un asteroide", "Un cometa", "Una luna"],
+      "hints": [
+        "Sigue girando alrededor del Sol.",
+        "Es redondo, pero comparte su órbita con muchos otros cuerpos.",
+        "Ceres y Eris tienen la misma etiqueta."
+      ],
+      "fun_fact": "Plutón es más pequeño que nuestra Luna."
+    },
+    {
+      "id": "solar-013",
+      "difficulty": 13,
+      "subcategory": "Planetas",
+      "description": "Un planeta que se echó una siesta y nunca se volvió a levantar.",
+      "question": "¿Qué planeta gira casi acostado, con su eje tumbado de lado?",
+      "answer": "Urano",
+      "wrong_answers": ["Neptuno", "Saturno", "Júpiter"],
+      "hints": [
+        "Es un gigante de hielo.",
+        "Fue el primer planeta descubierto con un telescopio.",
+        "Es el séptimo planeta desde el Sol."
+      ],
+      "fun_fact": "William Herschel descubrió Urano en 1781 y quería llamarlo como el rey Jorge III."
+    },
+    {
+      "id": "solar-014",
+      "difficulty": 14,
+      "subcategory": "Viajes espaciales",
+      "description": "Una nave que salió a comprar pan en los años setenta y sigue de camino.",
+      "question": "¿Qué nave espacial es el objeto hecho por humanos más lejano de la Tierra?",
+      "answer": "Voyager 1",
+      "wrong_answers": ["Voyager 2", "Pioneer 10", "New Horizons"],
+      "hints": [
+        "Despegó en 1977.",
+        "Pasó junto a Júpiter y Saturno.",
+        "Fue la primera nave en llegar al espacio interestelar, en 2012."
+      ],
+      "fun_fact": "Las dos naves Voyager llevan un disco de oro con sonidos y saludos de la Tierra."
+    },
+    {
+      "id": "solar-015",
+      "difficulty": 15,
+      "subcategory": "El Sol y las lunas",
+      "description": "Una luna con complejo de planeta.",
+      "question": "¿Cuál es la luna más grande del sistema solar?",
+      "answer": "Ganímedes",
+      "wrong_answers": ["Titán", "Ío", "Calisto"],
+      "hints": [
+        "Es más grande que el planeta Mercurio.",
+        "Gira alrededor de Júpiter.",
+        "En la mitología griega era el copero de los dioses."
+      ],
+      "fun_fact": "Galileo la descubrió en 1610, junto con otras tres lunas de Júpiter."
+    }
+  ]
+}

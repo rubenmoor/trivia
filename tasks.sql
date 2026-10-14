@@ -23458,7 +23458,7 @@ Why: decision 133: Player bundle kit: check with trivia --check-mod, kit in modd
 - `trivia-desktop --check-mod <tmp mod>` on a throw-away mod (bad `mod.json` field, a bad bundle row, two bad questions, a missing image, an absolute URL) lists each with its code and exits 1; fixed, it exits 0.
 - A packaged Linux build (`trivia-desktop-build --dir`, `linux-unpacked/`) runs the same.
 - Temp mod deleted; per-commit checks pass.', '2026-10-13T18:36:02Z', '2026-10-14T17:07:58Z', 940);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (983, 120, 'modding/bundles.md and modding/template-bundle/', 'work', 'open', NULL, NULL, 'Part 3 of plan 120. After task 2 of this plan (`--check-mod`). Read plan 120''s sections "Format doc" and "Template" for the full list; the essentials:
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (983, 120, 'modding/bundles.md and modding/template-bundle/', 'work', 'done', NULL, '2026-10-14, modding/bundles.md (player format doc: layout, mod.json, bundles.json, categories, names, pool fields, difficulty + age-group windows, media/credit (decision 129), writing rules, try/check/share, --check-mod reason codes), modding/template-bundle/ (mod.json, bundle solar-system kind topic, 1 category / 3 subcategories, names.en.json, pool.json + pool.en.json: 15 questions difficulty 1-15, one essential image img/planet.png drawn with ImageMagick, credit «¡Trivia! template · CC0»). trivia-desktop --check-mod modding/template-bundle: exit 0, 15 ok per language. Temp TRIVIA_MODS_DIR copy in trivia-desktop (dev user, temp save, state/desktop/mods.json restored): bundle tile «Player-made · Template: The solar system» with its English name, image question played with the image and no missing-media line, Credits lists «¡Trivia! template · CC0»; temp files deleted. Follow-up: bundle names in mod names files keyed by the namespaced id.', 'Part 3 of plan 120. After task 2 of this plan (`--check-mod`). Read plan 120''s sections "Format doc" and "Template" for the full list; the essentials:
 
 ## `modding/bundles.md`
 - English, AGENTS.md doc style (intro paragraph, then bullets); for players, no repo knowledge assumed.
@@ -23481,7 +23481,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - `trivia-desktop --check-mod modding/template-bundle` exits 0 with 15 ok per language.
 - A copy in a temp `TRIVIA_MODS_DIR` loads in `trivia-desktop` (`TRIVIA_DEV_STEAM_USER=1`): the bundle shows marked player-made, a game with it on plays its image question, the Credits screen lists the image; temp copy deleted.
-- Per-commit checks pass.', '2026-10-13T18:36:02Z', NULL, 940);
+- Per-commit checks pass.', '2026-10-13T18:36:02Z', '2026-10-14T17:14:51Z', 940);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (984, 120, 'modding/bundle-prompt.md: AI prompt for player bundles, tested once', 'work', 'open', NULL, NULL, 'Part 4 of plan 120. After task 3 of this plan (`bundles.md`, template). See plan 120''s section "AI prompt".
 
 ## What
@@ -23912,6 +23912,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Checks: `npm run check` (incl. `check:literals`), `npm test`, `npm run build`, `qgen validate`
 
 Done when: no open flags left (fixed or turned into tasks), guides updated, consequences recorded.', '2026-10-14T16:25:30Z', NULL, 804);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1027, 120, 'Mod names files: bundle names by the raw bundle id', 'work', 'open', NULL, NULL, 'Found by `task 983: modding/bundles.md and modding/template-bundle/`.
+
+A mod''s `data/bundles/<bundle>/names.<locale>.json` translates its bundle name under `bundles`, but the loader (`namesOf()` / `mergeNames()` in `app/client/src/lib/data.ts`, `engine/state.ts`; lookups `data.uiNames.bundles[b.id]` in `lib/names.svelte.ts`, `lib/api.ts`) keys it by the runtime id `<mod id>:<bundle id>` (decision 128: Bundles from mods: the shell merges bundles.json; mod ids namespaced <mod id>:<id>). Players copying `modding/template-bundle/` must change the mod id (decision 127) and then also this key, or the translated name silently falls back to the `bundles.json` name.
+
+- For mod bundles, namespace the `bundles` keys of their names files at load (raw `solar-system` → `template-bundle:solar-system`); accept the full id too, so existing mods keep working.
+- Update `modding/template-bundle/data/bundles/solar-system/names.en.json` to the raw key and the `names.<locale>.json` section of `modding/bundles.md`.
+
+Done when: the template with its mod id changed shows "The solar system" in an English UI (`trivia-desktop`, `TRIVIA_DEV_STEAM_USER=1`, temp `TRIVIA_MODS_DIR`); `trivia --check-mod modding/template-bundle` exits 0; per-commit checks pass.', '2026-10-14T17:14:51Z', NULL, 983);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -26389,6 +26397,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (921, 804, '2026-10-14T16:11:45Z', '2026-10-14T16:25:37Z', 'done', NULL, 0, '930e9771a027f61a7852e8ebf90ce048cbf64b94', 'claude-opus-5-5[1m]', '83870837-3ac7-4f7f-8f15-cd9af4e4d0df', 9, 18, 2512, 302676, 28225, 0.3366472, 2129003);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (922, 981, '2026-10-14T16:25:37Z', '2026-10-14T16:35:55Z', 'done', NULL, 0, 'e9d2204915fd4987f9f9726c041a06cfb5da4693', 'claude-opus-5-5[1m]', '97a41388-672a-45bf-a9fe-4f7c9d1c946f', 39, 74, 15210, 2145676, 66251, 1.2636392000000003, 2129003);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (923, 982, '2026-10-14T16:35:55Z', '2026-10-14T17:08:09Z', 'done', NULL, 0, 'ecfffddba76525b32af86c7dff9fb0cb9cd5674d', 'claude-opus-5-5[1m]', 'a64064cc-ab2f-4e45-aeec-45056176d8fd', 36, 68, 22154, 2971046, 98178, 1.8229852000000004, 2129003);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (924, 983, '2026-10-14T17:08:09Z', '2026-10-14T17:15:00Z', 'done', NULL, 0, '66ea5247b0608a55c82598f70b175906895c5b1d', 'claude-opus-5-5[1m]', '7ee2c2c0-5325-4321-b219-4ba7df792f70', 57, 104, 35477, 4577277, 116407, 2.5566674000000003, 2129003);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

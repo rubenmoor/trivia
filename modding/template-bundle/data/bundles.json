@@ -1,0 +1,11 @@
+{
+  "bundles": [
+    {
+      "id": "solar-system",
+      "kind": "topic",
+      "languages": ["es", "en"],
+      "name": "El sistema solar",
+      "description": "Planetas, lunas y viajes espaciales: del Sol a la nave más lejana."
+    }
+  ]
+}
