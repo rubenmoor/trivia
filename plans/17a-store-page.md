@@ -181,7 +181,45 @@ Only the fields that differ from `es`: «vosotros», «vídeo», «ordenador», 
 - Steam content-survey AI section and store wording per language: `task 667: AI disclosure text (Steam survey + store wording)`
 
 ## Capsules and icon
-- Typographic capsules per store language and DLC, 1024×1024 icon (decisions 77, 87): `task 669: Capsules, logo and icon: render per store language`
+Typographic capsules, library art and the game icon (decision 77: store capsule art, decision 87: Windows exe icon), rendered 2026-10-14 (`task 669`) by a script, no image generation; approved through pm decision "Capsules and icon approved?". Template: the tower of 12 blocks in its materials with the crown, the amber spotlight, faint «?» glyphs, the store name in Baloo 2 (`plans/10-visual-design.md`).
+
+### Valve's asset list
+- Checked 2026-10-14: [Graphical Assets overview](https://partner.steamgames.com/doc/store/assets), [Store assets](https://partner.steamgames.com/doc/store/assets/standard), [Library assets](https://partner.steamgames.com/doc/store/assets/libraryassets), [Community and client icons](https://partner.steamgames.com/doc/store/assets/community), [Asset rules](https://partner.steamgames.com/doc/store/assets/rules); sizes unchanged from the 2024 list, old sizes no longer accepted
+- Store: header 920×430, small 462×174 (logo nearly fills it; 120×45 and 184×69 generated), main 1232×706, vertical 748×896, page background 1438×810 (optional, ambient, not too bright)
+- Library: capsule 600×900, header 920×430, hero 3840×1240 PNG (no text at all; critical content in the centred 860×380 safe area), logo PNG on transparent, 1280 wide and/or 720 tall (logotype only; position picked in Steamworks' preview)
+- Icons: shortcut icon 256×256 or 512×512 PNG/ICO (Valve makes the .ico), app icon 184×184 JPG
+- Rules: capsules carry artwork, the game name and an official subtitle only; no review scores, awards, sale or call-to-action text, no other text; PG-13; logo readable at every size
+- Community icon: no longer in the list (the 2024 "community icon 184×184" is today's app icon)
+- DLC: Valve's DLC page names no own asset set; a DLC's store page uses the store capsules (header, small, main, vertical); recheck the DLC app's "Graphical Assets" tab at entry; library assets: none (shown inside the base game's library page)
+- Screenshots: see "Screenshots" below
+
+### Rendering
+- `node authoring/store/capsules.mjs [--only <path part>] [--visible]` from the dev shell, after `npm run build` (the shell serves the fonts); ~1 min
+- Shell under Xvfb with `--disable-gpu` (GPU compositing under Xvfb stalls CDP captures), raw CDP, viewport 3840×2160; each asset is a page swapped into the game's page
+- Names (D-50, decision 78): en «Living Room Trivia», es and es-ES «Trivia en Familia» (shared), de «Wohnzimmer-Quiz» (provisional until PUB-7's check); logotype = small amber line + big word
+- DLC: base logotype + pack name in a panel, a flag-coloured stripe (amber, sapphire, coral) at the bottom; name from `app/data/names.<lang>.json`, else `bundles.json`; replace with the DLC store name once `task 783: Free DLC store texts in 17a` sets one, then re-run
+- Re-run after any palette, font or name change
+
+### Output (`authoring/store/out/capsules/`, gitignored)
+| file | Steamworks field |
+|---|---|
+| `<lang>/header.png` | Store: header capsule; Library: header (or reuse) |
+| `<lang>/small.png` | Store: small capsule |
+| `<lang>/main.png` | Store: main capsule |
+| `<lang>/vertical.png` | Store: vertical capsule |
+| `<lang>/library-capsule.png` | Library: capsule |
+| `<lang>/library-header.png` | Library: header |
+| `<lang>/library-logo.png` | Library: logo (suggested position: left bottom corner) |
+| `art/library-hero.png` | Library: hero (all languages) |
+| `art/page-background.png` | Store: page background (all languages) |
+| `dlc-<id>/<lang>/{header,small,main,vertical}.png` | DLC app's store capsules |
+| `icon-1024.png` | Game icon source: exe, Linux, Steam client (`task 683`) |
+| `icon-256.png` | Community/client: shortcut icon |
+| `app-icon-184.jpg` | Community/client: app icon |
+| `icon-16.png` | Legibility check only, not uploaded |
+
+- `<lang>`: `en`, `es` (also for Spanish – Spain), `de`; upload as localized versions per store language
+- AI note for `task 667: AI disclosure text (Steam survey + store wording)`: the template (layout, tower, icon) was designed and coded by Claude; the font, Baloo 2, is people's work (OFL); no image generation; per decision 77 disclosed as AI-assisted store art
 
 ## System requirements, languages, controller
 Values for Steamworks → Edit Store Page → "Basic Info" (requirements, languages) and "Controller" (plan 88 task 3). Proposed 2026-10-13; the developer approves or fixes them through pm decision "Store requirements, languages and controller flags?". Field names are from memory (no web access at the task); recheck them at entry.
