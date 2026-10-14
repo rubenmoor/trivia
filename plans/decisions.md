@@ -358,7 +358,7 @@ Template:
 - Context: Batch-6 wrote `base` questions with a Colombian flavour because 27 of `base`'s subcategories are about Colombia (OQ-42). D-41 gives each bundle its own taxonomy but left the layout open (OQ-41).
 - Decision: `base`'s categories stay in `app/data/categories.json`. Another bundle's categories are in `app/data/bundles/<id>/categories.json`. They ship because the game's «Cambiazo» picker shows every bundle's categories while the game plays every bundle (until BN-6). Its concept lists are in `authoring/data/bundles/<id>/concepts/`, and its optional question axes in `authoring/data/bundles/<id>/question-axes.json` (otherwise `base`'s). Subcategory names and broad-category slugs are unique across all bundles, and question ids stay global. Concept names are unique within a bundle. The taxonomy steers generation; the question's `bundle` steers play. A question may keep a subcategory from another bundle's list (a well-known fact about Colombia stays in `base`). The 27 Colombian subcategories move into `colombia`'s own list (6 broad categories), and their concept lists move with them. Existing questions keep their bundle. A `base` batch keeps Colombia-only content out through the prompt alone (OQ-43); the developer moves the rest with `n` in the review tool.
 - Consequences: `qgen batch` picks from `base`'s 113 subcategories; `qgen batch --bundle colombia` picks from the 27 Colombian ones. `qgen bundle new <id>` creates the entry and an empty `categories.json`. `validate` checks the uniqueness rules. The game's picker gets 6 more tiles (29 broad categories).
-- Supersedes / related: D-19, D-37, D-39, D-41; OQ-41, OQ-42, OQ-43; BN-8..BN-12; amended by D-49, D-99 (names unique per bundle only; a `colombia` question uses a `colombia` subcategory)
+- Supersedes / related: D-19, D-37, D-39, D-41; OQ-41, OQ-42, OQ-43; BN-8..BN-12; amended by D-49, D-99 (names unique per bundle only; a `colombia` question uses a `colombia` subcategory), D-100 (keys: bundle + name)
 
 ## D-44: One house style for every bundle
 - Date: 2026-10-08
@@ -939,3 +939,15 @@ Template:
   - **Launch doesn't wait:** it ships what `colombia` has then; updates bring the rest.
 - Consequences: `qgen report --simulate` defaults to the locale's default game (`base` for every locale); `--bundles` for packs. Plan 98 builds the rest (taxonomy, `colombia` list, target, `--translate --bundle`, effort report).
 - Supersedes / related: D-43 (uniqueness across bundles), D-49, D-53, D-84 (amends); D-39, D-85, D-94, D-95, D-97, D-98; OQ-46; RG-5; pm decisions 33, 37, 66, 110; plans 84, 98
+
+## D-100: Subcategory keys: bundle + name in code
+- Date: 2026-10-14
+- Context: D-99 makes a category or subcategory bundle + name; code looked subcategories up by name alone (D-43). Plan 98 task 826.
+- Decision:
+  - **Python:** a subcategory is `(bundle, name)` (`categories.key(q)`, `broad_of()`, `category_of(bundle, sub)`); concept lists, drafts, saturation, reports and `validate` take the bundle; `validate` checks uniqueness within each bundle only.
+  - **One-string key** (engine, names, patch notes, `--simulate` output): `subKey` / `categories.sub_key`: `base`'s bare name or slug, another bundle's `<bundle>/<name>`. Saves keep their keys: a `base` subcategory's key is unchanged, so purged subcategories, `swapped_to` and `notified_exhausted` of existing saves stay valid without a save migration.
+  - **Names:** each names file keys its own bundle's slugs and Spanish names; merged by key (`mergeNames`, `load_names`).
+  - **Joker view:** «Cambiazo» categories and subcategories carry `key`; the client sends the subcategory's key. Frozen engine fixtures (plan 51) replay through a normalizer in `game.test.ts` (bare names, no `key`).
+  - **Work files** of a non-`base` subcategory (`work/concepts/`, translation chunks) are prefixed `<bundle>--`.
+- Consequences: Until plan 98 task 827, the 19 `colombia` questions on `base` subcategories pass `validate` (D-49's other direction) but have no broad category in play or reports (`None`); a `colombia` name already in a save's `notified_exhausted` is pruned and may be shown once more. Mods: `taxonomy_clash` goes in task 995.
+- Supersedes / related: D-43 (amends: lookups by name alone), D-49, D-81, D-99; pm decision 110; plan 98

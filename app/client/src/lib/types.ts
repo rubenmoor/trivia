@@ -91,10 +91,13 @@ export interface JokerState {
 
 export interface Jokers {
   hint: JokerState;
+  /** Subcategory and category keys: bundle + name (subKey, D-99). */
   skip: JokerState & { purge: JokerState & { subcategory: string } };
   easier: JokerState;
   category: JokerState & {
-    categories: { slug: string; name: string; available: boolean; subcategories: { name: string; available: boolean }[] }[];
+    categories: {
+      slug: string; key: string; name: string; available: boolean; subcategories: { name: string; key: string; available: boolean }[];
+    }[];
   };
   snipe: JokerState;
 }
@@ -135,7 +138,7 @@ export interface Game {
   options: { description: string }[];
   history: { level: number; correct: boolean }[];
   can_undo: boolean;
-  /** Subcategories purged with «Paso» in this game. */
+  /** Subcategories (keys, D-99) purged with «Paso» in this game. */
   purged: string[];
   /** The level repeats after a «Francotirador» hit (until a card is picked). */
   repeat: boolean;
@@ -161,7 +164,7 @@ export interface Game {
     hints: string[];
     /** Answer indexes struck out by «Francotirador» misses. */
     struck: number[];
-    /** The subcategory chosen with «Cambiazo» for this question, or null. */
+    /** The subcategory (key, D-99) chosen with «Cambiazo» for this question, or null. */
     swapped_to: string | null;
   } | null;
   last: {

@@ -2,7 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import type { Category } from "../lib/types.ts";
 import {
-  broadOf, byId, categoryOf, isModId, isOurs, loadCategories, modPool, parseAgeGroups, parseBundles, parsePool, subcategories,
+  broadOf, byId, categoryOf, isModId, isOurs, loadCategories, modPool, parseAgeGroups, parseBundles, parsePool, subcategories, subKeys,
 } from "./pool.ts";
 import { data, fixture, realCategories } from "./test/fixtures.ts";
 
@@ -30,18 +30,19 @@ test("loadCategories: bundles.json order, base first, missing file = none", () =
   assert.deepEqual(cats.map((c) => [c.bundle, c.slug]), [["base", "a"], ["base", "b"], ["y", "c"]]);
 });
 
-test("real categories: base first, every subcategory once", () => {
+test("real categories: base first, every subcategory once per bundle", () => {
   const cats = realCategories();
   const bundles = cats.map((c) => c.bundle);
   assert.equal(bundles[0], "base");
   assert.equal(bundles.lastIndexOf("base") + 1, bundles.indexOf("colombia"));
-  const subs = subcategories(cats);
+  const subs = subKeys(cats);
   assert.equal(new Set(subs).size, subs.length);
   assert.equal(subcategories(cats, "base").length + subcategories(cats, "colombia").length, subs.length);
   const broad = broadOf(cats);
   assert.equal(broad.get("Bebidas")?.slug, "comida-bebida");
-  assert.equal(broad.get("Regiones de Colombia")?.slug, "colombia-pais");
-  assert.equal(broad.get("Regiones de Colombia")?.bundle, "colombia");
+  assert.equal(broad.get("colombia/Regiones de Colombia")?.slug, "colombia-pais");
+  assert.equal(broad.get("colombia/Regiones de Colombia")?.bundle, "colombia");
+  assert.equal(broad.get("Regiones de Colombia"), undefined);
   assert.equal(broad.get("Nada"), undefined);
 });
 
@@ -51,7 +52,11 @@ test("fixture categories: broadOf, categoryOf", () => {
   const cat = categoryOf(broadOf(cats));
   assert.equal(cat({ subcategory: "Planetas" }), "ciencia");
   assert.equal(cat({ subcategory: "Fútbol" }), "cultura");
-  assert.equal(cat({ subcategory: "Ciudades de Colombia" }), "colombia");
+  assert.equal(cat({ bundle: "colombia", subcategory: "Ciudades de Colombia" }), "colombia/colombia");
+  assert.equal(cat({ subcategory: "Ciudades de Colombia" }), null);
+  const twice = categoryOf(broadOf([...cats, { slug: "ciencia", name: "Ciencia", bundle: "colombia", subcategories: ["Planetas"] }]));
+  assert.equal(twice({ bundle: "base", subcategory: "Planetas" }), "ciencia");
+  assert.equal(twice({ bundle: "colombia", subcategory: "Planetas" }), "colombia/ciencia");
   assert.equal(cat({ subcategory: "Nada" }), null);
   assert.equal(cat({ subcategory: null }), null);
   assert.equal(cat({}), null);

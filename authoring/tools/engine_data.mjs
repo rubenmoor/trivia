@@ -24,6 +24,6 @@ export function loadData(locale) {
   }
   return engineData(
     pool, loadCategories(bundles, byBundle), parsed, parseAgeGroups(json("age-groups.json")), locale,
-    locale === "es" ? undefined : mergeNames(parsed.map((b) => optional(bundleFile(b.id, `names.${locale}.json`)))),
+    locale === "es" ? undefined : mergeNames(parsed.map((b) => [b.id, optional(bundleFile(b.id, `names.${locale}.json`))])),
   );
 }

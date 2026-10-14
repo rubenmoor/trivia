@@ -143,7 +143,7 @@ async function namesOf(bundles: Bundle[], lang: string): Promise<Names> {
   if (lang.split("-")[0] === "es") return NO_NAMES;
   return mergeNames(await Promise.all(bundles.map(async (b) => {
     const file = bundleFile(b.id, `names.${lang}.json`);
-    return b.source === "mod" ? modNames(await modGet(file), b.mod ?? "") : get(file, true);
+    return [b.id, b.source === "mod" ? modNames(await modGet(file), b.mod ?? "") : await get(file, true)] as const;
   })));
 }
 

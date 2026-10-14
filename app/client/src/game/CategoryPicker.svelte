@@ -1,6 +1,6 @@
 <script lang="ts">
   // «Cambiazo»'s two-step picker (plans/09-jokers.md, "Cambiazo", JK-7): every bundle's broad categories
-  // (D-43), then the subcategories of the chosen one (D-19). Tiles without a fitting question are disabled
+  // (D-43), then the subcategories of the chosen one (D-19), by key (bundle + name, D-99). Tiles without a fitting question are disabled
   // (the engine decides, 09 "Availability"). Click, or arrows + Enter; Backspace goes back.
   import { tick } from "svelte";
   import type { Jokers } from "../lib/types.ts";
@@ -38,10 +38,10 @@
 
   async function back() {
     if (!group) return oncancel();
-    const slug = group.slug;
+    const key = group.key;
     group = null;
     await tick();
-    focusControl(grid?.querySelector<HTMLButtonElement>(`[data-slug="${slug}"]`));
+    focusControl(grid?.querySelector<HTMLButtonElement>(`[data-key="${CSS.escape(key)}"]`));
   }
 
   // Esc cancels, Backspace goes back; arrows move over the picker (lib/focus.ts); Enter and Space press the focused tile.
@@ -62,17 +62,17 @@
 
 <div class="backdrop">
   <div class="picker glass-strong" bind:this={picker}>
-    <h2 lang={group ? questionLocale() : undefined}>{group ? displayName("category", group.slug) : t("joker.category.title")}</h2>
+    <h2 lang={group ? questionLocale() : undefined}>{group ? displayName("category", group.key) : t("joker.category.title")}</h2>
     {#key group}
       <div class="grid" class:subs={group} bind:this={grid} lang={questionLocale()}>
         {#if group}
-          {#each group.subcategories as s, i (s.name)}
-            <button class="tile" disabled={!s.available} onclick={() => onpick(s.name)} style:--i={i}>{displayName("subcategory", s.name)}</button>
+          {#each group.subcategories as s, i (s.key)}
+            <button class="tile" disabled={!s.available} onclick={() => onpick(s.key)} style:--i={i}>{displayName("subcategory", s.key)}</button>
           {/each}
         {:else}
-          {#each categories as g, i (g.slug)}
-            <button class="tile" data-slug={g.slug} disabled={!g.available} onclick={() => open(g)} style:--i={i}>
-              {displayName("category", g.slug)}
+          {#each categories as g, i (g.key)}
+            <button class="tile" data-key={g.key} disabled={!g.available} onclick={() => open(g)} style:--i={i}>
+              {displayName("category", g.key)}
             </button>
           {/each}
         {/if}

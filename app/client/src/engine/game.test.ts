@@ -5,7 +5,7 @@ import { join } from "node:path";
 import type { Category } from "../lib/types.ts";
 import { deletePlayer, gameAction, getGame, getPlayers } from "./api.ts";
 import { repair } from "./game.ts";
-import type { PoolQuestion } from "./pool.ts";
+import { subKey, type PoolQuestion } from "./pool.ts";
 import { emptySave, engineData, type EngineData, type SaveData } from "./state.ts";
 import { fixture, realAgeGroups, realBundles } from "./test/fixtures.ts";
 import { snapshot, upgradeDb, withoutOrphans } from "./test/save.ts";
@@ -29,6 +29,16 @@ const data: Record<string, EngineData> = {};
 const dataFor = (pool: string): EngineData =>
   (data[pool] ??= engineData((fixture(`pools/${pool}.json`) as { questions: PoolQuestion[] }).questions, categories, bundles, ageGroups));
 
+// Recorded before bundle-scoped keys (D-99): `subcategory` args are bare names; bodies and saves have no `key`s, bare names.
+const keyOf = new Map(categories.flatMap((c) => c.subcategories.map((s) => [s, subKey(c.bundle, s)] as const)));
+const keyed = (args: Record<string, unknown>) =>
+  (typeof args.subcategory === "string" ? { ...args, subcategory: keyOf.get(args.subcategory) ?? args.subcategory } : args);
+const recorded = (v: unknown): unknown =>
+  typeof v === "string" ? v.replace(/^colombia\//, "")
+  : Array.isArray(v) ? v.map(recorded)
+  : v && typeof v === "object" ? Object.fromEntries(Object.entries(v).filter(([k]) => k !== "key").map(([k, x]) => [k, recorded(x)]))
+  : v;
+
 const latestState = (save: SaveData) => save.games.reduce<SaveData["games"][number] | null>((m, g) => (m && m.id > g.id ? m : g), null)?.state;
 
 const scenarios = readdirSync(join(import.meta.dirname, "fixtures/game")).filter((f) => f.endsWith(".json")).sort();
@@ -50,14 +60,14 @@ for (const file of scenarios) {
       const r = step.call === "get_game" ? getGame(save, d, io, step.args.player as string | undefined)
         : step.call === "players" ? getPlayers(save)
         : step.call === "delete_player" ? deletePlayer(save, step.args)
-        : gameAction(save, d, io, step.call, step.args);
+        : gameAction(save, d, io, step.call, keyed(step.args));
       if (seen.length && step.call === "get_game" && r.status === 200) {
-        const { supply: _, ...body } = r.body as { supply: unknown };
+        const { supply: _, ...body } = recorded(r.body) as { supply: unknown };
         const { supply: __, ...want } = step.response.body as { supply: unknown };
         assert.deepEqual({ status: r.status, body }, { status: step.response.status, body: want }, at);
-      } else assert.deepEqual({ status: r.status, body: r.body }, step.response, at);
+      } else assert.deepEqual({ status: r.status, body: recorded(r.body) }, step.response, at);
       if (r.status !== 200) assert.deepEqual(r.save, save, `${at}: save changed on error`);
-      if (step.db) assert.deepEqual(snapshot(withoutOrphans(r.save)), upgradeDb(step.db), `${at}: db`);
+      if (step.db) assert.deepEqual(recorded(snapshot(withoutOrphans(r.save))), upgradeDb(step.db), `${at}: db`);
       rng.done();
       save = r.save;
     }

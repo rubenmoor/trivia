@@ -6,7 +6,7 @@ export interface PoolQuestion {
   id: string;
   status: Status;
   difficulty: number;
-  /** Always one of the categories' subcategories (qgen validate). */
+  /** Always one of its bundle's subcategories (qgen validate); keyed with the bundle (subKey). */
   subcategory: string;
   bundle: string;
   description: string;
@@ -239,19 +239,37 @@ export function loadCategories(bundlesJson: unknown, files: Record<string, unkno
   });
 }
 
+/** Key of a bundle's subcategory or category slug (D-99: bundle + name); base's is the bare name, so saves keep theirs. */
+export const subKey = (bundle: string, name: string): string => (bundle === "base" ? name : `${bundle}/${name}`);
+/** A question's subcategory key, or null. */
+export const subOf = (q: { bundle?: string; subcategory?: string | null }): string | null =>
+  (q.subcategory != null ? subKey(q.bundle ?? "base", q.subcategory) : null);
+export const catKey = (c: Pick<Category, "bundle" | "slug">): string => subKey(c.bundle, c.slug);
+/** The name in a subKey of `bundle` (unknown bundle: the key). */
+export const subName = (bundle: string | undefined, key: string): string =>
+  (bundle && bundle !== "base" ? key.slice(bundle.length + 1) : key);
+
 /** Subcategory names in display order, of one bundle or of all. */
 export function subcategories(cats: Category[], bundle?: string): string[] {
   return cats.filter((c) => bundle === undefined || c.bundle === bundle).flatMap((c) => c.subcategories);
 }
 
-/** subcategory → its broad category, across all bundles. */
-export function broadOf(cats: Category[]): Map<string, Category> {
-  return new Map(cats.flatMap((c) => c.subcategories.map((s) => [s, c] as const)));
+/** Subcategory keys in display order. */
+export function subKeys(cats: Category[]): string[] {
+  return cats.flatMap((c) => c.subcategories.map((s) => subKey(c.bundle, s)));
 }
 
-/** question → broad category slug, or null. */
-export function categoryOf(broad: Map<string, Category>): (q: { subcategory?: string | null }) => string | null {
-  return (q) => (q.subcategory != null ? broad.get(q.subcategory)?.slug ?? null : null);
+/** subcategory key → its broad category, across all bundles. */
+export function broadOf(cats: Category[]): Map<string, Category> {
+  return new Map(cats.flatMap((c) => c.subcategories.map((s) => [subKey(c.bundle, s), c] as const)));
+}
+
+/** question → broad category key, or null. */
+export function categoryOf(broad: Map<string, Category>): (q: { bundle?: string; subcategory?: string | null }) => string | null {
+  return (q) => {
+    const c = broad.get(subOf(q) ?? "");
+    return c ? catKey(c) : null;
+  };
 }
 
 export function byId(pool: PoolQuestion[]): Map<string, PoolQuestion> {

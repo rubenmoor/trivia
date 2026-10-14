@@ -174,8 +174,8 @@ def check_bundle(bundle):
         sys.exit(f"Bundle {bundle!r} has no subcategories yet: fill {categories.path(bundle).relative_to(ROOT)}")
 
 
-def not_in_bundle(subs, bundle=None):
-    """The subcategories that aren't in the bundle's categories (any bundle's when None)."""
+def not_in_bundle(subs, bundle):
+    """The subcategories that aren't in the bundle's categories."""
     known = set(categories.subcategories(bundle))
     return [s for s in subs if s not in known]
 
@@ -219,6 +219,8 @@ def parallel(fn, items, jobs, label="items", unit="items"):
         return fn(it)
 
     def name(x):
+        if isinstance(x, tuple) and all(isinstance(p, str) for p in x):
+            return "/".join(x)  # (bundle, subcategory)
         return str(x.get("id")) if isinstance(x, dict) else str(x)
 
     with progress.Bar(label, len(items), unit) as bar, concurrent.futures.ThreadPoolExecutor(max_workers=jobs) as ex:
@@ -458,8 +460,13 @@ def list_schema(axes_def):
                      "properties": {"id": STR, "concept": STR, "axes": axes_schema(axes_def)}}}}}
 
 
-def subcategory_header(sub):
-    return f"## Subcategory\n{sub} (broad category: {categories.broad_of()[sub]['name']})"
+def concept_file(bundle, sub):
+    """A work file per subcategory: base's by slug, another bundle's prefixed with its id (D-99)."""
+    return f"{slug(sub)}.json" if bundle == "base" else f"{bundle}--{slug(sub)}.json"
+
+
+def subcategory_header(bundle, sub):
+    return f"## Subcategory\n{sub} (broad category: {categories.category_of(bundle, sub)['name']})"
 
 
 def cmd_concepts(args):
@@ -468,30 +475,35 @@ def cmd_concepts(args):
     and save raw results in work/concepts/; `finalize_concepts` then writes the lists one by one."""
     d = WORK / "concepts"
     d.mkdir(parents=True, exist_ok=True)
+    bundle = getattr(args, "bundle", None)
     if args.subcategories:
-        subs = split_list(args.subcategories)
+        bundle = bundle or "base"
+        subs = [(bundle, s) for s in split_list(args.subcategories)]
     elif getattr(args, "run", None):
-        subs = load_json(WORK / args.run / "run.json")["subcategories"]
+        run = load_json(WORK / args.run / "run.json")
+        bundle = run.get("bundle", "base")
+        subs = [(bundle, s) for s in run["subcategories"]]
     else:
-        subs = categories.subcategories(getattr(args, "bundle", None))
-    unknown = not_in_bundle(subs)
+        subs = [(c["bundle"], s) for c in categories.load(bundle) for s in c["subcategories"]]
+    unknown = [s for b, s in subs if s not in categories.subcategories(b)]
     if unknown:
-        sys.exit(f"Not in any bundle's categories: {', '.join(unknown)}")
+        sys.exit(f"Not in {bundle}'s categories: {', '.join(unknown)}")
     pool = load_json(POOL)["questions"]
-    create = [s for s in subs if concepts.load(s) is None]
+    create = [bs for bs in subs if concepts.load(*bs) is None]
 
-    def make(sub):
-        path = d / "raw" / f"{slug(sub)}.json"
+    def make(bs):
+        bundle, sub = bs
+        path = d / "raw" / concept_file(bundle, sub)
         r = load_json(path, {})
-        axes_def = concepts.load_axes(categories.bundle_of(sub))
-        intro = subcategory_header(sub) + "\n\n## Question axes\n" + concepts.axes_text(axes_def)
+        axes_def = concepts.load_axes(bundle)
+        intro = subcategory_header(bundle, sub) + "\n\n## Question axes\n" + concepts.axes_text(axes_def)
         if "facets" not in r:
             r.update(claude(prompt("house-style", "concepts-facets"), intro, facets_schema(axes_def), args.model, d))
             save_json(path, r)
         if "concepts" not in r:
             existing = [{"id": q["id"], "question": q["question"], "answer": q["answer"],
                          "media": f"{q['media']['type']}/{q['media']['role']}"}
-                        for q in pool if q.get("subcategory") == sub]
+                        for q in pool if categories.key(q) == bs]
             user = (intro + "\n\n## Facets\n" + "\n".join(f"- {f}" for f in r["facets"])
                     + "\n\n## Existing questions\n" + (json.dumps(existing, ensure_ascii=False) if existing else "none"))
             out = claude(prompt("house-style", "concepts-list"), user, list_schema(axes_def), args.model, d)
@@ -502,32 +514,33 @@ def cmd_concepts(args):
             save_json(path, r)
         progress.detail(f"  concepts: {sub}: {len(r['facets'])} facets, {len(r['concepts'])} concepts")
 
-    def wanted(sub):
+    def wanted(bs):
         """How many concepts a top-up asks for: up to TARGET_SIZE with --fill, else TOP_UP when low."""
-        lst = concepts.load(sub)
+        lst = concepts.load(*bs)
         if getattr(args, "fill", False) and len(lst["concepts"]) < concepts.TARGET_SIZE:
             return concepts.TARGET_SIZE - len(lst["concepts"])
-        if args.top_up and len(concepts.unused(lst, concepts.uses(pool, sub))) < concepts.LOW_STOCK:
+        if args.top_up and len(concepts.unused(lst, concepts.uses(pool, *bs))) < concepts.LOW_STOCK:
             return concepts.TOP_UP
         return 0
 
-    def top_up(sub):
-        path = d / "topup" / f"{slug(sub)}.json"
+    def top_up(bs):
+        bundle, sub = bs
+        path = d / "topup" / concept_file(bundle, sub)
         if path.exists():
             return
-        lst = concepts.load(sub)
-        user = (subcategory_header(sub) + f"\n\n## How many\nAdd about {wanted(sub)} new concepts."
+        lst = concepts.load(*bs)
+        user = (subcategory_header(*bs) + f"\n\n## How many\nAdd about {wanted(bs)} new concepts."
                 + "\n\n## Facets\n" + "\n".join(f"- {f}" for f in lst["facets"])
                 + "\n\n## Concepts already in the list\n" + "\n".join(f"- {c['name']} ({c['facet']})" for c in lst["concepts"]))
         out = claude(prompt("house-style", "concepts-topup"), user, TOPUP_SCHEMA, args.model, d)
         save_json(path, out)
         progress.detail(f"  top-up: {sub}: {len(out['concepts'])} new concepts")
 
-    bundles = sorted({categories.bundle_of(s) for s in subs}, key=categories.bundle_ids().index)
+    bundles = sorted({b for b, _ in subs}, key=categories.bundle_ids().index)
     errors = parallel(make, create, args.jobs, "concepts", "lists")
     for b in bundles:
         finalize_concepts(d, b)
-    errors += parallel(top_up, [s for s in subs if concepts.load(s) and wanted(s)], args.jobs, "top-up", "lists")
+    errors += parallel(top_up, [bs for bs in subs if concepts.load(*bs) and wanted(bs)], args.jobs, "top-up", "lists")
     for b in bundles:
         finalize_concepts(d, b)
     return errors
@@ -542,15 +555,15 @@ def finalize_concepts(d, bundle):
     lo, hi = load_age_groups()["scale"]
     seen = {}
     for s in order:
-        lst = concepts.load(s)
+        lst = concepts.load(bundle, s)
         for c in (lst or {}).get("concepts", []):
             seen.setdefault(concepts.key(c["name"]), s)
     with atomic.locked(POOL):
         data, tagged = load_json(POOL), 0
         by_id = {q["id"]: q for q in data["questions"]}
         for s in order:
-            raw, topup = load_json(d / "raw" / f"{slug(s)}.json", {}), d / "topup" / f"{slug(s)}.json"
-            lst, before = concepts.load(s), None
+            raw, topup = load_json(d / "raw" / concept_file(bundle, s), {}), d / "topup" / concept_file(bundle, s)
+            lst, before = concepts.load(bundle, s), None
             if lst is None and "concepts" in raw:
                 lst = {"subcategory": s, "facets": raw["facets"], "axis_fit": raw["axis_fit"], "concepts": []}
                 tags = raw["existing"]
@@ -581,16 +594,16 @@ def finalize_concepts(d, bundle):
             if before is not None:  # for the saturation check (plan 14)
                 lst.setdefault("top_ups", []).append({"date": datetime.date.today().isoformat(),
                                                       "added": len(lst["concepts"]) - before,
-                                                      "unused": len(concepts.unused(lst, concepts.uses(data["questions"], s)))})
+                                                      "unused": len(concepts.unused(lst, concepts.uses(data["questions"], bundle, s)))})
             for e in tags:
                 q = by_id.get(e["id"])
-                if q is None or q.get("subcategory") != s:
+                if q is None or categories.key(q) != (bundle, s):
                     continue
                 q["concept"] = own[concepts.key(e["concept"])]
                 if not concepts.axes_problems(e["axes"], axes_def)[0]:
                     q["axes"] = e["axes"]
                 tagged += 1
-            concepts.save(s, lst)
+            concepts.save(bundle, s, lst)
             topup.unlink(missing_ok=True)
             progress.detail(f"  list: {s}: {len(lst['concepts'])} concepts"
                             + (f"; dropped {len(shared)} already in another list: {', '.join(shared)}" if shared else ""))
@@ -726,8 +739,8 @@ def assign_difficulties(free, fresh, weights, seed, rounds=50):
 def draw_slots(subs, pool_questions, axes_def, n, seed, bundle="base"):
     """{subcategory: slots} for a run (PE-10): a concept, a target difficulty, up to 3 axis
     combinations and the questions already asked about the concept, per slot. Seeded."""
-    lists = {s: concepts.load(s) for s in subs}
-    used = {s: concepts.uses(pool_questions, s) for s in subs}
+    lists = {s: concepts.load(bundle, s) for s in subs}
+    used = {s: concepts.uses(pool_questions, bundle, s) for s in subs}
     levels = assign_difficulties({s: n for s in subs},
                                  {s: [c["known_at"] for c in concepts.unused(lists[s], used[s])] for s in subs},
                                  target_weights(pool_questions, bundle), seed)
@@ -738,7 +751,7 @@ def draw_slots(subs, pool_questions, axes_def, n, seed, bundle="base"):
         picked = concepts.draw_concepts(lst, used[s], levels[s], rng)  # scarce levels pick first
         pairs = list(zip(picked, levels[s]))
         rng.shuffle(pairs)
-        usage = concepts.axis_usage(pool_questions, s)
+        usage = concepts.axis_usage(pool_questions, bundle, s)
         offered = {a: set() for a in concepts.AXES}
         possible = concepts.possible_combos(axes_def, lst.get("axis_fit", {}))
         if not possible:
@@ -750,7 +763,7 @@ def draw_slots(subs, pool_questions, axes_def, n, seed, bundle="base"):
             if not combos:
                 continue
             asked = [f"{q['question']} → {q['answer']}" for q in pool_questions
-                     if q.get("subcategory") == s and q.get("concept") == c["name"]]
+                     if categories.key(q) == (bundle, s) and q.get("concept") == c["name"]]
             slots.append({"slot": len(slots), "concept": c["name"], "facet": c["facet"], "target_difficulty": target,
                           "options": [{"option": i, **combo} for i, combo in enumerate(combos, 1)],
                           "already_asked": asked})
@@ -758,10 +771,10 @@ def draw_slots(subs, pool_questions, axes_def, n, seed, bundle="base"):
     return plan
 
 
-def existing_answers(pool, sub):
+def existing_answers(pool, bundle, sub):
     """The subcategory's own pool questions, all statuses (PE-4); merge's `duplicates()` and the
     review's `related` list still check the whole pool."""
-    return sorted({f"{q['answer']} ({q['question'][:60]})" for q in pool["questions"] if q.get("subcategory") == sub})
+    return sorted({f"{q['answer']} ({q['question'][:60]})" for q in pool["questions"] if categories.key(q) == (bundle, sub)})
 
 
 def cmd_draft(args):
@@ -779,9 +792,9 @@ def cmd_draft(args):
             sys.exit(f"Not in {categories.path(args.bundle).relative_to(ROOT)} (add them there first): {', '.join(unknown)}")
         save_json(d / "run.json", cfg)
     subs, bundle = cfg["subcategories"], cfg.get("bundle", "base")  # runs before D-41 have no bundle
-    missing = [s for s in subs if concepts.load(s) is None]
+    missing = [s for s in subs if concepts.load(bundle, s) is None]
     if missing:
-        sys.exit(f"No concept list for {', '.join(missing)}: run `qgen concepts --subcategories ...` first.")
+        sys.exit(f"No concept list for {', '.join(missing)}: run `qgen concepts --bundle {bundle} --subcategories ...` first.")
     pool = load_json(POOL)
     axes_def = concepts.load_axes(bundle)
     plan = load_json(d / "slots.json")
@@ -796,8 +809,8 @@ def cmd_draft(args):
     def work(sub):
         slots = plan[sub]
         shown = {a: {o[a] for sl in slots for o in sl["options"]} for a in concepts.AXES}
-        avoid = "\n".join(f"- {a}" for a in existing_answers(pool, sub)) or "none yet"
-        user = (subcategory_header(sub) + "\n\n## Question axes (the values in these options)\n"
+        avoid = "\n".join(f"- {a}" for a in existing_answers(pool, bundle, sub)) or "none yet"
+        user = (subcategory_header(bundle, sub) + "\n\n## Question axes (the values in these options)\n"
                 + concepts.axes_text(axes_def, shown) + "\n\n## Slots\n" + json.dumps(slots, ensure_ascii=False)
                 + f"\n\n## Already in the pool for this subcategory (don't repeat these facts)\n{avoid}"
                 + "\n\n## Bundle\n" + bundle_text(bundle))
@@ -821,24 +834,24 @@ def cmd_draft(args):
                 print(f"  {sub}: {q['tmp_id']}: stimulus {option['stimulus']} with {q['media']['role']} media "
                       "(left for rate and review)", file=sys.stderr)
             good.append(q)
-        retire(sub, slots, out["skipped"])
+        retire(bundle, sub, slots, out["skipped"])
         save_json(d / "drafts" / f"{slug(sub)}.json", {"questions": good, "skipped": out["skipped"]})
         progress.detail(f"  draft: {sub}: {len(good)} written, {len(out['skipped'])} skipped")
 
     return parallel(work, todo, args.jobs, "draft", "subcategories")
 
 
-def retire(sub, slots, skipped):
+def retire(bundle, sub, slots, skipped):
     """Skips that say a concept is used up or unaskable retire it from its list (PE-10)."""
     why = {slots[x["slot"]]["concept"]: f"{x['retire']}: {x['reason']}" for x in skipped
            if x["retire"] != "no" and 0 <= x["slot"] < len(slots)}
     if not why:
         return
-    lst = concepts.load(sub)
+    lst = concepts.load(bundle, sub)
     for c in lst["concepts"]:
         if c["name"] in why:
             c["retired"] = why[c["name"]]
-    concepts.save(sub, lst)
+    concepts.save(bundle, sub, lst)
     progress.detail(f"  {sub}: retired {', '.join(why)}")
 
 
@@ -920,9 +933,9 @@ def translate_chunks(ids, src):
     """[(name, questions)]: the run's sources per subcategory, at most TRANSLATE_CHUNK per chunk."""
     by_sub = {}
     for i in ids:
-        by_sub.setdefault(src[i]["subcategory"], []).append(src[i])
-    return [(f"{slug(sub)}-{n // TRANSLATE_CHUNK + 1}", qs[n:n + TRANSLATE_CHUNK])
-            for sub, qs in by_sub.items() for n in range(0, len(qs), TRANSLATE_CHUNK)]
+        by_sub.setdefault(categories.key(src[i]), []).append(src[i])
+    return [(f"{concept_file(*bs)[:-5]}-{n // TRANSLATE_CHUNK + 1}", qs[n:n + TRANSLATE_CHUNK])
+            for bs, qs in by_sub.items() for n in range(0, len(qs), TRANSLATE_CHUNK)]
 
 
 def cmd_translate(args):
@@ -1554,17 +1567,17 @@ def report_subcategories(avail, ranges):
     scale = range(lo, hi + 1)
     by_sub = {}
     for q in avail:
-        by_sub.setdefault(q.get("subcategory"), []).append(q["difficulty"])
+        by_sub.setdefault(categories.key(q), []).append(q["difficulty"])
     print("supply per subcategory × difficulty (JK-10; '.' = none):")
     print(f"  {'':34}" + "".join(f"{d:>3}" for d in scale) + "  total")
     for c in categories.load():
         print(f"  {c['name']}" + (f" ({c['bundle']})" if c["bundle"] != "base" else ""))
         for sub in c["subcategories"]:
-            ds = by_sub.get(sub, [])
+            ds = by_sub.get((c["bundle"], sub), [])
             cells = "".join(f"{ds.count(d) or '.':>3}" for d in scale)
             print(f"    {sub[:32]:32}{cells}  {len(ds):5}{'  EMPTY' if not ds else ''}")
-    empty = sum(1 for c in categories.load() for sub in c["subcategories"] if sub not in by_sub)
-    easier = sum(1 for q in avail if any(d < q["difficulty"] for d in by_sub[q.get("subcategory")]))
+    empty = sum(1 for c in categories.load() for sub in c["subcategories"] if (c["bundle"], sub) not in by_sub)
+    easier = sum(1 for q in avail if any(d < q["difficulty"] for d in by_sub[categories.key(q)]))
     print(f"  empty subcategories: {empty}")
     print(f"  «Bájale» possible on {easier} of {len(avail)} questions "
           f"({easier * 100 // max(len(avail), 1)} %): an easier one exists in the same subcategory")
@@ -1600,8 +1613,8 @@ def saturation(pool, bundle):
     ovl = [health.overlaps_by_subcategory(r, pool) for r in runs]
     rows = {}
     for sub in categories.subcategories(bundle):
-        qs = [q for q in pool if q.get("subcategory") == sub]
-        lst = concepts.load(sub)
+        qs = [q for q in pool if categories.key(q) == (bundle, sub)]
+        lst = concepts.load(bundle, sub)
         r = {"approved": sum(q["status"] == "approved" for q in qs), "asked": len(qs), "list": None,
              "unused": None, "hard": None, "top_ups": 0, "overlaps": 0, "drafts": 0, "flags": []}
         for o in ovl:
@@ -1609,7 +1622,7 @@ def saturation(pool, bundle):
             r["drafts"] += o.get(sub, [0, 0])[1]
         last = next((o[sub] for o in reversed(ovl) if sub in o), None)  # its last batch
         if lst is not None:
-            free = concepts.unused(lst, concepts.uses(pool, sub))
+            free = concepts.unused(lst, concepts.uses(pool, bundle, sub))
             tops = lst.get("top_ups", [])
             r |= {"list": len(lst["concepts"]), "unused": len(free), "top_ups": len(tops),
                   "hard": sum(c["known_at"] >= HARD_AT for c in free)}
@@ -1663,11 +1676,12 @@ def calibration(run, pool=None):
     ratings, _ = collect(d)
     ids = load_json(d / "ids.json", {})
     by_id = {q["id"]: q for q in (pool if pool is not None else load_json(POOL)["questions"])}
+    bundle = (load_json(d / "run.json", {}) or {}).get("bundle", "base")
     rows = {}
     row = lambda lvl: rows.setdefault(lvl, {"slots": 0, "known_at": [], "drafted": [], "rated": [], "final": [],
                                             "merged": 0, "approved": 0})
     for sub, slots in plan.items():
-        known = {c["name"]: c["known_at"] for c in (concepts.load(sub) or {"concepts": []})["concepts"]}
+        known = {c["name"]: c["known_at"] for c in (concepts.load(bundle, sub) or {"concepts": []})["concepts"]}
         for sl in slots:
             r = row(sl["target_difficulty"])
             r["slots"] += 1
@@ -1738,7 +1752,7 @@ def report_progress(pool, bundle, locale="es"):
         line(f"difficulty {d:2}", by_diff[d], goal)
     line("total        ", len(approved), t["total"])
     broad = categories.broad_of()
-    by_cat = Counter(broad[q["subcategory"]]["slug"] for q in approved if q.get("subcategory") in broad)
+    by_cat = Counter(broad[categories.key(q)]["slug"] for q in approved if categories.key(q) in broad)
     shares = targets.category_shares(bundle)
     w = max(map(len, shares), default=0)
     print("  per broad category (derived share, guide only):")
@@ -2313,7 +2327,7 @@ def cmd_report(args):
         return print(health.deficit_line())
     pool = load_json(POOL)["questions"]
     broad = categories.broad_of()
-    cat = lambda q: broad[q["subcategory"]]["slug"] if q.get("subcategory") in broad else None
+    cat = lambda q: (c := broad.get(categories.key(q))) and (c["slug"] if c["bundle"] == "base" else f"{c['bundle']}/{c['slug']}")
     print(f"pool: {len(pool)} questions")
     for title, key in [("status", lambda q: q["status"]), ("difficulty", lambda q: q["difficulty"]),
                        ("category", cat), ("style", lambda q: q.get("style")),
@@ -2475,7 +2489,7 @@ def related_questions(q, pool):
         ratio = 1.0 if a == b else difflib.SequenceMatcher(None, a, b).ratio()
         if ratio >= RELATED_RATIO:
             ranked.append((0, -ratio, i, p))
-        elif p.get("subcategory") == q["subcategory"]:
+        elif categories.key(p) == categories.key(q):
             ranked.append((1, 0, i, p))
     ranked.sort(key=lambda r: r[:3])
     return [{k: p[k] for k in ["id", "status", "subcategory", "question", "answer"]}
@@ -3925,9 +3939,9 @@ def validate_pool():
         if q.get("status") not in {"draft", "approved", "rejected", "needs_work"}: errors.append(f"{qid}: bad status")
         errors += [f"{qid}: {p}" for p in review_problems(q)]
         if "translatable" in q and q["translatable"] is not False: errors.append(f"{qid}: translatable must be false when set (absent = translatable, D-81)")
-        if q.get("subcategory") not in subcategories: errors.append(f"{qid}: subcategory not in any bundle's categories (D-19, D-43)")
-        elif q.get("bundle") == "base" and subcategories[q["subcategory"]]["bundle"] != "base":
-            errors.append(f"{qid}: a base question needs a subcategory from base's categories (D-49)")
+        key = categories.key(q)
+        if key not in subcategories and (q.get("bundle") == "base" or ("base", key[1]) not in subcategories):
+            errors.append(f"{qid}: subcategory not in its bundle's categories (D-19, D-49, D-99)")  # base's allowed until task 827
         if q.get("bundle") not in bundle_ids: errors.append(f"{qid}: bundle must be one of app/data/bundles.json (D-39)")
         m = q.get("media", {})
         if m.get("type") not in {"image", "audio", "video"} or m.get("role") not in {"decorative", "illustrative", "essential"}:
@@ -3949,25 +3963,26 @@ def validate_pool():
         if all(k in q for k in ["wrong_answers", "hints", "difficulty", "answer"]):
             errors += [f"{qid}: {p}" for p in check_question_shape(q)]
         if q.get("axes") is not None:  # D-37
-            e, w = concepts.axes_problems(q["axes"], axes_of[subcategories.get(q.get("subcategory"), {}).get("bundle", "base")])
+            e, w = concepts.axes_problems(q["axes"], axes_of.get(key[0], axes_of["base"]))
             errors += [f"{qid}: {p}" for p in e]
             warnings += [f"{qid}: {p}" for p in w]
         if q.get("concept") is not None and isinstance(q.get("subcategory"), str):
-            sub = q["subcategory"]
-            if sub not in lists:
-                lists[sub] = {c["name"] for c in (concepts.load(sub) or {}).get("concepts", [])}
-            if q["concept"] not in lists[sub]:
-                errors.append(f"{qid}: concept {q['concept']!r} is not in {sub}'s concept list")
-    for sub in subcategories:
-        lst = concepts.load(sub)
+            if key not in subcategories:
+                key = ("base", key[1])  # a base subcategory's list, until task 827
+            if key not in lists:
+                lists[key] = {c["name"] for c in (concepts.load(*key) or {}).get("concepts", [])}
+            if q["concept"] not in lists[key]:
+                errors.append(f"{qid}: concept {q['concept']!r} is not in {key[1]}'s concept list ({key[0]})")
+    for b, sub in subcategories:
+        lst = concepts.load(b, sub)
         keys = [concepts.key(c["name"]) for c in (lst or {}).get("concepts", [])]
         dup = sorted({k for k in keys if keys.count(k) > 1})
         if dup:
-            errors.append(f"{concepts.path(sub).relative_to(ROOT)}: same concept twice: {', '.join(dup)}")
+            errors.append(f"{concepts.path(b, sub).relative_to(ROOT)}: same concept twice: {', '.join(dup)}")
         bad = [c["name"] for c in (lst or {}).get("concepts", [])
                if not isinstance(c.get("known_at"), int) or not lo <= c["known_at"] <= hi]
         if bad:
-            errors.append(f"{concepts.path(sub).relative_to(ROOT)}: known_at missing or not {lo}–{hi} (D-38): {first_ids(bad)}")
+            errors.append(f"{concepts.path(b, sub).relative_to(ROOT)}: known_at missing or not {lo}–{hi} (D-38): {first_ids(bad)}")
     if unlicensed:
         errors.append(f"{len(unlicensed)} approved pick(s) on the licence replace list (needs_work and a new file, decision 47): {first_ids(unlicensed)}")
     e, w = translation_problems(data)
@@ -4104,9 +4119,10 @@ def names_problems(data):
         names, broad = categories.load_names(l), categories.broad_of()
         missing = set()
         for e in translations.play_entries(l, data):
-            if e["subcategory"] not in names["subcategories"]: missing.add(f"subcategory {e['subcategory']}")
-            c = broad.get(e["subcategory"])
-            if c and c["slug"] not in names["categories"]: missing.add(f"category {c['slug']}")
+            b, sub = categories.key(e)
+            if categories.sub_key(b, sub) not in names["subcategories"]: missing.add(f"subcategory {categories.sub_key(b, sub)}")
+            c = broad.get((b, sub))
+            if c and categories.sub_key(b, c["slug"]) not in names["categories"]: missing.add(f"category {categories.sub_key(b, c['slug'])}")
             if e["bundle"] not in names["bundles"]: missing.add(f"bundle {e['bundle']}")
         if missing:
             errors.append(f"{l}: pool.{l}.json uses names missing in names.{l}.json: {first_ids(sorted(missing))}")
@@ -4128,8 +4144,8 @@ def names_warnings():
             continue
         names = categories.load_names(l)
         n = (len(set(categories.bundle_ids()) - set(names["bundles"]))
-             + len({c["slug"] for c in cats} - set(names["categories"]))
-             + len(set(categories.subcategories()) - set(names["subcategories"]))
+             + len({categories.sub_key(c["bundle"], c["slug"]) for c in cats} - set(names["categories"]))
+             + len({categories.sub_key(c["bundle"], s) for c in cats for s in c["subcategories"]} - set(names["subcategories"]))
              + len({g["id"] for g in load_age_groups()["groups"]} - set(names["age_groups"])))
         if n:
             out.append(f"{l}: {n} bundle/category/subcategory/age-group name(s) missing in the names.{l}.json files")
@@ -4173,17 +4189,18 @@ def spot_check_problems(questions, scale):
 
 
 def taxonomy_problems():
-    """Every bundle's categories file belongs to a bundle; names and slugs are unique across bundles (D-43)."""
+    """Every bundle's categories file belongs to a bundle; names and slugs are unique within a bundle (D-43, D-99)."""
     errors, ids = [], categories.bundle_ids()
     if ids[:1] != ["base"]:
         errors.append("app/data/bundles.json: base must come first")
     for p in sorted(layout.app_paths.BUNDLE_DATA.glob("*/categories.json")):
         if p.parent.name not in ids or p.parent.name == "base":
             errors.append(f"{p.relative_to(ROOT)}: no bundle {p.parent.name!r} in app/data/bundles.json")
-    for what, items in [("subcategory", categories.subcategories()), ("category slug", [c["slug"] for c in categories.load()])]:
-        dup = sorted({x for x in items if items.count(x) > 1})
-        if dup:
-            errors.append(f"same {what} in two places (D-43): {', '.join(dup)}")
+    for b in ids:
+        for what, items in [("subcategory", categories.subcategories(b)), ("category slug", [c["slug"] for c in categories.load(b)])]:
+            dup = sorted({x for x in items if items.count(x) > 1})
+            if dup:
+                errors.append(f"{categories.path(b).relative_to(ROOT)}: same {what} twice (D-99): {', '.join(dup)}")
     return errors
 
 
@@ -4230,7 +4247,7 @@ def cmd_bundle_new(args):
     path = categories.path(args.id)
     if not path.exists():
         save_json(path, {"about": f"Categories of the {args.id} bundle (D-41, D-43). Subcategory names "
-                                  "and slugs must be unique across all bundles.", "categories": []})
+                                  "and slugs are unique within the bundle; they may repeat another bundle's (D-99).", "categories": []})
     print(f"Created bundle {args.id}. Next: fill {path.relative_to(ROOT)} with broad categories and "
           f"subcategories, then `qgen batch --bundle {args.id}`.")
 
@@ -4263,7 +4280,7 @@ def main():
     cp.add_argument("--subcategories", help="comma-separated; default: every subcategory without a list")
     cp.add_argument("--top-up", action="store_true", help=f"also add concepts to lists with fewer than {concepts.LOW_STOCK} unused")
     cp.add_argument("--fill", action="store_true", help=f"also top up lists with fewer than {concepts.TARGET_SIZE} concepts to that size")
-    cp.add_argument("--bundle", help="without --subcategories: only this bundle's subcategories (default: every bundle)")
+    cp.add_argument("--bundle", help="the bundle of --subcategories (default base); without them: only this bundle's (default: every bundle)")
     cp.set_defaults(run=None)
     bp = add("bundles", cmd_bundles, "opus", run=False)
     bp.set_defaults(run=None)

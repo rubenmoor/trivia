@@ -83,7 +83,7 @@
           <ol class="subs">
             {#each bySize(row) as s (s.name)}
               <li class="row">
-                <a class="label" href={reviewLink(s.name, locale)} title="Review its approved questions{names ? ` (${s.name})` : ''}">{s.label}</a>
+                <a class="label" href={reviewLink(s, locale)} title="Review its approved questions{names ? ` (${s.name})` : ''}">{s.label}</a>
                 <span class="track">
                   {#if s.count > 0}
                     <span class="bar sub-bar" style:width="{(s.count / subMax) * 100}%"></span>

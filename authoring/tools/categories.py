@@ -1,7 +1,7 @@
 """Category lists (D-19, D-43): broad categories with their subcategories, one list per bundle.
 
 `base`'s list is app/data/categories.json; another bundle's is app/data/bundles/<id>/categories.json.
-Subcategory names and slugs are unique across bundles, so a subcategory names its bundle's list.
+A subcategory is bundle + name (D-99): names and slugs are unique within a bundle only.
 """
 import json
 
@@ -42,25 +42,35 @@ def subcategories(bundle=None):
     return [s for c in load(bundle) for s in c["subcategories"]]
 
 
+def key(q):
+    """A question's subcategory as (bundle, name) (D-99)."""
+    return (q.get("bundle") or "base", q.get("subcategory"))
+
+
+def sub_key(bundle, name):
+    """A subcategory's or category slug's key in one string, as the engine's subKey: base's bare, else <bundle>/<name>."""
+    return name if bundle == "base" else f"{bundle}/{name}"
+
+
 def broad_of():
-    """subcategory -> its broad category ({"slug", "name", "bundle", ...}), across all bundles."""
-    return {s: c for c in load() for s in c["subcategories"]}
+    """(bundle, subcategory) -> its broad category ({"slug", "name", "bundle", ...}), across all bundles."""
+    return {(c["bundle"], s): c for c in load() for s in c["subcategories"]}
 
 
-def bundle_of(sub):
-    """The bundle whose list has this subcategory, or None."""
-    c = broad_of().get(sub)
-    return c["bundle"] if c else None
+def category_of(bundle, sub):
+    """The broad category of the bundle's subcategory, or None."""
+    return broad_of().get((bundle, sub))
 
 
 def load_names(locale):
     """{"bundles", "categories", "subcategories", "age_groups"}: display names in a locale (D-81), base's file
-    merged with every bundle's; keys are bundle ids, category slugs and Spanish subcategory names."""
+    merged with every bundle's; "categories" and "subcategories" keyed by sub_key (bundle + slug or Spanish name, D-99)."""
     out = {"bundles": {}, "categories": {}, "subcategories": {}, "age_groups": {}}
     for b in bundle_ids():
         p = names(locale, b)
         if p.exists():
             doc = _read(p)
             for k in out:
-                out[k].update(doc.get(k) or {})
+                keyed = k in ("categories", "subcategories")
+                out[k].update({sub_key(b, n) if keyed else n: v for n, v in (doc.get(k) or {}).items()})
     return out

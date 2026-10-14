@@ -10,7 +10,7 @@ import json, re, unicodedata
 from collections import Counter
 
 import atomic  # authoring/tools/atomic.py
-import categories  # authoring/tools/categories.py: which bundle a subcategory is in (D-43)
+import categories  # authoring/tools/categories.py: (bundle, subcategory) of a question (D-99)
 from layout import AXES_FILE, BUNDLE_SOURCES, CONCEPTS
 
 AXES = ["move", "stimulus", "clue", "answer_kind", "lens"]
@@ -91,13 +91,13 @@ def concepts_dir(bundle):
     return CONCEPTS if bundle == "base" else BUNDLE_SOURCES / bundle / "concepts"
 
 
-def path(sub):
-    """Where the subcategory's list is: in the folder of the bundle whose categories list it."""
-    return concepts_dir(categories.bundle_of(sub) or "base") / f"{slug(sub)}.json"
+def path(bundle, sub):
+    """Where the bundle's subcategory's list is: in the bundle's concept folder (D-43, D-99)."""
+    return concepts_dir(bundle) / f"{slug(sub)}.json"
 
 
-def load(sub):
-    p = path(sub)
+def load(bundle, sub):
+    p = path(bundle, sub)
     if not p.exists():
         return None
     try:
@@ -106,13 +106,13 @@ def load(sub):
         raise json.JSONDecodeError(f"{p}: {e.msg}", e.doc, e.pos) from None
 
 
-def save(sub, data):
-    atomic.write_json(path(sub), data)
+def save(bundle, sub, data):
+    atomic.write_json(path(bundle, sub), data)
 
 
-def uses(pool_questions, sub):
-    """Questions per concept name in this subcategory, all statuses (they all count as asked)."""
-    return Counter(q["concept"] for q in pool_questions if q.get("subcategory") == sub and q.get("concept"))
+def uses(pool_questions, bundle, sub):
+    """Questions per concept name in the bundle's subcategory, all statuses (they all count as asked)."""
+    return Counter(q["concept"] for q in pool_questions if categories.key(q) == (bundle, sub) and q.get("concept"))
 
 
 def unused(lst, used):
@@ -139,10 +139,10 @@ def draw_concepts(lst, used, difficulties, rng):
     return out
 
 
-def axis_usage(pool_questions, sub):
+def axis_usage(pool_questions, bundle, sub):
     """How the tagged questions use each value: {"sub": (Counters, n), "pool": (Counters, n)}."""
     tagged = [q for q in pool_questions if q.get("axes")]
-    mine = [q for q in tagged if q.get("subcategory") == sub]
+    mine = [q for q in tagged if categories.key(q) == (bundle, sub)]
     return {scope: ({a: Counter(q["axes"][a] for q in qs) for a in AXES}, len(qs))
             for scope, qs in (("sub", mine), ("pool", tagged))}
 

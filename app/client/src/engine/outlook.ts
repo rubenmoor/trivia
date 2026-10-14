@@ -2,7 +2,7 @@
 import type { Choice, GameMode } from "../lib/types.ts";
 import { availableFor, countOf, rangesFor, STANDARD_JOKERS } from "./game.ts";
 import type { LevelRanges, PoolQuestion } from "./pool.ts";
-import { bundlesFor, subcategories } from "./pool.ts";
+import { bundlesFor, subKeys, subOf } from "./pool.ts";
 import { LEVELS, levelsOf } from "./selection.ts";
 import type { EngineData, SaveData } from "./state.ts";
 
@@ -122,17 +122,18 @@ function merge(ranges: [number, number][]): [number, number][] {
   return out;
 }
 
-/** Subcategories with approved, unblocked, allowed questions in the choice's bundles and window
+/** Keys of subcategories with approved, unblocked, allowed questions in the choice's bundles and window
  * (custom: start–end), all seen. */
 function exhaustedSubs(save: SaveData, data: EngineData, choice: Choice): string[] {
   const [lo, hi] = choice.difficulty ? [choice.difficulty.start, choice.difficulty.end] : data.groupById.get(choice.age_group!)!.window;
   const count = countOf(save);
-  const state = new Map<string, boolean>(); // subcategory → every question seen
+  const state = new Map<string, boolean>(); // subcategory key → every question seen
   for (const q of availableFor(save, data, choice)) {
     if (q.difficulty < lo || q.difficulty > hi) continue;
-    state.set(q.subcategory, (state.get(q.subcategory) ?? true) && count(q) > 0);
+    const k = subOf(q)!;
+    state.set(k, (state.get(k) ?? true) && count(q) > 0);
   }
-  return subcategories(data.categories).filter((s) => state.get(s));
+  return subKeys(data.categories).filter((s) => state.get(s));
 }
 
 /** The outlook for a new game with `choice`; reads the save, never writes it. */

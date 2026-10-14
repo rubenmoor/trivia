@@ -1,6 +1,6 @@
 // Question selection per level (PORT-2): port of the former app/server/selection.py (deleted in PORT-8), same results.
 import type { Supply } from "../lib/types.ts";
-import type { LevelRanges, PoolQuestion } from "./pool.ts";
+import { subOf, type LevelRanges, type PoolQuestion } from "./pool.ts";
 import type { Rng } from "./rng.ts";
 
 /** Defaults; a game's own: `settings.levels` (= its ranges' length) and `settings.cards` (D-88). */
@@ -74,10 +74,10 @@ export interface DrawOptions<T> {
 
 /** n questions for `level` from `questions` (already `available`): the lowest seen count first, then
  * fresh categories, each only if later levels stay fillable; null if the level can't be filled. */
-export function draw<T extends Q & { subcategory?: string | null }>(
+export function draw<T extends Q & { bundle?: string; subcategory?: string | null }>(
   level: number, questions: T[], { ranges, n = PER_LEVEL, perLevel = PER_LEVEL, keep = [], avoidCategories = [], categoryOf, countOf, rng }: DrawOptions<T>,
 ): T[] | null {
-  const cat = categoryOf ?? ((q: T) => q.subcategory ?? null);
+  const cat = categoryOf ?? subOf;
   const avoid = new Set(avoidCategories);
   const later = Array.from({ length: ranges.length - level }, (_, i) => level + 1 + i);
   const taken = new Set(keep.map((q) => q.id));

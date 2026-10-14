@@ -40,7 +40,7 @@
           <tbody>
             {#each row.subs as s (s.name)}
               <tr>
-                <td class="name"><a href={reviewLink(s.name, locale)} title={names ? s.name : undefined}>{s.label}</a></td>
+                <td class="name"><a href={reviewLink(s, locale)} title={names ? s.name : undefined}>{s.label}</a></td>
                 <td class="bar-cell">
                   {#if s.count > 0}<span class="bar" style:width="{(s.count / subMax) * 100}%"></span>{/if}
                 </td>

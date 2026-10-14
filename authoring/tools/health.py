@@ -54,7 +54,7 @@ def drop_kind(reason):
 
 
 def overlaps_by_subcategory(run, pool=None):
-    """{subcategory: [overlaps, drafts]} of one run: merge's overlap/duplicate drops plus `record`'s
+    """{subcategory: [overlaps, drafts]} of one run (one bundle): merge's overlap/duplicate drops plus `record`'s
     needs_work for overlap (plan 14's saturation check)."""
     pool = pool if pool is not None else load(POOL)["questions"]
     sub_of = {q["tmp_id"]: q["subcategory"] for _, qq in qgen.drafts(WORK / run) for q in qq}

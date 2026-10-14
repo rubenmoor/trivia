@@ -42,7 +42,7 @@ function playOut(save: SaveData, seed: number, check: (s: GameState, eased: Set<
       eased.add(stateOf(save).current!);
     } else if (!used.has("category") && j.category.available) {
       const sub = j.category.categories.flatMap((c) => c.subcategories).find((x) => x.available)!;
-      tryJoker("category", { subcategory: sub.name });
+      tryJoker("category", { subcategory: sub.key });
     } else if (!used.has("skip") && j.skip.available) tryJoker("skip");
     else save = game.answer(save, data, r, correct).save;
   }

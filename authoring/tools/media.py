@@ -145,7 +145,7 @@ def load_candidates(qid, slot="media"):
 
 
 def category_of(q):
-    c = categories.broad_of().get(q.get("subcategory"))
+    c = categories.category_of(*categories.key(q))
     return c["slug"] if c else None
 
 

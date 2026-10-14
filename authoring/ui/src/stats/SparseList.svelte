@@ -38,7 +38,7 @@
       .sort((a, b) => a.count - b.count),
   );
   const picked = $derived(new Set(nextBatch ?? []));
-  const covered = $derived(sparseSubs.filter((s) => picked.has(s.name)).length);
+  const covered = $derived(sparseSubs.filter((s) => (s.bundle === "base" && picked.has(s.name))).length);
   const shownSubs = $derived(compact ? sparseSubs.slice(0, COMPACT_ROWS) : sparseSubs);
 </script>
 
@@ -70,9 +70,9 @@
           {#each shownSubs as s (s.name)}
             <li>
               <span>
-                <a href={reviewLink(s.name, locale)} title={names ? s.name : undefined}>{s.label}</a>
+                <a href={reviewLink(s, locale)} title={names ? s.name : undefined}>{s.label}</a>
                 {#if !compact}<span class="cat">{s.category}</span>{/if}
-                {#if picked.has(s.name)}<span class="next">next batch</span>{/if}
+                {#if (s.bundle === "base" && picked.has(s.name))}<span class="next">next batch</span>{/if}
               </span>
               <span class="num">{s.count}</span>
             </li>

@@ -39,7 +39,7 @@
   let bundles = $state<Bundle[]>([]);
   let mediaStats = $state<MediaStatsData | null>(null);
   let names = $state<Names | null>(null);
-  /** The subcategories the next `qgen batch` picks; null until loaded or when it fails. */
+  /** The base subcategories the next `qgen batch` picks; null until loaded or when it fails. */
   let nextBatch = $state<string[] | null>(null);
   /** The selected bundle's targets (D-53); null for all bundles or a bundle without targets. */
   let targets = $state<BundleTargets | null>(null);

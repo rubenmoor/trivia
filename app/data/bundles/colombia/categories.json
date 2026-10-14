@@ -1,5 +1,5 @@
 {
-  "about": "Categories of the colombia bundle (D-41, D-43): its own taxonomy for `qgen batch --bundle colombia`. Subcategory names and slugs are unique across all bundles.",
+  "about": "Categories of the colombia bundle (D-41, D-43): its own taxonomy for `qgen batch --bundle colombia`. Subcategory names and slugs are unique within the bundle; they may repeat another bundle's (D-99).",
   "categories": [
     {"slug": "colombia-pais", "name": "Colombia", "subcategories": [
       "Regiones de Colombia",

@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import type { Category } from "../lib/types.ts";
-import { broadOf, categoryOf, type PoolQuestion } from "./pool.ts";
+import { broadOf, catKey, categoryOf, subKey, type PoolQuestion } from "./pool.ts";
 import { assign, available, draw, inRange, PER_LEVEL, supply } from "./selection.ts";
 import { fixture, realAgeGroups, realBundles } from "./test/fixtures.ts";
 import { seededRng } from "./rng.ts";
@@ -19,7 +19,10 @@ const pools: Record<string, PoolQuestion[]> = {
   main: (fixture("pools/main.json") as { questions: PoolQuestion[] }).questions,
   tight: (fixture("pools/tight.json") as { questions: PoolQuestion[] }).questions,
 };
-const broad = categoryOf(broadOf(fixture("categories.json") as Category[]));
+const fixtureCats = fixture("categories.json") as Category[];
+const broad = categoryOf(broadOf(fixtureCats));
+// Recorded with bare names (D-99 keys them by bundle).
+const keyOf = new Map(fixtureCats.flatMap((c) => [[c.slug, catKey(c)], ...c.subcategories.map((s) => [s, subKey(c.bundle, s)])] as [string, string][]));
 // Plan 18 recorded D-22 with every bundle: young_teens, all bundles on.
 const ranges = realAgeGroups().find((g) => g.id === "young_teens")!.levels;
 const bundles = new Set(realBundles().map((b) => b.id));
@@ -56,7 +59,7 @@ function run(c: Case, rng: ReturnType<typeof tapeRng>): unknown {
         ranges,
         n: args.n ?? PER_LEVEL,
         keep,
-        avoidCategories: args.avoid_categories ?? [],
+        avoidCategories: (args.avoid_categories ?? []).map((c: string) => keyOf.get(c) ?? c),
         categoryOf: args.category_of === "broad" ? broad : undefined,
         rng,
       });

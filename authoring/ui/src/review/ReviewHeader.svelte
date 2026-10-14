@@ -1,6 +1,7 @@
 <script lang="ts">
   // Top line of the review page: progress, counts, the question's meta, links and locales.
   import type { Bundle, Names, Question } from "../lib/types.ts";
+  import { subKey } from "$app/engine/pool.ts";
   import { LOCALES } from "$app/lib/data.ts";
   import { localeHref } from "./url.ts";
 
@@ -41,8 +42,9 @@
   {/if}
   <span class="meta">
     {current.id} ·
-    {#if names?.subcategories[current.subcategory]}{names.subcategories[current.subcategory]}
-      <span class="key">({current.subcategory})</span>{:else}{current.subcategory}{/if} ·
+    {#if names?.subcategories[subKey(current.bundle, current.subcategory)]}{names.subcategories[subKey(current.bundle, current.subcategory)]}
+      <span class="key">({current.subcategory})</span>{:else}{current.subcategory}{/if}{#if current.bundle !== "base"}
+      ({current.bundle}){/if} ·
     <span class:pending={difficultyInput !== null}
       >difficulty {difficultyInput !== null ? `${difficultyInput}▏ (Enter)` : current.difficulty}</span
     >

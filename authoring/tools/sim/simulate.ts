@@ -4,7 +4,7 @@ import { readFileSync } from "node:fs";
 import { rangesFor } from "../../../app/client/src/engine/choice.ts";
 import { GameError, MODES, STANDARD_JOKERS, answer, joker, newGame, pick, resolveChoice, view } from "../../../app/client/src/engine/game.ts";
 import { outlook } from "../../../app/client/src/engine/outlook.ts";
-import { categoryOf, type LevelRanges } from "../../../app/client/src/engine/pool.ts";
+import { categoryOf, subOf, type LevelRanges } from "../../../app/client/src/engine/pool.ts";
 import { seededRng } from "../../../app/client/src/engine/rng.ts";
 import * as selection from "../../../app/client/src/engine/selection.ts";
 import { emptySave, type EngineData, type GameState, type Io, type SaveData } from "../../../app/client/src/engine/state.ts";
@@ -60,9 +60,9 @@ function short(e: GameError, seen: Set<string>, data: EngineData, bundles: Set<s
   return dryAt(level, lo, hi, seen, data, bundles);
 }
 
-/** The level with the subcategories whose questions at its range were all seen. */
+/** The level with the subcategories (keys) whose questions at its range were all seen. */
 function dryAt(level: number, lo: number, hi: number, seen: Set<string>, data: EngineData, bundles: Set<string>): Bottleneck {
-  const at = (qs: typeof data.pool) => new Set(qs.filter((q) => lo <= q.difficulty && q.difficulty <= hi).map((q) => q.subcategory));
+  const at = (qs: typeof data.pool) => new Set(qs.filter((q) => lo <= q.difficulty && q.difficulty <= hi).map(subOf));
   const all = selection.available(data.pool, [], [], bundles);
   const had = at(all);
   const still = at(all.filter((q) => !seen.has(q.id)));

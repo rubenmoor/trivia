@@ -2,7 +2,7 @@
 // SaveData = game.sqlite's tables as JSON plus flags (plan 49); GameState = games.state of the former Python referee.
 import type { Category, Difficulty, ErrorInfo, GameMode, JokerBudget, JokerName, Language, Supply } from "../lib/types.ts";
 import type { AgeGroup, Bundle, PoolQuestion } from "./pool.ts";
-import { broadOf, byId } from "./pool.ts";
+import { broadOf, byId, subKey } from "./pool.ts";
 import { pyRepr } from "./pycompat.ts";
 import type { Rng } from "./rng.ts";
 
@@ -230,6 +230,7 @@ export interface Io {
 /** Display names of one locale (D-81): base's names file merged with every bundle's. */
 export interface Names {
   bundles: Record<string, { name: string; description?: string }>;
+  /** By catKey / subKey (D-99): each file keys its own bundle's slugs and Spanish names. */
   categories: Record<string, string>;
   subcategories: Record<string, string>;
   /** Age-group id → name (decision 48). */
@@ -257,14 +258,16 @@ export interface EngineData {
 
 export const NO_NAMES: Names = { bundles: {}, categories: {}, subcategories: {}, age_groups: {} };
 
-/** Base's names file merged with every bundle's; null entries (no file) are skipped. */
-export function mergeNames(files: unknown[]): Names {
+/** Base's names file merged with every bundle's ([bundle id, file]); null files (none) are skipped. */
+export function mergeNames(files: (readonly [string, unknown])[]): Names {
   const out: Names = { bundles: {}, categories: {}, subcategories: {}, age_groups: {} };
-  for (const f of files as (Partial<Names> | null)[]) {
+  const keyed = (bundle: string, m: Record<string, string> | undefined) =>
+    Object.fromEntries(Object.entries(m ?? {}).map(([k, v]) => [subKey(bundle, k), v]));
+  for (const [bundle, f] of files as [string, Partial<Names> | null][]) {
     if (!f) continue;
     Object.assign(out.bundles, f.bundles);
-    Object.assign(out.categories, f.categories);
-    Object.assign(out.subcategories, f.subcategories);
+    Object.assign(out.categories, keyed(bundle, f.categories));
+    Object.assign(out.subcategories, keyed(bundle, f.subcategories));
     Object.assign(out.age_groups, f.age_groups);
   }
   return out;

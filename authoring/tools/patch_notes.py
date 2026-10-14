@@ -11,14 +11,15 @@ from pathlib import Path
 
 from layout import REPO as ROOT, WORK
 import translations  # authoring/tools/translations.py
+from categories import key, sub_key  # authoring/tools/categories.py (D-99)
 
 sys.path.insert(0, str(ROOT / "authoring" / "steam"))
 import release_check  # noqa: E402
 
 FIXED_FIELDS = ["question", "answer", "wrong_answers", "hints", "fun_fact", "difficulty", "subcategory", "media"]
 POOL_RE = re.compile(r"app/data/(bundles/[^/]+/)?pool(?:\.([A-Za-z-]+))?\.json")  # a pack's in bundles/<id>/ (decision 66)
-CATS_RE = re.compile(r"app/data/(?:bundles/[^/]+/)?categories\.json")
-NAMES_RE = re.compile(r"app/data/(?:bundles/[^/]+/)?names\.([A-Za-z-]+)\.json")
+CATS_RE = re.compile(r"app/data/(?:bundles/([^/]+)/)?categories\.json")
+NAMES_RE = re.compile(r"app/data/(?:bundles/([^/]+)/)?names\.([A-Za-z-]+)\.json")
 LAUNCH = translations.LAUNCH  # D-78; EVENT needs each one (qgen validate)
 OTHER = "other"
 # Steam event strings per launch language (authoring, not t()); tone of plans/11-steam.md "Announcement texts".
@@ -61,7 +62,8 @@ def read(ref, path):
 
 
 def snapshot(ref):
-    """{"version", "pools": {locale: pool}, "sub": {subcategory: slug}, "names": {locale: {slug: name}}}."""
+    """{"version", "pools": {locale: pool}, "sub": {subcategory: slug}, "names": {locale: {slug: name}}};
+    subcategories and slugs as categories.sub_key (bundle + name, D-99)."""
     fs = files(ref)
     pools = {}  # per locale: base's questions and the packs', base's hash
     for f in fs:
@@ -71,13 +73,15 @@ def snapshot(ref):
             if not m.group(1):
                 pool["hash"] = p.get("hash")
     sub, names = {}, {"es": {}}
-    for f in sorted(f for f in fs if CATS_RE.fullmatch(f)):
-        for c in read(ref, f)["categories"]:
-            names["es"][c["slug"]] = c["name"]
-            sub.update({s: c["slug"] for s in c["subcategories"]})
     for f in sorted(fs):
-        if m := NAMES_RE.fullmatch(f):
-            names.setdefault(m.group(1), {}).update(read(ref, f).get("categories") or {})
+        if m := CATS_RE.fullmatch(f):
+            b = m.group(1) or "base"
+            for c in read(ref, f)["categories"]:
+                names["es"][sub_key(b, c["slug"])] = c["name"]
+                sub.update({sub_key(b, s): sub_key(b, c["slug"]) for s in c["subcategories"]})
+        elif m := NAMES_RE.fullmatch(f):
+            b = m.group(1) or "base"
+            names.setdefault(m.group(2), {}).update({sub_key(b, k): v for k, v in (read(ref, f).get("categories") or {}).items()})
     pkg = read(ref, "app/desktop/package.json")
     return {"version": pkg and pkg["version"], "pools": pools, "sub": sub, "names": names}
 
@@ -91,12 +95,12 @@ def diff(old, new, old_sub, new_sub):
         out.setdefault(slug, {"added": 0, "fixed": 0, "dropped": 0})[key] += 1
     for i, q in n.items():
         if i not in o:
-            count("added", new_sub.get(q["subcategory"], OTHER))
+            count("added", new_sub.get(sub_key(*key(q)), OTHER))
         elif any(q.get(f) != o[i].get(f) for f in FIXED_FIELDS):
-            count("fixed", new_sub.get(q["subcategory"], OTHER))
+            count("fixed", new_sub.get(sub_key(*key(q)), OTHER))
     for i, q in o.items():
         if i not in n:
-            count("dropped", old_sub.get(q["subcategory"]) or new_sub.get(q["subcategory"], OTHER))
+            count("dropped", old_sub.get(sub_key(*key(q))) or new_sub.get(sub_key(*key(q)), OTHER))
     return out
 
 

@@ -4,7 +4,7 @@ import type { Choice, Game, GameMode, JokerBudget, JokerEvent, JokerName, JokerS
 import type { ChoiceInput } from "./choice.ts";
 import { JOKERS, STANDARD_JOKERS, checkBudget, checkCount, defaultChoice, gameChoice, mediaAllowed, rangesFor, resolveChoice } from "./choice.ts";
 import type { LevelRanges, PoolQuestion } from "./pool.ts";
-import { categoryOf } from "./pool.ts";
+import { catKey, categoryOf, subKey, subOf } from "./pool.ts";
 import { casefold, pyLen, pySplitJoin, pyTruthy } from "./pycompat.ts";
 import * as selection from "./selection.ts";
 import type { EngineData, GameRow, GameState, Io, Outcome, SaveData } from "./state.ts";
@@ -135,7 +135,7 @@ function availableNow(work: SaveData, state: GameState, data: EngineData): PoolQ
   const purged = new Set<string | null>(state.purged);
   const bundles = new Set(gameChoice(state, data).bundles);
   const media = mediaAllowed(state.settings);
-  return selection.available(data.pool, work.blocked, state.offered, bundles).filter((q) => !purged.has(q.subcategory) && media(q));
+  return selection.available(data.pool, work.blocked, state.offered, bundles).filter((q) => !purged.has(subOf(q)) && media(q));
 }
 
 /** Draw n cards for the state's level from what's still available in this game, lowest seen count first. */
@@ -342,12 +342,12 @@ function dropCurrent(
 function backToSelect(
   work: SaveData, gid: number, state: GameState, data: EngineData, io: Io, outcome: Outcome, purge = false,
 ): void {
-  const sub = question(data, state.current).subcategory;
+  const sub = subOf(question(data, state.current))!;
   dropCurrent(work, gid, state, outcome, io, outcome === "admin_block");
   const removed = new Set([state.current!]);
   if (purge) {
     state.purged.push(sub);
-    for (const i of state.options) if (question(data, i).subcategory === sub) removed.add(i);
+    for (const i of state.options) if (subOf(question(data, i)) === sub) removed.add(i);
   }
   const keep = state.options.filter((i) => !removed.has(i)).map((i) => question(data, i));
   let fresh: string[];
@@ -408,7 +408,7 @@ function replacement(
 }
 
 function categoryCandidates(avail: PoolQuestion[], level: number, ranges: LevelRanges, sub: string): PoolQuestion[] {
-  return avail.filter((q) => q.subcategory === sub && selection.inRange(q, level, ranges));
+  return avail.filter((q) => subOf(q) === sub && selection.inRange(q, level, ranges));
 }
 
 /** Replace the question on screen in place with `fresh` (Bájale, Cambiazo). */
@@ -448,7 +448,7 @@ const playHint: Play = (_work, _gid, state, data) => {
 /** «Paso»: back to Select with a new card; optionally the subcategory leaves the game. */
 const playSkip: Play = (work, gid, state, data, io, { purge }) => {
   state.jokers.push("skip");
-  const sub = question(data, state.current).subcategory;
+  const sub = subOf(question(data, state.current));
   backToSelect(work, gid, state, data, io, "skipped", pyTruthy(purge));
   return { purged: pyTruthy(purge) ? sub : null };
 };
@@ -457,7 +457,7 @@ const playSkip: Play = (work, gid, state, data, io, { purge }) => {
 const playEasier: Play = (work, gid, state, data, io) => {
   const cur = question(data, state.current);
   const avail = availableNow(work, state, data);
-  const cands = avail.filter((q) => q.subcategory === cur.subcategory && q.difficulty < cur.difficulty);
+  const cands = avail.filter((q) => subOf(q) === subOf(cur) && q.difficulty < cur.difficulty);
   const fresh = replacement(avail, state.level, rangesOf(state, data), cands, (q) => -q.difficulty, countOf(work), io, undefined, cardsOf(state));
   if (!fresh) throw new GameError("easier_none");
   state.jokers.push("easier");
@@ -465,11 +465,11 @@ const playEasier: Play = (work, gid, state, data, io) => {
   return { from: cur.difficulty, to: fresh.difficulty };
 };
 
-/** «Cambiazo»: a question of the level's range from the chosen subcategory, nearest difficulty first (09). */
+/** «Cambiazo»: a question of the level's range from the chosen subcategory (its key), nearest difficulty first (09). */
 const playCategory: Play = (work, gid, state, data, io, { subcategory }) => {
   const cur = question(data, state.current);
   if (typeof subcategory !== "string" || !data.broad.has(subcategory)) throw new GameError("category_unknown");
-  if (subcategory === cur.subcategory) throw new GameError("category_same");
+  if (subcategory === subOf(cur)) throw new GameError("category_same");
   const avail = availableNow(work, state, data);
   const ranges = rangesOf(state, data);
   const fresh = replacement(avail, state.level, ranges, categoryCandidates(avail, state.level, ranges, subcategory),
@@ -540,7 +540,7 @@ function jokersView(work: SaveData, row: GameRow, state: GameState, data: Engine
   const hint = check(playHint), skipJ = check(playSkip), easier = check(playEasier);
   // Availability tries the worst case, a hit; the client only learns yes or no.
   const snipe = check(playSnipe, { index: state.answers.indexOf(cur.answer) });
-  const purge = { ...check(playSkip, { purge: true }), subcategory: cur.subcategory };
+  const purge = { ...check(playSkip, { purge: true }), subcategory: subOf(cur)! };
 
   const avail = availableNow(work, state, data);
   const ranges = rangesOf(state, data);
@@ -548,12 +548,15 @@ function jokersView(work: SaveData, row: GameRow, state: GameState, data: Engine
   const count = countOf(work);
   const active = new Set(gameChoice(state, data).bundles);
   const groups = data.categories.filter((c) => active.has(c.bundle)).map((c) => {
-    const subs = c.subcategories.map((s) => ({
-      name: s,
-      available: s !== cur.subcategory
-        && replacement(avail, state.level, ranges, categoryCandidates(avail, state.level, ranges, s), () => 0, count, io, fill, cardsOf(state)) !== null,
-    }));
-    return { slug: c.slug, name: c.name, available: subs.some((s) => s.available), subcategories: subs };
+    const subs = c.subcategories.map((name) => {
+      const key = subKey(c.bundle, name);
+      return {
+        name, key,
+        available: key !== subOf(cur)
+          && replacement(avail, state.level, ranges, categoryCandidates(avail, state.level, ranges, key), () => 0, count, io, fill, cardsOf(state)) !== null,
+      };
+    });
+    return { slug: c.slug, key: catKey(c), name: c.name, available: subs.some((s) => s.available), subcategories: subs };
   });
   const possible = groups.some((g) => g.available);
   const out: Jokers = {
@@ -601,8 +604,8 @@ function replaceCurrent(work: SaveData, gid: number, state: GameState, data: Eng
   const fill = laterFill(avail, state.level, ranges, cardsOf(state));
   const pickFrom = (cands: PoolQuestion[]) => replacement(avail, state.level, ranges, cands,
     (q) => Math.abs(q.difficulty - cur.difficulty), countOf(work), io, fill, cardsOf(state));
-  const fresh = pickFrom(categoryCandidates(avail, state.level, ranges, cur.subcategory))
-    ?? pickFrom(avail.filter((q) => q.subcategory !== cur.subcategory && selection.inRange(q, state.level, ranges)));
+  const fresh = pickFrom(categoryCandidates(avail, state.level, ranges, subOf(cur)!))
+    ?? pickFrom(avail.filter((q) => subOf(q) !== subOf(cur) && selection.inRange(q, state.level, ranges)));
   if (!fresh) throw new GameError("replace_empty");
   if (seen) see(work, cur.id, gid, io);
   state.history.push({ level: state.level, question_id: cur.id, outcome: "admin_replace", jokers: state.jokers });
