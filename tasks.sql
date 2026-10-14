@@ -22959,14 +22959,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Plan 99 (`Retire the browser game and the Python game server`) isn''t done: add a line to its open `task 762: Node dev server for browser checks` (`pm task set 762 --body …`, keep its text) that its built-client command (`vite preview`) must serve the readable tree; `vite` dev is unaffected. If 762 is done by then, check `vite preview` directly.
 
 Done when: those commands pass; build size per depot noted in the done note (expected + ~2 MB).', '2026-10-13T18:28:37Z', '2026-10-13T21:49:07Z', 911);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (948, 111, 'Start time on the Steam Deck: gamemaster check (decision once)', 'work', 'open', NULL, NULL, 'Plan 111 task 5. ~200 module requests over `app://` instead of 3 may slow the start. Runs after task 944 (readable build config); doesn''t block the other tasks.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (948, 111, 'Start time on the Steam Deck: gamemaster check (decision once)', 'work', 'done', NULL, '2026-10-14, no files: decision 149 answered (bundle the Svelte runtime), follow-up task 1025 in plan 111', 'Plan 111 task 5. ~200 module requests over `app://` instead of 3 may slow the start. Runs after task 944 (readable build config); doesn''t block the other tasks.
 
 - Raise `pm decision add "Readable build: start time on the Steam Deck ok?"` (kind once), body with the steps: install the beta build with the readable client (or, only if no beta upload is due, copy the unpacked Windows build to the Deck as a non-Steam test), time launch → start menu three times, compare with the previous (hashed) build; also on the gamemaster''s PC. Budget ≤ +0.5 s on the Deck.
 - Options: "ok (≤ +0.5 s)" (recommended) | "too slow: bundle the Svelte runtime" (one `vendor/svelte.js`, ours still per module) | "too slow: other".
 - Note decision 125: Steam Deck: best effort, review without a Deck at hand — the gamemaster may have no Deck; say so in the body (PC timing then, Deck later).
 - Make this task pending on it (`pm task-pending-decision <this task> <id>`), stage, stop. On answer: "too slow" → add a follow-up task in plan 111 with the chosen fix.
 
-Done when: the decision is answered and any follow-up added.', '2026-10-13T18:28:49Z', NULL, 911);
+Done when: the decision is answered and any follow-up added.', '2026-10-13T18:28:49Z', '2026-10-14T15:48:24Z', 911);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (949, 111, 'Docs: readable build, cache finding, module paths for modders', 'work', 'done', NULL, '2026-10-13, plans/01-architecture.md (readable build bullet), plans/18-steam-integration.md (Layout: readable resources/client/; new ''Modding: module paths'': decision 124 naming rule, index.html, cssHash, not overridable by path, no stability promise; cache finding already there from task 946), directory.md (app/client/dist/ layout). Per-commit checks pass.', 'Plan 111 task 6. Document the readable client build (decision 124: Readable client build: output naming rule for mod overrides).
 
 - `plans/01-architecture.md`: build bullet (readable build, decision 124, why: mods).
@@ -23879,6 +23879,26 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Checks
 - `npm run check`, `npm test`, `npm run build`, `qgen validate`.
 - Browser (dev server, `TRIVIA_MUTE=1`): en and de UI show age group and bundle names in that language on the Choice screen, Esc → «Dificultad y paquetes», bundle selector, overlay line, credits; es UI unchanged.', '2026-10-14T08:23:07Z', '2026-10-14T08:28:31Z', 1023);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1025, 111, 'Readable build: bundle the Svelte runtime into vendor/svelte.js', 'work', 'open', NULL, NULL, '`decision 149: Readable build costs +0.14 s at start on your PC: keep it?` → bundle the Svelte runtime. Follow-up of `task 948: Start time on the Steam Deck: gamemaster check (decision once)`.
+
+## Goal
+- Svelte''s runtime (≈ 100 of the 198 JS files under `vendor/svelte/src/…`) ships as one bundled file; our modules stay one file each (`decision 124: Readable client build: output naming rule for mod overrides`, unchanged for `src/`)
+- Still unminified, with a source map
+
+## Constraints
+- `decision 145: Svelte runtime ships with every export for precompiled mod components`: the bundle keeps every export of `svelte`, `svelte/internal/client`, `svelte/internal/disclose-version`; one runtime instance shared by our code and mod components (no duplicated module state across several bundles)
+- `decision 106`: no new dependencies, Vite/Rolldown options or a small plugin only
+- File name: `vendor/svelte.js` if one file can serve all three specifiers (e.g. one entry re-exporting all, our imports rewritten to it); if the specifiers need separate files, they must import one shared chunk; pick the simplest that keeps one instance and record the paths with `pm decision record`
+
+## Steps
+- `app/client/vite.config.ts`: Rolldown option (`preserveModules` is all-or-nothing: likely build the runtime as its own entry/pre-bundle and point `svelte`, `svelte/internal/*` imports at it); `build:optimized` mode unchanged
+- Mods that import `/vendor/svelte/…` by path: update `app/client/src/lib/mods.ts` comments, `plans/18-steam-integration.md` ("`window.trivia`" `svelte` line, "Modding: module paths"), `directory.md` `app/client/` row; check the precompiled-mod-component example/test from `task 971` (grep `vendor/svelte` in `mods/`, `modding/`, `app/`) still works
+- Measure again as in `decision 143` (`npm run build:optimized -w app/client` vs. `npm run build -w app/client`, `trivia-desktop` under Xvfb, median of 20): update the numbers in `plans/01-architecture.md`
+
+## Done when
+- `npm run build`: no `vendor/svelte/src/` tree, the runtime in the bundled file(s) + `.map`; no other `node_modules` file count change beyond Svelte
+- Game plays in `trivia-desktop`; a code add-on with a precompiled Svelte component (task 971''s) still mounts on our runtime
+- New launch → start menu number in `plans/01-architecture.md`; per-commit checks pass', '2026-10-14T15:48:20Z', NULL, 948);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -25335,7 +25355,7 @@ Measured 2026-10-13 on your PC (repo shell, Xvfb, fresh save, median of 20 runs,
 Options
 - keep the readable build as is
 - bundle the Svelte runtime: one `vendor/svelte.js` (≈ 100 of the 198 files), our modules still one file each; mods importing `/vendor/svelte/…` by path change (follow-up task in plan 111)
-- other: say what', 'bundle the Svelte runtime', NULL, '2026-10-14T04:11:27Z', '2026-10-14T15:18:56Z', 948, NULL, 'rule', NULL, '');
+- other: say what', 'bundle the Svelte runtime', NULL, '2026-10-14T04:11:27Z', '2026-10-14T15:18:56Z', 948, NULL, 'rule', NULL, '2026-10-14, task 948: 2026-10-14, task 948: The readable build''s per-file Svelte runtime (vendor/svelte/src/…, decision 124''s third-party rule) no longer holds: task 1025 (plan 111) bundles it into vendor/svelte.js (or shared-chunk files), every export kept (decision 145), our src/ modules still one file each; mods importing /vendor/svelte/… by path move to the new path; docs (18-steam-integration.md, directory.md, mods.ts) and the start-time numbers in 01-architecture.md updated there.');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (150, 'Family save imported into trivia-desktop?', 'pending', '["imported, family plays trivia-desktop", "not yet"]', '`plan 99: Retire the browser game and the Python game server`, step 2 (`task 763`). The family''s save moves from the browser game (`state/game.json`) into the desktop build; `task 765: Delete app/server, ServerStore, the trivia command and nix build .#app` waits for this answer.
 - Start Steam, logged in with the family''s Steam account (the save folder is per Steam user, `plan 87`).
 - From the repo''s dev shell: `trivia-desktop --import-save state/game.json`
@@ -26292,6 +26312,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (914, 800, '2026-10-14T08:31:35Z', '2026-10-14T08:39:33Z', 'done', NULL, 0, '542d752d7c66623e48c964c0ec287f5bf7ad57ef', 'claude-opus-5-5[1m]', 'a7b2fed9-213c-43bb-bdb5-8616bbd3c3e2', 55, 104, 20628, 4104981, 98690, 2.0234922, 2040245);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (915, 802, '2026-10-14T08:39:33Z', '2026-10-14T15:08:50Z', 'failed', 'interrupted', NULL, '6235d0dfb9e3b70281733e327f957981d206c3c2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2040245);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (916, 802, '2026-10-14T15:08:51Z', '2026-10-14T15:47:50Z', 'done', NULL, 0, '8216e6e26ac446ccf731d9065c84a6422ba65fa2', 'claude-opus-5-5[1m]', '3ab22acc-c99e-40aa-bd91-3814f8885796', 86, 158, 58245, 11024129, 232774, 5.2325498, 2129003);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (917, 948, '2026-10-14T15:47:50Z', '2026-10-14T15:48:29Z', 'done', NULL, 0, '3ce169b53508ca6378369beff68f8a17fb774a8d', 'claude-opus-5-5[1m]', 'b9c1db57-907e-4818-9706-bfa689f36bef', 7, 14, 3003, 243004, 32182, 0.36617279999999997, 2129003);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
