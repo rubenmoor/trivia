@@ -186,6 +186,7 @@ Requirements to plan for: full controller support with correct glyphs (IN), legi
 - Real-Deck test and tuning: plan 90 once a Deck is at hand.
 
 ## Modding
+Player-facing: [`modding/README.md`](../modding/README.md).
 Mods are folders the shell serves over `app://trivia/` before our own client and data (pm plan 112, milestone 15). The shell only reads mod files as bytes; mod code runs only in the page.
 - Code: `app/desktop/mods.mjs` (`readManifest`, `discover`, `readSettings`/`writeSettings`, `arrange`), layers in `resolve.mjs` (`makeResolver({ …, layers })`), wiring in `main.mjs`; test `resolve.test.mjs` (`npm test`).
 - Sources: local folder (`TRIVIA_MODS_DIR`, else packaged `<userData>/mods/`, created at start; dev repo `mods/`, gitignored), then Workshop (below); each direct subfolder with a `mod.json` is a mod; local before Workshop on a duplicate id (decision 127).
@@ -219,6 +220,7 @@ Mods are folders the shell serves over `app://trivia/` before our own client and
   - No stability promise: `window.trivia`, its types and module paths may change with any update; renames in the patch notes (pm plan 102).
 
 ## Modding: `window.trivia`
+Player-facing: [`modding/README.md`](../modding/README.md).
 The page-side mod API (pm plan 117, decisions 130, 131), defined in `app/client/src/lib/mods.ts` (type `TriviaApi`: the reference, with source maps and the public repo); listed here with the call sites for the modding guide (pm plan 121). No stability promise.
 - `setup(trivia)`: an entry's default export; `trivia` is scoped to the mod (`trivia.mod`, registrations tagged with its id); `window.trivia` is the unscoped view. Registrations return an `off()`.
 - `version`: `buildInfo().version` (decision 91); `mods`: loaded mods `{ id, name, version }[]`; `mod`: this mod (scoped view only).
@@ -238,6 +240,7 @@ The page-side mod API (pm plan 117, decisions 130, 131), defined in `app/client/
 - Internals, not on `window.trivia`: `loadedMods()`, `modErrors()` (mods screen, plan 118), `modsOn()` (telemetry, decision 146).
 
 ## Modding: module paths
+Player-facing: [`modding/README.md`](../modding/README.md).
 The client ships as a readable tree, so a mod replaces any single module, component CSS or stylesheet by putting a file at the same path (pm plan 111, decision 124: Readable client build: output naming rule for mod overrides). The modding guide (pm plan 121) links this section.
 - Build: `app/client/vite.config.ts` (`svelteRuntime()` plugin, `preserveModules`, `preserveModulesRoot: "src"`, naming functions, `minify: false`, `sourcemap: true`, `cssCodeSplit: true`), `svelte.config.js` (`cssHash`).
 - Naming rule (paths relative to `app/client/src/` and `app://trivia/`):
@@ -260,6 +263,7 @@ The client ships as a readable tree, so a mod replaces any single module, compon
 - No stability promise: paths may change with any update and break mods; renames go into the patch notes (pm plan 102).
 
 ## Modding: Workshop source
+Player-facing: [`modding/README.md`](../modding/README.md).
 Subscribed Workshop items are mod sources next to the local folder (pm plan 114); the page reads and orders mods over IPC. Steam's client downloads items, never us; the overlay stays this run's.
 - Code: `app/desktop/workshop.mjs` (`workshopItems(ugc)`: `steam.workshop` → `[{ dir, publishedFileId, state, warnings }]`, ids as decimal strings; `fakeUgc(dir)`; pure, no Electron, no binding import), `discover({ local, workshop })` in `mods.mjs`, wiring in `main.mjs`.
 - Only with a real Steam user (`hasSteamId()`, decision 111); else no Workshop entries.
@@ -277,6 +281,7 @@ Subscribed Workshop items are mod sources next to the local folder (pm plan 114)
 - Steam updating files while running: accepted; restart after updates.
 
 ## Modding: mods screen and safe start
+Player-facing: [`modding/README.md`](../modding/README.md).
 The shell side of the mods screen (pm plan 118; screen: `04-ui-tv-display.md` "Mods"): a one-time notice before any mod runs, a crash marker that makes the next start a safe one, restart to apply. The page only calls IPC; the shell reads and writes `mods.json` and relaunches.
 - Code: `app/desktop/mods.mjs` (`noticed`, `withNotice`, `readMarker`/`writeMarker`/`clearMarker`, hold-off in `arrange`), `main.mjs` (safe start, marker, relaunch, IPC), `preload.cjs`, `app/client/src/lib/desktop.ts` (`ModsBridge`), `main.ts` (`ready` → `mods.ready()`).
 - Notice (decision 151: Mods notice per install in mods.json; new mods held off until it): `mods.json` gains `notice: true` + `noticeAt`, per machine like decision 136; while missing, `arrange()` appends new mods `on: false`, so no mod code runs before the notice; after it, new mods appended `on`; accepting never touches existing rows.
@@ -295,6 +300,7 @@ The shell side of the mods screen (pm plan 118; screen: `04-ui-tv-display.md` "M
 - Bridge: `window.triviaShell.mods` = `{ list, set, notice, restart, ready }`.
 
 ## Modding: Publishing
+Player-facing: [`modding/README.md`](../modding/README.md).
 Modders publish a mod folder as a Workshop item with the game itself (pm plan 119); Steam's client uploads, we make no network calls of our own. The folder is only read and copied, never run. The modding guide (pm plan 121) copies this section.
 - Command: `trivia --publish-mod <folder> [--changenote <text>] [--visibility public|friends|unlisted|private] [--content-only] [--dry-run]`; dev `trivia-desktop --publish-mod …`; packaged: the game executable (Linux `trivia`, Windows `Trivia.exe`) from a terminal, Steam client running.
 - Flags: `--changenote`, `--visibility`, `--content-only`, `--dry-run` only with `--publish-mod`; `--publish-mod` not with `--import-save`/`--no-mods`.
@@ -355,6 +361,7 @@ The shell's half of question reports (pm plan 93, decision 93, decision 111): ma
   - `report:send({ question, lang, text, note?, version, pool })`: plan 103's field limits, else rejects `bad_report`; → `{ ok: true, id }` or `{ ok: false, status, error, retryAfter? }`; `status: 0` without a response (`no_connection`, `timeout`, `no_ticket`, `unavailable`, `too_large`), else the server's code (`retryAfter` on 429).
 
 ## Modding: `mod.json`
+Player-facing: [`modding/README.md`](../modding/README.md).
 A mod is a folder with a `mod.json` (pm plan 112). The validator `readManifest` in `app/desktop/mods.mjs` is the source of truth; this schema is for the modding guide (plan 121) and editors.
 - Also checked by the validator, not by the schema: file ≤ 64 KB UTF-8; `entry` exists inside the mod (symlinks resolved); unknown keys and unknown `languages` tags are warnings; `game` ≠ running version: warning `game_version`, still loaded.
 - Errors: `no_manifest`, `bad_json`, `bad_field` (+ field), `duplicate_id` (+ other folder; local before Workshop, then lower published file id, decision 127), `entry_missing`, `not_a_folder`.
