@@ -24304,8 +24304,77 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 Check: `npm run check`; `trivia-steam vdf` (or `--dry-run`) writes the VDFs with the real IDs; `rg -n ''\b480\b'' app authoring README.md` shows no default outside `--dry-run`.
 Done when: no 480 default left outside `--dry-run`; SW-7 ticked.', '2026-10-14T21:51:13Z', NULL, 1043);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1046, 131, 'create tasks for plan 131: Content survey, rating and price (PUB-9, PUB-11)', 'split', 'open', 1000, NULL, 'Split plan 131 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-14T21:55:25Z', NULL, 259);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1046, 131, 'create tasks for plan 131: Content survey, rating and price (PUB-9, PUB-11)', 'split', 'done', 1000, '2026-10-14, tasks 1047-1050 in plan 131 (tasks.sql only)', 'Split plan 131 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-14T21:55:25Z', '2026-10-14T21:56:16Z', 259);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1047, 131, 'Content survey and age rating: research and draft (PUB-9)', 'work', 'open', NULL, NULL, 'Part of `plan 131: Content survey, rating and price (PUB-9, PUB-11)`. Research Valve''s current content survey rules, scan the game, draft the answers, and get them approved through a pm decision. Never log into Steamworks or contact Valve or a rating body. Steam only (`decision 111: Steam only: no effort outside Steam; Steam features are the reason to buy`).
+
+## Research (cite URL + read date for every rule)
+- partner.steamgames.com/doc/gettingstarted/contentsurvey; the mature-content / content-descriptor rules; the IARC page in Steamworks docs (cost, which regions show its ratings, whether Germany (USK) or other launch markets need it).
+- Earlier "from memory" notes (17a "Valve''s rules", decision 180''s body) are rechecked, not copied.
+
+## Scan the game (throw-away script, deleted afterwards)
+- Pool (`app/data/pool.json`, `app/data/bundles/colombia/`): questions on war, death, crime, drugs/alcohol, religion, sex; keyword lists per language; counts and example ids.
+- Media: pictures that may show nudity (classical paintings, sculptures) or violence (war photos), via the media licence data''s Commons categories/restriction flags and the question text; list ids, no full manual audit.
+- Player-entered text: player names stay on the device and in Steam Cloud, never shown to others; Workshop mods (milestone 15, decision 135: creators pick per-item descriptors) if the form asks about user content; question reports (`plan 103: Report server (POST /reports)`) send text only on the player''s click; telemetry opt-in only.
+- No gambling, no purchases in the game, no chat.
+
+## Write
+- Section "Content survey (PUB-9)" in `plans/17a-store-page.md`, after "AI disclosure": Valve''s rules with sources; scan findings (counts, examples); every survey question with the proposed answer; for borderline descriptors (classical nudes, war history) the reasoning and the alternative; IARC recommendation (get one or not) with the reason; whether the `colombia` DLC needs its own survey.
+- Recheck decision 180 "AI disclosure approved?"''s open points: description field localized or English only, length limit, own survey per DLC app. If one changes the AI draft (too long, English only), fix 17a "AI disclosure" and say so in the new decision''s body. Don''t touch decision 180.
+
+## Decision
+- `pm decision add "Content survey answers approved? (PUB-9)"`: body = summary of the answers, borderline items with options, IARC recommendation, link to the 17a section; options: approved as drafted (recommended) / approved with IARC changed / fixes (list).
+
+## Done when
+- Section written with sources; decision pending.', '2026-10-14T21:56:09Z', NULL, 1046);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1048, 131, 'Price, regional prices and launch discount: research and draft (PUB-11)', 'work', 'open', NULL, NULL, 'Part of `plan 131: Content survey, rating and price (PUB-9, PUB-11)`. Research Valve''s current pricing and discount rules, check the price against comparable games, draft the regional prices and launch discount, and get them approved through a pm decision. Binding: `decision 66: Price model (OQ-33): how is the game sold on Steam?` (paid one-time, base $9.99 "for now; final check at PUB-11", Valve''s regional matrix, launch discount, bundles as free DLC only, no paid DLC; D-98 in `plans/decisions.md`). Never log into Steamworks or contact Valve.
+
+## Research (cite URL + read date for every rule)
+- partner.steamgames.com/doc/store/pricing (regional pricing, recommended matrix), /doc/marketing/discounts (launch discount: max %, length, setup deadline, cooldown after it, rules on discounting after a price change), /doc/store/application/dlc (how a free DLC is priced and packaged).
+- Earlier "from memory" notes (decision 66, `plans/11-steam.md` "Launch (S6)" discount line) are rechecked, not copied.
+
+## Comparables
+- Recheck decision 66''s table (price, reviews, DLC model) on the store today; add 3–5 smaller family/party trivia games on Steam; one line on where $9.99 sits.
+
+## Regional prices
+- Valve''s published recommendation for $9.99, at least USD, EUR, GBP, MXN, COP, LATAM-USD (ARS etc.), CLP, PEN, CHF. If the matrix is only visible in the Steamworks pricing tool, write the developer''s step (accept Valve''s recommendation, read off these rows) instead of guessing numbers.
+
+## Launch discount
+- % and length within Valve''s rules, and what it blocks afterwards (cooldown before e.g. a seasonal sale).
+
+## Write
+- Section "Price (PUB-11)" in `plans/17-publishing.md`, after "Steamworks and store": sources, comparables, regional rows, launch discount, free DLC setup for `colombia` (and every later pack).
+- Fix `plans/11-steam.md` "Launch (S6)" → "Valve''s rules" discount line ("unverified") with the verified facts.
+
+## Decision
+- `pm decision add "Price, regional prices and launch discount? (PUB-11)"`: body = the summary; options: $9.99, Valve''s regional matrix, launch discount <x> % for <n> days (recommended) / other base price (state) / no launch discount.
+
+## Done when
+- Section written with sources; decision pending.', '2026-10-14T21:56:09Z', NULL, 1046);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1049, 131, 'Content survey and pricing: entry checklist and the ''entered'' decision (PUB-9, PUB-11)', 'work', 'open', NULL, NULL, 'Part of `plan 131: Content survey, rating and price (PUB-9, PUB-11)`. Runs after `task 1047: Content survey and age rating: research and draft (PUB-9)` and `task 1048: Price, regional prices and launch discount: research and draft (PUB-11)` (their sections in `plans/17a-store-page.md` "Content survey (PUB-9)" and `plans/17-publishing.md` "Price (PUB-11)", and their pending decisions). If decision 177 "Steamworks app created? App ID?" isn''t answered yet, still write the checklist.
+
+## Checklist
+- "Content survey and pricing: entry" in `plans/17a-store-page.md`, Steamworks page by page; Valve''s field names as found by tasks tasks 1047–1048, marked "recheck at entry":
+  - content survey: answers per task 1047''s approved decision; AI section from 17a "AI disclosure" once decision 180 "AI disclosure approved?" is answered (approved variant); IARC if approved; per DLC app if Valve needs it
+  - pricing: base package price $9.99 (or the approved value), regional prices, submit for Valve''s price approval if required; `colombia` DLC free per task 1048''s setup (DLC app from decision 179 "Steamworks app configured (SW-7)? IDs?", `plan 130: Steamworks app configuration (SW-7)`)
+  - launch discount: not entered now; the launch-day row in `plans/11-steam.md` "Launch-day checklist" (`plan 95: Launch`) points to PUB-11''s values
+  - publish the Steamworks changes
+
+## Decision
+- `did=$(pm decision add "Content survey and prices entered in Steamworks? (PUB-9, PUB-11)" …)`: body = the checklist link; needs decisions 177, 179, 180 and tasks 1047–1048''s decisions answered first; report: survey submitted (date), IARC rating(s) received if any, base and regional prices entered (approved by Valve or pending), DLC free; options: entered (recommended) / not yet / issues (rows).
+- `pm task-pending-decision 1050 $did`.
+
+## Done when
+- Checklist written; decision pending; task 1050 waits on it.', '2026-10-14T21:56:10Z', NULL, 1046);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1050, 131, 'Close-out of PUB-9 and PUB-11', 'work', 'open', NULL, NULL, 'Part of `plan 131: Content survey, rating and price (PUB-9, PUB-11)`. Runs after the decision "Content survey and prices entered in Steamworks? (PUB-9, PUB-11)" from `task 1049: Content survey and pricing: entry checklist and the ''entered'' decision (PUB-9, PUB-11)`; if that decision doesn''t exist or is pending, this task should be waiting on it (task 1049 links it).
+
+- Record the answer: rows in the 17a checklist "Content survey and pricing: entry" `[x]`; IARC ratings in 17a "Content survey (PUB-9)".
+- Issues → follow-up tasks: wording in 17a → `plan 88: Store page and AI disclosure (PUB-8, LUI-6)`; a survey answer the game contradicts → the owning plan.
+- `plans/17-publishing.md`: PUB-9 and PUB-11 `[x]` with date and note; price bullet in "Steamworks and store" final. If the price differs from $9.99: amendment note on D-98 in `plans/decisions.md` and `pm decision consequences 66 …`.
+- `plans/project.md` S5 row in sync; `pm decision consequences` on the decisions of tasks 1047, 1048 and 1049.
+
+## Done when
+- PUB-9 and PUB-11 ticked; the launch discount waits only for the launch day (`plan 95: Launch`).', '2026-10-14T21:56:10Z', NULL, 1046);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -26965,6 +27034,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (968, 1044, '2026-10-14T21:51:33Z', '2026-10-14T21:52:28Z', 'done', NULL, 0, '870a17e1c6f7a11db487fb62eab5d825c102ec2a', 'claude-opus-5-5[1m]', '4fc1ad82-7829-4437-bfca-08447a303572', 11, 20, 5023, 468067, 47459, 0.57382540000000015, 2296074);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (969, 667, '2026-10-14T21:52:29Z', '2026-10-14T21:54:06Z', 'done', NULL, 0, '41cda2f67fefa155264f1564b6a39d0d0319ebb1', 'claude-opus-5-5[1m]', '359d31de-6f6d-4760-9372-0f23d9b2403e', 19, 32, 9296, 813930, 54646, 0.786002, 2296074);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (970, 259, '2026-10-14T21:54:06Z', '2026-10-14T21:55:35Z', 'done', NULL, 0, '48f032251c1e2ede6567b44de30848e2d66f0145', 'claude-opus-5-5[1m]', 'ff659266-9c8d-4fbf-9104-d8a08b17854b', 10, 20, 8368, 533809, 73639, 0.86331379999999991, 2296074);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (971, 1046, '2026-10-14T21:55:35Z', '2026-10-14T21:56:22Z', 'done', NULL, 0, '362d543db5f9695a890db1231f9655597541bf7e', 'claude-opus-5-5[1m]', '7cfdcb9b-2e7b-4299-bd1f-947d945066d5', 6, 12, 5184, 206580, 33304, 0.411476, 2296074);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
