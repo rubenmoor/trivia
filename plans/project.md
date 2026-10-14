@@ -152,6 +152,7 @@ Everything that only matters for a release on Steam (desktop shell, controller, 
 - [x] S6: Version numbers and patch-safe saves: one version (`app/desktop/package.json`, tag `v<version>`), pool hash on the credits screen, running games survive a patch, id-continuity check in `qgen validate` (2026-10-13, pm plan 91, decisions 91, 92) — [`18`](18-steam-integration.md), [`12`](12-client-engine.md)
 - [x] S6: ST-4 Release checklist: `trivia-release-check` tag gate, kind full/content-only patch, credits both ways, manual rows (offline, Windows, Deck, Cloud, sound, red frame, beta save, sign-off), one pm decision per release candidate; first full run: part 4's release candidate (task 269) (2026-10-13, pm plan 92) — [`11`](11-steam.md)
 - [x] S6: ST-5 question reports: «Enviar» in «Preguntas marcadas» → report server with a Steam ticket, copy fallback, `qgen flag` (pasted) and `qgen flag --pull` → `needs_work`; send live once plan 103's server URL is in `reportUrl` (2026-10-13, pm plan 93, decisions 93, 142) — [`11`](11-steam.md), [`18`](18-steam-integration.md)
+- [ ] S6: ST-5 content patches: cadence (decision 96), patch and hotfix path, `qgen patch-notes` (counts only, decision 97) in place; first patch after launch open (pm plan 96) — [`11`](11-steam.md), [`16`](16-content-target.md)
 
 ### Backlog
 Not yet accepted, see [`backlog.md`](backlog.md): B-1 session log, B-2 backup of the save, B-3 practice/preview mode, B-5 reworded duplicates in `dedupe` (pm plan 15), B-6 top-up for difficulties 9–10, B-7 picture effects for essential images.

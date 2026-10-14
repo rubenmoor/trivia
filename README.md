@@ -194,6 +194,18 @@ Before every Steam upload, on a clean, tagged commit: `trivia-release-check` (~1
 
 Each artefact (~2.5 GB) holds the game, the data and the pool's media, and plays offline. Unpack it and start `Trivia.exe` (Windows; SmartScreen: «More info → Run anyway») or `./trivia` (Linux, Steam Deck). The first build downloads Electron for both platforms; later builds run offline. Outside Nix: `npm ci --prefix app/desktop && npm run dist --prefix app/desktop`.
 
+### Send a content patch
+
+Steps, rules and the Steamworks part: [`plans/11-steam.md`](plans/11-steam.md) "Content updates (ST-5)".
+
+```sh
+qgen flag --pull && qgen export && qgen validate
+qgen patch-notes                                   # draft: newest v* tag → working tree
+# bump version in app/desktop/package.json (patch; minor on a save change), per-commit checks, commit
+git tag v<x> && qgen patch-notes v<prev> v<x>      # → work/steam/v<x>/patch-notes.md
+trivia-steam upload --branch beta                  # then the manual rows on beta, then default by hand in Steamworks
+```
+
 ### Mod the game
 
 Question bundles, themes, rules tweaks and full conversions, shared on the Steam Workshop: the modding guide [`modding/README.md`](modding/README.md), with example mods in [`modding/examples/`](modding/examples/).

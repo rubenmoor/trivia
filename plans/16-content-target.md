@@ -36,6 +36,7 @@ Part of the Steam plan ([11](11-steam.md)). The release target is set per launch
 - Release bar and back-audit of the pre-D-56 pool (1136 approved): pm plan 57; release bar: pm decision 15.
 - LLM-reviewed questions (D-33) are allowed, but the AI disclosure (17) must describe the process honestly.
 - After release: «Reportar pregunta» (MD-6) plus a manual channel (ST-5) feeds fixes into patches.
+- Patches (ST-5, [`11`](11-steam.md) "Content updates (ST-5)"): new approved questions per language, fixed questions, dropped ones by status; monthly, only if ≥ 100 new approved per launch language or a reported fix waits; hotfixes any time (decision 96).
 
 ## Cost
 `costs.log` records the cost per generated question. A full run for 5000 questions × 3 launch languages (with translation, rating and fact-checking) needs a budget estimate before it starts (CT-3).

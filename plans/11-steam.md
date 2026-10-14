@@ -329,8 +329,54 @@ Eine Frage ist falsch oder unklar? Markiert sie im Spiel (Fahnen-Symbol oder M),
   - bugs: steps to reproduce, version and pool hash from the credits screen, platform (Windows, Linux, Deck);
   - review themes: one line each.
 - Each bug → a task in its owning plan or a `plans/backlog.md` row.
-- Hotfix (wrong answer, crash): version bump (`1.0.1`), commit, new tag, ST-4 checklist (content-only if only `app/data/` changed), `beta`, then `default`; patch flow = `task 270: write plan: Content updates as patches (ST-5)`'s plan.
+- Hotfix (wrong answer, crash): version bump (`1.0.1`), commit, new tag, ST-4 checklist (content-only if only `app/data/` changed), `beta`, then `default`; patch flow: "Content updates (ST-5)" below.
 - Result via decision "First week after launch: what came in?" (plan 95 task 5).
+
+## Content updates (ST-5)
+After launch, new and fixed questions reach players only as Steam patches: a new version, the release checklist (ST-4, usually its content-only variant), `beta`, then `default` by hand. Steam delivers the update; the game makes no new request. This is the content half of ST-5 (pm plan 96); the reports half is pm plan 93 + pm plan 103. Steam build only (decision 111): no steps without Steam.
+
+### Valve's rules
+2026-10-14, task 713: no web access for the worker (WebFetch denied); Valve's wording wins.
+- Review for an update set live on `default` after release: unverified (developer: check https://partner.steamgames.com/doc/store/updates). Assumed none (only the first build is reviewed); if Valve says otherwise, add the lead time to "Patch path" step 10.
+- Event type for patch notes ("Small update / patch notes" vs "Regular update"), per-language texts: unverified (developer: check https://partner.steamgames.com/doc/marketing/event_tools). Working rule until checked: content-only patch = "Small update / patch notes"; full patch (a "Changes" section) = "Regular update".
+
+### Cadence
+- Decision 96: monthly, only if ≥ 100 new approved per launch language or a player-reported fix is waiting.
+- New approved per language: `qgen patch-notes` (newest `v*` tag → working tree), "added" per locale.
+- Hotfix (wrong answer, crash): any time, no cadence wait.
+
+### Patch path
+1. Questions: `qgen batch` per `authoring/RUNBOOK.md` (`--translate en|de` for the translations).
+2. Reports: `qgen flag --pull` (players' reports, report server, plan 103); `qgen flag` for pasted copy-fallback text; both → `needs_work`; `qgen rework` only when the developer asks.
+3. `qgen export`, then `qgen validate` (clean; also guards id continuity against the newest tag).
+4. `qgen patch-notes`: draft notes (counts only, decision 97); check kind and save version.
+5. `version` in `app/desktop/package.json`: patch `x.y.Z+1`; minor on a `SAVE_VERSION` change (decision 91).
+6. Per-commit checks (AGENTS.md), commit, `git tag v<x>` (never reuse a tag).
+7. `qgen patch-notes v<prev> v<x>` (both explicit: after tagging, the default would be `v<x>` itself) → `work/steam/v<x>/patch-notes.md` (Markdown + Steam event drafts es, en, de).
+8. `trivia-steam upload --branch beta` (release check: automated `report` step (`/health`) on every run; manual prompt `later`).
+9. ST-4 manual rows on the Steam-installed `beta` (plan 104):
+   - content-only: `offline` (Steam in offline mode, a game to level 3 hitting new questions) + `signoff` (the developer's OK);
+   - `beta-save` on a save change;
+   - full patch: every row, incl. the manual `report` row.
+10. Candidate decision `Release candidate v<x> passed?` per "Decision per release candidate".
+11. Developer: SteamPipe → Builds → the BuildID → "Set build live on branch" `default`; check `default` = `beta`.
+12. Developer: Community → Events & Announcements → new event from the draft, one text per language (type: "Valve's rules" above); append the texts to "Patch notes" below.
+
+### Hotfix path
+- Wrong answer: fix in the source pool (`qgen rework` when the developer asks, or drop by status), then steps 3–12; same day if needed.
+- Crash: a task in the plan of the code involved; kind `full`, so every manual row.
+- Version: next patch number; no cadence wait (decision 96).
+
+### What a patch may not do
+- Change game rules or the save shape silently: a code change → kind `full` + a hand-written "Changes" section in the notes; a `SAVE_VERSION` change → minor version + `beta-save`.
+- Delete a question: dropped = status change in `questions.json`.
+- Add a network request, update check or remote content: the clicked report stays the only request.
+- Ship report-server changes: they deploy apart (`trivia-report-server deploy`, plan 103).
+- Workers never log in to Steamworks, set builds live, post events or contact players.
+
+### Patch notes
+Event texts as posted, newest last (one entry per patch: version, date, BuildID, texts per language).
+- (none yet)
 
 ## Privacy (ST-5)
 Texts for question reports sent to the report server (plan 103, written by task 867 on 2026-10-13 from plan 103's API contract, "Data" and "Retention"; the Worker wasn't built yet: task 865/866 must keep to it or edit these texts). The long version is the public `PRIVACY.md` at the repo root; the store text and the in-game dialog text are short versions of it. Telemetry (milestone 14): one more paragraph per language in the store text below and a `PRIVACY.md` sub-section, written by task 889 on 2026-10-14 from `report-server/src/validate-telemetry.ts`, `app/client/src/engine/telemetry.ts` and `app/desktop/telemetry.mjs` as built.
@@ -382,7 +428,7 @@ Das Spiel läuft offline. Nur bei „Senden“ an einer markierten Frage geht ei
   - S6 part 2 done 2026-10-13 (pm plan 91: Version numbers and patch-safe saves; no ST-row of its own): one version in `app/desktop/package.json`, pool hash, both on the credits screen; running games survive dropped questions; `qgen validate` guards id continuity against the newest `v*` tag (`18`, `12`).
 - [ ] ST-5 Post-release: content update cadence, how question reports are collected.
   - [x] Reports half done 2026-10-13 (pm plan 93, decision 93): «Enviar» / «Enviar todas» in «Preguntas marcadas» → shell main posts to plan 103's `POST /reports` with a Steam ticket (`report:*` IPC, `app/desktop/report.mjs`); copy per flag and all as fallback (text format decision 142); `qgen flag` (pasted text) and `qgen flag --pull` (server, ledger `state/reports-pulled.json`) → `needs_work`. URL: `reportUrl` in `app/desktop/package.json`, empty until plan 103's server is live (task 868): until then copy only.
-  - [ ] Cadence half: pm plan 96.
+  - [ ] Cadence half: pm plan 96. Path and cadence (decision 96) in "Content updates (ST-5)" above (2026-10-14, task 713); `qgen patch-notes` (task 712); open: the first content patch.
   - Privacy texts done 2026-10-13 (task 867): `PRIVACY.md`, "Privacy (ST-5)" above (store text, dialog text, Steamworks steps).
   - Server half, part 1 done 2026-10-14 (task 865): `report-server/` (Cloudflare Workers + D1, plan 103 API v1): reports, pull/ack, `/health`, rate limits (vars `RATE_USER` 20, `RATE_TOTAL` 1000 per UTC day), kill switch `REPORTS_OPEN`, cron 03:00 UTC (past `rate` days, reports > 90 days); `trivia-report-server dev` with fake `dev-*` tickets; real Steam check: task 866. Free tier (plan 103's figures, not re-checked: no web access in task 865; task 868 checks them on Cloudflare's pricing pages at signup): Workers 100k requests/day, 10 ms CPU/request, cron included; D1 5 GB, 5M rows read and 100k rows written/day. Our load: ≈ 4 row writes per report.
   - Server half, part 2 done 2026-10-13 (task 866): real Steam check in `report-server/src/steam.ts`.
