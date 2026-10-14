@@ -24109,8 +24109,64 @@ Binding: `decision 110` (D-99: Regional packs at launch (RG-5, OQ-46)), `decisio
 - If the answer adds bundles: check plans 84/98 got their tasks (the decision''s consequences), else `pm task add 98`.
 
 Done when: milestone 9''s "Done when" holds in full; task note cites the decision.', '2026-10-14T21:34:37Z', NULL, 1031);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1036, 129, 'create tasks for plan 129: Partner account, name check and AI terms (PUB-6, PUB-7, PUB-10)', 'split', 'open', 1000, NULL, 'Split plan 129 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-14T21:35:41Z', NULL, 253);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1036, 129, 'create tasks for plan 129: Partner account, name check and AI terms (PUB-6, PUB-7, PUB-10)', 'split', 'done', 1000, '2026-10-14, tasks.sql: tasks 1037-1042; decisions ''Store names pass PUB-7?'' and ''Steamworks app created? App ID?'' added by tasks 1038 and 1040 once their research is written', 'Split plan 129 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-14T21:35:41Z', '2026-10-14T21:36:42Z', 253);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1037, 129, 'PUB-10 Anthropic terms for the pipeline''s outputs', 'work', 'open', NULL, NULL, 'Part 1 of `plan 129: Partner account, name check and AI terms (PUB-6, PUB-7, PUB-10)`. Research only; never log in or contact anyone.
+
+- Which terms govern `claude -p` on the developer''s plan type (consumer Pro/Max → Consumer Terms; API key / Console → Commercial Terms). Read the current pages on anthropic.com/legal (consumer terms, commercial terms, usage policy); note URL + read date.
+- Answer: who owns outputs; may outputs be sold in a commercial product (questions, translations, code); restrictions that bite (competing-models clause: irrelevant here, say so); attribution needed or not.
+- `plans/17-publishing.md`:
+  - "AI disclosure": replace the "Check Anthropic''s terms…" bullet with one line + source
+  - "Code and content license", "Lawyer check owed" bullet: drop PUB-10 if the finding is clear
+  - PUB-10 `[x]` with a note
+- Unclear point (e.g. commercial use only via API) → `pm decision add` with a body ready for a professional (question, quoted clause, URL, date), options: keep / switch the pipeline to an API key / ask a lawyer; PUB-10 stays `[ ]` and `task 1042: Close-out of PUB-6, PUB-7, PUB-10` waits on it (`pm task-pending-decision`).
+- Disclosure facts are fixed by milestone 10 (LLM-drafted questions checked, edited, approved by a person; LLM-written code; no live generation; no AI art/sound; capsules per `decision 77: Store capsule art (PUB-8): who makes the capsules and logo?`). Only if the terms change one of them: note in `plans/17a-store-page.md` "AI disclosure" and in `task 667: AI disclosure text (Steam survey + store wording)`''s body (`pm task set`, if still open).
+
+Done when: plan 17 holds PUB-10''s line with source and PUB-10 is `[x]`, or a pending decision holds the open point.', '2026-10-14T21:36:30Z', NULL, 1036);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1038, 129, 'PUB-7 name and trademark check: findings and decision', 'work', 'open', NULL, NULL, 'Part 2 of `plan 129: Partner account, name check and AI terms (PUB-6, PUB-7, PUB-10)`. Research only; never file anything, buy a domain or contact anyone.
+
+- Names: «Living Room Trivia» (en, default), «Trivia en Familia» (es, es-ES), «Wohnzimmer-Quiz» (de; `decision 78: German store name (PUB-8, D-50): keep «Living Room Trivia» or a localized one?`).
+- Per name: Steam store search (exact and close titles, Steam app list); EUIPO (eSearch plus / TMview); USPTO Trademark Search; WIPO Global Brand Database; classes 9 and 41; web search for apps/board games of that name (Play Store, App Store, BoardGameGeek); domains via RDAP/whois (`.com`; `.de` for the German; `.es`, `.com.co` for the Spanish), information only.
+- `plans/17-publishing.md`: new section "Name check (PUB-7)": short intro (not legal advice; a professional clearance search is optional, the developer''s call), findings table: name, source, hit (exact / similar / none), class, owner, status, date read.
+- `pm decision add "Store names pass PUB-7?"`: body = summary per name with the riskiest hits, link to the section; options: pass all three (recommended if no live identical mark in classes 9/41 and no Steam game of that name) / pass some (list) / fail → reopen OQ-34.
+- Make `task 1039: PUB-7 result: store names final or OQ-34 reopened` pending on that decision: `pm task-pending-decision 1039 <decision id>`.
+
+Done when: the findings table is in plan 17, the decision is pending and the result task waits on it.', '2026-10-14T21:36:30Z', NULL, 1036);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1039, 129, 'PUB-7 result: store names final or OQ-34 reopened', 'work', 'open', 710, NULL, 'Part 2 of `plan 129: Partner account, name check and AI terms (PUB-6, PUB-7, PUB-10)`, after the developer answers "Store names pass PUB-7?" (added by `task 1038: PUB-7 name and trademark check: findings and decision`; this task is made pending on it there).
+
+- Pass (all or some): D-50 and OQ-34 marked final for the passed names: `plans/decisions.md` D-50 note, `plans/open-questions.md`, `plans/11-steam.md` OQ table, `plans/17a-store-page.md` "Name … (provisional)" note dropped. Renaming builds (`productName`, artefact names) is not this plan''s: add a follow-up task to `plan 89: Builds, depots and upload (SW-10, SW-6)` if none exists.
+- Fail (any name): new `pm decision add` for OQ-34 with new name candidates, each with a quick pre-check (Steam search, EUIPO/USPTO exact hit, `.com`); note in plan 17 that store names, capsules (`plan 88: Store page and AI disclosure (PUB-8, LUI-6)`) and the exe''s `ProductName` (`plans/18-steam-integration.md` "Exe metadata") wait.
+- `plans/17-publishing.md`: result under "Name check (PUB-7)"; PUB-7 `[x]` with the result (names in that row: all three).
+- `pm decision consequences` on the answered decision.', '2026-10-14T21:36:30Z', NULL, 1036);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1040, 129, 'PUB-6 Steamworks signup checklist and App ID decision', 'work', 'open', NULL, NULL, 'Part 3 of `plan 129: Partner account, name check and AI terms (PUB-6, PUB-7, PUB-10)`. Research and write; never log in, pay or contact Valve or an advisor.
+
+- Read Valve''s current pages: partner.steamgames.com/doc/gettingstarted, /doc/gettingstarted/onboarding, /doc/gettingstarted/appfee, Steamworks tax interview help; note URL + read date.
+- `plans/17-publishing.md`: new section "Steamworks signup (PUB-6)", short intro, checklist in order for the developer:
+  - advisor check first (`decision 67: Steamworks account holder (OQ-33): person or company?`): ready question list for the tax advisor: sole-trader registration in the developer''s country, US withholding and treaty rate via W-8BEN, VAT/OSS on Steam sales (Valve collects EU VAT), the DSA trader address on the store page and whether a home address is acceptable, when to switch to a company
+  - partner signup: legal name, address, contact; NDA/distribution agreement; identity verification
+  - bank details; tax interview (W-8BEN for a non-US individual)
+  - store Developer/Publisher label (developer''s choice, e.g. a studio label; not a company)
+  - pay the $100 app credit (Steam Direct fee, recouped after $1,000 adjusted gross revenue); note the payment date (21-day rule, `plans/11-steam.md` "Coming soon page (ST-3)")
+  - create the app: «Living Room Trivia» if PUB-7 passed, else a working name (changeable before "coming soon"); DLC apps (one per shipped pack, `decision 66: Price model (OQ-33): how is the game sold on Steam?`) need no app credit (confirm on Valve''s page); they are `task 254: write plan: Steamworks app configuration (SW-7)`''s
+  - build account: later, `plan 89: Builds, depots and upload (SW-10, SW-6)`, not here
+- Steam only (`decision 111: Steam only: no effort outside Steam; Steam features are the reason to buy`): no rows for other shops.
+- Update the PUB-6 row text to point to the section (stays `[ ]`).
+- `pm decision add "Steamworks app created? App ID?"`: body = link to the section, what to report (App ID, app credit payment date, Developer/Publisher label); options: created (App ID …, paid on …, label …) / not yet.
+- `pm task-pending-decision 1041 <decision id>`.
+
+Done when: the checklist is in plan 17, the decision is pending and the result task waits on it.', '2026-10-14T21:36:30Z', NULL, 1036);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1041, 129, 'PUB-6 result: App ID and payment date into the plans', 'work', 'open', 710, NULL, 'Part 3 of `plan 129: Partner account, name check and AI terms (PUB-6, PUB-7, PUB-10)`, after the developer answers "Steamworks app created? App ID?" (added by `task 1040: PUB-6 Steamworks signup checklist and App ID decision`; this task is made pending on it there).
+
+- Created: App ID, app credit payment date and Developer/Publisher label into `plans/17-publishing.md` (PUB-6 `[x]` with the note) and `plans/11-steam.md` (S5 prerequisites).
+- Not here: depots, branch (`decision 89: Steamworks App ID, depot IDs and beta branch entered? (for the first beta upload)`, plan 89); the switch from Spacewar 480 to the real App ID (`steam_appid.txt`, `TRIVIA_STEAM_APPID`) is `task 254: write plan: Steamworks app configuration (SW-7)`''s plan.
+- "Not yet": a new decision with the same question; this task pending on it.
+- `pm decision consequences` on the answered decision.', '2026-10-14T21:36:31Z', NULL, 1036);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1042, 129, 'Close-out of PUB-6, PUB-7, PUB-10', 'work', 'open', 690, NULL, 'Part 4 of `plan 129: Partner account, name check and AI terms (PUB-6, PUB-7, PUB-10)`; last task of the plan.
+
+- `plans/17-publishing.md`: PUB-6, PUB-7, PUB-10 `[x]` with notes (PUB-10''s line with source, PUB-7 findings table and result, PUB-6 checklist with App ID and payment date); status line.
+- `plans/project.md` and `plans/11-steam.md` (S5 prerequisites) in sync.
+- Each answered decision of this plan has `pm decision consequences`.
+- A row still open (a pending decision): make this task pending on it, don''t close.', '2026-10-14T21:36:31Z', NULL, 1036);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -26715,6 +26771,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (955, 251, '2026-10-14T21:32:27Z', '2026-10-14T21:34:01Z', 'done', NULL, 0, '5d4060676de69fa75a12bb8c39cd8365d1665ab0', 'claude-opus-5-5[1m]', '2fc18554-20db-408b-bd25-14cf6c03da2c', 17, 34, 8611, 993982, 79206, 1.0048004000000002, 2296074);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (956, 1031, '2026-10-14T21:34:02Z', '2026-10-14T21:34:44Z', 'done', NULL, 0, '3ca89262704b4afc865245dfcdfac9f606db6024', 'claude-opus-5-5[1m]', '19b431c0-2d57-40d7-a958-9d01a7497ce9', 5, 10, 4800, 169325, 35623, 0.414889, 2296074);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (957, 253, '2026-10-14T21:34:44Z', '2026-10-14T21:35:52Z', 'done', NULL, 0, 'fb9a7cab82b424e145162a4acbe70bfd4127cd92', 'claude-opus-5-5[1m]', '60ca8a04-c26c-4bbd-b90f-c4dd3a3f7217', 8, 16, 6372, 370642, 52963, 0.6253364, 2296074);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (958, 1036, '2026-10-14T21:35:52Z', '2026-10-14T21:36:48Z', 'done', NULL, 0, '54436cedfb21f60851baf9907c776164a93a9cc1', 'claude-opus-5-5[1m]', '9fc26efe-b5eb-4af4-8621-f811fdc13e65', 7, 14, 6047, 260997, 36627, 0.4662114, 2296074);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
