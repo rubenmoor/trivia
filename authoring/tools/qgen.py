@@ -20,6 +20,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen audit --backlog [--slice N] [--dry-run]   # the next slice of unaudited approved questions from before D-56 (plan 57)
     qgen flag [--dry-run] < reports.txt   # pasted player reports become needs_work reviews (plan 93)
     qgen flag --pull [--url URL] [--dry-run]   # the report server's reports, then acked (token: TRIVIA_REPORT_TOKEN or state/report-token)
+    qgen telemetry --pull [--url URL] [--from FILE] [--dry-run]   # opt-in telemetry sessions → state/played/stats.json, then acked (plan 109)
     qgen health ack <batch> <note>  # clears a failing batch's stop of `qgen batch` (D-55)
     qgen rework [--batch <batch>] [--model fable]   # needs_work questions once more through fix and review (QG-23)
     qgen tighten                    # find long-winded questions in the whole pool, shorten and review them (QG-24)
@@ -66,6 +67,7 @@ import pool_export  # authoring/tools/pool_export.py (D-35)
 import patch_notes  # authoring/tools/patch_notes.py: `qgen patch-notes` (plan 96)
 import translations  # authoring/tools/translations.py: translated questions (D-81)
 import reviews  # authoring/tools/reviews.py: review writes, player reports (plan 93)
+import played  # authoring/tools/played.py: opt-in telemetry → state/played/ (plan 109)
 
 # Target share per difficulty level (07, "Difficulty target", D-31): what the 12 levels'
 # ranges (D-22) show per game, times 3. These are the focus group's (young teens, window 1–10,
@@ -3671,16 +3673,22 @@ def report_api(url, token, path, body=None):
         sys.exit(f"{url}{path}: {getattr(e, 'reason', e)}")
 
 
-def pull_reports(args):
-    """`qgen flag --pull`: the server's reports → needs_work reviews, then ack (plan 93 task 5).
-    Pages are acked one by one: GET returns the same reports until acked."""
-    url = (args.url or json.loads((ROOT / "app" / "desktop" / "package.json").read_text())["reportUrl"]).rstrip("/")
+def report_server(url):
+    """(base URL, pull token): --url, else reportUrl in app/desktop/package.json; token from env or file."""
+    url = (url or json.loads((ROOT / "app" / "desktop" / "package.json").read_text())["reportUrl"]).rstrip("/")
     if not url:
         sys.exit("no report URL: pass --url or set reportUrl in app/desktop/package.json")
     token = os.environ.get("TRIVIA_REPORT_TOKEN", "").strip() or (
         TOKEN_FILE.read_text().strip() if TOKEN_FILE.exists() else "")
     if not token:
         sys.exit(f"no pull token: set TRIVIA_REPORT_TOKEN or write it to {TOKEN_FILE}")
+    return url, token
+
+
+def pull_reports(args):
+    """`qgen flag --pull`: the server's reports → needs_work reviews, then ack (plan 93 task 5).
+    Pages are acked one by one: GET returns the same reports until acked."""
+    url, token = report_server(args.url)
     ledger = load_json(PULLED) if PULLED.exists() else {}
     done = set(ledger.get(url, []))
     n = Counter()
@@ -3725,6 +3733,27 @@ def cmd_flag(args):
     applied, already, skipped = apply_reports(reports, args.dry_run)
     print(f"{len(reports)} reports: {applied} {'would be ' if args.dry_run else ''}applied, "
           f"{already} already there, {skipped} skipped")
+
+
+def cmd_telemetry(args):
+    """`qgen telemetry --pull`: telemetry sessions → state/played/stats.json, then ack (plan 109)."""
+    if not args.pull:
+        sys.exit("qgen telemetry: nothing to do without --pull")
+    known = {q["id"] for q in load_json(POOL)["questions"]}
+    if args.from_file:
+        stats = played.load()
+        doc, today = load_json(Path(args.from_file)), datetime.datetime.now(datetime.timezone.utc).date().isoformat()
+        sessions = doc["sessions"] if "sessions" in doc else [doc]  # also one POST body, e.g. the fixture
+        n = played.fold(stats, [{"received_day": today, **s} for s in sessions], known)
+        if not args.dry_run:
+            played.save(stats)
+        n.update(pages=0, acked=0)
+    else:
+        url, token = report_server(args.url)
+        n = played.pull(lambda path, body=None: report_api(url, token, path, body), known, args.dry_run)
+    print(f"{n['sessions']} sessions, {n['games']} games, {n['answers']} answers "
+          f"{'would be ' if args.dry_run else ''}folded ({n['unknown']} unknown ids), "
+          f"{n['pages']} pages, {n['acked']} acked" + (" (more on the server)" if n.get("more") else ""))
 
 
 # --- export, validate, bundle new (D-35) --------------------------------------
@@ -4211,6 +4240,12 @@ def main():
     fl.add_argument("--dry-run", action="store_true", help="print the changes, write nothing")
     fl.add_argument("--pull", action="store_true", help="the report server's reports instead of stdin, then ack them")
     fl.add_argument("--url", help="report server for --pull (default: reportUrl in app/desktop/package.json)")
+    tm = sub.add_parser("telemetry", help="opt-in telemetry → state/played/stats.json (plan 109)")
+    tm.set_defaults(fn=cmd_telemetry)
+    tm.add_argument("--pull", action="store_true", help="fold the report server's sessions, then ack them")
+    tm.add_argument("--dry-run", action="store_true", help="one page: print counts, write nothing, ack nothing")
+    tm.add_argument("--from", dest="from_file", metavar="FILE", help='a {"sessions": [...]} file (or one session) instead of the server, no ack')
+    tm.add_argument("--url", help="report server (default: reportUrl in app/desktop/package.json)")
     rw = sub.add_parser("rework", help="needs_work questions once more through fix and review (QG-23)")
     rw.set_defaults(fn=cmd_rework)
     rw.add_argument("--batch", help="only this batch's needs_work questions")
