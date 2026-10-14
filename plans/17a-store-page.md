@@ -508,7 +508,7 @@ Values for Steamworks → Edit Store Page → "Basic Info" (requirements, langua
 
 ### Measured
 - Depots from the local `trivia-desktop-build --dir` (0.1.0, re-measured 2026-10-14 with the media bundle, `plan 132: Media bundle for shipping (SW-9)`, D-104): `windows` 0.41 GB, `linux` 0.36 GB, `content` (media) 0.63 GB, `colombia` DLC 0.05 GB → installed 1.09 GB (Windows), 1.04 GB (Linux), DLC included; before the bundle 2.96 / 2.91 GB
-- Shell: Electron 43 (Chromium); no WebGL, no 3D; the heaviest load is HD video questions (hardware decode)
+- Shell: Electron 43 (Chromium); no WebGL, no 3D; the heaviest load is HD video questions (WebM VP9 + Opus ≤ 1080p, CRF 33, D-104; hardware decode where the GPU has VP9, else Chromium's software decode)
 - Played on: the author's laptop only (NixOS 26.05, i5-12500H, 64 GB, Iris Xe + RTX 4060 Mobile); Linux build smoke-tested under `steam-run` (FHS runtime, task 678). Clean Windows and Ubuntu start tests (18, "Local build start test"): not filled yet
 
 ### Requirements (Windows)
@@ -517,7 +517,7 @@ Values for Steamworks → Edit Store Page → "Basic Info" (requirements, langua
 | OS | Windows 10 64-bit | Windows 11 64-bit |
 | Processor | 64-bit dual-core, 2 GHz | quad-core |
 | Memory | 4 GB RAM | 8 GB RAM |
-| Graphics | DirectX 11 GPU with H.264 video decode (Intel HD 520 or better) | any GPU from 2018 on |
+| Graphics | DirectX 11 GPU with VP9 video decode (Intel HD 520 or better; else software decode) | any GPU from 2018 on |
 | DirectX | Version 11 | Version 11 |
 | Network | none | none |
 | Storage | 1.5 GB available space | 1.5 GB available space |
@@ -529,7 +529,7 @@ Values for Steamworks → Edit Store Page → "Basic Info" (requirements, langua
 | OS | SteamOS 3, or Ubuntu 22.04 64-bit or newer | same |
 | Processor | 64-bit dual-core, 2 GHz | quad-core |
 | Memory | 4 GB RAM | 8 GB RAM |
-| Graphics | GPU with OpenGL/Vulkan and H.264 video decode | any GPU from 2018 on |
+| Graphics | GPU with OpenGL/Vulkan and VP9 video decode (else software decode) | any GPU from 2018 on |
 | Network | none | none |
 | Storage | 1.5 GB available space | 1.5 GB available space |
 | Additional notes | Native Linux build; plays offline | same |
