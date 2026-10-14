@@ -314,15 +314,14 @@
 
       {#if mode === "gamemaster"}
         {@const g = options.groups.find((x) => x.id === group)}
+        {@const span = custom ? difficulty : spanOf(options.groups, group)}
         <div class="config">
           <div class="lines">
             <p class="label heading">{t("configure.game")}</p>
             {@render stepper("difficulty", t("configure.difficulty"), custom ? t("configure.custom") : (g?.name ?? group),
               custom ? "" : g ? ages(g.ages) : "", !custom && short[group])}
-            {#if custom}
-              {@render stepper("start", t("configure.start"), String(difficulty.start))}
-              {@render stepper("end", t("configure.end"), String(difficulty.end))}
-            {/if}
+            {@render stepper("start", t("configure.start"), String(span.start), "", false, !custom)}
+            {@render stepper("end", t("configure.end"), String(span.end), "", false, !custom)}
             {@render stepper("levels", t("configure.levels"), String(levels))}
             {@render stepper("cards", t("configure.cards"), String(cards), cards ? "" : t("configure.noCards"))}
             {@render toggle("video", t("configure.video"), video)}
@@ -396,13 +395,15 @@
   <Customize {jokers} onchange={(j) => (jokers = j)} onclose={() => (customizing = false)} />
 {/if}
 
-{#snippet stepper(id: string, label: string, value: string, note = "", warn = false)}
+<!-- `fixed`: read-only, out of the focus ring and ↑/↓ -->
+{#snippet stepper(id: string, label: string, value: string, note = "", warn = false, fixed = false)}
   <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
-  <div class="line glass" data-line data-step={id} data-focusable data-focus-id="config-{id}" tabindex="0" role="group" aria-label={label}>
+  <div class="line glass" class:fixed data-line data-step={fixed ? undefined : id} data-focusable={!fixed || undefined}
+    data-focus-id="config-{id}" tabindex={fixed ? undefined : 0} role="group" aria-label={label}>
     <span class="label line-name">{label}</span>
-    <button class="step" onclick={() => step(id, -1)} disabled={busy} tabindex="-1" aria-label={t("overlay.less")}>−</button>
+    <button class="step" onclick={() => step(id, -1)} disabled={busy || fixed} tabindex="-1" aria-label={t("overlay.less")}>−</button>
     <span class="value">{value}{#if note}<span class="label note" class:warn>{note}</span>{/if}</span>
-    <button class="step" onclick={() => step(id, 1)} disabled={busy} tabindex="-1" aria-label={t("overlay.more")}>+</button>
+    <button class="step" onclick={() => step(id, 1)} disabled={busy || fixed} tabindex="-1" aria-label={t("overlay.more")}>+</button>
   </div>
 {/snippet}
 
@@ -539,6 +540,15 @@
   }
   .value .note {
     font-size: calc(0.9 * var(--u));
+  }
+  .line.fixed {
+    border-color: var(--slate-600);
+  }
+  .line.fixed .value {
+    color: var(--slate-400);
+  }
+  .line.fixed .step {
+    visibility: hidden;
   }
   .line.on .switch {
     color: var(--sky);
