@@ -60,14 +60,23 @@ export function parseBundles(json: unknown): Bundle[] {
   });
 }
 
-/** Why modPool drops a question (or only its media: `media`, `background`). */
+/** Why modPool drops a question; `bad_media` may drop only its media or background (decision 133). */
 export type ModReason =
-  | "no_id" | "duplicate_id" | "no_text" | "wrong_answers" | "difficulty" | "subcategory" | "status"
-  | "essential_media" | "media" | "background";
+  | "bad_id" | "duplicate_id" | "no_text" | "wrong_answers" | "hints" | "difficulty" | "subcategory" | "status" | "bad_media";
 
+/** A mod question's issue; `dropped`: the question is left out, else only its bad media. */
+export interface ModIssue {
+  id: string;
+  reason: ModReason;
+  dropped: boolean;
+}
+
+/** No media (a text-only mod question). */
 const NO_MEDIA: Media = { type: "image", role: "decorative", source_url: null, file_url: null, credit: null };
+const MOD_ID = /^[a-z0-9][a-z0-9-]{0,63}$/;
 const str = (v: unknown): v is string => typeof v === "string" && v.trim() !== "";
 const opt = (v: unknown): string | null => (typeof v === "string" ? v : null);
+const three = (v: unknown): v is string[] => Array.isArray(v) && v.length === 3 && v.every(str);
 
 /** A mod file_url → its URL under the bundle folder; null if not a plain relative path inside it. */
 function modUrl(bundle: string, rel: unknown): string | null {
@@ -78,28 +87,27 @@ function modUrl(bundle: string, rel: unknown): string | null {
 }
 
 /** A mod bundle's pool (decision 128): ids → `<mod>:<id>`, `bundle` = the runtime id, media paths → its
- * folder; invalid questions dropped, bad media dropped (the question too if essential). Reasons per
- * question for the mods screen and `--check-mod` (decision 133). `taken`: runtime ids already used, gains
- * this pool's. Throws on a bad pool file. */
+ * folder, no media → NO_MEDIA; invalid questions dropped, bad media dropped (the question too if essential).
+ * Issues per question for the mods screen and `--check-mod` (decision 133). `taken`: runtime ids already
+ * used, gains this pool's. Throws on a bad pool file. Pure: also imported by the shell's check (Node). */
 export function modPool(json: unknown, bundle: string, subcategories: Iterable<string>, taken = new Set<string>()): {
-  questions: PoolQuestion[]; reasons: { id: string; reason: ModReason }[]; badQuestions: number; badMedia: number;
+  questions: PoolQuestion[]; reasons: ModIssue[]; badQuestions: number; badMedia: number;
 } {
   const mod = bundle.slice(0, bundle.indexOf(":"));
   const subs = new Set(subcategories);
   const questions: PoolQuestion[] = [];
-  const reasons: { id: string; reason: ModReason }[] = [];
-  let badMedia = 0;
+  const reasons: ModIssue[] = [];
   const raw = parsePool(json);
   raw.forEach((one, i) => {
     const q = (one ?? {}) as unknown as Record<string, unknown>;
-    const id = str(q.id) && !isModId(q.id) ? q.id : `#${i + 1}`;
-    const bad = (reason: ModReason) => void reasons.push({ id, reason });
-    const wrong = q.wrong_answers;
+    const id = str(q.id) ? q.id : `#${i + 1}`;
+    const bad = (reason: ModReason, dropped = true) => void reasons.push({ id, reason, dropped });
     const reason: ModReason | null =
-      id !== q.id ? "no_id"
+      !str(q.id) || !MOD_ID.test(q.id) ? "bad_id"
       : taken.has(`${mod}:${id}`) ? "duplicate_id"
       : !str(q.question) || !str(q.answer) ? "no_text"
-      : !Array.isArray(wrong) || wrong.length !== 3 || !wrong.every(str) ? "wrong_answers"
+      : !three(q.wrong_answers) ? "wrong_answers"
+      : !three(q.hints) ? "hints"
       : !Number.isInteger(q.difficulty) || (q.difficulty as number) < 1 || (q.difficulty as number) > 15 ? "difficulty"
       : !str(q.subcategory) || !subs.has(q.subcategory) ? "subcategory"
       : q.status !== undefined && q.status !== "approved" ? "status"
@@ -109,11 +117,9 @@ export function modPool(json: unknown, bundle: string, subcategories: Iterable<s
     const m = q.media as Record<string, unknown> | null | undefined;
     if (m) {
       const url = modUrl(bundle, m.file_url);
-      const ok = url && ["image", "audio", "video"].includes(m.type as string);
-      if (!ok) {
-        badMedia++;
-        if (m.role === "essential") return bad("essential_media");
-        bad("media");
+      if (!url || !["image", "audio", "video"].includes(m.type as string)) {
+        if (m.role === "essential") return bad("bad_media");
+        bad("bad_media", false);
       } else {
         const role = ["decorative", "illustrative", "essential"].includes(m.role as string) ? m.role : "illustrative";
         media = { type: m.type, role, source_url: opt(m.source_url), file_url: url, credit: opt(m.credit) } as Media;
@@ -124,16 +130,16 @@ export function modPool(json: unknown, bundle: string, subcategories: Iterable<s
     if (b) {
       const url = modUrl(bundle, b.file_url);
       if (url) background = { source_url: opt(b.source_url), file_url: url, credit: opt(b.credit) };
-      else (badMedia++, bad("background"));
+      else bad("bad_media", false);
     }
     taken.add(`${mod}:${id}`);
-    const hints = Array.isArray(q.hints) ? q.hints.filter(str) : [];
     questions.push({
       id: `${mod}:${id}`, status: "approved", difficulty: q.difficulty as number, subcategory: q.subcategory as string,
       bundle, description: opt(q.description) ?? "", question: q.question as string, answer: q.answer as string,
-      wrong_answers: wrong as string[], hints, fun_fact: opt(q.fun_fact) ?? "", media, background,
+      wrong_answers: q.wrong_answers as string[], hints: q.hints as string[], fun_fact: opt(q.fun_fact) ?? "", media, background,
     });
   });
+  const badMedia = reasons.filter((r) => r.reason === "bad_media").length;
   return { questions, reasons, badQuestions: raw.length - questions.length, badMedia };
 }
 

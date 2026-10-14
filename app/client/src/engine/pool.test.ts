@@ -97,9 +97,9 @@ test("parseBundles on the real file: base first, the only base bundle, in every 
   assert.throws(() => parseBundles({ bundles: [{ id: "x", languages: ["es"] }] }), /kind/);
 });
 
-test("modPool: namespaced ids, media under the bundle folder, bad questions and media dropped", () => {
-  const q = (id: string, more: object = {}) => ({
-    id, difficulty: 3, subcategory: "Búhos", question: "¿?", answer: "a", wrong_answers: ["b", "c", "d"], ...more,
+test("modPool: namespaced ids, media under the bundle folder, text-only, a reason per dropped question", () => {
+  const q = (id: unknown, more: object = {}) => ({
+    id, difficulty: 3, subcategory: "Búhos", question: "¿?", answer: "a", wrong_answers: ["b", "c", "d"], hints: ["x", "y", "z"], ...more,
   });
   const img = (file_url: string, role = "illustrative") => ({ media: { type: "image", role, file_url, credit: "Ana" } });
   const pool = {
@@ -107,22 +107,31 @@ test("modPool: namespaced ids, media under the bundle folder, bad questions and 
     questions: [
       q("owl", img("img/owl 1.jpg")),
       q("abs", img("https://x.org/a.jpg")),
+      q("text", { media: null }),
       q("up", img("../../x.jpg", "essential")),
-      q("short", { wrong_answers: ["b"] }),
+      q("Owl"),
+      q(7),
       q("owl"),
+      q("blank", { answer: " " }),
+      q("short", { wrong_answers: ["b"] }),
+      q("hintless", { hints: ["x"] }),
       q("hard", { difficulty: 16 }),
+      q("bat", { subcategory: "Murciélagos" }),
+      q("draft", { status: "draft" }),
     ],
   };
   const out = modPool(pool, "aves:pack", ["Búhos"]);
-  assert.deepEqual(out.questions.map((x) => [x.id, x.bundle, x.media.file_url]), [
-    ["aves:owl", "aves:pack", "/data/bundles/aves:pack/img/owl%201.jpg"],
-    ["aves:abs", "aves:pack", null],
+  assert.deepEqual(out.questions.map((x) => [x.id, x.bundle, x.media.file_url, x.media.role]), [
+    ["aves:owl", "aves:pack", "/data/bundles/aves:pack/img/owl%201.jpg", "illustrative"],
+    ["aves:abs", "aves:pack", null, "decorative"],
+    ["aves:text", "aves:pack", null, "decorative"],
   ]);
-  assert.deepEqual(out.reasons, [
-    { id: "abs", reason: "media" }, { id: "up", reason: "essential_media" }, { id: "short", reason: "wrong_answers" },
-    { id: "owl", reason: "duplicate_id" }, { id: "hard", reason: "difficulty" },
+  assert.deepEqual(out.reasons.map((r) => [r.id, r.reason, r.dropped]), [
+    ["abs", "bad_media", false], ["up", "bad_media", true], ["Owl", "bad_id", true], ["#6", "bad_id", true],
+    ["owl", "duplicate_id", true], ["blank", "no_text", true], ["short", "wrong_answers", true], ["hintless", "hints", true],
+    ["hard", "difficulty", true], ["bat", "subcategory", true], ["draft", "status", true],
   ]);
-  assert.equal(out.badQuestions, 4);
+  assert.equal(out.badQuestions, 10);
   assert.equal(out.badMedia, 2);
   assert.ok(isModId(out.questions[0].id) && isOurs("q-0001"));
 });
