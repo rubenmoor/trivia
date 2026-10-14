@@ -1,6 +1,6 @@
 // The authoring server's question API (authoring/server/main.py, port 8001).
 import { call, json, post } from "$app/lib/http.ts";
-import type { AgeGroups, Bundle, Category, MediaStats, Names, Overview, Question, Review, Slot, SpotCheckItem, SpotChecks, Status, Targets } from "./types.ts";
+import type { AgeGroups, Bundle, Category, GalleryManifest, MediaStats, Names, Overview, Question, Review, Slot, SpotCheckItem, SpotChecks, Status, Targets, UiFlag } from "./types.ts";
 
 const SERVER = "the authoring server (`trivia-authoring`)";
 
@@ -128,4 +128,16 @@ export async function recordSpotCheck(batch: string, id: string, mediaChanged: b
 /** Undo: remove the question's spot check. */
 export async function removeSpotCheck(batch: string, id: string): Promise<null> {
   return send(`/api/spot-checks/${encodeURIComponent(batch)}/${encodeURIComponent(id)}`, { undo: true });
+}
+
+/** trivia-gallery's manifest (null before its first run) and the UI string flags (plan 100). */
+export async function fetchGallery(): Promise<{ manifest: GalleryManifest | null; flags: UiFlag[] }> {
+  return get("/api/gallery");
+}
+
+/** Add a flag, edit its note or remove it; returns every flag. */
+export async function changeUiFlag(
+  body: { flag: Pick<UiFlag, "locale" | "key" | "text" | "shot" | "note"> } | { id: number; note: string } | { id: number; remove: true },
+): Promise<UiFlag[]> {
+  return send("/api/gallery/flags", body);
 }

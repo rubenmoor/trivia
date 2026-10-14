@@ -296,7 +296,7 @@
       <p class="links">
         <a href="/stats/categories">Categories</a> · <a href="/stats/subcategories">Subcategories</a> ·
         <a href="/stats/difficulty">Difficulty</a> · <a href="/review">Whole pool in the review tool</a> ·
-        <a href="/comodines">Joker cards to print</a>
+        <a href="/comodines">Joker cards to print</a> · <a href="/gallery">Screen gallery (UI wording)</a>
       </p>
       <p class="muted small">
         Pool:

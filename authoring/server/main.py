@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Authoring server: the review tool (plans/08-review-tool.md), the stats pages and the
-printable joker cards, with the question API. Never ships (D-35).
+"""Authoring server: the review tool (plans/08-review-tool.md), the stats pages, the
+printable joker cards and the screen gallery (plan 100), with the question API. Never ships (D-35).
 
     trivia-authoring [--port 8001] [--host 127.0.0.1]   (or: python3 authoring/server/main.py)
 
@@ -60,6 +60,11 @@ API:
     GET  /api/stats/media?bundle=colombia          approved questions per media role and image resolution
          &locale=en                                (RV-23, authoring/server/media_stats.py); locale: the sources of
                                                    its playing translations (plan 67)
+    GET  /api/gallery                              trivia-gallery's work/gallery/manifest.json (null before its first
+                                                   run) and the UI string flags, authoring/data/ui-flags.json (plan 100)
+    POST /api/gallery/flags                        body {"flag": {locale, key, text, shot, note}} adds,
+                                                   {"id", "note"} edits, {"id", "remove": true} removes; returns all flags
+    GET  /gallery/<locale>/<shot>.png              a shot from work/gallery/
     GET  /reports/<batch>.md                       a batch report (authoring/reports/), as plain text
     GET  /media?url=<file_url>                     a picked media file from the cache (any question in the
                                                    source pool, approved or not); downloaded first on a miss
@@ -84,6 +89,7 @@ import download  # noqa: E402  (authoring/tools/download.py)
 import media  # noqa: E402  (authoring/tools/media.py)
 import media_cache  # noqa: E402  (authoring/tools/media_cache.py)
 import media_stats  # noqa: E402  (authoring/server/media_stats.py)
+import ui_flags  # noqa: E402  (authoring/server/ui_flags.py)
 import overview  # noqa: E402  (authoring/server/overview.py)
 import played  # noqa: E402  (authoring/tools/played.py)
 import pool_export  # noqa: E402  (authoring/tools/pool_export.py)
@@ -370,6 +376,7 @@ GET_API = {
     "/api/bundles": lambda query: load_bundles(),
     "/api/names": names_of,
     "/api/targets": lambda query: targets.load_all(),
+    "/api/gallery": lambda query: ui_flags.build(),
 }
 
 
@@ -402,6 +409,9 @@ class Handler(BaseHandler):
             return self.send_json(404, {"error": "not found"})
         if url.path.startswith("/reports/"):
             return self.send_report(url.path.removeprefix("/reports/"))
+        if (m := re.fullmatch(r"/gallery/([^/]+)/([^/]+)", url.path)) and m[2].endswith(".png"):
+            path = ui_flags.shot_path(m[1], m[2])
+            return self.send_file(path) if path else self.send_json(404, {"error": "no such shot: run trivia-gallery"})
         if url.path == "/media":
             return self.send_media(parse_qs(url.query).get("url", [""])[0])
         return self.send_static(url.path)
@@ -432,6 +442,11 @@ class Handler(BaseHandler):
 
     def do_POST(self):
         parts = urlparse(self.path).path.strip("/").split("/")
+        if parts == ["api", "gallery", "flags"]:
+            try:
+                return self.send_json(200, ui_flags.change(self.read_body()))
+            except (ValueError, TypeError, AttributeError) as e:
+                return self.send_json(400, {"error": str(e)})
         if len(parts) == 4 and parts[:2] == ["api", "spot-checks"]:
             return self.post_spot_check(parts[2], parts[3])
         if len(parts) < 4 or parts[:2] != ["api", "questions"]:

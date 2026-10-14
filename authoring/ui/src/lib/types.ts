@@ -278,3 +278,50 @@ export interface MediaStats {
   /** The most common exact sizes. */
   sizes: { size: string; questions: number }[];
 }
+
+/** A visible text of a gallery shot (authoring/tools/gallery.py); box: x, y, width, height in px of 1920 × 1080. */
+export interface GalleryItem {
+  text: string;
+  box: [number, number, number, number];
+  /** Catalog keys whose text this is (`?gallery`'s trace); several when the text is the same. */
+  keys?: string[];
+  /** Question content or names (not a catalog string). */
+  data?: boolean;
+  /** A pad or key glyph. */
+  glyph?: boolean;
+  /** A key shown as a key cap. */
+  kbd?: boolean;
+  /** Not visible text: an attribute such as aria-label, title, placeholder. */
+  attr?: string;
+  /** The part of the text without a key (a literal, or a text the trace missed). */
+  unmatched?: string;
+}
+
+export interface GalleryShot {
+  /** <locale>/<shot>.png under work/gallery/. */
+  file: string;
+  items: GalleryItem[];
+  /** Visible text without a catalog key (a literal). */
+  unmatched: string[];
+}
+
+/** work/gallery/manifest.json. */
+export interface GalleryManifest {
+  run: string;
+  commit: string;
+  /** Shots per UI locale, in step order. */
+  locales: Record<string, Record<string, GalleryShot>>;
+}
+
+/** A flag on a UI string (authoring/data/ui-flags.json, plan 100); key null: text without a catalog key. */
+export interface UiFlag {
+  id: number;
+  locale: string;
+  key: string | null;
+  text: string;
+  shot: string;
+  note: string;
+  flagged_on: string;
+  /** Set by the fix pass. */
+  fixed_on?: string;
+}
