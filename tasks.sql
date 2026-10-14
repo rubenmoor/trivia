@@ -25556,6 +25556,15 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 - es-ES: the es text unchanged (pack in Colombian Spanish, «ustedes»); say if you want a vosotros version.
 - en: drafted, entered only once app/data/bundles/colombia/pool.en.json ships.
 Answer ''approved'', or list fixes (they go into a follow-up task of plan 88).', NULL, NULL, '2026-10-14T19:14:48Z', NULL, 783, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (174, 'Store requirements: beta test distro and real-pad run?', 'pending', '["Answer after the beta test: Linux distro (name, version) the beta ran on, if any; real-pad run passed yes/no (failing step if no)", "Keep provisional values (Ubuntu 22.04, Partial) for the beta store page"]', '`task 1028: Store requirements: storage after the media bundle, Linux distro after the beta test` needs inputs that don''t exist yet (2026-10-14):
+- Storage: the media bundle (`task 260: write plan: Media bundle for shipping (SW-9)`, still unplanned) hasn''t written `app/desktop/build/media/`; today it holds the raw cache copy (2.55 GB), already measured by `task 688` (3 GB estimate stays).
+- Linux OS row: the non-Nix start test is the Steam beta test (decision 39, `task 263: write plan: Beta test and S5 close-out`); not played yet.
+- Controller Full (decision 90): needs your real-pad run: start → new player via letter picker or Steam''s floating keyboard → victory, pad only.
+- en/de Subtitles: wait for `pool.en.json` / `pool.de.json` (decision 80).
+
+Answer once the beta test is played (the beta upload needs the media bundle, so storage can be measured then too):
+- distro and version played on, if Linux; else "none"
+- real-pad run: passed, or the failing step', NULL, NULL, '2026-10-14T19:40:33Z', NULL, 1028, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -26506,6 +26515,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (940, 784, '2026-10-14T19:14:57Z', '2026-10-14T19:16:43Z', 'done', NULL, 0, '1deeda446f98624048548fa1dc995c3d11120da5', 'claude-opus-5-5[1m]', 'cf4b51a1-eef6-4d56-b660-7c4778e39852', 11, 18, 2742, 307894, 34536, 0.3927788, 2296074);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (941, 843, '2026-10-14T19:16:44Z', '2026-10-14T19:20:44Z', 'done', NULL, 0, '60ad187f40eb9fb5c408df66791b379ef145b3e3', 'claude-opus-5-5[1m]', '2e697d58-dd4d-471f-96cd-96826a92bd88', 29, 54, 9957, 1523682, 66347, 1.0348684, 2296074);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (942, 844, '2026-10-14T19:20:44Z', '2026-10-14T19:39:54Z', 'done', NULL, 0, '5bf28f9e105e4350c5437129f2da4e2b95ec26c5', 'claude-opus-5-5[1m]', 'a08d3d50-3acd-4513-8598-883c224c9ed5', 72, 130, 41218, 6645791, 143907, 3.3052941999999992, 2296074);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (943, 1028, '2026-10-14T19:39:54Z', '2026-10-14T19:40:51Z', 'blocked', NULL, 0, '807a49937991a96b43841c1680c7c5c0f1e2f44c', 'claude-opus-5-5[1m]', '30672a7e-e7c1-40ac-bfc2-43cc1cc0d6bd', 9, 18, 3150, 335565, 36372, 0.42116099999999995, 2296074);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -26747,6 +26757,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1026, 161);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1026, 162);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1026, 163);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1026, 164);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1028, 174);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
