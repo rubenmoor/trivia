@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-// Store screenshots (plan 88, PUB-8): the shell at 1920×1080 under Xvfb, raw CDP, a demo save per shot.
+// Store screenshots (plan 88, PUB-8, decision 79): 7 per language at 1920×1080 (5 without its question pool),
+// the shell under Xvfb, raw CDP, a demo save per shot.
 // Usage (dev shell): node authoring/store/screenshots.mjs [--lang en,es,es-ES,de] [--visible]
 // Needs app/client/dist (`npm run build`) and the media cache (`trivia-media sync --status approved`).
 import { spawn } from "node:child_process";
@@ -23,8 +24,8 @@ const H = 1080;
 
 // Made-up players, no family data; the first one plays.
 const PLAYERS = ["Luna", "Mateo", "Sofía", "Max", "Emma"];
-// Shots' questions (es pool): picture, video, joker, the last level.
-const Q = { image: "q-0030", video: "q-0055", joker: "q-0019", final: "q-0053" };
+// Gameplay shots' questions (es pool): approved, short, an image each.
+const Q = { locked: "q-0030", joker: "q-0019" };
 
 const args = process.argv.slice(2);
 const opt = (name) => {
@@ -92,42 +93,10 @@ async function shoot(lang, name) {
 
 // The walk -----------------------------------------------------------------------------------
 
-/** Start, player, mode choice, customize (each language). */
-async function menus(lang, saveDir, data, ui) {
-  await load(saveDir, baseSave(ui, data.locale));
-  await sleep(1500);
-  await shoot(lang, "start");
-  await click("button.candy");
-  await waitFor(visibleEl(".name-button"), "player screen");
-  await sleep(3000);
-  await shoot(lang, "player");
-  await click(".name-button");
-  await click('[data-focus-id="mode-solo"]');
-  await waitFor(visibleEl('[data-focus-id="group-young_teens"]'), "age groups");
-  await click('[data-focus-id="group-young_teens"]');
-  await sleep(3000);
-  await shoot(lang, "modes");
-  await click('[data-focus-id="customize"]');
-  await sleep(1500);
-  await shoot(lang, "customize");
-}
-
 /** Resume a seeded game from Start. */
 async function resume(saveDir, save) {
   await load(saveDir, save);
   await click("button.candy");
-}
-
-async function tower(lang, saveDir, data, ui, cards) {
-  await resume(saveDir, gameAt(data, ui, 11));
-  await waitFor(visibleEl(".level .hint"), "level screen");
-  await sleep(2500);
-  await shoot(lang, "tower");
-  if (!cards) return;
-  await click(".level .hint");
-  await waitFor(visibleEl(".cards .card"), "cards");
-  await sleep(2000);
-  await shoot(lang, "cards");
 }
 
 async function onQuestion(saveDir, save) {
@@ -135,39 +104,71 @@ async function onQuestion(saveDir, save) {
   await waitFor(visibleEl(".answers .answer"), "question screen");
 }
 
-/** Question screens need the UI language's own questions. */
-async function questions(lang, saveDir, data, ui) {
-  await onQuestion(saveDir, gameAt(data, ui, 4, Q.image));
+const answerEl = (i) => `.answers .answer:nth-child(${i + 1})`;
+
+/** Gameplay (decision 79): a locked-in answer, Francotirador aiming. Needs the UI language's own questions. */
+async function gameplay(lang, saveDir, data, ui) {
+  const lockSave = gameAt(data, ui, 5, Q.locked);
+  await onQuestion(saveDir, lockSave);
   await sleep(2500);
-  await shoot(lang, "image-question");
+  await click(answerEl(latestState(lockSave).answers.indexOf(data.byId.get(Q.locked).answer)));
+  await waitFor(visibleEl(".final-button.ready"), "locked answer", 10000);
+  await sleep(800);
+  await shoot(lang, "question-locked");
 
-  await onQuestion(saveDir, gameAt(data, ui, 7, Q.video));
-  await waitFor(`(() => { const v = document.querySelector("video"); return !!v && v.currentTime > 3; })()`, "video playing", 20000)
-    .catch(() => console.error("  video didn't play, shot anyway"));
-  await shoot(lang, "video-question");
-
-  // Francotirador aiming at a wrong answer.
   const jokerSave = gameAt(data, ui, 6, Q.joker);
   await onQuestion(saveDir, jokerSave);
   await sleep(1500);
-  const s = latestState(jokerSave);
   // Not tile 0: the crosshair starts there, a click on it would shoot.
-  const wrong = s.answers.findIndex((a, i) => i > 0 && a !== data.byId.get(Q.joker).answer);
+  const wrong = latestState(jokerSave).answers.findIndex((a, i) => i > 0 && a !== data.byId.get(Q.joker).answer);
   await click('.token[data-joker="snipe"]');
   await sleep(300);
-  await click(`.answers .answer:nth-child(${wrong + 1})`);
+  await click(answerEl(wrong));
   await sleep(1200);
-  await shoot(lang, "joker");
+  await shoot(lang, "joker-snipe");
+}
 
-  const finalSave = gameAt(data, ui, 12, Q.final);
-  await onQuestion(saveDir, finalSave);
+/** Start → player → the Choice screen in `mode`. */
+async function toChoice(saveDir, data, ui, mode) {
+  await load(saveDir, baseSave(ui, data.locale));
+  await click("button.candy");
+  await waitFor(visibleEl(".name-button"), "player screen");
+  await sleep(800);
+  await click(".name-button");
+  await click(`[data-focus-id="mode-${mode}"]`);
+}
+
+const focus = (sel) => evaluate(`document.querySelector(${JSON.stringify(sel)}).focus()`);
+
+/** The 5 informative shots (decision 79): modes, bundles, Customize game, configure screen, joker presets. */
+async function menus(lang, saveDir, data, ui) {
+  await toChoice(saveDir, data, ui, "solo");
+  await click('[data-focus-id="group-young_teens"]');
+  await sleep(3000);
+  await shoot(lang, "modes");
+
+  const pack = '[data-focus-id="bundle-colombia"]';
+  if (await evaluate(`!!document.querySelector(${JSON.stringify(pack)})`)) {
+    await click(pack);
+    await focus(pack);
+  }
+  await sleep(1200);
+  await shoot(lang, "bundles");
+
+  await click('[data-focus-id="customize"]');
+  await waitFor(visibleEl(".dialog"), "customize");
+  await sleep(1200);
+  await shoot(lang, "customize");
+
+  await toChoice(saveDir, data, ui, "gamemaster");
+  await waitFor(visibleEl('[data-focus-id="config-preset"]'), "configure screen");
+  await sleep(2500);
+  await shoot(lang, "configure");
+
+  await click('[data-focus-id="config-preset"] button.step:last-of-type'); // Estándar → Sin límite
+  await focus('[data-focus-id="config-preset"]');
   await sleep(1000);
-  const f = latestState(finalSave);
-  await click(`.answers .answer:nth-child(${f.answers.indexOf(data.byId.get(Q.final).answer) + 1})`);
-  await click(".final-button.ready");
-  await waitFor(visibleEl(".result.victory"), "victory", 30000);
-  await sleep(3500);
-  await shoot(lang, "victory");
+  await shoot(lang, "joker-presets");
 }
 
 // Main ---------------------------------------------------------------------------------------
@@ -211,14 +212,13 @@ async function main() {
       await rm(path.join(OUT, ui), { recursive: true, force: true });
       await mkdir(path.join(OUT, ui), { recursive: true });
       const own = loadData(ui.split("-")[0]);
-      const data = own ?? es; // UI-only shots on the es pool show no question text
-      await menus(ui, tmp, data, ui);
-      await tower(ui, tmp, data, ui, !!own);
-      if (own) await questions(ui, tmp, data, ui);
+      const data = own ?? es; // menu shots on the es pool show no question text
+      if (own) await gameplay(ui, tmp, data, ui);
       else followUp.push(ui);
+      await menus(ui, tmp, data, ui);
     }
     console.log(`${shots.length} screenshots in ${path.relative(REPO, OUT)}/`);
-    if (followUp.length) console.log(`no question pool for ${followUp.join(", ")}: menus and tower only; re-run once it lands`);
+    if (followUp.length) console.log(`no question pool for ${followUp.join(", ")}: the 2 question shots skipped (decision 80); re-run once it lands`);
   } finally {
     page?.close();
     for (const p of procs.reverse()) p.kill();

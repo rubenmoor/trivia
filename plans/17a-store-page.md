@@ -353,8 +353,16 @@ Values for Steamworks → Edit Store Page → "Basic Info" (requirements, langua
 - Shell at 1920×1080 under Xvfb, raw CDP, a throw-away demo save per shot (made-up players), offline
 - `TRIVIA_DEV_STEAM_USER=1`: valid user under the save gate (plan 87), so the demo save loads; no "progress needs Steam" notice, flag action shown
 - Output: `authoring/store/out/screenshots/<lang>/NN-<screen>.png` (gitignored)
-- Screens: start, player, modes, customize, tower (level 11); with a question pool of the language also cards, image question, video question, Francotirador aiming, victory
-- Questions per shot: `Q` in the script
+- Set and order (decision 79; the developer approves the order with the render, `task 845: Store media: render screenshots and trailers for approval`):
+  1. `question-locked`: a question with a locked-in answer (q-0030)
+  2. `joker-snipe`: Francotirador aiming (q-0019)
+  3. `modes`: mode choice, «Solo o en grupo» with the age groups
+  4. `bundles`: bundle selector, Regional: Colombia switched on
+  5. `customize`: «Personalizar partida»
+  6. `configure`: gamemaster mode's configure screen
+  7. `joker-presets`: configure screen, preset «Sin límite»
+- en/de until their pools (decision 80): only 3–7, numbered 01–05; the question shots skip with a message
+- Questions per shot: `Q` in the script (es: approved, short, image cached)
 - Re-run after every visual change; the chosen set re-rendered before upload
 
 ## Trailer
