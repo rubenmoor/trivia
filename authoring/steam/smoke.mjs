@@ -1,7 +1,9 @@
 #!/usr/bin/env node
-// Packaged smoke game (plan 89, release check step 6): the unpacked Linux build offline, clean env, temp HOME.
+// Packaged smoke game (plan 89, release check step 6): the unpacked Linux build offline, clean env, temp HOME,
+// TRIVIA_DEV_STEAM_USER=1 (decision 111: saves need a valid Steam user; the switch stands in for one).
 // Usage (dev shell): node authoring/steam/smoke.mjs [app/desktop/release/linux-unpacked]; DEBUG=1 shows the shell's stderr
-// New player → levels 1–3 with an image, audio and video question → quit → restart resumes. Exit 1 names the step.
+// New player → levels 1–3 with an image, audio and video question → quit → restart resumes; no «progress needs Steam»
+// notice. Exit 1 names the step.
 // With packs (DLC depots, decision 66): once as built (packs offered), once without their files (not offered).
 import { spawn, spawnSync } from "node:child_process";
 import { accessSync, constants, existsSync, readdirSync, readFileSync } from "node:fs";
@@ -52,7 +54,7 @@ function pickQuestions(locale) {
 let DIR, page, h, home, display;
 const procs = [];
 
-const saveFile = () => path.join(home, ".config", "trivia", "save", "local", "game.json");
+const saveFile = () => path.join(home, ".config", "trivia", "save", "dev", "game.json") // decision 114;
 const running = (save) => save.games.at(-1).state;
 
 /** The save on disk once `test` holds (the shell writes after each action). */
@@ -69,7 +71,7 @@ async function saved(test, what) {
 async function launch() {
   const steamRun = which("steam-run");
   // Muted: checks media load, not audio; sound is a manual row.
-  const env = [`HOME=${home}`, `DISPLAY=${display}`, "TRIVIA_DEVTOOLS=1", "TRIVIA_MUTE=1"];
+  const env = [`HOME=${home}`, `DISPLAY=${display}`, "TRIVIA_DEVTOOLS=1", "TRIVIA_MUTE=1", "TRIVIA_DEV_STEAM_USER=1"];
   // unshare -rn: no network; env -i + steam-run: no Nix shell env, an FHS runtime like a Steam Linux machine.
   const shell = spawn("unshare", ["-rn", "env", "-i", ...env, steamRun, path.join(DIR, "trivia"), "--lang=es", "--remote-debugging-pipe"], {
     stdio: ["ignore", "ignore", "pipe", "pipe", "pipe"],
@@ -178,17 +180,27 @@ async function main() {
   }
 }
 
+/** The memory-only notice (no valid Steam user) fails. */
+async function noNotice() {
+  if (await h.evaluate(visibleEl(".start .notice"))) {
+    throw new Error(`notice: "${(await h.evaluate(`document.querySelector(".start .notice").textContent`)).trim()}"`);
+  }
+}
+
 /** One game in DIR with a fresh HOME: new player, levels 1–3, quit, restart resumes. */
 async function game(dir) {
   home = dir;
   await mkdir(home);
   at("start");
   let shell = await launch();
-  await h.waitFor(`${visibleEl(".language .option")} || ${visibleEl('[data-focus-id="main"]')}`, "first screen", 30000);
+  await h.waitFor(`${visibleEl(".language .option")} || ${visibleEl('[data-focus-id="main"]')} || ${visibleEl(".start .notice")}`, "first screen", 30000);
   if (await h.evaluate(visibleEl(".language .option"))) {
     at("language");
     await h.click(".language .option.current");
   }
+  at("start screen");
+  await h.waitFor(`${visibleEl('[data-focus-id="main"]')} || ${visibleEl(".start .notice")}`, "start screen");
+  await noNotice();
   at("new player");
   await h.click('[data-focus-id="main"]');
   await h.waitFor(visibleEl("#new-player"), "player screen");
@@ -224,16 +236,19 @@ async function game(dir) {
   at("quit");
   await saved((s) => running(s).level === 4 && running(s).phase === "select", "level 4");
   await quit(shell);
+  if (!existsSync(saveFile())) throw new Error(`no save at ${saveFile()}`);
 
   at("restart");
   shell = await launch();
-  await h.waitFor(visibleEl('[data-focus-id="main"]'), "start screen", 30000);
+  await h.waitFor(`${visibleEl('[data-focus-id="main"]')} || ${visibleEl(".start .notice")}`, "start screen", 30000);
+  await noNotice();
   const label = await h.evaluate(`document.querySelector('[data-focus-id="main"]').textContent`);
   if (!label.includes(PLAYER)) throw new Error(`no resume for ${PLAYER}: "${label.trim()}"`);
   at("resume");
   await h.click('[data-focus-id="main"]');
   await h.waitFor(`${visibleEl(".level .hint")} || ${visibleEl(".cards .card")}`, "level 4");
-  const level = await h.evaluate(`document.querySelector(".level .title, .hud")?.textContent ?? ""`);
+  // Level screen's number, else the HUD's level chip (cards).
+  const level = await h.evaluate(`document.querySelector(".level .title.big, .hud .level")?.textContent ?? ""`);
   if (!/4/.test(level)) throw new Error(`resumed at "${level.trim()}", not level 4`);
   await quit(shell);
   page.close();

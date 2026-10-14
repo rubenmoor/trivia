@@ -13,7 +13,8 @@ Steps, each ✓/✗ with its time; all automated steps run, exit 1 on any ✗:
   report    the build's reportUrl (package.json in the Linux app.asar) non-empty, GET <url>/health → {"ok": true, "api": 1}
             within 10 s (plan 104); `--skip report` until the server is set up (plan 103 task 4)
   credits   node authoring/steam/credits_check.mjs on both unpacked builds: files ↔ credits.json, both ways
-  smoke     node authoring/steam/smoke.mjs app/desktop/release/linux-unpacked (with packs: again without them)
+  smoke     node authoring/steam/smoke.mjs app/desktop/release/linux-unpacked: TRIVIA_DEV_STEAM_USER=1 (decision 111),
+            network off; save and resume, no «progress needs Steam» notice (with packs: again without them)
   media-budget  always skipped until masterplan 10 part 6 (task 260) adds its check
   manual    the rows of MANUAL, asked y/n/note or read from --manual FILE (`<row>: <answer>` per line);
             "n…" fails, "y…" passes (deck: also "no Deck…", decision 125), anything else is a note and
@@ -48,7 +49,7 @@ STEPS = {
 SHIPPED = ("app/", "flake.nix", "flake.lock", "package.json", "package-lock.json")
 STATE_TS = "app/client/src/engine/state.ts"
 MEDIA_BUDGET = "masterplan 10 part 6, task 260"
-OFFLINE = ("beta install, Steam running in offline mode (Steam → Go Offline while online, then network off), "
+OFFLINE = ("beta install from Steam, network off (Steam offline mode: Steam → Go Offline while online, then network off), "
            "start from Steam")
 # Row → (scope, check, check on a content-only patch); scope: always, full (full release only), save
 # (only when SAVE_VERSION changed). Steps: plans/11-steam.md "Release checklist (ST-4)".
