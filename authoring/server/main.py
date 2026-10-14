@@ -23,7 +23,9 @@ API:
          &sample=1&audit=flagged                   with batch: sample=1 its spot-check sample in order,
                                                    audit=flagged its audited ones with a major finding, plan 16;
          &run=backaudit-1                          run: a back-audit run's questions, also with sample/audit, plan 57;
-         &licence=replace                          licence=replace: not rejected, a picked file to replace, plan 53)
+         &licence=replace                          licence=replace: not rejected, a picked file to replace, plan 53;
+         &played=outliers                          played=outliers: played difficulty outliers of `qgen report --played`
+                                                   (too easy / too hard, not mixed), by |Δ|, plan 109)
     GET  /api/questions?locale=en&stale=1          locale (translations.LOCALES; es or absent = the above): one item per
                                                    entry of questions.<locale>.json, the source with the translation's
                                                    text, difficulty(_original), status, batch, review laid over it, plus
@@ -64,8 +66,9 @@ API:
     Other /api/ paths: 404; a bad body or query: 400; a crash: 500 {"error": "server error: …"}.
 Questions in responses carry `media_candidates` and `background_candidates`
 (from work/media/, or null if not fetched) and `audit` (the newest back-audit, else work/<batch>/audit/<id>.json,
-or null; plans 16, 57) and `licence`: per picked slot {"verdict": "ok"|"replace", "reasons": [...]}
-(providers.licence_verdict, plan 53).
+or null; plans 16, 57), `licence`: per picked slot {"verdict": "ok"|"replace", "reasons": [...]}
+(providers.licence_verdict, plan 53) and `played`: per age group with played data
+[{group, n, right, rated, observed, bound}] (played.review_data, state/played/stats.json; [] without, plan 109).
 """
 import argparse, datetime, json, re, sys
 from http.server import ThreadingHTTPServer
@@ -82,6 +85,7 @@ import media  # noqa: E402  (authoring/tools/media.py)
 import media_cache  # noqa: E402  (app/server/media_cache.py)
 import media_stats  # noqa: E402  (authoring/server/media_stats.py)
 import overview  # noqa: E402  (authoring/server/overview.py)
+import played  # noqa: E402  (authoring/tools/played.py)
 import pool_export  # noqa: E402  (authoring/tools/pool_export.py)
 import reviews  # noqa: E402  (authoring/tools/reviews.py)
 from reviews import (NoQuestion, POOL, load_pool, save_pool, set_review,  # noqa: E402
@@ -104,18 +108,19 @@ def locale_of(value):
     return value
 
 
-def with_extras(q):
+def with_extras(q, data=None, locale="es"):
+    """data: played.review_data, loaded once per request (None: no played data)."""
     found = media.load_candidates(q["id"])
     bg = media.load_candidates(q["id"], "background") if q.get("background") else None
     return {**q, "media_candidates": found["candidates"] if found else None,
             "background_candidates": bg["candidates"] if bg else None, "audit": audit_of(q) or None,
-            "licence": media.licence_of(q)}
+            "licence": media.licence_of(q), "played": data["played"].get((q["id"], locale), []) if data else []}
 
 
-def locale_item(t, q, locale):
+def locale_item(t, q, locale, data=None):
     """The source with the translation laid over it, plus the Spanish side (plan 67)."""
     own = {k: v for k, v in t.items() if k != "source_hash"}
-    return {**with_extras(q), "difficulty_original": None, "review": None, "batch": None, **own,
+    return {**with_extras(q, data, locale), "difficulty_original": None, "review": None, "batch": None, **own,
             "audit": translation_audit_of(t), "locale": locale, "stale": translations.is_stale(t, q),
             "source": {k: q.get(k) for k in [*translations.TEXT_FIELDS, "difficulty", "status"]}}
 
@@ -123,12 +128,19 @@ def locale_item(t, q, locale):
 def item_of(qid, locale):
     """What a POST returns: the question, or with a locale its translation item."""
     q = find_question(qid)
+    data = played.review_data(locale or "es")
     if not locale:
-        return with_extras(q)
+        return with_extras(q, data)
     t = next((t for t in translations.load(locale)["questions"] if t["id"] == qid), None)
     if t is None:
         raise NoQuestion(qid)
-    return locale_item(t, q, locale)
+    return locale_item(t, q, locale, data)
+
+
+def played_outliers(items, data, id_of=lambda x: x["id"]):
+    """played=outliers: the review candidates, by |Δ| (plan 109)."""
+    by_id = {id_of(x): x for x in items}
+    return [by_id[i] for i, _, _ in (data or {"outliers": []})["outliers"] if i in by_id]
 
 
 def locale_questions(locale, query):
@@ -155,12 +167,15 @@ def locale_questions(locale, query):
         pairs = [(t, q) for t, q in pairs if translations.is_stale(t, q)]
     if query.get("plays") == "1":
         pairs = [(t, q) for t, q in pairs if translations.plays(t, q)]
+    data = played.review_data(locale)
+    if query.get("played") == "outliers":
+        pairs = played_outliers(pairs, data, lambda p: p[0]["id"])
     if query.get("sample") and query.get("batch"):
         by_id = {t["id"]: (t, q) for t, q in pairs}
         pairs = [by_id[i] for i in spot_checks.sample(query["batch"]) if i in by_id]
     if query.get("audit") == "flagged":
         pairs = [(t, q) for t, q in pairs if (a := translation_audit_of(t)) and is_major(a)]
-    return [locale_item(t, q, locale) for t, q in pairs]
+    return [locale_item(t, q, locale, data) for t, q in pairs]
 
 
 def source_questions(query):
@@ -191,7 +206,10 @@ def source_questions(query):
         qs = [q for q in qs if media.to_replace(q)]
     if query.get("audit") == "flagged":
         qs = [q for q in qs if (a := audit_of(q)) and is_major(a)]
-    return [with_extras(q) for q in qs]
+    data = played.review_data("es")
+    if query.get("played") == "outliers":
+        qs = played_outliers(qs, data)
+    return [with_extras(q, data) for q in qs]
 
 
 def questions_of(query):
@@ -444,7 +462,7 @@ class Handler(BaseHandler):
                 q = search_media(qid, body.get("query"), slot_of(body), body.get("all") is True)
             else:
                 return self.send_json(404, {"error": "not found"})
-            return self.send_json(200, with_extras(q))
+            return self.send_json(200, with_extras(q, played.review_data("es")))
         except NoQuestion:
             return self.send_json(404, {"error": f"no question {qid}"})
         except (ValueError, TypeError, AttributeError) as e:

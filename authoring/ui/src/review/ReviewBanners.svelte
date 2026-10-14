@@ -6,16 +6,23 @@
 </script>
 
 <script lang="ts">
-  // Banners above the question: spot-check reveal, stale, doesn't travel, previous review, audit.
-  import type { Question, SpotCheckItem } from "../lib/types.ts";
+  // Banners above the question: spot-check reveal, stale, doesn't travel, played data, previous review, audit.
+  import type { AgeGroups, PlayedCell, Question, SpotCheckItem } from "../lib/types.ts";
 
   // blind: sample mode before the human's decision, nothing of the LLM review or audit (plan 16).
-  let { current, spot, blind, onTravels }: {
+  let { current, spot, blind, ageGroups, onTravels }: {
     current: Question;
     spot: SpotCheckItem | undefined;
     blind: boolean;
+    ageGroups: AgeGroups | null;
     onTravels: () => void;
   } = $props();
+
+  /** «adultos 37 resp., 92 % bien, dificultad 11 → jugada ≤ 7» (plan 109). */
+  const playedText = (c: PlayedCell) =>
+    `${ageGroups?.groups.find((g) => g.id === c.group)?.name.toLowerCase() ?? c.group} ${c.n} resp., ` +
+    `${Math.round((c.right / c.n) * 100)} % bien, dificultad ${c.rated}` +
+    (c.observed === null ? "" : ` → jugada ${c.bound ? `${c.bound} ` : ""}${c.observed}`);
 </script>
 
 {#if spot}
@@ -38,6 +45,10 @@
     The source doesn't travel (<code>translatable: false</code>); its translations are rejected.
     <button onclick={onTravels}>travels again</button>
   </div>
+{/if}
+
+{#if current.played.length && !blind}
+  <div class="previous played">Datos de juego: {current.played.map(playedText).join(" · ")}</div>
 {/if}
 
 {#if current.review && !blind}

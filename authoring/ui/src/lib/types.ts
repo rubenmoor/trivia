@@ -164,12 +164,25 @@ export interface Question {
   background_candidates: MediaCandidate[] | null;
   /** Added by the server: per picked slot; unpicked slots left out. */
   licence: Partial<Record<Slot, LicenceVerdict>>;
+  /** Added by the server: played data per age group (plan 109); [] without. */
+  played: PlayedCell[];
   /** D-81: false = doesn't travel (absent = true). */
   translatable?: boolean;
   /** Locale view (plan 67): the translation's locale, its Spanish source and whether that changed since. */
   locale?: string;
   source?: SourceText;
   stale?: boolean;
+}
+
+/** played.review_data: one age group's clean answers of a question; observed null without a curve,
+ *  bound "≤"/"≥" when the rate is past the curve's end. */
+export interface PlayedCell {
+  group: string;
+  n: number;
+  right: number;
+  rated: number;
+  observed: number | null;
+  bound: "≤" | "≥" | null;
 }
 
 /** The Spanish side of a translation item (plan 67). */

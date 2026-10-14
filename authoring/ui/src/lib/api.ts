@@ -31,6 +31,8 @@ export interface QuestionFilter {
   audit?: "flagged" | null;
   /** "replace": not rejected, a picked file on the licence replacement list (plan 53). */
   licence?: "replace" | null;
+  /** "outliers": played difficulty outliers of `qgen report --played`, by |Δ| (plan 109). */
+  played?: "outliers" | null;
   /** A translation locale (en, de): its translations with the Spanish source (plan 67); absent = Spanish. */
   locale?: string | null;
   /** With locale: "1" = only stale translations. */

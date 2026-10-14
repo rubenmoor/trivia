@@ -3,6 +3,7 @@
   import { onMount } from "svelte";
   import { messageOf } from "$app/lib/http.ts";
   import {
+    fetchAgeGroups,
     fetchBundles,
     fetchNames,
     fetchQuestions,
@@ -16,7 +17,7 @@
     setDifficulty,
     setTranslatable,
   } from "../lib/api.ts";
-  import type { Bundle, Decision, Names, Question, Review, Slot, SpotCheckItem } from "../lib/types.ts";
+  import type { AgeGroups, Bundle, Decision, Names, Question, Review, Slot, SpotCheckItem } from "../lib/types.ts";
   import Nav from "../lib/Nav.svelte";
   import FeedbackModal from "./FeedbackModal.svelte";
   import MediaPanel from "./MediaPanel.svelte";
@@ -27,12 +28,13 @@
   import SourcePanel from "./SourcePanel.svelte";
   import { reviewUrl } from "./url.ts";
 
-  const { locale, checkGroup, sampleMode, filter, licenceMode, filterText, singleId, startId, debugKeys } = reviewUrl();
+  const { locale, checkGroup, sampleMode, filter, licenceMode, playedMode, filterText, singleId, startId, debugKeys } = reviewUrl();
   let lastKey = $state("");
 
   let questions = $state<Question[]>([]);
   let bundles = $state<Bundle[]>([]);
   let names = $state<Names | null>(null);
+  let ageGroups = $state<AgeGroups | null>(null);
   let index = $state(0);
   let loading = $state(true);
   let error = $state<string | null>(null);
@@ -77,12 +79,14 @@
   let decidedNow = $state<Set<string>>(new Set());
   /** Open until a human has reviewed it: drafts and LLM-reviewed questions (D-33). In the media queue
    *  (media=missing) a question stays open until it has picked media, whoever reviewed it; in the licence
-   *  queue until no slot is still "replace" (plan 53). With a
+   *  queue until no slot is still "replace" (plan 53); in the played outliers until a decision or a new
+   *  difficulty (plan 109). With a
    *  status filter the list is one pass over questions that may already have a human review. */
   const isOpen = (q: Question) =>
     sampleMode ? !spotItems[q.id]
       : filter.media === "missing" ? !q.media.file_url
       : licenceMode ? Object.values(q.licence).some((v) => v.verdict === "replace")
+      : playedMode ? !decidedNow.has(q.id) && q.played.every((c) => c.rated === q.difficulty)
       : filter.status ? !decidedNow.has(q.id) : q.review?.reviewer !== "human";
 
   const current = $derived(questions[index]);
@@ -106,10 +110,10 @@
 
   onMount(async () => {
     try {
-      const [qs, bs, spots, ns] = await Promise.all([
-        fetchQuestions(filter), fetchBundles(), fetchSpotChecks(), locale ? fetchNames(locale) : null,
+      const [qs, bs, spots, ns, ag] = await Promise.all([
+        fetchQuestions(filter), fetchBundles(), fetchSpotChecks(), locale ? fetchNames(locale) : null, fetchAgeGroups(),
       ]);
-      [questions, bundles, problemKinds, names] = [qs, bs, spots.problems, ns];
+      [questions, bundles, problemKinds, names, ageGroups] = [qs, bs, spots.problems, ns, ag];
       if (sampleMode) spotItems = spots.checks[checkGroup!]?.items ?? {};
       if (singleId) questions = questions.filter((q) => q.id === singleId);
       const fromUrl = questions.findIndex((q) => q.id === startId);
@@ -497,7 +501,7 @@
       {difficultyInput}
     />
 
-    <ReviewBanners {current} {spot} {blind} onTravels={() => setTravels(true)} />
+    <ReviewBanners {current} {spot} {blind} {ageGroups} onTravels={() => setTravels(true)} />
 
     {#if current.revision && !blind && !locale}<RevisionPanel question={current} revision={current.revision} />{/if}
 

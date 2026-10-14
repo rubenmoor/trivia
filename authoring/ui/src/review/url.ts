@@ -1,7 +1,7 @@
 import type { QuestionFilter } from "../lib/api.ts";
 
 // URL: ?batch=pilot&bundle=colombia&id=q-0123, plus the filters status, reviewer, subcategory and
-// media=missing (RV-13), licence=replace (plan 53); status=!approved is every question that isn't
+// media=missing (RV-13), licence=replace (plan 53), played=outliers (plan 109); status=!approved is every question that isn't
 // approved, across batches (RV-22, D-47). The id follows the current question, so a reload (or a bookmark) comes
 // back to it. Decisions themselves live in authoring/data/questions.json.
 // With batch: sample=1 is the blind spot check (plan 16), audit=flagged the audit's major findings.
@@ -27,11 +27,14 @@ export function reviewUrl() {
     sample: sampleMode ? "1" : null,
     audit: params.get("audit"),
     licence: params.get("licence"),
+    played: params.get("played"),
     locale,
     stale: params.get("stale"),
   } as QuestionFilter;
   /** The licence queue (plan 53): searches ask every provider. */
   const licenceMode = filter.licence === "replace";
+  /** Played difficulty outliers (plan 109): open until the difficulty changes or a decision. */
+  const playedMode = filter.played === "outliers";
   /** The active filters in words, for the empty and summary screens. */
   const filterText = [
     batch && `batch “${batch}”`,
@@ -44,6 +47,7 @@ export function reviewUrl() {
     sampleMode && "spot-check sample",
     filter.audit === "flagged" && "flagged by the audit",
     licenceMode && "licence to replace",
+    playedMode && "played difficulty outliers",
     locale && `locale ${locale}`,
     filter.stale === "1" && "stale",
   ]
@@ -54,7 +58,7 @@ export function reviewUrl() {
   const startId = singleId ?? params.get("id");
   // ?debug=keys shows what the browser reports for each key press (for layout problems).
   const debugKeys = params.get("debug") === "keys";
-  return { locale, checkGroup, sampleMode, filter, licenceMode, filterText, singleId, startId, debugKeys };
+  return { locale, checkGroup, sampleMode, filter, licenceMode, playedMode, filterText, singleId, startId, debugKeys };
 }
 
 /** This page in another locale, the other params kept. */
