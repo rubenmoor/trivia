@@ -23697,7 +23697,7 @@ Done when, under `trivia-desktop` with `TRIVIA_DEV_STEAM_USER=1`, `TRIVIA_TELEME
 - with `--no-mods` → `mods: false`;
 - no `answers` row carries a `<mod>:` id after a mod bundle question was played.
 - Temp mod and dir deleted; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-14T01:33:15Z', '2026-10-14T03:19:57Z', 1006);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1008, 124, 'Docs: achievements, flags, telemetry, presence with mods on', 'work', 'open', NULL, NULL, '`plan 124: Achievements, flags and telemetry with mods on`, part 2; after the telemetry task of the same plan. State the rules from `decision 123: Achievements in games with mods on: allowed or off?` and `decision 146: Achievements, mods screen and rich presence with mods on`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1008, 124, 'Docs: achievements, flags, telemetry, presence with mods on', 'work', 'done', NULL, '2026-10-13, plans/18-steam-integration.md, plans/12-client-engine.md, plans/22-bundles.md', '`plan 124: Achievements, flags and telemetry with mods on`, part 2; after the telemetry task of the same plan. State the rules from `decision 123: Achievements in games with mods on: allowed or off?` and `decision 146: Achievements, mods screen and rich presence with mods on`.
 
 - `plans/18-steam-integration.md`:
   - "Achievements in Steamworks": allowed with mods on (decision 123); player questions count except `BUNDLE_*` (our regional bundles) and `ALL_CATEGORIES` (our base).
@@ -23706,7 +23706,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/22-bundles.md` "Player bundles (mods)": an achievements line if the section lists "not ours" rules.
 - Not here: the modding guide (`modding/README.md`, plan 121 takes it from these docs).
 
-Done when: those docs name decision 123 and decision 146; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-14T01:33:15Z', NULL, 1006);
+Done when: those docs name decision 123 and decision 146; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-14T01:33:15Z', '2026-10-14T03:20:40Z', 1006);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -26022,6 +26022,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (865, 885, '2026-10-14T03:13:38Z', '2026-10-14T03:15:32Z', 'done', NULL, 0, 'bd10bb234de80b35d52293cc4b378758cdb6a775', 'claude-opus-5-5[1m]', '2cc8cad2-9cbf-4a25-bc22-f2648d099baa', 16, 32, 8574, 720115, 42288, 0.65393500000000016, 1963349);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (866, 869, '2026-10-14T03:15:33Z', '2026-10-14T03:15:57Z', 'blocked', NULL, 0, 'b56ce28982441f2dc0b0ae6c6b12ecf404baf1e5', 'claude-opus-5-5[1m]', 'b07418fa-1d2b-4533-99f3-77b22bd609fa', 6, 12, 1855, 198376, 29937, 0.3163192, 1963349);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (867, 1007, '2026-10-14T03:15:58Z', '2026-10-14T03:20:03Z', 'done', NULL, 0, 'f5fe84a22d963a88fbb26b920049143a657afae5', 'claude-opus-5-5[1m]', '5e9df17b-4962-45ff-a997-117d7a0b0c57', 36, 72, 16445, 2114144, 69207, 1.3056728, 1963349);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (868, 1008, '2026-10-14T03:20:04Z', '2026-10-14T03:20:46Z', 'done', NULL, 0, '360d59f5e639ba8c7451ed84049900390e904fc1', 'claude-opus-5-5[1m]', '470f7751-2a12-47dd-902e-5bb809d592b0', 12, 14, 2732, 241839, 32314, 0.36157580000000006, 1963349);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

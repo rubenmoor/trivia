@@ -46,6 +46,7 @@ Values for Steamworks → Stats & Achievements → Achievements (plan 86, SW-11;
 - Order: enter them in the table's order (= `ACHIEVEMENTS` in `engine/achievements.ts`); the edit form takes the English name and description.
 - Localization: upload `app/desktop/steam-achievements.vdf` (latam, spanish, english, german). Its tokens `NEW_ACHIEVEMENT_1_<n>_NAME/_DESC` assume Steamworks' ids for that order on a fresh app; compare with Steamworks' localization download first and rename tokens if they differ.
 - Then publish (Steamworks → Publish).
+- Mods: achievements stay allowed with mods on (decision 123: Achievements in games with mods on: allowed or off?; decision 146: Achievements, mods screen and rich presence with mods on); no mods gate in `earned()` or the unlock gate, no save field; player questions count like ours except `BUNDLE_*` (our regional bundles only) and `ALL_CATEGORIES` (our `base` only).
 - Wording: infinitive, no address, so latam/spanish and German need no plural form; joker names from the catalogs (es Soplo/Paso/Bájale/Cambiazo/Francotirador, en Hint/Pass & Purge/Fairy/Ms Picky/Trick Shot, de Zaunpfahl/Näxt/Gang runter/Wunschzeit/Finte).
 - `SUPER_PICKY` in English isn't «Super Picky»: Ms Picky is a different joker.
 
@@ -193,6 +194,7 @@ Mods are folders the shell serves over `app://trivia/` before our own client and
 - Full conversion: a mod's `index.html` wins the SPA fallback too.
 - Not overlaid: `/media?url=…`, `/api/*` (404), a mod's `mod.json`.
 - `--no-mods`: no layers this run (way back from a full conversion).
+- With mods on (decision 123: Achievements in games with mods on: allowed or off?; decision 146: Achievements, mods screen and rich presence with mods on): achievements as without ("Achievements in Steamworks"); flags hidden on player questions; reports ours only; telemetry keeps `isOurs` answers only, `games[].mods` = this run's overlay non-empty; rich presence unchanged (no "modded" token); no achievements line on the mods screen.
 - Path safety: `contained()` compares `realpath`s against the layer root's `realpath` (every root, ours too): symlinks out of a layer miss; `..`, encoded `..`, absolute and drive-letter paths stay inside or miss; files only.
 - MIME by extension (`MIME` in `resolve.mjs`), unknown → `application/octet-stream`. Paths case-sensitive (Windows: match case).
 - stderr: one line per mod (`trivia: mod <id> <state> [warnings]`) and a summary (`trivia: mods: 2 loaded, 1 invalid`).
