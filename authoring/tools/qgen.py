@@ -5,7 +5,7 @@ An LLM makes a batch with exactly one command (authoring/RUNBOOK.md):
 
     qgen batch                      # writes base questions (D-41)
     qgen batch --bundle colombia    # only when the user names a bundle
-    qgen batch --translate en       # only when the user names a language (plan 66)
+    qgen batch --translate en [--bundle colombia]   # only when the user names a language (plan 66)
 
 It runs these steps in a fixed order; they stay available one by one for debugging:
 
@@ -3258,8 +3258,8 @@ def cmd_batch(args):
     """The whole pipeline in a fixed order (D-36). Rerunning it continues where it stopped."""
     if args.translate:
         return cmd_translate_batch(args)
-    if args.ids:
-        sys.exit("--ids needs --translate")
+    if args.ids or args.dry_run:
+        sys.exit("--ids and --dry-run need --translate")
     if args.run:
         run, resuming = args.run, (WORK / args.run / "run.json").exists()
     else:
@@ -3355,8 +3355,8 @@ def spread(qs, offset=0.0):
     return out
 
 
-def translate_selection(locale, n):
-    """(ids, stale ids) for the next run (plan 66, D-36): approved, translatable `base` sources without an
+def translate_selection(locale, n, bundle="base"):
+    """(ids, stale ids) for the next run (plan 66, D-36): approved, translatable sources of the bundle without an
     approved non-stale translation and not rejected in the locale; stale ones first, then one at a time
     from the subcategory with the fewest approved translations (picks count), spread over difficulty;
     ties in categories.json order. Within a subcategory, the source whose es level has the most locale
@@ -3365,7 +3365,7 @@ def translate_selection(locale, n):
     have = {t["id"]: t for t in translations.load(locale)["questions"]}
     open_, stale, done = [], [], Counter()
     for q in pool:
-        if (q.get("bundle") or "base") != "base":
+        if (q.get("bundle") or "base") != bundle:
             continue
         t = have.get(q["id"])
         if t and t["status"] == "approved" and not translations.is_stale(t, q):
@@ -3375,10 +3375,10 @@ def translate_selection(locale, n):
             continue
         (stale if t and translations.is_stale(t, q) else open_).append(q)
     stale = [q["id"] for q in sorted(stale, key=lambda q: natural_key(q["id"]))][:n]
-    order = categories.subcategories("base")
+    order = categories.subcategories(bundle)
     queues = {sub: spread([q for q in open_ if q["subcategory"] == sub], (k * 0.618034) % 1)  # golden-ratio offsets
               for k, sub in enumerate(order)}
-    deficit, per_level = targets.deficits(pool, "base", locale) or {}, Counter()
+    deficit, per_level = targets.deficits(pool, bundle, locale) or {}, Counter()
     picked = list(stale)
     while len(picked) < n and any(queues.values()):
         sub = min((s for s in order if queues[s]), key=lambda s: (done[s], order.index(s)))
@@ -3408,35 +3408,50 @@ def cmd_translate_batch(args):
     locale = args.translate
     if locale not in translations.LOCALES:
         sys.exit(f"--translate must be one of {', '.join(translations.LOCALES)}")
-    if args.bundle != "base":
-        sys.exit("--translate translates base only (until RG-5)")
+    bundle = args.bundle
+    check_bundle(bundle)
     if args.run:
         run, resuming = args.run, (WORK / args.run / "run.json").exists()
     else:
         run, resuming = next_translate_run(locale)
     d = WORK / run
-    again = f"qgen batch --translate {locale}"
+    again = f"qgen batch --translate {locale}" + (f" --bundle {bundle}" if bundle != "base" else "")
     if resuming:
         if run_locale(d) != locale:
             sys.exit(f"{run} is not a {locale} translation run")
+        open_bundle = load_json(d / "run.json").get("bundle", "base")
+        if open_bundle != bundle:
+            sys.exit(f"{run} is unfinished and writes for bundle {open_bundle!r}, not {bundle!r}. Finish it first: "
+                     f"qgen batch --translate {locale}" + (f" --bundle {open_bundle}" if open_bundle != "base" else ""))
+        if args.dry_run:
+            print(f"{run} is unfinished; `{again}` resumes it.")
+            return []
         if args.count or args.ids:
             print("(--count and --ids ignored: resuming)", flush=True)
     else:
         if stop := health.translate_stop_reason(locale):
             print(stop, file=sys.stderr)
-            sys.exit(EXIT_HEALTH)
+            if not args.dry_run:
+                sys.exit(EXIT_HEALTH)
         if args.ids:
             ids, stale = split_list(args.ids), []
+            src = {q["id"]: q for q in load_json(POOL)["questions"]}
+            if other := [i for i in ids if (src.get(i, {}).get("bundle") or "base") != bundle or i not in src]:
+                sys.exit(f"Not {bundle} questions: {', '.join(other)}")
         else:
             pilot = not translations.path(locale).exists()
-            ids, stale = translate_selection(locale, args.count or (TRANSLATE_PILOT if pilot else TRANSLATE_SIZE))
+            ids, stale = translate_selection(locale, args.count or (TRANSLATE_PILOT if pilot else TRANSLATE_SIZE), bundle)
         if not ids:
-            sys.exit(f"Nothing to translate into {locale}: every approved base question has a translation.")
-        save_json(d / "run.json", {"mode": "translate", "locale": locale, "ids": ids, "stale": stale,
+            sys.exit(f"Nothing to translate into {locale}: every approved {bundle} question has a translation.")
+        if args.dry_run:
+            print(f"{run} would translate {len(ids)} {bundle} questions into {LANGUAGES[locale]}"
+                  + (f" ({len(stale)} stale)" if stale else "") + ": " + ", ".join(ids))
+            return []
+        save_json(d / "run.json", {"mode": "translate", "locale": locale, "bundle": bundle, "ids": ids, "stale": stale,
                                    "started": datetime.date.today().isoformat()})
     cfg = load_json(d / "run.json")
     progress.verbose = False
-    print(f"{'Resuming' if resuming else 'Starting'} {run}: {len(cfg['ids'])} questions into {LANGUAGES[locale]}"
+    print(f"{'Resuming' if resuming else 'Starting'} {run}: {len(cfg['ids'])} {bundle} questions into {LANGUAGES[locale]}"
           + (f" ({len(cfg.get('stale', []))} stale)" if cfg.get("stale") else "")
           + ". This takes from several minutes to an hour.", flush=True)
 
@@ -3465,11 +3480,12 @@ def cmd_translate_batch(args):
           f"(took {progress.duration(time.monotonic() - t0)}).")
     if run == f"tr-{locale}-1":
         print(f"Pilot: the next `{again}` waits for the developer's go (`qgen health ack {run} \"<note>\"`).")
-    files = [translations.path(locale), layout.LOCALE_POOL(locale), layout.BUNDLE_DATA, out]
+    files = [translations.path(locale), layout.POOL_FILE(locale, bundle), layout.BUNDLE_DATA, out]
     if h["not travelling confirmed"]:
         files.insert(1, POOL)
     print("Commit exactly this:\n  git add " + " ".join(f.relative_to(ROOT).as_posix() for f in files) + "\n"
-          f"  git commit -m \"{run}: {h['translated']} questions into {LANGUAGES[locale]}, {h['approved']} approved "
+          f"  git commit -m \"{run}: {h['translated']} {'' if bundle == 'base' else bundle + ' '}questions into "
+          f"{LANGUAGES[locale]}, {h['approved']} approved "
           f"(qgen batch --translate)\"")
     return []
 
@@ -3488,7 +3504,7 @@ def write_translate_report(run):
     usd = lambda x: "–" if x is None else f"${x:.2f}"
     lines = [f"# {run}", "",
              f"Made by `qgen batch --translate {locale}` on {datetime.date.today().isoformat()} (plan 66, D-81): "
-             f"`base` questions translated into {LANGUAGES[locale]}. Generated file: don't edit by hand.", "",
+             f"`{cfg.get('bundle', 'base')}` questions translated into {LANGUAGES[locale]}. Generated file: don't edit by hand.", "",
              f"- Sources: {h['sources']} ({h['stale re-translated']} stale re-translated)",
              f"- Translated: {h['translated']}", f"- Approved: {h['approved']}", f"- Needs work: {h['needs_work']}",
              f"- Not travelling: {h['not travelling']} ({h['not travelling confirmed']} confirmed → `translatable: false`, "
@@ -4223,10 +4239,12 @@ def bundle_problems(bundles):
             errors.append(f"authoring/tools/patch_notes.py: no Steam event texts (EVENT) for {l}")
         if l == "es":  # the source: every bundle starts there (`qgen bundle new`)
             continue
+        missing = {b for b in listed[l] if not layout.POOL_FILE(l, b).exists()}
+        warnings += [f"{layout.POOL_FILE(l, b).relative_to(ROOT)}: missing; {b} is listed for {l}" for b in sorted(missing)]
         path = layout.LOCALE_POOL(l)
-        pool = [q for p in layout.POOL_FILES() if p.name == path.name for q in load_json(p)["questions"]]
+        pool =[q for p in layout.POOL_FILES() if p.name == path.name for q in load_json(p)["questions"]]
         have = {q.get("bundle") or "base" for q in pool if q.get("status", "approved") == "approved"}
-        warnings += [f"{path.name}: no approved {b} question; {b} is listed for {l}" for b in sorted(listed[l] - have)]
+        warnings += [f"{path.name}: no approved {b} question; {b} is listed for {l}" for b in sorted(listed[l] - have - missing)]
         warnings += [f"{path.name}: approved {b} questions, but {b} isn't listed for {l}" for b in sorted(have - listed[l])]
     return errors, warnings
 
@@ -4412,7 +4430,8 @@ def main():
     b.add_argument("--count", type=int, help=argparse.SUPPRESS)  # default: batches.SHARE of the bundle's subcategories
     b.add_argument("--jobs", type=int, default=3, help=argparse.SUPPRESS)
     b.add_argument("--translate", metavar="LOCALE", choices=translations.LOCALES,
-                   help="translate approved base questions into this locale (plan 66); only when the user names a language")
+                   help="translate the bundle's approved questions into this locale (plan 66); only when the user names a language")
+    b.add_argument("--dry-run", action="store_true", help="with --translate: print the next run's sources, no LLM calls")
     b.add_argument("--ids", help=argparse.SUPPRESS)  # with --translate: these source ids (tests and debugging only)
     args = ap.parse_args()
     errors = args.fn(args)

@@ -309,7 +309,7 @@ Template:
 - Context: Batch-4's Claude review (D-32) worked, but it was done by hand in an interactive session: choosing subcategories, running steps, building contact sheets, judging images and writing review records were all improvised. The developer wants the process unambiguous, with no room for variation by the LLM.
 - Decision: `qgen batch` runs the whole pipeline in a fixed order with fixed rules (run name, subcategory choice, all steps, review, media pick, export, validate, sync, report). The review is a pipeline step: one `claude -p` call per question with `prompts/review.md` and the contact sheet of its media candidates, answering by JSON schema. An LLM operating the pipeline follows `authoring/RUNBOOK.md` only: run `qgen batch`, rerun it after a usage limit, commit the listed paths. It doesn't edit the pool, pick media or change prompts by hand.
 - Consequences: The interactive procedure of batch-4 is retired. Prompt changes are code changes reviewed by the developer. D-32's criteria live in `prompts/review.md`.
-- Supersedes / related: D-10, D-16, D-32, D-33; QG-17; amended by D-83 (`qgen neutralize`), D-87 (`qgen batch --translate`)
+- Supersedes / related: D-10, D-16, D-32, D-33; QG-17; amended by D-83 (`qgen neutralize`), D-87 (`qgen batch --translate`, with `--bundle` since plan 98 task 829)
 
 ## D-37: New questions start from stored concept lists and multi-axis styles
 - Date: 2026-10-07
@@ -762,16 +762,16 @@ Template:
 - Date: 2026-10-12
 - Context: QT-2, QT-3 (plan 15b); plan 66 (tasks 437–441, 464); files per locale D-81; prompts and markets: decision 35: Translation prompts and markets per locale; thresholds and order: decision 45: Health thresholds and selection order for qgen batch --translate runs.
 - Decision:
-  - **Command:** `qgen batch --translate <locale>` (`en`, `de`), one more exception to D-36's "no arguments", used only when the user names a language. `base` only (until RG-5).
-  - **Run:** `tr-<locale>-<n>`, also the translations' `batch`; an unfinished run of that locale is resumed. `work/tr-<locale>-<n>/run.json` `{mode: "translate", locale, ids, stale, started, done}`.
-  - **Selection (code):** approved, translatable `base` sources without an approved non-stale translation, not rejected in the locale. Stale translations first (old review kept as `previous`). Then one source at a time from the subcategory with the fewest approved translations (picks count; ties in `categories.json` order); within it the source whose level has the most locale deficit per pick (D-84), van der Corput order over difficulty as tie-break.
+  - **Command:** `qgen batch --translate <locale>` (`en`, `de`), one more exception to D-36's "no arguments", used only when the user names a language; `--bundle <id>` translates that bundle's sources instead of `base`'s (decision 110, plan 98 task 829), export to the pack's `app/data/bundles/<id>/pool.<locale>.json` (decision 112).
+  - **Run:** `tr-<locale>-<n>`, also the translations' `batch`; an unfinished run of that locale is resumed. `work/tr-<locale>-<n>/run.json` `{mode: "translate", locale, bundle, ids, stale, started, done}`; one run sequence per locale across bundles; an unfinished run of another bundle stops the command.
+  - **Selection (code):** approved, translatable sources of the run's bundle (`base` by default) without an approved non-stale translation, not rejected in the locale. Stale translations first (old review kept as `previous`). Then one source at a time from the subcategory with the fewest approved translations (picks count; ties in `categories.json` order); within it the source whose level has the most locale deficit per pick (D-84), van der Corput order over difficulty as tie-break.
   - **Size:** `TRANSLATE_SIZE` 300 sources; the locale's first run (no `questions.<locale>.json` yet) is the pilot, `TRANSLATE_PILOT` 50 (QT-5).
   - **Steps:** translate (opus, chunks of 15 per subcategory, `prompts/translate.md` + `locale-<l>.md`) → rate → factcheck (changed numbers, units, dates, records only) → merge → review 1 → fix → review 2 → record → audit → export → validate → report `authoring/reports/tr-<locale>-<n>.md`. No concepts, draft, media search or sheets; media stays the source's.
   - **Not travelling:** the translator says so instead of forcing it → no entry, `work/<run>/not-travelling.json`; review 1 confirms → `translatable: false` on the source (`questions.json`), else translated again next run.
   - **Stop (exit 2, D-55):** after the pilot `tr-<locale>-1` always, and after a run failing a threshold that applies (decision 45), until `qgen health ack <run> "<note>"`.
   - **Text in media** is never a problem (decision 35): no `media_text` flag, no media problem for it.
 - Consequences: RUNBOOK step 2 names `--translate`; QC adds a native-speaker spot check for `tr-*` runs (review view per locale: plan 67). Commit lines: the locale file, `pool.<locale>.json`, the report, `questions.json` when `translatable` changed.
-- Supersedes / related: D-36 (amends), D-55, D-56, D-79, D-81, D-84; plan 66; pm decisions 35, 45
+- Supersedes / related: D-36 (amends), D-55, D-56, D-79, D-81, D-84; plan 66; pm decisions 35, 45, 110, 112
 
 ## D-88: Gamemaster mode: configure screen fields and gamemaster menu
 - Date: 2026-10-12

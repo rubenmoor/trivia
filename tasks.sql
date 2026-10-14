@@ -25502,6 +25502,7 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 1. The list above.
 2. Only the 19''s targets now (Historia de Colombia, Independencia…, etc. as above), nothing else new; more subcategories later.
 3. Changes: name them.', NULL, NULL, '2026-10-14T18:27:43Z', NULL, 827, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (167, 'Translation prompt for a regional bundle (en for colombia)', 'pending', '["a: the draft as written: prompts/translate-region.md, added to translate, rate, review, fix and audit in a regional bundle''s tr-* run", "b: the draft, but questions about a regional word or saying don''t travel (about_spanish as for base)", "c: no regional note: colombia translated for locale-en''s market as is (players not in Colombia)"]', '', NULL, NULL, '2026-10-14T18:31:51Z', NULL, 829, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -26443,6 +26444,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (931, 826, '2026-10-14T18:12:53Z', '2026-10-14T18:26:47Z', 'done', NULL, 0, '140bfd20f20af82642d1aaffeaeec7a0ec983edf', 'claude-opus-5-5[1m]', '4476419a-35ec-4239-a020-37e3b84ebf3c', 115, 220, 68046, 17925478, 237713, 6.8485996000000018, 2296074);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (932, 827, '2026-10-14T18:26:48Z', '2026-10-14T18:27:59Z', 'blocked', NULL, 0, '0f448fb9605b99ee2f0b0ace4edbf94db8a5543b', 'claude-opus-5-5[1m]', '1144a102-404a-48a7-9cde-1618b7f630a9', 11, 22, 7250, 492711, 45345, 0.6063902000000001, 2296074);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (933, 828, '2026-10-14T18:27:59Z', '2026-10-14T18:29:43Z', 'done', NULL, 0, 'bf9a52b9e37bb2216dad62a355457b5defee50e2', 'claude-opus-5-5[1m]', '457722f4-8545-4e87-a6b0-9cb353cb008e', 21, 40, 8432, 1025026, 56444, 0.8253571999999999, 2296074);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (934, 829, '2026-10-14T18:29:43Z', '2026-10-14T18:32:25Z', 'blocked', NULL, 0, '2041676598a0dc9275daeecb7549999a0555c143', 'claude-opus-5-5[1m]', '5d0bb6a1-378a-4b30-8b29-18697b588ad2', 34, 58, 14469, 2074094, 84440, 1.3799507999999996, 2296074);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -26660,6 +26662,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (783, 110);
 INSERT INTO task_decision (task_id, decision_id) VALUES (786, 137);
 INSERT INTO task_decision (task_id, decision_id) VALUES (801, 160);
 INSERT INTO task_decision (task_id, decision_id) VALUES (827, 166);
+INSERT INTO task_decision (task_id, decision_id) VALUES (829, 167);
 INSERT INTO task_decision (task_id, decision_id) VALUES (845, 116);
 INSERT INTO task_decision (task_id, decision_id) VALUES (865, 117);
 INSERT INTO task_decision (task_id, decision_id) VALUES (866, 117);
