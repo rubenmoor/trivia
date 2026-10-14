@@ -175,7 +175,79 @@ Only the fields that differ from `es`: «vosotros», «vídeo», «ordenador», 
   > Die Oberfläche ist auf Deutsch; die Fragen sind vorerst auf Spanisch. Deutsche Fragen folgen mit einem Update.
 
 ## Free DLC
-- Store texts per shipped pack (decision 110: `colombia`, es + en): `task 783: Free DLC store texts in 17a`
+Store texts for each shipped question bundle, one free DLC app each (decision 66: price model, decision 110: regional packs at launch: `colombia` only, es + en, off by default). Entered on the DLC app's own store page (Steamworks → DLC app → Edit Store Page), same fields as the base game. Drafted 2026-10-14 (`task 783`); approved through pm decision "DLC store texts approved? (colombia)".
+
+### Fields and limits
+- Same fields and limits as the base game (above, from memory; recheck in the DLC app's admin at entry): name, short description ≤ 300 characters plain text, "About This Content" in BBCode
+- Name: the in-game bundle name (decision 50: «Regional: Colombia» everywhere, Steam DLC included); Steam shows the base game on the DLC page itself, so no base-name prefix
+- Say: free, needs the base game, optional install, off by default on the bundle step (switched on per game); Steam only (decision 111)
+- No question count (decision 110: launch ships what colombia has then; 102 approved es today, pilot target 2000)
+- Content facts: `app/data/bundles.json`, `app/data/bundles/colombia/categories.json` (6 categories), `names.en.json`; `BUNDLE_COLOMBIA` Steam achievement (decision 73, `app/desktop/achievements/`) ships with the DLC
+- Voice: `es` in the pack's Colombian voice (decision 27, `bundles.json` `voice`), «ustedes» as in-game; glossary terms from the style guides («paquete de preguntas», «question bundle», «logros de Steam»)
+
+### `colombia` (Regional: Colombia)
+- Languages: es (pool today), en (`app/data/bundles/colombia/pool.en.json` doesn't exist yet: en text drafted, **enter once the en pack pool ships**; until then the DLC page lists Spanish only)
+- es-ES: the `es` text unchanged (the pack speaks Colombian Spanish; no Spain-specific wording needed)
+
+#### Spanish (`es`, also es-ES)
+- **Name:** Regional: Colombia
+- **Short description** (≤ 300):
+  > Paquete de preguntas gratis para Trivia en Familia, para quien tiene relación con Colombia: lugares, comida, fiestas, costumbres, gente, música, deporte y palabras de allá. Se instala aparte y viene apagado: lo encienden en el paso de paquetes de preguntas cuando quieran jugarlo.
+- **About This Content:**
+  ```
+  [h2]Preguntas de Colombia[/h2]
+  Regional: Colombia es un paquete de preguntas gratis para Trivia en Familia. Es para quien tiene relación con Colombia: preguntas que en Colombia se saben y que afuera casi nadie sabría.
+
+  [list]
+  [*][b]Colombia:[/b] regiones, ciudades, ríos, parques naturales, símbolos patrios y animales
+  [*][b]Fiestas, mitos y tradiciones:[/b] el Carnaval de Barranquilla, la Feria de las Flores, mitos y leyendas
+  [*][b]Comida colombiana:[/b] platos típicos, dulces, postres, bebidas y frutas
+  [*][b]Música y gente de Colombia:[/b] ritmos, cantantes y colombianos famosos
+  [*][b]Deporte colombiano:[/b] la Selección, el ciclismo, los medallistas olímpicos y los deportes tradicionales
+  [*][b]Así hablamos en Colombia:[/b] palabras y dichos
+  [/list]
+
+  [h2]Cómo se juega[/h2]
+  [list]
+  [*]Gratis; necesita el juego base Trivia en Familia
+  [*]Instalación opcional: se puede quitar y volver a poner en Steam
+  [*]Apagado por defecto: lo encienden en el paso «Paquetes de preguntas» antes de cada partida; sus preguntas se mezclan con las del paquete básico
+  [*]Un logro de Steam propio: 50 respuestas correctas de este paquete
+  [*]El paquete crece con las actualizaciones
+  [/list]
+  ```
+
+#### English (`en`) — enter once `pool.en.json` of the pack ships
+- **Name:** Regional: Colombia
+- **Short description** (≤ 300):
+  > A free question bundle for Living Room Trivia, for anyone with ties to Colombia: its places, food, festivals, customs, people, music, sport and words. Installs separately and starts switched off: turn it on in the question bundle step whenever you want to play it.
+- **About This Content:**
+  ```
+  [h2]Questions from Colombia[/h2]
+  Regional: Colombia is a free question bundle for Living Room Trivia. It's for anyone with ties to Colombia: questions people in Colombia know and hardly anyone outside would.
+
+  [list]
+  [*][b]Colombia:[/b] regions, cities, rivers, national parks, national symbols and animals
+  [*][b]Colombian festivals, myths and traditions:[/b] the Barranquilla Carnival, the Flower Festival, myths and legends
+  [*][b]Colombian food:[/b] traditional dishes, sweets, desserts, drinks and fruit
+  [*][b]Colombian music and people:[/b] rhythms, singers and famous Colombians
+  [*][b]Colombian sport:[/b] the national team, cycling, Olympic medallists and traditional sports
+  [*][b]How Colombians talk:[/b] words and sayings
+  [/list]
+
+  [h2]How it plays[/h2]
+  [list]
+  [*]Free; needs the base game Living Room Trivia
+  [*]Optional install: remove it and add it back in Steam any time
+  [*]Off by default: turn it on in the “Question bundles” step before a game; its questions mix with the base bundle's
+  [*]Its own Steam achievement: 50 right answers from this bundle
+  [*]The bundle grows with updates
+  [/list]
+  ```
+- Language note while the en pack pool is missing: none; the en text isn't entered before it ships
+
+### After approval
+- Capsules: the DLC store name equals the in-game name, so `dlc-colombia/` capsules from `task 669` stay as rendered (no re-run)
 
 ## AI disclosure
 - Steam content-survey AI section and store wording per language: `task 667: AI disclosure text (Steam survey + store wording)`
