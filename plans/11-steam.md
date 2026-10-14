@@ -178,7 +178,7 @@ The release candidate `v1.0.0` goes from `beta` through the release checklist (S
 - Build review lead time: unverified (developer: check https://partner.steamgames.com/doc/store/review_process). ST-3 only verified the store page review (3–5 business days, submit ≥ 7 before); this plan assumes the same buffer for the build until confirmed.
 - What the build review checks (starts, matches the store page, no placeholder content, which branch it reads): unverified (developer: check https://partner.steamgames.com/doc/store/review_process). Rule here anyway: no `PLACEHOLDER(` in the candidate (AGENTS.md; ST-3's store review rule).
 - Setting a build live on `default`, the Release button and a scheduled release (time of day, whether it fires by itself): unverified (developer: check https://partner.steamgames.com/doc/store/releasing and https://partner.steamgames.com/doc/sdk/uploading).
-- Launch discount (max %, duration, setup deadline, cooldown after it): unverified (developer: check https://partner.steamgames.com/doc/marketing/discounts); decision 66's draft noted a 30-day cooldown between discounts, also unverified.
+- Launch discount: optional, 10–40 % (Valve suggests 10–15 %), 7–14 days, ends 10:00 Pacific; set up only before the release date, on the app landing page below the intended release date; no other discount until 30 days after release and 30 days after it ends; seasonal sales exempt from the latter, not from the release cooldown. Source: https://partner.steamgames.com/doc/marketing/discounts (read 2026-10-14, task 1048); values: PUB-11 in `plans/17-publishing.md`.
 - Announcements (event types, per-language texts, scheduling): unverified (developer: check https://partner.steamgames.com/doc/marketing/event_tools).
 
 ### Preconditions
@@ -218,7 +218,7 @@ In order, Steamworks (partner.steamgames.com, the app's landing page); menu name
 | Build review passed | App landing page: build review status passed for the candidate's BuildID; issues → answer "Released?" with `Valve's build review returned issues` |
 | Candidate live on `default` | SteamPipe → Builds → the passed candidate's BuildID (Desc `v1.0.x <sha>`) → "Set build live on branch" `default` → Preview → Set live; never from the repo (decision 84: SteamCMD source and depot split). Check: `default` and `beta` show the same BuildID |
 | Price | Store & release / Pricing: base price and regional prices per PUB-11 (`plans/17-publishing.md`, decision 66) |
-| Launch discount (if PUB-11 has one) | Marketing & Visibility → Discounting → launch discount scheduled for R, % and length per PUB-11 and Valve's rules (unverified above) |
+| Launch discount (if PUB-11 has one) | App landing page, below the release date (not the discount dashboard): launch discount for R, % and length per PUB-11; only before release (Valve's rules above) |
 | Store languages = shipped | Store page → Supported languages: tick exactly what the build ships (see "Languages to compare") |
 | Discussions and report thread | Community Hub → Discussions: open; one thread per language with ST-5's text (`task 701`), each pinned ("Make sticky") |
 | Deck review | Only if SW-12 says "review in S6" (plan 90): app → Steam Deck Compatibility → request review; result → plan 18 |

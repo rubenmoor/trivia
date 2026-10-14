@@ -59,6 +59,71 @@ Steam requires developers to disclose AI-generated content on the store page (co
 - **"Coming soon" page** at least two weeks before release (Valve rule, partner.steamgames.com/doc/store/coming_soon, read 2026-10-13), better months, to collect wishlists. Rules and developer checklist: `11-steam.md` "Coming soon page (ST-3)".
 - **Launch:** preconditions, timeline, release candidate, launch-day checklist (build live on `default`, price, launch discount, languages, report thread, Release, announcement), first week: `11-steam.md` "Launch (S6)" (pm plan 95).
 
+## Price (PUB-11)
+Base price, regional prices, launch discount and the free DLC setup, drafted 2026-10-14 (`task 1048`) from Valve's public docs and the store as it is today. Approval goes through the pm decision "Price, regional prices and launch discount? (PUB-11)"; the developer enters the values via `task 1049: Content survey and pricing: entry checklist and the 'entered' decision (PUB-9, PUB-11)`. Workers never log into Steamworks.
+
+### Valve's rules (read 2026-10-14)
+- [Pricing](https://partner.steamgames.com/doc/store/pricing):
+  - initial price and every change reviewed by Valve, "usually processed within one or two business days"
+  - 37 currencies + 4 region groups; a currency without a price → game not buyable there
+  - three conversion methods in the "Propose Pricing" tool, relative to a USD price: exchange rate only, purchasing power only, multi-variable (purchasing power, comparable entertainment prices, exchange rate); Valve "suggest[s] prices in the Propose Pricing tool … which you may accept or adjust"
+  - the per-currency matrix ([pricing explorer](https://partner.steamgames.com/pricing/explorer)) is "Valve Confidential", behind the partner login: no numbers here
+  - price changes only after 30 days from release (launch errors excepted via support); a price increase in any currency → 30-day discount cooldown
+  - minimum base price = multi-variable value of the $0.99 tier; irrelevant at $9.99
+- [Supported currencies](https://partner.steamgames.com/doc/store/pricing/currencies): COP, CLP in whole units; `USD_LATAM` region group (a discounted USD price) for Argentina, Bolivia, Ecuador, Paraguay, Venezuela, Central America (Belize, El Salvador, Guatemala, Honduras, Nicaragua, Panama), Guyana, Suriname; Europe without a local currency pays EUR
+- [Discounting](https://partner.steamgames.com/doc/marketing/discounts):
+  - launch discount: optional, 10–40 %, 7–14 days, ends 10:00 Pacific; set up only before the release date, on the app landing page right below the intended release date (not in the discount dashboard); editable until it starts
+  - Valve's suggestion: "around 10% to 15%"; warns against a "very high launch discount"
+  - no other discount for 30 days after release; every discount (launch included) starts a 30-day cooldown after it ends
+  - seasonal sales (Spring, Summer, Autumn, Winter) are exempt from discount cooldowns, not from the release cooldown: a game joins one only if released ≥ 30 days before its start ([Upcoming events](https://partner.steamgames.com/doc/marketing/upcoming_events): Winter 2026-12-17 – 2027-01-04, Spring 2027-03-18 – 03-25, Summer 2027-06-24 – 07-08)
+  - no base price change while a discount is active or scheduled
+  - ≥ 20 % triggers wishlist e-mails
+  - "Discount all associated packages … at the same time": moot, DLC free
+- [DLC](https://partner.steamgames.com/doc/store/application/dlc): own app ID per DLC (base app → "All Associated Packages, DLC, Demos And Tools" → "Add New DLC"); DLC depots live in the base app; price page silent on free DLC
+- [Free to Play](https://partner.steamgames.com/doc/store/freetoplay): a free product is set at creation ("This is a free product" under Options) and shows "free" in its store package, no pricing entered; every DLC goes through its own store page, review and release; DLC needs no app credit (D-98)
+
+### Comparables (store API, 2026-10-14, US prices, list price)
+| Title | Price | Reviews | DLC |
+|---|---|---|---|
+| Jackbox Party Pack 3 (434170) | $24.99 | 6,678, overwhelmingly positive | no |
+| Jackbox Party Pack 6 (1005300) | $29.99 | 3,105, very positive | no |
+| Trivia Murder Party 3 (3048060, 2026) | $14.99 | 165, mixed | no |
+| Who Wants To Be A Millionaire (1356240) | $29.99 | 715, mixed | 15 (packs $2.99, some free, season pass $14.99) |
+| You Don't Know Jack Vol. 2 (259940) | $2.99 | 108, very positive | no; each volume its own app |
+| Trivia Vault: 1980's Trivia (689180) | $13.99 list, 90 % off ($1.39) | 173, mixed | no; one app per topic |
+| Party Quiz (2024070) | $11.99 | 1,639, very positive | no |
+| Trivia Tricks (1404090) | $14.99 | 244, very positive | no |
+| Trivia About You (3196180) | $14.99 | 192, very positive | 1 |
+| Papa's Quiz (1484730) | $12.99 | 145, very positive | no |
+| The You Quiz (3669740) | $9.99 | 104, very positive | 1 |
+| Trivia War (3472880) | $9.99 | 17, positive | no |
+| Quiz Night Tonight! (549280) | $9.99 | 8 | no |
+| Trivia Throwdown (991240) | $4.99 | 33, positive | no |
+- Decision 66's table rechecked: Trivial Pursuit Live! and SongPop Party no longer found in the store search; You Don't Know Jack sells per volume ($1.99–2.99), not as DLC; Millionaire is $29.99, not ≈$19.99.
+- $9.99: half the big party packs, below the indie party-quiz band ($11.99–14.99), level with the smaller quiz titles; fits a game with ~1,000 Spanish questions at launch and free packs.
+
+### Regional prices
+- Valve's recommendation for $9.99 only in Steamworks → Propose Pricing; developer's step: pick $9.99, accept Valve's suggested prices for every currency and region group, read off these rows into the "entered" decision:
+  - USD, EUR, GBP, CHF, MXN, COP, CLP, PEN, `USD_LATAM` (Argentina etc.)
+- Plausibility only, not Valve's matrix: $9.99 titles today (cc=…, 2026-10-14), The You Quiz / Trivia War / Quiz Night Tonight!:
+  - EUR 9.99 / 9.75 / –; GBP 8.99 / 8.50 / 6.99; CHF 8.75 / 10.99 / 10.00
+  - MXN 139.99 / 123.99 / 109.99; COP 26,999 / 26,000 / 23,500; CLP 6,599 / 5,750 / 5,500; PEN 25.99 / 23.00 / 27.95
+  - Argentina (`USD_LATAM`) $6.29 / $5.79 / $9.99
+  - a row far outside these → recheck the tool's method (multi-variable is the default to accept)
+
+### Launch discount
+- Proposal: 15 % for 7 days ($9.99 → $8.49): inside Valve's 10–40 %, 7–14 days, at the top of Valve's "10% to 15%"; release already e-mails wishlisters (`11-steam.md` ST-3), so no need for 20 %.
+- Entered before release, on the app landing page below the release date; with the launch-day checklist (`11-steam.md` "Launch (S6)").
+- Blocks afterwards:
+  - any other discount until release + 30 days, and until 30 days after the launch discount ends (7 days: release + 37 days)
+  - seasonal sales: open from release + 30 days regardless of the launch discount; release ≥ 30 days before a sale's start to join it
+  - price changes: none in the first 30 days, none while it runs
+
+### Free DLC (`colombia` and every later pack)
+- One DLC app per shipped pack ("Add New DLC"), marked free ("This is a free product"; Valve's DLC page doesn't name the field, recheck at entry); no price, no regional rows, no launch discount.
+- Own store page and review per DLC (store texts: `17a-store-page.md` "Free DLC"); depot in the base app (D-95, `18-steam-integration.md` "DLC").
+- Later packs: same steps; never a price (decision 66).
+
 ## Name check (PUB-7)
 This section records what a worker found for the three store names: «Living Room Trivia» (en, default), «Trivia en Familia» (es, es-ES) and «Wohnzimmer-Quiz» (de, decision 78). It is research, not legal advice; a professional clearance search is optional and the developer's call. The result is pm decision "Store names pass PUB-7?" (pm plan 129).
 - Sources (all read 2026-10-14):
