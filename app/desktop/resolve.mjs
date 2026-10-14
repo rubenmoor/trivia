@@ -70,11 +70,19 @@ const sameFile = process.platform === "win32" ? (a, b) => a.toLowerCase() === b.
 // Client files: no hashes in their names (decision 124), so never reused unchecked.
 const CLIENT = { "cache-control": "no-cache" };
 
-// First hit in the layers; a mod's own mod.json never.
-async function firstHit(roots, rel, mods) {
+// A mod's own files, never overlaid (decision 148): mod.json, its entry, its root style.css.
+const OWN = ["mod.json", "style.css"];
+async function ownFiles(dir, entry) {
+  const real = await realRoot(dir);
+  const files = await Promise.all([...OWN, ...(entry ? [entry] : [])].map((rel) => contained(dir, rel)));
+  return real ? [path.join(real, "mod.json"), ...files.filter(Boolean)] : [];
+}
+
+// First hit in the layers; hidden: a mod's own files (dir → Promise<paths>).
+async function firstHit(roots, rel, hidden) {
   for (const root of roots) {
     const file = await contained(root, rel);
-    if (file && !(mods.has(root) && sameFile(file, path.join(await realRoot(root), "mod.json")))) return file;
+    if (file && !(hidden.has(root) && (await hidden.get(root)).some((f) => sameFile(file, f)))) return file;
   }
   return null;
 }
@@ -166,14 +174,15 @@ async function mergedBundles(data, mods) {
   return { ...ours, bundles: [...ours.bundles, ...rows] };
 }
 
-// layers: enabled mods' folders, top first (plan 112); ours last. mods: the loaded ones { id, name, dir, bundles }, same order.
+// layers: enabled mods' folders, top first (plan 112); ours last. mods: the loaded ones { id, name, dir, entry?, bundles }, same order.
 // modsJs: `/mods.js` text (mods.mjs modsScript, decision 131).
 export function makeResolver({ dist, data, media, layers = [], mods = [], modsJs = "export default [];\n" }) {
   dist = path.resolve(dist);
   data = path.resolve(data);
   media = path.resolve(media);
-  const modDirs = new Set(layers.map((d) => path.resolve(d)));
-  const distRoots = [...modDirs, dist];
+  const distRoots = [...layers.map((d) => path.resolve(d)), dist];
+  const entries = new Map(mods.map((m) => [path.resolve(m.dir), m.entry]));
+  const hidden = new Map(distRoots.slice(0, -1).map((d) => [d, ownFiles(d, entries.get(d))]));
   const byId = new Map(mods.map((m) => [m.id, m]));
   let merged = null; // built once per run: the layers are fixed
   const urls = pooledUrls(data);
@@ -218,7 +227,7 @@ export function makeResolver({ dist, data, media, layers = [], mods = [], modsJs
       return file ? sendFile(file, request) : json(404, { error: "media_missing" });
     }
     const file =
-      (rel !== "/" && (await firstHit(distRoots, rel, modDirs))) || (await firstHit(distRoots, "index.html", modDirs));
+      (rel !== "/" && (await firstHit(distRoots, rel, hidden))) || (await firstHit(distRoots, "index.html", hidden));
     return sendFile(file || path.join(dist, "index.html"), request, CLIENT);
   };
 }

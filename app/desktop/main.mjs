@@ -473,7 +473,7 @@ async function loadMods() {
   const loaded = mods.filter((m) => m.state === "loaded");
   return {
     layers: arranged.layers,
-    mods: loaded.map((m) => ({ id: m.id, name: m.manifest.name, dir: m.dir, bundles: m.bundles })),
+    mods: loaded.map((m) => ({ id: m.id, name: m.manifest.name, dir: m.dir, entry: m.manifest.entry, bundles: m.bundles })),
     modsJs: modsScript(mods),
   };
 }

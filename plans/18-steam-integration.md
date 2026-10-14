@@ -192,7 +192,7 @@ Mods are folders the shell serves over `app://trivia/` before our own client and
   - `/data/bundles/<mod>:<bundle>/<rel>` → `<mod dir>/data/bundles/<bundle>/<rel>` via `contained()`, only for a loaded mod that lists that bundle; else 404; no colon reaches the file system.
   - Every other `/data/` file: ours only, never overlaid (a mod's `data/pool.json` isn't served).
 - Full conversion: a mod's `index.html` wins the SPA fallback too.
-- Not overlaid: `/media?url=…`, `/api/*` (404), a mod's `mod.json`.
+- Not overlaid: `/media?url=…`, `/api/*` (404), a mod's own files (decision 148: Overlay: a mod's entry and root style.css never shadow our files): its `mod.json`, its `entry` and its root `style.css` (served under `/mods/<id>/` only; an entry `main.js` never replaces our `/main.js`).
 - `--no-mods`: no layers this run (way back from a full conversion).
 - With mods on (decision 123: Achievements in games with mods on: allowed or off?; decision 146: Achievements, mods screen and rich presence with mods on): achievements as without ("Achievements in Steamworks"); flags hidden on player questions; reports ours only; telemetry keeps `isOurs` answers only, `games[].mods` = this run's overlay non-empty; rich presence unchanged (no "modded" token); no achievements line on the mods screen.
 - Path safety: `contained()` compares `realpath`s against the layer root's `realpath` (every root, ours too): symlinks out of a layer miss; `..`, encoded `..`, absolute and drive-letter paths stay inside or miss; files only.

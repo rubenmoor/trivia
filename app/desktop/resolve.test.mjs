@@ -193,7 +193,7 @@ const loaded = list.filter((m) => m.state === "loaded");
 const coded = makeResolver({
   ...dirs,
   layers: loaded.map((m) => m.dir),
-  mods: loaded.map((m) => ({ id: m.id, name: m.manifest.name, dir: m.dir, bundles: m.bundles })),
+  mods: loaded.map((m) => ({ id: m.id, name: m.manifest.name, dir: m.dir, entry: m.manifest.entry, bundles: m.bundles })),
   modsJs: modsScript(list),
 });
 const exported = async (src) => (await import("data:text/javascript," + encodeURIComponent(src))).default;
@@ -236,4 +236,26 @@ test("/mods/<id>/: loaded mods' files only", async () => {
     assert.equal((await get(coded, p)).status, 404, p);
   assert.equal(await text(coded, "/mods/aa/%2e%2e/%2e%2e/secret/key"), "ours index"); // URL-normalised out of /mods/
   assert.equal((await get(plain, "/mods/aa/src/main.js")).status, 404);
+});
+
+test("a mod's entry and root style.css never shadow ours (decision 148)", async () => {
+  put("dist/main.js", "ours main");
+  put("dist/style.css", "ours style");
+  put("code/ee/mod.json", manifest("ee", { entry: "main.js" }));
+  put("code/ee/main.js", "ee main");
+  put("code/ee/style.css", "ee style");
+  put("code/ee/game/theme.css", "ee theme");
+  const ee = await readManifest(path.join(tmp, "code", "ee"), "1.0.0");
+  const resolve = makeResolver({
+    ...dirs,
+    layers: [ee.dir],
+    mods: [{ id: "ee", name: "Mod ee", dir: ee.dir, entry: ee.manifest.entry, bundles: [] }],
+  });
+  assert.equal(await text(resolve, "/main.js"), "ours main");
+  assert.equal(await text(resolve, "/./main.js"), "ours main");
+  assert.equal(await text(resolve, "/style.css"), "ours style");
+  assert.equal(await text(resolve, "/game/theme.css"), "ee theme");
+  assert.equal(await text(resolve, "/mods/ee/main.js"), "ee main");
+  assert.equal(await text(resolve, "/mods/ee/style.css"), "ee style");
+  assert.equal(await text(coded, "/src/main.js"), "ours index");
 });
