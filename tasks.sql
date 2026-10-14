@@ -24656,8 +24656,57 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - check the "Measured" shell bullet ("HD video questions (hardware decode)") still reads right
 - provisional values per `decision 90: Store requirements, languages and controller flags?`; nothing entered in Steamworks
 - Check: `npm run check`', '2026-10-14T23:30:00Z', '2026-10-14T23:37:19Z', 1056, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1067, 134, 'create tasks for plan 134: Beta test and S5 close-out', 'split', 'open', 1000, NULL, 'Split plan 134 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-14T23:38:50Z', NULL, 263, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1067, 134, 'create tasks for plan 134: Beta test and S5 close-out', 'split', 'done', 1000, '2026-10-14, tasks.sql: tasks 1068-1070; all three pending on decision 179 (task 1068''s guard; 1069/1070 get the beta decision from 1068)', 'Split plan 134 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-14T23:38:50Z', '2026-10-14T23:39:38Z', 263, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1068, 134, 'Beta checklist and the test decision', 'work', 'open', NULL, NULL, 'Task 1 of `plan 134: Beta test and S5 close-out`: write the "S5 beta test" checklist and ask the developer for the result. Docs and pm only, no code; workers never tick a row.
+
+## Guard (stop if any fails)
+- `task 682: Record the first beta upload` done: a `beta` build exists with the `colombia` DLC depot.
+- `decision 179: Steamworks app configured (SW-7)? IDs?` answered (Cloud values, Steam Input default, Linux runtime).
+- `task 650: Package the Steam binding in both builds` done (it is).
+- Missing → `pm task-pending-decision` on the pending decision, or stop and say which task is still open.
+
+## Do
+- `plans/18-steam-integration.md`: new section "S5 beta test" after "Steam Cloud test", per the plan''s "The checklist":
+  - intro lines: BuildID and tag `v<version>` (from task 682''s note), `work/steam/<tag>/release-check.md` path, skipped release check steps (`decision 86: Release check fails on licences and the release bar: fix before the first beta upload, or skip for the beta?`), the `licenses` step result (`decision 82: Freesound API for a paid Steam release (OQ-45)`), date, second machine OS + Linux distro/version (`decision 174: Store requirements: beta test distro and real-pad run?`), Steam account used; unknowns left for the developer
+  - one table per machine (check | result | note), results empty: second machine rows, Cloud row (or plan 87''s "Steam Cloud test" table if `decision 75: Steam Cloud test passed?` is pending; don''t copy it), no-valid-Steam-user rows (`decision 111`), optional rows (second account / Family Sharing, `--import-save`)
+  - plan 48''s per-platform rows as one row; no real-Deck rows (plan 90); no new rows in `authoring/steam/release_check.py`
+- Same file: the "Local build start test" result line points at "S5 beta test" (`decision 39: Local builds start offline?`).
+- Release check failed or a prerequisite missing → note it, `pm task add` in the owning plan, stop without the decision.
+- `did=$(pm decision add "S5 beta test passed?" --body - --option "passed" --option "passed with minor issues (list them; they go to the backlog)" --option "failed (list the failing rows)")`; body: the whole checklist as Markdown tables, BuildID/tag/branch (never the password), switching to `beta` and installing the DLC, starting without Steam (Linux `./trivia`, Windows `Trivia.exe` from the install folder, Steam not running), how to report (copy the tables, fill result and note, "skipped" needs a reason, name the Linux distro), reminder to answer decision 75 too if pending.
+- `pm task-pending-decision` for tasks 2 (Record the beta result) and 3 (S5 docs close-out) of plan 134 on `did`.
+
+## Done when
+- The section exists, the decision is pending, tasks 2 and 3 wait for it.', '2026-10-14T23:39:31Z', NULL, 1067, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1069, 134, 'Record the beta result', 'work', 'open', NULL, NULL, 'Task 2 of `plan 134: Beta test and S5 close-out`: copy the developer''s answer to "S5 beta test passed?" (added by task 1 of plan 134: Beta checklist and the test decision) into `plans/18-steam-integration.md` "S5 beta test". Docs and pm only.
+
+## Do
+- Fill the tables with the reported results, date and BuildID.
+- `passed`: done; the note says `decision 174: Store requirements: beta test distro and real-pad run?` and the release check''s manual rows (`offline`, `cloud`, `signoff`, … in `authoring/steam/release_check.py`) can be answered now.
+- `passed with minor issues`: each issue into `plans/backlog.md` with the owning plan file''s ID prefix.
+- `failed`: per failing row `pm task add` in the owning plan (row, note, repro steps, that plan''s priority). Owners: 85 binding/overlay/keyboard/language, 87 saves/Cloud/notice, 89 builds/depots/upload, 130 Steamworks values, 132 media, 86 achievements, 93 flags, 113 peek, 45/46 input; owner done → task in plan 134. Then `pm decision add "S5 beta re-test passed?"` with only the failed rows plus the full-game row; this task and task 3 (S5 docs close-out) pending on it; stage and stop without closing. Repeat until passed.
+- A finding that settles something (e.g. the Linux runtime) → D-entry in `plans/decisions.md` and `pm decision record`.
+
+## Done when
+- Every non-optional row shows pass.', '2026-10-14T23:39:32Z', NULL, 1067, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1070, 134, 'S5 docs close-out', 'work', 'open', NULL, NULL, 'Task 3 of `plan 134: Beta test and S5 close-out`, after task 2 (Record the beta result). Docs and pm only; never drop or edit tasks of other plans; pm''s cleanup sets the milestone status.
+
+## Guard
+- `pm show p134`, `pm plans list`: every other milestone-10 plan done.
+  - remaining task waiting on a pending decision → `pm task-pending-decision <this task> <that decision>`, stop
+  - task 673 (Store media: en and de question shots and trailers once their pools land) or another task waiting only for milestone 9 content → `pm decision add "S5 close-out: wait for <task> or carry it over?"`, options `close S5 without it (the task stays in plan 88; noted in plan 11)`, `wait`; this task pending on it
+  - any other open task → stop without changes, say so
+
+## Do (per plan 134 "Tasks" 3)
+- `plans/11-steam.md`: S5 row in the phases table done (date, link to "S5 beta test"); Launch (S6) gate row "Beta test passed (masterplan 10 part 11)" ✓ with date.
+- Deferred with dated notes, in plan 18''s Tasks list and `plans/11-steam.md`: SW-13 Remote Play Together (after IN-6), SW-14 macOS (developer account, notarization), online co-op (decision 111, eventually, not planned).
+- `plans/18-steam-integration.md`: SW-6, SW-7, SW-10 `[x]` with notes if their plans left them open (check, don''t redo); SW-12 as plan 90 left it (Valve''s result or "review in S6"; real-Deck test pending a Deck, `decision 125`); status line `stub` → `draft` or `agreed`.
+- `plans/17-publishing.md` (PUB-6..PUB-11), `plans/15a-ui-translation.md` (LUI-6), `plans/14-input.md` (Steam Input default, Deck line): ticks checked, status lines current; `plans/README.md` status column to match.
+- `plans/project.md` "Steam track": S5 done line (date, beta BuildID, link), S5 items ticked, resolved open-question rows removed.
+- S6 scope changed (Deck review moved, task 673 carried over, Linux distro / pad-run facts for `decision 90: Store requirements, languages and controller flags?`, a DLC finding) → short dated note in `plan 11: masterplan` via `pm plan edit 11 --body -`.
+
+## Done when
+- The task note cites milestone 10''s "Done when": beta installed from Steam on a second machine and played by the family; without a Steam user nothing persists and flags are off; with one, saves sync through Steam Cloud (decision 75 or the beta Cloud row); Deck review requested and its result (or S6 deferral) noted in plan 18; `qgen validate` unaffected.', '2026-10-14T23:39:32Z', NULL, 1067, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -27399,6 +27448,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (992, 801, '2026-10-14T23:36:33Z', '2026-10-14T23:36:59Z', 'done', NULL, 0, '773a52d0020c4496901d504ab9a8ba8316db4201', 'claude-opus-5-5[1m]', 'f55aa054-c14b-48be-a5cc-1a8a0cde9add', 9, 18, 2318, 296148, 26988, 0.3215656, 2472458);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (993, 1066, '2026-10-14T23:36:59Z', '2026-10-14T23:37:24Z', 'done', NULL, 0, '9c0496a7a43c17fc9c98bee8c25dc44f5e9bf5b8', 'claude-opus-5-5[1m]', '3627bc4c-4841-4c27-bab6-246135c59d31', 6, 10, 1509, 145008, 24383, 0.25428560000000006, 2472458);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (994, 263, '2026-10-14T23:37:24Z', '2026-10-14T23:39:01Z', 'done', NULL, 0, '28002d4b6425780d32080df59b56deccb663ac6e', 'claude-opus-5-5[1m]', '5b31f5d1-0116-43cd-8749-15542bfe3659', 13, 26, 9066, 788526, 76202, 0.94874519999999984, 2472458);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (995, 1067, '2026-10-14T23:39:01Z', '2026-10-14T23:39:43Z', 'done', NULL, 0, '63da7cd2f56004b8ee5027067b5a5ba006efca91', 'claude-opus-5-5[1m]', '8edca8c4-b456-48c6-8285-3a1bf22eac47', 7, 14, 4333, 254913, 34586, 0.41438660000000005, 2472458);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -27655,6 +27705,9 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1045, 177);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1045, 179);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1050, 183);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1051, 184);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1068, 179);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1069, 179);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1070, 179);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
