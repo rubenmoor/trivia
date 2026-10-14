@@ -990,3 +990,20 @@ Template:
   - `providers/freesound.py` may stay as code but isn't asked; no SW-9 exclusion rule needed.
   - Slightly fewer everyday sounds in future batches.
 - Supersedes / related: D-36, D-45, D-98; OQ-45 (Freesound); MP-6; pm decisions 66, 82; plan 42
+
+## D-104: Shipped media: formats, names, encode cache, budget (SW-9)
+- Date: 2026-10-14
+- Context: plan 132 (Media bundle for shipping); pm decision 185 (Shipped media: formats, names and where the encode runs (SW-9)). The content depot shipped the raw cache: 2549 MB, 1100 files, 854 over 1 MB.
+- Decision:
+  - `app/desktop/stage-media.mjs` encodes (build tooling, run by `trivia-desktop-build`), not `trivia-media`
+  - images (`.jpg .jpeg .png .webp`): WebP lossy (`cwebp`, alpha kept), fit inside 3840×2160, never upscaled (D-48), q 82 → q 60 while > 1 MB; GIF, SVG as is
+  - audio: Opus in Ogg (`.opus`), 96 kb/s; video: WebM VP9 CRF 33 + Opus, ≤ 1920×1080; no AVIF (no encoder in the shell, slower)
+  - name: `shippedName(url)` (`resolve.mjs`) = `cacheName`'s stem + shipped extension; resolver tries `cacheName` (raw cache, dev), then `shippedName` (packaged); no manifest, D-17 keys unchanged
+  - encode cache `work/ship-media/<stem>-<settings hash>.<ext>` (hash: tool versions + parameters), hard links into `build/media/`
+  - one `credits.json` / `CREDITS.md` for all depots, no per-DLC split
+  - budget `app/desktop/media-budget.json` (MB): `content` 950, `dlc` per pack (`colombia` 75), `default_dlc` 75, `file` 5, `video` 100; `stage-media.mjs --check` = release check step `media-budget`
+- Consequences:
+  - 2549 → 679 MB (content 630, colombia 50); archives ~0.83 GB; store storage 3 → 1.5 GB (`17a-store-page.md`)
+  - 58 files still > 1 MB (3 videos, 55 WebP up to 2.3 MB): listed, not a failure
+  - dev runs keep playing the raw cache
+- Supersedes / related: D-17, D-48, D-93, D-95; SW-9; pm decisions 66, 90, 112, 185; plan 132

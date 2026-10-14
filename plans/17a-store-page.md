@@ -507,7 +507,7 @@ Typographic capsules, library art and the game icon (decision 77: store capsule 
 Values for Steamworks → Edit Store Page → "Basic Info" (requirements, languages) and "Controller" (plan 88 task 3). Provisional values for the store page entry and coming-soon page, per `decision 90: Store requirements, languages and controller flags?` (applied 2026-10-14, `task 688`); final values measured on the release candidate (milestone 11), with a Steam Deck test. Field names are from memory (no web access at the task); recheck them at entry.
 
 ### Measured
-- Depots from the local `trivia-desktop-build --dir` (0.1.0, rechecked 2026-10-14; part 6's media bundle not built yet, `task 260: write plan: Media bundle for shipping (SW-9)`): `windows` 0.41 GB, `linux` 0.36 GB, `content` (media) 2.55 GB → installed 2.96 GB (Windows), 2.91 GB (Linux)
+- Depots from the local `trivia-desktop-build --dir` (0.1.0, re-measured 2026-10-14 with the media bundle, `plan 132: Media bundle for shipping (SW-9)`, D-104): `windows` 0.41 GB, `linux` 0.36 GB, `content` (media) 0.63 GB, `colombia` DLC 0.05 GB → installed 1.09 GB (Windows), 1.04 GB (Linux), DLC included; before the bundle 2.96 / 2.91 GB
 - Shell: Electron 43 (Chromium); no WebGL, no 3D; the heaviest load is HD video questions (hardware decode)
 - Played on: the author's laptop only (NixOS 26.05, i5-12500H, 64 GB, Iris Xe + RTX 4060 Mobile); Linux build smoke-tested under `steam-run` (FHS runtime, task 678). Clean Windows and Ubuntu start tests (18, "Local build start test"): not filled yet
 
@@ -520,7 +520,7 @@ Values for Steamworks → Edit Store Page → "Basic Info" (requirements, langua
 | Graphics | DirectX 11 GPU with H.264 video decode (Intel HD 520 or better) | any GPU from 2018 on |
 | DirectX | Version 11 | Version 11 |
 | Network | none | none |
-| Storage | 3 GB available space | 3 GB available space |
+| Storage | 1.5 GB available space | 1.5 GB available space |
 | Additional notes | Plays offline; 1280×720 or larger; keyboard, mouse or gamepads; best on a TV | same |
 
 ### Requirements (SteamOS + Linux)
@@ -531,10 +531,10 @@ Values for Steamworks → Edit Store Page → "Basic Info" (requirements, langua
 | Memory | 4 GB RAM | 8 GB RAM |
 | Graphics | GPU with OpenGL/Vulkan and H.264 video decode | any GPU from 2018 on |
 | Network | none | none |
-| Storage | 3 GB available space | 3 GB available space |
+| Storage | 1.5 GB available space | 1.5 GB available space |
 | Additional notes | Native Linux build; plays offline | same |
 
-- Storage: estimate per decision 90 (3 GB now, grows with content); the installed size rounded up once part 6's bundle (SW-9) exists
+- Storage: per decision 90 (estimate, grows with content): 1.5 GB = measured 1.09 GB rounded up; the media budget (`app/desktop/media-budget.json`: 950 + 75 MB) plus the OS depot still fits
 - Ubuntu 22.04: Electron's own floor, not tested; the non-Nix start test is the Steam beta test (decision 39, `task 263: write plan: Beta test and S5 close-out`): its distro replaces it
 - macOS: none (no build)
 

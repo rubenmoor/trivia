@@ -50,6 +50,7 @@ A provider that answers 429 is put on cooldown for its `Retry-After`, so later s
 - One throttle per provider (minimum interval, `RateLimited` per provider). `download.http_get` (`authoring/tools/download.py`, D-90) stops naming Commons in its rate-limit message; the bearer token stays limited to Commons' API URL.
 - The review tool shows the provider and licence on each candidate; the search modal searches all providers by the same order.
 - Prompts (`house-style.md` "Media", `draft.md`, `review.md`, `rate.md`, `revise.md`, `concepts-facets.md`): "Wikimedia Commons" becomes "the media sources", with one line per provider on what it is good for. The rules on essential media stay strict: a clear, recognisable photo or sound of exactly that thing.
+- Shipped formats ≠ cache formats (SW-9, D-104): the cache (`media/`, `trivia-media sync`) keeps each provider's file as downloaded; only the desktop build re-encodes (WebP, Opus, WebM) under `shippedName`; keys (`file_url`, D-17) and `cacheName` unchanged, so providers need nothing for shipping.
 
 ## How to check it worked (MP-11)
 Compare the first batch with providers against batch-6: time spent in `media`/`research`/`sync`, the share of "no adequate media" `needs_work`, picks per provider, and the developer's media rejections in the review tool.

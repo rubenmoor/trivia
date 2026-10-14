@@ -75,7 +75,7 @@ Logged in [`open-questions.md`](open-questions.md) (frozen 2026-10-12; questions
 ## Risks
 - **Content volume and factual errors** are the most likely reason for bad reviews. A wrong answer in a public product costs more than at home. See 16 (quality bar) and 13 (a "report this question" action instead of the gamemaster's «Saltar y quemar para todos»).
 - **Media licensing:** ~290 Commons files under nine license types. ShareAlike, PD-US-only and GFDL need care in a worldwide commercial release (17).
-- **Install size:** the media cache is ~720 MB today and grows with the pool. It needs resizing and re-encoding before shipping (SW-9).
+- **Install size:** ~1.1 GB installed (2026-10-14): media re-encoded for shipping (SW-9, D-104) 2549 → 679 MB; grows with the pool, capped by `app/desktop/media-budget.json` (`stage-media.mjs --check`, release check step `media-budget`).
 - **Engine port regressions:** the referee has subtle supply and matching rules. 12 builds fixtures from the Python engine before the port.
 - **Scope creep:** competitive mode and couch co-op are explicitly "Later". The release doesn't wait for them.
 
