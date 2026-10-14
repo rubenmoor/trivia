@@ -36,13 +36,18 @@ Decided (D-102): MIT code, reserved questions, one public repo.
 - **Questions:** all rights reserved, `LICENSE-content.md` (`authoring/data/`, `app/data/`); personal, non-commercial play from the repo allowed.
 - **Not covered:** media (per file), fonts (OFL), UI audio, npm deps.
 - **Public:** whole repo, release content included (D-17 stays); buyers get `pool.json` in plain JSON anyway, the licence forbids reuse.
-- **Lawyer check owed:** protectability of the AI-drafted, human-reviewed pool; wording next to MIT; forks of unlicensed commits; PUB-10.
+- **Lawyer check owed:** protectability of the AI-drafted, human-reviewed pool; wording next to MIT; forks of unlicensed commits. PUB-10 is settled ("AI disclosure").
 
 ## AI disclosure
 Steam requires developers to disclose AI-generated content on the store page (content survey). For this game:
 - **Pre-generated content:** questions, hints, answers and translations are drafted by Claude, fact-checked by Claude with web search, and reviewed by a person or by Claude (D-7, D-10, D-32, D-33). Describe the review steps honestly.
 - **Not AI:** the images (Wikimedia Commons, by people), the music, the code's runtime (no AI at play time; no live generation).
-- Check Anthropic's terms for commercial use of outputs (they allow it for paid API use; the pipeline runs on `claude -p` under the author's account, so check the plan type).
+- **Anthropic's terms (PUB-10):** outputs may be sold. `claude -p` on the developer's Claude subscription (D-10) → Consumer Terms (anthropic.com/legal/consumer-terms, effective 2025-10-08, read 2026-10-14). Anthropic assigns all its rights in Outputs to the user (§4, "if any": no promise they're protectable); no non-commercial limit (that applies only to evaluation access); no attribution needed. Questions, translations and code may ship in a paid game.
+  - Competing-models clause (§3): doesn't apply, since the game trains no model and resells no Claude access.
+  - Scripts (§3): automated access is banned unless Anthropic "explicitly permit[s] it". Running headless Claude Code (the published `claude` binary, the developer's own login) is permitted: code.claude.com/docs/en/legal-and-compliance (read 2026-10-14), "ordinary, individual usage of Claude Code and the Agent SDK".
+  - Trademarks (§12 "Use of our brand"): no Anthropic or Claude name or logo on the store page or in the game without written permission. The disclosure says "LLM", which is fine.
+  - Usage Policy (anthropic.com/legal/aup, version effective 2026-11-12, read 2026-10-14): its AI-disclosure rule is for live chatbots, which the game doesn't have.
+  - API keys would fall under the Commercial Terms (effective 2025-06-17), which have the same ownership of Outputs. No reason to switch.
 
 ## Steamworks and store
 - **Account:** Steamworks partner signup, identity and tax interview (bank details, a W-8BEN for non-US individuals or the company equivalent), and a **$100 app credit** per game (recouped after $1,000 revenue). Holder: the developer as a person, W-8BEN, after a tax advisor check; store Developer/Publisher as a label; company later via app transfer (D-98).
@@ -64,5 +69,5 @@ Steam requires developers to disclose AI-generated content on the store page (co
 - [ ] PUB-7 Name and trademark check for «Living Room Trivia» and «Trivia en Familia» (D-50); if it fails, OQ-34 reopens.
 - [ ] PUB-8 Store page: texts, capsules, screenshots, trailer, AI disclosure, privacy line. *Plan: pm plan 88 (drafts in `17a-store-page.md`, capsule art: pm decision 77, scripted screenshots, scripted trailer `trivia-trailer`).*
 - [ ] PUB-9 Content survey and age rating.
-- [ ] PUB-10 Check Anthropic's commercial-use terms for the generated content.
+- [x] PUB-10 Check Anthropic's commercial-use terms for the generated content. *pm plan 129, 2026-10-14: Consumer Terms (effective 2025-10-08) apply to `claude -p` on the developer's subscription. Outputs are assigned to the user and may be sold, with no attribution needed. Headless Claude Code is explicitly permitted. Disclosure facts unchanged. Details are under "AI disclosure".*
 - [ ] PUB-11 Price (D-98): confirm $9.99 against comparable titles; Valve's recommended regional prices (check EUR, MXN, COP, LATAM-USD); launch discount % and length per Valve's discount rules; every pack DLC free.
