@@ -16746,7 +16746,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - New dependencies: none (decision needed otherwise).
 - Done when: a fresh-save game plays a few levels in a browser on the dev server (throw-away Playwright, decision 6), the save lands in the printed dir, a cached media file plays; per-commit checks pass; `trivia` still works.
 - Readable build (`plan 111: Readable client build`, decision 124: Readable client build: output naming rule for mod overrides; found by task 947): the built-client command (`vite preview`) serves the readable `dist/` tree as built (`main.js`, `game/Game.svelte.js`, `vendor/svelte/…`, `.map` files, `.svelte.css`), no rewrite or fallback that hides a missing module; `vite` dev is unaffected.', '2026-10-13T15:19:47Z', '2026-10-14T04:08:57Z', 759);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (763, 99, 'trivia-desktop --import-save: envelope check, --force with backup; raise the family-switch decision', 'work', 'open', NULL, NULL, 'Step 2 of plan 99. The family''s `state/game.json` (save version 2) moves into the desktop build.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (763, 99, 'trivia-desktop --import-save: envelope check, --force with backup; raise the family-switch decision', 'work', 'done', NULL, '2026-10-13, app/desktop/save.mjs (importText: envelope, --force copy to backup/game-import-<stamp>.json), app/desktop/main.mjs (--force, exit 1 on failure, prints paths), README.md; checked on a copy of state/game.json in a temp TRIVIA_SAVE_DIR; decision 150 raised, task 765 pending on it', 'Step 2 of plan 99. The family''s `state/game.json` (save version 2) moves into the desktop build.
 
 - Extend the existing `--import-save <file>` in `app/desktop/main.mjs` (+ `app/desktop/save.mjs`):
   - check the envelope: JSON object with numeric `version` (the client upgrades v2 on load, `engine/save.ts`; no Python `save.migrate()`); a bad file: clear error, exit non-zero, nothing written;
@@ -16759,7 +16759,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
   `pm decision add "Family save imported into trivia-desktop?" --option "imported, family plays trivia-desktop" --option "not yet" --body …` (check `pm decision add -h` for the kind flag). Body: the exact command for the gamemaster (`trivia-desktop --import-save state/game.json`, run with Steam running and the family''s Steam account logged in, since the save folder is per Steam user, plan 87); what to check (players, seen counters, a round plays); from then on the family plays `trivia-desktop` (later the Steam beta).
 - Make the step-4 task ("Delete app/server, ServerStore, the trivia command and nix build .#app") wait on it: `pm task-pending-decision <that task id> <decision id>` (find the id with `pm show p99`).
 - Binding: decision 111: Steam only; decision 98: Browser game: corrupt or newer state/game.json (backup behaviour stays in `save.mjs`).
-- Done when: the import works as above; the decision is raised and the deletion task waits on it; per-commit checks pass.', '2026-10-13T15:19:47Z', NULL, 759);
+- Done when: the import works as above; the decision is raised and the deletion task waits on it; per-commit checks pass.', '2026-10-13T15:19:47Z', '2026-10-14T04:14:20Z', 759);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (764, 99, 'Move authoring''s Python imports off app/server; authoring reads the desktop save', 'work', 'open', NULL, NULL, 'Step 3 of plan 99. Authoring stops importing from `app/server/` so step 4 can delete it.
 
 - Today `authoring/tools/layout.py` puts `app/server` on `sys.path`; imports: `paths` (layout.py, save_file.py, categories.py), `save.load` (save_file.py), `media_cache` (qgen.py, download.py, media.py, authoring/server/main.py, overview.py, media_stats.py), `http_base.BaseHandler` (authoring/server/main.py). Check with `grep -rn "app/server\|app.server\|import paths\|import save\|media_cache\|http_base" authoring`.
@@ -25160,6 +25160,14 @@ Options
 - keep the readable build as is
 - bundle the Svelte runtime: one `vendor/svelte.js` (≈ 100 of the 198 files), our modules still one file each; mods importing `/vendor/svelte/…` by path change (follow-up task in plan 111)
 - other: say what', NULL, NULL, '2026-10-14T04:11:27Z', NULL, 948, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (150, 'Family save imported into trivia-desktop?', 'pending', '["imported, family plays trivia-desktop", "not yet"]', '`plan 99: Retire the browser game and the Python game server`, step 2 (`task 763`). The family''s save moves from the browser game (`state/game.json`) into the desktop build; `task 765: Delete app/server, ServerStore, the trivia command and nix build .#app` waits for this answer.
+- Start Steam, logged in with the family''s Steam account (the save folder is per Steam user, `plan 87`).
+- From the repo''s dev shell: `trivia-desktop --import-save state/game.json`
+  - prints the source and the target `game.json` (the Steam user''s `<steamid64>/` folder); `state/game.json` stays untouched
+  - refuses if that user already has a save; `--force` replaces it and keeps the old one in `backup/game-import-<stamp>.json`
+  - the game starts right after the import
+- Check: «¿Quién juega?» lists the family''s players with their games; recently seen questions don''t come back; a round plays.
+- From then on the family plays `trivia-desktop` (later the Steam beta); the browser game and `trivia` go with `task 765`.', NULL, NULL, '2026-10-14T04:13:54Z', NULL, 763, NULL, 'once', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -26047,6 +26055,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (877, 332, '2026-10-14T03:52:48Z', '2026-10-14T03:53:18Z', 'done', NULL, 0, 'ef577b6bee5c1aa2a6151d51b77d32998976712e', 'claude-opus-5-5[1m]', '51a9304b-b401-4dbe-966c-9580d1a57980', 10, 18, 2856, 317003, 34756, 0.39864060000000007, 1963349);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (878, 762, '2026-10-14T03:53:19Z', '2026-10-14T04:09:09Z', 'done', NULL, 0, '340fde5cd91d25637772bf7ba25b32115f0d238b', 'claude-opus-5-5[1m]', '4374e151-7e08-42c9-a061-4e4fb0b437bc', 71, 136, 34027, 6082227, 115226, 2.8193374, 1963349);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (879, 948, '2026-10-14T04:09:09Z', '2026-10-14T04:11:36Z', 'blocked', NULL, 0, 'dadf42da4e07f210437202e7e3bfdd5128e8adc5', 'claude-opus-5-5[1m]', '0c8cb10c-b8bf-4ec9-a89f-baa6a5d15165', 17, 34, 7944, 723915, 40814, 0.63031100000000007, 1963349);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (880, 763, '2026-10-14T04:11:37Z', '2026-10-14T04:14:29Z', 'done', NULL, 0, '88e000bbbcceee55e330fbde6442eaf118fdd2f4', 'claude-opus-5-5[1m]', 'eb1a0964-900f-4e56-bd5b-3d427b7966fe', 18, 32, 7478, 684333, 40363, 0.60945860000000007, 1963349);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -26257,6 +26266,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (742, 105);
 INSERT INTO task_decision (task_id, decision_id) VALUES (744, 106);
 INSERT INTO task_decision (task_id, decision_id) VALUES (748, 109);
 INSERT INTO task_decision (task_id, decision_id) VALUES (750, 110);
+INSERT INTO task_decision (task_id, decision_id) VALUES (765, 150);
 INSERT INTO task_decision (task_id, decision_id) VALUES (783, 110);
 INSERT INTO task_decision (task_id, decision_id) VALUES (786, 137);
 INSERT INTO task_decision (task_id, decision_id) VALUES (845, 116);

@@ -84,13 +84,13 @@ function steamSdkDir() {
 }
 
 const USAGE =
-  "known flags: --import-save <file>, --no-mods, --publish-mod <folder> [--changenote <text>] [--visibility public|friends|unlisted|private] [--content-only] [--dry-run]";
+  "known flags: --import-save <file> [--force], --no-mods, --publish-mod <folder> [--changenote <text>] [--visibility public|friends|unlisted|private] [--content-only] [--dry-run]";
 // Our flags' namespace; anything else (Electron/Chromium switches, the dev app path, Steam's) passes.
-const OWN = /^--(import|export|save|trivia|no-mods|publish|changenote|visibility|content-only|dry-run)/;
+const OWN = /^--(import|export|save|trivia|no-mods|force|publish|changenote|visibility|content-only|dry-run)/;
 const VALUE = { "--import-save": "a file", "--publish-mod": "a folder", "--changenote": "a text", "--visibility": "a value" };
-const SWITCH = new Set(["--no-mods", "--content-only", "--dry-run"]);
+const SWITCH = new Set(["--no-mods", "--force", "--content-only", "--dry-run"]);
 
-/** Our flags from argv: `{ importSave, noMods, publish }`, or `{ error }` for an unknown own-looking flag or a missing value. */
+/** Our flags from argv: `{ importSave, force, noMods, publish }`, or `{ error }` for an unknown own-looking flag or a missing value. */
 function parseArgs(argv) {
   const v = {};
   for (let i = 1; i < argv.length; i++) {
@@ -107,6 +107,7 @@ function parseArgs(argv) {
   }
   const extra = ["--changenote", "--visibility", "--content-only", "--dry-run"].filter((f) => v[f]);
   if (!v["--publish-mod"] && extra.length) return { error: `${extra[0]} needs --publish-mod; ${USAGE}` };
+  if (v["--force"] && !v["--import-save"]) return { error: `--force needs --import-save; ${USAGE}` };
   if (v["--publish-mod"] && (v["--import-save"] || v["--no-mods"]))
     return { error: `--publish-mod runs alone; ${USAGE}` };
   if (v["--visibility"] && !(v["--visibility"] in VISIBILITY))
@@ -118,7 +119,7 @@ function parseArgs(argv) {
     contentOnly: !!v["--content-only"],
     dryRun: !!v["--dry-run"],
   };
-  return { importSave: v["--import-save"] ?? null, noMods: !!v["--no-mods"], publish: publish || null };
+  return { importSave: v["--import-save"] ?? null, force: !!v["--force"], noMods: !!v["--no-mods"], publish: publish || null };
 }
 
 const args = parseArgs(process.argv);
@@ -346,16 +347,17 @@ async function upload(p, opts, out) {
   }
 }
 
-async function importSave(file) {
-  if ((await saveFile.read()) !== null) {
-    console.error(`trivia: --import-save: ${saveFile.file} exists, not overwritten`);
-    return;
-  }
+/** Source file → this user's save; the source stays untouched. → ok. */
+async function importSave(file, force) {
+  const source = path.resolve(file);
   try {
-    await saveFile.write(await readFile(file, "utf8"));
-    console.error(`trivia: imported ${file} → ${saveFile.file}`);
+    const kept = await saveFile.importText(await readFile(source, "utf8"), { force });
+    console.error(`trivia: imported ${source} → ${saveFile.file}`);
+    if (kept) console.error(`trivia: old save kept in ${kept}`);
+    return true;
   } catch (err) {
-    console.error(`trivia: --import-save ${file}: ${err.message}`);
+    console.error(`trivia: --import-save ${source}: ${err.message}`);
+    return false;
   }
 }
 
@@ -376,7 +378,10 @@ async function start() {
       app.exit(1);
       return;
     }
-    await importSave(args.importSave);
+    if (!(await importSave(args.importSave, args.force))) {
+      app.exit(1);
+      return;
+    }
   }
 
   const dirs = roots();

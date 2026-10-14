@@ -82,21 +82,39 @@ export function makeSaveFile(dir, { rename = fs.rename } = {}) {
     }
   }
 
-  async function backup(kind) {
-    if (!KINDS.has(kind)) throw new Error(`bad backup kind: ${kind}`);
+  /** game.json → backup/game-<kind>-<stamp>.json, moved or copied. */
+  async function stash(kind, op) {
     await fs.mkdir(backups, { recursive: true });
     const base = path.join(backups, `game-${kind}-${stamp()}`);
     for (let n = 1; ; n++) {
       const target = n === 1 ? `${base}.json` : `${base}-${n}.json`;
       if (await exists(target)) continue;
-      await move(file, target);
+      await op(file, target);
       return target;
     }
+  }
+
+  async function backup(kind) {
+    if (!KINDS.has(kind)) throw new Error(`bad backup kind: ${kind}`);
+    return stash(kind, move);
+  }
+
+  /** `text` as the save; a present save needs `force` and is copied to backup/ first. → backup path | null. */
+  async function importText(text, { force = false } = {}) {
+    if (!envelope(text)) throw saveError("not a save (JSON object with a numeric version, at most 10 MB)");
+    if ((await read()) !== null) {
+      if (!force) throw saveError(`${file} exists, not overwritten (--force: replace it, old one to backup/)`);
+      const kept = await stash("import", (from, to) => fs.copyFile(from, to));
+      await write(text);
+      return kept;
+    }
+    await write(text);
+    return null;
   }
 
   async function dropStaleTemp() {
     await fs.rm(tmp, { force: true });
   }
 
-  return { file, read, write, backup, dropStaleTemp };
+  return { file, read, write, backup, importText, dropStaleTemp };
 }
