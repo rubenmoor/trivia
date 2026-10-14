@@ -7117,6 +7117,65 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 ## Done when
 - Plan 17 holds PUB-10''s line with source, the PUB-7 findings table and result, the PUB-6 checklist with App ID and payment date; PUB-6, PUB-7, PUB-10 `[x]`.', '2026-10-14T21:35:41Z', 253);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (130, 10, 'Steamworks app configuration (SW-7)', 700, 'SW-7 (masterplan 10 part 2): the exact Steamworks values the developer enters for the base app and each free DLC app, as one checklist in `plans/18-steam-integration.md`, confirmed through one pm decision; then the real App ID replaces Spacewar 480 in the repo. Docs and pm, plus a one-constant code change; no Steamworks access for workers (they never log in, never enter values). Steam only (decision 111: Steam only: no effort outside Steam): no values for running outside Steam, no DRM, no `restartAppIfNecessary`, no anti-tamper.
+
+## Binding
+- decision 67: Steamworks account holder (OQ-33): person or company?: person; the app comes from `plan 129: Partner account, name check and AI terms (PUB-6, PUB-7, PUB-10)` via decision 177 "Steamworks app created? App ID?" (pending).
+- decision 66: Price model (OQ-33): bundles are free DLC, own store entries, optional install; DLC needs no app credit.
+- decision 110: Regional packs at launch (RG-5, OQ-46): only `colombia` ships, es + en, off by default.
+- decision 84: SteamCMD source and depot split for Steam uploads: depots `windows`, `linux`, `content`, one install folder; `SetLive` beta only; `default` set only in the web UI, empty until S6.
+- decision 125: Steam Deck: best effort, review without a Deck at hand: the Gamepad template as Steam Input default is a precondition of `plan 90: Steam Deck review and Deck test (SW-12)`''s review request.
+- decision 90: Store requirements, languages and controller flags?: store-page languages and controller flags (Partial) live in `plans/17a-store-page.md`; not repeated here.
+- decision 152: Manual safe start: --no-mods only: no second Steamworks launch option.
+- decision 26: Launch languages (OQ-31) / decision 27 (Spanish variants): latam (es-419), spanish (es-ES), english, german.
+- decision 78 / decision 176 "Store names pass PUB-7?" (pending): localized names; if PUB-7 fails, the names row waits for the new OQ-34 decision.
+
+## Reuse, don''t copy (point to these sections)
+- Auto-Cloud: plan 18 "Steam features" → "Auto-Cloud values for SW-7" (`plan 87: Steam Cloud saves`).
+- Achievements: plan 18 "Achievements in Steamworks"; entered via decision 140 "Achievements entered and published in Steamworks?" (`plan 86: Achievements (SW-11)`).
+- Rich presence: `app/desktop/steam-presence.vdf` (`plan 85: Steamworks binding in the shell (SW-8)`).
+- Depots, `steam.json`, DLC depots, branches: plan 18 "Builds and depots" (`plan 89: Builds, depots and upload (SW-10, SW-6)`); decision 89 "Steamworks App ID, depot IDs and beta branch entered?" already asks for the IDs: the new decision asks the same plus the rest, and says "answer decision 89 with ''see decision N''".
+- Store fields (texts, languages table, controller flags, requirements, capsules): `plans/17a-store-page.md`, entered via `task 672: Store page entry checklist and PUB-8 close-out`; DLC store texts via decision 173.
+- Workshop: decision 135 "Steamworks: enable Workshop …" (milestone 15), not here.
+- Deck review request: plan 90, not here.
+
+## Values (task 1 writes them as checklist rows; field names from memory, "recheck at entry")
+- **App:** App ID from decision 177; type Game.
+- **Names (D-50):** default/english «Living Room Trivia»; latam + spanish «Trivia en Familia»; german «Wohnzimmer-Quiz» (decision 78); in-game `productName` «Trivia» unchanged (plan 18 "Exe metadata").
+- **Installation folder:** `LivingRoomTrivia` (Cloud paths don''t depend on it).
+- **Launch options** (Installation → General), no arguments, no Proton forcing:
+  - Windows, 64-bit: executable `Trivia.exe`
+  - Linux + SteamOS, 64-bit: executable `trivia` (the `after-pack.mjs` launcher, adds `--no-sandbox`; binary `trivia-bin`)
+  - Linux runtime: Steam Linux Runtime (current "sniper"/3.0 if Steamworks offers the choice; recheck); the beta test (`task 263: write plan: Beta test and S5 close-out`) confirms it starts
+  - never `TRIVIA_DEV_STEAM_USER`, `--no-mods` or other dev args
+- **Redistributables:** none (Electron ships its runtime).
+- **Depots** (Installation → Depots): `windows` (OS Windows, 64-bit), `linux` (OS Linux, 64-bit), `content` (all OS), language "all" for each; plus `colombia` (all OS, tied to the colombia DLC app); IDs → `authoring/steam/steam.json` (task 2 / `task 681: First beta upload: checklist and decision`).
+- **Free DLC per shipped pack:** base app → "All Associated Packages, DLC, Demos And Tools" → "Add New DLC": `colombia`, name «Regional: Colombia» (es, es-ES, en «Regional: Colombia»; de «Regional: Kolumbien» only once a de pack pool ships), price free, depot `colombia` linked to it, optional (installed when owned and ticked in Properties → DLC); the base app lists it; store texts per 17a "Free DLC". Only packs in `app/data/bundles/` at upload time.
+- **Branches** (SteamPipe → Builds): `default` empty until S6; `beta` password-protected, password with the developer only, never in a file.
+- **Steam Cloud:** plan 18''s Auto-Cloud values (quota 1 file / 20 MB; root `WinAppDataRoaming`, `trivia/save/{64BitSteamID}`, `game.json`, non-recursive; Linux override `LinuxXdgConfigHome`), conflict: Steam''s dialog, no code.
+- **Steam Input** (Application → Steam Input): default configuration for every controller type = the **Gamepad** template (Valve''s "Gamepad" / "Generic Gamepad" template; the Deck''s controls arrive as a virtual Xbox pad); no opt-outs for PlayStation/Xbox/Switch configuration support (glyphs read `GetInputTypeForHandle`, plan 85); no custom action set (the game reads the browser Gamepad API).
+- **Deck:** nothing else to set in SW-7 (fit plan 46, peek plan 113, review plan 90).
+- **Rich presence:** upload `app/desktop/steam-presence.vdf` (Community → Rich Presence or Steamworks'' localization upload; recheck).
+- **Achievements:** decision 140 (not repeated).
+- **Publish** the Steamworks changes after each block.
+- **Dev:** `TRIVIA_STEAM_APPID` / `SteamAppId` override stay; the default switches from 480 to the real App ID; no `steam_appid.txt` in the repo or in builds (`steam.py` `EXCLUDE`); a dev run that needs one writes it gitignored.
+
+## Tasks
+1. **SW-7 checklist in plan 18 and the "configured" decision**
+   - New section "Steamworks app configuration (SW-7)" in `plans/18-steam-integration.md` (after "Builds and depots"): an intro paragraph, then a checklist (`- [ ]` rows, grouped by Steamworks page) with the values above; pointers instead of copies where "Reuse" lists a source. Note at the top: needs decision 177''s App ID; Valve''s field names unverified, recheck at entry.
+   - `plans/18-steam-integration.md` "Steam Deck Verified": the Gamepad-template bullet points to this section.
+   - `did=$(pm decision add "Steamworks app configured (SW-7)? IDs?" …)`, body: after decision 177; the section to follow; report App ID, depot IDs `windows`, `linux`, `content`, `colombia` DLC app ID + its depot ID, `beta` branch created (no password), Gamepad template set as Steam Input default, Cloud values, launch options, rich presence uploaded, published; decision 89 asks the same IDs: answer it "see decision <did>"; achievements stay decision 140, Workshop decision 135, store page task 672. Options: `configured: App ID …, depots windows … linux … content …, colombia DLC … depot …` (recommended), `not yet`, `issues (rows)`.
+   - `pm task-pending-decision <task 2> $did`.
+   - Done when: section written; decision pending; task 2 waits on it.
+2. **Real App ID in the repo and SW-7 close-out**
+   - After the decision. `app/desktop/main.mjs` `STEAM_APP_ID` → the real App ID (comment gone); README `TRIVIA_STEAM_APPID` default; plan 18 "Steam features" Dev line (480 until SW-7) and SW-8 note updated; `authoring/steam/steam.json` with every ID unless task 681 already filled it (`steam.py` `--dry-run` keeps 480).
+   - Fill the answered IDs into the SW-7 section, rows `[x]`; issues → follow-up tasks in the owning plan (85, 87, 89, 90) with the failing row.
+   - Plan 18 SW-7 `[x]` with date and note; `plans/project.md` S5 row; `pm decision consequences` on the decision.
+   - Check: `npm run check`, `trivia-steam vdf` (or `--dry-run`) writes the VDFs with the real IDs.
+   - Done when: no 480 default left outside `--dry-run`; SW-7 ticked.
+
+## Out of scope
+- Entering values (the developer), store page fields (plan 88), achievements entry (decision 140), Workshop (decision 135), the first upload (plan 89), the Deck review (plan 90), price (part 9), `report-server/wrangler.toml` `STEAM_APP_ID` (decision 147''s follow-up).', '2026-10-14T21:50:30Z', 254);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -8948,7 +9007,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Steam only (decision 111): no rows for selling or running outside Steam.
 - Gamemaster does signup and payments; workers never enter credentials or contact Valve, a lawyer or a tax advisor.
 - Owner `plans/17-publishing.md` ("Steamworks and store", "AI disclosure").', '2026-10-12T01:13:55Z', '2026-10-14T21:35:44Z', 252);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (254, 10, 'write plan: Steamworks app configuration (SW-7)', 'plan', 'open', 240, NULL, 'Write the plan for part 2 of the masterplan (plan 10): `pm plan add 10 "Steamworks app configuration (SW-7)" --priority 700`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (254, 10, 'write plan: Steamworks app configuration (SW-7)', 'plan', 'done', 240, '2026-10-14, plan 130: Steamworks app configuration (SW-7) (tasks.sql only)', 'Write the plan for part 2 of the masterplan (plan 10): `pm plan add 10 "Steamworks app configuration (SW-7)" --priority 700`.
 
 - Write against decision 67 (account holder: person) and part 1''s plan (App ID decision, task 253).
 - Read and reuse, don''t duplicate: plan 85 (binding, language, rich presence), plan 86 (achievement values), plan 87 (Auto-Cloud values), plan 89 (depots, decision 84; `steam.json`; decision 89 already asks for App ID, depot IDs, beta branch), plan 88 (store texts; decision 90 asks for requirements, languages, controller flags), plan 90 (Deck review). Fold their Steamworks values into one checklist; where an open decision already asks the gamemaster, refer to it instead of a second one.
@@ -8959,7 +9018,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
   - Steam Cloud: Auto-Cloud root/pattern/quota/conflict note per plan 87 (one save per Steam user, `{64BitSteamID}` folder, `game.json`, non-recursive). `steam_appid.txt` for dev runs.
 - Steam only (decision 111): no values for running outside Steam; no DRM / `restartAppIfNecessary`.
 - Done when (of the plan): gamemaster confirms the values are entered, Gamepad template default included (pm decision); plan 18 holds them.
-- Owner `plans/18-steam-integration.md` ("Builds and depots", "Steam features").', '2026-10-12T01:13:55Z', NULL, 252);
+- Owner `plans/18-steam-integration.md` ("Builds and depots", "Steam features").', '2026-10-12T01:13:55Z', '2026-10-14T21:50:34Z', 252);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (255, 10, 'write plan: Steamworks binding in the shell (SW-8)', 'plan', 'done', 240, '2026-10-13, pm plan 85 (priority 690); plans/18-steam-integration.md SW-8 pointer', 'Write the plan for part 3 of the masterplan (plan 10): `pm plan add 10 "Steamworks binding in the shell (SW-8)" --priority 690`.
 
 - Binding: steamworks-ffi-node (decision 28: Steam binding for the Electron shell): koffi FFI, Steamworks SDK `redistributable_bin` supplied by us (`setSdkPath`), electron-builder `asarUnpack` as its docs say; overlay experimental via OSR (X11 only, untested with our video/audio; Windows build via Proton stays the Deck fallback).
@@ -24167,6 +24226,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/project.md` and `plans/11-steam.md` (S5 prerequisites) in sync.
 - Each answered decision of this plan has `pm decision consequences`.
 - A row still open (a pending decision): make this task pending on it, don''t close.', '2026-10-14T21:36:31Z', NULL, 1036);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1043, 130, 'create tasks for plan 130: Steamworks app configuration (SW-7)', 'split', 'open', 1000, NULL, 'Split plan 130 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-14T21:50:30Z', NULL, 254);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -26804,6 +26865,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (963, 713, '2026-10-14T21:46:05Z', '2026-10-14T21:47:52Z', 'done', NULL, 0, '94f7f82d8cbd6964ccb6c43453fcfb8bf007c00a', 'claude-opus-5-5[1m]', '480ffe2b-816b-43c0-939c-04054f518d44', 27, 42, 9086, 1189080, 60501, 0.90371200000000007, 2296074);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (964, 715, '2026-10-14T21:47:52Z', '2026-10-14T21:48:12Z', 'blocked', NULL, 0, '4c15441b48292112e046f3c1f1997f5d76f7fbdc', 'claude-opus-5-5[1m]', 'dd1040c3-32cf-4876-8f24-3046db475a2c', 5, 12, 1134, 144296, 24065, 0.24410720000000002, 2296074);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (965, 716, '2026-10-14T21:48:12Z', '2026-10-14T21:48:28Z', 'blocked', NULL, 0, 'aaff68a9981efe0e703da2549c3a47881a673d49', 'claude-opus-5-5[1m]', '3bdf9234-4f08-4051-817c-643570cf27b6', 5, 10, 1026, 148045, 26029, 0.25840100000000005, 2296074);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (966, 254, '2026-10-14T21:48:28Z', '2026-10-14T21:50:45Z', 'done', NULL, 0, 'c08ee9a553fa7c462bd1189ef0fff42d38a93e2c', 'claude-opus-5-5[1m]', '8a62861c-35e0-4b5a-bb42-92a9df15ab62', 15, 28, 11782, 1026384, 99628, 1.2380528, 2296074);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
