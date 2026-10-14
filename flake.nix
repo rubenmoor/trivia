@@ -4,7 +4,7 @@
   #   nix build .#app              the game as it ships: built client + Python server, run with `trivia`
   #   nix run .#qgen -- batch      the LLM question batch (authoring/RUNBOOK.md, D-36)
   #   nix develop / direnv allow   everything for development, incl. `trivia`, `trivia-authoring`,
-  #                                `qgen`, `trivia-media`, `trivia-desktop`, `trivia-desktop-build`, `trivia-steam` and `trivia-release-check` running from this checkout
+  #                                `qgen`, `trivia-media`, `trivia-desktop`, `trivia-desktop-build`, `trivia-steam`, `trivia-release-check` and `trivia-report-server` running from this checkout
   #
   # The authoring tools edit files in the checkout (authoring/data, app/data/pool.json, work/), so
   # they are wrappers that run the checkout's scripts with pinned Python, ImageMagick and Claude Code.
@@ -97,6 +97,40 @@
             exec npm run "$script" --prefix "$root/app/desktop" -- "$@"
           '';
         };
+        # Question report server (plan 103, decision 117): wrangler from nixpkgs, run in report-server/.
+        trivia-report-server = pkgs.writeShellApplication {
+          name = "trivia-report-server";
+          runtimeInputs = [ pkgs.git pkgs.wrangler pkgs.openssl ];
+          text = ''
+            root=$(git rev-parse --show-toplevel 2>/dev/null) || {
+              echo "trivia-report-server: run this inside the trivia repository" >&2; exit 2; }
+            if [ ! -f "$root/report-server/wrangler.toml" ]; then
+              echo "trivia-report-server: $root is not the trivia repository (no report-server/wrangler.toml)" >&2; exit 2
+            fi
+            cd "$root/report-server"
+            export WRANGLER_SEND_METRICS=false
+            cmd=''${1:-}; shift || true
+            case "$cmd" in
+              dev)  # local D1, fake tickets; extra args to `wrangler dev` (e.g. --test-scheduled)
+                if [ ! -f .dev.vars ]; then
+                  {
+                    echo "DEV_FAKE_TICKETS=1"
+                    echo "PULL_TOKEN=$(openssl rand -base64 32 | tr '+/' '-_' | tr -d '=')"
+                    echo "HASH_SALT=$(openssl rand -hex 32)"
+                  } > .dev.vars
+                fi
+                echo "pull token: $(sed -n 's/^PULL_TOKEN=//p' .dev.vars)"
+                wrangler d1 migrations apply DB --local
+                exec wrangler dev --local --ip 127.0.0.1 --port 8787 "$@" ;;
+              deploy)
+                wrangler d1 migrations apply DB --remote
+                exec wrangler deploy "$@" ;;
+              tail) exec wrangler tail --format pretty "$@" ;;
+              secret) exec wrangler secret put "$@" ;;  # STEAM_WEB_API_KEY, PULL_TOKEN, HASH_SALT
+              *) echo "usage: trivia-report-server dev|deploy|tail|secret <NAME>" >&2; exit 2 ;;
+            esac
+          '';
+        };
         # Before every Steam upload (SW-6, plan 89); nix, steam-run and Xvfb from the dev shell.
         trivia-release-check = fromCheckout pkgs "trivia-release-check" "authoring/steam/release_check.py"
           [ pkgs.nodejs_22 qgen trivia-media trivia-desktop-build trivia-steam ];
@@ -138,7 +172,7 @@
             name = "trivia-authoring";
             paths = with tools; [ qgen trivia-media trivia-authoring ];
           };
-        } // { inherit (tools) qgen trivia-media trivia-authoring; });
+        } // { inherit (tools) qgen trivia-media trivia-authoring trivia-report-server; });
 
       devShells = forAll (pkgs:
         let tools = authoringTools pkgs; in {
@@ -146,7 +180,7 @@
             packages = [
               pkgs.nodejs_22 pkgs.python3 pkgs.imagemagick pkgs.claude-code pkgs.electron
               tools.qgen tools.trivia-media tools.trivia-authoring tools.trivia-dev tools.trivia-desktop
-              tools.trivia-desktop-build
+              tools.trivia-desktop-build tools.trivia-report-server
               pkgs.xvfb  # authoring/store/screenshots.mjs, authoring/steam/smoke.mjs
             ] ++ nixpkgs.lib.optionals (pkgs.stdenv.hostPlatform.system == "x86_64-linux") [
               tools.trivia-steam tools.trivia-release-check tools.steamcmd  # SteamCMD: x86_64-linux only

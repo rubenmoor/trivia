@@ -7,7 +7,7 @@
   ],
   "scripts": {
     "build": "npm run build --workspaces",
-    "check": "npm run check --workspaces",
+    "check": "npm run check --workspaces && tsc -p report-server",
     "test": "npm run test --workspaces --if-present && node --test 'app/desktop/*.test.mjs'"
   }
 }

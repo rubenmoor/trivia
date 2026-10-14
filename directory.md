@@ -71,6 +71,7 @@ What lives where. The repo is split into what ships and what doesn't ([`plans/19
 | `plans/` | Plans, decisions, open questions, backlog; start at [`plans/README.md`](plans/README.md) |
 | `README.md` | Human how-tos: setup, commands, environment variables |
 | `PRIVACY.md` | Public privacy policy (en, es, de): question reports to the report server (plan 103) |
+| `report-server/` | Question report server (plan 103, decision 93): Cloudflare Worker + D1, not shipped. `src/index.ts` (`POST /reports`, `GET /reports`, `POST /reports/ack`, `GET /health`; rate limits, kill switch `REPORTS_OPEN`, daily retention cron), `src/validate.ts` (body checks; pure), `src/steam.ts` (ticket check: dev fake check only until task 866; `user_hash` HMAC), `migrations/` (D1 schema), `wrangler.toml` (binding, cron, vars; no secrets), `tsconfig.json` + `env.d.ts` (hand-written Worker/D1 types, decision 117; in `npm run check`); `.dev.vars`, `.wrangler/` gitignored; run with `trivia-report-server` |
 | `tasks.sql`, `project-manager.toml` | `pm`: milestones, plans, tasks, decisions (edit only through `pm`); its config |
 | `CLAUDE.md` | Imports `AGENTS.md` for Claude Code |
 | `AGENTS.md` | Guide for AI coding assistants |

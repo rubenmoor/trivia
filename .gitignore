@@ -32,3 +32,7 @@ authoring/store/out/
 
 # Local mods for development (plan 112); TRIVIA_MODS_DIR overrides.
 /mods/
+
+# Report server (plan 103): local secrets and wrangler's local state.
+report-server/.dev.vars
+report-server/.wrangler/

@@ -1,0 +1,25 @@
+# Question report server (plan 103). Secrets (STEAM_WEB_API_KEY, PULL_TOKEN, HASH_SALT): `trivia-report-server secret <NAME>`, never here.
+name = "trivia-reports"
+main = "src/index.ts"
+compatibility_date = "2026-10-01"
+workers_dev = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "trivia-reports"
+# PLACEHOLDER(868): the id `wrangler d1 create trivia-reports` prints (not a secret).
+database_id = "00000000-0000-0000-0000-000000000000"
+migrations_dir = "migrations"
+
+[triggers]
+crons = ["0 3 * * *"]
+
+[vars]
+STEAM_APP_ID = ""  # authoring/steam/steam.json "appid", once set
+TICKET_IDENTITY = "trivia-reports"
+REPORTS_OPEN = "1"  # "0": every POST /reports → 503 closed
+RATE_USER = "20"
+RATE_TOTAL = "1000"
+
+[observability]
+enabled = false
