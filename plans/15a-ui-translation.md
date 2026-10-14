@@ -53,6 +53,17 @@ English first (D-74); Spanish forms for `es`. Only «Solo o en grupo» is fixed;
   - `/comodines` per language (2026-10-12, pm task 457): `?lang=es|es-ES|en|de`, language links on screen; names, keys, `joker.<id>.rule` and `cards.*` page text from the app catalogs (`catalogFor` in `lib/i18n.ts`); `@page` Letter (0.5 in) for `es`/`en`, A4 (0.84 in × 0.38 in) for `de`/`es-ES`. Chrome print preview: one page, 12 cards each.
 - [ ] LUI-6 Store page texts per language (with PUB-8). S5, not milestone 9 (S4). *Plan: pm plan 88 (`es`, `es-ES`, `en`, `de` in `17a-store-page.md`).*
 
+## Wording and review
+The developer's TV check (2026-10-13) found catalogs that read like translations: German plural address, terms that differ from screen to screen, an Esc row that says the wrong thing. Pm plan 100 adds style guides, applies the TV-check fixes and builds a screen gallery the developer reviews per language; flags from the review feed fix passes. Runs before the playtest close-out (pm task 459), so the playtest sees the fixed wording.
+
+- **Style guides** `app/client/src/locales/style/{en,es,es-ES,de}.md` (pm task 799): glossary (modes, jokers, bundles, Esc rows, Steam's own terms), address, buttons and prompts, bad patterns (wrong → right); guidance, not a lint
+  - `AGENTS.md` rule: changing UI strings → read the locale's guide first; new bad patterns go into it
+  - `de`: never plural, infinitive for prompts and buttons, impersonal elsewhere, «du» only per listed string
+  - translation prompts (`authoring/tools/prompts/locale-<l>.md`) get the guide's address and glossary after a pm decision (pm task 801)
+- **TV-check fixes** (pm task 800): de «Spielleitermodus»; «Steam achievements» / «logros de Steam» / «Steam-Erfolge»; Esc «Back to main menu» / «Volver al menú principal» / «Zurück zum Hauptmenü» → start screen; «Quit game» / «Salir del juego» / «Spiel beenden» in its own colour; `de` plural sweep; `es` changes only in these strings (D-59)
+- **Screen gallery** (pm tasks 802, 803): `trivia-gallery` renders every screen and dialog per UI language from a demo save into `work/gallery/`, with the catalog key of each visible text; `trivia-authoring` `/gallery` shows the shots, the developer flags a string with a note (`authoring/data/ui-flags.json`)
+- **Flag → fix loop** (pm task 804): one pm decision per language "Screen gallery reviewed? (<lang>)"; a fix task reads the open flags, fixes the catalogs per the guide, adds new bad patterns to the guide, sets `fixed_on`, re-runs the gallery; re-runnable any time
+
 ## Playtest
 One native speaker per launch catalog (`es` the family, `es-ES`, `en`, `de`), arranged by the developer, plays the real game rather than reading the catalog. The answer goes into that language's pm decision "Playtest passed? (<lang>)"; fixes go to pm task 459 (pm decisions 62 `es`, 63 `es-ES`, 64 `en`, 65 `de`).
 

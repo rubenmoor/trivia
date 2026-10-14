@@ -24,6 +24,7 @@ Family trivia party game, shown on a TV: the family plays against the gamemaster
 - Game is muted under `PM_WORKER`; outside pm, launch with `TRIVIA_MUTE=1` unless the work is about sound; `TRIVIA_SOUND=1` for sound checks.
 - Stop background processes by PID (`kill $!`), never `pkill -f`: the pattern can match your own `claude` process.
 - No secrets in the repo, no accounts of our own; telemetry only opt-in.
+- Changing UI strings (`app/client/src/locales/`): read `locales/style/<locale>.md` first; new bad patterns found go into it.
 - Unpolished game parts: `PLACEHOLDER(<task id>)` in code and on screen.
 - "Gamemaster": only the in-game role (Gamemaster mode); the human is "the developer".
   - Older text (`tasks.sql`: milestones, plans, tasks, decisions) still says "the gamemaster" for the developer: read it as "the developer"; new text says "the developer".
