@@ -249,6 +249,42 @@ Store texts for each shipped question bundle, one free DLC app each (decision 66
 ### After approval
 - Capsules: the DLC store name equals the in-game name, so `dlc-colombia/` capsules from `task 669` stay as rendered (no re-run)
 
+## Modding
+Store and Workshop texts for modding (milestone 15, plan 121): one feature bullet per store language, a link line to the modding guide, and the Workshop hub description. Drafted 2026-10-14 (`task 990`); approved through pm decision "Store texts: modding bullet and guide link?"; entered at launch (milestone 11), once the Workshop works for players (`plan 122: Modding end-to-end check and close-out`), never on the beta page.
+
+### Rules and fields
+- Guide: `https://github.com/rubenmoor/trivia/blob/main/modding/README.md` (decision 134, English only; decision 108: repo public)
+- Link rules, from memory (no web access at the task; recheck in Steamworks at entry):
+  - About This Game: BBCode `[url=…]…[/url]` is accepted; Steam routes external links through its link filter (`steamcommunity.com/linkfilter/`, "you are leaving Steam" page); no links to other stores or purchase pages
+  - Basic Info: one website field plus social links; the game's website field could take the guide URL only if there is no other website
+  - If Valve's review rejects the link in About This Game: keep the bullet, drop the link line; the link lives on the Workshop page only
+- Workshop hub description: not known whether Steamworks' Workshop configuration has a text field (recheck at entry under Community → Workshop); else the community hub's first announcement (pinned), same text
+- Terms per `locales/style/<locale>.md`: «Steam Workshop» (en), «Workshop de Steam» (es), «Steam-Workshop» (de); «mods» as in the Mods screen
+- Place: the bullet goes last-but-one in each Features list (before the Steam achievements bullet); the link line is the paragraph after the list, before Privacy
+
+### English (`en`)
+- **Feature bullet:** `[*]Make it yours: question bundles, themes and full mods, shared on the Steam Workshop`
+- **Link line:** `[b]Modding:[/b] the modding guide (English) explains everything: [url=https://github.com/rubenmoor/trivia/blob/main/modding/README.md]modding guide[/url]`
+- **Workshop description:**
+  > Mods for Living Room Trivia: question bundles, themes, rule tweaks and full conversions. Subscribe, then turn mods on in the game's Mods screen and restart. Make your own: the modding guide has the format, examples and how to publish here: https://github.com/rubenmoor/trivia/blob/main/modding/README.md
+
+### Spanish – Latin America (`es`)
+- **Feature bullet:** `[*]Háganlo suyo: paquetes de preguntas, temas visuales y mods completos, compartidos en el Workshop de Steam`
+- **Link line:** `[b]Mods:[/b] la guía de modding (en inglés) lo explica todo: [url=https://github.com/rubenmoor/trivia/blob/main/modding/README.md]guía de modding[/url]`
+- **Workshop description:**
+  > Mods para Trivia en Familia: paquetes de preguntas, temas visuales, cambios de reglas y conversiones completas. Suscríbanse, enciendan los mods en la pantalla Mods del juego y reinicien. Para hacer los suyos, la guía de modding (en inglés) tiene el formato, ejemplos y cómo publicarlos aquí: https://github.com/rubenmoor/trivia/blob/main/modding/README.md
+
+### Spanish – Spain (`es-ES`)
+- **Feature bullet:** `[*]Hacedlo vuestro: paquetes de preguntas, temas visuales y mods completos, compartidos en el Workshop de Steam`
+- **Link line:** as `es`
+- **Workshop description:** `es` with «Suscríbanse, enciendan … y reinicien. Para hacer los suyos» → «Suscribíos, encended … y reiniciad. Para hacer los vuestros»
+
+### German (`de`)
+- **Feature bullet:** `[*]Ganz nach eigenem Geschmack: Fragenpakete, Themes und komplette Mods, geteilt im Steam-Workshop`
+- **Link line:** `[b]Mods:[/b] Die Modding-Anleitung (auf Englisch) erklärt alles: [url=https://github.com/rubenmoor/trivia/blob/main/modding/README.md]Modding-Anleitung[/url]`
+- **Workshop description:**
+  > Mods für Wohnzimmer-Quiz: Fragenpakete, Themes, Regeländerungen und komplette Umbauten. Abonnieren, im Mods-Bildschirm des Spiels einschalten und neu starten. Eigene Mods bauen: Die Modding-Anleitung (auf Englisch) erklärt Format, Beispiele und das Veröffentlichen hier: https://github.com/rubenmoor/trivia/blob/main/modding/README.md
+
 ## AI disclosure
 - Steam content-survey AI section and store wording per language: `task 667: AI disclosure text (Steam survey + store wording)`
 

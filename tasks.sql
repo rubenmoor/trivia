@@ -25571,6 +25571,13 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 Answer once the beta test is played (the beta upload needs the media bundle, so storage can be measured then too):
 - distro and version played on, if Linux; else "none"
 - real-pad run: passed, or the failing step', NULL, NULL, '2026-10-14T19:40:33Z', NULL, 1028, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (175, 'Store texts: modding bullet and guide link?', 'pending', '["approved as drafted", "link only on the Workshop page, no store bullet", "changes: …"]', 'Plan 121 part 4 (`task 990: Store page and Workshop texts: modding bullet and guide link`). Drafts: `plans/17a-store-page.md` section "Modding" (en, es, es-ES, de): one feature bullet per language in About This Game''s Features list, a link line to the guide `https://github.com/rubenmoor/trivia/blob/main/modding/README.md` (decision 134, English only, marked «en inglés» / «auf Englisch»), and the Workshop hub description per language with the link.
+
+en bullet: «Make it yours: question bundles, themes and full mods, shared on the Steam Workshop»
+
+Link rules: no web access at the task, so from memory, recheck at entry: About This Game accepts BBCode [url] links, Steam routes them through its link filter; no links to other stores. Not known whether Steamworks'' Workshop configuration has a description field; else the community hub''s first (pinned) announcement carries the text. If Valve''s review rejects the link in About This Game: keep the bullet, the link stays on the Workshop page only.
+
+Timing: entered at launch (milestone 11) once the Workshop works for players (plan 122), not on the beta page.', NULL, NULL, '2026-10-14T20:25:31Z', NULL, 990, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -26526,6 +26533,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (945, 987, '2026-10-14T19:44:47Z', '2026-10-14T19:49:36Z', 'done', NULL, 0, 'f69300413f18b378c943659a17d667cec8ab0fcc', 'claude-opus-5-5[1m]', 'f8048c06-f401-4204-8045-f72738342752', 50, 78, 19303, 3006478, 94954, 1.7472995999999998, 2296074);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (946, 988, '2026-10-14T19:49:36Z', '2026-10-14T20:08:14Z', 'done', NULL, 0, '97400c43ffe85329cd4885646ca2268eeff95b2d', 'claude-opus-5-5[1m]', '2c0bee97-4e9d-4479-a349-09d91a68ab8e', 45, 86, 22811, 3576702, 99454, 1.9675364000000002, 2296074);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (947, 989, '2026-10-14T20:08:14Z', '2026-10-14T20:24:38Z', 'done', NULL, 0, '7d855dec0b78d3deeb29aaa23ad97c7d4f710911', 'claude-opus-5-5[1m]', '75732492-b7c0-48c5-894f-d791eb1ca169', 21, 38, 6032, 875207, 49353, 0.69065739999999987, 2296074);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (948, 990, '2026-10-14T20:24:38Z', '2026-10-14T20:25:40Z', 'blocked', NULL, 0, '63c5f574125ec9c93b1593a67658770d04e94158', 'claude-opus-5-5[1m]', '016c5c7a-2f12-44a9-97b4-6710a5f13bf7', 16, 26, 5772, 653603, 54576, 0.6828726, 2296074);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -26763,6 +26771,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (948, 143);
 INSERT INTO task_decision (task_id, decision_id) VALUES (948, 149);
 INSERT INTO task_decision (task_id, decision_id) VALUES (958, 135);
 INSERT INTO task_decision (task_id, decision_id) VALUES (980, 135);
+INSERT INTO task_decision (task_id, decision_id) VALUES (990, 175);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1026, 161);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1026, 162);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1026, 163);
