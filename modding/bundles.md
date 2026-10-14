@@ -36,7 +36,7 @@ A question bundle is a set of questions the family can switch on before a game, 
 - `{ "categories": [ { "slug", "name", "subcategories": [ … ] } ] }`
 - `slug`: lowercase id of the category; `name`: shown in the game; `subcategories`: names, at least one
 - Every question's `subcategory` is one of these names, in every language's pool file: the names in `categories.json` are the keys, `names.<locale>.json` translates them.
-- Slugs and subcategory names must differ from the game's own and from other mods' (error `taxonomy_clash`); make them specific, e.g. «Dinosaurios del Jurásico», not «Animales».
+- Slugs and subcategory names only need to be unique within the bundle; they may repeat the game's or other mods' names («Historia»): each bundle keeps its own.
 
 ## `names.<locale>.json`
 - Optional, one per extra language; anything missing shows in the original.
@@ -128,7 +128,7 @@ Difficulty means who can answer it, not how obscure the fact is.
   - `subcategory`: not in `categories.json`
   - `status`: something other than `approved`
   - `bad_media`: `file_url` a web address or outside the folder; only the media is dropped, unless `essential`
-- Other errors: `media_missing` (file not found), `bad_categories`, `taxonomy_clash`, `bundle_row`, `bad_field` (in `mod.json`), `no_pool` (no pool file for any language).
+- Other errors: `media_missing` (file not found), `bad_categories`, `bundle_row`, `bad_field` (in `mod.json`), `no_pool` (no pool file for any language).
 
 ## Share it
 - `trivia --publish-mod <folder>` uploads it as a Steam Workshop item (Steam running; `--dry-run` to try without uploading); run it again to update.

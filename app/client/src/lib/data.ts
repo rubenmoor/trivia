@@ -56,7 +56,7 @@ export async function availableLocales(): Promise<string[]> {
 export interface ModIssue {
   mod: string;
   bundle: string;
-  code: "bad_question" | "bad_media" | "bad_categories" | "no_pool" | "bundle_language" | "taxonomy_clash";
+  code: "bad_question" | "bad_media" | "bad_categories" | "no_pool" | "bundle_language";
   count: number;
 }
 
@@ -103,17 +103,12 @@ async function load(locale: string): Promise<Loaded> {
   ]);
   const packs: Record<string, unknown> = Object.fromEntries(packFiles);
   const byBundle: Record<string, unknown> = Object.fromEntries(ours.flatMap((b, i) => (files[i] ? [[b.id, files[i]]] : [])));
-  const cats = loadCategories(bundles, byBundle);
-  const slugs = new Set(cats.map((c) => c.slug));
-  const subs = new Set(cats.flatMap((c) => c.subcategories));
   const taken = new Set<string>();
   mods.forEach((b, i) => {
     const [json, catFile] = modFiles[i];
     packs[b.id] = null;
     const tax = modSubcategories(catFile);
     if (!tax) return issue(b, "bad_categories");
-    // Until task 826 (bundle-scoped taxonomy): names must not repeat across bundles.
-    if (tax.slugs.some((s) => slugs.has(s)) || tax.subs.some((s) => subs.has(s))) return issue(b, "taxonomy_clash");
     if (!json) return issue(b, "no_pool");
     let out;
     try {
@@ -126,8 +121,6 @@ async function load(locale: string): Promise<Loaded> {
     if (!out.questions.length) return issue(b, "no_pool");
     packs[b.id] = { version: 1, questions: out.questions };
     byBundle[b.id] = catFile;
-    tax.slugs.forEach((s) => slugs.add(s));
-    tax.subs.forEach((s) => subs.add(s));
   });
   const packed = withPacks(parsePool(pool), all, locale, packs);
   const { questions, bundles: parsed, ageGroups: groups } = runDataHooks({

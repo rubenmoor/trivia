@@ -17,7 +17,6 @@ const ERRORS = {
   bundle_json: () => "data/bundles.json: not a JSON object with a bundles list",
   bundle_row: (e) => `data/bundles.json: row ${e.id ? `"${e.id}"` : "without an id"} needs id, kind (slugs), languages, name, description; ids unique`,
   bad_categories: (e) => `${e.file}: missing, or not categories with slug, name and subcategories (unique)`,
-  taxonomy_clash: (e) => `${e.file}: category or subcategory name already used by ${e.by}: ${e.names.join(", ")}`,
   bad_pool: (e) => `${e.file}: ${e.message}`,
   no_pool: (e) => `bundle ${e.bundle}: no pool file for any of its languages`,
   no_bundles: () => "kind bundle but no bundles in data/bundles.json",
@@ -92,18 +91,9 @@ export async function checkMod(folder, { dist, data, gameVersion }, out = () => 
     return done(mod.id);
   }
 
-  const ours = JSON.parse(await fs.readFile(path.join(data, "bundles.json"), "utf8"));
-  const ourFiles = {};
-  for (const b of ours.bundles) {
-    const file = path.join(data, pool.bundleFile(b.id, "categories.json"));
-    ourFiles[b.id] = JSON.parse(await fs.readFile(file, "utf8").catch(() => "null"));
-  }
-  const ourCats = pool.loadCategories(ours, ourFiles);
   const groups = pool.parseAgeGroups(JSON.parse(await fs.readFile(path.join(data, "age-groups.json"), "utf8")));
 
-  // Like the loader: names unique across bundles, question ids per locale across this mod's pools.
-  const slugs = new Set(ourCats.map((c) => c.slug));
-  const subs = new Set(pool.subcategories(ourCats));
+  // Like the loader: question ids unique per locale across this mod's pools.
   const taken = Object.fromEntries(LOCALES.map((l) => [l, new Set()]));
   for (const row of rows.rows) {
     const bundle = `${id}:${row.id}`;
@@ -115,11 +105,6 @@ export async function checkMod(folder, { dist, data, gameVersion }, out = () => 
     const tax = cats instanceof Error ? null : pool.modSubcategories(cats);
     if (!tax) {
       error({ code: "bad_categories", file: rel("categories.json") });
-      continue;
-    }
-    const clash = [...tax.slugs.filter((s) => slugs.has(s)), ...tax.subs.filter((s) => subs.has(s))];
-    if (clash.length) {
-      error({ code: "taxonomy_clash", file: rel("categories.json"), by: "the game or an earlier bundle", names: clash });
       continue;
     }
     let pools = 0;
@@ -168,8 +153,6 @@ export async function checkMod(folder, { dist, data, gameVersion }, out = () => 
       }
     }
     if (!pools) error({ code: "no_pool", bundle: row.id });
-    tax.slugs.forEach((s) => slugs.add(s));
-    tax.subs.forEach((s) => subs.add(s));
   }
   return done(mod.id);
 }

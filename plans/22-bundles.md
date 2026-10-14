@@ -67,7 +67,7 @@ Mods carry bundles in our own format, loaded by our own loader (pm plan 115, dec
 - Media: relative `file_url` inside the bundle folder (`img/owl.jpg`) → `/data/bundles/<mod>:<id>/img/owl.jpg`; never downloaded; absolute URL or `..` → media dropped, `role: essential` question dropped.
 - Credits (decision 129: Credits for mod media: runtime section on the Credits screen from the mod's own pool): `Credits.svelte` adds a section per loaded mod bundle from its questions' `credit` + `source_url` (deduped); `credits.json`, `CREDITS.md` stay ours.
 - Marker: `BundleSelector.svelte` shows «Hecho por jugadores · {mod}» (`bundles.playerMade`); flag action hidden for mod questions.
-- `modIssues()` (`lib/data.ts`, per mod and bundle, with count): `bad_question`, `bad_media`, `bad_categories`, `no_pool`, `bundle_language`, `taxonomy_clash` (until pm task 995); a broken mod bundle is left out, never breaks the load.
+- `modIssues()` (`lib/data.ts`, per mod and bundle, with count): `bad_question`, `bad_media`, `bad_categories`, `no_pool`, `bundle_language`; names may repeat across bundles (D-100); a broken mod bundle is left out, never breaks the load.
 - Save: mod ids stored as strings, no format change; removed mods' rows ignored; `authoring/tools/save_file.py` drops ids with `:`; telemetry keeps `isOurs` only.
 - Achievements: player questions count like ours except `BUNDLE_*` and `ALL_CATEGORIES` (ours only) (decision 123: Achievements in games with mods on: allowed or off?; decision 146: Achievements, mods screen and rich presence with mods on).
 
