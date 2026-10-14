@@ -23991,8 +23991,74 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Do: try the recipe on the packaged Linux build (`trivia-desktop-build --dir`, `linux-unpacked/trivia`) with Chrome''s inspect page; check whether `TRIVIA_DEVTOOLS=1` is needed at all and whether `--remote-allow-origins` is; fix the guide line to what works.
 - Fix README.md''s line to what the variable really does (or, if the developer wants an in-game way, raise a pm decision: e.g. F12 opens devtools when `TRIVIA_DEVTOOLS=1`; don''t add it unasked).
 - Done when: the guide''s recipe works as written; README.md''s line is accurate; per-commit checks pass.', '2026-10-14T20:07:58Z', '2026-10-14T20:44:07Z', 988);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1031, 128, 'create tasks for plan 128: S4 close-out', 'split', 'open', 1000, NULL, 'Split plan 128 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-14T21:33:52Z', NULL, 251);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1031, 128, 'create tasks for plan 128: S4 close-out', 'split', 'done', 1000, '2026-10-14, tasks.sql: tasks 1032–1035; no decisions needed now (plan''s conditional decisions are raised by tasks 1032, 1035)', 'Split plan 128 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-14T21:33:52Z', '2026-10-14T21:34:39Z', 251);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1032, 128, 'Content target check', 'work', 'open', NULL, NULL, 'Task 1 of `plan 128: S4 close-out`: check milestone 9''s content target per launch language and record it. Checks, docs and pm only; no content fixes.
+
+Binding: `decision 21: Content target per player and language (OQ-32)?` (5000 approved per launch language with D-53''s mix; games numbers information only); `decision 26: Launch languages (OQ-31): which languages at Steam launch, and which comes first after?` (`es`, `en`, `de`); decision 37 (D-84, deficits per locale); plan 57 (CT-5, release-ready slices).
+
+## Guard
+- `pm plans list`; `pm show` of plans 57, 62, 63, 64, 66, 67, 68, 69, 70, 98, 100, 126 and 84.
+- Each must have all tasks done or dropped; plan 84: chains 1–4 (neutral Spanish, translation pilot, full translation, `es` top-ups) ended. The `colombia` chain and plan 84''s pilot-effort task don''t count (task 4 of plan 128).
+- An open task pending on a decision → `pm task-pending-decision <this task> <that decision>`, stop. Other open tasks → stop without changes, say so (the queue brings it back). Never drop or edit other plans'' tasks.
+
+## Steps
+- `qgen validate`; `trivia-media sync --status approved`; `qgen export`.
+- `qgen report --simulate` (default matrix: every launch language, default bundles, all age groups, all modes); `qgen report --locale <L>` for `es`, `en`, `de`; `qgen report --qc` (release-ready column); `qgen report --cost` (spent vs. `targets.json` `"budget"`).
+- Record in `plans/16-content-target.md` ("Where we stand" → dated close-out result): per locale approved vs. 5000 and per level, ✓/✗, games per new player (median, p10, strong bound) for adults solo, bottlenecks, release-ready state, total spent per language, file sizes of `app/data/pool*.json` and pack pools (task 3 uses them for the install size).
+- A ✗ or a slice not release-ready: no fix. If plan 84 has no open run/QC pair for that locale: `pm decision add "S4 target not met for <locale>: more runs or lower the target?"` (body: the numbers; options "more runs: plan 84 adds pairs" (recommended), "lower the target (D-75 amended)", "ship as is"), `pm task-pending-decision` for this task and tasks 2–3 of plan 128, stop. On the answer "more runs": `pm task add 84` the next run/QC pair, stop (this task waits for it).
+
+Done when: `qgen report --simulate` exits 0 (or an answered decision accepts the shortfall), the result is in `plans/16-content-target.md`.', '2026-10-14T21:34:37Z', NULL, 1031);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1033, 128, 'Language picker and UI wording check', 'work', 'open', NULL, NULL, 'Task 2 of `plan 128: S4 close-out`: check milestone 9''s "language on first start" and "UI wording and review" rows. Checks, docs and pm only; failures become tasks in the owning plans.
+
+Binding: D-96 (`decision 50: Play-test of age groups and bundles` item 7, plan 126, tasks 1019–1021): one language for UI and questions; picker at first start with the guess preselected (`navigator.language` now); afterwards only Start''s language button; no Esc menu language rows; a save without `language` (the family''s) = `es`, never sees the picker. Supersedes the milestone''s "Esc menu" wording. `decision 110` (D-99): `colombia` on for the family''s save.
+
+## Guard
+- Same as task 1 of plan 128 (plans 57, 62–64, 66–70, 98, 100, 126 done or dropped; plan 84 chains 1–4 ended; pend on a decision blocking them, else stop without changes).
+- Decisions 161–164 "Screen gallery reviewed? (<lang>)" answered and task 1026 done; decisions 62–65 "Playtest passed?" answered and task 459 done. Else `pm task-pending-decision <this task> <open decision>`, stop.
+
+## Static check
+- `app/client/src/locales/style/{en,es,es-ES,de}.md` exist; `AGENTS.md` Rules line about the style guides present.
+- Grep the catalogs: `de` «Spielleitermodus»; «Steam achievements» / «logros de Steam» / «Steam-Erfolge» wherever achievements appear; Esc «Back to main menu» / «Volver al menú principal» / «Zurück zum Hauptmenü», «Quit game» / «Salir del juego» / «Spiel beenden»; no «ihr/euch/euer» in `de.ts`.
+- A miss → `pm task add 100 "<fix>"` with the string, stop.
+
+## Browser check (throw-away)
+- `npm run build`, then `npm run serve -w app/client` (Node dev server), temp `TRIVIA_SAVE_DIR`, `TRIVIA_MUTE=1`; stop it by PID.
+- No save, `navigator.language` `de-AT` → picker, `Deutsch` preselected; confirm → German Start; reload → no picker; Start''s language button → `en`, next game draws from `pool.en.json` (English question text).
+- `es-CO` → `Español (Latinoamérica)` preselected; `fr-FR` → `English` (fallback per D-96).
+- A copy of the family''s save (no `language` field, e.g. copied from `state/game.json`, never the file itself) → no picker, Spanish, base + `colombia` on.
+- Keyboard only; pad too if the dev server has pad emulation (else note keyboard only).
+- Failure → `pm task add 126` (or the owning plan) with the steps to reproduce, stop.
+
+Done when: every row passes; the result (date, commit) is in `plans/15-i18n.md` "Model" (I18N-2) and `plans/15a-ui-translation.md` "Wording and review".', '2026-10-14T21:34:37Z', NULL, 1031);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1034, 128, 'Docs close-out of S4', 'work', 'open', NULL, NULL, 'Task 3 of `plan 128: S4 close-out`: bring plan files, indexes and the later masterplans in line with milestone 9''s outcome. Runs after task 1032: Content target check and task 1033: Language picker and UI wording check are done (stop without changes otherwise). Docs and pm only.
+
+Binding: `decision 21` (D-75), `decision 26` (D-78), D-96 (`decision 50` item 7), `decision 110` (D-99, `colombia` 2000 es + en may land after launch), `decision 66` (packs are free DLC), decision 96 (content updates).
+
+## Steps
+- `plans/11-steam.md`: S4 row done (date, task 1032''s numbers; packs: `colombia` state at launch, 2000 es + en after launch per decision 110); exit criterion text matches D-75 and D-96.
+- `plans/15-i18n.md`, `15a`, `15b`, `15c`, `16-content-target.md`, `22-bundles.md`: tasks `[x]` with notes (check, don''t redo, each plan''s own ticks: I18N-2, LUI-4, LUI-5, QT-1..QT-6, RG-1..RG-5, CT-1..CT-5); LUI-6 stays open, noted as S5 (`plan 88: Store page and AI disclosure (PUB-8, LUI-6)`); status lines (`stub` → `agreed`/`done`). RG-5 open until task 4 of plan 128 if `colombia` isn''t at 2000 es + en.
+- `plans/README.md` status column for 11, 15, 15a, 15b, 15c, 16, 22; `plans/project.md`: Steam track says S4 done (date) except the `colombia` pilot, ticked tasks ticked, resolved open-question rows removed; `plans/open-questions.md` if an S4 question is still listed.
+- Masterplans of milestones 10 and 11 (`plan 10: masterplan`, `plan 11: masterplan`): compare with S4''s outcome; if scope changed, append a short dated note via `pm plan edit <id> --body -` (whole body): store languages `es`, `en`, `de` (+ `es-ES` UI); one free DLC depot per pack with its languages; packs grow after launch via content updates (`plan 96: Content updates as patches (ST-5)`, decision 96); install size with three pools + pack pools (task 1032''s file sizes); Steam''s language as the picker''s guess (D-96). No note if nothing changed. Milestone bodies untouched; anything they get wrong → `pm decision add`.
+- `qgen validate`, `npm run check` unaffected.
+
+Done when: milestone 9''s "Done when" holds except the `colombia` row; task note cites decision ids and dates.', '2026-10-14T21:34:37Z', NULL, 1031);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1035, 128, 'Regional pilot record', 'work', 'open', -140, NULL, 'Task 4 of `plan 128: S4 close-out`: record the `colombia` pilot (2000 approved in es + en, effort measured, follow-up decision answered). May land after launch; the launch (milestone 11) never waits for it. Runs after task 1034: Docs close-out of S4. Docs, checks and pm only.
+
+Binding: `decision 110` (D-99: Regional packs at launch (RG-5, OQ-46)), `decision 66` (packs are free DLC).
+
+## Guard
+- Plan 84''s `colombia` chain ended: `qgen report --bundle colombia` and `qgen report --bundle colombia --locale en` at 2000 approved; plan 84''s pilot-effort task done.
+- "More regional bundles at launch?" answered (`pm decision list --grep "More regional"`).
+- Else pend on the open decision (`pm task-pending-decision`) or stop without changes.
+
+## Steps
+- Plan 84''s numbers in `plans/15c-regional-questions.md` and `plans/16-content-target.md` ($ per approved, review time per 100); missing → record them from `qgen report --cost` and `qgen report --review-time --bundle colombia`.
+- `app/data/bundles.json` `colombia` `languages` lists `en`; `app/data/bundles/colombia/pool.en.json` exists; `qgen validate` clean.
+- `plans/11-steam.md` S4 row: pilot done (date, numbers, the decision''s answer); `plans/project.md`; RG-5 ticked in `15c`.
+- If the answer adds bundles: check plans 84/98 got their tasks (the decision''s consequences), else `pm task add 98`.
+
+Done when: milestone 9''s "Done when" holds in full; task note cites the decision.', '2026-10-14T21:34:37Z', NULL, 1031);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -26595,6 +26661,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (953, 683, '2026-10-14T21:00:37Z', '2026-10-14T21:29:51Z', 'done', NULL, 0, 'b3ceb2e9bdf3a7559e28bacc74c3c82d6cc65cf9', 'claude-opus-5-5[1m]', '2e15dee5-9a7e-45ea-9898-0e104a64d116', 24, 48, 9365, 1317638, 58430, 0.91845959999999993, 2296074);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (954, 995, '2026-10-14T21:29:51Z', '2026-10-14T21:32:27Z', 'done', NULL, 0, '292d7ba535a05bde2b687813b0d7d42bb39536bb', 'claude-opus-5-5[1m]', '37fa1266-aa2b-4473-b6ce-10d71f11d3e4', 27, 54, 9470, 1240798, 43989, 0.7896876, 2296074);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (955, 251, '2026-10-14T21:32:27Z', '2026-10-14T21:34:01Z', 'done', NULL, 0, '5d4060676de69fa75a12bb8c39cd8365d1665ab0', 'claude-opus-5-5[1m]', '2fc18554-20db-408b-bd25-14cf6c03da2c', 17, 34, 8611, 993982, 79206, 1.0048004000000002, 2296074);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (956, 1031, '2026-10-14T21:34:02Z', '2026-10-14T21:34:44Z', 'done', NULL, 0, '3ca89262704b4afc865245dfcdfac9f606db6024', 'claude-opus-5-5[1m]', '19b431c0-2d57-40d7-a958-9d01a7497ce9', 5, 10, 4800, 169325, 35623, 0.414889, 2296074);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
