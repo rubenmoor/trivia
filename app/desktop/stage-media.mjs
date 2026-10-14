@@ -1,6 +1,7 @@
 // Pool media → build/media for a packaged build (plan 56): encoded under shippedName (decision 185),
 // hard links (or copies) from the encode cache work/ship-media/.
 // build/pack-media.json: per pack, the media only it uses (its DLC depot carries them, decision 66).
+// --check: no encoding; build/media against the pools and media-budget.json, exit 1 on ✗.
 import { execFile, execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
 import { copyFileSync, linkSync, mkdirSync, readdirSync, readFileSync, renameSync, rmSync, statSync, writeFileSync } from "node:fs";
@@ -13,6 +14,7 @@ import { cacheName, poolUrls, shippedName } from "./resolve.mjs";
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const REPO = path.resolve(HERE, "..", "..");
 const allowMissing = process.argv.includes("--allow-missing");
+const check = process.argv.includes("--check");
 const cache = process.env.TRIVIA_MEDIA || path.join(REPO, "media");
 const out = path.join(HERE, "build", "media");
 const encoded = path.join(process.env.TRIVIA_WORK || path.join(REPO, "work"), "ship-media");
@@ -27,7 +29,7 @@ const version = (cmd, arg) => {
     process.exit(1);
   }
 };
-const TOOLS = `${version("ffmpeg", "-version")} | cwebp ${version("cwebp", "-version")}`;
+const TOOLS = check ? "" : `${version("ffmpeg", "-version")} | cwebp ${version("cwebp", "-version")}`;
 
 // Formats (decision 185); `args` and the version line make the settings hash.
 const IMAGE = { box: [3840, 2160], q: [82, 76, 70, 64, 60], args: ["-m", "6", "-metadata", "icc"] };
@@ -86,6 +88,35 @@ const packMedia = Object.fromEntries(packs.map(([b]) => [b, []]));
 for (const [u, b] of [...owners].sort()) {
   urls.add(u);
   if (b) packMedia[b].push(shippedName(u));
+}
+
+// Budgets in MB (media-budget.json): per depot, per file (videos `video`).
+if (check) {
+  const budget = JSON.parse(readFileSync(path.join(HERE, "media-budget.json"), "utf8"));
+  const shipped = JSON.parse(readFileSync(path.join(HERE, "build", "pack-media.json"), "utf8"));
+  const size = new Map(readdirSync(out).map((f) => [f, statSync(path.join(out, f)).size]));
+  const fails = [];
+  const absent = [...urls].filter((u) => !size.has(shippedName(u))).sort();
+  for (const u of absent) fails.push(`missing ${shippedName(u)}  ${u}`);
+  const inPack = new Set(Object.values(shipped).flat());
+  const depots = [["content", [...size.keys()].filter((f) => !inPack.has(f)), budget.content]];
+  for (const [b, files] of Object.entries(shipped)) depots.push([`dlc ${b}`, files, budget.dlc[b] ?? budget.default_dlc]);
+  for (const [name, files, max] of depots) {
+    const mb = files.reduce((n, f) => n + (size.get(f) ?? 0), 0) / MB;
+    const over = mb > max;
+    console.log(`${over ? "✗" : "✓"} ${name}: ${files.length} files, ${mb.toFixed(0)} MB of ${max} MB`);
+    if (over) fails.push(`${name} over budget: ${mb.toFixed(0)} > ${max} MB`);
+  }
+  const big = [...size].filter(([, n]) => n > MB).sort((a, b) => b[1] - a[1]);
+  for (const [f, n] of big) {
+    const max = KIND[path.extname(f)] === "video" ? budget.video : budget.file;
+    if (n / MB > max) fails.push(`${f} ${(n / MB).toFixed(1)} MB > ${max} MB`);
+  }
+  console.log(`${big.length} files > 1 MB:`);
+  for (const [f, n] of big) console.log(`  ${(n / MB).toFixed(1)} MB  ${f}`);
+  for (const f of fails) console.error(`✗ ${f}`);
+  console.log(`stage-media --check: ${fails.length ? `✗ ${fails.length} failure(s)` : "✓"} (${out})`);
+  process.exit(fails.length ? 1 : 0);
 }
 rmSync(out, { recursive: true, force: true });
 mkdirSync(out, { recursive: true });

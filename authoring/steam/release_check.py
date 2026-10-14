@@ -10,6 +10,8 @@ Steps, each ✓/✗ with its time; all automated steps run, exit 1 on any ✗:
   quality   qgen report --qc: release bar ✓ for the last two batches (pm decision 15)
   nix       nix build .#app (D-59)
   desktop   trivia-desktop-build --dir (stage-media's missing-file check) + trivia-steam stage
+  media-budget  node app/desktop/stage-media.mjs --check: every pool URL shipped, depot and file sizes within
+            app/desktop/media-budget.json (plan 132)
   report    the build's reportUrl (package.json in the Linux app.asar) non-empty, GET <url>/health → {"ok": true, "api": 1}
             within 10 s (plan 104); `--skip report` until the server is set up (plan 103 task 4)
   modkit    steam-run <linux-unpacked>/trivia --check-mod (no display needed) on its modding/template-bundle and each
@@ -17,7 +19,6 @@ Steps, each ✓/✗ with its time; all automated steps run, exit 1 on any ✗:
   credits   node authoring/steam/credits_check.mjs on both unpacked builds: files ↔ credits.json, both ways
   smoke     node authoring/steam/smoke.mjs app/desktop/release/linux-unpacked: TRIVIA_DEV_STEAM_USER=1 (decision 111),
             network off; save and resume, no «progress needs Steam» notice (with packs: again without them)
-  media-budget  always skipped until masterplan 10 part 6 (task 260) adds its check
   manual    the rows of MANUAL, asked y/n/note or read from --manual FILE (`<row>: <answer>` per line);
             "n…" fails, "y…" passes (deck: also "no Deck…", decision 125), anything else is a note and
             counts as skipped; on a content-only patch full-only rows are answered "skipped: content-only since <tag>"; beta-save only when
@@ -44,6 +45,7 @@ STEPS = {
     "quality": [["qgen", "report", "--qc"]],
     "nix": [["nix", "build", ".#app", "--no-link"]],
     "desktop": [["trivia-desktop-build", "--dir"], ["trivia-steam", "stage"]],
+    "media-budget": [["node", "app/desktop/stage-media.mjs", "--check"]],
     "report": [],
     "modkit": [["steam-run", f"{UNPACKED}/trivia", "--ozone-platform=headless", "--check-mod", f"{UNPACKED}/modding/{m}"]
                for m in ("template-bundle", *(f"examples/{e.name}" for e in sorted((REPO / "modding/examples").iterdir()) if e.is_dir()))],
@@ -52,7 +54,6 @@ STEPS = {
 }
 SHIPPED = ("app/", "flake.nix", "flake.lock", "package.json", "package-lock.json")
 STATE_TS = "app/client/src/engine/state.ts"
-MEDIA_BUDGET = "masterplan 10 part 6, task 260"
 OFFLINE = ("beta install from Steam, network off (Steam offline mode: Steam → Go Offline while online, then network off), "
            "start from Steam")
 # Row → (scope, check, check on a content-only patch); scope: always, full (full release only), save
@@ -258,8 +259,6 @@ def main() -> None:
         dt = time.monotonic() - t
         steps.append((name, "✗" if fail else "✓", dt, fail or ""))
         print(f"{'✗' if fail else '✓'} {name} ({dt:.0f} s){': ' + fail + f' (log {logs / name}.log)' if fail else ''}")
-    steps.append(("media-budget", "skipped", 0, MEDIA_BUDGET))
-    print(f"– media-budget: skipped ({MEDIA_BUDGET})")
 
     rows = []  # (row, check, status, answer)
     if "manual" in args.skip:
