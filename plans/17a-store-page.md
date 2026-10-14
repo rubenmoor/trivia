@@ -351,6 +351,7 @@ Values for Steamworks → Edit Store Page → "Basic Info" (requirements, langua
 ## Screenshots
 - Rendered, not hand-made: `node authoring/store/screenshots.mjs [--lang en,es,es-ES,de] [--visible]` from the dev shell (`npm run build` and `trivia-media sync --status approved` first)
 - Shell at 1920×1080 under Xvfb, raw CDP, a throw-away demo save per shot (made-up players), offline
+- `TRIVIA_DEV_STEAM_USER=1`: valid user under the save gate (plan 87), so the demo save loads; no "progress needs Steam" notice, flag action shown
 - Output: `authoring/store/out/screenshots/<lang>/NN-<screen>.png` (gitignored)
 - Screens: start, player, modes, customize, tower (level 11); with a question pool of the language also cards, image question, video question, Francotirador aiming, victory
 - Questions per shot: `Q` in the script

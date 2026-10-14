@@ -194,7 +194,8 @@ async function main() {
     }
     const port = await freePort();
     const shell = spawn("trivia-desktop", [`--remote-debugging-port=${port}`, "--remote-allow-origins=*"], {
-      env: { ...process.env, DISPLAY: display, TRIVIA_SAVE_DIR: tmp, TRIVIA_STEAM_SDK: path.join(tmp, "no-steam") },
+      // dev user: saves and flags on under the gate (plan 87), no notice
+      env: { ...process.env, DISPLAY: display, TRIVIA_SAVE_DIR: tmp, TRIVIA_STEAM_SDK: path.join(tmp, "no-steam"), TRIVIA_DEV_STEAM_USER: "1" },
       stdio: ["ignore", "ignore", "pipe"],
     });
     shell.stderr.on("data", (d) => process.env.DEBUG && process.stderr.write(d));
