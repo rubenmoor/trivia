@@ -91,7 +91,7 @@ export interface ModModules {
   i18n: { t: typeof t; readonly lang: string; fill: typeof fill };
   input: { pushScope: typeof pushScope; lastDevice: typeof lastDevice };
   sound: { sfx: typeof sfx; music: typeof music };
-  /** Our Svelte runtime: compiled mod components import `/vendor/svelte/…`, not their own. */
+  /** Our Svelte runtime: compiled mod components import `/vendor/svelte.js`, not their own. */
   svelte: { mount: typeof mount; unmount: typeof unmount; flushSync: typeof flushSync };
 }
 
@@ -112,7 +112,7 @@ export interface TriviaApi {
     add(locale: string, catalog: Record<string, unknown>, opts?: { endonym?: string; base?: string }): void;
   };
   screens: {
-    /** Our screen `name` → a compiled Svelte component on our runtime (`/vendor/svelte/…`), same props as ours
+    /** Our screen `name` → a compiled Svelte component on our runtime (`/vendor/svelte.js`), same props as ours
      * (`game/screens/<name>.svelte`); top mod wins. Call in `setup`: read when the game mounts. */
     replace(name: ScreenName, component: Component<never>): () => void;
     /** Our screen `name` → plain DOM, without a Svelte compiler. */

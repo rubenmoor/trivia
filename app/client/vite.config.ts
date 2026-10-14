@@ -1,4 +1,4 @@
-import { defineConfig, type Plugin } from "vite";
+import { build, defineConfig, type Plugin } from "vite";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
 import { globSync, readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
@@ -35,24 +35,62 @@ function oneEntryScript(): Plugin {
   };
 }
 
+/** Svelte's runtime as one file, `/vendor/svelte.js` (decision 149): every `svelte`/`svelte/*` import points at it;
+ * it re-exports all of `svelte`, `svelte/internal/client` and whatever else we import, one instance (decision 145). */
+function svelteRuntime(): Plugin {
+  const file = "vendor/svelte.js";
+  const entry = "\0trivia-svelte-runtime";
+  const used = new Set(["svelte", "svelte/internal/client", "svelte/internal/disclose-version"]);
+  return {
+    name: "trivia-svelte-runtime",
+    enforce: "pre",
+    resolveId(id) {
+      if (id !== "svelte" && !id.startsWith("svelte/")) return null;
+      used.add(id);
+      return { id: `/${file}`, external: true };
+    },
+    async generateBundle() {
+      const out = await build({
+        configFile: false,
+        envFile: false,
+        root: client,
+        logLevel: "warn",
+        plugins: [{
+          name: "trivia-svelte-runtime-entry",
+          resolveId: (id) => (id === entry ? id : null),
+          load: (id) => (id === entry ? [...used].sort().map((s) => `export * from "${s}";`).join("\n") : null),
+        }],
+        build: {
+          write: false,
+          minify: false,
+          sourcemap: true,
+          rolldownOptions: { input: entry, preserveEntrySignatures: "strict", output: { entryFileNames: file } },
+        },
+      });
+      for (const o of (Array.isArray(out) ? out : [out]).flatMap((r) => ("output" in r ? r.output : []))) {
+        this.emitFile({ type: "asset", fileName: o.fileName, source: o.type === "chunk" ? o.code : o.source });
+      }
+    },
+  };
+}
+
 /** Readable build; `--mode optimized`: Vite's defaults (hashed, minified), to measure the readable build's cost (decision 143). */
 export default defineConfig(({ mode }) => ({
   define: { __APP_VERSION__: JSON.stringify(version) },
-  plugins: [svelte(), credits(), ...(mode === "optimized" ? [] : [oneEntryScript()]), devServer()],
+  plugins: [
+    ...(mode === "optimized" ? [] : [{ ...svelteRuntime(), apply: "build" as const }, oneEntryScript()]),
+    svelte(),
+    credits(),
+    devServer(),
+  ],
   build: mode === "optimized" ? {} : {
     minify: false,
     sourcemap: true,
     cssCodeSplit: true,
     modulePreload: false,
     rolldownOptions: {
-      // Our modules and Svelte's runtime with every export: mods import them by path (plan 117, decision 145).
-      input: {
-        index: `${client}index.html`,
-        ...modules,
-        "svelte-index": "svelte",
-        "svelte-client": "svelte/internal/client",
-        "svelte-version": "svelte/internal/disclose-version",
-      },
+      // Our modules with every export: mods import them by path (plan 117).
+      input: { index: `${client}index.html`, ...modules },
       preserveEntrySignatures: "strict",
       output: {
         preserveModules: true,
