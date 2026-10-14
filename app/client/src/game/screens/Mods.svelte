@@ -221,7 +221,7 @@
                 </span>
                 <span class="meta">
                   {m.source === "local" ? t("mods.local") : t("mods.workshop", { id: m.publishedFileId ?? "" })} ·
-                  {m.languages.length ? m.languages.map((l) => endonym(l, "ui")).join(", ") : t("mods.allLanguages")}
+                  {m.languages.length ? m.languages.map((l) => endonym(l)).join(", ") : t("mods.allLanguages")}
                 </span>
                 <span class="state" class:bad={m.state === "invalid"}>{stateText(m)}</span>
                 {#each warnings(m) as w (w)}<span class="warning">{w}</span>{/each}

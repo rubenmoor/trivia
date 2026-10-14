@@ -181,7 +181,21 @@
   }
 
   async function languagePicked() {
+    if (languageFromStart) return backToStart();
     await go((await askConsent()) ? "consent" : "start", "whoosh");
+  }
+
+  /** The language screen opened from Start's button (plan 126): back returns to Start. */
+  let languageFromStart = $state(false);
+
+  async function openLanguage() {
+    if (busy) return;
+    languageFromStart = true;
+    await go("language", "whoosh");
+  }
+
+  async function backToStart() {
+    await go("start", "whoosh", () => (languageFromStart = false));
   }
 
   /** A save that couldn't be written stays in the corner until one is (plan 55). */
@@ -531,6 +545,7 @@
       if (running) resume();
       else newGame();
     } else if (on === "start" && a.type === "new") newGame();
+    else if (on === "start" && a.type === "language" && !notice) openLanguage();
     else if (on === "level" && a.type === "confirm") go(table(game), "paper");
     else if (on === "select" && a.type === "pick" && a.n <= 4 && picked === null) pick(a.n - 1);
     else if (on === "correct" && a.type === "confirm") toLevel();
@@ -556,7 +571,8 @@
     if (on === "language" || on === "consent" || on === "player" || on === "choice" || on === "question") return; // they push their own
     return pushScope({
       name: on,
-      keys: on === "start" ? { [NEW_KEY]: { type: "new" } } : undefined,
+      keys: on === "start" ? { [NEW_KEY]: { type: "new" }, [LANGUAGE_KEY]: { type: "language" } } : undefined,
+      pad: on === "start" ? () => ({ 3: { type: "language" } }) : undefined,
       handle: (a) => onScreen(on, a),
       root: () => main,
       keep: on === "start",
@@ -587,6 +603,7 @@
   }
 
   const NEW_KEY = t("screen.start.newKey").toLowerCase();
+  const LANGUAGE_KEY = t("screen.start.languageKey").toLowerCase();
 </script>
 
 <main class="game" bind:this={main}>
@@ -596,13 +613,13 @@
       <p class="center label">{t("screen.loading")}</p>
     {:else if screen === "language"}
       <Stage />
-      <S.Language onpicked={languagePicked} />
+      <S.Language onpicked={languagePicked} onback={languageFromStart ? backToStart : undefined} />
     {:else if screen === "consent"}
       <Stage />
       <Consent ondone={() => go("start", "whoosh")} />
     {:else if screen === "start"}
       <Stage />
-      <S.Start {game} {running} {levels} {supply} {notice} {busy} mods={startMods} onmods={() => (modsOpen = true)} onresume={resume} onnew={newGame} ondismiss={() => (notice = null)} />
+      <S.Start {game} {running} {levels} {supply} {notice} {busy} mods={startMods} onmods={() => (modsOpen = true)} onlanguage={openLanguage} onresume={resume} onnew={newGame} ondismiss={() => (notice = null)} />
     {:else if screen === "player"}
       <Stage />
       <S.Player {busy} onchoose={choosePlayer} ondeleted={refresh} />

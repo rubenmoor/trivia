@@ -117,14 +117,6 @@ const es = {
   },
   /** Language rows of the Esc menu (plan 68); language names are endonyms in lib/i18n.ts. */
   language: {
-    ui: "Idioma",
-    questions: "Idioma de las preguntas",
-    previous: "anterior",
-    next: "siguiente",
-    /** The UI language is applied with Enter: the game reloads. */
-    apply: "Cambiar (reinicia la pantalla)",
-    /** A question language whose pool can't fill a game. */
-    short: "Faltan preguntas ({n} disponibles)",
     /** First-start screen (fresh save): heading and confirm prompt. */
     choose: "Elige el idioma",
     confirm: "Aceptar",
@@ -364,6 +356,10 @@ const es = {
       new: "Nueva partida",
       /** Shortcut for `new` (case-insensitive). */
       newKey: "N",
+      /** Language button top right (plan 126): aria label; the button shows the endonym. */
+      language: "Idioma: {name}",
+      /** Shortcut for `language` (case-insensitive). */
+      languageKey: "I",
       play: "¡Jugar!",
     },
     player: {

@@ -103,12 +103,6 @@ export const en = {
     used: "{n} used",
   },
   language: {
-    ui: "Language",
-    questions: "Question language",
-    previous: "previous",
-    next: "next",
-    apply: "Switch (restarts the screen)",
-    short: "Not enough questions ({n} available)",
     choose: "Choose your language",
     confirm: "OK",
   },
@@ -317,6 +311,8 @@ export const en = {
       resumePlayer: "Continue: {name}, level {level}",
       new: "New game",
       newKey: "N",
+      language: "Language: {name}",
+      languageKey: "L",
       play: "Play!",
     },
     player: {

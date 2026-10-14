@@ -56,7 +56,7 @@ export async function initLang(saved?: string): Promise<void> {
   plurals = new Intl.PluralRules(real(lang));
 }
 
-/** Names of the languages in themselves (plan 68): data, not translated. Question `es` is neutral Spanish. */
+/** Names of the languages in themselves (plan 68): data, not translated. */
 const ENDONYMS: Record<string, string> = {
   es: "Español (Latinoamérica)",
   "es-ES": "Español (España)",
@@ -78,8 +78,8 @@ export function addCatalog(locale: string, over: Record<string, unknown>, opts: 
   ENDONYMS[locale] = opts.endonym ?? locale;
 }
 
-export function endonym(tag: string, kind: "ui" | "questions"): string {
-  return kind === "questions" && tag === "es" ? "Español" : (ENDONYMS[tag] ?? tag);
+export function endonym(tag: string): string {
+  return ENDONYMS[tag] ?? tag;
 }
 
 const warned = new Set<string>();

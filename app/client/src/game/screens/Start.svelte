@@ -1,8 +1,8 @@
 <script lang="ts">
   // Start (04, "Start"): wordmark, resume or new game, the save notice (plan 55), the supply report (GF-5),
-  // the Mods button in the shell (plan 118).
+  // the Mods button in the shell (plan 118), the language button top right (plan 126).
   import type { takeSaveNotice } from "../../lib/engine.ts";
-  import { t } from "../../lib/i18n.ts";
+  import { endonym, lang, t } from "../../lib/i18n.ts";
   import type { Game, Supply } from "../../lib/types.ts";
   import EffectsDemo from "../EffectsDemo.svelte";
   import Fireworks from "../Fireworks.svelte";
@@ -21,6 +21,7 @@
     onnew,
     ondismiss,
     onmods,
+    onlanguage,
   }: {
     game: Game | null;
     running: boolean;
@@ -34,6 +35,7 @@
     onnew: () => void;
     ondismiss: () => void;
     onmods?: () => void;
+    onlanguage: () => void;
   } = $props();
 
   /** /?fuegos=<variant> or ?fuegos=finale plays fireworks over the Start screen (preview, UI-9). */
@@ -45,6 +47,13 @@
 {#if preview}<Fireworks mode={preview === "finale" ? "finale" : "single"} variant={preview} />{/if}
 {#if effectsDemo}<EffectsDemo />{/if}
 <section class="start">
+  {#if !notice}
+    <button class="language glass" onclick={onlanguage} disabled={busy} data-focus-id="language" aria-label={t("screen.start.language", { name: endonym(lang) })}>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20" /></svg>
+      {endonym(lang)}
+      <Prompt action="language" />
+    </button>
+  {/if}
   <h1 class="wordmark"><span class="bang">{t("screen.start.open")}</span>{t("screen.start.name")}<span class="bang">{t("screen.start.close")}</span></h1>
   <p class="subtitle">{t("screen.start.subtitle", { n: levels })}</p>
   <div class="buttons">
@@ -118,6 +127,25 @@
     align-items: center;
     gap: calc(1.6 * var(--u));
     margin-top: calc(2 * var(--u));
+  }
+  .language {
+    position: absolute;
+    top: calc(var(--safe-y) * 0.5 + 4 * var(--u)); /* under the ☰ menu button, clear of the error line */
+    right: calc(var(--safe-x) * 0.5);
+    display: flex;
+    align-items: center;
+    gap: calc(0.6 * var(--u));
+    padding: calc(0.5 * var(--u)) calc(1 * var(--u));
+    font-size: calc(1.3 * var(--u));
+    font-weight: 700;
+    color: var(--slate-200);
+  }
+  .language svg {
+    width: calc(1.6 * var(--u));
+    height: calc(1.6 * var(--u));
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
   }
   .count {
     margin-left: calc(0.6 * var(--u));

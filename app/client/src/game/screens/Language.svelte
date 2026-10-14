@@ -1,6 +1,6 @@
 <script lang="ts">
   // The first-start language screen (plan 68, I18N-2): a fresh save picks its UI language once, the
-  // guess preselected; the questions follow it (plan 126). Later changes: the Esc menu.
+  // guess preselected; the questions follow it (plan 126). Later: Start's language button, with `onback`.
   import { onMount, tick } from "svelte";
   import { fetchLanguage, setLanguage } from "../../lib/api.ts";
   import { errorText } from "../../lib/errors.ts";
@@ -8,7 +8,7 @@
   import { focusControl, pushScope } from "../../lib/input.svelte.ts";
   import Prompt from "../Prompt.svelte";
 
-  let { onpicked }: { onpicked: () => void } = $props();
+  let { onpicked, onback }: { onpicked: () => void; onback?: () => void } = $props();
 
   let options = $state<string[]>([]);
   /** The focused option; confirm picks it. */
@@ -51,6 +51,7 @@
       handle: (a) => {
         if (a.type === "confirm" && current) choose(current);
         else if (a.type === "pick" && a.n <= options.length) choose(options[a.n - 1]);
+        else if (a.type === "back" && onback && !saving) onback();
         else return a.type === "menu"; // no Esc menu here: nothing to configure yet
         return true;
       },
@@ -72,11 +73,12 @@
         data-focus-default={tag === current || undefined}
         style:--i={i}
       >
-        {endonym(tag, "ui")}
+        {endonym(tag)}
       </button>
     {/each}
   </div>
   {#if options.length}<p class="label">{t("language.confirm")} <Prompt action="confirm" /></p>{/if}
+  {#if onback}<button class="secondary" onclick={onback} disabled={saving}>{t("action.back")} <Prompt action="back" /></button>{/if}
   {#if error}<p class="error">{error}</p>{/if}
 </section>
 

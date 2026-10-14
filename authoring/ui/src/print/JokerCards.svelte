@@ -45,7 +45,7 @@
 <div class="screen-only" {lang}>
   <nav>
     {#each UI_LANGS as l (l)}
-      <a href="?lang={l}" class:on={l === lang} lang={l}>{endonym(l, "ui")}</a>
+      <a href="?lang={l}" class:on={l === lang} lang={l}>{endonym(l)}</a>
     {/each}
   </nav>
   <h1>{c.cards.title}</h1>

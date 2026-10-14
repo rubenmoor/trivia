@@ -17,6 +17,8 @@ export type Intent =
   | { type: "replay" }
   | { type: "flag" }
   | { type: "new" }
+  /** Start's language button (plan 126). */
+  | { type: "language" }
   | { type: "submit" }
   | { type: "joker-focus"; step: 1 | -1 }
   /** The one hold (plan 113): down on press, up on release. */
@@ -74,17 +76,18 @@ function toIntent(e: Key, keys: Keys = {}, text = false): Intent | null {
   return null;
 }
 
-/** On-screen key labels (IN-5): the one copy, read by Prompt.svelte. */
-const KEY_LABELS: Partial<Record<Intent["type"], string>> = {
+/** On-screen key labels (IN-5): the one copy, read by Prompt.svelte. A function: catalogs load after import. */
+const keyLabels = (): Partial<Record<Intent["type"], string>> => ({
   confirm: "Enter",
   submit: "Enter",
   back: "⌫",
   menu: "Esc",
   replay: t("screen.question.replayKey"),
   new: t("screen.start.newKey"),
+  language: t("screen.start.languageKey"),
   flag: t("flag.key"),
   peek: t("screen.question.peekKey"),
-};
+});
 const ARROW_LABELS: Record<Dir, string> = { up: "↑", down: "↓", left: "←", right: "→" };
 
 /** The key shown for an intent, or null (jokers by letter, joker-focus has no key). */
@@ -92,7 +95,7 @@ export function keyLabel(i: Intent): string | null {
   if (i.type === "pick") return String(i.n);
   if (i.type === "navigate") return ARROW_LABELS[i.dir];
   if (i.type === "letter") return i.key.toUpperCase();
-  return KEY_LABELS[i.type] ?? null;
+  return keyLabels()[i.type] ?? null;
 }
 
 const stack: Scope[] = [];

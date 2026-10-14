@@ -136,7 +136,7 @@ const CATALOGS = {
 /** Shortcut keys live together; `flag.key` works on every screen. */
 const SCREENS = {
   question: ["joker.hint.key", "joker.skip.key", "joker.easier.key", "joker.category.key", "joker.snipe.key", "screen.question.replayKey", "screen.question.peekKey"],
-  start: ["screen.start.newKey"],
+  start: ["screen.start.newKey", "screen.start.languageKey"],
   choice: ["mode.gamemasterKey", "mode.soloKey", "customize.openKey"],
 };
 /** Screens that show answers `A`–`D`. */

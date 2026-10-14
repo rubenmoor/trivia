@@ -1,14 +1,14 @@
 <script lang="ts">
   // Gamemaster menu on Esc (04-ui-tv-display.md, UI-13; MD-12, D-88). The family sees it, so it never shows
-  // the correct answer. Two parts: general (every mode: actions, sound, languages) and, in gamemaster mode,
+  // the correct answer. Two parts: general (every mode: actions, sound) and, in gamemaster mode,
   // the cheats apart (skip, block, undo, replace, jump to level, difficulty and bundles, jokers left).
   // ↑/↓ choose, Enter runs, ←/→ change a value (else the next column), Esc closes. Outside gamemaster
-  // mode no cheats (D-74), the jokers left read-only. Language rows (plan 68) only with ≥2 options.
+  // mode no cheats (D-74), the jokers left read-only. No language rows: Start's button (plan 126).
   // Code mods' rows (plan 117) in a last column.
-  import { fetchGameChoice, fetchJokersUsed, fetchLanguage, setLanguage, type GameActionBody } from "../lib/api.ts";
+  import { fetchGameChoice, fetchJokersUsed, type GameActionBody } from "../lib/api.ts";
   import { desktop, devMode } from "../lib/desktop.ts";
   import { flush } from "../lib/engine.ts";
-  import { endonym, t } from "../lib/i18n.ts";
+  import { t } from "../lib/i18n.ts";
   import { pushScope, type Action } from "../lib/input.svelte.ts";
   import { menuRows } from "../lib/mods.ts";
   import { setTelemetryConsent, telemetryState } from "../lib/telemetry.ts";
@@ -17,7 +17,7 @@
   import GoToDialog from "./GoToDialog.svelte";
   import { levelsOf } from "./levels.ts";
   import Prompt from "./Prompt.svelte";
-  import type { Game, GameMode, JokerBudget, JokerName, Language } from "../lib/types.ts";
+  import type { Game, GameMode, JokerBudget, JokerName } from "../lib/types.ts";
   import { stepUses, TOKENS } from "./jokers.ts";
   import { setVolumes, sound, type Volumes } from "./sound.svelte.ts";
 
@@ -29,12 +29,11 @@
     col: 0 | 1 | 2 | 3;
     /** Mod rows: their labels may repeat. */
     key?: string;
-    /** General part, under «Sonido»: volumes, mute, languages. */
+    /** General part, under «Sonido»: volumes, mute, telemetry. */
     sound?: boolean;
     confirm?: boolean;
     volume?: Channel;
     joker?: JokerName;
-    lang?: LangKind;
     /** «Cambiar pregunta»: ←/→ toggles seen. */
     replace?: boolean;
     /** «Saltar a nivel»: ←/→ picks the level. */
@@ -42,7 +41,6 @@
     /** Read-only: the running game's choice (plan 29); ↑/↓ skip it. */
     info?: boolean;
   };
-  type LangKind = "ui" | "questions";
   type Channel = "music" | "effects" | "media";
 
   const CHANNELS: { key: Channel; label: string }[] = [
@@ -192,34 +190,6 @@
     target = ((target - 1 + by + levels) % levels) + 1;
   }
 
-  /** Stored language and options (plan 126: one language). Null until loaded. */
-  let langs = $state<{ language: Language; options: string[] } | null>(null);
-  /** The option the row shows; differs from the stored one only for an unapplied language. */
-  let shown = $state<Language | null>(null);
-  $effect(() => {
-    fetchLanguage()
-      .then((l) => ((langs = l), (shown = l.language)))
-      .catch((e) => console.warn("language rows", e));
-  });
-  const langKinds = $derived(langs && langs.options.length > 1 ? (["ui"] as const) : []);
-
-  function blocked(_kind: LangKind, _tag: string): string | null {
-    return null;
-  }
-
-  function stepLang(_kind: LangKind, by: number) {
-    if (!langs || !shown) return;
-    const { options } = langs;
-    shown = options[(options.indexOf(shown) + by + options.length) % options.length];
-  }
-
-  /** The UI language is a boot constant: write the save, then reload. */
-  async function applyUi() {
-    if (!langs || !shown || shown === langs.language) return;
-    await setLanguage(shown);
-    location.reload();
-  }
-
   /** Opt-in telemetry (plan 108): null without a valid Steam user in the shell (no row); `null` consent shows as off. */
   let telemetryOn = $state<boolean | null>(null);
   telemetryState()
@@ -279,14 +249,6 @@
       col: 0,
       sound: true,
     },
-    ...langKinds.map((k) => ({
-      label: t(k === "ui" ? "language.ui" : "language.questions"),
-      enabled: true,
-      run: k === "ui" ? applyUi : () => {},
-      lang: k,
-      col: 0 as const,
-      sound: true,
-    })),
     ...(telemetryOn === null
       ? []
       : [
@@ -351,7 +313,6 @@
       confirming = null;
     } else if (by && item.volume) change(item.volume, by * STEP);
     else if (by && item.joker) stepJoker(item.joker, by);
-    else if (by && item.lang) stepLang(item.lang, by);
     else if (by && item.replace && item.enabled) seen = !seen;
     else if (by && item.level && item.enabled) stepLevel(by);
     else if (by) across(by);
@@ -415,21 +376,6 @@
     </div>
   {:else if item.info}
     <p class="row readonly info">{item.label}</p>
-  {:else if item.lang && shown}
-    {@const kind = item.lang}
-    {@const tag = shown}
-    {@const reason = blocked(kind, tag)}
-    <div class="row lang" class:selected={i === selected} data-item={i} role="group" onmouseenter={() => (selected = i)}>
-      <span>{item.label}</span>
-      <button class="step" onclick={() => stepLang(kind, -1)} tabindex="-1" aria-label={t("language.previous")}>‹</button>
-      <span class="value" class:off={reason}>{endonym(tag, kind)}</span>
-      <button class="step" onclick={() => stepLang(kind, 1)} tabindex="-1" aria-label={t("language.next")}>›</button>
-      {#if reason}
-        <span class="note">{reason}</span>
-      {:else if kind === "ui" && tag !== langs?.language}
-        <button class="note apply" onclick={applyUi} tabindex="-1">{t("language.apply")} <Prompt action="confirm" /></button>
-      {/if}
-    </div>
   {:else}
     <button
       class:selected={i === selected}
@@ -444,7 +390,7 @@
 {/snippet}
 
 {#snippet column(col: number, sound = false)}
-  {#each items as item, i (item.joker ?? item.volume ?? item.lang ?? item.key ?? item.label)}
+  {#each items as item, i (item.joker ?? item.volume ?? item.key ?? item.label)}
     {#if item.col === col && !!item.sound === sound}{@render row(item, i)}{/if}
   {/each}
 {/snippet}
@@ -670,27 +616,6 @@
     text-align: center;
     color: var(--amber);
     white-space: nowrap;
-  }
-  .lang {
-    grid-template-columns: 1fr calc(2.4 * var(--u)) calc(12 * var(--u)) calc(2.4 * var(--u));
-  }
-  .lang .value {
-    text-align: center;
-    color: var(--amber);
-  }
-  .lang .value.off {
-    color: var(--slate-400);
-    text-decoration: line-through;
-  }
-  .note {
-    grid-column: 1 / -1;
-    color: var(--slate-400);
-    font-weight: 600;
-  }
-  .note.apply {
-    padding: calc(0.3 * var(--u)) calc(0.8 * var(--u));
-    font-size: calc(1.1 * var(--u));
-    color: var(--slate-200);
   }
   .volume input {
     accent-color: var(--amber);

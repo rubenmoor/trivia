@@ -103,12 +103,6 @@ export const de = {
     used: "{n} benutzt",
   },
   language: {
-    ui: "Sprache",
-    questions: "Sprache der Fragen",
-    previous: "vorherige",
-    next: "nächste",
-    apply: "Wechseln (lädt den Bildschirm neu)",
-    short: "Zu wenige Fragen ({n} vorhanden)",
     choose: "Sprache wählen",
     confirm: "Bestätigen",
   },
@@ -316,6 +310,8 @@ export const de = {
       resumePlayer: "Weiterspielen: {name}, Stufe {level}",
       new: "Neues Spiel",
       newKey: "N",
+      language: "Sprache: {name}",
+      languageKey: "S",
       play: "Spielen!",
     },
     player: {
