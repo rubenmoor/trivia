@@ -1,0 +1,3 @@
+- Example theme: a root `style.css` that overrides colour variables from `game/theme.css` and one component rule by its stable class
+- Guide: [`../../README.md`](../../README.md), sections "Overlay rules" and "Code add-ons" (root `style.css`)
+- Copy the folder into your mods folder, restart, turn it on in the Mods screen

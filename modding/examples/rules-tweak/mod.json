@@ -1,0 +1,10 @@
+{
+  "id": "example-rules-tweak",
+  "name": "Example: One more hint",
+  "description": "A code add-on: every new game gets one more hint joker, the joker card says so, and the result of each game goes to the console.",
+  "version": "1.0.0",
+  "game": "0.1.0",
+  "languages": ["es", "es-ES", "en", "de"],
+  "entry": "main.js",
+  "kind": ["code"]
+}

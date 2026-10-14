@@ -1,0 +1,9 @@
+{
+  "id": "example-conversion",
+  "name": "Example: Guess the number",
+  "description": "A minimal full conversion: its own index.html replaces the whole game with a one-screen number guessing game. Start with --no-mods to get the game back.",
+  "version": "1.0.0",
+  "game": "0.1.0",
+  "languages": ["en"],
+  "kind": ["conversion"]
+}

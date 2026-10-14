@@ -1,0 +1,26 @@
+/* Example theme (MIT): linked after the game's CSS, so equal selectors win.
+   Colour variables: game/theme.css; component classes: svelte-<component path>. */
+
+.game {
+  /* Base: plum instead of night blue */
+  --night-900: #1a0b20;
+  --night-800: #26112e;
+  --night-700: #361a40;
+  --slate-600: #4a2b50;
+  --slate-400: #8f6b94;
+  --slate-200: #dcc3d8;
+
+  /* Glass at the same alphas as ours */
+  --glass: rgba(38, 17, 46, 0.62);
+  --glass-strong: rgba(38, 17, 46, 0.74);
+  --glass-light: rgba(38, 17, 46, 0.45);
+  --glass-line: rgba(220, 195, 216, 0.18);
+
+  --amber: #ffcf5c;
+  --sky: #b48cff;
+}
+
+/* One component rule: the HUD's level chip (game/Hud.svelte) */
+.level.svelte-game-hud {
+  color: var(--pink);
+}

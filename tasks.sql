@@ -23525,7 +23525,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - Docs name decision 133 and the paths; part 10 (plan 121) can link `modding/bundles.md` and `modding/bundle-prompt.md`.
 - Per-commit checks pass.', '2026-10-13T18:36:03Z', '2026-10-14T18:06:21Z', 940);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (987, 121, 'Example mods: theme, rules tweak, minimal full conversion', 'work', 'open', NULL, NULL, 'Part of plan 121 (milestone 15). Three example mods modders can copy as is; the bundle example is `modding/template-bundle/` (plan 120), referenced, not copied (decision 134: Modding guide: path, language, examples).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (987, 121, 'Example mods: theme, rules tweak, minimal full conversion', 'work', 'done', NULL, '2026-10-14, modding/examples/{theme,rules-tweak,conversion}/ (mod.json, README.md, style.css / main.js / index.html+main.js); checked: --check-mod exit 0 each; dev shell under Xvfb with temp TRIVIA_MODS_DIR + dev user: theme palette, solo hint 3→4 (gamemaster numbers +1, unlimited kept), reworded joker.hint.rule, game:end log, all four incl. template-bundle active without errors, conversion replaces the game with /fonts/ fall-through, quits on Esc and pad B, --no-mods back to our game', 'Part of plan 121 (milestone 15). Three example mods modders can copy as is; the bundle example is `modding/template-bundle/` (plan 120), referenced, not copied (decision 134: Modding guide: path, language, examples).
 
 Runs after plan 117 (code add-ons, `window.trivia`), plan 118 task 1 (mods screen) and plan 120 task 3 (template bundle). Check every API name against the code as built (`grep` in `app/`), not against plans.
 
@@ -23540,7 +23540,7 @@ All in `modding/examples/`, each with `mod.json` (`game` = current version from 
 - All three plus `template-bundle` enabled together: no errors on the mods screen.
 - `trivia-desktop --check-mod <folder>` (decision 133) exits 0 for each.
 - `--no-mods` brings back our game; temp dir deleted.
-- Per-commit checks pass (AGENTS.md).', '2026-10-13T18:37:00Z', NULL, 941);
+- Per-commit checks pass (AGENTS.md).', '2026-10-13T18:37:00Z', '2026-10-14T19:49:22Z', 941);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (988, 121, 'Modding guide modding/README.md', 'work', 'open', NULL, NULL, 'Part of plan 121 (milestone 15). The one player-facing modding guide, English only, at `modding/README.md`, online at `https://github.com/rubenmoor/trivia/blob/main/modding/README.md` (decision 134: Modding guide: path, language, examples). It documents what plans 111–120 built; it designs nothing.
 
 Runs after the example mods task of plan 121 and the docs tasks of plans 111, 112, 114, 115, 117, 118, 119, 120 and the plan written by task 906 (achievements, flags, telemetry with mods; decision 123).
@@ -26517,6 +26517,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (942, 844, '2026-10-14T19:20:44Z', '2026-10-14T19:39:54Z', 'done', NULL, 0, '5bf28f9e105e4350c5437129f2da4e2b95ec26c5', 'claude-opus-5-5[1m]', 'a08d3d50-3acd-4513-8598-883c224c9ed5', 72, 130, 41218, 6645791, 143907, 3.3052941999999992, 2296074);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (943, 1028, '2026-10-14T19:39:54Z', '2026-10-14T19:40:51Z', 'blocked', NULL, 0, '807a49937991a96b43841c1680c7c5c0f1e2f44c', 'claude-opus-5-5[1m]', '30672a7e-e7c1-40ac-bfc2-43cc1cc0d6bd', 9, 18, 3150, 335565, 36372, 0.42116099999999995, 2296074);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (944, 1029, '2026-10-14T19:40:51Z', '2026-10-14T19:44:47Z', 'done', NULL, 0, 'f3cab1d50a8bc794088dddab3ae5eb7f23f22769', 'claude-opus-5-5[1m]', '2cb61247-3fd1-4571-9f9b-228b02b84322', 27, 50, 9193, 1038936, 42042, 0.72818319999999981, 2296074);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (945, 987, '2026-10-14T19:44:47Z', '2026-10-14T19:49:36Z', 'done', NULL, 0, 'f69300413f18b378c943659a17d667cec8ab0fcc', 'claude-opus-5-5[1m]', 'f8048c06-f401-4204-8045-f72738342752', 50, 78, 19303, 3006478, 94954, 1.7472995999999998, 2296074);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

@@ -1,0 +1,3 @@
+- Example code add-on: `trivia.actions.before` adds a hint joker to every new game, `trivia.i18n.add` rewords the hint card in es/es-ES/en/de, `trivia.on("game:end")` logs the result
+- Guide: [`../../README.md`](../../README.md), section "Code add-ons"
+- Copy the folder into your mods folder, restart, turn it on in the Mods screen; the log shows in devtools

@@ -1,0 +1,8 @@
+{
+  "id": "example-theme",
+  "name": "Example: Plum theme",
+  "description": "A CSS theme: a plum palette for every screen and a pink level chip. Only a root style.css, none of the game's files copied.",
+  "version": "1.0.0",
+  "game": "0.1.0",
+  "kind": ["theme"]
+}

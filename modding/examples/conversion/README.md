@@ -1,0 +1,3 @@
+- Example full conversion: its own `index.html` + `main.js` replace the game; fonts come from the game's `/fonts/` (overlay fall-through); quits via `window.triviaShell.quit()`, confirms the start via `window.triviaShell.mods.ready()`
+- Guide: [`../../README.md`](../../README.md), sections "Overlay rules" and "Mods screen and safe start"
+- Copy the folder into your mods folder, restart; to get the game back start it with `--no-mods` and turn this mod off
