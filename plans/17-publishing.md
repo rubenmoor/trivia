@@ -59,6 +59,59 @@ Steam requires developers to disclose AI-generated content on the store page (co
 - **"Coming soon" page** at least two weeks before release (Valve rule, partner.steamgames.com/doc/store/coming_soon, read 2026-10-13), better months, to collect wishlists. Rules and developer checklist: `11-steam.md` "Coming soon page (ST-3)".
 - **Launch:** preconditions, timeline, release candidate, launch-day checklist (build live on `default`, price, launch discount, languages, report thread, Release, announcement), first week: `11-steam.md` "Launch (S6)" (pm plan 95).
 
+## Name check (PUB-7)
+This section records what a worker found for the three store names: «Living Room Trivia» (en, default), «Trivia en Familia» (es, es-ES) and «Wohnzimmer-Quiz» (de, decision 78). It is research, not legal advice; a professional clearance search is optional and the developer's call. The result is pm decision "Store names pass PUB-7?" (pm plan 129).
+- Sources (all read 2026-10-14):
+  - Steam: store search (`store.steampowered.com/search`, also the suggest box), in English, Spanish and German. The full app list API (`ISteamApps/GetAppList`) is retired, so there's no check beyond the store search.
+  - USPTO: `tmsearch.uspto.gov`, word marks.
+  - TMview (`tmdn.org/tmview`): EUIPO, the EU national offices, WIPO Madrid (WO) and others.
+  - WIPO Global Brand Database: not checked directly because of its captcha. Madrid marks are covered through TMview.
+  - App Store (iTunes search, us/es/de) and Play Store search.
+  - Domains: RDAP (Verisign, DENIC) and whois (.com.co).
+  - Not checked: BoardGameGeek (Cloudflare blocks it). A general web search only worked for «Living Room Trivia».
+- Classes: 9 (software), 28 (games), 41 (entertainment). Marks are listed only if they're live.
+
+| Name | Source | Hit | Class | Owner | Status | Read |
+|---|---|---|---|---|---|---|
+| Living Room Trivia | Steam | none (titles with «Living Room» are other genres: «A Living Room», «Home Designer - Living Room») | – | – | – | 2026-10-14 |
+| Living Room Trivia | USPTO | none exact, none for «living room» + trivia/quiz/game | – | – | – | 2026-10-14 |
+| Living Room Trivia | USPTO | similar: LIVING ROOM 97883498, 97883506 (nightclub events, music production) | 41 | LIVINGROOM LLC | registered 2026-07-21 | 2026-10-14 |
+| Living Room Trivia | USPTO | similar: LIVING ROOM 78698523 (cinemas) | 41 | Living Room Theaters, Inc. | registered | 2026-10-14 |
+| Living Room Trivia | USPTO | similar: LIVING ROOM LIVE 88861046 (fitness streaming app) | 9, 41 | BB Body, Inc. | registered | 2026-10-14 |
+| Living Room Trivia | TMview | none exact | – | – | – | 2026-10-14 |
+| Living Room Trivia | TMview | similar: LIVING ROOM, AT 538/2018 | 9, 35, 41, 43 | Thomas E. Pausch | registered | 2026-10-14 |
+| Living Room Trivia | TMview | similar: THE LIVING ROOM, FR 4360442 | 9, 35, 38, 39, 41–43 | Bercy Services XXIX SAS | registered | 2026-10-14 |
+| Living Room Trivia | TMview | similar: LivingRoom, DE 3020170096275; The Livingroom, EM 019277580 | 41 (+36, 44, 45 / 35, 43) | EWING MEDIA GmbH; Neamciuc Learning | registered | 2026-10-14 |
+| Living Room Trivia | App Store, Play | none exact | – | – | – | 2026-10-14 |
+| Living Room Trivia | web | similar: Instagram account @livingroomtrivia «Living Room Trivia» (93 followers) | – | unknown | active | 2026-10-14 |
+| Living Room Trivia | domain | livingroomtrivia.com free | – | – | – | 2026-10-14 |
+| Trivia en Familia | Steam | none | – | – | – | 2026-10-14 |
+| Trivia en Familia | USPTO | none (also none for familia + trivia) | – | – | – | 2026-10-14 |
+| Trivia en Familia | TMview | none exact, none for «trivia familia» | – | – | – | 2026-10-14 |
+| Trivia en Familia | TMview | similar: EN FAMILIA, ES M2994232 | 41 | Asociación Española de Pediatría | registered | 2026-10-14 |
+| Trivia en Familia | TMview | similar: EN FAMILIA, CL 886022; AR 2989662 | 41 | Televisión Nacional de Chile; Anheuser-Busch InBev | registered | 2026-10-14 |
+| Trivia en Familia | TMview | similar: CINE EN FAMILIA, ES M2906406 | 38, 41 | Mediaset España | registered | 2026-10-14 |
+| Trivia en Familia | App Store es | similar: «Trivia Family - En Español» | app | TITANWARE SL | live | 2026-10-14 |
+| Trivia en Familia | Play | similar: «Family Trivia» (English) | app | unknown | live | 2026-10-14 |
+| Trivia en Familia | domain | triviaenfamilia.com, trivia-en-familia.com free; .com.co both free; .es: whois.nic.es refuses anonymous lookups, no DNS (likely free) | – | – | – | 2026-10-14 |
+| Wohnzimmer-Quiz | Steam (German) | none («Familienquiz» → «Family Quiz», a different name) | – | – | – | 2026-10-14 |
+| Wohnzimmer-Quiz | USPTO | none for wohnzimmer* | – | – | – | 2026-10-14 |
+| Wohnzimmer-Quiz | TMview | none exact, none for «Wohnzimmer» + Quiz/Spiel | – | – | – | 2026-10-14 |
+| Wohnzimmer-Quiz | TMview | similar: Wohnzimmerwissen, DE 3020262533264 | 9, 41, 44 | Bamarni Skin UG | filed | 2026-10-14 |
+| Wohnzimmer-Quiz | TMview | similar: WORLD WIDE WOHNZIMMER, DE 3020192217334 | 9, 16, 21, 25, 35, 38, 41 | TWIN.TV GmbH | registered | 2026-10-14 |
+| Wohnzimmer-Quiz | TMview | similar: Wohnzimmerkonzert, EM 013503685; WOHNZIMMER GE, DE 3020162352888 | 41 (+35, 43) | SofaConcerts GmbH; Paul Pillath | registered | 2026-10-14 |
+| Wohnzimmer-Quiz | App Store de, Play | none | – | – | – | 2026-10-14 |
+| Wohnzimmer-Quiz | domain | wohnzimmer-quiz.de, wohnzimmer-quiz.com, wohnzimmerquiz.com free; wohnzimmerquiz.de in DENIC's redemption period (recently dropped) | – | – | – | 2026-10-14 |
+
+- Findings:
+  - No Steam game is named after any of the three.
+  - No live identical mark was found in classes 9, 28 or 41.
+  - Riskiest hits:
+    - «Living Room» word marks in classes 9/41 (AT, FR; in the US, nightclubs and cinemas). «Trivia» is descriptive, so «Living Room» carries the name, but none of these marks covers games.
+    - «EN FAMILIA» in class 41 in Spain (a pediatrics association) and Chile (a TV show).
+    - «Trivia Family - En Español» on the Spanish App Store.
+    - For «Wohnzimmer-Quiz», nothing close; «Wohnzimmer» is a common word in German marks.
+
 ## Tasks
 - [x] PUB-1 Media license audit: a `media.py licenses` report per file (license, PD reason, Commons restriction templates); list the files to replace (PD-US-only, GFDL); restriction flags are listed, not replaced (D-61). *pm plan 52, 2026-10-11: 1,129 distinct files (non-rejected); 3 to replace: off-allowlist 1 (q-0021, GFDL 1.2), PD-US only 2 (q-1100, q-1194); 23 restriction flags on 21 files (personality 14, trademarked 5, design 2, fan-art 1, insignia 1).*
 - [x] PUB-2 Store the full license data per media item (license URL, author link, restrictions) in the pool, not just the `credit` string; `validate` requires it for approved questions. *pm plan 26, 2026-10-11: all 1,202 picks migrated; validate errors (q-0021, GFDL only, set to needs_work until part 3 replaces it; decision 10).*
