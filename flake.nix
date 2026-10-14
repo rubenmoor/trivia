@@ -100,7 +100,7 @@
         # Question report server (plan 103, decision 117): wrangler from nixpkgs, run in report-server/.
         trivia-report-server = pkgs.writeShellApplication {
           name = "trivia-report-server";
-          runtimeInputs = [ pkgs.git pkgs.wrangler pkgs.openssl ];
+          runtimeInputs = [ pkgs.git pkgs.wrangler pkgs.openssl pkgs.nodejs_22 ];
           text = ''
             root=$(git rev-parse --show-toplevel 2>/dev/null) || {
               echo "trivia-report-server: run this inside the trivia repository" >&2; exit 2; }
@@ -127,7 +127,8 @@
                 exec wrangler deploy "$@" ;;
               tail) exec wrangler tail --format pretty "$@" ;;
               secret) exec wrangler secret put "$@" ;;  # STEAM_WEB_API_KEY, PULL_TOKEN, HASH_SALT
-              *) echo "usage: trivia-report-server dev|deploy|tail|secret <NAME>" >&2; exit 2 ;;
+              seed-telemetry) exec node seed-telemetry.mjs "$@" ;;  # dev only: [N] [URL], localhost
+              *) echo "usage: trivia-report-server dev|deploy|tail|secret <NAME>|seed-telemetry [N] [URL]" >&2; exit 2 ;;
             esac
           '';
         };
