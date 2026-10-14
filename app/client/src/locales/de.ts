@@ -93,7 +93,7 @@ export const de = {
     seen: "gesehen",
     unseen: "nicht gesehen",
     level: "Zu Stufe springen",
-    settings: "Schwierigkeit und Pakete",
+    settings: "Schwierigkeit und Fragenpakete",
     /** Dev mode only (plan 85): a question by id replaces the one on screen. */
     goTo: "Zu Frage gehen…",
     goToBody: "Fragen-ID (q-0007 oder 7); sie ersetzt die Frage auf dem Bildschirm, auf dieser Stufe.",
@@ -242,11 +242,12 @@ export const de = {
     ages: "{lo}–{hi} Jahre",
     agesFrom: "ab {lo} Jahren",
     short: "Zu wenige Fragen",
-    bundles: "Pakete",
+    bundles: "Fragenpakete",
     on: "an",
     off: "aus",
     start: "Los geht’s!",
-    line: "{group} · {bundles}",
+    lineGroup: "Altersgruppe: {group}",
+    lineBundles: "Fragenpakete: {bundles}",
     difficulty: "Schwierigkeit {start}–{end}",
   },
   mode: {

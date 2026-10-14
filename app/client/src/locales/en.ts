@@ -93,7 +93,7 @@ export const en = {
     seen: "seen",
     unseen: "not seen",
     level: "Jump to level",
-    settings: "Difficulty and bundles",
+    settings: "Difficulty and question bundles",
     /** Dev mode only (plan 85): a question by id replaces the one on screen. */
     goTo: "Go to question…",
     goToBody: "Question id (q-0007 or 7); it replaces the one on screen, at this level.",
@@ -242,11 +242,12 @@ export const en = {
     ages: "{lo}–{hi} years",
     agesFrom: "{lo}+ years",
     short: "Not enough questions",
-    bundles: "Bundles",
+    bundles: "Question bundles",
     on: "on",
     off: "off",
     start: "Let's play!",
-    line: "{group} · {bundles}",
+    lineGroup: "Age group: {group}",
+    lineBundles: "Question bundles: {bundles}",
     difficulty: "Difficulty {start}–{end}",
   },
   mode: {

@@ -105,7 +105,7 @@ const es = {
     unseen: "no vista",
     /** «Saltar a nivel»: ‹ › picks the level. */
     level: "Saltar a nivel",
-    settings: "Dificultad y paquetes",
+    settings: "Dificultad y paquetes de preguntas",
     /** Dev mode only (plan 85): a question by id replaces the one on screen. */
     goTo: "Ir a pregunta…",
     goToBody: "Id de la pregunta (q-0007 o 7); sustituye a la que está en pantalla, en este nivel.",
@@ -273,12 +273,13 @@ const es = {
     agesFrom: "{lo}+ años",
     /** A group whose window can't fill a game with these bundles. */
     short: "Faltan preguntas",
-    bundles: "Paquetes",
+    bundles: "Paquetes de preguntas",
     on: "activado",
     off: "desactivado",
     start: "¡A jugar!",
-    /** The running game's choice in the overlay: «Adolescentes · Básico, Colombia». */
-    line: "{group} · {bundles}",
+    /** The running game's choice in the overlay, two rows. */
+    lineGroup: "Edad: {group}",
+    lineBundles: "Paquetes de preguntas: {bundles}",
     /** A custom difficulty in place of the group (D-88). */
     difficulty: "Dificultad {start}–{end}",
   },

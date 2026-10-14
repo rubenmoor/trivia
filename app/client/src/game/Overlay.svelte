@@ -204,15 +204,15 @@
     }
   }
 
-  /** «Adolescentes · Básico, Colombia»; null without a running game. */
-  let choiceLine = $state<string | null>(null);
+  /** «Edad: Adolescentes», «Paquetes de preguntas: Básico, …»; empty without a running game. */
+  let choiceLines = $state<string[]>([]);
   $effect(() => {
     const s = running ? game?.settings : null;
-    if (!s) return void (choiceLine = null);
+    if (!s) return void (choiceLines = []);
     fetchGameChoice(s)
       .then(({ group, difficulty, bundles }) => {
         const head = difficulty ? t("choice.difficulty", { start: difficulty.start, end: difficulty.end }) : (group ?? "");
-        choiceLine = t("choice.line", { group: head, bundles: bundles.join(", ") });
+        choiceLines = [t("choice.lineGroup", { group: head }), t("choice.lineBundles", { bundles: bundles.join(", ") })];
       })
       .catch(() => {});
   });
@@ -263,7 +263,7 @@
           { label: t("overlay.replace"), enabled: canSkip, run: () => onreplace(seen), replace: true, col: 1 as const },
           { label: t("overlay.level"), enabled: canTable, run: () => onlevel(target), level: true, col: 1 as const },
           { label: t("overlay.settings"), enabled: canTable, run: () => (settingsOpen = true), col: 1 as const },
-          ...(choiceLine ? [{ label: choiceLine, enabled: false, run: () => {}, info: true, col: 1 as const }] : []),
+          ...choiceLines.map((label) => ({ label, enabled: false, run: () => {}, info: true, col: 1 as const })),
         ]
       : []),
     ...(cheats && budget
@@ -426,7 +426,7 @@
               <span class="value">{game?.jokers_left?.[token.name] ?? "∞"}</span>
             </p>
           {/each}
-          {#if choiceLine}<p class="row readonly info">{choiceLine}</p>{/if}
+          {#each choiceLines as line (line)}<p class="row readonly info">{line}</p>{/each}
         </div>
       {/if}
       {#if modRows.length}
