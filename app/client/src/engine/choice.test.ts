@@ -112,7 +112,7 @@ test("not exactly one base bundle, or a bundle not offered → 409, save unchang
     [twoBases, ["base", "base2"], "base_bundle_count"],
     [enData, ["base", "colombia"], "bundle_not_offered"],
   ] as const) {
-    const at = { ...save, language: { ui: d.locale, questions: d.locale } };
+    const at = { ...save, language: d.locale };
     const r = gameAction(at, d, io(12), "new", { player: "bea", bundles });
     assert.equal(r.status, 409, `${bundles}`);
     assert.equal((r.body as { error: string }).error, code);

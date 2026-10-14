@@ -1,9 +1,8 @@
 <script lang="ts">
   // The first-start language screen (plan 68, I18N-2): a fresh save picks its UI language once, the
-  // guess preselected; the question language follows it. Later changes: the Esc menu.
+  // guess preselected; the questions follow it (plan 126). Later changes: the Esc menu.
   import { onMount, tick } from "svelte";
-  import { defaultLanguage } from "../../engine/save.ts";
-  import { fetchLanguage, localeSupply, setLanguage } from "../../lib/api.ts";
+  import { fetchLanguage, setLanguage } from "../../lib/api.ts";
   import { errorText } from "../../lib/errors.ts";
   import { endonym, lang, t } from "../../lib/i18n.ts";
   import { focusControl, pushScope } from "../../lib/input.svelte.ts";
@@ -12,8 +11,6 @@
   let { onpicked }: { onpicked: () => void } = $props();
 
   let options = $state<string[]>([]);
-  /** Question locales a pick can default to: those whose supply check passes, `es` always. */
-  let playable: string[] = ["es"];
   /** The focused option; confirm picks it. */
   let current = $state<string | null>(null);
   let saving = $state(false);
@@ -24,28 +21,21 @@
   onMount(async () => {
     try {
       const l = await fetchLanguage();
-      let supply: Awaited<ReturnType<typeof localeSupply>> = {};
-      try {
-        if (l.questions.length > 1) supply = await localeSupply();
-      } catch (e) {
-        console.warn("locale supply:", e); // a broken pool leaves `es` only, not a screen without options
-      }
-      playable = l.questions.filter((q) => q === "es" || supply[q]?.ok);
-      options = l.ui;
-      current = l.language.ui;
+      options = l.options;
+      current = l.language;
       await tick();
-      focusControl(buttons[l.language.ui]);
+      focusControl(buttons[l.language]);
     } catch (e) {
       error = errorText(e);
     }
   });
 
-  /** Both languages from the pick; a UI language other than the boot one reloads (it's a boot constant). */
+  /** A language other than the boot one reloads (it's a boot constant). */
   async function choose(ui: string) {
     if (saving) return;
     saving = true;
     try {
-      await setLanguage({ ui, questions: defaultLanguage(ui, [ui], playable).questions });
+      await setLanguage(ui);
       if (ui !== lang) location.reload();
       else onpicked();
     } catch (e) {

@@ -5,7 +5,7 @@
   // ↑/↓ choose, Enter runs, ←/→ change a value (else the next column), Esc closes. Outside gamemaster
   // mode no cheats (D-74), the jokers left read-only. Language rows (plan 68) only with ≥2 options.
   // Code mods' rows (plan 117) in a last column.
-  import { fetchGameChoice, fetchJokersUsed, fetchLanguage, localeSupply, setLanguage, type GameActionBody } from "../lib/api.ts";
+  import { fetchGameChoice, fetchJokersUsed, fetchLanguage, setLanguage, type GameActionBody } from "../lib/api.ts";
   import { desktop, devMode } from "../lib/desktop.ts";
   import { flush } from "../lib/engine.ts";
   import { endonym, t } from "../lib/i18n.ts";
@@ -17,7 +17,7 @@
   import GoToDialog from "./GoToDialog.svelte";
   import { levelsOf } from "./levels.ts";
   import Prompt from "./Prompt.svelte";
-  import type { Game, GameMode, JokerBudget, JokerName, Language, Supply } from "../lib/types.ts";
+  import type { Game, GameMode, JokerBudget, JokerName, Language } from "../lib/types.ts";
   import { stepUses, TOKENS } from "./jokers.ts";
   import { setVolumes, sound, type Volumes } from "./sound.svelte.ts";
 
@@ -192,38 +192,31 @@
     target = ((target - 1 + by + levels) % levels) + 1;
   }
 
-  /** Stored language and options; per question locale its supply (default bundles). Null until loaded. */
-  let langs = $state<{ language: Language; ui: string[]; questions: string[]; supply: Record<string, Supply> } | null>(null);
-  /** The option each row shows; differs from the stored one only for an unapplied UI language or a disabled locale. */
+  /** Stored language and options (plan 126: one language). Null until loaded. */
+  let langs = $state<{ language: Language; options: string[] } | null>(null);
+  /** The option the row shows; differs from the stored one only for an unapplied language. */
   let shown = $state<Language | null>(null);
   $effect(() => {
-    (async () => {
-      const l = await fetchLanguage();
-      const supply = l.questions.length > 1 ? await localeSupply() : {};
-      langs = { ...l, supply };
-      shown = l.language;
-    })().catch((e) => console.warn("language rows", e));
+    fetchLanguage()
+      .then((l) => ((langs = l), (shown = l.language)))
+      .catch((e) => console.warn("language rows", e));
   });
-  const langKinds = $derived(langs ? (["ui", "questions"] as const).filter((k) => langs![k].length > 1) : []);
+  const langKinds = $derived(langs && langs.options.length > 1 ? (["ui"] as const) : []);
 
-  function blocked(kind: LangKind, tag: string): string | null {
-    const s = kind === "questions" ? langs?.supply[tag] : undefined;
-    return s && !s.ok ? t("language.short", { n: s.available }) : null;
+  function blocked(_kind: LangKind, _tag: string): string | null {
+    return null;
   }
 
-  async function stepLang(kind: LangKind, by: number) {
+  function stepLang(_kind: LangKind, by: number) {
     if (!langs || !shown) return;
-    const options = langs[kind];
-    const tag = options[(options.indexOf(shown[kind]) + by + options.length) % options.length];
-    shown = { ...shown, [kind]: tag };
-    if (kind === "questions" && !blocked(kind, tag) && tag !== langs.language.questions)
-      langs.language = await setLanguage({ ui: langs.language.ui, questions: tag });
+    const { options } = langs;
+    shown = options[(options.indexOf(shown) + by + options.length) % options.length];
   }
 
   /** The UI language is a boot constant: write the save, then reload. */
   async function applyUi() {
-    if (!langs || !shown || shown.ui === langs.language.ui) return;
-    await setLanguage({ ui: shown.ui, questions: langs.language.questions });
+    if (!langs || !shown || shown === langs.language) return;
+    await setLanguage(shown);
     location.reload();
   }
 
@@ -424,7 +417,7 @@
     <p class="row readonly info">{item.label}</p>
   {:else if item.lang && shown}
     {@const kind = item.lang}
-    {@const tag = shown[kind]}
+    {@const tag = shown}
     {@const reason = blocked(kind, tag)}
     <div class="row lang" class:selected={i === selected} data-item={i} role="group" onmouseenter={() => (selected = i)}>
       <span>{item.label}</span>
@@ -433,7 +426,7 @@
       <button class="step" onclick={() => stepLang(kind, 1)} tabindex="-1" aria-label={t("language.next")}>›</button>
       {#if reason}
         <span class="note">{reason}</span>
-      {:else if kind === "ui" && tag !== langs?.language.ui}
+      {:else if kind === "ui" && tag !== langs?.language}
         <button class="note apply" onclick={applyUi} tabindex="-1">{t("language.apply")} <Prompt action="confirm" /></button>
       {/if}
     </div>

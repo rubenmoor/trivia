@@ -5,7 +5,6 @@ import { repair, supply } from "../engine/game.ts";
 import { defaultLanguage } from "../engine/save.ts";
 import { gameLocale, newest, type EngineData, type Io, type Language, type SaveData } from "../engine/state.ts";
 import { GameError, messageOf } from "./http.ts";
-import type { Supply } from "./types.ts";
 import { availableLocales, loadEngineData } from "./data.ts";
 import { desktop, steam, validUser } from "./desktop.ts";
 import { UI_LANGS } from "./i18n.ts";
@@ -16,7 +15,7 @@ import { achievementsCheckpoint, achievementsLoad } from "./achievements.ts";
 
 interface Loaded {
   save: SaveData & { language: Language };
-  /** Question locales with a pool (plan 68). */
+  /** Question locales with a pool file (plan 68). */
   locales: string[];
   /** No save stored yet (no file, 404, backed-up broken file): the first-start screen may ask (plan 68). */
   fresh: boolean;
@@ -61,8 +60,7 @@ export function ready(): Promise<Loaded> {
 
 async function load(): Promise<Loaded> {
   const [save, locales] = await Promise.all([store.load(), availableLocales()]);
-  let language = save.language ?? defaultLanguage(await guessTag(), UI_LANGS, locales);
-  if (!locales.includes(language.questions)) language = { ...language, questions: "es" }; // pool gone
+  const language = save.language ?? defaultLanguage(await guessTag(), UI_LANGS);
   const fresh = !save.language;
   const loaded = { save: { ...save, language }, locales, fresh };
   const data = await dataFor(loaded, "game"); // a missing data file fails here, not on the first action
@@ -108,24 +106,30 @@ function exclusive<T>(fn: () => Promise<T>): Promise<T> {
 
 /** The stored language (fresh save: the default), the options a player can pick from, and whether
  * the first-start screen asks (a fresh save with something to pick). */
-export async function language(): Promise<{ language: Language; ui: string[]; questions: string[]; ask: boolean }> {
-  const { save, locales, fresh } = await ready();
-  return { language: save.language, ui: UI_LANGS, questions: locales, ask: fresh && (UI_LANGS.length > 1 || locales.length > 1) };
+export async function language(): Promise<{ language: Language; options: string[]; ask: boolean }> {
+  const { save, fresh } = await ready();
+  return { language: save.language, options: UI_LANGS, ask: fresh && UI_LANGS.length > 1 };
 }
 
-/** Per question locale, the supply check for the default bundles (plan 68): not ok → listed, disabled. */
-export async function localeSupply(): Promise<Record<string, Supply>> {
-  const { save, locales } = await ready();
-  return Object.fromEntries(await Promise.all(locales.map(async (l) => [l, supply(save, await loadEngineData(l))])));
+/** The questions of `lang` (plan 126): its own pool if it has one whose default bundles' supply passes, else es. */
+async function localeOf({ save, locales }: Loaded, lang: Language): Promise<string> {
+  if (lang === "es" || !locales.includes(lang)) return "es";
+  return supply(save, await loadEngineData(lang)).ok ? lang : "es";
+}
+
+/** The question locale of the save's language: what a new game plays. */
+export async function nextLocale(): Promise<string> {
+  const loaded = await ready();
+  return localeOf(loaded, loaded.save.language);
 }
 
 /** `game`: the newest game's data (it keeps its locale), else the language's; `next`: the language's
  * (a new game). No mid-game pool swap. */
 export type DataScope = "game" | "next";
 
-function dataFor({ save }: Loaded, scope: DataScope): Promise<EngineData> {
-  const row = newest(save.games);
-  return loadEngineData(scope === "game" && row ? gameLocale(row) : save.language.questions);
+async function dataFor(loaded: Loaded, scope: DataScope): Promise<EngineData> {
+  const row = newest(loaded.save.games);
+  return loadEngineData(scope === "game" && row ? gameLocale(row) : await localeOf(loaded, loaded.save.language));
 }
 
 export type Route<T> = (save: SaveData, data: EngineData, io: Io) => Reply<T>;

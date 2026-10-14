@@ -220,8 +220,8 @@ async function game(dir) {
   await h.click('[data-focus-id="group-young_teens"]');
   await h.click('[data-focus-id="start"]');
   await h.click(".level .hint");
-  // The questions language picked on the first screen (engine default es).
-  const locale = (await saved((s) => s.games?.length, "new game")).language?.questions ?? "es";
+  // The new game's question locale (plan 126: es unless the language has its own pool).
+  const locale = (await saved((s) => s.games?.length, "new game")).games.at(-1).locale ?? "es";
   at("packs");
   const want = packsFor(locale).sort().join(", ") || "none";
   const { bundles } = JSON.parse(readFileSync(path.join(DIR, "resources", "data", "bundles.json"), "utf8"));

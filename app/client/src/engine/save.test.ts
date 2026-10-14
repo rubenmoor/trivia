@@ -17,6 +17,7 @@ test("parseSave accepts emptySave() and a fixture db; a save without a language 
   assert.deepEqual(parseSave(emptySave()), { ...emptySave(), language: SPANISH });
   assert.deepEqual(parseSave({ ...full, language: undefined }), full);
   assert.deepEqual(parseSave(JSON.stringify(full)), full);
+  assert.equal(parseSave({ ...full, language: { ui: "de", questions: "es" } }).language, "de"); // before plan 126
   assert.ok(db.games.length > 0 && db.seen.length > 0);
 });
 
@@ -68,7 +69,7 @@ test("parseSave rejects newer versions and broken shapes", () => {
   for (const bad of [null, [], "x", { ...full, version: undefined }, { ...full, version: 0 },
     { ...full, players: undefined }, { ...full, games: {} }, { ...full, seen: [1] }, { ...full, blocked: [1] },
     { ...full, notified_exhausted: undefined }, { ...full, version: 2, burned: [1] },
-    { ...full, games: [{ id: 1 }] }, { ...full, flags: [] }, { ...full, version: 3, reports: {} }, { ...full, language: "en" }, { ...full, language: { ui: "en" } }]) {
+    { ...full, games: [{ id: 1 }] }, { ...full, flags: [] }, { ...full, version: 3, reports: {} }, { ...full, language: 3 }, { ...full, language: { questions: "en" } }]) {
     assert.throws(() => parseSave(bad), JSON.stringify(bad)?.slice(0, 60));
   }
 });

@@ -57,11 +57,9 @@ export interface Choice {
   jokers: JokerBudget;
 }
 
-/** UI and question language of a save (plan 68); a game keeps the question locale it started in. */
-export interface Language {
-  ui: string;
-  questions: string;
-}
+/** The save's one language tag, UI and questions (plan 126); questions fall back to es without its own pool.
+ * A game keeps the question locale it started in. */
+export type Language = string;
 
 /** A known player (engine/game.ts `players`, D-28). */
 export interface Player {

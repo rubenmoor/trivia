@@ -119,15 +119,12 @@ export function noteExhausted(save: SaveData, data: EngineData, body: Record<str
   });
 }
 
-/** The UI and question language (plan 68), any mode; each must be one of `options`. Applies to the next game. */
-export function setLanguage(save: SaveData, body: Record<string, unknown>, options: { ui: readonly string[]; questions: readonly string[] }):
-  Reply<{ language: Language }> {
+/** The one language (plan 126), any mode; one of `options`. Questions apply to the next game. */
+export function setLanguage(save: SaveData, body: Record<string, unknown>, options: readonly string[]): Reply<{ language: Language }> {
   return guard(save, 409, () => {
-    const language = { ui: body.ui, questions: body.questions };
-    for (const kind of ["ui", "questions"] as const) {
-      if (!(options[kind] as unknown[]).includes(language[kind])) throw new GameError("language_unknown", { kind, lang: String(language[kind]) });
-    }
-    const out = { ...save, language: language as Language };
+    const language = body.language;
+    if (typeof language !== "string" || !options.includes(language)) throw new GameError("language_unknown", { lang: String(language) });
+    const out = { ...save, language };
     return { save: out, status: 200, body: { language: out.language } };
   });
 }

@@ -22,12 +22,12 @@ export interface SaveData {
   notified_exhausted: string[];
   /** Questions flagged for review (GM-5, D-47); keyed by question ID. Version 4 merged `reports` in (decision 60). */
   flags: Record<string, FlagEntry>;
-  /** UI and question language (plan 68); parseSave fills {es, es}, a fresh save gets defaultLanguage(). */
+  /** UI and question language (plan 126); parseSave fills es, a fresh save gets defaultLanguage(). */
   language?: Language;
 }
 
 /** The family's language: what a save from before plan 68 plays in. */
-export const SPANISH: Language = { ui: "es", questions: "es" };
+export const SPANISH: Language = "es";
 
 export interface FlagEntry {
   flagged_on: string;
@@ -198,7 +198,7 @@ const ERRORS: Record<string, string | ((p: Params) => string)> = {
   question_unknown: (p) => `no question ${pyRepr(String(p.id))} in the loaded pool`,
   level_invalid: (p) => `level: a whole number ${p.min}–${p.max}`,
   cheat_not_select: (p) => `${p.action} only with the cards on the table`,
-  language_unknown: (p) => `no ${p.kind} language ${pyRepr(String(p.lang))}`,
+  language_unknown: (p) => `no language ${pyRepr(String(p.lang))}`,
 };
 
 /** A request that doesn't fit the game's state: a code with params; `details` (a supply report) goes to the client. */

@@ -64,21 +64,17 @@ export function parseSave(json: unknown): SaveData {
     throw new Error("a game's locale must be text");
   const flags = doc.flags ?? {};
   if (!isObject(flags)) throw new Error("flags must be an object");
-  const language = doc.language ?? SPANISH;
-  if (!isObject(language) || typeof language.ui !== "string" || typeof language.questions !== "string")
-    throw new Error("language must be {ui, questions}");
-  return { ...doc, flags, language: { ui: language.ui, questions: language.questions } } as SaveData;
+  const stored = doc.language ?? SPANISH;
+  const language = isObject(stored) ? stored.ui : stored; // before plan 126: {ui, questions}
+  if (typeof language !== "string" || !language) throw new Error("language must be a tag");
+  return { ...doc, flags, language } as SaveData;
 }
 
-/** A fresh save's language (plan 68): per list, the exact tag, then its language part, else en, else es.
- * `es-ES` → UI es-ES, questions es. */
-export function defaultLanguage(tag: string, ui: readonly string[], questions: readonly string[]): Language {
-  const best = (options: readonly string[]): string => {
-    const exact = options.find((o) => o.toLowerCase() === tag.toLowerCase());
-    const base = tag.split("-")[0].toLowerCase();
-    return exact ?? options.find((o) => o.toLowerCase() === base) ?? (options.includes("en") ? "en" : "es");
-  };
-  return { ui: best(ui), questions: best(questions) };
+/** A fresh save's language (plans 68, 126): of `options`, the exact tag, then its language part, else en, else es. */
+export function defaultLanguage(tag: string, options: readonly string[]): Language {
+  const exact = options.find((o) => o.toLowerCase() === tag.toLowerCase());
+  const base = tag.split("-")[0].toLowerCase();
+  return exact ?? options.find((o) => o.toLowerCase() === base) ?? (options.includes("en") ? "en" : "es");
 }
 
 /** What the flag dialog sends; `null` unflags. `locale`/`shown`: the game's question (decision 102). */

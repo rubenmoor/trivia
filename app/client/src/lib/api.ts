@@ -7,7 +7,7 @@ import { bundlesFor } from "../engine/pool.ts";
 import { setFlag as saveFlag, setReported, type FlagInput } from "../engine/save.ts";
 import { newest, withDefaults, type EngineData, type SaveData } from "../engine/state.ts";
 import { messageOf } from "./http.ts";
-import { language as fetchLanguage, localeSupply, read, run, type DataScope, type Route } from "./engine.ts";
+import { language as fetchLanguage, nextLocale, read, run, type DataScope, type Route } from "./engine.ts";
 import { emit, runAfter, runBefore } from "./mods.ts";
 import type { Choice, Difficulty, Flagged, Game, GameMode, JokerBudget, JokerEvent, JokerName, Language, Player, Supply } from "./types.ts";
 
@@ -246,13 +246,13 @@ export async function gameAction(
   return (await hooked(action, body, scope)).game;
 }
 
-/** The stored UI and question language, and the options (plan 68). */
-export { fetchLanguage, localeSupply };
+/** The stored language and the options (plans 68, 126); the next game's question locale. */
+export { fetchLanguage, nextLocale };
 
-/** Set both languages; a question language applies to the next game, a UI language after a reload. */
+/** Set the language; its questions apply to the next game, the UI after a reload. */
 export async function setLanguage(language: Language): Promise<Language> {
-  const { ui, questions } = await fetchLanguage();
-  return (await run((save) => engine.setLanguage(save, { ...language }, { ui, questions }))).language;
+  const { options } = await fetchLanguage();
+  return (await run((save) => engine.setLanguage(save, { language }, options))).language;
 }
 
 /** Choice limits and defaults for the configure screen and overlay (engine/choice.ts). */

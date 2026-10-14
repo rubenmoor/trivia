@@ -8,7 +8,7 @@ import { emit, loadMods } from "./lib/mods.ts";
 // Mods first: their setup registers hooks before data and language load (decision 131).
 await loadMods();
 // The save's UI language before any game module runs `t()` (plan 68); a failed load shows up in the game.
-const ui = await language().then((l) => l.language.ui, () => undefined);
+const ui = await language().then((l) => l.language, () => undefined);
 await initLang(ui);
 initDocument();
 const { default: App } = await import("./App.svelte");
