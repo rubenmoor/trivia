@@ -84,6 +84,19 @@ export function endonym(tag: string): string {
 
 const warned = new Set<string>();
 
+/** `?gallery` (trivia-gallery, plan 100): rendered text → its keys on `window.__galleryKeys`; off otherwise. */
+const trace: Record<string, string[]> | null =
+  typeof location !== "undefined" && new URLSearchParams(location.search).has("gallery")
+    ? ((window as unknown as { __galleryKeys: Record<string, string[]> }).__galleryKeys = Object.create(null))
+    : null;
+/** Variant lines → `key[i]`, so `fill` traces them too. */
+const lines = new Map<string, string>();
+
+function traced(key: string | undefined, text: string): string {
+  if (trace && key && !(trace[text] ??= []).includes(key)) trace[text].push(key);
+  return text;
+}
+
 /** `⟦key⟧`, with a dev warning once per key (LUI-2). */
 function missing(key: string): string {
   if (import.meta.env?.DEV && !warned.has(key)) {
@@ -104,11 +117,11 @@ function lookup(key: string): unknown {
 
 /** Replaces `{name}` from params; numbers formatted for `lang`. */
 export function fill(text: string, params?: Params): string {
-  if (!params) return text;
-  return text.replace(/\{(\w+)\}/g, (m, k: string) => {
+  if (!params) return traced(lines.get(text), text);
+  return traced(lines.get(text), text.replace(/\{(\w+)\}/g, (m, k: string) => {
     const v = params[k];
     return v === undefined ? m : typeof v === "number" ? numbers.format(v) : v;
-  });
+  }));
 }
 
 /** Whether `key` names a text in the catalog (for keys built at runtime). */
@@ -120,10 +133,10 @@ export function has(key: string): key is TextKey {
 /** The text of a key; plural maps pick by `params.n`. Missing → `⟦key⟧`. */
 export function t(key: TextKey, params?: Params): string {
   const v = lookup(key);
-  if (typeof v === "string") return fill(v, params);
+  if (typeof v === "string") return traced(key, fill(v, params));
   if (isPlural(v)) {
     const n = params?.n;
-    return fill((typeof n === "number" ? v[plurals.select(n)] : undefined) ?? v.other, params);
+    return traced(key, fill((typeof n === "number" ? v[plurals.select(n)] : undefined) ?? v.other, params));
   }
   return missing(key);
 }
@@ -131,6 +144,7 @@ export function t(key: TextKey, params?: Params): string {
 /** The lines of a variant entry. Missing → `[⟦key⟧]`. */
 export function variants(key: VariantsKey): readonly string[] {
   const v = lookup(key);
+  if (trace && Array.isArray(v)) v.forEach((line: string, i) => lines.set(line, `${key}[${i}]`));
   return Array.isArray(v) && v.length ? v : [missing(key)];
 }
 

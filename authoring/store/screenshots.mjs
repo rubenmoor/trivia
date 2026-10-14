@@ -3,7 +3,7 @@
 // Usage (dev shell): node authoring/store/screenshots.mjs [--lang en,es,es-ES,de] [--visible]
 // Needs app/client/dist (`npm run build`) and the media cache (`trivia-media sync --status approved`).
 import { spawn } from "node:child_process";
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync } from "node:fs";
 import { mkdir, mkdtemp, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
@@ -11,12 +11,11 @@ import { fileURLToPath } from "node:url";
 import { cacheName } from "../../app/desktop/resolve.mjs";
 import { connectPort, freePort, pageHelpers, sleep, startXvfb, visibleEl } from "../tools/cdp.mjs";
 import { answer, newGame, pick } from "../../app/client/src/engine/game.ts";
-import { bundleFile, loadCategories, packsFor, parseAgeGroups, parseBundles, parsePool, poolFile, withPacks } from "../../app/client/src/engine/pool.ts";
+import { loadData } from "../tools/engine_data.mjs";
 import { seededRng } from "../../app/client/src/engine/rng.ts";
-import { emptySave, engineData, mergeNames, SAVE_VERSION } from "../../app/client/src/engine/state.ts";
+import { emptySave, SAVE_VERSION } from "../../app/client/src/engine/state.ts";
 
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
-const DATA = path.join(REPO, "app", "data");
 const OUT = path.join(REPO, "authoring", "store", "out", "screenshots");
 const MEDIA = process.env.TRIVIA_MEDIA || path.join(REPO, "media"); // as the shell's roots()
 const W = 1920;
@@ -34,28 +33,6 @@ const opt = (name) => {
 };
 const LANGS = (opt("--lang") ?? "en,es,es-ES,de").split(",");
 const visible = args.includes("--visible");
-
-const json = (file) => JSON.parse(readFileSync(path.join(DATA, file), "utf8"));
-
-/** data.ts's load(), from disk; null if the locale has no pool. */
-function loadData(locale) {
-  const file = poolFile(locale);
-  if (!existsSync(path.join(DATA, file))) return null;
-  const bundles = json("bundles.json");
-  const optional = (f) => (existsSync(path.join(DATA, f)) ? json(f) : null);
-  const all = parseBundles(bundles);
-  const packs = Object.fromEntries(packsFor(all, locale).map((b) => [b.id, optional(poolFile(locale, b.id))]));
-  const { pool, bundles: parsed } = withPacks(parsePool(json(file)), all, locale, packs);
-  const byBundle = {};
-  for (const b of parsed) {
-    const cats = optional(bundleFile(b.id, "categories.json"));
-    if (cats) byBundle[b.id] = cats;
-  }
-  return engineData(
-    pool, loadCategories(bundles, byBundle), parsed, parseAgeGroups(json("age-groups.json")), locale,
-    locale === "es" ? undefined : mergeNames(parsed.map((b) => optional(bundleFile(b.id, `names.${locale}.json`)))),
-  );
-}
 
 // Save documents -----------------------------------------------------------------------------
 

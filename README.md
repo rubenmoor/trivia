@@ -153,6 +153,15 @@ Environment variables (empty = unset):
 - `TRIVIA_STEAM_ACCOUNT`: `trivia-steam upload`'s Steam login; `TRIVIA_STEAMCMD_HOME`: SteamCMD's home (default `$XDG_DATA_HOME/trivia/steamcmd`)
 - `VITE_AUTHORING_URL` (build time): the game's links to the authoring pages; `""` hides them (default: same host, port 8001)
 
+### Check the UI wording (screen gallery)
+
+```sh
+trivia-gallery                                  # every screen and dialog in en, es, es-ES, de (~15 min)
+trivia-gallery --locale de --only menu-gamemaster,victory   # some shots again; --list names them
+```
+
+Shots go to `work/gallery/<locale>/<shot>.png`; `work/gallery/manifest.json` has each visible text with its catalog key, and text without one (a literal) as unmatched. The game runs from demo saves in a temp folder, never your save.
+
 ### Build the packaged game
 
 ```sh
