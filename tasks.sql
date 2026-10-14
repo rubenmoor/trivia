@@ -23764,10 +23764,57 @@ Work:
 - `plans/18-steam-integration.md` "Modding": one line that the relaunch under Steam is checked per release by this row.
 
 Check: a `--manual` file answering every row incl. `mods-restart` parses; a content-only run lists it as "skipped: content-only since <tag>". Per-commit checks pass.', '2026-10-14T07:39:11Z', NULL, 975);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1011, 125, 'create tasks for plan 125: Play-test fixes: player Enter, Choice screen, overlay line, Regional: Colombia', 'split', 'open', 1000, NULL, 'Split plan 125 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-14T07:41:56Z', NULL, 479);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1011, 125, 'create tasks for plan 125: Play-test fixes: player Enter, Choice screen, overlay line, Regional: Colombia', 'split', 'done', 1000, '2026-10-14, tasks 1013-1018 (plan 125 fixes 1-6); no decisions needed (decision 50 answers them)', 'Split plan 125 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-14T07:41:56Z', '2026-10-14T07:43:25Z', 479);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1012, 126, 'create tasks for plan 126: One language setting for UI and questions', 'split', 'open', 1000, NULL, 'Split plan 126 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-14T07:42:09Z', NULL, 479);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1013, 125, 'Player screen: Enter picks the most recent player', 'work', 'open', NULL, NULL, 'Fix 1 of `plan 125: Play-test fixes: player Enter, Choice screen, overlay line, Regional: Colombia` (from `decision 50: Play-test of age groups and bundles`, problem 1).
+
+- `app/client/src/game/screens/Player.svelte`: with saved players and nothing focused (no name field focus, no delete dialog), Enter (keyboard, pad confirm) does nothing today. It picks the most recent player, `shown[0]`, exactly as pressing its name button.
+- Unchanged: Enter in the name field submits the typed name; the delete confirmation keeps its own keys; no saved players → as today.
+- Prompt/hint: if the screen shows a confirm prompt, show it on `shown[0]`''s button.
+
+Done when: `npm run check`, `npm test`, `npm run build`; browser (`npm run dev -w app/client`, `TRIVIA_MUTE=1`): with 2+ saved players, Enter on a fresh screen opens the Choice screen for the newest player; mouse unchanged.', '2026-10-14T07:43:22Z', NULL, 1011);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1014, 125, 'Overlay choice line labelled: age group and question bundles', 'work', 'open', NULL, NULL, 'Fix 2 of `plan 125: Play-test fixes: player Enter, Choice screen, overlay line, Regional: Colombia` (`decision 50: Play-test of age groups and bundles`, problem 2).
+
+- `app/client/src/game/Overlay.svelte` `choiceLine` and `choice.line` in `app/client/src/locales/{es,es-ES,en,de}.ts`: today «Niños · Básico, Colombia», unlabelled. Two labelled parts, e.g. «Edad: Niños» and «Paquetes de preguntas: Básico, Regional: Colombia»; en "Age group: …", "Question bundles: …"; de e.g. «Altersgruppe: …», «Fragenpakete: …». Two info rows or one line: whatever reads best on the TV.
+- Bundle and group shown by their display names (localised: `names.<locale>.json`), not ids; check what `fetchGameChoice` returns.
+- Custom difficulty: keeps its «Desde–Hasta» text (`choice.difficulty`) under the age label.
+- Term: "question bundle" («paquete de preguntas», «Fragenpaket»), as the Steam DLC; base bundle and the others are all question bundles; never «Temas». Grep all catalogs for «Temas» and bundle wording (`choice.bundles` «Paquetes», `bundles.*`, `configure.*`, errors) and align where a heading/label names bundles.
+- `check:literals` passes; screen gallery (if it shows the overlay) follows.
+
+Done when: checks of plan 125 pass; browser: Esc overlay in a running game shows both labels in es, en, de, also with «A medida».', '2026-10-14T07:43:22Z', NULL, 1011);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1015, 125, 'Name colombia «Regional: Colombia» everywhere', 'work', 'open', NULL, NULL, 'Fix 3 of `plan 125: Play-test fixes: player Enter, Choice screen, overlay line, Regional: Colombia` (`decision 50: Play-test of age groups and bundles`, problem 3).
+
+- `app/data/bundles.json` `colombia.name` → «Regional: Colombia»; `app/data/names.en.json` "Regional: Colombia", `names.de.json` «Regional: Kolumbien» (or as the de catalog style says). Choice screen, `BundleSelector.svelte`, overlay, credits then show it.
+- Steam DLC name: grep `Colombia` in `plans/` (esp. `11-steam.md`, `18-steam-integration.md`, `22-bundles.md`, `15c-regional-questions.md`), `app/desktop/` (e.g. `build/pack-media.json`), Steam config/data (`steam.json` etc.), store texts; rename where it names the bundle/DLC to players. Don''t touch question text, `rule`/`voice` prompts, or the id `colombia`.
+- Bundle letter keys (`bundleKeys`/`keyOf` in `Choice.svelte`) stay unique and sensible with the new name (first letter now «R»: check against `RESERVED` and other keys).
+- Achievement names/texts for the regional bundle (decision 73''s `BUNDLE_*`) if they name the bundle.
+- If the name is cached in `app/data/pool.json` or other exports: `qgen export`, `qgen validate` passes.
+
+Done when: checks of plan 125 pass; browser es/en/de: Choice screen and overlay show the new name; bundle letter works.', '2026-10-14T07:43:23Z', NULL, 1011);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1016, 125, 'Choice screen: «Solo o en grupo» first in the mode row', 'work', 'open', NULL, NULL, 'Fix 4 of `plan 125: Play-test fixes: player Enter, Choice screen, overlay line, Regional: Colombia` (`decision 50: Play-test of age groups and bundles`, problem 4).
+
+- `app/client/src/game/screens/Choice.svelte` `MODE_ROW` (~line 239): «Solo o en grupo» (solo) first, then «Modo anfitrión» (gamemaster). Only the order changes: default mode (`playerMode`), focus default («¡A jugar!»), letter keys stay.
+- Screen gallery and docs follow: `plans/13-game-modes.md`, `plans/04-ui-tv-display.md` (mode row order).
+
+Done when: checks of plan 125 pass; browser: order by mouse and keyboard (arrows go solo → gamemaster).', '2026-10-14T07:43:23Z', NULL, 1011);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1017, 125, 'Bundle selection in every mode, apart from customization', 'work', 'open', NULL, NULL, 'Fix 5 of `plan 125: Play-test fixes: player Enter, Choice screen, overlay line, Regional: Colombia` (`decision 50: Play-test of age groups and bundles`, problem 5).
+
+- Today only gamemaster mode''s configure screen in `app/client/src/game/screens/Choice.svelte` shows `BundleSelector`; «Solo o en grupo» sends `bundles: active()` without a selector. Solo gets `BundleSelector` too, with the same letter keys (`keyOf`, today gamemaster only in `keys` and `handle`), mouse, keyboard and pad (IN-1).
+- Bundle selection, like the age group, is its own section in every mode, not session customization: not inside «Personalizar partida» (`Customize.svelte`), not counted in `customized`; in gamemaster mode it stays apart from the configure fields (as now, below them).
+- Preset in both modes: the player''s last choice, else the locale''s defaults: first base bundle, non-base off (`playerChoice` in `app/client/src/engine/game.ts`, `decision 33: Configure game screen: which fields?`); check solo uses the same preset.
+- Layout: the solo screen must still fit the TV (1080p, safe area) with group tiles, customize row and bundles; check `reporting` state too.
+- Overrides the parts of `decision 38: Base bundles and bundle languages` / `decision 33: Configure game screen: which fields?` that say solo plays the locale''s defaults. Record it: `pm decision record` (supersedes those parts, cite `decision 50: Play-test of age groups and bundles`) and a D entry in `plans/decisions.md`; docs `plans/13-game-modes.md`, `plans/22-bundles.md`.
+
+Done when: checks of plan 125 pass; browser es: solo session with `colombia` off and one with it on, by mouse and by keyboard only; gamemaster unchanged.', '2026-10-14T07:43:23Z', NULL, 1011);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1018, 125, 'Difficulty: «Desde»/«Hasta» always visible, read-only for age groups', 'work', 'open', NULL, NULL, 'Fix 6 of `plan 125: Play-test fixes: player Enter, Choice screen, overlay line, Regional: Colombia` (`decision 50: Play-test of age groups and bundles`, problem 6).
+
+- `app/client/src/game/screens/Choice.svelte` gamemaster configure screen: the «Desde»/«Hasta» lines (`stepper("start"…)`, `stepper("end"…)`) show today only with «A medida» (`custom`). Always show them: with an age group selected they show the group''s window from `app/data/age-groups.json` (e.g. Niños 1–6; see `difficulty.ts`/`rangesFor` for where windows come from), read-only: no −/+ buttons (or disabled), not focusable, skipped by ↑/↓ (`moveLine`) and the focus ring; pad and mouse the same.
+- Editable only with «A medida», as today; switching to «A medida» starts from the current group''s window if that''s what happens now, else as today.
+- Screen still fits the TV; screen gallery follows.
+
+Done when: checks of plan 125 pass; browser: each group shows its window; arrows skip the read-only lines; «A medida» edits them by keyboard and mouse.', '2026-10-14T07:43:23Z', NULL, 1011);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -26156,6 +26203,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (896, 975, '2026-10-14T07:30:28Z', '2026-10-14T07:39:45Z', 'done', NULL, 0, 'd5f51e2b7f1f510c227f984683a68b4cff3f6e61', 'claude-opus-5-5[1m]', '427e9d8c-30f9-4811-a8de-fd401ff76c0a', 45, 72, 16253, 2616336, 95109, 1.6094872, 2040245);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (897, 976, '2026-10-14T07:39:45Z', '2026-10-14T07:41:04Z', 'done', NULL, 0, '37fb58de2d0052bed30abe1116879e68e9b1f8b7', 'claude-opus-5-5[1m]', '8333c00e-4080-4ad1-ada4-77de9efa167a', 16, 24, 6722, 635882, 58487, 0.7296084, 2040245);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (898, 479, '2026-10-14T07:41:04Z', '2026-10-14T07:42:29Z', 'blocked', NULL, 0, '99291fbc0e55b5e4c8db65c5119b41c2494b3a69', 'claude-opus-5-5[1m]', '5aa5b170-34e0-4015-a321-28f7fdc35510', 13, 24, 8142, 643124, 58559, 0.76003280000000006, 2040245);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (899, 1011, '2026-10-14T07:42:29Z', '2026-10-14T07:43:29Z', 'done', NULL, 0, 'c7a7b2f572e3f5d09156910e5e17b3f111517d70', 'claude-opus-5-5[1m]', '11463b95-8cdd-4a7a-bd9d-ec122e208519', 9, 18, 5283, 356066, 43748, 0.5269292, 2040245);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
