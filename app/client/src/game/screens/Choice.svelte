@@ -16,8 +16,8 @@
 <script lang="ts">
   // The Choice screen (plans/04-ui-tv-display.md, "Choice"; plan 29, AG-7, BN-6): «¿Cómo juega …?»,
   // between Player and Level. Mode row (MD-7); gamemaster mode: the configure game screen (MD-11, D-88):
-  // difficulty, bundles (letter keys), levels, cards, video, audio, jokers; «Solo o en grupo»: age group (1–4),
-  // the language's default bundles and «Personalizar partida» (joker counts). Preset: `?mode=`, the
+  // difficulty, levels, cards, video, audio, jokers; «Solo o en grupo»: age group (1–4) and «Personalizar partida»
+  // (joker counts). Bundles (letter keys) in both modes, apart from those (decision 50). Preset: `?mode=`, the
   // player's newest game (every field), else the defaults. ↑/↓ move between lines, ←/→ change a value.
   import { onMount } from "svelte";
   import {
@@ -116,7 +116,7 @@
   async function check() {
     if (!options) return;
     const n = ++seq;
-    const wanted = mode === "gamemaster" ? { ...config(), jokers: undefined } : { age_group: group, bundles: active() };
+    const wanted = mode === "gamemaster" ? { ...config(), jokers: undefined } : { age_group: group, bundles: [...bundles] };
     const [mine, ...each] = await Promise.allSettled([
       fetchChoice(wanted),
       ...options.groups.map((g) => fetchChoice({ ...wanted, age_group: g.id, difficulty: undefined })),
@@ -130,13 +130,6 @@
   function changed() {
     stale = true;
     check();
-  }
-
-  /** «Solo o en grupo» plays the language's default bundles (decision 38): the first base bundle plus every other one. */
-  function active(): string[] {
-    if (mode === "gamemaster" || !options) return [...bundles];
-    const base = options.bundles.find((b) => b.base);
-    return options.bundles.filter((b) => b === base || !b.base).map((b) => b.id);
   }
 
   function pickMode(m: GameMode) {
@@ -221,7 +214,7 @@
     if (!ready || busy || checking) return;
     const choice: ChoiceBody & { mode: GameMode } = mode === "gamemaster"
       ? { mode, ...config() }
-      : { mode, age_group: group, bundles: active(), ...(customized ? { jokers: { ...jokers } } : {}) };
+      : { mode, age_group: group, bundles: [...bundles], ...(customized ? { jokers: { ...jokers } } : {}) };
     checking = true;
     const outlook = await fetchOutlook(choice).catch(() => null); // informational: never blocks a game
     checking = false;
@@ -251,7 +244,8 @@
   const keys = $derived<Keys>(
     Object.fromEntries([
       ...modes.map((m) => letter(m.key)),
-      ...(mode === "gamemaster" ? letters.filter(Boolean).map(letter) : [letter(CUSTOMIZE_KEY)]),
+      ...letters.filter(Boolean).map(letter),
+      ...(mode === "gamemaster" ? [] : [letter(CUSTOMIZE_KEY)]),
     ]),
   );
   const customized = $derived(presetOf(jokers) !== "standard");
@@ -260,7 +254,7 @@
     return hi === null ? t("choice.agesFrom", { lo }) : t("choice.ages", { lo, hi });
   }
 
-  // A mode's letter picks it, 1–4 pick a group, a bundle's letter selects or toggles it (gamemaster mode), the
+  // A mode's letter picks it, 1–4 pick a group, a bundle's letter selects or toggles it, the
   // customize letter opens the dialog (solo); ↑/↓ lines, ←/→ a configure value; Enter starts (on a switch: toggles),
   // Backspace goes back; Esc falls through to the overlay.
   $effect(() =>
@@ -278,7 +272,7 @@
         else if (a.type === "letter" && modes.some((m) => m.key === a.key)) pickMode(modes.find((m) => m.key === a.key)!.id);
         else if (a.type === "letter" && mode !== "gamemaster" && a.key === CUSTOMIZE_KEY) customizing = !busy;
         else if (a.type === "pick" && options && a.n <= options.groups.length) pickGroup(options.groups[a.n - 1].id);
-        else if (a.type === "letter" && mode === "gamemaster" && options?.bundles.some((b) => keyOf(b) === a.key))
+        else if (a.type === "letter" && options?.bundles.some((b) => keyOf(b) === a.key))
           pickBundles(toggled(options.bundles, bundles, options.bundles.find((b) => keyOf(b) === a.key)!));
         else if (a.type === "confirm") start();
         else if (a.type === "back") onback();
@@ -342,8 +336,6 @@
             {/each}
           </div>
         </div>
-        <p class="label heading" style:--i={5}>{t("choice.bundles")}</p>
-        <BundleSelector bundles={options.bundles} selected={bundles} {busy} {keyOf} first={6} onchange={pickBundles} />
       {:else}
         <p class="label heading" style:--i={0}>{t("choice.groups")}</p>
         <div class="row" role="radiogroup" data-line>
@@ -373,6 +365,8 @@
           <span class="label" class:warn={customized}>{t(customized ? "customize.custom" : "customize.standard")}</span>
         </div>
       {/if}
+      <p class="label heading" style:--i={5}>{t("choice.bundles")}</p>
+      <BundleSelector bundles={options.bundles} selected={bundles} {busy} {keyOf} first={6} onchange={pickBundles} />
 
       <div class="row actions" data-line>
         <button class="secondary" onclick={onback} disabled={busy} data-focus-id="back">{t("action.back")} <Prompt action="back" /></button>

@@ -59,7 +59,7 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 | Language | First start (D-86) or Start's language button (D-96): «Elige el idioma», languages by endonym, guess preselected | Click / `Enter` / pad A / `1`–`n`; from Start: «Atrás» / `Backspace` / pad B | Normal |
 | Start | Title, «¡Jugar!», "continue game" if one is running | Click / `Enter` | Normal |
 | Player | «¿Quién juega?»: known names, new name | Click a name / `1`–`9` / `Enter` (most recent name, nothing focused) / type + `Enter` | Normal |
-| Choice | «¿Cómo juega …?»: mode (MD-7); gamemaster mode: the configure game screen (MD-11: difficulty, levels, cards, video, audio, jokers, bundles); «Solo o en grupo»: age group, «Personalizar partida» | «¡A jugar!» / `Enter`; «Atrás» / `Backspace` | Normal |
+| Choice | «¿Cómo juega …?»: mode (MD-7); gamemaster mode: the configure game screen (MD-11: difficulty, levels, cards, video, audio, jokers, bundles); «Solo o en grupo»: age group, «Personalizar partida», bundles | «¡A jugar!» / `Enter`; «Atrás» / `Backspace` | Normal |
 | Level | The tower, «Nivel N de 12» | Click / `Enter` / `Space` | Normal |
 | Select | 4 description cards | Click a card / `1`–`4` | Normal |
 | Question | Question, 4 answers, media, lock, final button, joker tray | Final answer; jokers Paso / Francotirador hit | Intense (off while question media plays); after submitting: most intense |
@@ -110,7 +110,7 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
   - Below: «Paquetes», the shared `game/BundleSelector.svelte` (base radio group | divider | other bundles as toggles); the menu reuses it (MD-12).
   - Lines (`data-line`): ↑/↓ (D-pad, stick) move line by line, left column then right; ←/→ change a value on a stepper or switch; −/+ and switch clicks with the mouse; `Enter`/A on a switch toggles, on a stepper or «¡A jugar!» starts; `1`–`4` pick a group, bundle letters as below.
   - Supply on every change with the whole configuration; a long report hides the bundle descriptions so 720p fits.
-- «Solo o en grupo»: age group only; no bundle rows (the language's default bundles, decision 38: first base bundle + every other), a small «Personalizar partida» button (`P`) with «Comodines estándar» / «Comodines personalizados» next to it.
+- «Solo o en grupo»: age group, then the shared bundle selector (letter keys, as gamemaster mode; its own section, not customization; D-97), a small «Personalizar partida» button (`P`) with «Comodines estándar» / «Comodines personalizados» next to it.
   - Dialog `game/Customize.svelte` (modal scope): preset row «Conjunto» (Estándar | Sin límite | Personalizado, decision 99), then one row per joker, 0–9 or ∞ (MD-4 steppers); ↑/↓ rows, ←/→ or −/+ change, «Listo» / `Enter` / `Esc` / `Backspace` close, focus back on the button.
   - `new` gets `mode: "solo"` and `jokers` only when they differ from the standard set; the engine sets `customized` (D-74: no achievements).
 - Age group: four tiles in `age-groups.json` order, name + ages («6–10 años», «23+ años»), keys `1`–`4`; the window isn't shown.

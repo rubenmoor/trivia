@@ -899,3 +899,13 @@ Template:
   - **POLYGLOT** counts `GameRow.locale`: a de UI on Spanish questions is an `es` game.
 - Consequences: «Idioma de las preguntas» and its strings gone; the play-test's en/de question language check is replaced by this (plan 30).
 - Supersedes / related: D-86 in part (two settings, the question-language option list, the Esc menu rows, first start setting both); D-70, D-78, D-82, D-85; pm decisions 36, 50, 156, 157
+
+## D-97: Bundle selection in every mode
+- Date: 2026-10-14
+- Context: problem 5 of pm decision 50 (Play-test of age groups and bundles); plan 125, task 1017; pm decision 158.
+- Decision:
+  - **Every mode** shows the shared `BundleSelector` on the Choice screen: «Solo o en grupo» too, with the same letter keys (`keyOf`), mouse and pad.
+  - **Not customization:** its own section like the age group; not in «Personalizar partida», not counted in `customized`; in gamemaster mode below the configure fields.
+  - **Preset** in both modes: `playerChoice`, the player's newest game's bundles, else the locale's first base bundle, non-base off (pm decision 33).
+- Consequences: a fresh solo game plays base only (was: every offered bundle); a non-base mod bundle is off by default in solo too.
+- Supersedes / related: pm decision 51 (solo plays the defaults); pm decisions 33, 38 in part (fresh default on the configure screen only); D-85, D-88

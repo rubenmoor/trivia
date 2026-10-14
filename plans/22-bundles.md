@@ -60,7 +60,7 @@ Mods carry bundles in our own format, loaded by our own loader (pm plan 115, dec
 - Namespacing: bundle and question ids → `<mod id>:<id>`; `:` never in our ids: `isModId()` / `isOurs()` in `app/client/src/engine/pool.ts`.
 - Merge: the shell serves one `/data/bundles.json`: ours first, then loaded mods' rows in load order, tagged `source: "mod"`, `mod`, `modName` (`app/desktop/resolve.mjs`).
 - Loading: mod bundles are packs (`withPacks`) in `app/client/src/lib/data.ts`; `modPool()` namespaces, rewrites media, drops invalid questions; offered in `languages` ∩ `LOCALES` with a pool file.
-- Kinds and defaults: a non-base mod bundle is a pack: off on the configure screen (decision 33), on in solo (decision 51); a base mod bundle is a second choice in the base radio group, ours stays the default (decision 38). Mod removed: its bundles vanish, stored choices fall back to defaults.
+- Kinds and defaults: a non-base mod bundle is a pack: off by default in every mode (decision 33, decision 158); a base mod bundle is a second choice in the base radio group, ours stays the default (decision 38). Mod removed: its bundles vanish, stored choices fall back to defaults.
 - Media: relative `file_url` inside the bundle folder (`img/owl.jpg`) → `/data/bundles/<mod>:<id>/img/owl.jpg`; never downloaded; absolute URL or `..` → media dropped, `role: essential` question dropped.
 - Credits (decision 129: Credits for mod media: runtime section on the Credits screen from the mod's own pool): `Credits.svelte` adds a section per loaded mod bundle from its questions' `credit` + `source_url` (deduped); `credits.json`, `CREDITS.md` stay ours.
 - Marker: `BundleSelector.svelte` shows «Hecho por jugadores · {mod}» (`bundles.playerMade`); flag action hidden for mod questions.
