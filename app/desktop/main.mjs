@@ -360,7 +360,7 @@ async function checkModCmd(folder) {
 /** `--publish-mod` (plan 119): the folder is only read and copied. → exit code. */
 async function publishMod(opts) {
   const { out, logTo, finish } = headlessOutput();
-  const p = await preparePublish(opts.folder, app.getVersion());
+  const p = await preparePublish(opts.folder, app.getVersion(), roots());
   logTo(path.join(path.dirname(opts.folder), `${p.manifest?.id ?? path.basename(opts.folder)}-publish.log`));
   for (const w of p.warnings) out(`warning: ${w}`, true);
   let result;

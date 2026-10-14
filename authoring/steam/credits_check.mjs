@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Credits complete both ways in a packaged build (plan 92, SW-6): node credits_check.mjs <unpacked dir>...
-// Exit 1 with every missing/extra name.
+// Exit 1 with every missing/extra name. Not checked: modding/ (player kit; its template image is ours, CC0).
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { createRequire } from "node:module";
 import path from "node:path";

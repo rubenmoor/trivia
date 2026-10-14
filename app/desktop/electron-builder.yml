@@ -33,6 +33,8 @@ extraResources:
 extraFiles:
   - from: ../client/dist/CREDITS.md
     to: CREDITS.md
+  - from: ../../modding  # player kit and guide (decisions 133, 134)
+    to: modding
 npmRebuild: false
 # Pinned (from v43.7.7's SHASUMS256.txt): cached zips verify offline; update with electron's version.
 electronDownload:

@@ -23497,7 +23497,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Run once through an AI at hand (e.g. `claude -p`), answering its questions with the sample "dinosaurs, kids, en + de, 20 questions"; save its files into a temp mod with a `mod.json`; `trivia-desktop --check-mod <temp mod>` passes with ≤ 2 dropped (else fix the prompt and rerun); the coverage line shows the kids window (1–6) filled.
 - Temp mod deleted; one line on the result in the done note.
 - Per-commit checks pass.', '2026-10-13T18:36:02Z', '2026-10-14T17:20:38Z', 940);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (985, 120, 'Ship modding/ in the install folder; modkit step in trivia-release-check', 'work', 'open', NULL, NULL, 'Part 5 of plan 120. After task 3 (template exists) and task 2 (`--check-mod`). Decision 133: the kit ships in the install folder as `modding/`; decision 134: the modding guide `modding/README.md` and `modding/examples/` live there too (part 10, plan 121), so ship the whole folder.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (985, 120, 'Ship modding/ in the install folder; modkit step in trivia-release-check', 'work', 'done', NULL, '2026-10-14, app/desktop/electron-builder.yml (extraFiles ../../modding → modding), authoring/steam/release_check.py (modkit step: steam-run linux-unpacked/trivia --ozone-platform=headless --check-mod modding/template-bundle), authoring/steam/credits_check.mjs (modding/ not checked, comment), app/desktop/publish.mjs + main.mjs (preparePublish runs checkMod, findings as warnings). Verified: modding/ in linux- and win-unpacked; trivia-steam stage ok; release check modkit ✓ credits ✓; dry-run publish shows checkMod findings as warnings.', 'Part 5 of plan 120. After task 3 (template exists) and task 2 (`--check-mod`). Decision 133: the kit ships in the install folder as `modding/`; decision 134: the modding guide `modding/README.md` and `modding/examples/` live there too (part 10, plan 121), so ship the whole folder.
 
 ## What
 - `app/desktop/electron-builder.yml` `extraFiles`: `../../modding` → `modding` (beside the executable, both Windows and Linux).
@@ -23509,7 +23509,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - `trivia-desktop-build --dir` has `modding/` in `linux-unpacked/` and `win-unpacked/`.
 - `trivia-release-check --skip tag` passes its `modkit` and `credits` steps.
-- Per-commit checks pass.', '2026-10-13T18:36:03Z', NULL, 940);
+- Per-commit checks pass.', '2026-10-13T18:36:03Z', '2026-10-14T17:49:24Z', 940);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (986, 120, 'Docs: player bundle kit, --check-mod; decision 133 consequences', 'work', 'open', NULL, NULL, 'Part 6 of plan 120, last. After tasks 1–5 of this plan.
 
 ## What
@@ -26399,6 +26399,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (923, 982, '2026-10-14T16:35:55Z', '2026-10-14T17:08:09Z', 'done', NULL, 0, 'ecfffddba76525b32af86c7dff9fb0cb9cd5674d', 'claude-opus-5-5[1m]', 'a64064cc-ab2f-4e45-aeec-45056176d8fd', 36, 68, 22154, 2971046, 98178, 1.8229852000000004, 2129003);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (924, 983, '2026-10-14T17:08:09Z', '2026-10-14T17:15:00Z', 'done', NULL, 0, '66ea5247b0608a55c82598f70b175906895c5b1d', 'claude-opus-5-5[1m]', '7ee2c2c0-5325-4321-b219-4ba7df792f70', 57, 104, 35477, 4577277, 116407, 2.5566674000000003, 2129003);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (925, 984, '2026-10-14T17:15:00Z', '2026-10-14T17:20:49Z', 'done', NULL, 0, '7a7fcd752c26097705f2dff753f7fb28e1212b9e', 'claude-opus-5-5[1m]', '38893ff5-80ec-409b-8622-b213ce2ef1a0', 15, 30, 7692, 746608, 48290, 0.68960160000000015, 2129003);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (926, 985, '2026-10-14T17:20:49Z', '2026-10-14T17:49:32Z', 'done', NULL, 0, 'd58624ec31eb590295dca73ed7a178f3ab8df35c', 'claude-opus-5-5[1m]', 'f2df2cb8-4a5a-4de3-80b3-c38c94be632f', 19, 38, 7098, 967660, 53272, 0.76181999999999972, 2129003);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

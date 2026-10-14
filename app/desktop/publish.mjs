@@ -3,7 +3,7 @@ import fs from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import { isDeepStrictEqual } from "node:util";
-import { errorText, warningText } from "./check-mod.mjs";
+import { checkMod, errorText } from "./check-mod.mjs";
 import { readManifest } from "./mods.mjs";
 import { contained } from "./resolve.mjs";
 
@@ -66,11 +66,15 @@ async function stage(src, dest, warnings) {
 
 /**
  * Steps 1–5: validate, preview, stage, tags. → { error, warnings } or the prepared item;
- * `dispose()` removes the staged copy (already gone on error).
+ * `dispose()` removes the staged copy (already gone on error). `roots`: checkMod's `{ dist, data }`.
  */
-export async function preparePublish(folder, gameVersion) {
+export async function preparePublish(folder, gameVersion, roots) {
   const mod = await readManifest(folder, gameVersion);
-  const warnings = mod.warnings.map(warningText);
+  // --check-mod's findings (plan 120): warnings only, the manifest error below still stops.
+  const warnings = [];
+  await checkMod(folder, { ...roots, gameVersion }, (line, isError) => {
+    if (isError) warnings.push(line.trim().replace(/^(error|warning): /, ""));
+  });
   if (mod.error) return { error: errorText(mod.error), warnings };
   const m = mod.manifest;
 
