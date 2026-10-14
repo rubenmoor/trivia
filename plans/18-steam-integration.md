@@ -129,6 +129,66 @@ Local builds since S3 (SW-5, D-73); the release check (SW-6) and Steam uploads (
   - Kind (plan 92): previous tag = newest `v*` reachable from HEAD, not HEAD's own; `content-only` patch if `git diff --name-only <prev>..HEAD` touches nothing shipped (`app/`, `flake.nix`, `flake.lock`, root `package*.json`) outside `app/data/`, else (or no earlier tag) `full`. Save version: `SAVE_VERSION` (`app/client/src/engine/state.ts`) at HEAD vs previous tag. JSON keys `kind`, `previous_tag`, `save_version`.
   - Report `work/steam/<tag-or-sha>/release-check.{md,json}` (header: version, pool hash, previous tag, kind, save version change; commit, clean tree, result, skips) + `logs/<step>.log`; the JSON is what `trivia-steam upload --checked` reuses.
 
+## Steamworks app configuration (SW-7)
+The values the developer enters in Steamworks for the base app and the free DLC app, one checklist (plan 130, SW-7). Workers never log in or enter values; the developer ticks the rows and reports the IDs through the decision "Steamworks app configured (SW-7)? IDs?". Steam only (decision 111): no values for running outside Steam, no DRM, no `restartAppIfNecessary`, no anti-tamper.
+- Needs the App ID from decision 177: Steamworks app created? App ID?
+- Valve's page and field names are from memory: recheck at entry.
+- Not here: store fields (`plans/17a-store-page.md`, task 672: Store page entry checklist and PUB-8 close-out; DLC texts decision 173: DLC store texts approved? (colombia)), achievements (decision 140), Workshop (decision 135: Steamworks: enable Workshop …), Deck review (plan 90: Steam Deck review and Deck test (SW-12)), price (PUB-11).
+
+### App (Basic info)
+- [ ] App ID: decision 177's; type Game.
+- [ ] Names (D-50): default/english «Living Room Trivia»; latam + spanish «Trivia en Familia»; german «Wohnzimmer-Quiz» (decision 78: German store name (PUB-8, D-50): keep «Living Room Trivia» or a localized one?). If PUB-7 fails (decision 176: Store names pass PUB-7?), this row waits for the new OQ-34 decision. In-game `productName` «Trivia» unchanged ("Exe metadata" above).
+
+### Installation → General
+- [ ] Install folder: `LivingRoomTrivia` (Cloud paths don't depend on it).
+- [ ] Launch option Windows, 64-bit: executable `Trivia.exe`, no arguments.
+- [ ] Launch option Linux + SteamOS, 64-bit: executable `trivia` (the `after-pack.mjs` launcher, adds `--no-sandbox`; binary `trivia-bin`), no arguments, no Proton forcing.
+- [ ] Linux runtime: Steam Linux Runtime (current "sniper"/3.0 if offered; recheck); the beta test (task 263: write plan: Beta test and S5 close-out) confirms it starts.
+- [ ] No other launch options: never `TRIVIA_DEV_STEAM_USER`, `--no-mods` or other dev args; no second "safe start" option (decision 152: Manual safe start: --no-mods only).
+- [ ] Redistributables: none (Electron ships its runtime).
+
+### Installation → Depots
+Split per decision 84: SteamCMD source and depot split for Steam uploads; build side and `steam.json`: "Builds and depots" above (plan 89).
+- [ ] `windows`: OS Windows, 64-bit, language all.
+- [ ] `linux`: OS Linux, 64-bit, language all.
+- [ ] `content`: OS all, language all.
+- [ ] `colombia`: OS all, language all, tied to the colombia DLC app (next block).
+- [ ] IDs → `authoring/steam/steam.json` (task 1045 / task 681), via the decision.
+
+### DLC (All Associated Packages, DLC, Demos And Tools → Add New DLC)
+Free DLC per shipped pack (decision 66: Price model (OQ-33); decision 110: Regional packs at launch (RG-5, OQ-46)); only packs in `app/data/bundles/` at upload time.
+- [ ] `colombia`: name «Regional: Colombia» (es, es-ES, en); de «Regional: Kolumbien» only once a de pack pool ships.
+- [ ] Price free; optional (installed when owned and ticked in Properties → DLC).
+- [ ] Depot `colombia` linked to it; the base app lists it.
+- [ ] Store texts: `plans/17a-store-page.md` "Free DLC" (decision 173).
+
+### SteamPipe → Builds (branches)
+- [ ] `default`: empty until S6 (decision 84).
+- [ ] `beta`: password-protected; password with the developer only, never in a file or a decision.
+
+### Steam Cloud
+- [ ] Auto-Cloud values from "Steam features" → "Auto-Cloud values for SW-7" above (plan 87): quota, root path, Linux root override.
+- [ ] Conflicts: Steam's dialog, nothing to set.
+
+### Application → Steam Input
+- [ ] Default configuration for every controller type: Valve's **Gamepad** template ("Gamepad" / "Generic Gamepad"); the Deck's controls arrive as a virtual Xbox pad (decision 125: Steam Deck: best effort, review without a Deck at hand).
+- [ ] No opt-outs of PlayStation/Xbox/Switch configuration support (glyphs read `GetInputTypeForHandle`, plan 85).
+- [ ] No custom action set (the game reads the browser Gamepad API).
+- [ ] Deck: nothing else here (fit plan 46, peek plan 113, review plan 90).
+
+### Community → Rich Presence
+- [ ] Upload `app/desktop/steam-presence.vdf` (or via Steamworks' localization upload; recheck); a friend's list shows «Nivel N de 12» (decision 71: Upload the rich presence tokens in Steamworks?).
+
+### Achievements
+- [ ] "Achievements in Steamworks" above, reported through decision 140: Achievements entered and published in Steamworks?.
+
+### Publish
+- [ ] Publish the Steamworks changes after each block.
+
+### Dev (repo side, task 1045)
+- [ ] `app/desktop/main.mjs` `STEAM_APP_ID` 480 → the real App ID; `TRIVIA_STEAM_APPID` / `SteamAppId` overrides stay; `--dry-run` keeps 480.
+- [ ] No `steam_appid.txt` in the repo or in builds (`steam.py` `EXCLUDE`); a dev run that needs one writes it gitignored.
+
 ## Local build start test
 The developer's check that the local builds start and play offline on machines without the dev setup (SW-5; pm plan 56 task 3). Skipped, not failed: decision 39 (Steam only, decision 111); the clean-machine start test is covered by the Steam beta test (task 263). Tables kept as the checklist for that test.
 - **Artefacts:** `trivia-desktop-build` → `app/desktop/release/Trivia-<version>-win-x64.zip`, `Trivia-<version>-linux-x64.tar.gz`; or copy those two files over (USB stick, ~2.5 GB each).
@@ -181,7 +241,7 @@ Date: · Build commit:
 
 ## Steam Deck Verified
 Requirements to plan for: full controller support with correct glyphs (IN), legible text at 800p, the on-screen keyboard for text entry, no launcher, working default settings, no warnings on start. Before applying (decision 125: Steam Deck: best effort, review without a Deck at hand):
-- Fit at 1280×800 (plan 46, done); image peek on image questions (plan 113, done: every image question's picture whole at 1280×800, task 923); the Gamepad template as Steam Input default (milestone 10).
+- Fit at 1280×800 (plan 46, done); image peek on image questions (plan 113, done: every image question's picture whole at 1280×800, task 923); the Gamepad template as Steam Input default (milestone 10; "Steamworks app configuration (SW-7)" → "Application → Steam Input").
 - With those in, request Valve's Deck review (SW-12) without a real-Deck test.
 - Real-Deck test and tuning: plan 90 once a Deck is at hand.
 

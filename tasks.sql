@@ -24228,7 +24228,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - A row still open (a pending decision): make this task pending on it, don''t close.', '2026-10-14T21:36:31Z', NULL, 1036);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1043, 130, 'create tasks for plan 130: Steamworks app configuration (SW-7)', 'split', 'done', 1000, '2026-10-14, tasks.sql: tasks 1044, 1045 (1045 waits on decision 177)', 'Split plan 130 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-14T21:50:30Z', '2026-10-14T21:51:26Z', 254);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1044, 130, 'SW-7 checklist in plan 18 and the ''configured'' decision', 'work', 'open', NULL, NULL, 'Part 1 of `plan 130: Steamworks app configuration (SW-7)`: write the Steamworks values the developer enters as one checklist, and the pm decision that collects the results. Docs and pm only; no Steamworks access (never log in, never enter values).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1044, 130, 'SW-7 checklist in plan 18 and the ''configured'' decision', 'work', 'done', NULL, '2026-10-14, plans/18-steam-integration.md: SW-7 checklist section, Deck Verified pointer; decision 179 pending, task 1045 waits on it', 'Part 1 of `plan 130: Steamworks app configuration (SW-7)`: write the Steamworks values the developer enters as one checklist, and the pm decision that collects the results. Docs and pm only; no Steamworks access (never log in, never enter values).
 
 - `plans/18-steam-integration.md`: new section "Steamworks app configuration (SW-7)" right after "Builds and depots".
   - Intro paragraph (full sentences); note at the top: needs the App ID from `decision 177: Steamworks app created? App ID?`; Valve''s field names are from memory, recheck at entry.
@@ -24238,7 +24238,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Decision: `did=$(pm decision add "Steamworks app configured (SW-7)? IDs?" --body - --option "configured: App ID …, depots windows … linux … content …, colombia DLC … depot …" --option "not yet" --option "issues (rows)")`; body: after decision 177; follow the new section; report App ID, depot IDs `windows`, `linux`, `content`, `colombia` DLC app ID + its depot ID, `beta` branch created (no password), Gamepad template set as Steam Input default, Cloud values, launch options, rich presence uploaded, published; `decision 89: Steamworks App ID, depot IDs and beta branch entered?` asks the same IDs: answer it "see decision <did>"; achievements stay decision 140, Workshop decision 135, store page task 672.
 - `pm task-pending-decision 1045 $did` (`task 1045: Real App ID in the repo and SW-7 close-out`; already waits on decision 177 too).
 
-Done when: section written; decision pending; the close-out task waits on it.', '2026-10-14T21:51:13Z', NULL, 1043);
+Done when: section written; decision pending; the close-out task waits on it.', '2026-10-14T21:51:13Z', '2026-10-14T21:52:15Z', 1043);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1045, 130, 'Real App ID in the repo and SW-7 close-out', 'work', 'open', NULL, NULL, 'Part 2 of `plan 130: Steamworks app configuration (SW-7)`: after the developer answers the "Steamworks app configured (SW-7)? IDs?" decision (added by the previous task of this plan), put the real IDs into the repo and tick SW-7.
 
 - `app/desktop/main.mjs` `STEAM_APP_ID`: 480 (Spacewar) → the real App ID, its comment gone; `TRIVIA_STEAM_APPID` / `SteamAppId` overrides stay; no `steam_appid.txt` in repo or builds (`steam.py` `EXCLUDE`).
@@ -25914,6 +25914,18 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 
 Options: `go: version 1.0.<n>` (the next patch number after the newest `v*` tag; minor if `SAVE_VERSION` changed, decision 91), `not yet (why)`.
 On `go`, `task 714: First content patch candidate` bumps the version, drafts the notes and raises `Release candidate v<x> passed?`.', NULL, NULL, '2026-10-14T21:47:16Z', NULL, 713, NULL, 'once', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (179, 'Steamworks app configured (SW-7)? IDs?', 'pending', '["configured: App ID …, depots windows … linux … content …, colombia DLC … depot …", "not yet", "issues (rows)"]', 'After `decision 177: Steamworks app created? App ID?`. Follow `plans/18-steam-integration.md` "Steamworks app configuration (SW-7)" (`plan 130: Steamworks app configuration (SW-7)`), tick its rows, then report:
+- App ID; depot IDs `windows`, `linux`, `content`; `colombia` DLC app ID + its depot ID
+- `beta` branch created (password-protected; don''t write the password here)
+- Gamepad template set as Steam Input default
+- Steam Cloud (Auto-Cloud) values entered
+- launch options (Windows `Trivia.exe`, Linux/SteamOS `trivia`)
+- rich presence uploaded (`app/desktop/steam-presence.vdf`)
+- published
+- issues: the failing rows
+
+`decision 89: Steamworks App ID, depot IDs and beta branch entered? (for the first beta upload)` asks for the same IDs: answer it "see decision <this one>".
+Not here: achievements (`decision 140: Achievements entered and published in Steamworks?`), Workshop (`decision 135: Steamworks: enable Workshop for ¡Trivia! and a second Steam account?`), store page (`task 672: Store page entry checklist and PUB-8 close-out`).', NULL, NULL, '2026-10-14T21:52:12Z', NULL, 1044, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -26889,6 +26901,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (965, 716, '2026-10-14T21:48:12Z', '2026-10-14T21:48:28Z', 'blocked', NULL, 0, 'aaff68a9981efe0e703da2549c3a47881a673d49', 'claude-opus-5-5[1m]', '3bdf9234-4f08-4051-817c-643570cf27b6', 5, 10, 1026, 148045, 26029, 0.25840100000000005, 2296074);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (966, 254, '2026-10-14T21:48:28Z', '2026-10-14T21:50:45Z', 'done', NULL, 0, 'c08ee9a553fa7c462bd1189ef0fff42d38a93e2c', 'claude-opus-5-5[1m]', '8a62861c-35e0-4b5a-bb42-92a9df15ab62', 15, 28, 11782, 1026384, 99628, 1.2380528, 2296074);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (967, 1043, '2026-10-14T21:50:45Z', '2026-10-14T21:51:33Z', 'done', NULL, 0, '5f5d6c588e4e6225b93961f58b36f7208cd77c87', 'claude-opus-5-5[1m]', '4d4550d6-d110-463e-811d-de8bfb037588', 8, 16, 3870, 298532, 34106, 0.41001839999999989, 2296074);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (968, 1044, '2026-10-14T21:51:33Z', '2026-10-14T21:52:28Z', 'done', NULL, 0, '870a17e1c6f7a11db487fb62eab5d825c102ec2a', 'claude-opus-5-5[1m]', '4fc1ad82-7829-4437-bfca-08447a303572', 11, 20, 5023, 468067, 47459, 0.57382540000000015, 2296074);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -27142,6 +27155,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1041, 177);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1042, 176);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1042, 177);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1045, 177);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1045, 179);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
