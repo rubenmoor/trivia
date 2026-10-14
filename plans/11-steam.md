@@ -171,7 +171,7 @@ In order; workers never log in, enter credentials or contact Valve (plan 94).
 The release candidate `v1.0.0` goes from `beta` through the release checklist (ST-4), the family's sign-off and Valve's build review to `default`, and the developer presses Release on a date the "Coming soon" rules (ST-3) allow. Then a launch-day checklist and a first week of watching by hand. Every Steamworks step is the developer's; workers write the texts, raise the decisions and record the answers (pm plan 95).
 
 ### Valve's rules
-2026-10-13, task 706: no web access for the worker (WebFetch/WebSearch denied); rules already read for ST-3 (same day) are reused, the rest is unverified. Valve's wording wins.
+2026-10-13, task 706: no web access for the worker (WebFetch/WebSearch denied); rules already read for ST-3 (same day) are reused, the rest is unverified. 2026-10-14, task 862: retried review_process, releasing, uploading, event_tools: WebFetch denied again, marks kept; discounts read by task 1048. Valve's wording wins.
 - Release date and lock: exact intended date set in Steamworks, changeable until two weeks before it, then locked; earliest release = later of (Coming soon live + 14 days, app fee paid + 21 days). Source: ST-3 "Valve's rules" above (/doc/store/release_dates, /doc/store/coming_soon, /doc/gettingstarted/onboarding, read 2026-10-13).
 - Permissions for releasing: "Publish app changes to Steam" and "Manage pricing and discounts". Source: /doc/store/releasing (read 2026-10-13, ST-3).
 - At release Steam e-mails everyone who wishlisted. Source: /doc/store/coming_soon (read 2026-10-13, ST-3).
@@ -184,13 +184,20 @@ The release candidate `v1.0.0` goes from `beta` through the release checklist (S
 
 ### Preconditions
 All ✓ before the go decision (`Start the launch release candidate v1.0.0?`).
+- Decision 95's body predates this table (revised 2026-10-14, task 862): the table wins.
+
 | precondition | how it's checked |
 |---|---|
 | Coming soon live; earliest release date known | ST-3 `[x]` above with live date and earliest release date (`task 704: Record the Coming soon result (ST-3)`, decision "Coming soon page live? date?") |
 | Content target per launch language (decision 21, decision 37, D-75) | `qgen export && qgen report --simulate --locale es,en,de`: ✓ for every language, exit 0 (`app/data/pool.json`, `pool.en.json`, `pool.de.json` vs. `targets.json`; milestone 9 "Done when") |
 | Beta test passed (masterplan 10 part 11) | `task 263: write plan: Beta test and S5 close-out`'s plan done, its "S5 beta test passed?" answered passed; S5 row done above |
 | Price and account (decision 66, decision 67) | both answered; `task 194` done; PUB-11 in `plans/17-publishing.md` holds price, regional pricing, launch discount |
-| Question reports (plan 93) | tasks 699, 700, 701 done: copy text + "where to send" in the build, `qgen flag`, thread texts per language in ST-5 |
+| Question reports (plan 93) | tasks 699, 859, 700, 860, 701 done: «Enviar» and the copy fallback in the build, `qgen flag`, `qgen flag --pull` |
+| Report server live (plan 103) | plan 103 task 4's (`task 868`) setup decision answered with the URL; the URL in the build config (`reportUrl`, plan 93); `curl <url>/health` → `{"ok": true, "api": 1}` |
+| Release checklist rows (plan 104) | plan 104 done: ST-4 has the `report` and Steam-offline (`offline`) rows |
+| Privacy text (plan 103 task 3) | ST-5 "Privacy" and `PRIVACY.md` written (`task 867`) |
+| Modding and Workshop (milestone 15) | `pm milestone list` shows milestone 15 implemented; modding guide URL on the store page (`17a` "Modding") |
+| Machines for the store facts | an older laptop (weak machine) and a Steam Deck (borrowed or bought) at hand for "Store facts on the release candidate" |
 | Deck review timing (plan 90) | `task 687` done: SW-12 `[x]` in `plans/18-steam-integration.md`; if it says "review in S6", the launch-day row below applies |
 | Steamworks app ready | SW-7 `[x]` (App ID, depots, `beta` branch; decision 89); first `beta` upload recorded |
 | No placeholders | `grep -rn 'PLACEHOLDER(' app/` empty |
@@ -208,9 +215,27 @@ Backwards from the release date R (a weekday ≥ the earliest release date):
 3. `git tag v1.0.0` on that commit (the check never tags).
 4. `trivia-steam upload --branch beta` (runs `trivia-release-check`; prints the BuildID; manual prompt: `later`).
 5. Manual rows on the Steam-installed `beta` ("Manual rows" above), full release: all of them.
-6. Family sign-off: a family game from `beta` (row `signoff`).
-7. Candidate decision `Release candidate v1.0.0 passed?` per "Decision per release candidate"; answers recorded with `trivia-release-check --manual FILE`.
+6. Store facts run sheet on the same `beta` install ("Store facts on the release candidate" below).
+7. Family sign-off: a family game from `beta` (row `signoff`).
+8. Candidate decision `Release candidate v1.0.0 passed?` per "Decision per release candidate", plus a "Store facts" section after the ST-4 rows (the run sheet's answers); answers recorded with `trivia-release-check --manual FILE`.
 - Failed: fixes → `1.0.1`, new tag, new candidate decision; a tag is never reused.
+
+### Store facts on the release candidate
+Decision 90: Store requirements, languages and controller flags?: final store values are measured on the candidate. The developer's run sheet on the candidate installed through Steam from `beta`; answers go into the candidate decision's "Store facts" section.
+
+| fact | steps | answer |
+|---|---|---|
+| Installed size | Steam → game → Properties → Installed Files: base alone, then each pack DLC on (decision 110: Regional packs at launch); Linux: also `du -sh` of the install folder | GB per base and per DLC |
+| Weak machine | an older laptop (name CPU, RAM, GPU, OS); a full game with video questions on; per row ✓/✗: starts, menus smooth, video plays without stutter, load times (s) | machine + rows |
+| Steam Deck | borrowed or bought; the same full game; reuse plan 90's real-Deck rows where they overlap (`plans/18-steam-integration.md` "Steam Deck Verified", `task 685`) | rows |
+| Pad only | a full game, menus and «Preguntas marcadas» with a pad only, no keyboard or mouse | ✓, or ✗ with what failed |
+
+Results → Steamworks field values (`plans/17a-store-page.md` "System requirements, languages, controller"; the developer enters them before the build review):
+- Storage (Windows, Linux): installed size rounded up to the next 0.5 GB; DLC sizes on each DLC's own page.
+- Minimum (OS, Processor, Memory, Graphics): the weak machine if it passed; else the author's laptop, with a note.
+- Recommended: unchanged unless a run says otherwise.
+- Controller ("Xbox controllers"): pad-only ✓ → Full; ✗ → Partial, with what failed.
+- Deck: findings → plan 90.
 
 ### Launch-day checklist
 In order, Steamworks (partner.steamgames.com, the app's landing page); menu names as known 2026-10, Valve's UI wins.
@@ -221,7 +246,11 @@ In order, Steamworks (partner.steamgames.com, the app's landing page); menu name
 | Price | Store & release / Pricing: base and regional prices per PUB-11 (`plans/17-publishing.md`, decision 66), entered and approved earlier (`plans/17a-store-page.md` "Content survey and pricing: entry"); check unchanged and approved |
 | Launch discount (if PUB-11 has one) | App landing page, below the release date (not the discount dashboard): launch discount for R, % and length per PUB-11; only before release (Valve's rules above) |
 | Store languages = shipped | Store page → Supported languages: tick exactly what the build ships (see "Languages to compare") |
-| Discussions and report thread | Community Hub → Discussions: open; one thread per language with ST-5's text (`task 701`), each pinned ("Make sticky") |
+| Discussions open | Community Hub → Discussions: open |
+| Privacy policy on the store page | ST-5 "Privacy" → "Where it goes on Steam" (plan 103 task 3): the store text in every store language, the `PRIVACY.md` URL if a field takes one |
+| Modding guide link | Store page "Modding" text (`17a` "Modding", milestone 15) with the guide URL, every store language |
+| Store facts entered | installed size (base + each DLC), requirements and controller flag match the candidate decision's "Store facts" |
+| Report server answers | `curl <url>/health` → `{"ok": true, "api": 1}` on launch day |
 | Deck review | Only if SW-12 says "review in S6" (plan 90): app → Steam Deck Compatibility → request review; result → plan 18 |
 | Release | App landing page → Release: press Release on R (or check the scheduled release fired); store page shows the game buyable |
 | Announcement | Community → Events & Announcements → new event, type release/launch, texts per language from "Announcement texts" (plan 95 task 2) |
@@ -233,7 +262,8 @@ In order, Steamworks (partner.steamgames.com, the app's landing page); menu name
 
 ### Announcement texts
 Per language, written by plan 95 task 2 (`task 707`, 2026-10-13); posted by the developer on launch day (Community → Events & Announcements, one text per Steam language). Workers never post.
-- Placeholders: `<n_es>`, `<n_en>`, `<n_de>` = questions per language from `qgen report` (filled by `task 708: Release candidate v1.0.0`); `<thread>` = the pinned report thread's title per language (ST-5, `task 701`; decision 93 pending: if it picks e-mail over a thread, the report paragraph changes with it).
+- Placeholders: `<n_es>`, `<n_en>`, `<n_de>` = questions per language from `qgen report` (filled by `task 708: Release candidate v1.0.0`).
+- Reports (revised 2026-10-14, task 862): the in-game send (plan 93: flag, «Preguntas marcadas», «Enviar»; «Copiar» when sending fails); privacy: one sentence pointing to the store page's privacy policy (ST-5 "Privacy"); one factual line on mods from the Workshop (milestone 15). UI words as in `app/client/src/locales/`.
 - Facts as of 2026-10-13: launch modes = gamemaster mode and «Solo o en grupo» (plan 13; multiplayer later, milestone 11 out of scope); names per D-50 (German: no localized name); UI words from `app/client/src/locales/`; AI wording from `plans/17-publishing.md` "AI disclosure" (`17a` has no AI text yet: if PUB-9's final text differs, follow it).
 - No marketing claims, no links outside Steam. Body in Steam's BBCode. Forum name («Discusiones», "Diskussionen"): use Steam's own label in that language.
 - Spanish: Spanish – Latin America gets es-419 as written; Spanish – Spain the same text with the es-ES deltas applied.
@@ -261,7 +291,9 @@ Languages (interface and questions):
 
 Questions, hints and translations were drafted with AI (Claude), fact-checked with web search and reviewed by a person or by a second AI check before they went into the game. Images and sounds are by people and listed in the game's Credits (menu, Esc). Nothing is generated while you play.
 
-A wrong or unclear question? Mark it in the game (flag icon or M), open "Marked questions" in the menu (Esc), press "Copy" and paste the text into the pinned thread "<thread>" in this game's Discussions. No account details needed.
+Mods: subscribe in the Steam Workshop, then turn them on in the game's Mods screen.
+
+A wrong or unclear question? Mark it in the game (flag icon or M), open "Marked questions" in the menu (Esc) and press "Send". If sending fails, "Copy" copies the report text. What a report contains and how long it is kept: the privacy section on this store page.
 ```
 
 #### Spanish (es-419)
@@ -287,7 +319,9 @@ Idiomas (interfaz y preguntas):
 
 Las preguntas, las pistas y las traducciones se redactaron con IA (Claude), se verificaron con búsquedas en la web y las revisó una persona o una segunda revisión con IA antes de entrar al juego. Las imágenes y los sonidos son obra de personas y figuran en los créditos del juego (menú, Esc). Nada se genera mientras juegan.
 
-¿Una pregunta incorrecta o confusa? Márquenla en el juego (icono de bandera o M), abran «Preguntas marcadas» en el menú (Esc), presionen «Copiar» y peguen el texto en el hilo fijado «<thread>» de las Discusiones de este juego. No hace falta ningún dato de la cuenta.
+Mods: se suscriben en el Workshop de Steam y se encienden en la pantalla Mods del juego.
+
+¿Una pregunta incorrecta o confusa? Márquenla en el juego (icono de bandera o M), abran «Preguntas marcadas» en el menú (Esc) y presionen «Enviar». Si no se puede enviar, «Copiar» copia el texto del reporte. Qué se envía y cuánto tiempo se guarda: la sección de privacidad de esta página de la tienda.
 ```
 
 #### Spanish (es-ES deltas)
@@ -295,7 +329,7 @@ Same title, what's new and body, with:
 - `video` → `vídeo` (both places)
 - `Control, teclado o mouse` → `Mando, teclado o ratón`
 - `mientras juegan` → `mientras jugáis`
-- `Márquenla` → `Marcadla`, `abran` → `abrid`, `presionen` → `pulsad`, `peguen` → `pegad`
+- `Márquenla` → `Marcadla`, `abran` → `abrid`, `presionen` → `pulsad`
 
 #### German
 - Title: `Living Room Trivia ist erschienen`
@@ -320,13 +354,16 @@ Sprachen (Oberfläche und Fragen):
 
 Fragen, Hinweise und Übersetzungen wurden mit KI (Claude) entworfen und per Websuche auf Fakten geprüft; vor der Aufnahme ins Spiel hat sie ein Mensch oder eine zweite KI-Prüfung durchgesehen. Bilder und Klänge stammen von Menschen und stehen im Spiel unter „Mitwirkende“ (Menü, Esc). Beim Spielen wird nichts generiert.
 
-Eine Frage ist falsch oder unklar? Markiert sie im Spiel (Fahnen-Symbol oder M), öffnet „Markierte Fragen“ im Menü (Esc), drückt „Kopieren“ und fügt den Text in den angehefteten Thread „<thread>“ in den Diskussionen dieses Spiels ein. Kontodaten sind nicht nötig.
+Mods: im Steam-Workshop abonnieren, dann im Mods-Bildschirm des Spiels einschalten.
+
+Eine Frage ist falsch oder unklar? Im Spiel markieren (Fahnen-Symbol oder M), im Menü (Esc) „Markierte Fragen“ öffnen und „Senden“ drücken. Geht das Senden nicht, kopiert „Kopieren“ den Text der Meldung. Was gesendet und wie lange es gespeichert wird: der Abschnitt „Datenschutz“ auf dieser Shop-Seite.
 ```
 
 ### First week
-- Developer daily: Community Hub discussions (every report thread) and the store reviews.
+- Developer daily: `qgen flag --pull` (sent reports → `needs_work`, plan 93); Community Hub discussions and the store reviews.
+- Report server: `trivia-report-server tail` (plan 103) for 429 and 5xx counts; many 5xx or a dead `/health` → a task in plan 103.
 - To pm:
-  - question reports: paste the text into `qgen flag` (plan 93), or into a pm task if unsure;
+  - question reports: sent ones arrive via `qgen flag --pull`; pasted copy-fallback text (Discussions, e-mail) into `qgen flag`, or into a pm task if unsure;
   - bugs: steps to reproduce, version and pool hash from the credits screen, platform (Windows, Linux, Deck);
   - review themes: one line each.
 - Each bug → a task in its owning plan or a `plans/backlog.md` row.
