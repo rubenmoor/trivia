@@ -26020,6 +26020,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 ?? app/data/pool.de.json
 ?? app/data/pool.en.json', 0, '4da30162baadce9233881f4f8e5485b7228445cb', 'claude-opus-5-5[1m]', 'bad28ebd-85c1-4983-a491-8af4e96c9ac3', 34, 62, 22297, 1797239, 63216, 1.3113637999999999, 1923858);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (865, 885, '2026-10-14T03:13:38Z', '2026-10-14T03:15:32Z', 'done', NULL, 0, 'bd10bb234de80b35d52293cc4b378758cdb6a775', 'claude-opus-5-5[1m]', '2cc8cad2-9cbf-4a25-bc22-f2648d099baa', 16, 32, 8574, 720115, 42288, 0.65393500000000016, 1963349);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (866, 869, '2026-10-14T03:15:33Z', '2026-10-14T03:15:57Z', 'blocked', NULL, 0, 'b56ce28982441f2dc0b0ae6c6b12ecf404baf1e5', 'claude-opus-5-5[1m]', 'b07418fa-1d2b-4533-99f3-77b22bd609fa', 6, 12, 1855, 198376, 29937, 0.3163192, 1963349);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -26238,6 +26239,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (866, 117);
 INSERT INTO task_decision (task_id, decision_id) VALUES (868, 117);
 INSERT INTO task_decision (task_id, decision_id) VALUES (868, 147);
 INSERT INTO task_decision (task_id, decision_id) VALUES (869, 117);
+INSERT INTO task_decision (task_id, decision_id) VALUES (869, 147);
 INSERT INTO task_decision (task_id, decision_id) VALUES (870, 117);
 INSERT INTO task_decision (task_id, decision_id) VALUES (884, 117);
 INSERT INTO task_decision (task_id, decision_id) VALUES (885, 117);
