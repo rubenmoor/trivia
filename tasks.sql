@@ -1,5 +1,5 @@
 -- pm database. Change it with pm; after a hand edit run `pm validate`.
-PRAGMA user_version = 14;
+PRAGMA user_version = 15;
 
 CREATE TABLE milestone (
     id             INTEGER PRIMARY KEY,
@@ -26,7 +26,7 @@ CREATE TABLE task (
     id              INTEGER PRIMARY KEY,
     plan_id         INTEGER NOT NULL REFERENCES plan (id),
     subject         TEXT NOT NULL CHECK (trim(subject) <> ''),
-    kind            TEXT NOT NULL DEFAULT 'work' CHECK (kind IN ('work', 'plan', 'masterplan', 'split', 'cleanup')),
+    kind            TEXT NOT NULL DEFAULT 'work' CHECK (kind IN ('work', 'plan', 'masterplan', 'split', 'cleanup', 'revise')),
     status          TEXT NOT NULL DEFAULT 'open' CHECK (status IN ('open', 'done', 'dropped')),
     priority        INTEGER,                               -- NULL: the plan's
     note            TEXT,                                  -- done: date, files; dropped: reason
@@ -9516,7 +9516,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-12T16:11:37Z', '2026-10-12T16:42:34Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (360, 7, 'create tasks for plan 7', 'split', 'done', 1000, '2026-10-12, task 370 (part 11 plan); parts 1–10 covered by plans 34–43 and queued revisions 361–369', 'Split plan 7 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T16:42:32Z', '2026-10-12T16:43:09Z', 359);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (361, 35, 'revise plan 35', 'plan', 'done', 1000, '2026-10-12, plan 35 rewritten in tasks.sql: no default mode/presets/checkpoints; record decisions 19, 20 and the five modes; spec settings.mode, settings.customized, standard joker set, refusals, ReportRow', 'Plan 7, the plan above plan 35, changed; it is quoted below. Bring plan 35 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (361, 35, 'revise plan 35', 'revise', 'done', 1000, '2026-10-12, plan 35 rewritten in tasks.sql: no default mode/presets/checkpoints; record decisions 19, 20 and the five modes; spec settings.mode, settings.customized, standard joker set, refusals, ReportRow', 'Plan 7, the plan above plan 35, changed; it is quoted below. Bring plan 35 in line with it
 (`pm plan edit 35 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -9623,7 +9623,7 @@ The gamemaster answered OQ-30 and OQ-37 directly (pm decisions 19, 20, 23, 24 an
 ## Constraints (from the milestone)
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
 - Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-12T16:42:32Z', '2026-10-12T16:44:44Z', 359);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (362, 36, 'revise plan 36', 'plan', 'done', 1000, '2026-10-12, plan 36 body: no default mode/presets; report only logs; mode screen with gamemaster + Solo o en grupo, standard set, customized', 'Plan 7, the plan above plan 36, changed; it is quoted below. Bring plan 36 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (362, 36, 'revise plan 36', 'revise', 'done', 1000, '2026-10-12, plan 36 body: no default mode/presets; report only logs; mode screen with gamemaster + Solo o en grupo, standard set, customized', 'Plan 7, the plan above plan 36, changed; it is quoted below. Bring plan 36 in line with it
 (`pm plan edit 36 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -9730,7 +9730,7 @@ The gamemaster answered OQ-30 and OQ-37 directly (pm decisions 19, 20, 23, 24 an
 ## Constraints (from the milestone)
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
 - Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-12T16:42:32Z', '2026-10-12T16:46:15Z', 359);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (363, 37, 'revise plan 37', 'plan', 'done', 1000, '2026-10-12, plan 37 body: decision 26 answered (es, en, de at launch), mode names'' Spanish forms, plan 24 as launch work', 'Plan 7, the plan above plan 37, changed; it is quoted below. Bring plan 37 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (363, 37, 'revise plan 37', 'revise', 'done', 1000, '2026-10-12, plan 37 body: decision 26 answered (es, en, de at launch), mode names'' Spanish forms, plan 24 as launch work', 'Plan 7, the plan above plan 37, changed; it is quoted below. Bring plan 37 in line with it
 (`pm plan edit 37 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -9837,7 +9837,7 @@ The gamemaster answered OQ-30 and OQ-37 directly (pm decisions 19, 20, 23, 24 an
 ## Constraints (from the milestone)
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
 - Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-12T16:42:32Z', '2026-10-12T16:47:47Z', 359);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (364, 38, 'revise plan 38', 'plan', 'done', 1000, '2026-10-12, plan 38 body: decision 21 and 26 answers, modes instead of presets; task 192 can start', 'Plan 7, the plan above plan 38, changed; it is quoted below. Bring plan 38 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (364, 38, 'revise plan 38', 'revise', 'done', 1000, '2026-10-12, plan 38 body: decision 21 and 26 answers, modes instead of presets; task 192 can start', 'Plan 7, the plan above plan 38, changed; it is quoted below. Bring plan 38 in line with it
 (`pm plan edit 38 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -9944,7 +9944,7 @@ The gamemaster answered OQ-30 and OQ-37 directly (pm decisions 19, 20, 23, 24 an
 ## Constraints (from the milestone)
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
 - Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-12T16:42:32Z', '2026-10-12T16:48:46Z', 359);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (365, 39, 'revise plan 39', 'plan', 'done', 1000, '2026-10-12, no change: plan 39 already matches masterplan part 6 (options, account holder, consequences for parts 7/9, PUB-6/PUB-11 stay S5)', 'Plan 7, the plan above plan 39, changed; it is quoted below. Bring plan 39 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (365, 39, 'revise plan 39', 'revise', 'done', 1000, '2026-10-12, no change: plan 39 already matches masterplan part 6 (options, account holder, consequences for parts 7/9, PUB-6/PUB-11 stay S5)', 'Plan 7, the plan above plan 39, changed; it is quoted below. Bring plan 39 in line with it
 (`pm plan edit 39 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -10051,7 +10051,7 @@ The gamemaster answered OQ-30 and OQ-37 directly (pm decisions 19, 20, 23, 24 an
 ## Constraints (from the milestone)
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
 - Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-12T16:42:32Z', '2026-10-12T16:49:21Z', 359);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (366, 40, 'revise plan 40', 'plan', 'done', 1000, '2026-10-12, no change: plan 40 still fits plan 7 part 7', 'Plan 7, the plan above plan 40, changed; it is quoted below. Bring plan 40 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (366, 40, 'revise plan 40', 'revise', 'done', 1000, '2026-10-12, no change: plan 40 still fits plan 7 part 7', 'Plan 7, the plan above plan 40, changed; it is quoted below. Bring plan 40 in line with it
 (`pm plan edit 40 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -10158,7 +10158,7 @@ The gamemaster answered OQ-30 and OQ-37 directly (pm decisions 19, 20, 23, 24 an
 ## Constraints (from the milestone)
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
 - Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-12T16:42:32Z', '2026-10-12T16:49:32Z', 359);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (367, 41, 'revise plan 41', 'plan', 'done', 1000, '2026-10-12, plan 41 body rewritten: record decisions 23, 24 and milestone modes, no new decisions', 'Plan 7, the plan above plan 41, changed; it is quoted below. Bring plan 41 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (367, 41, 'revise plan 41', 'revise', 'done', 1000, '2026-10-12, plan 41 body rewritten: record decisions 23, 24 and milestone modes, no new decisions', 'Plan 7, the plan above plan 41, changed; it is quoted below. Bring plan 41 in line with it
 (`pm plan edit 41 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -10265,7 +10265,7 @@ The gamemaster answered OQ-30 and OQ-37 directly (pm decisions 19, 20, 23, 24 an
 ## Constraints (from the milestone)
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
 - Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-12T16:42:32Z', '2026-10-12T16:49:52Z', 359);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (368, 42, 'revise plan 42', 'plan', 'done', 1000, '2026-10-12, no change: plan 42 still matches plan 7 part 9 (options, housekeeping, owner plan 23, priority 200)', 'Plan 7, the plan above plan 42, changed; it is quoted below. Bring plan 42 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (368, 42, 'revise plan 42', 'revise', 'done', 1000, '2026-10-12, no change: plan 42 still matches plan 7 part 9 (options, housekeeping, owner plan 23, priority 200)', 'Plan 7, the plan above plan 42, changed; it is quoted below. Bring plan 42 in line with it
 (`pm plan edit 42 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -10372,7 +10372,7 @@ The gamemaster answered OQ-30 and OQ-37 directly (pm decisions 19, 20, 23, 24 an
 ## Constraints (from the milestone)
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
 - Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-12T16:42:32Z', '2026-10-12T16:50:33Z', 359);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (369, 43, 'revise plan 43', 'plan', 'done', 1000, '2026-10-12, plan 43 body (pm): plans 35/41 as recording parts, 36/59 not awaited, S5 achievements + multiplayer ''Later'' notes', 'Plan 7, the plan above plan 43, changed; it is quoted below. Bring plan 43 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (369, 43, 'revise plan 43', 'revise', 'done', 1000, '2026-10-12, plan 43 body (pm): plans 35/41 as recording parts, 36/59 not awaited, S5 achievements + multiplayer ''Later'' notes', 'Plan 7, the plan above plan 43, changed; it is quoted below. Bring plan 43 in line with it
 (`pm plan edit 43 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -10704,7 +10704,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-12T17:35:47Z', '2026-10-12T17:41:50Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (395, 7, 'create tasks for plan 7', 'split', 'done', 1000, '2026-10-12, task 402 (new plan for the revised competitive timed spec; plans 38, 41 are done); revisions of plans 36, 39, 40, 42, 43, 59 already queued (396–401); no new decisions', 'Split plan 7 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T17:41:40Z', '2026-10-12T17:42:37Z', 394);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (396, 36, 'revise plan 36', 'plan', 'done', 1000, '2026-10-12, no change: plan 7''s revision only touched parts 5 and 8 (competitive timed); part 3 is unchanged and plan 36 still matches it', 'Plan 7, the plan above plan 36, changed; it is quoted below. Bring plan 36 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (396, 36, 'revise plan 36', 'revise', 'done', 1000, '2026-10-12, no change: plan 7''s revision only touched parts 5 and 8 (competitive timed); part 3 is unchanged and plan 36 still matches it', 'Plan 7, the plan above plan 36, changed; it is quoted below. Bring plan 36 in line with it
 (`pm plan edit 36 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -10817,7 +10817,7 @@ The gamemaster answered OQ-30 and OQ-37 directly (pm decisions 19, 20, 23, 24 an
 ## Constraints (from the milestone)
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
 - Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-12T17:41:40Z', '2026-10-12T17:43:18Z', 394);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (397, 39, 'revise plan 39', 'plan', 'done', 1000, '2026-10-12, no change: plan 39 still matches masterplan part 6 (mode changes don''t touch price/account)', 'Plan 7, the plan above plan 39, changed; it is quoted below. Bring plan 39 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (397, 39, 'revise plan 39', 'revise', 'done', 1000, '2026-10-12, no change: plan 39 still matches masterplan part 6 (mode changes don''t touch price/account)', 'Plan 7, the plan above plan 39, changed; it is quoted below. Bring plan 39 in line with it
 (`pm plan edit 39 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -10930,7 +10930,7 @@ The gamemaster answered OQ-30 and OQ-37 directly (pm decisions 19, 20, 23, 24 an
 ## Constraints (from the milestone)
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
 - Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-12T17:41:40Z', '2026-10-12T17:43:30Z', 394);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (398, 40, 'revise plan 40', 'plan', 'done', 1000, '2026-10-12, no change: plan 40 still matches masterplan part 7', 'Plan 7, the plan above plan 40, changed; it is quoted below. Bring plan 40 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (398, 40, 'revise plan 40', 'revise', 'done', 1000, '2026-10-12, no change: plan 40 still matches masterplan part 7', 'Plan 7, the plan above plan 40, changed; it is quoted below. Bring plan 40 in line with it
 (`pm plan edit 40 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -11043,7 +11043,7 @@ The gamemaster answered OQ-30 and OQ-37 directly (pm decisions 19, 20, 23, 24 an
 ## Constraints (from the milestone)
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
 - Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-12T17:41:40Z', '2026-10-12T17:43:39Z', 394);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (399, 42, 'revise plan 42', 'plan', 'done', 1000, '2026-10-12, no change: plan 42 still matches masterplan part 9 (changes were game modes only)', 'Plan 7, the plan above plan 42, changed; it is quoted below. Bring plan 42 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (399, 42, 'revise plan 42', 'revise', 'done', 1000, '2026-10-12, no change: plan 42 still matches masterplan part 9 (changes were game modes only)', 'Plan 7, the plan above plan 42, changed; it is quoted below. Bring plan 42 in line with it
 (`pm plan edit 42 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -11156,7 +11156,7 @@ The gamemaster answered OQ-30 and OQ-37 directly (pm decisions 19, 20, 23, 24 an
 ## Constraints (from the milestone)
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
 - Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-12T17:41:40Z', '2026-10-12T17:43:53Z', 394);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (400, 43, 'revise plan 43', 'plan', 'done', 1000, '2026-10-12, plan 43 body: also waits for plan 61 (revised competitive timed spec); OQ-37 row names D-77 + plan 61''s D-entry; ''Later'' names timed per plan 61', 'Plan 7, the plan above plan 43, changed; it is quoted below. Bring plan 43 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (400, 43, 'revise plan 43', 'revise', 'done', 1000, '2026-10-12, plan 43 body: also waits for plan 61 (revised competitive timed spec); OQ-37 row names D-77 + plan 61''s D-entry; ''Later'' names timed per plan 61', 'Plan 7, the plan above plan 43, changed; it is quoted below. Bring plan 43 in line with it
 (`pm plan edit 43 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -11269,7 +11269,7 @@ The gamemaster answered OQ-30 and OQ-37 directly (pm decisions 19, 20, 23, 24 an
 ## Constraints (from the milestone)
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
 - Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-12T17:41:40Z', '2026-10-12T17:44:27Z', 394);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (401, 59, 'revise plan 59', 'plan', 'done', 1000, '2026-10-12, no change: plan 59 already matches plan 7 part 11 (MD-10..MD-12, decisions first, defaults = today, waits on plan 36 settings.mode and engine, priority 480)', 'Plan 7, the plan above plan 59, changed; it is quoted below. Bring plan 59 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (401, 59, 'revise plan 59', 'revise', 'done', 1000, '2026-10-12, no change: plan 59 already matches plan 7 part 11 (MD-10..MD-12, decisions first, defaults = today, waits on plan 36 settings.mode and engine, priority 480)', 'Plan 7, the plan above plan 59, changed; it is quoted below. Bring plan 59 in line with it
 (`pm plan edit 59 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -11922,7 +11922,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-12T20:08:57Z', '2026-10-12T20:20:32Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (466, 5, 'create tasks for plan 5', 'split', 'done', 1000, '2026-10-12, no files: plan 5 already in line (task 469 writes part 5; revisions 467/468 queued for plans 29/30; parts 1, 3 done); no human decisions needed', 'Split plan 5 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T20:20:30Z', '2026-10-12T20:20:52Z', 465);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (467, 29, 'revise plan 29', 'plan', 'done', 1000, '2026-10-12, tasks.sql (plan 29 revised: bundles per language, base bundles one-of-N, action layer, i18n)', 'Plan 5, the plan above plan 29, changed; it is quoted below. Bring plan 29 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (467, 29, 'revise plan 29', 'revise', 'done', 1000, '2026-10-12, tasks.sql (plan 29 revised: bundles per language, base bundles one-of-N, action layer, i18n)', 'Plan 5, the plan above plan 29, changed; it is quoted below. Bring plan 29 in line with it
 (`pm plan edit 29 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -11979,7 +11979,7 @@ Milestone 5 lets players choose an age group and the bundles to play before a se
 - New bundles, regional packs (`plans/15c-regional-questions.md`); `chinese-base` (milestone 12).
 - Batches per age group (AG-8), targets from the windows (D-53).
 - Mixed-age sessions; log in `plans/open-questions.md` if it comes up.', '2026-10-12T20:20:30Z', '2026-10-12T20:23:37Z', 465);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (468, 30, 'revise plan 30', 'plan', 'done', 1000, '2026-10-12, plan 30 body: plan 71 dependency, base-bundle refusals, en/de offered bundles, languages/kind docs, decision 5 answered', 'Plan 5, the plan above plan 30, changed; it is quoted below. Bring plan 30 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (468, 30, 'revise plan 30', 'revise', 'done', 1000, '2026-10-12, plan 30 body: plan 71 dependency, base-bundle refusals, en/de offered bundles, languages/kind docs, decision 5 answered', 'Plan 5, the plan above plan 30, changed; it is quoted below. Bring plan 30 in line with it
 (`pm plan edit 30 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -12186,7 +12186,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `qgen validate` passes on the real data (en/de base warnings allowed); decision entry written in both places.', '2026-10-12T20:26:50Z', '2026-10-12T20:39:21Z', 472);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (482, 9, 'create tasks for plan 9', 'split', 'done', 1000, '2026-10-12, tasks.sql: parts 1-12 already have plan tasks; task 251 body gets the first-start language screen check; part 6''s screen goes to plan 68 via task 486 (revise plan 68, already queued)', 'Split plan 9 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T20:29:23Z', '2026-10-12T20:30:08Z', 470);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (483, 57, 'revise plan 57', 'plan', 'done', 1000, '2026-10-12, no change: plan 9''s part 2 (release bar, back-audit) unchanged; the revision touched part 6 (first-start language screen), not plan 57', 'Plan 9, the plan above plan 57, changed; it is quoted below. Bring plan 57 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (483, 57, 'revise plan 57', 'revise', 'done', 1000, '2026-10-12, no change: plan 9''s part 2 (release bar, back-audit) unchanged; the revision touched part 6 (first-start language screen), not plan 57', 'Plan 9, the plan above plan 57, changed; it is quoted below. Bring plan 57 in line with it
 (`pm plan edit 57 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -12292,7 +12292,7 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 
 ## Out of scope (from the milestone)
 - Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-12T20:29:23Z', '2026-10-12T20:30:21Z', 470);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (484, 66, 'revise plan 66', 'plan', 'done', 1000, '2026-10-12, no change: plan 9''s revision (task 470) touched parts 6 and 12 only; part 4 unchanged, plan 66 still fits', 'Plan 9, the plan above plan 66, changed; it is quoted below. Bring plan 66 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (484, 66, 'revise plan 66', 'revise', 'done', 1000, '2026-10-12, no change: plan 9''s revision (task 470) touched parts 6 and 12 only; part 4 unchanged, plan 66 still fits', 'Plan 9, the plan above plan 66, changed; it is quoted below. Bring plan 66 in line with it
 (`pm plan edit 66 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -12398,7 +12398,7 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 
 ## Out of scope (from the milestone)
 - Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-12T20:29:23Z', '2026-10-12T20:30:32Z', 470);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (485, 67, 'revise plan 67', 'plan', 'done', 1000, '2026-10-12, no change: plan 9''s revision only touches part 6 (first-start language screen, plan 68) and part 12; part 5 (QT-4) is unchanged, plan 67 still fits', 'Plan 9, the plan above plan 67, changed; it is quoted below. Bring plan 67 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (485, 67, 'revise plan 67', 'revise', 'done', 1000, '2026-10-12, no change: plan 9''s revision only touches part 6 (first-start language screen, plan 68) and part 12; part 5 (QT-4) is unchanged, plan 67 still fits', 'Plan 9, the plan above plan 67, changed; it is quoted below. Bring plan 67 in line with it
 (`pm plan edit 67 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -12504,7 +12504,7 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 
 ## Out of scope (from the milestone)
 - Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-12T20:29:23Z', '2026-10-12T20:30:44Z', 470);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (486, 68, 'revise plan 68', 'plan', 'done', 1000, '2026-10-12, plan 68 body: first-start language screen (task 4), docs task covers it; split queued as task 489', 'Plan 9, the plan above plan 68, changed; it is quoted below. Bring plan 68 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (486, 68, 'revise plan 68', 'revise', 'done', 1000, '2026-10-12, plan 68 body: first-start language screen (task 4), docs task covers it; split queued as task 489', 'Plan 9, the plan above plan 68, changed; it is quoted below. Bring plan 68 in line with it
 (`pm plan edit 68 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -12610,7 +12610,7 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 
 ## Out of scope (from the milestone)
 - Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-12T20:29:23Z', '2026-10-12T20:31:54Z', 470);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (487, 69, 'revise plan 69', 'plan', 'done', 1000, '2026-10-12, plan 69 body: first-start language screen (language.* keys per catalog, walks, playtest)', 'Plan 9, the plan above plan 69, changed; it is quoted below. Bring plan 69 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (487, 69, 'revise plan 69', 'revise', 'done', 1000, '2026-10-12, plan 69 body: first-start language screen (language.* keys per catalog, walks, playtest)', 'Plan 9, the plan above plan 69, changed; it is quoted below. Bring plan 69 in line with it
 (`pm plan edit 69 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -12716,7 +12716,7 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 
 ## Out of scope (from the milestone)
 - Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-12T20:29:23Z', '2026-10-12T20:32:46Z', 470);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (488, 70, 'revise plan 70', 'plan', 'done', 1000, '2026-10-12, no change: plan 9''s revision only touches part 6 (first-start language screen); part 9 and plan 70 (cost, budget, per-locale gaps) still fit', 'Plan 9, the plan above plan 70, changed; it is quoted below. Bring plan 70 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (488, 70, 'revise plan 70', 'revise', 'done', 1000, '2026-10-12, no change: plan 9''s revision only touches part 6 (first-start language screen); part 9 and plan 70 (cost, budget, per-locale gaps) still fit', 'Plan 9, the plan above plan 70, changed; it is quoted below. Bring plan 70 in line with it
 (`pm plan edit 70 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -14661,7 +14661,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-12T23:33:08Z', '2026-10-12T23:34:08Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (594, 72, 'create tasks for plan 72', 'split', 'done', 1000, '2026-10-12, no changes: plans 73-83 cover parts 1-11; revise tasks 595-605 already bring them in line with the linter revision; no decisions needed yet (linter dependency decision belongs to part 10)', 'Split plan 72 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T23:34:06Z', '2026-10-12T23:34:37Z', 593);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (595, 73, 'revise plan 73', 'plan', 'done', 1000, '2026-10-12, plan 73 body: lint-evidence tags, no-findings rows, Linter evaluation heading, tsc/bad-practice counts recorded', 'Plan 72, the plan above plan 73, changed; it is quoted below. Bring plan 73 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (595, 73, 'revise plan 73', 'revise', 'done', 1000, '2026-10-12, plan 73 body: lint-evidence tags, no-findings rows, Linter evaluation heading, tsc/bad-practice counts recorded', 'Plan 72, the plan above plan 73, changed; it is quoted below. Bring plan 73 in line with it
 (`pm plan edit 73 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -14701,7 +14701,7 @@ Masterplan of milestone 13 (Code quality): review every tracked code file in sco
 
 ## Done when
 - Plans for parts 1–11 exist (priority 0) and the milestone''s "Done when" holds after they are worked, incl. the linter: evaluated in `code-review.md`; if adopted, it runs before every commit touching TypeScript and reports no issues.', '2026-10-12T23:34:06Z', '2026-10-12T23:35:06Z', 593);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (596, 74, 'revise plan 74', 'plan', 'done', 1000, '2026-10-12, plan 74: report wording aligned with plan 72 (fixed (task N), no-findings rows)', 'Plan 72, the plan above plan 74, changed; it is quoted below. Bring plan 74 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (596, 74, 'revise plan 74', 'revise', 'done', 1000, '2026-10-12, plan 74: report wording aligned with plan 72 (fixed (task N), no-findings rows)', 'Plan 72, the plan above plan 74, changed; it is quoted below. Bring plan 74 in line with it
 (`pm plan edit 74 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -14741,7 +14741,7 @@ Masterplan of milestone 13 (Code quality): review every tracked code file in sco
 
 ## Done when
 - Plans for parts 1–11 exist (priority 0) and the milestone''s "Done when" holds after they are worked, incl. the linter: evaluated in `code-review.md`; if adopted, it runs before every commit touching TypeScript and reports no issues.', '2026-10-12T23:34:06Z', '2026-10-12T23:36:20Z', 593);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (597, 75, 'revise plan 75', 'plan', 'done', 1000, '2026-10-12, plan 75: linter evidence tags (lint: …) per engine finding, part 1 tsc --noUnused hits in handed rows, lint pass in pre-commit if adopted', 'Plan 72, the plan above plan 75, changed; it is quoted below. Bring plan 75 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (597, 75, 'revise plan 75', 'revise', 'done', 1000, '2026-10-12, plan 75: linter evidence tags (lint: …) per engine finding, part 1 tsc --noUnused hits in handed rows, lint pass in pre-commit if adopted', 'Plan 72, the plan above plan 75, changed; it is quoted below. Bring plan 75 in line with it
 (`pm plan edit 75 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -14781,7 +14781,7 @@ Masterplan of milestone 13 (Code quality): review every tracked code file in sco
 
 ## Done when
 - Plans for parts 1–11 exist (priority 0) and the milestone''s "Done when" holds after they are worked, incl. the linter: evaluated in `code-review.md`; if adopted, it runs before every commit touching TypeScript and reports no issues.', '2026-10-12T23:34:06Z', '2026-10-12T23:37:17Z', 593);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (598, 76, 'revise plan 76', 'plan', 'done', 1000, '2026-10-12, plan 76: linter evidence tags (lint: …), fixed (task N) status, lint pass in pre-commit and done-when if adopted', 'Plan 72, the plan above plan 76, changed; it is quoted below. Bring plan 76 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (598, 76, 'revise plan 76', 'revise', 'done', 1000, '2026-10-12, plan 76: linter evidence tags (lint: …), fixed (task N) status, lint pass in pre-commit and done-when if adopted', 'Plan 72, the plan above plan 76, changed; it is quoted below. Bring plan 76 in line with it
 (`pm plan edit 76 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -14821,7 +14821,7 @@ Masterplan of milestone 13 (Code quality): review every tracked code file in sco
 
 ## Done when
 - Plans for parts 1–11 exist (priority 0) and the milestone''s "Done when" holds after they are worked, incl. the linter: evaluated in `code-review.md`; if adopted, it runs before every commit touching TypeScript and reports no issues.', '2026-10-12T23:34:06Z', '2026-10-12T23:38:17Z', 593);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (599, 77, 'revise plan 77', 'plan', 'done', 1000, '2026-10-12, plan 77: linter evidence tags (lint: …), fixed (task N) status, lint pass in pre-commit and done-when if adopted', 'Plan 72, the plan above plan 77, changed; it is quoted below. Bring plan 77 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (599, 77, 'revise plan 77', 'revise', 'done', 1000, '2026-10-12, plan 77: linter evidence tags (lint: …), fixed (task N) status, lint pass in pre-commit and done-when if adopted', 'Plan 72, the plan above plan 77, changed; it is quoted below. Bring plan 77 in line with it
 (`pm plan edit 77 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -14861,7 +14861,7 @@ Masterplan of milestone 13 (Code quality): review every tracked code file in sco
 
 ## Done when
 - Plans for parts 1–11 exist (priority 0) and the milestone''s "Done when" holds after they are worked, incl. the linter: evaluated in `code-review.md`; if adopted, it runs before every commit touching TypeScript and reports no issues.', '2026-10-12T23:34:06Z', '2026-10-12T23:39:13Z', 593);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (600, 78, 'revise plan 78', 'plan', 'done', 1000, '2026-10-12, plan 78: linter evidence tags, fixed (task N) status, lint pass in checks per plan 72', 'Plan 72, the plan above plan 78, changed; it is quoted below. Bring plan 78 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (600, 78, 'revise plan 78', 'revise', 'done', 1000, '2026-10-12, plan 78: linter evidence tags, fixed (task N) status, lint pass in checks per plan 72', 'Plan 72, the plan above plan 78, changed; it is quoted below. Bring plan 78 in line with it
 (`pm plan edit 78 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -14901,7 +14901,7 @@ Masterplan of milestone 13 (Code quality): review every tracked code file in sco
 
 ## Done when
 - Plans for parts 1–11 exist (priority 0) and the milestone''s "Done when" holds after they are worked, incl. the linter: evaluated in `code-review.md`; if adopted, it runs before every commit touching TypeScript and reports no issues.', '2026-10-12T23:34:06Z', '2026-10-12T23:40:21Z', 593);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (601, 79, 'revise plan 79', 'plan', 'done', 1000, '2026-10-12, plan 79 body: report status fixed (task N), temp-copy rule from plan 72', 'Plan 72, the plan above plan 79, changed; it is quoted below. Bring plan 79 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (601, 79, 'revise plan 79', 'revise', 'done', 1000, '2026-10-12, plan 79 body: report status fixed (task N), temp-copy rule from plan 72', 'Plan 72, the plan above plan 79, changed; it is quoted below. Bring plan 79 in line with it
 (`pm plan edit 79 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -14941,7 +14941,7 @@ Masterplan of milestone 13 (Code quality): review every tracked code file in sco
 
 ## Done when
 - Plans for parts 1–11 exist (priority 0) and the milestone''s "Done when" holds after they are worked, incl. the linter: evaluated in `code-review.md`; if adopted, it runs before every commit touching TypeScript and reports no issues.', '2026-10-12T23:34:06Z', '2026-10-12T23:41:07Z', 593);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (602, 80, 'revise plan 80', 'plan', 'done', 1000, '2026-10-12, plan 80 body: report status fixed (task N), temp-copy rule, lint evidence tags for supply.ts/sim and lint pass from plan 72', 'Plan 72, the plan above plan 80, changed; it is quoted below. Bring plan 80 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (602, 80, 'revise plan 80', 'revise', 'done', 1000, '2026-10-12, plan 80 body: report status fixed (task N), temp-copy rule, lint evidence tags for supply.ts/sim and lint pass from plan 72', 'Plan 72, the plan above plan 80, changed; it is quoted below. Bring plan 80 in line with it
 (`pm plan edit 80 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -14981,7 +14981,7 @@ Masterplan of milestone 13 (Code quality): review every tracked code file in sco
 
 ## Done when
 - Plans for parts 1–11 exist (priority 0) and the milestone''s "Done when" holds after they are worked, incl. the linter: evaluated in `code-review.md`; if adopted, it runs before every commit touching TypeScript and reports no issues.', '2026-10-12T23:34:06Z', '2026-10-12T23:42:06Z', 593);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (603, 81, 'revise plan 81', 'plan', 'done', 1000, '2026-10-12, plan 81 body: fixed (task N) status, lint evidence tags for .ts/.svelte findings, lint pass in pre-commit checks once part 10 adopts it (plan 72)', 'Plan 72, the plan above plan 81, changed; it is quoted below. Bring plan 81 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (603, 81, 'revise plan 81', 'revise', 'done', 1000, '2026-10-12, plan 81 body: fixed (task N) status, lint evidence tags for .ts/.svelte findings, lint pass in pre-commit checks once part 10 adopts it (plan 72)', 'Plan 72, the plan above plan 81, changed; it is quoted below. Bring plan 81 in line with it
 (`pm plan edit 81 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -15021,7 +15021,7 @@ Masterplan of milestone 13 (Code quality): review every tracked code file in sco
 
 ## Done when
 - Plans for parts 1–11 exist (priority 0) and the milestone''s "Done when" holds after they are worked, incl. the linter: evaluated in `code-review.md`; if adopted, it runs before every commit touching TypeScript and reports no issues.', '2026-10-12T23:34:06Z', '2026-10-12T23:42:54Z', 593);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (604, 82, 'revise plan 82', 'plan', 'done', 1000, '2026-10-12, plan 82: added task 8 linter evaluation/adoption, lint pass in rules and done-when', 'Plan 72, the plan above plan 82, changed; it is quoted below. Bring plan 82 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (604, 82, 'revise plan 82', 'revise', 'done', 1000, '2026-10-12, plan 82: added task 8 linter evaluation/adoption, lint pass in rules and done-when', 'Plan 72, the plan above plan 82, changed; it is quoted below. Bring plan 82 in line with it
 (`pm plan edit 82 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -15061,7 +15061,7 @@ Masterplan of milestone 13 (Code quality): review every tracked code file in sco
 
 ## Done when
 - Plans for parts 1–11 exist (priority 0) and the milestone''s "Done when" holds after they are worked, incl. the linter: evaluated in `code-review.md`; if adopted, it runs before every commit touching TypeScript and reports no issues.', '2026-10-12T23:34:06Z', '2026-10-12T23:43:51Z', 593);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (605, 83, 'revise plan 83', 'plan', 'done', 1000, '2026-10-12, plan 83: linter outcome of part 10 (task 616) in completeness check, process decisions, summary, final checks, done when', 'Plan 72, the plan above plan 83, changed; it is quoted below. Bring plan 83 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (605, 83, 'revise plan 83', 'revise', 'done', 1000, '2026-10-12, plan 83: linter outcome of part 10 (task 616) in completeness check, process decisions, summary, final checks, done when', 'Plan 72, the plan above plan 83, changed; it is quoted below. Bring plan 83 in line with it
 (`pm plan edit 83 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -16591,7 +16591,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-13T15:11:31Z', '2026-10-13T15:21:18Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (755, 8, 'create tasks for plan 8', 'split', 'done', 1000, '2026-10-13, tasks.sql: task 758 writes the plan for part 9 (retire browser game, priority 450); part 8 already covered by task 756: revise plan 48; parts 1-7 done. No new decision needed (the family-save decision belongs to part 9''s plan).', 'Split plan 8 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:13:02Z', '2026-10-13T15:13:43Z', 753);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (756, 48, 'revise plan 48', 'plan', 'done', 1000, '2026-10-13, plan 48 revised for decision 111 and plan 99: Steam-target platforms, no clean-machine/no-Nix/offline-install rows (decision 39), family check on trivia-desktop with the imported save, waits for plan 99; task 760 queued to redo its tasks', 'Plan 8, the plan above plan 48, changed; it is quoted below. Bring plan 48 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (756, 48, 'revise plan 48', 'revise', 'done', 1000, '2026-10-13, plan 48 revised for decision 111 and plan 99: Steam-target platforms, no clean-machine/no-Nix/offline-install rows (decision 39), family check on trivia-desktop with the imported save, waits for plan 99; task 760 queued to redo its tasks', 'Plan 8, the plan above plan 48, changed; it is quoted below. Bring plan 48 in line with it
 (`pm plan edit 48 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -16653,7 +16653,7 @@ Milestone 8 is S3 of the Steam track (D-34, `plans/11-steam.md`): the first buil
 ## Out of scope (from the milestone)
 - Steamworks features (overlay, Cloud setup, achievements, on-screen keyboard, SW-7..SW-14), store page (S5); translations (S4); media resizing (SW-9, S5); couch co-op input (IN-6, IN-7, later).
 - Porting authoring''s Python (qgen, `trivia-authoring`) to Node/TS: later, own milestone.', '2026-10-13T15:13:02Z', '2026-10-13T15:17:21Z', 753);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (757, 56, 'revise plan 56', 'plan', 'done', 1000, '2026-10-13, plan 56 body: status, task 4 records start test as skipped (decision 39), done-when per decision 111', 'Plan 8, the plan above plan 56, changed; it is quoted below. Bring plan 56 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (757, 56, 'revise plan 56', 'revise', 'done', 1000, '2026-10-13, plan 56 body: status, task 4 records start test as skipped (decision 39), done-when per decision 111', 'Plan 8, the plan above plan 56, changed; it is quoted below. Bring plan 56 in line with it
 (`pm plan edit 56 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -16792,7 +16792,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Done when: no open task body or pending decision tells a worker or the gamemaster to use the removed commands/endpoints; list what changed in the done note.', '2026-10-13T15:19:48Z', '2026-10-14T04:19:20Z', 759);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (768, 10, 'create tasks for plan 10', 'split', 'done', 1000, '2026-10-13, tasks.sql: open plan tasks 253, 254, 259, 260, 263 aligned with revised plan 10 (decision 111 Steam only, valid-user gate, free DLC depots per decision 66/112); plans 85-90 get revise tasks 769-774', 'Split plan 10 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:21:16Z', '2026-10-13T15:22:16Z', 754);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (769, 85, 'revise plan 85', 'plan', 'done', 1000, '2026-10-13, plan 85 body: valid-user check steam.user/validUser + dev switch TRIVIA_DEV_STEAM_USER (new task 9), overlay per decision 70, Steam-only done-whens and close-out/packaging rows', 'Plan 10, the plan above plan 85, changed; it is quoted below. Bring plan 85 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (769, 85, 'revise plan 85', 'revise', 'done', 1000, '2026-10-13, plan 85 body: valid-user check steam.user/validUser + dev switch TRIVIA_DEV_STEAM_USER (new task 9), overlay per decision 70, Steam-only done-whens and close-out/packaging rows', 'Plan 10, the plan above plan 85, changed; it is quoted below. Bring plan 85 in line with it
 (`pm plan edit 85 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -16913,7 +16913,7 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 
 ## Out of scope (from the milestone)
 - Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T15:21:16Z', '2026-10-13T15:23:25Z', 754);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (770, 86, 'revise plan 86', 'plan', 'done', 1000, '2026-10-13, plan 86 body: unlock gated on validUser (plan 85), retroactive unlock kept (import-save, late publish), local/ and without-Steam rows dropped per decision 111, decisions 73/74 cited', 'Plan 10, the plan above plan 86, changed; it is quoted below. Bring plan 86 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (770, 86, 'revise plan 86', 'revise', 'done', 1000, '2026-10-13, plan 86 body: unlock gated on validUser (plan 85), retroactive unlock kept (import-save, late publish), local/ and without-Steam rows dropped per decision 111, decisions 73/74 cited', 'Plan 10, the plan above plan 86, changed; it is quoted below. Bring plan 86 in line with it
 (`pm plan edit 86 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -17034,7 +17034,7 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 
 ## Out of scope (from the milestone)
 - Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T15:21:16Z', '2026-10-13T15:26:07Z', 754);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (771, 87, 'revise plan 87', 'plan', 'done', 1000, '2026-10-13, plan 87 body (decision 111: local/, migration and offer dialog removed; memory-only store, notice, flags hidden, dev/ folder)', 'Plan 10, the plan above plan 87, changed; it is quoted below. Bring plan 87 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (771, 87, 'revise plan 87', 'revise', 'done', 1000, '2026-10-13, plan 87 body (decision 111: local/, migration and offer dialog removed; memory-only store, notice, flags hidden, dev/ folder)', 'Plan 10, the plan above plan 87, changed; it is quoted below. Bring plan 87 in line with it
 (`pm plan edit 87 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -17155,7 +17155,7 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 
 ## Out of scope (from the milestone)
 - Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T15:21:16Z', '2026-10-13T15:28:12Z', 754);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (772, 88, 'revise plan 88', 'plan', 'done', 1000, '2026-10-13, plan 88 body: free DLC store texts and capsules, Steam features (Cloud, achievements) in the feature list, Steam-only wording, dev switch for screenshot re-runs', 'Plan 10, the plan above plan 88, changed; it is quoted below. Bring plan 88 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (772, 88, 'revise plan 88', 'revise', 'done', 1000, '2026-10-13, plan 88 body: free DLC store texts and capsules, Steam features (Cloud, achievements) in the feature list, Steam-only wording, dev switch for screenshot re-runs', 'Plan 10, the plan above plan 88, changed; it is quoted below. Bring plan 88 in line with it
 (`pm plan edit 88 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -17276,7 +17276,7 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 
 ## Out of scope (from the milestone)
 - Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T15:21:16Z', '2026-10-13T15:30:51Z', 754);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (773, 89, 'revise plan 89', 'plan', 'done', 1000, '2026-10-13, plan 89 body (decision 111: no nix step, smoke under TRIVIA_DEV_STEAM_USER, beta-only start test; DLC depots per decision 66/112; new task 10)', 'Plan 10, the plan above plan 89, changed; it is quoted below. Bring plan 89 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (773, 89, 'revise plan 89', 'revise', 'done', 1000, '2026-10-13, plan 89 body (decision 111: no nix step, smoke under TRIVIA_DEV_STEAM_USER, beta-only start test; DLC depots per decision 66/112; new task 10)', 'Plan 10, the plan above plan 89, changed; it is quoted below. Bring plan 89 in line with it
 (`pm plan edit 89 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -17397,7 +17397,7 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 
 ## Out of scope (from the milestone)
 - Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T15:21:16Z', '2026-10-13T15:33:51Z', 754);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (774, 90, 'revise plan 90', 'plan', 'done', 1000, '2026-10-13, plan 90 body: DLC install/uninstall row, valid-user row, review after store page (decision 111, 66, 112)', 'Plan 10, the plan above plan 90, changed; it is quoted below. Bring plan 90 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (774, 90, 'revise plan 90', 'revise', 'done', 1000, '2026-10-13, plan 90 body: DLC install/uninstall row, valid-user row, review after store page (decision 111, 66, 112)', 'Plan 10, the plan above plan 90, changed; it is quoted below. Bring plan 90 in line with it
 (`pm plan edit 90 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -17612,7 +17612,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-13T15:36:57Z', '2026-10-13T15:44:25Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (790, 9, 'create tasks for plan 9', 'split', 'done', 1000, '2026-10-13, tasks.sql: task 796 (plan task for part 13), task 251 and 459 bodies updated for part 13', 'Split plan 9 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:38:25Z', '2026-10-13T15:39:10Z', 788);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (791, 57, 'revise plan 57', 'plan', 'done', 1000, '2026-10-13, no change: masterplan part 2 unchanged (changes were parts 6, 7, 12, 13); plan 57 still fits, decisions 15, 16 already applied', 'Plan 9, the plan above plan 57, changed; it is quoted below. Bring plan 57 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (791, 57, 'revise plan 57', 'revise', 'done', 1000, '2026-10-13, no change: masterplan part 2 unchanged (changes were parts 6, 7, 12, 13); plan 57 still fits, decisions 15, 16 already applied', 'Plan 9, the plan above plan 57, changed; it is quoted below. Bring plan 57 in line with it
 (`pm plan edit 57 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -17730,7 +17730,7 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 
 ## Out of scope (from the milestone)
 - Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-13T15:38:25Z', '2026-10-13T15:41:32Z', 788);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (792, 69, 'revise plan 69', 'plan', 'done', 1000, '2026-10-13, plan 69 body: plan 100 in Builds on; task 7 follows the locale style guides', 'Plan 9, the plan above plan 69, changed; it is quoted below. Bring plan 69 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (792, 69, 'revise plan 69', 'revise', 'done', 1000, '2026-10-13, plan 69 body: plan 100 in Builds on; task 7 follows the locale style guides', 'Plan 9, the plan above plan 69, changed; it is quoted below. Bring plan 69 in line with it
 (`pm plan edit 69 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -17848,7 +17848,7 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 
 ## Out of scope (from the milestone)
 - Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-13T15:38:25Z', '2026-10-13T15:41:54Z', 788);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (793, 70, 'revise plan 70', 'plan', 'done', 1000, '2026-10-13, no change: plan 9''s edit (first-start language screen, part 13 UI wording) doesn''t touch part 9; plan 70 still fits', 'Plan 9, the plan above plan 70, changed; it is quoted below. Bring plan 70 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (793, 70, 'revise plan 70', 'revise', 'done', 1000, '2026-10-13, no change: plan 9''s edit (first-start language screen, part 13 UI wording) doesn''t touch part 9; plan 70 still fits', 'Plan 9, the plan above plan 70, changed; it is quoted below. Bring plan 70 in line with it
 (`pm plan edit 70 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -17966,7 +17966,7 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 
 ## Out of scope (from the milestone)
 - Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-13T15:38:25Z', '2026-10-13T15:42:31Z', 788);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (794, 84, 'revise plan 84', 'plan', 'done', 1000, '2026-10-13, no change: plan 9''s revision touches parts 6 and 13 (language screen, UI wording); part 11 unchanged, plan 84 still fits', 'Plan 9, the plan above plan 84, changed; it is quoted below. Bring plan 84 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (794, 84, 'revise plan 84', 'revise', 'done', 1000, '2026-10-13, no change: plan 9''s revision touches parts 6 and 13 (language screen, UI wording); part 11 unchanged, plan 84 still fits', 'Plan 9, the plan above plan 84, changed; it is quoted below. Bring plan 84 in line with it
 (`pm plan edit 84 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -18084,7 +18084,7 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 
 ## Out of scope (from the milestone)
 - Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-13T15:38:25Z', '2026-10-13T15:42:46Z', 788);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (795, 98, 'revise plan 98', 'plan', 'done', 1000, '2026-10-13, no change: plan 9''s part 10 (regional packs) unchanged; masterplan change is parts 6 and 13, plan 98 still fits', 'Plan 9, the plan above plan 98, changed; it is quoted below. Bring plan 98 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (795, 98, 'revise plan 98', 'revise', 'done', 1000, '2026-10-13, no change: plan 9''s part 10 (regional packs) unchanged; masterplan change is parts 6 and 13, plan 98 still fits', 'Plan 9, the plan above plan 98, changed; it is quoted below. Bring plan 98 in line with it
 (`pm plan edit 98 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -18281,7 +18281,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Done when: the four decisions and the pending fix task exist.', '2026-10-13T15:43:48Z', NULL, 797);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (805, 10, 'create tasks for plan 10', 'split', 'done', 1000, '2026-10-13, no changes: plan 10''s only change (dev-mode «Ir a pregunta…», part 3) goes to plan 85 via task 806; open tasks 253, 254, 259, 260, 263 still match', 'Split plan 10 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:44:24Z', '2026-10-13T15:44:46Z', 789);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (806, 85, 'revise plan 85', 'plan', 'done', 1000, '2026-10-13, plan 85 body: dev mode «Ir a pregunta…» section, task 10, done-when row', 'Plan 10, the plan above plan 85, changed; it is quoted below. Bring plan 85 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (806, 85, 'revise plan 85', 'revise', 'done', 1000, '2026-10-13, plan 85 body: dev mode «Ir a pregunta…» section, task 10, done-when row', 'Plan 10, the plan above plan 85, changed; it is quoted below. Bring plan 85 in line with it
 (`pm plan edit 85 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -18404,7 +18404,7 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 
 ## Out of scope (from the milestone)
 - Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T15:44:24Z', '2026-10-13T15:45:28Z', 789);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (807, 86, 'revise plan 86', 'plan', 'done', 1000, '2026-10-13, plan 86 body: games with admin_replace (dev «Ir a pregunta…») don''t qualify', 'Plan 10, the plan above plan 86, changed; it is quoted below. Bring plan 86 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (807, 86, 'revise plan 86', 'revise', 'done', 1000, '2026-10-13, plan 86 body: games with admin_replace (dev «Ir a pregunta…») don''t qualify', 'Plan 10, the plan above plan 86, changed; it is quoted below. Bring plan 86 in line with it
 (`pm plan edit 86 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -18527,7 +18527,7 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 
 ## Out of scope (from the milestone)
 - Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T15:44:24Z', '2026-10-13T15:47:04Z', 789);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (808, 87, 'revise plan 87', 'plan', 'done', 1000, '2026-10-13, no change: plan 87 already matches plan 10 part 4 (per-user save, memory-only + notice, flags hidden, Family Sharing, test rows incl. Steam not running via task 781); «Ir a pregunta…» is part 3 / plan 85', 'Plan 10, the plan above plan 87, changed; it is quoted below. Bring plan 87 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (808, 87, 'revise plan 87', 'revise', 'done', 1000, '2026-10-13, no change: plan 87 already matches plan 10 part 4 (per-user save, memory-only + notice, flags hidden, Family Sharing, test rows incl. Steam not running via task 781); «Ir a pregunta…» is part 3 / plan 85', 'Plan 10, the plan above plan 87, changed; it is quoted below. Bring plan 87 in line with it
 (`pm plan edit 87 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -18650,7 +18650,7 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 
 ## Out of scope (from the milestone)
 - Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T15:44:24Z', '2026-10-13T15:47:52Z', 789);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (809, 88, 'revise plan 88', 'plan', 'done', 1000, '2026-10-13, no change: plan 10''s edit (dev-mode «Ir a pregunta…» row in the gamemaster menu) doesn''t touch plan 88; the screenshot walk seeds saves and never opens the gamemaster menu, so the dev row can''t show under TRIVIA_DEV_STEAM_USER', 'Plan 10, the plan above plan 88, changed; it is quoted below. Bring plan 88 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (809, 88, 'revise plan 88', 'revise', 'done', 1000, '2026-10-13, no change: plan 10''s edit (dev-mode «Ir a pregunta…» row in the gamemaster menu) doesn''t touch plan 88; the screenshot walk seeds saves and never opens the gamemaster menu, so the dev row can''t show under TRIVIA_DEV_STEAM_USER', 'Plan 10, the plan above plan 88, changed; it is quoted below. Bring plan 88 in line with it
 (`pm plan edit 88 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -18773,7 +18773,7 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 
 ## Out of scope (from the milestone)
 - Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T15:44:24Z', '2026-10-13T15:48:28Z', 789);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (810, 89, 'revise plan 89', 'plan', 'done', 1000, '2026-10-13, no change: plan 10''s edit (dev-mode «Ir a pregunta…») belongs to part 3 / plan 85; part 7 unchanged and plan 89 already matches it', 'Plan 10, the plan above plan 89, changed; it is quoted below. Bring plan 89 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (810, 89, 'revise plan 89', 'revise', 'done', 1000, '2026-10-13, no change: plan 10''s edit (dev-mode «Ir a pregunta…») belongs to part 3 / plan 85; part 7 unchanged and plan 89 already matches it', 'Plan 10, the plan above plan 89, changed; it is quoted below. Bring plan 89 in line with it
 (`pm plan edit 89 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -18896,7 +18896,7 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 
 ## Out of scope (from the milestone)
 - Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T15:44:24Z', '2026-10-13T15:48:46Z', 789);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (811, 90, 'revise plan 90', 'plan', 'done', 1000, '2026-10-13, no change: plan 90 already fits plan 10 (Steam only, valid user, DLC rows, plan 48 rows); dev-mode «Ir a pregunta…» and plan 99''s retirement don''t touch the Steam-installed Deck test', 'Plan 10, the plan above plan 90, changed; it is quoted below. Bring plan 90 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (811, 90, 'revise plan 90', 'revise', 'done', 1000, '2026-10-13, no change: plan 90 already fits plan 10 (Steam only, valid user, DLC rows, plan 48 rows); dev-mode «Ir a pregunta…» and plan 99''s retirement don''t touch the Steam-installed Deck test', 'Plan 10, the plan above plan 90, changed; it is quoted below. Bring plan 90 in line with it
 (`pm plan edit 90 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -19041,7 +19041,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-13T15:54:53Z', '2026-10-13T15:56:51Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (816, 9, 'create tasks for plan 9', 'split', 'done', 1000, '2026-10-13, task 251 body: colombia pilot done-when (decision 110); parts 10/11 changes go to the queued plan revisions (tasks 817-822), no new decisions', 'Split plan 9 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:56:46Z', '2026-10-13T15:57:16Z', 815);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (817, 57, 'revise plan 57', 'plan', 'done', 1000, '2026-10-13, no change: plan 9''s revision (part 13 UI wording, decision 110 regional bundles) leaves part 2 unchanged; plan 57 and its open tasks 339, 340 still fit', 'Plan 9, the plan above plan 57, changed; it is quoted below. Bring plan 57 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (817, 57, 'revise plan 57', 'revise', 'done', 1000, '2026-10-13, no change: plan 9''s revision (part 13 UI wording, decision 110 regional bundles) leaves part 2 unchanged; plan 57 and its open tasks 339, 340 still fit', 'Plan 9, the plan above plan 57, changed; it is quoted below. Bring plan 57 in line with it
 (`pm plan edit 57 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -19169,7 +19169,7 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 
 ## Out of scope (from the milestone)
 - Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-13T15:56:46Z', '2026-10-13T15:57:30Z', 815);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (818, 69, 'revise plan 69', 'plan', 'done', 1000, '2026-10-13, no change: plan 69 and task 459 already follow masterplan part 7/13 (plan 100 first, style guides read before playtest fixes)', 'Plan 9, the plan above plan 69, changed; it is quoted below. Bring plan 69 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (818, 69, 'revise plan 69', 'revise', 'done', 1000, '2026-10-13, no change: plan 69 and task 459 already follow masterplan part 7/13 (plan 100 first, style guides read before playtest fixes)', 'Plan 9, the plan above plan 69, changed; it is quoted below. Bring plan 69 in line with it
 (`pm plan edit 69 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -19297,7 +19297,7 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 
 ## Out of scope (from the milestone)
 - Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-13T15:56:46Z', '2026-10-13T15:58:48Z', 815);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (819, 70, 'revise plan 70', 'plan', 'done', 1000, '2026-10-13, tasks.sql: plan 70 cites decision 110; colombia row in the release budget decision; per-bundle cost/targets/review time left to plan 98', 'Plan 9, the plan above plan 70, changed; it is quoted below. Bring plan 70 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (819, 70, 'revise plan 70', 'revise', 'done', 1000, '2026-10-13, tasks.sql: plan 70 cites decision 110; colombia row in the release budget decision; per-bundle cost/targets/review time left to plan 98', 'Plan 9, the plan above plan 70, changed; it is quoted below. Bring plan 70 in line with it
 (`pm plan edit 70 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -19425,7 +19425,7 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 
 ## Out of scope (from the milestone)
 - Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-13T15:56:46Z', '2026-10-13T15:59:27Z', 815);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (820, 84, 'revise plan 84', 'plan', 'done', 1000, '2026-10-13, tasks.sql: plan 84 chain 5 → regional pilot colombia per decision 110 (es pairs to 2000, en pairs, effort record + ''More regional bundles at launch?''); builds on plan 98''s taxonomy/target/--translate --bundle; done-when updated', 'Plan 9, the plan above plan 84, changed; it is quoted below. Bring plan 84 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (820, 84, 'revise plan 84', 'revise', 'done', 1000, '2026-10-13, tasks.sql: plan 84 chain 5 → regional pilot colombia per decision 110 (es pairs to 2000, en pairs, effort record + ''More regional bundles at launch?''); builds on plan 98''s taxonomy/target/--translate --bundle; done-when updated', 'Plan 9, the plan above plan 84, changed; it is quoted below. Bring plan 84 in line with it
 (`pm plan edit 84 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -19553,7 +19553,7 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 
 ## Out of scope (from the milestone)
 - Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-13T15:56:46Z', '2026-10-13T16:00:46Z', 815);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (821, 98, 'revise plan 98', 'plan', 'done', 1000, '2026-10-13, tasks.sql: plan 98 rewritten per plan 9 part 10 / decision 110 (bundle-scoped taxonomy, colombia subcategories, 2000 target, --translate --bundle, effort report)', 'Plan 9, the plan above plan 98, changed; it is quoted below. Bring plan 98 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (821, 98, 'revise plan 98', 'revise', 'done', 1000, '2026-10-13, tasks.sql: plan 98 rewritten per plan 9 part 10 / decision 110 (bundle-scoped taxonomy, colombia subcategories, 2000 target, --translate --bundle, effort report)', 'Plan 9, the plan above plan 98, changed; it is quoted below. Bring plan 98 in line with it
 (`pm plan edit 98 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -19681,7 +19681,7 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 
 ## Out of scope (from the milestone)
 - Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-13T15:56:46Z', '2026-10-13T16:03:07Z', 815);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (822, 100, 'revise plan 100', 'plan', 'done', 1000, '2026-10-13, no change: plan 100 already fits plan 9 part 13 (guides, AGENTS.md rule, prompt decision, TV-check fixes, gallery per decision 115, flags → fix task, review decisions, priority 380 before task 459)', 'Plan 9, the plan above plan 100, changed; it is quoted below. Bring plan 100 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (822, 100, 'revise plan 100', 'revise', 'done', 1000, '2026-10-13, no change: plan 100 already fits plan 9 part 13 (guides, AGENTS.md rule, prompt decision, TV-check fixes, gallery per decision 115, flags → fix task, review decisions, priority 380 before task 459)', 'Plan 9, the plan above plan 100, changed; it is quoted below. Bring plan 100 in line with it
 (`pm plan edit 100 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -19881,7 +19881,7 @@ divided into parts. State in the masterplan that its own tasks are not implement
 plan for one part.', '2026-10-13T16:55:00Z', '2026-10-13T17:46:08Z', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (835, 10, 'create tasks for plan 10', 'split', 'done', 1000, '2026-10-13, tasks.sql: plan 10 tasks in line after task 832 (part 8 only): task 253 PUB-10 → plan 88 AI disclosure, decision 78 name; part 8 via task 839 (revise plan 88); decisions 77/79/80/87 answered, none new', 'Split plan 10 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T16:56:05Z', '2026-10-13T16:56:47Z', 832);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (836, 85, 'revise plan 85', 'plan', 'done', 1000, '2026-10-13, no change: plan 85 already matches plan 10 part 3 (masterplan revision touched part 8 only)', 'Plan 10, the plan above plan 85, changed; it is quoted below. Bring plan 85 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (836, 85, 'revise plan 85', 'revise', 'done', 1000, '2026-10-13, no change: plan 85 already matches plan 10 part 3 (masterplan revision touched part 8 only)', 'Plan 10, the plan above plan 85, changed; it is quoted below. Bring plan 85 in line with it
 (`pm plan edit 85 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -20009,7 +20009,7 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 
 ## Out of scope (from the milestone)
 - Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T16:56:05Z', '2026-10-13T16:57:06Z', 832);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (837, 86, 'revise plan 86', 'plan', 'done', 1000, '2026-10-13, no change: masterplan revision (task 832) only changed part 8; plan 86 still fits part 5', 'Plan 10, the plan above plan 86, changed; it is quoted below. Bring plan 86 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (837, 86, 'revise plan 86', 'revise', 'done', 1000, '2026-10-13, no change: masterplan revision (task 832) only changed part 8; plan 86 still fits part 5', 'Plan 10, the plan above plan 86, changed; it is quoted below. Bring plan 86 in line with it
 (`pm plan edit 86 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -20137,7 +20137,7 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 
 ## Out of scope (from the milestone)
 - Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T16:56:05Z', '2026-10-13T16:57:25Z', 832);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (838, 87, 'revise plan 87', 'plan', 'done', 1000, '2026-10-13, no change: plan 10 revision (task 832) touched only part 8; part 4 unchanged, plan 87 still fits', 'Plan 10, the plan above plan 87, changed; it is quoted below. Bring plan 87 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (838, 87, 'revise plan 87', 'revise', 'done', 1000, '2026-10-13, no change: plan 10 revision (task 832) touched only part 8; part 4 unchanged, plan 87 still fits', 'Plan 10, the plan above plan 87, changed; it is quoted below. Bring plan 87 in line with it
 (`pm plan edit 87 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -20265,7 +20265,7 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 
 ## Out of scope (from the milestone)
 - Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T16:56:05Z', '2026-10-13T16:57:37Z', 832);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (839, 88, 'revise plan 88', 'plan', 'done', 1000, '2026-10-13, plan 88 body: masterplan part 8 (7 screenshots per decision 79, trailer in scope replacing B-21, render late per 79/80, capsules per 77 + icon per 87, decision 78/90/110 inputs, AI disclosure incl. code); task 842 queued', 'Plan 10, the plan above plan 88, changed; it is quoted below. Bring plan 88 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (839, 88, 'revise plan 88', 'revise', 'done', 1000, '2026-10-13, plan 88 body: masterplan part 8 (7 screenshots per decision 79, trailer in scope replacing B-21, render late per 79/80, capsules per 77 + icon per 87, decision 78/90/110 inputs, AI disclosure incl. code); task 842 queued', 'Plan 10, the plan above plan 88, changed; it is quoted below. Bring plan 88 in line with it
 (`pm plan edit 88 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -20393,7 +20393,7 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 
 ## Out of scope (from the milestone)
 - Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T16:56:05Z', '2026-10-13T16:58:42Z', 832);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (840, 89, 'revise plan 89', 'plan', 'done', 1000, '2026-10-13, tasks.sql: plan 89 task 8 follows decision 87 (icon from task 669''s script) and decision 88 (resedit, no wine, unsigned); rest still fits plan 10', 'Plan 10, the plan above plan 89, changed; it is quoted below. Bring plan 89 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (840, 89, 'revise plan 89', 'revise', 'done', 1000, '2026-10-13, tasks.sql: plan 89 task 8 follows decision 87 (icon from task 669''s script) and decision 88 (resedit, no wine, unsigned); rest still fits plan 10', 'Plan 10, the plan above plan 89, changed; it is quoted below. Bring plan 89 in line with it
 (`pm plan edit 89 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -20521,7 +20521,7 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 
 ## Out of scope (from the milestone)
 - Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T16:56:05Z', '2026-10-13T17:01:22Z', 832);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (841, 90, 'revise plan 90', 'plan', 'done', 1000, '2026-10-13, no changes: plan 10''s revision (task 832) only touched part 8 (store media, AI disclosure, capsules); part 10 unchanged, plan 90 still fits; its open task 685 already cites decision 113 for task 652''s check', 'Plan 10, the plan above plan 90, changed; it is quoted below. Bring plan 90 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (841, 90, 'revise plan 90', 'revise', 'done', 1000, '2026-10-13, no changes: plan 10''s revision (task 832) only touched part 8 (store media, AI disclosure, capsules); part 10 unchanged, plan 90 still fits; its open task 685 already cites decision 113 for task 652''s check', 'Plan 10, the plan above plan 90, changed; it is quoted below. Bring plan 90 in line with it
 (`pm plan edit 90 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -20693,7 +20693,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:01:20Z', '2026-10-13T17:01:46Z', 840);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (847, 11, 'create tasks for plan 11', 'split', 'done', 1000, '2026-10-13, tasks.sql: tasks 854 (plan: report server, part 8), 855 (plan: release checklist rows, part 3 update; plan 92 done); plans 93–97 already have revise tasks 848–852; plans 91, 92 done', 'Split plan 11 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:03:31Z', '2026-10-13T17:04:34Z', 831);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (848, 93, 'revise plan 93', 'plan', 'done', 1000, '2026-10-13, plan 93 body and subject revised to decision 93''s own endpoint (pm only, no files)', 'Plan 11, the plan above plan 93, changed; it is quoted below. Bring plan 93 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (848, 93, 'revise plan 93', 'revise', 'done', 1000, '2026-10-13, plan 93 body and subject revised to decision 93''s own endpoint (pm only, no files)', 'Plan 11, the plan above plan 93, changed; it is quoted below. Bring plan 93 in line with it
 (`pm plan edit 93 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -20796,7 +20796,7 @@ Milestone 11 is S6 of the Steam track (D-34, `plans/11-steam.md`, ST-3..ST-5): t
 
 ## Out of scope (from the milestone)
 - Competitive mode, couch co-op, more regions and languages (later); Remote Play Together (SW-13), macOS (SW-14); marketing beyond Steam''s own wishlist and follow features; telemetry and any network request other than the clicked report.', '2026-10-13T17:03:31Z', '2026-10-13T17:13:21Z', 831);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (849, 94, 'revise plan 94', 'plan', 'done', 1000, '2026-10-13, no file changes: plan 94 still fits masterplan 11 part 1 (checklist, Valve''s rules, TBA date, Steam-only wishlists, decision 94 pending for task 704); decision 90''s provisional values reach the page via plan 88''s store page entry', 'Plan 11, the plan above plan 94, changed; it is quoted below. Bring plan 94 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (849, 94, 'revise plan 94', 'revise', 'done', 1000, '2026-10-13, no file changes: plan 94 still fits masterplan 11 part 1 (checklist, Valve''s rules, TBA date, Steam-only wishlists, decision 94 pending for task 704); decision 90''s provisional values reach the page via plan 88''s store page entry', 'Plan 11, the plan above plan 94, changed; it is quoted below. Bring plan 94 in line with it
 (`pm plan edit 94 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -20899,7 +20899,7 @@ Milestone 11 is S6 of the Steam track (D-34, `plans/11-steam.md`, ST-3..ST-5): t
 
 ## Out of scope (from the milestone)
 - Competitive mode, couch co-op, more regions and languages (later); Remote Play Together (SW-13), macOS (SW-14); marketing beyond Steam''s own wishlist and follow features; telemetry and any network request other than the clicked report.', '2026-10-13T17:03:31Z', '2026-10-13T17:15:00Z', 831);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (850, 95, 'revise plan 95', 'plan', 'done', 1000, '2026-10-13, tasks.sql (plan 95 revised: report server/plan 93/104 inputs, store facts run sheet per decision 90/110, milestone 15 gate, Steam-only rules; new task 6 for the Launch section update)', 'Plan 11, the plan above plan 95, changed; it is quoted below. Bring plan 95 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (850, 95, 'revise plan 95', 'revise', 'done', 1000, '2026-10-13, tasks.sql (plan 95 revised: report server/plan 93/104 inputs, store facts run sheet per decision 90/110, milestone 15 gate, Steam-only rules; new task 6 for the Launch section update)', 'Plan 11, the plan above plan 95, changed; it is quoted below. Bring plan 95 in line with it
 (`pm plan edit 95 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -21002,7 +21002,7 @@ Milestone 11 is S6 of the Steam track (D-34, `plans/11-steam.md`, ST-3..ST-5): t
 
 ## Out of scope (from the milestone)
 - Competitive mode, couch co-op, more regions and languages (later); Remote Play Together (SW-13), macOS (SW-14); marketing beyond Steam''s own wishlist and follow features; telemetry and any network request other than the clicked report.', '2026-10-13T17:03:31Z', '2026-10-13T17:16:35Z', 831);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (851, 96, 'revise plan 96', 'plan', 'done', 1000, '2026-10-13, plan 96 body: cadence = decision 96, tasks 1/2 marked done, reports via qgen flag --pull (plans 93, 103), ST-4 rows per plan 104, Steam only (decision 111), D-59 done-when replaced', 'Plan 11, the plan above plan 96, changed; it is quoted below. Bring plan 96 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (851, 96, 'revise plan 96', 'revise', 'done', 1000, '2026-10-13, plan 96 body: cadence = decision 96, tasks 1/2 marked done, reports via qgen flag --pull (plans 93, 103), ST-4 rows per plan 104, Steam only (decision 111), D-59 done-when replaced', 'Plan 11, the plan above plan 96, changed; it is quoted below. Bring plan 96 in line with it
 (`pm plan edit 96 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -21105,7 +21105,7 @@ Milestone 11 is S6 of the Steam track (D-34, `plans/11-steam.md`, ST-3..ST-5): t
 
 ## Out of scope (from the milestone)
 - Competitive mode, couch co-op, more regions and languages (later); Remote Play Together (SW-13), macOS (SW-14); marketing beyond Steam''s own wishlist and follow features; telemetry and any network request other than the clicked report.', '2026-10-13T17:03:31Z', '2026-10-13T17:18:29Z', 831);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (852, 97, 'revise plan 97', 'plan', 'done', 1000, '2026-10-13, plan 97 body: depends on plans 103/104, report round trip + copy fallback in the milestone check, README report how-tos, Steam-only (no trivia note), directory.md', 'Plan 11, the plan above plan 97, changed; it is quoted below. Bring plan 97 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (852, 97, 'revise plan 97', 'revise', 'done', 1000, '2026-10-13, plan 97 body: depends on plans 103/104, report round trip + copy fallback in the milestone check, README report how-tos, Steam-only (no trivia note), directory.md', 'Plan 11, the plan above plan 97, changed; it is quoted below. Bring plan 97 in line with it
 (`pm plan edit 97 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -21768,7 +21768,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:52:37Z', '2026-10-13T18:29:54Z', 900);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (915, 8, 'create tasks for plan 8', 'split', 'done', 1000, '2026-10-13, tasks.sql: added task 919 (write plan: Image peek, part 10); parts 8/9 revisions already queued as tasks 916, 918 (and 917 for plan 56); no new decisions needed', 'Split plan 8 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:53:34Z', '2026-10-13T17:54:05Z', 912);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (916, 48, 'revise plan 48', 'plan', 'done', 1000, '2026-10-13, plan 48 body: decision 125 (Deck = 1280×800 window run, real-Deck rows to plan 90, skipped not failed), decision 126 peek rows on every platform, plans 65 and 113 added to the guard and failure owners', 'Plan 8, the plan above plan 48, changed; it is quoted below. Bring plan 48 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (916, 48, 'revise plan 48', 'revise', 'done', 1000, '2026-10-13, plan 48 body: decision 125 (Deck = 1280×800 window run, real-Deck rows to plan 90, skipped not failed), decision 126 peek rows on every platform, plans 65 and 113 added to the guard and failure owners', 'Plan 8, the plan above plan 48, changed; it is quoted below. Bring plan 48 in line with it
 (`pm plan edit 48 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -21843,7 +21843,7 @@ Milestone 8 is S3 of the Steam track (D-34, `plans/11-steam.md`): the first buil
 ## Out of scope (from the milestone)
 - Steamworks features (overlay, Cloud setup, achievements, on-screen keyboard, SW-7..SW-14), store page (S5); translations (S4); media resizing (SW-9, S5); couch co-op input (IN-6, IN-7, later).
 - Porting authoring''s Python (qgen, `trivia-authoring`) to Node/TS: later, own milestone.', '2026-10-13T17:53:34Z', '2026-10-13T17:57:02Z', 912);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (917, 56, 'revise plan 56', 'plan', 'done', 1000, '2026-10-13, no change: plan 56 and task 332 already match masterplan part 3 (decision 39: Local builds start offline? skipped; decision 111: Steam only; decision 14: CI local)', 'Plan 8, the plan above plan 56, changed; it is quoted below. Bring plan 56 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (917, 56, 'revise plan 56', 'revise', 'done', 1000, '2026-10-13, no change: plan 56 and task 332 already match masterplan part 3 (decision 39: Local builds start offline? skipped; decision 111: Steam only; decision 14: CI local)', 'Plan 8, the plan above plan 56, changed; it is quoted below. Bring plan 56 in line with it
 (`pm plan edit 56 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -21918,7 +21918,7 @@ Milestone 8 is S3 of the Steam track (D-34, `plans/11-steam.md`): the first buil
 ## Out of scope (from the milestone)
 - Steamworks features (overlay, Cloud setup, achievements, on-screen keyboard, SW-7..SW-14), store page (S5); translations (S4); media resizing (SW-9, S5); couch co-op input (IN-6, IN-7, later).
 - Porting authoring''s Python (qgen, `trivia-authoring`) to Node/TS: later, own milestone.', '2026-10-13T17:53:34Z', '2026-10-13T17:58:00Z', 912);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (918, 99, 'revise plan 99', 'plan', 'done', 1000, '2026-10-13, no change: plan 99 still matches plan 8 part 9 (steps, order, decisions 111/39/104/98, done-when); part 10''s dev-server dependency is plan 113''s', 'Plan 8, the plan above plan 99, changed; it is quoted below. Bring plan 99 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (918, 99, 'revise plan 99', 'revise', 'done', 1000, '2026-10-13, no change: plan 99 still matches plan 8 part 9 (steps, order, decisions 111/39/104/98, done-when); part 10''s dev-server dependency is plan 113''s', 'Plan 8, the plan above plan 99, changed; it is quoted below. Bring plan 99 in line with it
 (`pm plan edit 99 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -22040,7 +22040,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Done when: at 1280×800 every image question''s picture can be seen whole via the peek (milestone 8); the owning plan files carry the notes. Check: `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-13T17:58:50Z', NULL, 920);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (924, 10, 'create tasks for plan 10', 'split', 'done', 1000, '2026-10-13, tasks.sql: tasks 254 (Gamepad template default) and 263 (Deck review counts, real-Deck test doesn''t) per decision 125; plans 85-90 already queued for revision (tasks 925-930)', 'Split plan 10 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:59:23Z', '2026-10-13T18:00:01Z', 913);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (925, 85, 'revise plan 85', 'plan', 'done', 1000, '2026-10-13, no change: plan 10''s revision (decision 125: Deck best effort, Gamepad template default) touches parts 2, 10, 11; part 3 still matches plan 85', 'Plan 10, the plan above plan 85, changed; it is quoted below. Bring plan 85 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (925, 85, 'revise plan 85', 'revise', 'done', 1000, '2026-10-13, no change: plan 10''s revision (decision 125: Deck best effort, Gamepad template default) touches parts 2, 10, 11; part 3 still matches plan 85', 'Plan 10, the plan above plan 85, changed; it is quoted below. Bring plan 85 in line with it
 (`pm plan edit 85 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -22170,7 +22170,7 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 
 ## Out of scope (from the milestone)
 - Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T17:59:23Z', '2026-10-13T18:00:18Z', 913);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (926, 86, 'revise plan 86', 'plan', 'done', 1000, '2026-10-13, no change: masterplan revision (task 913) only changed parts 2, 10, 11 and the order (decision 125, Deck best effort); plan 86 still fits part 5', 'Plan 10, the plan above plan 86, changed; it is quoted below. Bring plan 86 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (926, 86, 'revise plan 86', 'revise', 'done', 1000, '2026-10-13, no change: masterplan revision (task 913) only changed parts 2, 10, 11 and the order (decision 125, Deck best effort); plan 86 still fits part 5', 'Plan 10, the plan above plan 86, changed; it is quoted below. Bring plan 86 in line with it
 (`pm plan edit 86 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -22300,7 +22300,7 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 
 ## Out of scope (from the milestone)
 - Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T17:59:23Z', '2026-10-13T18:00:43Z', 913);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (927, 87, 'revise plan 87', 'plan', 'done', 1000, '2026-10-13, no change: plan 10''s revision (task 913) touched parts 2, 10, 11 and the order (decision 125); part 4 matches plan 87 as written', 'Plan 10, the plan above plan 87, changed; it is quoted below. Bring plan 87 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (927, 87, 'revise plan 87', 'revise', 'done', 1000, '2026-10-13, no change: plan 10''s revision (task 913) touched parts 2, 10, 11 and the order (decision 125); part 4 matches plan 87 as written', 'Plan 10, the plan above plan 87, changed; it is quoted below. Bring plan 87 in line with it
 (`pm plan edit 87 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -22430,7 +22430,7 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 
 ## Out of scope (from the milestone)
 - Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T17:59:23Z', '2026-10-13T18:00:58Z', 913);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (928, 88, 'revise plan 88', 'plan', 'done', 1000, '2026-10-13, no change: masterplan part 8 unchanged; plan 88 still fits (dev switch, Steam only, store media timing already in)', 'Plan 10, the plan above plan 88, changed; it is quoted below. Bring plan 88 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (928, 88, 'revise plan 88', 'revise', 'done', 1000, '2026-10-13, no change: masterplan part 8 unchanged; plan 88 still fits (dev switch, Steam only, store media timing already in)', 'Plan 10, the plan above plan 88, changed; it is quoted below. Bring plan 88 in line with it
 (`pm plan edit 88 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -22560,7 +22560,7 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 
 ## Out of scope (from the milestone)
 - Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T17:59:23Z', '2026-10-13T18:01:20Z', 913);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (929, 89, 'revise plan 89', 'plan', 'done', 1000, '2026-10-13, tasks.sql: plan 89 step 7 Deck row best effort per decision 125, task 11 for release_check.py''s deck row', 'Plan 10, the plan above plan 89, changed; it is quoted below. Bring plan 89 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (929, 89, 'revise plan 89', 'revise', 'done', 1000, '2026-10-13, tasks.sql: plan 89 step 7 Deck row best effort per decision 125, task 11 for release_check.py''s deck row', 'Plan 10, the plan above plan 89, changed; it is quoted below. Bring plan 89 in line with it
 (`pm plan edit 89 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -22690,7 +22690,7 @@ Milestone 10 is S5 of the Steam track (D-34, `plans/11-steam.md`): the desktop b
 
 ## Out of scope (from the milestone)
 - Public release: coming-soon page, wishlists, release checklist, patches (S6, milestone 11). Remote Play Together (SW-13), macOS (SW-14), online co-op (decision 111): later. Steam Workshop bundles (decision 66): own milestone. Marketing.', '2026-10-13T17:59:23Z', '2026-10-13T18:02:01Z', 913);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (930, 90, 'revise plan 90', 'plan', 'done', 1000, '2026-10-13, tasks.sql: plan 90 rewritten per decision 125 (review without real-Deck test; real-Deck checklist written for later)', 'Plan 10, the plan above plan 90, changed; it is quoted below. Bring plan 90 in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (930, 90, 'revise plan 90', 'revise', 'done', 1000, '2026-10-13, tasks.sql: plan 90 rewritten per decision 125 (review without real-Deck test; real-Deck checklist written for later)', 'Plan 10, the plan above plan 90, changed; it is quoted below. Bring plan 90 in line with it
 (`pm plan edit 90 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
