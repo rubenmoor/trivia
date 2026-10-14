@@ -198,6 +198,34 @@ Mods are folders the shell serves over `app://trivia/` before our own client and
 - Path safety: `contained()` compares `realpath`s against the layer root's `realpath` (every root, ours too): symlinks out of a layer miss; `..`, encoded `..`, absolute and drive-letter paths stay inside or miss; files only.
 - MIME by extension (`MIME` in `resolve.mjs`), unknown → `application/octet-stream`. Paths case-sensitive (Windows: match case).
 - stderr: one line per mod (`trivia: mod <id> <state> [warnings]`) and a summary (`trivia: mods: 2 loaded, 1 invalid`).
+- Bridge name (decision 130: Preload bridge renamed window.trivia → window.triviaShell; window.trivia is the mod API): the shell's bridge is `window.triviaShell` (`preload.cjs`, read only by `lib/desktop.ts`); `window.trivia` is the page's mod API ("Modding: `window.trivia`"); mods can reach `window.triviaShell` too: accepted.
+- Code add-ons (pm plan 117, decision 131: Code add-ons: shell-generated /mods.js, entry default export setup(trivia), mods run before data and language load):
+  - `/mods.js`: `modsScript(list)` in `mods.mjs` (pure), served by `resolve.mjs` ahead of every layer (a mod can't override it); `export default [{ id, name, version, entry, style }, …]`: loaded mods only, run order = bottom of the load order first; `entry` from `mod.json` (null if none), `style` = `/mods/<id>/style.css` if the mod has a root `style.css` (null else); no disk paths; `--no-mods`, no valid user, no mods: `export default [];`.
+  - `/mods/<id>/<rel>` → `<mod dir>/<rel>` via `contained()`, loaded mods only, files only, `mod.json` never; else 404. Relative imports and `import.meta.url` stay in the mod's folder. Reserved: our `dist/` has no root `mods.js` or `mods/`.
+  - Outside the shell (Vite dev, dev server): no `/mods.js` → no mods.
+  - Page loader: `app/client/src/lib/mods.ts` `loadMods()`, first in `main.ts`, before `language()` (save + data) and `initLang`; per mod in run order: `style` linked after our CSS (later = stronger, top mod wins the cascade), then `import(entry)` and `await default(trivia)` with a view scoped to that mod; import + setup race a 5 s timeout. Then mods' `i18n.add` catalogs apply, `language()` → `initLang` → `initDocument` → mount `App` → event `ready`.
+  - Error codes (`modErrors()`, `console.error`; no UI here, plan 118 maps them to `t()`): `load_failed` (import rejects), `setup_failed` (setup throws), `timeout` (> 5 s): the mod's registrations removed (late ones too), the next mod loads, the game always starts; `hook_failed`: a hook throws later (data, action, event, screen, layer, menu row) → caught at the call site, that registration dropped for the run, the game goes on unhooked.
+  - Run order: entries bottom-up, so the top mod registers last; hooks run in run order; for screens the last registration (top mod) wins.
+  - No stability promise: `window.trivia`, its types and module paths may change with any update; renames in the patch notes (pm plan 102).
+
+## Modding: `window.trivia`
+The page-side mod API (pm plan 117, decisions 130, 131), defined in `app/client/src/lib/mods.ts` (type `TriviaApi`: the reference, with source maps and the public repo); listed here with the call sites for the modding guide (pm plan 121). No stability promise.
+- `setup(trivia)`: an entry's default export; `trivia` is scoped to the mod (`trivia.mod`, registrations tagged with its id); `window.trivia` is the unscoped view. Registrations return an `off()`.
+- `version`: `buildInfo().version` (decision 91); `mods`: loaded mods `{ id, name, version }[]`; `mod`: this mod (scoped view only).
+- `modules`: same instances as by path (decision 124), exports read-only: `api` (`lib/api.ts`), `engine` (`read`, `run` from `lib/engine.ts`), `game` (`engine/game.ts`), `i18n` (`t`, `lang`, `fill`), `input` (`pushScope`, `lastDevice` from `lib/input.svelte.ts`), `sound` (`sfx`, `music` from `game/sound.svelte.ts`), `svelte` (`mount`, `unmount`, `flushSync`: compiled mod components import our runtime at `/vendor/svelte/…`).
+- `data(fn)`: `lib/data.ts` locale load, after the mod-bundle step (plan 115), before `engineData(…)`; `fn({ locale, questions, bundles, ageGroups })` on a copy → change in place or return a partial replacement (arrays); mod questions have `<mod id>:<id>` ids (decision 128); per locale load, in run order; sync only.
+- `actions.before(fn)` / `actions.after(fn)`: `lib/api.ts` `hooked()`, behind `gameAction()` and `playJoker()` (action `joker`); `before(action, body)` on a copy → body or void (e.g. `new` with `body.jokers`), the engine still validates; `after(action, game)`: a copy, may be null.
+- `i18n.add(locale, catalog, opts?)`: `lib/i18n.ts` `addCatalog()`; existing UI locale → deep-merged over it (`es-ES` is its own); new → `merge(base, catalog)` (`opts.base`, default `en`), added to `CATALOGS`, `UI_LANGS`, `ENDONYMS` (`opts.endonym`); UI language only, question locales stay ours; in `setup` (applied before `initLang`), later calls after a reload.
+- `screens.replace(name, component)` / `screens.dom(name, render)`: `game/screens/registry.ts` `screenFor()`, read once when `Game.svelte` mounts; names `Start`, `Language`, `Player`, `Choice`, `Level`, `Select`, `Question`, `Correct`, `Wrong`, `Victory` (`SCREENS`, files `game/screens/*.svelte`); same props as ours; `dom`: `render(el, props) → cleanup?` through `game/screens/DomScreen.svelte`; a throwing replacement → `hook_failed`, ours instead (`screenFailed()`, `Game.svelte`'s boundary).
+- `screens.show(render)` → `{ close() }`: a full-screen layer over the game (`DomScreen` in `Game.svelte` via `watchLayers()`), modal with its own input scope; Esc, pad B or `props.close` close it.
+- `menu.add({ label, onselect })`: Esc menu rows in a last column (`Overlay.svelte` `menuRows()`); `label` shown as is (not via `t()`, `check:literals` doesn't see it).
+- `on(event, fn)` → `off`; payloads `structuredClone`d, return values ignored:
+  - `ready`: after mount (`main.ts`)
+  - `screen` `{ name }`: after a switch (`Game.svelte` `go()`)
+  - `question:shown` `{ id, level }`: after the switch to Question, its media ready or the preload cap (`Game.svelte` `go()`)
+  - `game:start` `{ game }`: after a successful `new`; `game:end` `{ game, result }`: `result` null → won/lost/abandoned, a `new` over a running game too; `question:answered` `{ id, level, index, correct }`: after `answer` (all `lib/api.ts` `events()`)
+- `css(href)`: a `<link>` after ours, e.g. `trivia.css(new URL("./x.css", import.meta.url))`.
+- Internals, not on `window.trivia`: `loadedMods()`, `modErrors()` (mods screen, plan 118), `modsOn()` (telemetry, decision 146).
 
 ## Modding: module paths
 The client ships as a readable tree, so a mod replaces any single module, component CSS or stylesheet by putting a file at the same path (pm plan 111, decision 124: Readable client build: output naming rule for mod overrides). The modding guide (pm plan 121) links this section.
@@ -210,7 +238,7 @@ The client ships as a readable tree, so a mod replaces any single module, compon
   - `.map` next to each JS file; no hashes; `public/` files where they are (`audio/`, `fonts/`)
 - `index.html`: one `<script type="module" src="/main.js">` + `app.css`; the browser follows imports; a full conversion replaces it.
 - Scoped class names: `svelte-<component path>` (e.g. `svelte-game-hud`), stable per component path, not per CSS content: a theme's selectors survive our CSS changes.
-- Screen list (plan 116): `game/screens/*.svelte` (one file per full screen, `Game.svelte` mounts them); Question pieces: `game/question/*`; for `window.trivia`'s screen list (task 904) and the guide (task 909).
+- Screen list (plan 116): `game/screens/*.svelte` (one file per full screen, `Game.svelte` mounts them); Question pieces: `game/question/*`; `window.trivia`'s screen names ("Modding: `window.trivia`") and the guide (task 909).
 - Not overridable by path (no file of their own):
   - inlined `__APP_VERSION__` and other `define`s
   - the preload helper's dependency list inside `main.js` (a mod adding a module imports it itself)

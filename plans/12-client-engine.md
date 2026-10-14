@@ -32,6 +32,9 @@ flowchart LR
 - **`ServerStore`** (current game, until the Steam build replaces it, D-59): the Python server keeps a tiny `GET/PUT /api/save` that writes `state/game.json` atomically. No localStorage: D-3 rejected it as fragile.
 - **Pool export** (done, D-35): `qgen export` writes the playable pool (`approved` only, without `review`, `quality` and pipeline fields) to `app/data/pool.json`. The TS engine loads that file; with locales (15b) it becomes one file per locale.
 - **Data in the client** (pm plan 50, PORT-7): the server serves `app/data/` read-only at `/data/…`; the client loads pool and categories once per page load (reload after `qgen export`). `lib/api.ts` keeps its signatures and calls the engine + `ServerStore`.
+- **Mod hooks** (pm plan 117, decision 131: Code add-ons: shell-generated /mods.js, entry default export setup(trivia), mods run before data and language load; `lib/mods.ts`, full list in `plans/18-steam-integration.md` "Modding: `window.trivia`"): the engine itself stays mod-free.
+  - `lib/data.ts`: `runDataHooks()` (`trivia.data`) per locale load, after the mod bundles are packed, before `engineData(…)`; a throwing hook leaves the data as it was (`hook_failed`).
+  - `lib/api.ts` `hooked()`, behind `gameAction()` and `playJoker()`: `runBefore()` on the body (the engine still validates it), the engine route, `events()` (`game:start`, `game:end`, `question:answered` from the newest game before vs after), `runAfter()` (`trivia.actions.after`).
 - **Python game server after the port** (pm decision 4, D-59): static files plus `/api/save` only. Flags go into `SaveData`, categories are static files from `qgen export`, media is served from the synced cache only (no download on miss). The authoring API (review, stats, media fetch) stays in `trivia-authoring`. `app/server/game.py` and the game routes are deleted once parity holds.
 
 ## The referee question (D-66)
