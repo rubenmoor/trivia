@@ -373,7 +373,8 @@ const es = {
   save: {
     corrupt: "El archivo de la partida guardada está dañado. Se guardó como copia de seguridad en {path} y empieza una partida nueva.",
     newer: "El archivo de la partida guardada es de una versión más nueva del juego. Se guardó como copia de seguridad en {path} y empieza una partida nueva.",
-    /** First Steam start (plan 87): the save of this computer without Steam; {players}, {games}: the counts. */
+    /** No valid Steam user (decision 111): memory-only save. */
+    unsaved: "Sin Steam no se guarda el progreso.",
   },
   /** Refusals by server error code (plan 22, D-57); codes without a key show the English message. */
   error: {

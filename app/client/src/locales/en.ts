@@ -325,6 +325,7 @@ export const en = {
   save: {
     corrupt: "The saved game file is damaged. It was backed up to {path}, and a new game starts.",
     newer: "The saved game file is from a newer version of the game. It was backed up to {path}, and a new game starts.",
+    unsaved: "Without Steam, progress isn't saved.",
   },
   error: {
     name_missing: "the player's name is missing",

@@ -118,7 +118,8 @@
     onrestart: () => void;
     onbudget: (budget: Partial<JokerBudget>) => void;
     /** «Preguntas marcadas» opens over the overlay. */
-    onflags: () => void;
+    /** Null without a valid Steam user (decision 111): no «Preguntas marcadas». */
+    onflags: (() => void) | null;
   } = $props();
 
   const gamemaster = $derived(mode === "gamemaster");
@@ -252,7 +253,7 @@
 
   const items = $derived<Item[]>([
     { label: t("overlay.continue"), enabled: true, run: onclose, col: 0 },
-    { label: t("flag.list"), enabled: true, run: onflags, col: 0 },
+    ...(onflags ? [{ label: t("flag.list"), enabled: true, run: onflags, col: 0 as const }] : []),
     ...(devMode && questionOn ? [{ label: t("overlay.goTo"), enabled: canSkip, run: () => (goToOpen = true), col: 0 as const }] : []),
     { label: t("overlay.fullscreen"), enabled: true, run: fullscreen, col: 0 },
     { label: t("credits.open"), enabled: true, run: () => (creditsOpen = true), col: 0 },

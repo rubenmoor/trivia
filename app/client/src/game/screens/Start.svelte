@@ -44,7 +44,7 @@
   <div class="buttons">
     {#if notice}
       <div class="notice glass">
-        <p>{t(notice.kind === "newer" ? "save.newer" : "save.corrupt", { path: notice.path })}</p>
+        <p>{notice.kind === "unsaved" ? t("save.unsaved") : t(notice.kind === "newer" ? "save.newer" : "save.corrupt", { path: notice.path })}</p>
         <button class="candy" onclick={ondismiss} data-focus-default data-focus-id="notice">{t("action.next")} <Prompt action="confirm" /></button>
       </div>
     {:else if running}

@@ -324,6 +324,7 @@ export const de = {
   save: {
     corrupt: "Die Spielstand-Datei ist beschädigt. Sie wurde als Sicherung nach {path} verschoben, und ein neues Spiel beginnt.",
     newer: "Die Spielstand-Datei stammt aus einer neueren Version des Spiels. Sie wurde als Sicherung nach {path} verschoben, und ein neues Spiel beginnt.",
+    unsaved: "Ohne Steam wird der Fortschritt nicht gespeichert.",
   },
   error: {
     name_missing: "der Name des Spielers fehlt",

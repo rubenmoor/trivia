@@ -6,7 +6,7 @@
   import { fetchFlags, fetchGame, gameAction, noteExhausted, playJoker, setFlag, type GameActionBody } from "../lib/api.ts";
   import { isOurs } from "../engine/pool.ts";
   import { GameError } from "../lib/http.ts";
-  import { steam } from "../lib/desktop.ts";
+  import { steam, validUser } from "../lib/desktop.ts";
   import { language, saveError, takeSaveNotice } from "../lib/engine.ts";
   import { errorText } from "../lib/errors.ts";
   import { t } from "../lib/i18n.ts";
@@ -116,7 +116,7 @@
       : ["correct", "wrong", "victory"].includes(screen)
         ? (game?.last?.question_id ?? null)
         : null;
-    return id && isOurs(id) ? id : null; // mod questions: no flags, no reports (plan 93)
+    return validUser && id && isOurs(id) ? id : null; // mod questions: no flags, no reports (plan 93)
   });
   const mode = $derived(game?.settings.mode ?? "gamemaster");
   const levels = $derived(levelsOf(game));
@@ -641,7 +641,7 @@
       canUndo={!!game?.can_undo && !questionBusy()}
       canRestart={(running || screen !== "start") && !questionBusy()}
       canBudget={!questionBusy()}
-      onflags={openFlagList}
+      onflags={validUser ? openFlagList : null}
       onclose={closeOverlay}
       onskip={() => skip(false)}
       onskipall={() => skip(true)}
@@ -654,7 +654,7 @@
       onbudget={setBudget}
     />
   {/if}
-  {#if overlayOpen && flagListOpen}
+  {#if overlayOpen && flagListOpen && validUser}
     <FlagList bind:flags onclose={() => (flagListOpen = false)} />
   {/if}
   {#if flagOpen && flagTarget}

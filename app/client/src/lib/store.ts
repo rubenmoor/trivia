@@ -1,4 +1,5 @@
-// Where the save lives: the game server (GET/PUT /api/save, plan 49) or the desktop's file (plan 55).
+// Where the save lives: the game server (GET/PUT /api/save, plan 49), the desktop's file (plan 55) or, without a
+// Steam user, memory only (plan 87).
 import { parseSave, SaveNewerError } from "../engine/save.ts";
 import { emptySave, type SaveData } from "../engine/state.ts";
 import type { Store } from "../engine/store.ts";
@@ -41,11 +42,8 @@ class WriteQueue {
   }
 }
 
-/** A save file that couldn't be used: moved to `path`, the game starts fresh. */
-export interface SaveNotice {
-  kind: BackupKind;
-  path: string;
-}
+/** A save file that couldn't be used: moved to `path`, the game starts fresh; `unsaved`: memory-only save. */
+export type SaveNotice = { kind: BackupKind; path: string } | { kind: "unsaved" };
 
 /** Text in, parseSave here; a corrupt or newer file goes to the backup with a notice (D-72, decision 98). */
 abstract class TextStore implements Store {
@@ -123,5 +121,22 @@ export class FileStore extends TextStore {
 
   protected backup(kind: BackupKind): Promise<string> {
     return this.bridge.backupSave(kind);
+  }
+}
+
+/** No valid Steam user (decision 111): starts empty, keeps the save in memory, nothing on disk. */
+export class MemoryStore extends TextStore {
+  override notice: SaveNotice | null = { kind: "unsaved" };
+  private text: string | null = null;
+  protected readonly queue = new WriteQueue(async (text) => {
+    this.text = text;
+  });
+
+  protected read(): Promise<string | null> {
+    return Promise.resolve(this.text);
+  }
+
+  protected backup(): Promise<string> {
+    return Promise.resolve("");
   }
 }

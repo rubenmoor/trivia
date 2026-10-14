@@ -7,10 +7,10 @@ import { gameLocale, newest, type EngineData, type Io, type Language, type SaveD
 import { GameError, messageOf } from "./http.ts";
 import type { Supply } from "./types.ts";
 import { availableLocales, loadEngineData } from "./data.ts";
-import { desktop, steam } from "./desktop.ts";
+import { desktop, steam, validUser } from "./desktop.ts";
 import { UI_LANGS } from "./i18n.ts";
 import { useNames } from "./names.svelte.ts";
-import { FileStore, ServerStore, type SaveNotice } from "./store.ts";
+import { FileStore, MemoryStore, type SaveNotice } from "./store.ts";
 import { telemetryCheckpoint, telemetryLoad } from "./telemetry.ts";
 import { achievementsCheckpoint, achievementsLoad } from "./achievements.ts";
 
@@ -22,7 +22,8 @@ interface Loaded {
   fresh: boolean;
 }
 
-const store = desktop ? new FileStore(desktop) : new ServerStore();
+/** Saves need a valid Steam user (decision 111); else memory only, every start fresh. */
+const store = desktop && validUser ? new FileStore(desktop) : new MemoryStore();
 let loading: Promise<Loaded> | null = null;
 let chain: Promise<unknown> = Promise.resolve();
 let lastSaveError: GameError | null = null;
@@ -71,7 +72,7 @@ async function load(): Promise<Loaded> {
   return loaded;
 }
 
-/** The notice of a backed-up save file (plan 55, decision 98), once; null after that. */
+/** The notice of a backed-up save file (plan 55, decision 98) or of a memory-only save (plan 87), once; null after that. */
 export function takeSaveNotice(): SaveNotice | null {
   const notice = store.notice;
   store.notice = null;
