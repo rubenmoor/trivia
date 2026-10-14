@@ -167,7 +167,8 @@ async function mergedBundles(data, mods) {
 }
 
 // layers: enabled mods' folders, top first (plan 112); ours last. mods: the loaded ones { id, name, dir, bundles }, same order.
-export function makeResolver({ dist, data, media, layers = [], mods = [] }) {
+// modsJs: `/mods.js` text (mods.mjs modsScript, decision 131).
+export function makeResolver({ dist, data, media, layers = [], mods = [], modsJs = "export default [];\n" }) {
   dist = path.resolve(dist);
   data = path.resolve(data);
   media = path.resolve(media);
@@ -185,6 +186,15 @@ export function makeResolver({ dist, data, media, layers = [], mods = [] }) {
       return json(404, { error: "not_found" });
     }
     if (rel === "/api" || rel.startsWith("/api/")) return json(404, { error: "not_found" });
+    if (rel === "/mods.js")
+      return new Response(modsJs, { status: 200, headers: { "content-type": MIME[".js"], ...CLIENT } });
+    if (rel.startsWith("/mods/")) {
+      const m = /^\/mods\/([^/]+)\/(.+)$/.exec(rel);
+      const mod = m && byId.get(m[1]);
+      const file = mod && (await contained(mod.dir, m[2]));
+      if (!file || sameFile(file, path.join(await realRoot(mod.dir), "mod.json"))) return json(404, { error: "not_found" });
+      return sendFile(file, request, CLIENT);
+    }
     if (rel === "/data/bundles.json" && mods.length) {
       merged ??= mergedBundles(data, mods).catch((err) => {
         console.error(`trivia: bundles.json: ${err.message}`);

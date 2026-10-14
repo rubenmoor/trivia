@@ -4,7 +4,7 @@ import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } fr
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { arrange, discover, ID as MOD_ID, readSettings, writeSettings } from "./mods.mjs";
+import { arrange, discover, ID as MOD_ID, modsScript, readSettings, writeSettings } from "./mods.mjs";
 import { muteReason } from "./mute.mjs";
 import { describe, itemUrl, preparePublish, publish, VISIBILITY } from "./publish.mjs";
 import { devTicket, IDENTITY, postReport, reportFields, reportTarget } from "./report.mjs";
@@ -372,10 +372,10 @@ async function start() {
     return;
   }
 
-  const { layers, mods } = await loadMods();
+  const { layers, mods, modsJs } = await loadMods();
 
   const ses = session.defaultSession;
-  ses.protocol.handle("app", makeResolver({ ...dirs, layers, mods }));
+  ses.protocol.handle("app", makeResolver({ ...dirs, layers, mods, modsJs }));
   ses.webRequest.onBeforeRequest(
     { urls: ["http://*/*", "https://*/*", "ws://*/*", "wss://*/*"] },
     (_details, callback) => callback({ cancel: true }),
@@ -432,7 +432,7 @@ async function start() {
   win.loadURL(ORIGIN);
 }
 
-/** Discovery, mods.json, load order → overlay layers and loaded mods' bundles, fixed for the run; none with --no-mods. */
+/** Discovery, mods.json, load order → overlay layers, loaded mods' bundles and `/mods.js`, fixed for the run; none with --no-mods. */
 async function loadMods() {
   const file = modsSettingsFile();
   const arranged = await arrangeMods(true);
@@ -444,7 +444,7 @@ async function loadMods() {
       console.error(`trivia: mod ${mod.id ?? "?"} workshop ${mod.publishedFileId} ${mod.dir ? "installed" : mod.state}`);
   if (args.noMods) {
     console.error("trivia: --no-mods: no mods this run");
-    return { layers: [], mods: [] };
+    return { layers: [], mods: [], modsJs: modsScript([]) };
   }
   const count = {};
   for (const mod of mods) {
@@ -456,7 +456,11 @@ async function loadMods() {
     console.error(`trivia: mods: ${Object.entries(count).map(([state, n]) => `${n} ${state}`).join(", ")}`);
   activeDirs = new Set(arranged.layers);
   const loaded = mods.filter((m) => m.state === "loaded");
-  return { layers: arranged.layers, mods: loaded.map((m) => ({ id: m.id, name: m.manifest.name, dir: m.dir, bundles: m.bundles })) };
+  return {
+    layers: arranged.layers,
+    mods: loaded.map((m) => ({ id: m.id, name: m.manifest.name, dir: m.dir, bundles: m.bundles })),
+    modsJs: modsScript(mods),
+  };
 }
 
 /** Fresh discovery (local + Workshop re-query) arranged against mods.json; at start and per `mods:list`. */

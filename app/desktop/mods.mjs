@@ -89,7 +89,7 @@ function checkFields(m, gameVersion, warnings) {
 /** One mod folder → { id, dir, manifest, kind, warnings, error }; id null when unknown. */
 export async function readManifest(dir, gameVersion) {
   dir = path.resolve(dir);
-  const out = { id: null, dir, manifest: null, kind: [], bundles: [], warnings: [], error: null };
+  const out = { id: null, dir, manifest: null, kind: [], bundles: [], style: false, warnings: [], error: null };
   const fail = (error) => ({ ...out, error });
   if (!(await exists(dir, (s) => s.isDirectory()))) return fail({ code: "not_a_folder" });
   const file = path.join(dir, "mod.json");
@@ -113,6 +113,7 @@ export async function readManifest(dir, gameVersion) {
   if (error) return fail(error);
   if (m.entry !== undefined && !(await inside(dir, m.entry))) return fail({ code: "entry_missing" });
   out.kind = m.kind ?? (await deriveKind(dir, m.entry));
+  out.style = !!(await inside(dir, "style.css"));
   const bundles = await bundleRows(dir);
   out.bundles = bundles.rows;
   out.warnings.push(...bundles.warnings);
@@ -266,4 +267,21 @@ export function arrange(mods, settings, { validUser }) {
       list.push({ ...mod, on: false, position: null, state: "invalid" });
   const layers = list.filter((e) => e.state === "loaded").map((e) => e.dir);
   return { list, layers, settings: next, changed: next !== settings };
+}
+
+const modUrl = (id, rel) => `/mods/${id}/` + encodeURI(path.posix.normalize("/" + rel.replaceAll("\\", "/")).slice(1));
+
+/** `/mods.js` text (decision 131): loaded mods in run order, bottom of the load order first. */
+export function modsScript(list) {
+  const rows = list
+    .filter((m) => m.state === "loaded")
+    .reverse()
+    .map(({ id, manifest: m, style }) => ({
+      id,
+      name: m.name,
+      version: m.version,
+      entry: m.entry === undefined ? null : modUrl(id, m.entry),
+      style: style ? modUrl(id, "style.css") : null,
+    }));
+  return rows.length ? `export default [\n${rows.map((r) => "  " + JSON.stringify(r)).join(",\n")}\n];\n` : "export default [];\n";
 }

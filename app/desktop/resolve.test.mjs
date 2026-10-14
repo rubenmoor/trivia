@@ -1,10 +1,10 @@
-// makeResolver: mod layers, path safety (plan 112), mod bundles (plan 115). `npm test`
+// makeResolver: mod layers, path safety (plan 112), mod bundles (plan 115), /mods.js and /mods/<id>/ (plan 117). `npm test`
 import assert from "node:assert/strict";
 import { mkdirSync, mkdtempSync, rmSync, symlinkSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { after, test } from "node:test";
-import { bundleRows } from "./mods.mjs";
+import { arrange, bundleRows, modsScript, readManifest } from "./mods.mjs";
 import { makeResolver } from "./resolve.mjs";
 
 const tmp = mkdtempSync(path.join(tmpdir(), "trivia-resolve-"));
@@ -169,4 +169,71 @@ test("directory request misses", async () => {
 test("MIME", async () => {
   assert.equal((await get(modded, "/sub/x.txt")).type, "text/plain; charset=utf-8");
   assert.equal((await get(modded, "/game/theme.css")).type, "text/css; charset=utf-8");
+});
+
+// Code add-ons (decision 131).
+const manifest = (id, extra = {}) => JSON.stringify({ id, name: `Mod ${id}`, description: "", version: "1.0.0", game: "1.0.0", ...extra });
+put("code/aa/mod.json", manifest("aa", { entry: "./src/main.js" }));
+put("code/aa/src/main.js", "export default () => {};");
+put("code/aa/src/util.mjs", "export {};");
+put("code/aa/style.css", "body{}");
+put("code/bb/mod.json", manifest("bb"));
+put("code/bb/sub/style.css", "not root");
+put("code/cc/mod.json", manifest("cc", { entry: "main.js" }));
+put("code/cc/main.js", "off");
+put("code/dd/mod.json", manifest("dd", { version: 2 }));
+put("code/dd/main.js", "invalid");
+symlinkSync(path.join(tmp, "secret/key"), path.join(tmp, "code/aa/leak.js"));
+symlinkSync(path.join(tmp, "secret"), path.join(tmp, "code/aa/dir"));
+
+const found = await Promise.all(["aa", "bb", "cc", "dd"].map((id) => readManifest(path.join(tmp, "code", id), "1.0.0")));
+const settings = { version: 1, mods: ["aa", "bb", "cc", "dd"].map((id) => ({ id, on: id !== "cc" })) };
+const { list } = arrange(found, settings, { validUser: true });
+const loaded = list.filter((m) => m.state === "loaded");
+const coded = makeResolver({
+  ...dirs,
+  layers: loaded.map((m) => m.dir),
+  mods: loaded.map((m) => ({ id: m.id, name: m.manifest.name, dir: m.dir, bundles: m.bundles })),
+  modsJs: modsScript(list),
+});
+const exported = async (src) => (await import("data:text/javascript," + encodeURIComponent(src))).default;
+
+test("/mods.js: none", async () => {
+  assert.equal(modsScript([]), "export default [];\n");
+  assert.equal(modsScript(arrange(found, settings, { validUser: false }).list), "export default [];\n");
+  const res = await get(plain, "/mods.js");
+  assert.equal(res.text, "export default [];\n");
+  assert.equal(res.type, "text/javascript; charset=utf-8");
+});
+
+test("/mods.js: loaded mods bottom-up, style only when a root style.css exists", async () => {
+  assert.deepEqual(await exported(await text(coded, "/mods.js")), [
+    { id: "bb", name: "Mod bb", version: "1.0.0", entry: null, style: null },
+    { id: "aa", name: "Mod aa", version: "1.0.0", entry: "/mods/aa/src/main.js", style: "/mods/aa/style.css" },
+  ]);
+  assert.ok(!(await text(coded, "/mods.js")).includes(tmp));
+});
+
+test("/mods/<id>/: loaded mods' files only", async () => {
+  assert.equal(await text(coded, "/mods/aa/src/main.js"), "export default () => {};");
+  assert.equal((await get(coded, "/mods/aa/src/util.mjs")).type, "text/javascript; charset=utf-8");
+  assert.equal(await text(coded, "/mods/aa/style.css"), "body{}");
+  for (const p of [
+    "/mods/aa/mod.json",
+    "/mods/aa/./src/../mod.json",
+    "/mods/aa/src",
+    "/mods/aa/",
+    "/mods/aa/../bb/mod.json",
+    "/mods/aa/..%2F..%2F..%2Fsecret%2Fkey",
+    "/mods/aa/..%2Fbb%2Fmod.json",
+    "/mods/aa/leak.js",
+    "/mods/aa/dir/key",
+    "/mods/cc/main.js",
+    "/mods/dd/main.js",
+    "/mods/zz/main.js",
+    "/mods/",
+  ])
+    assert.equal((await get(coded, p)).status, 404, p);
+  assert.equal(await text(coded, "/mods/aa/%2e%2e/%2e%2e/secret/key"), "ours index"); // URL-normalised out of /mods/
+  assert.equal((await get(plain, "/mods/aa/src/main.js")).status, 404);
 });
