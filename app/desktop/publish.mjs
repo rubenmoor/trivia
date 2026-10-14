@@ -3,6 +3,7 @@ import fs from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import { isDeepStrictEqual } from "node:util";
+import { errorText, warningText } from "./check-mod.mjs";
 import { readManifest } from "./mods.mjs";
 import { contained } from "./resolve.mjs";
 
@@ -21,21 +22,6 @@ export const itemUrl = (id) => `https://steamcommunity.com/sharedfiles/filedetai
 const legal = () => `legal agreement: the item stays hidden until you accept it at ${LEGAL}`;
 const mb = (n) => (Number(n) / MB).toFixed(1);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-
-const ERRORS = {
-  not_a_folder: () => "not a folder",
-  no_manifest: () => "no mod.json",
-  bad_json: (e) => (e.reason === "too_big" ? "mod.json over 64 KB" : "mod.json is not a JSON object"),
-  bad_field: (e) => `mod.json: field "${e.field}" missing or invalid`,
-  entry_missing: () => "mod.json: entry file not found in the folder",
-};
-const WARNINGS = {
-  unknown_language: (w) => `languages: "${w.tag}" isn't a game language`,
-  unknown_key: (w) => `mod.json: unknown key "${w.key}"`,
-  game_version: (w) => `made for ${w.game}, running ${w.running}`,
-};
-const errorText = (e) => `${e.code}: ${ERRORS[e.code]?.(e) ?? e.code}`;
-const warningText = (w) => `${w.code}: ${WARNINGS[w.code]?.(w) ?? w.code}`;
 
 /** Copies the folder's files into dest: no dot files/folders, symlinks only inside the folder. */
 async function stage(src, dest, warnings) {

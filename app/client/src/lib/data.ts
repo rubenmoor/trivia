@@ -1,6 +1,6 @@
 // The game data from /data/ (app/data/, read-only: app/server/main.py or the desktop protocol; plan 50, PORT-7).
 import {
-  type Bundle, bundleFile, loadCategories, modPool, packsFor, parseAgeGroups, parseBundles, parsePool, poolFile, poolHash, withPacks,
+  type Bundle, bundleFile, loadCategories, modPool, modSubcategories, packsFor, parseAgeGroups, parseBundles, parsePool, poolFile, poolHash, withPacks,
 } from "../engine/pool.ts";
 import { engineData, mergeNames, NO_NAMES, type EngineData, type Names } from "../engine/state.ts";
 import { call } from "./http.ts";
@@ -73,18 +73,6 @@ function issue(b: Bundle, code: ModIssue["code"], count = 1): void {
 
 /** A mod bundle's file: its JSON, null if missing or unreadable. */
 const modGet = (file: string): Promise<unknown> => get(file, true).catch(() => null);
-
-/** A categories file's subcategories if well-formed (slugs, names, unique within it), else null. */
-function modSubcategories(file: unknown): { slugs: string[]; subs: string[] } | null {
-  const cats = (file as { categories?: unknown } | null)?.categories;
-  if (!Array.isArray(cats) || !cats.length) return null;
-  const ok = cats.every((c) => typeof c?.slug === "string" && c.slug && typeof c.name === "string" && Array.isArray(c.subcategories)
-    && c.subcategories.length && c.subcategories.every((s: unknown) => typeof s === "string" && s));
-  if (!ok) return null;
-  const slugs = cats.map((c) => c.slug as string);
-  const subs = cats.flatMap((c) => c.subcategories as string[]);
-  return new Set(slugs).size === slugs.length && new Set(subs).size === subs.length ? { slugs, subs } : null;
-}
 
 /** `named`: the bundles that may have names files. */
 interface Loaded {

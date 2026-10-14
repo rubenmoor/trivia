@@ -12,6 +12,7 @@ files:
   - mute.mjs
   - workshop.mjs
   - publish.mjs
+  - check-mod.mjs
   - report.mjs
   - resolve.mjs
   - telemetry.mjs

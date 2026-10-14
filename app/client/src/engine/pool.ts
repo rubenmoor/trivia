@@ -143,6 +143,18 @@ export function modPool(json: unknown, bundle: string, subcategories: Iterable<s
   return { questions, reasons, badQuestions: raw.length - questions.length, badMedia };
 }
 
+/** A categories file's subcategories if well-formed (slugs, names, unique within it), else null. */
+export function modSubcategories(file: unknown): { slugs: string[]; subs: string[] } | null {
+  const cats = (file as { categories?: unknown } | null)?.categories;
+  if (!Array.isArray(cats) || !cats.length) return null;
+  const ok = cats.every((c) => typeof c?.slug === "string" && c.slug && typeof c.name === "string" && Array.isArray(c.subcategories)
+    && c.subcategories.length && c.subcategories.every((s: unknown) => typeof s === "string" && s));
+  if (!ok) return null;
+  const slugs = cats.map((c) => c.slug as string);
+  const subs = cats.flatMap((c) => c.subcategories as string[]);
+  return new Set(slugs).size === slugs.length && new Set(subs).size === subs.length ? { slugs, subs } : null;
+}
+
 /** The bundles offered in `locale`, bundles.json order (plan 71). */
 export function bundlesFor(data: { bundles: Bundle[]; locale: string }, locale = data.locale): Bundle[] {
   return data.bundles.filter((b) => b.languages.includes(locale));

@@ -17,6 +17,7 @@ import {
   writeMarker,
   writeSettings,
 } from "./mods.mjs";
+import { checkMod } from "./check-mod.mjs";
 import { muteReason } from "./mute.mjs";
 import { describe, itemUrl, preparePublish, publish, VISIBILITY } from "./publish.mjs";
 import {
@@ -101,13 +102,13 @@ function steamSdkDir() {
 }
 
 const USAGE =
-  "known flags: --import-save <file> [--force], --no-mods, --publish-mod <folder> [--changenote <text>] [--visibility public|friends|unlisted|private] [--content-only] [--dry-run]";
+  "known flags: --import-save <file> [--force], --no-mods, --check-mod <folder>, --publish-mod <folder> [--changenote <text>] [--visibility public|friends|unlisted|private] [--content-only] [--dry-run]";
 // Our flags' namespace; anything else (Electron/Chromium switches, the dev app path, Steam's) passes.
-const OWN = /^--(import|export|save|trivia|no-mods|force|publish|changenote|visibility|content-only|dry-run)/;
-const VALUE = { "--import-save": "a file", "--publish-mod": "a folder", "--changenote": "a text", "--visibility": "a value" };
+const OWN = /^--(import|export|save|trivia|no-mods|force|check|publish|changenote|visibility|content-only|dry-run)/;
+const VALUE = { "--import-save": "a file", "--check-mod": "a folder", "--publish-mod": "a folder", "--changenote": "a text", "--visibility": "a value" };
 const SWITCH = new Set(["--no-mods", "--force", "--content-only", "--dry-run"]);
 
-/** Our flags from argv: `{ importSave, force, noMods, publish }`, or `{ error }` for an unknown own-looking flag or a missing value. */
+/** Our flags from argv: `{ importSave, force, noMods, checkMod, publish }`, or `{ error }` for an unknown own-looking flag or a missing value. */
 function parseArgs(argv) {
   const v = {};
   for (let i = 1; i < argv.length; i++) {
@@ -127,6 +128,7 @@ function parseArgs(argv) {
   if (v["--force"] && !v["--import-save"]) return { error: `--force needs --import-save; ${USAGE}` };
   if (v["--publish-mod"] && (v["--import-save"] || v["--no-mods"]))
     return { error: `--publish-mod runs alone; ${USAGE}` };
+  if (v["--check-mod"] && Object.keys(v).length > 1) return { error: `--check-mod runs alone; ${USAGE}` };
   if (v["--visibility"] && !(v["--visibility"] in VISIBILITY))
     return { error: `--visibility: public, friends, unlisted or private; ${USAGE}` };
   const publish = v["--publish-mod"] && {
@@ -136,7 +138,8 @@ function parseArgs(argv) {
     contentOnly: !!v["--content-only"],
     dryRun: !!v["--dry-run"],
   };
-  return { importSave: v["--import-save"] ?? null, force: !!v["--force"], noMods: !!v["--no-mods"], publish: publish || null };
+  const checkMod = v["--check-mod"] ? path.resolve(v["--check-mod"]) : null;
+  return { importSave: v["--import-save"] ?? null, force: !!v["--force"], noMods: !!v["--no-mods"], checkMod, publish: publish || null };
 }
 
 /** argv for a relaunch: our own flags dropped (with their values), Electron's and Steam's kept. */
@@ -195,14 +198,10 @@ if (args.error) {
       app.exit(2);
     });
   else app.exit(2);
+} else if (args.checkMod) {
+  headless("--check-mod", () => checkModCmd(args.checkMod));
 } else if (args.publish) {
-  publishMod(args.publish).then(
-    (code) => app.exit(code),
-    (err) => {
-      console.error(`trivia: --publish-mod: ${err.stack ?? err}`);
-      app.exit(1);
-    },
-  );
+  headless("--publish-mod", () => publishMod(args.publish));
 } else if (!app.requestSingleInstanceLock()) {
   app.quit();
 } else {
@@ -299,9 +298,19 @@ const ERESULT = {
   25: "limit exceeded: Workshop storage quota",
 };
 
-/** `--publish-mod` (plan 119): headless, no window, no instance lock; the folder is only read and copied. → exit code. */
-async function publishMod(opts) {
-  // Packaged Windows has no console: a log file beside the mod and a message box.
+/** A headless command (plans 119, 120): no window, no instance lock; exit with its code. */
+function headless(flag, run) {
+  run().then(
+    (code) => app.exit(code),
+    (err) => {
+      console.error(`trivia: ${flag}: ${err.stack ?? err}`);
+      app.exit(1);
+    },
+  );
+}
+
+/** Headless output: stdout/stderr; packaged Windows has no console, so also a log file (once `logTo` names it) and a message box. */
+function headlessOutput() {
   const winOut = app.isPackaged && process.platform === "win32";
   const early = [];
   let logFile = null;
@@ -316,15 +325,43 @@ async function publishMod(opts) {
     if (logFile) toLog(line);
     else early.push(line);
   };
-
-  const p = await preparePublish(opts.folder, app.getVersion());
-  if (winOut) {
-    logFile = path.join(path.dirname(opts.folder), `${p.manifest?.id ?? path.basename(opts.folder)}-publish.log`);
+  const logTo = (file) => {
+    if (!winOut) return;
+    logFile = file;
     try {
       writeFileSync(logFile, "");
     } catch {}
     early.forEach(toLog);
-  }
+  };
+  /** `{ code, text }` → the message box (Windows packaged), → code. */
+  const finish = async ({ code, text }) => {
+    if (winOut) {
+      await app.whenReady();
+      await dialog.showMessageBox({
+        type: code ? "error" : "info",
+        title: "¡Trivia!",
+        message: code ? `${text}\n\nlog: ${logFile}` : text,
+      });
+    }
+    return code;
+  };
+  return { out, logTo, finish };
+}
+
+/** `--check-mod` (plan 120): the loader's checks on one folder, read only. → exit code 0 ok, 1 errors. */
+async function checkModCmd(folder) {
+  const { out, logTo, finish } = headlessOutput();
+  logTo(path.join(path.dirname(folder), `${path.basename(folder)}-check.log`));
+  const r = await checkMod(folder, { ...roots(), gameVersion: app.getVersion() }, out);
+  const text = r.errors ? `${r.errors} error(s) in ${folder}: fix them` : `${path.basename(folder)}: loads as is`;
+  return finish({ code: r.errors ? 1 : 0, text });
+}
+
+/** `--publish-mod` (plan 119): the folder is only read and copied. → exit code. */
+async function publishMod(opts) {
+  const { out, logTo, finish } = headlessOutput();
+  const p = await preparePublish(opts.folder, app.getVersion());
+  logTo(path.join(path.dirname(opts.folder), `${p.manifest?.id ?? path.basename(opts.folder)}-publish.log`));
   for (const w of p.warnings) out(`warning: ${w}`, true);
   let result;
   if (p.error) {
@@ -338,15 +375,7 @@ async function publishMod(opts) {
       stopSteam();
     }
   }
-  if (winOut) {
-    await app.whenReady();
-    await dialog.showMessageBox({
-      type: result.code ? "error" : "info",
-      title: "¡Trivia!",
-      message: result.code ? `${result.text}\n\nlog: ${logFile}` : result.text,
-    });
-  }
-  return result.code;
+  return finish(result);
 }
 
 /** Dry-run summary, or Steam + publish; the binding's warn/error lines pass through. → { code, text }. */
