@@ -14,6 +14,7 @@ export interface D1PreparedStatement {
 
 export interface D1Database {
   prepare(sql: string): D1PreparedStatement;
+  batch(statements: D1PreparedStatement[]): Promise<D1Result<unknown>[]>;
 }
 
 export interface ScheduledController {
@@ -33,6 +34,11 @@ export interface Env {
   REPORTS_OPEN: string;
   RATE_USER: string;
   RATE_TOTAL: string;
+  TELEMETRY_IDENTITY: string;
+  TELEMETRY_OPEN: string;
+  RATE_TELEMETRY_USER: string;
+  RATE_TELEMETRY_TOTAL: string;
+  TELEMETRY_KEEP_DAYS: string;
   STEAM_WEB_API_KEY?: string;
   PULL_TOKEN?: string;
   HASH_SALT?: string;

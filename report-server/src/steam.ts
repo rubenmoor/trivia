@@ -13,7 +13,7 @@ export function devTickets(env: Env, url: URL): boolean {
 }
 
 /** The ticket's SteamID64, held in memory only for the rate-limit hash. */
-export async function checkTicket(ticket: string, env: Env, dev: boolean): Promise<TicketResult> {
+export async function checkTicket(ticket: string, identity: string, env: Env, dev: boolean): Promise<TicketResult> {
   if (dev && ticket.startsWith("dev-")) {
     if (ticket === "dev-invalid") return { ok: false, status: 401 };
     if (ticket === "dev-steamdown") return { ok: false, status: 502 };
@@ -21,7 +21,7 @@ export async function checkTicket(ticket: string, env: Env, dev: boolean): Promi
   }
   // Half set up: fail safe as 502, not 500.
   if (!env.STEAM_WEB_API_KEY || !env.STEAM_APP_ID) return { ok: false, status: 502 };
-  const q = new URLSearchParams({ key: env.STEAM_WEB_API_KEY, appid: env.STEAM_APP_ID, ticket, identity: env.TICKET_IDENTITY });
+  const q = new URLSearchParams({ key: env.STEAM_WEB_API_KEY, appid: env.STEAM_APP_ID, ticket, identity });
   let body: unknown;
   try {
     const res = await fetch(`${AUTH_URL}?${q}`, { signal: AbortSignal.timeout(TIMEOUT_MS) });

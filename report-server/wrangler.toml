@@ -20,6 +20,11 @@ TICKET_IDENTITY = "trivia-reports"
 REPORTS_OPEN = "1"  # "0": every POST /reports → 503 closed
 RATE_USER = "20"
 RATE_TOTAL = "1000"
+TELEMETRY_IDENTITY = "trivia-telemetry"  # plan 105
+TELEMETRY_OPEN = "1"  # "0": every POST /telemetry → 503 closed
+RATE_TELEMETRY_USER = "10"
+RATE_TELEMETRY_TOTAL = "2000"
+TELEMETRY_KEEP_DAYS = "30"
 
 [observability]
 enabled = false

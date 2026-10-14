@@ -14,14 +14,17 @@ export interface Report {
 
 export type Checked = { ok: true; report: Report } | { ok: false; status: 400 | 413 | 415; field?: string };
 
+export const LANG = /^[a-z]{2,3}(-[A-Za-z0-9]{2,8})*$/;
+export const VERSION = /^\d+\.\d+\.\d+([-+][0-9A-Za-z.-]+)?$/;
+
 const CONTROL = /[\u0000-\u0008\u000b-\u001f\u007f]/g;
 
 const RULES: Record<keyof Report, (v: unknown) => boolean> = {
   question: (v) => typeof v === "string" && /^[A-Za-z0-9._:-]{1,64}$/.test(v),
-  lang: (v) => typeof v === "string" && v.length <= 16 && /^[a-z]{2,3}(-[A-Za-z0-9]{2,8})*$/.test(v),
+  lang: (v) => typeof v === "string" && v.length <= 16 && LANG.test(v),
   text: (v) => typeof v === "string" && v.replace(CONTROL, "").trim().length >= 1 && v.replace(CONTROL, "").trim().length <= 4000,
   note: (v) => v === undefined || v === null || (typeof v === "string" && v.replace(CONTROL, "").length <= 1000),
-  version: (v) => typeof v === "string" && v.length <= 32 && /^\d+\.\d+\.\d+([-+][0-9A-Za-z.-]+)?$/.test(v),
+  version: (v) => typeof v === "string" && v.length <= 32 && VERSION.test(v),
   pool: (v) => v === null || (typeof v === "string" && /^[0-9a-f]{8}$/.test(v)),
   ticket: (v) => typeof v === "string" && /^[0-9A-Za-z-]{2,4096}$/.test(v),
 };
