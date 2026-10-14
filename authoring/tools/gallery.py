@@ -414,8 +414,6 @@ def start(r):
     r.wait('[data-focus-id="notice"]')
     r.settle(1)
     r.shot("start-save-notice")
-    r.scene("blocked")
-    r.shot("start-supply-report")
 
 
 def player(r):
@@ -634,7 +632,7 @@ def mods(r):
 
 STEPS = [
     (["language", "consent"], first_start),
-    (["start", "language-from-start", "start-resume", "start-save-notice", "start-supply-report"], start),
+    (["start", "language-from-start", "start-resume", "start-save-notice"], start),
     (["player", "player-delete-confirm", "letter-picker"], player),
     (["choice-gamemaster", "choice-solo", "customize", "greeting"], choice),
     (["supply-notice", "choice-supply-report"], supply),

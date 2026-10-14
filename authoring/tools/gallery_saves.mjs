@@ -91,7 +91,7 @@ const subs = [...new Set(data.pool.map((q) => q.subcategory))].slice(0, 3);
 saves.seen = structuredClone(done);
 saves.seen.seen = data.pool.filter((q) => subs.includes(q.subcategory))
   .map((q) => ({ question_id: q.id, game_id: 0, seen_on: "2026-10-01T20:00:00" }));
-// Every question blocked: the supply report on Start and Choice.
+// Every question blocked: the supply report on Choice.
 saves.blocked = structuredClone(done);
 saves.blocked.blocked = data.pool.map((q) => q.id);
 

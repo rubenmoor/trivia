@@ -1,19 +1,17 @@
 <script lang="ts">
-  // Start (04, "Start"): wordmark, resume or new game, the save notice (plan 55), the supply report (GF-5),
-  // the Mods button in the shell (plan 118), the language button top right (plan 126).
+  // Start (04, "Start"): wordmark, resume or new game, the save notice (plan 55), the Mods button
+  // in the shell (plan 118), the language button top right (plan 126).
   import type { takeSaveNotice } from "../../lib/engine.ts";
   import { endonym, lang, t } from "../../lib/i18n.ts";
-  import type { Game, Supply } from "../../lib/types.ts";
+  import type { Game } from "../../lib/types.ts";
   import EffectsDemo from "../EffectsDemo.svelte";
   import Fireworks from "../Fireworks.svelte";
   import Prompt from "../Prompt.svelte";
-  import SupplyReport from "../SupplyReport.svelte";
 
   let {
     game,
     running,
     levels,
-    supply,
     notice,
     busy,
     mods = null,
@@ -26,7 +24,6 @@
     game: Game | null;
     running: boolean;
     levels: number;
-    supply: Supply | null;
     notice: ReturnType<typeof takeSaveNotice>;
     busy: boolean;
     /** Null outside the shell: no Mods button. */
@@ -79,9 +76,7 @@
       </button>
     {/if}
   </div>
-  {#if mods?.held && !notice}<p class="held">{t("mods.held", { n: mods.held })}</p>{/if}
-  {#if supply}<SupplyReport {supply} />{/if}
-</section>
+  {#if mods?.held && !notice}<p class="held">{t("mods.held", { n: mods.held })}</p>{/if}</section>
 
 <style>
   section {

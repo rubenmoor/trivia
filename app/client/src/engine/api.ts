@@ -32,13 +32,13 @@ function guard<T>(save: SaveData, status: number, fn: () => Reply<T>): Reply<T> 
   }
 }
 
-/** GET /api/game[?player=]: view first, then supply. */
+/** GET /api/game[?player=]: the view; `player` only checked. */
 export function getGame(save: SaveData, data: EngineData, io: Io, player?: string | null):
-  Reply<{ game: Game | null; supply: Supply }> {
+  Reply<{ game: Game | null }> {
   return guard(save, 400, () => {
     const view = game.view(save, data, io);
     if (player) game.cleanName(player);
-    return { save, status: 200, body: { game: view, supply: game.supply(save, data) } };
+    return { save, status: 200, body: { game: view } };
   });
 }
 

@@ -14,7 +14,7 @@
   import { listenPads } from "../lib/gamepad.svelte.ts";
   import { listen, pushScope, type Action } from "../lib/input.svelte.ts";
   import { emit, loadedMods, watchLayers, type ModLayer } from "../lib/mods.ts";
-  import type { Game, GameMode, JokerBudget, JokerEvent, Flagged, Supply } from "../lib/types.ts";
+  import type { Game, GameMode, JokerBudget, JokerEvent, Flagged } from "../lib/types.ts";
   import FlagDialog from "./FlagDialog.svelte";
   import FlagList from "./FlagList.svelte";
   import Hud from "./Hud.svelte";
@@ -78,7 +78,6 @@
   /** Cards on the table that replaced a skipped or purged one: they deal in with «¡Nueva!» (JK-6). */
   let fresh = $state<Set<number>>(new Set());
   let game = $state<Game | null>(null);
-  let supply = $state<Supply | null>(null);
   let error = $state<string | null>(null);
   let loading = $state(true);
   /** The black layer of the transition routine. */
@@ -157,7 +156,7 @@
 
   async function refresh() {
     try {
-      ({ game, supply } = await fetchGame());
+      ({ game } = await fetchGame());
       if (loading) await askLanguage();
       notice ??= takeSaveNotice();
       error = saveWarning();
@@ -260,7 +259,6 @@
       return next;
     } catch (e) {
       error = errorText(e);
-      if (e instanceof GameError && e.supply) supply = e.supply;
       return undefined;
     } finally {
       busy = was;
@@ -614,7 +612,7 @@
       <Consent ondone={() => go("start", "whoosh")} />
     {:else if screen === "start"}
       <Stage />
-      <S.Start {game} {running} {levels} {supply} {notice} {busy} mods={startMods} onmods={() => (modsOpen = true)} onlanguage={openLanguage} onresume={resume} onnew={newGame} ondismiss={() => (notice = null)} />
+      <S.Start {game} {running} {levels} {notice} {busy} mods={startMods} onmods={() => (modsOpen = true)} onlanguage={openLanguage} onresume={resume} onnew={newGame} ondismiss={() => (notice = null)} />
     {:else if screen === "player"}
       <Stage />
       <S.Player {busy} onchoose={choosePlayer} ondeleted={refresh} />

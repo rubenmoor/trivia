@@ -4,7 +4,7 @@ import { readdirSync } from "node:fs";
 import { join } from "node:path";
 import type { Category } from "../lib/types.ts";
 import { deletePlayer, gameAction, getGame, getPlayers } from "./api.ts";
-import { repair } from "./game.ts";
+import { repair, supply } from "./game.ts";
 import { subKey, type PoolQuestion } from "./pool.ts";
 import { emptySave, engineData, type EngineData, type SaveData } from "./state.ts";
 import { fixture, realAgeGroups, realBundles } from "./test/fixtures.ts";
@@ -53,7 +53,7 @@ for (const file of scenarios) {
       const io = { rng, now: step.now };
       const d = dataFor(step.pool);
       // Python burned, the engine counts (plan 65): a seen question that this game can offer again
-      // (a later game, or undo after a swap) and the player-scoped supply differ from the recording.
+      // (a later game, or undo after a swap) differs from the recording.
       const seen = save.seen.filter((s) => d.byId.has(s.question_id)).map((s) => s.question_id);
       const offered = new Set(step.call === "new" ? [] : latestState(save)?.offered);
       if (seen.some((q) => !offered.has(q))) break;
@@ -61,10 +61,10 @@ for (const file of scenarios) {
         : step.call === "players" ? getPlayers(save)
         : step.call === "delete_player" ? deletePlayer(save, step.args)
         : gameAction(save, d, io, step.call, keyed(step.args));
-      if (seen.length && step.call === "get_game" && r.status === 200) {
-        const { supply: _, ...body } = recorded(r.body) as { supply: unknown };
-        const { supply: __, ...want } = step.response.body as { supply: unknown };
-        assert.deepEqual({ status: r.status, body }, { status: step.response.status, body: want }, at);
+      // Recorded get_game bodies carry a supply; getGame no longer does (plan 133).
+      if (step.call === "get_game" && r.status === 200) {
+        const { supply: _, ...want } = step.response.body as { supply: unknown };
+        assert.deepEqual({ status: r.status, body: recorded(r.body) }, { status: step.response.status, body: want }, at);
       } else assert.deepEqual({ status: r.status, body: recorded(r.body) }, step.response, at);
       if (r.status !== 200) assert.deepEqual(r.save, save, `${at}: save changed on error`);
       if (step.db) assert.deepEqual(recorded(snapshot(withoutOrphans(r.save))), upgradeDb(step.db), `${at}: db`);
@@ -83,7 +83,7 @@ test("supply (plan 65): seen questions come back in the next game, only blocked 
   assert.equal(save.seen.length, 1);
   const again = gameAction(save, d, io, "new", { player: "Ana" });
   assert.equal(again.status, 200);
-  assert.ok(getGame(save, d, io, "Ana").body.supply.ok);
+  assert.ok(supply(save, d).ok);
   save = { ...again.save, blocked: [d.pool[0].id] };
   const short = gameAction(save, d, io, "new", { player: "Bea" });
   assert.equal(short.status, 409);

@@ -80,6 +80,7 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 - Language button top right, under ☰ (D-96, decision 157): globe + endonym, key per catalog (`I`/`L`/`S`), pad Y; opens the Language screen. The only place to change the language; hidden while the save notice shows.
 - If an unfinished game exists (server state, GF-4), show «Continuar» with its player and level («Continuar: Sofía, nivel 5») next to «Nueva partida».
 - Desktop shell only (`desktop?.mods`): a `secondary` «Mods» button under play/resume (count of loaded mods when > 0); while the notice isn't accepted and mods are held off, a line «N mods found, off until you allow them» under the buttons.
+- No supply report (plan 133): the supply check is on the Choice screen.
 
 ### Mods (plan 118)
 - `game/screens/Mods.svelte`: full-screen layer like `Credits.svelte` (own modal scope, `data-focus-default`); from the start screen's «Mods», the Esc menu's «Mods» row, or by itself before the start screen after a crashed start (`safeStart.reason === "crashed"`). Not in the dev server (no `mods` bridge). Shell side: `18-steam-integration.md` "Modding: mods screen and safe start".

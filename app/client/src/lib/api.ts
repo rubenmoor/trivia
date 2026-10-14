@@ -66,7 +66,7 @@ export async function markReported(id: string): Promise<Flagged[]> {
   });
 }
 
-export async function fetchGame(): Promise<{ game: Game | null; supply: Supply }> {
+export async function fetchGame(): Promise<{ game: Game | null }> {
   return read((save, data, io) => engine.getGame(save, data, io));
 }
 
