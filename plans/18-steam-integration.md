@@ -236,6 +236,7 @@ The client ships as a readable tree, so a mod replaces any single module, compon
   - global CSS keeps its path: `app.css`, `game/theme.css` (colour variables)
   - third-party: `vendor/<package>/<path>` (Svelte runtime: `vendor/svelte/src/internal/client/…`); Vite helpers: `_virtual/…`
   - `.map` next to each JS file; no hashes; `public/` files where they are (`audio/`, `fonts/`)
+- Every export kept: each shipped `src/**/*.{ts,svelte}` (not tests, `engine/test/`, `locales/xx.ts`) and Svelte's runtime are extra Rolldown inputs with `preserveEntrySignatures: "strict"` (task 1005, decision 145), so a by-path import sees the source's exports, not only the ones the game uses.
 - `index.html`: one `<script type="module" src="/main.js">` + `app.css`; the browser follows imports; a full conversion replaces it.
 - Scoped class names: `svelte-<component path>` (e.g. `svelte-game-hud`), stable per component path, not per CSS content: a theme's selectors survive our CSS changes.
 - Screen list (plan 116): `game/screens/*.svelte` (one file per full screen, `Game.svelte` mounts them); Question pieces: `game/question/*`; `window.trivia`'s screen names ("Modding: `window.trivia`") and the guide (task 909).

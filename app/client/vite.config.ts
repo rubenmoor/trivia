@@ -1,6 +1,6 @@
 import { defineConfig, type Plugin } from "vite";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
-import { readFileSync } from "node:fs";
+import { globSync, readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { credits } from "./credits.ts";
 
@@ -20,6 +20,11 @@ function outPath(id: string | null | undefined, ext: string): string | null {
   const rel = pkg >= 0 ? `vendor/${id.slice(pkg + 14)}` : id.startsWith(src) ? id.slice(src.length) : null;
   return rel && `${rel.replace(/\.(ts|js|mjs)$/, "")}${ext}`;
 }
+
+/** Every shipped source module, so each keeps all its exports for mods' by-path imports (task 1005). */
+const modules = Object.fromEntries(
+  globSync("**/*.{ts,svelte}", { cwd: src, exclude: ["**/*.test.ts", "**/*.d.ts", "engine/test/**", "locales/xx.ts"] }).map((f) => [f, `${src}${f}`]),
+);
 
 /** Only `/main.js` as a module script: the browser follows its imports. */
 function oneEntryScript(): Plugin {
@@ -41,9 +46,10 @@ export default defineConfig({
     cssCodeSplit: true,
     modulePreload: false,
     rolldownOptions: {
-      // Svelte's runtime with every export: precompiled mod components import it from `/vendor/svelte/…` (plan 117).
+      // Our modules and Svelte's runtime with every export: mods import them by path (plan 117, decision 145).
       input: {
         index: `${client}index.html`,
+        ...modules,
         "svelte-index": "svelte",
         "svelte-client": "svelte/internal/client",
         "svelte-version": "svelte/internal/disclose-version",
