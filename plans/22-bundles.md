@@ -55,6 +55,7 @@ The developer's direction (2026-10-07): a batch writes for **one bundle, chosen 
 
 ## Player bundles (mods)
 Mods carry bundles in our own format, loaded by our own loader (pm plan 115, decision 128: Bundles from mods: the shell merges bundles.json; mod ids namespaced <mod id>:<id>). Player content never mixes with our ids, seen counts, flags, reports or telemetry.
+- Player-facing format doc: `modding/bundles.md`; template `modding/template-bundle/`; AI prompt `modding/bundle-prompt.md`; check `trivia --check-mod <folder>` (pm plan 120, decision 133: Player bundle kit: check with trivia --check-mod, kit in modding/ shipped in the install folder).
 - Format: `<mod>/data/bundles.json` (rows as ours: `id`, `kind`, `languages`, `name`, `description`; `rule`, `voice`, `about` ignored); `<mod>/data/bundles/<id>/`: `categories.json`, `names.<locale>.json` (optional), `pool.json` / `pool.<locale>.json` (`version: 1`), media anywhere below; base bundles too.
 - Row checks: `bundleRows()` in `app/desktop/mods.mjs` (≤ 256 KB, slugs, structure); bad row dropped, warning `bundle_row`; bad file `bundle_json`. A mod with bundles has `kind` `bundle`.
 - Namespacing: bundle and question ids → `<mod id>:<id>`; `:` never in our ids: `isModId()` / `isOurs()` in `app/client/src/engine/pool.ts`.
