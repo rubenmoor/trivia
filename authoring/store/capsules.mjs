@@ -232,8 +232,16 @@ async function main() {
       procs.push(x.proc);
     }
     const port = await freePort();
-    const shell = spawn("trivia-desktop", [`--remote-debugging-port=${port}`, "--remote-allow-origins=*", "--no-mods", "--disable-gpu"] /* GPU compositing under Xvfb stalls captures */, {
-      env: { ...process.env, DISPLAY: display, TRIVIA_SAVE_DIR: tmp, TRIVIA_STEAM_SDK: path.join(tmp, "no-steam"), TRIVIA_MUTE: "1" },
+    const env = { ...process.env, DISPLAY: display, TRIVIA_SAVE_DIR: tmp, TRIVIA_STEAM_SDK: path.join(tmp, "no-steam"), TRIVIA_MUTE: "1" };
+    const shellArgs = [`--remote-debugging-port=${port}`, "--remote-allow-origins=*", "--no-mods", "--disable-gpu"]; // GPU compositing under Xvfb stalls captures
+    if (!visible) {
+      // into Xvfb, not the desktop's Wayland
+      delete env.WAYLAND_DISPLAY;
+      delete env.NIXOS_OZONE_WL;
+      shellArgs.push("--ozone-platform=x11");
+    }
+    const shell = spawn("trivia-desktop", shellArgs, {
+      env,
       stdio: ["ignore", "ignore", "pipe"],
     });
     shell.stderr.on("data", (d) => process.env.DEBUG && process.stderr.write(d));

@@ -194,9 +194,17 @@ async function main() {
       procs.push(x.proc);
     }
     const port = await freePort();
-    const shell = spawn("trivia-desktop", [`--remote-debugging-port=${port}`, "--remote-allow-origins=*"], {
-      // dev user: saves and flags on under the gate (plan 87), no notice
-      env: { ...process.env, DISPLAY: display, TRIVIA_SAVE_DIR: tmp, TRIVIA_STEAM_SDK: path.join(tmp, "no-steam"), TRIVIA_DEV_STEAM_USER: "1" },
+    // dev user: saves and flags on under the gate (plan 87), no notice
+    const env = { ...process.env, DISPLAY: display, TRIVIA_SAVE_DIR: tmp, TRIVIA_STEAM_SDK: path.join(tmp, "no-steam"), TRIVIA_DEV_STEAM_USER: "1" };
+    const shellArgs = [`--remote-debugging-port=${port}`, "--remote-allow-origins=*"];
+    if (!visible) {
+      // into Xvfb, not the desktop's Wayland
+      delete env.WAYLAND_DISPLAY;
+      delete env.NIXOS_OZONE_WL;
+      shellArgs.push("--ozone-platform=x11");
+    }
+    const shell = spawn("trivia-desktop", shellArgs, {
+      env,
       stdio: ["ignore", "ignore", "pipe"],
     });
     shell.stderr.on("data", (d) => process.env.DEBUG && process.stderr.write(d));
