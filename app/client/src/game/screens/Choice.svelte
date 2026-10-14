@@ -237,8 +237,8 @@
   }
 
   const MODE_ROW: { id: GameMode; name: string; about: string; key: string }[] = [
-    { id: "gamemaster", name: t("mode.gamemaster"), about: t("mode.gamemasterAbout"), key: t("mode.gamemasterKey").toLowerCase() },
     { id: "solo", name: t("mode.solo"), about: t("mode.soloAbout"), key: t("mode.soloKey").toLowerCase() },
+    { id: "gamemaster", name: t("mode.gamemaster"), about: t("mode.gamemasterAbout"), key: t("mode.gamemasterKey").toLowerCase() },
   ];
   const modes = MODE_ROW.filter((m) => BUILT_MODES.includes(m.id));
   const CUSTOMIZE_KEY = t("customize.openKey").toLowerCase();
