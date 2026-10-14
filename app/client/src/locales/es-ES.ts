@@ -44,6 +44,10 @@ export const esES = {
   cards: {
     intro: "Una hoja A4: 4 × {hint} y 2 × cada otro comodín. Imprimir al {scale} (sin «ajustar a la página»), luego recortar por las líneas.",
   },
+  outlook: {
+    none: "En esta partida pueden salir preguntas que ya habéis visto.",
+    exhausted: "Ya habéis visto todas las preguntas de: {list}",
+  },
   picker: {
     title: "Escribid vuestro nombre",
   },

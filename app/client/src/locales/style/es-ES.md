@@ -20,5 +20,5 @@ Differences from `es` only.
 ## Bad patterns
 Seen in review; guidance, not a lint. Wrong → right.
 - «ustedes» leaking in because a new `es` string got no override: every new `es` string that addresses the players gets its `es-ES` leaf in the same change
-  - today: `outlook.none` «… que ya vieron» → «… que ya habéis visto»; `outlook.exhausted` «Ya vieron todas …» → «Ya habéis visto todas …»
+  - fixed in task 800: `outlook.none` «… que ya vieron» → «… que ya habéis visto»; `outlook.exhausted` «Ya vieron todas …» → «Ya habéis visto todas …»
 - Overriding a leaf that reads the same in Spain: leave it to `es`

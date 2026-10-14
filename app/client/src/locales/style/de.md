@@ -37,13 +37,15 @@ Fixed terms; use them as written, never a synonym.
 
 ## Bad patterns
 Seen in review; guidance, not a lint. Wrong → right.
-- Plural address (TV check 2026-10-13; `de.ts` today: `flag.pickerTitle`, `flag.copyFailed`, `joker.*.rule`, `joker.category.title`, `joker.snipe.aim`, `outlook.none`, `outlook.exhausted`, `picker.title`, `screen.player.firstLabel`, `screen.level.again`, `screen.select.title`, `screen.question.prompt`, `copy.*`, `error.category_same`, `error.snipe_no_repeat`):
+- Plural address (TV check 2026-10-13; fixed in task 800: `flag.pickerTitle`, `flag.copyFailed`, `joker.*.rule`, `joker.category.title`, `joker.snipe.aim`, `outlook.none`, `outlook.exhausted`, `picker.title`, `screen.player.firstLabel`, `screen.level.again`, `screen.select.title`, `screen.question.prompt`, `copy.*`, `error.category_same`, `error.snipe_no_repeat`):
   - «Wählt eine Frage» → «Frage wählen»
   - «Schreibt euren Namen» → «Namen eingeben»
   - «Welches Thema wollt ihr?» → «Welches Thema soll es sein?»
   - «Ihr kennt schon alle Fragen aus: {list}» → «Alle Fragen schon gesehen: {list}»
   - «Darauf könnt ihr stolz sein.» → «Darauf kann man stolz sein!»
   - «ihr seid schon bei diesem Thema» → «schon bei diesem Thema»
+  - «Zielt auf die falsche Antwort» → «Ziel: die falsche Antwort» (`joker.snipe.aim`)
+  - «Trefft ihr die richtige, …» → «Ein Treffer auf die richtige: …» (`joker.snipe.rule`)
 - Singular «du» imperative where an infinitive works: «wähle genau ein Grundpaket» → «genau ein Grundpaket wählen» (`error.base_bundle_count`)
 - Mode name as a phrase: «Mit Spielleitung» → «Spielleitermodus» (TV check)
 - Esc row that names the wrong target and clashes with quit: «Spiel beenden (neues einrichten)» → «Zurück zum Hauptmenü» (TV check)

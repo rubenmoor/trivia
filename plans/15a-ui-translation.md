@@ -61,6 +61,7 @@ The developer's TV check (2026-10-13) found catalogs that read like translations
   - `de`: never plural, infinitive for prompts and buttons, impersonal elsewhere, «du» only per listed string
   - translation prompts (`authoring/tools/prompts/locale-<l>.md`) get the guide's address and glossary after a pm decision (pm task 801)
 - **TV-check fixes** (pm task 800): de «Spielleitermodus»; «Steam achievements» / «logros de Steam» / «Steam-Erfolge»; Esc «Back to main menu» / «Volver al menú principal» / «Zurück zum Hauptmenü» → start screen; «Quit game» / «Salir del juego» / «Spiel beenden» in its own colour; `de` plural sweep; `es` changes only in these strings (D-59)
+  - done 2026-10-14: catalogs, `restart()` in `Game.svelte` → Start, `--quit` token in `theme.css`; also `en` `flag.copyFailed` (no «yourselves»), `es-ES` `outlook.none`/`outlook.exhausted` overrides, `de` „…“ quotes and «…» without space
 - **Screen gallery** (pm tasks 802, 803): `trivia-gallery` renders every screen and dialog per UI language from a demo save into `work/gallery/`, with the catalog key of each visible text; `trivia-authoring` `/gallery` shows the shots, the developer flags a string with a note (`authoring/data/ui-flags.json`)
 - **Flag → fix loop** (pm task 804): one pm decision per language "Screen gallery reviewed? (<lang>)"; a fix task reads the open flags, fixes the catalogs per the guide, adds new bad patterns to the guide, sets `fixed_on`, re-runs the gallery; re-runnable any time
 

@@ -229,7 +229,7 @@ Three loops of the same suspenseful theme, getting more intense. It's best if al
 `Esc` opens a semi-transparent menu over any screen. It pauses the current state: question media pauses and animations freeze. `Esc` again closes it and resumes. The family sees the overlay, so it never shows the correct answer. A separate GM view is GM-3 (05).
 
 Menu items (keyboard-navigable, large enough for the TV), the gamemaster menu (MD-12, D-88): a general part (every mode) and, in gamemaster mode, the cheats in a dashed amber panel «Trucos del anfitrión» beside it (shown while a game runs or can be undone). Fits without scrolling at 1920 × 1080 and 1280 × 800 (`es`, `xx`).
-- **General, left column:** Continuar; «Preguntas marcadas»; Pantalla completa; Créditos; Mods (desktop shell only: the Mods screen, «Back» returns to the menu; "Mods (plan 118)"); «Terminar partida (configurar otra)» (confirm; `abandon`, then the same player's configure screen, else Start); Salir del juego (desktop); under «Sonido»: volumes, mute (no language rows, D-96).
+- **General, left column:** Continuar; «Preguntas marcadas»; Pantalla completa; Créditos; Mods (desktop shell only: the Mods screen, «Back» returns to the menu; "Mods (plan 118)"); «Volver al menú principal» (confirm; `abandon`, then Start; milestone 9 replaces D-88's configure screen); «Salir del juego» (desktop; own colour `--quit` / `--quit-line`, apart from every other button, selected too); under «Sonido»: volumes, mute (no language rows, D-96).
 - **Continuar** (close).
 - **Volumen:** music, effects and media sliders, plus mute all.
 - **Cheats, first column** (`overlay.cheats`; each enabled only in the phase its engine action accepts):

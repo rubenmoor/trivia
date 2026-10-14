@@ -48,6 +48,10 @@
   --ink: #2a2238;
   --seal: #c23b2e;
 
+  /* Quit game (Esc menu, desktop): apart from every other button */
+  --quit: #7a2a38;
+  --quit-line: #ff8a9b;
+
   /* Tower materials (VD-7) */
   --stone: #5d6b86;
   --brick: #c8643b;

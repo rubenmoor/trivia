@@ -490,16 +490,11 @@
     flagListOpen = true;
   }
 
-  /** Abandon, then the same player's configure screen (D-88); without a player, Start. */
+  /** Abandon, then Start (milestone 9, replaces D-88's configure screen). */
   async function restart() {
     leaveOverlay();
-    const player = game?.player ?? null;
     if (!(await act("abandon"))) return;
-    if (player === null) return toStart();
-    await refresh();
-    chosen = player;
-    refused = null;
-    await go("choice", "whoosh");
+    await toStart();
   }
 
   /** The flag dialog (decision 60); media pauses like under the overlay. */

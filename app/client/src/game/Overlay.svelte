@@ -32,6 +32,8 @@
     /** General part, under «Sonido»: volumes, mute, telemetry. */
     sound?: boolean;
     confirm?: boolean;
+    /** «Salir del juego»: its own colour. */
+    quit?: boolean;
     volume?: Channel;
     joker?: JokerName;
     /** «Cambiar pregunta»: ←/→ toggles seen. */
@@ -240,7 +242,7 @@
     { label: t("credits.open"), enabled: true, run: () => (creditsOpen = true), col: 0 },
     ...(onmods ? [{ label: t("mods.open"), enabled: true, run: onmods, col: 0 as const }] : []),
     { label: t("overlay.restart"), enabled: canRestart, run: onrestart, confirm: true, col: 0 },
-    ...(shell ? [{ label: t("overlay.quit"), enabled: true, run: quit, col: 0 as const }] : []),
+    ...(shell ? [{ label: t("overlay.quit"), enabled: true, run: quit, col: 0 as const, quit: true }] : []),
     ...CHANNELS.map((c) => ({ label: c.label, enabled: true, run: () => {}, volume: c.key, col: 0 as const, sound: true })),
     {
       label: t(sound.volumes.muted ? "overlay.muted" : "overlay.unmuted"),
@@ -379,6 +381,7 @@
   {:else}
     <button
       class:selected={i === selected}
+      class:quit={item.quit}
       data-item={i}
       disabled={!item.enabled}
       onclick={() => activate(i)}
@@ -578,6 +581,13 @@
   button.selected,
   .row.selected {
     border-color: var(--amber);
+  }
+  button.quit {
+    background: var(--quit);
+    color: var(--quit-line);
+  }
+  button.quit.selected {
+    border-color: var(--quit-line);
   }
   .row {
     display: grid;
