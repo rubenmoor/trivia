@@ -41,7 +41,8 @@ Steam requires developers to disclose AI-generated content on the store page (co
 - Check Anthropic's terms for commercial use of outputs (they allow it for paid API use; the pipeline runs on `claude -p` under the author's account, so check the plan type).
 
 ## Steamworks and store
-- **Account:** Steamworks partner signup, identity and tax interview (bank details, a W-8BEN for non-US individuals or the company equivalent), and a **$100 app credit** per game (recouped after $1,000 revenue). Person or company: OQ-33.
+- **Account:** Steamworks partner signup, identity and tax interview (bank details, a W-8BEN for non-US individuals or the company equivalent), and a **$100 app credit** per game (recouped after $1,000 revenue). Holder: the developer as a person, W-8BEN, after a tax advisor check; store Developer/Publisher as a label; company later via app transfer (D-98).
+- **Price (D-98):** paid one-time purchase, $9.99 for now; Valve's regional matrix; launch discount; packs as free DLC (D-95), no paid DLC.
 - **Name (D-50):** «Living Room Trivia», with the Steam localized name «Trivia en Familia» for Spanish (Steamworks → General Application Settings; same limits as a name change, so set both before the coming-soon page). Check both names on Steam, in trademark registers and for a domain (PUB-7).
 - **Store page:** capsule images in the required sizes, screenshots, a trailer (optional but strongly advised; S6 or later: backlog B-21), short and long description per language (LUI-6), system requirements, supported languages table, controller support flags, Steam Deck compatibility.
 - **Content survey / age rating:** the Steam questionnaire (no violence, no gambling; kid-friendly). IARC is optional on Steam.
@@ -55,9 +56,9 @@ Steam requires developers to disclose AI-generated content on the store page (co
 - [x] PUB-3 Replace the problem files from PUB-1 in the review tool. *pm plan 53, 2026-10-14: no replacement pass (decision 47): q-0021 (GFDL 1.2, Container_Ship.jpg), q-1100 (PD-US-not renewed, HitComicsNo19.jpg), q-1194 (PD-Harris-Ewing, PD-US-no notice, LCCN2016872269.jpg) are needs_work, out of the export; new files when they're reworked. Gate: `qgen validate` errors on an approved pick with verdict `replace`, reasons in the message; `/review?licence=replace` stays as the list's view.*
 - [ ] PUB-4 Decide the code and content license (OQ-35); add a `LICENSE` file.
 - [x] PUB-5 Credits screen and a generated `CREDITS.md` in the build (media, audio, fonts, glyphs, libraries). *Done 2026-10-12 (pm plan 47): `app/client/credits.ts` writes `dist/credits.json` + `dist/CREDITS.md` (1,102 media, 13 sounds, fonts, glyphs, Svelte); Credits screen from the ☰ overlay. Open: Electron entry (task 621), `CREDITS.md` at the desktop artefact root, Game section after OQ-35.*
-- [ ] PUB-6 Steamworks signup, tax and identity; pay the app credit (OQ-33).
+- [ ] PUB-6 Steamworks signup as a private person (D-98): tax advisor check first (pm decision 67's questions: registration, treaty rate, VAT, DSA address); identity, bank, W-8BEN tax interview; store Developer/Publisher label; pay the $100 app credit (DLC packs need none).
 - [ ] PUB-7 Name and trademark check for «Living Room Trivia» and «Trivia en Familia» (D-50); if it fails, OQ-34 reopens.
 - [ ] PUB-8 Store page: texts, capsules, screenshots, trailer, AI disclosure, privacy line. *Plan: pm plan 88 (drafts in `17a-store-page.md`, capsule art: pm decision 77, scripted screenshots, trailer → backlog).*
 - [ ] PUB-9 Content survey and age rating.
 - [ ] PUB-10 Check Anthropic's commercial-use terms for the generated content.
-- [ ] PUB-11 Price and regional pricing (OQ-33).
+- [ ] PUB-11 Price (D-98): confirm $9.99 against comparable titles; Valve's recommended regional prices (check EUR, MXN, COP, LATAM-USD); launch discount % and length per Valve's discount rules; every pack DLC free.

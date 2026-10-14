@@ -1,10 +1,9 @@
 # Open Questions
 
-Frozen on 2026-10-12: this file is history. New questions for the developer are `pm` decisions (`pm decision add`, see `pm instructions`); answers that set a lasting rule still go to `decisions.md`. Old OQ ids stay valid where they are cited. The four questions below were still open when the file was frozen; the `pm` plan or task named with each one raises it as a `pm` decision.
+Frozen on 2026-10-12: this file is history. New questions for the developer are `pm` decisions (`pm decision add`, see `pm instructions`); answers that set a lasting rule still go to `decisions.md`. Old OQ ids stay valid where they are cited. The questions below were still open when the file was frozen; the `pm` plan or task named with each one raises it as a `pm` decision.
 
 ## Open when frozen
 - OQ-45 (Freesound): plan 42, tasks 204–205
-- OQ-33 (price, account): plan 39, tasks 193–194
 - OQ-35 (licence): plan 40, tasks 198–199
 - OQ-46 (`colombia` subcategories): task 249 (write plan: Regional packs)
 
@@ -12,13 +11,13 @@ Frozen on 2026-10-12: this file is history. New questions for the developer are 
 - **OQ-45** Freesound's API is free for non-commercial use, and commercial apps need a licence from UPF. Our pipeline uses the API only to find sounds; the game ships the CC0/CC BY files, never the API. Before a paid Steam release: ask Freesound whether that counts as commercial use of the API, or replace the Freesound picks.
 
 ### Added 2026-10-07 (Steam release, [`11-steam.md`](11-steam.md))
-- **OQ-33** Price model (paid, free, free + paid packs), and who holds the Steamworks account (a person or a company; tax)?
 - **OQ-35** Code and content license (the repo has no `LICENSE` today); does new release content stay public on GitHub?
 
 ### Added 2026-10-09 (bundles, D-49)
 - **OQ-46** Should a `colombia` question also have to use a `colombia` subcategory? 19 `colombia` questions use a `base` subcategory today (Historia: Grito de Independencia, Boyacá, Panamá; Navidad: novena; Piratas: Cartagena's walls; Mundiales de fútbol: James's goal; …). The game's «Cambiazo» picker then offers «Historia» and serves a Colombian question. If yes, `colombia` needs subcategories like «Historia de Colombia» and «Literatura colombiana».
 
 ## Resolved
+- **OQ-33** Paid one-time purchase, $9.99 (final check PUB-11), regional pricing, launch discount; packs as free DLC, never paid; the developer holds the Steamworks account as a person after an advisor check, company later via app transfer (D-98).
 - **OQ-31** Launch languages es, en, de (zh-Hans, ru, pt-BR later, milestone 12); `base` in neutral Latin American Spanish (es-419) plus an es-ES variant where wording differs; `colombia` keeps its Colombian voice; store: Spanish – Latin America, Spanish – Spain, English, German (D-78).
 - **OQ-37** Multiplayer: round-robin co-op, round-robin competitive, competitive (timed); one gamepad per player, keyboard, mouse, shared keyboard; no phones (D-77; timed revised D-80).
 - **OQ-32** Content target: 5000 approved per launch language (es, en, de) with D-53's mix; no games-per-player number, CT-2 reports it for information (D-75).

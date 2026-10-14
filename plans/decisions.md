@@ -909,3 +909,18 @@ Template:
   - **Preset** in both modes: `playerChoice`, the player's newest game's bundles, else the locale's first base bundle, non-base off (pm decision 33).
 - Consequences: a fresh solo game plays base only (was: every offered bundle); a non-base mod bundle is off by default in solo too.
 - Supersedes / related: pm decision 51 (solo plays the defaults); pm decisions 33, 38 in part (fresh default on the configure screen only); D-85, D-88
+
+## D-98: Paid one-time purchase, $9.99; free DLC packs; a person holds the Steamworks account
+- Date: 2026-10-14
+- Context: OQ-33, plan 39 (task 193 prep, task 194); pm decisions 66 (Price model (OQ-33)), 67 (Steamworks account holder (OQ-33)). Not legal or tax advice.
+- Decision:
+  - **Price:** paid one-time purchase, base price $9.99 for now; final check at PUB-11. Valve's recommended regional matrix; a launch discount. No in-game store, no IAP.
+  - **Packs:** every bundle besides `base` ships as **free DLC** (own store entry, optional install; D-94, D-95), never paid: paid packs would push players to their own AI-made questions instead. No paid DLC planned. Player-made bundles: Steam Workshop and modding (own milestone).
+  - **Account holder:** the developer as a private person, after a tax advisor check (advisor questions: pm decision 67's body); W-8BEN; store Developer/Publisher as a free-text label.
+  - **Switch to a company** (app transfer) if revenue passes the advisor's threshold, a partner joins, or the EU DSA trader address can't be kept private.
+- Consequences:
+  - OQ-35 (plan 40): a paid game with a public pool → anyone can copy the content; the store sells the game, not the questions.
+  - OQ-45 (plan 42): paid → "commercial" under Freesound API / CC NC terms; CC BY credits stay required.
+  - $100 app credit recouped at $1,000 gross; free DLC costs no app credit.
+  - Professional checks still owed before PUB-6 signup: tax advisor (business registration, W-8BEN treaty rate, VAT/small-business threshold, income tax, DSA address); re-check the ≈ figures (regional matrix, discount rules, comparable prices) in Steamworks at PUB-11.
+- Supersedes / related: D-50, D-94, D-95; OQ-33; PUB-6, PUB-11; pm decisions 66, 67; plans 39, 40, 42

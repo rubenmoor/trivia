@@ -65,7 +65,7 @@ Logged in [`open-questions.md`](open-questions.md) (frozen 2026-10-12; questions
 | OQ-30 | ~~Default mode~~ answered: five modes, no presets, no checkpoint, no skip outside gamemaster mode (D-74) | 13 |
 | OQ-31 | ~~Launch languages~~ answered: es, en, de (zh-Hans, ru, pt-BR later); `base` in es-419 + es-ES variant, `colombia` stays Colombian (D-78) | 15, 16 |
 | OQ-32 | ~~Content target~~ answered: 5000 approved per launch language, D-53's mix; no games number (D-75) | 16 |
-| OQ-33 | Price model (paid, free, free + paid packs) and who holds the Steamworks account (person or company, tax) | 17 |
+| OQ-33 | ~~Price model; account~~ answered: paid $9.99, regional pricing, packs as free DLC; account: a person, advisor check first (D-98) | 17 |
 | OQ-34 | ~~Store name~~ answered: «Living Room Trivia» / «Trivia en Familia», pending PUB-7 (D-50) | 17 |
 | OQ-35 | Code and content license; does the question pool stay public on GitHub? | 17 |
 | OQ-36 | ~~Audience~~ answered: four age groups on one shared scale (D-38) | 13, 16 |
@@ -152,7 +152,7 @@ In order; workers never log in, enter credentials or contact Valve (plan 94).
    - Store page entered: `task 672: Store page entry checklist and PUB-8 close-out`'s decision answered "entered".
    - Names per D-50 set in Steamworks: «Living Room Trivia», localized «Trivia en Familia» (part 1 of masterplan 10, `task 253`; PUB-7 check passed).
    - Content survey complete, incl. AI disclosure (part 9 of masterplan 10, `task 259`; PUB-9).
-   - App credit paid (PUB-6, `task 253`; decision 66 for person/company); note the payment date (21-day rule).
+   - App credit paid (PUB-6, `task 253`; decision 67, D-98: a person); note the payment date (21-day rule).
    - Steamworks "Your Store Presence" checklist all green.
 2. Steamworks app landing page: "Mark as ready for review" for the store page, ≥ 7 business days before the wanted live date.
 3. Wait for Valve's review (3–5 business days).
