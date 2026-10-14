@@ -194,17 +194,9 @@ Before every Steam upload, on a clean, tagged commit: `trivia-release-check` (~1
 
 Each artefact (~2.5 GB) holds the game, the data and the pool's media, and plays offline. Unpack it and start `Trivia.exe` (Windows; SmartScreen: «More info → Run anyway») or `./trivia` (Linux, Steam Deck). The first build downloads Electron for both platforms; later builds run offline. Outside Nix: `npm ci --prefix app/desktop && npm run dist --prefix app/desktop`.
 
-### Publish a mod to the Workshop
+### Mod the game
 
-- Steam client running and logged in; `--dry-run` checks and stages without Steam.
-- First publish creates a private item and writes its id into `mod.json` (`workshopId`, decision 132); later runs update it.
-- Accept the Workshop legal agreement at the printed URL, check the item page, then `--visibility public`.
-
-```sh
-trivia-desktop --publish-mod mods/<mod> [--changenote <text>] [--visibility public|friends|unlisted|private] [--content-only] [--dry-run]
-```
-
-Packaged: the game executable (`trivia`, `Trivia.exe`) with the same flags; Windows writes `<mod>-publish.log` beside the mod folder. Details: `plans/18-steam-integration.md` "Modding: Publishing".
+Question bundles, themes, rules tweaks and full conversions, shared on the Steam Workshop: the modding guide [`modding/README.md`](modding/README.md), with example mods in [`modding/examples/`](modding/examples/).
 
 ### Update dependencies
 
