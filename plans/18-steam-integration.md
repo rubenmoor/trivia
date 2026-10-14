@@ -18,7 +18,10 @@ The shell's own code stays tiny: create a fullscreen window, load `app/client/di
 - Credits: the shell adds its own entry (Electron, MIT, plus the Chromium licence file Electron ships) to the generator `app/client/credits.ts` (PUB-5, plan 47).
 
 ## Steam features
-- **Steam Cloud:** the save (12) is one JSON file per Steam user, `<userData>/save/<steamid64>/game.json` (`%APPDATA%\trivia`, `~/.config/trivia`; D-72, plan 87); without Steam `save/local/game.json`, S3's `save/game.json` migrated there at start. Steam Auto-Cloud syncs it with no code: subdirectory `trivia/save/{64BitSteamID}`, non-recursive, pattern `game.json` (the `.tmp`, `backup/`, `local/` and other users' folders stay local).
+- **Steam Cloud:** the save (12) is one JSON file per valid Steam user (decision 111), `<userData>/save/<steamid64>/game.json` (`%APPDATA%\trivia`, `~/.config/trivia`; D-72, plan 87). Steam Auto-Cloud syncs it with no code: subdirectory `trivia/save/{64BitSteamID}`, non-recursive, pattern `game.json` (the `.tmp`, `backup/`, `dev/` and other users' folders stay local).
+  - No valid user: no save file, no folder; the page plays memory-only (`MemoryStore`), one dismissable notice «Sin Steam no se guarda el progreso» per start, flag action hidden; `--import-save` refuses (exit 1).
+  - Dev switch (`TRIVIA_DEV_STEAM_USER=1`) without a SteamID: `TRIVIA_SAVE_DIR` if set, else `save/dev/game.json` (decision 114).
+  - No `local/` folder, no migration of S3's `save/game.json`: old files left alone, never read; the family's save comes in via `--import-save` (plan 99).
   - Auto-Cloud values for SW-7 (plan 87; entered in Steamworks → Steam Cloud by the developer):
     - Quota: 1 file, 20 MB (envelope ≤ 10 MB, D-72).
     - Root path: root `WinAppDataRoaming`, subdirectory `trivia/save/{64BitSteamID}`, pattern `game.json`, OS all, recursive off.
@@ -172,10 +175,9 @@ Date: · Build commit:
 | A plays (new player, a few questions) → quit → B shows the same players and seen counts | | |
 | Two Steam accounts on one OS login → separate saves (`save/<id>/` each) | | |
 | Family Sharing borrower → own save | | |
-| First Steam start with an S3 or `local/` save → «Usar el progreso de este equipo» offered | | |
-| Second machine with a cloud save → no question | | |
 | Offline on both, play on both, then online → Steam's conflict dialog; the picked side wins whole | | |
-| Steam's cloud file list (game properties, or `store.steampowered.com/account/remotestorage`) shows only `game.json`, never `.tmp`, `backup/`, `local/` | | |
+| Steam not running → full game, notice shown, no flag action, nothing written under `save/` | | |
+| Steam's cloud file list (game properties, or `store.steampowered.com/account/remotestorage`) shows only `game.json`, never `.tmp`, `backup/`, `dev/` | | |
 
 ## Steam Deck Verified
 Requirements to plan for: full controller support with correct glyphs (IN), legible text at 800p, the on-screen keyboard for text entry, no launcher, working default settings, no warnings on start. Test on a real Deck before applying.
