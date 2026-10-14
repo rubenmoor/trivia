@@ -23331,7 +23331,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 Shots for es, en, de look right (no overflow, no plural address in de); restart under Steam checked on Linux, Windows checked or its follow-up exists; per-commit checks pass.', '2026-10-13T18:34:23Z', '2026-10-14T07:39:37Z', 938);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (976, 118, 'Docs: mods screen, notice, crash marker, safe start', 'work', 'open', NULL, NULL, 'Plan 118 task 4. After tasks 973–975.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (976, 118, 'Docs: mods screen, notice, crash marker, safe start', 'work', 'done', NULL, '2026-10-14, plans/04-ui-tv-display.md (Start: Mods button + held-off hint; new ''Mods (plan 118)'' section: screen, controls, notice dialog; Esc menu Mods row), plans/18-steam-integration.md (new ''Modding: mods screen and safe start'': notice + hold-off, mods-start.json marker + 20 s ping, safeStart, mods:notice/restart/ready, restart args, --no-mods via Steam launch options; decisions 151-154), directory.md (Mods.svelte, ModsNotice.svelte, mods-start.json, notice flag), AGENTS.md trivia-desktop --no-mods line; per-commit checks pass', 'Plan 118 task 4. After tasks 973–975.
 
 ## What
 - `plans/04-ui-tv-display.md`: Mods screen, start screen button + hint, Esc menu row, notice dialog
@@ -23341,7 +23341,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - cite the decisions task 973 recorded
 
 ## Done when
-Docs name the recorded decisions and paths; per-commit checks pass.', '2026-10-13T18:34:23Z', NULL, 938);
+Docs name the recorded decisions and paths; per-commit checks pass.', '2026-10-13T18:34:23Z', '2026-10-14T07:40:57Z', 938);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (977, 119, 'publish.mjs: validate, stage, upload; workshopId in mods.mjs', 'work', 'done', NULL, '2026-10-13, app/desktop/publish.mjs (preparePublish, describe, publish, writeWorkshopId, WORKSHOP_TAGS), resolve.mjs (contained exported), electron-builder.yml (ships publish.mjs). mods.mjs already had workshopId (task 950/955). WORKSHOP_TAGS uses decision 135''s proposed list (bundle, theme, code, conversion, es, en, de; decision 135 unanswered; locale tags reduced to base language). Binding check: submitItemUpdate polls 30 s and returns false on timeout; publish() treats false after >= 29 s as timeout and polls getItemUpdateProgress until status 0 (unconfirmed: true). First publish sets private even with --content-only. publish() returns {ok, workshopId}; task 978 adds the binding''s captured reason line. Throw-away fake-ugc script checked all done-when cases.', 'Plan 119 task 1. Read plan 119 (`pm show p119`) "Binding", "Binding facts", "Command" steps 1–10 and "Published file id".
 
 - After plan 112''s task 950 (`mods.mjs` validator) and task 951 (`contained()` in `resolve.mjs`).
@@ -26095,6 +26095,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (894, 973, '2026-10-14T07:08:39Z', '2026-10-14T07:15:26Z', 'done', NULL, 0, '6bbf93e210e719789a4573b7264bdf1e1c323da7', 'claude-opus-5-5[1m]', '19701d30-14f2-4e97-a9a9-f5cf8761099f', 49, 58, 26460, 2301904, 88317, 1.6963487999999998, 2040245);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (895, 974, '2026-10-14T07:15:26Z', '2026-10-14T07:30:28Z', 'done', NULL, 0, '93bb8998720b6cfb04944c220e314c962eb41582', 'claude-opus-5-5[1m]', '572cd359-86dc-4dde-ac4e-7a9b4582d5df', 82, 152, 61403, 11162342, 190667, 4.9864724000000011, 2040245);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (896, 975, '2026-10-14T07:30:28Z', '2026-10-14T07:39:45Z', 'done', NULL, 0, 'd5f51e2b7f1f510c227f984683a68b4cff3f6e61', 'claude-opus-5-5[1m]', '427e9d8c-30f9-4811-a8de-fd401ff76c0a', 45, 72, 16253, 2616336, 95109, 1.6094872, 2040245);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (897, 976, '2026-10-14T07:39:45Z', '2026-10-14T07:41:04Z', 'done', NULL, 0, '37fb58de2d0052bed30abe1116879e68e9b1f8b7', 'claude-opus-5-5[1m]', '8333c00e-4080-4ad1-ada4-77de9efa167a', 16, 24, 6722, 635882, 58487, 0.7296084, 2040245);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

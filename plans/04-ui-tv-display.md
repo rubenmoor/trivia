@@ -75,6 +75,16 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 - Game title, a short subtitle, a big «¡Jugar!» button.
 - The first click is also the **audio unlock**. Browsers block sound and autoplaying video with sound until a user gesture, so nothing plays before it. After this click, autoplay works for the rest of the session.
 - If an unfinished game exists (server state, GF-4), show «Continuar» with its player and level («Continuar: Sofía, nivel 5») next to «Nueva partida».
+- Desktop shell only (`desktop?.mods`): a `secondary` «Mods» button under play/resume (count of loaded mods when > 0); while the notice isn't accepted and mods are held off, a line «N mods found, off until you allow them» under the buttons.
+
+### Mods (plan 118)
+- `game/screens/Mods.svelte`: full-screen layer like `Credits.svelte` (own modal scope, `data-focus-default`); from the start screen's «Mods», the Esc menu's «Mods» row, or by itself before the start screen after a crashed start (`safeStart.reason === "crashed"`). Not in the dev server (no `mods` bridge). Shell side: `18-steam-integration.md` "Modding: mods screen and safe start".
+- Rows in load order (invalid and pending ones last, no move controls): name, version, source (Local / Workshop + published file id), kind badges, languages (endonyms; none = all); state line (loaded, off, on/off after restart when `on ≠ active`, invalid + reason, downloading, disabled in Steam, needs a Steam user); warnings (plan 112/114 codes, `modErrors()`); focused row: description, local folder name.
+- Codes → `mods.state.*`, `mods.warning.*`, `mods.error.*`; an unknown code shows as is.
+- Controls (IN-1, each a button with `<Prompt>`): on/off per row, ▲▼ move on the focused row (pad LB/RB via `joker-focus`), «Refresh» (`mods:list` again), «All off», «Restart to apply» (enabled when any `on ≠ active` or the order differs from this run's), «Back» (`Esc`/`Backspace`/B → where it came from). Every change calls `mods:set` at once; no save button.
+- Top lines: crashed safe start («The last start with mods didn't finish…», names the mods, «All off» focused); `--no-mods`; no valid Steam user (decision 111, rows still toggle); empty list (where mods go, the guide explains; no link).
+- One-time notice (`game/ModsNotice.svelte`, decision 151: Mods notice per install in mods.json; new mods held off until it): on the first turn-on or «Restart to apply» with any on while not accepted; mods are made by other players and run code with the game's access; «Allow mods» → `mods.notice()`, then the action; «Cancel» (focus default, `Esc`/B) changes nothing.
+- Screen gallery: steps in task 802 (stubbed `mods` list).
 
 ### Player (D-28)
 - «¿Quién juega?»: the known player names as big buttons (most recent first, keys `1`–`9`), plus «Nuevo jugador» with a text field (the TV machine's keyboard, OQ-11).
@@ -215,7 +225,7 @@ Three loops of the same suspenseful theme, getting more intense. It's best if al
 `Esc` opens a semi-transparent menu over any screen. It pauses the current state: question media pauses and animations freeze. `Esc` again closes it and resumes. The family sees the overlay, so it never shows the correct answer. A separate GM view is GM-3 (05).
 
 Menu items (keyboard-navigable, large enough for the TV), the gamemaster menu (MD-12, D-88): a general part (every mode) and, in gamemaster mode, the cheats in a dashed amber panel «Trucos del anfitrión» beside it (shown while a game runs or can be undone). Fits without scrolling at 1920 × 1080 and 1280 × 800 (`es`, `xx`).
-- **General, left column:** Continuar; «Preguntas marcadas»; Pantalla completa; Créditos; «Terminar partida (configurar otra)» (confirm; `abandon`, then the same player's configure screen, else Start); Salir del juego (desktop); under «Sonido»: volumes, mute, language rows.
+- **General, left column:** Continuar; «Preguntas marcadas»; Pantalla completa; Créditos; Mods (desktop shell only: the Mods screen, «Back» returns to the menu; "Mods (plan 118)"); «Terminar partida (configurar otra)» (confirm; `abandon`, then the same player's configure screen, else Start); Salir del juego (desktop); under «Sonido»: volumes, mute, language rows.
 - **Continuar** (close).
 - **Volumen:** music, effects and media sliders, plus mute all.
 - **Cheats, first column** (`overlay.cheats`; each enabled only in the phase its engine action accepts):

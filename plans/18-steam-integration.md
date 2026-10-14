@@ -198,7 +198,7 @@ Mods are folders the shell serves over `app://trivia/` before our own client and
   - Every other `/data/` file: ours only, never overlaid (a mod's `data/pool.json` isn't served).
 - Full conversion: a mod's `index.html` wins the SPA fallback too.
 - Not overlaid: `/media?url=…`, `/api/*` (404), a mod's own files (decision 148: Overlay: a mod's entry and root style.css never shadow our files): its `mod.json`, its `entry` and its root `style.css` (served under `/mods/<id>/` only; an entry `main.js` never replaces our `/main.js`).
-- `--no-mods`: no layers this run (way back from a full conversion).
+- `--no-mods`: no layers this run (way back from a full conversion); safe starts: "Modding: mods screen and safe start".
 - With mods on (decision 123: Achievements in games with mods on: allowed or off?; decision 146: Achievements, mods screen and rich presence with mods on): achievements as without ("Achievements in Steamworks"); flags hidden on player questions; reports ours only; telemetry keeps `isOurs` answers only, `games[].mods` = this run's overlay non-empty; rich presence unchanged (no "modded" token); no achievements line on the mods screen.
 - Path safety: `contained()` compares `realpath`s against the layer root's `realpath` (every root, ours too): symlinks out of a layer miss; `..`, encoded `..`, absolute and drive-letter paths stay inside or miss; files only.
 - MIME by extension (`MIME` in `resolve.mjs`), unknown → `application/octet-stream`. Paths case-sensitive (Windows: match case).
@@ -269,6 +269,24 @@ Subscribed Workshop items are mod sources next to the local folder (pm plan 114)
   - Codes stay codes; the mods screen (plan 118) maps them to `t()`.
 - Dev: `TRIVIA_DEV_WORKSHOP_DIR=<dir>`, only with `TRIVIA_DEV_STEAM_USER=1` (one stderr line): `<dir>/<numeric id>/` installed item, `<dir>/<id>.downloading/` downloading.
 - Steam updating files while running: accepted; restart after updates.
+
+## Modding: mods screen and safe start
+The shell side of the mods screen (pm plan 118; screen: `04-ui-tv-display.md` "Mods"): a one-time notice before any mod runs, a crash marker that makes the next start a safe one, restart to apply. The page only calls IPC; the shell reads and writes `mods.json` and relaunches.
+- Code: `app/desktop/mods.mjs` (`noticed`, `withNotice`, `readMarker`/`writeMarker`/`clearMarker`, hold-off in `arrange`), `main.mjs` (safe start, marker, relaunch, IPC), `preload.cjs`, `app/client/src/lib/desktop.ts` (`ModsBridge`), `main.ts` (`ready` → `mods.ready()`).
+- Notice (decision 151: Mods notice per install in mods.json; new mods held off until it): `mods.json` gains `notice: true` + `noticeAt`, per machine like decision 136; while missing, `arrange()` appends new mods `on: false`, so no mod code runs before the notice; after it, new mods appended `on`; accepting never touches existing rows.
+- Crash marker (decision 153: Mods crash marker: mods-start.json, cleared on ready or a live page after 20 s): `mods-start.json` beside `mods.json` (`<userData>/`, dev `state/desktop/`), `{ at, mods: [active ids] }`, written atomically before `loadURL` only when the run has layers.
+  - Cleared on `mods:ready` (our client after `window.trivia`'s `ready`; a full conversion calls `window.triviaShell.mods.ready()`), or when the page answers a ping 20 s after `did-finish-load` (3 s answer window).
+  - Relaunch without mods: no ping answer, `render-process-gone` (not `clean-exit`) or a main-frame load failure while the marker is set.
+  - Not cleared on quit: closing a broken start early gives a safe next start (intended).
+- Start: marker found → deleted, no layers, `safeStart = { reason: "crashed", mods }`; `--no-mods` → `safeStart = { reason: "flag" }`; else `null`; stderr line each. No loop: a safe start writes no marker.
+- Manual safe start (decision 152: Manual safe start: --no-mods only): `--no-mods` in Steam's per-game launch options (Properties → Launch options); no held key or pad button, no second Steamworks launch option.
+- Restart (decision 154: Mods restart drops our own flags): `mods:restart` and the crash relaunch flush the save queue and telemetry like a quit, `app.relaunch({ args })` without our own flags (`OWN`/`relaunchArgs()`: `--no-mods`, `--import-save <file>`, `--force`, …, with their values), Electron/Chromium/Steam args kept, `app.exit(0)`; `SteamAppId` stays in the environment. Overlay and presence after a relaunch under Steam: manual release row (task 1010).
+- IPC (beside `mods:list`/`mods:set`, "Modding: Workshop source"):
+  - `mods:list` also returns `safeStart` and `notice`
+  - `mods:notice` → sets the notice, returns the list
+  - `mods:restart` → relaunch as above
+  - `mods:ready` → clears the marker
+- Bridge: `window.triviaShell.mods` = `{ list, set, notice, restart, ready }`.
 
 ## Modding: Publishing
 Modders publish a mod folder as a Workshop item with the game itself (pm plan 119); Steam's client uploads, we make no network calls of our own. The folder is only read and copied, never run. The modding guide (pm plan 121) copies this section.
