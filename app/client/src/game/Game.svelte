@@ -20,7 +20,6 @@
   import JokerTray from "./JokerTray.svelte";
   import { levelsOf, onTwelve } from "./levels.ts";
   import Overlay from "./Overlay.svelte";
-  import Question, { type JokerPlay } from "./Question.svelte";
   import { music, sfx, unlock, type Cue, type Track } from "./sound.svelte.ts";
   import Stage from "./Stage.svelte";
   import { swap } from "./swap.ts";
@@ -30,6 +29,7 @@
   import Language from "./screens/Language.svelte";
   import Level from "./screens/Level.svelte";
   import Player from "./screens/Player.svelte";
+  import Question, { type JokerPlay } from "./screens/Question.svelte";
   import Select from "./screens/Select.svelte";
   import Start from "./screens/Start.svelte";
   import Victory from "./screens/Victory.svelte";
@@ -219,7 +219,7 @@
   async function jokerPlayed(next: Game, event: JokerEvent) {
     error = saveWarning();
     if (event.joker === "easier" || event.joker === "category") {
-      // The card flip (JK-7): the transitions in Question.svelte only run while this is set.
+      // The card flip (JK-7): the transitions in screens/Question.svelte only run while this is set.
       swap.active = true;
       swappedBy = event;
       sfx(event.joker === "easier" ? "whistle-down" : "swoosh-up");
