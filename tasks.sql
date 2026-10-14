@@ -25474,6 +25474,32 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 - Guide for the wording: `app/client/src/locales/style/de.md`
 - Answer when done; the fix task (`Gallery fixes from the review flags`) waits for all four languages', NULL, NULL, '2026-10-14T16:25:23Z', NULL, 804, NULL, 'once', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (165, 'Subcategory keys in code: bundle + name; base keeps bare names', 'answered', '[]', 'Decision 110 (d) makes a subcategory bundle + name. A one-string key where base keeps its bare name means existing saves (purged, swapped_to, notified_exhausted) stay valid without a save migration, and the frozen engine fixtures replay through a small normalizer. D-100 in plans/decisions.md.', 'Python: (bundle, name); engine, names files and reports: one string, base''s bare name, another bundle''s <bundle>/<name> (subKey, categories.sub_key)', NULL, '2026-10-14T18:25:57Z', '2026-10-14T18:25:57Z', 826, NULL, 'rule', 826, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (166, 'colombia subcategories (OQ-46): where the 19 go, and the list for 2000', 'pending', '["Proposed list as in the body (10 categories, 51 subcategories)", "Only map the 19 now (same targets), add more subcategories later from qgen batch --bundle colombia", "Changes (name them: renames, merges, moves, drops, additions)"]', '`task 827: colombia subcategories (OQ-46)`, `decision 110: Regional packs at launch (RG-5, OQ-46)` (d). Taxonomy is the developer''s.
+
+## Today
+- `colombia`: 109 questions (102 approved, 7 rejected), 6 categories, 31 subcategories (`app/data/bundles/colombia/categories.json`).
+- 19 approved on `base` subcategories (pool checked): Historia 3, Piratas 2, Desiertos 2, Navidad 2, Mundiales de fútbol 2; Aves, Cuentos infantiles, Literatura, Islas, Reciclaje, Árboles, Deportes extremos, Museos 1 each.
+- Scale: `base` 198 subcategories for a 5000 target (~25 each); 2000 over 51 subcategories ≈ 40 each (narrow ones like «Feria de las Flores» fewer, broad ones like «Animales de Colombia» more).
+
+## Proposal (new = *, ← the 19 moved there)
+1. Colombia (existing): Regiones de Colombia; *Departamentos de Colombia; Ciudades de Colombia; Ríos de Colombia; *Paisajes de Colombia ← Desiertos 2 (Taroa, Tatacoa); *Destinos turísticos de Colombia ← Deportes extremos 1 (San Gil); Símbolos patrios de Colombia
+2. *Naturaleza de Colombia: Animales de Colombia (moved from 1); *Aves de Colombia ← Aves 1; *Plantas y flores de Colombia ← Árboles 1 (palma de cera); Parques naturales de Colombia (moved from 1); *Islas y mares de Colombia ← Islas 1 (Gorgona)
+3. *Historia de Colombia: *Historia de Colombia ← Historia 1 (Panamá 1903); *Independencia de Colombia ← Historia 2 (Grito, Boyacá); *Colombia colonial y piratas ← Piratas 2 (murallas de Cartagena, fuertes); *Culturas precolombinas de Colombia ← Museos 1 (Balsa Muisca, Museo del Oro); *Personajes históricos de Colombia
+4. Fiestas, mitos y tradiciones de Colombia (existing 6) + *Navidad en Colombia ← Navidad 2 (novena)
+5. Comida colombiana (existing 5) + *Café de Colombia
+6. Música y gente de Colombia (existing 3) + *Vallenato, *Instrumentos musicales colombianos
+7. *Arte, letras y pantalla de Colombia: *Literatura colombiana ← Literatura 1 (María), Cuentos infantiles 1 (El renacuajo paseador); *Pintores y artistas colombianos; *Artesanías colombianas; *Cine y televisión colombianos
+8. Deporte colombiano (existing 5) + *Colombia en los Mundiales ← Mundiales de fútbol 2 (James, Linda Caicedo)
+9. Así hablamos en Colombia (existing 2) + *Gentilicios colombianos (paisa, rolo, costeño…)
+10. *Vida diaria en Colombia: *Vida cotidiana en Colombia ← Reciclaje 1 (canecas); *Billetes y monedas de Colombia; *Transporte en Colombia (chiva, TransMilenio, Metrocable)
+
+- Totals: 10 categories (4 new), 51 subcategories (20 new); every one of the 19 lands on a `colombia` subcategory; none repeats a `base` name except the category «Historia de Colombia» shares its name with its own subcategory (fine within a bundle? if not, the category becomes «Historia colombiana»).
+- Names en/de: drafted by `qgen` after the answer, not part of this decision.
+
+## Options
+1. The list above.
+2. Only the 19''s targets now (Historia de Colombia, Independencia…, etc. as above), nothing else new; more subcategories later.
+3. Changes: name them.', NULL, NULL, '2026-10-14T18:27:43Z', NULL, 827, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -26413,6 +26439,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (929, 194, '2026-10-14T18:07:48Z', '2026-10-14T18:11:14Z', 'done', NULL, 0, 'b5e2db1154e1e93ec2f87d9f359d6c64bb0ac5a5', 'claude-opus-5-5[1m]', '87fcad18-fc21-4022-8640-d9e5bf4010e1', 13, 24, 5168, 518321, 44064, 0.55963219999999991, 2296074);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (930, 750, '2026-10-14T18:11:14Z', '2026-10-14T18:12:53Z', 'done', NULL, 0, '20194a8f4971b8efdb6480ea38095d41b47583a1', 'claude-opus-5-5[1m]', '4326c023-e13c-4048-b2f3-075ac0602969', 23, 44, 7833, 1272524, 62049, 0.90773280000000023, 2296074);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (931, 826, '2026-10-14T18:12:53Z', '2026-10-14T18:26:47Z', 'done', NULL, 0, '140bfd20f20af82642d1aaffeaeec7a0ec983edf', 'claude-opus-5-5[1m]', '4476419a-35ec-4239-a020-37e3b84ebf3c', 115, 220, 68046, 17925478, 237713, 6.8485996000000018, 2296074);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (932, 827, '2026-10-14T18:26:48Z', '2026-10-14T18:27:59Z', 'blocked', NULL, 0, '0f448fb9605b99ee2f0b0ace4edbf94db8a5543b', 'claude-opus-5-5[1m]', '1144a102-404a-48a7-9cde-1618b7f630a9', 11, 22, 7250, 492711, 45345, 0.6063902000000001, 2296074);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -26629,6 +26656,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (766, 150);
 INSERT INTO task_decision (task_id, decision_id) VALUES (783, 110);
 INSERT INTO task_decision (task_id, decision_id) VALUES (786, 137);
 INSERT INTO task_decision (task_id, decision_id) VALUES (801, 160);
+INSERT INTO task_decision (task_id, decision_id) VALUES (827, 166);
 INSERT INTO task_decision (task_id, decision_id) VALUES (845, 116);
 INSERT INTO task_decision (task_id, decision_id) VALUES (865, 117);
 INSERT INTO task_decision (task_id, decision_id) VALUES (866, 117);
