@@ -211,6 +211,7 @@ function markdown(
   svelteLicence: string,
   electronLicence: string | null,
   packageLicences: { name: string; text: string }[],
+  icon: boolean,
 ): string {
   const out = [
     "# Credits",
@@ -256,6 +257,15 @@ function markdown(
   out.push("");
   if (c.glyphs) out.push("## Controller glyphs", "", "Original, drawn for the game.", "");
   if (c.achievements) out.push("## Steam achievement icons", "", "Original, drawn for the game.", "");
+  // Decisions 77, 87.
+  if (icon) {
+    out.push(
+      "## Game icon",
+      "",
+      "Original: typographic, set in Baloo 2; template designed with AI assistance (Claude), no image generation.",
+      "",
+    );
+  }
   out.push("## Libraries", "");
   for (const l of c.libraries) out.push(`- ${[l.name, l.version].filter(Boolean).join(" ")} (${l.url}): ${l.license}`);
   out.push("", "### Svelte licence", "", svelteLicence, "");
@@ -306,7 +316,7 @@ function buildCredits(): { json: Credits; md: string; warnings: string[] } {
     achievements: existsSync(`${repo}app/desktop/achievements/FIRST_WIN.svg`),
     libraries: [lib.entry, ...(shell?.entries ?? []), ...desktop.entries],
   };
-  return { json, md: markdown(json, s.md, lib.text, shell?.text ?? null, desktop.texts), warnings };
+  return { json, md: markdown(json, s.md, lib.text, shell?.text ?? null, desktop.texts, existsSync(`${repo}app/desktop/icon.png`)), warnings };
 }
 
 /** Emits credits.json and CREDITS.md into dist/; serves /credits.json in dev. */

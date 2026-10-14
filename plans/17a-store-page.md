@@ -321,7 +321,7 @@ Typographic capsules, library art and the game icon (decision 77: store capsule 
 | `art/library-hero.png` | Library: hero (all languages) |
 | `art/page-background.png` | Store: page background (all languages) |
 | `dlc-<id>/<lang>/{header,small,main,vertical}.png` | DLC app's store capsules |
-| `icon-1024.png` | Game icon source: exe, Linux, Steam client (`task 683`) |
+| `icon-1024.png` | Game icon source: exe, Linux, Steam client (`task 683`); tracked copy `app/desktop/icon.png`: copy again after a re-render |
 | `icon-256.png` | Community/client: shortcut icon |
 | `app-icon-184.jpg` | Community/client: app icon |
 | `icon-16.png` | Legibility check only, not uploaded |

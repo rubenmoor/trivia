@@ -2,6 +2,8 @@
 appId: io.github.rubenmoor.trivia
 productName: Trivia
 executableName: trivia
+extraMetadata:
+  description: Trivia  # exe FileDescription (Task Manager), Linux Comment
 artifactName: ${productName}-${version}-${os}-${arch}.${ext}
 directories:
   output: release
@@ -57,8 +59,10 @@ win:
     - from: steamworks_sdk/redistributable_bin/win64/steam_api64.dll
       to: steamworks_sdk/redistributable_bin/win64/steam_api64.dll
   signExecutable: false  # resedit sets icon + metadata (no wine); unsigned (B-11)
+  icon: icon.png  # decision 87: capsules.mjs's icon-1024.png
 linux:
   category: Game
+  icon: icon.png
   files:
     - "!node_modules/@koromix/koffi-win32-*/**"
     - "!node_modules/steamworks-ffi-node/prebuilds/{darwin,win32}-*/**"
