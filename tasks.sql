@@ -12428,21 +12428,28 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 6. Delete the script and temp data (keep throw-away en/de data only if the checklist needs it, and say where and how to remove it).
 
 Done when: the decision exists with the table and checklist, the close-out task waits on it, script and temp data deleted.', '2026-10-12T20:25:56Z', '2026-10-13T00:47:50Z', 476, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (479, 30, 'Close out AG-7 and BN-6', 'work', 'open', NULL, NULL, 'Plan 30, task 3 ("Close-out docs" section). Waits on the play-test decision raised by the pre-check task.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (479, 30, 'Close out AG-7 and BN-6', 'work', 'open', NULL, NULL, 'Plan 30, the play-test handling and the "Close-out docs" section. Pending on `decision 155: Play-test of age groups and bundles (again, after the decision 50 fixes)`.
 
-If the answer is "problems": add one fix task per problem to plan 71 (engine/data/validate), 29 (screen) or 27 (older engine parts), raise the play-test decision again (same body, updated), make this task pending on the new one, stage, stop.
+## Play-test handling
+- Decision 155''s checklist lacks plan 30''s part-6 items (`plan 133: No supply report on the Start screen`):
+  - Start shows no supply report, also with a nearly empty pool for the default choice (e.g. the gallery''s `blocked` save).
+  - A choice too small for its pool: report on the Choice screen only, «¡A jugar!» disabled; by mouse and keyboard (IN-1).
+- Answer "fine" without these items: raise one short decision with just these two items, make this task pending on it, stage, stop.
+- Answer "problems": one fix task per problem in a new plan in milestone 5 (screen, Choice → priority 400; engine/data → 600; plans 27, 29, 71, 125, 133 are done); raise the play-test again (decision 155''s checklist, updated, incl. the two items above), make this task pending on it, stage, stop.
+- On the final "fine": `pm decision consequences 155 "…"` (and of the short follow-up decision, if any); the docs below.
 
-If "all sessions played fine":
-- `plans/21-age-groups.md`: AG-7 `[x]` with date and plans 27/28/29; remove "The game plays young teens (levels 1–10) until AG-7, whatever the focus" and other "until AG-7" wording.
-- `plans/22-bundles.md`:
-  - BN-6 `[x]` with date and plans 27/29/71; "Later" section: drop the BN-6 bullet (section too if empty); Cambiazo sentence ("all of them until BN-6") in the present tense.
-  - `languages` per bundle (the game offers only its language''s bundles; `qgen validate` rules) and base bundles (`kind: base`, exactly one per session, default the language''s first, then every other bundle of the language); rewrite "`base` is always on and can''t be switched off" and every `always_on` mention; link plan 71''s D entry.
+## Close-out docs (after "fine")
+- `plans/21-age-groups.md`: AG-7 `[x]` with date and plans 27/28/29/125; remove "The game plays young teens (levels 1–10) until AG-7, whatever the focus" and other "until AG-7" wording.
+- `plans/22-bundles.md` (check first: plans 125–127 may have done parts):
+  - BN-6 `[x]` with date and plans 27/29/71/125; "Later" section: drop the BN-6 bullet (section too if empty); Cambiazo sentence ("all of them until BN-6") in the present tense.
+  - `languages` per bundle (the game offers only its language''s bundles; `qgen validate` rules) and base bundles (`kind: base`, exactly one per session, preset per `decision 158: Bundle selection in every mode, apart from customization`); rewrite "`base` is always on and can''t be switched off" and every `always_on` mention; bundle selection in every mode (decision 158); «Regional: Colombia»; link plan 71''s D entry.
 - `plans/project.md`: AG-7, BN-6 `[x]`; BN-6''s "(`base` always on)" → "(exactly one base bundle)".
-- `directory.md`: `age-groups.json` / `bundles.json` rows say the game reads them (group ranges, choice; `languages`, `kind: base`); check files new in plans 27–29, 71 are listed.
-- `app/data/age-groups.json` `about`: no "The game plays young teens until AG-7", no "draft". `app/data/bundles.json` `about`: `languages` and base bundles (exactly one per session), no "always on"; "players switch on or off" only for non-base bundles.
-- `plans/decisions.md`: D-68 gets "superseded in part by D-<plan 71''s entry>" if plan 71 didn''t add it; new D entry (play-test confirmed, date, milestone 5 done-when met; related D-38, D-39, D-68, plans 28/71 entries) only if the answer adds something beyond "fine".
+- `directory.md`: `age-groups.json` / `bundles.json` rows say the game reads them (group ranges, choice; `languages`, `kind: base`); check files new in plans 27–29, 71, 125–127, 133 are listed.
+- `app/data/age-groups.json` `about`: no "until AG-7", no "draft". `app/data/bundles.json` `about`: `languages` and base bundles (exactly one per session), no "always on"; "players switch on or off" only for non-base bundles.
+- `plans/decisions.md`: D-68 gets "superseded in part by D-<plan 71''s entry>" if missing; new D entry (play-test confirmed, date, milestone 5 done-when met; related D-38, D-39, D-68, plans 28/71 entries) only if the answer adds something beyond "fine".
+- Decision 50''s consequences are recorded; add nothing there.
 
-Done when: AG-7, BN-6 `[x]` in plans 21, 22, `project.md`; `grep -rn "until AG-7\|until BN-6\|always_on\|always on\|Siempre activo" plans/21-age-groups.md plans/22-bundles.md plans/project.md directory.md app/data/*.json app/client/src` finds nothing; `qgen validate` passes.', '2026-10-12T20:25:56Z', NULL, 476, 0);
+Done when: the developer confirmed the play-test incl. the part-6 items; AG-7, BN-6 `[x]` in plans 21, 22, `project.md`; `rg -n "until AG-7|until BN-6|always_on|always on|Siempre activo" plans/21-age-groups.md plans/22-bundles.md plans/project.md directory.md app/data/*.json app/client/src` finds nothing (`decisions.md` history stays); `qgen validate` passes.', '2026-10-12T20:25:56Z', NULL, 476, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (480, 71, 'Bundle languages and base bundles in data and engine', 'work', 'done', NULL, '2026-10-12, app/data/bundles.json, app/client/src/engine/{pool,game,outlook,state}.ts, choice/outlook/pool tests, lib/types.ts, locales/es.ts, authoring/server/overview.py, authoring/tools/qgen.py, authoring/ui/src/lib/types.ts', 'Plan 71, part 1. Give each bundle the languages it exists in, make `kind: "base"` the mark of a base bundle (exactly one per session), drop `always_on`. Builds on plan 27 (bundle choice) and plan 68 (`EngineData.locale`; decision 36: GameRow.locale written only for non-es games). All rules: plan 71 "Decisions taken here" (`pm show p71`).
 
 ## Data
@@ -24522,8 +24529,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Binding: `decision 31: Low-supply warning: below how many fresh games left (K) should the game start warn?` (`SupplyNotice` unchanged).', '2026-10-14T23:10:57Z', '2026-10-14T23:12:03Z', 1058, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1062, 133, 'create tasks for plan 133: No supply report on the Start screen', 'split', 'open', 1000, NULL, 'Split plan 133 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-14T23:12:01Z', NULL, 1061, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1063, 30, 'create tasks for plan 30: Play-test and close-out of age groups and bundles', 'split', 'open', 1000, NULL, 'Split plan 30 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-14T23:13:02Z', NULL, 1059, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1063, 30, 'create tasks for plan 30: Play-test and close-out of age groups and bundles', 'split', 'done', 1000, '2026-10-14, tasks.sql: task 479 body aligned with revised plan 30 (part-6 checks, fix-task routing, plans 125/133, decision 158); no new tasks or decisions', 'Split plan 30 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-14T23:13:02Z', '2026-10-14T23:13:37Z', 1059, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -27255,6 +27262,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (982, 1058, '2026-10-14T23:10:24Z', '2026-10-14T23:11:06Z', 'done', NULL, 0, 'adb4aec262e3962918081f981d1fcc24fec0c361', 'claude-opus-5-5[1m]', 'f1802c00-311a-4de5-b19f-76ec823d6c2e', 9, 18, 2200, 343942, 35293, 0.3952044, 2472458);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (983, 1061, '2026-10-14T23:11:06Z', '2026-10-14T23:12:11Z', 'done', NULL, 0, '1eef62babf10627ef9bb9f70176a12c47d966d92', 'claude-opus-5-5[1m]', '9d562137-89a7-4b3c-8a94-d737b0711814', 16, 30, 6375, 688821, 51241, 0.6753122, 2472458);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (984, 1059, '2026-10-14T23:12:11Z', '2026-10-14T23:13:14Z', 'done', NULL, 0, '38424244ae38c66a234a31ce59a3cc59bf6d6f15', 'claude-opus-5-5[1m]', '382cd619-c709-4db9-8f60-646eda2fadcb', 8, 14, 6552, 284891, 42687, 0.5295702, 2472458);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (985, 1063, '2026-10-14T23:13:14Z', '2026-10-14T23:13:43Z', 'done', NULL, 0, '0976edd8d52426d6abe05d1d5595f123278856e5', 'claude-opus-5-5[1m]', '1fbeb1f8-2cbf-4111-b247-374a10e7ed9b', 4, 8, 2513, 111882, 28677, 0.3020844, 2472458);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
