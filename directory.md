@@ -37,7 +37,7 @@ What lives where. The repo is split into what ships and what doesn't ([`plans/19
 | `authoring/data/questions.<locale>.json` | Translations per locale (`en`, `de`): text fields, own `difficulty`, `status`, `review`, `source_hash` (D-81); none yet (written by the first translation run) |
 | `authoring/data/concepts/`, `authoring/data/bundles/<id>/concepts/` | Concept lists per subcategory that drafts start from (D-37): `base`'s, then another bundle's (D-43) |
 | `authoring/data/question-axes.json` | Question styles as axes (D-37) |
-| `authoring/data/targets.json` | Pool targets per bundle: approved total and per difficulty (D-53); batch health thresholds (`batch_health`, D-55) |
+| `authoring/data/targets.json` | Pool targets per bundle: approved total and per difficulty (D-53; every regional bundle 2000, D-101); batch health thresholds (`batch_health`, D-55) |
 | `authoring/data/health-acks.json` | The developer's acks of batches failing the health thresholds (`qgen health ack`, D-55); shown in `authoring/reports/batches.md` |
 | `authoring/data/ui-flags.json` | The developer's flags on UI strings from `/gallery` (plan 100): `[{id, locale, key, text, shot, note, flagged_on, fixed_on?}]`; written by the authoring server, a fix pass sets `fixed_on` |
 | `authoring/data/spot-checks.json` | The developer's blind spot checks per batch (`/review?batch=<b>&sample=1`, plan 16); written only by the authoring server |

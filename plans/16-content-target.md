@@ -26,6 +26,7 @@ Part of the Steam plan ([11](11-steam.md)). The release target is set per launch
 - **5000 approved per launch language** (es, en, de), with D-53's per-level mix (`authoring/data/targets.json`).
 - No games-per-player number (pm decision 21). Estimate at 5000, strong player, old Normal joker budget: ≥ 80 games in every age group (bottleneck: adults, difficulty 13–15).
 - Later languages (zh-Hans, ru, pt-BR, milestone 12): no target now.
+- **Regional packs:** 2000 approved each, D-53's mix scaled (`targets.json` `colombia`: 100 … 50), per locale (region's language + en); progress: `qgen report --bundle <id> [--locale L]` (D-101).
 - Open: whether a translated pool counts toward a language's 5000, or only once its own approved pool (re-rated, fact-checked, reviewed, 15b) meets it; follows plan 37's D-entry (OQ-31).
 - The release also needs **every subcategory** to have depth at several difficulties, or it is merged into a neighbour (D-19).
 

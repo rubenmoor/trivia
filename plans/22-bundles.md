@@ -9,7 +9,7 @@ A **bundle** is a named set of questions that players can switch on or off befor
 - **Every question is in exactly one bundle**: the field `bundle`, default `"base"`.
 - Bundles **add** questions; they don't own a topic. A sports question can be in `base`; a sports bundle later just adds many more. "¿Cuál es la capital de Colombia?" stays in `base`; only questions that need a real connection to Colombia go into `colombia`.
 - **Exactly one base bundle** (`kind: base`) per session (D-85, decision 38); `base` is the first and today the only one. Non-base bundles are off by default on the configure screen (decision 33).
-- **Regional packs** (D-99, pm decision 110): 2000 approved each, in the region's language + en (`colombia`: es + en), free DLC; pilot `colombia`, more packs only after a decision with its effort numbers (plan 98, plan 84).
+- **Regional packs** (D-99, pm decision 110): 2000 approved each, in the region's language + en (`colombia`: es + en), free DLC; pilot `colombia`, more packs only after a decision with its effort numbers (plan 98, plan 84). Target: a `targets.json` entry per regional bundle, D-53's mix scaled to 2000; `qgen bundle new --kind region` writes it, `qgen validate` requires it (D-101).
 - A session plays the questions of the active bundles. Difficulty, age groups (D-38) and burning (D-28) work as before inside that set.
 
 ## The first bundles

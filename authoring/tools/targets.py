@@ -9,6 +9,7 @@ import translations  # authoring/tools/translations.py (D-81)
 NOT_BUNDLES = {"about", "batch_health", "quality"}  # top-level keys that aren't bundles (D-55, plan 16)
 REL = "authoring/data/targets.json"  # in messages
 MIN_YIELD = 0.1  # floor of a locale's yield: a 0 % pilot asks 10× its deficit, not ∞
+REGION_TOTAL = 2000  # every regional bundle (D-99)
 
 
 def load_all():
@@ -21,6 +22,16 @@ def load_targets(bundle):
     if t is None:
         return None
     return {"total": t["total"], "difficulty": {int(k): v for k, v in t["difficulty"].items()}}
+
+
+def scaled(total, like="base"):
+    """{"total": total, "difficulty": {level (str): n}}: `like`'s mix scaled to total (largest remainder)."""
+    diff = load_all()[like]["difficulty"]
+    exact = {k: v * total / sum(diff.values()) for k, v in diff.items()}
+    out = {k: int(x) for k, x in exact.items()}
+    for k in sorted(exact, key=lambda k: exact[k] - out[k], reverse=True)[:total - sum(out.values())]:
+        out[k] += 1
+    return {"total": total, "difficulty": out}
 
 
 def load_quality():
@@ -126,11 +137,15 @@ def category_shares(bundle):
     return {c["slug"]: t["total"] * len(c["subcategories"]) / n for c in cats} if n else {}
 
 
-def problems(scale, bundle_ids):
-    """Errors in targets.json: bundles known, levels = scale, values ≥ 0, sum = total."""
-    out = []
+def problems(scale, bundles):
+    """Errors in targets.json: bundles known, every regional bundle has an entry (D-99),
+    levels = scale, values ≥ 0, sum = total."""
+    bundle_ids = {b["id"] for b in bundles}
+    all_ = load_all()
+    out = [f"{REL}: regional bundle {b['id']!r} has no targets (D-99: {REGION_TOTAL})"
+           for b in bundles if b.get("kind") == "region" and b["id"] not in all_]
     lo, hi = scale
-    for b, t in load_all().items():
+    for b, t in all_.items():
         if b in NOT_BUNDLES:
             continue
         if b not in bundle_ids:

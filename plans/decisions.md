@@ -428,7 +428,7 @@ Template:
 - Context: D-52 sets 5000 approved `base` questions with a target per difficulty (pm milestone 1, part 1). `qgen` (report, `draft`'s gap weighting) and the authoring server (`/stats/difficulty`) both need the numbers; the game doesn't.
 - Decision: A new file `authoring/data/targets.json`, keyed by bundle: `{"base": {"total": 5000, "difficulty": {"1": n, …, "15": n}}}`. Authoring-only, so not in `app/data/age-groups.json` (D-35: what the game doesn't need stays in `authoring/`). Per-category targets aren't stored: they follow from the total and the bundle's subcategory count. A bundle without an entry has no targets.
 - Consequences: `qgen validate` checks the file (levels match the scale, sum = total). The authoring server serves it at `/api/targets`. The difficulty numbers come from pm decision 1.
-- Supersedes / related: D-35, D-38, D-40, D-52; amended by D-99 (every regional bundle: 2000)
+- Supersedes / related: D-35, D-38, D-40, D-52; amended by D-99 (every regional bundle: 2000), D-101 (regional entries in code)
 
 ## D-54: `draft` aims at the gaps to the pool targets
 - Date: 2026-10-11
@@ -951,3 +951,14 @@ Template:
   - **Work files** of a non-`base` subcategory (`work/concepts/`, translation chunks) are prefixed `<bundle>--`.
 - Consequences: Until plan 98 task 827, the 19 `colombia` questions on `base` subcategories pass `validate` (D-49's other direction) but have no broad category in play or reports (`None`); a `colombia` name already in a save's `notified_exhausted` is pruned and may be shown once more. Mods: `taxonomy_clash` goes in task 995.
 - Supersedes / related: D-43 (amends: lookups by name alone), D-49, D-81, D-99; pm decision 110; plan 98
+
+## D-101: Regional bundle targets in `targets.json`
+- Date: 2026-10-14
+- Context: D-99 gives every regional bundle 2000 approved; `targets.json` had `base` only (D-53). Plan 98 task 828.
+- Decision:
+  - **Entry per regional bundle:** `{"total": 2000, "difficulty": …}`, D-53's `base` mix scaled to 2000 (largest remainder, `targets.scaled`); `colombia`: 100, 140, 180 ×6, 132 ×3, 92 ×2, 50 ×2.
+  - **Required:** `qgen validate` errors on a `kind: region` bundle without an entry; `qgen bundle new --kind region` writes it. Theme bundles: no target.
+  - **Per locale:** the same numbers for each of the bundle's languages (`deficits(..., locale)`), as pm decision 37 for `base`.
+  - **Read by** `--bundle` drafting (`target_weights`, the subcategory ranking) and `qgen report --bundle <id> [--locale L]`. No `es` source shortfall for packs (`base` only, D-84).
+- Consequences: `qgen report --bundle colombia` shows progress vs. 2000; `qgen batch --bundle colombia` aims at its deficits.
+- Supersedes / related: D-53 (amends: a regional bundle always has an entry), D-54, D-84, D-99; pm decisions 37, 110; plan 98

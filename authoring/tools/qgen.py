@@ -3924,7 +3924,7 @@ def validate_pool():
     errors += e
     warnings += w
     errors += age_groups.level_problems(load_age_groups())
-    errors += targets.problems((lo, hi), bundle_ids)
+    errors += targets.problems((lo, hi), bundles)
     import health  # authoring/tools/health.py (imports qgen)
     errors += targets.health_problems(health.THRESHOLDABLE)
     errors += targets.quality_problems()
@@ -4232,8 +4232,8 @@ def bundle_problems(bundles):
 
 
 def cmd_bundle_new(args):
-    """An empty bundle (BN-9, D-41): its entry in app/data/bundles.json and an empty categories.json
-    to fill by hand. Concept lists come from `qgen batch --bundle <id>`; axes stay base's until
+    """An empty bundle (BN-9, D-41): its entry in app/data/bundles.json, a regional one's 2000 target
+    (D-101) and an empty categories.json to fill by hand. Concept lists come from `qgen batch --bundle <id>`; axes stay base's until
     authoring/data/bundles/<id>/question-axes.json exists."""
     if not re.fullmatch(r"[a-z0-9-]+", args.id):
         sys.exit("A bundle id is lowercase letters, digits and dashes.")
@@ -4244,6 +4244,9 @@ def cmd_bundle_new(args):
                             "description": args.description, "rule": args.rule,
                             **({"voice": args.voice} if args.voice else {})})
     save_json(layout.BUNDLES, data)
+    if args.kind == "region":
+        t = targets.load_all()
+        save_json(layout.TARGETS, {**t, args.id: targets.scaled(targets.REGION_TOTAL)})
     path = categories.path(args.id)
     if not path.exists():
         save_json(path, {"about": f"Categories of the {args.id} bundle (D-41, D-43). Subcategory names "
