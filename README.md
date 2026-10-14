@@ -17,7 +17,7 @@ Milestones, plans and open tasks: `pm status` (`tasks.sql`); the older overview 
 
 ## Getting started
 
-You need [Nix](https://nixos.org/) with flakes. The dev shell has Node 22, Python 3, ImageMagick and Claude Code, plus Electron and the commands `trivia`, `trivia-desktop`, `trivia-desktop-build`, `trivia-authoring`, `qgen` and `trivia-media`, which run this checkout's scripts, Xvfb, on x86_64 Linux also `trivia-steam`, `trivia-release-check` and `steamcmd`, and `pm` ([project-manager](https://github.com/rubenmoor/project-manager)).
+You need [Nix](https://nixos.org/) with flakes. The dev shell has Node 22, Python 3, ImageMagick and Claude Code, plus Electron and the commands `trivia`, `trivia-desktop`, `trivia-desktop-build`, `trivia-authoring`, `qgen` and `trivia-media`, which run this checkout's scripts, Xvfb, `trivia-trailer`, on x86_64 Linux also `trivia-steam`, `trivia-release-check` and `steamcmd`, and `pm` ([project-manager](https://github.com/rubenmoor/project-manager)).
 
 ```sh
 git clone https://github.com/rubenmoor/trivia.git && cd trivia
@@ -163,6 +163,15 @@ trivia-gallery --locale de --only menu-gamemaster,victory   # some shots again; 
 Shots go to `work/gallery/<locale>/<shot>.png`; `work/gallery/manifest.json` has each visible text with its catalog key, and text without one (a literal) as unmatched. The game runs from demo saves in a temp folder, never your save.
 
 Review them in `trivia-authoring` → `/gallery`: per language every shot; click a text for its catalog key, flag it with a note. Flags go to `authoring/data/ui-flags.json` for the next fix pass.
+
+### Store trailer
+
+```sh
+npm run build && trivia-media sync --status approved   # first
+trivia-trailer --lang es,es-ES                          # ~1 min per language
+```
+
+A scripted game in the desktop shell under Xvfb, its sound through a private PulseAudio sink, recorded with ffmpeg and cut to ≈20 s: `authoring/store/out/trailer/<lang>.mp4`. Made-up players in a temp save folder, never your save; your desktop's sound server isn't touched. en/de refuse until their question pools exist.
 
 ### Build the packaged game
 

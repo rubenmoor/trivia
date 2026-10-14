@@ -366,7 +366,29 @@ Values for Steamworks → Edit Store Page → "Basic Info" (requirements, langua
 - Re-run after every visual change; the chosen set re-rendered before upload
 
 ## Trailer
-- `trivia-trailer`, 20 s per store language, rendered late: `task 844: Store trailer command trivia-trailer`, `task 845: Store media: render screenshots and trailers for approval`
+- Rendered, not edited by hand: `trivia-trailer [--lang es,es-ES,en,de]` from the dev shell (`npm run build` and `trivia-media sync --status approved` first); final videos late, with the screenshots: `task 845: Store media: render screenshots and trailers for approval`
+- Shell under Xvfb (X11, 1920×1080), `TRIVIA_DEV_STEAM_USER=1`, `TRIVIA_SOUND=1`, a throw-away demo save (made-up players), offline
+- Sound: a private PulseAudio with a null sink (own runtime dir, no session bus), never the desktop's sound server; ffmpeg grabs the display (x11grab) and the sink's monitor
+- Scripted game, fixed questions and seed (es: q-0030, q-0019; `Q` in the script):
+  1. Start → level 4 question, Soplo's hint
+  2. right answer locked, «Respuesta final», reveal
+  3. the tower, level 5
+  4. next question: Francotirador shoots a wrong answer
+  5. a wrong answer locked, reveal, «¡Oh no!»: the loss
+- Raw take ≈60 s, cut to ≈20 s by `CUT` (marks set during the walk, 80 ms audio fades at each cut); `--keep-raw` keeps the take
+- Output: `authoring/store/out/trailer/<lang>.mp4` (gitignored); on a failed walk `<lang>-failed.png`
+- Format: 1920×1080, 30 fps, H.264 High yuv420p ~20 Mbit/s, AAC-LC stereo 192 kbit/s 48 kHz, MP4 with faststart
+- Valve's rules (Steamworks "Trailers", https://partner.steamgames.com/doc/store/trailer, checked 2026-10-14):
+  - up to 1920×1080, 30/29.97 or 60/59.94 fps, high bit rate (5,000+ kbps), .mov/.wmv/.mp4; H.264 + AAC preferred; 16:9 preferred
+  - audio: 44 or 48 kHz, filtered down to stereo; wrong resolution or sample rate = most common processing failures
+  - a trailer is required for release; the first two valid trailers show before the screenshots; category «Gameplay» for this one
+  - viewers may watch without sound (Valve's advice): our cut reads without it (answers, reveal colours, «¡Oh no!»)
+  - poster 600×380 and thumbnail 232×130 made by Steam; a custom one must be a 1920×1080 frame of the video
+  - microtrailer: Steam cuts six 1 s clips from the first store video, not customizable
+  - per-language trailers via Advanced Settings; the base video should be the English one (en waits for its pool, decision 80)
+  - no length limit stated; no autoplay/mute rule stated on the page
+- en/de: refuse with a message until `pool.en.json` / `pool.de.json` (decision 80); then add their two questions to `Q`
+- Re-run after any UI change; the developer approves before upload (`task 845`)
 
 ## Entry checklist
 - Steamworks → Store page admin, field by field: `task 672: Store page entry checklist and PUB-8 close-out`

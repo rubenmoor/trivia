@@ -20714,7 +20714,7 @@ Work:
 - `plans/17a-store-page.md` "Screenshots": the 7 shots and their order. `npm run check`.
 
 Done when: the script renders the 7 (es/es-ES) and 5 (en/de) shots.', '2026-10-13T17:00:28Z', '2026-10-14T19:20:37Z', 842);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (844, 88, 'Store trailer command trivia-trailer', 'work', 'open', NULL, NULL, 'Plan 88 task 7, the command (build now; final videos render late, render task of this plan). Replaces backlog B-21 (`task 671`).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (844, 88, 'Store trailer command trivia-trailer', 'work', 'done', NULL, '2026-10-14, authoring/store/trailer.mjs, flake.nix (trivia-trailer: xvfb, xdotool, pulseaudio, ffmpeg-full), plans/17a-store-page.md Trailer (Valve''s format, cited), plans/backlog.md B-21, plans/17-publishing.md, directory.md, README.md, AGENTS.md; check: es run 20.5 s with game audio (mean -20 dB), frames checked, video deleted; follow-up task 1029', 'Plan 88 task 7, the command (build now; final videos render late, render task of this plan). Replaces backlog B-21 (`task 671`).
 
 - Valve''s current trailer format (resolution, codec, container, bitrate, length rules, autoplay/muted behaviour): check, cite page and date in `plans/17a-store-page.md` "Trailer".
 - `trivia-trailer [--lang es,es-ES,en,de]` (dev shell only, not shipped; flake `devShell` command like `trivia-release-check`): script under `authoring/store/` (e.g. `trailer.mjs`), no npm dependency.
@@ -20729,7 +20729,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/backlog.md`: B-21 status "moved to plan 88"; `plans/17-publishing.md` store bullet: trailer back in PUB-8 (plan 88); `directory.md`, README''s commands; AGENTS.md "Commands" one line.
 - Check: one throw-away es run, watch it with sound, delete it. No approval yet: decision 79/80''s timing (decision 116 gates the final render).
 
-Done when: `trivia-trailer --lang es` produces a 20 s video with game audio of the scripted game.', '2026-10-13T17:00:28Z', NULL, 842);
+Done when: `trivia-trailer --lang es` produces a 20 s video with game audio of the scripted game.', '2026-10-13T17:00:28Z', '2026-10-14T19:39:42Z', 842);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (845, 88, 'Store media: render screenshots and trailers for approval', 'work', 'open', 290, NULL, 'Plan 88 tasks 6–7, the late render. Waits on decision 116: Store media: render screenshots and trailer now? (go-ahead after milestone 9''s UI wording fixes and translations, right before Valve''s review; decisions 79, 80). Needs the scripts from this plan''s tasks "Store screenshots: decision 79''s set of 7", "Store trailer command trivia-trailer" and `task 784`.
 
 - Dev shell: `npm run build`, `trivia-media sync --status approved`.
@@ -23932,6 +23932,11 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Linux OS row: the non-Nix start test is the Steam beta test (decision 39); replace "Ubuntu 22.04" with the distro played there, if any.
 - en/de "Subtitles" ✓ once `pool.en.json` / `pool.de.json` ship (decision 80, decision 90).
 - Controller: Full instead of Partial once the developer''s real-pad run passes (decision 90).', '2026-10-14T19:13:27Z', NULL, 688);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1029, 88, 'Store screenshots and capsules: shell on Xvfb, not the desktop''s Wayland', 'work', 'open', NULL, NULL, 'Found in `task 844: Store trailer command trivia-trailer`.
+
+- `authoring/store/screenshots.mjs` and `authoring/store/capsules.mjs` start `trivia-desktop` with `DISPLAY` set to their Xvfb, but pass `WAYLAND_DISPLAY` (and `NIXOS_OZONE_WL`) from the developer''s session through: Electron picks Wayland, the window opens on the developer''s desktop and Xvfb stays empty (`xwininfo -root -tree` shows no children). The shots are still right (CDP `Page.captureScreenshot` + `Emulation.setDeviceMetricsOverride`), so this is about windows popping up and a dead Xvfb.
+- Fix as `trailer.mjs` does: drop `WAYLAND_DISPLAY` and `NIXOS_OZONE_WL` from the env and pass `--ozone-platform=x11`; skip it with `--visible` (screenshots.mjs) where the window is meant to show.
+- Check: run each under a Wayland session; no window appears, output as before.', '2026-10-14T19:38:36Z', NULL, 844);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -26500,6 +26505,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (939, 783, '2026-10-14T19:13:38Z', '2026-10-14T19:14:57Z', 'done', NULL, 0, '4911823d7d8864e997270c73978c7cf936d7b6df', 'claude-opus-5-5[1m]', 'ac3d7756-179a-4269-b966-930606babfad', 16, 26, 7904, 690923, 56667, 0.7497046, 2296074);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (940, 784, '2026-10-14T19:14:57Z', '2026-10-14T19:16:43Z', 'done', NULL, 0, '1deeda446f98624048548fa1dc995c3d11120da5', 'claude-opus-5-5[1m]', 'cf4b51a1-eef6-4d56-b660-7c4778e39852', 11, 18, 2742, 307894, 34536, 0.3927788, 2296074);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (941, 843, '2026-10-14T19:16:44Z', '2026-10-14T19:20:44Z', 'done', NULL, 0, '60ad187f40eb9fb5c408df66791b379ef145b3e3', 'claude-opus-5-5[1m]', '2e697d58-dd4d-471f-96cd-96826a92bd88', 29, 54, 9957, 1523682, 66347, 1.0348684, 2296074);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (942, 844, '2026-10-14T19:20:44Z', '2026-10-14T19:39:54Z', 'done', NULL, 0, '5bf28f9e105e4350c5437129f2da4e2b95ec26c5', 'claude-opus-5-5[1m]', 'a08d3d50-3acd-4513-8598-883c224c9ed5', 72, 130, 41218, 6645791, 143907, 3.3052941999999992, 2296074);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

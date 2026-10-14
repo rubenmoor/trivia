@@ -4,7 +4,7 @@
   #   nix build .#app              the game as it ships: built client + Python server, run with `trivia`
   #   nix run .#qgen -- batch      the LLM question batch (authoring/RUNBOOK.md, D-36)
   #   nix develop / direnv allow   everything for development, incl. `trivia`, `trivia-authoring`,
-  #                                `qgen`, `trivia-media`, `trivia-desktop`, `trivia-desktop-build`, `trivia-steam`, `trivia-release-check`, `trivia-report-server` and `trivia-gallery` running from this checkout
+  #                                `qgen`, `trivia-media`, `trivia-desktop`, `trivia-desktop-build`, `trivia-steam`, `trivia-release-check`, `trivia-report-server`, `trivia-gallery` and `trivia-trailer` running from this checkout
   #
   # The authoring tools edit files in the checkout (authoring/data, app/data/pool.json, work/), so
   # they are wrappers that run the checkout's scripts with pinned Python, ImageMagick and Claude Code.
@@ -147,6 +147,19 @@
             exec python3 "$root/authoring/tools/gallery.py" "$@"
           '';
         };
+        # Store trailer (plan 88): the shell under Xvfb, a private PulseAudio null sink, ffmpeg with x11grab.
+        trivia-trailer = pkgs.writeShellApplication {
+          name = "trivia-trailer";
+          runtimeInputs = [ pkgs.git pkgs.nodejs_22 pkgs.xvfb pkgs.xdotool pkgs.pulseaudio pkgs.ffmpeg-full trivia-desktop ];
+          text = ''
+            root=$(git rev-parse --show-toplevel 2>/dev/null) || {
+              echo "trivia-trailer: run this inside the trivia repository" >&2; exit 2; }
+            if [ ! -f "$root/authoring/store/trailer.mjs" ]; then
+              echo "trivia-trailer: $root is not the trivia repository (no authoring/store/trailer.mjs)" >&2; exit 2
+            fi
+            exec node "$root/authoring/store/trailer.mjs" "$@"
+          '';
+        };
         # Before every Steam upload (SW-6, plan 89); nix, steam-run and Xvfb from the dev shell.
         trivia-release-check = fromCheckout pkgs "trivia-release-check" "authoring/steam/release_check.py"
           [ pkgs.nodejs_22 qgen trivia-media trivia-desktop-build trivia-steam ];
@@ -196,7 +209,7 @@
             packages = [
               pkgs.nodejs_22 pkgs.python3 pkgs.imagemagick pkgs.claude-code pkgs.electron
               tools.qgen tools.trivia-media tools.trivia-authoring tools.trivia-dev tools.trivia-desktop
-              tools.trivia-desktop-build tools.trivia-report-server tools.trivia-gallery
+              tools.trivia-desktop-build tools.trivia-report-server tools.trivia-gallery tools.trivia-trailer
               pkgs.xvfb  # authoring/store/screenshots.mjs, authoring/steam/smoke.mjs
             ] ++ nixpkgs.lib.optionals (pkgs.stdenv.hostPlatform.system == "x86_64-linux") [
               tools.trivia-steam tools.trivia-release-check tools.steamcmd  # SteamCMD: x86_64-linux only
