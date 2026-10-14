@@ -25089,6 +25089,56 @@ Options
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (144, 'README.md is customer-facing: modding docs live in modding/README.md', 'answered', '[]', 'The developer, 2026-10-13: the GitHub README is effectively customer-facing and too long; ''Upload to Steam'' removed from it (already in plans 11 and 18).', 'README.md has one short ''Mod the game'' section: a link to modding/README.md, nothing else on modding; how-tos for publishing mods, player bundles and testing mods locally go in the guide; Steam release/upload how-tos stay in plans/11-steam.md and plans/18-steam-integration.md, not in README.md', NULL, '2026-10-13T23:31:16Z', '2026-10-13T23:31:16Z', NULL, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (145, 'Svelte runtime ships with every export for precompiled mod components', 'answered', '[]', 'Task 971: precompiled mod components (svelte/compiler, imports rewritten to /vendor/svelte/src/internal/client/index.js) found an index.js with only side-effect imports: Rolldown had dropped every export our app doesn''t use. As extra entries the runtime keeps its full export signature under the same vendor/ paths (decision 124); a mod''s component shares our runtime instance.', 'vite.config.ts: svelte, svelte/internal/client, svelte/internal/disclose-version as extra rolldown inputs, preserveEntrySignatures strict', NULL, '2026-10-14T01:30:44Z', '2026-10-14T01:30:44Z', 971, NULL, 'rule', 971, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (146, 'Achievements, mods screen and rich presence with mods on', 'answered', '[]', 'Follows decision 123: Achievements in games with mods on: allowed or off? (always allowed). With no mods gate there is nothing to record per game for the retroactive pass; a ''modded'' presence token would need a VDF token, a Steamworks re-upload (decision 71) and 4 languages for no player benefit. Plan 124: Achievements, flags and telemetry with mods on.', 'No change: earned() and the unlock gate ignore mods (no modsActive, no save field); player questions count like ours except BUNDLE_* (our regional bundles) and ALL_CATEGORIES (our base); no achievements line on the mods screen; rich presence unchanged (no ''modded'' token)', NULL, '2026-10-14T01:32:44Z', '2026-10-14T01:32:44Z', 906, NULL, 'rule', 906, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (147, 'Report server: deployed on Cloudflare? URL and date', 'pending', '["workers.dev, deployed: <URL>, <date>, database_id <id>, test report ok/not yet", "own domain, deployed: <URL>, <date>, database_id <id>, test report ok/not yet"]', 'Task 868 (plan 103 part 4). Set up the question report server (`report-server/`, Cloudflare Workers + D1) and send a first test report. Every step runs in the repo''s dev shell (`direnv allow` or `nix develop`); workers never log in or handle secrets.
+
+## 1. Cloudflare account
+- Sign up at dash.cloudflare.com, free plan; turn on 2FA (My Profile → Authentication).
+- Free-tier numbers not re-checked (no web access for this worker): check developers.cloudflare.com/workers/platform/limits and /d1/platform/pricing against `plans/11-steam.md` ST-5 (Workers 100k requests/day, 10 ms CPU/request; D1 5 GB, 5M rows read and 100k written/day); differences in your answer.
+
+## 2. Endpoint name
+- 1) `workers.dev` (recommended): `https://trivia-reports.<account-subdomain>.workers.dev`, free, nothing to renew; moving off Cloudflare later needs a game patch with a new `reportUrl`.
+- 2) Own domain (≈ $10/year): e.g. `reports.<domain>`; the server can move later without a game patch. Domain on Cloudflare (Registrar or nameservers), then a Custom Domain on the Worker (Workers → trivia-reports → Settings → Domains & Routes) after step 6.
+
+## 3. Log in
+```
+cd report-server && wrangler login
+```
+
+## 4. D1 database
+```
+cd report-server && wrangler d1 create trivia-reports
+```
+- Copy the printed `database_id` into `report-server/wrangler.toml` (replaces `PLACEHOLDER(868)` and the zero id); not a secret: commit it or put it in the answer.
+
+## 5. Secrets (Worker secrets only, never in git)
+- First deploy creates the Worker; if `secret` complains that it doesn''t exist, run step 6 first, then come back.
+```
+trivia-report-server secret STEAM_WEB_API_KEY   # publisher Web API key: Steamworks → Users & Permissions → Manage Groups → your group → Web API key (needs decision 67''s account)
+openssl rand -base64 32 | tr ''+/'' ''-_'' | tr -d ''=''   # pull token: copy it
+trivia-report-server secret PULL_TOKEN          # paste the pull token
+openssl rand -hex 32 | trivia-report-server secret HASH_SALT
+```
+- Save the same pull token for `qgen flag --pull`: `state/report-token` (gitignored) or env `TRIVIA_REPORT_TOKEN`:
+```
+printf ''%s\n'' ''<pull token>'' > state/report-token && chmod 600 state/report-token
+```
+
+## 6. Deploy and check
+```
+trivia-report-server deploy      # applies migrations remotely, then deploys
+curl https://<url>/health        # → {"ok":true,"api":1}
+qgen flag --pull --url https://<url> --dry-run   # token check: no error, 0 reports
+```
+
+## 7. First test report (needs the App ID, decision 89)
+- `STEAM_APP_ID` in `report-server/wrangler.toml` stays `""` until `authoring/steam/steam.json` has the App ID (decision 89: Steamworks App ID, depot IDs and beta branch entered?); until then every `POST /reports` → 502 and the game falls back to copy. Once known: set it there, `trivia-report-server deploy` again.
+- A `beta` build with `reportUrl` set (the next worker sets it from your answer), started under Steam: flag a question, add a note, «Enviar» → «enviada».
+- `qgen flag --pull` → the report shows up as a `needs_work` review; a second pull is empty.
+- If it fails: `trivia-report-server tail` while sending (no bodies logged), note the error code.
+
+## Answer
+- URL + date, e.g. `https://trivia-reports.<sub>.workers.dev, deployed 2026-10-20; database_id <id>; test report: ok / not yet (App ID)`.
+- The next worker puts the URL into `reportUrl` in `app/desktop/package.json` and ST-5. If the test report is still waiting on the App ID, say so: a follow-up task covers it.', NULL, NULL, '2026-10-14T02:21:21Z', NULL, 868, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -25957,6 +26007,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (860, 865, '2026-10-14T01:43:32Z', '2026-10-14T01:48:07Z', 'done', NULL, 0, 'df6059d5417954393e2637a802d6acaa8e142a01', 'claude-opus-5-5[1m]', 'ad8fc63d-a8ab-4a32-af06-79413469579f', 44, 74, 23915, 2519318, 78316, 1.6089876, 1923858);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (861, 866, '2026-10-14T01:48:08Z', '2026-10-14T01:49:49Z', 'done', NULL, 0, '9f6d336e415ac418961820e9fda70d4217ff3abf', 'claude-opus-5-5[1m]', '7bed6ff2-1b62-4a9f-87f6-4c2a8fef38a0', 18, 30, 7228, 725777, 48022, 0.67401139999999993, 1923858);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (862, 650, '2026-10-14T01:49:49Z', '2026-10-14T02:20:30Z', 'done', NULL, 0, '86681408f047ccaa1ba1faa71e6d4351f8ecff5c', 'claude-opus-5-5[1m]', 'cf2ff2d2-1fca-4009-922b-2aa6fe9cc2fe', 22, 44, 10172, 1168999, 59562, 0.91391179999999994, 1923858);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (863, 868, '2026-10-14T02:20:31Z', '2026-10-14T02:21:37Z', 'blocked', NULL, 0, 'b6b75b522b1a5af0bb34176a58e2281380dcf64e', 'claude-opus-5-5[1m]', '3de764fc-4b23-4f7e-87e5-758bda2f46aa', 13, 24, 4731, 466752, 35399, 0.47125839999999997, 1923858);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -26173,6 +26224,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (845, 116);
 INSERT INTO task_decision (task_id, decision_id) VALUES (865, 117);
 INSERT INTO task_decision (task_id, decision_id) VALUES (866, 117);
 INSERT INTO task_decision (task_id, decision_id) VALUES (868, 117);
+INSERT INTO task_decision (task_id, decision_id) VALUES (868, 147);
 INSERT INTO task_decision (task_id, decision_id) VALUES (869, 117);
 INSERT INTO task_decision (task_id, decision_id) VALUES (870, 117);
 INSERT INTO task_decision (task_id, decision_id) VALUES (884, 117);
