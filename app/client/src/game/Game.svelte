@@ -675,6 +675,12 @@
     inset: 0;
     overflow: hidden;
   }
+  /* Peek (plan 113): the corner buttons fade with the Question screen's panels. */
+  .game:has(:global(.question-screen.peeking)) :global(:is(.flag-button, .menu-button, .error-box)) {
+    opacity: 0;
+    pointer-events: none; /* not visibility: hidden, which drops DOM focus */
+    transition: opacity 0.15s;
+  }
   .corner-hud {
     position: absolute;
     top: var(--safe-y);

@@ -180,7 +180,10 @@ Date: · Build commit:
 | Steam's cloud file list (game properties, or `store.steampowered.com/account/remotestorage`) shows only `game.json`, never `.tmp`, `backup/`, `dev/` | | |
 
 ## Steam Deck Verified
-Requirements to plan for: full controller support with correct glyphs (IN), legible text at 800p, the on-screen keyboard for text entry, no launcher, working default settings, no warnings on start. Test on a real Deck before applying.
+Requirements to plan for: full controller support with correct glyphs (IN), legible text at 800p, the on-screen keyboard for text entry, no launcher, working default settings, no warnings on start. Before applying (decision 125: Steam Deck: best effort, review without a Deck at hand):
+- Fit at 1280×800 (plan 46, done); image peek on image questions (plan 113, done: every image question's picture whole at 1280×800, task 923); the Gamepad template as Steam Input default (milestone 10).
+- With those in, request Valve's Deck review (SW-12) without a real-Deck test.
+- Real-Deck test and tuning: plan 90 once a Deck is at hand.
 
 ## Modding
 Mods are folders the shell serves over `app://trivia/` before our own client and data (pm plan 112, milestone 15). The shell only reads mod files as bytes; mod code runs only in the page.

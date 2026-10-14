@@ -140,6 +140,7 @@ Everything that only matters for a release on Steam (desktop shell, controller, 
 - [x] S3: SW-6 resolved: no GitHub Actions; CI = local per-commit checks (AGENTS.md), release check moved to S5 (2026-10-12, pm decision 14, D-73) — [`18`](18-steam-integration.md)
 - [x] S3: IN-4, IN-5 Gamepad input and button glyphs (Xbox/PlayStation, drawn in-house) (2026-10-12, pm plan 45; real-pad check pending) — [`14`](14-input.md)
 - [x] S3: SW-4 Deck layout: letter picker for names with a pad, screen check at 1280×800/720 and 4K, size rule ≥ 0.9 u (2026-10-12, pm plan 46; real Deck: plan 48) — [`18`](18-steam-integration.md)
+- [x] S3: Image peek: hold `R3` / `V` on an image question hides every panel, the whole picture shows; checked on every image question at 1280×800, 1280×720, 1920×1080; Deck review without a real Deck (2026-10-14, pm plan 113, decisions 125, 126) — [`14`](14-input.md), [`04`](04-ui-tv-display.md), [`18`](18-steam-integration.md)
 - [x] S3: PUB-5 Credits screen from the ☰ overlay and generated `credits.json` + `CREDITS.md` in `dist/` (2026-10-12, pm plan 47) — [`17`](17-publishing.md)
 - [x] S4: CT-2 `qgen report --simulate`: games per new player on the engine (information only); exit 1 unless every launch language meets D-75's 5000 (2026-10-12, pm plan 62) — [`16`](16-content-target.md)
 - [x] S4: B-13 tooling: `base` voice es-419, `colombia` Colombian; `qgen neutralize` rewrites Colombian wording in `base` (2026-10-12, pm plan 64, D-83); the run belongs to masterplan part 11 — [`15`](15-i18n.md)

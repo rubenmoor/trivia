@@ -483,10 +483,8 @@
   /* Peek (plan 113): every panel fades out, the picture stays, unfiltered; release restores at once. */
   .peeking > :global(:not(.backdrop)) {
     opacity: 0;
-    visibility: hidden;
-    transition:
-      opacity 0.15s,
-      visibility 0s 0.15s;
+    pointer-events: none; /* not visibility: hidden, which drops DOM focus */
+    transition: opacity 0.15s;
   }
   .question-screen.peeking > :global(.backdrop) :global(img) {
     filter: none;
