@@ -23482,7 +23482,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `trivia-desktop --check-mod modding/template-bundle` exits 0 with 15 ok per language.
 - A copy in a temp `TRIVIA_MODS_DIR` loads in `trivia-desktop` (`TRIVIA_DEV_STEAM_USER=1`): the bundle shows marked player-made, a game with it on plays its image question, the Credits screen lists the image; temp copy deleted.
 - Per-commit checks pass.', '2026-10-13T18:36:02Z', '2026-10-14T17:14:51Z', 940);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (984, 120, 'modding/bundle-prompt.md: AI prompt for player bundles, tested once', 'work', 'open', NULL, NULL, 'Part 4 of plan 120. After task 3 of this plan (`bundles.md`, template). See plan 120''s section "AI prompt".
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (984, 120, 'modding/bundle-prompt.md: AI prompt for player bundles, tested once', 'work', 'done', NULL, '2026-10-14, modding/bundle-prompt.md (how-to header + standalone prompt: ask first, mod.json/bundles.json/categories/names/pools, house-style digest, difficulty table, no-web facts rule, parts of 20). Tested with claude -p (sonnet), dinosaurs/kids/en+de/20: --check-mod 0 errors, 20 ok 0 dropped per language, kids 1–6 filled (3–4 per level); prompt alone asks the six questions first; temp mod deleted.', 'Part 4 of plan 120. After task 3 of this plan (`bundles.md`, template). See plan 120''s section "AI prompt".
 
 ## What
 - One file `modding/bundle-prompt.md`: a short "how to use" header for the player (paste into your AI, answer its questions, save its files, run `trivia --check-mod`), then the prompt in one fenced block.
@@ -23496,7 +23496,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - Run once through an AI at hand (e.g. `claude -p`), answering its questions with the sample "dinosaurs, kids, en + de, 20 questions"; save its files into a temp mod with a `mod.json`; `trivia-desktop --check-mod <temp mod>` passes with ≤ 2 dropped (else fix the prompt and rerun); the coverage line shows the kids window (1–6) filled.
 - Temp mod deleted; one line on the result in the done note.
-- Per-commit checks pass.', '2026-10-13T18:36:02Z', NULL, 940);
+- Per-commit checks pass.', '2026-10-13T18:36:02Z', '2026-10-14T17:20:38Z', 940);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (985, 120, 'Ship modding/ in the install folder; modkit step in trivia-release-check', 'work', 'open', NULL, NULL, 'Part 5 of plan 120. After task 3 (template exists) and task 2 (`--check-mod`). Decision 133: the kit ships in the install folder as `modding/`; decision 134: the modding guide `modding/README.md` and `modding/examples/` live there too (part 10, plan 121), so ship the whole folder.
 
 ## What
@@ -26398,6 +26398,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (922, 981, '2026-10-14T16:25:37Z', '2026-10-14T16:35:55Z', 'done', NULL, 0, 'e9d2204915fd4987f9f9726c041a06cfb5da4693', 'claude-opus-5-5[1m]', '97a41388-672a-45bf-a9fe-4f7c9d1c946f', 39, 74, 15210, 2145676, 66251, 1.2636392000000003, 2129003);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (923, 982, '2026-10-14T16:35:55Z', '2026-10-14T17:08:09Z', 'done', NULL, 0, 'ecfffddba76525b32af86c7dff9fb0cb9cd5674d', 'claude-opus-5-5[1m]', 'a64064cc-ab2f-4e45-aeec-45056176d8fd', 36, 68, 22154, 2971046, 98178, 1.8229852000000004, 2129003);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (924, 983, '2026-10-14T17:08:09Z', '2026-10-14T17:15:00Z', 'done', NULL, 0, '66ea5247b0608a55c82598f70b175906895c5b1d', 'claude-opus-5-5[1m]', '7ee2c2c0-5325-4321-b219-4ba7df792f70', 57, 104, 35477, 4577277, 116407, 2.5566674000000003, 2129003);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (925, 984, '2026-10-14T17:15:00Z', '2026-10-14T17:20:49Z', 'done', NULL, 0, '7a7fcd752c26097705f2dff753f7fb28e1212b9e', 'claude-opus-5-5[1m]', '38893ff5-80ec-409b-8622-b213ce2ef1a0', 15, 30, 7692, 746608, 48290, 0.68960160000000015, 2129003);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
