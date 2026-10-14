@@ -20,7 +20,9 @@ The game as the family sees it on the TV: screen states, transitions, sound and 
 
 ```mermaid
 stateDiagram-v2
-  [*] --> Language: fresh save, ≥2 languages (D-86)
+  [*] --> Language: fresh save, ≥2 languages (D-86, D-96)
+  Start --> Language: language button
+  Language --> Start: «Atrás» / Backspace
   [*] --> Start
   Language --> Start: confirm (reload if the UI language changed)
   Start --> Player: «¡Jugar!» (new game)
@@ -54,7 +56,7 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 
 | State | Shows | Leaves via | Music |
 |---|---|---|---|
-| Language | First start only (D-86): «Elige el idioma», UI languages by endonym, guess preselected | Click / `Enter` / pad A / `1`–`n` | Normal |
+| Language | First start (D-86) or Start's language button (D-96): «Elige el idioma», languages by endonym, guess preselected | Click / `Enter` / pad A / `1`–`n`; from Start: «Atrás» / `Backspace` / pad B | Normal |
 | Start | Title, «¡Jugar!», "continue game" if one is running | Click / `Enter` | Normal |
 | Player | «¿Quién juega?»: known names, new name | Click a name / type + `Enter` | Normal |
 | Choice | «¿Cómo juega …?»: mode (MD-7); gamemaster mode: the configure game screen (MD-11: difficulty, levels, cards, video, audio, jokers, bundles); «Solo o en grupo»: age group, «Personalizar partida» | «¡A jugar!» / `Enter`; «Atrás» / `Backspace` | Normal |
@@ -65,15 +67,17 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 | Wrong | Dark animation, correct answer, consolation | «Volver al inicio» | Off; a sad sting |
 | Victory | Full 12-block tower, big finale | «Volver al inicio» | «Pomp and Circumstance» (`victory`), over cheers |
 
-### Language (first start, D-86)
-- Only for a fresh save (no `language` stored) and only with something to pick (>1 UI language or >1 question locale); a stored save, like the family's, never sees it.
+### Language (first start, D-86, D-96)
+- At first start only for a fresh save (no `language` stored) and only with something to pick (>1 UI language); a stored save, like the family's, never sees it unasked.
 - One list of UI languages by endonym, the guessed one (`guessTag()`) preselected and focused; heading and confirm prompt in the guessed language.
-- A pick sets the UI language and the matching question locale; confirming writes the save, so it asks once. A UI language other than the boot one reloads the app.
-- No Esc menu here; later changes: the overlay's language rows.
+- A pick sets the one language (UI and questions, D-96); confirming writes the save, so it asks once. A UI language other than the boot one reloads the app.
+- Questions: the language's pool if it exists and passes, else Spanish (`es`).
+- No Esc menu here; later changes: Start's language button only (opens this screen with «Atrás» / `Backspace` / pad B).
 
 ### Start
 - Game title, a short subtitle, a big «¡Jugar!» button.
 - The first click is also the **audio unlock**. Browsers block sound and autoplaying video with sound until a user gesture, so nothing plays before it. After this click, autoplay works for the rest of the session.
+- Language button top right, under ☰ (D-96, decision 157): globe + endonym, key per catalog (`I`/`L`/`S`), pad Y; opens the Language screen. The only place to change the language; hidden while the save notice shows.
 - If an unfinished game exists (server state, GF-4), show «Continuar» with its player and level («Continuar: Sofía, nivel 5») next to «Nueva partida».
 - Desktop shell only (`desktop?.mods`): a `secondary` «Mods» button under play/resume (count of loaded mods when > 0); while the notice isn't accepted and mods are held off, a line «N mods found, off until you allow them» under the buttons.
 
@@ -110,7 +114,7 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
   - Dialog `game/Customize.svelte` (modal scope): preset row «Conjunto» (Estándar | Sin límite | Personalizado, decision 99), then one row per joker, 0–9 or ∞ (MD-4 steppers); ↑/↓ rows, ←/→ or −/+ change, «Listo» / `Enter` / `Esc` / `Backspace` close, focus back on the button.
   - `new` gets `mode: "solo"` and `jokers` only when they differ from the standard set; the engine sets `customized` (D-74: no achievements).
 - Age group: four tiles in `age-groups.json` order, name + ages («6–10 años», «23+ años»), keys `1`–`4`; the window isn't shown.
-- Bundles: only those of the new game's question language (`bundlesFor`), file order, names in that language.
+- Bundles: only those of the new game's question locale (`bundlesFor`; the language's, else `es`, D-96), file order, names in that language.
   - Base bundles: one-of-N tiles, exactly one selected; picking another deselects the first.
   - Others: on/off tiles («activado» / «desactivado»).
   - Key per bundle: first letter of its name (accents stripped) not taken by an earlier bundle, else its next letter; never the flag, new, replay or Soplo key (es: `M` `N` `R` `S`). es: `B` Básico, `C` Colombia.
@@ -225,7 +229,7 @@ Three loops of the same suspenseful theme, getting more intense. It's best if al
 `Esc` opens a semi-transparent menu over any screen. It pauses the current state: question media pauses and animations freeze. `Esc` again closes it and resumes. The family sees the overlay, so it never shows the correct answer. A separate GM view is GM-3 (05).
 
 Menu items (keyboard-navigable, large enough for the TV), the gamemaster menu (MD-12, D-88): a general part (every mode) and, in gamemaster mode, the cheats in a dashed amber panel «Trucos del anfitrión» beside it (shown while a game runs or can be undone). Fits without scrolling at 1920 × 1080 and 1280 × 800 (`es`, `xx`).
-- **General, left column:** Continuar; «Preguntas marcadas»; Pantalla completa; Créditos; Mods (desktop shell only: the Mods screen, «Back» returns to the menu; "Mods (plan 118)"); «Terminar partida (configurar otra)» (confirm; `abandon`, then the same player's configure screen, else Start); Salir del juego (desktop); under «Sonido»: volumes, mute, language rows.
+- **General, left column:** Continuar; «Preguntas marcadas»; Pantalla completa; Créditos; Mods (desktop shell only: the Mods screen, «Back» returns to the menu; "Mods (plan 118)"); «Terminar partida (configurar otra)» (confirm; `abandon`, then the same player's configure screen, else Start); Salir del juego (desktop); under «Sonido»: volumes, mute (no language rows, D-96).
 - **Continuar** (close).
 - **Volumen:** music, effects and media sliders, plus mute all.
 - **Cheats, first column** (`overlay.cheats`; each enabled only in the phase its engine action accepts):
@@ -238,11 +242,11 @@ Menu items (keyboard-navigable, large enough for the TV), the gamemaster menu (M
   - The game's choice below, read-only.
 - **Cheats, second column: Comodines de esta partida** (MD-4, MD-12; no preset row, decision 99): one row per joker showing the uses *left* (∞ = unlimited) and «n usados»; −/+ gives back or takes away one use (0–9, then ∞); sent as limit = used + left.
 - **Créditos** (PUB-5, pm plan 47), below «Pantalla completa»: opens the Credits screen (`Credits.svelte`) over the overlay, which hides meanwhile. Glass panel, sections with counts (media, sounds, fonts, glyphs, libraries) from the build's `credits.json`; one row per entry (title, author, licence, provider), source URL as plain text, never a link. No focusable rows: ↑/↓ scroll ~70 %, ←/→ jump between sections, wheel and scrollbar; `Esc`/`Backspace`/pad B or the close button go back to the overlay. Generator and `CREDITS.md`: `17-publishing.md`.
-- **Idioma** / **Idioma de las preguntas** (D-86), every mode, each only with ≥2 options: ‹ › steps through endonyms. UI: applied with `Enter`, the game reloads. Questions: applies to the next game; a locale whose pool can't fill a game is shown disabled with the reason. The first start asks once on the Language screen.
+- No language rows (D-96): the language changes only on Start.
 - **«Preguntas marcadas»** (MD-6, every mode; decision 60 merged «Reportar pregunta» into the flag): the flagged questions (`FlagList.svelte`) over the overlay: newest first, date, id, question, answer (hidden for the question still on screen), player, level, note; «Copiar» per flag and «Copiar todo» (plain text, one block per flag with a `¡Trivia! #<id> · <lang> · v<version> · pool <hash> · <date>` header, decision 142), else a selectable `<pre>`. «Enviar» per flag and «Enviar todas» (unsent ones, stops at the first failure) only when the shell's `report:available` says so (plan 93): confirm with the privacy text before the session's first send; per flag «Enviando…», «Enviada <date>» (`reported_on`, sending again possible) or the failure in words (no connection, try tomorrow, closed, failed) next to the copy buttons.
 - **By mode** (D-74): cheats only in gamemaster mode; «Solo o en grupo»: general part plus a read-only column «Comodines de esta partida» (uses left) and the game's choice.
 - **The game's choice** (plan 29), read-only (↑/↓ skip it): «Adolescentes · Básico, Colombia», group (or «Dificultad 3–9», D-88) · active bundles, base first. From `settings` via `gameChoice`; missing keys read as the locale's defaults. Not in the HUD; changed mid-game only with «Dificultad y paquetes».
-- **Keys:** ↑/↓ walk the items in order (general, cheats, jokers), ←/→ change a row's value (volume, language, joker, ‹ › of «Cambiar pregunta» / «Saltar a nivel»), on a plain item jump to the next column at the same height; `Enter`/A runs; `Esc`/Start closes, pad B leaves; mouse hover selects, click runs, −/+ and ‹ › buttons.
+- **Keys:** ↑/↓ walk the items in order (general, cheats, jokers), ←/→ change a row's value (volume, joker, ‹ › of «Cambiar pregunta» / «Saltar a nivel»), on a plain item jump to the next column at the same height; `Enter`/A runs; `Esc`/Start closes, pad B leaves; mouse hover selects, click runs, −/+ and ‹ › buttons.
 - **Flag for review** (GM-5, D-47, decision 60) is not in the menu: a small faint flag next to the ☰ (`M`, pad Select) opens a dialog (`FlagDialog.svelte`): «¿Marcar esta pregunta?», an optional note (keyboard straight into the field; pad: A on the field opens the letter picker with digits and punctuation; later the Steam Deck on-screen keyboard), `Enter` flags, `Esc`/`Backspace`/B cancel; media pauses meanwhile. On a flagged question: «Pregunta marcada», save the note or «Quitar marca». The question stays.
 - **Question ID** for debugging, in small type: the question on screen, or else the last one answered («última»). The ID gives nothing away, and it finds the question in `authoring/data/questions.json` and the review tool. The ID links to `/review/<id>` (new tab), next to links to the stats pages (`/stats/categories`, `/stats/difficulty`).
 - **Demo de efectos** (later): play every transition and effect for testing on the TV (B-3).

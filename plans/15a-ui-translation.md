@@ -64,7 +64,7 @@ One native speaker per launch catalog (`es` the family, `es-ES`, `en`, `de`), ar
   - family save (no `language` field) → never sees the screen
 - **Full game** in each mode: Gamemaster mode, Alone or as group; customize dialog, difficulty and bundles
 - **Every joker** (`hint`, `skip` incl. the plain pass, `easier`, `category`, `snipe`): name, key letter, prompt, effect line
-- **Overlay / Esc menu**: every row incl. the language rows (UI and question language, «not enough questions»)
+- **Overlay / Esc menu**: every row (language rows gone since D-96; Start's language button instead)
 - **Prompts**: keyboard (key letters match the names) and pad (glyphs + text)
 - **Endings**: victory, wrong answer, milestone and consolation lines (several levels)
 - **Report dialog**: mark a question (`M`), note, list of marked questions, copy

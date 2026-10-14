@@ -30,7 +30,7 @@ Plan 29's Choice screen in gamemaster form, no second screen. Opens on the playe
 
 #### Gamemaster menu (MD-12; D-88, pm decision 34)
 Today's overlay (`Overlay.svelte`) grows into the menu, in two visibly separate parts. Strings `overlay.*`.
-- **General (every mode):** continue; «Preguntas marcadas» (MD-6; flagging itself is the flag dialog, decision 60); sound (volumes, mute); language rows (D-86); fullscreen; restart (`abandon`, then the mode's start screen: configure screen in gamemaster mode); quit (desktop, after `flush`).
+- **General (every mode):** continue; «Preguntas marcadas» (MD-6; flagging itself is the flag dialog, decision 60); sound (volumes, mute); fullscreen (no language rows, D-96); restart (`abandon`, then the mode's start screen: configure screen in gamemaster mode); quit (desktop, after `flush`).
 - **Gamemaster cheats (gamemaster mode only, hidden elsewhere):** every one an engine action in `engine/api.ts` / `engine/game.ts`, refused `gamemaster_only` (409) when `gameMode(state) !== "gamemaster"`; `lib/api.ts`, `lib/types.ts`.
   - «Saltar pregunta»: `skip` (as today): question phase only; outcome `admin_skip`, seen +1, table refilled.
   - «Bloquear pregunta»: `skip {everyone: true}` (as today, D-82): outcome `admin_block`, blocked, no seen row; confirm («¿Seguro?»).

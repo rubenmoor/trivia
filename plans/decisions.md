@@ -756,6 +756,7 @@ Template:
   - **Seen across locales:** ids are shared, so a switch never repeats a question before unseen ones run out; supply, outlook and low-supply warning run on the loaded locale's pool.
 - Consequences: only `es` ships today, so no rows and no screen; `en`, `de`, `es-ES` catalogs (plans 24, 69) and translated pools (plan 66) turn them on with no code change. Steam client language: milestone 10, `guessTag()`.
 - Supersedes / related: plan 68's earlier "no first-start language screen"; D-59, D-70, D-78, D-81, D-82; pm decisions 26, 27, 36
+- **Superseded in part by D-96** (one language for UI and questions: no question-language setting or option list, no Esc menu rows; changed only on Start).
 
 ## D-87: Translations through `qgen batch --translate`
 - Date: 2026-10-12
@@ -884,3 +885,17 @@ Template:
   - The game itself never asks Steam about DLC (D-94: files present = pack offered).
 - Consequences: a new pack needs a `steam.json` `dlc` entry before `trivia-steam stage` passes; a pack's media shared with `base` or another pack stays in `content`.
 - Supersedes / related: D-93, D-94; pm decisions 66, 109, 110, 112; plans 89, 98
+
+## D-96: One language for UI and questions
+- Date: 2026-10-14
+- Context: item 7 of pm decision 50 (Play-test of age groups and bundles); plan 126 (tasks 1019, 1020); pm decisions 156 (One language for UI and questions), 157 (Start's language button: globe and endonym, key per catalog, pad Y). Bundles depend on the language, so it can't change once bundles are chosen.
+- Decision:
+  - **One setting:** the game's language = UI language = question language. `SaveData.language` is one tag; an old `{ui, questions}` save reads as `ui` (`parseSave`), missing = `es`; no save-version bump. Options = `UI_LANGS`.
+  - **First start:** `Language.svelte` picks it for a fresh save (default `guessTag()`: Steam's language, else the browser's), as before.
+  - **Afterwards only on Start:** a button top right under ☰: globe + endonym (no national flag), key per catalog (`I` es/es-ES, `L` en, `S` de), pad Y; opens the same picker with «Atrás». A different UI language reloads the app. Not on later screens.
+  - **No language rows in the Esc menu**, in any mode.
+  - **Fixed in a game:** a game keeps `GameRow.locale`; the language can't change once bundles are chosen.
+  - **Question locale** (`localeOf` / `nextLocale` in `lib/engine.ts`): the language if `pool.<language>.json` exists and its default bundles' supply passes, else `es` (`pool.json`, es bundles via `bundlesFor`). Used for `loadEngineData`, `newGame`'s locale (from the loaded data) and the bundles offered. All UI languages stay selectable; en, de, es-ES and mod UI languages play the Spanish questions until their translation ships.
+  - **POLYGLOT** counts `GameRow.locale`: a de UI on Spanish questions is an `es` game.
+- Consequences: «Idioma de las preguntas» and its strings gone; the play-test's en/de question language check is replaced by this (plan 30).
+- Supersedes / related: D-86 in part (two settings, the question-language option list, the Esc menu rows, first start setting both); D-70, D-78, D-82, D-85; pm decisions 36, 50, 156, 157
