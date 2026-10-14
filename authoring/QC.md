@@ -60,6 +60,7 @@ Players report questions from the game (plan 93); each report becomes a human `n
 
 - Pasted report text (copied from «Preguntas marcadas»): `qgen flag [--dry-run] < reports.txt`; feedback «Reporte de jugador (…)» in `/review?status=needs_work`, older feedback after «Antes:»; es → source, en/de → that translation; unknown ids skipped, a repeated report adds nothing.
 - Sent reports (report server, plan 103): `qgen flag --pull [--url URL] [--dry-run]`; same feedback, then acked; token `TRIVIA_REPORT_TOKEN` or `state/report-token`; ledger `state/reports-pulled.json`; mod and unknown ids skipped and acked.
+- Played outliers (opt-in telemetry, plan 109, decision 122): `qgen telemetry --pull`, then `qgen report --played`; candidates in `/review?played=outliers[&locale=…]`; the developer changes the difficulty or sets `needs_work` by hand, nothing automatic.
 
 ## Never
 

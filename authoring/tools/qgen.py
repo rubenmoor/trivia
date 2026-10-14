@@ -31,6 +31,8 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen report --qc [<batch> [--changes "<task ids>"]]   # spot check vs. LLM review and audit (plan 16)
     qgen report --simulate [--locale …] [--mode …|all] [--json]   # games per new player; exit 1 below D-75's target (plan 62)
     qgen report --cost [--json]     # $ per approved by run kind, projection per launch language (plan 70)
+    qgen report --played [--locale es|en|de|all] [--age-group …] [--mode …] [--since YYYY-MM-DD] [--all] [--json]
+                                    # played vs. rated difficulty, outliers → /review?played=outliers (plan 109)
     qgen validate
     qgen patch-notes [<from-ref> [<to-ref>]] [--out FILE] [--json]   # counts-only notes of a content patch (plan 96)
 
@@ -1990,7 +1992,7 @@ def report_simulate(args):
     """Games per new player until the first repeat (plan 62, CT-2; plan 65), information only; exit code = D-75's target check."""
     locales = args.locale.split(",") if args.locale else translations.LAUNCH
     all_bundles = [b["id"] for b in load_json(layout.BUNDLES)["bundles"]]
-    modes = SIM_MODES if args.mode == "all" else args.mode.split(",")
+    modes = SIM_MODES if args.mode == "all" else (args.mode or "solo").split(",")
     groups = args.age_group.split(",") if args.age_group else [g["id"] for g in load_age_groups()["groups"]]
     player = args.player or "both"
     if player not in ("strong", "typical", "both") or set(modes) - set(SIM_MODES):
@@ -2163,11 +2165,130 @@ def report_cost(args):
             print(f"  {s}")
 
 
+def _quantile(hist, order, q):
+    """The bucket holding quantile q of a {bucket: count} histogram."""
+    total, acc = sum(hist.values()), 0
+    for b in order:
+        acc += hist.get(b, 0)
+        if acc >= q * total:
+            return b
+    return None
+
+
+def report_played(args):
+    """`qgen report --played`: played vs. rated difficulty (plan 109, decision 122); information only."""
+    if not played.STATS.exists():
+        return print("no played data: qgen telemetry --pull")
+    stats, known = played.load(), played.rated()
+    locales = None if (args.locale or "all") == "all" else args.locale.split(",")
+    gids = args.age_group.split(",") if args.age_group else None
+    since, mode = args.since or "", args.mode
+    a = played.analyse(stats, known, load_age_groups()["groups"], mode, since, locales, gids)
+    keep = lambda day, g=None, m=None: day >= since and (not gids or g in gids) and (not mode or m == mode)
+    results, reached, levels = Counter(), Counter(), {}
+    for k, v in stats["games"]["results"].items():
+        day, version, m, g, res = k.split("|")
+        if keep(day, g, m):
+            results[(version, m, g, res)] += v
+    for k, v in stats["games"]["reached"].items():
+        day, g, m, lvl, res = k.split("|")
+        if keep(day, g, m):
+            reached[(g, int(lvl), res)] += v
+    for k, v in stats["levels"].items():
+        g, lvl, m, day = k.split("|")
+        if keep(day, g, m):
+            row = levels.setdefault((g, int(lvl)), [0, 0, 0, 0])
+            for i, x in enumerate((v + [0, 0])[:4]):
+                row[i] += x
+    sessions, versions, by_games, by_len = Counter(), Counter(), Counter(), Counter()
+    for k, s in stats["sessions"].items():
+        version, day = k.split("|")
+        if day >= since:
+            sessions[version] += s["n"]
+            by_games.update(s["games"])
+            by_len.update(s["length"])
+    answers, days, locs = Counter(), set(), Counter()
+    for k, (n, _) in stats["answers"].items():
+        qid, loc, g, m, day, clean = k.split("|")
+        if keep(day, g, m) and (not locales or loc in locales):
+            answers[clean] += n
+            days.add(day)
+            locs[loc] += n
+    days |= {k.split("|")[1] for k in stats["sessions"] if k.split("|")[1] >= since}
+    games = sum(results.values())
+    jokers = Counter()
+    for k, v in stats["games"]["jokers"].items():
+        day, j = k.split("|")
+        if day >= since:
+            jokers[j] += v
+    share = lambda key: sum(v for d, v in stats["games"][key].items() if d >= since)
+    cells = [c for c in a["cells"] if c["n"] >= played.MIN_N and c["observed"] is not None]
+    candidates = Counter(l for _, l in {(c["id"], c["locale"]) for o in ("too_easy", "too_hard") for c in a["outliers"][o]})
+    if args.json:
+        return print(json.dumps({"curves": a["curves"], "outliers": a["outliers"], "cells": cells if args.all else None,
+                                 "sessions": dict(sessions), "games": games, "answers": dict(answers),
+                                 "levels": {f"{g}|{l}": v for (g, l), v in sorted(levels.items())},
+                                 "candidates": dict(candidates)}, ensure_ascii=False, indent=1))
+    pct = lambda r, n: f"{100 * r / n:.0f} %" if n else "–"
+    print(f"data: {min(days, default='–')} – {max(days, default='–')}, {sum(sessions.values())} sessions, {games} games, "
+          f"{sum(answers.values())} answers ({answers['1']} clean, {answers['0']} with help), "
+          f"versions {', '.join(sorted(sessions)) or '–'}, locales {dict(locs)}, "
+          f"{stats['unknown']} unknown ids (all days)")
+    order = [played.length_bucket(m * 60) for m in [0, *played.LENGTH_MIN]]
+    print("sessions:")
+    print(f"  per version: {dict(sessions)}")
+    print(f"  games per session: {dict(sorted(by_games.items(), key=lambda kv: int(kv[0])))}")
+    if by_len:
+        print(f"  length (min): median {_quantile(by_len, order, .5)}, quartiles {_quantile(by_len, order, .25)} / "
+              f"{_quantile(by_len, order, .75)}")
+    for title, i in [("mode", 1), ("result", 3), ("age group", 2)]:
+        c = Counter()
+        for key, v in results.items():
+            c[key[i]] += v
+        print(f"  games by {title}: {dict(c.most_common())}")
+    if games:
+        print(f"  customized {pct(share('customized'), games)}, mods {pct(share('mods'), games)} "
+              f"(all modes and groups); joker uses per game: "
+              + ", ".join(f"{j} {v / games:.2f}" for j, v in jokers.most_common()))
+    print("per age group × level (answers, right, mean rated difficulty, games ending there lost / won / other):")
+    for g in sorted({g for g, _ in levels} | {g for g, _, _ in reached}):
+        print(f"  {g}:")
+        for lvl in sorted({l for gg, l in levels if gg == g} | {l for gg, l, _ in reached if gg == g}):
+            n, r, ds, dn = levels.get((g, lvl), [0, 0, 0, 0])
+            end = lambda res: reached[(g, lvl, res)]
+            other = sum(v for (gg, l, res), v in reached.items() if gg == g and l == lvl and res not in ("lost", "won"))
+            print(f"    level {lvl:2}: {n:5} answers, {pct(r, n):>5} right, rated {ds / dn if dn else 0:4.1f}, "
+                  f"ended {end('lost')} / {end('won')} / {other}")
+    print(f"curves per age group (clean answers{f', mode {mode}' if mode else ''}; rated → right rate, n):")
+    for g, c in a["curves"].items():
+        if not c["points"]:
+            print(f"  {g}: not enough data ({c['n']} clean answers, needs {played.GROUP_MIN})")
+            continue
+        print(f"  {g} ({c['n']}): " + ", ".join(f"{x:.1f} → {p * 100:.0f} % ({n})" for x, p, n in c["points"]))
+    def line(c):
+        obs = f"{c['bound'] or ''}{c['observed']:.1f}"
+        return (f"    {c['id']} {c['locale']} {c['group']}: n {c['n']}, {pct(c['right'], c['n'])} right, "
+                f"rated {c['rated']} → played {obs}, Δ {c['delta']:+.1f}")
+    for key, title in [("too_easy", "too easy"), ("too_hard", "too hard"), ("mixed", "mixed (groups disagree, not a candidate)")]:
+        print(f"outliers, {title}: {len(a['outliers'][key])}")
+        for c in a["outliers"][key]:
+            print(line(c))
+    if args.all:
+        print(f"every cell with n ≥ {played.MIN_N}: {len(cells)}")
+        for c in sorted(cells, key=lambda c: -abs(c["delta"])):
+            print(line(c))
+    url = "http://localhost:8001/review?played=outliers"
+    for l, n in sorted(candidates.items()) or [((locales or ["es"])[0], 0)]:
+        print(f"review candidates: {n} → {url}" + ("" if l == "es" else f"&locale={l}"))
+
+
 def engine_model(results):
     return next((r["model"]["typical_p"] for r in results if r.get("result") == "ok"), None)
 
 
 def cmd_report(args):
+    if args.played:
+        return report_played(args)
     if args.cost:
         return report_cost(args)
     if args.simulate:
@@ -3739,7 +3860,7 @@ def cmd_telemetry(args):
     """`qgen telemetry --pull`: telemetry sessions → state/played/stats.json, then ack (plan 109)."""
     if not args.pull:
         sys.exit("qgen telemetry: nothing to do without --pull")
-    known = {q["id"] for q in load_json(POOL)["questions"]}
+    known = played.rated()
     if args.from_file:
         stats = played.load()
         doc, today = load_json(Path(args.from_file)), datetime.datetime.now(datetime.timezone.utc).date().isoformat()
@@ -4186,12 +4307,18 @@ def main():
                     "comma-separated (default: es,en,de, D-78)")
     rp.add_argument("--bundles", help="with --simulate: comma-separated (default: es every bundle, else base; until RG-5)")
     rp.add_argument("--age-group", help="with --simulate: comma-separated (default: all four)")
-    rp.add_argument("--mode", default="solo", help="with --simulate: solo|rr-coop|rr-competitive|timed|all")
+    rp.add_argument("--mode", help="with --simulate: solo|rr-coop|rr-competitive|timed|all (default solo); "
+                    "with --played: one mode (default every mode)")
     rp.add_argument("--players", type=int, help="with --simulate: players in rr-competitive and timed (default 4)")
     rp.add_argument("--seeds", type=int, default=40, help="with --simulate: runs per cell")
     rp.add_argument("--cost", action="store_true",
                     help="$ per run and per approved by run kind, projection per launch language (plan 70, CT-3)")
-    rp.add_argument("--json", action="store_true", help="with --simulate or --cost: JSON on stdout")
+    rp.add_argument("--json", action="store_true", help="with --simulate, --cost or --played: JSON on stdout")
+    rp.add_argument("--played", action="store_true",
+                    help="played vs. rated difficulty from opt-in telemetry, outliers as review candidates (plan 109, "
+                    "decision 122); --locale es|en|de|all, --age-group, --mode, --since, --all")
+    rp.add_argument("--since", metavar="YYYY-MM-DD", help="with --played: answers received on or after this day")
+    rp.add_argument("--all", action="store_true", help=f"with --played: every cell with n ≥ {played.MIN_N}, not only outliers")
     rp.add_argument("--bundle", default="base", help="progress vs. targets and saturation for this bundle (plans 12, 14)")
     rp.add_argument("--subcategories", action="store_true",
                     help="supply per subcategory × difficulty, for the jokers (JK-10); saturation flags (plan 14)")

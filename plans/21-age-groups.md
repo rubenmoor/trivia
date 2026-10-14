@@ -138,3 +138,11 @@ Equal play per group. Flat: plan 21's method (1 / window width per group). Weigh
 | 14–15 | adults | 2 % each | 2 / 1 % | 1.8 / 0.8 % |
 
 - Against the draft table above: 3 is played by two groups instead of three, 4 and 7 by three instead of four; 5–6 rise to 11 %.
+
+## Played vs. rated (plan 109)
+Opt-in telemetry measures how the scale plays. `qgen report --played` (decision 122) compares it with the ratings per age group; it never changes a question or a window on its own.
+
+- Per group a curve: right rate per rated difficulty, clean answers only (no Soplo, no Francotirador), made monotone.
+- Per question and group: the difficulty where the curve meets its played right rate; |Δ| ≥ 2 with enough answers → review candidate in `/review?played=outliers`.
+- Relative: finds questions mis-rated against their peers, not a group that is too hard as a whole.
+- Per age group × level table: answers, right rate, mean rated difficulty, games ending there; input for window and level changes, which go through their own plan.
