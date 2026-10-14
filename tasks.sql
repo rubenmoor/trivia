@@ -18321,13 +18321,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Docs: `directory.md` (`ui-flags.json`, page), README line.
 
 Done when: `npm run check`, `npm run build` pass; browser check: flag, edit, remove, reload keeps the state in `ui-flags.json`.', '2026-10-13T15:43:48Z', '2026-10-14T16:10:34Z', 797);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (804, 100, 'Screen gallery review decisions per UI language', 'work', 'open', 370, NULL, 'Plan 100, task 6 (after the /gallery page task). Ask the gamemaster to review the gallery in every UI language.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (804, 100, 'Screen gallery review decisions per UI language', 'work', 'done', 370, '2026-10-14, trivia-gallery run (work/gallery/, not staged); decisions 161-164; task 1026 pending on them', 'Plan 100, task 6 (after the /gallery page task). Ask the gamemaster to review the gallery in every UI language.
 
 - Run `trivia-gallery` (all four locales); stage nothing from `work/`.
 - Four `pm decision add --once "Screen gallery reviewed? (<lang>)"` for en, es, es-ES, de, body with the how-to (`trivia-gallery`, `trivia-authoring` → `/gallery`, flag strings with a note), options "reviewed, flags in /gallery" (recommended) and "reviewed, nothing to fix".
 - Add task 7 of plan 100: `pm task add 100 "Gallery fixes from the review flags" --priority 360` with a body: read open flags in `authoring/data/ui-flags.json`, fix catalogs per `app/client/src/locales/style/<locale>.md`, add new bad patterns to the guides, set `fixed_on`; re-run `trivia-gallery --only` for changed shots; anything beyond catalogs → `pm task add`; consequences on the four decisions; 15a "Wording and review" marked done. Make it pending on all four decisions (`pm task-pending-decision`).
 
-Done when: the four decisions and the pending fix task exist.', '2026-10-13T15:43:48Z', NULL, 797);
+Done when: the four decisions and the pending fix task exist.', '2026-10-13T15:43:48Z', '2026-10-14T16:25:33Z', 797);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (805, 10, 'create tasks for plan 10', 'split', 'done', 1000, '2026-10-13, no changes: plan 10''s only change (dev-mode «Ir a pregunta…», part 3) goes to plan 85 via task 806; open tasks 253, 254, 259, 260, 263 still match', 'Split plan 10 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T15:44:24Z', '2026-10-13T15:44:46Z', 789);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (806, 85, 'revise plan 85', 'revise', 'done', 1000, '2026-10-13, plan 85 body: dev mode «Ir a pregunta…» section, task 10, done-when row', 'Plan 10, the plan above plan 85, changed; it is quoted below. Bring plan 85 in line with it
@@ -23899,6 +23899,19 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `npm run build`: no `vendor/svelte/src/` tree, the runtime in the bundled file(s) + `.map`; no other `node_modules` file count change beyond Svelte
 - Game plays in `trivia-desktop`; a code add-on with a precompiled Svelte component (task 971''s) still mounts on our runtime
 - New launch → start menu number in `plans/01-architecture.md`; per-commit checks pass', '2026-10-14T15:48:20Z', '2026-10-14T15:54:49Z', 948);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1026, 100, 'Gallery fixes from the review flags', 'work', 'open', 360, NULL, 'Plan 100, task 7. Fix what the developer flagged in the screen gallery review (decisions 161–164: "Screen gallery reviewed? (en|es|es-ES|de)").
+
+- Read open flags (no `fixed_on`) in `authoring/data/ui-flags.json`: `{id, locale, key, text, shot, note, flagged_on}`
+- Fix the catalog string per `app/client/src/locales/style/<locale>.md`; `es` changes only where flagged (D-59); `es-ES` overrides only where it differs from `es`
+- New bad patterns from the notes → the locale''s guide ("Bad patterns", wrong → right)
+- Set `fixed_on` (YYYY-MM-DD) on each fixed flag
+- Re-run `trivia-gallery --locale <l> --only <shot>` for changed shots; check in `trivia-authoring` → `/gallery`
+- Anything beyond catalogs (layout, behaviour, literals) → `pm task add`
+- `pm decision consequences` on 161–164
+- `plans/15a-ui-translation.md` "Wording and review": mark done
+- Checks: `npm run check` (incl. `check:literals`), `npm test`, `npm run build`, `qgen validate`
+
+Done when: no open flags left (fixed or turned into tasks), guides updated, consequences recorded.', '2026-10-14T16:25:30Z', NULL, 804);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -25417,6 +25430,34 @@ Options
 - approve as drafted: the three edits above, `qgen validate`
 - `{style}` placeholder: `prompt(..., locale=)` pastes the guide''s Address and Glossary sections into the Language section (UI-only rules included)
 - no change: prompts stay as they are; `de` keeps «ihr» in question texts', NULL, NULL, '2026-10-14T16:11:34Z', NULL, 801, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (161, 'Screen gallery reviewed? (en)', 'pending', '["reviewed, flags in /gallery", "reviewed, nothing to fix"]', 'Review the screen gallery in `en` (`plan 100: UI wording: style guides, TV-check fixes, screen gallery`). Gallery rendered 2026-10-14 by `task 804: Screen gallery review decisions per UI language`: 44 shots, every visible text keyed.
+
+- Optional fresh run: `trivia-gallery --locale en` (dev shell; ~4 min); output `work/gallery/en/`
+- `trivia-authoring` → http://localhost:8001/gallery → language `en`
+- Hover/click a text box: catalog key and text; flag a string with a note (what''s wrong, the wording you want)
+- Guide for the wording: `app/client/src/locales/style/en.md`
+- Answer when done; the fix task (`Gallery fixes from the review flags`) waits for all four languages', NULL, NULL, '2026-10-14T16:25:23Z', NULL, 804, NULL, 'once', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (162, 'Screen gallery reviewed? (es)', 'pending', '["reviewed, flags in /gallery", "reviewed, nothing to fix"]', 'Review the screen gallery in `es` (`plan 100: UI wording: style guides, TV-check fixes, screen gallery`). Gallery rendered 2026-10-14 by `task 804: Screen gallery review decisions per UI language`: 44 shots, every visible text keyed.
+
+- Optional fresh run: `trivia-gallery --locale es` (dev shell; ~4 min); output `work/gallery/es/`
+- `trivia-authoring` → http://localhost:8001/gallery → language `es`
+- Hover/click a text box: catalog key and text; flag a string with a note (what''s wrong, the wording you want)
+- Guide for the wording: `app/client/src/locales/style/es.md`
+- Answer when done; the fix task (`Gallery fixes from the review flags`) waits for all four languages', NULL, NULL, '2026-10-14T16:25:23Z', NULL, 804, NULL, 'once', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (163, 'Screen gallery reviewed? (es-ES)', 'pending', '["reviewed, flags in /gallery", "reviewed, nothing to fix"]', 'Review the screen gallery in `es-ES` (`plan 100: UI wording: style guides, TV-check fixes, screen gallery`). Gallery rendered 2026-10-14 by `task 804: Screen gallery review decisions per UI language`: 44 shots, every visible text keyed.
+
+- Optional fresh run: `trivia-gallery --locale es-ES` (dev shell; ~4 min); output `work/gallery/es-ES/`
+- `trivia-authoring` → http://localhost:8001/gallery → language `es-ES`
+- Hover/click a text box: catalog key and text; flag a string with a note (what''s wrong, the wording you want)
+- Guide for the wording: `app/client/src/locales/style/es-ES.md`
+- Answer when done; the fix task (`Gallery fixes from the review flags`) waits for all four languages', NULL, NULL, '2026-10-14T16:25:23Z', NULL, 804, NULL, 'once', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (164, 'Screen gallery reviewed? (de)', 'pending', '["reviewed, flags in /gallery", "reviewed, nothing to fix"]', 'Review the screen gallery in `de` (`plan 100: UI wording: style guides, TV-check fixes, screen gallery`). Gallery rendered 2026-10-14 by `task 804: Screen gallery review decisions per UI language`: 44 shots, every visible text keyed.
+
+- Optional fresh run: `trivia-gallery --locale de` (dev shell; ~4 min); output `work/gallery/de/`
+- `trivia-authoring` → http://localhost:8001/gallery → language `de`
+- Hover/click a text box: catalog key and text; flag a string with a note (what''s wrong, the wording you want)
+- Guide for the wording: `app/client/src/locales/style/de.md`
+- Answer when done; the fix task (`Gallery fixes from the review flags`) waits for all four languages', NULL, NULL, '2026-10-14T16:25:23Z', NULL, 804, NULL, 'once', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -26345,6 +26386,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (918, 1025, '2026-10-14T15:48:29Z', '2026-10-14T15:55:04Z', 'done', NULL, 0, '798889d667819fbf3e3c6a7efc79e337dd6ae3cf', 'claude-opus-5-5[1m]', 'e7e79087-1043-47c1-842c-83887e1b071e', 34, 68, 21978, 2144050, 76574, 1.4812339999999997, 2129003);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (919, 803, '2026-10-14T15:55:05Z', '2026-10-14T16:10:43Z', 'done', NULL, 0, '67baecccd5cb63b35f1978b50dfa1ede5528364a', 'claude-opus-5-5[1m]', '1f10da0f-b589-4419-ad94-c252be3f4623', 30, 58, 19947, 2188682, 85897, 1.5240843999999998, 2129003);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (920, 801, '2026-10-14T16:10:43Z', '2026-10-14T16:11:45Z', 'blocked', NULL, 0, '83c057bf06d687fd87d331f5781f509981dba1d9', 'claude-opus-5-5[1m]', 'af7522dc-c452-41ef-beaf-91a0f4079f0d', 10, 20, 5105, 400635, 42595, 0.523067, 2129003);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (921, 804, '2026-10-14T16:11:45Z', '2026-10-14T16:25:37Z', 'done', NULL, 0, '930e9771a027f61a7852e8ebf90ce048cbf64b94', 'claude-opus-5-5[1m]', '83870837-3ac7-4f7f-8f15-cd9af4e4d0df', 9, 18, 2512, 302676, 28225, 0.3366472, 2129003);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -26580,6 +26622,10 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (948, 143);
 INSERT INTO task_decision (task_id, decision_id) VALUES (948, 149);
 INSERT INTO task_decision (task_id, decision_id) VALUES (958, 135);
 INSERT INTO task_decision (task_id, decision_id) VALUES (980, 135);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1026, 161);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1026, 162);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1026, 163);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1026, 164);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
