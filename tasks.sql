@@ -23705,12 +23705,12 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Not here: the modding guide (`modding/README.md`, plan 121 takes it from these docs).
 
 Done when: those docs name decision 123 and decision 146; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-14T01:33:15Z', '2026-10-14T03:20:40Z', 1006);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1009, 4, 'post-milestone cleanup of milestone 4: Media license audit', 'cleanup', 'open', NULL, NULL, '* rewrite top-level .md files to reflect the current state of the project
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1009, 4, 'post-milestone cleanup of milestone 4: Media license audit', 'cleanup', 'done', NULL, '2026-10-14, plans/project.md: M10 marked done (PUB-3 via the qgen validate gate, decision 47: Replace the files on the licence list); other top-level docs, milestones and pending decisions already current; no unused milestone-4 code or redundant files', '* rewrite top-level .md files to reflect the current state of the project
 * remove files that have become redundant
 * suggest entirely new files, if necessary
 * delete code that isn''t actually used
 * check pending decisions if they are still relevant and really pending
-* check other milestones if their contents are up-to-date and update them if necessary', '2026-10-14T05:10:03Z', NULL, NULL);
+* check other milestones if their contents are up-to-date and update them if necessary', '2026-10-14T05:10:03Z', '2026-10-14T05:11:51Z', NULL);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -26068,6 +26068,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (886, 781, '2026-10-14T04:28:56Z', '2026-10-14T04:30:07Z', 'done', NULL, 0, 'b374b99a005e8c68ec655a374769add90d7bd767', 'claude-opus-5-5[1m]', '700f3958-2f72-4375-a0a4-15f0b8555f9e', 12, 22, 5722, 503905, 48051, 0.59971700000000006, 1963349);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (887, 786, '2026-10-14T04:30:07Z', '2026-10-14T04:48:26Z', 'done', NULL, 0, '49db9682639736c125645f1019eb8ac9321a0c11', 'claude-opus-5-5[1m]', 'dcb312f0-92cf-4f1b-95c4-3342fae08fd3', 18, 36, 6439, 860115, 47046, 0.677315, 1963349);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (888, 312, '2026-10-14T05:08:15Z', '2026-10-14T05:10:03Z', 'done', NULL, 0, 'dc285112b485aecd8dff9bea9f4368aa546aa4d1', 'claude-opus-5-5[1m]', '5916c4c4-8ea7-4996-9273-27cff812162b', 18, 34, 5656, 656738, 36587, 0.5372996, 2040245);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (889, 1009, '2026-10-14T05:10:03Z', '2026-10-14T05:12:00Z', 'done', NULL, 0, 'b37d6a73827b7f96dfc7c6d31a0d85155ff2b905', 'claude-opus-5-5[1m]', '3ad03de8-8a1c-4470-903a-fdcdf35e8e60', 17, 34, 5575, 768459, 50846, 0.67209580000000024, 2040245);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

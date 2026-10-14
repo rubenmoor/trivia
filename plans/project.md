@@ -32,12 +32,12 @@ The road from today onward: milestones, every open task, every open question. Th
 | M7 | Game engine in TypeScript | 12 | done (2026-10-12, D-90) |
 | M8 | Mouse everywhere and a joker budget | 14, 13 | done (2026-10-07) |
 | M9 | UI strings in a catalog; bundles | 15a, 22 | done (2026-10-13, pm milestone 3) |
-| M10 | Media license audit | 17 | in progress (PUB-1, PUB-2 done; PUB-3 waits for the developer, pm decision 47) |
+| M10 | Media license audit | 17 | done (2026-10-14, pm milestone 4; replace files on needs_work questions, decision 47) |
 | M11 | Age groups and bundles in the game | 21, 22 | in progress (engine and screens done, pm plans 27–29; play-test pending, pm decision 50) |
 
 (M6, living-room ready, is done and closed. Milestone numbers aren't reused.)
 
-Suggested order: M5 keeps running alongside everything. M10 is small and independent, so it can go next. M7 is the biggest; M8 and M9 work on either engine, so they don't have to wait for it. M11 changes selection, so it is easier after M7. A family test night closes M7 (PORT-7).
+Suggested order: M5 keeps running alongside everything. M7 is the biggest; M8 and M9 work on either engine, so they don't have to wait for it. M11 changes selection, so it is easier after M7. A family test night closes M7 (PORT-7).
 
 ---
 
@@ -115,12 +115,12 @@ No family-specific questions (D-30).
 - [x] Developer checks the 84 `colombia` proposals at `/review?bundle=colombia` (key `n` moves one back to base) — [`22`](22-bundles.md)
 
 ### M10 — Media license audit
-**Goal:** the full license data of every media file is known and stored, and files with unclear licenses (PD-US only, GFDL, flagged) are replaced.
-**Exit:** `validate` requires license data for approved questions; the audit's replacement list is empty.
+**Goal:** the full license data of every media file is known and stored, and files with unclear licenses (PD-US only, GFDL) are replaced.
+**Exit:** `validate` requires license data for approved questions and rejects approved picks on the replacement list (decision 47: the list itself need not be empty; its 3 files sit on needs_work questions).
 
-- [x] PUB-1 `media.py licenses` report; list the files to replace (2026-10-11, pm plan 52) — [`17`](17-publishing.md)
-- [x] PUB-2 Full license data per media item in the pool; `validate` requires it — [`17`](17-publishing.md)
-- [ ] PUB-3 Replace the problem files in the review tool — [`17`](17-publishing.md)
+- [x] PUB-1 `trivia-media licenses` report; list the files to replace (2026-10-11, pm plan 52) — [`17`](17-publishing.md)
+- [x] PUB-2 Full license data per media item in the pool; `validate` requires it (2026-10-11, pm plan 26) — [`17`](17-publishing.md)
+- [x] PUB-3 `/review?licence=replace`; `validate` gate instead of a replacement pass (2026-10-14, pm plan 53, decision 47) — [`17`](17-publishing.md)
 
 ### M11 — Age groups and bundles in the game
 **Goal:** before a session, players choose their age group and which bundles to play; selection uses the group's window on the shared scale and only the active bundles. The family's default stays young teens with every bundle on.
