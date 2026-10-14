@@ -141,8 +141,16 @@ async function load(locale: string): Promise<Loaded> {
 /** The bundles' names files of `lang` merged; es, es-ES → NO_NAMES. */
 async function namesOf(bundles: Bundle[], lang: string): Promise<Names> {
   if (lang.split("-")[0] === "es") return NO_NAMES;
-  return mergeNames(await Promise.all(bundles.map((b) => {
+  return mergeNames(await Promise.all(bundles.map(async (b) => {
     const file = bundleFile(b.id, `names.${lang}.json`);
-    return b.source === "mod" ? modGet(file) : get(file, true);
+    return b.source === "mod" ? modNames(await modGet(file), b.mod ?? "") : get(file, true);
   })));
+}
+
+/** A mod's names file with raw `bundles` keys namespaced `<mod id>:<id>`; full ids kept. */
+function modNames(file: unknown, mod: string): unknown {
+  const f = file as Partial<Names> | null;
+  if (!f?.bundles || typeof f.bundles !== "object") return f;
+  const bundles = Object.fromEntries(Object.entries(f.bundles).map(([k, v]) => [k.includes(":") ? k : `${mod}:${k}`, v]));
+  return { ...f, bundles };
 }

@@ -1,6 +1,6 @@
 {
   "bundles": {
-    "template-bundle:solar-system": {
+    "solar-system": {
       "name": "The solar system",
       "description": "Planets, moons and space travel: from the Sun to the farthest spacecraft."
     }

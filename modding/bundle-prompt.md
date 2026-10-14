@@ -57,7 +57,7 @@ c) data/bundles/<bundle id>/categories.json
 
 d) data/bundles/<bundle id>/names.<lang>.json, one per language other than the main one (skip if only one language):
 {
-  "bundles": { "<mod id>:<bundle id>": { "name": "<translated name>", "description": "<translated description>" } },
+  "bundles": { "<bundle id>": { "name": "<translated name>", "description": "<translated description>" } },
   "categories": { "<slug>": "<translated category name>" },
   "subcategories": { "<subcategory name as in categories.json>": "<translated name>" }
 }

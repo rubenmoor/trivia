@@ -40,7 +40,7 @@ A question bundle is a set of questions the family can switch on before a game, 
 
 ## `names.<locale>.json`
 - Optional, one per extra language; anything missing shows in the original.
-- `bundles`: `{ "<mod id>:<bundle id>": { "name", "description" } }` (the full id; change it with your mod id)
+- `bundles`: `{ "<bundle id>": { "name", "description" } }` (the id from `bundles.json`, without your mod id)
 - `categories`: `{ "<slug>": "<name>" }`
 - `subcategories`: `{ "<name in categories.json>": "<translated name>" }`
 
