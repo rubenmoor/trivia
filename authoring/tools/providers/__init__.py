@@ -17,8 +17,8 @@ from providers import commons, freesound, nasa, openverse
 PROVIDERS = {m.ID: m for m in [commons, nasa, openverse, freesound]}
 
 # Which providers a search asks, in order, per media type (plans/23, "Which provider for which
-# slot"). NASA only for space subcategories.
-ORDER = {"image": ["commons", "nasa", "openverse"], "audio": ["commons", "freesound"], "video": ["commons", "nasa"]}
+# slot"). NASA only for space subcategories. Freesound out (D-103).
+ORDER = {"image": ["commons", "nasa", "openverse"], "audio": ["commons"], "video": ["commons", "nasa"]}
 SPACE_CATEGORIES = {"espacio"}
 
 # The allowlist (D-45): licences that allow a commercial release with credit, by family.

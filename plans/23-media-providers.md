@@ -31,7 +31,7 @@ Not used: Unsplash (requires hotlinking), xeno-canto (mostly CC BY-NC-SA), iNatu
 | Slot | Order |
 |---|---|
 | image (any role) | Commons → NASA (Espacio only) → Openverse |
-| audio | Commons (Freesound until its removal, D-103) |
+| audio | Commons (D-103) |
 | video | Commons → NASA (Espacio only); then images as now |
 
 Commons stays first: its file descriptions are precise, its images are large, and the review prompt is tuned on it. Each provider is asked with the shortened query variants until there are 3 candidates; the next provider is asked only while there are fewer (this spares Openverse's daily limit and keeps Commons' results as they were wherever Commons has enough). At most 6. When Pexels or Pixabay come, they go first for decorative images, which only need to look good and not give anything away.
@@ -63,7 +63,7 @@ Only for gaps the free ones leave, and only once a Steam release is real (11): e
 - [x] MP-3 Per-provider throttle; a rate-limited provider is skipped for the current search; provider order per slot. *2026-10-08: `providers.ORDER`, cooldown per provider from `Retry-After`; `media_cache.http_get(…, headers, wait)`; a search left empty by a limit raises so a rerun retries.*
 - [x] MP-4 Openverse (images); anonymous, with optional `OPENVERSE_CLIENT_ID`/`OPENVERSE_CLIENT_SECRET` for the higher limit. *2026-10-08: `providers/openverse.py`; credits name the original site ("Flickr via Openverse").*
 - [ ] MP-5 Pexels (images, videos), once new API keys are issued again
-- [x] MP-6 Freesound (audio previews). *2026-10-08: `providers/freesound.py`, `FREESOUND_API_KEY`; CC0 and CC BY only, ≤ 60 s, the HQ MP3 preview. 2026-10-14: dropped before release (D-103, plan 42); the module stays, unasked.*
+- [x] MP-6 Freesound (audio previews). *2026-10-08: `providers/freesound.py`, `FREESOUND_API_KEY`; CC0 and CC BY only, ≤ 60 s, the HQ MP3 preview. 2026-10-14: dropped before release (D-103, plan 42); out of `providers.ORDER["audio"]` since task 1051; the module stays, unasked.*
 - [x] MP-7 NASA Image and Video Library (space photos and videos, Espacio only; third-party items skipped). *2026-10-08: `providers/nasa.py`; videos as MP4 (`~large`). The third-party check reads the credit fields only: footage filmed by a company but credited to NASA staff still gets through, so the review has to watch for it.*
 - [x] MP-8 Pool fields `provider`, `license`, `license_url`, `author` per picked slot; migrate existing picks; `validate` checks the allowlist; credit names the provider (shared with PUB-2). *Done in pm plan 26 (tasks 111–113): 1,202 picks migrated on 2026-10-11.*
 - [x] MP-9 Review tool: provider and licence on candidates; search modal over all providers. *2026-10-08; the LLM review also sees each candidate's source.*

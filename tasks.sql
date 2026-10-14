@@ -26108,6 +26108,19 @@ Please report:
 - launch discount: not entered now (launch day, plan 95)
 
 Task 1050: Close-out of PUB-9 and PUB-11 waits on this answer.', NULL, NULL, '2026-10-14T22:06:47Z', NULL, 1049, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (184, 'Freesound re-pick: which Commons sounds for q-0752 (mosquito) and q-1016 (turkey)?', 'pending', '["Pick in the review tool (/review?q=…, search modal): q-0752 ''File:Mosquito attack.ogg'' (CC0, 88 s) if it buzzes clearly near the start, else set it to needs_work; q-1016 ''File:Gobbler.ogg'' (Public domain, PD-author, 10.6 s, domestic gobble)", "q-1016 a xeno-canto wild turkey instead: ''Meleagris gallopavo - Wild Turkey XC134744.ogg'' (CC BY-SA 3.0, 29 s)", "Both to needs_work: no usable Commons sound; drop the Freesound picks without a replacement"]', '`task 1051: Freesound: re-pick its 2 audio slots from Commons, drop it from the audio order`; `decision 82: Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?` → (a), D-103. No `qgen` path re-picks a single question''s media; D-36: picks only through the review tool, so the developer picks (needs a listen).
+
+Done already: `freesound` out of `providers.ORDER["audio"]` (the review tool''s search modal now asks Commons only); `plans/23-media-providers.md` audio row, MP-6.
+
+Commons candidates (allowlisted, D-45; searched 2026-10-14, review tool search terms in brackets):
+- q-0752 «El zancudo» (Ronald Ross, malaria; search "mosquito buzzing"):
+  - File:Mosquito attack.ogg: CC0, Yesthatbruce, 87.6 s; the only real mosquito recording; the rest are spoken-word pronunciations (LL-Q…, En-uk-mosquito)
+- q-1016 «Pavo» (search "turkey gobble" or "Meleagris gallopavo"):
+  - File:Gobbler.ogg: Public domain (PD-author, PD-pdsounds.org; worldwide, not US-only), bod, 10.6 s: shortest real gobble
+  - File:Meleagris gallopavo - Wild Turkey XC134744.ogg: CC BY-SA 3.0, xeno-canto, 29.1 s (wild turkey)
+  - other xeno-canto clips: XC104532 (102 s), XC104533 (118 s), XC136045 (173 s), XC320490, XC134155: long
+
+After the picks the worker resumes task 1051: `qgen export`, no `freesound.org` URL left in `authoring/data/questions.json` / `app/data/pool.json`, `qgen validate`, `trivia-media sync --status approved`.', NULL, NULL, '2026-10-14T22:09:21Z', NULL, 1051, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -27091,6 +27104,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (973, 1048, '2026-10-14T22:01:33Z', '2026-10-14T22:06:06Z', 'done', NULL, 0, '8d2b4fed84571771c93b7198874510b0904678e8', 'claude-opus-5-5[1m]', '3c983925-b362-4c0c-a2c3-942776d0f28e', 38, 66, 16634, 2240581, 91173, 1.5104442000000002, 2296074);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (974, 1049, '2026-10-14T22:06:07Z', '2026-10-14T22:07:18Z', 'done', NULL, 0, '00512b3f9bdcb4e018062243f306dcf2c6232f0c', 'claude-opus-5-5[1m]', '58f059d1-14b5-4bf8-8a74-6a73f85d6dae', 13, 22, 5243, 483355, 45141, 0.562747, 2296074);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (975, 205, '2026-10-14T22:07:18Z', '2026-10-14T22:08:08Z', 'done', NULL, 0, '902b0774dea2803bc6ac583c3937a2e31cc6e19c', 'claude-opus-5-5[1m]', '695ef689-cda3-4756-977b-a63c3804c25b', 11, 22, 4949, 425742, 36454, 0.47584839999999995, 2296074);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (976, 1051, '2026-10-14T22:08:08Z', '2026-10-14T22:10:05Z', 'blocked', NULL, 0, '4fc260eb4a81ea213fa67d60772e4a37c3c281c0', 'claude-opus-5-5[1m]', '42820b11-ea11-468b-9a06-0ccba4d32557', 20, 34, 5273, 787673, 49673, 0.66051460000000006, 2296074);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -27346,6 +27360,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1042, 177);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1045, 177);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1045, 179);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1050, 183);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1051, 184);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
