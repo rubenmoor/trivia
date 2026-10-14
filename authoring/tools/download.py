@@ -1,10 +1,9 @@
 """Downloads for the authoring tools: provider API calls and media files into the cache (D-17).
 
-Never ships: the game server only reads the cache (app/server/media_cache.py, plan 51).
+Never ships: the game only reads the cache (media_cache.py, plan 51).
 """
 import os, sys, threading, time, urllib.error, urllib.parse, urllib.request
 
-import layout  # noqa: F401  (makes app/server importable)
 from media_cache import MEDIA, cache_path
 
 # Wikimedia requires an identifying User-Agent with contact information.

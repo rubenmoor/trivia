@@ -49,7 +49,7 @@ import urllib.parse
 from pathlib import Path
 from collections import Counter
 
-import layout  # paths; also makes app/server importable (D-35)
+import layout  # paths (D-35)
 from layout import PROMPTS, REPO as ROOT, SOURCE_POOL as POOL, WORK
 import atomic  # authoring/tools/atomic.py: .tmp + replace writes, cross-process locks
 import age_groups  # authoring/tools/age_groups.py: level ranges per group (plan 27)
@@ -57,13 +57,13 @@ import batches  # authoring/tools/batches.py: what the next batch does (D-36)
 import concepts  # authoring/tools/concepts.py: concept lists and question axes (D-37)
 import progress  # authoring/tools/progress.py: progress bars (QG-18)
 import categories  # authoring/tools/categories.py: every bundle's categories (D-19, D-43)
-import media_cache as media  # app/server/media_cache.py: the media cache (D-17)
+import media_cache as media  # authoring/tools/media_cache.py: the media cache (D-17)
 import download  # authoring/tools/download.py: fills the media cache
 import media as media_tool  # authoring/tools/media.py: candidates, sheets, picks (`media` is the cache)
 import providers  # authoring/tools/providers/: where candidates come from (D-45)
 import engine  # authoring/tools/engine.py: the TS engine under Node (D-60), e.g. the supply check (GF-5)
 import save_file  # authoring/tools/save_file.py: the game's save, read-only (D-59)
-import paths  # app/server/paths.py: state/ (TRIVIA_STATE)
+import paths  # authoring/tools/paths.py: state/ (TRIVIA_STATE)
 import targets  # authoring/tools/targets.py: pool targets (D-53)
 import pool_export  # authoring/tools/pool_export.py (D-35)
 import patch_notes  # authoring/tools/patch_notes.py: `qgen patch-notes` (plan 96)

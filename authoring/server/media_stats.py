@@ -3,7 +3,7 @@ Pixel sizes come from the cached files (D-17); headers only, standard library on
 import struct
 from collections import Counter
 
-import media_cache  # app/server/media_cache.py
+import media_cache  # authoring/tools/media_cache.py
 
 # Bands on the long edge, in px: (lower bound, label).
 BANDS = [(3840, "≥ 3840"), (1920, "1920–3839"), (1280, "1280–1919"), (800, "800–1279"), (0, "< 800")]

@@ -1,25 +1,43 @@
-"""The game's save, read-only for authoring (plans/49, D-59, D-67).
+"""The game's save, read-only for authoring (plans/49, D-59, D-67, plan 99).
 
-Reads state/game.json; without it: no seen counts, blocked questions or flags (game.sqlite/flags.json are backups,
-read only by save.migrate()). Never writes the save; only its own ledger:
+Reads the desktop save: TRIVIA_SAVE_DIR/game.json if set, else state/desktop/<user>/game.json (the only one, or
+the newest; named on stderr). Without one: no seen counts, blocked questions or flags. Never writes the save;
+only its own ledger:
 
     flags-applied.json   {"<question id>": "<flagged_on>[ <note>]"}   flags already turned into reviews (stamp())
 """
-import json
+import json, os, sys
 from collections import Counter
+from functools import cache
+from pathlib import Path
 
-import layout  # noqa: F401  (authoring/tools/layout.py; makes app/server importable)
 import atomic  # authoring/tools/atomic.py
-import paths  # app/server/paths.py
-import save  # app/server/save.py
+import layout  # authoring/tools/layout.py
+import paths  # authoring/tools/paths.py
 
 APPLIED = paths.STATE / "flags-applied.json"  # gitignored, written by trivia-authoring only
+DESKTOP = layout.REPO / "state" / "desktop"  # the dev shell's save folders, one per user (app/desktop/main.mjs)
+
+
+@cache
+def path():
+    """The save file to read, or None."""
+    if os.environ.get("TRIVIA_SAVE_DIR"):
+        return Path(os.environ["TRIVIA_SAVE_DIR"]) / "game.json"
+    found = sorted(DESKTOP.glob("*/game.json"), key=lambda f: f.stat().st_mtime)
+    if not found:
+        return None
+    print(f"save: {found[-1]}" + (f" (newest of {len(found)})" if len(found) > 1 else ""), file=sys.stderr)
+    return found[-1]
 
 
 def _doc():
     """game.json parsed, or None."""
-    raw = save.load()
-    return json.loads(raw) if raw is not None else None
+    f = path()
+    try:
+        return json.loads(f.read_text(encoding="utf-8")) if f else None
+    except FileNotFoundError:
+        return None
 
 
 def _seen_blocked():

@@ -120,7 +120,7 @@ async function sendFile(file, request, extra = {}) {
   return new Response(size ? body(file) : null, { status: 200, headers: { ...headers, "content-length": String(size) } });
 }
 
-// Same name as app/server/media_cache.py cache_path (D-17).
+// Same name as authoring/tools/media_cache.py cache_path (D-17).
 export function cacheName(url) {
   let ext = "";
   try {

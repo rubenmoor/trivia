@@ -5,8 +5,8 @@ the older after «Antes:»; es reviews the source, en/de that locale's translati
 """
 import datetime, json, re
 
-import layout  # noqa: F401  (authoring/tools/layout.py; makes app/server importable)
 import atomic  # authoring/tools/atomic.py
+import layout  # authoring/tools/layout.py
 import pool_export  # authoring/tools/pool_export.py
 import translations  # authoring/tools/translations.py
 

@@ -10,7 +10,7 @@ question's media, work/media/<id>-background.json for the background image of au
 questions (D-14). The review tool and `qgen review` choose among them; `download()` and
 `pick_fields()` turn a chosen candidate into the fields stored in the pool.
 
-Picked files live in the media cache (app/server/media_cache.py, D-17); downloads go through
+Picked files live in the media cache (authoring/tools/media_cache.py, D-17); downloads go through
 authoring/tools/download.py. `sync` downloads every picked file that isn't cached yet, ahead
 of game night.
 

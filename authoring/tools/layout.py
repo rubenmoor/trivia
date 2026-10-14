@@ -1,18 +1,14 @@
 """Where the authoring tools find their files (plans/19-repo-layout.md, D-35).
 
-Importing this module also makes the game's modules in app/server/ importable (paths,
-media_cache, save): authoring may use app/, never the other way round.
+authoring may read app/, never the other way round; the game's paths come from paths.py.
 """
-import os, sys
+import os
 from pathlib import Path
 
 AUTHORING = Path(__file__).resolve().parent.parent  # authoring/
 REPO = AUTHORING.parent
-APP_SERVER = REPO / "app" / "server"
-if str(APP_SERVER) not in sys.path:
-    sys.path.insert(0, str(APP_SERVER))
 
-import paths as app_paths  # noqa: E402  (app/server/paths.py)
+import paths as app_paths  # noqa: E402  (authoring/tools/paths.py)
 
 SOURCE_POOL = AUTHORING / "data" / "questions.json"  # every question, with reviews and pipeline fields
 TARGETS = AUTHORING / "data" / "targets.json"  # pool targets per bundle (D-53)

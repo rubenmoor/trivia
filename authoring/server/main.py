@@ -6,7 +6,7 @@ printable joker cards, with the question API. Never ships (D-35).
 
 It edits authoring/data/questions.json (translations: questions.<locale>.json) and re-exports
 app/data/pool.json (pool.<locale>.json) after every change, so the game (port 8000) sees reviews at once.
-At startup it turns the questions flagged in the game (state/game.json's flags) into needs-work reviews
+At startup it turns the questions flagged in the game (the desktop save's flags, save_file.py) into needs-work reviews
 (D-47; a flag from an en/de game: of that translation, decision 102) and prints the link to every
 question that isn't approved (/review?status=!approved, RV-22).
 
@@ -76,13 +76,13 @@ from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "tools"))
-import layout  # noqa: E402,F401  (authoring/tools/layout.py; makes app/server importable)
+import layout  # noqa: E402  (authoring/tools/layout.py)
 import atomic  # noqa: E402  (authoring/tools/atomic.py)
 import categories  # noqa: E402  (authoring/tools/categories.py)
-from http_base import BaseHandler  # noqa: E402  (app/server/http_base.py)
+from http_base import BaseHandler  # noqa: E402  (authoring/tools/http_base.py)
 import download  # noqa: E402  (authoring/tools/download.py)
 import media  # noqa: E402  (authoring/tools/media.py)
-import media_cache  # noqa: E402  (app/server/media_cache.py)
+import media_cache  # noqa: E402  (authoring/tools/media_cache.py)
 import media_stats  # noqa: E402  (authoring/server/media_stats.py)
 import overview  # noqa: E402  (authoring/server/overview.py)
 import played  # noqa: E402  (authoring/tools/played.py)
@@ -333,7 +333,7 @@ def apply_flags():
     """Questions flagged in the game become human needs-work reviews (GM-5, D-47); returns their IDs.
     A flag from an en/de game reviews that translation, else the source (decision 102); the feedback quotes
     the question as the player saw it. Runs only at startup: a question that left the pool while on screen
-    would break a running game. The flags stay in game.json; state/flags-applied.json records the applied ones (D-59)."""
+    would break a running game. The flags stay in the save; state/flags-applied.json records the applied ones (D-59)."""
     ledger = save_file.applied()
     pending = {k: v for k, v in save_file.flags().items() if ledger.get(k) != save_file.stamp(v)}
     known = {}
@@ -374,9 +374,7 @@ GET_API = {
 
 
 class Handler(BaseHandler):
-    dist = layout.DIST
     pool_file = POOL
-    build_hint = "authoring UI not built: run `npm run build -w authoring/ui`"
 
     def send_media(self, file_url):
         """Like the game's, but downloads on a cache miss (the game server never does)."""

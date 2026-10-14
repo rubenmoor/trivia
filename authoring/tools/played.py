@@ -10,8 +10,8 @@ from clean answers, inverted per question after shrinkage; outliers are review c
 import json, math
 
 import atomic
-import layout  # also makes app/server importable
-import paths  # app/server/paths.py: state/
+import layout
+import paths  # authoring/tools/paths.py: state/
 import translations
 
 STATS = paths.STATE / "played" / "stats.json"
