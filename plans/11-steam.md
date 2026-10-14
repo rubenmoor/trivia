@@ -264,7 +264,7 @@ In order, Steamworks (partner.steamgames.com, the app's landing page); menu name
 Per language, written by plan 95 task 2 (`task 707`, 2026-10-13); posted by the developer on launch day (Community → Events & Announcements, one text per Steam language). Workers never post.
 - Placeholders: `<n_es>`, `<n_en>`, `<n_de>` = questions per language from `qgen report` (filled by `task 708: Release candidate v1.0.0`).
 - Reports (revised 2026-10-14, task 862): the in-game send (plan 93: flag, «Preguntas marcadas», «Enviar»; «Copiar» when sending fails); privacy: one sentence pointing to the store page's privacy policy (ST-5 "Privacy"); one factual line on mods from the Workshop (milestone 15). UI words as in `app/client/src/locales/`.
-- Facts as of 2026-10-13: launch modes = gamemaster mode and «Solo o en grupo» (plan 13; multiplayer later, milestone 11 out of scope); names per D-50 (German: no localized name); UI words from `app/client/src/locales/`; AI wording from `plans/17-publishing.md` "AI disclosure" (`17a` has no AI text yet: if PUB-9's final text differs, follow it).
+- Facts as of 2026-10-13: launch modes = gamemaster mode and «Solo o en grupo» (plan 13; multiplayer later, milestone 11 out of scope); names per D-50 and decision 78 (German: «Wohnzimmer-Quiz» as `plans/17a-store-page.md` "German" has it, provisional until PUB-7's check; task 1071, 2026-10-14); UI words from `app/client/src/locales/`; AI wording from `plans/17-publishing.md` "AI disclosure" (`17a` has no AI text yet: if PUB-9's final text differs, follow it).
 - No marketing claims, no links outside Steam. Body in Steam's BBCode. Forum name («Discusiones», "Diskussionen"): use Steam's own label in that language.
 - Spanish: Spanish – Latin America gets es-419 as written; Spanish – Spain the same text with the es-ES deltas applied.
 
@@ -332,15 +332,15 @@ Same title, what's new and body, with:
 - `Márquenla` → `Marcadla`, `abran` → `abrid`, `presionen` → `pulsad`
 
 #### German
-- Title: `Living Room Trivia ist erschienen`
-- What's new (1.0.0): `Erste Version: „Mit Spielleitung“ und „Allein oder in der Gruppe“, Fragen auf Spanisch, Englisch und Deutsch.`
+- Title: `Wohnzimmer-Quiz ist erschienen`
+- What's new (1.0.0): `Erste Version: „Spielleitermodus“ und „Allein oder in der Gruppe“, Fragen auf Spanisch, Englisch und Deutsch.`
 - Body:
 ```
-Living Room Trivia ist ein Quizspiel für den Fernseher: Die Familie spielt zusammen als ein Team, und 12 richtige Antworten in Folge gewinnen das Spiel. Eine falsche Antwort beendet es.
+Wohnzimmer-Quiz ist ein Quizspiel für den Fernseher: Die Familie spielt zusammen als ein Team, und 12 richtige Antworten in Folge gewinnen das Spiel. Eine falsche Antwort beendet es.
 
 Zwei Modi:
 [list]
-[*]Mit Spielleitung: Eine Person leitet das Spiel für die anderen: Schwierigkeit, Anzahl der Stufen, Joker, Video- und Audiofragen; sie kann eine Frage überspringen, austauschen oder zurücknehmen.
+[*]Spielleitermodus: Eine Person leitet das Spiel für die anderen: Schwierigkeit, Anzahl der Stufen, Joker, Video- und Audiofragen; sie kann eine Frage überspringen, austauschen oder zurücknehmen.
 [*]Allein oder in der Gruppe: eine Person allein oder alle als ein Team, ohne Spielleitung; Altersgruppe wählen und mit den Standard-Jokern spielen.
 [/list]
 Fünf Joker; Fragen mit Bildern, Audio und Video. Gamepad, Tastatur oder Maus. Läuft offline; kein Konto nötig.
