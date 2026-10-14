@@ -146,7 +146,7 @@ Environment variables (empty = unset):
 - `TRIVIA_STATE`, `TRIVIA_MEDIA`: save folder and media cache (default `state/`, `media/`; packaged: `$XDG_DATA_HOME/trivia/`)
 - `TRIVIA_WORK`: the pipeline's `work/` folder (authoring tools)
 - `TRIVIA_SAVE_DIR`: the desktop shell's save folder
-- `TRIVIA_DEVTOOLS=1`: the desktop shell opens its devtools
+- `TRIVIA_DEVTOOLS=1`: the desktop shell allows its built-in devtools (`webPreferences.devTools`); nothing opens them (no menu, no shortcut); to inspect the page: `--remote-debugging-port=9222` + `chrome://inspect`, works without this variable
 - `TRIVIA_STEAM_APPID`: the desktop shell's Steam App ID in dev (a Steam launch's `SteamAppId` wins; default 480)
 - `TRIVIA_DEV_STEAM_USER=1`: the desktop shell counts as a valid Steam user without Steam (saves and flags on; dev runs and checks only, decision 111); also dev mode: Esc menu row «Ir a pregunta…» (question id or number → that question on screen)
 - `TRIVIA_STEAM_SDK`: Steamworks SDK libs (set by the flake)

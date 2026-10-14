@@ -115,7 +115,8 @@ Mods change the game: new question bundles, a new look, changed rules, or a whol
 - Seeing our source:
   - The public repo at the game's version tag: `https://github.com/rubenmoor/trivia/tree/v<version>/app/client/src` (version: Credits screen)
   - The installed files: `resources/client/` in the install folder, with source maps
-  - Devtools (no shortcut in the game): start with `TRIVIA_DEVTOOLS=1` and `--remote-debugging-port=9222 --remote-allow-origins=*`, then open `chrome://inspect` in Chrome or Chromium and add `localhost:9222`
+  - Devtools (no shortcut in the game): start the game with `--remote-debugging-port=9222` (Steam: Properties → Launch options), then open `chrome://inspect` in Chrome or Chromium; under "Remote Target" (`localhost:9222`, else "Configure..." → add it) click "inspect" on `app://trivia/`
+  - Only while you mod: anything on your PC can control the game through that port
 
 ## Code add-ons
 - `mod.json` `"entry": "main.js"` (any path inside the mod); the entry is an ES module:
