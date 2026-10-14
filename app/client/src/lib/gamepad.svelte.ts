@@ -2,7 +2,7 @@
 // is connected and dispatches their actions like keys (input.svelte.ts). Any pad drives the game.
 import { steam } from "./desktop.ts";
 import { BUTTONS, FRESH, held, step, steamStyle, styleOf, type PadState, type PadStyle } from "./gamepad.ts";
-import { dispatch, padMap } from "./input.svelte.ts";
+import { dispatch, padMap, release } from "./input.svelte.ts";
 
 /** The glyph set of the pad that acted last (IN-5). */
 export const padStyle = $state({ current: "xbox" as PadStyle });
@@ -27,6 +27,7 @@ export function listenPads(first: () => void): () => void {
   function poll() {
     frame = requestAnimationFrame(poll);
     const active = !document.hidden && document.hasFocus();
+    if (!active) release();
     for (const g of pads()) {
       if (!active) {
         prev.set(g.index, held(g.buttons.length)); // held buttons don't fire on return
@@ -60,6 +61,7 @@ export function listenPads(first: () => void): () => void {
 
   function disconnected(e: GamepadEvent) {
     prev.delete(e.gamepad.index);
+    release();
     void refreshSteam();
     if (pads().length) return;
     cancelAnimationFrame(frame);

@@ -283,6 +283,8 @@ export const en = {
       topic: "Topic: {name}",
       replay: "replay",
       replayKey: "R",
+      peek: "View image",
+      peekKey: "V",
       hint: "Hint {n}",
       mediaMissing: "media not available (missing `trivia-media sync`?)",
       sendFailed: "Couldn't send the answer: {error}",

@@ -328,6 +328,9 @@ const es = {
       replay: "repetir",
       /** Shortcut for `replay` (case-insensitive). */
       replayKey: "R",
+      peek: "Ver imagen",
+      /** Hold to show only the picture (plan 113); case-insensitive. */
+      peekKey: "V",
       hint: "Soplo {n}",
       mediaMissing: "medio no disponible (¿falta `trivia-media sync`?)",
       sendFailed: "No se pudo enviar la respuesta: {error}",

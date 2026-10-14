@@ -282,6 +282,8 @@ export const de = {
       topic: "Thema: {name}",
       replay: "nochmal",
       replayKey: "R",
+      peek: "Bild ansehen",
+      peekKey: "V",
       hint: "Zaunpfahl {n}",
       mediaMissing: "Medium nicht verfügbar (fehlt `trivia-media sync`?)",
       sendFailed: "Die Antwort konnte nicht gesendet werden: {error}",

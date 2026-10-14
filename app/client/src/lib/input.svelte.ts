@@ -19,6 +19,8 @@ export type Intent =
   | { type: "new" }
   | { type: "submit" }
   | { type: "joker-focus"; step: 1 | -1 }
+  /** The one hold (plan 113): down on press, up on release. */
+  | { type: "peek"; down: boolean }
   /** A screen's own letter key (a bundle on Choice); `key` lower case. */
   | { type: "letter"; key: string };
 export type Action = Intent & { device: Device };
@@ -81,6 +83,7 @@ const KEY_LABELS: Partial<Record<Intent["type"], string>> = {
   replay: t("screen.question.replayKey"),
   new: t("screen.start.newKey"),
   flag: t("flag.key"),
+  peek: t("screen.question.peekKey"),
 };
 const ARROW_LABELS: Record<Dir, string> = { up: "↑", down: "↓", left: "←", right: "→" };
 
@@ -97,6 +100,7 @@ const stack: Scope[] = [];
 /** Push a scope (in `$effect`); returns its pop. */
 export function pushScope(scope: Scope): () => void {
   if (!scope.keep) forget(scope.name);
+  if (scope.modal) release();
   const restore = scope.modal ? opener() : null; // dialogs give focus back to their opener
   const at = scope.modal ? stack.length : stack.findIndex((s) => s.modal);
   stack.splice(at < 0 ? stack.length : at, 0, scope);
@@ -127,11 +131,28 @@ export function focusControl(el: HTMLElement | null | undefined) {
 }
 
 let busy = () => false;
+/** A peek is held; its key, if a key started it. */
+let holding = false;
+let holdKey: string | null = null;
 
 /** Run an action through the scopes, top first; true if one handled it. The gamepad loop calls it too. */
 export function dispatch(action: Action): boolean {
+  if (action.type !== "peek") return route(action);
+  if (!action.down && !holding) return false;
+  const done = route(action);
+  holding = action.down && done;
+  return done;
+}
+
+/** Ends a held peek (blur, hidden page, pad gone, a modal scope). */
+export function release() {
+  holdKey = null;
+  if (holding) dispatch({ type: "peek", down: false, device: lastDevice.current });
+}
+
+function route(action: Action): boolean {
   lastDevice.current = action.device;
-  const always = action.type === "menu" || action.type === "flag";
+  const always = action.type === "menu" || action.type === "flag" || (action.type === "peek" && !action.down);
   const top = stack.at(-1);
   const root = top?.root?.();
   if (action.type === "confirm" && root && !busy() && press(root, top?.pressable)) return true;
@@ -165,7 +186,10 @@ function keydown(e: KeyboardEvent, first: () => void) {
   const text = textField(document.activeElement);
   const keys = Object.assign({}, ...stack.map((s) => s.keys ?? {}));
   const intent = toIntent(e, keys, text);
-  if (intent && dispatch({ ...intent, device: "keyboard" })) return e.preventDefault();
+  if (intent && dispatch({ ...intent, device: "keyboard" })) {
+    if (intent.type === "peek") holdKey = e.key.toLowerCase();
+    return e.preventDefault();
+  }
   if (text || busy() || e.key.length !== 1 || !/\p{L}/u.test(e.key) || e.ctrlKey || e.metaKey) return;
   for (let i = stack.length - 1; i >= 0; i--) {
     const field = stack[i].text?.();
@@ -179,14 +203,22 @@ export function listen(opts: { busy: () => boolean; first: () => void }): () => 
   busy = opts.busy;
   const onkey = (e: KeyboardEvent) => keydown(e, opts.first);
   const onpointer = () => (lastDevice.current = "mouse");
+  const onkeyup = (e: KeyboardEvent) => e.key.toLowerCase() === holdKey && release();
+  const onhidden = () => document.hidden && release();
   const untrackFocus = track();
   window.addEventListener("keydown", onkey);
+  window.addEventListener("keyup", onkeyup);
+  window.addEventListener("blur", release);
+  document.addEventListener("visibilitychange", onhidden);
   window.addEventListener("pointerdown", onpointer);
   window.addEventListener("click", opts.first);
   window.addEventListener("focusin", bump);
   window.addEventListener("focusout", bump);
   return () => {
     window.removeEventListener("keydown", onkey);
+    window.removeEventListener("keyup", onkeyup);
+    window.removeEventListener("blur", release);
+    document.removeEventListener("visibilitychange", onhidden);
     window.removeEventListener("pointerdown", onpointer);
     window.removeEventListener("click", opts.first);
     window.removeEventListener("focusin", bump);

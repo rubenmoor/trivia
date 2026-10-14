@@ -15,6 +15,7 @@
   import Hud from "../Hud.svelte";
   import JokerFlight from "../JokerFlight.svelte";
   import JokerTray from "../JokerTray.svelte";
+  import Prompt from "../Prompt.svelte";
   import { TOKENS } from "../jokers.ts";
   import { DEFAULT_LEVELS, onTwelve } from "../levels.ts";
   import Answers, { LETTERS } from "../question/Answers.svelte";
@@ -112,6 +113,11 @@
   let shattering = $state<number | null>(null);
   let tiles = $state<HTMLButtonElement[]>([]);
   let screenEl = $state<HTMLDivElement>();
+  /** The peek is held (plan 113): only the picture shows. */
+  let peeking = $state(false);
+  const canPeek = $derived(
+    question.media.type === "image" && question.media.role !== "decorative" && !!question.media.file_url && !mediaFailed && mode === null,
+  );
 
   /** Resolves once the media is ready to show (or failed); Game.svelte waits for it before the fade-in. */
   export function ready() {
@@ -300,10 +306,11 @@
     ...Object.fromEntries(TOKENS.map((t) => [t.key.toLowerCase(), { type: "joker", name: t.name }])),
     ...Object.fromEntries(LETTERS.map((l, i) => [l.toLowerCase(), { type: "pick", n: i + 1 }])),
     [REPLAY_KEY.toLowerCase()]: { type: "replay" },
+    [t("screen.question.peekKey").toLowerCase()]: { type: "peek", down: true },
   };
   // Pad (decision 9): Y/B/X/A pick by position, RT submits, LT unlocks; on a token A/B are confirm/back.
   const PAD_PICKS: Record<number, Intent> = Object.fromEntries([3, 1, 2, 0].map((b, i) => [b, { type: "pick", n: i + 1 }]));
-  const PAD_FINAL: Record<number, Intent> = { 6: { type: "back" }, 7: { type: "submit" } };
+  const PAD_FINAL: Record<number, Intent> = { 6: { type: "back" }, 7: { type: "submit" }, 11: { type: "peek", down: true } };
   const PAD_TOKEN: Record<number, Intent> = { 0: { type: "confirm" }, 1: { type: "back" } };
   function padMap(): Record<number, Intent> {
     const f = document.activeElement;
@@ -335,6 +342,7 @@
         else if (a.type === "confirm" || a.type === "submit") submit();
         else if (a.type === "joker-focus") focusToken(a.step);
         else if (a.type === "replay") replay();
+        else if (a.type === "peek") peeking = a.down;
         else return false;
         return true;
       },
@@ -378,9 +386,21 @@
   const scoped = $derived(tiles[shot ?? (mode === "snipe" ? (target ?? -1) : -1)] ?? null);
 </script>
 
-<div class="question-screen" bind:this={screenEl} class:sweeping style:--sweep="{SWEEP_MS}ms">
+<!-- svelte-ignore a11y_no_static_element_interactions -->
+<div
+  class="question-screen"
+  bind:this={screenEl}
+  class:sweeping
+  class:peeking={peeking && canPeek}
+  style:--sweep="{SWEEP_MS}ms"
+  onpointerdown={(e) => e.target === screenEl && e.button === 0 && (peeking = true)}
+  onpointerup={() => (peeking = false)}
+  onpointercancel={() => (peeking = false)}
+  onpointerleave={() => (peeking = false)}
+>
   <div class="top">
     <Hud {level} {levels} player={playerName} />
+    {#if canPeek}<span class="peek glass"><Prompt action={{ type: "peek", down: true }} /> {t("screen.question.peek")}</span>{/if}
   </div>
 
   {#if swappedBy?.joker === "easier"}
@@ -447,6 +467,29 @@
   }
   .top {
     justify-self: start;
+    display: flex;
+    align-items: center;
+    gap: calc(0.8 * var(--u));
+  }
+  .peek {
+    display: flex;
+    align-items: center;
+    gap: calc(0.4 * var(--u));
+    padding: calc(0.35 * var(--u)) calc(1 * var(--u));
+    border-radius: calc(0.9 * var(--u));
+    font-size: calc(1 * var(--u));
+    color: var(--slate-200);
+  }
+  /* Peek (plan 113): every panel fades out, the picture stays, unfiltered; release restores at once. */
+  .peeking > :global(:not(.backdrop)) {
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.15s,
+      visibility 0s 0.15s;
+  }
+  .question-screen.peeking > :global(.backdrop) :global(img) {
+    filter: none;
   }
   .dial-spot {
     position: absolute;

@@ -3,15 +3,15 @@
   // no console makers' art. Standard button index + glyph set → one 24×24 SVG.
   import type { PadStyle } from "../lib/gamepad.ts";
 
-  type Shape = "a" | "b" | "x" | "y" | "cross" | "circle" | "square" | "triangle" | "bumper" | "trigger" | "view" | "menu"
+  type Shape = "a" | "b" | "x" | "y" | "cross" | "circle" | "square" | "triangle" | "bumper" | "trigger" | "stick" | "view" | "menu"
     | "create" | "options" | "up" | "down" | "left" | "right";
 
   const DPAD: Record<number, Shape> = { 12: "up", 13: "down", 14: "left", 15: "right" };
   const SETS: Record<PadStyle, Record<number, [Shape, string?]>> = {
     xbox: { 0: ["a"], 1: ["b"], 2: ["x"], 3: ["y"], 4: ["bumper", "LB"], 5: ["bumper", "RB"], 6: ["trigger", "LT"],
-      7: ["trigger", "RT"], 8: ["view"], 9: ["menu"] },
+      7: ["trigger", "RT"], 8: ["view"], 9: ["menu"], 11: ["stick", "RS"] },
     playstation: { 0: ["cross"], 1: ["circle"], 2: ["square"], 3: ["triangle"], 4: ["bumper", "L1"], 5: ["bumper", "R1"],
-      6: ["trigger", "L2"], 7: ["trigger", "R2"], 8: ["create"], 9: ["options"] },
+      6: ["trigger", "L2"], 7: ["trigger", "R2"], 8: ["create"], 9: ["options"], 11: ["stick", "R3"] },
   };
   const ARMS: Record<string, string> = {
     up: "M9 3.5h6V9H9z",
@@ -50,6 +50,9 @@
     {:else if shape in ARMS}
       <path d="M9 3.5h6V9h5.5v6H15v5.5H9V15H3.5V9H9z" fill="currentColor" fill-opacity="0.2" stroke-width="1.8" />
       <path d={ARMS[shape]} fill="currentColor" stroke-width="1.8" />
+    {:else if shape === "stick"}
+      <circle cx="12" cy="12" r="10.6" stroke-width="1.2" />
+      <circle cx="12" cy="12" r="8.2" fill="currentColor" fill-opacity="0.25" stroke-width="1.6" />
     {:else}
       <circle cx="12" cy="12" r="9.8" fill="currentColor" fill-opacity="0.25" />
     {/if}

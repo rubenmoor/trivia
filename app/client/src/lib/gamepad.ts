@@ -39,11 +39,14 @@ function along(d: Dir, x: number, y: number) {
   return d === "right" ? x : d === "left" ? -x : d === "down" ? y : -y;
 }
 
-/** One frame: press edges and stick moves → intents; no repeat while held. */
+/** One frame: press edges and stick moves → intents; no repeat while held. A hold (peek) also has its release edge. */
 export function step(prev: PadState, pad: Pad, map = BUTTONS): { next: PadState; actions: Intent[] } {
   const actions: Intent[] = [];
   pad.buttons.forEach((down, i) => {
-    if (down && !prev.buttons[i] && map[i]) actions.push(map[i]);
+    const intent = map[i];
+    if (!intent || down === !!prev.buttons[i]) return;
+    if (intent.type === "peek") actions.push({ type: "peek", down });
+    else if (down) actions.push(intent);
   });
   const [x = 0, y = 0] = pad.axes;
   let stick = prev.stick;
@@ -56,6 +59,7 @@ export function step(prev: PadState, pad: Pad, map = BUTTONS): { next: PadState;
 }
 
 const same = (a: Intent, b: Intent) =>
+  (a.type === "peek" && b.type === "peek") ||
   Object.keys(a).length === Object.keys(b).length && Object.entries(a).every(([k, v]) => b[k as keyof Intent] === v);
 
 /** The button bound to `intent` in `map` (lowest index), or null (IN-5). */
