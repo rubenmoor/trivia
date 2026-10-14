@@ -4,6 +4,8 @@
 // synthesized ones they cover, the three music loops included. Still synthesized: the effect cues
 // without a recording (recipes below) and the generated loops, the fallback when a file is missing.
 
+import { desktop } from "../lib/desktop.ts";
+
 /** normal: Start/Level/Select; question: a question on screen; submitted: an answer locked in;
  * roll: the drum roll from «Respuesta final» until the reveal; victory: «Pomp and Circumstance»
  * on the Victory screen, once (04, "Music"). */
@@ -12,6 +14,8 @@ export type Track = "normal" | "question" | "submitted" | "roll" | "victory";
 export type Volumes = { music: number; effects: number; media: number; muted: boolean };
 
 const STORE = "trivia.volumes";
+/** Session mute (plan 123): the dev server's flag or `?mute`; never stored. */
+const sessionMute = desktop?.muted === true || new URLSearchParams(location.search).has("mute");
 const DEFAULTS: Volumes = { music: 0.3, effects: 0.7, media: 1, muted: false };
 
 /** A stored value that isn't a level in 0..1 (or a boolean for `muted`) falls back to the default. */
@@ -142,14 +146,14 @@ function applyVolumes() {
   if (!ctx) return;
   const v = sound.volumes;
   const t = ctx.currentTime;
-  master.gain.setTargetAtTime(v.muted ? 0 : 1, t, 0.05);
+  master.gain.setTargetAtTime(v.muted || sessionMute ? 0 : 1, t, 0.05);
   musicBus.gain.setTargetAtTime(v.music * 0.5, t, 0.05);
   fxBus.gain.setTargetAtTime(v.effects, t, 0.05);
 }
 
 /** Volume for the question's <audio>/<video> (they play outside the AudioContext). */
 export function mediaVolume() {
-  return sound.volumes.muted ? 0 : sound.volumes.media;
+  return sound.volumes.muted || sessionMute ? 0 : sound.volumes.media;
 }
 
 /** Jokers duck the music to about half while they play (09, "Common play animation"). */

@@ -7,6 +7,7 @@ import { fileURLToPath } from "node:url";
 import type { Connect, Plugin } from "vite";
 import { makeResolver } from "../desktop/resolve.mjs";
 import { makeSaveFile } from "../desktop/save.mjs";
+import { muteReason } from "../desktop/mute.mjs";
 
 const client = fileURLToPath(new URL(".", import.meta.url));
 const repo = `${client}../../`;
@@ -57,10 +58,12 @@ function mount(app: Connect.Server, dist: string | null): void {
   });
   const save = makeSaveFile(saveDir());
   void save.dropStaleTemp();
+  const muted = muteReason(process.env);
+  if (muted) console.log(`trivia dev: muted (${muted}); TRIVIA_SOUND=1 to hear`);
 
   app.use(SHIM, (_req, res) => {
     res.setHeader("content-type", "text/javascript; charset=utf-8");
-    res.end(readFileSync(`${client}devshell.js`, "utf8"));
+    res.end(readFileSync(`${client}devshell.js`, "utf8") + (muted ? "window.triviaShell.muted = true;\n" : ""));
   });
 
   app.use(SAVE, (incoming, res) => {

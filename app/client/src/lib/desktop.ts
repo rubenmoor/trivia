@@ -20,6 +20,8 @@ export interface DesktopBridge {
   readonly report?: ReportBridge;
   /** Set by the dev server's page shim (plan 99): its save dir is the dev switch. */
   readonly devServer?: true;
+  /** Dev server under `PM_WORKER`/`TRIVIA_MUTE=1` (plan 123): session mute; the shell mutes in Electron instead. */
+  readonly muted?: true;
 }
 
 export type BackupKind = "corrupt" | "newer";

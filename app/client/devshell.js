@@ -1,4 +1,5 @@
 // Dev server's page shim (plan 99): the save half of the desktop bridge over /@trivia/save, no Steam. Never in dist/.
+// The server appends `muted = true` under PM_WORKER/TRIVIA_MUTE=1 (plan 123).
 (() => {
   async function call(method, path = "", body = undefined) {
     const res = await fetch(`/@trivia/save${path}`, { method, body });
