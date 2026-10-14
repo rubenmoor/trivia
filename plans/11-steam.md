@@ -83,7 +83,8 @@ Every public build — the launch and every later patch — passes one checklist
 
 ### How to run
 - Bump `version` in `app/desktop/package.json` if needed, commit, `git tag v<x>` (the check never tags).
-- `trivia-steam upload --branch beta`: runs `trivia-release-check` (tag gate, per-commit checks, licences, release bar, `nix build .#app`, desktop builds, credits both ways, smoke game), then stages and uploads; prints the BuildID.
+- `trivia-steam upload --branch beta`: runs `trivia-release-check` (tag gate, per-commit checks, licences, release bar, `nix build .#app`, desktop builds, `report`, credits both ways, smoke game), then stages and uploads; prints the BuildID.
+- `report` step: the build's `reportUrl` (`package.json` in `linux-unpacked`'s `app.asar`) non-empty and `GET <url>/health` → `{"ok": true, "api": 1}` within 10 s; catches an empty URL (copy only) or a dead endpoint. Request from the dev shell, not the game. `--skip report` until the server is set up (plan 103 task 4); named in the build Desc.
 - Manual rows need the `beta` build, so at upload time answer the prompt with a note (e.g. `later`: counts as skipped, named in the build Desc).
 - Then the developer runs the rows below on `beta` and answers the candidate decision; `trivia-release-check --manual FILE` (one `<row>: <answer>` per line; `y…` passes, `n…` fails, anything else = note, counts as skipped) records the answers in the report.
 - Report: `work/steam/v<x>/release-check.md` (header: version, pool hash, previous tag, kind, save version change; every skip).
@@ -93,7 +94,8 @@ On the `beta` branch, installed through Steam. Scope: always, full (full release
 
 | row | scope | steps |
 |---|---|---|
-| `offline` | always | Network off, Steam not running, start the installed game: full release: a full game to level 12 or a won checkpoint; content-only patch: a game to level 3 that hits new questions |
+| `offline` | always | Steam running in offline mode (Steam → Go Offline while online, then network off), start the installed game from Steam. Full release: a full game to level 12 or a won checkpoint; quit and restart: the save is there (valid Steam user offline); flag a question and send: fails cleanly (no hang, failed state), the copy fallback copies the report text. Content-only patch: a game to level 3 that hits new questions. No "Steam off" row: saves and flags need a valid Steam user (decision 111) |
+| `report` | full | Candidate on `beta` under Steam, online: flag a question with a note, «Enviar» → «Enviada»; then `qgen flag --pull` → that question is `needs_work` with the note, report acknowledged; a second `qgen flag --pull` pulls nothing |
 | `windows` | full | Clean Windows machine (no dev tools), install from Steam `beta`, start: no warning, game fullscreen, a few questions with a pad |
 | `deck` | full | Best effort (decision 125): `no Deck (decision 125)` passes until the developer has a Deck; then plan 90's (SW-12) Deck checklist on the real Deck: `plans/18-steam-integration.md` "Steam Deck Verified" (until plan 90 writes it there: pm plan 90) |
 | `cloud` | full | Short A→B run of plan 87's table (`plans/18-steam-integration.md` "Steam Cloud test", first row): play on A, quit, B shows the same players and seen counts |
@@ -105,6 +107,7 @@ On the `beta` branch, installed through Steam. Scope: always, full (full release
 ### Patch variant
 - Kind, set by the check: `content-only` when, since the newest earlier `v*` tag, `git diff --name-only` touches nothing that ships except `app/data/` (shipped = `app/`, `flake.nix`, `flake.lock`, root `package*.json`); else `full`. No earlier tag = full.
 - Why: a content-only patch changes no code, so platform behaviour (Windows/Deck start, Cloud, sound, red frame) can't change; what it can break (questions, media, licences, credits, pool loading) stays covered by every automated step plus `offline` and `signoff`.
+- `report` is full-only: a content-only patch ships no client or shell code, and the server is deployed apart from game builds (`trivia-report-server deploy`, plan 103), so a game patch can't break the round trip; server changes get their own test report (plan 103).
 - Full-only rows are answered "skipped: content-only since <tag>" automatically and listed in the report.
 
 ### Decision per release candidate
@@ -114,13 +117,20 @@ On the `beta` branch, installed through Steam. Scope: always, full (full release
   | row | result ✓/✗/n/a | note (✗: how to reproduce) |
   |---|---|---|
   | offline | | |
+  | report | | |
   | … every row the report lists, auto-skipped ones pre-filled | | |
 
 - Options: `passed` (recommended), `passed with minor issues (list)`, `failed (rows)`.
 - Worker on the answer:
   - `passed`: `trivia-release-check --manual FILE` with the answers so the report holds them; the build may go to `default` (by hand, Steamworks).
   - `passed with minor issues`: as passed; each issue a bullet in `plans/backlog.md`.
-  - `failed`: one task per failing row in the owning plan (Deck → plan 90/18, Cloud → plan 87/18, sound, red frame, offline → the plan of the code involved); after the fixes a new tag and a new candidate decision.
+  - `failed`: one task per failing row in the owning plan; after the fixes a new tag and a new candidate decision:
+    - Deck → plan 90/18; Cloud → plan 87/18; sound, red frame → the plan of the code involved
+    - `offline` save/start → plan 87/85
+    - `offline` send/fallback, `report` client side (no «Enviada», wrong fields, no fallback) → plan 93
+    - `report` server side (server error on send, 401 on a real ticket, pull/ack wrong) → plan 103
+    - `report` step ✗ → the developer's setup (plan 103 task 4) or plan 93 (URL place)
+    - once those plans are closed: a new task in the plan of the code involved
 - Review request for Deck Verified: plan 90 (task 687) decides whether it moves here.
 
 ## Coming soon page (ST-3)
@@ -361,7 +371,7 @@ Das Spiel läuft offline. Nur bei „Senden“ an einer markierten Frage geht ei
 - [ ] ST-1 Resolve OQ-29..OQ-37 and record each answer in `decisions.md` (phase S2).
 - [x] ST-2 Add the new files to `README.md`, the Steam track to `project.md`, the questions to `open-questions.md` and D-34. *2026-10-07: done with this plan; keep `project.md` in sync from now on.*
 - [ ] ST-3 Steam "Coming soon" page live (after PUB-8, SW-7). *Plan: pm plan 94 (checklist with Valve's cited rules, pm decision "Coming soon page live? date?").*
-- [x] ST-4 Release checklist: build from a tagged commit, `qgen.py validate` clean, credits complete, offline test, Deck test, family sign-off. *Done 2026-10-13 (pm plan 92): "Release checklist (ST-4)" above; `trivia-release-check` tag gate, kind full/content-only, credits both ways, manual rows. First full run: part 4's release candidate (task 269).*
+- [x] ST-4 Release checklist: build from a tagged commit, `qgen.py validate` clean, credits complete, offline test, Deck test, family sign-off. *Done 2026-10-13 (pm plan 92): "Release checklist (ST-4)" above; `trivia-release-check` tag gate, kind full/content-only, credits both ways, manual rows. First full run: part 4's release candidate (task 269). Updated 2026-10-13 (pm plan 104): `offline` = Steam in offline mode with save and copy-fallback checks, `report` row and step.*
   - S6 part 2 done 2026-10-13 (pm plan 91: Version numbers and patch-safe saves; no ST-row of its own): one version in `app/desktop/package.json`, pool hash, both on the credits screen; running games survive dropped questions; `qgen validate` guards id continuity against the newest `v*` tag (`18`, `12`).
 - [ ] ST-5 Post-release: content update cadence, how question reports are collected.
   - [x] Reports half done 2026-10-13 (pm plan 93, decision 93): «Enviar» / «Enviar todas» in «Preguntas marcadas» → shell main posts to plan 103's `POST /reports` with a Steam ticket (`report:*` IPC, `app/desktop/report.mjs`); copy per flag and all as fallback (text format decision 142); `qgen flag` (pasted text) and `qgen flag --pull` (server, ledger `state/reports-pulled.json`) → `needs_work`. URL: `reportUrl` in `app/desktop/package.json`, empty until plan 103's server is live (task 868): until then copy only.

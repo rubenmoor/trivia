@@ -10,6 +10,8 @@ Steps, each ✓/✗ with its time; all automated steps run, exit 1 on any ✗:
   quality   qgen report --qc: release bar ✓ for the last two batches (pm decision 15)
   nix       nix build .#app (D-59)
   desktop   trivia-desktop-build --dir (stage-media's missing-file check) + trivia-steam stage
+  report    the build's reportUrl (package.json in the Linux app.asar) non-empty, GET <url>/health → {"ok": true, "api": 1}
+            within 10 s (plan 104); `--skip report` until the server is set up (plan 103 task 4)
   credits   node authoring/steam/credits_check.mjs on both unpacked builds: files ↔ credits.json, both ways
   smoke     node authoring/steam/smoke.mjs app/desktop/release/linux-unpacked (with packs: again without them)
   media-budget  always skipped until masterplan 10 part 6 (task 260) adds its check
@@ -24,7 +26,7 @@ Report header: version, every shipped pool's hash (app/data/pool.json = es, pool
 Run from the dev shell (nix, steam-run, Xvfb). Report: work/steam/<tag-or-sha>/release-check.md,
 release-check.json for `trivia-steam upload --checked` (commit, clean, ok, skipped), logs/<step>.log.
 """
-import argparse, json, re, subprocess, sys, time
+import argparse, json, re, struct, subprocess, sys, time, urllib.request
 from datetime import datetime
 from pathlib import Path
 
@@ -39,17 +41,23 @@ STEPS = {
     "quality": [["qgen", "report", "--qc"]],
     "nix": [["nix", "build", ".#app", "--no-link"]],
     "desktop": [["trivia-desktop-build", "--dir"], ["trivia-steam", "stage"]],
+    "report": [],
     "credits": [["node", "authoring/steam/credits_check.mjs", UNPACKED, UNPACKED_WIN]],
     "smoke": [["node", "authoring/steam/smoke.mjs", UNPACKED]],
 }
 SHIPPED = ("app/", "flake.nix", "flake.lock", "package.json", "package-lock.json")
 STATE_TS = "app/client/src/engine/state.ts"
 MEDIA_BUDGET = "masterplan 10 part 6, task 260"
+OFFLINE = ("beta install, Steam running in offline mode (Steam → Go Offline while online, then network off), "
+           "start from Steam")
 # Row → (scope, check, check on a content-only patch); scope: always, full (full release only), save
 # (only when SAVE_VERSION changed). Steps: plans/11-steam.md "Release checklist (ST-4)".
 MANUAL = {
-    "offline": ("always", "beta install, network off, Steam not running: full game to level 12 or a won checkpoint",
-                "beta install, network off, Steam not running: a game to level 3 that hits new questions"),
+    "offline": ("always", f"{OFFLINE}: full game to level 12 or a won checkpoint; quit and restart: save is there; "
+                "flag a question and send: fails cleanly (no hang, failed state), copy fallback copies the report text",
+                f"{OFFLINE}: a game to level 3 that hits new questions"),
+    "report": ("full", "candidate on beta under Steam, online: flag a question with a note, send → «enviada»; "
+               "`qgen flag --pull` → that question is needs_work with the note; a second pull is empty", None),
     "windows": ("full", "start test on a clean Windows machine from Steam (beta)", None),
     "deck": ("full", "Steam Deck: answer `no Deck (decision 125)` until the developer has one; then plan 90's real-Deck "
              "checklist from the `beta` branch (plans/18-steam-integration.md \"Steam Deck Verified\")", None),
@@ -109,10 +117,46 @@ def save_version(rev: str | None) -> int | None:
     return int(m.group(1)) if m else None
 
 
+def report_url() -> tuple[str, str]:
+    """(source, reportUrl) from package.json in the unpacked Linux build's app.asar, else app/desktop/package.json."""
+    asar = REPO / UNPACKED / "resources" / "app.asar"
+    if not asar.exists():
+        src = REPO / "app" / "desktop" / "package.json"
+        return str(src.relative_to(REPO)), json.loads(src.read_text()).get("reportUrl") or ""
+    data = asar.read_bytes()
+    size, n = struct.unpack("<I", data[4:8])[0], struct.unpack("<I", data[12:16])[0]
+    entry = json.loads(data[16:16 + n])["files"]["package.json"]
+    start = 8 + size + int(entry["offset"])
+    pkg = json.loads(data[start:start + entry["size"]])
+    return str(asar.relative_to(REPO)), pkg.get("reportUrl") or ""
+
+
+def report_health(log) -> str | None:
+    """Failure of the report step: no URL in the build, or /health not {"ok": true, "api": 1}."""
+    src, url = report_url()
+    log.write(f"reportUrl from {src}: {url!r}\n")
+    if not url:
+        return f"no report URL in the build ({src})"
+    health = url.rstrip("/") + "/health"
+    try:
+        with urllib.request.urlopen(health, timeout=10) as r:
+            body = r.read().decode()
+    except Exception as e:  # noqa: BLE001
+        return f"GET {health}: {e}"
+    log.write(f"GET {health}: {body}\n")
+    try:
+        ok = json.loads(body) == {"ok": True, "api": 1}
+    except ValueError:
+        ok = False
+    return None if ok else f"GET {health}: unexpected answer {body[:200]!r}"
+
+
 def run(name: str, logs: Path) -> str | None:
     """Run a step's commands, output to logs/<name>.log; the failure or None."""
     log = logs / f"{name}.log"
     with log.open("w") as f:
+        if name == "report":
+            return report_health(f)
         for cmd in STEPS[name]:
             f.write(f"$ {' '.join(cmd)}\n")
             f.flush()
