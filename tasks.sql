@@ -725,52 +725,43 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 ## Not in this milestone
 - Credits screen, `CREDITS.md`, store disclosures (PUB-5, Steam S3/S5); code licence (PUB-4).
 - Audio UI sounds and fonts (`app/client/public/audio/CREDITS.md`, OFL): not pool media.', '2026-10-11T21:54:55Z', NULL);
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (5, 5, 'masterplan', 1000, 'Milestone 5 lets players choose an age group and the bundles to play before a session. Parts 1 and 3 are done: the TS engine reads per-group level ranges from `app/data/age-groups.json` (tuned, decision 22: Approve the age-group windows) and filters by the active bundles, with `age_group` and `bundles` as settings per game (D-68). The milestone has since grown: bundles list their languages, and `always_on` becomes base bundles (`kind: base`), exactly one per session. Part 5 adds that to data, engine and `qgen validate`; parts 2 and 4 (start screen, close-out) take it in. Design sources: `plans/21-age-groups.md` (AG-7), `plans/22-bundles.md` (BN-6).
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (5, 5, 'masterplan', 1000, 'Milestone 5 lets players choose an age group and the bundles to play before a session. Parts 1, 2, 3 and 5 are done: the TS engine reads per-group level ranges from `app/data/age-groups.json` (tuned, decision 22: Approve the age-group windows), filters by the active bundles, offers bundles per `languages` with exactly one base bundle (`kind: base`) per session, and the Choice screen makes the choice. The play-test (`decision 50: Play-test of age groups and bundles`) brought fixes (plans 125, 126, 127, done). The milestone now also drops the supply report from the Start screen (part 6); part 4 closes out after it. Design sources: `plans/21-age-groups.md` (AG-7), `plans/22-bundles.md` (BN-6).
 
 **The tasks of this masterplan are not implementation work: each of them writes the plan for one part** (`pm plan add 5 …`), with its own tasks queued by pm.
 
 ## Builds on
-- TS engine (milestone 2): `engine/selection.ts`, `pool.ts`, `game.ts`, `state.ts`, `api.ts`. No part changes the Python referee.
-- Language setting (plan 68, I18N-2): `SaveData.language.questions`, `GameRow.locale` (a game keeps its locale), `loadEngineData(base, locale)`, `availableLocales()` in `lib/data.ts`. "The game''s language" in this milestone = the game''s question locale (`GameRow.locale`, missing = `es`); for a new game, `language.questions`.
+- TS engine (milestone 2): `engine/selection.ts`, `pool.ts`, `game.ts`, `choice.ts`, `state.ts`, `api.ts`. No part changes the Python referee.
+- One language for UI and questions (`decision 156: One language for UI and questions`, plan 126): the game''s question locale is the language if its pool exists, else `es`; a game keeps its locale (`GameRow.locale`).
 - Seen counters (plan 65) replace burns (D-28); seen stays per player across groups, bundles and locales.
+- Supply warnings follow `decision 31: Low-supply warning` (super tight); the repeat notice `SupplyNotice` stays as is.
 
 ## Part 1: Group windows and bundle filter in the engine (done, plan 27)
-- `levels` per group in `age-groups.json`; `settings.age_group` / `settings.bundles`, defaults resolved on read (`gameChoice`, `resolveChoice`); `available` filters by bundle; jokers and supply follow the game''s choice; D-68.
-- Today `resolveChoice` forces every `always_on` bundle in; part 5 replaces that rule.
+- `levels` per group, `settings.age_group` / `settings.bundles`, `choice` route, supply per choice; D-68.
 
-## Part 2: Choice before a session (start screen; plan 29, open)
-- Age group tiles and bundle toggles, preset from the player''s last game, supply per choice, IN-1 keys, HUD/overlay shows the choice.
-- Changes from part 5 (the plan revision takes them in):
-  - Only bundles whose `languages` contain the game''s language are listed.
-  - Base bundles: a one-of-N choice among the language''s base bundles (not a locked toggle); with one base bundle (every launch language today) it''s shown selected; the start button stays disabled with zero or two selected, with the reason.
-  - Other bundles: toggles, any number on or off.
-  - Default preset: the language''s first base bundle plus every other bundle of the language; the family presses Enter straight through as today.
-- No `always_on` / «Siempre activo» wording left.
-- Suggested priority: stays 400; its tasks wait for part 5''s engine API where they need it.
+## Part 2: Choice before a session (done, plan 29)
+- Choice screen between Player and Level: age group, base bundle (one of N), other bundles as toggles, preset from the player''s last game, supply report for the actual choice, «¡A jugar!» disabled while short, a refused `new` reported there; overlay choice line.
+- Later fixes: plan 125 (bundle selection in every mode, `decision 51: «Solo o en grupo»: which bundles does a game play?` overridden there; «Regional: Colombia»; labelled overlay line), plan 127 (group and bundle names in the UI language).
 
 ## Part 3: Tune the windows and per-group level weights (done, plan 28)
-- Windows approved (decision 22), `level_weights` per group stored; nothing left here.
+- Windows approved (decision 22), `level_weights` per group stored.
 
 ## Part 4: Play-test and close-out (plan 30, open)
-- Adds to the "done when" checks: a start attempt with zero and with two base bundles is refused (engine test plus, where the UI allows it, the screen); in `en` and `de` (throw-away translated pools if none ship yet) the screen lists only the bundles of that language.
-- Docs: `plans/22-bundles.md` (`languages`, base bundles, `always_on` gone), the `about` text of `bundles.json`, `directory.md`, `plans/project.md`; D-68 superseded in part by part 5''s decision entry.
-- Suggested priority: stays 390, last.
+- `task 479: Close out AG-7 and BN-6` waits on the repeated play-test after plans 125–127 and part 6.
+- The play-test checklist gains: Start shows no supply report (also with a nearly empty pool for the default choice); a choice too small for its pool shows the report on the Choice screen only, «¡A jugar!» disabled.
+- Docs as planned (`plans/22-bundles.md`, `about` texts, `directory.md`, `plans/project.md`, D-68 superseded in part).
+- Priority stays 390, last.
 
-## Part 5: Bundle languages and base bundles (data, engine, validate)
-- **Data** (`app/data/bundles.json`): every bundle gets `languages` (locale codes); `base`: `["es", "en", "de"]` (decision 26: Launch languages); `colombia`: the locales it is translated into (today `es`, plus `en`/`de` only if its pool and names exist for them; the plan checks `app/data/bundles/colombia/` and the export). `always_on` removed; `kind: base` marks base bundles. File order sets "the language''s first base bundle".
-- **Engine** (`pool.ts`, `game.ts`, `lib/types.ts`, `lib/data.ts`):
-  - `Bundle` gets `languages`, loses `always_on`; `parseBundles` checks both.
-  - `bundlesFor(data, locale)`: the bundles offered in a locale, file order.
-  - `resolveChoice` per the game''s locale: a bundle not offered in it → `GameError`; exactly one `kind: base` bundle, else `GameError` (Spanish message, e.g. «elige exactamente un paquete básico»); duplicates dropped, order normalized.
-  - Defaults (missing `bundles`): the locale''s first base bundle plus every non-base bundle of the locale; for `es` that is `base` + `colombia`, so old saves and plan 18''s fixtures replay unchanged (milestone constraint "defaults unchanged").
-  - Questions without `bundle` stay `base`; «Cambiazo» and supply keep following the active bundles.
-  - Stored settings that are now invalid (e.g. a save from another locale): resolve to the defaults on read rather than breaking a running game; the plan decides and records it.
-  - Supply/outlook (decision 31: super-tight warning) per locale and bundle set, as the start screen needs it.
-- **`qgen validate`**: every bundle has a non-empty `languages` of known locales; each launch language (es, en, de; later milestone 12''s) has at least one base bundle; a bundle listed for a locale whose pool/names for it don''t exist is flagged (warning or error: plan decides).
-- **Authoring readers** of `always_on` (`authoring/tools/qgen.py`, `authoring/server/overview.py`, `authoring/ui/src/lib/types.ts`) switch to `kind`; no behaviour change.
-- **Checks**: fixture replay identical; tests for zero/two base bundles rejected, a bundle outside the locale rejected, defaults per locale (temp `en` data); `npm run check`, `qgen validate`.
-- **Decision entry** (next D number): base bundles replace `always_on`, exactly one per session, default the locale''s first; bundles offered per `languages`; supersedes D-68 in part.
-- Suggested priority: 600 (core mechanics), before plan 29''s remaining UI tasks (400).
+## Part 5: Bundle languages and base bundles (done, plan 71)
+- `languages` per bundle, `kind: base` replaces `always_on`, `bundlesFor`, `resolveChoice` refusing zero/two base bundles or a bundle not offered, defaults per locale, `qgen validate` rules; `decision 38: Base bundles and bundle languages`.
+
+## Part 6: No supply report on the Start screen (new plan, UI, priority 400)
+- Why: Start shows `SupplyReport` («No hay suficientes preguntas para una partida completa…», GF-5) for `defaultChoice`, before any player, group or bundle is chosen: it checks a choice nobody made, and it confused the developer.
+- Today: `Game.svelte` keeps `supply` from `fetchGame()` (`lib/api.ts`) and from a refused action''s `GameError.supply` (`request`), passes it to `screens/Start.svelte`, which renders `{#if supply}<SupplyReport {supply} />{/if}`.
+- Change: Start never renders a supply report; `Start.svelte` loses the `supply` prop and its comment''s GF-5 mention; `Game.svelte` stops passing it and no longer sets it from refused actions (a refused `new` is already reported on the Choice screen via `refused`). Whether `fetchGame()` still needs to compute `supply` at all: the plan checks its other callers (achievements, gallery demo saves, desktop, tests) and drops it if unused.
+- Stays: the Choice screen''s report for the actual choice, «¡A jugar!» disabled while short, a refused `new` shown there; `SupplyNotice` (decision 31) unchanged.
+- Specs: `plans/04-ui-tv-display.md` "Start" section and GF-5''s note (`plans/` game-flow file) say the supply check lives on the Choice screen only; `trivia-gallery` Start shots without a report.
+- Checks: `npm run check`, `npm test`, `npm run build`, `qgen validate`; browser (`TRIVIA_MUTE=1`) with a save whose default choice is short: Start shows no report, the Choice screen does, by mouse and keyboard (IN-1).
+- Priority 400 (UI), before plan 30 (390).
 
 ## Not in this milestone
 - New bundles, regional packs (`plans/15c-regional-questions.md`); `chinese-base` (milestone 12).
@@ -24454,8 +24445,59 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `directory.md`: `work/ship-media/`, `app/desktop/media-budget.json`
 - `plans/project.md` in sync; `AGENTS.md` `trivia-desktop-build` / `trivia-release-check` lines if they need the encode or `media-budget` step
 - Check: links and cited ids resolve; `npm run check`', '2026-10-14T22:13:09Z', NULL, 1052, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1057, 5, 'revise the masterplan of milestone 5: Age groups and bundles in the game', 'revise', 'open', 1000, NULL, '`milestone 5: Age groups and bundles in the game` changed. Bring `plan 5: masterplan`, the masterplan, in line with it (`pm plan edit 5 --body -`), or
-leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-14T23:07:12Z', NULL, NULL, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1057, 5, 'revise the masterplan of milestone 5: Age groups and bundles in the game', 'revise', 'done', 1000, '2026-10-14, tasks.sql (plan 5 body: parts 2/5 done, plans 125–127, new part 6: no supply report on Start; play-test checklist addition for plan 30)', '`milestone 5: Age groups and bundles in the game` changed. Bring `plan 5: masterplan`, the masterplan, in line with it (`pm plan edit 5 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-14T23:07:12Z', '2026-10-14T23:10:17Z', NULL, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1058, 5, 'create tasks for plan 5: masterplan', 'split', 'open', 1000, NULL, 'Split plan 5 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-14T23:10:12Z', NULL, 1057, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1059, 30, 'revise plan 30: Play-test and close-out of age groups and bundles', 'revise', 'open', 1000, NULL, '`plan 5: masterplan`, the plan above `plan 30: Play-test and close-out of age groups and bundles`, changed; it is quoted below. Bring `plan 30: Play-test and close-out of age groups and bundles` in line with it
+(`pm plan edit 30 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 5: masterplan
+
+Milestone 5 lets players choose an age group and the bundles to play before a session. Parts 1, 2, 3 and 5 are done: the TS engine reads per-group level ranges from `app/data/age-groups.json` (tuned, decision 22: Approve the age-group windows), filters by the active bundles, offers bundles per `languages` with exactly one base bundle (`kind: base`) per session, and the Choice screen makes the choice. The play-test (`decision 50: Play-test of age groups and bundles`) brought fixes (plans 125, 126, 127, done). The milestone now also drops the supply report from the Start screen (part 6); part 4 closes out after it. Design sources: `plans/21-age-groups.md` (AG-7), `plans/22-bundles.md` (BN-6).
+
+**The tasks of this masterplan are not implementation work: each of them writes the plan for one part** (`pm plan add 5 …`), with its own tasks queued by pm.
+
+## Builds on
+- TS engine (milestone 2): `engine/selection.ts`, `pool.ts`, `game.ts`, `choice.ts`, `state.ts`, `api.ts`. No part changes the Python referee.
+- One language for UI and questions (`decision 156: One language for UI and questions`, plan 126): the game''s question locale is the language if its pool exists, else `es`; a game keeps its locale (`GameRow.locale`).
+- Seen counters (plan 65) replace burns (D-28); seen stays per player across groups, bundles and locales.
+- Supply warnings follow `decision 31: Low-supply warning` (super tight); the repeat notice `SupplyNotice` stays as is.
+
+## Part 1: Group windows and bundle filter in the engine (done, plan 27)
+- `levels` per group, `settings.age_group` / `settings.bundles`, `choice` route, supply per choice; D-68.
+
+## Part 2: Choice before a session (done, plan 29)
+- Choice screen between Player and Level: age group, base bundle (one of N), other bundles as toggles, preset from the player''s last game, supply report for the actual choice, «¡A jugar!» disabled while short, a refused `new` reported there; overlay choice line.
+- Later fixes: plan 125 (bundle selection in every mode, `decision 51: «Solo o en grupo»: which bundles does a game play?` overridden there; «Regional: Colombia»; labelled overlay line), plan 127 (group and bundle names in the UI language).
+
+## Part 3: Tune the windows and per-group level weights (done, plan 28)
+- Windows approved (decision 22), `level_weights` per group stored.
+
+## Part 4: Play-test and close-out (plan 30, open)
+- `task 479: Close out AG-7 and BN-6` waits on the repeated play-test after plans 125–127 and part 6.
+- The play-test checklist gains: Start shows no supply report (also with a nearly empty pool for the default choice); a choice too small for its pool shows the report on the Choice screen only, «¡A jugar!» disabled.
+- Docs as planned (`plans/22-bundles.md`, `about` texts, `directory.md`, `plans/project.md`, D-68 superseded in part).
+- Priority stays 390, last.
+
+## Part 5: Bundle languages and base bundles (done, plan 71)
+- `languages` per bundle, `kind: base` replaces `always_on`, `bundlesFor`, `resolveChoice` refusing zero/two base bundles or a bundle not offered, defaults per locale, `qgen validate` rules; `decision 38: Base bundles and bundle languages`.
+
+## Part 6: No supply report on the Start screen (new plan, UI, priority 400)
+- Why: Start shows `SupplyReport` («No hay suficientes preguntas para una partida completa…», GF-5) for `defaultChoice`, before any player, group or bundle is chosen: it checks a choice nobody made, and it confused the developer.
+- Today: `Game.svelte` keeps `supply` from `fetchGame()` (`lib/api.ts`) and from a refused action''s `GameError.supply` (`request`), passes it to `screens/Start.svelte`, which renders `{#if supply}<SupplyReport {supply} />{/if}`.
+- Change: Start never renders a supply report; `Start.svelte` loses the `supply` prop and its comment''s GF-5 mention; `Game.svelte` stops passing it and no longer sets it from refused actions (a refused `new` is already reported on the Choice screen via `refused`). Whether `fetchGame()` still needs to compute `supply` at all: the plan checks its other callers (achievements, gallery demo saves, desktop, tests) and drops it if unused.
+- Stays: the Choice screen''s report for the actual choice, «¡A jugar!» disabled while short, a refused `new` shown there; `SupplyNotice` (decision 31) unchanged.
+- Specs: `plans/04-ui-tv-display.md` "Start" section and GF-5''s note (`plans/` game-flow file) say the supply check lives on the Choice screen only; `trivia-gallery` Start shots without a report.
+- Checks: `npm run check`, `npm test`, `npm run build`, `qgen validate`; browser (`TRIVIA_MUTE=1`) with a save whose default choice is short: Start shows no report, the Choice screen does, by mouse and keyboard (IN-1).
+- Priority 400 (UI), before plan 30 (390).
+
+## Not in this milestone
+- New bundles, regional packs (`plans/15c-regional-questions.md`); `chinese-base` (milestone 12).
+- Batches per age group (AG-8), targets from the windows (D-53).
+- Mixed-age sessions; log in `plans/open-questions.md` if it comes up.', '2026-10-14T23:10:12Z', NULL, 1057, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1060, 5, 'write plan: No supply report on the Start screen', 'plan', 'dropped', 1000, 'duplicate: task 1058 (create tasks for plan 5) adds the plan-writing task for part 6', 'Write the plan for part 6 of `plan 5: masterplan` (milestone 5: Age groups and bundles in the game): Start never shows a supply report; the supply check stays on the Choice screen only. Details, files and checks: the masterplan''s "Part 6". `pm plan add 5 "No supply report on the Start screen" --priority 400`, so it runs before `plan 30: Play-test and close-out of age groups and bundles` (390), whose `task 479: Close out AG-7 and BN-6` waits on the repeated play-test.', '2026-10-14T23:10:12Z', '2026-10-14T23:10:17Z', 1057, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -27183,6 +27225,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (978, 1052, '2026-10-14T22:12:40Z', '2026-10-14T22:13:20Z', 'done', NULL, 0, '76ac3bc5e5fadd3c13417dde825e610c945f3d18', 'claude-opus-5-5[1m]', 'a859c33b-c9a3-4611-b5dd-3603b03cac24', 7, 14, 4260, 228579, 30415, 0.3742918, 2296074);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (979, 1053, '2026-10-14T22:13:21Z', '2026-10-14T22:16:05Z', 'done', NULL, 0, 'f8521b7e6c7a05b27c37d63a8fc71f48eda6b65a', 'claude-opus-5-5[1m]', '5fff9741-d0d5-438d-90ca-286faa7c71e8', 17, 34, 9215, 823314, 49671, 0.7464668, 2296074);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (980, 1054, '2026-10-14T22:16:05Z', '2026-10-14T23:07:47Z', 'failed', 'interrupted', NULL, 'c01ab62f15b90417523403ccff6d5c38e087046f', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2296074);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (981, 1057, '2026-10-14T23:09:23Z', '2026-10-14T23:10:24Z', 'done', NULL, 0, '6fcd1ff53b6661c03824a0c0ab53be59b52faa9c', 'claude-opus-5-5[1m]', '99b7772f-7059-4267-9348-4e66a3c1a073', 12, 22, 5960, 446693, 46004, 0.57665859999999991, 2472458);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
