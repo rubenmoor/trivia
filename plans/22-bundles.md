@@ -15,7 +15,7 @@ A **bundle** is a named set of questions that players can switch on or off befor
 | id | kind | Name | Rule (for the pipeline) |
 |---|---|---|---|
 | `base` | base | Básico | Everything else: answerable by the players anywhere in the Spanish-speaking world, including well-known facts about Colombia. |
-| `colombia` | region | Colombia | Answering needs a connection to Colombia: places, food, customs, people, music, sport, words or history that the players outside Colombia mostly wouldn't know. |
+| `colombia` | region | Regional: Colombia | Answering needs a connection to Colombia: places, food, customs, people, music, sport, words or history that the players outside Colombia mostly wouldn't know. |
 
 ## In the pipeline
 - **Existing pool:** every question gets `bundle: "base"`; then `qgen bundles` (an LLM pass, about 20 questions per call) proposes `colombia` where the rule fits and writes it into the pool. The developer checks the proposals in the review tool (`/review?bundle=colombia`) and changes any that are wrong there.
