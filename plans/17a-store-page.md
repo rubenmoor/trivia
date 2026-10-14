@@ -420,6 +420,48 @@ Steamworks content survey: general content (generates Steam's own age ratings), 
 - Own survey per DLC app: likely (above); the `colombia` line is kept
 - No change to the AI draft
 
+## Content survey and pricing: entry
+The developer's Steamworks steps for PUB-9 and PUB-11, page by page, written 2026-10-14 (`task 1049: Content survey and pricing: entry checklist and the 'entered' decision (PUB-9, PUB-11)`). Field and menu names are from Valve's public docs (tasks 1047, 1048), not the forms themselves: recheck at entry, Valve's UI wins. Result goes into pm decision "Content survey and prices entered in Steamworks? (PUB-9, PUB-11)"; `task 1050: Close-out of PUB-9 and PUB-11` ticks the rows.
+
+### Before entry
+- [ ] decision 177 "Steamworks app created? App ID?" answered (App ID)
+- [ ] decision 179 "Steamworks app configured (SW-7)? IDs?" answered (`colombia` DLC app ID)
+- [ ] decision 180 "AI disclosure approved?" answered (approved variant of "AI disclosure" above)
+- [ ] decision 181 "Content survey answers approved? (PUB-9)" answered; if B1 (a): the 3 pictures (q-0135, q-0747, q-0852) replaced in the build that goes to review
+- [ ] decision 182 "Price, regional prices and launch discount? (PUB-11)" answered
+
+### Content survey: base app
+Steamworks → the app's landing page → Content Survey (recheck the menu path).
+- [ ] General Content: answers per "Proposed answers" above, as approved in decision 181 (B2 variant)
+- [ ] Mature Content: descriptors per decision 181 (recommended: none; B1 (b)/(c) → descriptor 1 or 5 with the note from "Borderline")
+- [ ] Generative AI: pre-generated yes, description = approved store text (`en`; per language if the field is localized); live-generated no; adult live generation no
+  - check the field: localized? length limit? → result in the decision; shortened text → decision 180 consequences
+- [ ] user content / online, if asked: "Workshop" line from "Borderline"; no chat; reports on click; telemetry opt-in
+- [ ] IARC: none (unless decision 181 says otherwise); never enter an IARC-generated USK rating
+- [ ] Submit the survey; note the date
+
+### Content survey: `colombia` DLC app
+- [ ] DLC app (decision 179) → its own Content Survey, if Steamworks has one (else note "inherits from base")
+- [ ] answers per "DLC (`colombia`)" above: as the base, no nudity, no Workshop; AI line from "Free DLC (`colombia`)"
+- [ ] Submit; note the date
+
+### Pricing: base package
+Steamworks → Store & release → Pricing → Propose Pricing (recheck).
+- [ ] base price USD $9.99 (or decision 182's value)
+- [ ] accept Valve's suggested prices for all currencies and region groups (no empty currency: unbuyable there); multi-variable method
+- [ ] read off into the decision: USD, EUR, GBP, CHF, MXN, COP, CLP, PEN, `USD_LATAM`; a row far from the plausibility ranges in `17-publishing.md` "Regional prices" → recheck the method
+- [ ] submit for Valve's price review (1–2 business days); note approved or pending
+
+### Pricing: `colombia` DLC
+- [ ] DLC app free ("This is a free product", set at creation, `17-publishing.md` "Free DLC"); no price rows, no discount
+- [ ] if the app wasn't created free: fix via the app's settings or Steam Support before review; note it
+
+### Launch discount
+- [ ] not now: entered before release on the landing page, per `11-steam.md` "Launch-day checklist" row "Launch discount" (values from PUB-11, decision 182)
+
+### Publish
+- [ ] Publish the Steamworks changes (app landing page → "Publish" / "Prepare for publishing"; recheck); survey and prices of base and DLC included
+
 ## Capsules and icon
 Typographic capsules, library art and the game icon (decision 77: store capsule art, decision 87: Windows exe icon), rendered 2026-10-14 (`task 669`) by a script, no image generation; approved through pm decision "Capsules and icon approved?". Template: the tower of 12 blocks in its materials with the crown, the amber spotlight, faint «?» glyphs, the store name in Baloo 2 (`plans/10-visual-design.md`).
 

@@ -24351,7 +24351,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - Section written with sources; decision pending.', '2026-10-14T21:56:09Z', '2026-10-14T22:05:55Z', 1046);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1049, 131, 'Content survey and pricing: entry checklist and the ''entered'' decision (PUB-9, PUB-11)', 'work', 'open', NULL, NULL, 'Part of `plan 131: Content survey, rating and price (PUB-9, PUB-11)`. Runs after `task 1047: Content survey and age rating: research and draft (PUB-9)` and `task 1048: Price, regional prices and launch discount: research and draft (PUB-11)` (their sections in `plans/17a-store-page.md` "Content survey (PUB-9)" and `plans/17-publishing.md` "Price (PUB-11)", and their pending decisions). If decision 177 "Steamworks app created? App ID?" isn''t answered yet, still write the checklist.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1049, 131, 'Content survey and pricing: entry checklist and the ''entered'' decision (PUB-9, PUB-11)', 'work', 'done', NULL, '2026-10-14, plans/17a-store-page.md ''Content survey and pricing: entry'', plans/11-steam.md launch-day Price row; decision 183, task 1050 waits on it', 'Part of `plan 131: Content survey, rating and price (PUB-9, PUB-11)`. Runs after `task 1047: Content survey and age rating: research and draft (PUB-9)` and `task 1048: Price, regional prices and launch discount: research and draft (PUB-11)` (their sections in `plans/17a-store-page.md` "Content survey (PUB-9)" and `plans/17-publishing.md` "Price (PUB-11)", and their pending decisions). If decision 177 "Steamworks app created? App ID?" isn''t answered yet, still write the checklist.
 
 ## Checklist
 - "Content survey and pricing: entry" in `plans/17a-store-page.md`, Steamworks page by page; Valve''s field names as found by tasks tasks 1047–1048, marked "recheck at entry":
@@ -24365,7 +24365,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm task-pending-decision 1050 $did`.
 
 ## Done when
-- Checklist written; decision pending; task 1050 waits on it.', '2026-10-14T21:56:10Z', NULL, 1046);
+- Checklist written; decision pending; task 1050 waits on it.', '2026-10-14T21:56:10Z', '2026-10-14T22:07:10Z', 1046);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task) VALUES (1050, 131, 'Close-out of PUB-9 and PUB-11', 'work', 'open', NULL, NULL, 'Part of `plan 131: Content survey, rating and price (PUB-9, PUB-11)`. Runs after the decision "Content survey and prices entered in Steamworks? (PUB-9, PUB-11)" from `task 1049: Content survey and pricing: entry checklist and the ''entered'' decision (PUB-9, PUB-11)`; if that decision doesn''t exist or is pending, this task should be waiting on it (task 1049 links it).
 
 - Record the answer: rows in the 17a checklist "Content survey and pricing: entry" `[x]`; IARC ratings in 17a "Content survey (PUB-9)".
@@ -26086,6 +26086,20 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 - 2: other base price (state it), rest as above.
 - 3: no launch discount.
 - 4: other launch discount (state % 10–40 and days 7–14).', NULL, NULL, '2026-10-14T22:05:50Z', NULL, 1048, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (183, 'Content survey and prices entered in Steamworks? (PUB-9, PUB-11)', 'pending', '["Entered: survey submitted (date), prices entered (approved/pending), DLC free", "Not yet", "Issues (list the rows)"]', 'Checklist: `plans/17a-store-page.md` "Content survey and pricing: entry" (`task 1049: Content survey and pricing: entry checklist and the ''entered'' decision (PUB-9, PUB-11)`); field names from Valve''s public docs, recheck in the forms.
+
+Answer only after these are answered: decision 177 "Steamworks app created? App ID?", decision 179 "Steamworks app configured (SW-7)? IDs?", decision 180 "AI disclosure approved?", decision 181 "Content survey answers approved? (PUB-9)", decision 182 "Price, regional prices and launch discount? (PUB-11)".
+
+Please report:
+- content survey (base): submitted on <date>; Generative AI field localized? length limit? text shortened?
+- `colombia` DLC: own survey submitted on <date>, or inherits from the base app
+- Steam''s generated ratings shown (Germany, IGRS, …), if any yet; IARC: none unless decision 181 said otherwise
+- base price and regional prices: entered; Valve''s price review approved or pending; rows USD, EUR, GBP, CHF, MXN, COP, CLP, PEN, USD_LATAM
+- `colombia` DLC: free
+- Steamworks changes published
+- launch discount: not entered now (launch day, plan 95)
+
+Task 1050: Close-out of PUB-9 and PUB-11 waits on this answer.', NULL, NULL, '2026-10-14T22:06:47Z', NULL, 1049, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -27067,6 +27081,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (971, 1046, '2026-10-14T21:55:35Z', '2026-10-14T21:56:22Z', 'done', NULL, 0, '362d543db5f9695a890db1231f9655597541bf7e', 'claude-opus-5-5[1m]', '7cfdcb9b-2e7b-4299-bd1f-947d945066d5', 6, 12, 5184, 206580, 33304, 0.411476, 2296074);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (972, 1047, '2026-10-14T21:56:22Z', '2026-10-14T22:01:33Z', 'done', NULL, 0, 'b75cc13155aa6a2d30ad9da6680b777e49d30ac0', 'claude-opus-5-5[1m]', '641c4d39-7684-426c-b596-ee5bab7af8ae', 44, 82, 25224, 2977957, 103678, 1.9298234, 2296074);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (973, 1048, '2026-10-14T22:01:33Z', '2026-10-14T22:06:06Z', 'done', NULL, 0, '8d2b4fed84571771c93b7198874510b0904678e8', 'claude-opus-5-5[1m]', '3c983925-b362-4c0c-a2c3-942776d0f28e', 38, 66, 16634, 2240581, 91173, 1.5104442000000002, 2296074);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (974, 1049, '2026-10-14T22:06:07Z', '2026-10-14T22:07:18Z', 'done', NULL, 0, '00512b3f9bdcb4e018062243f306dcf2c6232f0c', 'claude-opus-5-5[1m]', '58f059d1-14b5-4bf8-8a74-6a73f85d6dae', 13, 22, 5243, 483355, 45141, 0.562747, 2296074);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -27321,6 +27336,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1042, 176);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1042, 177);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1045, 177);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1045, 179);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1050, 183);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');

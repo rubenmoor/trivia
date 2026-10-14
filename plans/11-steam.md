@@ -217,7 +217,7 @@ In order, Steamworks (partner.steamgames.com, the app's landing page); menu name
 |---|---|
 | Build review passed | App landing page: build review status passed for the candidate's BuildID; issues → answer "Released?" with `Valve's build review returned issues` |
 | Candidate live on `default` | SteamPipe → Builds → the passed candidate's BuildID (Desc `v1.0.x <sha>`) → "Set build live on branch" `default` → Preview → Set live; never from the repo (decision 84: SteamCMD source and depot split). Check: `default` and `beta` show the same BuildID |
-| Price | Store & release / Pricing: base price and regional prices per PUB-11 (`plans/17-publishing.md`, decision 66) |
+| Price | Store & release / Pricing: base and regional prices per PUB-11 (`plans/17-publishing.md`, decision 66), entered and approved earlier (`plans/17a-store-page.md` "Content survey and pricing: entry"); check unchanged and approved |
 | Launch discount (if PUB-11 has one) | App landing page, below the release date (not the discount dashboard): launch discount for R, % and length per PUB-11; only before release (Valve's rules above) |
 | Store languages = shipped | Store page → Supported languages: tick exactly what the build ships (see "Languages to compare") |
 | Discussions and report thread | Community Hub → Discussions: open; one thread per language with ST-5's text (`task 701`), each pinned ("Make sticky") |
