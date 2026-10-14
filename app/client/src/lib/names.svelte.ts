@@ -1,4 +1,4 @@
-// Category, subcategory and bundle names in the question locale of the last engine call (plan 68, D-81).
+// Category and subcategory names in the question locale, bundle names in the UI language, of the last engine call (plan 68, D-81).
 import type { EngineData } from "../engine/state.ts";
 
 let data = $state.raw<EngineData | null>(null);
@@ -18,12 +18,12 @@ export function poolHash(): string | null {
   return data?.poolHash ?? null;
 }
 
-/** The locale's name; fallback the Spanish key / categories.json / bundles.json name.
+/** The locale's name (bundles: the UI language's); fallback the Spanish key / categories.json / bundles.json name.
  * Keys: category slug, Spanish subcategory name, bundle id. */
 export function displayName(kind: "category" | "subcategory" | "bundle", key: string): string {
   const d = data;
   if (!d) return key;
   if (kind === "subcategory") return d.names.subcategories[key] ?? key;
   if (kind === "category") return d.names.categories[key] ?? d.categories.find((c) => c.slug === key)?.name ?? key;
-  return d.names.bundles[key]?.name ?? d.bundles.find((b) => b.id === key)?.name ?? key;
+  return d.uiNames.bundles[key]?.name ?? d.bundles.find((b) => b.id === key)?.name ?? key;
 }

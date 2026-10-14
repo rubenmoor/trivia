@@ -129,7 +129,7 @@ export type DataScope = "game" | "next";
 
 async function dataFor(loaded: Loaded, scope: DataScope): Promise<EngineData> {
   const row = newest(loaded.save.games);
-  return loadEngineData(scope === "game" && row ? gameLocale(row) : await localeOf(loaded, loaded.save.language));
+  return loadEngineData(scope === "game" && row ? gameLocale(row) : await localeOf(loaded, loaded.save.language), loaded.save.language);
 }
 
 export type Route<T> = (save: SaveData, data: EngineData, io: Io) => Reply<T>;

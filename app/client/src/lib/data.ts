@@ -2,7 +2,7 @@
 import {
   type Bundle, bundleFile, loadCategories, modPool, packsFor, parseAgeGroups, parseBundles, parsePool, poolFile, poolHash, withPacks,
 } from "../engine/pool.ts";
-import { engineData, mergeNames, NO_NAMES, type EngineData } from "../engine/state.ts";
+import { engineData, mergeNames, NO_NAMES, type EngineData, type Names } from "../engine/state.ts";
 import { call } from "./http.ts";
 import { runDataHooks } from "./mods.ts";
 
@@ -17,17 +17,28 @@ async function get(file: string, optional = false): Promise<unknown> {
 /** Question locales a pool may exist for (D-78); es always has one. */
 export const LOCALES = ["es", "en", "de"] as const;
 
-const cache = new Map<string, Promise<EngineData>>();
+const cache = new Map<string, Promise<Loaded>>();
+const withUi = new Map<string, Promise<EngineData>>();
 
-/** The engine data of `locale`, once per locale; a failure is retried on the next call. */
-export function loadEngineData(locale = "es"): Promise<EngineData> {
-  let out = cache.get(locale);
+/** Once per key; a failure is retried on the next call. */
+function once<T>(map: Map<string, Promise<T>>, key: string, fn: () => Promise<T>): Promise<T> {
+  let out = map.get(key);
   if (!out) {
-    out = load(locale);
-    out.catch(() => cache.delete(locale));
-    cache.set(locale, out);
+    out = fn();
+    out.catch(() => map.delete(key));
+    map.set(key, out);
   }
   return out;
+}
+
+/** The engine data of `locale`, its age group and bundle names in `ui` (task 1024); once per pair. */
+export function loadEngineData(locale = "es", ui = locale): Promise<EngineData> {
+  const base = once(cache, locale, () => load(locale));
+  if (ui === locale) return base.then((l) => l.data);
+  return once(withUi, `${locale} ${ui}`, async () => {
+    const { data, named } = await base;
+    return { ...data, uiNames: await namesOf(named, ui) };
+  });
 }
 
 /** Locales of LOCALES whose pool file exists; the body isn't read. */
@@ -75,11 +86,17 @@ function modSubcategories(file: unknown): { slugs: string[]; subs: string[] } | 
   return new Set(slugs).size === slugs.length && new Set(subs).size === subs.length ? { slugs, subs } : null;
 }
 
+/** `named`: the bundles that may have names files. */
+interface Loaded {
+  data: EngineData;
+  named: Bundle[];
+}
+
 /** The locale's pool and its packs' (decision 66), bundles.json, age-groups.json, every bundle's categories file
  * and names files → engineData. A bundle without a categories file has none (categories.load()); a pack
  * without a pool file isn't offered (withPacks). Mod bundles (decision 128) are packs checked by modPool;
  * a broken one is left out like a pack without a file, its issues in modIssues(). Then the mods' data hooks (plan 117). */
-async function load(locale: string): Promise<EngineData> {
+async function load(locale: string): Promise<Loaded> {
   const [pool, bundles, ageGroups] = await Promise.all(
     [poolFile(locale), "bundles.json", "age-groups.json"].map((f) => get(f)),
   );
@@ -128,11 +145,16 @@ async function load(locale: string): Promise<EngineData> {
   const { questions, bundles: parsed, ageGroups: groups } = runDataHooks({
     locale, questions: packed.pool, bundles: packed.bundles, ageGroups: parseAgeGroups(ageGroups),
   });
-  const names = locale === "es" ? NO_NAMES : mergeNames(await Promise.all(
-    parsed.filter((b) => b.source !== "mod" || byBundle[b.id]).map((b) => {
-      const file = bundleFile(b.id, `names.${locale}.json`);
-      return b.source === "mod" ? modGet(file) : get(file, true);
-    }),
-  ));
-  return engineData(questions, loadCategories(bundles, byBundle), parsed, groups, locale, names, poolHash(pool));
+  const named = parsed.filter((b) => b.source !== "mod" || byBundle[b.id]);
+  const data = engineData(questions, loadCategories(bundles, byBundle), parsed, groups, locale, await namesOf(named, locale), poolHash(pool));
+  return { data, named };
+}
+
+/** The bundles' names files of `lang` merged; es, es-ES → NO_NAMES. */
+async function namesOf(bundles: Bundle[], lang: string): Promise<Names> {
+  if (lang.split("-")[0] === "es") return NO_NAMES;
+  return mergeNames(await Promise.all(bundles.map((b) => {
+    const file = bundleFile(b.id, `names.${lang}.json`);
+    return b.source === "mod" ? modGet(file) : get(file, true);
+  })));
 }

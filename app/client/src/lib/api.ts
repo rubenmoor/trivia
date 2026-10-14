@@ -106,10 +106,10 @@ export interface ChoiceOptions {
 export async function fetchChoiceOptions(scope: DataScope = "next"): Promise<ChoiceOptions> {
   return read((save, data) => {
     const groups = data.ageGroups.map(({ id, name, ages, levels }) => ({
-      id, name: data.names.age_groups[id] ?? name, ages, span: [levels[0][0], levels[levels.length - 1][1]] as const,
+      id, name: data.uiNames.age_groups[id] ?? name, ages, span: [levels[0][0], levels[levels.length - 1][1]] as const,
     }));
     const bundles = bundlesFor(data).map((b) => {
-      const n = data.names.bundles[b.id];
+      const n = data.uiNames.bundles[b.id];
       return {
         id: b.id, base: b.kind === "base", name: n?.name ?? b.name, description: n?.description ?? b.description,
         ...(b.source === "mod" && { source: b.source, modName: b.modName ?? b.mod ?? b.id }),
@@ -131,7 +131,7 @@ export async function fetchModCredits(): Promise<{ bundle: string; name: string;
           seen.set(`${m.credit}\n${m.source_url}`, { credit: m.credit, url: m.source_url });
         }
       }
-      return seen.size ? [{ bundle: b.id, name: data.names.bundles[b.id]?.name ?? b.name, mod: b.modName ?? b.mod ?? b.id, items: [...seen.values()] }] : [];
+      return seen.size ? [{ bundle: b.id, name: data.uiNames.bundles[b.id]?.name ?? b.name, mod: b.modName ?? b.mod ?? b.id, items: [...seen.values()] }] : [];
     });
     return { save, status: 200, body };
   });
@@ -142,10 +142,10 @@ export async function fetchModCredits(): Promise<{ bundle: string; name: string;
 export async function fetchGameChoice(settings: Game["settings"]): Promise<{ group: string | null; difficulty: Difficulty | null; bundles: string[] }> {
   return read((save, data) => {
     const c = gameChoice({ settings }, data);
-    const group = c.age_group === null ? null : (data.names.age_groups[c.age_group] ?? data.groupById.get(c.age_group)?.name ?? c.age_group);
+    const group = c.age_group === null ? null : (data.uiNames.age_groups[c.age_group] ?? data.groupById.get(c.age_group)?.name ?? c.age_group);
     const on = data.bundles.filter((b) => c.bundles.includes(b.id));
     const bundles = [...on.filter((b) => b.kind === "base"), ...on.filter((b) => b.kind !== "base")]
-      .map((b) => data.names.bundles[b.id]?.name ?? b.name);
+      .map((b) => data.uiNames.bundles[b.id]?.name ?? b.name);
     return { save, status: 200, body: { group, difficulty: c.difficulty, bundles } };
   });
 }

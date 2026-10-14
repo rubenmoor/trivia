@@ -242,6 +242,8 @@ export interface EngineData {
   locale: string;
   /** Empty for es: the keys are the Spanish names. */
   names: Names;
+  /** Of the UI language (task 1024): age group and bundle names; `names` when it's the question locale. */
+  uiNames: Names;
   pool: PoolQuestion[];
   /** pool.json's export hash (D-92), null if absent. */
   poolHash: string | null;
@@ -273,7 +275,7 @@ export function engineData(
   locale = "es", names: Names = NO_NAMES, poolHash: string | null = null,
 ): EngineData {
   return {
-    locale, names, pool, poolHash, byId: byId(pool), categories, broad: broadOf(categories),
+    locale, names, uiNames: names, pool, poolHash, byId: byId(pool), categories, broad: broadOf(categories),
     bundles, ageGroups, groupById: new Map(ageGroups.map((g) => [g.id, g])),
   };
 }
