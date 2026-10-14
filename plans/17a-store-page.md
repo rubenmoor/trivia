@@ -327,6 +327,99 @@ Steamworks content survey, section "AI Generated Content", and the text Steam sh
 - es: «Las preguntas de este paquete las redactó y verificó con fuentes de la web un modelo de lenguaje de IA; cada una se revisa antes de publicarse, por el desarrollador o por una revisión aparte con IA. Las imágenes y sonidos son obra de personas, de Wikimedia Commons y otras fuentes libres, con créditos en el juego. Nada se genera mientras juegan.»
 - en (once the en pack pool ships): "This bundle's questions were drafted by an AI language model, which also fact-checks them against web sources; each one is reviewed before it ships, by the developer or by a separate AI review. Pictures and sounds are people's work from Wikimedia Commons and other free sources, credited in the game. Nothing is generated while you play."
 
+## Content survey (PUB-9)
+Steamworks content survey: general content (generates Steam's own age ratings), mature content (descriptors that drive customers' filters) and generative AI (section above). Drafted 2026-10-14 (`task 1047`) from Valve's public docs and a scan of the shipped pools; approved through pm decision "Content survey answers approved? (PUB-9)"; entered by `task 1049: Content survey and pricing: entry checklist and the 'entered' decision (PUB-9, PUB-11)`. The form itself is only visible in Steamworks: question wording below is by topic, recheck at entry.
+
+### Valve's rules (read 2026-10-14)
+- [Content Survey](https://partner.steamgames.com/doc/gettingstarted/contentsurvey):
+  - required before store page and build go to review; Valve compares the answers with the build and the store page
+  - three sections, all required: 1) General Content ("generate ratings for several regional rating boards", shown on the store page at release; official ratings go under the app's Ratings section), 2) Mature Content (drives "how your game appears relative to each customer's preferences"; disclose all adult content in the builds, even if not accessible), 3) Generative AI (pre-generated / live-generated; "efficiency gains" from AI dev tools not the focus; content that ships and players consume: "artwork, sound, narrative, localization, etc.")
+  - after approval some answers can't be edited without Steam Support (summary of the change, how a tester reaches it)
+- [Age Ratings Mandatory in Germany](https://partner.steamgames.com/doc/gettingstarted/contentsurvey/germany): since 2024-11-15 games without a rating are hidden in Germany; rating = USK (rare, only a real USK review of the exact Steam version) or Valve's self-rating from the survey + its review team + customer feedback; no survey → no rating; an IARC-generated USK rating from another store must **not** be entered
+- [Age Ratings in Indonesia](https://partner.steamgames.com/doc/gettingstarted/contentsurvey/indonesia): same scheme (IGRS 3+/7+/13+/15+/18+/refused), Valve self-rating from the survey
+- IARC: no IARC page in the Steamworks docs; Steam's only mention is the Germany/Indonesia rule above; Steam runs its own survey-based ratings instead
+- Ratings seen on store data (`store.steampowered.com/api/appdetails`, 2026-10-14): `steam_germany`, `igrs`, `steam_australia`, `dejus` marked `rating_generated`; DLC apps carry their own descriptors and generated ratings (Cyberpunk 2077: Phantom Liberty, 2138330)
+- [Onboarding](https://partner.steamgames.com/doc/gettingstarted/onboarding) "What you shouldn't publish": hate speech, nude or sexually explicit images of real people, unlabelled adult content, content "intended to shock or disgust", content you lack rights to
+- Descriptors ([ISteamUGC `EUGCContentDescriptorID`](https://partner.steamgames.com/doc/api/ISteamUGC), same list as the store's):
+  - 1 Some Nudity or Sexual Content: "some nudity or sexual themes, but not as the primary focus"
+  - 2 Frequent Violence or Gore: "extreme violence or gore"
+  - 3 Adult Only Sexual Content (18+ gate)
+  - 4 Frequent Nudity or Sexual Content (18+ gate)
+  - 5 General Mature Content: "mature topics that may not be appropriate for all audiences"
+- [Review Process](https://partner.steamgames.com/doc/store/review_process): review 3–5 business days, plan 7; Adult Only content needs build and page reviewed together (not us)
+- Comparables, Steam's generated ratings (appdetails, 2026-10-14): Bible Trivia (2578400) no descriptors, Germany 6, IGRS 3; Trivia Tricks (1404090) Germany 12 "Fantasy-Gewalt"; Trivia About You (3196180) descriptor 5 for "limited alcohol use and mild, non-sexual nudity", Germany 12 "Alkohol / Tabak"; Trivia Murder Party 3 descriptor 5, Germany 12
+
+### Scan (2026-10-14, shipped pools)
+- Pools: `app/data/pool.json` 1,032 approved (es; no en/de pool yet), `app/data/bundles/colombia/pool.json` 102 (es); keyword lists es only (en/de lists when their pools ship; rerun then)
+- Text, base (counts after reading out false hits; ids are examples):
+  - war: ~30 mentions, history and myth only, no description of killing: q-0105 (end of WWII, year), q-0108 (storming of the Bastille), q-0650 (Arc de Triomphe, Austerlitz), q-0330 (Trojan horse), q-0141 (Poseidon's trident)
+  - death: Egyptian tombs and mummies (q-0235, q-0237, q-0353, q-0391), blood as biology (q-0039, q-0226); no killing, no gore
+  - crime: cartoon and fairy-tale (q-0512 Bowser kidnaps Peach, q-0312 Batman, q-0182 Jolly Roger, q-0636 pirates); history (q-0551 Pompey vs pirates); no real crime, no drugs trade
+  - alcohol/tobacco: mentions only, nobody drinks or smokes on screen: q-0291 (the drunkard in «El Principito»), q-1123 (Shirley Temple, alcohol-free cocktail), q-1143 (tequila as a wrong answer in a food analogy)
+  - religion: ~50 in question, answer or fun fact, all facts (Greek/Roman/Egyptian myth, Christmas customs, Vatican as smallest country, Gutenberg Bible); no preaching, nothing mocked
+  - fear: monsters of games/films/legends (q-0076 Creeper, q-0219 Bran castle/Dracula); no horror imagery
+  - sex: none (hits are kisses in fairy tales and Disney, q-0688, q-0709; pregnancy as nutrition, q-1200)
+  - gambling: none as a mechanic; two mentions (q-0532 Perudo bets dice, q-1153 Dr. Seuss bet)
+  - profanity, slurs: none
+- Text, `colombia`: Battle of Boyacá (q-0011), forts against pirates (q-0184, q-0580), legends Mohán (q-0170, smokes in the legend), Madremonte (q-0171), Silbón (q-0482, carries a sack of bones), novena carols (q-0256, q-0297); nothing else
+- Media: 1,146 Commons files (base 1,044, colombia 102); categories fetched from the Commons API and matched on nudity/violence/alcohol words, hits viewed:
+  - nudity, base only (3):
+    - q-0135 (largest organ: skin) `File:Human body proportions.JPG`: figure-drawing study, male and female nudes with genitals sketched; illustrative, not needed for the question
+    - q-0747 (Hercules) `File:Herakles Farnese MAN Napoli Inv6001 n01.jpg`: Farnese Hercules, full-frontal marble statue; the picture is the question («Mira la foto»)
+    - q-0852 (Uffizi → Florence) `File:Sandro Botticelli 046.jpg`: «El nacimiento de Venus», classical nude (covered by hand and hair); named in the question
+  - violence: none graphic; q-0108 storming of the Bastille (1789 watercolour, small figures, smoke, no blood), q-0042 Halloween skeletons at a chess board, q-0391 mummy in a museum case, armour/helmets/cannons in museums (q-0179, q-0744, q-0958, q-1086)
+  - alcohol/drugs: none
+  - colombia: none
+  - not covered: images whose Commons categories don't name the content (no full audit, per plan 131)
+- Players' text and online:
+  - player names: on the device and in the player's Steam Cloud only; never shown to other players
+  - no chat, no multiplayer over the network (one screen, one room; online co-op not planned, decision 111)
+  - question reports (`plan 103: Report server (POST /reports)`): text goes to the developer only when the player clicks «Enviar»; never shown to others
+  - telemetry: opt-in, per install (decision 121), anonymous game data
+  - Workshop mods (milestone 15): players' bundles, themes, code; creators set descriptors per item, the base game sets none for them (decision 135 "Steamworks: enable Workshop", pending)
+- No in-game purchases (DLC free, decision 66), no ads, no gambling, no loot boxes, no location data
+
+### Proposed answers
+- General Content (by topic; map onto the form's wording at entry):
+  - violence: none depicted; history and myth questions name wars and battles in text; one historical painting (storming of the Bastille, no blood) → lowest "references/historical, non-graphic" level if the form has one, else no
+  - blood/gore: no (blood as biology only)
+  - fear/horror: no (legend monsters named in text, cartoon/game monsters)
+  - sexual content: no
+  - nudity: see borderline B1
+  - language: no profanity
+  - alcohol, tobacco, drugs: references only in text, no use shown (3 questions) → "references" level if the form has one, else no
+  - gambling, simulated gambling: no
+  - discrimination: no
+  - in-game purchases: no
+  - user interaction / online: no chat or player contact; optional Workshop mods (user-generated content, not reviewed by us); question reports on the player's click, to the developer only
+  - personal data / location: no location; player names stay local + Steam Cloud; telemetry opt-in
+- Mature Content: no descriptor (B1 and B2 below may change it); no Adult Only sexual content
+- Generative AI: section "AI disclosure" above (pre-generated yes, live-generated no), as approved in decision 180 "AI disclosure approved?"
+- Expected Steam ratings: Germany 6 or 12, IGRS 3 or 7 (Bible Trivia: 6 / 3); not settable by us, read after submission
+
+### Borderline
+- B1 nudity (q-0135, q-0747, q-0852):
+  - (a) replace the three pictures before the build goes to review, answer "no nudity" (recommended): one illustrative image, one statue, one painting; the game stays filter-free for families; Valve's "nude images of real people" rule doesn't cover art, but the figure study q-0135 is the weakest case
+  - (b) keep them, tick descriptor 1 "Some Nudity or Sexual Content" with the note "classical art and an anatomy drawing, non-sexual, 3 of 1,000+ questions": honest, but family customers with nudity filtered may never see the game, and the Germany/IGRS ratings likely rise
+  - (c) keep them, descriptor 5 "General Mature Content" with the same note (Trivia About You's choice): the weaker label; Valve may ask for 1 instead
+  - later content: once approved, the survey answer is hard to change (Steam Support); future pools must stay free of nudity, or the answer changes
+- B2 war history: q-0108's painting and the WWII/battle questions; answer "no violence" (recommended), alternative "historical references, non-graphic" in General Content; no descriptor either way
+- Workshop: Steam filters mod items by their own descriptors; the base survey answers only for our content; if the form asks about user-generated content: "yes, optional Workshop mods; creators tag their items"
+
+### DLC (`colombia`)
+- DLC apps show their own descriptors and generated ratings on the store (Phantom Liberty), so expect a survey per DLC app; recheck at entry whether Steamworks pre-fills it from the base game
+- Answers: as the base, minus nudity (none in the pack), minus Workshop; AI: the DLC line in "Free DLC (`colombia`)" above
+- Without its own rating the DLC page may be hidden in Germany like an unrated game (Valve's Germany page names "games"; recheck in the healthcheck list `partner.steamgames.com/healthcheck/missingratingforgermany`)
+
+### IARC
+- Recommendation: none. Steam doesn't offer IARC; Germany and Indonesia accept Valve's survey rating; entering an IARC-generated USK rating from another store is forbidden; a real USK review costs money and is "rare" per Valve; Steam only (decision 111), so no other store's IARC either
+
+### AI disclosure: open points of decision 180 rechecked
+- Valve's page confirms the scope: content players consume ("artwork, sound, narrative, localization"), not dev-tool efficiency; the draft's code sentence stays an honest extra (graphics and sounds players see and hear)
+- Description field localized or English only, its length limit: not on Valve's public pages (2026-10-14); only in the form: recheck at entry; if English only, enter `en`; if limited, shorten at entry and say so in decision 180's consequences
+- Own survey per DLC app: likely (above); the `colombia` line is kept
+- No change to the AI draft
+
 ## Capsules and icon
 Typographic capsules, library art and the game icon (decision 77: store capsule art, decision 87: Windows exe icon), rendered 2026-10-14 (`task 669`) by a script, no image generation; approved through pm decision "Capsules and icon approved?". Template: the tower of 12 blocks in its materials with the crown, the amber spotlight, faint «?» glyphs, the store name in Baloo 2 (`plans/10-visual-design.md`).
 
