@@ -333,7 +333,7 @@ Eine Frage ist falsch oder unklar? Markiert sie im Spiel (Fahnen-Symbol oder M),
 - Result via decision "First week after launch: what came in?" (plan 95 task 5).
 
 ## Privacy (ST-5)
-Texts for question reports sent to the report server (plan 103, written by task 867 on 2026-10-13 from plan 103's API contract, "Data" and "Retention"; the Worker wasn't built yet: task 865/866 must keep to it or edit these texts). The long version is the public `PRIVACY.md` at the repo root; the store text and the in-game dialog text are short versions of it. Telemetry (milestone 14) adds its own section later (plan 108).
+Texts for question reports sent to the report server (plan 103, written by task 867 on 2026-10-13 from plan 103's API contract, "Data" and "Retention"; the Worker wasn't built yet: task 865/866 must keep to it or edit these texts). The long version is the public `PRIVACY.md` at the repo root; the store text and the in-game dialog text are short versions of it. Telemetry (milestone 14): one more paragraph per language in the store text below and a `PRIVACY.md` sub-section, written by task 889 on 2026-10-14 from `report-server/src/validate-telemetry.ts`, `app/client/src/engine/telemetry.ts` and `app/desktop/telemetry.mjs` as built.
 
 ### Where it goes on Steam
 - Valve's public Steamworks docs name no privacy-policy field (checked 2026-10-13: the `partner.steamgames.com/doc` store, onboarding and marketing pages; "privacy policy" appears only as Steam's own policy in the Rules & Guidelines).
@@ -341,6 +341,7 @@ Texts for question reports sent to the report server (plan 103, written by task 
   - Steamworks → app → Edit Store Page: look for a privacy-policy or EULA/legal field (tabs "Basic Info", "Special Configuration"); if one takes a URL: `https://github.com/rubenmoor/trivia/blob/main/PRIVACY.md`
   - in any case: Edit Store Page → "Description" → "About This Game", per language (English, Spanish – Latin America, Spanish – Spain, German): append the store text below as the last paragraph (heading in Steam's BBCode `[h2]`)
   - Preview, then Publish; the store review sees it with the next change
+  - telemetry paragraph: publish the updated store text in the same release as the first build with telemetry (plan 110's checklist runs it); until then: first paragraph only, with "No analytics, no ads." / «Sin analítica ni publicidad.» / „Keine Analyse, keine Werbung.“ before the "Full text" sentence
 - Plan 95's launch-day checklist checks it is on the page in every store language.
 - A full EU privacy notice may need the controller's name and contact; `PRIVACY.md` names the game's Steam Discussions as contact. Add an address there if the developer wants one.
 
@@ -348,17 +349,23 @@ Texts for question reports sent to the report server (plan 103, written by task 
 English:
 ```
 [h2]Privacy[/h2]
-The game runs offline. Only if you press "Send" on a marked question does it send a report: question id and language, the question as shown, your note, game and pool version, and a one-time Steam ticket that proves a real copy. Kept: those fields, without Steam account id, IP address or name, until the developer downloads them, at most 90 days. Cloudflare hosts the server, Valve checks the ticket. No analytics, no ads. Full text: PRIVACY.md in the game's repository.
+The game runs offline. Only if you press "Send" on a marked question does it send a report: question id and language, the question as shown, your note, game and pool version, and a one-time Steam ticket that proves a real copy. Kept: those fields, without Steam account id, IP address or name, until the developer downloads them, at most 90 days. Cloudflare hosts the server, Valve checks the ticket. Full text: PRIVACY.md in the game's repository.
+
+[b]Anonymous gameplay data (opt-in)[/b]: off unless you say yes at the first start; change it any time in the menu (Esc). When the game closes it sends a random install id and, per game, mode, language, levels, result and jokers used, and per answered question its id, right or wrong, level and jokers: to tune question difficulty. No names, no Steam account id, no IP address; a one-time Steam ticket proves a real copy. Kept until the developer downloads it, at most 30 days. Turning it off deletes the unsent data. Nothing else is sent; no third-party analytics, no ads.
 ```
 Spanish (es-419 and es-ES, no deltas):
 ```
 [h2]Privacidad[/h2]
-El juego funciona sin internet. Solo al presionar «Enviar» en una pregunta marcada envía un reporte: id e idioma de la pregunta, la pregunta tal como se vio, la nota, versión del juego y del banco de preguntas, y un ticket de Steam de un solo uso que demuestra una copia real. Se guardan esos datos, sin id de la cuenta de Steam, sin dirección IP ni nombre, hasta que el desarrollador los descarga, como máximo 90 días. Cloudflare aloja el servidor y Valve verifica el ticket. Sin analítica ni publicidad. Texto completo: PRIVACY.md en el repositorio del juego.
+El juego funciona sin internet. Solo al presionar «Enviar» en una pregunta marcada envía un reporte: id e idioma de la pregunta, la pregunta tal como se vio, la nota, versión del juego y del banco de preguntas, y un ticket de Steam de un solo uso que demuestra una copia real. Se guardan esos datos, sin id de la cuenta de Steam, sin dirección IP ni nombre, hasta que el desarrollador los descarga, como máximo 90 días. Cloudflare aloja el servidor y Valve verifica el ticket. Texto completo: PRIVACY.md en el repositorio del juego.
+
+[b]Datos de juego anónimos (opcional)[/b]: desactivados salvo que se acepten en el primer inicio; se cambian cuando se quiera en el menú (Esc). Al cerrar, el juego envía un id de instalación aleatorio y, por partida, modo, idioma, niveles, resultado y comodines usados, y por pregunta respondida su id, si fue bien o mal, nivel y comodines: para ajustar la dificultad de las preguntas. Sin nombres, sin id de la cuenta de Steam, sin dirección IP; un ticket de Steam de un solo uso demuestra una copia real. Se guardan hasta que el desarrollador los descarga, como máximo 30 días. Al desactivarlos se borran los datos no enviados. No se envía nada más; sin analítica de terceros ni publicidad.
 ```
 German:
 ```
 [h2]Datenschutz[/h2]
-Das Spiel läuft offline. Nur bei „Senden“ an einer markierten Frage geht eine Meldung hinaus: ID und Sprache der Frage, die Frage wie angezeigt, die Notiz, Spiel- und Poolversion sowie ein einmaliges Steam-Ticket als Nachweis einer echten Kopie. Gespeichert werden diese Angaben ohne Steam-Konto-ID, IP-Adresse oder Namen, bis der Entwickler sie abruft, höchstens 90 Tage. Cloudflare betreibt den Server, Valve prüft das Ticket. Keine Analyse, keine Werbung. Volltext: PRIVACY.md im Repository des Spiels.
+Das Spiel läuft offline. Nur bei „Senden“ an einer markierten Frage geht eine Meldung hinaus: ID und Sprache der Frage, die Frage wie angezeigt, die Notiz, Spiel- und Poolversion sowie ein einmaliges Steam-Ticket als Nachweis einer echten Kopie. Gespeichert werden diese Angaben ohne Steam-Konto-ID, IP-Adresse oder Namen, bis der Entwickler sie abruft, höchstens 90 Tage. Cloudflare betreibt den Server, Valve prüft das Ticket. Volltext: PRIVACY.md im Repository des Spiels.
+
+[b]Anonyme Spieldaten (freiwillig)[/b]: aus, solange beim ersten Start nicht zugestimmt; jederzeit im Menü (Esc) änderbar. Beim Schließen sendet das Spiel eine zufällige Installations-ID und pro Spiel Modus, Sprache, Stufen, Ergebnis und benutzte Joker, pro beantworteter Frage ihre ID, richtig oder falsch, Stufe und Joker: um die Schwierigkeit der Fragen abzustimmen. Keine Namen, keine Steam-Konto-ID, keine IP-Adresse; ein einmaliges Steam-Ticket belegt eine echte Kopie. Gespeichert, bis der Entwickler sie abruft, höchstens 30 Tage. Ausschalten löscht die ungesendeten Daten. Sonst wird nichts gesendet; keine Analyse durch Dritte, keine Werbung.
 ```
 
 ### Dialog text (plan 93's send confirmation)
