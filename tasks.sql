@@ -28342,6 +28342,14 @@ Stopped at `media` with 1 error(s). Run `qgen batch` again; if the same step fai
    - "State": batch-8 stopped at media in task 51; fix and resume task ids
    - the "create tasks for plan 17" task the edit queues is expected
 6. `pm task done 51`, note: stopped at media; fix and resume task ids; RUNBOOK and plan 17 changed.', NULL, '2026-10-15T06:04:34Z', '2026-10-15T13:14:15Z', 51, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (206, 'Play-test: no supply report on Start, report on the Choice screen only', 'pending', '["both fine", "problems (listed in the answer)"]', '`decision 155: Play-test of age groups and bundles (again, after the decision 50 fixes)` was answered "fine", but its checklist predates `plan 133: No supply report on the Start screen` (done, `task 1064: Drop the supply report from the Start screen`). Two items left before `task 479: Close out AG-7 and BN-6` closes milestone 5:
+
+1. Start shows no supply report, also with a nearly empty pool for the default choice.
+2. A choice too small for the pool: the report shows on the Choice screen only, «¡A jugar!» disabled; by mouse and by keyboard (IN-1).
+
+How: the gallery''s `blocked` save (every question blocked) covers both: `trivia-gallery --only start,choice-supply-report --visible`, or look at `work/gallery/<locale>/choice-supply-report.png`; by hand in `trivia-desktop` with a save whose questions are mostly blocked («Bloquear pregunta»).
+
+Answer "problems": list each; task 479 turns them into fix tasks.', NULL, NULL, '2026-10-15T13:47:49Z', NULL, 479, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -29436,6 +29444,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1077, 1125, '2026-10-15T13:33:35Z', '2026-10-15T13:41:58Z', 'done', NULL, 0, '3a971c1c2037a17ddcbaadf5e6ef6ee2bb7ec41d', 'claude-opus-5-5[1m]', 'e7cea1e4-02ca-44f9-beb5-9a9be212f494', 42, 70, 22164, 3128788, 111194, 1.9588696, 3224626);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1078, 1126, '2026-10-15T13:41:58Z', '2026-10-15T13:43:26Z', 'done', NULL, 0, '5677e51971d0e87bf7eb61f63f25b2ba12a6cc39', 'claude-opus-5-5[1m]', '6c79c34e-5486-47d6-8a29-bf5cab5515a7', 12, 24, 5436, 598554, 55102, 0.66934280000000013, 3224626);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1079, 1127, '2026-10-15T13:43:26Z', '2026-10-15T13:47:21Z', 'done', NULL, 0, '064f51b50b4f37b3cd09d30498bfe98475e99127', 'claude-opus-5-5[1m]', 'ffd39d2e-ee01-442d-9d29-1f2f0c1d7316', 17, 30, 4863, 651012, 47273, 0.6057664, 3224626);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1080, 479, '2026-10-15T13:47:22Z', '2026-10-15T13:47:55Z', 'blocked', NULL, 0, '6fd688c5c7c2de3f1f96ea21cfd408d340e5783a', 'claude-opus-5-5[1m]', '81767434-a514-4a5b-bf2e-04cb1f20a04f', 13, 24, 2841, 394721, 28420, 0.3632202, 3224626);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -29592,6 +29601,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (463, 204);
 INSERT INTO task_decision (task_id, decision_id) VALUES (464, 35);
 INSERT INTO task_decision (task_id, decision_id) VALUES (479, 50);
 INSERT INTO task_decision (task_id, decision_id) VALUES (479, 155);
+INSERT INTO task_decision (task_id, decision_id) VALUES (479, 206);
 INSERT INTO task_decision (task_id, decision_id) VALUES (632, 202);
 INSERT INTO task_decision (task_id, decision_id) VALUES (633, 202);
 INSERT INTO task_decision (task_id, decision_id) VALUES (634, 202);
