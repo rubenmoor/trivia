@@ -8,10 +8,11 @@ Everything runs locally and offline: the game (a Svelte client with the game eng
 
 **The family game is done** (October 2026): a full game night on the TV with sound, jokers and the final look, played by player name without touching code.
 
-- **Questions:** about 1,140 approved on the shared difficulty scale 1–15 (D-38), each with a picked image, audio or video; more batches are being made. Players choose an age group and bundles before a game.
+- **Questions:** about 2,080 approved (base ~1,980, `colombia` ~100) on the shared difficulty scale 1–15 (D-38), with images, audio or video; more batches are being made. Players choose an age group and bundles before a game.
 - **Engine:** the referee runs in the browser (TypeScript, `app/client/src/engine/`); the Python server only serves files and the save (D-90).
 - **UI:** every on-screen string comes from a catalog (`es`, `es-ES`, `en`, `de`); question translations aren't shipped yet.
-- **Next:** more content, screen polish, code quality, and the Steam release track (desktop build, store, release).
+- **Code quality:** reviewed file by file (milestone 13, [`code-review.md`](code-review.md)); `npm run check` now also runs knip and ruff.
+- **Next:** more content, screen polish, and the Steam release track (desktop build, store, release).
 
 Milestones, plans and open tasks: `pm status` (`tasks.sql`); the older overview is [`plans/project.md`](plans/project.md). Top-level files and directories: [`directory.md`](directory.md).
 

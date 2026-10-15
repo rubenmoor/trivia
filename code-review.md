@@ -50,7 +50,7 @@ Milestone 13 read every tracked code and build file once, between 2026-10-12 and
 - Scans, part 1 → now (`### Scans`):
   - Old files got better: `any` 15 → 12, broad `except` + `pass` 1 → 0, stale markers 0.
   - The new files brought most of the growth: `as` 118 → 146 (+33 in new files), `!` 74 → 90 (+23), swallowed `.catch` 21 → 38 (+16), empty `catch {}` 7 → 12. Tasks 1106–1111 reviewed those files afterwards and kept most of these as deliberate.
-- Linter (`### Linter evaluation`, part 10): Biome, oxlint and ESLint were not adopted (0 bugs caught; decision 106 answered no). Five `tsconfig` flags were adopted instead (`noUnusedLocals`, `noUnusedParameters`, `noFallthroughCasesInSwitch`, `noImplicitReturns`, `noImplicitOverride`). They run inside `npm run check`, which is already a pre-commit check. No baseline file, no fix task left.
+- Linter (`### Linter evaluation`, part 10): Biome, oxlint and ESLint were not adopted (0 bugs caught; decision 106 answered no). Five `tsconfig` flags were adopted instead (`noUnusedLocals`, `noUnusedParameters`, `noFallthroughCasesInSwitch`, `noImplicitReturns`, `noImplicitOverride`). They run inside `npm run check`, which is already a pre-commit check. No baseline file, no fix task left. Later (decisions 197, 198): knip and ruff in `npm run check` too.
 
 ### Pending
 - Follow-up tasks (`### Pending`):
@@ -67,13 +67,15 @@ Milestone 13 read every tracked code and build file once, between 2026-10-12 and
   - Each file had one review pass. The 274 won't-fix rows are judgement calls, mostly small duplications kept on purpose.
 
 ### Process
-These decisions are open and wait for the developer (`### Process decisions`):
-- decision 196: no `directory.md` check; `directory.md` now names only top-level `.md` files and directories (task 1114).
-- decision 197: knip in `npm run check` fails on unused exports, files and dependencies, test-only exports included (task 1115, `### Unused-export check`).
-- decision 198: ruff for Python with narrow rules (unused, encoding); in `npm run check` (task 1116, `### Python check`).
-- decision 199: an AGENTS.md rule: "import, don't copy; a copy across a boundary names its source".
-- decision 200: an AGENTS.md rule: "after a move, rename or delete, fix the comments and docs that name the old".
-- decision 201: a recurring review per milestone (pm `cleanup_prompt`) or per release.
+Process decisions (`### Process decisions`):
+- Answered and done (2026-10-15):
+  - decision 196: no `directory.md` check; `directory.md` names only top-level `.md` files and directories (task 1114).
+  - decision 197: knip in `npm run check` fails on unused exports, files and dependencies, test-only exports included (task 1115, `### Unused-export check`).
+  - decision 198: ruff for Python with narrow rules (unused, encoding) in `npm run check` (task 1116, `### Python check`).
+- Open, waiting for the developer:
+  - decision 199: an AGENTS.md rule: "import, don't copy; a copy across a boundary names its source".
+  - decision 200: an AGENTS.md rule: "after a move, rename or delete, fix the comments and docs that name the old".
+  - decision 201: a recurring review per milestone (pm `cleanup_prompt`) or per release.
 
 ## Format
 

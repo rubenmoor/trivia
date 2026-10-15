@@ -38,7 +38,7 @@ Family trivia party game, shown on a TV: the family plays against the gamemaster
 ## Layout
 - `app/` ships (game server, game UI, Electron shell, `app/data/`); `authoring/` doesn't (source pool, `qgen` pipeline, review/stats pages).
 - `authoring/` may import from `app/`, never the reverse; `app/` never reads `authoring/data/`.
-- Every path: [`directory.md`](directory.md).
+- Top-level `.md` files and directories: [`directory.md`](directory.md); no per-file rows (decision 196).
 
 ## Commands
 Dev shell from the flake: `direnv allow` or `nix develop`. Human how-tos: `README.md`.
@@ -50,7 +50,7 @@ Dev shell from the flake: `direnv allow` or `nix develop`. Human how-tos: `READM
 - `trivia-report-server` (question report server, plan 103, wrangler: `dev` local on `127.0.0.1:8787`, local D1, fake `dev-*` tickets, prints the pull token, extra args to `wrangler dev` e.g. `--test-scheduled`; `seed-telemetry [N]`: N synthetic telemetry sessions to the local server, localhost only; `deploy`, `tail`, `secret <NAME>`: developer only)
 - `trivia-trailer [--lang es,es-ES,en,de] [--keep-raw]` (store trailer, plan 88: shell under Xvfb (X11, window sized by `xdotool`), private PulseAudio null sink, ffmpeg x11grab, `TRIVIA_SOUND=1`, dev Steam user, demo save; scripted game cut to ≈20 s → `authoring/store/out/trailer/<lang>.mp4`, H.264/AAC; en/de refuse until their pools; on a failed walk `<lang>-failed.png`)
 - `trivia-gallery` (screen gallery, plan 100: every screen and dialog per UI language from demo saves, built client on the Node dev server, temp save dir, desktop bridge stubbed; `--locale`, `--only <shot>`, `--list`, `--visible`; `work/gallery/<locale>/<shot>.png` + `manifest.json`: catalog key per visible text via `?gallery`, unmatched text listed; ~15 min for all four)
-- `npm run build`, `npm run check` (type-check + lint: strict `tsconfig` flags, `code-review.md` "Linter evaluation"), `npm run dev -w app/client|authoring/ui`
+- `npm run build`, `npm run check` (type-check with strict `tsconfig` flags, on-screen literals, knip: unused exports/files/deps, ruff: Python; `code-review.md` "Linter evaluation"), `npm run dev -w app/client|authoring/ui`
 - `qgen validate` (also flags a stale `app/data/pool.json`), `qgen export` (the game loads the pool once per page: reload it), `qgen report` (`-h` for its options; needs Node, dev shell); `qgen report --cost` for $ per approved and the projection per language; `qgen flag` (pasted player reports → `needs_work`), `qgen flag --pull` (report server's; token `TRIVIA_REPORT_TOKEN` or `state/report-token`)
 - `trivia-media sync --status approved` (required before play: the game never downloads media)
 - `nix build .#app` → `result/bin/trivia`

@@ -12783,12 +12783,11 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
   - BN-6 `[x]` with date and plans 27/29/71/125; "Later" section: drop the BN-6 bullet (section too if empty); Cambiazo sentence ("all of them until BN-6") in the present tense.
   - `languages` per bundle (the game offers only its language''s bundles; `qgen validate` rules) and base bundles (`kind: base`, exactly one per session, preset per `decision 158: Bundle selection in every mode, apart from customization`); rewrite "`base` is always on and can''t be switched off" and every `always_on` mention; bundle selection in every mode (decision 158); «Regional: Colombia»; link plan 71''s D entry.
 - `plans/project.md`: AG-7, BN-6 `[x]`; BN-6''s "(`base` always on)" → "(exactly one base bundle)".
-- `directory.md`: `age-groups.json` / `bundles.json` rows say the game reads them (group ranges, choice; `languages`, `kind: base`); check files new in plans 27–29, 71, 125–127, 133 are listed.
 - `app/data/age-groups.json` `about`: no "until AG-7", no "draft". `app/data/bundles.json` `about`: `languages` and base bundles (exactly one per session), no "always on"; "players switch on or off" only for non-base bundles.
 - `plans/decisions.md`: D-68 gets "superseded in part by D-<plan 71''s entry>" if missing; new D entry (play-test confirmed, date, milestone 5 done-when met; related D-38, D-39, D-68, plans 28/71 entries) only if the answer adds something beyond "fine".
 - Decision 50''s consequences are recorded; add nothing there.
 
-Done when: the developer confirmed the play-test incl. the part-6 items; AG-7, BN-6 `[x]` in plans 21, 22, `project.md`; `rg -n "until AG-7|until BN-6|always_on|always on|Siempre activo" plans/21-age-groups.md plans/22-bundles.md plans/project.md directory.md app/data/*.json app/client/src` finds nothing (`decisions.md` history stays); `qgen validate` passes.', '2026-10-12T20:25:56Z', NULL, 476, 0);
+Done when: the developer confirmed the play-test incl. the part-6 items; AG-7, BN-6 `[x]` in plans 21, 22, `project.md`; `rg -n "until AG-7|until BN-6|always_on|always on|Siempre activo" plans/21-age-groups.md plans/22-bundles.md plans/project.md app/data/*.json app/client/src` finds nothing (`decisions.md` history stays); `qgen validate` passes.', '2026-10-12T20:25:56Z', NULL, 476, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (480, 71, 'Bundle languages and base bundles in data and engine', 'work', 'done', NULL, '2026-10-12, app/data/bundles.json, app/client/src/engine/{pool,game,outlook,state}.ts, choice/outlook/pool tests, lib/types.ts, locales/es.ts, authoring/server/overview.py, authoring/tools/qgen.py, authoring/ui/src/lib/types.ts', 'Plan 71, part 1. Give each bundle the languages it exists in, make `kind: "base"` the mark of a base bundle (exactly one per session), drop `always_on`. Builds on plan 27 (bundle choice) and plan 68 (`EngineData.locale`; decision 36: GameRow.locale written only for non-es games). All rules: plan 71 "Decisions taken here" (`pm show p71`).
 
 ## Data
@@ -16181,7 +16180,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Keyboard part (task 648): if letters don''t reach the field: follow-up task in plan 85 to switch `steam:show-text-input` in `app/desktop/main.mjs` to `showGamepadTextInput` + `getEnteredGamepadTextInput` (wait for the dismiss, return the text; the bridge then returns `string | null` and `game/screens/Player.svelte` sets `name`); note it in `plans/14-input.md` (Steam Deck line).
 - Glyphs part (task 649): if Steam Input init breaks pad input in Chromium or always reports Xbox: follow-up task in plan 85 to drop `steam.input.init` in `app/desktop/main.mjs` (`steam:input-types` → null) and note it in `plans/14-input.md`.
 - Valid-user part (task 776): if a logged-in user isn''t valid: follow-up task in plan 85.
-- Docs: `plans/18-steam-integration.md` SW-8 `[x]` with note and "Steam features" updated (overlay: Windows only, D-92; valid user + `TRIVIA_DEV_STEAM_USER`; dev mode «Ir a pregunta…»); `plans/14-input.md` (glyphs, keyboard); `plans/15-i18n.md` ("Model", I18N-2 note: Steam language wired); `plans/project.md`; `directory.md` (`steamworks_sdk/`, new lib files).
+- Docs: `plans/18-steam-integration.md` SW-8 `[x]` with note and "Steam features" updated (overlay: Windows only, D-92; valid user + `TRIVIA_DEV_STEAM_USER`; dev mode «Ir a pregunta…»); `plans/14-input.md` (glyphs, keyboard); `plans/15-i18n.md` ("Model", I18N-2 note: Steam language wired); `plans/project.md`.
 - Failures from the check → follow-up tasks in plan 85.
 
 Done when: decision 113 answered as passed and the docs updated.', '2026-10-13T05:18:18Z', NULL, 644, 0);
@@ -16220,7 +16219,7 @@ Done when: values documented, decision answered.', '2026-10-13T05:48:40Z', NULL,
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (658, 86, 'SW-11 close-out: gamemaster check and docs', 'work', 'open', NULL, NULL, 'Plan 86 task 5. After tasks 655, 656, 657.
 
 - `pm decision add` one gamemaster check under Steam with the real App ID and a logged-in user (fresh account or reset stats): win a solo game → `FIRST_WIN` toast; a customized game and a gamemaster game unlock nothing; a save with earlier qualifying wins (e.g. brought in with `--import-save`, plan 99) unlocks them on the next start. Options: passes (recommended) / issues. Pending this task on it. Steam only (decision 111: Steam only: no effort outside Steam): no "without Steam" row.
-- Docs: `plans/18-steam-integration.md` SW-11 `[x]` with note; rewrite the "Achievements" bullet under "Steam features" (drop presets/Experto wording, per decision 19: Default mode: presets, checkpoints and won levels; valid user per decision 111); `plans/13-game-modes.md` MD-8 note (enter the mode-win achievements in Steamworks when the mode ships); `plans/project.md`; `directory.md` (achievements dir, render script, VDF).
+- Docs: `plans/18-steam-integration.md` SW-11 `[x]` with note; rewrite the "Achievements" bullet under "Steam features" (drop presets/Experto wording, per decision 19: Default mode: presets, checkpoints and won levels; valid user per decision 111); `plans/13-game-modes.md` MD-8 note (enter the mode-win achievements in Steamworks when the mode ships); `plans/project.md`.
 
 Done when: check passed, docs updated; issues → follow-up tasks.', '2026-10-13T05:48:40Z', NULL, 653, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (659, 87, 'create tasks for plan 87', 'split', 'done', 1000, '2026-10-13, tasks 660-664 in plan 87; no files', 'Split plan 87 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -16300,7 +16299,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/18-steam-integration.md`: Steam Cloud row/bullet `[x]` with date and a short note; test table filled from the answer.
 - `plans/12-client-engine.md` Store bullet: "one save per Steam user" (`save/<steamid64>/`), memory-only without one.
 - `plans/decisions.md` D-72 matches what shipped (per SteamID, `dev/`, no `local/`).
-- `plans/project.md` S5 Cloud line, `directory.md`, `README.md` desktop save line in sync.
+- `plans/project.md` S5 Cloud line, `README.md` desktop save line in sync.
 - `pm decision consequences 75 "…"`.', '2026-10-13T05:52:56Z', NULL, 659, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (665, 88, 'create tasks for plan 88', 'split', 'done', 1000, '2026-10-13, pm tasks 666-672, pm decision 78', 'Split plan 88 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T06:05:26Z', '2026-10-13T06:07:10Z', 258, 0);
@@ -16858,7 +16857,6 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
     - "Send a content patch" (task 713): link "Content updates (ST-5)"
     - "Pull player reports" (`qgen flag --pull`, where the pull token lives) and "a player pasted a report" (`qgen flag`)
     - "Run the report server": local dev, deploy, rotate secrets (plan 103)
-- `directory.md`: files S6 added (e.g. `authoring/steam/release_check.py`, `report-server/`, the `qgen flag` / `patch-notes` modules, `state/reports-pulled.json`) listed; check, don''t rewrite.
 - Milestone check, cited in the task note:
   - answered "Released? date, build id" (task 710) and "Content patch v<x> live? …" (task 716): ids, dates, version, BuildID
   - the released candidate''s ST-4 decision (plan 95, tasks 708/709): id; `report` row (send under Steam → `qgen flag --pull` → needs_work) and `offline` row (send fails cleanly, copy fallback) passed
@@ -17434,7 +17432,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 - AGENTS.md Commands: no `trivia`, no `nix build .#app`; the dev server (command, port, save dir: `TRIVIA_SAVE_DIR` or a printed temp dir); `trivia-release-check` line without `nix build .#app`.
 - README.md: the family plays `trivia-desktop`; `--import-save` (with `--force`, backup).
-- `directory.md`: `app/server/` gone, new authoring modules, dev server files.
+- `directory.md`: only if a top-level directory or `.md` file changes (`decision 196: Per-commit check: directory.md names every tracked file? (code review part 11)`)
 - `plans/decisions.md`: D-59 marked superseded by decision 111: Steam only.
 - `plans/01-architecture.md`, `plans/19-repo-layout.md`, `plans/12-client-engine.md`, `plans/18-steam-integration.md` (desktop as the only game; part 9 note), `plans/project.md` in sync.
 - `pm decision consequences 111 "<date>, task <id>: …"` with what changed (Python server, `/api/save`, `trivia`, `nix build .#app` gone; dev server; import; authoring reads the desktop save).
@@ -22008,7 +22006,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 - `plans/11-steam.md` ST-5 server half `[x]` with a note (API v1, hosting, retention, URL).
 - `plans/18-steam-integration.md`: one line (shell sends reports; ticket identity `trivia-reports`).
-- `directory.md` and AGENTS.md "Commands" match `report-server/` and `trivia-report-server` as built.
+- AGENTS.md "Commands" matches `report-server/` and `trivia-report-server` as built.
 - `README.md` how-tos: "run the report server locally", "deploy / rotate secrets" (`PULL_TOKEN`: new secret + new local file; `HASH_SALT`: only resets today''s counts).
 - `plans/project.md` in sync.
 - `pm decision consequences` on decision 93 and decision 117.
@@ -22317,7 +22315,6 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 - `plans/11-steam.md`: principle 3 → "Offline, no accounts; opt-in telemetry only (milestone 14)": the game works without network, sends nothing without a stored yes; ST-5''s "(no telemetry, so by hand …)" → reports via plan 103''s server, opt-in telemetry see milestone 14 (plans 105–109); ST-5 note with deploy date and retention (30 days, decision 118: Telemetry server storage and pull token).
 - `plans/18-steam-integration.md`: shell section: telemetry store and IPC (`telemetry:state|consent|load|record`), send at quit + one try at next start (decision 120: Telemetry send: at quit, one later try at the next start), ticket identity `trivia-telemetry` next to `trivia-reports`, per-install consent (decision 121: Telemetry consent: stored per install, not in the save); Steam close behaviour as found in task 896.
-- `directory.md`: `app/desktop/telemetry.mjs`, client `engine/telemetry.ts`/`lib/telemetry.ts`, `ConsentScreen.svelte`, `authoring/tools/played.py`, `state/played/`, `report-server/` telemetry files (only what plans 105–109 didn''t add; check real names).
 - `README.md` "How to …": "Pull gameplay data and read the played difficulty" (`qgen telemetry --pull`, `qgen report --played`, `/review?played=outliers`, nothing changes without the gamemaster), "Test telemetry locally" (`trivia-report-server dev`, `seed-telemetry`, `TRIVIA_DEV_STEAM_USER=1`, `TRIVIA_REPORT_URL`, `TRIVIA_TELEMETRY_DIR`), deploy line under the report-server how-to.
 - `AGENTS.md` "Commands": `qgen telemetry --pull`, `qgen report --played`, `trivia-report-server seed-telemetry` if missing (`.md` style rules).
 - `plans/project.md`: milestone 14 line `[x]` with date and pm plans 101, 105–110.
@@ -24264,13 +24261,12 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/project.md`: Steam track list gains `[x] Modding and Steam Workshop: readable build, mods from mods/ and the Workshop, code add-ons, mods screen, publish and check commands, player bundle kit, guide and examples (<date>, pm milestone 15, plans 102, 111–121 + part 7''s; decisions 124, 127–134)`; store link per task 992''s answer ("at launch (plan 95)" if so).
 - `README.md`: modding only as the one-line link to `modding/README.md` (decision 144: README.md is customer-facing); "Test mods locally" (`mods/`, `TRIVIA_MODS_DIR`, `TRIVIA_DEV_STEAM_USER=1`, `TRIVIA_DEV_WORKSHOP_DIR`, `--no-mods`, devtools `TRIVIA_DEVTOOLS=1`; each checked by `grep` in `app/desktop/`) goes into `modding/README.md`, not `README.md`.
 - `AGENTS.md` "Commands": `trivia-desktop` line names `TRIVIA_MODS_DIR`, `TRIVIA_DEV_WORKSHOP_DIR`, `--no-mods`, `--check-mod <folder>`, `--publish-mod <folder>` (`--dry-run` without Steam); if the additions made it unreadable, one sub-bullet "mods: …"; `trivia-release-check` line names `modkit` and `mods`.
-- `directory.md`: every path milestone 15 added (`app/desktop/{mods,workshop,publish}.mjs`, `app/client/src/lib/mods.ts`, the mods screen, `mods/`, `modding/`, `state/desktop/mods.json`, `mods-start.json`): `ls` each, list the real ones.
 - `modding/README.md` and the four examples'' `mod.json` (`modding/template-bundle`, `modding/examples/{theme,rules-tweak,conversion}`): the Workshop item links / `workshopId`s from task 991 (public → links; private → ids only, no links).
 - `pm decision consequences` on decisions 124, 127–134 (and part 7''s, from task 906) where the built result differs or adds facts.
 - Check milestone 15''s "Done when" and plan 102''s against tasks 991, 992 and task 942; a gap → follow-up task in the owning plan (or `pm plan add 15 …` if it''s done).
 
 ## Done when
-- Plans 18, 01, 11, `project.md`, README, AGENTS.md, directory.md describe modding as built; example ids committed. Per-commit checks (AGENTS.md) pass.', '2026-10-13T18:37:57Z', NULL, 943, 0);
+- Plans 18, 01, 11, `project.md`, README, AGENTS.md describe modding as built; example ids committed. Per-commit checks (AGENTS.md) pass.', '2026-10-13T18:37:57Z', NULL, 943, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (994, 112, 'electron-builder.yml: ship mods.mjs in the packaged shell', 'work', 'done', NULL, '2026-10-13, app/desktop/electron-builder.yml: mods.mjs in files: (no *.test.mjs); trivia-desktop-build --dir, release/linux-unpacked/trivia with TRIVIA_DEV_STEAM_USER=1 and a throw-away mod logs ''trivia: mods: 1 loaded''; checks pass', '- `app/desktop/electron-builder.yml` `files:` lists `main.mjs`, `resolve.mjs`, `save.mjs`, `preload.cjs` only; `mods.mjs` (task 950) is missing.
 - Once `main.mjs` imports `./mods.mjs` (task 952), the packaged build fails at start (module not found).
 - Add `- mods.mjs` to `files:`; don''t ship `*.test.mjs`.
@@ -26592,7 +26588,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## On the answer
 - `authoring/data/regional-categories.json` (authoring only, never read by `app/`): per category `name` (pattern with `{región}`/`{gentilicio}` placeholders or plain), `scope` (en), `excludes`; a short top-level note on its use (input of `qgen taxonomy`).
 - `qgen validate` loads it if cheap (well-formed JSON, unique names); else nothing.
-- `directory.md` entry; `pm decision consequences <decision> "…"`.
+- `pm decision consequences <decision> "…"`.
 - Per-commit checks (AGENTS.md).
 
 Done when: the decision is answered and the file matches the answer.', '2026-10-15T19:02:56Z', NULL, 1136, 0);
@@ -26613,7 +26609,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Also
 - `qgen bundle new --kind region` (`cmd_bundle_new`, `authoring/tools/qgen.py`): its "Next:" line points at `qgen taxonomy --bundle <id>` instead of "fill by hand"; docstring too.
-- `directory.md` (prompt, `work/taxonomy/`), README/AGENTS.md command line for `qgen taxonomy` if qgen commands are listed there; RUNBOOK unchanged.
+- README/AGENTS.md command line for `qgen taxonomy` if qgen commands are listed there; RUNBOOK unchanged.
 - Smoke: run the proposal for a throw-away bundle or `colombia` without `--apply` once; don''t keep the output in git (`work/` is ignored).
 - Per-commit checks.
 
@@ -26651,12 +26647,12 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm decision consequences 166 "…"`.
 
 Done when: every `colombia` question is on a `colombia` subcategory, `validate` enforces it, checks pass.', '2026-10-15T19:02:56Z', NULL, 1136, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1141, 72, 'post-milestone cleanup of milestone 13: Code quality', 'cleanup', 'open', NULL, NULL, '* rewrite top-level .md files to reflect the current state of the project
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1141, 72, 'post-milestone cleanup of milestone 13: Code quality', 'cleanup', 'done', NULL, '2026-10-15, AGENTS.md, README.md, code-review.md; directory.md bullets dropped from open tasks 479, 652, 658, 664, 719, 766, 869, 897, 993, 1137, 1138 (decision 196)', '* rewrite top-level .md files to reflect the current state of the project
 * remove files that have become redundant
 * suggest entirely new files, if necessary
 * delete code that isn''t actually used
 * check pending decisions if they are still relevant and really pending
-* check other milestones if their contents are up-to-date and update them if necessary', '2026-10-15T19:16:50Z', NULL, NULL, 0);
+* check other milestones if their contents are up-to-date and update them if necessary', '2026-10-15T19:16:50Z', '2026-10-15T19:19:44Z', NULL, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -29848,6 +29844,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1100, 1114, '2026-10-15T19:07:44Z', '2026-10-15T19:08:57Z', 'done', NULL, 0, '083b838116d07ce8d4b6cffb5f3e135d25a49cb1', 'claude-opus-5-5[1m]', '492532c4-f5b7-41f2-b1fe-0e683081d82a', 13, 20, 4007, 500797, 52069, 0.59693140000000011, 3530483);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1101, 1115, '2026-10-15T19:08:57Z', '2026-10-15T19:14:51Z', 'done', NULL, 0, '83eca9a9c67d5b5e7d98882eca2e612447ca3adf', 'claude-opus-5-5[1m]', '2e617b66-9b3e-447b-9998-561167fac966', 54, 106, 26716, 4172873, 100252, 2.1713346, 3530483);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1102, 1116, '2026-10-15T19:14:51Z', '2026-10-15T19:16:50Z', 'done', NULL, 0, 'b8b389ff57aa8b30ca07722e271abc62c291af3d', 'claude-opus-5-5[1m]', 'e6a62d4d-4311-423d-bcd1-faa229e643df', 20, 40, 5690, 861467, 42920, 0.6296134000000001, 3530483);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1103, 1141, '2026-10-15T19:16:50Z', '2026-10-15T19:19:52Z', 'done', NULL, 0, 'efbf3ce904f66ed3edd22609d4c5183a719a8d81', 'claude-opus-5-5[1m]', '15b047b5-e8f3-42e0-9ad0-098aa459c245', 31, 60, 11164, 2037964, 79525, 1.2673128, 3530483);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
