@@ -7914,6 +7914,60 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 ## Done when
 - `zh-Hans`, `ru`, `pt-BR` catalogs ship (shown per decision 222) with their fonts within budget, pass `check:literals`, no overflow at both sizes, achievement and presence texts in place, and each passed its native playtest; es/es-ES/en/de look and play as before.', '2026-10-15T20:18:52Z', 1151);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (143, 12, 'Russian and Portuguese pools', -130, 'The content runs that give `ru` and `pt-BR` their own approved pools from translated `base`: 5000 each in D-53''s mix (`decision 21: Content target per player and language (OQ-32)?`). Part 7 of `plan 60: masterplan`. Same pattern as the launch languages'' chains in `plan 84: Release content runs` (pilot, native spot check, `qgen health ack`, budget, full runs), with an outside native reviewer instead of the developer; no code beyond the budget''s own `targets.json` entries and `DRIVES_DRAFTING`.
+
+## Builds on
+- D-36 / `authoring/RUNBOOK.md`: workers only run `qgen batch …`; no prompt, pool, media or `qgen.py` changes inside a run or QC task.
+- `plan 139: New locales in data and pipeline`: `ru`, `pt-BR` in `translations.LANGUAGES`, `base` `languages` lists both, per-locale deficits and reports.
+- `plan 140: Translation prompts and markets per locale`: approved `authoring/tools/prompts/locale-ru.md`, `locale-pt-BR.md`; without them `--translate` stops before any call.
+- `plan 141: Native reviewers`: `qgen spotcheck export <run> --controls 3` / `qgen spotcheck import <file>` (`decision 221: How does an outside native reviewer reach the review tool?`), `authoring/NATIVE-REVIEW.md`, one "Native reviewer for <locale> engaged?" decision per locale after `decision 220: Native reviewers for zh-Hans, ru, pt-BR: paid freelancers, volunteers, or mixed?`.
+- `plan 84: Release content runs`: chains 2–4 are the model (run/QC pairs, pm-run rules of plan 17: stage exactly the printed `git add` paths, don''t commit; exit 75, exit 2, other codes or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines, `pm task-pending-decision`, stage nothing, stop).
+- `decision 45: Health thresholds and selection order for qgen batch --translate runs`: pilot `tr-<locale>-1` (50 sources) stops the next run until `qgen health ack`; full runs 300 sources.
+- `decision 2: When is batch quality "fine": human spot-check size and agreement rate with the LLM review?` / `decision 15: Release quality bar (CT-5): D-56''s numbers or stricter for the Steam release?`: 30-question spot check, ≥ 90 % agreement, ≤ 2 false approves, none of kind `fact`.
+- `decision 219: Do the new locales (zh-Hans, ru, pt-BR) steer es drafting from the start?`: `ru`, `pt-BR` join `translations.DRIVES_DRAFTING` only by this plan''s budget decision.
+- `decision 37: Per-locale content targets and gap aiming` (D-84): source shortfall drives `es` drafting; `decision 3: How are needs_work questions (33 now, more per batch) resolved?`: `qgen rework` once after each `es` batch''s QC.
+
+## Gate: stable `base` sources
+- D-81: a rewrite of an approved `es` source makes its translations stale. The pilots start only after the launch content settles:
+  - `plan 84: Release content runs` chains 1–3 closed (neutralize QC''d, `en`/`de` full runs at target or stopped by an answered decision); chain 5 (`colombia`) doesn''t matter (other bundle).
+  - `plan 57: Release quality bar and back-audit (CT-5)`: no open back-audit slice (slices edit approved sources).
+- Later `es` top-ups only add sources; their `qgen rework` touches `needs_work`, not approved: no reason to wait.
+- Gate not met → the pilot run task pends on the decision that blocks the earliest open task of plan 84 (or plan 57), stops.
+
+## Chains (one per locale, independent; one open pair per chain)
+1. **Pilot** (`run tr-<locale>-1` + `QC tr-<locale>-1`, per locale `ru`, `pt-BR`):
+   - Run task checks before running: the gate above; plan 139''s tasks done; `locale-<locale>.md` exists; `qgen spotcheck` exists (plan 141 task 1); "Native reviewer for <locale> engaged?" answered "engaged". Missing → pend on the blocking decision (or the decision blocking the missing task), stop.
+   - Run: `qgen batch --translate <locale>` (50 sources); exit 0 expected; note "Done:" line + report path.
+   - QC (`authoring/QC.md` "Translation runs", steps 1–4): `qgen spotcheck export tr-<locale>-1 --controls 3`; `pm decision add "Spot check tr-<locale>-1 done?"` (kind once; body: sheet path, "native speaker of Russian / Brazilian Portuguese needed, send per `authoring/NATIVE-REVIEW.md`, import with `qgen spotcheck import`"); pend; on the answer `qgen report --qc tr-<locale>-1` (agreement, controls caught), proposals decision "QC tr-<locale>-1: which changes?" (the reviewer''s patterns → `locale-<locale>.md`, `translate.md`, `translate-review.md` changes as tasks in `plan 140: Translation prompts and markets per locale` or a new plan; prompts are the developer''s, D-36).
+   - Spot check never answered by an LLM; controls caught < N → the decision body says so (reviewer''s check not trusted for that run).
+2. **Pilot go/no-go** (one task after both pilot QCs): table per locale from the reports: translated, approved, needs_work, rejected, not travelling, $ per approved translation, audit and spot-check agreement, controls caught, release bar ✓/✗. `pm decision add "ru / pt-BR translation pilot: go for full runs?"`; options: "go: I ran `qgen health ack tr-ru-1 "…"` and `tr-pt-BR-1`" (recommended if both meet decision 45''s thresholds and the release bar), "changes first (the QC proposals)", "no-go for <locale>". On the answer: 15b QT-6 later-languages line with the numbers; no-go for a locale → that locale''s chain stops; `pm decision add` "Drop <locale> from milestone 12 or retry after prompt changes?".
+3. **Budget** (one task, after the go/no-go): `qgen report --cost` and `--locale ru|pt-BR` → `pm decision add "Budget for ru and pt-BR pools"` with a table per locale: deficit to 5000, $ per approved translation (pilot), projection, `es` source shortfall (D-84 at the pilots'' yield) and its draft cost, the reviewer''s cost (≈ runs × one spot check at decision 220''s rate), overhead. Options: projection + 20 % margin and grow `es` past its target for the sources (recommended if the shortfall is a small share); the same without growing `es` (pools stop where the sources run out; lower target per level); a lower cap with the levels that give way.
+   - On the answer: `targets.json` `"budget"` += `ru`, `pt-BR` (plan 70''s key, `qgen validate` reads it); grow `es` → `translations.DRIVES_DRAFTING` += `ru`, `pt-BR` (decision 219), `qgen report --cost` shows the shortfall drafting aims at; `npm run check`, `npm test`, `qgen validate`; `pm decision consequences`; plan 16 "Cost" line for the later languages.
+4. **Full runs** (`run tr-<locale>-<n>` + `QC tr-<locale>-<n>`, n ≥ 2, per locale):
+   - Run task: the go/no-go and the budget answered (else pend on them), the locale not stopped; `qgen batch --translate <locale>` (300 sources).
+   - QC: as the pilot''s (sheet, `--controls 3`, "Spot check …" decision, `qgen report --qc`, proposals decision), then:
+     - `qgen report --locale <locale>` meets the target (every level at `targets.json` `base`) → no next pair; 15b progress line, `qgen report --locale <locale>` recorded in plan 16.
+     - Spent ≥ the locale''s budget (`qgen report --cost`) → `pm decision add "<locale> over budget: continue?"`, next pair waits on it.
+     - The run selected fewer than 300 sources, or an `es` source shortfall shows → an `es` top-up pair (chain 5) before the next translation pair.
+     - Release bar ✗ two runs in a row → `pm decision add "<locale>: runs below the release bar, pause for prompt changes?"`, next pair waits on it.
+     - Else the next pair `tr-<locale>-<n+1>`.
+   - Reviewer hasn''t returned a sheet after ~2 weeks: the "Spot check" decision stays open, nothing else; the next run waits (a run without its check doesn''t count for the release bar).
+5. **`es` top-ups** (`run batch-<n>` + `QC batch-<n>`, plan 17''s pattern, decision 3''s rework once): only if the budget decision grew `es`; else `pm decision add "Source shortfall for <locale> at levels …: lower the target or grow es?"` instead. `qgen batch` (no arguments: D-84''s weights, now incl. `ru`/`pt-BR`, aim it). The top-up''s QC adds the waiting translation pair back. One open top-up pair for both locales; if plan 84''s chain 4 has an open pair, none here (it serves the same pool).
+
+## Tasks (for the split)
+1. `run tr-ru-1`, 2. `QC tr-ru-1`, 3. `run tr-pt-BR-1`, 4. `QC tr-pt-BR-1`.
+5. Pilot go/no-go (ru, pt-BR).
+6. Budget for ru and pt-BR (pm decision).
+7. `run tr-ru-2`, 8. `QC tr-ru-2`, 9. `run tr-pt-BR-2`, 10. `QC tr-pt-BR-2`.
+- Later pairs and top-ups are added by QC tasks, not the split. Every run/QC task body repeats the pm-run rules above and names its run.
+- Priorities: plan''s (-130); nothing earlier.
+
+## Done when
+- Both chains end at 5000 approved (`qgen report --locale ru`, `--locale pt-BR` at target) or with an answered decision that stops them; numbers in plan 16 and 15b.
+- `qgen report --simulate` ✓ for `ru`, `pt-BR` is part 9''s close-out check (`task 1155: write plan: Release and close-out of the new languages`).
+
+## Out of scope
+- `zh-Hans` and `chinese-base` (parts 2, 6); `colombia` or other bundles in `ru`/`pt-BR`; own base bundles for `ru`/`pt-BR`; shipping the pools (part 9: content patches); UI and store texts (parts 5, 8).', '2026-10-15T20:20:22Z', 1153);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -27054,13 +27108,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Scope: masterplan part 6: fit pass over `base`''s zh translations (part 2''s model), developer corrects, sample to the native reviewer; new China-centric questions per decision 218; pilot first (QT-5: 50, `qgen health ack`), cost and reject rate → budget pm decision (as `plan 70: Cost, budget and generation plan by gap (CT-3, CT-4)`); runs to 5000 approved (`qgen report --bundle chinese-base --locale zh-Hans`, `--simulate` ✓).
 - Runs follow `authoring/RUNBOOK.md` (`qgen batch …` only); batch tasks like `plan 17: Batch runs` / `plan 84: Release content runs`.
 - Plan priority ~-120.', '2026-10-15T20:09:27Z', NULL, 1146, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1153, 60, 'write plan: Russian and Portuguese pools', 'plan', 'open', 1000, NULL, 'Write the plan for part 7 of `plan 60: masterplan` (`pm plan add 12 …`): approved `ru` and `pt-BR` pools of 5000 each from translated `base`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1153, 60, 'write plan: Russian and Portuguese pools', 'plan', 'done', 1000, '2026-10-15, plan 143: Russian and Portuguese pools (tasks.sql only)', 'Write the plan for part 7 of `plan 60: masterplan` (`pm plan add 12 …`): approved `ru` and `pt-BR` pools of 5000 each from translated `base`.
 
 - Scope: masterplan part 7: `qgen batch --translate ru` / `--translate pt-BR`: pilot `tr-<locale>-1`, native spot check (part 4), `qgen health ack`, budget pm decision, full runs to 5000 approved each.
 - Source supply: 5000 per locale needs more translatable `es` sources at a yield below 1 (D-84 source shortfall, part 1); whether `es` drafting grows goes into the budget decision.
 - Waits for `plan 84: Release content runs` so `base` sources are stable (D-81), and for the plans of parts 1, 3, 4.
 - Runs follow `authoring/RUNBOOK.md` (`qgen batch …` only).
-- Plan priority ~-130.', '2026-10-15T20:09:28Z', NULL, 1146, 0);
+- Plan priority ~-130.', '2026-10-15T20:09:28Z', '2026-10-15T20:20:24Z', 1146, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1154, 60, 'write plan: Store page and Steam for the new languages', 'plan', 'open', 1000, NULL, 'Write the plan for part 8 of `plan 60: masterplan` (`pm plan add 12 …`): store page and Steamworks in `zh-Hans`, `ru`, `pt-BR`.
 
 - Scope: masterplan part 8: store texts, short description, AI disclosure, capsules with text, screenshots, trailer per language (decisions 79, 80: rendered late; `trivia-trailer --lang`, `trivia-gallery`); store names (PUB-7 check, `plan 129: Partner account, name check and AI terms (PUB-6, PUB-7, PUB-10)`); Steamworks supported languages (decision 90), achievement localization, store language entries; approval pm decisions per language by the developer and native reviewers (part 4).
@@ -27079,6 +27133,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:15:43Z', NULL, 1150, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1159, 142, 'create tasks for plan 142: UI in the new languages', 'split', 'open', 1000, NULL, 'Split plan 142 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:18:52Z', NULL, 1151, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1160, 143, 'create tasks for plan 143: Russian and Portuguese pools', 'split', 'open', 1000, NULL, 'Split plan 143 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:20:22Z', NULL, 1153, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -30373,6 +30429,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1129, 1149, '2026-10-15T20:11:41Z', '2026-10-15T20:13:37Z', 'done', NULL, 0, '6b88f0f1d1610243ed402f8239e6c4fe0c4eec30', 'claude-opus-5-5[1m]', '016efaff-b3c4-4ac1-8553-1e88b771227b', 10, 18, 10014, 423266, 55941, 0.73253320000000011, 3530483);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1130, 1150, '2026-10-15T20:13:37Z', '2026-10-15T20:15:57Z', 'done', NULL, 0, '734b45076cf275eef8adc08f26040b92b530d468', 'claude-opus-5-5[1m]', '8d4719b4-e5d4-4f2f-8283-3c77f2f683c4', 14, 28, 12513, 769036, 66143, 0.93332319999999991, 3530483);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1131, 1151, '2026-10-15T20:15:57Z', '2026-10-15T20:19:03Z', 'done', NULL, 0, '622ae8fa24dbb4dddbbc0660645b1c3385fd4238', 'claude-opus-5-5[1m]', 'b051f419-bdd3-49a4-a042-f96dd835e08b', 20, 40, 16385, 1224294, 77147, 1.1898948, 3530483);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1132, 1153, '2026-10-15T20:19:03Z', '2026-10-15T20:20:33Z', 'done', NULL, 0, '644c1cfb5edf917f26a0b308e491e9ce3c7c2d37', 'claude-opus-5-5[1m]', '38c40e8d-59b4-4a29-904a-0d3e5e3144d8', 10, 20, 8828, 441606, 54694, 0.70251320000000006, 3530483);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
