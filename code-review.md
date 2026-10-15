@@ -55,7 +55,6 @@ Milestone 13 read every tracked code and build file once, between 2026-10-12 and
 ### Pending
 - Follow-up tasks (`### Pending`):
   - `task 1051: Freesound: re-pick its 2 audio slots from Commons, drop it from the audio order`
-  - `task 1116` (ruff), decision 198
 - Superseded by tasks of other milestones:
   - `task 765: Delete app/server, ServerStore, the trivia command and nix build .#app` (blocked by decision 150)
   - `task 463: Release budget per language (pm decision, CT-3)`
@@ -71,7 +70,7 @@ Milestone 13 read every tracked code and build file once, between 2026-10-12 and
 These decisions are open and wait for the developer (`### Process decisions`):
 - decision 196: no `directory.md` check; `directory.md` now names only top-level `.md` files and directories (task 1114).
 - decision 197: knip in `npm run check` fails on unused exports, files and dependencies, test-only exports included (task 1115, `### Unused-export check`).
-- decision 198: ruff for Python with narrow rules (encoding, unused, broad excepts; task 1116).
+- decision 198: ruff for Python with narrow rules (unused, encoding); in `npm run check` (task 1116, `### Python check`).
 - decision 199: an AGENTS.md rule: "import, don't copy; a copy across a boundary names its source".
 - decision 200: an AGENTS.md rule: "after a move, rename or delete, fix the comments and docs that name the old".
 - decision 201: a recurring review per milestone (pm `cleanup_prompt`) or per release.
@@ -1981,7 +1980,7 @@ Plan 83 checks this report for completeness, proposes process changes, writes th
 | `app/server/http_base.py`, `media_cache.py`, `paths.py` | copies of the authoring modules (task 764), only `app/server/main.py` imports them | — | — | superseded by task 765 |
 | `authoring/tools/http_base.py` | after task 765, `BaseHandler`'s `dist`/`pool_file`/`build_hint` hooks have one subclass (authoring `Handler`); its `send_media` docstring still compared it to "the game's" handler | complexity | low | won't fix: the split keeps generic serving (ranges, SPA, `/media` allow-list) apart from the ~500-line authoring routes; docstring fixed (task 1111) |
 | `authoring/tools/paths.py` | `locale_pool("es")` names `pool.es.json` (never written), `pool("es")` `pool.json`: two rules for one file; `qgen.locale_pool` patches es back | complexity | low | won't fix: every `LOCALE_POOL` caller passes a translated locale or goes through qgen's es fallback; cluster 8 kept the aliases |
-| `authoring/server/main.py`, `authoring/tools/qgen.py`, `authoring/steam/release_check.py` | ruff trial (task 589): unused `import pool_export` (`main.py:95`), unused `versions` Counter (`qgen.py:2298`), `read_text()` without `encoding` (`release_check.py:211`, cp1252 on Windows) | unused | low | follow-up task 1116 |
+| `authoring/server/main.py`, `authoring/tools/qgen.py`, `authoring/steam/release_check.py` | ruff trial (task 589): unused `import pool_export` (`main.py:95`), unused `versions` Counter (`qgen.py:2298`), `read_text()` without `encoding` (`release_check.py:211`, cp1252 on Windows) | unused | low | fixed (task 1116) |
 | `authoring/tools/http_base.py`, `media_cache.py`, `paths.py` | no further findings: diff to the `app/server/` originals is paths and docstrings only (`layout.DIST`, `REPO` from `authoring/tools/`, `DIST` gone); the `sys.path` side-effect imports of part 8 are gone with task 764; `STATE` = repo `state/` is authoring's own files (`reports-pulled.json`, `report-token`, `played/`, `flags-applied.json`), never the game save | — | — | — |
 
 ### Completeness
@@ -2008,7 +2007,6 @@ Task 588, 2026-10-14. Throw-away scripts over `code-review.md`, `git ls-files` a
 | task 652 | SW-8 close-out: gamemaster check and docs | part 6 `preload.cjs`/`main.mjs` overlay, `showTextInput` | decision 113: SW-8 check under Steam |
 | task 765 | Delete app/server, ServerStore, the trivia command and nix build .#app | part 10 parity rows (save twin), part 11 `ServerStore` | decision 150: Family save imported into trivia-desktop? |
 | task 1051 | Freesound: re-pick its 2 audio slots from Commons, drop it from the audio order | part 8 `providers/__init__.py` `ORDER`, `freesound.py` | — |
-| task 1116 | Python: ruff per decision 198, fix its 3 hits | part 11 ruff trial row | decision 198 |
 
 ### Scans
 
@@ -2044,7 +2042,7 @@ Task 589, 2026-10-14. A throw-away script over the finding rows of parts 1–11 
 
 - decision 196: per-commit `directory.md` ↔ `git ls-files` check (79 of 174 files unnamed at part 1, 22 docs-drift rows); answered no: `directory.md` cut to top-level `.md` files and directories (task 1114)
 - decision 197: per-commit unused-export scan, the gap all linter candidates leave (34 unused-export rows); answered "find a tool": knip, task 1115
-- decision 198: ruff for Python, narrow rules (5 platform-encoding rows; trial: 3 new real hits); task 1116
+- decision 198: ruff for Python, narrow rules (5 platform-encoding rows; trial: 3 new real hits); answered yes (F, PLW1514): task 1116, `### Python check`
 - decision 199: AGENTS.md rule "import, don't copy; a cross-boundary copy names its source" (118 copy rows, 38 clusters)
 - decision 200: AGENTS.md rule "after a move, rename or delete, fix comments and docs naming the old" (39 lying-comment rows)
 - decision 201: recurring review, per milestone in pm's `cleanup_prompt` or per release (69 files added during milestone 13 unreviewed; their review found 9 bugs, 2 medium)
@@ -2076,6 +2074,12 @@ Task 1115, 2026-10-15, per decision 197 (answer: a tool, not our own script). kn
 | `authoring/tools/cdp.mjs` | `freePort`, `connectPort` exported, used only in own file | unused | low | fixed (task 1115) |
 | `report-server/src/steam.ts` | `ticketResult` exported, used only in own file | unused | low | fixed (task 1115) |
 | `authoring/ui/package.json` | `@tsconfig/svelte` devDependency unused (`tsconfig.json` extends `app/client`'s) | unused | low | fixed (task 1115) |
+
+### Python check
+
+Task 1116, 2026-10-15, per decision 198 (answer: narrow rules, run by `npm run check`). ruff from nixpkgs in the dev shell (no pip/npm package), `npm run ruff` = `ruff check` over `git ls-files '*.py'`, last step of `npm run check`, < 0.1 s:
+- `ruff.toml`: `select = ["F", "PLW1514"]`; `PLW1514` (`unspecified-encoding`) is a preview rule → `preview = true` with `explicit-preview-rules` (no other preview rule slips in)
+- No `noqa` added, no baseline: the trial's 3 hits fixed (part 11 ruff trial row), 0 hits
 
 ### Close-out
 
@@ -2146,3 +2150,4 @@ Out of scope (milestone 13 "Scope", plan 72):
 - media, audio, fonts: `app/client/public/audio/`, `app/client/public/fonts/` (44)
 - `*.md` docs (13), except part 10's `directory.md`/`AGENTS.md` check
 - added since part 1 (task 588): `LICENSE`, `.ignore` (pm's search config), `app/desktop/achievements/*.svg` (29) and `app/desktop/icon.png` (media), `report-server/fixtures/`
+

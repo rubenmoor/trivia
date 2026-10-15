@@ -2394,7 +2394,7 @@ def report_played(args):
             row = levels.setdefault((g, int(lvl)), [0, 0, 0, 0])
             for i, x in enumerate((v + [0, 0])[:4]):
                 row[i] += x
-    sessions, versions, by_games, by_len = Counter(), Counter(), Counter(), Counter()
+    sessions, by_games, by_len = Counter(), Counter(), Counter()
     for k, s in stats["sessions"].items():
         version, day = k.split("|")
         if day >= since:

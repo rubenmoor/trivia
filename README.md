@@ -17,7 +17,7 @@ Milestones, plans and open tasks: `pm status` (`tasks.sql`); the older overview 
 
 ## Getting started
 
-You need [Nix](https://nixos.org/) with flakes. The dev shell has Node 22, Python 3, ImageMagick and Claude Code, plus Electron and the commands `trivia`, `trivia-desktop`, `trivia-desktop-build`, `trivia-authoring`, `qgen` and `trivia-media`, which run this checkout's scripts, Xvfb, `trivia-trailer`, on x86_64 Linux also `trivia-steam`, `trivia-release-check` and `steamcmd`, and `pm` ([project-manager](https://github.com/rubenmoor/project-manager)).
+You need [Nix](https://nixos.org/) with flakes. The dev shell has Node 22, Python 3, ruff, ImageMagick and Claude Code, plus Electron and the commands `trivia`, `trivia-desktop`, `trivia-desktop-build`, `trivia-authoring`, `qgen` and `trivia-media`, which run this checkout's scripts, Xvfb, `trivia-trailer`, on x86_64 Linux also `trivia-steam`, `trivia-release-check` and `steamcmd`, and `pm` ([project-manager](https://github.com/rubenmoor/project-manager)).
 
 ```sh
 git clone https://github.com/rubenmoor/trivia.git && cd trivia
@@ -134,7 +134,7 @@ Text around the `¡Trivia! #q-… · …` blocks is ignored; one paste can hold 
 ```sh
 trivia & npm run dev -w app/client                 # game UI with hot reload
 trivia-authoring & npm run dev -w authoring/ui     # authoring UI with hot reload (port 5174)
-npm run check                                      # type-check both clients (strict tsconfig flags) + on-screen literals + knip (unused exports, files, deps; knip.jsonc)
+npm run check                                      # type-check both clients (strict tsconfig flags) + on-screen literals + knip (unused exports, files, deps; knip.jsonc) + ruff (Python, ruff.toml)
 npm test                                           # game engine tests (node:test)
 npm run check:literals -w app/client               # on-screen literals outside the UI catalog (src/game by default)
 npm run build -w app/client && trivia-desktop      # the game in the Electron desktop shell, no Python (no Steam: nothing saved; TRIVIA_DEV_STEAM_USER=1: state/desktop/dev/game.json)

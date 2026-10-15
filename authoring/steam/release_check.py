@@ -208,7 +208,7 @@ def manual(rows: dict[str, tuple[str, str | None]], path: str | None, ask: bool)
     """Answers per manual row: automatic, from FILE, else asked on the terminal (only if ask)."""
     open_rows = {k: text for k, (text, auto) in rows.items() if auto is None}
     if path:
-        lines = [l.split(":", 1) for l in Path(path).read_text().splitlines() if ":" in l]
+        lines = [l.split(":", 1) for l in Path(path).read_text(encoding="utf-8").splitlines() if ":" in l]
         given = {k.strip(): v.strip() for k, v in lines}
         for k in given.keys() - MANUAL.keys():
             print(f"  {path}: unknown row {k!r}", file=sys.stderr)

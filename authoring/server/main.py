@@ -92,7 +92,6 @@ import media_stats  # noqa: E402  (authoring/server/media_stats.py)
 import ui_flags  # noqa: E402  (authoring/server/ui_flags.py)
 import overview  # noqa: E402  (authoring/server/overview.py)
 import played  # noqa: E402  (authoring/tools/played.py)
-import pool_export  # noqa: E402  (authoring/tools/pool_export.py)
 import reviews  # noqa: E402  (authoring/tools/reviews.py)
 from reviews import (NoQuestion, POOL, load_pool, save_pool, set_review,  # noqa: E402
                      update_question, update_translation)

@@ -1,0 +1,6 @@
+# decision 198: narrow rule set; PLW1514 is a preview rule
+preview = true
+
+[lint]
+explicit-preview-rules = true
+select = ["F", "PLW1514"]
