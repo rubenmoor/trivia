@@ -28691,6 +28691,39 @@ Leaves for the recommended set:
 - `joker.easier.dial` «Schwierigkeit» stays
 - `joker.category.title` «Frau Pingelig: Welches Thema soll es sein?»
 - `joker.snipe.*` (aim, false, shoot, hit) name no joker: stay; `arm` «{name} einsetzen?» and `rule` leaves stay', NULL, NULL, '2026-10-15T18:59:56Z', NULL, 1097, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (213, 'General category list for regional bundles', 'pending', '["the list as drafted (14)", "the shorter core list (10)", "changes (name them)"]', 'General list of broad categories every regional bundle starts from (`plan 138: Regional taxonomy: a general list, colombia reworked`, part 1; `decision 166: colombia subcategories (OQ-46): where the 19 go, and the list for 2000`). On the answer it becomes `authoring/data/regional-categories.json` (authoring only), the input of `qgen taxonomy --bundle <id>` (task 1138), which adds the region''s own categories and proposes subcategories for your approval (colombia: task 1139).
+
+## How it is used
+- Placeholders: `{región}` = the region''s name («Colombia», «Andalucía»); patterns built on `de {región}` / `en {región}` avoid gender agreement (no `{gentilicio}` needed: «Comida colombiana» needs the feminine form).
+- Names repeat across bundles (`decision 110: Regional packs at launch (RG-5, OQ-46)` (d)): «Historia de Colombia», «Historia de México» are separate entries of their bundles.
+- Sizing at 2000 approved: ≈ 50 subcategories (≈ 40 approved each), so 14 + 1–3 regional ones ≈ 3–4 subcategories per category, more for the big ones (history, geography, food, music).
+- `qgen taxonomy` may leave a category out for a region with too little to ask (reason in the proposal), you see it in the region''s decision.
+- Excluded everywhere (bundle rule, D-49): anything players anywhere in the Spanish-speaking world answer without a connection to the region (capital, flag, coffee, García Márquez, Shakira as a name) stays in `base`; world topics stay in `base`''s subcategories.
+
+## The list (14)
+1. **Geografía de {región}**: provinces/departments, cities and towns, rivers, mountains, coasts, islands, landmarks and monuments, roads and distances. Excludes: country-level facts known worldwide (base Capitales del mundo, Países del mundo, Monumentos famosos).
+2. **Naturaleza de {región}**: native animals and plants, national parks and reserves, ecosystems, climate and seasons, natural phenomena. Excludes: animals and plants known worldwide without a regional angle (base Animales, Plantas, Amazonas).
+3. **Historia de {región}**: indigenous peoples before the conquest, colony, independence, wars and founding figures, 19th–20th century, presidents and turning points. Excludes: world history (base Historia); current party politics.
+4. **Personajes de {región}**: well-known people not covered by music, sport, arts or TV: scientists, inventors, business founders, heroes of daily life, popular characters. Excludes: names known worldwide (base); musicians, athletes, writers, actors go to their categories.
+5. **Comida y bebida de {región}**: typical dishes, sweets and desserts, drinks, fruits and ingredients, regional variants, markets and street food. Excludes: international food (base Comida y bebida, Comida latinoamericana: arepa as a name, coffee in general).
+6. **Fiestas y tradiciones de {región}**: festivals, carnivals, fairs, holidays, family customs, crafts, traditional dress and games. Excludes: world festivals and customs (base Fiestas y tradiciones, Trajes típicos del mundo).
+7. **Mitos y leyendas de {región}**: legendary creatures, ghost stories, popular beliefs and superstitions, indigenous myths. Excludes: world mythologies and generic superstitions (base Mitos y leyendas, Leyendas y supersticiones).
+8. **Música y baile de {región}**: rhythms and dances, instruments, singers and bands, famous songs, music festivals. Excludes: world music and global stars by name only (base Música).
+9. **Arte y literatura de {región}**: writers and books, poets, painters and sculptors, architecture, museums, comics. Excludes: world literature and art (base Arte y literatura; García Márquez basics).
+10. **Cine y televisión de {región}**: telenovelas, series, films, presenters, actors, radio, cartoons, internet celebrities. Excludes: international film and TV (base Cine, series y superhéroes).
+11. **Deporte de {región}**: national teams, clubs, athletes, Olympic medals, the region''s favourite sports, traditional games and sports. Excludes: world football and sport (base Fútbol, Deportes).
+12. **Así se habla en {región}**: words and slang, sayings and expressions, accents, loanwords from indigenous languages, the region''s own languages. Excludes: Spanish in general (base Idiomas y palabras, Refranes y dichos).
+13. **Vida diaria en {región}**: money and banknotes, brands and products, shops, transport, school, home, everyday objects and habits, public services. Excludes: world brands and money (base Marcas y logotipos, Monedas y dinero).
+14. **Símbolos de {región}**: flag, anthem, coat of arms, national symbols (bird, tree, flower), emblems of the provinces/cities. Excludes: the flag as recognised worldwide (base Banderas del mundo).
+
+## colombia today vs. this list
+- Today 6 categories, 31 subcategories; all fit into 1, 2, 5, 6, 7, 8, 11, 12, 14 (e.g. «Colombianos famosos» → 4 or 8/11; «Animales de Colombia» → 2). Missing today: 3, 9, 10, 13. Region-specific extras come in task 1139 (e.g. «Café de Colombia», «Región Caribe»).
+
+## Shorter core list (option 2, 10)
+- 4 Personajes folded into the field each person is known for, else 3 Historia.
+- 14 Símbolos folded into 3 Historia.
+- 10 Cine y televisión and 13 Vida diaria merged: «Vida diaria y televisión en {región}».
+- 7 Mitos y leyendas folded into 6: «Fiestas, tradiciones y leyendas de {región}».', NULL, NULL, '2026-10-15T19:04:01Z', NULL, 1137, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -29799,6 +29832,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1091, 1097, '2026-10-15T18:57:45Z', '2026-10-15T19:00:43Z', 'done', NULL, 0, '76bd4123d1da58f9c1159c8222b2aa039e8ca538', 'claude-opus-5-5[1m]', 'f50ccae3-76f0-4031-87b7-389fcdc991d2', 15, 28, 15563, 781830, 66618, 1.0006820000000003, 3530483);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1092, 827, '2026-10-15T19:00:43Z', '2026-10-15T19:02:15Z', 'done', NULL, 0, '6690909a09b51fa5cd3683caa1f2c7fed35643cb', 'claude-opus-5-5[1m]', 'e4d167c7-cfb8-461d-a311-195737f80c62', 14, 28, 8600, 778524, 68129, 0.8728488, 3530483);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1093, 1136, '2026-10-15T19:02:15Z', '2026-10-15T19:03:09Z', 'done', NULL, 0, 'b44e83e39836949e9500c8f808f765ffeb2d43f6', 'claude-opus-5-5[1m]', '37f6553a-5494-4841-9e71-461b5f242c69', 7, 14, 5375, 269596, 39827, 0.48009119999999994, 3530483);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1094, 1137, '2026-10-15T19:03:09Z', '2026-10-15T19:04:09Z', 'blocked', NULL, 0, '17840c1919b86d497d8175de73e949a442618f49', 'claude-opus-5-5[1m]', '839a4cbd-4013-4d03-883a-7c760467b98c', 8, 16, 5314, 338761, 47138, 0.5512002, 3530483);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -30133,6 +30167,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1114, 196);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1115, 197);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1116, 198);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1135, 209);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1137, 213);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
