@@ -90,7 +90,7 @@ function run(data: EngineData, cell: Cell, seed: number): Run {
   if (cell.mode === "timed") return runTimed(data, cell, io, r, ranges, bundles);
   // rr-competitive until MD-8: one solo game per player on the one save (D-82); a game = a round.
   const names = cell.mode === "rr-competitive" ? Array.from({ length: cell.players! }, (_, i) => `${NAME} ${i + 1}`) : [NAME];
-  let save: SaveData = { ...emptySave(), language: { ui: data.locale, questions: data.locale } };
+  let save: SaveData = { ...emptySave(), language: data.locale };
   let first: { games: number; cambiazo: boolean } | null = null;
   for (let games = 0; games < MAX_GAMES; games++) {
     for (const name of names) {

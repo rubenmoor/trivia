@@ -7,7 +7,7 @@
     "build": "vite build",
     "build:optimized": "vite build --mode optimized",
     "serve": "vite preview",
-    "check": "svelte-check --tsconfig ./tsconfig.json && node scripts/check-literals.mjs",
+    "check": "svelte-check --tsconfig ./tsconfig.json && tsc -p tsconfig.node.json && node scripts/check-literals.mjs",
     "check:literals": "node scripts/check-literals.mjs",
     "test": "node --test 'src/engine/**/*.test.ts'"
   },

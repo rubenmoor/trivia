@@ -17,5 +17,8 @@ declare module "node:os" {
 declare module "node:path" {
   export function join(...parts: string[]): string;
 }
-declare const process: { env: Record<string, string | undefined> };
+interface NodeProcess {
+  env: Record<string, string | undefined>;
+}
+declare const process: NodeProcess;
 declare const Buffer: { concat(chunks: Uint8Array[]): { toString(encoding: "utf8"): string } };

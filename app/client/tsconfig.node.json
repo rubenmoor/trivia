@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "types": []
+  },
+  "include": ["src/**/*.test.ts", "src/engine/test/", "../../authoring/tools/supply.ts", "../../authoring/tools/sim/*.ts", "node.d.ts", "node-test.d.ts"],
+  "exclude": []
+}
