@@ -1911,6 +1911,7 @@ Plan 83 checks this report for completeness, proposes process changes, writes th
 | `app/server/http_base.py`, `media_cache.py`, `paths.py` | copies of the authoring modules (task 764), only `app/server/main.py` imports them | — | — | superseded by task 765 |
 | `authoring/tools/http_base.py` | after task 765, `BaseHandler`'s `dist`/`pool_file`/`build_hint` hooks have one subclass (authoring `Handler`); its `send_media` docstring still compared it to "the game's" handler | complexity | low | won't fix: the split keeps generic serving (ranges, SPA, `/media` allow-list) apart from the ~500-line authoring routes; docstring fixed (task 1111) |
 | `authoring/tools/paths.py` | `locale_pool("es")` names `pool.es.json` (never written), `pool("es")` `pool.json`: two rules for one file; `qgen.locale_pool` patches es back | complexity | low | won't fix: every `LOCALE_POOL` caller passes a translated locale or goes through qgen's es fallback; cluster 8 kept the aliases |
+| `authoring/server/main.py`, `authoring/tools/qgen.py`, `authoring/steam/release_check.py` | ruff trial (task 589): unused `import pool_export` (`main.py:95`), unused `versions` Counter (`qgen.py:2298`), `read_text()` without `encoding` (`release_check.py:211`, cp1252 on Windows) | unused | low | follow-up task 1116 |
 | `authoring/tools/http_base.py`, `media_cache.py`, `paths.py` | no further findings: diff to the `app/server/` originals is paths and docstrings only (`layout.DIST`, `REPO` from `authoring/tools/`, `DIST` gone); the `sys.path` side-effect imports of part 8 are gone with task 764; `STATE` = repo `state/` is authoring's own files (`reports-pulled.json`, `report-token`, `played/`, `flags-applied.json`), never the game save | — | — | — |
 
 ### Completeness
@@ -1939,6 +1940,9 @@ Task 588, 2026-10-14. Throw-away scripts over `code-review.md`, `git ls-files` a
 | task 1051 | Freesound: re-pick its 2 audio slots from Commons, drop it from the audio order | part 8 `providers/__init__.py` `ORDER`, `freesound.py` | — |
 | task 1112 | Mods screen: show modIssues() per mod bundle | part 11 `modIssues()` | — |
 | task 1113 | Store and gallery scripts: one shell launcher and one demo-save builder | part 11 `capsules.mjs`, `trailer.mjs`, `gallery_saves.mjs` | — |
+| task 1114 | directory.md check per decision 196 | process decisions | decision 196 |
+| task 1115 | Unused-export check per decision 197 | process decisions | decision 197 |
+| task 1116 | Python: ruff per decision 198, fix its 3 hits | part 11 ruff trial row | decision 198 |
 
 ### Scans
 
@@ -1967,6 +1971,22 @@ Part 1's commands re-run on 2026-10-14 (task 588), same scope (`git ls-files app
 | markers `PLACEHOLDER\|TODO\|FIXME\|XXX\|HACK` (`app`, `authoring`, `report-server`) | 2 (`PLACEHOLDER_IDS`, renamed since) | 1 (`PLACEHOLDER(868)`, live) | 1 |
 
 - Old files got better (`any` −3, broad + `pass` −1); growth of `as`, `!` and swallowed `.catch` comes mostly from the new files, which no review has read yet (tasks 1106–1111)
+
+### Process decisions
+
+Task 589, 2026-10-14. A throw-away script over the finding rows of parts 1–11 (762 rows: complexity 186, practice 181, inconsistency 166, bug 117, unused 61, performance 51; 321 on `.py` files) grouped them by cause; each repeated cause got one decision, none on lint rules or `tsconfig` flags (`### Linter evaluation`).
+
+- decision 196: per-commit `directory.md` ↔ `git ls-files` check (79 of 174 files unnamed at part 1, 22 docs-drift rows); task 1114
+- decision 197: per-commit unused-export scan, the gap all linter candidates leave (34 unused-export rows); task 1115
+- decision 198: ruff for Python, narrow rules (5 platform-encoding rows; trial: 3 new real hits); task 1116
+- decision 199: AGENTS.md rule "import, don't copy; a cross-boundary copy names its source" (118 copy rows, 38 clusters)
+- decision 200: AGENTS.md rule "after a move, rename or delete, fix comments and docs naming the old" (39 lying-comment rows)
+- decision 201: recurring review, per milestone in pm's `cleanup_prompt` or per release (69 files added during milestone 13 unreviewed; their review found 9 bugs, 2 medium)
+- Not proposed:
+  - stale-`PLACEHOLDER(<id>)` check: 0 stale markers in parts 1 and 11
+  - Python ↔ TS parity check: `decision 104: Python ↔ Node/TS twins: how to keep save, media cache and serving rules in sync` answered won't fix (Python side retires)
+  - swallowed promises: `decision 106: Adopt ESLint + typescript-eslint for no-floating-promises? (code review part 10)` keeps them a review item; Python broad excepts are option 2 of decision 198
+  - tests kept by default: AGENTS.md already says so; `TESTONLY` exports are in decision 197
 
 ## Inventory
 
