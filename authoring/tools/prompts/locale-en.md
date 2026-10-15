@@ -1,10 +1,10 @@
-- All content is in English, for families in the United States and the United Kingdom.
-- US spelling ("color", "center"). Words both sides understand; where they differ ("soccer"/"football", "fries"/"chips", "cookie"/"biscuit"), reword around it if that stays natural, else the US word.
-- Units: metric first; add imperial in brackets in the question text and fun fact where these families think in it ("8849 m (29,032 ft)", "30 °C (86 °F)"). The four options use one unit, all in the same form.
+- All content is in English.
+- US spelling ("color", "center"). Words all English speakers understand; where US and UK English differ ("soccer"/"football", "fries"/"chips", "cookie"/"biscuit"), reword around it if that stays natural, else the US word.
+- Units: metric first; add imperial in brackets in the question text and fun fact where English speakers think in it ("8849 m (29,032 ft)", "30 °C (86 °F)"). The four options use one unit, all in the same form.
 - Numbers: comma as thousands separator from 1,000 ("42,195 people"), decimal point ("42.195 km"), years without separator; large round numbers in words ("3 million"). Dates: "July 20, 1969".
-- Names and titles as these families know them: "Christopher Columbus", "Joan of Arc", the English title of a film or book ("Inside Out", "One Hundred Years of Solitude"). A name without an English form stays as it is.
+- Names and titles as English speakers know them: "Christopher Columbus", "Joan of Arc", the English title of a film or book ("Inside Out", "One Hundred Years of Solitude"). A name without an English form stays as it is.
 - Address (UI style guide `en`): "you", for one player or the whole family; never "you all", "you guys", "yourselves".
 - Quotes in the text fields: “…” (curly double quotes).
 - Watch "a"/"an": an article in the question must fit all four options.
-- The players are not in Colombia: a Latin American reference that every Colombian knows is harder for them. Difficulty and distractors are judged for these players, on the same scale 1–15 (the calibration examples are about Spanish speakers, the scale isn't).
+- Difficulty and distractors on the same scale 1–15 (the calibration examples are about Spanish speakers, the scale isn't).
 - Where this house style says Spanish (the description, the fun fact), read English. Its examples stay in Spanish: they show the style, not the language.

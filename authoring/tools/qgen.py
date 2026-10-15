@@ -182,9 +182,10 @@ def not_in_bundle(subs, bundle):
     return [s for s in subs if s not in known]
 
 
-def prompt(*names, locale="es"):
+def prompt(*names, locale="es", bundle="base"):
     """Prompt files joined; {age_groups} and {players} are filled from app/data/age-groups.json,
-    {locale} from prompts/locale-<locale>.md, {voices} from app/data/bundles.json."""
+    {locale} from prompts/locale-<locale>.md (+ translate-region.md for a regional bundle's translation,
+    decision 167), {voices} from app/data/bundles.json."""
     ag, focus = load_age_groups(), focus_group()
     groups = [f"{g['id'].replace('_', ' ')} ({ages_text(g)})" for g in ag["groups"]]
     if focus:
@@ -199,7 +200,12 @@ def prompt(*names, locale="es"):
                    f"whose window contains its difficulty ({windows}). Write for those players: their knowledge, "
                    'their world, their humour. "The players" below means them, for the question at hand.')
     text = "\n\n".join((PROMPTS / f"{n}.md").read_text(encoding="utf-8") for n in names)
-    text = text.replace("{locale}", (PROMPTS / f"locale-{locale}.md").read_text(encoding="utf-8").rstrip())
+    loc = (PROMPTS / f"locale-{locale}.md").read_text(encoding="utf-8").rstrip()
+    b = next(b for b in load_bundles() if b["id"] == bundle)
+    if locale != "es" and b["kind"] == "region":
+        loc += "\n\n" + ((PROMPTS / "translate-region.md").read_text(encoding="utf-8").rstrip()
+                          .replace("{bundle}", bundle).replace("{rule}", b["rule"]))
+    text = text.replace("{locale}", loc)
     return (text.replace("{age_groups}", ", ".join(groups[:-1]) + " and " + groups[-1])
             .replace("{players}", players).replace("{voices}", voices_text()))
 
@@ -971,6 +977,11 @@ def run_locale(d):
     return (load_json(d / "run.json", {}) or {}).get("locale")
 
 
+def run_bundle(d):
+    """The bundle a `--translate` run translates (base for other runs)."""
+    return (load_json(d / "run.json", {}) or {}).get("bundle") or "base"
+
+
 def numbers(text):
     """The numbers in text, thousands separators and decimal marks dropped: «42 195» = «42,195»."""
     return sorted(re.findall(r"\d+", re.sub(r"(?<=\d)[ ,.  '](?=\d)", "", text)))
@@ -1035,7 +1046,7 @@ def cmd_translate(args):
     locale, src = cfg["locale"], {q["id"]: q for q in load_json(POOL)["questions"]}
     if unknown := [i for i in cfg["ids"] if i not in src]:
         sys.exit(f"no such source id: {', '.join(unknown)}")
-    system = prompt("house-style", "translate", locale=locale)
+    system = prompt("house-style", "translate", locale=locale, bundle=run_bundle(d))
     all_chunks = translate_chunks(cfg["ids"], src)
     todo = [c for c in all_chunks if not (d / "translations" / f"{c[0]}.json").exists()]
     progress.resumed("translate", len(all_chunks) - len(todo), len(todo), "chunks")
@@ -1189,7 +1200,7 @@ def rate_candidates(d):
 
 def cmd_rate(args):
     d = run_dir(args)
-    system = prompt("house-style", "rate", locale=run_locale(d) or "es")
+    system = prompt("house-style", "rate", locale=run_locale(d) or "es", bundle=run_bundle(d))
     files = [(name, qs) for name, qs in drafts(d) if qs]
     todo = [(name, qs) for name, qs in files if not (d / "ratings" / f"{name}.json").exists()]
     progress.resumed("rate", len(files) - len(todo), len(todo), "draft files")
@@ -2694,7 +2705,8 @@ def cmd_review(args):
     ratings, checks = collect(d)
     locale = run_locale(d)
     pool = locale_questions(locale) if locale else load_json(POOL)["questions"]
-    system = prompt("house-style", "review", *(["translate-review"] if locale else []), locale=locale or "es")
+    system = prompt("house-style", "review", *(["translate-review"] if locale else []), locale=locale or "es",
+                    bundle=run_bundle(d))
     notes = translator_notes(d) if locale else {}
     mode = run_mode(args.run)
     rework = mode in ("rework", *SCANS)
@@ -2782,7 +2794,7 @@ def cmd_fix(args):
     scanned = load_json(d / "run.json", {}).get("issues") if mode in SCANS else None
     tmp_of = tmp_ids(d)
     _, checks = collect(d)
-    system = prompt("house-style", "revise", locale=locale or "es")
+    system = prompt("house-style", "revise", locale=locale or "es", bundle=run_bundle(d))
     lo, hi = load_age_groups()["scale"]
     today = datetime.date.today().isoformat()
     revise, recheck, done = [], [], 0
@@ -3214,7 +3226,8 @@ def audit_ids(run, ids, args):
     todo = [by_id[i] for i in ids if i in by_id and not (d / f"{i}.json").exists()]
     progress.resumed("audit", sum(i in by_id for i in ids) - len(todo), len(todo), "questions")
     locale = run_locale(WORK / run)
-    system = prompt("house-style", "audit", *(["translate-review"] if locale else []), locale=locale or "es")
+    system = prompt("house-style", "audit", *(["translate-review"] if locale else []), locale=locale or "es",
+                    bundle=run_bundle(WORK / run))
     lo, hi = load_age_groups()["scale"]
     today = datetime.date.today().isoformat()
 

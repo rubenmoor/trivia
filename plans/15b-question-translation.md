@@ -16,9 +16,9 @@ Sub-plan of [15](15-i18n.md). Translates the question pool into the launch langu
 Decided: D-87 (pm plan 66). One command, `qgen batch --translate <locale>` (`authoring/RUNBOOK.md`), reusing the batch steps through the run's `locale`.
 
 - Run `tr-<locale>-<n>`: 300 sources (`TRANSLATE_SIZE`); the locale's first run is the 50-question pilot (QT-5), after which the next run exits 2 until `qgen health ack tr-<locale>-1`.
-- Selection: approved, translatable `base` sources; stale translations first, then subcategories with the fewest approved translations, levels by the locale's deficit (D-84).
+- Selection: approved, translatable sources of one bundle (`base`, or `--bundle <id>`, plan 98); stale translations first, then subcategories with the fewest approved translations, levels by the locale's deficit (D-84).
 - Steps: translate → rate → factcheck (changed facts only) → merge → review 1 → fix → review 2 → record → audit → export → report.
-- Prompts: `translate.md`, `translate-review.md`, `locale-<locale>.md` (market: `en` US + UK, US spelling; `de` Germany, Austria, Switzerland; decision 35).
+- Prompts: `translate.md`, `translate-review.md`, `locale-<locale>.md` (spelling and usage: `en` US spelling, words US and UK share; `de` as in Germany; no player location, decision 35, decision 167); a regional bundle adds `translate-region.md` (players with a link to the region, decision 167).
 - Health: decision 45's subset of the batch thresholds; native-speaker spot check per run (`authoring/QC.md`).
 - Cost per approved translation in each run's report and `qgen report --cost` (CT-3).
 
