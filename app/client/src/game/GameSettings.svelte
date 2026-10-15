@@ -1,7 +1,7 @@
 <script lang="ts">
-  // «Dificultad y paquetes» of the gamemaster menu (MD-12, D-88): the configure screen's difficulty row and
-  // the shared bundle selector for the running game; «Aplicar» sends `settings` (new table, level and history stay).
-  // ↑/↓ move, ←/→ or −/+ change the difficulty, Enter on a row applies, Esc/⌫/B cancel.
+  // «Dificultad y paquetes» of the gamemaster menu (MD-12, D-88): the configure screen's difficulty row, answers
+  // switch (D-105) and the shared bundle selector for the running game; «Aplicar» sends `settings` (new table, level
+  // and history stay). ↑/↓ move, ←/→ or −/+ change a value, Enter on the switch toggles, on a row applies, Esc/⌫/B cancel.
   import { onMount } from "svelte";
   import { DIFFICULTY_MAX, fetchChoiceOptions, fetchGameSettings, type ChoiceOptions, type GameActionBody } from "../lib/api.ts";
   import { errorText } from "../lib/errors.ts";
@@ -9,6 +9,7 @@
   import { focusControl, pushScope } from "../lib/input.svelte.ts";
   import type { Difficulty, Game } from "../lib/types.ts";
   import BundleSelector from "./BundleSelector.svelte";
+  import Icon from "./Icon.svelte";
   import { spanOf, stepDifficulty } from "./difficulty.ts";
   import Prompt from "./Prompt.svelte";
 
@@ -29,6 +30,7 @@
   let custom = $state(false);
   let difficulty = $state<Difficulty>({ start: 1, end: DIFFICULTY_MAX });
   let bundles = $state<string[]>([]);
+  let answers = $state(true);
   let busy = $state(false);
   let error = $state<string | null>(null);
 
@@ -40,6 +42,7 @@
       custom = c.difficulty !== null;
       difficulty = c.difficulty ?? spanOf(opts.groups, group);
       bundles = c.bundles;
+      answers = c.answers;
     } catch (e) {
       error = errorText(e);
     }
@@ -49,6 +52,7 @@
   function step(id: string, by: number) {
     if (busy || !options) return;
     error = null;
+    if (id === "answers") return void (answers = !answers);
     const pick = stepDifficulty(options.groups, { group, custom, difficulty }, id, by);
     if (pick) ({ group, custom, difficulty } = pick);
   }
@@ -56,7 +60,7 @@
   async function apply() {
     if (busy || !options) return;
     busy = true;
-    const body = custom ? { difficulty: { ...difficulty }, bundles: [...bundles] } : { age_group: group, bundles: [...bundles] };
+    const body = { ...(custom ? { difficulty: { ...difficulty } } : { age_group: group }), bundles: [...bundles], answers };
     error = await onapply(body);
     busy = false;
   }
@@ -67,7 +71,7 @@
       modal: true,
       whileBusy: true,
       root: () => dialog,
-      pressable: (el) => !el.dataset.step,
+      pressable: (el) => !(el instanceof HTMLDivElement && el.dataset.step),
       handle: (a) => {
         const id = document.activeElement instanceof HTMLElement ? document.activeElement.dataset.step : undefined;
         if (a.type === "navigate" && id && (a.dir === "left" || a.dir === "right")) step(id, a.dir === "right" ? 1 : -1);
@@ -99,6 +103,11 @@
         {@render stepper("difficulty", t("configure.difficulty"), custom ? t("configure.custom") : (g?.name ?? ""), true)}
         {@render stepper("start", t("configure.start"), String(span.start), false, !custom)}
         {@render stepper("end", t("configure.end"), String(span.end), false, !custom)}
+        <button class="row switch" class:on={answers} data-step="answers" role="switch" aria-checked={answers}
+          onclick={() => step("answers", 1)} disabled={busy}>
+          <span><Icon name="lock" /> {t("configure.answers")}</span>
+          <span class="value">{t(answers ? "choice.on" : "choice.off")}</span>
+        </button>
       </div>
       <BundleSelector bundles={options.bundles} selected={bundles} {busy} onchange={(ids) => ((bundles = ids), (error = null))} />
     {/if}
@@ -178,6 +187,17 @@
   .row:not(.fixed):global([data-nav]),
   .row:not(.fixed):hover {
     border-color: var(--amber);
+  }
+  .row.switch {
+    grid-template-columns: 1fr calc(14 * var(--u)) calc(2.4 * var(--u));
+    color: inherit;
+    text-align: left;
+  }
+  .row.switch .value {
+    grid-column: 2;
+  }
+  .row.switch:not(.on) .value {
+    color: var(--slate-400);
   }
   .row.fixed .value {
     color: var(--slate-400);

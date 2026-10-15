@@ -16,7 +16,7 @@
 <script lang="ts">
   // The Choice screen (plans/04-ui-tv-display.md, "Choice"; plan 29, AG-7, BN-6): «¿Cómo juega …?»,
   // between Player and Level. Mode row (MD-7); gamemaster mode: the configure game screen (MD-11, D-88):
-  // difficulty, levels, cards, video, audio, jokers; «Solo o en grupo»: age group (1–4) and «Personalizar partida»
+  // difficulty, levels, cards, video, audio, answers (D-105), jokers; «Solo o en grupo»: age group (1–4) and «Personalizar partida»
   // (joker counts). Bundles (letter keys) in both modes, apart from those (decision 50). Preset: `?mode=`, the
   // player's newest game (every field), else the defaults. ↑/↓ move between lines, ←/→ change a value.
   import { onMount } from "svelte";
@@ -73,6 +73,7 @@
   let cards = $state(CARDS_MAX);
   let video = $state(true);
   let audio = $state(true);
+  let answers = $state(true);
   let budget = $state<JokerBudget>({ ...STANDARD_JOKERS });
   /** The supply of the current choice; null while unknown or refused. */
   let supply = $state<Supply | null>(null);
@@ -100,7 +101,7 @@
       custom = c.difficulty !== null;
       difficulty = c.difficulty ?? spanOf(opts.groups, group);
       bundles = c.bundles;
-      ({ levels, cards, video, audio } = c);
+      ({ levels, cards, video, audio, answers } = c);
       budget = { ...c.jokers };
       await check();
     } catch (e) {
@@ -156,7 +157,7 @@
   function config(): ChoiceBody {
     return {
       ...(custom ? { difficulty: { ...difficulty } } : { age_group: group }),
-      bundles: [...bundles], levels, cards, video, audio, jokers: { ...budget },
+      bundles: [...bundles], levels, cards, video, audio, answers, jokers: { ...budget },
     };
   }
 
@@ -174,6 +175,7 @@
     else if (id === "cards") cards = clamp(cards + by, 0, CARDS_MAX);
     else if (id === "video") video = !video;
     else if (id === "audio") audio = !audio;
+    else if (id === "answers") answers = !answers;
     else if (id === "preset") return void (budget = stepPreset(budget, by));
     else if (id.startsWith("joker-")) return stepJoker(id.slice(6) as JokerName, by);
     changed();
@@ -324,6 +326,7 @@
             {@render stepper("cards", t("configure.cards"), String(cards), cards ? "" : t("configure.noCards"))}
             {@render toggle("video", t("configure.video"), video, "film")}
             {@render toggle("audio", t("configure.audio"), audio, "speaker")}
+            {@render toggle("answers", t("configure.answers"), answers, "lock")}
           </div>
           <div class="lines">
             <p class="label heading">{t("configure.jokers")}</p>

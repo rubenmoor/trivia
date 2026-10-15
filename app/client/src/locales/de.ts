@@ -287,6 +287,7 @@ export const de = {
     noCards: "Frage sofort",
     video: "Videofragen",
     audio: "Audiofragen",
+    answers: "Antworten zum Aufsteigen",
     jokers: "Joker",
     preset: "Vorgabe",
     presets: { standard: "Standard", unlimited: "Unbegrenzt", custom: "Eigene" },
