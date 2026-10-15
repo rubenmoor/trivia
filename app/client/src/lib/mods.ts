@@ -282,6 +282,7 @@ function setLayers(next: readonly ModLayer[]): void {
 
 function show(mod: string, render: DomRender): { close(): void } {
   if (typeof render !== "function") throw new TypeError("screens.show: not a function");
+  if (failed.has(mod)) return { close() {} };
   const layer: ModLayer = {
     render,
     close: () => setLayers(layers.filter((l) => l !== layer)),
@@ -351,6 +352,7 @@ function view(mod: ModInfo | null): TriviaApi {
       add(locale, catalog, opts) {
         Intl.getCanonicalLocales(locale);
         if (!isObject(catalog)) throw new TypeError("i18n.add: catalog not an object");
+        if (failed.has(tag())) return;
         if (catalogsApplied) addCatalog(locale, catalog, opts);
         else register(tag(), "i18n", { locale, catalog, opts });
       },
@@ -372,7 +374,9 @@ function view(mod: ModInfo | null): TriviaApi {
         return register(tag(), "menu", { label: row.label, onselect: row.onselect });
       },
     },
-    css: linkStyle,
+    css: (href) => {
+      if (!failed.has(tag())) linkStyle(href);
+    },
   };
 }
 

@@ -54,7 +54,7 @@
     gap: calc(1 * var(--u));
     max-width: calc(52 * var(--u));
     padding: calc(1.8 * var(--u)) calc(2.2 * var(--u));
-    animation: arrive 0.35s var(--spring) backwards;
+    animation: rise 0.35s var(--spring) backwards;
   }
   h2 {
     margin: 0;
@@ -74,12 +74,5 @@
     gap: calc(1.2 * var(--u));
     justify-content: flex-end;
     margin-top: calc(0.6 * var(--u));
-  }
-
-  @keyframes arrive {
-    from {
-      opacity: 0;
-      transform: translateY(calc(1.5 * var(--u))) scale(0.96);
-    }
   }
 </style>

@@ -307,7 +307,8 @@ export function arrange(mods, settings, { validUser }) {
   return { list, layers, settings: next, changed: next !== settings };
 }
 
-const modUrl = (id, rel) => `/mods/${id}/` + encodeURI(path.posix.normalize("/" + rel.replaceAll("\\", "/")).slice(1));
+const modUrl = (id, rel) =>
+  `/mods/${id}/` + path.posix.normalize("/" + rel.replaceAll("\\", "/")).slice(1).split("/").map(encodeURIComponent).join("/");
 
 /** `/mods.js` text (decision 131): loaded mods in run order, bottom of the load order first. */
 export function modsScript(list) {

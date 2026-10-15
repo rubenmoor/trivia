@@ -46,7 +46,8 @@
 
   const rows = $derived(list ? [...byPosition(list.mods.filter(movable)), ...list.mods.filter((m) => !movable(m))] : []);
   const order = $derived(rows.filter(movable));
-  const keyOf = (m: ModEntry) => m.id ?? m.publishedFileId ?? m.dir ?? "?";
+  /** Unique per row: a `duplicate_id` row shares its id with the primary. */
+  const keyOf = (m: ModEntry) => `${m.source}:${m.publishedFileId ?? m.dir ?? m.id ?? "?"}`;
   const detail = $derived(rows.find((m) => keyOf(m) === focused) ?? null);
   /** Next run's overlay differs from this one's. */
   const dirty = $derived(list !== null && order.filter((m) => m.state === "loaded").map((m) => m.id).join() !== (runOrder ?? []).join());
@@ -110,7 +111,7 @@
     const action = pending;
     pending = null;
     await update(() => bridge!.notice());
-    await action?.();
+    if (list?.notice) await action?.();
   }
 
   function toggle(m: ModEntry) {
@@ -134,8 +135,13 @@
   async function restart() {
     if (!dirty || busy) return;
     busy = true;
-    await flush();
-    await bridge!.restart();
+    try {
+      await flush();
+      await bridge!.restart();
+    } catch (e) {
+      console.error("mods:restart", e);
+      busy = false;
+    }
   }
 
   function handle(a: Action): boolean {
