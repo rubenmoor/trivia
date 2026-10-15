@@ -22,6 +22,19 @@ English first (D-74); Spanish forms for `es`. Only «Solo o en grupo» is fixed;
 - `rr-competitive` Round-robin competitive → «Por turnos, todos contra todos» (proposal)
 - `timed` Competitive (timed) → «Contrarreloj» (proposal)
 
+## Joker names
+Milestone 9 defines the joker names again (pm decision 188, pm plan 136): one symbol per joker, the same in every language, and a name made in English first to fit it. `es`, `es-ES` and `de` are translated from the English names; `es` is an exception to D-59, so the family's game gets them too. Replaces pm decisions 40–44 and 54–58 (D-89, D-91's names).
+
+- Rules: ≤ 13 characters, playful, fitting the symbol; key letter mnemonic per catalog (pm decision 53), en Question screen keeps `A`–`D`, `R`, `M` free
+- English candidates (recommended first, key in brackets; pm decisions 190–194):
+  - `hint`, bulb (190): Bright Idea (B), Brainwave (W), Lightbulb (L), Aha! (H), Hint (H, today)
+  - `skip`, door (191): Way Out (W), Door Slam (S), Back Door (K), Escape Hatch (E), Pass & Purge (P, today)
+  - `easier`, stairs (192): Step Down (S), Easy Steps (E), Downstairs (W), Baby Steps (Y), Fairy (F, today; would need a wand)
+  - `category`, compass (193): Change Course (C), True North (N), Detour (T), Compass (O), Ms Picky (K, today)
+  - `snipe`, crosshair (194): Trick Shot (T, today), Sharpshooter (S), Long Shot (L), Pot Shot (O)
+- Symbols: none of the candidates needs a new one
+- Translations (`es`, `es-ES`, `de`): one decision per locale after the English answers, pm task 1097
+
 ## Tasks
 - [x] LUI-1 `t()` helper and the `es` catalog; move every string from `copy.ts` and the components into it. No visible change (check with `grep` for Spanish characters left in `app/client/src/game`).
   - Done 2026-10-12 (pm plan 21, D-70): `lib/i18n.ts`, `locales/es.ts`, neutral sound cues, `npm run check:literals -w app/client`. Before/after Playwright run (43 screens incl. every joker, overlay, victory, wrong): pixel-identical, same text, `aria-label`/`title`/`placeholder`.

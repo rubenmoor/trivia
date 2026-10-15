@@ -25977,7 +25977,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T01:51:03Z', '2026-10-15T01:51:29Z', 1086, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1095, 128, 'create tasks for plan 128: S4 close-out', 'split', 'done', 1000, '2026-10-14, tasks.sql: tasks 1032-1034 brought in line with revised plan 128 (plan 136 in guards, joker static and browser checks in 1033, 09-jokers.md in 1034); 1035 unchanged; no new decisions (plan 136 adds its own)', 'Split plan 128 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T01:53:08Z', '2026-10-15T01:53:54Z', 1091, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1096, 136, 'Decisions: supersede old joker names, English names per joker', 'work', 'open', NULL, NULL, 'Plan 136 task 1. Read `plan 136: Joker names and symbols, defined again` (Design: Symbols, English names), `app/client/src/locales/style/en.md`, `app/client/src/game/jokers.ts` (`TOKENS`), `app/client/src/game/Icon.svelte`, today''s names in `app/client/src/locales/{en,es,es-ES,de}.ts`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1096, 136, 'Decisions: supersede old joker names, English names per joker', 'work', 'done', NULL, '2026-10-14, plans/15a-ui-translation.md; decisions 188 (record), 189 (supersede links, developer), 190–194 (English names); tasks 1097–1101, 459 pending on 190–194', 'Plan 136 task 1. Read `plan 136: Joker names and symbols, defined again` (Design: Symbols, English names), `app/client/src/locales/style/en.md`, `app/client/src/game/jokers.ts` (`TOKENS`), `app/client/src/game/Icon.svelte`, today''s names in `app/client/src/locales/{en,es,es-ES,de}.ts`.
 
 - `pm decision record "Joker names English first, one symbol per joker (milestone 9)" --answer "names made in English to fit one shared symbol; es, es-ES, de translated from them; es an exception to D-59" --body "…" --supersedes 40 --supersedes 41 --supersedes 42 --supersedes 43 --supersedes 44 --supersedes 54 --supersedes 55 --supersedes 56 --supersedes 57 --supersedes 58`
 - Five `pm decision add` (`hint`, `skip`, `easier`, `category`, `snipe`): "English name for the <id> joker (symbol <token>)?"; 3–5 `--option`s, recommended first, ≤ 13 characters, playful, fitting the symbol; a candidate needing another symbol says which. Body: what the joker does, the symbol, today''s names in all four catalogs, why each candidate.
@@ -25990,7 +25990,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
   - `task 1101: Gallery check and review of joker names and symbols`
   - `task 459: LUI-5: playtest fixes and close-out`
 
-Done when: the record and five decisions exist, 15a has the section, the links are set. Check: `qgen validate` (docs only).', '2026-10-15T01:54:42Z', NULL, 1093, 0);
+Done when: the record and five decisions exist, 15a has the section, the links are set. Check: `qgen validate` (docs only).', '2026-10-15T01:54:42Z', '2026-10-15T02:14:16Z', 1093, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1097, 136, 'Decisions: es, es-ES, de joker names and keys', 'work', 'open', NULL, NULL, 'Plan 136 task 2; runs after the five English name decisions of `task 1096: Decisions: supersede old joker names, English names per joker` are answered (`pm show` this task lists them).
 
 - Read `plan 136: Joker names and symbols, defined again` (Design: Translations, Keys), `decision 53: Joker and action keys per UI language (LUI-4)?`, `locales/style/{es,es-ES,de}.md` (de: no plural address, infinitive style).
@@ -27804,6 +27804,74 @@ How to review:
 - `trivia-authoring` → `/gallery`: per locale, the shots above
 - Flag what to change with a note: a drawing (unclear, not playful, wrong icon for the button), a flag (colours, shape, set per language), placement or size
 - Known, already a task: choice-gamemaster shows solo mode (`task 1102: Gallery: choice-gamemaster shot stays on solo mode`)', NULL, NULL, '2026-10-15T02:10:56Z', NULL, 1083, NULL, 'once', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (188, 'Joker names English first, one symbol per joker (milestone 9)', 'answered', '[]', 'Milestone 9 "Joker names, defined again" (developer, 2026-10-14), `plan 136: Joker names and symbols, defined again`.
+
+- One symbol per joker, the same in every language: today''s tray icons (`TOKENS` in `app/client/src/game/jokers.ts`): `hint` bulb, `skip` door, `easier` stairs, `category` compass, `snipe` crosshair; a new one only if an English answer needs it
+- English names first, to fit the symbol (one decision per joker); `es`, `es-ES`, `de` translated from the English answers (one decision per locale, `task 1097: Decisions: es, es-ES, de joker names and keys`)
+- `es` included: a decided exception to `decision 59: Neutral Spanish UI wording in es.ts (D-78)?`, so the family''s game gets the new names
+- Replaces the old names: en `decision 40: English name for the hint joker «Soplo»?` … `decision 44: English name for the snipe joker «Francotirador»?` (Hint, Pass & Purge, Fairy, Ms Picky, Trick Shot); de `decision 54: German name for the hint joker «Soplo»?` … `decision 58: German name for the snipe joker «Francotirador»?` (Zaunpfahl, Näxt, Gang runter, Wunschzeit, Finte). Supersede links: the developer''s to set (a worker may not supersede a human answer)
+- Stays: code ids, Steam API names (`FIRST_SOPLO` …), save fields; keys follow `decision 53: Joker and action keys per UI language (LUI-4)?` (mnemonic per catalog, `check:literals`)', 'names made in English to fit one shared symbol; es, es-ES, de translated from them; es an exception to D-59', NULL, '2026-10-15T02:13:18Z', '2026-10-15T02:13:18Z', 1096, NULL, 'rule', 1096, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (189, 'Supersede decisions 40–44 and 54–58 with decision 188?', 'pending', '["yes, links set", "no, keep the old ones in the log"]', '`decision 188: Joker names English first, one symbol per joker (milestone 9)` records the milestone 9 rule (developer, 2026-10-14) that replaces the old joker names. pm refuses a worker superseding a human answer, so the links are missing and the old names still show in `pm decision list --answered`.
+
+How (developer):
+```sh
+for d in 40 41 42 43 44 54 55 56 57 58; do pm decision supersede 188 $d; done
+```
+No task waits on this.', NULL, NULL, '2026-10-15T02:13:45Z', NULL, 1096, NULL, 'once', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (190, 'English name for the hint joker (symbol bulb)?', 'pending', '["Bright Idea (B)", "Brainwave (W)", "Lightbulb (L)", "Aha! (H)", "Hint (H), keep"]', '`decision 188: Joker names English first, one symbol per joker (milestone 9)`, `plan 136: Joker names and symbols, defined again`. ≤ 13 characters, playful, fitting the symbol; candidates in `plans/15a-ui-translation.md` "Joker names". The name also shows in «Use {name}?», the aria label, «no … left» errors, the hint notes («<name> 1/2/3»), `/comodines`. Key letter (mnemonic) in brackets; en Question screen keeps `A`–`D`, `R` (replay), `M` (flag) free.
+
+- Does: shows the next of the question''s three hints, vague → strong; up to three per question
+- Symbol: `bulb` (light bulb), stays for every candidate
+- Today: es/es-ES «Soplo» (S), en «Hint» (H), de «Zaunpfahl» (Z)
+- Why:
+  - Bright Idea: the bulb is the cartoon «bright idea»; warm, family tone; notes «Bright Idea 2»
+  - Brainwave: a sudden idea, a bit cheekier; `B` free for another joker
+  - Lightbulb: names the symbol itself, clearest for kids, least playful
+  - Aha!: the moment the bulb lights up, shortest; `A` is an answer key, so `H`
+  - Hint: today''s name, plain (en style guide: joker names playful)', NULL, NULL, '2026-10-15T02:13:46Z', NULL, 1096, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (191, 'English name for the skip joker (symbol door)?', 'pending', '["Way Out (W)", "Door Slam (S)", "Back Door (K)", "Escape Hatch (E)", "Pass & Purge (P), keep"]', '`decision 188: Joker names English first, one symbol per joker (milestone 9)`, `plan 136: Joker names and symbols, defined again`. ≤ 13 characters, playful, fitting the symbol; candidates in `plans/15a-ui-translation.md` "Joker names". The name also shows in «Use {name}?», the skip dialog heading, the purge line («<name>: goodbye to “{topic}”»), «no … left» errors, `/comodines`. The dialog''s plain option stays its own leaf (`joker.skip.pass`, «Just pass»). Key letter (mnemonic) in brackets; `A`–`D`, `R`, `M` taken.
+
+- Does: swaps the question for another card; optionally its whole topic leaves the game (stamp «GONE»)
+- Symbol: `door` (a door with an arrow out), stays for every candidate
+- Today: es/es-ES «Paso» (P), en «Pass & Purge» (P), de «Näxt» (N)
+- Why:
+  - Way Out: the door''s exit arrow, covers both skip and purge, short and clear
+  - Door Slam: slamming the door on the question (and its topic), the most playful; `S` may collide with `easier`''s «Step Down»
+  - Back Door: sneaking out, cheeky; `B` taken by «Bright Idea», so `K`
+  - Escape Hatch: escape-room feel, 12 characters; a hatch, but the door symbol still reads
+  - Pass & Purge: today''s name, says what it does, doesn''t fit the door', NULL, NULL, '2026-10-15T02:13:46Z', NULL, 1096, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (192, 'English name for the easier joker (symbol stairs)?', 'pending', '["Step Down (S)", "Easy Steps (E)", "Downstairs (W)", "Baby Steps (Y)", "Fairy (F), keep"]', '`decision 188: Joker names English first, one symbol per joker (milestone 9)`, `plan 136: Joker names and symbols, defined again`. ≤ 13 characters, playful, fitting the symbol; candidates in `plans/15a-ui-translation.md` "Joker names". The name also shows in «Use {name}?», the difficulty dial label, «no … left» errors, `/comodines`. Key letter (mnemonic) in brackets; `A`–`D`, `R`, `M` taken.
+
+- Does: swaps the question for an easier one on the same topic; the difficulty dial turns down
+- Symbol: `stairs` (steps with an arrow going down), stays for every candidate
+- Today: es/es-ES «Bájale» (F), en «Fairy» (F), de «Gang runter» (G)
+- Why:
+  - Step Down: one step down the stairs, matches the dial too; closest to «Bájale»; `S` may collide with «Door Slam»
+  - Easy Steps: the steps become easy, friendly
+  - Downstairs: the symbol itself, playful sound; `D` is an answer key, so `W`
+  - Baby Steps: playful, but may sound condescending to adults (as in `decision 42: English name for the easier joker «Bájale»?`)
+  - Fairy: today''s name, doesn''t fit the stairs (would need a wand symbol)', NULL, NULL, '2026-10-15T02:13:46Z', NULL, 1096, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (193, 'English name for the category joker (symbol compass)?', 'pending', '["Change Course (C)", "True North (N)", "Detour (T)", "Compass (O)", "Ms Picky (K), keep"]', '`decision 188: Joker names English first, one symbol per joker (milestone 9)`, `plan 136: Joker names and symbols, defined again`. ≤ 13 characters, playful, fitting the symbol; candidates in `plans/15a-ui-translation.md` "Joker names". The name also shows in «Use {name}?», the topic picker title («<name>: which topic do you want?»), «no … left» errors, `/comodines`. Key letter (mnemonic) in brackets; `A`–`D`, `R`, `M` taken.
+
+- Does: the players pick another topic; the question is replaced by one of about the same difficulty from it
+- Symbol: `compass`, stays for every candidate
+- Today: es/es-ES «Cambiazo» (T), en «Ms Picky» (K), de «Wunschzeit» (W)
+- Why:
+  - Change Course: steer by the compass to a new topic; exactly 13 characters
+  - True North: you set the direction you want, a little poetic; «True North: which topic do you want?» reads well
+  - Detour: short, says «somewhere else»; `D` is an answer key, so `T` (collides with «Trick Shot», then `snipe` takes another letter)
+  - Compass: the symbol itself, plain; `C` free, `O` if `C` is taken
+  - Ms Picky: today''s name, doesn''t fit the compass', NULL, NULL, '2026-10-15T02:13:46Z', NULL, 1096, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (194, 'English name for the snipe joker (symbol crosshair)?', 'pending', '["Trick Shot (T), keep", "Sharpshooter (S)", "Long Shot (L)", "Pot Shot (O)"]', '`decision 188: Joker names English first, one symbol per joker (milestone 9)`, `plan 136: Joker names and symbols, defined again`. ≤ 13 characters, playful, fitting the symbol; candidates in `plans/15a-ui-translation.md` "Joker names". The name also shows in «Use {name}?», the aim prompt («Pick the answer you think is wrong»), «no … left» errors, `/comodines`. Key letter (mnemonic) in brackets; `A`–`D`, `R`, `M` taken.
+
+- Does: the players aim at the answer they think is wrong; a wrong one hit is crossed out and play goes on; hitting the right one loses the question and the level starts over
+- Symbol: `crosshair` (already shown in `question/Scope.svelte`), stays for every candidate
+- Today: es/es-ES «Francotirador» (X), en «Trick Shot» (T), de «Finte» (F)
+- Why:
+  - Trick Shot: today''s name already fits the crosshair; the trick is shooting a wrong answer; nothing to relearn
+  - Sharpshooter: closest to «Francotirador», clear for kids, 12 characters; `S` may collide with «Step Down» / «Door Slam»
+  - Long Shot: pun on the risky bet (the level may start over)
+  - Pot Shot: casual, opportunistic shot, cheeky; `P` free if `skip` leaves it, else `O`', NULL, NULL, '2026-10-15T02:13:46Z', NULL, 1096, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -28852,6 +28920,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1037, 1082, '2026-10-15T02:02:24Z', '2026-10-15T02:05:03Z', 'done', NULL, 0, 'a7b0a9712ec57ad6365a984c48d7ba8ba123935c', 'claude-opus-5-5[1m]', '696337cf-f4fd-4984-a7f8-9d4caf3daa19', 15, 28, 8566, 622853, 48539, 0.68431460000000011, 2557536);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1038, 1083, '2026-10-15T02:05:03Z', '2026-10-15T02:11:14Z', 'done', NULL, 0, 'e72160541f1f1198f9e582e5d277bf9968c2fc42', 'claude-opus-5-5[1m]', 'be6420fc-07c6-4287-8d6d-af490745a2ca', 22, 26, 4173, 640290, 61997, 0.70759799999999984, 2557536);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1039, 1102, '2026-10-15T02:11:14Z', '2026-10-15T02:12:13Z', 'done', NULL, 0, '5bd234c65599e974926c0d3235fcbe3b6ee6cf32', 'claude-opus-5-5[1m]', 'd7d3b436-686b-4720-9eee-82eff82fef4c', 11, 20, 2306, 391614, 40369, 0.4474748, 2557536);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1040, 1096, '2026-10-15T02:12:13Z', '2026-10-15T02:14:24Z', 'done', NULL, 0, '723bdf423b5b29845d122139138d967f974b740d', 'claude-opus-5-5[1m]', '913d5cd4-a5d3-4b7c-aa49-b501d054d921', 14, 28, 9992, 704992, 54579, 0.77758240000000012, 2557536);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -28997,6 +29066,11 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (459, 62);
 INSERT INTO task_decision (task_id, decision_id) VALUES (459, 63);
 INSERT INTO task_decision (task_id, decision_id) VALUES (459, 64);
 INSERT INTO task_decision (task_id, decision_id) VALUES (459, 65);
+INSERT INTO task_decision (task_id, decision_id) VALUES (459, 190);
+INSERT INTO task_decision (task_id, decision_id) VALUES (459, 191);
+INSERT INTO task_decision (task_id, decision_id) VALUES (459, 192);
+INSERT INTO task_decision (task_id, decision_id) VALUES (459, 193);
+INSERT INTO task_decision (task_id, decision_id) VALUES (459, 194);
 INSERT INTO task_decision (task_id, decision_id) VALUES (464, 35);
 INSERT INTO task_decision (task_id, decision_id) VALUES (479, 50);
 INSERT INTO task_decision (task_id, decision_id) VALUES (479, 155);
@@ -29129,6 +29203,31 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1051, 184);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1068, 179);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1069, 179);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1070, 179);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1097, 190);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1097, 191);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1097, 192);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1097, 193);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1097, 194);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1098, 190);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1098, 191);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1098, 192);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1098, 193);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1098, 194);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1099, 190);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1099, 191);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1099, 192);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1099, 193);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1099, 194);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1100, 190);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1100, 191);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1100, 192);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1100, 193);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1100, 194);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1101, 190);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1101, 191);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1101, 192);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1101, 193);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1101, 194);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1103, 187);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
