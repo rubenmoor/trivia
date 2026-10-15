@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "e31e00b4",
+  "hash": "2c68db4e",
   "questions": [
     {
       "id": "q-0001",
@@ -51337,7 +51337,7 @@
     {
       "id": "q-1673",
       "status": "approved",
-      "difficulty": 8,
+      "difficulty": 12,
       "subcategory": "Novela policiaca",
       "bundle": "base",
       "description": "Overoles rojos, máscaras de Dalí y un plan con muchísimos pasos.",
@@ -51943,40 +51943,6 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Karl-Martin Skontorp from Norway",
         "author_url": "https://www.flickr.com/people/21905741@N06"
-      },
-      "background": null
-    },
-    {
-      "id": "q-1691",
-      "status": "approved",
-      "difficulty": 7,
-      "subcategory": "Origen de las marcas",
-      "bundle": "base",
-      "description": "Una cinta tan pegajosa que se quedó hasta con el nombre de otro país.",
-      "question": "El nombre de la cinta Scotch suena escocés. ¿En qué país se inventó en realidad?",
-      "answer": "Estados Unidos",
-      "wrong_answers": [
-        "Escocia",
-        "Inglaterra",
-        "Alemania"
-      ],
-      "hints": [
-        "El nombre engaña: no nació en el Reino Unido.",
-        "La inventó la empresa 3M en 1930.",
-        "Es el mismo país donde nacieron las notas Post-it."
-      ],
-      "fun_fact": "Se cuenta que el nombre vino de un cliente que se quejó de que la empresa era 'scotch' (tacaña) con el pegamento.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Adhesive_tapes_clear.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AAdhesive_tapes_clear.JPG",
-        "credit": "BarberJP · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "BarberJP",
-        "author_url": "https://commons.wikimedia.org/wiki/User:BarberJP"
       },
       "background": null
     },
@@ -52935,7 +52901,7 @@
     {
       "id": "q-1720",
       "status": "approved",
-      "difficulty": 3,
+      "difficulty": 1,
       "subcategory": "Poesía",
       "bundle": "base",
       "description": "Una canción en la que los perros desaparecen más rápido que los dulces de una piñata.",
@@ -53371,40 +53337,6 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Harrison Keely",
         "author_url": "https://commons.wikimedia.org/wiki/User:Hkeely"
-      },
-      "background": null
-    },
-    {
-      "id": "q-1733",
-      "status": "approved",
-      "difficulty": 10,
-      "subcategory": "Preguntas filosóficas",
-      "bundle": "base",
-      "description": "Una pregunta que convierte un día de playa en una crisis existencial.",
-      "question": "Si me quitas un grano de arena, sigo igual. Y otro, y otro… hasta que queda uno. ¿Con qué grano dejé de merecer mi nombre? ¿Qué paradoja soy?",
-      "answer": "La paradoja del montón",
-      "wrong_answers": [
-        "La paradoja del barco de Teseo",
-        "La paradoja del mentiroso",
-        "La paradoja de Aquiles y la tortuga"
-      ],
-      "hints": [
-        "Viene de la antigua Grecia.",
-        "Pasa lo mismo con alguien que pierde pelos uno a uno: ¿cuándo pasa a ser calvo?",
-        "Trata de cuántos granos hacen falta para llamar a algo de cierta manera."
-      ],
-      "fun_fact": "Se atribuye a Eubúlides de Mileto, el mismo filósofo griego al que se atribuye la paradoja del mentiroso.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Macrophotography_of_grains_of_sand_in_polarised_ligth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AMacrophotography_of_grains_of_sand_in_polarised_ligth.jpg",
-        "credit": "Jojowikiscience · CC BY-SA 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Jojowikiscience",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Jojowikiscience&action=edit&redlink=1"
       },
       "background": null
     },
@@ -57936,40 +57868,6 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Sven Scheuermeier sveninho",
         "author_url": "https://unsplash.com/@sveninho"
-      },
-      "background": null
-    },
-    {
-      "id": "q-1868",
-      "status": "approved",
-      "difficulty": 8,
-      "subcategory": "Exploradores y descubrimientos",
-      "bundle": "base",
-      "description": "Una piedra mal lanzada que terminó en los libros de historia.",
-      "question": "Buscaba algo que se me había perdido, tiré una piedra a una cueva y oí romperse una vasija con rollos antiguos. ¿Quién soy?",
-      "answer": "Un pastor beduino",
-      "wrong_answers": [
-        "Un arqueólogo británico",
-        "Un monje cristiano",
-        "Un ingeniero francés"
-      ],
-      "hints": [
-        "Fue en 1947, cerca del mar Muerto.",
-        "Era un joven de un pueblo nómada del desierto.",
-        "El animal perdido era una cabra."
-      ],
-      "fun_fact": "Los Rollos del mar Muerto tienen más de 2000 años y se conservaron gracias al clima seco del desierto.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/PikiWiki_Israel_28412_Vadi_Qumran_and_Qumran_caves.JPG/3840px-PikiWiki_Israel_28412_Vadi_Qumran_and_Qumran_caves.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3APikiWiki_Israel_28412_Vadi_Qumran_and_Qumran_caves.JPG",
-        "credit": "Dr. Avishai  Teicher · CC BY 2.5 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY 2.5",
-        "license_url": "https://creativecommons.org/licenses/by/2.5",
-        "author": "Dr. Avishai  Teicher",
-        "author_url": null
       },
       "background": null
     },

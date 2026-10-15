@@ -1,0 +1,296 @@
+{
+  "batch-8": {
+    "size": 30,
+    "seed": "batch-8",
+    "items": {
+      "q-1673": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          8,
+          12
+        ],
+        "media_changed": false,
+        "on": "2026-10-15"
+      },
+      "q-1691": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "needs_work",
+        "problems": [],
+        "difficulty": [
+          7,
+          7
+        ],
+        "media_changed": false,
+        "on": "2026-10-15"
+      },
+      "q-1698": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          12,
+          12
+        ],
+        "media_changed": false,
+        "on": "2026-10-15"
+      },
+      "q-1261": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          14,
+          14
+        ],
+        "media_changed": false,
+        "on": "2026-10-15"
+      },
+      "q-1384": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          11,
+          11
+        ],
+        "media_changed": false,
+        "on": "2026-10-15"
+      },
+      "q-1854": {
+        "llm": "needs_work",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          11,
+          11
+        ],
+        "media_changed": false,
+        "on": "2026-10-15"
+      },
+      "q-1497": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          6,
+          6
+        ],
+        "media_changed": false,
+        "on": "2026-10-15"
+      },
+      "q-1875": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          4,
+          4
+        ],
+        "media_changed": false,
+        "on": "2026-10-15"
+      },
+      "q-1305": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          7,
+          7
+        ],
+        "media_changed": false,
+        "on": "2026-10-15"
+      },
+      "q-1697": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          7,
+          7
+        ],
+        "media_changed": false,
+        "on": "2026-10-15"
+      },
+      "q-1456": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          8,
+          8
+        ],
+        "media_changed": false,
+        "on": "2026-10-15"
+      },
+      "q-1868": {
+        "llm": "approved",
+        "audit": "problem",
+        "human": "needs_work",
+        "problems": [],
+        "difficulty": [
+          8,
+          8
+        ],
+        "media_changed": false,
+        "on": "2026-10-15"
+      },
+      "q-1632": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          12,
+          12
+        ],
+        "media_changed": false,
+        "on": "2026-10-15"
+      },
+      "q-1908": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          8,
+          8
+        ],
+        "media_changed": false,
+        "on": "2026-10-15"
+      },
+      "q-1587": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          6,
+          6
+        ],
+        "media_changed": false,
+        "on": "2026-10-15"
+      },
+      "q-1626": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          4,
+          4
+        ],
+        "media_changed": false,
+        "on": "2026-10-15"
+      },
+      "q-1720": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          3,
+          1
+        ],
+        "media_changed": false,
+        "on": "2026-10-15"
+      },
+      "q-1623": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          12,
+          12
+        ],
+        "media_changed": false,
+        "on": "2026-10-15"
+      },
+      "q-1599": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          12,
+          12
+        ],
+        "media_changed": false,
+        "on": "2026-10-15"
+      },
+      "q-2157": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          6,
+          6
+        ],
+        "media_changed": false,
+        "on": "2026-10-15"
+      },
+      "q-1733": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "needs_work",
+        "problems": [],
+        "difficulty": [
+          10,
+          10
+        ],
+        "media_changed": false,
+        "on": "2026-10-15"
+      },
+      "q-1796": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          10,
+          10
+        ],
+        "media_changed": false,
+        "on": "2026-10-15"
+      },
+      "q-1996": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          10,
+          10
+        ],
+        "media_changed": false,
+        "on": "2026-10-15"
+      },
+      "q-1798": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          7,
+          7
+        ],
+        "media_changed": false,
+        "on": "2026-10-15"
+      }
+    }
+  }
+}
