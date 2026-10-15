@@ -29121,6 +29121,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1058, 632, '2026-10-15T03:30:09Z', '2026-10-15T03:34:37Z', 'blocked', NULL, 0, 'efd3adc43c796848f1b1783a010d016c9abbd0c3', 'claude-opus-5-5[1m]', 'd8427bcd-45ce-47ee-985e-67c76d4e093d', 10, 20, 2321, 343668, 28902, 0.34644959999999997, 2557536);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1059, 633, '2026-10-15T03:34:37Z', '2026-10-15T03:34:47Z', 'blocked', NULL, 0, '57c4bdcccadbd472f8d4f61dfca7c011a1384f78', 'claude-opus-5-5[1m]', '001da0c0-6a17-457e-aa95-62f252cc6430', 4, 8, 574, 115476, 26691, 0.24813519999999997, 2557536);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1060, 339, '2026-10-15T03:34:47Z', '2026-10-15T03:41:08Z', 'blocked', NULL, 0, '45270930bda33cdb82a4a86e9fb9b4cfe29b629a', 'claude-opus-5-5[1m]', 'd4155ee1-53a9-434a-86e4-fc4683938fdf', 14, 28, 2956, 582539, 42319, 0.51429180000000008, 2557536);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1061, 634, '2026-10-15T03:41:09Z', '2026-10-15T03:41:22Z', 'blocked', NULL, 0, '36804305f08fe04b9d98ef989ce49e3fcf31e200', 'claude-opus-5-5[1m]', 'b8214f44-13e3-4dfa-93d0-ba6a310a6c76', 6, 12, 821, 183670, 25696, 0.25877, 2557536);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -29277,6 +29278,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (479, 50);
 INSERT INTO task_decision (task_id, decision_id) VALUES (479, 155);
 INSERT INTO task_decision (task_id, decision_id) VALUES (632, 202);
 INSERT INTO task_decision (task_id, decision_id) VALUES (633, 202);
+INSERT INTO task_decision (task_id, decision_id) VALUES (634, 202);
 INSERT INTO task_decision (task_id, decision_id) VALUES (643, 110);
 INSERT INTO task_decision (task_id, decision_id) VALUES (650, 68);
 INSERT INTO task_decision (task_id, decision_id) VALUES (652, 72);
