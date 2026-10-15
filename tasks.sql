@@ -28062,7 +28062,7 @@ Afterwards, the 19 flagged questions with the audit notes: http://127.0.0.1:8001
 Answer once the 30 are decided. Then task 339 runs `qgen report --qc backaudit-1` (release bar, decision 15) and asks the cost decision for the remaining slices.', NULL, NULL, '2026-10-15T03:41:00Z', NULL, 339, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (204, 'Translation pilot done (tr-en-1, tr-de-1)?', 'pending', '["done"]', '`task 463: Release budget per language (pm decision, CT-3)` needs the translation pilot''s cost numbers (`qgen report --cost`, `tr-<locale>-*` runs). Today (2026-10-14) no `work/tr-en-1`, `work/tr-de-1` or `authoring/reports/tr-*-1.md` exist: `task 634: run tr-en-1` … `task 638: Translation pilot go/no-go (QT-5)` all wait on decision 202 (Run qgen neutralize on base now?).
 Answer "done" once tasks 634–638 are done (pilot run, QC''d, go/no-go answered); then task 463 builds the release budget table.', NULL, NULL, '2026-10-15T03:42:39Z', NULL, 463, NULL, 'once', NULL, '');
-INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (205, 'batch-8 fails at media: how to go on?', 'pending', '[]', 'qgen batch (batch-8) exited 1 at `media` three runs in a row (runs 3–5 of task 51; runs 1–2 failed at rate and revise, then got past them). Always the same item: q-1425 (Eurovisión, "Jaja Ding Dong", media query "Iceland map outline", stimulus map_outline). Looks deterministic (a code bug in the media step, likely a JSON list where a dict is expected), not a flaky call. Under the RUNBOOK the worker may not change qgen.py/media.py. Options: a fix task for the media step, then rerun batch-8; or something else.
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (205, 'batch-8 fails at media: how to go on?', 'answered', '[]', 'qgen batch (batch-8) exited 1 at `media` three runs in a row (runs 3–5 of task 51; runs 1–2 failed at rate and revise, then got past them). Always the same item: q-1425 (Eurovisión, "Jaja Ding Dong", media query "Iceland map outline", stimulus map_outline). Looks deterministic (a code bug in the media step, likely a JSON list where a dict is expected), not a flaky call. Under the RUNBOOK the worker may not change qgen.py/media.py. Options: a fix task for the media step, then rerun batch-8; or something else.
 
 Last 30 lines:
 ```
@@ -28096,7 +28096,31 @@ merged 0 question(s) into authoring/data/questions.json; 144 dropped in total (s
    media took 0s (batch: 1s)
 
 Stopped at `media` with 1 error(s). Run `qgen batch` again; if the same step fails three times in a row, stop and report the output.
-```', NULL, NULL, '2026-10-15T06:04:34Z', NULL, 51, NULL, 'rule', NULL, '');
+```', 'Script bugs become fix tasks; the queue never waits for the developer on them. Task 51''s worker:
+
+1. Partial batch into git, not a stash:
+   - `git stash apply 6d1be84` (batch-8''s pool edits from run 1068; pm stashed them as "left")
+   - `qgen validate`; passes → `git add authoring/data` (pm commits it with task 51, like WIP d7fb13f); `work/batch-8` stays as it is
+   - fails → stage nothing, new decision with the output, stop
+2. Fix task:
+   `pm task add 17 "Fix qgen media: Commons extmetadata [] crashes the search" --priority 0`, body:
+   - `authoring/tools/providers/commons.py` `search()`: Commons sends `extmetadata: []` instead of `{}` for some files (here "File:Iceland Boreal Birch Forests and Alpine Tundra Ecoregion - Relief Map Zoom.png", query "Iceland map outline") → `''list'' object has no attribute ''get''`
+   - fix: `meta = i.get("extmetadata") or {}`; look for the same pattern in the other providers
+   - check: `media.fetch_for` on q-1425 slot `media` succeeds; no test
+3. Resume task:
+   `pm task add 17 "Finish batch-8 after task <fix id>: Fix qgen media: Commons extmetadata [] crashes the search" --priority -99`, body: follow the RUNBOOK (plain `qgen batch` resumes at media); -99: after the fix (0), before the other batch tasks (-100)
+4. RUNBOOK, "Under `pm run`": the row "exit 1, same step three times in a row" no longer opens a decision; instead, generic versions of 1–3:
+   - partial batch: `qgen validate`, `git add authoring/data`
+   - a fix task in the batch task''s plan, `--priority 0`: failing step, last 30 lines, the worker''s read-only diagnosis (file, cause, suggested fix), how to check it
+   - a resume task in the same plan, `--priority -99`: "Finish <batch> after task <fix id>: <fix subject>"
+   - `pm task done <task>`, note: "stopped at <step>; fix: task <id>, resume: task <id>"
+   - the batch worker still never edits qgen code itself
+   - exit 75, exit 2, other exit codes, "More than one unfinished batch", "unfinished batch for another bundle": unchanged, still decisions
+5. Plan 17, same rule (after 2–3, so pm''s re-split of plan 17 sees the new tasks): `pm show p17` → body; edit; `pm plan edit 17 --body - <<''EOF''`
+   - "Batch tasks under `pm run`": exit 1 three times at one step leaves the decision bullet; new bullet as in 4 (fix task 0, resume task -99, partial batch committed, task closed)
+   - "State": batch-8 stopped at media in task 51; fix and resume task ids
+   - the "create tasks for plan 17" task the edit queues is expected
+6. `pm task done 51`, note: stopped at media; fix and resume task ids; RUNBOOK and plan 17 changed.', NULL, '2026-10-15T06:04:34Z', '2026-10-15T13:14:15Z', 51, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
