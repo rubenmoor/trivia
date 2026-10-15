@@ -6,6 +6,7 @@
   import { focusControl, pushScope } from "../lib/input.svelte.ts";
   import type { JokerBudget, JokerName } from "../lib/types.ts";
   import { PRESETS, presetOf, stepPreset, stepUses, TOKENS } from "./jokers.ts";
+  import Icon from "./Icon.svelte";
   import Prompt from "./Prompt.svelte";
 
   let {
@@ -66,7 +67,7 @@
       </div>
     {/each}
     <div class="choices">
-      <button class="candy" onclick={onclose}>{t("customize.done")} <Prompt action="confirm" /></button>
+      <button class="candy" onclick={onclose}><Icon name="check" /> {t("customize.done")} <Prompt action="confirm" /></button>
     </div>
   </div>
 </div>

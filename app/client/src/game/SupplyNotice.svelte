@@ -11,6 +11,7 @@
   import { t } from "../lib/i18n.ts";
   import { focusControl, pushScope } from "../lib/input.svelte.ts";
   import { displayName } from "../lib/names.svelte.ts";
+  import Icon from "./Icon.svelte";
   import Prompt from "./Prompt.svelte";
 
   let { outlook, onplay, onback }: { outlook: Outlook; onplay: () => void; onback: () => void } = $props();
@@ -46,8 +47,8 @@
       <p>{t("outlook.exhausted", { list: outlook.exhausted.map((s) => displayName("subcategory", s)).join(", ") })}</p>
     {/if}
     <div class="choices">
-      <button class="secondary" onclick={onback} data-focus-id="notice-back">{t("action.back")} <Prompt action="back" /></button>
-      <button class="candy" onclick={onplay} data-focus-default data-focus-id="notice-play">{t("choice.start")} <Prompt action="confirm" /></button>
+      <button class="secondary" onclick={onback} data-focus-id="notice-back"><Icon name="back" /> {t("action.back")} <Prompt action="back" /></button>
+      <button class="candy" onclick={onplay} data-focus-default data-focus-id="notice-play"><Icon name="rocket" /> {t("choice.start")} <Prompt action="confirm" /></button>
     </div>
   </div>
 </div>

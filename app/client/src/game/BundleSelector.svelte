@@ -74,7 +74,7 @@
     data-focus-id="bundle-{b.id}"
   >
     {#if key}<Prompt action={{ type: "letter", key }} hold />{/if}
-    <span class="name-text">{b.name}</span>
+    <span class="name-text"><Icon name={b.source === "mod" ? "puzzle" : b.base ? "book" : "pin"} /> {b.name}</span>
     {#if role === "switch"}<span class="switch label">{t(on ? "choice.on" : "choice.off")}</span>{/if}
     <span class="label description">{b.description}</span>
     {#if b.source === "mod"}<span class="label made"><Icon name="puzzle" /> {t("bundles.playerMade", { mod: b.modName ?? "" })}</span>{/if}

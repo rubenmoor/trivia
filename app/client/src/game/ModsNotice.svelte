@@ -2,6 +2,7 @@
   // One-time notice before the first mod runs (plan 118, decision 151): Allow or Cancel; Esc/B cancels.
   import { t } from "../lib/i18n.ts";
   import { focusControl, pushScope } from "../lib/input.svelte.ts";
+  import Icon from "./Icon.svelte";
   import Prompt from "./Prompt.svelte";
 
   let { onallow, oncancel }: { onallow: () => void; oncancel: () => void } = $props();
@@ -32,8 +33,8 @@
     <p>{t("mods.notice.body")}</p>
     <p class="crash">{t("mods.notice.crash")}</p>
     <div class="buttons">
-      <button class="candy" onclick={onallow}>{t("mods.notice.allow")}</button>
-      <button class="secondary" bind:this={cancel} onclick={oncancel} data-focus-default>{t("action.cancel")} <Prompt action="menu" pad="back" /></button>
+      <button class="candy" onclick={onallow}><Icon name="check" /> {t("mods.notice.allow")}</button>
+      <button class="secondary" bind:this={cancel} onclick={oncancel} data-focus-default><Icon name="back" /> {t("action.cancel")} <Prompt action="menu" pad="back" /></button>
     </div>
   </div>
 </div>

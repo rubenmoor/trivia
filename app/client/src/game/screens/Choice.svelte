@@ -35,6 +35,7 @@
   import { presetOf, stepPreset, stepUses, TOKENS } from "../jokers.ts";
   import { clamp, spanOf, stepDifficulty } from "../difficulty.ts";
   import { DEFAULT_LEVELS } from "../levels.ts";
+  import Icon, { type IconName } from "../Icon.svelte";
   import Prompt from "../Prompt.svelte";
   import SupplyNotice, { worthShowing } from "../SupplyNotice.svelte";
   import SupplyReport from "../SupplyReport.svelte";
@@ -231,6 +232,7 @@
   ];
   const modes = MODE_ROW.filter((m) => BUILT_MODES.includes(m.id));
   const CUSTOMIZE_KEY = t("customize.openKey").toLowerCase();
+  const GROUP_ICONS: Record<string, IconName> = { kids: "balloon", young_teens: "skateboard", young_adults: "headphones", adults: "mug" };
   const RESERVED = [
     t("flag.key"), t("screen.start.newKey"), t("screen.question.replayKey"), t("joker.hint.key"), CUSTOMIZE_KEY, ...modes.map((m) => m.key),
   ];
@@ -301,7 +303,7 @@
               data-focus-id="mode-{m.id}"
             >
               <Prompt action={{ type: "letter", key: m.key }} hold />
-              <span class="name-text">{m.name}</span>
+              <span class="name-text"><Icon name={m.id === "gamemaster" ? "mic" : "family"} /> {m.name}</span>
               <span class="label">{m.about}</span>
             </button>
           {/each}
@@ -320,8 +322,8 @@
             {@render stepper("end", t("configure.end"), String(span.end), "", false, !custom)}
             {@render stepper("levels", t("configure.levels"), String(levels))}
             {@render stepper("cards", t("configure.cards"), String(cards), cards ? "" : t("configure.noCards"))}
-            {@render toggle("video", t("configure.video"), video)}
-            {@render toggle("audio", t("configure.audio"), audio)}
+            {@render toggle("video", t("configure.video"), video, "film")}
+            {@render toggle("audio", t("configure.audio"), audio, "speaker")}
           </div>
           <div class="lines">
             <p class="label heading">{t("configure.jokers")}</p>
@@ -347,7 +349,7 @@
               data-focus-id="group-{g.id}"
             >
               <Prompt action={{ type: "pick", n: i + 1 }} hold />
-              <span class="name-text">{g.name}</span>
+              <span class="name-text">{#if GROUP_ICONS[g.id]}<Icon name={GROUP_ICONS[g.id]} />{/if} {g.name}</span>
               <span class="label">{ages(g.ages)}</span>
               {#if short[g.id]}<span class="label warn">{t("choice.short")}</span>{/if}
             </button>
@@ -355,7 +357,7 @@
         </div>
         <div class="row" data-line>
           <button class="secondary customize" onclick={() => (customizing = true)} disabled={busy} data-focus-id="customize">
-            {t("customize.open")} <Prompt action={{ type: "letter", key: CUSTOMIZE_KEY }} />
+            <Icon name="sliders" /> {t("customize.open")} <Prompt action={{ type: "letter", key: CUSTOMIZE_KEY }} />
           </button>
           <span class="label" class:warn={customized}>{t(customized ? "customize.custom" : "customize.standard")}</span>
         </div>
@@ -364,8 +366,8 @@
       <BundleSelector bundles={options.bundles} selected={bundles} {busy} {keyOf} first={6} onchange={pickBundles} />
 
       <div class="row actions" data-line>
-        <button class="secondary" onclick={onback} disabled={busy} data-focus-id="back">{t("action.back")} <Prompt action="back" /></button>
-        <button class="candy" onclick={start} disabled={busy || !ready} data-focus-default data-focus-id="start">{t("choice.start")} <Prompt action="confirm" off={!ready} /></button>
+        <button class="secondary" onclick={onback} disabled={busy} data-focus-id="back"><Icon name="back" /> {t("action.back")} <Prompt action="back" /></button>
+        <button class="candy" onclick={start} disabled={busy || !ready} data-focus-default data-focus-id="start"><Icon name="rocket" /> {t("choice.start")} <Prompt action="confirm" off={!ready} /></button>
       </div>
 
       {#if shownRefusal?.supply}
@@ -403,9 +405,9 @@
   </div>
 {/snippet}
 
-{#snippet toggle(id: string, label: string, on: boolean)}
+{#snippet toggle(id: string, label: string, on: boolean, icon: IconName)}
   <button class="line glass" class:on data-line data-step={id} data-focus-id="config-{id}" role="switch" aria-checked={on} onclick={() => step(id, 1)} disabled={busy}>
-    <span class="label line-name">{label}</span>
+    <span class="label line-name"><Icon name={icon} /> {label}</span>
     <span class="value switch">{t(on ? "choice.on" : "choice.off")}</span>
   </button>
 {/snippet}

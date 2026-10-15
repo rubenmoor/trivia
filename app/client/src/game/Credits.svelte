@@ -18,6 +18,7 @@
   import { buildInfo } from "../lib/build.ts";
   import { t } from "../lib/i18n.ts";
   import { focusControl, pushScope, type Action } from "../lib/input.svelte.ts";
+  import Icon from "./Icon.svelte";
   import Prompt from "./Prompt.svelte";
 
   let { onclose }: { onclose: () => void } = $props();
@@ -76,7 +77,7 @@
       {t("credits.scroll")} <Prompt action={{ type: "navigate", dir: "up" }} /> <Prompt action={{ type: "navigate", dir: "down" }} />
       · {t("credits.jump")} <Prompt action={{ type: "navigate", dir: "left" }} /> <Prompt action={{ type: "navigate", dir: "right" }} />
     </p>
-    <button class="candy" bind:this={backButton} onclick={onclose} data-focus-default>{t("action.back")} <Prompt action="menu" pad="back" /></button>
+    <button class="candy" bind:this={backButton} onclick={onclose} data-focus-default><Icon name="back" /> {t("action.back")} <Prompt action="menu" pad="back" /></button>
   </header>
   <div class="scroller" bind:this={scroller}>
     {#if failed}

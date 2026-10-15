@@ -158,7 +158,7 @@
         <div class="entry" style:--i={i}>
           <button class="name-button glass" onclick={() => onchoose(p.name)} disabled={busy} data-focus-default>
             <Prompt action={{ type: "pick", n: i + 1 }} hold />
-            <span class="who">{p.name}{#if i === 0 && free}<Prompt action="confirm" />{/if}</span>
+            <span class="who"><Icon name="person" /> {p.name}{#if i === 0 && free}<Prompt action="confirm" />{/if}</span>
             <span class="label">{games(p)}</span>
           </button>
           <button class="delete" onclick={() => askDelete(p)} disabled={busy} title={t("screen.player.delete", { name: p.name })}>
@@ -189,10 +189,10 @@
         {#if lastDevice.current === "gamepad"}
           <button class="secondary" type="button" onclick={() => void write()} disabled={busy} data-nofocus tabindex="-1">
             <Prompt action="confirm" fixed off={!onField} />
-            {t("picker.write")}
+            <Icon name="pencil" /> {t("picker.write")}
           </button>
         {/if}
-        <button class="candy" type="submit" disabled={busy || !typed}>{t("screen.player.submit")} <Prompt action="confirm" off={!typed} /></button>
+        <button class="candy" type="submit" disabled={busy || !typed}><Icon name="person-plus" /> {t("screen.player.submit")} <Prompt action="confirm" off={!typed} /></button>
       </div>
     </form>
   {/if}
@@ -211,8 +211,8 @@
           })}
         </p>
         <div class="row">
-          <button class="secondary" bind:this={cancelButton} onclick={() => (doomed = null)} data-focus-default>{t("action.cancel")} <Prompt action="menu" pad="back" /></button>
-          <button class="danger" onclick={confirmDelete} disabled={deleting}>{t("screen.player.confirm")}</button>
+          <button class="secondary" bind:this={cancelButton} onclick={() => (doomed = null)} data-focus-default><Icon name="back" /> {t("action.cancel")} <Prompt action="menu" pad="back" /></button>
+          <button class="danger" onclick={confirmDelete} disabled={deleting}><Icon name="trash" /> {t("screen.player.confirm")}</button>
         </div>
       </div>
     </div>

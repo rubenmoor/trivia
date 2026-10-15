@@ -6,6 +6,7 @@
   import type { Game } from "../../lib/types.ts";
   import EffectsDemo from "../EffectsDemo.svelte";
   import Fireworks from "../Fireworks.svelte";
+  import Icon from "../Icon.svelte";
   import Prompt from "../Prompt.svelte";
 
   let {
@@ -46,7 +47,7 @@
 <section class="start">
   {#if !notice}
     <button class="language glass" onclick={onlanguage} disabled={busy} data-focus-id="language" aria-label={t("screen.start.language", { name: endonym(lang) })}>
-      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20" /></svg>
+      <Icon name="globe" size="1.25em" />
       {endonym(lang)}
       <Prompt action="language" />
     </button>
@@ -57,22 +58,23 @@
     {#if notice}
       <div class="notice glass">
         <p>{notice.kind === "unsaved" ? t("save.unsaved") : t(notice.kind === "newer" ? "save.newer" : "save.corrupt", { path: notice.path })}</p>
-        <button class="candy" onclick={ondismiss} data-focus-default data-focus-id="notice">{t("action.next")} <Prompt action="confirm" /></button>
+        <button class="candy" onclick={ondismiss} data-focus-default data-focus-id="notice"><Icon name="next" /> {t("action.next")} <Prompt action="confirm" /></button>
       </div>
     {:else if running}
       <button class="candy breathe" onclick={onresume} disabled={busy} data-focus-default data-focus-id="main">
+        <Icon name="play" />
         {game?.player
           ? t("screen.start.resumePlayer", { name: game.player, level: game.level })
           : t("screen.start.resume", { level: game?.level ?? 0 })}
         <Prompt action="confirm" />
       </button>
-      <button class="secondary" onclick={onnew} disabled={busy} data-focus-id="new">{t("screen.start.new")} <Prompt action="new" /></button>
+      <button class="secondary" onclick={onnew} disabled={busy} data-focus-id="new"><Icon name="sparkle" /> {t("screen.start.new")} <Prompt action="new" /></button>
     {:else}
-      <button class="candy breathe" onclick={onnew} disabled={busy} data-focus-default data-focus-id="main">{t("screen.start.play")} <Prompt action="confirm" /></button>
+      <button class="candy breathe" onclick={onnew} disabled={busy} data-focus-default data-focus-id="main"><Icon name="rocket" /> {t("screen.start.play")} <Prompt action="confirm" /></button>
     {/if}
     {#if mods && !notice}
       <button class="secondary" onclick={onmods} disabled={busy} data-focus-id="mods">
-        {t("mods.open")}{#if mods.loaded}<span class="count">{mods.loaded}</span>{/if}
+        <Icon name="puzzle" /> {t("mods.open")}{#if mods.loaded}<span class="count">{mods.loaded}</span>{/if}
       </button>
     {/if}
   </div>
@@ -134,13 +136,6 @@
     font-size: calc(1.3 * var(--u));
     font-weight: 700;
     color: var(--slate-200);
-  }
-  .language svg {
-    width: calc(1.6 * var(--u));
-    height: calc(1.6 * var(--u));
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 1.8;
   }
   .count {
     margin-left: calc(0.6 * var(--u));

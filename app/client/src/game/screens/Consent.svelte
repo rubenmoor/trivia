@@ -5,6 +5,7 @@
   import { t } from "../../lib/i18n.ts";
   import { focusControl, pushScope } from "../../lib/input.svelte.ts";
   import { setTelemetryConsent } from "../../lib/telemetry.ts";
+  import Icon from "../Icon.svelte";
 
   let { ondone }: { ondone: () => void } = $props();
 
@@ -63,7 +64,7 @@
         data-focus-default={!yes || undefined}
         style:--i={i}
       >
-        {t(yes ? "consent.yes" : "consent.no")}
+        <Icon name={yes ? "check" : "cross"} /> {t(yes ? "consent.yes" : "consent.no")}
       </button>
     {/each}
   </div>

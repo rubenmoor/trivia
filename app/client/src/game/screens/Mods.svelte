@@ -30,6 +30,7 @@
   import { focusControl, lastDevice, pushScope, type Action } from "../../lib/input.svelte.ts";
   import { modErrors } from "../../lib/mods.ts";
   import ModsNotice from "../ModsNotice.svelte";
+  import Icon from "../Icon.svelte";
   import Prompt from "../Prompt.svelte";
 
   let { onclose }: { onclose: (list: ModList | null) => void } = $props();
@@ -177,10 +178,10 @@
         {t("mods.order")}
       {/if}
     </p>
-    <button class="secondary" onclick={refresh} disabled={!list} data-focus-id="refresh">{t("mods.refresh")}</button>
-    <button class="secondary" onclick={allOff} disabled={!anyOn} data-focus-id="all-off">{t("mods.allOff")}</button>
-    <button class="candy" onclick={() => guarded(anyOn, restart)} disabled={!dirty} data-focus-id="restart">{t("mods.restart")}</button>
-    <button class="secondary" onclick={() => onclose(list)} data-focus-id="back" data-focus-default>{t("action.back")} <Prompt action="menu" pad="back" /></button>
+    <button class="secondary" onclick={refresh} disabled={!list} data-focus-id="refresh"><Icon name="refresh" /> {t("mods.refresh")}</button>
+    <button class="secondary" onclick={allOff} disabled={!anyOn} data-focus-id="all-off"><Icon name="power" /> {t("mods.allOff")}</button>
+    <button class="candy" onclick={() => guarded(anyOn, restart)} disabled={!dirty} data-focus-id="restart"><Icon name="rocket" /> {t("mods.restart")}</button>
+    <button class="secondary" onclick={() => onclose(list)} data-focus-id="back" data-focus-default><Icon name="back" /> {t("action.back")} <Prompt action="menu" pad="back" /></button>
   </header>
 
   {#if list?.safeStart?.reason === "crashed"}
@@ -215,6 +216,7 @@
               <span class="switch" aria-hidden="true"><span></span></span>
               <span class="main">
                 <span class="head">
+                  <Icon name="puzzle" />
                   <b>{nameOf(m)}</b>
                   {#if m.version}<span class="version">{m.version}</span>{/if}
                   {#each m.kind as k (k)}<span class="badge">{code("mods.kind", k)}</span>{/each}

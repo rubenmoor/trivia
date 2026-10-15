@@ -6,6 +6,7 @@
   import { errorText } from "../../lib/errors.ts";
   import { endonym, lang, t } from "../../lib/i18n.ts";
   import { focusControl, pushScope } from "../../lib/input.svelte.ts";
+  import Icon from "../Icon.svelte";
   import Prompt from "../Prompt.svelte";
 
   let { onpicked, onback }: { onpicked: () => void; onback?: () => void } = $props();
@@ -78,7 +79,7 @@
     {/each}
   </div>
   {#if options.length}<p class="label">{t("language.confirm")} <Prompt action="confirm" /></p>{/if}
-  {#if onback}<button class="secondary" onclick={onback} disabled={saving}>{t("action.back")} <Prompt action="back" /></button>{/if}
+  {#if onback}<button class="secondary" onclick={onback} disabled={saving}><Icon name="back" /> {t("action.back")} <Prompt action="back" /></button>{/if}
   {#if error}<p class="error">{error}</p>{/if}
 </section>
 
