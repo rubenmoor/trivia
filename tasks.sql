@@ -1,5 +1,5 @@
 -- pm database. Change it with pm; after a hand edit run `pm validate`.
-PRAGMA user_version = 21;
+PRAGMA user_version = 22;
 
 CREATE TABLE milestone (
     id             INTEGER PRIMARY KEY,
@@ -128,6 +128,16 @@ CREATE TABLE resource_use_task (                           -- each task done whe
     task_id     INTEGER NOT NULL REFERENCES task (id),
     category_id INTEGER NOT NULL REFERENCES resource_use_category (id),
     PRIMARY KEY (report_id, task_id)
+) STRICT;
+
+CREATE TABLE custom_report (                               -- the human's question, answered in one paragraph by an exec task
+    id          INTEGER PRIMARY KEY,
+    task_id     INTEGER NOT NULL UNIQUE REFERENCES task (id),
+    question    TEXT NOT NULL CHECK (trim(question) <> ''),
+    answer      TEXT,                                      -- NULL: not answered yet
+    created_at  TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')),
+    answered_at TEXT,
+    CONSTRAINT "answered_at is set exactly when answered" CHECK ((answer IS NULL) = (answered_at IS NULL))
 ) STRICT;
 
 CREATE INDEX plan_milestone ON plan (milestone_id);
@@ -486,7 +496,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 - A flag sent from the released game under Steam arrives via `qgen flag --pull` as a needs_work review; without the server the copy fallback works.
 
 Plan files: `plans/11-steam.md`.', '2026-10-11T21:55:09Z', NULL, 0);
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (12, 'Conquer the world', 'open', 'After the launch in English, Spanish and German (pm decision 26), the game ships in Simplified Chinese, Russian and Brazilian Portuguese: the three next-largest language groups on Steam. The Chinese version gets its own base bundle, `chinese-base`: a Chinese family plays China-centric questions instead of a Spanish-speaking world''s. A session has one base bundle (milestone 5), so `chinese-base` takes `base`''s place.
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (12, 'Conquer the world', 'on-hold', 'After the launch in English, Spanish and German (pm decision 26), the game ships in Simplified Chinese, Russian and Brazilian Portuguese: the three next-largest language groups on Steam. The Chinese version gets its own base bundle, `chinese-base`: a Chinese family plays China-centric questions instead of a Spanish-speaking world''s. A session has one base bundle (milestone 5), so `chinese-base` takes `base`''s place.
 
 ## Outcome
 - Questions, UI and store page in Simplified Chinese, Russian and Portuguese (Brazil), each with its own approved pool meeting the content target (pm decision 21: 5000 per language with D-53''s mix).
@@ -27373,6 +27383,55 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm decision consequences 220 "<what changed>"`.
 
 Done when: three request files in `work/native-review/`, three engaged decisions raised and linked where possible, consequences recorded.', '2026-10-15T20:27:49Z', NULL, 1158, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1175, 142, 'Decisions: fonts per script, keys on non-Latin layouts, picker letters', 'work', 'open', 410, NULL, 'Task 1 of `plan 142: UI in the new languages`: raise the three developer decisions the plan''s "Decisions" section lists; no game code changes.
+
+## Fonts per script
+- Throw-away renders in `work/fonts/` (not committed): Start, Question (4 answers, joker row), Victory per candidate, at 1920 × 1080, in the game''s colours.
+  - ru: Nunito text with its Cyrillic subset; display candidates Nunito 800–900 (recommended), Rubik, M PLUS Rounded 1c.
+  - zh-Hans: one CJK family for text and display, e.g. Noto Sans SC / Source Han Sans SC variable (recommended); alternative ZCOOL KuaiLe headings + Noto Sans SC text.
+  - Sample text: `en.ts` strings translated ad hoc (throw-away), plus a few `names` / question lines.
+- Sizes per option: woff2 of the Cyrillic subset; CJK subset = GB2312 level 1 (3755) ∪ catalog-like sample ∪ pool estimate; fonttools from the flake (`pyftsubset`; add to `flake.nix` if missing, then it''s part of task 2).
+- All OFL, rounded, heavy weights to match Baloo 2 (`app/client/public/fonts/`, `theme.css`).
+- `pm decision add "Fonts for ru and zh-Hans (display, text)?"`: body with render paths, sizes, licences; options recommended first.
+
+## Keys on non-Latin layouts (extends `decision 53: Joker and action keys per UI language (LUI-4)?`)
+- Problem: `lib/input.svelte.ts` `toIntent` matches `e.key`; on ЙЦУКЕН the A–D keys give `ф и с в`.
+- Options: (recommended) key letters stay Latin in `ru` and `zh-Hans`, `toIntent` falls back to `e.code` (`KeyA` → `a`) when `e.key` is a non-Latin letter, answers A–D; alternative ru Cyrillic letters (А Б В Г, Cyrillic joker keys; breaks on a Latin layout).
+
+## Picker letters and name length
+- `LetterPicker.svelte`, `picker.letters` per catalog, `MAX_NAME`.
+- Options per plan: ru Cyrillic А–Я, Ё + Latin; pt-BR Latin + `Á Â Ã À Ç É Ê Í Ó Ô Õ Ú`; zh-Hans (recommended) Latin letters (pinyin) on the pad picker, Chinese names via keyboard IME / Steam on-screen keyboard; `MAX_NAME` per script (check the Player screen width with the render fonts).
+- One decision with the three locales, or one per locale if the options differ in kind.
+
+## Links
+- Every other open task of plan 142 (2–10) gets pending on all three decisions: `pm task-pending-decision <task> <decision>`, so they run in id order once answered.
+
+Done when: three pending decisions with renders and sizes in their bodies; tasks 2–10 of plan 142 pending on them; `work/fonts/` left uncommitted (delete or note it in the decision body that it''s local).', '2026-10-15T20:28:58Z', NULL, 1159, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1176, 142, 'Fonts for ru and zh-Hans in the client and build', 'work', 'open', NULL, NULL, 'Task 2 of `plan 142: UI in the new languages` (plan "Design: Fonts"); per the font decision raised by task 1 (`pm show` lists it).
+
+- Font files in `app/client/public/fonts/` + their OFL texts; `@font-face` per family with `unicode-range` (Cyrillic, CJK), so a Latin page never loads them.
+- `app/client/src/game/theme.css`: `--font-display` / `--font-text` per `:lang(ru)`, `:lang(zh-Hans)` (UI via `<html lang>`, question content via its own `lang`, task 629), fallback chain ending in system Cyrillic/CJK fonts.
+- CJK subset script in `app/desktop/` next to `stage-media.mjs` (fonttools from the flake): catalog `zh-Hans.ts` ∪ `app/data/names.zh-Hans.json` ∪ `pool.zh-Hans.json` (if present) ∪ GB2312 level 1; run by `trivia-desktop-build`; the dev client gets a committed subset or the same script via an npm script (pick the simpler, say which in the note).
+- `trivia-release-check`: a step that fails on a zh-Hans / Cyrillic character in a shipped catalog, names file or pool missing from the font.
+- `app/desktop/media-budget.json`: a `fonts` entry (MB), checked by `stage-media.mjs --check`.
+- Credits: `CREDITS.md` source / credits screen (`credits.ts`) list the new fonts with licence.
+- `/comodines` (`authoring/ui/src/print/JokerCards.svelte`) loads the same fonts.
+
+Check: `npm run check`, `npm test`, `npm run build`, `qgen validate`; `?lang=xx` / es page: network tab loads no Cyrillic/CJK font file; a throw-away page with ru/zh text renders in the new fonts (zh catalog may not exist yet: `names.zh-Hans.json` text suffices).', '2026-10-15T20:28:58Z', NULL, 1159, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1177, 142, 'Wiring of zh-Hans, ru, pt-BR in client, shell and tools', 'work', 'open', NULL, NULL, 'Task 3 of `plan 142: UI in the new languages`; per the key and picker decisions raised by task 1 (`pm show` lists them) and `decision 222: New UI languages (zh-Hans, ru, pt-BR): offered only once their pool ships`.
+
+- Catalogs `app/client/src/locales/{zh-Hans,ru,pt-BR}.ts`: start as copies of `en.ts` (`satisfies Catalog`), statically imported; tasks 4–6 translate them.
+- `lib/i18n.ts`: `CATALOGS`, `ENDONYMS` («简体中文», «Русский», «Português (Brasil)»); `UI_LANGS` / Start''s picker and the first-start guess gated per decision 222 (pool present and its default bundles'' supply passes; else only `?lang=` in dev and under `TRIVIA_DEV_STEAM_USER`); es/es-ES/en/de unchanged. `STEAM_LANGS` in `lib/engine.ts` already maps the three.
+- Flags per `decision 186: Language flags instead of the globe`: China, Russia, Brazil drawn in `Flags.svelte`.
+- `lib/input.svelte.ts` `toIntent`: per the key decision (recommended: `e.code` fallback when `e.key` is a non-Latin letter).
+- `picker.letters` per catalog and `MAX_NAME` per the picker decision (`LetterPicker.svelte`, Player screen).
+- `check:literals`: ru plural maps need `one`/`few`/`many` (+`other`); every catalog character covered by the locale''s font (after task 2; if task 2''s font files aren''t in yet, add a follow-up task instead).
+- `app/desktop/mods.mjs` `LANGS` (`check-mod.mjs` `LOCALES` is `task 1163: New locales zh-Hans, ru, pt-BR in the locale lists and rules`''s); `publish.mjs` Workshop language tags: Steam''s tag names (`schinese`/`russian`/`brazilian` style per Steam''s Workshop tag list), not `split("-")[0]`; modding kit docs (`modding/`) list the languages.
+- `authoring/tools/reviews.py` `LABELS` (`decision 142: Report text format (copy fallback, qgen flag)`): Question/Answer/Note labels as the catalogs will say them (take them from the catalog leaves at runtime if simple, else placeholders updated by tasks 4–6).
+- `authoring/tools/gallery.py` `LOCALES` += the three.
+- `/comodines?lang=`: zh-Hans, ru, pt-BR, all A4 (`@page size`).
+
+Check: `npm run check`, `npm test`, `npm run build`, `qgen validate`; `?lang=ru` in the dev client plays with Latin keys on a Russian layout (simulate `e.key` `ф` with `e.code` `KeyA` in a throw-away test); es/es-ES/en/de gallery shots unchanged (`trivia-gallery --only` a few).', '2026-10-15T20:28:58Z', NULL, 1159, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -30673,6 +30732,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1135, 1156, '2026-10-15T20:24:57Z', '2026-10-15T20:25:43Z', 'done', NULL, 0, '699a5977422036a7e9e609734de8ab4a996ec0c2', 'claude-opus-5-5[1m]', '635a13cc-3d0b-417c-93ba-02cd255a7a75', 7, 14, 4542, 220676, 28063, 0.3595352, 3530483);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1136, 1157, '2026-10-15T20:25:44Z', '2026-10-15T20:26:55Z', 'done', NULL, 0, '3359a8f30b380af8110de0155374c465a05b7cee', 'claude-opus-5-5[1m]', 'd5aa6986-5256-484d-9e05-cb2f00292004', 8, 16, 7013, 295445, 37284, 0.49768499999999993, 3530483);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1137, 1158, '2026-10-15T20:26:55Z', '2026-10-15T20:27:59Z', 'done', NULL, 0, 'b626e065197b84846394a8d5eb1262bd7b52ab8f', 'claude-opus-5-5[1m]', 'db8a8aa8-1ffe-455f-ad9c-2a1ebcceec1d', 11, 22, 6325, 462993, 41925, 0.5545866, 3530483);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1138, 1159, '2026-10-15T20:27:59Z', '2026-10-15T20:31:25Z', 'failed', 'interrupted', NULL, '959f804c32ae0e11be8d40783bd86f178c86cfef', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 3530483);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
