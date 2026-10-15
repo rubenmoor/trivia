@@ -29674,7 +29674,7 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 - 14 Símbolos folded into 3 Historia.
 - 10 Cine y televisión and 13 Vida diaria merged: «Vida diaria y televisión en {región}».
 - 7 Mitos y leyendas folded into 6: «Fiestas, tradiciones y leyendas de {región}».', NULL, NULL, '2026-10-15T19:04:01Z', NULL, 1137, NULL, 'rule', NULL, '');
-INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (214, 'neutralize-1: qgen validate fails after fix', 'pending', '["fix first: task 632 waits for task 1142, then resumes with plain `qgen neutralize`", "discard: revert questions.json, drop tasks 632 and 633"]', '`task 632: run neutralize-1` (decision 202: Run qgen neutralize on base now? → go).
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (214, 'neutralize-1: qgen validate fails after fix', 'answered', '["fix first: task 632 waits for task 1142, then resumes with plain `qgen neutralize`", "discard: revert questions.json, drop tasks 632 and 633"]', '`task 632: run neutralize-1` (decision 202: Run qgen neutralize on base now? → go).
 
 - Run 1: `qgen neutralize` exit 1 at `fix` (1 of 31 fact-check calls: `no fact check for q-1162`).
   `claude: 70 calls (0 failed, 0 retried), opus 39 / sonnet 31, 181 turns, 2.3M tokens (1.9M cache), $14.08, 46m56s in calls`
@@ -29692,7 +29692,7 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 - Working tree: `authoring/data/questions.json` has `fix`''s uncommitted rewording (~5000 lines changed). Other batch tasks will see a dirty tree until this resumes or is reverted.
 
 "fix first": task 632 resumes after task 1142, with plain `qgen neutralize`.
-"discard": `git checkout authoring/data/questions.json`, `work/neutralize-1/` stays, tasks 632 and 633 dropped.', NULL, NULL, '2026-10-15T19:36:54Z', NULL, 632, NULL, 'rule', NULL, '');
+"discard": `git checkout authoring/data/questions.json`, `work/neutralize-1/` stays, tasks 632 and 633 dropped.', 'fix first: task 632 resumes with plain qgen neutralize. Restoring stash@{0} conflicts in questions.json (36 hunks): resolve per question, stash''s version for the neutralized ones except q-0476, q-0590, q-0641, q-0768, q-0896, q-0931, q-0941, q-1100, q-1112, q-1178, q-1194 (reworked on main since, keep main''s; they stay un-neutralized, QC neutralize-1 notes them)', NULL, '2026-10-15T19:36:54Z', '2026-10-15T23:05:45Z', 632, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (215, 'Spot check batch-8 done?', 'answered', '["done"]', 'Blind spot check of batch-8 (QC.md step 2, `plan 16: Quality control after every batch`): 992 merged, 947 approved, 45 needs_work; report authoring/reports/batch-8.md (Audit: 1 of 57 approved with a major finding, audit/review agreement 95 %).
 Start `trivia-authoring`, then open http://127.0.0.1:8001/review?batch=batch-8&sample=1: 30 questions of the audit sample (`quality.spot_check_size`), LLM decision and audit hidden until you decide; about 10–15 min.
 Afterwards, the audit''s major findings on approved questions: http://127.0.0.1:8001/review?batch=batch-8&audit=flagged.
