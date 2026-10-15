@@ -5,7 +5,7 @@
 // Needs app/client/dist (`npm run build`) and the media cache (`trivia-media sync --status approved`).
 import { spawn } from "node:child_process";
 import { existsSync } from "node:fs";
-import { mkdir, mkdtemp, rm, writeFile } from "node:fs/promises";
+import { copyFile, mkdir, mkdtemp, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -305,7 +305,7 @@ async function main() {
       const file = path.join(OUT, `${ui}.mp4`);
       const secs = await cut(raw, rec.starts, marks, file);
       console.log(`  ${path.relative(REPO, file)} (${secs.toFixed(1)} s)`);
-      if (keepRaw) await run("cp", [raw, path.join(OUT, `${ui}.raw.mkv`)]);
+      if (keepRaw) await copyFile(raw, path.join(OUT, `${ui}.raw.mkv`));
       await rm(raw, { force: true });
     }
   } finally {

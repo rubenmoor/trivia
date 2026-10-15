@@ -1,9 +1,7 @@
 // app:// URL → file (plan 54). Web Request/Response only, so plain `node` can test it.
 import { createHash } from "node:crypto";
-import { createReadStream } from "node:fs";
-import { readdir, readFile, realpath, stat } from "node:fs/promises";
+import { open, readdir, readFile, realpath, stat } from "node:fs/promises";
 import path from "node:path";
-import { Readable } from "node:stream";
 
 const MIME = {
   ".html": "text/html; charset=utf-8",
@@ -102,7 +100,31 @@ function parseRange(header, size) {
   return start > end || start >= size ? false : { start, end };
 }
 
-const body = (file, opts) => Readable.toWeb(createReadStream(file, opts));
+const CHUNK = 256 * 1024;
+
+// Bytes start..end, read per pull. Not Readable.toWeb: a cancel mid-read (a dropped video) throws uncaught there (Node 22/24).
+function body(file, start, end) {
+  let fh = null;
+  let pos = start;
+  const close = () => fh?.close().catch(() => {});
+  return new ReadableStream({
+    async start() {
+      fh = await open(file, "r");
+    },
+    async pull(c) {
+      const want = Math.min(CHUNK, end - pos + 1);
+      const { bytesRead, buffer } = want > 0 ? await fh.read(Buffer.allocUnsafe(want), 0, want, pos) : { bytesRead: 0 };
+      if (!bytesRead) {
+        await close();
+        c.close();
+        return;
+      }
+      pos += bytesRead;
+      c.enqueue(new Uint8Array(buffer.buffer, buffer.byteOffset, bytesRead));
+    },
+    cancel: close,
+  });
+}
 
 async function sendFile(file, request, extra = {}) {
   const { size } = await stat(file);
@@ -112,12 +134,12 @@ async function sendFile(file, request, extra = {}) {
     return new Response(null, { status: 416, headers: { ...headers, "content-range": `bytes */${size}` } });
   if (range) {
     const { start, end } = range;
-    return new Response(body(file, { start, end }), {
+    return new Response(body(file, start, end), {
       status: 206,
       headers: { ...headers, "content-length": String(end - start + 1), "content-range": `bytes ${start}-${end}/${size}` },
     });
   }
-  return new Response(size ? body(file) : null, { status: 200, headers: { ...headers, "content-length": String(size) } });
+  return new Response(size ? body(file, 0, size - 1) : null, { status: 200, headers: { ...headers, "content-length": String(size) } });
 }
 
 // Same name as authoring/tools/media_cache.py cache_path (D-17).

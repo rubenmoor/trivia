@@ -268,12 +268,13 @@ def build_if_stale():
 
 
 class Server:
-    """`vite preview` with the dev server's plugin; stopped by its process group (npm → sh → vite)."""
+    """`vite preview` with the dev server's plugin on a temp save dir; stopped by its process group (npm → sh → vite)."""
 
-    def __init__(self, save_dir):
+    def __init__(self):
         self.port = free_port()
         self.log = tempfile.TemporaryFile()
-        env = {**os.environ, "TRIVIA_SAVE_DIR": str(save_dir), "TRIVIA_MUTE": "1"}
+        self.save_dir = Path(tempfile.mkdtemp(prefix="trivia-gallery-"))
+        env = {**os.environ, "TRIVIA_SAVE_DIR": str(self.save_dir), "TRIVIA_MUTE": "1"}
         self.proc = subprocess.Popen(["npm", "run", "serve", "-w", "app/client", "--", "--port", str(self.port)],
                                      cwd=REPO, env=env, stdout=self.log, stderr=subprocess.STDOUT, start_new_session=True)
         self.url = f"http://localhost:{self.port}"
@@ -293,13 +294,14 @@ class Server:
         if self.proc.poll() is None:
             os.killpg(self.proc.pid, signal.SIGTERM)
             self.proc.wait(10)
+        shutil.rmtree(self.save_dir, ignore_errors=True)
 
 
 class Run:
     """One UI language: scenes (a save, a stub config, a fresh page) and shots."""
 
-    def __init__(self, browser, server, save_dir, ui, demo, data, only, manifest):
-        self.browser, self.server, self.save, self.ui = browser, server, save_dir / "game.json", ui
+    def __init__(self, browser, server, ui, demo, data, only, manifest):
+        self.browser, self.server, self.save, self.ui = browser, server, server.save_dir / "game.json", ui
         self.saves, self.meta, self.data, self.only = demo["saves"], demo["meta"], data, only
         self.shots = manifest.setdefault("locales", {}).setdefault(ui, {})
         self.context = self.page = None
@@ -667,13 +669,12 @@ def main():
     build_if_stale()
     OUT.mkdir(parents=True, exist_ok=True)
     manifest_file = OUT / "manifest.json"
-    manifest = json.loads(manifest_file.read_text()) if manifest_file.exists() else {}
+    manifest = json.loads(manifest_file.read_text(encoding="utf-8")) if manifest_file.exists() else {}
     commit = subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=REPO, capture_output=True, text=True).stdout.strip()
     dirty = subprocess.run(["git", "status", "--porcelain"], cwd=REPO, capture_output=True, text=True).stdout.strip()
     manifest.update(run=datetime.datetime.now().isoformat(timespec="seconds"), commit=commit + ("-dirty" if dirty else ""))
     shutil.rmtree(OUT / "failed", ignore_errors=True)
-    tmp = Path(tempfile.mkdtemp(prefix="trivia-gallery-"))
-    server = Server(tmp)
+    server = Server()
     failed = []
     try:
         with sync_playwright() as p:
@@ -683,7 +684,7 @@ def main():
                 print(ui, flush=True)
                 demo = json.loads(subprocess.run(["node", str(REPO / "authoring/tools/gallery_saves.mjs"), ui],
                                                  cwd=REPO, check=True, capture_output=True, text=True).stdout)
-                r = Run(browser, server, tmp, ui, demo, data_strings(demo["players"]), only, manifest)
+                r = Run(browser, server, ui, demo, data_strings(demo["players"]), only, manifest)
                 for shots, step in STEPS:
                     if only and not only.intersection(shots):
                         continue
@@ -692,7 +693,8 @@ def main():
                     except Exception as e:  # one broken step doesn't stop the gallery
                         failed.append(f"{ui}/{step.__name__}: {str(e).splitlines()[0]}")
                         (OUT / "failed").mkdir(exist_ok=True)
-                        r.page.screenshot(path=str(OUT / "failed" / f"{ui}-{step.__name__}.png"))
+                        if r.page:
+                            r.page.screenshot(path=str(OUT / "failed" / f"{ui}-{step.__name__}.png"))
                         print(f"  FAILED {failed[-1]}", flush=True)
                 r.close()
                 manifest["locales"][ui] = dict(sorted(manifest["locales"][ui].items(), key=lambda kv: names.index(kv[0])
@@ -700,8 +702,7 @@ def main():
             browser.close()
     finally:
         server.stop()
-        shutil.rmtree(tmp, ignore_errors=True)
-        manifest_file.write_text(json.dumps(manifest, ensure_ascii=False, indent=1) + "\n")
+        manifest_file.write_text(json.dumps(manifest, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f"gallery: {OUT.relative_to(REPO)}/ ({', '.join(locales)})")
     if failed:
         sys.exit("gallery: failed steps:\n  " + "\n  ".join(failed))

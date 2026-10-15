@@ -384,7 +384,7 @@ class Handler(BaseHandler):
     pool_file = POOL
 
     def send_media(self, file_url):
-        """Like the game's, but downloads on a cache miss (the game server never does)."""
+        """The base's, after a download on a cache miss (the game never downloads)."""
         if file_url in media_cache.pool_urls(self.pool_file):
             try:
                 download.cached(file_url)

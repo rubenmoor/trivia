@@ -37,9 +37,25 @@ type Res = Parameters<Connect.NextHandleFunction>[1];
 async function send(res: Res, r: Response): Promise<void> {
   res.statusCode = r.status;
   r.headers.forEach((v, k) => res.setHeader(k, v));
-  if (r.body) for await (const chunk of r.body) res.write(chunk);
+  // Backpressure, and stop when the page drops it (video seek): else a whole video sits in memory.
+  if (r.body)
+    for await (const chunk of r.body) {
+      if (res.destroyed) break;
+      if (!res.write(chunk)) await drained(res);
+    }
   res.end();
 }
+
+const drained = (res: Res) =>
+  new Promise<void>((go) => {
+    const done = () => {
+      res.off("drain", done);
+      res.off("close", done);
+      go();
+    };
+    res.on("drain", done);
+    res.on("close", done);
+  });
 
 async function text(req: Req): Promise<string> {
   const chunks: Uint8Array[] = [];

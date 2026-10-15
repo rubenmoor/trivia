@@ -61,6 +61,7 @@ function dlcs() {
 
 // The template --------------------------------------------------------------------------------
 
+// app/client/src/game/theme.css tokens (the page is replaced, so no var()).
 const C = {
   night900: "#0b1120", night800: "#111a2e", night700: "#1a2540", slate600: "#2b3650",
   paper: "#eef1f6", amber: "#ffb81c", amberDeep: "#b97a00", sky: "#4cc9f0", mint: "#2fe39a", coral: "#ff5470",

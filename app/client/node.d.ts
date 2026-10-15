@@ -3,13 +3,11 @@ declare module "node:fs" {
   export function existsSync(path: string): boolean;
   export function readdirSync(path: string): string[];
   export function readFileSync(path: string, encoding: "utf8"): string;
+  export function mkdtempSync(prefix: string): string;
+  export function globSync(pattern: string, options: { cwd: string; exclude: string[] }): string[];
 }
 declare module "node:url" {
   export function fileURLToPath(url: URL): string;
-}
-declare module "node:fs" {
-  export function mkdtempSync(prefix: string): string;
-  export function globSync(pattern: string, options: { cwd: string; exclude: string[] }): string[];
 }
 declare module "node:os" {
   export function tmpdir(): string;
