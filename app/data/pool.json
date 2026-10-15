@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "e86196d0",
+  "hash": "60f15875",
   "questions": [
     {
       "id": "q-0001",
@@ -37386,40 +37386,6 @@
       "background": null
     },
     {
-      "id": "q-1246",
-      "status": "approved",
-      "difficulty": 7,
-      "subcategory": "Billetes del mundo",
-      "bundle": "base",
-      "description": "Una mujer tan famosa que tiene musical, película y billete propio.",
-      "question": "La llamaban 'Evita', su cara salió en un billete de 100 pesos y fue primera dama. ¿De qué país?",
-      "answer": "Argentina",
-      "wrong_answers": [
-        "Chile",
-        "Uruguay",
-        "México"
-      ],
-      "hints": [
-        "Es un país de Sudamérica.",
-        "Allá es famoso el tango.",
-        "Su capital es Buenos Aires."
-      ],
-      "fun_fact": "En 2012 Eva Perón se convirtió en la primera mujer real en aparecer en un billete argentino de uso diario.",
-      "media": {
-        "type": "image",
-        "role": "decorative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/%22Victory%22_Philippines_Peso.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3A%22Victory%22_Philippines_Peso.jpg",
-        "credit": "Jeffrey Hagelberg · CC BY-SA 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Jeffrey Hagelberg",
-        "author_url": null
-      },
-      "background": null
-    },
-    {
       "id": "q-1247",
       "status": "approved",
       "difficulty": 5,
@@ -39972,7 +39938,7 @@
     {
       "id": "q-1322",
       "status": "approved",
-      "difficulty": 7,
+      "difficulty": 9,
       "subcategory": "Crímenes famosos",
       "bundle": "base",
       "description": "Antes de las redes sociales, los romanos publicaban las cosas importantes en la plaza.",
@@ -40272,40 +40238,6 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Edwin of Northumbria",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Edwin_of_Northumbria&action=edit&redlink=1"
-      },
-      "background": null
-    },
-    {
-      "id": "q-1331",
-      "status": "approved",
-      "difficulty": 9,
-      "subcategory": "Dinosaurios",
-      "bundle": "base",
-      "description": "Antes de las redes sociales, la gente publicaba sus fotos directamente en la pared… de una montaña.",
-      "question": "Está pintado sobre roca, tiene miles de años y lo hay en Chiribiquete y en Altamira. ¿Cómo se llama este arte?",
-      "answer": "Arte rupestre",
-      "wrong_answers": [
-        "Arte gótico",
-        "Arte barroco",
-        "Arte bizantino"
-      ],
-      "hints": [
-        "Lo hicieron los primeros grupos humanos, mucho antes de que existieran ciudades.",
-        "Muchas de estas pinturas están en cuevas o en paredes de piedra.",
-        "Su nombre viene de una palabra latina que significa 'roca'."
-      ],
-      "fun_fact": "En Chiribiquete hay decenas de miles de figuras pintadas, y el parque es Patrimonio de la Humanidad desde 2018.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Parque_Nacional_Natural_Serran%C3%ADa_de_Chiribiquete.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AParque_Nacional_Natural_Serran%C3%ADa_de_Chiribiquete.jpg",
-        "credit": "Ministerio de Ambiente de Colombia · CC BY-SA 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Ministerio de Ambiente de Colombia",
-        "author_url": null
       },
       "background": null
     },
@@ -44322,6 +44254,40 @@
       "background": null
     },
     {
+      "id": "q-1452",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "Fantasía",
+      "bundle": "base",
+      "description": "Un papá que cuida la silla del rey pero no quiere devolverla.",
+      "question": "Gobierno Gondor mientras no hay rey y soy el padre de Boromir y Faramir. ¿Quién soy?",
+      "answer": "Denethor",
+      "wrong_answers": [
+        "Éomer",
+        "Isildur",
+        "Elendil"
+      ],
+      "hints": [
+        "Mi cargo se llama senescal.",
+        "Vivo en Minas Tirith.",
+        "Tengo una piedra para ver lejos, un palantír."
+      ],
+      "fun_fact": "En la película, Denethor lo interpreta el actor australiano John Noble.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Neamt_Citadel%2C_Medieval_Romanian_Fortress_18.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANeamt_Citadel%2C_Medieval_Romanian_Fortress_18.JPG",
+        "credit": "Moldavia · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Moldavia",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Moldavia&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-1453",
       "status": "approved",
       "difficulty": 3,
@@ -47248,7 +47214,7 @@
     {
       "id": "q-1539",
       "status": "approved",
-      "difficulty": 10,
+      "difficulty": 8,
       "subcategory": "Hip hop y rap",
       "bundle": "base",
       "description": "Una fiesta en la que los vecinos no pueden quejarse del ruido porque todos están invitados.",
@@ -48636,40 +48602,6 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Shixart1985",
         "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
-      },
-      "background": null
-    },
-    {
-      "id": "q-1581",
-      "status": "approved",
-      "difficulty": 13,
-      "subcategory": "Inventos por accidente",
-      "bundle": "base",
-      "description": "El postre perfecto para quienes cocinan todo al revés y aun así quedan como chefs.",
-      "question": "Tres pistas: lleva el apellido de dos hermanas que tenían un hotel en Francia, se hornea con la masa encima y luego se voltea. ¿Qué postre es?",
-      "answer": "Tarta Tatin",
-      "wrong_answers": [
-        "Crepe Suzette",
-        "Clafoutis",
-        "Milhojas"
-      ],
-      "hints": [
-        "La leyenda dice que una de las hermanas se equivocó al prepararla.",
-        "Al voltearla quedan arriba frutas caramelizadas.",
-        "Es una tarta de manzanas al revés."
-      ],
-      "fun_fact": "Las hermanas Stéphanie y Caroline Tatin tenían su hotel en Lamotte-Beuvron, en el valle del Loira, a finales del siglo XIX.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Beuvron_River_in_Bracieux.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ABeuvron_River_in_Bracieux.jpg",
-        "credit": "Krzysztof Golik · CC BY-SA 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Krzysztof Golik",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Tournasol7"
       },
       "background": null
     },
@@ -50521,7 +50453,7 @@
     {
       "id": "q-1636",
       "status": "approved",
-      "difficulty": 12,
+      "difficulty": 13,
       "subcategory": "Monarquía británica",
       "bundle": "base",
       "description": "Un rey que llegó al trono de suplente, como portero que entra en el minuto 90.",
@@ -50855,40 +50787,6 @@
         "license_url": null,
         "author": "The government of the Democratic Republic of Vietnam (North Vietnam).",
         "author_url": null
-      },
-      "background": null
-    },
-    {
-      "id": "q-1646",
-      "status": "approved",
-      "difficulty": 8,
-      "subcategory": "Monedas del mundo",
-      "bundle": "base",
-      "description": "Un billete también tiene columna vertebral, y es muy delgadita.",
-      "question": "Soy una tira delgada metida dentro del billete, de arriba abajo, y me ves al ponerlo a contraluz. ¿Qué parte soy?",
-      "answer": "El hilo de seguridad",
-      "wrong_answers": [
-        "La marca de agua",
-        "El holograma",
-        "El microtexto"
-      ],
-      "hints": [
-        "Sirvo para que no falsifiquen los billetes.",
-        "No soy un dibujo ni una imagen: soy una cinta.",
-        "Mi nombre suena a costura."
-      ],
-      "fun_fact": "El Banco de Inglaterra empezó a poner hilos de metal en sus billetes en los años cuarenta.",
-      "media": {
-        "type": "image",
-        "role": "decorative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Money_-_Flickr_-_Tracy_O.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AMoney_-_Flickr_-_Tracy_O.jpg",
-        "credit": "Tracy O · CC BY-SA 2.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 2.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-        "author": "Tracy O",
-        "author_url": "https://www.flickr.com/people/37108241@N00"
       },
       "background": null
     },
@@ -52493,7 +52391,7 @@
     {
       "id": "q-1695",
       "status": "approved",
-      "difficulty": 2,
+      "difficulty": 5,
       "subcategory": "Origen de las marcas",
       "bundle": "base",
       "description": "Algo que se llevó hasta la Luna sin pagar exceso de equipaje.",
@@ -59368,40 +59266,6 @@
       "background": null
     },
     {
-      "id": "q-1897",
-      "status": "approved",
-      "difficulty": 10,
-      "subcategory": "Fotografía",
-      "bundle": "base",
-      "description": "La foto de perfil más famosa del planeta, y el planeta ni siquiera tuvo que posar.",
-      "question": "Los astronautas del Apolo 17 tomaron \"La canica azul\", la famosa foto de la Tierra entera. ¿En qué año?",
-      "answer": "1972",
-      "wrong_answers": [
-        "1965",
-        "1969",
-        "1977"
-      ],
-      "hints": [
-        "Fue durante la época de las misiones a la Luna.",
-        "Fue unos pocos años después de la primera llegada a la Luna.",
-        "Fue a comienzos de los años 70."
-      ],
-      "fun_fact": "La foto se tomó el 7 de diciembre de 1972, cuando el Apolo 17 iba camino a la Luna.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Apollo_17_Harrison_H._Schmitt_and_Tracy%27s_Rock_-_AS17-140-21493%2BAS17-140-21497_2025.jpg/3840px-Apollo_17_Harrison_H._Schmitt_and_Tracy%27s_Rock_-_AS17-140-21493%2BAS17-140-21497_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AApollo_17_Harrison_H._Schmitt_and_Tracy%27s_Rock_-_AS17-140-21493%2BAS17-140-21497_2025.jpg",
-        "credit": "Eugene A. CernanPhotomontage by User:Grunpfnul · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Eugene A. CernanPhotomontage by User:Grunpfnul",
-        "author_url": "https://commons.wikimedia.org/wiki/Category:Eugene_A._Cernan"
-      },
-      "background": null
-    },
-    {
       "id": "q-1898",
       "status": "approved",
       "difficulty": 3,
@@ -61170,40 +61034,6 @@
       "background": null
     },
     {
-      "id": "q-1950",
-      "status": "approved",
-      "difficulty": 10,
-      "subcategory": "James Bond",
-      "bundle": "base",
-      "description": "Esmoquin, martini y relojes con láser: el uniforme de trabajo de cierto espía británico.",
-      "question": "¿Qué película de 007, secuela directa de «Casino Royale», tiene un título que en inglés significa «una pizca de consuelo»?",
-      "answer": "Quantum of Solace",
-      "wrong_answers": [
-        "Skyfall",
-        "Spectre",
-        "GoldenEye"
-      ],
-      "hints": [
-        "Se estrenó en 2008.",
-        "En ella, Bond viaja a Bolivia, aunque se filmó en el desierto de Atacama.",
-        "La primera palabra del título viene del latín y significa «cantidad»."
-      ],
-      "fun_fact": "El título viene de un cuento de Ian Fleming que no tiene nada que ver con la trama de la película.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Atacama_Desert_Landscape_%28iced_moment_870-CC%29.jpg/3840px-Atacama_Desert_Landscape_%28iced_moment_870-CC%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AAtacama_Desert_Landscape_%28iced_moment_870-CC%29.jpg",
-        "credit": "L. Honnorat/ESO · CC BY 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY 4.0",
-        "license_url": "https://creativecommons.org/licenses/by/4.0",
-        "author": "L. Honnorat/ESO",
-        "author_url": null
-      },
-      "background": null
-    },
-    {
       "id": "q-1951",
       "status": "approved",
       "difficulty": 12,
@@ -61948,40 +61778,6 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Diliff",
         "author_url": "https://commons.wikimedia.org/wiki/User:Diliff"
-      },
-      "background": null
-    },
-    {
-      "id": "q-1973",
-      "status": "approved",
-      "difficulty": 6,
-      "subcategory": "Monedas del mundo",
-      "bundle": "base",
-      "description": "El dinero con el que en este país se compran camisetas con el número 10 en la espalda.",
-      "question": "Tres pistas: se usa en el país de Messi, su signo es $ y se divide en centavos. ¿Qué moneda es?",
-      "answer": "El peso",
-      "wrong_answers": [
-        "El real",
-        "El sol",
-        "El guaraní"
-      ],
-      "hints": [
-        "Ese país es famoso por el tango y el dulce de leche.",
-        "Varios países de América usan una moneda con el mismo nombre.",
-        "Su nombre también es lo que mide una balanza."
-      ],
-      "fun_fact": "Algunos billetes argentinos recientes muestran animales como la ballena franca, el cóndor y el yaguareté.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Obelisco_de_Buenos_Aires_at_sunset.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AObelisco_de_Buenos_Aires_at_sunset.jpg",
-        "credit": "Dpalma01 · CC BY-SA 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Dpalma01",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Dpalma01"
       },
       "background": null
     },
@@ -64581,7 +64377,7 @@
     {
       "id": "q-2052",
       "status": "approved",
-      "difficulty": 9,
+      "difficulty": 12,
       "subcategory": "Religiones del mundo",
       "bundle": "base",
       "description": "Un panteón tan grande que a alguien se le coló un invitado de otro continente.",
@@ -65465,7 +65261,7 @@
     {
       "id": "q-2079",
       "status": "approved",
-      "difficulty": 7,
+      "difficulty": 10,
       "subcategory": "Telenovelas",
       "bundle": "base",
       "description": "Antes de los mil capítulos y las gemelas malvadas, alguien tuvo que dar el primer paso.",

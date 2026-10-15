@@ -88656,11 +88656,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:44:04"
       },
       "bundle": "base",
       "background": null,
@@ -91109,7 +91117,7 @@
     },
     {
       "id": "q-1246",
-      "status": "approved",
+      "status": "needs_work",
       "difficulty": 7,
       "description": "Una mujer tan famosa que tiene musical, película y billete propio.",
       "question": "La llamaban 'Evita', su cara salió en un billete de 100 pesos y fue primera dama. ¿De qué país?",
@@ -91129,16 +91137,19 @@
         "role": "decorative",
         "query": "old peso banknotes",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3A%22Victory%22_Philippines_Peso.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/%22Victory%22_Philippines_Peso.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Jeffrey Hagelberg · CC BY-SA 4.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AYucatan_5_Peso_1898_B.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Yucatan_5_Peso_1898_B.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Banco Mercantil de Yucatan / American Banknote Company · Public domain · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Jeffrey Hagelberg",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Banco Mercantil de Yucatan / American Banknote Company",
         "author_url": null,
         "restrictions": [],
-        "pd_reasons": []
+        "pd_reasons": [
+          "PD-Mexico",
+          "PD-US-expired"
+        ]
       },
       "fun_fact": "En 2012 Eva Perón se convirtió en la primera mujer real en aparecer en un billete argentino de uso diario.",
       "subcategory": "Billetes del mundo",
@@ -91167,13 +91178,21 @@
       "needs_media": false,
       "batch": "batch-8",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
+        "decision": "needs_work",
+        "feedback": "the original image didn't actually show a peso bill",
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:42:01"
       },
       "bundle": "base",
       "background": null
@@ -91686,11 +91705,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:29:58"
       },
       "bundle": "base",
       "background": null,
@@ -93643,11 +93670,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:49:48"
       },
       "bundle": "base",
       "background": null,
@@ -94117,11 +94152,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:54:32"
       },
       "bundle": "base",
       "background": null
@@ -96400,11 +96443,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:30:12"
       },
       "bundle": "base",
       "background": null,
@@ -96483,11 +96534,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:51:16"
       },
       "bundle": "base",
       "background": null,
@@ -96899,7 +96958,7 @@
     {
       "id": "q-1322",
       "status": "approved",
-      "difficulty": 7,
+      "difficulty": 9,
       "description": "Antes de las redes sociales, los romanos publicaban las cosas importantes en la plaza.",
       "question": "Fuimos doce y nos pusieron en el Foro de Roma hace unos 2500 años para que todos nos leyeran. ¿Qué teníamos escrito?",
       "answer": "Las leyes de la ciudad",
@@ -96974,7 +97033,8 @@
           "answer": "Las leyes"
         },
         "revised_on": "2026-10-15"
-      }
+      },
+      "difficulty_original": 7
     },
     {
       "id": "q-1323",
@@ -97263,11 +97323,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:33:41"
       },
       "bundle": "base",
       "background": null
@@ -97336,11 +97404,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:56:13"
       },
       "bundle": "base",
       "background": null,
@@ -97600,7 +97676,7 @@
     },
     {
       "id": "q-1331",
-      "status": "approved",
+      "status": "needs_work",
       "difficulty": 9,
       "description": "Antes de las redes sociales, la gente publicaba sus fotos directamente en la pared… de una montaña.",
       "question": "Está pintado sobre roca, tiene miles de años y lo hay en Chiribiquete y en Altamira. ¿Cómo se llama este arte?",
@@ -97658,13 +97734,24 @@
       "needs_media": true,
       "batch": "batch-8",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
+        "decision": "needs_work",
+        "feedback": "the image doesn't show the art at all",
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-fable-5-1",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-fable-5-1",
+          "previous": null
+        },
+        "problems": [
+          "media"
+        ],
+        "reviewed_at": "2026-10-15T17:28:49"
       },
       "bundle": "base",
       "background": null,
@@ -98495,11 +98582,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:34:25"
       },
       "bundle": "base",
       "background": null
@@ -98710,11 +98805,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:32:47"
       },
       "bundle": "base",
       "background": null
@@ -98925,11 +99028,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:29:30"
       },
       "bundle": "base",
       "background": null,
@@ -99318,11 +99429,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:48:16"
       },
       "bundle": "base",
       "background": null
@@ -99602,11 +99721,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:34:16"
       },
       "bundle": "base",
       "background": null,
@@ -101209,11 +101336,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:44:29"
       },
       "bundle": "base",
       "background": null
@@ -102112,11 +102247,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:56:22"
       },
       "bundle": "base",
       "background": null
@@ -102183,11 +102326,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:38:10"
       },
       "bundle": "base",
       "background": null,
@@ -102985,11 +103136,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:26:38"
       },
       "bundle": "base",
       "background": null
@@ -103952,11 +104111,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:54:07"
       },
       "bundle": "base",
       "background": null,
@@ -104715,11 +104882,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:40:49"
       },
       "bundle": "base",
       "background": null
@@ -105917,11 +106092,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:32:21"
       },
       "bundle": "base",
       "background": null
@@ -106541,11 +106724,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:48:32"
       },
       "bundle": "base",
       "background": null
@@ -106612,11 +106803,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:38:18"
       },
       "bundle": "base",
       "background": null
@@ -106780,11 +106979,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:39:25"
       },
       "bundle": "base",
       "background": null,
@@ -106804,7 +107011,7 @@
     },
     {
       "id": "q-1452",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 12,
       "description": "Un papá que cuida la silla del rey pero no quiere devolverla.",
       "question": "Gobierno Gondor mientras no hay rey y soy el padre de Boromir y Faramir. ¿Quién soy?",
@@ -106824,9 +107031,16 @@
         "role": "illustrative",
         "query": "medieval stone citadel",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANeamt_Citadel%2C_Medieval_Romanian_Fortress_18.JPG",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Neamt_Citadel%2C_Medieval_Romanian_Fortress_18.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Moldavia · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Moldavia",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Moldavia&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "En la película, Denethor lo interpreta el actor australiano John Noble.",
       "subcategory": "Fantasía",
@@ -106855,15 +107069,23 @@
       "needs_media": true,
       "batch": "batch-8",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:43:18"
       },
       "bundle": "base",
       "background": null,
@@ -107493,11 +107715,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:55:34"
       },
       "bundle": "base",
       "background": null
@@ -108712,11 +108942,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:38:46"
       },
       "bundle": "base",
       "background": null,
@@ -108791,11 +109029,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:34:33"
       },
       "bundle": "base",
       "background": null
@@ -110746,11 +110992,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:53:36"
       },
       "bundle": "base",
       "background": null,
@@ -112628,11 +112882,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:39:06"
       },
       "bundle": "base",
       "background": null
@@ -112997,11 +113259,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:43:06"
       },
       "bundle": "base",
       "background": null
@@ -113139,11 +113409,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:33:23"
       },
       "bundle": "base",
       "background": null
@@ -113528,7 +113806,7 @@
     {
       "id": "q-1539",
       "status": "approved",
-      "difficulty": 10,
+      "difficulty": 8,
       "description": "Una fiesta en la que los vecinos no pueden quejarse del ruido porque todos están invitados.",
       "question": "Soy una fiesta en plena calle de un barrio del Bronx; los DJ conectaban sus altavoces a los postes de luz. ¿Cómo me llamo?",
       "answer": "Block party",
@@ -113590,11 +113868,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:37:34"
       },
       "bundle": "base",
       "background": null,
@@ -113606,7 +113892,8 @@
           "fun_fact": "Muchos DJ del Bronx sacaban electricidad de los postes de luz para hacer sonar sus equipos en la calle."
         },
         "revised_on": "2026-10-15"
-      }
+      },
+      "difficulty_original": 10
     },
     {
       "id": "q-1540",
@@ -115588,11 +115875,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:51:22"
       },
       "bundle": "base",
       "background": null
@@ -116651,11 +116946,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:30:26"
       },
       "bundle": "base",
       "background": null
@@ -116816,7 +117119,7 @@
     },
     {
       "id": "q-1581",
-      "status": "approved",
+      "status": "needs_work",
       "difficulty": 13,
       "description": "El postre perfecto para quienes cocinan todo al revés y aun así quedan como chefs.",
       "question": "Tres pistas: lleva el apellido de dos hermanas que tenían un hotel en Francia, se hornea con la masa encima y luego se voltea. ¿Qué postre es?",
@@ -116874,13 +117177,24 @@
       "needs_media": false,
       "batch": "batch-8",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
+        "decision": "needs_work",
+        "feedback": "the \"three hints\" style should be purged. this one has two hints",
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "problems": [
+          "style"
+        ],
+        "reviewed_at": "2026-10-15T17:28:12"
       },
       "bundle": "base",
       "background": null
@@ -117591,11 +117905,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:29:43"
       },
       "bundle": "base",
       "background": null,
@@ -117765,11 +118087,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:55:45"
       },
       "bundle": "base",
       "background": null,
@@ -118525,11 +118855,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:30:35"
       },
       "bundle": "base",
       "background": null
@@ -119158,11 +119496,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:54:52"
       },
       "bundle": "base",
       "background": null
@@ -119229,11 +119575,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:55:07"
       },
       "bundle": "base",
       "background": null
@@ -120097,11 +120451,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:33:03"
       },
       "bundle": "base",
       "background": null
@@ -120818,11 +121180,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:53:45"
       },
       "bundle": "base",
       "background": null
@@ -121168,7 +121538,7 @@
     {
       "id": "q-1636",
       "status": "approved",
-      "difficulty": 12,
+      "difficulty": 13,
       "description": "Un rey que llegó al trono de suplente, como portero que entra en el minuto 90.",
       "question": "Nunca iba a ser rey, pero mi hermano renunció a la corona por amor y me tocó a mí. Además, tartamudeaba. ¿Quién soy?",
       "answer": "Jorge VI",
@@ -121227,11 +121597,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:53:26"
       },
       "bundle": "base",
       "background": null,
@@ -121242,7 +121620,8 @@
           "description": "Un rey que llegó al trono de suplente, como arquero que entra en el minuto 90."
         },
         "revised_on": "2026-10-15"
-      }
+      },
+      "difficulty_original": 12
     },
     {
       "id": "q-1637",
@@ -121920,7 +122299,7 @@
     },
     {
       "id": "q-1646",
-      "status": "approved",
+      "status": "needs_work",
       "difficulty": 8,
       "description": "Un billete también tiene columna vertebral, y es muy delgadita.",
       "question": "Soy una tira delgada metida dentro del billete, de arriba abajo, y me ves al ponerlo a contraluz. ¿Qué parte soy?",
@@ -121978,13 +122357,21 @@
       "needs_media": false,
       "batch": "batch-8",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
+        "decision": "needs_work",
+        "feedback": "i don't think the bills of every currency have that. and for regional it's not specific enough",
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:32:06"
       },
       "bundle": "base",
       "background": null
@@ -125492,11 +125879,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:47:05"
       },
       "bundle": "base",
       "background": null
@@ -125659,7 +126054,7 @@
     {
       "id": "q-1695",
       "status": "approved",
-      "difficulty": 2,
+      "difficulty": 5,
       "description": "Algo que se llevó hasta la Luna sin pagar exceso de equipaje.",
       "question": "Soy de la marca suiza Omega y viajé a la Luna en la muñeca de los astronautas. ¿Qué soy?",
       "answer": "Un reloj",
@@ -125720,14 +126115,23 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:53:53"
       },
       "bundle": "base",
-      "background": null
+      "background": null,
+      "difficulty_original": 2
     },
     {
       "id": "q-1696",
@@ -126330,11 +126734,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:36:30"
       },
       "bundle": "base",
       "background": null
@@ -128883,11 +129295,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:41:08"
       },
       "bundle": "base",
       "background": null
@@ -131443,11 +131863,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:50:38"
       },
       "bundle": "base",
       "background": null
@@ -131656,11 +132084,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:54:14"
       },
       "bundle": "base",
       "background": null
@@ -136438,11 +136874,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:40:41"
       },
       "bundle": "base",
       "background": null,
@@ -138757,11 +139201,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:50:46"
       },
       "bundle": "base",
       "background": null
@@ -139063,11 +139515,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:36:11"
       },
       "bundle": "base",
       "background": null
@@ -139134,11 +139594,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:52:44"
       },
       "bundle": "base",
       "background": null
@@ -140967,18 +141435,26 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:46:56"
       },
       "bundle": "base",
       "background": null
     },
     {
       "id": "q-1897",
-      "status": "approved",
+      "status": "needs_work",
       "difficulty": 10,
       "description": "La foto de perfil más famosa del planeta, y el planeta ni siquiera tuvo que posar.",
       "question": "Los astronautas del Apolo 17 tomaron \"La canica azul\", la famosa foto de la Tierra entera. ¿En qué año?",
@@ -141038,13 +141514,24 @@
       "needs_media": false,
       "batch": "batch-8",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
+        "decision": "needs_work",
+        "feedback": "needs photo of earth from space",
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "problems": [
+          "media"
+        ],
+        "reviewed_at": "2026-10-15T17:45:15"
       },
       "bundle": "base",
       "background": null
@@ -141111,11 +141598,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:32:35"
       },
       "bundle": "base",
       "background": null
@@ -141182,11 +141677,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:50:01"
       },
       "bundle": "base",
       "background": null
@@ -142076,11 +142579,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:43:48"
       },
       "bundle": "base",
       "background": null
@@ -142218,11 +142729,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:37:04"
       },
       "bundle": "base",
       "background": null,
@@ -142384,11 +142903,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:49:31"
       },
       "bundle": "base",
       "background": null
@@ -142534,11 +143061,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:36:41"
       },
       "bundle": "base",
       "background": null
@@ -144309,11 +144844,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:49:17"
       },
       "bundle": "base",
       "background": null
@@ -144549,11 +145092,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:35:55"
       },
       "bundle": "base",
       "background": null
@@ -144917,7 +145468,7 @@
     },
     {
       "id": "q-1950",
-      "status": "approved",
+      "status": "needs_work",
       "difficulty": 10,
       "description": "Esmoquin, martini y relojes con láser: el uniforme de trabajo de cierto espía británico.",
       "question": "¿Qué película de 007, secuela directa de «Casino Royale», tiene un título que en inglés significa «una pizca de consuelo»?",
@@ -144975,13 +145526,21 @@
       "needs_media": false,
       "batch": "batch-8",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
+        "decision": "needs_work",
+        "feedback": "this might work ... not sure how this question translates to english.",
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:40:26"
       },
       "bundle": "base",
       "background": null,
@@ -145844,11 +146403,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:27:01"
       },
       "bundle": "base",
       "background": null
@@ -146057,11 +146624,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:32:56"
       },
       "bundle": "base",
       "background": null
@@ -146587,7 +147162,7 @@
     },
     {
       "id": "q-1973",
-      "status": "approved",
+      "status": "rejected",
       "difficulty": 6,
       "description": "El dinero con el que en este país se compran camisetas con el número 10 en la espalda.",
       "question": "Tres pistas: se usa en el país de Messi, su signo es $ y se divide en centavos. ¿Qué moneda es?",
@@ -146645,13 +147220,21 @@
       "needs_media": false,
       "batch": "batch-8",
       "review": {
-        "decision": "approved",
+        "decision": "rejected",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:52:19"
       },
       "bundle": "base",
       "background": null,
@@ -148462,11 +149045,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:30:56"
       },
       "bundle": "base",
       "background": null
@@ -151114,11 +151705,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:55:21"
       },
       "bundle": "base",
       "background": null
@@ -151255,14 +151854,22 @@
       "batch": "batch-8",
       "review": {
         "decision": "needs_work",
-        "feedback": "Se solapa con q-1783, que dice textualmente «queso suizo Emmental» y además pregunta de dónde salen sus huecos, el mismo tema que esta pregunta. Si alguien ve q-1783, ya sabe que la respuesta aquí es Suiza. Habría que descartar una de las dos o cambiar el enfoque de esta por completo.",
-        "problems": [
-          "overlap"
-        ],
+        "feedback": "the audit remark from opus is correct, the first hint gives away the answer. BUT: it's arguably more difficult to know that suisse is landlocked. so no real problem",
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Se solapa con q-1783, que dice textualmente «queso suizo Emmental» y además pregunta de dónde salen sus huecos, el mismo tema que esta pregunta. Si alguien ve q-1783, ya sabe que la respuesta aquí es Suiza. Habría que descartar una de las dos o cambiar el enfoque de esta por completo.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:35:45"
       },
       "bundle": "base",
       "background": null
@@ -151331,11 +151938,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:34:40"
       },
       "bundle": "base",
       "background": null
@@ -151783,11 +152398,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:55:29"
       },
       "bundle": "base",
       "background": null
@@ -151856,11 +152479,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-fable-5-1",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-fable-5-1",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:52:28"
       },
       "bundle": "base",
       "background": null,
@@ -151941,11 +152572,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:54:44"
       },
       "bundle": "base",
       "background": null
@@ -152462,11 +153101,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:47:24"
       },
       "bundle": "base",
       "background": null,
@@ -152487,7 +153134,7 @@
     {
       "id": "q-2052",
       "status": "approved",
-      "difficulty": 9,
+      "difficulty": 12,
       "description": "Un panteón tan grande que a alguien se le coló un invitado de otro continente.",
       "question": "¿Cuál de estos NO es un orisha, una deidad de la santería?",
       "answer": "Quetzalcóatl",
@@ -152546,14 +153193,23 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:49:05"
       },
       "bundle": "base",
-      "background": null
+      "background": null,
+      "difficulty_original": 9
     },
     {
       "id": "q-2053",
@@ -153655,11 +154311,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:42:21"
       },
       "bundle": "base",
       "background": null
@@ -154381,11 +155045,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:54:58"
       },
       "bundle": "base",
       "background": null
@@ -154464,7 +155136,7 @@
     {
       "id": "q-2079",
       "status": "approved",
-      "difficulty": 7,
+      "difficulty": 10,
       "description": "Antes de los mil capítulos y las gemelas malvadas, alguien tuvo que dar el primer paso.",
       "question": "Se estrenó en 1958, la escribió Fernanda Villeli y es la primera telenovela de su país. ¿De qué país es 'Senda prohibida'?",
       "answer": "México",
@@ -154523,14 +155195,23 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:42:30"
       },
       "bundle": "base",
-      "background": null
+      "background": null,
+      "difficulty_original": 7
     },
     {
       "id": "q-2080",
@@ -154807,11 +155488,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:34:04"
       },
       "bundle": "base",
       "background": null
@@ -157820,11 +158509,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:36:55"
       },
       "bundle": "base",
       "background": null
@@ -158493,11 +159190,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:49:42"
       },
       "bundle": "base",
       "background": null
@@ -162356,11 +163061,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:30:51"
       },
       "bundle": "base",
       "background": null
@@ -162741,11 +163454,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:55:50"
       },
       "bundle": "base",
       "background": null,
@@ -163346,11 +164067,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:50:55"
       },
       "bundle": "base",
       "background": null
@@ -163574,11 +164303,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T17:52:52"
       },
       "bundle": "base",
       "background": null,
