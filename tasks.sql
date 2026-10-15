@@ -24770,7 +24770,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-15T01:42:11Z', NULL, NULL, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1075, 6, 'create tasks for plan 6: masterplan', 'split', 'done', 1000, '2026-10-14, tasks.sql: task 1079 writes the part 4 plan; parts 1–3 already planned (plans 31–33)', 'Split plan 6 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T01:43:41Z', '2026-10-15T01:44:13Z', 1073, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1076, 32, 'revise plan 32: Recorded sound effects (UI-10)', 'revise', 'open', 1000, NULL, '`plan 6: masterplan`, the plan above `plan 32: Recorded sound effects (UI-10)`, changed; it is quoted below. Bring `plan 32: Recorded sound effects (UI-10)` in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1076, 32, 'revise plan 32: Recorded sound effects (UI-10)', 'revise', 'done', 1000, '2026-10-14, no change: plan 32 still fits the masterplan (part 2 unchanged; the revision added part 4 only)', '`plan 6: masterplan`, the plan above `plan 32: Recorded sound effects (UI-10)`, changed; it is quoted below. Bring `plan 32: Recorded sound effects (UI-10)` in line with it
 (`pm plan edit 32 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -24805,7 +24805,7 @@ Milestone 6 closes the leftovers of M3/M4, preloading before a screen fades in (
 
 ## Order and constraints
 - Parts are independent; 2 → 3 shared conventions (done).
-- D-45 licences only; everything offline; no new npm or Python dependencies.', '2026-10-15T01:43:41Z', NULL, 1073, 0);
+- D-45 licences only; everything offline; no new npm or Python dependencies.', '2026-10-15T01:43:41Z', '2026-10-15T01:46:08Z', 1073, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1077, 33, 'revise plan 33: Recorded music loops (UI-10)', 'revise', 'open', 1000, NULL, '`plan 6: masterplan`, the plan above `plan 33: Recorded music loops (UI-10)`, changed; it is quoted below. Bring `plan 33: Recorded music loops (UI-10)` in line with it
 (`pm plan edit 33 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
@@ -27626,6 +27626,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1017, 1073, '2026-10-15T01:42:55Z', '2026-10-15T01:43:53Z', 'done', NULL, 0, 'c17d4c8247082ce33412e1a9c8d5130b962b0a24', 'claude-opus-5-5[1m]', '799747c0-f64c-4c4c-ab43-3862d7d89d4e', 10, 20, 5363, 367872, 51402, 0.59213040000000006, 2557536);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1018, 1075, '2026-10-15T01:43:53Z', '2026-10-15T01:44:18Z', 'done', NULL, 0, 'b67aedb0928e22a24fec28017a62322e32561c28', 'claude-opus-5-5[1m]', 'df219db9-c8c5-4487-994d-04e9f07e4504', 5, 10, 1841, 147854, 27492, 0.2863668, 2557536);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1019, 1079, '2026-10-15T01:44:18Z', '2026-10-15T01:46:01Z', 'done', NULL, 0, '65b8e4c9592c8308230cefc1805de31b0daf4b61', 'claude-opus-5-5[1m]', '1d189799-7508-4f68-92ec-9d37b256cbe7', 13, 24, 7766, 599692, 57354, 0.7341863999999998, 2557536);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1020, 1076, '2026-10-15T01:46:01Z', '2026-10-15T01:46:11Z', 'done', NULL, 0, 'f5b263ba864d229960e0433de56e3c72641a07c3', 'claude-opus-5-5[1m]', 'd765a472-0cf1-48d4-b9f4-b945cb46ec2d', 3, 6, 549, 71692, 19661, 0.1826304, 2557536);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
