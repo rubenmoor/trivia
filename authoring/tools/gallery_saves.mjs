@@ -86,11 +86,11 @@ meta.final = { right: rightOf(saves.final) };
 saves.table = play(structuredClone(done), PLAYERS[0], 3, { mode: "gamemaster" });
 // Flags for the flag list.
 saves.flags = flagged(structuredClone(saves.question), data.pool.slice(0, 2).map((q) => q.id));
-// Three subcategories seen through: the supply notice before level 1.
-const subs = [...new Set(data.pool.map((q) => q.subcategory))].slice(0, 3);
-saves.seen = structuredClone(done);
-saves.seen.seen = data.pool.filter((q) => subs.includes(q.subcategory))
-  .map((q) => ({ question_id: q.id, game_id: 0, seen_on: "2026-10-01T20:00:00" }));
+// A game on base + colombia, every colombia question seen: the supply notice before level 1.
+saves.seen = play(structuredClone(done), PLAYERS[0], 1, { mode: "solo", bundles: ["base", "colombia"] }, true);
+({ save: saves.seen } = answer(saves.seen, data, io(), (rightOf(saves.seen) + 1) % latest(saves.seen).answers.length));
+saves.seen.seen.push(...data.pool.filter((q) => q.bundle === "colombia")
+  .map((q) => ({ question_id: q.id, game_id: 0, seen_on: "2026-10-01T20:00:00" })));
 // Every question blocked: the supply report on Choice.
 saves.blocked = structuredClone(done);
 saves.blocked.blocked = data.pool.map((q) => q.id);

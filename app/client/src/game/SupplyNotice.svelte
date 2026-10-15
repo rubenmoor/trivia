@@ -1,8 +1,8 @@
 <script module lang="ts">
   import type { Outlook } from "../lib/api.ts";
 
-  /** Something to tell before level 1 (decision 31): tight levels, none left, exhausted subcategories. */
-  export const worthShowing = (o: Outlook) => o.none || o.tight.length > 0 || o.exhausted.length > 0;
+  /** Something to tell before level 1 (decision 31): tight levels, none left, bundles running out. */
+  export const worthShowing = (o: Outlook) => o.none || o.tight.length > 0 || o.runningOut.length > 0;
 </script>
 
 <script lang="ts">
@@ -43,8 +43,8 @@
     {#if outlook.tight.length}<p>{t("outlook.tight", { ranges })}</p>{/if}
     {#if outlook.none}<p>{t("outlook.none")}</p>{/if}
     {#if warned && outlook.bundleHint}<p class="note">{t("outlook.bundle", { bundle: displayName("bundle", outlook.bundleHint) })}</p>{/if}
-    {#if outlook.exhausted.length}
-      <p>{t("outlook.exhausted", { list: outlook.exhausted.map((s) => displayName("subcategory", s)).join(", ") })}</p>
+    {#if outlook.runningOut.length}
+      <p>{t("outlook.exhausted", { n: outlook.runningOut.length, list: outlook.runningOut.map((b) => displayName("bundle", b)).join(", ") })}</p>
     {/if}
     <div class="choices">
       <button class="secondary" onclick={onback} data-focus-id="notice-back"><Icon name="back" /> {t("action.back")} <Prompt action="back" /></button>

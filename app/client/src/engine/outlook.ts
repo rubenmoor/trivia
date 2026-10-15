@@ -1,8 +1,8 @@
-// Supply outlook at game start (plan 65, D-82): fresh games left, bottleneck, tight levels (decision 31), exhausted subcategories.
+// Supply outlook at game start (plan 65, D-82): fresh games left, bottleneck, tight levels (decision 31), bundles running out.
 import type { Choice, GameMode } from "../lib/types.ts";
 import { availableFor, countOf, rangesFor, STANDARD_JOKERS } from "./game.ts";
 import type { LevelRanges, PoolQuestion } from "./pool.ts";
-import { bundlesFor, subKeys, subOf } from "./pool.ts";
+import { bundlesFor } from "./pool.ts";
 import { LEVELS, levelsOf } from "./selection.ts";
 import type { EngineData, SaveData } from "./state.ts";
 
@@ -35,8 +35,8 @@ export interface Outlook {
   none: boolean;
   /** An inactive non-base bundle of the locale whose activation shrinks the warning most (none, then tight levels), or null. */
   bundleHint: string | null;
-  /** Exhausted subcategories not yet shown (`notified_exhausted`), in display order. */
-  exhausted: string[];
+  /** Chosen bundles running out (`runningOutBundles`) not yet shown (`notified_exhausted`), in choice order. */
+  runningOut: string[];
 }
 
 /** Slots per level: `per` cards (at least 1) plus k games' seen events. */
@@ -122,18 +122,16 @@ function merge(ranges: [number, number][]): [number, number][] {
   return out;
 }
 
-/** Keys of subcategories with approved, unblocked, allowed questions in the choice's bundles and window
- * (custom: start–end), all seen. */
-function exhaustedSubs(save: SaveData, data: EngineData, choice: Choice): string[] {
+/** Chosen bundles running out (decision 31's super-tight rule per bundle): of their approved, unblocked, allowed
+ * questions in the window (custom: start–end), some seen and at most 1 unseen. */
+function runningOutBundles(save: SaveData, data: EngineData, choice: Choice): string[] {
   const [lo, hi] = choice.difficulty ? [choice.difficulty.start, choice.difficulty.end] : data.groupById.get(choice.age_group!)!.window;
   const count = countOf(save);
-  const state = new Map<string, boolean>(); // subcategory key → every question seen
-  for (const q of availableFor(save, data, choice)) {
-    if (q.difficulty < lo || q.difficulty > hi) continue;
-    const k = subOf(q)!;
-    state.set(k, (state.get(k) ?? true) && count(q) > 0);
-  }
-  return subKeys(data.categories).filter((s) => state.get(s));
+  return choice.bundles.filter((b) => {
+    const qs = availableFor(save, data, choice, [b]).filter((q) => q.difficulty >= lo && q.difficulty <= hi);
+    const fresh = qs.filter((q) => count(q) === 0).length;
+    return fresh <= 1 && qs.length > fresh;
+  });
 }
 
 /** The outlook for a new game with `choice`; reads the save, never writes it. */
@@ -158,14 +156,14 @@ export function outlook(save: SaveData, data: EngineData, choice: OutlookChoice)
     if (sb < best) [bundleHint, best] = [id, sb];
   }
   const notified = new Set(save.notified_exhausted);
-  const exhausted = exhaustedSubs(save, data, choice).filter((s) => !notified.has(s));
-  return { k, bottleneck, tight: merge(tight.levels.map(at)), none: tight.none, bundleHint, exhausted };
+  const runningOut = runningOutBundles(save, data, choice).filter((b) => !notified.has(b));
+  return { k, bottleneck, tight: merge(tight.levels.map(at)), none: tight.none, bundleHint, runningOut };
 }
 
-/** Record `shown` in `notified_exhausted` (a new save); drops entries that aren't exhausted for `choice` any more.
- * Call it at every game start, `shown` empty or not, so the prune runs. */
-export function noteExhausted(save: SaveData, data: EngineData, choice: Choice, shown: string[]): SaveData {
-  const now = new Set(exhaustedSubs(save, data, choice));
+/** Record `shown` in `notified_exhausted` (a new save); drops entries that aren't running out for `choice` any more
+ * (also subcategory keys from before task 1104). Call it at every game start, `shown` empty or not, so the prune runs. */
+export function noteRunningOut(save: SaveData, data: EngineData, choice: Choice, shown: string[]): SaveData {
+  const now = new Set(runningOutBundles(save, data, choice));
   const kept = save.notified_exhausted.filter((s) => now.has(s));
   const added = shown.filter((s) => now.has(s) && !kept.includes(s));
   return { ...save, notified_exhausted: [...kept, ...added] };

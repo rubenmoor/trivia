@@ -46,7 +46,6 @@ export const esES = {
   },
   outlook: {
     none: "En esta partida pueden salir preguntas que ya habéis visto.",
-    exhausted: "Ya habéis visto todas las preguntas de: {list}",
   },
   picker: {
     title: "Escribid vuestro nombre",

@@ -330,7 +330,7 @@ const es = {
     none: "En esta partida pueden salir preguntas que ya vieron.",
     bundle: "Con el paquete {bundle} activado habría más.",
     /** {list}: subcategory names joined with ", ". */
-    exhausted: "Ya vieron todas las preguntas de: {list}",
+    exhausted: { one: "A este paquete le quedan pocas preguntas: {list}", other: "A estos paquetes les quedan pocas preguntas: {list}" },
   },
   /** The letter picker: a new name with a pad only (plan 46). */
   picker: {

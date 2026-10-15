@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { STANDARD_JOKERS } from "./game.ts";
-import { noteExhausted, outlook } from "./outlook.ts";
+import { noteRunningOut, outlook } from "./outlook.ts";
 import type { AgeGroup, Bundle, PoolQuestion } from "./pool.ts";
 import { emptySave, engineData, type SaveData } from "./state.ts";
 
@@ -30,7 +30,7 @@ const seen = (save: SaveData, ...ids: string[]) =>
 test("outlook: k, bottleneck (plan 65)", () => {
   // b = 16/12: 4 + ceil(4k/3) ≤ 10 → k = 4.
   assert.deepEqual(outlook(emptySave(), data, solo),
-    { k: 4, bottleneck: [[7, 7]], tight: [], none: false, bundleHint: null, exhausted: [] });
+    { k: 4, bottleneck: [[7, 7]], tight: [], none: false, bundleHint: null, runningOut: [] });
   assert.equal(outlook(emptySave(), data, { ...solo, bundles: ["base", "colombia"] }).k, 12);
   assert.equal(outlook(seen(emptySave(), "b7-0", "b7-1"), data, solo).k, 3);
   assert.equal(outlook(emptySave(), data, { ...solo, mode: "rr-competitive", players: 2 }).k, 2);
@@ -48,11 +48,15 @@ test("outlook: tight levels, none left, bundle hint (decision 31)", () => {
   assert.deepEqual(outlook(seen(emptySave(), ...sevens.slice(2)), data, solo).tight, []);
 });
 
-test("outlook: exhausted subcategories, noted once, pruned when unseen again", () => {
-  const save = seen(emptySave(), "b1-0", "b1-1");
-  assert.deepEqual(outlook(save, data, solo).exhausted, ["X"]);
-  const noted = noteExhausted(save, data, solo, ["X"]);
-  assert.deepEqual(noted.notified_exhausted, ["X"]);
-  assert.deepEqual(outlook(noted, data, solo).exhausted, []);
-  assert.deepEqual(noteExhausted({ ...noted, seen: [] }, data, solo, []).notified_exhausted, []);
+test("outlook: bundles running out, noted once, pruned when unseen again", () => {
+  const both = { ...solo, bundles: ["base", "colombia"] };
+  const nine = Array.from({ length: 9 }, (_, j) => `c7-${j}`);
+  assert.deepEqual(outlook(seen(emptySave(), ...nine.slice(1)), data, both).runningOut, []);
+  const save = seen(emptySave(), ...nine);
+  assert.deepEqual(outlook(save, data, both).runningOut, ["colombia"]);
+  const noted = noteRunningOut(save, data, both, ["colombia"]);
+  assert.deepEqual(noted.notified_exhausted, ["colombia"]);
+  assert.deepEqual(outlook(noted, data, both).runningOut, []);
+  assert.deepEqual(noteRunningOut({ ...noted, seen: [] }, data, both, []).notified_exhausted, []);
+  assert.deepEqual(noteRunningOut({ ...save, notified_exhausted: ["X"] }, data, both, []).notified_exhausted, []);
 });

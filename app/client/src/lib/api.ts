@@ -169,14 +169,14 @@ export async function fetchChoice(body: ChoiceBody & { player?: string }): Promi
   return read((save, data) => engine.choice(save, data, { ...body }), "next");
 }
 
-/** The supply outlook of a new game (plan 65, decision 31): tight levels, none left, bundle hint, exhausted subcategories. */
+/** The supply outlook of a new game (plan 65, decision 31): tight levels, none left, bundle hint, bundles running out. */
 export async function fetchOutlook(body: ChoiceBody & { mode: GameMode }): Promise<Outlook> {
   return read((save, data) => engine.outlook(save, data, { ...body }), "next");
 }
 
-/** At every game start: the exhausted subcategories just shown; prunes the rest (plan 65). */
-export async function noteExhausted(body: ChoiceBody, subcategories: string[]): Promise<void> {
-  await run((save, data) => engine.noteExhausted(save, data, { ...body, subcategories }), "next");
+/** At every game start: the bundles just shown as running out; prunes the rest (plan 65). */
+export async function noteRunningOut(body: ChoiceBody, shown: string[]): Promise<void> {
+  await run((save, data) => engine.noteRunningOut(save, data, { ...body, shown }), "next");
 }
 
 /** The mode of the player's newest game, else gamemaster (MD-7). */

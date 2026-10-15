@@ -288,7 +288,7 @@ export const de = {
     tight: "Kaum noch neue Fragen mit Schwierigkeit {ranges}; danach wiederholen sich einige.",
     none: "In diesem Spiel können schon gesehene Fragen kommen.",
     bundle: "Mit dem Paket {bundle} gäbe es mehr.",
-    exhausted: "Alle Fragen schon gesehen: {list}",
+    exhausted: { one: "Diesem Paket gehen die Fragen aus: {list}", other: "Diesen Paketen gehen die Fragen aus: {list}" },
   },
   picker: {
     letters: "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜß-",

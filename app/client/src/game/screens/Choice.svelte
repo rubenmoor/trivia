@@ -54,8 +54,8 @@
     greeting: string | null;
     /** Why the last `new` was refused (supply, `base_bundle_count`, `bundle_not_offered`), or null. */
     refused: GameError | null;
-    /** `exhausted`: the subcategories the supply notice showed (plan 65). */
-    onstart: (choice: ChoiceBody & { mode: GameMode }, exhausted: string[]) => void;
+    /** `runningOut`: the bundles the supply notice showed (plan 65). */
+    onstart: (choice: ChoiceBody & { mode: GameMode }, runningOut: string[]) => void;
     onback: () => void;
   } = $props();
 
@@ -223,7 +223,7 @@
     if (!notice) return;
     const { outlook, choice } = notice;
     notice = null;
-    onstart(choice, outlook.exhausted);
+    onstart(choice, outlook.runningOut);
   }
 
   const MODE_ROW: { id: GameMode; name: string; about: string; key: string }[] = [

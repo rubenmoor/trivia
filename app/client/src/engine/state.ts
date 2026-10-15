@@ -18,7 +18,7 @@ export interface SaveData {
   seen: SeenRow[];
   /** «Bloquear pregunta»: never offered again. Since version 3. */
   blocked: string[];
-  /** Exhausted subcategories already shown at game start. Since version 3. */
+  /** Bundles already shown as running out at game start (task 1104; subcategory keys before, pruned). Since version 3. */
   notified_exhausted: string[];
   /** Questions flagged for review (GM-5, D-47); keyed by question ID. Version 4 merged `reports` in (decision 60). */
   flags: Record<string, FlagEntry>;

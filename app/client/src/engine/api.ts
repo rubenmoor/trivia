@@ -1,7 +1,7 @@
 // The former game routes of app/server/main.py (gone since PORT-8) on the engine (PORT-3, plan 20): same {status, body} as recorded.
 import type { Choice, Game, GameMode, JokerEvent, Player, Supply } from "../lib/types.ts";
 import * as game from "./game.ts";
-import { noteExhausted as noteExhaustedIn, outlook as outlookOf, type Outlook } from "./outlook.ts";
+import { noteRunningOut as noteRunningOutIn, outlook as outlookOf, type Outlook } from "./outlook.ts";
 import { pyInt, pyStr, pyTruthy } from "./pycompat.ts";
 import type { EngineData, Io, Language, SaveData } from "./state.ts";
 import { GameError } from "./state.ts";
@@ -110,12 +110,12 @@ export function outlook(save: SaveData, data: EngineData, body: Record<string, u
   });
 }
 
-/** Exhausted subcategories shown (plan 65): body = choice + `subcategories`. */
-export function noteExhausted(save: SaveData, data: EngineData, body: Record<string, unknown>): Reply<{ ok: true }> {
+/** Bundles shown as running out (plan 65): body = choice + `shown`. */
+export function noteRunningOut(save: SaveData, data: EngineData, body: Record<string, unknown>): Reply<{ ok: true }> {
   return guard(save, 409, () => {
     const choice = game.resolveChoice(data, pick(body, game.CHOICE_KEYS));
-    const shown = Array.isArray(body.subcategories) ? body.subcategories.filter((s) => typeof s === "string") : [];
-    return { save: noteExhaustedIn(save, data, choice, shown), status: 200, body: { ok: true } };
+    const shown = Array.isArray(body.shown) ? body.shown.filter((s) => typeof s === "string") : [];
+    return { save: noteRunningOutIn(save, data, choice, shown), status: 200, body: { ok: true } };
   });
 }
 

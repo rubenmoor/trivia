@@ -3,7 +3,7 @@
   // screens Start → Player → Choice → Level → Select → Question → Correct / Wrong → … → Victory, with one
   // transition routine and the admin overlay on Esc. The engine keeps the game (engine/, lib/api.ts).
   import { onDestroy, onMount, tick } from "svelte";
-  import { fetchFlags, fetchGame, gameAction, noteExhausted, playJoker, setFlag, type GameActionBody } from "../lib/api.ts";
+  import { fetchFlags, fetchGame, gameAction, noteRunningOut, playJoker, setFlag, type GameActionBody } from "../lib/api.ts";
   import { isOurs } from "../engine/pool.ts";
   import { GameError } from "../lib/http.ts";
   import { steam, validUser, type ModList } from "../lib/desktop.ts";
@@ -334,12 +334,12 @@
   }
 
   /** The Choice screen's «¡A jugar!»: start the game, greet, then the Level screen. */
-  async function startGame(choice: GameActionBody & { mode: GameMode }, exhausted: string[]) {
+  async function startGame(choice: GameActionBody & { mode: GameMode }, runningOut: string[]) {
     if (busy || chosen === null) return;
     busy = true;
     try {
       game = await gameAction("new", { player: chosen, ...choice });
-      await noteExhausted(choice, exhausted).catch((e) => console.warn("noteExhausted:", e)); // every start: it prunes too
+      await noteRunningOut(choice, runningOut).catch((e) => console.warn("noteRunningOut:", e)); // every start: it prunes too
       error = saveWarning();
       refused = null;
     } catch (e) {

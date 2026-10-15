@@ -288,7 +288,7 @@ export const en = {
     tight: "Hardly any new questions left at difficulty {ranges}; some will repeat after that.",
     none: "This game may show questions you've already seen.",
     bundle: "Turning on the {bundle} bundle would add more.",
-    exhausted: "You've seen every question of: {list}",
+    exhausted: { one: "This bundle is running out of questions: {list}", other: "These bundles are running out of questions: {list}" },
   },
   picker: {
     letters: "ABCDEFGHIJKLMNOPQRSTUVWXYZ-'",
