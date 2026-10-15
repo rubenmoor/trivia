@@ -64,7 +64,7 @@
     min-width: calc(36 * var(--u));
     padding: calc(1.8 * var(--u)) calc(2.2 * var(--u));
     text-align: center;
-    animation: arrive 0.35s var(--spring) backwards;
+    animation: rise 0.35s var(--spring) backwards;
   }
   .dialog h2 {
     margin: 0;
@@ -82,12 +82,5 @@
     font-family: var(--font-text);
     font-size: calc(1.1 * var(--u));
     color: var(--slate-200);
-  }
-
-  @keyframes arrive {
-    from {
-      opacity: 0;
-      transform: translateY(calc(1.5 * var(--u))) scale(0.96);
-    }
   }
 </style>

@@ -26083,7 +26083,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Rows into `code-review.md` `## Part 11` table (`file | finding | category | severity | status`, statuses as in `## Format`); every listed file gets at least one row (`no findings` if clean); lint-catchable findings carry `(lint: <flag>)`.
 - Inventory: the row for these files (added by task 588, review task `pending`) → this task''s id.
 - Before commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`; stage `code-review.md` and fixed files.', '2026-10-15T02:40:55Z', '2026-10-15T02:47:57Z', 588, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1107, 83, 'Part 11: review game/question/ pieces', 'work', 'open', 10, NULL, 'Review of the pieces split out of `Question.svelte` by task 965.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1107, 83, 'Part 11: review game/question/ pieces', 'work', 'done', 10, '2026-10-14, app/client/src/game/question/ (Answers, Card, SkipDialog: arrive copies → global rise in theme.css; Media: dead $effect.pre removed), code-review.md part 11 rows (8), task 1107 out of Pending; checks pass', 'Review of the pieces split out of `Question.svelte` by task 965.
 
 ## Files (~1070 lines)
 - `app/client/src/game/question/`: `Answers.svelte`, `Card.svelte`, `FinalAnswer.svelte`, `Media.svelte`, `Scope.svelte`, `SkipDialog.svelte`, `reveal.ts`
@@ -26095,7 +26095,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Open work elsewhere first (`pm queue`): code an open task rewrites or deletes gets findings only, status `superseded by task N`.
 - Rows into `code-review.md` `## Part 11` table (`file | finding | category | severity | status`, statuses as in `## Format`); every listed file gets at least one row (`no findings` if clean); lint-catchable findings carry `(lint: <flag>)`.
 - Inventory: the row for these files (added by task 588, review task `pending`) → this task''s id.
-- Before commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`; stage `code-review.md` and fixed files.', '2026-10-15T02:40:55Z', NULL, 588, 0);
+- Before commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`; stage `code-review.md` and fixed files.', '2026-10-15T02:40:55Z', '2026-10-15T02:50:30Z', 588, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1108, 83, 'Part 11: review the mods code (loader, shell, Workshop, mods screen)', 'work', 'open', 10, NULL, 'Review of the modding feature added after the part 1 inventory (plans 114–122).
 
 ## Files (~2090 lines)
@@ -29033,6 +29033,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1045, 745, '2026-10-15T02:32:02Z', '2026-10-15T02:35:29Z', 'done', NULL, 0, 'c0d98ace7444465a3b439d5a77d16b29f8b9f3cb', 'claude-opus-5-5[1m]', 'e9b52086-cda3-4566-a84a-526c9d1fa86e', 23, 46, 6055, 1169939, 52349, 0.77406380000000008, 2557536);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1046, 588, '2026-10-15T02:35:29Z', '2026-10-15T02:43:11Z', 'done', NULL, 0, '9bc4e7ca9e38f62993c6636eb7f09391e8151565', 'claude-opus-5-5[1m]', '58a19957-9320-49cb-9cc4-717dc7af011f', 68, 132, 36876, 6539717, 133689, 3.1155034, 2557536);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1047, 1106, '2026-10-15T02:43:11Z', '2026-10-15T02:48:09Z', 'done', NULL, 0, 'b0c1069dab04b80c4d8e67d7944e8b75feffbf91', 'claude-opus-5-5[1m]', '77cf1ad8-ce6b-415c-8cb4-d1590eecc998', 33, 56, 15314, 2283773, 98024, 1.5474506, 2557536);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1048, 1107, '2026-10-15T02:48:09Z', '2026-10-15T02:50:39Z', 'done', NULL, 0, 'b09767bebdd97d752ce688631a876098c74210b8', 'claude-opus-5-5[1m]', '99973b31-74f7-4ee9-87d1-7f6a3b7cd5c6', 26, 46, 12035, 1614539, 78099, 1.1885838000000002, 2557536);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

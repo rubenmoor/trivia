@@ -81,7 +81,7 @@
       border-color 0.2s,
       box-shadow 0.2s,
       background 0.3s;
-    animation: arrive 0.5s var(--spring) backwards;
+    animation: rise 0.5s var(--spring) backwards;
   }
   .answer:nth-child(2) {
     animation-delay: 0.06s;
@@ -211,12 +211,6 @@
     background: rgba(11, 17, 32, 0.85);
   }
 
-  @keyframes arrive {
-    from {
-      opacity: 0;
-      transform: translateY(calc(1.5 * var(--u))) scale(0.96);
-    }
-  }
   @keyframes pop {
     40% {
       transform: scale(1.06);

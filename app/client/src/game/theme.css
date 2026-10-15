@@ -230,6 +230,13 @@
     transform: translateY(calc(2 * var(--u))) scale(0.94);
   }
 }
+/* The softer one of the question's pieces. */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(calc(1.5 * var(--u))) scale(0.96);
+  }
+}
 @keyframes zoom-in {
   from {
     opacity: 0;

@@ -42,10 +42,6 @@
   /** The picture: the image itself, or an audio question's background (D-14). */
   const picture = $derived(media.type === "image" ? src(media.file_url) : src(question.background?.file_url ?? null));
   const decorative = $derived(media.type === "audio" || media.role === "decorative");
-  $effect.pre(() => {
-    void picture;
-    native = null;
-  });
   const credits = $derived(
     [media.credit, media.type === "audio" ? question.background?.credit : null].filter(Boolean).join(" · "),
   );

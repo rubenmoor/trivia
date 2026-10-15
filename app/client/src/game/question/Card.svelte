@@ -64,7 +64,7 @@
     max-width: 70%;
     padding: calc(1.3 * var(--u)) calc(2.4 * var(--u));
     text-align: center;
-    animation: arrive 0.5s var(--spring) backwards;
+    animation: rise 0.5s var(--spring) backwards;
   }
   h1 {
     margin: 0;
@@ -158,12 +158,6 @@
     font-size: var(--u);
   }
 
-  @keyframes arrive {
-    from {
-      opacity: 0;
-      transform: translateY(calc(1.5 * var(--u))) scale(0.96);
-    }
-  }
   @keyframes note-in {
     from {
       opacity: 0;
