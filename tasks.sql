@@ -29834,7 +29834,23 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 - 120 questions (batch-8''s `size` in `authoring/data/spot-checks.json`); the first 30 are already decided (`decision 215: Spot check batch-8 done?`), 90 to go (~40 min).
 - Blind as before; mark the problem kinds in the feedback box.
 - The audit now covers all 120 (60 extra, opus, $2.67): `authoring/reports/batch-8.md` "## Audit" (7 major among 115 approved, mostly giveaway hints).
-- Then `task 1191: Extended review of batch-8: 120-question spot check (decision 228)` runs `qgen report --qc batch-8` and proposes changes.', 'done', NULL, '2026-10-15T22:13:23Z', '2026-10-15T23:05:45Z', 1191, NULL, 'rule', NULL, '');
+- Then `task 1191: Extended review of batch-8: 120-question spot check (decision 228)` runs `qgen report --qc batch-8` and proposes changes.', 'done', NULL, '2026-10-15T22:13:23Z', '2026-10-15T23:05:45Z', 1191, NULL, 'rule', NULL, '2026-10-15, task 1191: all 120 of batch-8 spot-checked; qgen report --qc batch-8 counts 120 (agreement 108/120, 90 %, release bar ✓); authoring/reports/batch-8.md QC section rewritten; proposals in decision 231: QC batch-8 (120): which changes?');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (231, 'QC batch-8 (120): which changes?', 'pending', '["recommended set: A, B, C, D", "all: A–E", "none"]', '`task 1191: Extended review of batch-8: 120-question spot check (decision 228)`: `qgen report --qc batch-8` with all 120 (`authoring/reports/batch-8.md` "## Quality control").
+
+## Numbers
+- Agreement with the LLM review: 108/120 (90 %) ✓; release bar ✓
+- False approve 9 (8 %), false needs_work 3 (2 %); difficulty |Δ| ≥ 2: 6 (4 of them rated too low)
+- Audit/human agreement 105/120 (88 %), below the review''s 90 %: no "audit as a gate" proposal (QC.md step 4 trend rule)
+- Audit majors on approved: 7; you approved 6 of them (q-1316, q-1378, q-1531, q-1774, q-2033, q-2199), only q-1868 not
+
+## Proposals (prompts only unless said; each a task in `plan 17: Batch runs` at 650)
+- **A. No "Tres pistas:" label** (q-1581 "should be purged", q-1973 rejected; both open with it). `house-style.md`: the question never announces "Tres pistas:"/"Pistas:" (clashes with the Soplo hints, count often wrong); `three_facts` stays, written as plain facts. `review.md` reason 6/style: such a label → needs_work, `fix` drops it. `audit.md` check 7: retired style.
+- **B. Strip the label from the pool** (with A): ~20 approved `base` questions open with "Tres pistas…"/"Pistas:" (batch-7: q-0904, q-0852, q-0944, …; batch-8: q-1577, q-1747, q-1750). Edit the question text by hand (drop the label, minimal rewording), `qgen validate`, `qgen export`; translations follow the usual stale mechanism.
+- **C. Media must show what the question names** (q-1897 rover instead of the Blue Marble, q-1246 a Yucatán note instead of a peso bill, q-1331 landscape instead of rock art, audit q-2199 boutonniere instead of an ascot). `house-style.md` media + `review.md` media pick: when the question names something showable that isn''t the answer (a photo, an artwork, a banknote, "como esta"), the query and the picked image show that very thing; a merely nearby subject → another candidate or needs_work (media).
+- **D. Audit: hint giveaways are minor** (6 of 7 audit majors overruled; q-2035: "the first hint gives away the answer, BUT … no real problem"). Hints come only through the Soplo joker. `audit.md` check 3 / severity: hint 1 or 2 narrowing the options is `minor`; `major` only when it names, translates or defines the answer. `review.md`, `house-style.md` unchanged.
+- **E. Translatable premise** (not recommended: one case, you were unsure). q-1950: the clue is the Spanish meaning of an English title, which collapses in `en`. `review.md`: a `base` question whose clue is a translation of the answer''s own words → needs_work.
+
+Not proposed (one case each, below QC.md''s threshold of 2): q-1646 overgeneralization ("every bill has a thread"); q-1452/q-2043 false needs_work (no pattern).', NULL, NULL, '2026-10-15T23:08:12Z', NULL, 1191, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -31010,6 +31026,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1155, 1185, '2026-10-15T22:07:18Z', '2026-10-15T22:07:58Z', 'blocked', NULL, 0, 'd144aab18996340b2961d8db16005b30de107d57', 'claude-opus-5-5[1m]', '3a176f36-03f9-42d0-9edf-38ea4477fd8a', 8, 16, 3328, 260043, 28942, 0.35016860000000005, 3709948);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1156, 1191, '2026-10-15T22:07:58Z', '2026-10-15T22:13:32Z', 'blocked', NULL, 0, 'fab9353581f06619b4b57dc34ab1dc47dc852f96', 'claude-opus-5-5[1m]', '061709e6-f17c-4576-8c62-ced7d8ec3c45', 24, 42, 8153, 1142516, 59212, 0.86542720000000006, 3709948);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1157, 1186, '2026-10-15T22:13:33Z', '2026-10-15T22:13:54Z', 'blocked', NULL, 0, 'b3d624059378126cf1537edec669559a39b95cb0', 'claude-opus-5-5[1m]', '4aa3b121-40eb-4caf-976d-170220622420', 5, 12, 896, 136765, 21911, 0.22060900000000003, 3709948);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1158, 1191, '2026-10-15T23:05:46Z', '2026-10-15T23:08:36Z', 'blocked', NULL, 0, '51f52d9c1778eca4a044de3b365ece417b0aa38b', 'claude-opus-5-5[1m]', '33b26d4b-536c-464a-9a8c-c42f18897a5c', 19, 38, 11770, 940924, 68191, 0.9692648, 3709948);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -31391,6 +31408,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1186, 228);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1186, 229);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1190, 227);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1191, 230);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1191, 231);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');

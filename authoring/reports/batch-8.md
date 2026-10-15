@@ -95,23 +95,37 @@ Major findings on approved questions:
 
 The developer's blind spot check (`/review?batch=…&sample=1`) against the LLM review and the audit (plan 16, `qgen report --qc`). Agree = both accept or both don't.
 
-- Spot check: 30 decided of 30
-- Agreement with the LLM review: 26 of 30 (87 %) ✗ (bar: ≥ 30 questions, ≥ 90 %)
-- Release bar (D-79): ✗ not release-ready: agreement 87 % < 90 % (→ QC step 4)
-- False approve (LLM approved, human not): 3 of 30 (10 %); the audit flagged 1
-- False needs work (LLM not approved, human approved): 1 of 30 (3 %)
-- Difficulty |Δ| ≥ 2: 2 of 30 (7 %)
-- Media changed: 0 of 30 (0 %)
-- Audit/human agreement: 28 of 30 (93 %)
+- Spot check: 120 decided of 120
+- Agreement with the LLM review: 108 of 120 (90 %) ✓ (bar: ≥ 30 questions, ≥ 90 %)
+- Release bar (D-79): ✓ release-ready
+- False approve (LLM approved, human not): 9 of 120 (8 %); the audit flagged 1
+- False needs work (LLM not approved, human approved): 3 of 120 (2 %)
+- Difficulty |Δ| ≥ 2: 6 of 120 (5 %)
+- Media changed: 1 of 120 (1 %)
+- Audit/human agreement: 105 of 120 (88 %)
 
 Disagreements with the LLM review, by the human's problems:
 
-### no problem given (4)
+### media (1)
+
+- **q-1897** LLM approved → human needs_work, audit ok: needs photo of earth from space (http://127.0.0.1:8001/review/q-1897)
+
+### style (1)
+
+- **q-1581** LLM approved → human needs_work, audit ok: the "three hints" style should be purged. this one has two hints (http://127.0.0.1:8001/review/q-1581)
+
+### no problem given (10)
 
 - **q-1691** LLM approved → human needs_work, audit ok: the question is fine per se, but "cinta scotch" is only used in Spain. This has to go into a regional bundle "Spain". it can't go into a base bundle (http://127.0.0.1:8001/review/q-1691)
-- **q-1868** LLM approved → human needs_work, audit problem: this apparently refers to a specific anecdote, but the other answeres are not wrong. the events are not specific enough. (http://127.0.0.1:8001/review/q-1868)
-- **q-1733** LLM approved → human needs_work, audit ok: the paradox needs quotes, otherwise there are two questions (http://127.0.0.1:8001/review/q-1733)
+- **q-1868** LLM approved → human needs_work, audit problem (http://127.0.0.1:8001/review/q-1868)
+- **q-1733** LLM approved → human needs_work, audit ok (http://127.0.0.1:8001/review/q-1733)
+- **q-1646** LLM approved → human needs_work, audit ok: i don't think the bills of every currency have that. and for regional it's not specific enough (http://127.0.0.1:8001/review/q-1646)
+- **q-1950** LLM approved → human needs_work, audit ok: this might work ... not sure how this question translates to english. (http://127.0.0.1:8001/review/q-1950)
+- **q-1246** LLM approved → human needs_work, audit ok: the original image didn't actually show a peso bill (http://127.0.0.1:8001/review/q-1246)
+- **q-1973** LLM approved → human rejected, audit ok (http://127.0.0.1:8001/review/q-1973)
 - **q-1854** LLM needs_work → human approved, audit ok (http://127.0.0.1:8001/review/q-1854)
+- **q-1452** LLM needs_work → human approved, audit ok (http://127.0.0.1:8001/review/q-1452)
+- **q-2043** LLM needs_work → human approved, audit ok (http://127.0.0.1:8001/review/q-2043)
 
 Changes from this QC: 1182, 1183
 
