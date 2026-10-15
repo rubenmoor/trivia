@@ -15142,7 +15142,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - Plan 82 "Done when" holds: all statuses set, docs match the code; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass (plus `nix build .#app` if flake or lockfiles changed in this part, plus the lint pass if adopted); staged.', '2026-10-12T23:10:18Z', '2026-10-12T23:44:45Z', 522, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (588, 83, 'Part 11: completeness check of code-review.md', 'work', 'open', NULL, NULL, 'Task 1 of `plan 83: Executive summary and close-out (code review part 11)`. Scope, row format and status set: plan 72 "Ground rules for every part". Runs after parts 1–10 (plans 73–82) and their follow-ups.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (588, 83, 'Part 11: completeness check of code-review.md', 'work', 'done', NULL, '2026-10-14, code-review.md: statuses of done follow-ups rewritten, part 10 close note, inventory updated (69 files added since part 1 → review tasks 1106–1111, removed/moved files, out-of-scope additions), Part 11 rows (ServerStore, modIssues, PLACEHOLDER(868)), ### Completeness, ### Pending, ### Scans before/after', 'Task 1 of `plan 83: Executive summary and close-out (code review part 11)`. Scope, row format and status set: plan 72 "Ground rules for every part". Runs after parts 1–10 (plans 73–82) and their follow-ups.
 
 ## What
 - Inventory vs. reality: re-run part 1''s inventory idea (`## Part 1` in `code-review.md`) against current `git ls-files`; files added/moved/deleted during milestone 13 (e.g. task 302, part 10 consolidations) → inventory rows updated (deleted → `removed (task N)`, new → added with their part).
@@ -15159,7 +15159,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Check
 - Throw-away script (not committed) over `code-review.md` prints 0 inventory files unlisted in their part, 0 rows without a valid status.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass; plus the lint pass if part 10 adopted one and a commit touches `.ts`/`.svelte`/`.mjs`/`.cjs`.
-- Stage `code-review.md`.', '2026-10-12T23:10:57Z', NULL, 523, 0);
+- Stage `code-review.md`.', '2026-10-12T23:10:57Z', '2026-10-15T02:42:59Z', 523, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (589, 83, 'Part 11: propose process changes as decisions', 'work', 'open', NULL, NULL, 'Task 2 of `plan 83: Executive summary and close-out (code review part 11)`. Needs task 1''s final `code-review.md`.
 
 ## What
@@ -26068,6 +26068,95 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Do: an animated wait (e.g. pulsing/drumroll-style text or a suspense effect) within `--u` colours (D-29), respecting reduced motion if the client already does; the wording may change too (all four catalogs; read `app/client/src/locales/style/<locale>.md`; `es` only if needed for this string)
 - Check in the browser (Node dev server) and `trivia-gallery --only question-waiting`
 - Checks: `npm run check`, `npm test`, `npm run build`', '2026-10-15T02:15:35Z', '2026-10-15T02:31:31Z', 1026, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1106, 83, 'Part 11: review the split game screens (game/screens, loose game components)', 'work', 'open', 10, NULL, 'Review of the screen components split out of `Game.svelte`/`Question.svelte` (tasks 964, 965) and other screen pieces added since the part 1 inventory.
+
+## Files (~1640 lines)
+- `app/client/src/game/screens/`: `Question.svelte`, `Start.svelte`, `Level.svelte`, `Select.svelte`, `Correct.svelte`, `Wrong.svelte`, `Victory.svelte`, `Consent.svelte`
+- `app/client/src/game/`: `AnswerPanel.svelte`, `CornerButtons.svelte`, `Veil.svelte`, `Flags.svelte`, `GoToDialog.svelte`
+- Not here: `screens/Choice.svelte`, `Language.svelte`, `Player.svelte` (moved, reviewed in part 5 under their old paths); mods screens (other part 11 task)
+- Look for: state duplicated between `Game.svelte` and the screens after the split, props passed but unused, magic durations outside `timing.ts`, raw colours outside `theme.css` (part 10 clusters 25/26).
+
+## How
+- Files added after the part 1 inventory (2026-10-13) by other milestones'' work; found unreviewed by `task 588: Part 11: completeness check of code-review.md`.
+- Review as in `plan 72: masterplan` "Ground rules for every part": six categories, AGENTS.md rules, `directory.md`, answered decisions (`pm decision list --answered --grep <file or term>`); small local fixes here, cross-cutting/behaviour changes → `pm decision add` + linked follow-up task, larger work → `pm task add 83 …`.
+- Open work elsewhere first (`pm queue`): code an open task rewrites or deletes gets findings only, status `superseded by task N`.
+- Rows into `code-review.md` `## Part 11` table (`file | finding | category | severity | status`, statuses as in `## Format`); every listed file gets at least one row (`no findings` if clean); lint-catchable findings carry `(lint: <flag>)`.
+- Inventory: the row for these files (added by task 588, review task `pending`) → this task''s id.
+- Before commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`; stage `code-review.md` and fixed files.', '2026-10-15T02:40:55Z', NULL, 588, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1107, 83, 'Part 11: review game/question/ pieces', 'work', 'open', 10, NULL, 'Review of the pieces split out of `Question.svelte` by task 965.
+
+## Files (~1070 lines)
+- `app/client/src/game/question/`: `Answers.svelte`, `Card.svelte`, `FinalAnswer.svelte`, `Media.svelte`, `Scope.svelte`, `SkipDialog.svelte`, `reveal.ts`
+- Look for: logic copied rather than moved (compare with the old `Question.svelte` rows in part 5), timers not cleared on unmount, media `play()`/`pause()` races, magic durations outside `timing.ts`.
+
+## How
+- Files added after the part 1 inventory (2026-10-13) by other milestones'' work; found unreviewed by `task 588: Part 11: completeness check of code-review.md`.
+- Review as in `plan 72: masterplan` "Ground rules for every part": six categories, AGENTS.md rules, `directory.md`, answered decisions (`pm decision list --answered --grep <file or term>`); small local fixes here, cross-cutting/behaviour changes → `pm decision add` + linked follow-up task, larger work → `pm task add 83 …`.
+- Open work elsewhere first (`pm queue`): code an open task rewrites or deletes gets findings only, status `superseded by task N`.
+- Rows into `code-review.md` `## Part 11` table (`file | finding | category | severity | status`, statuses as in `## Format`); every listed file gets at least one row (`no findings` if clean); lint-catchable findings carry `(lint: <flag>)`.
+- Inventory: the row for these files (added by task 588, review task `pending`) → this task''s id.
+- Before commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`; stage `code-review.md` and fixed files.', '2026-10-15T02:40:55Z', NULL, 588, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1108, 83, 'Part 11: review the mods code (loader, shell, Workshop, mods screen)', 'work', 'open', 10, NULL, 'Review of the modding feature added after the part 1 inventory (plans 114–122).
+
+## Files (~2090 lines)
+- `app/client/src/lib/mods.ts`, `app/client/src/game/screens/Mods.svelte`, `screens/DomScreen.svelte`, `screens/registry.ts`, `app/client/src/game/ModsNotice.svelte`
+- `app/desktop/`: `mods.mjs`, `check-mod.mjs`, `publish.mjs`, `workshop.mjs`, `resolve.test.mjs`
+- Known lead (task 588''s scan): `app/client/src/lib/data.ts` `modIssues()` is exported for "part 6''s mods screen" (task 960) but nothing calls it: per-mod load issues (`bad_question`, `bad_media`, `no_pool`, …) are collected and never shown. Decide: wire into `Mods.svelte` (if a plan asked for it) or drop; row in part 11.
+- Look for: path containment and symlinks (`resolve.mjs` contained()), Windows paths, unvalidated `mod.json` fields, error handling of a broken mod at start (plan 118), duplication between `mods.mjs` and `check-mod.mjs`/`publish.mjs` validation.
+
+## How
+- Files added after the part 1 inventory (2026-10-13) by other milestones'' work; found unreviewed by `task 588: Part 11: completeness check of code-review.md`.
+- Review as in `plan 72: masterplan` "Ground rules for every part": six categories, AGENTS.md rules, `directory.md`, answered decisions (`pm decision list --answered --grep <file or term>`); small local fixes here, cross-cutting/behaviour changes → `pm decision add` + linked follow-up task, larger work → `pm task add 83 …`.
+- Open work elsewhere first (`pm queue`): code an open task rewrites or deletes gets findings only, status `superseded by task N`.
+- Rows into `code-review.md` `## Part 11` table (`file | finding | category | severity | status`, statuses as in `## Format`); every listed file gets at least one row (`no findings` if clean); lint-catchable findings carry `(lint: <flag>)`.
+- Inventory: the row for these files (added by task 588, review task `pending`) → this task''s id.
+- Before commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`; stage `code-review.md` and fixed files.', '2026-10-15T02:40:55Z', NULL, 588, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1109, 83, 'Part 11: review telemetry, reports and achievements (client and shell)', 'work', 'open', 10, NULL, 'Review of the telemetry, question report and achievements code added after the part 1 inventory (plans 86, 103, 110).
+
+## Files (~1100 lines)
+- `app/client/src/engine/`: `achievements.ts`, `achievements.test.ts`, `telemetry.ts`
+- `app/client/src/lib/`: `achievements.ts`, `telemetry.ts`; `app/client/src/game/report.ts`
+- `app/desktop/`: `telemetry.mjs`, `report.mjs`, `steam-libs.mjs`, `mute.mjs`, `steam-achievements.vdf`, `achievements/render.sh`
+- Look for: telemetry only opt-in (AGENTS.md: no secrets, telemetry opt-in), swallowed send errors, offline behaviour (no network must never break play), sync IO in IPC handlers, achievement ids in sync between `engine/achievements.ts`, the VDF and `achievements/*.svg`.
+
+## How
+- Files added after the part 1 inventory (2026-10-13) by other milestones'' work; found unreviewed by `task 588: Part 11: completeness check of code-review.md`.
+- Review as in `plan 72: masterplan` "Ground rules for every part": six categories, AGENTS.md rules, `directory.md`, answered decisions (`pm decision list --answered --grep <file or term>`); small local fixes here, cross-cutting/behaviour changes → `pm decision add` + linked follow-up task, larger work → `pm task add 83 …`.
+- Open work elsewhere first (`pm queue`): code an open task rewrites or deletes gets findings only, status `superseded by task N`.
+- Rows into `code-review.md` `## Part 11` table (`file | finding | category | severity | status`, statuses as in `## Format`); every listed file gets at least one row (`no findings` if clean); lint-catchable findings carry `(lint: <flag>)`.
+- Inventory: the row for these files (added by task 588, review task `pending`) → this task''s id.
+- Before commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`; stage `code-review.md` and fixed files.', '2026-10-15T02:40:55Z', NULL, 588, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1110, 83, 'Part 11: review report-server and the authoring report/telemetry pull', 'work', 'open', 10, NULL, 'Review of the question report / telemetry server (Cloudflare Worker, plan 103, plan 110) and the authoring side that pulls from it, added after the part 1 inventory.
+
+## Files (~1180 lines)
+- `report-server/`: `src/index.ts`, `src/http.ts`, `src/steam.ts`, `src/telemetry.ts`, `src/validate.ts`, `src/validate-telemetry.ts`, `env.d.ts`, `seed-telemetry.mjs`, `migrations/0001_init.sql`, `migrations/0002_telemetry.sql`, `wrangler.toml`, `tsconfig.json`
+- `authoring/tools/`: `played.py`, `reviews.py`
+- `report-server/wrangler.toml` `PLACEHOLDER(868)` is live (task 868 open): not a finding.
+- Look for: input validation and size limits, SQL built from input, rate limits, token handling (no secret in the repo), whether `report-server` is type-checked by `npm run check` (its `tsconfig.json`), client ↔ server validation duplicated (`validate*.ts` vs. `app/client` telemetry/report shapes).
+
+## How
+- Files added after the part 1 inventory (2026-10-13) by other milestones'' work; found unreviewed by `task 588: Part 11: completeness check of code-review.md`.
+- Review as in `plan 72: masterplan` "Ground rules for every part": six categories, AGENTS.md rules, `directory.md`, answered decisions (`pm decision list --answered --grep <file or term>`); small local fixes here, cross-cutting/behaviour changes → `pm decision add` + linked follow-up task, larger work → `pm task add 83 …`.
+- Open work elsewhere first (`pm queue`): code an open task rewrites or deletes gets findings only, status `superseded by task N`.
+- Rows into `code-review.md` `## Part 11` table (`file | finding | category | severity | status`, statuses as in `## Format`); every listed file gets at least one row (`no findings` if clean); lint-catchable findings carry `(lint: <flag>)`.
+- Inventory: the row for these files (added by task 588, review task `pending`) → this task''s id.
+- Before commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`; stage `code-review.md` and fixed files.', '2026-10-15T02:40:55Z', NULL, 588, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1111, 83, 'Part 11: review gallery, store renders, dev server and moved authoring helpers', 'work', 'open', 10, NULL, 'Review of authoring/dev tooling added after the part 1 inventory.
+
+## Files (~2210 lines)
+- Gallery (plan 100, task 802/803): `authoring/tools/gallery.py`, `gallery_saves.mjs`, `engine_data.mjs`, `authoring/server/ui_flags.py`, `authoring/ui/src/gallery/Gallery.svelte`
+- Store renders: `authoring/store/capsules.mjs`, `authoring/store/trailer.mjs`
+- Node dev server (plan 99, task 762): `app/client/devserver.ts`, `app/client/devshell.js`, `app/client/node-test.d.ts`, `app/client/tsconfig.node.json`
+- Moved by `task 764: Move authoring''s Python imports off app/server; authoring reads the desktop save`: `authoring/tools/http_base.py`, `media_cache.py`, `paths.py`; compare with `app/server/` copies (part 2 rows), which `task 765: Delete app/server, ServerStore, the trivia command and nix build .#app` deletes: copies → `superseded by task 765`, only findings in the authoring versions count.
+- Look for: Xvfb/CDP/shell-start code duplicated with `authoring/steam/smoke.mjs`, `authoring/store/screenshots.mjs`, `authoring/tools/cdp.mjs` (part 10 cluster 23), temp dirs not cleaned, real `state/` written.
+
+## How
+- Files added after the part 1 inventory (2026-10-13) by other milestones'' work; found unreviewed by `task 588: Part 11: completeness check of code-review.md`.
+- Review as in `plan 72: masterplan` "Ground rules for every part": six categories, AGENTS.md rules, `directory.md`, answered decisions (`pm decision list --answered --grep <file or term>`); small local fixes here, cross-cutting/behaviour changes → `pm decision add` + linked follow-up task, larger work → `pm task add 83 …`.
+- Open work elsewhere first (`pm queue`): code an open task rewrites or deletes gets findings only, status `superseded by task N`.
+- Rows into `code-review.md` `## Part 11` table (`file | finding | category | severity | status`, statuses as in `## Format`); every listed file gets at least one row (`no findings` if clean); lint-catchable findings carry `(lint: <flag>)`.
+- Inventory: the row for these files (added by task 588, review task `pending`) → this task''s id.
+- Before commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`; stage `code-review.md` and fixed files.', '2026-10-15T02:40:55Z', NULL, 588, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -28942,6 +29031,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1043, 1105, '2026-10-15T02:21:37Z', '2026-10-15T02:31:42Z', 'done', NULL, 0, '0764bcbd5ba91ca0063f0ed77674d5daede411a3', 'claude-opus-5-5[1m]', '39089f19-6a27-4088-8d0b-212c03b8b013', 19, 36, 7368, 760653, 40153, 0.6208586, 2557536);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1044, 744, '2026-10-15T02:31:42Z', '2026-10-15T02:32:02Z', 'done', NULL, 0, '98940fb0f6a520456c7f5f5b8a651b4dbe96b156', 'claude-opus-5-5[1m]', '271b2485-f0c0-4e06-92bf-c3423c54698f', 7, 14, 1740, 233200, 28831, 0.312144, 2557536);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1045, 745, '2026-10-15T02:32:02Z', '2026-10-15T02:35:29Z', 'done', NULL, 0, 'c0d98ace7444465a3b439d5a77d16b29f8b9f3cb', 'claude-opus-5-5[1m]', 'e9b52086-cda3-4566-a84a-526c9d1fa86e', 23, 46, 6055, 1169939, 52349, 0.77406380000000008, 2557536);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1046, 588, '2026-10-15T02:35:29Z', '2026-10-15T02:43:11Z', 'done', NULL, 0, '9bc4e7ca9e38f62993c6636eb7f09391e8151565', 'claude-opus-5-5[1m]', '58a19957-9320-49cb-9cc4-717dc7af011f', 68, 132, 36876, 6539717, 133689, 3.1155034, 2557536);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
