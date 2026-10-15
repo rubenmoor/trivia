@@ -104,7 +104,7 @@ Disagreements with the LLM review, by the human's problems:
 - **q-1733** LLM approved → human needs_work, audit ok: the paradox needs quotes, otherwise there are two questions (http://127.0.0.1:8001/review/q-1733)
 - **q-1854** LLM needs_work → human approved, audit ok (http://127.0.0.1:8001/review/q-1854)
 
-Changes from this QC: none yet (QC step 4)
+Changes from this QC: 1182, 1183
 
 ## Needs work
 

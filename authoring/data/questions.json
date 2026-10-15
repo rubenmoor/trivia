@@ -33975,7 +33975,7 @@
     },
     {
       "id": "q-0476",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "La persona que más tiempo ha aplazado algo en la historia, y le salió bien.",
       "question": "Según el título del famoso libro, ¿durante cuántas noches le cuenta cuentos Sherezade al rey?",
@@ -33987,7 +33987,7 @@
       ],
       "hints": [
         "Los cuentos transcurren entre palacios, sultanes y lámparas maravillosas de Oriente.",
-        "Son casi tres años de cuentos seguidos.",
+        "Cada noche dejaba el cuento sin terminar para que el rey quisiera oír el final al día siguiente.",
         "La respuesta está escondida en el nombre del libro."
       ],
       "media": {
@@ -34024,14 +34024,12 @@
       "needs_media": false,
       "batch": "batch-5",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La pista 2 (\"casi tres años de cuentos seguidos\") ya identifica la respuesta: 365 es un año y 100 o 40 ni se acercan, así que solo queda 1001 antes de llegar a la pista 3. Conviene reemplazarla por una pista más vaga (por ejemplo, sobre el motivo de Sherezade: contar cuentos para que el rey quiera oír el final al día siguiente).",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-15",
         "reviewer": "llm",
-        "model": "claude-fable-5-1",
+        "model": "claude-opus-5-5",
         "previous": null
       },
       "background": null,
@@ -34046,11 +34044,10 @@
       },
       "revision": {
         "action": "revise",
-        "reason": "Hint 1 ruled out all three wrong options; replaced it with a vague setting hint, and wrote the answer as '1001' per the house number format.",
+        "reason": "Replaced hint 2, which ruled out every option except 1001, with a vaguer hint about Sherezade's trick.",
         "previous": {
-          "answer": "1.001",
           "hints": [
-            "Son muchas más que las noches de un año.",
+            "Los cuentos transcurren entre palacios, sultanes y lámparas maravillosas de Oriente.",
             "Son casi tres años de cuentos seguidos.",
             "La respuesta está escondida en el nombre del libro."
           ]
@@ -46182,7 +46179,7 @@
     },
     {
       "id": "q-0641",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Un marinero que nunca se ha subido a un barco y tampoco a unos pantalones.",
       "question": "Camisa azul de marinero, gorrito, moñito, sin pantalones y una voz chillona y enojada. ¿Qué personaje de Disney es?",
@@ -46200,21 +46197,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "sailor hat on dock",
+        "query": "old sailboat harbor",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AU.S._Navy_Cmdr._Joel_Stewart%2C_right%2C_the_commanding_officer_of_the_amphibious_transport_dock_ship_Pre-Commissioning_Unit_%28PCU%29_Anchorage_%28LPD_23%29%2C_signs_a_white_hat_for_a_child_at_the_Dock_on_the_Block_party_130430-N-DR144-281.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/U.S._Navy_Cmdr._Joel_Stewart%2C_right%2C_the_commanding_officer_of_the_amphibious_transport_dock_ship_Pre-Commissioning_Unit_%28PCU%29_Anchorage_%28LPD_23%29%2C_signs_a_white_hat_for_a_child_at_the_Dock_on_the_Block_party_130430-N-DR144-281.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "MC1 James R. Evans · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A00_0490_sailboat_in_Buitenhaven_-_Enkhuizen.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/00_0490_sailboat_in_Buitenhaven_-_Enkhuizen.jpg/3840px-00_0490_sailboat_in_Buitenhaven_-_Enkhuizen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "W. Bulach · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "MC1 James R. Evans",
-        "author_url": null,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "W. Bulach",
+        "author_url": "https://commons.wikimedia.org/wiki/User:W._Bulach",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-USGov-Military"
-        ],
-        "file_problem": "truncated (Premature end of JPEG file)"
+        "pd_reasons": []
       },
       "fun_fact": "El Pato Donald apareció por primera vez en 1934, en el corto «La gallinita sabia».",
       "subcategory": "Barcos",
@@ -46242,45 +46236,38 @@
       "needs_media": false,
       "batch": "batch-7",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La imagen elegida está dañada en la fuente (truncated (Premature end of JPEG file)): elegir otra.",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "human",
-        "model": null,
-        "previous": {
-          "decision": "approved",
-          "feedback": null,
-          "problems": [],
-          "reviewed_on": "2026-10-15",
-          "reviewer": "llm",
-          "model": "claude-fable-5-1",
-          "previous": null
-        },
-        "problems": [
-          "media"
-        ]
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "bundle": "base",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Changed the decorative media query to a sailor-themed one that cannot show Donald, as the reviewer suggested.",
+        "reason": "The image file is damaged at the source, so I changed the decorative query to find a different image.",
         "previous": {
           "media": {
             "type": "image",
             "role": "decorative",
-            "query": "vintage animation drawing desk",
+            "query": "sailor hat on dock",
             "note": null,
-            "source_url": "https://commons.wikimedia.org/wiki/File%3AAliens_coming_to_house_party_%284999278854%29.jpg",
-            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Aliens_coming_to_house_party_%284999278854%29.jpg/3840px-Aliens_coming_to_house_party_%284999278854%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-            "credit": "college.library · CC BY 2.0 · Wikimedia Commons",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AU.S._Navy_Cmdr._Joel_Stewart%2C_right%2C_the_commanding_officer_of_the_amphibious_transport_dock_ship_Pre-Commissioning_Unit_%28PCU%29_Anchorage_%28LPD_23%29%2C_signs_a_white_hat_for_a_child_at_the_Dock_on_the_Block_party_130430-N-DR144-281.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/U.S._Navy_Cmdr._Joel_Stewart%2C_right%2C_the_commanding_officer_of_the_amphibious_transport_dock_ship_Pre-Commissioning_Unit_%28PCU%29_Anchorage_%28LPD_23%29%2C_signs_a_white_hat_for_a_child_at_the_Dock_on_the_Block_party_130430-N-DR144-281.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "MC1 James R. Evans · Public domain · Wikimedia Commons",
             "provider": "commons",
-            "license": "CC BY 2.0",
-            "license_url": "https://creativecommons.org/licenses/by/2.0",
-            "author": "college.library",
-            "author_url": "https://www.flickr.com/people/20245378@N03",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "MC1 James R. Evans",
+            "author_url": null,
             "restrictions": [],
-            "pd_reasons": []
+            "pd_reasons": [
+              "PD-USGov-Military"
+            ],
+            "file_problem": "truncated (Premature end of JPEG file)"
           }
         },
         "revised_on": "2026-10-15"
@@ -48171,19 +48158,19 @@
     },
     {
       "id": "q-0667",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Los días del año en que el pescado se vuelve el invitado de honor del almuerzo.",
-      "question": "¿Qué tienen en común el Domingo de Ramos, el Jueves Santo y el Viernes Santo?",
-      "answer": "Son días de la Semana Santa",
+      "question": "¿Qué semana empieza con el Domingo de Ramos y termina con el Domingo de Resurrección?",
+      "answer": "La Semana Santa",
       "wrong_answers": [
-        "Son días de la Navidad",
-        "Son días del Carnaval",
-        "Son fiestas patrias"
+        "La semana de Navidad",
+        "La semana de Carnaval",
+        "La semana de Reyes"
       ],
       "hints": [
-        "Se celebran en marzo o en abril, según el año.",
-        "Recuerdan los últimos días de Jesús.",
+        "Cae en marzo o en abril, según el año.",
+        "Recuerda los últimos días de Jesús.",
         "En Popayán hay procesiones muy famosas esos días."
       ],
       "media": {
@@ -48228,38 +48215,32 @@
       "needs_media": false,
       "batch": "batch-7",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La pregunta usa el formato retirado «¿Qué tienen en común…?» (razón 7); además, «Santo» en dos de los nombres hace casi imposible fallar entre las opciones. Hay que reformularla como pregunta directa (p. ej. «¿Cómo se llama la semana en la que caen el Domingo de Ramos y el Viernes Santo?» con opciones de la misma forma).",
-        "problems": [
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-15",
         "reviewer": "llm",
-        "model": "claude-fable-5-1",
+        "model": "claude-opus-5-5",
         "previous": null
       },
       "bundle": "base",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Changed the illustrative query to a more concrete search for Popayán's colonial streets so a matching image can be found.",
+        "reason": "Rewrote the retired 'what do they have in common' format as a direct question that doesn't use the giveaway 'Santo', and adjusted the hints to fit.",
         "previous": {
-          "media": {
-            "type": "image",
-            "role": "illustrative",
-            "query": "Popayan historic center",
-            "note": null,
-            "source_url": "https://commons.wikimedia.org/wiki/File%3AHoly_Spirit_Church%2C_Margao.jpg",
-            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Holy_Spirit_Church%2C_Margao.jpg/3840px-Holy_Spirit_Church%2C_Margao.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-            "credit": "iMahesh · CC BY-SA 4.0 · Wikimedia Commons",
-            "provider": "commons",
-            "license": "CC BY-SA 4.0",
-            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-            "author": "iMahesh",
-            "author_url": "https://commons.wikimedia.org/wiki/User:I.Mahesh",
-            "restrictions": [],
-            "pd_reasons": []
-          }
+          "question": "¿Qué tienen en común el Domingo de Ramos, el Jueves Santo y el Viernes Santo?",
+          "answer": "Son días de la Semana Santa",
+          "wrong_answers": [
+            "Son días de la Navidad",
+            "Son días del Carnaval",
+            "Son fiestas patrias"
+          ],
+          "hints": [
+            "Se celebran en marzo o en abril, según el año.",
+            "Recuerdan los últimos días de Jesús.",
+            "En Popayán hay procesiones muy famosas esos días."
+          ]
         },
         "revised_on": "2026-10-15"
       }
@@ -53689,15 +53670,15 @@
     },
     {
       "id": "q-0742",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 12,
       "description": "Unas gatas tan famosas que tienen más seguidores que tu equipo de fútbol.",
-      "question": "Meredith y Olivia, las gatas de Taylor Swift, tienen carita redonda de búho. ¿Qué tienen en común?",
-      "answer": "Son gatos Scottish Fold",
+      "question": "¿De qué raza son Meredith y Olivia, las famosas gatas de Taylor Swift?",
+      "answer": "Scottish Fold",
       "wrong_answers": [
-        "Son gatos persas",
-        "Son gatos siameses",
-        "Son gatos Maine Coon"
+        "Persa",
+        "Siamés",
+        "Maine Coon"
       ],
       "hints": [
         "Son famosas por sentarse en posturas raras, casi como personas.",
@@ -53746,26 +53727,26 @@
       "needs_media": false,
       "batch": "batch-7",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La pregunta usa el formato retirado \"¿Qué tienen en común?\". Además, el texto describe la \"carita redonda de búho\" cuando la pista real de la raza son las orejas dobladas; si se reescribe, preguntar directamente de qué raza son las gatas de Taylor Swift.",
-        "problems": [
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-15",
         "reviewer": "llm",
-        "model": "claude-fable-5-1",
+        "model": "claude-opus-5-5",
         "previous": null
       },
       "bundle": "base",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1 with a vague hint about the cats' fame that does not rule out any option.",
+        "reason": "Replaced the retired 'in common' format with a direct question about the breed, and dropped the misleading 'owl face' clue.",
         "previous": {
-          "hints": [
-            "Es una raza que viene de Europa.",
-            "Lo más llamativo está en sus orejas.",
-            "Sus orejas están dobladas hacia adelante, y su nombre lo dice en inglés."
+          "question": "Meredith y Olivia, las gatas de Taylor Swift, tienen carita redonda de búho. ¿Qué tienen en común?",
+          "answer": "Son gatos Scottish Fold",
+          "wrong_answers": [
+            "Son gatos persas",
+            "Son gatos siameses",
+            "Son gatos Maine Coon"
           ]
         },
         "revised_on": "2026-10-15"
@@ -53924,9 +53905,9 @@
     },
     {
       "id": "q-0745",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
-      "description": "Un taller donde nadie puede decir \"échale un ojo\" sin quedarse ciego.",
+      "description": "Unos gigantes que trabajaban de herreros para los dioses, sin vacaciones ni horario fijo.",
       "question": "En la mitología griega, ¿cuántos ojos tienen en total tres cíclopes?",
       "answer": "3",
       "wrong_answers": [
@@ -53936,7 +53917,7 @@
       ],
       "hints": [
         "Los cíclopes no tienen la cara como la tuya.",
-        "Su nombre viene del griego y quiere decir 'ojo redondo'… fíjate que dice ojo, no ojos.",
+        "Su nombre viene del griego y describe su cara.",
         "Un ojo por cada cíclope."
       ],
       "media": {
@@ -53981,14 +53962,12 @@
       "needs_media": false,
       "batch": "batch-7",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La pista 2 (\"fíjate que dice ojo, no ojos\") ya entrega el dato clave (un ojo por cíclope) antes de la pista 3, y la descripción (\"échale un ojo sin quedarse ciego\") apunta a lo mismo. Conviene suavizar la pista 2 (p. ej. solo \"Su nombre viene del griego y describe su cara\") y cambiar la descripción por una que no juegue con el ojo único.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-15",
         "reviewer": "llm",
-        "model": "claude-fable-5-1",
+        "model": "claude-opus-5-5",
         "previous": null
       },
       "bundle": "base",
@@ -53996,11 +53975,12 @@
       "difficulty_original": 5,
       "revision": {
         "action": "revise",
-        "reason": "Made hint 2 vaguer (the Greek meaning of the name) so only hint 3 nearly gives the answer away.",
+        "reason": "Softened hint 2 and replaced the description, because both revealed the single eye too early.",
         "previous": {
+          "description": "Un taller donde nadie puede decir \"échale un ojo\" sin quedarse ciego.",
           "hints": [
             "Los cíclopes no tienen la cara como la tuya.",
-            "Cada cíclope tiene un solo ojo en medio de la frente.",
+            "Su nombre viene del griego y quiere decir 'ojo redondo'… fíjate que dice ojo, no ojos.",
             "Un ojo por cada cíclope."
           ]
         },
@@ -64079,13 +64059,13 @@
       "id": "q-0881",
       "status": "needs_work",
       "difficulty": 8,
-      "description": "Historias que empiezan mal y, de alguna forma, terminan en una playa.",
-      "question": "¿Qué tienen en común el libro \"Robinson Crusoe\", la película \"La vida de Pi\" y \"Los Robinson suizos\"?",
+      "description": "Historias que empiezan con un plan de viaje y terminan con un cambio de planes total.",
+      "question": "¿Qué hecho pone en marcha las aventuras de \"Robinson Crusoe\", \"La vida de Pi\" y \"Los Robinson suizos\"?",
       "answer": "Un naufragio",
       "wrong_answers": [
-        "Un tesoro enterrado",
-        "Una ballena gigante",
-        "Un viaje en submarino"
+        "El hallazgo de un tesoro",
+        "El ataque de una ballena",
+        "Una avería del submarino"
       ],
       "hints": [
         "Las tres historias tienen mucha agua salada.",
@@ -64095,16 +64075,16 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "desert island beach palm",
+        "query": "Bengal tiger",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_cruise_of_the_Kawa%3B_%281921%29_%2814749462356%29.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/The_cruise_of_the_Kawa%3B_%281921%29_%2814749462356%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Internet Archive Book Images · No restrictions · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABengal_tiger_%28Panthera_tigris_tigris%29_female_3.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Bengal_tiger_%28Panthera_tigris_tigris%29_female_3.jpg/3840px-Bengal_tiger_%28Panthera_tigris_tigris%29_female_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Charles J. Sharp · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "No restrictions",
-        "license_url": "https://www.flickr.com/commons/usage/",
-        "author": "Internet Archive Book Images",
-        "author_url": "https://www.flickr.com/people/126377022@N07",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Charles J. Sharp",
+        "author_url": "https://www.wikidata.org/wiki/Q54800218",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -64135,32 +64115,44 @@
       "batch": "batch-7",
       "review": {
         "decision": "needs_work",
-        "feedback": "La pregunta usa el formato retirado \"¿qué tienen en común…?\" (tres obras y una respuesta común). Además, la descripción (\"terminan en una playa\") y la imagen de isla desierta apuntan directamente al naufragio.",
+        "feedback": "La pregunta pide lo que tienen en común tres obras (\"Robinson Crusoe\", \"La vida de Pi\", \"Los Robinson suizos\"), y ese formato de \"¿qué tienen en común…?\" ya no se usa. Hay que replantearla como una pregunta sobre una sola obra o un solo hecho.",
         "problems": [
-          "giveaway",
           "style"
         ],
         "reviewed_on": "2026-10-15",
         "reviewer": "llm",
-        "model": "claude-fable-5-1",
+        "model": "claude-opus-5-5",
         "previous": null
       },
       "bundle": "base",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the false hint 1 and swapped the mutiny/pirate distractors, which do appear in the works, for options absent from all three.",
+        "reason": "Replaced the retired 'in common' format with a direct question, and changed the description and image, which pointed straight at the shipwreck.",
         "previous": {
+          "description": "Historias que empiezan mal y, de alguna forma, terminan en una playa.",
+          "question": "¿Qué tienen en común el libro \"Robinson Crusoe\", la película \"La vida de Pi\" y \"Los Robinson suizos\"?",
           "wrong_answers": [
-            "Un motín",
             "Un tesoro enterrado",
-            "Un abordaje pirata"
+            "Una ballena gigante",
+            "Un viaje en submarino"
           ],
-          "hints": [
-            "Ninguna de estas historias necesita piratas.",
-            "Todo empieza cuando un barco tiene un problema muy serio.",
-            "Los protagonistas terminan solos en el mar o en una isla."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "desert island beach palm",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_cruise_of_the_Kawa%3B_%281921%29_%2814749462356%29.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/The_cruise_of_the_Kawa%3B_%281921%29_%2814749462356%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Internet Archive Book Images · No restrictions · Wikimedia Commons",
+            "provider": "commons",
+            "license": "No restrictions",
+            "license_url": "https://www.flickr.com/commons/usage/",
+            "author": "Internet Archive Book Images",
+            "author_url": "https://www.flickr.com/people/126377022@N07",
+            "restrictions": [],
+            "pd_reasons": []
+          }
         },
         "revised_on": "2026-10-15"
       }
@@ -65180,7 +65172,7 @@
     },
     {
       "id": "q-0896",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Un árbol que deja la casa oliendo mejor que el ambientador del baño.",
       "question": "Además de oler rico, ¿para qué sirve guardar la ropa en un armario de madera de cedro?",
@@ -65193,21 +65185,21 @@
       "hints": [
         "El olor no es solo para las personas.",
         "A unos bichitos que se comen la ropa no les gusta nada.",
-        "Son insectos pequeños que vuelan cerca de los bombillos."
+        "Son insectos pequeños que vuelan cerca de las bombillas."
       ],
       "media": {
         "type": "image",
         "role": "illustrative",
         "query": "two-door wardrobe",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AHamburg_Two-door_wardrobe_with_medallions.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Hamburg_Two-door_wardrobe_with_medallions.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Anonymous (Hamburg)Unknown author · CC0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALooking_NNE_at_wardrobe_in_parents_bedroom_-_second_floor_-_Tinsley_Living_Farm_-_Museum_of_the_Rockies_-_2013-07-08.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Looking_NNE_at_wardrobe_in_parents_bedroom_-_second_floor_-_Tinsley_Living_Farm_-_Museum_of_the_Rockies_-_2013-07-08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Tim Evanson · CC BY-SA 2.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC0",
-        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "author": "Anonymous (Hamburg)Unknown author",
-        "author_url": "https://en.wikipedia.org/wiki/en:Hamburg",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Tim Evanson",
+        "author_url": null,
         "restrictions": [],
         "pd_reasons": []
       },
@@ -65237,23 +65229,25 @@
       "needs_media": false,
       "batch": "batch-7",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La pregunta es del bundle base, pero la pista 3 usa «bombillos» (uso colombiano); en voz neutra debe ser «bombillas» («…vuelan cerca de las bombillas»). El resto (hecho, opciones, fun fact) está bien.",
-        "problems": [
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-15",
         "reviewer": "llm",
-        "model": "claude-fable-5-1",
+        "model": "claude-opus-5-5",
         "previous": null
       },
       "bundle": "base",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the fun fact that mixed up cedar species with a true tip about cedar blocks losing and recovering their scent.",
+        "reason": "Changed the Colombian word 'bombillos' to the neutral 'bombillas' in hint 3.",
         "previous": {
-          "fun_fact": "Con la madera olorosa de este cedro se hacen tradicionalmente las cajas para guardar tabacos finos."
+          "hints": [
+            "El olor no es solo para las personas.",
+            "A unos bichitos que se comen la ropa no les gusta nada.",
+            "Son insectos pequeños que vuelan cerca de los bombillos."
+          ]
         },
         "revised_on": "2026-10-15"
       }
@@ -67774,9 +67768,9 @@
     },
     {
       "id": "q-0931",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
-      "description": "Unas vacaciones sin colegio que salen carísimas… en orejas.",
+      "description": "Un viaje de pura diversión que termina con un rebuzno.",
       "question": "En el libro de Pinocho de Collodi, ¿qué eran antes los burros que el cochero vende en el mercado?",
       "answer": "Niños que no querían estudiar",
       "wrong_answers": [
@@ -67786,23 +67780,25 @@
       ],
       "hints": [
         "Al mismo Pinocho le pasa igual.",
-        "El cochero se los llevó a un lugar sin colegio ni maestros.",
-        "Les crecieron orejas largas por no querer ir a clase."
+        "Antes de tener orejas largas, se pasaban el día jugando.",
+        "El cochero se los llevó a un lugar sin colegio ni maestros."
       ],
       "media": {
         "type": "image",
         "role": "illustrative",
         "query": "donkey in field",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ADonkey_in_the_field_-_geograph.org.uk_-_7794939.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Donkey_in_the_field_-_geograph.org.uk_-_7794939.jpg/3840px-Donkey_in_the_field_-_geograph.org.uk_-_7794939.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Gordon Hatton · CC BY-SA 2.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_man_and_his_donkey_on_the_way_back_from_the_field_in_Aswan%2C_Egypt_%28edited%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/A_man_and_his_donkey_on_the_way_back_from_the_field_in_Aswan%2C_Egypt_%28edited%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Original:  Mohamed Hozyen · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 2.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-        "author": "Gordon Hatton",
-        "author_url": "https://www.geograph.org.uk/profile/4820",
-        "restrictions": [],
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Original:  Mohamed Hozyen\nDerivative work:  Aristeas",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Hozyen",
+        "restrictions": [
+          "personality"
+        ],
         "pd_reasons": []
       },
       "fun_fact": "En la película de Disney ese lugar se volvió una isla, pero en el libro es un país al que los niños llegan en una carreta tirada por burritos.",
@@ -67831,14 +67827,12 @@
       "needs_media": false,
       "batch": "batch-7",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La descripción (\"vacaciones sin colegio que salen carísimas… en orejas\") ya dice que los burros eran niños que no iban a clase, o sea, regala la respuesta antes de leer la pregunta. La pista 2 (\"un lugar sin colegio ni maestros\") también identifica la respuesta demasiado pronto; conviene una descripción sin \"colegio\" y mover esa pista al tercer lugar.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-15",
         "reviewer": "llm",
-        "model": "claude-fable-5-1",
+        "model": "claude-opus-5-5",
         "previous": null
       },
       "bundle": "base",
@@ -67846,10 +67840,11 @@
       "difficulty_original": 12,
       "revision": {
         "action": "revise",
-        "reason": "Fixed hint 1: in Collodi's book Pinocchio does fully turn into a donkey.",
+        "reason": "Rewrote the description so it no longer mentions school, and moved the 'sin colegio' clue to hint 3 with a softer hint 2.",
         "previous": {
+          "description": "Unas vacaciones sin colegio que salen carísimas… en orejas.",
           "hints": [
-            "Al mismo Pinocho casi le pasa igual.",
+            "Al mismo Pinocho le pasa igual.",
             "El cochero se los llevó a un lugar sin colegio ni maestros.",
             "Les crecieron orejas largas por no querer ir a clase."
           ]
@@ -68527,10 +68522,10 @@
     },
     {
       "id": "q-0941",
-      "status": "needs_work",
-      "difficulty": 7,
-      "description": "Un lugar tan oscuro que ni con la linterna del celular encuentras la salida.",
-      "question": "El guácharo es un ave que anida en cuevas totalmente oscuras y vuela entre las rocas sin chocar. ¿Cómo se orienta, igual que un murciélago?",
+      "status": "approved",
+      "difficulty": 8,
+      "description": "Un lugar tan oscuro que ni con linterna encuentras la salida.",
+      "question": "El guácharo es un ave que anida en cuevas totalmente oscuras y vuela entre las rocas sin chocar. ¿Cómo se orienta?",
       "answer": "Con el eco de sus propios sonidos",
       "wrong_answers": [
         "Con el calor de las rocas",
@@ -68558,7 +68553,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "El guácharo es el único pájaro nocturno volador que se alimenta de frutas, y Alexander von Humboldt lo conoció en esta cueva en 1799.",
+      "fun_fact": "El guácharo es el único pájaro nocturno volador que se alimenta de frutas, y Alexander von Humboldt lo conoció en 1799 en la Cueva del Guácharo, en Venezuela.",
       "subcategory": "Fenómenos naturales",
       "style": null,
       "concept": "Cueva del Guácharo",
@@ -68584,31 +68579,24 @@
       "needs_media": false,
       "batch": "batch-7",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La pregunta regala la respuesta: \"igual que un murciélago\" apunta directo a la ecolocalización, que todos asocian con los murciélagos; quitar esa comparación o cambiar el enfoque. Además el fun fact dice \"esta cueva\" sin que la pregunta nombre ninguna cueva (la del Guácharo, Venezuela); nombrarla o reescribirlo.",
-        "problems": [
-          "giveaway",
-          "other"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-15",
         "reviewer": "llm",
-        "model": "claude-fable-5-1",
+        "model": "claude-opus-5-5",
         "previous": null
       },
       "bundle": "base",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the retired 'what do they have in common' format as a direct 'how does it orient itself' question, dropped the filler story and made the options uniform.",
+        "reason": "Removed the bat comparison that gave the answer away, named the cave in the fun fact, dropped the regional 'celular' and raised the difficulty slightly.",
         "previous": {
-          "difficulty": 8,
-          "question": "Estás de visita en la Cueva del Guácharo, oscura como boca de lobo. ¿Qué tienen en común el guácharo que vive allí, el murciélago y el delfín?",
-          "answer": "Se orientan con ecos",
-          "wrong_answers": [
-            "Son todos mamíferos",
-            "Duermen todo el invierno",
-            "Ven con luz infrarroja"
-          ]
+          "difficulty": 7,
+          "description": "Un lugar tan oscuro que ni con la linterna del celular encuentras la salida.",
+          "question": "El guácharo es un ave que anida en cuevas totalmente oscuras y vuela entre las rocas sin chocar. ¿Cómo se orienta, igual que un murciélago?",
+          "fun_fact": "El guácharo es el único pájaro nocturno volador que se alimenta de frutas, y Alexander von Humboldt lo conoció en esta cueva en 1799."
         },
         "revised_on": "2026-10-15"
       },
@@ -77547,20 +77535,20 @@
     },
     {
       "id": "q-1064",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
-      "description": "Tu tío asegura que la música buena se acabó antes de que tú nacieras, y trae pruebas.",
-      "question": "¿Qué tienen en común los álbumes «Thriller», «Back in Black» y «The Dark Side of the Moon»?",
-      "answer": "Están entre los álbumes más vendidos de la historia",
+      "description": "Música de cuando la gente todavía compraba los discos en una tienda.",
+      "question": "¿Cuál es el álbum más vendido de la historia?",
+      "answer": "Thriller",
       "wrong_answers": [
-        "Son bandas sonoras de películas famosas",
-        "Son álbumes grabados en vivo en estadios",
-        "Son álbumes lanzados el mismo año"
+        "Back in Black",
+        "The Dark Side of the Moon",
+        "Abbey Road"
       ],
       "hints": [
-        "Los tres salieron entre los años 70 y 80.",
-        "Casi todas las casas con tocadiscos tenían alguno de los tres.",
-        "«Thriller» encabeza esa lista desde hace décadas."
+        "Salió a comienzos de los años 80.",
+        "Su cantante era famoso por parecer que caminaba hacia atrás en el escenario.",
+        "Es del Rey del Pop."
       ],
       "media": {
         "type": "image",
@@ -77604,25 +77592,31 @@
       "needs_media": false,
       "batch": "batch-7",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La pregunta usa el formato retirado «¿qué tienen en común…?»; además la opción correcta es la más larga y la única con tono de récord, y la descripción abre con una historia inventada («Tu tío…»). Habría que reformularla como pregunta directa (p. ej. cuál es el álbum más vendido de la historia).",
-        "problems": [
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-15",
         "reviewer": "llm",
-        "model": "claude-fable-5-1",
+        "model": "claude-opus-5-5",
         "previous": null
       },
       "bundle": "base",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hints 1 and 2, which mentioned a record and sales figures, with vaguer hints about era and fame.",
+        "reason": "Replaced the retired 'qué tienen en común' format with a direct real-world superlative (best-selling album), used album titles as matching options and removed the invented uncle from the description.",
         "previous": {
+          "description": "Tu tío asegura que la música buena se acabó antes de que tú nacieras, y trae pruebas.",
+          "question": "¿Qué tienen en común los álbumes «Thriller», «Back in Black» y «The Dark Side of the Moon»?",
+          "answer": "Están entre los álbumes más vendidos de la historia",
+          "wrong_answers": [
+            "Son bandas sonoras de películas famosas",
+            "Son álbumes grabados en vivo en estadios",
+            "Son álbumes lanzados el mismo año"
+          ],
           "hints": [
-            "Tiene que ver con un récord.",
-            "Se mide en decenas de millones de copias.",
+            "Los tres salieron entre los años 70 y 80.",
+            "Casi todas las casas con tocadiscos tenían alguno de los tres.",
             "«Thriller» encabeza esa lista desde hace décadas."
           ]
         },
@@ -80199,9 +80193,9 @@
     },
     {
       "id": "q-1100",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
-      "description": "Un villano tan presumido que se dejó bigote de galán y se puso un anillo del color de un bombillo.",
+      "description": "Un villano tan presumido que se dejó bigote de galán y se puso un anillo del color de un pollito.",
       "question": "Soy Sinestro, el gran enemigo de Linterna Verde, y llevo un anillo amarillo. ¿Qué emoción le da poder a mi anillo?",
       "answer": "El miedo",
       "wrong_answers": [
@@ -80256,40 +80250,21 @@
       "needs_media": false,
       "batch": "batch-7",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La descripción usa \"bombillo\", voz colombiana, en una pregunta del bundle base; debe ser \"bombilla\" (o reformular: \"del color de un semáforo en amarillo\", \"del color de un pollito\"). El resto de datos está bien y la imagen 1 sirve.",
-        "problems": [
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-15",
         "reviewer": "llm",
-        "model": "claude-fable-5-1",
+        "model": "claude-opus-5-5",
         "previous": null
       },
       "bundle": "base",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Changed the decorative media query so the search avoids US-only public-domain comic covers.",
+        "reason": "Replaced the Colombian 'bombillo' in the description with a neutral image.",
         "previous": {
-          "media": {
-            "type": "image",
-            "role": "decorative",
-            "query": "comic super hero",
-            "note": null,
-            "source_url": "https://commons.wikimedia.org/wiki/File%3AHitComicsNo19.jpg",
-            "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/HitComicsNo19.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-            "credit": "Reed Crandall · Public domain · Wikimedia Commons",
-            "provider": "commons",
-            "license": "Public domain",
-            "license_url": null,
-            "author": "Reed Crandall",
-            "author_url": null,
-            "restrictions": [],
-            "pd_reasons": [
-              "PD-US-not renewed"
-            ]
-          }
+          "description": "Un villano tan presumido que se dejó bigote de galán y se puso un anillo del color de un bombillo."
         },
         "revised_on": "2026-10-15"
       }
@@ -80450,19 +80425,19 @@
     },
     {
       "id": "q-1103",
-      "status": "needs_work",
-      "difficulty": 9,
-      "description": "Tres villanos que jamás se han visto en persona, pero tienen exactamente la misma costumbre.",
-      "question": "¿Qué tienen en común el Dr. Claw del 'Inspector Gadget', Blofeld de James Bond y el Doctor Maligno de 'Austin Powers'?",
-      "answer": "Acarician un gato",
+      "status": "approved",
+      "difficulty": 8,
+      "description": "Un malvado que quiere dominar el mundo, pero sin soltar a su mascota.",
+      "question": "¿Qué animal acaricia Blofeld, el gran villano de James Bond, mientras planea sus maldades?",
+      "answer": "Un gato blanco",
       "wrong_answers": [
-        "Tienen un garfio",
-        "Usan un monóculo",
-        "Usan capa negra"
+        "Un conejo blanco",
+        "Un perro blanco",
+        "Un hurón blanco"
       ],
       "hints": [
-        "Lo tienen siempre a la mano mientras planean maldades.",
-        "Su mano nunca está quieta: pasa una y otra vez por encima de algo suave.",
+        "Es una mascota suave y peluda.",
+        "El Dr. Claw del 'Inspector Gadget' y el Doctor Maligno de 'Austin Powers' copiaron esa costumbre.",
         "Dice 'miau'."
       ],
       "media": {
@@ -80507,30 +80482,38 @@
       "needs_media": false,
       "batch": "batch-7",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La pregunta usa el formato retirado \"¿Qué tienen en común…?\". Hay que replantearla desde cero (por ejemplo, preguntar directamente qué acaricia el Dr. Claw o Blofeld mientras planea sus maldades).",
-        "problems": [
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-15",
         "reviewer": "llm",
-        "model": "claude-fable-5-1",
+        "model": "claude-opus-5-5",
         "previous": null
       },
       "bundle": "base",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2 with a vaguer hint about the hand gesture that doesn't reveal a living animal, fixing the dangling 'tenerla'.",
+        "reason": "Replaced the retired 'qué tienen en común' format with a direct question about which pet Blofeld strokes, with new matching options, description and hints.",
         "previous": {
+          "difficulty": 9,
+          "description": "Tres villanos que jamás se han visto en persona, pero tienen exactamente la misma costumbre.",
+          "question": "¿Qué tienen en común el Dr. Claw del 'Inspector Gadget', Blofeld de James Bond y el Doctor Maligno de 'Austin Powers'?",
+          "answer": "Acarician un gato",
+          "wrong_answers": [
+            "Tienen un garfio",
+            "Usan un monóculo",
+            "Usan capa negra"
+          ],
           "hints": [
             "Lo tienen siempre a la mano mientras planean maldades.",
-            "Suelen tenerla sentada en las piernas mientras dan órdenes.",
+            "Su mano nunca está quieta: pasa una y otra vez por encima de algo suave.",
             "Dice 'miau'."
           ]
         },
         "revised_on": "2026-10-15"
-      }
+      },
+      "difficulty_original": 9
     },
     {
       "id": "q-1104",
@@ -87170,19 +87153,19 @@
     },
     {
       "id": "q-1194",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Un huevo que se quita la armadura y queda listo para rebotar.",
-      "question": "Vinagre, jugo de limón y gaseosa de cola: ¿qué tienen en común, que si dejas un huevo crudo en ellos varios días le van deshaciendo la cáscara?",
-      "answer": "Son ácidos",
+      "question": "Si dejas un huevo crudo varios días en vinagre, se le deshace la cáscara. ¿Qué tipo de sustancia es el vinagre?",
+      "answer": "Un ácido",
       "wrong_answers": [
-        "Son bases",
-        "Son aceites",
-        "Son sales"
+        "Una base",
+        "Un aceite",
+        "Una sal"
       ],
       "hints": [
         "Piensa en su sabor.",
-        "Los tres son agrios o saben un poquito así.",
+        "El jugo de limón también lo logra, y también es agrio.",
         "Es lo contrario de una sustancia alcalina."
       ],
       "media": {
@@ -87227,42 +87210,32 @@
       "needs_media": true,
       "batch": "batch-7",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La pregunta usa el formato retirado \"¿qué tienen en común…?\". Además, en el bundle base \"gaseosa de cola\" es uso regional; lo neutro sería \"refresco de cola\". Si se reescribe, preguntar directamente qué tipo de sustancia deshace la cáscara del huevo.",
-        "problems": [
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-15",
         "reviewer": "llm",
-        "model": "claude-fable-5-1",
+        "model": "claude-opus-5-5",
         "previous": null
       },
       "bundle": "base",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Image was PD in the US only; changed the query so a new, worldwide-free photo of eggs is fetched (needs_media set).",
+        "reason": "Replaced the retired 'qué tienen en común' format with a direct question about vinegar and removed the regional 'gaseosa'.",
         "previous": {
-          "media": {
-            "type": "image",
-            "role": "illustrative",
-            "query": "egg in glass jar",
-            "note": null,
-            "source_url": "https://commons.wikimedia.org/wiki/File%3A...%29_yolk_is_weighted_and_put_into_a_jar_%28...%29_rest_of_the_egg_LCCN2016872269.jpg",
-            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/...%29_yolk_is_weighted_and_put_into_a_jar_%28...%29_rest_of_the_egg_LCCN2016872269.jpg/3840px-...%29_yolk_is_weighted_and_put_into_a_jar_%28...%29_rest_of_the_egg_LCCN2016872269.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-            "credit": "Harris & Ewing, photographer · Public domain · Wikimedia Commons",
-            "provider": "commons",
-            "license": "Public domain",
-            "license_url": null,
-            "author": "Harris & Ewing, photographer",
-            "author_url": null,
-            "restrictions": [],
-            "pd_reasons": [
-              "PD-Harris-Ewing",
-              "PD-US-no notice"
-            ]
-          },
-          "needs_media": false
+          "question": "Vinagre, jugo de limón y gaseosa de cola: ¿qué tienen en común, que si dejas un huevo crudo en ellos varios días le van deshaciendo la cáscara?",
+          "answer": "Son ácidos",
+          "wrong_answers": [
+            "Son bases",
+            "Son aceites",
+            "Son sales"
+          ],
+          "hints": [
+            "Piensa en su sabor.",
+            "Los tres son agrios o saben un poquito así.",
+            "Es lo contrario de una sustancia alcalina."
+          ]
         },
         "revised_on": "2026-10-15"
       }
@@ -95295,19 +95268,19 @@
     },
     {
       "id": "q-1301",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "Monstruos de cartón, platillos voladores colgando de un hilo y cero vergüenza.",
       "question": "Soy la letra del cine barato de monstruos y platillos voladores, y nací en el Hollywood de los años 30. ¿Qué significaba yo al principio?",
-      "answer": "La película secundaria de una función doble",
+      "answer": "La segunda película de la función",
       "wrong_answers": [
-        "Una película en blanco y negro",
+        "Una película rodada en blanco y negro",
         "Una película de bestias y monstruos",
-        "Una película rodada en Burbank"
+        "Una película para público infantil"
       ],
       "hints": [
         "Tiene que ver con cómo programaban las salas de cine.",
-        "Por una sola entrada se veían dos películas.",
+        "En los años 30, los cines querían que el público se quedara más tiempo en la sala.",
         "La «A» era la película estrella; yo era la de complemento."
       ],
       "media": {
@@ -95315,14 +95288,14 @@
         "role": "illustrative",
         "query": "vintage cinema film projector",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AOnomichi_Cinema_Museum_film_projector_ac_%281%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Onomichi_Cinema_Museum_film_projector_ac_%281%29.jpg/3840px-Onomichi_Cinema_Museum_film_projector_ac_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Asturio Cantabrio · CC BY-SA 4.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APayana_Museum%2C_Karnataka_%282025%29_321.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Payana_Museum%2C_Karnataka_%282025%29_321.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Gpkp · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Asturio Cantabrio",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Asturio_Cantabrio",
+        "author": "Gpkp",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Gpkp",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -95353,43 +95326,31 @@
       "needs_media": true,
       "batch": "batch-8",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La pista 2 («Por una sola entrada se veían dos películas») describe directamente la función doble, que aparece literalmente en la respuesta correcta; además la respuesta es mucho más larga y específica que las tres incorrectas, así que se distingue a simple vista. Conviene suavizar la pista 2 y emparejar la forma y longitud de las cuatro opciones.",
-        "problems": [
-          "giveaway",
-          "other"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-15",
         "reviewer": "llm",
-        "model": "claude-fable-5-1",
+        "model": "claude-opus-5-5",
         "previous": null
       },
       "bundle": "base",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Image was PD in the US only; changed the query to a generic vintage cinema projector so a worldwide-free photo is fetched (needs_media set).",
+        "reason": "Made the four options the same form and length and softened hint 2 so it no longer describes the double feature directly.",
         "previous": {
-          "media": {
-            "type": "image",
-            "role": "illustrative",
-            "query": "1950s drive-in theater",
-            "note": null,
-            "source_url": "https://commons.wikimedia.org/wiki/File%3A1951_-_Airport_Drive-In_Theater_Ad_-_26_Apr_MC_-_Allentown_PA.jpg",
-            "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/02/1951_-_Airport_Drive-In_Theater_Ad_-_26_Apr_MC_-_Allentown_PA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-            "credit": "Paramount Pictures · Public domain · Wikimedia Commons",
-            "provider": "commons",
-            "license": "Public domain",
-            "license_url": null,
-            "author": "Paramount Pictures",
-            "author_url": null,
-            "restrictions": [],
-            "pd_reasons": [
-              "PD-US-no notice",
-              "PD-US-pre1978"
-            ]
-          },
-          "needs_media": false
+          "answer": "La película secundaria de una función doble",
+          "wrong_answers": [
+            "Una película en blanco y negro",
+            "Una película de bestias y monstruos",
+            "Una película rodada en Burbank"
+          ],
+          "hints": [
+            "Tiene que ver con cómo programaban las salas de cine.",
+            "Por una sola entrada se veían dos películas.",
+            "La «A» era la película estrella; yo era la de complemento."
+          ]
         },
         "revised_on": "2026-10-15"
       }
@@ -106861,7 +106822,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "medieval throne room",
+        "query": "medieval stone citadel",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -106901,25 +106862,24 @@
         ],
         "reviewed_on": "2026-10-15",
         "reviewer": "llm",
-        "model": "claude-fable-5-1",
+        "model": "claude-opus-5-5",
         "previous": null
       },
       "bundle": "base",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "New image search for a medieval throne room, as the reviewer suggested; text unchanged.",
+        "reason": "No image was found, so I changed the media query to a simpler medieval citadel scene that doesn't give the answer away.",
         "previous": {
           "media": {
             "type": "image",
             "role": "illustrative",
-            "query": "empty stone throne",
+            "query": "medieval throne room",
             "note": null,
             "source_url": null,
             "file_url": null,
             "credit": null
-          },
-          "needs_media": false
+          }
         },
         "revised_on": "2026-10-15"
       }
@@ -115740,7 +115700,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Augustus Prima Porta statue Vatican",
+        "query": "Augusto di Prima Porta",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3AStatue-Augustus.jpg",
         "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Statue-Augustus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -115790,19 +115750,19 @@
         ],
         "reviewed_on": "2026-10-15",
         "reviewer": "llm",
-        "model": "claude-fable-5-1",
+        "model": "claude-opus-5-5",
         "previous": null
       },
       "bundle": "base",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Flagged image had an unsuitable PD-US-only license; adjusted the query and requested a new media search for the same statue.",
+        "reason": "The image licence was PD-US only, so I changed the query to trigger a new search for a freely licensed photo of the same statue.",
         "previous": {
           "media": {
             "type": "image",
             "role": "illustrative",
-            "query": "Augustus of Prima Porta",
+            "query": "Augustus Prima Porta statue Vatican",
             "note": null,
             "source_url": "https://commons.wikimedia.org/wiki/File%3AStatue-Augustus.jpg",
             "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Statue-Augustus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -115817,8 +115777,7 @@
               "PD-1923",
               "PD-US-expired"
             ]
-          },
-          "needs_media": false
+          }
         },
         "revised_on": "2026-10-15"
       }
@@ -128570,10 +128529,10 @@
     },
     {
       "id": "q-1733",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "Una pregunta que convierte un día de playa en una crisis existencial.",
-      "question": "Si me quitas un grano de arena, sigo igual. Y otro, y otro… hasta que queda uno. ¿Con qué grano dejé de merecer mi nombre? ¿Qué paradoja soy?",
+      "question": "Si me quitas un grano de arena, sigo igual. Y otro, y otro… hasta que queda uno. «¿Con qué grano dejé de merecer mi nombre?» ¿Qué paradoja soy?",
       "answer": "La paradoja del montón",
       "wrong_answers": [
         "La paradoja del barco de Teseo",
@@ -128628,34 +128587,21 @@
       "needs_media": false,
       "batch": "batch-8",
       "review": {
-        "decision": "needs_work",
-        "feedback": "the paradox needs quotes, otherwise there are two questions",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "human",
-        "model": null,
-        "previous": {
-          "decision": "approved",
-          "feedback": null,
-          "problems": [],
-          "reviewed_on": "2026-10-15",
-          "reviewer": "llm",
-          "model": "claude-opus-5-5",
-          "previous": null
-        },
-        "reviewed_at": "2026-10-15T16:29:22"
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "bundle": "base",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Reworded the question around the name rather than identity, so Theseus' ship is no longer defensible, and replaced the 'sorites' giveaway hint with the bald-man variant.",
+        "reason": "I put the paradox's own question in quotes, as the developer asked, so the text no longer reads as two questions.",
         "previous": {
-          "question": "Si me quitas un grano de arena, sigo igual. Y otro, y otro… hasta que queda uno. ¿Cuándo dejé de ser yo? ¿Qué paradoja soy?",
-          "hints": [
-            "Viene de la antigua Grecia.",
-            "También se la conoce como paradoja sorites.",
-            "Trata de cuántos granos hacen falta para llamar a algo de cierta manera."
-          ]
+          "question": "Si me quitas un grano de arena, sigo igual. Y otro, y otro… hasta que queda uno. ¿Con qué grano dejé de merecer mi nombre? ¿Qué paradoja soy?"
         },
         "revised_on": "2026-10-15"
       }
@@ -136515,7 +136461,7 @@
     },
     {
       "id": "q-1838",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "El tío lejano de los cocodrilos, en versión tamaño bus.",
       "question": "Medía unos 11 metros, es uno de los cocodrilos más grandes que han existido y lo llamaron «SuperCroc». ¿Dónde se hallaron sus fósiles más famosos?",
@@ -136527,7 +136473,7 @@
       ],
       "hints": [
         "Hace 110 millones de años, ese lugar estaba lleno de ríos.",
-        "Hoy es un lugar muy seco, pero con mucho calor.",
+        "Hoy casi no llueve allí.",
         "Lo excavó el paleontólogo Paul Sereno en Níger, en una gran expedición de 1997."
       ],
       "media": {
@@ -136573,27 +136519,24 @@
       "needs_media": false,
       "batch": "batch-8",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La pista 2 («Hoy es un lugar muy seco, pero con mucho calor») identifica el Sahara sin ambigüedad: entre Patagonia, Siberia y Antártida es la única opción calurosa, así que regala la respuesta antes de la pista 3. Conviene cambiarla por algo más vago (por ejemplo, que hoy casi no llueve allí, o que se encuentra en África sin nombrar el desierto… mejor algo sobre el continente o la época del hallazgo).",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-15",
         "reviewer": "llm",
-        "model": "claude-fable-5-1",
+        "model": "claude-opus-5-5",
         "previous": null
       },
       "bundle": "base",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Made hint 2 vaguer (today's climate) so it no longer singles out the only African option, and fixed the description since Sarcosuchus is not an ancestor of modern crocodiles.",
+        "reason": "Hint 2 gave the answer away by mentioning heat, so I replaced it with dryness, which also fits Antarctica and Patagonia.",
         "previous": {
-          "description": "El abuelo de los cocodrilos, en versión tamaño bus.",
           "hints": [
             "Hace 110 millones de años, ese lugar estaba lleno de ríos.",
-            "Sus fósiles más famosos salieron de África, en una gran expedición de 1997.",
-            "Lo excavó el paleontólogo Paul Sereno en Níger."
+            "Hoy es un lugar muy seco, pero con mucho calor.",
+            "Lo excavó el paleontólogo Paul Sereno en Níger, en una gran expedición de 1997."
           ]
         },
         "revised_on": "2026-10-15"
@@ -138825,18 +138768,18 @@
     },
     {
       "id": "q-1868",
-      "status": "needs_work",
-      "difficulty": 8,
+      "status": "approved",
+      "difficulty": 9,
       "description": "Una piedra mal lanzada que terminó en los libros de historia.",
-      "question": "Buscaba algo que se me había perdido, tiré una piedra a una cueva y oí romperse una vasija con rollos antiguos. ¿Quién soy?",
+      "question": "En 1947, alguien tiró una piedra a una cueva junto al mar Muerto y así se descubrieron los famosos rollos. ¿Quién era?",
       "answer": "Un pastor beduino",
       "wrong_answers": [
         "Un arqueólogo británico",
         "Un monje cristiano",
-        "Un ingeniero francés"
+        "Un soldado jordano"
       ],
       "hints": [
-        "Fue en 1947, cerca del mar Muerto.",
+        "No buscaba tesoros: buscaba un animal perdido.",
         "Era un joven de un pueblo nómada del desierto.",
         "El animal perdido era una cabra."
       ],
@@ -138883,37 +138826,36 @@
       "needs_media": false,
       "batch": "batch-8",
       "review": {
-        "decision": "needs_work",
-        "feedback": "this apparently refers to a specific anecdote, but the other answeres are not wrong. the events are not specific enough.",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "human",
-        "model": null,
-        "previous": {
-          "decision": "approved",
-          "feedback": null,
-          "problems": [],
-          "reviewed_on": "2026-10-15",
-          "reviewer": "llm",
-          "model": "claude-opus-5-5",
-          "previous": null
-        },
-        "reviewed_at": "2026-10-15T16:25:39"
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
       },
       "bundle": "base",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which gave away the herder, and made the question's opening less revealing.",
+        "reason": "I tied the question to the specific 1947 discovery of the Dead Sea Scrolls, so only the Bedouin shepherd fits, and adjusted the hints and difficulty to match.",
         "previous": {
-          "question": "Buscaba un animal perdido, tiré una piedra a una cueva y oí romperse una vasija con rollos antiguos. ¿Quién soy?",
+          "difficulty": 8,
+          "question": "Buscaba algo que se me había perdido, tiré una piedra a una cueva y oí romperse una vasija con rollos antiguos. ¿Quién soy?",
+          "wrong_answers": [
+            "Un arqueólogo británico",
+            "Un monje cristiano",
+            "Un ingeniero francés"
+          ],
           "hints": [
             "Fue en 1947, cerca del mar Muerto.",
-            "No buscaba tesoros: cuidaba su rebaño.",
+            "Era un joven de un pueblo nómada del desierto.",
             "El animal perdido era una cabra."
           ]
         },
         "revised_on": "2026-10-15"
-      }
+      },
+      "difficulty_original": 8
     },
     {
       "id": "q-1869",
@@ -148005,7 +147947,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Mark Twain photograph",
+        "query": "Mark Twain portrait",
         "note": "Retrato fotográfico clásico de Mark Twain (pelo y bigote blancos), sin su nombre visible. Debe ser una foto de dominio público en todo el mundo (autor fallecido hace más de 70 años), no solo PD-US.",
         "source_url": "https://commons.wikimedia.org/wiki/File%3AMark_Twain_1907.jpg",
         "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Mark_Twain_1907.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -148054,20 +147996,20 @@
         ],
         "reviewed_on": "2026-10-15",
         "reviewer": "llm",
-        "model": "claude-fable-5-1",
+        "model": "claude-opus-5-5",
         "previous": null
       },
       "bundle": "base",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the US-only public-domain image with a new media search for a Twain photo whose author died more than 70 years ago; text unchanged.",
+        "reason": "The photo was PD-US only, so I changed the query to trigger a new search for a portrait that is public domain worldwide (the note already requires this).",
         "previous": {
           "media": {
             "type": "image",
             "role": "essential",
-            "query": "Mark Twain portrait",
-            "note": "Retrato fotográfico clásico de Mark Twain (pelo y bigote blancos), sin su nombre visible.",
+            "query": "Mark Twain photograph",
+            "note": "Retrato fotográfico clásico de Mark Twain (pelo y bigote blancos), sin su nombre visible. Debe ser una foto de dominio público en todo el mundo (autor fallecido hace más de 70 años), no solo PD-US.",
             "source_url": "https://commons.wikimedia.org/wiki/File%3AMark_Twain_1907.jpg",
             "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Mark_Twain_1907.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
             "credit": "Photographer: A.F. Bradley in his studio. · Public domain · Wikimedia Commons",
@@ -152633,7 +152575,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Michelangelo David head",
+        "query": "David Michelangelo face",
         "note": "Close-up of the head and face of Michelangelo's marble David only (no full nude body), no captions. Not Caravaggio's, Donatello's or Verrocchio's David.",
         "source_url": null,
         "file_url": null,
@@ -152673,20 +152615,20 @@
         ],
         "reviewed_on": "2026-10-15",
         "reviewer": "llm",
-        "model": "claude-fable-5-1",
+        "model": "claude-opus-5-5",
         "previous": null
       },
       "bundle": "base",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Changed the media query to 'Michelangelo David head' as the reviewer suggested so the search finds a close-up of the face; text unchanged.",
+        "reason": "No image was found, so I changed to a simpler query for the face of Michelangelo's David, which Commons has many photos of.",
         "previous": {
           "media": {
             "type": "image",
             "role": "essential",
-            "query": "David Michelangelo face",
-            "note": "Close-up of the head and face of Michelangelo's David only (no body), no captions.",
+            "query": "Michelangelo David head",
+            "note": "Close-up of the head and face of Michelangelo's marble David only (no full nude body), no captions. Not Caravaggio's, Donatello's or Verrocchio's David.",
             "source_url": null,
             "file_url": null,
             "credit": null
@@ -162652,7 +162594,7 @@
     },
     {
       "id": "q-2187",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Una alarma que corre más rápido que la tierra que tiembla.",
       "question": "Suena la alerta sísmica en tu ciudad. ¿Cuál de estas cosas NO puede hacer ese sistema?",
@@ -162670,11 +162612,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "seismograph drum recording",
+        "query": "seismograph",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHistorischer_Seismograph.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Historischer_Seismograph.jpg/3840px-Historischer_Seismograph.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Ilyacadiz · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Ilyacadiz",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Ilyacadiz&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "En Ciudad de México, la alerta puede dar casi un minuto de ventaja cuando el sismo nace en la costa del Pacífico.",
       "subcategory": "Terremotos",
@@ -162703,32 +162652,29 @@
       "needs_media": true,
       "batch": "batch-8",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-15",
         "reviewer": "llm",
-        "model": "claude-fable-5-1",
+        "model": "claude-opus-5-5",
         "previous": null
       },
       "bundle": "base",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Changed the media query to a seismograph, which fits the topic without showing a loudspeaker (one of the options); text unchanged.",
+        "reason": "No image was found, so I changed to a simpler, more common query (a seismograph).",
         "previous": {
           "media": {
             "type": "image",
             "role": "illustrative",
-            "query": "Mexico City alert loudspeaker",
+            "query": "seismograph drum recording",
             "note": null,
             "source_url": null,
             "file_url": null,
             "credit": null
-          },
-          "needs_media": false
+          }
         },
         "revised_on": "2026-10-15"
       }
@@ -163796,7 +163742,7 @@
     },
     {
       "id": "q-2202",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Una pregunta para ver quién ve bien y quién necesita ayuda.",
       "question": "¿Cuál de estos personajes NO lleva gafas?",
@@ -163808,7 +163754,7 @@
       ],
       "hints": [
         "Tres de ellos tienen monturas famosísimas, redondas o cuadradas.",
-        "El personaje que buscamos es de la realeza.",
+        "El personaje que buscamos tiene poderes mágicos.",
         "Es una reina de Arendelle que canta 'Libre soy'."
       ],
       "media": {
@@ -163854,25 +163800,23 @@
       "needs_media": false,
       "batch": "batch-8",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La pista 2 (\"es de la realeza\") identifica a Elsa de inmediato: es el único personaje de las cuatro opciones que es de la realeza, así que regala la respuesta antes de la pista 3. Cámbiala por algo más vago (por ejemplo, que es de una película animada musical con nieve).",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-10-15",
         "reviewer": "llm",
-        "model": "claude-fable-5-1",
+        "model": "claude-opus-5-5",
         "previous": null
       },
       "bundle": "base",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2 with a vaguer clue (royalty) that no longer identifies Elsa outright.",
+        "reason": "Replaced hint 2, which gave the answer away (only royal option), with 'has magic powers', which still fits Harry Potter.",
         "previous": {
           "hints": [
             "Tres de ellos tienen monturas famosísimas, redondas o cuadradas.",
-            "El personaje que buscamos tiene poderes de hielo.",
+            "El personaje que buscamos es de la realeza.",
             "Es una reina de Arendelle que canta 'Libre soy'."
           ]
         },

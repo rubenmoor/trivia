@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "2c68db4e",
+  "hash": "e86196d0",
   "questions": [
     {
       "id": "q-0001",
@@ -13464,6 +13464,40 @@
       "background": null
     },
     {
+      "id": "q-0476",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "Cuentos infantiles",
+      "bundle": "base",
+      "description": "La persona que más tiempo ha aplazado algo en la historia, y le salió bien.",
+      "question": "Según el título del famoso libro, ¿durante cuántas noches le cuenta cuentos Sherezade al rey?",
+      "answer": "1001",
+      "wrong_answers": [
+        "365",
+        "100",
+        "40"
+      ],
+      "hints": [
+        "Los cuentos transcurren entre palacios, sultanes y lámparas maravillosas de Oriente.",
+        "Cada noche dejaba el cuento sin terminar para que el rey quisiera oír el final al día siguiente.",
+        "La respuesta está escondida en el nombre del libro."
+      ],
+      "fun_fact": "Los cuentos de Aladino y de Alí Babá no estaban en los manuscritos árabes antiguos: los agregó un traductor francés hace unos 300 años.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Ibn_Bukhtishu_-_Manafi%27_al-Hayawan_-_Folio_II_Recto.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AIbn_Bukhtishu_-_Manafi%27_al-Hayawan_-_Folio_II_Recto.png",
+        "credit": "Michel Bakni · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Michel Bakni",
+        "author_url": "https://www.wikidata.org/wiki/Q81411358"
+      },
+      "background": null
+    },
+    {
       "id": "q-0480",
       "status": "approved",
       "difficulty": 5,
@@ -17707,6 +17741,40 @@
       "background": null
     },
     {
+      "id": "q-0641",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "Barcos",
+      "bundle": "base",
+      "description": "Un marinero que nunca se ha subido a un barco y tampoco a unos pantalones.",
+      "question": "Camisa azul de marinero, gorrito, moñito, sin pantalones y una voz chillona y enojada. ¿Qué personaje de Disney es?",
+      "answer": "El Pato Donald",
+      "wrong_answers": [
+        "Mickey Mouse",
+        "Goofy",
+        "Daisy"
+      ],
+      "hints": [
+        "Es un personaje con plumas.",
+        "Tiene tres sobrinos traviesos.",
+        "Sus sobrinos se llaman Hugo, Paco y Luis."
+      ],
+      "fun_fact": "El Pato Donald apareció por primera vez en 1934, en el corto «La gallinita sabia».",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/00_0490_sailboat_in_Buitenhaven_-_Enkhuizen.jpg/3840px-00_0490_sailboat_in_Buitenhaven_-_Enkhuizen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A00_0490_sailboat_in_Buitenhaven_-_Enkhuizen.jpg",
+        "credit": "W. Bulach · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "W. Bulach",
+        "author_url": "https://commons.wikimedia.org/wiki/User:W._Bulach"
+      },
+      "background": null
+    },
+    {
       "id": "q-0642",
       "status": "approved",
       "difficulty": 8,
@@ -18417,6 +18485,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Deborah Tilley",
         "author_url": "https://www.geograph.org.uk/profile/22705"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0667",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "Celebraciones del mundo",
+      "bundle": "base",
+      "description": "Los días del año en que el pescado se vuelve el invitado de honor del almuerzo.",
+      "question": "¿Qué semana empieza con el Domingo de Ramos y termina con el Domingo de Resurrección?",
+      "answer": "La Semana Santa",
+      "wrong_answers": [
+        "La semana de Navidad",
+        "La semana de Carnaval",
+        "La semana de Reyes"
+      ],
+      "hints": [
+        "Cae en marzo o en abril, según el año.",
+        "Recuerda los últimos días de Jesús.",
+        "En Popayán hay procesiones muy famosas esos días."
+      ],
+      "fun_fact": "Las procesiones de Semana Santa de Popayán son Patrimonio Cultural Inmaterial de la Humanidad de la UNESCO desde 2009.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Popayan_ciudad_colonial.jpg/3840px-Popayan_ciudad_colonial.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APopayan_ciudad_colonial.jpg",
+        "credit": "Xemenendura · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Xemenendura",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Xemenendura"
       },
       "background": null
     },
@@ -20767,6 +20869,40 @@
       "background": null
     },
     {
+      "id": "q-0742",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "Gatos",
+      "bundle": "base",
+      "description": "Unas gatas tan famosas que tienen más seguidores que tu equipo de fútbol.",
+      "question": "¿De qué raza son Meredith y Olivia, las famosas gatas de Taylor Swift?",
+      "answer": "Scottish Fold",
+      "wrong_answers": [
+        "Persa",
+        "Siamés",
+        "Maine Coon"
+      ],
+      "hints": [
+        "Son famosas por sentarse en posturas raras, casi como personas.",
+        "Lo más llamativo está en sus orejas.",
+        "Sus orejas están dobladas hacia adelante, y su nombre lo dice en inglés."
+      ],
+      "fun_fact": "Todos los gatos de esta raza descienden de Susie, una gata de granja que encontraron en Escocia en 1961.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Beach-Please-2022-crowd-stage-lights-night-performance.jpg/3840px-Beach-Please-2022-crowd-stage-lights-night-performance.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABeach-Please-2022-crowd-stage-lights-night-performance.jpg",
+        "credit": "PinkBeachPlanet · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "PinkBeachPlanet",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:PinkBeachPlanet&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-0743",
       "status": "approved",
       "difficulty": 15,
@@ -20831,6 +20967,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Elliott Sadourny",
         "author_url": "https://commons.wikimedia.org/wiki/User:CptKeyes"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0745",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "Héroes griegos",
+      "bundle": "base",
+      "description": "Unos gigantes que trabajaban de herreros para los dioses, sin vacaciones ni horario fijo.",
+      "question": "En la mitología griega, ¿cuántos ojos tienen en total tres cíclopes?",
+      "answer": "3",
+      "wrong_answers": [
+        "6",
+        "2",
+        "9"
+      ],
+      "hints": [
+        "Los cíclopes no tienen la cara como la tuya.",
+        "Su nombre viene del griego y describe su cara.",
+        "Un ojo por cada cíclope."
+      ],
+      "fun_fact": "Zeus recibió el rayo como regalo de los cíclopes por haberlos liberado de una prisión.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Temple_of_Zeus_Olympian%2C_Athens%2C_Greece.jpg/3840px-Temple_of_Zeus_Olympian%2C_Athens%2C_Greece.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATemple_of_Zeus_Olympian%2C_Athens%2C_Greece.jpg",
+        "credit": "Jebulon · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Jebulon",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Jebulon"
       },
       "background": null
     },
@@ -25715,6 +25885,40 @@
       "background": null
     },
     {
+      "id": "q-0896",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "Plantas del Amazonas",
+      "bundle": "base",
+      "description": "Un árbol que deja la casa oliendo mejor que el ambientador del baño.",
+      "question": "Además de oler rico, ¿para qué sirve guardar la ropa en un armario de madera de cedro?",
+      "answer": "Para alejar las polillas",
+      "wrong_answers": [
+        "Para planchar la ropa sola",
+        "Para que la ropa no destiña",
+        "Para secar la ropa mojada"
+      ],
+      "hints": [
+        "El olor no es solo para las personas.",
+        "A unos bichitos que se comen la ropa no les gusta nada.",
+        "Son insectos pequeños que vuelan cerca de las bombillas."
+      ],
+      "fun_fact": "Las bolitas de cedro para el armario pierden su olor con los años, pero basta lijarlas un poco para que vuelvan a oler.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Looking_NNE_at_wardrobe_in_parents_bedroom_-_second_floor_-_Tinsley_Living_Farm_-_Museum_of_the_Rockies_-_2013-07-08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALooking_NNE_at_wardrobe_in_parents_bedroom_-_second_floor_-_Tinsley_Living_Farm_-_Museum_of_the_Rockies_-_2013-07-08.jpg",
+        "credit": "Tim Evanson · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Tim Evanson",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-0897",
       "status": "approved",
       "difficulty": 13,
@@ -26735,6 +26939,40 @@
       "background": null
     },
     {
+      "id": "q-0931",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "Cuentos infantiles",
+      "bundle": "base",
+      "description": "Un viaje de pura diversión que termina con un rebuzno.",
+      "question": "En el libro de Pinocho de Collodi, ¿qué eran antes los burros que el cochero vende en el mercado?",
+      "answer": "Niños que no querían estudiar",
+      "wrong_answers": [
+        "Ladrones castigados por un hada",
+        "Caballos hechizados por un mago",
+        "Gatos que se portaron muy mal"
+      ],
+      "hints": [
+        "Al mismo Pinocho le pasa igual.",
+        "Antes de tener orejas largas, se pasaban el día jugando.",
+        "El cochero se los llevó a un lugar sin colegio ni maestros."
+      ],
+      "fun_fact": "En la película de Disney ese lugar se volvió una isla, pero en el libro es un país al que los niños llegan en una carreta tirada por burritos.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/A_man_and_his_donkey_on_the_way_back_from_the_field_in_Aswan%2C_Egypt_%28edited%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_man_and_his_donkey_on_the_way_back_from_the_field_in_Aswan%2C_Egypt_%28edited%29.jpg",
+        "credit": "Original:  Mohamed Hozyen · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Original:  Mohamed Hozyen\nDerivative work:  Aristeas",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Hozyen"
+      },
+      "background": null
+    },
+    {
       "id": "q-0932",
       "status": "approved",
       "difficulty": 8,
@@ -27037,6 +27275,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Peter Dowley from Dubai, United Arab Emirates",
         "author_url": "https://www.flickr.com/people/40271931@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0941",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "Fenómenos naturales",
+      "bundle": "base",
+      "description": "Un lugar tan oscuro que ni con linterna encuentras la salida.",
+      "question": "El guácharo es un ave que anida en cuevas totalmente oscuras y vuela entre las rocas sin chocar. ¿Cómo se orienta?",
+      "answer": "Con el eco de sus propios sonidos",
+      "wrong_answers": [
+        "Con el calor de las rocas",
+        "Con el olor de las frutas",
+        "Con una luz infrarroja"
+      ],
+      "hints": [
+        "Tiene que ver con cómo encuentran el camino sin ver nada.",
+        "Hacen sonidos y escuchan lo que les responde.",
+        "Se llama ecolocalización."
+      ],
+      "fun_fact": "El guácharo es el único pájaro nocturno volador que se alimenta de frutas, y Alexander von Humboldt lo conoció en 1799 en la Cueva del Guácharo, en Venezuela.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Cueva_del_Guacharo_por_dentro.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACueva_del_Guacharo_por_dentro.JPG",
+        "credit": "Jiberch · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Jiberch",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Jiberch&action=edit&redlink=1"
       },
       "background": null
     },
@@ -30994,6 +31266,40 @@
       "background": null
     },
     {
+      "id": "q-1064",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "Récords Guinness",
+      "bundle": "base",
+      "description": "Música de cuando la gente todavía compraba los discos en una tienda.",
+      "question": "¿Cuál es el álbum más vendido de la historia?",
+      "answer": "Thriller",
+      "wrong_answers": [
+        "Back in Black",
+        "The Dark Side of the Moon",
+        "Abbey Road"
+      ],
+      "hints": [
+        "Salió a comienzos de los años 80.",
+        "Su cantante era famoso por parecer que caminaba hacia atrás en el escenario.",
+        "Es del Rey del Pop."
+      ],
+      "fun_fact": "El videoclip de «Thriller» dura casi 14 minutos, más que muchos cortometrajes de cine.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Vinyl_record_collection_in_The_Stacks_of_KDVS.jpg/3840px-Vinyl_record_collection_in_The_Stacks_of_KDVS.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVinyl_record_collection_in_The_Stacks_of_KDVS.jpg",
+        "credit": "Melikamp · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Melikamp",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Melikamp"
+      },
+      "background": null
+    },
+    {
       "id": "q-1065",
       "status": "approved",
       "difficulty": 9,
@@ -32184,6 +32490,40 @@
       "background": null
     },
     {
+      "id": "q-1100",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "Villanos famosos",
+      "bundle": "base",
+      "description": "Un villano tan presumido que se dejó bigote de galán y se puso un anillo del color de un pollito.",
+      "question": "Soy Sinestro, el gran enemigo de Linterna Verde, y llevo un anillo amarillo. ¿Qué emoción le da poder a mi anillo?",
+      "answer": "El miedo",
+      "wrong_answers": [
+        "La tristeza",
+        "La alegría",
+        "La envidia"
+      ],
+      "hints": [
+        "El anillo verde funciona con la fuerza de voluntad.",
+        "El Espantapájaros, enemigo de Batman, también usa esta emoción como arma.",
+        "Mis seguidores asustan a la gente para ser más fuertes."
+      ],
+      "fun_fact": "Antes de volverse villano, Sinestro fue un Linterna Verde y hasta fue maestro de Hal Jordan.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/The_Big_Bang_Theory%2C_Comic_Book_Store_%22The_Comic_Center_of_Pasadena%22_%286196384919%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Big_Bang_Theory%2C_Comic_Book_Store_%22The_Comic_Center_of_Pasadena%22_%286196384919%29.jpg",
+        "credit": "Chester from Toronto, Canada · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Chester from Toronto, Canada",
+        "author_url": "https://www.flickr.com/people/91032493@N00"
+      },
+      "background": null
+    },
+    {
       "id": "q-1101",
       "status": "approved",
       "difficulty": 6,
@@ -32248,6 +32588,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "AgainErick",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:AgainErick&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1103",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "Villanos famosos",
+      "bundle": "base",
+      "description": "Un malvado que quiere dominar el mundo, pero sin soltar a su mascota.",
+      "question": "¿Qué animal acaricia Blofeld, el gran villano de James Bond, mientras planea sus maldades?",
+      "answer": "Un gato blanco",
+      "wrong_answers": [
+        "Un conejo blanco",
+        "Un perro blanco",
+        "Un hurón blanco"
+      ],
+      "hints": [
+        "Es una mascota suave y peluda.",
+        "El Dr. Claw del 'Inspector Gadget' y el Doctor Maligno de 'Austin Powers' copiaron esa costumbre.",
+        "Dice 'miau'."
+      ],
+      "fun_fact": "En 'Inspector Gadget' nunca se le ve la cara al Dr. Claw: solo su mano con guante metálico y su gato.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Dot_%28181845429%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADot_%28181845429%29.jpeg",
+        "credit": "Weston Woodbury · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Weston Woodbury",
+        "author_url": "https://500px.com/Woodbury"
       },
       "background": null
     },
@@ -35274,6 +35648,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0/",
         "author": "somegeekintn",
         "author_url": "https://www.flickr.com/photos/66335021@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1194",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "Trucos",
+      "bundle": "base",
+      "description": "Un huevo que se quita la armadura y queda listo para rebotar.",
+      "question": "Si dejas un huevo crudo varios días en vinagre, se le deshace la cáscara. ¿Qué tipo de sustancia es el vinagre?",
+      "answer": "Un ácido",
+      "wrong_answers": [
+        "Una base",
+        "Un aceite",
+        "Una sal"
+      ],
+      "hints": [
+        "Piensa en su sabor.",
+        "El jugo de limón también lo logra, y también es agrio.",
+        "Es lo contrario de una sustancia alcalina."
+      ],
+      "fun_fact": "El ácido disuelve el carbonato de calcio de la cáscara soltando burbujitas, y el huevo queda blandito y rebota si lo dejas caer desde poca altura.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Fresh_Eggs_%28Unsplash_fBturNUtd8%29.jpg/3840px-Fresh_Eggs_%28Unsplash_fBturNUtd8%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFresh_Eggs_%28Unsplash_fBturNUtd8%29.jpg",
+        "credit": "Brina Blum brina_blum · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Brina Blum brina_blum",
+        "author_url": "https://unsplash.com/@brina_blum"
       },
       "background": null
     },
@@ -38844,6 +39252,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Elias Levy",
         "author_url": "https://www.flickr.com/people/67374204@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1301",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "Cine de terror",
+      "bundle": "base",
+      "description": "Monstruos de cartón, platillos voladores colgando de un hilo y cero vergüenza.",
+      "question": "Soy la letra del cine barato de monstruos y platillos voladores, y nací en el Hollywood de los años 30. ¿Qué significaba yo al principio?",
+      "answer": "La segunda película de la función",
+      "wrong_answers": [
+        "Una película rodada en blanco y negro",
+        "Una película de bestias y monstruos",
+        "Una película para público infantil"
+      ],
+      "hints": [
+        "Tiene que ver con cómo programaban las salas de cine.",
+        "En los años 30, los cines querían que el público se quedara más tiempo en la sala.",
+        "La «A» era la película estrella; yo era la de complemento."
+      ],
+      "fun_fact": "Roger Corman, el rey de la serie B, filmó «La tiendita de los horrores» (1960) en unos dos días.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Payana_Museum%2C_Karnataka_%282025%29_321.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APayana_Museum%2C_Karnataka_%282025%29_321.jpg",
+        "credit": "Gpkp · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Gpkp",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Gpkp"
       },
       "background": null
     },
@@ -53341,6 +53783,40 @@
       "background": null
     },
     {
+      "id": "q-1733",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "Preguntas filosóficas",
+      "bundle": "base",
+      "description": "Una pregunta que convierte un día de playa en una crisis existencial.",
+      "question": "Si me quitas un grano de arena, sigo igual. Y otro, y otro… hasta que queda uno. «¿Con qué grano dejé de merecer mi nombre?» ¿Qué paradoja soy?",
+      "answer": "La paradoja del montón",
+      "wrong_answers": [
+        "La paradoja del barco de Teseo",
+        "La paradoja del mentiroso",
+        "La paradoja de Aquiles y la tortuga"
+      ],
+      "hints": [
+        "Viene de la antigua Grecia.",
+        "Pasa lo mismo con alguien que pierde pelos uno a uno: ¿cuándo pasa a ser calvo?",
+        "Trata de cuántos granos hacen falta para llamar a algo de cierta manera."
+      ],
+      "fun_fact": "Se atribuye a Eubúlides de Mileto, el mismo filósofo griego al que se atribuye la paradoja del mentiroso.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Macrophotography_of_grains_of_sand_in_polarised_ligth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMacrophotography_of_grains_of_sand_in_polarised_ligth.jpg",
+        "credit": "Jojowikiscience · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Jojowikiscience",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Jojowikiscience&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-1734",
       "status": "approved",
       "difficulty": 10,
@@ -56877,6 +57353,40 @@
       "background": null
     },
     {
+      "id": "q-1838",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "Reptiles",
+      "bundle": "base",
+      "description": "El tío lejano de los cocodrilos, en versión tamaño bus.",
+      "question": "Medía unos 11 metros, es uno de los cocodrilos más grandes que han existido y lo llamaron «SuperCroc». ¿Dónde se hallaron sus fósiles más famosos?",
+      "answer": "En el desierto del Sahara",
+      "wrong_answers": [
+        "En la Patagonia",
+        "En Siberia",
+        "En la Antártida"
+      ],
+      "hints": [
+        "Hace 110 millones de años, ese lugar estaba lleno de ríos.",
+        "Hoy casi no llueve allí.",
+        "Lo excavó el paleontólogo Paul Sereno en Níger, en una gran expedición de 1997."
+      ],
+      "fun_fact": "Sarcosuchus tenía en la punta del hocico un bulto curioso cuya función todavía discuten los científicos.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Iziko_fossil_crocodile_head.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AIziko_fossil_crocodile_head.JPG",
+        "credit": "Nkansahrexford · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Nkansahrexford",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Nkansahrexford"
+      },
+      "background": null
+    },
+    {
       "id": "q-1839",
       "status": "approved",
       "difficulty": 2,
@@ -57868,6 +58378,40 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Sven Scheuermeier sveninho",
         "author_url": "https://unsplash.com/@sveninho"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1868",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "Exploradores y descubrimientos",
+      "bundle": "base",
+      "description": "Una piedra mal lanzada que terminó en los libros de historia.",
+      "question": "En 1947, alguien tiró una piedra a una cueva junto al mar Muerto y así se descubrieron los famosos rollos. ¿Quién era?",
+      "answer": "Un pastor beduino",
+      "wrong_answers": [
+        "Un arqueólogo británico",
+        "Un monje cristiano",
+        "Un soldado jordano"
+      ],
+      "hints": [
+        "No buscaba tesoros: buscaba un animal perdido.",
+        "Era un joven de un pueblo nómada del desierto.",
+        "El animal perdido era una cabra."
+      ],
+      "fun_fact": "Los Rollos del mar Muerto tienen más de 2000 años y se conservaron gracias al clima seco del desierto.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/PikiWiki_Israel_28412_Vadi_Qumran_and_Qumran_caves.JPG/3840px-PikiWiki_Israel_28412_Vadi_Qumran_and_Qumran_caves.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APikiWiki_Israel_28412_Vadi_Qumran_and_Qumran_caves.JPG",
+        "credit": "Dr. Avishai  Teicher · CC BY 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.5",
+        "license_url": "https://creativecommons.org/licenses/by/2.5",
+        "author": "Dr. Avishai  Teicher",
+        "author_url": null
       },
       "background": null
     },
@@ -68591,6 +69135,40 @@
       "background": null
     },
     {
+      "id": "q-2187",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "Terremotos",
+      "bundle": "base",
+      "description": "Una alarma que corre más rápido que la tierra que tiembla.",
+      "question": "Suena la alerta sísmica en tu ciudad. ¿Cuál de estas cosas NO puede hacer ese sistema?",
+      "answer": "Avisar días antes del terremoto",
+      "wrong_answers": [
+        "Avisar segundos antes del temblor fuerte",
+        "Detener trenes de forma automática",
+        "Hacer sonar altavoces en la calle"
+      ],
+      "hints": [
+        "La alerta funciona porque las señales eléctricas viajan más rápido que las ondas del sismo.",
+        "Ciudad de México tiene uno de estos sistemas desde los años 90.",
+        "Nadie en el mundo sabe predecir terremotos con anticipación."
+      ],
+      "fun_fact": "En Ciudad de México, la alerta puede dar casi un minuto de ventaja cuando el sismo nace en la costa del Pacífico.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Historischer_Seismograph.jpg/3840px-Historischer_Seismograph.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHistorischer_Seismograph.jpg",
+        "credit": "Ilyacadiz · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Ilyacadiz",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Ilyacadiz&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-2188",
       "status": "approved",
       "difficulty": 13,
@@ -69063,6 +69641,40 @@
         "license_url": null,
         "author": "Printed by: Charles Motte\n\nPrint made by: Zvinnger\nAfter: Jacques Albert Senave\nPublished by: J P Quénot",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-2202",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "Zapatos y accesorios",
+      "bundle": "base",
+      "description": "Una pregunta para ver quién ve bien y quién necesita ayuda.",
+      "question": "¿Cuál de estos personajes NO lleva gafas?",
+      "answer": "Elsa, de Frozen",
+      "wrong_answers": [
+        "Harry Potter",
+        "Vilma, de Scooby-Doo",
+        "Edna Moda, de Los Increíbles"
+      ],
+      "hints": [
+        "Tres de ellos tienen monturas famosísimas, redondas o cuadradas.",
+        "El personaje que buscamos tiene poderes mágicos.",
+        "Es una reina de Arendelle que canta 'Libre soy'."
+      ],
+      "fun_fact": "En Scooby-Doo es un chiste que se repite: a Vilma se le caen las gafas y anda a tientas diciendo que no ve nada sin ellas.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/DSCF0454_A_street_vendor_carefully_adjusts_a_display_of_eyeglasses_and_sunglasses_at_an_outdoor_market_stall_filled_with_rows_of_frames_cleaning_solutions_and_mirrors.jpg/3840px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADSCF0454_A_street_vendor_carefully_adjusts_a_display_of_eyeglasses_and_sunglasses_at_an_outdoor_market_stall_filled_with_rows_of_frames_cleaning_solutions_and_mirrors.jpg",
+        "credit": "PattayaPatrol · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "PattayaPatrol",
+        "author_url": "https://www.flickr.com/people/PattayaPatrol/"
       },
       "background": null
     },
