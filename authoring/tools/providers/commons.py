@@ -64,7 +64,7 @@ def search(query, kind, limit=30):
     out = []
     for p in sorted(pages.values(), key=lambda p: p.get("index", 0)):
         i = p[info][0]
-        meta = i.get("extmetadata", {})
+        meta = i.get("extmetadata") or {}
         c = {
             "type": kind, "provider": ID, "id": p["title"], "title": p["title"], "page_url": page_url(p["title"]),
             "preview_url": i.get("thumburl") if kind != "audio" else i["url"],
@@ -111,7 +111,7 @@ def lookup(candidate, templates, meta=True):
     page = next(iter(api(**params)["query"]["pages"].values()))
     out = {"pd_reasons": pd_templates(page) if templates else []}
     if meta:
-        m = (page.get("imageinfo") or [{}])[0].get("extmetadata", {})
+        m = (page.get("imageinfo") or [{}])[0].get("extmetadata") or {}
         out |= {"author_url": author_url(m.get("Artist", {}).get("value")), "restrictions": restrictions(m)}
     return out
 
