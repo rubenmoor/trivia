@@ -11,7 +11,7 @@ Fixed terms; use them as written, never a synonym.
 - Question bundle: «Fragenpaket» (decision 50; «Paket» once the context is clear); base bundle «Grundpaket»; bundle names from `app/data/names.de.json` («Basis», «Regional: Kolumbien»)
 - Age group: «Alter» (label), «Altersgruppe»
 - Difficulty: «Schwierigkeit», «Von» / «Bis», «Eigene»
-- Flag: «markieren» / «Zum Prüfen markieren», «Markierte Fragen», «Meldung»
+- Flag: «melden» / «Zum Prüfen melden», «Diese Frage melden», «Gemeldete Fragen», «Meldung» (gallery review 2026-10-14; never «markieren»)
 - Esc menu: «Pause»; «Zurück zum Hauptmenü» (`overlay.restart`, to the start screen); «Spiel beenden» (`overlay.quit`, desktop only, closes the game)
 - Start screen: «Hauptmenü» when named
 - Steam terms as Steam writes them in German: «Steam-Erfolge» (never bare «Erfolge»), «Steam Cloud», «Steam Deck», «Steam-Workshop»
@@ -30,7 +30,8 @@ Fixed terms; use them as written, never a synonym.
 - Short: buttons 1–3 words, about 30 characters (German runs 20–35 % longer, hyphenation on, decision 61); prompts one line at 1280 × 800
 - German capitalisation, otherwise sentence style; joker names as written in the glossary
 - «!» for cheers only, not for menu rows
-- «…» (one character, no space) for rows that open a dialog («Zu Frage gehen…») and for waiting states («Lädt…»)
+- «…» (one character, no space) for waiting states only («Lädt…»); not on rows that open a dialog («Zu einer Frage springen»)
+- Dialog titles that state the action: no «?» («Diese Frage melden»)
 - Quotes „…“
 - Keys and pad glyphs: shown by the `Prompt` chip, never typed into the text; exception `{key}` in `flag.on` / `flag.off`
 - Shortcut letters: one letter, mnemonic in German, unique per screen, not A–D where answers show (LUI-4, `check:literals`)
@@ -52,3 +53,7 @@ Seen in review; guidance, not a lint. Wrong → right.
 - Bare «Erfolge»: «Ein angepasstes Spiel bringt keine Erfolge.» → «… bringt keine Steam-Erfolge.» (TV check)
 - Spanish/French quotes: «{field}» → „{field}“ (`mods.error.bad_field`)
 - Ellipsis with a space: «Wird gesendet …» → «Wird gesendet…» (`flag.sending`)
+- «markieren» for flagging a question: «Diese Frage markieren?», «Markierte Fragen» → «Diese Frage melden», «Gemeldete Fragen» (gallery review 2026-10-14)
+- «…» on a menu row, stiff verb: «Zu Frage gehen…» → «Zu einer Frage springen» (`overlay.goTo`)
+- Filler words: «12 Fragen am Stück bis zum Gipfel» → «12 Fragen bis zum Gipfel» (`screen.start.subtitle`)
+- Colloquial «aus» for a state: «Mods gefunden, aus bis zur Freigabe» → «Mods gefunden, deaktiviert bis zur Freigabe» (`mods.held`)

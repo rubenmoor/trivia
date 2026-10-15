@@ -306,7 +306,7 @@ Questions, hints and translations were drafted with AI (Claude), fact-checked wi
 
 Mods: subscribe in the Steam Workshop, then turn them on in the game's Mods screen.
 
-A wrong or unclear question? Mark it in the game (flag icon or M), open "Marked questions" in the menu (Esc) and press "Send". If sending fails, "Copy" copies the report text. What a report contains and how long it is kept: the privacy section on this store page.
+A wrong or unclear question? Flag it in the game (flag icon or M), open "Flagged questions" in the menu (Esc) and press "Send". If sending fails, "Copy" copies the report text. What a report contains and how long it is kept: the privacy section on this store page.
 ```
 
 #### Spanish (es-419)
@@ -369,7 +369,7 @@ Fragen, Hinweise und Übersetzungen wurden mit KI (Claude) entworfen und per Web
 
 Mods: im Steam-Workshop abonnieren, dann im Mods-Bildschirm des Spiels einschalten.
 
-Eine Frage ist falsch oder unklar? Im Spiel markieren (Fahnen-Symbol oder M), im Menü (Esc) „Markierte Fragen“ öffnen und „Senden“ drücken. Geht das Senden nicht, kopiert „Kopieren“ den Text der Meldung. Was gesendet und wie lange es gespeichert wird: der Abschnitt „Datenschutz“ auf dieser Shop-Seite.
+Eine Frage ist falsch oder unklar? Im Spiel melden (Fahnen-Symbol oder M), im Menü (Esc) „Gemeldete Fragen“ öffnen und „Senden“ drücken. Geht das Senden nicht, kopiert „Kopieren“ den Text der Meldung. Was gesendet und wie lange es gespeichert wird: der Abschnitt „Datenschutz“ auf dieser Shop-Seite.
 ```
 
 ### First week

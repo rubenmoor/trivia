@@ -11,7 +11,7 @@ Fixed terms; use them as written, never a synonym.
 - Question bundle: «question bundle» (decision 50; «bundle» once the context is clear); base bundle «base bundle»; bundle names from `app/data/names.en.json` («Basics», «Regional: Colombia»)
 - Age group: «Age» (label), «age group»
 - Difficulty: «Difficulty», «From» / «To», «Custom»
-- Flag: «mark» / «Mark for review», «Marked questions», «report»
+- Flag: «flag» / «Flag for review», «Flag this question», «Flagged questions», «report» (gallery review 2026-10-14; never «mark»)
 - Esc menu: «Paused»; «Back to main menu» (`overlay.restart`, to the start screen); «Quit game» (`overlay.quit`, desktop only)
 - Start screen: «main menu» when named
 - Steam terms as Steam writes them: «Steam achievements» (never bare «achievements»), «Steam Cloud», «Steam Deck», «Steam Workshop»
@@ -26,7 +26,8 @@ Fixed terms; use them as written, never a synonym.
 - Short: buttons 1–3 words, about 25 characters; prompts one line at 1280 × 800
 - Sentence case: «Customize game», not «Customize Game»; joker and bundle names capitalized as names
 - Contractions are fine («Couldn't», «Who's playing?»)
-- «…» (one character, no space) for rows that open a dialog («Go to question…») and for waiting states («Loading…»)
+- «…» (one character, no space) for waiting states only («Loading…»); not on rows that open a dialog («Go to question»)
+- Dialog titles that state the action: no «?» («Flag this question»)
 - Quotes “…”
 - Keys and pad glyphs: shown by the `Prompt` chip, never typed into the text; exception `{key}` in `flag.on` / `flag.off`
 - Shortcut letters: one letter, mnemonic in English, unique per screen, not A–D where answers show (LUI-4, `check:literals`)
@@ -37,3 +38,6 @@ Seen in review; guidance, not a lint. Wrong → right.
 - Bare «achievements»: «A customized game earns no achievements.» → «… earns no Steam achievements.» (TV check)
 - Parenthesized explanations in a row: «End game (set up another)» → say the effect in the name
 - Plural-only address: «copy it yourselves» → «copy it yourself» or «copy it by hand» (`flag.copyFailed`)
+- «mark» for flagging a question: «Mark this question?», «Marked questions» → «Flag this question», «Flagged questions» (gallery review 2026-10-14)
+- Dialog body that restates the title: «It gets noted for review; the question stays.» → «Optional: Tell us the issue» (`flag.body`)
+- «…» on a menu row: «Go to question…» → «Go to question» (`overlay.goTo`)
