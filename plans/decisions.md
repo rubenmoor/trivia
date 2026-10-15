@@ -513,7 +513,10 @@ Template:
 - Context: Rework handles the hardest needs_work cases at small volume (rework-1: 43 questions, $5.57); a stronger model may pay off there first. Fable costs 2.5× Opus per token (plan 58).
 - Decision: `qgen rework --model {opus,fable}`, default `opus`. Switches fix and review 1 (it decides keep/fix after the reworked fix); fact check stays `sonnet`; review 2 stays `REVIEW_MODEL` (opus) so the final verdict is comparable to rework-1. Model stored in `run.json`; on resume `--model` is ignored with a notice.
 - Consequences: `qgen batch`, `qgen tighten`, `REVIEW_MODEL` unchanged. Model per call already in `costs.log` and `review.model`. RUNBOOK unchanged until the experiment (task 345) changes the default.
-- Supersedes / related: QG-23; plans 16, 58
+- Result (task 345, 2026-10-15): rework-2 (fable) 52/79 approved, $0.39/approved vs rework-1 (opus) 28/43, $0.20/approved: same rate, ~2× cost.
+- Outcome (decision 216): drop; default stays `opus`, `--model fable` stays opt-in; no Fable for batch review.
+- Caveat: review 2 (opus) runs only after a new media search, so in rework review 1 gives the final verdict (with `--model fable`: Fable judges its own fix).
+- Supersedes / related: QG-23; plans 16, 58; decision 216
 
 ## D-66: The client holds the correct answer; the view still hides it
 - Date: 2026-10-12
