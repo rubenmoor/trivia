@@ -15,7 +15,7 @@ import paths  # authoring/tools/paths.py: state/
 import translations
 
 STATS = paths.STATE / "played" / "stats.json"
-PAGE = 200  # the server's GET /telemetry and ack maximum
+PAGE = 200  # the server's TELEMETRY_PAGE (GET /telemetry and ack maximum)
 HELP_JOKERS = {"hint", "snipe"}  # show hints / strike answers; easier, category only pick the question
 LENGTH_MIN = [5, 15, 30, 60, 120, 240]  # session length buckets, minutes
 MIN_N = 20  # clean answers in a cell before it can be an outlier

@@ -6,7 +6,7 @@ import { readFileSync } from "node:fs";
 const n = Number(process.argv[2] ?? 20);
 const base = new URL(process.argv[3] ?? process.env.TRIVIA_REPORT_URL ?? "http://127.0.0.1:8787");
 if (!Number.isInteger(n) || n < 1 || n > 2000) fail("N: integer 1–2000");
-if (!["localhost", "127.0.0.1", "[::1]"].includes(base.hostname)) fail(`refusing ${base.origin}: localhost only`);
+if (!["localhost", "127.0.0.1"].includes(base.hostname)) fail(`refusing ${base.origin}: localhost only`);
 
 const data = (f) => JSON.parse(readFileSync(new URL(`../app/data/${f}`, import.meta.url), "utf8"));
 const pool = data("pool.json");

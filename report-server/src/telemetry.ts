@@ -1,10 +1,10 @@
 // Opt-in telemetry (plan 105, decision 118): the shell posts one session, authoring pulls and acks.
 // Never logs bodies, tickets, SteamIDs, hashes, install or session ids.
 import type { Env } from "../env";
-import { day, error, json, rateLimited, readBody } from "./http";
+import { day, error, json, rateLimited, readBody, rejected, ticketFailed } from "./http";
 import { checkTicket, devTickets, userHash } from "./steam";
 import { checkLimit } from "./validate";
-import { checkTelemetry, checkTelemetryAck, MAX_TELEMETRY_BODY } from "./validate-telemetry";
+import { checkTelemetry, checkTelemetryAck, MAX_TELEMETRY_BODY, TELEMETRY_PAGE } from "./validate-telemetry";
 
 const BUMP = "INSERT INTO telemetry_rate (user_hash, day, count) VALUES (?, ?, 1) ON CONFLICT (user_hash, day) DO UPDATE SET count = count + 1";
 
@@ -17,13 +17,9 @@ export async function postTelemetry(req: Request, env: Env, url: URL): Promise<R
   if (env.TELEMETRY_OPEN === "0") return error(503, "closed");
   const dev = devTickets(env, url);
   const checked = checkTelemetry(req.headers.get("Content-Type"), await readBody(req, MAX_TELEMETRY_BODY), dev);
-  if (!checked.ok) {
-    if (checked.status === 413) return error(413, "too_large");
-    if (checked.status === 415) return error(415, "unsupported_media_type");
-    return error(400, "bad_request", checked.field ? { field: checked.field } : {});
-  }
+  if (!checked.ok) return rejected(checked);
   const ticket = await checkTicket(checked.ticket, env.TELEMETRY_IDENTITY, env, dev);
-  if (!ticket.ok) return ticket.status === 401 ? error(401, "invalid_ticket") : error(502, "steam_unavailable");
+  if (!ticket.ok) return ticketFailed(ticket.status);
   if (!env.HASH_SALT) throw new Error("HASH_SALT not set");
 
   const s = checked.session;
@@ -55,7 +51,7 @@ export async function postTelemetry(req: Request, env: Env, url: URL): Promise<R
 export async function pullTelemetry(env: Env, url: URL): Promise<Response> {
   const limit = checkLimit(url.searchParams.get("limit"));
   if (limit === null) return error(400, "bad_request", { field: "limit" });
-  const n = Math.min(limit, 200);
+  const n = Math.min(limit, TELEMETRY_PAGE);
   const { results } = await env.DB.prepare("SELECT received_day, body FROM telemetry ORDER BY received_day, session_id LIMIT ?")
     .bind(n + 1)
     .all<{ received_day: string; body: string }>();

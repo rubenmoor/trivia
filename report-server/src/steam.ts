@@ -1,6 +1,7 @@
 // Steam Web API ticket check (plan 103 "Steam ticket check"); fake `dev-*` tickets behind the dev switch.
 // Never logs the key, the ticket or the SteamID.
 import type { Env } from "../env";
+import { isObj } from "./validate";
 
 const AUTH_URL = "https://partner.steam-api.com/ISteamUserAuth/AuthenticateUserTicket/v1/";
 const TIMEOUT_MS = 5000;
@@ -35,17 +36,15 @@ export async function checkTicket(ticket: string, identity: string, env: Env, de
 
 /** `{response: {params: {result, steamid, publisherbanned, …}}}` or `{response: {error: {…}}}`. */
 export function ticketResult(body: unknown): TicketResult {
-  const response = isObject(body) ? body["response"] : undefined;
-  if (!isObject(response)) return { ok: false, status: 502 };
+  const response = isObj(body) ? body["response"] : undefined;
+  if (!isObj(response)) return { ok: false, status: 502 };
   if (response["error"] !== undefined) return { ok: false, status: 401 };
   const params = response["params"];
-  if (!isObject(params)) return { ok: false, status: 502 };
+  if (!isObj(params)) return { ok: false, status: 502 };
   if (params["result"] !== "OK" || params["publisherbanned"] === true) return { ok: false, status: 401 };
   const steamid = params["steamid"];
   return typeof steamid === "string" && /^\d{1,20}$/.test(steamid) ? { ok: true, steamid } : { ok: false, status: 502 };
 }
-
-const isObject = (v: unknown): v is Record<string, unknown> => typeof v === "object" && v !== null && !Array.isArray(v);
 
 /** HMAC-SHA256(HASH_SALT, SteamID64), hex. */
 export async function userHash(salt: string, steamid: string): Promise<string> {

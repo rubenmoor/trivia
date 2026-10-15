@@ -1,5 +1,6 @@
 // Helpers shared by the report and telemetry routes.
 import type { Env } from "../env";
+import type { Rejected } from "./validate";
 
 export const json = (status: number, body: unknown, headers: Record<string, string> = {}): Response =>
   new Response(JSON.stringify(body), { status, headers: { "Content-Type": "application/json; charset=utf-8", ...headers } });
@@ -9,17 +10,37 @@ export const error = (status: number, code: string, extra: Record<string, unknow
 
 export const day = (now: Date): string => now.toISOString().slice(0, 10);
 
+/** A failed body check as its response. */
+export function rejected(r: Rejected): Response {
+  if (r.status === 413) return error(413, "too_large");
+  if (r.status === 415) return error(415, "unsupported_media_type");
+  return error(400, "bad_request", r.field ? { field: r.field } : {});
+}
+
+/** A failed ticket check as its response. */
+export const ticketFailed = (status: 401 | 502): Response =>
+  status === 401 ? error(401, "invalid_ticket") : error(502, "steam_unavailable");
+
 /** 429 until the next UTC day. */
 export function rateLimited(now: Date): Response {
   const wait = Math.ceil((Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + 1) - now.getTime()) / 1000);
   return json(429, { error: "rate_limited", retry_after: wait }, { "Retry-After": String(wait) });
 }
 
-/** Body up to `max + 1` bytes, so oversize is seen without reading it all. */
+/** Body up to `max + 1` bytes, so oversize is seen without reading it all (also without `Content-Length`). */
 export async function readBody(req: Request, max: number): Promise<Uint8Array> {
   if (Number(req.headers.get("Content-Length") ?? 0) > max) return new Uint8Array(max + 1);
-  const buf = new Uint8Array(await req.arrayBuffer());
-  return buf.byteLength > max ? buf.subarray(0, max + 1) : buf;
+  const out = new Uint8Array(max + 1);
+  const reader = req.body?.getReader();
+  let n = 0;
+  while (reader && n <= max) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    out.set(value.subarray(0, max + 1 - n), n);
+    n += value.byteLength;
+  }
+  if (n > max) await reader?.cancel();
+  return out.subarray(0, Math.min(n, max + 1));
 }
 
 async function digest(s: string): Promise<Uint8Array> {

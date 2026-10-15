@@ -1,12 +1,14 @@
 // Question report server (plan 103, decision 93): the game posts, `qgen flag --pull` pulls and acks.
 // Never logs bodies, tickets, SteamIDs or hashes.
 import type { Env, ExecutionContext, ScheduledController } from "../env";
-import { authorized, day, error, json, rateLimited, readBody } from "./http";
+import { authorized, day, error, json, rateLimited, readBody, rejected, ticketFailed } from "./http";
 import { checkTicket, devTickets, userHash } from "./steam";
 import { ackTelemetry, postTelemetry, pullTelemetry, telemetryRetention } from "./telemetry";
 import { checkAck, checkLimit, checkReport, MAX_BODY } from "./validate";
 
 const KEEP_DAYS = 90;
+
+const second = (d: Date): string => d.toISOString().slice(0, 19) + "Z";
 
 /** Today's count of `user` after this one. */
 async function bump(env: Env, user: string, today: string): Promise<number> {
@@ -22,14 +24,10 @@ async function postReport(req: Request, env: Env, url: URL): Promise<Response> {
   if (env.REPORTS_OPEN === "0") return error(503, "closed");
   const dev = devTickets(env, url);
   const checked = checkReport(req.headers.get("Content-Type"), await readBody(req, MAX_BODY), dev);
-  if (!checked.ok) {
-    if (checked.status === 413) return error(413, "too_large");
-    if (checked.status === 415) return error(415, "unsupported_media_type");
-    return error(400, "bad_request", checked.field ? { field: checked.field } : {});
-  }
+  if (!checked.ok) return rejected(checked);
   const r = checked.report;
   const ticket = await checkTicket(r.ticket, env.TICKET_IDENTITY, env, dev);
-  if (!ticket.ok) return ticket.status === 401 ? error(401, "invalid_ticket") : error(502, "steam_unavailable");
+  if (!ticket.ok) return ticketFailed(ticket.status);
   if (!env.HASH_SALT) throw new Error("HASH_SALT not set");
 
   const now = new Date();
@@ -40,7 +38,7 @@ async function postReport(req: Request, env: Env, url: URL): Promise<Response> {
   const row = await env.DB.prepare(
     "INSERT INTO reports (received_at, question_id, lang, text, note, version, pool) VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING id",
   )
-    .bind(now.toISOString().slice(0, 19) + "Z", r.question, r.lang, r.text, r.note, r.version, r.pool)
+    .bind(second(now), r.question, r.lang, r.text, r.note, r.version, r.pool)
     .first<{ id: number }>();
   return json(201, { id: row?.id });
 }
@@ -102,7 +100,7 @@ export default {
   /** Daily 03:00 UTC: rate rows of past days, reports older than 90 days, telemetry (plan 105 "Retention"). */
   async scheduled(controller: ScheduledController, env: Env, ctx: ExecutionContext): Promise<void> {
     const now = new Date(controller.scheduledTime);
-    const cutoff = new Date(now.getTime() - KEEP_DAYS * 86_400_000).toISOString().slice(0, 19) + "Z";
+    const cutoff = second(new Date(now.getTime() - KEEP_DAYS * 86_400_000));
     ctx.waitUntil(
       Promise.all([
         env.DB.prepare("DELETE FROM rate WHERE day < ?").bind(day(now)).run(),

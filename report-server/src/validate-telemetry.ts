@@ -1,8 +1,10 @@
 // Body checks of `POST /telemetry` (plan 105 "API contract"); pure, no Worker APIs.
 // The result holds known fields only: unknown fields never reach the stored body.
-import { LANG, VERSION } from "./validate";
+import { isObj, LANG, parseJson, validTicket, VERSION, type Rejected } from "./validate";
 
 export const MAX_TELEMETRY_BODY = 64 * 1024;
+/** `GET /telemetry` page and ack maximum. */
+export const TELEMETRY_PAGE = 200;
 
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/;
 
@@ -39,9 +41,7 @@ export interface Session {
   games: Game[];
 }
 
-export type CheckedTelemetry =
-  | { ok: true; session: Session; ticket: string }
-  | { ok: false; status: 400 | 413 | 415; field?: string };
+export type CheckedTelemetry = { ok: true; session: Session; ticket: string } | Rejected;
 
 class Bad extends Error {
   readonly field: string;
@@ -52,8 +52,6 @@ class Bad extends Error {
 }
 
 type Obj = Record<string, unknown>;
-
-const isObj = (v: unknown): v is Obj => typeof v === "object" && v !== null && !Array.isArray(v);
 
 function obj(v: unknown, path: string): Obj {
   if (!isObj(v)) throw new Bad(path);
@@ -130,12 +128,8 @@ function game(v: unknown, path: string): Game {
 export function checkTelemetry(contentType: string | null, body: Uint8Array, dev = false): CheckedTelemetry {
   if (!/^application\/json\s*(;|$)/i.test(contentType ?? "")) return { ok: false, status: 415 };
   if (body.byteLength > MAX_TELEMETRY_BODY) return { ok: false, status: 413 };
-  let data: unknown;
-  try {
-    data = JSON.parse(new TextDecoder("utf-8", { fatal: true }).decode(body));
-  } catch {
-    return { ok: false, status: 400 };
-  }
+  const data = parseJson(body);
+  if (data === undefined) return { ok: false, status: 400 };
   try {
     const o = obj(data, "");
     const session: Session = {
@@ -147,7 +141,7 @@ export function checkTelemetry(contentType: string | null, body: Uint8Array, dev
     };
     if (session.games.reduce((n, g) => n + g.answers.length, 0) > 500) throw new Bad("games");
     const ticket = o["ticket"];
-    if (typeof ticket !== "string" || !(/^[0-9A-Fa-f]{2,4096}$/.test(ticket) || (dev && /^dev-[0-9A-Za-z-]{1,64}$/.test(ticket)))) throw new Bad("ticket");
+    if (!validTicket(ticket, dev)) throw new Bad("ticket");
     return { ok: true, session, ticket };
   } catch (e) {
     if (e instanceof Bad) return e.field ? { ok: false, status: 400, field: e.field } : { ok: false, status: 400 };
@@ -155,15 +149,10 @@ export function checkTelemetry(contentType: string | null, body: Uint8Array, dev
   }
 }
 
-/** `POST /telemetry/ack` body: 1–200 session UUIDs, else null. */
+/** `POST /telemetry/ack` body: 1–`TELEMETRY_PAGE` session UUIDs, else null. */
 export function checkTelemetryAck(body: Uint8Array): string[] | null {
-  let data: unknown;
-  try {
-    data = JSON.parse(new TextDecoder("utf-8", { fatal: true }).decode(body));
-  } catch {
-    return null;
-  }
+  const data = parseJson(body);
   const ids = isObj(data) ? data["sessions"] : undefined;
-  if (!Array.isArray(ids) || ids.length < 1 || ids.length > 200 || !ids.every((i) => typeof i === "string" && UUID.test(i))) return null;
+  if (!Array.isArray(ids) || ids.length < 1 || ids.length > TELEMETRY_PAGE || !ids.every((i) => typeof i === "string" && UUID.test(i))) return null;
   return ids as string[];
 }
