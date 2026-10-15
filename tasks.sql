@@ -28048,6 +28048,10 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 
 "go": the worker runs `qgen neutralize` (no arguments; continues from this scan), then `task 633: QC neutralize-1`.
 "not now": tasks 632 and 633 dropped.', NULL, NULL, '2026-10-15T03:34:24Z', NULL, 632, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (203, 'Spot check backaudit-1 done?', 'pending', '["done"]', 'Back-audit pilot slice for `plan 57: Release quality bar and back-audit (CT-5)`: 100 of the oldest approved questions (pilot 73, first-120 27) were audited by opus. 19 have a major finding (19 %); report: authoring/reports/backaudit-1.md. Cost: $3.77, about $0.038 per question.
+Blind spot check: 30 random approved questions of the slice, decide each one without seeing the audit. Start `trivia-authoring`, then open http://127.0.0.1:8001/review?run=backaudit-1&sample=1 (about 15 min).
+Afterwards, the 19 flagged questions with the audit notes: http://127.0.0.1:8001/review?run=backaudit-1&audit=flagged. Send to needs_work whatever you want reworked; `qgen rework` runs only when you ask for it.
+Answer once the 30 are decided. Then task 339 runs `qgen report --qc backaudit-1` (release bar, decision 15) and asks the cost decision for the remaining slices.', NULL, NULL, '2026-10-15T03:41:00Z', NULL, 339, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -29116,6 +29120,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1057, 1113, '2026-10-15T03:25:47Z', '2026-10-15T03:30:09Z', 'done', NULL, 0, 'fa6da4edcc7e27d565e45354dcb99cddc90e7180', 'claude-opus-5-5[1m]', '39798d09-69a5-4fd2-9f99-74bbb83e5bb5', 32, 52, 15687, 1809344, 76282, 1.2860727999999997, 2557536);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1058, 632, '2026-10-15T03:30:09Z', '2026-10-15T03:34:37Z', 'blocked', NULL, 0, 'efd3adc43c796848f1b1783a010d016c9abbd0c3', 'claude-opus-5-5[1m]', 'd8427bcd-45ce-47ee-985e-67c76d4e093d', 10, 20, 2321, 343668, 28902, 0.34644959999999997, 2557536);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1059, 633, '2026-10-15T03:34:37Z', '2026-10-15T03:34:47Z', 'blocked', NULL, 0, '57c4bdcccadbd472f8d4f61dfca7c011a1384f78', 'claude-opus-5-5[1m]', '001da0c0-6a17-457e-aa95-62f252cc6430', 4, 8, 574, 115476, 26691, 0.24813519999999997, 2557536);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1060, 339, '2026-10-15T03:34:47Z', '2026-10-15T03:41:08Z', 'blocked', NULL, 0, '45270930bda33cdb82a4a86e9fb9b4cfe29b629a', 'claude-opus-5-5[1m]', 'd4155ee1-53a9-434a-86e4-fc4683938fdf', 14, 28, 2956, 582539, 42319, 0.51429180000000008, 2557536);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -29222,6 +29227,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (333, 14);
 INSERT INTO task_decision (task_id, decision_id) VALUES (336, 15);
 INSERT INTO task_decision (task_id, decision_id) VALUES (339, 15);
 INSERT INTO task_decision (task_id, decision_id) VALUES (339, 16);
+INSERT INTO task_decision (task_id, decision_id) VALUES (339, 203);
 INSERT INTO task_decision (task_id, decision_id) VALUES (345, 17);
 INSERT INTO task_decision (task_id, decision_id) VALUES (346, 25);
 INSERT INTO task_decision (task_id, decision_id) VALUES (348, 19);
