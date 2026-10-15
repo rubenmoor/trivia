@@ -19,6 +19,9 @@ Steps, each ✓/✗ with its time; all automated steps run, exit 1 on any ✗:
   credits   node authoring/steam/credits_check.mjs on both unpacked builds: files ↔ credits.json, both ways
   smoke     node authoring/steam/smoke.mjs app/desktop/release/linux-unpacked: TRIVIA_DEV_STEAM_USER=1 (decision 111),
             network off; save and resume, no «progress needs Steam» notice (with packs: again without them)
+  mods      node authoring/steam/smoke.mjs --mods: the build's modding/ examples as local mods: loaded, theme applied,
+            player bundle played, rules tweak's extra hint, no crash marker; conversion on top; --no-mods; always
+            (data changes can break the merged bundles.json, decision 128)
   manual    the rows of MANUAL, asked y/n/note or read from --manual FILE (`<row>: <answer>` per line);
             "n…" fails, "y…" passes (deck: also "no Deck…", decision 125), anything else is a note and
             counts as skipped; on a content-only patch full-only rows are answered "skipped: content-only since <tag>"; beta-save only when
@@ -51,6 +54,7 @@ STEPS = {
                for m in ("template-bundle", *(f"examples/{e.name}" for e in sorted((REPO / "modding/examples").iterdir()) if e.is_dir()))],
     "credits": [["node", "authoring/steam/credits_check.mjs", UNPACKED, UNPACKED_WIN]],
     "smoke": [["node", "authoring/steam/smoke.mjs", UNPACKED]],
+    "mods": [["node", "authoring/steam/smoke.mjs", "--mods", UNPACKED]],
 }
 SHIPPED = ("app/", "flake.nix", "flake.lock", "package.json", "package-lock.json")
 STATE_TS = "app/client/src/engine/state.ts"
@@ -64,6 +68,9 @@ MANUAL = {
                 f"{OFFLINE}: a game to level 3 that hits new questions"),
     "report": ("full", "candidate on beta under Steam, online: flag a question with a note, send → «enviada»; "
                "`qgen flag --pull` → that question is needs_work with the note; a second pull is empty", None),
+    "workshop": ("full", "beta under Steam with the example theme subscribed from the Workshop: the mods screen lists it as "
+                 "Workshop, loaded, the colours change; Steam launch options `--no-mods`: plain game, mods screen says why; "
+                 "remove the option", None),
     "windows": ("full", "start test on a clean Windows machine from Steam (beta)", None),
     "deck": ("full", "Steam Deck: answer `no Deck (decision 125)` until the developer has one; then plan 90's real-Deck "
              "checklist from the `beta` branch (plans/18-steam-integration.md \"Steam Deck Verified\")", None),

@@ -5,16 +5,20 @@
 // New player → levels 1–3 with an image, audio and video question → quit → restart resumes; no «progress needs Steam»
 // notice. Exit 1 names the step.
 // With packs (DLC depots, decision 66): once as built (packs offered), once without their files (not offered).
+// --mods (plan 104, task 942) instead: the shipped modding/ examples in <userData>/mods/: loaded, theme applied, player
+// bundle offered and played, rules tweak's extra hint, no crash marker; then the conversion on top, then --no-mods.
 import { spawn, spawnSync } from "node:child_process";
 import { accessSync, constants, existsSync, readdirSync, readFileSync } from "node:fs";
-import { mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
+import { cp, mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { cacheName, shippedName } from "../../app/desktop/resolve.mjs";
 import { connectPipe, pageHelpers, sleep, startXvfb, visibleEl } from "../tools/cdp.mjs";
 
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
-const BUILD = path.resolve(process.argv[2] ?? path.join(REPO, "app", "desktop", "release", "linux-unpacked"));
+const ARGS = process.argv.slice(2);
+const MODS = ARGS.includes("--mods");
+const BUILD = path.resolve(ARGS.find((a) => a !== "--mods") ?? path.join(REPO, "app", "desktop", "release", "linux-unpacked"));
 const BUNDLES = path.join("resources", "data", "bundles");
 const TYPES = ["image", "audio", "video"]; // levels 1–3
 const PLAYER = "Smoke";
@@ -74,12 +78,12 @@ async function saved(test, what) {
   throw new Error(`save: ${what}`);
 }
 
-async function launch() {
+async function launch(...args) {
   const steamRun = which("steam-run");
   // Muted: checks media load, not audio; sound is a manual row.
   const env = [`HOME=${home}`, `DISPLAY=${display}`, "TRIVIA_DEVTOOLS=1", "TRIVIA_MUTE=1", "TRIVIA_DEV_STEAM_USER=1"];
   // unshare -rn: no network; env -i + steam-run: no Nix shell env, an FHS runtime like a Steam Linux machine.
-  const shell = spawn("unshare", ["-rn", "env", "-i", ...env, steamRun, path.join(DIR, "trivia"), "--lang=es", "--remote-debugging-pipe"], {
+  const shell = spawn("unshare", ["-rn", "env", "-i", ...env, steamRun, path.join(DIR, "trivia"), "--lang=es", ...args, "--remote-debugging-pipe"], {
     stdio: ["ignore", "ignore", "pipe", "pipe", "pipe"],
   });
   shell.stderr.on("data", (d) => process.env.DEBUG && process.stderr.write(d));
@@ -169,15 +173,16 @@ async function main() {
     display = x.display;
     procs.push(x.proc);
     const built = packs();
-    console.log(built.length ? `with packs ${built.join(", ")}` : "no packs");
-    await game(path.join(tmp, "home"));
-    if (built.length) {
+    if (!MODS) console.log(built.length ? `with packs ${built.join(", ")}` : "no packs");
+    if (MODS) await modsGame(path.join(tmp, "home-mods"));
+    else await game(path.join(tmp, "home"));
+    if (!MODS && built.length) {
       at("without packs");
       DIR = withoutPacks(tmp);
       if (packs().length) throw new Error(`packs left: ${packs().join(", ")}`);
       await game(path.join(tmp, "home-nopacks"));
     }
-    console.log("smoke: ok");
+    console.log(`smoke${MODS ? " --mods" : ""}: ok`);
   } finally {
     page?.close();
     for (const p of procs.reverse()) if (p.exitCode === null) p.kill();
@@ -193,12 +198,8 @@ async function noNotice() {
   }
 }
 
-/** One game in DIR with a fresh HOME: new player, levels 1–3, quit, restart resumes. */
-async function game(dir) {
-  home = dir;
-  await mkdir(home);
-  at("start");
-  let shell = await launch();
+/** First start: language and consent screens, then the start screen, no memory-only notice. */
+async function toStart() {
   const start = `${visibleEl('[data-focus-id="main"]')} || ${visibleEl(".start .notice")}`;
   await h.waitFor(`${visibleEl(".language .option")} || ${visibleEl(".consent .option")} || ${start}`, "first screen", 30000);
   if (await h.evaluate(visibleEl(".language .option"))) {
@@ -213,6 +214,10 @@ async function game(dir) {
   at("start screen");
   await h.waitFor(start, "start screen");
   await noNotice();
+}
+
+/** Start screen → a new player → the choice screen. */
+async function newPlayer() {
   at("new player");
   await h.click('[data-focus-id="main"]');
   await h.waitFor(visibleEl("#new-player"), "player screen");
@@ -222,6 +227,16 @@ async function game(dir) {
     i.dispatchEvent(new Event("input", { bubbles: true }));
   })()`);
   await h.click('.new button[type="submit"]');
+}
+
+/** One game in DIR with a fresh HOME: new player, levels 1–3, quit, restart resumes. */
+async function game(dir) {
+  home = dir;
+  await mkdir(home);
+  at("start");
+  let shell = await launch();
+  await toStart();
+  await newPlayer();
   at("mode");
   // Packs show in gamemaster mode's bundle selector.
   await h.click('[data-focus-id="mode-gamemaster"]');
@@ -262,6 +277,95 @@ async function game(dir) {
   // Level screen's number, else the HUD's level chip (cards).
   const level = await h.evaluate(`document.querySelector(".level .title.big, .hud .level")?.textContent ?? ""`);
   if (!/4/.test(level)) throw new Error(`resumed at "${level.trim()}", not level 4`);
+  await quit(shell);
+  page.close();
+  page = null;
+}
+
+const EXAMPLES = ["template-bundle", "examples/theme", "examples/rules-tweak"]; // load order, top first
+const CONVERSION = "examples/conversion";
+const userData = () => path.join(home, ".config", "trivia"); // main.mjs: appData/trivia when packaged
+const modId = (rel) => JSON.parse(readFileSync(path.join(DIR, "modding", rel, "mod.json"), "utf8")).id;
+
+/** <userData>/mods/<folder> from the build's modding/; mods.json as the shell writes it, notice accepted, `rels` on. */
+async function installMods(rels) {
+  for (const rel of rels) await cp(path.join(DIR, "modding", rel), path.join(userData(), "mods", path.basename(rel)), { recursive: true });
+  const settings = { version: 1, mods: rels.map((rel) => ({ id: modId(rel), on: true })), notice: true, noticeAt: new Date().toISOString() };
+  await writeFile(path.join(userData(), "mods.json"), JSON.stringify(settings, null, 2) + "\n");
+}
+
+/** `window.triviaShell.mods.list()` */
+const modsList = () => h.evaluate("window.triviaShell.mods.list()");
+
+/** Every id in `ids` loaded, no mod with an error. */
+async function loaded(ids) {
+  const { mods } = await modsList();
+  const bad = mods.filter((m) => m.error || (ids.includes(m.id) && m.state !== "loaded"));
+  const missing = ids.filter((id) => !mods.some((m) => m.id === id));
+  if (bad.length || missing.length)
+    throw new Error(`mods: ${[...bad.map((m) => `${m.id ?? m.dir} ${m.state}${m.error ? ` ${m.error.code}` : ""}`), ...missing.map((id) => `${id} not listed`)].join(", ")}`);
+}
+
+/** Shipped examples as a player's local mods: theme, player bundle, rules tweak; then the conversion; then --no-mods. */
+async function modsGame(dir) {
+  home = dir;
+  await mkdir(home);
+  for (const rel of [...EXAMPLES, CONVERSION])
+    if (!existsSync(path.join(DIR, "modding", rel, "mod.json"))) throw new Error(`no modding/${rel} in the build`);
+  at("install mods");
+  await installMods(EXAMPLES);
+  const ids = EXAMPLES.map(modId);
+  const t0 = Date.now();
+  at("start with mods");
+  let shell = await launch();
+  await toStart();
+  at("mods loaded");
+  await loaded(ids);
+  at("theme");
+  const css = readFileSync(path.join(DIR, "modding", "examples", "theme", "style.css"), "utf8");
+  const [, name, value] = css.match(/(--[\w-]+):\s*([^;]+);/) ?? [];
+  if (!name) throw new Error("no CSS variable in the theme's style.css");
+  const got = await h.evaluate(`getComputedStyle(document.querySelector(".game")).getPropertyValue(${JSON.stringify(name)}).trim()`);
+  if (got !== value.trim()) throw new Error(`${name} is "${got}", the theme sets "${value.trim()}"`);
+  await newPlayer();
+  at("player bundle");
+  const tb = path.join(DIR, "modding", "template-bundle");
+  const rows = JSON.parse(readFileSync(path.join(tb, "data", "bundles.json"), "utf8")).bundles;
+  const bundle = `${modId("template-bundle")}:${rows[0].id}`;
+  const tile = `[data-focus-id="bundle-${bundle}"]`;
+  await h.waitFor(visibleEl(tile), `bundle ${bundle} offered`);
+  if (!(await h.evaluate(visibleEl(`${tile} .made`)))) throw new Error(`bundle ${bundle} not marked player-made`);
+  await h.click('[data-focus-id="mode-solo"]');
+  await h.click('[data-focus-id="group-young_teens"]');
+  if ((await h.evaluate(`document.querySelector('${tile}').getAttribute("aria-checked")`)) !== "true") await h.click(tile);
+  await h.click('[data-focus-id="start"]');
+  const save = await saved((s) => s.games?.length, "new game");
+  if (!running(save).settings?.bundles?.includes(bundle)) throw new Error(`game started without ${bundle}`);
+  at("rules tweak");
+  await h.waitFor(visibleEl('.side-tray [data-joker="hint"] .count'), "hint joker count");
+  const hints = await h.evaluate(`document.querySelector('.side-tray [data-joker="hint"] .count').textContent.trim()`);
+  if (hints !== "4") throw new Error(`hint jokers ${hints}, want 4 (3 + the rules tweak's one)`);
+  await h.click(".level .hint");
+  for (const [i, p] of pickQuestions(save.games.at(-1).locale ?? "es").entries()) await playLevel(i + 1, p);
+  at("crash marker");
+  await sleep(Math.max(0, t0 + 25000 - Date.now()));
+  const marker = path.join(userData(), "mods-start.json");
+  if (existsSync(marker)) throw new Error(`${marker} still there after 20 s`);
+  await quit(shell);
+
+  at("conversion");
+  await installMods([CONVERSION, ...EXAMPLES]);
+  shell = await launch();
+  await h.waitFor(visibleEl("#guess"), "conversion's #guess", 30000);
+  if (await h.evaluate(visibleEl('[data-focus-id="main"]'))) throw new Error("our start screen shows under the conversion");
+  await loaded([CONVERSION, ...EXAMPLES].map(modId));
+  await quit(shell);
+
+  at("--no-mods");
+  shell = await launch("--no-mods");
+  await h.waitFor(visibleEl('[data-focus-id="main"]'), "our start screen", 30000);
+  const list = await modsList();
+  if (!list.noMods || list.safeStart?.reason !== "flag") throw new Error(`mods.list(): noMods ${list.noMods}, safeStart ${JSON.stringify(list.safeStart)}`);
   await quit(shell);
   page.close();
   page = null;
