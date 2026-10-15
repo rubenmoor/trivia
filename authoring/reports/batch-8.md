@@ -74,16 +74,22 @@ Deficit to the targets (base, approved now): 1: 205, 2: 242, 3: 311, 4: 297, 5: 
 
 A second LLM reader of a seeded sample (plan 16, `prompts/audit.md`), blind to the review. It changes nothing in the pool; the developer decides its findings in the review tool.
 
-- Major among review approved: 1 of 57 (2 %)
-- Major among review needs work: 1 of 3 (33 %)
-- Problems by kind: giveaway 6 (2 major), overlap 1 (1 major), media 1 (0 major), difficulty 4 (0 major), style 1 (0 major), other 3 (0 major)
-- Mean |audit − final difficulty|: 0.9; ≥ 3 on 4 of 60 (7 %)
-- Audit/review agreement (both accept or both not): 57 of 60 (95 %)
-- Sample: 60 audited of 60; 60 Claude calls, about $2.74
+- Major among review approved: 7 of 115 (6 %)
+- Major among review needs work: 1 of 5 (20 %)
+- Problems by kind: giveaway 13 (6 major), overlap 2 (2 major), media 2 (1 major), difficulty 8 (0 major), style 3 (1 major), other 4 (0 major)
+- Mean |audit − final difficulty|: 0.8; ≥ 3 on 9 of 120 (8 %)
+- Audit/review agreement (both accept or both not): 109 of 120 (91 %)
+- Sample: 120 audited of 120; 120 Claude calls, about $5.41
 
 Major findings on approved questions:
 
+- **q-1316**: overlap — Hint 1 ("Mi color viene del hierro que llevo dentro") gives away the answer to related q-1314, which asks which metal in haemoglobin makes blood red (answer: Hierro). If both questions are played, one spoils the other, so hint 1 should be reworded. Everything else checks out: the answer is right (blood is red, and venous blood is dark red, never blue), the hints and fun fact are true, the vein photo is a fair illustration that doesn't show the answer, and difficulty 2 fits. (http://127.0.0.1:8001/review/q-1316)
+- **q-1378**: giveaway — Hint 1 ("Es un líquido.") rules out all three wrong answers (huevo, harina, azúcar), so the first hint gives the answer away. A vaguer hint 1 would fix it, for example "Viene de un animal", though that still leaves huevo in play. Everything else checks out: the answer and fun fact are correct (hard cheeses take about 10 L of milk per kg), the media shows an arepa with fish rather than milk, and difficulty 2 fits. (http://127.0.0.1:8001/review/q-1378)
+- **q-1531**: giveaway — Hint 1 ("Esto pasa en 'Animales fantásticos', décadas antes de Harry") rules out all three wrong answers, since Voldemort, Bellatrix and Barty Crouch Jr. are all villains from Harry's time, so only Grindelwald is left. Hint 2 ("la segunda película") also points to a film titled 'Los crímenes de Grindelwald'. The facts check out: Queenie is Tina's sister and a legilimens, she joins Grindelwald in Paris in film 2 because of the US ban on marrying no-majs, and she marries Jacob at the end of 'Los secretos de Dumbledore'. Q-1908 about Tina is a different fact, and the decorative Paris image is fine. (http://127.0.0.1:8001/review/q-1531)
+- **q-1774**: giveaway, style — Hint 2 ("Lo bebían lejos, muy lejos de la Tierra") gives the answer away: of the four options, only astronauts leave Earth, so it rules out all three wrong answers. It should be moved to hint 3 or made vaguer. Minor style issues: in a base question, "neveras" (hint 1) is regional ("refrigeradores" is closer to neutral), and "refresco" usually means a soda in many countries. The facts are correct: Tang was created by William A. Mitchell at General Foods in 1957, he also invented Pop Rocks, and Tang flew on Gemini missions. (http://127.0.0.1:8001/review/q-1774)
 - **q-1868**: giveaway — Hint 2 ("joven de un pueblo nómada del desierto") is basically the definition of a Bedouin. It rules out all three wrong answers at once, and it gives more away than hint 3 (the goat), so the hints go from stronger to weaker. Swapping hints 2 and 3, or rewording hint 2, would fix it. The facts check out: Muhammed edh-Dhib was a Bedouin shepherd looking for a lost goat near Qumran in 1946/47 who threw a stone into a cave and heard a jar break. The Qumran caves image doesn't show the answer, and no related question overlaps. (http://127.0.0.1:8001/review/q-1868)
+- **q-2033**: giveaway — The facts hold up: pernicious anemia comes from B12 deficiency, liver therapy began with Minot and Murphy in 1926, and Whipple, Minot and Murphy won the 1934 Nobel. The problem is the hints. Only one option is an anemia, so hint 1 ("Afecta la sangre") already points straight at it, and hint 2 ("faltan glóbulos rojos sanos") is the textbook definition of anemia; both rule out every wrong answer long before hint 3. (http://127.0.0.1:8001/review/q-2033)
+- **q-2199**: media — The essential image is "Weisse boutonniere.jpg", which shows a flower worn in a buttonhole, not an ascot. The question says "una pañoleta como esta", so the image has to show an ascot tie. The facts check out: the ascot is named after Ascot Racecourse, and Royal Ascot's dress code does set rules for hats and headpieces, such as a minimum base size in the Royal Enclosure. The distractors are clearly wrong and none of the related questions asks the same fact. (http://127.0.0.1:8001/review/q-2199)
 
 ## Quality control
 

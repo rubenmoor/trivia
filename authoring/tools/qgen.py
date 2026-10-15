@@ -3111,6 +3111,20 @@ def llm_decisions(run):
     return {q["id"]: "needs_work" if q["id"] in work else "approved" for q in qs if q["id"] in work or by_llm(q.get("review"))}
 
 
+SPOT_CHECK_SIZE = 30  # pm decision 2; without targets.json "quality"
+
+
+def spot_check_size(run=None):
+    """The run's spot-check size: its spot-checks.json "size" (e.g. batch-8's 120, decision 228), else quality.spot_check_size."""
+    own = (load_json(layout.SPOT_CHECKS, {}) or {}).get(run, {}).get("size") if run else None
+    return own or (targets.load_quality() or {}).get("spot_check_size", SPOT_CHECK_SIZE)
+
+
+def audit_size(run):
+    """Questions the run's audit reads: AUDIT_SAMPLE, or the whole spot check if larger."""
+    return max(AUDIT_SAMPLE, spot_check_size(run))
+
+
 def audit_sample(run, n=AUDIT_SAMPLE):
     """The first n ids of the run's audit order (plan 16), seeded by the run's name: LLM-approved and
     needs_work questions interleaved in proportion, so every prefix is a proportional sample and the
@@ -3217,7 +3231,7 @@ def cmd_audit(args):
     run = args.batch or (health.batch_runs() or [None])[-1]
     if run is None or not (WORK / run).is_dir():
         sys.exit(f"no work/{run}/")
-    ids = audit_sample(run)
+    ids = audit_sample(run, audit_size(run))
     if not ids:
         return failed(f"{run}: no recorded LLM review to audit")
     return audit_ids(run, ids, args)
@@ -3336,7 +3350,7 @@ def audit_section(run):
     agree = sum((dec[i] == "approved") == (not is_major(found[i])) for i in both)
     lines.append(f"- Audit/review agreement (both accept or both not): {pct(agree, len(both))}")
     c = costs(WORK / run / "audit")
-    lines += [f"- {'Slice' if back else 'Sample'}: {len(found)} audited of {len(dec) if back else len(audit_sample(run))}; "
+    lines += [f"- {'Slice' if back else 'Sample'}: {len(found)} audited of {len(dec) if back else len(audit_sample(run, audit_size(run)))}; "
               f"{len(c)} Claude calls, about ${sum(c):.2f}",
               "", "Major findings on approved questions:", ""]
     lines += [f"- **{i}**: {', '.join(a['problems']) or 'other'} — {a['notes']} ({REVIEW_URL}/{i})"

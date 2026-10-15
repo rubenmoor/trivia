@@ -6,10 +6,11 @@ This is the procedure that follows every finished batch (plan 16, D-56). The LLM
 
 The steps run in order; a pm worker stops at each decision and continues when it is answered.
 
-1. **Batch done.** `qgen batch` finished and is committed (RUNBOOK). The report `authoring/reports/<batch>.md` has the "## Audit" section (LLM audit of a seeded sample of 60, blind to the review).
+1. **Batch done.** `qgen batch` finished and is committed (RUNBOOK). The report `authoring/reports/<batch>.md` has the "## Audit" section (LLM audit of a seeded sample of 60, or of the whole spot check if larger, blind to the review).
    - Major audit findings on approved questions: `http://127.0.0.1:8001/review?batch=<batch>&audit=flagged`.
 2. **Blind spot check (developer only).** Run `trivia-authoring`, open `http://127.0.0.1:8001/review?batch=<batch>&sample=1`.
    - 30 questions (`quality.spot_check_size` in `authoring/data/targets.json`), a subset of the audit sample, same ones on every reload; ~10–15 min.
+   - Larger check of one run (decision 228: batch-8, 120): its `"size"` in `authoring/data/spot-checks.json`; the first 30 stay a prefix; `qgen audit --batch <batch>` audits up to that size.
    - The LLM decision, feedback and audit stay hidden until you decide; then they show next to yours. Mark the problem kinds in the feedback box.
    - Recorded in `authoring/data/spot-checks.json`; undo removes the item.
    - pm worker: can't do this. `pm decision add "Spot check <batch> done?"` (body: the link, the size, `trivia-authoring`; option "done"), `pm task-pending-decision <task> <decision>`, stop.

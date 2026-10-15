@@ -1,24 +1,22 @@
 """Human spot checks per batch (plan 16): the seeded sample and authoring/data/spot-checks.json.
-Written only by the authoring server; `qgen report --qc` and the exit check read the file."""
+Written by the authoring server (a run's "size" by hand, decision 228); `qgen report --qc` and the exit check read the file."""
 import datetime, json, re
 
 import layout  # authoring/tools/layout.py
 import atomic  # authoring/tools/atomic.py
 import qgen  # authoring/tools/qgen.py: audit sample, LLM decisions, audits
-import targets  # authoring/tools/targets.py
 import translations  # authoring/tools/translations.py
 
 FILE = layout.SPOT_CHECKS
-DEFAULT_SIZE = 30  # pm decision 2; without targets.json "quality"
 
 
-def size():
-    return (targets.load_quality() or {}).get("spot_check_size", DEFAULT_SIZE)
+def size(batch=None):
+    return qgen.spot_check_size(batch)
 
 
 def sample(batch):
-    """The batch's (or back-audit run's) spot-check ids in order: the first `size()` of the audit sample."""
-    return qgen.audit_sample(batch, size())
+    """The batch's (or back-audit run's) spot-check ids in order: the first `size(batch)` of the audit sample."""
+    return qgen.audit_sample(batch, size(batch))
 
 
 def run_ids(run):
@@ -64,7 +62,7 @@ def record(batch, q, media_changed):
         item["locale"] = locale
     with atomic.locked(FILE):
         data = load()
-        entry = data.setdefault(batch, {"size": size(), "seed": batch, "items": {}})
+        entry = data.setdefault(batch, {"size": size(batch), "seed": batch, "items": {}})
         entry["items"][q["id"]] = item
         save(data)
     return item
