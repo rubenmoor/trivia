@@ -26246,13 +26246,13 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 - Hover/click a text box: catalog key and text; flag a string with a note (what''s wrong, the wording you want)
 - Guide for the wording: `app/client/src/locales/style/en.md`
 - Answer when done; the fix task (`Gallery fixes from the review flags`) waits for all four languages', 'reviewed, flags in /gallery', NULL, '2026-10-14T16:25:23Z', '2026-10-15T01:35:01Z', 804, NULL, 'once', NULL, '');
-INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (162, 'Screen gallery reviewed? (es)', 'pending', '["reviewed, flags in /gallery", "reviewed, nothing to fix"]', 'Review the screen gallery in `es` (`plan 100: UI wording: style guides, TV-check fixes, screen gallery`). Gallery rendered 2026-10-14 by `task 804: Screen gallery review decisions per UI language`: 44 shots, every visible text keyed.
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (162, 'Screen gallery reviewed? (es)', 'answered', '["reviewed, flags in /gallery", "reviewed, nothing to fix"]', 'Review the screen gallery in `es` (`plan 100: UI wording: style guides, TV-check fixes, screen gallery`). Gallery rendered 2026-10-14 by `task 804: Screen gallery review decisions per UI language`: 44 shots, every visible text keyed.
 
 - Optional fresh run: `trivia-gallery --locale es` (dev shell; ~4 min); output `work/gallery/es/`
 - `trivia-authoring` → http://localhost:8001/gallery → language `es`
 - Hover/click a text box: catalog key and text; flag a string with a note (what''s wrong, the wording you want)
 - Guide for the wording: `app/client/src/locales/style/es.md`
-- Answer when done; the fix task (`Gallery fixes from the review flags`) waits for all four languages', NULL, NULL, '2026-10-14T16:25:23Z', NULL, 804, NULL, 'once', NULL, '');
+- Answer when done; the fix task (`Gallery fixes from the review flags`) waits for all four languages', 'reviewed, nothing to fix', NULL, '2026-10-14T16:25:23Z', '2026-10-15T01:35:01Z', 804, NULL, 'once', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (163, 'Screen gallery reviewed? (es-ES)', 'pending', '["reviewed, flags in /gallery", "reviewed, nothing to fix"]', 'Review the screen gallery in `es-ES` (`plan 100: UI wording: style guides, TV-check fixes, screen gallery`). Gallery rendered 2026-10-14 by `task 804: Screen gallery review decisions per UI language`: 44 shots, every visible text keyed.
 
 - Optional fresh run: `trivia-gallery --locale es-ES` (dev shell; ~4 min); output `work/gallery/es-ES/`
