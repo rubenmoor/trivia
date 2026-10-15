@@ -1007,3 +1007,24 @@ Template:
   - 58 files still > 1 MB (3 videos, 55 WebP up to 2.3 MB): listed, not a failure
   - dev runs keep playing the raw cache
 - Supersedes / related: D-17, D-48, D-93, D-95; SW-9; pm decisions 66, 90, 112, 185; plan 132
+
+## D-105: Gamemaster mode: «select answer to advance to next level» (`settings.answers`)
+- Date: 2026-10-15
+- Context: milestone 7 "Gamemaster mode" (the developer's answer, no pm decision); plan 137; MD-13. Obvious choices below taken in plan 137.
+- Decision:
+  - **Setting:** «select answer to advance to next level», gamemaster mode only; default on; configure screen row + in-game settings dialog switch (`GameSettings.svelte`)
+  - **Field:** `settings.answers`, stored only as `false` (like `video` / `audio`); missing = on (old saves, fixture replay unchanged); `new` / `settings` with it in another mode → `gamemaster_only`
+  - **Mid-game:** toggled through `changeSettings`, same phase rule as difficulty and bundles (select phase; with `cards: 0` the question on screen is replaced)
+  - **Off:** answers not selectable; the padlock on the Question screen is clickable right away (Enter/A, click) and reveals the correct answer
+  - **Engine `reveal`** (no index): question phase, only with `answers: false` (else `answers_on`); `answer` with `answers: false` → `answers_off`
+    - seen row as for an answer; history entry `revealed: true` (stats, telemetry, achievements skip it as right/wrong)
+    - `last` with `chosen: null` + `correct_index`; undo snapshot as for `answer`
+    - level +1, new table; at the last level phase and result `completed` (new; not a win, not a loss)
+  - **Jokers:** stay, except Francotirador (aims at an answer): unavailable with answers off, reason string
+  - **Screens:** after a reveal a neutral message («Siguiente ronda»), no fanfare, no sad trombone; never game over; last level: neutral «Cuestionario completado», fireworks ok, no victory music, no Victory screen
+  - No separate "game over on false answer" option: with answers off there are none to judge
+  - UI strings es, es-ES, en, de (+ `xx`) per `locales/style/<locale>.md`
+- Consequences:
+  - engine + UI tasks in plan 137 (tasks 1123–1126); `completed` read wherever results are (player stats, Start, achievements, telemetry, save checks)
+  - plan 13 "Gamemaster mode" spec, MD-13
+- Supersedes / related: D-74, D-88 (adds a configure field; the menu's "not built: revealing the answer" now means no reveal from the menu, the padlock reveals); milestone 7; plans 59, 137

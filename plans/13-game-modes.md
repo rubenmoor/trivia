@@ -1,6 +1,6 @@
 # 13 — Game Modes
 
-**Status:** modes decided (D-74, multiplayer D-77, timed D-80); gamemaster mode specced (D-88); MD-6, MD-7, MD-10 done; MD-8.. open
+**Status:** modes decided (D-74, multiplayer D-77, timed D-80); gamemaster mode specced (D-88, «select answer» setting D-105); MD-6, MD-7, MD-10 done; MD-8.. open
 
 Part of the Steam plan ([11](11-steam.md)). Today there is one way to play: the family as a team against the gamemaster, who knows the game and manages the jokers. A Steam player has no gamemaster, so the game itself has to set the rules. There are five modes and no "default mode" (D-74); this file defines them. Spanish names: «Solo o en grupo» fixed, the others proposals ([15a](15a-ui-translation.md) "Mode names").
 
@@ -26,6 +26,13 @@ Plan 29's Choice screen in gamemaster form, no second screen. Opens on the playe
 - **Allow video questions / allow audio questions:** two switches, default on; new `settings.video` / `settings.audio`, stored only as `false` (missing = allowed). Off: `availableNow` and `supply` drop questions whose `media.type` is `video` / `audio`; images and backgrounds stay.
 - **Number of levels:** 1–20, default 12; new `settings.levels` (missing = 12). Won at level `levels`; the Tower draws `levels` steps. With an age group: level i of n uses the group's range at step round(1 + 11·(i − 1)/(n − 1)) (n = 1: step 1; n > 12 repeats steps). `selection.LEVELS` becomes a per-game value (`answer`, `laterLevels`, `selection.draw`, `assign`, `supply`). Errors: `levels_invalid`.
 - **Cards per level:** 0–4, default 4; new `settings.cards` (missing = 4). The table shows that many cards (`selection.PER_LEVEL` per game; the supply needs max(cards, 1) per level). 0: one card is drawn and opened at once (no select phase); every return to the table (next level, skip, Paso, replace, jump) does the same. Errors: `cards_invalid`; switches: `switch_invalid`.
+- **Select answer to advance to next level (D-105):** switch, default on; new `settings.answers`, stored only as `false` (missing = on); gamemaster mode only (`new` / `settings` elsewhere → `gamemaster_only`). Off:
+  - Question screen: answers not selectable; the padlock is clickable at once (Enter/A, click) → engine `reveal` (no index; question phase, only with answers off, else `answers_on`; `answer` → `answers_off`)
+  - reveal: seen row as for an answer; history `revealed: true` (stats, telemetry, achievements skip it as right/wrong); `last` with `chosen: null` + `correct_index`; undo snapshot as for `answer`; level +1, new table
+  - after a reveal: neutral «Siguiente ronda», no fanfare, no sad trombone; never game over
+  - last level: phase and result `completed` (not a win, not a loss); neutral «Cuestionario completado», fireworks ok, no victory music, no Victory screen
+  - jokers stay, except Francotirador: unavailable with answers off (reason string)
+  - no "game over on false answer" option
 - Supply check (GF-5) and outlook (plan 65) run on the whole configuration; «Jugar» disabled with the reason when short (`supply_short`).
 
 #### Gamemaster menu (MD-12; D-88, pm decision 34)
@@ -38,8 +45,9 @@ Today's overlay (`Overlay.svelte`) grows into the menu, in two visibly separate 
   - «Gestionar comodines»: `jokers {joker: limit | null}` (as today); the rows show and edit uses *left* (−/+ gives back or takes one away; the client sends limit = used + left; ∞ = null); no preset row (decision 99: presets only before a game starts); any phase.
   - «Cambiar pregunta»: new `replace {seen?: boolean}`: question phase only; a new question at the same level from the same subcategory (`categoryCandidates` + `replacement`, GF-2 kept), else any subcategory in range; the old one gets history outcome `admin_replace` (new `Outcome`), no seen row unless `seen: true`; nothing to draw → `replace_empty`.
   - «Saltar a nivel»: new `level {level}`: 1..`levels` (`level_invalid`); select phase (with `cards: 0` it also replaces the question on screen, not seen); the table is redrawn at that level (old cards back in the pool); no history rows for skipped levels; the undo snapshot stays.
+  - «Select answer to advance to next level» mid-game (D-105): switch in `GameSettings.svelte` (keys, pad, mouse as the configure switches); `settings {answers}` through `changeSettings`, same phase rule as difficulty and bundles.
   - Difficulty and bundles mid-game: new `settings {age_group? | difficulty?, bundles?}`: same validation and supply check as `new` (rest of the game: current level..`levels`); select phase (with `cards: 0` as for «Saltar a nivel»); the table is redrawn; history and level stay. UI: the configure screen's difficulty row and the shared bundle selector.
-- Not built: revealing the answer (the TV is the only screen, UI-13; no phones, D-74).
+- Not built: revealing the answer from the menu (the TV is the only screen, UI-13; no phones, D-74); with answers off the padlock reveals (D-105).
 - Input: the menu takes ↑/↓, ←/→, Enter/A, Esc/Start closes, B leaves (pad); mouse hover selects, click runs. The flat item list stays; «Cambiar pregunta» and «Saltar a nivel» are rows with ←/→ values; difficulty and bundles open a nested modal scope (`GameSettings.svelte`, `root`, `data-focus-default`) (MD-12).
 
 ### Alone or as group («Solo o en grupo», `solo`)
@@ -103,3 +111,4 @@ Spec for MD-6/MD-7 (plan 36) and MD-10..MD-12 (plan 59).
 - [x] MD-10 Gamemaster mode: the gamemaster holds every control (keyboard, mouse, gamepad, switchable any time) via the action layer (IN-2, IN-3). *2026-10-12: covered by IN-1..IN-5: one scope stack for all three devices, `lastDevice` follows each action, so switching needs nothing; every screen and dialog pushes a scope; the overlay: Esc / Start / ☰ button opens it, ↑/↓ + ←/→ + Enter or D-pad/stick + A, B leaves, mouse hover + click, −/+ and sliders. Left for MD-12: the new editors in the menu (see "Gamemaster menu" Input); real-pad check by the developer still pending (IN-4).*
 - [x] MD-11 Gamemaster mode: "configure game" screen before every game, fields as specced above (D-88); opens on the last game's settings, so Enter straight through on an existing save = today's game. *2026-10-12: `Choice.svelte` in gamemaster mode (lines: ↑/↓, ←/→ values, −/+), `BundleSelector.svelte`; `new` gets every field; jokers wrap 0–99 ↔ ∞ (2026-10-14, decision 105: 0–9 then ∞, clamped); outlook display left to task 623.*
 - [x] MD-12 Gamemaster menu (`Esc`): general part + gamemaster cheats as specced above (D-88), incl. the input gap noted there. *2026-10-13: `Overlay.svelte`: general column (actions, sound, languages) + dashed panel «Trucos del anfitrión» (skip, block, undo, «Cambiar pregunta» ‹ no vista / vista ›, «Saltar a nivel» ‹ n ›, «Dificultad y paquetes», choice line; jokers: uses left, «n usados», limit = used + left via `fetchJokersUsed`); ←/→ on a plain item jumps column; difficulty and bundles in `GameSettings.svelte` (nested modal scope with `root`, `data-focus-default`; `BundleSelector`); restart = `abandon` + the player's configure screen (2026-10-14, task 800: «Volver al menú principal», `abandon` + Start). Walked headless with keyboard, mouse and a fake pad; ≤ 921 px at 1080 and 614 px at 800, `es` and `xx`.*
+- [ ] MD-13 Gamemaster mode: «select answer to advance to next level» (D-105)
