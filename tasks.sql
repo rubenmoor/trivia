@@ -26111,7 +26111,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Rows into `code-review.md` `## Part 11` table (`file | finding | category | severity | status`, statuses as in `## Format`); every listed file gets at least one row (`no findings` if clean); lint-catchable findings carry `(lint: <flag>)`.
 - Inventory: the row for these files (added by task 588, review task `pending`) → this task''s id.
 - Before commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`; stage `code-review.md` and fixed files.', '2026-10-15T02:40:55Z', '2026-10-15T02:55:04Z', 588, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1109, 83, 'Part 11: review telemetry, reports and achievements (client and shell)', 'work', 'open', 10, NULL, 'Review of the telemetry, question report and achievements code added after the part 1 inventory (plans 86, 103, 110).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1109, 83, 'Part 11: review telemetry, reports and achievements (client and shell)', 'work', 'done', 10, '2026-10-14, code-review.md (Part 11 rows), directory.md, app/client/src/engine/telemetry.ts, app/client/src/engine/achievements.ts', 'Review of the telemetry, question report and achievements code added after the part 1 inventory (plans 86, 103, 110).
 
 ## Files (~1100 lines)
 - `app/client/src/engine/`: `achievements.ts`, `achievements.test.ts`, `telemetry.ts`
@@ -26125,7 +26125,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Open work elsewhere first (`pm queue`): code an open task rewrites or deletes gets findings only, status `superseded by task N`.
 - Rows into `code-review.md` `## Part 11` table (`file | finding | category | severity | status`, statuses as in `## Format`); every listed file gets at least one row (`no findings` if clean); lint-catchable findings carry `(lint: <flag>)`.
 - Inventory: the row for these files (added by task 588, review task `pending`) → this task''s id.
-- Before commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`; stage `code-review.md` and fixed files.', '2026-10-15T02:40:55Z', NULL, 588, 0);
+- Before commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`; stage `code-review.md` and fixed files.', '2026-10-15T02:40:55Z', '2026-10-15T02:57:59Z', 588, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1110, 83, 'Part 11: review report-server and the authoring report/telemetry pull', 'work', 'open', 10, NULL, 'Review of the question report / telemetry server (Cloudflare Worker, plan 103, plan 110) and the authoring side that pulls from it, added after the part 1 inventory.
 
 ## Files (~1180 lines)
@@ -29043,6 +29043,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1047, 1106, '2026-10-15T02:43:11Z', '2026-10-15T02:48:09Z', 'done', NULL, 0, 'b0c1069dab04b80c4d8e67d7944e8b75feffbf91', 'claude-opus-5-5[1m]', '77cf1ad8-ce6b-415c-8cb4-d1590eecc998', 33, 56, 15314, 2283773, 98024, 1.5474506, 2557536);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1048, 1107, '2026-10-15T02:48:09Z', '2026-10-15T02:50:39Z', 'done', NULL, 0, 'b09767bebdd97d752ce688631a876098c74210b8', 'claude-opus-5-5[1m]', '99973b31-74f7-4ee9-87d1-7f6a3b7cd5c6', 26, 46, 12035, 1614539, 78099, 1.1885838000000002, 2557536);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1049, 1108, '2026-10-15T02:50:39Z', '2026-10-15T02:55:14Z', 'done', NULL, 0, '752800b35c38faa000db728e128eceef6f03b588', 'claude-opus-5-5[1m]', '7c3a98e2-5ba3-4294-8b4a-c5c681b8b855', 51, 62, 22746, 3128697, 121770, 2.0550674000000004, 2557536);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1050, 1109, '2026-10-15T02:55:15Z', '2026-10-15T02:58:09Z', 'done', NULL, 0, 'a888ad5346f91fcec23767637d2bcd6df942a6a0', 'claude-opus-5-5[1m]', '8a6f1433-6440-462f-9e06-36f025c1ea43', 22, 42, 12778, 1386935, 72763, 1.115219, 2557536);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

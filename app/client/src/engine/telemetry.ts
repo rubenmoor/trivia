@@ -1,7 +1,9 @@
 // Opt-in telemetry (plan 106, decision 119): this run's games from the save → plan 105's contract games.
 import type { Difficulty, JokerName } from "../lib/types.ts";
 import { gameChoice, JOKERS } from "./choice.ts";
+import { gameMode } from "./game.ts";
 import { isOurs } from "./pool.ts";
+import { LEVELS } from "./selection.ts";
 import { gameLocale, type EngineData, type GameRow, type SaveData } from "./state.ts";
 
 export interface TelemetryAnswer {
@@ -65,16 +67,16 @@ function ourQuestion(id: string, data: EngineData): boolean {
 export function telemetryGame(row: GameRow, from: number, data: EngineData, mods: boolean): TelemetryGame {
   const { state } = row;
   const choice = gameChoice(state, data);
-  const levels = state.settings.levels ?? 12;
+  const levels = state.settings.levels ?? LEVELS;
   const slice = state.history.slice(from);
   const jokers = Object.fromEntries(JOKERS.map((j) => [j, 0])) as Record<JokerName, number>;
-  for (const j of [...slice.flatMap((h) => h.jokers ?? []), ...(state.jokers ?? [])]) jokers[j] = (jokers[j] ?? 0) + 1;
+  for (const j of [...slice.flatMap((h) => h.jokers ?? []), ...(state.jokers ?? [])]) jokers[j]++;
   const answers = slice
     .filter((h) => h.correct !== undefined && h.level >= 1 && h.level <= levels && ourQuestion(h.question_id, data))
     .slice(0, MAX_GAME_ANSWERS)
     .map((h) => ({ question: h.question_id, level: h.level, correct: h.correct!, jokers: counts(h.jokers) }));
   return {
-    mode: state.settings.mode ?? "gamemaster",
+    mode: gameMode(state),
     locale: gameLocale(row),
     pool: data.poolHash,
     age_group: choice.age_group,

@@ -1856,6 +1856,20 @@ Plan 83 checks this report for completeness, proposes process changes, writes th
 | `app/desktop/workshop.mjs` | no findings: `EItemState` bits named; disabled/downloading items listed, not loaded; `downloadItem` only when neither downloading nor pending; `fakeUgc` dev-only | — | — | — |
 | `app/client/src/game/screens/DomScreen.svelte`, `registry.ts` | no findings: a render throw → `onerror` or `Game.svelte`'s boundary → `screenFailed()` → ours; mod cleanup errors logged (the mod's, not ours); layer scope modal, Esc/B close | — | — | — |
 | `app/desktop/resolve.test.mjs` | no findings: covers containment (escapes, symlinks), overlay order, decision 148's own files, merged `bundles.json`, `/mods.js`, `/mods/<id>/`; kept (path safety stays useful) | — | — | — |
+| `app/client/src/engine/telemetry.ts` | `levels ?? 12` and `mode ?? "gamemaster"` re-spell `selection.ts` `LEVELS` and `game.ts` `gameMode()`; `jokers[j] ?? 0` on a record pre-filled with 0 | inconsistency | low | fixed (task 1109) |
+| `app/client/src/engine/telemetry.ts`, `app/desktop/telemetry.mjs` | `MAX_GAME_ANSWERS = 100` (plan 105's cap) in both | complexity | low | won't fix: the shell can't import the TS client and re-checks the page's input anyway |
+| `app/client/src/engine/telemetry.ts` | no further findings: mod questions dropped (`ourQuestion`, decision 128), `mods` flag per decision 146; recorded rows whose game is gone kept as they were; parallel `games`/`index` | — | — | — |
+| `app/client/src/engine/achievements.ts` | `inSteamworks` searched `ACHIEVEMENTS` and narrowed `"mode" in` twice; `MODE_WIN` already maps mode ↔ id | complexity | low | fixed (task 1109) |
+| `app/client/src/engine/achievements.ts`, `steam-achievements.vdf`, `achievements/*.svg` | no further findings: 28 ids + `BUNDLE_COLOMBIA` = the 29 SVGs; VDF 25 tokens × 4 languages = the ids without a mode (mode wins and bundles enter Steamworks later, `inSteamworks`); `qualifies` per decisions 19, 74; local-clock `NIGHT_OWL`/`CHRISTMAS` per decision 139; mods per decision 146 | — | — | — |
+| `app/client/src/engine/achievements.test.ts` | no findings: one rule test, one earn test incl. `inSteamworks`; kept (cheap guard for the unlock list) | — | — | — |
+| `app/client/src/lib/telemetry.ts` | no findings: opt-in twice (page: stored `consent === true`; shell `record` no-op without consent); one chain, never rejects; no bridge → nothing runs; no network in the page | — | — | — |
+| `app/client/src/lib/achievements.ts` | no findings: valid user + live Steam only; each id once per page load, a failed `unlock` logged and retried at the next load (comment says so); game end detected by `id:finished_on` | — | — | — |
+| `app/client/src/game/report.ts` | `consent = { given: false }`: the report screen's session flag as a mutable export in the text module | practice | low | won't fix: one reader (`FlagList.svelte`), once per page load by design; a store would add nothing |
+| `app/desktop/telemetry.mjs` | `settle()`: a failed rename to `.retry.json` swallowed (`.catch(() => {})`) | practice | low | won't fix: the file stays `.json`, is sent once more as a leftover at the next start and deleted; same outcome, 5-file cap holds |
+| `app/desktop/telemetry.mjs` | no further findings: async `fs` only (no sync IO in IPC), one write queue, atomic writes with `fsync`, nothing on disk before a yes, a no deletes id and sessions; caps per plan 105; unreadable `install.json` = never asked (asks again) | — | — | — |
+| `app/desktop/report.mjs` | no findings: no network outside a click or quit/leftover send, connect/total timeouts, every failure a `{ ok: false, status: 0 }` (offline never throws), response capped; field rules mirror plan 103's server | — | — | — |
+| `app/desktop/steam-libs.mjs`, `mute.mjs`, `achievements/render.sh` | no findings: build script (sync IO fine; `npm pack` only when koffi's version changes, plan 18), `muteReason` shared by shell and dev server, `render.sh` per plan 86's 256×256 | — | — | — |
+| `directory.md` | `engine/telemetry.ts` and `lib/telemetry.ts` not listed | inconsistency | low | fixed (task 1109) |
 
 ### Completeness
 

@@ -40,8 +40,8 @@ const NIGHT_END = 5;
 
 /** In Steamworks now: mode wins with their mode built, bundle ones with their DLC. */
 export function inSteamworks(id: AchievementId): boolean {
-  const mode = ACHIEVEMENTS.find((a) => a.id === id && "mode" in a);
-  if (mode && "mode" in mode) return BUILT_MODES.includes(mode.mode);
+  const mode = [...MODE_WIN].find(([, a]) => a === id)?.[0];
+  if (mode) return BUILT_MODES.includes(mode);
   return id.startsWith("BUNDLE_") ? DLC_BUNDLES.some((b) => bundleAchievement(b) === id) : true;
 }
 
