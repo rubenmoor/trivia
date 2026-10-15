@@ -7,7 +7,7 @@ This prompt lets an AI chat assistant (ChatGPT, Claude, Gemini, …) write a que
 - Answer its questions, in your own language.
 - For each file it writes, save the JSON block under the path shown above it, inside a new folder named like your mod's id, e.g. `dinosaurs/mod.json`, `dinosaurs/data/bundles.json`.
 - Long sets come in parts: say «next» until it says it's done; add each part's questions to the same pool file.
-- Check the folder: `trivia --check-mod <folder>` (see «Check it» in `bundles.md`); paste errors back to the AI to fix them.
+- Check the folder: `living-room-trivia --check-mod <folder>` (see «Check it» in `bundles.md`); paste errors back to the AI to fix them.
 - Read the questions yourself: AIs make mistakes, and your family will notice.
 - Pictures: add them by hand afterwards, see «Media» in `bundles.md`.
 - Try it: copy the folder into the mods folder and restart the game (see «Try it» in `bundles.md`).

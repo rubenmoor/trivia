@@ -186,14 +186,14 @@ The package contains only `app/`. It keeps its saves and media cache in `$XDG_DA
 
 ```sh
 trivia-media sync --status approved   # the pool's media must be in the cache
-trivia-desktop-build                  # → app/desktop/release/Trivia-<version>-win-x64.zip, …-linux-x64.tar.gz
+trivia-desktop-build                  # → app/desktop/release/LivingRoomTrivia-<version>-win-x64.zip, …-linux-x64.tar.gz
 trivia-desktop-build --dir            # also win-unpacked/, linux-unpacked/ for the Steam depots
 trivia-steam stage                    # stages build/dlc/<pack>/; depot folders + build/media + DLC = the archives
 ```
 
 Before every Steam upload, on a clean, tagged commit: `trivia-release-check` (~15 min; per-commit checks, licences, release quality bar, `nix build .#app`, both desktop builds, the report server's `/health` at the build's `reportUrl` (`--skip report` until it is set up), a smoke game in `linux-unpacked` and one with the shipped example mods, then asks the manual checklist). Exit 1 on any ✗; `--skip <step>` for a known-broken step, `--manual <file>` for answers (`<row>: y|n|note` per line). Report: `work/steam/<tag>/release-check.md`.
 
-Each artefact (~2.5 GB) holds the game, the data and the pool's media, and plays offline. Unpack it and start `Trivia.exe` (Windows; SmartScreen: «More info → Run anyway») or `./trivia` (Linux, Steam Deck). The first build downloads Electron for both platforms; later builds run offline. Outside Nix: `npm ci --prefix app/desktop && npm run dist --prefix app/desktop`.
+Each artefact (~2.5 GB) holds the game, the data and the pool's media, and plays offline. Unpack it and start `LivingRoomTrivia.exe` (Windows; SmartScreen: «More info → Run anyway») or `./living-room-trivia` (Linux, Steam Deck). The first build downloads Electron for both platforms; later builds run offline. Outside Nix: `npm ci --prefix app/desktop && npm run dist --prefix app/desktop`.
 
 ### Send a content patch
 

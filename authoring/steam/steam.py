@@ -181,7 +181,7 @@ def stage() -> bool:
         print(f"  {p}: DLC depot {len(t)} files")
     ok = True
     for name, ext in [("windows", "win-x64.zip"), ("linux", "linux-x64.tar.gz")]:
-        arc = release / f"Trivia-{version()}-{ext}"
+        arc = release / f"LivingRoomTrivia-{version()}-{ext}"
         if not arc.is_file():
             sys.exit(f"trivia-steam stage: missing {arc} (run trivia-desktop-build --dir)")
         own = (content_path + "/", *(pack_data(p) for p in packs()))

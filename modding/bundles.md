@@ -1,6 +1,6 @@
 # Make your own question bundle
 
-A question bundle is a set of questions the family can switch on before a game, next to the game's own. You make one as a mod: a folder with a few JSON files and, if you like, pictures. Start from `template-bundle/` beside this file (15 questions about the solar system, Spanish and English) or let an AI write the files with `bundle-prompt.md`. The game checks your folder with `trivia --check-mod <folder>`. No stability promise: a game update may change this format.
+A question bundle is a set of questions the family can switch on before a game, next to the game's own. You make one as a mod: a folder with a few JSON files and, if you like, pictures. Start from `template-bundle/` beside this file (15 questions about the solar system, Spanish and English) or let an AI write the files with `bundle-prompt.md`. The game checks your folder with `living-room-trivia --check-mod <folder>`. No stability promise: a game update may change this format.
 
 ## Folder layout
 - `mod.json`: who the mod is (below)
@@ -117,7 +117,7 @@ Difficulty means who can answer it, not how obscure the fact is.
 - Choose your bundle before a game; it shows «Player-made · <mod name>».
 
 ## Check it
-- From a terminal in the game's install folder: `trivia --check-mod <folder>` (Windows: `Trivia.exe --check-mod <folder>`; the result also goes to `<folder>-check.log` beside the folder)
+- From a terminal in the game's install folder: `living-room-trivia --check-mod <folder>` (Windows: `LivingRoomTrivia.exe --check-mod <folder>`; the result also goes to `<folder>-check.log` beside the folder)
 - Output: per bundle and language, questions ok and dropped; per age group, questions in its window; last line «loads as is» or «fix the errors above»; exit code 0 = fine, 1 = errors.
 - Why a question was dropped:
   - `bad_id`: id not lowercase letters, digits and `-`
@@ -131,4 +131,4 @@ Difficulty means who can answer it, not how obscure the fact is.
 - Other errors: `media_missing` (file not found), `bad_categories`, `bundle_row`, `bad_field` (in `mod.json`), `no_pool` (no pool file for any language).
 
 ## Share it
-- `trivia --publish-mod <folder>` uploads it as a Steam Workshop item (Steam running; `--dry-run` to try without uploading); run it again to update.
+- `living-room-trivia --publish-mod <folder>` uploads it as a Steam Workshop item (Steam running; `--dry-run` to try without uploading); run it again to update.

@@ -107,12 +107,12 @@ Not entered now: Steam shows every defined achievement, unreachable ones look br
 ## Builds and depots
 Local builds since S3 (SW-5, D-73); the release check (SW-6) and Steam uploads (SW-10) since S5. No GitHub Actions: CI is local (pm decision 14). One command on the developer's Linux machine builds both platforms; the artefacts are plain folders, so Steam (S5) can install them as they are.
 - **Command:** `trivia-desktop-build` (dev shell) = `qgen validate`, `npm run build -w app/client`, `stage-media.mjs` (encodes the pool's media into `build/media/`, cache `work/ship-media/` `<stem>-<settings hash>.<ext>`, only new or changed files, hard links; `ffmpeg-headless`, `libwebp` in the wrapper), `steam-libs.mjs`, `electron-builder --x64 --linux tar.gz --win zip`; `--dir` adds the `dir` target (`release/{win,linux}-unpacked/`, the OS depots; launcher via `after-pack.mjs` too), `trivia-steam stage` checks OS depot (without `resources/media`) + content depot (`build/media/`) = the archives. Outside Nix: `npm ci --prefix app/desktop`, then `npm run dist --prefix app/desktop` (no `qgen validate`). First build downloads the Electron zips into `~/.cache/electron`; later builds run offline.
-- **Targets:** `app/desktop/release/Trivia-<version>-win-x64.zip` (files at the zip root; `Trivia.exe`: unsigned, game icon) and `Trivia-<version>-linux-x64.tar.gz` (folder `Trivia-<version>-linux-x64/`; `./trivia` = launcher with `--no-sandbox`, binary `trivia-bin`; the Deck runs this one). No installer, no AppImage. 0.82 GB (tar.gz), 0.84 GB (zip) since SW-9 (were ~2.5 GB).
+- **Targets:** `app/desktop/release/LivingRoomTrivia-<version>-win-x64.zip` (files at the zip root; `LivingRoomTrivia.exe`: unsigned, game icon) and `LivingRoomTrivia-<version>-linux-x64.tar.gz` (folder `LivingRoomTrivia-<version>-linux-x64/`; `./living-room-trivia` = launcher with `--no-sandbox`, binary `living-room-trivia-bin`; the Deck runs this one). No installer, no AppImage. 0.82 GB (tar.gz), 0.84 GB (zip) since SW-9 (were ~2.5 GB).
 - **Layout:** `resources/app.asar` (`package.json`, `main.mjs`, `resolve.mjs`, `save.mjs`, `preload.cjs`), `resources/client/` (client `dist/`: the readable tree, decision 124, plain files outside the asar; "Modding: module paths"), `resources/data/` (`app/data/`), `resources/media/` (only the pool's media and backgrounds, encoded from the cache via `app/desktop/build/media/` under `shippedName`; outside the asar for the S5 content depot); `LICENSE.electron.txt`, `LICENSES.chromium.html` at the root. `CREDITS.md` (PUB-5) in `resources/client/` and at the root (`extraFiles` from `../client/dist/CREDITS.md`).
 - **Stale client files (task 946):** checked 2026-10-13, Electron 43: `app://` (`protocol.handle`) responses never enter Chromium's HTTP cache and V8's code cache follows changed bytes: a changed module runs on the next start, with or without the header; `resolve.mjs` still sends `cache-control: no-cache` for client and mod-overlay files (unhashed names, decision 124); no `ses.clearCache()` needed.
 - **Config:** `app/desktop/electron-builder.yml`, `after-pack.mjs` (Linux launcher), own `package-lock.json` (`electron`, `electron-builder`; not a root workspace).
 - **Steam binding (plan 85, task 650):** `asarUnpack` steamworks-ffi-node, koffi, `@koromix/*`; per-platform `files` drop the other OS's native binaries; SDK lib per OS via `extraResources` → `resources/steamworks_sdk/redistributable_bin/{linux64,win64}/` (`main.mjs` `setSdkPath`); `steam-libs.mjs`: fails without the SDK libs, fetches `@koromix/koffi-win32-x64` (koffi's version, `npm pack`) for the zip built on Linux; no `steam_appid.txt` in `release/`.
-- **Exe metadata (B-11, task 683):** `win.signExecutable: false`: electron-builder 26 edits `Trivia.exe`'s resources in pure JS (`resedit`, no wine): `ProductName` = `productName`, `FileDescription` = `extraMetadata.description` («Trivia»), `CompanyName` + copyright = `package.json` `author`, `FileVersion`/`ProductVersion` = `version`. Icon (decision 87): `app/desktop/icon.png` (tracked copy of `capsules.mjs`'s `icon-1024.png`) as `win.icon` (exe, 16–256 px) and `linux.icon` (only used by desktop-file targets; the tar.gz/Steam build has none, the Steam client icons are uploaded by hand, 17a). Re-rendered icon: copy it over `app/desktop/icon.png`. `ProductName` follows `productName` («Trivia»); «Living Room Trivia» once PUB-7 passes (artifact names and paths change with it).
+- **Exe metadata (B-11, task 683):** `win.signExecutable: false`: electron-builder 26 edits `LivingRoomTrivia.exe`'s resources in pure JS (`resedit`, no wine): `ProductName` = `productName`, `FileDescription` = `extraMetadata.description` («Living Room Trivia»), `CompanyName` + copyright = `package.json` `author`, `FileVersion`/`ProductVersion` = `version`. Icon (decision 87): `app/desktop/icon.png` (tracked copy of `capsules.mjs`'s `icon-1024.png`) as `win.icon` (exe, 16–256 px) and `linux.icon` (only used by desktop-file targets; the tar.gz/Steam build has none, the Steam client icons are uploaded by hand, 17a). Re-rendered icon: copy it over `app/desktop/icon.png`. Names (D-106, task 1179): `productName` = store name (en) «Living Room Trivia» (decision 176: Store names pass PUB-7?) → `ProductName`; space-free exe and artefact names `LivingRoomTrivia`, Linux `living-room-trivia`; userData stays `<appData>/trivia` (saves, mods, Cloud path unchanged); window title, in-game title and `app://trivia/` unchanged. Checked 2026-10-15: exe `ProductName`/`FileDescription` «Living Room Trivia», `trivia-steam stage` ✓, smoke game ✓.
 - **Signing:** not required by Steam; the exe stays unsigned (SmartScreen only warns for downloads outside Steam).
 - **Checked (task 330, 2026-10-12):** unpacked Linux build, no network (`unshare -rn`), no Nix env (`env -i` + an FHS runtime), no Python: new player → level 5 with image, audio (playing) and video (playing) questions, no missing-media notice; «Salir del juego» → restart: player resumes, no answered question comes back; save at `~/.config/trivia/save/game.json`; nothing written outside `HOME`. Windows: zip content listed only.
 - **Upload:** `trivia-steam upload --branch beta` (dev shell, `authoring/steam/steam.py`, D-93): gates (clean tree; tag `v<version>` on HEAD, never created by the command; `steam.json` IDs) → `trivia-release-check` (or `--checked`: this commit's passing `release-check.json` on a clean tree) → `trivia-steam stage` → VDFs → `steamcmd +login $TRIVIA_STEAM_ACCOUNT +run_app_build <app vdf> +quit`; prints the BuildID. `--preview` (Valve's `Preview 1`, no tag needed), `--dry-run` (no SteamCMD, no tag, placeholder IDs 480/481… (one per depot, packs included) while `steam.json` is null). Desc `<tag> <sha>` plus `skipped: <steps>`.
@@ -141,12 +141,12 @@ The values the developer enters in Steamworks for the base app and the free DLC 
 
 ### App (Basic info)
 - [ ] App ID: decision 177's; type Game.
-- [ ] Names (D-50): default/english «Living Room Trivia»; latam + spanish «Trivia en Familia»; german «Wohnzimmer-Quiz» (decision 78: German store name (PUB-8, D-50): keep «Living Room Trivia» or a localized one?). Final: PUB-7 passed (decision 176: Store names pass PUB-7?). In-game `productName` «Trivia» unchanged ("Exe metadata" above).
+- [ ] Names (D-50): default/english «Living Room Trivia»; latam + spanish «Trivia en Familia»; german «Wohnzimmer-Quiz» (decision 78: German store name (PUB-8, D-50): keep «Living Room Trivia» or a localized one?). Final: PUB-7 passed (decision 176: Store names pass PUB-7?). Builds: `productName` «Living Room Trivia», exe `LivingRoomTrivia.exe` / `living-room-trivia`; the in-game title stays the UI catalog's ("Exe metadata" above, D-106).
 
 ### Installation → General
 - [ ] Install folder: `LivingRoomTrivia` (Cloud paths don't depend on it).
-- [ ] Launch option Windows, 64-bit: executable `Trivia.exe`, no arguments.
-- [ ] Launch option Linux + SteamOS, 64-bit: executable `trivia` (the `after-pack.mjs` launcher, adds `--no-sandbox`; binary `trivia-bin`), no arguments, no Proton forcing.
+- [ ] Launch option Windows, 64-bit: executable `LivingRoomTrivia.exe`, no arguments.
+- [ ] Launch option Linux + SteamOS, 64-bit: executable `living-room-trivia` (the `after-pack.mjs` launcher, adds `--no-sandbox`; binary `living-room-trivia-bin`), no arguments, no Proton forcing.
 - [ ] Linux runtime: Steam Linux Runtime (current "sniper"/3.0 if offered; recheck); the beta test (task 263: write plan: Beta test and S5 close-out) confirms it starts.
 - [ ] No other launch options: never `TRIVIA_DEV_STEAM_USER`, `--no-mods` or other dev args; no second "safe start" option (decision 152: Manual safe start: --no-mods only).
 - [ ] Redistributables: none (Electron ships its runtime).
@@ -195,7 +195,7 @@ Free DLC per shipped pack (decision 66: Price model (OQ-33); decision 110: Regio
 
 ## Local build start test
 The developer's check that the local builds start and play offline on machines without the dev setup (SW-5; pm plan 56 task 3). Skipped, not failed: decision 39 (Steam only, decision 111); the clean-machine start test is covered by the Steam beta test (task 263). Tables kept as the checklist for that test.
-- **Artefacts:** `trivia-desktop-build` → `app/desktop/release/Trivia-<version>-win-x64.zip`, `Trivia-<version>-linux-x64.tar.gz`; or copy those two files over (USB stick, ~0.85 GB each).
+- **Artefacts:** `trivia-desktop-build` → `app/desktop/release/LivingRoomTrivia-<version>-win-x64.zip`, `LivingRoomTrivia-<version>-linux-x64.tar.gz`; or copy those two files over (USB stick, ~0.85 GB each).
 - **Machines:** Windows x64 without Node/Python; Linux x64 without Nix (e.g. Ubuntu 24.04).
 - **Result:** «skipped, decision 39 (Steam only, decision 111); covered by the Steam beta test (task 263)», every row; no rows to fill.
 
@@ -205,7 +205,7 @@ Date: 2026-10-13 · Build commit: 06c39dc
 | check | result | note |
 |---|---|---|
 | Network off before unpacking | skipped (decision 39) | |
-| Unpack the zip, start `Trivia.exe` (SmartScreen «More info → Run anyway» expected: unsigned) | skipped (decision 39) | |
+| Unpack the zip, start `LivingRoomTrivia.exe` (SmartScreen «More info → Run anyway» expected: unsigned) | skipped (decision 39) | |
 | No console window | skipped (decision 39) | |
 | Starts fullscreen; F11 toggles | skipped (decision 39) | |
 | Keyboard-only game to level 3, with an image, an audio and a video question; sound plays | skipped (decision 39) | |
@@ -219,7 +219,7 @@ Date: 2026-10-13 · Build commit: 06c39dc
 | check | result | note |
 |---|---|---|
 | Network off before unpacking | skipped (decision 39) | |
-| `tar xzf`, `cd Trivia-<version>-linux-x64`, `./trivia` | skipped (decision 39) | |
+| `tar xzf`, `cd LivingRoomTrivia-<version>-linux-x64`, `./living-room-trivia` | skipped (decision 39) | |
 | Starts fullscreen; F11 toggles | skipped (decision 39) | |
 | Keyboard-only game to level 3, with an image, an audio and a video question; sound plays | skipped (decision 39) | |
 | «Salir del juego», restart: the player is still there | skipped (decision 39) | |
@@ -366,7 +366,7 @@ The shell side of the mods screen (pm plan 118; screen: `04-ui-tv-display.md` "M
 ## Modding: Publishing
 Player-facing: [`modding/README.md`](../modding/README.md).
 Modders publish a mod folder as a Workshop item with the game itself (pm plan 119); Steam's client uploads, we make no network calls of our own. The folder is only read and copied, never run. The modding guide (pm plan 121) copies this section.
-- Command: `trivia --publish-mod <folder> [--changenote <text>] [--visibility public|friends|unlisted|private] [--content-only] [--dry-run]`; dev `trivia-desktop --publish-mod …`; packaged: the game executable (Linux `trivia`, Windows `Trivia.exe`) from a terminal, Steam client running.
+- Command: `living-room-trivia --publish-mod <folder> [--changenote <text>] [--visibility public|friends|unlisted|private] [--content-only] [--dry-run]`; dev `trivia-desktop --publish-mod …`; packaged: the game executable (Linux `living-room-trivia`, Windows `LivingRoomTrivia.exe`) from a terminal, Steam client running.
 - Flags: `--changenote`, `--visibility`, `--content-only`, `--dry-run` only with `--publish-mod`; `--publish-mod` not with `--import-save`/`--no-mods`.
 - Headless: before the instance lock (game may be closed), no window; exit 0 ok, 1 failed, 2 usage.
 - Code: `app/desktop/publish.mjs` (`preparePublish`, `describe`, `publish`, `writeWorkshopId`, `WORKSHOP_TAGS`; pure, no Electron, no binding import), `publishMod` in `main.mjs`.

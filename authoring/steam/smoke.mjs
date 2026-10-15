@@ -83,7 +83,7 @@ async function launch(...args) {
   // Muted: checks media load, not audio; sound is a manual row.
   const env = [`HOME=${home}`, `DISPLAY=${display}`, "TRIVIA_DEVTOOLS=1", "TRIVIA_MUTE=1", "TRIVIA_DEV_STEAM_USER=1"];
   // unshare -rn: no network; env -i + steam-run: no Nix shell env, an FHS runtime like a Steam Linux machine.
-  const shell = spawn("unshare", ["-rn", "env", "-i", ...env, steamRun, path.join(DIR, "trivia"), "--lang=es", ...args, "--remote-debugging-pipe"], {
+  const shell = spawn("unshare", ["-rn", "env", "-i", ...env, steamRun, path.join(DIR, "living-room-trivia"), "--lang=es", ...args, "--remote-debugging-pipe"], {
     stdio: ["ignore", "ignore", "pipe", "pipe", "pipe"],
   });
   shell.stderr.on("data", (d) => process.env.DEBUG && process.stderr.write(d));
@@ -160,7 +160,7 @@ function withoutPacks(tmp) {
 }
 
 async function main() {
-  if (!existsSync(path.join(BUILD, "trivia-bin"))) throw new Error(`${BUILD}: no unpacked Linux build (trivia-desktop-build --dir)`);
+  if (!existsSync(path.join(BUILD, "living-room-trivia-bin"))) throw new Error(`${BUILD}: no unpacked Linux build (trivia-desktop-build --dir)`);
   DIR = BUILD;
   pickQuestions("es"); // fail early on a pool without media questions
 

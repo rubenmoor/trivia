@@ -1,10 +1,10 @@
 # Local builds (plan 56, SW-5): Windows x64 zip, Linux x64 tar.gz; `trivia-desktop-build` (`npm run dist` skips `qgen validate`).
 appId: io.github.rubenmoor.trivia
-productName: Trivia
-executableName: trivia
+productName: Living Room Trivia  # store name (D-50, decision 176)
+executableName: living-room-trivia
 extraMetadata:
-  description: Trivia  # exe FileDescription (Task Manager), Linux Comment
-artifactName: ${productName}-${version}-${os}-${arch}.${ext}
+  description: Living Room Trivia  # exe FileDescription (Task Manager), Linux Comment
+artifactName: LivingRoomTrivia-${version}-${os}-${arch}.${ext}
 directories:
   output: release
 files:
@@ -51,7 +51,7 @@ electronDownload:
 publish: null
 afterPack: ./after-pack.mjs
 win:
-  executableName: Trivia
+  executableName: LivingRoomTrivia
   files:  # the other platforms' native binaries
     - "!node_modules/@koromix/koffi-linux-*/**"
     - "!node_modules/steamworks-ffi-node/prebuilds/{darwin,linux}-*/**"

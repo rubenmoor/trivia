@@ -13,7 +13,7 @@ Mods change the game: new question bundles, a new look, changed rules, or a whol
 - Start the game → «Mods» on the start screen (also in the Esc menu)
 - Turn the mod on → «Allow mods?» notice (once per machine) → «Allow mods»
 - «Restart to apply»: mods load at start only
-- Check a folder without starting the game: `trivia --check-mod <folder>` (below)
+- Check a folder without starting the game: `living-room-trivia --check-mod <folder>` (below)
 
 ## Mod format
 - A mod = a folder with `mod.json` at its root, plus any files
@@ -43,7 +43,7 @@ Mods change the game: new question bundles, a new look, changed rules, or a whol
   - `bundle_json`, `bundle_row`: `data/bundles.json` unreadable, a bundle row skipped
   - `needs_update`, `workshop_id_mismatch`: Workshop only (below)
   - `load_failed`, `setup_failed`, `timeout`, `hook_failed`: code add-ons (below)
-- Check: `trivia --check-mod <folder>` (Windows: `Trivia.exe --check-mod <folder>`)
+- Check: `living-room-trivia --check-mod <folder>` (Windows: `LivingRoomTrivia.exe --check-mod <folder>`)
   - Same checks as the game's loader, plus every bundle question; no Steam, no window, no restart
   - Prints errors and warnings with their codes, dropped questions with reasons, ends with "loads as is" or "N error(s)"
   - Exit 0 ok, 1 errors, 2 usage; Windows: also `<folder>-check.log` beside the folder and a message box
@@ -192,7 +192,7 @@ export default async function setup(trivia) {
 - Ids become `<mod id>:<id>` in the game (bundles and questions), so they never clash with ours
 - Shown as «Player-made · <mod name>» in the bundle selector; media credits from your questions' `credit` and `source_url` on the Credits screen
 - Never in our question pool, our seen counts, our question reports or telemetry; the flag action is hidden on player questions
-- Check every question: `trivia --check-mod <folder>`
+- Check every question: `living-room-trivia --check-mod <folder>`
 
 ## Achievements, flags and telemetry with mods
 - Steam achievements: unlock with mods on, as without
@@ -201,8 +201,8 @@ export default async function setup(trivia) {
 - Telemetry (opt-in): answers to our questions only; a game notes that mods were on
 
 ## Publishing
-- `trivia --publish-mod <folder> [--changenote <text>] [--visibility public|friends|unlisted|private] [--content-only] [--dry-run]`
-  - Run from a terminal, Steam client running and logged in (the game may be closed); Windows: `Trivia.exe` in the install folder
+- `living-room-trivia --publish-mod <folder> [--changenote <text>] [--visibility public|friends|unlisted|private] [--content-only] [--dry-run]`
+  - Run from a terminal, Steam client running and logged in (the game may be closed); Windows: `LivingRoomTrivia.exe` in the install folder
   - The game only reads and copies the folder; Steam uploads it
 - First: `--dry-run` (no Steam needed): item id or "new", title, description length, visibility, tags, preview, file count and size
 - Steps: checks `mod.json` (errors stop, `--check-mod`'s findings become warnings) → copies the folder without dot files and dot folders (`.git`) → uploads

@@ -1029,3 +1029,14 @@ Template:
   - engine + UI tasks in plan 137 (tasks 1123–1126); `completed` read wherever results are (player stats, Start, achievements, telemetry, save checks)
   - plan 13 "Gamemaster mode" spec, MD-13
 - Supersedes / related: D-74, D-88 (adds a configure field; the menu's "not built: revealing the answer" now means no reveal from the menu, the padlock reveals); milestone 7; plans 59, 137
+
+## D-106: Build names follow the store name «Living Room Trivia»
+- Date: 2026-10-15
+- Context: task 1179; pm decision 176 (Store names pass PUB-7?) made D-50's «Living Room Trivia» final; builds still said «Trivia».
+- Decision:
+  - `productName` «Living Room Trivia» (exe `ProductName`, `FileDescription` via `extraMetadata.description`)
+  - space-free files: Windows `LivingRoomTrivia.exe`, Linux launcher `living-room-trivia` + binary `living-room-trivia-bin`, artefacts `LivingRoomTrivia-<version>-{win,linux}-x64.{zip,tar.gz}`
+  - unchanged: userData `<appData>/trivia` (pinned in `main.mjs`: saves, mods, Steam Cloud path), `app://trivia/`, window and in-game titles (UI catalog), install folder `LivingRoomTrivia`
+- Consequences:
+  - Steamworks launch options, `trivia-steam stage`, `smoke.mjs`, `release_check.py` (modkit), `modding/` docs, README, plan 18
+- Supersedes / related: D-50, D-73 (artefact names), D-94; B-11; pm decisions 87, 176
