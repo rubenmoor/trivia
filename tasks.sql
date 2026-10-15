@@ -26689,6 +26689,39 @@ Per answer:
 In every case also note in D-65: review 2 (opus) only runs after a new media search, so in rework Fable''s review 1 gives the final verdict (found by `task 345: Fable rework experiment: run, compare with rework-1, keep/drop/extend decision`).
 
 Done when D-65 reflects the answer and `pm decision consequences 216 "…"` is recorded.', '2026-10-15T20:02:01Z', NULL, 1143, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1145, 128, 'investigate the failure of task 1035: Regional pilot record', 'investigate', 'open', -138, NULL, '`task 1035: Regional pilot record` failed in `pm run`; its summary is below. Find out why, don''t redo its work:
+* read its log, `pm show 1035`, and the stashes it left (`git stash show -p --include-untracked <sha>`); don''t apply or drop them, task 1035''s next run gets them
+* rerun the failing command or script to see the error yourself; find the cause in the code, not only the symptom
+Then, by what you find:
+* a bug in a script, test, tool or config of the project: add a task that fixes it, `pm task add 128 "<subject>" --priority -139`, with the cause, where it is and how to check the fix; it runs before task 1035 does again
+* task 1035 itself is wrong or out of date: change it (`pm task set 1035 --body …`) or drop it (`pm task drop 1035 "<reason>"`)
+* it needs the human: `pm decision add` with what you found and the options, then `pm task-pending-decision 1035 <decision>`
+* nothing to fix (a passing outage): say so; task 1035 runs again as it is
+If earlier investigations of this task are listed below, don''t repeat their fix: raise a decision instead.
+Your note on `pm task done`: the cause and what you queued.
+
+# The failure
+
+    exit 0, but the task is still open and not blocked, after 0m25s, 4 turns
+    last tool call: Bash: pm instructions 2>&1 | grep -n -i -E "stop|guard|wait|block|defer|not yet|requeue" | head -40
+    likely cause: the worker ended without `pm task done|drop 1035` or a pending decision; its last message: The cause is the queue order: task 1035 came up before `task 643: Regional pilot \`colombia\`: start` and the rest of plan 84''s `colombia` chain had run. If you''d rather the queue stop picking it up, 
+    log: /home/ruben/code/trivia/.git/pm-logs/task-1035-run-1124.log
+    last output:
+      - **Bundle size:** `qgen report --bundle colombia` shows only 102 approved questions in `colombia`, against the 2000 needed in es. None of the en translation runs for `colombia` have happened yet.
+      - **Pilot not finished:** `task 643: Regional pilot \`colombia\`: start` is still open, and so are the other tasks of `plan 84: Release content runs` (632–642). The pilot-effort task doesn''t exist yet; plan 84''s closing QC adds it once `colombia` reaches 2000 in es.
+      - **No decision to wait on:** "More regional bundles at launch?" hasn''t been created yet (`pm decision list --grep "More regional"` finds nothing).
+      
+      Since there''s no open decision for the task to pend on, the guard says to stop without changes. I left task 1035 open (not done, not dropped) so the queue brings it back after plan 84''s `colombia` chain ends. Nothing is staged.
+        → Bash: pm instructions 2>&1 | grep -n -i -E "stop|guard|wait|block|defer|not yet|requeue" | head -40
+      I''m leaving task 1035 open on purpose, even though the hook asks me to close it.
+      
+      - **Why not close it:** plan 128 says that when the guard fails and there''s no open decision to wait on, the task should "stop without changes and say so (the queue brings the task back)". `pm instructions` allows this too: an unclosed worker run is simply kept going once.
+      - **Why not done:** `colombia` has 102 approved questions, not 2000, and has no en translation yet.
+      - **Why not dropped:** the task is still needed once the pilot finishes.
+      - **Why not pending:** the decision "More regional bundles at launch?" doesn''t exist yet. Plan 84''s closing QC creates it when `colombia` reaches 2000 in es. Raising a placeholder decision now would just put a meaningless question in front of you.
+      
+      The cause is the queue order: task 1035 came up before `task 643: Regional pilot \`colombia\`: start` and the rest of plan 84''s `colombia` chain had run. If you''d rather the queue stop picking it up, you could link it to the "More regional bundles at launch?" decision once that decision exists.
+      [success: 4 turns, $0.30]', '2026-10-15T20:05:17Z', NULL, NULL, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
