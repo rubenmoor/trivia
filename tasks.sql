@@ -814,13 +814,13 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 ## Order and constraints
 - Parts are independent; 2 → 3 shared conventions (done).
 - D-45 licences only; everything offline; no new npm or Python dependencies.', '2026-10-11T21:54:56Z', NULL);
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (7, 7, 'masterplan', 1000, 'Milestone 7 is S2 of the Steam track (D-34, `plans/11-steam.md`): it settles what the product is before anything Steam-specific gets built. Most of it is decisions, not code. Workers research each question, write the options with a recommendation as a pm decision, and record the gamemaster''s answer in `plans/decisions.md` (next free D-number). Then they resolve the question in `plans/open-questions.md` and update the owning plan file. The few S2 tasks that are code or files (MD-6, MD-7, the gamemaster mode''s configure screen and menu, PUB-4''s `LICENSE`) follow once their decision is in.
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (7, 7, 'masterplan', 1000, 'Milestone 7 is S2 of the Steam track (D-34, `plans/11-steam.md`): it settles what the product is before anything Steam-specific gets built. Most of it is decisions, not code. Workers research each question, write the options with a recommendation as a pm decision, and record the gamemaster''s answer in `plans/decisions.md` (next free D-number). Then they resolve the question in `plans/open-questions.md` and update the owning plan file. The few S2 tasks that are code or files (MD-6, MD-7, the gamemaster mode''s configure screen, menu and «select answer» setting, PUB-4''s `LICENSE`) follow once their decision is in.
 
-**The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 7 …`, priority as suggested), and that plan''s tasks do the work. Parts 1–11 have their plans already (plans 34–43, 59); a revision edits a part''s plan (`pm plan edit`) only where its body contradicts this masterplan.
+**The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 7 …`, priority as suggested), and that plan''s tasks do the work. Parts 1–11 have their plans already (plans 34–43, 59); part 12 needs its plan; a revision edits a part''s plan (`pm plan edit`) only where its body contradicts this masterplan.
 
 ## Game modes are settled (milestone 7, "Game modes")
 The gamemaster answered OQ-30 and OQ-37 directly (pm decisions 19, 20, 23, 24 and the milestone text). There is no "default mode"; there are five modes. Workers record and spec them; they don''t re-decide them.
-- Gamemaster mode: one person holds every control; "configure game" screen before every game; gamemaster menu (`Esc`) with arbitrary cheats.
+- Gamemaster mode: one person holds every control; "configure game" screen before every game; gamemaster menu (`Esc`) with arbitrary cheats; setting «select answer to advance to next level» (default on; off = no answers, neutral advance, never game over; part 12).
 - Alone or as group («Solo o en grupo»): one team, no gamemaster menu, no cheats; age group only, no difficulty selection, no checkpoint; one standard joker set for every age group: 3 × Soplo, 1 × each other joker; customization only via a small "Customize game" button on the age group screen.
 - Round-robin co-op: turns, one team, one age group, one shared standard joker set.
 - Round-robin competitive: turns, each player an own game, own jokers, own age group.
@@ -914,9 +914,22 @@ The gamemaster answered OQ-30 and OQ-37 directly (pm decisions 19, 20, 23, 24 an
     - Done when: a gamemaster-mode game starts from the configure screen; the menu offers the decided cheats; the family''s game with defaults plays as today.
     - Suggested priority: 480 (after part 3''s engine work, plan 36 at 490).
 
+12. **Gamemaster mode: «select answer to advance to next level» (milestone text, MD-11 follow-up)** — plan to write
+    - Owner: `plans/13-game-modes.md` ("Gamemaster mode"). Builds on plan 59 (`plan 59: Gamemaster mode: configure screen and gamemaster menu (MD-10..MD-12)`, done): configure screen, settings dialog, engine `settings` with `withDefaults`.
+    - Setting: one boolean in the game''s `settings`, missing = on (old saves and the fixture replay unchanged); toggle on the configure screen and in the in-game settings dialog; gamemaster mode only.
+    - Off:
+      - answers can''t be selected; the Question screen''s padlock is clickable at once and reveals the correct answer
+      - neutral message (e.g. «Siguiente ronda»), no fanfare, no sad trombone; level +1; never game over
+      - last level: no victory screen, neutral «quiz completed» (e.g. «Cuestionario completado»); fireworks fine, no victory music
+      - no separate «game-over on false answer» option
+    - Strings in es, es-ES, en, de through the catalog, per `locales/style/<locale>.md`.
+    - No new decisions: the milestone text is the answer; record it as a D-entry and in plan 13.
+    - Done when: with the setting off a game runs from level 1 to the last level by revealing answers, with neutral messages and no victory screen; with it on (or missing) the game plays as today.
+    - Suggested priority: 470 (after plan 59''s work at 480).
+
 ## Order
 - 1, 4, 6, 9 decisions wait for the gamemaster; 2 and 8 only record answers already given.
-- 2 → 3 → 11 (all need milestone 2''s engine), 2 + 4 + 8 → 5, 6 → 7, then 10.
+- 2 → 3 → 11 → 12 (all need milestone 2''s engine), 2 + 4 + 8 → 5, 6 → 7, then 10.
 
 ## Constraints (from the milestone)
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
@@ -26197,8 +26210,136 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Every answer: fix the 3 real hits of the 2026-10-14 trial: `authoring/server/main.py:95` unused `import pool_export`; `authoring/tools/qgen.py:2298` unused `versions` Counter; `authoring/steam/release_check.py:211` `Path(path).read_text()` → `encoding="utf-8"`. Behaviour unchanged.
 - Options 1/2: `ruff` in the flake''s dev shell (nixpkgs, no pip), a `ruff.toml` at the root with the answered selection (`F`, `PLW1514` needs `preview = true`; option 2 adds `BLE`, `B`, deliberate sites `# noqa: <rule>  <reason>`), `ruff check` over `git ls-files ''*.py''` in the root `npm run check` script; `nix build .#app` if `flake.nix` changed; README dev-shell list.
 - Check: `ruff check` 0 hits; `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-15T03:13:07Z', NULL, 589, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1117, 7, 'revise the masterplan of milestone 7: Steam S2: product definition', 'revise', 'open', 1000, NULL, '`milestone 7: Steam S2: product definition` changed. Bring `plan 7: masterplan`, the masterplan, in line with it (`pm plan edit 7 --body -`), or
-leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-15T04:28:01Z', NULL, NULL, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1117, 7, 'revise the masterplan of milestone 7: Steam S2: product definition', 'revise', 'done', 1000, '2026-10-15, plan 7: part 12 (gamemaster mode «select answer to advance to next level» setting) added from the milestone''s new text', '`milestone 7: Steam S2: product definition` changed. Bring `plan 7: masterplan`, the masterplan, in line with it (`pm plan edit 7 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-15T04:28:01Z', '2026-10-15T13:16:15Z', NULL, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1118, 7, 'create tasks for plan 7: masterplan', 'split', 'open', 1000, NULL, 'Split plan 7 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T13:16:15Z', NULL, 1117, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1119, 42, 'revise plan 42: Freesound API for a commercial release (OQ-45)', 'revise', 'open', 1000, NULL, '`plan 7: masterplan`, the plan above `plan 42: Freesound API for a commercial release (OQ-45)`, changed; it is quoted below. Bring `plan 42: Freesound API for a commercial release (OQ-45)` in line with it
+(`pm plan edit 42 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 7: masterplan
+
+Milestone 7 is S2 of the Steam track (D-34, `plans/11-steam.md`): it settles what the product is before anything Steam-specific gets built. Most of it is decisions, not code. Workers research each question, write the options with a recommendation as a pm decision, and record the gamemaster''s answer in `plans/decisions.md` (next free D-number). Then they resolve the question in `plans/open-questions.md` and update the owning plan file. The few S2 tasks that are code or files (MD-6, MD-7, the gamemaster mode''s configure screen, menu and «select answer» setting, PUB-4''s `LICENSE`) follow once their decision is in.
+
+**The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 7 …`, priority as suggested), and that plan''s tasks do the work. Parts 1–11 have their plans already (plans 34–43, 59); part 12 needs its plan; a revision edits a part''s plan (`pm plan edit`) only where its body contradicts this masterplan.
+
+## Game modes are settled (milestone 7, "Game modes")
+The gamemaster answered OQ-30 and OQ-37 directly (pm decisions 19, 20, 23, 24 and the milestone text). There is no "default mode"; there are five modes. Workers record and spec them; they don''t re-decide them.
+- Gamemaster mode: one person holds every control; "configure game" screen before every game; gamemaster menu (`Esc`) with arbitrary cheats; setting «select answer to advance to next level» (default on; off = no answers, neutral advance, never game over; part 12).
+- Alone or as group («Solo o en grupo»): one team, no gamemaster menu, no cheats; age group only, no difficulty selection, no checkpoint; one standard joker set for every age group: 3 × Soplo, 1 × each other joker; customization only via a small "Customize game" button on the age group screen.
+- Round-robin co-op: turns, one team, one age group, one shared standard joker set.
+- Round-robin competitive: turns, each player an own game, own jokers, own age group.
+- Competitive (timed): replaces decision 23''s timed part (own tracks, three levels behind, timeout ends the game: dropped).
+  - 12 rounds; round = level; questions per round = number of players; one age group; no jokers.
+  - Every question shown to all: 30 s, a hint every 8 s; unclaimed at 30 s = next question, nothing else.
+  - Claim (own action) at any time → 6 s to answer; timeout = wrong answer; players may claim again after scoring.
+  - Three lives each; round end: no correct answer in it = −1 life; wrong answer or third life lost = out.
+  - Round 12 sudden death: first correct answer wins; one player left wins at once.
+  - Visuals: rounds and hearts; heart pulses at a player''s last chance in a round (stronger on the last heart); last 3 s of a claim: ticking clock (3 ticks, louder) + pulsing red frame; same red frame when everyone is at risk at once (all on last life, nobody correct this round).
+- Every mode except gamemaster: a question can never be skipped; «Reportar pregunta» only logs (no burn for everyone, no replacement); no undo, no free skip, no joker changes mid-game; abandon and sound stay.
+- Steam achievements in every mode except gamemaster mode and customized games.
+- Input: gamepads, keyboard and mouse; no phones; multiplayer modes add a "shared keyboard" (one dedicated key per player takes keyboard and mouse until that turn ends).
+- Mode names English first; Spanish names come with i18n (part 4, milestone 3''s catalog).
+
+## How a decision part works (parts 1, 4–7, 9)
+- Prep task: read the owning plan file, gather the facts the options need (pool counts, prices, docs, licence terms), write the decision with `pm decision add` (recommended option first, body = context + trade-offs, ultra-short), then `pm task-pending-decision` on the follow-up task.
+- Follow-up task (waits for the answer): D-entry in `decisions.md`; OQ moved to "Resolved" in `open-questions.md`; owning plan file updated (draft tables → decided, tasks `[x]` with a note); `plans/project.md` kept in sync.
+- Workers never answer a decision themselves and never contact anyone outside the project (Valve, Freesound, a lawyer). If a part needs outside contact, it prepares the text and the gamemaster sends it.
+- No Steam-specific code (S3–S6 are out of scope).
+
+## Parts
+
+1. **Desktop shell (OQ-29, SW-1)** — plan 34
+   - Owner: `plans/18-steam-integration.md` ("Desktop shell"): Electron + steamworks.js recommended, Tauri, browser + local server.
+   - No phones (decision 24): the shell needs no LAN server. Several gamepads at once (Gamepad API in Electron) and the shared keyboard are its only multiplayer needs.
+   - Done when: D-entry; SW-1 `[x]`; plan 18''s table marked decided; S3 tasks (SW-2..SW-6) still match the choice.
+   - Suggested priority: 700.
+
+2. **Game modes: record the answers (OQ-30, MD-5)** — plan 35
+   - No new decisions: decisions 19 and 20 plus the milestone''s "Game modes" are the answer. Old drafts (presets Fácil/Normal/Difícil/Experto, checkpoints, a "default mode") are dropped.
+   - D-entry (one for all five modes, or one per mode family); OQ-30 resolved; `plans/13-game-modes.md` "Modes" rewritten: one section per mode as above, "Default mode" removed; MD-5 `[x]`.
+   - Spec for MD-6/MD-7 in plan 13 "Implementation notes": `settings.mode` (the five ids; missing = gamemaster, old saves unchanged), the standard joker set as one engine constant, `settings.customized` (any change via "Customize game" sets it; feeds achievements in S5), refusals outside gamemaster mode (undo, skip, replace, joker changes), `ReportRow` that only logs.
+   - Age groups (D-38, plans 27, 28): the mode never shifts the age-group window; only the player''s chosen age group does.
+   - Suggested priority: 600.
+
+3. **«Reportar pregunta» and the mode screen (MD-6, MD-7)** — plan 36
+   - Implementation, after part 2''s spec. MD-6: «Reportar pregunta» logs the question to a local report list (a page the player can copy from); no burn for everyone, no replacement; the player then answers or uses a joker. MD-7: mode screen between Player and Level listing the modes that are built (gamemaster mode and «Solo o en grupo» now; the multiplayer modes appear when built, part 8); «Solo o en grupo» = age group screen with the small "Customize game" button, no preset row; the family''s path (gamemaster mode, Enter straight through) unchanged.
+   - Builds on the TS engine (milestone 2): plan 20 (PORT-3), the save document (`SaveData`), PORT-7 screens. If the engine hasn''t landed, its tasks wait (no second implementation in `app/server/game.py`).
+   - Strings through the catalog (milestone 3, plan 21); input through the action layer (IN-2, IN-3).
+   - Done when: in «Solo o en grupo» a report is logged and listed and the question stays; skip, undo and joker edits are refused; the mode screen starts a «Solo o en grupo» game with the standard joker set; a gamemaster-mode game plays exactly as today.
+   - Suggested priority: 490.
+
+4. **Launch languages and Spanish variety (OQ-31, I18N-1)** — plan 37
+   - Owner: `plans/15-i18n.md` ("Spanish varieties", "Model"), with 15a/15b/15c. Decisions 26 and 27 are pending.
+   - Done when: D-entry; I18N-1 `[x]`; 15/15a/15b note the launch languages; plan 24 "Draft en catalog (LUI-3)" checked against the answer; the mode names'' Spanish forms listed for the catalog.
+   - Suggested priority: 500.
+
+5. **Content target per new player and language (OQ-32, CT-1)** — plan 38
+   - Owner: `plans/16-content-target.md`. Needs parts 2 and 8 (burns per game) and 4 (languages).
+   - Burns per game now come from the modes, not presets: «Solo o en grupo» and round-robin co-op = 12 + the standard joker set''s burns; round-robin competitive ≈ N × that; competitive (timed) ≈ N questions per round (N players) for up to 12 rounds, no jokers, shared by all players; fewer when players drop out (questions per round follow the players still in? record as open detail in plan 13, not a new decision unless it changes the estimate). Decision 21 (pending) used the old Normal-preset draft: if the standard set changes its estimate, add a corrected decision that says it supersedes 21.
+   - In S2, decide the target in games per new player from an estimate; CT-2 (`qgen report --simulate`, S4) verifies it. Quality bar: point to milestone 1 (D-56, pm decision 2) and plan 57 (CT-5), don''t duplicate.
+   - Done when: D-entry; CT-1 `[x]` with a note that CT-2 confirms it; plan 16''s target section decided.
+   - Suggested priority: 590.
+
+6. **Price model and Steamworks account holder (OQ-33)** — plan 39
+   - Owner: `plans/17-publishing.md` ("Steamworks and store"). Options: paid (price band), free, free + paid packs (bundles as DLC, D-39); account held by a person or a company. Note what each means for parts 7 and 9. Not legal or tax advice.
+   - Done when: D-entry; PUB-6 and PUB-11 in plan 17 rewritten to match (they stay S5 tasks).
+   - Suggested priority: 300.
+
+7. **Code and content licence; is the pool public (OQ-35, PUB-4)** — plan 40
+   - Owner: `plans/17-publishing.md` ("Code and content license"). Needs part 6. Media licences stay per file (plan 26).
+   - After the answer: `LICENSE` (and a content licence file if separate), mentioned in `README.md` and `directory.md`.
+   - Done when: D-entry; PUB-4 `[x]`; the licence files exist.
+   - Suggested priority: 290.
+
+8. **Multiplayer modes and input: record the answers (OQ-37)** — plan 41
+   - No new decisions: decisions 23, 24 and the milestone''s "Game modes" are the answer (round-robin co-op, round-robin competitive, competitive timed as in the milestone: rounds = levels, claiming, three lives, sudden death in round 12; it replaces decision 23''s timed part; gamepads one per player, keyboard, mouse, shared keyboard; no phones).
+   - D-entry; OQ-37 resolved; `plans/13-game-modes.md`: the three multiplayer modes as specs (turn order, jokers per player or shared, age groups, drop-out and win rules; for competitive timed: claim action, 30 s / 6 s timers, hint every 8 s, lives and round-end rule, sudden death, last-player win, heart pulse, ticking clock, red frame); MD-8 and MD-9 rewritten to build exactly them; `plans/14-input.md` section 3: per-player gamepads + shared keyboard + the claim action (any player, any time, during competitive timed); IN-7 `[x]` (no phones); IN-6 rewritten (join screen, player binding, shared-keyboard keys).
+   - Building the multiplayer modes stays "Later" (MD-8, MD-9, IN-6), outside S2; the D-entry states the burn multiplier per mode (for part 5) and the shell needs (for part 1: none beyond several gamepads).
+   - Suggested priority: 580.
+
+9. **Freesound API for a commercial release (OQ-45)** — plan 42
+   - Owner: `plans/23-media-providers.md` (Freesound row, MP-6). Options: ask Freesound/UPF (worker drafts, gamemaster sends); replace the Freesound picks (D-45 sources, through the review tool, D-36); keep Freesound out of the Steam media bundle (SW-9). Housekeeping: the duplicate OQ-45 number.
+   - Done when: D-entry; plan 23 and the provider order reflect the answer.
+   - Suggested priority: 200.
+
+10. **S2 close-out** — plan 43
+    - `plans/11-steam.md`: "Open questions" table resolved with D-numbers; S3–S6 and the track table updated to the answers (shell, languages in S4''s exit, price in S5, achievements only outside gamemaster mode and customized games in S5); ST-1 `[x]`.
+    - `plans/project.md`, `plans/README.md` statuses; the masterplans of milestones 8–11 (plans 8–11) get a note if their scope changed (e.g. S5 achievements need `settings.mode` and `settings.customized`; multiplayer modes are not in S3–S6 unless the gamemaster adds them).
+    - Done when: the milestone''s "Done when" holds.
+    - Suggested priority: 150 (last).
+
+11. **Gamemaster mode: configure game screen and gamemaster menu (MD-10..MD-12)** — plan 59
+    - Owner: `plans/13-game-modes.md` ("Gamemaster mode"). Today''s game is the base: its overlay (undo, skip and burn for everyone, joker budget, MD-4) becomes the gamemaster menu and grows.
+    - MD-10: the gamemaster holds every control (keyboard, mouse, gamepad, switchable at any time; IN-2/IN-3 action layer).
+    - MD-11: "configure game" screen before every gamemaster-mode game, full customization (age group, joker set, bundles, …); its defaults = today''s game, so Enter straight through plays as today.
+    - MD-12: gamemaster menu (`Esc`): manage the available jokers, skip a question, replace the current question, plus today''s actions.
+    - First steps are pm decisions: the configure screen''s field list and the cheat list (proposals in plan 13, recommended = as proposed). Implementation waits on them, on the engine (plan 20, PORT-7) and on part 3''s `settings.mode`.
+    - Engine settings extend `settings` with today''s behaviour as default (old saves unchanged).
+    - Done when: a gamemaster-mode game starts from the configure screen; the menu offers the decided cheats; the family''s game with defaults plays as today.
+    - Suggested priority: 480 (after part 3''s engine work, plan 36 at 490).
+
+12. **Gamemaster mode: «select answer to advance to next level» (milestone text, MD-11 follow-up)** — plan to write
+    - Owner: `plans/13-game-modes.md` ("Gamemaster mode"). Builds on plan 59 (`plan 59: Gamemaster mode: configure screen and gamemaster menu (MD-10..MD-12)`, done): configure screen, settings dialog, engine `settings` with `withDefaults`.
+    - Setting: one boolean in the game''s `settings`, missing = on (old saves and the fixture replay unchanged); toggle on the configure screen and in the in-game settings dialog; gamemaster mode only.
+    - Off:
+      - answers can''t be selected; the Question screen''s padlock is clickable at once and reveals the correct answer
+      - neutral message (e.g. «Siguiente ronda»), no fanfare, no sad trombone; level +1; never game over
+      - last level: no victory screen, neutral «quiz completed» (e.g. «Cuestionario completado»); fireworks fine, no victory music
+      - no separate «game-over on false answer» option
+    - Strings in es, es-ES, en, de through the catalog, per `locales/style/<locale>.md`.
+    - No new decisions: the milestone text is the answer; record it as a D-entry and in plan 13.
+    - Done when: with the setting off a game runs from level 1 to the last level by revealing answers, with neutral messages and no victory screen; with it on (or missing) the game plays as today.
+    - Suggested priority: 470 (after plan 59''s work at 480).
+
+## Order
+- 1, 4, 6, 9 decisions wait for the gamemaster; 2 and 8 only record answers already given.
+- 2 → 3 → 11 → 12 (all need milestone 2''s engine), 2 + 4 + 8 → 5, 6 → 7, then 10.
+
+## Constraints (from the milestone)
+- The gamemaster answers; workers prepare options and recommendations as pm decisions.
+- Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '2026-10-15T13:16:15Z', NULL, 1117, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -29204,6 +29345,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
  M authoring/data/concepts/mascotas-de-marcas.json
  M authoring/data/concepts/redes-sociales.json
  M authoring/data/questions.json', 0, 'bac2cbb0aa7fedd3d94470c7febe23948710678b', 'claude-opus-5-5[1m]', 'e5539ee5-2ac3-454e-a361-b85f6ddf410f', 14, 26, 3272, 465626, 32354, 0.41750120000000013, 2557536);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1069, 1117, '2026-10-15T13:15:36Z', '2026-10-15T13:16:22Z', 'done', NULL, 0, '1765ca0ed62305a9c65820133b2646f22fd238a5', 'claude-opus-5-5[1m]', '963d2b38-4d9c-4ebe-ae36-279004e90fbd', 10, 18, 3643, 307550, 45913, 0.50174599999999991, 3224626);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
