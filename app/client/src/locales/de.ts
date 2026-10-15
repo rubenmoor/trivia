@@ -200,6 +200,13 @@ export const de = {
       timeout: "Einrichtung dauerte zu lange",
       hook_failed: "Eine Änderung des Mods schlug fehl",
     },
+    issue: {
+      bad_question: { one: "{bundle}: 1 Frage übersprungen", other: "{bundle}: {n} Fragen übersprungen" },
+      bad_media: { one: "{bundle}: 1 Mediendatei übersprungen", other: "{bundle}: {n} Mediendateien übersprungen" },
+      bad_categories: "{bundle}: categories.json nicht lesbar",
+      no_pool: "{bundle}: keine Fragen für diese Sprache",
+      bundle_language: { one: "{bundle}: 1 Sprache ohne Fragen ignoriert", other: "{bundle}: {n} Sprachen ohne Fragen ignoriert" },
+    },
     notice: {
       title: "Mods erlauben?",
       body: "Mods stammen von anderen Spielern und führen Code mit den Rechten des Spiels aus: Spielstand, Steam-Erfolge und Steam-Funktionen. Nur vertrauenswürdige Mods einschalten.",

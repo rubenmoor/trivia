@@ -54,7 +54,6 @@ Milestone 13 read every tracked code and build file once, between 2026-10-12 and
 
 ### Pending
 - Follow-up tasks (`### Pending`):
-  - `task 1112: Mods screen: show modIssues() per mod bundle`
   - `task 1113: Store and gallery scripts: one shell launcher and one demo-save builder`
   - `task 1051: Freesound: re-pick its 2 audio slots from Commons, drop it from the audio order`
   - `task 1114`–`1116` (check scripts and ruff), waiting on decisions 196–198
@@ -1890,7 +1889,7 @@ Plan 83 checks this report for completeness, proposes process changes, writes th
 | file | finding | category | severity | status |
 |---|---|---|---|---|
 | `app/client/src/lib/store.ts` | `ServerStore` has no caller since task 780 (`lib/engine.ts` picks `FileStore` or `MemoryStore`); the `/api/save` client stays only for the browser game's server (task 588 export scan: `DEAD`) | unused | low | superseded by task 765 |
-| `app/client/src/lib/data.ts` | `modIssues()` exported for the mods screen (task 960) but never called: per-mod load issues are collected, never shown (task 588 export scan: `DEAD`) | unused | low | follow-up task 1112 (task 1108: plan 115 and decision 133 want the counts on the mods screen, so wire, not drop) |
+| `app/client/src/lib/data.ts` | `modIssues()` exported for the mods screen (task 960) but never called: per-mod load issues are collected, never shown (task 588 export scan: `DEAD`) | unused | low | fixed (task 1112): `Mods.svelte` `warnings()` shows them per bundle (`mods.issue.*`) |
 | `report-server/wrangler.toml` | `PLACEHOLDER(868)`: D1 database id; task 868 (developer setup) is open, so live, not stale | — | — | — |
 | `app/client/src/game/screens/` `Start`, `Level`, `Select`, `Correct`, `Wrong`, `Victory`, `Consent` | the split (task 964) copied `Game.svelte`'s centred-screen `section` block (10 lines) into all seven | complexity | low | fixed (task 1106): one `.game :where(.screen)` in `theme.css` (zero specificity, so `.level`/`.victory` rows and Consent's gap still win); gallery `level`, `select`, `wrong`, `victory`, `consent`, `start-save-notice` (es) unchanged |
 | `app/client/src/game/screens/Select.svelte`, `app/client/src/game/CornerButtons.svelte` | `.error-box` copied verbatim in both (raw `rgba(40, 10, 18, 0.9)` twice); `Game.svelte` already targets it globally for the peek fade | complexity | low | fixed (task 1106): one `.game .error-box` in `theme.css` |
@@ -2010,7 +2009,6 @@ Task 588, 2026-10-14. Throw-away scripts over `code-review.md`, `git ls-files` a
 | task 652 | SW-8 close-out: gamemaster check and docs | part 6 `preload.cjs`/`main.mjs` overlay, `showTextInput` | decision 113: SW-8 check under Steam |
 | task 765 | Delete app/server, ServerStore, the trivia command and nix build .#app | part 10 parity rows (save twin), part 11 `ServerStore` | decision 150: Family save imported into trivia-desktop? |
 | task 1051 | Freesound: re-pick its 2 audio slots from Commons, drop it from the audio order | part 8 `providers/__init__.py` `ORDER`, `freesound.py` | — |
-| task 1112 | Mods screen: show modIssues() per mod bundle | part 11 `modIssues()` | — |
 | task 1113 | Store and gallery scripts: one shell launcher and one demo-save builder | part 11 `capsules.mjs`, `trailer.mjs`, `gallery_saves.mjs` | — |
 | task 1114 | directory.md check per decision 196 | process decisions | decision 196 |
 | task 1115 | Unused-export check per decision 197 | process decisions | decision 197 |

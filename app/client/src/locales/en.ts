@@ -200,6 +200,13 @@ export const en = {
       timeout: "Setup took too long",
       hook_failed: "A change by the mod failed",
     },
+    issue: {
+      bad_question: { one: "{bundle}: 1 question skipped", other: "{bundle}: {n} questions skipped" },
+      bad_media: { one: "{bundle}: 1 media file skipped", other: "{bundle}: {n} media files skipped" },
+      bad_categories: "{bundle}: categories.json can't be read",
+      no_pool: "{bundle}: no questions for this language",
+      bundle_language: { one: "{bundle}: 1 language without questions ignored", other: "{bundle}: {n} languages without questions ignored" },
+    },
     notice: {
       title: "Allow mods?",
       body: "Mods are made by other players and run code with the game's access: your save, Steam achievements and Steam features. Only turn on mods you trust.",

@@ -222,6 +222,14 @@ const es = {
       timeout: "Tardó demasiado en iniciar",
       hook_failed: "Un cambio del mod falló",
     },
+    /** Per mod bundle, from lib/data.ts modIssues(); {bundle}: its name. */
+    issue: {
+      bad_question: { one: "{bundle}: 1 pregunta omitida", other: "{bundle}: {n} preguntas omitidas" },
+      bad_media: { one: "{bundle}: 1 archivo multimedia omitido", other: "{bundle}: {n} archivos multimedia omitidos" },
+      bad_categories: "{bundle}: categories.json no se puede leer",
+      no_pool: "{bundle}: no hay preguntas para este idioma",
+      bundle_language: { one: "{bundle}: 1 idioma sin preguntas se ignora", other: "{bundle}: {n} idiomas sin preguntas se ignoran" },
+    },
     /** One-time notice before the first mod runs. */
     notice: {
       title: "¿Permitir mods?",

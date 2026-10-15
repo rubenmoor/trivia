@@ -28,6 +28,7 @@
   import { flush } from "../../lib/engine.ts";
   import { endonym, has, t, type Params } from "../../lib/i18n.ts";
   import { focusControl, lastDevice, pushScope, type Action } from "../../lib/input.svelte.ts";
+  import { modIssues } from "../../lib/data.ts";
   import { modErrors } from "../../lib/mods.ts";
   import ModsNotice from "../ModsNotice.svelte";
   import Icon from "../Icon.svelte";
@@ -68,7 +69,8 @@
 
   function warnings(m: ModEntry): string[] {
     const page = m.active ? modErrors().filter((e) => e.id === m.id).map((e) => e.code) : [];
-    return [...new Set([...m.warnings, ...page])].map((w) => code("mods.warning", w, { version: m.game ?? "" }));
+    const bundles = m.active ? modIssues().filter((i) => i.mod === m.id).map((i) => code("mods.issue", i.code, { bundle: i.name, n: i.count })) : [];
+    return [...new Set([...m.warnings, ...page])].map((w) => code("mods.warning", w, { version: m.game ?? "" })).concat(bundles);
   }
 
   function nameOf(m: ModEntry): string {

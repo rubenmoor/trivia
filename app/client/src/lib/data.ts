@@ -56,6 +56,8 @@ export async function availableLocales(): Promise<string[]> {
 export interface ModIssue {
   mod: string;
   bundle: string;
+  /** bundles.json row name, else the id after `<mod>:`. */
+  name: string;
   code: "bad_question" | "bad_media" | "bad_categories" | "no_pool" | "bundle_language";
   count: number;
 }
@@ -68,7 +70,7 @@ export function modIssues(): ModIssue[] {
 }
 
 function issue(b: Bundle, code: ModIssue["code"], count = 1): void {
-  if (count) issues.set(`${b.id} ${code}`, { mod: b.mod ?? "", bundle: b.id, code, count });
+  if (count) issues.set(`${b.id} ${code}`, { mod: b.mod ?? "", bundle: b.id, name: b.name || b.id.slice(b.id.indexOf(":") + 1), code, count });
 }
 
 /** A mod bundle's file: its JSON, null if missing or unreadable. */
