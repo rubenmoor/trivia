@@ -208,7 +208,7 @@ export interface Credits {
   /** Licence files at the repo root (plan 40), with their first line. */
   game: { file: string; title: string }[];
   media: MediaCredit[];
-  sounds: { entries: SoundCredit[]; note: string };
+  sounds: { entries: SoundCredit[] };
   fonts: { name: string; file: string; license: string; license_file: string }[];
   /** Controller glyphs drawn for the game (Glyph.svelte). */
   glyphs: boolean;

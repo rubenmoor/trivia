@@ -30,6 +30,7 @@ interface Slot {
   author_url?: string | null;
 }
 
+/** CREDITS.md only; the screen shows `credits.elgar` (decision 49). */
 const ELGAR =
   "Victory march: Pomp and Circumstance No. 1, composed by Edward Elgar († 1934, public domain); " +
   "recording by the United States Marine Band, a US government work (public domain).";
@@ -248,7 +249,7 @@ function markdown(
     "|---|---|---|---|---|",
     ...soundRows,
     "",
-    c.sounds.note,
+    ELGAR,
     "",
     "## Fonts",
     "",
@@ -310,7 +311,7 @@ function buildCredits(): { json: Credits; md: string; warnings: string[] } {
     version: 1,
     game: game(),
     media: media(warnings),
-    sounds: { entries: s.entries, note: ELGAR },
+    sounds: { entries: s.entries },
     fonts: FONTS,
     glyphs: existsSync(`${client}src/game/Glyph.svelte`),
     achievements: existsSync(`${repo}app/desktop/achievements/FIRST_WIN.svg`),

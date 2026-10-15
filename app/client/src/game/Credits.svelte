@@ -108,7 +108,7 @@
             {@render row(s.used_for, s.author, s.license, s.source, s.source_url)}
           {/each}
         </ul>
-        <p class="hint">{credits.sounds.note}</p>
+        <p class="hint">{t("credits.elgar")}</p>
       </section>
       <section>
         <h3>{t("credits.fonts")} <small>{credits.fonts.length}</small></h3>
