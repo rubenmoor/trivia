@@ -26653,6 +26653,21 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 * delete code that isn''t actually used
 * check pending decisions if they are still relevant and really pending
 * check other milestones if their contents are up-to-date and update them if necessary', '2026-10-15T19:16:50Z', '2026-10-15T19:19:44Z', NULL, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1142, 84, 'Fix qgen neutralize: resume fails validate (stale pool.json after a partial fix)', 'work', 'open', 0, NULL, '`task 632: run neutralize-1` stopped; `qgen neutralize` can''t resume after a partial `fix` step.
+
+- Failing step: run 1 exited 1 at `fix` (1 transient item: `no fact check for q-1162`, "rerun the same command"). Runs 2 and 3: exit 1 at the scan''s `validate`, before `fix` is retried:
+  ```
+  Resuming neutralize-1.
+  == [1/2] scan
+     scan took 0s (batch: 0s)
+  == [2/2] validate
+  app/data/pool.json is not the current export of the pool: run `qgen export`
+  `qgen validate` failed. Stop and report the output.
+  ```
+- Diagnosis (read-only): `authoring/tools/qgen.py` `cmd_neutralize` runs `run_steps([("scan", …)])` first; `run_steps` always ends with `validate_pool()`. `fix` (in `revise_steps`) has already written `authoring/data/questions.json`; `export` comes only at the end, so the stale-export check (`validate_pool`, "is not the current export of the pool") fails on every resume. Same pattern probably in `qgen tighten` (scan modes share it); check `cmd_rework` too.
+- Suggested fix: on resume, skip the stale-export check (or the whole validate) of the scan-only `run_steps` call, or run scan and the revise steps in one `run_steps` call so validate runs once at the end after `export`.
+- Check: with `work/neutralize-1/` as left by task 632 (unexported `questions.json` diff), `nix develop -c qgen neutralize` resumes at `fix`, retries the failed item and continues; or reproduce on a small `qgen tighten --ids …` run interrupted after `fix`.
+- Don''t commit or revert the partial `authoring/data/questions.json` from task 632; the resume task needs it.', '2026-10-15T19:36:44Z', NULL, 632, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -28727,6 +28742,25 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 - 14 Símbolos folded into 3 Historia.
 - 10 Cine y televisión and 13 Vida diaria merged: «Vida diaria y televisión en {región}».
 - 7 Mitos y leyendas folded into 6: «Fiestas, tradiciones y leyendas de {región}».', NULL, NULL, '2026-10-15T19:04:01Z', NULL, 1137, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (214, 'neutralize-1: qgen validate fails after fix', 'pending', '["fix first: task 632 waits for task 1142, then resumes with plain `qgen neutralize`", "discard: revert questions.json, drop tasks 632 and 633"]', '`task 632: run neutralize-1` (decision 202: Run qgen neutralize on base now? → go).
+
+- Run 1: `qgen neutralize` exit 1 at `fix` (1 of 31 fact-check calls: `no fact check for q-1162`).
+  `claude: 70 calls (0 failed, 0 retried), opus 39 / sonnet 31, 181 turns, 2.3M tokens (1.9M cache), $14.08, 46m56s in calls`
+- Runs 2, 3: exit 1 at the scan''s `validate`, before `fix` is retried (no claude calls):
+  ```
+  Resuming neutralize-1.
+  == [1/2] scan
+     scan took 0s (batch: 0s)
+  == [2/2] validate
+  app/data/pool.json is not the current export of the pool: run `qgen export`
+  `qgen validate` failed. Stop and report the output.
+  ```
+- `qgen validate` on the partial state: same error. So the RUNBOOK''s partial-batch path (validate passes → stage `authoring/data`) doesn''t apply. Nothing staged.
+- Cause: a qgen bug. Every resume validates after the scan, but `export` only runs at the end. Fix: `task 1142: Fix qgen neutralize: resume fails validate (stale pool.json after a partial fix)`.
+- Working tree: `authoring/data/questions.json` has `fix`''s uncommitted rewording (~5000 lines changed). Other batch tasks will see a dirty tree until this resumes or is reverted.
+
+"fix first": task 632 resumes after task 1142, with plain `qgen neutralize`.
+"discard": `git checkout authoring/data/questions.json`, `work/neutralize-1/` stays, tasks 632 and 633 dropped.', NULL, NULL, '2026-10-15T19:36:54Z', NULL, 632, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -29845,6 +29879,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1101, 1115, '2026-10-15T19:08:57Z', '2026-10-15T19:14:51Z', 'done', NULL, 0, '83eca9a9c67d5b5e7d98882eca2e612447ca3adf', 'claude-opus-5-5[1m]', '2e617b66-9b3e-447b-9998-561167fac966', 54, 106, 26716, 4172873, 100252, 2.1713346, 3530483);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1102, 1116, '2026-10-15T19:14:51Z', '2026-10-15T19:16:50Z', 'done', NULL, 0, 'b8b389ff57aa8b30ca07722e271abc62c291af3d', 'claude-opus-5-5[1m]', 'e6a62d4d-4311-423d-bcd1-faa229e643df', 20, 40, 5690, 861467, 42920, 0.6296134000000001, 3530483);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1103, 1141, '2026-10-15T19:16:50Z', '2026-10-15T19:19:52Z', 'done', NULL, 0, 'efbf3ce904f66ed3edd22609d4c5183a719a8d81', 'claude-opus-5-5[1m]', '15b047b5-e8f3-42e0-9ad0-098aa459c245', 31, 60, 11164, 2037964, 79525, 1.2673128, 3530483);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1104, 632, '2026-10-15T19:19:52Z', '2026-10-15T19:37:03Z', 'blocked', NULL, 0, '0273fe21f55085534709e8bf20dc42b02a8c3531', 'claude-opus-5-5[1m]', '21385932-7fd7-444c-95e1-8194a1df6ecb', 13, 26, 5190, 524236, 38115, 0.5136712, 3530483);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -30003,6 +30038,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (479, 50);
 INSERT INTO task_decision (task_id, decision_id) VALUES (479, 155);
 INSERT INTO task_decision (task_id, decision_id) VALUES (479, 206);
 INSERT INTO task_decision (task_id, decision_id) VALUES (632, 202);
+INSERT INTO task_decision (task_id, decision_id) VALUES (632, 214);
 INSERT INTO task_decision (task_id, decision_id) VALUES (633, 202);
 INSERT INTO task_decision (task_id, decision_id) VALUES (634, 202);
 INSERT INTO task_decision (task_id, decision_id) VALUES (635, 202);
