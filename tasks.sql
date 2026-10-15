@@ -3529,7 +3529,81 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - A gamemaster-mode game starts from the configure screen.
 - The menu offers the decided cheats; each is refused outside gamemaster mode.
 - The family''s game with defaults plays as today (fixture replay passes, Enter straight through).', '2026-10-12T16:44:17Z', 370);
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (60, 12, 'masterplan', 1000, 'tbd.', '2026-10-12T16:46:08Z', NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (60, 12, 'masterplan', 1000, 'The game ships in Simplified Chinese (`zh-Hans`), Russian (`ru`) and Brazilian Portuguese (`pt-BR`) on top of the launch languages (`decision 26: Launch languages (OQ-31): which languages at Steam launch, and which comes first after?`), each with its own approved pool of 5000 in D-53''s mix (`decision 21: Content target per player and language (OQ-32)?`). Russian and Portuguese play translated `base`; the zh game plays a new base bundle, `chinese-base`. Everything reuses the launch languages'' pipeline (`qgen batch --translate`, D-87), review tool (plan 67) and UI path (plans 69, 100); no new pipeline per language.
+
+This masterplan''s own tasks are not implementation work: each of them writes the plan for one part below (`pm plan add 12 …`), with its own tasks, priority and pm decisions. Parts are in dependency order; a part''s plan names the parts it waits for.
+
+## Names and terms
+- Locale tags: `zh-Hans`, `ru`, `pt-BR` (D-78; Steam `schinese`, `russian`, `brazilian` already map to them in `STEAM_LANGS`, `app/client/src/lib/engine.ts`); "zh" in the milestone = `zh-Hans`.
+- New locales are translation locales like `en`, `de`: `authoring/data/questions.<locale>.json`, `app/data/pool.<locale>.json`, `names.<locale>.json` (D-81); the Spanish `questions.json` stays the only source unless decision 218 says otherwise.
+
+## Decisions raised by this masterplan
+- `decision 217: chinese-base membership: how does a translated base question count for chinese-base?` (D-39 vs. D-81): part 2''s plan waits for it.
+- `decision 218: New China-centric questions for chinese-base: drafted in Spanish and translated, or drafted in Chinese?`: part 6''s plan waits for it.
+- Native reviewers (who, how, cost): raised by part 4''s plan, answered before any generation (milestone constraint).
+
+## Part 1: New locales in data and pipeline
+- `authoring/tools/translations.py` `LANGUAGES` (comment already names milestone 12), `qgen validate`, `export`, `report`, `--simulate`, `--cost`, `health`, `flag` (report locale), `targets.py` deficits and source shortfall (D-84 "largest over `en`/`de`" → over every translation locale), review tool locale switch and stats, start page rows, `trivia-release-check` pool hashes (decision 100), telemetry and report server locale fields, `lib/data.ts` / `lib/i18n.ts` `LOCALES`.
+- `app/data/bundles.json`: `base` `languages` += `ru`, `pt-BR` (not `zh-Hans`); `qgen validate` "each language has a base bundle" covers the new ones (`chinese-base` from part 2 for `zh-Hans`).
+- Names files `names.{zh-Hans,ru,pt-BR}.json` (categories, subcategories, bundles, age groups).
+- Done when: `qgen validate` and `report` handle all three locales with empty pools; nothing changes for es/en/de.
+- Plan priority: ~900 (data layout).
+
+## Part 2: `chinese-base` bundle: model and setup
+- Waits for decision 217; implements its answer in the translation layout, `export` and `validate` (D-81 amended, a new D-entry in `plans/decisions.md`).
+- `qgen bundle new chinese-base --kind base`, `languages: ["zh-Hans"]`, `voice`, `rule` (what a Chinese family knows; what doesn''t fit: the Spanish-speaking world, Spanish wordplay); `targets.json` entry 5000 in D-53''s mix (like `base`, not the regional 2000).
+- Own taxonomy and concept lists (D-43, D-99, D-100): reuse `base`''s subcategories and concepts where they fit, add China-centric categories (Chinese history, places, food, festivals, people, language, pop culture); a pm decision for the developer to approve the list (as for `colombia`, plan 138).
+- Base bundles per language (D-85, milestone 5): zh offers only `chinese-base`; `bundlesFor`, the default base bundle, the Choice screen, `qgen report --simulate --bundles` default for zh; other bundles in zh only if translated (not required).
+- Achievements: `ALL_CATEGORIES` (our base''s categories) in a `chinese-base` game; `BUNDLE_*` stays regional only (decision 73, decision 146).
+- Plan priority: ~880, after part 1.
+
+## Part 3: Translation prompts and markets per locale
+- `authoring/tools/prompts/locale-{zh-Hans,ru,pt-BR}.md` like `locale-en.md` / `locale-de.md` (decisions 35, 160, 167: no player location, address, quotes): Simplified characters and Chinese punctuation, names as Chinese speakers know them, 万 vs. Western grouping; Russian case endings fitting all options (like German articles), «ёлочки» quotes, Cyrillic transliteration; Brazilian spelling and usage (not European Portuguese), «você»; numbers and units per locale.
+- `chinese-base` fit pass prompt (by decision 217''s answer): which `base` questions work for a Chinese family.
+- Prompts are the developer''s (D-36): one pm decision per locale to approve the drafts.
+- Plan priority: ~700.
+
+## Part 4: Native reviewers
+- No native speaker in the family (milestone constraint): plan who reviews and how, before any `tr-zh-Hans-*`, `tr-ru-*`, `tr-pt-BR-*` or `chinese-base` run.
+- Who: paid (freelance, per sample or per hour) or volunteer (community, Steam forum after launch); one per language, also for the UI playtest (part 5) and store texts (part 8). A pm decision with options, costs and the recommended one.
+- How: the review tool runs on the developer''s machine (`trivia-authoring`, :8001); a reviewer outside needs a path in and back (e.g. an exported spot-check sheet per run imported back as verdicts, or a reachable review page); the per-run native spot check (`authoring/QC.md`, D-87) and the pilot''s go/no-go read it.
+- What they check: the spot check of each run (size: release bar D-79), every `chinese-base` China-centric source if decision 218 makes them Chinese-only, the fit pass sample.
+- Plan priority: ~720 (before the content runs, after parts 1–3 can be planned in parallel).
+
+## Part 5: UI in the new languages
+- Fonts: Baloo 2 has no Cyrillic, neither font has CJK (15a "Fonts"); pick fonts per script (licence, file size: subset CJK; `app/desktop/media-budget.json`), fallback chain per locale in `theme.css`.
+- Catalogs `app/client/src/locales/{zh-Hans,ru,pt-BR}.ts` and style guides `locales/style/<locale>.md` (glossary, address, Steam''s own terms, bad patterns); joker names translated from the English names, one symbol each (decision 188); key letters per catalog (decision 53; Latin letters on a Chinese keyboard), `check:literals`.
+- Layout: CJK line breaking (no `hyphens`, `word-break`/`line-break`), Russian length (as German), language picker endonyms, `/comodines?lang=` paper size, `trivia-gallery` locales and the developer''s gallery check (plan 100''s flag → fix loop).
+- Achievement texts (`schinese`, `russian`, `brazilian`), Steam rich presence strings.
+- Native playtest per language: a pm decision "Playtest passed? (<lang>)" like decisions 62–65, by part 4''s reviewers.
+- Plan priority: ~400.
+
+## Part 6: `chinese-base` content
+- Fit pass over `base`''s zh translations (part 2''s model): `tr-zh-Hans-*` runs translate `base` sources, the fit pass marks what fits, the developer corrects; a sample to the native reviewer.
+- New China-centric questions per decision 218 (`qgen batch --bundle chinese-base` + `--translate zh-Hans --bundle chinese-base`, or the answer''s path).
+- Pilot first (QT-5: 50, `qgen health ack`), its cost and reject rate → budget pm decision (as plan 70), then runs to 5000 approved: `qgen report --bundle chinese-base --locale zh-Hans`, `--simulate` ✓ for zh.
+- Runs follow `authoring/RUNBOOK.md` (`qgen batch …` only); batch tasks like plan 17 / plan 84.
+- Plan priority: ~-120 (content runs after the milestone''s code, as plan 84).
+
+## Part 7: Russian and Portuguese pools
+- `qgen batch --translate ru` and `--translate pt-BR` on `base`: pilot `tr-<locale>-1`, native spot check, `qgen health ack`, budget pm decision, full runs to 5000 approved each.
+- Source supply: 5000 per locale needs more translatable `es` sources than 5000 at a yield below 1 (D-84 source shortfall, part 1); whether `es` drafting grows for it goes into the budget decision.
+- Waits for the launch languages'' runs (plan 84) so `base` sources are stable (D-81: whole-pool rewrites stale translations).
+- Plan priority: ~-130.
+
+## Part 8: Store page and Steam
+- Store texts, short description, AI disclosure, capsules with text, screenshots and trailer per new language (plans 88, 94; decisions 79, 80: rendered late, after UI wording and pools; `trivia-trailer --lang`, `trivia-gallery`); store names (PUB-7 check, plan 129) in Chinese, Russian, Portuguese.
+- Steamworks: supported languages (interface, subtitles = question content once a pool ships, decision 90), achievement localization, store language entries; texts approved by the developer and the native reviewers (pm decisions per language).
+- Plan priority: ~300.
+
+## Part 9: Release and close-out
+- Ship path: the new languages arrive as a full patch (fonts, catalogs) and content patches after it (`plans/11-steam.md` "Content updates (ST-5)", decision 96); `trivia-release-check` (pool hashes, smoke game per new locale, media budget with the fonts), `trivia-steam upload`.
+- Docs: `plans/15-i18n.md` (launch languages + later), `15a`, `15b` (QT-6 later languages), `16-content-target.md` (later-language targets now 5000), `22-bundles.md` (`chinese-base`), `decisions.md` D-entries, `README.md`, `directory.md`, `AGENTS.md` if commands change.
+- Done when (milestone): all three languages playable in the released game, store pages localized, `qgen report --simulate` ✓ for `zh-Hans` (`chinese-base`), `ru`, `pt-BR`.
+- Plan priority: ~-200 (last).
+
+## Out of scope
+- Languages beyond these three; own base bundles for `ru` or `pt-BR`; translating `colombia` or other bundles into the new languages.', '2026-10-12T16:46:08Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (61, 7, 'Competitive timed: record the revised spec (OQ-37 follow-up)', 580, 'Task 394 revised masterplan parts 5 and 8: competitive (timed) is now the milestone''s version and replaces decision 23''s timed part (own tracks, three levels behind, timeout ends the game). The recorded files still describe the old version. Plans 38 and 41 are done, so this plan brings the files in line. No new pm decisions: the milestone text ("Game modes", "Competitive (timed)") is the answer. Check stale spots with `grep -n -i timed plans/`.
 
 ## Spec to record (from milestone 7)
@@ -11168,9 +11242,9 @@ Steps:
 - Sync the OQ-30 row in `plans/11-steam.md` and `plans/project.md`.
 
 Done when: D-entry exists; OQ-30 resolved; MD-5 `[x]`; plan 13 has one section per mode and the notes above; `grep -niE ''preset|checkpoint|Fácil|Experto'' plans/13-game-modes.md` finds nothing outdated.', '2026-10-12T16:45:10Z', '2026-10-12T16:53:22Z', 372, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (374, 60, 'write the masterplan', 'masterplan', 'open', NULL, NULL, 'Write plan 60, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (374, 60, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-15, plan 60 body; decisions 217, 218', 'Write plan 60, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
-plan for one part.', '2026-10-12T16:46:08Z', NULL, NULL, 0);
+plan for one part.', '2026-10-12T16:46:08Z', '2026-10-15T20:08:35Z', NULL, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (375, 36, 'create tasks for plan 36', 'split', 'done', 1000, '2026-10-12, tasks.sql: dropped 186, 187, 188, 349 (pre-revision spec); added 376 engine, 377 report UI, 378 mode screen, 379 mode screen on the action layer; 348 kept (report dialog on the action layer, now after 377); no new decisions', 'Split plan 36 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T16:46:15Z', '2026-10-12T16:47:19Z', 362, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (376, 36, 'Engine: mode, standard joker set, report (MD-6 engine part)', 'work', 'done', NULL, '2026-10-12, app/client/src/engine/{state,game,api,save,save.test}.ts, lib/types.ts, locales/es.ts, app/server/save.py, plans/13-game-modes.md: settings.mode/customized, STANDARD_JOKERS, report action + SaveData.reports (save v2, upgrade 1→2), gamemaster_only refusals for undo/skip/setJokers (replace: no action yet, plan 59), can_undo false outside gamemaster; npm test + check pass, throw-away script ok', 'Task 1 of plan 36. Engine rules for `gamemaster` and `solo` («Solo o en grupo»); no UI. Spec: plan 13 "Implementation notes" (plan 35, decisions 19 and 20); don''t re-decide it.
@@ -26723,6 +26797,8 @@ Your note on `pm task done`: the cause and what you queued.
       
       The cause is the queue order: task 1035 came up before `task 643: Regional pilot \`colombia\`: start` and the rest of plan 84''s `colombia` chain had run. If you''d rather the queue stop picking it up, you could link it to the "More regional bundles at launch?" decision once that decision exists.
       [success: 4 turns, $0.30]', '2026-10-15T20:05:17Z', '2026-10-15T20:05:49Z', NULL, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1146, 60, 'create tasks for plan 60: masterplan', 'split', 'open', 1000, NULL, 'Split plan 60 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:08:30Z', NULL, 374, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -26991,7 +27067,7 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 - steamworks.js (github.com/ceifa/steamworks.js): npm 0.4.0 on 2024-08-06 (no release since), last commit 2025-09-07, 66 open issues, 635 stars. napi-rs prebuilds with `steam_api64.dll`/`libsteam_api.so` inside the package (win64, linux64, osx); built against Electron 24. Overlay: `electronEnableSteamOverlay()` (in-process-gpu, per-frame invalidation); open issues: Linux overlay (#195, 2025), white overlay (#116), video tag breaks overlay (#148), asar (#153), forge binaries (#75).
 - Either way the Deck/Linux overlay is a risk; fallback stays the Windows build via Proton (D-63, SW-12).', 'steamworks-ffi-node: maintained, current SDK, documented electron-builder setup; overlay experimental (OSR)', NULL, '2026-10-12T14:42:40Z', '2026-10-12T17:07:55Z', 317, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (29, 'Desktop shell plays?', 'answered', '["plays fine", "problems (listed)"]', 'SW-2 (plan 54, D-71). `npm run build -w app/client && trivia-desktop`: play a short game with sound, F11 toggles fullscreen, ☰ → «Salir del juego» quits. Save stays in memory until SW-3. Automated check passed 2026-10-12: whole game to level 12 under Xvfb, every joker, undo, abandon, all media loaded, samples decoded, console clean, no Python.', 'plays fine', NULL, '2026-10-12T15:48:35Z', '2026-10-13T02:57:10Z', 318, NULL, 'rule', NULL, '2026-10-13, task 355: Nothing to fix; task 355 done without code changes. plans/18-steam-integration.md SW-2 note: play test no longer pending.');
-INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (30, 'Start milestone "Conquer the world" (zh, ru, pt-BR)?', 'answered', '["start now"]', 'The milestone is on hold: its masterplan task waits for this decision. Answer when the launch languages (en, es, de) are far enough along.', 'Replaced by the milestone hold: milestone 12 is on hold (pm milestone hold 12); resume it with pm milestone resume 12 when the launch languages are far enough along.', NULL, '2026-10-12T16:46:08Z', '2026-10-12T17:25:38Z', NULL, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (30, 'Start milestone "Conquer the world" (zh, ru, pt-BR)?', 'answered', '["start now"]', 'The milestone is on hold: its masterplan task waits for this decision. Answer when the launch languages (en, es, de) are far enough along.', 'Replaced by the milestone hold: milestone 12 is on hold (pm milestone hold 12); resume it with pm milestone resume 12 when the launch languages are far enough along.', NULL, '2026-10-12T16:46:08Z', '2026-10-12T17:25:38Z', NULL, NULL, 'rule', NULL, '2026-10-15, task 374: 2026-10-15, task 374: the start decision became a milestone hold; milestone 12 now runs at queue index 5 (after the launch milestones). Masterplan written: plan 60 in 9 parts (locales in data and pipeline, chinese-base model, prompts, native reviewers, UI, chinese-base content, ru/pt-BR pools, store and Steam, release and close-out); decisions 217 (chinese-base membership) and 218 (China-centric questions: Spanish or Chinese source) raised. No longer holds: the milestone''s ''pending decision on the masterplan task'' (no start decision is asked).');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (31, 'Low-supply warning: below how many fresh games left (K) should the game start warn?', 'answered', '["3", "2", "5"]', 'Plan 65 replaces burning with seen counters. At game start the engine computes k = how many more games the profile can play with only unseen questions (per mode, bundles, age group). The start screen shows an informational warning («Quedan preguntas nuevas para unas 2 partidas; …», «Jugar» stays) when k < K. k = 0 shows «En esta partida pueden salir preguntas que ya vieron.»
 
 - 3 (plan proposal): a few nights of notice before repeats start.
@@ -28821,6 +28897,22 @@ Start `trivia-authoring`, then open http://127.0.0.1:8001/review?batch=batch-8&s
 Afterwards, the audit''s major findings on approved questions: http://127.0.0.1:8001/review?batch=batch-8&audit=flagged.
 Answer once the 30 are decided. Then `task 53: QC batch-8` runs `qgen report --qc batch-8` and asks the proposals decision.', NULL, NULL, '2026-10-15T19:39:56Z', NULL, 53, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (216, 'Fable for qgen rework: keep, drop or try for batch review? (plan 58)', 'pending', '["drop: default stays opus, --model fable stays opt-in", "keep: fable becomes rework''s default (RUNBOOK + D-65 update)", "extend: new plan to try fable for batch review"]', 'Experiment in `plan 58: Fable as an opt-in model for qgen rework` (section Result). rework-2 with fable: 52/79 approved (66 %), $20.08, $0.39 per approved. rework-1 with opus: 28/43 (65 %), $5.57, $0.20 per approved. Same approval rate at ~2× the cost per approved. Caveat: review 2 (opus) ran for no question, so Fable judged its own fixes; the rates are not strictly comparable. /usage delta not measured. Recommendation: drop, default stays opus.', NULL, NULL, '2026-10-15T20:01:21Z', NULL, 345, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (217, 'chinese-base membership: how does a translated base question count for chinese-base?', 'pending', '["1: fit flag on the zh translation, export maps it into chinese-base", "2: bundle per locale on the source question", "3: copy fitting base questions into chinese-base"]', 'Milestone 12 (`plan 60: masterplan`, part 2). The zh game (`zh-Hans`) plays `chinese-base` instead of `base`; part of `chinese-base` is translated `base` questions that a fit pass picks (not about the Spanish-speaking world, no Spanish wordplay), the developer corrects.
+
+Today: D-39 one `bundle` per question; D-81 a translation (`questions.<locale>.json`) takes `bundle`, `subcategory`, media from its source by id, and exports to `app/data/pool.<locale>.json`; D-82 seen counts by id across locales; D-100 subcategory keys are bundle + name, so a `chinese-base` question needs a `chinese-base` subcategory (reused `base` names may repeat, D-99).
+
+Options:
+1. Fit flag on the zh translation: the `questions.zh-Hans.json` entry gets `fit` (true / false / absent = not checked yet); the fit pass writes it, the developer flips it in `/review?locale=zh-Hans`. The source keeps `bundle: base`. `qgen export` writes a fitting, approved translation into the `chinese-base` pool with `bundle: chinese-base` and the same-named subcategory of `chinese-base`''s taxonomy (one reused from `base`); not fitting, or a subcategory `chinese-base` doesn''t reuse: not exported. Ids shared (seen counts), no source change, one pipeline.
+2. Bundle per locale on the source: `questions.json` gets `bundles: {"zh-Hans": "chinese-base"}` beside `bundle`; the fit pass writes the source. Same export and taxonomy rule as 1; the source file grows a locale-specific field.
+3. Copies: a fitting `base` question is copied into a new `chinese-base` source question (own id, `bundle: chinese-base`), then translated like the new ones. Simplest model (D-39 unchanged), but double text: fixes to the `base` source don''t reach the copy, and seen counts don''t match across languages.', NULL, NULL, '2026-10-15T20:07:50Z', NULL, 374, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (218, 'New China-centric questions for chinese-base: drafted in Spanish and translated, or drafted in Chinese?', 'pending', '["1: drafted in Spanish, translated with --translate zh-Hans", "2: drafted in Chinese (zh-Hans as a second source language)", "3: Spanish by default, Chinese-language subcategories drafted in Chinese"]', 'Milestone 12 (`plan 60: masterplan`, part 6). `chinese-base` needs new China-centric questions (Chinese history, places, food, festivals, people, language, pop culture) on top of the translated `base` questions that fit, to reach 5000 approved (pm decision 21).
+
+Today: `questions.json` is the Spanish source (D-81); `qgen batch --bundle <id>` drafts a bundle''s Spanish source, `qgen batch --translate <locale> --bundle <id>` translates it (D-87); the developer reviews in Spanish; the milestone says "no new pipeline per language". No one in the family reads Chinese.
+
+Options:
+1. Drafted in Spanish as `chinese-base` source questions (`qgen batch --bundle chinese-base`, `languages` zh-Hans only, so the Spanish text never ships), then `qgen batch --translate zh-Hans --bundle chinese-base`. One pipeline; the developer can review every source. Cost: two passes per question; questions about the Chinese language (characters, 成语 idioms, wordplay) are hard to write and check through Spanish: the language subcategories stay thin or are dropped.
+2. Drafted in Chinese: `zh-Hans` becomes a second source language (draft, review, fix, audit prompts in Chinese, a source file for zh-only questions). Natural Chinese and language questions possible; a new pipeline path, against the milestone''s constraint, and only native reviewers can check the sources.
+3. Spanish by default (1); only the language subcategories (characters, idioms, wordplay) drafted in Chinese, reviewed by the native reviewers only.', NULL, NULL, '2026-10-15T20:07:50Z', NULL, 374, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -29964,6 +30056,7 @@ last tool call: Bash: pm instructions 2>&1 | grep -n -i -E "stop|guard|wait|bloc
 likely cause: the worker ended without `pm task done|drop 1035` or a pending decision; its last message: The cause is the queue order: task 1035 came up before `task 643: Regional pilot \`colombia\`: start` and the rest of plan 84''s `colombia` chain had run. If you''d rather the queue stop picking it up, 
 log: /home/ruben/code/trivia/.git/pm-logs/task-1035-run-1124.log', 0, 'cfc31ef6d1679d698d68c76c71ac553f11ab04db', 'claude-opus-5-5[1m]', '3815dce7-332e-4fc4-a69d-06bc84bb24ca', 4, 10, 1495, 124339, 30620, 0.29976780000000003, 3530483);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1125, 1145, '2026-10-15T20:05:17Z', '2026-10-15T20:05:56Z', 'done', NULL, 0, 'a63da553e60423ae0bc49432757cff31ffbf2f69', 'claude-opus-5-5[1m]', 'cff9e49a-a913-4b17-82ed-ea086db6336b', 8, 16, 3186, 321349, 40203, 0.4496778, 3530483);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1126, 374, '2026-10-15T20:05:56Z', '2026-10-15T20:08:48Z', 'done', NULL, 0, 'af8e740de5de582277ac85c3e4b609c5f9d0ae2a', 'claude-opus-5-5[1m]', '8d52deea-7424-4372-8faa-870d97e45ef4', 17, 34, 14328, 1192690, 102755, 1.347274, 3530483);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
