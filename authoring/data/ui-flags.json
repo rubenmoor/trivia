@@ -7,5 +7,122 @@
     "shot": "supply-notice",
     "note": "this should be: this bundle is running out of questions: Regional: Colombia",
     "flagged_on": "2026-10-14"
+  },
+  {
+    "id": 2,
+    "locale": "en",
+    "key": "screen.question.finalWaiting",
+    "text": "Final answer…",
+    "shot": "question-waiting",
+    "note": "needs animation, the text here isn't dramatic enough",
+    "flagged_on": "2026-10-14"
+  },
+  {
+    "id": 3,
+    "locale": "en",
+    "key": "overlay.goTo",
+    "text": "Go to question…",
+    "shot": "goto",
+    "note": "skip the ... in the end",
+    "flagged_on": "2026-10-14"
+  },
+  {
+    "id": 4,
+    "locale": "en",
+    "key": "flag.title",
+    "text": "Mark this question?",
+    "shot": "flag-dialog",
+    "note": "it should be: Flag this question No question mark.",
+    "flagged_on": "2026-10-14"
+  },
+  {
+    "id": 5,
+    "locale": "en",
+    "key": "flag.body",
+    "text": "It gets noted for review; the question stays.",
+    "shot": "flag-dialog",
+    "note": "redundant",
+    "flagged_on": "2026-10-14"
+  },
+  {
+    "id": 6,
+    "locale": "en",
+    "key": "flag.body",
+    "text": "It gets noted for review; the question stays.",
+    "shot": "flag-dialog",
+    "note": "it should say: Optional: Tell us the issue",
+    "flagged_on": "2026-10-14"
+  },
+  {
+    "id": 7,
+    "locale": "en",
+    "key": "flag.confirm",
+    "text": "Mark",
+    "shot": "flag-dialog",
+    "note": "Flag",
+    "flagged_on": "2026-10-14"
+  },
+  {
+    "id": 8,
+    "locale": "en",
+    "key": "flag.list",
+    "text": "Marked questions",
+    "shot": "flag-list",
+    "note": "Flagged questions",
+    "flagged_on": "2026-10-14"
+  },
+  {
+    "id": 9,
+    "locale": "de",
+    "key": "screen.start.subtitle",
+    "text": "12 Fragen am Stück bis zum Gipfel",
+    "shot": "start",
+    "note": "should be: 12 Fragen bis zum Gipfel",
+    "flagged_on": "2026-10-14"
+  },
+  {
+    "id": 10,
+    "locale": "de",
+    "key": "mods.held",
+    "text": "14 Mods gefunden, aus bis zur Freigabe",
+    "shot": "start",
+    "note": "should be: 14 Mods gefunden, deaktiviert bis zur Freigabe",
+    "flagged_on": "2026-10-14"
+  },
+  {
+    "id": 11,
+    "locale": "de",
+    "key": "flag.list",
+    "text": "Markierte Fragen",
+    "shot": "menu-start",
+    "note": "Gemeldete Fragen",
+    "flagged_on": "2026-10-14"
+  },
+  {
+    "id": 12,
+    "locale": "de",
+    "key": "overlay.goTo",
+    "text": "Zu Frage gehen…",
+    "shot": "goto",
+    "note": "Zu einer Frage springen",
+    "flagged_on": "2026-10-14"
+  },
+  {
+    "id": 13,
+    "locale": "de",
+    "key": "flag.title",
+    "text": "Diese Frage markieren?",
+    "shot": "flag-dialog",
+    "note": "Diese Frage melden",
+    "flagged_on": "2026-10-14"
+  },
+  {
+    "id": 14,
+    "locale": "de",
+    "key": "flag.list",
+    "text": "Markierte Fragen",
+    "shot": "flag-list",
+    "note": "Gemeldete Fragen",
+    "flagged_on": "2026-10-14"
   }
 ]
