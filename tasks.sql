@@ -26486,7 +26486,7 @@ Done when
 - `qgen batch` piped to a file: no `\r` or escape codes; a resumed run shows one skip line per step it resumes; every `claude -p` call and provider call has a start line and a result line.
 - Same on a terminal (no bar).
 - Check with a throw-away fake `claude` on `PATH` (one success, one failure, one slow call) and a resumed `work/<run>`; don''t spend real Claude calls.', '2026-10-15T17:26:09Z', '2026-10-15T18:47:04Z', NULL, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1132, NULL, 'write an executive summary', 'exec', 'open', 10000, NULL, 'Write an executive summary for the owner of this project: a busy person who doesn''t read code, tasks or plans. Write
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1132, NULL, 'write an executive summary', 'exec', 'done', 10000, '2026-10-15, executive summary 1 stored via pm summary add; no files', 'Write an executive summary for the owner of this project: a busy person who doesn''t read code, tasks or plans. Write
 it for an interested outsider who knows nothing about the project: plain, good English in full sentences, no jargon.
 Change nothing in the project; stage nothing.
 
@@ -26503,7 +26503,7 @@ Write, in this order:
 
 Leave out everything about how the work is managed: decisions, sign-offs, tasks, plans, runs, failures, cost, tests
 and pm itself; never ids, file names or counts of these. One screen at most, about 250 words, few headings.
-Store it: `pm summary add < summary.md`, delete summary.md, then close your task.', '2026-10-15T18:39:31Z', NULL, NULL, 0);
+Store it: `pm summary add < summary.md`, delete summary.md, then close your task.', '2026-10-15T18:39:31Z', '2026-10-15T18:47:43Z', NULL, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1133, NULL, 'write a resource use report', 'exec', 'open', 10000, NULL, 'Write a resource use report: sort every done task of this project into categories of the work itself, so the owner
 sees where time and tokens went. Change nothing in the project; stage nothing.
 
@@ -29580,6 +29580,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1083, 1128, '2026-10-15T13:49:50Z', '2026-10-15T13:50:47Z', 'done', NULL, 0, '50e44e1a2ab501f2bcd8a2c6ccd91feb46c55e3c', 'claude-opus-5-5[1m]', 'fa16398b-5aaf-4bef-99bd-f493c771b1a9', 13, 22, 2694, 344805, 26019, 0.331081, 3224626);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1084, 1129, '2026-10-15T13:50:47Z', '2026-10-15T17:40:17Z', 'done', 'left 2 files unstaged, committed on branch pm/task-1129-run-1084-left; decision 207: investigate', 0, 'c09cac9c5f4d7371218d27ae3f6ac1444135fad8', 'claude-opus-5-5[1m]', 'c0e7d95d-a71f-4ee8-8020-97bdaeaf9916', 11, 22, 2426, 388553, 30193, 0.3678626, 3224626);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1085, 1131, '2026-10-15T18:38:26Z', '2026-10-15T18:47:16Z', 'done', NULL, 0, '25c43a925c666ed0427686ff08dc74f503bae54f', 'claude-opus-5-5[1m]', '2b021455-81e5-4c76-8dc3-7fe3b7c1ec9a', 50, 78, 26581, 3195863, 97297, 1.9494805999999993, 3530483);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1086, 1132, '2026-10-15T18:47:16Z', '2026-10-15T18:47:49Z', 'done', NULL, 0, 'b058a5cec54717d02ee217106e3eaea4c9df30ad', 'claude-opus-5-5[1m]', '55d8cc77-5a0c-4277-bd22-58a288347671', 9, 18, 2427, 306238, 34694, 0.3874116, 3530483);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -29907,3 +29908,21 @@ INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 3
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (110, 37, 'regional bundles: 2000 approved each');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (186, 157, '');
+
+INSERT INTO summary (id, task_id, body, head_commit, created_at) VALUES (1, 1132, '# Trivia: executive summary
+
+Trivia is a quiz game for families to play together in front of the living-room TV: the family works as one team through twelve questions of rising difficulty, with a few "jokers" to help out of a tight spot. It started as a game for one Spanish-speaking family and is now being turned into a product to sell on Steam, the largest store for PC games.
+
+**Where it stands:** the game is complete and playable as a desktop program, and most of what a Steam launch needs is built, but it is not yet on Steam, and the questions exist only in Spanish so far.
+
+## What exists today
+
+- **A finished game.** Five ways to play, from a host who controls everything to players taking turns, with sound, music, jokers and a polished look. It works with a game controller as well as keyboard and mouse.
+- **About 2,000 approved questions** in Spanish, each with a picture, sound or short video, for players of different ages. A small extra set about Colombia can be switched on.
+- **A desktop version for Windows and Linux**, ready for Steam: saved progress across computers, Steam achievements, and an English and German version of every on-screen text.
+- **Players can change the game themselves** ("mods") and share their changes through Steam, from new question sets to a whole new look.
+- **Players can report a bad question** with one click, and can choose to share anonymous play data to help tune difficulty.
+
+## What comes next
+
+The family''s playtests in each language, a first test version on Steam, the store page, and more questions: the goal is 5,000 in Spanish, then translations into English and German. The main risk to the timing is content: the question count must more than double, and translating and checking questions for the other languages has barely started.', 'b058a5cec54717d02ee217106e3eaea4c9df30ad', '2026-10-15T18:47:41Z');
