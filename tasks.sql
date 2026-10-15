@@ -1,5 +1,5 @@
 -- pm database. Change it with pm; after a hand edit run `pm validate`.
-PRAGMA user_version = 16;
+PRAGMA user_version = 17;
 
 CREATE TABLE milestone (
     id             INTEGER PRIMARY KEY,
@@ -26,7 +26,7 @@ CREATE TABLE task (
     id              INTEGER PRIMARY KEY,
     plan_id         INTEGER NOT NULL REFERENCES plan (id),
     subject         TEXT NOT NULL CHECK (trim(subject) <> ''),
-    kind            TEXT NOT NULL DEFAULT 'work' CHECK (kind IN ('work', 'plan', 'masterplan', 'split', 'cleanup', 'revise')),
+    kind            TEXT NOT NULL DEFAULT 'work' CHECK (kind IN ('work', 'plan', 'masterplan', 'split', 'cleanup', 'revise', 'investigate')),
     status          TEXT NOT NULL DEFAULT 'open' CHECK (status IN ('open', 'done', 'dropped')),
     priority        INTEGER,                               -- NULL: the plan's
     note            TEXT,                                  -- done: date, files; dropped: reason
