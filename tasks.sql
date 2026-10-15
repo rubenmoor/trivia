@@ -7024,7 +7024,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 ## Checks
 - `npm run check`, `npm test`, `npm run build`, `qgen validate`.
 - Browser: en and de UI show group and bundle names in that language; es unchanged.', '2026-10-14T08:22:43Z', 1022);
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (128, 9, 'S4 close-out', -130, 'Part 12 of the masterplan (`plan 9: masterplan`): the last step of milestone 9 (S4). Once the other S4 plans are done, this plan checks the milestone''s "Done when" (target met per launch language, first-start language picker, UI wording reviewed), records the results, and brings the plan files, indexes and later masterplans in line. The regional pilot (`colombia` to 2000 in es + en) may land after launch: its record is a separate, last task; the launch (milestone 11) never waits for it. Docs, checks and pm only; failures become tasks in the owning plans, never fixes here.
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (128, 9, 'S4 close-out', -130, 'Part 12 of the masterplan (`plan 9: masterplan`): the last step of milestone 9 (S4). Once the other S4 plans are done, this plan checks the milestone''s "Done when" (target met per launch language, first-start language picker, UI wording reviewed, joker names and symbols), records the results, and brings the plan files, indexes and later masterplans in line. The regional pilot (`colombia` to 2000 in es + en) may land after launch: its record is a separate, last task; the launch (milestone 11) never waits for it. Docs, checks and pm only; failures become tasks in the owning plans, never fixes here.
 
 ## Binding
 - decision 21 (D-75): pass/fail = 5000 approved per launch language with D-53''s mix; the simulation''s games numbers are information only. decision 26 (D-78): launch languages `es`, `en`, `de`. decision 37 (D-84): deficits per locale.
@@ -7033,9 +7033,10 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - decision 66: Price model (OQ-33): packs are free DLC.
 - Plan 57 (CT-5): every batch/back-audit slice with approved questions in the release pool is release-ready (`qgen report --qc`).
 - Plan 100: decisions 161–164 "Screen gallery reviewed? (<lang>)"; task 1026 (gallery fixes). Plan 69: decisions 62–65 "Playtest passed?", task 459.
+- Plan 136 (`plan 136: Joker names and symbols, defined again`; masterplan part 14, developer 2026-10-14): one English-first name per joker, translated in `es`, `es-ES`, `de` (keys per `decision 53: Joker and action keys per UI language (LUI-4)?`), one symbol across languages, shown in its follow-up dialog; its record supersedes decisions 40–44 and 54–58; its "Joker names and symbols reviewed?" decision; task 459 runs after it. Find the decisions with `pm decision list --grep "Joker names"`.
 
 ## Depends on
-- Tasks 1–3 wait for plans 57, 62–64, 66–70, 98, 100, 126 (all tasks done or dropped) and plan 84''s chains 1–4 (neutral Spanish, translation pilot, full translation, `es` top-ups) at their end. Not plan 84''s chain 5 (`colombia`) nor plan 84''s pilot-effort task: those are task 4''s.
+- Tasks 1–3 wait for plans 57, 62–64, 66–70, 98, 100, 126, 136 (all tasks done or dropped) and plan 84''s chains 1–4 (neutral Spanish, translation pilot, full translation, `es` top-ups) at their end. Not plan 84''s chain 5 (`colombia`) nor plan 84''s pilot-effort task: those are task 4''s.
 - Guard at the start of each task: `pm plans list`, `pm show` of the plans above. If one has open tasks (other than the `colombia` chain for tasks 1–3): if one of them is pending on a decision, `pm task-pending-decision <this task> <that decision>`; otherwise stop without changes and say so (the queue brings the task back). Never drop or edit tasks of other plans.
 - Not the milestone''s post-milestone cleanup; this plan doesn''t set the milestone status.
 
@@ -7046,19 +7047,21 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
    - Record in `plans/16-content-target.md` ("Where we stand" → dated close-out result): per locale approved vs. 5000 and per level, ✓/✗, games per new player (median, p10, strong bound) for adults solo, bottlenecks, release-ready state, total spent per language.
    - A ✗ or a batch/slice not release-ready: no fix here. If plan 84 has no open pair for that locale: `pm decision add "S4 target not met for <locale>: more runs or lower the target?"` (body: the numbers; options: "more runs: plan 84 adds pairs" (recommended), "lower the target (D-75 amended)", "ship as is"), `pm task-pending-decision` for this task and tasks 2–3, stop. On the answer: "more runs" → `pm task add 84` the next run/QC pair, this task waits for it (stop).
    - Done when: `--simulate` exits 0 (or an answered decision accepts the shortfall), the result is in plan 16.
-2. **Language picker and UI wording check** (-130)
-   - Guard. Decisions 161–164 answered and task 1026 done; decisions 62–65 answered and task 459 done; else pend on the open one, stop.
+2. **Language picker, UI wording and joker check** (-130)
+   - Guard. Decisions 161–164 answered and task 1026 done; plan 136 done and its "Joker names and symbols reviewed?" answered (its fix task done, if any); decisions 62–65 answered and task 459 done; else pend on the open one, stop.
    - Style guides `app/client/src/locales/style/{en,es,es-ES,de}.md` exist; `AGENTS.md` Rules line present; TV-check fixes in the catalogs (grep: `de` «Spielleitermodus»; «Steam achievements» / «logros de Steam» / «Steam-Erfolge» wherever achievements appear; Esc «Back to main menu» / «Volver al menú principal» / «Zurück zum Hauptmenü», «Quit game» / «Salir del juego» / «Spiel beenden»; no «ihr/euch/euer» in `de.ts`). A miss → `pm task add 100` with the string, stop.
+   - Joker names: each joker''s `joker.<id>.name` in `en`, `es`, `es-ES`, `de` matches plan 136''s answered decisions; keys per decision 53 (`check:literals` passes); no old name not chosen again (Soplo, Paso, Bájale, Cambiazo, Francotirador; Hint, Pass & Purge, Fairy, Ms Picky, Trick Shot; Zaunpfahl, Näxt, Gang runter, Wunschzeit, Finte) in user-visible text (`rg` over `app/client/src/locales`, `authoring/ui/src/print`, `modding/`, `plans/17a-store-page.md`, `app/desktop/steam-achievements.vdf`; old names in the style guides'' bad-patterns lists are fine); glossaries list the new names. A miss → `pm task add 136` with the string, stop.
    - Browser check (throw-away, Node dev server, `npm run serve -w app/client` after `npm run build`, temp `TRIVIA_SAVE_DIR`, muted):
      - no save, `navigator.language` `de-AT` → picker, `Deutsch` preselected; confirm → German Start; reload → no picker; Start''s language button switches to `en`, the next game draws from `pool.en.json` (English question text).
      - `es-CO` → `Español (Latinoamérica)` preselected; `fr-FR` → `English` (fallback per D-96).
      - a copy of the family''s save (no `language` field, e.g. from `state/game.json`, never the file itself) → no picker, Spanish, base + `colombia` on (D-59, decision 110 c).
      - keyboard only and pad (if the dev server''s pad emulation exists; else keyboard only, noted).
-   - Failure → `pm task add 126` (or the owning plan) with the steps, stop.
-   - Done when: every row passes; the result (date, commit) is in `plans/15-i18n.md` "Model" (I18N-2) and `plans/15a-ui-translation.md` "Wording and review".
+     - jokers, in `en` and `de`: the tray shows the five symbols; each follow-up dialog (skip dialog, category picker both steps, snipe scope, difficulty dial, hint note) shows its joker''s symbol (the tray''s, from `TOKENS`) and the new name; `/comodines?lang=<L>` (`trivia-authoring`) per locale: new names, same symbols.
+   - Failure → `pm task add 126` (language picker), `pm task add 136` (jokers) or the owning plan, with the steps, stop.
+   - Done when: every row passes; the result (date, commit) is in `plans/15-i18n.md` "Model" (I18N-2) and `plans/15a-ui-translation.md` "Wording and review" and "Joker names".
 3. **Docs close-out** (-130, after tasks 1 and 2)
    - `plans/11-steam.md`: S4 row done (date, task 1''s numbers, packs: `colombia` state at launch, 2000 es + en after launch per decision 110); exit criterion text matches D-75 and D-96.
-   - `plans/15-i18n.md`, `15a`, `15b`, `15c`, `16-content-target.md`, `22-bundles.md`: tasks `[x]` with notes (check, don''t redo, each plan''s own ticks: I18N-2, LUI-4, LUI-5, QT-1..QT-6, RG-1..RG-5, CT-1..CT-5); LUI-6 stays open, noted as S5 (`plan 88: Store page and AI disclosure (PUB-8, LUI-6)`); status lines (`stub` → `agreed`/`done`).
+   - `plans/15-i18n.md`, `15a`, `15b`, `15c`, `16-content-target.md`, `22-bundles.md`, `09-jokers.md` (new names, symbols): tasks `[x]` with notes (check, don''t redo, each plan''s own ticks: I18N-2, LUI-4, LUI-5, QT-1..QT-6, RG-1..RG-5, CT-1..CT-5); LUI-6 stays open, noted as S5 (`plan 88: Store page and AI disclosure (PUB-8, LUI-6)`); status lines (`stub` → `agreed`/`done`).
    - `plans/README.md` status column for 11, 15, 15a, 15b, 15c, 16, 22; `plans/project.md`: Steam track says S4 done (date) except the `colombia` pilot, ticked tasks ticked, resolved open-question rows removed; `plans/open-questions.md` if an S4 question is still listed.
    - Masterplans of milestones 10 and 11 (`plan 10: masterplan`, `plan 11: masterplan`): compare with S4''s outcome; if scope changed, a short dated note via `pm plan edit <id> --body -` (whole body, note appended): store languages = `es`, `en`, `de` (+ `es-ES` UI); one free DLC depot per pack with its languages; packs grow after launch through content updates (`plan 96: Content updates as patches (ST-5)`, decision 96); install size with three pools + pack pools (task 1''s file sizes); Steam''s language as the picker''s guess (D-96). No note if nothing changed. Milestone bodies untouched; anything they get wrong → `pm decision add`.
    - `qgen validate`, `npm run check` unaffected (docs only).
@@ -7071,7 +7074,13 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
    - Done when: the milestone''s "Done when" holds in full; task note cites the decision.
 
 ## Out of scope
-- Running or fixing content (plan 84), UI fixes (plans 69, 100, 126), store texts (S5, plan 88), Steam language detection (milestone 10), later languages (milestone 12).', '2026-10-14T21:33:52Z', 251);
+- Running or fixing content (plan 84), UI fixes (plans 69, 100, 126), joker names and symbols (plan 136), store texts (S5, plan 88), Steam language detection (milestone 10), later languages (milestone 12).
+
+- task 1031 [done, split] create tasks for plan 128: S4 close-out
+- task 1032 [open] Content target check
+- task 1033 [open] Language picker and UI wording check
+- task 1034 [open] Docs close-out of S4
+- task 1035 [open] Regional pilot record', '2026-10-14T21:33:52Z', 251);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (129, 10, 'Partner account, name check and AI terms (PUB-6, PUB-7, PUB-10)', 720, 'Part 1 of `plan 10: masterplan` (milestone 10, S5). Three paper tasks before the Steamworks app exists: the partner signup and app credit (PUB-6), the name and trademark check of the store names (PUB-7), and Anthropic''s commercial-use terms for the pipeline''s outputs (PUB-10). Owner: `plans/17-publishing.md` ("Steamworks and store", "AI disclosure"); PUB-6, PUB-7, PUB-10 rows there get `[x]` with a note.
 
 ## Binding
@@ -25801,7 +25810,7 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 
 ## Out of scope (from the milestone)
 - Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-15T01:47:58Z', '2026-10-15T01:52:28Z', 1074, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1091, 128, 'revise plan 128: S4 close-out', 'revise', 'open', 1000, NULL, '`plan 9: masterplan`, the plan above `plan 128: S4 close-out`, changed; it is quoted below. Bring `plan 128: S4 close-out` in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1091, 128, 'revise plan 128: S4 close-out', 'revise', 'done', 1000, '2026-10-14, tasks.sql: plan 128 gains masterplan part 14 (plan 136: joker names and symbols): binding, dependency, task 2 joker grep + browser rows, task 3 09-jokers.md', '`plan 9: masterplan`, the plan above `plan 128: S4 close-out`, changed; it is quoted below. Bring `plan 128: S4 close-out` in line with it
 (`pm plan edit 128 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -25941,7 +25950,7 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 - Part 2 any time after plan 16. Part 12 last.
 
 ## Out of scope (from the milestone)
-- Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-15T01:47:58Z', NULL, 1074, 0);
+- Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-15T01:47:58Z', '2026-10-15T01:53:12Z', 1074, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1092, 9, 'write plan: Joker names and symbols, defined again', 'plan', 'done', 1000, '2026-10-14, plan 136: Joker names and symbols, defined again (375): 6 tasks for the split; tasks.sql only', 'Write the plan for part 14 of `plan 9: masterplan` ("Joker names and symbols, defined again"; the milestone''s "Joker names, defined again", developer 2026-10-14): `pm plan add 9 "Joker names and symbols, defined again" --priority 375` (after `plan 100: UI wording: style guides, TV-check fixes, screen gallery` at 380, above `plan 69: UI catalogs for the launch languages (LUI-4, LUI-5)` at 370, whose task 459 waits for it).
 
 The plan covers:
@@ -25959,6 +25968,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T01:50:21Z', NULL, 1092, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1094, 69, 'create tasks for plan 69: UI catalogs for the launch languages (LUI-4, LUI-5)', 'split', 'done', 1000, '2026-10-14, task 459 body: waits for plan 136 (joker names, review), joker-name notes go to plan 136; other tasks done, still fit', 'Split plan 69 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T01:51:03Z', '2026-10-15T01:51:29Z', 1086, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1095, 128, 'create tasks for plan 128: S4 close-out', 'split', 'open', 1000, NULL, 'Split plan 128 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T01:53:08Z', NULL, 1091, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -28743,6 +28754,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1030, 1088, '2026-10-15T01:51:49Z', '2026-10-15T01:51:59Z', 'done', NULL, 0, 'c0e0ee9c1ca444f7599747db3438d8ef2bb54be4', 'claude-opus-5-5[1m]', 'd5780c06-6bd3-4dd4-8f31-059f20473b83', 3, 6, 628, 92786, 30549, 0.2755332, 2557536);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1031, 1089, '2026-10-15T01:51:59Z', '2026-10-15T01:52:16Z', 'done', NULL, 0, 'fc5d9e16d493436987931acf792b42a8123fb92b', 'claude-opus-5-5[1m]', 'e2df29ef-817e-49f1-9bbb-a2a39d2f75c8', 3, 6, 867, 90844, 31130, 0.2845728, 2557536);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1032, 1090, '2026-10-15T01:52:16Z', '2026-10-15T01:52:32Z', 'done', NULL, 0, '96fcd50a3e38450d2855b9d5c2d50601a4b3737f', 'claude-opus-5-5[1m]', 'f5e9bc99-bb76-4e76-ad0f-d8a705a61e36', 5, 10, 1293, 186152, 35513, 0.3472344, 2557536);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1033, 1091, '2026-10-15T01:52:32Z', '2026-10-15T01:53:24Z', 'done', NULL, 0, '896f9d044c0eab0623af36e1d38736bc5b1e121b', 'claude-opus-5-5[1m]', '3983066d-bd5e-4bed-921c-5e01c11906ae', 6, 12, 4178, 244691, 42136, 0.4696342, 2557536);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
