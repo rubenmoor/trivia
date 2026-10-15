@@ -80,6 +80,27 @@ The review tool is keyboard-driven:
 
 Every decision is saved into `authoring/data/questions.json` and re-exported to `app/data/pool.json` at once, so the game sees it on its next question. Switch off browser extensions that grab single keys (e.g. Vimium) for `127.0.0.1:8001`. All keys: [`plans/08-review-tool.md`](plans/08-review-tool.md).
 
+#### Review in a separate worktree
+
+`pm run` works in the main checkout and moves files it didn't stage, including your reviews, to a `pm/task-…-left` branch. Review in a second worktree instead, so pm never sees your edits:
+
+```sh
+# once
+git worktree add ../trivia-review -b review
+cd ../trivia-review && npm ci && npm run build
+
+# each session, in ../trivia-review
+git rebase main
+TRIVIA_MEDIA=../trivia/media TRIVIA_STATE=../trivia/state TRIVIA_WORK=../trivia/work trivia-authoring
+# afterwards
+qgen validate && git add -A authoring/data app/data && git commit -m "Review …"
+git -C ../trivia merge --ff-only review    # or rebase first if main moved
+git -C ../trivia push
+```
+
+- The env vars share the main checkout's media cache, game flags and media candidates
+- `--ff-only` fails if `main` moved since: `git rebase main` in the worktree, then merge again
+
 Also on the authoring server: stats at `/stats/categories`, `/stats/subcategories`, `/stats/difficulty` and `/stats/media`, and printable joker cards at `/comodines`.
 
 ### Make new questions
