@@ -1,6 +1,6 @@
 # 11 — Steam Release (Master Plan)
 
-**Status:** draft
+**Status:** agreed
 
 Turns «¡Trivia!» from a private living-room game (D-2) into a game anyone can buy and install from Steam (D-34). This file is only the map: the goal, the guiding principles, the tracks, their order and the questions that block them. Each track has its own sub-plan, which owns the details and the tasks.
 
@@ -22,11 +22,11 @@ A family can install the game from Steam on Windows, Linux or the Steam Deck. Th
 |---|----------|----------------|---------------------------|----------------------------|-------------------|
 | 12 | [Client engine](12-client-engine.md) | Move the game referee from Python (`app/server/game.py`, `app/server/selection.py`) to TypeScript; storage adapters; pool export (done 2026-10-12: `app/client/src/engine/`, D-90) | No (same rules, same saves) | all of it (M7) | — |
 | 13 | [Game modes](13-game-modes.md) | Five modes (D-74): gamemaster, «Solo o en grupo», round-robin co-op, round-robin competitive, competitive timed | Only if the family opts in | joker budget MD-1..MD-4 (M8) | S2 (OQ-30, OQ-36 answered) |
-| 14 | [Input](14-input.md) | Every button clickable, controller support, couch co-op input | No | mouse IN-1 (M8) | S3 (controller) |
+| 14 | [Input](14-input.md) | Every button clickable, controller support, couch co-op input | No | mouse IN-1 (M8) | S3 (controller); one gamepad per player + shared keyboard, no phones (D-77, D-80): IN-6 "Later" |
 | 15 | [Internationalization](15-i18n.md) | Locale model; sub-plans [15a UI](15a-ui-translation.md), [15b questions](15b-question-translation.md), [15c regional](15c-regional-questions.md) | No | LUI-1..LUI-3, RG-1, RG-2 (M9) | launch languages es, en, de (D-78) |
 | 16 | [Content target](16-content-target.md) | How many questions a release needs, how that is measured, the quality bar | No (more questions help the family too) | — | target set (D-75) |
-| 17 | [Publishing](17-publishing.md) | Media and code licenses, credits, AI disclosure, store page, Steamworks account, rating | Credits screen only | audit PUB-1..PUB-3 (M10) | S2 (license), S5 (store) |
-| 18 | [Steam integration](18-steam-integration.md) | Desktop shell, Steamworks (overlay, Cloud, achievements), builds, depots, Steam Deck | No | — | after M7 and OQ-29 |
+| 17 | [Publishing](17-publishing.md) | Media and code licenses, credits, AI disclosure, store page, Steamworks account, rating | Credits screen only | audit PUB-1..PUB-3 (M10) | licence D-102, price + account D-98, Freesound out D-103; S5 (store) |
+| 18 | [Steam integration](18-steam-integration.md) | Desktop shell, Steamworks (overlay, Cloud, achievements), builds, depots, Steam Deck | No | — | after M7; Electron (D-63) |
 
 ```mermaid
 flowchart LR
@@ -47,12 +47,12 @@ flowchart LR
 | Phase | Content | Tasks (start with) | Exit |
 |-------|---------|--------------------|------|
 | **S1 — Groundwork** | Moved to [`project.md`](project.md): M7 (TS engine), M8 (mouse, joker budget), M9 (UI strings, region tags), M10 (license audit) | — | M7–M10 done |
-| **S2 — Product definition** | Answer the open questions below. Define the game modes and the launch languages. | MD-5..MD-7, I18N-1, CT-1, PUB-4 | OQ-29..OQ-37 resolved in `decisions.md` |
-| **S3 — Playable desktop build** | Electron shell, file saves, controller support, Deck layout, credits screen | SW-1..SW-5, IN-2..IN-5, PUB-5 | A local build runs on Windows, Linux and the Deck with a controller only |
-| **S4 — Content for release** | Translated UI and questions, regional packs, reaching the content target | QT-*, RG-3..RG-5, LUI-4..LUI-6, CT-* | Every launch language (es, en, de) has 5000 approved with D-53's mix (D-75); `qgen report --simulate` reports games per player |
-| **S5 — Steam** | Steamworks app, Cloud, achievements, depots, beta branch, store page, disclosures | SW-6..SW-14, PUB-6..PUB-11 | Beta branch installed from Steam on a second machine and played by the family |
+| **S2 — Product definition** | The questions below, answered; the five game modes and the launch languages defined. | MD-5..MD-7, I18N-1, CT-1, PUB-4 | OQ-29..OQ-37 and OQ-45 (Freesound) resolved in `decisions.md`: done 2026-10-14 (D-63, D-74, D-75, D-77, D-78, D-80, D-98, D-102, D-103) |
+| **S3 — Playable desktop build** | Electron shell (D-63), file saves, controller support, Deck layout, credits screen | SW-1..SW-5, IN-2..IN-5, PUB-5 | A local build runs on Windows, Linux and the Deck with a controller only |
+| **S4 — Content for release** | Translated UI and questions, regional packs, reaching the content target | QT-*, RG-3..RG-5, LUI-4..LUI-6, CT-* | Every launch language (es, en, de) has 5000 approved with D-53's mix (D-75); CT-2 verifies (`qgen report --simulate`, games per player for information) |
+| **S5 — Steam** | Steamworks app, Cloud, depots, beta branch, store page, disclosures; paid $9.99 one-time, packs as free DLC, account held by the developer as a person (D-98); `LICENSE` (MIT) + `LICENSE-content.md` (D-102); Freesound picks replaced from Commons (D-103); achievements only outside gamemaster mode and customized games (`settings.mode`, `settings.customized`; D-74) | SW-6..SW-14, PUB-6..PUB-11 | Beta branch installed from Steam on a second machine and played by the family |
 | **S6 — Release** | Coming-soon page, wishlists, release, patches | ST-3..ST-5 | Released; content updates go out as patches |
-| **Later** | Competitive mode (8+ players), couch co-op, more regions and languages | MD-8+, IN-6+ | — |
+| **Later** | The three multiplayer modes (D-77): round-robin co-op, round-robin competitive, competitive timed (D-80: claiming, lives, sudden death); not in S3–S6 unless the developer adds them. More regions and languages | MD-8, MD-9, IN-6 | — |
 
 S2 is decisions and can start now, alongside M7–M10. S3 needs M7 (the shell loads the client without Python). S3 ends with a developer platform test (Windows, Linux, Deck; controller only; offline): pm plan 48.
 
@@ -62,7 +62,7 @@ Logged in [`open-questions.md`](open-questions.md) (frozen 2026-10-12; questions
 | ID | Question | Blocks |
 |----|----------|--------|
 | OQ-29 | ~~Desktop shell~~ answered: Electron (D-63) | 18 |
-| OQ-30 | ~~Default mode~~ answered: five modes, no presets, no checkpoint, no skip outside gamemaster mode (D-74) | 13 |
+| OQ-30 | ~~Game modes~~ answered: five modes, no presets, no checkpoint, no skip outside gamemaster mode (D-74) | 13 |
 | OQ-31 | ~~Launch languages~~ answered: es, en, de (zh-Hans, ru, pt-BR later); `base` in es-419 + es-ES variant, `colombia` stays Colombian (D-78) | 15, 16 |
 | OQ-32 | ~~Content target~~ answered: 5000 approved per launch language, D-53's mix; no games number (D-75) | 16 |
 | OQ-33 | ~~Price model; account~~ answered: paid $9.99, regional pricing, packs as free DLC; account: a person, advisor check first (D-98) | 17 |
@@ -70,14 +70,14 @@ Logged in [`open-questions.md`](open-questions.md) (frozen 2026-10-12; questions
 | OQ-35 | ~~Code and content license~~ answered: code MIT, questions all rights reserved; whole repo stays public (D-102) | 17 |
 | OQ-36 | ~~Audience~~ answered: four age groups on one shared scale (D-38) | 13, 16 |
 | OQ-37 | ~~Competitive and couch co-op~~ answered: round-robin co-op, round-robin competitive, competitive (timed); per-player gamepads + shared keyboard, no phones (D-77; timed revised D-80) | 13, 14 |
-| OQ-45 | ~~Freesound API for a commercial release~~ answered: re-pick its 2 picks from Commons, drop Freesound from the audio order (D-103) | 23, 17 |
+| OQ-45 (Freesound) | ~~Freesound API for a commercial release~~ answered: re-pick its 2 picks from Commons, drop Freesound from the audio order (D-103) | 23, 17 |
 
 ## Risks
 - **Content volume and factual errors** are the most likely reason for bad reviews. A wrong answer in a public product costs more than at home. See 16 (quality bar) and 13 (a "report this question" action instead of the gamemaster's «Saltar y quemar para todos»).
-- **Media licensing:** ~290 Commons files under nine license types. ShareAlike, PD-US-only and GFDL need care in a worldwide commercial release (17).
+- **Media licensing:** ~290 Commons files under nine license types. ShareAlike, PD-US-only and GFDL need care in a worldwide commercial release (17). Freesound: its 2 picks re-picked from Commons before release, audio Commons only (D-103).
 - **Install size:** ~1.1 GB installed (2026-10-14): media re-encoded for shipping (SW-9, D-104) 2549 → 679 MB; grows with the pool, capped by `app/desktop/media-budget.json` (`stage-media.mjs --check`, release check step `media-budget`).
 - **Engine port regressions:** the referee has subtle supply and matching rules. 12 builds fixtures from the Python engine before the port.
-- **Scope creep:** competitive mode and couch co-op are explicitly "Later". The release doesn't wait for them.
+- **Scope creep:** the three multiplayer modes (D-77, D-80) stay "Later". The release ships gamemaster mode and «Solo o en grupo» and doesn't wait for them.
 
 ## Release checklist (ST-4)
 Every public build — the launch and every later patch — passes one checklist before its build goes from `beta` to `default`: the automated `trivia-release-check` (plan 18 "Builds and depots", SW-6) plus the manual rows below, which the developer runs on the Steam-installed `beta` build. Each release candidate gets one pm decision with the result (template below); parts 4 (launch, task 269) and 6 (patches, task 270) create it, nothing else does.
@@ -464,7 +464,7 @@ Das Spiel läuft offline. Nur bei „Senden“ an einer markierten Frage geht ei
 - de: „Gesendet werden die Frage wie angezeigt, die Notiz, die Sprache und die Spielversion, dazu ein einmaliges Steam-Ticket.“ / „Steam-Konto und IP werden nicht gespeichert; gelöscht nach dem Abruf, spätestens nach 90 Tagen.“
 
 ## Tasks
-- [ ] ST-1 Resolve OQ-29..OQ-37 and record each answer in `decisions.md` (phase S2).
+- [x] ST-1 Resolve OQ-29..OQ-37 and record each answer in `decisions.md` (phase S2). *Done 2026-10-14: D-63, D-74, D-75, D-77, D-78, D-80, D-98, D-102, D-103 (OQ-45 Freesound); OQ-34 D-50, OQ-36 D-38.*
 - [x] ST-2 Add the new files to `README.md`, the Steam track to `project.md`, the questions to `open-questions.md` and D-34. *2026-10-07: done with this plan; keep `project.md` in sync from now on.*
 - [ ] ST-3 Steam "Coming soon" page live (after PUB-8, SW-7). *Plan: pm plan 94 (checklist with Valve's cited rules, pm decision "Coming soon page live? date?").*
 - [x] ST-4 Release checklist: build from a tagged commit, `qgen.py validate` clean, credits complete, offline test, Deck test, family sign-off. *Done 2026-10-13 (pm plan 92): "Release checklist (ST-4)" above; `trivia-release-check` tag gate, kind full/content-only, credits both ways, manual rows. First full run: part 4's release candidate (task 269). Updated 2026-10-13 (pm plan 104): `offline` = Steam in offline mode with save and copy-fallback checks, `report` row and step. Updated 2026-10-14 (task 942): `mods` step, `workshop` row.*
