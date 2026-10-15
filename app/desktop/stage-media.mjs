@@ -50,9 +50,22 @@ async function image(src, dst) {
   const { width: w, height: h } = JSON.parse(stdout).streams[0];
   const s = Math.min(1, IMAGE.box[0] / w, IMAGE.box[1] / h);
   const resize = s < 1 ? ["-resize", String(Math.round(w * s)), String(Math.round(h * s))] : [];
-  for (const q of IMAGE.q) {
-    await run("cwebp", ["-quiet", "-q", String(q), ...IMAGE.args, ...resize, src, "-o", dst]);
-    if (statSync(dst).size <= MB) break;
+  let input = src;
+  try {
+    for (const q of IMAGE.q) {
+      try {
+        await run("cwebp", ["-quiet", "-q", String(q), ...IMAGE.args, ...resize, input, "-o", dst]);
+      } catch (e) {
+        if (input !== src) throw e;
+        // CMYK or truncated JPEG: cwebp can't read it, ffmpeg decodes it (RGB, ICC dropped).
+        input = `${dst}.png`;
+        await ffmpeg(src, ["-frames:v", "1", "-vf", "sidedata=mode=delete:type=ICC_PROFILE", "-pix_fmt", "rgb24"], input);
+        await run("cwebp", ["-quiet", "-q", String(q), ...IMAGE.args, ...resize, input, "-o", dst]);
+      }
+      if (statSync(dst).size <= MB) break;
+    }
+  } finally {
+    if (input !== src) rmSync(input, { force: true });
   }
   return s < 1;
 }
