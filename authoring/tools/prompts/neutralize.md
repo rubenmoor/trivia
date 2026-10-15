@@ -1,7 +1,9 @@
 # Task: find wording that isn't neutral Spanish
 
-You get questions from the `base` bundle of the trivia game described above, with their id: description, question, answer, wrong answers, hints and fun fact. `base` is played anywhere in the Spanish-speaking world, so its voice is neutral Latin American Spanish (house style "Language"). Find every question whose wording, in any of these fields, uses Colombian or other national usage where a neutral word exists:
+You get questions from the `base` bundle of the trivia game described above, with their id: description, question, answer, wrong answers, hints and fun fact. `base` is played anywhere in the Spanish-speaking world, so its voice is neutral Latin American Spanish (house style "Language"). Find every question whose wording, in any of these fields, uses Colombian or other national usage, Spain's included, where a neutral word exists:
 - regional words: "bombillo" → "bombilla", "crispetas" → "palomitas", "gripa" → "gripe", "arquero" → "portero", "tinto" → "café", "computador" → "computadora";
+- Spain-only words: "ordenador" → "computadora", "zumo" → "jugo", "patata" → "papa";
+- brands as generic words: "cinta Scotch" → "cinta adhesiva";
 - regional diminutives and slang: "pelotica" → "pelota", "parcero";
 - "vos" or "vosotros" forms → "tú"/"ustedes";
 - numbers with a dot as thousands separator: "2.640" → "2640", "42.195" → "42 195".

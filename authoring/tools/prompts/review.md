@@ -20,7 +20,7 @@ Answer `approved` unless one of these is true; then answer `needs_work` and say 
 5. No candidate is adequate (below), and a new search can't help or was already tried.
 6. The question text breaks house style "Keep it short": it is long-winded, or wrapped in an invented story (a relative, friend or guide telling you something, "Imagina que…"), or it asks two questions, one unquoted inside a riddle. The `fix` says what to cut, or puts the inner question in quotes («…»).
 7. It asks what several given things have in common ("¿qué tienen en común…?"). This style is retired; leave `fix` empty.
-8. Its wording doesn't match its bundle's voice (house style "Language"): a `base` question uses Colombian or other national usage where a neutral word exists. The `fix` names each word and its replacement.
+8. Its wording doesn't match its bundle's voice (house style "Language"): a `base` question uses, or rests on, a word, brand-as-generic or usage known in one country only, Spain included ("gripa", "cinta Scotch", "ordenador"), where a neutral word exists. `feedback` names it as regional; the `fix` names each word and its replacement.
 
 ## Fix
 When `can_fix` is true and you decide `needs_work` for a problem in the text (1–4, 6, 8), write `fix`: an English instruction the reviser can follow without seeing anything else, naming the field, what's wrong and what the new text must do. Examples: "Hint 1 names the composer's country, which gives the answer away; replace it with a vague hint about the era." "The fun fact's date is wrong (1969, not 1971); correct it." "'Saturno' is also defensible because it has rings too; replace that wrong answer with a planet without visible rings."
