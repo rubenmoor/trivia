@@ -37,6 +37,9 @@ Batch health (plan 15): this batch and the two before it, ✓/✗ against the th
 | needs_work: ambiguity | ≤ 10.0 % | 0.0 % ✓ | 0.0 % ✓ | 0.0 % ✓ |
 | needs_work: overlap | ≤ 1.0 % | 1.2 % ✗ | 2.9 % ✗ | 0.4 % ✓ |
 | needs_work: media | ≤ 10.0 % | 7.3 % ✓ | 7.0 % ✓ | 2.1 % ✓ |
+| media: no pick in review 1 |  | 6 | 69 | 101 |
+| media: recovered by research |  | 0 | 26 | 92 |
+| media: no pick at record |  | 6 | 43 | 9 |
 | needs_work: difficulty | ≤ 10.0 % | 0.0 % ✓ | 0.0 % ✓ | 0.0 % ✓ |
 | needs_work: style | ≤ 10.0 % | 2.4 % ✓ | 0.6 % ✓ | 0.0 % ✓ |
 | needs_work: other | ≤ 10.0 % | 1.2 % ✓ | 0.5 % ✓ | 0.0 % ✓ |

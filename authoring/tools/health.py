@@ -75,6 +75,20 @@ def rate(n, of):
     return n / of if of else None
 
 
+def media_funnel(d, qs):
+    """Media picks lost before record (plan 146): review-1 misses, research recoveries, record's no-picks."""
+    keys = ["media: no pick in review 1", "media: recovered by research", "media: no pick at record"]
+    if not (d / "reviews").is_dir():
+        return dict.fromkeys(keys)
+    out = Counter()
+    for q in qs:
+        r = load(d / "reviews" / f"{q['id']}.json", {})
+        r1, final = r.get("round1") or {}, qgen.final_review(r)  # as cmd_research, cmd_record
+        missed, none = r1.get("pick") is None and bool(r1.get("new_query")), bool(final) and final["pick"] is None
+        out.update({keys[0]: missed, keys[1]: missed and bool(final) and not none, keys[2]: none})
+    return {k: out[k] for k in keys}
+
+
 def batch_health(run, pool=None):
     """{metric: value} for one run; None = n/a. Keys and order: ROWS."""
     d = WORK / run
@@ -97,6 +111,8 @@ def batch_health(run, pool=None):
     guessed = any(g for _, g in work.values())
     for p in qgen.PROBLEMS:
         h[f"needs_work: {p}"] = rate(by_problem[p], m)
+        if p == "media":
+            h |= media_funnel(d, qs)
     h["problems guessed"] = guessed if work else None
     h["overlap rate"] = rate(kinds["overlap"] + kinds["duplicate"] + by_problem["overlap"], n)
     if (d / "slots.json").exists():
