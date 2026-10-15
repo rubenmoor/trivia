@@ -26578,8 +26578,78 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Achievement icons (`app/desktop/achievements/`, task 656''s render script) redrawn if a symbol changed
 - Docs: VD-8 icon list in `plans/10-visual-design.md`, `plans/09-jokers.md` UI section
 - Check: `npm run check`, `npm test`, `npm run build`, `qgen validate`; `trivia-gallery --only customize,choice-gamemaster,joker-hint,joker-hint-armed,joker-skip,joker-easier,joker-category,joker-snipe` (all four locales) and look at them', '2026-10-15T18:57:05Z', NULL, 1103, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1136, 138, 'create tasks for plan 138: Regional taxonomy: a general list, colombia reworked', 'split', 'open', 1000, NULL, 'Split plan 138 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T19:01:52Z', NULL, 827, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1136, 138, 'create tasks for plan 138: Regional taxonomy: a general list, colombia reworked', 'split', 'done', 1000, '2026-10-15, tasks.sql: tasks 1137–1140 (general list, qgen taxonomy, colombia taxonomy, remap); decisions raised by 1137 and 1139 themselves (they need the drafts)', 'Split plan 138 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T19:01:52Z', '2026-10-15T19:03:02Z', 827, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1137, 138, 'General regional category list', 'work', 'open', NULL, NULL, 'Part 1 of `plan 138: Regional taxonomy: a general list, colombia reworked`, per `decision 166: colombia subcategories (OQ-46): where the 19 go, and the list for 2000`: a general list of broad categories that every regional bundle starts from.
+
+## First run: draft and ask
+- Draft ~10–15 broad categories that fit any region (e.g. geography, nature, history, famous people, food and drink, festivities and traditions, myths and legends, music and dance, arts and literature, film and TV, sport, how people speak, daily life, symbols).
+- Per category: Spanish name pattern (`… de {región}`, `… {gentilicio}` or neutral), one-line English scope, what doesn''t belong (overlap with `base` subcategories, D-49; read `app/data/categories.json` and `app/data/bundles/colombia/categories.json` for what exists).
+- Names may repeat across bundles (`decision 110: Regional packs at launch (RG-5, OQ-46)` (d)).
+- `pm decision add "General category list for regional bundles"` with the list in the body; options: the list as drafted (recommended), a shorter core list, changes (name them). `pm task-pending-decision <this task> <decision>`, stop.
+
+## On the answer
+- `authoring/data/regional-categories.json` (authoring only, never read by `app/`): per category `name` (pattern with `{región}`/`{gentilicio}` placeholders or plain), `scope` (en), `excludes`; a short top-level note on its use (input of `qgen taxonomy`).
+- `qgen validate` loads it if cheap (well-formed JSON, unique names); else nothing.
+- `directory.md` entry; `pm decision consequences <decision> "…"`.
+- Per-commit checks (AGENTS.md).
+
+Done when: the decision is answered and the file matches the answer.', '2026-10-15T19:02:56Z', NULL, 1136, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1138, 138, 'qgen taxonomy --bundle <id>: propose and apply a region''s taxonomy', 'work', 'open', NULL, NULL, 'Part 2 of `plan 138: Regional taxonomy: a general list, colombia reworked`. Runs after `task 1137: General regional category list` (needs `authoring/data/regional-categories.json`); still open → stop and say so.
+
+## Propose: `qgen taxonomy --bundle <id>`
+- One opus call per bundle; input: `authoring/data/regional-categories.json`, the bundle''s `rule`/`voice` in `bundles.json`, its target in `authoring/data/targets.json` (colombia 2000, D-101).
+- Output: region-specific extra categories (with reason), then per category its subcategories in the format of `decision 18: Which new base subcategories?` (name, scope line, reason, ~10 sample concepts with `known_at`), sized for the target (≈ 40 approved per subcategory, ≈ 50 subcategories at 2000).
+- Writes `work/taxonomy/<id>/proposal.json` and `proposal.md` (the md is what goes into the pm decision: counts per category, then the lists).
+- Existing taxonomy (`app/data/bundles/<id>/categories.json`) shown to the model as context only; the proposal stands on its own.
+- Prompt in `authoring/tools/prompts/taxonomy.md`; reports its claude calls and totals (`decision 208: What must a script that calls claude report to its caller?`, as `task 1134: qgen reports its claude calls: per-call cost and tokens, totals at the end` did for qgen).
+
+## Apply: `qgen taxonomy --bundle <id> --apply <proposal.json>`
+- Input: the proposal, possibly edited by a worker to match the developer''s answer (that''s the decisions file; no hand edits of `categories.json`).
+- Writes `app/data/bundles/<id>/categories.json` (format as today, D-100 keys); drafts `names.en.json`/`names.de.json` entries for new names (one cheap call, reported as above), existing entries kept.
+- Doesn''t touch questions or concept lists (that''s the remap task); prints which old subcategories are no longer in the list and how many questions they hold.
+- `qgen validate` passes afterwards except for questions on removed subcategories, which the remap task fixes; if validate would fail on them, `--apply` says so and still writes.
+
+## Also
+- `qgen bundle new --kind region` (`cmd_bundle_new`, `authoring/tools/qgen.py`): its "Next:" line points at `qgen taxonomy --bundle <id>` instead of "fill by hand"; docstring too.
+- `directory.md` (prompt, `work/taxonomy/`), README/AGENTS.md command line for `qgen taxonomy` if qgen commands are listed there; RUNBOOK unchanged.
+- Smoke: run the proposal for a throw-away bundle or `colombia` without `--apply` once; don''t keep the output in git (`work/` is ignored).
+- Per-commit checks.
+
+Done when: `qgen taxonomy --bundle colombia` writes a proposal and `--apply` on it writes a valid `categories.json` (verified on a copy, not committed).', '2026-10-15T19:02:56Z', NULL, 1136, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1139, 138, 'colombia taxonomy: proposal, the developer''s answer, apply', 'work', 'open', NULL, NULL, 'Part 3 of `plan 138: Regional taxonomy: a general list, colombia reworked`. Runs after `task 1138: qgen taxonomy --bundle <id>: propose and apply a region''s taxonomy`; still open → stop and say so.
+
+## First run: propose and ask
+- `nix develop -c qgen taxonomy --bundle colombia` → `work/taxonomy/colombia/proposal.{json,md}`.
+- `pm decision add "colombia taxonomy: categories and subcategories"` with `proposal.md` in the body (counts per category first, then the lists with scope and samples; the claude totals); options: the proposal (recommended), changes (name them: renames, merges, moves, drops, additions). Mention the existing 109 questions are remapped afterwards (next task), and that the old list (6 categories, 31 subcategories) is replaced, not merged.
+- `pm task-pending-decision <this task> <decision>`, stop. Keep `work/taxonomy/colombia/` (ignored, survives the stash).
+
+## On the answer
+- Edit `proposal.json` to the answer (that''s the decisions file), then `qgen taxonomy --bundle colombia --apply work/taxonomy/colombia/proposal.json`.
+- `qgen validate` may still fail only on questions on removed subcategories (next task); everything else passes; `npm run check`, `npm test`, `npm run build`.
+- If questions on removed subcategories break `qgen validate` or `qgen export`, don''t commit a broken pool: stage the new list together with the remap task''s work instead, i.e. leave the files staged and say so in the note.
+- `pm decision consequences <decision> "…"`.
+
+Done when: `app/data/bundles/colombia/categories.json` and its names files match the answer.', '2026-10-15T19:02:56Z', NULL, 1136, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1140, 138, 'Remap colombia''s existing questions onto its new taxonomy', 'work', 'open', NULL, NULL, 'Part 4 of `plan 138: Regional taxonomy: a general list, colombia reworked`, only for `colombia` (`decision 166: colombia subcategories (OQ-46): where the 19 go, and the list for 2000`). Runs after `task 1139: colombia taxonomy: proposal, the developer''s answer, apply`; still open → stop and say so.
+
+## Migration step in `qgen`
+- Like `cmd_bundles` (`authoring/tools/qgen.py`, prompt `prompts/bundles.md`): an LLM proposes, the proposal is kept in `work/`, then applied through `qgen`; no hand edits of `authoring/data/questions.json`. Reports its claude calls (`decision 208: What must a script that calls claude report to its caller?`).
+- Every `colombia` question (all 109, any status, also the 19 on `base` subcategories) gets the fitting subcategory of the new list.
+- None fits → a new subcategory (or category) is added to `colombia`''s `categories.json` with en/de names (through `qgen taxonomy --apply` or the migration step itself, not by hand); list every addition in the task note.
+- Concepts as BN-13 (D-49): kept and added to the target subcategory''s concept list if it has one, else cleared. Old lists in `authoring/data/bundles/colombia/concepts/` whose subcategory is gone: renamed to the new subcategory when it is the same topic, else deleted.
+- Translations, media, reviews keyed by question id stay as they are.
+
+## Validate rule
+- `qgen validate`: a question''s subcategory is in its own bundle''s list (fails on a `colombia` question on a `base` subcategory, and on any removed subcategory); the D-100 grace for the 19 goes.
+- `qgen export`; per-commit checks (`npm run check`, `npm test`, `npm run build`, `qgen validate`).
+
+## Docs
+- D-entry in `plans/decisions.md` (amends D-43/D-99 for colombia''s list; points at `authoring/data/regional-categories.json` and `qgen taxonomy`).
+- `plans/22-bundles.md` (colombia''s list), `plans/15c-regional-questions.md`.
+- `pm decision consequences 166 "…"`.
+
+Done when: every `colombia` question is on a `colombia` subcategory, `validate` enforces it, checks pass.', '2026-10-15T19:02:56Z', NULL, 1136, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -29728,6 +29798,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1090, 1135, '2026-10-15T18:57:19Z', '2026-10-15T18:57:45Z', 'blocked', NULL, 0, '34e5f9a0b2882c9cf4c74166818f6102002ccdc3', 'claude-opus-5-5[1m]', '0606a40a-0d75-413a-83b3-575b775a1d1e', 5, 10, 2278, 163859, 31347, 0.3291478, 3530483);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1091, 1097, '2026-10-15T18:57:45Z', '2026-10-15T19:00:43Z', 'done', NULL, 0, '76bd4123d1da58f9c1159c8222b2aa039e8ca538', 'claude-opus-5-5[1m]', 'f50ccae3-76f0-4031-87b7-389fcdc991d2', 15, 28, 15563, 781830, 66618, 1.0006820000000003, 3530483);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1092, 827, '2026-10-15T19:00:43Z', '2026-10-15T19:02:15Z', 'done', NULL, 0, '6690909a09b51fa5cd3683caa1f2c7fed35643cb', 'claude-opus-5-5[1m]', 'e4d167c7-cfb8-461d-a311-195737f80c62', 14, 28, 8600, 778524, 68129, 0.8728488, 3530483);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1093, 1136, '2026-10-15T19:02:15Z', '2026-10-15T19:03:09Z', 'done', NULL, 0, 'b44e83e39836949e9500c8f808f765ffeb2d43f6', 'claude-opus-5-5[1m]', '37f6553a-5494-4841-9e71-461b5f242c69', 7, 14, 5375, 269596, 39827, 0.48009119999999994, 3530483);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
