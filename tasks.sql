@@ -29809,14 +29809,14 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 - Licence `replace` (12 in b8) is `decision 47: Replace the files on the licence list`, not this decision.
 
 Options: recommended first. "Weight" = `none` 7 → 5 in `authoring/data/question-axes.json`, bound stays 15 %.', NULL, NULL, '2026-10-15T22:01:27Z', NULL, 1189, NULL, 'rule', NULL, '');
-INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (228, 'batch-9: health stop, ack?', 'pending', '[]', '`qgen batch` for `task 1185: run batch-9` exited 2 (RUNBOOK exit-2 row); no new batch started, no claude calls (no `claude:` line printed). Output verbatim:
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (228, 'batch-9: health stop, ack?', 'answered', '[]', '`qgen batch` for `task 1185: run batch-9` exited 2 (RUNBOOK exit-2 row); no new batch started, no claude calls (no `claude:` line printed). Output verbatim:
 
 ```
 batch-8 fails the batch health thresholds: overlap rate, max final−target gap 11–15, media share.
 See `qgen report --batches` or authoring/reports/batches.md. The developer looks at it and clears the stop with: qgen health ack batch-8 "<note>"
 ```
 
-Only the developer clears it: `qgen health ack batch-8 "<note>"`; then task 1185 reruns plain `qgen batch`.', NULL, NULL, '2026-10-15T22:02:05Z', NULL, 1185, NULL, 'rule', NULL, '');
+Only the developer clears it: `qgen health ack batch-8 "<note>"`; then task 1185 reruns plain `qgen batch`.', 'before continuing with batch-9 we need an extensive review of batch 8: quadruple the sample size for human review to 120 and have me review those first. incorporate my feedback and we see from there.', NULL, '2026-10-15T22:02:05Z', '2026-10-15T22:07:18Z', 1185, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
