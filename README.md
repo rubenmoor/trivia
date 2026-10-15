@@ -134,7 +134,7 @@ Text around the `¡Trivia! #q-… · …` blocks is ignored; one paste can hold 
 ```sh
 trivia & npm run dev -w app/client                 # game UI with hot reload
 trivia-authoring & npm run dev -w authoring/ui     # authoring UI with hot reload (port 5174)
-npm run check                                      # type-check both clients (strict tsconfig flags) + on-screen literals
+npm run check                                      # type-check both clients (strict tsconfig flags) + on-screen literals + knip (unused exports, files, deps; knip.jsonc)
 npm test                                           # game engine tests (node:test)
 npm run check:literals -w app/client               # on-screen literals outside the UI catalog (src/game by default)
 npm run build -w app/client && trivia-desktop      # the game in the Electron desktop shell, no Python (no Steam: nothing saved; TRIVIA_DEV_STEAM_USER=1: state/desktop/dev/game.json)

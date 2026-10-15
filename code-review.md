@@ -55,7 +55,7 @@ Milestone 13 read every tracked code and build file once, between 2026-10-12 and
 ### Pending
 - Follow-up tasks (`### Pending`):
   - `task 1051: Freesound: re-pick its 2 audio slots from Commons, drop it from the audio order`
-  - `task 1115`, `task 1116` (unused-export check, ruff), waiting on decisions 197–198
+  - `task 1116` (ruff), decision 198
 - Superseded by tasks of other milestones:
   - `task 765: Delete app/server, ServerStore, the trivia command and nix build .#app` (blocked by decision 150)
   - `task 463: Release budget per language (pm decision, CT-3)`
@@ -70,7 +70,7 @@ Milestone 13 read every tracked code and build file once, between 2026-10-12 and
 ### Process
 These decisions are open and wait for the developer (`### Process decisions`):
 - decision 196: no `directory.md` check; `directory.md` now names only top-level `.md` files and directories (task 1114).
-- decision 197: a per-commit unused-export scan, covering the gap every linter leaves (task 1115).
+- decision 197: knip in `npm run check` fails on unused exports, files and dependencies, test-only exports included (task 1115, `### Unused-export check`).
 - decision 198: ruff for Python with narrow rules (encoding, unused, broad excepts; task 1116).
 - decision 199: an AGENTS.md rule: "import, don't copy; a copy across a boundary names its source".
 - decision 200: an AGENTS.md rule: "after a move, rename or delete, fix the comments and docs that name the old".
@@ -2008,7 +2008,6 @@ Task 588, 2026-10-14. Throw-away scripts over `code-review.md`, `git ls-files` a
 | task 652 | SW-8 close-out: gamemaster check and docs | part 6 `preload.cjs`/`main.mjs` overlay, `showTextInput` | decision 113: SW-8 check under Steam |
 | task 765 | Delete app/server, ServerStore, the trivia command and nix build .#app | part 10 parity rows (save twin), part 11 `ServerStore` | decision 150: Family save imported into trivia-desktop? |
 | task 1051 | Freesound: re-pick its 2 audio slots from Commons, drop it from the audio order | part 8 `providers/__init__.py` `ORDER`, `freesound.py` | — |
-| task 1115 | Unused-export check per decision 197 | process decisions | decision 197 |
 | task 1116 | Python: ruff per decision 198, fix its 3 hits | part 11 ruff trial row | decision 198 |
 
 ### Scans
@@ -2044,7 +2043,7 @@ Part 1's commands re-run on 2026-10-14 (task 588), same scope (`git ls-files app
 Task 589, 2026-10-14. A throw-away script over the finding rows of parts 1–11 (762 rows: complexity 186, practice 181, inconsistency 166, bug 117, unused 61, performance 51; 321 on `.py` files) grouped them by cause; each repeated cause got one decision, none on lint rules or `tsconfig` flags (`### Linter evaluation`).
 
 - decision 196: per-commit `directory.md` ↔ `git ls-files` check (79 of 174 files unnamed at part 1, 22 docs-drift rows); answered no: `directory.md` cut to top-level `.md` files and directories (task 1114)
-- decision 197: per-commit unused-export scan, the gap all linter candidates leave (34 unused-export rows); task 1115
+- decision 197: per-commit unused-export scan, the gap all linter candidates leave (34 unused-export rows); answered "find a tool": knip, task 1115
 - decision 198: ruff for Python, narrow rules (5 platform-encoding rows; trial: 3 new real hits); task 1116
 - decision 199: AGENTS.md rule "import, don't copy; a cross-boundary copy names its source" (118 copy rows, 38 clusters)
 - decision 200: AGENTS.md rule "after a move, rename or delete, fix comments and docs naming the old" (39 lying-comment rows)
@@ -2054,6 +2053,29 @@ Task 589, 2026-10-14. A throw-away script over the finding rows of parts 1–11 
   - Python ↔ TS parity check: `decision 104: Python ↔ Node/TS twins: how to keep save, media cache and serving rules in sync` answered won't fix (Python side retires)
   - swallowed promises: `decision 106: Adopt ESLint + typescript-eslint for no-floating-promises? (code review part 10)` keeps them a review item; Python broad excepts are option 2 of decision 198
   - tests kept by default: AGENTS.md already says so; `TESTONLY` exports are in decision 197
+
+### Unused-export check
+
+Task 1115, 2026-10-15, per decision 197 (answer: a tool, not our own script). knip 6.41 (root devDependency, +65 lockfile entries incl. per-platform oxc bindings; offline at run time) runs as `npm run knip` inside `npm run check`, ~1.5 s, two passes:
+- `knip`: unused exports, files, dependencies, binaries across `app/client`, `authoring/ui`, `app/desktop`, `authoring/` scripts, `modding/examples`, `report-server/` (`knip.jsonc`)
+- `knip --production`: only `!` entries (shipped/run code), tests ignored → an export only tests import fails (`TESTONLY`); `@internal` for one kept on purpose
+- Config: Vite plugin off for `app/client` (every `src` module is a Rolldown input for mods, so it hid every export); types used in their own file stay exported (signatures); `ServerStore` ignored until `task 765: Delete app/server, ServerStore, the trivia command and nix build .#app`
+- Check: a new unused `export` in `lib/focus.ts`, an unused file in `app/desktop/` or `authoring/ui/src/lib/`, a test-only export in `pool.ts` each fail it
+- `nix build .#app`: `npmDepsHash` updated
+
+| file | finding | category | severity | status |
+|---|---|---|---|---|
+| `app/client/src/engine/achievements.ts` | `DLC_BUNDLES`, `bundleAchievement` exported, used only in own file; `qualifies` used in file and by tests | unused | low | fixed (task 1115): `export` dropped; `qualifies` tagged `@internal` |
+| `app/client/src/engine/telemetry.ts` | `gameKey`, `telemetryGame` exported, used only in own file | unused | low | fixed (task 1115) |
+| `app/client/src/engine/pool.ts`, `pool.test.ts` | `subcategories`, `subKeys` used only by `pool.test.ts` | unused | low | fixed (task 1115): deleted, test inlines them |
+| `app/client/src/game/jokers.ts`, `game/report.ts` | `MAX_USES`, `langOf`, `block` exported, used only in own file | unused | low | fixed (task 1115) |
+| `app/client/src/lib/engine.ts`, `lib/focus.ts` | `ready`, `nearest` exported, used only in own file | unused | low | fixed (task 1115) |
+| `app/client/src/lib/i18n.ts`, `locales/es.ts` | `Key` re-exported and declared, imported by nobody | unused | low | fixed (task 1115): deleted |
+| `app/client/src/lib/store.ts` | `ServerStore` has no importer since task 780 | unused | low | follow-up task 765 (knip ignore until then) |
+| `app/desktop/` (`check-mod.mjs`, `publish.mjs`, `resolve.mjs`, `save.mjs`) | `warningText`, `WORKSHOP_TAGS`, `writeWorkshopId`, `poolFiles`, `saveError` exported, used only in own file | unused | low | fixed (task 1115) |
+| `authoring/tools/cdp.mjs` | `freePort`, `connectPort` exported, used only in own file | unused | low | fixed (task 1115) |
+| `report-server/src/steam.ts` | `ticketResult` exported, used only in own file | unused | low | fixed (task 1115) |
+| `authoring/ui/package.json` | `@tsconfig/svelte` devDependency unused (`tsconfig.json` extends `app/client`'s) | unused | low | fixed (task 1115) |
 
 ### Close-out
 

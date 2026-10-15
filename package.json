@@ -7,7 +7,11 @@
   ],
   "scripts": {
     "build": "npm run build --workspaces",
-    "check": "npm run check --workspaces && tsc -p report-server",
-    "test": "npm run test --workspaces --if-present && node --test 'app/desktop/*.test.mjs'"
+    "check": "npm run check --workspaces && tsc -p report-server && npm run knip",
+    "test": "npm run test --workspaces --if-present && node --test 'app/desktop/*.test.mjs'",
+    "knip": "knip && knip --production"
+  },
+  "devDependencies": {
+    "knip": "^6.41.0"
   }
 }

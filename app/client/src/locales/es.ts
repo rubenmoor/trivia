@@ -559,6 +559,5 @@ type Paths<T, Leaf> = {
 export type TextKey = Paths<Catalog, string | Plural>;
 /** Keys `variants()` reads. */
 export type VariantsKey = Paths<Catalog, readonly string[]>;
-export type Key = TextKey | VariantsKey;
 
 export default es satisfies Catalog;

@@ -44,7 +44,7 @@ export type TelemetryStart = Map<string, number>;
 
 const MAX_GAME_ANSWERS = 100;
 
-export const gameKey = (row: GameRow): string => `${row.id}@${row.started_on}`;
+const gameKey = (row: GameRow): string => `${row.id}@${row.started_on}`;
 
 /** Snapshot at session start: every game known then; running ones keep their history length. */
 export function telemetryStart(save: SaveData): TelemetryStart {
@@ -64,7 +64,7 @@ function ourQuestion(id: string, data: EngineData): boolean {
 }
 
 /** `mods`: this run's overlay isn't empty (decision 146). */
-export function telemetryGame(row: GameRow, from: number, data: EngineData, mods: boolean): TelemetryGame {
+function telemetryGame(row: GameRow, from: number, data: EngineData, mods: boolean): TelemetryGame {
   const { state } = row;
   const choice = gameChoice(state, data);
   const levels = state.settings.levels ?? LEVELS;

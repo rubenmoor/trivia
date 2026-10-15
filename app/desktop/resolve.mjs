@@ -169,7 +169,7 @@ export const poolUrls = ({ questions }) =>
   new Set(questions.flatMap((q) => [q.media?.file_url, q.background?.file_url]).filter(Boolean));
 
 // es pool files in data/: base's and every installed pack's (decision 66).
-export async function poolFiles(data) {
+async function poolFiles(data) {
   const packs = await readdir(path.join(data, "bundles")).catch(() => []);
   return [path.join(data, "pool.json"), ...packs.map((b) => path.join(data, "bundles", b, "pool.json"))];
 }

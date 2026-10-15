@@ -4,7 +4,6 @@ import { en } from "../locales/en.ts";
 import es, { type Catalog, type Override, type Plural, type TextKey, type VariantsKey } from "../locales/es.ts";
 import { esES } from "../locales/es-ES.ts";
 
-export type { Key } from "../locales/es.ts";
 export type Params = Record<string, string | number>;
 
 const isPlural = (v: unknown): v is Plural => !!v && typeof v === "object" && !Array.isArray(v) && "other" in v;

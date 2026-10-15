@@ -45,7 +45,7 @@ const REASONS = {
 
 const text = (table, x) => `${x.code}: ${table[x.code]?.(x) ?? x.code}`;
 export const errorText = (e) => text(ERRORS, e);
-export const warningText = (w) => text(w.code in WARNINGS ? WARNINGS : ERRORS, w);
+const warningText = (w) => text(w.code in WARNINGS ? WARNINGS : ERRORS, w);
 
 /** JSON of a file inside `dir`; undefined if missing, Error if unreadable. */
 async function readJson(dir, rel) {

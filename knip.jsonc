@@ -1,0 +1,40 @@
+// Unused exports, files and dependencies (decision 197); runs in `npm run check`.
+// `!` entries: shipped/run code; `knip --production` (also in check) ignores tests, so a test-only export fails.
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  // Types of exported signatures stay exported.
+  "ignoreExportsUsedInFile": { "interface": true, "type": true },
+  // System tools; tsc hoisted from the workspaces.
+  "ignoreBinaries": ["tsc", "unshare", "pulseaudio", "ffmpeg", "trivia-desktop"],
+  "ignoreIssues": {
+    // task 765: Delete app/server, ServerStore, the trivia command and nix build .#app
+    "app/client/src/lib/store.ts": ["exports"]
+  },
+  "workspaces": {
+    ".": {
+      "entry": [
+        "authoring/{steam,store}/*.mjs!",
+        "authoring/tools/{gallery_saves,demo_saves}.mjs!",
+        "authoring/tools/supply.ts!",
+        "authoring/tools/sim/simulate.ts!",
+        "modding/examples/*/main.js!",
+        "report-server/src/index.ts!",
+        "report-server/seed-telemetry.mjs!"
+      ],
+      "project": ["authoring/**/*.{ts,mjs}!", "modding/**/*.js!", "report-server/**/*.{ts,mjs}!", "!authoring/ui/**"]
+    },
+    "app/desktop": {
+      "entry": ["{main,after-pack,stage-media,steam-libs}.mjs!", "preload.cjs!", "*.test.mjs"],
+      "project": ["*.{mjs,cjs}!"]
+    },
+    "app/client": {
+      // Not the Vite plugin: every src module is a Rolldown input (mods import by path), so it hides all exports.
+      "vite": false,
+      "entry": ["index.html!", "src/main.ts!", "devserver.ts", "devshell.js", "credits.ts!", "scripts/*.mjs"],
+      "project": ["**/*.{ts,svelte,js,mjs}!"]
+    },
+    "authoring/ui": {
+      "project": ["src/**/*.{ts,svelte}!"]
+    }
+  }
+}

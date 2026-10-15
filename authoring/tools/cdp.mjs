@@ -7,7 +7,7 @@ import path from "node:path";
 
 export const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-export function freePort() {
+function freePort() {
   return new Promise((resolve) => {
     const srv = createServer().listen(0, "127.0.0.1", () => {
       const { port } = srv.address();
@@ -99,7 +99,7 @@ function rpc(write, close, sessionId) {
 }
 
 /** The app:// page on `--remote-debugging-port`. */
-export async function connectPort(port) {
+async function connectPort(port) {
   for (let i = 0; i < 100; i++) {
     try {
       const list = await (await fetch(`http://127.0.0.1:${port}/json/list`)).json();

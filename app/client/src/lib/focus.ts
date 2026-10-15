@@ -6,7 +6,7 @@ export type Rect = { left: number; top: number; width: number; height: number };
 
 /** The candidate nearest to `from` in `dir`, no wrap; -1 if none. Those in line (overlapping on the cross
  * axis) first, then edge distance + 2 × cross-axis gap; ties: the nearer centre. */
-export function nearest(from: Rect, dir: Dir, rects: Rect[]): number {
+function nearest(from: Rect, dir: Dir, rects: Rect[]): number {
   const h = dir === "left" || dir === "right";
   const lo = (r: Rect) => (h ? r.left : r.top);
   const hi = (r: Rect) => lo(r) + (h ? r.width : r.height);

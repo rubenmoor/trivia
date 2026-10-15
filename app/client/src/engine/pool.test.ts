@@ -2,9 +2,11 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import type { Category } from "../lib/types.ts";
 import {
-  broadOf, byId, categoryOf, isModId, isOurs, loadCategories, modPool, parseAgeGroups, parseBundles, parsePool, subcategories, subKeys,
+  broadOf, byId, categoryOf, isModId, isOurs, loadCategories, modPool, parseAgeGroups, parseBundles, parsePool,
 } from "./pool.ts";
 import { data, fixture, realCategories } from "./test/fixtures.ts";
+
+const subsOf = (cats: Category[], bundle: string) => cats.filter((c) => c.bundle === bundle).flatMap((c) => c.subcategories);
 
 test("parsePool: version 1 only", () => {
   assert.deepEqual(parsePool({ version: 1, questions: [] }), []);
@@ -35,10 +37,10 @@ test("real categories: base first, every subcategory once per bundle", () => {
   const bundles = cats.map((c) => c.bundle);
   assert.equal(bundles[0], "base");
   assert.equal(bundles.lastIndexOf("base") + 1, bundles.indexOf("colombia"));
-  const subs = subKeys(cats);
-  assert.equal(new Set(subs).size, subs.length);
-  assert.equal(subcategories(cats, "base").length + subcategories(cats, "colombia").length, subs.length);
+  const subs = cats.flatMap((c) => c.subcategories);
   const broad = broadOf(cats);
+  assert.equal(broad.size, subs.length);
+  assert.equal(subsOf(cats, "base").length + subsOf(cats, "colombia").length, subs.length);
   assert.equal(broad.get("Bebidas")?.slug, "comida-bebida");
   assert.equal(broad.get("colombia/Regiones de Colombia")?.slug, "colombia-pais");
   assert.equal(broad.get("colombia/Regiones de Colombia")?.bundle, "colombia");
@@ -48,7 +50,7 @@ test("real categories: base first, every subcategory once per bundle", () => {
 
 test("fixture categories: broadOf, categoryOf", () => {
   const cats = fixture("categories.json") as Category[];
-  assert.deepEqual(subcategories(cats, "base"), ["Planetas", "Inventos", "Música", "Fútbol"]);
+  assert.deepEqual(subsOf(cats, "base"), ["Planetas", "Inventos", "Música", "Fútbol"]);
   const cat = categoryOf(broadOf(cats));
   assert.equal(cat({ subcategory: "Planetas" }), "ciencia");
   assert.equal(cat({ subcategory: "Fútbol" }), "cultura");

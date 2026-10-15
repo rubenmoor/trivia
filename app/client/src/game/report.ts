@@ -9,7 +9,7 @@ import type { Flagged } from "../lib/types.ts";
 const MARK = "\u00a1Trivia!"; // fixed, untranslated
 
 /** The question language: the flag's locale, else es (decision 102). */
-export const langOf = (f: Flagged) => f.locale ?? "es";
+const langOf = (f: Flagged) => f.locale ?? "es";
 
 export type Pools = Record<string, string | null>;
 
@@ -32,7 +32,7 @@ function body(f: Flagged): string {
   return [`${t("flag.question")}: ${f.question ?? "—"}`, `${t("flag.answer")}: ${f.answer ?? t("flag.hidden")}`].join("\n");
 }
 
-export function block(f: Flagged, pools: Pools): string {
+function block(f: Flagged, pools: Pools): string {
   return [header(f, pools), body(f), ...(f.note ? [`${t("flag.note")}: ${f.note}`] : [])].join("\n");
 }
 

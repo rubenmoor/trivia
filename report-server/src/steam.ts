@@ -35,7 +35,7 @@ export async function checkTicket(ticket: string, identity: string, env: Env, de
 }
 
 /** `{response: {params: {result, steamid, publisherbanned, …}}}` or `{response: {error: {…}}}`. */
-export function ticketResult(body: unknown): TicketResult {
+function ticketResult(body: unknown): TicketResult {
   const response = isObj(body) ? body["response"] : undefined;
   if (!isObj(response)) return { ok: false, status: 502 };
   if (response["error"] !== undefined) return { ok: false, status: 401 };

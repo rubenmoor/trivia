@@ -249,16 +249,6 @@ export const catKey = (c: Pick<Category, "bundle" | "slug">): string => subKey(c
 export const subName = (bundle: string | undefined, key: string): string =>
   (bundle && bundle !== "base" ? key.slice(bundle.length + 1) : key);
 
-/** Subcategory names in display order, of one bundle or of all. */
-export function subcategories(cats: Category[], bundle?: string): string[] {
-  return cats.filter((c) => bundle === undefined || c.bundle === bundle).flatMap((c) => c.subcategories);
-}
-
-/** Subcategory keys in display order. */
-export function subKeys(cats: Category[]): string[] {
-  return cats.flatMap((c) => c.subcategories.map((s) => subKey(c.bundle, s)));
-}
-
 /** subcategory key → its broad category, across all bundles. */
 export function broadOf(cats: Category[]): Map<string, Category> {
   return new Map(cats.flatMap((c) => c.subcategories.map((s) => [subKey(c.bundle, s), c] as const)));

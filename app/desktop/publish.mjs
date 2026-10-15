@@ -8,7 +8,7 @@ import { readManifest } from "./mods.mjs";
 import { contained } from "./resolve.mjs";
 
 // Decision 135's proposed list (unanswered): kinds + locales, as entered in Steamworks.
-export const WORKSHOP_TAGS = ["bundle", "theme", "code", "conversion", "es", "en", "de"];
+const WORKSHOP_TAGS = ["bundle", "theme", "code", "conversion", "es", "en", "de"];
 export const VISIBILITY = { public: 0, friends: 1, private: 2, unlisted: 3 };
 const PREVIEWS = ["preview.png", "preview.jpg", "preview.gif"];
 const MB = 1024 * 1024;
@@ -136,7 +136,7 @@ export function describe(p, opts = {}) {
 }
 
 /** Sets `workshopId` in a mod.json: only that key, rest of the text as is; atomic. */
-export async function writeWorkshopId(file, id) {
+async function writeWorkshopId(file, id) {
   const text = await fs.readFile(file, "utf8");
   const old = JSON.parse(text);
   const want = { ...old, workshopId: id };

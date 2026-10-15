@@ -9,7 +9,7 @@ const LOCKED = new Set(["EPERM", "EBUSY", "EACCES"]);
 const KINDS = new Set(["corrupt", "newer"]);
 
 /** Error whose message is the code, so it survives IPC. */
-export function saveError(code) {
+function saveError(code) {
   const err = new Error(code);
   err.code = code;
   return err;

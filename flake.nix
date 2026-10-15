@@ -176,7 +176,7 @@
               root = ./.;
               fileset = pkgs.lib.fileset.unions [ ./package.json ./package-lock.json ./app ];
             };
-            npmDepsHash = "sha256-njHPPjPRJW/Qe+INDPjHGxg1haZ7ZYrLBJAsfgYAin4=";
+            npmDepsHash = "sha256-Fd5z1xQJ15URGhU4QUcm/unXHA51rjulyTqj3oghtH0=";
             npmWorkspace = "app/client";
             env.VITE_AUTHORING_URL = "";  # no authoring server in a packaged game: hide its links
             nativeBuildInputs = [ pkgs.makeWrapper ];

@@ -50,7 +50,7 @@ async function guessTag(): Promise<string> {
 
 /** Save + available locales, once per page load; a fresh save gets the guessed language (plan 68).
  * A failure is retried on the next call. */
-export function ready(): Promise<Loaded> {
+function ready(): Promise<Loaded> {
   loading ??= load().catch((e) => {
     loading = null;
     throw new Error(`can't load the game: ${messageOf(e)}`);

@@ -22,9 +22,9 @@ export const ACHIEVEMENTS = [
 export type AchievementId = (typeof ACHIEVEMENTS)[number]["id"] | `BUNDLE_${string}`;
 
 /** Regional bundles whose DLC (and achievement) is in Steamworks. */
-export const DLC_BUNDLES: readonly string[] = [];
+const DLC_BUNDLES: readonly string[] = [];
 
-export const bundleAchievement = (bundle: string): AchievementId => `BUNDLE_${bundle.toUpperCase()}`;
+const bundleAchievement = (bundle: string): AchievementId => `BUNDLE_${bundle.toUpperCase()}`;
 
 const FIRST_USE: Record<JokerName, AchievementId> = {
   hint: "FIRST_SOPLO", skip: "FIRST_PASO", easier: "FIRST_BAJALE", category: "FIRST_CAMBIAZO", snipe: "FIRST_FRANCOTIRADOR",
@@ -45,7 +45,8 @@ export function inSteamworks(id: AchievementId): boolean {
   return id.startsWith("BUNDLE_") ? DLC_BUNDLES.some((b) => bundleAchievement(b) === id) : true;
 }
 
-/** Standard rules only (decisions 19, 74): not gamemaster, not customized, 12 levels, 4 cards, answers on, no «Ir a pregunta…». */
+/** Standard rules only (decisions 19, 74): not gamemaster, not customized, 12 levels, 4 cards, answers on, no «Ir a pregunta…».
+ * @internal exported for tests */
 export function qualifies(row: GameRow): boolean {
   const s = row.state.settings ?? {};
   return gameMode(row.state) !== "gamemaster" && !s.customized && !s.difficulty
