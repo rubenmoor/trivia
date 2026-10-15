@@ -14,6 +14,7 @@
     view,
     disabled,
     shattering,
+    pickable = true,
     tiles = $bindable(),
     onpick,
     onhover,
@@ -24,6 +25,8 @@
     disabled: boolean;
     /** The tile Francotirador is shattering. */
     shattering: number | null;
+    /** False with answers off (D-105): no pad glyphs. */
+    pickable?: boolean;
     /** The tile elements, for the input scope and the scope's hole. */
     tiles: HTMLButtonElement[];
     onpick: (i: number) => void;
@@ -50,7 +53,7 @@
           {/each}
         </span>
       {/if}
-      <span class="letter">{LETTERS[i]}{#if !view.struck.includes(i)}<span class="pad-glyph"><Prompt action={{ type: "pick", n: i + 1 }} padOnly /></span>{/if}</span>
+      <span class="letter">{LETTERS[i]}{#if pickable && !view.struck.includes(i)}<span class="pad-glyph"><Prompt action={{ type: "pick", n: i + 1 }} padOnly /></span>{/if}</span>
       <span class="text">{answer}</span>
       {#if badge}<span class="badge"><Icon name={badge} /></span>{/if}
     </button>

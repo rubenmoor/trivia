@@ -1,6 +1,7 @@
 <script lang="ts">
   // The game on the TV (plans/04-ui-tv-display.md, D-21, D-25): a state machine over the
-  // screens Start → Player → Choice → Level → Select → Question → Correct / Wrong → … → Victory, with one
+  // screens Start → Player → Choice → Level → Select → Question → Correct / Wrong → … → Victory (answers off, D-105:
+  // Question → Next → … → Completed), with one
   // transition routine and the admin overlay on Esc. The engine keeps the game (engine/, lib/api.ts).
   import { onDestroy, onMount, tick } from "svelte";
   import { fetchFlags, fetchGame, gameAction, noteRunningOut, playJoker, setFlag, type GameActionBody } from "../lib/api.ts";
@@ -35,6 +36,7 @@
   import Mods, { fetchModList, heldOff } from "./screens/Mods.svelte";
   import Player from "./screens/Player.svelte";
   import Question, { type JokerPlay } from "./screens/Question.svelte";
+  import Revealed from "./screens/Revealed.svelte";
   import { screenFailed, screenFor } from "./screens/registry.ts";
   import Select from "./screens/Select.svelte";
   import Start from "./screens/Start.svelte";
@@ -44,7 +46,7 @@
   import { BLOCK_DROP_MS, FADE_MS, FLIP_MS, GREETING_MS, PICK_MS, PRELOAD_MAX_MS, TEAR_MS, sleep } from "./timing.ts";
   import Veil from "./Veil.svelte";
 
-  type Screen = "language" | "consent" | "start" | "player" | "choice" | "level" | "select" | "question" | "correct" | "wrong" | "victory";
+  type Screen = "language" | "consent" | "start" | "player" | "choice" | "level" | "select" | "question" | "correct" | "wrong" | "victory" | "next" | "completed";
 
   const MUSIC: Record<Screen, Track | null> = {
     language: "normal",
@@ -58,6 +60,8 @@
     correct: "normal", // the fanfare plays at the reveal, then this comes back
     wrong: null,
     victory: "victory", // «Pomp and Circumstance», over the cheers
+    next: "normal",
+    completed: "normal", // no victory music (D-105)
   };
 
   const OURS = { Start, Language, Player, Choice, Level, Select, Question, Correct, Wrong, Victory };
@@ -122,15 +126,17 @@
   const flagTarget = $derived.by(() => {
     const id = screen === "question"
       ? (game?.question?.id ?? null)
-      : ["correct", "wrong", "victory"].includes(screen)
+      : ["correct", "wrong", "victory", "next", "completed"].includes(screen)
         ? (game?.last?.question_id ?? null)
         : null;
     return validUser && id && isOurs(id) ? id : null; // mod questions: no flags, no reports (plan 93)
   });
   const mode = $derived(game?.settings.mode ?? "gamemaster");
   const levels = $derived(levelsOf(game));
-  /** Blocks on the tower: correct answers in this game. */
-  const blocks = $derived(game?.history.filter((h) => h.correct).length ?? 0);
+  /** Blocks on the tower: correct answers in this game; answers off (D-105): the levels behind. */
+  const blocks = $derived(
+    game?.settings.answers === false ? game.level - 1 : (game?.history.filter((h) => h.correct).length ?? 0),
+  );
 
   onMount(() => {
     music(MUSIC.start);
@@ -375,6 +381,8 @@
     const apply = () => (game = next);
     if (next.phase === "won") await go("victory", "applause-big", apply);
     else if (next.phase === "lost") await go("wrong", "boom", apply);
+    else if (next.phase === "completed") await go("completed", "whoosh", apply);
+    else if (next.last?.revealed) await go("next", "whoosh", apply);
     else await go("correct", "applause", apply);
   }
 
@@ -541,8 +549,8 @@
     else if (on === "start" && a.type === "language" && !notice) openLanguage();
     else if (on === "level" && a.type === "confirm") go(table(game), "paper");
     else if (on === "select" && a.type === "pick" && a.n <= 4 && picked === null) pick(a.n - 1);
-    else if (on === "correct" && a.type === "confirm") toLevel();
-    else if ((on === "wrong" || on === "victory") && a.type === "confirm") toStart();
+    else if ((on === "correct" || on === "next") && a.type === "confirm") toLevel();
+    else if ((on === "wrong" || on === "victory" || on === "completed") && a.type === "confirm") toStart();
     else return false;
     return true;
   }
@@ -575,7 +583,7 @@
   // Steam rich presence «Nivel 7 de 12» while playing (plan 85).
   let presence = "";
   $effect(() => {
-    const level = ["level", "select", "question", "correct"].includes(screen) ? game?.level : undefined;
+    const level = ["level", "select", "question", "correct", "next"].includes(screen) ? game?.level : undefined;
     const next = level ? `${level}/${levels}` : "";
     if (!steam?.available || next === presence) return;
     presence = next;
@@ -623,7 +631,7 @@
       <Stage />
       <div class="corner-hud"><Hud level={null} player={game.player} /></div>
       <aside class="side-tray"><JokerTray readonly left={game.jokers_left} /></aside>
-      <S.Level {game} {levels} {blocks} drop={previous === "correct"} {busy} onnext={() => go(table(game), "paper")} />
+      <S.Level {game} {levels} {blocks} drop={previous === "correct" || previous === "next"} {busy} onnext={() => go(table(game), "paper")} />
     {:else if screen === "select" && game}
       <Stage />
       <div class="corner-hud"><Hud level={game.level} {levels} player={game.player} /></div>
@@ -642,6 +650,7 @@
           jokers={game.jokers}
           jokersLeft={game.jokers_left}
           {swappedBy}
+          answersOff={game.settings.answers === false}
           play={playJokerAction}
           onplayed={jokerPlayed}
           onanswered={answered}
@@ -653,6 +662,9 @@
     {:else if screen === "wrong" && game?.last}
       <Stage mood="wrong" />
       <S.Wrong {game} last={game.last} {levels} {blocks} {busy} onhome={toStart} />
+    {:else if (screen === "next" || screen === "completed") && game?.last}
+      <Stage />
+      <Revealed last={game.last} completed={screen === "completed"} {busy} onnext={screen === "completed" ? toStart : toLevel} />
     {:else if screen === "victory" && game}
       <Stage mood="victory" />
       <S.Victory {game} {levels} {busy} onhome={toStart} />

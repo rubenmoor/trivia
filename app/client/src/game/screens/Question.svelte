@@ -53,6 +53,7 @@
     jokers,
     jokersLeft = null,
     swappedBy = null,
+    answersOff = false,
     play,
     onplayed,
     onanswered,
@@ -73,6 +74,8 @@
     jokersLeft?: JokerBudget | null;
     /** The joker that just swapped this question in (Bájale, Cambiazo), for the dial and the label. */
     swappedBy?: JokerEvent | null;
+    /** «Select answer to advance» is off (D-105): no picks, the padlock reveals. */
+    answersOff?: boolean;
     /** Sends a joker to the engine (Game.svelte shows errors); null if it was refused. */
     play: (body: JokerPlay) => Promise<{ game: Game; event: JokerEvent } | null>;
     /** The joker is done on screen: Game.svelte takes the new game (and changes screen if needed). */
@@ -145,7 +148,7 @@
   }
 
   function tap(i: number) {
-    if (submitted || jokerBusy || question.struck.includes(i)) return;
+    if (answersOff || submitted || jokerBusy || question.struck.includes(i)) return;
     if (mode === "snipe") return aim(i);
     if (mode) return;
     disarm();
@@ -195,6 +198,28 @@
     } catch (e) {
       submitted = false;
       music(locked !== null ? "submitted" : "question");
+      error = errorText(e);
+    }
+  }
+
+  /** Answers off (D-105): the padlock opens on the correct answer, no drum roll, no fanfare. */
+  async function reveal() {
+    if (!answersOff || submitted || jokerBusy || mode) return;
+    disarm();
+    submitted = true;
+    error = null;
+    mediaEl?.pause();
+    music(null);
+    sfx("padlock-open");
+    try {
+      const game = await gameAction("reveal");
+      result = game?.last ?? null;
+      revealed = true;
+      await wait(AFTER_REVEAL_MS);
+      onanswered(game);
+    } catch (e) {
+      submitted = false;
+      music("question");
       error = errorText(e);
     }
   }
@@ -315,7 +340,7 @@
   function padMap(): Record<number, Intent> {
     const f = document.activeElement;
     const other = f instanceof HTMLElement && f.hasAttribute("data-nav") && !tiles.includes(f as HTMLButtonElement);
-    return { ...PAD_PICKS, ...(other ? PAD_TOKEN : {}), ...PAD_FINAL };
+    return { ...(answersOff ? {} : PAD_PICKS), ...(other ? PAD_TOKEN : {}), ...PAD_FINAL };
   }
 
   /** LB/RB: focus the previous/next playable token, wrapping. */
@@ -339,7 +364,7 @@
         if (a.type === "joker") press(a.name);
         else if (i !== null) tap(i);
         else if (a.type === "back") unlock();
-        else if (a.type === "confirm" || a.type === "submit") submit();
+        else if (a.type === "confirm" || a.type === "submit") (answersOff ? reveal : submit)();
         else if (a.type === "joker-focus") focusToken(a.step);
         else if (a.type === "replay") replay();
         else if (a.type === "peek") peeking = a.down;
@@ -443,13 +468,14 @@
     <Answers
       answers={question.answers}
       {view}
-      disabled={submitted || hit !== null}
+      disabled={answersOff || submitted || hit !== null}
+      pickable={!answersOff}
       {shattering}
       bind:tiles
       onpick={tap}
       onhover={(i) => mode === "snipe" && !question.struck.includes(i) && (target = i)}
     />
-    <FinalAnswer locked={locked !== null} ready={finalReady} {submitted} {revealed} {error} onsubmit={submit} />
+    <FinalAnswer locked={locked !== null} ready={finalReady} {submitted} {revealed} {error} {answersOff} onsubmit={submit} onreveal={reveal} />
   </footer>
 
   <Media bind:this={mediaEl} bind:failed={mediaFailed} {question} {shown} {paused} dark={submitted && !revealed} onended={mediaEnded} />

@@ -411,6 +411,9 @@ const es = {
       correct: "¡Correcto!",
       wrong: "¡Oh no!",
       answerWas: "La respuesta correcta era",
+      /** Answers off (D-105): after a reveal, and after the last level. */
+      next: "Siguiente ronda",
+      completed: "Cuestionario completado",
     },
     victory: {
       title: "¡Ganaron!",
@@ -430,6 +433,8 @@ const es = {
       final: "Respuesta final",
       finalWaiting: "Respuesta final…",
       prompt: "Elijan una respuesta",
+      /** The padlock with answers off (D-105). */
+      reveal: "Mostrar respuesta",
     },
   },
   copy: {

@@ -358,6 +358,9 @@ export const de = {
       correct: "Richtig!",
       wrong: "Oh nein!",
       answerWas: "Die richtige Antwort war",
+      /** Answers off (D-105): after a reveal, and after the last level. */
+      next: "Nächste Runde",
+      completed: "Quiz abgeschlossen",
     },
     victory: {
       title: "Gewonnen!",
@@ -375,6 +378,8 @@ export const de = {
       final: "Endgültige Antwort",
       finalWaiting: "Und die Antwort ist…",
       prompt: "Antwort wählen",
+      /** The padlock with answers off (D-105). */
+      reveal: "Antwort zeigen",
     },
   },
   copy: {

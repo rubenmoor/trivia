@@ -1,5 +1,6 @@
 <script lang="ts">
   // «Respuesta final» (04-ui-tv-display.md): the padlock shakes, opens and slides away (UI-12), then the button.
+  // Answers off (D-105): the padlock is the button and reveals.
   import { t } from "../../lib/i18n.ts";
   import Icon from "../Icon.svelte";
   import Prompt from "../Prompt.svelte";
@@ -10,7 +11,9 @@
     submitted,
     revealed,
     error,
+    answersOff = false,
     onsubmit,
+    onreveal,
   }: {
     /** An answer is locked in. */
     locked: boolean;
@@ -19,7 +22,10 @@
     submitted: boolean;
     revealed: boolean;
     error: string | null;
+    /** «Select answer to advance» is off (D-105). */
+    answersOff?: boolean;
     onsubmit: () => void;
+    onreveal: () => void;
   } = $props();
 </script>
 
@@ -33,6 +39,12 @@
         <p class="waiting">{t("screen.question.finalWaiting")}</p>
       </div>
     {/if}
+  {:else if answersOff}
+    <button class="reveal-button" onclick={onreveal} data-focus-default>
+      <span class="padlock clickable" aria-hidden="true"><Icon name="lock" size="100%" /></span>
+      <span class="label">{t("screen.question.reveal")}</span>
+      <Prompt action="confirm" />
+    </button>
   {:else}
     <button class="candy final-button" class:ready onclick={onsubmit} disabled={!ready} tabindex={ready ? 0 : -1}>
       {t("screen.question.final")} <Prompt action="submit" />
@@ -84,6 +96,25 @@
     color: var(--amber);
     opacity: 0;
     transform: translate(calc(14 * var(--u)), calc(1 * var(--u))) rotate(35deg) scale(0.7);
+  }
+  .reveal-button {
+    display: inline-flex;
+    align-items: center;
+    gap: calc(0.8 * var(--u));
+    padding: calc(0.3 * var(--u)) calc(1.2 * var(--u));
+    border: none;
+    border-radius: calc(1 * var(--u));
+    background: none;
+    text-shadow: var(--text-shadow);
+  }
+  .padlock.clickable {
+    transition: transform 0.2s var(--spring), color 0.2s;
+  }
+  .reveal-button:hover .padlock,
+  .reveal-button:focus-visible .padlock,
+  .reveal-button:global([data-nav]) .padlock {
+    color: var(--amber);
+    transform: scale(1.08);
   }
   .prompt {
     position: absolute;
