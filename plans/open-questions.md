@@ -16,7 +16,7 @@ None.
 - **OQ-30** No default mode: five game modes; no presets, no checkpoint, no skip outside gamemaster mode; «Reportar pregunta» only logs (D-74).
 - **OQ-29** Desktop shell: Electron; Steam binding (steamworks-ffi-node or steamworks.js) picked in SW-2 (D-63).
 - **OQ-17** Target pool size: 5000 approved `base` questions, tapering at high difficulties (D-52).
-- **OQ-34** Store name: «Living Room Trivia», in Spanish «Trivia en Familia» (Steam localized name), pending the name and trademark check PUB-7 (D-50).
+- **OQ-34** Store name: «Living Room Trivia», in Spanish «Trivia en Familia», in German «Wohnzimmer-Quiz» (Steam localized names); final, PUB-7 passed 2026-10-15 (D-50, pm decisions 78, 176).
 - **OQ-45** LLM-approved questions no human has seen are an option to review, not a to-do; `needs_work` and the other open queues come first (D-42).
 - **OQ-44** No per-bundle house style: a session mixes questions from every active bundle, so they all follow one house style (D-44).
 - **OQ-41** A non-base bundle's categories are in `app/data/bundles/<id>/` (they ship), and its concepts and axes in `authoring/data/bundles/<id>/`. Subcategory names and category slugs are unique across bundles; question ids are global. **OQ-42** The Colombian subcategories leave `base` for `colombia`'s own list, and their questions keep their bundle. **OQ-43** Prompt only; the developer moves the rest in the review tool (D-43).

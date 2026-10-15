@@ -1,6 +1,6 @@
 # 17 — Publishing: Licenses, Disclosures, Store
 
-**Status:** in progress: PUB-10 done; PUB-7 waits on pm decision 176, PUB-6 on pm decision 177 (pm plan 129)
+**Status:** in progress: PUB-10 and PUB-7 done; PUB-6 waits on pm decision 177 (pm plan 129)
 
 Part of the Steam plan ([11](11-steam.md)). Everything that has to be true legally and on paper before the game is sold or given away on Steam. Not legal advice: where it matters (tax, a company, contested licenses), check with a professional or with Valve's documentation.
 
@@ -52,7 +52,7 @@ Steam requires developers to disclose AI-generated content on the store page (co
 ## Steamworks and store
 - **Account:** Steamworks partner signup, identity and tax interview (bank details, a W-8BEN for non-US individuals or the company equivalent), and a **$100 app credit** per game (recouped after $1,000 revenue). Holder: the developer as a person, W-8BEN, after a tax advisor check; store Developer/Publisher as a label; company later via app transfer (D-98).
 - **Price (D-98):** paid one-time purchase, $9.99 for now; Valve's regional matrix; launch discount; packs as free DLC (D-95), no paid DLC.
-- **Name (D-50):** «Living Room Trivia», with the Steam localized name «Trivia en Familia» for Spanish (Steamworks → General Application Settings; same limits as a name change, so set both before the coming-soon page). Check both names on Steam, in trademark registers and for a domain (PUB-7).
+- **Name (D-50):** «Living Room Trivia», with the Steam localized name «Trivia en Familia» for Spanish (Steamworks → General Application Settings; same limits as a name change, so set both before the coming-soon page). German localized name «Wohnzimmer-Quiz» (decision 78). All three final: PUB-7 passed (pm decision 176).
 - **Store page:** capsule images in the required sizes, screenshots, a trailer (20 s of gameplay per store language, `trivia-trailer`, PUB-8, pm plan 88), short and long description per language (LUI-6), system requirements, supported languages table, controller support flags, Steam Deck compatibility.
 - **Content survey / age rating:** the Steam questionnaire (no violence, no gambling; kid-friendly). IARC is optional on Steam.
 - **Privacy:** the game sends nothing on its own; only a question report on the player's «Enviar» (plan 103). Texts: public `PRIVACY.md` (en, es, de); store-page paragraph per language and the Steamworks steps in `11-steam.md` "Privacy (ST-5)" (task 867). Player names stay on the device (and in Steam Cloud).
@@ -176,6 +176,7 @@ This section records what a worker found for the three store names: «Living Roo
     - «EN FAMILIA» in class 41 in Spain (a pediatrics association) and Chile (a TV show).
     - «Trivia Family - En Español» on the Spanish App Store.
     - For «Wohnzimmer-Quiz», nothing close; «Wohnzimmer» is a common word in German marks.
+- Result (2026-10-15, pm decision 176): all three pass; D-50 and OQ-34 final. No professional clearance search.
 
 ## Steamworks signup (PUB-6)
 This is the developer's checklist for becoming a Steamworks partner as a person (decision 67, D-98) and creating the app. Workers only research and write it; every step below is the developer's. Valve's order is paperwork, then the fee, then bank, tax and identity, so the advisor check comes before the first step. Once done, report it in pm decision 177 "Steamworks app created? App ID?" (pm plan 129). Not legal or tax advice.
@@ -207,7 +208,7 @@ This is the developer's checklist for becoming a Steamworks partner as a person 
 - [ ] **Bank details**: an account in the developer's legal name (routing number, account number, bank address).
 - [ ] **Tax interview**: the W-8BEN questionnaire for a non-US individual. Enter the TIN the advisor named to get the treaty rate. Then wait 10–15 business days for verification and watch e-mail for document requests.
 - [ ] **Store Developer/Publisher label**: the developer's choice, e.g. a studio label. It's only a label, not a company and not the legal name. It's set on the store page later; decide it now so the decision answer can carry it.
-- [ ] **Create the app** with the app credit: name «Living Room Trivia» if PUB-7 passed (pm decision "Store names pass PUB-7?"), else a working name, which can change before "Coming soon". Note the App ID.
+- [ ] **Create the app** with the app credit: name «Living Room Trivia» (PUB-7 passed, pm decision 176). Note the App ID.
   - DLC apps (one per shipped pack, decision 66) are created later from the base app, with no app credit: `task 254: write plan: Steamworks app configuration (SW-7)`.
 - Not here: the build account and its permissions (`plan 89: Builds, depots and upload (SW-10, SW-6)`); the switch from Spacewar 480 to the real App ID (SW-7).
 - Report in the pm decision: App ID, payment date of the app credit, Developer/Publisher label.
@@ -219,7 +220,7 @@ This is the developer's checklist for becoming a Steamworks partner as a person 
 - [x] PUB-4 Decide the code and content license (OQ-35); add a `LICENSE` file. *pm plan 40, 2026-10-14 (D-102): `LICENSE` (MIT), `LICENSE-content.md` (questions reserved; `modding/` MIT; media, fonts, sounds excluded); both at the desktop artefact root (`electron-builder.yml` `extraFiles`), in the credits' "Game" section; README "License", `directory.md`.*
 - [x] PUB-5 Credits screen and a generated `CREDITS.md` in the build (media, audio, fonts, glyphs, libraries). *Done 2026-10-12 (pm plan 47): `app/client/credits.ts` writes `dist/credits.json` + `dist/CREDITS.md` (1,102 media, 13 sounds, fonts, glyphs, Svelte); Credits screen from the ☰ overlay. Open: Electron entry (task 621), `CREDITS.md` at the desktop artefact root, Game section after OQ-35.*
 - [ ] PUB-6 Steamworks signup as a private person (D-98): tax advisor check first (pm decision 67's questions: registration, treaty rate, VAT, DSA address); identity, bank, W-8BEN tax interview; store Developer/Publisher label; pay the $100 app credit (DLC packs need none). *Checklist: "Steamworks signup (PUB-6)" (pm plan 129); waits on pm decision 177.*
-- [ ] PUB-7 Name and trademark check for «Living Room Trivia» and «Trivia en Familia» (D-50); if it fails, OQ-34 reopens.
+- [x] PUB-7 Name and trademark check for «Living Room Trivia», «Trivia en Familia» and «Wohnzimmer-Quiz» (D-50, pm decision 78). *pm plan 129, 2026-10-15: all three pass (pm decision 176); no Steam game, no live identical mark in classes 9/28/41; findings under "Name check (PUB-7)". D-50, OQ-34 final.*
 - [ ] PUB-8 Store page: texts, capsules, screenshots, trailer, AI disclosure, privacy line. *Plan: pm plan 88 (drafts in `17a-store-page.md`, capsule art: pm decision 77, scripted screenshots, scripted trailer `trivia-trailer`).*
 - [ ] PUB-9 Content survey and age rating.
 - [x] PUB-10 Check Anthropic's commercial-use terms for the generated content. *pm plan 129, 2026-10-14: Consumer Terms (effective 2025-10-08) apply to `claude -p` on the developer's subscription. Outputs are assigned to the user and may be sold, with no attribution needed. Headless Claude Code is explicitly permitted. Disclosure facts unchanged. Details are under "AI disclosure".*

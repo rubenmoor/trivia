@@ -141,7 +141,7 @@ The values the developer enters in Steamworks for the base app and the free DLC 
 
 ### App (Basic info)
 - [ ] App ID: decision 177's; type Game.
-- [ ] Names (D-50): default/english «Living Room Trivia»; latam + spanish «Trivia en Familia»; german «Wohnzimmer-Quiz» (decision 78: German store name (PUB-8, D-50): keep «Living Room Trivia» or a localized one?). If PUB-7 fails (decision 176: Store names pass PUB-7?), this row waits for the new OQ-34 decision. In-game `productName` «Trivia» unchanged ("Exe metadata" above).
+- [ ] Names (D-50): default/english «Living Room Trivia»; latam + spanish «Trivia en Familia»; german «Wohnzimmer-Quiz» (decision 78: German store name (PUB-8, D-50): keep «Living Room Trivia» or a localized one?). Final: PUB-7 passed (decision 176: Store names pass PUB-7?). In-game `productName` «Trivia» unchanged ("Exe metadata" above).
 
 ### Installation → General
 - [ ] Install folder: `LivingRoomTrivia` (Cloud paths don't depend on it).

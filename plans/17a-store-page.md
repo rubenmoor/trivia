@@ -126,7 +126,7 @@ Only the fields that differ from `es`: «vosotros», «vídeo», «ordenador», 
   - Controller: «controles de Xbox y PlayStation, teclado o mouse» → «mandos de Xbox y PlayStation, teclado o ratón»
 
 ### German (`de`)
-- **Name:** Wohnzimmer-Quiz (provisional: decision 78 picked it; stands only once PUB-7's name and trademark check passes, `task 253: write plan: Partner account, name check and AI terms`)
+- **Name:** Wohnzimmer-Quiz (decision 78; PUB-7 passed, decision 176)
 - No «ihr», no «Sie» (de style guide): impersonal or infinitive
 - **Short description** (≤ 300):
   > Ein Quiz für die ganze Familie am Fernseher: zwölf Fragen in Folge richtig beantworten und gewinnen. Vier Altersgruppen von Kindern bis Erwachsenen, fünf Joker für knifflige Momente und Fragen mit Bildern, Tönen und Videos. Allein oder in der Gruppe spielen, oder die Spielleitung übernimmt.
@@ -478,7 +478,7 @@ Typographic capsules, library art and the game icon (decision 77: store capsule 
 ### Rendering
 - `node authoring/store/capsules.mjs [--only <path part>] [--visible]` from the dev shell, after `npm run build` (the shell serves the fonts); ~1 min
 - Shell under Xvfb with `--disable-gpu` (GPU compositing under Xvfb stalls CDP captures), raw CDP, viewport 3840×2160; each asset is a page swapped into the game's page
-- Names (D-50, decision 78): en «Living Room Trivia», es and es-ES «Trivia en Familia» (shared), de «Wohnzimmer-Quiz» (provisional until PUB-7's check); logotype = small amber line + big word
+- Names (D-50, decision 78): en «Living Room Trivia», es and es-ES «Trivia en Familia» (shared), de «Wohnzimmer-Quiz» (PUB-7 passed, decision 176); logotype = small amber line + big word
 - DLC: base logotype + pack name in a panel, a flag-coloured stripe (amber, sapphire, coral) at the bottom; name from `app/data/names.<lang>.json`, else `bundles.json`; replace with the DLC store name once `task 783: Free DLC store texts in 17a` sets one, then re-run
 - Re-run after any palette, font or name change
 
