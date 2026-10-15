@@ -7805,6 +7805,56 @@ In this order: all content in <language> + spelling standard; words all speakers
 ## Done when
 - `locale-zh-Hans.md`, `locale-ru.md`, `locale-pt-BR.md` and `fit.md` exist as the developer approved them, each with an answered decision and its consequences.
 - `prompt(...)` renders for each new locale; es/en/de prompts unchanged; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-15T20:13:25Z', 1149);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (141, 12, 'Native reviewers', 720, 'Who checks `zh-Hans`, `ru` and `pt-BR` content, and how they reach it. Part 4 of `plan 60: masterplan`. No one in the family reads these languages (milestone constraint), yet every translation run needs a native spot check (`authoring/QC.md` "Translation runs", D-87) at the release bar (D-79: 30 questions, ≥ 90 % agreement), and each pilot''s go (`qgen health ack`) reads it. This plan picks the people (a pm decision), builds the offline path between them and the review tool, and gates the runs on an engaged reviewer per locale.
+
+## Decisions
+- `decision 220: Native reviewers for zh-Hans, ru, pt-BR: paid freelancers, volunteers, or mixed?` (pending): who, costs, recommended paid per language with the pilot as a trial. Tasks 4 waits on it.
+- `decision 221: How does an outside native reviewer reach the review tool?` (recorded): an offline sheet per run, returned as a verdict file; no reachable review page.
+- Relies on: `decision 35: Translation prompts and markets per locale (plan 66)` (text in media is never a problem), `decision 167: Translation prompt for a regional bundle (en for colombia)`, D-79 (release bar), D-87 (runs, pilot stop).
+
+## What a reviewer does (one per language)
+- Before the pilot: read the approved `authoring/tools/prompts/locale-<locale>.md` (`plan 140: Translation prompts and markets per locale`); findings → a new pm decision, never a silent edit.
+- Per run `tr-<locale>-<n>`: the spot check of its 30-question sample (`spot_checks.sample`), plus general comments (patterns) for QC step 4 proposals on `locale-<locale>.md`, `translate.md`, `translate-review.md`.
+- zh only: the `chinese-base` fit pass sample (format by `decision 217: chinese-base membership: how does a translated base question count for chinese-base?`, part 2).
+- zh only, if `decision 218: New China-centric questions for chinese-base: drafted in Spanish and translated, or drafted in Chinese?` makes sources Chinese-drafted: every such source (a full review, not a sample); its sheet comes with part 6''s plan.
+- UI (part 5): the `trivia-gallery` screens of their locale, then a playtest via a Steam key on the `beta` branch; findings feed "Playtest passed? (<lang>)".
+- Store texts (part 8): read and correct the drafts.
+
+## Spot-check sheet (decision 221)
+- `qgen spotcheck export <run> [--controls 3]` → `work/<run>/spotcheck-<run>.html`: one self-contained file (inline JS/CSS, small inline images; audio/video named, not embedded), opens offline in any browser.
+  - Brief at the top (from `authoring/NATIVE-REVIEW.md`), then the run''s sample in `spot_checks.sample` order.
+  - Per item: English reference (the approved, non-stale `en` translation of the source; else an English gloss made at export, marked "gloss"), the translation (question, four options with the right one marked, hints, explanation if any), subcategory, difficulty 1–15.
+  - Blind by construction: no LLM review, audit, status or feedback in the file.
+  - Reviewer''s input per item: approve / needs_work / reject / doesn''t travel (as the review tool), problem kinds (the server''s `PROBLEMS`), feedback in English, an optional corrected text in the target language; general comments at the end.
+  - Progress kept in the browser''s `localStorage`; «Download verdicts» → `spotcheck-<run>.verdicts.json` (run, sample ids, sheet hash, verdicts); the reviewer sends it back by e-mail.
+  - Controls: `--controls N` adds N planted faulty copies of sample items (wrong right answer, changed number, garbled option; ids `control-<k>`, listed in `work/<run>/spotcheck-controls.json`, never in a pool); default 3 for new locales, 0 otherwise.
+- `qgen spotcheck import <file> [--dry-run]`: checks run, ids and sheet hash; writes each verdict as the translation''s human review (`reviewer: "human"`, `by: "native"`, no name: the repo is public), then `spot_checks.record` (same file, same item shape, `locale` set); controls scored apart: "controls caught k/N" printed and added to the run report''s QC section by `qgen report --qc`; a corrected text goes into the feedback, not over the translation (the next run''s fix step reads it as today).
+- Code in `authoring/tools/spotcheck.py` (export, import) reusing `authoring/server/spot_checks.py` and `reviews.py`; `qgen.py` only dispatches. The review tool stays local (`127.0.0.1`), unchanged.
+- The developer''s own en/de checks keep using the review tool; the sheet works for any `tr-*` run (also en/de, if wanted).
+
+## Gate: no run without a reviewer
+- No code gate: runs only come from the tasks of parts 6 and 7.
+- After decision 220, per locale a `once` decision "Native reviewer for <locale> engaged?" (option "engaged"); parts 6 and 7 make their pilot tasks pending on it (their plans; part 6 also for `chinese-base`). Raised by task 4.
+- Names, contacts, payments: outside the repo (the developer''s own records); credits by consent are part 9''s.
+
+## Brief: `authoring/NATIVE-REVIEW.md`
+- For the reviewers, in English, short: the game (family trivia on a TV, 12 questions to victory), each job above with time per job, what they check (QC.md extra checks: faithful to the source, natural, hints and wrong answers that work in the language, difficulty for the language''s players; text in media is never a problem), the locale prompt''s rules as the yardstick, how to return work, deadline per sheet (~1 week).
+- For the developer, a short section: per job what to send (sheet, gallery zip, Steam key, store text draft) and what to do with the reply (import, `qgen report --qc`, answer the playtest or store decisions).
+- QC.md "Translation runs": the spot check by an outside reviewer is the sheet + import; pm worker: `pm decision add "Spot check tr-<locale>-<n> done?"` as today, body names the sheet path.
+
+## Tasks (suggested split)
+1. `qgen spotcheck export` and `import` with controls (above); try it end to end on an existing `tr-en-*` or `tr-de-*` run with a throw-away verdict file (`--dry-run` import, nothing committed under `authoring/data/`); `qgen report --qc` shows "controls caught". Docs: QC.md, README how-to, D-entry (D-106 or next) in `plans/decisions.md`, `plans/15b-question-translation.md` QT-6 note.
+2. `authoring/NATIVE-REVIEW.md` brief (above), embedded by the export; `directory.md` unchanged (inside `authoring/`).
+3. zh fit-sample sheet: `qgen spotcheck export --fit <run>` (or the command part 2 names), fit yes / no + reason per item, import writes the developer-correctable fit field; pending on decision 217 and part 2''s fit model task.
+4. On decision 220''s answer: a posting / request text per language (scope, ~hours, rate or volunteer credit, trial = pilot sheet) in `work/native-review/` (not committed), the three "Native reviewer for <locale> engaged?" decisions, `pm decision consequences 220`; pending on decision 220.
+
+## Left to other parts
+- Running the pilots and the go (`qgen health ack`): parts 6, 7. Playtest decisions, gallery per locale: part 5. Store texts: part 8. Credits: part 9.
+
+## Done when
+- `qgen spotcheck export|import` work end to end on a translation run (blind sheet, verdicts recorded as spot checks, controls scored); `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.
+- `authoring/NATIVE-REVIEW.md` exists; QC.md names the sheet path.
+- Decision 220 answered; one "engaged" decision per locale raised.', '2026-10-15T20:15:43Z', 1150);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -26927,12 +26977,12 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Fit pass prompt per `decision 217: chinese-base membership: how does a translated base question count for chinese-base?`; if still pending, the plan''s fit-pass task waits for it.
 - Prompts are the developer''s (D-36): one pm decision per locale to approve the drafts.
 - Plan priority ~700.', '2026-10-15T20:09:27Z', '2026-10-15T20:13:28Z', 1146, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1150, 60, 'write plan: Native reviewers', 'plan', 'open', 1000, NULL, 'Write the plan for part 4 of `plan 60: masterplan` (`pm plan add 12 …`): who reviews `zh-Hans`, `ru`, `pt-BR` and how, before any `tr-zh-Hans-*`, `tr-ru-*`, `tr-pt-BR-*` or `chinese-base` run (milestone constraint: no native speaker in the family).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1150, 60, 'write plan: Native reviewers', 'plan', 'done', 1000, '2026-10-15, plan 141: Native reviewers; decision 220 raised (who: paid/volunteer/mixed), decision 221 recorded (offline spot-check sheet)', 'Write the plan for part 4 of `plan 60: masterplan` (`pm plan add 12 …`): who reviews `zh-Hans`, `ru`, `pt-BR` and how, before any `tr-zh-Hans-*`, `tr-ru-*`, `tr-pt-BR-*` or `chinese-base` run (milestone constraint: no native speaker in the family).
 
 - Raise a pm decision: paid (freelance, per sample or hour) vs. volunteer (community, Steam forum after launch), one per language, with options, costs, the recommended one; they also do the UI playtest (part 5) and store texts (part 8).
 - How a reviewer outside reaches the review tool (`trivia-authoring`, :8001, developer''s machine): e.g. exported spot-check sheet per run imported back as verdicts, or a reachable review page; feeds the per-run native spot check (`authoring/QC.md`, D-87) and the pilot''s go/no-go.
 - What they check: each run''s spot check (size: release bar D-79), the fit pass sample, China-centric sources if `decision 218: New China-centric questions for chinese-base: drafted in Spanish and translated, or drafted in Chinese?` makes them Chinese-only.
-- Can be planned in parallel with parts 1–3. Plan priority ~720.', '2026-10-15T20:09:27Z', NULL, 1146, 0);
+- Can be planned in parallel with parts 1–3. Plan priority ~720.', '2026-10-15T20:09:27Z', '2026-10-15T20:15:47Z', 1146, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1151, 60, 'write plan: UI in the new languages', 'plan', 'open', 1000, NULL, 'Write the plan for part 5 of `plan 60: masterplan` (`pm plan add 12 …`): the game UI in `zh-Hans`, `ru`, `pt-BR`.
 
 - Scope: masterplan part 5: fonts per script (Baloo 2 has no Cyrillic, no CJK in either font; licence, CJK subset, `app/desktop/media-budget.json`, fallback chain in `theme.css`); catalogs `app/client/src/locales/{zh-Hans,ru,pt-BR}.ts` and style guides `locales/style/<locale>.md`; joker names (decision 188), key letters (decision 53), `check:literals`; CJK line breaking, Russian length, picker endonyms, `/comodines?lang=`, `trivia-gallery` locales and the developer''s gallery check (plan 100); achievement texts and rich presence strings; native playtest decisions per language like decisions 62–65, by part 4''s reviewers.
@@ -26966,6 +27016,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:11:24Z', NULL, 1147, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1157, 140, 'create tasks for plan 140: Translation prompts and markets per locale', 'split', 'open', 1000, NULL, 'Split plan 140 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:13:25Z', NULL, 1149, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1158, 141, 'create tasks for plan 141: Native reviewers', 'split', 'open', 1000, NULL, 'Split plan 141 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:15:43Z', NULL, 1150, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -29081,6 +29133,35 @@ Options:
 2. Drafted in Chinese: `zh-Hans` becomes a second source language (draft, review, fix, audit prompts in Chinese, a source file for zh-only questions). Natural Chinese and language questions possible; a new pipeline path, against the milestone''s constraint, and only native reviewers can check the sources.
 3. Spanish by default (1); only the language subcategories (characters, idioms, wordplay) drafted in Chinese, reviewed by the native reviewers only.', NULL, NULL, '2026-10-15T20:07:50Z', NULL, 374, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (219, 'Do the new locales (zh-Hans, ru, pt-BR) steer es drafting from the start?', 'answered', '[]', 'D-84 / decision 37: the translations'' source shortfall drives es drafting once es meets its target. Counting ru/pt-BR''s empty pools at once would steer es drafting before anyone decided to pay for those pools (plan 60 part 7 puts that into its budget decision); zh-Hans plays chinese-base, not base. Until part 2 adds chinese-base, zh-Hans is listed by no bundle: a validate warning, not an error, so validate passes. Plan 139: New locales in data and pipeline.', 'No: source shortfall counts only locales in translations.DRIVES_DRAFTING (en, de) that the bundle lists; ru and pt-BR join by part 7''s budget decision; zh-Hans never steers base; a locale no bundle lists only warns in qgen validate', NULL, '2026-10-15T20:11:30Z', '2026-10-15T20:11:30Z', 1147, NULL, 'rule', 1147, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (220, 'Native reviewers for zh-Hans, ru, pt-BR: paid freelancers, volunteers, or mixed?', 'pending', '["1: paid freelancer per language, the pilot spot check as the paid trial", "2: volunteers (community after launch, native-speaking acquaintances), credited, unpaid", "3: mixed: paid for the pilot, prompt read, UI playtest and store texts; volunteers for the per-run spot checks, paid fallback"]', 'Milestone 12 (`plan 60: masterplan`, part 4): no one in the family reads Chinese, Russian or Portuguese, but every `tr-<locale>-<n>` run needs a native spot check (`authoring/QC.md` "Translation runs", D-87) at the release bar (D-79: 30 questions, ≥ 90 % agreement), and the pilot''s go (`qgen health ack`) reads it. No `tr-zh-Hans-*`, `tr-ru-*`, `tr-pt-BR-*` or `chinese-base` run starts before a reviewer is engaged for its locale.
+
+One reviewer per language, for everything native in the milestone:
+- read the approved locale prompt (`plan 140: Translation prompts and markets per locale`) before the pilot
+- spot check of each run: 30 questions, English reference beside the translation (they need not read Spanish), returned as a verdict file (offline sheet, no access to the developer''s machine)
+- zh only: the `chinese-base` fit pass sample (does this `base` question fit a Chinese family?)
+- UI: screen gallery read + one playtest via a Steam key on the beta branch (part 5, "Playtest passed? (<lang>)")
+- store texts (part 8)
+
+Workload per language (estimate, mine):
+- runs to 5000 approved: pilot + ~18–20 runs of 300 → ~20 spot checks × ~45 min ≈ 15 h
+- prompt read 1 h, UI gallery + playtest 3–4 h, store texts 1–2 h
+- zh: + fit samples ~3 h
+- total ≈ 20–25 h per language, spread over months (one check per run, as runs happen)
+- if `decision 218: New China-centric questions for chinese-base: drafted in Spanish and translated, or drafted in Chinese?` makes China-centric sources Chinese-drafted (option 2, or 3 for the language subcategories), the zh reviewer is their only human reviewer: a full review of every such source (~1 min each; 2000 sources ≈ 35 h more), not a spot check. Weigh that in decision 218.
+
+Costs (rough, from general knowledge of freelance rates; not checked on the web):
+- paid native reviewer / proofreader on a freelance platform (e.g. Upwork, ProZ): ~$20–40 per hour for zh, ru, pt-BR (pt-BR and ru usually at the low end)
+- option 1: ≈ $500–1000 per language, ≈ $1500–3000 for all three (+ ≈ $700–1400 for zh if decision 218 goes Chinese)
+- option 2: $0; credit in the game''s credits (with their consent) and a free key
+- option 3: ≈ $150–300 per language (pilot, prompt read, UI, store texts ≈ 7 h), the rest free while volunteers deliver
+
+Trade-offs:
+- 1: reliable, on the developer''s schedule, comparable checks run after run (same person); costs money; the developer''s own freelance account (outside the repo, no project account)
+- 2: free, but no community exists before these languages ship (chicken and egg: volunteers come from players of the language), slow and uneven; ~20 checks per language is a lot to ask unpaid; a missed check stalls the runs (the next run waits for it)
+- 3: pays for the one-off, high-leverage reviews; per-run checks depend on volunteers who may not exist yet, paid fallback when they don''t deliver within ~2 weeks
+
+Recommended: 1. Every run stops until its spot check is in (QC step 5), so the per-run checks are the bottleneck; a paid reviewer per language keeps them coming at a known cost. Start with the pilot spot check as a paid trial; keep the reviewer if their verdicts are consistent (3 planted control items per sheet, see the plan), else hire another. Names and payments stay outside the public repo.', NULL, NULL, '2026-10-15T20:15:09Z', NULL, 1150, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (221, 'How does an outside native reviewer reach the review tool?', 'answered', '[]', 'The review tool (trivia-authoring) binds 127.0.0.1 on the developer''s machine, has no accounts and writes the pools directly; opening it to the internet (tunnel, port forward) would need auth and trust in an outside person writing to authoring/data/. Hosting it on the report server would add a second server with writable content. AGENTS.md: no accounts of our own, no secrets in the repo. A file per run by e-mail needs neither, keeps the check blind by construction (the sheet holds no LLM verdicts), and fits the per-run rhythm of QC.md. Plan: plan 60 part 4.', 'Offline sheet per run: qgen spotcheck export writes one self-contained HTML file (blind sample, English reference, no LLM data); the reviewer returns a verdict JSON; qgen spotcheck import records it as the human review and spot check. No reachable review page.', NULL, '2026-10-15T20:15:14Z', '2026-10-15T20:15:14Z', 1150, NULL, 'rule', 1150, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -30228,6 +30309,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1127, 1146, '2026-10-15T20:08:48Z', '2026-10-15T20:09:36Z', 'done', NULL, 0, '561d535d73280ef574885653d4d8d9e8f56a532e', 'claude-opus-5-5[1m]', 'c0ea7e19-3a98-4309-b3ba-45d4cac690d6', 5, 10, 5363, 162428, 33923, 0.41116959999999997, 3530483);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1128, 1147, '2026-10-15T20:09:37Z', '2026-10-15T20:11:40Z', 'done', NULL, 0, 'd4eac2fce0afe4a2919279a73a425e5ae3b3dd4f', 'claude-opus-5-5[1m]', '36e9f064-dac3-4763-8c5f-6e64df5c6f0f', 21, 42, 11439, 1255760, 67212, 1.0177960000000002, 3530483);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1129, 1149, '2026-10-15T20:11:41Z', '2026-10-15T20:13:37Z', 'done', NULL, 0, '6b88f0f1d1610243ed402f8239e6c4fe0c4eec30', 'claude-opus-5-5[1m]', '016efaff-b3c4-4ac1-8553-1e88b771227b', 10, 18, 10014, 423266, 55941, 0.73253320000000011, 3530483);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1130, 1150, '2026-10-15T20:13:37Z', '2026-10-15T20:15:57Z', 'done', NULL, 0, '734b45076cf275eef8adc08f26040b92b530d468', 'claude-opus-5-5[1m]', '8d4719b4-e5d4-4f2f-8283-3c77f2f683c4', 14, 28, 12513, 769036, 66143, 0.93332319999999991, 3530483);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
