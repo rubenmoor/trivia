@@ -20,7 +20,7 @@ export const TOKENS: { name: JokerName; label: string; key: string; icon: IconNa
   icon,
 }));
 
-/** Most uses a budget stepper shows before ∞ (Customize, the gamemaster menu). */
+/** Most uses a budget stepper shows before ∞ (configure screen, Customize, the gamemaster menu; decision 105). */
 export const MAX_USES = 9;
 
 /** A budget stepper's next value: 0–9 uses, then ∞ (null), clamped at both ends. */

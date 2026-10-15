@@ -32,7 +32,7 @@
   import type { Difficulty, GameMode, JokerBudget, JokerName, Supply } from "../../lib/types.ts";
   import BundleSelector, { toggled, type Bundle } from "../BundleSelector.svelte";
   import Customize from "../Customize.svelte";
-  import { presetOf, stepPreset, TOKENS } from "../jokers.ts";
+  import { presetOf, stepPreset, stepUses, TOKENS } from "../jokers.ts";
   import { clamp, spanOf, stepDifficulty } from "../difficulty.ts";
   import { DEFAULT_LEVELS } from "../levels.ts";
   import Prompt from "../Prompt.svelte";
@@ -159,13 +159,9 @@
     };
   }
 
-  const JOKER_MAX = 99;
-
-  /** A joker's count by one: 0–99, then ∞, wrapping both ways. */
+  /** A joker's count by one: 0–9, then ∞, clamped (decision 105). */
   function stepJoker(name: JokerName, by: number) {
-    const now = budget[name] ?? JOKER_MAX + 1;
-    const next = (now + by + JOKER_MAX + 2) % (JOKER_MAX + 2);
-    budget = { ...budget, [name]: next > JOKER_MAX ? null : next };
+    budget = { ...budget, [name]: stepUses(budget[name], by) };
   }
 
   /** ←/→ or −/+ on a configure line (`data-step`). */
