@@ -10,7 +10,7 @@ Milestone 13 read every tracked code and build file once, between 2026-10-12 and
 - Overall: the code worked, but it had drifted. No high-severity finding: nothing broke a family game, lost a save or broke offline play. Still, 115 bugs (18 medium) sat in races, unhandled states and edge cases that only a reader finds. Next to them sat 595 complexity, practice, inconsistency and unused rows: copies, stale comments, dead code, rules that disagree.
 - Systemic causes of drift:
   - Per-task local view: each worker saw its own diff, never the whole file. The result was long multi-concern files (`engine/game.ts` 921 lines, six concerns; part 3) and race windows between components (`Game.svelte`, `Question.svelte`, `Overlay.svelte` busy gates; part 5).
-  - Copies instead of imports: 118 copy rows and 38 duplication clusters (part 10). Examples: the Python↔TS twins (save upgrades, media cache, serving), the store-script shell launchers (part 11, task 1113), and CSS blocks copied when screens were split (tasks 1106, 1107).
+  - Copies instead of imports: 118 copy rows and 38 duplication clusters (part 10). Examples: the Python↔TS twins (save upgrades, media cache, serving), the store-script shell launchers (part 11, fixed in task 1113), and CSS blocks copied when screens were split (tasks 1106, 1107).
   - Docs not updated: 79 of 174 files missing from `directory.md` at part 1, 22 docs-drift rows, 39 lying-comment rows after moves and renames.
   - Python↔TS ports: 321 rows on `.py` files. Parity was kept by hand, so a `SAVE_VERSION` bump silently needed `save.py` too (part 2, medium).
   - Tests kept by default: 7 test-only exports; the engine tests were not type-checked at all (part 10 cluster 34, medium).
@@ -54,7 +54,6 @@ Milestone 13 read every tracked code and build file once, between 2026-10-12 and
 
 ### Pending
 - Follow-up tasks (`### Pending`):
-  - `task 1113: Store and gallery scripts: one shell launcher and one demo-save builder`
   - `task 1051: Freesound: re-pick its 2 audio slots from Commons, drop it from the audio order`
   - `task 1114`–`1116` (check scripts and ruff), waiting on decisions 196–198
 - Superseded by tasks of other milestones:
@@ -1968,8 +1967,8 @@ Plan 83 checks this report for completeness, proposes process changes, writes th
 | `authoring/tools/gallery.py` | the temp save dir was made before the `try`: a dev server that didn't start (`sys.exit`) left it in `/tmp`; a step failing before its first page (`r.page` None) raised inside the handler and ended the whole run | bug | low | fixed (task 1111): `Server` owns the dir (made in `__init__`, removed in `stop()`, also on a failed start); failure shot only with a page; checked `trivia-gallery --locale es --only start`, no dir left |
 | `authoring/tools/gallery.py` | `manifest.json` read and written without `encoding` (written with `ensure_ascii=False`), unlike `data_strings` and `ui_flags.py` | inconsistency | low | fixed (task 1111): `utf-8` |
 | `authoring/tools/gallery.py` | no further findings: temp save dir only, never `state/` or the family's save; dev server stopped by process group; the shell stub leaves out `devServer` on purpose (quit shows); fixed sleeps per step are the walk's pacing, a missed wait fails the step with a screenshot, not the gallery | — | — | — |
-| `authoring/tools/gallery_saves.mjs`, `authoring/store/screenshots.mjs`, `authoring/store/trailer.mjs` | demo-save builders copied: `PLAYERS`, `seed`/`io()`, `baseSave`, `latestState`, the "win the levels below" loop (trailer: "as screenshots.mjs") | complexity | low | follow-up task 1113 |
-| `authoring/store/capsules.mjs`, `trailer.mjs`, `screenshots.mjs` | shell launch copied 3× after cluster 23 (task 583 moved only `startXvfb` into `cdp.mjs`): temp save dir, Xvfb + «not found» message, `freePort`, env with `no-steam` and the Wayland deletes, `trivia-desktop` CDP flags, `DEBUG` stderr, the `finally` cleanup (trailer checks `exitCode`, the others don't) | complexity | low | follow-up task 1113 |
+| `authoring/tools/gallery_saves.mjs`, `authoring/store/screenshots.mjs`, `authoring/store/trailer.mjs` | demo-save builders copied: `PLAYERS`, `seed`/`io()`, `baseSave`, `latestState`, the "win the levels below" loop (trailer: "as screenshots.mjs"); now `authoring/tools/demo_saves.mjs`, saves byte-identical | complexity | low | fixed (task 1113) |
+| `authoring/store/capsules.mjs`, `trailer.mjs`, `screenshots.mjs` | shell launch copied 3× after cluster 23 (task 583 moved only `startXvfb` into `cdp.mjs`): temp save dir, Xvfb + «not found» message, `freePort`, env with `no-steam` and the Wayland deletes, `trivia-desktop` CDP flags, `DEBUG` stderr, the `finally` cleanup (trailer checks `exitCode`, the others don't); now `launchShell()` in `cdp.mjs` | complexity | low | fixed (task 1113) |
 | `authoring/store/capsules.mjs` | colours `C` hand-copied from `theme.css` without saying so | inconsistency | low | fixed (task 1111): comment names `theme.css` (all 14 values match) |
 | `authoring/store/capsules.mjs` | `dlcs()` hard-codes `colombia: ["es", "en"]` over `bundles.json`'s `["es"]` | inconsistency | low | won't fix: decision 110 (Regional packs at launch) ships colombia in es + en before its en pool exists; the override goes once `bundles.json` lists `en` |
 | `authoring/store/capsules.mjs` | no further findings: temp save dir removed in `finally`; `--no-mods`, no Steam (`no-steam` SDK dir); outputs only under gitignored `authoring/store/out/`; names per decisions 77, 78 | — | — | — |
@@ -2009,7 +2008,6 @@ Task 588, 2026-10-14. Throw-away scripts over `code-review.md`, `git ls-files` a
 | task 652 | SW-8 close-out: gamemaster check and docs | part 6 `preload.cjs`/`main.mjs` overlay, `showTextInput` | decision 113: SW-8 check under Steam |
 | task 765 | Delete app/server, ServerStore, the trivia command and nix build .#app | part 10 parity rows (save twin), part 11 `ServerStore` | decision 150: Family save imported into trivia-desktop? |
 | task 1051 | Freesound: re-pick its 2 audio slots from Commons, drop it from the audio order | part 8 `providers/__init__.py` `ORDER`, `freesound.py` | — |
-| task 1113 | Store and gallery scripts: one shell launcher and one demo-save builder | part 11 `capsules.mjs`, `trailer.mjs`, `gallery_saves.mjs` | — |
 | task 1114 | directory.md check per decision 196 | process decisions | decision 196 |
 | task 1115 | Unused-export check per decision 197 | process decisions | decision 197 |
 | task 1116 | Python: ruff per decision 198, fix its 3 hits | part 11 ruff trial row | decision 198 |

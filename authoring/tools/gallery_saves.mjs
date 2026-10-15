@@ -1,23 +1,13 @@
 #!/usr/bin/env node
 // trivia-gallery's demo saves (plan 100): built with the engine on the es pool, made-up players.
 // Usage: node authoring/tools/gallery_saves.mjs <ui locale> → JSON {saves: {name: save}, meta: {name: {...}}} on stdout.
-import { answer, newGame, pick } from "../../app/client/src/engine/game.ts";
-import { seededRng } from "../../app/client/src/engine/rng.ts";
-import { emptySave, SAVE_VERSION } from "../../app/client/src/engine/state.ts";
+import { answer, pick } from "../../app/client/src/engine/game.ts";
+import { baseSave, checkVersion, io, latestState, PLAYERS, playTo, rightOf } from "./demo_saves.mjs";
 import { loadData } from "./engine_data.mjs";
 
 const ui = process.argv[2];
 if (!ui) throw new Error("usage: gallery_saves.mjs <ui locale>");
 const data = loadData("es");
-
-const PLAYERS = ["Luna", "Mateo", "Sofía", "Max", "Emma"];
-let seed = 1;
-const io = () => ({ rng: seededRng(seed++), now: "2026-10-13T20:00:00" });
-const latest = (save) => save.games.at(-1).state;
-const rightOf = (save) => {
-  const s = latest(save);
-  return s.answers.indexOf(data.byId.get(s.current).answer);
-};
 
 /** Image questions with hints first: no video or audio waiting on the screen, Soplo has something to show. */
 function best(ids) {
@@ -28,21 +18,13 @@ function best(ids) {
   return ids.reduce((b, id) => (score(id) > score(b) ? id : b));
 }
 
-function base() {
-  const save = { ...emptySave(), language: { ui, questions: "es" } };
-  save.players = PLAYERS.map((name, i) => ({ id: i + 1, name, created_on: `2026-10-0${9 - i}T18:00:00` }));
-  return save;
-}
+const base = () => baseSave(ui, "es");
 
 /** `player` plays to `level` (the levels below won); `onQuestion`: its best card picked. */
 function play(save, player, level, opts, onQuestion) {
-  ({ save } = newGame(save, data, io(), player, opts));
-  for (let l = 1; l < level; l++) {
-    ({ save } = pick(save, data, io(), 0));
-    ({ save } = answer(save, data, io(), rightOf(save)));
-  }
+  save = playTo(data, save, player, level, opts);
   if (onQuestion) {
-    const s = latest(save);
+    const s = latestState(save);
     ({ save } = pick(save, data, io(), s.options.indexOf(best(s.options))));
   }
   return save;
@@ -52,7 +34,7 @@ function play(save, player, level, opts, onQuestion) {
 function history() {
   let save = play(base(), PLAYERS[1], 13, { mode: "solo" });
   save = play(save, PLAYERS[2], 3, { mode: "solo" }, true);
-  ({ save } = answer(save, data, io(), (rightOf(save) + 1) % latest(save).answers.length));
+  ({ save } = answer(save, data, io(), (rightOf(data, save) + 1) % latestState(save).answers.length));
   return save;
 }
 
@@ -75,25 +57,25 @@ saves.base = done;
 
 // Gamemaster mode on a question at level 4: Esc cheats, jokers, flag dialog.
 saves.question = play(structuredClone(done), PLAYERS[0], 4, { mode: "gamemaster" }, true);
-meta.question = { right: rightOf(saves.question) };
+meta.question = { right: rightOf(data, saves.question) };
 // Solo on a question: the Esc menu's read-only budget, a correct answer.
 saves.solo = play(structuredClone(done), PLAYERS[0], 5, { mode: "solo" }, true);
-meta.solo = { right: rightOf(saves.solo) };
+meta.solo = { right: rightOf(data, saves.solo) };
 // The last level's question: victory.
 saves.final = play(structuredClone(done), PLAYERS[0], 12, { mode: "solo" }, true);
-meta.final = { right: rightOf(saves.final) };
+meta.final = { right: rightOf(data, saves.final) };
 // A table at level 3, gamemaster mode: «Difficulty and bundles».
 saves.table = play(structuredClone(done), PLAYERS[0], 3, { mode: "gamemaster" });
 // Flags for the flag list.
 saves.flags = flagged(structuredClone(saves.question), data.pool.slice(0, 2).map((q) => q.id));
 // A game on base + colombia, every colombia question seen: the supply notice before level 1.
 saves.seen = play(structuredClone(done), PLAYERS[0], 1, { mode: "solo", bundles: ["base", "colombia"] }, true);
-({ save: saves.seen } = answer(saves.seen, data, io(), (rightOf(saves.seen) + 1) % latest(saves.seen).answers.length));
+({ save: saves.seen } = answer(saves.seen, data, io(), (rightOf(data, saves.seen) + 1) % latestState(saves.seen).answers.length));
 saves.seen.seen.push(...data.pool.filter((q) => q.bundle === "colombia")
   .map((q) => ({ question_id: q.id, game_id: 0, seen_on: "2026-10-01T20:00:00" })));
 // Every question blocked: the supply report on Choice.
 saves.blocked = structuredClone(done);
 saves.blocked.blocked = data.pool.map((q) => q.id);
 
-for (const s of Object.values(saves)) if (s.version !== SAVE_VERSION) throw new Error("save version");
+for (const s of Object.values(saves)) checkVersion(s);
 process.stdout.write(JSON.stringify({ saves, meta, players: PLAYERS }));

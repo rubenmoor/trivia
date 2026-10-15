@@ -1,6 +1,9 @@
-// Raw CDP for the shell (store screenshots, packaged smoke game): no puppeteer.
+// Raw CDP for the shell (store screenshots, capsules, trailer, packaged smoke game): no puppeteer.
 import { spawn } from "node:child_process";
+import { mkdtemp, rm } from "node:fs/promises";
 import { createServer } from "node:net";
+import os from "node:os";
+import path from "node:path";
 
 export const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -27,6 +30,50 @@ export function startXvfb(exe, width, height) {
     proc.on("error", reject);
     proc.on("exit", (code) => reject(new Error(`Xvfb exited (${code}) before it reported a display`)));
   });
+}
+
+/**
+ * `trivia-desktop` on a debugging port, a temp save dir, no Steam; under Xvfb (width × height) unless `visible`.
+ * `visible: undefined`: the script has no `--visible`. `stop()` closes the page, kills the processes, removes the dir.
+ */
+export async function launchShell({ name, width, height, visible, env = {}, args = [] }) {
+  const saveDir = await mkdtemp(path.join(os.tmpdir(), `trivia-${name}-`));
+  const procs = [];
+  let page;
+  const stop = async () => {
+    page?.close();
+    for (const p of procs.reverse()) p.exitCode === null && p.kill();
+    await sleep(500);
+    await rm(saveDir, { recursive: true, force: true });
+  };
+  try {
+    let display = process.env.DISPLAY;
+    if (!visible) {
+      const x = await startXvfb("Xvfb", width, height).catch((e) => {
+        throw e.code === "ENOENT" ? new Error(`Xvfb not found: run from the dev shell${visible === false ? ", or pass --visible" : ""}`) : e;
+      });
+      display = x.display;
+      procs.push(x.proc);
+    }
+    const port = await freePort();
+    const shellEnv = { ...process.env, DISPLAY: display, TRIVIA_SAVE_DIR: saveDir, TRIVIA_STEAM_SDK: path.join(saveDir, "no-steam"), ...env };
+    const shellArgs = [`--remote-debugging-port=${port}`, "--remote-allow-origins=*", ...args];
+    if (!visible) {
+      // into Xvfb, not the desktop's Wayland
+      delete shellEnv.WAYLAND_DISPLAY;
+      delete shellEnv.NIXOS_OZONE_WL;
+      shellArgs.push("--ozone-platform=x11");
+    }
+    const shell = spawn("trivia-desktop", shellArgs, { env: shellEnv, stdio: ["ignore", "ignore", "pipe"] });
+    shell.stderr.on("data", (d) => process.env.DEBUG && process.stderr.write(d));
+    procs.push(shell);
+    page = await connectPort(port);
+    await page.send("Page.enable");
+    return { page, display, saveDir, stop };
+  } catch (e) {
+    await stop();
+    throw e;
+  }
 }
 
 /** `{ send, close }` over a message transport; `sessionId` routes to an attached target; `gone` fails every pending call. */

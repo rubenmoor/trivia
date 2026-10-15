@@ -3,18 +3,14 @@
 // the shell under Xvfb, raw CDP, a demo save per shot.
 // Usage (dev shell): node authoring/store/screenshots.mjs [--lang en,es,es-ES,de] [--visible]
 // Needs app/client/dist (`npm run build`) and the media cache (`trivia-media sync --status approved`).
-import { spawn } from "node:child_process";
 import { existsSync } from "node:fs";
-import { mkdir, mkdtemp, rm, writeFile } from "node:fs/promises";
-import os from "node:os";
+import { mkdir, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { cacheName } from "../../app/desktop/resolve.mjs";
-import { connectPort, freePort, pageHelpers, sleep, startXvfb, visibleEl } from "../tools/cdp.mjs";
-import { answer, newGame, pick } from "../../app/client/src/engine/game.ts";
+import { launchShell, pageHelpers, sleep, visibleEl } from "../tools/cdp.mjs";
+import { baseSave, gameAt, latestState } from "../tools/demo_saves.mjs";
 import { loadData } from "../tools/engine_data.mjs";
-import { seededRng } from "../../app/client/src/engine/rng.ts";
-import { emptySave, SAVE_VERSION } from "../../app/client/src/engine/state.ts";
 
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
 const OUT = path.join(REPO, "authoring", "store", "out", "screenshots");
@@ -22,8 +18,6 @@ const MEDIA = process.env.TRIVIA_MEDIA || path.join(REPO, "media"); // as the sh
 const W = 1920;
 const H = 1080;
 
-// Made-up players, no family data; the first one plays.
-const PLAYERS = ["Luna", "Mateo", "Sofía", "Max", "Emma"];
 // Gameplay shots' questions (es pool): approved, short, an image each.
 const Q = { locked: "q-0030", joker: "q-0019" };
 
@@ -34,36 +28,6 @@ const opt = (name) => {
 };
 const LANGS = (opt("--lang") ?? "en,es,es-ES,de").split(",");
 const visible = args.includes("--visible");
-
-// Save documents -----------------------------------------------------------------------------
-
-let seed = 1;
-const io = () => ({ rng: seededRng(seed++), now: "2026-10-13T20:00:00" });
-
-function baseSave(ui, questions) {
-  const save = { ...emptySave(), language: { ui, questions } };
-  save.players = PLAYERS.map((name, i) => ({ id: i + 1, name, created_on: `2026-10-0${9 - i}T18:00:00` })); // newest first: PLAYERS[0] tops the list
-  return save;
-}
-
-const latestState = (save) => save.games.at(-1).state;
-
-/** A solo game of PLAYERS[0] at `level`: the levels below won; `qid` on screen, else the table. */
-function gameAt(data, ui, level, qid) {
-  let { save } = newGame(baseSave(ui, data.locale), data, io(), PLAYERS[0], { mode: "solo" });
-  for (let l = 1; l < level; l++) {
-    ({ save } = pick(save, data, io(), 0));
-    const s = latestState(save);
-    const right = data.byId.get(s.current).answer;
-    ({ save } = answer(save, data, io(), s.answers.indexOf(right)));
-  }
-  if (qid) {
-    latestState(save).options[0] = qid;
-    ({ save } = pick(save, data, io(), 0));
-  }
-  if (save.version !== SAVE_VERSION) throw new Error("save version");
-  return save;
-}
 
 // Page helpers -------------------------------------------------------------------------------
 
@@ -182,36 +146,12 @@ async function main() {
     if (!existsSync(path.join(MEDIA, cacheName(url)))) throw new Error(`${id}: media not cached: trivia-media sync --status approved`);
   }
 
-  const tmp = await mkdtemp(path.join(os.tmpdir(), "trivia-shots-"));
-  const procs = [];
-  let display = process.env.DISPLAY;
+  // dev user: saves and flags on under the gate (plan 87), no notice
+  const shell = await launchShell({ name: "shots", width: W, height: H, visible, env: { TRIVIA_DEV_STEAM_USER: "1" } });
+  const tmp = shell.saveDir;
   try {
-    if (!visible) {
-      const x = await startXvfb("Xvfb", W, H).catch((e) => {
-        throw e.code === "ENOENT" ? new Error("Xvfb not found: run from the dev shell, or pass --visible") : e;
-      });
-      display = x.display;
-      procs.push(x.proc);
-    }
-    const port = await freePort();
-    // dev user: saves and flags on under the gate (plan 87), no notice
-    const env = { ...process.env, DISPLAY: display, TRIVIA_SAVE_DIR: tmp, TRIVIA_STEAM_SDK: path.join(tmp, "no-steam"), TRIVIA_DEV_STEAM_USER: "1" };
-    const shellArgs = [`--remote-debugging-port=${port}`, "--remote-allow-origins=*"];
-    if (!visible) {
-      // into Xvfb, not the desktop's Wayland
-      delete env.WAYLAND_DISPLAY;
-      delete env.NIXOS_OZONE_WL;
-      shellArgs.push("--ozone-platform=x11");
-    }
-    const shell = spawn("trivia-desktop", shellArgs, {
-      env,
-      stdio: ["ignore", "ignore", "pipe"],
-    });
-    shell.stderr.on("data", (d) => process.env.DEBUG && process.stderr.write(d));
-    procs.push(shell);
-    page = await connectPort(port);
+    page = shell.page;
     ({ evaluate, waitFor, click } = pageHelpers(page));
-    await page.send("Page.enable");
     await page.send("Emulation.setDeviceMetricsOverride", { width: W, height: H, deviceScaleFactor: 1, mobile: false });
 
     const followUp = [];
@@ -228,10 +168,7 @@ async function main() {
     console.log(`${shots.length} screenshots in ${path.relative(REPO, OUT)}/`);
     if (followUp.length) console.log(`no question pool for ${followUp.join(", ")}: the 2 question shots skipped (decision 80); re-run once it lands`);
   } finally {
-    page?.close();
-    for (const p of procs.reverse()) p.kill();
-    await sleep(500);
-    await rm(tmp, { recursive: true, force: true });
+    await shell.stop();
   }
 }
 

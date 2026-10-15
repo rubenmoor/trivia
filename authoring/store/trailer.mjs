@@ -10,11 +10,9 @@ import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { cacheName } from "../../app/desktop/resolve.mjs";
-import { connectPort, freePort, pageHelpers, sleep, startXvfb, visibleEl } from "../tools/cdp.mjs";
-import { answer, newGame, pick } from "../../app/client/src/engine/game.ts";
+import { launchShell, pageHelpers, sleep, visibleEl } from "../tools/cdp.mjs";
+import { gameAt, latestState, resetSeed } from "../tools/demo_saves.mjs";
 import { loadData } from "../tools/engine_data.mjs";
-import { seededRng } from "../../app/client/src/engine/rng.ts";
-import { emptySave, SAVE_VERSION } from "../../app/client/src/engine/state.ts";
 
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
 const OUT = path.join(REPO, "authoring", "store", "out", "trailer");
@@ -23,8 +21,6 @@ const W = 1920;
 const H = 1080;
 const FPS = 30;
 
-// Made-up players, no family data; the first one plays.
-const PLAYERS = ["Luna", "Mateo", "Sofía", "Max", "Emma"];
 // Per question pool: q1 answered right after Soplo, q2 Francotirador then a wrong answer. Short, an image each.
 const Q = { es: { q1: "q-0030", q2: "q-0019" } };
 const LEVEL = 4; // q1's level; q2 one up
@@ -48,33 +44,6 @@ const opt = (name) => {
 };
 const LANGS = (opt("--lang") ?? "es,es-ES,en,de").split(",");
 const keepRaw = args.includes("--keep-raw");
-
-// Save documents (as screenshots.mjs) ---------------------------------------------------------
-
-let seed = 1;
-const io = () => ({ rng: seededRng(seed++), now: "2026-10-13T20:00:00" });
-
-function baseSave(ui, questions) {
-  const save = { ...emptySave(), language: { ui, questions } };
-  save.players = PLAYERS.map((name, i) => ({ id: i + 1, name, created_on: `2026-10-0${9 - i}T18:00:00` }));
-  return save;
-}
-
-const latestState = (save) => save.games.at(-1).state;
-
-/** A solo game of PLAYERS[0] at `level`, the levels below won, `qid` on screen. */
-function gameAt(data, ui, level, qid) {
-  let { save } = newGame(baseSave(ui, data.locale), data, io(), PLAYERS[0], { mode: "solo" });
-  for (let l = 1; l < level; l++) {
-    ({ save } = pick(save, data, io(), 0));
-    const s = latestState(save);
-    ({ save } = answer(save, data, io(), s.answers.indexOf(data.byId.get(s.current).answer)));
-  }
-  latestState(save).options[0] = qid;
-  ({ save } = pick(save, data, io(), 0));
-  if (save.version !== SAVE_VERSION) throw new Error("save version");
-  return save;
-}
 
 // Processes ----------------------------------------------------------------------------------
 
@@ -194,7 +163,7 @@ async function finalAnswer(i, n) {
 }
 
 async function walk(saveDir, data, ui, q) {
-  seed = 1; // the same game for every language and run
+  resetSeed(); // the same game for every language and run
   const s1 = gameAt(data, ui, LEVEL, q.q1);
   await question(saveDir, s1, "q1");
   await sleep(1500);
@@ -257,41 +226,29 @@ async function main() {
   }
 
   await mkdir(OUT, { recursive: true });
-  const tmp = await mkdtemp(path.join(os.tmpdir(), "trivia-trailer-"));
+  const pulseDir = await mkdtemp(path.join(os.tmpdir(), "trivia-pulse-"));
   const procs = [];
+  let shell;
   try {
-    const x = await startXvfb("Xvfb", W, H).catch((e) => {
-      throw e.code === "ENOENT" ? new Error("Xvfb not found: run from the dev shell (trivia-trailer)") : e;
-    });
-    procs.push(x.proc);
-    const pulse = await startPulse(tmp);
+    const pulse = await startPulse(pulseDir);
     procs.push(pulse.proc);
-    const port = await freePort();
     // X11, not the desktop's Wayland: ffmpeg grabs the Xvfb display
-    const env = {
-      ...process.env, DISPLAY: x.display, PULSE_SERVER: pulse.server, TRIVIA_SOUND: "1",
+    shell = await launchShell({
+      name: "trailer", width: W, height: H, args: ["--no-mods"],
       // dev user: the demo save loads, no notice; sound on even under PM_WORKER
-      TRIVIA_SAVE_DIR: tmp, TRIVIA_STEAM_SDK: path.join(tmp, "no-steam"), TRIVIA_DEV_STEAM_USER: "1",
-    };
-    delete env.WAYLAND_DISPLAY;
-    delete env.NIXOS_OZONE_WL;
-    const shell = spawn("trivia-desktop", [`--remote-debugging-port=${port}`, "--remote-allow-origins=*", "--ozone-platform=x11", "--no-mods"], {
-      env,
-      stdio: ["ignore", "ignore", "pipe"],
+      env: { PULSE_SERVER: pulse.server, TRIVIA_SOUND: "1", TRIVIA_DEV_STEAM_USER: "1" },
     });
-    shell.stderr.on("data", (d) => process.env.DEBUG && process.stderr.write(d));
-    procs.push(shell);
-    page = await connectPort(port);
+    const tmp = shell.saveDir;
+    page = shell.page;
     ({ evaluate, waitFor, click } = pageHelpers(page));
-    await page.send("Page.enable");
     // No window manager in Xvfb: fullscreen never applies, so the window is sized by hand.
-    await run("xdotool", ["search", "--sync", "--name", "Trivia", "windowmove", "%@", "0", "0", "windowsize", "%@", String(W), String(H)], { env: { ...process.env, DISPLAY: x.display } });
+    await run("xdotool", ["search", "--sync", "--name", "Trivia", "windowmove", "%@", "0", "0", "windowsize", "%@", String(W), String(H)], { env: { ...process.env, DISPLAY: shell.display } });
     await waitFor(`innerWidth === ${W} && innerHeight === ${H}`, "window at full size", 5000);
 
     for (const { ui, data, q } of plans) {
       console.log(ui);
       const raw = path.join(tmp, `${ui}.raw.mkv`);
-      const rec = startRecording(x.display, pulse.server, raw);
+      const rec = startRecording(shell.display, pulse.server, raw);
       procs.push(rec.proc);
       await rec.ready;
       for (const k of Object.keys(marks)) delete marks[k];
@@ -309,10 +266,9 @@ async function main() {
       await rm(raw, { force: true });
     }
   } finally {
-    page?.close();
     for (const p of procs.reverse()) p.exitCode === null && p.kill();
-    await sleep(500);
-    await rm(tmp, { recursive: true, force: true });
+    await shell?.stop();
+    await rm(pulseDir, { recursive: true, force: true });
   }
 }
 

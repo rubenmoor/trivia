@@ -2,13 +2,11 @@
 // Store capsules, library art and the game icon (plan 88, decisions 77, 87): a typographic template, raw CDP against the shell.
 // Usage (dev shell): node authoring/store/capsules.mjs [--only <path part>] [--visible]
 // Needs app/client/dist (`npm run build`): the shell serves the game's fonts. Output: out/capsules/ (17a "Capsules and icon").
-import { spawn } from "node:child_process";
 import { existsSync, readFileSync } from "node:fs";
-import { mkdir, mkdtemp, rm, writeFile } from "node:fs/promises";
-import os from "node:os";
+import { mkdir, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { connectPort, freePort, pageHelpers, sleep, startXvfb } from "../tools/cdp.mjs";
+import { launchShell, pageHelpers, sleep } from "../tools/cdp.mjs";
 
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
 const OUT = path.join(REPO, "authoring", "store", "out", "capsules");
@@ -221,35 +219,13 @@ async function set(dir, assets, name, pack) {
 
 async function main() {
   if (!existsSync(path.join(REPO, "app", "client", "dist", "index.html"))) throw new Error("client not built: npm run build");
-  const tmp = await mkdtemp(path.join(os.tmpdir(), "trivia-capsules-"));
-  const procs = [];
-  let display = process.env.DISPLAY;
+  const shell = await launchShell({
+    name: "capsules", width: 1920, height: 1080, visible, env: { TRIVIA_MUTE: "1" },
+    args: ["--no-mods", "--disable-gpu"], // GPU compositing under Xvfb stalls captures
+  });
   try {
-    if (!visible) {
-      const x = await startXvfb("Xvfb", 1920, 1080).catch((e) => {
-        throw e.code === "ENOENT" ? new Error("Xvfb not found: run from the dev shell, or pass --visible") : e;
-      });
-      display = x.display;
-      procs.push(x.proc);
-    }
-    const port = await freePort();
-    const env = { ...process.env, DISPLAY: display, TRIVIA_SAVE_DIR: tmp, TRIVIA_STEAM_SDK: path.join(tmp, "no-steam"), TRIVIA_MUTE: "1" };
-    const shellArgs = [`--remote-debugging-port=${port}`, "--remote-allow-origins=*", "--no-mods", "--disable-gpu"]; // GPU compositing under Xvfb stalls captures
-    if (!visible) {
-      // into Xvfb, not the desktop's Wayland
-      delete env.WAYLAND_DISPLAY;
-      delete env.NIXOS_OZONE_WL;
-      shellArgs.push("--ozone-platform=x11");
-    }
-    const shell = spawn("trivia-desktop", shellArgs, {
-      env,
-      stdio: ["ignore", "ignore", "pipe"],
-    });
-    shell.stderr.on("data", (d) => process.env.DEBUG && process.stderr.write(d));
-    procs.push(shell);
-    pg = await connectPort(port);
+    pg = shell.page;
     ({ evaluate } = pageHelpers(pg));
-    await pg.send("Page.enable");
     // A viewport the hero fits in; transparent where the art leaves it.
     await pg.send("Emulation.setDeviceMetricsOverride", { width: 3840, height: 2160, deviceScaleFactor: 1, mobile: false });
     await pg.send("Emulation.setDefaultBackgroundColorOverride", { color: { r: 0, g: 0, b: 0, a: 0 } });
@@ -276,10 +252,7 @@ async function main() {
     await render("icon-16.png", 16, 16, iconPage(16, true));
     console.log(`${written.length} files in ${path.relative(REPO, OUT)}/`);
   } finally {
-    pg?.close();
-    for (const p of procs.reverse()) p.kill();
-    await sleep(500);
-    await rm(tmp, { recursive: true, force: true });
+    await shell.stop();
   }
 }
 
