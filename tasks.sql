@@ -15174,7 +15174,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Check
 - `### Process decisions` lists every decision added; `pm show d<id>` shows each with options; none overlaps `### Linter evaluation`.
 - Stage `code-review.md`.', '2026-10-12T23:10:57Z', '2026-10-15T03:13:43Z', 523, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (590, 83, 'Part 11: write the executive summary of code-review.md', 'work', 'open', NULL, NULL, 'Task 3 of `plan 83: Executive summary and close-out (code review part 11)`. Needs tasks 1 (`### Pending`, `### Scans`) and 2 (`### Process decisions`).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (590, 83, 'Part 11: write the executive summary of code-review.md', 'work', 'done', NULL, '2026-10-14, code-review.md: executive summary (numbers from a throw-away count over the report and pm)', 'Task 3 of `plan 83: Executive summary and close-out (code review part 11)`. Needs tasks 1 (`### Pending`, `### Scans`) and 2 (`### Process decisions`).
 
 ## What
 Replace the `PLACEHOLDER(…)` under `## Executive summary` at the top of `code-review.md`. Every number from a throw-away script over `code-review.md` and `pm` (counts per part, category, severity, status), run, not committed, not estimated.
@@ -15188,7 +15188,7 @@ Replace the `PLACEHOLDER(…)` under `## Executive summary` at the top of `code-
 
 ## Check
 - `grep -n PLACEHOLDER code-review.md` finds nothing under `## Executive summary`; numbers match a re-run of the script.
-- Stage `code-review.md`.', '2026-10-12T23:10:57Z', NULL, 523, 0);
+- Stage `code-review.md`.', '2026-10-12T23:10:57Z', '2026-10-15T03:16:06Z', 523, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (591, 83, 'Part 11: final checks and close milestone 13''s review', 'work', 'open', NULL, NULL, 'Task 4 of `plan 83: Executive summary and close-out (code review part 11)`, last task of milestone 13.
 
 ## What
@@ -29101,6 +29101,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1051, 1110, '2026-10-15T02:58:09Z', '2026-10-15T03:02:36Z', 'done', NULL, 0, '09eabbd4932ec685d1c585dd58af2254d9a468d9', 'claude-opus-5-5[1m]', '97b6c99c-806c-4401-8f26-6a8a3f777ccd', 26, 48, 25397, 1818939, 105502, 1.7159358000000005, 2557536);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1052, 1111, '2026-10-15T03:02:36Z', '2026-10-15T03:10:13Z', 'done', NULL, 0, '032ca10461bd5c248686fe1ec846cce9910a20fa', 'claude-opus-5-5[1m]', 'c898ceb9-bc9e-4009-8d82-e9624e87098b', 59, 112, 37561, 6653375, 153485, 3.310223, 2557536);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1053, 589, '2026-10-15T03:10:14Z', '2026-10-15T03:13:53Z', 'done', NULL, 0, '57f03d36b41f705b1cca95460da729ad5a1622ac', 'claude-opus-5-5[1m]', 'bc97d2e2-38d8-4ef7-8c4e-3760be324598', 31, 56, 19427, 2260581, 98134, 1.6259522000000004, 2557536);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1054, 590, '2026-10-15T03:13:53Z', '2026-10-15T03:16:15Z', 'done', NULL, 0, '35f9888498a6ebc02cb990338953a8f5727c38f4', 'claude-opus-5-5[1m]', 'fccd0745-776e-4068-b8a1-11790660d026', 17, 32, 10857, 967458, 73276, 0.9969676, 2557536);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

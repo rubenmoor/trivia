@@ -4,7 +4,79 @@ This report collects the findings of the milestone 13 code review: every tracked
 
 ## Executive summary
 
-PLACEHOLDER(590)
+Milestone 13 read every tracked code and build file once, between 2026-10-12 and 2026-10-14: 243 inventory paths (174 at part 1, 69 added by other milestones while the review ran), about 40k lines (Svelte 13.1k, TS 10.8k, Python 10.5k, `.mjs` 4.8k, rest config/CSS/shell). Pm workers did the reading in eleven parts: part 1 ran cross-cutting scans, parts 2–9 reviewed file groups, part 10 handled duplication, consistency, build config and the linter question, and part 11 reviewed the late files and closed out. The report has 1066 rows: 763 findings and 303 "no findings". Cheap fixes went in with the review task. Everything else became a task or a decision. All numbers below come from a throw-away script over this file and `pm show` (2026-10-14).
+
+### Before the review
+- Overall: the code worked, but it had drifted. No high-severity finding: nothing broke a family game, lost a save or broke offline play. Still, 115 bugs (18 medium) sat in races, unhandled states and edge cases that only a reader finds. Next to them sat 595 complexity, practice, inconsistency and unused rows: copies, stale comments, dead code, rules that disagree.
+- Systemic causes of drift:
+  - Per-task local view: each worker saw its own diff, never the whole file. The result was long multi-concern files (`engine/game.ts` 921 lines, six concerns; part 3) and race windows between components (`Game.svelte`, `Question.svelte`, `Overlay.svelte` busy gates; part 5).
+  - Copies instead of imports: 118 copy rows and 38 duplication clusters (part 10). Examples: the Python↔TS twins (save upgrades, media cache, serving), the store-script shell launchers (part 11, task 1113), and CSS blocks copied when screens were split (tasks 1106, 1107).
+  - Docs not updated: 79 of 174 files missing from `directory.md` at part 1, 22 docs-drift rows, 39 lying-comment rows after moves and renames.
+  - Python↔TS ports: 321 rows on `.py` files. Parity was kept by hand, so a `SAVE_VERSION` bump silently needed `save.py` too (part 2, medium).
+  - Tests kept by default: 7 test-only exports; the engine tests were not type-checked at all (part 10 cluster 34, medium).
+  - Unused code after refactors: 62 unused rows. None of the linter candidates finds these (part 1 export scan).
+- Worst areas (final findings / bugs):
+  - `authoring/tools/qgen.py` (4.5k lines): 125 / 22. Part 7 alone logged 115 findings, the most of any part.
+  - Game screens (part 5): 91 / 19, incl. 5 medium (`Game.svelte` 15 rows, `Question.svelte` 10, `Overlay.svelte` 10).
+  - `authoring/server/main.py` 20 / 5 and `authoring/ui/src/review/Review.svelte` 15 / 6 (part 9).
+  - `engine/game.ts` 16 rows (part 3); `app/desktop/main.mjs` 10 rows, incl. an uncaught `whenReady().then(start)` (part 6, medium).
+
+### Impact
+- 660 final findings (763 minus 103 `handed to part N` rows, each closed in its target part):
+
+  | severity | fixed | won't fix | follow-up task | superseded | total |
+  |---|---|---|---|---|---|
+  | high | 0 | 0 | 0 | 0 | 0 |
+  | medium | 24 | 2 | 1 | 0 | 27 |
+  | low | 350 | 267 | 4 | 2 | 623 |
+  | — (removed files, notes) | 5 | 5 | 0 | 0 | 10 |
+  | total | 379 | 274 | 5 | 2 | 660 |
+
+  - Waiting on a decision: none (decisions 82, 98, 102, 103 are answered, and their rows are fixed or follow-up).
+  - By category: complexity 186, practice 181, inconsistency 166, bug 117, unused 62, performance 51 (all 763 rows).
+  - Bugs: 87 fixed, 27 won't fix, 1 superseded.
+  - The 2 medium won't-fix rows are both decided: the `--no-sandbox` launcher (D-73) and the Python save-upgrade twin (decision 104, Python retires).
+- Notable fixes (all medium):
+  - Races in the game: menu clickable over transitions (task 543), `busy()` not covering jokers in flight (544), restart during the reveal (545).
+  - Wrong game data: the difficulty dial had 10 steps for difficulties 1–15 (549); a game flag with no locale landed on the es question (decision 102, task 736).
+  - Steam build: the Steam binding was missing from the package (650). Smoke test pinned to es (730).
+  - Error handling: `ready()` and `start()` errors lost (540, 554); corrupt browser save (decision 98, task 724).
+  - Authoring: concurrent writers clobbered `questions*.json` and `spot-checks.json` (cluster 22, task 740); Ctrl-C didn't stop `qgen parallel()` (557); research thumbs reused stale images (570).
+  - Late files: duplicate `{#each}` keys on the mods screen (1108); dev server killed by a dropped video (`resolve.mjs`), and a 90 MB video read whole per request (1111).
+  - Structure: `engine/game.ts` split (535); import cycle broken by `lib/http.ts` (581); engine tests type-checked (743).
+- Bundle vs. part 1 baseline (`npm run build`, 2026-10-14):
+  - Authoring UI JS 157.4 → 191.1 kB (gzip 53.8 → 65.2), CSS 26.2 → 30.1 kB.
+  - Client JS 266.5 → 914 kB raw, CSS 70.6 → 111.4 kB. The client numbers are not comparable: the build now emits one readable, unminified file per module (decision 124) plus `vendor/svelte.js` (decision 149, 314 kB). `credits.json` and `audio/` are unchanged (687 kB, 2.8 MB).
+- Scans, part 1 → now (`### Scans`):
+  - Old files got better: `any` 15 → 12, broad `except` + `pass` 1 → 0, stale markers 0.
+  - The new files brought most of the growth: `as` 118 → 146 (+33 in new files), `!` 74 → 90 (+23), swallowed `.catch` 21 → 38 (+16), empty `catch {}` 7 → 12. Tasks 1106–1111 reviewed those files afterwards and kept most of these as deliberate.
+- Linter (`### Linter evaluation`, part 10): Biome, oxlint and ESLint were not adopted (0 bugs caught; decision 106 answered no). Five `tsconfig` flags were adopted instead (`noUnusedLocals`, `noUnusedParameters`, `noFallthroughCasesInSwitch`, `noImplicitReturns`, `noImplicitOverride`). They run inside `npm run check`, which is already a pre-commit check. No baseline file, no fix task left.
+
+### Pending
+- Follow-up tasks (`### Pending`):
+  - `task 1112: Mods screen: show modIssues() per mod bundle`
+  - `task 1113: Store and gallery scripts: one shell launcher and one demo-save builder`
+  - `task 1051: Freesound: re-pick its 2 audio slots from Commons, drop it from the audio order`
+  - `task 1114`–`1116` (check scripts and ruff), waiting on decisions 196–198
+- Superseded by tasks of other milestones:
+  - `task 765: Delete app/server, ServerStore, the trivia command and nix build .#app` (blocked by decision 150)
+  - `task 463: Release budget per language (pm decision, CT-3)`
+  - Developer checks: `task 146` (decision 81), `task 652` (decision 113)
+- Remaining risk:
+  - `qgen.py`: still 4.5k lines in one file. Part 7 fixed 64 rows and kept the structure; it remains the likeliest home of the next bug.
+  - Python↔TS twins: `app/server/` and `save_file.py` stay hand-synced until task 765 deletes them (decision 104).
+  - Promise handling (`no-floating-promises`) stays a review item (decision 106), checked by no tool.
+  - Unreviewed code: anything added after 2026-10-14. Decision 201 decides whether anyone reviews it.
+  - Each file had one review pass. The 274 won't-fix rows are judgement calls, mostly small duplications kept on purpose.
+
+### Process
+These decisions are open and wait for the developer (`### Process decisions`):
+- decision 196: a per-commit check that `directory.md` names every tracked file (task 1114).
+- decision 197: a per-commit unused-export scan, covering the gap every linter leaves (task 1115).
+- decision 198: ruff for Python with narrow rules (encoding, unused, broad excepts; task 1116).
+- decision 199: an AGENTS.md rule: "import, don't copy; a copy across a boundary names its source".
+- decision 200: an AGENTS.md rule: "after a move, rename or delete, fix the comments and docs that name the old".
+- decision 201: a recurring review per milestone (pm `cleanup_prompt`) or per release.
 
 ## Format
 
