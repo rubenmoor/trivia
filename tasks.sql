@@ -28489,6 +28489,30 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 
 Look: `git show pm/task-1129-run-1084-left`. Keep: `git merge pm/task-1129-run-1084-left`. Then `git branch -D pm/task-1129-run-1084-left`.', NULL, NULL, '2026-10-15T17:40:17Z', NULL, NULL, NULL, 'once', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (208, 'What must a script that calls claude report to its caller?', 'answered', '[]', 'task 1129: Finish batch-8 … ran 3h49m and pm recorded $0.37: only the worker''s own session. The qgen claude calls it started, the real cost, were invisible to pm and to the developer. Applies to qgen and to any future script that calls claude.', 'Everything a direct claude -p call would report, as a summary at the end of every run, also on failure or abort: number of calls (ok / failed / retried), models, turns, input/output/cache tokens, cost in $, wall time; per call a log line. An agent that runs the script copies the summary into its task note.', NULL, '2026-10-15T18:41:13Z', '2026-10-15T18:41:13Z', NULL, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (209, 'Joker symbols for the kept names?', 'pending', '["All ★: bulb with rays, broom with swoosh, wand with star, pointing hand, crosshair with curved arrow", "Keep today''s five (bulb, door, stairs, compass, crosshair), only redraw them VD-8 style", "Mixed: letters per joker from the list (e.g. H1 P2 F1 K2 T2)"]', '`decision 187: Icons and flags reviewed in /gallery?`: "joker icons still need work". English names kept (`decision 190: English name for the hint joker (symbol bulb)?` … `decision 194: English name for the snipe joker (symbol crosshair)?`); today''s symbols were drawn for the rejected symbol-first names. `decision 188: Joker names English first, one symbol per joker (milestone 9)` allows a new symbol. Whatever is picked: drawn VD-8 style like plan 135''s icons (24×24, stroke 2.4, rounded, body fill-opacity 0.25, playful), same symbol in every language, tray, follow-up dialogs, /comodines, Customize and gamemaster config rows; achievement icons redrawn if a symbol changes.
+
+Candidates per joker (★ = recommended; answer with letters, e.g. "all ★" or "H1 P2 F1 K1 T1"):
+
+- **Hint** (H; es Soplo, de Zaunpfahl): shows the next hint, vague → strong
+  - H1 ★ bulb with rays: today''s bulb, three short rays above, glass filled, rays bouncing out
+  - H2 speech bubble with a small "!" or "…": a whispered tip, fits «Soplo» too
+  - H3 keep today''s bulb, only redrawn
+- **Pass & Purge** (P; es Paso, de Näxt): drops the question; optionally purges its whole subcategory
+  - P1 ★ broom with a swoosh: bristles filled, two motion arcs; fits "purge" and plan 09''s sweep animation
+  - P2 door with a swoosh: today''s door ajar, a motion arc leaving through it ("pass")
+  - P3 fast-forward double chevron with a dust puff
+- **Fairy** (F; es Bájale, de Gang runter): swaps for an easier question of the same subcategory
+  - F1 ★ wand with a star: tilted wand, filled five-point star at the tip, two sparkles
+  - F2 fairy wings: two pairs of rounded wings, filled, a small dot body
+  - F3 keep stairs (going down), only redrawn
+- **Ms Picky** (K; es Cambiazo, de Wunschzeit): the players choose another subcategory, similar difficulty
+  - K1 ★ pointing hand: index finger pointing at a small card, picking one
+  - K2 magnifier over a card: picky inspection
+  - K3 keep compass, only redrawn
+- **Trick Shot** (T; es Francotirador, de Finte): aim at an answer; wrong one struck out, right one repeats the level
+  - T1 ★ crosshair with a curved arrow: today''s ring + ticks, an arc arrow curving into the centre
+  - T2 suction-cup dart in a target: filled target rings, dart stuck in (plan 09''s cartoon shot)
+  - T3 keep crosshair, only redrawn', NULL, NULL, '2026-10-15T18:57:38Z', NULL, 1135, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -29593,6 +29617,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1087, 1133, '2026-10-15T18:47:49Z', '2026-10-15T18:51:58Z', 'done', NULL, 0, '4f4e71b7932d0ec5a389156a9cd990030391fe23', 'claude-opus-5-5[1m]', 'afd62166-6671-4420-ae0c-46ddb714e584', 29, 54, 21332, 1739317, 125020, 1.7748794000000006, 3530483);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1088, 1134, '2026-10-15T18:51:58Z', '2026-10-15T18:56:00Z', 'done', NULL, 0, '4093f4c6a451c20c2b9dc050df700c886aabac6f', 'claude-opus-5-5[1m]', 'bb4a5c66-6658-46de-990d-8b513abf2e9c', 24, 46, 17337, 1405005, 69552, 1.184341, 3530483);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1089, 1103, '2026-10-15T18:56:00Z', '2026-10-15T18:57:19Z', 'done', NULL, 0, '86dfb697f252cb5e706cb13329ea469bd7b7bba6', 'claude-opus-5-5[1m]', 'ca3d6441-24c6-4443-8e82-c8c55c29acbc', 21, 34, 6938, 804386, 58548, 0.7681572, 3530483);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1090, 1135, '2026-10-15T18:57:19Z', '2026-10-15T18:57:45Z', 'blocked', NULL, 0, '34e5f9a0b2882c9cf4c74166818f6102002ccdc3', 'claude-opus-5-5[1m]', '0606a40a-0d75-413a-83b3-575b775a1d1e', 5, 10, 2278, 163859, 31347, 0.3291478, 3530483);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -29901,6 +29926,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1099, 191);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1099, 192);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1099, 193);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1099, 194);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1099, 209);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1100, 190);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1100, 191);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1100, 192);
@@ -29911,10 +29937,12 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1101, 191);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1101, 192);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1101, 193);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1101, 194);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1101, 209);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1103, 187);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1114, 196);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1115, 197);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1116, 198);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1135, 209);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
