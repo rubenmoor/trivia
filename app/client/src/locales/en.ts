@@ -365,7 +365,7 @@ export const en = {
       mediaMissing: "media not available (missing `trivia-media sync`?)",
       sendFailed: "Couldn't send the answer: {error}",
       final: "Final answer",
-      finalWaiting: "Final answer…",
+      finalWaiting: "And the answer is…",
       prompt: "Pick an answer",
     },
   },

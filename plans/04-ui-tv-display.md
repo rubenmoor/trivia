@@ -153,7 +153,7 @@ Four cards, each showing only a question's `description` (D-8). The players pick
   1. A heavy **lock "clunk"** sound plays, and the chosen answer gets a bright frame with a small padlock icon. The other answers dim.
   2. Below the answers sits a **big padlock** (or a vault door / chain) that has been covering the final-answer button. After a short suspense beat (~0.8 s), it unlocks with a click, swings or slides away (~0.6 s) with a metallic sound, and reveals the **«Respuesta final»** button.
 - **Going back (D-22):** while an answer is locked in, tapping any answer (or `Backspace`) **unlocks** it. This is the lock-in animation in reverse: the big padlock swings back in front of «Respuesta final» and closes with a clunk, the answer's frame and padlock icon go away, and the other answers brighten again. **No answer is locked in afterwards**; the players tap again to lock in an answer, the same one or another. This leaves room for family debate.
-- **Final answer:** «Respuesta final» (click or `Enter`) submits. The answers can't be changed any more, the screen darkens around the question, and the music switches to the **most intense track** (see Music). The players then wait; the higher the level, the longer the wait:
+- **Final answer:** «Respuesta final» (click or `Enter`) submits. The answers can't be changed any more, the screen darkens around the question, and the music switches to the **most intense track** (see Music). The players then wait under a drumroll (amber halos beating outwards, the trembling, shimmering «And the answer is…» growing until the reveal; task 1105); the higher the level, the longer the wait:
 
   | Level | 1–2 | 3–4 | 5–6 | 7–8 | 9–10 | 11 | 12 |
   |---|---|---|---|---|---|---|---|

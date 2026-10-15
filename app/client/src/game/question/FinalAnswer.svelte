@@ -27,7 +27,12 @@
   {#if error}
     <p class="error">{t("screen.question.sendFailed", { error })}</p>
   {:else if submitted}
-    {#if !revealed}<p class="waiting">{t("screen.question.finalWaiting")}</p>{/if}
+    {#if !revealed}
+      <div class="suspense">
+        <span class="ring" aria-hidden="true"></span><span class="ring late" aria-hidden="true"></span>
+        <p class="waiting">{t("screen.question.finalWaiting")}</p>
+      </div>
+    {/if}
   {:else}
     <button class="candy final-button" class:ready onclick={onsubmit} disabled={!ready} tabindex={ready ? 0 : -1}>
       {t("screen.question.final")} <Prompt action="submit" />
@@ -87,14 +92,40 @@
     white-space: nowrap;
     text-shadow: var(--text-shadow);
   }
+  /* Drumroll: halos beat outwards, the text trembles and grows until the reveal. */
+  .suspense {
+    position: relative;
+    display: grid;
+    place-items: center;
+    animation: build 10s ease-in forwards;
+  }
+  .suspense > * {
+    grid-area: 1 / 1;
+  }
+  .ring {
+    width: calc(100% + 2 * var(--u));
+    height: calc(100% + 0.6 * var(--u));
+    border-radius: 50%;
+    border: calc(0.25 * var(--u)) solid var(--amber);
+    opacity: 0;
+    animation: beat 1.6s ease-out infinite;
+    pointer-events: none;
+  }
+  .ring.late {
+    animation-delay: 0.8s;
+  }
   .waiting {
     margin: 0;
     font-family: var(--font-display);
-    font-size: calc(2 * var(--u));
-    font-weight: 700;
-    color: var(--amber);
-    text-shadow: var(--text-shadow);
-    animation: pulse 1.2s ease-in-out infinite;
+    font-size: calc(2.4 * var(--u));
+    font-weight: 800;
+    background: linear-gradient(100deg, var(--amber) 40%, var(--cream) 50%, var(--amber) 60%) 0 0 / 300% 100%;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 0 calc(0.6 * var(--u)) rgba(255, 184, 28, 0.55));
+    animation:
+      shimmer 1.8s linear infinite,
+      roll 0.12s linear infinite;
   }
   .error {
     margin: 0;
@@ -114,9 +145,41 @@
       transform: rotate(9deg);
     }
   }
-  @keyframes pulse {
+  @keyframes build {
+    from {
+      transform: scale(0.85);
+    }
+    to {
+      transform: scale(1.15);
+    }
+  }
+  @keyframes beat {
+    from {
+      opacity: 0.7;
+      transform: none;
+    }
+    to {
+      opacity: 0;
+      transform: scale(1.25, 1.9);
+    }
+  }
+  @keyframes shimmer {
+    from {
+      background-position: 100% 0;
+    }
+    to {
+      background-position: 0 0;
+    }
+  }
+  @keyframes roll {
+    25% {
+      translate: calc(0.04 * var(--u)) calc(-0.03 * var(--u));
+    }
     50% {
-      opacity: 0.45;
+      translate: calc(-0.03 * var(--u)) calc(0.04 * var(--u));
+    }
+    75% {
+      translate: calc(0.03 * var(--u)) calc(0.03 * var(--u));
     }
   }
 </style>
