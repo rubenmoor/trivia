@@ -21,18 +21,18 @@ A trivia/Q&A party game that runs locally and offline; the code and question poo
 | [`08-review-tool.md`](08-review-tool.md) | Local web page to approve, reject or give feedback on questions | draft |
 | [`09-jokers.md`](09-jokers.md) | Jokers (hint, skip/purge, easier, other subcategory, snipe): rules, server, UI, animations | draft |
 | [`10-visual-design.md`](10-visual-design.md) | Look and feel: colours, type scale, glass panels over images, components, motion | draft |
-| [`11-steam.md`](11-steam.md) | **Steam release master plan:** principles, tracks, phases, blocking questions (D-34) | draft |
+| [`11-steam.md`](11-steam.md) | **Steam release master plan:** principles, tracks, phases, S2 answers (D-34) | agreed |
 | [`12-client-engine.md`](12-client-engine.md) | Move the game referee from Python to TypeScript; storage adapters; pool export (M7) | draft |
-| [`13-game-modes.md`](13-game-modes.md) | Steam: gamemaster mode with joker budget, default mode with presets, competitive mode | stub |
+| [`13-game-modes.md`](13-game-modes.md) | Steam: five game modes, no default mode (D-74); gamemaster mode (D-88); multiplayer (D-77), competitive timed (D-80) | agreed |
 | [`14-input.md`](14-input.md) | Steam: every button clickable, controller support, couch co-op input | draft |
-| [`15-i18n.md`](15-i18n.md) | Steam: locale and region model; sub-plans 15a (UI), 15b (questions), 15c (regional) | stub |
+| [`15-i18n.md`](15-i18n.md) | Steam: locale and region model, launch languages (D-78); sub-plans 15a (UI), 15b (questions), 15c (regional) | agreed |
 | [`15a-ui-translation.md`](15a-ui-translation.md) | Steam: UI string catalogs, joker names and keys per language | stub |
-| [`15b-question-translation.md`](15b-question-translation.md) | Steam: translating, re-rating and reviewing the pool per language | stub |
-| [`15c-regional-questions.md`](15c-regional-questions.md) | Steam: `region` tags (Colombia today), regional packs | stub |
-| [`16-content-target.md`](16-content-target.md) | Steam: pool size and quality bar for release, games-per-player simulation | stub |
-| [`17-publishing.md`](17-publishing.md) | Steam: media and code licenses, credits, AI disclosure, store page, Steamworks account | stub |
+| [`15b-question-translation.md`](15b-question-translation.md) | Steam: translating, re-rating and reviewing the pool per language | draft |
+| [`15c-regional-questions.md`](15c-regional-questions.md) | Steam: `region` tags (Colombia today), regional packs; superseded by 22 (D-39) | superseded |
+| [`16-content-target.md`](16-content-target.md) | Steam: pool size and quality bar for release (D-75), games-per-player simulation | agreed |
+| [`17-publishing.md`](17-publishing.md) | Steam: media and code licenses (D-102), credits, AI disclosure, store page, price and Steamworks account (D-98), Freesound out (D-103) | active |
 | [`17a-store-page.md`](17a-store-page.md) | Steam: store page drafts per language, AI disclosure, requirements, capsules, screenshots | draft |
-| [`18-steam-integration.md`](18-steam-integration.md) | Steam: desktop shell, Steamworks features, builds and depots, Steam Deck | stub |
+| [`18-steam-integration.md`](18-steam-integration.md) | Steam: desktop shell (Electron, D-63), Steamworks features, builds and depots, Steam Deck | draft |
 | [`19-repo-layout.md`](19-repo-layout.md) | Repo layout (`app/` ships, `authoring/` doesn't), flake packages, the one-command LLM batch (D-35, D-36) | active |
 | [`20-pipeline-efficiency.md`](20-pipeline-efficiency.md) | Fewer Claude calls and tokens in `qgen batch`; stored concept lists and multi-axis question styles for more varied questions | active |
 | [`21-age-groups.md`](21-age-groups.md) | Four age groups on one shared difficulty scale 1–15; the pipeline writes for a focus group (D-38) | active |

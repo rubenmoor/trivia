@@ -1,6 +1,6 @@
 # 18 — Steam Integration and Packaging
 
-**Status:** stub
+**Status:** draft (shell decided, D-63)
 
 Part of the Steam plan ([11](11-steam.md)). Turns the built client into an installable desktop game with Steam features, and gets builds onto Steam. Depends on the client engine ([12](12-client-engine.md)): once the game runs without Python, the shell only has to show the client and save one file.
 
