@@ -24618,7 +24618,8 @@ Binding: `decision 110` (D-99: Regional packs at launch (RG-5, OQ-46)), `decisio
 ## Guard
 - Plan 84''s `colombia` chain ended: `qgen report --bundle colombia` and `qgen report --bundle colombia --locale en` at 2000 approved; plan 84''s pilot-effort task done.
 - "More regional bundles at launch?" answered (`pm decision list --grep "More regional"`).
-- Else pend on the open decision (`pm task-pending-decision`) or stop without changes.
+- Else pend, never stop without changes (an unclosed run counts as failed in `pm run`): `pm task-pending-decision 1035 <id>` on "More regional bundles at launch?" if it''s pending; otherwise on the pending decision that blocks the earliest open task of plan 84''s `colombia` chain (`pm decision list`, "blocks task(s)"; today `task 643: Regional pilot \`colombia\`: start` waits on `decision 213: General category list for regional bundles`), or of plans 98/138 that the chain waits for.
+- No such decision but the chain still has queued tasks (they run first, priority -110 vs. -140): `pm decision add "Regional pilot record: colombia chain still running"` (kind once; body: where the chain stands; option "re-check after the chain") and pend on it.
 
 ## Steps
 - Plan 84''s numbers in `plans/15c-regional-questions.md` and `plans/16-content-target.md` ($ per approved, review time per 100); missing → record them from `qgen report --cost` and `qgen report --review-time --bundle colombia`.
@@ -26689,7 +26690,7 @@ Per answer:
 In every case also note in D-65: review 2 (opus) only runs after a new media search, so in rework Fable''s review 1 gives the final verdict (found by `task 345: Fable rework experiment: run, compare with rework-1, keep/drop/extend decision`).
 
 Done when D-65 reflects the answer and `pm decision consequences 216 "…"` is recorded.', '2026-10-15T20:02:01Z', NULL, 1143, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1145, 128, 'investigate the failure of task 1035: Regional pilot record', 'investigate', 'open', -138, NULL, '`task 1035: Regional pilot record` failed in `pm run`; its summary is below. Find out why, don''t redo its work:
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1145, 128, 'investigate the failure of task 1035: Regional pilot record', 'investigate', 'done', -138, '2026-10-15, cause: task 1035''s guard allowed ''stop without changes'', which pm run counts as a failed run (no tooling bug; colombia at 102 approved, chain blocked). Rewrote task 1035''s guard to always pend on the decision blocking the colombia chain (or ''More regional bundles at launch?''); pended task 1035 on decision 213: General category list for regional bundles. No files changed.', '`task 1035: Regional pilot record` failed in `pm run`; its summary is below. Find out why, don''t redo its work:
 * read its log, `pm show 1035`, and the stashes it left (`git stash show -p --include-untracked <sha>`); don''t apply or drop them, task 1035''s next run gets them
 * rerun the failing command or script to see the error yourself; find the cause in the code, not only the symptom
 Then, by what you find:
@@ -26721,7 +26722,7 @@ Your note on `pm task done`: the cause and what you queued.
       - **Why not pending:** the decision "More regional bundles at launch?" doesn''t exist yet. Plan 84''s closing QC creates it when `colombia` reaches 2000 in es. Raising a placeholder decision now would just put a meaningless question in front of you.
       
       The cause is the queue order: task 1035 came up before `task 643: Regional pilot \`colombia\`: start` and the rest of plan 84''s `colombia` chain had run. If you''d rather the queue stop picking it up, you could link it to the "More regional bundles at launch?" decision once that decision exists.
-      [success: 4 turns, $0.30]', '2026-10-15T20:05:17Z', NULL, NULL, 0);
+      [success: 4 turns, $0.30]', '2026-10-15T20:05:17Z', '2026-10-15T20:05:49Z', NULL, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -29962,6 +29963,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 last tool call: Bash: pm instructions 2>&1 | grep -n -i -E "stop|guard|wait|block|defer|not yet|requeue" | head -40
 likely cause: the worker ended without `pm task done|drop 1035` or a pending decision; its last message: The cause is the queue order: task 1035 came up before `task 643: Regional pilot \`colombia\`: start` and the rest of plan 84''s `colombia` chain had run. If you''d rather the queue stop picking it up, 
 log: /home/ruben/code/trivia/.git/pm-logs/task-1035-run-1124.log', 0, 'cfc31ef6d1679d698d68c76c71ac553f11ab04db', 'claude-opus-5-5[1m]', '3815dce7-332e-4fc4-a69d-06bc84bb24ca', 4, 10, 1495, 124339, 30620, 0.29976780000000003, 3530483);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1125, 1145, '2026-10-15T20:05:17Z', '2026-10-15T20:05:56Z', 'done', NULL, 0, 'a63da553e60423ae0bc49432757cff31ffbf2f69', 'claude-opus-5-5[1m]', 'cff9e49a-a913-4b17-82ed-ea086db6336b', 8, 16, 3186, 321349, 40203, 0.4496778, 3530483);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -30273,6 +30275,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1032, 213);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1032, 214);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1033, 62);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1034, 62);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1035, 213);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1039, 176);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1041, 177);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1042, 176);
