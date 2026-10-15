@@ -8073,6 +8073,38 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 ## Done when
 - All three languages playable on `default` (go-live decisions answered), store pages localized (plan 144), `qgen report --simulate` ✓ for `zh-Hans` (`chinese-base`), `ru`, `pt-BR`; release check smokes every shipped locale; docs above updated.', '2026-10-15T20:24:37Z', 1155);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (146, 1, 'Media yield', 200, 'Questions lost for want of media, measured over batches 6–8, and what to do about it. Conclusion: **the yield is fine for now**. Media is batch-8''s top needs_work reason at record (2.1 % of 992 merged), but it''s well under the 10 % bar of `decision 13: Batch health thresholds and stop rule?`, and `qgen rework` (`decision 3: How are needs_work questions (33 now, more per batch) resolved?`) recovers almost all of it. So this plan only makes the loss visible end to end and looks into the one media metric that fails, media share. Raised by `task 53: QC batch-8` through `plan 17: Batch runs` ("Media yield").
+
+## Where picks fail (batch-8, `work/batch-8/reviews`, `authoring/reports/batch-8.md`)
+- Funnel: 992 merged → **101** without a pick in review round 1 (`new_query` set) → `qgen research` (one new search each, `cmd_research` in `qgen.py`) → **~21** still without one at record (`cmd_record`: no pick → needs_work "No se encontró una imagen adecuada…") → after rework-3: **4** media needs_work in the whole pool (q-1452, q-2053: no pick; q-1566, q-1991: licence `replace`, `decision 47: Replace the files on the licence list`).
+- Batch-7: 43 "no se encontró" lines (7.0 %), from before rework ran per batch; batch-6: 7.3 %.
+- Why picks fail (feedback in batch-7/8 "## Needs work"):
+  - Off-target candidates: the search returns unrelated Commons files (Denethor → Maurya reliefs; air resistance → paintings of angels). Most common.
+  - No candidates, and only one new search allowed (q-1331 "Chiribiquete tepuis aerial").
+  - Essential map with labels that give away the answer (q-1423: UK map reads "UNITED KINGDOM"), a "blank map" query would fix it.
+  - Logos and trademarks aren''t on the free providers (q-1811 Facebook "f").
+  - Wrong role: the reviewer says `essential` should be `illustrative` (q-1583), and record can''t change the role.
+  - Contact sheet didn''t match the candidate titles (q-0614, batch-7, one case).
+  - Licence `replace` (PD-US only): 2 left.
+- Drafting: 49 of batch-8''s 519 skipped slots name media as the reason ("the sources unlikely have a screenshot"), about 3 % of slots.
+
+## Throughput cost
+- After rework: ~0.4 % of merged (4 of 992), ≈ 4 approved per batch, so about 30 questions over the ~8 batches to 5000. Negligible.
+- Money: 101 research searches (no LLM) and their round-2 reviews; rework ≈ $0.12 per question (`decision 3` consequences: $3.57 for 31).
+- The real media gap is **media share** (questions with `stimulus` ≠ none): 25.6 % in batch-6, 13.8 % in batch-7, 12.2 % in batch-8, ✗ against 15–50 % twice in a row. The cause is unclear: slot plan, drafter skips, or merge/drop rates of media questions.
+
+## What would raise it (not now)
+- More providers: MP-5 Pexels, MP-12 Pixabay (`plans/23-media-providers.md`), both blocked on API access outside our control.
+- A second `research` round, query hints ("blank map", no logos as `essential`), a role change at record: only if task B''s diagnosis says they pay off.
+- IMG-16/17 (`plans/06-images.md`, 4K target and old picks) are about picture quality, not yield. Not part of this plan.
+
+## Tasks
+- A. Media funnel in the batch report: round-1 no pick, recovered by research, needs_work at record, so each QC sees where picks fail (`authoring/tools/health.py`, `authoring/reports/<batch>.md` "## Health").
+- B. Media share below 15 %: read-only diagnosis over batches 6–8, plus a proposal decision covering the residual-miss fixes above.
+
+## Done when
+- Task A''s rows show up in the next batch report, and task B''s decision is answered, with any approved change added as a task.
+- Plan 17''s trigger stays as it is: if media needs_work reaches ≥ 10 % in two batches in a row, revisit this plan.', '2026-10-15T21:54:05Z', 1184);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -27494,9 +27526,9 @@ QC batch-8 proposal B, approved in `decision 226: QC batch-8: which changes?` (a
 ## Check
 - `qgen validate`, `npm run check` clean.
 - Then `qgen report --qc batch-8 --changes "<task ids of proposals A and B>"` if that line isn''t written yet (QC.md step 4).', '2026-10-15T21:45:42Z', NULL, 53, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1184, 1, 'write plan: media yield', 'plan', 'open', 1000, NULL, 'Plan 17 "Media yield" trigger (`plan 17: Batch runs`), set by `task 53: QC batch-8`: in batch-8, media ("no usable media") is the top needs_work reason at record: 2.1 % of 992 merged (~21), ahead of giveaway 1.4 %, fact 0.6 %, overlap 0.4 % (`authoring/reports/batch-8.md` "## Health"; batch-7: 7.0 %, batch-6: 7.3 %). The rate itself is well under the 10 % bar, so the plan may well conclude the yield is fine for now; say so and keep it small then.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1184, 1, 'write plan: media yield', 'plan', 'done', 1000, '2026-10-15, plan 146: Media yield (tasks.sql only)', 'Plan 17 "Media yield" trigger (`plan 17: Batch runs`), set by `task 53: QC batch-8`: in batch-8, media ("no usable media") is the top needs_work reason at record: 2.1 % of 992 merged (~21), ahead of giveaway 1.4 %, fact 0.6 %, overlap 0.4 % (`authoring/reports/batch-8.md` "## Health"; batch-7: 7.0 %, batch-6: 7.3 %). The rate itself is well under the 10 % bar, so the plan may well conclude the yield is fine for now; say so and keep it small then.
 
-Write a plan for milestone 1 on media yield: why picks fail (no candidates, search can''t be repeated, unsuitable sheets, licence `replace`), how much throughput it costs, and what would raise the yield. Starting points: `plans/06-images.md`, `plans/23-media-providers.md`, IMG-16/17, the needs_work feedback in `authoring/reports/batch-7.md` and `batch-8.md` ("## Needs work", "No se encontró una imagen adecuada").', '2026-10-15T21:51:29Z', NULL, 53, 0);
+Write a plan for milestone 1 on media yield: why picks fail (no candidates, search can''t be repeated, unsuitable sheets, licence `replace`), how much throughput it costs, and what would raise the yield. Starting points: `plans/06-images.md`, `plans/23-media-providers.md`, IMG-16/17, the needs_work feedback in `authoring/reports/batch-7.md` and `batch-8.md` ("## Needs work", "No se encontró una imagen adecuada").', '2026-10-15T21:51:29Z', '2026-10-15T21:54:08Z', 53, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1185, 17, 'run batch-9', 'work', 'open', NULL, NULL, 'Next batch of `plan 17: Batch runs` (per-batch pattern 1), added by `task 53: QC batch-8`. Follow `authoring/RUNBOOK.md` steps 1–5 exactly, including "Under `pm run`" (plain `qgen batch`; `tasks.sql` alone isn''t a dirty tree; stage exactly the printed `git add` paths, don''t commit).
 
 - Runs after batch-8''s change tasks (`task 1182: Ambiguity in riddles: generic answers and one question per text (QC batch-8 A)`, `task 1183: Regional premise: no Spain-only words or brands in base (QC batch-8 B)`); they outrank -100.
@@ -27518,6 +27550,8 @@ Phases (the task runs again after each decision is answered; check which decisio
 Missing tooling: do what exists, list the rest in the note. No prompt or `qgen.py` changes here.
 
 Done when: phase 6 done; note lists decisions, change tasks, numbers.', '2026-10-15T21:51:41Z', NULL, 53, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1187, 146, 'create tasks for plan 146: Media yield', 'split', 'open', 1000, NULL, 'Split plan 146 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T21:54:05Z', NULL, 1184, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -30855,6 +30889,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1144, 1144, '2026-10-15T21:16:32Z', '2026-10-15T21:16:51Z', 'done', 'left 2 files unstaged, committed on branch pm/task-1144-run-1144-left; decision 225: investigate', 0, 'eb3b2eb486c1359855e0c192881a6a9c758b2f5a', 'claude-opus-5-5[1m]', '91f3b81a-1d9b-4f8f-a424-682979fd79e1', 5, 8, 1554, 102421, 20503, 0.21562019999999998, 3661032);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1145, 53, '2026-10-15T21:40:40Z', '2026-10-15T21:42:03Z', 'blocked', NULL, 0, '9378bf6ea2caf0e86a4e8dad94e4e8e8344c2aaf', 'claude-opus-5-5[1m]', '8a2ef06d-3786-4128-affa-4a5616ff1f16', 15, 30, 6275, 650019, 45372, 0.61859979999999992, 3709948);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1146, 53, '2026-10-15T21:45:12Z', '2026-10-15T21:52:35Z', 'done', NULL, 0, '2796ad64d3c8b447a7c8351a976dceb1de5e0b4c', 'claude-opus-5-5[1m]', '7fd5b9ee-1cfa-4183-b652-8776cf1b4c44', 21, 42, 9867, 1092988, 56625, 0.8691056, 3709948);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1147, 1184, '2026-10-15T21:52:35Z', '2026-10-15T21:54:17Z', 'done', NULL, 0, 'a86cb16a11cff93c743aaab53b50bb8900be99d1', 'claude-opus-5-5[1m]', 'd76d3855-3d23-4bec-9935-447ac5906610', 18, 36, 8945, 911586, 58341, 0.8280892, 3709948);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
