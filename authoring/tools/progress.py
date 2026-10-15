@@ -1,58 +1,91 @@
-"""Progress output for the long `qgen` steps (QG-18). Standard library only.
+"""Plain, append-only log of the long `qgen` steps (QG-18, QG-20, task 1131). Standard library only.
 
-On a terminal: a live bar on the last line, redrawn twice a second; other output scrolls above it.
-Otherwise (a pipe or a log, e.g. Claude Code running `qgen batch`): no bar, a plain status line
-every minute, so the output stays readable as text. Either way a summary line when a bar closes.
-The bar names what the running items wait for (`waiting()`: a Claude call, a provider search, …).
-`detail()` prints a line per item; `qgen batch` turns those off (`verbose = False`, QG-20).
+Written for an agent reading a pipe as much as for a terminal: no bar, no `\\r`, no escape codes;
+every line is written whole under one lock, so parallel calls (`--jobs`) never mix half lines.
+- `waiting()`: a start and a result line per outside call (Claude, provider search, download),
+  with the time, the step and the item (`item()`, set per item by `qgen`'s `parallel()`).
+- `resumed()`: one line when a step skips work done by an earlier run.
+- `Bar`: one summary line per step (`label: n/total in 3m10s, k failed`).
+- `fail()`: a failure line, kept so `run_steps` can repeat the step's failures before it exits.
+- `detail()`: a line per item; `qgen batch` turns those off (`verbose = False`).
 """
-import contextlib, shutil, sys, threading, time
-
-LIVE = sys.stdout.isatty() and sys.stderr.isatty()
-REDRAW = 0.5  # seconds between redraws on a terminal
-HEARTBEAT = 60  # seconds between status lines otherwise
-WIDTH = 20  # characters of the bar itself
+import contextlib, sys, threading, time
 
 _lock = threading.RLock()
-_err = sys.stderr  # the real stderr, where the live bar is drawn
-_active = None  # the bar on screen
-_drawn = False  # the live bar is drawn on the current line
-_line_start = True  # nothing else is half-written on the current line
-_waits = {}  # thread id -> stack of (what, since): what that thread is waiting for
+_ctx = threading.local()  # step, item: what the current thread works on
 verbose = True  # print detail() lines
+failures = []  # fail() lines since run_steps last cleared it
+
+
+def say(msg, err=False):
+    """One whole line, never interleaved with another thread's."""
+    with _lock:
+        out = sys.stderr if err else sys.stdout
+        out.write(msg + "\n")
+        out.flush()
 
 
 def detail(msg):
     """A line about one item: printed by the single steps, not by `qgen batch` (QG-20)."""
     if verbose:
-        print(msg, flush=True)
+        say(msg)
+
+
+def fail(msg):
+    """A FAILED line on stderr, kept for run_steps' closing block."""
+    with _lock:
+        failures.append(msg.strip())
+        say(msg, err=True)
+
+
+def resumed(label, done, todo, unit="items"):
+    """One line when a step skips `done` items finished by an earlier run; nothing on a fresh start."""
+    if done and todo:
+        say(f"  {label}: {done}/{done + todo} {unit} done earlier, skipped; {todo} to do")
+    elif done:
+        say(f"  {label}: all done earlier, skipped ({done} {unit})")
+
+
+@contextlib.contextmanager
+def item(step, name):
+    """What the current thread works on, named by every waiting() line inside the block."""
+    old = getattr(_ctx, "where", None)
+    _ctx.where = f"{step} {name}"
+    try:
+        yield
+    finally:
+        _ctx.where = old
+
+
+class _Call:
+    def __init__(self):
+        self.outcome = None
+
+    def result(self, text):
+        """The result line's text ("ok 12 results", "failed (exit 1): …"); default "ok"."""
+        self.outcome = text
+
+
+def short(text, n=160):
+    line = " ".join(str(text).split())
+    return line if len(line) <= n else line[:n - 1] + "…"
 
 
 @contextlib.contextmanager
 def waiting(what):
-    """Mark what the current thread waits for ("claude opus", "Openverse search", …) while the
-    block runs; the bar shows it. Nested marks: the innermost one counts."""
-    me = threading.get_ident()
-    with _lock:
-        _waits.setdefault(me, []).append((what, time.monotonic()))
+    """A start line and a result line, with its duration, for one outside call ("claude opus",
+    "Openverse search", …). An exception from the block is logged as "failed: …" and re-raised."""
+    where = getattr(_ctx, "where", None)
+    head = what + (f" {where}" if where else "")
+    say(f"{time.strftime('%H:%M:%S')} {head}")
+    call, t = _Call(), time.monotonic()
     try:
-        yield
+        yield call
+    except BaseException as e:
+        call.outcome = call.outcome or f"failed: {short(e) or type(e).__name__}"
+        raise
     finally:
-        with _lock:
-            stack = _waits[me]
-            stack.pop()
-            if not stack:
-                del _waits[me]
-
-
-def _waiting_text():
-    """"claude opus ×3 2m10s, Openverse search 3s": per kind, how many and the longest wait."""
-    now, groups = time.monotonic(), {}
-    for stack in _waits.values():
-        what, since = stack[-1]
-        n, oldest = groups.get(what, (0, now))
-        groups[what] = (n + 1, min(oldest, since))
-    return ", ".join(f"{w}{f' ×{n}' if n > 1 else ''} {duration(now - t)}" for w, (n, t) in sorted(groups.items()))
+        say(f"{time.strftime('%H:%M:%S')} {head} {call.outcome or 'ok'} {duration(time.monotonic() - t)}")
 
 
 def duration(seconds):
@@ -64,123 +97,25 @@ def duration(seconds):
     return f"{s // 3600}h{s % 3600 // 60:02d}m"
 
 
-class _Stream:
-    """Stands in for stdout/stderr while a live bar is used: clears the bar before other output
-    and draws it again below once that output ends a line."""
-
-    def __init__(self, real):
-        self.real = real
-
-    def write(self, s):
-        global _line_start
-        with _lock:
-            _clear()
-            n = self.real.write(s)
-            self.real.flush()
-            if s:
-                _line_start = s.endswith("\n")
-            if _line_start and _active:
-                _draw()
-            return n
-
-    def flush(self):
-        self.real.flush()
-
-    def __getattr__(self, name):
-        return getattr(self.real, name)
-
-
-def _install():
-    if LIVE and not isinstance(sys.stdout, _Stream):
-        sys.stdout, sys.stderr = _Stream(sys.stdout), _Stream(sys.stderr)
-
-
-def _draw():
-    global _drawn
-    width = shutil.get_terminal_size().columns - 1  # a wrapped line can't be cleared with \r
-    _err.write("\r\033[K" + _active.line()[:width])
-    _err.flush()
-    _drawn = True
-
-
-def _clear():
-    global _drawn
-    if _drawn:
-        _err.write("\r\033[K")
-        _err.flush()
-        _drawn = False
-
-
 class Bar:
-    """Progress over `total` items. Workers call `started()` and `finished()`; use as a context
-    manager. A bar with nothing to do prints nothing."""
+    """Counts `total` items; one summary line when the block ends. Workers call `finished()`;
+    use as a context manager. A bar with nothing to do prints nothing."""
 
     def __init__(self, label, total, unit="items"):
         self.label, self.total, self.unit = label, total, unit
-        self.n = self.failed = self.running = 0
+        self.n = self.failed = 0
         self.t0 = time.monotonic()
-        self._stop = threading.Event()
-        self._prev = None
 
     def __enter__(self):
-        global _active
-        if not self.total:
-            return self
-        _install()
-        with _lock:
-            self._prev, _active = _active, self
-        threading.Thread(target=self._tick, daemon=True).start()
         return self
 
     def __exit__(self, *exc):
-        global _active
-        if not self.total:
-            return False
-        self._stop.set()
-        with _lock:
-            _clear()
-            _active = self._prev
-        print(f"  {self.label}: {self.n}/{self.total} {self.unit} in {duration(time.monotonic() - self.t0)}"
-              + (f", {self.failed} failed" if self.failed else ""), flush=True)
+        if self.total:
+            say(f"  {self.label}: {self.n}/{self.total} {self.unit} in {duration(time.monotonic() - self.t0)}"
+                + (f", {self.failed} failed" if self.failed else ""))
         return False
-
-    def started(self):
-        with _lock:
-            self.running += 1
 
     def finished(self, ok=True):
         with _lock:
-            self.running = max(0, self.running - 1)
             self.n += 1
             self.failed += not ok
-            if LIVE and _active is self and _line_start:
-                _draw()
-
-    def line(self, live=True):
-        elapsed = time.monotonic() - self.t0
-        parts = [f"{self.n}/{self.total} {self.unit}"]
-        if self.failed:
-            parts.append(f"{self.failed} failed")
-        parts.append(duration(elapsed))
-        if 0 < self.n < self.total:
-            parts.append(f"~{duration(elapsed / self.n * (self.total - self.n))} left")
-        waits = _waiting_text()
-        if waits:
-            parts.append("waiting: " + waits)
-        elif self.running:
-            parts.append(f"{self.running} running")
-        if live:
-            full = WIDTH * self.n // self.total
-            return f"  {self.label} {'█' * full}{'░' * (WIDTH - full)} " + " · ".join(parts)
-        return f"  … {self.label}: {100 * self.n // self.total}% · " + " · ".join(parts)
-
-    def _tick(self):
-        while not self._stop.wait(REDRAW if LIVE else HEARTBEAT):
-            with _lock:
-                if self._stop.is_set():
-                    return
-                if LIVE:
-                    if _active is self and _line_start:
-                        _draw()
-                else:
-                    print(self.line(live=False), flush=True)

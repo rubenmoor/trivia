@@ -19,14 +19,14 @@ files to replace before a public release, grouped by reason (providers.licence_v
 restriction flags for information, and a tally per licence. Skips rejected questions; exits 1
 while the replacement list isn't empty.
 """
-import argparse, hashlib, itertools, json, re, subprocess, sys
+import argparse, hashlib, itertools, json, re, subprocess, sys, urllib.parse
 
 from layout import CANDIDATES, SOURCE_POOL as POOL
 from download import RateLimited, cached, http_get
 from media_cache import MEDIA, cache_path, picked, pool_urls
 import atomic  # authoring/tools/atomic.py
 import categories  # authoring/tools/categories.py (D-19, D-43)
-import progress  # authoring/tools/progress.py: the bar says what a step waits for (QG-20)
+import progress  # authoring/tools/progress.py: a log line per download (task 1131)
 import providers  # authoring/tools/providers/: Commons and the other media providers (D-45)
 
 MAX_CANDIDATES = 6
@@ -204,16 +204,15 @@ def make_sheet(candidates, out, thumbs):
             continue
         f = thumbs / (hashlib.sha1(c["preview_url"].encode("utf-8")).hexdigest()[:16] + ".img")  # not by number: a new search renumbers
         if not f.exists():
-            with progress.waiting(f"{providers.provider_of(c).NAME} preview"):
+            with progress.waiting(f"{providers.provider_of(c).NAME} preview {i}"):
                 f.write_bytes(http_get(c["preview_url"]))
         args += ["-label", str(i), f"{f}[0]"]
         shown.append(i)
     if not shown:
         return []
     out.parent.mkdir(parents=True, exist_ok=True)
-    with progress.waiting("ImageMagick"):
-        r = subprocess.run(["magick", "montage", *args, "-tile", "3x", "-geometry", "400x300+6+6",
-                            "-pointsize", "28", str(out)], capture_output=True, text=True)
+    r = subprocess.run(["magick", "montage", *args, "-tile", "3x", "-geometry", "400x300+6+6",
+                        "-pointsize", "28", str(out)], capture_output=True, text=True)
     if r.returncode:
         raise RuntimeError(f"magick montage: {r.stderr.strip() or f'exit {r.returncode}'}")
     return shown
@@ -228,9 +227,9 @@ def cmd_sync(args):
     failed = []
     for label, url in todo:
         try:
-            print(f"  {label}: {cached(url).name}", flush=True)
-        except Exception as e:  # noqa: BLE001 — keep going; rerun retries the rest
-            print(f"  {label}: FAILED {e}", file=sys.stderr)
+            with progress.item("sync", label), progress.waiting(f"download {urllib.parse.urlparse(url).hostname}"):
+                cached(url)
+        except Exception:  # noqa: BLE001 — keep going (waiting() logged it); rerun retries the rest
             failed.append(label)
     if args.prune and MEDIA.exists():
         keep = {cache_path(url).name for url in pool_urls(POOL)}  # every pick, not only playable ones
@@ -261,7 +260,8 @@ def cmd_fetch(args):
     for q, slot in todo:
         label = q["id"] if slot == "media" else f"{q['id']} background"
         try:
-            data = fetch_for(q, slot)
+            with progress.item("fetch", label):
+                data = fetch_for(q, slot)
         except Exception as e:  # noqa: BLE001 — keep going; rerun retries the rest
             print(f"  {label}: FAILED {e}", file=sys.stderr)
             continue

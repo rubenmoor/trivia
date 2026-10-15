@@ -26467,7 +26467,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - -99: after the fix (0), before the other batch tasks (-100)', '2026-10-15T13:48:15Z', '2026-10-15T17:40:09Z', 51, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1130, 17, 'create tasks for plan 17: Batch runs', 'split', 'done', 1000, '2026-10-15, tasks.sql only: plan 17''s tasks checked; task 53 body: phase 4 runs the one qgen rework per decision 3 (backlog + batch-8), later QC tasks use --batch; task 52 dropped (folded into 53); 1128, 1129 in line; no new decisions', 'Split plan 17 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T13:48:36Z', '2026-10-15T13:49:43Z', 51, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1131, 17, 'qgen output as a plain log: resume notes and one line per Claude or media call', 'work', 'open', 500, NULL, '`qgen` output is built for a person at a terminal: a live progress bar, `\r` rewrites of the last line, and a status line every minute when piped (QG-18, QG-20 in `plans/07-question-generation.md`). Mostly an agent reads it now, through `pm run` and the RUNBOOK. That reader needs a log that only appends: what was skipped because a step resumed, and every slow or failing outside call.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1131, 17, 'qgen output as a plain log: resume notes and one line per Claude or media call', 'work', 'done', 500, '2026-10-15, authoring/tools/progress.py (plain log: waiting() start/result lines with time, step, item; resumed(); fail(); bar, \r and minute status line gone), qgen.py (claude() result lines incl. retry n/2 and usage limit; parallel() names items; resume line per step; run_steps repeats the failed step''s FAILED lines before exit, so RUNBOOK''s last 30 lines show the cause), media.py, providers/__init__.py, directory.md, plans/07 QG-18. Checked with a fake claude on PATH (ok, failure+retry, slow, all retries failed, usage limit) against a resumed copy of work/batch-8 and fake provider searches: no \r or escape codes. A first check run picked up the real claude (dev shell PATH): 5 rate calls, ~$0.77, written only to the temp copy.', '`qgen` output is built for a person at a terminal: a live progress bar, `\r` rewrites of the last line, and a status line every minute when piped (QG-18, QG-20 in `plans/07-question-generation.md`). Mostly an agent reads it now, through `pm run` and the RUNBOOK. That reader needs a log that only appends: what was skipped because a step resumed, and every slow or failing outside call.
 
 What
 - Drop the bar: in `authoring/tools/progress.py`, remove the `LIVE` mode (`_Stream`, `_draw`, `_clear`, `\r\033[K`), the per-`Bar` redraw/heartbeat thread and the minute status line. Keep the one summary line per step (`label: n/total in 3m10s, k failed`).
@@ -26485,7 +26485,58 @@ Docs
 Done when
 - `qgen batch` piped to a file: no `\r` or escape codes; a resumed run shows one skip line per step it resumes; every `claude -p` call and provider call has a start line and a result line.
 - Same on a terminal (no bar).
-- Check with a throw-away fake `claude` on `PATH` (one success, one failure, one slow call) and a resumed `work/<run>`; don''t spend real Claude calls.', '2026-10-15T17:26:09Z', NULL, NULL, 0);
+- Check with a throw-away fake `claude` on `PATH` (one success, one failure, one slow call) and a resumed `work/<run>`; don''t spend real Claude calls.', '2026-10-15T17:26:09Z', '2026-10-15T18:47:04Z', NULL, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1132, NULL, 'write an executive summary', 'exec', 'open', 10000, NULL, 'Write an executive summary for the owner of this project: a busy person who doesn''t read code, tasks or plans. Write
+it for an interested outsider who knows nothing about the project: plain, good English in full sentences, no jargon.
+Change nothing in the project; stage nothing.
+
+Read first: the previous summary (`pm summary show`), the milestones (`pm milestone list`, `pm show m<id>`), and what
+was done since the previous summary (`git log --stat <its commit>..HEAD`, `pm show <id>` where you need more).
+
+Write, in this order:
+1. **What the project is**, in one or two sentences: what it makes, for whom, and why. Every summary starts this way.
+2. **Where it stands**, in one sentence: how far along it is toward the current goal (the open milestone), and
+   whether that is on track, in terms of what the product can do.
+3. **What''s new** since the previous summary (for the first one: everything so far): what the product can do now
+   that it couldn''t before, and why that matters. Explain it to the outsider; don''t go into detail.
+4. **What comes next**, plus a risk only if it could change the outcome or the timing.
+
+Leave out everything about how the work is managed: decisions, sign-offs, tasks, plans, runs, failures, cost, tests
+and pm itself; never ids, file names or counts of these. One screen at most, about 250 words, few headings.
+Store it: `pm summary add < summary.md`, delete summary.md, then close your task.', '2026-10-15T18:39:31Z', NULL, NULL, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1133, NULL, 'write a resource use report', 'exec', 'open', 10000, NULL, 'Write a resource use report: sort every done task of this project into categories of the work itself, so the owner
+sees where time and tokens went. Change nothing in the project; stage nothing.
+
+`pm report tasks` lists the done tasks: id, kind, the commits that did the work, subject, note.
+
+1. First pass: read every task''s diff (`git show --stat <commit>`, then `git show <commit> -- . '':!tasks.sql''`;
+   skim large ones) and, where the diff doesn''t tell, `pm show <id>`. Note in notes.md, one line per task: what it
+   actually built or changed, and loose candidate categories. Name them in the project''s own terms: what the product
+   is made of and what making it takes, e.g. for a game 3D assets, question authoring, store publishing, UI,
+   translations; never pm''s task kinds. Planning and upkeep tasks are classified like the rest, by what they plan
+   or touch.
+2. Decide on a set of mutually exclusive categories that together cover every task, each with one sentence of
+   criteria that decides which tasks belong in it. Start from scratch; don''t look at earlier reports.
+3. Second pass: apply the criteria and put every task in exactly one category; a task that spans several goes
+   where most of its work went.
+
+Store it: write report.json, `{"categories": [{"name": "…", "criteria": "…", "tasks": [3, 7]}]}`, then
+`pm report add < report.json` (it refuses a report that misses a done task or has one twice), delete notes.md and
+report.json, then close your task.', '2026-10-15T18:39:33Z', NULL, NULL, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1134, 17, 'qgen reports its claude calls: per-call cost and tokens, totals at the end', 'work', 'open', 490, NULL, 'decision 208
+pm: task 1131 is running; tasks.sql is committed with it: What must a script that calls claude report to its caller? `task 1129: Finish batch-8 …` ran 3h49m with qgen calling claude, and pm recorded $0.37, only the worker''s own session. Builds on `task 1131: qgen output as a plain log: resume notes and one line per Claude or media call` (per-call log lines).
+
+What
+- `claude()` in `authoring/tools/qgen.py` reads everything from the JSON result: `total_cost_usd`, `usage` (input, output, cache read/write tokens), `num_turns`, `duration_ms`, the model(s). One JSON line per call to `work/<run>/calls.jsonl` (step, item, ok/failed/retry, those fields); it replaces `costs.log`. `cost_runs()` / `qgen report --cost` read `calls.jsonl`, falling back to `costs.log` for old runs.
+- The per-call result line from task 1131 also shows the cost and tokens: `… ok 2m19s $0.84 31k tok`.
+- At the end of every qgen command that called claude, on success, on a failed step (`run_steps` before `sys.exit`), on a usage limit and on Ctrl-C: `claude: 112 calls (3 failed, 2 retried), opus 98 / sonnet 14, 412 turns, 4.1M tokens (3.2M cache), $41.20, 2h51m in calls`.
+- `authoring/RUNBOOK.md`: the worker copies the `claude:` summary line into its task note (and into the "last lines" it reports on a failure).
+- `AGENTS.md` Rules: one line, "A script that calls claude reports its calls and totals (decision 208
+pm: task 1131 is running; tasks.sql is committed with it)".
+
+Done when
+- With a throw-away fake `claude` on `PATH` (JSON results with cost and usage; one success, one failure, one usage limit): `calls.jsonl` has every call, and the summary line appears on success, on a failed step and on Ctrl-C.
+- `qgen report --cost` gives the same numbers as before for an old run that has only `costs.log`.', '2026-10-15T18:41:13Z', NULL, NULL, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -28428,6 +28479,7 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
      M authoring/reports/batches.md
 
 Look: `git show pm/task-1129-run-1084-left`. Keep: `git merge pm/task-1129-run-1084-left`. Then `git branch -D pm/task-1129-run-1084-left`.', NULL, NULL, '2026-10-15T17:40:17Z', NULL, NULL, NULL, 'once', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (208, 'What must a script that calls claude report to its caller?', 'answered', '[]', 'task 1129: Finish batch-8 … ran 3h49m and pm recorded $0.37: only the worker''s own session. The qgen claude calls it started, the real cost, were invisible to pm and to the developer. Applies to qgen and to any future script that calls claude.', 'Everything a direct claude -p call would report, as a summary at the end of every run, also on failure or abort: number of calls (ok / failed / retried), models, turns, input/output/cache tokens, cost in $, wall time; per call a log line. An agent that runs the script copies the summary into its task note.', NULL, '2026-10-15T18:41:13Z', '2026-10-15T18:41:13Z', NULL, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -29527,6 +29579,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1082, 1130, '2026-10-15T13:48:48Z', '2026-10-15T13:49:49Z', 'done', NULL, 0, '113875a4d54a62f8fa81db76054ad4c03019c667', 'claude-opus-5-5[1m]', '76abd42e-8ba0-4470-86dd-dabc33fecc53', 9, 18, 5800, 303416, 33502, 0.44477120000000003, 3224626);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1083, 1128, '2026-10-15T13:49:50Z', '2026-10-15T13:50:47Z', 'done', NULL, 0, '50e44e1a2ab501f2bcd8a2c6ccd91feb46c55e3c', 'claude-opus-5-5[1m]', 'fa16398b-5aaf-4bef-99bd-f493c771b1a9', 13, 22, 2694, 344805, 26019, 0.331081, 3224626);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1084, 1129, '2026-10-15T13:50:47Z', '2026-10-15T17:40:17Z', 'done', 'left 2 files unstaged, committed on branch pm/task-1129-run-1084-left; decision 207: investigate', 0, 'c09cac9c5f4d7371218d27ae3f6ac1444135fad8', 'claude-opus-5-5[1m]', 'c0e7d95d-a71f-4ee8-8020-97bdaeaf9916', 11, 22, 2426, 388553, 30193, 0.3678626, 3224626);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1085, 1131, '2026-10-15T18:38:26Z', '2026-10-15T18:47:16Z', 'done', NULL, 0, '25c43a925c666ed0427686ff08dc74f503bae54f', 'claude-opus-5-5[1m]', '2b021455-81e5-4c76-8dc3-7fe3b7c1ec9a', 50, 78, 26581, 3195863, 97297, 1.9494805999999993, 3530483);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

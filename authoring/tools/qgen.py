@@ -56,7 +56,7 @@ import atomic  # authoring/tools/atomic.py: .tmp + replace writes, cross-process
 import age_groups  # authoring/tools/age_groups.py: level ranges per group (plan 27)
 import batches  # authoring/tools/batches.py: what the next batch does (D-36)
 import concepts  # authoring/tools/concepts.py: concept lists and question axes (D-37)
-import progress  # authoring/tools/progress.py: progress bars (QG-18)
+import progress  # authoring/tools/progress.py: the plain log (QG-18, task 1131)
 import categories  # authoring/tools/categories.py: every bundle's categories (D-19, D-43)
 import media_cache as media  # authoring/tools/media_cache.py: the media cache (D-17)
 import download  # authoring/tools/download.py: fills the media cache
@@ -211,18 +211,23 @@ _interrupted = threading.Event()  # Ctrl-C in parallel(): running claude() calls
 
 
 def parallel(fn, items, jobs, label="items", unit="items"):
-    """Run fn over items with a progress bar; report failures without stopping the others.
+    """Run fn over items, each named in its log lines, with a summary line; report failures without stopping the others.
     Claude's usage limit stops the whole step instead, reported once. Returns the errors."""
     errors, items, limit = [], list(items), []
-
-    def run(it):
-        bar.started()
-        return fn(it)
 
     def name(x):
         if isinstance(x, tuple) and all(isinstance(p, str) for p in x):
             return "/".join(x)  # (bundle, subcategory)
         return str(x.get("id")) if isinstance(x, dict) else str(x)
+
+    def what(it):
+        return (name(it[0]) if isinstance(it, tuple)  # list: grouped() files or a group of questions
+                else ", ".join(name(x[0] if isinstance(x, tuple) else x) for x in it)
+                if isinstance(it, list) else name(it))
+
+    def run(it):
+        with progress.item(label, what(it)):
+            return fn(it)
 
     with progress.Bar(label, len(items), unit) as bar, concurrent.futures.ThreadPoolExecutor(max_workers=jobs) as ex:
         futures = {ex.submit(run, it): it for it in items}
@@ -242,11 +247,7 @@ def parallel(fn, items, jobs, label="items", unit="items"):
                 except Exception as e:  # noqa: BLE001 — keep the batch going
                     bar.finished(ok=False)
                     errors.append(e)
-                    it = futures[f]
-                    what = (name(it[0]) if isinstance(it, tuple)  # list: grouped() files or a group of questions
-                            else ", ".join(name(x[0] if isinstance(x, tuple) else x) for x in it)
-                            if isinstance(it, list) else name(it))
-                    print(f"  FAILED {what}: {e}", file=sys.stderr)
+                    progress.fail(f"  FAILED {label} {what(futures[f])}: {progress.short(e, 400)}")
         except KeyboardInterrupt:
             _interrupted.set()
             ex.shutdown(wait=False, cancel_futures=True)
@@ -254,13 +255,13 @@ def parallel(fn, items, jobs, label="items", unit="items"):
     if limit:  # the caller reports it (main, cmd_batch)
         return errors + limit
     if errors:
-        print(f"{len(errors)} item(s) failed; rerun the same command to retry them.", file=sys.stderr)
+        progress.say(f"{len(errors)} item(s) failed; rerun the same command to retry them.", err=True)
     return errors
 
 
 def failed(msg):
     """A step's own error (not from parallel()): printed here, returned as the step's errors."""
-    print(f"  {msg}", file=sys.stderr)
+    progress.fail(f"  FAILED {msg}")
     return [RuntimeError(msg)]
 
 
@@ -352,21 +353,25 @@ def claude(system, user, schema, model, cwd, web=False, retries=2, read=False, w
     for attempt in range(retries + 1):
         if attempt and _interrupted.is_set():
             break
-        with progress.waiting(f"claude {model}" + (f" (retry {attempt})" if attempt else "")):
+        again = f", retry {attempt + 1}/{retries}" if attempt < retries else ""
+        with progress.waiting(f"claude {model}") as call:
             p = subprocess.run(cmd, input=user, capture_output=True, text=True, cwd=cwd, timeout=CLAUDE_TIMEOUT)
-        try:
-            out = json.loads(p.stdout)
-        except json.JSONDecodeError:
-            last = f"no JSON from claude (exit {p.returncode}): {p.stderr.strip()[:300] or p.stdout[:300]}"
-            continue
-        # every JSON result, failed ones too: they cost money
-        with open(Path(cwd) / "costs.log", "a", encoding="utf-8") as f:
-            f.write(f"{model}\t{out.get('total_cost_usd')}\n")
-        if out.get("is_error") or out.get("structured_output") is None:
-            last = f"claude error: {str(out.get('result'))[:300]}"
-            if any(w in last.lower() for w in LIMIT_WORDS):
-                raise UsageLimit(last)
-            continue
+            try:
+                out = json.loads(p.stdout)
+            except json.JSONDecodeError:
+                last = f"no JSON from claude (exit {p.returncode}): {p.stderr.strip()[:300] or p.stdout[:300]}"
+                call.result(f"failed (exit {p.returncode}): {progress.short(p.stderr or p.stdout or 'no output')}{again}")
+                continue
+            # every JSON result, failed ones too: they cost money
+            with open(Path(cwd) / "costs.log", "a", encoding="utf-8") as f:
+                f.write(f"{model}\t{out.get('total_cost_usd')}\n")
+            if out.get("is_error") or out.get("structured_output") is None:
+                last = f"claude error: {str(out.get('result'))[:300]}"
+                if any(w in last.lower() for w in LIMIT_WORDS):
+                    call.result("usage limit")
+                    raise UsageLimit(last)
+                call.result(f"failed (exit {p.returncode}): {progress.short(out.get('result') or 'no structured output')}{again}")
+                continue
         return (out["structured_output"], main_model(out)) if with_model else out["structured_output"]
     raise RuntimeError(last)
 
@@ -538,10 +543,14 @@ def cmd_concepts(args):
         progress.detail(f"  top-up: {sub}: {len(out['concepts'])} new concepts")
 
     bundles = sorted({b for b, _ in subs}, key=categories.bundle_ids().index)
+    progress.resumed("concepts", len(subs) - len(create), len(create), "lists")
     errors = parallel(make, create, args.jobs, "concepts", "lists")
     for b in bundles:
         finalize_concepts(d, b)
-    errors += parallel(top_up, [bs for bs in subs if concepts.load(*bs) and wanted(bs)], args.jobs, "top-up", "lists")
+    topped = [bs for bs in subs if (d / "topup" / concept_file(*bs)).exists()]
+    low = [bs for bs in subs if bs not in topped and concepts.load(*bs) and wanted(bs)]
+    progress.resumed("top-up", len(topped), len(low), "lists")
+    errors += parallel(top_up, low, args.jobs, "top-up", "lists")
     for b in bundles:
         finalize_concepts(d, b)
     return errors
@@ -806,6 +815,7 @@ def cmd_draft(args):
     print("target difficulty: " + "  ".join(f"{lvl}×{c}" for lvl, c in sorted(drawn.items())), flush=True)
     system = prompt("house-style", "draft")
     todo = [s for s in subs if plan.get(s) and not (d / "drafts" / f"{slug(s)}.json").exists()]
+    progress.resumed("draft", sum(bool(plan.get(s)) for s in subs) - len(todo), len(todo), "subcategories")
 
     def work(sub):
         slots = plan[sub]
@@ -956,7 +966,9 @@ def cmd_translate(args):
     if unknown := [i for i in cfg["ids"] if i not in src]:
         sys.exit(f"no such source id: {', '.join(unknown)}")
     system = prompt("house-style", "translate", locale=locale)
-    todo = [c for c in translate_chunks(cfg["ids"], src) if not (d / "translations" / f"{c[0]}.json").exists()]
+    all_chunks = translate_chunks(cfg["ids"], src)
+    todo = [c for c in all_chunks if not (d / "translations" / f"{c[0]}.json").exists()]
+    progress.resumed("translate", len(all_chunks) - len(todo), len(todo), "chunks")
 
     def work(item):
         name, qs = item
@@ -1108,7 +1120,9 @@ def rate_candidates(d):
 def cmd_rate(args):
     d = run_dir(args)
     system = prompt("house-style", "rate", locale=run_locale(d) or "es")
-    todo = [(name, qs) for name, qs in drafts(d) if qs and not (d / "ratings" / f"{name}.json").exists()]
+    files = [(name, qs) for name, qs in drafts(d) if qs]
+    todo = [(name, qs) for name, qs in files if not (d / "ratings" / f"{name}.json").exists()]
+    progress.resumed("rate", len(files) - len(todo), len(todo), "draft files")
     cands = rate_candidates(d) if todo else {}
 
     def work(group):
@@ -1142,11 +1156,13 @@ def cmd_factcheck(args):
     system = prompt("factcheck")
     language = LANGUAGES.get(run_locale(d), "Spanish")
     _, done = collect(d)  # includes verdicts kept through a revision (PE-3)
-    todo = []
+    todo, checked = [], 0
     for name, qs in drafts(d):
         need = [q for q in qs if needs_check(q) and q["tmp_id"] not in done]
+        checked += sum(needs_check(q) for q in qs) - len(need)
         if need:
             todo.append((name, need))
+    progress.resumed("factcheck", checked, sum(len(qs) for _, qs in todo), "questions")
 
     def work(item):
         name, qs = item
@@ -1388,9 +1404,10 @@ def cmd_revise(args):
     d = run_dir(args)
     ratings, checks = collect(d)
     system = prompt("house-style", "revise")
-    todo = []
+    todo, revised = [], 0
     for name, qs in drafts(d):
         if name.startswith("revised-") or (d / "revisions" / f"{name}.json").exists():
+            revised += not name.startswith("revised-")
             continue  # one round only (QG-16): revised drafts are judged by rate/factcheck, not revised again
         items = []
         for q in qs:
@@ -1402,6 +1419,7 @@ def cmd_revise(args):
     for name, items in todo:
         if not items:  # nothing to revise: saved empty, so the file counts as done
             save_json(d / "revisions" / f"{name}.json", {})
+    progress.resumed("revise", revised, sum(bool(its) for _, its in todo), "draft files")
 
     def work(group):
         items = [it for _, its in group for it in its]
@@ -2520,17 +2538,19 @@ def sheet_path(d, qid, slot):
 def cmd_media(args):
     """Fetch media candidates for every slot of the run's merged questions."""
     errors = []
-    todo = [(q, slot) for q in batch_questions(args.run) for slot in slots_of(q)
-            if media_tool.load_candidates(q["id"], slot) is None]
+    slots = [(q, slot) for q in batch_questions(args.run) for slot in slots_of(q)]
+    todo = [(q, slot) for q, slot in slots if media_tool.load_candidates(q["id"], slot) is None]
+    progress.resumed("media", len(slots) - len(todo), len(todo), "slots")
     with progress.Bar("media", len(todo), "searches") as bar:
         for q, slot in todo:
             try:
-                data = media_tool.fetch_for(q, slot)
+                with progress.item("media", f"{q['id']} {slot}"):
+                    data = media_tool.fetch_for(q, slot)
                 progress.detail(f"  media: {q['id']} {slot}: {len(data['candidates'])} candidate(s)")
                 bar.finished()
             except Exception as e:  # noqa: BLE001 — rerun retries the rest
                 errors.append(e)
-                print(f"  FAILED media {q['id']} {slot}: {e}", file=sys.stderr)
+                progress.fail(f"  FAILED media {q['id']} {slot}: {e}")
                 bar.finished(ok=False)
     return errors
 
@@ -2539,18 +2559,22 @@ def cmd_sheets(args):
     """One contact sheet per slot (ImageMagick), for the review step to look at."""
     d = run_dir(args)
     errors = []
-    todo = [(sheet_path(d, q["id"], slot), found) for q in batch_questions(args.run) for slot in slots_of(q)
+    slots = [(q, slot) for q in batch_questions(args.run) for slot in slots_of(q)]
+    done = sum(sheet_path(d, q["id"], slot).exists() for q, slot in slots)
+    todo = [(sheet_path(d, q["id"], slot), found) for q, slot in slots
             if not sheet_path(d, q["id"], slot).exists() and (found := media_tool.load_candidates(q["id"], slot))]
+    progress.resumed("sheets", done, len(todo), "sheets")
     with progress.Bar("sheets", len(todo), "sheets") as bar:
         for out, found in todo:
             try:
                 thumbs = d / "sheets" / "thumbs" / out.stem
-                shown = media_tool.make_sheet(found["candidates"], out, thumbs)
+                with progress.item("sheets", out.stem):
+                    shown = media_tool.make_sheet(found["candidates"], out, thumbs)
                 progress.detail(f"  sheets: {out.name}: {len(shown)} picture(s)")
                 bar.finished()
             except Exception as e:  # noqa: BLE001
                 errors.append(e)
-                print(f"  FAILED sheet {out.name}: {e}", file=sys.stderr)
+                progress.fail(f"  FAILED sheet {out.name}: {e}")
                 bar.finished(ok=False)
     return errors
 
@@ -2604,9 +2628,10 @@ def cmd_review(args):
     notes = translator_notes(d) if locale else {}
     mode = run_mode(args.run)
     rework = mode in ("rework", *SCANS)
-    todo = []
+    todo, done = [], 0
     for q in batch_questions(args.run):
         r = load_json(reviews / f"{q['id']}.json", {})
+        done += f"round{args.round}" in r
         if args.round == 1 and "round1" not in r:
             todo.append((q, r))
         if args.round == 2 and (r.get("researched") or fixed(r) and not rework) and "round2" not in r:
@@ -2616,6 +2641,7 @@ def cmd_review(args):
         todo += [({**x, "not_travelling": True, "source": src[x["id"]]}, r)
                  for x in load_json(d / "not-travelling.json", [])
                  if "round1" not in (r := load_json(reviews / f"{x['id']}.json", {}))]
+    progress.resumed(f"review {args.round}", done, len(todo), "questions")
 
     def translation_payload(q, r, tmp):
         if q.get("not_travelling"):
@@ -2689,15 +2715,17 @@ def cmd_fix(args):
     system = prompt("house-style", "revise", locale=locale or "es")
     lo, hi = load_age_groups()["scale"]
     today = datetime.date.today().isoformat()
-    revise, recheck = [], []
+    revise, recheck, done = [], [], 0
     for q in batch_questions(args.run, ("draft", "needs_work", "approved")):
         path = d / "reviews" / f"{q['id']}.json"
         r = load_json(path, {})
         fix = r.get("fix")
+        done += bool(fix) and ("factcheck" in fix or not needs_recheck(fix, rework))
         if fix is None and (issue := f"{SCANS[mode]['issue']}: {scanned[q['id']]}" if scanned else fix_issue(q, r, rework)):
             revise.append((q, path, r, issue))
         elif fix and "factcheck" not in fix and needs_recheck(fix, rework):
             recheck.append((q, path, r))
+    progress.resumed("fix", done, len(revise) + len(recheck), "questions")
 
     def issues_of(issue, c):
         return [issue] + ([f"fact-check {c['verdict']}: {c['problem']} correction: {c['correction']}"]
@@ -2814,23 +2842,26 @@ def needs_recheck(fix, rework):
 def cmd_research(args):
     """One new media search for questions whose round-1 review found no adequate media."""
     d = run_dir(args)
-    errors, todo = [], []
+    errors, todo, done = [], [], 0
     for q in batch_questions(args.run):
         path = d / "reviews" / f"{q['id']}.json"
         r = load_json(path, {})
         r1 = r.get("round1") or {}
+        done += bool(r.get("researched"))
         if (r1.get("pick") is None and r1.get("new_query") and not r.get("researched")
                 and "media" not in (r.get("fix") or {}).get("changed", [])):
             todo.append((q, path, r))
+    progress.resumed("research", done, len(todo), "searches")
     with progress.Bar("research", len(todo), "searches") as bar:
         for q, path, r in todo:
             query = r["round1"]["new_query"].strip()
             try:
                 q["media"]["query"] = query
-                media_tool.fetch_for(q, "media")
+                with progress.item("research", q["id"]):
+                    media_tool.fetch_for(q, "media")
             except Exception as e:  # noqa: BLE001
                 errors.append(e)
-                print(f"  FAILED research {q['id']}: {e}", file=sys.stderr)
+                progress.fail(f"  FAILED research {q['id']}: {e}")
                 bar.finished(ok=False)
                 continue
             update_pool({q["id"]: lambda x, s=query: x["media"].update(query=s)})
@@ -3111,6 +3142,7 @@ def audit_ids(run, ids, args):
     pool = run_questions(run)
     by_id = {q["id"]: q for q in pool}
     todo = [by_id[i] for i in ids if i in by_id and not (d / f"{i}.json").exists()]
+    progress.resumed("audit", sum(i in by_id for i in ids) - len(todo), len(todo), "questions")
     locale = run_locale(WORK / run)
     system = prompt("house-style", "audit", *(["translate-review"] if locale else []), locale=locale or "es")
     lo, hi = load_age_groups()["scale"]
@@ -3228,17 +3260,18 @@ def audit_section(run):
 def cmd_sync_run(args):
     """Download the run's picked files into the media cache. Rate limits don't fail the batch."""
     missing = []
-    todo = [(label, url) for q in batch_questions(args.run, ("approved", "needs_work"))
-            for label, url in media.picked(q) if not media.cache_path(url).is_file()]
+    picks = [(label, url) for q in batch_questions(args.run, ("approved", "needs_work")) for label, url in media.picked(q)]
+    todo = [(label, url) for label, url in picks if not media.cache_path(url).is_file()]
+    progress.resumed("sync", len(picks) - len(todo), len(todo), "files")
     with progress.Bar("sync", len(todo), "files") as bar:
         for label, url in todo:
             try:
-                with progress.waiting(f"download {urllib.parse.urlparse(url).hostname}"):
+                with progress.item("sync", label), progress.waiting(f"download {urllib.parse.urlparse(url).hostname}"):
                     download.cached(url)
                 bar.finished()
             except Exception as e:  # noqa: BLE001 — listed in the report; `trivia-media sync` retries
                 missing.append(label)
-                print(f"  not cached: {label}: {e}", file=sys.stderr)
+                progress.say(f"  not cached: {label}: {e}", err=True)
                 bar.finished(ok=False)
     save_json(run_dir(args) / "not-cached.json", missing)
     return []
@@ -3302,6 +3335,7 @@ def run_steps(steps, again, run=None):
         name, fn, a = steps[i]
         i += 1
         print(f"\n== [{i}/{len(steps) + 1}] {name}", flush=True)
+        progress.failures.clear()
         t = time.monotonic()
         try:
             errors = fn(a) or []
@@ -3323,6 +3357,9 @@ def run_steps(steps, again, run=None):
                   f"Wait for the reset, then run `{again}` again.", file=sys.stderr)
             sys.exit(EXIT_LIMIT)
         if errors:
+            lines = progress.failures or [str(e) for e in errors]
+            print(f"\nFailures in `{name}`" + (f" (last 20 of {len(lines)})" if len(lines) > 20 else "") + ":\n"
+                  + "\n".join(f"  {progress.short(x, 300)}" for x in lines[-20:]), file=sys.stderr)
             print(f"\nStopped at `{name}` with {len(errors)} error(s). Run `{again}` again; "
                   "if the same step fails three times in a row, stop and report the output.", file=sys.stderr)
             sys.exit(1)
@@ -3368,7 +3405,7 @@ def cmd_batch(args):
         save_json(d / "run.json", {"mode": "batch", "bundle": args.bundle, "subcategories": subs,
                                    "started": datetime.date.today().isoformat()})
     subs = load_json(d / "run.json")["subcategories"]
-    progress.verbose = False  # one bar per step, no line per item (QG-20)
+    progress.verbose = False  # one summary per step, no detail line per item (QG-20)
     print(f"{'Resuming' if resuming else 'Starting'} {run} for bundle {args.bundle}: {len(subs)} subcategories. "
           "This takes from several minutes to an hour.", flush=True)
 
