@@ -16,7 +16,7 @@
   }: { game: Game; levels: number; blocks: number; drop: boolean; busy: boolean; onnext: () => void } = $props();
 </script>
 
-<section class="level">
+<section class="screen level">
   <Tower filled={blocks} {levels} {drop} />
   <div class="level-text">
     <p class="kicker">{t("screen.level.kicker")}</p>
@@ -32,17 +32,6 @@
 </section>
 
 <style>
-  section {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: calc(1.4 * var(--u));
-    padding: var(--safe-y) var(--safe-x);
-    text-align: center;
-  }
   p {
     margin: 0;
   }

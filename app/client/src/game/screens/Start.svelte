@@ -45,7 +45,7 @@
 
 {#if preview}<Fireworks mode={preview === "finale" ? "finale" : "single"} variant={preview} />{/if}
 {#if effectsDemo}<EffectsDemo />{/if}
-<section class="start">
+<section class="screen start">
   {#if !notice}
     <button class="language glass" onclick={onlanguage} disabled={busy} data-focus-id="language" aria-label={t("screen.start.language", { name: endonym(lang) })}>
       <Flags tag={lang} size="1.1em" />
@@ -82,17 +82,6 @@
   {#if mods?.held && !notice}<p class="held">{t("mods.held", { n: mods.held })}</p>{/if}</section>
 
 <style>
-  section {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: calc(1.4 * var(--u));
-    padding: var(--safe-y) var(--safe-x);
-    text-align: center;
-  }
   p {
     margin: 0;
   }

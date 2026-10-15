@@ -17,7 +17,7 @@
   }: { game: Game; last: NonNullable<Game["last"]>; levels: number; blocks: number; busy: boolean; onhome: () => void } = $props();
 </script>
 
-<section class="result wrong">
+<section class="screen result wrong">
   <div class="columns">
     <Tower filled={blocks} {levels} small crumble />
     <div class="stack">
@@ -30,17 +30,6 @@
 </section>
 
 <style>
-  section {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: calc(1.4 * var(--u));
-    padding: var(--safe-y) var(--safe-x);
-    text-align: center;
-  }
   p {
     margin: 0;
   }

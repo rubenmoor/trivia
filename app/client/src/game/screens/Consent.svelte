@@ -48,7 +48,7 @@
   );
 </script>
 
-<section class="consent" bind:this={section}>
+<section class="screen consent" bind:this={section}>
   <h1 class="title">{t("consent.title")}</h1>
   <p class="body">{t("consent.body")}</p>
   <p class="line">{t("consent.noNames")}<br />{t("consent.change")}</p>
@@ -72,15 +72,7 @@
 
 <style>
   .consent {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     gap: calc(2 * var(--u));
-    padding: var(--safe-y) var(--safe-x);
-    text-align: center;
   }
   .title {
     animation: arrive 0.6s var(--spring) backwards;

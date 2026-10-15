@@ -57,14 +57,6 @@
 {/if}
 
 <style>
-  .error-box {
-    color: var(--coral);
-    background: rgba(40, 10, 18, 0.9);
-    border: 1px solid var(--coral);
-    border-radius: calc(0.6 * var(--u));
-    padding: calc(0.5 * var(--u)) calc(1 * var(--u));
-    font-size: calc(1.1 * var(--u));
-  }
   .menu-button {
     position: fixed;
     top: calc(var(--safe-y) * 0.5);

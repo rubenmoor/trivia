@@ -9,7 +9,7 @@
   let { last, busy, onnext }: { last: NonNullable<Game["last"]>; busy: boolean; onnext: () => void } = $props();
 </script>
 
-<section class="result">
+<section class="screen result">
   <Fireworks />
   <h1 class="title good">{t("screen.result.correct")}</h1>
   <AnswerPanel {last} />
@@ -17,17 +17,6 @@
 </section>
 
 <style>
-  section {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: calc(1.4 * var(--u));
-    padding: var(--safe-y) var(--safe-x);
-    text-align: center;
-  }
   .title {
     animation: arrive 0.6s var(--spring) backwards;
   }

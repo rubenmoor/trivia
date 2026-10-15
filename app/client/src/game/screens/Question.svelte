@@ -153,7 +153,7 @@
     locked = i;
     sfx("padlock-close");
     lockMusic();
-    // The big padlock shakes for a suspense beat, opens and slides away (UI-12, CSS below).
+    // The big padlock shakes for a suspense beat, opens and slides away (UI-12, question/FinalAnswer.svelte).
     padlockTimer = setTimeout(() => {
       finalReady = true;
       sfx("padlock-open");

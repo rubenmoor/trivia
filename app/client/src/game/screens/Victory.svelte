@@ -11,7 +11,7 @@
 </script>
 
 <Fireworks mode="finale" />
-<section class="result victory">
+<section class="screen result victory">
   <Tower filled={levels} {levels} drop />
   <div class="stack">
     <h1 class="title big gold">{t("screen.victory.title")}</h1>
@@ -23,17 +23,6 @@
 </section>
 
 <style>
-  section {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: calc(1.4 * var(--u));
-    padding: var(--safe-y) var(--safe-x);
-    text-align: center;
-  }
   p {
     margin: 0;
   }
