@@ -87,7 +87,7 @@ async function firstHit(roots, rel, hidden) {
   return null;
 }
 
-// Single range only; null = whole file, false = unsatisfiable.
+// Single range only; null = whole file, false = unsatisfiable. As authoring/tools/http_base.py parse_range.
 function parseRange(header, size) {
   const m = /^bytes=(\d*)-(\d*)$/.exec(header?.trim() ?? "");
   if (!m || (m[1] === "" && m[2] === "")) return null;
@@ -142,7 +142,7 @@ export function shippedName(url) {
   return name.slice(0, -ext.length) + (SHIPPED[ext] ?? ext);
 }
 
-// Every picked file_url in the pool, like media_cache.pool_urls; stage-media.mjs ships the same set.
+// Every picked file_url in the pool, like authoring/tools/media_cache.py pool_urls; stage-media.mjs ships the same set.
 export const poolUrls = ({ questions }) =>
   new Set(questions.flatMap((q) => [q.media?.file_url, q.background?.file_url]).filter(Boolean));
 

@@ -6,7 +6,7 @@ import { broadOf, byId, subKey } from "./pool.ts";
 import { pyRepr } from "./pycompat.ts";
 import type { Rng } from "./rng.ts";
 
-export const SAVE_VERSION = 4; // bump app/server/save.py VERSION/LISTS and authoring/tools/save_file.py too
+export const SAVE_VERSION = 4; // bump authoring/tools/save_file.py's upgrades too (and app/server/save.py VERSION/LISTS until task 765)
 
 export type { Language };
 
