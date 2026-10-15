@@ -778,38 +778,35 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - New bundles, regional packs (`plans/15c-regional-questions.md`); `chinese-base` (milestone 12).
 - Batches per age group (AG-8), targets from the windows (D-53).
 - Mixed-age sessions; log in `plans/open-questions.md` if it comes up.', '2026-10-11T21:54:56Z', NULL);
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (6, 6, 'masterplan', 1000, 'Milestone 6 closes the two leftovers of M3/M4: preloading before a screen fades in (UI-7) and recorded sounds for everything still synthesized (UI-10). Owner plan file: `plans/04-ui-tv-display.md` ("Transitions", "Sound assets", tasks UI-7, UI-10).
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (6, 6, 'masterplan', 1000, 'Milestone 6 closes the leftovers of M3/M4, preloading before a screen fades in (UI-7) and recorded sounds for everything still synthesized (UI-10), and adds playful iconography to the screens before a game session (developer, 2026-10-14): icons on their buttons, national flags for the languages. Owner plan files: `plans/04-ui-tv-display.md` ("Transitions", "Sound assets", UI-7, UI-10), `plans/10-visual-design.md` (VD-8 icon set).
 
 **This masterplan''s tasks are not implementation work: each of them writes the plan for one part below** (`pm plan add 6 …`), with that part''s tasks.
 
 ## Part 1: Preload the next screen''s media (UI-7), priority 500
-- Today: `go()` in `app/client/src/game/Game.svelte` switches the screen behind the black and fades in at once (`PLACEHOLDER(UI-7)`, line ~117).
-- Spec (04, "Transitions", step 4): the next screen mounts behind the black, its media and images preload, the fade-in waits for that, at most 2 s.
-- What preloads: mainly the Question screen (`Question.svelte`: image, decorative background, video, audio via `/media?url=…`); check the other screens for images worth waiting for.
-- Shape to decide in the plan: a preload helper (`Image.decode()`, `canplaythrough` for audio/video, timeout) that `go()` awaits, or a promise the next screen hands back. Constant for the 2 s cap in `timing.ts`.
-- Missing or failing media must not block: timeout, then fade in as today (the «medio no disponible» chip stays).
-- Done-when catch: `grep -rn PLACEHOLDER app/client/src` also hits `Placeholder.svelte` itself (comment + `PLACEHOLDER · {task}` tag), used only for the missing-media chip (`task="IMG"`, a runtime fallback, not unfinished work). The plan turns that chip into a plain notice (no `PLACEHOLDER` tag, own component or inline) and removes `Placeholder.svelte`, or the milestone''s grep never comes up empty. Update D-25 references (AGENTS.md "Placeholders" line, 04 "Implementation notes") to say none are left.
-- Overlap: plan 21 (LUI-1) task 95 moves `Placeholder.svelte` labels into the i18n catalog (`placeholder.*`). Coordinate: whichever runs second adapts; note it in the plan.
-- Check: throttled network / large video in the dev browser; the fade waits, never longer than 2 s.
+- Done: `plan 31: Preload the next screen''s media (UI-7)` (tasks 140, 141); `Placeholder.svelte` is gone.
 
 ## Part 2: Recorded sound effects (UI-10), priority 200
-- Still synthesized (`app/client/src/game/sound.svelte.ts`, recipes from line ~480): whooshes (incl. «swoosh que sube»), pops (card pick), menu blips, joker shimmer, slide whistle (silbato), shredder (trituradora), heartbeat (latido), rewind (rebobinar), scope tick, cork shot, firework launch/cannon/sparkler/star sounds; still silent: Soplo''s paper rustle and the token pop-back (JK-9).
-- Source: Kenney.nl CC0 packs first (e.g. Interface Sounds, UI Audio, Impact Sounds, Digital Audio), then Freesound CC0 / OpenGameArt; only D-45 allowlisted licences, CC0 preferred.
-- Pipeline as in UI-10''s first rounds: trim, loudness-normalize, AAC `.m4a` via `nix shell nixpkgs#ffmpeg-headless` (not a project dependency); files in `app/client/public/audio/`, committed; row in `CREDITS.md` per file (CC0 too, for provenance).
-- Wiring: add to `SAMPLE_NAMES` and `SAMPLE_FOR`; synthesized recipes stay as the fallback. Keep the folder small (current ~700 kB; set a budget in the plan).
-- An audition aid for the TV check (a URL param like `/?fuegos=…` that plays every effect, or B-3''s «Demo de efectos») is the plan''s call; keep it minimal.
-- Done when the gamemaster approves the effects on the TV.
+- Planned and built: `plan 32: Recorded sound effects (UI-10)`; open: `task 146: Gamemaster check of the recorded effects on the TV`.
 
 ## Part 3: Recorded music loops (UI-10), priority 190
-- Still generated: `normal`, `question`, `submitted` (04, "Music"): one theme at three intensities, gapless loops, ideally same key and tempo family so the ~80 ms cuts between `question` and `submitted` don''t clash. `roll` and `victory` are already recordings.
-- Harder than effects: needs a matched set of loops. Sources: Kenney.nl (music jingles/loops), OpenGameArt CC0, Freesound CC0; D-45 allowlist. If no matched set exists, options for the plan: one CC0 loop at three tempos/filters, or keep the synthesized loops; ask the gamemaster via a decision rather than guessing.
-- Seamless loop points matter (`AudioBufferSourceNode.loop`, set `loopStart`/`loopEnd` if needed); test on the TV for clicks at the seam.
-- Wiring in `sound.svelte.ts` (the music scheduler falls back to synthesis if a file is missing); `CREDITS.md` rows.
-- Runs after part 2 (shared conventions, same audition aid).
-- Done when the gamemaster approves the music on the TV; then UI-10 `[x]` in 04 and `plans/project.md` updated.
+- Planned and built: `plan 33: Recorded music loops (UI-10)`; open: `task 149: Gamemaster check of the music loops on the TV`, `task 150: Close UI-10 in the plans`.
+
+## Part 4: Playful icons and language flags before a game session, priority 400
+- New plan (`pm plan add 6 …`), not yet written.
+- Icons on every button of the screens before play: Start (play/resume, new game, mods, language), Language, Player (pick, new name, write, delete already has `trash`), Choice (modes, age group, bundles, «Personalizar partida», start, back), Customize, Mods, Consent, Credits; the plan lists the exact buttons from the code (`app/client/src/game/screens/`, `Customize.svelte`, `BundleSelector.svelte`, `Credits.svelte`).
+- Style: VD-8 (`app/client/src/game/Icon.svelte`: inline SVG, 24×24, `currentColor`, rounded strokes, 0.25 fill); playful, no emoji; new names added to `IconName`. Out of scope: in-game screens and the Esc menu (shared with play).
+- Language flags: inline SVG, simplified (no detailed coats of arms), own drawings (public-domain designs, D-45: nothing downloaded); own component (e.g. `Flags.svelte`; `Icon`''s `flag` is the report flag), keyed by language tag:
+  - `es`: a few Latin American flags (plan picks, e.g. Mexico, Colombia, Argentina)
+  - `es-ES`: Spain; `en`: UK and US; `de`: Germany, Austria, Switzerland
+  - a mod''s UI language (plan 117, `ENDONYMS` from a mod catalog) has no flags: keep the globe for it
+- Where: each option on the Language screen (`Language.svelte`, next to the endonym) and Start''s language button (`Start.svelte`, replaces the globe SVG).
+- Supersedes `decision 157: Start''s language button: globe and endonym, key per catalog, pad Y` in part (globe → flags; key, pad Y, endonym unchanged): the plan task records it (`pm decision record`) and updates the docs that describe the button (04, D-96 in `plans/decisions.md`).
+- Layout: Start''s button and the Language options stay readable at TV size and in all four catalogs (de is longest); icons don''t change keys, prompts or focus.
+- Check: `trivia-gallery` for all four languages; a developer decision to review icons and flags in `/gallery` (like `plan 100: UI wording: style guides, TV-check fixes, screen gallery`''s review decisions); VD-8 note in 10 updated.
+- Overlap: `task 1026: Gallery fixes from the review flags` may touch the same screens'' strings; whichever runs second adapts.
 
 ## Order and constraints
-- Part 1 is independent of 2 and 3. Parts 2 → 3.
+- Parts are independent; 2 → 3 shared conventions (done).
 - D-45 licences only; everything offline; no new npm or Python dependencies.', '2026-10-11T21:54:56Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (7, 7, 'masterplan', 1000, 'Milestone 7 is S2 of the Steam track (D-34, `plans/11-steam.md`): it settles what the product is before anything Steam-specific gets built. Most of it is decisions, not code. Workers research each question, write the options with a recommendation as a pm decision, and record the gamemaster''s answer in `plans/decisions.md` (next free D-number). Then they resolve the question in `plans/open-questions.md` and update the owning plan file. The few S2 tasks that are code or files (MD-6, MD-7, the gamemaster mode''s configure screen and menu, PUB-4''s `LICENSE`) follow once their decision is in.
 
@@ -24720,10 +24717,85 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - The task note cites milestone 10''s "Done when": beta installed from Steam on a second machine and played by the family; without a Steam user nothing persists and flags are off; with one, saves sync through Steam Cloud (decision 75 or the beta Cloud row); Deck review requested and its result (or S6 deferral) noted in plan 18; `qgen validate` unaffected.', '2026-10-14T23:39:32Z', NULL, 1067, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1071, 95, 'German launch announcement: game name per decision 78', 'work', 'done', NULL, '2026-10-14, plans/11-steam.md: German announcement title/body «Wohnzimmer-Quiz» (decision 78, 17a), «Spielleitermodus» per de.md (was «Mit Spielleitung»), facts line names the German store name; body already infinitive/impersonal, no ihr', '`plans/11-steam.md` "Launch (S6)" → "Announcement texts" → "German" uses «Living Room Trivia» (title, body) and the facts line says "German: no localized name"; `decision 78: German store name (PUB-8, D-50): keep «Living Room Trivia» or a localized one?` picked «Wohnzimmer-Quiz» (provisional until PUB-7''s check, `plans/17a-store-page.md` "German"). Use the German store name as 17a has it at the time, fix the facts line. Also check the German body against `app/client/src/locales/style/de.md` (no «ihr» imperatives: «Markiert», «öffnet» style left elsewhere in the text). Docs only.', '2026-10-14T23:42:05Z', '2026-10-14T23:42:56Z', 862, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1072, 94, 'Coming soon checklist: German store name per decision 78', 'work', 'done', NULL, '2026-10-14, plans/11-steam.md', '`plans/11-steam.md` "Launch (S6)" → "Developer checklist" step 1 says "Names per D-50 set in Steamworks: «Living Room Trivia», localized «Trivia en Familia»" and omits German; `decision 78: German store name (PUB-8, D-50): keep «Living Room Trivia» or a localized one?` picked «Wohnzimmer-Quiz» (provisional until PUB-7''s check, `plans/17a-store-page.md` "German"). Add the German localized name as 17a has it, cite decision 78, PUB-7 check for all three names. Also line 69 (OQ-34 row) names only en/es: add de. Docs only.', '2026-10-14T23:42:56Z', '2026-10-14T23:43:11Z', 1071, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1073, 6, 'revise the masterplan of milestone 6: Screen polish leftovers', 'revise', 'open', 1000, NULL, '`milestone 6: Screen polish leftovers` changed. Bring `plan 6: masterplan`, the masterplan, in line with it (`pm plan edit 6 --body -`), or
-leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-15T01:42:11Z', NULL, NULL, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1073, 6, 'revise the masterplan of milestone 6: Screen polish leftovers', 'revise', 'done', 1000, '2026-10-15, plan 6 body (part 4: icons and language flags; parts 1–3 status)', '`milestone 6: Screen polish leftovers` changed. Bring `plan 6: masterplan`, the masterplan, in line with it (`pm plan edit 6 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-15T01:42:11Z', '2026-10-15T01:43:45Z', NULL, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1074, 9, 'revise the masterplan of milestone 9: Steam S4: content for release', 'revise', 'open', 1000, NULL, '`milestone 9: Steam S4: content for release` changed. Bring `plan 9: masterplan`, the masterplan, in line with it (`pm plan edit 9 --body -`), or
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-15T01:42:11Z', NULL, NULL, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1075, 6, 'create tasks for plan 6: masterplan', 'split', 'open', 1000, NULL, 'Split plan 6 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T01:43:41Z', NULL, 1073, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1076, 32, 'revise plan 32: Recorded sound effects (UI-10)', 'revise', 'open', 1000, NULL, '`plan 6: masterplan`, the plan above `plan 32: Recorded sound effects (UI-10)`, changed; it is quoted below. Bring `plan 32: Recorded sound effects (UI-10)` in line with it
+(`pm plan edit 32 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 6: masterplan
+
+Milestone 6 closes the leftovers of M3/M4, preloading before a screen fades in (UI-7) and recorded sounds for everything still synthesized (UI-10), and adds playful iconography to the screens before a game session (developer, 2026-10-14): icons on their buttons, national flags for the languages. Owner plan files: `plans/04-ui-tv-display.md` ("Transitions", "Sound assets", UI-7, UI-10), `plans/10-visual-design.md` (VD-8 icon set).
+
+**This masterplan''s tasks are not implementation work: each of them writes the plan for one part below** (`pm plan add 6 …`), with that part''s tasks.
+
+## Part 1: Preload the next screen''s media (UI-7), priority 500
+- Done: `plan 31: Preload the next screen''s media (UI-7)` (tasks 140, 141); `Placeholder.svelte` is gone.
+
+## Part 2: Recorded sound effects (UI-10), priority 200
+- Planned and built: `plan 32: Recorded sound effects (UI-10)`; open: `task 146: Gamemaster check of the recorded effects on the TV`.
+
+## Part 3: Recorded music loops (UI-10), priority 190
+- Planned and built: `plan 33: Recorded music loops (UI-10)`; open: `task 149: Gamemaster check of the music loops on the TV`, `task 150: Close UI-10 in the plans`.
+
+## Part 4: Playful icons and language flags before a game session, priority 400
+- New plan (`pm plan add 6 …`), not yet written.
+- Icons on every button of the screens before play: Start (play/resume, new game, mods, language), Language, Player (pick, new name, write, delete already has `trash`), Choice (modes, age group, bundles, «Personalizar partida», start, back), Customize, Mods, Consent, Credits; the plan lists the exact buttons from the code (`app/client/src/game/screens/`, `Customize.svelte`, `BundleSelector.svelte`, `Credits.svelte`).
+- Style: VD-8 (`app/client/src/game/Icon.svelte`: inline SVG, 24×24, `currentColor`, rounded strokes, 0.25 fill); playful, no emoji; new names added to `IconName`. Out of scope: in-game screens and the Esc menu (shared with play).
+- Language flags: inline SVG, simplified (no detailed coats of arms), own drawings (public-domain designs, D-45: nothing downloaded); own component (e.g. `Flags.svelte`; `Icon`''s `flag` is the report flag), keyed by language tag:
+  - `es`: a few Latin American flags (plan picks, e.g. Mexico, Colombia, Argentina)
+  - `es-ES`: Spain; `en`: UK and US; `de`: Germany, Austria, Switzerland
+  - a mod''s UI language (plan 117, `ENDONYMS` from a mod catalog) has no flags: keep the globe for it
+- Where: each option on the Language screen (`Language.svelte`, next to the endonym) and Start''s language button (`Start.svelte`, replaces the globe SVG).
+- Supersedes `decision 157: Start''s language button: globe and endonym, key per catalog, pad Y` in part (globe → flags; key, pad Y, endonym unchanged): the plan task records it (`pm decision record`) and updates the docs that describe the button (04, D-96 in `plans/decisions.md`).
+- Layout: Start''s button and the Language options stay readable at TV size and in all four catalogs (de is longest); icons don''t change keys, prompts or focus.
+- Check: `trivia-gallery` for all four languages; a developer decision to review icons and flags in `/gallery` (like `plan 100: UI wording: style guides, TV-check fixes, screen gallery`''s review decisions); VD-8 note in 10 updated.
+- Overlap: `task 1026: Gallery fixes from the review flags` may touch the same screens'' strings; whichever runs second adapts.
+
+## Order and constraints
+- Parts are independent; 2 → 3 shared conventions (done).
+- D-45 licences only; everything offline; no new npm or Python dependencies.', '2026-10-15T01:43:41Z', NULL, 1073, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1077, 33, 'revise plan 33: Recorded music loops (UI-10)', 'revise', 'open', 1000, NULL, '`plan 6: masterplan`, the plan above `plan 33: Recorded music loops (UI-10)`, changed; it is quoted below. Bring `plan 33: Recorded music loops (UI-10)` in line with it
+(`pm plan edit 33 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 6: masterplan
+
+Milestone 6 closes the leftovers of M3/M4, preloading before a screen fades in (UI-7) and recorded sounds for everything still synthesized (UI-10), and adds playful iconography to the screens before a game session (developer, 2026-10-14): icons on their buttons, national flags for the languages. Owner plan files: `plans/04-ui-tv-display.md` ("Transitions", "Sound assets", UI-7, UI-10), `plans/10-visual-design.md` (VD-8 icon set).
+
+**This masterplan''s tasks are not implementation work: each of them writes the plan for one part below** (`pm plan add 6 …`), with that part''s tasks.
+
+## Part 1: Preload the next screen''s media (UI-7), priority 500
+- Done: `plan 31: Preload the next screen''s media (UI-7)` (tasks 140, 141); `Placeholder.svelte` is gone.
+
+## Part 2: Recorded sound effects (UI-10), priority 200
+- Planned and built: `plan 32: Recorded sound effects (UI-10)`; open: `task 146: Gamemaster check of the recorded effects on the TV`.
+
+## Part 3: Recorded music loops (UI-10), priority 190
+- Planned and built: `plan 33: Recorded music loops (UI-10)`; open: `task 149: Gamemaster check of the music loops on the TV`, `task 150: Close UI-10 in the plans`.
+
+## Part 4: Playful icons and language flags before a game session, priority 400
+- New plan (`pm plan add 6 …`), not yet written.
+- Icons on every button of the screens before play: Start (play/resume, new game, mods, language), Language, Player (pick, new name, write, delete already has `trash`), Choice (modes, age group, bundles, «Personalizar partida», start, back), Customize, Mods, Consent, Credits; the plan lists the exact buttons from the code (`app/client/src/game/screens/`, `Customize.svelte`, `BundleSelector.svelte`, `Credits.svelte`).
+- Style: VD-8 (`app/client/src/game/Icon.svelte`: inline SVG, 24×24, `currentColor`, rounded strokes, 0.25 fill); playful, no emoji; new names added to `IconName`. Out of scope: in-game screens and the Esc menu (shared with play).
+- Language flags: inline SVG, simplified (no detailed coats of arms), own drawings (public-domain designs, D-45: nothing downloaded); own component (e.g. `Flags.svelte`; `Icon`''s `flag` is the report flag), keyed by language tag:
+  - `es`: a few Latin American flags (plan picks, e.g. Mexico, Colombia, Argentina)
+  - `es-ES`: Spain; `en`: UK and US; `de`: Germany, Austria, Switzerland
+  - a mod''s UI language (plan 117, `ENDONYMS` from a mod catalog) has no flags: keep the globe for it
+- Where: each option on the Language screen (`Language.svelte`, next to the endonym) and Start''s language button (`Start.svelte`, replaces the globe SVG).
+- Supersedes `decision 157: Start''s language button: globe and endonym, key per catalog, pad Y` in part (globe → flags; key, pad Y, endonym unchanged): the plan task records it (`pm decision record`) and updates the docs that describe the button (04, D-96 in `plans/decisions.md`).
+- Layout: Start''s button and the Language options stay readable at TV size and in all four catalogs (de is longest); icons don''t change keys, prompts or focus.
+- Check: `trivia-gallery` for all four languages; a developer decision to review icons and flags in `/gallery` (like `plan 100: UI wording: style guides, TV-check fixes, screen gallery`''s review decisions); VD-8 note in 10 updated.
+- Overlap: `task 1026: Gallery fixes from the review flags` may touch the same screens'' strings; whichever runs second adapts.
+
+## Order and constraints
+- Parts are independent; 2 → 3 shared conventions (done).
+- D-45 licences only; everything offline; no new npm or Python dependencies.', '2026-10-15T01:43:41Z', NULL, 1073, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1078, 6, 'write plan: Playful icons and language flags before a game session', 'plan', 'dropped', 1000, 'duplicate: task 1075 splits the masterplan into its plan tasks', 'Write the plan for part 4 of `plan 6: masterplan` (milestone 6: Screen polish leftovers): icons on every button of the screens before play and national flags per language on the Language screen and Start''s language button. `pm plan add 6 "Playful icons and language flags before a game session" --priority 400 < body.md`, then its tasks: list the exact buttons from the code, the icon per button, the flag set per language, the decision record superseding `decision 157: Start''s language button: globe and endonym, key per catalog, pad Y` in part, docs (04, 10 VD-8, D-96), gallery run and a developer review decision. Details in the masterplan''s part 4.', '2026-10-15T01:43:41Z', '2026-10-15T01:43:45Z', 1073, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -27492,6 +27564,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1015, 742, '2026-10-15T00:10:56Z', '2026-10-15T00:14:11Z', 'done', NULL, 0, '093ca092d9548700d8c08d128b7048f31a729ebf', 'claude-opus-5-5[1m]', 'aa88dbd1-40b3-44fc-b12a-4421e689f04d', 25, 50, 8377, 1265271, 54963, 0.86049819999999988, 2472458);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1016, 743, '2026-10-15T00:14:11Z', '2026-10-15T00:16:03Z', 'failed', 'the worker left changes that are not staged:
  M authoring/data/ui-flags.json', 0, 'ba30acd1335d87512ac7cc0d9bccd744696e9704', 'claude-opus-5-5[1m]', '6cc12289-5ebe-4772-b166-4ee72a9f1b4c', 17, 34, 7501, 745985, 46427, 0.67076900000000017, 2472458);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1017, 1073, '2026-10-15T01:42:55Z', '2026-10-15T01:43:53Z', 'done', NULL, 0, 'c17d4c8247082ce33412e1a9c8d5130b962b0a24', 'claude-opus-5-5[1m]', '799747c0-f64c-4c4c-ab43-3862d7d89d4e', 10, 20, 5363, 367872, 51402, 0.59213040000000006, 2557536);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
