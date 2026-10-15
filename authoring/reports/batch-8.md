@@ -82,6 +82,30 @@ Major findings on approved questions:
 
 - **q-1868**: giveaway — Hint 2 ("joven de un pueblo nómada del desierto") is basically the definition of a Bedouin. It rules out all three wrong answers at once, and it gives more away than hint 3 (the goat), so the hints go from stronger to weaker. Swapping hints 2 and 3, or rewording hint 2, would fix it. The facts check out: Muhammed edh-Dhib was a Bedouin shepherd looking for a lost goat near Qumran in 1946/47 who threw a stone into a cave and heard a jar break. The Qumran caves image doesn't show the answer, and no related question overlaps. (http://127.0.0.1:8001/review/q-1868)
 
+## Quality control
+
+The developer's blind spot check (`/review?batch=…&sample=1`) against the LLM review and the audit (plan 16, `qgen report --qc`). Agree = both accept or both don't.
+
+- Spot check: 30 decided of 30
+- Agreement with the LLM review: 26 of 30 (87 %) ✗ (bar: ≥ 30 questions, ≥ 90 %)
+- Release bar (D-79): ✗ not release-ready: agreement 87 % < 90 % (→ QC step 4)
+- False approve (LLM approved, human not): 3 of 30 (10 %); the audit flagged 1
+- False needs work (LLM not approved, human approved): 1 of 30 (3 %)
+- Difficulty |Δ| ≥ 2: 2 of 30 (7 %)
+- Media changed: 0 of 30 (0 %)
+- Audit/human agreement: 28 of 30 (93 %)
+
+Disagreements with the LLM review, by the human's problems:
+
+### no problem given (4)
+
+- **q-1691** LLM approved → human needs_work, audit ok: the question is fine per se, but "cinta scotch" is only used in Spain. This has to go into a regional bundle "Spain". it can't go into a base bundle (http://127.0.0.1:8001/review/q-1691)
+- **q-1868** LLM approved → human needs_work, audit problem: this apparently refers to a specific anecdote, but the other answeres are not wrong. the events are not specific enough. (http://127.0.0.1:8001/review/q-1868)
+- **q-1733** LLM approved → human needs_work, audit ok: the paradox needs quotes, otherwise there are two questions (http://127.0.0.1:8001/review/q-1733)
+- **q-1854** LLM needs_work → human approved, audit ok (http://127.0.0.1:8001/review/q-1854)
+
+Changes from this QC: none yet (QC step 4)
+
 ## Needs work
 
 - **q-1229** (Bebidas) Hierves flores secas de Jamaica en agua para hacer una bebida. ¿De qué color queda el agua? → Roja: La pista 2 ("un color cálido y profundo, más oscuro que el naranja") resuelve la pregunta: descarta verde y azul por no ser cálidos, y amarilla por ser más clara que el naranja. Además, la pista 1 ya apunta al color de la flor seca, así que las pistas 1 y 2 deberían ser mucho más vagas (por ejemplo, sobre el sabor ácido o sobre dónde se bebe).

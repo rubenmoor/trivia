@@ -29619,6 +29619,21 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
     ?? authoring/data/spot-checks.json
 
 Look: `git show pm/task-1144-run-1144-left`. Keep: `git merge pm/task-1144-run-1144-left`. Then `git branch -D pm/task-1144-run-1144-left`.', NULL, NULL, '2026-10-15T21:16:51Z', NULL, NULL, NULL, 'once', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (226, 'QC batch-8: which changes?', 'pending', '["recommended set", "all", "none"]', '`qgen report --qc batch-8` (authoring/reports/batch-8.md "## Quality control"): spot check 30 of 30; agreement with the LLM review 26/30 (87 %) ✗ below `quality.min_agreement` 90 % → release bar ✗ (D-79: only QC step 4''s proposals, no full audit, no second spot check). False approve 3 (10 %, audit flagged 1), false needs_work 1 (q-1854), difficulty |Δ| ≥ 2: 2, media changed 0, audit/human agreement 28/30 (93 %). Audit: 1 major among 57 approved (q-1868, giveaway). Trend: batch-8 is the first batch with a spot check, so no two-batch audit-vs-review trend proposal.
+
+You marked no problem kinds, so all 4 disagreements sit under "no problem given"; by your feedback I read them as: ambiguity 2 (q-1868, q-1733), regional usage 1 (q-1691), false needs_work 1 (q-1854, no change needed). QC.md threshold (≥ 2 per kind, ≥ 2 major audit findings, any `fact` false approve): only ambiguity passes.
+
+Proposals (each becomes a task in `plan 16: Quality control after every batch`, its priority):
+
+A. Ambiguity, recommended (q-1868, q-1733).
+   - `review.md` reason 2: for a "¿Quién soy?"/riddle with a generic answer (a kind of person, not a named one), check each wrong answer against every event described: if a wrong answer could also have done it ("un arqueólogo británico" could have thrown a stone into a cave), it''s needs_work; the `fix` adds a detail only the answer has.
+   - `house-style.md` "Keep it short" or "Format": the question asks exactly one thing; a rhetorical question or quoted thought inside a riddle goes in quotes («…») so the players don''t hear two questions (q-1733: «¿Con qué grano dejé de merecer mi nombre?» then «¿Qué paradoja soy?»). `review.md`: two questions without quotes → needs_work, `fix` adds the quotes.
+
+B. Regional premise, below the threshold (1 disagreement, q-1691), only in "all".
+   - `locale-es.md` / `review.md` reason 8: a `base` question must not rest on a word, brand-as-generic or usage known in one country only, Spain included ("cinta Scotch" is Spain''s name for adhesive tape; Latin America says "cinta adhesiva", "diurex", …); needs_work, feedback names it as regional. `neutralize.md` gets Spain examples next to the Colombian ones.
+   - Not proposed here: a "Spain" regional bundle (your q-1691 feedback); that is a new bundle, a decision of its own if you want it.
+
+Options: "recommended set" = A; "all" = A + B; "none".', NULL, NULL, '2026-10-15T21:41:52Z', NULL, 53, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -30781,6 +30796,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1142, 1180, '2026-10-15T21:01:29Z', '2026-10-15T21:12:04Z', 'done', NULL, 0, 'fdbf7554a1540e05816b8d8eeedd544af5a3e2d0', 'claude-opus-5-5[1m]', '602261ba-a2d4-411d-9413-6b82837a3308', 27, 40, 9775, 930361, 105886, 1.2288202000000001, 3661032);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1143, 1181, '2026-10-15T21:12:04Z', '2026-10-15T21:16:32Z', 'done', 'left 2 files unstaged, committed on branch pm/task-1181-run-1143-left; decision 224: investigate', 0, '3f0a865c4f7c00ace1598cbe994dcb5ca9975fac', 'claude-opus-5-5[1m]', '84614ace-48bd-4500-9d69-30c1275b696d', 45, 86, 20678, 2912146, 82377, 1.6553492, 3661032);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1144, 1144, '2026-10-15T21:16:32Z', '2026-10-15T21:16:51Z', 'done', 'left 2 files unstaged, committed on branch pm/task-1144-run-1144-left; decision 225: investigate', 0, 'eb3b2eb486c1359855e0c192881a6a9c758b2f5a', 'claude-opus-5-5[1m]', '91f3b81a-1d9b-4f8f-a424-682979fd79e1', 5, 8, 1554, 102421, 20503, 0.21562019999999998, 3661032);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1145, 53, '2026-10-15T21:40:40Z', '2026-10-15T21:42:03Z', 'blocked', NULL, 0, '9378bf6ea2caf0e86a4e8dad94e4e8e8344c2aaf', 'claude-opus-5-5[1m]', '8a2ef06d-3786-4128-affa-4a5616ff1f16', 15, 30, 6275, 650019, 45372, 0.61859979999999992, 3709948);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -30798,6 +30814,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (48, 2);
 INSERT INTO task_decision (task_id, decision_id) VALUES (51, 205);
 INSERT INTO task_decision (task_id, decision_id) VALUES (52, 3);
 INSERT INTO task_decision (task_id, decision_id) VALUES (53, 215);
+INSERT INTO task_decision (task_id, decision_id) VALUES (53, 226);
 INSERT INTO task_decision (task_id, decision_id) VALUES (58, 4);
 INSERT INTO task_decision (task_id, decision_id) VALUES (58, 5);
 INSERT INTO task_decision (task_id, decision_id) VALUES (59, 4);
