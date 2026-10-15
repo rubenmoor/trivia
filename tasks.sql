@@ -27550,8 +27550,42 @@ Phases (the task runs again after each decision is answered; check which decisio
 Missing tooling: do what exists, list the rest in the note. No prompt or `qgen.py` changes here.
 
 Done when: phase 6 done; note lists decisions, change tasks, numbers.', '2026-10-15T21:51:41Z', NULL, 53, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1187, 146, 'create tasks for plan 146: Media yield', 'split', 'open', 1000, NULL, 'Split plan 146 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T21:54:05Z', NULL, 1184, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1187, 146, 'create tasks for plan 146: Media yield', 'split', 'done', 1000, '2026-10-15, tasks 1188 (media funnel rows, plan 146 A), 1189 (media share diagnosis + proposal decision, plan 146 B); no decision needed up front: 1189 raises it', 'Split plan 146 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T21:54:05Z', '2026-10-15T21:54:52Z', 1184, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1188, 146, 'Media funnel rows in the batch health table', 'work', 'open', NULL, NULL, 'Make the media loss visible end to end in every batch report, per `plan 146: Media yield` task A. Today `authoring/reports/<batch>.md` "## Health" only shows `needs_work: media` (record''s verdict) and `media share`; where picks fail before record is invisible.
+
+## What
+- In `authoring/tools/health.py` `batch_health()`: three info rows (no threshold, like `drafts`/`merged`), counted from `work/<batch>/`:
+  - `media: no pick in review 1`: merged questions whose round-1 review set `new_query` (batch-8: 101)
+  - `media: recovered by research`: of those, picked after `qgen research` / round-2 review (batch-8: ~80)
+  - `media: no pick at record`: record''s no-pick needs_work ("No se encontró una imagen adecuada…"; batch-8: ~21); keep the existing `needs_work: media` row as is (also includes licence)
+- Read the review files (`work/<batch>/reviews`) the way `cmd_research` / `cmd_record` in `authoring/tools/qgen.py` do; import their helpers rather than re-parsing (decision 199), `qgen.py` stays one module (`decision 101: qgen.py stays one module (code review part 7)`).
+- Batches without the files (older runs, `tr-*` runs): rows empty, no crash. Not a threshold: `decision 13: Batch health thresholds and stop rule?` stays as it is; no change to `targets.json`.
+- Add the new keys to the row order (`table()` / the key list near `"media share"`) right after `needs_work: media`; `PCT` only if shown as a rate.
+
+## Done when
+- `qgen report` (or the call that writes the report) regenerates `authoring/reports/batch-8.md` with the three rows for batch-8 matching the numbers above (±, they''re from plan 146''s hand count) and blank/0 for batch-6 where no data exists; staged with the code.
+- `npm run check`, `qgen validate` pass.', '2026-10-15T21:54:48Z', NULL, 1187, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1189, 146, 'Diagnose media share below 15 % (batches 6–8) and propose fixes', 'work', 'open', NULL, NULL, 'Read-only diagnosis, per `plan 146: Media yield` task B. `media share` (merged questions with `axes.stimulus` ≠ none, `batch_health()` in `authoring/tools/health.py`) fell 25.6 % → 13.8 % → 12.2 % over batches 6–8, ✗ against 15–50 % twice in a row. Find where the media questions are lost.
+
+## How
+- Throw-away script (delete afterwards, nothing staged unless a real bug fix is needed → follow-up task instead) over `work/batch-{6,7,8}/` and `authoring/data`:
+  - slot plan: share of slots asking for a stimulus (`qgen` slot planning in `authoring/tools/qgen.py`; targets in `authoring/data/targets.json`)
+  - drafter: share of skipped slots that were media slots, and skip reasons naming media (batch-8: 49 of 519)
+  - drops: drop rate of media vs. non-media drafts, per drop kind (`dropped.json`)
+  - needs_work/merge: media vs. non-media at record
+  - per subcategory where it matters
+- Say which stage explains the fall from 25.6 % to 12.2 %.
+
+## Decision
+- `pm decision add` one proposal decision (recommended option first) with the diagnosis in its body, covering:
+  - the fix for the media-share cause found (e.g. slot plan, drafter prompt, or lowering the 15 % bound in `targets.json`, which changes `decision 13: Batch health thresholds and stop rule?`''s set)
+  - the residual-miss fixes listed in plan 146 "What would raise it": second `research` round, query hints ("blank map", no logos as `essential`), role change `essential` → `illustrative` at record; each with its expected gain from the batch-7/8 "## Needs work" feedback
+  - options like "all", "only <X>", "none"
+- Leave this task done after adding the decision (don''t make it pending): the answer is handled by a follow-up task; add `pm task add 146 "Media share and residual misses: changes per decision <id>"` pending on the decision (`pm task-pending-decision`), body: turn the approved changes into tasks in plan 146 (or the plan they belong to), and record the outcome with `pm decision consequences`.
+
+## Done when
+- Decision and the pending follow-up task exist; diagnosis numbers are in the decision body; no temporary files left.', '2026-10-15T21:54:48Z', NULL, 1187, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -30890,6 +30924,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1145, 53, '2026-10-15T21:40:40Z', '2026-10-15T21:42:03Z', 'blocked', NULL, 0, '9378bf6ea2caf0e86a4e8dad94e4e8e8344c2aaf', 'claude-opus-5-5[1m]', '8a2ef06d-3786-4128-affa-4a5616ff1f16', 15, 30, 6275, 650019, 45372, 0.61859979999999992, 3709948);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1146, 53, '2026-10-15T21:45:12Z', '2026-10-15T21:52:35Z', 'done', NULL, 0, '2796ad64d3c8b447a7c8351a976dceb1de5e0b4c', 'claude-opus-5-5[1m]', '7fd5b9ee-1cfa-4183-b652-8776cf1b4c44', 21, 42, 9867, 1092988, 56625, 0.8691056, 3709948);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1147, 1184, '2026-10-15T21:52:35Z', '2026-10-15T21:54:17Z', 'done', NULL, 0, 'a86cb16a11cff93c743aaab53b50bb8900be99d1', 'claude-opus-5-5[1m]', 'd76d3855-3d23-4bec-9935-447ac5906610', 18, 36, 8945, 911586, 58341, 0.8280892, 3709948);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1148, 1187, '2026-10-15T21:54:17Z', '2026-10-15T21:54:58Z', 'done', NULL, 0, 'ec1251c8013e7383012cacd659f66467fe32c2d0', 'claude-opus-5-5[1m]', '0d814dcf-9a99-4e0f-8809-f91479a7ab3e', 6, 12, 2915, 199039, 32815, 0.3606758, 3709948);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
