@@ -7810,7 +7810,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Plan 17 (batch runs): make sure its tasks follow the pattern batch → spot-check decision → `--qc` + proposal decision → change tasks → next batch (`pm plan edit 17` if its body lacks it; that requeues its split).
 
 Done when: files written and consistent with the commands from the previous tasks as built; no batch or QC run.', '2026-10-11T23:53:37Z', '2026-10-12T03:56:36Z', 23, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (50, 17, 'RUNBOOK: batch runs under pm run', 'work', 'open', NULL, NULL, 'Plan 17 "Batch tasks under `pm run`". RUNBOOK clashes with a pm worker twice; fix it once, so every later batch task can follow RUNBOOK exactly.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (50, 17, 'RUNBOOK: batch runs under pm run', 'work', 'done', NULL, '2026-10-14, authoring/RUNBOOK.md: section ''Under pm run'' (dirty tree ignores tasks.sql, foreground run with 1 h timeout and resume, a decision + task-pending-decision per stop case incl. exit 75/1/2/other and both unfinished-batch messages, stage printed git add only, Done: line + report into the note), pointers in steps 1, 3, 4, 5; task 49''s QC.md pointer kept', 'Plan 17 "Batch tasks under `pm run`". RUNBOOK clashes with a pm worker twice; fix it once, so every later batch task can follow RUNBOOK exactly.
 
 - `authoring/RUNBOOK.md`, new short section "Under `pm run`" (env `PM_WORKER=1`), referenced from steps 1, 3, 4:
   - Step 1: `tasks.sql` alone in `git status --porcelain` doesn''t count as dirty.
@@ -7820,7 +7820,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - No other RUNBOOK change (task 49 adds the QC.md pointer in step 5; keep both consistent if it''s done).
 - No batch run here.
 
-Done when: RUNBOOK has the section; a worker reading only RUNBOOK + its task knows what to do for every exit code.', '2026-10-11T23:54:42Z', NULL, 24, 0);
+Done when: RUNBOOK has the section; a worker reading only RUNBOOK + its task knows what to do for every exit code.', '2026-10-11T23:54:42Z', '2026-10-15T03:43:19Z', 24, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (51, 17, 'run batch-8', 'work', 'open', NULL, NULL, 'Finish batch-8 (`work/batch-8`, WIP commit d7fb13f: 57 subcategories, 61 draft files, ~$1.6 so far). It resumes with plain `qgen batch`.
 
 - Follow `authoring/RUNBOOK.md` steps 1–5 exactly, with its "Under `pm run`" section (previous task). No arguments.
@@ -29129,6 +29129,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1064, 637, '2026-10-15T03:41:48Z', '2026-10-15T03:42:01Z', 'blocked', NULL, 0, '5b936822c24a1f4c9294be40523c9c60db53c056', 'claude-opus-5-5[1m]', '7424c115-34d6-4d57-90e5-911ee1ca1377', 4, 8, 776, 121640, 28195, 0.26544, 2557536);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1065, 638, '2026-10-15T03:42:02Z', '2026-10-15T03:42:20Z', 'blocked', NULL, 0, '4776c4c2959cb598fdd9c2846f8b5ec7411f53ea', 'claude-opus-5-5[1m]', '70fdeb68-9f60-4c14-8f81-64c031f3d664', 7, 14, 1166, 235370, 29886, 0.30953800000000004, 2557536);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1066, 463, '2026-10-15T03:42:20Z', '2026-10-15T03:42:47Z', 'blocked', NULL, 0, 'e89b6c4802c4c66e5f65087df58e1df9bf01337d', 'claude-opus-5-5[1m]', '68fa7b99-49f6-44df-9ebb-33d260d452f0', 6, 12, 1646, 202720, 31056, 0.32196, 2557536);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1067, 50, '2026-10-15T03:42:47Z', '2026-10-15T03:43:26Z', 'done', NULL, 0, '3ae25aa987706ace30294c24b5afc0fb55a81fcb', 'claude-opus-5-5[1m]', '38f9c9f8-daa6-40b6-b6e5-b0d7f4937ffc', 7, 12, 3588, 184311, 29647, 0.3458462, 2557536);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

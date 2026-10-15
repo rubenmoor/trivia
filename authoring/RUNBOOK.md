@@ -6,7 +6,7 @@ One command does all the work: choosing subcategories, drafting, rating, fact-ch
 
 ## Steps
 
-1. **Check the tree.** Run `git status --porcelain`. If it prints anything, stop and tell the user: "The working tree has uncommitted changes; commit or stash them before a batch." Don't commit or stash them yourself.
+1. **Check the tree.** Run `git status --porcelain`. If it prints anything, stop and tell the user: "The working tree has uncommitted changes; commit or stash them before a batch." Don't commit or stash them yourself. Under `pm run`: see below.
 2. **Run the batch.** In the repo root, run:
 
    ```sh
@@ -24,9 +24,34 @@ One command does all the work: choosing subcategories, drafting, rating, fact-ch
    | 2 | The last batch failed the batch health thresholds (plan 15), or (`--translate`) the last run was the language's pilot `tr-<locale>-1`; no new batch started | Stop. Give the user the output verbatim. Only the developer clears it (`qgen health ack`) |
    | other | Unexpected | Stop and give the user the last 30 lines of output verbatim |
 
-   If the output says "More than one unfinished batch", stop and ask the user which one to finish. If it says a batch "is unfinished and writes for bundle …", stop and tell the user. Run the command it names only if they say so.
-4. **Commit.** Run exactly the two `git add` / `git commit` lines printed after "Commit exactly this:". Nothing else goes into the commit. Don't push unless the user asks.
-5. **Report.** Tell the user the "Done:" line, the path of the report (`authoring/reports/<batch>.md`; `tr-<locale>-<n>.md` for a translation run), and that they can check the questions at http://127.0.0.1:8001/review?batch=<batch> (run `trivia-authoring`). Quality control of the batch follows `authoring/QC.md`; it is the developer's, not part of this procedure.
+   If the output says "More than one unfinished batch", stop and ask the user which one to finish. If it says a batch "is unfinished and writes for bundle …", stop and tell the user. Run the command it names only if they say so. Under `pm run`, "stop" and "tell the user" mean a pm decision: see below.
+4. **Commit.** Run exactly the two `git add` / `git commit` lines printed after "Commit exactly this:". Nothing else goes into the commit. Don't push unless the user asks. Under `pm run`: stage only, see below.
+5. **Report.** Tell the user the "Done:" line, the path of the report (`authoring/reports/<batch>.md`; `tr-<locale>-<n>.md` for a translation run), and that they can check the questions at http://127.0.0.1:8001/review?batch=<batch> (run `trivia-authoring`). Quality control of the batch follows `authoring/QC.md`; it is the developer's, not part of this procedure. Under `pm run`: into the task's note, see below.
+
+## Under `pm run`
+
+A pm worker (environment `PM_WORKER=1`) follows the steps above with these changes; everything else holds as written. `<task>` is the worker's task id (`PM_TASK`), `<batch>` the run's name from the output.
+
+- **Step 1:** `tasks.sql` alone in `git status --porcelain` doesn't count as dirty; anything else does: stop as below.
+- **Step 2:** run it in the foreground with the longest Bash timeout (`3600000`); a timeout isn't a failure: run the same command again (it resumes).
+- **Step 3, "stop":** never wait for an answer in the session. Instead:
+  - `pm decision add "<subject>" --body - <<'EOF'` with the body below; prints the decision id
+  - `pm task-pending-decision <task> <id>`
+  - stage nothing, don't `pm task done`; end the turn
+- **Subjects and bodies:**
+
+  | Case | Subject | Body |
+  |---|---|---|
+  | exit 75 | `Continue <batch> after the usage limit?` | the usage-limit message, incl. the reset time |
+  | exit 1, same step three times in a row | `<batch> fails at <step>: how to go on?` | last 30 lines verbatim |
+  | exit 2 | `<batch>: health stop, ack?` | the output verbatim |
+  | other exit code | `<batch>: exit <code>, how to go on?` | last 30 lines verbatim |
+  | "More than one unfinished batch" | `Which unfinished batch to finish?` | the message |
+  | "is unfinished and writes for bundle …" | `Unfinished batch for another bundle: run the named command?` | the message |
+  | step 1: dirty tree | `Dirty tree before <task>'s batch: what to do?` | `git status --porcelain` |
+
+- **Step 4:** run exactly the printed `git add` line(s); don't run the printed `git commit` (pm commits as "task N: …"). Same for `qgen rework`, `tighten`, `neutralize`, `audit --backlog`.
+- **Step 5:** `pm task done <task> "<YYYY-MM-DD>, Done: <the Done: line>, report <path>"`.
 
 ## Never
 
