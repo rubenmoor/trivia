@@ -268,6 +268,12 @@ Five modes; there is no "default mode". Mode names are written in English first;
 - One team, one person, the gamemaster, holds every control (keyboard, mouse, gamepad, switchable at any time).
 - A "configure game" screen with full customization before every game.
 - A gamemaster menu (`Esc`) that allows arbitrary cheats: manage the available jokers, skip a question, replace the current question, …
+- Setting «select answer to advance to next level» (default on; configure screen and in-game settings dialog; saved in the game''s `settings`, missing = on). Off:
+  - answers can''t be selected; the padlock on the Question screen is clickable right away and reveals the correct answer
+  - neutral message, neither success nor failure (e.g. «Siguiente ronda»), no fanfare and no sad trombone; level +1; never game over
+  - last level: no victory screen, a neutral «quiz completed» message (e.g. «Cuestionario completado»); fireworks are fine, no victory music
+  - no separate «game-over on false answer» option: with answers off there are none to judge
+  - UI strings in es, es-ES, en, de per `locales/style/<locale>.md`
 
 ### Alone or as group (es: «Solo o en grupo»)
 - Single-player like gamemaster mode: one player alone, or everyone together as one team; no gamemaster menu, no cheats.
@@ -26191,6 +26197,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Every answer: fix the 3 real hits of the 2026-10-14 trial: `authoring/server/main.py:95` unused `import pool_export`; `authoring/tools/qgen.py:2298` unused `versions` Counter; `authoring/steam/release_check.py:211` `Path(path).read_text()` → `encoding="utf-8"`. Behaviour unchanged.
 - Options 1/2: `ruff` in the flake''s dev shell (nixpkgs, no pip), a `ruff.toml` at the root with the answered selection (`F`, `PLW1514` needs `preview = true`; option 2 adds `BLE`, `B`, deliberate sites `# noqa: <rule>  <reason>`), `ruff check` over `git ls-files ''*.py''` in the root `npm run check` script; `nix build .#app` if `flake.nix` changed; README dev-shell list.
 - Check: `ruff check` 0 hits; `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-15T03:13:07Z', NULL, 589, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1117, 7, 'revise the masterplan of milestone 7: Steam S2: product definition', 'revise', 'open', 1000, NULL, '`milestone 7: Steam S2: product definition` changed. Bring `plan 7: masterplan`, the masterplan, in line with it (`pm plan edit 7 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-15T04:28:01Z', NULL, NULL, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -27674,7 +27682,7 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (152, 'Manual safe start: --no-mods only', 'answered', '[]', 'The overlay is fixed before the page starts, so a key check would cost a relaunch; a pad isn''t readable before the page; a second launch option makes Steam ask on every start. From plan 118: Mods screen and safe start.', 'Playing without mods is --no-mods in Steam''s per-game launch options; no held key or pad button, no second Steamworks launch option', NULL, '2026-10-14T07:15:09Z', '2026-10-14T07:15:09Z', 973, NULL, 'rule', 973, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (153, 'Mods crash marker: mods-start.json, cleared on ready or a live page after 20 s', 'answered', '[]', 'A crashed or hung start with mods is followed by one start without mods that tells the player why; no loop because a safe start has no layers and writes no marker. The ping instead of a plain 20 s timer catches a page blocked by a mod''s synchronous loop (Chromium''s unresponsive event needs pending input, so it can''t be relied on). Full conversions that never call ready are confirmed by the ping. From plan 118, task 973.', '<userData>/mods-start.json (dev state/desktop/), { at, mods: [active ids] }, written atomically before loadURL only when the run has layers; cleared on mods:ready or when the page answers a ping 20 s after did-finish-load (3 s answer window); a page that doesn''t answer, render-process-gone (not clean-exit) or a main-frame load failure relaunches; not cleared on quit; marker found at start → deleted, no layers, safeStart { reason: crashed, mods }', NULL, '2026-10-14T07:15:09Z', '2026-10-14T07:15:09Z', 973, NULL, 'rule', 973, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (154, 'Mods restart drops our own flags', 'answered', '[]', 'A restart applies the mods list; repeating --no-mods would defeat it and repeating --import-save would import the old file again. From plan 118, task 973.', 'mods:restart (and the crash relaunch) flushes the save queue and telemetry like a quit, then app.relaunch({ args }) with every own flag (--no-mods, --import-save <file>, --force) dropped and Electron/Chromium/Steam args kept, then app.exit(0); SteamAppId stays in the environment', NULL, '2026-10-14T07:15:09Z', '2026-10-14T07:15:09Z', 973, NULL, 'rule', 973, '');
-INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (155, 'Play-test of age groups and bundles (again, after the decision 50 fixes)', 'pending', '["all sessions played fine", "problems (listed in the answer)"]', 'Plan 30 (milestone 5): play-test again once `plan 125: Play-test fixes: player Enter, Choice screen, overlay line, Regional: Colombia` and `plan 126: One language setting for UI and questions` are done (their tasks closed); answer then.
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (155, 'Play-test of age groups and bundles (again, after the decision 50 fixes)', 'answered', '["all sessions played fine", "problems (listed in the answer)"]', 'Plan 30 (milestone 5): play-test again once `plan 125: Play-test fixes: player Enter, Choice screen, overlay line, Regional: Colombia` and `plan 126: One language setting for UI and questions` are done (their tasks closed); answer then.
 
 ## Previous round
 `decision 50: Play-test of age groups and bundles` → problems 1–7; fine: age groups, colombia off, keyboard, UI languages es/en/de. The engine pre-check of task 478 passed (every group, `base` only, refusals `base_bundle_count` / `bundle_not_offered`, en/de `bundlesFor` = `base`); see decision 50''s body for the table.
@@ -27690,7 +27698,7 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
   7. Language: one setting; flag top right on the first screen only; no language rows in the Esc menu; en/de play the Spanish questions with only `base` offered.
 - Still: one session per age group (mouse, and once keyboard only, IN-1); one with `colombia` off; defaults straight through with Enter; Básico as the selected base bundle (one of N), no «Siempre activo»; undo/abandon keep the choice.
 
-Answer "problems": list each one; the close-out (`task 479: Close out AG-7 and BN-6`) turns them into fix tasks.', NULL, NULL, '2026-10-14T07:42:18Z', NULL, 479, NULL, 'rule', NULL, '');
+Answer "problems": list each one; the close-out (`task 479: Close out AG-7 and BN-6`) turns them into fix tasks.', 'all sessions played fine', NULL, '2026-10-14T07:42:18Z', '2026-10-15T04:30:23Z', 479, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (156, 'One language for UI and questions', 'answered', '[]', 'From `decision 50: Play-test of age groups and bundles` (item 7), `plan 126: One language setting for UI and questions`. Supersedes in part D-86 (two settings, question-language option list): options = UI_LANGS only. es-ES, en, de (no pools yet) and mod UI languages play the Spanish pool with the es bundles. newGame takes its locale from the loaded data (data.locale); a running game keeps GameRow.locale, so POLYGLOT counts a de UI on Spanish questions as an es game. No bump: parseSave already read a missing language as es (D-86), the old object still parses, and save_file.py doesn''t read language.', 'SaveData.language is one tag (UI = questions); the question locale is the language if pool.<language>.json exists and its default bundles'' supply passes, else es (lib/engine.ts nextLocale / localeOf); old {ui, questions} saves read as ui, no save-version bump', NULL, '2026-10-14T07:47:44Z', '2026-10-14T07:47:44Z', 1019, NULL, 'rule', 1019, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (157, 'Start''s language button: globe and endonym, key per catalog, pad Y', 'answered', '[]', 'plan 126: One language setting for UI and questions asked for a language flag; a flag can''t stand for es (no single country) and would mislabel es vs es-ES. The endonym is TV-readable and unambiguous. Under the menu button keeps it clear of the corner error line. Y is free on Start (replay is Question-only).', 'Top right on Start, under the ☰ menu button: a globe icon plus the current language''s endonym (ENDONYMS, e.g. «Español (Latinoamérica)»), no national flag (es is Latin American Spanish). Key per catalog screen.start.languageKey: I (es, es-ES), L (en), S (de), in Start''s collision set of check-literals; pad Y (button 3) via Start''s Scope.pad. Opens the first-start Language screen with a «Atrás» button (Backspace / B) back to Start; hidden while the save notice shows.', NULL, '2026-10-14T07:53:17Z', '2026-10-14T07:53:17Z', 1020, NULL, 'rule', 1020, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (158, 'Bundle selection in every mode, apart from customization', 'answered', '[]', 'From `decision 50: Play-test of age groups and bundles` (problem 5), task 1017. Supersedes `decision 51: «Solo o en grupo»: which bundles does a game play?` (solo plays the language''s defaults, no bundle choice) and the parts of `decision 38: Base bundles and bundle languages` / `decision 33: Configure game screen: which fields?` that keep the fresh default (base only) to the configure screen: it now holds in solo too, so a non-base mod bundle is off by default in solo as well. D-97 in plans/decisions.md.', '«Solo o en grupo» shows the shared BundleSelector (letter keys, mouse, pad) like gamemaster mode; bundle selection is its own section in every mode, never part of «Personalizar partida» nor counted in customized; preset in both modes = playerChoice: the player''s newest game''s bundles, else the locale''s first base bundle with non-base bundles off (decision 33)', NULL, '2026-10-14T08:15:16Z', '2026-10-14T08:15:16Z', 1017, NULL, 'rule', 1017, '');
@@ -28054,6 +28062,41 @@ Afterwards, the 19 flagged questions with the audit notes: http://127.0.0.1:8001
 Answer once the 30 are decided. Then task 339 runs `qgen report --qc backaudit-1` (release bar, decision 15) and asks the cost decision for the remaining slices.', NULL, NULL, '2026-10-15T03:41:00Z', NULL, 339, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (204, 'Translation pilot done (tr-en-1, tr-de-1)?', 'pending', '["done"]', '`task 463: Release budget per language (pm decision, CT-3)` needs the translation pilot''s cost numbers (`qgen report --cost`, `tr-<locale>-*` runs). Today (2026-10-14) no `work/tr-en-1`, `work/tr-de-1` or `authoring/reports/tr-*-1.md` exist: `task 634: run tr-en-1` … `task 638: Translation pilot go/no-go (QT-5)` all wait on decision 202 (Run qgen neutralize on base now?).
 Answer "done" once tasks 634–638 are done (pilot run, QC''d, go/no-go answered); then task 463 builds the release budget table.', NULL, NULL, '2026-10-15T03:42:39Z', NULL, 463, NULL, 'once', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (205, 'batch-8 fails at media: how to go on?', 'pending', '[]', 'qgen batch (batch-8) exited 1 at `media` three runs in a row (runs 3–5 of task 51; runs 1–2 failed at rate and revise, then got past them). Always the same item: q-1425 (Eurovisión, "Jaja Ding Dong", media query "Iceland map outline", stimulus map_outline). Looks deterministic (a code bug in the media step, likely a JSON list where a dict is expected), not a flaky call. Under the RUNBOOK the worker may not change qgen.py/media.py. Options: a fix task for the media step, then rerun batch-8; or something else.
+
+Last 30 lines:
+```
+
+== [3/23] rate
+   rate took 0s (batch: 0s)
+
+== [4/23] factcheck
+   factcheck took 0s (batch: 0s)
+
+== [5/23] revise
+   revise took 0s (batch: 0s)
+
+== [6/23] apply
+applied: . Next: rate and factcheck (revised drafts only), then merge
+   apply took 0s (batch: 0s)
+
+== [7/23] rate
+   rate took 0s (batch: 0s)
+
+== [8/23] factcheck
+   factcheck took 0s (batch: 0s)
+
+== [9/23] merge
+merged 0 question(s) into authoring/data/questions.json; 144 dropped in total (see dropped.json)
+   merge took 0s (batch: 0s)
+
+== [10/23] media
+  FAILED media q-1425 media: ''list'' object has no attribute ''get''
+  media: 1/1 searches in 0s, 1 failed
+   media took 0s (batch: 1s)
+
+Stopped at `media` with 1 error(s). Run `qgen batch` again; if the same step fails three times in a row, stop and report the output.
+```', NULL, NULL, '2026-10-15T06:04:34Z', NULL, 51, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -29130,6 +29173,13 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1065, 638, '2026-10-15T03:42:02Z', '2026-10-15T03:42:20Z', 'blocked', NULL, 0, '4776c4c2959cb598fdd9c2846f8b5ec7411f53ea', 'claude-opus-5-5[1m]', '70fdeb68-9f60-4c14-8f81-64c031f3d664', 7, 14, 1166, 235370, 29886, 0.30953800000000004, 2557536);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1066, 463, '2026-10-15T03:42:20Z', '2026-10-15T03:42:47Z', 'blocked', NULL, 0, 'e89b6c4802c4c66e5f65087df58e1df9bf01337d', 'claude-opus-5-5[1m]', '68fa7b99-49f6-44df-9ebb-33d260d452f0', 6, 12, 1646, 202720, 31056, 0.32196, 2557536);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1067, 50, '2026-10-15T03:42:47Z', '2026-10-15T03:43:26Z', 'done', NULL, 0, '3ae25aa987706ace30294c24b5afc0fb55a81fcb', 'claude-opus-5-5[1m]', '38f9c9f8-daa6-40b6-b6e5-b0d7f4937ffc', 7, 12, 3588, 184311, 29647, 0.3458462, 2557536);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1068, 51, '2026-10-15T03:43:26Z', '2026-10-15T06:04:42Z', 'failed', 'the worker left changes that are not staged:
+ M authoring/data/concepts/dinosaurios.json
+ M authoring/data/concepts/empresas-famosas.json
+ M authoring/data/concepts/logotipos-famosos.json
+ M authoring/data/concepts/mascotas-de-marcas.json
+ M authoring/data/concepts/redes-sociales.json
+ M authoring/data/questions.json', 0, 'bac2cbb0aa7fedd3d94470c7febe23948710678b', 'claude-opus-5-5[1m]', 'e5539ee5-2ac3-454e-a361-b85f6ddf410f', 14, 26, 3272, 465626, 32354, 0.41750120000000013, 2557536);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -29144,6 +29194,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (44, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (44, 13);
 INSERT INTO task_decision (task_id, decision_id) VALUES (48, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (48, 2);
+INSERT INTO task_decision (task_id, decision_id) VALUES (51, 205);
 INSERT INTO task_decision (task_id, decision_id) VALUES (52, 3);
 INSERT INTO task_decision (task_id, decision_id) VALUES (58, 4);
 INSERT INTO task_decision (task_id, decision_id) VALUES (58, 5);
