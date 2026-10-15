@@ -39,6 +39,10 @@ stateDiagram-v2
   Correct --> Victory: level 12 answered
   Wrong --> Start: «Volver al inicio»
   Victory --> Start: «Volver al inicio»
+  Question --> Next: answers off, padlock reveal (D-105)
+  Next --> Level: continue (a block is added)
+  Question --> Completed: answers off, last level revealed
+  Completed --> Start: «Volver al inicio»
 
   state Question {
     [*] --> Presenting
@@ -59,13 +63,15 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 | Language | First start (D-86) or Start's language button (D-96): «Elige el idioma», languages by flags + endonym (decision 186), guess preselected | Click / `Enter` / pad A / `1`–`n`; from Start: «Atrás» / `Backspace` / pad B | Normal |
 | Start | Title, «¡Jugar!», "continue game" if one is running | Click / `Enter` | Normal |
 | Player | «¿Quién juega?»: known names, new name | Click a name / `1`–`9` / `Enter` (most recent name, nothing focused) / type + `Enter` | Normal |
-| Choice | «¿Cómo juega …?»: mode (MD-7); gamemaster mode: the configure game screen (MD-11: difficulty, levels, cards, video, audio, jokers, bundles); «Solo o en grupo»: age group, «Personalizar partida», bundles | «¡A jugar!» / `Enter`; «Atrás» / `Backspace` | Normal |
+| Choice | «¿Cómo juega …?»: mode (MD-7); gamemaster mode: the configure game screen (MD-11: difficulty, levels, cards, video, audio, answers (D-105), jokers, bundles); «Solo o en grupo»: age group, «Personalizar partida», bundles | «¡A jugar!» / `Enter`; «Atrás» / `Backspace` | Normal |
 | Level | The tower, «Nivel N de 12» | Click / `Enter` / `Space` | Normal |
 | Select | 4 description cards | Click a card / `1`–`4` | Normal |
 | Question | Question, 4 answers, media, lock, final button, joker tray | Final answer; jokers Paso / Francotirador hit | Intense (off while question media plays); after submitting: most intense |
 | Correct | Fanfare, fireworks overlay, correct answer, `fun_fact` | Click / `Enter` | Fanfare replaces the music, then Normal |
 | Wrong | Dark animation, correct answer, consolation | «Volver al inicio» | Off; a sad sting |
 | Victory | Full 12-block tower, big finale | «Volver al inicio» | «Pomp and Circumstance» (`victory`), over cheers |
+| Next | Answers off (D-105): «Siguiente ronda», the correct answer, `fun_fact` | Click / `Enter` / A | Normal |
+| Completed | Answers off, after the last level: «Cuestionario completado», correct answer, fireworks | «Volver al inicio» | Normal (no victory music) |
 
 ### Language (first start, D-86, D-96)
 - At first start only for a fresh save (no `language` stored) and only with something to pick (>1 UI language); a stored save, like the family's, never sees it unasked.
@@ -107,7 +113,7 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 - `game/Choice.svelte`, «¿Cómo juega Sofía?»: what the next game plays; preset: the player's newest game, else the language's defaults (engine `choice` route, plan 71).
 - Mode row (MD-7, plan 36), on top: the built modes (`BUILT_MODES`), in the order «Solo o en grupo», «Modo anfitrión» (decision 50; multiplayer modes when built), name + one-line about, keys `mode.*Key` (es `G` grupo, `A` anfitrión; en `A`, `G`). Preset: `?mode=gamemaster|solo` launch option, else the player's newest game's mode (`playerMode`), else gamemaster mode; Enter straight through = today's game.
 - Gamemaster mode: the configure game screen (MD-11, D-88, decision 33: Configure game screen: which fields?); every field preset from the player's newest game (`playerChoice`), a fresh player: `young_teens`, the first base bundle only, `STANDARD_JOKERS`, video/audio on, 12 levels, 4 cards.
-  - Left «Partida»: Difficulty (age groups, then «A medida»; «Desde» / «Hasta» rows always shown: with a group its span, read-only (no −/+, skipped by ↑/↓ and the focus ring), with «A medida» editable 1–15, end ≥ start, starting at the group's span; plan 125), Niveles 1–20, Cartas por nivel 0–4 (0: «pregunta directa»), Preguntas con video / audio (switches). Right «Comodines»: «Conjunto» preset row (Estándar | Sin límite | Personalizado, decision 99: ←/→ Estándar ↔ Sin límite fills the rows), then one row per joker (`TOKENS` order), 0–9 or ∞, clamped (← stops at 0, → stops at ∞; decision 105).
+  - Left «Partida»: Difficulty (age groups, then «A medida»; «Desde» / «Hasta» rows always shown: with a group its span, read-only (no −/+, skipped by ↑/↓ and the focus ring), with «A medida» editable 1–15, end ≥ start, starting at the group's span; plan 125), Niveles 1–20, Cartas por nivel 0–4 (0: «pregunta directa»), Preguntas con video / audio, «Responder para avanzar» (switches; D-105, `answers`, sent only as `false`). Right «Comodines»: «Conjunto» preset row (Estándar | Sin límite | Personalizado, decision 99: ←/→ Estándar ↔ Sin límite fills the rows), then one row per joker (`TOKENS` order), 0–9 or ∞, clamped (← stops at 0, → stops at ∞; decision 105).
   - Below: «Paquetes», the shared `game/BundleSelector.svelte` (base radio group | divider | other bundles as toggles); the menu reuses it (MD-12).
   - Lines (`data-line`): ↑/↓ (D-pad, stick) move line by line, left column then right; ←/→ change a value on a stepper or switch; −/+ and switch clicks with the mouse; `Enter`/A on a switch toggles, on a stepper or «¡A jugar!» starts; `1`–`4` pick a group, bundle letters as below.
   - Supply on every change with the whole configuration; a long report hides the bundle descriptions so 720p fits.
@@ -121,7 +127,7 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
   - Key per bundle: first letter of its name (after a `Regional:`-style prefix; accents stripped) not taken by an earlier bundle, else its next letter; never the flag, new, replay or Soplo key (es: `M` `N` `R` `S`). es: `B` Básico, `C` Regional: Colombia.
 - Supply on entering and on every change: the choice, plus each group with these bundles. A group that can't fill a game: dimmed, «Faltan preguntas», still selectable. The choice can't fill one: «¡A jugar!» off, the supply report (`SupplyReport.svelte`) below. Zero or two base bundles: off, with the engine's reason.
 - Supply notice (plan 65, decision 31): «¡A jugar!» first asks `outlook`; tight levels (≤ 1 unseen), none left or chosen bundles running out (≤ 1 unseen in the window, task 1104; «This bundle is running out of questions: Regional: Colombia») → modal `SupplyNotice.svelte` (bundle hint if one helps); Enter plays, `Backspace`/`Esc` back. Every start calls `noteRunningOut` with what it showed (`notified_exhausted`: bundle ids).
-- «¡A jugar!» / `Enter`: `new` with `{player, mode, age_group, bundles, jokers?}` («Solo o en grupo»), every field in gamemaster mode (`age_group` or `difficulty`, `bundles`, `levels`, `cards`, `video`, `audio`, `jokers`); a refusal shows here. Then «¡Hola, Sofía!» plays into the transition to Level; the name stays in a corner of the Level screen.
+- «¡A jugar!» / `Enter`: `new` with `{player, mode, age_group, bundles, jokers?}` («Solo o en grupo»), every field in gamemaster mode (`age_group` or `difficulty`, `bundles`, `levels`, `cards`, `video`, `audio`, `answers`, `jokers`); a refusal shows here. Then «¡Hola, Sofía!» plays into the transition to Level; the name stays in a corner of the Level screen.
 - «Atrás» / `Backspace`: back to Player. `Esc`: the overlay.
 
 ### Level (between questions)
@@ -160,6 +166,7 @@ Four cards, each showing only a question's `description` (D-8). The players pick
   | Wait before the reveal | 3 s | 4 s | 5 s | 6 s | 8 s | 10 s | 12 s |
 
   The values are a starting point, to be tuned on the TV (UI-6). At the reveal, the music transitions straight into the fanfare (right) or the sad sting (wrong), with no silence in between. The right answer flashes green. On a wrong answer, the chosen answer flashes red as well, and the right one flashes green, so the players always see the right answer (D-22). Then the result screen follows.
+- **Answers off (D-105, gamemaster mode, `settings.answers: false`):** the tiles show but can't be picked (no `A`–`D` / `1`–`4`, no pad pick glyphs); no «Respuesta final»: the padlock is a button «Mostrar respuesta», clickable at once (`Enter`/A, click) → engine `reveal`. It opens (padlock-open sound), the correct answer flashes green, no drum roll, no fanfare, no sad trombone; then Next («Siguiente ronda»), or at the last level Completed. Jokers stay, Francotirador locked (engine reason). Tower: one block per level behind (`level − 1`). Mid-game toggle: «Dificultad y paquetes» dialog (task 1124); toggled back on, the tower counts correct answers only again.
 - **Peek (plan 113, decision 126):** on a question with a sharp picture (image, not decorative, loaded), holding `R3` or `V` (catalog `screen.question.peekKey`), or pressing and holding the mouse on the bare picture, fades every panel out (~150 ms: HUD, card, answers, tray, prompts, «Respuesta final», credit, corner ☰ and flag) and shows the whole picture (D-51 fit), unfiltered; release brings it back unchanged (focus, locked answer, armed joker). Prompt «Ver imagen» in the HUD row, on image questions only. Not on video/audio/decorative questions, nor with Paso, Francotirador, Cambiazo, the flag dialog or the overlay open (opening one ends the peek). Timed mode: the clock keeps running. Panels fade by `opacity` + `pointer-events: none`, not `visibility: hidden`, which drops DOM focus. Checked at 1280×800, 1280×720, 1920×1080 on every image question (task 923).
 
 ### Correct
@@ -173,6 +180,11 @@ Four cards, each showing only a question's `description` (D-8). The players pick
 - **Dark animation:** colour drains from the screen (desaturate), a vignette closes in, and the tower (shown small) crumbles, or its blocks fall away one by one with soft thuds. Rain or a slow fade to deep blue also works. It should be gentle, not scary; the players are 11 and 12 (D-6).
 - Then the **correct answer** and the `fun_fact` are shown (D-22), with a **consolation message** that names the level reached: «¡Llegaron al nivel 7! Eso es más alto que la mayoría de las torres…». There are several messages, chosen by how far the players got.
 - One button: **«Volver al inicio»** → transition → Start.
+
+### Next and Completed (answers off, D-105)
+- `game/screens/Revealed.svelte`, both neutral: neither success nor failure, sky-coloured title, the correct answer and `fun_fact` (`AnswerPanel`), normal music; whoosh in, no applause, no boom.
+- **Next** «Siguiente ronda»: «Seguir» / `Enter` → Level, the new block drops in.
+- **Completed** «Cuestionario completado» (phase and result `completed`, not a win, not a loss): fireworks, no victory music, no Victory screen; «Volver al inicio» / `Enter` → Start.
 
 ### Victory
 - After the 12th correct answer: the Level screen shows the 12th block landing, the crown on top, a long fireworks finale (all variants in sequence) and a victory jingle. Text: «¡Ganaron!».
@@ -239,7 +251,7 @@ Menu items (keyboard-navigable, large enough for the TV), the gamemaster menu (M
   - **Deshacer:** take back the last final answer, if the gamemaster misjudged or someone pressed by accident (GM-2); also after a cheat.
   - **Cambiar pregunta** ‹ no vista / vista ›: a new question at the same level (`replace {seen}`), question on screen only.
   - **Saltar a nivel** ‹ n ›: 1..levels, from the current level (`level`); then the Level screen. Select phase (with 0 cards also on the question).
-  - **Dificultad y paquetes:** a dialog (`GameSettings.svelte`, own modal scope): the configure screen's difficulty row (age groups, then «A medida» with Desde/Hasta) and the shared bundle selector; «Aplicar» (or `Enter` on a row) sends `settings`, a refusal (e.g. supply short) stays in the dialog; a new table, level and history stay. Same phases as «Saltar a nivel».
+  - **Dificultad y paquetes:** a dialog (`GameSettings.svelte`, own modal scope): the configure screen's difficulty row (age groups, then «A medida» with Desde/Hasta) and the shared bundle selector, plus the «Responder para avanzar» switch (D-105; ←/→, `Enter`/A, click); «Aplicar» (or `Enter` on a row) sends `settings`, a refusal (e.g. supply short) stays in the dialog; a new table, level and history stay. Same phases as «Saltar a nivel».
   - The game's choice below, read-only.
 - **Cheats, second column: Comodines de esta partida** (MD-4, MD-12; no preset row, decision 99): one row per joker showing the uses *left* (∞ = unlimited) and «n usados»; −/+ gives back or takes away one use (0–9, then ∞); sent as limit = used + left.
 - **Créditos** (PUB-5, pm plan 47), below «Pantalla completa»: opens the Credits screen (`Credits.svelte`) over the overlay, which hides meanwhile. Glass panel, sections with counts (media, sounds, fonts, glyphs, libraries) from the build's `credits.json`; one row per entry (title, author, licence, provider), source URL as plain text, never a link. No focusable rows: ↑/↓ scroll ~70 %, ←/→ jump between sections, wheel and scrollbar; `Esc`/`Backspace`/pad B or the close button go back to the overlay. Generator and `CREDITS.md`: `17-publishing.md`.
@@ -257,7 +269,7 @@ The detailed action set and any extra keys are owned by `05-gamemaster-controls.
 ## Input
 **Rule (IN-1): no action without a clickable control.** A key is a shortcut shown on its button (`<kbd>`), never the only way. The overlay opens with `Esc` or the faint ☰ button in the top right corner.
 
-Everything works with a mouse and with the keyboard of the TV machine (OQ-11): `Enter`/`Space` = continue or confirm, `1`–`4` / `A`–`D` = pick a card or an answer (Choice: an age group; ↑/↓ lines and ←/→ values on the configure screen; a mode's letter picks it, es `A` `G`; a bundle's letter selects or toggles it; `P` «Personalizar partida»), `R` = replay media, `S` `P` `F` `T` `X` = jokers (09, D-30), `Backspace` = unlock or cancel, `M` = flag the question for review (GM-5), `Esc` = admin overlay. A clicker or phone remote can map to these later.
+Everything works with a mouse and with the keyboard of the TV machine (OQ-11): `Enter`/`Space` = continue or confirm, `1`–`4` / `A`–`D` = pick a card or an answer (Choice: an age group; ↑/↓ lines and ←/→ values on the configure screen; a mode's letter picks it, es `A` `G`; a bundle's letter selects or toggles it; `P` «Personalizar partida»), `R` = replay media, `S` `P` `F` `T` `X` = jokers (09, D-30), `Backspace` = unlock or cancel, (answers off, D-105) `Enter` / pad A = the padlock reveal, `M` = flag the question for review (GM-5), `Esc` = admin overlay. A clicker or phone remote can map to these later.
 
 **Rule (IN-2, IN-3): actions, not keys.** Screens and dialogs listen to actions from `app/client/src/lib/input.svelte.ts` (`pushScope`), never to `keydown`; `grep -rn "keydown\|KeyboardEvent" app/client/src` lists only that file. Each screen and dialog declares a focus default (`data-focus-default`) and a `root`, so arrows + `Enter` + `Esc`/`Backspace` play it (spatial focus, ring, memory: `lib/focus.ts`, plan 44). ☰ and flag stay unfocusable (`data-nofocus`).
 
