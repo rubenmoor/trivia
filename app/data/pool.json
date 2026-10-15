@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "1c4009a9",
+  "hash": "32a32fd7",
   "questions": [
     {
       "id": "q-0001",
@@ -407,6 +407,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Dr Swapan Kr Dey",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Dr_Swapan_Kr_Dey&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0021",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "Océanos",
+      "bundle": "base",
+      "description": "Un atajo para barcos que no tenían ganas de darle la vuelta a un continente.",
+      "question": "¿Qué canal une el mar Caribe con el océano Pacífico para que pasen los barcos?",
+      "answer": "El Canal de Panamá",
+      "wrong_answers": [
+        "El Canal de Suez",
+        "El Canal de la Mancha",
+        "El Canal de Kiel"
+      ],
+      "hints": [
+        "Se inauguró en 1914.",
+        "Usa esclusas para subir y bajar los barcos.",
+        "Está muy cerca de Colombia, en Centroamérica."
+      ],
+      "fun_fact": "Un barco tarda entre 8 y 10 horas en cruzarlo.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Cargo_ship_at_dusk_%2815953825200%29.jpg/3840px-Cargo_ship_at_dusk_%2815953825200%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACargo_ship_at_dusk_%2815953825200%29.jpg",
+        "credit": "Ian Gratton from Sutton-n-Craven, North Yorkshire, England · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Ian Gratton from Sutton-n-Craven, North Yorkshire, England",
+        "author_url": "https://www.flickr.com/people/60911558@N04"
       },
       "background": null
     },
@@ -6644,6 +6678,40 @@
       "background": null
     },
     {
+      "id": "q-0250",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "Matemáticas",
+      "bundle": "base",
+      "description": "Una serie de números tan famosa que aparece hasta en los girasoles.",
+      "question": "¿Qué número sigue en la sucesión de Fibonacci: 1, 1, 2, 3, 5, 8...?",
+      "answer": "13",
+      "wrong_answers": [
+        "11",
+        "12",
+        "16"
+      ],
+      "hints": [
+        "No se suma siempre lo mismo: fíjate en los números de atrás.",
+        "Mira cómo 2 + 3 da 5 y 3 + 5 da 8.",
+        "Cada número es la suma de los dos anteriores: 5 + 8."
+      ],
+      "fun_fact": "Esta serie se llama sucesión de Fibonacci, y el matemático italiano la usó en el año 1202 para calcular cómo se multiplicaban unos conejos.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Pflanze-Sonnenblume1-Asio_%28cropped%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APflanze-Sonnenblume1-Asio_%28cropped%29.JPG",
+        "credit": "Chiswick Chap · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Chiswick Chap",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Chiswick_Chap"
+      },
+      "background": null
+    },
+    {
       "id": "q-0251",
       "status": "approved",
       "difficulty": 9,
@@ -7721,6 +7789,40 @@
         "license_url": null,
         "author": "NASA/JHU/APL",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-0292",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "Libros infantiles",
+      "bundle": "base",
+      "description": "Unas direcciones peores que las que da tu tío cuando vas a una finca.",
+      "question": "«Segunda estrella a la derecha y todo recto hasta el amanecer» es el camino a Nunca Jamás. ¿Quién lo dice?",
+      "answer": "Peter Pan",
+      "wrong_answers": [
+        "El Capitán Garfio",
+        "Campanita",
+        "Wendy"
+      ],
+      "hints": [
+        "Es alguien que sabe volar sin necesidad de avión.",
+        "Al comienzo de la historia entra por la ventana de la casa de Wendy, en Londres, buscando su sombra.",
+        "Es el niño que nunca quiso crecer."
+      ],
+      "fun_fact": "El escritor J. M. Barrie le regaló los derechos de Peter Pan a un hospital de niños de Londres, que todavía recibe dinero por ellos.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Big_Ben_%28109553029%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABig_Ben_%28109553029%29.jpeg",
+        "credit": "Kristin Tweer · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Kristin Tweer",
+        "author_url": "https://500px.com/krissi_tw"
       },
       "background": null
     },
@@ -8988,6 +9090,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Bubba73 (Jud McCranie)",
         "author_url": "https://commons.wikimedia.org/wiki/User:Bubba73"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0334",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "Inteligencia artificial",
+      "bundle": "base",
+      "description": "Es el amigo que siempre te contesta al instante, nunca se cansa y ni siquiera tiene cara.",
+      "question": "¿Cómo se llama un programa que conversa contigo por escrito como si fuera una persona?",
+      "answer": "Chatbot",
+      "wrong_answers": [
+        "Antivirus",
+        "Navegador",
+        "Emoticón"
+      ],
+      "hints": [
+        "Su nombre está en inglés y tiene dos partes.",
+        "Muchas páginas de servicio al cliente lo usan para responder preguntas a cualquier hora.",
+        "Su nombre junta 'chatear' con un pedacito de la palabra 'robot'."
+      ],
+      "fun_fact": "Uno de los primeros chatbots, ELIZA, se creó en los años 60 y se hacía pasar por una psicóloga que respondía con preguntas.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Children%27s_learner_typing_on_the_laptop_keyboard_closeup.jpg/3840px-Children%27s_learner_typing_on_the_laptop_keyboard_closeup.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChildren%27s_learner_typing_on_the_laptop_keyboard_closeup.jpg",
+        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Shixart1985",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
       },
       "background": null
     },
@@ -15701,6 +15837,40 @@
       "background": null
     },
     {
+      "id": "q-0581",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "Piratas",
+      "bundle": "base",
+      "description": "Una fortaleza contra piratas que terminó enfrentando a un ejército entero: como poner candado contra ladrones y que llegue un tanque.",
+      "question": "¿En qué año tomaron los ingleses el Castillo del Morro de La Habana, tras un largo asedio?",
+      "answer": "1762",
+      "wrong_answers": [
+        "1588",
+        "1741",
+        "1810"
+      ],
+      "hints": [
+        "Fue durante la Guerra de los Siete Años.",
+        "En España reinaba Carlos III y en Gran Bretaña, Jorge III.",
+        "Fue apenas catorce años antes de la independencia de Estados Unidos."
+      ],
+      "fun_fact": "Los ingleses solo se quedaron con La Habana unos once meses antes de cambiarla por la Florida en el Tratado de París de 1763.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/AvMalecon-LaHabanaCuba-04735.jpg/3840px-AvMalecon-LaHabanaCuba-04735.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAvMalecon-LaHabanaCuba-04735.jpg",
+        "credit": "Ezarate · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Ezarate\n\n\n\n\n\n\nThis  is a retouched picture, which means that it has been digitally altered from its original version. Modifications: rebuild from raw fixing light compensation in shadows and lights, White balance, tonemaping balance, fix lens distortion, fix vertical distortions, remove dust spots, noise reduction and chromatic aberration fix, cut element distracting and remove oil spot and finally export in full jpeg quality by The Photographer 13:39, 12 February 2017 (UTC).",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Ezarate"
+      },
+      "background": null
+    },
+    {
       "id": "q-0584",
       "status": "approved",
       "difficulty": 5,
@@ -15799,6 +15969,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Juan Carlos Fonseca Mata",
         "author_url": "https://commons.wikimedia.org/wiki/User:Juan_Carlos_Fonseca_Mata"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0590",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "Volcanes",
+      "bundle": "base",
+      "description": "Una foto en la que nadie sale con sus colores de verdad, ni siquiera el volcán.",
+      "question": "¿Cómo se llama la cámara que muestra qué tan caliente está cada cosa: lo frío sale azul y lo caliente amarillo?",
+      "answer": "Cámara térmica",
+      "wrong_answers": [
+        "Cámara sísmica",
+        "Cámara de rayos X",
+        "Cámara oscura"
+      ],
+      "hints": [
+        "También la usan los bomberos para ver a través del humo.",
+        "Sirve además para encontrar animales escondidos en plena noche.",
+        "Su nombre comparte raíz con 'termómetro' y con el 'termo' donde guardas el café caliente."
+      ],
+      "fun_fact": "Con cámaras térmicas los vulcanólogos pueden notar que un cráter se está calentando antes de que el volcán haga erupción.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Nevado_del_Ruiz_by_Edgar.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANevado_del_Ruiz_by_Edgar.png",
+        "credit": "Edgar from Ibagué, Colombia · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Edgar from Ibagué, Colombia",
+        "author_url": "https://www.flickr.com/people/63488671@N00"
       },
       "background": null
     },
@@ -17499,6 +17703,40 @@
         "license_url": "https://creativecommons.org/licenses/by/3.0/de/deed.en",
         "author": "High Contrast",
         "author_url": "https://commons.wikimedia.org/wiki/User:High_Contrast"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0641",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "Barcos",
+      "bundle": "base",
+      "description": "Un marinero que nunca se ha subido a un barco y tampoco a unos pantalones.",
+      "question": "Camisa azul de marinero, gorrito, moñito, sin pantalones y una voz chillona y enojada. ¿Qué personaje de Disney es?",
+      "answer": "El Pato Donald",
+      "wrong_answers": [
+        "Mickey Mouse",
+        "Goofy",
+        "Daisy"
+      ],
+      "hints": [
+        "Es un personaje con plumas.",
+        "Tiene tres sobrinos traviesos.",
+        "Sus sobrinos se llaman Hugo, Paco y Luis."
+      ],
+      "fun_fact": "El Pato Donald apareció por primera vez en 1934, en el corto «La gallinita sabia».",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/U.S._Navy_Cmdr._Joel_Stewart%2C_right%2C_the_commanding_officer_of_the_amphibious_transport_dock_ship_Pre-Commissioning_Unit_%28PCU%29_Anchorage_%28LPD_23%29%2C_signs_a_white_hat_for_a_child_at_the_Dock_on_the_Block_party_130430-N-DR144-281.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AU.S._Navy_Cmdr._Joel_Stewart%2C_right%2C_the_commanding_officer_of_the_amphibious_transport_dock_ship_Pre-Commissioning_Unit_%28PCU%29_Anchorage_%28LPD_23%29%2C_signs_a_white_hat_for_a_child_at_the_Dock_on_the_Block_party_130430-N-DR144-281.jpg",
+        "credit": "MC1 James R. Evans · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "MC1 James R. Evans",
+        "author_url": null
       },
       "background": null
     },
@@ -20087,6 +20325,40 @@
       "background": null
     },
     {
+      "id": "q-0728",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "Fenómenos naturales",
+      "bundle": "base",
+      "description": "Hasta las escalas se jubilan y les toca pasarle el puesto a una más joven.",
+      "question": "Hoy los sismólogos usan la escala de magnitud de momento en vez de la de Richter. ¿En qué década se creó?",
+      "answer": "La década de 1970",
+      "wrong_answers": [
+        "La década de 1930",
+        "La década de 1950",
+        "La década de 1990"
+      ],
+      "hints": [
+        "Es bastante más moderna que la escala de Richter, que es de 1935.",
+        "La propusieron Thomas Hanks y Hiroo Kanamori.",
+        "Es de la misma década en que se estrenó la primera película de Star Wars."
+      ],
+      "fun_fact": "En la escala de magnitud de momento, cada punto más significa unas 32 veces más energía liberada.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Historischer_Seismograph.jpg/3840px-Historischer_Seismograph.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHistorischer_Seismograph.jpg",
+        "credit": "Ilyacadiz · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Ilyacadiz",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Ilyacadiz&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-0729",
       "status": "approved",
       "difficulty": 8,
@@ -20661,6 +20933,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.5",
         "author": "Glycon of Athens (copy), Lysippos (original type)",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-0748",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "Héroes griegos",
+      "bundle": "base",
+      "description": "Un villano con el pelo en llamas que también tiene un nombre de repuesto.",
+      "question": "En la mitología romana: Zeus es a Júpiter como Hades es a…",
+      "answer": "Plutón",
+      "wrong_answers": [
+        "Neptuno",
+        "Marte",
+        "Vulcano"
+      ],
+      "hints": [
+        "Los romanos también llamaban así a un planeta… o casi planeta.",
+        "Ese astro es tan pequeño y lejano que hoy se considera planeta enano.",
+        "El perro de Mickey Mouse lleva casi el mismo nombre, solo le falta una letra al final."
+      ],
+      "fun_fact": "El nombre del planeta enano Plutón lo propuso una niña inglesa de 11 años, Venetia Burney, en 1930.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Lebanon%2C_Baalbek%2C_Temple_of_Bacchus_2.jpg/3840px-Lebanon%2C_Baalbek%2C_Temple_of_Bacchus_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALebanon%2C_Baalbek%2C_Temple_of_Bacchus_2.jpg",
+        "credit": "Vyacheslav Argenberg · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Vyacheslav Argenberg",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Argenberg"
       },
       "background": null
     },
@@ -21261,6 +21567,40 @@
       "background": null
     },
     {
+      "id": "q-0766",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "Internet",
+      "bundle": "base",
+      "description": "Antenas gigantes que se pasan tu llamada como si fuera un balón.",
+      "question": "Las zonas que cubre cada antena de telefonía le dieron su nombre al «celular». ¿Cómo se llaman esas zonas?",
+      "answer": "Celdas",
+      "wrong_answers": [
+        "Cuadras",
+        "Burbujas",
+        "Parcelas"
+      ],
+      "hints": [
+        "Cada antena atiende solo un pedacito del mapa, y tu teléfono salta de uno a otro.",
+        "En los dibujos técnicos suelen pintarse como hexágonos, como un panal.",
+        "También se llaman así los cuadritos de una hoja de cálculo."
+      ],
+      "fun_fact": "En los mapas de los ingenieros, las zonas de cobertura se dibujan como hexágonos porque así encajan sin dejar huecos.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Cellular_Telephone_Tower_-_Knoxville%2C_Tennessee_-_May_26%2C_2014.jpg/3840px-Cellular_Telephone_Tower_-_Knoxville%2C_Tennessee_-_May_26%2C_2014.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACellular_Telephone_Tower_-_Knoxville%2C_Tennessee_-_May_26%2C_2014.jpg",
+        "credit": "David Ratledge · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "David Ratledge",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:David_Ratledge&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-0767",
       "status": "approved",
       "difficulty": 11,
@@ -21291,6 +21631,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Bhullargraphic",
         "author_url": "https://commons.wikimedia.org/wiki/User:Bhullargraphic"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0768",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "Internet",
+      "bundle": "base",
+      "description": "Una letra que vale más que el resto del abecedario cuando vas a pagar en línea.",
+      "question": "Soy la «s» que se agrega al final de «http» en algunas direcciones web. ¿Para qué sirvo?",
+      "answer": "Para cifrar los datos entre tu navegador y la página",
+      "wrong_answers": [
+        "Para que la página cargue más rápido",
+        "Para indicar que la página está en español",
+        "Para indicar que la página es del gobierno"
+      ],
+      "hints": [
+        "Importo sobre todo cuando pagas con tarjeta o escribes tu contraseña.",
+        "Junto a mí suele aparecer un candadito en el navegador.",
+        "Convierto lo que envías en un código que otros no pueden leer por el camino."
+      ],
+      "fun_fact": "Desde 2018, el navegador Chrome marca como «no seguras» las páginas que no usan HTTPS.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Man_working_on_laptop_in_a_modern_cafe_with_coffee.jpg/3840px-Man_working_on_laptop_in_a_modern_cafe_with_coffee.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMan_working_on_laptop_in_a_modern_cafe_with_coffee.jpg",
+        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Shixart1985",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
       },
       "background": null
     },
@@ -21801,6 +22175,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Tim Evanson",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-0785",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "Juguetes",
+      "bundle": "base",
+      "description": "Una figura con tantas caras que ni el más hipócrita le gana.",
+      "question": "¿Cómo se llama la figura geométrica que tiene 20 caras, todas en forma de triángulo?",
+      "answer": "Icosaedro",
+      "wrong_answers": [
+        "Dodecaedro",
+        "Octaedro",
+        "Tetraedro"
+      ],
+      "hints": [
+        "Es un dado especial, muy usado en juegos de rol.",
+        "Su nombre viene del griego y quiere decir 'veinte caras'.",
+        "Empieza por 'ico'."
+      ],
+      "fun_fact": "Muchos virus, como el adenovirus, tienen una cubierta con forma de icosaedro.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Civilization_Board_Game_Table.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACivilization_Board_Game_Table.jpg",
+        "credit": "Ervaude · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Ervaude",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Ervaude"
       },
       "background": null
     },
@@ -24627,6 +25035,40 @@
       "background": null
     },
     {
+      "id": "q-0873",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "Personajes de videojuegos",
+      "bundle": "base",
+      "description": "La fruta más peligrosa de la isla, y no por resbalosa.",
+      "question": "Estás jugando Fortnite y ves un plátano gigante con piernas que baila y carga armas. ¿Cómo se llama ese personaje?",
+      "answer": "Peely",
+      "wrong_answers": [
+        "Jonesy",
+        "Fishstick",
+        "Meowscles"
+      ],
+      "hints": [
+        "Es uno de los trajes más famosos de Fortnite.",
+        "Su nombre viene de la palabra en inglés para 'pelar'.",
+        "Su nombre suena a la cáscara que le quitas a la fruta."
+      ],
+      "fun_fact": "Peely llegó a Fortnite en 2019, en la Temporada 8 del Capítulo 1.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/DFC_4184_Bunches_of_ripe_bananas_neatly_arranged_at_a_bustling_market_stall_ready_for_shoppers.jpg/3840px-DFC_4184_Bunches_of_ripe_bananas_neatly_arranged_at_a_bustling_market_stall_ready_for_shoppers.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADFC_4184_Bunches_of_ripe_bananas_neatly_arranged_at_a_bustling_market_stall_ready_for_shoppers.jpg",
+        "credit": "PattayaPatrol · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "PattayaPatrol",
+        "author_url": "https://www.flickr.com/people/PattayaPatrol/"
+      },
+      "background": null
+    },
+    {
       "id": "q-0874",
       "status": "approved",
       "difficulty": 14,
@@ -26323,6 +26765,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Moahim",
         "author_url": "https://commons.wikimedia.org/wiki/User:Moahim"
+      },
+      "background": null
+    },
+    {
+      "id": "q-0932",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "Cuentos infantiles",
+      "bundle": "base",
+      "description": "Un profesor de matemáticas que se aburrió de los números y se puso a inventar cuentos.",
+      "question": "J. M. Barrie es a 'Peter Pan' como Lewis Carroll es a…",
+      "answer": "Alicia en el país de las maravillas",
+      "wrong_answers": [
+        "El mago de Oz",
+        "Mary Poppins",
+        "Las crónicas de Narnia"
+      ],
+      "hints": [
+        "Es un libro lleno de personajes que no tienen mucho sentido.",
+        "Tiene un gato que sonríe y una reina que juega cróquet con flamencos.",
+        "La protagonista persigue a un conejo blanco."
+      ],
+      "fun_fact": "'Lewis Carroll' era un seudónimo: se llamaba Charles Lutwidge Dodgson y daba clases de matemáticas en Oxford.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Old_books_on_bookshelf._%28Unsplash%29.jpg/3840px-Old_books_on_bookshelf._%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOld_books_on_bookshelf._%28Unsplash%29.jpg",
+        "credit": "Clem Onojeghuo clemono2 · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Clem Onojeghuo clemono2",
+        "author_url": "http://unsplash.com/@clemono2"
       },
       "background": null
     },
@@ -31674,6 +32150,40 @@
       "background": null
     },
     {
+      "id": "q-1098",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "Verduras",
+      "bundle": "base",
+      "description": "Un impostor que se esconde en los restaurantes de sushi.",
+      "question": "En muchos restaurantes de sushi, el wasabi es en realidad otra raíz picante teñida de verde. ¿Cuál?",
+      "answer": "Rábano picante",
+      "wrong_answers": [
+        "Jengibre",
+        "Cúrcuma",
+        "Nabo"
+      ],
+      "hints": [
+        "Crece bajo tierra y pica muchísimo cuando la rallas.",
+        "En Europa se usa en salsas para acompañar carne.",
+        "Su nombre es el de una verdura pequeña de ensalada, con un apellido que avisa que pica."
+      ],
+      "fun_fact": "El wasabi de verdad es tan caro y escaso que incluso en Japón muchos restaurantes sirven la imitación.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Sushi_Restaurant_in_Shinjuku_%2853415763257%29.jpg/3840px-Sushi_Restaurant_in_Shinjuku_%2853415763257%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASushi_Restaurant_in_Shinjuku_%2853415763257%29.jpg",
+        "credit": "Stephen Kelly from San Francisco, CA, USA · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Stephen Kelly from San Francisco, CA, USA",
+        "author_url": "https://www.flickr.com/people/67056263@N04"
+      },
+      "background": null
+    },
+    {
       "id": "q-1099",
       "status": "approved",
       "difficulty": 10,
@@ -32044,6 +32554,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
         "author": "Diliff",
         "author_url": "https://commons.wikimedia.org/wiki/User:Diliff"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1112",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "Capitales del mundo",
+      "bundle": "base",
+      "description": "Un país chiquito con una idea muy grande para moverse por la ciudad.",
+      "question": "¿Qué tiene de especial el transporte público de Luxemburgo desde 2020?",
+      "answer": "Es gratis para todos",
+      "wrong_answers": [
+        "Los buses no tienen conductor",
+        "Funciona solo con energía solar",
+        "Funciona 24 horas sin parar"
+      ],
+      "hints": [
+        "Lo disfrutan por igual los turistas y la gente que vive allí.",
+        "Ningún otro país lo había hecho antes en todo su territorio.",
+        "Puedes dejar la billetera en el bolsillo."
+      ],
+      "fun_fact": "En 2020, Luxemburgo se convirtió en el primer país del mundo con transporte público gratis en todo su territorio.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Aerial_views_of_European_Union_Capitals_-_Luxembourg%2C_Luxembourg_05.jpg/3840px-Aerial_views_of_European_Union_Capitals_-_Luxembourg%2C_Luxembourg_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAerial_views_of_European_Union_Capitals_-_Luxembourg%2C_Luxembourg_05.jpg",
+        "credit": "Sophie Margue / European Commission · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Sophie Margue / European Commission",
+        "author_url": null
       },
       "background": null
     },
@@ -33544,6 +34088,40 @@
       "background": null
     },
     {
+      "id": "q-1157",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "Ríos del mundo",
+      "bundle": "base",
+      "description": "Un río tan elegante que al final se viste de varios dragones.",
+      "question": "En el sur de Vietnam, el Mekong se abre en muchos brazos antes del mar. Allí lo llaman 'el río de los ___ dragones'. ¿Qué número falta?",
+      "answer": "9",
+      "wrong_answers": [
+        "1",
+        "3",
+        "100"
+      ],
+      "hints": [
+        "El número está escondido en el nombre vietnamita del río, Cửu Long.",
+        "Es un número de una sola cifra.",
+        "Es el número que va justo antes del 10."
+      ],
+      "fun_fact": "En el delta del Mekong hay mercados flotantes donde la gente compra frutas directamente de un bote a otro.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Can_Tho%2C_Vietnam%2C_Floating_Market%2C_Boats.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACan_Tho%2C_Vietnam%2C_Floating_Market%2C_Boats.jpg",
+        "credit": "Vyacheslav Argenberg · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Vyacheslav Argenberg",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Argenberg"
+      },
+      "background": null
+    },
+    {
       "id": "q-1158",
       "status": "approved",
       "difficulty": 11,
@@ -34220,6 +34798,40 @@
         "license_url": null,
         "author": "NASA, Caltech/JPL",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-1178",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "Trenes",
+      "bundle": "base",
+      "description": "Un metro que tiene más estilo para rodar que tú para caminar.",
+      "question": "¿Sobre qué ruedan los trenes en la mayoría de las líneas del metro de Ciudad de México?",
+      "answer": "Llantas de caucho",
+      "wrong_answers": [
+        "Ruedas de acero sobre rieles",
+        "Un colchón de aire",
+        "Imanes que flotan"
+      ],
+      "hints": [
+        "No es tecnología del futuro: se usa desde hace más de setenta años.",
+        "La idea vino del metro de París, que buscaba trenes más silenciosos.",
+        "Es lo mismo que se infla en un taller cuando se pincha el carro."
+      ],
+      "fun_fact": "Los dibujitos de las estaciones del metro de Ciudad de México se crearon para que cualquiera pudiera ubicarse, aunque no supiera leer.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Plaza_de_la_Constituci%C3%B3n_-_Z%C3%B3calo_de_la_Ciudad_de_M%C3%A9xico_-_6.jpg/3840px-Plaza_de_la_Constituci%C3%B3n_-_Z%C3%B3calo_de_la_Ciudad_de_M%C3%A9xico_-_6.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APlaza_de_la_Constituci%C3%B3n_-_Z%C3%B3calo_de_la_Ciudad_de_M%C3%A9xico_-_6.jpg",
+        "credit": "ProtoplasmaKid · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "ProtoplasmaKid",
+        "author_url": "https://commons.wikimedia.org/wiki/User:ProtoplasmaKid"
       },
       "background": null
     },
@@ -35818,6 +36430,40 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "VickyOmondi",
         "author_url": "https://commons.wikimedia.org/wiki/User:VickyOmondi"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1229",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "Bebidas",
+      "bundle": "base",
+      "description": "Una flor que se mete a la olla y sale convertida en refresco.",
+      "question": "Hierves flores secas de Jamaica en agua para hacer una bebida. ¿De qué color queda el agua?",
+      "answer": "Roja",
+      "wrong_answers": [
+        "Verde",
+        "Azul",
+        "Amarilla"
+      ],
+      "hints": [
+        "Es una bebida muy popular en México, y se toma bien fría.",
+        "Su sabor es ácido, parecido al del arándano.",
+        "Es el mismo color de un tomate maduro."
+      ],
+      "fun_fact": "La flor de Jamaica es en realidad un hibisco, y lo que se usa son sus cálices, no los pétalos.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Traditional_food_stall.jpg/3840px-Traditional_food_stall.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATraditional_food_stall.jpg",
+        "credit": "Daniela Magallán Ramírez · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Daniela Magallán Ramírez",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Daniela_Magall%C3%A1n_Ram%C3%ADrez&action=edit&redlink=1"
       },
       "background": null
     },
@@ -37896,6 +38542,40 @@
       "background": null
     },
     {
+      "id": "q-1291",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "Científicos famosos",
+      "bundle": "base",
+      "description": "Un científico al que Hollywood le dedicó tres horas de película y cero minutos de chistes.",
+      "question": "Oppenheimer dirigió el laboratorio que probó la primera bomba atómica en el desierto de Nuevo México. ¿En qué año?",
+      "answer": "1945",
+      "wrong_answers": [
+        "1939",
+        "1952",
+        "1962"
+      ],
+      "hints": [
+        "Fue durante la Segunda Guerra Mundial.",
+        "Estados Unidos la desarrolló en secreto dentro del Proyecto Manhattan.",
+        "Fue a mitad del siglo XX, en la década de los cuarenta."
+      ],
+      "fun_fact": "La prueba se llamó 'Trinity' y su destello se vio a más de 200 kilómetros.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Desert_Dunes_in_New_Mexico_%28Unsplash%29.jpg/3840px-Desert_Dunes_in_New_Mexico_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADesert_Dunes_in_New_Mexico_%28Unsplash%29.jpg",
+        "credit": "Breanna Galley breannagalley · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Breanna Galley breannagalley",
+        "author_url": "https://unsplash.com/@breannagalley"
+      },
+      "background": null
+    },
+    {
       "id": "q-1292",
       "status": "approved",
       "difficulty": 13,
@@ -38576,6 +39256,40 @@
       "background": null
     },
     {
+      "id": "q-1313",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "Cosas raras del cuerpo humano",
+      "bundle": "base",
+      "description": "Lo que te regalan los zapatos nuevos el primer día.",
+      "question": "Soy una burbujita en la piel que sale cuando un zapato nuevo te roza mucho. ¿De qué estoy llena?",
+      "answer": "De líquido",
+      "wrong_answers": [
+        "De aire",
+        "De grasa",
+        "De arena"
+      ],
+      "hints": [
+        "Suelo salir en los talones o en los dedos de los pies.",
+        "Lo que tengo dentro viene de tu propio cuerpo.",
+        "Parece agua, pero sale de tu propia piel lastimada."
+      ],
+      "fun_fact": "Es mejor no reventar una ampolla: la piel de encima funciona como una curita natural que protege de gérmenes.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/22/New_Balance_574.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANew_Balance_574.jpg",
+        "credit": "LeDroider · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "LeDroider",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:LeDroider&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-1314",
       "status": "approved",
       "difficulty": 8,
@@ -38882,6 +39596,40 @@
       "background": null
     },
     {
+      "id": "q-1323",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "Crímenes famosos",
+      "bundle": "base",
+      "description": "Una roquita en medio del mar que se tomó muy en serio lo de ser un castillo.",
+      "question": "Desde el puerto de Marsella ves una islita con una fortaleza: el Castillo de If. ¿Para qué se usó durante siglos?",
+      "answer": "Como cárcel",
+      "wrong_answers": [
+        "Como faro",
+        "Como monasterio",
+        "Como palacio de verano"
+      ],
+      "hints": [
+        "La fortaleza se construyó en el siglo XVI por orden del rey Francisco I.",
+        "Un famoso escritor francés ambientó allí parte de una novela de aventuras.",
+        "Edmundo Dantès pasó allí catorce años en 'El conde de Montecristo'."
+      ],
+      "fun_fact": "Aunque Dantès es inventado, hoy los turistas pueden visitar en el Castillo de If una 'celda de Montecristo'.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Marseille_Old_Port.jpg/3840px-Marseille_Old_Port.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMarseille_Old_Port.jpg",
+        "credit": "Ingo Mehling · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Ingo Mehling",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-1324",
       "status": "approved",
       "difficulty": 3,
@@ -39116,6 +39864,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Edwin of Northumbria",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Edwin_of_Northumbria&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1331",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "Dinosaurios",
+      "bundle": "base",
+      "description": "Antes de las redes sociales, la gente publicaba sus fotos directamente en la pared… de una montaña.",
+      "question": "Está pintado sobre roca, tiene miles de años y lo hay en Chiribiquete y en Altamira. ¿Cómo se llama este arte?",
+      "answer": "Arte rupestre",
+      "wrong_answers": [
+        "Arte gótico",
+        "Arte barroco",
+        "Arte bizantino"
+      ],
+      "hints": [
+        "Lo hicieron los primeros grupos humanos, mucho antes de que existieran ciudades.",
+        "Muchas de estas pinturas están en cuevas o en paredes de piedra.",
+        "Su nombre viene de una palabra latina que significa 'roca'."
+      ],
+      "fun_fact": "En Chiribiquete hay decenas de miles de figuras pintadas, y el parque es Patrimonio de la Humanidad desde 2018.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Parque_Nacional_Natural_Serran%C3%ADa_de_Chiribiquete.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AParque_Nacional_Natural_Serran%C3%ADa_de_Chiribiquete.jpg",
+        "credit": "Ministerio de Ambiente de Colombia · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Ministerio de Ambiente de Colombia",
+        "author_url": null
       },
       "background": null
     },
@@ -42146,6 +42928,40 @@
       "background": null
     },
     {
+      "id": "q-1423",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "Eurovisión",
+      "bundle": "base",
+      "description": "Una marioneta con hilos que movió a todo un continente... y la cantante, descalza.",
+      "question": "Sandie Shaw ganó Eurovisión 1967 cantando descalza «Puppet on a String». ¿A qué país representaba?",
+      "answer": "Reino Unido",
+      "wrong_answers": [
+        "Irlanda",
+        "Islandia",
+        "Malta"
+      ],
+      "hints": [
+        "Sandie Shaw era una estrella del pop de los años sesenta, la década de la minifalda.",
+        "Es un país insular del noroeste de Europa formado por varias naciones.",
+        "Su capital es Londres."
+      ],
+      "fun_fact": "Sandie Shaw fue la primera ganadora británica de Eurovisión y solía cantar descalza en sus presentaciones.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Elektra%2C_opereta_de_cocina_%E2%80%93_int%C3%A9rprete_con_micr%C3%B3fono_en_el_Festival_Escenarios_del_Mundo.jpg/3840px-Elektra%2C_opereta_de_cocina_%E2%80%93_int%C3%A9rprete_con_micr%C3%B3fono_en_el_Festival_Escenarios_del_Mundo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AElektra%2C_opereta_de_cocina_%E2%80%93_int%C3%A9rprete_con_micr%C3%B3fono_en_el_Festival_Escenarios_del_Mundo.jpg",
+        "credit": "Martín Vasco · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Martín Vasco",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Martin.vascovinueza"
+      },
+      "background": null
+    },
+    {
       "id": "q-1424",
       "status": "approved",
       "difficulty": 13,
@@ -43030,6 +43846,40 @@
       "background": null
     },
     {
+      "id": "q-1450",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "Fantasía",
+      "bundle": "base",
+      "description": "Un rey que pasó años de vagabundo antes de estrenar corona.",
+      "question": "Lo apodan Trancos, es heredero de un reino perdido y se enamora de la elfa Arwen. ¿A qué pueblo pertenece Aragorn?",
+      "answer": "Humanos",
+      "wrong_answers": [
+        "Elfos",
+        "Enanos",
+        "Hobbits"
+      ],
+      "hints": [
+        "No es inmortal, aunque vive más de lo normal.",
+        "Su pueblo recibió nueve anillos de poder.",
+        "Es de la misma especie que tú."
+      ],
+      "fun_fact": "En la historia de Tolkien, Aragorn vive 210 años gracias a su sangre de los dúnedain.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Misty_path.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMisty_path.JPG",
+        "credit": "RhinoMind · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "RhinoMind",
+        "author_url": "https://commons.wikimedia.org/wiki/User:RhinoMind"
+      },
+      "background": null
+    },
+    {
       "id": "q-1451",
       "status": "approved",
       "difficulty": 7,
@@ -43400,6 +44250,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Anai171",
         "author_url": "https://commons.wikimedia.org/wiki/User:Anai171"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1463",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "Fauna africana",
+      "bundle": "base",
+      "description": "Un atasco de millones de patas que se repite todos los años.",
+      "question": "La Gran Migración de ñus da una vuelta completa cada año. ¿Por cuántos países pasa?",
+      "answer": "2",
+      "wrong_answers": [
+        "1",
+        "4",
+        "6"
+      ],
+      "hints": [
+        "Empieza y termina en el Serengueti.",
+        "Una vez al año, las manadas cruzan el río Mara, lleno de cocodrilos.",
+        "Esos países son Tanzania y su vecino del norte, Kenia."
+      ],
+      "fun_fact": "En la Gran Migración se mueven cerca de un millón y medio de ñus, acompañados por cebras y gacelas.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Wildebeest_herd%2C_Northern_Serengeti%2C_Tanzania.jpg/3840px-Wildebeest_herd%2C_Northern_Serengeti%2C_Tanzania.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWildebeest_herd%2C_Northern_Serengeti%2C_Tanzania.jpg",
+        "credit": "Christoph Strässler · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Christoph Strässler",
+        "author_url": null
       },
       "background": null
     },
@@ -44114,6 +44998,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Edvaldo LL Souza",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Edvaldo_LL_Souza&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1485",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "Física",
+      "bundle": "base",
+      "description": "Una carrera entre una piedra y una hoja de papel con final cantado.",
+      "question": "Sueltas al mismo tiempo una piedra y una hoja de papel extendida: la piedra llega primero. ¿Qué frena más a la hoja?",
+      "answer": "La resistencia del aire",
+      "wrong_answers": [
+        "El magnetismo de la Tierra",
+        "La rotación de la Tierra",
+        "La luz del sol"
+      ],
+      "hints": [
+        "Si arrugas la hoja en una bolita, cae mucho más rápido.",
+        "En la Luna caerían al mismo tiempo.",
+        "Es lo mismo que aprovecha un paracaídas."
+      ],
+      "fun_fact": "En 1971, un astronauta del Apolo 15 soltó un martillo y una pluma en la Luna, y ambos cayeron al mismo tiempo.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Work_No._88%3B_A_sheet_of_A4_paper_crumbled_into_a_ball.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWork_No._88%3B_A_sheet_of_A4_paper_crumbled_into_a_ball.jpg",
+        "credit": "14GTR · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "14GTR",
+        "author_url": "https://commons.wikimedia.org/wiki/User:14GTR"
       },
       "background": null
     },
@@ -45240,6 +46158,40 @@
       "background": null
     },
     {
+      "id": "q-1519",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "Guerra Fría",
+      "bundle": "base",
+      "description": "Un barquito sobrecargado que terminó dándole nombre a una provincia entera.",
+      "question": "Este yate llevó en 1956 a Fidel Castro y al Che de México a Cuba, y hoy nombra al periódico oficial cubano. ¿Cómo se llamaba?",
+      "answer": "Granma",
+      "wrong_answers": [
+        "Moncada",
+        "Sierra Maestra",
+        "Playa Girón"
+      ],
+      "hints": [
+        "Zarpó de Tuxpan, en el golfo de México.",
+        "Era un yate de recreo comprado a un estadounidense.",
+        "Viene de una palabra cariñosa para 'abuelita'."
+      ],
+      "fun_fact": "El yate estaba hecho para unas 12 personas, pero viajaron 82 hombres apretujados durante una semana.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Caribbean_fishing_boats.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACaribbean_fishing_boats.jpg",
+        "credit": "Dennis Matheson · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Dennis Matheson",
+        "author_url": "https://www.flickr.com/photos/89116575@N00"
+      },
+      "background": null
+    },
+    {
       "id": "q-1520",
       "status": "approved",
       "difficulty": 12,
@@ -45304,6 +46256,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Jeremy Roux",
         "author_url": "https://www.wikidata.org/wiki/Q119106097"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1522",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "Guerra Fría",
+      "bundle": "base",
+      "description": "Un cantante cuyas caderas fueron censuradas en televisión.",
+      "question": "¿Quién es este cantante, al que todavía llaman 'el Rey'?",
+      "answer": "Elvis Presley",
+      "wrong_answers": [
+        "Frank Sinatra",
+        "Johnny Cash",
+        "Chuck Berry"
+      ],
+      "hints": [
+        "Vivió y se hizo famoso en Memphis, Estados Unidos.",
+        "Vivía en una mansión llamada Graceland.",
+        "Su nombre empieza por E y le dicen 'el Rey del Rock'."
+      ],
+      "fun_fact": "Elvis hizo el servicio militar en Alemania Occidental entre 1958 y 1960, en plena Guerra Fría.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Elvis_Presley_1970.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AElvis_Presley_1970.jpg",
+        "credit": "Ollie Atkins, chief White House photographer at the time. See ARC record. · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Ollie Atkins, chief White House photographer at the time. See ARC record.",
+        "author_url": null
       },
       "background": null
     },
@@ -45474,6 +46460,40 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Cultureel Gelderland",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Cultureel_Gelderland&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1528",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "Harry Potter",
+      "bundle": "base",
+      "description": "Un capitán que habla de quidditch hasta dormido.",
+      "question": "Fui capitán y guardián de quidditch, y lloré de emoción al ganar la copa en mi último año. ¿En qué casa de Hogwarts estuve?",
+      "answer": "Gryffindor",
+      "wrong_answers": [
+        "Slytherin",
+        "Ravenclaw",
+        "Hufflepuff"
+      ],
+      "hints": [
+        "Me llamo Oliver Wood.",
+        "Me obsesionan las tácticas y despierto a mi equipo al amanecer para entrenar.",
+        "Mi casa tiene un león como símbolo."
+      ],
+      "fun_fact": "Al salir de Hogwarts, Oliver Wood fichó por el equipo de reserva del Puddlemere United.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Blue_Darter_Trophy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABlue_Darter_Trophy.jpg",
+        "credit": "RoyalxOptimum · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "RoyalxOptimum",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:RoyalxOptimum&action=edit&redlink=1"
       },
       "background": null
     },
@@ -46090,6 +47110,40 @@
       "background": null
     },
     {
+      "id": "q-1547",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "Historia de la moda",
+      "bundle": "base",
+      "description": "Una década en la que hasta la ropa quería bailar.",
+      "question": "En los años veinte, los vestidos de fiesta eran rectos, cortos y se movían al bailar charlestón. ¿De qué solían ir adornados?",
+      "answer": "Flecos y cuentas brillantes",
+      "wrong_answers": [
+        "Hombreras gigantes",
+        "Aros de crinolina",
+        "Parches de jean"
+      ],
+      "hints": [
+        "El adorno tenía que moverse con cada paso de baile.",
+        "Brillaban bajo las luces de los salones de jazz.",
+        "Son tiritas colgantes, como las de una cortina o un poncho."
+      ],
+      "fun_fact": "Algunos vestidos de los años veinte llevaban tantas cuentas de vidrio que pesaban más de un kilo.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Vintage_Musicians_%287057077503%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVintage_Musicians_%287057077503%29.jpg",
+        "credit": "National Library of Ireland on The Commons · No restrictions · Wikimedia Commons",
+        "provider": "commons",
+        "license": "No restrictions",
+        "license_url": "https://www.flickr.com/commons/usage/",
+        "author": "National Library of Ireland on The Commons",
+        "author_url": "https://www.flickr.com/people/47290943@N03"
+      },
+      "background": null
+    },
+    {
       "id": "q-1548",
       "status": "approved",
       "difficulty": 11,
@@ -46294,6 +47348,40 @@
       "background": null
     },
     {
+      "id": "q-1554",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "Historia del dinero",
+      "bundle": "base",
+      "description": "Un papelito que vale más que todos los cuadernos del colegio juntos.",
+      "question": "Soy de papel y sirvo para pagar. Me inventaron hace más de mil años en un país de Asia. ¿En cuál?",
+      "answer": "China",
+      "wrong_answers": [
+        "Japón",
+        "India",
+        "Corea"
+      ],
+      "hints": [
+        "Ese país también inventó el papel.",
+        "Allá también se inventaron la pólvora y la brújula.",
+        "Es el país con la Gran Muralla."
+      ],
+      "fun_fact": "Cuando Marco Polo contó en Europa que en China se pagaba con papel, a mucha gente le pareció increíble.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Euro_coins_and_banknotes_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEuro_coins_and_banknotes_%28cropped%29.jpg",
+        "credit": "Avij (talk · contribs) · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Avij (talk · contribs)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Avij"
+      },
+      "background": null
+    },
+    {
       "id": "q-1555",
       "status": "approved",
       "difficulty": 3,
@@ -46324,6 +47412,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Steve Morgan",
         "author_url": "https://commons.wikimedia.org/wiki/User:Steve_Morgan"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1556",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "Historia del dinero",
+      "bundle": "base",
+      "description": "Una moneda con más años que el chiste más viejo de tu abuelo.",
+      "question": "El siclo, que hoy da nombre a la moneda de Israel, empezó como un peso de plata en Mesopotamia. ¿Hace cuánto?",
+      "answer": "Hace unos 4000 años",
+      "wrong_answers": [
+        "Hace unos 2000 años",
+        "Hace unos 1000 años",
+        "Hace unos 500 años"
+      ],
+      "hints": [
+        "Su nombre viene de una antigua palabra que significa 'pesar'.",
+        "Ya aparece en el Código de Hammurabi.",
+        "Mesopotamia es la misma región donde se inventó la escritura."
+      ],
+      "fun_fact": "Al principio el siclo no era una moneda sino una medida de peso: se pesaba la plata en una balanza para pagar.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/A_fragment_of_a_clay_tablet_with_a_cuneiform_inscription%2C_unearthed_September_2014_at_Bakr_Awa%2C_Sulaymaniyah%2C_Iraq.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_fragment_of_a_clay_tablet_with_a_cuneiform_inscription%2C_unearthed_September_2014_at_Bakr_Awa%2C_Sulaymaniyah%2C_Iraq.jpg",
+        "credit": "Osama Shukir Muhammed Amin FRCP(Glasg) · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Osama Shukir Muhammed Amin FRCP(Glasg)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Neuroforever"
       },
       "background": null
     },
@@ -46528,6 +47650,40 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "W.carter",
         "author_url": "https://commons.wikimedia.org/wiki/User:W.carter"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1563",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "Historias de la Biblia",
+      "bundle": "base",
+      "description": "Un equipo tan grande que no cabía en una sola foto de grupo.",
+      "question": "Mateo era uno de los apóstoles de Jesús. ¿Cuántos apóstoles tenía Jesús?",
+      "answer": "12",
+      "wrong_answers": [
+        "7",
+        "10",
+        "40"
+      ],
+      "hints": [
+        "Es un número par.",
+        "Es menos de 20.",
+        "Una docena."
+      ],
+      "fun_fact": "Antes de seguir a Jesús, Mateo era cobrador de impuestos, uno de los oficios más mal vistos de su época.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Sea_of_Galilee_A_tour_boat_at_Galilee_Sea_%288293315571%29.jpg/3840px-Sea_of_Galilee_A_tour_boat_at_Galilee_Sea_%288293315571%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASea_of_Galilee_A_tour_boat_at_Galilee_Sea_%288293315571%29.jpg",
+        "credit": "Lux Moundi · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Lux Moundi",
+        "author_url": "https://www.flickr.com/people/62808641@N00"
       },
       "background": null
     },
@@ -47140,6 +48296,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Aathavan jaffna",
         "author_url": "https://commons.wikimedia.org/wiki/User:Aathavan_jaffna"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1583",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "Inventos por accidente",
+      "bundle": "base",
+      "description": "Del pasto de las vacas a la mesa de noche del abuelo: un viaje muy poco común.",
+      "question": "La warfarina, medicamento contra los coágulos, se descubrió estudiando esta planta enmohecida que comía el ganado. ¿Cuál es?",
+      "answer": "Trébol dulce",
+      "wrong_answers": [
+        "Alfalfa",
+        "Diente de león",
+        "Ortiga"
+      ],
+      "hints": [
+        "Su moho producía una sustancia que hacía la sangre más líquida.",
+        "La investigación se hizo en la Universidad de Wisconsin en los años 30 y 40.",
+        "También se le llama meliloto o trébol de olor."
+      ],
+      "fun_fact": "La warfarina se vendió primero como veneno para ratas, y su nombre viene de WARF, la fundación de la Universidad de Wisconsin.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Cattle_Eating_Hay_-_49239129937.jpg/3840px-Cattle_Eating_Hay_-_49239129937.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACattle_Eating_Hay_-_49239129937.jpg",
+        "credit": "Alabama Extension · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Alabama Extension",
+        "author_url": null
       },
       "background": null
     },
@@ -47820,6 +49010,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "EgorovaSvetlana",
         "author_url": "https://commons.wikimedia.org/wiki/User:EgorovaSvetlana"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1604",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "Logotipos famosos",
+      "bundle": "base",
+      "description": "Una prenda tan resistente que ni la caballería pudo con ella.",
+      "question": "Adivina: nací en 1873 para los mineros de California, tengo remaches de cobre y en mi etiqueta dos caballos intentan romperme. ¿Qué soy?",
+      "answer": "Los jeans",
+      "wrong_answers": [
+        "Las botas de cuero",
+        "El sombrero vaquero",
+        "La chaqueta de cuero"
+      ],
+      "hints": [
+        "Me pongo en las piernas.",
+        "Casi siempre soy de tela azul llamada mezclilla.",
+        "Tengo bolsillos, cremallera y dos perneras."
+      ],
+      "fun_fact": "El logo de los dos caballos de Levi's se usa desde 1886 para presumir que ni dos caballos podían romper sus pantalones.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Gold_panning_on_Jack_Wade_Creek_%2824785190007%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGold_panning_on_Jack_Wade_Creek_%2824785190007%29.jpg",
+        "credit": "BLM Alaska · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "BLM Alaska",
+        "author_url": "https://www.flickr.com/people/blmalaska/"
       },
       "background": null
     },
@@ -49601,6 +50825,40 @@
       "background": null
     },
     {
+      "id": "q-1657",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "Música del mundo",
+      "bundle": "base",
+      "description": "Un señor tan elegante que hasta cantaba con pajarita.",
+      "question": "Me llamaban 'La Voz' y canté 'New York, New York'. Nací en Estados Unidos, pero mis padres venían de otro país. ¿De cuál?",
+      "answer": "Italia",
+      "wrong_answers": [
+        "Irlanda",
+        "Alemania",
+        "Polonia"
+      ],
+      "hints": [
+        "Mis padres emigraron a Estados Unidos a principios del siglo XX, como millones de europeos.",
+        "Muchos emigrantes de ese país se instalaron en Nueva York y Nueva Jersey.",
+        "Es el país de la pizza y la pasta."
+      ],
+      "fun_fact": "Frank Sinatra nació en Hoboken, una ciudad de Nueva Jersey justo enfrente de Nueva York.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Elektra%2C_opereta_de_cocina_%E2%80%93_int%C3%A9rprete_con_micr%C3%B3fono_en_el_Festival_Escenarios_del_Mundo.jpg/3840px-Elektra%2C_opereta_de_cocina_%E2%80%93_int%C3%A9rprete_con_micr%C3%B3fono_en_el_Festival_Escenarios_del_Mundo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AElektra%2C_opereta_de_cocina_%E2%80%93_int%C3%A9rprete_con_micr%C3%B3fono_en_el_Festival_Escenarios_del_Mundo.jpg",
+        "credit": "Martín Vasco · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Martín Vasco",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Martin.vascovinueza"
+      },
+      "background": null
+    },
+    {
       "id": "q-1658",
       "status": "approved",
       "difficulty": 5,
@@ -49873,6 +51131,40 @@
       "background": null
     },
     {
+      "id": "q-1666",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "Musicales",
+      "bundle": "base",
+      "description": "Una historia de amor donde uno de los dos necesita una pulsera para no antojarse de cerebros.",
+      "question": "Soy animadora en Seabrook, escondo mi pelo blanco bajo una peluca y me enamoré de Zed, un zombi. ¿Quién soy?",
+      "answer": "Addison",
+      "wrong_answers": [
+        "Bree",
+        "Eliza",
+        "Willa"
+      ],
+      "hints": [
+        "Salgo en la película de Disney Channel 'Zombies'.",
+        "Mi primo Bucky es el capitán de las animadoras.",
+        "Mi nombre empieza por 'A'."
+      ],
+      "fun_fact": "La primera película de 'Zombies' se estrenó en Disney Channel en 2018 y tuvo varias secuelas.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Charlotte_Tarpon_cheerleaders_waving_poms_2.jpg/3840px-Charlotte_Tarpon_cheerleaders_waving_poms_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACharlotte_Tarpon_cheerleaders_waving_poms_2.jpg",
+        "credit": "PCHS-NJROTC · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "PCHS-NJROTC",
+        "author_url": "https://commons.wikimedia.org/wiki/User:PCHS-NJROTC"
+      },
+      "background": null
+    },
+    {
       "id": "q-1667",
       "status": "approved",
       "difficulty": 11,
@@ -49971,6 +51263,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Benjamin Shaw",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Benjamin_Shaw&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1670",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "Novela policiaca",
+      "bundle": "base",
+      "description": "Hasta el villano más malvado tiene sus razones… o eso dice su abogado.",
+      "question": "Soy la razón por la que alguien comete un crimen: dinero, celos o venganza. Los detectives siempre me buscan. ¿Qué soy?",
+      "answer": "El móvil",
+      "wrong_answers": [
+        "La coartada",
+        "El modus operandi",
+        "El cuerpo del delito"
+      ],
+      "hints": [
+        "Respondo a la pregunta «¿por qué lo hizo?».",
+        "En el juicio, el abogado defensor intenta demostrar que el acusado no me tenía.",
+        "Mi nombre viene de «mover»: es lo que mueve a actuar."
+      ],
+      "fun_fact": "Los detectives clásicos buscan tres cosas: móvil, medio y oportunidad.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Cianorte_desktop_%28Unsplash%29.jpg/3840px-Cianorte_desktop_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACianorte_desktop_%28Unsplash%29.jpg",
+        "credit": "João Silas joaosilas · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "João Silas joaosilas",
+        "author_url": "https://unsplash.com/@joaosilas"
       },
       "background": null
     },
@@ -51263,6 +52589,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "PattayaPatrol",
         "author_url": "https://www.flickr.com/people/PattayaPatrol/"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1709",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "Perros",
+      "bundle": "base",
+      "description": "Un maratón con cuatro patas, nieve hasta las orejas y cero puestos de hidratación.",
+      "question": "En 1925, perros de trineo como Balto llevaron una medicina por relevos hasta Nome, Alaska. ¿Cuántos kilómetros recorrieron en total?",
+      "answer": "Unos 1000 km",
+      "wrong_answers": [
+        "Unos 10 km",
+        "Unos 100 km",
+        "Unos 10 000 km"
+      ],
+      "hints": [
+        "Participaron unos 20 conductores con sus equipos de perros.",
+        "El viaje tomó unos cinco días y medio.",
+        "Es más o menos la distancia entre Bogotá y Caracas."
+      ],
+      "fun_fact": "Balto tiene una estatua en el Parque Central de Nueva York desde 1925, y él mismo asistió a su inauguración.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Dog_team_pounding_through_a_snow_storm_%286953033057%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADog_team_pounding_through_a_snow_storm_%286953033057%29.jpg",
+        "credit": "Frank Kovalchek from USA · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Frank Kovalchek from USA",
+        "author_url": "https://www.flickr.com/people/72213316@N00"
       },
       "background": null
     },
@@ -52865,6 +54225,40 @@
       "background": null
     },
     {
+      "id": "q-1757",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "Premios Óscar",
+      "bundle": "base",
+      "description": "Un hombrecito dorado que no hace ejercicio pero siempre está de pie.",
+      "question": "Los premios Óscar se entregaron por primera vez en 1929. ¿En qué ciudad fue esa primera ceremonia?",
+      "answer": "Los Ángeles",
+      "wrong_answers": [
+        "Nueva York",
+        "Londres",
+        "París"
+      ],
+      "hints": [
+        "Fue en Estados Unidos.",
+        "Queda en California, junto al océano Pacífico.",
+        "Allí está el barrio de Hollywood."
+      ],
+      "fun_fact": "La primera ceremonia, en el hotel Hollywood Roosevelt, duró apenas unos 15 minutos.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Andrea_Morricone%2C_Lubomir_Haltmar_on_the_red_carpet_Film_Festival_Zlin_2018_Premiere_of_72_Hours_in_Bangkok.jpg/3840px-Andrea_Morricone%2C_Lubomir_Haltmar_on_the_red_carpet_Film_Festival_Zlin_2018_Premiere_of_72_Hours_in_Bangkok.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAndrea_Morricone%2C_Lubomir_Haltmar_on_the_red_carpet_Film_Festival_Zlin_2018_Premiere_of_72_Hours_in_Bangkok.jpg",
+        "credit": "Lubomir Haltmar · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Lubomir Haltmar",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Haltmarus?action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-1758",
       "status": "approved",
       "difficulty": 13,
@@ -53575,6 +54969,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Berthold Werner",
         "author_url": "https://commons.wikimedia.org/wiki/User:Berthold_Werner"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1779",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "Puentes famosos",
+      "bundle": "base",
+      "description": "Un ogro, un burro que no se calla y un puente que cruje: ¿qué podría salir mal?",
+      "question": "En «Shrek», Shrek y Burro cruzan un puente de tablas que se balancea sobre lava. ¿Cómo se llama ese tipo de puente?",
+      "answer": "Puente colgante",
+      "wrong_answers": [
+        "Puente levadizo",
+        "Puente de arco",
+        "Puente giratorio"
+      ],
+      "hints": [
+        "No tiene pilares abajo.",
+        "Está sostenido de los dos lados.",
+        "Parece que flota en el aire, sujeto de cuerdas."
+      ],
+      "fun_fact": "Cuando Burro se congela de miedo a mitad del puente, Shrek lo sacude y lo hace retroceder discutiendo, sin que se dé cuenta, hasta llegar al otro lado.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Litli-Hr%C3%BAtur_-_Volcanic_Eruption_in_Iceland_July_2023_%2853063284354%29.jpg/3840px-Litli-Hr%C3%BAtur_-_Volcanic_Eruption_in_Iceland_July_2023_%2853063284354%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALitli-Hr%C3%BAtur_-_Volcanic_Eruption_in_Iceland_July_2023_%2853063284354%29.jpg",
+        "credit": "Anthony Quintano from Mount Laurel, United States · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Anthony Quintano from Mount Laurel, United States",
+        "author_url": "https://www.flickr.com/people/22882274@N04"
       },
       "background": null
     },
@@ -54633,6 +56061,40 @@
       "background": null
     },
     {
+      "id": "q-1811",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "Redes sociales",
+      "bundle": "base",
+      "description": "Una sola letra minúscula que le cambió la vida a tus tías.",
+      "question": "Facebook, la red social con una «f» blanca sobre fondo azul en su logo, nació en 2004. ¿Quién la creó?",
+      "answer": "Mark Zuckerberg",
+      "wrong_answers": [
+        "Elon Musk",
+        "Jeff Bezos",
+        "Bill Gates"
+      ],
+      "hints": [
+        "La creó cuando era estudiante universitario.",
+        "Estudiaba en la Universidad de Harvard.",
+        "Hoy dirige Meta, dueña también de Instagram y WhatsApp."
+      ],
+      "fun_fact": "Facebook es azul porque Zuckerberg no distingue bien el rojo y el verde, y el azul es el color que mejor ve.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Social_Media_App_Icons_On_The_Screen_of_A_Smartphone.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASocial_Media_App_Icons_On_The_Screen_of_A_Smartphone.jpg",
+        "credit": "mikemacmarketing · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "mikemacmarketing",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-1812",
       "status": "approved",
       "difficulty": 6,
@@ -55551,6 +57013,40 @@
       "background": null
     },
     {
+      "id": "q-1840",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "Reptiles",
+      "bundle": "base",
+      "description": "Una excavadora con caparazón que, claramente, no está haciendo castillos de arena.",
+      "question": "¿Para qué cavan las tortugas marinas un hoyo en la arena de la playa?",
+      "answer": "Para poner sus huevos",
+      "wrong_answers": [
+        "Para dormir",
+        "Para esconderse del sol",
+        "Para buscar comida"
+      ],
+      "hints": [
+        "Lo hacen de noche y luego vuelven al mar.",
+        "Después tapan el hoyo con arena.",
+        "Semanas después, de ahí salen tortuguitas."
+      ],
+      "fun_fact": "Muchas tortugas marinas vuelven a poner sus huevos en la misma playa donde nacieron.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Loggerhead_sea_turtle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALoggerhead_sea_turtle.jpg",
+        "credit": "ukanda · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "ukanda",
+        "author_url": "https://www.flickr.com/people/99613680@N00"
+      },
+      "background": null
+    },
+    {
       "id": "q-1841",
       "status": "approved",
       "difficulty": 4,
@@ -56002,6 +57498,40 @@
       "background": null
     },
     {
+      "id": "q-1854",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "Escándalos famosos",
+      "bundle": "base",
+      "description": "Unos diputados que le pasaron al Estado la cuenta hasta de los patos.",
+      "question": "¿En qué país estalló en 2009 un escándalo porque diputados pasaron al Estado gastos como una casita para patos o limpiar el foso de su mansión?",
+      "answer": "Reino Unido",
+      "wrong_answers": [
+        "Francia",
+        "Italia",
+        "Australia"
+      ],
+      "hints": [
+        "Es un país con parlamento muy antiguo.",
+        "Su moneda no es el euro ni el dólar.",
+        "Su capital tiene el Big Ben."
+      ],
+      "fun_fact": "La famosa casita flotante para patos costaba unas 1645 libras y se volvió el símbolo de todo el escándalo.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Duck_House_on_the_Pond_-_geograph.org.uk_-_7267281.jpg/3840px-Duck_House_on_the_Pond_-_geograph.org.uk_-_7267281.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADuck_House_on_the_Pond_-_geograph.org.uk_-_7267281.jpg",
+        "credit": "Geographer · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Geographer",
+        "author_url": "https://www.geograph.org.uk/profile/2639"
+      },
+      "background": null
+    },
+    {
       "id": "q-1855",
       "status": "approved",
       "difficulty": 11,
@@ -56100,6 +57630,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Peter McDermott",
         "author_url": "https://www.geograph.org.uk/profile/14194"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1858",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "Eslóganes publicitarios",
+      "bundle": "base",
+      "description": "Antes de las pantallas, esto era lo que más brillaba en la calle de noche.",
+      "question": "Soy un letrero que brilla en rojo gracias a un gas y anuncio tiendas de noche. ¿Qué inventor me presentó en París en 1910?",
+      "answer": "Georges Claude",
+      "wrong_answers": [
+        "Thomas Edison",
+        "Nikola Tesla",
+        "Louis Lumière"
+      ],
+      "hints": [
+        "Era químico e ingeniero, no un fabricante de bombillas.",
+        "Nació en el mismo país donde hizo la presentación.",
+        "Su nombre en español sería Jorge Claudio."
+      ],
+      "fun_fact": "Se cuenta que el primer anuncio de neón se vendió en 1912 a una barbería de París.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Night_Lights_-_Flickr_-_judithjackson957.jpg/3840px-Night_Lights_-_Flickr_-_judithjackson957.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANight_Lights_-_Flickr_-_judithjackson957.jpg",
+        "credit": "Judith Jackson · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Judith Jackson",
+        "author_url": "https://www.flickr.com/people/130010035@N04"
       },
       "background": null
     },
@@ -56814,6 +58378,40 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Vyacheslav Argenberg",
         "author_url": "https://commons.wikimedia.org/wiki/User:Argenberg"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1880",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "Fauna africana",
+      "bundle": "base",
+      "description": "Un antílope con resortes en las patas y equipo de rugby propio.",
+      "question": "El springbok, que da nombre a la selección sudafricana de rugby, salta de forma espectacular. ¿Hasta qué altura puede llegar?",
+      "answer": "Unos 2 metros",
+      "wrong_answers": [
+        "Unos 20 centímetros",
+        "Unos 10 metros",
+        "Unos 25 metros"
+      ],
+      "hints": [
+        "Salta más alto de lo que mide una persona adulta.",
+        "Salta así para mostrarles a los depredadores lo en forma que está.",
+        "Más o menos la altura de una puerta."
+      ],
+      "fun_fact": "Al saltar con las patas rígidas y el lomo arqueado, el springbok parece rebotar: en inglés a eso le dicen 'pronking'.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Antidorcas_marsupialis%2C_male_%28Etosha%2C_2012%29.jpg/3840px-Antidorcas_marsupialis%2C_male_%28Etosha%2C_2012%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAntidorcas_marsupialis%2C_male_%28Etosha%2C_2012%29.jpg",
+        "credit": "Yathin S Krishnappa · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Yathin S Krishnappa",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Yathin_sk"
       },
       "background": null
     },
@@ -58926,6 +60524,40 @@
       "background": null
     },
     {
+      "id": "q-1943",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "Inventos por accidente",
+      "bundle": "base",
+      "description": "Transparente, crujiente y nacido de un plan que salió completamente al revés.",
+      "question": "El celofán, que envuelve flores y canastas de regalo, nació sin querer en 1908. ¿Qué intentaba crear su inventor?",
+      "answer": "Un mantel a prueba de manchas",
+      "wrong_answers": [
+        "Una bolsa para conservar el pan",
+        "Una película para fotografías",
+        "Un vidrio irrompible para ventanas"
+      ],
+      "hints": [
+        "Su inventor era un químico suizo de principios del siglo XX.",
+        "Quería que algo fuera impermeable cubriéndolo con viscosa, un material hecho de pulpa de madera.",
+        "Según se cuenta, vio vino derramado en un restaurante y quiso una tela que no se ensuciara."
+      ],
+      "fun_fact": "El suizo Jacques Brandenberger intentó cubrir telas con una capa impermeable, pero la capa se despegaba sola como una lámina transparente: así nació el celofán.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Pink_rose_bouquet_%28Unsplash%29.jpg/3840px-Pink_rose_bouquet_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APink_rose_bouquet_%28Unsplash%29.jpg",
+        "credit": "Caroline Attwood carolineattwood · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Caroline Attwood carolineattwood",
+        "author_url": "https://unsplash.com/@carolineattwood"
+      },
+      "background": null
+    },
+    {
       "id": "q-1944",
       "status": "approved",
       "difficulty": 11,
@@ -59946,6 +61578,40 @@
       "background": null
     },
     {
+      "id": "q-1974",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "Monedas del mundo",
+      "bundle": "base",
+      "description": "Una letra que se puso dos cinturones para ir a trabajar a Tokio.",
+      "question": "¿Cómo se llama la moneda que se usa en Japón?",
+      "answer": "El yen",
+      "wrong_answers": [
+        "El won",
+        "El yuan",
+        "El baht"
+      ],
+      "hints": [
+        "Es una moneda asiática de nombre muy corto.",
+        "Su símbolo parece una letra con dos rayitas atravesadas.",
+        "Su nombre tiene tres letras y empieza por Y."
+      ],
+      "fun_fact": "China usa casi el mismo símbolo ¥ para su yuan, así que hay que fijarse en el país.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Illuminated_street_corner_at_blue_hour_-_facade_of_the_building_Fujiya_in_Ginza_Chuo-ku_Tokyo_Japan.jpg/3840px-Illuminated_street_corner_at_blue_hour_-_facade_of_the_building_Fujiya_in_Ginza_Chuo-ku_Tokyo_Japan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AIlluminated_street_corner_at_blue_hour_-_facade_of_the_building_Fujiya_in_Ginza_Chuo-ku_Tokyo_Japan.jpg",
+        "credit": "Basile Morin · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Basile Morin",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Basile_Morin"
+      },
+      "background": null
+    },
+    {
       "id": "q-1975",
       "status": "approved",
       "difficulty": 11,
@@ -60461,6 +62127,40 @@
         "license_url": null,
         "author": "Great Sand Dunes National Park and Preserve",
         "author_url": "https://www.flickr.com/people/greatsanddunesnpp/"
+      },
+      "background": null
+    },
+    {
+      "id": "q-1990",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "Novela policiaca",
+      "bundle": "base",
+      "description": "Tres palabras en latín que suenan a hechizo de Harry Potter, pero son de escritores.",
+      "question": "La aconsejó el poeta Horacio y la usan la «Odisea» y muchas novelas policiacas. ¿Qué significa «in medias res»?",
+      "answer": "Empezar en mitad de la acción",
+      "wrong_answers": [
+        "Empezar desde el origen de todo",
+        "Empezar revelando el final",
+        "Contarlo desde el asesino"
+      ],
+      "hints": [
+        "Es una expresión latina sobre cómo se ordena un relato.",
+        "Indica en qué punto de la trama se encuentra el lector al abrir el libro.",
+        "«Medias» significa «en medio de» y «res», «las cosas»."
+      ],
+      "fun_fact": "La «Odisea» arranca cuando Ulises lleva casi veinte años lejos de casa (diez de guerra en Troya y casi diez de regreso), y sus aventuras anteriores, como la del cíclope, se cuentan después.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Old_Pharmacy_Book_%2814631955230%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOld_Pharmacy_Book_%2814631955230%29.jpg",
+        "credit": "Turku Gingerbread from Finland · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Turku Gingerbread from Finland",
+        "author_url": "https://www.flickr.com/people/55559596@N02"
       },
       "background": null
     },
@@ -62161,6 +63861,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Dietmar Rabich",
         "author_url": "https://www.wikidata.org/wiki/Q34788025"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2043",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "Reality shows",
+      "bundle": "base",
+      "description": "Una expresión en inglés que suena a 'primo', pero no tiene nada que ver con tu familia.",
+      "question": "En televisión, ¿qué es el 'prime time'?",
+      "answer": "El horario con más audiencia",
+      "wrong_answers": [
+        "El primer programa de la mañana",
+        "La pausa de los comerciales",
+        "El estreno de una temporada"
+      ],
+      "hints": [
+        "Es un término del mundo de la televisión y la publicidad.",
+        "Es cuando la familia ya llegó a casa y prende la tele.",
+        "Por eso los anuncios en ese horario son los más caros."
+      ],
+      "fun_fact": "'Prime' en inglés significa 'principal' o 'de primera'; por eso es el horario más valioso de la televisión.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Family_watching_television_1958.jpg/3840px-Family_watching_television_1958.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFamily_watching_television_1958.jpg",
+        "credit": "Evert F. Baumgardner · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Evert F. Baumgardner",
+        "author_url": null
       },
       "background": null
     },
@@ -66139,6 +67873,40 @@
         "license_url": null,
         "author": "Joseph Vernet",
         "author_url": "https://en.wikipedia.org/wiki/en:Claude-Joseph_Vernet"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2162",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "Shakespeare",
+      "bundle": "base",
+      "description": "La despedida más corta y elegante del teatro: ni un 'chao, nos vemos'.",
+      "question": "En una tragedia de Shakespeare, el protagonista dice al morir: «El resto es silencio». ¿Qué personaje es?",
+      "answer": "Hamlet",
+      "wrong_answers": [
+        "Macbeth",
+        "Romeo",
+        "Otelo"
+      ],
+      "hints": [
+        "Es el protagonista de una de las obras más representadas de Shakespeare.",
+        "Un fantasma le pide que vengue a su padre.",
+        "Su historia ocurre en Dinamarca."
+      ],
+      "fun_fact": "'Hamlet' es la obra más larga de Shakespeare: completa puede durar unas cuatro horas.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Safety_curtain_at_the_Paramount_Theatre%2C_Newcastle_-_Flickr_-_Tyne_%5E_Wear_Archives_%5E_Museums.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASafety_curtain_at_the_Paramount_Theatre%2C_Newcastle_-_Flickr_-_Tyne_%5E_Wear_Archives_%5E_Museums.jpg",
+        "credit": "Tyne & Wear Archives & Museums · No restrictions · Wikimedia Commons",
+        "provider": "commons",
+        "license": "No restrictions",
+        "license_url": "https://www.flickr.com/commons/usage/",
+        "author": "Tyne & Wear Archives & Museums",
+        "author_url": "https://www.flickr.com/people/29295370@N07"
       },
       "background": null
     },
