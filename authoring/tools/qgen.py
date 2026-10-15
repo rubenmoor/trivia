@@ -3408,16 +3408,17 @@ def next_batch():
     return f"batch-{max(numbers, default=0) + 1}", False
 
 
-def run_steps(steps, again, run=None):
-    """Run (name, fn, args) steps in order, then validate; waits out Claude's usage limit (QG-21).
+def run_steps(steps, again, run=None, validate=True):
+    """Run (name, fn, args) steps in order, then validate (unless `validate` is false); waits out Claude's usage limit (QG-21).
     Exits EXIT_LIMIT or 1 on a step that fails; `again` is the command that continues. Returns the start time.
     With `run`, adds each step's seconds to run.json's "seconds" (batch health, plan 15)."""
     t0 = time.monotonic()
+    total = len(steps) + validate
     i = 0
     while i < len(steps):
         name, fn, a = steps[i]
         i += 1
-        print(f"\n== [{i}/{len(steps) + 1}] {name}", flush=True)
+        print(f"\n== [{i}/{total}] {name}", flush=True)
         progress.failures.clear()
         t = time.monotonic()
         try:
@@ -3447,7 +3448,9 @@ def run_steps(steps, again, run=None):
             print(f"\nStopped at `{name}` with {len(errors)} error(s). Run `{again}` again; "
                   "if the same step fails three times in a row, stop and report the output.", file=sys.stderr)
             sys.exit(1)
-    print(f"\n== [{len(steps) + 1}/{len(steps) + 1}] validate", flush=True)
+    if not validate:
+        return t0
+    print(f"\n== [{total}/{total}] validate", flush=True)
     errors, _ = validate_pool()
     if errors:
         print("\n".join(errors), file=sys.stderr)
@@ -3906,7 +3909,8 @@ def cmd_neutralize(args):
         return argparse.Namespace(run=run, jobs=args.jobs, **kw)
 
     again = "qgen neutralize" + (" --dry-run" if args.dry_run else "")
-    t0 = run_steps([("scan", cmd_scan, ns(model="opus"))], again, run)
+    # no validate: a resume after a partial fix has an unexported pool until the export step
+    t0 = run_steps([("scan", cmd_scan, ns(model="opus"))], again, run, validate=False)
     cfg = load_json(d / "run.json")
     if args.dry_run:
         print_neutralize_scan(run)
@@ -3918,6 +3922,8 @@ def cmd_neutralize(args):
             ("export", lambda a: cmd_export(a) or [], ns()),
             ("sync", cmd_sync_run, ns()),
         ], "qgen neutralize", run)
+    else:
+        run_steps([], "qgen neutralize", run)
     cfg = load_json(d / "run.json")
     save_json(d / "run.json", {**cfg, "done": datetime.date.today().isoformat()})
     revised = [i for i in cfg["ids"] if fixed(load_json(d / "reviews" / f"{i}.json", {}))]
