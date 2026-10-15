@@ -26797,8 +26797,61 @@ Your note on `pm task done`: the cause and what you queued.
       
       The cause is the queue order: task 1035 came up before `task 643: Regional pilot \`colombia\`: start` and the rest of plan 84''s `colombia` chain had run. If you''d rather the queue stop picking it up, you could link it to the "More regional bundles at launch?" decision once that decision exists.
       [success: 4 turns, $0.30]', '2026-10-15T20:05:17Z', '2026-10-15T20:05:49Z', NULL, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1146, 60, 'create tasks for plan 60: masterplan', 'split', 'open', 1000, NULL, 'Split plan 60 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:08:30Z', NULL, 374, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1146, 60, 'create tasks for plan 60: masterplan', 'split', 'done', 1000, '2026-10-15, tasks.sql: plan tasks 1147–1155 for parts 1–9; 1148 waits for decision 217, 1152 for decision 218', 'Split plan 60 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:08:30Z', '2026-10-15T20:09:30Z', 374, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1147, 60, 'write plan: New locales in data and pipeline', 'plan', 'open', 1000, NULL, 'Write the plan for part 1 of `plan 60: masterplan` (`pm plan add 12 …`): `zh-Hans`, `ru`, `pt-BR` as translation locales in data and pipeline, like `en`/`de` (D-78, D-81).
+
+- Scope: masterplan part 1: `authoring/tools/translations.py` `LANGUAGES`, `qgen validate`/`export`/`report` (`--simulate`, `--cost`), `health`, `flag`, `targets.py` deficits and source shortfall over every translation locale (D-84), review tool locale switch and stats, start page rows, `trivia-release-check` pool hashes, telemetry and report server locale fields, `lib/data.ts` / `lib/i18n.ts` `LOCALES`; `app/data/bundles.json` `base` `languages` += `ru`, `pt-BR`; `names.{zh-Hans,ru,pt-BR}.json`.
+- `qgen validate` "each language has a base bundle": `zh-Hans` gets `chinese-base` only in part 2; the plan says how validate treats zh until then.
+- Done when (plan): `qgen validate` and `report` handle all three locales with empty pools; nothing changes for es/en/de.
+- Plan priority ~900. Check `pm plan list` first; refer to, don''t duplicate, open plans (e.g. `plan 69: UI catalogs for the launch languages (LUI-4, LUI-5)`, `plan 103: Report server (POST /reports)`).', '2026-10-15T20:09:26Z', NULL, 1146, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1148, 60, 'write plan: chinese-base bundle: model and setup', 'plan', 'open', 1000, NULL, 'Write the plan for part 2 of `plan 60: masterplan` (`pm plan add 12 …`): the `chinese-base` bundle''s model and setup.
+
+- Waits for `decision 217: chinese-base membership: how does a translated base question count for chinese-base?`; implement its answer in the translation layout, `export`, `validate` (D-81 amended, new D-entry in `plans/decisions.md`).
+- Scope: masterplan part 2: `qgen bundle new chinese-base --kind base`, `languages: ["zh-Hans"]`, `voice`, `rule`; `targets.json` 5000 in D-53''s mix; own taxonomy and concept lists (D-43, D-99, D-100) reusing `base`''s where they fit, plus China-centric categories, with a pm decision for the developer to approve the list (as `plan 138: Regional taxonomy: a general list, colombia reworked`); zh offers only `chinese-base` (`bundlesFor`, default base bundle, Choice screen, `qgen report --simulate --bundles`); achievements: `ALL_CATEGORIES` in a `chinese-base` game, `BUNDLE_*` regional only (decision 73, decision 146).
+- Waits for part 1''s plan (new locales in data and pipeline); name it.
+- Plan priority ~880.', '2026-10-15T20:09:27Z', NULL, 1146, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1149, 60, 'write plan: Translation prompts and markets per locale', 'plan', 'open', 1000, NULL, 'Write the plan for part 3 of `plan 60: masterplan` (`pm plan add 12 …`): translation prompts for `zh-Hans`, `ru`, `pt-BR` and the `chinese-base` fit pass prompt.
+
+- Scope: masterplan part 3: `authoring/tools/prompts/locale-{zh-Hans,ru,pt-BR}.md` like `locale-en.md` / `locale-de.md` (decisions 35, 160, 167); per-locale rules (Simplified characters, Chinese punctuation, 万; Russian case endings across options, «ёлочки», Cyrillic transliteration; Brazilian usage, «você»; numbers and units).
+- Fit pass prompt per `decision 217: chinese-base membership: how does a translated base question count for chinese-base?`; if still pending, the plan''s fit-pass task waits for it.
+- Prompts are the developer''s (D-36): one pm decision per locale to approve the drafts.
+- Plan priority ~700.', '2026-10-15T20:09:27Z', NULL, 1146, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1150, 60, 'write plan: Native reviewers', 'plan', 'open', 1000, NULL, 'Write the plan for part 4 of `plan 60: masterplan` (`pm plan add 12 …`): who reviews `zh-Hans`, `ru`, `pt-BR` and how, before any `tr-zh-Hans-*`, `tr-ru-*`, `tr-pt-BR-*` or `chinese-base` run (milestone constraint: no native speaker in the family).
+
+- Raise a pm decision: paid (freelance, per sample or hour) vs. volunteer (community, Steam forum after launch), one per language, with options, costs, the recommended one; they also do the UI playtest (part 5) and store texts (part 8).
+- How a reviewer outside reaches the review tool (`trivia-authoring`, :8001, developer''s machine): e.g. exported spot-check sheet per run imported back as verdicts, or a reachable review page; feeds the per-run native spot check (`authoring/QC.md`, D-87) and the pilot''s go/no-go.
+- What they check: each run''s spot check (size: release bar D-79), the fit pass sample, China-centric sources if `decision 218: New China-centric questions for chinese-base: drafted in Spanish and translated, or drafted in Chinese?` makes them Chinese-only.
+- Can be planned in parallel with parts 1–3. Plan priority ~720.', '2026-10-15T20:09:27Z', NULL, 1146, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1151, 60, 'write plan: UI in the new languages', 'plan', 'open', 1000, NULL, 'Write the plan for part 5 of `plan 60: masterplan` (`pm plan add 12 …`): the game UI in `zh-Hans`, `ru`, `pt-BR`.
+
+- Scope: masterplan part 5: fonts per script (Baloo 2 has no Cyrillic, no CJK in either font; licence, CJK subset, `app/desktop/media-budget.json`, fallback chain in `theme.css`); catalogs `app/client/src/locales/{zh-Hans,ru,pt-BR}.ts` and style guides `locales/style/<locale>.md`; joker names (decision 188), key letters (decision 53), `check:literals`; CJK line breaking, Russian length, picker endonyms, `/comodines?lang=`, `trivia-gallery` locales and the developer''s gallery check (plan 100); achievement texts and rich presence strings; native playtest decisions per language like decisions 62–65, by part 4''s reviewers.
+- Waits for part 1''s plan (locales) and part 4''s (reviewers) for the playtest.
+- Refer to `plan 69: UI catalogs for the launch languages (LUI-4, LUI-5)` and `plan 136: Joker names and symbols, defined again` rather than duplicating them.
+- Plan priority ~400.', '2026-10-15T20:09:27Z', NULL, 1146, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1152, 60, 'write plan: chinese-base content', 'plan', 'open', 1000, NULL, 'Write the plan for part 6 of `plan 60: masterplan` (`pm plan add 12 …`): `chinese-base` content to 5000 approved.
+
+- Waits for `decision 218: New China-centric questions for chinese-base: drafted in Spanish and translated, or drafted in Chinese?` (and the plans of parts 2–4).
+- Scope: masterplan part 6: fit pass over `base`''s zh translations (part 2''s model), developer corrects, sample to the native reviewer; new China-centric questions per decision 218; pilot first (QT-5: 50, `qgen health ack`), cost and reject rate → budget pm decision (as `plan 70: Cost, budget and generation plan by gap (CT-3, CT-4)`); runs to 5000 approved (`qgen report --bundle chinese-base --locale zh-Hans`, `--simulate` ✓).
+- Runs follow `authoring/RUNBOOK.md` (`qgen batch …` only); batch tasks like `plan 17: Batch runs` / `plan 84: Release content runs`.
+- Plan priority ~-120.', '2026-10-15T20:09:27Z', NULL, 1146, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1153, 60, 'write plan: Russian and Portuguese pools', 'plan', 'open', 1000, NULL, 'Write the plan for part 7 of `plan 60: masterplan` (`pm plan add 12 …`): approved `ru` and `pt-BR` pools of 5000 each from translated `base`.
+
+- Scope: masterplan part 7: `qgen batch --translate ru` / `--translate pt-BR`: pilot `tr-<locale>-1`, native spot check (part 4), `qgen health ack`, budget pm decision, full runs to 5000 approved each.
+- Source supply: 5000 per locale needs more translatable `es` sources at a yield below 1 (D-84 source shortfall, part 1); whether `es` drafting grows goes into the budget decision.
+- Waits for `plan 84: Release content runs` so `base` sources are stable (D-81), and for the plans of parts 1, 3, 4.
+- Runs follow `authoring/RUNBOOK.md` (`qgen batch …` only).
+- Plan priority ~-130.', '2026-10-15T20:09:28Z', NULL, 1146, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1154, 60, 'write plan: Store page and Steam for the new languages', 'plan', 'open', 1000, NULL, 'Write the plan for part 8 of `plan 60: masterplan` (`pm plan add 12 …`): store page and Steamworks in `zh-Hans`, `ru`, `pt-BR`.
+
+- Scope: masterplan part 8: store texts, short description, AI disclosure, capsules with text, screenshots, trailer per language (decisions 79, 80: rendered late; `trivia-trailer --lang`, `trivia-gallery`); store names (PUB-7 check, `plan 129: Partner account, name check and AI terms (PUB-6, PUB-7, PUB-10)`); Steamworks supported languages (decision 90), achievement localization, store language entries; approval pm decisions per language by the developer and native reviewers (part 4).
+- Builds on `plan 88: Store page and AI disclosure (PUB-8, LUI-6)`; waits for parts 4, 5 and the pools.
+- Plan priority ~300.', '2026-10-15T20:09:28Z', NULL, 1146, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1155, 60, 'write plan: Release and close-out of the new languages', 'plan', 'open', 1000, NULL, 'Write the plan for part 9 of `plan 60: masterplan` (`pm plan add 12 …`): shipping the new languages and closing milestone 12.
+
+- Scope: masterplan part 9: a full patch (fonts, catalogs) then content patches (`plans/11-steam.md` ST-5, decision 96, `plan 96: Content updates as patches (ST-5)`); `trivia-release-check` (pool hashes, smoke game per new locale, media budget with fonts), `trivia-steam upload`; docs `plans/15-i18n.md`, `15a`, `15b`, `16-content-target.md`, `22-bundles.md`, `decisions.md`, `README.md`, `directory.md`, `AGENTS.md` if commands change.
+- Done when (milestone): all three languages playable in the released game, store pages localized, `qgen report --simulate` ✓ for `zh-Hans` (`chinese-base`), `ru`, `pt-BR`.
+- Waits for every other part. Plan priority ~-200.', '2026-10-15T20:09:28Z', NULL, 1146, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -30057,6 +30110,7 @@ likely cause: the worker ended without `pm task done|drop 1035` or a pending dec
 log: /home/ruben/code/trivia/.git/pm-logs/task-1035-run-1124.log', 0, 'cfc31ef6d1679d698d68c76c71ac553f11ab04db', 'claude-opus-5-5[1m]', '3815dce7-332e-4fc4-a69d-06bc84bb24ca', 4, 10, 1495, 124339, 30620, 0.29976780000000003, 3530483);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1125, 1145, '2026-10-15T20:05:17Z', '2026-10-15T20:05:56Z', 'done', NULL, 0, 'a63da553e60423ae0bc49432757cff31ffbf2f69', 'claude-opus-5-5[1m]', 'cff9e49a-a913-4b17-82ed-ea086db6336b', 8, 16, 3186, 321349, 40203, 0.4496778, 3530483);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1126, 374, '2026-10-15T20:05:56Z', '2026-10-15T20:08:48Z', 'done', NULL, 0, 'af8e740de5de582277ac85c3e4b609c5f9d0ae2a', 'claude-opus-5-5[1m]', '8d52deea-7424-4372-8faa-870d97e45ef4', 17, 34, 14328, 1192690, 102755, 1.347274, 3530483);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1127, 1146, '2026-10-15T20:08:48Z', '2026-10-15T20:09:36Z', 'done', NULL, 0, '561d535d73280ef574885653d4d8d9e8f56a532e', 'claude-opus-5-5[1m]', 'c0ea7e19-3a98-4309-b3ba-45d4cac690d6', 5, 10, 5363, 162428, 33923, 0.41116959999999997, 3530483);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -30426,6 +30480,8 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1138, 213);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1139, 213);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1140, 213);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1144, 216);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1148, 217);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1152, 218);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
