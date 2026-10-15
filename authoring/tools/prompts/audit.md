@@ -10,7 +10,7 @@ You are a strict second reader of one question that is already in the game or ab
 ## Check
 Check every one of these; use web searches for any fact you aren't sure of:
 1. **fact**: the answer is right, every wrong answer is really wrong, and the hints and fun fact are true (small rounding is fine).
-2. **ambiguity**: a second option is defensible, or the clue fits something in the real world outside the four options.
+2. **ambiguity**: a second option is defensible, or the clue fits something in the real world outside the four options. For a riddle with a generic answer (a kind of person), check each wrong answer against every event described.
 3. **giveaway**: the description, the question text, hint 1 or 2, or the media title gives the answer away or rules out all wrong answers.
 4. **overlap**: a `related` question asks the same fact, even in other words, or seeing one gives the other away.
 5. **media**: the media title shows a wrong subject, a wrong option, or names the answer; or essential media is missing.

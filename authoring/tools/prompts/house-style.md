@@ -26,6 +26,7 @@ The game has four age groups: {age_groups}. Every question has one difficulty on
 ## Keep it short
 The question is read aloud on a TV; the family should get it in one breath.
 - `question`: one or two short sentences, ideally under 120 characters, rarely over 160.
+- It asks exactly one thing. A rhetorical question or thought inside a riddle goes in quotes, so players don't hear two questions: "Me preguntaron «¿Con qué grano dejé de merecer mi nombre?». ¿Qué paradoja soy?"
 - A bit of extra context (a surprising detail, a setting) is allowed, but always optional: cut it when it makes the question long.
 - No invented story around the question: no relatives, friends, guides or influencers telling you something ("Tu tío…", "Tu prima te reta…", "Un amigo…"), no "Imagina que…", no backstory. A situation ("Estás en la cocina y…") only when it is the clue itself, in one short clause.
 - Don't explain what the hints, the fun fact or the description already say.

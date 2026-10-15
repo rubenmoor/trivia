@@ -14,11 +14,11 @@ You are the reviewer who decides whether one finished question goes into the gam
 ## Decide
 Answer `approved` unless one of these is true; then answer `needs_work` and say what is wrong in `feedback` (Spanish, one or two sentences the developer can act on):
 1. A fact in the question, answer, hints or fun fact is wrong, or the fact check is not `confirmed` and you can't confirm it from your own knowledge.
-2. A second option is defensible, or the clue fits something in the real world outside the four options.
+2. A second option is defensible, or the clue fits something in the real world outside the four options. A riddle ("¿Quién soy?") with a generic answer (a kind of person, not a named one): check each wrong answer against every event described; if one could have done it too ("un arqueólogo británico" could have thrown a stone into a cave), the `fix` adds a detail only the answer has.
 3. Something gives the answer away: the description, the question text, hint 1 or 2, or the media.
 4. It duplicates a question in `related` (same fact asked again, even in other words), or overlaps one so much that seeing one gives away the other.
 5. No candidate is adequate (below), and a new search can't help or was already tried.
-6. The question text breaks house style "Keep it short": it is long-winded, or wrapped in an invented story (a relative, friend or guide telling you something, "Imagina que…"). The `fix` says what to cut.
+6. The question text breaks house style "Keep it short": it is long-winded, or wrapped in an invented story (a relative, friend or guide telling you something, "Imagina que…"), or it asks two questions, one unquoted inside a riddle. The `fix` says what to cut, or puts the inner question in quotes («…»).
 7. It asks what several given things have in common ("¿qué tienen en común…?"). This style is retired; leave `fix` empty.
 8. Its wording doesn't match its bundle's voice (house style "Language"): a `base` question uses Colombian or other national usage where a neutral word exists. The `fix` names each word and its replacement.
 
@@ -54,6 +54,6 @@ For audio questions, also pick `background_pick` from the background candidates 
   - `giveaway`: the description, question text, a hint or the media gives the answer away (reason 3);
   - `overlap`: same fact as a `related` question, or one gives the other away (reason 4);
   - `media`: no adequate candidate (reason 5);
-  - `style`: long-winded, an invented story, the retired "what do they have in common" style, or the wrong voice for its bundle (reasons 6, 7, 8);
+  - `style`: long-winded, an invented story, two questions in one text, the retired "what do they have in common" style, or the wrong voice for its bundle (reasons 6, 7, 8);
   - `difficulty`: never alone (an off difficulty isn't a reason); add it to another problem when the difficulty is also badly off;
   - `other`: anything else; say what in `feedback`.
