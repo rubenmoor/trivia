@@ -12,7 +12,7 @@ Fixed terms; use them as written, never a synonym.
 - Age group: «Alter» (label), «Altersgruppe»
 - Difficulty: «Schwierigkeit», «Von» / «Bis», «Eigene»
 - Flag: «melden» / «Zum Prüfen melden», «Diese Frage melden», «Gemeldete Fragen», «Meldung» (gallery review 2026-10-14; never «markieren»)
-- Esc menu: «Pause»; «Zurück zum Hauptmenü» (`overlay.restart`, to the start screen); «Spiel beenden» (`overlay.quit`, desktop only, closes the game)
+- Esc menu: «Pause»; «Zurück zum Hauptmenü» (`overlay.restart`, to the start screen); «Spiel beenden» (`overlay.quit`, desktop only, closes the game); «Spieleinstellungen» (`overlay.settings`, gamemaster dialog: difficulty, bundles, answers; task 1127)
 - Start screen: «Hauptmenü» when named
 - Steam terms as Steam writes them in German: «Steam-Erfolge» (never bare «Erfolge»), «Steam Cloud», «Steam Deck», «Steam-Workshop»
 - Credits: «Mitwirkende»

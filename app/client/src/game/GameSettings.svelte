@@ -1,5 +1,5 @@
 <script lang="ts">
-  // «Dificultad y paquetes» of the gamemaster menu (MD-12, D-88): the configure screen's difficulty row, answers
+  // «Ajustes de la partida» of the gamemaster menu (MD-12, D-88): the configure screen's difficulty row, answers
   // switch (D-105) and the shared bundle selector for the running game; «Aplicar» sends `settings` (new table, level
   // and history stay). ↑/↓ move, ←/→ or −/+ change a value, Enter on the switch toggles, on a row applies, Esc/⌫/B cancel.
   import { onMount } from "svelte";

@@ -93,7 +93,7 @@ export const de = {
     seen: "gesehen",
     unseen: "nicht gesehen",
     level: "Zu Stufe springen",
-    settings: "Schwierigkeit und Fragenpakete",
+    settings: "Spieleinstellungen",
     /** Dev mode only (plan 85): a question by id replaces the one on screen. */
     goTo: "Zu einer Frage springen",
     goToBody: "Fragen-ID (q-0007 oder 7); sie ersetzt die Frage auf dem Bildschirm, auf dieser Stufe.",

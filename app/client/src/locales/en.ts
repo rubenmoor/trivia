@@ -93,7 +93,7 @@ export const en = {
     seen: "seen",
     unseen: "not seen",
     level: "Jump to level",
-    settings: "Difficulty and question bundles",
+    settings: "Game settings",
     /** Dev mode only (plan 85): a question by id replaces the one on screen. */
     goTo: "Go to question",
     goToBody: "Question id (q-0007 or 7); it replaces the one on screen, at this level.",

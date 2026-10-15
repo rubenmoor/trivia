@@ -105,7 +105,7 @@ const es = {
     unseen: "no vista",
     /** «Saltar a nivel»: ‹ › picks the level. */
     level: "Saltar a nivel",
-    settings: "Dificultad y paquetes de preguntas",
+    settings: "Ajustes de la partida",
     /** Dev mode only (plan 85): a question by id replaces the one on screen. */
     goTo: "Ir a pregunta…",
     goToBody: "Id de la pregunta (q-0007 o 7); sustituye a la que está en pantalla, en este nivel.",

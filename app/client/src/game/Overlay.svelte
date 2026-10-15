@@ -133,7 +133,7 @@
 
   /** The Credits screen (PUB-5) is open over the game; the menu hides. */
   let creditsOpen = $state(false);
-  /** «Dificultad y paquetes» is open over the menu. */
+  /** «Ajustes de la partida» is open over the menu. */
   let settingsOpen = $state(false);
   let goToOpen = $state(false);
   function fullscreen() {
