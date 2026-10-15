@@ -201,7 +201,8 @@
     {
       "name": "Plateosaurio",
       "facet": "Dinosaurios herbívoros gigantes",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: All options need a person; who named Plateosaurus (von Meyer) is too obscure to ask fairly."
     },
     {
       "name": "Camarasaurio",
@@ -356,7 +357,8 @@
     {
       "name": "Paleozoico",
       "facet": "Eras y periodos geológicos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: The Paleozoic can't make a question a 6-year-old could answer."
     },
     {
       "name": "Pérmico",

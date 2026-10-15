@@ -101,7 +101,8 @@
     {
       "name": "Hoja de coca",
       "facet": "Origen de los nombres",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: Coca leaf for a target of 2 is drug-adjacent and doesn't fit the options (no person or purpose works for kids)."
     },
     {
       "name": "Googol",
@@ -242,6 +243,33 @@
       "name": "Etsy",
       "facet": "Tiendas y comercio en línea",
       "known_at": 12
+    },
+    {
+      "name": "Bibendum (muñeco de Michelin)",
+      "facet": "Fundadores y mascotas de marca",
+      "known_at": 8
+    },
+    {
+      "name": "I'm lovin' it",
+      "facet": "Logotipos y eslóganes",
+      "known_at": 6
+    },
+    {
+      "name": "Niké (diosa griega)",
+      "facet": "Origen de los nombres",
+      "known_at": 10
+    },
+    {
+      "name": "Adolf Dassler",
+      "facet": "Origen de los nombres",
+      "known_at": 11
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-15",
+      "added": 4,
+      "unused": 30
     }
   ]
 }

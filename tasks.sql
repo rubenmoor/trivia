@@ -1653,11 +1653,13 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 ## State (2026-10-11)
 - batch-8: `work/batch-8` (WIP commit d7fb13f, on `main`): 57 subcategories in `run.json`, 61 draft files, ~$1.6 in `costs.log`. Resumes with plain `qgen batch` (RUNBOOK).
 - Approved `base`: 1035; needs_work: 33 (batch-7''s reasons: giveaway hints, overlap, no usable media).
+- 2026-10-15: batch-8 stopped at media in `task 51: run batch-8` (Commons `extmetadata: []` crash); pool up to media committed with task 51. Fix: `task 1128: Fix qgen media: Commons extmetadata [] crashes the search`; resume: `task 1129: Finish batch-8 after task 1128: Fix qgen media: Commons extmetadata [] crashes the search`.
 - Depends on: plan 12 (targets, exit check), 13 (aim at gaps), 14 (subcategories), 15 (overlap, health, stop rule), 16 (audit, spot check, `authoring/QC.md`). Their tasks run first by priority; a batch task doesn''t wait for unfinished ones, it uses what exists and says what was missing in its note.
 
 ## Batch tasks under `pm run`
 - RUNBOOK clashes with a pm worker in two places: step 1 stops on a dirty tree, but `pm run` keeps `tasks.sql` modified; step 4 commits, but a worker only stages. Fixed once in RUNBOOK (task below): `tasks.sql` alone doesn''t count as dirty; the worker stages exactly the printed `git add` paths and doesn''t commit (pm commits as "task N: …").
-- Exit 75 (usage limit, no reset time): `pm decision add "Continue <batch> after the usage limit?"`, `pm task-pending-decision`, stage nothing, stop. Exit 1 three times at one step, other codes, exit 2 (plan 15''s health stop): same, with the last 30 lines in the decision body.
+- Exit 75 (usage limit, no reset time): `pm decision add "Continue <batch> after the usage limit?"`, `pm task-pending-decision`, stage nothing, stop. Other codes, exit 2 (plan 15''s health stop): same, with the last 30 lines in the decision body.
+- Exit 1 three times at one step (`decision 205: batch-8 fails at media: how to go on?`): no decision; partial batch staged after `qgen validate` (committed with the task); fix task in this plan (`--priority 0`: step, last 30 lines, read-only diagnosis, check); resume task "Finish <batch> after task <fix id>: …" (`--priority -99`); batch task done. RUNBOOK "Under `pm run`".
 - Never inside a batch task: prompt, `qgen.py`, subcategory or media changes (RUNBOOK). Findings become decisions or tasks in their own plans.
 
 ## Per-batch pattern
@@ -7860,13 +7862,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - No batch run here.
 
 Done when: RUNBOOK has the section; a worker reading only RUNBOOK + its task knows what to do for every exit code.', '2026-10-11T23:54:42Z', '2026-10-15T03:43:19Z', 24, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (51, 17, 'run batch-8', 'work', 'open', NULL, NULL, 'Batch-8 stopped at media in run 1068 (decision 205: batch-8 fails at media: how to go on?). This run doesn''t run the batch: it does decision 205''s six steps, in order, instead of the RUNBOOK.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (51, 17, 'run batch-8', 'work', 'done', NULL, '2026-10-15, authoring/data (batch-8 up to media, stash 6d1be84, qgen validate OK), authoring/RUNBOOK.md, plan 17; stopped at media; fix: task 1128, resume: task 1129', 'Batch-8 stopped at media in run 1068 (decision 205: batch-8 fails at media: how to go on?). This run doesn''t run the batch: it does decision 205''s six steps, in order, instead of the RUNBOOK.
 
 - Don''t run `qgen batch`; task "Finish batch-8 after task <fix id>: …" (step 3) resumes it after the fix.
 - Applying stash 6d1be84 (step 1) restores the batch''s own pool edits; it isn''t editing the pool.
 - Editing `authoring/RUNBOOK.md` (step 4) and plan 17 (step 5) is part of this task; no qgen code changes.
 
-Done when: steps 1–6 are done; partial batch staged (or a decision if `qgen validate` fails); fix and resume tasks exist; RUNBOOK and plan 17 changed; note as in step 6; `pm decision consequences 205 "<text>"`.', '2026-10-11T23:54:42Z', NULL, 24, 0);
+Done when: steps 1–6 are done; partial batch staged (or a decision if `qgen validate` fails); fix and resume tasks exist; RUNBOOK and plan 17 changed; note as in step 6; `pm decision consequences 205 "<text>"`.', '2026-10-11T23:54:42Z', '2026-10-15T13:48:41Z', 24, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (52, 17, 'needs_work of batch-7/8 per decision 3', 'work', 'open', NULL, NULL, 'Resolve the `needs_work` questions (33 at plan time, batch-7''s and older; batch-8''s too if it is merged) the way pm decision 3 says. Waits on decision 3.
 
 - Do exactly what the answer says, nothing more: e.g. `qgen rework` (with `--batch` only if the answer names one) only if the answer asks for it (RUNBOOK "Never": the answer is the gamemaster''s word); act on exit codes as RUNBOOK step 3 / "Under `pm run`"; stage the printed paths.
@@ -26420,6 +26422,19 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - The menu row and the dialog title are both `overlay.settings` («Dificultad y paquetes de preguntas» / «Difficulty and question bundles» / «Schwierigkeit und Fragenpakete»): the developer won''t look for the answers switch there.
 - Pick a name covering all three (e.g. es «Ajustes de la partida», en «Game settings», de «Spieleinstellungen»); es, es-ES, en, de per `locales/style/<locale>.md`; D-59 / D-105 cover the change (gamemaster mode only).
 - Check: `npm run check` (`check:literals`), `npm run build`, `trivia-gallery --only game-settings,menu-gamemaster` for the four locales.', '2026-10-15T13:33:25Z', '2026-10-15T13:47:12Z', 1124, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1128, 17, 'Fix qgen media: Commons extmetadata [] crashes the search', 'work', 'open', 0, NULL, '`task 51: run batch-8` stopped at media (run 1068): `qgen batch` crashed in the Commons provider.
+
+- `authoring/tools/providers/commons.py` `search()` (line 67): Commons sends `extmetadata: []` instead of `{}` for some files (here "File:Iceland Boreal Birch Forests and Alpine Tundra Ecoregion - Relief Map Zoom.png", query "Iceland map outline") → `''list'' object has no attribute ''get''`
+- Fix: `meta = i.get("extmetadata") or {}`; same pattern at line 114 (`.get("extmetadata", {})`); look for it in the other providers (`authoring/tools/providers/`)
+- Check: `media.fetch_for` on q-1425 slot `media` succeeds; no test
+- Then the resume task "Finish batch-8 after task 1128" runs (priority -99)', '2026-10-15T13:48:08Z', NULL, 51, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1129, 17, 'Finish batch-8 after task 1128: Fix qgen media: Commons extmetadata [] crashes the search', 'work', 'open', -99, NULL, 'Resume batch-8 after `task 1128: Fix qgen media: Commons extmetadata [] crashes the search`.
+
+- Follow `authoring/RUNBOOK.md` (section "Under `pm run`"); plain `qgen batch` resumes `work/batch-8` at media
+- Partial batch (up to media) is already committed with `task 51: run batch-8`
+- -99: after the fix (0), before the other batch tasks (-100)', '2026-10-15T13:48:15Z', NULL, 51, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1130, 17, 'create tasks for plan 17: Batch runs', 'split', 'open', 1000, NULL, 'Split plan 17 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T13:48:36Z', NULL, 51, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -28341,7 +28356,7 @@ Stopped at `media` with 1 error(s). Run `qgen batch` again; if the same step fai
    - "Batch tasks under `pm run`": exit 1 three times at one step leaves the decision bullet; new bullet as in 4 (fix task 0, resume task -99, partial batch committed, task closed)
    - "State": batch-8 stopped at media in task 51; fix and resume task ids
    - the "create tasks for plan 17" task the edit queues is expected
-6. `pm task done 51`, note: stopped at media; fix and resume task ids; RUNBOOK and plan 17 changed.', NULL, '2026-10-15T06:04:34Z', '2026-10-15T13:14:15Z', 51, NULL, 'rule', NULL, '');
+6. `pm task done 51`, note: stopped at media; fix and resume task ids; RUNBOOK and plan 17 changed.', NULL, '2026-10-15T06:04:34Z', '2026-10-15T13:14:15Z', 51, NULL, 'rule', NULL, '2026-10-15, task 51: 2026-10-15, task 51: batch-8''s pool up to media committed with task 51 (no stash); fix task 1128 (Commons extmetadata [] crash, priority 0) and resume task 1129 (priority -99) in plan 17. RUNBOOK ''Under pm run'' and plan 17: exit 1 at the same step three times no longer opens a decision; the worker stages the partial batch after qgen validate, adds a fix task (0) and a resume task (-99) in its plan and closes the batch task. Exit 75, exit 2, other codes and the unfinished-batch cases stay decisions.');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (206, 'Play-test: no supply report on Start, report on the Choice screen only', 'pending', '["both fine", "problems (listed in the answer)"]', '`decision 155: Play-test of age groups and bundles (again, after the decision 50 fixes)` was answered "fine", but its checklist predates `plan 133: No supply report on the Start screen` (done, `task 1064: Drop the supply report from the Start screen`). Two items left before `task 479: Close out AG-7 and BN-6` closes milestone 5:
 
 1. Start shows no supply report, also with a nearly empty pool for the default choice.
@@ -29445,6 +29460,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1078, 1126, '2026-10-15T13:41:58Z', '2026-10-15T13:43:26Z', 'done', NULL, 0, '5677e51971d0e87bf7eb61f63f25b2ba12a6cc39', 'claude-opus-5-5[1m]', '6c79c34e-5486-47d6-8a29-bf5cab5515a7', 12, 24, 5436, 598554, 55102, 0.66934280000000013, 3224626);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1079, 1127, '2026-10-15T13:43:26Z', '2026-10-15T13:47:21Z', 'done', NULL, 0, '064f51b50b4f37b3cd09d30498bfe98475e99127', 'claude-opus-5-5[1m]', 'ffd39d2e-ee01-442d-9d29-1f2f0c1d7316', 17, 30, 4863, 651012, 47273, 0.6057664, 3224626);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1080, 479, '2026-10-15T13:47:22Z', '2026-10-15T13:47:55Z', 'blocked', NULL, 0, '6fd688c5c7c2de3f1f96ea21cfd408d340e5783a', 'claude-opus-5-5[1m]', '81767434-a514-4a5b-bf2e-04cb1f20a04f', 13, 24, 2841, 394721, 28420, 0.3632202, 3224626);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1081, 51, '2026-10-15T13:47:55Z', '2026-10-15T13:48:47Z', 'done', NULL, 0, 'cf30b24ff56ce85897700e5c5827a6e49ef4f090', 'claude-opus-5-5[1m]', 'ac78faa0-8ecd-4f14-832b-7ec60752c376', 10, 20, 4371, 331979, 30579, 0.3985278, 3224626);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

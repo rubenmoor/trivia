@@ -38,12 +38,17 @@ A pm worker (environment `PM_WORKER=1`) follows the steps above with these chang
   - `pm decision add "<subject>" --body - <<'EOF'` with the body below; prints the decision id
   - `pm task-pending-decision <task> <id>`
   - stage nothing, don't `pm task done`; end the turn
+- **Step 3, exit 1 at the same step three times in a row:** no decision (decision 205); the queue doesn't wait for the developer on script bugs:
+  - partial batch: `qgen validate`; passes → `git add authoring/data` (`work/<batch>` stays); fails → stop as above, subject `<batch>: qgen validate fails after <step>`, body its output
+  - fix task in the batch task's plan: `pm task add <plan> "Fix qgen <step>: <cause>" --priority 0`; body: failing step, last 30 lines, your read-only diagnosis (file, cause, suggested fix), how to check it
+  - resume task in the same plan: `pm task add <plan> "Finish <batch> after task <fix id>: <fix subject>" --priority -99`; body: follow this RUNBOOK, plain `qgen batch` resumes
+  - `pm task done <task> "<YYYY-MM-DD>, stopped at <step>; fix: task <id>, resume: task <id>"`
+  - still never edit qgen code yourself (Never, below)
 - **Subjects and bodies:**
 
   | Case | Subject | Body |
   |---|---|---|
   | exit 75 | `Continue <batch> after the usage limit?` | the usage-limit message, incl. the reset time |
-  | exit 1, same step three times in a row | `<batch> fails at <step>: how to go on?` | last 30 lines verbatim |
   | exit 2 | `<batch>: health stop, ack?` | the output verbatim |
   | other exit code | `<batch>: exit <code>, how to go on?` | last 30 lines verbatim |
   | "More than one unfinished batch" | `Which unfinished batch to finish?` | the message |

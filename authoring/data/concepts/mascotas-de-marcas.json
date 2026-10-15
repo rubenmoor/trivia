@@ -111,7 +111,8 @@
     {
       "name": "Chef Wendell",
       "facet": "Mascotas de cereales y desayunos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Chef Wendell (Cinnamon Toast Crunch) es casi desconocido en el mundo hispano."
     },
     {
       "name": "Fruity Pebbles",
@@ -331,7 +332,8 @@
     {
       "name": "Cachorro de Scottex",
       "facet": "Mascotas de aseo y hogar",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: El cachorro de Scottex es poco conocido fuera de España; no tiene datos justos para la familia."
     },
     {
       "name": "Insectos de Raid",
@@ -346,7 +348,8 @@
     {
       "name": "Brawny Man",
       "facet": "Mascotas de aseo y hogar",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: Brawny Man es una mascota solo de EE. UU., desconocida para el público hispano."
     },
     {
       "name": "Técnico de Maytag",

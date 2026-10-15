@@ -101,7 +101,8 @@
     {
       "name": "Tim Hortons",
       "facet": "Logos de comida rápida",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Tim Hortons is barely known outside Canada; impossible at difficulty 1 for this audience."
     },
     {
       "name": "Telepizza",
