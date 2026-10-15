@@ -13,7 +13,7 @@ Everything runs locally and offline: the game (a Svelte client with the game eng
 - **UI:** every on-screen string comes from a catalog (`es`, `es-ES`, `en`, `de`); question translations aren't shipped yet.
 - **Next:** more content, screen polish, code quality, and the Steam release track (desktop build, store, release).
 
-Milestones, plans and open tasks: `pm status` (`tasks.sql`); the older overview is [`plans/project.md`](plans/project.md). Where each file lives: [`directory.md`](directory.md).
+Milestones, plans and open tasks: `pm status` (`tasks.sql`); the older overview is [`plans/project.md`](plans/project.md). Top-level files and directories: [`directory.md`](directory.md).
 
 ## Getting started
 

@@ -55,7 +55,7 @@ Milestone 13 read every tracked code and build file once, between 2026-10-12 and
 ### Pending
 - Follow-up tasks (`### Pending`):
   - `task 1051: Freesound: re-pick its 2 audio slots from Commons, drop it from the audio order`
-  - `task 1114`–`1116` (check scripts and ruff), waiting on decisions 196–198
+  - `task 1115`, `task 1116` (unused-export check, ruff), waiting on decisions 197–198
 - Superseded by tasks of other milestones:
   - `task 765: Delete app/server, ServerStore, the trivia command and nix build .#app` (blocked by decision 150)
   - `task 463: Release budget per language (pm decision, CT-3)`
@@ -69,7 +69,7 @@ Milestone 13 read every tracked code and build file once, between 2026-10-12 and
 
 ### Process
 These decisions are open and wait for the developer (`### Process decisions`):
-- decision 196: a per-commit check that `directory.md` names every tracked file (task 1114).
+- decision 196: no `directory.md` check; `directory.md` now names only top-level `.md` files and directories (task 1114).
 - decision 197: a per-commit unused-export scan, covering the gap every linter leaves (task 1115).
 - decision 198: ruff for Python with narrow rules (encoding, unused, broad excepts; task 1116).
 - decision 199: an AGENTS.md rule: "import, don't copy; a copy across a boundary names its source".
@@ -2008,7 +2008,6 @@ Task 588, 2026-10-14. Throw-away scripts over `code-review.md`, `git ls-files` a
 | task 652 | SW-8 close-out: gamemaster check and docs | part 6 `preload.cjs`/`main.mjs` overlay, `showTextInput` | decision 113: SW-8 check under Steam |
 | task 765 | Delete app/server, ServerStore, the trivia command and nix build .#app | part 10 parity rows (save twin), part 11 `ServerStore` | decision 150: Family save imported into trivia-desktop? |
 | task 1051 | Freesound: re-pick its 2 audio slots from Commons, drop it from the audio order | part 8 `providers/__init__.py` `ORDER`, `freesound.py` | — |
-| task 1114 | directory.md check per decision 196 | process decisions | decision 196 |
 | task 1115 | Unused-export check per decision 197 | process decisions | decision 197 |
 | task 1116 | Python: ruff per decision 198, fix its 3 hits | part 11 ruff trial row | decision 198 |
 
@@ -2044,7 +2043,7 @@ Part 1's commands re-run on 2026-10-14 (task 588), same scope (`git ls-files app
 
 Task 589, 2026-10-14. A throw-away script over the finding rows of parts 1–11 (762 rows: complexity 186, practice 181, inconsistency 166, bug 117, unused 61, performance 51; 321 on `.py` files) grouped them by cause; each repeated cause got one decision, none on lint rules or `tsconfig` flags (`### Linter evaluation`).
 
-- decision 196: per-commit `directory.md` ↔ `git ls-files` check (79 of 174 files unnamed at part 1, 22 docs-drift rows); task 1114
+- decision 196: per-commit `directory.md` ↔ `git ls-files` check (79 of 174 files unnamed at part 1, 22 docs-drift rows); answered no: `directory.md` cut to top-level `.md` files and directories (task 1114)
 - decision 197: per-commit unused-export scan, the gap all linter candidates leave (34 unused-export rows); task 1115
 - decision 198: ruff for Python, narrow rules (5 platform-encoding rows; trial: 3 new real hits); task 1116
 - decision 199: AGENTS.md rule "import, don't copy; a cross-boundary copy names its source" (118 copy rows, 38 clusters)
