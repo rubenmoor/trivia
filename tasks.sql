@@ -25971,12 +25971,73 @@ The plan covers:
 - Lands before the playtests (decisions 62–65 "Playtest passed?"): make `task 459: LUI-5: playtest fixes and close-out` wait on it (a note in plan 69''s revision or a dependency the plan names).
 
 Before writing: `pm plan list`, `pm decision list --answered --grep joker --grep comod --grep Soplo`.', '2026-10-15T01:48:29Z', '2026-10-15T01:50:24Z', 1084, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1093, 136, 'create tasks for plan 136: Joker names and symbols, defined again', 'split', 'open', 1000, NULL, 'Split plan 136 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T01:50:21Z', NULL, 1092, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1093, 136, 'create tasks for plan 136: Joker names and symbols, defined again', 'split', 'done', 1000, '2026-10-15, tasks 1096–1101 (tasks.sql only)', 'Split plan 136 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T01:50:21Z', '2026-10-15T01:55:20Z', 1092, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1094, 69, 'create tasks for plan 69: UI catalogs for the launch languages (LUI-4, LUI-5)', 'split', 'done', 1000, '2026-10-14, task 459 body: waits for plan 136 (joker names, review), joker-name notes go to plan 136; other tasks done, still fit', 'Split plan 69 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T01:51:03Z', '2026-10-15T01:51:29Z', 1086, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1095, 128, 'create tasks for plan 128: S4 close-out', 'split', 'done', 1000, '2026-10-14, tasks.sql: tasks 1032-1034 brought in line with revised plan 128 (plan 136 in guards, joker static and browser checks in 1033, 09-jokers.md in 1034); 1035 unchanged; no new decisions (plan 136 adds its own)', 'Split plan 128 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T01:53:08Z', '2026-10-15T01:53:54Z', 1091, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1096, 136, 'Decisions: supersede old joker names, English names per joker', 'work', 'open', NULL, NULL, 'Plan 136 task 1. Read `plan 136: Joker names and symbols, defined again` (Design: Symbols, English names), `app/client/src/locales/style/en.md`, `app/client/src/game/jokers.ts` (`TOKENS`), `app/client/src/game/Icon.svelte`, today''s names in `app/client/src/locales/{en,es,es-ES,de}.ts`.
+
+- `pm decision record "Joker names English first, one symbol per joker (milestone 9)" --answer "names made in English to fit one shared symbol; es, es-ES, de translated from them; es an exception to D-59" --body "…" --supersedes 40 --supersedes 41 --supersedes 42 --supersedes 43 --supersedes 44 --supersedes 54 --supersedes 55 --supersedes 56 --supersedes 57 --supersedes 58`
+- Five `pm decision add` (`hint`, `skip`, `easier`, `category`, `snipe`): "English name for the <id> joker (symbol <token>)?"; 3–5 `--option`s, recommended first, ≤ 13 characters, playful, fitting the symbol; a candidate needing another symbol says which. Body: what the joker does, the symbol, today''s names in all four catalogs, why each candidate.
+- Candidate lists into `plans/15a-ui-translation.md`, new section "Joker names" (intro paragraph, then bullets).
+- Pending links, each task on all five decisions (`pm task-pending-decision <task> <decision>`):
+  - `task 1097: Decisions: es, es-ES, de joker names and keys`
+  - `task 1098: New joker names in the catalogs and everywhere they show`
+  - `task 1099: Joker symbol in the follow-up UI`
+  - `task 1100: Joker names in store and achievement texts`
+  - `task 1101: Gallery check and review of joker names and symbols`
+  - `task 459: LUI-5: playtest fixes and close-out`
+
+Done when: the record and five decisions exist, 15a has the section, the links are set. Check: `qgen validate` (docs only).', '2026-10-15T01:54:42Z', NULL, 1093, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1097, 136, 'Decisions: es, es-ES, de joker names and keys', 'work', 'open', NULL, NULL, 'Plan 136 task 2; runs after the five English name decisions of `task 1096: Decisions: supersede old joker names, English names per joker` are answered (`pm show` this task lists them).
+
+- Read `plan 136: Joker names and symbols, defined again` (Design: Translations, Keys), `decision 53: Joker and action keys per UI language (LUI-4)?`, `locales/style/{es,es-ES,de}.md` (de: no plural address, infinitive style).
+- Three `pm decision add`, one per locale (`es`, `es-ES`, `de`), all five jokers at once (names work together, keys collide per catalog): per joker 2–3 candidates translated from the English answer, recommended first, ≤ 13 characters; plus key letter (mnemonic, unique per catalog, not `A`–`D`, no digit, no clash on the same screen: the `check:literals` rule), the plural for «ya no les quedan …» (`error.joker_spent.*`), the hint-note form («Soplo {n}» today), extra leaves (`joker.skip.pass`/`stamp`/`purge`, `joker.easier.dial`, `joker.category.title`, `snipe.*`). Options: "as recommended" first, then alternatives.
+- `es-ES`: only where it differs from `es` (default: same as `es`). `es` keys change only if a new name needs it, listed in the `es` decision.
+- Candidate lists into `plans/15a-ui-translation.md` "Joker names".
+- `pm task-pending-decision` on all three: `task 1098: New joker names in the catalogs and everywhere they show`, `task 1100: Joker names in store and achievement texts`, `task 1101: Gallery check and review of joker names and symbols`.
+
+Done when: three decisions exist, 15a updated, links set.', '2026-10-15T01:54:42Z', NULL, 1093, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1098, 136, 'New joker names in the catalogs and everywhere they show', 'work', 'open', NULL, NULL, 'Plan 136 task 3; runs after the English decisions of `task 1096: Decisions: supersede old joker names, English names per joker` and the es/es-ES/de decisions of `task 1097: Decisions: es, es-ES, de joker names and keys` are answered; if `task 1097` is still open, stop with a note. User-visible text only: code ids (`hint` …), Steam API names (`FIRST_SOPLO` …), save fields and code comments stay.
+
+- Catalogs `app/client/src/locales/{en,es,es-ES,de}.ts` (`xx.ts` follows `es`): `joker.<id>.name`, `.key`, `.rule`, extras (`skip.pass`/`stamp`/`purge`, `easier.dial`, `category.title`, `snipe.*`), `joker.arm`, the hint note, `error.joker_spent.*` plural forms, `cards.intro` and any other string naming a joker (`rg` the old names). Keys per the answers; `check:literals` passes.
+- New symbols (if an English answer chose one): drawn in `Icon.svelte` (VD-8 style: 24×24, `currentColor`, stroke 2.4, rounded, body `fill-opacity` 0.25) and set in `TOKENS` (`app/client/src/game/jokers.ts`).
+- Style guides `app/client/src/locales/style/*.md`: glossary with the new names; old names into the bad patterns as "old name, don''t use".
+- `modding/examples/rules-tweak/main.js` blurbs; user-visible `qgen` output naming jokers (`qgen.py` supply report) per `es`.
+- `/comodines` (`authoring/ui/src/print/JokerCards.svelte`): print preview per `?lang=` (one page, 12 cards, names fit).
+- Docs: D-entry in `plans/decisions.md` (supersedes D-89/D-91''s names; D-59 exception), `plans/09-jokers.md` (table, rule headings, UI text), 15a "Joker names", `plans/04-ui-tv-display.md`, `plans/13-game-modes.md` where names appear.
+- `pm decision consequences` on the record from task 1096 and the eight name decisions.
+- Not here: store page (`plans/17a-store-page.md`) and `steam-achievements.vdf` (`task 1100: Joker names in store and achievement texts`).
+
+Check: `npm run check`, `npm test`, `npm run build`, `qgen validate`; `rg` for old names over `app/client/src/locales`, `authoring/ui/src/print`, `modding/` finds only the bad-pattern lists.', '2026-10-15T01:54:42Z', NULL, 1093, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1099, 136, 'Joker symbol in the follow-up UI', 'work', 'open', 370, NULL, 'Plan 136 task 4; runs after the English name decisions of `task 1096: Decisions: supersede old joker names, English names per joker` are answered, so the symbols are known. If a symbol changed and `task 1098: New joker names in the catalogs and everywhere they show` hasn''t run yet, draw it here in `app/client/src/game/Icon.svelte` and set it in `TOKENS` (VD-8 style: 24×24, `currentColor`, stroke 2.4, rounded, body `fill-opacity` 0.25), and say so in the done note.
+
+- The joker''s symbol from `TOKENS` (`app/client/src/game/jokers.ts`), never hard-coded, 1em before the text, no other layout change:
+  - `app/client/src/game/question/SkipDialog.svelte` heading
+  - `app/client/src/game/CategoryPicker.svelte` title, both steps
+  - `app/client/src/game/question/Scope.svelte` (crosshair today: make it read `TOKENS`)
+  - `app/client/src/game/DifficultyDial.svelte` label
+  - the hint notes'' number line
+- Docs: `plans/09-jokers.md` UI section; VD-8 in `plans/10-visual-design.md` if a symbol changed.
+
+Check: `npm run check`, `npm test`, `npm run build`, `qgen validate`; a look in the dev client (`npm run dev -w app/client`, `TRIVIA_MUTE=1`) at each dialog.', '2026-10-15T01:54:42Z', NULL, 1093, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1100, 136, 'Joker names in store and achievement texts', 'work', 'open', 370, NULL, 'Plan 136 task 5; runs after `task 1098: New joker names in the catalogs and everywhere they show`. If it is still open, stop with a note.
+
+- `plans/17a-store-page.md` store blocks, all languages: the new joker names. `decision 169: Store texts approved? (en)`, `decision 170: Store texts approved? (es + es-ES)`, `decision 171: Store texts approved? (de)`: if still pending they see the new names; if one is already answered, `pm task add 88 "…"` for its re-approval.
+- `app/desktop/steam-achievements.vdf` names/descriptions in all languages (`plan 86: Achievements (SW-11)`): if `task 657: Steamworks achievement setup values and VDF` is still open and the file or the plan 18 table doesn''t exist yet, update the texts in `plans/18-steam-integration.md` and the drafts it reads; whichever of the two runs second adapts. API names (`FIRST_SOPLO`, `SOPLO_SAVE` …) stay.
+- Achievement icons (`app/desktop/achievements/`) only if a symbol changed: re-render with the render script of `task 656: Achievement icons and render script`.
+
+Check: `rg` for old names over `plans/17a-store-page.md`, `app/desktop/steam-achievements.vdf`; `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-15T01:54:42Z', NULL, 1093, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1101, 136, 'Gallery check and review of joker names and symbols', 'work', 'open', 360, NULL, 'Plan 136 task 6; runs after tasks 1098, 1099, 1100 (new names, symbols in the follow-up UI, store and achievement texts). If one is still open, stop with a note.
+
+- `trivia-gallery` for all four locales; check the shots with jokers (tray, arm, skip dialog, category picker, scope, dial, hint notes, credits/achievement screens if any): names fit at 1920 × 1080 and 1280 × 800 (de the longest). Fix what clips in the catalogs or components (no layout redesign).
+- `pm decision add --once "Joker names and symbols reviewed?"`; body: how-to (`trivia-gallery`, `trivia-authoring` → `/gallery`, `/comodines?lang=es|es-ES|en|de`); options: "reviewed" / "flags in /gallery". `pm task-pending-decision 459 <id>` (`task 459: LUI-5: playtest fixes and close-out`).
+- Also `pm task-pending-decision 1101 <id>` and stop; after the answer: `pm decision consequences`, and if flags came in, `pm task add 136 "Joker names: fixes from the review"` with the flags (459 already stops while plan 136 has open tasks).
+- `plans/15a-ui-translation.md` "Joker names" and `plans/project.md` in sync.
+
+Done when: the review is answered, 459 waits on it, flags (if any) are in a fix task.', '2026-10-15T01:54:42Z', NULL, 1093, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -28763,6 +28824,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1032, 1090, '2026-10-15T01:52:16Z', '2026-10-15T01:52:32Z', 'done', NULL, 0, '96fcd50a3e38450d2855b9d5c2d50601a4b3737f', 'claude-opus-5-5[1m]', 'f5e9bc99-bb76-4e76-ad0f-d8a705a61e36', 5, 10, 1293, 186152, 35513, 0.3472344, 2557536);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1033, 1091, '2026-10-15T01:52:32Z', '2026-10-15T01:53:24Z', 'done', NULL, 0, '896f9d044c0eab0623af36e1d38736bc5b1e121b', 'claude-opus-5-5[1m]', '3983066d-bd5e-4bed-921c-5e01c11906ae', 6, 12, 4178, 244691, 42136, 0.4696342, 2557536);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1034, 1095, '2026-10-15T01:53:24Z', '2026-10-15T01:53:59Z', 'done', NULL, 0, '60b5671121e9f7048c64977dad4b46b88eb94420', 'claude-opus-5-5[1m]', '6d2e9b08-e555-4bf3-b30d-a458d173dcab', 6, 12, 3676, 219572, 36979, 0.41331439999999997, 2557536);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1035, 1093, '2026-10-15T01:54:00Z', '2026-10-15T01:55:27Z', 'done', NULL, 0, 'b6743e89da8418014e078b19df8a8ebe9f08234e', 'claude-opus-5-5[1m]', '437ed344-93e0-4e92-a650-5165ae1bb406', 11, 22, 9239, 458980, 45322, 0.63923999999999992, 2557536);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
