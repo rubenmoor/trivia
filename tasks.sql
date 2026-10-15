@@ -27224,8 +27224,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:11:24Z', '2026-10-15T20:25:36Z', 1147, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1157, 140, 'create tasks for plan 140: Translation prompts and markets per locale', 'split', 'done', 1000, '2026-10-15, tasks 1166-1169 (1170 folded into 1166-1168); no files', 'Split plan 140 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:13:25Z', '2026-10-15T20:26:48Z', 1149, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1158, 141, 'create tasks for plan 141: Native reviewers', 'split', 'open', 1000, NULL, 'Split plan 141 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:15:43Z', NULL, 1150, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1158, 141, 'create tasks for plan 141: Native reviewers', 'split', 'done', 1000, '2026-10-15, tasks 1171-1174 (1173 pending on decision 217, 1174 on decision 220); no files', 'Split plan 141 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:15:43Z', '2026-10-15T20:27:53Z', 1150, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1159, 142, 'create tasks for plan 142: UI in the new languages', 'split', 'open', 1000, NULL, 'Split plan 142 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:18:52Z', NULL, 1151, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1160, 143, 'create tasks for plan 143: Russian and Portuguese pools', 'split', 'open', 1000, NULL, 'Split plan 143 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -27331,6 +27331,48 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `directory.md`: no change expected (no new top-level file).
 
 Done when: those docs match the files as approved; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-15T20:26:31Z', '2026-10-15T20:26:41Z', 1157, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1171, 141, 'Native reviewer brief: authoring/NATIVE-REVIEW.md', 'work', 'open', 730, NULL, 'Write `authoring/NATIVE-REVIEW.md`, the brief for outside native reviewers of `zh-Hans`, `ru`, `pt-BR` (`plan 141: Native reviewers`, "Brief"). The spot-check sheet (`qgen spotcheck export`, task in this plan) embeds it at the top, so it runs first.
+
+- In English, short; style per AGENTS.md (intro paragraph, then bullets).
+- For the reviewers:
+  - the game: family trivia on a TV, the family plays against the gamemaster, 12 questions to victory
+  - each job with time per job (estimates in `decision 220: Native reviewers for zh-Hans, ru, pt-BR: paid freelancers, volunteers, or mixed?`): locale prompt read (~1 h, findings go back as comments, never silent edits), per-run spot check of 30 questions (~45 min), zh only: `chinese-base` fit sample, UI gallery read + playtest via a Steam key on `beta`, store text drafts
+  - what they check (`authoring/QC.md` "Translation runs" extra checks): faithful to the source (English reference beside it; "gloss" marks a machine gloss), natural, hints and wrong answers that work in the language, difficulty for the language''s players; text inside images/audio/video is never a problem (`decision 35: Translation prompts and markets per locale (plan 66)`)
+  - the yardstick: the rules of `authoring/tools/prompts/locale-<locale>.md`
+  - verdicts: approve / needs_work / reject / doesn''t travel, problem kinds (`qgen.py` `PROBLEMS`), feedback in English, optional corrected text; general comments at the end
+  - how to return work: «Download verdicts» → `spotcheck-<run>.verdicts.json` by e-mail; progress stays in the browser; deadline ~1 week per sheet
+  - no mention of planted control items (they must stay blind)
+- For the developer, a short section: per job what to send (sheet, gallery zip from `trivia-gallery`, Steam key, store text draft) and what to do with the reply (`qgen spotcheck import`, `qgen report --qc`, answer the playtest or store decisions). Names, contacts, payments stay out of the repo.
+- `directory.md` unchanged (file inside `authoring/`).
+
+Done when: the file exists and reads as a one-page brief; `npm run check` passes.', '2026-10-15T20:27:37Z', NULL, 1158, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1172, 141, 'qgen spotcheck export and import: offline sheet for outside reviewers', 'work', 'open', NULL, NULL, 'Build the offline spot-check sheet of `decision 221: How does an outside native reviewer reach the review tool?`, as specified in `plan 141: Native reviewers` "Spot-check sheet" (read it in full).
+
+- `authoring/tools/spotcheck.py` (new): export and import; reuse `authoring/server/spot_checks.py` (`sample`, `record`, `size`) and `authoring/tools/reviews.py`; `qgen.py` only dispatches `qgen spotcheck export|import` (`decision 101: qgen.py stays one module (code review part 7)`: no package split).
+- `qgen spotcheck export <run> [--controls N]` → `work/<run>/spotcheck-<run>.html`: self-contained (inline JS/CSS, small inline images; audio/video named only), brief from `authoring/NATIVE-REVIEW.md` on top, sample in `spot_checks.sample` order; per item English reference (approved non-stale `en` translation, else a gloss made at export, marked "gloss"), translation (question, options with the right one marked, hints, explanation), subcategory, difficulty 1–15; blind: no LLM review, audit, status, feedback. Input per item as the review tool (approve / needs_work / reject / doesn''t travel, `PROBLEMS`, feedback, optional corrected text), general comments; `localStorage` progress; «Download verdicts» → `spotcheck-<run>.verdicts.json` (run, sample ids, sheet hash, verdicts).
+- Controls: `--controls N` (default 3 for `zh-Hans`, `ru`, `pt-BR`, else 0) adds planted faulty copies (wrong right answer, changed number, garbled option), ids `control-<k>`, mixed into the sample order, listed in `work/<run>/spotcheck-controls.json`, never in a pool.
+- `qgen spotcheck import <file> [--dry-run]`: checks run, ids, sheet hash; each verdict → the translation''s human review (`reviewer: "human"`, `by: "native"`, no name) and `spot_checks.record` (`locale` set); corrected text into the feedback, not over the translation; controls scored apart: prints "controls caught k/N", and `qgen report --qc` shows it in the run''s QC section.
+- Gloss calls claude: report calls and totals (`decision 208: What must a script that calls claude report to its caller?`).
+- Check end to end: no `tr-*` run exists yet in this repo; if still none, make a throw-away one in a scratch copy (e.g. `git worktree` + `TRIVIA_WORK`), export, open the sheet in a browser, fill a verdict file by hand, `--dry-run` import plus one real import in the scratch copy, `qgen report --qc`; nothing committed under `authoring/data/` or `work/`.
+- Docs: `authoring/QC.md` "Translation runs" (outside reviewer: sheet + import; pm worker still `pm decision add "Spot check tr-<locale>-<n> done?"`, body names the sheet path), README how-to, D-entry (next free, D-106 or later) in `plans/decisions.md`, QT-6 note in `plans/15b-question-translation.md`.
+
+Done when: export/import work as above; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-15T20:27:37Z', NULL, 1158, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1173, 141, 'Fit-sample sheet for chinese-base (zh only)', 'work', 'open', NULL, NULL, 'Extend the offline sheet (`task 1172: qgen spotcheck export and import: offline sheet for outside reviewers`) for the `chinese-base` fit pass: the zh native reviewer checks a sample of the fit pass''s picks (`plan 141: Native reviewers`, task 3).
+
+- Waits on `decision 217: chinese-base membership: how does a translated base question count for chinese-base?` and on the fit model from the `chinese-base` model plan (written by `task 1148: write plan: chinese-base bundle: model and setup`) and the fit pass prompt (`task 1169: Fit pass prompt: draft, approval, prompts/fit.md`). Use the command name and field that plan names; else `qgen spotcheck export --fit <run>`.
+- Per item: the English reference and the zh translation as in the spot-check sheet; input fit yes / no + reason (English); blind: no LLM fit verdict shown.
+- Import writes the developer-correctable fit field (per decision 217''s answer, e.g. `fit` on the `questions.zh-Hans.json` entry) with the reason, marked as native; the developer can still flip it in `/review?locale=zh-Hans`.
+- Brief: add the fit job''s how-to to `authoring/NATIVE-REVIEW.md` if not yet there.
+- Check on a throw-away copy as task 1172 did; nothing committed under `authoring/data/`.
+
+Done when: a fit sheet exports, a hand-filled verdict file imports into the fit field; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-15T20:27:48Z', NULL, 1158, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1174, 141, 'Native reviewer requests and the engaged decisions per locale', 'work', 'open', NULL, NULL, 'After `decision 220: Native reviewers for zh-Hans, ru, pt-BR: paid freelancers, volunteers, or mixed?` is answered (`plan 141: Native reviewers`, "Gate"):
+
+- Per locale (`zh-Hans`, `ru`, `pt-BR`) a posting / request text in `work/native-review/<locale>.md` (not committed): the jobs and hours from decision 220 and `authoring/NATIVE-REVIEW.md`, rate (paid) or credit + free key (volunteer) per the answer, trial = the pilot''s spot-check sheet, return by e-mail, ~1 week per sheet; zh adds the `chinese-base` fit sample (and full source review if `decision 218: New China-centric questions for chinese-base: drafted in Spanish and translated, or drafted in Chinese?` went Chinese). No names, contacts or payments in the repo.
+- Raise three `once` decisions `Native reviewer for <locale> engaged?` with option "engaged"; body names the request file. The pilot tasks of the ru/pt-BR pools plan (`plan 143: Russian and Portuguese pools`) and of the `chinese-base` content plan get pending on them: link any that already exist with `pm task-pending-decision`; else say so in the consequences, so those plans'' split tasks do it.
+- `pm decision consequences 220 "<what changed>"`.
+
+Done when: three request files in `work/native-review/`, three engaged decisions raised and linked where possible, consequences recorded.', '2026-10-15T20:27:49Z', NULL, 1158, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -30630,6 +30672,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1134, 1155, '2026-10-15T20:23:01Z', '2026-10-15T20:24:56Z', 'done', NULL, 0, '38fdd836253ec2313a3f6ebf3bd3d78c3d412be1', 'claude-opus-5-5[1m]', 'fa50d1c6-fa5f-423f-ba85-f838f5e7d0a3', 17, 32, 10196, 967821, 77004, 1.0136441999999999, 3530483);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1135, 1156, '2026-10-15T20:24:57Z', '2026-10-15T20:25:43Z', 'done', NULL, 0, '699a5977422036a7e9e609734de8ab4a996ec0c2', 'claude-opus-5-5[1m]', '635a13cc-3d0b-417c-93ba-02cd255a7a75', 7, 14, 4542, 220676, 28063, 0.3595352, 3530483);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1136, 1157, '2026-10-15T20:25:44Z', '2026-10-15T20:26:55Z', 'done', NULL, 0, '3359a8f30b380af8110de0155374c465a05b7cee', 'claude-opus-5-5[1m]', 'd5aa6986-5256-484d-9e05-cb2f00292004', 8, 16, 7013, 295445, 37284, 0.49768499999999993, 3530483);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1137, 1158, '2026-10-15T20:26:55Z', '2026-10-15T20:27:59Z', 'done', NULL, 0, 'b626e065197b84846394a8d5eb1262bd7b52ab8f', 'claude-opus-5-5[1m]', 'db8a8aa8-1ffe-455f-ad9c-2a1ebcceec1d', 11, 22, 6325, 462993, 41925, 0.5545866, 3530483);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -31002,6 +31045,8 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1144, 216);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1148, 217);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1152, 218);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1169, 217);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1173, 217);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1174, 220);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
