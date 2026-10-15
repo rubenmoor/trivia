@@ -290,6 +290,66 @@
         ],
         "media_changed": false,
         "on": "2026-10-15"
+      },
+      "q-1443": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          5,
+          5
+        ],
+        "media_changed": false,
+        "on": "2026-10-15"
+      },
+      "q-1617": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          11,
+          11
+        ],
+        "media_changed": false,
+        "on": "2026-10-15"
+      },
+      "q-1689": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          6,
+          6
+        ],
+        "media_changed": false,
+        "on": "2026-10-15"
+      },
+      "q-2118": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          7,
+          7
+        ],
+        "media_changed": false,
+        "on": "2026-10-15"
+      },
+      "q-1704": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          9,
+          9
+        ],
+        "media_changed": false,
+        "on": "2026-10-15"
       }
     }
   }
