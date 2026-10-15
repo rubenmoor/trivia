@@ -118970,11 +118970,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T16:16:33"
       },
       "bundle": "base",
       "background": null
