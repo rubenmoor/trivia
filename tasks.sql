@@ -28039,6 +28039,15 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 - Option 1: pm''s `cleanup_prompt` (`project-manager.toml`, "post-milestone cleanup") gets one item: review the files the milestone added or changed (`git diff` since its first commit) per milestone 13''s "What to look for", rows appended to `code-review.md`, larger fixes as tasks. Cost: one worker run per milestone, none per commit.
 - Option 2: a review milestone before each release (`v1.0.0`, each content patch, decision 96 cadence), like milestone 13 but over the diff since the last review.
 - Changing `project-manager.toml` and AGENTS.md is the developer''s (AGENTS.md "Outside pm workers").', NULL, NULL, '2026-10-15T03:12:51Z', NULL, 589, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (202, 'Run qgen neutralize on base now?', 'pending', '["go", "not now"]', '`task 632: run neutralize-1`, `plan 64: Spanish variety (neutral Spanish)` (decision 27: base in es-419, colombia keeps its voice; decision 32: prompts approved, RAE numbers). Runs before the translation pilot (D-81).
+
+`qgen neutralize --dry-run` (scan done, $4.18 spent; `work/neutralize-1/`):
+- 388 of 1066 base questions flagged (Colombianisms like plata, carro→…, gaseosa, computador, afán; many are only number formatting 10.000 → 10 000)
+- 26 with no neutral form, left as they are (carro, papas, durazno, arveja, ají, patineta, …)
+- estimated rest: about $47.80 at list price ($0.12 per flagged question, $0.05 per audit call × 60)
+
+"go": the worker runs `qgen neutralize` (no arguments; continues from this scan), then `task 633: QC neutralize-1`.
+"not now": tasks 632 and 633 dropped.', NULL, NULL, '2026-10-15T03:34:24Z', NULL, 632, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -29105,6 +29114,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1055, 591, '2026-10-15T03:16:15Z', '2026-10-15T03:22:48Z', 'done', NULL, 0, '93fd7c1ff4c905d4fbdf9fc8848fe1bbc9505a9f', 'claude-opus-5-5[1m]', '91990c3a-c4fa-42ea-a2ee-ecacbe633bd8', 9, 18, 3005, 367339, 39029, 0.4458718, 2557536);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1056, 1112, '2026-10-15T03:22:49Z', '2026-10-15T03:25:47Z', 'done', NULL, 0, '69c43f0a5f27e54babfa2c7f2a61cbe2ad046b7e', 'claude-opus-5-5[1m]', '493a6327-a1f1-4e76-944f-1ef005e406cb', 29, 56, 11331, 1795126, 70001, 1.1458772000000002, 2557536);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1057, 1113, '2026-10-15T03:25:47Z', '2026-10-15T03:30:09Z', 'done', NULL, 0, 'fa6da4edcc7e27d565e45354dcb99cddc90e7180', 'claude-opus-5-5[1m]', '39798d09-69a5-4fd2-9f99-74bbb83e5bb5', 32, 52, 15687, 1809344, 76282, 1.2860727999999997, 2557536);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1058, 632, '2026-10-15T03:30:09Z', '2026-10-15T03:34:37Z', 'blocked', NULL, 0, 'efd3adc43c796848f1b1783a010d016c9abbd0c3', 'claude-opus-5-5[1m]', 'd8427bcd-45ce-47ee-985e-67c76d4e093d', 10, 20, 2321, 343668, 28902, 0.34644959999999997, 2557536);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -29258,6 +29268,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (459, 194);
 INSERT INTO task_decision (task_id, decision_id) VALUES (464, 35);
 INSERT INTO task_decision (task_id, decision_id) VALUES (479, 50);
 INSERT INTO task_decision (task_id, decision_id) VALUES (479, 155);
+INSERT INTO task_decision (task_id, decision_id) VALUES (632, 202);
 INSERT INTO task_decision (task_id, decision_id) VALUES (643, 110);
 INSERT INTO task_decision (task_id, decision_id) VALUES (650, 68);
 INSERT INTO task_decision (task_id, decision_id) VALUES (652, 72);
