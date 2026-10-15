@@ -7386,6 +7386,53 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 ## Out of scope
 - Running the real-Deck test (plan 90, decision 125); fixing failures (tasks in the owning plans); the release candidate and launch (milestone 11, plan 95); Workshop and mod checks (plans 114, 119, 122).', '2026-10-14T23:38:50Z', 263);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (135, 6, 'Playful icons and language flags before a game session', 400, 'Part 4 of `plan 6: masterplan`: every button on the screens before a game session gets a playful VD-8 icon, and the languages show national flags instead of decision 157''s globe (developer, 2026-10-14). Pure client UI: `app/client/src/game/`, no engine, save or catalog change.
+
+## Style
+- Icons: `app/client/src/game/Icon.svelte`, new names in `IconName`; 24×24 viewBox, `currentColor`, stroke 2.4, rounded caps/joins, body fill `fill-opacity` 0.25 (VD-8); playful = rounded, a little bouncy (rocket, balloon, mug), never emoji or text glyphs
+- Placement: `<Icon>` before the label, 1em (Prompt stays after the label); no change to keys, prompts, focus ids, `data-focus-default`, aria labels or catalogs (`check:literals` unaffected)
+- Out of scope: in-game screens (Level, Select, Question, Correct, Wrong, Victory), the Esc menu and its dialogs (`GameSettings`, `GoToDialog`, `FlagDialog`, `FlagList`), `LetterPicker` (letter keys), steppers'' `−`/`+` and Mods'' `▲`/`▼`
+
+## Buttons and icons (from the code, 2026-10-14)
+- `screens/Start.svelte`: play `rocket`; resume `play`; new game `sparkle`; mods `puzzle` (exists); save notice «Siguiente» `next`; language: flags (below)
+- `screens/Language.svelte`: each option: flags (below); «Atrás» `back`
+- `screens/Consent.svelte`: yes `check`, no `cross` (exist)
+- `screens/Player.svelte`: name buttons `person`; gamepad «Escribir» `pencil`; submit new name `person-plus`; delete `trash` (exists); delete confirm: cancel `back`, confirm `trash`
+- `screens/Choice.svelte`:
+  - mode tiles: solo `family`, gamemaster `mic`
+  - age group tiles by id: `kids` `balloon`, `young_teens` `skateboard`, `young_adults` `headphones`, `adults` `mug`; an unknown id: none
+  - gamemaster config toggles: video `film`, audio `speaker` (exist); stepper lines: none
+  - «Personalizar partida» `sliders`; back `back`; start `rocket`
+- `SupplyNotice.svelte` (from Choice): back `back`, start `rocket`
+- `Customize.svelte`: done `check`
+- `BundleSelector.svelte`: tile by `kind`: `base` `book`, `region` `pin`, mod bundle (`source: "mod"`) `puzzle`
+- `screens/Mods.svelte`: refresh `refresh`, all off `power`, restart `rocket`, back `back`; mod rows `puzzle`
+- `ModsNotice.svelte`: allow `check`, cancel `back`
+- `Credits.svelte`: back `back`
+- New `IconName`s: `rocket`, `play`, `sparkle`, `next`, `back`, `person`, `person-plus`, `pencil`, `family`, `mic`, `balloon`, `skateboard`, `headphones`, `mug`, `sliders`, `book`, `pin`, `refresh`, `power`, `globe` (Start''s current SVG, moved into Icon)
+- The worker may swap a drawing for a clearer one; then the list in `plans/10-visual-design.md` VD-8 says so
+
+## Flags
+- New `app/client/src/game/Flags.svelte`: `{ tag, size }`, keyed by language tag; `Icon`''s `flag` stays the report flag
+- Sets: `es` Mexico, Colombia, Argentina (Latin America north to south; Colombia matches the regional bundle); `es-ES` Spain; `en` UK, US; `de` Germany, Austria, Switzerland
+- Any other tag (a mod''s UI language, plan 117, `ENDONYMS` via `addCatalog` in `lib/i18n.ts`): `<Icon name="globe" />`
+- Drawings: own inline SVG of public-domain designs, nothing downloaded (D-45); fixed colours (not `currentColor`), rounded corners, thin dark outline so white stripes read on glass; simplified: no coats of arms (Mexico: small brown/green disc; Argentina: small sun disc; Spain: plain red-yellow-red; US: stripes reduced, canton with a few dots; UK: simplified Union Jack); Switzerland square, the others 3:2, same height
+- Several flags: a small overlapping row, slightly fanned (playful), `aria-hidden`
+- Where: each Language option next to the endonym; Start''s language button replaces the globe (endonym, key, pad Y unchanged)
+
+## Decision and docs
+- `pm decision record … --supersedes 157` (partly): globe → flags (Flags.svelte, sets above, globe for mod languages); `decision 157: Start''s language button: globe and endonym, key per catalog, pad Y`''s "no national flag" falls; key per catalog, pad Y, endonym, place unchanged
+- Docs: `plans/04-ui-tv-display.md` (Start''s language button, Language screen), D-96 in `plans/decisions.md`, VD-8 in `plans/10-visual-design.md` (new icons, Flags component), `directory.md` (Flags.svelte)
+
+## Check
+- Readable at TV size in all four catalogs (de longest): Start''s language button under ☰ doesn''t collide with the wordmark or corner error line; Language options and Choice tiles don''t wrap badly
+- `trivia-gallery` all four locales (shots `language`, `consent`, `start`, `language-from-start`, `start-resume`, `start-save-notice`, `player`, `player-delete-confirm`, `choice-gamemaster`, `choice-solo`, `customize`, `supply-notice`, `credits`, `mods`, `mods-notice`, `mods-crashed`, `mods-empty`)
+- Developer decision: icons and flags reviewed in `/gallery` (like `plan 100: UI wording: style guides, TV-check fixes, screen gallery`''s review decisions); a fix task waits on it
+- Per commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`
+
+## Constraints
+- D-45 licences only; offline; no new npm or Python dependencies
+- Overlap: `task 1026: Gallery fixes from the review flags` touches the same screens'' strings; whichever runs second adapts', '2026-10-15T01:45:46Z', 1079);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -24796,7 +24843,7 @@ Milestone 6 closes the leftovers of M3/M4, preloading before a screen fades in (
 - Parts are independent; 2 → 3 shared conventions (done).
 - D-45 licences only; everything offline; no new npm or Python dependencies.', '2026-10-15T01:43:41Z', NULL, 1073, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1078, 6, 'write plan: Playful icons and language flags before a game session', 'plan', 'dropped', 1000, 'duplicate: task 1075 splits the masterplan into its plan tasks', 'Write the plan for part 4 of `plan 6: masterplan` (milestone 6: Screen polish leftovers): icons on every button of the screens before play and national flags per language on the Language screen and Start''s language button. `pm plan add 6 "Playful icons and language flags before a game session" --priority 400 < body.md`, then its tasks: list the exact buttons from the code, the icon per button, the flag set per language, the decision record superseding `decision 157: Start''s language button: globe and endonym, key per catalog, pad Y` in part, docs (04, 10 VD-8, D-96), gallery run and a developer review decision. Details in the masterplan''s part 4.', '2026-10-15T01:43:41Z', '2026-10-15T01:43:45Z', 1073, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1079, 6, 'write plan: Playful icons and language flags before a game session', 'plan', 'open', 1000, NULL, 'Write the plan for part 4 of `plan 6: masterplan` (milestone 6: Screen polish leftovers): `pm plan add 6 "Playful icons and language flags before a game session" --priority 400 < body.md`, then split it into tasks (or leave that to its split task).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1079, 6, 'write plan: Playful icons and language flags before a game session', 'plan', 'done', 1000, '2026-10-14, plan 135: Playful icons and language flags before a game session (tasks left to its split task)', 'Write the plan for part 4 of `plan 6: masterplan` (milestone 6: Screen polish leftovers): `pm plan add 6 "Playful icons and language flags before a game session" --priority 400 < body.md`, then split it into tasks (or leave that to its split task).
 
 The plan covers, per the masterplan''s part 4:
 - Icons: the exact buttons of the screens before play, read from the code (`app/client/src/game/screens/` Start, Language, Player, Choice, Mods, Consent; `Customize.svelte`, `BundleSelector.svelte`, `Credits.svelte`), one icon per button; new names in `IconName` of `app/client/src/game/Icon.svelte`, VD-8 style (inline SVG, 24×24, `currentColor`, rounded strokes, 0.25 fill), playful, no emoji. Out of scope: in-game screens, Esc menu.
@@ -24805,7 +24852,9 @@ The plan covers, per the masterplan''s part 4:
 - Layout readable at TV size in all four catalogs (de longest); keys, prompts, focus unchanged.
 - Check: `trivia-gallery` for all four languages, then a developer decision to review icons and flags in `/gallery` (as in `plan 100: UI wording: style guides, TV-check fixes, screen gallery`).
 - Overlap: `task 1026: Gallery fixes from the review flags` may touch the same screens; whichever runs second adapts.
-- D-45 licences only, offline, no new npm or Python dependencies.', '2026-10-15T01:44:11Z', NULL, 1075, 0);
+- D-45 licences only, offline, no new npm or Python dependencies.', '2026-10-15T01:44:11Z', '2026-10-15T01:45:52Z', 1075, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1080, 135, 'create tasks for plan 135: Playful icons and language flags before a game session', 'split', 'open', 1000, NULL, 'Split plan 135 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T01:45:46Z', NULL, 1079, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -27576,6 +27625,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
  M authoring/data/ui-flags.json', 0, 'ba30acd1335d87512ac7cc0d9bccd744696e9704', 'claude-opus-5-5[1m]', '6cc12289-5ebe-4772-b166-4ee72a9f1b4c', 17, 34, 7501, 745985, 46427, 0.67076900000000017, 2472458);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1017, 1073, '2026-10-15T01:42:55Z', '2026-10-15T01:43:53Z', 'done', NULL, 0, 'c17d4c8247082ce33412e1a9c8d5130b962b0a24', 'claude-opus-5-5[1m]', '799747c0-f64c-4c4c-ab43-3862d7d89d4e', 10, 20, 5363, 367872, 51402, 0.59213040000000006, 2557536);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1018, 1075, '2026-10-15T01:43:53Z', '2026-10-15T01:44:18Z', 'done', NULL, 0, 'b67aedb0928e22a24fec28017a62322e32561c28', 'claude-opus-5-5[1m]', 'df219db9-c8c5-4487-994d-04e9f07e4504', 5, 10, 1841, 147854, 27492, 0.2863668, 2557536);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1019, 1079, '2026-10-15T01:44:18Z', '2026-10-15T01:46:01Z', 'done', NULL, 0, '65b8e4c9592c8308230cefc1805de31b0daf4b61', 'claude-opus-5-5[1m]', '1d189799-7508-4f68-92ec-9d37b256cbe7', 13, 24, 7766, 599692, 57354, 0.7341863999999998, 2557536);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
