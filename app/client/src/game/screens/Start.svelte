@@ -6,6 +6,7 @@
   import type { Game } from "../../lib/types.ts";
   import EffectsDemo from "../EffectsDemo.svelte";
   import Fireworks from "../Fireworks.svelte";
+  import Flags from "../Flags.svelte";
   import Icon from "../Icon.svelte";
   import Prompt from "../Prompt.svelte";
 
@@ -47,7 +48,7 @@
 <section class="start">
   {#if !notice}
     <button class="language glass" onclick={onlanguage} disabled={busy} data-focus-id="language" aria-label={t("screen.start.language", { name: endonym(lang) })}>
-      <Icon name="globe" size="1.25em" />
+      <Flags tag={lang} size="1.1em" />
       {endonym(lang)}
       <Prompt action="language" />
     </button>

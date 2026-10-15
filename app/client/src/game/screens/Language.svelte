@@ -6,6 +6,7 @@
   import { errorText } from "../../lib/errors.ts";
   import { endonym, lang, t } from "../../lib/i18n.ts";
   import { focusControl, pushScope } from "../../lib/input.svelte.ts";
+  import Flags from "../Flags.svelte";
   import Icon from "../Icon.svelte";
   import Prompt from "../Prompt.svelte";
 
@@ -74,6 +75,7 @@
         data-focus-default={tag === current || undefined}
         style:--i={i}
       >
+        <span class="flags"><Flags {tag} /></span>
         {endonym(tag)}
       </button>
     {/each}
@@ -105,6 +107,9 @@
     min-width: calc(28 * var(--u));
   }
   .option {
+    display: flex;
+    align-items: center;
+    gap: calc(1 * var(--u));
     padding: calc(1 * var(--u)) calc(2 * var(--u));
     border-color: var(--slate-600);
     font-family: var(--font-display);
@@ -114,6 +119,11 @@
     transition:
       transform 0.2s var(--spring),
       border-color 0.2s;
+  }
+  .flags {
+    display: flex;
+    justify-content: center;
+    min-width: 4em;
   }
   .option.current,
   .option:hover:not(:disabled),

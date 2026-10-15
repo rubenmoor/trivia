@@ -892,7 +892,7 @@ Template:
 - Decision:
   - **One setting:** the game's language = UI language = question language. `SaveData.language` is one tag; an old `{ui, questions}` save reads as `ui` (`parseSave`), missing = `es`; no save-version bump. Options = `UI_LANGS`.
   - **First start:** `Language.svelte` picks it for a fresh save (default `guessTag()`: Steam's language, else the browser's), as before.
-  - **Afterwards only on Start:** a button top right under ☰: globe + endonym (no national flag), key per catalog (`I` es/es-ES, `L` en, `S` de), pad Y; opens the same picker with «Atrás». A different UI language reloads the app. Not on later screens.
+  - **Afterwards only on Start:** a button top right under ☰: the language's flags + endonym (pm decision 186, replaces 157's globe: `Flags.svelte`, es Mexico/Colombia/Argentina, es-ES Spain, en UK/US, de Germany/Austria/Switzerland, globe for a mod's language), key per catalog (`I` es/es-ES, `L` en, `S` de), pad Y; opens the same picker (flags + endonym per option) with «Atrás». A different UI language reloads the app. Not on later screens.
   - **No language rows in the Esc menu**, in any mode.
   - **Fixed in a game:** a game keeps `GameRow.locale`; the language can't change once bundles are chosen.
   - **Question locale** (`localeOf` / `nextLocale` in `lib/engine.ts`): the language if `pool.<language>.json` exists and its default bundles' supply passes, else `es` (`pool.json`, es bundles via `bundlesFor`). Used for `loadEngineData`, `newGame`'s locale (from the loaded data) and the bundles offered. All UI languages stay selectable; en, de, es-ES and mod UI languages play the Spanish questions until their translation ships.

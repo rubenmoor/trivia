@@ -56,7 +56,7 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 
 | State | Shows | Leaves via | Music |
 |---|---|---|---|
-| Language | First start (D-86) or Start's language button (D-96): «Elige el idioma», languages by endonym, guess preselected | Click / `Enter` / pad A / `1`–`n`; from Start: «Atrás» / `Backspace` / pad B | Normal |
+| Language | First start (D-86) or Start's language button (D-96): «Elige el idioma», languages by flags + endonym (decision 186), guess preselected | Click / `Enter` / pad A / `1`–`n`; from Start: «Atrás» / `Backspace` / pad B | Normal |
 | Start | Title, «¡Jugar!», "continue game" if one is running | Click / `Enter` | Normal |
 | Player | «¿Quién juega?»: known names, new name | Click a name / `1`–`9` / `Enter` (most recent name, nothing focused) / type + `Enter` | Normal |
 | Choice | «¿Cómo juega …?»: mode (MD-7); gamemaster mode: the configure game screen (MD-11: difficulty, levels, cards, video, audio, jokers, bundles); «Solo o en grupo»: age group, «Personalizar partida», bundles | «¡A jugar!» / `Enter`; «Atrás» / `Backspace` | Normal |
@@ -77,7 +77,7 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 ### Start
 - Game title, a short subtitle, a big «¡Jugar!» button.
 - The first click is also the **audio unlock**. Browsers block sound and autoplaying video with sound until a user gesture, so nothing plays before it. After this click, autoplay works for the rest of the session.
-- Language button top right, under ☰ (D-96, decision 157): globe + endonym, key per catalog (`I`/`L`/`S`), pad Y; opens the Language screen. The only place to change the language; hidden while the save notice shows.
+- Language button top right, under ☰ (D-96, decisions 157, 186): the language's flags (`Flags.svelte`) + endonym, key per catalog (`I`/`L`/`S`), pad Y; opens the Language screen. The only place to change the language; hidden while the save notice shows.
 - If an unfinished game exists (server state, GF-4), show «Continuar» with its player and level («Continuar: Sofía, nivel 5») next to «Nueva partida».
 - Desktop shell only (`desktop?.mods`): a `secondary` «Mods» button under play/resume (count of loaded mods when > 0); while the notice isn't accepted and mods are held off, a line «N mods found, off until you allow them» under the buttons.
 - No supply report (plan 133): the supply check is on the Choice screen.
