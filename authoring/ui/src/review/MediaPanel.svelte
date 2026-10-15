@@ -61,6 +61,7 @@
     "off-allowlist": "not on the licence allowlist",
     "missing-data": "licence data missing",
     "pd-no-reason": "no PD template",
+    "broken-file": "broken source file",
   };
   function reason(r: string) {
     const [code, ...rest] = r.split(": ");

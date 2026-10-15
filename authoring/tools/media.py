@@ -22,8 +22,8 @@ while the replacement list isn't empty.
 import argparse, hashlib, itertools, json, re, subprocess, sys, urllib.parse
 
 from layout import CANDIDATES, SOURCE_POOL as POOL
-from download import RateLimited, cached, http_get
-from media_cache import MEDIA, cache_path, picked, pool_urls
+from download import RateLimited, cached, file_problem, http_get
+from media_cache import MEDIA, cache_path, pool_urls
 import atomic  # authoring/tools/atomic.py
 import categories  # authoring/tools/categories.py (D-19, D-43)
 import progress  # authoring/tools/progress.py: a log line per download (task 1131)
@@ -182,15 +182,40 @@ def pick_fields(candidate, slot="media"):
 
 def unpicked(slot):
     """The slot with its pick cleared: no file, no credit, no licence fields (plans/26)."""
-    out = {k: v for k, v in slot.items() if k not in providers.LICENCE_FIELDS}
+    out = {k: v for k, v in slot.items() if k not in (*providers.LICENCE_FIELDS, "file_problem")}
     return {**out, "source_url": None, "file_url": None, "credit": None}
+
+
+def checked(fields):
+    """Download a pick's file; the fields plus `file_problem` when it is broken at the source (task 1181)."""
+    problem = file_problem(cached(fields["file_url"]))
+    return {**fields, "file_problem": problem} if problem else fields
+
+
+def apply_pick(target, fields):
+    """Store a pick's fields in a pool slot; an earlier pick's file_problem goes."""
+    target.pop("file_problem", None)
+    target.update(fields)
+
+
+def mark_broken(problems):
+    """{(qid, slot): file_problem} into the source pool: the slot's licence verdict is then `replace`."""
+    if not problems:
+        return
+    with atomic.locked(POOL):
+        data = json.loads(POOL.read_text(encoding="utf-8"))
+        for q in data["questions"]:
+            for slot in SLOTS:
+                if (q["id"], slot) in problems:
+                    q[slot]["file_problem"] = problems[q["id"], slot]
+        atomic.write_json(POOL, data)
+    for (qid, slot), problem in sorted(problems.items()):
+        print(f"broken source file: {qid} {slot}: {problem}", file=sys.stderr)
 
 
 def download(candidate, slot="media"):
     """Download a picked candidate into the cache; return the fields to store."""
-    fields = pick_fields(candidate, slot)
-    cached(fields["file_url"])
-    return fields
+    return checked(pick_fields(candidate, slot))
 
 
 def make_sheet(candidates, out, thumbs):
@@ -222,15 +247,20 @@ def cmd_sync(args):
     qs = json.loads(POOL.read_text(encoding="utf-8"))["questions"]
     if args.status:
         qs = [q for q in qs if q["status"] == args.status]
-    todo = [(label, url) for q in qs for label, url in picked(q) if not cache_path(url).is_file()]
+    todo = [(q["id"], slot, q[slot]["file_url"]) for q in qs for slot in SLOTS
+            if (q.get(slot) or {}).get("file_url") and not cache_path(q[slot]["file_url"]).is_file()]
     print(f"downloading {len(todo)} missing file(s)", flush=True)
-    failed = []
-    for label, url in todo:
+    failed, broken = [], {}
+    for qid, slot, url in todo:
+        label = qid if slot == "media" else f"{qid} background"
         try:
             with progress.item("sync", label), progress.waiting(f"download {urllib.parse.urlparse(url).hostname}"):
-                cached(url)
+                problem = file_problem(cached(url))
+            if problem:
+                broken[qid, slot] = problem
         except Exception:  # noqa: BLE001 — keep going (waiting() logged it); rerun retries the rest
             failed.append(label)
+    mark_broken(broken)
     if args.prune and MEDIA.exists():
         keep = {cache_path(url).name for url in pool_urls(POOL)}  # every pick, not only playable ones
         stale = [f for f in MEDIA.iterdir() if f.is_file() and f.name not in keep]

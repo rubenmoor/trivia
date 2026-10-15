@@ -21,6 +21,7 @@ Don't hotlink at game time. Every chosen file is **downloaded once into `media/`
 - `trivia-media sync` downloads every missing file ahead of time (run it before game night); `--prune` deletes files no question references.
 - Images wider than 3840 px are downloaded as a thumbnail 3840 px wide (4K, D-48); `file_url` is then the thumbnail URL. Smaller originals are downloaded as they are.
 - Every request sends a descriptive User-Agent, as Wikimedia's policy requires.
+- Broken sources (task 1181): a picked image is decode-checked after download (`download.file_problem`: ImageMagick fails, or libjpeg's "Premature end of" = truncated at the source); the reason goes into the slot's `file_problem`, so `providers.licence_verdict` says `replace` (`broken-file`): the record step makes the question needs_work, `qgen validate` rejects it approved, `/review?licence=replace` lists it. Checked on the review tool's pick, `qgen batch`'s record and sync steps, `trivia-media sync`; a new pick clears it.
 
 ## Requirements (IMG-3)
 - **Licence:** free (public domain, CC0, CC BY, CC BY-SA). The author and licence go into `credit`.

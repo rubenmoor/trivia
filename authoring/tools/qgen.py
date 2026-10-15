@@ -2991,12 +2991,18 @@ def cmd_record(args):
                                 else "No se encontró una imagen de fondo adecuada.")
                 continue
             fields[slot] = media_tool.pick_fields(found[n - 1], slot)
+            try:
+                fields[slot] = media_tool.checked(fields[slot])
+            except Exception as e:  # noqa: BLE001 — the sync step downloads and checks it again
+                progress.say(f"  not checked: {q['id']} {slot}: {e}", err=True)
             verdict, reasons = providers.licence_verdict(fields[slot])
             if verdict == "replace":  # plan 53
                 decision = "needs_work"
                 kinds.add("media")
+                broken = fields[slot].get("file_problem")
                 problems.append(("La imagen elegida" if slot == "media" else "La imagen de fondo elegida")
-                                + f" tiene una licencia no adecuada ({'; '.join(reasons)}).")
+                                + (f" está dañada en la fuente ({broken})." if broken  # task 1181
+                                   else f" tiene una licencia no adecuada ({'; '.join(reasons)})."))
         check = fact_check(full, checks.get(tmp_of.get(q["id"])))
         if check and check["verdict"] != "confirmed":
             decision = "needs_work"
@@ -3010,7 +3016,7 @@ def cmd_record(args):
 
         def change(x, review=review, fields=fields, check=check if "factcheck" in (full.get("fix") or {}) else None):
             for slot, f in fields.items():
-                x[slot].update(f)
+                media_tool.apply_pick(x[slot], f)
             if check:
                 x["fact_checked"] = check["verdict"] == "confirmed"
             x.update(review=review, status=review["decision"])
@@ -3342,20 +3348,25 @@ def audit_section(run):
 
 def cmd_sync_run(args):
     """Download the run's picked files into the media cache. Rate limits don't fail the batch."""
-    missing = []
-    picks = [(label, url) for q in batch_questions(args.run, ("approved", "needs_work")) for label, url in media.picked(q)]
-    todo = [(label, url) for label, url in picks if not media.cache_path(url).is_file()]
+    missing, broken = [], {}
+    picks = [(q["id"], slot, q[slot]["file_url"]) for q in batch_questions(args.run, ("approved", "needs_work"))
+             for slot in slots_of(q) if q[slot].get("file_url")]
+    todo = [(qid, slot, url) for qid, slot, url in picks if not media.cache_path(url).is_file()]
     progress.resumed("sync", len(picks) - len(todo), len(todo), "files")
     with progress.Bar("sync", len(todo), "files") as bar:
-        for label, url in todo:
+        for qid, slot, url in todo:
+            label = qid if slot == "media" else f"{qid} background"
             try:
                 with progress.item("sync", label), progress.waiting(f"download {urllib.parse.urlparse(url).hostname}"):
-                    download.cached(url)
+                    problem = download.file_problem(download.cached(url))
+                if problem:
+                    broken[qid, slot] = problem
                 bar.finished()
             except Exception as e:  # noqa: BLE001 — listed in the report; `trivia-media sync` retries
                 missing.append(label)
                 progress.say(f"  not cached: {label}: {e}", err=True)
                 bar.finished(ok=False)
+    media_tool.mark_broken(broken)  # approved ones then fail qgen validate (decision 47)
     save_json(run_dir(args) / "not-cached.json", missing)
     return []
 

@@ -101,7 +101,7 @@ US_ONLY_PD = r"PD-US(?!Gov).*|PD-1923|PD-Harris-Ewing"
 
 def licence_verdict(slot):
     """("ok" | "replace", ["code: text", …]) for a picked slot's licence record (plans/52).
-    Restrictions never make a file "replace" (D-61)."""
+    Restrictions never make a file "replace" (D-61); a broken source file does (task 1181)."""
     missing = [k for k in LICENCE_FIELDS if k not in slot]
     if missing:
         return "replace", [f"missing-data: {', '.join(missing)}"]
@@ -119,6 +119,8 @@ def licence_verdict(slot):
             reasons.append("pd-no-reason: public domain without a template")
         elif all(re.fullmatch(US_ONLY_PD, r) for r in slot["pd_reasons"]):
             reasons.append(f"pd-us-only: {', '.join(slot['pd_reasons'])}")
+    if slot.get("file_problem"):
+        reasons.append(f"broken-file: {slot['file_problem']}")
     return ("replace" if reasons else "ok"), reasons
 
 

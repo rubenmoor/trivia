@@ -264,7 +264,7 @@ def pick_media(qid, index, slot):
     if not found or not 0 <= index < len(found["candidates"]):
         raise ValueError(f"no candidate {index + 1}")
     fields = media.download(found["candidates"][index], slot)
-    return update_question(qid, lambda q: target(q, slot).update(fields))
+    return update_question(qid, lambda q: media.apply_pick(target(q, slot), fields))
 
 
 def search_media(qid, query, slot, every=False):

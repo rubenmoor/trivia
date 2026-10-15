@@ -2,7 +2,7 @@
 
 Never ships: the game only reads the cache (media_cache.py, plan 51).
 """
-import os, sys, threading, time, urllib.error, urllib.parse, urllib.request
+import os, re, subprocess, sys, threading, time, urllib.error, urllib.parse, urllib.request
 
 from media_cache import MEDIA, cache_path
 
@@ -62,6 +62,24 @@ def http_get(url, params=None, headers=None, wait=None):
                 raise RateLimited(seconds, host) from e
             print(f"  rate limited by {host}, waiting {seconds} s", file=sys.stderr)
             time.sleep(seconds)
+
+
+IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png", ".gif", ".tif", ".tiff", ".webp"}
+
+
+def file_problem(path):
+    """Why a cached image can't be shipped as is (undecodable or truncated at the source), else None.
+    Non-images pass. ImageMagick exits 0 on a truncated JPEG; libjpeg's warning tells (task 1181)."""
+    if path.suffix.lower() not in IMAGE_SUFFIXES:
+        return None
+    r = subprocess.run(["magick", "-regard-warnings", f"{path}[0]", "null:"], capture_output=True, text=True)
+    lines = [re.sub(r"^magick: | `.*$", "", line) for line in r.stderr.splitlines()]
+    truncated = [line for line in lines if line.startswith("Premature end of")]
+    if truncated:
+        return f"truncated ({truncated[0]})"
+    if r.returncode:
+        return f"undecodable ({(lines or [f'exit {r.returncode}'])[-1]})"
+    return None
 
 
 _download_locks = {}

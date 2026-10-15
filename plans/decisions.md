@@ -484,7 +484,7 @@ Template:
 - Date: 2026-10-12
 - Context: Commons marks some files with non-copyright restrictions (personality rights, trademark, insignia, …). Milestone 4 listed them among the files to replace; plan 17 suggested checking each one.
 - Decision: Keep every flagged file (pm decision 8). The developer checked them: no problem in any. The licence audit shows the flags for information; they never put a file on the replacement list.
-- Consequences: No per-file "checked, keep" mark, no review-tool control for it. Replacement list: PD-US only, GFDL, off-allowlist licences, missing data.
+- Consequences: No per-file "checked, keep" mark, no review-tool control for it. Replacement list: PD-US only, GFDL, off-allowlist licences, missing data; broken source images (`broken-file`, task 1181).
 - Supersedes / related: D-59; plan 17 (PUB-1), milestone 4
 
 ## D-62: PD-US-only media is replaced; US government works count as free

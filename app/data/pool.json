@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "32a32fd7",
+  "hash": "e31e00b4",
   "questions": [
     {
       "id": "q-0001",
@@ -17703,40 +17703,6 @@
         "license_url": "https://creativecommons.org/licenses/by/3.0/de/deed.en",
         "author": "High Contrast",
         "author_url": "https://commons.wikimedia.org/wiki/User:High_Contrast"
-      },
-      "background": null
-    },
-    {
-      "id": "q-0641",
-      "status": "approved",
-      "difficulty": 4,
-      "subcategory": "Barcos",
-      "bundle": "base",
-      "description": "Un marinero que nunca se ha subido a un barco y tampoco a unos pantalones.",
-      "question": "Camisa azul de marinero, gorrito, moñito, sin pantalones y una voz chillona y enojada. ¿Qué personaje de Disney es?",
-      "answer": "El Pato Donald",
-      "wrong_answers": [
-        "Mickey Mouse",
-        "Goofy",
-        "Daisy"
-      ],
-      "hints": [
-        "Es un personaje con plumas.",
-        "Tiene tres sobrinos traviesos.",
-        "Sus sobrinos se llaman Hugo, Paco y Luis."
-      ],
-      "fun_fact": "El Pato Donald apareció por primera vez en 1934, en el corto «La gallinita sabia».",
-      "media": {
-        "type": "image",
-        "role": "decorative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/U.S._Navy_Cmdr._Joel_Stewart%2C_right%2C_the_commanding_officer_of_the_amphibious_transport_dock_ship_Pre-Commissioning_Unit_%28PCU%29_Anchorage_%28LPD_23%29%2C_signs_a_white_hat_for_a_child_at_the_Dock_on_the_Block_party_130430-N-DR144-281.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AU.S._Navy_Cmdr._Joel_Stewart%2C_right%2C_the_commanding_officer_of_the_amphibious_transport_dock_ship_Pre-Commissioning_Unit_%28PCU%29_Anchorage_%28LPD_23%29%2C_signs_a_white_hat_for_a_child_at_the_Dock_on_the_Block_party_130430-N-DR144-281.jpg",
-        "credit": "MC1 James R. Evans · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "MC1 James R. Evans",
-        "author_url": null
       },
       "background": null
     },

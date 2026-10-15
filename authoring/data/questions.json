@@ -46182,7 +46182,7 @@
     },
     {
       "id": "q-0641",
-      "status": "approved",
+      "status": "needs_work",
       "difficulty": 4,
       "description": "Un marinero que nunca se ha subido a un barco y tampoco a unos pantalones.",
       "question": "Camisa azul de marinero, gorrito, moñito, sin pantalones y una voz chillona y enojada. ¿Qué personaje de Disney es?",
@@ -46213,7 +46213,8 @@
         "restrictions": [],
         "pd_reasons": [
           "PD-USGov-Military"
-        ]
+        ],
+        "file_problem": "truncated (Premature end of JPEG file)"
       },
       "fun_fact": "El Pato Donald apareció por primera vez en 1934, en el corto «La gallinita sabia».",
       "subcategory": "Barcos",
@@ -46241,13 +46242,23 @@
       "needs_media": false,
       "batch": "batch-7",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
+        "decision": "needs_work",
+        "feedback": "La imagen elegida está dañada en la fuente (truncated (Premature end of JPEG file)): elegir otra.",
         "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-fable-5-1",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-fable-5-1",
+          "previous": null
+        },
+        "problems": [
+          "media"
+        ]
       },
       "bundle": "base",
       "background": null,
