@@ -19,6 +19,8 @@ Family trivia party game, shown on a TV: the family plays against the gamemaster
 - Push directly to `main`. No feature branches or pull requests.
 - CI is local, no GitHub Actions (D-73): before every commit `npm run check`, `npm test`, `npm run build`, `qgen validate` and the task's own check pass.
 - Use comments sparingly and keep them ultra-short.
+- Import, don't copy (decision 199): before writing a helper, constant, type or CSS block, `rg` for an existing one and import it (`authoring/` may import from `app/`); where importing is impossible (Python ↔ TS, `app/desktop` `.mjs` ↔ client TS, `report-server/`), a comment names the source.
+- After moving, renaming or deleting a file, function, constant or decided behaviour, `rg` its old name or path over comments and `.md` files; fix every hit in the same commit (decision 200).
 - Don't write tests by default. Keep only the few, if any, that stay useful long-term; don't verify too much either, use throw-away scripts to verify genuinely complex issues only.
 - Style of `.md` files: bullet points, ultra-concise, no full sentences needed. Exception: an intro paragraph in full sentences at the top of the document and under each top-level heading.
 - Game is muted under `PM_WORKER`; outside pm, launch with `TRIVIA_MUTE=1` unless the work is about sound; `TRIVIA_SOUND=1` for sound checks.

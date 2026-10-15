@@ -43,6 +43,7 @@ cleanup_prompt = '''
 * delete code that isn't actually used
 * check pending decisions if they are still relevant and really pending
 * check other milestones if their contents are up-to-date and update them if necessary
+* review the code files the milestone added or changed (`git diff` since its first commit) per milestone 13's "What to look for": rows appended to `code-review.md`, small fixes in place, larger ones as tasks (decision 201)
 '''
 
 # Priority of the planning work: the masterplan `pm milestone add` creates (its tasks write the plans) and every task

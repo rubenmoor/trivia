@@ -63,7 +63,7 @@ Milestone 13 read every tracked code and build file once, between 2026-10-12 and
   - `qgen.py`: still 4.5k lines in one file. Part 7 fixed 64 rows and kept the structure; it remains the likeliest home of the next bug.
   - Python↔TS twins: `app/server/` and `save_file.py` stay hand-synced until task 765 deletes them (decision 104).
   - Promise handling (`no-floating-promises`) stays a review item (decision 106), checked by no tool.
-  - Unreviewed code: anything added after 2026-10-14. Decision 201 decides whether anyone reviews it.
+  - Unreviewed code: anything added after 2026-10-14 until its milestone's cleanup task reviews it (decision 201).
   - Each file had one review pass. The 274 won't-fix rows are judgement calls, mostly small duplications kept on purpose.
 
 ### Process
@@ -72,10 +72,9 @@ Process decisions (`### Process decisions`):
   - decision 196: no `directory.md` check; `directory.md` names only top-level `.md` files and directories (task 1114).
   - decision 197: knip in `npm run check` fails on unused exports, files and dependencies, test-only exports included (task 1115, `### Unused-export check`).
   - decision 198: ruff for Python with narrow rules (unused, encoding) in `npm run check` (task 1116, `### Python check`).
-- Open, waiting for the developer:
-  - decision 199: an AGENTS.md rule: "import, don't copy; a copy across a boundary names its source".
-  - decision 200: an AGENTS.md rule: "after a move, rename or delete, fix the comments and docs that name the old".
-  - decision 201: a recurring review per milestone (pm `cleanup_prompt`) or per release.
+  - decision 199: AGENTS.md rule "import, don't copy; a copy across a boundary names its source" (developer, outside pm).
+  - decision 200: AGENTS.md rule "after a move, rename or delete, fix the comments and docs that name the old" (developer, outside pm).
+  - decision 201: per-milestone review item in pm's `cleanup_prompt` (`project-manager.toml`, developer, outside pm).
 
 ## Format
 
@@ -2045,9 +2044,9 @@ Task 589, 2026-10-14. A throw-away script over the finding rows of parts 1–11 
 - decision 196: per-commit `directory.md` ↔ `git ls-files` check (79 of 174 files unnamed at part 1, 22 docs-drift rows); answered no: `directory.md` cut to top-level `.md` files and directories (task 1114)
 - decision 197: per-commit unused-export scan, the gap all linter candidates leave (34 unused-export rows); answered "find a tool": knip, task 1115
 - decision 198: ruff for Python, narrow rules (5 platform-encoding rows; trial: 3 new real hits); answered yes (F, PLW1514): task 1116, `### Python check`
-- decision 199: AGENTS.md rule "import, don't copy; a cross-boundary copy names its source" (118 copy rows, 38 clusters)
-- decision 200: AGENTS.md rule "after a move, rename or delete, fix comments and docs naming the old" (39 lying-comment rows)
-- decision 201: recurring review, per milestone in pm's `cleanup_prompt` or per release (69 files added during milestone 13 unreviewed; their review found 9 bugs, 2 medium)
+- decision 199: AGENTS.md rule "import, don't copy; a cross-boundary copy names its source" (118 copy rows, 38 clusters); answered yes: AGENTS.md "Rules" bullet
+- decision 200: AGENTS.md rule "after a move, rename or delete, fix comments and docs naming the old" (39 lying-comment rows); answered yes: AGENTS.md "Rules" bullet
+- decision 201: recurring review, per milestone in pm's `cleanup_prompt` or per release (69 files added during milestone 13 unreviewed; their review found 9 bugs, 2 medium); answered per milestone: `cleanup_prompt` item in `project-manager.toml`
 - Not proposed:
   - stale-`PLACEHOLDER(<id>)` check: 0 stale markers in parts 1 and 11
   - Python ↔ TS parity check: `decision 104: Python ↔ Node/TS twins: how to keep save, media cache and serving rules in sync` answered won't fix (Python side retires)
