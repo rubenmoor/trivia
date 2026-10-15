@@ -80,6 +80,7 @@ export function gameAction(save: SaveData, data: EngineData, io: Io, action: str
     new: (s) => game.newGame(s, data, io, body.player, pick(body, [...game.CHOICE_KEYS, "mode"])),
     pick: (s) => game.pick(s, data, io, index()),
     answer: (s) => game.answer(s, data, io, index()),
+    reveal: (s) => game.reveal(s, data, io),
     skip: (s) => game.skip(s, data, io, pyTruthy(body.everyone)),
     undo: (s) => game.undo(s, io),
     abandon: (s) => game.abandon(s, io),
@@ -87,7 +88,7 @@ export function gameAction(save: SaveData, data: EngineData, io: Io, action: str
     replace: (s) => game.replace(s, data, io, pyTruthy(body.seen)),
     level: (s) => game.jumpLevel(s, data, io, body.level),
     goto: (s) => game.goTo(s, data, io, body.id),
-    settings: (s) => game.changeSettings(s, data, io, pick(body, ["age_group", "difficulty", "bundles"])),
+    settings: (s) => game.changeSettings(s, data, io, pick(body, ["age_group", "difficulty", "bundles", "answers"])),
     joker: (s) => game.joker(s, data, io, pyStr(body.joker), pick(body, ["purge", "subcategory", "index"])),
   };
   if (!Object.hasOwn(actions, action)) return { save, status: 404, body: NOT_FOUND };

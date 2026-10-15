@@ -40,7 +40,7 @@ export interface ModEvents {
   screen: { name: string };
   /** After a successful `new`. */
   "game:start": { game: Game };
-  /** A game's `result` went from null to won/lost/abandoned (a `new` abandons the running game). */
+  /** A game's `result` went from null to won/lost/completed/abandoned (a `new` abandons the running game). */
   "game:end": { game: Game; result: NonNullable<Game["result"]> };
   /** The Question screen is shown, its media ready. */
   "question:shown": { id: string; level: number };

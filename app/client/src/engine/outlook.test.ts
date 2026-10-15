@@ -21,7 +21,7 @@ const pool = [
 const data = engineData(pool, [{ slug: "s", name: "S", bundle: "base", subcategories: ["X", "Y"] },
   { slug: "z", name: "Z", bundle: "colombia", subcategories: ["Z"] }], [bundle("base", "base"), bundle("colombia", "region")], [group]);
 const solo = {
-  age_group: "g", difficulty: null, bundles: ["base"], levels: 12, cards: 4, video: true, audio: true,
+  age_group: "g", difficulty: null, bundles: ["base"], levels: 12, cards: 4, video: true, audio: true, answers: true,
   jokers: STANDARD_JOKERS, mode: "solo" as const,
 };
 const seen = (save: SaveData, ...ids: string[]) =>

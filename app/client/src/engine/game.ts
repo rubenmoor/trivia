@@ -46,7 +46,7 @@ export function players(save: SaveData): Player[] {
   const rows = [...save.players].sort((a, b) => a.id - b.id).map((p) => {
     const games = save.games.filter((g) => g.player_id === p.id);
     const last = games.reduce<string | null>((m, g) => (m === null || g.started_on > m ? g.started_on : m), null);
-    return { p, games: games.length, won: games.filter((g) => g.result === "won").length, last };
+    return { p, games: games.length, won: games.filter((g) => g.result === "won").length, last }; // `completed`: not a win (D-105)
   });
   rows.sort((a, b) => {
     const ka = a.last ?? a.p.created_on, kb = b.last ?? b.p.created_on;
@@ -210,7 +210,7 @@ export function playerChoice(save: SaveData, data: EngineData, player?: unknown)
 
 /** Start a game for `player` (known or new, D-28); a running game is abandoned. The settings get
  * `age_group` / `difficulty` / `bundles` / `mode` / `levels` / `cards` only when `args` carries them,
- * `video` / `audio` only when off. */
+ * `video` / `audio` / `answers` only when off; `answers` in gamemaster mode only (D-105). */
 export function newGame(
   save: SaveData, data: EngineData, io: Io, player: unknown, args: ChoiceArgs = {},
 ): { save: SaveData; state: GameState } {
@@ -221,6 +221,7 @@ export function newGame(
   const mode = args.mode ?? "gamemaster";
   if (!(MODES as unknown[]).includes(mode)) throw new GameError("mode_unknown", { mode: String(mode) });
   if (!(BUILT_MODES as unknown[]).includes(mode)) throw new GameError("mode_not_built", { mode });
+  if (args.answers !== undefined && mode !== "gamemaster") throw new GameError("gamemaster_only", { action: "answers" });
   const overrides = args.jokers === undefined ? {} : checkBudget(args.jokers);
   const report = supply(save, data, choice);
   if (!report.ok) throw supplyShort(report);
@@ -243,6 +244,7 @@ export function newGame(
     if (args.cards !== undefined) state.settings.cards = choice.cards;
     if (!choice.video) state.settings.video = false;
     if (!choice.audio) state.settings.audio = false;
+    if (!choice.answers) state.settings.answers = false;
     if (args.mode !== undefined) state.settings.mode = mode as GameMode;
     if (mode === "gamemaster") Object.assign(state.settings.jokers, overrides);
     else {
@@ -299,6 +301,7 @@ export function answer(save: SaveData, data: EngineData, io: Io, index: number):
   return action(save, (work) => {
     const { row, state } = running(work);
     if (state.phase !== "question") throw new GameError("no_question");
+    if (state.settings.answers === false) throw new GameError("answers_off");
     if (!(0 <= index && index < state.answers.length) || state.struck.includes(index))
       throw new GameError("answer_invalid", { n: index + 1 });
     const q = question(data, state.current);
@@ -313,6 +316,31 @@ export function answer(save: SaveData, data: EngineData, io: Io, index: number):
       state.phase = result = "lost";
     } else if (state.level >= levelCount(state)) {
       state.phase = result = "won";
+    } else {
+      Object.assign(state, { level: state.level + 1, phase: "select" });
+      leaveQuestion(state);
+      deal(work, state, data, io);
+    }
+    saveGame(row, state, io, result);
+    return state;
+  });
+}
+
+/** With answers off (D-105): the correct answer is shown, seen, one level up; after the last level `completed`. */
+export function reveal(save: SaveData, data: EngineData, io: Io): { save: SaveData; state: GameState } {
+  return action(save, (work) => {
+    const { row, state } = running(work);
+    if (state.phase !== "question") throw new GameError("no_question");
+    if (state.settings.answers !== false) throw new GameError("answers_on");
+    const q = question(data, state.current);
+    const before: GameState = { ...structuredClone(state), undo: null };
+    see(work, q.id, row.id, io);
+    state.history.push({ level: state.level, question_id: q.id, revealed: true, jokers: state.jokers });
+    state.last = { question_id: q.id, chosen: null, correct: false, revealed: true, correct_index: state.answers.indexOf(q.answer) };
+    state.undo = before;
+    let result: Result = null;
+    if (state.level >= levelCount(state)) {
+      state.phase = result = "completed";
     } else {
       Object.assign(state, { level: state.level + 1, phase: "select" });
       leaveQuestion(state);
@@ -483,6 +511,7 @@ const playCategory: Play = (work, gid, state, data, io, { subcategory }) => {
 
 /** «Francotirador» (JK-3): a wrong answer is struck out; the right one drops the question (seen) and repeats the level (D-27). */
 const playSnipe: Play = (work, gid, state, data, io, { index }) => {
+  if (state.settings.answers === false) throw new GameError("snipe_answers_off");
   if (state.answers.length - state.struck.length <= 1) throw new GameError("snipe_last");
   if (typeof index !== "number" || !Number.isInteger(index) || index < 0 || index >= state.answers.length
     || state.struck.includes(index))
@@ -677,10 +706,10 @@ export function jumpLevel(save: SaveData, data: EngineData, io: Io, level: unkno
   });
 }
 
-/** Difficulty and bundles mid-game: validated like `new`, the rest of the game (current level..levels)
- * must fill; a new table, history and level stay. */
+/** Difficulty, bundles and answers (D-105) mid-game: validated like `new`, the rest of the game (current
+ * level..levels) must fill; a new table, history and level stay. */
 export function changeSettings(
-  save: SaveData, data: EngineData, io: Io, input: Pick<ChoiceInput, "age_group" | "difficulty" | "bundles">,
+  save: SaveData, data: EngineData, io: Io, input: Pick<ChoiceInput, "age_group" | "difficulty" | "bundles" | "answers">,
 ): { save: SaveData; state: GameState } {
   return action(save, (work) => {
     const { row, state } = running(work);
@@ -695,6 +724,10 @@ export function changeSettings(
       else s.age_group = choice.age_group!;
     }
     if (input.bundles !== undefined) s.bundles = choice.bundles;
+    if (input.answers !== undefined) {
+      if (choice.answers) delete s.answers;
+      else s.answers = false;
+    }
     const ranges = rangesOf(state, data);
     const avail = availableNow(work, state, data);
     const rest = laterLevels(state.level - 1, ranges);

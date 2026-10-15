@@ -54,6 +54,8 @@ export interface Choice {
   cards: number;
   video: boolean;
   audio: boolean;
+  /** «Select answer to advance to next level» (D-105): false = the padlock reveals. */
+  answers: boolean;
   jokers: JokerBudget;
 }
 
@@ -132,9 +134,9 @@ export interface Game {
   id: number;
   /** null only for games from before players existed (D-28). */
   player: string | null;
-  result: null | "won" | "lost" | "abandoned";
+  result: null | "won" | "lost" | "completed" | "abandoned";
   level: number;
-  phase: "select" | "question" | "won" | "lost";
+  phase: "select" | "question" | "won" | "lost" | "completed";
   options: { description: string }[];
   history: { level: number; correct: boolean }[];
   can_undo: boolean;
@@ -147,10 +149,10 @@ export interface Game {
   /** Game settings (13-game-modes.md, MD-1): the joker budget per game, null = unlimited;
    * age group and bundles as stored (plan 27), missing = `DEFAULT_AGE_GROUP` / every bundle;
    * mode as stored, missing = `gamemaster`; `customized` outside gamemaster mode (plan 36);
-   * difficulty, levels, cards, video, audio (D-88): missing = age group, 12, 4, allowed. */
+   * difficulty, levels, cards, video, audio (D-88): missing = age group, 12, 4, allowed; answers (D-105): missing = on. */
   settings: {
     jokers: JokerBudget; age_group?: string; bundles?: string[]; mode?: GameMode; customized?: boolean;
-    difficulty?: Difficulty; levels?: number; cards?: number; video?: false; audio?: false;
+    difficulty?: Difficulty; levels?: number; cards?: number; video?: false; audio?: false; answers?: false;
   };
   /** Uses left in this game per joker, null = unlimited (MD-1). */
   jokers_left: JokerBudget;
@@ -167,10 +169,12 @@ export interface Game {
     /** The subcategory (key, D-99) chosen with «Cambiazo» for this question, or null. */
     swapped_to: string | null;
   } | null;
+  /** A reveal (D-105): `chosen` null, `correct` false, `revealed`. */
   last: {
     question_id: string;
-    chosen: number;
+    chosen: number | null;
     correct: boolean;
+    revealed?: true;
     correct_index: number;
     answer: string;
     fun_fact: string;

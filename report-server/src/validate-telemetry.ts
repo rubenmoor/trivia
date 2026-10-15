@@ -107,7 +107,7 @@ function game(v: unknown, path: string): Game {
     difficulty,
     levels,
     reached: int(g["reached"], 0, levels, `${path}.reached`),
-    result: str(g["result"], /^(won|lost|abandoned|open)$/, `${path}.result`),
+    result: str(g["result"], /^(won|lost|completed|abandoned|open)$/, `${path}.result`),
     customized: bool(g["customized"], `${path}.customized`),
     mods: bool(g["mods"], `${path}.mods`),
     jokers: jokers(g["jokers"], `${path}.jokers`),

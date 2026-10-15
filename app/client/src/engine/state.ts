@@ -59,7 +59,8 @@ export interface GameRow {
   id: number;
   started_on: string;
   finished_on: string | null;
-  result: "won" | "lost" | "abandoned" | null;
+  /** `completed`: the last level reached by reveals (D-105), neither won nor lost. */
+  result: "won" | "lost" | "completed" | "abandoned" | null;
   /** null only for games from before D-28. */
   player_id: number | null;
   /** The question locale the game plays in (plan 68); missing = es. */
@@ -83,26 +84,29 @@ interface SeenRow {
 /** `admin_burn`: «Saltar y quemar para todos» in games from before plan 65. */
 export type Outcome = "skipped" | "easier" | "category" | "sniped" | "admin_skip" | "admin_block" | "admin_burn" | "admin_replace";
 
-/** An answered question has `correct`; a replaced or skipped one `outcome`. */
+/** An answered question has `correct`; a revealed one `revealed` (D-105); a replaced or skipped one `outcome`. */
 interface HistoryEntry {
   level: number;
   question_id: string;
   correct?: boolean;
+  revealed?: true;
   outcome?: Outcome;
   /** Missing in games from before JK-2. */
   jokers?: JokerName[];
 }
 
+/** A reveal (D-105): `chosen` null, `correct` false, `revealed`. */
 interface LastAnswer {
   question_id: string;
-  chosen: number;
+  chosen: number | null;
   correct: boolean;
+  revealed?: true;
   correct_index: number;
 }
 
 export interface GameState {
   level: number;
-  phase: "select" | "question" | "won" | "lost";
+  phase: "select" | "question" | "won" | "lost" | "completed";
   options: string[];
   offered: string[];
   current: string | null;
@@ -118,10 +122,10 @@ export interface GameState {
   repeat: boolean;
   /** age_group / bundles / mode: only when the new game's request carried them (plan 27, plan 36);
    * missing mode = gamemaster. `customized`: outside gamemaster mode only. D-88: `difficulty` (then no
-   * age_group), `levels` (missing 12), `cards` (missing 4), `video` / `audio` (only false; missing = allowed). */
+   * age_group), `levels` (missing 12), `cards` (missing 4), `video` / `audio` (only false; missing = allowed); D-105: `answers` (only false; missing = on). */
   settings: {
     jokers: JokerBudget; age_group?: string; bundles?: string[]; mode?: GameMode; customized?: boolean;
-    difficulty?: Difficulty; levels?: number; cards?: number; video?: false; audio?: false;
+    difficulty?: Difficulty; levels?: number; cards?: number; video?: false; audio?: false; answers?: false;
   };
 }
 
@@ -197,6 +201,9 @@ const ERRORS: Record<string, string | ((p: Params) => string)> = {
   replace_empty: "no other question for this level",
   question_unknown: (p) => `no question ${pyRepr(String(p.id))} in the loaded pool`,
   level_invalid: (p) => `level: a whole number ${p.min}–${p.max}`,
+  answers_on: "the answer is only revealed with answers off",
+  answers_off: "answers are off: reveal the answer",
+  snipe_answers_off: "answers are off",
   cheat_not_select: (p) => `${p.action} only with the cards on the table`,
   language_unknown: (p) => `no language ${pyRepr(String(p.lang))}`,
 };

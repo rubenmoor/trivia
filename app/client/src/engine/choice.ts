@@ -19,14 +19,14 @@ export const CARDS_MAX = 4;
 export const DIFFICULTY_MAX = 15;
 
 /** The default age group; the locale's first base bundle plus every other bundle offered in it (plan 71);
- * 12 levels, 4 cards, media allowed; the standard joker set (configure screen only, D-88). */
+ * 12 levels, 4 cards, media allowed, answers on; the standard joker set (configure screen only, D-88). */
 export function defaultChoice(data: EngineData): Choice {
   const offered = bundlesFor(data);
   const base = offered.find((b) => b.kind === "base");
   return {
     age_group: DEFAULT_AGE_GROUP, difficulty: null,
     bundles: offered.filter((b) => b === base || b.kind !== "base").map((b) => b.id),
-    levels: LEVELS, cards: PER_LEVEL, video: true, audio: true, jokers: { ...STANDARD_JOKERS },
+    levels: LEVELS, cards: PER_LEVEL, video: true, audio: true, answers: true, jokers: { ...STANDARD_JOKERS },
   };
 }
 
@@ -34,7 +34,7 @@ export function defaultChoice(data: EngineData): Choice {
  * defaults (jokers: the game's budget), resolved here and never written back. */
 export function gameChoice(state: Pick<GameState, "settings">, data: EngineData): Choice {
   const d = defaultChoice(data);
-  const { age_group, bundles, difficulty, levels, cards, video, audio, jokers } = state.settings;
+  const { age_group, bundles, difficulty, levels, cards, video, audio, answers, jokers } = state.settings;
   let out = d.bundles;
   if (bundles !== undefined) {
     try {
@@ -46,7 +46,8 @@ export function gameChoice(state: Pick<GameState, "settings">, data: EngineData)
   return {
     age_group: difficulty ? null : age_group !== undefined && data.groupById.has(age_group) ? age_group : d.age_group,
     difficulty: difficulty ? { ...difficulty } : null, bundles: out,
-    levels: levels ?? d.levels, cards: cards ?? d.cards, video: video !== false, audio: audio !== false, jokers: { ...jokers },
+    levels: levels ?? d.levels, cards: cards ?? d.cards, video: video !== false, audio: audio !== false,
+    answers: answers !== false, jokers: { ...jokers },
   };
 }
 
@@ -75,11 +76,13 @@ export interface ChoiceInput {
   cards?: unknown;
   video?: unknown;
   audio?: unknown;
+  /** Gamemaster mode only (D-105). */
+  answers?: unknown;
   /** Merged into `base.jokers`. */
   jokers?: unknown;
 }
 
-export const CHOICE_KEYS = ["age_group", "difficulty", "bundles", "levels", "cards", "video", "audio", "jokers"] as const;
+export const CHOICE_KEYS = ["age_group", "difficulty", "bundles", "levels", "cards", "video", "audio", "answers", "jokers"] as const;
 
 const isInt = (v: unknown): v is number => Number.isInteger(v);
 
@@ -133,6 +136,7 @@ export function resolveChoice(data: EngineData, input: ChoiceInput, base: Choice
     cards: or(input.cards, base.cards, (v) => checkCount(v, 0, CARDS_MAX, "cards_invalid")),
     video: or(input.video, base.video, (v) => checkSwitch(v, "video")),
     audio: or(input.audio, base.audio, (v) => checkSwitch(v, "audio")),
+    answers: or(input.answers, base.answers, (v) => checkSwitch(v, "answers")),
     jokers: or(input.jokers, base.jokers, (v) => ({ ...base.jokers, ...checkBudget(v) })),
   };
 }

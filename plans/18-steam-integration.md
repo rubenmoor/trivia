@@ -299,7 +299,7 @@ The page-side mod API (pm plan 117, decisions 130, 131), defined in `app/client/
   - `ready`: after mount (`main.ts`)
   - `screen` `{ name }`: after a switch (`Game.svelte` `go()`)
   - `question:shown` `{ id, level }`: after the switch to Question, its media ready or the preload cap (`Game.svelte` `go()`)
-  - `game:start` `{ game }`: after a successful `new`; `game:end` `{ game, result }`: `result` null → won/lost/abandoned, a `new` over a running game too; `question:answered` `{ id, level, index, correct }`: after `answer` (all `lib/api.ts` `events()`)
+  - `game:start` `{ game }`: after a successful `new`; `game:end` `{ game, result }`: `result` null → won/lost/completed/abandoned, a `new` over a running game too; `question:answered` `{ id, level, index, correct }`: after `answer` (all `lib/api.ts` `events()`)
 - `css(href)`: a `<link>` after ours, e.g. `trivia.css(new URL("./x.css", import.meta.url))`.
 - Internals, not on `window.trivia`: `loadedMods()`, `modErrors()` (mods screen, plan 118), `modsOn()` (telemetry, decision 146).
 

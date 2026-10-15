@@ -45,11 +45,11 @@ export function inSteamworks(id: AchievementId): boolean {
   return id.startsWith("BUNDLE_") ? DLC_BUNDLES.some((b) => bundleAchievement(b) === id) : true;
 }
 
-/** Standard rules only (decisions 19, 74): not gamemaster, not customized, 12 levels, 4 cards, no «Ir a pregunta…». */
+/** Standard rules only (decisions 19, 74): not gamemaster, not customized, 12 levels, 4 cards, answers on, no «Ir a pregunta…». */
 export function qualifies(row: GameRow): boolean {
   const s = row.state.settings ?? {};
   return gameMode(row.state) !== "gamemaster" && !s.customized && !s.difficulty
-    && (s.levels ?? LEVELS) === LEVELS && (s.cards ?? PER_LEVEL) === PER_LEVEL
+    && (s.levels ?? LEVELS) === LEVELS && (s.cards ?? PER_LEVEL) === PER_LEVEL && s.answers !== false
     && !(row.state.history ?? []).some((h) => h.outcome === "admin_replace");
 }
 

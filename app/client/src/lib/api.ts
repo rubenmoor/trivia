@@ -72,7 +72,7 @@ export async function fetchGame(): Promise<{ game: Game | null }> {
 
 /** The body of a game action: `index` for pick/answer, `player` for new, `everyone` for skip (D-28),
  * `jokers` for the joker budget (MD-4); new: the configuration (D-88); cheats (MD-12): `seen` for
- * replace, `level` for level, age_group / difficulty / bundles for settings; `id` for goto (dev mode). */
+ * replace, `level` for level, age_group / difficulty / bundles / answers for settings; `id` for goto (dev mode). */
 export interface GameActionBody {
   index?: number;
   player?: string;
@@ -86,13 +86,14 @@ export interface GameActionBody {
   cards?: number;
   video?: boolean;
   audio?: boolean;
+  answers?: boolean;
   seen?: boolean;
   id?: string;
   level?: number;
 }
 
 /** A configuration for `choice` and `new` (D-88): a missing field comes from the player's newest game. */
-export type ChoiceBody = Pick<GameActionBody, "age_group" | "difficulty" | "bundles" | "levels" | "cards" | "video" | "audio" | "jokers">;
+export type ChoiceBody = Pick<GameActionBody, "age_group" | "difficulty" | "bundles" | "levels" | "cards" | "video" | "audio" | "answers" | "jokers">;
 
 /** What the Choice screen offers (plan 29): age groups in file order, the new game's locale's bundles
  * (plan 71), both with their names in that locale; `scope` "game": the running game's locale (MD-12). */
@@ -239,7 +240,7 @@ function events(action: string, body: GameActionBody, before: Before | null, gam
 
 /** A game action on the engine (engine/api.ts); returns the game afterwards. */
 export async function gameAction(
-  action: "new" | "pick" | "answer" | "skip" | "undo" | "abandon" | "jokers" | "replace" | "level" | "goto" | "settings",
+  action: "new" | "pick" | "answer" | "reveal" | "skip" | "undo" | "abandon" | "jokers" | "replace" | "level" | "goto" | "settings",
   body: GameActionBody = {},
 ): Promise<Game | null> {
   const scope = action === "new" ? "next" : "game";

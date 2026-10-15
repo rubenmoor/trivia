@@ -21,7 +21,7 @@ export interface TelemetryGame {
   difficulty: Difficulty | null;
   levels: number;
   reached: number;
-  result: "won" | "lost" | "abandoned" | "open";
+  result: "won" | "lost" | "completed" | "abandoned" | "open";
   customized: boolean;
   mods: boolean;
   jokers: Record<JokerName, number>;
@@ -82,7 +82,7 @@ export function telemetryGame(row: GameRow, from: number, data: EngineData, mods
     age_group: choice.age_group,
     difficulty: choice.difficulty,
     levels,
-    reached: row.result === "won" ? levels : state.level,
+    reached: row.result === "won" || row.result === "completed" ? levels : state.level,
     result: row.result ?? "open",
     customized: state.settings.customized ?? false,
     mods,
