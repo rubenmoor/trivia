@@ -27566,7 +27566,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - `qgen report` (or the call that writes the report) regenerates `authoring/reports/batch-8.md` with the three rows for batch-8 matching the numbers above (±, they''re from plan 146''s hand count) and blank/0 for batch-6 where no data exists; staged with the code.
 - `npm run check`, `qgen validate` pass.', '2026-10-15T21:54:48Z', '2026-10-15T21:58:15Z', 1187, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1189, 146, 'Diagnose media share below 15 % (batches 6–8) and propose fixes', 'work', 'open', NULL, NULL, 'Read-only diagnosis, per `plan 146: Media yield` task B. `media share` (merged questions with `axes.stimulus` ≠ none, `batch_health()` in `authoring/tools/health.py`) fell 25.6 % → 13.8 % → 12.2 % over batches 6–8, ✗ against 15–50 % twice in a row. Find where the media questions are lost.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1189, 146, 'Diagnose media share below 15 % (batches 6–8) and propose fixes', 'work', 'done', NULL, '2026-10-15, no files: read-only diagnosis over work/batch-{6,7,8}; decision 227, follow-up task 1190 pending on it', 'Read-only diagnosis, per `plan 146: Media yield` task B. `media share` (merged questions with `axes.stimulus` ≠ none, `batch_health()` in `authoring/tools/health.py`) fell 25.6 % → 13.8 % → 12.2 % over batches 6–8, ✗ against 15–50 % twice in a row. Find where the media questions are lost.
 
 ## How
 - Throw-away script (delete afterwards, nothing staged unless a real bug fix is needed → follow-up task instead) over `work/batch-{6,7,8}/` and `authoring/data`:
@@ -27585,7 +27585,11 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Leave this task done after adding the decision (don''t make it pending): the answer is handled by a follow-up task; add `pm task add 146 "Media share and residual misses: changes per decision <id>"` pending on the decision (`pm task-pending-decision`), body: turn the approved changes into tasks in plan 146 (or the plan they belong to), and record the outcome with `pm decision consequences`.
 
 ## Done when
-- Decision and the pending follow-up task exist; diagnosis numbers are in the decision body; no temporary files left.', '2026-10-15T21:54:48Z', NULL, 1187, 0);
+- Decision and the pending follow-up task exist; diagnosis numbers are in the decision body; no temporary files left.', '2026-10-15T21:54:48Z', '2026-10-15T22:01:36Z', 1187, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1190, 146, 'Media share and residual misses: changes per decision 227', 'work', 'open', NULL, NULL, 'Turn the changes approved in `decision 227: Media share below 15 %: lower the none weight, and which residual-miss fixes?` into tasks in `plan 146: Media yield` (or the plan they belong to, e.g. `plan 17: Batch runs` for the slot plan or drafter prompt), and record the outcome with `pm decision consequences 227 "…"`.
+- Weight change: `authoring/data/question-axes.json` `weights.stimulus.none`; the diagnosis and simulated numbers are in decision 227''s body.
+- Bound change: `authoring/data/targets.json` "media share" min; also note it under `decision 13: Batch health thresholds and stop rule?`''s consequences.
+- "None": only the consequences line.', '2026-10-15T22:01:32Z', NULL, 1189, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -29759,6 +29763,52 @@ B. Regional premise, below the threshold (1 disagreement, q-1691), only in "all"
    - Not proposed here: a "Spain" regional bundle (your q-1691 feedback); that is a new bundle, a decision of its own if you want it.
 
 Options: "recommended set" = A; "all" = A + B; "none".', 'all', NULL, '2026-10-15T21:41:52Z', '2026-10-15T21:45:10Z', 53, NULL, 'rule', NULL, '2026-10-15, task 53: proposals A and B became tasks in plan 17 at plan 16''s priority 650 (plan 16 is closed): task 1182: Ambiguity in riddles: generic answers and one question per text (QC batch-8 A) (review.md reason 2, house-style.md one question per text), task 1183: Regional premise: no Spain-only words or brands in base (QC batch-8 B) (review.md reason 8, locale-es.md, neutralize.md Spain examples); authoring/reports/batch-8.md ''Changes from this QC: 1182, 1183''. No Spain bundle (would need its own decision).');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (227, 'Media share below 15 %: lower the none weight, and which residual-miss fixes?', 'pending', '["Weight only: none 7 → 5, no residual-miss fixes (rework covers them)", "Weight + query hints (blank map, no logos/franchise characters as essential)", "All: weight + query hints + second research round + role change at record", "Only lower the media share bound to 10 % in targets.json (changes decision 13''s set), no weight change", "None: keep weight and bound, ack the ✗"]', '`plan 146: Media yield` task B (`task 1189: Diagnose media share below 15 % (batches 6–8) and propose fixes`). Media share (merged with `axes.stimulus` ≠ none) fell 25.6 % → 13.8 % → 12.2 %, ✗ against `decision 13: Batch health thresholds and stop rule?`''s 15–50 % twice. Read-only script over `work/batch-{6,7,8}/` and the pool.
+
+**Diagnosis: the slot plan explains the whole fall; every later stage is flat.**
+
+| stage | b6 | b7 | b8 |
+|---|---:|---:|---:|
+| slots (subcats × slots each) | 120 (30 × 4) | 1026 (57 × 18) | 1656 (92 × 18) |
+| options with a stimulus | 45.3 % | 28.4 % | 20.8 % |
+| slots with ≥ 1 media option | 73 % | 58 % | 45 % |
+| subcats with no media value fitting (`axis_fit` ≤ 2) | 2/30 | 5/57 | 16/92 |
+| drafter picks media when offered (drafted slots) | 37 % | 27 % | 28 % |
+| skip rate: media-offering / text-only slots | 26 / 19 % | 33 / 27 % | 33 / 30 % |
+| skips naming media | 16/29 | 78/313 | 65/519 |
+| media share of drafts | 26.4 % | 14.9 % | 12.4 % |
+| drop rate media / text | 12.5 / 9.0 % | 19.8 / 12.4 % | 14.2 / 12.5 % |
+| needs_work at record media / text | 24 / 18 % | 22 / 18 % | 6.6 / 4.2 % |
+| media share of merged | 25.6 % | 13.8 % | 12.2 % |
+
+- Drafts → merged: share almost unchanged (26.4 → 25.6, 14.9 → 13.8, 12.4 → 12.2). Media drafts drop a bit more (giveaway: the photo shows the answer) but it costs ≤ 1 point.
+- Options → drafts: steady ratio ≈ 0.55–0.6 (drafter takes the text option ~ 7 of 10 times it can choose).
+- Options: 45 → 21 %. Two causes:
+  - Subcategory mix: batches 7–8 move into the long tail of non-visual subcats (pop music, musicals, fiction, Harry Potter, reality shows, slogans, sayings, numbers…; free providers have no media for franchises and logos). Fit-only expected option share 20.4 → 18.7 → 14.7 %; 16 of 92 batch-8 subcats can''t offer media at all.
+  - Slots per subcat 4 → 18: with 4 slots, `OFFERED_FACTOR` (0.3, `concepts.py`) penalises `none` after slot 1 while the media values are still fresh, a strong boost; over 18 slots every value has been offered, the boost fades back to the base weights (`none` 7 vs. 4.2 for all media values together, `authoring/data/question-axes.json`).
+- Not the cause: drafter prompt, drops, record, review. Per subcategory: media concentrates in animals, places, art, religion, pharaohs (Reptiles, Peces: 7 each in b8).
+- Context: every approved question already shows a picture (illustrative/decorative); media share counts only essential stimuli. Pool base-bundle share now 15.0 %.
+
+**Fix for the cause: lower the `none` weight.** Simulated slot draw for batch-8''s subcats on today''s pool (18 slots, seed 1):
+
+| `none` weight | options with stimulus | slots with media | expected merged share (× 0.59) |
+|---|---:|---:|---:|
+| 7 (now) | 27.4 % | 58 % | ≈ 16 % |
+| 5 | 39.2 % | 69 % | ≈ 23 % |
+| 4 | 46.6 % | 75 % | ≈ 27 % |
+
+- `none` 7 → 5: lands mid-range (15–50 %), still text-first; non-visual subcats stay text-only via `axis_fit`. Cost: media drafts drop and needs_work slightly more (b8: +1.7 / +2.4 points on the media part), so ≈ +0.5 point overall.
+- At 7 the usage factor alone may lift batch-9 to ≈ 16 % (the pool is now under media''s expected share), but only just above the bound.
+- Alternative: lower the bound to 10 % in `targets.json` (decision 13''s looser set had 10–60 %), changing decision 13''s set; accepts fewer picture questions.
+
+**Residual misses** (plan 146 "What would raise it"), counted from batch-7/8 "## Needs work" (batch-7: ~31 media lines, batch-8: 9 no-pick + 12 licence `replace`):
+- Second `research` round: off-target/no candidates = most misses (b7 ~17, b8 6: q-1331, q-1452, q-1485, q-1840, q-2053, q-2187). Maybe half recover → ≈ 3–8 per batch at record; but `qgen rework` (`decision 3: How are needs_work questions (33 now, more per batch) resolved?`) already recovers them (4 media needs_work left in the pool) for ≈ $0.12 each, so the gain is < $1 per batch and a little rework time.
+- Query hints at draft ("blank map" for map stimuli, no logos/franchise characters as essential): labelled maps b7 2 (q-0654, q-0804), b8 1 (q-1423); logos/franchises b7 ~6 (q-0658, q-0983, q-1027, q-1204, q-1206, q-1209), b8 1 (q-1811). ≈ 2–8 per batch; a prompt line, cheap.
+- Role change `essential` → `illustrative` at record: 1 case in two batches (q-1583). Not worth code.
+- Contact sheet not matching candidates: b7 ~5 (q-0614, q-0656, q-0896, q-1100, q-0787), b8 0: likely gone, no fix.
+- Licence `replace` (12 in b8) is `decision 47: Replace the files on the licence list`, not this decision.
+
+Options: recommended first. "Weight" = `none` 7 → 5 in `authoring/data/question-axes.json`, bound stays 15 %.', NULL, NULL, '2026-10-15T22:01:27Z', NULL, 1189, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -30928,6 +30978,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1149, 1182, '2026-10-15T21:54:58Z', '2026-10-15T21:55:48Z', 'done', NULL, 0, '6b3916e68384857822734c188bb9d1dfc095cb84', 'claude-opus-5-5[1m]', 'e8172800-2a42-4934-8d1e-ecba4a68d4b6', 14, 22, 3573, 440532, 38267, 0.4657904, 3709948);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1150, 1183, '2026-10-15T21:55:48Z', '2026-10-15T21:56:28Z', 'done', NULL, 0, '794e41ec7505cf16ab81de00680a167369729e69', 'claude-opus-5-5[1m]', 'c76bcb0e-227e-4e6f-8ab2-75781359af99', 12, 16, 2774, 269479, 30233, 0.3513038, 3709948);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1151, 1188, '2026-10-15T21:56:28Z', '2026-10-15T21:58:22Z', 'done', NULL, 0, 'c359c7eedd8b1a1ade2f724dcd62603f8819e17d', 'claude-opus-5-5[1m]', 'b4be69ca-a305-48d7-9065-f3e3e298e450', 18, 30, 6859, 686875, 50315, 0.6771950000000001, 3709948);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1152, 1189, '2026-10-15T21:58:22Z', '2026-10-15T22:01:55Z', 'done', NULL, 0, 'df2b519adfbfc56dd5e74339166b0a33ac6d1aa5', 'claude-opus-5-5[1m]', 'b4788545-7825-4a9b-b09b-afed7e163b7a', 22, 44, 16747, 1174026, 70081, 1.1305691999999998, 3709948);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -31303,6 +31354,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1152, 218);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1169, 217);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1173, 217);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1174, 220);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1190, 227);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
