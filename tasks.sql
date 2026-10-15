@@ -227,11 +227,14 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 - Start never shows a supply report; a pool too small for the chosen group and bundles shows on the Choice screen only.
 
 Plan files: `plans/21-age-groups.md`, `plans/22-bundles.md`.', '2026-10-11T21:54:56Z', NULL, 0);
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (6, 'Screen polish leftovers', 'open', 'Two leftovers from the finished visual and sound milestones (M3, M4).
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (6, 'Screen polish leftovers', 'open', 'Leftovers from the finished visual and sound milestones (M3, M4), plus playful iconography before a game session.
 
 ## Outcome
 - The next screen''s media is preloaded before it fades in; `PLACEHOLDER(UI-7)` is gone (UI-7).
 - Real sound assets replace the synthesized music loops, whooshes, pops and joker sounds; Kenney.nl CC0 packs are the next source to try (UI-10).
+- Playful iconography before a game session (developer, 2026-10-14):
+  - icons on the buttons of the screens before play (start, player, configure, customize, …), playful, in the VD-8 style (`Icon.svelte`: inline SVG, no emoji)
+  - language selection shows flags (replaces decision 157''s globe): `es` a few Latin American flags, `es-ES` Spain, `en` UK and US, `de` Germany, Austria and Switzerland; on the language screen and Start''s language button
 
 ## Constraints
 - CC0 or otherwise allowlisted licenses only (D-45); assets stay offline.
@@ -239,6 +242,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 ## Done when
 - `grep -rn PLACEHOLDER app/client/src` is empty.
 - The gamemaster approves the new sounds on the TV.
+- Every button before a game session has its icon; every language shows its flags; the developer approves them in the screen gallery.
 
 Plan files: `plans/04-ui-tv-display.md`.', '2026-10-11T21:54:56Z', NULL, 0);
 INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (7, 'Steam S2: product definition', 'open', 'The first phase of the Steam track (D-34) is decisions, not code: what the product is before anything Steam-specific gets built. It can run alongside the other milestones.
@@ -24709,6 +24713,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - The task note cites milestone 10''s "Done when": beta installed from Steam on a second machine and played by the family; without a Steam user nothing persists and flags are off; with one, saves sync through Steam Cloud (decision 75 or the beta Cloud row); Deck review requested and its result (or S6 deferral) noted in plan 18; `qgen validate` unaffected.', '2026-10-14T23:39:32Z', NULL, 1067, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1071, 95, 'German launch announcement: game name per decision 78', 'work', 'done', NULL, '2026-10-14, plans/11-steam.md: German announcement title/body «Wohnzimmer-Quiz» (decision 78, 17a), «Spielleitermodus» per de.md (was «Mit Spielleitung»), facts line names the German store name; body already infinitive/impersonal, no ihr', '`plans/11-steam.md` "Launch (S6)" → "Announcement texts" → "German" uses «Living Room Trivia» (title, body) and the facts line says "German: no localized name"; `decision 78: German store name (PUB-8, D-50): keep «Living Room Trivia» or a localized one?` picked «Wohnzimmer-Quiz» (provisional until PUB-7''s check, `plans/17a-store-page.md` "German"). Use the German store name as 17a has it at the time, fix the facts line. Also check the German body against `app/client/src/locales/style/de.md` (no «ihr» imperatives: «Markiert», «öffnet» style left elsewhere in the text). Docs only.', '2026-10-14T23:42:05Z', '2026-10-14T23:42:56Z', 862, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1072, 94, 'Coming soon checklist: German store name per decision 78', 'work', 'done', NULL, '2026-10-14, plans/11-steam.md', '`plans/11-steam.md` "Launch (S6)" → "Developer checklist" step 1 says "Names per D-50 set in Steamworks: «Living Room Trivia», localized «Trivia en Familia»" and omits German; `decision 78: German store name (PUB-8, D-50): keep «Living Room Trivia» or a localized one?` picked «Wohnzimmer-Quiz» (provisional until PUB-7''s check, `plans/17a-store-page.md` "German"). Add the German localized name as 17a has it, cite decision 78, PUB-7 check for all three names. Also line 69 (OQ-34 row) names only en/es: add de. Docs only.', '2026-10-14T23:42:56Z', '2026-10-14T23:43:11Z', 1071, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1073, 6, 'revise the masterplan of milestone 6: Screen polish leftovers', 'revise', 'open', 1000, NULL, '`milestone 6: Screen polish leftovers` changed. Bring `plan 6: masterplan`, the masterplan, in line with it (`pm plan edit 6 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-15T01:42:11Z', NULL, NULL, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
