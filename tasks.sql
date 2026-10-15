@@ -15189,7 +15189,7 @@ Replace the `PLACEHOLDER(…)` under `## Executive summary` at the top of `code-
 ## Check
 - `grep -n PLACEHOLDER code-review.md` finds nothing under `## Executive summary`; numbers match a re-run of the script.
 - Stage `code-review.md`.', '2026-10-12T23:10:57Z', '2026-10-15T03:16:06Z', 523, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (591, 83, 'Part 11: final checks and close milestone 13''s review', 'work', 'open', NULL, NULL, 'Task 4 of `plan 83: Executive summary and close-out (code review part 11)`, last task of milestone 13.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (591, 83, 'Part 11: final checks and close milestone 13''s review', 'work', 'done', NULL, '2026-10-14, code-review.md (### Close-out): npm run check, npm test (17), npm run build, qgen validate, nix develop -c true, trivia-desktop-build pass; Done when met; no open PLACEHOLDER; pending tasks/decisions stay listed', 'Task 4 of `plan 83: Executive summary and close-out (code review part 11)`, last task of milestone 13.
 
 ## What
 - `npm run check`, `npm test`, `npm run build`, `qgen validate`; plus `nix develop -c true` and `trivia-desktop-build` if `flake.nix`/`flake.lock`/`package-lock.json` changed since milestone 13''s first commit (`git log --oneline -- flake.nix flake.lock package-lock.json` vs. the first `task 5xx` commit of plan 73). `nix build .#app` and `trivia` are gone (`plan 99: Retire the browser game and the Python game server`).
@@ -15200,7 +15200,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Check
 - All checks above pass; note the results in the done note.
-- Stage any doc fixes.', '2026-10-12T23:10:57Z', NULL, 523, 0);
+- Stage any doc fixes.', '2026-10-12T23:10:57Z', '2026-10-15T03:22:43Z', 523, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (592, 59, 'Start screen subtitle follows the game''s levels', 'work', 'done', NULL, '2026-10-12, app/client/src/game/Game.svelte, app/client/src/locales/{es,en}.ts: subtitle {n} = levelsOf(game) (latest game, running or finished; none = 12), plural one/other; browser walk not done, verified by throw-away script (5, 1, 20, missing, null)', '`screen.start.subtitle` («12 preguntas seguidas para llegar a la cima», en "12 questions in a row to reach the top") hardcodes 12; with D-88 (`settings.levels` 1–20) a running game or the configured choice can have another count.
 - `app/client/src/game/Game.svelte` Start screen: `{n}` = `levelsOf(game)` (`game/levels.ts`) for a running game, else the last choice''s `levels` (or 12); catalog `screen.start.subtitle` in every locale gets `{n}` (singular for 1 if needed).
 - Check: `npm run check`, `npm run build`, `npm run check:literals -w app/client`; browser: a running 5-level game shows 5, a fresh save 12.', '2026-10-12T23:20:39Z', '2026-10-12T23:22:15Z', 499, 0);
@@ -29102,6 +29102,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1052, 1111, '2026-10-15T03:02:36Z', '2026-10-15T03:10:13Z', 'done', NULL, 0, '032ca10461bd5c248686fe1ec846cce9910a20fa', 'claude-opus-5-5[1m]', 'c898ceb9-bc9e-4009-8d82-e9624e87098b', 59, 112, 37561, 6653375, 153485, 3.310223, 2557536);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1053, 589, '2026-10-15T03:10:14Z', '2026-10-15T03:13:53Z', 'done', NULL, 0, '57f03d36b41f705b1cca95460da729ad5a1622ac', 'claude-opus-5-5[1m]', 'bc97d2e2-38d8-4ef7-8c4e-3760be324598', 31, 56, 19427, 2260581, 98134, 1.6259522000000004, 2557536);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1054, 590, '2026-10-15T03:13:53Z', '2026-10-15T03:16:15Z', 'done', NULL, 0, '35f9888498a6ebc02cb990338953a8f5727c38f4', 'claude-opus-5-5[1m]', 'fccd0745-776e-4068-b8a1-11790660d026', 17, 32, 10857, 967458, 73276, 0.9969676, 2557536);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1055, 591, '2026-10-15T03:16:15Z', '2026-10-15T03:22:48Z', 'done', NULL, 0, '93fd7c1ff4c905d4fbdf9fc8848fe1bbc9505a9f', 'claude-opus-5-5[1m]', '91990c3a-c4fa-42ea-a2ee-ecacbe633bd8', 9, 18, 3005, 367339, 39029, 0.4458718, 2557536);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

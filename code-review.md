@@ -2060,6 +2060,18 @@ Task 589, 2026-10-14. A throw-away script over the finding rows of parts 1–11 
   - swallowed promises: `decision 106: Adopt ESLint + typescript-eslint for no-floating-promises? (code review part 10)` keeps them a review item; Python broad excepts are option 2 of decision 198
   - tests kept by default: AGENTS.md already says so; `TESTONLY` exports are in decision 197
 
+### Close-out
+
+Task 591, 2026-10-14: final checks and milestone 13's "Done when", item by item.
+
+- Checks: `npm run check` (0 errors, 0 warnings; the five `tsconfig` flags = the lint pass), `npm test` (17 pass), `npm run build`, `qgen validate` (OK, 1211 questions) pass; `flake.nix`/`flake.lock`/`package-lock.json` changed during the milestone (12 commits since `3fc9358`) → `nix develop -c true` and `trivia-desktop-build` pass
+- Every in-scope file reviewed and listed: yes (`### Completeness`; no file added since task 588)
+- Every finding has a status: yes; open ones under `### Pending`
+- Executive summary on top: yes; no open `PLACEHOLDER` (only quoted markers and the live `PLACEHOLDER(868)` row)
+- Linter evaluated: yes (`### Linter evaluation`); five `tsconfig` flags inside `npm run check`, already a pre-commit check (AGENTS.md, D-73); no baseline file, no fix task
+- `code-review.md` in `directory.md`: yes
+- Not met: nothing; open follow-ups and decisions 196–201 stay listed under `### Pending` and `### Process decisions`
+
 ## Inventory
 
 Every `git ls-files` path in scope, mapped to the one part that reviews it (2026-10-13, 174 files; produced by a throw-away script that reported no unassigned file). Files added later are added here by the part that reviews them.
