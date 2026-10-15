@@ -38,14 +38,15 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen patch-notes [<from-ref> [<to-ref>]] [--out FILE] [--json]   # counts-only notes of a content patch (plan 96)
 
 Writing steps call `claude -p --json-schema` with prompts from authoring/tools/prompts/. Work files
-live in work/<run>/ and every step skips what is already done, so a run can be resumed.
+live in work/<run>/ and every step skips what is already done, so a run can be resumed. Every Claude call
+goes to work/<run>/calls.jsonl; a command that called Claude ends with a `claude:` totals line (decision 208).
 
 Revising questions that are already in the pool (07, QG-13):
 
     qgen import --run <run> --batch <batch> [--assign-unbatched]
     qgen rate | factcheck | revise | apply --run <run>
 """
-import argparse, concurrent.futures, datetime, difflib, json, os, random, re, subprocess, sys, threading, time, unicodedata
+import argparse, atexit, concurrent.futures, datetime, difflib, json, os, random, re, subprocess, sys, threading, time, unicodedata
 import urllib.parse
 from pathlib import Path
 from collections import Counter
@@ -336,11 +337,66 @@ def main_model(out):
 
 
 CLAUDE_TIMEOUT = 1800  # seconds per `claude -p` call
+TOKENS = (("input", "input_tokens", "inputTokens"), ("output", "output_tokens", "outputTokens"),
+          ("cache_read", "cache_read_input_tokens", "cacheReadInputTokens"),
+          ("cache_write", "cache_creation_input_tokens", "cacheCreationInputTokens"))
+
+
+def human(n):
+    return f"{n / 1e6:.1f}M" if n >= 1e6 else f"{n / 1e3:.0f}k" if n >= 1e3 else str(n)
+
+
+class Calls:
+    """This process's Claude calls, summed for the closing `claude:` line (decision 208)."""
+
+    def __init__(self):
+        self.lock, self.all = threading.Lock(), []
+
+    def log(self, cwd, model, outcome, out, seconds):
+        """One call (attempt) into <cwd>/calls.jsonl and the totals; returns the result line's "$0.84 31k tok"."""
+        out = out or {}
+        per_model = out.get("modelUsage") or {}
+        usage = out.get("usage") or {}
+        rec = {"time": datetime.datetime.now().isoformat(timespec="seconds"),
+               "step": progress.where()[0], "item": progress.where()[1], "model": model, "outcome": outcome,
+               "models": sorted(per_model), "usd": out.get("total_cost_usd"), "turns": out.get("num_turns"),
+               "ms": out.get("duration_ms"), "seconds": round(seconds, 1)}
+        for key, snake, camel in TOKENS:
+            rec[key] = (sum(u.get(camel) or 0 for u in per_model.values()) if per_model
+                        else usage.get(snake) if snake in usage else None)
+        with self.lock:
+            if not self.all:
+                atexit.register(self.summary)
+            self.all.append(rec)
+            with open(Path(cwd) / "calls.jsonl", "a", encoding="utf-8") as f:
+                f.write(json.dumps(rec) + "\n")
+        tok = sum(rec[k] or 0 for k, *_ in TOKENS)
+        return " ".join(([f"${rec['usd']:.2f}"] if rec["usd"] is not None else []) + ([f"{human(tok)} tok"] if tok else []))
+
+    def summary(self):
+        """`claude: 112 calls (3 failed, 2 retried), opus 98 / sonnet 14, 412 turns, 4.1M tokens (3.2M cache), $41.20, 2h51m in calls`"""
+        with self.lock:
+            c = list(self.all)
+        if not c:
+            return
+        n = Counter(r["outcome"] for r in c)
+        models = Counter(r["model"] for r in c)
+        cache = sum((r["cache_read"] or 0) + (r["cache_write"] or 0) for r in c)
+        tok = sum(r[k] or 0 for r in c for k, *_ in TOKENS)
+        progress.say(f"claude: {len(c)} calls ({n['failed']} failed, {n['retry']} retried"
+                     + (f", {n['limit']} usage limit" if n["limit"] else "") + "), "
+                     + " / ".join(f"{m} {k}" for m, k in models.most_common()) + ", "
+                     f"{sum(r['turns'] or 0 for r in c)} turns, {human(tok)} tokens ({human(cache)} cache), "
+                     f"${sum(r['usd'] or 0 for r in c):.2f}, {progress.duration(sum(r['seconds'] for r in c))} in calls", err=True)
+
+
+CALLS = Calls()
 
 
 def claude(system, user, schema, model, cwd, web=False, retries=2, read=False, with_model=False):
     """One fresh `claude -p` session returning structured output (and the model id if asked).
-    read=True lets the session open files under cwd with the Read tool (contact sheets)."""
+    read=True lets the session open files under cwd with the Read tool (contact sheets).
+    Every attempt goes to <cwd>/calls.jsonl and CALLS (decision 208)."""
     cmd = ["claude", "-p", "--output-format", "json", "--no-session-persistence",
            "--model", model, "--system-prompt", system, "--json-schema", json.dumps(schema)]
     if web:
@@ -353,35 +409,49 @@ def claude(system, user, schema, model, cwd, web=False, retries=2, read=False, w
     for attempt in range(retries + 1):
         if attempt and _interrupted.is_set():
             break
-        again = f", retry {attempt + 1}/{retries}" if attempt < retries else ""
         with progress.waiting(f"claude {model}") as call:
-            p = subprocess.run(cmd, input=user, capture_output=True, text=True, cwd=cwd, timeout=CLAUDE_TIMEOUT)
+            t = time.monotonic()
+            try:
+                p = subprocess.run(cmd, input=user, capture_output=True, text=True, cwd=cwd, timeout=CLAUDE_TIMEOUT)
+            except BaseException:  # timeout, Ctrl-C: still a call
+                CALLS.log(cwd, model, "failed", None, time.monotonic() - t)
+                raise
+            seconds = time.monotonic() - t
+            more = attempt < retries and not _interrupted.is_set()
+            again = f", retry {attempt + 1}/{retries}" if more else ""
             try:
                 out = json.loads(p.stdout)
             except json.JSONDecodeError:
                 last = f"no JSON from claude (exit {p.returncode}): {p.stderr.strip()[:300] or p.stdout[:300]}"
+                call.extra = CALLS.log(cwd, model, "retry" if more else "failed", None, seconds)
                 call.result(f"failed (exit {p.returncode}): {progress.short(p.stderr or p.stdout or 'no output')}{again}")
                 continue
-            # every JSON result, failed ones too: they cost money
-            with open(Path(cwd) / "costs.log", "a", encoding="utf-8") as f:
-                f.write(f"{model}\t{out.get('total_cost_usd')}\n")
             if out.get("is_error") or out.get("structured_output") is None:
                 last = f"claude error: {str(out.get('result'))[:300]}"
                 if any(w in last.lower() for w in LIMIT_WORDS):
+                    call.extra = CALLS.log(cwd, model, "limit", out, seconds)
                     call.result("usage limit")
                     raise UsageLimit(last)
+                call.extra = CALLS.log(cwd, model, "retry" if more else "failed", out, seconds)
                 call.result(f"failed (exit {p.returncode}): {progress.short(out.get('result') or 'no structured output')}{again}")
                 continue
+            call.extra = CALLS.log(cwd, model, "ok", out, seconds)
         return (out["structured_output"], main_model(out)) if with_model else out["structured_output"]
     raise RuntimeError(last)
 
 
-def costs(path):
-    """Dollar amounts in a costs.log, one per Claude call."""
-    if not path.exists():
-        return []
-    cells = [line.split("\t") for line in path.read_text(encoding="utf-8").splitlines()]
-    return [float(c[1]) for c in cells if len(c) == 2 and c[1] not in ("None", "")]
+def calls(d):
+    """Every Claude call logged in the work directory d: calls.jsonl, and costs.log from before task 1134."""
+    old, new = d / "costs.log", d / "calls.jsonl"
+    cells = [line.split("\t") for line in old.read_text(encoding="utf-8").splitlines()] if old.exists() else []
+    return ([{"model": c[0], "usd": None if c[1] in ("None", "") else float(c[1])} for c in cells if len(c) == 2]
+            + ([json.loads(line) for line in new.read_text(encoding="utf-8").splitlines() if line.strip()]
+               if new.exists() else []))
+
+
+def costs(d):
+    """Dollar amounts of the Claude calls in the work directory d, one per call that reported one."""
+    return [c["usd"] for c in calls(d) if c.get("usd") is not None]
 
 
 # --- schemas ------------------------------------------------------------------
@@ -2104,9 +2174,9 @@ def cost_runs(pool):
     runs, skipped = [], []
     for d in sorted((p for p in WORK.iterdir() if p.is_dir()), key=lambda p: natural_key(p.name)):
         run, kind = d.name, run_kind(d.name)
-        own, audit = costs(d / "costs.log"), costs(d / "audit" / "costs.log")
+        own, audit = costs(d), costs(d / "audit")
         if not own and not audit:
-            skipped.append(f"{run}: no costs.log")
+            skipped.append(f"{run}: no calls.jsonl or costs.log")
             continue
         approved, locale = None, None
         bundle = (load_json(d / "run.json", {}) or {}).get("bundle", "base") if kind in ("batch", "translation") else None
@@ -2194,7 +2264,7 @@ def report_cost(args):
     if args.json:
         return print(json.dumps(r, ensure_ascii=False))
     usd = lambda x: "–" if x is None else f"${x:.2f}"
-    print("cost per run (plan 70, CT-3; work/*/costs.log at list price; $/approved = the run's own log, as batches.md)")
+    print("cost per run (plan 70, CT-3; work/*/calls.jsonl or costs.log at list price; $/approved = the run's own log, as batches.md)")
     rows = [("run", "kind", "calls", "$", "audit $", "approved", "$/approved")]
     rows += [(x["run"], x["kind"] + (f" {x['locale']}" if x["locale"] else ""), str(x["calls"]), usd(x["cost"]),
               usd(x["audit"]) if x["audit"] else "–", "–" if x["approved"] is None else str(x["approved"]),
@@ -3246,7 +3316,7 @@ def audit_section(run):
     both = [i for i in found if i in dec]
     agree = sum((dec[i] == "approved") == (not is_major(found[i])) for i in both)
     lines.append(f"- Audit/review agreement (both accept or both not): {pct(agree, len(both))}")
-    c = costs(WORK / run / "audit" / "costs.log")
+    c = costs(WORK / run / "audit")
     lines += [f"- {'Slice' if back else 'Sample'}: {len(found)} audited of {len(dec) if back else len(audit_sample(run))}; "
               f"{len(c)} Claude calls, about ${sum(c):.2f}",
               "", "Major findings on approved questions:", ""]
@@ -3284,7 +3354,7 @@ def cmd_batch_report(args):
     qs = [q for q in load_json(POOL)["questions"] if q.get("batch") == args.run]
     cfg = load_json(d / "run.json", {})
     dropped = load_json(d / "dropped.json", [])
-    calls = costs(d / "costs.log") + costs(d / "audit" / "costs.log")
+    calls = costs(d) + costs(d / "audit")
     models = sorted({(q.get("review") or {}).get("model") for q in qs} - {None})
     approved = [q for q in qs if q["status"] == "approved"]
     work = [q for q in qs if q["status"] == "needs_work"]
@@ -3338,7 +3408,8 @@ def run_steps(steps, again, run=None):
         progress.failures.clear()
         t = time.monotonic()
         try:
-            errors = fn(a) or []
+            with progress.item(name, None):
+                errors = fn(a) or []
         except UsageLimit as e:  # a call outside parallel()
             errors = [e]
         print(f"   {name} took {progress.duration(time.monotonic() - t)} "
@@ -3618,7 +3689,7 @@ def write_translate_report(run):
     qs = {q["id"]: q for q in batch_questions(run, ("approved", "needs_work", "draft", "rejected"))}
     work = [q for q in qs.values() if q["status"] == "needs_work"]
     away = load_json(d / "not-travelling.json", [])
-    calls = costs(d / "costs.log") + costs(d / "audit" / "costs.log")
+    calls = costs(d) + costs(d / "audit")
     usd = lambda x: "–" if x is None else f"${x:.2f}"
     lines = [f"# {run}", "",
              f"Made by `qgen batch --translate {locale}` on {datetime.date.today().isoformat()} (plan 66, D-81): "
@@ -3866,12 +3937,12 @@ def print_neutralize_scan(run):
         print(f"\nNo neutral form ({len(extras)}, left as they are):")
         for f in extras:
             print(f"- {f['id']}: {f['words']}")
-    scan = sum(costs(WORK / run / "costs.log"))
+    scan = sum(costs(WORK / run))
     past = [(p.parent, c) for p in WORK.glob("*/run.json") if (c := load_json(p)) and c.get("done")
             and c.get("mode") in ("rework", *SCANS) and c.get("ids")]
     n = sum(len(c["ids"]) for _, c in past)
-    per_q = sum(sum(costs(p / "costs.log")) for p, _ in past) / n if n else None
-    audit = [x for p in WORK.glob("*/audit/costs.log") for x in costs(p)]
+    per_q = sum(sum(costs(p)) for p, _ in past) / n if n else None
+    audit = [x for p in WORK.glob("*/audit") for x in costs(p)]
     per_audit = sum(audit) / len(audit) if audit else 0
     if per_q is None:
         print(f"\nScan: ${scan:.2f}. No finished rework/tighten/neutralize run yet to estimate the rest from.")
@@ -3888,7 +3959,7 @@ def write_neutralize_report(run, revised):
     cfg = load_json(WORK / run / "run.json")
     by_id = {q["id"]: q for q in load_json(POOL)["questions"]}
     work = [i for i in revised if i in by_id and by_id[i]["status"] == "needs_work"]
-    c = costs(WORK / run / "costs.log") + costs(WORK / run / "audit" / "costs.log")
+    c = costs(WORK / run / "costs.log") + costs(WORK / run / "audit")
     lines = [f"# {run}", "",
              f"Made by `qgen neutralize` on {datetime.date.today().isoformat()} (plan 64, D-78): `base` questions "
              "reworded from Colombian or other national usage into neutral Spanish. Generated file: don't edit by hand.", "",

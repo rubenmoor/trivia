@@ -50,16 +50,22 @@ def resumed(label, done, todo, unit="items"):
 def item(step, name):
     """What the current thread works on, named by every waiting() line inside the block."""
     old = getattr(_ctx, "where", None)
-    _ctx.where = f"{step} {name}"
+    _ctx.where = (step, name)
     try:
         yield
     finally:
         _ctx.where = old
 
 
+def where():
+    """(step, item) of the current thread, or (None, None)."""
+    return getattr(_ctx, "where", None) or (None, None)
+
+
 class _Call:
     def __init__(self):
         self.outcome = None
+        self.extra = ""  # after the duration: "$0.84 31k tok"
 
     def result(self, text):
         """The result line's text ("ok 12 results", "failed (exit 1): …"); default "ok"."""
@@ -75,8 +81,7 @@ def short(text, n=160):
 def waiting(what):
     """A start line and a result line, with its duration, for one outside call ("claude opus",
     "Openverse search", …). An exception from the block is logged as "failed: …" and re-raised."""
-    where = getattr(_ctx, "where", None)
-    head = what + (f" {where}" if where else "")
+    head = " ".join(x for x in (what, *where()) if x)
     say(f"{time.strftime('%H:%M:%S')} {head}")
     call, t = _Call(), time.monotonic()
     try:
@@ -85,7 +90,8 @@ def waiting(what):
         call.outcome = call.outcome or f"failed: {short(e) or type(e).__name__}"
         raise
     finally:
-        say(f"{time.strftime('%H:%M:%S')} {head} {call.outcome or 'ok'} {duration(time.monotonic() - t)}")
+        say(f"{time.strftime('%H:%M:%S')} {head} {call.outcome or 'ok'} {duration(time.monotonic() - t)}"
+            + (f" {call.extra}" if call.extra else ""))
 
 
 def duration(seconds):

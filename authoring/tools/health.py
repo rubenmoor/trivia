@@ -116,9 +116,8 @@ def batch_health(run, pool=None):
     h["media share"] = rate(sum(q["axes"].get("stimulus") != "none" for q in with_axes), len(with_axes))
     fun = [r["fun"] for r in ratings.values() if "fun" in r]
     h["mean fun"] = sum(fun) / len(fun) if fun else None
-    log = d / "costs.log"
-    calls = sum(line.count("\t") == 1 for line in log.read_text(encoding="utf-8").splitlines()) if log.exists() else 0
-    dollars = sum(qgen.costs(log))
+    calls = len(qgen.calls(d))
+    dollars = sum(qgen.costs(d))
     h |= {"cost $": dollars, "$ per approved": rate(dollars, len(approved)),
           "calls": calls, "calls per approved": rate(calls, len(approved))}
     secs = cfg.get("seconds")
@@ -258,7 +257,7 @@ def translation_health(run):
     both = [i for i in found if i in dec]
     h["audited"] = len(found)
     h["audit/review agreement"] = rate(sum((dec[i] == "approved") == (not qgen.is_major(found[i])) for i in both), len(both))
-    dollars = sum(qgen.costs(d / "costs.log"))
+    dollars = sum(qgen.costs(d))
     h |= {"cost $": dollars, "$ per approved": rate(dollars, m - len(work))}
     return h
 

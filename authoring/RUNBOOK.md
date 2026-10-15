@@ -20,13 +20,13 @@ One command does all the work: choosing subcategories, drafting, rating, fact-ch
    |---|---|---|
    | 0 | The batch is done | Go to step 4 |
    | 75 | Claude's usage limit without a reset time it could read | Stop. Tell the user the batch stopped at a usage limit and quote the message, including the reset time. When the user says to continue, go back to step 2 (same command) |
-   | 1 | A step failed | Run step 2 again. If it fails at the **same step three times in a row**, stop and give the user the last 30 lines of output verbatim |
+   | 1 | A step failed | Run step 2 again. If it fails at the **same step three times in a row**, stop and give the user the last 30 lines of output verbatim (they end with the `claude:` line) |
    | 2 | The last batch failed the batch health thresholds (plan 15), or (`--translate`) the last run was the language's pilot `tr-<locale>-1`; no new batch started | Stop. Give the user the output verbatim. Only the developer clears it (`qgen health ack`) |
    | other | Unexpected | Stop and give the user the last 30 lines of output verbatim |
 
    If the output says "More than one unfinished batch", stop and ask the user which one to finish. If it says a batch "is unfinished and writes for bundle …", stop and tell the user. Run the command it names only if they say so. Under `pm run`, "stop" and "tell the user" mean a pm decision: see below.
 4. **Commit.** Run exactly the two `git add` / `git commit` lines printed after "Commit exactly this:". Nothing else goes into the commit. Don't push unless the user asks. Under `pm run`: stage only, see below.
-5. **Report.** Tell the user the "Done:" line, the path of the report (`authoring/reports/<batch>.md`; `tr-<locale>-<n>.md` for a translation run), and that they can check the questions at http://127.0.0.1:8001/review?batch=<batch> (run `trivia-authoring`). Quality control of the batch follows `authoring/QC.md`; it is the developer's, not part of this procedure. Under `pm run`: into the task's note, see below.
+5. **Report.** Tell the user the "Done:" line, the `claude:` line (calls, tokens, $; printed last, also on a failure or stop, decision 208), the path of the report (`authoring/reports/<batch>.md`; `tr-<locale>-<n>.md` for a translation run), and that they can check the questions at http://127.0.0.1:8001/review?batch=<batch> (run `trivia-authoring`). Quality control of the batch follows `authoring/QC.md`; it is the developer's, not part of this procedure. Under `pm run`: into the task's note, see below.
 
 ## Under `pm run`
 
@@ -56,7 +56,8 @@ A pm worker (environment `PM_WORKER=1`) follows the steps above with these chang
   | step 1: dirty tree | `Dirty tree before <task>'s batch: what to do?` | `git status --porcelain` |
 
 - **Step 4:** run exactly the printed `git add` line(s); don't run the printed `git commit` (pm commits as "task N: …"). Same for `qgen rework`, `tighten`, `neutralize`, `audit --backlog`.
-- **Step 5:** `pm task done <task> "<YYYY-MM-DD>, Done: <the Done: line>, report <path>"`.
+- **Step 5:** `pm task done <task> "<YYYY-MM-DD>, Done: <the Done: line>, <the claude: line>, report <path>"`.
+- **Every stop** (decision, fix task, `pm task done`): the `claude:` line of each `qgen` run in the task goes into the task's note or the decision's body (decision 208).
 
 ## Never
 

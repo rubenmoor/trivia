@@ -24,6 +24,7 @@ Family trivia party game, shown on a TV: the family plays against the gamemaster
 - Game is muted under `PM_WORKER`; outside pm, launch with `TRIVIA_MUTE=1` unless the work is about sound; `TRIVIA_SOUND=1` for sound checks.
 - Stop background processes by PID (`kill $!`), never `pkill -f`: the pattern can match your own `claude` process.
 - No secrets in the repo, no accounts of our own; telemetry only opt-in.
+- A script that calls claude reports its calls and totals (decision 208: What must a script that calls claude report to its caller?).
 - Changing UI strings (`app/client/src/locales/`): read `locales/style/<locale>.md` first; new bad patterns found go into it.
 - Unpolished game parts: `PLACEHOLDER(<task id>)` in code and on screen.
 - "Gamemaster": only the in-game role (Gamemaster mode); the human is "the developer".
