@@ -519,7 +519,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 ## Done when
 - All three languages playable in the released game, store pages localized, content target met per language.
 - zh game plays `chinese-base` (5000 approved) instead of `base`.', '2026-10-12T16:46:08Z', NULL, 5);
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (13, 'Code quality', 'open', 'The code grew fast through many pm workers (milestones 1–11, ~24k lines in `app/` and `authoring/`) and nobody has read it as a whole. This milestone reviews it file by file, fixes what is cheap to fix and writes everything down in one report for the gamemaster.
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (13, 'Code quality', 'implemented', 'The code grew fast through many pm workers (milestones 1–11, ~24k lines in `app/` and `authoring/`) and nobody has read it as a whole. This milestone reviews it file by file, fixes what is cheap to fix and writes everything down in one report for the gamemaster.
 
 ## Priority
 - Every plan and task of this milestone runs at priority 0: after the other milestones'' work (only the planning tasks stay at 1000).
@@ -563,7 +563,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 - Every code file in scope is reviewed and listed in `code-review.md`.
 - Every finding has a status; the executive summary is on top.
 - Linter evaluated; if adopted: the lint pass runs before every commit touching TypeScript and reports no issues.
-- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T22:44:46Z', NULL, 0);
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T22:44:46Z', '2026-10-15T19:19:52Z', 0);
 INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (14, 'Opt-in telemetry', 'open', 'Anonymous, opt-in gameplay data to tune difficulty and see how the game is played. Builds on milestone 11''s report server. In the launch build if ready in time, else the first patch after launch; the launch doesn''t wait for it.
 
 ## Outcome
