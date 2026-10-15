@@ -26677,8 +26677,18 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Suggested fix: on resume, skip the stale-export check (or the whole validate) of the scan-only `run_steps` call, or run scan and the revise steps in one `run_steps` call so validate runs once at the end after `export`.
 - Check: with `work/neutralize-1/` as left by task 632 (unexported `questions.json` diff), `nix develop -c qgen neutralize` resumes at `fix`, retries the failed item and continues; or reproduce on a small `qgen tighten --ids …` run interrupted after `fix`.
 - Don''t commit or revert the partial `authoring/data/questions.json` from task 632; the resume task needs it.', '2026-10-15T19:36:44Z', '2026-10-15T19:38:11Z', 632, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1143, 58, 'create tasks for plan 58: Fable as an opt-in model for qgen rework', 'split', 'open', 1000, NULL, 'Split plan 58 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:01:15Z', NULL, 345, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1143, 58, 'create tasks for plan 58: Fable as an opt-in model for qgen rework', 'split', 'done', 1000, '2026-10-15, tasks.sql (task 1144 added, waits on decision 216)', 'Split plan 58 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:01:15Z', '2026-10-15T20:02:03Z', 345, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1144, 58, 'Apply decision 216: Fable for qgen rework: keep, drop or try for batch review', 'work', 'open', NULL, NULL, 'Closes `plan 58: Fable as an opt-in model for qgen rework` once the developer has answered `decision 216: Fable for qgen rework: keep, drop or try for batch review? (plan 58)`. Experiment numbers: plan 58, section Result.
+
+Per answer:
+- **drop:** default stays `opus`, `--model fable` stays opt-in. Add a line to D-65 in `plans/decisions.md`: experiment result (rework-2: 52/79, $0.39/approved vs rework-1 $0.20) and the outcome. No code change.
+- **keep:** `qgen rework` default `--model` → `fable` in `authoring/tools/qgen.py` (`cmd_rework`); update D-65 and `authoring/RUNBOOK.md` (rework step), AGENTS.md command list if it names the default. `qgen batch`, `tighten`, `REVIEW_MODEL` unchanged.
+- **extend:** new plan in milestone 1 (`pm plan add 1 …`, priority 650) "Fable for batch review": cost (~+$150–200 per batch, plan 58 Cost facts), a measurable comparison, opt-in flag. Default for rework stays opus; D-65 note as for drop.
+
+In every case also note in D-65: review 2 (opus) only runs after a new media search, so in rework Fable''s review 1 gives the final verdict (found by `task 345: Fable rework experiment: run, compare with rework-1, keep/drop/extend decision`).
+
+Done when D-65 reflects the answer and `pm decision consequences 216 "…"` is recorded.', '2026-10-15T20:02:01Z', NULL, 1143, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -29905,6 +29915,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1111, 638, '2026-10-15T19:39:29Z', '2026-10-15T19:39:43Z', 'blocked', NULL, 0, '8f87f334bee347d46f29590b047b3accd4cfcabd', 'claude-opus-5-5[1m]', '10b4cf26-5c42-40fa-ac09-50e31e1720e9', 4, 8, 898, 116173, 27860, 0.2641066, 3530483);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1112, 53, '2026-10-15T19:39:43Z', '2026-10-15T19:40:03Z', 'blocked', NULL, 0, '9996a58973220f9d4cdde1a629d6127fb003e0ea', 'claude-opus-5-5[1m]', '907cd10a-bd89-4a71-9c39-bb1145b99ab9', 7, 14, 1374, 236366, 30438, 0.3183132, 3530483);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1113, 345, '2026-10-15T19:40:03Z', '2026-10-15T20:01:45Z', 'done', NULL, 0, 'bc0967d4105c953ddefece4daeebf5a7098161b3', 'claude-opus-5-5[1m]', '7df4e445-bda1-41f2-9340-88d1371e01ad', 26, 52, 8900, 1181688, 46433, 0.78600959999999986, 3530483);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1114, 1143, '2026-10-15T20:01:45Z', '2026-10-15T20:02:08Z', 'done', NULL, 0, '13a7ae8b6f352bce8a31a5bc0b1d55ade3862baf', 'claude-opus-5-5[1m]', 'd81f229e-412f-4d50-9334-a3350a94cb86', 5, 10, 1969, 139380, 24196, 0.260864, 3530483);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -30252,6 +30263,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1137, 213);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1138, 213);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1139, 213);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1140, 213);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1144, 216);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
