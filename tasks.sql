@@ -26064,7 +26064,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
   - `task 459: LUI-5: playtest fixes and close-out`
 
 Done when: the record and five decisions exist, 15a has the section, the links are set. Check: `qgen validate` (docs only).', '2026-10-15T01:54:42Z', '2026-10-15T02:14:16Z', 1093, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1097, 136, 'Decisions: es, es-ES, de joker names and keys', 'work', 'open', NULL, NULL, 'Plan 136 task 2; runs after the five English name decisions of `task 1096: Decisions: supersede old joker names, English names per joker` are answered (`pm show` this task lists them).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1097, 136, 'Decisions: es, es-ES, de joker names and keys', 'work', 'done', NULL, '2026-10-15, decisions 210 (es), 211 (es-ES), 212 (de); plans/15a-ui-translation.md; tasks 1098, 1100, 1101 pending on them', 'Plan 136 task 2; runs after the five English name decisions of `task 1096: Decisions: supersede old joker names, English names per joker` are answered (`pm show` this task lists them).
 
 - Read `plan 136: Joker names and symbols, defined again` (Design: Translations, Keys), `decision 53: Joker and action keys per UI language (LUI-4)?`, `locales/style/{es,es-ES,de}.md` (de: no plural address, infinitive style).
 - Three `pm decision add`, one per locale (`es`, `es-ES`, `de`), all five jokers at once (names work together, keys collide per catalog): per joker 2–3 candidates translated from the English answer, recommended first, ≤ 13 characters; plus key letter (mnemonic, unique per catalog, not `A`–`D`, no digit, no clash on the same screen: the `check:literals` rule), the plural for «ya no les quedan …» (`error.joker_spent.*`), the hint-note form («Soplo {n}» today), extra leaves (`joker.skip.pass`/`stamp`/`purge`, `joker.easier.dial`, `joker.category.title`, `snipe.*`). Options: "as recommended" first, then alternatives.
@@ -26072,7 +26072,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Candidate lists into `plans/15a-ui-translation.md` "Joker names".
 - `pm task-pending-decision` on all three: `task 1098: New joker names in the catalogs and everywhere they show`, `task 1100: Joker names in store and achievement texts`, `task 1101: Gallery check and review of joker names and symbols`.
 
-Done when: three decisions exist, 15a updated, links set.', '2026-10-15T01:54:42Z', NULL, 1093, 0);
+Done when: three decisions exist, 15a updated, links set.', '2026-10-15T01:54:42Z', '2026-10-15T19:00:34Z', 1093, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1098, 136, 'New joker names in the catalogs and everywhere they show', 'work', 'open', NULL, NULL, 'Plan 136 task 3; runs after the English decisions of `task 1096: Decisions: supersede old joker names, English names per joker` and the es/es-ES/de decisions of `task 1097: Decisions: es, es-ES, de joker names and keys` are answered; if `task 1097` is still open, stop with a note. User-visible text only: code ids (`hint` …), Steam API names (`FIRST_SOPLO` …), save fields and code comments stay.
 
 - Catalogs `app/client/src/locales/{en,es,es-ES,de}.ts` (`xx.ts` follows `es`): `joker.<id>.name`, `.key`, `.rule`, extras (`skip.pass`/`stamp`/`purge`, `easier.dial`, `category.title`, `snipe.*`), `joker.arm`, the hint note, `error.joker_spent.*` plural forms, `cards.intro` and any other string naming a joker (`rg` the old names). Keys per the answers; `check:literals` passes.
@@ -28513,6 +28513,80 @@ Candidates per joker (★ = recommended; answer with letters, e.g. "all ★" or 
   - T1 ★ crosshair with a curved arrow: today''s ring + ticks, an arc arrow curving into the centre
   - T2 suction-cup dart in a target: filled target rings, dart stuck in (plan 09''s cartoon shot)
   - T3 keep crosshair, only redrawn', NULL, NULL, '2026-10-15T18:57:38Z', NULL, 1135, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (210, 'Spanish joker names and keys (es), translated from the English?', 'pending', '["As recommended: Soplo (S), Paso y fuera (P), Hada madrina (H), Doña Exigente (E), Tiro mágico (T)", "Closer to the English: Pista (S), Paso y purga (P), Hada (H), Quisquillosa (Q), Carambola (L)", "Keep today''s: Soplo (S), Paso (P), Bájale (F), Cambiazo (T), Francotirador (X)", "Mixed: one candidate per joker from the list (keys as listed, clashes resolved as noted)"]', '`decision 188: Joker names English first, one symbol per joker (milestone 9)`, `plan 136: Joker names and symbols, defined again`; English answers `decision 190: English name for the hint joker (symbol bulb)?` … `decision 194: English name for the snipe joker (symbol crosshair)?`: Hint, Pass & Purge, Fairy, Ms Picky, Trick Shot (all kept). `es` is the family''s catalog (exception to D-59); `es-ES` follows it (own decision). Neutral Latin American Spanish, «ustedes» (`locales/style/es.md`). ≤ 13 characters, playful. Symbols: pending `decision 209: Joker symbols for the kept names?` (★ wand fits «Hada madrina», pointing hand fits «Doña Exigente»).
+
+Keys (`decision 53: Joker and action keys per UI language (LUI-4)?`, `check:literals`): Question screen has `A`–`D`, `R` replay, `V` peek, `M` flag taken; today S P F T X; a key changes only where the new name needs it.
+
+Candidates, recommended first, key in brackets:
+- **Hint** (today «Soplo»)
+  - Soplo (S): already means a whispered hint, playful, the family knows it
+  - Pista (S): the literal «hint», plain like the English
+  - Pistita (S): diminutive, playful
+- **Pass & Purge** (today «Paso»)
+  - Paso y fuera (P): pass, and the topic is out; echoes today''s purge line «Paso, y fuera el tema»
+  - Paso y purga (P): closest to the English alliteration; «purga» sounds harsh
+  - Paso (P): today''s, says nothing of the purge
+- **Fairy** (today «Bájale»)
+  - Hada madrina (H): the fairy godmother makes things easier; 12 characters
+  - Hada (H): literal, short
+  - Bájale (F): today''s, not a fairy
+- **Ms Picky** (today «Cambiazo»)
+  - Doña Exigente (E): a character like «Ms», picks the topic she wants; 13 characters; `D` is an answer key
+  - Quisquillosa (Q): «picky», one word
+  - Cambiazo (T): today''s, a swap, not picky
+- **Trick Shot** (today «Francotirador»)
+  - Tiro mágico (T): the trick shot that strikes a wrong answer; `T` free once «Cambiazo» goes (if «Cambiazo» stays: `I`)
+  - Carambola (L): billiards trick shot, also a lucky fluke; `C`, `A`, `R`, `M`, `B` taken
+  - Francotirador (X): today''s
+
+Leaves for the recommended set (es; `es-ES` gets «os»/«queréis» per its decision):
+- `joker.<id>.name`/`key`: Soplo S, Paso y fuera P, Hada madrina H, Doña Exigente E, Tiro mágico T
+- `error.joker_spent.*`: «ya no les quedan Soplos», «ya no les queda ningún Paso y fuera», «ya no les quedan Hadas madrinas», «ya no les queda ninguna Doña Exigente», «ya no les quedan Tiros mágicos»
+- hint note `screen.question.hint`: «Soplo {n}» (Pista: «Pista {n}»)
+- `joker.skip.pass` «Solo paso» (was «Paso», now part of the name); `stamp` «ELIMINADO» stays; `purge` «Paso y fuera: adiós al tema «{name}»»
+- `joker.easier.dial` «Dificultad» stays
+- `joker.category.title` «Doña Exigente: ¿qué tema quieren?»
+- `joker.snipe.*` (aim, false, shoot, hit) name no joker: stay; `arm` «¿Usar {name}?» and `rule` leaves stay', NULL, NULL, '2026-10-15T18:59:39Z', NULL, 1097, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (211, 'Spain joker names (es-ES): same as es?', 'pending', '["Same names and keys as es; only the vosotros leaves differ", "Own names where Spain differs (note which joker and name)"]', '`decision 188: Joker names English first, one symbol per joker (milestone 9)`, `plan 136: Joker names and symbols, defined again`. `es-ES.ts` overrides `es` only where it differs (`locales/style/es-ES.md`); names follow `decision 210: Spanish joker names and keys (es), translated from the English?`. None of its candidates (Soplo, Paso y fuera, Hada madrina, Doña Exigente, Tiro mágico; Pista, Paso y purga, Hada, Quisquillosa, Carambola) reads oddly in Spain, so no Spain-only names are proposed.
+
+Overrides with the recommended es set (address «vosotros»):
+- `error.joker_spent.*`: «ya no os quedan Soplos», «ya no os queda ningún Paso y fuera», «ya no os quedan Hadas madrinas», «ya no os queda ninguna Doña Exigente», «ya no os quedan Tiros mágicos»
+- `joker.category.title` «Doña Exigente: ¿qué tema queréis?»
+- keys, hint note, `skip.pass`/`stamp`/`purge`, `easier.dial`, `snipe.*` names: as `es`; existing `rule`/`aim`/`hit` overrides stay', NULL, NULL, '2026-10-15T18:59:56Z', NULL, 1097, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (212, 'German joker names and keys (de), translated from the English?', 'pending', '["As recommended: Zaunpfahl (Z), Näxt & weg (N), Gute Fee (F), Frau Pingelig (P), Trickschuss (T)", "Alternative set: Tipp (I), Und tschüss! (U), Glücksfee (F), Frau Mäkelig (K), Kunstschuss (S)", "Keep today''s: Zaunpfahl (Z), Näxt (N), Gang runter (G), Wunschzeit (W), Finte (F)", "Mixed: one candidate per joker from the list (keys as listed, clashes resolved as noted)"]', '`decision 188: Joker names English first, one symbol per joker (milestone 9)`, `plan 136: Joker names and symbols, defined again`; English answers `decision 190: English name for the hint joker (symbol bulb)?` … `decision 194: English name for the snipe joker (symbol crosshair)?`: Hint, Pass & Purge, Fairy, Ms Picky, Trick Shot (all kept). Replaces today''s names from `decision 54: German name for the hint joker «Soplo»?` … `decision 58: German name for the snipe joker «Francotirador»?`. `locales/style/de.md`: no plural address, infinitive prompts, „…“ quotes. ≤ 13 characters, playful. Symbols: pending `decision 209: Joker symbols for the kept names?` (★ wand fits «Gute Fee», pointing hand fits «Frau Pingelig»).
+
+Keys (`decision 53: Joker and action keys per UI language (LUI-4)?`, `check:literals`): Question screen has `A`–`D`, `R` replay, `V` peek, `M` flag taken; today Z N G W F.
+
+Candidates, recommended first, key in brackets:
+- **Hint** (today «Zaunpfahl»)
+  - Zaunpfahl (Z): «Wink mit dem Zaunpfahl», a broad hint; playful, already a translation of «Hint»
+  - Tipp (I): literal, plain; `T` goes to «Trickschuss»
+  - Geistesblitz (G): fits the bulb, but a flash of insight, not a hint
+- **Pass & Purge** (today «Näxt»)
+  - Näxt & weg (N): keeps «Näxt» (pass), adds the purge like the English «&»
+  - Und tschüss! (U): getting rid of question and topic, cheeky
+  - Weg damit! (W): «away with it»; clashes with «Wunschzeit» (W) if that stays
+- **Fairy** (today «Gang runter»)
+  - Gute Fee (F): the fairy godmother who makes things easy; `F` free once «Finte» goes
+  - Glücksfee (F): «lucky fairy», common idiom
+  - Fee (F): literal, shortest
+- **Ms Picky** (today «Wunschzeit»)
+  - Frau Pingelig (P): a character like «Ms», fussy; 13 characters
+  - Frau Mäkelig (K): «mäkelig» = picky (eater); `M` taken; clashes with «Kunstschuss» (K), then that one takes `S`
+  - Wunschzeit (W): today''s, a wish, not picky
+- **Trick Shot** (today «Finte»)
+  - Trickschuss (T): closest to the English
+  - Kunstschuss (S): the billiards trick shot; `K` if «Frau Mäkelig» isn''t picked
+  - Finte (F): today''s, a feint; clashes with the fairy names (F), then those take `E`
+
+Leaves for the recommended set:
+- `joker.<id>.name`/`key`: Zaunpfahl Z, Näxt & weg N, Gute Fee F, Frau Pingelig P, Trickschuss T
+- `error.joker_spent.*`: «kein Zaunpfahl mehr übrig», «kein „Näxt & weg“ mehr übrig», «keine „Gute Fee“ mehr übrig», «keine „Frau Pingelig“ mehr übrig», «kein Trickschuss mehr übrig»
+- hint note `screen.question.hint`: «Zaunpfahl {n}» (Tipp: «Tipp {n}»)
+- `joker.skip.pass` «Nur passen» and `stamp` «WEG» stay; `purge` «Näxt & weg: tschüss, Thema „{name}“»
+- `joker.easier.dial` «Schwierigkeit» stays
+- `joker.category.title` «Frau Pingelig: Welches Thema soll es sein?»
+- `joker.snipe.*` (aim, false, shoot, hit) name no joker: stay; `arm` «{name} einsetzen?» and `rule` leaves stay', NULL, NULL, '2026-10-15T18:59:56Z', NULL, 1097, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -29618,6 +29692,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1088, 1134, '2026-10-15T18:51:58Z', '2026-10-15T18:56:00Z', 'done', NULL, 0, '4093f4c6a451c20c2b9dc050df700c886aabac6f', 'claude-opus-5-5[1m]', 'bb4a5c66-6658-46de-990d-8b513abf2e9c', 24, 46, 17337, 1405005, 69552, 1.184341, 3530483);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1089, 1103, '2026-10-15T18:56:00Z', '2026-10-15T18:57:19Z', 'done', NULL, 0, '86dfb697f252cb5e706cb13329ea469bd7b7bba6', 'claude-opus-5-5[1m]', 'ca3d6441-24c6-4443-8e82-c8c55c29acbc', 21, 34, 6938, 804386, 58548, 0.7681572, 3530483);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1090, 1135, '2026-10-15T18:57:19Z', '2026-10-15T18:57:45Z', 'blocked', NULL, 0, '34e5f9a0b2882c9cf4c74166818f6102002ccdc3', 'claude-opus-5-5[1m]', '0606a40a-0d75-413a-83b3-575b775a1d1e', 5, 10, 2278, 163859, 31347, 0.3291478, 3530483);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1091, 1097, '2026-10-15T18:57:45Z', '2026-10-15T19:00:43Z', 'done', NULL, 0, '76bd4123d1da58f9c1159c8222b2aa039e8ca538', 'claude-opus-5-5[1m]', 'f50ccae3-76f0-4031-87b7-389fcdc991d2', 15, 28, 15563, 781830, 66618, 1.0006820000000003, 3530483);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -29921,6 +29996,9 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1098, 191);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1098, 192);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1098, 193);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1098, 194);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1098, 210);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1098, 211);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1098, 212);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1099, 190);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1099, 191);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1099, 192);
@@ -29932,12 +30010,18 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1100, 191);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1100, 192);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1100, 193);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1100, 194);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1100, 210);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1100, 211);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1100, 212);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1101, 190);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1101, 191);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1101, 192);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1101, 193);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1101, 194);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1101, 209);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1101, 210);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1101, 211);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1101, 212);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1103, 187);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1114, 196);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1115, 197);

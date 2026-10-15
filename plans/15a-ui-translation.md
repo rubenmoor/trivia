@@ -33,7 +33,13 @@ Milestone 9 defines the joker names again (pm decision 188, pm plan 136): one sy
   - `category`, compass (193): Change Course (C), True North (N), Detour (T), Compass (O), Ms Picky (K, today)
   - `snipe`, crosshair (194): Trick Shot (T, today), Sharpshooter (S), Long Shot (L), Pot Shot (O)
 - Symbols: none of the candidates needs a new one
-- Translations (`es`, `es-ES`, `de`): one decision per locale after the English answers, pm task 1097
+- English answers (2026-10-15): all kept, Hint (H), Pass & Purge (P), Fairy (F), Ms Picky (K), Trick Shot (T); symbols for them: pm decision 209
+- Translations (pm task 1097), recommended first, key in brackets; Question screen keeps `A`–`D`, `R`, `V`, `M` free:
+  - `es` (pm decision 210): `hint` Soplo (S), Pista (S), Pistita (S); `skip` Paso y fuera (P), Paso y purga (P), Paso (P); `easier` Hada madrina (H), Hada (H), Bájale (F); `category` Doña Exigente (E), Quisquillosa (Q), Cambiazo (T); `snipe` Tiro mágico (T), Carambola (L), Francotirador (X)
+    - plain skip «Solo paso»; purge «Paso y fuera: adiós al tema «{name}»»; title «Doña Exigente: ¿qué tema quieren?»
+  - `es-ES` (pm decision 211): same as `es`; only «os»/«queréis» leaves (`error.joker_spent.*`, `joker.category.title`)
+  - `de` (pm decision 212): `hint` Zaunpfahl (Z), Tipp (I), Geistesblitz (G); `skip` Näxt & weg (N), Und tschüss! (U), Weg damit! (W); `easier` Gute Fee (F), Glücksfee (F), Fee (F); `category` Frau Pingelig (P), Frau Mäkelig (K), Wunschzeit (W); `snipe` Trickschuss (T), Kunstschuss (S), Finte (F)
+    - purge «Näxt & weg: tschüss, Thema „{name}“»; title «Frau Pingelig: Welches Thema soll es sein?»
 
 ## Tasks
 - [x] LUI-1 `t()` helper and the `es` catalog; move every string from `copy.ts` and the components into it. No visible change (check with `grep` for Spanish characters left in `app/client/src/game`).
