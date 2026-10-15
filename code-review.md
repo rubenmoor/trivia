@@ -1759,7 +1759,8 @@ Task 620 (2026-10-13) checked that every part 1 row `handed to part 10` and ever
 - Still open from part 10: `task 745: Credits screen: Elgar note as a t() string, not English text from credits.json`, `task 626: Vite native config loader warning: import extensions in config files`, `task 627: trivia-desktop: unknown command-line flags fail loudly`
 - Cluster 34 closed by `task 743: Type-check the engine tests and authoring/tools TS in npm run check`
 - Decision 104 answered (won't fix, the Python side retires): task 741 updated the parity rows
-- Waiting for the developer: decision 105 → task 742 (configure screen steppers), decision 106 → task 744 (ESLint)
+- Waiting for the developer: decision 105 → task 742 (configure screen steppers)
+- Decision 106 answered no: ESLint not adopted, task 744 dropped
 - Open follow-ups of parts 4–9, each waiting for a pending decision (no part 10 overlap): task 727 (99), 729 (100), 736 (102), 739 (103)
 
 | part 1 row (quoted) | final status |
@@ -1782,7 +1783,7 @@ Task 616 evaluated a linter for the TypeScript trees (`app/client/src`, `authori
     - `lib/engine.ts` `ready()` (task 540, medium): `(lint: none)`.
     - Biome, oxlint: none of the four (no type info).
   - Noise in the same trial: 41 other `no-floating-promises`/`no-misused-promises` hits in `app/client/src`; review rows ruled them won't fix (async functions catch their own errors).
-  - Result: 1 low bug among 42 hits for 132 packages. Recommendation unchanged (not adopted); the developer decides: `decision 106: Adopt ESLint + typescript-eslint for no-floating-promises?`, adoption pending in `task 744: Adopt ESLint no-floating-promises (per decision 106)`.
+  - Result: 1 low bug among 42 hits for 132 packages. Recommendation unchanged (not adopted); `decision 106: Adopt ESLint + typescript-eslint for no-floating-promises?` answered no (2026-10-13): five tsconfig flags only, promise handling stays a review item; `task 744: Adopt ESLint no-floating-promises (per decision 106)` dropped.
 - Trial: temp copy under `/tmp`, candidates installed there only, deleted afterwards.
 
 | candidate | packages added (lockfile entries) | Svelte | type-aware | time | diagnostics | real bugs | noise |
