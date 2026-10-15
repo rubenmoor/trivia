@@ -1,0 +1,20 @@
+{
+  "batch-8": {
+    "size": 30,
+    "seed": "batch-8",
+    "items": {
+      "q-1607": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          15,
+          15
+        ],
+        "media_changed": false,
+        "on": "2026-10-15"
+      }
+    }
+  }
+}
