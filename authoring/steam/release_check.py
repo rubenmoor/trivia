@@ -68,6 +68,10 @@ MANUAL = {
                 f"{OFFLINE}: a game to level 3 that hits new questions"),
     "report": ("full", "candidate on beta under Steam, online: flag a question with a note, send → «enviada»; "
                "`qgen flag --pull` → that question is needs_work with the note; a second pull is empty", None),
+    "telemetry": ("full", "beta under Steam, online: «Sí, enviar datos» (or Esc menu «Datos anónimos: activados»), one "
+                  "game, quit → `qgen telemetry --pull` folds ≥ 1 session, `qgen report --played` lists this version in "
+                  "its session stats; Esc menu off, one game, quit, start again → stderr `trivia: telemetry off`, no "
+                  "`trivia: telemetry →` line in either run; the next pull folds 0 sessions", None),
     "workshop": ("full", "beta under Steam with the example theme subscribed from the Workshop: the mods screen lists it as "
                  "Workshop, loaded, the colours change; Steam launch options `--no-mods`: plain game, mods screen says why; "
                  "remove the option", None),
