@@ -99,6 +99,7 @@ On the `beta` branch, installed through Steam. Scope: always, full (full release
 | `offline` | always | Steam running in offline mode (Steam → Go Offline while online, then network off), start the installed game from Steam. Full release: a full game to level 12 or a won checkpoint; quit and restart: the save is there (valid Steam user offline); flag a question and send: fails cleanly (no hang, failed state), the copy fallback copies the report text. Content-only patch: a game to level 3 that hits new questions. No "Steam off" row: saves and flags need a valid Steam user (decision 111) |
 | `report` | full | Candidate on `beta` under Steam, online: flag a question with a note, «Enviar» → «Enviada»; then `qgen flag --pull` → that question is `needs_work` with the note, report acknowledged; a second `qgen flag --pull` pulls nothing |
 | `workshop` | full | Beta under Steam with the example theme subscribed from the Workshop: the mods screen lists it as Workshop, loaded, the colours change; Steam launch options `--no-mods`: plain game, the mods screen says why; remove the option |
+| `mods-restart` | full | Beta under Steam, Linux and Windows: Mods screen, turn a mod on (or off), «Restart to apply»: the game comes back with the new state (`loaded`/`off`); Steam still shows the game running and its rich presence (friends list / own profile) after a level starts; Windows: Shift+Tab opens the Steam overlay; Linux has no overlay (decision 70: Steam overlay in the Electron shell) |
 | `windows` | full | Clean Windows machine (no dev tools), install from Steam `beta`, start: no warning, game fullscreen, a few questions with a pad |
 | `deck` | full | Best effort (decision 125): `no Deck (decision 125)` passes until the developer has a Deck; then plan 90's (SW-12) Deck checklist on the real Deck: `plans/18-steam-integration.md` "Steam Deck Verified" (until plan 90 writes it there: pm plan 90) |
 | `cloud` | full | Short A→B run of plan 87's table (`plans/18-steam-integration.md` "Steam Cloud test", first row): play on A, quit, B shows the same players and seen counts |
@@ -112,6 +113,7 @@ On the `beta` branch, installed through Steam. Scope: always, full (full release
 - Why: a content-only patch changes no code, so platform behaviour (Windows/Deck start, Cloud, sound, red frame) can't change; what it can break (questions, media, licences, credits, pool loading) stays covered by every automated step plus `offline` and `signoff`.
 - `report` is full-only: a content-only patch ships no client or shell code, and the server is deployed apart from game builds (`trivia-report-server deploy`, plan 103), so a game patch can't break the round trip; server changes get their own test report (plan 103).
 - `mods` always: data changes can break the merged `bundles.json` (decision 128); `workshop` full only: Workshop discovery is shell code.
+- `mods-restart` full only: the relaunch is shell code (decision 154).
 - Full-only rows are answered "skipped: content-only since <tag>" automatically and listed in the report.
 
 ### Decision per release candidate
@@ -123,6 +125,7 @@ On the `beta` branch, installed through Steam. Scope: always, full (full release
   | offline | | |
   | report | | |
   | workshop | | |
+  | mods-restart | | |
   | … every row the report lists, auto-skipped ones pre-filled | | |
 
 - Options: `passed` (recommended), `passed with minor issues (list)`, `failed (rows)`.
@@ -136,6 +139,7 @@ On the `beta` branch, installed through Steam. Scope: always, full (full release
     - `report` server side (server error on send, 401 on a real ticket, pull/ack wrong) → plan 103
     - `report` step ✗ → the developer's setup (plan 103 task 4) or plan 93 (URL place)
     - `mods` step or `workshop` row ✗ → the milestone 15 plan of the code involved: overlay plan 112, Workshop plan 114, bundles plan 115, add-ons plan 117, mods screen plan 118, examples plan 121; once closed, a new plan in milestone 15
+    - `mods-restart` ✗ → plan 118 (Mods screen and safe start) while open, else a new task in milestone 15
     - once those plans are closed: a new task in the plan of the code involved
 - Review request for Deck Verified: plan 90 (task 687) decides whether it moves here.
 
@@ -467,7 +471,7 @@ Das Spiel läuft offline. Nur bei „Senden“ an einer markierten Frage geht ei
 - [x] ST-1 Resolve OQ-29..OQ-37 and record each answer in `decisions.md` (phase S2). *Done 2026-10-14: D-63, D-74, D-75, D-77, D-78, D-80, D-98, D-102, D-103 (OQ-45 Freesound); OQ-34 D-50, OQ-36 D-38.*
 - [x] ST-2 Add the new files to `README.md`, the Steam track to `project.md`, the questions to `open-questions.md` and D-34. *2026-10-07: done with this plan; keep `project.md` in sync from now on.*
 - [ ] ST-3 Steam "Coming soon" page live (after PUB-8, SW-7). *Plan: pm plan 94 (checklist with Valve's cited rules, pm decision "Coming soon page live? date?").*
-- [x] ST-4 Release checklist: build from a tagged commit, `qgen.py validate` clean, credits complete, offline test, Deck test, family sign-off. *Done 2026-10-13 (pm plan 92): "Release checklist (ST-4)" above; `trivia-release-check` tag gate, kind full/content-only, credits both ways, manual rows. First full run: part 4's release candidate (task 269). Updated 2026-10-13 (pm plan 104): `offline` = Steam in offline mode with save and copy-fallback checks, `report` row and step. Updated 2026-10-14 (task 942): `mods` step, `workshop` row.*
+- [x] ST-4 Release checklist: build from a tagged commit, `qgen.py validate` clean, credits complete, offline test, Deck test, family sign-off. *Done 2026-10-13 (pm plan 92): "Release checklist (ST-4)" above; `trivia-release-check` tag gate, kind full/content-only, credits both ways, manual rows. First full run: part 4's release candidate (task 269). Updated 2026-10-13 (pm plan 104): `offline` = Steam in offline mode with save and copy-fallback checks, `report` row and step. Updated 2026-10-14 (task 942): `mods` step, `workshop` row. Updated 2026-10-14 (task 1010): `mods-restart` row.*
   - S6 part 2 done 2026-10-13 (pm plan 91: Version numbers and patch-safe saves; no ST-row of its own): one version in `app/desktop/package.json`, pool hash, both on the credits screen; running games survive dropped questions; `qgen validate` guards id continuity against the newest `v*` tag (`18`, `12`).
 - [ ] ST-5 Post-release: content update cadence, how question reports are collected.
   - [x] Reports half done 2026-10-13 (pm plan 93, decision 93): «Enviar» / «Enviar todas» in «Preguntas marcadas» → shell main posts to plan 103's `POST /reports` with a Steam ticket (`report:*` IPC, `app/desktop/report.mjs`); copy per flag and all as fallback (text format decision 142); `qgen flag` (pasted text) and `qgen flag --pull` (server, ledger `state/reports-pulled.json`) → `needs_work`. URL: `reportUrl` in `app/desktop/package.json`, empty until plan 103's server is live (task 868): until then copy only.

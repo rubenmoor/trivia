@@ -71,6 +71,10 @@ MANUAL = {
     "workshop": ("full", "beta under Steam with the example theme subscribed from the Workshop: the mods screen lists it as "
                  "Workshop, loaded, the colours change; Steam launch options `--no-mods`: plain game, mods screen says why; "
                  "remove the option", None),
+    "mods-restart": ("full", "beta under Steam, Linux and Windows: Mods screen, turn a mod on (or off), «Restart to apply»: "
+                     "the game comes back with the new state (loaded/off); Steam still shows the game running and its rich "
+                     "presence (friends list / own profile) after a level starts; Windows: Shift+Tab opens the Steam overlay "
+                     "(Linux has none, decision 70)", None),
     "windows": ("full", "start test on a clean Windows machine from Steam (beta)", None),
     "deck": ("full", "Steam Deck: answer `no Deck (decision 125)` until the developer has one; then plan 90's real-Deck "
              "checklist from the `beta` branch (plans/18-steam-integration.md \"Steam Deck Verified\")", None),
