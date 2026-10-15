@@ -27432,6 +27432,17 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `/comodines?lang=`: zh-Hans, ru, pt-BR, all A4 (`@page size`).
 
 Check: `npm run check`, `npm test`, `npm run build`, `qgen validate`; `?lang=ru` in the dev client plays with Latin keys on a Russian layout (simulate `e.key` `ф` with `e.code` `KeyA` in a throw-away test); es/es-ES/en/de gallery shots unchanged (`trivia-gallery --only` a few).', '2026-10-15T20:28:58Z', NULL, 1159, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1178, NULL, 'answer: what was the result of the code review?', 'exec', 'open', 10000, NULL, 'The owner of this project asks:
+
+what was the result of the code review?
+
+Answer in one paragraph for a busy person who doesn''t read code, tasks or plans: plain, good English in full
+sentences, pleasant to read, no jargon, like an executive summary. Find out what you need first: the milestones
+(`pm milestone list`, `pm show m<id>`), the code, `git log`, `pm show <id>`, the reports (`pm report list`). Leave out
+how the work is managed (decisions, tasks, plans, runs, pm itself) unless the question is about it; never ids or file
+names. If the question asks for something to be done, don''t do it: say in the paragraph what it would take.
+Change nothing in the project; stage nothing.
+Store it: `pm report answer < answer.md`, delete answer.md, then close your task.', '2026-10-15T20:32:24Z', NULL, NULL, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -32121,3 +32132,5 @@ INSERT INTO resource_use_task (report_id, task_id, category_id) VALUES (1, 1129,
 INSERT INTO resource_use_task (report_id, task_id, category_id) VALUES (1, 1130, 1);
 INSERT INTO resource_use_task (report_id, task_id, category_id) VALUES (1, 1131, 1);
 INSERT INTO resource_use_task (report_id, task_id, category_id) VALUES (1, 1132, 12);
+
+INSERT INTO custom_report (id, task_id, question, answer, created_at, answered_at) VALUES (1, 1178, 'what was the result of the code review?', NULL, '2026-10-15T20:32:24Z', NULL);
