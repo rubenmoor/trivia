@@ -1,5 +1,6 @@
 // Before packaging (plan 85): Steamworks SDK libs present; koffi's win32-x64 binary beside the host's (npm installs only the host's).
 import { execFileSync } from "node:child_process";
+import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
@@ -13,6 +14,11 @@ for (const lib of ["linux64/libsteam_api.so", "win64/steam_api64.dll"])
     console.error(`steam-libs: missing ${path.join(SDK, lib)} (Steamworks SDK zip, plan 85)`);
     process.exit(1);
   }
+
+// Linux lib's sha256 → SDK version (also read by authoring/steam/release_check.py)
+const known = JSON.parse(readFileSync(path.join(HERE, "steam-sdk-versions.json"), "utf8"));
+const sha = createHash("sha256").update(readFileSync(path.join(SDK, "linux64/libsteam_api.so"))).digest("hex");
+console.log(`steam-libs: Steamworks SDK ${known[sha] ?? "unknown"} (libsteam_api.so sha256 ${sha.slice(0, 12)})`);
 
 const modules = path.join(HERE, "node_modules");
 const { version } = JSON.parse(readFileSync(path.join(modules, "koffi", "package.json"), "utf8"));
