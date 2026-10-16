@@ -248,7 +248,7 @@ export interface Names {
 export interface EngineData {
   /** The question locale of `pool` (plan 68). */
   locale: string;
-  /** Empty where no names files exist (old data: the keys are the Spanish names). */
+  /** Empty where no names files exist (plain-format mods: the keys are the names). */
   names: Names;
   /** Of the UI language (task 1024): age group and bundle names; `names` when it's the question locale. */
   uiNames: Names;

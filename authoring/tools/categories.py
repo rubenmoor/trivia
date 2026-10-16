@@ -2,8 +2,8 @@
 
 `base`'s list is app/data/categories.json; another bundle's is app/data/bundles/<id>/categories.json.
 A subcategory is bundle + key, unique within a bundle only (D-99). Keys are English slugs (decision 259:
-Category and subcategory keys: English slugs) with display names in names.<locale>.json; until the migration,
-and in mods, a plain string is key and Spanish name, a category's `name` its name.
+Category and subcategory keys: English slugs) with display names in names.<locale>.json; in mods,
+a plain string is also key and name, a category's `name` its name.
 """
 import json
 import re
