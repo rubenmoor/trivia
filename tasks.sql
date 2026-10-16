@@ -34034,18 +34034,18 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - Bundle screen and Choice line show the new names in es, es-ES, en, de (dev server or `trivia-gallery --only bundles`)
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass', '2026-10-16T13:57:26Z', '2026-10-16T14:50:38Z', 1336, 0, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1340, 151, 'Gallery run of the two-column bundle screen and developer review', 'work', 'open', 390, NULL, 'Part 5 of `plan 151: Bundle selection on its own full screen`, after `task 1350: Country field for regional bundles and flag icons` and `task 1351: Bundle screen: two columns, scrolling optional column, order by region`. Replaces this task''s first round (`decision 263: Bundle screen reviewed in /gallery?`, answered "problems", covered by tasks 1350 and 1351).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1340, 151, 'Gallery run of the flowing-tile bundle screen and developer review', 'work', 'open', 390, NULL, 'Part 7 of `plan 151: Bundle selection on its own full screen`, after `task 1360: Bundle screen after Choice: «Seguir», supply report and notice on Bundles` and `task 1361: Bundle screen layout: narrow base column, ruler, flowing tiles, highlighting, counts`. Third review round: `decision 263: Bundle screen reviewed in /gallery?` and `decision 264: Bundle screen (two columns) reviewed in /gallery?` were answered "problems" and are covered by plan 151''s revision.
 
 ## What
-- `trivia-gallery --only bundles,choice-solo,choice-gamemaster,choice-supply-report` for all four locales (es, es-ES, en, de); `--size 1280x800` too if `task 1330: Gallery size option` is done
+- `trivia-gallery --only bundles,bundles-supply-report,choice-solo,choice-gamemaster` for all four locales (es, es-ES, en, de), at 1920×1080 and `--size 1280x800`
 - `bundles` with ~15 fake mod bundles too if the gallery can load a mods dir; else say so in the decision body
-- Look at every shot yourself: overflow, cut text, unmatched catalog text in `manifest.json`, columns, flags, scroll fade; fix small problems here, larger ones as fix tasks in plan 151
-- `pm decision consequences 263 "<text>"`: what changed because of its answer (country field, flags, two columns, order by region, names only; tasks 1350, 1351)
-- `pm decision add "Bundle screen (two columns) reviewed in /gallery?"` for the developer (a go-ahead, like decision 263): intro, body lists the shots and what changed since decision 263; options "approved" (recommended), "problems (listed in the answer)"; `pm task-pending-decision 1340 <id>`
+- Look at every shot yourself: overflow, cut text, unmatched catalog text in `manifest.json`, base column and ruler, tile flow, focus and selected states, counts, flags, scroll fade; Choice without bundle line or supply; fix small problems here, larger ones as fix tasks in plan 151
+- `pm decision consequences 264 "<text>"`: what changed because of its answer (flow Player → Choice «Seguir» → Bundles → Level, supply report and notice on Bundles, narrow info-only base column, ruler, flowing tiles, highlighting, counts; tasks 1360, 1361). Decision 263''s consequences are already recorded.
+- `pm decision add "Bundle screen (flowing tiles) reviewed in /gallery?"` for the developer (a go-ahead, like decision 264): intro, body lists the shots and what changed since decision 264; options "approved" (recommended), "problems (listed in the answer)"; `pm task-pending-decision 1340 <id>`
 - On the answer: problems → fix tasks in plan 151; approved → mark the gallery flag on `choice-gamemaster` in `authoring/data/ui-flags.json` fixed, then done
 
 ## Done when
-- Shots for all four locales, decision 263''s consequences recorded, the new review decision answered; problems have fix tasks', '2026-10-16T13:57:26Z', NULL, 1336, 0, NULL);
+- Shots for all four locales at both sizes, decision 264''s consequences recorded, the new review decision answered; problems have fix tasks', '2026-10-16T13:57:26Z', NULL, 1336, 0, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1341, 57, 'qgen validate: spot-checks.json depends on gitignored work/<run>/run.json', 'work', 'done', NULL, '2026-10-16, authoring/tools/qgen.py (run_ids falls back to spot-checks.json ids; validate reads run members from the entry''s ids), authoring/server/spot_checks.py (record stores ids), authoring/data/spot-checks.json (neutralize-1 ids backfilled; backaudit-1 has no entry yet, gets ids on its first record), authoring/ui/src/lib/types.ts, authoring/QC.md; qgen validate passes in a fresh worktree without work/', '- `qgen validate` fails in `../trivia-review`: `authoring/data/spot-checks.json: no batch ''neutralize-1'' in the pool`; passes in the main checkout
 - Cause: `run_ids()` (`authoring/tools/qgen.py`) reads a back-audit/neutralize run''s ids from `work/<run>/run.json`, gitignored; a fresh worktree or clone has none
 - Fix: keep the run''s ids in tracked data (e.g. `ids` in its `spot-checks.json` entry, or a tracked run file), so validate needs nothing under `work/`; check `backaudit-1` the same way
@@ -34716,8 +34716,51 @@ Milestone 8 is S3 of the Steam track (D-34, `plans/11-steam.md`): the first buil
 - Porting authoring''s Python (qgen, `trivia-authoring`) to Node/TS: later, own milestone.', '2026-10-16T16:04:59Z', '2026-10-16T16:09:56Z', 1352, 0, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1358, 48, 'create tasks for plan 48: S3 close-out and platform test', 'split', 'done', 1000, '2026-10-16, tasks 238, 236, 237 brought in line with plan 48''s revision for decision 264 (flow Player → Choice → Bundles → Level, bundle layout rows); no new tasks or decisions', 'Split plan 48 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T16:06:07Z', '2026-10-16T16:07:09Z', 1355, 0, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1359, 151, 'create tasks for plan 151: Bundle selection on its own full screen', 'split', 'open', 1000, NULL, 'Split plan 151 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T16:09:53Z', NULL, 1357, 0, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1359, 151, 'create tasks for plan 151: Bundle selection on its own full screen', 'split', 'done', 1000, '2026-10-16, tasks.sql: tasks 1360 (flow, prio 410), 1361 (layout, pending decision 269), task 1340 rewritten for the third review (also pending 269 so it runs after 1361)', 'Split plan 151 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T16:09:53Z', '2026-10-16T16:10:55Z', 1357, 0, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1360, 151, 'Bundle screen after Choice: «Seguir», supply report and notice on Bundles', 'work', 'open', 410, NULL, 'Part 5 of `plan 151: Bundle selection on its own full screen`, from `decision 264: Bundle screen (two columns) reviewed in /gallery?` and `decision 268: Short-group marks after the flow change`. Turns task 1338''s order (Player → Bundles → Choice) around: Player → Choice → Bundles → Level in both modes. Layout stays as task 1351 left it; `the layout task` of plan 151 follows.
+
+## What
+- Flow in `Game.svelte`, both modes («Solo o en grupo», «Modo anfitrión»), also with one offered bundle: Player → Choice → Bundles → Level; Back from Bundles → Choice, Back from Choice → Player; both screens keep their picks
+- Choice: main button «Seguir» (the catalog''s existing continue string if it fits; read `locales/style/<locale>.md` first), enabled once a group is set; no bundle line (`choice.lineBundles` off Choice; the Esc overlay''s line of a running game stays), no supply report, no short-group marks (decision 268); «Personalizar partida» stays on Choice
+- Bundles: main button starts the game («¡A jugar!»), through `SupplyNotice` (plan 65, decision 31, `decision 195: Supply notice: bundles running out instead of exhausted subcategories`) when it has something to say
+- Supply on Bundles: supply of the full choice (Choice''s picks + bundles), recomputed on every toggle; `SupplyReport` when short, start disabled; engine refusals (`base_bundle_count`, `bundle_not_offered`, supply) shown there as on Choice today
+- Move Choice''s supply code (supply fetch, `short`, `notice`, refusal) into `Bundles.svelte`, don''t copy it (decision 199); drop catalog keys that go unused (knip / `npm run check`)
+- Walkers in the new order: `authoring/tools/gallery.py` (shots `bundles`, `choice-solo`, `choice-gamemaster`; rename `choice-supply-report` → `bundles-supply-report`), `authoring/steam/smoke.mjs`, `authoring/store/screenshots.mjs`, the trailer''s walk (`trivia-trailer`), `engine/*.test.ts` only if they assume the screen order
+- Docs (flow part): `plans/04-ui-tv-display.md` (flow, «Seguir», supply report on Bundles, Choice without supply), `plans/13-game-modes.md`, plan 65''s file where it puts the supply report on Choice, `plans/decisions.md` D-97 (flow) and the D-entry of decision 206 if any; `rg` "Player → Bundles → Choice", "report on the Choice screen", `lineBundles`, `choice-supply-report` over plan files, `.md` files and comments; fix hits (decision 200)
+- `pm decision consequences 206 "<text>"`: the report now sits on the bundle screen; Start still shows none
+
+## Check
+- Node dev server (`npm run dev -w app/client`), 1920×1080 and 1280×800, both modes, keys and pad (or forced `device: "gamepad"`): Player → Choice («Seguir») → Bundles (toggle colombia) → start; Back from Bundles to Choice and forward keeps both picks
+- Blocked save (as the gallery''s `blocked`): report and disabled start on Bundles, nothing on Choice; running-out notice from Bundles (gallery demo save `seen`)
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`
+
+## Done when
+- Flow and supply as above in both modes; walkers and docs follow; decision 206''s consequences recorded', '2026-10-16T16:10:30Z', NULL, 1359, 0, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1361, 151, 'Bundle screen layout: narrow base column, ruler, flowing tiles, highlighting, counts', 'work', 'open', NULL, NULL, 'Part 6 of `plan 151: Bundle selection on its own full screen`, after `task 1360: Bundle screen after Choice: «Seguir», supply report and notice on Bundles`. Replaces task 1351''s two equal columns with the layout of `decision 264: Bundle screen (two columns) reviewed in /gallery?`. Waits for `decision 269: Bundle screen: a mod''s extra base bundle`; follow its answer for two or more base bundles.
+
+## What
+- Left: base column, narrow (as little width as its tile needs), information only: no heading «Elijan uno», no pick prompt, not focusable with one base bundle; two or more base bundles (mods) per decision 269''s answer
+- A vertical ruler between the base column and the optional area
+- Right: optional bundles as fixed-width tiles flowing into rows and columns (CSS grid `auto-fill`); the area scrolls when they don''t fit (wheel, touch, pad, keys); fade at a cut edge; the focused tile always in view (`data-nav-scroll` in `lib/focus.ts` stays)
+- 2D focus: arrows / D-pad between tiles in rows and columns (`lib/focus.ts` spatial nav), down from the last row to the buttons; letters (`bundleKeys`) toggle and scroll into view; default focus as today
+- Tiles: icon (flag for regional, `Flags.svelte`), name, count; no descriptions; no column headings unless a short one is needed for the optional area (catalogs in all four locales, `locales/style/<locale>.md` first)
+- Highlighting: hover/focus a clear ring or lift; selected-for-this-game clearly different (filled tile in the accent colour plus a check mark), not only a small «activado» line; both visible on a focused selected tile
+- Counts per `decision 267: Bundle tiles: question count strings`: shipped bundles catalog strings «5000+» (base) / «2000+» (others), number formatting per locale; mod bundles counted from the pool the client loaded for the UI language (`lib/data.ts` / engine data), rounded down, capped at their kind''s string
+- Order: `orderBundles` unchanged
+- Fits at 1280×800, 1280×720 and 1920×1080 (`plan 46: Deck layout and controller-only text entry (SW-4)`) with 1 and ~15 optional bundles, with and without a supply report
+- «Ajustes de la partida» (`GameSettings.svelte`): compact `BundleSelector` with descriptions, order and flags unchanged; counts there only if cheap
+- Reuse existing tile, ring, accent and check-mark CSS before writing new (decision 199)
+- Docs: `plans/22-bundles.md` (counts, base column), `plans/04-ui-tv-display.md` (Bundles layout), `plans/14-input.md` (scope `bundles`, 2D focus), `plans/decisions.md` D-97 (counts), `modding/README.md` and `modding/bundles.md` (count shown for mod bundles; base-bundle wording per decision 269); `rg` "one tile per row", "Elijan uno", "two columns" over plan files and `.md` files; fix hits (decision 200)
+
+## Check
+- Node dev server (`npm run dev -w app/client`) at 1280×800 and 1920×1080, keys and pad (or forced `device: "gamepad"`)
+- ~15 fake mod bundles (throw-away mod folder via `TRIVIA_MODS_DIR` or the dev server''s equivalent; regional with drawn and undrawn countries; small ones for counts; a second base bundle for decision 269): tiles flow, area scrolls, focus in view with arrows, pad and letters; counts per decision 267; delete the folder after
+- Order with `?region=CO`, `?region=`, `?region=DE`
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`
+
+## Done when
+- Base column, ruler, flowing tiles with scroll and focus follow, focus and selected states, counts as above; docs updated', '2026-10-16T16:10:41Z', NULL, 1359, 0, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -40280,6 +40323,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1360, 1358, '2026-10-16T16:06:20Z', '2026-10-16T16:07:16Z', 'done', NULL, 0, 'e7fd7feb6e2af5c25f760fecef980786915bb890', 'claude-opus-5-5', '74c30e7f-c7a8-494f-95a8-18a8d76f148f', NULL, 6, 12, 6563, 206865, 37793, 0.475025, 4144524);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1361, 1356, '2026-10-16T16:07:16Z', '2026-10-16T16:07:29Z', 'done', NULL, 0, '558ddc7c18e2c90aaac0b1045fbbf6aaa9c4c70f', 'claude-opus-5-5', '4c137ce7-0cc2-4905-a7f7-68e942e300f1', NULL, 3, 6, 895, 90635, 30794, 0.282403, 4144524);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1362, 1357, '2026-10-16T16:07:29Z', '2026-10-16T16:10:09Z', 'done', NULL, 0, '6903f237bfb78527e2146c526bce5767f60b2066', 'claude-opus-5-5', '55a0d21f-5ac6-45d2-b4b6-6b4ec7d55792', NULL, 23, 46, 14882, 1380771, 66278, 1.1042022, 4144524);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1363, 1359, '2026-10-16T16:10:09Z', '2026-10-16T16:11:01Z', 'done', NULL, 0, 'ca87d5860b078bedae69a64b8287f708e85530cf', 'claude-opus-5-5', 'ec11c06f-dad4-4fa2-8d3d-3b6b206c1c33', NULL, 9, 18, 5361, 358005, 39332, 0.49354899999999996, 4144524);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -40744,6 +40788,8 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1327, 265);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1328, 265);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1340, 263);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1340, 264);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1340, 269);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1361, 269);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
