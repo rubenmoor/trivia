@@ -88,6 +88,7 @@ Shared by the three: no skip, no undo, no joker changes mid-game; flagging only 
 - Seen events (D-82): ≈ N questions per round (N players), up to 12 rounds, fewer after drop-outs; no jokers.
 - As built (plan 159, engine only):
   - Clock: all deadlines are epoch ms in the save; the client counts down from `view().session.timed` and sends `expire`; the engine checks every claim and answer against the stored timestamps (late = settled, not an error).
+  - The question's 30 s run from `show` (client: the question is on screen), not from the previous question's end (decision 296: Timed mode: a round screen with a countdown before each round, and the question clock starts when the question is on screen): `shown_at` null until then; `claim` / `answer` before it: `not_shown`; an unshown question never expires; `show` is idempotent.
   - Round size = players still in at the round's start (decision 276: Timed mode: after a drop-out, how many questions does a round have?).
   - Everyone out at one round end: nobody wins (decision 280: Timed mode: everyone out at one round end means nobody wins).
   - Round 12 without a correct answer repeats as another sudden-death round (decision 281: Timed mode: round 12 without a correct answer repeats as another sudden-death round).

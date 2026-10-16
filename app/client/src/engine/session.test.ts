@@ -145,12 +145,15 @@ test("rr-competitive: the supply check counts every seat's levels", () => {
 const T0 = Date.parse("2026-10-16T00:00:00Z");
 function timed(save: SaveData, action: string, body: Record<string, unknown>, ms: number): { save: SaveData; error?: string; params?: Record<string, unknown> } {
   const r = gameAction(save, data, { ...io(++step), ms }, action, body);
-  if (r.status === 200) return { save: r.save };
+  if (r.status === 200) return { save: shown(r.save, ms) };
   const e = r.body as { error: string; params?: Record<string, unknown> };
   return { save, error: e.error, params: e.params };
 }
+/** The client's `show`, sent at once when a new question is drawn (decision 296). */
+const shown = (save: SaveData, ms: number): SaveData =>
+  row(save).state.timed?.shown_at === null && row(save).result === null ? gameAction(save, data, { ...io(++step), ms }, "show", {}).save : save;
 const startTimed = (players: string[]) =>
-  game.newSession(emptySave(), data, { ...io(4), ms: T0 }, players, { mode: "timed", bundles: ["base"], age_group: "adults" }).save;
+  shown(game.newSession(emptySave(), data, { ...io(4), ms: T0 }, players, { mode: "timed", bundles: ["base"], age_group: "adults" }).save, T0);
 const flow = (save: SaveData) => row(save).state.timed!;
 const wrongOf = (save: SaveData) => [0, 1, 2, 3].find((i) => i !== correct(save))!;
 /** `seat` claims at `ms` and answers a second later. */
@@ -160,7 +163,7 @@ const claimAnswer = (save: SaveData, seat: number, ok: boolean, ms: number) =>
 function idleRound(save: SaveData): SaveData {
   const level = row(save).state.level, repeat = flow(save).repeat;
   while (row(save).result === null && row(save).state.level === level && flow(save).repeat === repeat)
-    save = timed(save, "expire", {}, flow(save).shown_at + game.QUESTION_MS + 1).save;
+    save = timed(save, "expire", {}, flow(save).shown_at! + game.QUESTION_MS + 1).save;
   return save;
 }
 
@@ -192,7 +195,7 @@ test("timed: claims, a claim run out, an unclaimed question, the round end's liv
   assert.deepEqual([row(save).state.last!.timeout, row(save).state.history.at(-1)!.correct], [true, false]);
   assert.equal(timed(save, "claim", { seat: 1 }, T0 + 43000).error, "seat_out");
 
-  save = timed(save, "claim", { seat: 2 }, flow(save).shown_at + game.QUESTION_MS + 1).save; // too late: settled, no claim
+  save = timed(save, "claim", { seat: 2 }, flow(save).shown_at! + game.QUESTION_MS + 1).save; // too late: settled, no claim
   assert.equal(row(save).state.history.at(-1)!.unclaimed, true);
   assert.equal(row(save).state.history.at(-1)!.correct, undefined);
   // round end: Cami without a correct answer loses a life; round 2 has the two seats still in (decision 276)
@@ -254,4 +257,28 @@ test("timed: a pause shifts the question and claim deadlines and refuses play", 
   const t = game.view(save, data, { ...io(1), ms: T0 + 51000 })!.session!;
   assert.deepEqual(t.timed!.claim, { seat: 0, deadline: T0 + 48000 + game.CLAIM_MS });
   assert.deepEqual(t.seats.map((s) => s.lives), [3, 3]);
+});
+
+test("timed: the question clock runs from show, not from the previous question's end", () => {
+  const first = game.newSession(emptySave(), data, { ...io(4), ms: T0 }, ["Ana", "Beto"], { mode: "timed", bundles: ["base"], age_group: "adults" }).save;
+  const send = (save: SaveData, action: string, body: Record<string, unknown>, ms: number) => {
+    const r = gameAction(save, data, { ...io(++step), ms }, action, body);
+    return r.status === 200 ? { save: r.save } : { save, error: (r.body as { error: string }).error };
+  };
+  assert.equal(flow(first).shown_at, null);
+  assert.equal(game.view(first, data, { ...io(1), ms: T0 })!.session!.timed!.deadline, null);
+  assert.equal(send(first, "claim", { seat: 0 }, T0 + 1000).error, "not_shown");
+  assert.equal(send(first, "answer", { seat: 0, index: 0 }, T0 + 1000).error, "not_shown");
+  assert.equal(send(first, "expire", {}, T0 + 99000).error, "not_expired");
+  let save = send(first, "show", {}, T0 + 5000).save;
+  assert.deepEqual(flow(send(save, "show", {}, T0 + 9000).save), flow(save)); // idempotent
+  assert.equal(flow(send(save, "show", {}, T0 + 9000).save).shown_at, T0 + 5000);
+  assert.equal(game.view(save, data, { ...io(1), ms: T0 + 5000 })!.session!.timed!.deadline, T0 + 5000 + game.QUESTION_MS);
+  save = send(save, "claim", { seat: 0 }, T0 + 6000).save;
+  save = send(save, "answer", { seat: 0, index: correct(save) }, T0 + 7000).save;
+  assert.equal(flow(save).shown_at, null);
+  assert.equal(send(save, "claim", { seat: 1 }, T0 + 8000).error, "not_shown");
+  save = send(save, "show", {}, T0 + 20000).save;
+  assert.equal(send(save, "expire", {}, T0 + 20000 + game.QUESTION_MS).error, "not_expired");
+  assert.equal(row(send(save, "expire", {}, T0 + 20001 + game.QUESTION_MS).save).state.level, 2); // the round's second question ended
 });

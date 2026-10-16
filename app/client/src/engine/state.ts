@@ -147,7 +147,8 @@ export interface TimedState {
   round_done: number;
   /** Seats with a correct answer this round. */
   round_correct: number[];
-  shown_at: number;
+  /** null: drawn, not on screen yet (decision 296). */
+  shown_at: number | null;
   claim: { seat: number; at: number } | null;
   paused_at: number | null;
   /** Extra sudden-death rounds at the last level (decision 281). */
@@ -266,6 +267,7 @@ const ERRORS: Record<string, string | ((p: Params) => string)> = {
   claim_taken: "another seat has claimed the question",
   claim_first: "claim the question first",
   not_your_claim: "another seat claimed the question",
+  not_shown: "the question is not on screen yet",
   paused: "the clock is paused",
   already_paused: "the clock is already paused",
   not_paused: "the clock is not paused",

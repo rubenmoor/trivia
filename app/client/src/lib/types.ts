@@ -196,6 +196,8 @@ export interface Game {
     /** timed only (plan 159): times are epoch ms; null while claimed or paused. */
     timed?: {
       round: number; sudden_death: boolean; repeat: number; round_size: number; question_in_round: number;
+      /** The question is on screen (decision 296); until then no deadline. */
+      shown: boolean;
       deadline: number | null; claim: { seat: number; deadline: number } | null; paused: boolean;
       hints_shown: number | null; all_at_risk: boolean;
     };
