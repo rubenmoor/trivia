@@ -16,6 +16,7 @@ HEALTH_ACKS = AUTHORING / "data" / "health-acks.json"  # the developer's acks of
 SPOT_CHECKS = AUTHORING / "data" / "spot-checks.json"  # human spot checks per batch (plan 16)
 ENGLISH_KEYS = AUTHORING / "data" / "english-keys.json"  # English answer + concept per non-en source (decision 232)
 UI_FLAGS = AUTHORING / "data" / "ui-flags.json"  # the developer's flags on UI strings in /gallery (plan 100)
+REGIONAL_CATEGORIES = AUTHORING / "data" / "regional-categories.json"  # general list for qgen taxonomy (decision 213)
 AXES_FILE = AUTHORING / "data" / "question-axes.json"  # question styles as axes (D-37)
 CONCEPTS = AUTHORING / "data" / "concepts"  # one concept list per subcategory of base (D-37)
 BUNDLE_SOURCES = AUTHORING / "data" / "bundles"  # another bundle's concepts/ and question-axes.json (D-43)

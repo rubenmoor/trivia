@@ -1,0 +1,75 @@
+{
+  "about": "General category list for regional bundles (decision 213, plan 138): input of `qgen taxonomy --bundle <id>`, which adds the region's own categories and proposes subcategories; a category may be left out for a region with too little to ask. Authoring only, never read by app/. {región} = the region's name; names repeat across bundles (decision 110 (d)). Everywhere excluded (D-49): what players anywhere in the Spanish-speaking world answer without a connection to the region, and world topics: they stay in base.",
+  "categories": [
+    {
+      "name": "Geografía de {región}",
+      "scope": "Provinces/departments, cities and towns, rivers, mountains, coasts, islands, landmarks and monuments, roads and distances.",
+      "excludes": "Country-level facts known worldwide (base Capitales del mundo, Países del mundo, Monumentos famosos)."
+    },
+    {
+      "name": "Naturaleza de {región}",
+      "scope": "Native animals and plants, national parks and reserves, ecosystems, climate and seasons, natural phenomena.",
+      "excludes": "Animals and plants known worldwide without a regional angle (base Animales, Plantas, Amazonas)."
+    },
+    {
+      "name": "Historia de {región}",
+      "scope": "Indigenous peoples before the conquest, colony, independence, wars and founding figures, 19th–20th century, presidents and turning points.",
+      "excludes": "World history (base Historia); current party politics."
+    },
+    {
+      "name": "Personajes de {región}",
+      "scope": "Well-known people not covered by music, sport, arts or TV: scientists, inventors, business founders, heroes of daily life, popular characters.",
+      "excludes": "Names known worldwide (base); musicians, athletes, writers, actors go to their categories."
+    },
+    {
+      "name": "Comida y bebida de {región}",
+      "scope": "Typical dishes, sweets and desserts, drinks, fruits and ingredients, regional variants, markets and street food.",
+      "excludes": "International food (base Comida y bebida, Comida latinoamericana: arepa as a name, coffee in general)."
+    },
+    {
+      "name": "Fiestas y tradiciones de {región}",
+      "scope": "Festivals, carnivals, fairs, holidays, family customs, crafts, traditional dress and games.",
+      "excludes": "World festivals and customs (base Fiestas y tradiciones, Trajes típicos del mundo)."
+    },
+    {
+      "name": "Mitos y leyendas de {región}",
+      "scope": "Legendary creatures, ghost stories, popular beliefs and superstitions, indigenous myths.",
+      "excludes": "World mythologies and generic superstitions (base Mitos y leyendas, Leyendas y supersticiones)."
+    },
+    {
+      "name": "Música y baile de {región}",
+      "scope": "Rhythms and dances, instruments, singers and bands, famous songs, music festivals.",
+      "excludes": "World music and global stars by name only (base Música)."
+    },
+    {
+      "name": "Arte y literatura de {región}",
+      "scope": "Writers and books, poets, painters and sculptors, architecture, museums, comics.",
+      "excludes": "World literature and art (base Arte y literatura; García Márquez basics)."
+    },
+    {
+      "name": "Cine y televisión de {región}",
+      "scope": "Telenovelas, series, films, presenters, actors, radio, cartoons, internet celebrities.",
+      "excludes": "International film and TV (base Cine, series y superhéroes)."
+    },
+    {
+      "name": "Deporte de {región}",
+      "scope": "National teams, clubs, athletes, Olympic medals, the region's favourite sports, traditional games and sports.",
+      "excludes": "World football and sport (base Fútbol, Deportes)."
+    },
+    {
+      "name": "Así se habla en {región}",
+      "scope": "Words and slang, sayings and expressions, accents, loanwords from indigenous languages, the region's own languages.",
+      "excludes": "Spanish in general (base Idiomas y palabras, Refranes y dichos)."
+    },
+    {
+      "name": "Vida diaria en {región}",
+      "scope": "Money and banknotes, brands and products, shops, transport, school, home, everyday objects and habits, public services.",
+      "excludes": "World brands and money (base Marcas y logotipos, Monedas y dinero)."
+    },
+    {
+      "name": "Símbolos de {región}",
+      "scope": "Flag, anthem, coat of arms, national symbols (bird, tree, flower), emblems of the provinces/cities.",
+      "excludes": "The flag as recognised worldwide (base Banderas del mundo)."
+    }
+  ]
+}

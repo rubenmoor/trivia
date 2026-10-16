@@ -4697,6 +4697,13 @@ def taxonomy_problems():
             dup = sorted({x for x in items if items.count(x) > 1})
             if dup:
                 errors.append(f"{categories.path(b).relative_to(ROOT)}: same {what} twice (D-99): {', '.join(dup)}")
+    rel = layout.REGIONAL_CATEGORIES.relative_to(ROOT)
+    regional = (load_json(layout.REGIONAL_CATEGORIES, {}) or {}).get("categories", [])
+    names = [c.get("name") for c in regional]
+    if not all(isinstance(n, str) and n and c.get("scope") and c.get("excludes") for n, c in zip(names, regional)):
+        errors.append(f"{rel}: every category needs name, scope and excludes (decision 213)")
+    if dup := sorted({n for n in names if isinstance(n, str) and names.count(n) > 1}):
+        errors.append(f"{rel}: same name twice: {', '.join(dup)}")
     return errors
 
 

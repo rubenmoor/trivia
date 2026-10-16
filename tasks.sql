@@ -27237,7 +27237,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Check: `npm run check`, `npm test`, `npm run build`, `qgen validate`; `trivia-gallery --only customize,choice-gamemaster,joker-hint,joker-hint-armed,joker-skip,joker-easier,joker-category,joker-snipe` (all four locales) and look at them', '2026-10-15T18:57:05Z', '2026-10-16T02:35:58Z', 1103, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1136, 138, 'create tasks for plan 138: Regional taxonomy: a general list, colombia reworked', 'split', 'done', 1000, '2026-10-15, tasks.sql: tasks 1137–1140 (general list, qgen taxonomy, colombia taxonomy, remap); decisions raised by 1137 and 1139 themselves (they need the drafts)', 'Split plan 138 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T19:01:52Z', '2026-10-15T19:03:02Z', 827, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1137, 138, 'General regional category list', 'work', 'open', NULL, NULL, 'Part 1 of `plan 138: Regional taxonomy: a general list, colombia reworked`, per `decision 166: colombia subcategories (OQ-46): where the 19 go, and the list for 2000`: a general list of broad categories that every regional bundle starts from.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1137, 138, 'General regional category list', 'work', 'done', NULL, '2026-10-16, authoring/data/regional-categories.json (decision 213: 14 categories as drafted), qgen validate check in taxonomy_problems, layout.REGIONAL_CATEGORIES', 'Part 1 of `plan 138: Regional taxonomy: a general list, colombia reworked`, per `decision 166: colombia subcategories (OQ-46): where the 19 go, and the list for 2000`: a general list of broad categories that every regional bundle starts from.
 
 ## First run: draft and ask
 - Draft ~10–15 broad categories that fit any region (e.g. geography, nature, history, famous people, food and drink, festivities and traditions, myths and legends, music and dance, arts and literature, film and TV, sport, how people speak, daily life, symbols).
@@ -27251,7 +27251,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm decision consequences <decision> "…"`.
 - Per-commit checks (AGENTS.md).
 
-Done when: the decision is answered and the file matches the answer.', '2026-10-15T19:02:56Z', NULL, 1136, 0);
+Done when: the decision is answered and the file matches the answer.', '2026-10-15T19:02:56Z', '2026-10-16T03:09:28Z', 1136, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1138, 138, 'qgen taxonomy --bundle <id>: propose and apply a region''s taxonomy', 'work', 'open', NULL, NULL, 'Part 2 of `plan 138: Regional taxonomy: a general list, colombia reworked`. Runs after `task 1137: General regional category list` (needs `authoring/data/regional-categories.json`); still open → stop and say so.
 
 ## Propose: `qgen taxonomy --bundle <id>`
@@ -31658,7 +31658,7 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 - 4 Personajes folded into the field each person is known for, else 3 Historia.
 - 14 Símbolos folded into 3 Historia.
 - 10 Cine y televisión and 13 Vida diaria merged: «Vida diaria y televisión en {región}».
-- 7 Mitos y leyendas folded into 6: «Fiestas, tradiciones y leyendas de {región}».', 'the list as drafted (14)', NULL, '2026-10-15T19:04:01Z', '2026-10-16T02:04:11Z', 1137, NULL, 'rule', NULL, '');
+- 7 Mitos y leyendas folded into 6: «Fiestas, tradiciones y leyendas de {región}».', 'the list as drafted (14)', NULL, '2026-10-15T19:04:01Z', '2026-10-16T02:04:11Z', 1137, NULL, 'rule', NULL, '2026-10-16, task 1137: authoring/data/regional-categories.json holds the 14 categories as drafted (name with {región}, scope, excludes); qgen validate checks it (fields present, unique names); input of task 1138: qgen taxonomy --bundle <id>: propose and apply a region''s taxonomy.');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (214, 'neutralize-1: qgen validate fails after fix', 'answered', '["fix first: task 632 waits for task 1142, then resumes with plain `qgen neutralize`", "discard: revert questions.json, drop tasks 632 and 633"]', '`task 632: run neutralize-1` (decision 202: Run qgen neutralize on base now? → go).
 
 - Run 1: `qgen neutralize` exit 1 at `fix` (1 of 31 fact-check calls: `no fact check for q-1162`).
@@ -33889,6 +33889,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1216, 1099, '2026-10-16T02:54:43Z', '2026-10-16T02:57:58Z', 'done', NULL, 0, 'f15c735d5316476730a85b2be87c99e19a5b6322', 'claude-opus-5-5[1m]', '2c516987-223d-4662-8a35-a8117047bcf3', 16, 26, 4585, 582011, 53588, 0.6369102, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1217, 1100, '2026-10-16T02:57:58Z', '2026-10-16T02:59:46Z', 'done', NULL, 0, 'e0a4c638e3536a0a291d627077e9abfe4d2286b3', 'claude-opus-5-5[1m]', 'eedcf204-63dd-4922-b4d7-ea705f050753', 12, 24, 7021, 598250, 57756, 0.72221400000000013, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1218, 1101, '2026-10-16T02:59:46Z', '2026-10-16T03:08:24Z', 'blocked', NULL, 0, '44d39c73330b0e1b73d6a843189ec43f00c2be3c', 'claude-opus-5-5[1m]', 'bf984fe2-2a15-4aa0-81c8-57d9c5f96d4c', 31, 46, 6195, 1124328, 58053, 0.8133735999999997, 3857742);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1219, 1137, '2026-10-16T03:08:24Z', '2026-10-16T03:09:35Z', 'done', NULL, 0, 'eb39e12f3b7d73a4987c031a95bb942c402c7bdf', 'claude-opus-5-5[1m]', '115cb8aa-4e4f-4be7-86dc-ad920c04cc16', 13, 26, 4563, 505454, 34928, 0.47187879999999993, 3857742);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
