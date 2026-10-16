@@ -269,11 +269,14 @@ const es = {
     intro: "Una hoja carta: 4 × {hint} y 2 × cada otro comodín. Imprimir al {scale} (sin «ajustar a la página»), luego recortar por las líneas.",
     print: "Imprimir",
   },
-  /** Bundles from mods (decision 128); `mod`: the mod's name. */
   bundles: {
+    /** The Bundles screen (plan 151): «¿Qué preguntas juega <name>?» with the name highlighted. */
+    titleOpen: "¿Qué preguntas juega ",
+    titleClose: "?",
+    /** A mod's bundle (decision 128); `mod`: the mod's name. */
     playerMade: "Hecho por jugadores · {mod}",
   },
-  /** The Choice screen (plan 29): age group and bundles before a game. */
+  /** The Choice screen (plan 29): mode, age group and the like before a game. */
   choice: {
     /** «¿Cómo juega <name>?» with the name highlighted. */
     titleOpen: "¿Cómo juega ",
@@ -283,7 +286,6 @@ const es = {
     agesFrom: "{lo}+ años",
     /** A group whose window can't fill a game with these bundles. */
     short: "Faltan preguntas",
-    bundles: "Paquetes de preguntas",
     on: "activado",
     off: "desactivado",
     start: "¡A jugar!",

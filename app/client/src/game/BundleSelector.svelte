@@ -8,11 +8,24 @@
     const on = (x: Bundle) => (b.base && x.base ? x.id === b.id : x.id === b.id ? !selected.includes(x.id) : selected.includes(x.id));
     return bundles.filter(on).map((x) => x.id);
   }
+
+  /** One key per bundle (plan 29): the first letter of its name (after a «Regional:»-style prefix), accents
+   * stripped, not taken by an earlier bundle nor in `reserved`, else the name's next letter; "" if none is left. */
+  export function bundleKeys(names: string[], reserved: string[]): string[] {
+    const taken = new Set(reserved.map((k) => k.toLowerCase()));
+    return names.map((name) => {
+      const ordered = name.includes(":") ? name.slice(name.lastIndexOf(":") + 1) + name : name;
+      const letters = [...ordered.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase()].filter((c) => /\p{L}/u.test(c));
+      const key = letters.find((c) => !taken.has(c)) ?? "";
+      if (key) taken.add(key);
+      return key;
+    });
+  }
 </script>
 
 <script lang="ts">
   // Shared bundle selector (D-88): the base bundles as a radio group, apart from the others (toggles);
-  // exactly one base bundle (D-85). Choice screen in every mode (plan 125); «Ajustes de la partida» reuses it (MD-12).
+  // exactly one base bundle (D-85). Bundles screen in every mode (plan 151); «Ajustes de la partida» reuses it (MD-12).
   import { t } from "../lib/i18n.ts";
   import Icon from "./Icon.svelte";
   import Prompt from "./Prompt.svelte";
@@ -23,6 +36,7 @@
     busy = false,
     keyOf = () => "",
     first = 0,
+    large = false,
     onchange,
   }: {
     /** The language's bundles (`fetchChoiceOptions`, `bundlesFor`). */
@@ -33,6 +47,8 @@
     keyOf?: (b: Bundle) => string;
     /** Animation index of the first tile. */
     first?: number;
+    /** The Bundles screen's bigger tiles. */
+    large?: boolean;
     onchange: (ids: string[]) => void;
   } = $props();
 
@@ -44,7 +60,7 @@
   }
 </script>
 
-<div class="bundles" data-line>
+<div class="bundles" class:large data-line>
   <div class="group" role="radiogroup">
     {#each base as b, i (b.id)}
       {@render tile(b, "radio", first + i)}
@@ -143,6 +159,25 @@
   }
   .switch {
     color: var(--sky);
+  }
+  .bundles.large {
+    flex-direction: column;
+    align-items: center;
+  }
+  .large .divider {
+    width: calc(40 * var(--u));
+    height: calc(0.15 * var(--u));
+  }
+  .large .tile {
+    min-width: calc(26 * var(--u));
+    padding: calc(1.4 * var(--u)) calc(2 * var(--u));
+    row-gap: calc(0.3 * var(--u));
+  }
+  .large .name-text {
+    font-size: calc(2.6 * var(--u));
+  }
+  .large .label {
+    font-size: calc(1.3 * var(--u));
   }
   .made {
     color: var(--amber);

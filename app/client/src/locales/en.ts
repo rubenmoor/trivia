@@ -241,6 +241,8 @@ export const en = {
     print: "Print",
   },
   bundles: {
+    titleOpen: "Which questions does ",
+    titleClose: " play?",
     playerMade: "Player-made · {mod}",
   },
   choice: {
@@ -250,7 +252,6 @@ export const en = {
     ages: "{lo}–{hi} years",
     agesFrom: "{lo}+ years",
     short: "Not enough questions",
-    bundles: "Question bundles",
     on: "on",
     off: "off",
     start: "Let's play!",

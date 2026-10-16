@@ -216,7 +216,7 @@ async function toStart() {
   await noNotice();
 }
 
-/** Start screen → a new player → the choice screen. */
+/** Start screen → a new player → the Bundles screen. */
 async function newPlayer() {
   at("new player");
   await h.click('[data-focus-id="main"]');
@@ -237,12 +237,13 @@ async function game(dir) {
   let shell = await launch();
   await toStart();
   await newPlayer();
-  at("mode");
-  // Packs show in gamemaster mode's bundle selector.
-  await h.click('[data-focus-id="mode-gamemaster"]');
-  await h.waitFor(visibleEl(".bundles"), "bundle selector");
+  at("bundles");
+  // Packs show on the Bundles screen.
+  await h.waitFor(visibleEl('[data-focus-id="next"]'), "bundles screen");
   const offered = await h.evaluate(`JSON.stringify([...document.querySelectorAll(".bundles [data-focus-id^='bundle-']")]
     .map((b) => b.dataset.focusId.slice(7)))`);
+  await h.click('[data-focus-id="next"]');
+  at("mode");
   await h.click('[data-focus-id="mode-solo"]');
   await h.click('[data-focus-id="group-young_teens"]');
   await h.click('[data-focus-id="start"]');
@@ -335,9 +336,10 @@ async function modsGame(dir) {
   const tile = `[data-focus-id="bundle-${bundle}"]`;
   await h.waitFor(visibleEl(tile), `bundle ${bundle} offered`);
   if (!(await h.evaluate(visibleEl(`${tile} .made`)))) throw new Error(`bundle ${bundle} not marked player-made`);
+  if ((await h.evaluate(`document.querySelector('${tile}').getAttribute("aria-checked")`)) !== "true") await h.click(tile);
+  await h.click('[data-focus-id="next"]');
   await h.click('[data-focus-id="mode-solo"]');
   await h.click('[data-focus-id="group-young_teens"]');
-  if ((await h.evaluate(`document.querySelector('${tile}').getAttribute("aria-checked")`)) !== "true") await h.click(tile);
   await h.click('[data-focus-id="start"]');
   const save = await saved((s) => s.games?.length, "new game");
   if (!running(save).settings?.bundles?.includes(bundle)) throw new Error(`game started without ${bundle}`);

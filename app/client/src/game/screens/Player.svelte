@@ -2,7 +2,7 @@
   // The Player screen (plans/04-ui-tv-display.md, "Player", D-28, UI-16): «¿Quién juega?» with the
   // known names (most recent first, keys 1–9) and a field for a new name. Names are labels; what the
   // family saw counts for the whole save (plan 65). Each name can be deleted with its games, after a
-  // confirmation (GF-7); its seen questions stay seen. The Choice screen comes next (plan 29). With a pad,
+  // confirmation (GF-7); its seen questions stay seen. The Bundles screen comes next (plan 151). With a pad,
   // A on the field opens Steam's floating keyboard (Big Picture/Deck, plan 85), else the letter picker (plan 46).
   import { onMount } from "svelte";
   import { deletePlayer, fetchPlayers } from "../../lib/api.ts";

@@ -1,24 +1,9 @@
-<script module lang="ts">
-  /** One key per bundle (plan 29): the first letter of its name (after a «Regional:»-style prefix), accents
-   * stripped, not taken by an earlier bundle nor in `reserved`, else the name's next letter; "" if none is left. */
-  function bundleKeys(names: string[], reserved: string[]): string[] {
-    const taken = new Set(reserved.map((k) => k.toLowerCase()));
-    return names.map((name) => {
-      const ordered = name.includes(":") ? name.slice(name.lastIndexOf(":") + 1) + name : name;
-      const letters = [...ordered.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase()].filter((c) => /\p{L}/u.test(c));
-      const key = letters.find((c) => !taken.has(c)) ?? "";
-      if (key) taken.add(key);
-      return key;
-    });
-  }
-</script>
-
 <script lang="ts">
   // The Choice screen (plans/04-ui-tv-display.md, "Choice"; plan 29, AG-7, BN-6): «¿Cómo juega …?»,
-  // between Player and Level. Mode row (MD-7); gamemaster mode: the configure game screen (MD-11, D-88):
+  // between Bundles and Level. Mode row (MD-7); gamemaster mode: the configure game screen (MD-11, D-88):
   // difficulty, levels, cards, video, audio, answers (D-105), jokers; «Solo o en grupo»: age group (1–4) and «Personalizar partida»
-  // (joker counts). Bundles (letter keys) in both modes, apart from those (decision 50). Preset: `?mode=`, the
-  // player's newest game (every field), else the defaults. ↑/↓ move between lines, ←/→ change a value.
+  // (joker counts). The bundles come from the Bundles screen, shown as a read-only line (decision 260). Preset: `?mode=`,
+  // the player's newest game (every field but the bundles), else the defaults. ↑/↓ move between lines, ←/→ change a value.
   import { onMount } from "svelte";
   import {
     BUILT_MODES, CARDS_MAX, DEFAULT_AGE_GROUP, DIFFICULTY_MAX, fetchChoice, fetchChoiceOptions, fetchOutlook, fetchPlayerMode,
@@ -30,7 +15,6 @@
   import { t } from "../../lib/i18n.ts";
   import { pushScope, type Keys } from "../../lib/input.svelte.ts";
   import type { Difficulty, GameMode, JokerBudget, JokerName, Supply } from "../../lib/types.ts";
-  import BundleSelector, { toggled, type Bundle } from "../BundleSelector.svelte";
   import Customize from "../Customize.svelte";
   import { presetOf, stepPreset, stepUses, TOKENS } from "../jokers.ts";
   import { clamp, spanOf, stepDifficulty } from "../difficulty.ts";
@@ -42,6 +26,7 @@
 
   let {
     player,
+    bundles,
     busy,
     greeting,
     refused,
@@ -49,6 +34,8 @@
     onback,
   }: {
     player: string;
+    /** Picked on the Bundles screen. */
+    bundles: string[];
     busy: boolean;
     /** The name while «¡Hola, …!» plays into the transition, else null. */
     greeting: string | null;
@@ -61,7 +48,6 @@
 
   let options = $state<ChoiceOptions | null>(null);
   let group = $state(DEFAULT_AGE_GROUP);
-  let bundles = $state<string[]>([]);
   let mode = $state<GameMode>("gamemaster");
   /** «Solo o en grupo»'s joker counts; a difference from the standard set makes the game customized. */
   let jokers = $state<JokerBudget>({ ...STANDARD_JOKERS });
@@ -100,7 +86,6 @@
       group = c.age_group ?? DEFAULT_AGE_GROUP;
       custom = c.difficulty !== null;
       difficulty = c.difficulty ?? spanOf(opts.groups, group);
-      bundles = c.bundles;
       ({ levels, cards, video, audio, answers } = c);
       budget = { ...c.jokers };
       await check();
@@ -144,12 +129,6 @@
     if (busy) return;
     group = id;
     custom = false;
-    changed();
-  }
-
-  function pickBundles(ids: string[]) {
-    if (busy) return;
-    bundles = ids;
     changed();
   }
 
@@ -235,27 +214,24 @@
   const modes = MODE_ROW.filter((m) => BUILT_MODES.includes(m.id));
   const CUSTOMIZE_KEY = t("customize.openKey").toLowerCase();
   const GROUP_ICONS: Record<string, IconName> = { kids: "balloon", young_teens: "skateboard", young_adults: "headphones", adults: "mug" };
-  const RESERVED = [
-    t("flag.key"), t("screen.start.newKey"), t("screen.question.replayKey"), t("joker.hint.key"), CUSTOMIZE_KEY, ...modes.map((m) => m.key),
-  ];
-  const letters = $derived(bundleKeys(options?.bundles.map((b) => b.name) ?? [], RESERVED));
-  const keyOf = (b: Bundle) => letters[options?.bundles.indexOf(b) ?? -1] ?? "";
   const letter = (key: string) => [key, { type: "letter", key }] as const;
   const keys = $derived<Keys>(
     Object.fromEntries([
       ...modes.map((m) => letter(m.key)),
-      ...letters.filter(Boolean).map(letter),
       ...(mode === "gamemaster" ? [] : [letter(CUSTOMIZE_KEY)]),
     ]),
   );
   const customized = $derived(presetOf(jokers) !== "standard");
+  /** The picked bundles' names, base first (as in the Esc overlay). */
+  const names = $derived(
+    [...(options?.bundles ?? [])].sort((a, b) => Number(b.base) - Number(a.base)).filter((b) => bundles.includes(b.id)).map((b) => b.name),
+  );
 
   function ages([lo, hi]: readonly [number, number | null]) {
     return hi === null ? t("choice.agesFrom", { lo }) : t("choice.ages", { lo, hi });
   }
 
-  // A mode's letter picks it, 1–4 pick a group, a bundle's letter selects or toggles it, the
-  // customize letter opens the dialog (solo); ↑/↓ lines, ←/→ a configure value; Enter starts (on a switch: toggles),
+  // A mode's letter picks it, 1–4 pick a group, the customize letter opens the dialog (solo); ↑/↓ lines, ←/→ a configure value; Enter starts (on a switch: toggles),
   // Backspace goes back; Esc falls through to the overlay.
   $effect(() =>
     pushScope({
@@ -272,8 +248,6 @@
         else if (a.type === "letter" && modes.some((m) => m.key === a.key)) pickMode(modes.find((m) => m.key === a.key)!.id);
         else if (a.type === "letter" && mode !== "gamemaster" && a.key === CUSTOMIZE_KEY) customizing = !busy;
         else if (a.type === "pick" && options && a.n <= options.groups.length) pickGroup(options.groups[a.n - 1].id);
-        else if (a.type === "letter" && options?.bundles.some((b) => keyOf(b) === a.key))
-          pickBundles(toggled(options.bundles, bundles, options.bundles.find((b) => keyOf(b) === a.key)!));
         else if (a.type === "confirm") start();
         else if (a.type === "back") onback();
         else return false;
@@ -291,7 +265,7 @@
 
     {#if options}
       {#if modes.length > 1}
-        <p class="label heading" style:--i={0}>{t("mode.heading")}</p>
+        <p class="label heading">{t("mode.heading")}</p>
         <div class="row" role="radiogroup" data-line>
           {#each modes as m, i (m.id)}
             <button
@@ -337,7 +311,7 @@
           </div>
         </div>
       {:else}
-        <p class="label heading" style:--i={0}>{t("choice.groups")}</p>
+        <p class="label heading">{t("choice.groups")}</p>
         <div class="row" role="radiogroup" data-line>
           {#each options.groups as g, i (g.id)}
             <button
@@ -365,8 +339,7 @@
           <span class="label" class:warn={customized}>{t(customized ? "customize.custom" : "customize.standard")}</span>
         </div>
       {/if}
-      <p class="label heading" style:--i={5}>{t("choice.bundles")}</p>
-      <BundleSelector bundles={options.bundles} selected={bundles} {busy} {keyOf} first={6} onchange={pickBundles} />
+      <p class="label bundles">{t("choice.lineBundles", { bundles: names.join(", ") })}</p>
 
       <div class="row actions" data-line>
         <button class="secondary" onclick={onback} disabled={busy} data-focus-id="back"><Icon name="back" /> {t("action.back")} <Prompt action="back" /></button>
@@ -430,9 +403,6 @@
   .choice.reporting {
     gap: calc(0.8 * var(--u));
   }
-  .choice.reporting :global(.bundle .description) {
-    display: none;
-  }
   .title {
     animation: arrive 0.6s var(--spring) backwards;
   }
@@ -443,7 +413,7 @@
     margin: calc(0.6 * var(--u)) 0 0;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    animation: arrive 0.5s calc(0.15s + var(--i) * 0.05s) var(--spring) backwards;
+    animation: arrive 0.5s 0.15s var(--spring) backwards;
   }
   .row {
     display: flex;
@@ -576,6 +546,10 @@
     font-size: calc(2 * var(--u));
     font-weight: 800;
     line-height: 1.1;
+  }
+  .bundles {
+    margin: 0;
+    color: var(--slate-200);
   }
   .warn {
     color: var(--amber);

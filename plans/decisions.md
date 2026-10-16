@@ -887,7 +887,7 @@ Template:
   - **Staged folder** `app/desktop/build/dlc/<id>/` (gitignored, hard links), written by `trivia-steam stage`: `resources/data/bundles/<id>/` from `linux-unpacked` plus `pack-media.json`'s files under `resources/media/`; depot path `.`.
   - **Exclusions:** OS depots `resources/data/bundles/<id>/*`; `content` each pack-only media file name.
   - **Checks:** `trivia-steam stage` fails unless packs in the build = `pack-media.json` = `steam.json` `dlc` (every shipped bundle is DLC), and OS depot + content + DLC depots = each archive. `--depots W,L,C,<packs in steam.json order>`; `--dry-run` placeholders 480 / 481… per depot.
-  - **Smoke game:** with packs in the build, a second run on a hard-link copy without the packs' data and media; each run checks gamemaster mode's bundle selector offers exactly the packs with a pool file in the questions locale. Shell started with `--lang=es` (the packs' language).
+  - **Smoke game:** with packs in the build, a second run on a hard-link copy without the packs' data and media; each run checks the Bundles screen offers exactly the packs with a pool file in the questions locale. Shell started with `--lang=es` (the packs' language).
   - The game itself never asks Steam about DLC (D-94: files present = pack offered).
 - Consequences: a new pack needs a `steam.json` `dlc` entry before `trivia-steam stage` passes; a pack's media shared with `base` or another pack stays in `content`.
 - Supersedes / related: D-93, D-94; pm decisions 66, 109, 110, 112; plans 89, 98
@@ -910,8 +910,8 @@ Template:
 - Date: 2026-10-14
 - Context: problem 5 of pm decision 50 (Play-test of age groups and bundles); plan 125, task 1017; pm decision 158.
 - Decision:
-  - **Every mode** shows the shared `BundleSelector` on the Choice screen: «Solo o en grupo» too, with the same letter keys (`keyOf`), mouse and pad.
-  - **Not customization:** its own section like the age group; not in «Personalizar partida», not counted in `customized`; in gamemaster mode below the configure fields.
+  - **Every mode** shows the shared `BundleSelector` on its own screen, Bundles, between Player and Choice (amended 2026-10-16, pm decisions 158, 260; plan 151): «Solo o en grupo» too, with letter keys (`keyOf`), mouse and pad; Choice shows the pick as a read-only line and keeps the supply report.
+  - **Not customization:** its own screen; not in «Personalizar partida», not counted in `customized`.
   - **Preset** in both modes: `playerChoice`, the player's newest game's bundles, else the locale's first base bundle, non-base off (pm decision 33).
 - Consequences: a fresh solo game plays base only (was: every offered bundle); a non-base mod bundle is off by default in solo too.
 - Supersedes / related: pm decision 51 (solo plays the defaults); pm decisions 33, 38 in part (fresh default on the configure screen only); D-85, D-88

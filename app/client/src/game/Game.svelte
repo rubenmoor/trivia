@@ -1,6 +1,6 @@
 <script lang="ts">
   // The game on the TV (plans/04-ui-tv-display.md, D-21, D-25): a state machine over the screens
-  // Start → Player → Choice → Level → Select → Question → Correct / Wrong → … → Victory (answers off, D-105:
+  // Start → Player → Bundles → Choice → Level → Select → Question → Correct / Wrong → … → Victory (answers off, D-105:
   // Question → Next → … → Completed), with one transition routine and the admin overlay on Esc. The engine
   // keeps the game (engine/, lib/api.ts).
   import { onDestroy, onMount, tick } from "svelte";
@@ -27,6 +27,7 @@
   import Stage from "./Stage.svelte";
   import { swap } from "./swap.ts";
   import CornerButtons from "./CornerButtons.svelte";
+  import Bundles from "./screens/Bundles.svelte";
   import Choice from "./screens/Choice.svelte";
   import Consent from "./screens/Consent.svelte";
   import Correct from "./screens/Correct.svelte";
@@ -46,13 +47,14 @@
   import { BLOCK_DROP_MS, FADE_MS, FLIP_MS, GREETING_MS, PICK_MS, PRELOAD_MAX_MS, TEAR_MS, sleep } from "./timing.ts";
   import Veil from "./Veil.svelte";
 
-  type Screen = "language" | "consent" | "start" | "player" | "choice" | "level" | "select" | "question" | "correct" | "wrong" | "victory" | "next" | "completed";
+  type Screen = "language" | "consent" | "start" | "player" | "bundles" | "choice" | "level" | "select" | "question" | "correct" | "wrong" | "victory" | "next" | "completed";
 
   const MUSIC: Record<Screen, Track | null> = {
     language: "normal",
     consent: "normal",
     start: "normal",
     player: "normal",
+    bundles: "normal",
     choice: "normal",
     level: "normal",
     select: "normal",
@@ -65,7 +67,7 @@
   };
 
   // Next and Completed: both `Revealed` (answers off, D-105).
-  const OURS = { Start, Language, Player, Choice, Level, Select, Question, Correct, Wrong, Next: Revealed, Completed: Revealed, Victory };
+  const OURS = { Start, Language, Player, Bundles, Choice, Level, Select, Question, Correct, Wrong, Next: Revealed, Completed: Revealed, Victory };
   type Name = keyof typeof OURS;
   /** Each screen: ours or a mod's (plan 117), read once; a failing one falls back to ours. */
   let S = $state.raw(Object.fromEntries(Object.entries(OURS).map(([n, c]) => [n, screenFor(n as Name, c)])) as typeof OURS);
@@ -98,8 +100,10 @@
   let main = $state<HTMLElement>();
   /** The chosen name while «¡Hola, …!» plays (UI-16). */
   let greeting = $state<string | null>(null);
-  /** The name picked on Player, for the Choice screen. */
+  /** The name picked on Player, for the Bundles and Choice screens. */
   let chosen = $state<string | null>(null);
+  /** The Bundles screen's pick; null until its preset loads (plan 151). */
+  let bundlePick = $state<string[] | null>(null);
   /** Why `new` refused the Choice screen's choice (plan 29). */
   let refused = $state<GameError | null>(null);
   /** The save file was unusable and moved to a backup (plan 55): shown once on Start. */
@@ -332,10 +336,18 @@
     await go("player", "whoosh");
   }
 
-  /** A name was picked or typed: their age group and bundles next (plan 29). */
+  /** A name was picked or typed: their bundles next, a fresh pick (plan 151). */
   async function choosePlayer(name: string) {
     if (busy) return;
     chosen = name;
+    bundlePick = null;
+    refused = null;
+    await go("bundles", "whoosh");
+  }
+
+  /** The Bundles screen's «Seguir»: the Choice screen with that pick. */
+  async function bundlesPicked() {
+    if (busy) return;
     refused = null;
     await go("choice", "whoosh");
   }
@@ -570,7 +582,7 @@
 
   $effect(() => {
     const on = screen;
-    if (on === "language" || on === "consent" || on === "player" || on === "choice" || on === "question") return; // they push their own
+    if (on === "language" || on === "consent" || on === "player" || on === "bundles" || on === "choice" || on === "question") return; // they push their own
     return pushScope({
       name: on,
       keys: on === "start" ? { [NEW_KEY]: { type: "new" }, [LANGUAGE_KEY]: { type: "language" } } : undefined,
@@ -625,9 +637,12 @@
     {:else if screen === "player"}
       <Stage />
       <S.Player {busy} onchoose={choosePlayer} ondeleted={refresh} />
-    {:else if screen === "choice" && chosen !== null}
+    {:else if screen === "bundles" && chosen !== null}
       <Stage />
-      <S.Choice player={chosen} {busy} {greeting} {refused} onstart={startGame} onback={() => go("player", "whoosh")} />
+      <S.Bundles player={chosen} {busy} picked={bundlePick} onpick={(ids) => (bundlePick = ids)} onnext={bundlesPicked} onback={() => go("player", "whoosh")} />
+    {:else if screen === "choice" && chosen !== null && bundlePick}
+      <Stage />
+      <S.Choice player={chosen} bundles={bundlePick} {busy} {greeting} {refused} onstart={startGame} onback={() => go("bundles", "whoosh")} />
     {:else if screen === "level" && game}
       <Stage />
       <div class="corner-hud"><Hud level={null} player={game.player} /></div>

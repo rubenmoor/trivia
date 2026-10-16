@@ -65,7 +65,7 @@ export type BeforeHook = (action: string, body: Record<string, unknown>) => Reco
 export type AfterHook = (action: string, game: Game | null) => void;
 
 /** `game/screens/*`: the names `screens.replace` and `screens.dom` take. */
-export const SCREENS = ["Start", "Language", "Player", "Choice", "Level", "Select", "Question", "Correct", "Wrong", "Next", "Completed", "Victory"] as const;
+export const SCREENS = ["Start", "Language", "Player", "Bundles", "Choice", "Level", "Select", "Question", "Correct", "Wrong", "Next", "Completed", "Victory"] as const;
 export type ScreenName = (typeof SCREENS)[number];
 /** Plain DOM: draw into `el`; `props` live, as our screen gets them; may return a cleanup. */
 export type DomRender = (el: HTMLElement, props: Record<string, unknown>) => (() => void) | void;

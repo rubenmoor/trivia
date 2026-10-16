@@ -92,13 +92,19 @@ async function gameplay(lang, saveDir, data, ui) {
   await shoot(lang, "joker-snipe");
 }
 
-/** Start → player → the Choice screen in `mode`. */
-async function toChoice(saveDir, data, ui, mode) {
+/** Start → player → the Bundles screen. */
+async function toBundles(saveDir, data, ui) {
   await load(saveDir, baseSave(ui, data.locale));
   await click("button.candy");
   await waitFor(visibleEl(".name-button"), "player screen");
   await sleep(800);
   await click(".name-button");
+  await waitFor(visibleEl('[data-focus-id="next"]'), "bundles screen");
+}
+
+/** Bundles → the Choice screen in `mode`. */
+async function toChoice(mode) {
+  await click('[data-focus-id="next"]');
   await click(`[data-focus-id="mode-${mode}"]`);
 }
 
@@ -106,11 +112,7 @@ const focus = (sel) => evaluate(`document.querySelector(${JSON.stringify(sel)}).
 
 /** The 5 informative shots (decision 79): modes, bundles, Customize game, configure screen, joker presets. */
 async function menus(lang, saveDir, data, ui) {
-  await toChoice(saveDir, data, ui, "solo");
-  await click('[data-focus-id="group-young_teens"]');
-  await sleep(3000);
-  await shoot(lang, "modes");
-
+  await toBundles(saveDir, data, ui);
   const pack = '[data-focus-id="bundle-colombia"]';
   if (await evaluate(`!!document.querySelector(${JSON.stringify(pack)})`)) {
     await click(pack);
@@ -119,12 +121,18 @@ async function menus(lang, saveDir, data, ui) {
   await sleep(1200);
   await shoot(lang, "bundles");
 
+  await toChoice("solo");
+  await click('[data-focus-id="group-young_teens"]');
+  await sleep(3000);
+  await shoot(lang, "modes");
+
   await click('[data-focus-id="customize"]');
   await waitFor(visibleEl(".dialog"), "customize");
   await sleep(1200);
   await shoot(lang, "customize");
 
-  await toChoice(saveDir, data, ui, "gamemaster");
+  await toBundles(saveDir, data, ui);
+  await toChoice("gamemaster");
   await waitFor(visibleEl('[data-focus-id="config-preset"]'), "configure screen");
   await sleep(2500);
   await shoot(lang, "configure");

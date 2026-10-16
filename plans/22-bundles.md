@@ -73,11 +73,11 @@ Mods carry bundles in our own format, loaded by our own loader (pm plan 115, dec
 - Achievements: player questions count like ours except `BUNDLE_*` and `ALL_CATEGORIES` (ours only) (decision 123: Achievements in games with mods on: allowed or off?; decision 146: Achievements, mods screen and rich presence with mods on).
 
 ## In the game (BN-6)
-Players choose bundles on the Choice screen before every session; selection uses only the active bundles.
+Players choose bundles on their own screen, Bundles (Player → Bundles → Choice), before every session; selection uses only the active bundles.
 
 - **Languages** (D-85): every bundle lists `languages`; the game offers only the bundles of its language (`bundlesFor`), others refused (`bundle_not_offered`). `base`: es, es-ES, en, de; `colombia`: es.
 - **Base bundles** (D-85): `kind: base`; exactly one per session, zero or two refused (`base_bundle_count`); picked like a radio button among the language's base bundles. Other bundles: any number, on or off.
-- **Every mode** (D-97, decision 158): «Solo o en grupo» and gamemaster mode show the same `BundleSelector`, its own step apart from «Personalizar partida»; preset: the player's newest game's bundles, else the language's first base bundle, non-base off.
+- **Every mode** (D-97, decision 158): «Solo o en grupo» and gamemaster mode show the same `BundleSelector` on the Bundles screen (plan 151, decision 260), apart from «Personalizar partida»; Choice shows the pick as a read-only line with the supply report; preset: the player's newest game's bundles, else the language's first base bundle, non-base off.
 - **Names:** «Básico», «Regional: Colombia»; the overlay line labels them «Paquetes de preguntas: …» (plan 125).
 - **`qgen validate`:** each launch language has a base bundle; `languages` and `kind` valid, no legacy keys (D-85).
 - **«Cambiazo»:** shows the categories of the active bundles only.

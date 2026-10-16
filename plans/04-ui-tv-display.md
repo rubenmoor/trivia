@@ -26,8 +26,10 @@ stateDiagram-v2
   [*] --> Start
   Language --> Start: confirm (reload if the UI language changed)
   Start --> Player: «¡Jugar!» (new game)
-  Player --> Choice: name chosen
-  Choice --> Player: «Atrás» / Backspace
+  Player --> Bundles: name chosen
+  Bundles --> Player: «Atrás» / Backspace
+  Bundles --> Choice: «Seguir» (exactly one base bundle)
+  Choice --> Bundles: «Atrás» / Backspace (pick kept)
   Choice --> Level: «¡A jugar!» (new game, «¡Hola, …!»)
   Level --> Select: continue
   Select --> Question: pick a description
@@ -63,7 +65,8 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 | Language | First start (D-86) or Start's language button (D-96): «Elige el idioma», languages by flags + endonym (decision 186), guess preselected | Click / `Enter` / pad A / `1`–`n`; from Start: «Atrás» / `Backspace` / pad B | Normal |
 | Start | Title, «¡Jugar!», "continue game" if one is running | Click / `Enter` | Normal |
 | Player | «¿Quién juega?»: known names, new name | Click a name / `1`–`9` / `Enter` (most recent name, nothing focused) / type + `Enter` | Normal |
-| Choice | «¿Cómo juega …?»: mode (MD-7); gamemaster mode: the configure game screen (MD-11: difficulty, levels, cards, video, audio, answers (D-105), jokers, bundles); «Solo o en grupo»: age group, «Personalizar partida», bundles | «¡A jugar!» / `Enter`; «Atrás» / `Backspace` | Normal |
+| Bundles | «¿Qué preguntas juega …?»: the question bundles (plan 151) | «Seguir» / `Enter`; «Atrás» / `Backspace` | Normal |
+| Choice | «¿Cómo juega …?»: mode (MD-7); gamemaster mode: the configure game screen (MD-11: difficulty, levels, cards, video, audio, answers (D-105), jokers); «Solo o en grupo»: age group, «Personalizar partida»; the bundles as a read-only line | «¡A jugar!» / `Enter`; «Atrás» / `Backspace` | Normal |
 | Level | The tower, «Nivel N de 12» | Click / `Enter` / `Space` | Normal |
 | Select | 4 description cards | Click a card / `1`–`4` | Normal |
 | Question | Question, 4 answers, media, lock, final button, joker tray | Final answer; jokers Paso y fuera / Tiro mágico hit | Intense (off while question media plays); after submitting: most intense |
@@ -109,26 +112,34 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
   - Mouse clicks on keys; physical letters, `Backspace`, `Enter` (focused key), `Esc` (close) while open.
 - Idle animation so the TV doesn't look frozen, e.g. the empty foundation slowly breathing, or floating question marks.
 
-### Choice (plan 29, AG-7, BN-6)
-- `game/Choice.svelte`, «¿Cómo juega Sofía?»: what the next game plays; preset: the player's newest game, else the language's defaults (engine `choice` route, plan 71).
-- Mode row (MD-7, plan 36), on top: the built modes (`BUILT_MODES`), in the order «Solo o en grupo», «Modo anfitrión» (decision 50; multiplayer modes when built), name + one-line about, keys `mode.*Key` (es `G` grupo, `A` anfitrión; en `A`, `G`). Preset: `?mode=gamemaster|solo` launch option, else the player's newest game's mode (`playerMode`), else gamemaster mode; Enter straight through = today's game.
-- Gamemaster mode: the configure game screen (MD-11, D-88, decision 33: Configure game screen: which fields?); every field preset from the player's newest game (`playerChoice`), a fresh player: `young_teens`, the first base bundle only, `STANDARD_JOKERS`, video/audio on, 12 levels, 4 cards.
-  - Left «Partida»: Difficulty (age groups, then «A medida»; «Desde» / «Hasta» rows always shown: with a group its span, read-only (no −/+, skipped by ↑/↓ and the focus ring), with «A medida» editable 1–15, end ≥ start, starting at the group's span; plan 125), Niveles 1–20, Cartas por nivel 0–4 (0: «pregunta directa»), Preguntas con video / audio, «Responder para avanzar» (switches; D-105, `answers`, sent only as `false`). Right «Comodines»: «Conjunto» preset row (Estándar | Sin límite | Personalizado, decision 99: ←/→ Estándar ↔ Sin límite fills the rows), then one row per joker (`TOKENS` order), 0–9 or ∞, clamped (← stops at 0, → stops at ∞; decision 105).
-  - Below: «Paquetes», the shared `game/BundleSelector.svelte` (base radio group | divider | other bundles as toggles); the menu reuses it (MD-12).
-  - Lines (`data-line`): ↑/↓ (D-pad, stick) move line by line, left column then right; ←/→ change a value on a stepper or switch; −/+ and switch clicks with the mouse; `Enter`/A on a switch toggles, on a stepper or «¡A jugar!» starts; `1`–`4` pick a group, bundle letters as below.
-  - Supply on every change with the whole configuration; a long report hides the bundle descriptions so 720p fits.
-- «Solo o en grupo»: age group, then the shared bundle selector (letter keys, as gamemaster mode; its own section, not customization; D-97), a small «Personalizar partida» button (`P`) with «Comodines estándar» / «Comodines personalizados» next to it.
-  - Dialog `game/Customize.svelte` (modal scope): preset row «Conjunto» (Estándar | Sin límite | Personalizado, decision 99), then one row per joker, 0–9 or ∞ (MD-4 steppers); ↑/↓ rows, ←/→ or −/+ change, «Listo» / `Enter` / `Esc` / `Backspace` close, focus back on the button.
-  - `new` gets `mode: "solo"` and `jokers` only when they differ from the standard set; the engine sets `customized` (D-74: no achievements).
-- Age group: four tiles in `age-groups.json` order, name + ages («6–10 años», «23+ años»), keys `1`–`4`; the window isn't shown.
+### Bundles (plan 151, BN-6)
+- `game/screens/Bundles.svelte`, «¿Qué preguntas juega Sofía?»: between Player and Choice in every mode, also with one offered bundle (decision 260: Bundle screen: where it sits, supply report, in-game settings; D-97).
+- The shared `game/BundleSelector.svelte`, `large`: base bundles in one row, a divider, the others below (wrap, no scroll at 2–6 tiles at 1280×720); descriptions always shown; «Ajustes de la partida» reuses the selector (MD-12).
 - Bundles: only those of the new game's question locale (`bundlesFor`; the language's, else `es`, D-96), file order, names in that language.
   - Base bundles: one-of-N tiles, exactly one selected; picking another deselects the first.
   - Others: on/off tiles («activado» / «desactivado»).
-  - Key per bundle: first letter of its name (after a `Regional:`-style prefix; accents stripped) not taken by an earlier bundle, else its next letter; never the flag, new, replay or Soplo key (es: `M` `N` `R` `S`). es: `B` Básico, `C` Regional: Colombia.
+  - Key per bundle (`bundleKeys`): first letter of its name (after a `Regional:`-style prefix; accents stripped) not taken by an earlier bundle, else its next letter; never the flag key (es `M`). es: `B` Básico, `C` Regional: Colombia.
+- Preset: the player's newest game's bundles (`playerChoice`), else the locale's first base bundle, non-base off (decision 33). The pick lives in `Game.svelte`: Choice → «Atrás» shows it unchanged; a name chosen on Player starts fresh.
+- No supply here (decision 206: report on Choice only).
+- Input (scope `bundles`): a bundle's letter toggles it; arrows move spatially between tiles and buttons; `Enter`/A on a tile toggles, on «Seguir» continues (default focus); `Backspace`/B back to Player; `Esc` the overlay.
+- «Seguir»: off unless exactly one base bundle; Choice with the pick.
+
+### Choice (plan 29, AG-7, BN-6)
+- `game/Choice.svelte`, «¿Cómo juega Sofía?»: what the next game plays; preset: the player's newest game, else the language's defaults (engine `choice` route, plan 71); the bundles come from the Bundles screen.
+- Mode row (MD-7, plan 36), on top: the built modes (`BUILT_MODES`), in the order «Solo o en grupo», «Modo anfitrión» (decision 50; multiplayer modes when built), name + one-line about, keys `mode.*Key` (es `G` grupo, `A` anfitrión; en `A`, `G`). Preset: `?mode=gamemaster|solo` launch option, else the player's newest game's mode (`playerMode`), else gamemaster mode; Enter straight through = today's game.
+- Gamemaster mode: the configure game screen (MD-11, D-88, decision 33: Configure game screen: which fields?); every field preset from the player's newest game (`playerChoice`), a fresh player: `young_teens`, `STANDARD_JOKERS`, video/audio on, 12 levels, 4 cards.
+  - Left «Partida»: Difficulty (age groups, then «A medida»; «Desde» / «Hasta» rows always shown: with a group its span, read-only (no −/+, skipped by ↑/↓ and the focus ring), with «A medida» editable 1–15, end ≥ start, starting at the group's span; plan 125), Niveles 1–20, Cartas por nivel 0–4 (0: «pregunta directa»), Preguntas con video / audio, «Responder para avanzar» (switches; D-105, `answers`, sent only as `false`). Right «Comodines»: «Conjunto» preset row (Estándar | Sin límite | Personalizado, decision 99: ←/→ Estándar ↔ Sin límite fills the rows), then one row per joker (`TOKENS` order), 0–9 or ∞, clamped (← stops at 0, → stops at ∞; decision 105).
+  - Lines (`data-line`): ↑/↓ (D-pad, stick) move line by line, left column then right; ←/→ change a value on a stepper or switch; −/+ and switch clicks with the mouse; `Enter`/A on a switch toggles, on a stepper or «¡A jugar!» starts; `1`–`4` pick a group.
+  - Supply on every change with the whole configuration; a long report tightens the gaps so 720p fits.
+- «Solo o en grupo»: age group, a small «Personalizar partida» button (`P`) with «Comodines estándar» / «Comodines personalizados» next to it.
+  - Dialog `game/Customize.svelte` (modal scope): preset row «Conjunto» (Estándar | Sin límite | Personalizado, decision 99), then one row per joker, 0–9 or ∞ (MD-4 steppers); ↑/↓ rows, ←/→ or −/+ change, «Listo» / `Enter` / `Esc` / `Backspace` close, focus back on the button.
+  - `new` gets `mode: "solo"` and `jokers` only when they differ from the standard set; the engine sets `customized` (D-74: no achievements).
+- Age group: four tiles in `age-groups.json` order, name + ages («6–10 años», «23+ años»), keys `1`–`4`; the window isn't shown.
+- Bundles: a read-only line «Paquetes de preguntas: …» (`choice.lineBundles`, base first, as in the overlay), the context of the supply report.
 - Supply on entering and on every change: the choice, plus each group with these bundles. A group that can't fill a game: dimmed, «Faltan preguntas», still selectable. The choice can't fill one: «¡A jugar!» off, the supply report (`SupplyReport.svelte`) below. Zero or two base bundles: off, with the engine's reason.
 - Supply notice (plan 65, decision 31): «¡A jugar!» first asks `outlook`; tight levels (≤ 1 unseen), none left or chosen bundles running out (≤ 1 unseen in the window, task 1104; «This bundle is running out of questions: Regional: Colombia») → modal `SupplyNotice.svelte` (bundle hint if one helps); Enter plays, `Backspace`/`Esc` back. Every start calls `noteRunningOut` with what it showed (`notified_exhausted`: bundle ids).
 - «¡A jugar!» / `Enter`: `new` with `{player, mode, age_group, bundles, jokers?}` («Solo o en grupo»), every field in gamemaster mode (`age_group` or `difficulty`, `bundles`, `levels`, `cards`, `video`, `audio`, `answers`, `jokers`); a refusal shows here. Then «¡Hola, Sofía!» plays into the transition to Level; the name stays in a corner of the Level screen.
-- «Atrás» / `Backspace`: back to Player. `Esc`: the overlay.
+- «Atrás» / `Backspace`: back to Bundles. `Esc`: the overlay.
 
 ### Level (between questions)
 Players start at **level 1** (easiest question) and must answer **level 12** to win (D-20). Before every question, they see where they are.
@@ -269,7 +280,7 @@ The detailed action set and any extra keys are owned by `05-gamemaster-controls.
 ## Input
 **Rule (IN-1): no action without a clickable control.** A key is a shortcut shown on its button (`<kbd>`), never the only way. The overlay opens with `Esc` or the faint ☰ button in the top right corner.
 
-Everything works with a mouse and with the keyboard of the TV machine (OQ-11): `Enter`/`Space` = continue or confirm, `1`–`4` / `A`–`D` = pick a card or an answer (Choice: an age group; ↑/↓ lines and ←/→ values on the configure screen; a mode's letter picks it, es `A` `G`; a bundle's letter selects or toggles it; `P` «Personalizar partida»), `R` = replay media, `S` `P` `F` `T` `X` = jokers (09, D-30), `Backspace` = unlock or cancel, (answers off, D-105) `Enter` / pad A = the padlock reveal, `M` = flag the question for review (GM-5), `Esc` = admin overlay. A clicker or phone remote can map to these later.
+Everything works with a mouse and with the keyboard of the TV machine (OQ-11): `Enter`/`Space` = continue or confirm, `1`–`4` / `A`–`D` = pick a card or an answer (Choice: an age group; ↑/↓ lines and ←/→ values on the configure screen; a mode's letter picks it, es `A` `G`; `P` «Personalizar partida»; Bundles: a bundle's letter selects or toggles it), `R` = replay media, `S` `P` `F` `T` `X` = jokers (09, D-30), `Backspace` = unlock or cancel, (answers off, D-105) `Enter` / pad A = the padlock reveal, `M` = flag the question for review (GM-5), `Esc` = admin overlay. A clicker or phone remote can map to these later.
 
 **Rule (IN-2, IN-3): actions, not keys.** Screens and dialogs listen to actions from `app/client/src/lib/input.svelte.ts` (`pushScope`), never to `keydown`; `grep -rn "keydown\|KeyboardEvent" app/client/src` lists only that file. Each screen and dialog declares a focus default (`data-focus-default`) and a `root`, so arrows + `Enter` + `Esc`/`Backspace` play it (spatial focus, ring, memory: `lib/focus.ts`, plan 44). ☰ and flag stay unfocusable (`data-nofocus`).
 
