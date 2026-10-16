@@ -161,6 +161,7 @@ Split per decision 84: SteamCMD source and depot split for Steam uploads; build 
 - [ ] `germany`: OS all, language all, tied to the germany DLC app (next block); only if `app/data/bundles/germany/` ships at upload time.
 - [ ] `uk`: OS all, language all, tied to the uk DLC app (next block); only if `app/data/bundles/uk/` ships at upload time.
 - [ ] `spain`: OS all, language all, tied to the spain DLC app (next block); only if `app/data/bundles/spain/` ships at upload time.
+- [ ] `mexico`: OS all, language all, tied to the mexico DLC app (next block); only if `app/data/bundles/mexico/` ships at upload time.
 - [ ] IDs → `authoring/steam/steam.json` (task 1045 / task 681), via the decision.
 
 ### DLC (All Associated Packages, DLC, Demos And Tools → Add New DLC)
@@ -170,8 +171,9 @@ Free DLC per shipped pack (decision 66: Price model (OQ-33); decision 110: Regio
 - [ ] `germany`: name «Regional: Germany» (en); de «Regional: Deutschland»; es/es-ES «Regional: Alemania» (`names.<locale>.json` `bundles.germany`); `languages: ["de"]`, en joins once en translations exist.
 - [ ] `uk`: name «Regional: United Kingdom» (en); de «Regional: Vereinigtes Königreich»; es/es-ES «Regional: Reino Unido» (`names.<locale>.json` `bundles.uk`); en only (`languages: ["en"]`).
 - [ ] `spain`: name «Regional: Spain» (en); de «Regional: Spanien»; es/es-ES «Regional: España» (`names.<locale>.json` `bundles.spain`); `languages: ["es-ES"]`, en joins once en translations exist.
+- [ ] `mexico`: name «Regional: Mexico» (en); de «Regional: Mexiko»; es «Regional: México» (`names.<locale>.json` `bundles.mexico`); `languages: ["es"]`, en joins once en translations exist.
 - [ ] Price free; optional (installed when owned and ticked in Properties → DLC).
-- [ ] Depot `colombia` linked to it; the base app lists it. Same for `usa` (depot `usa`), `germany` (depot `germany`), `uk` (depot `uk`) and `spain` (depot `spain`); their app IDs and depot IDs go into decision 179: Steamworks app configured (SW-7)? IDs? like colombia's.
+- [ ] Depot `colombia` linked to it; the base app lists it. Same for `usa` (depot `usa`), `germany` (depot `germany`), `uk` (depot `uk`), `spain` (depot `spain`) and `mexico` (depot `mexico`); their app IDs and depot IDs go into decision 179: Steamworks app configured (SW-7)? IDs? like colombia's.
 - [ ] Store texts: `plans/17a-store-page.md` "Free DLC" (decision 173).
 
 ### SteamPipe → Builds (branches)
