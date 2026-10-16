@@ -9429,6 +9429,61 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 - A `timed` session plays start to finish on the dev server with 3 key seats, 5 seats and 8 seats, every end reached (round-12 win, last standing, nobody wins, a sudden-death repeat)
 - The drama shows and sounds as specified with `TRIVIA_SOUND=1`; a pause keeps everyone''s seconds
 - Solo, gamemaster and round-robin screens unchanged; per-commit checks pass', 'In the timed race every player sees the same question at once, anyone can grab it, and whoever grabs it has six seconds to answer, with three lives each over twelve rounds. These screens are what the family watches on the TV during that race: the shrinking clock, the hints appearing, who grabbed the question, everyone''s hearts, and the moments of tension (a heart beating on someone''s last chance, ticks getting louder, a red pulsing frame when time is nearly up). It also covers pausing the race fairly, the sudden-death final round and the winner''s moment, with sounds made by the game itself until recorded ones replace them.', '2026-10-16T21:14:29Z', 1399);
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (165, 16, 'Multiplayer UI strings and gallery', 360, 'Part 9 of `plan 152: masterplan`. Every multiplayer UI string in es, es-ES, en, de, checked as a whole once the screens of `plan 162: Mode row, session setup and join screen`, `plan 163: Round-robin game screens` and `plan 164: Timed game screens, drama and sound` are in; the catalog key rule for the new screens and the claim keys; `trivia-gallery` demo saves and shots of every new screen and state in all four locales; the developer''s review. Same method as `plan 69: UI catalogs for the launch languages (LUI-4, LUI-5)` and plan 100''s gallery (style guides, `/gallery` flags, a fix pass).
+
+## Binding
+- Strings land with their screens (plans 162–164, each task in four locales); this plan audits and fills gaps, it doesn''t write them first
+- Style: `app/client/src/locales/style/<locale>.md` read before any change (AGENTS.md); new bad patterns go into the guide
+- `decision 53: Joker and action keys per UI language (LUI-4)?`: shortcut keys per catalog, collision rule in `npm run check` (`app/client/scripts/check-literals.mjs` `SCREENS`, `ANSWERS`)
+- `decision 290: Timed mode: the claim input per kind of player`: picked claim keys must not be a key the Question screen binds; `claimKeyOk` (plan 161) reads the Question screen''s key list, not a copy (decision 199)
+- `decision 292: Join screen: joining, leaving, names and claim keys`, `decision 293: Unbuilt multiplayer modes: on the mode row in dev mode only`: the gallery''s stub is a dev Steam user (`steam.dev: true` → `devMode`), so unbuilt modes show with their `PLACEHOLDER` marks until part 10 ships them
+- Mode names: `plans/15a-ui-translation.md` "Mode names" are proposals; plan 162 says the developer reviews them here
+- `decision 115: Screen gallery: how does trivia-gallery drive a browser?`: nixpkgs Playwright, nothing in `package.json`
+- Demo saves: made-up players only (`authoring/tools/demo_saves.mjs` `PLAYERS`), built with the engine (`decision 277: Multiplayer sessions in the save: one games[] row per session, with seats`), `checkVersion` on each
+- Deck sizes: shots at 1920×1080 and 1280×800 (`--size`), as `decision 248: Joker names and symbols reviewed?`''s check
+
+## What exists (2026-10-16)
+- `authoring/tools/gallery.py`: `STEPS` (shot names → step), `Run.shot`, manifest with catalog keys per visible text (`?gallery`), shell stub with one fake pad (`__press(button)`), `failed/` screenshots
+- `authoring/tools/gallery_saves.mjs`: `saves`/`meta` per scene from `play`/`playTo`, solo and gamemaster only
+- `check-literals.mjs`: keys per screen (`question`, `start`, `choice`), `{param}` sets equal to `es`, en/de leaves not identical to `es` (`SAME_OK`)
+- `trivia-authoring` `/gallery` (`authoring/ui/src/gallery/Gallery.svelte`): flags per string into `authoring/data/ui-flags.json`
+
+## Strings and keys
+- `SCREENS` in `check-literals.mjs`: `choice` gains the three mode keys (`mode.<id>Key`); a `join` scope and a `timed` scope with whatever keys those screens show; `timed` in `ANSWERS` (answers A–D shown)
+- Claim keys: a throw-away check per locale that no key of `SCREENS.question` (nor A–D, 1–9) passes `claimKeyOk`; if `claimKeyOk`''s list isn''t derived from the catalog, a follow-up task in `plan 161: Per-player controls`
+- Audit of every leaf the multiplayer screens added (`git log` of plans 162–164 over `locales/`): the guide''s rules per locale; `es` group address (ustedes) vs `es-ES` overrides where the group is addressed (vosotros) or a regionalism differs; plural maps for player counts («Ana, Luis y 2 más») per catalog; German length (seat names, «Muerte súbita», turn line) at 1280×800
+- Names of players are data, not catalog text (manifest `data`); seat colours carry no text
+
+## Gallery
+- Stub: N fake pads (`__pads(n, ids)`, `__press(button, pad = 0)`), mixed ids (Xbox, PlayStation) so per-pad glyph styles show; `steam.inputTypes` per pad if plan 161 reads it
+- Session binding: the demo save''s seats bound by an init script (plan 161''s `sessionStorage` entry by game id), so mid-game shots don''t stop at the rebind dialog; one shot without it for that dialog
+- Clock: Playwright `page.clock` set to a fixed time per timed shot (the save''s `now` plus the seconds the scene needs), so countdowns, hints and the red frame are frozen at a chosen moment; `reduced_motion` left as the default
+- Extra names for 8 seats: a separate list in `demo_saves.mjs` used only by session saves (`PLAYERS` and the Player screen shots unchanged)
+- Shots (names may follow what plans 162–164 built; listed by `--list`):
+  - Setup: `choice-multiplayer` (five tiles), `join-empty` (pads connected, none joined), `join-5` (4 pads + keyboard and mouse, named), `join-8` (scroll), `join-keyboard-timed` (3 key seats, a refused key), `join-name-picker`, `join-age-groups` (rr-competitive steppers), `bundles-session` (plural title, a short supply naming a seat), `greeting-session`
+  - In a session: `start-resume-session`, `menu-session` (Esc menu, `decision 288: Local multiplayer: who opens the Esc menu in a session, and who drives it`), `seat-lost` (`decision 289: Local multiplayer: a controller lost mid-session waits for a controller to take the seat`)
+  - rr-coop: `level-rr-coop` (turn line), `select-rr-coop` (HUD seat tag, team jokers), `correct-rr-coop`, `wrong-rr-coop`, `victory-rr-coop`
+  - rr-competitive: `level-rr-competitive` (tracks, an out seat), `wrong-rr-competitive` («Fuera», «Siguiente»), `victory-rr-competitive`, `victory-last-standing`
+  - timed: `timed-round` (hearts, a cracked heart, seats out), `timed-question` (clock, a hint shown), `timed-claimed`, `timed-claim-last` (last 3 s, red frame), `timed-last-heart`, `timed-all-at-risk`, `timed-time-up`, `timed-paused`, `timed-sudden-death`, `victory-timed`, `timed-nobody-wins`
+- Every shot in es, es-ES, en, de at 1920×1080 and 1280×800; nothing clips, no `unmatched` text that should be a catalog key
+
+## Tasks
+1. Catalog checks for the multiplayer screens: `SCREENS`/`ANSWERS` scopes (choice mode keys, join, timed), the claim-key throw-away check per locale, string audit per style guide with es-ES overrides and plural maps; fixes in the catalogs; new patterns into the guides; after plan 162''s tasks (`task 1437: Mode row and per-mode Choice for the multiplayer modes`, `task 1438: Join screen: seats, names, keyboard rules, claim keys, seat colours`, `task 1439: Session start through Bundles: session supply, new with players, binding, greeting`), plan 163''s (`task 1445: Session screens and rr-coop: routing, seat tag, turn line, team screens`, `task 1446: rr-competitive screens: tracks, per-seat jokers, knocked out, winner`) and plan 164''s screen tasks (timed screen, pause, drama, ends)
+2. Gallery stub and setup shots: N fake pads with mixed ids, `__press` per pad, session binding init script, the setup and in-session shots above (Join through greeting, resume, Esc menu, seat lost); session demo saves in `gallery_saves.mjs` (extra names list in `demo_saves.mjs`); after `task 1439: Session start through Bundles: session supply, new with players, binding, greeting` and `task 1434: Lost pads and the Esc menu in a session`
+3. Round-robin demo saves and shots: rr-coop and rr-competitive scenes (mid-game turn, a seat out, team loss, each win, last standing) built with the engine''s session actions; after `task 1446: rr-competitive screens: tracks, per-seat jokers, knocked out, winner` and task 2
+4. Timed demo saves and shots (`--model opus`: timestamps vs the frozen page clock): scenes for each timed shot above (claim, last 3 s, last heart, all at risk, time up, paused, sudden death, each end), `page.clock` per shot; after plan 164''s ends task and task 2
+5. Full run and review decision: `trivia-gallery` for all four locales at 1920×1080 and 1280×800; overflow fixed within `--u` or catalogs (bigger → follow-up task in the plan of that screen); `plans/15a-ui-translation.md` gallery line (shot count, multiplayer shots); `pm decision add --once` "Multiplayer screens reviewed in /gallery?" (how to review, the mode names per locale from 15a; options: reviewed, names as proposed / flags in /gallery, fix task follows); link task 6 to it; after tasks 1, 3, 4
+6. Review fixes: open flags of the multiplayer shots per the guides (catalogs; bigger → follow-up task), `fixed_on` in `ui-flags.json`, new patterns into the guides, 15a "Mode names" no longer proposals, re-run the affected shots; `pm decision consequences`; waits for task 5''s decision
+
+## Check
+- Per commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`
+- `trivia-gallery --only <the new shots>` passes with no `failed/`; solo and gamemaster shots unchanged (same `--list` names, no new unmatched text)
+
+## Out of scope
+- Writing the screens and their first strings (plans 162–164), store texts and `BUILT_MODES` (`task 1401: write plan: Shipping the multiplayer modes and docs`), store screenshots (`decision 79: Store screenshots: which set?`), native-speaker playtest of multiplayer (part 11, `task 1402: write plan: Local multiplayer close-out and family playtest`)
+
+## Done when
+- Every multiplayer string in es, es-ES, en, de passes `npm run check` with the new key scopes; every new screen and state has a gallery shot in all four locales at both sizes; the developer''s review decision is answered and its flags fixed', 'When several players share the TV, the new screens (joining, whose turn it is, the timed race with its hearts and countdowns, the winner) must read right in all four launch languages: Latin American Spanish, Spanish from Spain, English and German. This part checks every new text against each language''s style guide, makes sure no shortcut key on those screens clashes with another, and renders a picture of every new screen and moment in every language, so the developer can review the wording and layout without playing a full game night.', '2026-10-16T21:16:42Z', 1400);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -37192,6 +37247,11 @@ Needs: `task 1449: Timed screen and flow: round screen, question for all, clock,
 - `npm run check`, `npm test`, `npm run build`, `qgen validate`
 
 Decision 297 (pending): Timed mode visuals: what should change in the hearts, red frame and claim banner?', '2026-10-16T21:15:41Z', NULL, 1448, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1454, 130, 'DLC app for regional bundle uk', 'work', 'open', 700, NULL, 'Bundle `uk` (`languages: ["en"]`, en region: en only): free DLC like `colombia` (`decision 66: Price model (OQ-33)`). In `plans/18-steam-integration.md` Steamworks checklist: DLC app «Regional: United Kingdom» (de «Regional: Vereinigtes Königreich»; es/es-ES «Regional: Reino Unido»), price free, optional, off by default, depot `uk` linked; `authoring/steam/steam.json` `dlc` entry `uk` (`null` IDs until entered); the SW-7 decision lists its IDs like colombia''s. Names: `app/data/names.<locale>.json` `bundles.uk`. Only if the pack ships at upload time (`app/data/bundles/uk/`).', '2026-10-16T21:16:36Z', NULL, 1278, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1455, 89, 'DLC depot for regional bundle uk', 'work', 'open', 620, NULL, 'Bundle `uk` (`languages: ["en"]`, en region: en only): like `task 748: DLC depots for packs (decision 66)`: `steam.json` `dlc` entry `uk`, depot VDF, exclusions in the OS and `content` depots, `trivia-steam stage` union check, smoke game with and without the pack (an en save is offered it, others not). `trivia-steam upload --dry-run` renders its depot with placeholder IDs. Only once `app/data/bundles/uk/pool.json` ships.', '2026-10-16T21:16:36Z', NULL, 1278, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1456, 88, 'Store text and capsules for DLC uk', 'work', 'open', 300, NULL, 'Bundle `uk` (`languages: ["en"]`, en region: en only; description in `app/data/names.en.json` `bundles.uk`): free DLC store page in `plans/17a-store-page.md` "Free DLC": store name «Regional: United Kingdom», short and long description in en (British English; free, needs the base game, optional, off by default), capsules via `authoring/store/capsules.mjs`. Approval via pm decision like colombia''s (`task 783: Free DLC store texts in 17a`).', '2026-10-16T21:16:37Z', NULL, 1278, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1457, 165, 'create tasks for plan 165: Multiplayer UI strings and gallery', 'split', 'open', 1000, NULL, 'Split plan 165 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T21:16:42Z', NULL, 1400, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -41585,6 +41645,85 @@ left out: []', 'The new German question pack needs its own list of topics, so it
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (295, 'Timed mode: the claimer answers with one press, no final-answer step, a short reveal', 'answered', '[]', 'Decision 290 and decision 275 say the claimer answers as on the Question screen; that names the inputs, not the two-step lock-in. The lock-in plus PADLOCK_MS (1.4 s) leaves under 5 s to think and invites claim timeouts that feel like input failures. The pace of the race needs a quick reveal; the drama is in the clock, not the wait.', 'In the timed race, the player who grabs a question has only six seconds to answer. The normal game makes players pick an answer, wait for a padlock and confirm it as their final answer, then holds a drum roll of several seconds before the reveal; that would eat most of the six seconds and slow the race. Here a single press is the answer, and the result shows after a short fixed beat.', 'In timed, the claimer''s first pick (pad face button, A–D/1–4, or a click) is the answer: no lock-in, no padlock, no «Respuesta final», no level-dependent drum roll; the reveal follows after a fixed TIMED_REVEAL_MS beat (about 1.2 s, timing.ts), visible to everyone, then the next question or the round end', NULL, '2026-10-16T21:13:18Z', '2026-10-16T21:13:18Z', 1399, NULL, 'rule', 1399, '2026-10-16, task 1399: written into plan 164: Timed game screens, drama and sound (Timed screen, Answer).');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (296, 'Timed mode: a round screen with a countdown before each round, and the question clock starts when the question is on screen', 'answered', '[]', 'With shown_at set at the previous question''s end (plan 159 as written), the reveal beat, the fade and a round screen would come off the next question''s 30 s, and a slow machine would lose more. A press to continue would need a rule for which player may press; the countdown is fair to all and keeps the pace.', 'Between rounds of the timed race, the screen shows the round number and every player''s hearts, including the hearts just lost. Somebody has to move on from there, and the question''s 30 seconds must not start ticking while the screen is still fading in or showing the last answer. This rule moves on by itself after a short countdown, and starts each question''s clock only once the question is visible.', 'Each round opens on the Level screen as a round screen (round n of 12 or sudden death, hearts per player, the hearts lost at the last round end break there, players out marked) and moves on by itself after a 3-2-1 countdown (no press, so no player has to be the one to press; the Esc menu still opens); inside a round the next question follows the reveal directly; the engine starts a question''s 30 s on a show action the client sends once the question has faded in, not at the end of the previous one', NULL, '2026-10-16T21:13:18Z', '2026-10-16T21:13:18Z', 1399, NULL, 'rule', 1399, '2026-10-16, task 1399: written into plan 164: Timed game screens, drama and sound (Flow); engine side: task 1447: Timed: the question clock starts on show, not at the previous question''s end (plan 159).');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (297, 'Timed mode visuals: what should change in the hearts, red frame and claim banner?', 'pending', '["Changes (name them)", "Keep as they are; just remove the PLACEHOLDER marks"]', 'Play a timed session on the TV after `task 1449: Timed screen and flow: round screen, question for all, clock, claims, one-press answer`, `task 1451: Timed drama and sound: heart pulses, heartbeat, last-3-s ticks, red frame, timed track` and `task 1452: Timed sudden death and ends: «Muerte súbita», winner, last standing, nobody wins, resume line` are done. Answer with what to change; `task 1453: Timed visuals polish: hearts, red frame, claim banner` applies it and removes the PLACEHOLDER marks.', 'The fast-paced competitive mode shows each player''s lives as hearts, a pulsing red frame when time is running out, and a banner naming the player who grabbed the question. These first versions are rough. Once you have played the mode on the TV, say what to change, or keep them as they are; the answer is what the final visual pass builds.', NULL, NULL, '2026-10-16T21:15:41Z', NULL, 1448, NULL, 'once', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (298, 'uk taxonomy: categories and subcategories', 'pending', '["Apply the proposal as written", "Apply with changes (say which)"]', 'Bundle `uk` (British English, `languages: ["en"]`, country GB, target 2000 ≈ 36 per subcategory).
+
+Rule: Answering needs a connection to the United Kingdom: British places, food, customs, holidays, people, music, sport, media, words, sayings or history that players outside the UK mostly wouldn''t know; topics shared across the English-speaking world, and American-only ones (those belong to `usa`), are not here. 
+
+Voice: British English: UK spelling ("colour", "grey", "realise"), UK words ("football", "biscuit", "lorry", "holiday", "pavement"), dates as "20 July 1969", metric units with miles and pints where Britons use them 
+
+Proposal (`qgen taxonomy --bundle uk`, from the general list of `decision 213: General category list for regional bundles`): 15 categories, 56 subcategories, one region category (`comedy`). Slug and English name (the bundle''s language is en; es and de names are drafted on apply). Full proposal with scopes and samples: `work/taxonomy/uk/proposal.md`.
+
+- `geography` Geography of the UK (6, general)
+  - `cities-and-towns` British cities and towns
+  - `london` London
+  - `counties-and-regions` Counties and regions
+  - `rivers-coasts-and-islands` Rivers, coasts and islands
+  - `hills-moors-and-national-parks` Hills, moors and national parks
+  - `landmarks-and-castles` Landmarks and castles
+- `nature` Nature of the UK (4, general)
+  - `wildlife` British wildlife
+  - `birds` British birds
+  - `plants-and-gardens` Plants and gardens
+  - `weather-and-seasons` British weather
+- `history` History of the UK (6, general)
+  - `early-britain` Early Britain
+  - `middle-ages` Medieval Britain
+  - `tudors-and-stuarts` Tudors and Stuarts
+  - `georgians-and-victorians` Georgians and Victorians
+  - `twentieth-century` Britain in the 20th century
+  - `parliament-and-prime-ministers` Parliament and prime ministers
+- `people` People of the UK (2, general)
+  - `scientists-and-inventors` British scientists and inventors
+  - `pioneers-and-heroes` British pioneers and heroes
+- `food-and-drink` British food and drink (5, general)
+  - `classic-dishes` Classic British dishes
+  - `regional-specialities` Regional specialities
+  - `cakes-puddings-and-biscuits` Cakes, puddings and biscuits
+  - `sweets-and-crisps` Sweets, crisps and snacks
+  - `drinks` British drinks
+- `festivals-and-traditions` British festivals and traditions (3, general)
+  - `holidays-and-celebrations` British holidays and celebrations
+  - `christmas-in-britain` A British Christmas
+  - `customs-and-ceremonies` Customs and ceremonies
+- `myths-and-legends` British myths and legends (2, general)
+  - `legendary-heroes` Legendary British heroes
+  - `creatures-ghosts-and-superstitions` Creatures, ghosts and superstitions
+- `music-and-dance` British music and dance (3, general)
+  - `pop-and-rock` British pop and charts
+  - `traditional-music-and-dance` Traditional music and dance
+  - `nursery-rhymes-and-singalongs` Nursery rhymes and singalongs
+- `art-and-literature` British art and literature (3, general)
+  - `writers-and-poets` British writers and poets
+  - `childrens-books-and-comics` Children''s books and comics
+  - `art-and-architecture` British art and architecture
+- `film-and-television` British film and television (4, general)
+  - `childrens-tv` Children''s TV
+  - `soaps-and-dramas` Soaps and dramas
+  - `game-shows-and-presenters` Game shows and presenters
+  - `british-films` British films
+- `comedy` British comedy (2, region)
+  - `sitcoms` British sitcoms
+  - `comedians-and-panel-shows` Comedians and panel shows
+- `sports` Sport in the UK (5, general)
+  - `football` British football
+  - `rugby-and-cricket` Rugby and cricket in Britain
+  - `team-gb-and-olympians` Team GB and Olympians
+  - `sporting-events` Big British sporting events
+  - `pub-and-playground-games` Pub and playground games
+- `how-people-speak` How Britain speaks (4, general)
+  - `slang-and-words` British slang and words
+  - `sayings-and-idioms` British sayings and idioms
+  - `accents-and-dialects` Accents and dialects
+  - `languages-of-britain` Languages of Britain
+- `daily-life` Daily life in the UK (5, general)
+  - `money-and-shopping` Money and shopping
+  - `brands-and-adverts` British brands and adverts
+  - `transport` Getting around Britain
+  - `school-and-childhood` School and childhood
+  - `home-and-public-services` Home and public services
+- `symbols` Symbols of the UK (2, general)
+  - `flags-and-emblems` Flags and emblems
+  - `crown-and-state` Crown and state symbols', 'The new British question pack needs its own list of topics, so its questions cover life in the United Kingdom evenly. The proposal keeps the general topics every regional pack has, adds one topic of its own (British comedy), and splits them into 56 subtopics, about 36 questions each at 2000 questions. Applying it fixes the pack''s structure; the Spanish and German topic names are drafted at that point.', NULL, NULL, '2026-10-16T21:16:18Z', NULL, 1278, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -43483,6 +43622,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1277, 294);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1278, 250);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1278, 258);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1278, 266);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1278, 298);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1279, 250);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1279, 258);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1279, 266);
