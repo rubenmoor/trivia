@@ -5,7 +5,8 @@ The map is decision 258's list (work/slugs/proposal.json): {bundle: [[old catego
 [[old subcategory, en name, new slug], …]], …]}. Writes categories.json (structure only), the names files (keys renamed,
 names.es.json from today's Spanish names), questions.json and questions.<locale>.json, concept lists (renamed to
 <slug>.json), work files (run.json, slots.json, fit.json, drafts and their ratings/factchecks/revisions/translations,
-work/concepts/) and app/data/old-keys.json. Pools: `qgen export` afterwards. Idempotent: a rekeyed bundle is skipped.
+work/concepts/) and app/data/old-keys.json. Pools: `qgen export` afterwards. Idempotent: a rekeyed bundle is skipped;
+once all are, work files still on old keys are mapped through old-keys.json.
 """
 import json
 import sys
@@ -206,19 +207,42 @@ def plan_concepts(m, plan):
             plan.move(p, concepts.path(b, s), {**lst, "subcategory": s}, "subcategory field")
 
 
-def stems(m):
+def work_table(m):
+    """{bundle: {old subcategory key: new}} for the work files: from the map, else (already rekeyed) from old-keys.json."""
+    if m:
+        return {b: {o: n for o, (n, _) in mb["subs"].items()} for b, mb in m.items()}
+    out = {}
+    if OLD_KEYS.exists():
+        for k, v in json.loads(OLD_KEYS.read_text(encoding="utf-8"))["subcategories"].items():
+            (b, o), (_, n) = categories.parse_key(k), categories.parse_key(v)
+            out.setdefault(b, {})[o] = n
+    return out
+
+
+def work_mapper(table):
+    """(run bundle, key) → new key or None: the run's bundle first, else the one other bundle that has it (a base run from
+    before D-99 holds today's colombia names bare). Key only, so slots.json and its drafts map alike."""
+    def new(rb, k):
+        if k in table.get(rb, {}):
+            return table[rb][k]
+        hits = {t[k] for b, t in table.items() if b != rb and k in t}
+        return hits.pop() if len(hits) == 1 else None
+    return new
+
+
+def stems(table):
     """{old work file stem: new} (qgen.concept_file: base's bare, another bundle's <bundle>--<slug>, also for older bare ones)."""
     out = {}
-    for b in sorted(m, key=lambda b: b == "base"):  # base last: its bare stems win
-        for o, (n, _) in m[b]["subs"].items():
+    for b in sorted(table, key=lambda b: b == "base"):  # base last: its bare stems win
+        for o, n in table[b].items():
             new = n if b == "base" else f"{b}--{n}"
             out[concepts.slug(o)] = new
             out[f"{b}--{concepts.slug(o)}"] = new
     return out
 
 
-def plan_work(m, plan):
-    new, st = sub_mapper(m), stems(m)
+def plan_work(table, plan):
+    new, st = work_mapper(table), stems(table)
 
     def renamed(name):
         pre = "revised-" if name.startswith("revised-") else ""
@@ -231,12 +255,12 @@ def plan_work(m, plan):
     for d in sorted(p.parent for p in WORK.glob("*/run.json")):
         cfg = json.loads((d / "run.json").read_text(encoding="utf-8"))
         rb = cfg.get("bundle", "base")
-        if rb in m and isinstance(cfg.get("subcategories"), list):
+        if isinstance(cfg.get("subcategories"), list):
             subs = [new(rb, s) or s for s in cfg["subcategories"]]
             if subs != cfg["subcategories"]:
                 plan.write(d / "run.json", {**cfg, "subcategories": subs}, "subcategories")
         for f in ["slots.json", "fit.json"]:
-            if rb in m and (d / f).exists():
+            if (d / f).exists():
                 doc = json.loads((d / f).read_text(encoding="utf-8"))
                 if isinstance(doc, dict) and any(new(rb, k) not in (None, k) for k in doc):
                     plan.write(d / f, {new(rb, k) or k: v for k, v in doc.items()}, "keys")
@@ -244,7 +268,7 @@ def plan_work(m, plan):
             doc = json.loads(p.read_text(encoding="utf-8"))
             n = 0
             for q in doc.get("questions") or []:
-                s = new(q.get("bundle") or rb, q.get("subcategory"))
+                s = new(rb, q.get("subcategory"))
                 if s and s != q.get("subcategory"):
                     q["subcategory"], n = s, n + 1
             dst = renamed(p.stem)
@@ -281,17 +305,18 @@ def plan_checked(m, plan):
 
 def cmd_rekey(args):
     m = load_map(args.map)
-    if not m:
-        return print("nothing to do")
     plan = Plan()
-    plan_data(m, plan)
-    plan_questions(m, plan)
-    plan_concepts(m, plan)
-    plan_work(m, plan)
+    if m:
+        plan_data(m, plan)
+        plan_questions(m, plan)
+        plan_concepts(m, plan)
+    plan_work(work_table(m), plan)
     plan_checked(m, plan)
+    if not plan.writes and not plan.moves:
+        return print("nothing to do")
     if errors := plan.check():
         sys.exit("cannot rekey:\n" + "\n".join(f"  {e}" for e in errors))
-    print(f"{'Rekeying' if args.apply else 'Would rekey'} {', '.join(m)}: "
+    print(f"{'Rekeying' if args.apply else 'Would rekey'} {', '.join(m) or 'work files (old-keys.json)'}: "
           f"{len(plan.writes)} file(s) written, {len(plan.moves)} moved")
     plan.show()
     if not args.apply:
