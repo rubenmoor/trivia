@@ -1,7 +1,7 @@
 <script lang="ts">
   // The Bundles screen (plans/04-ui-tv-display.md, "Bundles"; plan 151, decisions 158, 264): «¿Qué preguntas
-  // juega …?», after Choice in every mode; «¡A jugar!» starts the game. The shared BundleSelector, two columns; exactly
-  // one base bundle (D-85). Preset: the player's newest game's bundles, else the locale's first base bundle (decision 33).
+  // juega …?», after Choice in every mode; «¡A jugar!» starts the game. The shared BundleSelector, two columns; any
+  // combination, base bundles toggle too. Preset: the player's newest game's bundles, else the locale's first base bundle (decision 33).
   // The supply of the whole choice (Choice's picks + bundles) is checked on every toggle: report and disabled start
   // when short (decisions 206, 268); the running-out notice (plan 65, decision 31) comes before level 1.
   import { onMount } from "svelte";
@@ -36,7 +36,7 @@
     busy: boolean;
     /** The name while «¡Hola, …!» plays into the transition, else null. */
     greeting: string | null;
-    /** Why the last `new` was refused (supply, `base_bundle_count`, `bundle_not_offered`), or null. */
+    /** Why the last `new` was refused (supply, `no_questions`, `bundle_not_offered`), or null. */
     refused: GameError | null;
     /** The pick kept in Game.svelte; null: not made yet, the preset applies. */
     picked: string[] | null;
@@ -51,7 +51,7 @@
   let section = $state<HTMLElement>();
   /** The supply of the current choice; null while unknown or refused. */
   let supply = $state<Supply | null>(null);
-  /** Why the engine refuses the current choice (zero or two base bundles). */
+  /** Why the engine refuses the current choice (the selection has no question, `no_questions`). */
   let reason = $state<string | null>(null);
   /** The choice changed since `refused` came. */
   let stale = $state(false);
@@ -71,6 +71,8 @@
   });
 
   const selected = $derived(picked ?? []);
+  // No question for the choice (nothing selected, or the bundles hold none for the group and levels): start off.
+  const empty = $derived(!!supply && supply.levels.every((l) => l.candidates === 0));
   const ready = $derived(!!options && !!picked && !!supply?.ok && !reason);
   const shownRefusal = $derived(refused && !stale ? refused : null);
 
@@ -165,6 +167,8 @@
         <SupplyReport supply={shownRefusal.supply} />
       {:else if shownRefusal}
         <p class="error">{errorText(shownRefusal)}</p>
+      {:else if empty}
+        <p class="error">{t("bundles.noQuestions")}</p>
       {:else if reason}
         <p class="error">{reason}</p>
       {:else if supply}

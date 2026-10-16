@@ -47,7 +47,7 @@ Seen in review; guidance, not a lint. Wrong → right.
   - «ihr seid schon bei diesem Thema» → «schon bei diesem Thema»
   - «Zielt auf die falsche Antwort» → «Ziel: die falsche Antwort» (`joker.snipe.aim`)
   - «Trefft ihr die richtige, …» → «Ein Treffer auf die richtige: …» (`joker.snipe.rule`)
-- Singular «du» imperative where an infinitive works: «wähle genau ein Grundpaket» → «genau ein Grundpaket wählen» (`error.base_bundle_count`)
+- Singular «du» imperative where an infinitive works: «wähle ein Paket mit Fragen» → «ein Paket mit Fragen wählen» (`error.no_questions`)
 - Mode name as a phrase: «Mit Spielleitung» → «Spielleitermodus» (TV check)
 - Esc row that names the wrong target and clashes with quit: «Spiel beenden (neues einrichten)» → «Zurück zum Hauptmenü» (TV check)
 - Bare «Erfolge»: «Ein angepasstes Spiel bringt keine Erfolge.» → «… bringt keine Steam-Erfolge.» (TV check)

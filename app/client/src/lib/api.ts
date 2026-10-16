@@ -172,7 +172,7 @@ export async function fetchJokersUsed(): Promise<Record<JokerName, number> | nul
 }
 
 /** The player's preset (missing fields) and the supply of a choice (plan 27's `choice` route); a
- * refused choice throws GameError (`base_bundle_count`, `bundle_not_offered`). */
+ * refused choice throws GameError (`bundle_not_offered`). */
 export async function fetchChoice(body: ChoiceBody & { player?: string }): Promise<{ choice: Choice; supply: Supply }> {
   return read((save, data) => engine.choice(save, data, { ...body }), "next");
 }

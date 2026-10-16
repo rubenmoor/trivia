@@ -56,7 +56,7 @@ export function gameChoice(state: Pick<GameState, "settings">, data: EngineData)
   };
 }
 
-/** Bundles offered in the locale, duplicates dropped, exactly one base bundle, bundles.json order. */
+/** Bundles offered in the locale, duplicates dropped, any combination (plan 151), bundles.json order. */
 function resolveBundles(data: EngineData, wanted: unknown): string[] {
   if (!Array.isArray(wanted)) throw new GameError("bundles_not_list");
   const known = new Set(data.bundles.map((b) => b.id));
@@ -65,10 +65,7 @@ function resolveBundles(data: EngineData, wanted: unknown): string[] {
     if (typeof b !== "string" || !known.has(b)) throw new GameError("bundle_unknown", { bundle: String(b) });
     if (!offered.has(b)) throw new GameError("bundle_not_offered", { bundle: b, locale: data.locale });
   }
-  const on = data.bundles.filter((b) => wanted.includes(b.id));
-  const count = on.filter((b) => b.kind === "base").length;
-  if (count !== 1) throw new GameError("base_bundle_count", { count });
-  return on.map((b) => b.id);
+  return data.bundles.filter((b) => wanted.includes(b.id)).map((b) => b.id);
 }
 
 /** What a choice may get from a request body (plan 27, D-88). */

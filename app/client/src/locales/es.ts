@@ -271,6 +271,8 @@ const es = {
     print: "Imprimir",
   },
   bundles: {
+    /** Start disabled: the chosen bundles have no question for the game (plan 151). */
+    noQuestions: "Ningún paquete elegido tiene preguntas para esta partida",
     /** The Bundles screen (plan 151): «¿Qué preguntas juega <name>?» with the name highlighted. */
     titleOpen: "¿Qué preguntas juega ",
     titleClose: "?",
@@ -521,7 +523,7 @@ const es = {
     bundle_unknown: "paquete desconocido: '{bundle}'",
     bundles_not_list: "los paquetes deben ser una lista",
     bundle_not_offered: "el paquete '{bundle}' no está disponible en este idioma",
-    base_bundle_count: "elige exactamente un paquete básico",
+    no_questions: "no hay preguntas para esta elección: elige algún paquete con preguntas",
     difficulty_invalid: "dificultad a medida: de 1 a 15, el final no menor que el inicio",
     levels_invalid: "número de niveles: de {min} a {max}",
     cards_invalid: "cartas por nivel: de {min} a {max}",

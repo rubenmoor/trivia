@@ -217,6 +217,7 @@ const ERRORS: Record<string, string | ((p: Params) => string)> = {
   supply_short: (p) =>
     "not enough questions: " +
     (p.levels as Params[]).map((l) => `${l.seat === undefined ? "" : `seat ${l.seat} `}level ${l.level} (difficulty ${l.lo}–${l.hi}): ${l.missing} missing`).join(", "),
+  no_questions: "no question for this choice",
   no_cards: "no cards on the table",
   card_invalid: (p) => `no card ${p.n}`,
   no_question: "no question to answer",
@@ -243,7 +244,6 @@ const ERRORS: Record<string, string | ((p: Params) => string)> = {
   bundle_unknown: (p) => `unknown bundle ${pyRepr(String(p.bundle))}`,
   bundles_not_list: "bundles must be a list",
   bundle_not_offered: (p) => `bundle ${pyRepr(String(p.bundle))} isn't offered in ${p.locale}`,
-  base_bundle_count: "pick exactly one base bundle",
   difficulty_invalid: "a custom difficulty is {start, end}, whole numbers 1–15, end ≥ start, without an age group",
   levels_invalid: (p) => `levels: a whole number ${p.min}–${p.max}`,
   cards_invalid: (p) => `cards per level: a whole number ${p.min}–${p.max}`,

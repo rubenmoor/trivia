@@ -738,7 +738,7 @@ Template:
 - Date: 2026-10-12
 - Context: Every bundle was offered in every language, and `always_on` forced `base` into each session. Milestone 5 adds per-language bundles and base bundles (`chinese-base` later, milestone 12). Plan 71.
 - Decision:
-  - **Base bundles:** `kind: base` marks a base bundle; replaces `always_on`. Exactly one per session; zero or two → `base_bundle_count`.
+  - **Base bundles:** `kind: base` marks a base bundle; replaces `always_on`. ~~Exactly one per session; zero or two → `base_bundle_count`~~ amended 2026-10-16 (milestone 8): any combination, base bundles toggle; no question for the choice → `no_questions`.
   - **Languages:** every bundle in `app/data/bundles.json` lists `languages`; the game offers only the bundles of its locale (`bundlesFor`); others → `bundle_not_offered`. `base`: es, en, de; `colombia`: es.
   - **Default:** the locale's first base bundle (file order) plus every non-base bundle offered in the locale. es → `base` + `colombia` (unchanged), en/de → `base`.
   - **Nothing added:** `[]` and `["colombia"]` are refused, not completed with `base`.
@@ -786,7 +786,7 @@ Template:
 - Decision:
   - **Configure screen** (plan 29's Choice screen in gamemaster mode; opens on the player's last game's settings, else the defaults below):
     - Difficulty: an age group, or «Custom»: start and end difficulty 1–15, end ≥ start, levels ramp evenly.
-    - Bundles: a shared bundle selector (also in the menu and elsewhere): the locale's bundles, base bundles apart, exactly one base bundle (D-85). Default: the locale's first base bundle, non-base off.
+    - Bundles: a shared bundle selector (also in the menu and elsewhere): the locale's bundles, base bundles apart, any combination (amended 2026-10-16; D-85 had exactly one). Default: the locale's first base bundle, non-base off.
     - Jokers: one row per joker, 0–99 or ∞; default the standard set (`STANDARD_JOKERS`); no presets.
     - Allow video questions, allow audio questions: on/off, default on; no general media switch.
     - Number of levels 1–20, default 12; the Tower adapts. No start level.
@@ -915,6 +915,7 @@ Template:
   - **Not customization:** its own screen; not in «Personalizar partida», not counted in `customized`.
   - **Preset** in both modes: `playerChoice`, the player's newest game's bundles, else the locale's first base bundle, non-base off (pm decision 33).
   - **Order** (amended 2026-10-16, decision 263; plan 151): base bundles in one column; optional ones in another: regional of the player's region (machine locale country), non-regional, regional of other countries; file order within each, mods after ours.
+  - **Any combination and start check** (amended 2026-10-16, milestone 8; plan 151): every bundle, base ones too, toggles; the Bundles screen's start is off, with a short reason, when the selection has no question for the choice (`no_questions` in the engine's `new` and in-game settings).
   - **Flag icons** (amended 2026-10-16, decision 263; plan 151): a regional bundle's icon is its `country`'s flag wherever a bundle shows an icon, mod bundles too; no pin for regional bundles.
 - Consequences: a fresh solo game plays base only (was: every offered bundle); a non-base mod bundle is off by default in solo too.
 - Supersedes / related: pm decision 51 (solo plays the defaults); pm decisions 33, 38 in part (fresh default on the configure screen only); D-85, D-88
