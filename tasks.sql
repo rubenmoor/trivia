@@ -29582,6 +29582,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Suspects: the second `on_question(r)` (re-entering the scene after the snipe aiming mode) waiting for `.answers .answer`, or `r.wait(".dial-spot", 8000)` after the two clicks on the `easier` token (arm, play; selector or flow may have changed with the DifficultyDial)
 - Fix the step so all eight shots render; `task 1101: Gallery check and review of joker names and symbols` needs `joker-easier`
 - Check: `trivia-gallery --only question` in all four locales without failed steps; look at `joker-easier.png`', '2026-10-16T02:35:53Z', '2026-10-16T02:54:37Z', 1135, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1255, 7, 'post-milestone cleanup of milestone 7: Steam S2: product definition', 'cleanup', 'open', NULL, NULL, '* rewrite top-level .md files to reflect the current state of the project
+* remove files that have become redundant
+* suggest entirely new files, if necessary
+* delete code that isn''t actually used
+* check pending decisions if they are still relevant and really pending
+* check other milestones if their contents are up-to-date and update them if necessary
+* review the code files the milestone added or changed (`git diff` since its first commit) per milestone 13''s "What to look for": rows appended to `code-review.md`, small fixes in place, larger ones as tasks (decision 201)', '2026-10-16T03:25:53Z', NULL, NULL, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
