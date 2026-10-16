@@ -1,6 +1,6 @@
 """Human spot checks per batch (plan 16): the seeded sample and authoring/data/spot-checks.json.
 Written by the authoring server (a run's "size" by hand, decision 228); `qgen report --qc` and the exit check read the file."""
-import datetime, json, re
+import datetime, json
 
 import layout  # authoring/tools/layout.py
 import atomic  # authoring/tools/atomic.py
@@ -19,15 +19,6 @@ def sample(batch):
     return qgen.audit_sample(batch, size(batch))
 
 
-def run_ids(run):
-    """The ids of a back-audit (plan 57) or neutralize run (plan 64), or None for any other name."""
-    m = re.fullmatch(r"(backaudit|neutralize)-\d+", run)
-    if not m:
-        return None
-    cfg = qgen.load_json(qgen.WORK / run / "run.json", {}) or {}
-    return cfg.get("ids") if cfg.get("mode") == m.group(1) else None
-
-
 def load():
     return json.loads(FILE.read_text(encoding="utf-8")) if FILE.exists() else {}
 
@@ -44,7 +35,7 @@ def record(batch, q, media_changed):
     if locale:
         q = next((t for t in translations.load(locale)["questions"] if t["id"] == q["id"]), None) or {"id": q["id"]}
     rv = q.get("review") or {}
-    if q.get("batch") != batch and q["id"] not in (run_ids(batch) or ()):
+    if q.get("batch") != batch and q["id"] not in (qgen.run_ids(batch) or ()):
         raise ValueError(f"{q['id']} is not in {batch}")
     if q["id"] not in sample(batch):
         raise ValueError(f"{q['id']} is not in {batch}'s spot-check sample")

@@ -97,7 +97,7 @@ import reviews  # noqa: E402  (authoring/tools/reviews.py)
 from reviews import (NoQuestion, POOL, load_pool, save_pool, set_review,  # noqa: E402
                      update_question, update_translation)
 import save_file  # noqa: E402  (authoring/tools/save_file.py)
-from qgen import PROBLEMS, audit_of, is_major, translation_audit_of  # noqa: E402  (authoring/tools/qgen.py)
+from qgen import PROBLEMS, audit_of, is_major, run_ids, translation_audit_of  # noqa: E402  (authoring/tools/qgen.py)
 import spot_checks  # noqa: E402  (authoring/server/spot_checks.py)
 import targets  # noqa: E402  (authoring/tools/targets.py)
 import translations  # noqa: E402  (authoring/tools/translations.py)
@@ -199,7 +199,7 @@ def source_questions(query):
         want = None if query["batch"] == "none" else query["batch"]
         qs = [q for q in qs if q.get("batch") == want]
     if "run" in query:
-        ids = spot_checks.run_ids(query["run"]) or []
+        ids = run_ids(query["run"]) or []
         by_id = {q["id"]: q for q in qs}
         qs = [by_id[i] for i in ids if i in by_id]
     if "status" in query:

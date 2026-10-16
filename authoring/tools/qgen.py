@@ -4716,8 +4716,17 @@ def english_keys_problems(questions):
     return out
 
 
+def run_ids(run):
+    """The ids of a back-audit (plan 57) or neutralize run (plan 64), or None for any other name."""
+    m = re.fullmatch(r"(backaudit|neutralize)-\d+", run)
+    if not m:
+        return None
+    cfg = load_json(WORK / run / "run.json", {}) or {}
+    return cfg.get("ids") if cfg.get("mode") == m.group(1) else None
+
+
 def spot_check_problems(questions, scale):
-    """Errors in authoring/data/spot-checks.json (plan 16): batches and ids exist, values in range;
+    """Errors in authoring/data/spot-checks.json (plan 16): batches (or back-audit, neutralize runs) and ids exist, values in range;
     a translation run's (tr-<locale>-<n>) items are its translations, with "locale" (plan 67)."""
     checks = load_json(layout.SPOT_CHECKS)
     if checks is None:
@@ -4731,6 +4740,9 @@ def spot_check_problems(questions, scale):
         if locale and locale not in tr_batches:
             tr_batches[locale] = {t["id"]: t.get("batch") for t in translations.load(locale)["questions"]}
         batch_of = tr_batches[locale] if locale else pool_batches
+        ids = run_ids(b)
+        if ids is not None:
+            batch_of = {i: b for i in ids}
         if b not in batch_of.values():
             out.append(f"{rel}: no batch {b!r} in {f'questions.{locale}.json' if locale else 'the pool'}")
             continue
