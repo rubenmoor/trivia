@@ -5,11 +5,11 @@ import { STANDARD_JOKERS } from "../lib/api.ts";
 import { t } from "../lib/i18n.ts";
 
 const ICONS: [JokerName, IconName][] = [
-  ["hint", "bulb"],
-  ["skip", "door"],
-  ["easier", "stairs"],
-  ["category", "compass"],
-  ["snipe", "crosshair"],
+  ["hint", "idea"],
+  ["skip", "broom"],
+  ["easier", "wand"],
+  ["category", "point"],
+  ["snipe", "trick-shot"],
 ];
 
 /** Labels and keys in the UI language at import (a language change reloads the page). */

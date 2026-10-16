@@ -33,7 +33,7 @@ Milestone 9 defines the joker names again (pm decision 188, pm plan 136): one sy
   - `category`, compass (193): Change Course (C), True North (N), Detour (T), Compass (O), Ms Picky (K, today)
   - `snipe`, crosshair (194): Trick Shot (T, today), Sharpshooter (S), Long Shot (L), Pot Shot (O)
 - Symbols: none of the candidates needs a new one
-- English answers (2026-10-15): all kept, Hint (H), Pass & Purge (P), Fairy (F), Ms Picky (K), Trick Shot (T); symbols for them: pm decision 209
+- English answers (2026-10-15): all kept, Hint (H), Pass & Purge (P), Fairy (F), Ms Picky (K), Trick Shot (T); symbols for them (pm decision 209, task 1135): bulb with rays, broom, wand with a star, hand pointing at a card, crosshair with a curved arrow
 - Translations (pm task 1097), recommended first, key in brackets; Question screen keeps `A`–`D`, `R`, `V`, `M` free:
   - `es` (pm decision 210): `hint` Soplo (S), Pista (S), Pistita (S); `skip` Paso y fuera (P), Paso y purga (P), Paso (P); `easier` Hada madrina (H), Hada (H), Bájale (F); `category` Doña Exigente (E), Quisquillosa (Q), Cambiazo (T); `snipe` Tiro mágico (T), Carambola (L), Francotirador (X)
     - plain skip «Solo paso»; purge «Paso y fuera: adiós al tema «{name}»»; title «Doña Exigente: ¿qué tema quieren?»

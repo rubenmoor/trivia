@@ -60,7 +60,7 @@
       {@const name = token.name}
       <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
       <div class="row" data-joker={name} data-focusable tabindex="0" role="group">
-        <span>{token.label}</span>
+        <span><Icon name={token.icon} /> {token.label}</span>
         <button class="step" onclick={() => step(name, -1)} tabindex="-1" aria-label={t("overlay.less")}>−</button>
         <span class="value" class:changed={jokers[name] !== PRESETS.standard[name]}>{jokers[name] ?? "∞"}</span>
         <button class="step" onclick={() => step(name, 1)} tabindex="-1" aria-label={t("overlay.more")}>+</button>

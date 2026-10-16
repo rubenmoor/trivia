@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="256" height="256">
-  <!-- SUPER_PICKY (plan 86, SW-11): Paso and Bájale on one question: door and stairs. Icon.svelte's 24×24 style on a night tile. -->
+  <!-- SUPER_PICKY (plan 86, SW-11): Paso and Bájale on one question: broom and wand. Icon.svelte's 24×24 style on a night tile. -->
   <defs>
     <radialGradient id="glow" cx="50%" cy="42%" r="62%">
       <stop offset="0" stop-color="#4cc9f0" stop-opacity="0.3"/>
@@ -10,6 +10,6 @@
   <rect width="64" height="64" fill="url(#glow)"/>
   <rect x="3" y="3" width="58" height="58" rx="10" fill="none" stroke="#4cc9f0" stroke-opacity="0.5" stroke-width="2"/>
   <g transform="translate(11 11) scale(1.75)" color="#4cc9f0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M3.5 20.5V8.5A1 1 0 0 1 4.5 7.5H10v13" fill="currentColor" fill-opacity="0.25"/><path d="M2 20.5h20"/><path d="M12.5 20.5v-3h3v-3h3v-3h3"/><path d="M13 3.5l4 4M17 4.3v3.2h-3.2"/>
+    <g transform="translate(-1 4.5) scale(.6)"><g transform="rotate(35 12 12)"><path d="M12 1v7"/><rect x="9" y="8" width="6" height="3.5" rx="1" fill="currentColor" fill-opacity="0.25"/><path d="M9.5 11.5h5c1.5 2.5 3 5.5 3.5 9H6c.5-3.5 2-6.5 3.5-9z" fill="currentColor" fill-opacity="0.25"/><path d="M12 15v5.5"/></g><path d="M15 21.5c2.5.4 4.6-.1 6.5-1.6M17.5 17.3c1.5 0 2.9-.6 4-1.7"/></g><g transform="translate(11 4.5) scale(.6)"><path d="M3.5 20.5l8.5-8.5"/><path d="M16 2.8l1.3 3.4 3.65.2-2.85 2.3.95 3.5L16 10.2l-3.05 2-.95-3.5-2.85-2.3 3.65-.2z" fill="currentColor" fill-opacity="0.25"/><path d="M5.5 4.5v3M4 6h3M20 16v3M18.5 17.5h3"/></g>
   </g>
 </svg>

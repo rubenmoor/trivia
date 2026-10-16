@@ -332,7 +332,7 @@
             <p class="label heading">{t("configure.jokers")}</p>
             {@render stepper("preset", t("configure.preset"), t(`configure.presets.${presetOf(budget)}`))}
             {#each TOKENS as token (token.name)}
-              {@render stepper(`joker-${token.name}`, token.label, String(budget[token.name] ?? "∞"))}
+              {@render stepper(`joker-${token.name}`, token.label, String(budget[token.name] ?? "∞"), "", false, false, token.icon)}
             {/each}
           </div>
         </div>
@@ -397,11 +397,11 @@
 {/if}
 
 <!-- `fixed`: read-only, out of the focus ring and ↑/↓ -->
-{#snippet stepper(id: string, label: string, value: string, note = "", warn = false, fixed = false)}
+{#snippet stepper(id: string, label: string, value: string, note = "", warn = false, fixed = false, icon?: IconName)}
   <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
   <div class="line glass" class:fixed data-line data-step={fixed ? undefined : id} data-focusable={!fixed || undefined}
     data-focus-id="config-{id}" tabindex={fixed ? undefined : 0} role="group" aria-label={label}>
-    <span class="label line-name">{label}</span>
+    <span class="label line-name">{#if icon}<Icon name={icon} />{/if} {label}</span>
     <button class="step" onclick={() => step(id, -1)} disabled={busy || fixed} tabindex="-1" aria-label={t("overlay.less")}>−</button>
     <span class="value">{value}{#if note}<span class="label note" class:warn>{note}</span>{/if}</span>
     <button class="step" onclick={() => step(id, 1)} disabled={busy || fixed} tabindex="-1" aria-label={t("overlay.more")}>+</button>
