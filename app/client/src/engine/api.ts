@@ -77,7 +77,8 @@ export function gameAction(save: SaveData, data: EngineData, io: Io, action: str
   Reply<{ game: Game | null; event?: JokerEvent }> {
   const index = () => pyInt("index" in body ? body.index : -1);
   const actions: Record<string, Action> = {
-    new: (s) => game.newGame(s, data, io, body.player, pick(body, [...game.CHOICE_KEYS, "mode"])),
+    new: (s) => "players" in body ? game.newSession(s, data, io, body.players, pick(body, [...game.CHOICE_KEYS, "mode"]))
+      : game.newGame(s, data, io, body.player, pick(body, [...game.CHOICE_KEYS, "mode"])),
     pick: (s) => game.pick(s, data, io, index()),
     answer: (s) => game.answer(s, data, io, index()),
     reveal: (s) => game.reveal(s, data, io),
@@ -93,6 +94,7 @@ export function gameAction(save: SaveData, data: EngineData, io: Io, action: str
   };
   if (!Object.hasOwn(actions, action)) return { save, status: 404, body: NOT_FOUND };
   return guard(save, 409, () => {
+    if (action !== "new" && action !== "abandon") game.checkActor(save, body.seat);
     const { save: out, event } = actions[action](save);
     const res: { game: Game | null; event?: JokerEvent } = { game: game.view(out, data, io) };
     if (action === "joker") res.event = event;
