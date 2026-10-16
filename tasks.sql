@@ -16762,29 +16762,31 @@ Done when: both decisions answered, change tasks and the next pair (or the 15b l
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop. Applies whether or not plan 17''s task 50 (RUNBOOK: batch runs under pm run) is done.
 - Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-13T05:14:48Z', NULL, 631, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (643, 84, 'Regional pilot `colombia`: start', 'work', 'open', -110, NULL, 'Plan 84 chain 4: start the regional pilot `colombia` (decision 110: Regional packs at launch (RG-5, OQ-46)): grow `colombia` from 102 to 2000 approved in es, then translate to en, measuring the effort. Launch (milestone 11) doesn''t wait for this chain. Owners: `plans/15c-regional-questions.md`, `plans/16-content-target.md`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (643, 84, 'Regional pilot `colombia`: start', 'work', 'open', -110, NULL, 'Plan 84 chain 4: start the regional pilot `colombia` (decision 110: Regional packs at launch (RG-5, OQ-46)): grow `colombia` from 102 to 2000 approved in es, then translate to en, measuring the effort. Launch (milestone 11) doesn''t wait for this chain. Chain 5 (`usa`, `germany`, `uk`, `spain`, `mexico`) starts once this chain''s first `QC batch-<n>` is done. Owners: `plans/15c-regional-questions.md`, `plans/16-content-target.md`.
 
 ## Before starting
-- Needs from plan 98 and plan 138 (`pm show p98`, `pm show p138`): `colombia`''s own taxonomy with every `colombia` question remapped (`plan 138: Regional taxonomy: a general list, colombia reworked`, which replaces plan 98''s part 5), and the bundle target (2000) in `targets.json`.
-- Either open → `pm task-pending-decision <this task>` on the decision blocking that plan 98 task (or plan 98''s earliest open decision), stop.
+- Needs from plan 138 and plan 98 (`pm show p138`, `pm show p98`): `colombia`''s own taxonomy applied (`decision 249: colombia taxonomy: categories and subcategories`) with every `colombia` question remapped (`task 1140: Remap colombia''s existing questions onto its new taxonomy`; `plan 138: Regional taxonomy: a general list, colombia reworked`), and the bundle target (2000) in `targets.json`.
+- Either open → `pm task-pending-decision <this task>` on the decision blocking it (or plan 138''s / plan 98''s earliest open decision), stop.
 
 ## Then: add the first es pair (priority -110)
-- `run batch-<n>` (next free batch number from `qgen`): `nix develop -c qgen batch --bundle colombia` (RUNBOOK steps 1–5; the bundle is the one decision 110 names). Done when its report exists, printed paths staged, note with "Done:" line and report path.
-- `QC batch-<n>`: `authoring/QC.md` steps 1–4: spot check `pm decision add "Spot check batch-<n> done?"` (never answered by an LLM), `qgen report --qc batch-<n>`, `pm decision add "QC batch-<n>: which changes?"`, change tasks in their plans at their priority; decision 3''s `qgen rework` once after QC. Then, first that applies:
-  1. `qgen report --bundle colombia` shows 2000 approved (es) → add the two closing tasks below.
-  2. Spent on `colombia` (`qgen report --cost`, per bundle) ≥ a bundle budget set by task 463 (plan 70), if any → `pm decision add "colombia over budget: continue?"`, add the next es pair and pend its run task on it.
-  3. Else the next es pair (same bodies, next batch number).
+- `run batch-<n>` (next free batch number from `qgen`): `nix develop -c qgen batch --bundle colombia` (RUNBOOK steps 1–5; Colombian Spanish). Done when its report exists, printed paths staged, note with "Done:" line and report path.
+- `QC batch-<n>`: `authoring/QC.md` steps 1–4: spot check `pm decision add "Spot check batch-<n> done?"` (native speaker of Colombian Spanish; never answered by an LLM), `qgen report --qc batch-<n>`, `pm decision add "QC batch-<n>: which changes?"`, change tasks in their plans at their priority; decision 3''s `qgen rework` once after QC.
+  - The first QC of this chain also records the first effort numbers ($ per approved, `qgen report --cost` per bundle; the developer''s review time per 100, plan 98''s `qgen report` review-time line) in `plans/15c-regional-questions.md`: the chain is proven, chain 5''s start tasks read them.
+  - Then, first that applies:
+    1. `qgen report --bundle colombia` shows 2000 approved (es) → add the two closing tasks below.
+    2. Spent on `colombia` (`qgen report --cost`, per bundle) ≥ a bundle budget set by task 463 (plan 70), if any → `pm decision add "colombia over budget: continue?"`, add the next es pair and pend its run task on it.
+    3. Else the next es pair (same bodies, next batch number).
 - Closing tasks (added by the QC that reaches 2000 es):
-  - **Pilot effort and next bundles**: $ per approved (`qgen report --cost`, per bundle) and the developer''s review time per 100 (plan 98''s `qgen report` line) recorded in `plans/15c-regional-questions.md` and `plans/16-content-target.md`; `pm decision add "More regional bundles at launch?"` with the numbers (options: none until after launch (recommended unless the numbers are cheap), `mexico`, `argentina`, both). A yes → per bundle `pm task add 98` (`qgen bundle new` + taxonomy decision, plan 138''s general list) and `pm task add 84` "Regional runs <id>" (this chain''s pattern, region''s language then en).
-  - **First en pair**: `run tr-en-<n>` (`qgen batch --translate en --bundle colombia`; needs plan 98''s `--translate --bundle` done and the en pilot acked, chain 2 / task 638; else pend on the blocking decision) + `QC tr-en-<n>` (QC.md "Translation runs": spot check "native speaker of English needed", `http://127.0.0.1:8001/review?batch=tr-en-<n>&locale=en&sample=1`; needs_work: nothing). The QC adds the next en pair until `qgen report --bundle colombia --locale en` (or the report plan 98 names) shows 2000 approved en; then `plans/15c-regional-questions.md` notes `colombia` es + en done.
-- One open pair per language of the bundle; run names come from `qgen` (`batch-<n>`, `tr-en-<n>` are shared with chains 2, 3 and plan 17). Every added body repeats the pm-run rules below and names its run.
+  - **Pilot effort**: $ per approved (`qgen report --cost`, per bundle) and the developer''s review time per 100 (plan 98''s `qgen report` line) recorded in `plans/15c-regional-questions.md` and `plans/16-content-target.md`. No "More regional bundles?" decision (chain 5 already runs them).
+  - **First en pair**: `run tr-en-<n>` (`qgen batch --translate en --bundle colombia`; needs plan 98''s `--translate --bundle` done and the en pilot acked, chain 2 / `task 638: Translation pilot go/no-go en, de (QT-5)`; else pend on the blocking decision) + `QC tr-en-<n>` (QC.md "Translation runs": spot check "native speaker of English needed", `http://127.0.0.1:8001/review?batch=tr-en-<n>&locale=en&sample=1`, `trivia-authoring`; needs_work: nothing). The QC adds the next en pair until `qgen report --bundle colombia --locale en` (or the report plan 98 names) shows 2000 approved en; then `plans/15c-regional-questions.md` notes `colombia` es + en done.
+- One open pair per language of the bundle; run names come from `qgen` (`batch-<n>`, `tr-en-<n>` are shared with chains 2, 3, 5 and plan 17). Every added body repeats the pm-run rules below and names its run.
 
-Done when: the first es pair is added (or this task pends on plan 98); note names the pair.
+Done when: the first es pair is added (or this task pends on the blocking decision); note names the pair.
 
 ## pm-run rules (plan 84, plan 17 "Batch tasks under pm run")
-- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 98, 148 or new).
+- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 98, 138, 148 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
-- Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop. Applies whether or not plan 17''s task 50 (RUNBOOK: batch runs under pm run) is done.
+- Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
 - Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-13T05:14:54Z', NULL, 631, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (644, 85, 'create tasks for plan 85', 'split', 'done', 1000, '2026-10-13, tasks.sql: tasks 645–652 for plan 85, decision 68 (SDK download), task 650 pending on it', 'Split plan 85 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T05:17:09Z', '2026-10-13T05:18:20Z', 255, 0);
@@ -30793,8 +30795,133 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 - Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-16T03:32:54Z', NULL, 1257, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1266, 70, 'create tasks for plan 70: Cost, budget and generation plan by gap (CT-3, CT-4)', 'split', 'done', 1000, '2026-10-16, task 463 aligned with plan 70 (plan 148 --cost done via task 1236; six regional rows; stand-ins); no new tasks or decisions', 'Split plan 70 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T03:34:37Z', '2026-10-16T03:35:09Z', 1261, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1267, 84, 'create tasks for plan 84: Release content runs', 'split', 'open', 1000, NULL, 'Split plan 84 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T03:36:07Z', NULL, 1262, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1267, 84, 'create tasks for plan 84: Release content runs', 'split', 'done', 1000, '2026-10-15, tasks.sql: task 643 body in line with chain 4 (first QC records effort numbers, no ''More regional bundles?'' decision, plan 138 / task 1140 prerequisites); chain 5 start tasks 1268 usa, 1269 germany, 1270 uk, 1271 spain, 1272 mexico (-110); no new decisions (bundle taxonomies are plan 98''s, under revision in task 1263)', 'Split plan 84 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T03:36:07Z', '2026-10-16T03:37:08Z', 1262, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1268, 84, 'Regional runs `usa`: start', 'work', 'open', NULL, NULL, 'Plan 84 chain 5: start the regional bundle `usa` (milestone 9, developer 2026-10-15; same rules as `colombia`, decision 110: Regional packs at launch (RG-5, OQ-46)): 2000 approved in en, drafted in US English. Launch (milestone 11) doesn''t wait for this chain. DLC entry, store texts and capsules are plans 130, 89, 88''s, not this task''s. Owner: `plans/15c-regional-questions.md`.
+
+## Before starting
+- Needs plan 98''s tasks for `usa` done (`pm show p98`; subjects may change): bundle created (`qgen bundle new --kind region`), its taxonomy decision answered and `qgen taxonomy --bundle usa` applied, its 2000 target in `targets.json`, `qgen batch --bundle usa` drafting in en (US English; `bundles.json` `rule`/`voice`).
+- Needs chain 4''s first `QC batch-<n>` of `colombia` done (added by `task 643: Regional pilot `colombia`: start`), with its first effort numbers in `plans/15c-regional-questions.md`.
+- Any open → `pm task-pending-decision <this task>` on the decision blocking it (the bundle''s taxonomy decision, plan 98''s or chain 4''s earliest open decision), stop.
+- If colombia''s effort numbers look too costly for this pace: `pm decision add "Regional bundle usa: start now?"` with the numbers, pend on it, stop.
+
+## Then: add the first drafting pair (priority -110)
+- `run batch-<n>` (next free batch number from `qgen`): `nix develop -c qgen batch --bundle usa` (RUNBOOK steps 1–5; US English). Done when its report exists, printed paths staged, note with "Done:" line and report path.
+- `QC batch-<n>`: `authoring/QC.md` steps 1–4: spot check `pm decision add "Spot check batch-<n> done?"` (native speaker of US English needed, link and `trivia-authoring`; never answered by an LLM), `qgen report --qc batch-<n>`, `pm decision add "QC batch-<n>: which changes?"`, change tasks in their plans at their priority; decision 3''s `qgen rework` once after QC. Then, first that applies:
+  1. `qgen report --bundle usa` shows 2000 approved (en) → closing step below.
+  2. Spent on `usa` (`qgen report --cost`, per bundle) ≥ a bundle budget set by task 463 (plan 70), if any → `pm decision add "usa over budget: continue?"`, add the next pair and pend its run task on it.
+  3. colombia''s effort numbers look too costly for this pace → `pm decision add` asking the developer instead of adding the next pair.
+  4. Else the next pair (same bodies, next batch number).
+- At 2000 (en): nothing more (`usa` is en only); the closing QC notes `usa` done in `plans/15c-regional-questions.md`.
+- One open pair per language of the bundle; run names come from `qgen` (`batch-<n>`, `tr-en-<n>` shared with chains 2–4 and plan 17). Every added body repeats the pm-run rules below and names its run.
+
+Done when: the first drafting pair is added (or this task pends on the blocking decision); note names the pair.
+
+## pm-run rules (plan 84, plan 17 "Batch tasks under pm run")
+- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (98, 138, 148 or new).
+- `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
+- Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
+- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T03:37:02Z', NULL, 1267, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1269, 84, 'Regional runs `germany`: start', 'work', 'open', NULL, NULL, 'Plan 84 chain 5: start the regional bundle `germany` (milestone 9, developer 2026-10-15; same rules as `colombia`, decision 110: Regional packs at launch (RG-5, OQ-46)): 2000 approved in de, drafted in German, then translated to en. Launch (milestone 11) doesn''t wait for this chain. DLC entry, store texts and capsules are plans 130, 89, 88''s, not this task''s. Owner: `plans/15c-regional-questions.md`.
+
+## Before starting
+- Needs plan 98''s tasks for `germany` done (`pm show p98`; subjects may change): bundle created (`qgen bundle new --kind region`), its taxonomy decision answered and `qgen taxonomy --bundle germany` applied, its 2000 target in `targets.json`, `qgen batch --bundle germany` drafting in de (German; `bundles.json` `rule`/`voice`).
+- Needs chain 4''s first `QC batch-<n>` of `colombia` done (added by `task 643: Regional pilot `colombia`: start`), with its first effort numbers in `plans/15c-regional-questions.md`.
+- Any open → `pm task-pending-decision <this task>` on the decision blocking it (the bundle''s taxonomy decision, plan 98''s or chain 4''s earliest open decision), stop.
+- If colombia''s effort numbers look too costly for this pace: `pm decision add "Regional bundle germany: start now?"` with the numbers, pend on it, stop.
+
+## Then: add the first drafting pair (priority -110)
+- `run batch-<n>` (next free batch number from `qgen`): `nix develop -c qgen batch --bundle germany` (RUNBOOK steps 1–5; German). Done when its report exists, printed paths staged, note with "Done:" line and report path.
+- `QC batch-<n>`: `authoring/QC.md` steps 1–4: spot check `pm decision add "Spot check batch-<n> done?"` (native speaker of German needed, link and `trivia-authoring`; never answered by an LLM), `qgen report --qc batch-<n>`, `pm decision add "QC batch-<n>: which changes?"`, change tasks in their plans at their priority; decision 3''s `qgen rework` once after QC. Then, first that applies:
+  1. `qgen report --bundle germany` shows 2000 approved (de) → closing step below.
+  2. Spent on `germany` (`qgen report --cost`, per bundle) ≥ a bundle budget set by task 463 (plan 70), if any → `pm decision add "germany over budget: continue?"`, add the next pair and pend its run task on it.
+  3. colombia''s effort numbers look too costly for this pace → `pm decision add` asking the developer instead of adding the next pair.
+  4. Else the next pair (same bodies, next batch number).
+- At 2000 (de): the closing QC adds the first en pair: `run tr-en-<n>` (`qgen batch --translate en --bundle germany`; needs plan 98''s `--translate en` from de done and the en pilot acked, `task 638: Translation pilot go/no-go en, de (QT-5)`; else pend on the blocking decision) + `QC tr-en-<n>` (QC.md "Translation runs": spot check "native speaker of English needed", `http://127.0.0.1:8001/review?batch=tr-en-<n>&locale=en&sample=1`, `trivia-authoring`; needs_work: nothing). That QC adds the next en pair until `qgen report --bundle germany --locale en` shows 2000 approved en; then `plans/15c-regional-questions.md` notes `germany` de + en done.
+- One open pair per language of the bundle; run names come from `qgen` (`batch-<n>`, `tr-en-<n>` shared with chains 2–4 and plan 17). Every added body repeats the pm-run rules below and names its run.
+
+Done when: the first drafting pair is added (or this task pends on the blocking decision); note names the pair.
+
+## pm-run rules (plan 84, plan 17 "Batch tasks under pm run")
+- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (98, 138, 148 or new).
+- `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
+- Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
+- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T03:37:02Z', NULL, 1267, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1270, 84, 'Regional runs `uk`: start', 'work', 'open', NULL, NULL, 'Plan 84 chain 5: start the regional bundle `uk` (milestone 9, developer 2026-10-15; same rules as `colombia`, decision 110: Regional packs at launch (RG-5, OQ-46)): 2000 approved in en, drafted in British English. Launch (milestone 11) doesn''t wait for this chain. DLC entry, store texts and capsules are plans 130, 89, 88''s, not this task''s. Owner: `plans/15c-regional-questions.md`.
+
+## Before starting
+- Needs plan 98''s tasks for `uk` done (`pm show p98`; subjects may change): bundle created (`qgen bundle new --kind region`), its taxonomy decision answered and `qgen taxonomy --bundle uk` applied, its 2000 target in `targets.json`, `qgen batch --bundle uk` drafting in en (British English; `bundles.json` `rule`/`voice`).
+- Needs chain 4''s first `QC batch-<n>` of `colombia` done (added by `task 643: Regional pilot `colombia`: start`), with its first effort numbers in `plans/15c-regional-questions.md`.
+- Any open → `pm task-pending-decision <this task>` on the decision blocking it (the bundle''s taxonomy decision, plan 98''s or chain 4''s earliest open decision), stop.
+- If colombia''s effort numbers look too costly for this pace: `pm decision add "Regional bundle uk: start now?"` with the numbers, pend on it, stop.
+
+## Then: add the first drafting pair (priority -110)
+- `run batch-<n>` (next free batch number from `qgen`): `nix develop -c qgen batch --bundle uk` (RUNBOOK steps 1–5; British English). Done when its report exists, printed paths staged, note with "Done:" line and report path.
+- `QC batch-<n>`: `authoring/QC.md` steps 1–4: spot check `pm decision add "Spot check batch-<n> done?"` (native speaker of British English needed, link and `trivia-authoring`; never answered by an LLM), `qgen report --qc batch-<n>`, `pm decision add "QC batch-<n>: which changes?"`, change tasks in their plans at their priority; decision 3''s `qgen rework` once after QC. Then, first that applies:
+  1. `qgen report --bundle uk` shows 2000 approved (en) → closing step below.
+  2. Spent on `uk` (`qgen report --cost`, per bundle) ≥ a bundle budget set by task 463 (plan 70), if any → `pm decision add "uk over budget: continue?"`, add the next pair and pend its run task on it.
+  3. colombia''s effort numbers look too costly for this pace → `pm decision add` asking the developer instead of adding the next pair.
+  4. Else the next pair (same bodies, next batch number).
+- At 2000 (en): nothing more (`uk` is en only); the closing QC notes `uk` done in `plans/15c-regional-questions.md`.
+- One open pair per language of the bundle; run names come from `qgen` (`batch-<n>`, `tr-en-<n>` shared with chains 2–4 and plan 17). Every added body repeats the pm-run rules below and names its run.
+
+Done when: the first drafting pair is added (or this task pends on the blocking decision); note names the pair.
+
+## pm-run rules (plan 84, plan 17 "Batch tasks under pm run")
+- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (98, 138, 148 or new).
+- `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
+- Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
+- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T03:37:02Z', NULL, 1267, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1271, 84, 'Regional runs `spain`: start', 'work', 'open', NULL, NULL, 'Plan 84 chain 5: start the regional bundle `spain` (milestone 9, developer 2026-10-15; same rules as `colombia`, decision 110: Regional packs at launch (RG-5, OQ-46)): 2000 approved in es-ES, drafted in Spain''s Spanish, then translated to en. Launch (milestone 11) doesn''t wait for this chain. DLC entry, store texts and capsules are plans 130, 89, 88''s, not this task''s. Owner: `plans/15c-regional-questions.md`.
+
+## Before starting
+- Needs plan 98''s tasks for `spain` done (`pm show p98`; subjects may change): bundle created (`qgen bundle new --kind region`), its taxonomy decision answered and `qgen taxonomy --bundle spain` applied, its 2000 target in `targets.json`, `qgen batch --bundle spain` drafting in es-ES (Spain''s Spanish; `bundles.json` `rule`/`voice`).
+- Needs chain 4''s first `QC batch-<n>` of `colombia` done (added by `task 643: Regional pilot `colombia`: start`), with its first effort numbers in `plans/15c-regional-questions.md`.
+- Any open → `pm task-pending-decision <this task>` on the decision blocking it (the bundle''s taxonomy decision, plan 98''s or chain 4''s earliest open decision), stop.
+- If colombia''s effort numbers look too costly for this pace: `pm decision add "Regional bundle spain: start now?"` with the numbers, pend on it, stop.
+
+## Then: add the first drafting pair (priority -110)
+- `run batch-<n>` (next free batch number from `qgen`): `nix develop -c qgen batch --bundle spain` (RUNBOOK steps 1–5; Spain''s Spanish). Done when its report exists, printed paths staged, note with "Done:" line and report path.
+- `QC batch-<n>`: `authoring/QC.md` steps 1–4: spot check `pm decision add "Spot check batch-<n> done?"` (native speaker of Spain''s Spanish needed, link and `trivia-authoring`; never answered by an LLM), `qgen report --qc batch-<n>`, `pm decision add "QC batch-<n>: which changes?"`, change tasks in their plans at their priority; decision 3''s `qgen rework` once after QC. Then, first that applies:
+  1. `qgen report --bundle spain` shows 2000 approved (es-ES) → closing step below.
+  2. Spent on `spain` (`qgen report --cost`, per bundle) ≥ a bundle budget set by task 463 (plan 70), if any → `pm decision add "spain over budget: continue?"`, add the next pair and pend its run task on it.
+  3. colombia''s effort numbers look too costly for this pace → `pm decision add` asking the developer instead of adding the next pair.
+  4. Else the next pair (same bodies, next batch number).
+- At 2000 (es-ES): the closing QC adds the first en pair: `run tr-en-<n>` (`qgen batch --translate en --bundle spain`; needs plan 98''s `--translate en` from es-ES done and the en pilot acked, `task 638: Translation pilot go/no-go en, de (QT-5)`; else pend on the blocking decision) + `QC tr-en-<n>` (QC.md "Translation runs": spot check "native speaker of English needed", `http://127.0.0.1:8001/review?batch=tr-en-<n>&locale=en&sample=1`, `trivia-authoring`; needs_work: nothing). That QC adds the next en pair until `qgen report --bundle spain --locale en` shows 2000 approved en; then `plans/15c-regional-questions.md` notes `spain` es-ES + en done.
+- One open pair per language of the bundle; run names come from `qgen` (`batch-<n>`, `tr-en-<n>` shared with chains 2–4 and plan 17). Every added body repeats the pm-run rules below and names its run.
+
+Done when: the first drafting pair is added (or this task pends on the blocking decision); note names the pair.
+
+## pm-run rules (plan 84, plan 17 "Batch tasks under pm run")
+- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (98, 138, 148 or new).
+- `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
+- Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
+- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T03:37:03Z', NULL, 1267, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1272, 84, 'Regional runs `mexico`: start', 'work', 'open', NULL, NULL, 'Plan 84 chain 5: start the regional bundle `mexico` (milestone 9, developer 2026-10-15; same rules as `colombia`, decision 110: Regional packs at launch (RG-5, OQ-46)): 2000 approved in es, drafted in Mexican Spanish, then translated to en. Launch (milestone 11) doesn''t wait for this chain. DLC entry, store texts and capsules are plans 130, 89, 88''s, not this task''s. Owner: `plans/15c-regional-questions.md`.
+
+## Before starting
+- Needs plan 98''s tasks for `mexico` done (`pm show p98`; subjects may change): bundle created (`qgen bundle new --kind region`), its taxonomy decision answered and `qgen taxonomy --bundle mexico` applied, its 2000 target in `targets.json`, `qgen batch --bundle mexico` drafting in es (Mexican Spanish; `bundles.json` `rule`/`voice`).
+- Needs chain 4''s first `QC batch-<n>` of `colombia` done (added by `task 643: Regional pilot `colombia`: start`), with its first effort numbers in `plans/15c-regional-questions.md`.
+- Any open → `pm task-pending-decision <this task>` on the decision blocking it (the bundle''s taxonomy decision, plan 98''s or chain 4''s earliest open decision), stop.
+- If colombia''s effort numbers look too costly for this pace: `pm decision add "Regional bundle mexico: start now?"` with the numbers, pend on it, stop.
+
+## Then: add the first drafting pair (priority -110)
+- `run batch-<n>` (next free batch number from `qgen`): `nix develop -c qgen batch --bundle mexico` (RUNBOOK steps 1–5; Mexican Spanish). Done when its report exists, printed paths staged, note with "Done:" line and report path.
+- `QC batch-<n>`: `authoring/QC.md` steps 1–4: spot check `pm decision add "Spot check batch-<n> done?"` (native speaker of Mexican Spanish needed, link and `trivia-authoring`; never answered by an LLM), `qgen report --qc batch-<n>`, `pm decision add "QC batch-<n>: which changes?"`, change tasks in their plans at their priority; decision 3''s `qgen rework` once after QC. Then, first that applies:
+  1. `qgen report --bundle mexico` shows 2000 approved (es) → closing step below.
+  2. Spent on `mexico` (`qgen report --cost`, per bundle) ≥ a bundle budget set by task 463 (plan 70), if any → `pm decision add "mexico over budget: continue?"`, add the next pair and pend its run task on it.
+  3. colombia''s effort numbers look too costly for this pace → `pm decision add` asking the developer instead of adding the next pair.
+  4. Else the next pair (same bodies, next batch number).
+- At 2000 (es): the closing QC adds the first en pair: `run tr-en-<n>` (`qgen batch --translate en --bundle mexico`; needs plan 98''s `--translate en` from es done and the en pilot acked, `task 638: Translation pilot go/no-go en, de (QT-5)`; else pend on the blocking decision) + `QC tr-en-<n>` (QC.md "Translation runs": spot check "native speaker of English needed", `http://127.0.0.1:8001/review?batch=tr-en-<n>&locale=en&sample=1`, `trivia-authoring`; needs_work: nothing). That QC adds the next en pair until `qgen report --bundle mexico --locale en` shows 2000 approved en; then `plans/15c-regional-questions.md` notes `mexico` es + en done.
+- One open pair per language of the bundle; run names come from `qgen` (`batch-<n>`, `tr-en-<n>` shared with chains 2–4 and plan 17). Every added body repeats the pm-run rules below and names its run.
+
+Done when: the first drafting pair is added (or this task pends on the blocking decision); note names the pair.
+
+## pm-run rules (plan 84, plan 17 "Batch tasks under pm run")
+- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (98, 138, 148 or new).
+- `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
+- Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
+- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T03:37:03Z', NULL, 1267, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -35278,6 +35405,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1233, 1261, '2026-10-16T03:34:07Z', '2026-10-16T03:34:47Z', 'done', NULL, 0, 'ff2e2271a8193202f73aa007836d0e252bc5897b', 'claude-opus-5-5[1m]', 'e6be8440-d8f8-461a-9466-2e0b92857f20', 7, 14, 3916, 320728, 45004, 0.5025536, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1234, 1266, '2026-10-16T03:34:47Z', '2026-10-16T03:35:16Z', 'done', NULL, 0, 'b2a6761e4c7faf4a4667b1b2b5fa5c6a39dbd4d4', 'claude-opus-5-5[1m]', '3891ff04-10fb-48e4-84de-7fb2be04c434', 7, 14, 2574, 275008, 38393, 0.41368160000000004, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1235, 1262, '2026-10-16T03:35:16Z', '2026-10-16T03:36:15Z', 'done', NULL, 0, '803bcff1404c51c25f85b4452458ce9fe8a56512', 'claude-opus-5-5[1m]', '8c5c43b8-93d2-4563-8477-443eb91d99bd', 8, 16, 6015, 437170, 59839, 0.68651000000000007, 3857742);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1236, 1267, '2026-10-16T03:36:16Z', '2026-10-16T03:37:15Z', 'done', NULL, 0, '83cfc9d2e656fa17adf64925734a5fab6046a3b8', 'claude-opus-5-5[1m]', '6c541167-b1f6-41d3-b431-eae043366586', 11, 20, 6355, 441224, 46782, 0.58968080000000012, 3857742);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
