@@ -76,6 +76,9 @@ function startable(mode: unknown = "gamemaster"): true {
   return true;
 }
 
+/** Actions without an acting seat: start, end, timed's clock (plan 159). */
+const CLOCK = new Set(["new", "abandon", "expire"]);
+
 type Action = (save: SaveData) => { save: SaveData; event?: JokerEvent };
 
 /** POST /api/game/<action> */
@@ -87,6 +90,8 @@ export function gameAction(save: SaveData, data: EngineData, io: Io, action: str
       : game.newGame(s, data, io, body.player, pick(body, [...game.CHOICE_KEYS, "mode"])),
     pick: (s) => game.pick(s, data, io, index(), body.seat),
     answer: (s) => game.answer(s, data, io, index(), body.seat),
+    claim: (s) => game.claim(s, data, io, body.seat),
+    expire: (s) => game.expire(s, data, io),
     reveal: (s) => game.reveal(s, data, io),
     skip: (s) => game.skip(s, data, io, pyTruthy(body.everyone)),
     undo: (s) => game.undo(s, io),
@@ -100,7 +105,7 @@ export function gameAction(save: SaveData, data: EngineData, io: Io, action: str
   };
   if (!Object.hasOwn(actions, action)) return { save, status: 404, body: NOT_FOUND };
   return guard(save, 409, () => {
-    if (action !== "new" && action !== "abandon") game.checkActor(save, body.seat);
+    if (!CLOCK.has(action)) game.checkActor(save, body.seat);
     const { save: out, event } = actions[action](save);
     const res: { game: Game | null; event?: JokerEvent } = { game: game.view(out, data, io) };
     if (action === "joker") res.event = event;
