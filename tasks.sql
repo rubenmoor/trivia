@@ -8413,6 +8413,56 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 ## Constraints
 - D-45 licences only; nothing fetched at runtime; no new npm or Python dependencies (imagemagick and cwebp are already in the shells)', '2026-10-16T13:48:49Z', 1325);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (151, 8, 'Bundle selection on its own full screen', 400, 'Part 11 of `plan 8: masterplan` (developer''s gallery flag of 2026-10-16 on `choice-gamemaster`, `authoring/data/ui-flags.json`): the question bundles get a full screen of their own, before the Choice screen, in both modes, and the base bundle gets an explicit name in every UI language instead of «Básico» / «Basics» / «Basis». Flow and supply rules: `decision 260: Bundle screen: where it sits, supply report, in-game settings`; names: `decision 261: Name of the base bundle per UI language (not «Basics»)` (pending).
+
+## Binding
+- `decision 158: Bundle selection in every mode, apart from customization`: "own section" → "own screen"; the rest holds: never part of «Personalizar partida», not counted in `customized`, preset = `playerChoice` (newest game''s bundles, else the locale''s first base bundle, non-base off)
+- `decision 260: Bundle screen: where it sits, supply report, in-game settings`: Player → Bundles → Choice → Level, both modes, also with one offered bundle; supply report, short-group marks and the running-out notice (plan 65) stay on Choice (`decision 206: Play-test: no supply report on Start, report on the Choice screen only`); «Ajustes de la partida» (`GameSettings.svelte`, MD-12) keeps `BundleSelector`
+- `decision 50: Play-test of age groups and bundles`: the term "question bundle" holds
+- `plan 150: Start screen horizon` touches Start only, no overlap; its `task 1330: Gallery size option` (`trivia-gallery --size`) is used for the 1280×800 shots if done
+
+## Screen
+- New `app/client/src/game/screens/Bundles.svelte`, between Player and Choice in `Game.svelte` (`Screen` type, `OURS`, transitions «whoosh»): title per catalog (e.g. es «¿Qué preguntas juega {name}?»), the shared `BundleSelector` large (full screen: descriptions always shown, tiles bigger than on Choice), «Atrás» and «Seguir» (or the catalog''s equivalent) with Prompts
+- Preset: `fetchChoice({ player })`''s bundles on first entry; the pick lives in `Game.svelte` (like `chosen`), so Choice → Back → Bundles shows it unchanged; a new player from Player starts fresh
+- Back: Player; confirm: Choice with the bundles as a prop; «Seguir» disabled without exactly one base bundle (`toggled` keeps one; guard anyway)
+- Letter keys: `bundleKeys` moves out of `Choice.svelte` into `BundleSelector.svelte`''s module script (import, decision 199); reserved keys on this screen: the global ones (flag, …) only, not Choice''s mode/customize letters
+- Focus and input (`plan 44: Action layer and focus navigation (IN-2, IN-3)`): new scope `bundles` in `pushScope`: letters toggle/select, ←/→/↑/↓ spatial between tiles and buttons, A/Enter on a tile toggles (`pressable`), Start/confirm-on-button continues, B/Backspace back, Esc falls through to the overlay; pad glyphs via `Prompt`
+- Mods: `"Bundles"` added to `SCREENS` in `app/client/src/lib/mods.ts` (`screenFor`), `modding/README.md`''s screen-name list
+- Fits at 1280×800 and 1280×720 (`plan 46: Deck layout and controller-only text entry (SW-4)`), also with a few mod bundles (wraps, no scroll at 2–6 tiles)
+
+## Choice screen
+- `BundleSelector` and its letters out of `Choice.svelte`; `bundles` comes as a prop (no longer from the preset); a read-only line «Paquetes de preguntas: …» (catalog `choice.lineBundles`, base first, as in the Esc overlay) so the supply report has its context; Back → Bundles
+- Supply check, `SupplyReport`, `short`, refusals (`base_bundle_count`, `bundle_not_offered`), `SupplyNotice` unchanged
+- Gamemaster mode''s configure fields and solo''s group/«Personalizar partida» unchanged; heading index/animation and `reporting` CSS (`.bundle .description` hide) cleaned up
+
+## Names (waits for decision 261)
+- Apply the answer: `app/data/bundles.json` (es name; es-ES reads it), `app/data/names.en.json`, `names.de.json`; `about` text unchanged
+- Glossaries in `app/client/src/locales/style/{es,en,de}.md` ("bundle names from …"), `es-ES.md` if an override is needed
+- `rg` the old names («Básico», «Basics», «Basis») over code, tests, `.md` files and plan files; fix every hit (decision 200); old names in pm text stay
+- `authoring/data/ui-flags.json`: the 2026-10-16 «Basics» flag gets `fixed_on`
+
+## Walkers
+- Every script that walks Player → Choice passes the new screen: `authoring/tools/gallery.py` (new shot `bundles`, solo and gamemaster shots via it), `authoring/steam/smoke.mjs`, `authoring/store/screenshots.mjs` (`toChoice`), `authoring/store/trailer.mjs` if it walks the flow, `authoring/tools/sim/` if it drives the UI
+- New screen strings: all four catalogs (es, es-ES only where Spain differs, en, de), style guides read first; `npm run check`''s on-screen literal check passes
+
+## Docs
+- `plans/04-ui-tv-display.md`: flow diagram (Player → Bundles → Choice, Back edges), screen table row, a "Bundles" section; Choice section without bundles
+- `plans/22-bundles.md`: base bundle''s name per locale; selection on its own screen
+- `plans/decisions.md`: D-97 amended (own screen, decisions 158 and 260; "in gamemaster mode below the configure fields" out); `plans/13-game-modes.md`, `plans/03-game-flow.md`, `plans/21-age-groups.md` where they say bundles are on the Choice screen; README.md if it describes the flow
+
+## Check
+- Node dev server (`npm run dev -w app/client`) at 1280×800 and 1920×1080: both modes, pad (or forced `device: "gamepad"`) and key: Player → Bundles (toggle colombia, base stays one) → Choice → Back → Bundles (pick kept) → Choice → «¡A jugar!»; a too-small pick shows the report on Choice, Back fixes it
+- `trivia-gallery --only bundles,choice-solo,choice-gamemaster,choice-supply-report` for all four locales
+- Per commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`
+
+## Tasks (suggested)
+1. Bundle screen and Choice without the selector (screen, scope, mods name, walkers, gallery shot, catalogs, docs except names)
+2. Base bundle names per locale (pending on decision 261)
+3. Gallery run and developer review decision (`pm decision add`: "Bundle screen reviewed in `/gallery`?", like plan 100''s reviews); fix tasks on problems
+
+## Done when
+- The milestone''s bundle-screen line holds: own full screen before Choice in every mode, base bundle named explicitly in every locale
+- `plans/04-ui-tv-display.md`, `plans/22-bundles.md` and D-97 updated; the gallery flag marked fixed', '2026-10-16T13:54:45Z', 1335);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -33846,7 +33896,7 @@ Milestone 8 is S3 of the Steam track (D-34, `plans/11-steam.md`): the first buil
 ## Out of scope (from the milestone)
 - Steamworks features (overlay, Cloud setup, achievements, on-screen keyboard, SW-7..SW-14), store page (S5); translations (S4); media resizing (SW-9, S5); couch co-op input (IN-6, IN-7, later).
 - Porting authoring''s Python (qgen, `trivia-authoring`) to Node/TS: later, own milestone.', '2026-10-16T13:51:32Z', NULL, 1321, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1335, 8, 'write plan: Bundle selection on its own full screen', 'plan', 'open', 1000, NULL, 'Part 11 of `plan 8: masterplan` (milestone change of 2026-10-16, gallery flag): write the plan with `pm plan add 8 "Bundle selection on its own full screen" --priority 400 < body.md`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1335, 8, 'write plan: Bundle selection on its own full screen', 'plan', 'done', 1000, '2026-10-16, plan 151 (decisions 260 recorded, 261 raised for the base bundle names)', 'Part 11 of `plan 8: masterplan` (milestone change of 2026-10-16, gallery flag): write the plan with `pm plan add 8 "Bundle selection on its own full screen" --priority 400 < body.md`.
 
 ## What the plan covers (from the masterplan, part 11)
 - Owner plan files: `plans/04-ui-tv-display.md` (screen flow), `plans/22-bundles.md` (bundle names); `plans/decisions.md` D-97 amended.
@@ -33860,7 +33910,9 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Before writing
 - `pm plan list` (don''t duplicate an open plan; `plan 150: Start screen horizon` touches the screen flow, refer to it if they overlap); `pm decision list --answered --grep bundle --grep Choice --grep BundleSelector`.
 - Read the current flow: `app/client/src/` screens around the Choice screen and `BundleSelector`, `app/data/bundles.json`, the gallery shot list.
-- `plan 48: S3 close-out and platform test` runs after this plan (priority 140); its revision for part 11 is `task 1333: revise plan 48: S3 close-out and platform test`, not this plan''s work.', '2026-10-16T13:52:03Z', NULL, 1332, 0);
+- `plan 48: S3 close-out and platform test` runs after this plan (priority 140); its revision for part 11 is `task 1333: revise plan 48: S3 close-out and platform test`, not this plan''s work.', '2026-10-16T13:52:03Z', '2026-10-16T13:54:49Z', 1332, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1336, 151, 'create tasks for plan 151: Bundle selection on its own full screen', 'split', 'open', 1000, NULL, 'Split plan 151 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T13:54:45Z', NULL, 1335, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -37603,6 +37655,21 @@ How the list below was made (no claude call):
 
 Options: "as proposed" applies the list as is (plan task "Apply the slug migration"); "with changes": name the rows and their new slugs; "keep the region in colombia''s slugs": `colombia/animals-of-colombia` etc., straight from the en names.', 'as proposed', NULL, '2026-10-16T12:42:38Z', '2026-10-16T13:06:10Z', 1305, NULL, 'rule', NULL, '2026-10-16, task 1312: Applied by `task 1312: Apply the slug migration to base and colombia` (2026-10-16), `qgen rekey --map work/slugs/proposal.json --apply` as proposed: base 28 categories / 198 subcategories, colombia 14 / 53 on English slugs; `categories.json` (base, colombia) structure only, no names; `names.es.json` new (today''s Spanish names, unchanged), `names.en.json` / `names.de.json` keys renamed (values unchanged); `authoring/data/questions.json` 2203 `subcategory` fields; 172 concept files renamed to `<slug>.json` (166 base, 6 colombia); `app/data/old-keys.json` new (42 category, 251 subcategory keys); work files of batches 4–8, pilot and `work/concepts/` mapped (gitignored); pools re-exported; `SPACE_CATEGORIES` now `{"space"}`; `pool.test.ts` on slugs. Old save (copy of `state/game.json`) loads, plays on, `purged` / `swapped_to` mapped (`drinks`, `cheese`); es names unchanged.');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (259, 'Category and subcategory keys: English slugs', 'answered', '[]', 'Milestone 9, "Slug keys for categories" (developer, 2026-10-16); `plan 149: Slug keys for categories` Model. Supersedes the name-as-key part of `decision 165: Subcategory keys in code: bundle + name; base keeps bare names` (the one-string key form stays), D-99''s "a category or subcategory is bundle + name" and D-100''s name keys. Spanish names as keys tie every bundle to Spanish before the next regional taxonomies (usa, germany, uk, spain, mexico) are made in other languages. The slug list for base and colombia is `decision 258: Slug keys for base and colombia: the list`.', 'Every category and subcategory in every bundle is keyed by an English slug (^[a-z0-9]+(-[a-z0-9]+)*$), unique within its bundle per kind (a category and a subcategory may share one). One-string form of decision 165 kept: subKey = base''s bare slug, else <bundle>/<slug>; Python (bundle, slug). categories.json holds structure only ({categories: [{slug, subcategories: [<slug>…]}]}). Display names, en included, from names.<locale>.json (en, es, de; es-ES reads names.es.json, then names.es-ES.json overrides where Spain differs, only existing keys); lookup order everywhere: locale file → base language file (es for es-ES) → a name field in categories.json (mods) → the key itself. Old keys mapped through app/data/old-keys.json (written once by the migration, shipped) by save load, the frozen engine fixtures'' normalizer, patch_notes.py and played.py. Mods: today''s format stays valid (a plain string is key and name); slugs + names files optional. Prompts get display names in the prompt''s locale, never slugs; model output mapped back to slugs by code. Bundle ids and bundles.json names out of scope. D-110 in plans/decisions.md.', NULL, '2026-10-16T12:45:32Z', '2026-10-16T12:45:32Z', 1309, NULL, 'rule', 1309, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (260, 'Bundle screen: where it sits, supply report, in-game settings', 'answered', '[]', 'From `task 1335: write plan: Bundle selection on its own full screen` (developer''s gallery flag of 2026-10-16 on choice-gamemaster). The bundle screen comes before the Choice screen, where the mode is picked, so it is the same screen in both modes. Supply depends on the age group / difficulty, levels and cards picked after it, so a report on the bundle screen would be guesswork; `decision 206: Play-test: no supply report on Start, report on the Choice screen only` keeps it on Choice, and Back from Choice returns to the bundles to fix a too-small pick. Always shown, also with one bundle (en, de today): the flow and gallery are the same in every locale, mods can add bundles, and the base bundle is named explicitly. The in-game settings dialog changes a running game, not the screen flow, so it keeps the selector. Amends `decision 158: Bundle selection in every mode, apart from customization`: own section → own screen.', 'Player → Bundles → Choice → Level in both modes, shown even when the locale offers one bundle; supply report, short-group marks and the running-out notice stay on the Choice screen only, which shows the chosen bundles as a read-only line; «Ajustes de la partida» (MD-12) keeps the shared BundleSelector for a running game', NULL, '2026-10-16T13:54:10Z', '2026-10-16T13:54:10Z', 1335, NULL, 'rule', 1335, '2026-10-16, task 1335: written into `plan 151: Bundle selection on its own full screen`.');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (261, 'Name of the base bundle per UI language (not «Basics»)', 'pending', '["1: base-bundle term: «Paquete básico», «Base bundle», «Grundpaket»", "2: general knowledge: «Cultura general», «General knowledge», «Allgemeinwissen»", "3: other names (listed in the answer)"]', 'Your gallery flag of 2026-10-16 on `choice-gamemaster` (en «Basics»): "it''s literally the ''base bundle'' with corresponding translations that must be just as explicit". Part 11 of `plan 8: masterplan`; the bundle screen''s implementing task waits for this answer.
+
+Today: es / es-ES «Básico» (`app/data/bundles.json`), en «Basics» (`names.en.json`), de «Basis» (`names.de.json`). Catalogs exist for es, es-ES, en, de only (zh-Hans, ru, pt-BR: none yet, they take the same pattern when written). Descriptions stay («Preguntas de todo un poco, para jugar en cualquier parte.» etc.).
+
+Style guides read (`app/client/src/locales/style/*.md`): option 1 uses each glossary''s existing base-bundle term, so error texts like `error.base_bundle_count` and the bundle name say the same thing; `decision 50: Play-test of age groups and bundles`''s "question bundle" holds. The bundle''s letter key is its name''s first free letter (plan 29), so it changes with the name (shown by the Prompt chip, no text change).
+
+| Locale | 1: the base-bundle term (recommended) | 2: general knowledge |
+|---|---|---|
+| es | «Paquete básico» | «Cultura general» |
+| es-ES | «Paquete básico» (no override) | «Cultura general» (no override) |
+| en | «Base bundle» | «General knowledge» |
+| de | «Grundpaket» | «Allgemeinwissen» |
+
+Option 3: your own names per locale, listed in the answer.', NULL, NULL, '2026-10-16T13:54:19Z', NULL, 1335, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -38945,6 +39012,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1322, 1326, '2026-10-16T13:49:32Z', '2026-10-16T13:50:35Z', 'done', NULL, 0, '2dbc73beb3e21c976a80b486ba16aa02e1e83ef3', 'claude-opus-5-5[1m]', '9ded8024-e2a4-464f-8733-6bc5f184ba33', 8, 16, 5273, 282922, 33224, 0.4279004, 4064407);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1323, 1321, '2026-10-16T13:50:35Z', '2026-10-16T13:51:40Z', 'done', NULL, 0, '90bbe062665ad0bf41141d5e957966e23cd93f8d', 'claude-opus-5-5[1m]', 'e88bafb8-bf74-4d45-ad67-be05fbe0e4aa', 11, 20, 4465, 378640, 34920, 0.44446800000000009, 4064407);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1324, 1332, '2026-10-16T13:51:40Z', '2026-10-16T13:52:20Z', 'done', NULL, 0, 'e4787e05a21ebdda42fe8500a94cbf3b8db3a5dc', 'claude-opus-5-5[1m]', '808e1b96-4dc8-4407-ae56-3d61b62eb454', 8, 16, 2732, 339153, 40656, 0.4477826, 4064407);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1325, 1335, '2026-10-16T13:52:20Z', '2026-10-16T13:55:01Z', 'done', NULL, 0, 'd7d454439feb06c7d210c2fc9664b96e4a6935d0', 'claude-opus-5-5[1m]', 'cec1d419-fb41-446f-a89c-9869b1616837', 22, 42, 12090, 1347016, 80735, 1.1572512000000002, 4064407);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
