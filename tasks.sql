@@ -35970,8 +35970,72 @@ Milestone 11 is S6 of the Steam track (D-34, `plans/11-steam.md`, ST-3..ST-5): t
 - More regions and languages (later); Remote Play Together (SW-13), macOS (SW-14); marketing beyond Steam''s own wishlist and follow features; telemetry and any network request other than the clicked report.', '2026-10-16T19:29:44Z', '2026-10-16T19:32:48Z', 1364, 0, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1390, 97, 'create tasks for plan 97: S6 close-out', 'split', 'done', 1000, '2026-10-16, tasks.sql: tasks 718/719 aligned with plan 97 (719: directory.md check, sync in Done when; 718: SW-13 points to milestone 17: Remote Play Together instead of a backlog row, since that milestone now owns it; multiplayer pointers for 11/17/18 and Later). No new decisions: the closing ones come from tasks 709/710/716.', 'Split plan 97 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T19:31:30Z', '2026-10-16T19:32:32Z', 1388, 0, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1391, 152, 'create tasks for plan 152: masterplan', 'split', 'open', 1000, NULL, 'Split plan 152 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T19:35:36Z', NULL, 1353, 0, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1391, 152, 'create tasks for plan 152: masterplan', 'split', 'done', 1000, '2026-10-16, tasks 1392–1402; 1394/1395 wait for decision 276, 1396 for 273/274/275, 1397 for 273/274, 1399 for 275', 'Split plan 152 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T19:35:36Z', '2026-10-16T19:37:14Z', 1353, 0, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1392, 152, 'write plan: Session model and save format', 'plan', 'open', 1000, NULL, 'Write the plan for part 1 of `plan 152: masterplan` ("Session model and save format"): `pm plan list` first, then `pm plan add 16 "Session model and save format" --priority 900 --intro "…"` with the full body.
+
+- Cover everything part 1 lists: session shape (players in join order, mode, shared settings, per-player state, turn/round pointer), how it maps onto `games[]` (record the choice with `pm decision record`), `SAVE_VERSION` bump with `engine/save.ts` `UPGRADES` and `authoring/tools/save_file.py` (and `app/server/save.py` while `plan 99: Retire the browser game and the Python game server` hasn''t removed it), seen events per D-82, engine API where every action carries the acting player and wrong-player actions are refused (`not_your_turn`, …)
+- Read the code first: `app/client/src/engine/state.ts`, `engine/save.ts`, the readers of `games[]` (stats, flags, achievements, telemetry, `qgen report --played`)
+- Keep the player binding device-agnostic for `milestone 17: Remote Play Together`
+- Done: no mode logic; types, save round-trip, `parseSave` upgrade; old saves and fixture replay unchanged', '2026-10-16T19:37:07Z', NULL, 1391, 0, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1393, 152, 'write plan: Round-robin modes in the engine', 'plan', 'open', 1000, NULL, 'Write the plan for part 2 of `plan 152: masterplan` ("Round-robin modes in the engine"): `pm plan list` first, then `pm plan add 16 "Round-robin modes in the engine" --priority 600 --intro "…"`, built on part 1''s plan (`Session model and save format`).
+
+- `rr-coop` and `rr-competitive` exactly as part 2 and milestone 16 spec them: turns in join order, shared vs. per-player jokers (`STANDARD_JOKERS`), age groups, end conditions
+- Settle and record (`pm decision record`) `rr-competitive`''s last player standing (wins or plays on)
+- Selection per player (`selection.draw`), supply check (GF-5), outlook for the session, `view()` for the screens
+- Tests only where they stay useful (AGENTS.md); fixture replay unchanged', '2026-10-16T19:37:07Z', NULL, 1391, 0, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1394, 152, 'write plan: Competitive (timed) in the engine', 'plan', 'open', 1000, NULL, 'Write the plan for part 3 of `plan 152: masterplan` ("Competitive (timed) in the engine"): `pm plan list` first, then `pm plan add 16 "Competitive (timed) in the engine" --priority 590 --intro "…"`, built on part 1''s plan (`Session model and save format`).
+
+- Rules as milestone 16 specs them: 12 rounds = levels, one age group, no jokers, 30 s per question, hint every 8 s, claim + 6 s, lives, drop-outs, round 12 sudden death, last one left wins; questions per round per `decision 276: Timed mode: after a drop-out, how many questions does a round have?`
+- Time from action timestamps (the `Io` clock), no timers in the engine; client sends `tick`/`expire`, engine checks them
+- Settle and record the edge cases part 3 lists: everyone out at one round end, round 12 exhausted with no correct answer, Esc menu / Steam overlay during a question (pause or not; D-92)
+- Seen events per question shown, claimed or not
+- Mark the core work task `--model opus`', '2026-10-16T19:37:08Z', NULL, 1391, 0, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1395, 152, 'write plan: Engine consumers of multiplayer sessions', 'plan', 'open', 1000, NULL, 'Write the plan for part 4 of `plan 152: masterplan` ("Engine consumers"): `pm plan list` first, then `pm plan add 16 "Engine consumers of multiplayer sessions" --priority 580 --intro "…"`, after the plans of parts 1–3.
+
+- Achievements (`engine/achievements.ts`): `WIN_RR_COOP`, `WIN_RR_COMPETITIVE`, `WIN_TIMED`; settle and record which other achievements sessions feed (one Steam user per machine); `qualifies` per mode; links `plan 86: Achievements (SW-11)`
+- Telemetry (`engine/telemetry.ts`): mode and player count, nothing personal
+- Outlook (`engine/outlook.ts` `seenPerLevel`, backlog B-15) and `qgen report --simulate` (`authoring/tools/sim/simulate.ts`, `qgen.py` `SIM_MODES`): replace the MD-8/MD-9 stand-ins (`plans/16-content-target.md`); Choice screen supply notice per mode; follows `decision 276: Timed mode: after a drop-out, how many questions does a round have?`
+- Readers of `games[]` (`qgen report --played`, authoring pages, `authoring/tools/*saves.mjs`) follow part 1''s shape', '2026-10-16T19:37:08Z', NULL, 1391, 0, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1396, 152, 'write plan: Per-player controls', 'plan', 'open', 1000, NULL, 'Write the plan for part 5 of `plan 152: masterplan` ("Per-player controls"): `pm plan list` first, then `pm plan add 16 "Per-player controls" --priority 480 --intro "…"`; after `plan 156: Prompts follow the last input` and part 1''s plan (the acting player in the engine API).
+
+- First a throw-away investigation task (report in the plan): pads listed by `navigator.getGamepads()` in Electron on Linux and Windows, with and without Steam Input (Chromium may stop at 4); pad identity across disconnect/reconnect; Steam input type per handle ↔ `Gamepad.index` (`lib/gamepad.ts` `padStyle`)
+- Binding device → player per `decision 273: Keyboard-only turn-based sessions: what does a player''s own key do?` and `decision 274: Pads plus keyboard: one keyboard player, or several key players?`; device-agnostic for `milestone 17: Remote Play Together`
+- Before the session: every device drives the shared UI; in a session the action layer (`lib/input.svelte.ts`, `lib/gamepad.svelte.ts`) tags actions with the player; only the acting player''s actions reach the game
+- `timed` claim per device; claimer''s answer per `decision 275: Timed mode, keyboard-only: how does the claimer answer in the 6 seconds?`
+- Settle and record: overlay (Esc/Start) in a session; pad lost mid-session (pause + «reconnect» or skip the player)
+- Prompts per player where it matters', '2026-10-16T19:37:08Z', NULL, 1391, 0, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1397, 152, 'write plan: Mode row, session setup and join screen', 'plan', 'open', 1000, NULL, 'Write the plan for part 6 of `plan 152: masterplan` ("Mode row, session setup and join screen"): `pm plan list` first, then `pm plan add 16 "Mode row, session setup and join screen" --priority 400 --intro "…"`; after parts 1 and 5; refer to `plan 151: Bundle selection on its own full screen`.
+
+- Three modes on the Choice screen''s mode row, gated by `BUILT_MODES`; names per `plans/15a-ui-translation.md` "Mode names"
+- Join screen: «press A to join» per pad, keyboard and mouse as one player, key picking per `decision 273: Keyboard-only turn-based sessions: what does a player''s own key do?` and `decision 274: Pads plus keyboard: one keyboard player, or several key players?`; names (save player rows or new, `LetterPicker.svelte`); leave/rejoin; no cap of our own, minimum 2
+- Per-mode setup: age group per player or for all, bundles (`decision 158: Bundle selection in every mode, apart from customization`), «Personalizar partida» where allowed (no achievements), supply check
+- Screens in `screens/registry.ts`; Deck size 1280×800', '2026-10-16T19:37:08Z', NULL, 1391, 0, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1398, 152, 'write plan: Round-robin game screens', 'plan', 'open', 1000, NULL, 'Write the plan for part 7 of `plan 152: masterplan` ("Round-robin game screens"): `pm plan list` first, then `pm plan add 16 "Round-robin game screens" --priority 390 --intro "…"`; after part 2''s plan.
+
+- Turn banner (whose turn, their device glyph), shared Tower (`rr-coop`) or one track per player (`rr-competitive`), shared or per-player joker tray, a player out, the session''s Victory/Wrong screens per mode
+- Reuse Level, Select, Question, Correct, Wrong (`game/screens/`), no copies (decision 199)
+- Strings land with their screens (part 9)', '2026-10-16T19:37:08Z', NULL, 1391, 0, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1399, 152, 'write plan: Timed game screens, drama and sound', 'plan', 'open', 1000, NULL, 'Write the plan for part 8 of `plan 152: masterplan` ("Timed game screens, drama and sound"): `pm plan list` first, then `pm plan add 16 "Timed game screens, drama and sound" --priority 380 --intro "…"`; after part 3''s plan.
+
+- One question for all: 30 s countdown, hint every 8 s, claim prompt per player, the claimer''s 6 s, rounds and hearts per player; claimer''s answer input per `decision 275: Timed mode, keyboard-only: how does the claimer answer in the 6 seconds?`
+- Drama as milestone 16 specs: pulsing heart at last chance in a round, stronger on the last heart; last 3 s after a claim: rising ticks and pulsing red frame; same frame when every player is at risk
+- Sounds through `game/sound.svelte.ts` (synth until `plan 32: Recorded sound effects (UI-10)`), checked with `TRIVIA_SOUND=1`
+- Sudden death round 12 and the winner screen; `PLACEHOLDER(<task id>)` for unpolished visuals', '2026-10-16T19:37:09Z', NULL, 1391, 0, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1400, 152, 'write plan: Multiplayer UI strings and gallery', 'plan', 'open', 1000, NULL, 'Write the plan for part 9 of `plan 152: masterplan` ("UI strings and gallery"): `pm plan list` first, then `pm plan add 16 "Multiplayer UI strings and gallery" --priority 360 --intro "…"`; alongside parts 6–8 (strings land with their screens, the gallery after); refer to `plan 69: UI catalogs for the launch languages (LUI-4, LUI-5)`.
+
+- Every new string in es, es-ES, en, de (`app/client/src/locales/`), per `locales/style/<locale>.md`; claim keys under the key collision rule of `npm run check` (`decision 53: Joker and action keys per UI language (LUI-4)?`)
+- `trivia-gallery`: demo saves in `authoring/tools/gallery_saves.mjs` for each new screen and state (join with 5 players, each mode mid-game, timed claim, last heart, red frame, each victory); shots for all four locales', '2026-10-16T19:37:09Z', NULL, 1391, 0, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1401, 152, 'write plan: Shipping the multiplayer modes and docs', 'plan', 'open', 1000, NULL, 'Write the plan for part 10 of `plan 152: masterplan` ("Shipping the modes and docs"): `pm plan list` first, then `pm plan add 16 "Shipping the multiplayer modes and docs" --priority 340 --intro "…"`; refer to `plan 86: Achievements (SW-11)` and `plan 88: Store page and AI disclosure (PUB-8, LUI-6)`.
+
+- Per mode: a `--once` decision for the developer (win achievement entered in Steamworks); the mode''s `steam-achievements.vdf` + `BUILT_MODES` task waits for it, and for that mode''s screens passing
+- Store texts name a mode once built (`decision 168: Store texts name only the built game modes`, `plans/17a-store-page.md`); controller line if a pad-only run changes `decision 90`
+- Docs: `plans/13-game-modes.md`, `plans/14-input.md` section 3, `plans/11-steam.md`, `plans/16-content-target.md`, `plans/17a-store-page.md`, `plans/backlog.md` (B-15) point to milestone 16; `rg "MD-8|MD-9|IN-6|Later"` leaves none for these (decision 200)', '2026-10-16T19:37:09Z', NULL, 1391, 0, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1402, 152, 'write plan: Local multiplayer close-out and family playtest', 'plan', 'open', 1000, NULL, 'Write the plan for part 11 of `plan 152: masterplan` ("Close-out: end-to-end runs and family playtest"): `pm plan list` first, then `pm plan add 16 "Local multiplayer close-out and family playtest" --priority 130 --intro "…"`; last.
+
+- Each mode start to finish: pads only, keyboard only, 4 pads + keyboard and mouse (5 players); fake pads headless where real ones are missing, real pads by the developer
+- A playtest decision for the developer (`--once`): each mode played on the TV with the family; failures become follow-up tasks
+- Feeds `milestone 17: Remote Play Together`''s gate C', '2026-10-16T19:37:09Z', NULL, 1391, 0, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -41590,6 +41654,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1398, 1390, '2026-10-16T19:31:38Z', '2026-10-16T19:32:37Z', 'done', NULL, 0, '5c2b4e2d43af6143305ad2b39052b47178552475', 'claude-opus-5-5', 'a9697a77-f822-4b42-b159-073b560d2532', NULL, 11, 18, 6324, 320159, 35515, 0.4747038, 4144524);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1399, 1389, '2026-10-16T19:32:37Z', '2026-10-16T19:32:51Z', 'done', NULL, 0, '7266640608ea59ca22d4b1a2c225b89680ce16ca', 'claude-opus-5-5', '3c5db4c8-5f41-48ab-ad32-a2c6369fea81', NULL, 4, 8, 909, 131844, 30963, 0.2922848, 4144524);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1400, 1353, '2026-10-16T19:32:51Z', '2026-10-16T19:36:17Z', 'done', NULL, 0, '1d8745943bf4ee231306405bb431657e134ba148', 'claude-opus-5-5', '8dad8a53-0f54-45e8-9675-1b241c7c9ce2', NULL, 21, 42, 15882, 1489584, 90993, 1.3436688, 4144524);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1401, 1391, '2026-10-16T19:36:18Z', '2026-10-16T19:37:19Z', 'done', NULL, 0, 'dc7e89277c7c01ac3954102ff14bdb750cb68e36', 'claude-opus-5-5', '7fcffe9f-684e-4de2-8dae-c2bae59415b9', NULL, 8, 16, 6394, 310205, 40626, 0.51499299999999992, 4144524);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -42070,6 +42135,14 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1340, 264);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1340, 269);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1361, 269);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1362, 270);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1394, 276);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1395, 276);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1396, 273);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1396, 274);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1396, 275);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1397, 273);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1397, 274);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1399, 275);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
