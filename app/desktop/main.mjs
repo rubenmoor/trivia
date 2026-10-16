@@ -102,11 +102,11 @@ function steamSdkDir() {
 }
 
 const USAGE =
-  "known flags: --import-save <file> [--force], --no-mods, --check-mod <folder>, --publish-mod <folder> [--changenote <text>] [--visibility public|friends|unlisted|private] [--content-only] [--dry-run]";
+  "known flags: --import-save <file> [--force], --no-mods, --check-mod <folder>, --publish-mod <folder> [--changenote <text>] [--visibility public|friends|unlisted|private] [--content-only] [--dry-run], --rp-probe";
 // Our flags' namespace; anything else (Electron/Chromium switches, the dev app path, Steam's) passes.
-const OWN = /^--(import|export|save|trivia|no-mods|force|check|publish|changenote|visibility|content-only|dry-run)/;
+const OWN = /^--(import|export|save|trivia|no-mods|force|check|publish|changenote|visibility|content-only|dry-run|rp-probe)/;
 const VALUE = { "--import-save": "a file", "--check-mod": "a folder", "--publish-mod": "a folder", "--changenote": "a text", "--visibility": "a value" };
-const SWITCH = new Set(["--no-mods", "--force", "--content-only", "--dry-run"]);
+const SWITCH = new Set(["--no-mods", "--force", "--content-only", "--dry-run", "--rp-probe"]);
 
 /** Our flags from argv: `{ importSave, force, noMods, checkMod, publish }`, or `{ error }` for an unknown own-looking flag or a missing value. */
 function parseArgs(argv) {
@@ -139,7 +139,7 @@ function parseArgs(argv) {
     dryRun: !!v["--dry-run"],
   };
   const checkMod = v["--check-mod"] ? path.resolve(v["--check-mod"]) : null;
-  return { importSave: v["--import-save"] ?? null, force: !!v["--force"], noMods: !!v["--no-mods"], checkMod, publish: publish || null };
+  return { importSave: v["--import-save"] ?? null, force: !!v["--force"], noMods: !!v["--no-mods"], rpProbe: !!v["--rp-probe"], checkMod, publish: publish || null };
 }
 
 /** argv for a relaunch: our own flags dropped (with their values), Electron's and Steam's kept. */
@@ -255,7 +255,10 @@ async function startSteam({ input = true } = {}) {
   Object.assign(console, { log, warn, error });
   // Steam Input for the pads' real types only (glyphs); runCallbacks drives its frames.
   steamInput = input && steam.input.init(false);
-  steamTimer = setInterval(() => steam.runCallbacks(), 100);
+  steamTimer = setInterval(() => {
+    steam.runCallbacks();
+    rpTick?.();
+  }, 100);
   console.error(
     `trivia: steam available, app ${appId}, user ${steam.getStatus().steamId} ${hasSteamId() ? "valid" : "none"}, language ${steam.apps.getCurrentGameLanguage()}`,
   );
@@ -281,11 +284,219 @@ function checkUser() {
 function stopSteam() {
   if (!steam) return;
   clearInterval(steamTimer);
+  clearInterval(rpSecond);
+  rpTick = null;
   if (steamInput) steam.input.shutdown();
   steamInput = false;
   steam.richPresence.clearRichPresence();
   steam.shutdown();
   steam = null;
+}
+
+// PLACEHOLDER(1479): Remote Play probe (plan 168, decision 302), `--rp-probe`; task 1479 removes this block and its calls.
+let rpTick = null;
+let rpLog = () => {};
+let rpApi = null; // { f: flat calls, host: own steam id }
+let rpDirect = false;
+let rpFlashAt = 0; // F11: ms of the white frame, 0 = not armed
+let rpPadsDown = "";
+const rpLines = [];
+const RP_BOX = "document.getElementById('rp-probe-box')";
+
+/** koffi load of the binding's Steam library, v003 flat calls (decision 301). */
+async function rpProbeStart() {
+  const file = path.join(
+    steamSdkDir(),
+    "redistributable_bin",
+    ...(process.platform === "win32" ? ["win64", "steam_api64.dll"] : ["linux64", "libsteam_api.so"]),
+  );
+  const logFile = path.join(app.getPath("userData"), "rp-probe.log");
+  mkdirSync(path.dirname(logFile), { recursive: true });
+  rpLog = (text) => {
+    const line = `${new Date().toISOString().slice(11, 23)} ${text}`;
+    rpLines.push(line);
+    if (rpLines.length > 8) rpLines.shift();
+    appendFileSync(logFile, `${line}\n`);
+    console.error(`rp-probe: ${line}`);
+  };
+  console.error(`rp-probe: log ${logFile}`);
+  if (!steam) return rpLog("no Steam: nothing to probe");
+  try {
+    const koffi = (await import("koffi")).default;
+    const lib = koffi.load(file);
+    let self = null;
+    let version = 0;
+    for (let n = 6; n >= 3 && !self; n--) {
+      try {
+        self = lib.func(`void *SteamAPI_SteamRemotePlay_v00${n}()`)();
+        version = n;
+      } catch {}
+    }
+    if (!self) throw new Error("no SteamAPI_SteamRemotePlay_v00N accessor");
+    const P = "SteamAPI_ISteamRemotePlay_";
+    const fn = (sig) => lib.func(sig.replace(/(\w+)\(/, `${P}$1(`));
+    const f = {
+      count: fn("uint32 GetSessionCount(void *s)"),
+      id: fn("uint32 GetSessionID(void *s, int i)"),
+      steamId: fn("uint64 GetSessionSteamID(void *s, uint32 id)"),
+      name: fn("const char *GetSessionClientName(void *s, uint32 id)"),
+      form: fn("int GetSessionClientFormFactor(void *s, uint32 id)"),
+      enable: fn("bool BEnableRemotePlayTogetherDirectInput(void *s)"),
+      disable: fn("void DisableRemotePlayTogetherDirectInput(void *s)"),
+      input: fn("uint32 GetInput(void *s, void *buf, uint32 max)"),
+      visible: fn("void SetMouseVisibility(void *s, uint32 id, bool v)"),
+      cursor: fn("uint32 CreateMouseCursor(void *s, int w, int h, int hx, int hy, const void *bgra, int pitch)"),
+      setCursor: fn("void SetMouseCursor(void *s, uint32 id, uint32 cursor)"),
+    };
+    rpApi = { f, self, host: String(steam.getStatus().steamId) };
+    rpLog(`start: remote play v00${version}, host ${rpApi.host}, direct input off`);
+    const sessions = new Map();
+    const buf = Buffer.alloc(64 * 32);
+    const FORM = ["unknown", "phone", "tablet", "computer", "tv", "vr"];
+    rpTick = () => {
+      const now = new Set();
+      for (let i = 0, n = f.count(self); i < n; i++) now.add(f.id(self, i));
+      for (const id of now)
+        if (!sessions.has(id)) {
+          const sid = String(f.steamId(self, id));
+          const info = { sid, name: f.name(self, id), form: FORM[f.form(self, id)] ?? f.form(self, id) };
+          sessions.set(id, info);
+          rpLog(`session + id ${id} steam ${sid} ${sid === rpApi.host ? "HOST'S OWN" : "GUEST"} name "${info.name}" form ${info.form}`);
+        }
+      for (const [id, info] of sessions)
+        if (!now.has(id)) {
+          sessions.delete(id);
+          rpLog(`session - id ${id} steam ${info.sid} name "${info.name}"`);
+        }
+      for (let n = f.input(self, buf, 32); n > 0; n = n === 32 ? f.input(self, buf, 32) : 0)
+        for (let i = 0; i < n; i++) rpEvent(buf.subarray(i * 64, i * 64 + 64));
+      rpPads(true);
+    };
+    rpSecond = setInterval(() => rpSecondly(sessions), 1000);
+  } catch (err) {
+    rpLog(`koffi/Steam: ${err.message}`);
+  }
+}
+
+function rpEvent(b) {
+  const sid = b.readUInt32LE(0);
+  const type = b.readInt32LE(4);
+  const head = `session ${sid}`;
+  if (type === 1)
+    rpLog(`rp mouse ${head} motion ${b[8] ? `abs ${b.readFloatLE(12).toFixed(3)},${b.readFloatLE(16).toFixed(3)}` : `delta ${b.readInt32LE(20)},${b.readInt32LE(24)}`}`);
+  else if (type === 2 || type === 3) rpLog(`rp mouse ${head} button ${type === 2 ? "down" : "up"} 0x${b.readInt32LE(8).toString(16)}`);
+  else if (type === 4) rpLog(`rp mouse ${head} wheel dir ${b.readInt32LE(8)} amount ${b.readFloatLE(12)}`);
+  else if (type === 5 || type === 6) {
+    const ch = b.readUInt32LE(16);
+    rpLog(`rp key ${head} ${type === 5 ? "down" : "up"} scancode ${b.readInt32LE(8)} mods 0x${b.readUInt32LE(12).toString(16)} char ${ch ? JSON.stringify(String.fromCodePoint(ch)) : "-"}`);
+  } else rpLog(`rp unknown ${head} type ${type}`);
+}
+
+let rpSecond = null;
+let rpBusy = false;
+
+/** Every second: Steam Input handles and the page's pads. */
+function rpSecondly(sessions) {
+  try {
+    const hs = steam.input.getConnectedControllers();
+    rpLog(
+      `steam-input ${hs.length} handles${hs
+        .map((h) => ` [${h} type ${steam.input.getInputTypeForHandle(h)} session ${steam.input.getRemotePlaySessionID(h)} pad ${steam.input.getGamepadIndexForController(h)}]`)
+        .join("")} sessions ${sessions.size}`,
+    );
+  } catch (err) {
+    rpLog(`steam-input: ${err.message}`);
+  }
+  rpPads(false);
+}
+
+const RP_PADS = `JSON.stringify([...navigator.getGamepads()].filter(Boolean).map((g) => ({ i: g.index, id: g.id, p: g.buttons.flatMap((b, n) => (b.pressed ? [n] : [])) })))`;
+
+/** `pads` line (log) or, when armed by F11, the first press afterwards (quiet = from the 100 ms tick). */
+function rpPads(quiet) {
+  if (!win || win.isDestroyed() || (quiet && !rpFlashAt) || rpBusy) return;
+  rpBusy = true;
+  win.webContents
+    .executeJavaScript(RP_PADS)
+    .then((json) => {
+      const pads = JSON.parse(json);
+      const down = JSON.stringify(pads.map((p) => [p.i, p.p]).filter(([, p]) => p.length));
+      if (!quiet) rpLog(`pads ${pads.length}${pads.map((p) => ` [${p.i} "${p.id}" pressed ${p.p.join(",") || "-"}]`).join("")}`);
+      if (rpFlashAt && down !== "[]" && down !== rpPadsDown) {
+        rpLog(`flash → pad press after ${Date.now() - rpFlashAt} ms: ${down}`);
+        rpFlashAt = 0;
+      }
+      rpPadsDown = down;
+    })
+    .catch(() => {})
+    .finally(() => (rpBusy = false));
+}
+
+const RP_PAGE = `(() => {
+  const box = document.createElement("pre");
+  box.id = "rp-probe-box";
+  box.style.cssText = "position:fixed;right:0;bottom:0;z-index:2147483647;margin:0;padding:6px;max-width:60vw;background:#000c;color:#0f0;font:12px monospace;white-space:pre-wrap;pointer-events:none";
+  document.body.append(box);
+  let last = 0;
+  const say = (kind, e) => {
+    const now = performance.now();
+    if (kind === "dom mouse move" && now - last < 100) return;
+    last = now;
+    console.log("rp-probe " + kind + " " + Math.round(e.clientX) + "," + Math.round(e.clientY) + " trusted " + e.isTrusted + " pointer " + e.pointerType + " button " + e.button);
+  };
+  addEventListener("pointermove", (e) => say("dom mouse move", e), true);
+  addEventListener("pointerdown", (e) => say("dom mouse down", e), true);
+})()`;
+
+function rpProbeWindow(wc) {
+  wc.on("did-finish-load", () => {
+    wc.executeJavaScript(RP_PAGE).catch(() => {});
+    rpLog("window loaded");
+  });
+  wc.on("console-message", (event) => {
+    if (event.message.startsWith("rp-probe ")) rpLog(event.message.slice(9));
+  });
+  setInterval(() => {
+    if (!win || win.isDestroyed()) return;
+    const text = `${path.join(app.getPath("userData"), "rp-probe.log")}\n${rpLines.join("\n")}\nF9 direct input · F10 cursor · F11 flash`;
+    wc.executeJavaScript(`{ const b = ${RP_BOX}; if (b) b.textContent = ${JSON.stringify(text)}; }`).catch(() => {});
+  }, 500);
+  wc.on("before-input-event", (event, input) => {
+    if (input.type !== "keyDown" || input.isAutoRepeat) return;
+    rpLog(`dom key ${input.key} code ${input.code}`);
+    if (!["F9", "F10", "F11"].includes(input.key)) return;
+    event.preventDefault();
+    if (!rpApi) return rpLog(`${input.key}: no Remote Play API`);
+    const { f, self } = rpApi;
+    if (input.key === "F9") {
+      rpDirect = !rpDirect;
+      if (rpDirect) rpLog(`direct input on → ${f.enable(self)}`);
+      else {
+        f.disable(self);
+        rpLog("direct input off");
+      }
+    } else if (input.key === "F10") {
+      const px = Buffer.alloc(32 * 32 * 4);
+      for (let i = 0; i < 32 * 32; i++) {
+        const edge = i % 32 < 3 || i % 32 > 28 || i < 96 || i > 32 * 29;
+        px.set(edge ? [255, 255, 255, 255] : [0, 0, 255, 255], i * 4); // BGRA: red fill
+      }
+      const cursor = f.cursor(self, 32, 32, 0, 0, px, 128);
+      const ids = [];
+      for (let i = 0, n = f.count(self); i < n; i++) ids.push(f.id(self, i));
+      for (const id of ids) {
+        f.visible(self, id, true);
+        f.setCursor(self, id, cursor);
+      }
+      rpLog(`custom cursor ${cursor} for sessions [${ids.join(",")}]`);
+    } else {
+      rpFlashAt = Date.now();
+      wc.executeJavaScript(
+        `{ const d = document.createElement("div"); d.style.cssText = "position:fixed;inset:0;background:#fff;z-index:2147483646"; document.body.append(d); setTimeout(() => d.remove(), 300); }`,
+      ).catch(() => {});
+      rpLog("flash: press a pad on the guest");
+    }
+  });
 }
 
 // EResult codes the binding reports for createItem/submitItemUpdate.
@@ -425,6 +636,7 @@ async function importSave(file, force) {
 
 async function start() {
   await startSteam();
+  if (args.rpProbe) await rpProbeStart();
   validUser = checkUser();
   if (validUser) {
     saveFile = makeSaveFile(userSaveDir());
@@ -505,12 +717,13 @@ async function start() {
   });
   wc.setWindowOpenHandler(() => ({ action: "deny" }));
   wc.on("before-input-event", (event, input) => {
-    if (input.type === "keyDown" && input.key === "F11" && !input.isAutoRepeat) {
+    if (input.type === "keyDown" && input.key === "F11" && !input.isAutoRepeat && !args.rpProbe) {
       event.preventDefault();
       win.setFullScreen(!win.isFullScreen());
     }
   });
 
+  if (args.rpProbe) rpProbeWindow(wc);
   bridge();
   if (layers.length) await watchStart(wc, mods.map((m) => m.id));
   win.loadURL(ORIGIN);

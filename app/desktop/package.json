@@ -19,6 +19,7 @@
     "electron-builder": "^26.15.3"
   },
   "dependencies": {
+    "koffi": "3.3.3",
     "steamworks-ffi-node": "0.11.3"
   }
 }
