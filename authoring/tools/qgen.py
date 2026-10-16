@@ -3189,7 +3189,7 @@ def cmd_record(args):
             found = (media_tool.load_candidates(q["id"], slot) or {"candidates": []})["candidates"]
             n = r[key]
             picks[q["id"], slot] = media_tool.pick_fields(found[n - 1], slot) if n is not None and 1 <= n <= len(found) else None
-    check_picks(picks)
+    check_picks(picks, args.jobs)
     for q, full, r in reviewed:
         decision, problems, fields = r["decision"], [r["feedback"].strip()] if r["feedback"].strip() else [], {}
         kinds = set(r.get("problems") or [])
@@ -3235,25 +3235,29 @@ def cmd_record(args):
     return failed(f"{len(missing)} question(s) without a review: {', '.join(missing)}") if missing else []
 
 
-def check_picks(picks):
-    """Download and check record's picks in place ({(qid, slot): fields or None}), a log line per download (task 1242).
-    A failed download leaves the pick unchecked: the sync step downloads and checks it again."""
+def check_picks(picks, jobs):
+    """Download and check record's picks in place ({(qid, slot): fields or None}), `jobs` at a time, a log line
+    per download (tasks 1242, 1243). A failed download leaves the pick unchecked: the sync step checks it again."""
     todo = {k for k, f in picks.items() if f and not media.cache_path(f["file_url"]).is_file()}
     if todo:
         progress.say(f"  record: {len(todo)} pick(s) to download")
-    with progress.Bar("record", len(todo), "downloads") as bar:
-        for (qid, slot), f in picks.items():
-            if not f:
-                continue
-            try:
-                with media_tool.downloading("record", qid, slot, f["file_url"]) if (qid, slot) in todo else contextlib.nullcontext():
-                    picks[qid, slot] = media_tool.checked(f)
-                ok = True
-            except Exception as e:  # noqa: BLE001 — see the docstring
-                progress.say(f"  not checked: {qid} {slot}: {e}", err=True)
-                ok = False
-            if (qid, slot) in todo:
-                bar.finished(ok)
+
+    def check(key):
+        qid, slot = key
+        f = picks[key]
+        try:
+            with media_tool.downloading("record", qid, slot, f["file_url"]) if key in todo else contextlib.nullcontext():
+                picks[key] = media_tool.checked(f)
+            ok = True
+        except Exception as e:  # noqa: BLE001 — see the docstring
+            progress.say(f"  not checked: {qid} {slot}: {e}", err=True)
+            ok = False
+        if key in todo:
+            bar.finished(ok)
+
+    with progress.Bar("record", len(todo), "downloads") as bar, \
+            concurrent.futures.ThreadPoolExecutor(max_workers=jobs) as ex:
+        list(ex.map(check, [k for k, f in picks.items() if f]))
 
 
 def review_before(x, recorded):
@@ -5275,7 +5279,7 @@ def main():
     add("review", cmd_review, REVIEW_MODEL).add_argument("--round", type=int, choices=[1, 2], default=1)
     add("fix", cmd_fix, "opus").add_argument("--check-model", default="sonnet")
     add("research", cmd_research)
-    add("record", cmd_record)
+    add("record", cmd_record).add_argument("--jobs", type=int, default=3, help="parallel downloads")
     au = add("audit", cmd_audit, "opus", run=False)
     au.add_argument("--batch", help="default: the newest merged batch")
     au.add_argument("--backlog", action="store_true",

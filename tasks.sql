@@ -29481,7 +29481,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - A record step with uncached picks prints a start/result line per download and a summary line; `npm run check` passes.
 - Check with a throw-away script (temp `TRIVIA_WORK`/`TRIVIA_MEDIA`) and 2–3 picks; no test.', '2026-10-16T00:44:15Z', '2026-10-16T04:08:03Z', 1194, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1243, 17, 'qgen record: download picks in parallel', 'work', 'open', -80, NULL, 'Found by `task 1194: qgen: scan runs keep media unless fix changed it; review qgen for bugs, follow-up tasks`. In `task 632: run neutralize-1` (run 1159) `record` downloaded ~47 picks per 10 min, serially (294 left when stopped).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1243, 17, 'qgen record: download picks in parallel', 'work', 'done', -80, '2026-10-15, authoring/tools/qgen.py: check_picks downloads in a thread pool (--jobs, default 3; standalone qgen record gets --jobs). Throw-away run, 20 uncached Commons picks, temp TRIVIA_WORK/TRIVIA_MEDIA: serial 18.4 s, 4 jobs 4.7 s, same file_problem results; npm run check passes.', 'Found by `task 1194: qgen: scan runs keep media unless fix changed it; review qgen for bugs, follow-up tasks`. In `task 632: run neutralize-1` (run 1159) `record` downloaded ~47 picks per 10 min, serially (294 left when stopped).
 
 ## What
 - `authoring/tools/qgen.py` `cmd_record`: the loop over questions calls `media_tool.checked(fields)` (download + `file_problem`) one pick at a time.
@@ -29493,7 +29493,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Keep task 1181''s behaviour: a download failure leaves the pick unchecked (`sync` checks again), a broken file → `file_problem` → licence verdict `replace` → needs_work.
 
 ## Done when
-- Throw-away run (temp `TRIVIA_WORK`/`TRIVIA_MEDIA`, ~20 uncached picks, `claude` not needed): wall time well below the serial one, same `file_problem` results; `npm run check` passes.', '2026-10-16T00:44:15Z', NULL, 1194, 0);
+- Throw-away run (temp `TRIVIA_WORK`/`TRIVIA_MEDIA`, ~20 uncached picks, `claude` not needed): wall time well below the serial one, same `file_problem` results; `npm run check` passes.', '2026-10-16T00:44:15Z', '2026-10-16T04:09:24Z', 1194, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1244, 17, 'qgen scan runs: review shows the kept pick, not candidates', 'work', 'open', -80, NULL, 'Found by `task 1194: qgen: scan runs keep media unless fix changed it; review qgen for bugs, follow-up tasks`. Since task 1194, a scan run (`neutralize`, `tighten`; `SCANS`) keeps a slot''s pool pick (`kept_slots` in `authoring/tools/qgen.py`): no search, research, re-pick or download. The review still sees the old input.
 
 ## What
@@ -36805,6 +36805,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1263, 1256, '2026-10-16T04:01:36Z', '2026-10-16T04:02:39Z', 'done', NULL, 0, '86a6d145b2e4a2035ff1a645d6aa6b0bc46f5c1d', 'claude-opus-5-5[1m]', 'cf511cff-5501-4f08-8cb3-f12d579ec469', 11, 20, 3660, 365841, 33174, 0.41184020000000005, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1264, 1241, '2026-10-16T04:02:39Z', '2026-10-16T04:06:08Z', 'done', NULL, 0, '7cbc6957bf4002f34e280daa06072301fb80d497', 'claude-opus-5-5[1m]', '1dc7c102-102c-4e6f-978c-5ed3dfc99164', 20, 38, 9826, 898143, 48452, 0.7639166, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1265, 1242, '2026-10-16T04:06:08Z', '2026-10-16T04:08:10Z', 'done', NULL, 0, 'b25e736ebc0f5c9dcb9ba12cd2f7a3c0ea2b0a8b', 'claude-opus-5-5[1m]', '583fb9b8-5b54-4f64-9f51-a55eef3e2607', 18, 34, 9730, 814516, 52879, 0.7806712, 3857742);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1266, 1243, '2026-10-16T04:08:10Z', '2026-10-16T04:09:29Z', 'done', NULL, 0, '134b989c2485b7a94d69b06e3f63ec615766013c', 'claude-opus-5-5[1m]', 'b764ba22-9116-4561-a168-d33d9dfcbba5', 13, 26, 4323, 479320, 32969, 0.44617999999999997, 3857742);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
