@@ -25,6 +25,12 @@ def source_locale(q):
     return q.get("locale", "es")
 
 
+def draft_locale(bundle):
+    """The language `qgen batch` drafts a bundle's row (bundles.json) in (plan 148): a regional bundle its
+    region's, the first of its languages (decision 110); base and theme bundles en."""
+    return (bundle.get("languages") or ["es"])[0] if bundle["kind"] == "region" else "en"
+
+
 def path(locale):
     return layout.translations(locale)
 
