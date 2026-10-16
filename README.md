@@ -8,9 +8,10 @@ Everything runs locally and offline: the game (a Svelte client with the game eng
 
 **The family game is done** (October 2026): a full game night on the TV with sound, jokers and the final look, played by player name without touching code.
 
-- **Questions:** about 2,080 approved (base ~1,980, `colombia` ~100) on the shared difficulty scale 1–15 (D-38), with images, audio or video; more batches are being made. Players choose an age group and bundles before a game.
+- **Questions:** about 2,140 approved (base ~2,040, «Regional: Colombia» ~100) on the shared difficulty scale 1–15 (D-38), with images, audio or video; more batches are being made.
+- **Age groups and bundles:** before each game the Choice screen picks an age group (or a custom difficulty range in gamemaster mode), one base bundle and any regional bundles; the game offers only the bundles of its language (milestone 5).
 - **Engine:** the referee runs in the browser (TypeScript, `app/client/src/engine/`); the Python server only serves files and the save (D-90).
-- **UI:** every on-screen string comes from a catalog (`es`, `es-ES`, `en`, `de`); question translations aren't shipped yet.
+- **UI:** every on-screen string comes from a catalog (`es`, `es-ES`, `en`, `de`); one language setting for UI and questions, picked at first start; question translations aren't shipped yet, so every language plays the Spanish questions.
 - **Code quality:** reviewed file by file (milestone 13, [`code-review.md`](code-review.md)); `npm run check` now also runs knip and ruff.
 - **Next:** more content, screen polish, and the Steam release track (desktop build, store, release).
 
@@ -37,11 +38,11 @@ Without Nix, Python 3 and Node 22 are enough to play: run `python3 app/server/ma
 trivia                   # http://127.0.0.1:8000/   (--port, --host)
 ```
 
-Open the page on the TV's browser and go fullscreen. Pick or type a player name and play.
+Open the page on the TV's browser and go fullscreen. Pick or type a player name, then on the Choice screen the mode, age group and bundles, and play.
 
-- `Esc` (or the menu button) opens the admin menu: skip, undo, restart, fullscreen, volume, joker budget. It links to the review tool and stats while the authoring server runs.
+- `Esc` (or the menu button) opens the admin menu: skip, undo, restart, fullscreen, volume, joker budget, «Ajustes de la partida» (difficulty, bundles). It links to the review tool and stats while the authoring server runs.
 - `M` (or the faint flag next to the menu button) flags the question for review: a dialog with an optional note, `Enter` flags, `Esc` cancels; on a flagged question it edits the note or unflags. The next start of `trivia-authoring` marks it «needs work» with the note; the menu's «Preguntas marcadas» lists the flags with «Copiar» for players without authoring tools.
-- Game saves, burned questions (questions a player has already seen) and flags live in `state/game.json`. Delete it to reset everything. An old `state/game.sqlite` + `flags.json` is migrated into it once at start; both stay as backups. A broken or newer `game.json` moves to `state/backup/` and the game starts fresh with a notice naming the backup.
+- Game saves, seen counters (which questions a player has already seen) and flags live in `state/game.json`. Delete it to reset everything. An old `state/game.sqlite` + `flags.json` is migrated into it once at start; both stay as backups. A broken or newer `game.json` moves to `state/backup/` and the game starts fresh with a notice naming the backup.
 - The game loads the pool once per page: reload the page (F5) after `qgen export` or a review session.
 - Desktop shell (`trivia-desktop`, packaged builds): the save is `save/<steamid64>/game.json` per Steam user in `%APPDATA%\trivia` (Windows) or `~/.config/trivia` (Linux, Steam Deck); in this checkout `state/desktop/<steamid64>/game.json`, `state/desktop/dev/game.json` under `TRIVIA_DEV_STEAM_USER=1` without Steam; `TRIVIA_SAVE_DIR` overrides (the save is then `$TRIVIA_SAVE_DIR/game.json`). Without a Steam user nothing is saved (a notice says so) and flags are off. A broken or newer save moves to `backup/` beside it and the game starts fresh.
 - Bring the browser game's save over: `trivia-desktop --import-save state/game.json` with the family's Steam account logged in (prints source, target and backup; refuses an existing save, `--force` replaces it and keeps the old one in `backup/game-import-<stamp>.json`; not a save: error, exit 1, nothing written), or copy `state/game.json` into the save folder. Unknown `--import*`/`--save*`/`--export*`/`--trivia*` flags or a missing file: error naming the flag, exit 2, no window (dialog when packaged).

@@ -1,6 +1,6 @@
 # Code review (milestone 13)
 
-This report collects the findings of the milestone 13 code review: every tracked code and build file in scope is read once, cheap fixes are made on the spot, and everything else becomes a follow-up task or a decision. Parts 1–11 follow `plan 72: masterplan`; each part appends its rows to its own section, and the inventory at the end maps every file to the part that reviews it.
+This report collects the findings of the milestone 13 code review: every tracked code and build file in scope is read once, cheap fixes are made on the spot, and everything else becomes a follow-up task or a decision. Parts 1–11 follow `plan 72: masterplan`; each part appends its rows to its own section, and the inventory at the end maps every file to the part that reviews it. Since decision 201, each milestone's post-milestone cleanup appends its own section, before the inventory.
 
 ## Executive summary
 
@@ -2093,6 +2093,26 @@ Task 591, 2026-10-14: final checks and milestone 13's "Done when", item by item.
 - Linter evaluated: yes (`### Linter evaluation`); five `tsconfig` flags inside `npm run check`, already a pre-commit check (AGENTS.md, D-73); no baseline file, no fix task
 - `code-review.md` in `directory.md`: yes
 - Not met: nothing; open follow-ups and decisions 196–201 stay listed under `### Pending` and `### Process decisions`
+
+## Milestone 5 review (task 1253)
+
+Post-milestone cleanup of milestone 5 (age groups and bundles), per `decision 201: Recurring code review: who reviews new code after milestone 13? (code review part 11)`: the code files its 27 commits added or changed (`task 123` … `task 1064`), read in their current state against milestone 13's "What to look for". Files that parts 2–11 already reviewed got only the milestone's later changes (plans 125, 126, 127, 133); their earlier rows stand.
+
+| file | finding | category | severity | status |
+|---|---|---|---|---|
+| `app/client/src/game/Overlay.svelte` | choice line `$effect`: a slower `fetchGameChoice` for older settings could overwrite the lines of newer ones (no cancel) | bug | low | fixed (task 1253): `live` flag, cleared on rerun |
+| `app/client/src/lib/api.ts` | bundle name in the UI language, else `bundles.json`'s, written out 3× (`fetchChoiceOptions`, `fetchModCredits`, `fetchGameChoice`) | complexity | low | fixed (task 1253): `bundleName` |
+| `app/client/src/game/BundleSelector.svelte` | header: "Configure screen; the gamemaster menu reuses it": the Choice screen shows it in every mode since plan 125 (task 1017) | inconsistency | low | fixed (task 1253) |
+| `app/client/src/locales/es.ts` | `language` block: "Language rows of the Esc menu (plan 68)": gone since plan 126 (task 1020); first-start picker and Start's button now | inconsistency | low | fixed (task 1253) |
+| `authoring/tools/supply.ts` | default group `"young_teens"` literal beside `DEFAULT_AGE_GROUP` (decision 199) | inconsistency | low | fixed (task 1253): imported |
+| `app/client/src/lib/engine.ts` | `localeOf` runs a whole-pool `supply` for a non-`es` language with its own pool on every `next`-scope call; the Choice screen's `check()` makes 5 per change | performance | low | won't fix: no non-`es` pool ships yet; ms per call over ~2000 questions |
+| `app/client/src/engine/choice.ts` | no findings: `defaultChoice` = first base bundle + the other offered ones; `resolveBundles` refuses unknown, not offered, zero/two base bundles (decision 38); `gameChoice` falls back to defaults on a bundle no longer offered | — | — | — |
+| `app/client/src/engine/pool.ts`, `app/client/src/engine/api.ts` | no findings: `bundlesFor` per locale (plan 71); `choice` route's preset from `playerChoice`, Choice screen's `check()` sends no player, so its supply uses the defaults a solo game gets | — | — | — |
+| `app/client/src/game/screens/Choice.svelte` | no findings in the plan 125/133 changes: bundles in both modes, `seq` guards `check()`, refused `new` shown until the choice changes (`stale`), «¡A jugar!» disabled while short | — | — | — |
+| `app/client/src/game/screens/Start.svelte`, `app/client/src/game/Game.svelte` | no findings: no `supply` prop or state left (plan 133); `fetchGame` returns the game only | — | — | — |
+| `app/client/src/game/screens/Language.svelte`, `app/client/src/game/screens/Player.svelte` | no findings: one language (plan 126), reload only on a UI change; Player's `free` recomputes on focus (`scopes.version` bumps on `focusin`/`focusout`) | — | — | — |
+| `app/client/src/game/GameSettings.svelte` | no findings beyond part 5's rows (stepper copy, task 584) | — | — | — |
+| `authoring/tools/qgen.py` (`bundle_problems`), `authoring/tools/age_groups.py` | no findings: kinds, `languages`, a base bundle per language with a pool or bundle, leftover `always_on`; `level_problems` mirrors `parseAgeGroups` (key order too) | — | — | — |
 
 ## Inventory
 

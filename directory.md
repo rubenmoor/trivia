@@ -5,7 +5,7 @@ What the top-level `.md` files and directories are for (decision 196). It names 
 ## Files
 - `README.md`: human how-tos (setup, commands, environment variables)
 - `AGENTS.md`: guide for AI coding assistants; `CLAUDE.md` imports it
-- `code-review.md`: milestone 13's code review report
+- `code-review.md`: code review report: milestone 13's file-by-file review, then each milestone's cleanup review (decision 201)
 - `LICENSE-content.md`: questions' licence (all rights reserved, personal play allowed); code: `LICENSE` (MIT)
 - `PRIVACY.md`: public privacy policy (reports, telemetry)
 - `directory.md`: this file

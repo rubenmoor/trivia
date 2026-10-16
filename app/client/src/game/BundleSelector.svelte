@@ -12,7 +12,7 @@
 
 <script lang="ts">
   // Shared bundle selector (D-88): the base bundles as a radio group, apart from the others (toggles);
-  // exactly one base bundle (D-85). Configure screen; the gamemaster menu reuses it (MD-12).
+  // exactly one base bundle (D-85). Choice screen in every mode (plan 125); «Ajustes de la partida» reuses it (MD-12).
   import { t } from "../lib/i18n.ts";
   import Icon from "./Icon.svelte";
   import Prompt from "./Prompt.svelte";

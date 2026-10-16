@@ -211,12 +211,15 @@
   $effect(() => {
     const s = running ? game?.settings : null;
     if (!s) return void (choiceLines = []);
+    let live = true;
     fetchGameChoice(s)
       .then(({ group, difficulty, bundles }) => {
+        if (!live) return;
         const head = difficulty ? t("choice.difficulty", { start: difficulty.start, end: difficulty.end }) : (group ?? "");
         choiceLines = [t("choice.lineGroup", { group: head }), t("choice.lineBundles", { bundles: bundles.join(", ") })];
       })
       .catch(() => {});
+    return () => (live = false);
   });
 
   /** Pending saves first (plan 55). */

@@ -4,6 +4,7 @@
 import { readFileSync } from "node:fs";
 import ageGroups from "../../app/data/age-groups.json" with { type: "json" };
 import bundlesJson from "../../app/data/bundles.json" with { type: "json" };
+import { DEFAULT_AGE_GROUP } from "../../app/client/src/engine/choice.ts";
 import { bundlesFor, parseAgeGroups, parseBundles, type PoolQuestion } from "../../app/client/src/engine/pool.ts";
 import { PER_LEVEL, available, supply } from "../../app/client/src/engine/selection.ts";
 
@@ -17,7 +18,7 @@ interface Input {
 const groups = parseAgeGroups(ageGroups);
 const base = bundlesFor({ bundles: parseBundles(bundlesJson), locale: "es" }).find((b) => b.kind === "base")!.id;
 
-function run({ questions, burned, age_group = "young_teens", bundles = [base] }: Input) {
+function run({ questions, burned, age_group = DEFAULT_AGE_GROUP, bundles = [base] }: Input) {
   const group = groups.find((g) => g.id === age_group);
   if (!group) throw new Error(`unknown age group ${age_group}`);
   return {

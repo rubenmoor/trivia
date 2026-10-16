@@ -3,7 +3,7 @@ import { gameChoice, jokersUsed, playerMode, view } from "../engine/game.ts";
 import { seededRng } from "../engine/rng.ts";
 import type { Outlook } from "../engine/outlook.ts";
 export type { Outlook };
-import { bundlesFor } from "../engine/pool.ts";
+import { bundlesFor, type Bundle } from "../engine/pool.ts";
 import { setFlag as saveFlag, setReported, type FlagInput } from "../engine/save.ts";
 import { newest, withDefaults, type EngineData, type SaveData } from "../engine/state.ts";
 import { messageOf } from "./http.ts";
@@ -104,6 +104,9 @@ export interface ChoiceOptions {
   bundles: { id: string; base: boolean; name: string; description: string; source?: "mod"; modName?: string }[];
 }
 
+/** A bundle's name in the UI language (plan 127), else bundles.json's. */
+const bundleName = (data: EngineData, b: Bundle): string => data.uiNames.bundles[b.id]?.name ?? b.name;
+
 export async function fetchChoiceOptions(scope: DataScope = "next"): Promise<ChoiceOptions> {
   return read((save, data) => {
     const groups = data.ageGroups.map(({ id, name, ages, levels }) => ({
@@ -112,7 +115,7 @@ export async function fetchChoiceOptions(scope: DataScope = "next"): Promise<Cho
     const bundles = bundlesFor(data).map((b) => {
       const n = data.uiNames.bundles[b.id];
       return {
-        id: b.id, base: b.kind === "base", name: n?.name ?? b.name, description: n?.description ?? b.description,
+        id: b.id, base: b.kind === "base", name: bundleName(data, b), description: n?.description ?? b.description,
         ...(b.source === "mod" && { source: b.source, modName: b.modName ?? b.mod ?? b.id }),
       };
     });
@@ -132,7 +135,7 @@ export async function fetchModCredits(): Promise<{ bundle: string; name: string;
           seen.set(`${m.credit}\n${m.source_url}`, { credit: m.credit, url: m.source_url });
         }
       }
-      return seen.size ? [{ bundle: b.id, name: data.uiNames.bundles[b.id]?.name ?? b.name, mod: b.modName ?? b.mod ?? b.id, items: [...seen.values()] }] : [];
+      return seen.size ? [{ bundle: b.id, name: bundleName(data, b), mod: b.modName ?? b.mod ?? b.id, items: [...seen.values()] }] : [];
     });
     return { save, status: 200, body };
   });
@@ -146,7 +149,7 @@ export async function fetchGameChoice(settings: Game["settings"]): Promise<{ gro
     const group = c.age_group === null ? null : (data.uiNames.age_groups[c.age_group] ?? data.groupById.get(c.age_group)?.name ?? c.age_group);
     const on = data.bundles.filter((b) => c.bundles.includes(b.id));
     const bundles = [...on.filter((b) => b.kind === "base"), ...on.filter((b) => b.kind !== "base")]
-      .map((b) => data.uiNames.bundles[b.id]?.name ?? b.name);
+      .map((b) => bundleName(data, b));
     return { save, status: 200, body: { group, difficulty: c.difficulty, bundles } };
   });
 }

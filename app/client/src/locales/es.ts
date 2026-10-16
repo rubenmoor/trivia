@@ -115,7 +115,7 @@ const es = {
     /** Joker uses so far; the row's number is the uses left. */
     used: "{n} usados",
   },
-  /** Language rows of the Esc menu (plan 68); language names are endonyms in lib/i18n.ts. */
+  /** First-start language picker and the Start screen's language button (plan 126); language names are endonyms in lib/i18n.ts. */
   language: {
     /** First-start screen (fresh save): heading and confirm prompt. */
     choose: "Elige el idioma",
