@@ -28,12 +28,12 @@ Steps, each ✓/✗ with its time; all automated steps run, exit 1 on any ✗:
             SAVE_VERSION changed (plans/11-steam.md "Release checklist (ST-4)")
 
 Report header: version, every shipped pool's hash (app/data/pool.json = es, pool.<locale>.json, a pack's as <locale>/<bundle>), previous tag (newest v* reachable from HEAD, not HEAD's own), kind
-(`full`, or `content-only` when nothing shipped but app/data/ changed since it) and SAVE_VERSION change.
+(`full`, or `content-only` when nothing shipped but app/data/ changed since it) SAVE_VERSION change and the shipped Steamworks SDK libs' version (information only).
 `--skip STEP` (repeatable): a known-broken step, ✗ → "skipped" in the report (and the build Desc).
 Run from the dev shell (nix, steam-run, Xvfb). Report: work/steam/<tag-or-sha>/release-check.md,
 release-check.json for `trivia-steam upload --checked` (commit, clean, ok, skipped), logs/<step>.log.
 """
-import argparse, json, re, struct, subprocess, sys, time, urllib.request
+import argparse, hashlib, json, re, struct, subprocess, sys, time, urllib.request
 from datetime import datetime
 from pathlib import Path
 
@@ -232,6 +232,16 @@ def pools() -> dict[str, str | None]:
     return out
 
 
+def sdk_libs() -> str:
+    """Version of the shipped Steamworks libs by the Linux lib's sha256 (app/desktop/steam-sdk-versions.json)."""
+    lib = REPO / "app" / "desktop" / "steamworks_sdk" / "redistributable_bin" / "linux64" / "libsteam_api.so"
+    if not lib.exists():
+        return "missing"
+    sha = hashlib.sha256(lib.read_bytes()).hexdigest()
+    known = json.loads((REPO / "app" / "desktop" / "steam-sdk-versions.json").read_text())
+    return f"{known.get(sha, 'unknown')} ({sha[:12]})"
+
+
 def main() -> None:
     p = argparse.ArgumentParser(prog="trivia-release-check", description=__doc__.split("\n")[0])
     p.add_argument("--skip", action="append", default=[], choices=["tag", *STEPS, "manual"], help="known-broken step")
@@ -254,7 +264,7 @@ def main() -> None:
     logs.mkdir(parents=True, exist_ok=True)
     started = datetime.now().astimezone()
     print(f"release check {tag} ({commit[:7]}{'' if clean else ', uncommitted changes'})")
-    print(f"  version {version()}, pools {pools_text}, previous tag {prev or 'none'}, {kind_text}, save version {save_text}")
+    print(f"  version {version()}, pools {pools_text}, previous tag {prev or 'none'}, {kind_text}, save version {save_text}, Steamworks SDK libs {sdk_libs()}")
 
     steps = []  # (name, status ✓/✗/skipped, seconds, note)
     if "tag" in args.skip:
@@ -306,6 +316,7 @@ def main() -> None:
           f"- Previous tag: {prev or 'none'}",
           f"- Kind: {kind_text}",
           f"- Save version: {save_text}",
+          f"- Steamworks SDK libs: {sdk_libs()}",
           f"- Skipped: {', '.join(skipped) or 'none'}", "",
           "| step | | time | note |", "|---|---|---:|---|",
           *[f"| {n} | {s} | {dt:.0f} s | {note} |" for n, s, dt, note in steps], "",
