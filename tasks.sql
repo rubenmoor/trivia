@@ -288,7 +288,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 - Every button before a game session has its icon; every language shows its flags; the developer approves them in the screen gallery.
 
 Plan files: `plans/04-ui-tv-display.md`.', '2026-10-11T21:54:56Z', NULL, 0);
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (7, 'Steam S2: product definition', 'open', 'The first phase of the Steam track (D-34) is decisions, not code: what the product is before anything Steam-specific gets built. It can run alongside the other milestones.
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (7, 'Steam S2: product definition', 'implemented', 'The first phase of the Steam track (D-34) is decisions, not code: what the product is before anything Steam-specific gets built. It can run alongside the other milestones.
 
 ## Outcome
 Answers, each recorded in `plans/decisions.md`, to:
@@ -355,7 +355,7 @@ Five modes; there is no "default mode". Mode names are written in English first;
 ## Done when
 - OQ-29..OQ-37 (and OQ-45) are resolved in `decisions.md`, and the later phases in `plans/11-steam.md` are updated to match.
 
-Plan files: `plans/11-steam.md`, `plans/13-game-modes.md`, `plans/15-i18n.md`, `plans/16-content-target.md`, `plans/17-publishing.md`, `plans/18-steam-integration.md`.', '2026-10-11T21:54:56Z', NULL, 0);
+Plan files: `plans/11-steam.md`, `plans/13-game-modes.md`, `plans/15-i18n.md`, `plans/16-content-target.md`, `plans/17-publishing.md`, `plans/18-steam-integration.md`.', '2026-10-11T21:54:56Z', '2026-10-16T03:29:28Z', 0);
 INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (8, 'Steam S3: playable desktop build', 'open', 'A local desktop build of the game that a family can play without the gamemaster''s dev setup: desktop shell, file saves, controller, Steam Deck layout, credits. Needs the TypeScript engine (the shell loads the client without Python) and the shell decision (OQ-29). The desktop build replaces the browser game now: the Python game server goes, and the game is Node/TS only (decision 111: Steam only).
 
 ## Outcome
