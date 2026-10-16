@@ -9484,6 +9484,62 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 
 ## Done when
 - Every multiplayer string in es, es-ES, en, de passes `npm run check` with the new key scopes; every new screen and state has a gallery shot in all four locales at both sizes; the developer''s review decision is answered and its flags fixed', 'When several players share the TV, the new screens (joining, whose turn it is, the timed race with its hearts and countdowns, the winner) must read right in all four launch languages: Latin American Spanish, Spanish from Spain, English and German. This part checks every new text against each language''s style guide, makes sure no shortcut key on those screens clashes with another, and renders a picture of every new screen and moment in every language, so the developer can review the wording and layout without playing a full game night.', '2026-10-16T21:16:42Z', 1400);
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (166, 16, 'Shipping the multiplayer modes and docs', 340, 'Part 10 of `plan 152: masterplan`. Turning each finished multiplayer mode on for players: its win achievement in Steamworks, `BUILT_MODES`, the store texts, and the docs pointing to `milestone 16: Local multiplayer: game modes and controls` instead of "Later". Builds on `plan 86: Achievements (SW-11)` (achievement list, icons, VDF, `inSteamworks`) and `plan 88: Store page and AI disclosure (PUB-8, LUI-6)` (store texts in `plans/17a-store-page.md`, approval by decision).
+
+## Binding
+- `decision 73: Achievement list (SW-11)?`: `WIN_RR_COOP`, `WIN_RR_COMPETITIVE`, `WIN_TIMED` entered "with MD-8"; plan 86: Steam shows every defined achievement, so one is entered only when its mode is reachable
+- `decision 285: Achievements from multiplayer sessions: every seat earns for the save; tower achievements need a win at the top level` (built by `plan 160: Engine consumers of multiplayer sessions`); nothing here changes the triggers
+- `decision 168: Store texts name only the built game modes`: a mode joins `plans/17a-store-page.md` when it ships, not before
+- `decision 90: Store requirements, languages and controller flags?`: controller "Partial" until the real-pad run passes; multiplayer doesn''t change it unless a mode needs a keyboard with pads only
+- `decision 293: Unbuilt multiplayer modes: on the mode row in dev mode only`: until shipped, a mode shows only in `devMode` with `PLACEHOLDER(<ship task id>)`; the ship task removes it
+- `decision 200: AGENTS.md rule: after a move, rename or delete, fix every comment and doc naming the old? (code review part 11)`; `decision 111: Steam only: no effort outside Steam; Steam features are the reason to buy`
+
+## What exists (2026-10-16)
+- `engine/game.ts`: `BUILT_MODES = ["gamemaster", "solo"]`; `new` refuses others with `mode_not_built`; `Choice.svelte` filters `MODE_ROW` and the launch mode by it
+- `engine/achievements.ts`: `ACHIEVEMENTS` carries the three mode wins with `mode:`; `inSteamworks(id)` = `BUILT_MODES.includes(mode)`, so a mode''s win unlocks from the commit that builds the mode; `achievements.test.ts` asserts `!inSteamworks("WIN_TIMED")`
+- Icons `app/desktop/achievements/WIN_RR_COOP.svg`, `WIN_RR_COMPETITIVE.svg`, `WIN_TIMED.svg` (`render.sh`, 256×256)
+- Texts of the three in `plans/18-steam-integration.md` "Achievements in Steamworks" (rows marked MD-8, outside the "Now (25)" table); `app/desktop/steam-achievements.vdf` has tokens `NEW_ACHIEVEMENT_1_0..24` only
+- `decision 140: Achievements entered and published in Steamworks?` pending (needs the real App ID, `plan 130: Steamworks app configuration (SW-7)`); its "Not now" line names the three mode wins
+- Stale "Later"/MD-8/MD-9/IN-6: `plans/13-game-modes.md` (status line, "Modes" input line, MD-8, MD-9), `plans/14-input.md` (section 3, IN-6; rewritten by `task 1432: Seats and the per-player input filter`), `plans/11-steam.md` (row 14, "Later" row), `plans/16-content-target.md` "Mode approximations" and `plans/backlog.md` B-15 (both `task 1429: Timed outlook and the simulation on the engine''s modes`), `plans/17a-store-page.md` "Modes" line, `plans/18-steam-integration.md` (Remote Play line "IN-6", mode rows "MD-8", SW-11 note, SW-13 "after IN-6"); `plans/decisions.md` entries are history: unchanged
+
+## Shipping a mode (one task per mode, two runs)
+- Gate: the mode''s screens'' tasks done (`rr-coop`: `task 1445: Session screens and rr-coop: routing, seat tag, turn line, team screens`; `rr-competitive`: `task 1446: rr-competitive screens: tracks, per-seat jokers, knocked out, winner`; `timed`: `task 1449` to `task 1453`), its strings in four locales (`plan 165: Multiplayer UI strings and gallery`), and per-player controls (`task 1432`, `task 1433: Timed claim inputs: claim intent, bumpers, Space, picked keys` for `timed`, `task 1434: Lost pads and the Esc menu in a session`); one not done → the task leaves `pm` as is and stops without closing (its priority keeps it after them; if one was dropped, a follow-up names what''s missing)
+- First run:
+  - Readiness check (throw-away, dev server, `devMode`): the mode start to finish once with fake pads (2 seats) and once keyboard only; a failure → follow-up task in the plan that owns it, stop
+  - Store text draft in `plans/17a-store-page.md`, per language block (en, es, es-ES where it differs, de): the mode in the modes sentence and bullets, names per `plans/15a-ui-translation.md` "Mode names" and the catalogs; marked "draft, with <mode>"; controller line unchanged unless the mode needs a keyboard with pads only (then a body line in the decision)
+  - `pm decision add --once` "Ship <mode>: <API name> in Steamworks and store texts": steps for the developer: after `decision 140` (or together with it), Steamworks → Stats & Achievements: new achievement with the API name, Hidden no, Set by Client, no stat, English name and description from plan 18''s row, per-language names and descriptions (latam, spanish, english, german) typed in or via the localization upload, icons `png/<API>_achieved.png`/`_unachieved.png`, publish; read the 17a draft (wording changes in the answer); answer with the token Steamworks gave it (`NEW_ACHIEVEMENT_1_<n>`, from its localization download); `pm task-pending-decision <own task> <decision>`, stage the 17a draft, stop
+- Second run (answer in `pm show`):
+  - `BUILT_MODES` += the mode; the mode''s `PLACEHOLDER(<this task>)` off its Choice tile (decision 293); `achievements.test.ts` assertion updated if it names the mode
+  - `steam-achievements.vdf`: the mode''s `_NAME`/`_DESC` in all four languages with the answered token; plan 18: the row moved into the "Now" table (count in the heading), its MD-8 cell and `decision 140`''s "Not now" mention dropped for it
+  - 17a: draft → approved with the answer''s wording; entry row in the store checklist (`task 672: Store page entry checklist and PUB-8 close-out` if open, else a line for the next store edit)
+  - Docs: the mode''s box in `plans/13-game-modes.md` ticked with a done note; `plans/11-steam.md` row 14/"Later" row per the docs task below
+  - `pm decision consequences <id>`; per-commit checks (AGENTS.md)
+- The mode reaches players with the next build upload (`plan 89: Builds, depots and upload (SW-10, SW-6)`, `trivia-steam upload`); nothing here uploads
+
+## Docs (one task, any time after the masterplan''s parts landed their own sections)
+- Point to milestone 16, no "Later" for MD-8, MD-9, IN-6:
+  - `plans/13-game-modes.md`: status line; MD-8 and MD-9 → one bullet per mode, "milestone 16", unticked until its ship task; "Modes" input line per milestone 16''s controls (each pad a player, keyboard and mouse one player, keyboard-only claim keys)
+  - `plans/14-input.md` section 3 and IN-6: check `task 1432`''s rewrite left no "Later"; fix leftovers
+  - `plans/11-steam.md`: row 14 (input) and the "Later" row: the three modes and MD-8/MD-9/IN-6 → milestone 16; "Later" keeps more regions and languages only
+  - `plans/16-content-target.md`, `plans/backlog.md` B-15: check `task 1429`''s change; fix leftovers
+  - `plans/17a-store-page.md` "Modes" line: "join the texts when milestone 16 ships each one" (decision 168)
+  - `plans/18-steam-integration.md`: mode rows'' MD-8 → milestone 16; Remote Play line and SW-13 "IN-6" → `milestone 17: Remote Play Together` after milestone 16''s controls; SW-11 note "with MD-8" → milestone 16
+- `rg -n "MD-8|MD-9|IN-6|Later" plans/ app/ authoring/ modding/ README.md directory.md`: no hit left for these (decisions.md history aside; code comments with MD-8 are `task 1427: Achievements from multiplayer sessions`''s; fix any it missed)
+- Priority below the three ship tasks so it runs after any of them that isn''t waiting
+
+## Tasks
+1. Ship `rr-coop` (Round-robin co-op): as above (`--model opus` not needed)
+2. Ship `rr-competitive` (Round-robin competitive): as above
+3. Ship `timed` (Competitive timed): as above; the readiness run includes a claim timeout, a lost life and sudden death
+4. Docs: milestone 16 replaces "Later" for MD-8, MD-9, IN-6 (priority 330)
+- The split: put the three ship tasks'' ids into plan 162''s `PLACEHOLDER(<shipping task>)` (`task 1437: Mode row and per-mode Choice for the multiplayer modes`, `pm task set --body` while open; else a follow-up in plan 162)
+
+## Out of scope
+- Remote Play Together (milestone 17), store screenshots and trailer with multiplayer (`decision 79: Store screenshots: which set?`, plan 88), the family playtest (part 11, `task 1402: write plan: Local multiplayer close-out and family playtest`), achievement triggers (plan 160)
+
+## Done when
+- Each mode in `BUILT_MODES` with its win achievement published in Steamworks and in `steam-achievements.vdf`, and named in the approved store texts
+- `rg "MD-8|MD-9|IN-6|Later"` finds no stale pointer for the multiplayer modes; the docs name milestone 16', 'The three new multiplayer ways to play are built behind a switch and only become visible to players once each is truly finished. This part flips that switch one game type at a time: the matching Steam trophy is set up by the developer first, the store page starts mentioning the new game type, and the project''s planning notes stop calling multiplayer a future idea. Doing it per game type means a half-finished one never shows up on a player''s screen or the store page.', '2026-10-16T21:18:44Z', 1401);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -37329,6 +37385,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm decision consequences <decision> "<date, task, what changed>"`
 
 Done when: no open multiplayer flag left without a fix or follow-up task; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-16T21:17:34Z', NULL, 1457, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1464, 166, 'create tasks for plan 166: Shipping the multiplayer modes and docs', 'split', 'open', 1000, NULL, 'Split plan 166 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T21:18:44Z', NULL, 1401, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
