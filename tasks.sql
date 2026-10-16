@@ -9676,6 +9676,88 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 
 ## Out of scope
 - The store feature line and docs beyond the two pointers (part 8), the probe and its live steps (plan 168), lag measurement (part 6), uploads (plan 89), SW-7 values (plan 130)', 'Steam can stream a game running at home to friends elsewhere, but only after the game''s owner switches the feature on in Steam''s developer settings, and testing it needs a real test version on Steam, two computers and a second Steam account. This covers that one-time setup: a checklist the developer follows and a single check-in once everything is ready. Every real test of playing together over the internet waits for it.', '2026-10-16T21:27:26Z', 1419);
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (170, 17, 'Timed mode over a Remote Play stream', 590, 'Part 6 of `plan 153: masterplan`. How much later remote guests see a `timed` question and how much later their claim reaches the host, measured on real Remote Play sessions. Then the developer decides: accept the lag, or change claiming in the engine. Measurement and decision are not gated. An engine change, if any, waits for `decision 284: Remote Play Together gate: single player, controller input and local multiplayer playtested?`.
+
+## Binding
+- Timed rules: milestone 16 and `plan 159: Competitive (timed) in the engine`
+  - 30 s per question (`QUESTION_MS`), a hint every 8 s (`HINT_MS`), 6 s after a claim (`CLAIM_MS`)
+  - the first claim to arrive wins (`claim_taken`)
+  - deadlines inclusive, no grace
+  - every time is the host''s epoch ms (`Io.ms`); the engine runs no timer of its own
+- `task 1447: Timed: the question clock starts on show, not at the previous question''s end`: `shown_at` is set by the host''s `show` action, i.e. when the host''s screen shows the question, not the guest''s
+- `decision 282: Timed mode: the Esc menu and the Steam overlay pause the clock and hide the question`, `decision 283: Remote Play Together: what happens when a remote guest leaves mid-game?`: unchanged here
+- `decision 277: Multiplayer sessions in the save: one games[] row per session, with seats`: any new seat or claim field is additive, no `SAVE_VERSION` bump
+- `decision 290: Timed mode: the claim input per kind of player`: a guest''s claim is a pad bumper (LB/RB); remote keyboard claims only if `plan 168: Investigation: Remote Play input and session API` answers «yes»
+- `decision 111: Steam only: no effort outside Steam; Steam features are the reason to buy`: Steam''s stream as it is; no netcode, no clock sync of our own with the guest''s machine
+- Live runs wait for part 2''s setup decision (`plan 169: Steamworks switch and Remote Play test setup`). Find it with `pm decision list --grep "test setup ready"`; link it with `pm task-pending-decision` once it exists
+
+## What the lag does (expected, to be measured)
+- Picture delay `V`: from the host''s screen to the guest''s screen (encode, network, decode)
+- Input delay `I`: from the guest''s press to the press reaching the host''s page
+- Claim race: compared with a host-side player, a guest is behind by `V + I`. Players in a race are often within about 100 ms of each other, so this is the part that can matter
+- Guest''s 6 s after a claim: the guest sees the claim `V` late and the answer arrives `I` late, so the guest gets `6 s − (V + I)`
+- 30 s and hints: everything reaches the guest `V` late; the guest''s 30 s window ends at the same host time as everyone else''s
+
+## Lag probe (task 1)
+- `--lag-probe` flag in `app/desktop/main.mjs` (Steam launch option, Windows and Linux): the window loads one self-contained page `app/desktop/lag-probe.html` (inline script, packaged by `electron-builder.yml`), not the game. Mark the flag branch and the page `PLACEHOLDER(<task 3''s id>)`; task 3 removes both
+- Page:
+  - a large running ms counter (host `performance.now()`), always on
+  - a full-screen white flash at random intervals of 2–5 s; its onset is the first `requestAnimationFrame` after it is painted
+  - presses: any `navigator.getGamepads()` button (polled every frame) and any key. Per press, log the device (pad index and `Gamepad.id`, or `key`), ms since the last flash onset, and the press''s `Gamepad.timestamp` or the event timestamp. A press with no flash in the last 2 s is logged as a miss
+  - the last 8 lines on screen; a running median and spread per device
+- Log to `<userData>/lag-probe.log` (renderer `console-message` → main) and stderr; the path shown on screen
+- No Steam calls of its own: guests'' pads arrive as the host OS gives them, as in the game. Steam init stays as in the normal start, so Steam Input and the stream behave as in a game
+- README row of `trivia-desktop` and `AGENTS.md` Commands: `--lag-probe` (task 3 removes both)
+
+## Measurement (task 2, the developer''s live session)
+- Method, per host and network:
+  - local reaction: 20 flashes, one person presses a pad at the host machine → median `R_local`
+  - remote reaction: 20 flashes, the same person presses a pad at the guest machine, watching the guest''s screen → median `R_remote`; `V + I ≈ R_remote − R_local`
+  - picture delay: guest machine next to the host machine; 5 photos (a phone is enough) showing both counters → `V` = host''s counter − guest''s counter; `I ≈ (V + I) − V`
+  - Steam''s streaming performance overlay on the guest, if it has latency figures: note them too (unverified that it does; recheck at the session)
+- Matrix, as available:
+  - Windows host and Linux (or Deck) host
+  - guest wired and on Wi-Fi
+  - at least one run over the internet (guest on another network, e.g. a phone hotspot), since guests normally play from elsewhere
+- Results: per row, `V`, `V + I`, spread, and anything odd (stutter, dropped presses)
+
+## The decision (task 3 raises it with the numbers)
+- Subject: «Timed mode over Remote Play: accept the lag or adjust claiming?»
+- Options, with the measured numbers in the body:
+  - accept: no engine change; guests are about `V + I` behind in claim races and get `6 s − (V + I)` to answer. Recommended if the internet-row `V + I` is under about 100 ms
+  - claim grace window: guests'' seats carry a fixed allowance `L` (from the measurement). When the first claim arrives, the engine keeps it provisional for `L` ms. A claim arriving within that window wins if its arrival minus its seat''s allowance is earlier; at a tie, the first arrival keeps it. Without remote seats `L` = 0, so nothing changes
+  - grace window plus deadlines: as above, and a remote claimer''s 6 s and the hint times stretched by `L`
+  - other (the developer''s own)
+- The «slowest guest''s view» variant from `plan 153: masterplan` (the 30 s and hints counted from when the slowest guest saw the question) is covered by stretching the deadlines; the 30 s window matters far less than the race
+
+## Engine change (task 4, only if the answer adjusts claiming)
+- In plan 159''s timestamp model:
+  - `Seat.remote?: true` (or the measured allowance) set at session start from part 4''s binding (the plan "Remote guests as players")
+  - the claim stores arrival and adjusted times; `settle` finalizes a provisional claim once `at + L` has passed
+  - `view().session.timed.claim` gets `provisional` so the Timed screen (`plan 164: Timed game screens, drama and sound`) waits before the claim banner; or it shows the banner at once and swaps it, as the answer says
+  - `expire`-style client nudge at the window''s end
+- `session.test.ts`: a remote claim overtaking a local one within the window; one arriving too late; no remote seats behaves as today
+- `plans/13-game-modes.md` "Competitive timed": the rule as built
+- Waits for `decision 284: Remote Play Together gate: single player, controller input and local multiplayer playtested?`, for the decision above, and for `task 1412: Timed core in the engine: clock, claims, rounds, lives, ends`, `task 1413: Timed pause and view in the engine` and `task 1447: Timed: the question clock starts on show, not at the previous question''s end`. If part 4''s plan doesn''t mark seats as remote: a follow-up task there, not a guess here
+
+## Tasks
+1. Lag probe switch (`--worktree app`, not gated): the probe above
+   - headless check: `trivia-desktop --lag-probe` with the dev Steam user starts, flashes, logs key presses with ms
+   - then add the developer''s decision for task 2 (`--once`), with the method and matrix above as a checklist. Options: `measured (numbers per row)` (recommended), `partly (which rows)`, `not possible (why)`
+   - make task 2''s decision pending on part 2''s setup decision if it exists (`pm decision list --grep "test setup ready"`); else note in the decision that the setup comes first
+   - the developer needs the probe in a `beta` upload (`plan 89: Builds, depots and upload (SW-10, SW-6)`); this task doesn''t upload
+2. (the developer) the measurement decision from task 1, after part 2''s setup
+3. Findings and the lag decision (`--worktree app`, not gated; pending on task 1''s decision)
+   - the numbers into this plan (`pm plan edit`, section "Findings") and one line in `plans/14-input.md` "Remote Play Together"
+   - `pm decision add` the lag decision above, with the numbers and a recommendation
+   - remove the probe: flag, page, `electron-builder.yml` entry, README and `AGENTS.md` lines (`rg lag-probe`, decision 200)
+   - make task 4 pending on the new decision and on decision 284
+4. Remote claim compensation in the engine (`--worktree app`, `--model opus`; pending on task 3''s decision and decision 284): per the answer, as in "Engine change" above. If the answer is «accept», only the `plans/13-game-modes.md` line («remote guests: no claim compensation, measured lag …»), then done
+
+## Out of scope
+- Pad ↔ guest mapping and the remote seat fact: parts 3 and 4 (the plans "Remote Play sessions in the shell bridge" and "Remote guests as players")
+- A guest leaving mid-game: decision 283, part 5
+- Live clock sync with guests'' machines, or measuring each session''s lag on the fly', 'In the fast race mode, every player sees the same question and the first to grab it gets to answer. When a friend plays from far away through Steam''s streaming, they see the question a little later than the people at the TV, and their button press arrives a little later too, so they may always lose the race. This work measures that delay on real machines and networks, then lets the developer choose: accept it, or have the game give remote players a small, fair head start when claiming.', '2026-10-16T21:29:11Z', 1420);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -37089,10 +37171,10 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - The developer''s step, checklist in `plans/18-steam-integration.md` SW-13: Remote Play Together on for the real App ID (Spacewar 480 is no test), the store feature flag, a `beta` build with this milestone''s code (`plan 89: Builds, depots and upload (SW-10, SW-6)`), a Windows host and a Linux or Deck machine, a second account (`decision 135: Steamworks: enable Workshop for ¡Trivia! and a second Steam account?`)
 - A decision (`--once`) with the checklist; the live runs of parts 1, 6 and 9 wait for it: name its subject in the plan
 - The checklist edit is docs, not implementation; link anything that needs this milestone''s code to `decision 284: Remote Play Together gate: single player, controller input and local multiplayer playtested?`', '2026-10-16T21:03:53Z', '2026-10-16T21:27:30Z', 1411, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1420, 153, 'write plan: Timed mode over a Remote Play stream', 'plan', 'open', 1000, NULL, 'Write the plan for part 6 of `plan 153: masterplan` ("Timed mode over a stream"): `pm plan list` first, then `pm plan add 17 "Timed mode over a Remote Play stream" --priority 590 --intro "…"`, after `plan 159: Competitive (timed) in the engine`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1420, 153, 'write plan: Timed mode over a Remote Play stream', 'plan', 'done', 1000, '2026-10-16, plan 170: Timed mode over a Remote Play stream (tasks.sql only)', 'Write the plan for part 6 of `plan 153: masterplan` ("Timed mode over a stream"): `pm plan list` first, then `pm plan add 17 "Timed mode over a Remote Play stream" --priority 590 --intro "…"`, after `plan 159: Competitive (timed) in the engine`.
 
 - Measurement first (investigation, not gated by `decision 284: Remote Play Together gate: single player, controller input and local multiplayer playtested?`; waits for part 2''s setup decision): host-to-guest picture delay, guest-to-host input delay; Windows and Linux hosts, wired and Wi-Fi; a throw-away dev probe (flash, guest presses, host logs arrival), numbers into the plan
-- Then a decision for the developer with the numbers: accept the lag, or adjust claiming (claim grace window; the 6 s claim and 30 s/8 s hints counted from the slowest guest''s view); the engine change, if any, in plan 159''s timestamp model, linked to decision 284', '2026-10-16T21:03:54Z', NULL, 1411, 0, NULL, 'app');
+- Then a decision for the developer with the numbers: accept the lag, or adjust claiming (claim grace window; the 6 s claim and 30 s/8 s hints counted from the slowest guest''s view); the engine change, if any, in plan 159''s timestamp model, linked to decision 284', '2026-10-16T21:03:54Z', '2026-10-16T21:29:13Z', 1411, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1421, 153, 'write plan: Remote Play sessions in the shell bridge', 'plan', 'open', 700, NULL, 'Write the plan for part 3 of `plan 153: masterplan` ("Remote Play sessions in the shell bridge"): `pm plan list` first, then `pm plan add 17 "Remote Play sessions in the shell bridge" --priority 700 --intro "…"`.
 
 - Needs part 1''s recorded answer (yes/no, `plan 153: masterplan` part 1; its plan names the decision); priority 700 puts this after part 1''s investigation tasks. Answer not recorded yet (part 1 waits for a live session): make this task pending on part 1''s checklist decision (`pm task-pending-decision`) and stop
@@ -37756,6 +37838,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - SW-13 row in "Tasks" stays `[ ]` (part 8 closes it after the close-out playtest)
 - `pm decision consequences 303 "<date>, task <id>: …"`
 - done when: the section matches what was set up', '2026-10-16T21:28:06Z', NULL, 1480, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1484, 170, 'create tasks for plan 170: Timed mode over a Remote Play stream', 'split', 'open', 1000, NULL, 'Split plan 170 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T21:29:11Z', NULL, 1420, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -43792,6 +43876,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1438, 1480, '2026-10-16T21:27:28Z', '2026-10-16T21:28:16Z', 'done', NULL, 0, '953dc9ef3500a2a8ff6ac8fa18ee40c1ba4f46a4', NULL, 'claude-opus-5-5', '7dab3c2e-ee4e-4ebd-bb70-f762e8b469ca', NULL, 7, 14, 4509, 244859, 34383, 0.4142718, 74883);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1439, 1420, '2026-10-16T21:27:38Z', NULL, 'running', NULL, NULL, '953dc9ef3500a2a8ff6ac8fa18ee40c1ba4f46a4', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 74883);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1440, 1279, '2026-10-16T21:27:45Z', '2026-10-16T21:28:44Z', 'done', NULL, 0, '1577093d01675406818b41e7bf55f05919123cd4', 'questions', 'claude-sonnet-5-5', 'dc9e610d-63a2-44c6-b4b6-8d24ce6431f9', NULL, 10, 18, 2345, 382126, 38968, 0.25578320000000004, 74883);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1441, 1280, '2026-10-16T21:28:44Z', NULL, 'running', NULL, NULL, '2d40397231010c58c3b89ec989814692a006119d', 'questions', NULL, NULL, 1440, NULL, NULL, NULL, NULL, NULL, NULL, 74883);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
