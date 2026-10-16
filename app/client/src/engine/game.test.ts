@@ -2,12 +2,11 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readdirSync } from "node:fs";
 import { join } from "node:path";
-import type { Category } from "../lib/types.ts";
 import { deletePlayer, gameAction, getGame, getPlayers } from "./api.ts";
 import { repair, supply } from "./game.ts";
-import { subKey, type PoolQuestion } from "./pool.ts";
+import { mapOldKeys } from "./save.ts";
 import { emptySave, engineData, type EngineData, type SaveData } from "./state.ts";
-import { fixture, realAgeGroups, realBundles } from "./test/fixtures.ts";
+import { fixture, realAgeGroups, realBundles, slugFixtures } from "./test/fixtures.ts";
 import { snapshot, upgradeDb, withoutOrphans } from "./test/save.ts";
 import { seededRng } from "./rng.ts";
 import { tapeRng, type TapeEntry } from "./test/tape.ts";
@@ -22,22 +21,31 @@ interface Step {
   db?: Parameters<typeof upgradeDb>[0];
 }
 
-const categories = fixture("categories.json") as Category[];
+// The engine plays on slug keys (decision 259); the recordings have bare names, no `key`s (before D-99).
+const { categories, oldKeys, back, catName, pool } = slugFixtures();
 const bundles = realBundles();
 const ageGroups = realAgeGroups();
 const data: Record<string, EngineData> = {};
-const dataFor = (pool: string): EngineData =>
-  (data[pool] ??= engineData((fixture(`pools/${pool}.json`) as { questions: PoolQuestion[] }).questions, categories, bundles, ageGroups));
+const dataFor = (name: string): EngineData => (data[name] ??= engineData(pool(name), categories, bundles, ageGroups));
 
-// Recorded before bundle-scoped keys (D-99): `subcategory` args are bare names; bodies and saves have no `key`s, bare names.
-const keyOf = new Map(categories.flatMap((c) => c.subcategories.map((s) => [s, subKey(c.bundle, s)] as const)));
 const keyed = (args: Record<string, unknown>) =>
-  (typeof args.subcategory === "string" ? { ...args, subcategory: keyOf.get(args.subcategory) ?? args.subcategory } : args);
-const recorded = (v: unknown): unknown =>
-  typeof v === "string" ? v.replace(/^colombia\//, "")
-  : Array.isArray(v) ? v.map(recorded)
-  : v && typeof v === "object" ? Object.fromEntries(Object.entries(v).filter(([k]) => k !== "key").map(([k, x]) => [k, recorded(x)]))
-  : v;
+  (typeof args.subcategory === "string" ? { ...args, subcategory: oldKeys.subcategories[args.subcategory] ?? args.subcategory } : args);
+/** An engine body or save as recorded: keys → names (a joker group's `key` → its `name`). */
+const recorded = (v: unknown): unknown => {
+  if (typeof v === "string") return back.get(v) ?? v.replace(/^colombia\//, "");
+  if (Array.isArray(v)) return v.map(recorded);
+  if (!v || typeof v !== "object") return v;
+  const { key, ...rest } = v as Record<string, unknown>;
+  const out = Object.fromEntries(Object.entries(rest).map(([k, x]) => [k, recorded(x)]));
+  if (typeof key === "string" && "available" in rest) out.name = "slug" in rest ? catName.get(rest.slug as string) : recorded(key);
+  return out;
+};
+/** A recorded `db` with its names mapped to keys, through the save loader's mapper. */
+const keyedDb = (db: Step["db"] & {}) => {
+  const tables = upgradeDb(db);
+  const { games } = mapOldKeys({ ...emptySave(), ...tables }, oldKeys);
+  return { ...tables, games };
+};
 
 const latestState = (save: SaveData) => save.games.reduce<SaveData["games"][number] | null>((m, g) => (m && m.id > g.id ? m : g), null)?.state;
 
@@ -67,7 +75,8 @@ for (const file of scenarios) {
         assert.deepEqual({ status: r.status, body: recorded(r.body) }, { status: step.response.status, body: want }, at);
       } else assert.deepEqual({ status: r.status, body: recorded(r.body) }, step.response, at);
       if (r.status !== 200) assert.deepEqual(r.save, save, `${at}: save changed on error`);
-      if (step.db) assert.deepEqual(recorded(snapshot(withoutOrphans(r.save))), upgradeDb(step.db), `${at}: db`);
+      if (step.db) assert.deepEqual(snapshot(withoutOrphans(r.save)), keyedDb(step.db), `${at}: db`);
+      assert.equal(mapOldKeys(r.save, oldKeys), r.save, `${at}: keys mapped twice`);
       rng.done();
       save = r.save;
     }

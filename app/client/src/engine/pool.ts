@@ -239,13 +239,13 @@ export function loadCategories(bundlesJson: unknown, files: Record<string, unkno
   });
 }
 
-/** Key of a bundle's subcategory or category slug (D-99: bundle + name); base's is the bare name, so saves keep theirs. */
-export const subKey = (bundle: string, name: string): string => (bundle === "base" ? name : `${bundle}/${name}`);
+/** Key of a bundle's subcategory or category (decision 259: bundle + slug); base's is the bare slug. */
+export const subKey = (bundle: string, key: string): string => (bundle === "base" ? key : `${bundle}/${key}`);
 /** A question's subcategory key, or null. */
 export const subOf = (q: { bundle?: string; subcategory?: string | null }): string | null =>
   (q.subcategory != null ? subKey(q.bundle ?? "base", q.subcategory) : null);
 export const catKey = (c: Pick<Category, "bundle" | "slug">): string => subKey(c.bundle, c.slug);
-/** The name in a subKey of `bundle` (unknown bundle: the key). */
+/** The bundle's own key in a subKey (unknown bundle: the key); a plain-string key is its name (old format, mods). */
 export const subName = (bundle: string | undefined, key: string): string =>
   (bundle && bundle !== "base" ? key.slice(bundle.length + 1) : key);
 

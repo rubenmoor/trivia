@@ -19,8 +19,8 @@ export function poolHash(): string | null {
   return data?.poolHash ?? null;
 }
 
-/** The locale's name (bundles: the UI language's); fallback the Spanish name / categories.json / bundles.json name.
- * Keys: category and subcategory keys (catKey, subKey: bundle + slug or Spanish name, D-99), bundle id. */
+/** The locale's name (bundles: the UI language's), es's for es-ES; fallback categories.json's `name` / bundles.json name
+ * / the key (a plain-string key is its name: old format, mods; decision 259). Keys: catKey, subKey, bundle id. */
 export function displayName(kind: "category" | "subcategory" | "bundle", key: string): string {
   const d = data;
   if (!d) return key;

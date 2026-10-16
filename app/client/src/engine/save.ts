@@ -1,6 +1,6 @@
 // The save document on disk (plan 49, PORT-4): parse/upgrade and flags.
 import { pyLen } from "./pycompat.ts";
-import { SAVE_VERSION, SPANISH, type FlagEntry, type FlagText, type Language, type SaveData } from "./state.ts";
+import { SAVE_VERSION, SPANISH, type FlagEntry, type FlagText, type GameState, type Language, type SaveData } from "./state.ts";
 
 const isObject = (v: unknown): v is Record<string, any> => typeof v === "object" && v !== null && !Array.isArray(v);
 
@@ -68,6 +68,35 @@ export function parseSave(json: unknown): SaveData {
   const language = isObject(stored) ? stored.ui : stored; // before plan 126: {ui, questions}
   if (typeof language !== "string" || !language) throw new Error("language must be a tag");
   return { ...doc, flags, language } as SaveData;
+}
+
+/** app/data/old-keys.json (decision 259): old catKey / subKey → its slug key. */
+export interface OldKeys {
+  categories: Record<string, string>;
+  subcategories: Record<string, string>;
+}
+
+/** The save with old subcategory keys mapped (purged, swapped_to, undo states, notified_exhausted); the same save
+ * if none. Idempotent: no new key is an old one. */
+export function mapOldKeys(save: SaveData, old: OldKeys | null): SaveData {
+  const subs = old?.subcategories ?? {};
+  const to = (k: string): string => (Object.hasOwn(subs, k) ? subs[k] : k);
+  let changed = false;
+  const list = (xs: string[]): string[] => {
+    const out = xs.map(to);
+    if (out.some((x, i) => x !== xs[i])) changed = true;
+    return out;
+  };
+  const state = (s: GameState): GameState => {
+    const purged = list(s.purged ?? []);
+    const swapped = s.swapped_to ? to(s.swapped_to) : s.swapped_to;
+    if (swapped !== s.swapped_to) changed = true;
+    return { ...s, ...(s.purged ? { purged } : {}), swapped_to: swapped, undo: s.undo && state(s.undo) };
+  };
+  const out = {
+    ...save, games: save.games.map((g) => ({ ...g, state: state(g.state) })), notified_exhausted: list(save.notified_exhausted),
+  };
+  return changed ? out : save;
 }
 
 /** A fresh save's language (plans 68, 126): of `options`, the exact tag, then its language part, else en, else es. */

@@ -577,15 +577,15 @@ function jokersView(work: SaveData, row: GameRow, state: GameState, data: Engine
   const count = countOf(work);
   const active = new Set(gameChoice(state, data).bundles);
   const groups = data.categories.filter((c) => active.has(c.bundle)).map((c) => {
-    const subs = c.subcategories.map((name) => {
-      const key = subKey(c.bundle, name);
+    const subs = c.subcategories.map((sub) => {
+      const key = subKey(c.bundle, sub);
       return {
-        name, key,
+        key,
         available: key !== subOf(cur)
           && replacement(avail, state.level, ranges, categoryCandidates(avail, state.level, ranges, key), () => 0, count, io, fill, cardsOf(state)) !== null,
       };
     });
-    return { slug: c.slug, key: catKey(c), name: c.name, available: subs.some((s) => s.available), subcategories: subs };
+    return { slug: c.slug, key: catKey(c), available: subs.some((s) => s.available), subcategories: subs };
   });
   const possible = groups.some((g) => g.available);
   const out: Jokers = {

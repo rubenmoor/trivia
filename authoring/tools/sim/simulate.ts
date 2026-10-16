@@ -201,7 +201,7 @@ function jokerArgs(name: JokerName, save: SaveData, data: EngineData, io: Io, st
   }
   if (name !== "category") return {};
   const subs = view(save, data, io)?.jokers?.category.categories
-    .flatMap((c) => c.subcategories.filter((s) => s.available).map((s) => s.name)) ?? [];
+    .flatMap((c) => c.subcategories.filter((s) => s.available).map((s) => s.key)) ?? [];
   return subs.length ? { subcategory: subs[randInt(subs.length)] } : null;
 }
 

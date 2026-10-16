@@ -33391,7 +33391,7 @@ Files: `authoring/tools/categories.py`, `qgen.py`, `paths.py`, `pool_export.py`,
 - Check: throw-away scratch copy of the repo, `qgen rekey --apply` there, `qgen validate` with the slug rule on passes, `qgen export` works; delete the copy. Nothing applied in the real tree.
 
 Done when: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass on today''s data; the scratch run is clean.', '2026-10-16T12:44:56Z', '2026-10-16T13:00:22Z', 1308, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1311, 149, 'Engine and client: slug keys, names for every locale, old saves mapped', 'work', 'open', NULL, NULL, 'Task 3 of `plan 149: Slug keys for categories` (read its Model). Client side; works with old data and with migrated data.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1311, 149, 'Engine and client: slug keys, names for every locale, old saves mapped', 'work', 'done', NULL, '2026-10-16, app/client/src/engine/{save.ts (mapOldKeys, OldKeys),state.ts (namesFiles),pool.ts,game.ts (joker view sends keys only),game.test.ts,selection.test.ts,test/fixtures.ts (slugFixtures),fixtures/README.md}, lib/{data.ts (namesOf every locale, es-ES over es; loadOldKeys),engine.ts (save load maps old keys),names.svelte.ts,types.ts}, CategoryPicker.svelte, authoring/tools/engine_data.mjs, sim/simulate.ts, ui/src/stats/breakdown.ts; checks: today''s data unchanged; scratch rekey --apply copy: es names unchanged, en/de names equal per mapped key, old save (purged, swapped_to, undo) mapped and played on', 'Task 3 of `plan 149: Slug keys for categories` (read its Model). Client side; works with old data and with migrated data.
 
 Files: `app/client/src/engine/pool.ts`, `state.ts`, `lib/data.ts` (`namesOf`), `lib/names.svelte.ts`, `game.test.ts`, `selection.test.ts`, save load code.
 
@@ -33400,7 +33400,7 @@ Files: `app/client/src/engine/pool.ts`, `state.ts`, `lib/data.ts` (`namesOf`), `
 - Frozen engine fixtures replay through the normalizer with the map (`decision 165: Subcategory keys in code: bundle + name; base keeps bare names` introduced the normalizer).
 - Check: (a) today''s data: keys shown as names = today''s Spanish, unchanged game; (b) a throw-away scratch migrated copy (`qgen rekey --apply` from this plan''s Python task if done, else a hand-made small copy of `app/data/` with slugs, `names.es.json`, `old-keys.json`): browser check on the Node dev server, `TRIVIA_MUTE=1`, es game shows today''s names, en/de unchanged, an old save with a purged sub and `swapped_to` plays on. Delete the scratch copy.
 
-Done when: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass; both checks above hold.', '2026-10-16T12:44:56Z', NULL, 1308, 0);
+Done when: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass; both checks above hold.', '2026-10-16T12:44:56Z', '2026-10-16T13:22:23Z', 1308, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1312, 149, 'Apply the slug migration to base and colombia', 'work', 'open', NULL, NULL, 'Task 4 of `plan 149: Slug keys for categories`. Needs `decision 258: Slug keys for base and colombia: the list` answered and this plan''s Python task (`qgen rekey`) and engine/client task done (`pm show p149`); if they aren''t, stop and say so.
 
 - Between batches: `pm show 1185` / `pm show 1295` (`task 1185: run batch-9`, `task 1295: run colombia batch (batch-<n>)`) and `work/<batch>/`; a mid-run batch''s work files are mapped by `qgen rekey`, never hand-edited.
@@ -33460,6 +33460,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Plan 149 "Done when": check each line and say so in the done note.
 
 Done when: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-16T12:44:57Z', NULL, 1308, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1318, NULL, '/gallery: arrow keys step through the shots', 'exec', 'open', NULL, NULL, 'The developer, 2026-10-16: on `trivia-authoring` `/gallery`, the arrow keys should go through the gallery''s images. Today nothing happens: `authoring/ui/src/gallery/Gallery.svelte` has no key handler at all.
+
+- ←/→: previous/next shot of the current locale (wrap or stop at the ends, your choice)
+- same pattern as `authoring/ui/src/review/Review.svelte` (`<svelte:window onkeydown>`, `ArrowRight`/`ArrowLeft` → `move(±1)`); import a shared helper if there is one, don''t copy
+- keys stay out of the way while typing a flag note (no stepping when focus is in an input or textarea)
+- a short hint on the page that ←/→ work
+
+Done when: on `/gallery`, ← and → step through the shots; typing a note with the arrow keys moves the caret, not the shot.', '2026-10-16T13:19:00Z', NULL, NULL, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -38532,6 +38540,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1310, 1308, '2026-10-16T12:43:44Z', '2026-10-16T12:45:15Z', 'done', NULL, 0, '54609aa0cf9d47d99725a30946513efb67631669', 'claude-opus-5-5[1m]', 'e7180221-d99a-47ac-83a1-a332bb97f613', 7, 14, 8556, 303662, 48173, 0.61729240000000007, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1311, 1309, '2026-10-16T12:45:16Z', '2026-10-16T12:45:56Z', 'done', NULL, 0, '7e2cb397935f31a4d22dbdac7162a2a5ca30b8bd', 'claude-opus-5-5[1m]', '2f5ad6d3-51b1-44ab-8636-40de820c1260', 7, 14, 4260, 265208, 37095, 0.4350576, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1312, 1310, '2026-10-16T12:45:57Z', '2026-10-16T13:00:34Z', 'done', NULL, 0, '366e2bd60a1d356343d21e0edb1ea4dc4188263a', 'claude-opus-5-5[1m]', '83d42e63-eef2-4c4c-b0ea-816479726cf4', 58, 114, 45309, 6637075, 159567, 3.5105869999999997, 3857742);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1313, 1311, '2026-10-16T13:13:18Z', '2026-10-16T13:22:37Z', 'done', NULL, 0, '1afac96b56f6ce15299fb2946399afe63ce7402f', 'claude-opus-5-5[1m]', '5a503b52-2b96-481f-9410-ed1f42ca8b80', 69, 136, 32735, 6770754, 122042, 2.9857308000000002, 4064407);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

@@ -37,7 +37,7 @@ export function breakdown(
   const known = new Set(categories.flatMap((c) => c.subcategories.map((s) => subKey(c.bundle, s))));
   const repeated = (all: string[]) => new Set(all.filter((x, i) => all.indexOf(x) !== i));
   const subNames = repeated(categories.flatMap((c) => c.subcategories));
-  const catNames = repeated(categories.map((c) => c.name));
+  const catNames = repeated(categories.map((c) => c.name ?? c.slug));
   const tag = (label: string, name: string, bundle: string, dup: Set<string>) => (dup.has(name) ? `${label} (${bundle})` : label);
   const out: CategoryRow[] = categories.flatMap((c) => {
     const all = c.subcategories.map((s) => {
@@ -46,8 +46,9 @@ export function breakdown(
     });
     const subs = !scope || scope.has(c.bundle) ? all : all.filter((s) => s.count);
     if (!subs.length) return [];
-    const label = tag(names?.categories[catKey(c)] ?? c.name, c.name, c.bundle, catNames);
-    return [{ name: c.name, label, count: subs.reduce((n, s) => n + s.count, 0), subs }];
+    const name = c.name ?? c.slug;
+    const label = tag(names?.categories[catKey(c)] ?? name, name, c.bundle, catNames);
+    return [{ name, label, count: subs.reduce((n, s) => n + s.count, 0), subs }];
   });
   const unknown = [...perSub].filter(([k]) => !known.has(k))
     .map(([, { bundle, name, count }]) => ({ name, bundle, label: bundle === "base" ? name : `${name} (${bundle})`, count }));

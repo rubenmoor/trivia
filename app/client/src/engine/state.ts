@@ -237,7 +237,7 @@ export interface Io {
 /** Display names of one locale (D-81): base's names file merged with every bundle's. */
 export interface Names {
   bundles: Record<string, { name: string; description?: string }>;
-  /** By catKey / subKey (D-99): each file keys its own bundle's slugs and Spanish names. */
+  /** By catKey / subKey (decision 259): each file keys its own bundle's keys. */
   categories: Record<string, string>;
   subcategories: Record<string, string>;
   /** Age-group id → name (decision 48). */
@@ -248,7 +248,7 @@ export interface Names {
 export interface EngineData {
   /** The question locale of `pool` (plan 68). */
   locale: string;
-  /** Empty for es: the keys are the Spanish names. */
+  /** Empty where no names files exist (old data: the keys are the Spanish names). */
   names: Names;
   /** Of the UI language (task 1024): age group and bundle names; `names` when it's the question locale. */
   uiNames: Names;
@@ -263,9 +263,13 @@ export interface EngineData {
   groupById: Map<string, AgeGroup>;
 }
 
-export const NO_NAMES: Names = { bundles: {}, categories: {}, subcategories: {}, age_groups: {} };
+const NO_NAMES: Names = { bundles: {}, categories: {}, subcategories: {}, age_groups: {} };
 
-/** Base's names file merged with every bundle's ([bundle id, file]); null files (none) are skipped. */
+/** A locale's names files, the overriding one last (decision 259): es-ES reads es's, then its own. */
+export const namesFiles = (lang: string): string[] =>
+  (lang === "es-ES" ? ["names.es.json", "names.es-ES.json"] : [`names.${lang}.json`]);
+
+/** Base's names file merged with every bundle's ([bundle id, file]), later ones winning; null files (none) are skipped. */
 export function mergeNames(files: (readonly [string, unknown])[]): Names {
   const out: Names = { bundles: {}, categories: {}, subcategories: {}, age_groups: {} };
   const keyed = (bundle: string, m: Record<string, string> | undefined) =>

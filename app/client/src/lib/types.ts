@@ -23,7 +23,8 @@ export interface Background {
 /** A broad category of one bundle's categories file (D-19, D-43). */
 export interface Category {
   slug: string;
-  name: string;
+  /** Old format and mods only; names come from names files (decision 259). */
+  name?: string;
   bundle: string;
   subcategories: string[];
 }
@@ -93,12 +94,12 @@ export interface JokerState {
 
 export interface Jokers {
   hint: JokerState;
-  /** Subcategory and category keys: bundle + name (subKey, D-99). */
+  /** Subcategory and category keys: bundle + slug (subKey, decision 259). */
   skip: JokerState & { purge: JokerState & { subcategory: string } };
   easier: JokerState;
   category: JokerState & {
     categories: {
-      slug: string; key: string; name: string; available: boolean; subcategories: { name: string; key: string; available: boolean }[];
+      slug: string; key: string; available: boolean; subcategories: { key: string; available: boolean }[];
     }[];
   };
   snipe: JokerState;
@@ -140,7 +141,7 @@ export interface Game {
   options: { description: string }[];
   history: { level: number; correct: boolean }[];
   can_undo: boolean;
-  /** Subcategories (keys, D-99) purged with «Paso» in this game. */
+  /** Subcategories (keys, decision 259) purged with «Paso» in this game. */
   purged: string[];
   /** The level repeats after a «Francotirador» hit (until a card is picked). */
   repeat: boolean;
@@ -166,7 +167,7 @@ export interface Game {
     hints: string[];
     /** Answer indexes struck out by «Francotirador» misses. */
     struck: number[];
-    /** The subcategory (key, D-99) chosen with «Cambiazo» for this question, or null. */
+    /** The subcategory (key, decision 259) chosen with «Cambiazo» for this question, or null. */
     swapped_to: string | null;
   } | null;
   /** A reveal (D-105): `chosen` null, `correct` false, `revealed`. */

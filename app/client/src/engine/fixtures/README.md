@@ -6,7 +6,7 @@ Recorded output of the Python referee (`app/server/game.py` + `selection.py`, de
 The referee and the recorder are gone; the fixtures stay as they are and `npm test` keeps replaying them.
 - Recorded from the Python referee up to commit `c3b683f16f5fb191c476aec0765fd368fe1a0fef`
 - To re-record: check out that commit, run `python3 authoring/tools/record_fixtures.py` (`--check`: diff only), copy the fixtures back
-- Bundle-scoped keys (D-100): `game.test.ts` sends recorded subcategory names as keys and compares bodies and saves without `key`s and with bare names
+- Slug keys (decision 259): `slugFixtures()` (`test/fixtures.ts`) puts categories and pools on slugs; `game.test.ts` sends recorded subcategory names as keys, maps recorded saves through `mapOldKeys` (the save loader's) and bodies back to names
 
 ## Files
 Synthetic categories and pools, never the real pool; the replays take bundles and age groups from the real `app/data/` (`young_teens` = D-22, pinned in `pool.test.ts`).

@@ -2,7 +2,8 @@
 import {
   type Bundle, bundleFile, loadCategories, modPool, modSubcategories, packsFor, parseAgeGroups, parseBundles, parsePool, poolFile, poolHash, withPacks,
 } from "../engine/pool.ts";
-import { engineData, mergeNames, NO_NAMES, type EngineData, type Names } from "../engine/state.ts";
+import type { OldKeys } from "../engine/save.ts";
+import { engineData, mergeNames, namesFiles, type EngineData, type Names } from "../engine/state.ts";
 import { call } from "./http.ts";
 import { runDataHooks } from "./mods.ts";
 
@@ -133,13 +134,16 @@ async function load(locale: string): Promise<Loaded> {
   return { data, named };
 }
 
-/** The bundles' names files of `lang` merged; es, es-ES → NO_NAMES. */
+/** The bundles' names files of `lang` merged (namesFiles: es-ES over es); missing files add nothing. */
 async function namesOf(bundles: Bundle[], lang: string): Promise<Names> {
-  if (lang.split("-")[0] === "es") return NO_NAMES;
-  return mergeNames(await Promise.all(bundles.map(async (b) => {
-    const file = bundleFile(b.id, `names.${lang}.json`);
-    return [b.id, b.source === "mod" ? modNames(await modGet(file), b.mod ?? "") : await get(file, true)] as const;
-  })));
+  const files = bundles.flatMap((b) => namesFiles(lang).map((n) => [b, bundleFile(b.id, n)] as const));
+  return mergeNames(await Promise.all(files.map(async ([b, file]) =>
+    [b.id, b.source === "mod" ? modNames(await modGet(file), b.mod ?? "") : await get(file, true)] as const)));
+}
+
+/** app/data/old-keys.json (decision 259); null before the slug migration. */
+export async function loadOldKeys(): Promise<OldKeys | null> {
+  return (await get("old-keys.json", true)) as OldKeys | null;
 }
 
 /** A mod's names file with raw `bundles` keys namespaced `<mod id>:<id>`; full ids kept. */

@@ -2,10 +2,10 @@
 import type { ErrorBody, Reply } from "../engine/api.ts";
 import { randomSeed, seededRng } from "../engine/rng.ts";
 import { repair, supply } from "../engine/game.ts";
-import { defaultLanguage } from "../engine/save.ts";
+import { defaultLanguage, mapOldKeys } from "../engine/save.ts";
 import { gameLocale, newest, type EngineData, type Io, type Language, type SaveData } from "../engine/state.ts";
 import { GameError, messageOf } from "./http.ts";
-import { availableLocales, loadEngineData } from "./data.ts";
+import { availableLocales, loadEngineData, loadOldKeys } from "./data.ts";
 import { desktop, steam, validUser } from "./desktop.ts";
 import { UI_LANGS } from "./i18n.ts";
 import { useNames } from "./names.svelte.ts";
@@ -59,7 +59,8 @@ function ready(): Promise<Loaded> {
 }
 
 async function load(): Promise<Loaded> {
-  const [save, locales] = await Promise.all([store.load(), availableLocales()]);
+  const [stored, locales, oldKeys] = await Promise.all([store.load(), availableLocales(), loadOldKeys()]);
+  const save = mapOldKeys(stored, oldKeys); // slug keys (decision 259); written with the next action
   const language = save.language ?? defaultLanguage(await guessTag(), UI_LANGS);
   const fresh = !save.language;
   const loaded = { save: { ...save, language }, locales, fresh };
