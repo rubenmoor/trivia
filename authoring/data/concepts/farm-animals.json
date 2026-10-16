@@ -1,0 +1,1012 @@
+{
+  "subcategory": "farm-animals",
+  "facets": [
+    "Animal sounds and calls",
+    "Babies and family names",
+    "Cattle and dairy cows",
+    "Pigs, sheep and goats",
+    "Chickens, ducks and poultry",
+    "Horses, donkeys and mules",
+    "Camels, llamas and yaks",
+    "Products from farm animals",
+    "Farm work and animal care",
+    "Breeds from around the world",
+    "Farm animals in stories and films",
+    "Domestication and farming history"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 4,
+      "record": 3,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 5,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 3,
+      "map_outline": 1,
+      "sound": 5,
+      "video": 3
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 2,
+      "pop_culture": 4,
+      "popular_science": 2,
+      "science_news": 2,
+      "educational_media": 3,
+      "nature": 5,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Moo",
+      "facet": "Animal sounds and calls",
+      "known_at": 1
+    },
+    {
+      "name": "Oink",
+      "facet": "Animal sounds and calls",
+      "known_at": 1
+    },
+    {
+      "name": "Baa",
+      "facet": "Animal sounds and calls",
+      "known_at": 1
+    },
+    {
+      "name": "Rooster crow",
+      "facet": "Animal sounds and calls",
+      "known_at": 1
+    },
+    {
+      "name": "Cluck",
+      "facet": "Animal sounds and calls",
+      "known_at": 2
+    },
+    {
+      "name": "Bray",
+      "facet": "Animal sounds and calls",
+      "known_at": 4
+    },
+    {
+      "name": "Gobble",
+      "facet": "Animal sounds and calls",
+      "known_at": 4
+    },
+    {
+      "name": "Bleat",
+      "facet": "Animal sounds and calls",
+      "known_at": 7
+    },
+    {
+      "name": "Honk",
+      "facet": "Animal sounds and calls",
+      "known_at": 3
+    },
+    {
+      "name": "Whinny",
+      "facet": "Animal sounds and calls",
+      "known_at": 7
+    },
+    {
+      "name": "Grunt",
+      "facet": "Animal sounds and calls",
+      "known_at": 4
+    },
+    {
+      "name": "Squeal",
+      "facet": "Animal sounds and calls",
+      "known_at": 4
+    },
+    {
+      "name": "Snort",
+      "facet": "Animal sounds and calls",
+      "known_at": 5
+    },
+    {
+      "name": "Cackle",
+      "facet": "Animal sounds and calls",
+      "known_at": 8
+    },
+    {
+      "name": "Peep",
+      "facet": "Animal sounds and calls",
+      "known_at": 3
+    },
+    {
+      "name": "Llama humming",
+      "facet": "Animal sounds and calls",
+      "known_at": 11
+    },
+    {
+      "name": "Lowing",
+      "facet": "Animal sounds and calls",
+      "known_at": 12
+    },
+    {
+      "name": "Nicker",
+      "facet": "Animal sounds and calls",
+      "known_at": 13
+    },
+    {
+      "name": "Calf",
+      "facet": "Babies and family names",
+      "known_at": 3
+    },
+    {
+      "name": "Lamb",
+      "facet": "Babies and family names",
+      "known_at": 2
+    },
+    {
+      "name": "Piglet",
+      "facet": "Babies and family names",
+      "known_at": 2
+    },
+    {
+      "name": "Kid",
+      "facet": "Babies and family names",
+      "known_at": 6
+    },
+    {
+      "name": "Foal",
+      "facet": "Babies and family names",
+      "known_at": 5
+    },
+    {
+      "name": "Duckling",
+      "facet": "Babies and family names",
+      "known_at": 2
+    },
+    {
+      "name": "Gosling",
+      "facet": "Babies and family names",
+      "known_at": 8
+    },
+    {
+      "name": "Cria",
+      "facet": "Babies and family names",
+      "known_at": 13
+    },
+    {
+      "name": "Colt",
+      "facet": "Babies and family names",
+      "known_at": 9
+    },
+    {
+      "name": "Filly",
+      "facet": "Babies and family names",
+      "known_at": 10
+    },
+    {
+      "name": "Heifer",
+      "facet": "Babies and family names",
+      "known_at": 12
+    },
+    {
+      "name": "Ewe",
+      "facet": "Babies and family names",
+      "known_at": 9
+    },
+    {
+      "name": "Sow",
+      "facet": "Babies and family names",
+      "known_at": 10
+    },
+    {
+      "name": "Boar",
+      "facet": "Babies and family names",
+      "known_at": 8
+    },
+    {
+      "name": "Mare",
+      "facet": "Babies and family names",
+      "known_at": 8
+    },
+    {
+      "name": "Stallion",
+      "facet": "Babies and family names",
+      "known_at": 7
+    },
+    {
+      "name": "Billy goat",
+      "facet": "Babies and family names",
+      "known_at": 6
+    },
+    {
+      "name": "Drake",
+      "facet": "Babies and family names",
+      "known_at": 12
+    },
+    {
+      "name": "Gander",
+      "facet": "Babies and family names",
+      "known_at": 12
+    },
+    {
+      "name": "Herd",
+      "facet": "Babies and family names",
+      "known_at": 4
+    },
+    {
+      "name": "Flock",
+      "facet": "Babies and family names",
+      "known_at": 5
+    },
+    {
+      "name": "Litter",
+      "facet": "Babies and family names",
+      "known_at": 7
+    },
+    {
+      "name": "Cow",
+      "facet": "Cattle and dairy cows",
+      "known_at": 1
+    },
+    {
+      "name": "Bull",
+      "facet": "Cattle and dairy cows",
+      "known_at": 2
+    },
+    {
+      "name": "Ox",
+      "facet": "Cattle and dairy cows",
+      "known_at": 5
+    },
+    {
+      "name": "Udder",
+      "facet": "Cattle and dairy cows",
+      "known_at": 6
+    },
+    {
+      "name": "Rumen",
+      "facet": "Cattle and dairy cows",
+      "known_at": 11
+    },
+    {
+      "name": "Cud",
+      "facet": "Cattle and dairy cows",
+      "known_at": 9
+    },
+    {
+      "name": "Ruminant",
+      "facet": "Cattle and dairy cows",
+      "known_at": 10
+    },
+    {
+      "name": "Four-chambered stomach",
+      "facet": "Cattle and dairy cows",
+      "known_at": 7
+    },
+    {
+      "name": "Cowbell",
+      "facet": "Cattle and dairy cows",
+      "known_at": 4
+    },
+    {
+      "name": "Water buffalo",
+      "facet": "Cattle and dairy cows",
+      "known_at": 6
+    },
+    {
+      "name": "Zebu",
+      "facet": "Cattle and dairy cows",
+      "known_at": 12
+    },
+    {
+      "name": "Cow methane",
+      "facet": "Cattle and dairy cows",
+      "known_at": 9
+    },
+    {
+      "name": "Cloven hoof",
+      "facet": "Cattle and dairy cows",
+      "known_at": 10
+    },
+    {
+      "name": "Silage",
+      "facet": "Cattle and dairy cows",
+      "known_at": 13
+    },
+    {
+      "name": "Dairy farm",
+      "facet": "Cattle and dairy cows",
+      "known_at": 4
+    },
+    {
+      "name": "Cattle egret",
+      "facet": "Cattle and dairy cows",
+      "known_at": 12
+    },
+    {
+      "name": "Cow spots",
+      "facet": "Cattle and dairy cows",
+      "known_at": 3
+    },
+    {
+      "name": "Sacred cow",
+      "facet": "Cattle and dairy cows",
+      "known_at": 9
+    },
+    {
+      "name": "Bullfighting",
+      "facet": "Cattle and dairy cows",
+      "known_at": 7
+    },
+    {
+      "name": "Pig",
+      "facet": "Pigs, sheep and goats",
+      "known_at": 1
+    },
+    {
+      "name": "Sheep",
+      "facet": "Pigs, sheep and goats",
+      "known_at": 1
+    },
+    {
+      "name": "Goat",
+      "facet": "Pigs, sheep and goats",
+      "known_at": 1
+    },
+    {
+      "name": "Snout",
+      "facet": "Pigs, sheep and goats",
+      "known_at": 4
+    },
+    {
+      "name": "Pig mud bath",
+      "facet": "Pigs, sheep and goats",
+      "known_at": 4
+    },
+    {
+      "name": "Truffle pig",
+      "facet": "Pigs, sheep and goats",
+      "known_at": 10
+    },
+    {
+      "name": "Pot-bellied pig",
+      "facet": "Pigs, sheep and goats",
+      "known_at": 8
+    },
+    {
+      "name": "Tusk",
+      "facet": "Pigs, sheep and goats",
+      "known_at": 6
+    },
+    {
+      "name": "Curly tail",
+      "facet": "Pigs, sheep and goats",
+      "known_at": 2
+    },
+    {
+      "name": "Goat pupil",
+      "facet": "Pigs, sheep and goats",
+      "known_at": 9
+    },
+    {
+      "name": "Goat beard",
+      "facet": "Pigs, sheep and goats",
+      "known_at": 4
+    },
+    {
+      "name": "Tree-climbing goats",
+      "facet": "Pigs, sheep and goats",
+      "known_at": 10
+    },
+    {
+      "name": "Ram horns",
+      "facet": "Pigs, sheep and goats",
+      "known_at": 5
+    },
+    {
+      "name": "Pig intelligence",
+      "facet": "Pigs, sheep and goats",
+      "known_at": 7
+    },
+    {
+      "name": "Pig sweat",
+      "facet": "Pigs, sheep and goats",
+      "known_at": 9
+    },
+    {
+      "name": "Goat yoga",
+      "facet": "Pigs, sheep and goats",
+      "known_at": 11
+    },
+    {
+      "name": "Fainting goat",
+      "facet": "Pigs, sheep and goats",
+      "known_at": 10
+    },
+    {
+      "name": "Hen",
+      "facet": "Chickens, ducks and poultry",
+      "known_at": 2
+    },
+    {
+      "name": "Guinea fowl",
+      "facet": "Chickens, ducks and poultry",
+      "known_at": 9
+    },
+    {
+      "name": "Comb",
+      "facet": "Chickens, ducks and poultry",
+      "known_at": 6
+    },
+    {
+      "name": "Wattle",
+      "facet": "Chickens, ducks and poultry",
+      "known_at": 11
+    },
+    {
+      "name": "Pecking order",
+      "facet": "Chickens, ducks and poultry",
+      "known_at": 10
+    },
+    {
+      "name": "Egg incubation",
+      "facet": "Chickens, ducks and poultry",
+      "known_at": 6
+    },
+    {
+      "name": "Broody hen",
+      "facet": "Chickens, ducks and poultry",
+      "known_at": 10
+    },
+    {
+      "name": "Donkey",
+      "facet": "Horses, donkeys and mules",
+      "known_at": 1
+    },
+    {
+      "name": "Mule",
+      "facet": "Horses, donkeys and mules",
+      "known_at": 6
+    },
+    {
+      "name": "Hinny",
+      "facet": "Horses, donkeys and mules",
+      "known_at": 13
+    },
+    {
+      "name": "Hoof",
+      "facet": "Horses, donkeys and mules",
+      "known_at": 3
+    },
+    {
+      "name": "Horseshoe",
+      "facet": "Horses, donkeys and mules",
+      "known_at": 3
+    },
+    {
+      "name": "Mane",
+      "facet": "Horses, donkeys and mules",
+      "known_at": 3
+    },
+    {
+      "name": "Bridle",
+      "facet": "Horses, donkeys and mules",
+      "known_at": 9
+    },
+    {
+      "name": "Gallop",
+      "facet": "Horses, donkeys and mules",
+      "known_at": 4
+    },
+    {
+      "name": "Trot",
+      "facet": "Horses, donkeys and mules",
+      "known_at": 6
+    },
+    {
+      "name": "Hand (unit)",
+      "facet": "Horses, donkeys and mules",
+      "known_at": 12
+    },
+    {
+      "name": "Przewalski's horse",
+      "facet": "Horses, donkeys and mules",
+      "known_at": 13
+    },
+    {
+      "name": "Draft horse",
+      "facet": "Horses, donkeys and mules",
+      "known_at": 9
+    },
+    {
+      "name": "Sleeping standing up",
+      "facet": "Horses, donkeys and mules",
+      "known_at": 6
+    },
+    {
+      "name": "Horsepower",
+      "facet": "Horses, donkeys and mules",
+      "known_at": 8
+    },
+    {
+      "name": "Horse teeth",
+      "facet": "Horses, donkeys and mules",
+      "known_at": 11
+    },
+    {
+      "name": "Dromedary",
+      "facet": "Camels, llamas and yaks",
+      "known_at": 8
+    },
+    {
+      "name": "Bactrian camel",
+      "facet": "Camels, llamas and yaks",
+      "known_at": 10
+    },
+    {
+      "name": "Camel hump",
+      "facet": "Camels, llamas and yaks",
+      "known_at": 3
+    },
+    {
+      "name": "Reindeer",
+      "facet": "Camels, llamas and yaks",
+      "known_at": 2
+    },
+    {
+      "name": "Llama spitting",
+      "facet": "Camels, llamas and yaks",
+      "known_at": 5
+    },
+    {
+      "name": "Camel caravan",
+      "facet": "Camels, llamas and yaks",
+      "known_at": 8
+    },
+    {
+      "name": "Camel eyelashes",
+      "facet": "Camels, llamas and yaks",
+      "known_at": 7
+    },
+    {
+      "name": "Guard llama",
+      "facet": "Camels, llamas and yaks",
+      "known_at": 12
+    },
+    {
+      "name": "Sami reindeer herding",
+      "facet": "Camels, llamas and yaks",
+      "known_at": 12
+    },
+    {
+      "name": "Camel racing",
+      "facet": "Camels, llamas and yaks",
+      "known_at": 9
+    },
+    {
+      "name": "Milk",
+      "facet": "Products from farm animals",
+      "known_at": 1
+    },
+    {
+      "name": "Cheese",
+      "facet": "Products from farm animals",
+      "known_at": 1
+    },
+    {
+      "name": "Wool",
+      "facet": "Products from farm animals",
+      "known_at": 3
+    },
+    {
+      "name": "Leather",
+      "facet": "Products from farm animals",
+      "known_at": 5
+    },
+    {
+      "name": "Down feathers",
+      "facet": "Products from farm animals",
+      "known_at": 8
+    },
+    {
+      "name": "Mohair",
+      "facet": "Products from farm animals",
+      "known_at": 13
+    },
+    {
+      "name": "Bacon",
+      "facet": "Products from farm animals",
+      "known_at": 3
+    },
+    {
+      "name": "Ham",
+      "facet": "Products from farm animals",
+      "known_at": 3
+    },
+    {
+      "name": "Gelatin",
+      "facet": "Products from farm animals",
+      "known_at": 10
+    },
+    {
+      "name": "Manure",
+      "facet": "Products from farm animals",
+      "known_at": 7
+    },
+    {
+      "name": "Cream",
+      "facet": "Products from farm animals",
+      "known_at": 3
+    },
+    {
+      "name": "Yak butter tea",
+      "facet": "Products from farm animals",
+      "known_at": 13
+    },
+    {
+      "name": "Shearing",
+      "facet": "Farm work and animal care",
+      "known_at": 6
+    },
+    {
+      "name": "Milking machine",
+      "facet": "Farm work and animal care",
+      "known_at": 6
+    },
+    {
+      "name": "Sheepdog",
+      "facet": "Farm work and animal care",
+      "known_at": 4
+    },
+    {
+      "name": "Barn",
+      "facet": "Farm work and animal care",
+      "known_at": 2
+    },
+    {
+      "name": "Haystack",
+      "facet": "Farm work and animal care",
+      "known_at": 3
+    },
+    {
+      "name": "Pitchfork",
+      "facet": "Farm work and animal care",
+      "known_at": 5
+    },
+    {
+      "name": "Scarecrow",
+      "facet": "Farm work and animal care",
+      "known_at": 2
+    },
+    {
+      "name": "Veterinarian",
+      "facet": "Farm work and animal care",
+      "known_at": 3
+    },
+    {
+      "name": "Farrier",
+      "facet": "Farm work and animal care",
+      "known_at": 12
+    },
+    {
+      "name": "Stable",
+      "facet": "Farm work and animal care",
+      "known_at": 3
+    },
+    {
+      "name": "Pigsty",
+      "facet": "Farm work and animal care",
+      "known_at": 5
+    },
+    {
+      "name": "Henhouse",
+      "facet": "Farm work and animal care",
+      "known_at": 4
+    },
+    {
+      "name": "Trough",
+      "facet": "Farm work and animal care",
+      "known_at": 8
+    },
+    {
+      "name": "Ear tag",
+      "facet": "Farm work and animal care",
+      "known_at": 8
+    },
+    {
+      "name": "Branding",
+      "facet": "Farm work and animal care",
+      "known_at": 9
+    },
+    {
+      "name": "Transhumance",
+      "facet": "Farm work and animal care",
+      "known_at": 14
+    },
+    {
+      "name": "Shepherd",
+      "facet": "Farm work and animal care",
+      "known_at": 3
+    },
+    {
+      "name": "Cowboy",
+      "facet": "Farm work and animal care",
+      "known_at": 2
+    },
+    {
+      "name": "Gaucho",
+      "facet": "Farm work and animal care",
+      "known_at": 11
+    },
+    {
+      "name": "Free range",
+      "facet": "Farm work and animal care",
+      "known_at": 9
+    },
+    {
+      "name": "Holstein Friesian",
+      "facet": "Breeds from around the world",
+      "known_at": 9
+    },
+    {
+      "name": "Jersey cattle",
+      "facet": "Breeds from around the world",
+      "known_at": 11
+    },
+    {
+      "name": "Highland cattle",
+      "facet": "Breeds from around the world",
+      "known_at": 8
+    },
+    {
+      "name": "Angus",
+      "facet": "Breeds from around the world",
+      "known_at": 10
+    },
+    {
+      "name": "Texas Longhorn",
+      "facet": "Breeds from around the world",
+      "known_at": 9
+    },
+    {
+      "name": "Ankole-Watusi",
+      "facet": "Breeds from around the world",
+      "known_at": 14
+    },
+    {
+      "name": "Brahman cattle",
+      "facet": "Breeds from around the world",
+      "known_at": 13
+    },
+    {
+      "name": "Merino",
+      "facet": "Breeds from around the world",
+      "known_at": 10
+    },
+    {
+      "name": "Silkie",
+      "facet": "Breeds from around the world",
+      "known_at": 11
+    },
+    {
+      "name": "Leghorn",
+      "facet": "Breeds from around the world",
+      "known_at": 13
+    },
+    {
+      "name": "Arabian horse",
+      "facet": "Breeds from around the world",
+      "known_at": 8
+    },
+    {
+      "name": "Shetland pony",
+      "facet": "Breeds from around the world",
+      "known_at": 7
+    },
+    {
+      "name": "Clydesdale",
+      "facet": "Breeds from around the world",
+      "known_at": 12
+    },
+    {
+      "name": "Andalusian horse",
+      "facet": "Breeds from around the world",
+      "known_at": 12
+    },
+    {
+      "name": "Friesian horse",
+      "facet": "Breeds from around the world",
+      "known_at": 12
+    },
+    {
+      "name": "Akhal-Teke",
+      "facet": "Breeds from around the world",
+      "known_at": 14
+    },
+    {
+      "name": "Mangalica",
+      "facet": "Breeds from around the world",
+      "known_at": 14
+    },
+    {
+      "name": "Iberian pig",
+      "facet": "Breeds from around the world",
+      "known_at": 12
+    },
+    {
+      "name": "Angora goat",
+      "facet": "Breeds from around the world",
+      "known_at": 12
+    },
+    {
+      "name": "Pygmy goat",
+      "facet": "Breeds from around the world",
+      "known_at": 9
+    },
+    {
+      "name": "Pekin duck",
+      "facet": "Breeds from around the world",
+      "known_at": 12
+    },
+    {
+      "name": "Charlotte's Web",
+      "facet": "Farm animals in stories and films",
+      "known_at": 6
+    },
+    {
+      "name": "Animal Farm",
+      "facet": "Farm animals in stories and films",
+      "known_at": 10
+    },
+    {
+      "name": "Chicken Run",
+      "facet": "Farm animals in stories and films",
+      "known_at": 5
+    },
+    {
+      "name": "The Little Red Hen",
+      "facet": "Farm animals in stories and films",
+      "known_at": 5
+    },
+    {
+      "name": "Black Beauty",
+      "facet": "Farm animals in stories and films",
+      "known_at": 9
+    },
+    {
+      "name": "Spirit: Stallion of the Cimarron",
+      "facet": "Farm animals in stories and films",
+      "known_at": 6
+    },
+    {
+      "name": "Donkey (Shrek)",
+      "facet": "Farm animals in stories and films",
+      "known_at": 2
+    },
+    {
+      "name": "Town Musicians of Bremen",
+      "facet": "Farm animals in stories and films",
+      "known_at": 8
+    },
+    {
+      "name": "Ferdinand",
+      "facet": "Farm animals in stories and films",
+      "known_at": 6
+    },
+    {
+      "name": "Miss Piggy",
+      "facet": "Farm animals in stories and films",
+      "known_at": 5
+    },
+    {
+      "name": "Nils Holgersson",
+      "facet": "Farm animals in stories and films",
+      "known_at": 11
+    },
+    {
+      "name": "Sven",
+      "facet": "Farm animals in stories and films",
+      "known_at": 3
+    },
+    {
+      "name": "War Horse",
+      "facet": "Farm animals in stories and films",
+      "known_at": 11
+    },
+    {
+      "name": "Aurochs",
+      "facet": "Domestication and farming history",
+      "known_at": 12
+    },
+    {
+      "name": "Red junglefowl",
+      "facet": "Domestication and farming history",
+      "known_at": 13
+    },
+    {
+      "name": "Wild boar",
+      "facet": "Domestication and farming history",
+      "known_at": 5
+    },
+    {
+      "name": "Mouflon",
+      "facet": "Domestication and farming history",
+      "known_at": 13
+    },
+    {
+      "name": "Bezoar ibex",
+      "facet": "Domestication and farming history",
+      "known_at": 15
+    },
+    {
+      "name": "Domestication",
+      "facet": "Domestication and farming history",
+      "known_at": 8
+    },
+    {
+      "name": "Selective breeding",
+      "facet": "Domestication and farming history",
+      "known_at": 10
+    },
+    {
+      "name": "Dolly the sheep",
+      "facet": "Domestication and farming history",
+      "known_at": 10
+    },
+    {
+      "name": "Silver fox experiment",
+      "facet": "Domestication and farming history",
+      "known_at": 14
+    },
+    {
+      "name": "Pastoralism",
+      "facet": "Domestication and farming history",
+      "known_at": 13
+    },
+    {
+      "name": "Nomads",
+      "facet": "Domestication and farming history",
+      "known_at": 8
+    },
+    {
+      "name": "Chariot",
+      "facet": "Domestication and farming history",
+      "known_at": 7
+    },
+    {
+      "name": "Mongol horsemen",
+      "facet": "Domestication and farming history",
+      "known_at": 10
+    },
+    {
+      "name": "Inca llama herding",
+      "facet": "Domestication and farming history",
+      "known_at": 11
+    },
+    {
+      "name": "Wild horses of the Americas",
+      "facet": "Domestication and farming history",
+      "known_at": 13
+    },
+    {
+      "name": "Plough",
+      "facet": "Domestication and farming history",
+      "known_at": 5
+    }
+  ]
+}

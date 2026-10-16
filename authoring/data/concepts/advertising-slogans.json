@@ -822,7 +822,8 @@
     {
       "name": "Juego de palabras",
       "facet": "Recursos del lenguaje publicitario",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: Wordplay depends on one language and doesn't travel across the game's languages."
     },
     {
       "name": "Modo imperativo",

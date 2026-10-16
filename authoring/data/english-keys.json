@@ -13,9 +13,9 @@
       "concept": "Yellow stripe"
     },
     "q-0003": {
-      "hash": "79b679cadd35",
+      "hash": "205c9204757f",
       "answer": "Corn",
-      "concept": null
+      "concept": "Arepa"
     },
     "q-0004": {
       "hash": "4934c6ff44b2",
@@ -58,9 +58,9 @@
       "concept": null
     },
     "q-0012": {
-      "hash": "44801ed7418e",
+      "hash": "dbe3424ed871",
       "answer": "32",
-      "concept": "Departments of Colombia"
+      "concept": null
     },
     "q-0013": {
       "hash": "dc5024e97993",
@@ -93,9 +93,9 @@
       "concept": "Brazil"
     },
     "q-0019": {
-      "hash": "385909884214",
+      "hash": "0883c20b28de",
       "answer": "Mount Everest",
-      "concept": null
+      "concept": "Mount Everest"
     },
     "q-0020": {
       "hash": "02fd6e8a5ad6",
@@ -123,9 +123,9 @@
       "concept": "Bering Strait"
     },
     "q-0025": {
-      "hash": "081621905439",
+      "hash": "59d7eb0ad9ae",
       "answer": "Rooster",
-      "concept": null
+      "concept": "Rooster crow"
     },
     "q-0026": {
       "hash": "532ac8858859",
@@ -133,9 +133,9 @@
       "concept": "Spider"
     },
     "q-0027": {
-      "hash": "a9d2a9dfb113",
+      "hash": "f2790eb615a9",
       "answer": "Blue whale",
-      "concept": null
+      "concept": "Blue whale"
     },
     "q-0028": {
       "hash": "9e9a919b79ff",
@@ -148,14 +148,14 @@
       "concept": "Tadpole"
     },
     "q-0030": {
-      "hash": "c7a6b696474e",
+      "hash": "182f8f4c5cc8",
       "answer": "Cheetah",
-      "concept": null
+      "concept": "Cheetah"
     },
     "q-0031": {
-      "hash": "81290d20f7c9",
+      "hash": "22cba214ebec",
       "answer": "Hummingbird",
-      "concept": null
+      "concept": "Hummingbird"
     },
     "q-0032": {
       "hash": "8b2b22fbb595",
@@ -183,9 +183,9 @@
       "concept": null
     },
     "q-0037": {
-      "hash": "6d8f86e1c4ed",
+      "hash": "4fe60da40968",
       "answer": "Nose",
-      "concept": null
+      "concept": "Nose"
     },
     "q-0038": {
       "hash": "39b1fc59b170",
@@ -193,54 +193,54 @@
       "concept": "Sunlight"
     },
     "q-0039": {
-      "hash": "79bd53c35bb6",
+      "hash": "a424d0d3414f",
       "answer": "Heart",
-      "concept": null
+      "concept": "Heart"
     },
     "q-0040": {
-      "hash": "b9e734d0779d",
+      "hash": "4af13007036e",
       "answer": "100 °C",
-      "concept": null
+      "concept": "Boiling point of water"
     },
     "q-0041": {
-      "hash": "0269dae3b2d1",
+      "hash": "0e017543f304",
       "answer": "Oxygen",
-      "concept": null
+      "concept": "Oxygen"
     },
     "q-0042": {
-      "hash": "e5df02c29628",
+      "hash": "4fe621180552",
       "answer": "Femur",
-      "concept": null
+      "concept": "Femur"
     },
     "q-0043": {
-      "hash": "ea9ba3083cc4",
+      "hash": "00be6be17cd1",
       "answer": "H₂O",
-      "concept": null
+      "concept": "Water molecule"
     },
     "q-0044": {
-      "hash": "d3e102c3be35",
+      "hash": "b128fee18bda",
       "answer": "Albert Einstein",
-      "concept": null
+      "concept": "Albert Einstein"
     },
     "q-0045": {
-      "hash": "49a506cbb65a",
+      "hash": "fc8c7403c622",
       "answer": "206",
-      "concept": null
+      "concept": "Skeleton"
     },
     "q-0046": {
-      "hash": "b78428f7a16f",
+      "hash": "a96d108c9c17",
       "answer": "Nucleus",
-      "concept": null
+      "concept": "Cell nucleus"
     },
     "q-0047": {
-      "hash": "6bb973d5985b",
+      "hash": "2d1d65746213",
       "answer": "Mercury",
-      "concept": null
+      "concept": "Mercury"
     },
     "q-0048": {
-      "hash": "8f9b0d50d9bc",
+      "hash": "2c916a7c8161",
       "answer": "300,000 km per second",
-      "concept": null
+      "concept": "Speed of light"
     },
     "q-0049": {
       "hash": "f458743e0d4e",
@@ -303,14 +303,14 @@
       "concept": "Light-year"
     },
     "q-0061": {
-      "hash": "30e91ccfb699",
+      "hash": "8241b8d313b5",
       "answer": "Drum",
-      "concept": null
+      "concept": "Drum"
     },
     "q-0062": {
-      "hash": "d870a9063e09",
+      "hash": "28e72e734d89",
       "answer": "Violin",
-      "concept": null
+      "concept": "Violin"
     },
     "q-0063": {
       "hash": "fa096969e5b3",
@@ -318,14 +318,14 @@
       "concept": "Shakira"
     },
     "q-0065": {
-      "hash": "bd54be9fce46",
+      "hash": "fcba0dd24306",
       "answer": "6",
-      "concept": null
+      "concept": "Guitar"
     },
     "q-0066": {
-      "hash": "2a7f26b6c389",
+      "hash": "f93709b71039",
       "answer": "Medellín",
-      "concept": "Medellín"
+      "concept": null
     },
     "q-0067": {
       "hash": "c21fce4e48a4",
@@ -358,29 +358,29 @@
       "concept": "Mickey Mouse"
     },
     "q-0074": {
-      "hash": "4e472c58710a",
+      "hash": "e78fad8829c1",
       "answer": "Madrigal",
-      "concept": null
+      "concept": "Mirabel Madrigal"
     },
     "q-0075": {
-      "hash": "116c235f1cfd",
+      "hash": "49465f932552",
       "answer": "Woody",
-      "concept": null
+      "concept": "Woody"
     },
     "q-0076": {
-      "hash": "201c321e3032",
+      "hash": "a51d2fa1330f",
       "answer": "Minecraft",
-      "concept": null
+      "concept": "Minecraft"
     },
     "q-0077": {
-      "hash": "bb67d6cd2ec5",
+      "hash": "a117042107a4",
       "answer": "Superhuman strength",
-      "concept": null
+      "concept": "Luisa Madrigal"
     },
     "q-0078": {
-      "hash": "e750700e49aa",
+      "hash": "ea3619fb566f",
       "answer": "Arendelle",
-      "concept": null
+      "concept": "Elsa"
     },
     "q-0079": {
       "hash": "7e6496b3ef47",
@@ -388,19 +388,19 @@
       "concept": "Harry Potter"
     },
     "q-0080": {
-      "hash": "63dee774909a",
+      "hash": "f90196b6b01b",
       "answer": "Mufasa",
-      "concept": null
+      "concept": "Mufasa"
     },
     "q-0081": {
-      "hash": "bd54be9fce46",
+      "hash": "b7fb10e828e7",
       "answer": "6",
-      "concept": null
+      "concept": "Infinity Stones"
     },
     "q-0082": {
-      "hash": "1ad0268776b1",
+      "hash": "5df9a9dab06e",
       "answer": "Nintendo",
-      "concept": null
+      "concept": "Nintendo"
     },
     "q-0083": {
       "hash": "64cd8d0c379f",
@@ -413,7 +413,7 @@
       "concept": "Steven Spielberg"
     },
     "q-0086": {
-      "hash": "1e63de5e8f28",
+      "hash": "aa4b83a7d688",
       "answer": "Goalkeeper",
       "concept": "Goalkeeper"
     },
@@ -458,9 +458,9 @@
       "concept": "Football Association"
     },
     "q-0095": {
-      "hash": "096b8411daf1",
+      "hash": "c5cb375ff2d5",
       "answer": "42.195 km",
-      "concept": null
+      "concept": "Marathon"
     },
     "q-0096": {
       "hash": "6d9b40382bba",
@@ -473,19 +473,19 @@
       "concept": "Dinosaur"
     },
     "q-0098": {
-      "hash": "fa0e576444fb",
+      "hash": "12de87310f5a",
       "answer": "Light bulb",
-      "concept": null
+      "concept": "Light bulb"
     },
     "q-0099": {
-      "hash": "6ddc3790368b",
+      "hash": "fcd3bd500c52",
       "answer": "Christopher Columbus",
-      "concept": null
+      "concept": "Christopher Columbus"
     },
     "q-0100": {
-      "hash": "a02c9350091e",
+      "hash": "ef361396bf8c",
       "answer": "Simón Bolívar",
-      "concept": null
+      "concept": "Simón Bolívar"
     },
     "q-0101": {
       "hash": "622cb734f4b5",
@@ -493,14 +493,14 @@
       "concept": "Santa María"
     },
     "q-0102": {
-      "hash": "a1ed5520e53e",
+      "hash": "660fb592f672",
       "answer": "Incas",
-      "concept": null
+      "concept": "Incas"
     },
     "q-0103": {
-      "hash": "2dff1754d371",
+      "hash": "ad4fd499a903",
       "answer": "Muisca",
-      "concept": "Muisca"
+      "concept": null
     },
     "q-0104": {
       "hash": "cd49cd843906",
@@ -508,14 +508,14 @@
       "concept": "Johannes Gutenberg"
     },
     "q-0105": {
-      "hash": "f6a5f2700a6b",
+      "hash": "bc501c8d0f2a",
       "answer": "1945",
-      "concept": null
+      "concept": "World War II"
     },
     "q-0106": {
-      "hash": "9f04ffc3296a",
+      "hash": "27ddbcbe8be1",
       "answer": "Berlin Wall",
-      "concept": null
+      "concept": "Berlin Wall"
     },
     "q-0107": {
       "hash": "6ba48b62c00b",
@@ -523,24 +523,24 @@
       "concept": null
     },
     "q-0108": {
-      "hash": "387b8ab6222f",
+      "hash": "657528c72e67",
       "answer": "French Revolution",
-      "concept": null
+      "concept": "French Revolution"
     },
     "q-0109": {
-      "hash": "c0e4440c9266",
+      "hash": "d4cbf083b247",
       "answer": "Blue and yellow",
-      "concept": null
+      "concept": "Green"
     },
     "q-0110": {
-      "hash": "158c90ce60c9",
+      "hash": "3a3dab87ef42",
       "answer": "Ñ",
-      "concept": null
+      "concept": "Ñ"
     },
     "q-0111": {
-      "hash": "3f9e7ee86fde",
+      "hash": "bbf37a70f9e3",
       "answer": "Rafael Pombo",
-      "concept": "Rafael Pombo"
+      "concept": null
     },
     "q-0112": {
       "hash": "6ef287d9431c",
@@ -548,9 +548,9 @@
       "concept": "Fernando Botero"
     },
     "q-0113": {
-      "hash": "791001ec6bc8",
+      "hash": "c18383c8a1ab",
       "answer": "Pencils",
-      "concept": null
+      "concept": "Plural"
     },
     "q-0114": {
       "hash": "47a45e0c231e",
@@ -558,9 +558,9 @@
       "concept": "Mona Lisa"
     },
     "q-0115": {
-      "hash": "5b569fde9428",
+      "hash": "4824780248c4",
       "answer": "Adverb",
-      "concept": null
+      "concept": "Adverb"
     },
     "q-0116": {
       "hash": "7aa031cf2eb8",
@@ -578,9 +578,9 @@
       "concept": "The Starry Night"
     },
     "q-0119": {
-      "hash": "0448206bf1f8",
+      "hash": "bb8a921a54af",
       "answer": "María",
-      "concept": "María (novel)"
+      "concept": null
     },
     "q-0120": {
       "hash": "1ee18a63b090",
@@ -588,24 +588,24 @@
       "concept": "Hyperbole"
     },
     "q-0121": {
-      "hash": "0ae3bdb9748a",
+      "hash": "68f8987863fc",
       "answer": "Andean cock-of-the-rock",
-      "concept": null
+      "concept": "Andean cock-of-the-rock"
     },
     "q-0122": {
-      "hash": "3c1b3509a591",
+      "hash": "42e416d182ea",
       "answer": "Woodpecker",
-      "concept": null
+      "concept": "Woodpecker"
     },
     "q-0123": {
-      "hash": "e440bcb26d12",
+      "hash": "2a07d0efc54e",
       "answer": "Feathers",
-      "concept": null
+      "concept": "Feather"
     },
     "q-0124": {
-      "hash": "540a6ade18b3",
+      "hash": "9eded7bce498",
       "answer": "Ostrich",
-      "concept": null
+      "concept": "Ostrich"
     },
     "q-0125": {
       "hash": "a8eedef56f27",
@@ -623,14 +623,14 @@
       "concept": "United States"
     },
     "q-0128": {
-      "hash": "2a0ac407c9fd",
+      "hash": "a362cf45c6ae",
       "answer": "Marimonda",
-      "concept": "Marimonda"
+      "concept": null
     },
     "q-0129": {
-      "hash": "5e4190e2a95f",
-      "answer": "Quien lo vive es quien lo goza",
-      "concept": "Quien lo vive es quien lo goza"
+      "hash": "aa7055f09686",
+      "answer": "Whoever lives it is the one who enjoys it",
+      "concept": null
     },
     "q-0130": {
       "hash": "1fea1020a334",
@@ -648,19 +648,19 @@
       "concept": null
     },
     "q-0134": {
-      "hash": "a8a87a7c833e",
+      "hash": "e078cf96e02e",
       "answer": "Diaphragm",
-      "concept": null
+      "concept": "Diaphragm"
     },
     "q-0135": {
-      "hash": "62856dacd280",
+      "hash": "4db1439643aa",
       "answer": "Skin",
-      "concept": null
+      "concept": "Skin"
     },
     "q-0136": {
-      "hash": "a7b9ae045fff",
+      "hash": "256d1ebca736",
       "answer": "20",
-      "concept": null
+      "concept": "Baby teeth"
     },
     "q-0137": {
       "hash": "c37435bd788d",
@@ -708,44 +708,44 @@
       "concept": "Cape gooseberry"
     },
     "q-0147": {
-      "hash": "27c972f30d16",
+      "hash": "376c7fff6dc2",
       "answer": "Palindrome",
-      "concept": null
+      "concept": "Palindrome"
     },
     "q-0148": {
-      "hash": "b7c2ec37e2c2",
+      "hash": "2cd0670c398a",
       "answer": "Lasting a very short time",
-      "concept": null
+      "concept": "Ephemeral"
     },
     "q-0149": {
-      "hash": "82329b64cdd3",
+      "hash": "61bfb12f97c1",
       "answer": "Antonym",
-      "concept": null
+      "concept": "Antonym"
     },
     "q-0150": {
-      "hash": "64b0ae6fc75a",
+      "hash": "ac8d23d7d964",
       "answer": "Neigh",
-      "concept": null
+      "concept": "Neigh"
     },
     "q-0151": {
-      "hash": "f4cae5930f7f",
+      "hash": "26251b46d6ce",
       "answer": "Two faces in profile",
-      "concept": null
+      "concept": "Rubin vase"
     },
     "q-0152": {
-      "hash": "9e406f6c8396",
-      "answer": "A mirage",
-      "concept": null
+      "hash": "02026894c2bd",
+      "answer": "Mirage",
+      "concept": "Mirage"
     },
     "q-0153": {
-      "hash": "8de43433a9a6",
+      "hash": "9c910c624047",
       "answer": "Both are the same size",
-      "concept": null
+      "concept": "Ebbinghaus illusion"
     },
     "q-0154": {
-      "hash": "c797f2f9279a",
+      "hash": "08332a6d2786",
       "answer": "Brain",
-      "concept": null
+      "concept": "Brain"
     },
     "q-0155": {
       "hash": "133b7d3f70f3",
@@ -763,19 +763,19 @@
       "concept": "Compound eye"
     },
     "q-0158": {
-      "hash": "5c6a2c58072b",
+      "hash": "8b9a7c18c31a",
       "answer": "Trumpet",
-      "concept": null
+      "concept": "Trumpet"
     },
     "q-0160": {
-      "hash": "c95be0a41c3b",
+      "hash": "64ed1661cd3a",
       "answer": "88",
-      "concept": null
+      "concept": "Piano"
     },
     "q-0161": {
-      "hash": "575190a62680",
-      "answer": "Made of metal",
-      "concept": null
+      "hash": "c8f43b86eb14",
+      "answer": "Metal",
+      "concept": "Saxophone"
     },
     "q-0162": {
       "hash": "b7d1e7881c3a",
@@ -833,9 +833,9 @@
       "concept": null
     },
     "q-0173": {
-      "hash": "c75b4ff38e31",
+      "hash": "e77fddafb4dc",
       "answer": "Frailejón",
-      "concept": "Frailejón"
+      "concept": null
     },
     "q-0174": {
       "hash": "2eeb647f995a",
@@ -848,19 +848,19 @@
       "concept": "Serranía de Chiribiquete"
     },
     "q-0176": {
-      "hash": "469a34251079",
+      "hash": "6b556274f86e",
       "answer": "Remy",
-      "concept": null
+      "concept": "Remy"
     },
     "q-0177": {
-      "hash": "1e5182a0683e",
-      "answer": "WALL-E",
-      "concept": null
+      "hash": "67755dbd7b90",
+      "answer": "WALL·E",
+      "concept": "WALL·E"
     },
     "q-0178": {
-      "hash": "5d4d6d81aed0",
+      "hash": "84b0d01286ee",
       "answer": "They are emotions from Inside Out",
-      "concept": null
+      "concept": "Inside Out"
     },
     "q-0179": {
       "hash": "1fb45ade2f91",
@@ -883,9 +883,9 @@
       "concept": "Jolly Roger"
     },
     "q-0184": {
-      "hash": "b9aae20072b2",
+      "hash": "1fea1020a334",
       "answer": "Cartagena",
-      "concept": "Cartagena de Indias"
+      "concept": null
     },
     "q-0185": {
       "hash": "ea562c85a741",
@@ -893,24 +893,24 @@
       "concept": null
     },
     "q-0186": {
-      "hash": "ca9223645be6",
+      "hash": "ab56e144a7ef",
       "answer": "Empanada",
-      "concept": null
+      "concept": "Empanada"
     },
     "q-0187": {
-      "hash": "5bb97a92869e",
+      "hash": "10ae466e2eff",
       "answer": "Peregrine falcon",
-      "concept": null
+      "concept": "Peregrine falcon"
     },
     "q-0188": {
-      "hash": "9983edc95419",
+      "hash": "85e04f47313b",
       "answer": "About 5 meters",
-      "concept": null
+      "concept": "Giraffe"
     },
     "q-0189": {
-      "hash": "2d6c07b0af27",
+      "hash": "64aae9900223",
       "answer": "Komodo dragon",
-      "concept": null
+      "concept": "Komodo dragon"
     },
     "q-0190": {
       "hash": "749f09e8b835",
@@ -963,14 +963,14 @@
       "concept": "Howler monkey"
     },
     "q-0203": {
-      "hash": "fe6ef5c1a55b",
+      "hash": "f4ad5a88f1d0",
       "answer": "7",
-      "concept": null
+      "concept": "Dragon Balls"
     },
     "q-0204": {
-      "hash": "381445f45d81",
+      "hash": "95076a9aa4b5",
       "answer": "Manga",
-      "concept": null
+      "concept": "Manga"
     },
     "q-0205": {
       "hash": "d9ccd26d7106",
@@ -1003,14 +1003,14 @@
       "concept": "Black box"
     },
     "q-0211": {
-      "hash": "dba65ad7ceea",
+      "hash": "fafbb7ce1ed2",
       "answer": "12 minutes",
-      "concept": null
+      "concept": "Quarter"
     },
     "q-0212": {
-      "hash": "2f36a5c5eebd",
-      "answer": "Slam dunk",
-      "concept": null
+      "hash": "14e597493e70",
+      "answer": "Dunk",
+      "concept": "Slam dunk"
     },
     "q-0213": {
       "hash": "3fa3fe466dd8",
@@ -1093,9 +1093,9 @@
       "concept": "Sahara Desert"
     },
     "q-0229": {
-      "hash": "4d079e37e140",
+      "hash": "307e2faf48a8",
       "answer": "La Guajira",
-      "concept": "Taroa Dunes"
+      "concept": null
     },
     "q-0230": {
       "hash": "3e0f621b87ac",
@@ -1143,9 +1143,9 @@
       "concept": "Solar halo"
     },
     "q-0239": {
-      "hash": "e4f7f231ecfd",
+      "hash": "52afbe9498c4",
       "answer": "Pasto",
-      "concept": "Blacks and Whites' Carnival"
+      "concept": null
     },
     "q-0240": {
       "hash": "f5bfe838bf56",
@@ -1213,9 +1213,9 @@
       "concept": "Loki"
     },
     "q-0253": {
-      "hash": "8865388b500d",
+      "hash": "bfa4fada31dc",
       "answer": "Aconcagua",
-      "concept": null
+      "concept": "Aconcagua"
     },
     "q-0254": {
       "hash": "502870e7e5e8",
@@ -1228,9 +1228,9 @@
       "concept": "Christmas tree"
     },
     "q-0256": {
-      "hash": "f1fb2e23dc38",
-      "answer": "tanto",
-      "concept": "Gozos"
+      "hash": "18e529fbeca6",
+      "answer": "so much",
+      "concept": null
     },
     "q-0257": {
       "hash": "ca45ace03ab0",
@@ -1273,9 +1273,9 @@
       "concept": "Cave paintings"
     },
     "q-0265": {
-      "hash": "a488f590164b",
+      "hash": "445e9f92beaf",
       "answer": "White",
-      "concept": "White recycling bin"
+      "concept": null
     },
     "q-0266": {
       "hash": "19980186c631",
@@ -1298,14 +1298,14 @@
       "concept": "Green anaconda"
     },
     "q-0270": {
-      "hash": "440a2f29ed0f",
+      "hash": "a4509edeac7d",
       "answer": "Luffy",
-      "concept": null
+      "concept": "Monkey D. Luffy"
     },
     "q-0271": {
-      "hash": "1b27a0732256",
+      "hash": "7f6ad3e6500b",
       "answer": "Cute or adorable",
-      "concept": null
+      "concept": "Kawaii"
     },
     "q-0272": {
       "hash": "5a7d2adc3744",
@@ -1318,18 +1318,18 @@
       "concept": "Seaplane"
     },
     "q-0274": {
-      "hash": "b9e8d358f5f7",
-      "answer": "Baskets of peaches",
-      "concept": null
+      "hash": "9b17f3d02031",
+      "answer": "Peach baskets",
+      "concept": "Peach basket"
     },
     "q-0275": {
-      "hash": "23eeb401ff58",
+      "hash": "e29f9b8e601e",
       "answer": "United States",
-      "concept": null
+      "concept": "Springfield, Massachusetts"
     },
     "q-0276": {
-      "hash": "7f443d93ba7b",
-      "answer": "Car horn",
+      "hash": "7f7a49c4d2bf",
+      "answer": "A car horn",
       "concept": "Horn"
     },
     "q-0278": {
@@ -1353,9 +1353,9 @@
       "concept": "Hiccups"
     },
     "q-0282": {
-      "hash": "a83b00edb03f",
+      "hash": "027f17850e7e",
       "answer": "Tatacoa Desert",
-      "concept": "Tatacoa Desert"
+      "concept": null
     },
     "q-0283": {
       "hash": "b7cf150dec91",
@@ -1403,29 +1403,29 @@
       "concept": "Peter Pan"
     },
     "q-0293": {
-      "hash": "89a508ab87ce",
-      "answer": "9,500 pesos",
+      "hash": "dd4b89dd973d",
+      "answer": "9500 pesos",
       "concept": "Subtraction"
     },
     "q-0294": {
-      "hash": "b8506c92df4a",
+      "hash": "1b52ae5815fe",
       "answer": "Matterhorn",
-      "concept": null
+      "concept": "Matterhorn"
     },
     "q-0295": {
-      "hash": "f788702f0448",
+      "hash": "fe9d52a129bf",
       "answer": "14",
-      "concept": null
+      "concept": "Eight-thousanders"
     },
     "q-0296": {
-      "hash": "a431461cb14a",
+      "hash": "f6dc3580848e",
       "answer": "Africa",
-      "concept": null
+      "concept": "Mount Kilimanjaro"
     },
     "q-0297": {
-      "hash": "6cdae565e278",
+      "hash": "ec2915071d73",
       "answer": "December 16",
-      "concept": "Novena de Aguinaldos"
+      "concept": null
     },
     "q-0298": {
       "hash": "9acbac15ab0b",
@@ -1473,14 +1473,14 @@
       "concept": "Angel Falls"
     },
     "q-0307": {
-      "hash": "e72c4c6daa96",
+      "hash": "32fd98cfdf19",
       "answer": "Tells the truth",
-      "concept": null
+      "concept": "Lasso of Truth"
     },
     "q-0308": {
-      "hash": "e10bc0868b60",
+      "hash": "32d639cf711c",
       "answer": "They are from the Justice League",
-      "concept": null
+      "concept": "Justice League"
     },
     "q-0309": {
       "hash": "cadfa53eeabe",
@@ -1498,14 +1498,14 @@
       "concept": "Tick-Tock the Crocodile"
     },
     "q-0312": {
-      "hash": "73a67be90aa1",
+      "hash": "51793ba6b910",
       "answer": "Batman",
-      "concept": null
+      "concept": "Batman"
     },
     "q-0313": {
-      "hash": "1488a230ec7f",
+      "hash": "4403111a60ec",
       "answer": "Krypton",
-      "concept": null
+      "concept": "Krypton"
     },
     "q-0314": {
       "hash": "bbb5d2fc81a1",
@@ -1578,9 +1578,9 @@
       "concept": null
     },
     "q-0329": {
-      "hash": "d851325ea36d",
+      "hash": "4c05df5e8520",
       "answer": "August",
-      "concept": "August"
+      "concept": null
     },
     "q-0330": {
       "hash": "990296672738",
@@ -1593,14 +1593,14 @@
       "concept": "Achilles heel"
     },
     "q-0332": {
-      "hash": "f6587a89a6d1",
+      "hash": "d96776008376",
       "answer": "Mandarin Chinese",
-      "concept": null
+      "concept": "Mandarin Chinese"
     },
     "q-0333": {
-      "hash": "a6ed1290ba6c",
+      "hash": "d0a08c697a6d",
       "answer": "Arabic",
-      "concept": null
+      "concept": "Arabic"
     },
     "q-0334": {
       "hash": "6f08f6930d8b",
@@ -1743,9 +1743,9 @@
       "concept": "Latex"
     },
     "q-0362": {
-      "hash": "294a0bab0d84",
+      "hash": "948dff03a133",
       "answer": "Egg whites whipped with sugar",
-      "concept": null
+      "concept": "Meringue"
     },
     "q-0363": {
       "hash": "7d7965d1df70",
@@ -1823,9 +1823,9 @@
       "concept": "Guacamole"
     },
     "q-0378": {
-      "hash": "1fae32d1d320",
+      "hash": "0bf9ea783cc7",
       "answer": "San Gil",
-      "concept": "San Gil"
+      "concept": null
     },
     "q-0379": {
       "hash": "aff3a57e366b",
@@ -1838,22 +1838,22 @@
       "concept": "Hercules (Disney film)"
     },
     "q-0381": {
-      "hash": "406e3ca51b8f",
+      "hash": "9085e4e01caa",
       "answer": "Thank you",
-      "concept": null
+      "concept": "Danke"
     },
     "q-0382": {
-      "hash": "2cab20f04b11",
+      "hash": "850588745202",
       "answer": "Portuguese",
-      "concept": null
+      "concept": "Brazil"
     },
     "q-0383": {
-      "hash": "cbb2b3547d27",
-      "answer": "Stored them on faraway computers it reaches over the internet",
+      "hash": "7eaa46956fc3",
+      "answer": "Stored them on distant computers reached via the internet",
       "concept": "The cloud"
     },
     "q-0385": {
-      "hash": "7faf5d508e37",
+      "hash": "c303b1b0d3c9",
       "answer": "South America",
       "concept": "Guinea pig"
     },
@@ -1893,9 +1893,9 @@
       "concept": "Louvre Museum"
     },
     "q-0393": {
-      "hash": "8227f8c6b823",
+      "hash": "62c89bf8082f",
       "answer": "Gold Museum",
-      "concept": "Gold Museum"
+      "concept": null
     },
     "q-0394": {
       "hash": "7b69e63dd434",
@@ -1913,14 +1913,14 @@
       "concept": "Açaí"
     },
     "q-0397": {
-      "hash": "557d6d56d96a",
+      "hash": "e3dba888e0ac",
       "answer": "Cocadas",
-      "concept": null
+      "concept": "Cocada"
     },
     "q-0398": {
-      "hash": "ea083e773fde",
+      "hash": "8fe23d682b39",
       "answer": "Rice pudding",
-      "concept": null
+      "concept": "Rice pudding"
     },
     "q-0399": {
       "hash": "86428d9e522a",
@@ -1943,14 +1943,14 @@
       "concept": "Teenage Mutant Ninja Turtles"
     },
     "q-0403": {
-      "hash": "3c99820ff79d",
+      "hash": "81f0d96699ea",
       "answer": "Ace",
-      "concept": null
+      "concept": "Ace"
     },
     "q-0404": {
-      "hash": "61413ae1d381",
+      "hash": "41e87dfe1561",
       "answer": "Brick dust",
-      "concept": null
+      "concept": "Clay court"
     },
     "q-0405": {
       "hash": "03dc2a916d0b",
@@ -1998,14 +1998,14 @@
       "concept": "Twitter"
     },
     "q-0414": {
-      "hash": "571a7a5a950d",
+      "hash": "6abf7006fa9b",
       "answer": "White",
-      "concept": null
+      "concept": "Wimbledon all-white rule"
     },
     "q-0415": {
-      "hash": "385b338193e9",
+      "hash": "72e1485eaded",
       "answer": "40",
-      "concept": null
+      "concept": "15-30-40 scoring"
     },
     "q-0416": {
       "hash": "95ef07e8e210",
@@ -2068,19 +2068,19 @@
       "concept": null
     },
     "q-0428": {
-      "hash": "fce44d8224bc",
-      "answer": "...the current carries it away",
-      "concept": null
+      "hash": "dc017729020d",
+      "answer": "...is carried away by the current",
+      "concept": "Proverb"
     },
     "q-0429": {
-      "hash": "5ee99baa0edd",
+      "hash": "9a8e9498bb89",
       "answer": "Donkey",
-      "concept": null
+      "concept": "Bray"
     },
     "q-0430": {
-      "hash": "3c7ed06b97f8",
+      "hash": "e773efa24f07",
       "answer": "Usain Bolt",
-      "concept": null
+      "concept": "Usain Bolt"
     },
     "q-0431": {
       "hash": "38a3b4716318",
@@ -2128,9 +2128,9 @@
       "concept": null
     },
     "q-0440": {
-      "hash": "8d345a2e6aa8",
+      "hash": "225dce54af24",
       "answer": "Orange",
-      "concept": null
+      "concept": "Complementary colors"
     },
     "q-0441": {
       "hash": "22a7a0097084",
@@ -2148,14 +2148,14 @@
       "concept": "Thomas Edison"
     },
     "q-0444": {
-      "hash": "1cffbfac2dd5",
-      "answer": "Electric battery",
-      "concept": null
+      "hash": "a19b0038b0c7",
+      "answer": "Battery",
+      "concept": "Battery"
     },
     "q-0445": {
-      "hash": "cd806d3a4b7b",
-      "answer": "The Nile",
-      "concept": null
+      "hash": "81ce0ba60f74",
+      "answer": "Nile",
+      "concept": "Papyrus"
     },
     "q-0446": {
       "hash": "1827ae8cf6c7",
@@ -2198,14 +2198,14 @@
       "concept": "Sunflower"
     },
     "q-0454": {
-      "hash": "0906dc3c797a",
+      "hash": "edf6b61c3bd7",
       "answer": "Amazonas",
-      "concept": "Amazonas Department"
+      "concept": null
     },
     "q-0455": {
-      "hash": "fb8cacfca783",
+      "hash": "43c2fdf69d35",
       "answer": "Chocó",
-      "concept": "Chocó"
+      "concept": null
     },
     "q-0456": {
       "hash": "a557505ddf4c",
@@ -2223,34 +2223,34 @@
       "concept": "Amphibian"
     },
     "q-0459": {
-      "hash": "29b7f5b51b12",
+      "hash": "84d6c7d1f5ea",
       "answer": "Guinea fowl",
-      "concept": null
+      "concept": "Guinea fowl"
     },
     "q-0460": {
-      "hash": "ed7f9727d733",
+      "hash": "7fa9955672dc",
       "answer": "1",
-      "concept": null
+      "concept": "Hoof"
     },
     "q-0461": {
-      "hash": "a1d42db59c49",
+      "hash": "567180d992f0",
       "answer": "Lamb",
-      "concept": null
+      "concept": "Lamb"
     },
     "q-0462": {
-      "hash": "14d6c32063e6",
+      "hash": "78b68f6041d3",
       "answer": "Pole vault",
-      "concept": null
+      "concept": "Pole vault"
     },
     "q-0463": {
-      "hash": "c94fc60503a4",
-      "answer": "The baton",
-      "concept": null
+      "hash": "be6e2293c341",
+      "answer": "Baton",
+      "concept": "Relay baton"
     },
     "q-0464": {
-      "hash": "6ff9fc8e5f44",
+      "hash": "7aa1d7662121",
       "answer": "About 7 kilos",
-      "concept": null
+      "concept": "Shot put"
     },
     "q-0465": {
       "hash": "863db1770a60",
@@ -2278,19 +2278,19 @@
       "concept": "Juan Valdez"
     },
     "q-0470": {
-      "hash": "fe6ef5c1a55b",
+      "hash": "51f83d390e28",
       "answer": "7",
-      "concept": null
+      "concept": "Rainbow"
     },
     "q-0471": {
-      "hash": "af6112f183e5",
+      "hash": "ca417206a737",
       "answer": "Primary colors",
-      "concept": null
+      "concept": "Primary colors"
     },
     "q-0472": {
-      "hash": "f47341bc7cb6",
+      "hash": "37d59843c4b3",
       "answer": "They are shades of red",
-      "concept": null
+      "concept": "Crimson"
     },
     "q-0473": {
       "hash": "987181ee0407",
@@ -2323,24 +2323,24 @@
       "concept": null
     },
     "q-0479": {
-      "hash": "9709f0df0b17",
+      "hash": "179d9ab55675",
       "answer": "December",
-      "concept": "Cali Fair"
+      "concept": null
     },
     "q-0480": {
-      "hash": "0e4cde2ae91b",
+      "hash": "7c50fee39aa6",
       "answer": "Gramophone",
-      "concept": null
+      "concept": "Gramophone"
     },
     "q-0481": {
-      "hash": "166749eff472",
-      "answer": "Sailing",
-      "concept": null
+      "hash": "70be3b58ebc4",
+      "answer": "Candle",
+      "concept": "Candle"
     },
     "q-0482": {
-      "hash": "a6bb7a0c8e73",
+      "hash": "9eb2cd1f4510",
       "answer": "El Silbón",
-      "concept": "El Silbón"
+      "concept": null
     },
     "q-0483": {
       "hash": "c1d242e34b61",
@@ -2418,14 +2418,14 @@
       "concept": null
     },
     "q-0499": {
-      "hash": "d2e4bc6869e0",
+      "hash": "77008bc41b94",
       "answer": "Russia",
-      "concept": null
+      "concept": "Tetris"
     },
     "q-0500": {
-      "hash": "13772a5e0021",
+      "hash": "d9b516ad4cea",
       "answer": "Kirby",
-      "concept": null
+      "concept": "Kirby"
     },
     "q-0501": {
       "hash": "ec55eef4628c",
@@ -2443,24 +2443,24 @@
       "concept": "Danube"
     },
     "q-0504": {
-      "hash": "571a774e5a02",
+      "hash": "c8c73809864c",
       "answer": "Hulk",
-      "concept": null
+      "concept": "Hulk"
     },
     "q-0505": {
-      "hash": "e81f033b3fb2",
+      "hash": "5f213aa4515c",
       "answer": "Vibranium",
-      "concept": null
+      "concept": "Vibranium"
     },
     "q-0506": {
-      "hash": "536989d655fe",
+      "hash": "655c70ebc826",
       "answer": "They are Avengers",
-      "concept": null
+      "concept": "Avengers"
     },
     "q-0507": {
-      "hash": "39c7c9ad244c",
+      "hash": "acc3b8bdd6f4",
       "answer": "Wakanda",
-      "concept": null
+      "concept": "Wakanda"
     },
     "q-0508": {
       "hash": "128965f18f9f",
@@ -2473,24 +2473,24 @@
       "concept": null
     },
     "q-0510": {
-      "hash": "8e5102ec2b8e",
+      "hash": "1e2173629528",
       "answer": "Mega Man",
-      "concept": null
+      "concept": "Mega Man"
     },
     "q-0511": {
-      "hash": "18ee39a29649",
+      "hash": "e4a8bae95258",
       "answer": "Raichu",
-      "concept": null
+      "concept": "Raichu"
     },
     "q-0512": {
-      "hash": "70c3c7294719",
+      "hash": "210be496139f",
       "answer": "Peach",
-      "concept": null
+      "concept": "Princess Peach"
     },
     "q-0513": {
-      "hash": "7384ba8c07ec",
+      "hash": "8717698fac4b",
       "answer": "4",
-      "concept": null
+      "concept": "Pac-Man"
     },
     "q-0514": {
       "hash": "8bd9c6d961ec",
@@ -2508,9 +2508,9 @@
       "concept": "Nuuk"
     },
     "q-0517": {
-      "hash": "3d78d2670151",
+      "hash": "36f9018a6fc7",
       "answer": "Costeños",
-      "concept": "Costeño"
+      "concept": null
     },
     "q-0518": {
       "hash": "9a55fda1c587",
@@ -2518,9 +2518,9 @@
       "concept": "Head coach"
     },
     "q-0519": {
-      "hash": "85a87d7e8098",
+      "hash": "20087d556373",
       "answer": "Jorge Tadeo Lozano University",
-      "concept": "Jorge Tadeo Lozano"
+      "concept": null
     },
     "q-0520": {
       "hash": "7016d70c738d",
@@ -2538,19 +2538,19 @@
       "concept": "Beijing"
     },
     "q-0523": {
-      "hash": "453eec55b11d",
+      "hash": "f93709b71039",
       "answer": "Medellín",
-      "concept": "Aburrá Valley"
+      "concept": null
     },
     "q-0524": {
-      "hash": "947ec8ba6127",
+      "hash": "ffbd939388b8",
       "answer": "Alstroemeria",
-      "concept": "Alstroemeria"
+      "concept": null
     },
     "q-0525": {
-      "hash": "32cdc13b4670",
+      "hash": "681d0e62b24b",
       "answer": "Gunpowder",
-      "concept": "Gunpowder"
+      "concept": null
     },
     "q-0526": {
       "hash": "3227db258815",
@@ -2593,7 +2593,7 @@
       "concept": "Ancient pentathlon"
     },
     "q-0534": {
-      "hash": "55822250c1a7",
+      "hash": "a84b59b1892d",
       "answer": "According to superstition, they bring bad luck",
       "concept": "Black cat"
     },
@@ -2618,14 +2618,14 @@
       "concept": "The Avengers"
     },
     "q-0540": {
-      "hash": "2c1fbfd7f222",
+      "hash": "dab89a5157ec",
       "answer": "2014",
-      "concept": "James Rodríguez's goal against Uruguay"
+      "concept": null
     },
     "q-0541": {
-      "hash": "49ea3bda11c2",
-      "answer": "18 years old",
-      "concept": "Linda Caicedo's goal against Germany"
+      "hash": "42cb4f34ebef",
+      "answer": "18 years",
+      "concept": null
     },
     "q-0542": {
       "hash": "38640429600a",
@@ -2678,14 +2678,14 @@
       "concept": "Pompey against the pirates"
     },
     "q-0552": {
-      "hash": "c0289dec8e58",
-      "answer": "A Chocoan",
-      "concept": "Chocoan"
+      "hash": "19a9d4d22ccf",
+      "answer": "Someone from Chocó",
+      "concept": null
     },
     "q-0554": {
-      "hash": "8abed6d43092",
-      "answer": "The raven",
-      "concept": null
+      "hash": "f68baa19d9f1",
+      "answer": "Crow",
+      "concept": "Crow"
     },
     "q-0555": {
       "hash": "d551eedc5fd6",
@@ -2693,14 +2693,14 @@
       "concept": "Sapote"
     },
     "q-0556": {
-      "hash": "691fb40c930e",
-      "answer": "The kernel-less center of the corn cob",
-      "concept": "Corn cob"
+      "hash": "9c9379509be2",
+      "answer": "The center of the corn cob without kernels",
+      "concept": null
     },
     "q-0557": {
-      "hash": "8216912635b4",
-      "answer": "The prisoner",
-      "concept": "Fruko y sus Tesos"
+      "hash": "46cc8e1ddc21",
+      "answer": "Prisoner",
+      "concept": null
     },
     "q-0558": {
       "hash": "d05861dbb3e0",
@@ -2738,9 +2738,9 @@
       "concept": "Day of the Holy Innocents"
     },
     "q-0565": {
-      "hash": "6c4eb4c90eb0",
+      "hash": "eeedf3ab8847",
       "answer": "Crazy hour",
-      "concept": "Crazy hour"
+      "concept": null
     },
     "q-0566": {
       "hash": "36be3b14c1e8",
@@ -2813,9 +2813,9 @@
       "concept": "Lichen"
     },
     "q-0580": {
-      "hash": "1247a654fd15",
-      "answer": "San Lorenzo Castle at Chagres",
-      "concept": "Fort San Lorenzo"
+      "hash": "41d0141b55e2",
+      "answer": "San Lorenzo Castle, Chagres",
+      "concept": null
     },
     "q-0581": {
       "hash": "43a1e019dbef",
@@ -2823,14 +2823,14 @@
       "concept": "Morro Castle, Havana"
     },
     "q-0582": {
-      "hash": "1ac4d2df456c",
+      "hash": "1c4d60d3fa08",
       "answer": "From Bogotá",
-      "concept": "Rolo"
+      "concept": null
     },
     "q-0583": {
-      "hash": "a3ec72f2c070",
+      "hash": "0bed7a5a99c3",
       "answer": "English",
-      "concept": "San Andrés Creole"
+      "concept": null
     },
     "q-0584": {
       "hash": "ce1fb7aa66c4",
@@ -2848,14 +2848,14 @@
       "concept": "Black vulture"
     },
     "q-0587": {
-      "hash": "fc6840d549f0",
+      "hash": "2bc6b6101d85",
       "answer": "It is the official seat and residence of the president",
-      "concept": "Casa de Nariño"
+      "concept": null
     },
     "q-0588": {
-      "hash": "78d82139c2cb",
+      "hash": "85fe28c4b5db",
       "answer": "Antioquia",
-      "concept": "Flag of Antioquia"
+      "concept": null
     },
     "q-0589": {
       "hash": "580d7289a6d3",
@@ -2883,9 +2883,9 @@
       "concept": "1883 eruption of Krakatoa"
     },
     "q-0594": {
-      "hash": "339b8b840cca",
+      "hash": "8915b6ccefe3",
       "answer": "About 12,000 km",
-      "concept": "1815 eruption of Tambora"
+      "concept": "1815 eruption of Mount Tambora"
     },
     "q-0595": {
       "hash": "e35d01d53afc",
@@ -3078,8 +3078,8 @@
       "concept": "Maple leaf"
     },
     "q-0633": {
-      "hash": "432038d71fa3",
-      "answer": "1,852 meters",
+      "hash": "e3a342a0637a",
+      "answer": "1852 meters",
       "concept": "Nautical mile"
     },
     "q-0634": {
@@ -3453,8 +3453,8 @@
       "concept": "Skateboard"
     },
     "q-0716": {
-      "hash": "35a031b4a052",
-      "answer": "4,000 meters",
+      "hash": "f156fcfbb500",
+      "answer": "4000 meters",
       "concept": "Skydiving"
     },
     "q-0717": {
@@ -3503,8 +3503,8 @@
       "concept": "Mongols"
     },
     "q-0726": {
-      "hash": "e81dc5654fd5",
-      "answer": "7,000 years",
+      "hash": "b3a07c245749",
+      "answer": "7000 years",
       "concept": "Chinchorro culture"
     },
     "q-0727": {
@@ -3523,8 +3523,8 @@
       "concept": "Cenote"
     },
     "q-0730": {
-      "hash": "7b21c803574f",
-      "answer": "About 1,000 °C",
+      "hash": "de1255581a5e",
+      "answer": "About 1000 °C",
       "concept": "Eruption"
     },
     "q-0731": {
@@ -3898,8 +3898,8 @@
       "concept": "Cliff"
     },
     "q-0809": {
-      "hash": "2d96ee8b621a",
-      "answer": "About 1,000 km",
+      "hash": "fa6c957361d2",
+      "answer": "About 1000 km",
       "concept": "Galápagos Islands"
     },
     "q-0810": {
@@ -4113,9 +4113,9 @@
       "concept": "Uffizi Gallery"
     },
     "q-0853": {
-      "hash": "a373137c4a9b",
+      "hash": "c1b8e5a7519d",
       "answer": "A banana",
-      "concept": "Comedian (banana taped to a wall)"
+      "concept": "Comedian (banana taped to wall)"
     },
     "q-0854": {
       "hash": "4bd8a3a44695",
@@ -4353,7 +4353,7 @@
       "concept": "Hydrangea"
     },
     "q-0902": {
-      "hash": "a69de1532a8d",
+      "hash": "021e3bd089af",
       "answer": "Poison dart frog tadpoles",
       "concept": "Bromeliad"
     },
@@ -4438,8 +4438,8 @@
       "concept": "Dragonfly"
     },
     "q-0921": {
-      "hash": "a61b0c09fa92",
-      "answer": "About 13,500 tonnes",
+      "hash": "7044bddefd04",
+      "answer": "About 13,500 tons",
       "concept": "Bagger 288"
     },
     "q-0923": {
@@ -4558,8 +4558,8 @@
       "concept": "Reforestation"
     },
     "q-0947": {
-      "hash": "d3e298a3a94e",
-      "answer": "The light bulb",
+      "hash": "5dc6155772cf",
+      "answer": "Light bulb",
       "concept": "Benjamin Franklin's kite"
     },
     "q-0948": {
@@ -5108,8 +5108,8 @@
       "concept": "Giant Rosca de Reyes"
     },
     "q-1063": {
-      "hash": "057440cc2307",
-      "answer": "9,000 years",
+      "hash": "ee3ecec54d59",
+      "answer": "9000 years",
       "concept": "Guinness Brewery"
     },
     "q-1064": {
@@ -5123,8 +5123,8 @@
       "concept": "Javier Sotomayor"
     },
     "q-1066": {
-      "hash": "0c2712072a6c",
-      "answer": "About 4,800 years",
+      "hash": "5b168f972984",
+      "answer": "About 4800 years",
       "concept": "Methuselah pine"
     },
     "q-1067": {
@@ -5368,7 +5368,7 @@
       "concept": "Academy Award for Best Animated Feature"
     },
     "q-1115": {
-      "hash": "a335767b9b95",
+      "hash": "e127b1c3da97",
       "answer": "Computer",
       "concept": "Computer animation"
     },
@@ -5773,9 +5773,9 @@
       "concept": "Capsaicin"
     },
     "q-1197": {
-      "hash": "f93b254925cd",
+      "hash": "aef6344c33a3",
       "answer": "Beans",
-      "concept": "Bean"
+      "concept": "Beans"
     },
     "q-1198": {
       "hash": "96761be405df",

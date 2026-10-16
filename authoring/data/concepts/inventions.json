@@ -1,0 +1,707 @@
+{
+  "subcategory": "inventions",
+  "facets": [
+    "Inventions in the home and kitchen",
+    "Communication and media inventions",
+    "Transport and travel inventions",
+    "Ancient and early inventions",
+    "Medical and health inventions",
+    "Tools, machines and engines",
+    "Light, energy and electricity",
+    "Toys, games and leisure inventions",
+    "Accidental and surprising inventions",
+    "Famous inventors and their workshops",
+    "Measuring and timekeeping inventions",
+    "Inventions for clothing and materials"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 5,
+      "made_of": 3,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 3,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 5,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 3,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Vacuum cleaner",
+      "facet": "Inventions in the home and kitchen",
+      "known_at": 2
+    },
+    {
+      "name": "Washing machine",
+      "facet": "Inventions in the home and kitchen",
+      "known_at": 2
+    },
+    {
+      "name": "Dishwasher",
+      "facet": "Inventions in the home and kitchen",
+      "known_at": 3
+    },
+    {
+      "name": "Flush toilet",
+      "facet": "Inventions in the home and kitchen",
+      "known_at": 3
+    },
+    {
+      "name": "Tin can",
+      "facet": "Inventions in the home and kitchen",
+      "known_at": 5
+    },
+    {
+      "name": "Air conditioning",
+      "facet": "Inventions in the home and kitchen",
+      "known_at": 4
+    },
+    {
+      "name": "Electric iron",
+      "facet": "Inventions in the home and kitchen",
+      "known_at": 4
+    },
+    {
+      "name": "Espresso machine",
+      "facet": "Inventions in the home and kitchen",
+      "known_at": 8
+    },
+    {
+      "name": "Toothbrush",
+      "facet": "Inventions in the home and kitchen",
+      "known_at": 2
+    },
+    {
+      "name": "Smoke detector",
+      "facet": "Inventions in the home and kitchen",
+      "known_at": 6
+    },
+    {
+      "name": "Telephone",
+      "facet": "Communication and media inventions",
+      "known_at": 1
+    },
+    {
+      "name": "Telegraph",
+      "facet": "Communication and media inventions",
+      "known_at": 8
+    },
+    {
+      "name": "Email",
+      "facet": "Communication and media inventions",
+      "known_at": 5
+    },
+    {
+      "name": "Camera",
+      "facet": "Communication and media inventions",
+      "known_at": 2
+    },
+    {
+      "name": "Typewriter",
+      "facet": "Communication and media inventions",
+      "known_at": 6
+    },
+    {
+      "name": "Communications satellite",
+      "facet": "Communication and media inventions",
+      "known_at": 7
+    },
+    {
+      "name": "Gramophone",
+      "facet": "Communication and media inventions",
+      "known_at": 8
+    },
+    {
+      "name": "Phonograph",
+      "facet": "Communication and media inventions",
+      "known_at": 10
+    },
+    {
+      "name": "Cinematograph",
+      "facet": "Communication and media inventions",
+      "known_at": 11
+    },
+    {
+      "name": "Fax machine",
+      "facet": "Communication and media inventions",
+      "known_at": 9
+    },
+    {
+      "name": "Computer",
+      "facet": "Communication and media inventions",
+      "known_at": 2
+    },
+    {
+      "name": "Bicycle",
+      "facet": "Transport and travel inventions",
+      "known_at": 1
+    },
+    {
+      "name": "Car",
+      "facet": "Transport and travel inventions",
+      "known_at": 1
+    },
+    {
+      "name": "Airplane",
+      "facet": "Transport and travel inventions",
+      "known_at": 1
+    },
+    {
+      "name": "Steam locomotive",
+      "facet": "Transport and travel inventions",
+      "known_at": 5
+    },
+    {
+      "name": "Hot air balloon",
+      "facet": "Transport and travel inventions",
+      "known_at": 3
+    },
+    {
+      "name": "Helicopter",
+      "facet": "Transport and travel inventions",
+      "known_at": 2
+    },
+    {
+      "name": "Parachute",
+      "facet": "Transport and travel inventions",
+      "known_at": 4
+    },
+    {
+      "name": "Rocket",
+      "facet": "Transport and travel inventions",
+      "known_at": 3
+    },
+    {
+      "name": "Jet engine",
+      "facet": "Transport and travel inventions",
+      "known_at": 8
+    },
+    {
+      "name": "Elevator",
+      "facet": "Transport and travel inventions",
+      "known_at": 3
+    },
+    {
+      "name": "Escalator",
+      "facet": "Transport and travel inventions",
+      "known_at": 4
+    },
+    {
+      "name": "Traffic light",
+      "facet": "Transport and travel inventions",
+      "known_at": 2
+    },
+    {
+      "name": "Seat belt",
+      "facet": "Transport and travel inventions",
+      "known_at": 3
+    },
+    {
+      "name": "Hovercraft",
+      "facet": "Transport and travel inventions",
+      "known_at": 9
+    },
+    {
+      "name": "Steamboat",
+      "facet": "Transport and travel inventions",
+      "known_at": 7
+    },
+    {
+      "name": "Wheel",
+      "facet": "Ancient and early inventions",
+      "known_at": 2
+    },
+    {
+      "name": "Paper",
+      "facet": "Ancient and early inventions",
+      "known_at": 3
+    },
+    {
+      "name": "Gunpowder",
+      "facet": "Ancient and early inventions",
+      "known_at": 7
+    },
+    {
+      "name": "Papyrus",
+      "facet": "Ancient and early inventions",
+      "known_at": 7
+    },
+    {
+      "name": "Abacus",
+      "facet": "Ancient and early inventions",
+      "known_at": 6
+    },
+    {
+      "name": "Plow",
+      "facet": "Ancient and early inventions",
+      "known_at": 6
+    },
+    {
+      "name": "Potter's wheel",
+      "facet": "Ancient and early inventions",
+      "known_at": 8
+    },
+    {
+      "name": "Archimedes' screw",
+      "facet": "Ancient and early inventions",
+      "known_at": 11
+    },
+    {
+      "name": "Roman aqueduct",
+      "facet": "Ancient and early inventions",
+      "known_at": 9
+    },
+    {
+      "name": "Bow and arrow",
+      "facet": "Ancient and early inventions",
+      "known_at": 3
+    },
+    {
+      "name": "Hieroglyphs",
+      "facet": "Ancient and early inventions",
+      "known_at": 7
+    },
+    {
+      "name": "Movable type",
+      "facet": "Ancient and early inventions",
+      "known_at": 12
+    },
+    {
+      "name": "Woodblock printing",
+      "facet": "Ancient and early inventions",
+      "known_at": 12
+    },
+    {
+      "name": "Eyeglasses",
+      "facet": "Medical and health inventions",
+      "known_at": 2
+    },
+    {
+      "name": "Syringe",
+      "facet": "Medical and health inventions",
+      "known_at": 3
+    },
+    {
+      "name": "Hearing aid",
+      "facet": "Medical and health inventions",
+      "known_at": 4
+    },
+    {
+      "name": "Wheelchair",
+      "facet": "Medical and health inventions",
+      "known_at": 2
+    },
+    {
+      "name": "Pacemaker",
+      "facet": "Medical and health inventions",
+      "known_at": 9
+    },
+    {
+      "name": "MRI scanner",
+      "facet": "Medical and health inventions",
+      "known_at": 9
+    },
+    {
+      "name": "Contact lens",
+      "facet": "Medical and health inventions",
+      "known_at": 6
+    },
+    {
+      "name": "Prosthetic leg",
+      "facet": "Medical and health inventions",
+      "known_at": 6
+    },
+    {
+      "name": "Defibrillator",
+      "facet": "Medical and health inventions",
+      "known_at": 8
+    },
+    {
+      "name": "Ultrasound scan",
+      "facet": "Medical and health inventions",
+      "known_at": 7
+    },
+    {
+      "name": "Steam engine",
+      "facet": "Tools, machines and engines",
+      "known_at": 6
+    },
+    {
+      "name": "Screw",
+      "facet": "Tools, machines and engines",
+      "known_at": 3
+    },
+    {
+      "name": "Hammer",
+      "facet": "Tools, machines and engines",
+      "known_at": 1
+    },
+    {
+      "name": "Saw",
+      "facet": "Tools, machines and engines",
+      "known_at": 2
+    },
+    {
+      "name": "Electric drill",
+      "facet": "Tools, machines and engines",
+      "known_at": 3
+    },
+    {
+      "name": "Internal combustion engine",
+      "facet": "Tools, machines and engines",
+      "known_at": 9
+    },
+    {
+      "name": "Electric motor",
+      "facet": "Tools, machines and engines",
+      "known_at": 7
+    },
+    {
+      "name": "Assembly line",
+      "facet": "Tools, machines and engines",
+      "known_at": 9
+    },
+    {
+      "name": "Spinning jenny",
+      "facet": "Tools, machines and engines",
+      "known_at": 12
+    },
+    {
+      "name": "Cotton gin",
+      "facet": "Tools, machines and engines",
+      "known_at": 12
+    },
+    {
+      "name": "Bulldozer",
+      "facet": "Tools, machines and engines",
+      "known_at": 3
+    },
+    {
+      "name": "Lathe",
+      "facet": "Tools, machines and engines",
+      "known_at": 11
+    },
+    {
+      "name": "3D printer",
+      "facet": "Tools, machines and engines",
+      "known_at": 5
+    },
+    {
+      "name": "Calculator",
+      "facet": "Tools, machines and engines",
+      "known_at": 3
+    },
+    {
+      "name": "Chainsaw",
+      "facet": "Tools, machines and engines",
+      "known_at": 4
+    },
+    {
+      "name": "Light bulb",
+      "facet": "Light, energy and electricity",
+      "known_at": 1
+    },
+    {
+      "name": "Battery",
+      "facet": "Light, energy and electricity",
+      "known_at": 3
+    },
+    {
+      "name": "Candle",
+      "facet": "Light, energy and electricity",
+      "known_at": 1
+    },
+    {
+      "name": "Oil lamp",
+      "facet": "Light, energy and electricity",
+      "known_at": 4
+    },
+    {
+      "name": "Lightning rod",
+      "facet": "Light, energy and electricity",
+      "known_at": 6
+    },
+    {
+      "name": "Electric generator",
+      "facet": "Light, energy and electricity",
+      "known_at": 8
+    },
+    {
+      "name": "Alternating current",
+      "facet": "Light, energy and electricity",
+      "known_at": 10
+    },
+    {
+      "name": "Neon lamp",
+      "facet": "Light, energy and electricity",
+      "known_at": 9
+    },
+    {
+      "name": "Flashlight",
+      "facet": "Light, energy and electricity",
+      "known_at": 2
+    },
+    {
+      "name": "Fluorescent lamp",
+      "facet": "Light, energy and electricity",
+      "known_at": 8
+    },
+    {
+      "name": "Yo-yo",
+      "facet": "Toys, games and leisure inventions",
+      "known_at": 2
+    },
+    {
+      "name": "Kite",
+      "facet": "Toys, games and leisure inventions",
+      "known_at": 2
+    },
+    {
+      "name": "Video game",
+      "facet": "Toys, games and leisure inventions",
+      "known_at": 2
+    },
+    {
+      "name": "Teddy bear",
+      "facet": "Toys, games and leisure inventions",
+      "known_at": 2
+    },
+    {
+      "name": "Chess",
+      "facet": "Toys, games and leisure inventions",
+      "known_at": 2
+    },
+    {
+      "name": "Playing cards",
+      "facet": "Toys, games and leisure inventions",
+      "known_at": 4
+    },
+    {
+      "name": "Trampoline",
+      "facet": "Toys, games and leisure inventions",
+      "known_at": 3
+    },
+    {
+      "name": "Roller coaster",
+      "facet": "Toys, games and leisure inventions",
+      "known_at": 3
+    },
+    {
+      "name": "Ferris wheel",
+      "facet": "Toys, games and leisure inventions",
+      "known_at": 4
+    },
+    {
+      "name": "Skateboard",
+      "facet": "Toys, games and leisure inventions",
+      "known_at": 3
+    },
+    {
+      "name": "Jigsaw puzzle",
+      "facet": "Toys, games and leisure inventions",
+      "known_at": 3
+    },
+    {
+      "name": "Dominoes",
+      "facet": "Toys, games and leisure inventions",
+      "known_at": 3
+    },
+    {
+      "name": "Silly Putty",
+      "facet": "Accidental and surprising inventions",
+      "known_at": 8
+    },
+    {
+      "name": "Saccharin",
+      "facet": "Accidental and surprising inventions",
+      "known_at": 13
+    },
+    {
+      "name": "Safety glass",
+      "facet": "Accidental and surprising inventions",
+      "known_at": 12
+    },
+    {
+      "name": "Mauveine",
+      "facet": "Accidental and surprising inventions",
+      "known_at": 14
+    },
+    {
+      "name": "Ice cream cone",
+      "facet": "Accidental and surprising inventions",
+      "known_at": 4
+    },
+    {
+      "name": "Fireworks",
+      "facet": "Accidental and surprising inventions",
+      "known_at": 5
+    },
+    {
+      "name": "Wright brothers",
+      "facet": "Famous inventors and their workshops",
+      "known_at": 6
+    },
+    {
+      "name": "Ismail al-Jazari",
+      "facet": "Famous inventors and their workshops",
+      "known_at": 15
+    },
+    {
+      "name": "Menlo Park",
+      "facet": "Famous inventors and their workshops",
+      "known_at": 13
+    },
+    {
+      "name": "Lumière brothers",
+      "facet": "Famous inventors and their workshops",
+      "known_at": 10
+    },
+    {
+      "name": "Clock",
+      "facet": "Measuring and timekeeping inventions",
+      "known_at": 1
+    },
+    {
+      "name": "Sundial",
+      "facet": "Measuring and timekeeping inventions",
+      "known_at": 5
+    },
+    {
+      "name": "Pendulum clock",
+      "facet": "Measuring and timekeeping inventions",
+      "known_at": 9
+    },
+    {
+      "name": "Wristwatch",
+      "facet": "Measuring and timekeeping inventions",
+      "known_at": 2
+    },
+    {
+      "name": "Balance scale",
+      "facet": "Measuring and timekeeping inventions",
+      "known_at": 3
+    },
+    {
+      "name": "Seismograph",
+      "facet": "Measuring and timekeeping inventions",
+      "known_at": 9
+    },
+    {
+      "name": "Water clock",
+      "facet": "Measuring and timekeeping inventions",
+      "known_at": 10
+    },
+    {
+      "name": "Tape measure",
+      "facet": "Measuring and timekeeping inventions",
+      "known_at": 2
+    },
+    {
+      "name": "Zipper",
+      "facet": "Inventions for clothing and materials",
+      "known_at": 2
+    },
+    {
+      "name": "Button",
+      "facet": "Inventions for clothing and materials",
+      "known_at": 1
+    },
+    {
+      "name": "Sewing machine",
+      "facet": "Inventions for clothing and materials",
+      "known_at": 6
+    },
+    {
+      "name": "Nylon",
+      "facet": "Inventions for clothing and materials",
+      "known_at": 8
+    },
+    {
+      "name": "Plastic",
+      "facet": "Inventions for clothing and materials",
+      "known_at": 3
+    },
+    {
+      "name": "Vulcanized rubber",
+      "facet": "Inventions for clothing and materials",
+      "known_at": 12
+    },
+    {
+      "name": "Glass",
+      "facet": "Inventions for clothing and materials",
+      "known_at": 4
+    },
+    {
+      "name": "Concrete",
+      "facet": "Inventions for clothing and materials",
+      "known_at": 5
+    },
+    {
+      "name": "Stainless steel",
+      "facet": "Inventions for clothing and materials",
+      "known_at": 9
+    },
+    {
+      "name": "Raincoat",
+      "facet": "Inventions for clothing and materials",
+      "known_at": 10
+    },
+    {
+      "name": "Polyester",
+      "facet": "Inventions for clothing and materials",
+      "known_at": 9
+    },
+    {
+      "name": "Safety pin",
+      "facet": "Inventions for clothing and materials",
+      "known_at": 3
+    },
+    {
+      "name": "Bakelite",
+      "facet": "Inventions for clothing and materials",
+      "known_at": 13
+    },
+    {
+      "name": "Spinning wheel",
+      "facet": "Inventions for clothing and materials",
+      "known_at": 7
+    },
+    {
+      "name": "Loom",
+      "facet": "Inventions for clothing and materials",
+      "known_at": 7
+    }
+  ]
+}

@@ -1,0 +1,973 @@
+{
+  "subcategory": "optical-illusions",
+  "facets": [
+    "Classic named illusions",
+    "Impossible objects and figures",
+    "Ambiguous and two-way pictures",
+    "Color and brightness illusions",
+    "Motion and afterimage illusions",
+    "Size and distance illusions",
+    "Illusions in nature and the sky",
+    "Illusion artists and artworks",
+    "Tricks in film, stage and photos",
+    "How eyes and brain see",
+    "Illusions in everyday life",
+    "Viral and internet illusions"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 2,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 5,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 3,
+      "university": 4,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 5,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 3,
+      "history": 3,
+      "body_senses": 5,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Müller-Lyer illusion",
+      "facet": "Classic named illusions",
+      "known_at": 12
+    },
+    {
+      "name": "Ebbinghaus illusion",
+      "facet": "Classic named illusions",
+      "known_at": 12
+    },
+    {
+      "name": "Ponzo illusion",
+      "facet": "Classic named illusions",
+      "known_at": 13
+    },
+    {
+      "name": "Café wall illusion",
+      "facet": "Classic named illusions",
+      "known_at": 13
+    },
+    {
+      "name": "Hermann grid illusion",
+      "facet": "Classic named illusions",
+      "known_at": 12
+    },
+    {
+      "name": "Kanizsa triangle",
+      "facet": "Classic named illusions",
+      "known_at": 13
+    },
+    {
+      "name": "Zöllner illusion",
+      "facet": "Classic named illusions",
+      "known_at": 14
+    },
+    {
+      "name": "Poggendorff illusion",
+      "facet": "Classic named illusions",
+      "known_at": 14
+    },
+    {
+      "name": "Hering illusion",
+      "facet": "Classic named illusions",
+      "known_at": 14
+    },
+    {
+      "name": "Fraser spiral",
+      "facet": "Classic named illusions",
+      "known_at": 13
+    },
+    {
+      "name": "Vertical–horizontal illusion",
+      "facet": "Classic named illusions",
+      "known_at": 13
+    },
+    {
+      "name": "Ehrenstein illusion",
+      "facet": "Classic named illusions",
+      "known_at": 15
+    },
+    {
+      "name": "Ouchi illusion",
+      "facet": "Classic named illusions",
+      "known_at": 15
+    },
+    {
+      "name": "Orbison illusion",
+      "facet": "Classic named illusions",
+      "known_at": 15
+    },
+    {
+      "name": "Sander parallelogram",
+      "facet": "Classic named illusions",
+      "known_at": 15
+    },
+    {
+      "name": "Impossible object",
+      "facet": "Impossible objects and figures",
+      "known_at": 10
+    },
+    {
+      "name": "Penrose triangle",
+      "facet": "Impossible objects and figures",
+      "known_at": 9
+    },
+    {
+      "name": "Penrose stairs",
+      "facet": "Impossible objects and figures",
+      "known_at": 10
+    },
+    {
+      "name": "Impossible trident",
+      "facet": "Impossible objects and figures",
+      "known_at": 10
+    },
+    {
+      "name": "Impossible cube",
+      "facet": "Impossible objects and figures",
+      "known_at": 11
+    },
+    {
+      "name": "Impossible elephant",
+      "facet": "Impossible objects and figures",
+      "known_at": 8
+    },
+    {
+      "name": "Möbius strip",
+      "facet": "Impossible objects and figures",
+      "known_at": 8
+    },
+    {
+      "name": "Klein bottle",
+      "facet": "Impossible objects and figures",
+      "known_at": 12
+    },
+    {
+      "name": "Ship in a bottle",
+      "facet": "Impossible objects and figures",
+      "known_at": 6
+    },
+    {
+      "name": "Impossible Triangle sculpture (Perth)",
+      "facet": "Impossible objects and figures",
+      "known_at": 14
+    },
+    {
+      "name": "Ambiguous cylinder illusion",
+      "facet": "Impossible objects and figures",
+      "known_at": 13
+    },
+    {
+      "name": "Ambiguous garage roof",
+      "facet": "Impossible objects and figures",
+      "known_at": 15
+    },
+    {
+      "name": "Reutersvärd triangle",
+      "facet": "Impossible objects and figures",
+      "known_at": 15
+    },
+    {
+      "name": "Endless staircase in Inception",
+      "facet": "Impossible objects and figures",
+      "known_at": 11
+    },
+    {
+      "name": "Impossible bolt",
+      "facet": "Impossible objects and figures",
+      "known_at": 14
+    },
+    {
+      "name": "Rubin vase",
+      "facet": "Ambiguous and two-way pictures",
+      "known_at": 7
+    },
+    {
+      "name": "Duck–rabbit",
+      "facet": "Ambiguous and two-way pictures",
+      "known_at": 8
+    },
+    {
+      "name": "My Wife and My Mother-in-Law",
+      "facet": "Ambiguous and two-way pictures",
+      "known_at": 10
+    },
+    {
+      "name": "Necker cube",
+      "facet": "Ambiguous and two-way pictures",
+      "known_at": 12
+    },
+    {
+      "name": "Schröder stairs",
+      "facet": "Ambiguous and two-way pictures",
+      "known_at": 14
+    },
+    {
+      "name": "Ambigram",
+      "facet": "Ambiguous and two-way pictures",
+      "known_at": 11
+    },
+    {
+      "name": "Figure–ground",
+      "facet": "Ambiguous and two-way pictures",
+      "known_at": 13
+    },
+    {
+      "name": "Reversible upside-down picture",
+      "facet": "Ambiguous and two-way pictures",
+      "known_at": 11
+    },
+    {
+      "name": "Saxophone player or woman's face",
+      "facet": "Ambiguous and two-way pictures",
+      "known_at": 11
+    },
+    {
+      "name": "Rat-man figure",
+      "facet": "Ambiguous and two-way pictures",
+      "known_at": 15
+    },
+    {
+      "name": "Marilyn Einstein hybrid image",
+      "facet": "Ambiguous and two-way pictures",
+      "known_at": 12
+    },
+    {
+      "name": "All Is Vanity skull picture",
+      "facet": "Ambiguous and two-way pictures",
+      "known_at": 13
+    },
+    {
+      "name": "Message from the Sea dolphins",
+      "facet": "Ambiguous and two-way pictures",
+      "known_at": 12
+    },
+    {
+      "name": "Bistable perception",
+      "facet": "Ambiguous and two-way pictures",
+      "known_at": 15
+    },
+    {
+      "name": "Hidden picture",
+      "facet": "Ambiguous and two-way pictures",
+      "known_at": 4
+    },
+    {
+      "name": "Checker shadow illusion",
+      "facet": "Color and brightness illusions",
+      "known_at": 11
+    },
+    {
+      "name": "Color constancy",
+      "facet": "Color and brightness illusions",
+      "known_at": 14
+    },
+    {
+      "name": "Simultaneous contrast",
+      "facet": "Color and brightness illusions",
+      "known_at": 13
+    },
+    {
+      "name": "Mach bands",
+      "facet": "Color and brightness illusions",
+      "known_at": 14
+    },
+    {
+      "name": "Benham's top",
+      "facet": "Color and brightness illusions",
+      "known_at": 13
+    },
+    {
+      "name": "Newton disc",
+      "facet": "Color and brightness illusions",
+      "known_at": 10
+    },
+    {
+      "name": "Cornsweet illusion",
+      "facet": "Color and brightness illusions",
+      "known_at": 15
+    },
+    {
+      "name": "White's illusion",
+      "facet": "Color and brightness illusions",
+      "known_at": 15
+    },
+    {
+      "name": "Munker illusion",
+      "facet": "Color and brightness illusions",
+      "known_at": 15,
+      "retired": "unaskable: Too obscure for families, even at 15. The options give no fair question: the 'who' answer is just the illusion's own name."
+    },
+    {
+      "name": "Bezold effect",
+      "facet": "Color and brightness illusions",
+      "known_at": 15
+    },
+    {
+      "name": "Watercolor illusion",
+      "facet": "Color and brightness illusions",
+      "known_at": 15
+    },
+    {
+      "name": "Neon color spreading",
+      "facet": "Color and brightness illusions",
+      "known_at": 15
+    },
+    {
+      "name": "Purkinje effect",
+      "facet": "Color and brightness illusions",
+      "known_at": 15
+    },
+    {
+      "name": "Rubik's cube color illusion",
+      "facet": "Color and brightness illusions",
+      "known_at": 13
+    },
+    {
+      "name": "Gradient illusion",
+      "facet": "Color and brightness illusions",
+      "known_at": 11
+    },
+    {
+      "name": "Motion aftereffect",
+      "facet": "Motion and afterimage illusions",
+      "known_at": 14
+    },
+    {
+      "name": "Thaumatrope",
+      "facet": "Motion and afterimage illusions",
+      "known_at": 12
+    },
+    {
+      "name": "Zoetrope",
+      "facet": "Motion and afterimage illusions",
+      "known_at": 11
+    },
+    {
+      "name": "Flip book",
+      "facet": "Motion and afterimage illusions",
+      "known_at": 5
+    },
+    {
+      "name": "Phenakistiscope",
+      "facet": "Motion and afterimage illusions",
+      "known_at": 14
+    },
+    {
+      "name": "Praxinoscope",
+      "facet": "Motion and afterimage illusions",
+      "known_at": 15
+    },
+    {
+      "name": "Stroboscopic effect",
+      "facet": "Motion and afterimage illusions",
+      "known_at": 12
+    },
+    {
+      "name": "Wagon-wheel effect",
+      "facet": "Motion and afterimage illusions",
+      "known_at": 12
+    },
+    {
+      "name": "Phi phenomenon",
+      "facet": "Motion and afterimage illusions",
+      "known_at": 15
+    },
+    {
+      "name": "Persistence of vision",
+      "facet": "Motion and afterimage illusions",
+      "known_at": 11
+    },
+    {
+      "name": "Barber pole illusion",
+      "facet": "Motion and afterimage illusions",
+      "known_at": 11
+    },
+    {
+      "name": "Hypnotic spiral",
+      "facet": "Motion and afterimage illusions",
+      "known_at": 6
+    },
+    {
+      "name": "Vection",
+      "facet": "Motion and afterimage illusions",
+      "known_at": 14
+    },
+    {
+      "name": "Motion parallax",
+      "facet": "Motion and afterimage illusions",
+      "known_at": 14
+    },
+    {
+      "name": "Stepping feet illusion",
+      "facet": "Motion and afterimage illusions",
+      "known_at": 15
+    },
+    {
+      "name": "Ames room",
+      "facet": "Size and distance illusions",
+      "known_at": 11
+    },
+    {
+      "name": "Forced perspective",
+      "facet": "Size and distance illusions",
+      "known_at": 10
+    },
+    {
+      "name": "Shepard tables",
+      "facet": "Size and distance illusions",
+      "known_at": 13
+    },
+    {
+      "name": "Leaning tower illusion",
+      "facet": "Size and distance illusions",
+      "known_at": 14
+    },
+    {
+      "name": "Size–weight illusion",
+      "facet": "Size and distance illusions",
+      "known_at": 14
+    },
+    {
+      "name": "Beuchet chair",
+      "facet": "Size and distance illusions",
+      "known_at": 14
+    },
+    {
+      "name": "Vanishing point",
+      "facet": "Size and distance illusions",
+      "known_at": 9
+    },
+    {
+      "name": "Linear perspective",
+      "facet": "Size and distance illusions",
+      "known_at": 10
+    },
+    {
+      "name": "Atmospheric perspective",
+      "facet": "Size and distance illusions",
+      "known_at": 14
+    },
+    {
+      "name": "Size constancy",
+      "facet": "Size and distance illusions",
+      "known_at": 14
+    },
+    {
+      "name": "Parallax",
+      "facet": "Size and distance illusions",
+      "known_at": 13
+    },
+    {
+      "name": "Gravity hill",
+      "facet": "Size and distance illusions",
+      "known_at": 12
+    },
+    {
+      "name": "Tilt-shift photography",
+      "facet": "Size and distance illusions",
+      "known_at": 12
+    },
+    {
+      "name": "Ames window",
+      "facet": "Size and distance illusions",
+      "known_at": 14
+    },
+    {
+      "name": "Jastrow illusion",
+      "facet": "Size and distance illusions",
+      "known_at": 14
+    },
+    {
+      "name": "Delboeuf illusion",
+      "facet": "Size and distance illusions",
+      "known_at": 15
+    },
+    {
+      "name": "Mirage",
+      "facet": "Illusions in nature and the sky",
+      "known_at": 8
+    },
+    {
+      "name": "Moon illusion",
+      "facet": "Illusions in nature and the sky",
+      "known_at": 11
+    },
+    {
+      "name": "Sun halo",
+      "facet": "Illusions in nature and the sky",
+      "known_at": 11
+    },
+    {
+      "name": "Sun dog",
+      "facet": "Illusions in nature and the sky",
+      "known_at": 13
+    },
+    {
+      "name": "Brocken spectre",
+      "facet": "Illusions in nature and the sky",
+      "known_at": 15
+    },
+    {
+      "name": "Stick insect",
+      "facet": "Illusions in nature and the sky",
+      "known_at": 5
+    },
+    {
+      "name": "Eyespots",
+      "facet": "Illusions in nature and the sky",
+      "known_at": 9
+    },
+    {
+      "name": "Owl butterfly",
+      "facet": "Illusions in nature and the sky",
+      "known_at": 12
+    },
+    {
+      "name": "Mimic octopus",
+      "facet": "Illusions in nature and the sky",
+      "known_at": 12
+    },
+    {
+      "name": "Leaf-tailed gecko",
+      "facet": "Illusions in nature and the sky",
+      "known_at": 13
+    },
+    {
+      "name": "Zebra stripes",
+      "facet": "Illusions in nature and the sky",
+      "known_at": 5
+    },
+    {
+      "name": "Man in the Moon",
+      "facet": "Illusions in nature and the sky",
+      "known_at": 5
+    },
+    {
+      "name": "Bent stick in water",
+      "facet": "Illusions in nature and the sky",
+      "known_at": 8
+    },
+    {
+      "name": "Relativity (Escher)",
+      "facet": "Illusion artists and artworks",
+      "known_at": 12
+    },
+    {
+      "name": "Ascending and Descending",
+      "facet": "Illusion artists and artworks",
+      "known_at": 13
+    },
+    {
+      "name": "Waterfall (Escher)",
+      "facet": "Illusion artists and artworks",
+      "known_at": 13
+    },
+    {
+      "name": "Drawing Hands",
+      "facet": "Illusion artists and artworks",
+      "known_at": 12
+    },
+    {
+      "name": "Victor Vasarely",
+      "facet": "Illusion artists and artworks",
+      "known_at": 14
+    },
+    {
+      "name": "Bridget Riley",
+      "facet": "Illusion artists and artworks",
+      "known_at": 15
+    },
+    {
+      "name": "Swans Reflecting Elephants",
+      "facet": "Illusion artists and artworks",
+      "known_at": 14
+    },
+    {
+      "name": "Giuseppe Arcimboldo",
+      "facet": "Illusion artists and artworks",
+      "known_at": 12
+    },
+    {
+      "name": "The Ambassadors (Holbein)",
+      "facet": "Illusion artists and artworks",
+      "known_at": 14
+    },
+    {
+      "name": "René Magritte",
+      "facet": "Illusion artists and artworks",
+      "known_at": 12
+    },
+    {
+      "name": "The Treachery of Images",
+      "facet": "Illusion artists and artworks",
+      "known_at": 13
+    },
+    {
+      "name": "Oscar Reutersvärd",
+      "facet": "Illusion artists and artworks",
+      "known_at": 15
+    },
+    {
+      "name": "Akiyoshi Kitaoka",
+      "facet": "Illusion artists and artworks",
+      "known_at": 15
+    },
+    {
+      "name": "Kokichi Sugihara",
+      "facet": "Illusion artists and artworks",
+      "known_at": 15
+    },
+    {
+      "name": "Julian Beever",
+      "facet": "Illusion artists and artworks",
+      "known_at": 14
+    },
+    {
+      "name": "Trompe-l'œil",
+      "facet": "Illusion artists and artworks",
+      "known_at": 12
+    },
+    {
+      "name": "Anamorphosis",
+      "facet": "Illusion artists and artworks",
+      "known_at": 13
+    },
+    {
+      "name": "Andrea Pozzo",
+      "facet": "Illusion artists and artworks",
+      "known_at": 15
+    },
+    {
+      "name": "Green screen",
+      "facet": "Tricks in film, stage and photos",
+      "known_at": 7
+    },
+    {
+      "name": "The Lord of the Rings (film)",
+      "facet": "Tricks in film, stage and photos",
+      "known_at": 9
+    },
+    {
+      "name": "Pepper's ghost",
+      "facet": "Tricks in film, stage and photos",
+      "known_at": 14
+    },
+    {
+      "name": "Camera obscura",
+      "facet": "Tricks in film, stage and photos",
+      "known_at": 11
+    },
+    {
+      "name": "Frame rate",
+      "facet": "Tricks in film, stage and photos",
+      "known_at": 12
+    },
+    {
+      "name": "3D glasses",
+      "facet": "Tricks in film, stage and photos",
+      "known_at": 5
+    },
+    {
+      "name": "Anaglyph",
+      "facet": "Tricks in film, stage and photos",
+      "known_at": 13
+    },
+    {
+      "name": "Stereoscope",
+      "facet": "Tricks in film, stage and photos",
+      "known_at": 13
+    },
+    {
+      "name": "Matte painting",
+      "facet": "Tricks in film, stage and photos",
+      "known_at": 14
+    },
+    {
+      "name": "Bullet time",
+      "facet": "Tricks in film, stage and photos",
+      "known_at": 12
+    },
+    {
+      "name": "Dolly zoom",
+      "facet": "Tricks in film, stage and photos",
+      "known_at": 14
+    },
+    {
+      "name": "Black light theatre",
+      "facet": "Tricks in film, stage and photos",
+      "known_at": 12
+    },
+    {
+      "name": "Shadow puppets",
+      "facet": "Tricks in film, stage and photos",
+      "known_at": 3
+    },
+    {
+      "name": "Motion capture",
+      "facet": "Tricks in film, stage and photos",
+      "known_at": 10
+    },
+    {
+      "name": "Sawing a person in half",
+      "facet": "Tricks in film, stage and photos",
+      "known_at": 8
+    },
+    {
+      "name": "Holding up the Leaning Tower of Pisa",
+      "facet": "Tricks in film, stage and photos",
+      "known_at": 7
+    },
+    {
+      "name": "Brain",
+      "facet": "How eyes and brain see",
+      "known_at": 2
+    },
+    {
+      "name": "Lens of the eye",
+      "facet": "How eyes and brain see",
+      "known_at": 9
+    },
+    {
+      "name": "Optic nerve",
+      "facet": "How eyes and brain see",
+      "known_at": 11
+    },
+    {
+      "name": "Visual cortex",
+      "facet": "How eyes and brain see",
+      "known_at": 13
+    },
+    {
+      "name": "Fovea",
+      "facet": "How eyes and brain see",
+      "known_at": 14
+    },
+    {
+      "name": "Hollow-face illusion",
+      "facet": "How eyes and brain see",
+      "known_at": 12
+    },
+    {
+      "name": "Depth perception",
+      "facet": "How eyes and brain see",
+      "known_at": 10
+    },
+    {
+      "name": "Binocular vision",
+      "facet": "How eyes and brain see",
+      "known_at": 11
+    },
+    {
+      "name": "Peripheral vision",
+      "facet": "How eyes and brain see",
+      "known_at": 10
+    },
+    {
+      "name": "Eye floaters",
+      "facet": "How eyes and brain see",
+      "known_at": 12
+    },
+    {
+      "name": "Saccade",
+      "facet": "How eyes and brain see",
+      "known_at": 15
+    },
+    {
+      "name": "Sausage finger illusion",
+      "facet": "How eyes and brain see",
+      "known_at": 8
+    },
+    {
+      "name": "Invisible gorilla test",
+      "facet": "How eyes and brain see",
+      "known_at": 13
+    },
+    {
+      "name": "Change blindness",
+      "facet": "How eyes and brain see",
+      "known_at": 14
+    },
+    {
+      "name": "Thatcher effect",
+      "facet": "How eyes and brain see",
+      "known_at": 14
+    },
+    {
+      "name": "Gestalt psychology",
+      "facet": "How eyes and brain see",
+      "known_at": 14
+    },
+    {
+      "name": "Funhouse mirror",
+      "facet": "Illusions in everyday life",
+      "known_at": 4
+    },
+    {
+      "name": "Infinity mirror",
+      "facet": "Illusions in everyday life",
+      "known_at": 8
+    },
+    {
+      "name": "Kaleidoscope",
+      "facet": "Illusions in everyday life",
+      "known_at": 4
+    },
+    {
+      "name": "Vertical stripes",
+      "facet": "Illusions in everyday life",
+      "known_at": 8
+    },
+    {
+      "name": "Ambulance mirror writing",
+      "facet": "Illusions in everyday life",
+      "known_at": 8
+    },
+    {
+      "name": "Spoon reflection",
+      "facet": "Illusions in everyday life",
+      "known_at": 7
+    },
+    {
+      "name": "Straw in a glass of water",
+      "facet": "Illusions in everyday life",
+      "known_at": 6
+    },
+    {
+      "name": "Objects in mirror are closer than they appear",
+      "facet": "Illusions in everyday life",
+      "known_at": 11
+    },
+    {
+      "name": "3D zebra crossing",
+      "facet": "Illusions in everyday life",
+      "known_at": 12
+    },
+    {
+      "name": "Optical speed bars",
+      "facet": "Illusions in everyday life",
+      "known_at": 14
+    },
+    {
+      "name": "Lenticular print",
+      "facet": "Illusions in everyday life",
+      "known_at": 8
+    },
+    {
+      "name": "Entasis",
+      "facet": "Illusions in everyday life",
+      "known_at": 14
+    },
+    {
+      "name": "Screen pixels",
+      "facet": "Illusions in everyday life",
+      "known_at": 10
+    },
+    {
+      "name": "Two-way mirror",
+      "facet": "Illusions in everyday life",
+      "known_at": 9
+    },
+    {
+      "name": "Pink or grey sneaker",
+      "facet": "Viral and internet illusions",
+      "known_at": 13
+    },
+    {
+      "name": "Spinning dancer",
+      "facet": "Viral and internet illusions",
+      "known_at": 11
+    },
+    {
+      "name": "Rotating snakes",
+      "facet": "Viral and internet illusions",
+      "known_at": 11
+    },
+    {
+      "name": "Lilac chaser",
+      "facet": "Viral and internet illusions",
+      "known_at": 13
+    },
+    {
+      "name": "Grey strawberries",
+      "facet": "Viral and internet illusions",
+      "known_at": 13
+    },
+    {
+      "name": "Scintillating grid",
+      "facet": "Viral and internet illusions",
+      "known_at": 13
+    },
+    {
+      "name": "Coffer illusion",
+      "facet": "Viral and internet illusions",
+      "known_at": 14
+    },
+    {
+      "name": "Paper dragon illusion",
+      "facet": "Viral and internet illusions",
+      "known_at": 12
+    },
+    {
+      "name": "Ninio's extinction illusion",
+      "facet": "Viral and internet illusions",
+      "known_at": 14
+    },
+    {
+      "name": "Curvature blindness illusion",
+      "facet": "Viral and internet illusions",
+      "known_at": 15
+    },
+    {
+      "name": "Troxler fading",
+      "facet": "Viral and internet illusions",
+      "known_at": 15
+    },
+    {
+      "name": "Expanding hole illusion",
+      "facet": "Viral and internet illusions",
+      "known_at": 15
+    },
+    {
+      "name": "Magic Eye",
+      "facet": "Viral and internet illusions",
+      "known_at": 10
+    },
+    {
+      "name": "Chronostasis",
+      "facet": "Viral and internet illusions",
+      "known_at": 14
+    }
+  ]
+}

@@ -830,7 +830,8 @@
     {
       "name": "Ruffles",
       "facet": "Paquetes y mecato salado",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: The launch year and creator of Ruffles are minor facts nobody could reason towards."
     },
     {
       "name": "Goldfish crackers",
@@ -952,7 +953,8 @@
     {
       "name": "Glade",
       "facet": "Aseo y limpieza del hogar",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: Glade has no famous person or name origin to ask about."
     },
     {
       "name": "Toucan Sam",

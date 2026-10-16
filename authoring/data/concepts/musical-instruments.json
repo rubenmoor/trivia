@@ -1,0 +1,882 @@
+{
+  "subcategory": "musical-instruments",
+  "facets": [
+    "String instruments",
+    "Wind and brass instruments",
+    "Drums and percussion",
+    "Keyboard instruments",
+    "Electronic and electric instruments",
+    "Traditional instruments around the world",
+    "Parts and how instruments work",
+    "Instrument families and the orchestra",
+    "Famous players and their instruments",
+    "Instrument makers and inventions",
+    "Instruments in films, cartoons and games",
+    "Playing techniques and terms"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 2,
+      "record": 3,
+      "origin": 5,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 3,
+      "map_outline": 1,
+      "sound": 5,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 2,
+      "pop_culture": 4,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Guitar",
+      "facet": "String instruments",
+      "known_at": 1
+    },
+    {
+      "name": "Violin",
+      "facet": "String instruments",
+      "known_at": 2
+    },
+    {
+      "name": "Harp",
+      "facet": "String instruments",
+      "known_at": 3
+    },
+    {
+      "name": "Cello",
+      "facet": "String instruments",
+      "known_at": 5
+    },
+    {
+      "name": "Double bass",
+      "facet": "String instruments",
+      "known_at": 6
+    },
+    {
+      "name": "Mandolin",
+      "facet": "String instruments",
+      "known_at": 8
+    },
+    {
+      "name": "Balalaika",
+      "facet": "String instruments",
+      "known_at": 9
+    },
+    {
+      "name": "Lute",
+      "facet": "String instruments",
+      "known_at": 10
+    },
+    {
+      "name": "Zither",
+      "facet": "String instruments",
+      "known_at": 12
+    },
+    {
+      "name": "Shamisen",
+      "facet": "String instruments",
+      "known_at": 13
+    },
+    {
+      "name": "Trumpet",
+      "facet": "Wind and brass instruments",
+      "known_at": 1
+    },
+    {
+      "name": "Flute",
+      "facet": "Wind and brass instruments",
+      "known_at": 2
+    },
+    {
+      "name": "Recorder",
+      "facet": "Wind and brass instruments",
+      "known_at": 3
+    },
+    {
+      "name": "Saxophone",
+      "facet": "Wind and brass instruments",
+      "known_at": 4
+    },
+    {
+      "name": "Harmonica",
+      "facet": "Wind and brass instruments",
+      "known_at": 4
+    },
+    {
+      "name": "Trombone",
+      "facet": "Wind and brass instruments",
+      "known_at": 5
+    },
+    {
+      "name": "Clarinet",
+      "facet": "Wind and brass instruments",
+      "known_at": 6
+    },
+    {
+      "name": "French horn",
+      "facet": "Wind and brass instruments",
+      "known_at": 7
+    },
+    {
+      "name": "Piccolo",
+      "facet": "Wind and brass instruments",
+      "known_at": 9
+    },
+    {
+      "name": "Bassoon",
+      "facet": "Wind and brass instruments",
+      "known_at": 10
+    },
+    {
+      "name": "Bugle",
+      "facet": "Wind and brass instruments",
+      "known_at": 10
+    },
+    {
+      "name": "Cornet",
+      "facet": "Wind and brass instruments",
+      "known_at": 11
+    },
+    {
+      "name": "Euphonium",
+      "facet": "Wind and brass instruments",
+      "known_at": 12
+    },
+    {
+      "name": "English horn",
+      "facet": "Wind and brass instruments",
+      "known_at": 13
+    },
+    {
+      "name": "Drum",
+      "facet": "Drums and percussion",
+      "known_at": 1
+    },
+    {
+      "name": "Maracas",
+      "facet": "Drums and percussion",
+      "known_at": 2
+    },
+    {
+      "name": "Drum kit",
+      "facet": "Drums and percussion",
+      "known_at": 3
+    },
+    {
+      "name": "Cymbals",
+      "facet": "Drums and percussion",
+      "known_at": 3
+    },
+    {
+      "name": "Gong",
+      "facet": "Drums and percussion",
+      "known_at": 4
+    },
+    {
+      "name": "Bongos",
+      "facet": "Drums and percussion",
+      "known_at": 5
+    },
+    {
+      "name": "Castanets",
+      "facet": "Drums and percussion",
+      "known_at": 5
+    },
+    {
+      "name": "Bass drum",
+      "facet": "Drums and percussion",
+      "known_at": 5
+    },
+    {
+      "name": "Snare drum",
+      "facet": "Drums and percussion",
+      "known_at": 6
+    },
+    {
+      "name": "Congas",
+      "facet": "Drums and percussion",
+      "known_at": 7
+    },
+    {
+      "name": "Glockenspiel",
+      "facet": "Drums and percussion",
+      "known_at": 8
+    },
+    {
+      "name": "Wood block",
+      "facet": "Drums and percussion",
+      "known_at": 8
+    },
+    {
+      "name": "Timpani",
+      "facet": "Drums and percussion",
+      "known_at": 9
+    },
+    {
+      "name": "Hi-hat",
+      "facet": "Drums and percussion",
+      "known_at": 9
+    },
+    {
+      "name": "Vibraphone",
+      "facet": "Drums and percussion",
+      "known_at": 12
+    },
+    {
+      "name": "Piano",
+      "facet": "Keyboard instruments",
+      "known_at": 1
+    },
+    {
+      "name": "Grand piano",
+      "facet": "Keyboard instruments",
+      "known_at": 4
+    },
+    {
+      "name": "Accordion",
+      "facet": "Keyboard instruments",
+      "known_at": 4
+    },
+    {
+      "name": "Pipe organ",
+      "facet": "Keyboard instruments",
+      "known_at": 6
+    },
+    {
+      "name": "Upright piano",
+      "facet": "Keyboard instruments",
+      "known_at": 6
+    },
+    {
+      "name": "Harpsichord",
+      "facet": "Keyboard instruments",
+      "known_at": 10
+    },
+    {
+      "name": "Player piano",
+      "facet": "Keyboard instruments",
+      "known_at": 11
+    },
+    {
+      "name": "Harmonium",
+      "facet": "Keyboard instruments",
+      "known_at": 12
+    },
+    {
+      "name": "Concertina",
+      "facet": "Keyboard instruments",
+      "known_at": 12
+    },
+    {
+      "name": "Fortepiano",
+      "facet": "Keyboard instruments",
+      "known_at": 13
+    },
+    {
+      "name": "Carillon",
+      "facet": "Keyboard instruments",
+      "known_at": 13
+    },
+    {
+      "name": "Clavichord",
+      "facet": "Keyboard instruments",
+      "known_at": 14
+    },
+    {
+      "name": "Electric guitar",
+      "facet": "Electronic and electric instruments",
+      "known_at": 2
+    },
+    {
+      "name": "Electronic keyboard",
+      "facet": "Electronic and electric instruments",
+      "known_at": 3
+    },
+    {
+      "name": "Bass guitar",
+      "facet": "Electronic and electric instruments",
+      "known_at": 6
+    },
+    {
+      "name": "Amplifier",
+      "facet": "Electronic and electric instruments",
+      "known_at": 6
+    },
+    {
+      "name": "Electronic drum kit",
+      "facet": "Electronic and electric instruments",
+      "known_at": 7
+    },
+    {
+      "name": "Turntables",
+      "facet": "Electronic and electric instruments",
+      "known_at": 8
+    },
+    {
+      "name": "Electric violin",
+      "facet": "Electronic and electric instruments",
+      "known_at": 9
+    },
+    {
+      "name": "Drum machine",
+      "facet": "Electronic and electric instruments",
+      "known_at": 10
+    },
+    {
+      "name": "Loop pedal",
+      "facet": "Electronic and electric instruments",
+      "known_at": 11
+    },
+    {
+      "name": "Vocoder",
+      "facet": "Electronic and electric instruments",
+      "known_at": 12
+    },
+    {
+      "name": "MIDI controller",
+      "facet": "Electronic and electric instruments",
+      "known_at": 12
+    },
+    {
+      "name": "Hammond organ",
+      "facet": "Electronic and electric instruments",
+      "known_at": 13
+    },
+    {
+      "name": "Moog synthesizer",
+      "facet": "Electronic and electric instruments",
+      "known_at": 13
+    },
+    {
+      "name": "Ondes Martenot",
+      "facet": "Electronic and electric instruments",
+      "known_at": 15
+    },
+    {
+      "name": "Bagpipes",
+      "facet": "Traditional instruments around the world",
+      "known_at": 4
+    },
+    {
+      "name": "Alphorn",
+      "facet": "Traditional instruments around the world",
+      "known_at": 8
+    },
+    {
+      "name": "Talking drum",
+      "facet": "Traditional instruments around the world",
+      "known_at": 11
+    },
+    {
+      "name": "Bandoneon",
+      "facet": "Traditional instruments around the world",
+      "known_at": 12
+    },
+    {
+      "name": "Hang drum",
+      "facet": "Traditional instruments around the world",
+      "known_at": 12
+    },
+    {
+      "name": "Shakuhachi",
+      "facet": "Traditional instruments around the world",
+      "known_at": 13
+    },
+    {
+      "name": "Guzheng",
+      "facet": "Traditional instruments around the world",
+      "known_at": 13
+    },
+    {
+      "name": "Bodhrán",
+      "facet": "Traditional instruments around the world",
+      "known_at": 13
+    },
+    {
+      "name": "Colombian gaita",
+      "facet": "Traditional instruments around the world",
+      "known_at": 14
+    },
+    {
+      "name": "Drumstick",
+      "facet": "Parts and how instruments work",
+      "known_at": 2
+    },
+    {
+      "name": "Piano key",
+      "facet": "Parts and how instruments work",
+      "known_at": 2
+    },
+    {
+      "name": "Instrument string",
+      "facet": "Parts and how instruments work",
+      "known_at": 3
+    },
+    {
+      "name": "Bow",
+      "facet": "Parts and how instruments work",
+      "known_at": 4
+    },
+    {
+      "name": "Guitar pick",
+      "facet": "Parts and how instruments work",
+      "known_at": 6
+    },
+    {
+      "name": "Piano pedal",
+      "facet": "Parts and how instruments work",
+      "known_at": 6
+    },
+    {
+      "name": "Sound hole",
+      "facet": "Parts and how instruments work",
+      "known_at": 7
+    },
+    {
+      "name": "Trombone slide",
+      "facet": "Parts and how instruments work",
+      "known_at": 7
+    },
+    {
+      "name": "Mouthpiece",
+      "facet": "Parts and how instruments work",
+      "known_at": 8
+    },
+    {
+      "name": "Drumhead",
+      "facet": "Parts and how instruments work",
+      "known_at": 8
+    },
+    {
+      "name": "Mallet",
+      "facet": "Parts and how instruments work",
+      "known_at": 8
+    },
+    {
+      "name": "Reed",
+      "facet": "Parts and how instruments work",
+      "known_at": 9
+    },
+    {
+      "name": "Fret",
+      "facet": "Parts and how instruments work",
+      "known_at": 9
+    },
+    {
+      "name": "Tuning peg",
+      "facet": "Parts and how instruments work",
+      "known_at": 9
+    },
+    {
+      "name": "Piano hammer",
+      "facet": "Parts and how instruments work",
+      "known_at": 10
+    },
+    {
+      "name": "Bridge",
+      "facet": "Parts and how instruments work",
+      "known_at": 11
+    },
+    {
+      "name": "Mute",
+      "facet": "Parts and how instruments work",
+      "known_at": 11
+    },
+    {
+      "name": "Rosin",
+      "facet": "Parts and how instruments work",
+      "known_at": 12
+    },
+    {
+      "name": "Orchestra",
+      "facet": "Instrument families and the orchestra",
+      "known_at": 3
+    },
+    {
+      "name": "Percussion family",
+      "facet": "Instrument families and the orchestra",
+      "known_at": 6
+    },
+    {
+      "name": "Baton",
+      "facet": "Instrument families and the orchestra",
+      "known_at": 6
+    },
+    {
+      "name": "Marching band",
+      "facet": "Instrument families and the orchestra",
+      "known_at": 6
+    },
+    {
+      "name": "String section",
+      "facet": "Instrument families and the orchestra",
+      "known_at": 7
+    },
+    {
+      "name": "Brass family",
+      "facet": "Instrument families and the orchestra",
+      "known_at": 7
+    },
+    {
+      "name": "Woodwind family",
+      "facet": "Instrument families and the orchestra",
+      "known_at": 8
+    },
+    {
+      "name": "Symphony orchestra",
+      "facet": "Instrument families and the orchestra",
+      "known_at": 8
+    },
+    {
+      "name": "Brass band",
+      "facet": "Instrument families and the orchestra",
+      "known_at": 9
+    },
+    {
+      "name": "String quartet",
+      "facet": "Instrument families and the orchestra",
+      "known_at": 10
+    },
+    {
+      "name": "Big band",
+      "facet": "Instrument families and the orchestra",
+      "known_at": 11
+    },
+    {
+      "name": "Chamber music",
+      "facet": "Instrument families and the orchestra",
+      "known_at": 12
+    },
+    {
+      "name": "Philharmonic",
+      "facet": "Instrument families and the orchestra",
+      "known_at": 12
+    },
+    {
+      "name": "Concertmaster",
+      "facet": "Instrument families and the orchestra",
+      "known_at": 13
+    },
+    {
+      "name": "Concert pitch",
+      "facet": "Instrument families and the orchestra",
+      "known_at": 14
+    },
+    {
+      "name": "Aerophone",
+      "facet": "Instrument families and the orchestra",
+      "known_at": 14
+    },
+    {
+      "name": "Chordophone",
+      "facet": "Instrument families and the orchestra",
+      "known_at": 14
+    },
+    {
+      "name": "Idiophone",
+      "facet": "Instrument families and the orchestra",
+      "known_at": 14
+    },
+    {
+      "name": "Membranophone",
+      "facet": "Instrument families and the orchestra",
+      "known_at": 14
+    },
+    {
+      "name": "Hornbostel–Sachs classification",
+      "facet": "Instrument families and the orchestra",
+      "known_at": 15
+    },
+    {
+      "name": "Ray Charles",
+      "facet": "Famous players and their instruments",
+      "known_at": 11
+    },
+    {
+      "name": "Miles Davis",
+      "facet": "Famous players and their instruments",
+      "known_at": 12
+    },
+    {
+      "name": "Carlos Santana",
+      "facet": "Famous players and their instruments",
+      "known_at": 12
+    },
+    {
+      "name": "Kenny G",
+      "facet": "Famous players and their instruments",
+      "known_at": 12
+    },
+    {
+      "name": "Paco de Lucía",
+      "facet": "Famous players and their instruments",
+      "known_at": 13
+    },
+    {
+      "name": "John Coltrane",
+      "facet": "Famous players and their instruments",
+      "known_at": 14
+    },
+    {
+      "name": "Charlie Parker",
+      "facet": "Famous players and their instruments",
+      "known_at": 14
+    },
+    {
+      "name": "Andrés Segovia",
+      "facet": "Famous players and their instruments",
+      "known_at": 14
+    },
+    {
+      "name": "Metronome",
+      "facet": "Instrument makers and inventions",
+      "known_at": 8
+    },
+    {
+      "name": "Adolphe Sax",
+      "facet": "Instrument makers and inventions",
+      "known_at": 9
+    },
+    {
+      "name": "Antonio Stradivari",
+      "facet": "Instrument makers and inventions",
+      "known_at": 11
+    },
+    {
+      "name": "Steinway & Sons",
+      "facet": "Instrument makers and inventions",
+      "known_at": 12
+    },
+    {
+      "name": "Roland",
+      "facet": "Instrument makers and inventions",
+      "known_at": 12
+    },
+    {
+      "name": "Luthier",
+      "facet": "Instrument makers and inventions",
+      "known_at": 12
+    },
+    {
+      "name": "Leo Fender",
+      "facet": "Instrument makers and inventions",
+      "known_at": 13
+    },
+    {
+      "name": "Les Paul",
+      "facet": "Instrument makers and inventions",
+      "known_at": 13
+    },
+    {
+      "name": "Hohner",
+      "facet": "Instrument makers and inventions",
+      "known_at": 13
+    },
+    {
+      "name": "Bartolomeo Cristofori",
+      "facet": "Instrument makers and inventions",
+      "known_at": 14
+    },
+    {
+      "name": "Robert Moog",
+      "facet": "Instrument makers and inventions",
+      "known_at": 14
+    },
+    {
+      "name": "Glass armonica",
+      "facet": "Instrument makers and inventions",
+      "known_at": 14
+    },
+    {
+      "name": "Léon Theremin",
+      "facet": "Instrument makers and inventions",
+      "known_at": 15
+    },
+    {
+      "name": "Theobald Boehm",
+      "facet": "Instrument makers and inventions",
+      "known_at": 15
+    },
+    {
+      "name": "Guarneri del Gesù",
+      "facet": "Instrument makers and inventions",
+      "known_at": 15
+    },
+    {
+      "name": "Amati",
+      "facet": "Instrument makers and inventions",
+      "known_at": 15
+    },
+    {
+      "name": "Squidward Tentacles",
+      "facet": "Instruments in films, cartoons and games",
+      "known_at": 5
+    },
+    {
+      "name": "Animal",
+      "facet": "Instruments in films, cartoons and games",
+      "known_at": 8
+    },
+    {
+      "name": "K.K. Slider",
+      "facet": "Instruments in films, cartoons and games",
+      "known_at": 8
+    },
+    {
+      "name": "The Legend of Zelda: Ocarina of Time",
+      "facet": "Instruments in films, cartoons and games",
+      "known_at": 9
+    },
+    {
+      "name": "Schroeder",
+      "facet": "Instruments in films, cartoons and games",
+      "known_at": 9
+    },
+    {
+      "name": "School of Rock",
+      "facet": "Instruments in films, cartoons and games",
+      "known_at": 10
+    },
+    {
+      "name": "Kubo and the Two Strings",
+      "facet": "Instruments in films, cartoons and games",
+      "known_at": 11
+    },
+    {
+      "name": "Big",
+      "facet": "Instruments in films, cartoons and games",
+      "known_at": 12
+    },
+    {
+      "name": "Whiplash",
+      "facet": "Instruments in films, cartoons and games",
+      "known_at": 13
+    },
+    {
+      "name": "Solo",
+      "facet": "Playing techniques and terms",
+      "known_at": 4
+    },
+    {
+      "name": "Drum roll",
+      "facet": "Playing techniques and terms",
+      "known_at": 4
+    },
+    {
+      "name": "Sheet music",
+      "facet": "Playing techniques and terms",
+      "known_at": 4
+    },
+    {
+      "name": "Strumming",
+      "facet": "Playing techniques and terms",
+      "known_at": 5
+    },
+    {
+      "name": "Duet",
+      "facet": "Playing techniques and terms",
+      "known_at": 5
+    },
+    {
+      "name": "Tuning",
+      "facet": "Playing techniques and terms",
+      "known_at": 6
+    },
+    {
+      "name": "Rhythm",
+      "facet": "Playing techniques and terms",
+      "known_at": 6
+    },
+    {
+      "name": "Chord",
+      "facet": "Playing techniques and terms",
+      "known_at": 7
+    },
+    {
+      "name": "Musical scale",
+      "facet": "Playing techniques and terms",
+      "known_at": 7
+    },
+    {
+      "name": "Improvisation",
+      "facet": "Playing techniques and terms",
+      "known_at": 9
+    },
+    {
+      "name": "Octave",
+      "facet": "Playing techniques and terms",
+      "known_at": 10
+    },
+    {
+      "name": "Fingerpicking",
+      "facet": "Playing techniques and terms",
+      "known_at": 11
+    },
+    {
+      "name": "Pizzicato",
+      "facet": "Playing techniques and terms",
+      "known_at": 12
+    },
+    {
+      "name": "Glissando",
+      "facet": "Playing techniques and terms",
+      "known_at": 13
+    },
+    {
+      "name": "Tremolo",
+      "facet": "Playing techniques and terms",
+      "known_at": 13
+    },
+    {
+      "name": "Legato",
+      "facet": "Playing techniques and terms",
+      "known_at": 13
+    },
+    {
+      "name": "Arpeggio",
+      "facet": "Playing techniques and terms",
+      "known_at": 13
+    },
+    {
+      "name": "Circular breathing",
+      "facet": "Playing techniques and terms",
+      "known_at": 13
+    },
+    {
+      "name": "Slap bass",
+      "facet": "Playing techniques and terms",
+      "known_at": 14
+    }
+  ]
+}

@@ -1,0 +1,1042 @@
+{
+  "subcategory": "animal-records",
+  "facets": [
+    "Biggest and heaviest animals",
+    "Smallest animals",
+    "Fastest animals on land, sea and air",
+    "Longest-lived and oldest animals",
+    "Strongest and loudest animals",
+    "Record jumpers, divers and climbers",
+    "Longest animal migrations",
+    "Record body parts and features",
+    "Extreme survivors and tough animals",
+    "Record eggs, babies and families",
+    "Most venomous and dangerous animals",
+    "Prehistoric record holders"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 1,
+      "count": 2,
+      "estimate": 5,
+      "record": 5,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 1,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 1,
+      "when": 1
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 3,
+      "map_outline": 1,
+      "sound": 3,
+      "video": 3
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 3,
+      "science_news": 3,
+      "educational_media": 5,
+      "nature": 5,
+      "history": 2,
+      "body_senses": 2,
+      "language": 1
+    }
+  },
+  "concepts": [
+    {
+      "name": "Blue whale",
+      "facet": "Biggest and heaviest animals",
+      "known_at": 3
+    },
+    {
+      "name": "African elephant",
+      "facet": "Biggest and heaviest animals",
+      "known_at": 2
+    },
+    {
+      "name": "Giraffe",
+      "facet": "Biggest and heaviest animals",
+      "known_at": 1
+    },
+    {
+      "name": "Whale shark",
+      "facet": "Biggest and heaviest animals",
+      "known_at": 5
+    },
+    {
+      "name": "Komodo dragon",
+      "facet": "Biggest and heaviest animals",
+      "known_at": 6
+    },
+    {
+      "name": "Saltwater crocodile",
+      "facet": "Biggest and heaviest animals",
+      "known_at": 8
+    },
+    {
+      "name": "Polar bear",
+      "facet": "Biggest and heaviest animals",
+      "known_at": 4
+    },
+    {
+      "name": "Hippopotamus",
+      "facet": "Biggest and heaviest animals",
+      "known_at": 3
+    },
+    {
+      "name": "Goliath beetle",
+      "facet": "Biggest and heaviest animals",
+      "known_at": 11
+    },
+    {
+      "name": "Colossal squid",
+      "facet": "Biggest and heaviest animals",
+      "known_at": 11
+    },
+    {
+      "name": "Lion's mane jellyfish",
+      "facet": "Biggest and heaviest animals",
+      "known_at": 12
+    },
+    {
+      "name": "Capybara",
+      "facet": "Biggest and heaviest animals",
+      "known_at": 6
+    },
+    {
+      "name": "Green anaconda",
+      "facet": "Biggest and heaviest animals",
+      "known_at": 6
+    },
+    {
+      "name": "Reticulated python",
+      "facet": "Biggest and heaviest animals",
+      "known_at": 10
+    },
+    {
+      "name": "Goliath frog",
+      "facet": "Biggest and heaviest animals",
+      "known_at": 11
+    },
+    {
+      "name": "Leatherback sea turtle",
+      "facet": "Biggest and heaviest animals",
+      "known_at": 10
+    },
+    {
+      "name": "Siberian tiger",
+      "facet": "Biggest and heaviest animals",
+      "known_at": 6
+    },
+    {
+      "name": "Japanese spider crab",
+      "facet": "Biggest and heaviest animals",
+      "known_at": 11
+    },
+    {
+      "name": "Moose",
+      "facet": "Biggest and heaviest animals",
+      "known_at": 7
+    },
+    {
+      "name": "Gorilla",
+      "facet": "Biggest and heaviest animals",
+      "known_at": 4
+    },
+    {
+      "name": "Bee hummingbird",
+      "facet": "Smallest animals",
+      "known_at": 9
+    },
+    {
+      "name": "Etruscan shrew",
+      "facet": "Smallest animals",
+      "known_at": 13
+    },
+    {
+      "name": "Bumblebee bat",
+      "facet": "Smallest animals",
+      "known_at": 12
+    },
+    {
+      "name": "Pygmy marmoset",
+      "facet": "Smallest animals",
+      "known_at": 11
+    },
+    {
+      "name": "Fairyfly",
+      "facet": "Smallest animals",
+      "known_at": 14
+    },
+    {
+      "name": "Pygmy seahorse",
+      "facet": "Smallest animals",
+      "known_at": 10
+    },
+    {
+      "name": "Nano-chameleon",
+      "facet": "Smallest animals",
+      "known_at": 12
+    },
+    {
+      "name": "Mouse lemur",
+      "facet": "Smallest animals",
+      "known_at": 11
+    },
+    {
+      "name": "Dwarf lantern shark",
+      "facet": "Smallest animals",
+      "known_at": 14
+    },
+    {
+      "name": "Pygmy hippopotamus",
+      "facet": "Smallest animals",
+      "known_at": 9
+    },
+    {
+      "name": "Fennec fox",
+      "facet": "Smallest animals",
+      "known_at": 7
+    },
+    {
+      "name": "Barbados threadsnake",
+      "facet": "Smallest animals",
+      "known_at": 14
+    },
+    {
+      "name": "Royal antelope",
+      "facet": "Smallest animals",
+      "known_at": 14
+    },
+    {
+      "name": "Philippine tarsier",
+      "facet": "Smallest animals",
+      "known_at": 10
+    },
+    {
+      "name": "Pygmy rabbit",
+      "facet": "Smallest animals",
+      "known_at": 12
+    },
+    {
+      "name": "Mouse deer",
+      "facet": "Smallest animals",
+      "known_at": 12
+    },
+    {
+      "name": "Cheetah",
+      "facet": "Fastest animals on land, sea and air",
+      "known_at": 2
+    },
+    {
+      "name": "Peregrine falcon",
+      "facet": "Fastest animals on land, sea and air",
+      "known_at": 6
+    },
+    {
+      "name": "Sailfish",
+      "facet": "Fastest animals on land, sea and air",
+      "known_at": 9
+    },
+    {
+      "name": "Pronghorn",
+      "facet": "Fastest animals on land, sea and air",
+      "known_at": 12
+    },
+    {
+      "name": "Black marlin",
+      "facet": "Fastest animals on land, sea and air",
+      "known_at": 12
+    },
+    {
+      "name": "Greyhound",
+      "facet": "Fastest animals on land, sea and air",
+      "known_at": 6
+    },
+    {
+      "name": "Thoroughbred horse",
+      "facet": "Fastest animals on land, sea and air",
+      "known_at": 7
+    },
+    {
+      "name": "White-throated needletail",
+      "facet": "Fastest animals on land, sea and air",
+      "known_at": 13
+    },
+    {
+      "name": "Brazilian free-tailed bat",
+      "facet": "Fastest animals on land, sea and air",
+      "known_at": 14
+    },
+    {
+      "name": "Shortfin mako shark",
+      "facet": "Fastest animals on land, sea and air",
+      "known_at": 11
+    },
+    {
+      "name": "Garden snail",
+      "facet": "Fastest animals on land, sea and air",
+      "known_at": 3
+    },
+    {
+      "name": "Three-toed sloth",
+      "facet": "Fastest animals on land, sea and air",
+      "known_at": 2
+    },
+    {
+      "name": "Tiger beetle",
+      "facet": "Fastest animals on land, sea and air",
+      "known_at": 13
+    },
+    {
+      "name": "Dragonfly",
+      "facet": "Fastest animals on land, sea and air",
+      "known_at": 8
+    },
+    {
+      "name": "Hare",
+      "facet": "Fastest animals on land, sea and air",
+      "known_at": 4
+    },
+    {
+      "name": "Swordfish",
+      "facet": "Fastest animals on land, sea and air",
+      "known_at": 8
+    },
+    {
+      "name": "Greenland shark",
+      "facet": "Longest-lived and oldest animals",
+      "known_at": 10
+    },
+    {
+      "name": "Ocean quahog",
+      "facet": "Longest-lived and oldest animals",
+      "known_at": 14
+    },
+    {
+      "name": "Immortal jellyfish",
+      "facet": "Longest-lived and oldest animals",
+      "known_at": 10
+    },
+    {
+      "name": "Jonathan the tortoise",
+      "facet": "Longest-lived and oldest animals",
+      "known_at": 11
+    },
+    {
+      "name": "Bowhead whale",
+      "facet": "Longest-lived and oldest animals",
+      "known_at": 12
+    },
+    {
+      "name": "Glass sponge",
+      "facet": "Longest-lived and oldest animals",
+      "known_at": 14
+    },
+    {
+      "name": "Koi",
+      "facet": "Longest-lived and oldest animals",
+      "known_at": 9
+    },
+    {
+      "name": "Lobster",
+      "facet": "Longest-lived and oldest animals",
+      "known_at": 10
+    },
+    {
+      "name": "Olm",
+      "facet": "Longest-lived and oldest animals",
+      "known_at": 13
+    },
+    {
+      "name": "Mayfly",
+      "facet": "Longest-lived and oldest animals",
+      "known_at": 9
+    },
+    {
+      "name": "Red sea urchin",
+      "facet": "Longest-lived and oldest animals",
+      "known_at": 13
+    },
+    {
+      "name": "Aldabra giant tortoise",
+      "facet": "Longest-lived and oldest animals",
+      "known_at": 12
+    },
+    {
+      "name": "Rougheye rockfish",
+      "facet": "Longest-lived and oldest animals",
+      "known_at": 15
+    },
+    {
+      "name": "Wisdom the albatross",
+      "facet": "Longest-lived and oldest animals",
+      "known_at": 13
+    },
+    {
+      "name": "Sturgeon",
+      "facet": "Longest-lived and oldest animals",
+      "known_at": 11
+    },
+    {
+      "name": "Dung beetle",
+      "facet": "Strongest and loudest animals",
+      "known_at": 8
+    },
+    {
+      "name": "Rhinoceros beetle",
+      "facet": "Strongest and loudest animals",
+      "known_at": 9
+    },
+    {
+      "name": "Sperm whale",
+      "facet": "Strongest and loudest animals",
+      "known_at": 7
+    },
+    {
+      "name": "Pistol shrimp",
+      "facet": "Strongest and loudest animals",
+      "known_at": 11
+    },
+    {
+      "name": "Mantis shrimp",
+      "facet": "Strongest and loudest animals",
+      "known_at": 10
+    },
+    {
+      "name": "Lion",
+      "facet": "Strongest and loudest animals",
+      "known_at": 2
+    },
+    {
+      "name": "Coquí frog",
+      "facet": "Strongest and loudest animals",
+      "known_at": 12
+    },
+    {
+      "name": "Cicada",
+      "facet": "Strongest and loudest animals",
+      "known_at": 8
+    },
+    {
+      "name": "Greater bulldog bat",
+      "facet": "Strongest and loudest animals",
+      "known_at": 14
+    },
+    {
+      "name": "Spotted hyena",
+      "facet": "Strongest and loudest animals",
+      "known_at": 6
+    },
+    {
+      "name": "Oribatid mite",
+      "facet": "Strongest and loudest animals",
+      "known_at": 15
+    },
+    {
+      "name": "Gray wolf",
+      "facet": "Strongest and loudest animals",
+      "known_at": 3
+    },
+    {
+      "name": "Ant",
+      "facet": "Strongest and loudest animals",
+      "known_at": 1
+    },
+    {
+      "name": "Horse",
+      "facet": "Strongest and loudest animals",
+      "known_at": 3
+    },
+    {
+      "name": "Flea",
+      "facet": "Record jumpers, divers and climbers",
+      "known_at": 5
+    },
+    {
+      "name": "Kangaroo",
+      "facet": "Record jumpers, divers and climbers",
+      "known_at": 2
+    },
+    {
+      "name": "Cuvier's beaked whale",
+      "facet": "Record jumpers, divers and climbers",
+      "known_at": 13
+    },
+    {
+      "name": "Elephant seal",
+      "facet": "Record jumpers, divers and climbers",
+      "known_at": 10
+    },
+    {
+      "name": "Klipspringer",
+      "facet": "Record jumpers, divers and climbers",
+      "known_at": 14
+    },
+    {
+      "name": "Froghopper",
+      "facet": "Record jumpers, divers and climbers",
+      "known_at": 14
+    },
+    {
+      "name": "Grasshopper",
+      "facet": "Record jumpers, divers and climbers",
+      "known_at": 3
+    },
+    {
+      "name": "Rüppell's vulture",
+      "facet": "Record jumpers, divers and climbers",
+      "known_at": 13
+    },
+    {
+      "name": "Jumping spider",
+      "facet": "Record jumpers, divers and climbers",
+      "known_at": 8
+    },
+    {
+      "name": "Alpine ibex",
+      "facet": "Record jumpers, divers and climbers",
+      "known_at": 10
+    },
+    {
+      "name": "Dolphin",
+      "facet": "Record jumpers, divers and climbers",
+      "known_at": 2
+    },
+    {
+      "name": "Flying fish",
+      "facet": "Record jumpers, divers and climbers",
+      "known_at": 7
+    },
+    {
+      "name": "Gibbon",
+      "facet": "Record jumpers, divers and climbers",
+      "known_at": 9
+    },
+    {
+      "name": "Flying squirrel",
+      "facet": "Record jumpers, divers and climbers",
+      "known_at": 8
+    },
+    {
+      "name": "Monarch butterfly",
+      "facet": "Longest animal migrations",
+      "known_at": 7
+    },
+    {
+      "name": "Humpback whale",
+      "facet": "Longest animal migrations",
+      "known_at": 6
+    },
+    {
+      "name": "Gray whale",
+      "facet": "Longest animal migrations",
+      "known_at": 10
+    },
+    {
+      "name": "Wildebeest",
+      "facet": "Longest animal migrations",
+      "known_at": 5
+    },
+    {
+      "name": "Caribou",
+      "facet": "Longest animal migrations",
+      "known_at": 8
+    },
+    {
+      "name": "European eel",
+      "facet": "Longest animal migrations",
+      "known_at": 12
+    },
+    {
+      "name": "Christmas Island red crab",
+      "facet": "Longest animal migrations",
+      "known_at": 10
+    },
+    {
+      "name": "Globe skimmer",
+      "facet": "Longest animal migrations",
+      "known_at": 14
+    },
+    {
+      "name": "Sooty shearwater",
+      "facet": "Longest animal migrations",
+      "known_at": 14
+    },
+    {
+      "name": "Painted lady butterfly",
+      "facet": "Longest animal migrations",
+      "known_at": 13
+    },
+    {
+      "name": "Barn swallow",
+      "facet": "Longest animal migrations",
+      "known_at": 6
+    },
+    {
+      "name": "White stork",
+      "facet": "Longest animal migrations",
+      "known_at": 8
+    },
+    {
+      "name": "Loggerhead sea turtle",
+      "facet": "Longest animal migrations",
+      "known_at": 10
+    },
+    {
+      "name": "Desert locust",
+      "facet": "Longest animal migrations",
+      "known_at": 9
+    },
+    {
+      "name": "Bogong moth",
+      "facet": "Longest animal migrations",
+      "known_at": 13
+    },
+    {
+      "name": "Wandering albatross",
+      "facet": "Record body parts and features",
+      "known_at": 10
+    },
+    {
+      "name": "Narwhal",
+      "facet": "Record body parts and features",
+      "known_at": 7
+    },
+    {
+      "name": "Chameleon",
+      "facet": "Record body parts and features",
+      "known_at": 5
+    },
+    {
+      "name": "Australian pelican",
+      "facet": "Record body parts and features",
+      "known_at": 11
+    },
+    {
+      "name": "Sword-billed hummingbird",
+      "facet": "Record body parts and features",
+      "known_at": 13
+    },
+    {
+      "name": "Star-nosed mole",
+      "facet": "Record body parts and features",
+      "known_at": 11
+    },
+    {
+      "name": "Giant anteater",
+      "facet": "Record body parts and features",
+      "known_at": 6
+    },
+    {
+      "name": "Hammerhead shark",
+      "facet": "Record body parts and features",
+      "known_at": 5
+    },
+    {
+      "name": "Walrus",
+      "facet": "Record body parts and features",
+      "known_at": 4
+    },
+    {
+      "name": "Octopus",
+      "facet": "Record body parts and features",
+      "known_at": 2
+    },
+    {
+      "name": "Bootlace worm",
+      "facet": "Record body parts and features",
+      "known_at": 14
+    },
+    {
+      "name": "Mandrill",
+      "facet": "Record body parts and features",
+      "known_at": 7
+    },
+    {
+      "name": "Millipede",
+      "facet": "Record body parts and features",
+      "known_at": 5
+    },
+    {
+      "name": "Proboscis monkey",
+      "facet": "Record body parts and features",
+      "known_at": 8
+    },
+    {
+      "name": "Tardigrade",
+      "facet": "Extreme survivors and tough animals",
+      "known_at": 8
+    },
+    {
+      "name": "Cockroach",
+      "facet": "Extreme survivors and tough animals",
+      "known_at": 3
+    },
+    {
+      "name": "Axolotl",
+      "facet": "Extreme survivors and tough animals",
+      "known_at": 5
+    },
+    {
+      "name": "Wood frog",
+      "facet": "Extreme survivors and tough animals",
+      "known_at": 12
+    },
+    {
+      "name": "Camel",
+      "facet": "Extreme survivors and tough animals",
+      "known_at": 2
+    },
+    {
+      "name": "Naked mole-rat",
+      "facet": "Extreme survivors and tough animals",
+      "known_at": 9
+    },
+    {
+      "name": "Pompeii worm",
+      "facet": "Extreme survivors and tough animals",
+      "known_at": 14
+    },
+    {
+      "name": "Arctic fox",
+      "facet": "Extreme survivors and tough animals",
+      "known_at": 5
+    },
+    {
+      "name": "Bdelloid rotifer",
+      "facet": "Extreme survivors and tough animals",
+      "known_at": 15
+    },
+    {
+      "name": "Lungfish",
+      "facet": "Extreme survivors and tough animals",
+      "known_at": 11
+    },
+    {
+      "name": "Planarian",
+      "facet": "Extreme survivors and tough animals",
+      "known_at": 11
+    },
+    {
+      "name": "Starfish",
+      "facet": "Extreme survivors and tough animals",
+      "known_at": 2
+    },
+    {
+      "name": "Yeti crab",
+      "facet": "Extreme survivors and tough animals",
+      "known_at": 13
+    },
+    {
+      "name": "Brine shrimp",
+      "facet": "Extreme survivors and tough animals",
+      "known_at": 9
+    },
+    {
+      "name": "Hagfish",
+      "facet": "Extreme survivors and tough animals",
+      "known_at": 11
+    },
+    {
+      "name": "Antarctic icefish",
+      "facet": "Extreme survivors and tough animals",
+      "known_at": 13
+    },
+    {
+      "name": "Honey badger",
+      "facet": "Extreme survivors and tough animals",
+      "known_at": 7
+    },
+    {
+      "name": "Thorny devil",
+      "facet": "Extreme survivors and tough animals",
+      "known_at": 11
+    },
+    {
+      "name": "Kangaroo rat",
+      "facet": "Extreme survivors and tough animals",
+      "known_at": 11
+    },
+    {
+      "name": "Mudskipper",
+      "facet": "Extreme survivors and tough animals",
+      "known_at": 10
+    },
+    {
+      "name": "Musk ox",
+      "facet": "Extreme survivors and tough animals",
+      "known_at": 9
+    },
+    {
+      "name": "Seahorse",
+      "facet": "Record eggs, babies and families",
+      "known_at": 4
+    },
+    {
+      "name": "Ocean sunfish",
+      "facet": "Record eggs, babies and families",
+      "known_at": 9
+    },
+    {
+      "name": "Platypus",
+      "facet": "Record eggs, babies and families",
+      "known_at": 5
+    },
+    {
+      "name": "Echidna",
+      "facet": "Record eggs, babies and families",
+      "known_at": 10
+    },
+    {
+      "name": "Cuckoo",
+      "facet": "Record eggs, babies and families",
+      "known_at": 7
+    },
+    {
+      "name": "Green sea turtle",
+      "facet": "Record eggs, babies and families",
+      "known_at": 6
+    },
+    {
+      "name": "Frilled shark",
+      "facet": "Record eggs, babies and families",
+      "known_at": 14
+    },
+    {
+      "name": "Alpine salamander",
+      "facet": "Record eggs, babies and families",
+      "known_at": 14
+    },
+    {
+      "name": "Termite queen",
+      "facet": "Record eggs, babies and families",
+      "known_at": 9
+    },
+    {
+      "name": "Honeybee queen",
+      "facet": "Record eggs, babies and families",
+      "known_at": 5
+    },
+    {
+      "name": "Aphid",
+      "facet": "Record eggs, babies and families",
+      "known_at": 11
+    },
+    {
+      "name": "Opossum",
+      "facet": "Record eggs, babies and families",
+      "known_at": 8
+    },
+    {
+      "name": "Atlantic cod",
+      "facet": "Record eggs, babies and families",
+      "known_at": 8
+    },
+    {
+      "name": "Rabbit",
+      "facet": "Record eggs, babies and families",
+      "known_at": 1
+    },
+    {
+      "name": "Surinam toad",
+      "facet": "Record eggs, babies and families",
+      "known_at": 13
+    },
+    {
+      "name": "Gastric-brooding frog",
+      "facet": "Record eggs, babies and families",
+      "known_at": 14
+    },
+    {
+      "name": "Malleefowl",
+      "facet": "Record eggs, babies and families",
+      "known_at": 14
+    },
+    {
+      "name": "Sand tiger shark",
+      "facet": "Record eggs, babies and families",
+      "known_at": 13
+    },
+    {
+      "name": "Box jellyfish",
+      "facet": "Most venomous and dangerous animals",
+      "known_at": 8
+    },
+    {
+      "name": "Inland taipan",
+      "facet": "Most venomous and dangerous animals",
+      "known_at": 11
+    },
+    {
+      "name": "Blue-ringed octopus",
+      "facet": "Most venomous and dangerous animals",
+      "known_at": 9
+    },
+    {
+      "name": "Stonefish",
+      "facet": "Most venomous and dangerous animals",
+      "known_at": 9
+    },
+    {
+      "name": "Cone snail",
+      "facet": "Most venomous and dangerous animals",
+      "known_at": 11
+    },
+    {
+      "name": "Black mamba",
+      "facet": "Most venomous and dangerous animals",
+      "known_at": 7
+    },
+    {
+      "name": "King cobra",
+      "facet": "Most venomous and dangerous animals",
+      "known_at": 5
+    },
+    {
+      "name": "Pufferfish",
+      "facet": "Most venomous and dangerous animals",
+      "known_at": 5
+    },
+    {
+      "name": "Great white shark",
+      "facet": "Most venomous and dangerous animals",
+      "known_at": 4
+    },
+    {
+      "name": "Brazilian wandering spider",
+      "facet": "Most venomous and dangerous animals",
+      "known_at": 12
+    },
+    {
+      "name": "Sydney funnel-web spider",
+      "facet": "Most venomous and dangerous animals",
+      "known_at": 11
+    },
+    {
+      "name": "Deathstalker scorpion",
+      "facet": "Most venomous and dangerous animals",
+      "known_at": 12
+    },
+    {
+      "name": "Gila monster",
+      "facet": "Most venomous and dangerous animals",
+      "known_at": 10
+    },
+    {
+      "name": "Irukandji jellyfish",
+      "facet": "Most venomous and dangerous animals",
+      "known_at": 13
+    },
+    {
+      "name": "Black widow spider",
+      "facet": "Most venomous and dangerous animals",
+      "known_at": 5
+    },
+    {
+      "name": "Tsetse fly",
+      "facet": "Most venomous and dangerous animals",
+      "known_at": 10
+    },
+    {
+      "name": "Portuguese man o' war",
+      "facet": "Most venomous and dangerous animals",
+      "known_at": 9
+    },
+    {
+      "name": "Lionfish",
+      "facet": "Most venomous and dangerous animals",
+      "known_at": 8
+    },
+    {
+      "name": "Cape buffalo",
+      "facet": "Most venomous and dangerous animals",
+      "known_at": 11
+    },
+    {
+      "name": "Slow loris",
+      "facet": "Most venomous and dangerous animals",
+      "known_at": 12
+    },
+    {
+      "name": "Tyrannosaurus rex",
+      "facet": "Prehistoric record holders",
+      "known_at": 1
+    },
+    {
+      "name": "Argentinosaurus",
+      "facet": "Prehistoric record holders",
+      "known_at": 11
+    },
+    {
+      "name": "Spinosaurus",
+      "facet": "Prehistoric record holders",
+      "known_at": 7
+    },
+    {
+      "name": "Woolly mammoth",
+      "facet": "Prehistoric record holders",
+      "known_at": 2
+    },
+    {
+      "name": "Brachiosaurus",
+      "facet": "Prehistoric record holders",
+      "known_at": 4
+    },
+    {
+      "name": "Paraceratherium",
+      "facet": "Prehistoric record holders",
+      "known_at": 14
+    },
+    {
+      "name": "Arthropleura",
+      "facet": "Prehistoric record holders",
+      "known_at": 14
+    },
+    {
+      "name": "Irish elk",
+      "facet": "Prehistoric record holders",
+      "known_at": 12
+    },
+    {
+      "name": "Saber-toothed cat",
+      "facet": "Prehistoric record holders",
+      "known_at": 4
+    },
+    {
+      "name": "Dunkleosteus",
+      "facet": "Prehistoric record holders",
+      "known_at": 12
+    },
+    {
+      "name": "Stegosaurus",
+      "facet": "Prehistoric record holders",
+      "known_at": 6
+    },
+    {
+      "name": "Livyatan",
+      "facet": "Prehistoric record holders",
+      "known_at": 14
+    },
+    {
+      "name": "Gigantopithecus",
+      "facet": "Prehistoric record holders",
+      "known_at": 13
+    }
+  ]
+}

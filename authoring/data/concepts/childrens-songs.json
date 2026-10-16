@@ -274,7 +274,8 @@
     {
       "name": "Canción de las vocales",
       "facet": "Canciones para contar y aprender",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: The vowel song is Spanish-only, and in English counting vowels is ambiguous (is Y a vowel?). It doesn't work across languages."
     },
     {
       "name": "Tablas de multiplicar cantadas",

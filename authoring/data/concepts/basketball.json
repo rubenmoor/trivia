@@ -1,0 +1,1112 @@
+{
+  "subcategory": "basketball",
+  "facets": [
+    "Rules and violations",
+    "Court, ball and equipment",
+    "Positions and player roles",
+    "Shots, moves and techniques",
+    "Basketball words and slang",
+    "Legendary players",
+    "Famous teams and clubs",
+    "Olympics and world competitions",
+    "Origins and history of the game",
+    "Basketball in films, cartoons and games",
+    "Variants and street basketball",
+    "Records and famous moments"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 5,
+      "estimate": 3,
+      "record": 4,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 4,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Traveling",
+      "facet": "Rules and violations",
+      "known_at": 5
+    },
+    {
+      "name": "Double dribble",
+      "facet": "Rules and violations",
+      "known_at": 6
+    },
+    {
+      "name": "Shot clock",
+      "facet": "Rules and violations",
+      "known_at": 8
+    },
+    {
+      "name": "Personal foul",
+      "facet": "Rules and violations",
+      "known_at": 6
+    },
+    {
+      "name": "Technical foul",
+      "facet": "Rules and violations",
+      "known_at": 10
+    },
+    {
+      "name": "Flagrant foul",
+      "facet": "Rules and violations",
+      "known_at": 12
+    },
+    {
+      "name": "Free throw",
+      "facet": "Rules and violations",
+      "known_at": 4
+    },
+    {
+      "name": "Goaltending",
+      "facet": "Rules and violations",
+      "known_at": 12
+    },
+    {
+      "name": "Three-second rule",
+      "facet": "Rules and violations",
+      "known_at": 10
+    },
+    {
+      "name": "Eight-second rule",
+      "facet": "Rules and violations",
+      "known_at": 13
+    },
+    {
+      "name": "Five-second rule",
+      "facet": "Rules and violations",
+      "known_at": 12
+    },
+    {
+      "name": "Backcourt violation",
+      "facet": "Rules and violations",
+      "known_at": 12
+    },
+    {
+      "name": "Fouling out",
+      "facet": "Rules and violations",
+      "known_at": 10
+    },
+    {
+      "name": "Charging",
+      "facet": "Rules and violations",
+      "known_at": 10
+    },
+    {
+      "name": "Jump ball",
+      "facet": "Rules and violations",
+      "known_at": 6
+    },
+    {
+      "name": "Quarter",
+      "facet": "Rules and violations",
+      "known_at": 5
+    },
+    {
+      "name": "Overtime",
+      "facet": "Rules and violations",
+      "known_at": 6
+    },
+    {
+      "name": "Timeout",
+      "facet": "Rules and violations",
+      "known_at": 5
+    },
+    {
+      "name": "Basketball",
+      "facet": "Court, ball and equipment",
+      "known_at": 1
+    },
+    {
+      "name": "Hoop",
+      "facet": "Court, ball and equipment",
+      "known_at": 1
+    },
+    {
+      "name": "Backboard",
+      "facet": "Court, ball and equipment",
+      "known_at": 4
+    },
+    {
+      "name": "Net",
+      "facet": "Court, ball and equipment",
+      "known_at": 2
+    },
+    {
+      "name": "Free-throw line",
+      "facet": "Court, ball and equipment",
+      "known_at": 6
+    },
+    {
+      "name": "Three-point line",
+      "facet": "Court, ball and equipment",
+      "known_at": 6
+    },
+    {
+      "name": "Key",
+      "facet": "Court, ball and equipment",
+      "known_at": 10
+    },
+    {
+      "name": "Center circle",
+      "facet": "Court, ball and equipment",
+      "known_at": 5
+    },
+    {
+      "name": "Half-court line",
+      "facet": "Court, ball and equipment",
+      "known_at": 6
+    },
+    {
+      "name": "Baseline",
+      "facet": "Court, ball and equipment",
+      "known_at": 9
+    },
+    {
+      "name": "Restricted area",
+      "facet": "Court, ball and equipment",
+      "known_at": 13
+    },
+    {
+      "name": "Scoreboard",
+      "facet": "Court, ball and equipment",
+      "known_at": 3
+    },
+    {
+      "name": "Basketball shoes",
+      "facet": "Court, ball and equipment",
+      "known_at": 3
+    },
+    {
+      "name": "Breakaway rim",
+      "facet": "Court, ball and equipment",
+      "known_at": 13
+    },
+    {
+      "name": "Hardwood court",
+      "facet": "Court, ball and equipment",
+      "known_at": 7
+    },
+    {
+      "name": "Jersey",
+      "facet": "Court, ball and equipment",
+      "known_at": 3
+    },
+    {
+      "name": "Point guard",
+      "facet": "Positions and player roles",
+      "known_at": 8
+    },
+    {
+      "name": "Shooting guard",
+      "facet": "Positions and player roles",
+      "known_at": 9
+    },
+    {
+      "name": "Small forward",
+      "facet": "Positions and player roles",
+      "known_at": 10
+    },
+    {
+      "name": "Power forward",
+      "facet": "Positions and player roles",
+      "known_at": 10
+    },
+    {
+      "name": "Center",
+      "facet": "Positions and player roles",
+      "known_at": 7
+    },
+    {
+      "name": "Sixth man",
+      "facet": "Positions and player roles",
+      "known_at": 11
+    },
+    {
+      "name": "Team captain",
+      "facet": "Positions and player roles",
+      "known_at": 4
+    },
+    {
+      "name": "Head coach",
+      "facet": "Positions and player roles",
+      "known_at": 4
+    },
+    {
+      "name": "Assistant coach",
+      "facet": "Positions and player roles",
+      "known_at": 8
+    },
+    {
+      "name": "Starting five",
+      "facet": "Positions and player roles",
+      "known_at": 7
+    },
+    {
+      "name": "Bench",
+      "facet": "Positions and player roles",
+      "known_at": 5
+    },
+    {
+      "name": "Rookie",
+      "facet": "Positions and player roles",
+      "known_at": 9
+    },
+    {
+      "name": "Team mascot",
+      "facet": "Positions and player roles",
+      "known_at": 4
+    },
+    {
+      "name": "Cheerleader",
+      "facet": "Positions and player roles",
+      "known_at": 4
+    },
+    {
+      "name": "Big man",
+      "facet": "Positions and player roles",
+      "known_at": 11
+    },
+    {
+      "name": "Point forward",
+      "facet": "Positions and player roles",
+      "known_at": 14
+    },
+    {
+      "name": "Stretch four",
+      "facet": "Positions and player roles",
+      "known_at": 15
+    },
+    {
+      "name": "Slam dunk",
+      "facet": "Shots, moves and techniques",
+      "known_at": 3
+    },
+    {
+      "name": "Layup",
+      "facet": "Shots, moves and techniques",
+      "known_at": 6
+    },
+    {
+      "name": "Jump shot",
+      "facet": "Shots, moves and techniques",
+      "known_at": 6
+    },
+    {
+      "name": "Hook shot",
+      "facet": "Shots, moves and techniques",
+      "known_at": 10
+    },
+    {
+      "name": "Skyhook",
+      "facet": "Shots, moves and techniques",
+      "known_at": 13
+    },
+    {
+      "name": "Three-pointer",
+      "facet": "Shots, moves and techniques",
+      "known_at": 5
+    },
+    {
+      "name": "Alley-oop",
+      "facet": "Shots, moves and techniques",
+      "known_at": 9
+    },
+    {
+      "name": "Fadeaway",
+      "facet": "Shots, moves and techniques",
+      "known_at": 11
+    },
+    {
+      "name": "Bank shot",
+      "facet": "Shots, moves and techniques",
+      "known_at": 10
+    },
+    {
+      "name": "Dribbling",
+      "facet": "Shots, moves and techniques",
+      "known_at": 3
+    },
+    {
+      "name": "Rebound",
+      "facet": "Shots, moves and techniques",
+      "known_at": 7
+    },
+    {
+      "name": "Assist",
+      "facet": "Shots, moves and techniques",
+      "known_at": 7
+    },
+    {
+      "name": "Steal",
+      "facet": "Shots, moves and techniques",
+      "known_at": 7
+    },
+    {
+      "name": "Block",
+      "facet": "Shots, moves and techniques",
+      "known_at": 5
+    },
+    {
+      "name": "Pick and roll",
+      "facet": "Shots, moves and techniques",
+      "known_at": 12
+    },
+    {
+      "name": "Bounce pass",
+      "facet": "Shots, moves and techniques",
+      "known_at": 5
+    },
+    {
+      "name": "Chest pass",
+      "facet": "Shots, moves and techniques",
+      "known_at": 6
+    },
+    {
+      "name": "Euro step",
+      "facet": "Shots, moves and techniques",
+      "known_at": 12
+    },
+    {
+      "name": "Granny shot",
+      "facet": "Shots, moves and techniques",
+      "known_at": 11
+    },
+    {
+      "name": "Fast break",
+      "facet": "Shots, moves and techniques",
+      "known_at": 9
+    },
+    {
+      "name": "Zone defense",
+      "facet": "Shots, moves and techniques",
+      "known_at": 11
+    },
+    {
+      "name": "Man-to-man defense",
+      "facet": "Shots, moves and techniques",
+      "known_at": 10
+    },
+    {
+      "name": "Windmill dunk",
+      "facet": "Shots, moves and techniques",
+      "known_at": 10
+    },
+    {
+      "name": "Swish",
+      "facet": "Basketball words and slang",
+      "known_at": 8
+    },
+    {
+      "name": "Brick",
+      "facet": "Basketball words and slang",
+      "known_at": 10
+    },
+    {
+      "name": "Airball",
+      "facet": "Basketball words and slang",
+      "known_at": 8
+    },
+    {
+      "name": "Triple-double",
+      "facet": "Basketball words and slang",
+      "known_at": 11
+    },
+    {
+      "name": "Double-double",
+      "facet": "Basketball words and slang",
+      "known_at": 12
+    },
+    {
+      "name": "Buzzer beater",
+      "facet": "Basketball words and slang",
+      "known_at": 8
+    },
+    {
+      "name": "And-one",
+      "facet": "Basketball words and slang",
+      "known_at": 11
+    },
+    {
+      "name": "Posterize",
+      "facet": "Basketball words and slang",
+      "known_at": 13
+    },
+    {
+      "name": "Nothing but net",
+      "facet": "Basketball words and slang",
+      "known_at": 8
+    },
+    {
+      "name": "Ankle breaker",
+      "facet": "Basketball words and slang",
+      "known_at": 11
+    },
+    {
+      "name": "Garbage time",
+      "facet": "Basketball words and slang",
+      "known_at": 13
+    },
+    {
+      "name": "Box out",
+      "facet": "Basketball words and slang",
+      "known_at": 12
+    },
+    {
+      "name": "Downtown",
+      "facet": "Basketball words and slang",
+      "known_at": 12
+    },
+    {
+      "name": "Full-court press",
+      "facet": "Basketball words and slang",
+      "known_at": 12
+    },
+    {
+      "name": "Hoops",
+      "facet": "Basketball words and slang",
+      "known_at": 7
+    },
+    {
+      "name": "Trash talk",
+      "facet": "Basketball words and slang",
+      "known_at": 10
+    },
+    {
+      "name": "LeBron James",
+      "facet": "Legendary players",
+      "known_at": 5
+    },
+    {
+      "name": "Kobe Bryant",
+      "facet": "Legendary players",
+      "known_at": 6
+    },
+    {
+      "name": "Stephen Curry",
+      "facet": "Legendary players",
+      "known_at": 6
+    },
+    {
+      "name": "Shaquille O'Neal",
+      "facet": "Legendary players",
+      "known_at": 7
+    },
+    {
+      "name": "Magic Johnson",
+      "facet": "Legendary players",
+      "known_at": 10
+    },
+    {
+      "name": "Kareem Abdul-Jabbar",
+      "facet": "Legendary players",
+      "known_at": 11
+    },
+    {
+      "name": "Wilt Chamberlain",
+      "facet": "Legendary players",
+      "known_at": 12
+    },
+    {
+      "name": "Bill Russell",
+      "facet": "Legendary players",
+      "known_at": 13
+    },
+    {
+      "name": "Yao Ming",
+      "facet": "Legendary players",
+      "known_at": 9
+    },
+    {
+      "name": "Dirk Nowitzki",
+      "facet": "Legendary players",
+      "known_at": 12
+    },
+    {
+      "name": "Manu Ginóbili",
+      "facet": "Legendary players",
+      "known_at": 13
+    },
+    {
+      "name": "Pau Gasol",
+      "facet": "Legendary players",
+      "known_at": 12
+    },
+    {
+      "name": "Hakeem Olajuwon",
+      "facet": "Legendary players",
+      "known_at": 13
+    },
+    {
+      "name": "Tim Duncan",
+      "facet": "Legendary players",
+      "known_at": 12
+    },
+    {
+      "name": "Dražen Petrović",
+      "facet": "Legendary players",
+      "known_at": 14
+    },
+    {
+      "name": "Arvydas Sabonis",
+      "facet": "Legendary players",
+      "known_at": 14
+    },
+    {
+      "name": "Giannis Antetokounmpo",
+      "facet": "Legendary players",
+      "known_at": 10
+    },
+    {
+      "name": "Luka Dončić",
+      "facet": "Legendary players",
+      "known_at": 9
+    },
+    {
+      "name": "Victor Wembanyama",
+      "facet": "Legendary players",
+      "known_at": 10
+    },
+    {
+      "name": "Nikola Jokić",
+      "facet": "Legendary players",
+      "known_at": 11
+    },
+    {
+      "name": "Dennis Rodman",
+      "facet": "Legendary players",
+      "known_at": 11
+    },
+    {
+      "name": "Lisa Leslie",
+      "facet": "Legendary players",
+      "known_at": 14
+    },
+    {
+      "name": "Oscar Schmidt",
+      "facet": "Legendary players",
+      "known_at": 14
+    },
+    {
+      "name": "Harlem Globetrotters",
+      "facet": "Famous teams and clubs",
+      "known_at": 7
+    },
+    {
+      "name": "Chicago Bulls",
+      "facet": "Famous teams and clubs",
+      "known_at": 5
+    },
+    {
+      "name": "Los Angeles Lakers",
+      "facet": "Famous teams and clubs",
+      "known_at": 5
+    },
+    {
+      "name": "Boston Celtics",
+      "facet": "Famous teams and clubs",
+      "known_at": 8
+    },
+    {
+      "name": "Golden State Warriors",
+      "facet": "Famous teams and clubs",
+      "known_at": 8
+    },
+    {
+      "name": "Miami Heat",
+      "facet": "Famous teams and clubs",
+      "known_at": 9
+    },
+    {
+      "name": "San Antonio Spurs",
+      "facet": "Famous teams and clubs",
+      "known_at": 11
+    },
+    {
+      "name": "New York Knicks",
+      "facet": "Famous teams and clubs",
+      "known_at": 9
+    },
+    {
+      "name": "Toronto Raptors",
+      "facet": "Famous teams and clubs",
+      "known_at": 9
+    },
+    {
+      "name": "Washington Generals",
+      "facet": "Famous teams and clubs",
+      "known_at": 14
+    },
+    {
+      "name": "Real Madrid Baloncesto",
+      "facet": "Famous teams and clubs",
+      "known_at": 11
+    },
+    {
+      "name": "FC Barcelona Basket",
+      "facet": "Famous teams and clubs",
+      "known_at": 11
+    },
+    {
+      "name": "CSKA Moscow",
+      "facet": "Famous teams and clubs",
+      "known_at": 13
+    },
+    {
+      "name": "Maccabi Tel Aviv",
+      "facet": "Famous teams and clubs",
+      "known_at": 13
+    },
+    {
+      "name": "Panathinaikos",
+      "facet": "Famous teams and clubs",
+      "known_at": 13
+    },
+    {
+      "name": "Fenerbahçe",
+      "facet": "Famous teams and clubs",
+      "known_at": 13
+    },
+    {
+      "name": "Žalgiris Kaunas",
+      "facet": "Famous teams and clubs",
+      "known_at": 14
+    },
+    {
+      "name": "Kansas Jayhawks",
+      "facet": "Famous teams and clubs",
+      "known_at": 15
+    },
+    {
+      "name": "WNBA",
+      "facet": "Olympics and world competitions",
+      "known_at": 10
+    },
+    {
+      "name": "NBA Finals",
+      "facet": "Olympics and world competitions",
+      "known_at": 7
+    },
+    {
+      "name": "NBA All-Star Game",
+      "facet": "Olympics and world competitions",
+      "known_at": 8
+    },
+    {
+      "name": "NBA Draft",
+      "facet": "Olympics and world competitions",
+      "known_at": 11
+    },
+    {
+      "name": "Larry O'Brien Trophy",
+      "facet": "Olympics and world competitions",
+      "known_at": 14
+    },
+    {
+      "name": "Redeem Team",
+      "facet": "Olympics and world competitions",
+      "known_at": 14
+    },
+    {
+      "name": "Olympic basketball tournament",
+      "facet": "Olympics and world competitions",
+      "known_at": 6
+    },
+    {
+      "name": "1972 Olympic basketball final",
+      "facet": "Olympics and world competitions",
+      "known_at": 14
+    },
+    {
+      "name": "Argentina's Golden Generation",
+      "facet": "Olympics and world competitions",
+      "known_at": 13
+    },
+    {
+      "name": "FIBA",
+      "facet": "Olympics and world competitions",
+      "known_at": 11
+    },
+    {
+      "name": "FIBA Basketball World Cup",
+      "facet": "Olympics and world competitions",
+      "known_at": 9
+    },
+    {
+      "name": "FIBA Women's Basketball World Cup",
+      "facet": "Olympics and world competitions",
+      "known_at": 12
+    },
+    {
+      "name": "EuroBasket",
+      "facet": "Olympics and world competitions",
+      "known_at": 11
+    },
+    {
+      "name": "EuroLeague",
+      "facet": "Olympics and world competitions",
+      "known_at": 11
+    },
+    {
+      "name": "AfroBasket",
+      "facet": "Olympics and world competitions",
+      "known_at": 14
+    },
+    {
+      "name": "March Madness",
+      "facet": "Olympics and world competitions",
+      "known_at": 12
+    },
+    {
+      "name": "James Naismith",
+      "facet": "Origins and history of the game",
+      "known_at": 9
+    },
+    {
+      "name": "Peach basket",
+      "facet": "Origins and history of the game",
+      "known_at": 8
+    },
+    {
+      "name": "Springfield, Massachusetts",
+      "facet": "Origins and history of the game",
+      "known_at": 11
+    },
+    {
+      "name": "YMCA",
+      "facet": "Origins and history of the game",
+      "known_at": 12
+    },
+    {
+      "name": "Naismith's 13 rules",
+      "facet": "Origins and history of the game",
+      "known_at": 13
+    },
+    {
+      "name": "Duck on a Rock",
+      "facet": "Origins and history of the game",
+      "known_at": 15
+    },
+    {
+      "name": "Senda Berenson",
+      "facet": "Origins and history of the game",
+      "known_at": 15
+    },
+    {
+      "name": "Naismith Memorial Basketball Hall of Fame",
+      "facet": "Origins and history of the game",
+      "known_at": 13
+    },
+    {
+      "name": "Basketball at the 1936 Summer Olympics",
+      "facet": "Origins and history of the game",
+      "known_at": 13
+    },
+    {
+      "name": "Basketball Association of America",
+      "facet": "Origins and history of the game",
+      "known_at": 14
+    },
+    {
+      "name": "American Basketball Association",
+      "facet": "Origins and history of the game",
+      "known_at": 13
+    },
+    {
+      "name": "ABA red, white and blue ball",
+      "facet": "Origins and history of the game",
+      "known_at": 14
+    },
+    {
+      "name": "Women's basketball",
+      "facet": "Origins and history of the game",
+      "known_at": 6
+    },
+    {
+      "name": "Laced leather ball",
+      "facet": "Origins and history of the game",
+      "known_at": 13
+    },
+    {
+      "name": "Earl Lloyd",
+      "facet": "Origins and history of the game",
+      "known_at": 15
+    },
+    {
+      "name": "Abe Saperstein",
+      "facet": "Origins and history of the game",
+      "known_at": 15
+    },
+    {
+      "name": "Space Jam",
+      "facet": "Basketball in films, cartoons and games",
+      "known_at": 4
+    },
+    {
+      "name": "Space Jam: A New Legacy",
+      "facet": "Basketball in films, cartoons and games",
+      "known_at": 5
+    },
+    {
+      "name": "Monstars",
+      "facet": "Basketball in films, cartoons and games",
+      "known_at": 7
+    },
+    {
+      "name": "Slam Dunk (manga)",
+      "facet": "Basketball in films, cartoons and games",
+      "known_at": 10
+    },
+    {
+      "name": "Kuroko's Basketball",
+      "facet": "Basketball in films, cartoons and games",
+      "known_at": 10
+    },
+    {
+      "name": "Air Bud",
+      "facet": "Basketball in films, cartoons and games",
+      "known_at": 9
+    },
+    {
+      "name": "Like Mike",
+      "facet": "Basketball in films, cartoons and games",
+      "known_at": 10
+    },
+    {
+      "name": "Coach Carter",
+      "facet": "Basketball in films, cartoons and games",
+      "known_at": 11
+    },
+    {
+      "name": "Hoosiers",
+      "facet": "Basketball in films, cartoons and games",
+      "known_at": 14
+    },
+    {
+      "name": "White Men Can't Jump",
+      "facet": "Basketball in films, cartoons and games",
+      "known_at": 13
+    },
+    {
+      "name": "Hustle",
+      "facet": "Basketball in films, cartoons and games",
+      "known_at": 13
+    },
+    {
+      "name": "Air",
+      "facet": "Basketball in films, cartoons and games",
+      "known_at": 12
+    },
+    {
+      "name": "The Last Dance",
+      "facet": "Basketball in films, cartoons and games",
+      "known_at": 11
+    },
+    {
+      "name": "Hoop Dreams",
+      "facet": "Basketball in films, cartoons and games",
+      "known_at": 14
+    },
+    {
+      "name": "Mario Hoops 3-on-3",
+      "facet": "Basketball in films, cartoons and games",
+      "known_at": 10
+    },
+    {
+      "name": "3x3 basketball",
+      "facet": "Variants and street basketball",
+      "known_at": 8
+    },
+    {
+      "name": "Streetball",
+      "facet": "Variants and street basketball",
+      "known_at": 7
+    },
+    {
+      "name": "Wheelchair basketball",
+      "facet": "Variants and street basketball",
+      "known_at": 5
+    },
+    {
+      "name": "Netball",
+      "facet": "Variants and street basketball",
+      "known_at": 9
+    },
+    {
+      "name": "Korfball",
+      "facet": "Variants and street basketball",
+      "known_at": 13
+    },
+    {
+      "name": "Around the World",
+      "facet": "Variants and street basketball",
+      "known_at": 10
+    },
+    {
+      "name": "Twenty-one",
+      "facet": "Variants and street basketball",
+      "known_at": 11
+    },
+    {
+      "name": "Knockout",
+      "facet": "Variants and street basketball",
+      "known_at": 10
+    },
+    {
+      "name": "SlamBall",
+      "facet": "Variants and street basketball",
+      "known_at": 13
+    },
+    {
+      "name": "Rucker Park",
+      "facet": "Variants and street basketball",
+      "known_at": 14
+    },
+    {
+      "name": "AND1 Mixtape Tour",
+      "facet": "Variants and street basketball",
+      "known_at": 13
+    },
+    {
+      "name": "Pickup game",
+      "facet": "Variants and street basketball",
+      "known_at": 9
+    },
+    {
+      "name": "Mini-basketball",
+      "facet": "Variants and street basketball",
+      "known_at": 7
+    },
+    {
+      "name": "Freestyle basketball",
+      "facet": "Variants and street basketball",
+      "known_at": 10
+    },
+    {
+      "name": "Big3",
+      "facet": "Variants and street basketball",
+      "known_at": 14
+    },
+    {
+      "name": "Wilt Chamberlain's 100-point game",
+      "facet": "Records and famous moments",
+      "known_at": 12
+    },
+    {
+      "name": "Kobe Bryant's 81-point game",
+      "facet": "Records and famous moments",
+      "known_at": 12
+    },
+    {
+      "name": "The Shot",
+      "facet": "Records and famous moments",
+      "known_at": 13
+    },
+    {
+      "name": "The Flu Game",
+      "facet": "Records and famous moments",
+      "known_at": 13
+    },
+    {
+      "name": "Free-throw line dunk",
+      "facet": "Records and famous moments",
+      "known_at": 11
+    },
+    {
+      "name": "NBA Slam Dunk Contest",
+      "facet": "Records and famous moments",
+      "known_at": 8
+    },
+    {
+      "name": "NBA Three-Point Contest",
+      "facet": "Records and famous moments",
+      "known_at": 10
+    },
+    {
+      "name": "LeBron James's all-time scoring record",
+      "facet": "Records and famous moments",
+      "known_at": 10
+    },
+    {
+      "name": "Warriors' 73–9 season",
+      "facet": "Records and famous moments",
+      "known_at": 13
+    },
+    {
+      "name": "Bill Russell's 11 championships",
+      "facet": "Records and famous moments",
+      "known_at": 13
+    },
+    {
+      "name": "Michael Jordan's six championships",
+      "facet": "Records and famous moments",
+      "known_at": 10
+    },
+    {
+      "name": "Ray Allen's corner three",
+      "facet": "Records and famous moments",
+      "known_at": 14
+    },
+    {
+      "name": "The Block",
+      "facet": "Records and famous moments",
+      "known_at": 13
+    },
+    {
+      "name": "Kawhi Leonard's four-bounce shot",
+      "facet": "Records and famous moments",
+      "known_at": 14
+    },
+    {
+      "name": "Shaquille O'Neal's broken backboards",
+      "facet": "Records and famous moments",
+      "known_at": 10
+    },
+    {
+      "name": "Manute Bol",
+      "facet": "Records and famous moments",
+      "known_at": 14
+    },
+    {
+      "name": "Muggsy Bogues",
+      "facet": "Records and famous moments",
+      "known_at": 13
+    }
+  ]
+}

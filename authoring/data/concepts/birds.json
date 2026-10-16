@@ -1,0 +1,897 @@
+{
+  "subcategory": "birds",
+  "facets": [
+    "Common and garden birds",
+    "Birds of prey and owls",
+    "Seabirds and waterbirds",
+    "Flightless and giant birds",
+    "Tropical and colorful birds",
+    "Feathers, beaks and bird bodies",
+    "Nests, eggs and chicks",
+    "Migration and flight",
+    "Bird songs and calls",
+    "Farm and pet birds",
+    "Famous birds in stories and films",
+    "Extinct birds and bird ancestors"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 4,
+      "record": 5,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 3,
+      "map_outline": 1,
+      "sound": 4,
+      "video": 3
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 4,
+      "colombia": 2,
+      "pop_culture": 4,
+      "popular_science": 3,
+      "science_news": 2,
+      "educational_media": 5,
+      "nature": 5,
+      "history": 3,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Sparrow",
+      "facet": "Common and garden birds",
+      "known_at": 1
+    },
+    {
+      "name": "Pigeon",
+      "facet": "Common and garden birds",
+      "known_at": 1
+    },
+    {
+      "name": "Crow",
+      "facet": "Common and garden birds",
+      "known_at": 2
+    },
+    {
+      "name": "Woodpecker",
+      "facet": "Common and garden birds",
+      "known_at": 2
+    },
+    {
+      "name": "Swallow",
+      "facet": "Common and garden birds",
+      "known_at": 4
+    },
+    {
+      "name": "Raven",
+      "facet": "Common and garden birds",
+      "known_at": 5
+    },
+    {
+      "name": "Blackbird",
+      "facet": "Common and garden birds",
+      "known_at": 5
+    },
+    {
+      "name": "Magpie",
+      "facet": "Common and garden birds",
+      "known_at": 6
+    },
+    {
+      "name": "Starling",
+      "facet": "Common and garden birds",
+      "known_at": 8
+    },
+    {
+      "name": "Blue tit",
+      "facet": "Common and garden birds",
+      "known_at": 8
+    },
+    {
+      "name": "Great tit",
+      "facet": "Common and garden birds",
+      "known_at": 10
+    },
+    {
+      "name": "Northern cardinal",
+      "facet": "Common and garden birds",
+      "known_at": 7
+    },
+    {
+      "name": "Blue jay",
+      "facet": "Common and garden birds",
+      "known_at": 7
+    },
+    {
+      "name": "Wren",
+      "facet": "Common and garden birds",
+      "known_at": 9
+    },
+    {
+      "name": "Goldfinch",
+      "facet": "Common and garden birds",
+      "known_at": 9
+    },
+    {
+      "name": "Common myna",
+      "facet": "Common and garden birds",
+      "known_at": 11
+    },
+    {
+      "name": "Hoopoe",
+      "facet": "Common and garden birds",
+      "known_at": 11
+    },
+    {
+      "name": "Owl",
+      "facet": "Birds of prey and owls",
+      "known_at": 1
+    },
+    {
+      "name": "Bald eagle",
+      "facet": "Birds of prey and owls",
+      "known_at": 4
+    },
+    {
+      "name": "Harpy eagle",
+      "facet": "Birds of prey and owls",
+      "known_at": 10
+    },
+    {
+      "name": "Philippine eagle",
+      "facet": "Birds of prey and owls",
+      "known_at": 12
+    },
+    {
+      "name": "Peregrine falcon",
+      "facet": "Birds of prey and owls",
+      "known_at": 7
+    },
+    {
+      "name": "Hawk",
+      "facet": "Birds of prey and owls",
+      "known_at": 3
+    },
+    {
+      "name": "Vulture",
+      "facet": "Birds of prey and owls",
+      "known_at": 4
+    },
+    {
+      "name": "Barn owl",
+      "facet": "Birds of prey and owls",
+      "known_at": 5
+    },
+    {
+      "name": "Snowy owl",
+      "facet": "Birds of prey and owls",
+      "known_at": 4
+    },
+    {
+      "name": "Great horned owl",
+      "facet": "Birds of prey and owls",
+      "known_at": 9
+    },
+    {
+      "name": "Osprey",
+      "facet": "Birds of prey and owls",
+      "known_at": 10
+    },
+    {
+      "name": "Kestrel",
+      "facet": "Birds of prey and owls",
+      "known_at": 10
+    },
+    {
+      "name": "Secretary bird",
+      "facet": "Birds of prey and owls",
+      "known_at": 11
+    },
+    {
+      "name": "Falconry",
+      "facet": "Birds of prey and owls",
+      "known_at": 10
+    },
+    {
+      "name": "Seagull",
+      "facet": "Seabirds and waterbirds",
+      "known_at": 2
+    },
+    {
+      "name": "Flamingo",
+      "facet": "Seabirds and waterbirds",
+      "known_at": 2
+    },
+    {
+      "name": "Pelican",
+      "facet": "Seabirds and waterbirds",
+      "known_at": 3
+    },
+    {
+      "name": "Swan",
+      "facet": "Seabirds and waterbirds",
+      "known_at": 3
+    },
+    {
+      "name": "Stork",
+      "facet": "Seabirds and waterbirds",
+      "known_at": 4
+    },
+    {
+      "name": "Puffin",
+      "facet": "Seabirds and waterbirds",
+      "known_at": 6
+    },
+    {
+      "name": "Heron",
+      "facet": "Seabirds and waterbirds",
+      "known_at": 6
+    },
+    {
+      "name": "Kingfisher",
+      "facet": "Seabirds and waterbirds",
+      "known_at": 7
+    },
+    {
+      "name": "Crane",
+      "facet": "Seabirds and waterbirds",
+      "known_at": 7
+    },
+    {
+      "name": "Blue-footed booby",
+      "facet": "Seabirds and waterbirds",
+      "known_at": 8
+    },
+    {
+      "name": "Cormorant",
+      "facet": "Seabirds and waterbirds",
+      "known_at": 10
+    },
+    {
+      "name": "Frigatebird",
+      "facet": "Seabirds and waterbirds",
+      "known_at": 11
+    },
+    {
+      "name": "Shoebill",
+      "facet": "Seabirds and waterbirds",
+      "known_at": 11
+    },
+    {
+      "name": "Loon",
+      "facet": "Seabirds and waterbirds",
+      "known_at": 12
+    },
+    {
+      "name": "Penguin",
+      "facet": "Flightless and giant birds",
+      "known_at": 1
+    },
+    {
+      "name": "Ostrich",
+      "facet": "Flightless and giant birds",
+      "known_at": 2
+    },
+    {
+      "name": "King penguin",
+      "facet": "Flightless and giant birds",
+      "known_at": 9
+    },
+    {
+      "name": "Cassowary",
+      "facet": "Flightless and giant birds",
+      "known_at": 9
+    },
+    {
+      "name": "Little penguin",
+      "facet": "Flightless and giant birds",
+      "known_at": 10
+    },
+    {
+      "name": "Galápagos penguin",
+      "facet": "Flightless and giant birds",
+      "known_at": 11
+    },
+    {
+      "name": "Rhea",
+      "facet": "Flightless and giant birds",
+      "known_at": 11
+    },
+    {
+      "name": "Takahe",
+      "facet": "Flightless and giant birds",
+      "known_at": 14
+    },
+    {
+      "name": "Flightless cormorant",
+      "facet": "Flightless and giant birds",
+      "known_at": 14
+    },
+    {
+      "name": "Ratite",
+      "facet": "Flightless and giant birds",
+      "known_at": 14
+    },
+    {
+      "name": "Hummingbird",
+      "facet": "Tropical and colorful birds",
+      "known_at": 2
+    },
+    {
+      "name": "Peacock",
+      "facet": "Tropical and colorful birds",
+      "known_at": 2
+    },
+    {
+      "name": "Macaw",
+      "facet": "Tropical and colorful birds",
+      "known_at": 4
+    },
+    {
+      "name": "Cockatoo",
+      "facet": "Tropical and colorful birds",
+      "known_at": 5
+    },
+    {
+      "name": "Hornbill",
+      "facet": "Tropical and colorful birds",
+      "known_at": 8
+    },
+    {
+      "name": "Bird-of-paradise",
+      "facet": "Tropical and colorful birds",
+      "known_at": 9
+    },
+    {
+      "name": "Mandarin duck",
+      "facet": "Tropical and colorful birds",
+      "known_at": 9
+    },
+    {
+      "name": "Rainbow lorikeet",
+      "facet": "Tropical and colorful birds",
+      "known_at": 10
+    },
+    {
+      "name": "Golden pheasant",
+      "facet": "Tropical and colorful birds",
+      "known_at": 10
+    },
+    {
+      "name": "Andean cock-of-the-rock",
+      "facet": "Tropical and colorful birds",
+      "known_at": 11
+    },
+    {
+      "name": "Bee-eater",
+      "facet": "Tropical and colorful birds",
+      "known_at": 11
+    },
+    {
+      "name": "Sunbird",
+      "facet": "Tropical and colorful birds",
+      "known_at": 12
+    },
+    {
+      "name": "Lilac-breasted roller",
+      "facet": "Tropical and colorful birds",
+      "known_at": 13
+    },
+    {
+      "name": "Feather",
+      "facet": "Feathers, beaks and bird bodies",
+      "known_at": 1
+    },
+    {
+      "name": "Beak",
+      "facet": "Feathers, beaks and bird bodies",
+      "known_at": 1
+    },
+    {
+      "name": "Webbed feet",
+      "facet": "Feathers, beaks and bird bodies",
+      "known_at": 4
+    },
+    {
+      "name": "Talon",
+      "facet": "Feathers, beaks and bird bodies",
+      "known_at": 5
+    },
+    {
+      "name": "Wishbone",
+      "facet": "Feathers, beaks and bird bodies",
+      "known_at": 6
+    },
+    {
+      "name": "Down feather",
+      "facet": "Feathers, beaks and bird bodies",
+      "known_at": 7
+    },
+    {
+      "name": "Hollow bones",
+      "facet": "Feathers, beaks and bird bodies",
+      "known_at": 7
+    },
+    {
+      "name": "Plumage",
+      "facet": "Feathers, beaks and bird bodies",
+      "known_at": 8
+    },
+    {
+      "name": "Crest",
+      "facet": "Feathers, beaks and bird bodies",
+      "known_at": 8
+    },
+    {
+      "name": "Molting",
+      "facet": "Feathers, beaks and bird bodies",
+      "known_at": 9
+    },
+    {
+      "name": "Preening",
+      "facet": "Feathers, beaks and bird bodies",
+      "known_at": 10
+    },
+    {
+      "name": "Gizzard",
+      "facet": "Feathers, beaks and bird bodies",
+      "known_at": 11
+    },
+    {
+      "name": "Crop",
+      "facet": "Feathers, beaks and bird bodies",
+      "known_at": 12
+    },
+    {
+      "name": "Keel",
+      "facet": "Feathers, beaks and bird bodies",
+      "known_at": 13
+    },
+    {
+      "name": "Preen gland",
+      "facet": "Feathers, beaks and bird bodies",
+      "known_at": 13
+    },
+    {
+      "name": "Nictitating membrane",
+      "facet": "Feathers, beaks and bird bodies",
+      "known_at": 14
+    },
+    {
+      "name": "Nest",
+      "facet": "Nests, eggs and chicks",
+      "known_at": 1
+    },
+    {
+      "name": "Egg",
+      "facet": "Nests, eggs and chicks",
+      "known_at": 1
+    },
+    {
+      "name": "Chick",
+      "facet": "Nests, eggs and chicks",
+      "known_at": 1
+    },
+    {
+      "name": "Eggshell",
+      "facet": "Nests, eggs and chicks",
+      "known_at": 3
+    },
+    {
+      "name": "Yolk",
+      "facet": "Nests, eggs and chicks",
+      "known_at": 3
+    },
+    {
+      "name": "Hatching",
+      "facet": "Nests, eggs and chicks",
+      "known_at": 3
+    },
+    {
+      "name": "Ostrich egg",
+      "facet": "Nests, eggs and chicks",
+      "known_at": 5
+    },
+    {
+      "name": "Common cuckoo",
+      "facet": "Nests, eggs and chicks",
+      "known_at": 6
+    },
+    {
+      "name": "Nest box",
+      "facet": "Nests, eggs and chicks",
+      "known_at": 6
+    },
+    {
+      "name": "Incubation",
+      "facet": "Nests, eggs and chicks",
+      "known_at": 8
+    },
+    {
+      "name": "Weaver bird",
+      "facet": "Nests, eggs and chicks",
+      "known_at": 9
+    },
+    {
+      "name": "Egg tooth",
+      "facet": "Nests, eggs and chicks",
+      "known_at": 10
+    },
+    {
+      "name": "Fledgling",
+      "facet": "Nests, eggs and chicks",
+      "known_at": 10
+    },
+    {
+      "name": "Imprinting",
+      "facet": "Nests, eggs and chicks",
+      "known_at": 11
+    },
+    {
+      "name": "Ovenbird",
+      "facet": "Nests, eggs and chicks",
+      "known_at": 11
+    },
+    {
+      "name": "Bowerbird",
+      "facet": "Nests, eggs and chicks",
+      "known_at": 11
+    },
+    {
+      "name": "Edible bird's nest",
+      "facet": "Nests, eggs and chicks",
+      "known_at": 12
+    },
+    {
+      "name": "Migration",
+      "facet": "Migration and flight",
+      "known_at": 3
+    },
+    {
+      "name": "V formation",
+      "facet": "Migration and flight",
+      "known_at": 5
+    },
+    {
+      "name": "Gliding",
+      "facet": "Migration and flight",
+      "known_at": 7
+    },
+    {
+      "name": "Hovering",
+      "facet": "Migration and flight",
+      "known_at": 8
+    },
+    {
+      "name": "Soaring",
+      "facet": "Migration and flight",
+      "known_at": 9
+    },
+    {
+      "name": "Homing instinct",
+      "facet": "Migration and flight",
+      "known_at": 9
+    },
+    {
+      "name": "Common swift",
+      "facet": "Migration and flight",
+      "known_at": 10
+    },
+    {
+      "name": "Arctic tern",
+      "facet": "Migration and flight",
+      "known_at": 11
+    },
+    {
+      "name": "Murmuration",
+      "facet": "Migration and flight",
+      "known_at": 11
+    },
+    {
+      "name": "Bird ringing",
+      "facet": "Migration and flight",
+      "known_at": 11
+    },
+    {
+      "name": "Thermal",
+      "facet": "Migration and flight",
+      "known_at": 12
+    },
+    {
+      "name": "Bar-tailed godwit",
+      "facet": "Migration and flight",
+      "known_at": 13
+    },
+    {
+      "name": "Bar-headed goose",
+      "facet": "Migration and flight",
+      "known_at": 13
+    },
+    {
+      "name": "Flyway",
+      "facet": "Migration and flight",
+      "known_at": 13
+    },
+    {
+      "name": "Ruby-throated hummingbird",
+      "facet": "Migration and flight",
+      "known_at": 13
+    },
+    {
+      "name": "Magnetoreception",
+      "facet": "Migration and flight",
+      "known_at": 14
+    },
+    {
+      "name": "Chirp",
+      "facet": "Bird songs and calls",
+      "known_at": 1
+    },
+    {
+      "name": "Quack",
+      "facet": "Bird songs and calls",
+      "known_at": 1
+    },
+    {
+      "name": "Hoot",
+      "facet": "Bird songs and calls",
+      "known_at": 2
+    },
+    {
+      "name": "Nightingale",
+      "facet": "Bird songs and calls",
+      "known_at": 6
+    },
+    {
+      "name": "Birdwatching",
+      "facet": "Bird songs and calls",
+      "known_at": 6
+    },
+    {
+      "name": "Kookaburra",
+      "facet": "Bird songs and calls",
+      "known_at": 8
+    },
+    {
+      "name": "Mockingbird",
+      "facet": "Bird songs and calls",
+      "known_at": 8
+    },
+    {
+      "name": "Skylark",
+      "facet": "Bird songs and calls",
+      "known_at": 9
+    },
+    {
+      "name": "Dawn chorus",
+      "facet": "Bird songs and calls",
+      "known_at": 10
+    },
+    {
+      "name": "Duck call",
+      "facet": "Bird songs and calls",
+      "known_at": 10
+    },
+    {
+      "name": "Song thrush",
+      "facet": "Bird songs and calls",
+      "known_at": 12
+    },
+    {
+      "name": "Bellbird",
+      "facet": "Bird songs and calls",
+      "known_at": 13
+    },
+    {
+      "name": "Whip-poor-will",
+      "facet": "Bird songs and calls",
+      "known_at": 13
+    },
+    {
+      "name": "Common potoo",
+      "facet": "Bird songs and calls",
+      "known_at": 13
+    },
+    {
+      "name": "Syrinx",
+      "facet": "Bird songs and calls",
+      "known_at": 14
+    },
+    {
+      "name": "Chicken",
+      "facet": "Farm and pet birds",
+      "known_at": 1
+    },
+    {
+      "name": "Rooster",
+      "facet": "Farm and pet birds",
+      "known_at": 1
+    },
+    {
+      "name": "Goose",
+      "facet": "Farm and pet birds",
+      "known_at": 2
+    },
+    {
+      "name": "Canary",
+      "facet": "Farm and pet birds",
+      "known_at": 4
+    },
+    {
+      "name": "Budgerigar",
+      "facet": "Farm and pet birds",
+      "known_at": 5
+    },
+    {
+      "name": "Quail",
+      "facet": "Farm and pet birds",
+      "known_at": 6
+    },
+    {
+      "name": "Cockatiel",
+      "facet": "Farm and pet birds",
+      "known_at": 7
+    },
+    {
+      "name": "Lovebird",
+      "facet": "Farm and pet birds",
+      "known_at": 7
+    },
+    {
+      "name": "Homing pigeon",
+      "facet": "Farm and pet birds",
+      "known_at": 7
+    },
+    {
+      "name": "African grey parrot",
+      "facet": "Farm and pet birds",
+      "known_at": 9
+    },
+    {
+      "name": "Guinea fowl",
+      "facet": "Farm and pet birds",
+      "known_at": 9
+    },
+    {
+      "name": "Silkie chicken",
+      "facet": "Farm and pet birds",
+      "known_at": 10
+    },
+    {
+      "name": "Zebra finch",
+      "facet": "Farm and pet birds",
+      "known_at": 11
+    },
+    {
+      "name": "Muscovy duck",
+      "facet": "Farm and pet birds",
+      "known_at": 12
+    },
+    {
+      "name": "Donald Duck",
+      "facet": "Famous birds in stories and films",
+      "known_at": 1
+    },
+    {
+      "name": "Tweety",
+      "facet": "Famous birds in stories and films",
+      "known_at": 3
+    },
+    {
+      "name": "Road Runner",
+      "facet": "Famous birds in stories and films",
+      "known_at": 4
+    },
+    {
+      "name": "Daffy Duck",
+      "facet": "Famous birds in stories and films",
+      "known_at": 5
+    },
+    {
+      "name": "Mumble",
+      "facet": "Famous birds in stories and films",
+      "known_at": 6
+    },
+    {
+      "name": "Firebird",
+      "facet": "Famous birds in stories and films",
+      "known_at": 10
+    },
+    {
+      "name": "The Nightingale (Andersen)",
+      "facet": "Famous birds in stories and films",
+      "known_at": 11
+    },
+    {
+      "name": "Garuda",
+      "facet": "Famous birds in stories and films",
+      "known_at": 12
+    },
+    {
+      "name": "The Raven (Poe)",
+      "facet": "Famous birds in stories and films",
+      "known_at": 12
+    },
+    {
+      "name": "Jonathan Livingston Seagull",
+      "facet": "Famous birds in stories and films",
+      "known_at": 13
+    },
+    {
+      "name": "Feathered dinosaur",
+      "facet": "Extinct birds and bird ancestors",
+      "known_at": 8
+    },
+    {
+      "name": "Pterosaur",
+      "facet": "Extinct birds and bird ancestors",
+      "known_at": 8
+    },
+    {
+      "name": "Passenger pigeon",
+      "facet": "Extinct birds and bird ancestors",
+      "known_at": 11
+    },
+    {
+      "name": "Elephant bird",
+      "facet": "Extinct birds and bird ancestors",
+      "known_at": 11
+    },
+    {
+      "name": "Terror bird",
+      "facet": "Extinct birds and bird ancestors",
+      "known_at": 11
+    },
+    {
+      "name": "Great auk",
+      "facet": "Extinct birds and bird ancestors",
+      "known_at": 12
+    },
+    {
+      "name": "Haast's eagle",
+      "facet": "Extinct birds and bird ancestors",
+      "known_at": 12
+    },
+    {
+      "name": "Spix's macaw",
+      "facet": "Extinct birds and bird ancestors",
+      "known_at": 12
+    },
+    {
+      "name": "Carolina parakeet",
+      "facet": "Extinct birds and bird ancestors",
+      "known_at": 13
+    },
+    {
+      "name": "Argentavis",
+      "facet": "Extinct birds and bird ancestors",
+      "known_at": 13
+    },
+    {
+      "name": "Gastornis",
+      "facet": "Extinct birds and bird ancestors",
+      "known_at": 14
+    }
+  ]
+}

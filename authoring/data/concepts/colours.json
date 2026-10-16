@@ -1,0 +1,872 @@
+{
+  "subcategory": "colours",
+  "facets": [
+    "Color wheel and mixing",
+    "Pigments, dyes and paints",
+    "Colors in famous art and artists",
+    "Light, rainbows and the sky",
+    "Color vision and the eye",
+    "Colors in nature and animals",
+    "Color symbolism around the world",
+    "Colors of flags and emblems",
+    "Colorful characters in pop culture",
+    "Colors in books and stories",
+    "Color names and their origins",
+    "Color codes in everyday life"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 5,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 3,
+      "science_news": 2,
+      "educational_media": 3,
+      "nature": 4,
+      "history": 4,
+      "body_senses": 4,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Primary colors",
+      "facet": "Color wheel and mixing",
+      "known_at": 3
+    },
+    {
+      "name": "Secondary colors",
+      "facet": "Color wheel and mixing",
+      "known_at": 5
+    },
+    {
+      "name": "Complementary colors",
+      "facet": "Color wheel and mixing",
+      "known_at": 9
+    },
+    {
+      "name": "Green",
+      "facet": "Color wheel and mixing",
+      "known_at": 1
+    },
+    {
+      "name": "Purple",
+      "facet": "Color wheel and mixing",
+      "known_at": 1
+    },
+    {
+      "name": "Brown",
+      "facet": "Color wheel and mixing",
+      "known_at": 2
+    },
+    {
+      "name": "Pink",
+      "facet": "Color wheel and mixing",
+      "known_at": 1
+    },
+    {
+      "name": "Grey",
+      "facet": "Color wheel and mixing",
+      "known_at": 1
+    },
+    {
+      "name": "Tertiary colors",
+      "facet": "Color wheel and mixing",
+      "known_at": 11
+    },
+    {
+      "name": "Warm colors",
+      "facet": "Color wheel and mixing",
+      "known_at": 6
+    },
+    {
+      "name": "Cool colors",
+      "facet": "Color wheel and mixing",
+      "known_at": 6
+    },
+    {
+      "name": "Tint",
+      "facet": "Color wheel and mixing",
+      "known_at": 11
+    },
+    {
+      "name": "Hue",
+      "facet": "Color wheel and mixing",
+      "known_at": 12
+    },
+    {
+      "name": "Saturation",
+      "facet": "Color wheel and mixing",
+      "known_at": 12
+    },
+    {
+      "name": "Analogous colors",
+      "facet": "Color wheel and mixing",
+      "known_at": 13
+    },
+    {
+      "name": "Cyan",
+      "facet": "Color wheel and mixing",
+      "known_at": 8
+    },
+    {
+      "name": "RGB",
+      "facet": "Color wheel and mixing",
+      "known_at": 10
+    },
+    {
+      "name": "Additive color mixing",
+      "facet": "Color wheel and mixing",
+      "known_at": 13
+    },
+    {
+      "name": "Subtractive color mixing",
+      "facet": "Color wheel and mixing",
+      "known_at": 13
+    },
+    {
+      "name": "Ultramarine",
+      "facet": "Pigments, dyes and paints",
+      "known_at": 13
+    },
+    {
+      "name": "Lapis lazuli",
+      "facet": "Pigments, dyes and paints",
+      "known_at": 11
+    },
+    {
+      "name": "Tyrian purple",
+      "facet": "Pigments, dyes and paints",
+      "known_at": 13
+    },
+    {
+      "name": "Indigo dye",
+      "facet": "Pigments, dyes and paints",
+      "known_at": 10
+    },
+    {
+      "name": "Cochineal",
+      "facet": "Pigments, dyes and paints",
+      "known_at": 13
+    },
+    {
+      "name": "Ochre",
+      "facet": "Pigments, dyes and paints",
+      "known_at": 11
+    },
+    {
+      "name": "Vermilion",
+      "facet": "Pigments, dyes and paints",
+      "known_at": 13
+    },
+    {
+      "name": "Watercolor",
+      "facet": "Pigments, dyes and paints",
+      "known_at": 4
+    },
+    {
+      "name": "Oil paint",
+      "facet": "Pigments, dyes and paints",
+      "known_at": 7
+    },
+    {
+      "name": "Acrylic paint",
+      "facet": "Pigments, dyes and paints",
+      "known_at": 9
+    },
+    {
+      "name": "Crayon",
+      "facet": "Pigments, dyes and paints",
+      "known_at": 1
+    },
+    {
+      "name": "Chalk",
+      "facet": "Pigments, dyes and paints",
+      "known_at": 2
+    },
+    {
+      "name": "Prussian blue",
+      "facet": "Pigments, dyes and paints",
+      "known_at": 13
+    },
+    {
+      "name": "Egyptian blue",
+      "facet": "Pigments, dyes and paints",
+      "known_at": 14
+    },
+    {
+      "name": "Gouache",
+      "facet": "Pigments, dyes and paints",
+      "known_at": 11
+    },
+    {
+      "name": "Vantablack",
+      "facet": "Pigments, dyes and paints",
+      "known_at": 12
+    },
+    {
+      "name": "Lead white",
+      "facet": "Pigments, dyes and paints",
+      "known_at": 14
+    },
+    {
+      "name": "The Starry Night",
+      "facet": "Colors in famous art and artists",
+      "known_at": 5
+    },
+    {
+      "name": "Sunflowers",
+      "facet": "Colors in famous art and artists",
+      "known_at": 9
+    },
+    {
+      "name": "Picasso's Blue Period",
+      "facet": "Colors in famous art and artists",
+      "known_at": 12
+    },
+    {
+      "name": "Water Lilies",
+      "facet": "Colors in famous art and artists",
+      "known_at": 10
+    },
+    {
+      "name": "Mark Rothko",
+      "facet": "Colors in famous art and artists",
+      "known_at": 13
+    },
+    {
+      "name": "International Klein Blue",
+      "facet": "Colors in famous art and artists",
+      "known_at": 14
+    },
+    {
+      "name": "Girl with a Pearl Earring",
+      "facet": "Colors in famous art and artists",
+      "known_at": 9
+    },
+    {
+      "name": "The Scream",
+      "facet": "Colors in famous art and artists",
+      "known_at": 7
+    },
+    {
+      "name": "Impressionism",
+      "facet": "Colors in famous art and artists",
+      "known_at": 10
+    },
+    {
+      "name": "Fauvism",
+      "facet": "Colors in famous art and artists",
+      "known_at": 13
+    },
+    {
+      "name": "Pointillism",
+      "facet": "Colors in famous art and artists",
+      "known_at": 12
+    },
+    {
+      "name": "The Kiss",
+      "facet": "Colors in famous art and artists",
+      "known_at": 11
+    },
+    {
+      "name": "Rainbow",
+      "facet": "Light, rainbows and the sky",
+      "known_at": 1
+    },
+    {
+      "name": "Blue sky",
+      "facet": "Light, rainbows and the sky",
+      "known_at": 3
+    },
+    {
+      "name": "Sunset",
+      "facet": "Light, rainbows and the sky",
+      "known_at": 1
+    },
+    {
+      "name": "Double rainbow",
+      "facet": "Light, rainbows and the sky",
+      "known_at": 6
+    },
+    {
+      "name": "Visible spectrum",
+      "facet": "Light, rainbows and the sky",
+      "known_at": 10
+    },
+    {
+      "name": "Ultraviolet",
+      "facet": "Light, rainbows and the sky",
+      "known_at": 8
+    },
+    {
+      "name": "White light",
+      "facet": "Light, rainbows and the sky",
+      "known_at": 8
+    },
+    {
+      "name": "Mars",
+      "facet": "Light, rainbows and the sky",
+      "known_at": 2
+    },
+    {
+      "name": "Blood moon",
+      "facet": "Light, rainbows and the sky",
+      "known_at": 9
+    },
+    {
+      "name": "Green flash",
+      "facet": "Light, rainbows and the sky",
+      "known_at": 14
+    },
+    {
+      "name": "Neon light",
+      "facet": "Light, rainbows and the sky",
+      "known_at": 9
+    },
+    {
+      "name": "Cone cells",
+      "facet": "Color vision and the eye",
+      "known_at": 11
+    },
+    {
+      "name": "Rod cells",
+      "facet": "Color vision and the eye",
+      "known_at": 11
+    },
+    {
+      "name": "Ishihara test",
+      "facet": "Color vision and the eye",
+      "known_at": 13
+    },
+    {
+      "name": "Eye color",
+      "facet": "Color vision and the eye",
+      "known_at": 2
+    },
+    {
+      "name": "Afterimage",
+      "facet": "Color vision and the eye",
+      "known_at": 10
+    },
+    {
+      "name": "The dress",
+      "facet": "Color vision and the eye",
+      "known_at": 10
+    },
+    {
+      "name": "Dog vision",
+      "facet": "Color vision and the eye",
+      "known_at": 5
+    },
+    {
+      "name": "Tetrachromacy",
+      "facet": "Color vision and the eye",
+      "known_at": 14
+    },
+    {
+      "name": "Night vision",
+      "facet": "Color vision and the eye",
+      "known_at": 6
+    },
+    {
+      "name": "Bee vision",
+      "facet": "Color vision and the eye",
+      "known_at": 11
+    },
+    {
+      "name": "Autumn leaves",
+      "facet": "Colors in nature and animals",
+      "known_at": 3
+    },
+    {
+      "name": "Zebra",
+      "facet": "Colors in nature and animals",
+      "known_at": 1
+    },
+    {
+      "name": "Camouflage",
+      "facet": "Colors in nature and animals",
+      "known_at": 5
+    },
+    {
+      "name": "Warning coloration",
+      "facet": "Colors in nature and animals",
+      "known_at": 12
+    },
+    {
+      "name": "Coral reef",
+      "facet": "Colors in nature and animals",
+      "known_at": 4
+    },
+    {
+      "name": "Amazon river dolphin",
+      "facet": "Colors in nature and animals",
+      "known_at": 8
+    },
+    {
+      "name": "Lake Hillier",
+      "facet": "Colors in nature and animals",
+      "known_at": 13
+    },
+    {
+      "name": "Carrot",
+      "facet": "Colors in nature and animals",
+      "known_at": 9
+    },
+    {
+      "name": "White wedding dress",
+      "facet": "Color symbolism around the world",
+      "known_at": 5
+    },
+    {
+      "name": "Black for mourning",
+      "facet": "Color symbolism around the world",
+      "known_at": 8
+    },
+    {
+      "name": "Red in Chinese culture",
+      "facet": "Color symbolism around the world",
+      "known_at": 7
+    },
+    {
+      "name": "Royal purple",
+      "facet": "Color symbolism around the world",
+      "known_at": 9
+    },
+    {
+      "name": "Saffron robes",
+      "facet": "Color symbolism around the world",
+      "known_at": 10
+    },
+    {
+      "name": "Green in Islam",
+      "facet": "Color symbolism around the world",
+      "known_at": 12
+    },
+    {
+      "name": "Red carpet",
+      "facet": "Color symbolism around the world",
+      "known_at": 5
+    },
+    {
+      "name": "King's Day orange",
+      "facet": "Color symbolism around the world",
+      "known_at": 8
+    },
+    {
+      "name": "Blue for boys, pink for girls",
+      "facet": "Color symbolism around the world",
+      "known_at": 4
+    },
+    {
+      "name": "Red rose",
+      "facet": "Color symbolism around the world",
+      "known_at": 3
+    },
+    {
+      "name": "White flag",
+      "facet": "Color symbolism around the world",
+      "known_at": 5
+    },
+    {
+      "name": "Yellow jersey",
+      "facet": "Color symbolism around the world",
+      "known_at": 10
+    },
+    {
+      "name": "Black belt",
+      "facet": "Color symbolism around the world",
+      "known_at": 5
+    },
+    {
+      "name": "Saint Patrick's Day",
+      "facet": "Color symbolism around the world",
+      "known_at": 6
+    },
+    {
+      "name": "White in East Asian funerals",
+      "facet": "Color symbolism around the world",
+      "known_at": 12
+    },
+    {
+      "name": "Green light",
+      "facet": "Color symbolism around the world",
+      "known_at": 3
+    },
+    {
+      "name": "Flag of Japan",
+      "facet": "Colors of flags and emblems",
+      "known_at": 2
+    },
+    {
+      "name": "Flag of Brazil",
+      "facet": "Colors of flags and emblems",
+      "known_at": 4
+    },
+    {
+      "name": "Flag of Canada",
+      "facet": "Colors of flags and emblems",
+      "known_at": 3
+    },
+    {
+      "name": "Flag of Italy",
+      "facet": "Colors of flags and emblems",
+      "known_at": 4
+    },
+    {
+      "name": "Flag of France",
+      "facet": "Colors of flags and emblems",
+      "known_at": 3
+    },
+    {
+      "name": "Flag of Germany",
+      "facet": "Colors of flags and emblems",
+      "known_at": 5
+    },
+    {
+      "name": "Flag of the United States",
+      "facet": "Colors of flags and emblems",
+      "known_at": 2
+    },
+    {
+      "name": "Flag of South Africa",
+      "facet": "Colors of flags and emblems",
+      "known_at": 9
+    },
+    {
+      "name": "Flag of India",
+      "facet": "Colors of flags and emblems",
+      "known_at": 7
+    },
+    {
+      "name": "Flag of China",
+      "facet": "Colors of flags and emblems",
+      "known_at": 4
+    },
+    {
+      "name": "Flag of Jamaica",
+      "facet": "Colors of flags and emblems",
+      "known_at": 8
+    },
+    {
+      "name": "Flag of Nepal",
+      "facet": "Colors of flags and emblems",
+      "known_at": 9
+    },
+    {
+      "name": "Flag of Bhutan",
+      "facet": "Colors of flags and emblems",
+      "known_at": 13
+    },
+    {
+      "name": "Pan-African colors",
+      "facet": "Colors of flags and emblems",
+      "known_at": 13
+    },
+    {
+      "name": "Flag of Colombia",
+      "facet": "Colors of flags and emblems",
+      "known_at": 8
+    },
+    {
+      "name": "Flag of Mexico",
+      "facet": "Colors of flags and emblems",
+      "known_at": 5
+    },
+    {
+      "name": "Flag of Australia",
+      "facet": "Colors of flags and emblems",
+      "known_at": 6
+    },
+    {
+      "name": "Rainbow flag",
+      "facet": "Colors of flags and emblems",
+      "known_at": 6
+    },
+    {
+      "name": "Flag of Kenya",
+      "facet": "Colors of flags and emblems",
+      "known_at": 11
+    },
+    {
+      "name": "Pink Panther",
+      "facet": "Colorful characters in pop culture",
+      "known_at": 4
+    },
+    {
+      "name": "Kermit the Frog",
+      "facet": "Colorful characters in pop culture",
+      "known_at": 3
+    },
+    {
+      "name": "Pac-Man ghosts",
+      "facet": "Colorful characters in pop culture",
+      "known_at": 6
+    },
+    {
+      "name": "Cookie Monster",
+      "facet": "Colorful characters in pop culture",
+      "known_at": 3
+    },
+    {
+      "name": "The Simpsons",
+      "facet": "Colorful characters in pop culture",
+      "known_at": 3
+    },
+    {
+      "name": "The Color Purple",
+      "facet": "Colors in books and stories",
+      "known_at": 13
+    },
+    {
+      "name": "The Scarlet Letter",
+      "facet": "Colors in books and stories",
+      "known_at": 14
+    },
+    {
+      "name": "Green Eggs and Ham",
+      "facet": "Colors in books and stories",
+      "known_at": 8
+    },
+    {
+      "name": "Bluebeard",
+      "facet": "Colors in books and stories",
+      "known_at": 11
+    },
+    {
+      "name": "The Red and the Black",
+      "facet": "Colors in books and stories",
+      "known_at": 14
+    },
+    {
+      "name": "Anne of Green Gables",
+      "facet": "Colors in books and stories",
+      "known_at": 11
+    },
+    {
+      "name": "White Fang",
+      "facet": "Colors in books and stories",
+      "known_at": 10
+    },
+    {
+      "name": "A Study in Scarlet",
+      "facet": "Colors in books and stories",
+      "known_at": 13
+    },
+    {
+      "name": "The Great Gatsby",
+      "facet": "Colors in books and stories",
+      "known_at": 13
+    },
+    {
+      "name": "Red Queen",
+      "facet": "Colors in books and stories",
+      "known_at": 8
+    },
+    {
+      "name": "One Hundred Years of Solitude",
+      "facet": "Colors in books and stories",
+      "known_at": 14
+    },
+    {
+      "name": "Magenta",
+      "facet": "Color names and their origins",
+      "known_at": 7
+    },
+    {
+      "name": "Turquoise",
+      "facet": "Color names and their origins",
+      "known_at": 5
+    },
+    {
+      "name": "Crimson",
+      "facet": "Color names and their origins",
+      "known_at": 9
+    },
+    {
+      "name": "Scarlet",
+      "facet": "Color names and their origins",
+      "known_at": 8
+    },
+    {
+      "name": "Beige",
+      "facet": "Color names and their origins",
+      "known_at": 7
+    },
+    {
+      "name": "Khaki",
+      "facet": "Color names and their origins",
+      "known_at": 11
+    },
+    {
+      "name": "Lilac",
+      "facet": "Color names and their origins",
+      "known_at": 6
+    },
+    {
+      "name": "Navy blue",
+      "facet": "Color names and their origins",
+      "known_at": 6
+    },
+    {
+      "name": "Teal",
+      "facet": "Color names and their origins",
+      "known_at": 9
+    },
+    {
+      "name": "Burgundy",
+      "facet": "Color names and their origins",
+      "known_at": 9
+    },
+    {
+      "name": "Fuchsia",
+      "facet": "Color names and their origins",
+      "known_at": 11
+    },
+    {
+      "name": "Lavender",
+      "facet": "Color names and their origins",
+      "known_at": 5
+    },
+    {
+      "name": "Ivory",
+      "facet": "Color names and their origins",
+      "known_at": 8
+    },
+    {
+      "name": "Amber",
+      "facet": "Color names and their origins",
+      "known_at": 8
+    },
+    {
+      "name": "Maroon",
+      "facet": "Color names and their origins",
+      "known_at": 10
+    },
+    {
+      "name": "Chartreuse",
+      "facet": "Color names and their origins",
+      "known_at": 13
+    },
+    {
+      "name": "Cerulean",
+      "facet": "Color names and their origins",
+      "known_at": 13
+    },
+    {
+      "name": "Azure",
+      "facet": "Color names and their origins",
+      "known_at": 11
+    },
+    {
+      "name": "Emerald green",
+      "facet": "Color names and their origins",
+      "known_at": 7
+    },
+    {
+      "name": "Flight recorder",
+      "facet": "Color codes in everyday life",
+      "known_at": 10
+    },
+    {
+      "name": "Stop sign",
+      "facet": "Color codes in everyday life",
+      "known_at": 3
+    },
+    {
+      "name": "Emergency exit sign",
+      "facet": "Color codes in everyday life",
+      "known_at": 6
+    },
+    {
+      "name": "Hot and cold taps",
+      "facet": "Color codes in everyday life",
+      "known_at": 3
+    },
+    {
+      "name": "Recycling bins",
+      "facet": "Color codes in everyday life",
+      "known_at": 5
+    },
+    {
+      "name": "Electrical wiring colors",
+      "facet": "Color codes in everyday life",
+      "known_at": 13
+    },
+    {
+      "name": "Resistor color code",
+      "facet": "Color codes in everyday life",
+      "known_at": 14
+    },
+    {
+      "name": "Hex color code",
+      "facet": "Color codes in everyday life",
+      "known_at": 12
+    },
+    {
+      "name": "Ski slope colors",
+      "facet": "Color codes in everyday life",
+      "known_at": 9
+    },
+    {
+      "name": "Snooker balls",
+      "facet": "Color codes in everyday life",
+      "known_at": 11
+    },
+    {
+      "name": "Map colors",
+      "facet": "Color codes in everyday life",
+      "known_at": 3
+    },
+    {
+      "name": "Weather warning colors",
+      "facet": "Color codes in everyday life",
+      "known_at": 8
+    },
+    {
+      "name": "Mood ring",
+      "facet": "Color codes in everyday life",
+      "known_at": 9
+    },
+    {
+      "name": "Fire truck",
+      "facet": "Color codes in everyday life",
+      "known_at": 1
+    },
+    {
+      "name": "High-visibility vest",
+      "facet": "Color codes in everyday life",
+      "known_at": 6
+    }
+  ]
+}

@@ -1,0 +1,617 @@
+{
+  "subcategory": "languages-of-the-world",
+  "facets": [
+    "Most spoken world languages",
+    "Official languages of countries",
+    "Writing systems and scripts",
+    "Language families and relatives",
+    "Ancient and extinct languages",
+    "Decipherment and translation",
+    "Indigenous and endangered languages",
+    "Invented and fictional languages",
+    "Sign languages, Braille and codes",
+    "Loanwords traveling between languages",
+    "Greetings around the world",
+    "How languages sound and work"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 4,
+      "record": 5,
+      "origin": 5,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 3,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 2,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Mandarin Chinese",
+      "facet": "Most spoken world languages",
+      "known_at": 4
+    },
+    {
+      "name": "Arabic",
+      "facet": "Most spoken world languages",
+      "known_at": 4
+    },
+    {
+      "name": "Urdu",
+      "facet": "Most spoken world languages",
+      "known_at": 11
+    },
+    {
+      "name": "Punjabi",
+      "facet": "Most spoken world languages",
+      "known_at": 12
+    },
+    {
+      "name": "Turkish",
+      "facet": "Most spoken world languages",
+      "known_at": 7
+    },
+    {
+      "name": "Vietnamese",
+      "facet": "Most spoken world languages",
+      "known_at": 9
+    },
+    {
+      "name": "Tamil",
+      "facet": "Most spoken world languages",
+      "known_at": 12
+    },
+    {
+      "name": "Persian",
+      "facet": "Most spoken world languages",
+      "known_at": 11
+    },
+    {
+      "name": "Brazil",
+      "facet": "Official languages of countries",
+      "known_at": 4
+    },
+    {
+      "name": "Switzerland",
+      "facet": "Official languages of countries",
+      "known_at": 8
+    },
+    {
+      "name": "South Africa",
+      "facet": "Official languages of countries",
+      "known_at": 11
+    },
+    {
+      "name": "Belgium",
+      "facet": "Official languages of countries",
+      "known_at": 9
+    },
+    {
+      "name": "Singapore",
+      "facet": "Official languages of countries",
+      "known_at": 11
+    },
+    {
+      "name": "New Zealand",
+      "facet": "Official languages of countries",
+      "known_at": 10
+    },
+    {
+      "name": "Angola",
+      "facet": "Official languages of countries",
+      "known_at": 11
+    },
+    {
+      "name": "Philippines",
+      "facet": "Official languages of countries",
+      "known_at": 11
+    },
+    {
+      "name": "Luxembourg",
+      "facet": "Official languages of countries",
+      "known_at": 12
+    },
+    {
+      "name": "Ireland",
+      "facet": "Official languages of countries",
+      "known_at": 10
+    },
+    {
+      "name": "Quebec",
+      "facet": "Official languages of countries",
+      "known_at": 9
+    },
+    {
+      "name": "Egypt",
+      "facet": "Official languages of countries",
+      "known_at": 7
+    },
+    {
+      "name": "Hiragana",
+      "facet": "Writing systems and scripts",
+      "known_at": 10
+    },
+    {
+      "name": "Katakana",
+      "facet": "Writing systems and scripts",
+      "known_at": 11
+    },
+    {
+      "name": "Kanji",
+      "facet": "Writing systems and scripts",
+      "known_at": 9
+    },
+    {
+      "name": "Thai script",
+      "facet": "Writing systems and scripts",
+      "known_at": 12
+    },
+    {
+      "name": "Right-to-left writing",
+      "facet": "Writing systems and scripts",
+      "known_at": 7
+    },
+    {
+      "name": "Georgian script",
+      "facet": "Writing systems and scripts",
+      "known_at": 14
+    },
+    {
+      "name": "Ge'ez script",
+      "facet": "Writing systems and scripts",
+      "known_at": 15
+    },
+    {
+      "name": "Cherokee syllabary",
+      "facet": "Writing systems and scripts",
+      "known_at": 14
+    },
+    {
+      "name": "Indo-European languages",
+      "facet": "Language families and relatives",
+      "known_at": 11
+    },
+    {
+      "name": "Romance languages",
+      "facet": "Language families and relatives",
+      "known_at": 9
+    },
+    {
+      "name": "Germanic languages",
+      "facet": "Language families and relatives",
+      "known_at": 10
+    },
+    {
+      "name": "Slavic languages",
+      "facet": "Language families and relatives",
+      "known_at": 10
+    },
+    {
+      "name": "Proto-Indo-European",
+      "facet": "Language families and relatives",
+      "known_at": 14
+    },
+    {
+      "name": "Bantu languages",
+      "facet": "Language families and relatives",
+      "known_at": 13
+    },
+    {
+      "name": "Semitic languages",
+      "facet": "Language families and relatives",
+      "known_at": 12
+    },
+    {
+      "name": "Sino-Tibetan languages",
+      "facet": "Language families and relatives",
+      "known_at": 14
+    },
+    {
+      "name": "Uralic languages",
+      "facet": "Language families and relatives",
+      "known_at": 14
+    },
+    {
+      "name": "Finnish",
+      "facet": "Language families and relatives",
+      "known_at": 10
+    },
+    {
+      "name": "Hungarian",
+      "facet": "Language families and relatives",
+      "known_at": 11
+    },
+    {
+      "name": "Austronesian languages",
+      "facet": "Language families and relatives",
+      "known_at": 14
+    },
+    {
+      "name": "Turkic languages",
+      "facet": "Language families and relatives",
+      "known_at": 13
+    },
+    {
+      "name": "Dravidian languages",
+      "facet": "Language families and relatives",
+      "known_at": 14
+    },
+    {
+      "name": "Celtic languages",
+      "facet": "Language families and relatives",
+      "known_at": 11
+    },
+    {
+      "name": "Creole language",
+      "facet": "Language families and relatives",
+      "known_at": 11
+    },
+    {
+      "name": "Afrikaans",
+      "facet": "Language families and relatives",
+      "known_at": 12
+    },
+    {
+      "name": "Dutch",
+      "facet": "Language families and relatives",
+      "known_at": 6
+    },
+    {
+      "name": "Yiddish",
+      "facet": "Language families and relatives",
+      "known_at": 12
+    },
+    {
+      "name": "Romanian",
+      "facet": "Language families and relatives",
+      "known_at": 11
+    },
+    {
+      "name": "Maltese",
+      "facet": "Language families and relatives",
+      "known_at": 14
+    },
+    {
+      "name": "Ancient Greek",
+      "facet": "Ancient and extinct languages",
+      "known_at": 7
+    },
+    {
+      "name": "Ancient Egyptian",
+      "facet": "Ancient and extinct languages",
+      "known_at": 7
+    },
+    {
+      "name": "Akkadian",
+      "facet": "Ancient and extinct languages",
+      "known_at": 14
+    },
+    {
+      "name": "Aramaic",
+      "facet": "Ancient and extinct languages",
+      "known_at": 12
+    },
+    {
+      "name": "Old English",
+      "facet": "Ancient and extinct languages",
+      "known_at": 11
+    },
+    {
+      "name": "Old Norse",
+      "facet": "Ancient and extinct languages",
+      "known_at": 10
+    },
+    {
+      "name": "Coptic",
+      "facet": "Ancient and extinct languages",
+      "known_at": 14
+    },
+    {
+      "name": "Gothic",
+      "facet": "Ancient and extinct languages",
+      "known_at": 14
+    },
+    {
+      "name": "Hittite",
+      "facet": "Ancient and extinct languages",
+      "known_at": 14
+    },
+    {
+      "name": "Biblical Hebrew",
+      "facet": "Ancient and extinct languages",
+      "known_at": 12
+    },
+    {
+      "name": "Pali",
+      "facet": "Ancient and extinct languages",
+      "known_at": 15
+    },
+    {
+      "name": "Old Church Slavonic",
+      "facet": "Ancient and extinct languages",
+      "known_at": 15
+    },
+    {
+      "name": "Classical Chinese",
+      "facet": "Ancient and extinct languages",
+      "known_at": 13
+    },
+    {
+      "name": "Yuri Knorozov",
+      "facet": "Decipherment and translation",
+      "known_at": 15
+    },
+    {
+      "name": "Septuagint",
+      "facet": "Decipherment and translation",
+      "known_at": 14
+    },
+    {
+      "name": "Inuktitut",
+      "facet": "Indigenous and endangered languages",
+      "known_at": 13
+    },
+    {
+      "name": "Welsh",
+      "facet": "Indigenous and endangered languages",
+      "known_at": 10
+    },
+    {
+      "name": "Irish",
+      "facet": "Indigenous and endangered languages",
+      "known_at": 10
+    },
+    {
+      "name": "Yoruba",
+      "facet": "Indigenous and endangered languages",
+      "known_at": 12
+    },
+    {
+      "name": "Xhosa",
+      "facet": "Indigenous and endangered languages",
+      "known_at": 12
+    },
+    {
+      "name": "Australian Aboriginal languages",
+      "facet": "Indigenous and endangered languages",
+      "known_at": 11
+    },
+    {
+      "name": "Mapudungun",
+      "facet": "Indigenous and endangered languages",
+      "known_at": 14
+    },
+    {
+      "name": "Tibetan",
+      "facet": "Indigenous and endangered languages",
+      "known_at": 12
+    },
+    {
+      "name": "Revival of Hebrew",
+      "facet": "Indigenous and endangered languages",
+      "known_at": 13
+    },
+    {
+      "name": "Language extinction",
+      "facet": "Indigenous and endangered languages",
+      "known_at": 10
+    },
+    {
+      "name": "Elvish languages",
+      "facet": "Invented and fictional languages",
+      "known_at": 8
+    },
+    {
+      "name": "High Valyrian",
+      "facet": "Invented and fictional languages",
+      "known_at": 13
+    },
+    {
+      "name": "Huttese",
+      "facet": "Invented and fictional languages",
+      "known_at": 12
+    },
+    {
+      "name": "Lojban",
+      "facet": "Invented and fictional languages",
+      "known_at": 15
+    },
+    {
+      "name": "Wookiee language",
+      "facet": "Invented and fictional languages",
+      "known_at": 7
+    },
+    {
+      "name": "American Sign Language",
+      "facet": "Sign languages, Braille and codes",
+      "known_at": 8
+    },
+    {
+      "name": "International Sign",
+      "facet": "Sign languages, Braille and codes",
+      "known_at": 12
+    },
+    {
+      "name": "Maritime signal flags",
+      "facet": "Sign languages, Braille and codes",
+      "known_at": 11
+    },
+    {
+      "name": "Pigpen cipher",
+      "facet": "Sign languages, Braille and codes",
+      "known_at": 13
+    },
+    {
+      "name": "Lip reading",
+      "facet": "Sign languages, Braille and codes",
+      "known_at": 6
+    },
+    {
+      "name": "Pajamas",
+      "facet": "Loanwords traveling between languages",
+      "known_at": 9
+    },
+    {
+      "name": "Boomerang",
+      "facet": "Loanwords traveling between languages",
+      "known_at": 5
+    },
+    {
+      "name": "Hurricane",
+      "facet": "Loanwords traveling between languages",
+      "known_at": 12
+    },
+    {
+      "name": "Sauna",
+      "facet": "Loanwords traveling between languages",
+      "known_at": 8
+    },
+    {
+      "name": "Zero",
+      "facet": "Loanwords traveling between languages",
+      "known_at": 13
+    },
+    {
+      "name": "Hello",
+      "facet": "Greetings around the world",
+      "known_at": 1
+    },
+    {
+      "name": "Hola",
+      "facet": "Greetings around the world",
+      "known_at": 1
+    },
+    {
+      "name": "Jambo",
+      "facet": "Greetings around the world",
+      "known_at": 8
+    },
+    {
+      "name": "As-salamu alaykum",
+      "facet": "Greetings around the world",
+      "known_at": 9
+    },
+    {
+      "name": "Ni hao",
+      "facet": "Greetings around the world",
+      "known_at": 5
+    },
+    {
+      "name": "Annyeonghaseyo",
+      "facet": "Greetings around the world",
+      "known_at": 9
+    },
+    {
+      "name": "Guten Tag",
+      "facet": "Greetings around the world",
+      "known_at": 6
+    },
+    {
+      "name": "Kia ora",
+      "facet": "Greetings around the world",
+      "known_at": 12
+    },
+    {
+      "name": "Sawasdee",
+      "facet": "Greetings around the world",
+      "known_at": 12
+    },
+    {
+      "name": "Danke",
+      "facet": "Greetings around the world",
+      "known_at": 4
+    },
+    {
+      "name": "Arigato",
+      "facet": "Greetings around the world",
+      "known_at": 5
+    },
+    {
+      "name": "Merci",
+      "facet": "Greetings around the world",
+      "known_at": 3
+    },
+    {
+      "name": "Obrigado",
+      "facet": "Greetings around the world",
+      "known_at": 7
+    },
+    {
+      "name": "Bowing",
+      "facet": "Greetings around the world",
+      "known_at": 4
+    },
+    {
+      "name": "Wai",
+      "facet": "Greetings around the world",
+      "known_at": 12
+    },
+    {
+      "name": "Cheek kissing",
+      "facet": "Greetings around the world",
+      "known_at": 6
+    },
+    {
+      "name": "Handshake",
+      "facet": "Greetings around the world",
+      "known_at": 1
+    },
+    {
+      "name": "Whistled language",
+      "facet": "How languages sound and work",
+      "known_at": 11
+    },
+    {
+      "name": "Animal sounds in different languages",
+      "facet": "How languages sound and work",
+      "known_at": 3
+    },
+    {
+      "name": "Word order",
+      "facet": "How languages sound and work",
+      "known_at": 11
+    },
+    {
+      "name": "Pidgin",
+      "facet": "How languages sound and work",
+      "known_at": 13
+    },
+    {
+      "name": "Lingua franca",
+      "facet": "How languages sound and work",
+      "known_at": 12
+    }
+  ]
+}

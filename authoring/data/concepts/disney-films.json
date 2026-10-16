@@ -1,0 +1,777 @@
+{
+  "subcategory": "disney-films",
+  "facets": [
+    "Princesses and heroes",
+    "Disney villains",
+    "Sidekicks and comic companions",
+    "Real animals in the films",
+    "Pixar worlds and characters",
+    "Songs and famous lines",
+    "Real places behind the films",
+    "Fairy tales and source stories",
+    "Magic objects and spells",
+    "Mickey Mouse and friends",
+    "Walt Disney and studio history",
+    "Live-action Disney films"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 2,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 1,
+      "nature": 3,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Belle",
+      "facet": "Princesses and heroes",
+      "known_at": 2
+    },
+    {
+      "name": "Elsa",
+      "facet": "Princesses and heroes",
+      "known_at": 1
+    },
+    {
+      "name": "Mirabel Madrigal",
+      "facet": "Princesses and heroes",
+      "known_at": 4
+    },
+    {
+      "name": "Luisa Madrigal",
+      "facet": "Princesses and heroes",
+      "known_at": 5
+    },
+    {
+      "name": "Mufasa",
+      "facet": "Princesses and heroes",
+      "known_at": 3
+    },
+    {
+      "name": "Pinocchio",
+      "facet": "Princesses and heroes",
+      "known_at": 2
+    },
+    {
+      "name": "Maleficent",
+      "facet": "Disney villains",
+      "known_at": 3
+    },
+    {
+      "name": "Captain Hook",
+      "facet": "Disney villains",
+      "known_at": 3
+    },
+    {
+      "name": "Evil Queen",
+      "facet": "Disney villains",
+      "known_at": 3
+    },
+    {
+      "name": "Mother Gothel",
+      "facet": "Disney villains",
+      "known_at": 5
+    },
+    {
+      "name": "Queen of Hearts",
+      "facet": "Disney villains",
+      "known_at": 5
+    },
+    {
+      "name": "Governor Ratcliffe",
+      "facet": "Disney villains",
+      "known_at": 11
+    },
+    {
+      "name": "Judge Claude Frollo",
+      "facet": "Disney villains",
+      "known_at": 10
+    },
+    {
+      "name": "King Magnifico",
+      "facet": "Disney villains",
+      "known_at": 10
+    },
+    {
+      "name": "Chernabog",
+      "facet": "Disney villains",
+      "known_at": 13
+    },
+    {
+      "name": "Pumbaa",
+      "facet": "Sidekicks and comic companions",
+      "known_at": 2
+    },
+    {
+      "name": "Mushu",
+      "facet": "Sidekicks and comic companions",
+      "known_at": 4
+    },
+    {
+      "name": "Jiminy Cricket",
+      "facet": "Sidekicks and comic companions",
+      "known_at": 4
+    },
+    {
+      "name": "Tinker Bell",
+      "facet": "Sidekicks and comic companions",
+      "known_at": 2
+    },
+    {
+      "name": "Lumière",
+      "facet": "Sidekicks and comic companions",
+      "known_at": 4
+    },
+    {
+      "name": "Cogsworth",
+      "facet": "Sidekicks and comic companions",
+      "known_at": 6
+    },
+    {
+      "name": "Ray the firefly",
+      "facet": "Sidekicks and comic companions",
+      "known_at": 9
+    },
+    {
+      "name": "Meerkat",
+      "facet": "Real animals in the films",
+      "known_at": 4
+    },
+    {
+      "name": "Warthog",
+      "facet": "Real animals in the films",
+      "known_at": 4
+    },
+    {
+      "name": "Hyena",
+      "facet": "Real animals in the films",
+      "known_at": 3
+    },
+    {
+      "name": "Clownfish",
+      "facet": "Real animals in the films",
+      "known_at": 2
+    },
+    {
+      "name": "Blue tang",
+      "facet": "Real animals in the films",
+      "known_at": 5
+    },
+    {
+      "name": "Sea turtle",
+      "facet": "Real animals in the films",
+      "known_at": 3
+    },
+    {
+      "name": "Raccoon",
+      "facet": "Real animals in the films",
+      "known_at": 4
+    },
+    {
+      "name": "Dalmatian",
+      "facet": "Real animals in the films",
+      "known_at": 2
+    },
+    {
+      "name": "Elephant",
+      "facet": "Real animals in the films",
+      "known_at": 1
+    },
+    {
+      "name": "White-tailed deer",
+      "facet": "Real animals in the films",
+      "known_at": 2
+    },
+    {
+      "name": "Skunk",
+      "facet": "Real animals in the films",
+      "known_at": 3
+    },
+    {
+      "name": "Sloth",
+      "facet": "Real animals in the films",
+      "known_at": 3
+    },
+    {
+      "name": "Bengal tiger",
+      "facet": "Real animals in the films",
+      "known_at": 4
+    },
+    {
+      "name": "EVE",
+      "facet": "Pixar worlds and characters",
+      "known_at": 4
+    },
+    {
+      "name": "Lightning McQueen",
+      "facet": "Pixar worlds and characters",
+      "known_at": 1
+    },
+    {
+      "name": "Mater",
+      "facet": "Pixar worlds and characters",
+      "known_at": 2
+    },
+    {
+      "name": "Sulley",
+      "facet": "Pixar worlds and characters",
+      "known_at": 2
+    },
+    {
+      "name": "Mike Wazowski",
+      "facet": "Pixar worlds and characters",
+      "known_at": 2
+    },
+    {
+      "name": "Carl Fredricksen",
+      "facet": "Pixar worlds and characters",
+      "known_at": 4
+    },
+    {
+      "name": "Russell",
+      "facet": "Pixar worlds and characters",
+      "known_at": 5
+    },
+    {
+      "name": "Joy",
+      "facet": "Pixar worlds and characters",
+      "known_at": 2
+    },
+    {
+      "name": "Bing Bong",
+      "facet": "Pixar worlds and characters",
+      "known_at": 6
+    },
+    {
+      "name": "Mr. Incredible",
+      "facet": "Pixar worlds and characters",
+      "known_at": 2
+    },
+    {
+      "name": "Edna Mode",
+      "facet": "Pixar worlds and characters",
+      "known_at": 5
+    },
+    {
+      "name": "Mei Lee",
+      "facet": "Pixar worlds and characters",
+      "known_at": 6
+    },
+    {
+      "name": "Joe Gardner",
+      "facet": "Pixar worlds and characters",
+      "known_at": 8
+    },
+    {
+      "name": "Ember Lumen",
+      "facet": "Pixar worlds and characters",
+      "known_at": 6
+    },
+    {
+      "name": "Monstropolis",
+      "facet": "Pixar worlds and characters",
+      "known_at": 7
+    },
+    {
+      "name": "Circle of Life",
+      "facet": "Songs and famous lines",
+      "known_at": 4
+    },
+    {
+      "name": "You've Got a Friend in Me",
+      "facet": "Songs and famous lines",
+      "known_at": 4
+    },
+    {
+      "name": "Supercalifragilisticexpialidocious",
+      "facet": "Songs and famous lines",
+      "known_at": 5
+    },
+    {
+      "name": "The Bare Necessities",
+      "facet": "Songs and famous lines",
+      "known_at": 5
+    },
+    {
+      "name": "To infinity and beyond",
+      "facet": "Songs and famous lines",
+      "known_at": 3
+    },
+    {
+      "name": "Can You Feel the Love Tonight",
+      "facet": "Songs and famous lines",
+      "known_at": 6
+    },
+    {
+      "name": "Heigh-Ho",
+      "facet": "Songs and famous lines",
+      "known_at": 5
+    },
+    {
+      "name": "Part of Your World",
+      "facet": "Songs and famous lines",
+      "known_at": 5
+    },
+    {
+      "name": "Go the Distance",
+      "facet": "Songs and famous lines",
+      "known_at": 10
+    },
+    {
+      "name": "Mirror, mirror on the wall",
+      "facet": "Songs and famous lines",
+      "known_at": 3
+    },
+    {
+      "name": "Norway",
+      "facet": "Real places behind the films",
+      "known_at": 6
+    },
+    {
+      "name": "Polynesia",
+      "facet": "Real places behind the films",
+      "known_at": 8
+    },
+    {
+      "name": "Scotland",
+      "facet": "Real places behind the films",
+      "known_at": 6
+    },
+    {
+      "name": "New Orleans",
+      "facet": "Real places behind the films",
+      "known_at": 7
+    },
+    {
+      "name": "Sydney",
+      "facet": "Real places behind the films",
+      "known_at": 4
+    },
+    {
+      "name": "Angel Falls",
+      "facet": "Real places behind the films",
+      "known_at": 11
+    },
+    {
+      "name": "Cinque Terre",
+      "facet": "Real places behind the films",
+      "known_at": 11
+    },
+    {
+      "name": "Serengeti",
+      "facet": "Real places behind the films",
+      "known_at": 9
+    },
+    {
+      "name": "Hawaii",
+      "facet": "Real places behind the films",
+      "known_at": 4
+    },
+    {
+      "name": "Route 66",
+      "facet": "Real places behind the films",
+      "known_at": 10
+    },
+    {
+      "name": "Tokyo",
+      "facet": "Real places behind the films",
+      "known_at": 8
+    },
+    {
+      "name": "Jamestown",
+      "facet": "Real places behind the films",
+      "known_at": 13
+    },
+    {
+      "name": "Ballad of Mulan",
+      "facet": "Fairy tales and source stories",
+      "known_at": 12
+    },
+    {
+      "name": "The Frog Prince",
+      "facet": "Fairy tales and source stories",
+      "known_at": 7
+    },
+    {
+      "name": "Jeanne-Marie Leprince de Beaumont",
+      "facet": "Fairy tales and source stories",
+      "known_at": 14
+    },
+    {
+      "name": "Edgar Rice Burroughs",
+      "facet": "Fairy tales and source stories",
+      "known_at": 13
+    },
+    {
+      "name": "P. L. Travers",
+      "facet": "Fairy tales and source stories",
+      "known_at": 12
+    },
+    {
+      "name": "Dodie Smith",
+      "facet": "Fairy tales and source stories",
+      "known_at": 14
+    },
+    {
+      "name": "Felix Salten",
+      "facet": "Fairy tales and source stories",
+      "known_at": 14
+    },
+    {
+      "name": "Greek mythology",
+      "facet": "Fairy tales and source stories",
+      "known_at": 6
+    },
+    {
+      "name": "Enchanted rose",
+      "facet": "Magic objects and spells",
+      "known_at": 4
+    },
+    {
+      "name": "Magic lamp",
+      "facet": "Magic objects and spells",
+      "known_at": 2
+    },
+    {
+      "name": "Glass slipper",
+      "facet": "Magic objects and spells",
+      "known_at": 2
+    },
+    {
+      "name": "Poisoned apple",
+      "facet": "Magic objects and spells",
+      "known_at": 2
+    },
+    {
+      "name": "Magic carpet",
+      "facet": "Magic objects and spells",
+      "known_at": 2
+    },
+    {
+      "name": "Heart of Te Fiti",
+      "facet": "Magic objects and spells",
+      "known_at": 5
+    },
+    {
+      "name": "Magic mirror",
+      "facet": "Magic objects and spells",
+      "known_at": 3
+    },
+    {
+      "name": "Pixie dust",
+      "facet": "Magic objects and spells",
+      "known_at": 4
+    },
+    {
+      "name": "Pumpkin carriage",
+      "facet": "Magic objects and spells",
+      "known_at": 3
+    },
+    {
+      "name": "Magic candle",
+      "facet": "Magic objects and spells",
+      "known_at": 7
+    },
+    {
+      "name": "Sorcerer's hat",
+      "facet": "Magic objects and spells",
+      "known_at": 8
+    },
+    {
+      "name": "Ariel's voice",
+      "facet": "Magic objects and spells",
+      "known_at": 4
+    },
+    {
+      "name": "True love's kiss",
+      "facet": "Magic objects and spells",
+      "known_at": 2
+    },
+    {
+      "name": "Rapunzel's magic hair",
+      "facet": "Magic objects and spells",
+      "known_at": 3
+    },
+    {
+      "name": "Sundrop flower",
+      "facet": "Magic objects and spells",
+      "known_at": 8
+    },
+    {
+      "name": "Ice powers",
+      "facet": "Magic objects and spells",
+      "known_at": 2
+    },
+    {
+      "name": "Wishing star",
+      "facet": "Magic objects and spells",
+      "known_at": 9
+    },
+    {
+      "name": "Llama potion",
+      "facet": "Magic objects and spells",
+      "known_at": 9
+    },
+    {
+      "name": "Fairy Godmother's wand",
+      "facet": "Magic objects and spells",
+      "known_at": 3
+    },
+    {
+      "name": "Blue Fairy",
+      "facet": "Magic objects and spells",
+      "known_at": 7
+    },
+    {
+      "name": "Daisy Duck",
+      "facet": "Mickey Mouse and friends",
+      "known_at": 3
+    },
+    {
+      "name": "Huey, Dewey and Louie",
+      "facet": "Mickey Mouse and friends",
+      "known_at": 6
+    },
+    {
+      "name": "Chip 'n' Dale",
+      "facet": "Mickey Mouse and friends",
+      "known_at": 4
+    },
+    {
+      "name": "Pete",
+      "facet": "Mickey Mouse and friends",
+      "known_at": 7
+    },
+    {
+      "name": "Clarabelle Cow",
+      "facet": "Mickey Mouse and friends",
+      "known_at": 11
+    },
+    {
+      "name": "Mickey Mouse Clubhouse",
+      "facet": "Mickey Mouse and friends",
+      "known_at": 3
+    },
+    {
+      "name": "The Sorcerer's Apprentice",
+      "facet": "Mickey Mouse and friends",
+      "known_at": 9
+    },
+    {
+      "name": "Oswald the Lucky Rabbit",
+      "facet": "Mickey Mouse and friends",
+      "known_at": 12
+    },
+    {
+      "name": "Duckburg",
+      "facet": "Mickey Mouse and friends",
+      "known_at": 9
+    },
+    {
+      "name": "Ludwig Von Drake",
+      "facet": "Mickey Mouse and friends",
+      "known_at": 13
+    },
+    {
+      "name": "Gyro Gearloose",
+      "facet": "Mickey Mouse and friends",
+      "known_at": 11
+    },
+    {
+      "name": "Max Goof",
+      "facet": "Mickey Mouse and friends",
+      "known_at": 9
+    },
+    {
+      "name": "Horace Horsecollar",
+      "facet": "Mickey Mouse and friends",
+      "known_at": 14
+    },
+    {
+      "name": "Roy O. Disney",
+      "facet": "Walt Disney and studio history",
+      "known_at": 13
+    },
+    {
+      "name": "Snow White and the Seven Dwarfs",
+      "facet": "Walt Disney and studio history",
+      "known_at": 6
+    },
+    {
+      "name": "Walt Disney World",
+      "facet": "Walt Disney and studio history",
+      "known_at": 4
+    },
+    {
+      "name": "Disneyland Paris",
+      "facet": "Walt Disney and studio history",
+      "known_at": 5
+    },
+    {
+      "name": "Tokyo Disneyland",
+      "facet": "Walt Disney and studio history",
+      "known_at": 7
+    },
+    {
+      "name": "Shanghai Disneyland",
+      "facet": "Walt Disney and studio history",
+      "known_at": 9
+    },
+    {
+      "name": "EPCOT",
+      "facet": "Walt Disney and studio history",
+      "known_at": 9
+    },
+    {
+      "name": "Sleeping Beauty Castle",
+      "facet": "Walt Disney and studio history",
+      "known_at": 5
+    },
+    {
+      "name": "Disney Renaissance",
+      "facet": "Walt Disney and studio history",
+      "known_at": 13
+    },
+    {
+      "name": "Academy Award",
+      "facet": "Walt Disney and studio history",
+      "known_at": 7
+    },
+    {
+      "name": "Marvel Studios",
+      "facet": "Walt Disney and studio history",
+      "known_at": 5
+    },
+    {
+      "name": "Lucasfilm",
+      "facet": "Walt Disney and studio history",
+      "known_at": 9
+    },
+    {
+      "name": "Multiplane camera",
+      "facet": "Walt Disney and studio history",
+      "known_at": 14
+    },
+    {
+      "name": "The Lion King (2019)",
+      "facet": "Live-action Disney films",
+      "known_at": 4
+    },
+    {
+      "name": "Aladdin (2019)",
+      "facet": "Live-action Disney films",
+      "known_at": 5
+    },
+    {
+      "name": "Beauty and the Beast (2017)",
+      "facet": "Live-action Disney films",
+      "known_at": 5
+    },
+    {
+      "name": "The Jungle Book (2016)",
+      "facet": "Live-action Disney films",
+      "known_at": 6
+    },
+    {
+      "name": "Mulan (2020)",
+      "facet": "Live-action Disney films",
+      "known_at": 7
+    },
+    {
+      "name": "The Little Mermaid (2023)",
+      "facet": "Live-action Disney films",
+      "known_at": 6
+    },
+    {
+      "name": "Lilo & Stitch (2025)",
+      "facet": "Live-action Disney films",
+      "known_at": 3
+    },
+    {
+      "name": "Tron",
+      "facet": "Live-action Disney films",
+      "known_at": 11
+    },
+    {
+      "name": "The Parent Trap",
+      "facet": "Live-action Disney films",
+      "known_at": 9
+    },
+    {
+      "name": "Freaky Friday",
+      "facet": "Live-action Disney films",
+      "known_at": 8
+    },
+    {
+      "name": "Enchanted",
+      "facet": "Live-action Disney films",
+      "known_at": 7
+    },
+    {
+      "name": "Pete's Dragon",
+      "facet": "Live-action Disney films",
+      "known_at": 9
+    },
+    {
+      "name": "20,000 Leagues Under the Sea",
+      "facet": "Live-action Disney films",
+      "known_at": 12
+    },
+    {
+      "name": "Honey, I Shrunk the Kids",
+      "facet": "Live-action Disney films",
+      "known_at": 9
+    },
+    {
+      "name": "The Princess Diaries",
+      "facet": "Live-action Disney films",
+      "known_at": 7
+    },
+    {
+      "name": "Cool Runnings",
+      "facet": "Live-action Disney films",
+      "known_at": 11
+    },
+    {
+      "name": "Bedknobs and Broomsticks",
+      "facet": "Live-action Disney films",
+      "known_at": 12
+    }
+  ]
+}

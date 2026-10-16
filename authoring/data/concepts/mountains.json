@@ -1,0 +1,1027 @@
+{
+  "subcategory": "mountains",
+  "facets": [
+    "Highest peaks of each continent",
+    "Famous mountain ranges",
+    "Volcanoes and eruptions",
+    "Iconic mountains and landmarks",
+    "How mountains form",
+    "Mountain landforms and terms",
+    "Mountain climate, snow and glaciers",
+    "Mountain animals and plants",
+    "Climbers and famous expeditions",
+    "Mountain sports and gear",
+    "Sacred mountains and legends",
+    "Mountains in films, books and games"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 4,
+      "record": 5,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 2,
+      "silhouette": 2,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 3
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 2,
+      "pop_culture": 3,
+      "popular_science": 3,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 4,
+      "body_senses": 3,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Mount Everest",
+      "facet": "Highest peaks of each continent",
+      "known_at": 2
+    },
+    {
+      "name": "Mount Kilimanjaro",
+      "facet": "Highest peaks of each continent",
+      "known_at": 6
+    },
+    {
+      "name": "Aconcagua",
+      "facet": "Highest peaks of each continent",
+      "known_at": 10
+    },
+    {
+      "name": "Mount Elbrus",
+      "facet": "Highest peaks of each continent",
+      "known_at": 12
+    },
+    {
+      "name": "Vinson Massif",
+      "facet": "Highest peaks of each continent",
+      "known_at": 14
+    },
+    {
+      "name": "Mount Kosciuszko",
+      "facet": "Highest peaks of each continent",
+      "known_at": 12
+    },
+    {
+      "name": "Kangchenjunga",
+      "facet": "Highest peaks of each continent",
+      "known_at": 13
+    },
+    {
+      "name": "Lhotse",
+      "facet": "Highest peaks of each continent",
+      "known_at": 14
+    },
+    {
+      "name": "Mount Kenya",
+      "facet": "Highest peaks of each continent",
+      "known_at": 12
+    },
+    {
+      "name": "Mount Logan",
+      "facet": "Highest peaks of each continent",
+      "known_at": 14
+    },
+    {
+      "name": "Pico de Orizaba",
+      "facet": "Highest peaks of each continent",
+      "known_at": 13
+    },
+    {
+      "name": "Aoraki / Mount Cook",
+      "facet": "Highest peaks of each continent",
+      "known_at": 13
+    },
+    {
+      "name": "Seven Summits",
+      "facet": "Highest peaks of each continent",
+      "known_at": 12
+    },
+    {
+      "name": "Eight-thousanders",
+      "facet": "Highest peaks of each continent",
+      "known_at": 11
+    },
+    {
+      "name": "Himalayas",
+      "facet": "Famous mountain ranges",
+      "known_at": 5
+    },
+    {
+      "name": "Andes",
+      "facet": "Famous mountain ranges",
+      "known_at": 7
+    },
+    {
+      "name": "Alps",
+      "facet": "Famous mountain ranges",
+      "known_at": 5
+    },
+    {
+      "name": "Rocky Mountains",
+      "facet": "Famous mountain ranges",
+      "known_at": 7
+    },
+    {
+      "name": "Pyrenees",
+      "facet": "Famous mountain ranges",
+      "known_at": 9
+    },
+    {
+      "name": "Ural Mountains",
+      "facet": "Famous mountain ranges",
+      "known_at": 10
+    },
+    {
+      "name": "Atlas Mountains",
+      "facet": "Famous mountain ranges",
+      "known_at": 11
+    },
+    {
+      "name": "Appalachian Mountains",
+      "facet": "Famous mountain ranges",
+      "known_at": 11
+    },
+    {
+      "name": "Carpathian Mountains",
+      "facet": "Famous mountain ranges",
+      "known_at": 11
+    },
+    {
+      "name": "Caucasus Mountains",
+      "facet": "Famous mountain ranges",
+      "known_at": 11
+    },
+    {
+      "name": "Karakoram",
+      "facet": "Famous mountain ranges",
+      "known_at": 13
+    },
+    {
+      "name": "Hindu Kush",
+      "facet": "Famous mountain ranges",
+      "known_at": 13
+    },
+    {
+      "name": "Great Dividing Range",
+      "facet": "Famous mountain ranges",
+      "known_at": 13
+    },
+    {
+      "name": "Drakensberg",
+      "facet": "Famous mountain ranges",
+      "known_at": 13
+    },
+    {
+      "name": "Tian Shan",
+      "facet": "Famous mountain ranges",
+      "known_at": 14
+    },
+    {
+      "name": "Sierra Nevada",
+      "facet": "Famous mountain ranges",
+      "known_at": 12
+    },
+    {
+      "name": "Apennines",
+      "facet": "Famous mountain ranges",
+      "known_at": 12
+    },
+    {
+      "name": "Dolomites",
+      "facet": "Famous mountain ranges",
+      "known_at": 10
+    },
+    {
+      "name": "Scandinavian Mountains",
+      "facet": "Famous mountain ranges",
+      "known_at": 13
+    },
+    {
+      "name": "Southern Alps",
+      "facet": "Famous mountain ranges",
+      "known_at": 13
+    },
+    {
+      "name": "Ethiopian Highlands",
+      "facet": "Famous mountain ranges",
+      "known_at": 13
+    },
+    {
+      "name": "Pamir Mountains",
+      "facet": "Famous mountain ranges",
+      "known_at": 14
+    },
+    {
+      "name": "Mount Vesuvius",
+      "facet": "Volcanoes and eruptions",
+      "known_at": 7
+    },
+    {
+      "name": "Mount Etna",
+      "facet": "Volcanoes and eruptions",
+      "known_at": 8
+    },
+    {
+      "name": "Mount St. Helens",
+      "facet": "Volcanoes and eruptions",
+      "known_at": 11
+    },
+    {
+      "name": "Mount Pinatubo",
+      "facet": "Volcanoes and eruptions",
+      "known_at": 13
+    },
+    {
+      "name": "Eyjafjallajökull",
+      "facet": "Volcanoes and eruptions",
+      "known_at": 11
+    },
+    {
+      "name": "Mount Tambora",
+      "facet": "Volcanoes and eruptions",
+      "known_at": 13
+    },
+    {
+      "name": "Mount Erebus",
+      "facet": "Volcanoes and eruptions",
+      "known_at": 14
+    },
+    {
+      "name": "Paricutín",
+      "facet": "Volcanoes and eruptions",
+      "known_at": 14
+    },
+    {
+      "name": "Mount Nyiragongo",
+      "facet": "Volcanoes and eruptions",
+      "known_at": 14
+    },
+    {
+      "name": "Hunga Tonga eruption",
+      "facet": "Volcanoes and eruptions",
+      "known_at": 13
+    },
+    {
+      "name": "Yellowstone Caldera",
+      "facet": "Volcanoes and eruptions",
+      "known_at": 11
+    },
+    {
+      "name": "Supervolcano",
+      "facet": "Volcanoes and eruptions",
+      "known_at": 11
+    },
+    {
+      "name": "Ring of Fire",
+      "facet": "Volcanoes and eruptions",
+      "known_at": 8
+    },
+    {
+      "name": "Olympus Mons",
+      "facet": "Volcanoes and eruptions",
+      "known_at": 9
+    },
+    {
+      "name": "Mount Fuji",
+      "facet": "Iconic mountains and landmarks",
+      "known_at": 5
+    },
+    {
+      "name": "Matterhorn",
+      "facet": "Iconic mountains and landmarks",
+      "known_at": 7
+    },
+    {
+      "name": "Table Mountain",
+      "facet": "Iconic mountains and landmarks",
+      "known_at": 10
+    },
+    {
+      "name": "Sugarloaf Mountain",
+      "facet": "Iconic mountains and landmarks",
+      "known_at": 8
+    },
+    {
+      "name": "Half Dome",
+      "facet": "Iconic mountains and landmarks",
+      "known_at": 12
+    },
+    {
+      "name": "Ben Nevis",
+      "facet": "Iconic mountains and landmarks",
+      "known_at": 11
+    },
+    {
+      "name": "Huangshan",
+      "facet": "Iconic mountains and landmarks",
+      "known_at": 13
+    },
+    {
+      "name": "Zhangjiajie",
+      "facet": "Iconic mountains and landmarks",
+      "known_at": 12
+    },
+    {
+      "name": "Mount Roraima",
+      "facet": "Iconic mountains and landmarks",
+      "known_at": 13
+    },
+    {
+      "name": "Rock of Gibraltar",
+      "facet": "Iconic mountains and landmarks",
+      "known_at": 11
+    },
+    {
+      "name": "Eiger",
+      "facet": "Iconic mountains and landmarks",
+      "known_at": 12
+    },
+    {
+      "name": "Jungfrau",
+      "facet": "Iconic mountains and landmarks",
+      "known_at": 12
+    },
+    {
+      "name": "Fitz Roy",
+      "facet": "Iconic mountains and landmarks",
+      "known_at": 13
+    },
+    {
+      "name": "Mount Kinabalu",
+      "facet": "Iconic mountains and landmarks",
+      "known_at": 13
+    },
+    {
+      "name": "Montserrat",
+      "facet": "Iconic mountains and landmarks",
+      "known_at": 13
+    },
+    {
+      "name": "Plate tectonics",
+      "facet": "How mountains form",
+      "known_at": 9
+    },
+    {
+      "name": "Tectonic plate",
+      "facet": "How mountains form",
+      "known_at": 8
+    },
+    {
+      "name": "Fold mountain",
+      "facet": "How mountains form",
+      "known_at": 10
+    },
+    {
+      "name": "Hotspot",
+      "facet": "How mountains form",
+      "known_at": 12
+    },
+    {
+      "name": "Earthquake",
+      "facet": "How mountains form",
+      "known_at": 3
+    },
+    {
+      "name": "Fault",
+      "facet": "How mountains form",
+      "known_at": 10
+    },
+    {
+      "name": "Weathering",
+      "facet": "How mountains form",
+      "known_at": 9
+    },
+    {
+      "name": "Continental drift",
+      "facet": "How mountains form",
+      "known_at": 9
+    },
+    {
+      "name": "Pangaea",
+      "facet": "How mountains form",
+      "known_at": 9
+    },
+    {
+      "name": "Subduction",
+      "facet": "How mountains form",
+      "known_at": 12
+    },
+    {
+      "name": "Mid-Atlantic Ridge",
+      "facet": "How mountains form",
+      "known_at": 12
+    },
+    {
+      "name": "Block mountain",
+      "facet": "How mountains form",
+      "known_at": 12
+    },
+    {
+      "name": "Great Rift Valley",
+      "facet": "How mountains form",
+      "known_at": 11
+    },
+    {
+      "name": "Indian Plate",
+      "facet": "How mountains form",
+      "known_at": 11
+    },
+    {
+      "name": "Marine fossils",
+      "facet": "How mountains form",
+      "known_at": 12
+    },
+    {
+      "name": "Dome mountain",
+      "facet": "How mountains form",
+      "known_at": 13
+    },
+    {
+      "name": "Uplift",
+      "facet": "How mountains form",
+      "known_at": 12
+    },
+    {
+      "name": "Peak",
+      "facet": "Mountain landforms and terms",
+      "known_at": 3
+    },
+    {
+      "name": "Summit",
+      "facet": "Mountain landforms and terms",
+      "known_at": 5
+    },
+    {
+      "name": "Valley",
+      "facet": "Mountain landforms and terms",
+      "known_at": 3
+    },
+    {
+      "name": "Ridge",
+      "facet": "Mountain landforms and terms",
+      "known_at": 8
+    },
+    {
+      "name": "Cliff",
+      "facet": "Mountain landforms and terms",
+      "known_at": 3
+    },
+    {
+      "name": "Slope",
+      "facet": "Mountain landforms and terms",
+      "known_at": 4
+    },
+    {
+      "name": "Canyon",
+      "facet": "Mountain landforms and terms",
+      "known_at": 6
+    },
+    {
+      "name": "Gorge",
+      "facet": "Mountain landforms and terms",
+      "known_at": 9
+    },
+    {
+      "name": "Plateau",
+      "facet": "Mountain landforms and terms",
+      "known_at": 9
+    },
+    {
+      "name": "Tibetan Plateau",
+      "facet": "Mountain landforms and terms",
+      "known_at": 11
+    },
+    {
+      "name": "Mountain pass",
+      "facet": "Mountain landforms and terms",
+      "known_at": 9
+    },
+    {
+      "name": "Foothills",
+      "facet": "Mountain landforms and terms",
+      "known_at": 10
+    },
+    {
+      "name": "Butte",
+      "facet": "Mountain landforms and terms",
+      "known_at": 14
+    },
+    {
+      "name": "Massif",
+      "facet": "Mountain landforms and terms",
+      "known_at": 13
+    },
+    {
+      "name": "Tepui",
+      "facet": "Mountain landforms and terms",
+      "known_at": 13
+    },
+    {
+      "name": "Saddle",
+      "facet": "Mountain landforms and terms",
+      "known_at": 12
+    },
+    {
+      "name": "Altitude",
+      "facet": "Mountain landforms and terms",
+      "known_at": 6
+    },
+    {
+      "name": "Sea level",
+      "facet": "Mountain landforms and terms",
+      "known_at": 6
+    },
+    {
+      "name": "Tree line",
+      "facet": "Mountain landforms and terms",
+      "known_at": 10
+    },
+    {
+      "name": "Scree",
+      "facet": "Mountain landforms and terms",
+      "known_at": 13
+    },
+    {
+      "name": "Cirque",
+      "facet": "Mountain landforms and terms",
+      "known_at": 14
+    },
+    {
+      "name": "Fjord",
+      "facet": "Mountain landforms and terms",
+      "known_at": 11
+    },
+    {
+      "name": "Snow",
+      "facet": "Mountain climate, snow and glaciers",
+      "known_at": 1
+    },
+    {
+      "name": "Glacier",
+      "facet": "Mountain climate, snow and glaciers",
+      "known_at": 6
+    },
+    {
+      "name": "Avalanche",
+      "facet": "Mountain climate, snow and glaciers",
+      "known_at": 6
+    },
+    {
+      "name": "Snow line",
+      "facet": "Mountain climate, snow and glaciers",
+      "known_at": 11
+    },
+    {
+      "name": "Altitude sickness",
+      "facet": "Mountain climate, snow and glaciers",
+      "known_at": 10
+    },
+    {
+      "name": "Low air pressure",
+      "facet": "Mountain climate, snow and glaciers",
+      "known_at": 11
+    },
+    {
+      "name": "Moraine",
+      "facet": "Mountain climate, snow and glaciers",
+      "known_at": 13
+    },
+    {
+      "name": "Crevasse",
+      "facet": "Mountain climate, snow and glaciers",
+      "known_at": 11
+    },
+    {
+      "name": "Rain shadow",
+      "facet": "Mountain climate, snow and glaciers",
+      "known_at": 13
+    },
+    {
+      "name": "Föhn wind",
+      "facet": "Mountain climate, snow and glaciers",
+      "known_at": 14
+    },
+    {
+      "name": "Chinook wind",
+      "facet": "Mountain climate, snow and glaciers",
+      "known_at": 14
+    },
+    {
+      "name": "Aletsch Glacier",
+      "facet": "Mountain climate, snow and glaciers",
+      "known_at": 14
+    },
+    {
+      "name": "Perito Moreno Glacier",
+      "facet": "Mountain climate, snow and glaciers",
+      "known_at": 12
+    },
+    {
+      "name": "Ice age",
+      "facet": "Mountain climate, snow and glaciers",
+      "known_at": 6
+    },
+    {
+      "name": "Snowmelt",
+      "facet": "Mountain climate, snow and glaciers",
+      "known_at": 8
+    },
+    {
+      "name": "Glacial lake",
+      "facet": "Mountain climate, snow and glaciers",
+      "known_at": 10
+    },
+    {
+      "name": "Frostbite",
+      "facet": "Mountain climate, snow and glaciers",
+      "known_at": 9
+    },
+    {
+      "name": "Alpine climate",
+      "facet": "Mountain climate, snow and glaciers",
+      "known_at": 11
+    },
+    {
+      "name": "Khumbu Icefall",
+      "facet": "Mountain climate, snow and glaciers",
+      "known_at": 14
+    },
+    {
+      "name": "Snow leopard",
+      "facet": "Mountain animals and plants",
+      "known_at": 5
+    },
+    {
+      "name": "Mountain goat",
+      "facet": "Mountain animals and plants",
+      "known_at": 4
+    },
+    {
+      "name": "Andean condor",
+      "facet": "Mountain animals and plants",
+      "known_at": 8
+    },
+    {
+      "name": "Giant panda",
+      "facet": "Mountain animals and plants",
+      "known_at": 3
+    },
+    {
+      "name": "Mountain gorilla",
+      "facet": "Mountain animals and plants",
+      "known_at": 7
+    },
+    {
+      "name": "Ibex",
+      "facet": "Mountain animals and plants",
+      "known_at": 9
+    },
+    {
+      "name": "Chamois",
+      "facet": "Mountain animals and plants",
+      "known_at": 13
+    },
+    {
+      "name": "Marmot",
+      "facet": "Mountain animals and plants",
+      "known_at": 9
+    },
+    {
+      "name": "Golden eagle",
+      "facet": "Mountain animals and plants",
+      "known_at": 6
+    },
+    {
+      "name": "Bighorn sheep",
+      "facet": "Mountain animals and plants",
+      "known_at": 9
+    },
+    {
+      "name": "Red panda",
+      "facet": "Mountain animals and plants",
+      "known_at": 6
+    },
+    {
+      "name": "Saint Bernard",
+      "facet": "Mountain animals and plants",
+      "known_at": 6
+    },
+    {
+      "name": "Grizzly bear",
+      "facet": "Mountain animals and plants",
+      "known_at": 5
+    },
+    {
+      "name": "Takin",
+      "facet": "Mountain animals and plants",
+      "known_at": 14
+    },
+    {
+      "name": "Bearded vulture",
+      "facet": "Mountain animals and plants",
+      "known_at": 13
+    },
+    {
+      "name": "Bristlecone pine",
+      "facet": "Mountain animals and plants",
+      "known_at": 14
+    },
+    {
+      "name": "1953 British Everest expedition",
+      "facet": "Climbers and famous expeditions",
+      "known_at": 11
+    },
+    {
+      "name": "Nirmal Purja",
+      "facet": "Climbers and famous expeditions",
+      "known_at": 14
+    },
+    {
+      "name": "Edward Whymper",
+      "facet": "Climbers and famous expeditions",
+      "known_at": 14
+    },
+    {
+      "name": "Hannibal crossing the Alps",
+      "facet": "Climbers and famous expeditions",
+      "known_at": 10
+    },
+    {
+      "name": "Maurice Herzog",
+      "facet": "Climbers and famous expeditions",
+      "known_at": 14
+    },
+    {
+      "name": "Hillary Step",
+      "facet": "Climbers and famous expeditions",
+      "known_at": 14
+    },
+    {
+      "name": "Ueli Steck",
+      "facet": "Climbers and famous expeditions",
+      "known_at": 14
+    },
+    {
+      "name": "Wanda Rutkiewicz",
+      "facet": "Climbers and famous expeditions",
+      "known_at": 15
+    },
+    {
+      "name": "Skiing",
+      "facet": "Mountain sports and gear",
+      "known_at": 2
+    },
+    {
+      "name": "Snowboarding",
+      "facet": "Mountain sports and gear",
+      "known_at": 4
+    },
+    {
+      "name": "Rock climbing",
+      "facet": "Mountain sports and gear",
+      "known_at": 3
+    },
+    {
+      "name": "Ice axe",
+      "facet": "Mountain sports and gear",
+      "known_at": 8
+    },
+    {
+      "name": "Crampons",
+      "facet": "Mountain sports and gear",
+      "known_at": 11
+    },
+    {
+      "name": "Carabiner",
+      "facet": "Mountain sports and gear",
+      "known_at": 9
+    },
+    {
+      "name": "Belay",
+      "facet": "Mountain sports and gear",
+      "known_at": 13
+    },
+    {
+      "name": "Bouldering",
+      "facet": "Mountain sports and gear",
+      "known_at": 9
+    },
+    {
+      "name": "Sport climbing",
+      "facet": "Mountain sports and gear",
+      "known_at": 10
+    },
+    {
+      "name": "Paragliding",
+      "facet": "Mountain sports and gear",
+      "known_at": 9
+    },
+    {
+      "name": "Mountain biking",
+      "facet": "Mountain sports and gear",
+      "known_at": 5
+    },
+    {
+      "name": "Hiking",
+      "facet": "Mountain sports and gear",
+      "known_at": 4
+    },
+    {
+      "name": "Trekking poles",
+      "facet": "Mountain sports and gear",
+      "known_at": 7
+    },
+    {
+      "name": "Ski lift",
+      "facet": "Mountain sports and gear",
+      "known_at": 4
+    },
+    {
+      "name": "Cable car",
+      "facet": "Mountain sports and gear",
+      "known_at": 4
+    },
+    {
+      "name": "Oxygen tank",
+      "facet": "Mountain sports and gear",
+      "known_at": 8
+    },
+    {
+      "name": "Sleeping bag",
+      "facet": "Mountain sports and gear",
+      "known_at": 3
+    },
+    {
+      "name": "Avalanche transceiver",
+      "facet": "Mountain sports and gear",
+      "known_at": 13
+    },
+    {
+      "name": "Ski jumping",
+      "facet": "Mountain sports and gear",
+      "known_at": 6
+    },
+    {
+      "name": "Snowshoes",
+      "facet": "Mountain sports and gear",
+      "known_at": 6
+    },
+    {
+      "name": "Winter Olympics",
+      "facet": "Mountain sports and gear",
+      "known_at": 5
+    },
+    {
+      "name": "Altitude training",
+      "facet": "Mountain sports and gear",
+      "known_at": 13
+    },
+    {
+      "name": "Mount Olympus",
+      "facet": "Sacred mountains and legends",
+      "known_at": 7
+    },
+    {
+      "name": "Mount Sinai",
+      "facet": "Sacred mountains and legends",
+      "known_at": 10
+    },
+    {
+      "name": "Mount Ararat",
+      "facet": "Sacred mountains and legends",
+      "known_at": 11
+    },
+    {
+      "name": "Mount Kailash",
+      "facet": "Sacred mountains and legends",
+      "known_at": 13
+    },
+    {
+      "name": "Mount Meru",
+      "facet": "Sacred mountains and legends",
+      "known_at": 14
+    },
+    {
+      "name": "Mount Tai",
+      "facet": "Sacred mountains and legends",
+      "known_at": 14
+    },
+    {
+      "name": "Mount Athos",
+      "facet": "Sacred mountains and legends",
+      "known_at": 13
+    },
+    {
+      "name": "Mount Zion",
+      "facet": "Sacred mountains and legends",
+      "known_at": 13
+    },
+    {
+      "name": "Sisyphus",
+      "facet": "Sacred mountains and legends",
+      "known_at": 11
+    },
+    {
+      "name": "Prometheus",
+      "facet": "Sacred mountains and legends",
+      "known_at": 12
+    },
+    {
+      "name": "Hephaestus",
+      "facet": "Sacred mountains and legends",
+      "known_at": 10
+    },
+    {
+      "name": "Adam's Peak",
+      "facet": "Sacred mountains and legends",
+      "known_at": 14
+    },
+    {
+      "name": "The Lonely Mountain",
+      "facet": "Mountains in films, books and games",
+      "known_at": 9
+    },
+    {
+      "name": "Mount Doom",
+      "facet": "Mountains in films, books and games",
+      "known_at": 7
+    },
+    {
+      "name": "Misty Mountains",
+      "facet": "Mountains in films, books and games",
+      "known_at": 11
+    },
+    {
+      "name": "Everest (2015 film)",
+      "facet": "Mountains in films, books and games",
+      "known_at": 12
+    },
+    {
+      "name": "Tintin in Tibet",
+      "facet": "Mountains in films, books and games",
+      "known_at": 10
+    },
+    {
+      "name": "Flower Fruit Mountain",
+      "facet": "Mountains in films, books and games",
+      "known_at": 12
+    },
+    {
+      "name": "Paramount Pictures logo",
+      "facet": "Mountains in films, books and games",
+      "known_at": 6
+    },
+    {
+      "name": "Journey to the Center of the Earth",
+      "facet": "Mountains in films, books and games",
+      "known_at": 12
+    },
+    {
+      "name": "Throat of the World",
+      "facet": "Mountains in films, books and games",
+      "known_at": 13
+    },
+    {
+      "name": "Death Mountain",
+      "facet": "Mountains in films, books and games",
+      "known_at": 9
+    },
+    {
+      "name": "In the Hall of the Mountain King",
+      "facet": "Mountains in films, books and games",
+      "known_at": 10
+    },
+    {
+      "name": "Free Solo",
+      "facet": "Mountains in films, books and games",
+      "known_at": 12
+    }
+  ]
+}

@@ -1443,6 +1443,14 @@
           "needs_media": null
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Mount Everest",
+      "axes": {
+        "move": "record",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "place",
+        "lens": "school"
       }
     },
     {
@@ -1936,7 +1944,15 @@
         },
         "revised_on": "2026-10-15"
       },
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Rooster crow",
+      "axes": {
+        "move": "identify",
+        "stimulus": "sound",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "nature"
+      }
     },
     {
       "id": "q-0026",
@@ -2077,6 +2093,14 @@
           "needs_media": null
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Blue whale",
+      "axes": {
+        "move": "record",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "nature"
       }
     },
     {
@@ -2293,7 +2317,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Cheetah",
+      "axes": {
+        "move": "record",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "nature"
+      }
     },
     {
       "id": "q-0031",
@@ -2364,6 +2396,14 @@
           "needs_media": null
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Hummingbird",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "nature"
       }
     },
     {
@@ -2857,6 +2897,14 @@
           "needs_media": null
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Nose",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "body_senses"
       }
     },
     {
@@ -2997,6 +3045,14 @@
           "needs_media": null
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Heart",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "body_senses"
       }
     },
     {
@@ -3058,7 +3114,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Boiling point of water",
+      "axes": {
+        "move": "count",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "number",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0041",
@@ -3129,7 +3193,15 @@
         },
         "revised_on": "2026-10-15"
       },
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Oxygen",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "body_senses"
+      }
     },
     {
       "id": "q-0042",
@@ -3202,6 +3274,14 @@
           "needs_media": null
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Femur",
+      "axes": {
+        "move": "record",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "school"
       }
     },
     {
@@ -3278,7 +3358,15 @@
         },
         "revised_on": "2026-10-06"
       },
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Water molecule",
+      "axes": {
+        "move": "made_of",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0044",
@@ -3355,7 +3443,15 @@
         },
         "revised_on": "2026-10-06"
       },
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Albert Einstein",
+      "axes": {
+        "move": "who",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "person",
+        "lens": "popular_science"
+      }
     },
     {
       "id": "q-0045",
@@ -3436,7 +3532,15 @@
         },
         "revised_on": "2026-10-06"
       },
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Skeleton",
+      "axes": {
+        "move": "count",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "number",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0046",
@@ -3510,7 +3614,15 @@
         },
         "revised_on": "2026-10-06"
       },
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Cell nucleus",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0047",
@@ -3581,7 +3693,15 @@
         },
         "revised_on": "2026-10-06"
       },
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Mercury",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0048",
@@ -3662,7 +3782,15 @@
         },
         "revised_on": "2026-10-15"
       },
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Speed of light",
+      "axes": {
+        "move": "estimate",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "number",
+        "lens": "popular_science"
+      }
     },
     {
       "id": "q-0049",
@@ -4676,7 +4804,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Drum",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "everyday"
+      }
     },
     {
       "id": "q-0062",
@@ -4754,7 +4890,15 @@
         ]
       },
       "difficulty_original": 1,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Violin",
+      "axes": {
+        "move": "identify",
+        "stimulus": "sound",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0063",
@@ -4909,7 +5053,15 @@
         },
         "revised_on": "2026-10-06"
       },
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Maracas",
+      "axes": {
+        "move": "identify",
+        "stimulus": "sound",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "everyday"
+      }
     },
     {
       "id": "q-0065",
@@ -4970,7 +5122,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Guitar",
+      "axes": {
+        "move": "count",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "number",
+        "lens": "everyday"
+      }
     },
     {
       "id": "q-0066",
@@ -5646,7 +5806,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Mirabel Madrigal",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "pop_culture"
+      }
     },
     {
       "id": "q-0075",
@@ -5717,6 +5885,14 @@
           "needs_media": null
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Woody",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "person",
+        "lens": "pop_culture"
       }
     },
     {
@@ -5804,7 +5980,15 @@
         },
         "revised_on": "2026-10-06"
       },
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Minecraft",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "pop_culture"
+      }
     },
     {
       "id": "q-0077",
@@ -5881,7 +6065,15 @@
         },
         "revised_on": "2026-10-06"
       },
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Luisa Madrigal",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "pop_culture"
+      }
     },
     {
       "id": "q-0078",
@@ -5942,7 +6134,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Elsa",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "place",
+        "lens": "pop_culture"
+      }
     },
     {
       "id": "q-0079",
@@ -6083,7 +6283,15 @@
         },
         "revised_on": "2026-10-06"
       },
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Mufasa",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "person",
+        "lens": "pop_culture"
+      }
     },
     {
       "id": "q-0081",
@@ -6144,7 +6352,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Infinity Stones",
+      "axes": {
+        "move": "count",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "number",
+        "lens": "pop_culture"
+      }
     },
     {
       "id": "q-0082",
@@ -6220,7 +6436,15 @@
         },
         "revised_on": "2026-10-06"
       },
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Nintendo",
+      "axes": {
+        "move": "who",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "group",
+        "lens": "pop_culture"
+      }
     },
     {
       "id": "q-0083",
@@ -6458,7 +6682,15 @@
         },
         "revised_on": "2026-10-06"
       },
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Tennis",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "body_senses"
+      }
     },
     {
       "id": "q-0086",
@@ -7230,7 +7462,15 @@
         },
         "revised_on": "2026-10-06"
       },
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Marathon",
+      "axes": {
+        "move": "estimate",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "number",
+        "lens": "body_senses"
+      }
     },
     {
       "id": "q-0096",
@@ -7456,6 +7696,14 @@
           "needs_media": null
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Light bulb",
+      "axes": {
+        "move": "purpose",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "everyday"
       }
     },
     {
@@ -7521,7 +7769,15 @@
       },
       "background": null,
       "difficulty_original": 3,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Christopher Columbus",
+      "axes": {
+        "move": "who",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "person",
+        "lens": "history"
+      }
     },
     {
       "id": "q-0100",
@@ -7582,7 +7838,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Simón Bolívar",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "person",
+        "lens": "history"
+      }
     },
     {
       "id": "q-0101",
@@ -7726,7 +7990,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Incas",
+      "axes": {
+        "move": "who",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "group",
+        "lens": "history"
+      }
     },
     {
       "id": "q-0103",
@@ -7930,7 +8202,15 @@
         "previous": {},
         "revised_on": "2026-10-06"
       },
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "World War II",
+      "axes": {
+        "move": "when",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "time",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0106",
@@ -8015,7 +8295,15 @@
         },
         "revised_on": "2026-10-06"
       },
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Berlin Wall",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "place",
+        "lens": "history"
+      }
     },
     {
       "id": "q-0107",
@@ -8169,7 +8457,15 @@
         },
         "revised_on": "2026-10-06"
       },
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "French Revolution",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0109",
@@ -8230,7 +8526,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Green",
+      "axes": {
+        "move": "made_of",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0110",
@@ -9113,7 +9417,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Andean cock-of-the-rock",
+      "axes": {
+        "move": "identify",
+        "stimulus": "photo",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "nature"
+      }
     },
     {
       "id": "q-0122",
@@ -9178,7 +9490,15 @@
         "file_url": null,
         "credit": null
       },
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Woodpecker",
+      "axes": {
+        "move": "identify",
+        "stimulus": "sound",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "nature"
+      }
     },
     {
       "id": "q-0123",
@@ -9238,7 +9558,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Feather",
+      "axes": {
+        "move": "made_of",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0124",
@@ -9298,7 +9626,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Ostrich",
+      "axes": {
+        "move": "record",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "nature"
+      }
     },
     {
       "id": "q-0125",
@@ -9953,7 +10289,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Diaphragm",
+      "axes": {
+        "move": "name_concept",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0135",
@@ -10013,7 +10357,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Skin",
+      "axes": {
+        "move": "record",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0136",
@@ -10073,7 +10425,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Baby teeth",
+      "axes": {
+        "move": "count",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "number",
+        "lens": "body_senses"
+      }
     },
     {
       "id": "q-0137",
@@ -11137,7 +11497,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Rubin vase",
+      "axes": {
+        "move": "identify",
+        "stimulus": "photo",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "educational_media"
+      }
     },
     {
       "id": "q-0152",
@@ -11210,6 +11578,14 @@
           ]
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Mirage",
+      "axes": {
+        "move": "name_concept",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "nature"
       }
     },
     {
@@ -11270,7 +11646,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Ebbinghaus illusion",
+      "axes": {
+        "move": "identify",
+        "stimulus": "photo",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "educational_media"
+      }
     },
     {
       "id": "q-0154",
@@ -11330,7 +11714,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Brain",
+      "axes": {
+        "move": "cause_effect",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "body_senses"
+      }
     },
     {
       "id": "q-0155",
@@ -11608,7 +12000,15 @@
         "pd_reasons": []
       },
       "difficulty_original": 5,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Trumpet",
+      "axes": {
+        "move": "identify",
+        "stimulus": "sound",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0159",
@@ -11661,7 +12061,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Colombian gaita",
+      "axes": {
+        "move": "identify",
+        "stimulus": "photo",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "colombia"
+      }
     },
     {
       "id": "q-0160",
@@ -11721,7 +12129,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Piano",
+      "axes": {
+        "move": "count",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "number",
+        "lens": "everyday"
+      }
     },
     {
       "id": "q-0161",
@@ -11783,7 +12199,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Saxophone",
+      "axes": {
+        "move": "made_of",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0162",
@@ -12828,6 +13252,14 @@
           "fun_fact": "El ratatouille de verdad es un guiso de verduras del sur de Francia, con berenjena, calabacín, tomate y pimentón."
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Remy",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "three_facts",
+        "answer_kind": "person",
+        "lens": "pop_culture"
       }
     },
     {
@@ -12898,6 +13330,14 @@
           "question": "En una película de Pixar, ¿cómo se llama el robotico que se queda solo en la Tierra compactando basura en cubos?"
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "WALL·E",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "person",
+        "lens": "pop_culture"
       }
     },
     {
@@ -12969,6 +13409,14 @@
           "fun_fact": "En la versión japonesa de 'Intensa-Mente', la verdura que Riley odia no es el brócoli sino el pimentón verde, porque a los niños japoneses no les disgusta tanto el brócoli."
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Inside Out",
+      "axes": {
+        "move": "connection",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "group",
+        "lens": "pop_culture"
       }
     },
     {
@@ -13603,6 +14051,14 @@
           "fun_fact": "En picada puede superar los 300 km/h, ¡más del triple de lo que va un carro por la autopista!"
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Peregrine falcon",
+      "axes": {
+        "move": "record",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "nature"
       }
     },
     {
@@ -13684,6 +14140,14 @@
           ]
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Giraffe",
+      "axes": {
+        "move": "estimate",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "number",
+        "lens": "nature"
       }
     },
     {
@@ -13744,7 +14208,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Komodo dragon",
+      "axes": {
+        "move": "identify",
+        "stimulus": "photo",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "nature"
+      }
     },
     {
       "id": "q-0190",
@@ -14739,7 +15211,15 @@
       },
       "background": null,
       "bundle": "base",
-      "difficulty_original": 3
+      "difficulty_original": 3,
+      "concept": "Dragon Balls",
+      "axes": {
+        "move": "count",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "number",
+        "lens": "pop_culture"
+      }
     },
     {
       "id": "q-0204",
@@ -14808,7 +15288,15 @@
       },
       "background": null,
       "bundle": "base",
-      "difficulty_original": 5
+      "difficulty_original": 5,
+      "concept": "Manga",
+      "axes": {
+        "move": "name_concept",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "pop_culture"
+      }
     },
     {
       "id": "q-0205",
@@ -15336,7 +15824,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Quarter",
+      "axes": {
+        "move": "count",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "number",
+        "lens": "body_senses"
+      }
     },
     {
       "id": "q-0212",
@@ -15410,6 +15906,14 @@
           ]
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Slam dunk",
+      "axes": {
+        "move": "name_concept",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "body_senses"
       }
     },
     {
@@ -18565,6 +19069,14 @@
           ]
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Aconcagua",
+      "axes": {
+        "move": "record",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "place",
+        "lens": "school"
       }
     },
     {
@@ -19877,7 +20389,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Monkey D. Luffy",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "person",
+        "lens": "pop_culture"
+      }
     },
     {
       "id": "q-0271",
@@ -19952,6 +20472,14 @@
           ]
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Kawaii",
+      "axes": {
+        "move": "word_meaning",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "language"
       }
     },
     {
@@ -20185,6 +20713,14 @@
           ]
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Peach basket",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "history"
       }
     },
     {
@@ -20253,7 +20789,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Springfield, Massachusetts",
+      "axes": {
+        "move": "origin",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "place",
+        "lens": "history"
+      }
     },
     {
       "id": "q-0276",
@@ -21805,6 +22349,14 @@
           "description": "Una montaña tan puntuda que parece dibujada por un niño de primaria."
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Matterhorn",
+      "axes": {
+        "move": "identify",
+        "stimulus": "photo",
+        "clue": "direct",
+        "answer_kind": "place",
+        "lens": "nature"
       }
     },
     {
@@ -21878,6 +22430,14 @@
           "question": "¿Cuántas montañas hay en el mundo que superan los 8.000 metros de altura?"
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Eight-thousanders",
+      "axes": {
+        "move": "count",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "number",
+        "lens": "school"
       }
     },
     {
@@ -21946,7 +22506,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Mount Kilimanjaro",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "place",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0297",
@@ -22798,7 +23366,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Lasso of Truth",
+      "axes": {
+        "move": "cause_effect",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "pop_culture"
+      }
     },
     {
       "id": "q-0308",
@@ -22866,7 +23442,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Justice League",
+      "axes": {
+        "move": "connection",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "group",
+        "lens": "pop_culture"
+      }
     },
     {
       "id": "q-0309",
@@ -23183,6 +23767,14 @@
           ]
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Batman",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "three_facts",
+        "answer_kind": "person",
+        "lens": "pop_culture"
       }
     },
     {
@@ -23254,7 +23846,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Krypton",
+      "axes": {
+        "move": "origin",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "place",
+        "lens": "pop_culture"
+      }
     },
     {
       "id": "q-0314",
@@ -24681,6 +25281,14 @@
           "description": "Si este idioma tuviera un grupo de WhatsApp, el celular nunca dejaría de sonar."
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Mandarin Chinese",
+      "axes": {
+        "move": "record",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "language"
       }
     },
     {
@@ -24742,7 +25350,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Arabic",
+      "axes": {
+        "move": "origin",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "language"
+      }
     },
     {
       "id": "q-0334",
@@ -28318,6 +28934,14 @@
           ]
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Danke",
+      "axes": {
+        "move": "word_meaning",
+        "stimulus": "none",
+        "clue": "scenario",
+        "answer_kind": "word",
+        "lens": "language"
       }
     },
     {
@@ -28392,6 +29016,14 @@
           ]
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Brazil",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "school"
       }
     },
     {
@@ -30005,6 +30637,14 @@
           "description": "Un saque tan rápido que el rival todavía está buscando la pelota en el parqueadero."
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Ace",
+      "axes": {
+        "move": "name_concept",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "body_senses"
       }
     },
     {
@@ -30075,6 +30715,14 @@
           "description": "Una cancha donde los jugadores terminan con las medias de otro color."
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Clay court",
+      "axes": {
+        "move": "identify",
+        "stimulus": "photo",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "body_senses"
       }
     },
     {
@@ -30817,6 +31465,14 @@
           ]
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Wimbledon all-white rule",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "body_senses"
       }
     },
     {
@@ -30878,7 +31534,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "15-30-40 scoring",
+      "axes": {
+        "move": "sequence",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "number",
+        "lens": "body_senses"
+      }
     },
     {
       "id": "q-0416",
@@ -31942,7 +32606,15 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Bray",
+      "axes": {
+        "move": "identify",
+        "stimulus": "sound",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "nature"
+      }
     },
     {
       "id": "q-0430",
@@ -32010,7 +32682,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Usain Bolt",
+      "axes": {
+        "move": "record",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "person",
+        "lens": "body_senses"
+      }
     },
     {
       "id": "q-0431",
@@ -32744,6 +33424,14 @@
           "fun_fact": "Los colores opuestos se llaman complementarios y, puestos uno al lado del otro, se ven más brillantes; por eso muchos afiches de películas usan azul y naranja."
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Complementary colors",
+      "axes": {
+        "move": "analogy",
+        "stimulus": "none",
+        "clue": "completion",
+        "answer_kind": "thing",
+        "lens": "school"
       }
     },
     {
@@ -33046,6 +33734,14 @@
           ]
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Battery",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "history"
       }
     },
     {
@@ -33107,7 +33803,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Papyrus",
+      "axes": {
+        "move": "origin",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "place",
+        "lens": "history"
+      }
     },
     {
       "id": "q-0446",
@@ -34192,6 +34896,14 @@
           "fun_fact": "En muchas fincas las tienen como 'alarma': gritan muy duro cuando llega un extraño o ven una culebra."
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Guinea fowl",
+      "axes": {
+        "move": "identify",
+        "stimulus": "photo",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "nature"
       }
     },
     {
@@ -34253,7 +34965,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Hoof",
+      "axes": {
+        "move": "count",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "number",
+        "lens": "nature"
+      }
     },
     {
       "id": "q-0461",
@@ -34329,6 +35049,14 @@
           ]
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Lamb",
+      "axes": {
+        "move": "name_concept",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "language"
       }
     },
     {
@@ -34390,7 +35118,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Pole vault",
+      "axes": {
+        "move": "identify",
+        "stimulus": "photo",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "body_senses"
+      }
     },
     {
       "id": "q-0463",
@@ -34464,6 +35200,14 @@
           ]
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Relay baton",
+      "axes": {
+        "move": "name_concept",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "body_senses"
       }
     },
     {
@@ -34525,7 +35269,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Shot put",
+      "axes": {
+        "move": "estimate",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "number",
+        "lens": "body_senses"
+      }
     },
     {
       "id": "q-0465",
@@ -34961,7 +35713,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Rainbow",
+      "axes": {
+        "move": "count",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "number",
+        "lens": "nature"
+      }
     },
     {
       "id": "q-0471",
@@ -35031,6 +35791,14 @@
           "fun_fact": "En las pantallas del celular y del televisor los colores básicos de la luz son otros: rojo, verde y azul."
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Primary colors",
+      "axes": {
+        "move": "name_concept",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "school"
       }
     },
     {
@@ -35092,7 +35860,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Crimson",
+      "axes": {
+        "move": "connection",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "group",
+        "lens": "language"
+      }
     },
     {
       "id": "q-0473",
@@ -35690,7 +36466,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Gramophone",
+      "axes": {
+        "move": "identify",
+        "stimulus": "photo",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "history"
+      }
     },
     {
       "id": "q-0481",
@@ -35774,6 +36558,14 @@
           "fun_fact": "Thomas Edison hizo miles de pruebas con distintos materiales antes de lograr un bombillo que durara muchas horas prendido."
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Candle",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "history"
       }
     },
     {
@@ -37102,6 +37894,14 @@
           ]
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Tetris",
+      "axes": {
+        "move": "origin",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "place",
+        "lens": "pop_culture"
       }
     },
     {
@@ -37165,7 +37965,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Kirby",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "three_facts",
+        "answer_kind": "person",
+        "lens": "pop_culture"
+      }
     },
     {
       "id": "q-0501",
@@ -37458,6 +38266,14 @@
           "question": "¿Qué personaje de Marvel es? Es un científico que, cuando se pone bravo, se vuelve un gigante verde y superfuerte."
         },
         "revised_on": "2026-10-15"
+      },
+      "concept": "Hulk",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "person",
+        "lens": "pop_culture"
       }
     },
     {
@@ -37526,7 +38342,15 @@
         }
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Vibranium",
+      "axes": {
+        "move": "made_of",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "pop_culture"
+      }
     },
     {
       "id": "q-0506",
@@ -37587,7 +38411,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Avengers",
+      "axes": {
+        "move": "connection",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "group",
+        "lens": "pop_culture"
+      }
     },
     {
       "id": "q-0507",
@@ -37650,7 +38482,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Wakanda",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "place",
+        "lens": "pop_culture"
+      }
     },
     {
       "id": "q-0508",
@@ -37848,7 +38688,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Mega Man",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "three_facts",
+        "answer_kind": "person",
+        "lens": "pop_culture"
+      }
     },
     {
       "id": "q-0511",
@@ -37909,7 +38757,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Raichu",
+      "axes": {
+        "move": "sequence",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "person",
+        "lens": "pop_culture"
+      }
     },
     {
       "id": "q-0512",
@@ -37970,7 +38826,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Princess Peach",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "person",
+        "lens": "pop_culture"
+      }
     },
     {
       "id": "q-0513",
@@ -38031,7 +38895,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Pac-Man",
+      "axes": {
+        "move": "count",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "number",
+        "lens": "pop_culture"
+      }
     },
     {
       "id": "q-0514",
@@ -41230,13 +42102,13 @@
       "fun_fact": "Los cuervos son tan inteligentes que pueden recordar la cara de una persona durante años.",
       "subcategory": "birds",
       "style": null,
-      "concept": null,
+      "concept": "Crow",
       "axes": {
         "move": "identify",
         "stimulus": "sound",
         "clue": "direct",
         "answer_kind": "thing",
-        "lens": "colombia"
+        "lens": "nature"
       },
       "quality": {
         "correct": 4,

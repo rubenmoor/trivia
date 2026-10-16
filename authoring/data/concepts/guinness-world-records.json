@@ -117,7 +117,8 @@
     {
       "name": "Lengua más larga",
       "facet": "Cuerpo humano extraordinario",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: The longest-tongue record holder is obscure, and the date of the record is a minor fact."
     },
     {
       "name": "Barba más larga",
@@ -286,7 +287,8 @@
     {
       "name": "Torta gigante",
       "facet": "Comida gigante y récords culinarios",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: Giant-cake record makers are obscure, and a detail-photo question with a place answer doesn't fit."
     },
     {
       "name": "Galleta gigante",
@@ -367,7 +369,8 @@
     {
       "name": "Cometa gigante",
       "facet": "Récords colectivos y hazañas curiosas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: Giant kite records (Kuwait flag kite, Sumpango kites) are too obscure for a base audience, and no option gives a fair question."
     },
     {
       "name": "Pelota de cauchos",

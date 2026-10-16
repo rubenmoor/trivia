@@ -1,0 +1,1042 @@
+{
+  "subcategory": "marvel-superheroes",
+  "facets": [
+    "Avengers founding heroes",
+    "Spider-Man and his world",
+    "X-Men and mutants",
+    "Villains and supervillains",
+    "Superpowers and abilities",
+    "Costumes, gear and weapons",
+    "Secret identities and real names",
+    "Places, cities and realms",
+    "Teams, groups and organizations",
+    "Origin stories",
+    "Marvel films and series",
+    "Creators, actors and comic history"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 1,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 2,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Iron Man",
+      "facet": "Avengers founding heroes",
+      "known_at": 2
+    },
+    {
+      "name": "Captain America",
+      "facet": "Avengers founding heroes",
+      "known_at": 2
+    },
+    {
+      "name": "Hulk",
+      "facet": "Avengers founding heroes",
+      "known_at": 1
+    },
+    {
+      "name": "Black Widow",
+      "facet": "Avengers founding heroes",
+      "known_at": 5
+    },
+    {
+      "name": "Hawkeye",
+      "facet": "Avengers founding heroes",
+      "known_at": 6
+    },
+    {
+      "name": "Wasp",
+      "facet": "Avengers founding heroes",
+      "known_at": 9
+    },
+    {
+      "name": "Scarlet Witch",
+      "facet": "Avengers founding heroes",
+      "known_at": 7
+    },
+    {
+      "name": "Vision",
+      "facet": "Avengers founding heroes",
+      "known_at": 8
+    },
+    {
+      "name": "Falcon",
+      "facet": "Avengers founding heroes",
+      "known_at": 7
+    },
+    {
+      "name": "War Machine",
+      "facet": "Avengers founding heroes",
+      "known_at": 9
+    },
+    {
+      "name": "Nick Fury",
+      "facet": "Avengers founding heroes",
+      "known_at": 7
+    },
+    {
+      "name": "Quicksilver",
+      "facet": "Avengers founding heroes",
+      "known_at": 10
+    },
+    {
+      "name": "She-Hulk",
+      "facet": "Avengers founding heroes",
+      "known_at": 8
+    },
+    {
+      "name": "Gwen Stacy",
+      "facet": "Spider-Man and his world",
+      "known_at": 6
+    },
+    {
+      "name": "Mary Jane Watson",
+      "facet": "Spider-Man and his world",
+      "known_at": 7
+    },
+    {
+      "name": "Aunt May",
+      "facet": "Spider-Man and his world",
+      "known_at": 4
+    },
+    {
+      "name": "Uncle Ben",
+      "facet": "Spider-Man and his world",
+      "known_at": 7
+    },
+    {
+      "name": "J. Jonah Jameson",
+      "facet": "Spider-Man and his world",
+      "known_at": 10
+    },
+    {
+      "name": "Daily Bugle",
+      "facet": "Spider-Man and his world",
+      "known_at": 9
+    },
+    {
+      "name": "Ned Leeds",
+      "facet": "Spider-Man and his world",
+      "known_at": 8
+    },
+    {
+      "name": "Harry Osborn",
+      "facet": "Spider-Man and his world",
+      "known_at": 10
+    },
+    {
+      "name": "Flash Thompson",
+      "facet": "Spider-Man and his world",
+      "known_at": 11
+    },
+    {
+      "name": "Spider-Ham",
+      "facet": "Spider-Man and his world",
+      "known_at": 6
+    },
+    {
+      "name": "Spider-Man 2099",
+      "facet": "Spider-Man and his world",
+      "known_at": 9
+    },
+    {
+      "name": "Peni Parker",
+      "facet": "Spider-Man and his world",
+      "known_at": 10
+    },
+    {
+      "name": "Spider-Woman",
+      "facet": "Spider-Man and his world",
+      "known_at": 8
+    },
+    {
+      "name": "Happy Hogan",
+      "facet": "Spider-Man and his world",
+      "known_at": 10
+    },
+    {
+      "name": "X-Men",
+      "facet": "X-Men and mutants",
+      "known_at": 6
+    },
+    {
+      "name": "Wolverine",
+      "facet": "X-Men and mutants",
+      "known_at": 5
+    },
+    {
+      "name": "Professor X",
+      "facet": "X-Men and mutants",
+      "known_at": 7
+    },
+    {
+      "name": "Storm",
+      "facet": "X-Men and mutants",
+      "known_at": 7
+    },
+    {
+      "name": "Cyclops",
+      "facet": "X-Men and mutants",
+      "known_at": 8
+    },
+    {
+      "name": "Jean Grey",
+      "facet": "X-Men and mutants",
+      "known_at": 9
+    },
+    {
+      "name": "Rogue",
+      "facet": "X-Men and mutants",
+      "known_at": 9
+    },
+    {
+      "name": "Beast",
+      "facet": "X-Men and mutants",
+      "known_at": 9
+    },
+    {
+      "name": "Mystique",
+      "facet": "X-Men and mutants",
+      "known_at": 8
+    },
+    {
+      "name": "Nightcrawler",
+      "facet": "X-Men and mutants",
+      "known_at": 10
+    },
+    {
+      "name": "Iceman",
+      "facet": "X-Men and mutants",
+      "known_at": 9
+    },
+    {
+      "name": "Gambit",
+      "facet": "X-Men and mutants",
+      "known_at": 11
+    },
+    {
+      "name": "Jubilee",
+      "facet": "X-Men and mutants",
+      "known_at": 12
+    },
+    {
+      "name": "Kitty Pryde",
+      "facet": "X-Men and mutants",
+      "known_at": 12
+    },
+    {
+      "name": "Colossus",
+      "facet": "X-Men and mutants",
+      "known_at": 10
+    },
+    {
+      "name": "Psylocke",
+      "facet": "X-Men and mutants",
+      "known_at": 13
+    },
+    {
+      "name": "Phoenix Force",
+      "facet": "X-Men and mutants",
+      "known_at": 12
+    },
+    {
+      "name": "Danger Room",
+      "facet": "X-Men and mutants",
+      "known_at": 12
+    },
+    {
+      "name": "Sentinels",
+      "facet": "X-Men and mutants",
+      "known_at": 12
+    },
+    {
+      "name": "Green Goblin",
+      "facet": "Villains and supervillains",
+      "known_at": 5
+    },
+    {
+      "name": "Red Skull",
+      "facet": "Villains and supervillains",
+      "known_at": 9
+    },
+    {
+      "name": "Kang the Conqueror",
+      "facet": "Villains and supervillains",
+      "known_at": 11
+    },
+    {
+      "name": "Lizard",
+      "facet": "Villains and supervillains",
+      "known_at": 8
+    },
+    {
+      "name": "Apocalypse",
+      "facet": "Villains and supervillains",
+      "known_at": 11
+    },
+    {
+      "name": "Dormammu",
+      "facet": "Villains and supervillains",
+      "known_at": 11
+    },
+    {
+      "name": "Abomination",
+      "facet": "Villains and supervillains",
+      "known_at": 11
+    },
+    {
+      "name": "Spider-sense",
+      "facet": "Superpowers and abilities",
+      "known_at": 4
+    },
+    {
+      "name": "Healing factor",
+      "facet": "Superpowers and abilities",
+      "known_at": 8
+    },
+    {
+      "name": "Telepathy",
+      "facet": "Superpowers and abilities",
+      "known_at": 8
+    },
+    {
+      "name": "Telekinesis",
+      "facet": "Superpowers and abilities",
+      "known_at": 9
+    },
+    {
+      "name": "Shapeshifting",
+      "facet": "Superpowers and abilities",
+      "known_at": 6
+    },
+    {
+      "name": "Super strength",
+      "facet": "Superpowers and abilities",
+      "known_at": 1
+    },
+    {
+      "name": "Teleportation",
+      "facet": "Superpowers and abilities",
+      "known_at": 5
+    },
+    {
+      "name": "Invisibility",
+      "facet": "Superpowers and abilities",
+      "known_at": 3
+    },
+    {
+      "name": "Weather control",
+      "facet": "Superpowers and abilities",
+      "known_at": 6
+    },
+    {
+      "name": "Size-changing",
+      "facet": "Superpowers and abilities",
+      "known_at": 4
+    },
+    {
+      "name": "Wall-crawling",
+      "facet": "Superpowers and abilities",
+      "known_at": 2
+    },
+    {
+      "name": "Magnetism control",
+      "facet": "Superpowers and abilities",
+      "known_at": 8
+    },
+    {
+      "name": "Optic blasts",
+      "facet": "Superpowers and abilities",
+      "known_at": 9
+    },
+    {
+      "name": "Flight",
+      "facet": "Superpowers and abilities",
+      "known_at": 1
+    },
+    {
+      "name": "Super speed",
+      "facet": "Superpowers and abilities",
+      "known_at": 2
+    },
+    {
+      "name": "Elasticity",
+      "facet": "Superpowers and abilities",
+      "known_at": 6
+    },
+    {
+      "name": "Mind control",
+      "facet": "Superpowers and abilities",
+      "known_at": 6
+    },
+    {
+      "name": "Power absorption",
+      "facet": "Superpowers and abilities",
+      "known_at": 11
+    },
+    {
+      "name": "Pyrokinesis",
+      "facet": "Superpowers and abilities",
+      "known_at": 13
+    },
+    {
+      "name": "Captain America's shield",
+      "facet": "Costumes, gear and weapons",
+      "known_at": 2
+    },
+    {
+      "name": "Infinity Gauntlet",
+      "facet": "Costumes, gear and weapons",
+      "known_at": 5
+    },
+    {
+      "name": "Infinity Stones",
+      "facet": "Costumes, gear and weapons",
+      "known_at": 5
+    },
+    {
+      "name": "Iron Man armor",
+      "facet": "Costumes, gear and weapons",
+      "known_at": 2
+    },
+    {
+      "name": "Arc reactor",
+      "facet": "Costumes, gear and weapons",
+      "known_at": 8
+    },
+    {
+      "name": "Web-shooters",
+      "facet": "Costumes, gear and weapons",
+      "known_at": 5
+    },
+    {
+      "name": "Vibranium",
+      "facet": "Costumes, gear and weapons",
+      "known_at": 7
+    },
+    {
+      "name": "Adamantium",
+      "facet": "Costumes, gear and weapons",
+      "known_at": 9
+    },
+    {
+      "name": "Tesseract",
+      "facet": "Costumes, gear and weapons",
+      "known_at": 9
+    },
+    {
+      "name": "Eye of Agamotto",
+      "facet": "Costumes, gear and weapons",
+      "known_at": 11
+    },
+    {
+      "name": "Cloak of Levitation",
+      "facet": "Costumes, gear and weapons",
+      "known_at": 10
+    },
+    {
+      "name": "Hawkeye's bow",
+      "facet": "Costumes, gear and weapons",
+      "known_at": 5
+    },
+    {
+      "name": "Helicarrier",
+      "facet": "Costumes, gear and weapons",
+      "known_at": 10
+    },
+    {
+      "name": "Cyclops's visor",
+      "facet": "Costumes, gear and weapons",
+      "known_at": 9
+    },
+    {
+      "name": "Pym Particles",
+      "facet": "Costumes, gear and weapons",
+      "known_at": 11
+    },
+    {
+      "name": "Ten Rings",
+      "facet": "Costumes, gear and weapons",
+      "known_at": 10
+    },
+    {
+      "name": "Black Panther suit",
+      "facet": "Costumes, gear and weapons",
+      "known_at": 5
+    },
+    {
+      "name": "J.A.R.V.I.S.",
+      "facet": "Costumes, gear and weapons",
+      "known_at": 8
+    },
+    {
+      "name": "Steve Rogers",
+      "facet": "Secret identities and real names",
+      "known_at": 6
+    },
+    {
+      "name": "Natasha Romanoff",
+      "facet": "Secret identities and real names",
+      "known_at": 8
+    },
+    {
+      "name": "T'Challa",
+      "facet": "Secret identities and real names",
+      "known_at": 8
+    },
+    {
+      "name": "Carol Danvers",
+      "facet": "Secret identities and real names",
+      "known_at": 10
+    },
+    {
+      "name": "Matt Murdock",
+      "facet": "Secret identities and real names",
+      "known_at": 11
+    },
+    {
+      "name": "Kamala Khan",
+      "facet": "Secret identities and real names",
+      "known_at": 10
+    },
+    {
+      "name": "Jennifer Walters",
+      "facet": "Secret identities and real names",
+      "known_at": 12
+    },
+    {
+      "name": "Marc Spector",
+      "facet": "Secret identities and real names",
+      "known_at": 12
+    },
+    {
+      "name": "Bucky Barnes",
+      "facet": "Secret identities and real names",
+      "known_at": 9
+    },
+    {
+      "name": "Wade Wilson",
+      "facet": "Secret identities and real names",
+      "known_at": 9
+    },
+    {
+      "name": "Logan",
+      "facet": "Secret identities and real names",
+      "known_at": 8
+    },
+    {
+      "name": "Clint Barton",
+      "facet": "Secret identities and real names",
+      "known_at": 10
+    },
+    {
+      "name": "Scott Lang",
+      "facet": "Secret identities and real names",
+      "known_at": 10
+    },
+    {
+      "name": "Wanda Maximoff",
+      "facet": "Secret identities and real names",
+      "known_at": 9
+    },
+    {
+      "name": "Stephen Strange",
+      "facet": "Secret identities and real names",
+      "known_at": 9
+    },
+    {
+      "name": "Frank Castle",
+      "facet": "Secret identities and real names",
+      "known_at": 12
+    },
+    {
+      "name": "Reed Richards",
+      "facet": "Secret identities and real names",
+      "known_at": 11
+    },
+    {
+      "name": "Charles Xavier",
+      "facet": "Secret identities and real names",
+      "known_at": 10
+    },
+    {
+      "name": "Peggy Carter",
+      "facet": "Secret identities and real names",
+      "known_at": 10
+    },
+    {
+      "name": "Wakanda",
+      "facet": "Places, cities and realms",
+      "known_at": 5
+    },
+    {
+      "name": "New York City",
+      "facet": "Places, cities and realms",
+      "known_at": 3
+    },
+    {
+      "name": "Queens",
+      "facet": "Places, cities and realms",
+      "known_at": 10
+    },
+    {
+      "name": "Avengers Tower",
+      "facet": "Places, cities and realms",
+      "known_at": 8
+    },
+    {
+      "name": "Sanctum Sanctorum",
+      "facet": "Places, cities and realms",
+      "known_at": 12
+    },
+    {
+      "name": "X-Mansion",
+      "facet": "Places, cities and realms",
+      "known_at": 10
+    },
+    {
+      "name": "Genosha",
+      "facet": "Places, cities and realms",
+      "known_at": 14
+    },
+    {
+      "name": "Knowhere",
+      "facet": "Places, cities and realms",
+      "known_at": 12
+    },
+    {
+      "name": "Sakaar",
+      "facet": "Places, cities and realms",
+      "known_at": 12
+    },
+    {
+      "name": "Quantum Realm",
+      "facet": "Places, cities and realms",
+      "known_at": 8
+    },
+    {
+      "name": "Multiverse",
+      "facet": "Places, cities and realms",
+      "known_at": 6
+    },
+    {
+      "name": "Latveria",
+      "facet": "Places, cities and realms",
+      "known_at": 13
+    },
+    {
+      "name": "Kamar-Taj",
+      "facet": "Places, cities and realms",
+      "known_at": 12
+    },
+    {
+      "name": "Ta Lo",
+      "facet": "Places, cities and realms",
+      "known_at": 13
+    },
+    {
+      "name": "Talokan",
+      "facet": "Places, cities and realms",
+      "known_at": 12
+    },
+    {
+      "name": "Savage Land",
+      "facet": "Places, cities and realms",
+      "known_at": 14
+    },
+    {
+      "name": "Xandar",
+      "facet": "Places, cities and realms",
+      "known_at": 13
+    },
+    {
+      "name": "Avengers",
+      "facet": "Teams, groups and organizations",
+      "known_at": 3
+    },
+    {
+      "name": "Fantastic Four",
+      "facet": "Teams, groups and organizations",
+      "known_at": 6
+    },
+    {
+      "name": "Guardians of the Galaxy",
+      "facet": "Teams, groups and organizations",
+      "known_at": 5
+    },
+    {
+      "name": "S.H.I.E.L.D.",
+      "facet": "Teams, groups and organizations",
+      "known_at": 8
+    },
+    {
+      "name": "Hydra",
+      "facet": "Teams, groups and organizations",
+      "known_at": 9
+    },
+    {
+      "name": "Defenders",
+      "facet": "Teams, groups and organizations",
+      "known_at": 12
+    },
+    {
+      "name": "Inhumans",
+      "facet": "Teams, groups and organizations",
+      "known_at": 12
+    },
+    {
+      "name": "Eternals",
+      "facet": "Teams, groups and organizations",
+      "known_at": 11
+    },
+    {
+      "name": "Brotherhood of Mutants",
+      "facet": "Teams, groups and organizations",
+      "known_at": 12
+    },
+    {
+      "name": "Thunderbolts",
+      "facet": "Teams, groups and organizations",
+      "known_at": 11
+    },
+    {
+      "name": "Dora Milaje",
+      "facet": "Teams, groups and organizations",
+      "known_at": 11
+    },
+    {
+      "name": "Sinister Six",
+      "facet": "Teams, groups and organizations",
+      "known_at": 10
+    },
+    {
+      "name": "Young Avengers",
+      "facet": "Teams, groups and organizations",
+      "known_at": 13
+    },
+    {
+      "name": "Illuminati",
+      "facet": "Teams, groups and organizations",
+      "known_at": 13
+    },
+    {
+      "name": "Nova Corps",
+      "facet": "Teams, groups and organizations",
+      "known_at": 12
+    },
+    {
+      "name": "Ravagers",
+      "facet": "Teams, groups and organizations",
+      "known_at": 11
+    },
+    {
+      "name": "Time Variance Authority",
+      "facet": "Teams, groups and organizations",
+      "known_at": 11
+    },
+    {
+      "name": "Hellfire Club",
+      "facet": "Teams, groups and organizations",
+      "known_at": 13
+    },
+    {
+      "name": "X-Force",
+      "facet": "Teams, groups and organizations",
+      "known_at": 12
+    },
+    {
+      "name": "Alpha Flight",
+      "facet": "Teams, groups and organizations",
+      "known_at": 15
+    },
+    {
+      "name": "Howling Commandos",
+      "facet": "Teams, groups and organizations",
+      "known_at": 14
+    },
+    {
+      "name": "Radioactive spider",
+      "facet": "Origin stories",
+      "known_at": 4
+    },
+    {
+      "name": "Super-Soldier Serum",
+      "facet": "Origin stories",
+      "known_at": 7
+    },
+    {
+      "name": "Gamma radiation",
+      "facet": "Origin stories",
+      "known_at": 8
+    },
+    {
+      "name": "Cosmic rays",
+      "facet": "Origin stories",
+      "known_at": 10
+    },
+    {
+      "name": "Weapon X",
+      "facet": "Origin stories",
+      "known_at": 11
+    },
+    {
+      "name": "X-gene",
+      "facet": "Origin stories",
+      "known_at": 10
+    },
+    {
+      "name": "Terrigen Mists",
+      "facet": "Origin stories",
+      "known_at": 13
+    },
+    {
+      "name": "Heart-Shaped Herb",
+      "facet": "Origin stories",
+      "known_at": 11
+    },
+    {
+      "name": "Mark I armor",
+      "facet": "Origin stories",
+      "known_at": 9
+    },
+    {
+      "name": "Abraham Erskine",
+      "facet": "Origin stories",
+      "known_at": 13
+    },
+    {
+      "name": "Extremis",
+      "facet": "Origin stories",
+      "known_at": 13
+    },
+    {
+      "name": "The Ancient One",
+      "facet": "Origin stories",
+      "known_at": 11
+    },
+    {
+      "name": "Howard Stark",
+      "facet": "Origin stories",
+      "known_at": 11
+    },
+    {
+      "name": "Kree",
+      "facet": "Origin stories",
+      "known_at": 11
+    },
+    {
+      "name": "Skrulls",
+      "facet": "Origin stories",
+      "known_at": 11
+    },
+    {
+      "name": "Symbiote",
+      "facet": "Origin stories",
+      "known_at": 8
+    },
+    {
+      "name": "The Avengers (2012 film)",
+      "facet": "Marvel films and series",
+      "known_at": 6
+    },
+    {
+      "name": "Avengers: Infinity War",
+      "facet": "Marvel films and series",
+      "known_at": 7
+    },
+    {
+      "name": "Black Panther (2018 film)",
+      "facet": "Marvel films and series",
+      "known_at": 8
+    },
+    {
+      "name": "Spider-Man: No Way Home",
+      "facet": "Marvel films and series",
+      "known_at": 6
+    },
+    {
+      "name": "Spider-Man: Into the Spider-Verse",
+      "facet": "Marvel films and series",
+      "known_at": 5
+    },
+    {
+      "name": "Spider-Man (2002 film)",
+      "facet": "Marvel films and series",
+      "known_at": 10
+    },
+    {
+      "name": "Captain America: Civil War",
+      "facet": "Marvel films and series",
+      "known_at": 8
+    },
+    {
+      "name": "Captain America: The Winter Soldier",
+      "facet": "Marvel films and series",
+      "known_at": 10
+    },
+    {
+      "name": "Deadpool & Wolverine",
+      "facet": "Marvel films and series",
+      "known_at": 10
+    },
+    {
+      "name": "Logan (film)",
+      "facet": "Marvel films and series",
+      "known_at": 12
+    },
+    {
+      "name": "X-Men (2000 film)",
+      "facet": "Marvel films and series",
+      "known_at": 12
+    },
+    {
+      "name": "Shang-Chi and the Legend of the Ten Rings",
+      "facet": "Marvel films and series",
+      "known_at": 10
+    },
+    {
+      "name": "WandaVision",
+      "facet": "Marvel films and series",
+      "known_at": 10
+    },
+    {
+      "name": "What If...?",
+      "facet": "Marvel films and series",
+      "known_at": 11
+    },
+    {
+      "name": "X-Men: The Animated Series",
+      "facet": "Marvel films and series",
+      "known_at": 12
+    },
+    {
+      "name": "Spidey and His Amazing Friends",
+      "facet": "Marvel films and series",
+      "known_at": 2
+    },
+    {
+      "name": "Marvel Cinematic Universe",
+      "facet": "Marvel films and series",
+      "known_at": 7
+    },
+    {
+      "name": "Post-credits scene",
+      "facet": "Marvel films and series",
+      "known_at": 7
+    },
+    {
+      "name": "The Fantastic Four: First Steps",
+      "facet": "Marvel films and series",
+      "known_at": 11
+    },
+    {
+      "name": "Black Panther: Wakanda Forever",
+      "facet": "Marvel films and series",
+      "known_at": 10
+    },
+    {
+      "name": "Steve Ditko",
+      "facet": "Creators, actors and comic history",
+      "known_at": 14
+    },
+    {
+      "name": "Chris Claremont",
+      "facet": "Creators, actors and comic history",
+      "known_at": 15
+    },
+    {
+      "name": "Chris Evans",
+      "facet": "Creators, actors and comic history",
+      "known_at": 9
+    },
+    {
+      "name": "Scarlett Johansson",
+      "facet": "Creators, actors and comic history",
+      "known_at": 10
+    },
+    {
+      "name": "Chadwick Boseman",
+      "facet": "Creators, actors and comic history",
+      "known_at": 11
+    },
+    {
+      "name": "Ryan Reynolds",
+      "facet": "Creators, actors and comic history",
+      "known_at": 10
+    },
+    {
+      "name": "Mark Ruffalo",
+      "facet": "Creators, actors and comic history",
+      "known_at": 11
+    },
+    {
+      "name": "Tobey Maguire",
+      "facet": "Creators, actors and comic history",
+      "known_at": 11
+    },
+    {
+      "name": "Kevin Feige",
+      "facet": "Creators, actors and comic history",
+      "known_at": 14
+    },
+    {
+      "name": "Russo brothers",
+      "facet": "Creators, actors and comic history",
+      "known_at": 14
+    },
+    {
+      "name": "Marvel Comics",
+      "facet": "Creators, actors and comic history",
+      "known_at": 5
+    },
+    {
+      "name": "Timely Comics",
+      "facet": "Creators, actors and comic history",
+      "known_at": 15
+    },
+    {
+      "name": "Amazing Fantasy #15",
+      "facet": "Creators, actors and comic history",
+      "known_at": 14
+    }
+  ]
+}

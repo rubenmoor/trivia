@@ -1,0 +1,812 @@
+{
+  "subcategory": "video-games",
+  "facets": [
+    "Famous game characters",
+    "Arcade classics",
+    "Consoles and handheld devices",
+    "Game companies and creators",
+    "Genres and gameplay terms",
+    "Items, power-ups and creatures",
+    "Sandbox and building games",
+    "Sports, racing and party games",
+    "Mobile and casual games",
+    "Online play and esports",
+    "Game music and sounds",
+    "Video games in films and shows"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Pac-Man",
+      "facet": "Famous game characters",
+      "known_at": 3
+    },
+    {
+      "name": "Kirby",
+      "facet": "Famous game characters",
+      "known_at": 3
+    },
+    {
+      "name": "Princess Peach",
+      "facet": "Famous game characters",
+      "known_at": 2
+    },
+    {
+      "name": "Princess Zelda",
+      "facet": "Famous game characters",
+      "known_at": 7
+    },
+    {
+      "name": "Cloud Strife",
+      "facet": "Famous game characters",
+      "known_at": 12
+    },
+    {
+      "name": "Claw machine",
+      "facet": "Arcade classics",
+      "known_at": 4
+    },
+    {
+      "name": "Arcade cabinet",
+      "facet": "Arcade classics",
+      "known_at": 6
+    },
+    {
+      "name": "Ms. Pac-Man",
+      "facet": "Arcade classics",
+      "known_at": 10
+    },
+    {
+      "name": "Breakout",
+      "facet": "Arcade classics",
+      "known_at": 11
+    },
+    {
+      "name": "Dig Dug",
+      "facet": "Arcade classics",
+      "known_at": 12
+    },
+    {
+      "name": "Missile Command",
+      "facet": "Arcade classics",
+      "known_at": 13
+    },
+    {
+      "name": "Out Run",
+      "facet": "Arcade classics",
+      "known_at": 13
+    },
+    {
+      "name": "Bubble Bobble",
+      "facet": "Arcade classics",
+      "known_at": 13
+    },
+    {
+      "name": "Galaxian",
+      "facet": "Arcade classics",
+      "known_at": 14
+    },
+    {
+      "name": "Defender",
+      "facet": "Arcade classics",
+      "known_at": 14
+    },
+    {
+      "name": "Game controller",
+      "facet": "Consoles and handheld devices",
+      "known_at": 2
+    },
+    {
+      "name": "Virtual reality headset",
+      "facet": "Consoles and handheld devices",
+      "known_at": 6
+    },
+    {
+      "name": "PlayStation Portable",
+      "facet": "Consoles and handheld devices",
+      "known_at": 9
+    },
+    {
+      "name": "CD Projekt",
+      "facet": "Game companies and creators",
+      "known_at": 13
+    },
+    {
+      "name": "Level",
+      "facet": "Genres and gameplay terms",
+      "known_at": 2
+    },
+    {
+      "name": "Boss",
+      "facet": "Genres and gameplay terms",
+      "known_at": 4
+    },
+    {
+      "name": "Extra life",
+      "facet": "Genres and gameplay terms",
+      "known_at": 4
+    },
+    {
+      "name": "Puzzle game",
+      "facet": "Genres and gameplay terms",
+      "known_at": 4
+    },
+    {
+      "name": "Checkpoint",
+      "facet": "Genres and gameplay terms",
+      "known_at": 6
+    },
+    {
+      "name": "Platform game",
+      "facet": "Genres and gameplay terms",
+      "known_at": 7
+    },
+    {
+      "name": "Battle royale",
+      "facet": "Genres and gameplay terms",
+      "known_at": 7
+    },
+    {
+      "name": "Save point",
+      "facet": "Genres and gameplay terms",
+      "known_at": 7
+    },
+    {
+      "name": "Pixel art",
+      "facet": "Genres and gameplay terms",
+      "known_at": 7
+    },
+    {
+      "name": "Role-playing game",
+      "facet": "Genres and gameplay terms",
+      "known_at": 8
+    },
+    {
+      "name": "Open world",
+      "facet": "Genres and gameplay terms",
+      "known_at": 8
+    },
+    {
+      "name": "Hit points",
+      "facet": "Genres and gameplay terms",
+      "known_at": 8
+    },
+    {
+      "name": "Cheat code",
+      "facet": "Genres and gameplay terms",
+      "known_at": 8
+    },
+    {
+      "name": "Rhythm game",
+      "facet": "Genres and gameplay terms",
+      "known_at": 8
+    },
+    {
+      "name": "First-person shooter",
+      "facet": "Genres and gameplay terms",
+      "known_at": 9
+    },
+    {
+      "name": "Non-player character",
+      "facet": "Genres and gameplay terms",
+      "known_at": 9
+    },
+    {
+      "name": "Side-scroller",
+      "facet": "Genres and gameplay terms",
+      "known_at": 10
+    },
+    {
+      "name": "Cutscene",
+      "facet": "Genres and gameplay terms",
+      "known_at": 10
+    },
+    {
+      "name": "Konami Code",
+      "facet": "Genres and gameplay terms",
+      "known_at": 12
+    },
+    {
+      "name": "Point-and-click adventure",
+      "facet": "Genres and gameplay terms",
+      "known_at": 12
+    },
+    {
+      "name": "Roguelike",
+      "facet": "Genres and gameplay terms",
+      "known_at": 13
+    },
+    {
+      "name": "Metroidvania",
+      "facet": "Genres and gameplay terms",
+      "known_at": 14
+    },
+    {
+      "name": "Super Mushroom",
+      "facet": "Items, power-ups and creatures",
+      "known_at": 3
+    },
+    {
+      "name": "Super Star",
+      "facet": "Items, power-ups and creatures",
+      "known_at": 4
+    },
+    {
+      "name": "Banana peel",
+      "facet": "Items, power-ups and creatures",
+      "known_at": 4
+    },
+    {
+      "name": "Fire Flower",
+      "facet": "Items, power-ups and creatures",
+      "known_at": 5
+    },
+    {
+      "name": "Warp pipe",
+      "facet": "Items, power-ups and creatures",
+      "known_at": 5
+    },
+    {
+      "name": "Question block",
+      "facet": "Items, power-ups and creatures",
+      "known_at": 5
+    },
+    {
+      "name": "Goomba",
+      "facet": "Items, power-ups and creatures",
+      "known_at": 6
+    },
+    {
+      "name": "Koopa Troopa",
+      "facet": "Items, power-ups and creatures",
+      "known_at": 6
+    },
+    {
+      "name": "Gold ring",
+      "facet": "Items, power-ups and creatures",
+      "known_at": 6
+    },
+    {
+      "name": "Blue Shell",
+      "facet": "Items, power-ups and creatures",
+      "known_at": 7
+    },
+    {
+      "name": "Power Pellet",
+      "facet": "Items, power-ups and creatures",
+      "known_at": 8
+    },
+    {
+      "name": "Chain Chomp",
+      "facet": "Items, power-ups and creatures",
+      "known_at": 9
+    },
+    {
+      "name": "Master Sword",
+      "facet": "Items, power-ups and creatures",
+      "known_at": 9
+    },
+    {
+      "name": "Triforce",
+      "facet": "Items, power-ups and creatures",
+      "known_at": 10
+    },
+    {
+      "name": "Heart container",
+      "facet": "Items, power-ups and creatures",
+      "known_at": 10
+    },
+    {
+      "name": "Rupee",
+      "facet": "Items, power-ups and creatures",
+      "known_at": 11
+    },
+    {
+      "name": "Chaos Emeralds",
+      "facet": "Items, power-ups and creatures",
+      "known_at": 11
+    },
+    {
+      "name": "Tetromino",
+      "facet": "Items, power-ups and creatures",
+      "known_at": 12
+    },
+    {
+      "name": "Metroid",
+      "facet": "Items, power-ups and creatures",
+      "known_at": 13
+    },
+    {
+      "name": "Minecraft",
+      "facet": "Sandbox and building games",
+      "known_at": 2
+    },
+    {
+      "name": "Crafting table",
+      "facet": "Sandbox and building games",
+      "known_at": 5
+    },
+    {
+      "name": "Nether",
+      "facet": "Sandbox and building games",
+      "known_at": 7
+    },
+    {
+      "name": "The Sims",
+      "facet": "Sandbox and building games",
+      "known_at": 7
+    },
+    {
+      "name": "Super Mario Maker",
+      "facet": "Sandbox and building games",
+      "known_at": 7
+    },
+    {
+      "name": "Terraria",
+      "facet": "Sandbox and building games",
+      "known_at": 9
+    },
+    {
+      "name": "Stardew Valley",
+      "facet": "Sandbox and building games",
+      "known_at": 9
+    },
+    {
+      "name": "LittleBigPlanet",
+      "facet": "Sandbox and building games",
+      "known_at": 11
+    },
+    {
+      "name": "RollerCoaster Tycoon",
+      "facet": "Sandbox and building games",
+      "known_at": 11
+    },
+    {
+      "name": "Zoo Tycoon",
+      "facet": "Sandbox and building games",
+      "known_at": 11
+    },
+    {
+      "name": "Cities: Skylines",
+      "facet": "Sandbox and building games",
+      "known_at": 12
+    },
+    {
+      "name": "No Man's Sky",
+      "facet": "Sandbox and building games",
+      "known_at": 12
+    },
+    {
+      "name": "Spore",
+      "facet": "Sandbox and building games",
+      "known_at": 12
+    },
+    {
+      "name": "Garry's Mod",
+      "facet": "Sandbox and building games",
+      "known_at": 13
+    },
+    {
+      "name": "Factorio",
+      "facet": "Sandbox and building games",
+      "known_at": 14
+    },
+    {
+      "name": "Just Dance",
+      "facet": "Sports, racing and party games",
+      "known_at": 3
+    },
+    {
+      "name": "EA Sports FC",
+      "facet": "Sports, racing and party games",
+      "known_at": 4
+    },
+    {
+      "name": "Wii Sports",
+      "facet": "Sports, racing and party games",
+      "known_at": 4
+    },
+    {
+      "name": "Mario Party",
+      "facet": "Sports, racing and party games",
+      "known_at": 5
+    },
+    {
+      "name": "Fall Guys",
+      "facet": "Sports, racing and party games",
+      "known_at": 5
+    },
+    {
+      "name": "Super Smash Bros.",
+      "facet": "Sports, racing and party games",
+      "known_at": 6
+    },
+    {
+      "name": "Wii Fit",
+      "facet": "Sports, racing and party games",
+      "known_at": 7
+    },
+    {
+      "name": "Rainbow Road",
+      "facet": "Sports, racing and party games",
+      "known_at": 8
+    },
+    {
+      "name": "Mario & Sonic at the Olympic Games",
+      "facet": "Sports, racing and party games",
+      "known_at": 8
+    },
+    {
+      "name": "Ring Fit Adventure",
+      "facet": "Sports, racing and party games",
+      "known_at": 9
+    },
+    {
+      "name": "Pro Evolution Soccer",
+      "facet": "Sports, racing and party games",
+      "known_at": 10
+    },
+    {
+      "name": "NBA 2K",
+      "facet": "Sports, racing and party games",
+      "known_at": 10
+    },
+    {
+      "name": "Tony Hawk's Pro Skater",
+      "facet": "Sports, racing and party games",
+      "known_at": 11
+    },
+    {
+      "name": "F-Zero",
+      "facet": "Sports, racing and party games",
+      "known_at": 12
+    },
+    {
+      "name": "SingStar",
+      "facet": "Sports, racing and party games",
+      "known_at": 12
+    },
+    {
+      "name": "Track & Field",
+      "facet": "Sports, racing and party games",
+      "known_at": 14
+    },
+    {
+      "name": "Fruit Ninja",
+      "facet": "Mobile and casual games",
+      "known_at": 4
+    },
+    {
+      "name": "Candy Crush Saga",
+      "facet": "Mobile and casual games",
+      "known_at": 5
+    },
+    {
+      "name": "Geometry Dash",
+      "facet": "Mobile and casual games",
+      "known_at": 6
+    },
+    {
+      "name": "Brawl Stars",
+      "facet": "Mobile and casual games",
+      "known_at": 6
+    },
+    {
+      "name": "Chrome Dino game",
+      "facet": "Mobile and casual games",
+      "known_at": 6
+    },
+    {
+      "name": "Clash of Clans",
+      "facet": "Mobile and casual games",
+      "known_at": 7
+    },
+    {
+      "name": "Cut the Rope",
+      "facet": "Mobile and casual games",
+      "known_at": 7
+    },
+    {
+      "name": "Snake",
+      "facet": "Mobile and casual games",
+      "known_at": 8
+    },
+    {
+      "name": "Minesweeper",
+      "facet": "Mobile and casual games",
+      "known_at": 9
+    },
+    {
+      "name": "Doodle Jump",
+      "facet": "Mobile and casual games",
+      "known_at": 9
+    },
+    {
+      "name": "Hay Day",
+      "facet": "Mobile and casual games",
+      "known_at": 9
+    },
+    {
+      "name": "2048",
+      "facet": "Mobile and casual games",
+      "known_at": 10
+    },
+    {
+      "name": "Multiplayer",
+      "facet": "Online play and esports",
+      "known_at": 5
+    },
+    {
+      "name": "Battle pass",
+      "facet": "Online play and esports",
+      "known_at": 9
+    },
+    {
+      "name": "League of Legends",
+      "facet": "Online play and esports",
+      "known_at": 10
+    },
+    {
+      "name": "Overwatch",
+      "facet": "Online play and esports",
+      "known_at": 10
+    },
+    {
+      "name": "Valorant",
+      "facet": "Online play and esports",
+      "known_at": 10
+    },
+    {
+      "name": "Counter-Strike",
+      "facet": "Online play and esports",
+      "known_at": 11
+    },
+    {
+      "name": "Loot box",
+      "facet": "Online play and esports",
+      "known_at": 11
+    },
+    {
+      "name": "Let's Play",
+      "facet": "Online play and esports",
+      "known_at": 11
+    },
+    {
+      "name": "Dota 2",
+      "facet": "Online play and esports",
+      "known_at": 12
+    },
+    {
+      "name": "MMORPG",
+      "facet": "Online play and esports",
+      "known_at": 12
+    },
+    {
+      "name": "League of Legends World Championship",
+      "facet": "Online play and esports",
+      "known_at": 13
+    },
+    {
+      "name": "The International",
+      "facet": "Online play and esports",
+      "known_at": 14
+    },
+    {
+      "name": "Faker",
+      "facet": "Online play and esports",
+      "known_at": 14
+    },
+    {
+      "name": "Super Mario Bros. theme",
+      "facet": "Game music and sounds",
+      "known_at": 3
+    },
+    {
+      "name": "Mario coin sound",
+      "facet": "Game music and sounds",
+      "known_at": 5
+    },
+    {
+      "name": "Pac-Man waka waka sound",
+      "facet": "Game music and sounds",
+      "known_at": 6
+    },
+    {
+      "name": "Mii Channel music",
+      "facet": "Game music and sounds",
+      "known_at": 10
+    },
+    {
+      "name": "Zelda secret sound",
+      "facet": "Game music and sounds",
+      "known_at": 11
+    },
+    {
+      "name": "Wii Shop Channel music",
+      "facet": "Game music and sounds",
+      "known_at": 11
+    },
+    {
+      "name": "Chiptune",
+      "facet": "Game music and sounds",
+      "known_at": 12
+    },
+    {
+      "name": "Megalovania",
+      "facet": "Game music and sounds",
+      "known_at": 12
+    },
+    {
+      "name": "Halo theme",
+      "facet": "Game music and sounds",
+      "known_at": 12
+    },
+    {
+      "name": "C418",
+      "facet": "Game music and sounds",
+      "known_at": 12
+    },
+    {
+      "name": "Game Boy startup sound",
+      "facet": "Game music and sounds",
+      "known_at": 12
+    },
+    {
+      "name": "Song of Storms",
+      "facet": "Game music and sounds",
+      "known_at": 13
+    },
+    {
+      "name": "Final Fantasy victory fanfare",
+      "facet": "Game music and sounds",
+      "known_at": 13
+    },
+    {
+      "name": "Sound chip",
+      "facet": "Game music and sounds",
+      "known_at": 13
+    },
+    {
+      "name": "Nobuo Uematsu",
+      "facet": "Game music and sounds",
+      "known_at": 14
+    },
+    {
+      "name": "Toby Fox",
+      "facet": "Game music and sounds",
+      "known_at": 14
+    },
+    {
+      "name": "Still Alive",
+      "facet": "Game music and sounds",
+      "known_at": 14
+    },
+    {
+      "name": "Yoko Shimomura",
+      "facet": "Game music and sounds",
+      "known_at": 15
+    },
+    {
+      "name": "Koichi Sugiyama",
+      "facet": "Game music and sounds",
+      "known_at": 15
+    },
+    {
+      "name": "Pokémon anime",
+      "facet": "Video games in films and shows",
+      "known_at": 2
+    },
+    {
+      "name": "The Super Mario Bros. Movie",
+      "facet": "Video games in films and shows",
+      "known_at": 3
+    },
+    {
+      "name": "Sonic the Hedgehog film",
+      "facet": "Video games in films and shows",
+      "known_at": 4
+    },
+    {
+      "name": "A Minecraft Movie",
+      "facet": "Video games in films and shows",
+      "known_at": 4
+    },
+    {
+      "name": "The Angry Birds Movie",
+      "facet": "Video games in films and shows",
+      "known_at": 4
+    },
+    {
+      "name": "Wreck-It Ralph",
+      "facet": "Video games in films and shows",
+      "known_at": 5
+    },
+    {
+      "name": "Pixels",
+      "facet": "Video games in films and shows",
+      "known_at": 9
+    },
+    {
+      "name": "Free Guy",
+      "facet": "Video games in films and shows",
+      "known_at": 9
+    },
+    {
+      "name": "Lara Croft: Tomb Raider",
+      "facet": "Video games in films and shows",
+      "known_at": 11
+    },
+    {
+      "name": "Uncharted",
+      "facet": "Video games in films and shows",
+      "known_at": 11
+    },
+    {
+      "name": "Tetris film",
+      "facet": "Video games in films and shows",
+      "known_at": 12
+    },
+    {
+      "name": "Scott Pilgrim vs. the World",
+      "facet": "Video games in films and shows",
+      "known_at": 13
+    },
+    {
+      "name": "Warcraft film",
+      "facet": "Video games in films and shows",
+      "known_at": 13
+    },
+    {
+      "name": "Castlevania series",
+      "facet": "Video games in films and shows",
+      "known_at": 13
+    },
+    {
+      "name": "The Wizard",
+      "facet": "Video games in films and shows",
+      "known_at": 15
+    }
+  ]
+}

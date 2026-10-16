@@ -1,0 +1,1092 @@
+{
+  "subcategory": "tennis",
+  "facets": [
+    "Rules and scoring",
+    "Strokes and shots",
+    "Equipment and gear",
+    "Courts and surfaces",
+    "Grand Slam tournaments",
+    "Legendary men players",
+    "Legendary women players",
+    "Famous matches and rivalries",
+    "Team events and the Olympics",
+    "History and origins of tennis",
+    "Tennis words and expressions",
+    "Relatives of tennis: padel, squash, table tennis"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 4,
+      "estimate": 3,
+      "record": 4,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 5,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "15-30-40 scoring",
+      "facet": "Rules and scoring",
+      "known_at": 5
+    },
+    {
+      "name": "Deuce",
+      "facet": "Rules and scoring",
+      "known_at": 7
+    },
+    {
+      "name": "Advantage",
+      "facet": "Rules and scoring",
+      "known_at": 8
+    },
+    {
+      "name": "Tiebreak",
+      "facet": "Rules and scoring",
+      "known_at": 8
+    },
+    {
+      "name": "Game",
+      "facet": "Rules and scoring",
+      "known_at": 6
+    },
+    {
+      "name": "Match point",
+      "facet": "Rules and scoring",
+      "known_at": 6
+    },
+    {
+      "name": "Break point",
+      "facet": "Rules and scoring",
+      "known_at": 9
+    },
+    {
+      "name": "Let",
+      "facet": "Rules and scoring",
+      "known_at": 9
+    },
+    {
+      "name": "Double fault",
+      "facet": "Rules and scoring",
+      "known_at": 7
+    },
+    {
+      "name": "Foot fault",
+      "facet": "Rules and scoring",
+      "known_at": 10
+    },
+    {
+      "name": "Hawk-Eye",
+      "facet": "Rules and scoring",
+      "known_at": 9
+    },
+    {
+      "name": "Chair umpire",
+      "facet": "Rules and scoring",
+      "known_at": 6
+    },
+    {
+      "name": "Line judge",
+      "facet": "Rules and scoring",
+      "known_at": 7
+    },
+    {
+      "name": "Best of five sets",
+      "facet": "Rules and scoring",
+      "known_at": 9
+    },
+    {
+      "name": "Super tiebreak",
+      "facet": "Rules and scoring",
+      "known_at": 11
+    },
+    {
+      "name": "Double bounce",
+      "facet": "Rules and scoring",
+      "known_at": 4
+    },
+    {
+      "name": "Changeover",
+      "facet": "Rules and scoring",
+      "known_at": 11
+    },
+    {
+      "name": "Serve",
+      "facet": "Strokes and shots",
+      "known_at": 3
+    },
+    {
+      "name": "Ace",
+      "facet": "Strokes and shots",
+      "known_at": 6
+    },
+    {
+      "name": "Forehand",
+      "facet": "Strokes and shots",
+      "known_at": 5
+    },
+    {
+      "name": "Backhand",
+      "facet": "Strokes and shots",
+      "known_at": 6
+    },
+    {
+      "name": "Two-handed backhand",
+      "facet": "Strokes and shots",
+      "known_at": 8
+    },
+    {
+      "name": "Volley",
+      "facet": "Strokes and shots",
+      "known_at": 7
+    },
+    {
+      "name": "Smash",
+      "facet": "Strokes and shots",
+      "known_at": 6
+    },
+    {
+      "name": "Lob",
+      "facet": "Strokes and shots",
+      "known_at": 7
+    },
+    {
+      "name": "Drop shot",
+      "facet": "Strokes and shots",
+      "known_at": 8
+    },
+    {
+      "name": "Slice",
+      "facet": "Strokes and shots",
+      "known_at": 9
+    },
+    {
+      "name": "Topspin",
+      "facet": "Strokes and shots",
+      "known_at": 9
+    },
+    {
+      "name": "Half volley",
+      "facet": "Strokes and shots",
+      "known_at": 11
+    },
+    {
+      "name": "Passing shot",
+      "facet": "Strokes and shots",
+      "known_at": 10
+    },
+    {
+      "name": "Tweener",
+      "facet": "Strokes and shots",
+      "known_at": 12
+    },
+    {
+      "name": "Return of serve",
+      "facet": "Strokes and shots",
+      "known_at": 7
+    },
+    {
+      "name": "Underarm serve",
+      "facet": "Strokes and shots",
+      "known_at": 11
+    },
+    {
+      "name": "Kick serve",
+      "facet": "Strokes and shots",
+      "known_at": 12
+    },
+    {
+      "name": "Serve and volley",
+      "facet": "Strokes and shots",
+      "known_at": 11
+    },
+    {
+      "name": "Approach shot",
+      "facet": "Strokes and shots",
+      "known_at": 12
+    },
+    {
+      "name": "Tennis racket",
+      "facet": "Equipment and gear",
+      "known_at": 1
+    },
+    {
+      "name": "Tennis ball",
+      "facet": "Equipment and gear",
+      "known_at": 1
+    },
+    {
+      "name": "Racket strings",
+      "facet": "Equipment and gear",
+      "known_at": 4
+    },
+    {
+      "name": "Tennis net",
+      "facet": "Equipment and gear",
+      "known_at": 2
+    },
+    {
+      "name": "Sweatband",
+      "facet": "Equipment and gear",
+      "known_at": 5
+    },
+    {
+      "name": "Headband",
+      "facet": "Equipment and gear",
+      "known_at": 5
+    },
+    {
+      "name": "Grip tape",
+      "facet": "Equipment and gear",
+      "known_at": 8
+    },
+    {
+      "name": "Vibration dampener",
+      "facet": "Equipment and gear",
+      "known_at": 11
+    },
+    {
+      "name": "Ball machine",
+      "facet": "Equipment and gear",
+      "known_at": 9
+    },
+    {
+      "name": "Tennis shoes",
+      "facet": "Equipment and gear",
+      "known_at": 3
+    },
+    {
+      "name": "Gut strings",
+      "facet": "Equipment and gear",
+      "known_at": 13
+    },
+    {
+      "name": "Wooden racket",
+      "facet": "Equipment and gear",
+      "known_at": 9
+    },
+    {
+      "name": "Graphite racket",
+      "facet": "Equipment and gear",
+      "known_at": 13
+    },
+    {
+      "name": "Ball felt",
+      "facet": "Equipment and gear",
+      "known_at": 8
+    },
+    {
+      "name": "Pressurized ball can",
+      "facet": "Equipment and gear",
+      "known_at": 10
+    },
+    {
+      "name": "Tennis skirt",
+      "facet": "Equipment and gear",
+      "known_at": 6
+    },
+    {
+      "name": "Clay court",
+      "facet": "Courts and surfaces",
+      "known_at": 6
+    },
+    {
+      "name": "Grass court",
+      "facet": "Courts and surfaces",
+      "known_at": 5
+    },
+    {
+      "name": "Hard court",
+      "facet": "Courts and surfaces",
+      "known_at": 7
+    },
+    {
+      "name": "Carpet court",
+      "facet": "Courts and surfaces",
+      "known_at": 13
+    },
+    {
+      "name": "Indoor court",
+      "facet": "Courts and surfaces",
+      "known_at": 8
+    },
+    {
+      "name": "Service line",
+      "facet": "Courts and surfaces",
+      "known_at": 9
+    },
+    {
+      "name": "Service box",
+      "facet": "Courts and surfaces",
+      "known_at": 8
+    },
+    {
+      "name": "Doubles alley",
+      "facet": "Courts and surfaces",
+      "known_at": 9
+    },
+    {
+      "name": "Center mark",
+      "facet": "Courts and surfaces",
+      "known_at": 11
+    },
+    {
+      "name": "Net post",
+      "facet": "Courts and surfaces",
+      "known_at": 8
+    },
+    {
+      "name": "Centre Court",
+      "facet": "Courts and surfaces",
+      "known_at": 10
+    },
+    {
+      "name": "Court Philippe-Chatrier",
+      "facet": "Courts and surfaces",
+      "known_at": 13
+    },
+    {
+      "name": "Arthur Ashe Stadium",
+      "facet": "Courts and surfaces",
+      "known_at": 12
+    },
+    {
+      "name": "Rod Laver Arena",
+      "facet": "Courts and surfaces",
+      "known_at": 12
+    },
+    {
+      "name": "Retractable roof",
+      "facet": "Courts and surfaces",
+      "known_at": 10
+    },
+    {
+      "name": "Green clay",
+      "facet": "Courts and surfaces",
+      "known_at": 14
+    },
+    {
+      "name": "Blue clay",
+      "facet": "Courts and surfaces",
+      "known_at": 14
+    },
+    {
+      "name": "Wimbledon",
+      "facet": "Grand Slam tournaments",
+      "known_at": 4
+    },
+    {
+      "name": "Australian Open",
+      "facet": "Grand Slam tournaments",
+      "known_at": 7
+    },
+    {
+      "name": "French Open",
+      "facet": "Grand Slam tournaments",
+      "known_at": 7
+    },
+    {
+      "name": "US Open",
+      "facet": "Grand Slam tournaments",
+      "known_at": 6
+    },
+    {
+      "name": "Grand Slam",
+      "facet": "Grand Slam tournaments",
+      "known_at": 9
+    },
+    {
+      "name": "Career Grand Slam",
+      "facet": "Grand Slam tournaments",
+      "known_at": 12
+    },
+    {
+      "name": "Golden Slam",
+      "facet": "Grand Slam tournaments",
+      "known_at": 13
+    },
+    {
+      "name": "Strawberries and cream",
+      "facet": "Grand Slam tournaments",
+      "known_at": 10
+    },
+    {
+      "name": "Wimbledon all-white rule",
+      "facet": "Grand Slam tournaments",
+      "known_at": 8
+    },
+    {
+      "name": "Roland Garros (aviator)",
+      "facet": "Grand Slam tournaments",
+      "known_at": 13
+    },
+    {
+      "name": "Melbourne Park",
+      "facet": "Grand Slam tournaments",
+      "known_at": 12
+    },
+    {
+      "name": "Flushing Meadows",
+      "facet": "Grand Slam tournaments",
+      "known_at": 12
+    },
+    {
+      "name": "All England Club",
+      "facet": "Grand Slam tournaments",
+      "known_at": 12
+    },
+    {
+      "name": "Royal Box",
+      "facet": "Grand Slam tournaments",
+      "known_at": 11
+    },
+    {
+      "name": "Venus Rosewater Dish",
+      "facet": "Grand Slam tournaments",
+      "known_at": 15
+    },
+    {
+      "name": "Coupe des Mousquetaires",
+      "facet": "Grand Slam tournaments",
+      "known_at": 15
+    },
+    {
+      "name": "Norman Brookes Challenge Cup",
+      "facet": "Grand Slam tournaments",
+      "known_at": 15
+    },
+    {
+      "name": "Novak Djokovic",
+      "facet": "Legendary men players",
+      "known_at": 6
+    },
+    {
+      "name": "Carlos Alcaraz",
+      "facet": "Legendary men players",
+      "known_at": 8
+    },
+    {
+      "name": "Jannik Sinner",
+      "facet": "Legendary men players",
+      "known_at": 9
+    },
+    {
+      "name": "Andy Murray",
+      "facet": "Legendary men players",
+      "known_at": 9
+    },
+    {
+      "name": "Pete Sampras",
+      "facet": "Legendary men players",
+      "known_at": 10
+    },
+    {
+      "name": "Andre Agassi",
+      "facet": "Legendary men players",
+      "known_at": 10
+    },
+    {
+      "name": "Björn Borg",
+      "facet": "Legendary men players",
+      "known_at": 10
+    },
+    {
+      "name": "John McEnroe",
+      "facet": "Legendary men players",
+      "known_at": 10
+    },
+    {
+      "name": "Rod Laver",
+      "facet": "Legendary men players",
+      "known_at": 13
+    },
+    {
+      "name": "Arthur Ashe",
+      "facet": "Legendary men players",
+      "known_at": 12
+    },
+    {
+      "name": "Boris Becker",
+      "facet": "Legendary men players",
+      "known_at": 11
+    },
+    {
+      "name": "Ivan Lendl",
+      "facet": "Legendary men players",
+      "known_at": 13
+    },
+    {
+      "name": "Jimmy Connors",
+      "facet": "Legendary men players",
+      "known_at": 12
+    },
+    {
+      "name": "Gustavo Kuerten",
+      "facet": "Legendary men players",
+      "known_at": 13
+    },
+    {
+      "name": "Yannick Noah",
+      "facet": "Legendary men players",
+      "known_at": 12
+    },
+    {
+      "name": "Fred Perry",
+      "facet": "Legendary men players",
+      "known_at": 12
+    },
+    {
+      "name": "Stan Wawrinka",
+      "facet": "Legendary men players",
+      "known_at": 12
+    },
+    {
+      "name": "Juan Martín del Potro",
+      "facet": "Legendary men players",
+      "known_at": 12
+    },
+    {
+      "name": "Kei Nishikori",
+      "facet": "Legendary men players",
+      "known_at": 12
+    },
+    {
+      "name": "Venus Williams",
+      "facet": "Legendary women players",
+      "known_at": 8
+    },
+    {
+      "name": "Steffi Graf",
+      "facet": "Legendary women players",
+      "known_at": 10
+    },
+    {
+      "name": "Martina Navratilova",
+      "facet": "Legendary women players",
+      "known_at": 10
+    },
+    {
+      "name": "Chris Evert",
+      "facet": "Legendary women players",
+      "known_at": 12
+    },
+    {
+      "name": "Billie Jean King",
+      "facet": "Legendary women players",
+      "known_at": 11
+    },
+    {
+      "name": "Margaret Court",
+      "facet": "Legendary women players",
+      "known_at": 13
+    },
+    {
+      "name": "Monica Seles",
+      "facet": "Legendary women players",
+      "known_at": 12
+    },
+    {
+      "name": "Maria Sharapova",
+      "facet": "Legendary women players",
+      "known_at": 9
+    },
+    {
+      "name": "Naomi Osaka",
+      "facet": "Legendary women players",
+      "known_at": 9
+    },
+    {
+      "name": "Iga Świątek",
+      "facet": "Legendary women players",
+      "known_at": 10
+    },
+    {
+      "name": "Li Na",
+      "facet": "Legendary women players",
+      "known_at": 11
+    },
+    {
+      "name": "Martina Hingis",
+      "facet": "Legendary women players",
+      "known_at": 11
+    },
+    {
+      "name": "Justine Henin",
+      "facet": "Legendary women players",
+      "known_at": 13
+    },
+    {
+      "name": "Kim Clijsters",
+      "facet": "Legendary women players",
+      "known_at": 12
+    },
+    {
+      "name": "Ashleigh Barty",
+      "facet": "Legendary women players",
+      "known_at": 11
+    },
+    {
+      "name": "Suzanne Lenglen",
+      "facet": "Legendary women players",
+      "known_at": 14
+    },
+    {
+      "name": "Althea Gibson",
+      "facet": "Legendary women players",
+      "known_at": 13
+    },
+    {
+      "name": "Aryna Sabalenka",
+      "facet": "Legendary women players",
+      "known_at": 10
+    },
+    {
+      "name": "Coco Gauff",
+      "facet": "Legendary women players",
+      "known_at": 9
+    },
+    {
+      "name": "Gabriela Sabatini",
+      "facet": "Legendary women players",
+      "known_at": 12
+    },
+    {
+      "name": "Evonne Goolagong",
+      "facet": "Legendary women players",
+      "known_at": 14
+    },
+    {
+      "name": "Federer–Nadal rivalry",
+      "facet": "Famous matches and rivalries",
+      "known_at": 8
+    },
+    {
+      "name": "Nadal–Djokovic rivalry",
+      "facet": "Famous matches and rivalries",
+      "known_at": 11
+    },
+    {
+      "name": "Borg–McEnroe rivalry",
+      "facet": "Famous matches and rivalries",
+      "known_at": 11
+    },
+    {
+      "name": "Evert–Navratilova rivalry",
+      "facet": "Famous matches and rivalries",
+      "known_at": 12
+    },
+    {
+      "name": "Agassi–Sampras rivalry",
+      "facet": "Famous matches and rivalries",
+      "known_at": 12
+    },
+    {
+      "name": "Williams sisters rivalry",
+      "facet": "Famous matches and rivalries",
+      "known_at": 10
+    },
+    {
+      "name": "Alcaraz–Sinner rivalry",
+      "facet": "Famous matches and rivalries",
+      "known_at": 11
+    },
+    {
+      "name": "2008 Wimbledon final",
+      "facet": "Famous matches and rivalries",
+      "known_at": 12
+    },
+    {
+      "name": "Isner–Mahut match",
+      "facet": "Famous matches and rivalries",
+      "known_at": 12
+    },
+    {
+      "name": "Battle of the Sexes",
+      "facet": "Famous matches and rivalries",
+      "known_at": 11
+    },
+    {
+      "name": "1980 Wimbledon final",
+      "facet": "Famous matches and rivalries",
+      "known_at": 13
+    },
+    {
+      "name": "2012 Australian Open final",
+      "facet": "Famous matches and rivalries",
+      "known_at": 14
+    },
+    {
+      "name": "2019 Wimbledon final",
+      "facet": "Famous matches and rivalries",
+      "known_at": 12
+    },
+    {
+      "name": "2023 Wimbledon final",
+      "facet": "Famous matches and rivalries",
+      "known_at": 13
+    },
+    {
+      "name": "2017 Australian Open final",
+      "facet": "Famous matches and rivalries",
+      "known_at": 13
+    },
+    {
+      "name": "Steffi Graf's 1988 Golden Slam",
+      "facet": "Famous matches and rivalries",
+      "known_at": 13
+    },
+    {
+      "name": "Davis Cup",
+      "facet": "Team events and the Olympics",
+      "known_at": 10
+    },
+    {
+      "name": "Billie Jean King Cup",
+      "facet": "Team events and the Olympics",
+      "known_at": 12
+    },
+    {
+      "name": "Laver Cup",
+      "facet": "Team events and the Olympics",
+      "known_at": 11
+    },
+    {
+      "name": "Olympic tennis",
+      "facet": "Team events and the Olympics",
+      "known_at": 9
+    },
+    {
+      "name": "United Cup",
+      "facet": "Team events and the Olympics",
+      "known_at": 13
+    },
+    {
+      "name": "Hopman Cup",
+      "facet": "Team events and the Olympics",
+      "known_at": 14
+    },
+    {
+      "name": "Doubles",
+      "facet": "Team events and the Olympics",
+      "known_at": 4
+    },
+    {
+      "name": "Mixed doubles",
+      "facet": "Team events and the Olympics",
+      "known_at": 7
+    },
+    {
+      "name": "ATP Finals",
+      "facet": "Team events and the Olympics",
+      "known_at": 11
+    },
+    {
+      "name": "WTA Finals",
+      "facet": "Team events and the Olympics",
+      "known_at": 12
+    },
+    {
+      "name": "ATP",
+      "facet": "Team events and the Olympics",
+      "known_at": 10
+    },
+    {
+      "name": "WTA",
+      "facet": "Team events and the Olympics",
+      "known_at": 10
+    },
+    {
+      "name": "ITF",
+      "facet": "Team events and the Olympics",
+      "known_at": 13
+    },
+    {
+      "name": "Tennis at the 1896 Olympics",
+      "facet": "Team events and the Olympics",
+      "known_at": 13
+    },
+    {
+      "name": "Tennis return to the Olympics in 1988",
+      "facet": "Team events and the Olympics",
+      "known_at": 14
+    },
+    {
+      "name": "Paris 2024 Olympic tennis",
+      "facet": "Team events and the Olympics",
+      "known_at": 12
+    },
+    {
+      "name": "Tennis",
+      "facet": "History and origins of tennis",
+      "known_at": 1
+    },
+    {
+      "name": "Jeu de paume",
+      "facet": "History and origins of tennis",
+      "known_at": 13
+    },
+    {
+      "name": "Real tennis",
+      "facet": "History and origins of tennis",
+      "known_at": 14
+    },
+    {
+      "name": "Walter Clopton Wingfield",
+      "facet": "History and origins of tennis",
+      "known_at": 14
+    },
+    {
+      "name": "Sphairistike",
+      "facet": "History and origins of tennis",
+      "known_at": 15
+    },
+    {
+      "name": "First Wimbledon Championships (1877)",
+      "facet": "History and origins of tennis",
+      "known_at": 12
+    },
+    {
+      "name": "Open Era",
+      "facet": "History and origins of tennis",
+      "known_at": 13
+    },
+    {
+      "name": "James Van Alen",
+      "facet": "History and origins of tennis",
+      "known_at": 15
+    },
+    {
+      "name": "Yellow tennis ball",
+      "facet": "History and origins of tennis",
+      "known_at": 12
+    },
+    {
+      "name": "Hampton Court Palace tennis court",
+      "facet": "History and origins of tennis",
+      "known_at": 14
+    },
+    {
+      "name": "Tennis Court Oath",
+      "facet": "History and origins of tennis",
+      "known_at": 13
+    },
+    {
+      "name": "French monastery ball games",
+      "facet": "History and origins of tennis",
+      "known_at": 14
+    },
+    {
+      "name": "Equal prize money",
+      "facet": "History and origins of tennis",
+      "known_at": 12
+    },
+    {
+      "name": "International Tennis Hall of Fame",
+      "facet": "History and origins of tennis",
+      "known_at": 13
+    },
+    {
+      "name": "Women's tennis in long dresses",
+      "facet": "History and origins of tennis",
+      "known_at": 11
+    },
+    {
+      "name": "Love",
+      "facet": "Tennis words and expressions",
+      "known_at": 8
+    },
+    {
+      "name": "Breadstick",
+      "facet": "Tennis words and expressions",
+      "known_at": 14
+    },
+    {
+      "name": "Unforced error",
+      "facet": "Tennis words and expressions",
+      "known_at": 10
+    },
+    {
+      "name": "Moonball",
+      "facet": "Tennis words and expressions",
+      "known_at": 13
+    },
+    {
+      "name": "Ball kid",
+      "facet": "Tennis words and expressions",
+      "known_at": 6
+    },
+    {
+      "name": "Seed",
+      "facet": "Tennis words and expressions",
+      "known_at": 10
+    },
+    {
+      "name": "Wild card",
+      "facet": "Tennis words and expressions",
+      "known_at": 10
+    },
+    {
+      "name": "Qualifier",
+      "facet": "Tennis words and expressions",
+      "known_at": 11
+    },
+    {
+      "name": "Lucky loser",
+      "facet": "Tennis words and expressions",
+      "known_at": 13
+    },
+    {
+      "name": "Walkover",
+      "facet": "Tennis words and expressions",
+      "known_at": 12
+    },
+    {
+      "name": "Bye",
+      "facet": "Tennis words and expressions",
+      "known_at": 11
+    },
+    {
+      "name": "Hold serve",
+      "facet": "Tennis words and expressions",
+      "known_at": 11
+    },
+    {
+      "name": "Grunting",
+      "facet": "Tennis words and expressions",
+      "known_at": 9
+    },
+    {
+      "name": "Net cord",
+      "facet": "Tennis words and expressions",
+      "known_at": 11
+    },
+    {
+      "name": "Mini-break",
+      "facet": "Tennis words and expressions",
+      "known_at": 13
+    },
+    {
+      "name": "Dead rubber",
+      "facet": "Tennis words and expressions",
+      "known_at": 14
+    },
+    {
+      "name": "Tennis elbow",
+      "facet": "Tennis words and expressions",
+      "known_at": 9
+    },
+    {
+      "name": "Golden set",
+      "facet": "Tennis words and expressions",
+      "known_at": 15
+    },
+    {
+      "name": "Padel",
+      "facet": "Relatives of tennis: padel, squash, table tennis",
+      "known_at": 8
+    },
+    {
+      "name": "Table tennis",
+      "facet": "Relatives of tennis: padel, squash, table tennis",
+      "known_at": 3
+    },
+    {
+      "name": "Pickleball",
+      "facet": "Relatives of tennis: padel, squash, table tennis",
+      "known_at": 10
+    },
+    {
+      "name": "Racquetball",
+      "facet": "Relatives of tennis: padel, squash, table tennis",
+      "known_at": 12
+    },
+    {
+      "name": "Beach tennis",
+      "facet": "Relatives of tennis: padel, squash, table tennis",
+      "known_at": 11
+    },
+    {
+      "name": "Basque pelota",
+      "facet": "Relatives of tennis: padel, squash, table tennis",
+      "known_at": 12
+    },
+    {
+      "name": "Jai alai",
+      "facet": "Relatives of tennis: padel, squash, table tennis",
+      "known_at": 13
+    },
+    {
+      "name": "Soft tennis",
+      "facet": "Relatives of tennis: padel, squash, table tennis",
+      "known_at": 14
+    },
+    {
+      "name": "Ping-pong ball",
+      "facet": "Relatives of tennis: padel, squash, table tennis",
+      "known_at": 3
+    },
+    {
+      "name": "Shuttlecock",
+      "facet": "Relatives of tennis: padel, squash, table tennis",
+      "known_at": 5
+    },
+    {
+      "name": "Table tennis paddle",
+      "facet": "Relatives of tennis: padel, squash, table tennis",
+      "known_at": 4
+    },
+    {
+      "name": "Padel glass walls",
+      "facet": "Relatives of tennis: padel, squash, table tennis",
+      "known_at": 10
+    },
+    {
+      "name": "Ma Long",
+      "facet": "Relatives of tennis: padel, squash, table tennis",
+      "known_at": 13
+    },
+    {
+      "name": "Jan-Ove Waldner",
+      "facet": "Relatives of tennis: padel, squash, table tennis",
+      "known_at": 14
+    },
+    {
+      "name": "Jahangir Khan",
+      "facet": "Relatives of tennis: padel, squash, table tennis",
+      "known_at": 14
+    }
+  ]
+}

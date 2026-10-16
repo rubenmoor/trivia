@@ -1,0 +1,732 @@
+{
+  "subcategory": "pixar-films",
+  "facets": [
+    "Toy Story world",
+    "Monsters and creatures",
+    "Ocean and animal adventures",
+    "Cars and machines",
+    "Superhero families",
+    "Emotions and the mind",
+    "Robots and space",
+    "Magic, myths and afterlife",
+    "Real places and settings",
+    "Villains and sidekicks",
+    "Pixar studio and filmmakers",
+    "Shorts, Luxo and Easter eggs"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 3,
+      "history": 2,
+      "body_senses": 2,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Woody",
+      "facet": "Toy Story world",
+      "known_at": 1
+    },
+    {
+      "name": "Slinky Dog",
+      "facet": "Toy Story world",
+      "known_at": 3
+    },
+    {
+      "name": "Bonnie",
+      "facet": "Toy Story world",
+      "known_at": 5
+    },
+    {
+      "name": "Bullseye",
+      "facet": "Toy Story world",
+      "known_at": 4
+    },
+    {
+      "name": "Little Green Men",
+      "facet": "Toy Story world",
+      "known_at": 3
+    },
+    {
+      "name": "Duke Caboom",
+      "facet": "Toy Story world",
+      "known_at": 7
+    },
+    {
+      "name": "Etch",
+      "facet": "Toy Story world",
+      "known_at": 8
+    },
+    {
+      "name": "Monsters University",
+      "facet": "Monsters and creatures",
+      "known_at": 4
+    },
+    {
+      "name": "Roz",
+      "facet": "Monsters and creatures",
+      "known_at": 7
+    },
+    {
+      "name": "Celia",
+      "facet": "Monsters and creatures",
+      "known_at": 9
+    },
+    {
+      "name": "Abominable Snowman",
+      "facet": "Monsters and creatures",
+      "known_at": 8
+    },
+    {
+      "name": "Scream canister",
+      "facet": "Monsters and creatures",
+      "known_at": 6
+    },
+    {
+      "name": "Alberto",
+      "facet": "Monsters and creatures",
+      "known_at": 6
+    },
+    {
+      "name": "The Good Dinosaur",
+      "facet": "Monsters and creatures",
+      "known_at": 6
+    },
+    {
+      "name": "Arlo",
+      "facet": "Monsters and creatures",
+      "known_at": 7
+    },
+    {
+      "name": "A Bug's Life",
+      "facet": "Monsters and creatures",
+      "known_at": 6
+    },
+    {
+      "name": "Heimlich",
+      "facet": "Monsters and creatures",
+      "known_at": 9
+    },
+    {
+      "name": "Finding Nemo",
+      "facet": "Ocean and animal adventures",
+      "known_at": 1
+    },
+    {
+      "name": "Finding Dory",
+      "facet": "Ocean and animal adventures",
+      "known_at": 3
+    },
+    {
+      "name": "Squirt",
+      "facet": "Ocean and animal adventures",
+      "known_at": 7
+    },
+    {
+      "name": "Hank",
+      "facet": "Ocean and animal adventures",
+      "known_at": 5
+    },
+    {
+      "name": "Nigel",
+      "facet": "Ocean and animal adventures",
+      "known_at": 8
+    },
+    {
+      "name": "Destiny",
+      "facet": "Ocean and animal adventures",
+      "known_at": 8
+    },
+    {
+      "name": "Remy",
+      "facet": "Ocean and animal adventures",
+      "known_at": 2
+    },
+    {
+      "name": "Kevin",
+      "facet": "Ocean and animal adventures",
+      "known_at": 6
+    },
+    {
+      "name": "Radiator Springs",
+      "facet": "Cars and machines",
+      "known_at": 6
+    },
+    {
+      "name": "Piston Cup",
+      "facet": "Cars and machines",
+      "known_at": 5
+    },
+    {
+      "name": "Guido",
+      "facet": "Cars and machines",
+      "known_at": 6
+    },
+    {
+      "name": "Cruz Ramirez",
+      "facet": "Cars and machines",
+      "known_at": 5
+    },
+    {
+      "name": "Jackson Storm",
+      "facet": "Cars and machines",
+      "known_at": 6
+    },
+    {
+      "name": "Francesco Bernoulli",
+      "facet": "Cars and machines",
+      "known_at": 8
+    },
+    {
+      "name": "Fillmore",
+      "facet": "Cars and machines",
+      "known_at": 8
+    },
+    {
+      "name": "Sarge",
+      "facet": "Cars and machines",
+      "known_at": 8
+    },
+    {
+      "name": "Ramone",
+      "facet": "Cars and machines",
+      "known_at": 8
+    },
+    {
+      "name": "Flo",
+      "facet": "Cars and machines",
+      "known_at": 9
+    },
+    {
+      "name": "The Incredibles",
+      "facet": "Superhero families",
+      "known_at": 2
+    },
+    {
+      "name": "Incredibles 2",
+      "facet": "Superhero families",
+      "known_at": 4
+    },
+    {
+      "name": "Elastigirl",
+      "facet": "Superhero families",
+      "known_at": 3
+    },
+    {
+      "name": "Violet",
+      "facet": "Superhero families",
+      "known_at": 4
+    },
+    {
+      "name": "Dash",
+      "facet": "Superhero families",
+      "known_at": 3
+    },
+    {
+      "name": "Jack-Jack",
+      "facet": "Superhero families",
+      "known_at": 3
+    },
+    {
+      "name": "Frozone",
+      "facet": "Superhero families",
+      "known_at": 4
+    },
+    {
+      "name": "Mirage",
+      "facet": "Superhero families",
+      "known_at": 10
+    },
+    {
+      "name": "Omnidroid",
+      "facet": "Superhero families",
+      "known_at": 10
+    },
+    {
+      "name": "Metroville",
+      "facet": "Superhero families",
+      "known_at": 11
+    },
+    {
+      "name": "Nomanisan Island",
+      "facet": "Superhero families",
+      "known_at": 13
+    },
+    {
+      "name": "Supers",
+      "facet": "Superhero families",
+      "known_at": 7
+    },
+    {
+      "name": "Superhero costume",
+      "facet": "Superhero families",
+      "known_at": 3
+    },
+    {
+      "name": "Inside Out",
+      "facet": "Emotions and the mind",
+      "known_at": 2
+    },
+    {
+      "name": "Inside Out 2",
+      "facet": "Emotions and the mind",
+      "known_at": 3
+    },
+    {
+      "name": "Sadness",
+      "facet": "Emotions and the mind",
+      "known_at": 2
+    },
+    {
+      "name": "Anger",
+      "facet": "Emotions and the mind",
+      "known_at": 2
+    },
+    {
+      "name": "Fear",
+      "facet": "Emotions and the mind",
+      "known_at": 3
+    },
+    {
+      "name": "Disgust",
+      "facet": "Emotions and the mind",
+      "known_at": 3
+    },
+    {
+      "name": "Anxiety",
+      "facet": "Emotions and the mind",
+      "known_at": 4
+    },
+    {
+      "name": "Envy",
+      "facet": "Emotions and the mind",
+      "known_at": 6
+    },
+    {
+      "name": "Ennui",
+      "facet": "Emotions and the mind",
+      "known_at": 7
+    },
+    {
+      "name": "Embarrassment",
+      "facet": "Emotions and the mind",
+      "known_at": 6
+    },
+    {
+      "name": "Riley",
+      "facet": "Emotions and the mind",
+      "known_at": 4
+    },
+    {
+      "name": "Headquarters",
+      "facet": "Emotions and the mind",
+      "known_at": 7
+    },
+    {
+      "name": "Core memories",
+      "facet": "Emotions and the mind",
+      "known_at": 6
+    },
+    {
+      "name": "Islands of Personality",
+      "facet": "Emotions and the mind",
+      "known_at": 8
+    },
+    {
+      "name": "Train of Thought",
+      "facet": "Emotions and the mind",
+      "known_at": 9
+    },
+    {
+      "name": "Imagination Land",
+      "facet": "Emotions and the mind",
+      "known_at": 8
+    },
+    {
+      "name": "WALL·E",
+      "facet": "Robots and space",
+      "known_at": 1
+    },
+    {
+      "name": "M-O",
+      "facet": "Robots and space",
+      "known_at": 8
+    },
+    {
+      "name": "Axiom",
+      "facet": "Robots and space",
+      "known_at": 9
+    },
+    {
+      "name": "Buy n Large",
+      "facet": "Robots and space",
+      "known_at": 11
+    },
+    {
+      "name": "Captain McCrea",
+      "facet": "Robots and space",
+      "known_at": 11
+    },
+    {
+      "name": "Hal the cockroach",
+      "facet": "Robots and space",
+      "known_at": 6
+    },
+    {
+      "name": "Plant in a boot",
+      "facet": "Robots and space",
+      "known_at": 7
+    },
+    {
+      "name": "Lightyear",
+      "facet": "Robots and space",
+      "known_at": 5
+    },
+    {
+      "name": "Sox",
+      "facet": "Robots and space",
+      "known_at": 7
+    },
+    {
+      "name": "Space Ranger",
+      "facet": "Robots and space",
+      "known_at": 4
+    },
+    {
+      "name": "Elio",
+      "facet": "Robots and space",
+      "known_at": 7
+    },
+    {
+      "name": "Communiverse",
+      "facet": "Robots and space",
+      "known_at": 10
+    },
+    {
+      "name": "Glordon",
+      "facet": "Robots and space",
+      "known_at": 10
+    },
+    {
+      "name": "Miguel",
+      "facet": "Magic, myths and afterlife",
+      "known_at": 3
+    },
+    {
+      "name": "Mamá Coco",
+      "facet": "Magic, myths and afterlife",
+      "known_at": 5
+    },
+    {
+      "name": "Land of the Dead",
+      "facet": "Magic, myths and afterlife",
+      "known_at": 6
+    },
+    {
+      "name": "Marigold",
+      "facet": "Magic, myths and afterlife",
+      "known_at": 8
+    },
+    {
+      "name": "22",
+      "facet": "Magic, myths and afterlife",
+      "known_at": 8
+    },
+    {
+      "name": "The Great Before",
+      "facet": "Magic, myths and afterlife",
+      "known_at": 11
+    },
+    {
+      "name": "Onward",
+      "facet": "Magic, myths and afterlife",
+      "known_at": 7
+    },
+    {
+      "name": "Ian and Barley Lightfoot",
+      "facet": "Magic, myths and afterlife",
+      "known_at": 8
+    },
+    {
+      "name": "Elemental",
+      "facet": "Magic, myths and afterlife",
+      "known_at": 5
+    },
+    {
+      "name": "Wade Ripple",
+      "facet": "Magic, myths and afterlife",
+      "known_at": 7
+    },
+    {
+      "name": "Element City",
+      "facet": "Magic, myths and afterlife",
+      "known_at": 8
+    },
+    {
+      "name": "Gusteau's",
+      "facet": "Real places and settings",
+      "known_at": 8
+    },
+    {
+      "name": "Ratatouille dish",
+      "facet": "Real places and settings",
+      "known_at": 8
+    },
+    {
+      "name": "Alfredo Linguini",
+      "facet": "Real places and settings",
+      "known_at": 6
+    },
+    {
+      "name": "Ellie Fredricksen",
+      "facet": "Real places and settings",
+      "known_at": 7
+    },
+    {
+      "name": "Paradise Falls",
+      "facet": "Real places and settings",
+      "known_at": 7
+    },
+    {
+      "name": "Flying balloon house",
+      "facet": "Real places and settings",
+      "known_at": 2
+    },
+    {
+      "name": "Turning Red",
+      "facet": "Real places and settings",
+      "known_at": 5
+    },
+    {
+      "name": "Italian Riviera",
+      "facet": "Real places and settings",
+      "known_at": 11
+    },
+    {
+      "name": "Portorosso",
+      "facet": "Real places and settings",
+      "known_at": 10
+    },
+    {
+      "name": "San Francisco",
+      "facet": "Real places and settings",
+      "known_at": 8
+    },
+    {
+      "name": "Stinky Pete",
+      "facet": "Villains and sidekicks",
+      "known_at": 7
+    },
+    {
+      "name": "Emperor Zurg",
+      "facet": "Villains and sidekicks",
+      "known_at": 5
+    },
+    {
+      "name": "Syndrome",
+      "facet": "Villains and sidekicks",
+      "known_at": 5
+    },
+    {
+      "name": "Screenslaver",
+      "facet": "Villains and sidekicks",
+      "known_at": 9
+    },
+    {
+      "name": "Chef Skinner",
+      "facet": "Villains and sidekicks",
+      "known_at": 9
+    },
+    {
+      "name": "AUTO",
+      "facet": "Villains and sidekicks",
+      "known_at": 9
+    },
+    {
+      "name": "Mor'du",
+      "facet": "Villains and sidekicks",
+      "known_at": 10
+    },
+    {
+      "name": "Pixar Animation Studios",
+      "facet": "Pixar studio and filmmakers",
+      "known_at": 3
+    },
+    {
+      "name": "Computer animation",
+      "facet": "Pixar studio and filmmakers",
+      "known_at": 6
+    },
+    {
+      "name": "Ed Catmull",
+      "facet": "Pixar studio and filmmakers",
+      "known_at": 14
+    },
+    {
+      "name": "Pete Docter",
+      "facet": "Pixar studio and filmmakers",
+      "known_at": 13
+    },
+    {
+      "name": "Brad Bird",
+      "facet": "Pixar studio and filmmakers",
+      "known_at": 13
+    },
+    {
+      "name": "Andrew Stanton",
+      "facet": "Pixar studio and filmmakers",
+      "known_at": 14
+    },
+    {
+      "name": "Lee Unkrich",
+      "facet": "Pixar studio and filmmakers",
+      "known_at": 15
+    },
+    {
+      "name": "Domee Shi",
+      "facet": "Pixar studio and filmmakers",
+      "known_at": 14
+    },
+    {
+      "name": "The Walt Disney Company",
+      "facet": "Pixar studio and filmmakers",
+      "known_at": 3
+    },
+    {
+      "name": "Emeryville",
+      "facet": "Pixar studio and filmmakers",
+      "known_at": 15
+    },
+    {
+      "name": "RenderMan",
+      "facet": "Pixar studio and filmmakers",
+      "known_at": 15
+    },
+    {
+      "name": "Tim Allen",
+      "facet": "Pixar studio and filmmakers",
+      "known_at": 11
+    },
+    {
+      "name": "John Ratzenberger",
+      "facet": "Pixar studio and filmmakers",
+      "known_at": 14
+    },
+    {
+      "name": "Randy Newman",
+      "facet": "Pixar studio and filmmakers",
+      "known_at": 13
+    },
+    {
+      "name": "Michael Giacchino",
+      "facet": "Pixar studio and filmmakers",
+      "known_at": 14
+    },
+    {
+      "name": "Academy Award for Best Animated Feature",
+      "facet": "Pixar studio and filmmakers",
+      "known_at": 9
+    },
+    {
+      "name": "Luxo ball",
+      "facet": "Shorts, Luxo and Easter eggs",
+      "known_at": 6
+    },
+    {
+      "name": "Pizza Planet truck",
+      "facet": "Shorts, Luxo and Easter eggs",
+      "known_at": 8
+    },
+    {
+      "name": "A113",
+      "facet": "Shorts, Luxo and Easter eggs",
+      "known_at": 11
+    },
+    {
+      "name": "Bao",
+      "facet": "Shorts, Luxo and Easter eggs",
+      "known_at": 9
+    },
+    {
+      "name": "Piper",
+      "facet": "Shorts, Luxo and Easter eggs",
+      "known_at": 8
+    },
+    {
+      "name": "For the Birds",
+      "facet": "Shorts, Luxo and Easter eggs",
+      "known_at": 9
+    },
+    {
+      "name": "Geri's Game",
+      "facet": "Shorts, Luxo and Easter eggs",
+      "known_at": 12
+    },
+    {
+      "name": "Partly Cloudy",
+      "facet": "Shorts, Luxo and Easter eggs",
+      "known_at": 10
+    },
+    {
+      "name": "Tin Toy",
+      "facet": "Shorts, Luxo and Easter eggs",
+      "known_at": 14
+    },
+    {
+      "name": "Kitbull",
+      "facet": "Shorts, Luxo and Easter eggs",
+      "known_at": 12
+    },
+    {
+      "name": "The Adventures of André and Wally B.",
+      "facet": "Shorts, Luxo and Easter eggs",
+      "known_at": 15
+    },
+    {
+      "name": "Day & Night",
+      "facet": "Shorts, Luxo and Easter eggs",
+      "known_at": 12
+    },
+    {
+      "name": "Purl",
+      "facet": "Shorts, Luxo and Easter eggs",
+      "known_at": 12
+    }
+  ]
+}

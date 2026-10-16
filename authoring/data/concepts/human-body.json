@@ -1,0 +1,1047 @@
+{
+  "subcategory": "human-body",
+  "facets": [
+    "Bones and the skeleton",
+    "Muscles and movement",
+    "Heart, blood and circulation",
+    "Lungs and breathing",
+    "Digestion and food in the body",
+    "Brain and nerves",
+    "The five senses",
+    "Skin, hair, nails and teeth",
+    "Growing up and body changes",
+    "Health, germs and immunity",
+    "Medicine and its history",
+    "Body records and oddities"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 5,
+      "estimate": 5,
+      "record": 5,
+      "origin": 2,
+      "made_of": 4,
+      "purpose": 5,
+      "cause_effect": 5,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 4,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 5,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Skeleton",
+      "facet": "Bones and the skeleton",
+      "known_at": 1
+    },
+    {
+      "name": "Skull",
+      "facet": "Bones and the skeleton",
+      "known_at": 1
+    },
+    {
+      "name": "Rib cage",
+      "facet": "Bones and the skeleton",
+      "known_at": 3
+    },
+    {
+      "name": "Jaw",
+      "facet": "Bones and the skeleton",
+      "known_at": 3
+    },
+    {
+      "name": "Spine",
+      "facet": "Bones and the skeleton",
+      "known_at": 4
+    },
+    {
+      "name": "Kneecap",
+      "facet": "Bones and the skeleton",
+      "known_at": 4
+    },
+    {
+      "name": "Plaster cast",
+      "facet": "Bones and the skeleton",
+      "known_at": 3
+    },
+    {
+      "name": "Fracture",
+      "facet": "Bones and the skeleton",
+      "known_at": 6
+    },
+    {
+      "name": "Joint",
+      "facet": "Bones and the skeleton",
+      "known_at": 6
+    },
+    {
+      "name": "Collarbone",
+      "facet": "Bones and the skeleton",
+      "known_at": 7
+    },
+    {
+      "name": "Funny bone",
+      "facet": "Bones and the skeleton",
+      "known_at": 8
+    },
+    {
+      "name": "Femur",
+      "facet": "Bones and the skeleton",
+      "known_at": 9
+    },
+    {
+      "name": "Pelvis",
+      "facet": "Bones and the skeleton",
+      "known_at": 9
+    },
+    {
+      "name": "Vertebra",
+      "facet": "Bones and the skeleton",
+      "known_at": 9
+    },
+    {
+      "name": "Bone marrow",
+      "facet": "Bones and the skeleton",
+      "known_at": 9
+    },
+    {
+      "name": "Cartilage",
+      "facet": "Bones and the skeleton",
+      "known_at": 9
+    },
+    {
+      "name": "Tibia",
+      "facet": "Bones and the skeleton",
+      "known_at": 10
+    },
+    {
+      "name": "Sternum",
+      "facet": "Bones and the skeleton",
+      "known_at": 11
+    },
+    {
+      "name": "Coccyx",
+      "facet": "Bones and the skeleton",
+      "known_at": 11
+    },
+    {
+      "name": "Stapes",
+      "facet": "Bones and the skeleton",
+      "known_at": 12
+    },
+    {
+      "name": "Hyoid bone",
+      "facet": "Bones and the skeleton",
+      "known_at": 15
+    },
+    {
+      "name": "Push-up",
+      "facet": "Muscles and movement",
+      "known_at": 3
+    },
+    {
+      "name": "Stretching",
+      "facet": "Muscles and movement",
+      "known_at": 5
+    },
+    {
+      "name": "Warm-up",
+      "facet": "Muscles and movement",
+      "known_at": 5
+    },
+    {
+      "name": "Abdominal muscles",
+      "facet": "Muscles and movement",
+      "known_at": 5
+    },
+    {
+      "name": "Biceps",
+      "facet": "Muscles and movement",
+      "known_at": 6
+    },
+    {
+      "name": "Muscle cramp",
+      "facet": "Muscles and movement",
+      "known_at": 7
+    },
+    {
+      "name": "Calf muscle",
+      "facet": "Muscles and movement",
+      "known_at": 7
+    },
+    {
+      "name": "Opposable thumb",
+      "facet": "Muscles and movement",
+      "known_at": 8
+    },
+    {
+      "name": "Tendon",
+      "facet": "Muscles and movement",
+      "known_at": 9
+    },
+    {
+      "name": "Triceps",
+      "facet": "Muscles and movement",
+      "known_at": 10
+    },
+    {
+      "name": "Quadriceps",
+      "facet": "Muscles and movement",
+      "known_at": 10
+    },
+    {
+      "name": "Hamstring",
+      "facet": "Muscles and movement",
+      "known_at": 10
+    },
+    {
+      "name": "Gluteus maximus",
+      "facet": "Muscles and movement",
+      "known_at": 10
+    },
+    {
+      "name": "Achilles tendon",
+      "facet": "Muscles and movement",
+      "known_at": 10
+    },
+    {
+      "name": "Ligament",
+      "facet": "Muscles and movement",
+      "known_at": 10
+    },
+    {
+      "name": "Lactic acid",
+      "facet": "Muscles and movement",
+      "known_at": 11
+    },
+    {
+      "name": "Voluntary muscle",
+      "facet": "Muscles and movement",
+      "known_at": 12
+    },
+    {
+      "name": "Smooth muscle",
+      "facet": "Muscles and movement",
+      "known_at": 13
+    },
+    {
+      "name": "Masseter",
+      "facet": "Muscles and movement",
+      "known_at": 14
+    },
+    {
+      "name": "Sartorius",
+      "facet": "Muscles and movement",
+      "known_at": 15
+    },
+    {
+      "name": "Heart",
+      "facet": "Heart, blood and circulation",
+      "known_at": 1
+    },
+    {
+      "name": "Blood",
+      "facet": "Heart, blood and circulation",
+      "known_at": 1
+    },
+    {
+      "name": "Heartbeat",
+      "facet": "Heart, blood and circulation",
+      "known_at": 2
+    },
+    {
+      "name": "Bruise",
+      "facet": "Heart, blood and circulation",
+      "known_at": 4
+    },
+    {
+      "name": "Pulse",
+      "facet": "Heart, blood and circulation",
+      "known_at": 5
+    },
+    {
+      "name": "White blood cell",
+      "facet": "Heart, blood and circulation",
+      "known_at": 7
+    },
+    {
+      "name": "Vein",
+      "facet": "Heart, blood and circulation",
+      "known_at": 8
+    },
+    {
+      "name": "Blood donation",
+      "facet": "Heart, blood and circulation",
+      "known_at": 8
+    },
+    {
+      "name": "Artery",
+      "facet": "Heart, blood and circulation",
+      "known_at": 9
+    },
+    {
+      "name": "Blood type",
+      "facet": "Heart, blood and circulation",
+      "known_at": 9
+    },
+    {
+      "name": "Blood pressure",
+      "facet": "Heart, blood and circulation",
+      "known_at": 9
+    },
+    {
+      "name": "Platelet",
+      "facet": "Heart, blood and circulation",
+      "known_at": 10
+    },
+    {
+      "name": "Capillary",
+      "facet": "Heart, blood and circulation",
+      "known_at": 11
+    },
+    {
+      "name": "Hemoglobin",
+      "facet": "Heart, blood and circulation",
+      "known_at": 11
+    },
+    {
+      "name": "Heart valve",
+      "facet": "Heart, blood and circulation",
+      "known_at": 11
+    },
+    {
+      "name": "Aorta",
+      "facet": "Heart, blood and circulation",
+      "known_at": 12
+    },
+    {
+      "name": "Lungs",
+      "facet": "Lungs and breathing",
+      "known_at": 2
+    },
+    {
+      "name": "Yawn",
+      "facet": "Lungs and breathing",
+      "known_at": 2
+    },
+    {
+      "name": "Sneeze",
+      "facet": "Lungs and breathing",
+      "known_at": 2
+    },
+    {
+      "name": "Cough",
+      "facet": "Lungs and breathing",
+      "known_at": 2
+    },
+    {
+      "name": "Hiccup",
+      "facet": "Lungs and breathing",
+      "known_at": 3
+    },
+    {
+      "name": "Snoring",
+      "facet": "Lungs and breathing",
+      "known_at": 3
+    },
+    {
+      "name": "Inhaler",
+      "facet": "Lungs and breathing",
+      "known_at": 6
+    },
+    {
+      "name": "Asthma",
+      "facet": "Lungs and breathing",
+      "known_at": 7
+    },
+    {
+      "name": "Diaphragm",
+      "facet": "Lungs and breathing",
+      "known_at": 9
+    },
+    {
+      "name": "Windpipe",
+      "facet": "Lungs and breathing",
+      "known_at": 9
+    },
+    {
+      "name": "Voice box",
+      "facet": "Lungs and breathing",
+      "known_at": 10
+    },
+    {
+      "name": "Bronchi",
+      "facet": "Lungs and breathing",
+      "known_at": 11
+    },
+    {
+      "name": "Alveoli",
+      "facet": "Lungs and breathing",
+      "known_at": 12
+    },
+    {
+      "name": "Epiglottis",
+      "facet": "Lungs and breathing",
+      "known_at": 13
+    },
+    {
+      "name": "Stomach",
+      "facet": "Digestion and food in the body",
+      "known_at": 2
+    },
+    {
+      "name": "Burp",
+      "facet": "Digestion and food in the body",
+      "known_at": 2
+    },
+    {
+      "name": "Stomach growling",
+      "facet": "Digestion and food in the body",
+      "known_at": 3
+    },
+    {
+      "name": "Vitamins",
+      "facet": "Digestion and food in the body",
+      "known_at": 5
+    },
+    {
+      "name": "Bladder",
+      "facet": "Digestion and food in the body",
+      "known_at": 6
+    },
+    {
+      "name": "Small intestine",
+      "facet": "Digestion and food in the body",
+      "known_at": 7
+    },
+    {
+      "name": "Liver",
+      "facet": "Digestion and food in the body",
+      "known_at": 7
+    },
+    {
+      "name": "Kidney",
+      "facet": "Digestion and food in the body",
+      "known_at": 7
+    },
+    {
+      "name": "Large intestine",
+      "facet": "Digestion and food in the body",
+      "known_at": 8
+    },
+    {
+      "name": "Stomach acid",
+      "facet": "Digestion and food in the body",
+      "known_at": 9
+    },
+    {
+      "name": "Appendix",
+      "facet": "Digestion and food in the body",
+      "known_at": 9
+    },
+    {
+      "name": "Dietary fiber",
+      "facet": "Digestion and food in the body",
+      "known_at": 9
+    },
+    {
+      "name": "Esophagus",
+      "facet": "Digestion and food in the body",
+      "known_at": 10
+    },
+    {
+      "name": "Insulin",
+      "facet": "Digestion and food in the body",
+      "known_at": 11
+    },
+    {
+      "name": "Gallbladder",
+      "facet": "Digestion and food in the body",
+      "known_at": 12
+    },
+    {
+      "name": "Enzyme",
+      "facet": "Digestion and food in the body",
+      "known_at": 12
+    },
+    {
+      "name": "Villi",
+      "facet": "Digestion and food in the body",
+      "known_at": 13
+    },
+    {
+      "name": "Brain",
+      "facet": "Brain and nerves",
+      "known_at": 1
+    },
+    {
+      "name": "Sleep",
+      "facet": "Brain and nerves",
+      "known_at": 1
+    },
+    {
+      "name": "Brain freeze",
+      "facet": "Brain and nerves",
+      "known_at": 5
+    },
+    {
+      "name": "Pins and needles",
+      "facet": "Brain and nerves",
+      "known_at": 5
+    },
+    {
+      "name": "Reflex",
+      "facet": "Brain and nerves",
+      "known_at": 6
+    },
+    {
+      "name": "Spinal cord",
+      "facet": "Brain and nerves",
+      "known_at": 8
+    },
+    {
+      "name": "Nervous system",
+      "facet": "Brain and nerves",
+      "known_at": 8
+    },
+    {
+      "name": "Neuron",
+      "facet": "Brain and nerves",
+      "known_at": 9
+    },
+    {
+      "name": "Brain hemispheres",
+      "facet": "Brain and nerves",
+      "known_at": 9
+    },
+    {
+      "name": "Adrenaline",
+      "facet": "Brain and nerves",
+      "known_at": 9
+    },
+    {
+      "name": "Cerebellum",
+      "facet": "Brain and nerves",
+      "known_at": 12
+    },
+    {
+      "name": "REM sleep",
+      "facet": "Brain and nerves",
+      "known_at": 12
+    },
+    {
+      "name": "Dopamine",
+      "facet": "Brain and nerves",
+      "known_at": 12
+    },
+    {
+      "name": "Synapse",
+      "facet": "Brain and nerves",
+      "known_at": 13
+    },
+    {
+      "name": "Cerebral cortex",
+      "facet": "Brain and nerves",
+      "known_at": 13
+    },
+    {
+      "name": "Hippocampus",
+      "facet": "Brain and nerves",
+      "known_at": 14
+    },
+    {
+      "name": "Phineas Gage",
+      "facet": "Brain and nerves",
+      "known_at": 15
+    },
+    {
+      "name": "Eye",
+      "facet": "The five senses",
+      "known_at": 1
+    },
+    {
+      "name": "Ear",
+      "facet": "The five senses",
+      "known_at": 1
+    },
+    {
+      "name": "Nose",
+      "facet": "The five senses",
+      "known_at": 1
+    },
+    {
+      "name": "Tongue",
+      "facet": "The five senses",
+      "known_at": 1
+    },
+    {
+      "name": "Touch",
+      "facet": "The five senses",
+      "known_at": 2
+    },
+    {
+      "name": "Glasses",
+      "facet": "The five senses",
+      "known_at": 2
+    },
+    {
+      "name": "Earwax",
+      "facet": "The five senses",
+      "known_at": 4
+    },
+    {
+      "name": "Taste buds",
+      "facet": "The five senses",
+      "known_at": 5
+    },
+    {
+      "name": "Pupil",
+      "facet": "The five senses",
+      "known_at": 7
+    },
+    {
+      "name": "Eardrum",
+      "facet": "The five senses",
+      "known_at": 7
+    },
+    {
+      "name": "Color blindness",
+      "facet": "The five senses",
+      "known_at": 8
+    },
+    {
+      "name": "Retina",
+      "facet": "The five senses",
+      "known_at": 11
+    },
+    {
+      "name": "Inner ear",
+      "facet": "The five senses",
+      "known_at": 11
+    },
+    {
+      "name": "Cornea",
+      "facet": "The five senses",
+      "known_at": 11
+    },
+    {
+      "name": "Blind spot",
+      "facet": "The five senses",
+      "known_at": 12
+    },
+    {
+      "name": "Cochlea",
+      "facet": "The five senses",
+      "known_at": 13
+    },
+    {
+      "name": "Rods and cones",
+      "facet": "The five senses",
+      "known_at": 13
+    },
+    {
+      "name": "Skin",
+      "facet": "Skin, hair, nails and teeth",
+      "known_at": 1
+    },
+    {
+      "name": "Fingernail",
+      "facet": "Skin, hair, nails and teeth",
+      "known_at": 1
+    },
+    {
+      "name": "Dentist",
+      "facet": "Skin, hair, nails and teeth",
+      "known_at": 1
+    },
+    {
+      "name": "Eyebrow",
+      "facet": "Skin, hair, nails and teeth",
+      "known_at": 2
+    },
+    {
+      "name": "Belly button",
+      "facet": "Skin, hair, nails and teeth",
+      "known_at": 2
+    },
+    {
+      "name": "Baby teeth",
+      "facet": "Skin, hair, nails and teeth",
+      "known_at": 3
+    },
+    {
+      "name": "Sweat",
+      "facet": "Skin, hair, nails and teeth",
+      "known_at": 3
+    },
+    {
+      "name": "Sunburn",
+      "facet": "Skin, hair, nails and teeth",
+      "known_at": 3
+    },
+    {
+      "name": "Scab",
+      "facet": "Skin, hair, nails and teeth",
+      "known_at": 3
+    },
+    {
+      "name": "Freckles",
+      "facet": "Skin, hair, nails and teeth",
+      "known_at": 4
+    },
+    {
+      "name": "Fingerprint",
+      "facet": "Skin, hair, nails and teeth",
+      "known_at": 4
+    },
+    {
+      "name": "Cavity",
+      "facet": "Skin, hair, nails and teeth",
+      "known_at": 4
+    },
+    {
+      "name": "Dimples",
+      "facet": "Skin, hair, nails and teeth",
+      "known_at": 5
+    },
+    {
+      "name": "Canine tooth",
+      "facet": "Skin, hair, nails and teeth",
+      "known_at": 6
+    },
+    {
+      "name": "Molar",
+      "facet": "Skin, hair, nails and teeth",
+      "known_at": 7
+    },
+    {
+      "name": "Wisdom tooth",
+      "facet": "Skin, hair, nails and teeth",
+      "known_at": 7
+    },
+    {
+      "name": "Tooth enamel",
+      "facet": "Skin, hair, nails and teeth",
+      "known_at": 9
+    },
+    {
+      "name": "Melanin",
+      "facet": "Skin, hair, nails and teeth",
+      "known_at": 11
+    },
+    {
+      "name": "Keratin",
+      "facet": "Skin, hair, nails and teeth",
+      "known_at": 12
+    },
+    {
+      "name": "Baby",
+      "facet": "Growing up and body changes",
+      "known_at": 1
+    },
+    {
+      "name": "Twins",
+      "facet": "Growing up and body changes",
+      "known_at": 2
+    },
+    {
+      "name": "Crawling",
+      "facet": "Growing up and body changes",
+      "known_at": 2
+    },
+    {
+      "name": "Gray hair",
+      "facet": "Growing up and body changes",
+      "known_at": 3
+    },
+    {
+      "name": "Wrinkles",
+      "facet": "Growing up and body changes",
+      "known_at": 4
+    },
+    {
+      "name": "Pregnancy",
+      "facet": "Growing up and body changes",
+      "known_at": 5
+    },
+    {
+      "name": "Growth spurt",
+      "facet": "Growing up and body changes",
+      "known_at": 8
+    },
+    {
+      "name": "Umbilical cord",
+      "facet": "Growing up and body changes",
+      "known_at": 8
+    },
+    {
+      "name": "Puberty",
+      "facet": "Growing up and body changes",
+      "known_at": 9
+    },
+    {
+      "name": "Voice breaking",
+      "facet": "Growing up and body changes",
+      "known_at": 9
+    },
+    {
+      "name": "Growth hormone",
+      "facet": "Growing up and body changes",
+      "known_at": 11
+    },
+    {
+      "name": "Life expectancy",
+      "facet": "Growing up and body changes",
+      "known_at": 11
+    },
+    {
+      "name": "Growth plate",
+      "facet": "Growing up and body changes",
+      "known_at": 12
+    },
+    {
+      "name": "Fontanelle",
+      "facet": "Growing up and body changes",
+      "known_at": 13
+    },
+    {
+      "name": "Handwashing",
+      "facet": "Health, germs and immunity",
+      "known_at": 1
+    },
+    {
+      "name": "Germ",
+      "facet": "Health, germs and immunity",
+      "known_at": 2
+    },
+    {
+      "name": "Common cold",
+      "facet": "Health, germs and immunity",
+      "known_at": 2
+    },
+    {
+      "name": "Fever",
+      "facet": "Health, germs and immunity",
+      "known_at": 3
+    },
+    {
+      "name": "Flu",
+      "facet": "Health, germs and immunity",
+      "known_at": 4
+    },
+    {
+      "name": "Head lice",
+      "facet": "Health, germs and immunity",
+      "known_at": 4
+    },
+    {
+      "name": "Allergy",
+      "facet": "Health, germs and immunity",
+      "known_at": 5
+    },
+    {
+      "name": "Chickenpox",
+      "facet": "Health, germs and immunity",
+      "known_at": 5
+    },
+    {
+      "name": "Vaccine",
+      "facet": "Health, germs and immunity",
+      "known_at": 6
+    },
+    {
+      "name": "Immune system",
+      "facet": "Health, germs and immunity",
+      "known_at": 8
+    },
+    {
+      "name": "Fungus",
+      "facet": "Health, germs and immunity",
+      "known_at": 8
+    },
+    {
+      "name": "Measles",
+      "facet": "Health, germs and immunity",
+      "known_at": 8
+    },
+    {
+      "name": "Antibodies",
+      "facet": "Health, germs and immunity",
+      "known_at": 10
+    },
+    {
+      "name": "Scurvy",
+      "facet": "Health, germs and immunity",
+      "known_at": 10
+    },
+    {
+      "name": "Probiotics",
+      "facet": "Health, germs and immunity",
+      "known_at": 12
+    },
+    {
+      "name": "Adhesive bandage",
+      "facet": "Medicine and its history",
+      "known_at": 2
+    },
+    {
+      "name": "X-ray",
+      "facet": "Medicine and its history",
+      "known_at": 4
+    },
+    {
+      "name": "Stethoscope",
+      "facet": "Medicine and its history",
+      "known_at": 4
+    },
+    {
+      "name": "Acupuncture",
+      "facet": "Medicine and its history",
+      "known_at": 7
+    },
+    {
+      "name": "Plague doctor",
+      "facet": "Medicine and its history",
+      "known_at": 9
+    },
+    {
+      "name": "Anesthesia",
+      "facet": "Medicine and its history",
+      "known_at": 10
+    },
+    {
+      "name": "Smallpox",
+      "facet": "Medicine and its history",
+      "known_at": 10
+    },
+    {
+      "name": "MRI scan",
+      "facet": "Medicine and its history",
+      "known_at": 10
+    },
+    {
+      "name": "Hippocrates",
+      "facet": "Medicine and its history",
+      "known_at": 11
+    },
+    {
+      "name": "Blood transfusion",
+      "facet": "Medicine and its history",
+      "known_at": 11
+    },
+    {
+      "name": "Ayurveda",
+      "facet": "Medicine and its history",
+      "known_at": 12
+    },
+    {
+      "name": "Avicenna",
+      "facet": "Medicine and its history",
+      "known_at": 14
+    },
+    {
+      "name": "Andreas Vesalius",
+      "facet": "Medicine and its history",
+      "known_at": 14
+    },
+    {
+      "name": "Tickling",
+      "facet": "Body records and oddities",
+      "known_at": 2
+    },
+    {
+      "name": "Blinking",
+      "facet": "Body records and oddities",
+      "known_at": 3
+    },
+    {
+      "name": "Pruney fingers",
+      "facet": "Body records and oddities",
+      "known_at": 4
+    },
+    {
+      "name": "Left-handedness",
+      "facet": "Body records and oddities",
+      "known_at": 4
+    },
+    {
+      "name": "Tongue rolling",
+      "facet": "Body records and oddities",
+      "known_at": 5
+    },
+    {
+      "name": "Ear wiggling",
+      "facet": "Body records and oddities",
+      "known_at": 5
+    },
+    {
+      "name": "Sleepwalking",
+      "facet": "Body records and oddities",
+      "known_at": 5
+    },
+    {
+      "name": "Double-jointedness",
+      "facet": "Body records and oddities",
+      "known_at": 7
+    },
+    {
+      "name": "Heterochromia",
+      "facet": "Body records and oddities",
+      "known_at": 10
+    },
+    {
+      "name": "Albinism",
+      "facet": "Body records and oddities",
+      "known_at": 10
+    },
+    {
+      "name": "Egg cell",
+      "facet": "Body records and oddities",
+      "known_at": 12
+    },
+    {
+      "name": "Phantom limb",
+      "facet": "Body records and oddities",
+      "known_at": 13
+    },
+    {
+      "name": "Synesthesia",
+      "facet": "Body records and oddities",
+      "known_at": 13
+    },
+    {
+      "name": "Photic sneeze reflex",
+      "facet": "Body records and oddities",
+      "known_at": 13
+    }
+  ]
+}

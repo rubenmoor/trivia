@@ -1,0 +1,527 @@
+{
+  "subcategory": "retro-games",
+  "facets": [
+    "Arcade classics",
+    "Home consoles and handhelds",
+    "Iconic characters and mascots",
+    "Game makers and designers",
+    "Puzzle and early computer games",
+    "Racing, fighting and sports classics",
+    "Genres and game types",
+    "Gaming terms and mechanics",
+    "Controllers, cartridges and accessories",
+    "Chiptune music and game sounds",
+    "Milestones of gaming history",
+    "Retro games in films and today"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 2,
+      "record": 3,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Joust",
+      "facet": "Arcade classics",
+      "known_at": 13
+    },
+    {
+      "name": "Dragon's Lair",
+      "facet": "Arcade classics",
+      "known_at": 14
+    },
+    {
+      "name": "Gauntlet",
+      "facet": "Arcade classics",
+      "known_at": 13
+    },
+    {
+      "name": "Sega Master System",
+      "facet": "Home consoles and handhelds",
+      "known_at": 11
+    },
+    {
+      "name": "ColecoVision",
+      "facet": "Home consoles and handhelds",
+      "known_at": 14
+    },
+    {
+      "name": "Nintendo GameCube",
+      "facet": "Home consoles and handhelds",
+      "known_at": 8
+    },
+    {
+      "name": "Dr. Robotnik",
+      "facet": "Iconic characters and mascots",
+      "known_at": 7
+    },
+    {
+      "name": "Raichu",
+      "facet": "Iconic characters and mascots",
+      "known_at": 6
+    },
+    {
+      "name": "Mega Man",
+      "facet": "Iconic characters and mascots",
+      "known_at": 8
+    },
+    {
+      "name": "Nintendo",
+      "facet": "Game makers and designers",
+      "known_at": 2
+    },
+    {
+      "name": "Square",
+      "facet": "Game makers and designers",
+      "known_at": 12
+    },
+    {
+      "name": "Tetris",
+      "facet": "Puzzle and early computer games",
+      "known_at": 2
+    },
+    {
+      "name": "Microsoft Solitaire",
+      "facet": "Puzzle and early computer games",
+      "known_at": 7
+    },
+    {
+      "name": "Lemmings",
+      "facet": "Puzzle and early computer games",
+      "known_at": 12
+    },
+    {
+      "name": "Prince of Persia",
+      "facet": "Puzzle and early computer games",
+      "known_at": 11
+    },
+    {
+      "name": "Doom",
+      "facet": "Puzzle and early computer games",
+      "known_at": 10
+    },
+    {
+      "name": "Wolfenstein 3D",
+      "facet": "Puzzle and early computer games",
+      "known_at": 13
+    },
+    {
+      "name": "Myst",
+      "facet": "Puzzle and early computer games",
+      "known_at": 13
+    },
+    {
+      "name": "The Oregon Trail",
+      "facet": "Puzzle and early computer games",
+      "known_at": 13
+    },
+    {
+      "name": "Zork",
+      "facet": "Puzzle and early computer games",
+      "known_at": 14
+    },
+    {
+      "name": "Dr. Mario",
+      "facet": "Puzzle and early computer games",
+      "known_at": 8
+    },
+    {
+      "name": "Puyo Puyo",
+      "facet": "Puzzle and early computer games",
+      "known_at": 13
+    },
+    {
+      "name": "Columns",
+      "facet": "Puzzle and early computer games",
+      "known_at": 14
+    },
+    {
+      "name": "The Secret of Monkey Island",
+      "facet": "Puzzle and early computer games",
+      "known_at": 13
+    },
+    {
+      "name": "ZX Spectrum",
+      "facet": "Puzzle and early computer games",
+      "known_at": 13
+    },
+    {
+      "name": "Virtua Fighter",
+      "facet": "Racing, fighting and sports classics",
+      "known_at": 13
+    },
+    {
+      "name": "The King of Fighters",
+      "facet": "Racing, fighting and sports classics",
+      "known_at": 12
+    },
+    {
+      "name": "Super Mario Kart",
+      "facet": "Racing, fighting and sports classics",
+      "known_at": 3
+    },
+    {
+      "name": "OutRun",
+      "facet": "Racing, fighting and sports classics",
+      "known_at": 12
+    },
+    {
+      "name": "Ridge Racer",
+      "facet": "Racing, fighting and sports classics",
+      "known_at": 12
+    },
+    {
+      "name": "Excitebike",
+      "facet": "Racing, fighting and sports classics",
+      "known_at": 12
+    },
+    {
+      "name": "Punch-Out!!",
+      "facet": "Racing, fighting and sports classics",
+      "known_at": 11
+    },
+    {
+      "name": "FIFA International Soccer",
+      "facet": "Racing, fighting and sports classics",
+      "known_at": 8
+    },
+    {
+      "name": "International Superstar Soccer",
+      "facet": "Racing, fighting and sports classics",
+      "known_at": 12
+    },
+    {
+      "name": "NBA Jam",
+      "facet": "Racing, fighting and sports classics",
+      "known_at": 12
+    },
+    {
+      "name": "Platformer",
+      "facet": "Genres and game types",
+      "known_at": 6
+    },
+    {
+      "name": "Shoot 'em up",
+      "facet": "Genres and game types",
+      "known_at": 10
+    },
+    {
+      "name": "Beat 'em up",
+      "facet": "Genres and game types",
+      "known_at": 11
+    },
+    {
+      "name": "Text adventure",
+      "facet": "Genres and game types",
+      "known_at": 12
+    },
+    {
+      "name": "Maze game",
+      "facet": "Genres and game types",
+      "known_at": 5
+    },
+    {
+      "name": "Fighting game",
+      "facet": "Genres and game types",
+      "known_at": 4
+    },
+    {
+      "name": "Racing game",
+      "facet": "Genres and game types",
+      "known_at": 2
+    },
+    {
+      "name": "Real-time strategy",
+      "facet": "Genres and game types",
+      "known_at": 11
+    },
+    {
+      "name": "Light-gun game",
+      "facet": "Genres and game types",
+      "known_at": 10
+    },
+    {
+      "name": "Stealth game",
+      "facet": "Genres and game types",
+      "known_at": 10
+    },
+    {
+      "name": "Bullet hell",
+      "facet": "Genres and game types",
+      "known_at": 13
+    },
+    {
+      "name": "1-UP",
+      "facet": "Gaming terms and mechanics",
+      "known_at": 4
+    },
+    {
+      "name": "High score",
+      "facet": "Gaming terms and mechanics",
+      "known_at": 4
+    },
+    {
+      "name": "Power-up",
+      "facet": "Gaming terms and mechanics",
+      "known_at": 4
+    },
+    {
+      "name": "Continue",
+      "facet": "Gaming terms and mechanics",
+      "known_at": 5
+    },
+    {
+      "name": "8-bit",
+      "facet": "Gaming terms and mechanics",
+      "known_at": 8
+    },
+    {
+      "name": "Warp Zone",
+      "facet": "Gaming terms and mechanics",
+      "known_at": 10
+    },
+    {
+      "name": "Respawn",
+      "facet": "Gaming terms and mechanics",
+      "known_at": 8
+    },
+    {
+      "name": "Combo",
+      "facet": "Gaming terms and mechanics",
+      "known_at": 7
+    },
+    {
+      "name": "D-pad",
+      "facet": "Controllers, cartridges and accessories",
+      "known_at": 8
+    },
+    {
+      "name": "Cartridge",
+      "facet": "Controllers, cartridges and accessories",
+      "known_at": 8
+    },
+    {
+      "name": "Memory card",
+      "facet": "Controllers, cartridges and accessories",
+      "known_at": 8
+    },
+    {
+      "name": "NES Zapper",
+      "facet": "Controllers, cartridges and accessories",
+      "known_at": 11
+    },
+    {
+      "name": "Game Genie",
+      "facet": "Controllers, cartridges and accessories",
+      "known_at": 13
+    },
+    {
+      "name": "Game Boy Camera",
+      "facet": "Controllers, cartridges and accessories",
+      "known_at": 12
+    },
+    {
+      "name": "Game Link Cable",
+      "facet": "Controllers, cartridges and accessories",
+      "known_at": 10
+    },
+    {
+      "name": "Arcade token",
+      "facet": "Controllers, cartridges and accessories",
+      "known_at": 7
+    },
+    {
+      "name": "Analog stick",
+      "facet": "Controllers, cartridges and accessories",
+      "known_at": 8
+    },
+    {
+      "name": "Floppy disk",
+      "facet": "Controllers, cartridges and accessories",
+      "known_at": 8
+    },
+    {
+      "name": "Paddle controller",
+      "facet": "Controllers, cartridges and accessories",
+      "known_at": 13
+    },
+    {
+      "name": "R.O.B.",
+      "facet": "Controllers, cartridges and accessories",
+      "known_at": 14
+    },
+    {
+      "name": "CRT television",
+      "facet": "Controllers, cartridges and accessories",
+      "known_at": 10
+    },
+    {
+      "name": "Yuzo Koshiro",
+      "facet": "Chiptune music and game sounds",
+      "known_at": 15
+    },
+    {
+      "name": "Square wave",
+      "facet": "Chiptune music and game sounds",
+      "known_at": 14
+    },
+    {
+      "name": "SID chip",
+      "facet": "Chiptune music and game sounds",
+      "known_at": 15
+    },
+    {
+      "name": "Coin sound",
+      "facet": "Chiptune music and game sounds",
+      "known_at": 3
+    },
+    {
+      "name": "Sega jingle",
+      "facet": "Chiptune music and game sounds",
+      "known_at": 10
+    },
+    {
+      "name": "Green Hill Zone",
+      "facet": "Chiptune music and game sounds",
+      "known_at": 8
+    },
+    {
+      "name": "Final Fantasy Prelude",
+      "facet": "Chiptune music and game sounds",
+      "known_at": 14
+    },
+    {
+      "name": "David Wise",
+      "facet": "Chiptune music and game sounds",
+      "known_at": 15
+    },
+    {
+      "name": "Computer Space",
+      "facet": "Milestones of gaming history",
+      "known_at": 15
+    },
+    {
+      "name": "Video game crash of 1983",
+      "facet": "Milestones of gaming history",
+      "known_at": 13
+    },
+    {
+      "name": "E.T. the Extra-Terrestrial (video game)",
+      "facet": "Milestones of gaming history",
+      "known_at": 13
+    },
+    {
+      "name": "Adventure (Atari 2600)",
+      "facet": "Milestones of gaming history",
+      "known_at": 14
+    },
+    {
+      "name": "Dragon Quest",
+      "facet": "Milestones of gaming history",
+      "known_at": 11
+    },
+    {
+      "name": "Pokémon Red and Green",
+      "facet": "Milestones of gaming history",
+      "known_at": 6
+    },
+    {
+      "name": "Super Mario 64",
+      "facet": "Milestones of gaming history",
+      "known_at": 7
+    },
+    {
+      "name": "Console war",
+      "facet": "Milestones of gaming history",
+      "known_at": 12
+    },
+    {
+      "name": "Golden age of arcade video games",
+      "facet": "Milestones of gaming history",
+      "known_at": 12
+    },
+    {
+      "name": "WarGames",
+      "facet": "Retro games in films and today",
+      "known_at": 14
+    },
+    {
+      "name": "Super Mario Bros. (1993 film)",
+      "facet": "Retro games in films and today",
+      "known_at": 13
+    },
+    {
+      "name": "The King of Kong",
+      "facet": "Retro games in films and today",
+      "known_at": 14
+    },
+    {
+      "name": "NES Classic Edition",
+      "facet": "Retro games in films and today",
+      "known_at": 10
+    },
+    {
+      "name": "Emulator",
+      "facet": "Retro games in films and today",
+      "known_at": 11
+    },
+    {
+      "name": "Super Nintendo World",
+      "facet": "Retro games in films and today",
+      "known_at": 7
+    },
+    {
+      "name": "Mario Day",
+      "facet": "Retro games in films and today",
+      "known_at": 9
+    },
+    {
+      "name": "Nintendo Museum",
+      "facet": "Retro games in films and today",
+      "known_at": 12
+    },
+    {
+      "name": "Classic Tetris World Championship",
+      "facet": "Retro games in films and today",
+      "known_at": 13
+    }
+  ]
+}

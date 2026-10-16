@@ -1,0 +1,633 @@
+{
+  "subcategory": "history",
+  "facets": [
+    "Ancient civilizations",
+    "Ancient wonders and monuments",
+    "Medieval world",
+    "Explorers and voyages",
+    "Empires and rulers",
+    "Revolutions and independence",
+    "Wars and peace treaties",
+    "Inventions that changed history",
+    "Daily life in the past",
+    "Famous historical figures",
+    "Modern history and the space age",
+    "Archaeology and lost cities"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 2,
+      "pop_culture": 4,
+      "popular_science": 3,
+      "science_news": 3,
+      "educational_media": 5,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Ancient Egypt",
+      "facet": "Ancient civilizations",
+      "known_at": 2
+    },
+    {
+      "name": "Ancient Rome",
+      "facet": "Ancient civilizations",
+      "known_at": 3
+    },
+    {
+      "name": "Ancient Greece",
+      "facet": "Ancient civilizations",
+      "known_at": 4
+    },
+    {
+      "name": "Pharaoh",
+      "facet": "Ancient civilizations",
+      "known_at": 3
+    },
+    {
+      "name": "Aztecs",
+      "facet": "Ancient civilizations",
+      "known_at": 6
+    },
+    {
+      "name": "Incas",
+      "facet": "Ancient civilizations",
+      "known_at": 6
+    },
+    {
+      "name": "Sumerians",
+      "facet": "Ancient civilizations",
+      "known_at": 11
+    },
+    {
+      "name": "Phoenicians",
+      "facet": "Ancient civilizations",
+      "known_at": 11
+    },
+    {
+      "name": "Carthage",
+      "facet": "Ancient civilizations",
+      "known_at": 11
+    },
+    {
+      "name": "Indus Valley Civilization",
+      "facet": "Ancient civilizations",
+      "known_at": 12
+    },
+    {
+      "name": "Olmecs",
+      "facet": "Ancient civilizations",
+      "known_at": 13
+    },
+    {
+      "name": "Etruscans",
+      "facet": "Ancient civilizations",
+      "known_at": 13
+    },
+    {
+      "name": "Kingdom of Kush",
+      "facet": "Ancient civilizations",
+      "known_at": 14
+    },
+    {
+      "name": "Hittites",
+      "facet": "Ancient civilizations",
+      "known_at": 14
+    },
+    {
+      "name": "Shang dynasty",
+      "facet": "Ancient civilizations",
+      "known_at": 14
+    },
+    {
+      "name": "Temple of Artemis",
+      "facet": "Ancient wonders and monuments",
+      "known_at": 13
+    },
+    {
+      "name": "Castle",
+      "facet": "Medieval world",
+      "known_at": 1
+    },
+    {
+      "name": "Knight",
+      "facet": "Medieval world",
+      "known_at": 2
+    },
+    {
+      "name": "Jester",
+      "facet": "Medieval world",
+      "known_at": 4
+    },
+    {
+      "name": "Joan of Arc",
+      "facet": "Medieval world",
+      "known_at": 7
+    },
+    {
+      "name": "Genghis Khan",
+      "facet": "Medieval world",
+      "known_at": 8
+    },
+    {
+      "name": "Black Death",
+      "facet": "Medieval world",
+      "known_at": 9
+    },
+    {
+      "name": "Crusades",
+      "facet": "Medieval world",
+      "known_at": 9
+    },
+    {
+      "name": "Charlemagne",
+      "facet": "Medieval world",
+      "known_at": 10
+    },
+    {
+      "name": "Magna Carta",
+      "facet": "Medieval world",
+      "known_at": 11
+    },
+    {
+      "name": "Feudalism",
+      "facet": "Medieval world",
+      "known_at": 11
+    },
+    {
+      "name": "Hundred Years' War",
+      "facet": "Medieval world",
+      "known_at": 11
+    },
+    {
+      "name": "Bayeux Tapestry",
+      "facet": "Medieval world",
+      "known_at": 12
+    },
+    {
+      "name": "Illuminated manuscript",
+      "facet": "Medieval world",
+      "known_at": 12
+    },
+    {
+      "name": "Christopher Columbus",
+      "facet": "Explorers and voyages",
+      "known_at": 2
+    },
+    {
+      "name": "Roman Empire",
+      "facet": "Empires and rulers",
+      "known_at": 4
+    },
+    {
+      "name": "Tutankhamun",
+      "facet": "Empires and rulers",
+      "known_at": 5
+    },
+    {
+      "name": "Julius Caesar",
+      "facet": "Empires and rulers",
+      "known_at": 5
+    },
+    {
+      "name": "Alexander the Great",
+      "facet": "Empires and rulers",
+      "known_at": 6
+    },
+    {
+      "name": "Queen Victoria",
+      "facet": "Empires and rulers",
+      "known_at": 8
+    },
+    {
+      "name": "Mongol Empire",
+      "facet": "Empires and rulers",
+      "known_at": 9
+    },
+    {
+      "name": "Elizabeth I",
+      "facet": "Empires and rulers",
+      "known_at": 9
+    },
+    {
+      "name": "Ottoman Empire",
+      "facet": "Empires and rulers",
+      "known_at": 10
+    },
+    {
+      "name": "Persian Empire",
+      "facet": "Empires and rulers",
+      "known_at": 10
+    },
+    {
+      "name": "Louis XIV",
+      "facet": "Empires and rulers",
+      "known_at": 10
+    },
+    {
+      "name": "Ramesses II",
+      "facet": "Empires and rulers",
+      "known_at": 11
+    },
+    {
+      "name": "Qin Shi Huang",
+      "facet": "Empires and rulers",
+      "known_at": 11
+    },
+    {
+      "name": "Augustus",
+      "facet": "Empires and rulers",
+      "known_at": 11
+    },
+    {
+      "name": "Catherine the Great",
+      "facet": "Empires and rulers",
+      "known_at": 11
+    },
+    {
+      "name": "Peter the Great",
+      "facet": "Empires and rulers",
+      "known_at": 11
+    },
+    {
+      "name": "Byzantine Empire",
+      "facet": "Empires and rulers",
+      "known_at": 11
+    },
+    {
+      "name": "Mughal Empire",
+      "facet": "Empires and rulers",
+      "known_at": 12
+    },
+    {
+      "name": "Ashoka",
+      "facet": "Empires and rulers",
+      "known_at": 13
+    },
+    {
+      "name": "Suleiman the Magnificent",
+      "facet": "Empires and rulers",
+      "known_at": 13
+    },
+    {
+      "name": "Shaka Zulu",
+      "facet": "Empires and rulers",
+      "known_at": 13
+    },
+    {
+      "name": "French Revolution",
+      "facet": "Revolutions and independence",
+      "known_at": 7
+    },
+    {
+      "name": "Guillotine",
+      "facet": "Revolutions and independence",
+      "known_at": 8,
+      "retired": "unaskable: Every option asks what the guillotine is or what it was for, and the answer is executions. That is too dark for a family game in any age group."
+    },
+    {
+      "name": "Simón Bolívar",
+      "facet": "Revolutions and independence",
+      "known_at": 9
+    },
+    {
+      "name": "Storming of the Bastille",
+      "facet": "Revolutions and independence",
+      "known_at": 9
+    },
+    {
+      "name": "American Revolution",
+      "facet": "Revolutions and independence",
+      "known_at": 9
+    },
+    {
+      "name": "Indian independence",
+      "facet": "Revolutions and independence",
+      "known_at": 10
+    },
+    {
+      "name": "Russian Revolution",
+      "facet": "Revolutions and independence",
+      "known_at": 11
+    },
+    {
+      "name": "Mexican War of Independence",
+      "facet": "Revolutions and independence",
+      "known_at": 11
+    },
+    {
+      "name": "End of apartheid",
+      "facet": "Revolutions and independence",
+      "known_at": 11
+    },
+    {
+      "name": "Salt March",
+      "facet": "Revolutions and independence",
+      "known_at": 12
+    },
+    {
+      "name": "Miguel Hidalgo",
+      "facet": "Revolutions and independence",
+      "known_at": 12
+    },
+    {
+      "name": "Haitian Revolution",
+      "facet": "Revolutions and independence",
+      "known_at": 13
+    },
+    {
+      "name": "Meiji Restoration",
+      "facet": "Revolutions and independence",
+      "known_at": 13
+    },
+    {
+      "name": "Xinhai Revolution",
+      "facet": "Revolutions and independence",
+      "known_at": 14
+    },
+    {
+      "name": "Carnation Revolution",
+      "facet": "Revolutions and independence",
+      "known_at": 14
+    },
+    {
+      "name": "World War II",
+      "facet": "Wars and peace treaties",
+      "known_at": 5
+    },
+    {
+      "name": "World War I",
+      "facet": "Wars and peace treaties",
+      "known_at": 7
+    },
+    {
+      "name": "Nobel Peace Prize",
+      "facet": "Wars and peace treaties",
+      "known_at": 8
+    },
+    {
+      "name": "Battle of Waterloo",
+      "facet": "Wars and peace treaties",
+      "known_at": 9
+    },
+    {
+      "name": "Cold War",
+      "facet": "Wars and peace treaties",
+      "known_at": 9
+    },
+    {
+      "name": "D-Day",
+      "facet": "Wars and peace treaties",
+      "known_at": 9
+    },
+    {
+      "name": "Hannibal",
+      "facet": "Wars and peace treaties",
+      "known_at": 10
+    },
+    {
+      "name": "Battle of Thermopylae",
+      "facet": "Wars and peace treaties",
+      "known_at": 10
+    },
+    {
+      "name": "Napoleonic Wars",
+      "facet": "Wars and peace treaties",
+      "known_at": 10
+    },
+    {
+      "name": "Treaty of Versailles",
+      "facet": "Wars and peace treaties",
+      "known_at": 11
+    },
+    {
+      "name": "Christmas truce",
+      "facet": "Wars and peace treaties",
+      "known_at": 11
+    },
+    {
+      "name": "Punic Wars",
+      "facet": "Wars and peace treaties",
+      "known_at": 12
+    },
+    {
+      "name": "Treaty of Tordesillas",
+      "facet": "Wars and peace treaties",
+      "known_at": 12
+    },
+    {
+      "name": "Battle of Hastings",
+      "facet": "Wars and peace treaties",
+      "known_at": 12
+    },
+    {
+      "name": "Wars of the Roses",
+      "facet": "Wars and peace treaties",
+      "known_at": 12
+    },
+    {
+      "name": "Peloponnesian War",
+      "facet": "Wars and peace treaties",
+      "known_at": 13
+    },
+    {
+      "name": "Thirty Years' War",
+      "facet": "Wars and peace treaties",
+      "known_at": 13
+    },
+    {
+      "name": "Peace of Westphalia",
+      "facet": "Wars and peace treaties",
+      "known_at": 14
+    },
+    {
+      "name": "Treaty of Waitangi",
+      "facet": "Wars and peace treaties",
+      "known_at": 14
+    },
+    {
+      "name": "Writing",
+      "facet": "Inventions that changed history",
+      "known_at": 5
+    },
+    {
+      "name": "Mechanical clock",
+      "facet": "Inventions that changed history",
+      "known_at": 6
+    },
+    {
+      "name": "Mummification",
+      "facet": "Daily life in the past",
+      "known_at": 4
+    },
+    {
+      "name": "Quill pen",
+      "facet": "Daily life in the past",
+      "known_at": 5
+    },
+    {
+      "name": "Jousting",
+      "facet": "Daily life in the past",
+      "known_at": 5
+    },
+    {
+      "name": "Roman baths",
+      "facet": "Daily life in the past",
+      "known_at": 7
+    },
+    {
+      "name": "Chariot racing",
+      "facet": "Daily life in the past",
+      "known_at": 7
+    },
+    {
+      "name": "Ancient Olympic Games",
+      "facet": "Daily life in the past",
+      "known_at": 7
+    },
+    {
+      "name": "Aqueduct",
+      "facet": "Daily life in the past",
+      "known_at": 8
+    },
+    {
+      "name": "Scribe",
+      "facet": "Daily life in the past",
+      "known_at": 9
+    },
+    {
+      "name": "Tea ceremony",
+      "facet": "Daily life in the past",
+      "known_at": 9
+    },
+    {
+      "name": "Serf",
+      "facet": "Daily life in the past",
+      "known_at": 11
+    },
+    {
+      "name": "Guild",
+      "facet": "Daily life in the past",
+      "known_at": 12
+    },
+    {
+      "name": "Wax tablet",
+      "facet": "Daily life in the past",
+      "known_at": 12
+    },
+    {
+      "name": "Roman latrines",
+      "facet": "Daily life in the past",
+      "known_at": 12
+    },
+    {
+      "name": "Lydian coins",
+      "facet": "Daily life in the past",
+      "known_at": 14
+    },
+    {
+      "name": "Anne Frank",
+      "facet": "Famous historical figures",
+      "known_at": 8
+    },
+    {
+      "name": "Mother Teresa",
+      "facet": "Famous historical figures",
+      "known_at": 8
+    },
+    {
+      "name": "Siddhartha Gautama",
+      "facet": "Famous historical figures",
+      "known_at": 8
+    },
+    {
+      "name": "Aristotle",
+      "facet": "Famous historical figures",
+      "known_at": 9
+    },
+    {
+      "name": "Rosa Parks",
+      "facet": "Famous historical figures",
+      "known_at": 9
+    },
+    {
+      "name": "Confucius",
+      "facet": "Famous historical figures",
+      "known_at": 10
+    },
+    {
+      "name": "Berlin Wall",
+      "facet": "Modern history and the space age",
+      "known_at": 7
+    },
+    {
+      "name": "European Union",
+      "facet": "Modern history and the space age",
+      "known_at": 8
+    },
+    {
+      "name": "Dissolution of the Soviet Union",
+      "facet": "Modern history and the space age",
+      "known_at": 11
+    },
+    {
+      "name": "1896 Athens Olympics",
+      "facet": "Modern history and the space age",
+      "known_at": 11
+    },
+    {
+      "name": "Cuban Missile Crisis",
+      "facet": "Modern history and the space age",
+      "known_at": 12
+    },
+    {
+      "name": "Atlantis",
+      "facet": "Archaeology and lost cities",
+      "known_at": 6
+    },
+    {
+      "name": "Radiocarbon dating",
+      "facet": "Archaeology and lost cities",
+      "known_at": 11
+    },
+    {
+      "name": "Herculaneum",
+      "facet": "Archaeology and lost cities",
+      "known_at": 13
+    }
+  ]
+}

@@ -1,0 +1,992 @@
+{
+  "subcategory": "anime",
+  "facets": [
+    "Studio Ghibli films",
+    "Pokémon and monster-collecting anime",
+    "Shonen action heroes",
+    "Magical girls and idol anime",
+    "Anime for young children",
+    "Anime creators and studios",
+    "Mecha and giant robots",
+    "Classic anime of the 1960s–90s",
+    "Manga and where anime comes from",
+    "Anime words and art style",
+    "Anime places and settings in Japan",
+    "Anime fandom, cosplay and merchandise"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 2,
+      "record": 3,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Princess Mononoke",
+      "facet": "Studio Ghibli films",
+      "known_at": 8
+    },
+    {
+      "name": "Castle in the Sky",
+      "facet": "Studio Ghibli films",
+      "known_at": 9
+    },
+    {
+      "name": "Nausicaä of the Valley of the Wind",
+      "facet": "Studio Ghibli films",
+      "known_at": 11
+    },
+    {
+      "name": "The Secret World of Arrietty",
+      "facet": "Studio Ghibli films",
+      "known_at": 8
+    },
+    {
+      "name": "The Wind Rises",
+      "facet": "Studio Ghibli films",
+      "known_at": 12
+    },
+    {
+      "name": "The Boy and the Heron",
+      "facet": "Studio Ghibli films",
+      "known_at": 11
+    },
+    {
+      "name": "Whisper of the Heart",
+      "facet": "Studio Ghibli films",
+      "known_at": 12
+    },
+    {
+      "name": "When Marnie Was There",
+      "facet": "Studio Ghibli films",
+      "known_at": 12
+    },
+    {
+      "name": "The Tale of the Princess Kaguya",
+      "facet": "Studio Ghibli films",
+      "known_at": 13
+    },
+    {
+      "name": "Pom Poko",
+      "facet": "Studio Ghibli films",
+      "known_at": 13
+    },
+    {
+      "name": "No-Face",
+      "facet": "Studio Ghibli films",
+      "known_at": 7
+    },
+    {
+      "name": "Catbus",
+      "facet": "Studio Ghibli films",
+      "known_at": 5
+    },
+    {
+      "name": "Soot sprites",
+      "facet": "Studio Ghibli films",
+      "known_at": 7
+    },
+    {
+      "name": "Poké Ball",
+      "facet": "Pokémon and monster-collecting anime",
+      "known_at": 2
+    },
+    {
+      "name": "Team Rocket",
+      "facet": "Pokémon and monster-collecting anime",
+      "known_at": 5
+    },
+    {
+      "name": "Professor Oak",
+      "facet": "Pokémon and monster-collecting anime",
+      "known_at": 6
+    },
+    {
+      "name": "Yo-kai Watch",
+      "facet": "Pokémon and monster-collecting anime",
+      "known_at": 9
+    },
+    {
+      "name": "Vegeta",
+      "facet": "Shonen action heroes",
+      "known_at": 7
+    },
+    {
+      "name": "Dragon Balls",
+      "facet": "Shonen action heroes",
+      "known_at": 5
+    },
+    {
+      "name": "Super Saiyan",
+      "facet": "Shonen action heroes",
+      "known_at": 6
+    },
+    {
+      "name": "Naruto Uzumaki",
+      "facet": "Shonen action heroes",
+      "known_at": 5
+    },
+    {
+      "name": "Sasuke Uchiha",
+      "facet": "Shonen action heroes",
+      "known_at": 7
+    },
+    {
+      "name": "Monkey D. Luffy",
+      "facet": "Shonen action heroes",
+      "known_at": 6
+    },
+    {
+      "name": "Roronoa Zoro",
+      "facet": "Shonen action heroes",
+      "known_at": 9
+    },
+    {
+      "name": "Devil Fruit",
+      "facet": "Shonen action heroes",
+      "known_at": 9
+    },
+    {
+      "name": "Tanjiro Kamado",
+      "facet": "Shonen action heroes",
+      "known_at": 8
+    },
+    {
+      "name": "Nezuko Kamado",
+      "facet": "Shonen action heroes",
+      "known_at": 8
+    },
+    {
+      "name": "Izuku Midoriya",
+      "facet": "Shonen action heroes",
+      "known_at": 9
+    },
+    {
+      "name": "Eren Yeager",
+      "facet": "Shonen action heroes",
+      "known_at": 10
+    },
+    {
+      "name": "Saitama",
+      "facet": "Shonen action heroes",
+      "known_at": 10
+    },
+    {
+      "name": "Satoru Gojo",
+      "facet": "Shonen action heroes",
+      "known_at": 10
+    },
+    {
+      "name": "Ichigo Kurosaki",
+      "facet": "Shonen action heroes",
+      "known_at": 11
+    },
+    {
+      "name": "Edward Elric",
+      "facet": "Shonen action heroes",
+      "known_at": 11
+    },
+    {
+      "name": "Gon Freecss",
+      "facet": "Shonen action heroes",
+      "known_at": 12
+    },
+    {
+      "name": "Light Yagami",
+      "facet": "Shonen action heroes",
+      "known_at": 11
+    },
+    {
+      "name": "Sailor Mercury",
+      "facet": "Magical girls and idol anime",
+      "known_at": 10
+    },
+    {
+      "name": "Tuxedo Mask",
+      "facet": "Magical girls and idol anime",
+      "known_at": 10
+    },
+    {
+      "name": "Cardcaptor Sakura",
+      "facet": "Magical girls and idol anime",
+      "known_at": 9
+    },
+    {
+      "name": "Kero",
+      "facet": "Magical girls and idol anime",
+      "known_at": 11
+    },
+    {
+      "name": "Pretty Cure",
+      "facet": "Magical girls and idol anime",
+      "known_at": 9
+    },
+    {
+      "name": "Magical DoReMi",
+      "facet": "Magical girls and idol anime",
+      "known_at": 10
+    },
+    {
+      "name": "Tokyo Mew Mew",
+      "facet": "Magical girls and idol anime",
+      "known_at": 11
+    },
+    {
+      "name": "Puella Magi Madoka Magica",
+      "facet": "Magical girls and idol anime",
+      "known_at": 12
+    },
+    {
+      "name": "Wedding Peach",
+      "facet": "Magical girls and idol anime",
+      "known_at": 13
+    },
+    {
+      "name": "Sally the Witch",
+      "facet": "Magical girls and idol anime",
+      "known_at": 14
+    },
+    {
+      "name": "Creamy Mami",
+      "facet": "Magical girls and idol anime",
+      "known_at": 14
+    },
+    {
+      "name": "Minky Momo",
+      "facet": "Magical girls and idol anime",
+      "known_at": 14
+    },
+    {
+      "name": "Love Live!",
+      "facet": "Magical girls and idol anime",
+      "known_at": 12
+    },
+    {
+      "name": "Aikatsu!",
+      "facet": "Magical girls and idol anime",
+      "known_at": 12
+    },
+    {
+      "name": "The Idolmaster",
+      "facet": "Magical girls and idol anime",
+      "known_at": 13
+    },
+    {
+      "name": "Oshi no Ko",
+      "facet": "Magical girls and idol anime",
+      "known_at": 12
+    },
+    {
+      "name": "Nobita",
+      "facet": "Anime for young children",
+      "known_at": 6
+    },
+    {
+      "name": "Anywhere Door",
+      "facet": "Anime for young children",
+      "known_at": 8
+    },
+    {
+      "name": "Take-copter",
+      "facet": "Anime for young children",
+      "known_at": 8
+    },
+    {
+      "name": "Crayon Shin-chan",
+      "facet": "Anime for young children",
+      "known_at": 8
+    },
+    {
+      "name": "Anpanman",
+      "facet": "Anime for young children",
+      "known_at": 9
+    },
+    {
+      "name": "Chibi Maruko-chan",
+      "facet": "Anime for young children",
+      "known_at": 11
+    },
+    {
+      "name": "Heidi, Girl of the Alps",
+      "facet": "Anime for young children",
+      "known_at": 7
+    },
+    {
+      "name": "Vicky the Viking",
+      "facet": "Anime for young children",
+      "known_at": 9
+    },
+    {
+      "name": "Moomin",
+      "facet": "Anime for young children",
+      "known_at": 8
+    },
+    {
+      "name": "Chi's Sweet Home",
+      "facet": "Anime for young children",
+      "known_at": 10
+    },
+    {
+      "name": "Shimajiro",
+      "facet": "Anime for young children",
+      "known_at": 12
+    },
+    {
+      "name": "Kirby: Right Back at Ya!",
+      "facet": "Anime for young children",
+      "known_at": 8
+    },
+    {
+      "name": "Isao Takahata",
+      "facet": "Anime creators and studios",
+      "known_at": 13
+    },
+    {
+      "name": "Joe Hisaishi",
+      "facet": "Anime creators and studios",
+      "known_at": 12
+    },
+    {
+      "name": "Toshio Suzuki",
+      "facet": "Anime creators and studios",
+      "known_at": 15
+    },
+    {
+      "name": "Eiichiro Oda",
+      "facet": "Anime creators and studios",
+      "known_at": 11
+    },
+    {
+      "name": "Masashi Kishimoto",
+      "facet": "Anime creators and studios",
+      "known_at": 12
+    },
+    {
+      "name": "Naoko Takeuchi",
+      "facet": "Anime creators and studios",
+      "known_at": 13
+    },
+    {
+      "name": "Rumiko Takahashi",
+      "facet": "Anime creators and studios",
+      "known_at": 13
+    },
+    {
+      "name": "Fujiko F. Fujio",
+      "facet": "Anime creators and studios",
+      "known_at": 12
+    },
+    {
+      "name": "CLAMP",
+      "facet": "Anime creators and studios",
+      "known_at": 13
+    },
+    {
+      "name": "Makoto Shinkai",
+      "facet": "Anime creators and studios",
+      "known_at": 12
+    },
+    {
+      "name": "Mamoru Hosoda",
+      "facet": "Anime creators and studios",
+      "known_at": 14
+    },
+    {
+      "name": "Satoshi Kon",
+      "facet": "Anime creators and studios",
+      "known_at": 14
+    },
+    {
+      "name": "Katsuhiro Otomo",
+      "facet": "Anime creators and studios",
+      "known_at": 13
+    },
+    {
+      "name": "Hideaki Anno",
+      "facet": "Anime creators and studios",
+      "known_at": 13
+    },
+    {
+      "name": "Toei Animation",
+      "facet": "Anime creators and studios",
+      "known_at": 11
+    },
+    {
+      "name": "Kyoto Animation",
+      "facet": "Anime creators and studios",
+      "known_at": 13
+    },
+    {
+      "name": "MAPPA",
+      "facet": "Anime creators and studios",
+      "known_at": 13
+    },
+    {
+      "name": "Ufotable",
+      "facet": "Anime creators and studios",
+      "known_at": 14
+    },
+    {
+      "name": "Studio Pierrot",
+      "facet": "Anime creators and studios",
+      "known_at": 14
+    },
+    {
+      "name": "Gundam",
+      "facet": "Mecha and giant robots",
+      "known_at": 7
+    },
+    {
+      "name": "Neon Genesis Evangelion",
+      "facet": "Mecha and giant robots",
+      "known_at": 11
+    },
+    {
+      "name": "UFO Robot Grendizer",
+      "facet": "Mecha and giant robots",
+      "known_at": 12
+    },
+    {
+      "name": "Getter Robo",
+      "facet": "Mecha and giant robots",
+      "known_at": 13
+    },
+    {
+      "name": "Tetsujin 28-go",
+      "facet": "Mecha and giant robots",
+      "known_at": 13
+    },
+    {
+      "name": "Macross",
+      "facet": "Mecha and giant robots",
+      "known_at": 12
+    },
+    {
+      "name": "Robotech",
+      "facet": "Mecha and giant robots",
+      "known_at": 12
+    },
+    {
+      "name": "Code Geass",
+      "facet": "Mecha and giant robots",
+      "known_at": 13
+    },
+    {
+      "name": "Gurren Lagann",
+      "facet": "Mecha and giant robots",
+      "known_at": 13
+    },
+    {
+      "name": "Patlabor",
+      "facet": "Mecha and giant robots",
+      "known_at": 14
+    },
+    {
+      "name": "Amuro Ray",
+      "facet": "Mecha and giant robots",
+      "known_at": 13
+    },
+    {
+      "name": "Char Aznable",
+      "facet": "Mecha and giant robots",
+      "known_at": 14
+    },
+    {
+      "name": "Zaku",
+      "facet": "Mecha and giant robots",
+      "known_at": 13
+    },
+    {
+      "name": "RX-78-2 Gundam",
+      "facet": "Mecha and giant robots",
+      "known_at": 14
+    },
+    {
+      "name": "Mobile suit",
+      "facet": "Mecha and giant robots",
+      "known_at": 12
+    },
+    {
+      "name": "Shinji Ikari",
+      "facet": "Mecha and giant robots",
+      "known_at": 12
+    },
+    {
+      "name": "Speed Racer",
+      "facet": "Classic anime of the 1960s–90s",
+      "known_at": 8
+    },
+    {
+      "name": "Kimba the White Lion",
+      "facet": "Classic anime of the 1960s–90s",
+      "known_at": 11
+    },
+    {
+      "name": "Princess Knight",
+      "facet": "Classic anime of the 1960s–90s",
+      "known_at": 14
+    },
+    {
+      "name": "Captain Tsubasa",
+      "facet": "Classic anime of the 1960s–90s",
+      "known_at": 8
+    },
+    {
+      "name": "Lupin III",
+      "facet": "Classic anime of the 1960s–90s",
+      "known_at": 10
+    },
+    {
+      "name": "Akira",
+      "facet": "Classic anime of the 1960s–90s",
+      "known_at": 10
+    },
+    {
+      "name": "Ghost in the Shell",
+      "facet": "Classic anime of the 1960s–90s",
+      "known_at": 11
+    },
+    {
+      "name": "Cowboy Bebop",
+      "facet": "Classic anime of the 1960s–90s",
+      "known_at": 11
+    },
+    {
+      "name": "Ranma ½",
+      "facet": "Classic anime of the 1960s–90s",
+      "known_at": 11
+    },
+    {
+      "name": "Slam Dunk",
+      "facet": "Classic anime of the 1960s–90s",
+      "known_at": 10
+    },
+    {
+      "name": "City Hunter",
+      "facet": "Classic anime of the 1960s–90s",
+      "known_at": 12
+    },
+    {
+      "name": "Captain Harlock",
+      "facet": "Classic anime of the 1960s–90s",
+      "known_at": 12
+    },
+    {
+      "name": "Space Battleship Yamato",
+      "facet": "Classic anime of the 1960s–90s",
+      "known_at": 12
+    },
+    {
+      "name": "Galaxy Express 999",
+      "facet": "Classic anime of the 1960s–90s",
+      "known_at": 13
+    },
+    {
+      "name": "The Rose of Versailles",
+      "facet": "Classic anime of the 1960s–90s",
+      "known_at": 12
+    },
+    {
+      "name": "Tiger Mask",
+      "facet": "Classic anime of the 1960s–90s",
+      "known_at": 13
+    },
+    {
+      "name": "Captain Future",
+      "facet": "Classic anime of the 1960s–90s",
+      "known_at": 13
+    },
+    {
+      "name": "Cutie Honey",
+      "facet": "Classic anime of the 1960s–90s",
+      "known_at": 13
+    },
+    {
+      "name": "Manga",
+      "facet": "Manga and where anime comes from",
+      "known_at": 3
+    },
+    {
+      "name": "Mangaka",
+      "facet": "Manga and where anime comes from",
+      "known_at": 11
+    },
+    {
+      "name": "Weekly Shōnen Jump",
+      "facet": "Manga and where anime comes from",
+      "known_at": 10
+    },
+    {
+      "name": "Shōnen",
+      "facet": "Manga and where anime comes from",
+      "known_at": 10
+    },
+    {
+      "name": "Shōjo",
+      "facet": "Manga and where anime comes from",
+      "known_at": 11
+    },
+    {
+      "name": "Seinen",
+      "facet": "Manga and where anime comes from",
+      "known_at": 13
+    },
+    {
+      "name": "Right-to-left reading",
+      "facet": "Manga and where anime comes from",
+      "known_at": 8
+    },
+    {
+      "name": "Tankōbon",
+      "facet": "Manga and where anime comes from",
+      "known_at": 14
+    },
+    {
+      "name": "Yonkoma",
+      "facet": "Manga and where anime comes from",
+      "known_at": 14
+    },
+    {
+      "name": "Light novel",
+      "facet": "Manga and where anime comes from",
+      "known_at": 12
+    },
+    {
+      "name": "Visual novel",
+      "facet": "Manga and where anime comes from",
+      "known_at": 13
+    },
+    {
+      "name": "Doujinshi",
+      "facet": "Manga and where anime comes from",
+      "known_at": 13
+    },
+    {
+      "name": "Manhwa",
+      "facet": "Manga and where anime comes from",
+      "known_at": 12
+    },
+    {
+      "name": "Webtoon",
+      "facet": "Manga and where anime comes from",
+      "known_at": 11
+    },
+    {
+      "name": "Hokusai Manga",
+      "facet": "Manga and where anime comes from",
+      "known_at": 14
+    },
+    {
+      "name": "Chōjū-giga",
+      "facet": "Manga and where anime comes from",
+      "known_at": 15
+    },
+    {
+      "name": "Kamishibai",
+      "facet": "Manga and where anime comes from",
+      "known_at": 14
+    },
+    {
+      "name": "Screentone",
+      "facet": "Manga and where anime comes from",
+      "known_at": 14
+    },
+    {
+      "name": "Manga café",
+      "facet": "Manga and where anime comes from",
+      "known_at": 12
+    },
+    {
+      "name": "Kawaii",
+      "facet": "Anime words and art style",
+      "known_at": 6
+    },
+    {
+      "name": "Chibi",
+      "facet": "Anime words and art style",
+      "known_at": 8
+    },
+    {
+      "name": "Anime eyes",
+      "facet": "Anime words and art style",
+      "known_at": 5
+    },
+    {
+      "name": "Sweat drop",
+      "facet": "Anime words and art style",
+      "known_at": 11
+    },
+    {
+      "name": "Speed lines",
+      "facet": "Anime words and art style",
+      "known_at": 12
+    },
+    {
+      "name": "Transformation sequence",
+      "facet": "Anime words and art style",
+      "known_at": 9
+    },
+    {
+      "name": "Otaku",
+      "facet": "Anime words and art style",
+      "known_at": 9
+    },
+    {
+      "name": "Senpai",
+      "facet": "Anime words and art style",
+      "known_at": 10
+    },
+    {
+      "name": "Sensei",
+      "facet": "Anime words and art style",
+      "known_at": 8
+    },
+    {
+      "name": "-chan",
+      "facet": "Anime words and art style",
+      "known_at": 9
+    },
+    {
+      "name": "Baka",
+      "facet": "Anime words and art style",
+      "known_at": 9
+    },
+    {
+      "name": "Nakama",
+      "facet": "Anime words and art style",
+      "known_at": 11
+    },
+    {
+      "name": "Isekai",
+      "facet": "Anime words and art style",
+      "known_at": 12
+    },
+    {
+      "name": "Tsundere",
+      "facet": "Anime words and art style",
+      "known_at": 12
+    },
+    {
+      "name": "Moe",
+      "facet": "Anime words and art style",
+      "known_at": 13
+    },
+    {
+      "name": "Bishōnen",
+      "facet": "Anime words and art style",
+      "known_at": 14
+    },
+    {
+      "name": "Ahoge",
+      "facet": "Anime words and art style",
+      "known_at": 14
+    },
+    {
+      "name": "Filler episode",
+      "facet": "Anime words and art style",
+      "known_at": 11
+    },
+    {
+      "name": "Sakuga",
+      "facet": "Anime words and art style",
+      "known_at": 15
+    },
+    {
+      "name": "Akihabara",
+      "facet": "Anime places and settings in Japan",
+      "known_at": 10
+    },
+    {
+      "name": "Shibuya Crossing",
+      "facet": "Anime places and settings in Japan",
+      "known_at": 9
+    },
+    {
+      "name": "Kyoto",
+      "facet": "Anime places and settings in Japan",
+      "known_at": 8
+    },
+    {
+      "name": "Kamakura",
+      "facet": "Anime places and settings in Japan",
+      "known_at": 13
+    },
+    {
+      "name": "Odaiba",
+      "facet": "Anime places and settings in Japan",
+      "known_at": 13
+    },
+    {
+      "name": "Ikebukuro",
+      "facet": "Anime places and settings in Japan",
+      "known_at": 14
+    },
+    {
+      "name": "Hida-Takayama",
+      "facet": "Anime places and settings in Japan",
+      "known_at": 15
+    },
+    {
+      "name": "Neo-Tokyo",
+      "facet": "Anime places and settings in Japan",
+      "known_at": 11
+    },
+    {
+      "name": "Ghibli Museum",
+      "facet": "Anime places and settings in Japan",
+      "known_at": 11
+    },
+    {
+      "name": "Ghibli Park",
+      "facet": "Anime places and settings in Japan",
+      "known_at": 12
+    },
+    {
+      "name": "Torii gate",
+      "facet": "Anime places and settings in Japan",
+      "known_at": 6
+    },
+    {
+      "name": "Shinto shrine",
+      "facet": "Anime places and settings in Japan",
+      "known_at": 9
+    },
+    {
+      "name": "Cherry blossoms",
+      "facet": "Anime places and settings in Japan",
+      "known_at": 4
+    },
+    {
+      "name": "Ramen shop",
+      "facet": "Anime places and settings in Japan",
+      "known_at": 5
+    },
+    {
+      "name": "Summer festival",
+      "facet": "Anime places and settings in Japan",
+      "known_at": 9
+    },
+    {
+      "name": "Sailor school uniform",
+      "facet": "Anime places and settings in Japan",
+      "known_at": 8
+    },
+    {
+      "name": "Kotatsu",
+      "facet": "Anime places and settings in Japan",
+      "known_at": 12
+    },
+    {
+      "name": "Cosplay",
+      "facet": "Anime fandom, cosplay and merchandise",
+      "known_at": 6
+    },
+    {
+      "name": "Anime convention",
+      "facet": "Anime fandom, cosplay and merchandise",
+      "known_at": 8
+    },
+    {
+      "name": "Comiket",
+      "facet": "Anime fandom, cosplay and merchandise",
+      "known_at": 13
+    },
+    {
+      "name": "Japan Expo",
+      "facet": "Anime fandom, cosplay and merchandise",
+      "known_at": 13
+    },
+    {
+      "name": "Fan art",
+      "facet": "Anime fandom, cosplay and merchandise",
+      "known_at": 5
+    },
+    {
+      "name": "Pokémon Trading Card Game",
+      "facet": "Anime fandom, cosplay and merchandise",
+      "known_at": 5
+    },
+    {
+      "name": "Gachapon",
+      "facet": "Anime fandom, cosplay and merchandise",
+      "known_at": 9
+    },
+    {
+      "name": "Gunpla",
+      "facet": "Anime fandom, cosplay and merchandise",
+      "known_at": 12
+    },
+    {
+      "name": "Nendoroid",
+      "facet": "Anime fandom, cosplay and merchandise",
+      "known_at": 13
+    },
+    {
+      "name": "Pokémon Center",
+      "facet": "Anime fandom, cosplay and merchandise",
+      "known_at": 8
+    },
+    {
+      "name": "Pikachu Jet",
+      "facet": "Anime fandom, cosplay and merchandise",
+      "known_at": 12
+    },
+    {
+      "name": "Maid café",
+      "facet": "Anime fandom, cosplay and merchandise",
+      "known_at": 12
+    },
+    {
+      "name": "Crunchyroll",
+      "facet": "Anime fandom, cosplay and merchandise",
+      "known_at": 10
+    },
+    {
+      "name": "Itasha",
+      "facet": "Anime fandom, cosplay and merchandise",
+      "known_at": 14
+    },
+    {
+      "name": "Ita-bag",
+      "facet": "Anime fandom, cosplay and merchandise",
+      "known_at": 14
+    }
+  ]
+}

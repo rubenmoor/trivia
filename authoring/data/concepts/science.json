@@ -1,0 +1,1127 @@
+{
+  "subcategory": "science",
+  "facets": [
+    "Forces and motion",
+    "Light and color",
+    "Sound and waves",
+    "Electricity and magnetism",
+    "States of matter",
+    "Chemical elements and reactions",
+    "Energy and its sources",
+    "Cells, genes and evolution",
+    "Famous scientists and discoveries",
+    "Experiments and lab tools",
+    "Units and measurement",
+    "Kitchen and everyday science"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 4,
+      "record": 3,
+      "origin": 2,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 5,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 3
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 5,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 3,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Speed",
+      "facet": "Forces and motion",
+      "known_at": 3
+    },
+    {
+      "name": "Weightlessness",
+      "facet": "Forces and motion",
+      "known_at": 5
+    },
+    {
+      "name": "Friction",
+      "facet": "Forces and motion",
+      "known_at": 6
+    },
+    {
+      "name": "Air resistance",
+      "facet": "Forces and motion",
+      "known_at": 6
+    },
+    {
+      "name": "Lever",
+      "facet": "Forces and motion",
+      "known_at": 6
+    },
+    {
+      "name": "Pulley",
+      "facet": "Forces and motion",
+      "known_at": 6
+    },
+    {
+      "name": "Pendulum",
+      "facet": "Forces and motion",
+      "known_at": 6
+    },
+    {
+      "name": "Wheel and axle",
+      "facet": "Forces and motion",
+      "known_at": 7
+    },
+    {
+      "name": "Newton's cradle",
+      "facet": "Forces and motion",
+      "known_at": 7
+    },
+    {
+      "name": "Mass",
+      "facet": "Forces and motion",
+      "known_at": 7
+    },
+    {
+      "name": "Inclined plane",
+      "facet": "Forces and motion",
+      "known_at": 8
+    },
+    {
+      "name": "Buoyancy",
+      "facet": "Forces and motion",
+      "known_at": 8
+    },
+    {
+      "name": "Inertia",
+      "facet": "Forces and motion",
+      "known_at": 9
+    },
+    {
+      "name": "Acceleration",
+      "facet": "Forces and motion",
+      "known_at": 9
+    },
+    {
+      "name": "Action and reaction",
+      "facet": "Forces and motion",
+      "known_at": 9
+    },
+    {
+      "name": "Centrifugal force",
+      "facet": "Forces and motion",
+      "known_at": 10
+    },
+    {
+      "name": "Momentum",
+      "facet": "Forces and motion",
+      "known_at": 11
+    },
+    {
+      "name": "Terminal velocity",
+      "facet": "Forces and motion",
+      "known_at": 11
+    },
+    {
+      "name": "Projectile motion",
+      "facet": "Forces and motion",
+      "known_at": 11
+    },
+    {
+      "name": "Rainbow",
+      "facet": "Light and color",
+      "known_at": 1
+    },
+    {
+      "name": "Mirror",
+      "facet": "Light and color",
+      "known_at": 1
+    },
+    {
+      "name": "Primary colors",
+      "facet": "Light and color",
+      "known_at": 3
+    },
+    {
+      "name": "Color wheel",
+      "facet": "Light and color",
+      "known_at": 4
+    },
+    {
+      "name": "Reflection",
+      "facet": "Light and color",
+      "known_at": 5
+    },
+    {
+      "name": "Optical illusion",
+      "facet": "Light and color",
+      "known_at": 5
+    },
+    {
+      "name": "Prism",
+      "facet": "Light and color",
+      "known_at": 6
+    },
+    {
+      "name": "Lens",
+      "facet": "Light and color",
+      "known_at": 6
+    },
+    {
+      "name": "Speed of light",
+      "facet": "Light and color",
+      "known_at": 7
+    },
+    {
+      "name": "Color spectrum",
+      "facet": "Light and color",
+      "known_at": 7
+    },
+    {
+      "name": "Ultraviolet light",
+      "facet": "Light and color",
+      "known_at": 7
+    },
+    {
+      "name": "Infrared",
+      "facet": "Light and color",
+      "known_at": 8
+    },
+    {
+      "name": "Refraction",
+      "facet": "Light and color",
+      "known_at": 9
+    },
+    {
+      "name": "Bioluminescence",
+      "facet": "Light and color",
+      "known_at": 9
+    },
+    {
+      "name": "Photon",
+      "facet": "Light and color",
+      "known_at": 11
+    },
+    {
+      "name": "Polarized light",
+      "facet": "Light and color",
+      "known_at": 12
+    },
+    {
+      "name": "Total internal reflection",
+      "facet": "Light and color",
+      "known_at": 13
+    },
+    {
+      "name": "Rayleigh scattering",
+      "facet": "Light and color",
+      "known_at": 13
+    },
+    {
+      "name": "Vibration",
+      "facet": "Sound and waves",
+      "known_at": 4
+    },
+    {
+      "name": "Silence in space",
+      "facet": "Sound and waves",
+      "known_at": 7
+    },
+    {
+      "name": "Sonic boom",
+      "facet": "Sound and waves",
+      "known_at": 8
+    },
+    {
+      "name": "Ultrasound",
+      "facet": "Sound and waves",
+      "known_at": 8
+    },
+    {
+      "name": "Radio waves",
+      "facet": "Sound and waves",
+      "known_at": 8
+    },
+    {
+      "name": "Tuning fork",
+      "facet": "Sound and waves",
+      "known_at": 8
+    },
+    {
+      "name": "Speed of sound",
+      "facet": "Sound and waves",
+      "known_at": 9
+    },
+    {
+      "name": "Microwaves",
+      "facet": "Sound and waves",
+      "known_at": 9
+    },
+    {
+      "name": "Decibel",
+      "facet": "Sound and waves",
+      "known_at": 10
+    },
+    {
+      "name": "Frequency",
+      "facet": "Sound and waves",
+      "known_at": 10
+    },
+    {
+      "name": "Hertz",
+      "facet": "Sound and waves",
+      "known_at": 11
+    },
+    {
+      "name": "Wavelength",
+      "facet": "Sound and waves",
+      "known_at": 11
+    },
+    {
+      "name": "Seismic wave",
+      "facet": "Sound and waves",
+      "known_at": 11
+    },
+    {
+      "name": "Doppler effect",
+      "facet": "Sound and waves",
+      "known_at": 12
+    },
+    {
+      "name": "Resonance",
+      "facet": "Sound and waves",
+      "known_at": 12
+    },
+    {
+      "name": "Amplitude",
+      "facet": "Sound and waves",
+      "known_at": 12
+    },
+    {
+      "name": "Magnet",
+      "facet": "Electricity and magnetism",
+      "known_at": 1
+    },
+    {
+      "name": "Lightning",
+      "facet": "Electricity and magnetism",
+      "known_at": 2
+    },
+    {
+      "name": "Light bulb",
+      "facet": "Electricity and magnetism",
+      "known_at": 2
+    },
+    {
+      "name": "Battery",
+      "facet": "Electricity and magnetism",
+      "known_at": 3
+    },
+    {
+      "name": "Static electricity",
+      "facet": "Electricity and magnetism",
+      "known_at": 5
+    },
+    {
+      "name": "Electric eel",
+      "facet": "Electricity and magnetism",
+      "known_at": 5
+    },
+    {
+      "name": "Magnetic poles",
+      "facet": "Electricity and magnetism",
+      "known_at": 6
+    },
+    {
+      "name": "Electric circuit",
+      "facet": "Electricity and magnetism",
+      "known_at": 7
+    },
+    {
+      "name": "Conductor",
+      "facet": "Electricity and magnetism",
+      "known_at": 8
+    },
+    {
+      "name": "Insulator",
+      "facet": "Electricity and magnetism",
+      "known_at": 8
+    },
+    {
+      "name": "Electromagnet",
+      "facet": "Electricity and magnetism",
+      "known_at": 8
+    },
+    {
+      "name": "Earth's magnetic field",
+      "facet": "Electricity and magnetism",
+      "known_at": 9
+    },
+    {
+      "name": "Generator",
+      "facet": "Electricity and magnetism",
+      "known_at": 9
+    },
+    {
+      "name": "Short circuit",
+      "facet": "Electricity and magnetism",
+      "known_at": 9
+    },
+    {
+      "name": "Volt",
+      "facet": "Electricity and magnetism",
+      "known_at": 10
+    },
+    {
+      "name": "Fuse",
+      "facet": "Electricity and magnetism",
+      "known_at": 10
+    },
+    {
+      "name": "Ampere",
+      "facet": "Electricity and magnetism",
+      "known_at": 12
+    },
+    {
+      "name": "Ohm's law",
+      "facet": "Electricity and magnetism",
+      "known_at": 12
+    },
+    {
+      "name": "Tesla coil",
+      "facet": "Electricity and magnetism",
+      "known_at": 12
+    },
+    {
+      "name": "Superconductivity",
+      "facet": "Electricity and magnetism",
+      "known_at": 14
+    },
+    {
+      "name": "Solid",
+      "facet": "States of matter",
+      "known_at": 3
+    },
+    {
+      "name": "Liquid",
+      "facet": "States of matter",
+      "known_at": 3
+    },
+    {
+      "name": "Melting",
+      "facet": "States of matter",
+      "known_at": 3
+    },
+    {
+      "name": "Freezing",
+      "facet": "States of matter",
+      "known_at": 3
+    },
+    {
+      "name": "Boiling point of water",
+      "facet": "States of matter",
+      "known_at": 3
+    },
+    {
+      "name": "Evaporation",
+      "facet": "States of matter",
+      "known_at": 6
+    },
+    {
+      "name": "Water cycle",
+      "facet": "States of matter",
+      "known_at": 6
+    },
+    {
+      "name": "Condensation",
+      "facet": "States of matter",
+      "known_at": 7
+    },
+    {
+      "name": "Dry ice",
+      "facet": "States of matter",
+      "known_at": 9
+    },
+    {
+      "name": "Density",
+      "facet": "States of matter",
+      "known_at": 9
+    },
+    {
+      "name": "Melting point",
+      "facet": "States of matter",
+      "known_at": 9
+    },
+    {
+      "name": "Non-Newtonian fluid",
+      "facet": "States of matter",
+      "known_at": 9
+    },
+    {
+      "name": "Surface tension",
+      "facet": "States of matter",
+      "known_at": 10
+    },
+    {
+      "name": "Sublimation",
+      "facet": "States of matter",
+      "known_at": 11
+    },
+    {
+      "name": "Absolute zero",
+      "facet": "States of matter",
+      "known_at": 11
+    },
+    {
+      "name": "Bose–Einstein condensate",
+      "facet": "States of matter",
+      "known_at": 15
+    },
+    {
+      "name": "Oxygen",
+      "facet": "Chemical elements and reactions",
+      "known_at": 2
+    },
+    {
+      "name": "Gold",
+      "facet": "Chemical elements and reactions",
+      "known_at": 3
+    },
+    {
+      "name": "Iron",
+      "facet": "Chemical elements and reactions",
+      "known_at": 4
+    },
+    {
+      "name": "Water molecule",
+      "facet": "Chemical elements and reactions",
+      "known_at": 5
+    },
+    {
+      "name": "Rust",
+      "facet": "Chemical elements and reactions",
+      "known_at": 5
+    },
+    {
+      "name": "Helium",
+      "facet": "Chemical elements and reactions",
+      "known_at": 6
+    },
+    {
+      "name": "Diamond",
+      "facet": "Chemical elements and reactions",
+      "known_at": 6
+    },
+    {
+      "name": "Hydrogen",
+      "facet": "Chemical elements and reactions",
+      "known_at": 7
+    },
+    {
+      "name": "Atom",
+      "facet": "Chemical elements and reactions",
+      "known_at": 7
+    },
+    {
+      "name": "Acid",
+      "facet": "Chemical elements and reactions",
+      "known_at": 7
+    },
+    {
+      "name": "Carbon dioxide",
+      "facet": "Chemical elements and reactions",
+      "known_at": 7
+    },
+    {
+      "name": "Molecule",
+      "facet": "Chemical elements and reactions",
+      "known_at": 8
+    },
+    {
+      "name": "Periodic table",
+      "facet": "Chemical elements and reactions",
+      "known_at": 9
+    },
+    {
+      "name": "Mercury",
+      "facet": "Chemical elements and reactions",
+      "known_at": 9
+    },
+    {
+      "name": "Ozone",
+      "facet": "Chemical elements and reactions",
+      "known_at": 9
+    },
+    {
+      "name": "Chemical symbol",
+      "facet": "Chemical elements and reactions",
+      "known_at": 10
+    },
+    {
+      "name": "pH scale",
+      "facet": "Chemical elements and reactions",
+      "known_at": 10
+    },
+    {
+      "name": "Uranium",
+      "facet": "Chemical elements and reactions",
+      "known_at": 11
+    },
+    {
+      "name": "Noble gases",
+      "facet": "Chemical elements and reactions",
+      "known_at": 12
+    },
+    {
+      "name": "Catalyst",
+      "facet": "Chemical elements and reactions",
+      "known_at": 12
+    },
+    {
+      "name": "Electric car",
+      "facet": "Energy and its sources",
+      "known_at": 3
+    },
+    {
+      "name": "Solar energy",
+      "facet": "Energy and its sources",
+      "known_at": 4
+    },
+    {
+      "name": "Wind turbine",
+      "facet": "Energy and its sources",
+      "known_at": 4
+    },
+    {
+      "name": "Solar panel",
+      "facet": "Energy and its sources",
+      "known_at": 4
+    },
+    {
+      "name": "Coal",
+      "facet": "Energy and its sources",
+      "known_at": 5
+    },
+    {
+      "name": "Petroleum",
+      "facet": "Energy and its sources",
+      "known_at": 6
+    },
+    {
+      "name": "Hydroelectric dam",
+      "facet": "Energy and its sources",
+      "known_at": 8
+    },
+    {
+      "name": "Fossil fuels",
+      "facet": "Energy and its sources",
+      "known_at": 8
+    },
+    {
+      "name": "Natural gas",
+      "facet": "Energy and its sources",
+      "known_at": 8
+    },
+    {
+      "name": "Nuclear power plant",
+      "facet": "Energy and its sources",
+      "known_at": 8
+    },
+    {
+      "name": "Calorie",
+      "facet": "Energy and its sources",
+      "known_at": 8
+    },
+    {
+      "name": "Geothermal energy",
+      "facet": "Energy and its sources",
+      "known_at": 10
+    },
+    {
+      "name": "Kinetic energy",
+      "facet": "Energy and its sources",
+      "known_at": 10
+    },
+    {
+      "name": "Potential energy",
+      "facet": "Energy and its sources",
+      "known_at": 10
+    },
+    {
+      "name": "Tidal energy",
+      "facet": "Energy and its sources",
+      "known_at": 11
+    },
+    {
+      "name": "Biofuel",
+      "facet": "Energy and its sources",
+      "known_at": 11
+    },
+    {
+      "name": "Nuclear fusion",
+      "facet": "Energy and its sources",
+      "known_at": 12
+    },
+    {
+      "name": "Conservation of energy",
+      "facet": "Energy and its sources",
+      "known_at": 12
+    },
+    {
+      "name": "Perpetual motion machine",
+      "facet": "Energy and its sources",
+      "known_at": 12
+    },
+    {
+      "name": "Three Gorges Dam",
+      "facet": "Energy and its sources",
+      "known_at": 12
+    },
+    {
+      "name": "Fossil",
+      "facet": "Cells, genes and evolution",
+      "known_at": 4
+    },
+    {
+      "name": "Cell",
+      "facet": "Cells, genes and evolution",
+      "known_at": 5
+    },
+    {
+      "name": "Identical twins",
+      "facet": "Cells, genes and evolution",
+      "known_at": 6
+    },
+    {
+      "name": "Cell nucleus",
+      "facet": "Cells, genes and evolution",
+      "known_at": 7
+    },
+    {
+      "name": "DNA",
+      "facet": "Cells, genes and evolution",
+      "known_at": 7
+    },
+    {
+      "name": "Red blood cell",
+      "facet": "Cells, genes and evolution",
+      "known_at": 7
+    },
+    {
+      "name": "Evolution",
+      "facet": "Cells, genes and evolution",
+      "known_at": 8
+    },
+    {
+      "name": "Gene",
+      "facet": "Cells, genes and evolution",
+      "known_at": 9
+    },
+    {
+      "name": "Chlorophyll",
+      "facet": "Cells, genes and evolution",
+      "known_at": 9
+    },
+    {
+      "name": "Mutation",
+      "facet": "Cells, genes and evolution",
+      "known_at": 9
+    },
+    {
+      "name": "Double helix",
+      "facet": "Cells, genes and evolution",
+      "known_at": 10
+    },
+    {
+      "name": "Mitochondria",
+      "facet": "Cells, genes and evolution",
+      "known_at": 10
+    },
+    {
+      "name": "Chromosome",
+      "facet": "Cells, genes and evolution",
+      "known_at": 11
+    },
+    {
+      "name": "Natural selection",
+      "facet": "Cells, genes and evolution",
+      "known_at": 11
+    },
+    {
+      "name": "Genome",
+      "facet": "Cells, genes and evolution",
+      "known_at": 12
+    },
+    {
+      "name": "Stem cell",
+      "facet": "Cells, genes and evolution",
+      "known_at": 13
+    },
+    {
+      "name": "Albert Einstein",
+      "facet": "Famous scientists and discoveries",
+      "known_at": 4
+    },
+    {
+      "name": "Newton's apple",
+      "facet": "Famous scientists and discoveries",
+      "known_at": 6
+    },
+    {
+      "name": "Nobel Prize",
+      "facet": "Famous scientists and discoveries",
+      "known_at": 8
+    },
+    {
+      "name": "Archimedes",
+      "facet": "Famous scientists and discoveries",
+      "known_at": 9
+    },
+    {
+      "name": "Penicillin",
+      "facet": "Famous scientists and discoveries",
+      "known_at": 11
+    },
+    {
+      "name": "Nicolaus Copernicus",
+      "facet": "Famous scientists and discoveries",
+      "known_at": 11
+    },
+    {
+      "name": "Dmitri Mendeleev",
+      "facet": "Famous scientists and discoveries",
+      "known_at": 12
+    },
+    {
+      "name": "Ibn al-Haytham",
+      "facet": "Famous scientists and discoveries",
+      "known_at": 14
+    },
+    {
+      "name": "Hypatia",
+      "facet": "Famous scientists and discoveries",
+      "known_at": 14
+    },
+    {
+      "name": "Magnifying glass",
+      "facet": "Experiments and lab tools",
+      "known_at": 2
+    },
+    {
+      "name": "Microscope",
+      "facet": "Experiments and lab tools",
+      "known_at": 3
+    },
+    {
+      "name": "Telescope",
+      "facet": "Experiments and lab tools",
+      "known_at": 3
+    },
+    {
+      "name": "Thermometer",
+      "facet": "Experiments and lab tools",
+      "known_at": 3
+    },
+    {
+      "name": "Test tube",
+      "facet": "Experiments and lab tools",
+      "known_at": 4
+    },
+    {
+      "name": "Baking soda volcano",
+      "facet": "Experiments and lab tools",
+      "known_at": 4
+    },
+    {
+      "name": "Safety goggles",
+      "facet": "Experiments and lab tools",
+      "known_at": 5
+    },
+    {
+      "name": "Mentos and soda",
+      "facet": "Experiments and lab tools",
+      "known_at": 6
+    },
+    {
+      "name": "Lemon battery",
+      "facet": "Experiments and lab tools",
+      "known_at": 7
+    },
+    {
+      "name": "Beaker",
+      "facet": "Experiments and lab tools",
+      "known_at": 9
+    },
+    {
+      "name": "Scientific method",
+      "facet": "Experiments and lab tools",
+      "known_at": 9
+    },
+    {
+      "name": "Hypothesis",
+      "facet": "Experiments and lab tools",
+      "known_at": 9
+    },
+    {
+      "name": "Bunsen burner",
+      "facet": "Experiments and lab tools",
+      "known_at": 10
+    },
+    {
+      "name": "Petri dish",
+      "facet": "Experiments and lab tools",
+      "known_at": 10
+    },
+    {
+      "name": "Pipette",
+      "facet": "Experiments and lab tools",
+      "known_at": 10
+    },
+    {
+      "name": "Litmus paper",
+      "facet": "Experiments and lab tools",
+      "known_at": 10
+    },
+    {
+      "name": "Leaning Tower of Pisa experiment",
+      "facet": "Experiments and lab tools",
+      "known_at": 10
+    },
+    {
+      "name": "Schrödinger's cat",
+      "facet": "Experiments and lab tools",
+      "known_at": 11
+    },
+    {
+      "name": "Pavlov's dogs",
+      "facet": "Experiments and lab tools",
+      "known_at": 11
+    },
+    {
+      "name": "Barometer",
+      "facet": "Experiments and lab tools",
+      "known_at": 11
+    },
+    {
+      "name": "Control group",
+      "facet": "Experiments and lab tools",
+      "known_at": 12
+    },
+    {
+      "name": "Large Hadron Collider",
+      "facet": "Experiments and lab tools",
+      "known_at": 12
+    },
+    {
+      "name": "Centrifuge",
+      "facet": "Experiments and lab tools",
+      "known_at": 12
+    },
+    {
+      "name": "Double-slit experiment",
+      "facet": "Experiments and lab tools",
+      "known_at": 14
+    },
+    {
+      "name": "Ruler",
+      "facet": "Units and measurement",
+      "known_at": 1
+    },
+    {
+      "name": "Second",
+      "facet": "Units and measurement",
+      "known_at": 2
+    },
+    {
+      "name": "Kilometer",
+      "facet": "Units and measurement",
+      "known_at": 2
+    },
+    {
+      "name": "Weighing scale",
+      "facet": "Units and measurement",
+      "known_at": 2
+    },
+    {
+      "name": "Stopwatch",
+      "facet": "Units and measurement",
+      "known_at": 2
+    },
+    {
+      "name": "Meter",
+      "facet": "Units and measurement",
+      "known_at": 3
+    },
+    {
+      "name": "Kilogram",
+      "facet": "Units and measurement",
+      "known_at": 3
+    },
+    {
+      "name": "Liter",
+      "facet": "Units and measurement",
+      "known_at": 3
+    },
+    {
+      "name": "Degree Celsius",
+      "facet": "Units and measurement",
+      "known_at": 4
+    },
+    {
+      "name": "Kilometers per hour",
+      "facet": "Units and measurement",
+      "known_at": 4
+    },
+    {
+      "name": "Mile",
+      "facet": "Units and measurement",
+      "known_at": 5
+    },
+    {
+      "name": "Speedometer",
+      "facet": "Units and measurement",
+      "known_at": 6
+    },
+    {
+      "name": "Degree Fahrenheit",
+      "facet": "Units and measurement",
+      "known_at": 7
+    },
+    {
+      "name": "Light-year",
+      "facet": "Units and measurement",
+      "known_at": 8
+    },
+    {
+      "name": "Metric system",
+      "facet": "Units and measurement",
+      "known_at": 8
+    },
+    {
+      "name": "Watt",
+      "facet": "Units and measurement",
+      "known_at": 9
+    },
+    {
+      "name": "Nanometer",
+      "facet": "Units and measurement",
+      "known_at": 10
+    },
+    {
+      "name": "Newton (unit)",
+      "facet": "Units and measurement",
+      "known_at": 11
+    },
+    {
+      "name": "Joule",
+      "facet": "Units and measurement",
+      "known_at": 11
+    },
+    {
+      "name": "International System of Units",
+      "facet": "Units and measurement",
+      "known_at": 11
+    },
+    {
+      "name": "Carat",
+      "facet": "Units and measurement",
+      "known_at": 11
+    },
+    {
+      "name": "Knot",
+      "facet": "Units and measurement",
+      "known_at": 12
+    },
+    {
+      "name": "Atomic clock",
+      "facet": "Units and measurement",
+      "known_at": 12
+    },
+    {
+      "name": "Refrigerator",
+      "facet": "Kitchen and everyday science",
+      "known_at": 2
+    },
+    {
+      "name": "Soap",
+      "facet": "Kitchen and everyday science",
+      "known_at": 4
+    },
+    {
+      "name": "Dissolving salt",
+      "facet": "Kitchen and everyday science",
+      "known_at": 5
+    },
+    {
+      "name": "Vinegar",
+      "facet": "Kitchen and everyday science",
+      "known_at": 5
+    },
+    {
+      "name": "Baking soda",
+      "facet": "Kitchen and everyday science",
+      "known_at": 6
+    },
+    {
+      "name": "Onion tears",
+      "facet": "Kitchen and everyday science",
+      "known_at": 6
+    },
+    {
+      "name": "Fizzy drinks",
+      "facet": "Kitchen and everyday science",
+      "known_at": 6
+    },
+    {
+      "name": "Yeast",
+      "facet": "Kitchen and everyday science",
+      "known_at": 7
+    },
+    {
+      "name": "Browning apple",
+      "facet": "Kitchen and everyday science",
+      "known_at": 7
+    },
+    {
+      "name": "Salt on icy roads",
+      "facet": "Kitchen and everyday science",
+      "known_at": 9
+    },
+    {
+      "name": "Induction cooktop",
+      "facet": "Kitchen and everyday science",
+      "known_at": 11
+    },
+    {
+      "name": "Protein denaturation",
+      "facet": "Kitchen and everyday science",
+      "known_at": 13
+    }
+  ]
+}

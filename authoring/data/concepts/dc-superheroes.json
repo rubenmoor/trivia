@@ -1,0 +1,1037 @@
+{
+  "subcategory": "dc-superheroes",
+  "facets": [
+    "Superman and his world",
+    "Batman and Gotham City",
+    "Wonder Woman and the Amazons",
+    "The Justice League team",
+    "The Flash, Green Lantern and Aquaman",
+    "Famous DC villains",
+    "Sidekicks, families and allies",
+    "Secret identities and origins",
+    "Superpowers, gadgets and weaknesses",
+    "Hometowns, hideouts and headquarters",
+    "DC films and TV series",
+    "Creators, comics and DC history"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 1,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Superman",
+      "facet": "Superman and his world",
+      "known_at": 1
+    },
+    {
+      "name": "Lois Lane",
+      "facet": "Superman and his world",
+      "known_at": 6
+    },
+    {
+      "name": "Jimmy Olsen",
+      "facet": "Superman and his world",
+      "known_at": 11
+    },
+    {
+      "name": "Perry White",
+      "facet": "Superman and his world",
+      "known_at": 13
+    },
+    {
+      "name": "Daily Planet",
+      "facet": "Superman and his world",
+      "known_at": 8
+    },
+    {
+      "name": "Jor-El",
+      "facet": "Superman and his world",
+      "known_at": 10
+    },
+    {
+      "name": "Lara Lor-Van",
+      "facet": "Superman and his world",
+      "known_at": 14
+    },
+    {
+      "name": "Jonathan Kent",
+      "facet": "Superman and his world",
+      "known_at": 10
+    },
+    {
+      "name": "Martha Kent",
+      "facet": "Superman and his world",
+      "known_at": 10
+    },
+    {
+      "name": "Supergirl",
+      "facet": "Superman and his world",
+      "known_at": 4
+    },
+    {
+      "name": "Superboy",
+      "facet": "Superman and his world",
+      "known_at": 7
+    },
+    {
+      "name": "Krypto the Superdog",
+      "facet": "Superman and his world",
+      "known_at": 5
+    },
+    {
+      "name": "Superman's S-shield",
+      "facet": "Superman and his world",
+      "known_at": 2
+    },
+    {
+      "name": "Superman's cape",
+      "facet": "Superman and his world",
+      "known_at": 1
+    },
+    {
+      "name": "Phantom Zone",
+      "facet": "Superman and his world",
+      "known_at": 12
+    },
+    {
+      "name": "Kandor",
+      "facet": "Superman and his world",
+      "known_at": 14
+    },
+    {
+      "name": "Steel",
+      "facet": "Superman and his world",
+      "known_at": 13
+    },
+    {
+      "name": "Batman",
+      "facet": "Batman and Gotham City",
+      "known_at": 1
+    },
+    {
+      "name": "Alfred Pennyworth",
+      "facet": "Batman and Gotham City",
+      "known_at": 6
+    },
+    {
+      "name": "James Gordon",
+      "facet": "Batman and Gotham City",
+      "known_at": 8
+    },
+    {
+      "name": "Bat-Signal",
+      "facet": "Batman and Gotham City",
+      "known_at": 4
+    },
+    {
+      "name": "Lucius Fox",
+      "facet": "Batman and Gotham City",
+      "known_at": 12
+    },
+    {
+      "name": "Wayne Enterprises",
+      "facet": "Batman and Gotham City",
+      "known_at": 10
+    },
+    {
+      "name": "Thomas Wayne",
+      "facet": "Batman and Gotham City",
+      "known_at": 10
+    },
+    {
+      "name": "Martha Wayne",
+      "facet": "Batman and Gotham City",
+      "known_at": 10
+    },
+    {
+      "name": "Crime Alley",
+      "facet": "Batman and Gotham City",
+      "known_at": 13
+    },
+    {
+      "name": "Batwing",
+      "facet": "Batman and Gotham City",
+      "known_at": 8
+    },
+    {
+      "name": "Gotham City Police Department",
+      "facet": "Batman and Gotham City",
+      "known_at": 9
+    },
+    {
+      "name": "Harvey Bullock",
+      "facet": "Batman and Gotham City",
+      "known_at": 14
+    },
+    {
+      "name": "Leslie Thompkins",
+      "facet": "Batman and Gotham City",
+      "known_at": 15
+    },
+    {
+      "name": "Ace the Bat-Hound",
+      "facet": "Batman and Gotham City",
+      "known_at": 9
+    },
+    {
+      "name": "Batman's cowl",
+      "facet": "Batman and Gotham City",
+      "known_at": 5
+    },
+    {
+      "name": "Court of Owls",
+      "facet": "Batman and Gotham City",
+      "known_at": 14
+    },
+    {
+      "name": "Amazons",
+      "facet": "Wonder Woman and the Amazons",
+      "known_at": 7
+    },
+    {
+      "name": "Hippolyta",
+      "facet": "Wonder Woman and the Amazons",
+      "known_at": 10
+    },
+    {
+      "name": "Antiope",
+      "facet": "Wonder Woman and the Amazons",
+      "known_at": 13
+    },
+    {
+      "name": "Themyscira",
+      "facet": "Wonder Woman and the Amazons",
+      "known_at": 9
+    },
+    {
+      "name": "Lasso of Truth",
+      "facet": "Wonder Woman and the Amazons",
+      "known_at": 5
+    },
+    {
+      "name": "Bracelets of Submission",
+      "facet": "Wonder Woman and the Amazons",
+      "known_at": 7
+    },
+    {
+      "name": "Wonder Woman's tiara",
+      "facet": "Wonder Woman and the Amazons",
+      "known_at": 5
+    },
+    {
+      "name": "Invisible Jet",
+      "facet": "Wonder Woman and the Amazons",
+      "known_at": 8
+    },
+    {
+      "name": "Steve Trevor",
+      "facet": "Wonder Woman and the Amazons",
+      "known_at": 10
+    },
+    {
+      "name": "Etta Candy",
+      "facet": "Wonder Woman and the Amazons",
+      "known_at": 14
+    },
+    {
+      "name": "Wonder Girl",
+      "facet": "Wonder Woman and the Amazons",
+      "known_at": 10
+    },
+    {
+      "name": "Godkiller sword",
+      "facet": "Wonder Woman and the Amazons",
+      "known_at": 13
+    },
+    {
+      "name": "Wonder Woman's shield",
+      "facet": "Wonder Woman and the Amazons",
+      "known_at": 7
+    },
+    {
+      "name": "Aphrodite",
+      "facet": "Wonder Woman and the Amazons",
+      "known_at": 11
+    },
+    {
+      "name": "Justice League",
+      "facet": "The Justice League team",
+      "known_at": 4
+    },
+    {
+      "name": "Cyborg",
+      "facet": "The Justice League team",
+      "known_at": 5
+    },
+    {
+      "name": "Martian Manhunter",
+      "facet": "The Justice League team",
+      "known_at": 9
+    },
+    {
+      "name": "Green Arrow",
+      "facet": "The Justice League team",
+      "known_at": 8
+    },
+    {
+      "name": "Black Canary",
+      "facet": "The Justice League team",
+      "known_at": 11
+    },
+    {
+      "name": "Hawkgirl",
+      "facet": "The Justice League team",
+      "known_at": 9
+    },
+    {
+      "name": "Hawkman",
+      "facet": "The Justice League team",
+      "known_at": 10
+    },
+    {
+      "name": "Zatanna",
+      "facet": "The Justice League team",
+      "known_at": 12
+    },
+    {
+      "name": "Firestorm",
+      "facet": "The Justice League team",
+      "known_at": 13
+    },
+    {
+      "name": "Plastic Man",
+      "facet": "The Justice League team",
+      "known_at": 12
+    },
+    {
+      "name": "Blue Beetle",
+      "facet": "The Justice League team",
+      "known_at": 11
+    },
+    {
+      "name": "Booster Gold",
+      "facet": "The Justice League team",
+      "known_at": 13
+    },
+    {
+      "name": "Justice Society of America",
+      "facet": "The Justice League team",
+      "known_at": 13
+    },
+    {
+      "name": "Justice League Dark",
+      "facet": "The Justice League team",
+      "known_at": 14
+    },
+    {
+      "name": "The Flash",
+      "facet": "The Flash, Green Lantern and Aquaman",
+      "known_at": 2
+    },
+    {
+      "name": "Barry Allen",
+      "facet": "The Flash, Green Lantern and Aquaman",
+      "known_at": 8
+    },
+    {
+      "name": "Wally West",
+      "facet": "The Flash, Green Lantern and Aquaman",
+      "known_at": 12
+    },
+    {
+      "name": "Jay Garrick",
+      "facet": "The Flash, Green Lantern and Aquaman",
+      "known_at": 13
+    },
+    {
+      "name": "Green Lantern",
+      "facet": "The Flash, Green Lantern and Aquaman",
+      "known_at": 4
+    },
+    {
+      "name": "Hal Jordan",
+      "facet": "The Flash, Green Lantern and Aquaman",
+      "known_at": 10
+    },
+    {
+      "name": "John Stewart",
+      "facet": "The Flash, Green Lantern and Aquaman",
+      "known_at": 11
+    },
+    {
+      "name": "Guy Gardner",
+      "facet": "The Flash, Green Lantern and Aquaman",
+      "known_at": 14
+    },
+    {
+      "name": "Kyle Rayner",
+      "facet": "The Flash, Green Lantern and Aquaman",
+      "known_at": 14
+    },
+    {
+      "name": "Alan Scott",
+      "facet": "The Flash, Green Lantern and Aquaman",
+      "known_at": 14
+    },
+    {
+      "name": "Green Lantern Corps",
+      "facet": "The Flash, Green Lantern and Aquaman",
+      "known_at": 10
+    },
+    {
+      "name": "Guardians of the Universe",
+      "facet": "The Flash, Green Lantern and Aquaman",
+      "known_at": 12
+    },
+    {
+      "name": "Kilowog",
+      "facet": "The Flash, Green Lantern and Aquaman",
+      "known_at": 13
+    },
+    {
+      "name": "Green Lantern Oath",
+      "facet": "The Flash, Green Lantern and Aquaman",
+      "known_at": 12
+    },
+    {
+      "name": "Mera",
+      "facet": "The Flash, Green Lantern and Aquaman",
+      "known_at": 10
+    },
+    {
+      "name": "Aquaman's trident",
+      "facet": "The Flash, Green Lantern and Aquaman",
+      "known_at": 5
+    },
+    {
+      "name": "Jessica Cruz",
+      "facet": "The Flash, Green Lantern and Aquaman",
+      "known_at": 12
+    },
+    {
+      "name": "Catwoman",
+      "facet": "Famous DC villains",
+      "known_at": 3
+    },
+    {
+      "name": "Riddler",
+      "facet": "Famous DC villains",
+      "known_at": 5
+    },
+    {
+      "name": "Two-Face",
+      "facet": "Famous DC villains",
+      "known_at": 7
+    },
+    {
+      "name": "Poison Ivy",
+      "facet": "Famous DC villains",
+      "known_at": 6
+    },
+    {
+      "name": "Mr. Freeze",
+      "facet": "Famous DC villains",
+      "known_at": 6
+    },
+    {
+      "name": "Bizarro",
+      "facet": "Famous DC villains",
+      "known_at": 9
+    },
+    {
+      "name": "Black Manta",
+      "facet": "Famous DC villains",
+      "known_at": 10
+    },
+    {
+      "name": "Reverse-Flash",
+      "facet": "Famous DC villains",
+      "known_at": 11
+    },
+    {
+      "name": "Gorilla Grodd",
+      "facet": "Famous DC villains",
+      "known_at": 11
+    },
+    {
+      "name": "Black Adam",
+      "facet": "Famous DC villains",
+      "known_at": 9
+    },
+    {
+      "name": "Nightwing",
+      "facet": "Sidekicks, families and allies",
+      "known_at": 9
+    },
+    {
+      "name": "Jason Todd",
+      "facet": "Sidekicks, families and allies",
+      "known_at": 13
+    },
+    {
+      "name": "Tim Drake",
+      "facet": "Sidekicks, families and allies",
+      "known_at": 14
+    },
+    {
+      "name": "Damian Wayne",
+      "facet": "Sidekicks, families and allies",
+      "known_at": 11
+    },
+    {
+      "name": "Batgirl",
+      "facet": "Sidekicks, families and allies",
+      "known_at": 4
+    },
+    {
+      "name": "Kid Flash",
+      "facet": "Sidekicks, families and allies",
+      "known_at": 9
+    },
+    {
+      "name": "Aqualad",
+      "facet": "Sidekicks, families and allies",
+      "known_at": 11
+    },
+    {
+      "name": "Speedy",
+      "facet": "Sidekicks, families and allies",
+      "known_at": 13
+    },
+    {
+      "name": "Teen Titans",
+      "facet": "Sidekicks, families and allies",
+      "known_at": 4
+    },
+    {
+      "name": "Starfire",
+      "facet": "Sidekicks, families and allies",
+      "known_at": 5
+    },
+    {
+      "name": "Beast Boy",
+      "facet": "Sidekicks, families and allies",
+      "known_at": 4
+    },
+    {
+      "name": "Batwoman",
+      "facet": "Sidekicks, families and allies",
+      "known_at": 11
+    },
+    {
+      "name": "Huntress",
+      "facet": "Sidekicks, families and allies",
+      "known_at": 13
+    },
+    {
+      "name": "Stargirl",
+      "facet": "Sidekicks, families and allies",
+      "known_at": 12
+    },
+    {
+      "name": "Legion of Super-Heroes",
+      "facet": "Sidekicks, families and allies",
+      "known_at": 13
+    },
+    {
+      "name": "Clark Kent",
+      "facet": "Secret identities and origins",
+      "known_at": 4
+    },
+    {
+      "name": "Kal-El",
+      "facet": "Secret identities and origins",
+      "known_at": 9
+    },
+    {
+      "name": "Diana Prince",
+      "facet": "Secret identities and origins",
+      "known_at": 8
+    },
+    {
+      "name": "Arthur Curry",
+      "facet": "Secret identities and origins",
+      "known_at": 10
+    },
+    {
+      "name": "Oliver Queen",
+      "facet": "Secret identities and origins",
+      "known_at": 10
+    },
+    {
+      "name": "Selina Kyle",
+      "facet": "Secret identities and origins",
+      "known_at": 10
+    },
+    {
+      "name": "Harleen Quinzel",
+      "facet": "Secret identities and origins",
+      "known_at": 11
+    },
+    {
+      "name": "Victor Stone",
+      "facet": "Secret identities and origins",
+      "known_at": 12
+    },
+    {
+      "name": "Billy Batson",
+      "facet": "Secret identities and origins",
+      "known_at": 10
+    },
+    {
+      "name": "J'onn J'onzz",
+      "facet": "Secret identities and origins",
+      "known_at": 13
+    },
+    {
+      "name": "Kara Zor-El",
+      "facet": "Secret identities and origins",
+      "known_at": 11
+    },
+    {
+      "name": "Pamela Isley",
+      "facet": "Secret identities and origins",
+      "known_at": 13
+    },
+    {
+      "name": "Edward Nygma",
+      "facet": "Secret identities and origins",
+      "known_at": 12
+    },
+    {
+      "name": "Oswald Cobblepot",
+      "facet": "Secret identities and origins",
+      "known_at": 12
+    },
+    {
+      "name": "Harvey Dent",
+      "facet": "Secret identities and origins",
+      "known_at": 10
+    },
+    {
+      "name": "Ace Chemicals",
+      "facet": "Secret identities and origins",
+      "known_at": 13
+    },
+    {
+      "name": "Superman's rocket",
+      "facet": "Secret identities and origins",
+      "known_at": 5
+    },
+    {
+      "name": "Kryptonite",
+      "facet": "Superpowers, gadgets and weaknesses",
+      "known_at": 4
+    },
+    {
+      "name": "Red Kryptonite",
+      "facet": "Superpowers, gadgets and weaknesses",
+      "known_at": 13
+    },
+    {
+      "name": "Heat vision",
+      "facet": "Superpowers, gadgets and weaknesses",
+      "known_at": 4
+    },
+    {
+      "name": "X-ray vision",
+      "facet": "Superpowers, gadgets and weaknesses",
+      "known_at": 4
+    },
+    {
+      "name": "Freeze breath",
+      "facet": "Superpowers, gadgets and weaknesses",
+      "known_at": 6
+    },
+    {
+      "name": "Speed Force",
+      "facet": "Superpowers, gadgets and weaknesses",
+      "known_at": 11
+    },
+    {
+      "name": "Power ring",
+      "facet": "Superpowers, gadgets and weaknesses",
+      "known_at": 6
+    },
+    {
+      "name": "Power battery",
+      "facet": "Superpowers, gadgets and weaknesses",
+      "known_at": 12
+    },
+    {
+      "name": "Batarang",
+      "facet": "Superpowers, gadgets and weaknesses",
+      "known_at": 5
+    },
+    {
+      "name": "Utility belt",
+      "facet": "Superpowers, gadgets and weaknesses",
+      "known_at": 5
+    },
+    {
+      "name": "Batmobile",
+      "facet": "Superpowers, gadgets and weaknesses",
+      "known_at": 2
+    },
+    {
+      "name": "Grappling gun",
+      "facet": "Superpowers, gadgets and weaknesses",
+      "known_at": 8
+    },
+    {
+      "name": "Red sun",
+      "facet": "Superpowers, gadgets and weaknesses",
+      "known_at": 12
+    },
+    {
+      "name": "Mother Box",
+      "facet": "Superpowers, gadgets and weaknesses",
+      "known_at": 13
+    },
+    {
+      "name": "Cosmic Treadmill",
+      "facet": "Superpowers, gadgets and weaknesses",
+      "known_at": 15
+    },
+    {
+      "name": "Joker venom",
+      "facet": "Superpowers, gadgets and weaknesses",
+      "known_at": 11
+    },
+    {
+      "name": "Fear toxin",
+      "facet": "Superpowers, gadgets and weaknesses",
+      "known_at": 10
+    },
+    {
+      "name": "Smallville",
+      "facet": "Hometowns, hideouts and headquarters",
+      "known_at": 9
+    },
+    {
+      "name": "Krypton",
+      "facet": "Hometowns, hideouts and headquarters",
+      "known_at": 4
+    },
+    {
+      "name": "Fortress of Solitude",
+      "facet": "Hometowns, hideouts and headquarters",
+      "known_at": 9
+    },
+    {
+      "name": "Batcave",
+      "facet": "Hometowns, hideouts and headquarters",
+      "known_at": 3
+    },
+    {
+      "name": "Wayne Manor",
+      "facet": "Hometowns, hideouts and headquarters",
+      "known_at": 7
+    },
+    {
+      "name": "Arkham Asylum",
+      "facet": "Hometowns, hideouts and headquarters",
+      "known_at": 9
+    },
+    {
+      "name": "Oa",
+      "facet": "Hometowns, hideouts and headquarters",
+      "known_at": 13
+    },
+    {
+      "name": "Central City",
+      "facet": "Hometowns, hideouts and headquarters",
+      "known_at": 11
+    },
+    {
+      "name": "Coast City",
+      "facet": "Hometowns, hideouts and headquarters",
+      "known_at": 14
+    },
+    {
+      "name": "Star City",
+      "facet": "Hometowns, hideouts and headquarters",
+      "known_at": 13
+    },
+    {
+      "name": "Keystone City",
+      "facet": "Hometowns, hideouts and headquarters",
+      "known_at": 14
+    },
+    {
+      "name": "Blüdhaven",
+      "facet": "Hometowns, hideouts and headquarters",
+      "known_at": 15
+    },
+    {
+      "name": "Hall of Justice",
+      "facet": "Hometowns, hideouts and headquarters",
+      "known_at": 9
+    },
+    {
+      "name": "Watchtower",
+      "facet": "Hometowns, hideouts and headquarters",
+      "known_at": 12
+    },
+    {
+      "name": "Titans Tower",
+      "facet": "Hometowns, hideouts and headquarters",
+      "known_at": 6
+    },
+    {
+      "name": "Apokolips",
+      "facet": "Hometowns, hideouts and headquarters",
+      "known_at": 13
+    },
+    {
+      "name": "LexCorp",
+      "facet": "Hometowns, hideouts and headquarters",
+      "known_at": 10
+    },
+    {
+      "name": "Superman (1978 film)",
+      "facet": "DC films and TV series",
+      "known_at": 11
+    },
+    {
+      "name": "Batman (1989 film)",
+      "facet": "DC films and TV series",
+      "known_at": 12
+    },
+    {
+      "name": "Batman Begins",
+      "facet": "DC films and TV series",
+      "known_at": 11
+    },
+    {
+      "name": "The Dark Knight",
+      "facet": "DC films and TV series",
+      "known_at": 9
+    },
+    {
+      "name": "Man of Steel",
+      "facet": "DC films and TV series",
+      "known_at": 10
+    },
+    {
+      "name": "Batman v Superman: Dawn of Justice",
+      "facet": "DC films and TV series",
+      "known_at": 9
+    },
+    {
+      "name": "Wonder Woman (2017 film)",
+      "facet": "DC films and TV series",
+      "known_at": 8
+    },
+    {
+      "name": "Justice League (2017 film)",
+      "facet": "DC films and TV series",
+      "known_at": 9
+    },
+    {
+      "name": "Aquaman (2018 film)",
+      "facet": "DC films and TV series",
+      "known_at": 8
+    },
+    {
+      "name": "Shazam! (2019 film)",
+      "facet": "DC films and TV series",
+      "known_at": 8
+    },
+    {
+      "name": "Joker (2019 film)",
+      "facet": "DC films and TV series",
+      "known_at": 11
+    },
+    {
+      "name": "The Batman (2022 film)",
+      "facet": "DC films and TV series",
+      "known_at": 10
+    },
+    {
+      "name": "Superman (2025 film)",
+      "facet": "DC films and TV series",
+      "known_at": 9
+    },
+    {
+      "name": "The Lego Batman Movie",
+      "facet": "DC films and TV series",
+      "known_at": 4
+    },
+    {
+      "name": "DC League of Super-Pets",
+      "facet": "DC films and TV series",
+      "known_at": 4
+    },
+    {
+      "name": "Suicide Squad (2016 film)",
+      "facet": "DC films and TV series",
+      "known_at": 10
+    },
+    {
+      "name": "Batman (1966 TV series)",
+      "facet": "DC films and TV series",
+      "known_at": 12
+    },
+    {
+      "name": "Batman: The Animated Series",
+      "facet": "DC films and TV series",
+      "known_at": 11
+    },
+    {
+      "name": "Teen Titans Go!",
+      "facet": "DC films and TV series",
+      "known_at": 3
+    },
+    {
+      "name": "Smallville (TV series)",
+      "facet": "DC films and TV series",
+      "known_at": 11
+    },
+    {
+      "name": "The Flash (TV series)",
+      "facet": "DC films and TV series",
+      "known_at": 9
+    },
+    {
+      "name": "Wonder Woman (1975 TV series)",
+      "facet": "DC films and TV series",
+      "known_at": 13
+    },
+    {
+      "name": "Christopher Reeve",
+      "facet": "DC films and TV series",
+      "known_at": 11
+    },
+    {
+      "name": "Gal Gadot",
+      "facet": "DC films and TV series",
+      "known_at": 8
+    },
+    {
+      "name": "Jerry Siegel",
+      "facet": "Creators, comics and DC history",
+      "known_at": 14
+    },
+    {
+      "name": "Joe Shuster",
+      "facet": "Creators, comics and DC history",
+      "known_at": 14
+    },
+    {
+      "name": "Bob Kane",
+      "facet": "Creators, comics and DC history",
+      "known_at": 13
+    },
+    {
+      "name": "Bill Finger",
+      "facet": "Creators, comics and DC history",
+      "known_at": 14
+    },
+    {
+      "name": "William Moulton Marston",
+      "facet": "Creators, comics and DC history",
+      "known_at": 15
+    },
+    {
+      "name": "Frank Miller",
+      "facet": "Creators, comics and DC history",
+      "known_at": 13
+    },
+    {
+      "name": "Alan Moore",
+      "facet": "Creators, comics and DC history",
+      "known_at": 13
+    },
+    {
+      "name": "Jim Lee",
+      "facet": "Creators, comics and DC history",
+      "known_at": 14
+    },
+    {
+      "name": "Action Comics #1",
+      "facet": "Creators, comics and DC history",
+      "known_at": 13
+    },
+    {
+      "name": "Detective Comics #27",
+      "facet": "Creators, comics and DC history",
+      "known_at": 14
+    },
+    {
+      "name": "Golden Age of Comic Books",
+      "facet": "Creators, comics and DC history",
+      "known_at": 12
+    },
+    {
+      "name": "Crisis on Infinite Earths",
+      "facet": "Creators, comics and DC history",
+      "known_at": 14
+    },
+    {
+      "name": "The Death of Superman",
+      "facet": "Creators, comics and DC history",
+      "known_at": 11
+    },
+    {
+      "name": "The Dark Knight Returns",
+      "facet": "Creators, comics and DC history",
+      "known_at": 13
+    },
+    {
+      "name": "The Sandman",
+      "facet": "Creators, comics and DC history",
+      "known_at": 12
+    },
+    {
+      "name": "Batman: The Killing Joke",
+      "facet": "Creators, comics and DC history",
+      "known_at": 14
+    },
+    {
+      "name": "Kingdom Come",
+      "facet": "Creators, comics and DC history",
+      "known_at": 15
+    }
+  ]
+}

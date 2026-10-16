@@ -158,7 +158,8 @@
     {
       "name": "Ayahuasca",
       "facet": "Pueblos indígenas amazónicos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: Ayahuasca is a psychedelic drug; not family-friendly."
     },
     {
       "name": "Parque Indígena del Xingu",
@@ -560,7 +561,8 @@
     {
       "name": "Dorothy Stang",
       "facet": "Deforestación y conservación moderna",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: Dorothy Stang is mainly known for her murder; a 'when' question would be about her death, and other facts are too obscure."
     },
     {
       "name": "Reservas extractivistas",
