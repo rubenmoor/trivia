@@ -225,32 +225,38 @@
     {
       "name": "Divino Niño del 20 de Julio",
       "facet": "Santuarios y templos de Colombia",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La Ermita de Cali",
       "facet": "Santuarios y templos de Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Catedral de Cartagena",
       "facet": "Santuarios y templos de Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Catedral de Santa Marta",
       "facet": "Santuarios y templos de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Iglesia de San Ignacio de Bogotá",
       "facet": "Santuarios y templos de Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ermita de la Veracruz de Medellín",
       "facet": "Santuarios y templos de Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Peregrino",
@@ -270,7 +276,8 @@
     {
       "name": "Procesiones de Semana Santa de Popayán",
       "facet": "Peregrinaciones y rutas sagradas",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Santiago Apóstol",
@@ -335,7 +342,8 @@
     {
       "name": "Laguna de Iguaque",
       "facet": "Montañas, ríos y naturaleza sagrada",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Apu",

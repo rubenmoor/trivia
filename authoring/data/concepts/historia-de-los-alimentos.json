@@ -12,7 +12,8 @@
     "Marcas y comida rápida",
     "Utensilios y aparatos de cocina",
     "Personajes de la gastronomía",
-    "Nombres y palabras de alimentos"
+    "Nombres y palabras de alimentos",
+    "Comidas de fiestas y tradiciones"
   ],
   "axis_fit": {
     "move": {
@@ -161,7 +162,8 @@
     {
       "name": "Cecina",
       "facet": "Inventos y técnicas de conservación",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Liofilización",
@@ -176,12 +178,14 @@
     {
       "name": "Agua de panela",
       "facet": "Historia de las bebidas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Aguardiente",
       "facet": "Historia de las bebidas",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Kaldi y las cabras",
@@ -191,7 +195,8 @@
     {
       "name": "Rosquilla",
       "facet": "Dulces, postres y golosinas",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Malvavisco",
@@ -216,47 +221,56 @@
     {
       "name": "Tamal tolimense",
       "facet": "Historia de la cocina colombiana",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hormigas culonas",
       "facet": "Historia de la cocina colombiana",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fritanga",
       "facet": "Historia de la cocina colombiana",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Changua",
       "facet": "Historia de la cocina colombiana",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mote de queso",
       "facet": "Historia de la cocina colombiana",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mute santandereano",
       "facet": "Historia de la cocina colombiana",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cuchuco",
       "facet": "Historia de la cocina colombiana",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Viudo de pescado",
       "facet": "Historia de la cocina colombiana",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Posta negra cartagenera",
       "facet": "Historia de la cocina colombiana",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sartén",
@@ -271,7 +285,8 @@
     {
       "name": "Budare",
       "facet": "Utensilios y aparatos de cocina",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Auguste Gusteau",
@@ -286,7 +301,8 @@
     {
       "name": "Harry Sasson",
       "facet": "Personajes de la gastronomía",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Jamie Oliver",
@@ -296,7 +312,8 @@
     {
       "name": "Leonor Espinosa",
       "facet": "Personajes de la gastronomía",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gastón Acurio",
@@ -376,7 +393,577 @@
     {
       "name": "Compañero",
       "facet": "Nombres y palabras de alimentos",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Potato",
+      "facet": "Alimentos del Nuevo Mundo",
+      "known_at": 1
+    },
+    {
+      "name": "Corn",
+      "facet": "Alimentos del Nuevo Mundo",
+      "known_at": 2
+    },
+    {
+      "name": "Vanilla",
+      "facet": "Alimentos del Nuevo Mundo",
+      "known_at": 4
+    },
+    {
+      "name": "Chili pepper",
+      "facet": "Alimentos del Nuevo Mundo",
+      "known_at": 5
+    },
+    {
+      "name": "Pineapple",
+      "facet": "Alimentos del Nuevo Mundo",
+      "known_at": 4
+    },
+    {
+      "name": "Pumpkin",
+      "facet": "Alimentos del Nuevo Mundo",
+      "known_at": 4
+    },
+    {
+      "name": "Popcorn",
+      "facet": "Alimentos del Nuevo Mundo",
+      "known_at": 3
+    },
+    {
+      "name": "Quinoa",
+      "facet": "Alimentos del Nuevo Mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Cassava",
+      "facet": "Alimentos del Nuevo Mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Maple syrup",
+      "facet": "Alimentos del Nuevo Mundo",
+      "known_at": 7
+    },
+    {
+      "name": "Olive oil",
+      "facet": "Comida de pueblos antiguos",
+      "known_at": 6
+    },
+    {
+      "name": "Honey",
+      "facet": "Comida de pueblos antiguos",
+      "known_at": 3
+    },
+    {
+      "name": "Wheat",
+      "facet": "Comida de pueblos antiguos",
+      "known_at": 3
+    },
+    {
+      "name": "Rice",
+      "facet": "Comida de pueblos antiguos",
+      "known_at": 2
+    },
+    {
+      "name": "Barley",
+      "facet": "Comida de pueblos antiguos",
+      "known_at": 9
+    },
+    {
+      "name": "Neolithic Revolution",
+      "facet": "Comida de pueblos antiguos",
+      "known_at": 11
+    },
+    {
+      "name": "Fertile Crescent",
+      "facet": "Comida de pueblos antiguos",
+      "known_at": 11
+    },
+    {
+      "name": "Three Sisters",
+      "facet": "Comida de pueblos antiguos",
+      "known_at": 12
+    },
+    {
+      "name": "Pompeii bakery",
+      "facet": "Comida de pueblos antiguos",
+      "known_at": 11
+    },
+    {
+      "name": "Cinnamon",
+      "facet": "Especias y rutas comerciales",
+      "known_at": 4
+    },
+    {
+      "name": "Nutmeg",
+      "facet": "Especias y rutas comerciales",
+      "known_at": 9
+    },
+    {
+      "name": "Clove",
+      "facet": "Especias y rutas comerciales",
+      "known_at": 9
+    },
+    {
+      "name": "Saffron",
+      "facet": "Especias y rutas comerciales",
+      "known_at": 9
+    },
+    {
+      "name": "Turmeric",
+      "facet": "Especias y rutas comerciales",
+      "known_at": 9
+    },
+    {
+      "name": "Salt",
+      "facet": "Especias y rutas comerciales",
+      "known_at": 2
+    },
+    {
+      "name": "Spice Islands",
+      "facet": "Especias y rutas comerciales",
+      "known_at": 12
+    },
+    {
+      "name": "Silk Road",
+      "facet": "Especias y rutas comerciales",
+      "known_at": 9
+    },
+    {
+      "name": "Dutch East India Company",
+      "facet": "Especias y rutas comerciales",
+      "known_at": 12
+    },
+    {
+      "name": "Magellan's voyage",
+      "facet": "Especias y rutas comerciales",
+      "known_at": 10
+    },
+    {
+      "name": "Zanzibar",
+      "facet": "Especias y rutas comerciales",
       "known_at": 13
+    },
+    {
+      "name": "Ice house",
+      "facet": "Inventos y técnicas de conservación",
+      "known_at": 11
+    },
+    {
+      "name": "Pickling",
+      "facet": "Inventos y técnicas de conservación",
+      "known_at": 8
+    },
+    {
+      "name": "Fermentation",
+      "facet": "Inventos y técnicas de conservación",
+      "known_at": 9
+    },
+    {
+      "name": "Can opener",
+      "facet": "Inventos y técnicas de conservación",
+      "known_at": 5
+    },
+    {
+      "name": "Jerky",
+      "facet": "Inventos y técnicas de conservación",
+      "known_at": 7
+    },
+    {
+      "name": "Hardtack",
+      "facet": "Inventos y técnicas de conservación",
+      "known_at": 12
+    },
+    {
+      "name": "Aluminum foil",
+      "facet": "Inventos y técnicas de conservación",
+      "known_at": 5
+    },
+    {
+      "name": "Frederic Tudor",
+      "facet": "Inventos y técnicas de conservación",
+      "known_at": 15
+    },
+    {
+      "name": "Sliced bread",
+      "facet": "Inventos y técnicas de conservación",
+      "known_at": 6
+    },
+    {
+      "name": "Condensed milk",
+      "facet": "Inventos y técnicas de conservación",
+      "known_at": 8
+    },
+    {
+      "name": "Caesar salad",
+      "facet": "Orígenes de platos famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Hamburger",
+      "facet": "Orígenes de platos famosos",
+      "known_at": 2
+    },
+    {
+      "name": "Hot dog",
+      "facet": "Orígenes de platos famosos",
+      "known_at": 2
+    },
+    {
+      "name": "Spaghetti",
+      "facet": "Orígenes de platos famosos",
+      "known_at": 2
+    },
+    {
+      "name": "Peking duck",
+      "facet": "Orígenes de platos famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Beef Stroganoff",
+      "facet": "Orígenes de platos famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Eggs Benedict",
+      "facet": "Orígenes de platos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Chicken tikka masala",
+      "facet": "Orígenes de platos famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Potato chips",
+      "facet": "Orígenes de platos famosos",
+      "known_at": 3
+    },
+    {
+      "name": "French fries",
+      "facet": "Orígenes de platos famosos",
+      "known_at": 2
+    },
+    {
+      "name": "Lasagna",
+      "facet": "Orígenes de platos famosos",
+      "known_at": 3
+    },
+    {
+      "name": "Jollof rice",
+      "facet": "Orígenes de platos famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Coffee",
+      "facet": "Historia de las bebidas",
+      "known_at": 2
+    },
+    {
+      "name": "Tea",
+      "facet": "Historia de las bebidas",
+      "known_at": 2
+    },
+    {
+      "name": "Hot chocolate",
+      "facet": "Historia de las bebidas",
+      "known_at": 2
+    },
+    {
+      "name": "Lemonade",
+      "facet": "Historia de las bebidas",
+      "known_at": 2
+    },
+    {
+      "name": "Boston Tea Party",
+      "facet": "Historia de las bebidas",
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Ottoman coffeehouse",
+      "facet": "Historia de las bebidas",
+      "known_at": 11
+    },
+    {
+      "name": "Soda water",
+      "facet": "Historia de las bebidas",
+      "known_at": 9
+    },
+    {
+      "name": "Chai",
+      "facet": "Historia de las bebidas",
+      "known_at": 7
+    },
+    {
+      "name": "Tea bag",
+      "facet": "Historia de las bebidas",
+      "known_at": 6
+    },
+    {
+      "name": "Chocolate bar",
+      "facet": "Dulces, postres y golosinas",
+      "known_at": 2
+    },
+    {
+      "name": "Ice cream",
+      "facet": "Dulces, postres y golosinas",
+      "known_at": 1
+    },
+    {
+      "name": "Chewing gum",
+      "facet": "Dulces, postres y golosinas",
+      "known_at": 2
+    },
+    {
+      "name": "Cotton candy",
+      "facet": "Dulces, postres y golosinas",
+      "known_at": 2
+    },
+    {
+      "name": "Lollipop",
+      "facet": "Dulces, postres y golosinas",
+      "known_at": 1
+    },
+    {
+      "name": "Macaron",
+      "facet": "Dulces, postres y golosinas",
+      "known_at": 6
+    },
+    {
+      "name": "Peach Melba",
+      "facet": "Dulces, postres y golosinas",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Brigadeiro",
+      "facet": "Dulces, postres y golosinas",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Dulce de leche",
+      "facet": "Dulces, postres y golosinas",
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Turkish delight",
+      "facet": "Dulces, postres y golosinas",
+      "known_at": 7
+    },
+    {
+      "name": "Marzipan",
+      "facet": "Dulces, postres y golosinas",
+      "known_at": 8
+    },
+    {
+      "name": "Chocolate chip cookie",
+      "facet": "Dulces, postres y golosinas",
+      "known_at": 3
+    },
+    {
+      "name": "Popsicle",
+      "facet": "Dulces, postres y golosinas",
+      "known_at": 4
+    },
+    {
+      "name": "Fortune cookie",
+      "facet": "Dulces, postres y golosinas",
+      "known_at": 6
+    },
+    {
+      "name": "Milk chocolate",
+      "facet": "Dulces, postres y golosinas",
+      "known_at": 6
+    },
+    {
+      "name": "Happy Meal",
+      "facet": "Marcas y comida rápida",
+      "known_at": 2
+    },
+    {
+      "name": "Kellogg's Corn Flakes",
+      "facet": "Marcas y comida rápida",
+      "known_at": 5
+    },
+    {
+      "name": "Kinder Surprise",
+      "facet": "Marcas y comida rápida",
+      "known_at": 3
+    },
+    {
+      "name": "Drive-through",
+      "facet": "Marcas y comida rápida",
+      "known_at": 5
+    },
+    {
+      "name": "Microwave oven",
+      "facet": "Utensilios y aparatos de cocina",
+      "known_at": 1
+    },
+    {
+      "name": "Toaster",
+      "facet": "Utensilios y aparatos de cocina",
+      "known_at": 2
+    },
+    {
+      "name": "Fork",
+      "facet": "Utensilios y aparatos de cocina",
+      "known_at": 1
+    },
+    {
+      "name": "Chopsticks",
+      "facet": "Utensilios y aparatos de cocina",
+      "known_at": 2
+    },
+    {
+      "name": "Kettle",
+      "facet": "Utensilios y aparatos de cocina",
+      "known_at": 4
+    },
+    {
+      "name": "Pressure cooker",
+      "facet": "Utensilios y aparatos de cocina",
+      "known_at": 6
+    },
+    {
+      "name": "Mortar and pestle",
+      "facet": "Utensilios y aparatos de cocina",
+      "known_at": 5
+    },
+    {
+      "name": "Tagine",
+      "facet": "Utensilios y aparatos de cocina",
+      "known_at": 9
+    },
+    {
+      "name": "Tandoor",
+      "facet": "Utensilios y aparatos de cocina",
+      "known_at": 10
+    },
+    {
+      "name": "Whisk",
+      "facet": "Utensilios y aparatos de cocina",
+      "known_at": 4
+    },
+    {
+      "name": "Non-stick pan",
+      "facet": "Utensilios y aparatos de cocina",
+      "known_at": 8
+    },
+    {
+      "name": "Moka pot",
+      "facet": "Utensilios y aparatos de cocina",
+      "known_at": 8
+    },
+    {
+      "name": "Rice cooker",
+      "facet": "Utensilios y aparatos de cocina",
+      "known_at": 6
+    },
+    {
+      "name": "Anton Ego",
+      "facet": "Personajes de la gastronomía",
+      "known_at": 8
+    },
+    {
+      "name": "Earl of Sandwich",
+      "facet": "Personajes de la gastronomía",
+      "known_at": 7
+    },
+    {
+      "name": "Catherine de' Medici",
+      "facet": "Personajes de la gastronomía",
+      "known_at": 13
+    },
+    {
+      "name": "Colonel Sanders",
+      "facet": "Personajes de la gastronomía",
+      "known_at": 6
+    },
+    {
+      "name": "Marie Antoinette",
+      "facet": "Personajes de la gastronomía",
+      "known_at": 9
+    },
+    {
+      "name": "Swedish Chef",
+      "facet": "Personajes de la gastronomía",
+      "known_at": 8,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Restaurant",
+      "facet": "Nombres y palabras de alimentos",
+      "known_at": 6
+    },
+    {
+      "name": "Barbecue",
+      "facet": "Nombres y palabras de alimentos",
+      "known_at": 5
+    },
+    {
+      "name": "Mayonnaise",
+      "facet": "Nombres y palabras de alimentos",
+      "known_at": 4
+    },
+    {
+      "name": "Sommelier",
+      "facet": "Nombres y palabras de alimentos",
+      "known_at": 11
+    },
+    {
+      "name": "Salary",
+      "facet": "Nombres y palabras de alimentos",
+      "known_at": 12
+    },
+    {
+      "name": "Picnic",
+      "facet": "Nombres y palabras de alimentos",
+      "known_at": 4
+    },
+    {
+      "name": "Michelin star",
+      "facet": "Nombres y palabras de alimentos",
+      "known_at": 9
+    },
+    {
+      "name": "Toque",
+      "facet": "Nombres y palabras de alimentos",
+      "known_at": 10
+    },
+    {
+      "name": "Mooncake",
+      "facet": "Comidas de fiestas y tradiciones",
+      "known_at": 9
+    },
+    {
+      "name": "Easter egg",
+      "facet": "Comidas de fiestas y tradiciones",
+      "known_at": 3
+    },
+    {
+      "name": "Twelve grapes",
+      "facet": "Comidas de fiestas y tradiciones",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Thanksgiving dinner",
+      "facet": "Comidas de fiestas y tradiciones",
+      "known_at": 7,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-15",
+      "added": 111,
+      "unused": 158
     }
   ]
 }

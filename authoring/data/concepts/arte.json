@@ -96,7 +96,8 @@
     {
       "name": "Los fusilamientos del 3 de mayo",
       "facet": "Pinturas famosas del mundo",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Vincent van Gogh",
@@ -511,12 +512,14 @@
     {
       "name": "Plaza Botero",
       "facet": "Arte colombiano y latinoamericano",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El Gato del Río",
       "facet": "Arte colombiano y latinoamericano",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Diego Rivera",
@@ -526,47 +529,56 @@
     {
       "name": "Débora Arango",
       "facet": "Arte colombiano y latinoamericano",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Alejandro Obregón",
       "facet": "Arte colombiano y latinoamericano",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Oswaldo Guayasamín",
       "facet": "Arte colombiano y latinoamericano",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Omar Rayo",
       "facet": "Arte colombiano y latinoamericano",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Edgar Negret",
       "facet": "Arte colombiano y latinoamericano",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Doris Salcedo",
       "facet": "Arte colombiano y latinoamericano",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pedro Nel Gómez",
       "facet": "Arte colombiano y latinoamericano",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Beatriz González",
       "facet": "Arte colombiano y latinoamericano",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ana Mercedes Hoyos",
       "facet": "Arte colombiano y latinoamericano",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "José Clemente Orozco",
@@ -581,27 +593,32 @@
     {
       "name": "Rufino Tamayo",
       "facet": "Arte colombiano y latinoamericano",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tarsila do Amaral",
       "facet": "Arte colombiano y latinoamericano",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Joaquín Torres García",
       "facet": "Arte colombiano y latinoamericano",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gregorio Vásquez de Arce y Ceballos",
       "facet": "Arte colombiano y latinoamericano",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Feliza Bursztyn",
       "facet": "Arte colombiano y latinoamericano",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Capilla Sixtina",
@@ -621,7 +638,8 @@
     {
       "name": "Estatuas de San Agustín",
       "facet": "Arte prehistórico y antiguo",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cerámica griega",
@@ -636,7 +654,8 @@
     {
       "name": "Chiribiquete",
       "facet": "Arte prehistórico y antiguo",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ánfora",
@@ -646,7 +665,8 @@
     {
       "name": "Orfebrería quimbaya",
       "facet": "Arte prehistórico y antiguo",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cueva de Lascaux",
@@ -676,7 +696,8 @@
     {
       "name": "Sombrero vueltiao",
       "facet": "Arte urbano y artesanías",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Origami",
@@ -686,22 +707,26 @@
     {
       "name": "Chiva",
       "facet": "Arte urbano y artesanías",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Alebrijes",
       "facet": "Arte urbano y artesanías",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Comuna 13",
       "facet": "Arte urbano y artesanías",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Silletas",
       "facet": "Arte urbano y artesanías",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Banksy",
@@ -711,7 +736,8 @@
     {
       "name": "Molas",
       "facet": "Arte urbano y artesanías",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Esténcil",
@@ -721,12 +747,14 @@
     {
       "name": "Cerámica de Ráquira",
       "facet": "Arte urbano y artesanías",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cerámica de La Chamba",
       "facet": "Arte urbano y artesanías",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Flash",

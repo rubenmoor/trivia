@@ -461,32 +461,38 @@
     {
       "name": "Rin Tin Tin",
       "facet": "Perros famosos de cine y dibujos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Dante",
       "facet": "Perros famosos de cine y dibujos",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chase",
       "facet": "Perros famosos de cine y dibujos",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Scrappy-Doo",
       "facet": "Perros famosos de cine y dibujos",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Brian Griffin",
       "facet": "Perros famosos de cine y dibujos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Krypto",
       "facet": "Perros famosos de cine y dibujos",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Hachiko",
@@ -501,7 +507,8 @@
     {
       "name": "Barry",
       "facet": "Perros en la historia y la leyenda",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Balto",
@@ -511,7 +518,8 @@
     {
       "name": "Greyfriars Bobby",
       "facet": "Perros en la historia y la leyenda",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Diógenes el Cínico",
@@ -551,17 +559,20 @@
     {
       "name": "Perro de monte",
       "facet": "Parientes salvajes y origen del perro",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Zorro cangrejero",
       "facet": "Parientes salvajes y origen del perro",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Aguará guazú",
       "facet": "Parientes salvajes y origen del perro",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Domesticación",
@@ -591,7 +602,8 @@
     {
       "name": "Perro que ladra no muerde",
       "facet": "Palabras y dichos perrunos",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Can",
@@ -611,7 +623,8 @@
     {
       "name": "A otro perro con ese hueso",
       "facet": "Palabras y dichos perrunos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Muerto el perro se acabó la rabia",
@@ -621,7 +634,8 @@
     {
       "name": "El perro del hortelano",
       "facet": "Palabras y dichos perrunos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mejor amigo del hombre",
@@ -641,7 +655,8 @@
     {
       "name": "Echar los perros",
       "facet": "Palabras y dichos perrunos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Perro viejo",
@@ -656,12 +671,14 @@
     {
       "name": "Canícula",
       "facet": "Palabras y dichos perrunos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cinología",
       "facet": "Palabras y dichos perrunos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sentado",
@@ -696,12 +713,14 @@
     {
       "name": "Westminster Dog Show",
       "facet": "Entrenamiento, deportes y concursos caninos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Crufts",
       "facet": "Entrenamiento, deportes y concursos caninos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Frisbee canino",
@@ -751,12 +770,14 @@
     {
       "name": "César Millán",
       "facet": "Entrenamiento, deportes y concursos caninos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Perro criollo",
       "facet": "Perros en Colombia y en la calle",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Perro callejero",
@@ -776,12 +797,14 @@
     {
       "name": "Chandoso",
       "facet": "Perros en Colombia y en la calle",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gozque",
       "facet": "Perros en Colombia y en la calle",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Zoonosis",
@@ -791,7 +814,8 @@
     {
       "name": "Jornada de esterilización",
       "facet": "Perros en Colombia y en la calle",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bozal",
@@ -816,7 +840,8 @@
     {
       "name": "Pólvora en diciembre",
       "facet": "Perros en Colombia y en la calle",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Parque para perros",
@@ -826,12 +851,14 @@
     {
       "name": "Ley 1774 de 2016",
       "facet": "Perros en Colombia y en la calle",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Perro de finca",
       "facet": "Perros en Colombia y en la calle",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Guardería canina",

@@ -156,7 +156,8 @@
     {
       "name": "Calendario muisca",
       "facet": "Calendarios del mundo",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Calendario etíope",
@@ -291,22 +292,26 @@
     {
       "name": "Dinero en el zapato",
       "facet": "Nochevieja y sus agüeros",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Barrer la casa hacia afuera",
       "facet": "Nochevieja y sus agüeros",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Espigas de trigo",
       "facet": "Nochevieja y sus agüeros",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Velas de colores",
       "facet": "Nochevieja y sus agüeros",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Agüero",
@@ -331,37 +336,44 @@
     {
       "name": "Puerta del Sol",
       "facet": "Nochevieja y sus agüeros",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Testamento del año viejo",
       "facet": "Año Nuevo en Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Feria de Manizales",
       "facet": "Año Nuevo en Colombia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cinco pa' las doce",
       "facet": "Año Nuevo en Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El año viejo (canción)",
       "facet": "Año Nuevo en Colombia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tony Camargo",
       "facet": "Año Nuevo en Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Prima navideña",
       "facet": "Año Nuevo en Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Joya no Kane",
@@ -386,7 +398,8 @@
     {
       "name": "We Tripantu",
       "facet": "Año Nuevo en el mundo",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Zodiaco chino",
@@ -536,7 +549,8 @@
     {
       "name": "Calendas griegas",
       "facet": "Palabras y nombres del tiempo",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Jueves Santo",

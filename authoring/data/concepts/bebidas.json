@@ -66,7 +66,8 @@
     {
       "name": "Tinto",
       "facet": "Café y tinto",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Café con leche",
@@ -111,12 +112,14 @@
     {
       "name": "Eje Cafetero",
       "facet": "Café y tinto",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Federación Nacional de Cafeteros",
       "facet": "Café y tinto",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Café arábica",
@@ -131,12 +134,14 @@
     {
       "name": "Pintado",
       "facet": "Café y tinto",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Perico",
       "facet": "Café y tinto",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tostión",
@@ -171,7 +176,8 @@
     {
       "name": "Aromática",
       "facet": "Té e infusiones",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Té de jengibre",
@@ -181,7 +187,8 @@
     {
       "name": "Limonaria",
       "facet": "Té e infusiones",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tila",
@@ -236,7 +243,8 @@
     {
       "name": "Jugo de lulo",
       "facet": "Jugos y frutas para beber",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Jugo de maracuyá",
@@ -256,7 +264,8 @@
     {
       "name": "Jugo de tomate de árbol",
       "facet": "Jugos y frutas para beber",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Jugo de mango",
@@ -291,17 +300,20 @@
     {
       "name": "Jugo de feijoa",
       "facet": "Jugos y frutas para beber",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Jugo de borojó",
       "facet": "Jugos y frutas para beber",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Jugo de corozo",
       "facet": "Jugos y frutas para beber",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Batido",
@@ -326,12 +338,14 @@
     {
       "name": "Agua de panela con queso",
       "facet": "Bebidas tradicionales colombianas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Avena colombiana",
       "facet": "Bebidas tradicionales colombianas",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chicha",
@@ -341,57 +355,68 @@
     {
       "name": "Champús",
       "facet": "Bebidas tradicionales colombianas",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Lulada",
       "facet": "Bebidas tradicionales colombianas",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mazamorra",
       "facet": "Bebidas tradicionales colombianas",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chocolate santafereño",
       "facet": "Bebidas tradicionales colombianas",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Guarapo",
       "facet": "Bebidas tradicionales colombianas",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Guandolo",
       "facet": "Bebidas tradicionales colombianas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Forcha",
       "facet": "Bebidas tradicionales colombianas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chucula",
       "facet": "Bebidas tradicionales colombianas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Kola Granulada",
       "facet": "Bebidas tradicionales colombianas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sorbete de curuba",
       "facet": "Bebidas tradicionales colombianas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tereré",
       "facet": "Bebidas típicas del mundo",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Té de burbujas",
@@ -406,7 +431,8 @@
     {
       "name": "Chicha morada",
       "facet": "Bebidas típicas del mundo",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Agua fresca",
@@ -446,17 +472,20 @@
     {
       "name": "Pozol",
       "facet": "Bebidas típicas del mundo",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mote con huesillo",
       "facet": "Bebidas típicas del mundo",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Inca Kola",
       "facet": "Bebidas típicas del mundo",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sprite",
@@ -471,32 +500,38 @@
     {
       "name": "Manzana Postobón",
       "facet": "Gaseosas y refrescos",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pony Malta",
       "facet": "Gaseosas y refrescos",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Kola Román",
       "facet": "Gaseosas y refrescos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Quatro",
       "facet": "Gaseosas y refrescos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Big Cola",
       "facet": "Gaseosas y refrescos",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Dr Pepper",
       "facet": "Gaseosas y refrescos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Ginger ale",
@@ -506,7 +541,8 @@
     {
       "name": "Root beer",
       "facet": "Gaseosas y refrescos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Agua tónica",
@@ -581,7 +617,8 @@
     {
       "name": "Colada",
       "facet": "Chocolate y bebidas calientes",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Agua de canela",
@@ -661,12 +698,14 @@
     {
       "name": "Bolsa de leche",
       "facet": "Leche y bebidas lácteas",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Leche merengada",
       "facet": "Leche y bebidas lácteas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sed",
@@ -761,7 +800,8 @@
     {
       "name": "Motín del té de Boston",
       "facet": "Historia e inventos de las bebidas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Café instantáneo",
@@ -786,7 +826,8 @@
     {
       "name": "Fuente de soda",
       "facet": "Historia e inventos de las bebidas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Comercio del hielo",
@@ -831,7 +872,8 @@
     {
       "name": "Pocillo",
       "facet": "Recipientes y utensilios para beber",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mug",
@@ -841,12 +883,14 @@
     {
       "name": "Tetero",
       "facet": "Recipientes y utensilios para beber",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Vaso de icopor",
       "facet": "Recipientes y utensilios para beber",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chocolatera",
@@ -926,12 +970,14 @@
     {
       "name": "Leche Mu-mu",
       "facet": "Bebidas en películas y cultura pop",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Squishee",
       "facet": "Bebidas en películas y cultura pop",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Slurm",
@@ -967,6 +1013,253 @@
       "name": "Néctar de los dioses",
       "facet": "Bebidas en películas y cultura pop",
       "known_at": 10
+    },
+    {
+      "name": "Cappuccino",
+      "facet": "Café y tinto",
+      "known_at": 6
+    },
+    {
+      "name": "Mocha",
+      "facet": "Café y tinto",
+      "known_at": 9
+    },
+    {
+      "name": "Macchiato",
+      "facet": "Café y tinto",
+      "known_at": 10
+    },
+    {
+      "name": "Cold brew",
+      "facet": "Café y tinto",
+      "known_at": 11
+    },
+    {
+      "name": "Caffeine",
+      "facet": "Café y tinto",
+      "known_at": 6
+    },
+    {
+      "name": "Ethiopian coffee ceremony",
+      "facet": "Café y tinto",
+      "known_at": 13
+    },
+    {
+      "name": "Vietnamese iced coffee",
+      "facet": "Café y tinto",
+      "known_at": 12
+    },
+    {
+      "name": "Green tea",
+      "facet": "Té e infusiones",
+      "known_at": 4
+    },
+    {
+      "name": "Chamomile tea",
+      "facet": "Té e infusiones",
+      "known_at": 6
+    },
+    {
+      "name": "Yerba mate",
+      "facet": "Té e infusiones",
+      "known_at": 9
+    },
+    {
+      "name": "Japanese tea ceremony",
+      "facet": "Té e infusiones",
+      "known_at": 9
+    },
+    {
+      "name": "Afternoon tea",
+      "facet": "Té e infusiones",
+      "known_at": 8
+    },
+    {
+      "name": "Darjeeling tea",
+      "facet": "Té e infusiones",
+      "known_at": 12
+    },
+    {
+      "name": "Iced tea",
+      "facet": "Té e infusiones",
+      "known_at": 3
+    },
+    {
+      "name": "Butter tea",
+      "facet": "Té e infusiones",
+      "known_at": 13
+    },
+    {
+      "name": "Apple juice",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 1
+    },
+    {
+      "name": "Pomegranate juice",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 6
+    },
+    {
+      "name": "Cranberry juice",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 7
+    },
+    {
+      "name": "Grapefruit juice",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 6
+    },
+    {
+      "name": "Thai iced tea",
+      "facet": "Bebidas típicas del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Barley tea",
+      "facet": "Bebidas típicas del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Kola nut",
+      "facet": "Gaseosas y refrescos",
+      "known_at": 12
+    },
+    {
+      "name": "Cocoa bean",
+      "facet": "Chocolate y bebidas calientes",
+      "known_at": 4
+    },
+    {
+      "name": "Ovaltine",
+      "facet": "Chocolate y bebidas calientes",
+      "known_at": 10
+    },
+    {
+      "name": "Whipped cream",
+      "facet": "Chocolate y bebidas calientes",
+      "known_at": 2
+    },
+    {
+      "name": "Milkshake",
+      "facet": "Leche y bebidas lácteas",
+      "known_at": 2
+    },
+    {
+      "name": "Buttermilk",
+      "facet": "Leche y bebidas lácteas",
+      "known_at": 9
+    },
+    {
+      "name": "Oat milk",
+      "facet": "Leche y bebidas lácteas",
+      "known_at": 7
+    },
+    {
+      "name": "Camel milk",
+      "facet": "Leche y bebidas lácteas",
+      "known_at": 6
+    },
+    {
+      "name": "Lactose",
+      "facet": "Leche y bebidas lácteas",
+      "known_at": 8
+    },
+    {
+      "name": "Skim milk",
+      "facet": "Leche y bebidas lácteas",
+      "known_at": 8
+    },
+    {
+      "name": "Mineral water",
+      "facet": "Agua y bebidas hidratantes",
+      "known_at": 5
+    },
+    {
+      "name": "Distilled water",
+      "facet": "Agua y bebidas hidratantes",
+      "known_at": 9
+    },
+    {
+      "name": "Desalination",
+      "facet": "Agua y bebidas hidratantes",
+      "known_at": 10
+    },
+    {
+      "name": "Drinking fountain",
+      "facet": "Agua y bebidas hidratantes",
+      "known_at": 3
+    },
+    {
+      "name": "Pasteurization",
+      "facet": "Historia e inventos de las bebidas",
+      "known_at": 10
+    },
+    {
+      "name": "Port of Mocha",
+      "facet": "Historia e inventos de las bebidas",
+      "known_at": 14
+    },
+    {
+      "name": "Drinking straw",
+      "facet": "Recipientes y utensilios para beber",
+      "known_at": 1
+    },
+    {
+      "name": "Mate gourd",
+      "facet": "Recipientes y utensilios para beber",
+      "known_at": 9
+    },
+    {
+      "name": "Electric kettle",
+      "facet": "Recipientes y utensilios para beber",
+      "known_at": 4
+    },
+    {
+      "name": "Coffee filter",
+      "facet": "Recipientes y utensilios para beber",
+      "known_at": 5
+    },
+    {
+      "name": "Blender",
+      "facet": "Recipientes y utensilios para beber",
+      "known_at": 3
+    },
+    {
+      "name": "Cezve",
+      "facet": "Recipientes y utensilios para beber",
+      "known_at": 13
+    },
+    {
+      "name": "Mrs. Potts",
+      "facet": "Bebidas en películas y cultura pop",
+      "known_at": 3
+    },
+    {
+      "name": "Butterbeer",
+      "facet": "Bebidas en películas y cultura pop",
+      "known_at": 7
+    },
+    {
+      "name": "Polyjuice Potion",
+      "facet": "Bebidas en películas y cultura pop",
+      "known_at": 9
+    },
+    {
+      "name": "Health potion",
+      "facet": "Bebidas en películas y cultura pop",
+      "known_at": 6
+    },
+    {
+      "name": "Lemonade stand",
+      "facet": "Bebidas en películas y cultura pop",
+      "known_at": 4
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-15",
+      "added": 48,
+      "unused": 172
     }
   ]
 }

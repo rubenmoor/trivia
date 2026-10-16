@@ -12,7 +12,9 @@
     "Telenovelas juveniles e infantiles",
     "Adaptaciones y remakes internacionales",
     "Historia de la telenovela y la radionovela",
-    "Canales, horarios y costumbres de verlas"
+    "Canales, horarios y costumbres de verlas",
+    "Dizis turcas y dramas asiáticos",
+    "Soap operas en inglés"
   ],
   "axis_fit": {
     "move": {
@@ -61,47 +63,56 @@
     {
       "name": "La casa de las dos palmas",
       "facet": "Telenovelas colombianas clásicas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pero sigo siendo el rey",
       "facet": "Telenovelas colombianas clásicas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Las aguas mansas",
       "facet": "Telenovelas colombianas clásicas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "San Tropel",
       "facet": "Telenovelas colombianas clásicas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Amor en custodia",
       "facet": "Telenovelas colombianas clásicas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La hija del mariachi",
       "facet": "Telenovelas colombianas clásicas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Señora Isabel",
       "facet": "Telenovelas colombianas clásicas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Me llaman Lolita",
       "facet": "Telenovelas colombianas clásicas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sofía dame tiempo",
       "facet": "Telenovelas colombianas clásicas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "María la del Barrio",
@@ -151,42 +162,50 @@
     {
       "name": "Abrázame muy fuerte",
       "facet": "Telenovelas mexicanas y de Televisa",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mañana es para siempre",
       "facet": "Telenovelas mexicanas y de Televisa",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Destilando amor",
       "facet": "Telenovelas mexicanas y de Televisa",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La fea más bella",
       "facet": "Telenovelas mexicanas y de Televisa",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Soy tu dueña",
       "facet": "Telenovelas mexicanas y de Televisa",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Alborada",
       "facet": "Telenovelas mexicanas y de Televisa",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Amores verdaderos",
       "facet": "Telenovelas mexicanas y de Televisa",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El privilegio de amar",
       "facet": "Telenovelas mexicanas y de Televisa",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La madrastra",
@@ -196,12 +215,14 @@
     {
       "name": "Mi corazón es tuyo",
       "facet": "Telenovelas mexicanas y de Televisa",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La rosa de Guadalupe",
       "facet": "Telenovelas mexicanas y de Televisa",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Televisa",
@@ -211,7 +232,8 @@
     {
       "name": "TV Azteca",
       "facet": "Telenovelas mexicanas y de Televisa",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Kassandra",
@@ -231,27 +253,32 @@
     {
       "name": "La dama de rosa",
       "facet": "Telenovelas venezolanas, argentinas y brasileñas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Señora",
       "facet": "Telenovelas venezolanas, argentinas y brasileñas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Por estas calles",
       "facet": "Telenovelas venezolanas, argentinas y brasileñas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mi gorda bella",
       "facet": "Telenovelas venezolanas, argentinas y brasileñas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Leonela",
       "facet": "Telenovelas venezolanas, argentinas y brasileñas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Muñeca brava",
@@ -261,17 +288,20 @@
     {
       "name": "Grande Pa!",
       "facet": "Telenovelas venezolanas, argentinas y brasileñas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Celeste",
       "facet": "Telenovelas venezolanas, argentinas y brasileñas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Montecristo",
       "facet": "Telenovelas venezolanas, argentinas y brasileñas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La esclava Isaura",
@@ -301,7 +331,8 @@
     {
       "name": "Xica da Silva",
       "facet": "Telenovelas venezolanas, argentinas y brasileñas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rede Globo",
@@ -311,12 +342,14 @@
     {
       "name": "Venevisión",
       "facet": "Telenovelas venezolanas, argentinas y brasileñas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "RCTV",
       "facet": "Telenovelas venezolanas, argentinas y brasileñas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Beatriz Pinzón Solano",
@@ -326,57 +359,68 @@
     {
       "name": "Patricia Fernández",
       "facet": "Personajes y villanos icónicos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Nicolás Mora",
       "facet": "Personajes y villanos icónicos",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hugo Lombardi",
       "facet": "Personajes y villanos icónicos",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mario Calderón",
       "facet": "Personajes y villanos icónicos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Freddy Stewart Contreras",
       "facet": "Personajes y villanos icónicos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hermes Pinzón",
       "facet": "Personajes y villanos icónicos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El cuartel de las feas",
       "facet": "Personajes y villanos icónicos",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Catalina Ángel",
       "facet": "Personajes y villanos icónicos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pedro Coral Tavera",
       "facet": "Personajes y villanos icónicos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gaviota",
       "facet": "Personajes y villanos icónicos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sebastián Vallejo",
       "facet": "Personajes y villanos icónicos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Paola Bracho",
@@ -386,52 +430,62 @@
     {
       "name": "Juan del Diablo",
       "facet": "Personajes y villanos icónicos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Leticia Padilla",
       "facet": "Personajes y villanos icónicos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sarita Elizondo",
       "facet": "Personajes y villanos icónicos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Juan Reyes",
       "facet": "Personajes y villanos icónicos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fernando Escandón",
       "facet": "Personajes y villanos icónicos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ana María Orozco",
       "facet": "Actores y actrices de telenovela",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Jorge Enrique Abello",
       "facet": "Actores y actrices de telenovela",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Lorna Cepeda",
       "facet": "Actores y actrices de telenovela",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Margarita Rosa de Francisco",
       "facet": "Actores y actrices de telenovela",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Marlon Moreno",
       "facet": "Actores y actrices de telenovela",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Manolo Cardona",
@@ -441,17 +495,20 @@
     {
       "name": "Kristina Lilley",
       "facet": "Actores y actrices de telenovela",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Danna García",
       "facet": "Actores y actrices de telenovela",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mario Cimarro",
       "facet": "Actores y actrices de telenovela",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Verónica Castro",
@@ -466,7 +523,8 @@
     {
       "name": "Itatí Cantoral",
       "facet": "Actores y actrices de telenovela",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gabriela Spanic",
@@ -481,17 +539,20 @@
     {
       "name": "Fernando Colunga",
       "facet": "Actores y actrices de telenovela",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sebastián Rulli",
       "facet": "Actores y actrices de telenovela",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Lucía Méndez",
       "facet": "Actores y actrices de telenovela",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Kate del Castillo",
@@ -506,27 +567,32 @@
     {
       "name": "Grecia Colmenares",
       "facet": "Actores y actrices de telenovela",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Se dice de mí",
       "facet": "Canciones y temas de apertura",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gaviota (canción)",
       "facet": "Canciones y temas de apertura",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "¿Quién es ese hombre?",
       "facet": "Canciones y temas de apertura",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La gota fría",
       "facet": "Canciones y temas de apertura",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rebelde (canción)",
@@ -541,17 +607,20 @@
     {
       "name": "Sólo quédate en silencio",
       "facet": "Canciones y temas de apertura",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Flores amarillas",
       "facet": "Canciones y temas de apertura",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "En mi mundo",
       "facet": "Canciones y temas de apertura",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Lambada",
@@ -571,7 +640,8 @@
     {
       "name": "Cabezote",
       "facet": "Canciones y temas de apertura",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Banda sonora",
@@ -692,12 +762,14 @@
     {
       "name": "Culebrón",
       "facet": "Vocabulario y jerga telenovelera",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Novelón",
       "facet": "Vocabulario y jerga telenovelera",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Melodrama",
@@ -747,7 +819,8 @@
     {
       "name": "Chica vampiro",
       "facet": "Telenovelas juveniles e infantiles",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rebelde",
@@ -757,22 +830,26 @@
     {
       "name": "Floricienta",
       "facet": "Telenovelas juveniles e infantiles",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Grachi",
       "facet": "Telenovelas juveniles e infantiles",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Club 57",
       "facet": "Telenovelas juveniles e infantiles",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Isa TKM",
       "facet": "Telenovelas juveniles e infantiles",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rebelde Way",
@@ -782,7 +859,8 @@
     {
       "name": "Casi Ángeles",
       "facet": "Telenovelas juveniles e infantiles",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Carrusel",
@@ -797,7 +875,8 @@
     {
       "name": "Cómplices al rescate",
       "facet": "Telenovelas juveniles e infantiles",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Carita de ángel",
@@ -807,7 +886,8 @@
     {
       "name": "Atrévete a soñar",
       "facet": "Telenovelas juveniles e infantiles",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Amigos x siempre",
@@ -817,27 +897,32 @@
     {
       "name": "Luz Clarita",
       "facet": "Telenovelas juveniles e infantiles",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El abuelo y yo",
       "facet": "Telenovelas juveniles e infantiles",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gotita de amor",
       "facet": "Telenovelas juveniles e infantiles",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Primer amor, a mil por hora",
       "facet": "Telenovelas juveniles e infantiles",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Clase 406",
       "facet": "Telenovelas juveniles e infantiles",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ugly Betty",
@@ -862,7 +947,8 @@
     {
       "name": "Betty en NY",
       "facet": "Adaptaciones y remakes internacionales",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Betty la fea, la historia continúa",
@@ -877,32 +963,38 @@
     {
       "name": "Fuego en la sangre",
       "facet": "Adaptaciones y remakes internacionales",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hasta que el dinero nos separe",
       "facet": "Adaptaciones y remakes internacionales",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Lo que la vida me robó",
       "facet": "Adaptaciones y remakes internacionales",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El triunfo del amor",
       "facet": "Adaptaciones y remakes internacionales",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Corazón indomable",
       "facet": "Adaptaciones y remakes internacionales",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Doña Bárbara",
       "facet": "Adaptaciones y remakes internacionales",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Remake",
@@ -922,17 +1014,20 @@
     {
       "name": "El derecho de nacer",
       "facet": "Historia de la telenovela y la radionovela",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Félix B. Caignet",
       "facet": "Historia de la telenovela y la radionovela",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Kalimán",
       "facet": "Historia de la telenovela y la radionovela",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Folletín",
@@ -967,57 +1062,68 @@
     {
       "name": "Gutierritos",
       "facet": "Historia de la telenovela y la radionovela",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Simplemente María",
       "facet": "Historia de la telenovela y la radionovela",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ernesto Alonso",
       "facet": "Historia de la telenovela y la radionovela",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Delia Fiallo",
       "facet": "Historia de la telenovela y la radionovela",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fernando Gaitán",
       "facet": "Historia de la telenovela y la radionovela",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Canal Uno",
       "facet": "Canales, horarios y costumbres de verlas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Canal A",
       "facet": "Canales, horarios y costumbres de verlas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "RTI",
       "facet": "Canales, horarios y costumbres de verlas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Punch",
       "facet": "Canales, horarios y costumbres de verlas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Telecaribe",
       "facet": "Canales, horarios y costumbres de verlas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Teleantioquia",
       "facet": "Canales, horarios y costumbres de verlas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Telemundo",
@@ -1032,7 +1138,8 @@
     {
       "name": "Las Estrellas",
       "facet": "Canales, horarios y costumbres de verlas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Amazon Prime Video",
@@ -1057,7 +1164,199 @@
     {
       "name": "Ibope",
       "facet": "Canales, horarios y costumbres de verlas",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Gabriela (1975 telenovela)",
+      "facet": "Telenovelas venezolanas, argentinas y brasileñas",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "J. R. Ewing",
+      "facet": "Personajes y villanos icónicos",
+      "known_at": 13
+    },
+    {
+      "name": "Jaime Camil",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Gina Rodriguez",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 12
+    },
+    {
+      "name": "Martina Stoessel",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 7
+    },
+    {
+      "name": "Sônia Braga",
+      "facet": "Actores y actrices de telenovela",
+      "known_at": 13
+    },
+    {
+      "name": "Alas (Soy Luna)",
+      "facet": "Canciones y temas de apertura",
+      "known_at": 9
+    },
+    {
+      "name": "Birthmark",
+      "facet": "Clichés y recursos del melodrama",
+      "known_at": 10
+    },
+    {
+      "name": "Coma",
+      "facet": "Clichés y recursos del melodrama",
+      "known_at": 9
+    },
+    {
+      "name": "Airport goodbye",
+      "facet": "Clichés y recursos del melodrama",
+      "known_at": 7
+    },
+    {
+      "name": "Return under a new identity",
+      "facet": "Clichés y recursos del melodrama",
+      "known_at": 11
+    },
+    {
+      "name": "Villain punished in the end",
+      "facet": "Clichés y recursos del melodrama",
+      "known_at": 8
+    },
+    {
+      "name": "Protagonist",
+      "facet": "Vocabulario y jerga telenovelera",
+      "known_at": 5
+    },
+    {
+      "name": "Villainess",
+      "facet": "Vocabulario y jerga telenovelera",
+      "known_at": 5
+    },
+    {
+      "name": "Dizi",
+      "facet": "Vocabulario y jerga telenovelera",
+      "known_at": 13
+    },
+    {
+      "name": "Teleserye",
+      "facet": "Vocabulario y jerga telenovelera",
       "known_at": 14
+    },
+    {
+      "name": "Dubbing",
+      "facet": "Vocabulario y jerga telenovelera",
+      "known_at": 7
+    },
+    {
+      "name": "K-drama",
+      "facet": "Vocabulario y jerga telenovelera",
+      "known_at": 8
+    },
+    {
+      "name": "La Reina del Sur",
+      "facet": "Adaptaciones y remakes internacionales",
+      "known_at": 12
+    },
+    {
+      "name": "Cris Morena",
+      "facet": "Historia de la telenovela y la radionovela",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Oshin",
+      "facet": "Historia de la telenovela y la radionovela",
+      "known_at": 14
+    },
+    {
+      "name": "Disney Channel",
+      "facet": "Canales, horarios y costumbres de verlas",
+      "known_at": 3
+    },
+    {
+      "name": "Magnificent Century",
+      "facet": "Dizis turcas y dramas asiáticos",
+      "known_at": 12
+    },
+    {
+      "name": "Hürrem Sultan",
+      "facet": "Dizis turcas y dramas asiáticos",
+      "known_at": 13
+    },
+    {
+      "name": "Diriliş: Ertuğrul",
+      "facet": "Dizis turcas y dramas asiáticos",
+      "known_at": 13
+    },
+    {
+      "name": "Kara Sevda (Endless Love)",
+      "facet": "Dizis turcas y dramas asiáticos",
+      "known_at": 14
+    },
+    {
+      "name": "What Is Fatmagül's Fault?",
+      "facet": "Dizis turcas y dramas asiáticos",
+      "known_at": 14
+    },
+    {
+      "name": "Winter Sonata",
+      "facet": "Dizis turcas y dramas asiáticos",
+      "known_at": 14
+    },
+    {
+      "name": "Crash Landing on You",
+      "facet": "Dizis turcas y dramas asiáticos",
+      "known_at": 12
+    },
+    {
+      "name": "Boys Over Flowers",
+      "facet": "Dizis turcas y dramas asiáticos",
+      "known_at": 12
+    },
+    {
+      "name": "Hallyu (Korean Wave)",
+      "facet": "Dizis turcas y dramas asiáticos",
+      "known_at": 12
+    },
+    {
+      "name": "Dallas",
+      "facet": "Soap operas en inglés",
+      "known_at": 12
+    },
+    {
+      "name": "The Bold and the Beautiful",
+      "facet": "Soap operas en inglés",
+      "known_at": 12
+    },
+    {
+      "name": "Coronation Street",
+      "facet": "Soap operas en inglés",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Neighbours",
+      "facet": "Soap operas en inglés",
+      "known_at": 13
+    },
+    {
+      "name": "Santa Barbara",
+      "facet": "Soap operas en inglés",
+      "known_at": 14
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-15",
+      "added": 36,
+      "unused": 120
     }
   ]
 }

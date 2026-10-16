@@ -252,7 +252,8 @@
     {
       "name": "Hey Arnold!",
       "facet": "Animación para toda la familia",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Steven Universe",
@@ -287,7 +288,8 @@
     {
       "name": "Los Thornberrys",
       "facet": "Animación para toda la familia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Animaniacs",
@@ -302,17 +304,20 @@
     {
       "name": "Armando Mendoza",
       "facet": "Telenovelas colombianas",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ecomoda",
       "facet": "Telenovelas colombianas",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Café con aroma de mujer",
       "facet": "Telenovelas colombianas",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pasión de gavilanes",
@@ -322,82 +327,98 @@
     {
       "name": "Pedro el escamoso",
       "facet": "Telenovelas colombianas",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La reina del flow",
       "facet": "Telenovelas colombianas",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Francisco el Matemático",
       "facet": "Telenovelas colombianas",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Padres e hijos",
       "facet": "Telenovelas colombianas",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hasta que la plata nos separe",
       "facet": "Telenovelas colombianas",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La Pola",
       "facet": "Telenovelas colombianas",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bolívar (serie)",
       "facet": "Telenovelas colombianas",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Los Reyes",
       "facet": "Telenovelas colombianas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Diomedes, el cacique de La Junta",
       "facet": "Telenovelas colombianas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chepe Fortuna",
       "facet": "Telenovelas colombianas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Escalona",
       "facet": "Telenovelas colombianas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rafael Orozco, el ídolo",
       "facet": "Telenovelas colombianas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Las Juanas",
       "facet": "Telenovelas colombianas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La Saga, negocio de familia",
       "facet": "Telenovelas colombianas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gallito Ramírez",
       "facet": "Telenovelas colombianas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Azúcar",
       "facet": "Telenovelas colombianas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El Chapulín Colorado",
@@ -442,7 +463,8 @@
     {
       "name": "Sábados Felices",
       "facet": "Comedias latinoamericanas clásicas",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Una familia de diez",
@@ -452,37 +474,44 @@
     {
       "name": "La familia P. Luche",
       "facet": "Comedias latinoamericanas clásicas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Vecinos",
       "facet": "Comedias latinoamericanas clásicas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Dejémonos de vainas",
       "facet": "Comedias latinoamericanas clásicas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Los Caquitos",
       "facet": "Comedias latinoamericanas clásicas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Casados con hijos",
       "facet": "Comedias latinoamericanas clásicas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Don Chinche",
       "facet": "Comedias latinoamericanas clásicas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Romeo y Buseta",
       "facet": "Comedias latinoamericanas clásicas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mr. Bean",
@@ -522,7 +551,8 @@
     {
       "name": "El Príncipe del Rap",
       "facet": "Sitcoms y comedias internacionales",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Malcolm",
@@ -547,7 +577,8 @@
     {
       "name": "Tres por tres",
       "facet": "Sitcoms y comedias internacionales",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Glee",
@@ -712,7 +743,8 @@
     {
       "name": "Guardianes de la Bahía",
       "facet": "Misterio, detectives y aventura",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Colombo",
@@ -737,7 +769,8 @@
     {
       "name": "Se ha escrito un crimen",
       "facet": "Misterio, detectives y aventura",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Monk",
@@ -782,12 +815,14 @@
     {
       "name": "Las Pistas de Blue",
       "facet": "Programas infantiles educativos",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Discovery Kids",
       "facet": "Programas infantiles educativos",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El Autobús Mágico",
@@ -802,12 +837,14 @@
     {
       "name": "Mi Señal",
       "facet": "Programas infantiles educativos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Abelardo",
       "facet": "Programas infantiles educativos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El Mundo de Beakman",
@@ -827,7 +864,8 @@
     {
       "name": "Club 10",
       "facet": "Programas infantiles educativos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cosmos",
@@ -912,12 +950,14 @@
     {
       "name": "Rating",
       "facet": "Formatos y jerga televisiva",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Horario estelar",
       "facet": "Formatos y jerga televisiva",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Cliffhanger",
@@ -937,12 +977,14 @@
     {
       "name": "Caracol Televisión",
       "facet": "Historia de la televisión",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "RCN Televisión",
       "facet": "Historia de la televisión",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Televisión a color",
@@ -952,7 +994,8 @@
     {
       "name": "Señal Colombia",
       "facet": "Historia de la televisión",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Televisión por cable",
@@ -982,17 +1025,20 @@
     {
       "name": "Llegada de la televisión a Colombia",
       "facet": "Historia de la televisión",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gustavo Rojas Pinilla",
       "facet": "Historia de la televisión",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Inravisión",
       "facet": "Historia de la televisión",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Philo Farnsworth",
@@ -1027,7 +1073,8 @@
     {
       "name": "Fue sin querer queriendo",
       "facet": "Frases y canciones de series",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "¡Ay, caramba!",
@@ -1078,6 +1125,176 @@
       "name": "Larga vida y prosperidad",
       "facet": "Frases y canciones de series",
       "known_at": 12
+    },
+    {
+      "name": "Tom and Jerry",
+      "facet": "Dibujos animados infantiles",
+      "known_at": 1
+    },
+    {
+      "name": "Masha and the Bear",
+      "facet": "Dibujos animados infantiles",
+      "known_at": 2
+    },
+    {
+      "name": "The Pink Panther",
+      "facet": "Dibujos animados infantiles",
+      "known_at": 3
+    },
+    {
+      "name": "Miraculous: Tales of Ladybug & Cat Noir",
+      "facet": "Dibujos animados infantiles",
+      "known_at": 3
+    },
+    {
+      "name": "Shaun the Sheep",
+      "facet": "Dibujos animados infantiles",
+      "known_at": 3
+    },
+    {
+      "name": "Pingu",
+      "facet": "Dibujos animados infantiles",
+      "known_at": 4
+    },
+    {
+      "name": "Oggy and the Cockroaches",
+      "facet": "Dibujos animados infantiles",
+      "known_at": 4
+    },
+    {
+      "name": "Thomas the Tank Engine",
+      "facet": "Dibujos animados infantiles",
+      "known_at": 3
+    },
+    {
+      "name": "Son Goku",
+      "facet": "Anime japonés",
+      "known_at": 4
+    },
+    {
+      "name": "Saint Seiya",
+      "facet": "Anime japonés",
+      "known_at": 10
+    },
+    {
+      "name": "Homer Simpson",
+      "facet": "Animación para toda la familia",
+      "known_at": 3
+    },
+    {
+      "name": "Lisa Simpson",
+      "facet": "Animación para toda la familia",
+      "known_at": 4
+    },
+    {
+      "name": "The Jetsons",
+      "facet": "Animación para toda la familia",
+      "known_at": 8
+    },
+    {
+      "name": "Drake & Josh",
+      "facet": "Sitcoms y comedias internacionales",
+      "known_at": 7,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Two and a Half Men",
+      "facet": "Sitcoms y comedias internacionales",
+      "known_at": 11
+    },
+    {
+      "name": "The Golden Girls",
+      "facet": "Sitcoms y comedias internacionales",
+      "known_at": 12
+    },
+    {
+      "name": "Dalek",
+      "facet": "Fantasía y ciencia ficción",
+      "known_at": 12
+    },
+    {
+      "name": "Bewitched",
+      "facet": "Fantasía y ciencia ficción",
+      "known_at": 11
+    },
+    {
+      "name": "Goosebumps",
+      "facet": "Fantasía y ciencia ficción",
+      "known_at": 8,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Money Heist",
+      "facet": "Misterio, detectives y aventura",
+      "known_at": 8
+    },
+    {
+      "name": "Inspector Rex",
+      "facet": "Misterio, detectives y aventura",
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Big Bird",
+      "facet": "Programas infantiles educativos",
+      "known_at": 4
+    },
+    {
+      "name": "The Muppet Show",
+      "facet": "Programas infantiles educativos",
+      "known_at": 6
+    },
+    {
+      "name": "Once Upon a Time... Life",
+      "facet": "Programas infantiles educativos",
+      "known_at": 10
+    },
+    {
+      "name": "Octonauts",
+      "facet": "Programas infantiles educativos",
+      "known_at": 5
+    },
+    {
+      "name": "Binge-watching",
+      "facet": "Formatos y jerga televisiva",
+      "known_at": 8
+    },
+    {
+      "name": "Crossover",
+      "facet": "Formatos y jerga televisiva",
+      "known_at": 9
+    },
+    {
+      "name": "Who Wants to Be a Millionaire?",
+      "facet": "Formatos y jerga televisiva",
+      "known_at": 6
+    },
+    {
+      "name": "Remote control",
+      "facet": "Historia de la televisión",
+      "known_at": 2
+    },
+    {
+      "name": "Cathode-ray tube",
+      "facet": "Historia de la televisión",
+      "known_at": 11
+    },
+    {
+      "name": "This is the way",
+      "facet": "Frases y canciones de series",
+      "known_at": 8
+    },
+    {
+      "name": "Exterminate!",
+      "facet": "Frases y canciones de series",
+      "known_at": 13
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-15",
+      "added": 32,
+      "unused": 176
     }
   ]
 }

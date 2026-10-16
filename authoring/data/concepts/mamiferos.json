@@ -241,7 +241,8 @@
     {
       "name": "Chigüiro",
       "facet": "Mamíferos de Colombia y Suramérica",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Oso hormiguero",
@@ -271,7 +272,8 @@
     {
       "name": "Cuy",
       "facet": "Mamíferos de Colombia y Suramérica",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Venado de cola blanca",
@@ -286,12 +288,14 @@
     {
       "name": "Danta",
       "facet": "Mamíferos de Colombia y Suramérica",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tigrillo",
       "facet": "Mamíferos de Colombia y Suramérica",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Nutria gigante",
@@ -306,7 +310,8 @@
     {
       "name": "Guatín",
       "facet": "Mamíferos de Colombia y Suramérica",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pecarí",
@@ -321,12 +326,14 @@
     {
       "name": "Kinkajú",
       "facet": "Mamíferos de Colombia y Suramérica",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Olinguito",
       "facet": "Mamíferos de Colombia y Suramérica",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "León marino",
@@ -411,7 +418,8 @@
     {
       "name": "Tití cabeciblanco",
       "facet": "Primates",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gibón",
@@ -1086,7 +1094,8 @@
     {
       "name": "Lince ibérico",
       "facet": "Mamíferos extintos y en peligro",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tilacino",

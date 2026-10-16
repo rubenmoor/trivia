@@ -131,7 +131,8 @@
     {
       "name": "Oliver!",
       "facet": "Clásicos de Broadway y West End",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Sweeney Todd",
@@ -736,7 +737,8 @@
     {
       "name": "Premios Olivier",
       "facet": "Oficio y términos del escenario",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Micrófono de diadema",
@@ -826,7 +828,8 @@
     {
       "name": "Las Rockettes",
       "facet": "Baile y coreografía en musicales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Pas de deux",
@@ -851,12 +854,14 @@
     {
       "name": "Hand jive",
       "facet": "Baile y coreografía en musicales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Zarzuela",
       "facet": "Orígenes: ópera, zarzuela y vodevil",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Vodevil",
@@ -871,7 +876,8 @@
     {
       "name": "Music hall",
       "facet": "Orígenes: ópera, zarzuela y vodevil",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Teatro griego",
@@ -886,12 +892,14 @@
     {
       "name": "Pantomima",
       "facet": "Orígenes: ópera, zarzuela y vodevil",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Gilbert y Sullivan",
       "facet": "Orígenes: ópera, zarzuela y vodevil",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Ziegfeld Follies",
@@ -906,7 +914,8 @@
     {
       "name": "Teatro de revista",
       "facet": "Orígenes: ópera, zarzuela y vodevil",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ópera de Pekín",
@@ -916,27 +925,32 @@
     {
       "name": "La verbena de la Paloma",
       "facet": "Orígenes: ópera, zarzuela y vodevil",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hoy no me puedo levantar",
       "facet": "Musicales del mundo hispano",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mecano",
       "facet": "Musicales del mundo hispano",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Misi",
       "facet": "Musicales del mundo hispano",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Avenida Corrientes",
       "facet": "Musicales del mundo hispano",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gran Vía de Madrid",
@@ -946,12 +960,14 @@
     {
       "name": "Mentiras, el musical",
       "facet": "Musicales del mundo hispano",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cecilia Valdés",
       "facet": "Musicales del mundo hispano",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Vivo",
@@ -966,32 +982,38 @@
     {
       "name": "Pedro Infante",
       "facet": "Musicales del mundo hispano",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Jorge Negrete",
       "facet": "Musicales del mundo hispano",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Carlos Gardel",
       "facet": "Musicales del mundo hispano",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Marisol",
       "facet": "Musicales del mundo hispano",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Joselito",
       "facet": "Musicales del mundo hispano",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sara Montiel",
       "facet": "Musicales del mundo hispano",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rita Moreno",
@@ -1006,7 +1028,8 @@
     {
       "name": "Lola Flores",
       "facet": "Musicales del mundo hispano",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     }
   ]
 }

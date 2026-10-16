@@ -713,27 +713,32 @@
     {
       "name": "Thursday",
       "facet": "Huellas en el idioma (días, palabras)",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Wednesday",
       "facet": "Huellas en el idioma (días, palabras)",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Tuesday",
       "facet": "Huellas en el idioma (días, palabras)",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Friday",
       "facet": "Huellas en el idioma (días, palabras)",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Monday",
       "facet": "Huellas en el idioma (días, palabras)",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Torio",
@@ -753,12 +758,14 @@
     {
       "name": "Window",
       "facet": "Huellas en el idioma (días, palabras)",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Sky",
       "facet": "Huellas en el idioma (días, palabras)",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Saga",
@@ -783,7 +790,8 @@
     {
       "name": "Husband",
       "facet": "Huellas en el idioma (días, palabras)",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Chris Hemsworth",

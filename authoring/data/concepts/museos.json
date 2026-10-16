@@ -116,7 +116,8 @@
     {
       "name": "Museo Nacional de Antropología de México",
       "facet": "Grandes museos del mundo",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Museo Reina Sofía",
@@ -161,72 +162,86 @@
     {
       "name": "Museo del Oro",
       "facet": "Museos de Colombia",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Museo Nacional de Colombia",
       "facet": "Museos de Colombia",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Museo Botero",
       "facet": "Museos de Colombia",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Museo de Antioquia",
       "facet": "Museos de Colombia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Museo de Arte Moderno de Bogotá",
       "facet": "Museos de Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Quinta de Bolívar",
       "facet": "Museos de Colombia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Museo Colonial",
       "facet": "Museos de Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Casa del Florero",
       "facet": "Museos de Colombia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Museo de Arte Moderno de Medellín",
       "facet": "Museos de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Museo del Caribe",
       "facet": "Museos de Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Museo Santa Clara",
       "facet": "Museos de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Museo Internacional de la Esmeralda",
       "facet": "Museos de Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Parque Arqueológico de San Agustín",
       "facet": "Museos de Colombia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Museo La Tertulia",
       "facet": "Museos de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Casa Museo Gabriel García Márquez",
@@ -236,17 +251,20 @@
     {
       "name": "Casa de Moneda de Bogotá",
       "facet": "Museos de Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Palacio de la Inquisición de Cartagena",
       "facet": "Museos de Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Museo Naval del Caribe",
       "facet": "Museos de Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mona Lisa",
@@ -341,7 +359,8 @@
     {
       "name": "Mona Lisa de Botero",
       "facet": "Obras maestras famosas",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pirámide del Louvre",
@@ -366,7 +385,8 @@
     {
       "name": "Museo Soumaya",
       "facet": "Edificios y arquitectura de museos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Frank Gehry",
@@ -391,7 +411,8 @@
     {
       "name": "Museo del Mañana",
       "facet": "Edificios y arquitectura de museos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Louvre Abu Dabi",
@@ -401,7 +422,8 @@
     {
       "name": "Palacio de Bellas Artes de México",
       "facet": "Edificios y arquitectura de museos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Museo de la Acrópolis",
@@ -416,7 +438,8 @@
     {
       "name": "Museo de Arte de Milwaukee",
       "facet": "Edificios y arquitectura de museos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Planetario",
@@ -426,17 +449,20 @@
     {
       "name": "Maloka",
       "facet": "Museos de ciencia y planetarios",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Planetario de Bogotá",
       "facet": "Museos de ciencia y planetarios",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Parque Explora",
       "facet": "Museos de ciencia y planetarios",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "CosmoCaixa",
@@ -446,7 +472,8 @@
     {
       "name": "Museo Nacional del Aire y el Espacio",
       "facet": "Museos de ciencia y planetarios",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Deutsches Museum",
@@ -466,7 +493,8 @@
     {
       "name": "Science Museum de Londres",
       "facet": "Museos de ciencia y planetarios",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Péndulo de Foucault",
@@ -516,17 +544,20 @@
     {
       "name": "Sue (Tyrannosaurus rex)",
       "facet": "Museos de historia natural",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Dippy",
       "facet": "Museos de historia natural",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Hope (ballena azul)",
       "facet": "Museos de historia natural",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Taxidermia",
@@ -586,12 +617,14 @@
     {
       "name": "Tesoro Quimbaya",
       "facet": "Arqueología y tesoros antiguos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ciudad Perdida",
       "facet": "Arqueología y tesoros antiguos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Jeroglíficos",
@@ -621,12 +654,14 @@
     {
       "name": "Poporo Quimbaya",
       "facet": "Arqueología y tesoros antiguos",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Balsa Muisca",
       "facet": "Arqueología y tesoros antiguos",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mármoles del Partenón",
@@ -651,7 +686,8 @@
     {
       "name": "Tierradentro",
       "facet": "Arqueología y tesoros antiguos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Curador",
@@ -761,7 +797,8 @@
     {
       "name": "Robo del Museo Isabella Stewart Gardner",
       "facet": "Robos, falsificaciones y curiosidades",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Robo de El grito",
@@ -791,7 +828,8 @@
     {
       "name": "New York City I de Mondrian",
       "facet": "Robos, falsificaciones y curiosidades",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Niña con globo",
@@ -811,7 +849,8 @@
     {
       "name": "Ecce Homo de Borja",
       "facet": "Robos, falsificaciones y curiosidades",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Wolfgang Beltracchi",
@@ -831,17 +870,20 @@
     {
       "name": "Larry Daley",
       "facet": "Museos en películas y juegos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Ahkmenrah",
       "facet": "Museos en películas y juegos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Sócrates (Animal Crossing)",
       "facet": "Museos en películas y juegos",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "El código Da Vinci",
@@ -856,7 +898,8 @@
     {
       "name": "Mr. Bean: la película",
       "facet": "Museos en películas y juegos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Lupin",
@@ -866,7 +909,8 @@
     {
       "name": "Museo de Ciudad Plateada",
       "facet": "Museos en películas y juegos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Kaito Kid",
@@ -901,7 +945,8 @@
     {
       "name": "Museo de las Momias de Guanajuato",
       "facet": "Museos insólitos y temáticos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Museo del Chocolate",
@@ -911,7 +956,8 @@
     {
       "name": "Museo de las Relaciones Rotas",
       "facet": "Museos insólitos y temáticos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Museo Mundial del Fútbol de la FIFA",
@@ -926,27 +972,32 @@
     {
       "name": "Ripley ¡Aunque usted no lo crea!",
       "facet": "Museos insólitos y temáticos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Museo de las Ilusiones",
       "facet": "Museos insólitos y temáticos",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Parque del Café",
       "facet": "Museos insólitos y temáticos",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Museo Subacuático de Arte de Cancún",
       "facet": "Museos insólitos y temáticos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Catedral de Sal de Zipaquirá",
       "facet": "Museos insólitos y temáticos",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Museo Ghibli",
@@ -961,7 +1012,8 @@
     {
       "name": "Museo del FC Barcelona",
       "facet": "Museos insólitos y temáticos",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Museo del Helado",
@@ -976,7 +1028,8 @@
     {
       "name": "Casa del Carnaval de Barranquilla",
       "facet": "Museos insólitos y temáticos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Museo del Juguete",
@@ -1041,7 +1094,8 @@
     {
       "name": "Museos Capitolinos",
       "facet": "Historia de los museos y coleccionismo",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "James Smithson",
@@ -1072,6 +1126,209 @@
       "name": "Mecenas",
       "facet": "Historia de los museos y coleccionismo",
       "known_at": 12
+    },
+    {
+      "name": "Palace of Versailles",
+      "facet": "Grandes museos del mundo",
+      "known_at": 4
+    },
+    {
+      "name": "Victoria and Albert Museum",
+      "facet": "Grandes museos del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Kunsthistorisches Museum",
+      "facet": "Grandes museos del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Topkapı Palace",
+      "facet": "Grandes museos del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "National Palace Museum (Taipei)",
+      "facet": "Grandes museos del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Tokyo National Museum",
+      "facet": "Grandes museos del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Museum Island (Berlin)",
+      "facet": "Grandes museos del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Frida Kahlo Museum (Blue House)",
+      "facet": "Grandes museos del mundo",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Anne Frank House",
+      "facet": "Grandes museos del mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Getty Center",
+      "facet": "Grandes museos del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "The Creation of Adam",
+      "facet": "Obras maestras famosas",
+      "known_at": 7
+    },
+    {
+      "name": "Sistine Chapel",
+      "facet": "Obras maestras famosas",
+      "known_at": 7
+    },
+    {
+      "name": "The Great Wave off Kanagawa",
+      "facet": "Obras maestras famosas",
+      "known_at": 8
+    },
+    {
+      "name": "Liberty Leading the People",
+      "facet": "Obras maestras famosas",
+      "known_at": 10
+    },
+    {
+      "name": "The School of Athens",
+      "facet": "Obras maestras famosas",
+      "known_at": 11
+    },
+    {
+      "name": "Campbell's Soup Cans",
+      "facet": "Obras maestras famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Impression, Sunrise",
+      "facet": "Obras maestras famosas",
+      "known_at": 12
+    },
+    {
+      "name": "The Raft of the Medusa",
+      "facet": "Obras maestras famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Niterói Contemporary Art Museum",
+      "facet": "Edificios y arquitectura de museos",
+      "known_at": 13
+    },
+    {
+      "name": "National Museum of Qatar",
+      "facet": "Edificios y arquitectura de museos",
+      "known_at": 13
+    },
+    {
+      "name": "Apollo 11 command module Columbia",
+      "facet": "Museos de ciencia y planetarios",
+      "known_at": 11
+    },
+    {
+      "name": "Moon rock",
+      "facet": "Museos de ciencia y planetarios",
+      "known_at": 5
+    },
+    {
+      "name": "Hayden Planetarium",
+      "facet": "Museos de ciencia y planetarios",
+      "known_at": 13
+    },
+    {
+      "name": "Meteorite",
+      "facet": "Museos de historia natural",
+      "known_at": 5
+    },
+    {
+      "name": "Grand Gallery of Evolution (Paris)",
+      "facet": "Museos de historia natural",
+      "known_at": 13
+    },
+    {
+      "name": "Tutankhamun's mask",
+      "facet": "Arqueología y tesoros antiguos",
+      "known_at": 5
+    },
+    {
+      "name": "Sutton Hoo helmet",
+      "facet": "Arqueología y tesoros antiguos",
+      "known_at": 13
+    },
+    {
+      "name": "Lewis Chessmen",
+      "facet": "Arqueología y tesoros antiguos",
+      "known_at": 13
+    },
+    {
+      "name": "Code of Hammurabi",
+      "facet": "Arqueología y tesoros antiguos",
+      "known_at": 10
+    },
+    {
+      "name": "Ishtar Gate",
+      "facet": "Arqueología y tesoros antiguos",
+      "known_at": 12
+    },
+    {
+      "name": "Benin Bronzes",
+      "facet": "Historia de los museos y coleccionismo",
+      "known_at": 13
+    },
+    {
+      "name": "Great Exhibition of 1851",
+      "facet": "Historia de los museos y coleccionismo",
+      "known_at": 13
+    },
+    {
+      "name": "Museum gift shop",
+      "facet": "Oficio del museo y conservación",
+      "known_at": 3
+    },
+    {
+      "name": "X-ray of a painting",
+      "facet": "Oficio del museo y conservación",
+      "known_at": 10
+    },
+    {
+      "name": "Louvre crown jewels heist (2025)",
+      "facet": "Robos, falsificaciones y curiosidades",
+      "known_at": 11
+    },
+    {
+      "name": "Paddington (film)",
+      "facet": "Museos en películas y juegos",
+      "known_at": 6
+    },
+    {
+      "name": "Vasa Museum",
+      "facet": "Museos insólitos y temáticos",
+      "known_at": 12
+    },
+    {
+      "name": "Cup Noodles Museum",
+      "facet": "Museos insólitos y temáticos",
+      "known_at": 10
+    },
+    {
+      "name": "International Spy Museum",
+      "facet": "Museos insólitos y temáticos",
+      "known_at": 11
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-15",
+      "added": 39,
+      "unused": 180
     }
   ]
 }

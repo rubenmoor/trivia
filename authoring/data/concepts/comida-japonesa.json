@@ -731,7 +731,8 @@
     {
       "name": "Máquina de tiquetes",
       "facet": "Restaurantes y costumbres al comer",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Konbini",
@@ -751,7 +752,8 @@
     {
       "name": "Pastel de Navidad japonés",
       "facet": "Restaurantes y costumbres al comer",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "KFC en Navidad",
@@ -836,17 +838,20 @@
     {
       "name": "Roll de plátano maduro",
       "facet": "Comida japonesa en Colombia y el mundo",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Comunidad japonesa de Palmira",
       "facet": "Comida japonesa en Colombia y el mundo",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Colonia El Jagual",
       "facet": "Comida japonesa en Colombia y el mundo",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cocina nikkei",
@@ -897,7 +902,8 @@
     {
       "name": "Salsa acevichada",
       "facet": "Comida japonesa en Colombia y el mundo",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Maruchan",

@@ -231,7 +231,8 @@
     {
       "name": "Dynamo",
       "facet": "Magos e ilusionistas famosos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Criss Angel",
@@ -241,7 +242,8 @@
     {
       "name": "Derren Brown",
       "facet": "Magos e ilusionistas famosos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Shin Lim",
@@ -251,12 +253,14 @@
     {
       "name": "Jorge Blass",
       "facet": "Magos e ilusionistas famosos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mag Lari",
       "facet": "Magos e ilusionistas famosos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chung Ling Soo",
@@ -266,7 +270,8 @@
     {
       "name": "Tommy Cooper",
       "facet": "Magos e ilusionistas famosos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Mujer cortada en dos",
@@ -422,7 +427,8 @@
     {
       "name": "Bruja Avería",
       "facet": "Magos y brujas de cuentos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Doctor Strange",
@@ -562,22 +568,26 @@
     {
       "name": "Remedios la bella",
       "facet": "Realismo mágico y Encanto",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mariposas amarillas",
       "facet": "Realismo mágico y Encanto",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Melquíades",
       "facet": "Realismo mágico y Encanto",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La casa de los espíritus",
       "facet": "Realismo mágico y Encanto",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mirabel",
@@ -587,12 +597,14 @@
     {
       "name": "Luisa Madrigal",
       "facet": "Realismo mágico y Encanto",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pepa Madrigal",
       "facet": "Realismo mágico y Encanto",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Vela mágica",
@@ -782,7 +794,8 @@
     {
       "name": "Bruja de Clash Royale",
       "facet": "Hechizos en juegos y videojuegos",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Fus Ro Dah",

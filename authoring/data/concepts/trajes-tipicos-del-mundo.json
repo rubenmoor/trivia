@@ -12,7 +12,9 @@
     "Telas, tejidos y estampados",
     "Accesorios y joyas tradicionales",
     "Trajes de fiestas y carnavales",
-    "Trajes típicos en películas y juegos"
+    "Trajes típicos en películas y juegos",
+    "Vestimenta tradicional de Oceanía",
+    "Ropa de la Antigüedad"
   ],
   "axis_fit": {
     "move": {
@@ -61,57 +63,68 @@
     {
       "name": "Sanjuanero huilense",
       "facet": "Trajes típicos de Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Traje llanero",
       "facet": "Trajes típicos de Colombia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Traje de silletero",
       "facet": "Trajes típicos de Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Traje paisa",
       "facet": "Trajes típicos de Colombia",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Traje de currulao",
       "facet": "Trajes típicos de Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Traje de bambuco",
       "facet": "Trajes típicos de Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pañolón",
       "facet": "Trajes típicos de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Traje de joropo",
       "facet": "Trajes típicos de Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Traje de mapalé",
       "facet": "Trajes típicos de Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cuadrillas de San Martín",
       "facet": "Trajes típicos de Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Traje campesino boyacense",
       "facet": "Trajes típicos de Colombia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hanbok",
@@ -211,7 +224,8 @@
     {
       "name": "Traje de luces",
       "facet": "Trajes típicos de Europa",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sarafán",
@@ -226,12 +240,14 @@
     {
       "name": "Bunad",
       "facet": "Trajes típicos de Europa",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Traje de chulapo",
       "facet": "Trajes típicos de Europa",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Vyshyvanka",
@@ -241,12 +257,14 @@
     {
       "name": "Traje de fallera",
       "facet": "Trajes típicos de Europa",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Traje de baturro",
       "facet": "Trajes típicos de Europa",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gákti",
@@ -256,7 +274,8 @@
     {
       "name": "Capa española",
       "facet": "Trajes típicos de Europa",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Poncho",
@@ -281,7 +300,8 @@
     {
       "name": "Pollera panameña",
       "facet": "Ropa tradicional de América Latina",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sarape",
@@ -291,17 +311,20 @@
     {
       "name": "Traje de gaucho",
       "facet": "Ropa tradicional de América Latina",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bombachas de campo",
       "facet": "Ropa tradicional de América Latina",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chola paceña",
       "facet": "Ropa tradicional de América Latina",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rebozo",
@@ -311,32 +334,38 @@
     {
       "name": "Traje de bahiana",
       "facet": "Ropa tradicional de América Latina",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Traje de tehuana",
       "facet": "Ropa tradicional de América Latina",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Traje de chalán",
       "facet": "Ropa tradicional de América Latina",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Quechquémitl",
       "facet": "Ropa tradicional de América Latina",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Traje de huaso",
       "facet": "Ropa tradicional de América Latina",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chamanto",
       "facet": "Ropa tradicional de América Latina",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Dashiki",
@@ -376,7 +405,8 @@
     {
       "name": "Habesha kemis",
       "facet": "Vestimenta tradicional de África",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tagelmust",
@@ -386,17 +416,20 @@
     {
       "name": "Kanzu",
       "facet": "Vestimenta tradicional de África",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Traje herero",
       "facet": "Vestimenta tradicional de África",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Manta basotho",
       "facet": "Vestimenta tradicional de África",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pagne",
@@ -411,27 +444,32 @@
     {
       "name": "Traje xhosa",
       "facet": "Vestimenta tradicional de África",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Arhuacos",
       "facet": "Pueblos indígenas y su ropa",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Kogui",
       "facet": "Pueblos indígenas y su ropa",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Emberá",
       "facet": "Pueblos indígenas y su ropa",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Misak",
       "facet": "Pueblos indígenas y su ropa",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Maasái",
@@ -461,7 +499,8 @@
     {
       "name": "Zenú",
       "facet": "Pueblos indígenas y su ropa",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mapuche",
@@ -471,7 +510,8 @@
     {
       "name": "Gunadule",
       "facet": "Pueblos indígenas y su ropa",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ainu",
@@ -521,17 +561,20 @@
     {
       "name": "Sombrero cordobés",
       "facet": "Sombreros y tocados del mundo",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Montera",
       "facet": "Sombreros y tocados del mundo",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gele",
       "facet": "Sombreros y tocados del mundo",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Kipá",
@@ -546,7 +589,8 @@
     {
       "name": "Barretina",
       "facet": "Sombreros y tocados del mundo",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mantilla",
@@ -591,7 +635,8 @@
     {
       "name": "Abarcas",
       "facet": "Calzado tradicional",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Botas vaqueras",
@@ -611,7 +656,8 @@
     {
       "name": "Ojotas",
       "facet": "Calzado tradicional",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Jutti",
@@ -621,22 +667,26 @@
     {
       "name": "Valenki",
       "facet": "Calzado tradicional",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cotizas",
       "facet": "Calzado tradicional",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Kolhapuri",
       "facet": "Calzado tradicional",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Botas pantaneras",
       "facet": "Calzado tradicional",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tartán",
@@ -671,7 +721,8 @@
     {
       "name": "Fique",
       "facet": "Telas, tejidos y estampados",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Lana de alpaca",
@@ -686,12 +737,14 @@
     {
       "name": "Caña flecha",
       "facet": "Telas, tejidos y estampados",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Collar de chaquiras",
       "facet": "Accesorios y joyas tradicionales",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Faja",
@@ -706,12 +759,14 @@
     {
       "name": "Peineta",
       "facet": "Accesorios y joyas tradicionales",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sporran",
       "facet": "Accesorios y joyas tradicionales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Anillos de cuello",
@@ -721,7 +776,8 @@
     {
       "name": "Tupu",
       "facet": "Accesorios y joyas tradicionales",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Kanzashi",
@@ -731,7 +787,8 @@
     {
       "name": "Nariguera",
       "facet": "Accesorios y joyas tradicionales",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pectoral precolombino",
@@ -751,12 +808,14 @@
     {
       "name": "Garabato",
       "facet": "Trajes de fiestas y carnavales",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Diablada",
       "facet": "Trajes de fiestas y carnavales",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Traje de samba",
@@ -771,7 +830,8 @@
     {
       "name": "Diablo de Riosucio",
       "facet": "Trajes de fiestas y carnavales",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Danza del dragón",
@@ -781,7 +841,8 @@
     {
       "name": "Gigantes y cabezudos",
       "facet": "Trajes de fiestas y carnavales",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Falda de hula",
@@ -791,22 +852,26 @@
     {
       "name": "Diablos danzantes",
       "facet": "Trajes de fiestas y carnavales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Monocuco",
       "facet": "Trajes de fiestas y carnavales",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Torito",
       "facet": "Trajes de fiestas y carnavales",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Caporal",
       "facet": "Trajes de fiestas y carnavales",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Miguel Rivera",
@@ -847,6 +912,316 @@
       "name": "Memorias de una geisha",
       "facet": "Trajes típicos en películas y juegos",
       "known_at": 13
+    },
+    {
+      "name": "Sarong",
+      "facet": "Vestimenta tradicional de Asia",
+      "known_at": 6
+    },
+    {
+      "name": "Dhoti",
+      "facet": "Vestimenta tradicional de Asia",
+      "known_at": 10
+    },
+    {
+      "name": "Mao suit",
+      "facet": "Vestimenta tradicional de Asia",
+      "known_at": 10
+    },
+    {
+      "name": "Baju kurung",
+      "facet": "Vestimenta tradicional de Asia",
+      "known_at": 13
+    },
+    {
+      "name": "Haori",
+      "facet": "Vestimenta tradicional de Asia",
+      "known_at": 13
+    },
+    {
+      "name": "Longyi",
+      "facet": "Vestimenta tradicional de Asia",
+      "known_at": 13
+    },
+    {
+      "name": "Aran sweater",
+      "facet": "Trajes típicos de Europa",
+      "known_at": 11
+    },
+    {
+      "name": "Romanian blouse (ie)",
+      "facet": "Trajes típicos de Europa",
+      "known_at": 13
+    },
+    {
+      "name": "Lopapeysa",
+      "facet": "Trajes típicos de Europa",
+      "known_at": 13
+    },
+    {
+      "name": "Volendam costume",
+      "facet": "Trajes típicos de Europa",
+      "known_at": 12
+    },
+    {
+      "name": "Swiss Guard uniform",
+      "facet": "Trajes típicos de Europa",
+      "known_at": 8
+    },
+    {
+      "name": "Marinera dress",
+      "facet": "Ropa tradicional de América Latina",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Terno yucateco",
+      "facet": "Ropa tradicional de América Latina",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Jarocho costume",
+      "facet": "Ropa tradicional de América Latina",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Wayuu mochila",
+      "facet": "Trajes típicos de Colombia",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Kikoi",
+      "facet": "Vestimenta tradicional de África",
+      "known_at": 13
+    },
+    {
+      "name": "Lamba",
+      "facet": "Vestimenta tradicional de África",
+      "known_at": 13
+    },
+    {
+      "name": "Netela",
+      "facet": "Vestimenta tradicional de África",
+      "known_at": 14
+    },
+    {
+      "name": "Wixárika",
+      "facet": "Pueblos indígenas y su ropa",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Zulu",
+      "facet": "Pueblos indígenas y su ropa",
+      "known_at": 8
+    },
+    {
+      "name": "Tuareg",
+      "facet": "Pueblos indígenas y su ropa",
+      "known_at": 9
+    },
+    {
+      "name": "Ndebele",
+      "facet": "Pueblos indígenas y su ropa",
+      "known_at": 12
+    },
+    {
+      "name": "Aboriginal Australians",
+      "facet": "Pueblos indígenas y su ropa",
+      "known_at": 7
+    },
+    {
+      "name": "Cherokee",
+      "facet": "Pueblos indígenas y su ropa",
+      "known_at": 8
+    },
+    {
+      "name": "Turban",
+      "facet": "Sombreros y tocados del mundo",
+      "known_at": 4
+    },
+    {
+      "name": "Beret",
+      "facet": "Sombreros y tocados del mundo",
+      "known_at": 4
+    },
+    {
+      "name": "Keffiyeh",
+      "facet": "Sombreros y tocados del mundo",
+      "known_at": 8
+    },
+    {
+      "name": "Bearskin hat",
+      "facet": "Sombreros y tocados del mundo",
+      "known_at": 6
+    },
+    {
+      "name": "Cowboy hat",
+      "facet": "Sombreros y tocados del mundo",
+      "known_at": 2
+    },
+    {
+      "name": "Bowler hat",
+      "facet": "Sombreros y tocados del mundo",
+      "known_at": 7
+    },
+    {
+      "name": "Kufi",
+      "facet": "Sombreros y tocados del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Gat",
+      "facet": "Sombreros y tocados del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Tricorne",
+      "facet": "Sombreros y tocados del mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Espadrilles",
+      "facet": "Calzado tradicional",
+      "known_at": 9
+    },
+    {
+      "name": "Tabi",
+      "facet": "Calzado tradicional",
+      "known_at": 11
+    },
+    {
+      "name": "Waraji",
+      "facet": "Calzado tradicional",
+      "known_at": 13
+    },
+    {
+      "name": "Opanci",
+      "facet": "Calzado tradicional",
+      "known_at": 13
+    },
+    {
+      "name": "Lapti",
+      "facet": "Calzado tradicional",
+      "known_at": 13
+    },
+    {
+      "name": "Cashmere",
+      "facet": "Telas, tejidos y estampados",
+      "known_at": 7
+    },
+    {
+      "name": "Tweed",
+      "facet": "Telas, tejidos y estampados",
+      "known_at": 11
+    },
+    {
+      "name": "Madras",
+      "facet": "Telas, tejidos y estampados",
+      "known_at": 12
+    },
+    {
+      "name": "Shibori",
+      "facet": "Telas, tejidos y estampados",
+      "known_at": 13
+    },
+    {
+      "name": "Kilim",
+      "facet": "Telas, tejidos y estampados",
+      "known_at": 10
+    },
+    {
+      "name": "Khadi",
+      "facet": "Telas, tejidos y estampados",
+      "known_at": 12
+    },
+    {
+      "name": "Bogolan",
+      "facet": "Telas, tejidos y estampados",
+      "known_at": 13
+    },
+    {
+      "name": "Spanish fan",
+      "facet": "Accesorios y joyas tradicionales",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Bolo tie",
+      "facet": "Accesorios y joyas tradicionales",
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Hamsa",
+      "facet": "Accesorios y joyas tradicionales",
+      "known_at": 12
+    },
+    {
+      "name": "Nazar",
+      "facet": "Accesorios y joyas tradicionales",
+      "known_at": 9
+    },
+    {
+      "name": "Hei-tiki",
+      "facet": "Accesorios y joyas tradicionales",
+      "known_at": 12
+    },
+    {
+      "name": "Cowrie shell jewelry",
+      "facet": "Accesorios y joyas tradicionales",
+      "known_at": 11
+    },
+    {
+      "name": "Venetian mask",
+      "facet": "Trajes de fiestas y carnavales",
+      "known_at": 5
+    },
+    {
+      "name": "Moors and Christians",
+      "facet": "Trajes de fiestas y carnavales",
+      "known_at": 12
+    },
+    {
+      "name": "Parachicos",
+      "facet": "Trajes de fiestas y carnavales",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Lilo",
+      "facet": "Trajes típicos en películas y juegos",
+      "known_at": 3
+    },
+    {
+      "name": "The Sound of Music",
+      "facet": "Trajes típicos en películas y juegos",
+      "known_at": 11
+    },
+    {
+      "name": "Aloha shirt",
+      "facet": "Vestimenta tradicional de Oceanía",
+      "known_at": 5
+    },
+    {
+      "name": "Muumuu",
+      "facet": "Vestimenta tradicional de Oceanía",
+      "known_at": 11
+    },
+    {
+      "name": "Tapa cloth",
+      "facet": "Vestimenta tradicional de Oceanía",
+      "known_at": 12
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-15",
+      "added": 59,
+      "unused": 145
     }
   ]
 }

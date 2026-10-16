@@ -141,77 +141,92 @@
     {
       "name": "Palma de cera",
       "facet": "Árboles de Colombia",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Guayacán amarillo",
       "facet": "Árboles de Colombia",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ocobo",
       "facet": "Árboles de Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Samán",
       "facet": "Árboles de Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Yarumo",
       "facet": "Árboles de Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Nogal cafetero",
       "facet": "Árboles de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Roble andino",
       "facet": "Árboles de Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Caracolí",
       "facet": "Árboles de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Abarco",
       "facet": "Árboles de Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Totumo",
       "facet": "Árboles de Colombia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Carbonero",
       "facet": "Árboles de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chiminango",
       "facet": "Árboles de Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Palma de moriche",
       "facet": "Árboles de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Siete cueros",
       "facet": "Árboles de Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chicalá",
       "facet": "Árboles de Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Manzano",
@@ -251,7 +266,8 @@
     {
       "name": "Palma de chontaduro",
       "facet": "Árboles frutales",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Peral",
@@ -276,7 +292,8 @@
     {
       "name": "Ombú",
       "facet": "Árboles emblemáticos del mundo",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Araucaria",
@@ -306,7 +323,8 @@
     {
       "name": "Manzano de Newton",
       "facet": "Árboles récord y famosos",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Árbol de la vida de Baréin",
@@ -316,17 +334,20 @@
     {
       "name": "Árbol de Navidad del Rockefeller Center",
       "facet": "Árboles récord y famosos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Árbol de Guernica",
       "facet": "Árboles récord y famosos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Samán de Güere",
       "facet": "Árboles récord y famosos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Plátano de Hipócrates",
@@ -371,7 +392,8 @@
     {
       "name": "Chocó biogeográfico",
       "facet": "Bosques y ecosistemas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bosque petrificado",
@@ -466,7 +488,8 @@
     {
       "name": "Madremonte",
       "facet": "Árboles en mitos y tradiciones",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Manzanas de oro de las Hespérides",
@@ -596,12 +619,14 @@
     {
       "name": "Árbol que nace torcido jamás su tronco endereza",
       "facet": "Palabras y dichos del árbol",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El que a buen árbol se arrima, buena sombra lo cobija",
       "facet": "Palabras y dichos del árbol",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Los árboles no dejan ver el bosque",
@@ -616,7 +641,8 @@
     {
       "name": "Del árbol caído todos hacen leña",
       "facet": "Palabras y dichos del árbol",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tocar madera",

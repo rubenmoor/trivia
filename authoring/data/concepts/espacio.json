@@ -696,7 +696,8 @@
     {
       "name": "Satélite Libertad 1",
       "facet": "Exploración espacial y misiones",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Astronauta",
@@ -756,22 +757,26 @@
     {
       "name": "Chris Hadfield",
       "facet": "Astronautas y pioneros espaciales",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Franklin Chang-Díaz",
       "facet": "Astronautas y pioneros espaciales",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pedro Duque",
       "facet": "Astronautas y pioneros espaciales",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Arnaldo Tamayo Méndez",
       "facet": "Astronautas y pioneros espaciales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mae Jemison",
@@ -781,7 +786,8 @@
     {
       "name": "Ellen Ochoa",
       "facet": "Astronautas y pioneros espaciales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Wernher von Braun",
@@ -1081,7 +1087,8 @@
     {
       "name": "Observatorio Astronómico Nacional de Colombia",
       "facet": "Astronomía antigua y descubrimientos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Buzz Lightyear",
@@ -1161,7 +1168,8 @@
     {
       "name": "Los Supersónicos",
       "facet": "Espacio en películas y juegos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Gravity",
@@ -1171,7 +1179,8 @@
     {
       "name": "Misión rescate",
       "facet": "Espacio en películas y juegos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "2001: Odisea del espacio",
@@ -1326,12 +1335,14 @@
     {
       "name": "Planeta Namek",
       "facet": "Espacio en películas y juegos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Marcianitos de Toy Story",
       "facet": "Espacio en películas y juegos",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     }
   ]
 }

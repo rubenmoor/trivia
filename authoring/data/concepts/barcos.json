@@ -426,7 +426,8 @@
     {
       "name": "Rodrigo de Bastidas",
       "facet": "Navegantes y exploradores",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Loro pirata",
@@ -506,52 +507,62 @@
     {
       "name": "Puerto de Cartagena",
       "facet": "Barcos y ríos de Colombia",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Puerto de Barranquilla",
       "facet": "Barcos y ríos de Colombia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Lancha a las Islas del Rosario",
       "facet": "Barcos y ríos de Colombia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Buque Escuela ARC Gloria",
       "facet": "Barcos y ríos de Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Armada de Colombia",
       "facet": "Barcos y ríos de Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Río Meta",
       "facet": "Barcos y ríos de Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mompox",
       "facet": "Barcos y ríos de Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Vapor del Magdalena",
       "facet": "Barcos y ríos de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Planchón",
       "facet": "Barcos y ríos de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Canal del Dique",
       "facet": "Barcos y ríos de Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Marinero",

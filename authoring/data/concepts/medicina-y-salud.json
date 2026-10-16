@@ -241,7 +241,8 @@
     {
       "name": "Acetaminofén",
       "facet": "Medicamentos y remedios",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pomada",
@@ -261,7 +262,8 @@
     {
       "name": "Fórmula médica",
       "facet": "Medicamentos y remedios",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Medicamento genérico",
@@ -291,7 +293,8 @@
     {
       "name": "Tapabocas",
       "facet": "Instrumentos y aparatos médicos",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Muletas",
@@ -541,7 +544,8 @@
     {
       "name": "Severo Ochoa",
       "facet": "Médicos y científicos famosos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Lavado de manos",
@@ -671,12 +675,14 @@
     {
       "name": "Agua de panela con limón",
       "facet": "Medicina tradicional y plantas medicinales",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Caldo de gallina",
       "facet": "Medicina tradicional y plantas medicinales",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Acupuntura",
@@ -696,7 +702,8 @@
     {
       "name": "Sobandero",
       "facet": "Medicina tradicional y plantas medicinales",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Homeopatía",

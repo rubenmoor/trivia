@@ -76,7 +76,8 @@
     {
       "name": "Pedro de Ursúa",
       "facet": "Orellana y primeros viajes europeos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "País de la Canela",
@@ -151,7 +152,8 @@
     {
       "name": "Tsantsa",
       "facet": "Pueblos indígenas amazónicos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ayahuasca",
@@ -171,7 +173,8 @@
     {
       "name": "Serranía de La Lindosa",
       "facet": "Arqueología y ciudades perdidas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cerámica marajoara",
@@ -181,7 +184,8 @@
     {
       "name": "Valle del Upano",
       "facet": "Arqueología y ciudades perdidas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Kuhikugu",
@@ -236,7 +240,8 @@
     {
       "name": "Seringueiro",
       "facet": "La fiebre del caucho",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fordlândia",
@@ -256,7 +261,8 @@
     {
       "name": "Carlos Fermín Fitzcarrald",
       "facet": "La fiebre del caucho",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Barón del caucho",
@@ -331,12 +337,14 @@
     {
       "name": "Tratado Salomón-Lozano",
       "facet": "Fronteras, tratados y conflictos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Trapecio amazónico",
       "facet": "Fronteras, tratados y conflictos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Triple frontera amazónica",
@@ -361,12 +369,14 @@
     {
       "name": "Protocolo de Río de Janeiro de 1942",
       "facet": "Fronteras, tratados y conflictos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Guerra del Cenepa",
       "facet": "Fronteras, tratados y conflictos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tratado de Cooperación Amazónica",
@@ -391,7 +401,8 @@
     {
       "name": "Departamento de Amazonas",
       "facet": "Fronteras, tratados y conflictos",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tabatinga",
@@ -426,37 +437,44 @@
     {
       "name": "Mitú",
       "facet": "Ciudades y puertos amazónicos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mocoa",
       "facet": "Ciudades y puertos amazónicos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "San José del Guaviare",
       "facet": "Ciudades y puertos amazónicos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Puerto Inírida",
       "facet": "Ciudades y puertos amazónicos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mercado Ver-o-Peso",
       "facet": "Ciudades y puertos amazónicos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Barrio de Belén de Iquitos",
       "facet": "Ciudades y puertos amazónicos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Casa de Fierro",
       "facet": "Ciudades y puertos amazónicos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Zona Franca de Manaos",
@@ -486,7 +504,8 @@
     {
       "name": "Trocha",
       "facet": "Navegación, herramientas y supervivencia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fitzcarraldo",
@@ -551,12 +570,14 @@
     {
       "name": "Parque Nacional Natural Amacayacu",
       "facet": "Deforestación y conservación moderna",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fondo Amazonía",
       "facet": "Deforestación y conservación moderna",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "COP30",
@@ -586,7 +607,8 @@
     {
       "name": "Amazonía sujeto de derechos",
       "facet": "Deforestación y conservación moderna",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Monitoreo satelital de la deforestación",

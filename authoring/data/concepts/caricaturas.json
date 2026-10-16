@@ -446,7 +446,8 @@
     {
       "name": "Yo soy tu amigo fiel",
       "facet": "Frases, canciones y nombres célebres",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "¡Estoy listo!",
@@ -496,22 +497,26 @@
     {
       "name": "Sebastián Yatra",
       "facet": "Caricaturas en Colombia y Latinoamérica",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Carlos Vives",
       "facet": "Caricaturas en Colombia y Latinoamérica",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El Chavo animado",
       "facet": "Caricaturas en Colombia y Latinoamérica",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Condorito",
       "facet": "Caricaturas en Colombia y Latinoamérica",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mafalda",
@@ -521,42 +526,50 @@
     {
       "name": "Quino",
       "facet": "Caricaturas en Colombia y Latinoamérica",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bolívar, el héroe",
       "facet": "Caricaturas en Colombia y Latinoamérica",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pequeñas voces",
       "facet": "Caricaturas en Colombia y Latinoamérica",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Huevocartoon",
       "facet": "Caricaturas en Colombia y Latinoamérica",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Elpidio Valdés",
       "facet": "Caricaturas en Colombia y Latinoamérica",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Patoruzú",
       "facet": "Caricaturas en Colombia y Latinoamérica",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gaturro",
       "facet": "Caricaturas en Colombia y Latinoamérica",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La Leyenda de la Nahuala",
       "facet": "Caricaturas en Colombia y Latinoamérica",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Elena de Ávalor",
@@ -566,12 +579,14 @@
     {
       "name": "Mario Castañeda",
       "facet": "Caricaturas en Colombia y Latinoamérica",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El Apóstol",
       "facet": "Caricaturas en Colombia y Latinoamérica",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mario",

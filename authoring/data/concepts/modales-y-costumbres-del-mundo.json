@@ -486,7 +486,8 @@
     {
       "name": "Doce uvas de Año Nuevo",
       "facet": "Supersticiones y creencias populares",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pedir perdón",
@@ -516,7 +517,8 @@
     {
       "name": "Decir salud al estornudar",
       "facet": "Normas de cortesía y etiqueta",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ceder el asiento",
@@ -546,17 +548,20 @@
     {
       "name": "Usted",
       "facet": "Normas de cortesía y etiqueta",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Don y doña",
       "facet": "Normas de cortesía y etiqueta",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tutear",
       "facet": "Normas de cortesía y etiqueta",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Escribir en mayúsculas en internet",
@@ -576,7 +581,8 @@
     {
       "name": "Manual de Carreño",
       "facet": "Normas de cortesía y etiqueta",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Lavarse los dientes",
@@ -591,7 +597,8 @@
     {
       "name": "Merienda",
       "facet": "Costumbres de la vida diaria",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bicicleta en Ámsterdam",
@@ -601,7 +608,8 @@
     {
       "name": "Desayuno inglés",
       "facet": "Costumbres de la vida diaria",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Conducir por la izquierda",
@@ -621,7 +629,8 @@
     {
       "name": "Cena tardía en España",
       "facet": "Costumbres de la vida diaria",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Onsen",
@@ -646,7 +655,8 @@
     {
       "name": "Quinceañera",
       "facet": "Ritos de paso y celebraciones familiares",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Luna de miel",
@@ -661,7 +671,8 @@
     {
       "name": "Baby shower",
       "facet": "Ritos de paso y celebraciones familiares",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Lanzar arroz a los novios",
@@ -676,12 +687,14 @@
     {
       "name": "Sweet sixteen",
       "facet": "Ritos de paso y celebraciones familiares",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Arras",
       "facet": "Ritos de paso y celebraciones familiares",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Seijin no hi",
@@ -691,47 +704,56 @@
     {
       "name": "Natilla y buñuelos",
       "facet": "Modales y costumbres en Colombia",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bandeja paisa",
       "facet": "Modales y costumbres en Colombia",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mucho gusto",
       "facet": "Modales y costumbres en Colombia",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "A la orden",
       "facet": "Modales y costumbres en Colombia",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mecato",
       "facet": "Modales y costumbres en Colombia",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Señalar con la boca",
       "facet": "Modales y costumbres en Colombia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sumercé",
       "facet": "Modales y costumbres en Colombia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hora colombiana",
       "facet": "Modales y costumbres en Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Salir con la maleta en Año Nuevo",
       "facet": "Modales y costumbres en Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     }
   ]
 }

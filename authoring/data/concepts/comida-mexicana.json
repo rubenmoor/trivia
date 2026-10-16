@@ -100,7 +100,8 @@
     {
       "name": "Sope",
       "facet": "Tortillas, tacos y antojitos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gordita",
@@ -115,7 +116,8 @@
     {
       "name": "Tlayuda",
       "facet": "Tortillas, tacos y antojitos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Flautas",
@@ -150,12 +152,14 @@
     {
       "name": "Tacos de canasta",
       "facet": "Tortillas, tacos y antojitos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tlacoyo",
       "facet": "Tortillas, tacos y antojitos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chile jalapeño",
@@ -210,12 +214,14 @@
     {
       "name": "Pipián",
       "facet": "Chiles, salsas y moles",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Salsa macha",
       "facet": "Chiles, salsas y moles",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Escala Scoville",
@@ -250,7 +256,8 @@
     {
       "name": "Menudo",
       "facet": "Platos y guisos tradicionales",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Carnitas",
@@ -270,7 +277,8 @@
     {
       "name": "Huevos divorciados",
       "facet": "Platos y guisos tradicionales",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sopa de tortilla",
@@ -300,12 +308,14 @@
     {
       "name": "Enfrijoladas",
       "facet": "Platos y guisos tradicionales",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Molletes",
       "facet": "Platos y guisos tradicionales",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Maíz",
@@ -390,7 +400,8 @@
     {
       "name": "Alegría",
       "facet": "Dulces, panes y postres",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pastel de tres leches",
@@ -400,7 +411,8 @@
     {
       "name": "Mazapán de cacahuate",
       "facet": "Dulces, panes y postres",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Buñuelos mexicanos",
@@ -410,12 +422,14 @@
     {
       "name": "Glorias",
       "facet": "Dulces, panes y postres",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Jamoncillo",
       "facet": "Dulces, panes y postres",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cocada",
@@ -435,7 +449,8 @@
     {
       "name": "Dulce de tamarindo",
       "facet": "Dulces, panes y postres",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tequila",
@@ -475,7 +490,8 @@
     {
       "name": "Agua de chía",
       "facet": "Bebidas y aguas frescas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Atole",
@@ -495,12 +511,14 @@
     {
       "name": "Tejate",
       "facet": "Bebidas y aguas frescas",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tepache",
       "facet": "Bebidas y aguas frescas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Michelada",
@@ -515,7 +533,8 @@
     {
       "name": "Tascalate",
       "facet": "Bebidas y aguas frescas",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chocolate caliente mexicano",
@@ -535,7 +554,8 @@
     {
       "name": "Grito de Independencia",
       "facet": "Fiestas y costumbres en la mesa",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fiesta de quince años",
@@ -550,32 +570,38 @@
     {
       "name": "Tianguis",
       "facet": "Fiestas y costumbres en la mesa",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fonda",
       "facet": "Fiestas y costumbres en la mesa",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Comida corrida",
       "facet": "Fiestas y costumbres en la mesa",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sobremesa",
       "facet": "Fiestas y costumbres en la mesa",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Guelaguetza",
       "facet": "Fiestas y costumbres en la mesa",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Taquiza",
       "facet": "Fiestas y costumbres en la mesa",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Aztecas",
@@ -610,17 +636,20 @@
     {
       "name": "Popol Vuh",
       "facet": "Historia y cocina prehispánica",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mercado de Tlatelolco",
       "facet": "Historia y cocina prehispánica",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fray Bernardino de Sahagún",
       "facet": "Historia y cocina prehispánica",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Teotihuacán",
@@ -685,7 +714,8 @@
     {
       "name": "Torta ahogada",
       "facet": "Cocinas regionales de México",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Aguachile",
@@ -700,12 +730,14 @@
     {
       "name": "Papadzules",
       "facet": "Cocinas regionales de México",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Huachinango a la veracruzana",
       "facet": "Cocinas regionales de México",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Comal",
@@ -745,7 +777,8 @@
     {
       "name": "Tortillero",
       "facet": "Utensilios y técnicas de cocina",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Trompo",
@@ -780,12 +813,14 @@
     {
       "name": "Tatemar",
       "facet": "Utensilios y técnicas de cocina",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Capear",
       "facet": "Utensilios y técnicas de cocina",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tex-Mex",
@@ -810,7 +845,8 @@
     {
       "name": "Taco Bell",
       "facet": "Comida mexicana en el mundo y la pantalla",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Ensalada César",
@@ -820,12 +856,14 @@
     {
       "name": "El Chavo del 8",
       "facet": "Comida mexicana en el mundo y la pantalla",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Torta de jamón",
       "facet": "Comida mexicana en el mundo y la pantalla",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Como agua para chocolate",
@@ -855,17 +893,320 @@
     {
       "name": "Taco Tuesday",
       "facet": "Comida mexicana en el mundo y la pantalla",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Enrique Olvera",
       "facet": "Comida mexicana en el mundo y la pantalla",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Salsa Valentina",
       "facet": "Comida mexicana en el mundo y la pantalla",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Tamale",
+      "facet": "Tortillas, tacos y antojitos",
+      "known_at": 4
+    },
+    {
+      "name": "Panucho",
+      "facet": "Tortillas, tacos y antojitos",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Pambazo",
+      "facet": "Tortillas, tacos y antojitos",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Tacos árabes",
+      "facet": "Tortillas, tacos y antojitos",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Salsa roja",
+      "facet": "Chiles, salsas y moles",
+      "known_at": 6
+    },
+    {
+      "name": "Guajillo chili",
+      "facet": "Chiles, salsas y moles",
       "known_at": 11
+    },
+    {
+      "name": "Pasilla chili",
+      "facet": "Chiles, salsas y moles",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Mole verde",
+      "facet": "Chiles, salsas y moles",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Chamoy",
+      "facet": "Chiles, salsas y moles",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Adobo",
+      "facet": "Chiles, salsas y moles",
+      "known_at": 10
+    },
+    {
+      "name": "Carne asada",
+      "facet": "Platos y guisos tradicionales",
+      "known_at": 7
+    },
+    {
+      "name": "Mixiote",
+      "facet": "Platos y guisos tradicionales",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Picadillo",
+      "facet": "Platos y guisos tradicionales",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Chicharrón",
+      "facet": "Platos y guisos tradicionales",
+      "known_at": 8
+    },
+    {
+      "name": "Frijoles charros",
+      "facet": "Platos y guisos tradicionales",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Sopa de lima",
+      "facet": "Platos y guisos tradicionales",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Mexican chorizo",
+      "facet": "Platos y guisos tradicionales",
+      "known_at": 8
+    },
+    {
+      "name": "Avocado",
+      "facet": "Ingredientes nativos de México",
+      "known_at": 2
+    },
+    {
+      "name": "Tomato",
+      "facet": "Ingredientes nativos de México",
+      "known_at": 2
+    },
+    {
+      "name": "Beans",
+      "facet": "Ingredientes nativos de México",
+      "known_at": 3
+    },
+    {
+      "name": "Squash",
+      "facet": "Ingredientes nativos de México",
+      "known_at": 4
+    },
+    {
+      "name": "Prickly pear",
+      "facet": "Ingredientes nativos de México",
+      "known_at": 7
+    },
+    {
+      "name": "Squash blossom",
+      "facet": "Ingredientes nativos de México",
+      "known_at": 9
+    },
+    {
+      "name": "Pitaya",
+      "facet": "Ingredientes nativos de México",
+      "known_at": 8
+    },
+    {
+      "name": "Turkey",
+      "facet": "Ingredientes nativos de México",
+      "known_at": 6
+    },
+    {
+      "name": "Oaxaca cheese",
+      "facet": "Ingredientes nativos de México",
+      "known_at": 9
+    },
+    {
+      "name": "Cotija cheese",
+      "facet": "Ingredientes nativos de México",
+      "known_at": 10
+    },
+    {
+      "name": "Maguey",
+      "facet": "Ingredientes nativos de México",
+      "known_at": 10
+    },
+    {
+      "name": "Sugar skull",
+      "facet": "Dulces, panes y postres",
+      "known_at": 4
+    },
+    {
+      "name": "Capirotada",
+      "facet": "Dulces, panes y postres",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Ate",
+      "facet": "Dulces, panes y postres",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Palanqueta",
+      "facet": "Dulces, panes y postres",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Pan dulce",
+      "facet": "Dulces, panes y postres",
+      "known_at": 7
+    },
+    {
+      "name": "Jarritos",
+      "facet": "Bebidas y aguas frescas",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Rompope",
+      "facet": "Bebidas y aguas frescas",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Ponche navideño",
+      "facet": "Bebidas y aguas frescas",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Licuado",
+      "facet": "Bebidas y aguas frescas",
+      "known_at": 9
+    },
+    {
+      "name": "Day of the Dead",
+      "facet": "Fiestas y costumbres en la mesa",
+      "known_at": 3
+    },
+    {
+      "name": "Maya",
+      "facet": "Historia y cocina prehispánica",
+      "known_at": 5
+    },
+    {
+      "name": "Columbian Exchange",
+      "facet": "Historia y cocina prehispánica",
+      "known_at": 11
+    },
+    {
+      "name": "Manila galleon",
+      "facet": "Historia y cocina prehispánica",
+      "known_at": 12
+    },
+    {
+      "name": "Mexico City",
+      "facet": "Cocinas regionales de México",
+      "known_at": 4
+    },
+    {
+      "name": "Baja California",
+      "facet": "Cocinas regionales de México",
+      "known_at": 8
+    },
+    {
+      "name": "Sinaloa",
+      "facet": "Cocinas regionales de México",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Sonora",
+      "facet": "Cocinas regionales de México",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Jícara",
+      "facet": "Utensilios y técnicas de cocina",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Tamalera",
+      "facet": "Utensilios y técnicas de cocina",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Hard-shell taco",
+      "facet": "Comida mexicana en el mundo y la pantalla",
+      "known_at": 5,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Chimichanga",
+      "facet": "Comida mexicana en el mundo y la pantalla",
+      "known_at": 9
+    },
+    {
+      "name": "Chipotle Mexican Grill",
+      "facet": "Comida mexicana en el mundo y la pantalla",
+      "known_at": 9
+    },
+    {
+      "name": "Diana Kennedy",
+      "facet": "Comida mexicana en el mundo y la pantalla",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Taco truck",
+      "facet": "Comida mexicana en el mundo y la pantalla",
+      "known_at": 7,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "The Three Caballeros",
+      "facet": "Comida mexicana en el mundo y la pantalla",
+      "known_at": 11
+    },
+    {
+      "name": "Tabasco sauce",
+      "facet": "Comida mexicana en el mundo y la pantalla",
+      "known_at": 6
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-15",
+      "added": 54,
+      "unused": 158
     }
   ]
 }

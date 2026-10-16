@@ -426,7 +426,8 @@
     {
       "name": "Colores de la Gran Colombia",
       "facet": "Colores y su significado",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Verde del islam",
@@ -466,12 +467,14 @@
     {
       "name": "Escudo de Colombia",
       "facet": "Símbolos y escudos en banderas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sol de Mayo",
       "facet": "Símbolos y escudos en banderas",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Estrella roja",
@@ -606,12 +609,14 @@
     {
       "name": "Bandera de Ohio",
       "facet": "Formas, franjas y diseños raros",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Bandera de Texas",
       "facet": "Banderas parecidas y confundibles",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Hungría",
@@ -692,17 +697,20 @@
     {
       "name": "José de San Martín",
       "facet": "Historia y origen de banderas",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Francisco de Miranda",
       "facet": "Historia y origen de banderas",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Manuel Belgrano",
       "facet": "Historia y origen de banderas",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Revolución francesa",
@@ -712,7 +720,8 @@
     {
       "name": "Bandera de la Gran Colombia",
       "facet": "Historia y origen de banderas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bandera de la Unión Soviética",
@@ -722,12 +731,14 @@
     {
       "name": "Trece colonias",
       "facet": "Historia y origen de banderas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Bandera de Cartagena",
       "facet": "Historia y origen de banderas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Dannebrog",
@@ -737,7 +748,8 @@
     {
       "name": "Betsy Ross",
       "facet": "Historia y origen de banderas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Vexilología",
@@ -817,7 +829,8 @@
     {
       "name": "Wiphala",
       "facet": "Banderas de organizaciones y señales",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Banderas de señales marítimas",
@@ -832,7 +845,8 @@
     {
       "name": "Bandera azul de playas",
       "facet": "Banderas de organizaciones y señales",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Bandera de la OTAN",
@@ -867,7 +881,8 @@
     {
       "name": "Desfile del 20 de julio",
       "facet": "Costumbres y protocolo de banderas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bandera a media asta",
@@ -912,7 +927,8 @@
     {
       "name": "Camiseta de la Selección Colombia",
       "facet": "Banderas en deporte y cultura",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Capitán América",
@@ -947,7 +963,8 @@
     {
       "name": "Banderazo",
       "facet": "Banderas en deporte y cultura",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tifo",
@@ -957,17 +974,20 @@
     {
       "name": "Senyera",
       "facet": "Banderas en deporte y cultura",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sheldon Cooper",
       "facet": "Banderas en deporte y cultura",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Banderines de la Copa América",
       "facet": "Banderas en deporte y cultura",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     }
   ]
 }

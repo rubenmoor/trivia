@@ -141,12 +141,14 @@
     {
       "name": "Arequipe",
       "facet": "Dulces típicos colombianos",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bocadillo veleño",
       "facet": "Dulces típicos colombianos",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cocadas",
@@ -156,22 +158,26 @@
     {
       "name": "Panelitas de leche",
       "facet": "Dulces típicos colombianos",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Brevas con arequipe",
       "facet": "Dulces típicos colombianos",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Merengón",
       "facet": "Dulces típicos colombianos",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Manjar blanco",
       "facet": "Dulces típicos colombianos",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Melcocha",
@@ -181,67 +187,80 @@
     {
       "name": "Bolitas de tamarindo",
       "facet": "Dulces típicos colombianos",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Enyucado",
       "facet": "Dulces típicos colombianos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Casquitos de guayaba",
       "facet": "Dulces típicos colombianos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cucas",
       "facet": "Dulces típicos colombianos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cortado de leche",
       "facet": "Dulces típicos colombianos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Postre de natas",
       "facet": "Dulces típicos colombianos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Alegrías",
       "facet": "Dulces típicos colombianos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Alfandoque",
       "facet": "Dulces típicos colombianos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chancacas",
       "facet": "Dulces típicos colombianos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Dulce de papayuela",
       "facet": "Dulces típicos colombianos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Caballitos de papaya",
       "facet": "Dulces típicos colombianos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mongomongo",
       "facet": "Dulces típicos colombianos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bon Bon Bum",
       "facet": "Golosinas y marcas famosas",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Oreo",
@@ -251,12 +270,14 @@
     {
       "name": "Chocolatina Jet",
       "facet": "Golosinas y marcas famosas",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chocorramo",
       "facet": "Golosinas y marcas famosas",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Kit Kat",
@@ -271,17 +292,20 @@
     {
       "name": "Nucita",
       "facet": "Golosinas y marcas famosas",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chocolatina Gol",
       "facet": "Golosinas y marcas famosas",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Colombina",
       "facet": "Golosinas y marcas famosas",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chupa Chups",
@@ -301,7 +325,8 @@
     {
       "name": "Chocolate Corona",
       "facet": "Golosinas y marcas famosas",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mentos",
@@ -311,7 +336,8 @@
     {
       "name": "Super Coco",
       "facet": "Golosinas y marcas famosas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Haribo",
@@ -336,12 +362,14 @@
     {
       "name": "Milky Way",
       "facet": "Golosinas y marcas famosas",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Cadbury",
       "facet": "Golosinas y marcas famosas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Torta tres leches",
@@ -401,7 +429,8 @@
     {
       "name": "Chupeta",
       "facet": "Caramelos, chicles y gomitas",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gomitas",
@@ -416,7 +445,8 @@
     {
       "name": "Masmelo",
       "facet": "Caramelos, chicles y gomitas",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Caramelo de menta",
@@ -671,7 +701,8 @@
     {
       "name": "Hombre de jengibre",
       "facet": "Dulces en películas y cuentos",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Candy Crush",
@@ -706,7 +737,8 @@
     {
       "name": "Candy Land",
       "facet": "Dulces en películas y cuentos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Augustus Gloop",
@@ -716,7 +748,8 @@
     {
       "name": "Una cucharada de azúcar",
       "facet": "Dulces en películas y cuentos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Delicias turcas",
@@ -741,7 +774,8 @@
     {
       "name": "Dulces de convento",
       "facet": "Historia de los dulces",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Milton Hershey",
@@ -756,12 +790,14 @@
     {
       "name": "Thomas Adams",
       "facet": "Historia de los dulces",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "William Morrison",
       "facet": "Historia de los dulces",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Torta de cumpleaños",
@@ -786,7 +822,8 @@
     {
       "name": "Torta negra",
       "facet": "Dulces de fiestas y tradiciones",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Calaveritas de azúcar",
@@ -796,7 +833,8 @@
     {
       "name": "Dulces de Semana Santa",
       "facet": "Dulces de fiestas y tradiciones",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Helado",
@@ -846,7 +884,8 @@
     {
       "name": "Helado de paila",
       "facet": "Helados y postres fríos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Granita siciliana",

@@ -201,7 +201,8 @@
     {
       "name": "Manuel Vázquez Montalbán",
       "facet": "Autores del género policiaco",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "G. K. Chesterton",
@@ -246,7 +247,8 @@
     {
       "name": "Golfos Apandadores",
       "facet": "Villanos y criminales célebres",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Raffles",
@@ -601,7 +603,8 @@
     {
       "name": "Sherlock (serie de la BBC)",
       "facet": "Detectives en cine, series y juegos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Basil, el ratón superdetective",
@@ -676,27 +679,32 @@
     {
       "name": "Agatha Mistery",
       "facet": "Detectives infantiles y juveniles",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mortadelo y Filemón",
       "facet": "Detectives infantiles y juveniles",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Enciclopedia Brown",
       "facet": "Detectives infantiles y juveniles",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Flanagan",
       "facet": "Detectives infantiles y juveniles",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Los Hollister",
       "facet": "Detectives infantiles y juveniles",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Tom Sawyer detective",
@@ -711,67 +719,80 @@
     {
       "name": "Santiago Nasar",
       "facet": "Policiaco latinoamericano y colombiano",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La muerte y la brújula",
       "facet": "Policiaco latinoamericano y colombiano",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rodolfo Walsh",
       "facet": "Policiaco latinoamericano y colombiano",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mario Mendoza",
       "facet": "Policiaco latinoamericano y colombiano",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Santiago Gamboa",
       "facet": "Policiaco latinoamericano y colombiano",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Leonardo Padura",
       "facet": "Policiaco latinoamericano y colombiano",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mario Conde",
       "facet": "Policiaco latinoamericano y colombiano",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Paco Ignacio Taibo II",
       "facet": "Policiaco latinoamericano y colombiano",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Héctor Belascoarán Shayne",
       "facet": "Policiaco latinoamericano y colombiano",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rubem Fonseca",
       "facet": "Policiaco latinoamericano y colombiano",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Juan Gabriel Vásquez",
       "facet": "Policiaco latinoamericano y colombiano",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ricardo Piglia",
       "facet": "Policiaco latinoamericano y colombiano",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Nueve reinas",
       "facet": "Policiaco latinoamericano y colombiano",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Adolfo Bioy Casares",

@@ -81,7 +81,8 @@
     {
       "name": "Discurso 'Elegimos ir a la Luna'",
       "facet": "Pioneros y primeros vuelos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Primer acoplamiento espacial",
@@ -151,7 +152,8 @@
     {
       "name": "Tim Peake",
       "facet": "Astronautas y cosmonautas famosos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Thomas Pesquet",
@@ -366,7 +368,8 @@
     {
       "name": "Tortillas en el espacio",
       "facet": "Vida diaria en el espacio",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Reciclaje de orina en agua",
@@ -641,22 +644,26 @@
     {
       "name": "Rodolfo Neri Vela",
       "facet": "Latinoamérica y Colombia en el espacio",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Marcos Pontes",
       "facet": "Latinoamérica y Colombia en el espacio",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "José Hernández",
       "facet": "Latinoamérica y Colombia en el espacio",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Katya Echazarreta",
       "facet": "Latinoamérica y Colombia en el espacio",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Carlos Noriega",
@@ -666,32 +673,38 @@
     {
       "name": "Joe Acabá",
       "facet": "Latinoamérica y Colombia en el espacio",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Libertad 1",
       "facet": "Latinoamérica y Colombia en el espacio",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "FACSAT-1",
       "facet": "Latinoamérica y Colombia en el espacio",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Comisión Colombiana del Espacio",
       "facet": "Latinoamérica y Colombia en el espacio",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Satélite Simón Bolívar",
       "facet": "Latinoamérica y Colombia en el espacio",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Agencia Espacial Mexicana",
       "facet": "Latinoamérica y Colombia en el espacio",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Puerto espacial de Kourou",
@@ -701,7 +714,8 @@
     {
       "name": "Centro de Lanzamiento de Alcântara",
       "facet": "Latinoamérica y Colombia en el espacio",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Talentos ocultos",
@@ -756,7 +770,8 @@
     {
       "name": "Astronauta de MTV",
       "facet": "Carrera espacial en películas y cultura",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     }
   ]
 }

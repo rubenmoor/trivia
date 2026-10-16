@@ -150,7 +150,8 @@
     {
       "name": "Puna",
       "facet": "Desiertos fríos y polares",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Estación Vostok",
@@ -270,7 +271,8 @@
     {
       "name": "Tuna",
       "facet": "Plantas del desierto",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rosa de Jericó",
@@ -280,7 +282,8 @@
     {
       "name": "Cardón",
       "facet": "Plantas del desierto",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Baobab",
@@ -425,7 +428,8 @@
     {
       "name": "Wayuu",
       "facet": "Pueblos y vida nómada",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Nómada",
@@ -470,17 +474,20 @@
     {
       "name": "Atacameños",
       "facet": "Pueblos y vida nómada",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mochila wayuu",
       "facet": "Pueblos y vida nómada",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ranchería",
       "facet": "Pueblos y vida nómada",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pozo de agua",
@@ -505,67 +512,80 @@
     {
       "name": "Desierto de la Tatacoa",
       "facet": "Desiertos de Colombia y América",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La Guajira",
       "facet": "Desiertos de Colombia y América",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Dunas de Taroa",
       "facet": "Desiertos de Colombia y América",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Desierto de la Candelaria",
       "facet": "Desiertos de Colombia y América",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Médanos de Coro",
       "facet": "Desiertos de Colombia y América",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Desierto de Sechura",
       "facet": "Desiertos de Colombia y América",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Huacachina",
       "facet": "Desiertos de Colombia y América",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Desierto Pintado",
       "facet": "Desiertos de Colombia y América",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Observatorio de la Tatacoa",
       "facet": "Desiertos de Colombia y América",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Serranía de la Macuira",
       "facet": "Desiertos de Colombia y América",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Península de Paraguaná",
       "facet": "Desiertos de Colombia y América",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Uribia",
       "facet": "Desiertos de Colombia y América",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cerro Pilón de Azúcar",
       "facet": "Desiertos de Colombia y América",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Lençóis Maranhenses",
@@ -740,7 +760,8 @@
     {
       "name": "Radiador Springs",
       "facet": "Desiertos en películas y cuentos",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Indiana Jones",

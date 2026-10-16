@@ -146,12 +146,14 @@
     {
       "name": "Sloppy Joe",
       "facet": "Hamburguesas y sándwiches",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Sándwich Reuben",
       "facet": "Hamburguesas y sándwiches",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Masa de pizza",
@@ -196,7 +198,8 @@
     {
       "name": "Salchipapa",
       "facet": "Perros calientes y salchichas",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chorizo",
@@ -206,22 +209,26 @@
     {
       "name": "Perro caliente colombiano",
       "facet": "Perros calientes y salchichas",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Salchichón",
       "facet": "Perros calientes y salchichas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Papitas ripio",
       "facet": "Perros calientes y salchichas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Salchicha ranchera",
       "facet": "Perros calientes y salchichas",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Salchicha alemana",
@@ -256,12 +263,14 @@
     {
       "name": "Chili dog",
       "facet": "Perros calientes y salchichas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Coney Island",
       "facet": "Perros calientes y salchichas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Tripa natural",
@@ -271,7 +280,8 @@
     {
       "name": "Perro caliente estilo Chicago",
       "facet": "Perros calientes y salchichas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Puré de papa",
@@ -321,7 +331,8 @@
     {
       "name": "Papas criollas fritas",
       "facet": "Papas fritas y acompañamientos",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Croquetas",
@@ -351,7 +362,8 @@
     {
       "name": "Tater tots",
       "facet": "Papas fritas y acompañamientos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Pollo frito",
@@ -481,12 +493,14 @@
     {
       "name": "El Corral",
       "facet": "Cadenas y mascotas famosas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Frisby",
       "facet": "Cadenas y mascotas famosas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Domino's",
@@ -501,7 +515,8 @@
     {
       "name": "Juan Valdez",
       "facet": "Cadenas y mascotas famosas",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Starbucks",
@@ -511,17 +526,20 @@
     {
       "name": "Kokoriko",
       "facet": "Cadenas y mascotas famosas",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Presto",
       "facet": "Cadenas y mascotas famosas",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Jeno's Pizza",
       "facet": "Cadenas y mascotas famosas",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sirena de Starbucks",
@@ -626,92 +644,110 @@
     {
       "name": "Obleas",
       "facet": "Comida callejera colombiana",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pandebono",
       "facet": "Comida callejera colombiana",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mazorca asada",
       "facet": "Comida callejera colombiana",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mango biche con sal",
       "facet": "Comida callejera colombiana",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Arepa de huevo",
       "facet": "Comida callejera colombiana",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Almojábana",
       "facet": "Comida callejera colombiana",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chuzo",
       "facet": "Comida callejera colombiana",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Raspao",
       "facet": "Comida callejera colombiana",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Papa rellena",
       "facet": "Comida callejera colombiana",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Arepa de choclo",
       "facet": "Comida callejera colombiana",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Picada",
       "facet": "Comida callejera colombiana",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Salpicón",
       "facet": "Comida callejera colombiana",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chontaduro",
       "facet": "Comida callejera colombiana",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pan de yuca",
       "facet": "Comida callejera colombiana",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Carimañola",
       "facet": "Comida callejera colombiana",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cholado",
       "facet": "Comida callejera colombiana",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Butifarra soledeña",
       "facet": "Comida callejera colombiana",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chorizo santarrosano",
       "facet": "Comida callejera colombiana",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Kétchup",
@@ -821,7 +857,8 @@
     {
       "name": "Pitillo",
       "facet": "Bebidas, malteadas y postres",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Malteada",
@@ -846,7 +883,8 @@
     {
       "name": "Colombiana",
       "facet": "Bebidas, malteadas y postres",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "McFlurry",
@@ -856,7 +894,8 @@
     {
       "name": "Postobón",
       "facet": "Bebidas, malteadas y postres",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Granizado",
@@ -871,7 +910,8 @@
     {
       "name": "Malta",
       "facet": "Bebidas, malteadas y postres",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sundae",
@@ -881,7 +921,8 @@
     {
       "name": "Limonada de coco",
       "facet": "Bebidas, malteadas y postres",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pie de manzana",
@@ -906,7 +947,8 @@
     {
       "name": "Plazoleta de comidas",
       "facet": "Historia e inventores de la comida rápida",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Autoservicio",
@@ -951,7 +993,8 @@
     {
       "name": "White Castle",
       "facet": "Historia e inventores de la comida rápida",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Sistema de Servicio Speedee",
@@ -966,12 +1009,14 @@
     {
       "name": "Nathan's Famous",
       "facet": "Historia e inventores de la comida rápida",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Charles Feltman",
       "facet": "Historia e inventores de la comida rápida",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Cangreburger",
@@ -1031,17 +1076,210 @@
     {
       "name": "Good Burger",
       "facet": "Comida rápida en películas y juegos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Wimpy",
       "facet": "Comida rápida en películas y juegos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "BurgerTime",
       "facet": "Comida rápida en películas y juegos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Quarter Pounder",
+      "facet": "Hamburguesas y sándwiches",
+      "known_at": 7
+    },
+    {
+      "name": "BLT",
+      "facet": "Hamburguesas y sándwiches",
+      "known_at": 10
+    },
+    {
+      "name": "Submarine sandwich",
+      "facet": "Hamburguesas y sándwiches",
+      "known_at": 8
+    },
+    {
+      "name": "Philly cheesesteak",
+      "facet": "Hamburguesas y sándwiches",
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Filet-O-Fish",
+      "facet": "Hamburguesas y sándwiches",
+      "known_at": 8
+    },
+    {
+      "name": "Grilled cheese sandwich",
+      "facet": "Hamburguesas y sándwiches",
+      "known_at": 5
+    },
+    {
+      "name": "Peanut butter and jelly sandwich",
+      "facet": "Hamburguesas y sándwiches",
+      "known_at": 5,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Pizza Margherita",
+      "facet": "Pizza y sus variedades",
+      "known_at": 5
+    },
+    {
+      "name": "Pepperoni pizza",
+      "facet": "Pizza y sus variedades",
+      "known_at": 3
+    },
+    {
+      "name": "Hawaiian pizza",
+      "facet": "Pizza y sus variedades",
+      "known_at": 5
+    },
+    {
+      "name": "Chicago deep-dish pizza",
+      "facet": "Pizza y sus variedades",
+      "known_at": 10
+    },
+    {
+      "name": "Neapolitan pizza",
+      "facet": "Pizza y sus variedades",
+      "known_at": 9
+    },
+    {
+      "name": "Wood-fired oven",
+      "facet": "Pizza y sus variedades",
+      "known_at": 7
+    },
+    {
+      "name": "Hash browns",
+      "facet": "Papas fritas y acompañamientos",
+      "known_at": 6
+    },
+    {
+      "name": "Mozzarella sticks",
+      "facet": "Papas fritas y acompañamientos",
+      "known_at": 7
+    },
+    {
+      "name": "Sweet potato fries",
+      "facet": "Papas fritas y acompañamientos",
+      "known_at": 6
+    },
+    {
+      "name": "Mac and cheese",
+      "facet": "Papas fritas y acompañamientos",
+      "known_at": 5
+    },
+    {
+      "name": "Peri-peri chicken",
+      "facet": "Pollo frito y alitas",
+      "known_at": 11
+    },
+    {
+      "name": "Jollibee",
+      "facet": "Cadenas y mascotas famosas",
+      "known_at": 11
+    },
+    {
+      "name": "Nando's",
+      "facet": "Cadenas y mascotas famosas",
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Spring roll",
+      "facet": "Comida rápida del mundo",
+      "known_at": 6
+    },
+    {
+      "name": "Crêpe",
+      "facet": "Comida rápida del mundo",
+      "known_at": 5
+    },
+    {
+      "name": "Vada pav",
+      "facet": "Comida rápida del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Bao bun",
+      "facet": "Comida rápida del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Mustard",
+      "facet": "Salsas y aderezos",
+      "known_at": 3
+    },
+    {
+      "name": "Soy sauce",
+      "facet": "Salsas y aderezos",
+      "known_at": 4
+    },
+    {
+      "name": "Chimichurri",
+      "facet": "Salsas y aderezos",
+      "known_at": 10
+    },
+    {
+      "name": "Sweet and sour sauce",
+      "facet": "Salsas y aderezos",
+      "known_at": 7
+    },
+    {
+      "name": "Bubble tea",
+      "facet": "Bebidas, malteadas y postres",
+      "known_at": 7
+    },
+    {
+      "name": "Instant noodles",
+      "facet": "Historia e inventores de la comida rápida",
+      "known_at": 4
+    },
+    {
+      "name": "Conveyor belt sushi",
+      "facet": "Historia e inventores de la comida rápida",
+      "known_at": 9
+    },
+    {
+      "name": "Naples",
+      "facet": "Historia e inventores de la comida rápida",
+      "known_at": 7
+    },
+    {
+      "name": "Teenage Mutant Ninja Turtles",
+      "facet": "Comida rápida en películas y juegos",
+      "known_at": 6
+    },
+    {
+      "name": "Cloudy with a Chance of Meatballs",
+      "facet": "Comida rápida en películas y juegos",
+      "known_at": 6
+    },
+    {
+      "name": "SpongeBob SquarePants",
+      "facet": "Comida rápida en películas y juegos",
+      "known_at": 1
+    },
+    {
+      "name": "Mr. Krabs",
+      "facet": "Comida rápida en películas y juegos",
+      "known_at": 3
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-15",
+      "added": 36,
+      "unused": 173
     }
   ]
 }

@@ -61,12 +61,14 @@
     {
       "name": "Agua de limón",
       "facet": "Rondas y juegos cantados",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El puente está quebrado",
       "facet": "Rondas y juegos cantados",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La pájara pinta",
@@ -76,22 +78,26 @@
     {
       "name": "Doña Ana no está aquí",
       "facet": "Rondas y juegos cantados",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Que llueva, que llueva",
       "facet": "Rondas y juegos cantados",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "A la rueda rueda",
       "facet": "Rondas y juegos cantados",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Matarile",
       "facet": "Rondas y juegos cantados",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La farolera",
@@ -101,7 +107,8 @@
     {
       "name": "Al pasar la barca",
       "facet": "Rondas y juegos cantados",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sana, sana, colita de rana",
@@ -111,7 +118,8 @@
     {
       "name": "La víbora de la mar",
       "facet": "Rondas y juegos cantados",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Señora Santa Ana",
@@ -136,22 +144,26 @@
     {
       "name": "Duérmete mi niño",
       "facet": "Canciones de cuna y arrullos",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Este niño lindo",
       "facet": "Canciones de cuna y arrullos",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Duerme negrito",
       "facet": "Canciones de cuna y arrullos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "A la rurru niño",
       "facet": "Canciones de cuna y arrullos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rock-a-bye Baby",
@@ -166,22 +178,26 @@
     {
       "name": "Luna lunera",
       "facet": "Canciones de cuna y arrullos",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La vaca Lola",
       "facet": "Animales en las canciones",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Caballito blanco",
       "facet": "Animales en las canciones",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El cocodrilo Dante",
       "facet": "Animales en las canciones",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La araña pequeñita",
@@ -191,7 +207,8 @@
     {
       "name": "Estaba el señor don Gato",
       "facet": "Animales en las canciones",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cucú cantaba la rana",
@@ -206,7 +223,8 @@
     {
       "name": "Sal de ahí, chivita",
       "facet": "Animales en las canciones",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cinco patitos",
@@ -216,27 +234,32 @@
     {
       "name": "La gallina Pintadita",
       "facet": "Animales en las canciones",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bartolito",
       "facet": "Animales en las canciones",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "A mi burro",
       "facet": "Animales en las canciones",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El ratón vaquero",
       "facet": "Animales en las canciones",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tengo una vaca lechera",
       "facet": "Animales en las canciones",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cinco monitos",
@@ -271,7 +294,8 @@
     {
       "name": "Hola, don Pepito",
       "facet": "Canciones para contar y aprender",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Canción de los meses del año",
@@ -286,7 +310,8 @@
     {
       "name": "Yo tenía diez perritos",
       "facet": "Canciones para contar y aprender",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Canción acumulativa",
@@ -311,12 +336,14 @@
     {
       "name": "Chu chu ua",
       "facet": "Canciones con movimientos y mímica",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La batalla del calentamiento",
       "facet": "Canciones con movimientos y mímica",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hokey Pokey",
@@ -326,12 +353,14 @@
     {
       "name": "Saco una manito",
       "facet": "Canciones con movimientos y mímica",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Juan Paco Pedro de la Mar",
       "facet": "Canciones con movimientos y mímica",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El baile de los pajaritos",
@@ -346,17 +375,20 @@
     {
       "name": "Choco choco la la",
       "facet": "Canciones con movimientos y mímica",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Juego de palmas",
       "facet": "Canciones con movimientos y mímica",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Juanito cuando baila",
       "facet": "Canciones con movimientos y mímica",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Baile de las estatuas",
@@ -366,57 +398,68 @@
     {
       "name": "El florón",
       "facet": "Tradición infantil colombiana",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Que pase el rey",
       "facet": "Tradición infantil colombiana",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tingo, tingo, tango",
       "facet": "Tradición infantil colombiana",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Arrullos del Pacífico",
       "facet": "Tradición infantil colombiana",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bunde",
       "facet": "Tradición infantil colombiana",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chocolate, molinillo",
       "facet": "Tradición infantil colombiana",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chirimía",
       "facet": "Tradición infantil colombiana",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Currulao",
       "facet": "Tradición infantil colombiana",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cri-Cri",
       "facet": "Cantantes y autores infantiles",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Topa",
       "facet": "Cantantes y autores infantiles",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Xuxa",
       "facet": "Cantantes y autores infantiles",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Miliki",
@@ -426,37 +469,44 @@
     {
       "name": "Canticuentos",
       "facet": "Cantantes y autores infantiles",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pica-Pica",
       "facet": "Cantantes y autores infantiles",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tatiana",
       "facet": "Cantantes y autores infantiles",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cantoalegre",
       "facet": "Cantantes y autores infantiles",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cepillín",
       "facet": "Cantantes y autores infantiles",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Raffi",
       "facet": "Cantantes y autores infantiles",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "CantaJuego",
       "facet": "Cantantes y autores infantiles",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hay un amigo en mí",
@@ -526,37 +576,44 @@
     {
       "name": "Ya viene el niñito",
       "facet": "Villancicos y canciones de celebración",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Arre borriquito",
       "facet": "Villancicos y canciones de celebración",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Las Mañanitas",
       "facet": "Villancicos y canciones de celebración",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Dale, dale, dale",
       "facet": "Villancicos y canciones de celebración",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Antón tiruriruriru",
       "facet": "Villancicos y canciones de celebración",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Vamos pastores vamos",
       "facet": "Villancicos y canciones de celebración",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Triqui triqui Halloween",
       "facet": "Villancicos y canciones de celebración",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ah, vous dirai-je, maman",
@@ -581,12 +638,14 @@
     {
       "name": "Ring a Ring o' Roses",
       "facet": "Orígenes e historia de las canciones",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Hermanas Hill",
       "facet": "Orígenes e historia de las canciones",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Jane Taylor",
@@ -596,7 +655,8 @@
     {
       "name": "Romancero",
       "facet": "Orígenes e historia de las canciones",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tradición oral",
@@ -681,7 +741,8 @@
     {
       "name": "Guacharaca",
       "facet": "Instrumentos de la música infantil",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Acordeón",
@@ -692,6 +753,468 @@
       "name": "Cajita de música",
       "facet": "Instrumentos de la música infantil",
       "known_at": 4
+    },
+    {
+      "name": "The Farmer in the Dell",
+      "facet": "Rondas y juegos cantados",
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Here We Go Round the Mulberry Bush",
+      "facet": "Rondas y juegos cantados",
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Musical chairs",
+      "facet": "Rondas y juegos cantados",
+      "known_at": 2
+    },
+    {
+      "name": "Oranges and Lemons",
+      "facet": "Rondas y juegos cantados",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Sur le pont d'Avignon",
+      "facet": "Rondas y juegos cantados",
+      "known_at": 12
+    },
+    {
+      "name": "Ciranda",
+      "facet": "Rondas y juegos cantados",
+      "known_at": 13
+    },
+    {
+      "name": "Pat-a-cake",
+      "facet": "Rondas y juegos cantados",
+      "known_at": 6
+    },
+    {
+      "name": "Kumbaya",
+      "facet": "Rondas y juegos cantados",
+      "known_at": 8
+    },
+    {
+      "name": "Alouette",
+      "facet": "Rondas y juegos cantados",
+      "known_at": 10
+    },
+    {
+      "name": "Twinkle, Twinkle, Little Star",
+      "facet": "Canciones de cuna y arrullos",
+      "known_at": 1
+    },
+    {
+      "name": "Sleep, Baby, Sleep",
+      "facet": "Canciones de cuna y arrullos",
+      "known_at": 11
+    },
+    {
+      "name": "Summertime",
+      "facet": "Canciones de cuna y arrullos",
+      "known_at": 12
+    },
+    {
+      "name": "Baby Mine",
+      "facet": "Canciones de cuna y arrullos",
+      "known_at": 11
+    },
+    {
+      "name": "Counting sheep",
+      "facet": "Canciones de cuna y arrullos",
+      "known_at": 2
+    },
+    {
+      "name": "Three Blind Mice",
+      "facet": "Animales en las canciones",
+      "known_at": 6
+    },
+    {
+      "name": "Hickory Dickory Dock",
+      "facet": "Animales en las canciones",
+      "known_at": 6,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "The Ants Go Marching",
+      "facet": "Animales en las canciones",
+      "known_at": 7
+    },
+    {
+      "name": "There Was an Old Lady Who Swallowed a Fly",
+      "facet": "Animales en las canciones",
+      "known_at": 7
+    },
+    {
+      "name": "Hey Diddle Diddle",
+      "facet": "Animales en las canciones",
+      "known_at": 6,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Pop Goes the Weasel",
+      "facet": "Animales en las canciones",
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Five Little Speckled Frogs",
+      "facet": "Animales en las canciones",
+      "known_at": 7,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "The Lion Sleeps Tonight",
+      "facet": "Animales en las canciones",
+      "known_at": 5
+    },
+    {
+      "name": "Il pulcino Pio",
+      "facet": "Animales en las canciones",
+      "known_at": 5
+    },
+    {
+      "name": "The Gummy Bear Song",
+      "facet": "Animales en las canciones",
+      "known_at": 4
+    },
+    {
+      "name": "Kookaburra Sits in the Old Gum Tree",
+      "facet": "Animales en las canciones",
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "The Fox (What Does the Fox Say?)",
+      "facet": "Animales en las canciones",
+      "known_at": 5
+    },
+    {
+      "name": "Manuelita",
+      "facet": "Animales en las canciones",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "The Carnival of the Animals",
+      "facet": "Animales en las canciones",
+      "known_at": 12
+    },
+    {
+      "name": "Flight of the Bumblebee",
+      "facet": "Animales en las canciones",
+      "known_at": 9
+    },
+    {
+      "name": "Alphabet song",
+      "facet": "Canciones para contar y aprender",
+      "known_at": 1
+    },
+    {
+      "name": "One, Two, Buckle My Shoe",
+      "facet": "Canciones para contar y aprender",
+      "known_at": 7
+    },
+    {
+      "name": "Solfège",
+      "facet": "Canciones para contar y aprender",
+      "known_at": 9
+    },
+    {
+      "name": "Round (music)",
+      "facet": "Canciones para contar y aprender",
+      "known_at": 10
+    },
+    {
+      "name": "Johny Johny Yes Papa",
+      "facet": "Canciones para contar y aprender",
+      "known_at": 4
+    },
+    {
+      "name": "Peter and the Wolf",
+      "facet": "Canciones para contar y aprender",
+      "known_at": 9
+    },
+    {
+      "name": "Row, Row, Row Your Boat",
+      "facet": "Canciones con movimientos y mímica",
+      "known_at": 5
+    },
+    {
+      "name": "I'm a Little Teapot",
+      "facet": "Canciones con movimientos y mímica",
+      "known_at": 6
+    },
+    {
+      "name": "Ram Sam Sam",
+      "facet": "Canciones con movimientos y mímica",
+      "known_at": 9
+    },
+    {
+      "name": "The Wiggles",
+      "facet": "Cantantes y autores infantiles",
+      "known_at": 8
+    },
+    {
+      "name": "Do You Want to Build a Snowman?",
+      "facet": "Canciones de películas animadas",
+      "known_at": 2
+    },
+    {
+      "name": "How Far I'll Go",
+      "facet": "Canciones de películas animadas",
+      "known_at": 4
+    },
+    {
+      "name": "You're Welcome",
+      "facet": "Canciones de películas animadas",
+      "known_at": 5
+    },
+    {
+      "name": "Under the Sea",
+      "facet": "Canciones de películas animadas",
+      "known_at": 4
+    },
+    {
+      "name": "Be Our Guest",
+      "facet": "Canciones de películas animadas",
+      "known_at": 6
+    },
+    {
+      "name": "A Whole New World",
+      "facet": "Canciones de películas animadas",
+      "known_at": 6
+    },
+    {
+      "name": "Colors of the Wind",
+      "facet": "Canciones de películas animadas",
+      "known_at": 10
+    },
+    {
+      "name": "Remember Me",
+      "facet": "Canciones de películas animadas",
+      "known_at": 5
+    },
+    {
+      "name": "Into the Unknown",
+      "facet": "Canciones de películas animadas",
+      "known_at": 6
+    },
+    {
+      "name": "Everything Is Awesome",
+      "facet": "Canciones de películas animadas",
+      "known_at": 7
+    },
+    {
+      "name": "Try Everything",
+      "facet": "Canciones de películas animadas",
+      "known_at": 6
+    },
+    {
+      "name": "Banana Song",
+      "facet": "Canciones de películas animadas",
+      "known_at": 5
+    },
+    {
+      "name": "I Wan'na Be Like You",
+      "facet": "Canciones de películas animadas",
+      "known_at": 9
+    },
+    {
+      "name": "Peaches",
+      "facet": "Canciones de películas animadas",
+      "known_at": 5
+    },
+    {
+      "name": "I Like to Move It",
+      "facet": "Canciones de películas animadas",
+      "known_at": 4
+    },
+    {
+      "name": "Can't Stop the Feeling!",
+      "facet": "Canciones de películas animadas",
+      "known_at": 5
+    },
+    {
+      "name": "Sesame Street",
+      "facet": "Canciones de series y programas infantiles",
+      "known_at": 3
+    },
+    {
+      "name": "Mah Nà Mah Nà",
+      "facet": "Canciones de series y programas infantiles",
+      "known_at": 6
+    },
+    {
+      "name": "Pokémon theme song",
+      "facet": "Canciones de series y programas infantiles",
+      "known_at": 5
+    },
+    {
+      "name": "Phineas and Ferb",
+      "facet": "Canciones de series y programas infantiles",
+      "known_at": 6,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Paw Patrol",
+      "facet": "Canciones de series y programas infantiles",
+      "known_at": 2
+    },
+    {
+      "name": "Dora the Explorer",
+      "facet": "Canciones de series y programas infantiles",
+      "known_at": 3
+    },
+    {
+      "name": "The Smurfs",
+      "facet": "Canciones de series y programas infantiles",
+      "known_at": 5
+    },
+    {
+      "name": "Maya the Bee",
+      "facet": "Canciones de series y programas infantiles",
+      "known_at": 9
+    },
+    {
+      "name": "Pippi Longstocking",
+      "facet": "Canciones de series y programas infantiles",
+      "known_at": 9
+    },
+    {
+      "name": "The Pink Panther Theme",
+      "facet": "Canciones de series y programas infantiles",
+      "known_at": 6
+    },
+    {
+      "name": "O Christmas Tree",
+      "facet": "Villancicos y canciones de celebración",
+      "known_at": 6
+    },
+    {
+      "name": "The Little Drummer Boy",
+      "facet": "Villancicos y canciones de celebración",
+      "known_at": 6
+    },
+    {
+      "name": "Santa Claus Is Coming to Town",
+      "facet": "Villancicos y canciones de celebración",
+      "known_at": 5
+    },
+    {
+      "name": "The Twelve Days of Christmas",
+      "facet": "Villancicos y canciones de celebración",
+      "known_at": 7
+    },
+    {
+      "name": "The Dreidel Song",
+      "facet": "Villancicos y canciones de celebración",
+      "known_at": 10
+    },
+    {
+      "name": "For He's a Jolly Good Fellow",
+      "facet": "Villancicos y canciones de celebración",
+      "known_at": 6,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Hava Nagila",
+      "facet": "Villancicos y canciones de celebración",
+      "known_at": 9
+    },
+    {
+      "name": "El burrito sabanero",
+      "facet": "Villancicos y canciones de celebración",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Nursery rhyme",
+      "facet": "Orígenes e historia de las canciones",
+      "known_at": 6
+    },
+    {
+      "name": "Jack and Jill",
+      "facet": "Orígenes e historia de las canciones",
+      "known_at": 6,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Little Miss Muffet",
+      "facet": "Orígenes e historia de las canciones",
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Au clair de la lune",
+      "facet": "Orígenes e historia de las canciones",
+      "known_at": 12
+    },
+    {
+      "name": "Two Tigers",
+      "facet": "Orígenes e historia de las canciones",
+      "known_at": 14
+    },
+    {
+      "name": "Sakura Sakura",
+      "facet": "Orígenes e historia de las canciones",
+      "known_at": 12
+    },
+    {
+      "name": "Xylophone",
+      "facet": "Instrumentos de la música infantil",
+      "known_at": 2
+    },
+    {
+      "name": "Tambourine",
+      "facet": "Instrumentos de la música infantil",
+      "known_at": 2
+    },
+    {
+      "name": "Triangle",
+      "facet": "Instrumentos de la música infantil",
+      "known_at": 3
+    },
+    {
+      "name": "Ukulele",
+      "facet": "Instrumentos de la música infantil",
+      "known_at": 4
+    },
+    {
+      "name": "Toy piano",
+      "facet": "Instrumentos de la música infantil",
+      "known_at": 4
+    },
+    {
+      "name": "Baby rattle",
+      "facet": "Instrumentos de la música infantil",
+      "known_at": 1
+    },
+    {
+      "name": "Pan flute",
+      "facet": "Instrumentos de la música infantil",
+      "known_at": 6
+    },
+    {
+      "name": "Ocarina",
+      "facet": "Instrumentos de la música infantil",
+      "known_at": 8
+    },
+    {
+      "name": "Cajón",
+      "facet": "Instrumentos de la música infantil",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-15",
+      "added": 88,
+      "unused": 145
     }
   ]
 }

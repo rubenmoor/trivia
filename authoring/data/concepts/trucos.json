@@ -101,7 +101,8 @@
     {
       "name": "Mago Pop",
       "facet": "Magos e ilusionistas famosos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Arte 3D en la calle",
@@ -231,7 +232,8 @@
     {
       "name": "El caballo blanco de Bolívar",
       "facet": "Acertijos y preguntas trampa",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Kilo de plumas y kilo de hierro",
@@ -301,7 +303,8 @@
     {
       "name": "Propina del 10 %",
       "facet": "Trucos de cálculo mental",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Divisibilidad entre 3",
@@ -341,12 +344,14 @@
     {
       "name": "Canción del abecedario",
       "facet": "Reglas mnemotécnicas",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Cocodrilo de mayor y menor que",
       "facet": "Reglas mnemotécnicas",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Colores del arcoíris",
@@ -366,7 +371,8 @@
     {
       "name": "Treinta días trae noviembre",
       "facet": "Reglas mnemotécnicas",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Hilo atado al dedo",
@@ -481,7 +487,8 @@
     {
       "name": "Germinador de fríjol",
       "facet": "Experimentos caseros sorprendentes",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mentos y Coca-Cola",
@@ -751,7 +758,8 @@
     {
       "name": "Bienparado",
       "facet": "Camuflaje y engaños animales",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pez hoja",

@@ -511,7 +511,8 @@
     {
       "name": "Mamos",
       "facet": "Religiones indígenas y tradicionales",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Yemayá",
@@ -696,7 +697,8 @@
     {
       "name": "Divino Niño",
       "facet": "Religión en Colombia y Latinoamérica",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Virgen del Carmen",
@@ -711,37 +713,44 @@
     {
       "name": "Virgen de Chiquinquirá",
       "facet": "Religión en Colombia y Latinoamérica",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Procesiones de Popayán",
       "facet": "Religión en Colombia y Latinoamérica",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Señor de los Milagros de Buga",
       "facet": "Religión en Colombia y Latinoamérica",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Madre Laura",
       "facet": "Religión en Colombia y Latinoamérica",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "San Pedro Claver",
       "facet": "Religión en Colombia y Latinoamérica",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Santa Rosa de Lima",
       "facet": "Religión en Colombia y Latinoamérica",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Semana Santa de Mompox",
       "facet": "Religión en Colombia y Latinoamérica",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Misiones jesuíticas",

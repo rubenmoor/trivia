@@ -631,7 +631,8 @@
     {
       "name": "Circo Price",
       "facet": "Historia del circo",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tren del circo",
@@ -666,7 +667,8 @@
     {
       "name": "Ringling Bros. and Barnum & Bailey",
       "facet": "Circos y artistas famosos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Gran Circo de Moscú",
@@ -687,7 +689,8 @@
     {
       "name": "Circo Atayde Hermanos",
       "facet": "Circos y artistas famosos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Festival Internacional de Circo de Montecarlo",
@@ -697,7 +700,8 @@
     {
       "name": "Payaso de Oro",
       "facet": "Circos y artistas famosos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Los Wallenda",
@@ -707,7 +711,8 @@
     {
       "name": "Los Payasos de la Tele",
       "facet": "Circos y artistas famosos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Oleg Popov",
@@ -742,7 +747,8 @@
     {
       "name": "Bozo el payaso",
       "facet": "Circo en cine y caricaturas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "El circo de Chaplin",
@@ -782,7 +788,8 @@
     {
       "name": "Malabarista de semáforo",
       "facet": "Circo callejero y en Colombia",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Estatua humana",
@@ -797,22 +804,26 @@
     {
       "name": "Pasar la gorra",
       "facet": "Circo callejero y en Colombia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Culebrero",
       "facet": "Circo callejero y en Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cuentero",
       "facet": "Circo callejero y en Colombia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Recreacionista",
       "facet": "Circo callejero y en Colombia",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Burbujas gigantes",
@@ -832,12 +843,14 @@
     {
       "name": "Circo para Todos",
       "facet": "Circo callejero y en Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Festival Iberoamericano de Teatro de Bogotá",
       "facet": "Circo callejero y en Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Prohibición de animales silvestres en circos",

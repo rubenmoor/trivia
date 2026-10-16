@@ -116,12 +116,14 @@
     {
       "name": "Mono maicero",
       "facet": "Primates amazónicos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mono churuco",
       "facet": "Primates amazónicos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Margay",
@@ -161,12 +163,14 @@
     {
       "name": "Boruga",
       "facet": "Felinos y mamíferos terrestres",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ñeque",
       "facet": "Felinos y mamíferos terrestres",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Perro de orejas cortas",
@@ -311,17 +315,20 @@
     {
       "name": "Charapa",
       "facet": "Reptiles y caimanes",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mapaná",
       "facet": "Reptiles y caimanes",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Verrugosa",
       "facet": "Reptiles y caimanes",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Falsa coral",
@@ -336,7 +343,8 @@
     {
       "name": "Taricaya",
       "facet": "Reptiles y caimanes",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rana dardo venenosa",
@@ -478,12 +486,14 @@
     {
       "name": "Cucha",
       "facet": "Peces del río Amazonas",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pavón",
       "facet": "Peces del río Amazonas",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pez hacha",
@@ -493,7 +503,8 @@
     {
       "name": "Bocachico",
       "facet": "Peces del río Amazonas",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pez pulmonado sudamericano",
@@ -548,12 +559,14 @@
     {
       "name": "Pito (chinche)",
       "facet": "Insectos, arañas y hormigas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Abeja angelita",
       "facet": "Insectos, arañas y hormigas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Insecto hoja",
@@ -638,17 +651,20 @@
     {
       "name": "Curupira",
       "facet": "Animales en leyendas y películas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mapinguarí",
       "facet": "Animales en leyendas y películas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chullachaqui",
       "facet": "Animales en leyendas y películas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Anaconda ancestral",
@@ -678,7 +694,8 @@
     {
       "name": "Antonio Madrigal",
       "facet": "Animales en leyendas y películas",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Botas (Dora la exploradora)",
@@ -703,12 +720,14 @@
     {
       "name": "Parque Nacional Amacayacu",
       "facet": "Conservación y especies amenazadas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Parque Nacional Chiribiquete",
       "facet": "Conservación y especies amenazadas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Guacamaya de Spix",
@@ -718,7 +737,8 @@
     {
       "name": "Fundación Omacha",
       "facet": "Conservación y especies amenazadas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mercurio en los ríos",
@@ -728,7 +748,8 @@
     {
       "name": "Puerto Nariño",
       "facet": "Conservación y especies amenazadas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "CITES",
@@ -788,7 +809,8 @@
     {
       "name": "Cândido Rondon",
       "facet": "Naturalistas y descubrimientos amazónicos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Percy Fawcett",
@@ -808,7 +830,8 @@
     {
       "name": "Gaspar de Carvajal",
       "facet": "Naturalistas y descubrimientos amazónicos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Margaret Mee",

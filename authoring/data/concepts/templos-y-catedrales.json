@@ -126,82 +126,98 @@
     {
       "name": "Catedral Primada de Bogotá",
       "facet": "Templos y catedrales de Colombia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Catedral Metropolitana de Medellín",
       "facet": "Templos y catedrales de Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Iglesia de San Pedro Claver",
       "facet": "Templos y catedrales de Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Catedral de Manizales",
       "facet": "Templos y catedrales de Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Basílica del Señor de los Milagros de Buga",
       "facet": "Templos y catedrales de Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Iglesia de La Ermita de Cali",
       "facet": "Templos y catedrales de Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Catedral de Santa Catalina de Cartagena",
       "facet": "Templos y catedrales de Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Capilla del Sagrario de Bogotá",
       "facet": "Templos y catedrales de Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Iglesia de San Francisco de Bogotá",
       "facet": "Templos y catedrales de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Catedral de Santa Fe de Antioquia",
       "facet": "Templos y catedrales de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Santuario del Divino Niño del 20 de Julio",
       "facet": "Templos y catedrales de Colombia",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Catedral de Popayán",
       "facet": "Templos y catedrales de Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Catedral de Tunja",
       "facet": "Templos y catedrales de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Santuario de Guadalupe de Bogotá",
       "facet": "Templos y catedrales de Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Iglesia de Santa Bárbara de Mompox",
       "facet": "Templos y catedrales de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Catedral Metropolitana de Barranquilla",
       "facet": "Templos y catedrales de Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Campanario",
@@ -316,12 +332,14 @@
     {
       "name": "Churrigueresco",
       "facet": "Estilos arquitectónicos religiosos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Plateresco",
       "facet": "Estilos arquitectónicos religiosos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Modernismo catalán",
@@ -426,7 +444,8 @@
     {
       "name": "Templo del Sol de Sogamoso",
       "facet": "Templos precolombinos y pirámides",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chavín de Huántar",
@@ -501,7 +520,8 @@
     {
       "name": "Fray Domingo de Petrés",
       "facet": "Arquitectos y constructores célebres",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Donato Bramante",
@@ -641,12 +661,14 @@
     {
       "name": "Catedral de Liverpool",
       "facet": "Récords y datos curiosos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Templo de Debod",
       "facet": "Récords y datos curiosos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Iglesia del Salvador sobre la Sangre Derramada",
@@ -706,7 +728,8 @@
     {
       "name": "Romería",
       "facet": "Peregrinaciones, fiestas y costumbres",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Baños sagrados en el Ganges",

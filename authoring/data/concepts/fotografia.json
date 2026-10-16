@@ -701,7 +701,8 @@
     {
       "name": "Peter Parker",
       "facet": "Fotógrafos famosos del mundo",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Ansel Adams",
@@ -721,12 +722,14 @@
     {
       "name": "Alberto Korda",
       "facet": "Fotógrafos famosos del mundo",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mario Testino",
       "facet": "Fotógrafos famosos del mundo",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Robert Capa",
@@ -831,7 +834,8 @@
     {
       "name": "Selfie de los Óscar 2014",
       "facet": "Fotos icónicas de la historia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Marilyn Monroe y el vestido blanco",
@@ -861,22 +865,26 @@
     {
       "name": "Guerrillero Heroico",
       "facet": "Fotos icónicas de la historia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Alzando la bandera en Iwo Jima",
       "facet": "Fotos icónicas de la historia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Foto del cirujano del lago Ness",
       "facet": "Fotos icónicas de la historia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Madre migrante",
       "facet": "Fotos icónicas de la historia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "El hombre del tanque",
@@ -951,77 +959,92 @@
     {
       "name": "Foto para la cédula",
       "facet": "Fotografía en Colombia y Latinoamérica",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Llamas de la Plaza de Bolívar",
       "facet": "Fotografía en Colombia y Latinoamérica",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fotógrafo minutero",
       "facet": "Fotografía en Colombia y Latinoamérica",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fotonovela",
       "facet": "Fotografía en Colombia y Latinoamérica",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Revista Cromos",
       "facet": "Fotografía en Colombia y Latinoamérica",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Jesús Abad Colorado",
       "facet": "Fotografía en Colombia y Latinoamérica",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Leo Matiz",
       "facet": "Fotografía en Colombia y Latinoamérica",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fotos del Bogotazo",
       "facet": "Fotografía en Colombia y Latinoamérica",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Melitón Rodríguez",
       "facet": "Fotografía en Colombia y Latinoamérica",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Nereo López",
       "facet": "Fotografía en Colombia y Latinoamérica",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sady González",
       "facet": "Fotografía en Colombia y Latinoamérica",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hernán Díaz",
       "facet": "Fotografía en Colombia y Latinoamérica",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Manuel H. Rodríguez",
       "facet": "Fotografía en Colombia y Latinoamérica",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Graciela Iturbide",
       "facet": "Fotografía en Colombia y Latinoamérica",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Manuel Álvarez Bravo",
       "facet": "Fotografía en Colombia y Latinoamérica",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     }
   ]
 }

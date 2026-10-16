@@ -267,7 +267,8 @@
     {
       "name": "Gran Premio de Las Vegas",
       "facet": "Circuitos y grandes premios",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Gran Premio de Singapur",
@@ -277,7 +278,8 @@
     {
       "name": "Gran Premio de Miami",
       "facet": "Circuitos y grandes premios",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Monza",
@@ -297,7 +299,8 @@
     {
       "name": "Autódromo Hermanos Rodríguez",
       "facet": "Circuitos y grandes premios",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gran Premio de Abu Dabi",
@@ -322,7 +325,8 @@
     {
       "name": "Circuito de las Américas",
       "facet": "Circuitos y grandes premios",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Gran Premio de Bahréin",
@@ -637,7 +641,8 @@
     {
       "name": "Carreras de demolición",
       "facet": "Otras competencias de motor",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "500 Millas de Indianápolis",
@@ -652,7 +657,8 @@
     {
       "name": "Arrancones",
       "facet": "Otras competencias de motor",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "IndyCar",
@@ -672,7 +678,8 @@
     {
       "name": "Daytona 500",
       "facet": "Otras competencias de motor",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Campeonato Mundial de Resistencia",
@@ -777,67 +784,80 @@
     {
       "name": "Carros de balineras",
       "facet": "Automovilismo en Colombia",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tatiana Calderón",
       "facet": "Automovilismo en Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Autódromo de Tocancipá",
       "facet": "Automovilismo en Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sebastián Montoya",
       "facet": "Automovilismo en Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "David Alonso",
       "facet": "Automovilismo en Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Roberto José Guerrero",
       "facet": "Automovilismo en Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Carlos Muñoz",
       "facet": "Automovilismo en Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sebastián Saavedra",
       "facet": "Automovilismo en Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gabby Chaves",
       "facet": "Automovilismo en Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Óscar Tunjo",
       "facet": "Automovilismo en Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Carlos Huertas",
       "facet": "Automovilismo en Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Martín Cárdenas",
       "facet": "Automovilismo en Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ricardo Londoño",
       "facet": "Automovilismo en Colombia",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Enzo Ferrari",
@@ -957,7 +977,8 @@
     {
       "name": "Los autos locos",
       "facet": "Autos de carreras en películas y juegos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "F1: la película",
@@ -1047,7 +1068,8 @@
     {
       "name": "Tuerca",
       "facet": "Jerga y términos del automovilismo",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rebufo",

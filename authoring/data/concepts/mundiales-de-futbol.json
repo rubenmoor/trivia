@@ -266,12 +266,14 @@
     {
       "name": "Antonio Carbajal",
       "facet": "Goleadores y récords",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Norman Whiteside",
       "facet": "Goleadores y récords",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Eusébio",
@@ -281,7 +283,8 @@
     {
       "name": "Gary Lineker",
       "facet": "Goleadores y récords",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Harry Kane",
@@ -386,12 +389,14 @@
     {
       "name": "Faryd Mondragón",
       "facet": "Colombia en los Mundiales",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gol olímpico de Marcos Coll",
       "facet": "Colombia en los Mundiales",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mundial de Chile 1962",
@@ -406,22 +411,26 @@
     {
       "name": "José Pékerman",
       "facet": "Colombia en los Mundiales",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gol de James a Uruguay",
       "facet": "Colombia en los Mundiales",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gol de Rincón a Alemania",
       "facet": "Colombia en los Mundiales",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bailes de gol de Colombia en 2014",
       "facet": "Colombia en los Mundiales",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Willie",
@@ -546,7 +555,8 @@
     {
       "name": "Silvio Gazzaniga",
       "facet": "Trofeos y premios",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Robo de la Copa Jules Rimet",
@@ -556,7 +566,8 @@
     {
       "name": "Pickles",
       "facet": "Trofeos y premios",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Medalla de campeón",
@@ -636,7 +647,8 @@
     {
       "name": "Atajada del Dibu Martínez a Kolo Muani",
       "facet": "Jugadas y momentos célebres",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Triplete de Mbappé en la final de 2022",
@@ -826,7 +838,8 @@
     {
       "name": "Ola mexicana",
       "facet": "Hinchas, cánticos y tradiciones",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Álbum Panini",
@@ -856,7 +869,8 @@
     {
       "name": "Muchachos, ahora nos volvimos a ilusionar",
       "facet": "Hinchas, cánticos y tradiciones",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hinchas japoneses que limpian el estadio",
@@ -886,17 +900,20 @@
     {
       "name": "Lluvia de papelitos",
       "facet": "Hinchas, cánticos y tradiciones",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Grito de gol",
       "facet": "Hinchas, cánticos y tradiciones",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Caravana de celebración",
       "facet": "Hinchas, cánticos y tradiciones",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Copa Mundial Femenina de la FIFA",
@@ -931,7 +948,8 @@
     {
       "name": "Selección femenina de España",
       "facet": "Mundial femenino",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Aitana Bonmatí",
@@ -971,7 +989,8 @@
     {
       "name": "Gol de Linda Caicedo a Alemania",
       "facet": "Mundial femenino",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Selección femenina de Japón",

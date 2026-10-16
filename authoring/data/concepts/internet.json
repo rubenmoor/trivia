@@ -121,12 +121,14 @@
     {
       "name": "Llegada de internet a Colombia",
       "facet": "Historia de internet",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Encarta",
       "facet": "Historia de internet",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Primera compra en línea",
@@ -136,7 +138,8 @@
     {
       "name": "Día de Internet",
       "facet": "Historia de internet",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Vint Cerf",
@@ -291,7 +294,8 @@
     {
       "name": "Voy a tener suerte",
       "facet": "Navegadores y buscadores",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "LinkedIn",
@@ -316,12 +320,14 @@
     {
       "name": "Hi5",
       "facet": "Redes sociales y apps",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fotolog",
       "facet": "Redes sociales y apps",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tumblr",
@@ -396,7 +402,8 @@
     {
       "name": "Doble chulito azul",
       "facet": "Correo y mensajería",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Nota de voz",
@@ -756,7 +763,8 @@
     {
       "name": "El Rubius",
       "facet": "Videos, streaming y creadores",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Buffering",
@@ -851,12 +859,14 @@
     {
       "name": "Café internet",
       "facet": "Conexión y dispositivos",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mercado Libre",
       "facet": "Comercio y servicios en línea",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "PayPal",
@@ -891,7 +901,8 @@
     {
       "name": "Nequi",
       "facet": "Comercio y servicios en línea",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bitcoin",
@@ -911,12 +922,14 @@
     {
       "name": "Black Friday",
       "facet": "Comercio y servicios en línea",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Cyber Monday",
       "facet": "Comercio y servicios en línea",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Código de descuento",

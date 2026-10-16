@@ -12,7 +12,9 @@
     "Monumentos de Colombia",
     "Monumentos de América Latina",
     "Monumentos en películas y juegos",
-    "Construcción y constructores de monumentos"
+    "Construcción y constructores de monumentos",
+    "Edificios modernos icónicos",
+    "Plazas, fuentes y memoriales"
   ],
   "axis_fit": {
     "move": {
@@ -91,7 +93,8 @@
     {
       "name": "Torre del Oro",
       "facet": "Torres y rascacielos célebres",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Buda de Leshan",
@@ -101,7 +104,8 @@
     {
       "name": "Ángel del Norte",
       "facet": "Estatuas y esculturas monumentales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Gran Buda de Kamakura",
@@ -176,102 +180,122 @@
     {
       "name": "Puerta de Alcalá",
       "facet": "Puentes, arcos y murallas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cristo Rey de Cali",
       "facet": "Monumentos de Colombia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Plaza de Bolívar de Bogotá",
       "facet": "Monumentos de Colombia",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Casa de Nariño",
       "facet": "Monumentos de Colombia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Monumento a los Héroes",
       "facet": "Monumentos de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Puente de Occidente",
       "facet": "Monumentos de Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "India Catalina",
       "facet": "Monumentos de Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Monumento a los Zapatos Viejos",
       "facet": "Monumentos de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Basílica de Chiquinquirá",
       "facet": "Monumentos de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Capitolio de La Habana",
       "facet": "Monumentos de América Latina",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mitad del Mundo",
       "facet": "Monumentos de América Latina",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Catedral de Brasilia",
       "facet": "Monumentos de América Latina",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tiwanaku",
       "facet": "Monumentos de América Latina",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cristo de la Concordia",
       "facet": "Monumentos de América Latina",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Plaza de Mayo",
       "facet": "Monumentos de América Latina",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Casa Rosada",
       "facet": "Monumentos de América Latina",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Malecón de La Habana",
       "facet": "Monumentos de América Latina",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Zócalo de Ciudad de México",
       "facet": "Monumentos de América Latina",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Copán",
       "facet": "Monumentos de América Latina",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Catedral Metropolitana de Ciudad de México",
       "facet": "Monumentos de América Latina",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Castillo de la Bella Durmiente de Disneyland",
@@ -286,7 +310,8 @@
     {
       "name": "Casita de Encanto",
       "facet": "Monumentos en películas y juegos",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Palacio del Sultán de Agrabah",
@@ -316,7 +341,8 @@
     {
       "name": "Rogelio Salmona",
       "facet": "Construcción y constructores de monumentos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bóveda",
@@ -342,6 +368,656 @@
       "name": "Andamio",
       "facet": "Construcción y constructores de monumentos",
       "known_at": 8
+    },
+    {
+      "name": "Hanging Gardens of Babylon",
+      "facet": "Maravillas del mundo antiguo",
+      "known_at": 8
+    },
+    {
+      "name": "Statue of Zeus at Olympia",
+      "facet": "Maravillas del mundo antiguo",
+      "known_at": 10
+    },
+    {
+      "name": "Colossus of Rhodes",
+      "facet": "Maravillas del mundo antiguo",
+      "known_at": 9
+    },
+    {
+      "name": "Lighthouse of Alexandria",
+      "facet": "Maravillas del mundo antiguo",
+      "known_at": 9
+    },
+    {
+      "name": "Mausoleum at Halicarnassus",
+      "facet": "Maravillas del mundo antiguo",
+      "known_at": 12
+    },
+    {
+      "name": "Phidias",
+      "facet": "Maravillas del mundo antiguo",
+      "known_at": 13
+    },
+    {
+      "name": "Khufu",
+      "facet": "Maravillas del mundo antiguo",
+      "known_at": 10
+    },
+    {
+      "name": "Seven Wonders of the Ancient World",
+      "facet": "Maravillas del mundo antiguo",
+      "known_at": 6
+    },
+    {
+      "name": "Great Wall of China",
+      "facet": "Nuevas siete maravillas",
+      "known_at": 2
+    },
+    {
+      "name": "Christ the Redeemer",
+      "facet": "Nuevas siete maravillas",
+      "known_at": 5
+    },
+    {
+      "name": "Colosseum",
+      "facet": "Nuevas siete maravillas",
+      "known_at": 4
+    },
+    {
+      "name": "Temple of Kukulcán",
+      "facet": "Nuevas siete maravillas",
+      "known_at": 11
+    },
+    {
+      "name": "Eiffel Tower",
+      "facet": "Torres y rascacielos célebres",
+      "known_at": 1
+    },
+    {
+      "name": "Leaning Tower of Pisa",
+      "facet": "Torres y rascacielos célebres",
+      "known_at": 3
+    },
+    {
+      "name": "CN Tower",
+      "facet": "Torres y rascacielos célebres",
+      "known_at": 9
+    },
+    {
+      "name": "Petronas Towers",
+      "facet": "Torres y rascacielos célebres",
+      "known_at": 8
+    },
+    {
+      "name": "Tokyo Tower",
+      "facet": "Torres y rascacielos célebres",
+      "known_at": 9
+    },
+    {
+      "name": "Chrysler Building",
+      "facet": "Torres y rascacielos célebres",
+      "known_at": 11
+    },
+    {
+      "name": "Statue of Liberty",
+      "facet": "Estatuas y esculturas monumentales",
+      "known_at": 2
+    },
+    {
+      "name": "Great Sphinx of Giza",
+      "facet": "Estatuas y esculturas monumentales",
+      "known_at": 4
+    },
+    {
+      "name": "Mount Rushmore",
+      "facet": "Estatuas y esculturas monumentales",
+      "known_at": 7
+    },
+    {
+      "name": "The Motherland Calls",
+      "facet": "Estatuas y esculturas monumentales",
+      "known_at": 12
+    },
+    {
+      "name": "Statue of Unity",
+      "facet": "Estatuas y esculturas monumentales",
+      "known_at": 11
+    },
+    {
+      "name": "The Little Mermaid statue",
+      "facet": "Estatuas y esculturas monumentales",
+      "known_at": 9
+    },
+    {
+      "name": "David by Michelangelo",
+      "facet": "Estatuas y esculturas monumentales",
+      "known_at": 7
+    },
+    {
+      "name": "The Thinker",
+      "facet": "Estatuas y esculturas monumentales",
+      "known_at": 7
+    },
+    {
+      "name": "Winged Victory of Samothrace",
+      "facet": "Estatuas y esculturas monumentales",
+      "known_at": 11
+    },
+    {
+      "name": "Cloud Gate",
+      "facet": "Estatuas y esculturas monumentales",
+      "known_at": 11
+    },
+    {
+      "name": "Merlion",
+      "facet": "Estatuas y esculturas monumentales",
+      "known_at": 9
+    },
+    {
+      "name": "Hachikō statue",
+      "facet": "Estatuas y esculturas monumentales",
+      "known_at": 8
+    },
+    {
+      "name": "St. Peter's Basilica",
+      "facet": "Templos, iglesias y catedrales",
+      "known_at": 6
+    },
+    {
+      "name": "Saint Basil's Cathedral",
+      "facet": "Templos, iglesias y catedrales",
+      "known_at": 7
+    },
+    {
+      "name": "Cologne Cathedral",
+      "facet": "Templos, iglesias y catedrales",
+      "known_at": 10
+    },
+    {
+      "name": "Westminster Abbey",
+      "facet": "Templos, iglesias y catedrales",
+      "known_at": 8
+    },
+    {
+      "name": "Blue Mosque",
+      "facet": "Templos, iglesias y catedrales",
+      "known_at": 9
+    },
+    {
+      "name": "Sheikh Zayed Grand Mosque",
+      "facet": "Templos, iglesias y catedrales",
+      "known_at": 10
+    },
+    {
+      "name": "Temple of Heaven",
+      "facet": "Templos, iglesias y catedrales",
+      "known_at": 11
+    },
+    {
+      "name": "Fushimi Inari Shrine",
+      "facet": "Templos, iglesias y catedrales",
+      "known_at": 9
+    },
+    {
+      "name": "Mosque–Cathedral of Córdoba",
+      "facet": "Templos, iglesias y catedrales",
+      "known_at": 10
+    },
+    {
+      "name": "Milan Cathedral",
+      "facet": "Templos, iglesias y catedrales",
+      "known_at": 9
+    },
+    {
+      "name": "Florence Cathedral",
+      "facet": "Templos, iglesias y catedrales",
+      "known_at": 9
+    },
+    {
+      "name": "Dome of the Rock",
+      "facet": "Templos, iglesias y catedrales",
+      "known_at": 10
+    },
+    {
+      "name": "Pantheon in Rome",
+      "facet": "Templos, iglesias y catedrales",
+      "known_at": 8
+    },
+    {
+      "name": "Rock-Hewn Churches of Lalibela",
+      "facet": "Templos, iglesias y catedrales",
+      "known_at": 13
+    },
+    {
+      "name": "Forbidden City",
+      "facet": "Palacios, castillos y fortalezas",
+      "known_at": 7
+    },
+    {
+      "name": "Neuschwanstein Castle",
+      "facet": "Palacios, castillos y fortalezas",
+      "known_at": 6
+    },
+    {
+      "name": "Buckingham Palace",
+      "facet": "Palacios, castillos y fortalezas",
+      "known_at": 4
+    },
+    {
+      "name": "Moscow Kremlin",
+      "facet": "Palacios, castillos y fortalezas",
+      "known_at": 7
+    },
+    {
+      "name": "Tower of London",
+      "facet": "Palacios, castillos y fortalezas",
+      "known_at": 7
+    },
+    {
+      "name": "Edinburgh Castle",
+      "facet": "Palacios, castillos y fortalezas",
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Himeji Castle",
+      "facet": "Palacios, castillos y fortalezas",
+      "known_at": 10
+    },
+    {
+      "name": "Potala Palace",
+      "facet": "Palacios, castillos y fortalezas",
+      "known_at": 11
+    },
+    {
+      "name": "Schönbrunn Palace",
+      "facet": "Palacios, castillos y fortalezas",
+      "known_at": 11
+    },
+    {
+      "name": "Windsor Castle",
+      "facet": "Palacios, castillos y fortalezas",
+      "known_at": 8
+    },
+    {
+      "name": "Prague Castle",
+      "facet": "Palacios, castillos y fortalezas",
+      "known_at": 9
+    },
+    {
+      "name": "Red Fort",
+      "facet": "Palacios, castillos y fortalezas",
+      "known_at": 10
+    },
+    {
+      "name": "Gyeongbokgung Palace",
+      "facet": "Palacios, castillos y fortalezas",
+      "known_at": 11
+    },
+    {
+      "name": "Acropolis of Athens",
+      "facet": "Ruinas y ciudades antiguas",
+      "known_at": 7
+    },
+    {
+      "name": "Parthenon",
+      "facet": "Ruinas y ciudades antiguas",
+      "known_at": 7
+    },
+    {
+      "name": "Roman Forum",
+      "facet": "Ruinas y ciudades antiguas",
+      "known_at": 8
+    },
+    {
+      "name": "Ephesus",
+      "facet": "Ruinas y ciudades antiguas",
+      "known_at": 11
+    },
+    {
+      "name": "Tomb of Tutankhamun",
+      "facet": "Ruinas y ciudades antiguas",
+      "known_at": 6
+    },
+    {
+      "name": "Palmyra",
+      "facet": "Ruinas y ciudades antiguas",
+      "known_at": 11
+    },
+    {
+      "name": "Olympia",
+      "facet": "Ruinas y ciudades antiguas",
+      "known_at": 9
+    },
+    {
+      "name": "Golden Gate Bridge",
+      "facet": "Puentes, arcos y murallas",
+      "known_at": 4
+    },
+    {
+      "name": "Brooklyn Bridge",
+      "facet": "Puentes, arcos y murallas",
+      "known_at": 7
+    },
+    {
+      "name": "Rialto Bridge",
+      "facet": "Puentes, arcos y murallas",
+      "known_at": 9
+    },
+    {
+      "name": "Charles Bridge",
+      "facet": "Puentes, arcos y murallas",
+      "known_at": 10
+    },
+    {
+      "name": "Brandenburg Gate",
+      "facet": "Puentes, arcos y murallas",
+      "known_at": 7
+    },
+    {
+      "name": "Berlin Wall",
+      "facet": "Puentes, arcos y murallas",
+      "known_at": 6
+    },
+    {
+      "name": "Arch of Constantine",
+      "facet": "Puentes, arcos y murallas",
+      "known_at": 10
+    },
+    {
+      "name": "Bridge of Sighs",
+      "facet": "Puentes, arcos y murallas",
+      "known_at": 9
+    },
+    {
+      "name": "Walls of Dubrovnik",
+      "facet": "Puentes, arcos y murallas",
+      "known_at": 10
+    },
+    {
+      "name": "Aqueduct of Segovia",
+      "facet": "Puentes, arcos y murallas",
+      "known_at": 10
+    },
+    {
+      "name": "Golden Bridge of Da Nang",
+      "facet": "Puentes, arcos y murallas",
+      "known_at": 9
+    },
+    {
+      "name": "Walls of Cartagena",
+      "facet": "Monumentos de Colombia",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Salt Cathedral of Zipaquirá",
+      "facet": "Monumentos de Colombia",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Las Lajas Sanctuary",
+      "facet": "Monumentos de Colombia",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "San Agustín Archaeological Park",
+      "facet": "Monumentos de Colombia",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Pyramid of the Sun",
+      "facet": "Monumentos de América Latina",
+      "known_at": 9
+    },
+    {
+      "name": "Angel of Independence",
+      "facet": "Monumentos de América Latina",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Teatro Colón",
+      "facet": "Monumentos de América Latina",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Panama Canal",
+      "facet": "Monumentos de América Latina",
+      "known_at": 8
+    },
+    {
+      "name": "Selarón Steps",
+      "facet": "Monumentos de América Latina",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Basilica of Our Lady of Guadalupe",
+      "facet": "Monumentos de América Latina",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Cinderella Castle",
+      "facet": "Monumentos en películas y juegos",
+      "known_at": 3
+    },
+    {
+      "name": "Elsa's Ice Palace",
+      "facet": "Monumentos en películas y juegos",
+      "known_at": 1
+    },
+    {
+      "name": "Hyrule Castle",
+      "facet": "Monumentos en películas y juegos",
+      "known_at": 6
+    },
+    {
+      "name": "Princess Peach's Castle",
+      "facet": "Monumentos en películas y juegos",
+      "known_at": 3
+    },
+    {
+      "name": "Bowser's Castle",
+      "facet": "Monumentos en películas y juegos",
+      "known_at": 4
+    },
+    {
+      "name": "Beast's Castle",
+      "facet": "Monumentos en películas y juegos",
+      "known_at": 3
+    },
+    {
+      "name": "Rapunzel's Tower",
+      "facet": "Monumentos en películas y juegos",
+      "known_at": 2
+    },
+    {
+      "name": "Howl's Moving Castle",
+      "facet": "Monumentos en películas y juegos",
+      "known_at": 6
+    },
+    {
+      "name": "Rivendell",
+      "facet": "Monumentos en películas y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Emerald City",
+      "facet": "Monumentos en películas y juegos",
+      "known_at": 7
+    },
+    {
+      "name": "Pride Rock",
+      "facet": "Monumentos en películas y juegos",
+      "known_at": 2
+    },
+    {
+      "name": "Jedi Temple",
+      "facet": "Monumentos en películas y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Laputa, Castle in the Sky",
+      "facet": "Monumentos en películas y juegos",
+      "known_at": 9
+    },
+    {
+      "name": "Keystone",
+      "facet": "Construcción y constructores de monumentos",
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Dome",
+      "facet": "Construcción y constructores de monumentos",
+      "known_at": 5
+    },
+    {
+      "name": "Gargoyle",
+      "facet": "Construcción y constructores de monumentos",
+      "known_at": 7
+    },
+    {
+      "name": "Stained glass",
+      "facet": "Construcción y constructores de monumentos",
+      "known_at": 6
+    },
+    {
+      "name": "Obelisk",
+      "facet": "Construcción y constructores de monumentos",
+      "known_at": 7
+    },
+    {
+      "name": "Minaret",
+      "facet": "Construcción y constructores de monumentos",
+      "known_at": 9
+    },
+    {
+      "name": "Ziggurat",
+      "facet": "Construcción y constructores de monumentos",
+      "known_at": 11
+    },
+    {
+      "name": "Suspension bridge",
+      "facet": "Construcción y constructores de monumentos",
+      "known_at": 8
+    },
+    {
+      "name": "Moat",
+      "facet": "Construcción y constructores de monumentos",
+      "known_at": 5
+    },
+    {
+      "name": "Drawbridge",
+      "facet": "Construcción y constructores de monumentos",
+      "known_at": 4
+    },
+    {
+      "name": "Sydney Opera House",
+      "facet": "Edificios modernos icónicos",
+      "known_at": 5
+    },
+    {
+      "name": "Louvre Pyramid",
+      "facet": "Edificios modernos icónicos",
+      "known_at": 8
+    },
+    {
+      "name": "Guggenheim Museum Bilbao",
+      "facet": "Edificios modernos icónicos",
+      "known_at": 11
+    },
+    {
+      "name": "Gardens by the Bay",
+      "facet": "Edificios modernos icónicos",
+      "known_at": 10
+    },
+    {
+      "name": "Beijing National Stadium",
+      "facet": "Edificios modernos icónicos",
+      "known_at": 10
+    },
+    {
+      "name": "Dancing House",
+      "facet": "Edificios modernos icónicos",
+      "known_at": 12
+    },
+    {
+      "name": "Centre Pompidou",
+      "facet": "Edificios modernos icónicos",
+      "known_at": 11
+    },
+    {
+      "name": "Trevi Fountain",
+      "facet": "Plazas, fuentes y memoriales",
+      "known_at": 7
+    },
+    {
+      "name": "Fountain of the Four Rivers",
+      "facet": "Plazas, fuentes y memoriales",
+      "known_at": 13
+    },
+    {
+      "name": "Jet d'Eau",
+      "facet": "Plazas, fuentes y memoriales",
+      "known_at": 11
+    },
+    {
+      "name": "Red Square",
+      "facet": "Plazas, fuentes y memoriales",
+      "known_at": 7
+    },
+    {
+      "name": "St. Peter's Square",
+      "facet": "Plazas, fuentes y memoriales",
+      "known_at": 9
+    },
+    {
+      "name": "Tiananmen Square",
+      "facet": "Plazas, fuentes y memoriales",
+      "known_at": 9
+    },
+    {
+      "name": "Trafalgar Square",
+      "facet": "Plazas, fuentes y memoriales",
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Piazza San Marco",
+      "facet": "Plazas, fuentes y memoriales",
+      "known_at": 9
+    },
+    {
+      "name": "Lincoln Memorial",
+      "facet": "Plazas, fuentes y memoriales",
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Washington Monument",
+      "facet": "Plazas, fuentes y memoriales",
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Hiroshima Peace Memorial",
+      "facet": "Plazas, fuentes y memoriales",
+      "known_at": 10
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-15",
+      "added": 126,
+      "unused": 152
     }
   ]
 }

@@ -201,7 +201,8 @@
     {
       "name": "Liz Truss",
       "facet": "Isabel II y su reinado",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Operación London Bridge",
@@ -216,7 +217,8 @@
     {
       "name": "Servicio Territorial Auxiliar",
       "facet": "Isabel II y su reinado",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Carlos III",
@@ -516,7 +518,8 @@
     {
       "name": "Cifra real",
       "facet": "Símbolos y emblemas reales",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Dieu et mon droit",
@@ -526,7 +529,8 @@
     {
       "name": "Garantía real",
       "facet": "Símbolos y emblemas reales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Casa de Windsor",
@@ -671,17 +675,20 @@
     {
       "name": "Domingo del Recuerdo",
       "facet": "Ceremonias y tradiciones reales",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Ceremonia de las Llaves",
       "facet": "Ceremonias y tradiciones reales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Dinero del Jueves Santo",
       "facet": "Ceremonias y tradiciones reales",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Corgi",
@@ -716,17 +723,20 @@
     {
       "name": "Dorgi",
       "facet": "Mascotas y animales reales",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Casa de fieras de la Torre de Londres",
       "facet": "Mascotas y animales reales",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Lupo",
       "facet": "Mascotas y animales reales",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Labradores de Sandringham",
@@ -736,27 +746,32 @@
     {
       "name": "Censo de los cisnes",
       "facet": "Mascotas y animales reales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Susan",
       "facet": "Mascotas y animales reales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Muick y Sandy",
       "facet": "Mascotas y animales reales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Esturión real",
       "facet": "Mascotas y animales reales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Burmese",
       "facet": "Mascotas y animales reales",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Diana de Gales",
@@ -826,12 +841,14 @@
     {
       "name": "Ala Lindo del Hospital St. Mary's",
       "facet": "Bodas, bebés y escándalos reales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Entrevista de Panorama",
       "facet": "Bodas, bebés y escándalos reales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Robin Hood de Disney",
@@ -896,7 +913,8 @@
     {
       "name": "Blackadder",
       "facet": "Monarquía en películas y series",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Victoria y Abdul",

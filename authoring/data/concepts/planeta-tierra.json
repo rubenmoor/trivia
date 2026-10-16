@@ -106,7 +106,8 @@
     {
       "name": "Altiplano cundiboyacense",
       "facet": "Montañas, valles y relieve",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mont Blanc",
@@ -126,7 +127,8 @@
     {
       "name": "Laguna de Guatavita",
       "facet": "Ríos, lagos y océanos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Escala de Beaufort",
@@ -266,7 +268,8 @@
     {
       "name": "Llanos Orientales",
       "facet": "Ecosistemas y biomas",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cadena alimenticia",
@@ -306,7 +309,8 @@
     {
       "name": "Desierto de La Guajira",
       "facet": "Desiertos, glaciares y polos",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rotación terrestre",
@@ -386,7 +390,8 @@
     {
       "name": "Contenedores de colores",
       "facet": "Contaminación y cuidado ambiental",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Especie en peligro de extinción",

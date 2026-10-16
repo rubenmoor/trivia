@@ -106,7 +106,8 @@
     {
       "name": "Thomas Blood",
       "facet": "Robos de arte famosos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Natividad de Caravaggio",
@@ -131,12 +132,14 @@
     {
       "name": "Robo del Banco Central de Fortaleza",
       "facet": "Grandes atracos y golpes",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Robo del Banco Río",
       "facet": "Grandes atracos y golpes",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Robo de diamantes de Amberes",
@@ -161,7 +164,8 @@
     {
       "name": "Robo de Brink's-Mat",
       "facet": "Grandes atracos y golpes",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Robo de Lufthansa",
@@ -251,12 +255,14 @@
     {
       "name": "Ronnie Biggs",
       "facet": "Fugas y prisiones célebres",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Barón de Pointis",
       "facet": "Piratas y corsarios históricos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bucaneros",
@@ -361,7 +367,8 @@
     {
       "name": "Wells Fargo",
       "facet": "Forajidos del Viejo Oeste",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Pony Express",
@@ -451,7 +458,8 @@
     {
       "name": "Enmienda 18",
       "facet": "Gánsteres y la Ley Seca",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Esquema Ponzi",
@@ -541,7 +549,8 @@
     {
       "name": "Cuento del tío",
       "facet": "Estafas y falsificaciones célebres",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Luminol",
@@ -676,7 +685,8 @@
     {
       "name": "Chómpiras",
       "facet": "Detectives y ladrones de ficción",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Padre Brown",
@@ -821,32 +831,38 @@
     {
       "name": "Sambenito",
       "facet": "Justicia y castigos de antaño",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Robo de la espada de Bolívar",
       "facet": "Casos célebres en Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Robo del Banco de la República en Valledupar",
       "facet": "Casos célebres en Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Noche Septembrina",
       "facet": "Casos célebres en Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Jorge Eliécer Gaitán",
       "facet": "Casos célebres en Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Policarpa Salavarrieta",
       "facet": "Casos célebres en Colombia",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pablo Escobar",
@@ -856,42 +872,50 @@
     {
       "name": "La Catedral",
       "facet": "Casos célebres en Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cárcel La Picota",
       "facet": "Casos célebres en Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cárcel La Modelo",
       "facet": "Casos célebres en Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pirámide DMG",
       "facet": "Casos célebres en Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Interbolsa",
       "facet": "Casos célebres en Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fiscalía General de la Nación",
       "facet": "Casos célebres en Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Medicina Legal",
       "facet": "Casos célebres en Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Guaquería",
       "facet": "Casos célebres en Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     }
   ]
 }

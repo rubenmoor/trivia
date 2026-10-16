@@ -11,7 +11,8 @@
     "Vocabulario y refranes del dinero",
     "Personajes ricos y ahorradores de ficción",
     "Seguridad bancaria y bóvedas",
-    "Presupuesto y finanzas del hogar"
+    "Presupuesto y finanzas del hogar",
+    "Millonarios de la vida real"
   ],
   "axis_fit": {
     "move": {
@@ -75,12 +76,14 @@
     {
       "name": "Plata debajo del colchón",
       "facet": "Alcancías y ahorro en casa",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Natillera",
       "facet": "Alcancías y ahorro en casa",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cadena de ahorro",
@@ -185,7 +188,8 @@
     {
       "name": "Gota a gota",
       "facet": "Préstamos, intereses y deudas",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fiador",
@@ -200,7 +204,8 @@
     {
       "name": "ICETEX",
       "facet": "Préstamos, intereses y deudas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Interés compuesto",
@@ -210,7 +215,8 @@
     {
       "name": "Datacrédito",
       "facet": "Préstamos, intereses y deudas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Embargo",
@@ -235,7 +241,8 @@
     {
       "name": "Banco de Bogotá",
       "facet": "Historia de la banca",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Banca del cambista",
@@ -260,7 +267,8 @@
     {
       "name": "Corralito",
       "facet": "Historia de la banca",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Banco de Estocolmo",
@@ -285,7 +293,8 @@
     {
       "name": "TRM",
       "facet": "Bancos centrales y Banco de la República",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Banco de España",
@@ -300,17 +309,20 @@
     {
       "name": "Junta Directiva del Banco de la República",
       "facet": "Bancos centrales y Banco de la República",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Superintendencia Financiera",
       "facet": "Bancos centrales y Banco de la República",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Misión Kemmerer",
       "facet": "Bancos centrales y Banco de la República",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Transferencia",
@@ -320,7 +332,8 @@
     {
       "name": "Daviplata",
       "facet": "Pagos digitales y billeteras",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Apple Pay",
@@ -335,7 +348,8 @@
     {
       "name": "PSE",
       "facet": "Pagos digitales y billeteras",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Dinero electrónico",
@@ -375,7 +389,8 @@
     {
       "name": "CDT",
       "facet": "Inversión, bolsa y acciones",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rentabilidad",
@@ -415,7 +430,8 @@
     {
       "name": "Bolsa de Valores de Colombia",
       "facet": "Inversión, bolsa y acciones",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mercado bajista",
@@ -440,12 +456,14 @@
     {
       "name": "Codo",
       "facet": "Vocabulario y refranes del dinero",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El que guarda siempre tiene",
       "facet": "Vocabulario y refranes del dinero",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Derrochar",
@@ -460,17 +478,20 @@
     {
       "name": "Rebusque",
       "facet": "Vocabulario y refranes del dinero",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Plata llama plata",
       "facet": "Vocabulario y refranes del dinero",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chichigua",
       "facet": "Vocabulario y refranes del dinero",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Patrimonio",
@@ -490,7 +511,8 @@
     {
       "name": "Richie Rich",
       "facet": "Personajes ricos y ahorradores de ficción",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Jay Gatsby",
@@ -525,7 +547,8 @@
     {
       "name": "Lista de mercado",
       "facet": "Presupuesto y finanzas del hogar",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gasto",
@@ -535,7 +558,8 @@
     {
       "name": "Arriendo",
       "facet": "Presupuesto y finanzas del hogar",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Factura",
@@ -575,7 +599,8 @@
     {
       "name": "Prima de servicios",
       "facet": "Presupuesto y finanzas del hogar",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fondo de emergencia",
@@ -595,17 +620,934 @@
     {
       "name": "DIAN",
       "facet": "Presupuesto y finanzas del hogar",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cesantías",
       "facet": "Presupuesto y finanzas del hogar",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Regla 50/30/20",
       "facet": "Presupuesto y finanzas del hogar",
       "known_at": 13
+    },
+    {
+      "name": "Piggy bank",
+      "facet": "Alcancías y ahorro en casa",
+      "known_at": 1
+    },
+    {
+      "name": "Pocket money",
+      "facet": "Alcancías y ahorro en casa",
+      "known_at": 3
+    },
+    {
+      "name": "Tooth Fairy",
+      "facet": "Alcancías y ahorro en casa",
+      "known_at": 2
+    },
+    {
+      "name": "Red envelope",
+      "facet": "Alcancías y ahorro en casa",
+      "known_at": 7
+    },
+    {
+      "name": "Spare change",
+      "facet": "Alcancías y ahorro en casa",
+      "known_at": 3
+    },
+    {
+      "name": "Coin counting machine",
+      "facet": "Alcancías y ahorro en casa",
+      "known_at": 6
+    },
+    {
+      "name": "Coin wrapper",
+      "facet": "Alcancías y ahorro en casa",
+      "known_at": 8
+    },
+    {
+      "name": "Marshmallow test",
+      "facet": "Alcancías y ahorro en casa",
+      "known_at": 11
+    },
+    {
+      "name": "Chores",
+      "facet": "Alcancías y ahorro en casa",
+      "known_at": 3
+    },
+    {
+      "name": "Wallet",
+      "facet": "Alcancías y ahorro en casa",
+      "known_at": 1
+    },
+    {
+      "name": "Treasure chest",
+      "facet": "Alcancías y ahorro en casa",
+      "known_at": 2
+    },
+    {
+      "name": "Savings account",
+      "facet": "Alcancías y ahorro en casa",
+      "known_at": 6
+    },
+    {
+      "name": "Tontine",
+      "facet": "Alcancías y ahorro en casa",
+      "known_at": 14
+    },
+    {
+      "name": "ATM",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 3
+    },
+    {
+      "name": "Debit card",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 5
+    },
+    {
+      "name": "Credit card",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 3
+    },
+    {
+      "name": "Bank teller",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 5
+    },
+    {
+      "name": "IBAN",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 11
+    },
+    {
+      "name": "SWIFT code",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 12
+    },
+    {
+      "name": "Contactless payment",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 5
+    },
+    {
+      "name": "Chip card",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 6
+    },
+    {
+      "name": "Magnetic stripe",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 7
+    },
+    {
+      "name": "American Express",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 8
+    },
+    {
+      "name": "UnionPay",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 12
+    },
+    {
+      "name": "Overdraft",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 10
+    },
+    {
+      "name": "Joint account",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 10
+    },
+    {
+      "name": "Online banking",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 6
+    },
+    {
+      "name": "Card payment terminal",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 6
+    },
+    {
+      "name": "Signature",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 4
+    },
+    {
+      "name": "HSBC",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 10
+    },
+    {
+      "name": "Swiss bank account",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 9
+    },
+    {
+      "name": "Traveler's check",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 10
+    },
+    {
+      "name": "Currency exchange office",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 6
+    },
+    {
+      "name": "John Shepherd-Barron",
+      "facet": "Cuentas, tarjetas y cajeros",
+      "known_at": 14
+    },
+    {
+      "name": "Loan",
+      "facet": "Préstamos, intereses y deudas",
+      "known_at": 4
+    },
+    {
+      "name": "Mortgage",
+      "facet": "Préstamos, intereses y deudas",
+      "known_at": 8
+    },
+    {
+      "name": "Interest rate",
+      "facet": "Préstamos, intereses y deudas",
+      "known_at": 7
+    },
+    {
+      "name": "Simple interest",
+      "facet": "Préstamos, intereses y deudas",
+      "known_at": 9
+    },
+    {
+      "name": "Collateral",
+      "facet": "Préstamos, intereses y deudas",
+      "known_at": 11
+    },
+    {
+      "name": "Credit score",
+      "facet": "Préstamos, intereses y deudas",
+      "known_at": 10
+    },
+    {
+      "name": "Bankruptcy",
+      "facet": "Préstamos, intereses y deudas",
+      "known_at": 9
+    },
+    {
+      "name": "Pawn shop",
+      "facet": "Préstamos, intereses y deudas",
+      "known_at": 7
+    },
+    {
+      "name": "Down payment",
+      "facet": "Préstamos, intereses y deudas",
+      "known_at": 9
+    },
+    {
+      "name": "Payday loan",
+      "facet": "Préstamos, intereses y deudas",
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Student loan",
+      "facet": "Préstamos, intereses y deudas",
+      "known_at": 8
+    },
+    {
+      "name": "Grameen Bank",
+      "facet": "Préstamos, intereses y deudas",
+      "known_at": 12
+    },
+    {
+      "name": "Loan shark",
+      "facet": "Préstamos, intereses y deudas",
+      "known_at": 8
+    },
+    {
+      "name": "IOU",
+      "facet": "Préstamos, intereses y deudas",
+      "known_at": 8
+    },
+    {
+      "name": "Credit limit",
+      "facet": "Préstamos, intereses y deudas",
+      "known_at": 8
+    },
+    {
+      "name": "Minimum payment",
+      "facet": "Préstamos, intereses y deudas",
+      "known_at": 9
+    },
+    {
+      "name": "Debt collector",
+      "facet": "Préstamos, intereses y deudas",
+      "known_at": 8
+    },
+    {
+      "name": "Annual percentage rate",
+      "facet": "Préstamos, intereses y deudas",
+      "known_at": 12
+    },
+    {
+      "name": "Medici family",
+      "facet": "Historia de la banca",
+      "known_at": 10
+    },
+    {
+      "name": "Knights Templar",
+      "facet": "Historia de la banca",
+      "known_at": 11
+    },
+    {
+      "name": "Bank of England",
+      "facet": "Historia de la banca",
+      "known_at": 9
+    },
+    {
+      "name": "Banco di San Giorgio",
+      "facet": "Historia de la banca",
+      "known_at": 14
+    },
+    {
+      "name": "Money changers in the Temple",
+      "facet": "Historia de la banca",
+      "known_at": 9
+    },
+    {
+      "name": "Bill of exchange",
+      "facet": "Historia de la banca",
+      "known_at": 13
+    },
+    {
+      "name": "Wall Street Crash of 1929",
+      "facet": "Historia de la banca",
+      "known_at": 10
+    },
+    {
+      "name": "Great Depression",
+      "facet": "Historia de la banca",
+      "known_at": 10
+    },
+    {
+      "name": "Bank run",
+      "facet": "Historia de la banca",
+      "known_at": 10
+    },
+    {
+      "name": "2008 financial crisis",
+      "facet": "Historia de la banca",
+      "known_at": 11
+    },
+    {
+      "name": "Tulip mania",
+      "facet": "Historia de la banca",
+      "known_at": 11
+    },
+    {
+      "name": "South Sea Bubble",
+      "facet": "Historia de la banca",
+      "known_at": 13
+    },
+    {
+      "name": "Bretton Woods",
+      "facet": "Historia de la banca",
+      "known_at": 13
+    },
+    {
+      "name": "Gold standard",
+      "facet": "Historia de la banca",
+      "known_at": 11
+    },
+    {
+      "name": "Florin",
+      "facet": "Historia de la banca",
+      "known_at": 11
+    },
+    {
+      "name": "Barings Bank",
+      "facet": "Historia de la banca",
+      "known_at": 14
+    },
+    {
+      "name": "Hawala",
+      "facet": "Historia de la banca",
+      "known_at": 14
+    },
+    {
+      "name": "John Law",
+      "facet": "Historia de la banca",
+      "known_at": 14
+    },
+    {
+      "name": "Federal Reserve",
+      "facet": "Bancos centrales y Banco de la República",
+      "known_at": 10
+    },
+    {
+      "name": "European Central Bank",
+      "facet": "Bancos centrales y Banco de la República",
+      "known_at": 10
+    },
+    {
+      "name": "Bank of Japan",
+      "facet": "Bancos centrales y Banco de la República",
+      "known_at": 11
+    },
+    {
+      "name": "People's Bank of China",
+      "facet": "Bancos centrales y Banco de la República",
+      "known_at": 12
+    },
+    {
+      "name": "Reserve Bank of India",
+      "facet": "Bancos centrales y Banco de la República",
+      "known_at": 12
+    },
+    {
+      "name": "Bundesbank",
+      "facet": "Bancos centrales y Banco de la República",
+      "known_at": 13
+    },
+    {
+      "name": "Swiss National Bank",
+      "facet": "Bancos centrales y Banco de la República",
+      "known_at": 12
+    },
+    {
+      "name": "Monetary policy",
+      "facet": "Bancos centrales y Banco de la República",
+      "known_at": 12
+    },
+    {
+      "name": "Inflation target",
+      "facet": "Bancos centrales y Banco de la República",
+      "known_at": 13
+    },
+    {
+      "name": "Quantitative easing",
+      "facet": "Bancos centrales y Banco de la República",
+      "known_at": 14
+    },
+    {
+      "name": "Lender of last resort",
+      "facet": "Bancos centrales y Banco de la República",
+      "known_at": 14
+    },
+    {
+      "name": "International Monetary Fund",
+      "facet": "Bancos centrales y Banco de la República",
+      "known_at": 11
+    },
+    {
+      "name": "World Bank",
+      "facet": "Bancos centrales y Banco de la República",
+      "known_at": 10
+    },
+    {
+      "name": "Inflation",
+      "facet": "Bancos centrales y Banco de la República",
+      "known_at": 8
+    },
+    {
+      "name": "Hyperinflation",
+      "facet": "Bancos centrales y Banco de la República",
+      "known_at": 10
+    },
+    {
+      "name": "Deflation",
+      "facet": "Bancos centrales y Banco de la República",
+      "known_at": 12
+    },
+    {
+      "name": "Recession",
+      "facet": "Bancos centrales y Banco de la República",
+      "known_at": 10
+    },
+    {
+      "name": "Exchange rate",
+      "facet": "Bancos centrales y Banco de la República",
+      "known_at": 8
+    },
+    {
+      "name": "Royal Mint",
+      "facet": "Bancos centrales y Banco de la República",
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Zimbabwe 100 trillion dollar note",
+      "facet": "Bancos centrales y Banco de la República",
+      "known_at": 11
+    },
+    {
+      "name": "Mario Draghi",
+      "facet": "Bancos centrales y Banco de la República",
+      "known_at": 14
+    },
+    {
+      "name": "QR code payment",
+      "facet": "Pagos digitales y billeteras",
+      "known_at": 5
+    },
+    {
+      "name": "Alipay",
+      "facet": "Pagos digitales y billeteras",
+      "known_at": 11
+    },
+    {
+      "name": "WeChat Pay",
+      "facet": "Pagos digitales y billeteras",
+      "known_at": 10
+    },
+    {
+      "name": "Google Pay",
+      "facet": "Pagos digitales y billeteras",
+      "known_at": 6
+    },
+    {
+      "name": "Ethereum",
+      "facet": "Pagos digitales y billeteras",
+      "known_at": 11
+    },
+    {
+      "name": "Dogecoin",
+      "facet": "Pagos digitales y billeteras",
+      "known_at": 9
+    },
+    {
+      "name": "Bitcoin mining",
+      "facet": "Pagos digitales y billeteras",
+      "known_at": 11
+    },
+    {
+      "name": "Pix",
+      "facet": "Pagos digitales y billeteras",
+      "known_at": 13
+    },
+    {
+      "name": "UPI",
+      "facet": "Pagos digitales y billeteras",
+      "known_at": 13
+    },
+    {
+      "name": "Buy now, pay later",
+      "facet": "Pagos digitales y billeteras",
+      "known_at": 11
+    },
+    {
+      "name": "Gift card",
+      "facet": "Pagos digitales y billeteras",
+      "known_at": 3
+    },
+    {
+      "name": "Cashless society",
+      "facet": "Pagos digitales y billeteras",
+      "known_at": 11
+    },
+    {
+      "name": "Central bank digital currency",
+      "facet": "Pagos digitales y billeteras",
+      "known_at": 14
+    },
+    {
+      "name": "Remittance",
+      "facet": "Pagos digitales y billeteras",
+      "known_at": 11
+    },
+    {
+      "name": "Stock market",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 6
+    },
+    {
+      "name": "Charging Bull",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 9
+    },
+    {
+      "name": "London Stock Exchange",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 11
+    },
+    {
+      "name": "Tokyo Stock Exchange",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 12
+    },
+    {
+      "name": "S&P 500",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 11
+    },
+    {
+      "name": "Nikkei 225",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 13
+    },
+    {
+      "name": "FTSE 100",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 13
+    },
+    {
+      "name": "IPO",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 12
+    },
+    {
+      "name": "Index fund",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 12
+    },
+    {
+      "name": "Portfolio",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 11
+    },
+    {
+      "name": "Gold bar",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 4
+    },
+    {
+      "name": "Hedge fund",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 13
+    },
+    {
+      "name": "Venture capital",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 13
+    },
+    {
+      "name": "Unicorn startup",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 12
+    },
+    {
+      "name": "Opening bell",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 10
+    },
+    {
+      "name": "Stock ticker",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 10
+    },
+    {
+      "name": "Rule of 72",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 13
+    },
+    {
+      "name": "Berkshire Hathaway",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 13
+    },
+    {
+      "name": "Benjamin Graham",
+      "facet": "Inversión, bolsa y acciones",
+      "known_at": 15
+    },
+    {
+      "name": "Millionaire",
+      "facet": "Vocabulario y refranes del dinero",
+      "known_at": 3
+    },
+    {
+      "name": "Billionaire",
+      "facet": "Vocabulario y refranes del dinero",
+      "known_at": 5
+    },
+    {
+      "name": "Broke",
+      "facet": "Vocabulario y refranes del dinero",
+      "known_at": 5
+    },
+    {
+      "name": "Time is money",
+      "facet": "Vocabulario y refranes del dinero",
+      "known_at": 8
+    },
+    {
+      "name": "Money doesn't grow on trees",
+      "facet": "Vocabulario y refranes del dinero",
+      "known_at": 5
+    },
+    {
+      "name": "Money can't buy happiness",
+      "facet": "Vocabulario y refranes del dinero",
+      "known_at": 6
+    },
+    {
+      "name": "Profit",
+      "facet": "Vocabulario y refranes del dinero",
+      "known_at": 6
+    },
+    {
+      "name": "Jackpot",
+      "facet": "Vocabulario y refranes del dinero",
+      "known_at": 6
+    },
+    {
+      "name": "Barter",
+      "facet": "Vocabulario y refranes del dinero",
+      "known_at": 8
+    },
+    {
+      "name": "Tip",
+      "facet": "Vocabulario y refranes del dinero",
+      "known_at": 4
+    },
+    {
+      "name": "Scrooge McDuck",
+      "facet": "Personajes ricos y ahorradores de ficción",
+      "known_at": 3
+    },
+    {
+      "name": "Number One Dime",
+      "facet": "Personajes ricos y ahorradores de ficción",
+      "known_at": 8,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Mr. Burns",
+      "facet": "Personajes ricos y ahorradores de ficción",
+      "known_at": 7
+    },
+    {
+      "name": "Rich Uncle Pennybags",
+      "facet": "Personajes ricos y ahorradores de ficción",
+      "known_at": 7
+    },
+    {
+      "name": "King Midas",
+      "facet": "Personajes ricos y ahorradores de ficción",
+      "known_at": 7
+    },
+    {
+      "name": "Mr. Banks",
+      "facet": "Personajes ricos y ahorradores de ficción",
+      "known_at": 10
+    },
+    {
+      "name": "The Count of Monte Cristo",
+      "facet": "Personajes ricos y ahorradores de ficción",
+      "known_at": 11
+    },
+    {
+      "name": "Bank vault",
+      "facet": "Seguridad bancaria y bóvedas",
+      "known_at": 3
+    },
+    {
+      "name": "Safe",
+      "facet": "Seguridad bancaria y bóvedas",
+      "known_at": 3
+    },
+    {
+      "name": "Combination lock",
+      "facet": "Seguridad bancaria y bóvedas",
+      "known_at": 5
+    },
+    {
+      "name": "Time lock",
+      "facet": "Seguridad bancaria y bóvedas",
+      "known_at": 12
+    },
+    {
+      "name": "Counterfeit money",
+      "facet": "Seguridad bancaria y bóvedas",
+      "known_at": 7
+    },
+    {
+      "name": "Watermark",
+      "facet": "Seguridad bancaria y bóvedas",
+      "known_at": 8
+    },
+    {
+      "name": "Security thread",
+      "facet": "Seguridad bancaria y bóvedas",
+      "known_at": 11
+    },
+    {
+      "name": "Hologram",
+      "facet": "Seguridad bancaria y bóvedas",
+      "known_at": 8
+    },
+    {
+      "name": "Fingerprint scanner",
+      "facet": "Seguridad bancaria y bóvedas",
+      "known_at": 6
+    },
+    {
+      "name": "Password",
+      "facet": "Seguridad bancaria y bóvedas",
+      "known_at": 3
+    },
+    {
+      "name": "Encryption",
+      "facet": "Seguridad bancaria y bóvedas",
+      "known_at": 11
+    },
+    {
+      "name": "Dye pack",
+      "facet": "Seguridad bancaria y bóvedas",
+      "known_at": 13
+    },
+    {
+      "name": "Security camera",
+      "facet": "Seguridad bancaria y bóvedas",
+      "known_at": 5
+    },
+    {
+      "name": "Identity theft",
+      "facet": "Seguridad bancaria y bóvedas",
+      "known_at": 10
+    },
+    {
+      "name": "Insurance",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 8
+    },
+    {
+      "name": "Coupon",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 5
+    },
+    {
+      "name": "Receipt",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 4
+    },
+    {
+      "name": "Price tag",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 2
+    },
+    {
+      "name": "Discount",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 3
+    },
+    {
+      "name": "VAT",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 11
+    },
+    {
+      "name": "Impulse buying",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 10
+    },
+    {
+      "name": "Subscription",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 7
+    },
+    {
+      "name": "Gross and net salary",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 12
+    },
+    {
+      "name": "Cost of living",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 11
+    },
+    {
+      "name": "Inheritance",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 9
+    },
+    {
+      "name": "Needs and wants",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 4
+    },
+    {
+      "name": "Second-hand shop",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 5
+    },
+    {
+      "name": "Cashback",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 8
+    },
+    {
+      "name": "Loyalty card",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 7
+    },
+    {
+      "name": "Payslip",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 10
+    },
+    {
+      "name": "Spreadsheet",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 9
+    },
+    {
+      "name": "Tax return",
+      "facet": "Presupuesto y finanzas del hogar",
+      "known_at": 11
+    },
+    {
+      "name": "John D. Rockefeller",
+      "facet": "Millonarios de la vida real",
+      "known_at": 11
+    },
+    {
+      "name": "Andrew Carnegie",
+      "facet": "Millonarios de la vida real",
+      "known_at": 12
+    },
+    {
+      "name": "Croesus",
+      "facet": "Millonarios de la vida real",
+      "known_at": 13
+    },
+    {
+      "name": "Oprah Winfrey",
+      "facet": "Millonarios de la vida real",
+      "known_at": 9
+    },
+    {
+      "name": "Carlos Slim",
+      "facet": "Millonarios de la vida real",
+      "known_at": 12
+    },
+    {
+      "name": "Bernard Arnault",
+      "facet": "Millonarios de la vida real",
+      "known_at": 13
+    },
+    {
+      "name": "Cornelius Vanderbilt",
+      "facet": "Millonarios de la vida real",
+      "known_at": 13
+    },
+    {
+      "name": "J. P. Morgan",
+      "facet": "Millonarios de la vida real",
+      "known_at": 12
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-15",
+      "added": 181,
+      "unused": 255
     }
   ]
 }

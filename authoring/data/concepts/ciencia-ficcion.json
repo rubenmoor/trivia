@@ -451,7 +451,8 @@
     {
       "name": "Destornillador sónico",
       "facet": "Inventos y tecnología ficticia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Replicador",
@@ -701,7 +702,8 @@
     {
       "name": "Gallifrey",
       "facet": "Planetas y mundos imaginarios",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Colonización de Marte",

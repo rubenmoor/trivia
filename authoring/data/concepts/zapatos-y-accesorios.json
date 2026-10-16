@@ -541,22 +541,26 @@
     {
       "name": "Tula",
       "facet": "Accesorios típicos de Colombia",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Esmeraldas de Muzo",
       "facet": "Accesorios típicos de Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chaquiras emberá",
       "facet": "Accesorios típicos de Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gafas de Mirabel",
       "facet": "Zapatos y accesorios famosos en películas y cuentos",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gorra de Ash Ketchum",
@@ -636,7 +640,8 @@
     {
       "name": "Chapines",
       "facet": "Historia del calzado y los accesorios",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Botas lunares del Apolo",
@@ -651,7 +656,8 @@
     {
       "name": "Zapatero a tus zapatos",
       "facet": "Palabras y dichos de zapatos y accesorios",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Quitarse el sombrero",
@@ -676,17 +682,20 @@
     {
       "name": "Colgar los guayos",
       "facet": "Palabras y dichos de zapatos y accesorios",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "No llegarle ni a los talones",
       "facet": "Palabras y dichos de zapatos y accesorios",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ponerse las botas",
       "facet": "Palabras y dichos de zapatos y accesorios",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Estar de capa caída",
@@ -696,7 +705,8 @@
     {
       "name": "Embolador",
       "facet": "Palabras y dichos de zapatos y accesorios",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Zapatear",

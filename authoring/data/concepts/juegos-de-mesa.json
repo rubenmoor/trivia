@@ -216,7 +216,8 @@
     {
       "name": "Rasta (risk) de dominación",
       "facet": "Damas, go y juegos de estrategia clásicos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Dado",
@@ -231,7 +232,8 @@
     {
       "name": "Generala",
       "facet": "Juegos de dados y azar",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Yahtzee",
@@ -261,7 +263,8 @@
     {
       "name": "Lotería mexicana",
       "facet": "Juegos de dados y azar",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ruleta",
@@ -296,7 +299,8 @@
     {
       "name": "Baraja española",
       "facet": "Cartas y barajas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Baraja francesa",
@@ -326,7 +330,8 @@
     {
       "name": "Chinchón",
       "facet": "Cartas y barajas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rummy",
@@ -336,17 +341,20 @@
     {
       "name": "Tute",
       "facet": "Cartas y barajas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mus",
       "facet": "Cartas y barajas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Escoba",
       "facet": "Cartas y barajas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Magic: The Gathering",
@@ -391,7 +399,8 @@
     {
       "name": "Concéntrese",
       "facet": "Cartas y barajas",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Señor Monopoly",
@@ -466,7 +475,8 @@
     {
       "name": "Cashflow",
       "facet": "Juegos de propiedades y dinero",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Billete de Monopoly",
@@ -606,7 +616,8 @@
     {
       "name": "Calabozos y Dragones",
       "facet": "Juegos de mesa modernos",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Risk",
@@ -616,17 +627,20 @@
     {
       "name": "Clue",
       "facet": "Juegos de mesa modernos",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Operando",
       "facet": "Juegos de mesa modernos",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hipopótamos glotones",
       "facet": "Juegos de mesa modernos",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Azul",
@@ -651,17 +665,20 @@
     {
       "name": "Parqués",
       "facet": "Juegos tradicionales colombianos de mesa",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Seguro del parqués",
       "facet": "Juegos tradicionales colombianos de mesa",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cárcel del parqués",
       "facet": "Juegos tradicionales colombianos de mesa",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Dominó",
@@ -681,37 +698,44 @@
     {
       "name": "Triqui",
       "facet": "Juegos tradicionales colombianos de mesa",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Remigio",
       "facet": "Juegos tradicionales colombianos de mesa",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pirinola",
       "facet": "Juegos tradicionales colombianos de mesa",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Juego de la rana",
       "facet": "Juegos tradicionales colombianos de mesa",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bolirana",
       "facet": "Juegos tradicionales colombianos de mesa",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cubilete",
       "facet": "Juegos tradicionales colombianos de mesa",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Golosa",
       "facet": "Juegos tradicionales colombianos de mesa",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Senet",
@@ -781,7 +805,8 @@
     {
       "name": "Libro de los juegos de Alfonso X",
       "facet": "Juegos antiguos y su historia",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mahjong",
@@ -1026,12 +1051,14 @@
     {
       "name": "Boris de Greiff",
       "facet": "Campeones y jugadores famosos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Alonso Zapata",
       "facet": "Campeones y jugadores famosos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Nigel Richards",

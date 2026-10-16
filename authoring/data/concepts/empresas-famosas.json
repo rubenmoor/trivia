@@ -157,32 +157,38 @@
     {
       "name": "Colombiana (gaseosa)",
       "facet": "Empresas colombianas",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ponqué Ramo",
       "facet": "Empresas colombianas",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Crepes & Waffles",
       "facet": "Empresas colombianas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bavaria",
       "facet": "Empresas colombianas",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Haceb",
       "facet": "Empresas colombianas",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mario Hernández",
       "facet": "Empresas colombianas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Nespresso",
@@ -263,6 +269,466 @@
       "name": "Adolf Dassler",
       "facet": "Origen de los nombres",
       "known_at": 11
+    },
+    {
+      "name": "Hard Rock Cafe",
+      "facet": "Comida rápida y restaurantes",
+      "known_at": 10
+    },
+    {
+      "name": "Chicken McNuggets",
+      "facet": "Comida rápida y restaurantes",
+      "known_at": 3
+    },
+    {
+      "name": "Skittles",
+      "facet": "Bebidas y golosinas",
+      "known_at": 4
+    },
+    {
+      "name": "Ben & Jerry's",
+      "facet": "Bebidas y golosinas",
+      "known_at": 9
+    },
+    {
+      "name": "Yakult",
+      "facet": "Bebidas y golosinas",
+      "known_at": 9
+    },
+    {
+      "name": "Maltesers",
+      "facet": "Bebidas y golosinas",
+      "known_at": 7,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Philips",
+      "facet": "Tecnología y videojuegos",
+      "known_at": 9
+    },
+    {
+      "name": "Dyson",
+      "facet": "Tecnología y videojuegos",
+      "known_at": 11
+    },
+    {
+      "name": "Tencent",
+      "facet": "Tecnología y videojuegos",
+      "known_at": 12
+    },
+    {
+      "name": "Volkswagen Beetle",
+      "facet": "Carros y transporte",
+      "known_at": 4
+    },
+    {
+      "name": "Ford Model T",
+      "facet": "Carros y transporte",
+      "known_at": 10
+    },
+    {
+      "name": "Land Rover",
+      "facet": "Carros y transporte",
+      "known_at": 9
+    },
+    {
+      "name": "Goodyear Blimp",
+      "facet": "Carros y transporte",
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Maserati",
+      "facet": "Carros y transporte",
+      "known_at": 11
+    },
+    {
+      "name": "BYD",
+      "facet": "Carros y transporte",
+      "known_at": 12
+    },
+    {
+      "name": "Dr. Martens",
+      "facet": "Ropa y deportes",
+      "known_at": 10
+    },
+    {
+      "name": "Speedo",
+      "facet": "Ropa y deportes",
+      "known_at": 9
+    },
+    {
+      "name": "Havaianas",
+      "facet": "Ropa y deportes",
+      "known_at": 9
+    },
+    {
+      "name": "Decathlon",
+      "facet": "Ropa y deportes",
+      "known_at": 8
+    },
+    {
+      "name": "Birkenstock",
+      "facet": "Ropa y deportes",
+      "known_at": 10
+    },
+    {
+      "name": "Victorinox",
+      "facet": "Ropa y deportes",
+      "known_at": 12
+    },
+    {
+      "name": "Disneyland",
+      "facet": "Juguetes y entretenimiento",
+      "known_at": 2
+    },
+    {
+      "name": "Sanrio",
+      "facet": "Juguetes y entretenimiento",
+      "known_at": 9
+    },
+    {
+      "name": "Crayola",
+      "facet": "Juguetes y entretenimiento",
+      "known_at": 4
+    },
+    {
+      "name": "Mr. Potato Head",
+      "facet": "Juguetes y entretenimiento",
+      "known_at": 3
+    },
+    {
+      "name": "Rubik's Cube",
+      "facet": "Juguetes y entretenimiento",
+      "known_at": 3
+    },
+    {
+      "name": "Etch A Sketch",
+      "facet": "Juguetes y entretenimiento",
+      "known_at": 9
+    },
+    {
+      "name": "Jack Ma",
+      "facet": "Fundadores y mascotas de marca",
+      "known_at": 11
+    },
+    {
+      "name": "Amancio Ortega",
+      "facet": "Fundadores y mascotas de marca",
+      "known_at": 13
+    },
+    {
+      "name": "Duo (Duolingo owl)",
+      "facet": "Fundadores y mascotas de marca",
+      "known_at": 6
+    },
+    {
+      "name": "Golden Arches",
+      "facet": "Logotipos y eslóganes",
+      "known_at": 3
+    },
+    {
+      "name": "Twitter bird",
+      "facet": "Logotipos y eslóganes",
+      "known_at": 5
+    },
+    {
+      "name": "Peugeot lion",
+      "facet": "Logotipos y eslóganes",
+      "known_at": 10
+    },
+    {
+      "name": "MGM lion",
+      "facet": "Logotipos y eslóganes",
+      "known_at": 11
+    },
+    {
+      "name": "Paramount mountain",
+      "facet": "Logotipos y eslóganes",
+      "known_at": 11
+    },
+    {
+      "name": "Amazon smile arrow",
+      "facet": "Logotipos y eslóganes",
+      "known_at": 9
+    },
+    {
+      "name": "FedEx hidden arrow",
+      "facet": "Logotipos y eslóganes",
+      "known_at": 13
+    },
+    {
+      "name": "Toblerone hidden bear",
+      "facet": "Logotipos y eslóganes",
+      "known_at": 12
+    },
+    {
+      "name": "Mitsubishi three diamonds",
+      "facet": "Logotipos y eslóganes",
+      "known_at": 12
+    },
+    {
+      "name": "Chupa Chups logo by Salvador Dalí",
+      "facet": "Logotipos y eslóganes",
+      "known_at": 13
+    },
+    {
+      "name": "Finger lickin' good",
+      "facet": "Logotipos y eslóganes",
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Because you're worth it",
+      "facet": "Logotipos y eslóganes",
+      "known_at": 11
+    },
+    {
+      "name": "BMW roundel",
+      "facet": "Logotipos y eslóganes",
+      "known_at": 10
+    },
+    {
+      "name": "Mastercard circles",
+      "facet": "Logotipos y eslóganes",
+      "known_at": 8
+    },
+    {
+      "name": "Android robot",
+      "facet": "Logotipos y eslóganes",
+      "known_at": 6
+    },
+    {
+      "name": "Pixar lamp",
+      "facet": "Logotipos y eslóganes",
+      "known_at": 3
+    },
+    {
+      "name": "Disney castle logo",
+      "facet": "Logotipos y eslóganes",
+      "known_at": 3
+    },
+    {
+      "name": "DreamWorks boy on the moon",
+      "facet": "Logotipos y eslóganes",
+      "known_at": 9
+    },
+    {
+      "name": "Rolex crown",
+      "facet": "Logotipos y eslóganes",
+      "known_at": 10
+    },
+    {
+      "name": "Harald Bluetooth",
+      "facet": "Origen de los nombres",
+      "known_at": 12
+    },
+    {
+      "name": "Krating Daeng",
+      "facet": "Origen de los nombres",
+      "known_at": 13
+    },
+    {
+      "name": "Kwannon (Canon)",
+      "facet": "Origen de los nombres",
+      "known_at": 14
+    },
+    {
+      "name": "Anima sana in corpore sano",
+      "facet": "Origen de los nombres",
+      "known_at": 13
+    },
+    {
+      "name": "Toyoda family",
+      "facet": "Origen de los nombres",
+      "known_at": 12
+    },
+    {
+      "name": "Hans Riegel",
+      "facet": "Origen de los nombres",
+      "known_at": 12
+    },
+    {
+      "name": "Service Games",
+      "facet": "Origen de los nombres",
+      "known_at": 13
+    },
+    {
+      "name": "Go (board game)",
+      "facet": "Origen de los nombres",
+      "known_at": 14
+    },
+    {
+      "name": "Echo Bay",
+      "facet": "Origen de los nombres",
+      "known_at": 14
+    },
+    {
+      "name": "Yahoos (Gulliver's Travels)",
+      "facet": "Origen de los nombres",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Grey rhebok",
+      "facet": "Origen de los nombres",
+      "known_at": 14
+    },
+    {
+      "name": "Mario Segale",
+      "facet": "Origen de los nombres",
+      "known_at": 14
+    },
+    {
+      "name": "Francesco Baracca",
+      "facet": "Origen de los nombres",
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Fountain of Neptune (Bologna)",
+      "facet": "Origen de los nombres",
+      "known_at": 15
+    },
+    {
+      "name": "Marcel Bich",
+      "facet": "Origen de los nombres",
+      "known_at": 14
+    },
+    {
+      "name": "Florida Gators",
+      "facet": "Origen de los nombres",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Larry Bird",
+      "facet": "Origen de los nombres",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Post-it note",
+      "facet": "Historia e inventos de empresas",
+      "known_at": 5
+    },
+    {
+      "name": "Polaroid camera",
+      "facet": "Historia e inventos de empresas",
+      "known_at": 8
+    },
+    {
+      "name": "Thermos",
+      "facet": "Historia e inventos de empresas",
+      "known_at": 8
+    },
+    {
+      "name": "Band-Aid",
+      "facet": "Historia e inventos de empresas",
+      "known_at": 5
+    },
+    {
+      "name": "Ford assembly line",
+      "facet": "Historia e inventos de empresas",
+      "known_at": 11
+    },
+    {
+      "name": "Compact disc",
+      "facet": "Historia e inventos de empresas",
+      "known_at": 8
+    },
+    {
+      "name": "Bubble Wrap",
+      "facet": "Historia e inventos de empresas",
+      "known_at": 5
+    },
+    {
+      "name": "Cup Noodles",
+      "facet": "Historia e inventos de empresas",
+      "known_at": 6
+    },
+    {
+      "name": "Super Glue",
+      "facet": "Historia e inventos de empresas",
+      "known_at": 6
+    },
+    {
+      "name": "Bic Cristal",
+      "facet": "Historia e inventos de empresas",
+      "known_at": 9
+    },
+    {
+      "name": "Swiss Army knife",
+      "facet": "Historia e inventos de empresas",
+      "known_at": 5
+    },
+    {
+      "name": "Nintendo Entertainment System",
+      "facet": "Historia e inventos de empresas",
+      "known_at": 9
+    },
+    {
+      "name": "Tesco",
+      "facet": "Tiendas y comercio en línea",
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Aldi",
+      "facet": "Tiendas y comercio en línea",
+      "known_at": 9
+    },
+    {
+      "name": "Lidl",
+      "facet": "Tiendas y comercio en línea",
+      "known_at": 9
+    },
+    {
+      "name": "7-Eleven",
+      "facet": "Tiendas y comercio en línea",
+      "known_at": 7
+    },
+    {
+      "name": "Harrods",
+      "facet": "Tiendas y comercio en línea",
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Galeries Lafayette",
+      "facet": "Tiendas y comercio en línea",
+      "known_at": 13
+    },
+    {
+      "name": "Macy's",
+      "facet": "Tiendas y comercio en línea",
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Sephora",
+      "facet": "Tiendas y comercio en línea",
+      "known_at": 9
+    },
+    {
+      "name": "Muji",
+      "facet": "Tiendas y comercio en línea",
+      "known_at": 12
+    },
+    {
+      "name": "Singles' Day",
+      "facet": "Tiendas y comercio en línea",
+      "known_at": 13
+    },
+    {
+      "name": "Rakuten",
+      "facet": "Tiendas y comercio en línea",
+      "known_at": 12
+    },
+    {
+      "name": "Daiso",
+      "facet": "Tiendas y comercio en línea",
+      "known_at": 11
     }
   ],
   "top_ups": [
@@ -270,6 +736,11 @@
       "date": "2026-10-15",
       "added": 4,
       "unused": 30
+    },
+    {
+      "date": "2026-10-15",
+      "added": 90,
+      "unused": 114
     }
   ]
 }

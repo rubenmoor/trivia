@@ -911,7 +911,8 @@
     {
       "name": "Bloomsbury",
       "facet": "Libros, autora y películas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Warner Bros. Studio Tour Londres",

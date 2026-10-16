@@ -421,7 +421,8 @@
     {
       "name": "Palma de cera",
       "facet": "Plantas de Colombia",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cattleya trianae",
@@ -431,12 +432,14 @@
     {
       "name": "Guadua",
       "facet": "Plantas de Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Lulo",
       "facet": "Plantas de Colombia",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Maracuyá",
@@ -446,17 +449,20 @@
     {
       "name": "Granadilla",
       "facet": "Plantas de Colombia",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Uchuva",
       "facet": "Plantas de Colombia",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Borojó",
       "facet": "Plantas de Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Guanábana",
@@ -466,12 +472,14 @@
     {
       "name": "Feijoa",
       "facet": "Plantas de Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Curuba",
       "facet": "Plantas de Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Guayaba",
@@ -481,12 +489,14 @@
     {
       "name": "Mamoncillo",
       "facet": "Plantas de Colombia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tomate de árbol",
       "facet": "Plantas de Colombia",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rosa",
@@ -561,12 +571,14 @@
     {
       "name": "Anturio",
       "facet": "Flores y plantas ornamentales",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Heliconia",
       "facet": "Flores y plantas ornamentales",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Dalia",
@@ -581,7 +593,8 @@
     {
       "name": "Sábila",
       "facet": "Plantas medicinales y aromáticas",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Manzanilla",
@@ -611,17 +624,20 @@
     {
       "name": "Quina",
       "facet": "Plantas medicinales y aromáticas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cidrón",
       "facet": "Plantas medicinales y aromáticas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ruda",
       "facet": "Plantas medicinales y aromáticas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Café",
@@ -711,7 +727,8 @@
     {
       "name": "Puya raimondii",
       "facet": "Plantas curiosas y extremas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Higuerón estrangulador",
@@ -911,7 +928,8 @@
     {
       "name": "Isabela Madrigal",
       "facet": "Plantas en cuentos, cine y juegos",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Planta de WALL·E",

@@ -321,17 +321,20 @@
     {
       "name": "Jorge Isaacs",
       "facet": "Literatura colombiana y latinoamericana",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "María (novela)",
       "facet": "Literatura colombiana y latinoamericana",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rin Rin Renacuajo",
       "facet": "Literatura colombiana y latinoamericana",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El amor en los tiempos del cólera",
@@ -346,7 +349,8 @@
     {
       "name": "Tomás Carrasquilla",
       "facet": "Literatura colombiana y latinoamericana",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Jorge Luis Borges",
@@ -381,7 +385,8 @@
     {
       "name": "Laura Restrepo",
       "facet": "Literatura colombiana y latinoamericana",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Héctor Abad Faciolince",
@@ -421,7 +426,8 @@
     {
       "name": "José Asunción Silva",
       "facet": "Poesía y poetas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Veinte poemas de amor y una canción desesperada",
@@ -446,12 +452,14 @@
     {
       "name": "Mario Benedetti",
       "facet": "Poesía y poetas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Alfonsina Storni",
       "facet": "Poesía y poetas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Octavio Paz",
@@ -466,7 +474,8 @@
     {
       "name": "Versos sencillos",
       "facet": "Poesía y poetas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El cuervo (poema)",
@@ -476,12 +485,14 @@
     {
       "name": "León de Greiff",
       "facet": "Poesía y poetas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Porfirio Barba Jacob",
       "facet": "Poesía y poetas",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "William Shakespeare",
@@ -541,7 +552,8 @@
     {
       "name": "Don Juan Tenorio",
       "facet": "Teatro y dramaturgos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La Celestina",
@@ -611,7 +623,8 @@
     {
       "name": "El Silbón",
       "facet": "Mitos, leyendas y epopeyas",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Robin Hood",
@@ -621,7 +634,8 @@
     {
       "name": "Cantar de mio Cid",
       "facet": "Mitos, leyendas y epopeyas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La Divina Comedia",
@@ -941,12 +955,14 @@
     {
       "name": "Premio Pulitzer",
       "facet": "Libros, premios y vida lectora",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Día del Idioma",
       "facet": "Libros, premios y vida lectora",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Día Internacional del Libro",
@@ -956,7 +972,8 @@
     {
       "name": "Feria Internacional del Libro de Bogotá",
       "facet": "Libros, premios y vida lectora",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hay Festival",
@@ -966,12 +983,14 @@
     {
       "name": "Biblioburro",
       "facet": "Libros, premios y vida lectora",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Biblioteca Luis Ángel Arango",
       "facet": "Libros, premios y vida lectora",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Editorial",

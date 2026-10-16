@@ -211,7 +211,8 @@
     {
       "name": "Muralla de Ávila",
       "facet": "Murallas, castillos y fortalezas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Murallas de Dubrovnik",
@@ -251,7 +252,8 @@
     {
       "name": "Giralda",
       "facet": "Torres y rascacielos famosos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Burj al Arab",
@@ -391,7 +393,8 @@
     {
       "name": "Volcán Paricutín",
       "facet": "Maravillas naturales del planeta",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Géiser Old Faithful",
@@ -411,27 +414,32 @@
     {
       "name": "Santuario de Las Lajas",
       "facet": "Maravillas y patrimonio de Colombia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Santa Cruz de Mompox",
       "facet": "Maravillas y patrimonio de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Paisaje Cultural Cafetero",
       "facet": "Maravillas y patrimonio de Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Puente de Boyacá",
       "facet": "Maravillas y patrimonio de Colombia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Monserrate",
       "facet": "Maravillas y patrimonio de Colombia",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Capitolio Nacional",
@@ -441,7 +449,8 @@
     {
       "name": "Torre Colpatria",
       "facet": "Maravillas y patrimonio de Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Laberinto del Minotauro",

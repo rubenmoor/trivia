@@ -12,7 +12,8 @@
     "Chamanes y plantas medicinales",
     "Palabras indígenas en el español",
     "Historia: exploradores, caucho y misiones",
-    "Resguardos, territorio y líderes actuales"
+    "Resguardos, territorio y líderes actuales",
+    "Arqueología y culturas antiguas"
   ],
   "axis_fit": {
     "move": {
@@ -82,12 +83,14 @@
     {
       "name": "Andoque",
       "facet": "Pueblos y etnias amazónicas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Muinane",
       "facet": "Pueblos y etnias amazónicas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tucano",
@@ -97,12 +100,14 @@
     {
       "name": "Desano",
       "facet": "Pueblos y etnias amazónicas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cubeo",
       "facet": "Pueblos y etnias amazónicas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bora",
@@ -112,17 +117,20 @@
     {
       "name": "Nukak",
       "facet": "Pueblos y etnias amazónicas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Puinave",
       "facet": "Pueblos y etnias amazónicas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Siona",
       "facet": "Pueblos y etnias amazónicas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Kofán",
@@ -133,7 +141,8 @@
     {
       "name": "Inga",
       "facet": "Pueblos y etnias amazónicas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Asháninka",
@@ -153,12 +162,14 @@
     {
       "name": "Yukuna",
       "facet": "Pueblos y etnias amazónicas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Makuna",
       "facet": "Pueblos y etnias amazónicas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pueblos en aislamiento voluntario",
@@ -173,7 +184,8 @@
     {
       "name": "Chagra",
       "facet": "Maloca, aldea y vida diaria",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Palafito",
@@ -193,7 +205,8 @@
     {
       "name": "Mambeadero",
       "facet": "Maloca, aldea y vida diaria",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tala y quema",
@@ -228,7 +241,8 @@
     {
       "name": "Minga",
       "facet": "Maloca, aldea y vida diaria",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Aldea ribereña",
@@ -268,7 +282,8 @@
     {
       "name": "Mojojoy",
       "facet": "Yuca, frutos y cocina indígena",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pescado moqueado",
@@ -363,7 +378,8 @@
     {
       "name": "Chorro de Araracuara",
       "facet": "Navegación y vida en el río",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tres Fronteras",
@@ -513,17 +529,20 @@
     {
       "name": "Pelazón",
       "facet": "Música, fiestas y rituales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Festival de la Confraternidad Amazónica",
       "facet": "Música, fiestas y rituales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Baile del chontaduro",
       "facet": "Música, fiestas y rituales",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Flauta de hueso",
@@ -583,7 +602,8 @@
     {
       "name": "Sabedor tradicional",
       "facet": "Chamanes y plantas medicinales",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rezo de curación",
@@ -618,7 +638,8 @@
     {
       "name": "Cajú",
       "facet": "Palabras indígenas en el español",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tapir",
@@ -628,7 +649,8 @@
     {
       "name": "Carioca",
       "facet": "Palabras indígenas en el español",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Yacaré",
@@ -643,12 +665,14 @@
     {
       "name": "Casa Arana",
       "facet": "Historia: exploradores, caucho y misiones",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Julio César Arana",
       "facet": "Historia: exploradores, caucho y misiones",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Roger Casement",
@@ -663,7 +687,8 @@
     {
       "name": "José Eustasio Rivera",
       "facet": "Historia: exploradores, caucho y misiones",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Misioneros capuchinos",
@@ -678,7 +703,8 @@
     {
       "name": "Guerra colombo-peruana",
       "facet": "Historia: exploradores, caucho y misiones",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Lope de Aguirre",
@@ -693,27 +719,32 @@
     {
       "name": "La Chorrera",
       "facet": "Historia: exploradores, caucho y misiones",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Resguardo indígena",
       "facet": "Resguardos, territorio y líderes actuales",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Parque Nacional La Paya",
       "facet": "Resguardos, territorio y líderes actuales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Predio Putumayo",
       "facet": "Resguardos, territorio y líderes actuales",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Constitución de 1991",
       "facet": "Resguardos, territorio y líderes actuales",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Guardia indígena",
@@ -723,17 +754,20 @@
     {
       "name": "ONIC",
       "facet": "Resguardos, territorio y líderes actuales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "OPIAC",
       "facet": "Resguardos, territorio y líderes actuales",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cabildo indígena",
       "facet": "Resguardos, territorio y líderes actuales",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Territorio ancestral",
@@ -753,7 +787,311 @@
     {
       "name": "Lenguas cooficiales",
       "facet": "Resguardos, territorio y líderes actuales",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Tikuna",
+      "facet": "Pueblos y etnias amazónicas",
+      "known_at": 13
+    },
+    {
+      "name": "Waorani",
+      "facet": "Pueblos y etnias amazónicas",
+      "known_at": 13
+    },
+    {
+      "name": "Achuar",
+      "facet": "Pueblos y etnias amazónicas",
+      "known_at": 14
+    },
+    {
+      "name": "Matsigenka",
+      "facet": "Pueblos y etnias amazónicas",
+      "known_at": 14
+    },
+    {
+      "name": "Munduruku",
+      "facet": "Pueblos y etnias amazónicas",
+      "known_at": 14
+    },
+    {
+      "name": "Kuikuro",
+      "facet": "Pueblos y etnias amazónicas",
+      "known_at": 14
+    },
+    {
+      "name": "Huni Kuin",
+      "facet": "Pueblos y etnias amazónicas",
+      "known_at": 14
+    },
+    {
+      "name": "Sateré-Mawé",
+      "facet": "Pueblos y etnias amazónicas",
+      "known_at": 14
+    },
+    {
+      "name": "Korubo",
+      "facet": "Pueblos y etnias amazónicas",
+      "known_at": 14
+    },
+    {
+      "name": "Shabono",
+      "facet": "Maloca, aldea y vida diaria",
+      "known_at": 13
+    },
+    {
+      "name": "Açaí",
+      "facet": "Yuca, frutos y cocina indígena",
+      "known_at": 6
+    },
+    {
+      "name": "Cassava flour",
+      "facet": "Yuca, frutos y cocina indígena",
+      "known_at": 10
+    },
+    {
+      "name": "Brazil nut",
+      "facet": "Yuca, frutos y cocina indígena",
+      "known_at": 7
+    },
+    {
+      "name": "Cupuaçu",
+      "facet": "Yuca, frutos y cocina indígena",
+      "known_at": 13
+    },
+    {
+      "name": "Poison dart frog",
+      "facet": "Caza, pesca y herramientas",
+      "known_at": 6
+    },
+    {
+      "name": "Fish weir",
+      "facet": "Caza, pesca y herramientas",
+      "known_at": 13
+    },
+    {
+      "name": "Fishing net",
+      "facet": "Caza, pesca y herramientas",
+      "known_at": 4
+    },
+    {
+      "name": "Amazon River",
+      "facet": "Navegación y vida en el río",
+      "known_at": 3
+    },
+    {
+      "name": "Solimões River",
+      "facet": "Navegación y vida en el río",
+      "known_at": 13
+    },
+    {
+      "name": "Marañón River",
+      "facet": "Navegación y vida en el río",
+      "known_at": 13
+    },
+    {
+      "name": "Ucayali River",
+      "facet": "Navegación y vida en el río",
+      "known_at": 13
+    },
+    {
+      "name": "Xingu River",
+      "facet": "Navegación y vida en el río",
+      "known_at": 13
+    },
+    {
+      "name": "Manaus",
+      "facet": "Navegación y vida en el río",
+      "known_at": 9
+    },
+    {
+      "name": "Pink river dolphin",
+      "facet": "Navegación y vida en el río",
+      "known_at": 5
+    },
+    {
+      "name": "Flooded forest",
+      "facet": "Navegación y vida en el río",
+      "known_at": 12
+    },
+    {
+      "name": "Amazonian manatee",
+      "facet": "Navegación y vida en el río",
+      "known_at": 9
+    },
+    {
+      "name": "Kené designs",
+      "facet": "Arte, adornos y artesanía",
+      "known_at": 14
+    },
+    {
+      "name": "Lip plate",
+      "facet": "Arte, adornos y artesanía",
+      "known_at": 8
+    },
+    {
+      "name": "Bark cloth",
+      "facet": "Arte, adornos y artesanía",
+      "known_at": 12
+    },
+    {
+      "name": "Muiraquitã",
+      "facet": "Arte, adornos y artesanía",
+      "known_at": 15
+    },
+    {
+      "name": "Boto encantado",
+      "facet": "Mitos, leyendas y cosmovisión",
+      "known_at": 12
+    },
+    {
+      "name": "Ancestral anaconda canoe",
+      "facet": "Mitos, leyendas y cosmovisión",
+      "known_at": 14
+    },
+    {
+      "name": "Legend of Mani",
+      "facet": "Mitos, leyendas y cosmovisión",
+      "known_at": 14
+    },
+    {
+      "name": "Legend of the guaraná",
+      "facet": "Mitos, leyendas y cosmovisión",
+      "known_at": 14
+    },
+    {
+      "name": "Kuarup",
+      "facet": "Música, fiestas y rituales",
+      "known_at": 13
+    },
+    {
+      "name": "Bullet ant initiation",
+      "facet": "Música, fiestas y rituales",
+      "known_at": 9
+    },
+    {
+      "name": "Huka-huka",
+      "facet": "Música, fiestas y rituales",
+      "known_at": 14
+    },
+    {
+      "name": "Parintins Festival",
+      "facet": "Música, fiestas y rituales",
+      "known_at": 13
+    },
+    {
+      "name": "Fiesta de San Juan",
+      "facet": "Música, fiestas y rituales",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Tobacco",
+      "facet": "Chamanes y plantas medicinales",
+      "known_at": 6
+    },
+    {
+      "name": "Coca leaf",
+      "facet": "Chamanes y plantas medicinales",
+      "known_at": 10
+    },
+    {
+      "name": "Dragon's blood",
+      "facet": "Chamanes y plantas medicinales",
+      "known_at": 13
+    },
+    {
+      "name": "Kambo",
+      "facet": "Chamanes y plantas medicinales",
+      "known_at": 14
+    },
+    {
+      "name": "Toucan",
+      "facet": "Palabras indígenas en el español",
+      "known_at": 3
+    },
+    {
+      "name": "Piranha",
+      "facet": "Palabras indígenas en el español",
+      "known_at": 4
+    },
+    {
+      "name": "Iguazú",
+      "facet": "Palabras indígenas en el español",
+      "known_at": 9
+    },
+    {
+      "name": "Rubber boom",
+      "facet": "Historia: exploradores, caucho y misiones",
       "known_at": 11
+    },
+    {
+      "name": "River of Doubt",
+      "facet": "Historia: exploradores, caucho y misiones",
+      "known_at": 14
+    },
+    {
+      "name": "Xingu Indigenous Park",
+      "facet": "Resguardos, territorio y líderes actuales",
+      "known_at": 13
+    },
+    {
+      "name": "Yanomami Indigenous Territory",
+      "facet": "Resguardos, territorio y líderes actuales",
+      "known_at": 14
+    },
+    {
+      "name": "Sônia Guajajara",
+      "facet": "Resguardos, territorio y líderes actuales",
+      "known_at": 14
+    },
+    {
+      "name": "Txai Suruí",
+      "facet": "Resguardos, territorio y líderes actuales",
+      "known_at": 14
+    },
+    {
+      "name": "Nemonte Nenquimo",
+      "facet": "Resguardos, territorio y líderes actuales",
+      "known_at": 14
+    },
+    {
+      "name": "Illegal gold mining",
+      "facet": "Resguardos, territorio y líderes actuales",
+      "known_at": 11
+    },
+    {
+      "name": "International Day of the World's Indigenous Peoples",
+      "facet": "Resguardos, territorio y líderes actuales",
+      "known_at": 13
+    },
+    {
+      "name": "COP30 in Belém",
+      "facet": "Resguardos, territorio y líderes actuales",
+      "known_at": 12
+    },
+    {
+      "name": "Marajoara culture",
+      "facet": "Arqueología y culturas antiguas",
+      "known_at": 14
+    },
+    {
+      "name": "Acre geoglyphs",
+      "facet": "Arqueología y culturas antiguas",
+      "known_at": 15
+    },
+    {
+      "name": "Upano Valley cities",
+      "facet": "Arqueología y culturas antiguas",
+      "known_at": 14
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-15",
+      "added": 59,
+      "unused": 149
     }
   ]
 }

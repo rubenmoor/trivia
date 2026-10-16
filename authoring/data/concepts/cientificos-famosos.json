@@ -276,77 +276,92 @@
     {
       "name": "Manuel Elkin Patarroyo",
       "facet": "Científicos de Colombia y Latinoamérica",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Francisco José de Caldas",
       "facet": "Científicos de Colombia y Latinoamérica",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Diana Trujillo",
       "facet": "Científicos de Colombia y Latinoamérica",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Jorge Reynolds Pombo",
       "facet": "Científicos de Colombia y Latinoamérica",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rodolfo Llinás",
       "facet": "Científicos de Colombia y Latinoamérica",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Observatorio Astronómico de Bogotá",
       "facet": "Científicos de Colombia y Latinoamérica",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Salomón Hakim",
       "facet": "Científicos de Colombia y Latinoamérica",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ángela Restrepo",
       "facet": "Científicos de Colombia y Latinoamérica",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "René Favaloro",
       "facet": "Científicos de Colombia y Latinoamérica",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Raúl Cuero",
       "facet": "Científicos de Colombia y Latinoamérica",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Adriana Ocampo",
       "facet": "Científicos de Colombia y Latinoamérica",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bernardo Houssay",
       "facet": "Científicos de Colombia y Latinoamérica",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "César Milstein",
       "facet": "Científicos de Colombia y Latinoamérica",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Emilio Yunis",
       "facet": "Científicos de Colombia y Latinoamérica",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Vital Brazil",
       "facet": "Científicos de Colombia y Latinoamérica",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "HMS Beagle",
@@ -356,7 +371,8 @@
     {
       "name": "Agustín Codazzi",
       "facet": "Exploradores y científicos viajeros",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Perra Laika",
@@ -366,7 +382,8 @@
     {
       "name": "Cometa de Franklin",
       "facet": "Anécdotas y experimentos famosos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Perro de Pavlov",
@@ -516,7 +533,8 @@
     {
       "name": "Profesor Tornasol",
       "facet": "Científicos en el cine y la cultura",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rick Sánchez",
@@ -556,12 +574,14 @@
     {
       "name": "Egon Spengler",
       "facet": "Científicos en el cine y la cultura",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Bill Nye",
       "facet": "Científicos en el cine y la cultura",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     }
   ]
 }

@@ -456,7 +456,8 @@
     {
       "name": "Daleks",
       "facet": "Villanos de sagas galácticas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Barón Harkonnen",
@@ -796,17 +797,20 @@
     {
       "name": "Soraya Montenegro",
       "facet": "Villanos de series y telenovelas",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Catalina Creel",
       "facet": "Villanos de series y telenovelas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Marcela Valencia",
       "facet": "Villanos de series y telenovelas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Iago",

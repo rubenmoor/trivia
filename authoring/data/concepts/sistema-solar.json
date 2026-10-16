@@ -416,7 +416,8 @@
     {
       "name": "Marvin el marciano",
       "facet": "El sistema solar en películas y cultura",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Armageddon",
@@ -446,7 +447,8 @@
     {
       "name": "Aterrizaje en la Luna (Tintín)",
       "facet": "El sistema solar en películas y cultura",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fly Me to the Moon",

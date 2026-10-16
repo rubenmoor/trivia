@@ -96,12 +96,14 @@
     {
       "name": "30 minutos o gratis (Domino's)",
       "facet": "Eslóganes de comida rápida y snacks",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "¿Dónde está la carne? (Wendy's)",
       "facet": "Eslóganes de comida rápida y snacks",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "¡Son grrrandiosas! (Zucaritas)",
@@ -151,7 +153,8 @@
     {
       "name": "Reto Pepsi",
       "facet": "Eslóganes de bebidas y refrescos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "La elección de una nueva generación (Pepsi)",
@@ -171,7 +174,8 @@
     {
       "name": "¿Tienes leche? (Got Milk?)",
       "facet": "Eslóganes de bebidas y refrescos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "¿Lo tienes? (Gatorade)",
@@ -261,7 +265,8 @@
     {
       "name": "Sega does what Nintendon't",
       "facet": "Eslóganes de tecnología y videojuegos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Wii",
@@ -386,7 +391,8 @@
     {
       "name": "Cuatro de cada cinco dentistas (Trident)",
       "facet": "Eslóganes de dulces y golosinas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Bubbaloo",
@@ -401,7 +407,8 @@
     {
       "name": "Dispensador PEZ",
       "facet": "Eslóganes de dulces y golosinas",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Sonrisa Colgate",
@@ -436,12 +443,14 @@
     {
       "name": "Raid",
       "facet": "Eslóganes de productos del hogar y aseo",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Scotch-Brite",
       "facet": "Eslóganes de productos del hogar y aseo",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "No más lágrimas (Johnson's)",
@@ -466,12 +475,14 @@
     {
       "name": "Rexona no te abandona",
       "facet": "Eslóganes de productos del hogar y aseo",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fabuloso",
       "facet": "Eslóganes de productos del hogar y aseo",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Clorox",
@@ -491,7 +502,8 @@
     {
       "name": "Tigre Toño",
       "facet": "Mascotas y personajes publicitarios",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hombre Michelin",
@@ -501,12 +513,14 @@
     {
       "name": "Mr. Músculo",
       "facet": "Mascotas y personajes publicitarios",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Don Limpio",
       "facet": "Mascotas y personajes publicitarios",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Conejo de Nesquik",
@@ -526,12 +540,14 @@
     {
       "name": "Muñeco de Pillsbury",
       "facet": "Mascotas y personajes publicitarios",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Señor de Quaker",
       "facet": "Mascotas y personajes publicitarios",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Conejo de Duracell",
@@ -551,7 +567,8 @@
     {
       "name": "Melvin (Choco Krispis)",
       "facet": "Mascotas y personajes publicitarios",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tucán Sam",
@@ -561,52 +578,62 @@
     {
       "name": "Colombiana, la nuestra",
       "facet": "Eslóganes y jingles colombianos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Alpinito",
       "facet": "Eslóganes y jingles colombianos",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bon Yurt",
       "facet": "Eslóganes y jingles colombianos",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chocoramo",
       "facet": "Eslóganes y jingles colombianos",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Café Águila Roja",
       "facet": "Eslóganes y jingles colombianos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Papas Margarita",
       "facet": "Eslóganes y jingles colombianos",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Jugos Hit",
       "facet": "Eslóganes y jingles colombianos",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Manimoto",
       "facet": "Eslóganes y jingles colombianos",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Almacenes Éxito",
       "facet": "Eslóganes y jingles colombianos",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Colanta",
       "facet": "Eslóganes y jingles colombianos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pa-ra-pa-pa-pa de McDonald's",
@@ -641,7 +668,8 @@
     {
       "name": "Ya llegan las fiestas (Coca-Cola)",
       "facet": "Cuñas de radio y jingles famosos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La guerra de los mundos (radio, 1938)",
@@ -656,7 +684,8 @@
     {
       "name": "Jingle de Wheaties",
       "facet": "Cuñas de radio y jingles famosos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Sonido de arranque de Mac",
@@ -671,12 +700,14 @@
     {
       "name": "Música del carrito de helados",
       "facet": "Cuñas de radio y jingles famosos",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Cuña radial",
       "facet": "Cuñas de radio y jingles famosos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "David Ogilvy",
@@ -691,7 +722,8 @@
     {
       "name": "Mad Men",
       "facet": "Historia de la publicidad y sus pioneros",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Times Square",
@@ -701,7 +733,8 @@
     {
       "name": "Comerciales del Super Bowl",
       "facet": "Historia de la publicidad y sus pioneros",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Comercial de televisión",
@@ -726,7 +759,8 @@
     {
       "name": "Latas de sopa Campbell",
       "facet": "Historia de la publicidad y sus pioneros",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Hombre sándwich",
@@ -771,12 +805,14 @@
     {
       "name": "Dirigible de Goodyear",
       "facet": "Historia de la publicidad y sus pioneros",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Comercial de Bulova",
       "facet": "Historia de la publicidad y sus pioneros",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Jingle",

@@ -351,7 +351,8 @@
     {
       "name": "Juan de la Cierva",
       "facet": "Pioneros e historia de la aviación",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Amy Johnson",
@@ -501,87 +502,104 @@
     {
       "name": "Avianca",
       "facet": "Aviación en Colombia",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Aeropuerto El Dorado",
       "facet": "Aviación en Colombia",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Satena",
       "facet": "Aviación en Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fuerza Aérea Colombiana",
       "facet": "Aviación en Colombia",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Aeropuerto José María Córdova",
       "facet": "Aviación en Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Aeropuerto Rafael Núñez",
       "facet": "Aviación en Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Aerocivil",
       "facet": "Aviación en Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Aeropuerto Gustavo Rojas Pinilla",
       "facet": "Aviación en Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Wingo",
       "facet": "Aviación en Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Aeropuerto Ernesto Cortissoz",
       "facet": "Aviación en Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Aeropuerto Olaya Herrera",
       "facet": "Aviación en Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Museo Aeroespacial Colombiano",
       "facet": "Aviación en Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Camilo Daza",
       "facet": "Aviación en Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Aeropuerto Alfonso Bonilla Aragón",
       "facet": "Aviación en Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Aeropuerto Matecaña",
       "facet": "Aviación en Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Aeropuerto El Embrujo",
       "facet": "Aviación en Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "F-AIR Colombia",
       "facet": "Aviación en Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Avión caza",
@@ -646,7 +664,8 @@
     {
       "name": "Kfir",
       "facet": "Aviones militares y de rescate",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Patrulla acrobática",
@@ -691,7 +710,8 @@
     {
       "name": "¿Y dónde está el piloto?",
       "facet": "Aviones en películas y juegos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "El aviador",

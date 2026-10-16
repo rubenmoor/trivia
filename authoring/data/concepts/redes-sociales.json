@@ -61,7 +61,8 @@
     {
       "name": "Kwai",
       "facet": "Plataformas y aplicaciones",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "WeChat",
@@ -466,7 +467,8 @@
     {
       "name": "Tuenti",
       "facet": "Redes del pasado",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Second Life",
@@ -486,7 +488,8 @@
     {
       "name": "Metroflog",
       "facet": "Redes del pasado",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "ICQ",
@@ -542,7 +545,8 @@
     {
       "name": "HolaSoyGerman",
       "facet": "Creadores de contenido famosos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Kim Kardashian",
@@ -602,52 +606,62 @@
     {
       "name": "Westcol",
       "facet": "Redes sociales en Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Yeferson Cossio",
       "facet": "Redes sociales en Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Epa Colombia",
       "facet": "Redes sociales en Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La Liendra",
       "facet": "Redes sociales en Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Juanpis González",
       "facet": "Redes sociales en Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Luisa Fernanda W",
       "facet": "Redes sociales en Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Juan Pablo Jaramillo",
       "facet": "Redes sociales en Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La Segura",
       "facet": "Redes sociales en Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Platzi",
       "facet": "Redes sociales en Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La Pulla",
       "facet": "Redes sociales en Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     }
   ]
 }

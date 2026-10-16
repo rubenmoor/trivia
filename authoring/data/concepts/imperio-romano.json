@@ -522,12 +522,14 @@
     {
       "name": "Muralla de Adriano",
       "facet": "Monumentos y arquitectura",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Teatro romano de Mérida",
       "facet": "Monumentos y arquitectura",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Domus Aurea",
@@ -562,7 +564,8 @@
     {
       "name": "Acueducto de Segovia",
       "facet": "Ingeniería: acueductos y calzadas",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Puente del Gard",
@@ -617,7 +620,8 @@
     {
       "name": "Puente de Alcántara",
       "facet": "Ingeniería: acueductos y calzadas",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Vitruvio",
@@ -632,7 +636,8 @@
     {
       "name": "Torre de Hércules",
       "facet": "Ingeniería: acueductos y calzadas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Toga",
@@ -892,7 +897,8 @@
     {
       "name": "Roma no se hizo en un día",
       "facet": "Latín y herencia romana",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Alfabeto latino",
@@ -947,7 +953,8 @@
     {
       "name": "Tarragona",
       "facet": "Ciudades y provincias del imperio",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Alejandría",
@@ -972,7 +979,8 @@
     {
       "name": "Itálica",
       "facet": "Ciudades y provincias del imperio",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Dacia",
@@ -1017,7 +1025,8 @@
     {
       "name": "La vida de Brian",
       "facet": "Roma en cine, cómics y juegos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Civilization",
@@ -1027,12 +1036,14 @@
     {
       "name": "Yo, Claudio",
       "facet": "Roma en cine, cómics y juegos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Roma (serie)",
       "facet": "Roma en cine, cómics y juegos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Julio César (Shakespeare)",
@@ -1052,7 +1063,8 @@
     {
       "name": "Campamento Júpiter",
       "facet": "Roma en cine, cómics y juegos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Pompeya (película)",

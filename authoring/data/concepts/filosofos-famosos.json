@@ -216,7 +216,8 @@
     {
       "name": "Ramon Llull",
       "facet": "Pensadores de Roma y Edad Media",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hildegarda de Bingen",
@@ -286,7 +287,8 @@
     {
       "name": "Francisco Suárez",
       "facet": "Renacimiento y racionalismo",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tommaso Campanella",
@@ -461,12 +463,14 @@
     {
       "name": "José Ortega y Gasset",
       "facet": "Filósofos del siglo XX",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Miguel de Unamuno",
       "facet": "Filósofos del siglo XX",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Jacques Derrida",
@@ -476,7 +480,8 @@
     {
       "name": "María Zambrano",
       "facet": "Filósofos del siglo XX",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "John Rawls",
@@ -516,7 +521,8 @@
     {
       "name": "Quítate de mi sol",
       "facet": "Frases y citas célebres",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Proletarios de todos los países, uníos",
@@ -716,27 +722,32 @@
     {
       "name": "Estanislao Zuleta",
       "facet": "Pensadores latinoamericanos y colombianos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Nicolás Gómez Dávila",
       "facet": "Pensadores latinoamericanos y colombianos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fernando González",
       "facet": "Pensadores latinoamericanos y colombianos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "José Vasconcelos",
       "facet": "Pensadores latinoamericanos y colombianos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Enrique Dussel",
       "facet": "Pensadores latinoamericanos y colombianos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Paulo Freire",
@@ -746,32 +757,38 @@
     {
       "name": "Leopoldo Zea",
       "facet": "Pensadores latinoamericanos y colombianos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Andrés Bello",
       "facet": "Pensadores latinoamericanos y colombianos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "José Carlos Mariátegui",
       "facet": "Pensadores latinoamericanos y colombianos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rafael Gutiérrez Girardot",
       "facet": "Pensadores latinoamericanos y colombianos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Simón Rodríguez",
       "facet": "Pensadores latinoamericanos y colombianos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Camilo Torres Restrepo",
       "facet": "Pensadores latinoamericanos y colombianos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bartolomé de las Casas",
@@ -781,17 +798,20 @@
     {
       "name": "Danilo Cruz Vélez",
       "facet": "Pensadores latinoamericanos y colombianos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gustavo Gutiérrez",
       "facet": "Pensadores latinoamericanos y colombianos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mario Bunge",
       "facet": "Pensadores latinoamericanos y colombianos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El pensador de Rodin",
@@ -816,7 +836,8 @@
     {
       "name": "Merlí",
       "facet": "Filósofos en la cultura popular",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "The Good Place",
@@ -846,7 +867,8 @@
     {
       "name": "Sócrates (futbolista)",
       "facet": "Filósofos en la cultura popular",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     }
   ]
 }

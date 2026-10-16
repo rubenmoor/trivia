@@ -91,17 +91,20 @@
     {
       "name": "Boliviano",
       "facet": "Monedas de América",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Guaraní paraguayo",
       "facet": "Monedas de América",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Peso uruguayo",
       "facet": "Monedas de América",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Quetzal guatemalteco",
@@ -111,22 +114,26 @@
     {
       "name": "Colón costarricense",
       "facet": "Monedas de América",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Balboa panameño",
       "facet": "Monedas de América",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Córdoba nicaragüense",
       "facet": "Monedas de América",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Lempira hondureño",
       "facet": "Monedas de América",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Peso cubano",
@@ -136,7 +143,8 @@
     {
       "name": "Gourde haitiano",
       "facet": "Monedas de América",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Corona noruega",
@@ -411,7 +419,8 @@
     {
       "name": "COP",
       "facet": "Símbolos y códigos de monedas",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "USD",
@@ -441,22 +450,26 @@
     {
       "name": "Virginia Gutiérrez",
       "facet": "Personajes en los billetes",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Alfonso López Michelsen",
       "facet": "Personajes en los billetes",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Carlos Lleras Restrepo",
       "facet": "Personajes en los billetes",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Francisco de Paula Santander",
       "facet": "Personajes en los billetes",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Benito Juárez",
@@ -551,17 +564,20 @@
     {
       "name": "Sucre ecuatoriano",
       "facet": "Monedas que ya desaparecieron",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Austral argentino",
       "facet": "Monedas que ya desaparecieron",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Inti peruano",
       "facet": "Monedas que ya desaparecieron",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cruzeiro brasileño",
@@ -571,7 +587,8 @@
     {
       "name": "Peso oro colombiano",
       "facet": "Monedas que ya desaparecieron",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ecu",
@@ -606,27 +623,32 @@
     {
       "name": "Esterlina",
       "facet": "Origen de los nombres",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Witwatersrand",
       "facet": "Origen de los nombres",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Guinea (moneda)",
       "facet": "Origen de los nombres",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Cacique Lempira",
       "facet": "Origen de los nombres",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Francisco Hernández de Córdoba",
       "facet": "Origen de los nombres",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Antonio José de Sucre",
@@ -636,17 +658,20 @@
     {
       "name": "Palo (millón)",
       "facet": "Origen de los nombres",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Plata (dinero)",
       "facet": "Origen de los nombres",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Billete (palabra)",
       "facet": "Origen de los nombres",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hilo de seguridad",
@@ -711,7 +736,8 @@
     {
       "name": "Banco de la República",
       "facet": "Billetes, monedas y seguridad",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Monedas de Super Mario",
@@ -761,7 +787,8 @@
     {
       "name": "Chapas de Fallout",
       "facet": "Dinero de ficción y videojuegos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Gemas de Clash Royale",
@@ -776,12 +803,14 @@
     {
       "name": "Moneda número uno",
       "facet": "Dinero de ficción y videojuegos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Señor Cangrejo",
       "facet": "Dinero de ficción y videojuegos",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Tasa de cambio",

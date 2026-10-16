@@ -406,12 +406,14 @@
     {
       "name": "Quechua",
       "facet": "Idiomas y monedas",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Guaraní",
       "facet": "Idiomas y monedas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Águila calva",
@@ -581,7 +583,8 @@
     {
       "name": "Día de Acción de Gracias",
       "facet": "Costumbres, fiestas y tradiciones",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Holi",
@@ -621,7 +624,8 @@
     {
       "name": "Inti Raymi",
       "facet": "Costumbres, fiestas y tradiciones",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Encanto",
@@ -761,12 +765,14 @@
     {
       "name": "Nueva Granada",
       "facet": "Países que cambiaron de nombre",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gran Colombia",
       "facet": "Países que cambiaron de nombre",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Formosa",

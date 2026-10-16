@@ -61,17 +61,20 @@
     {
       "name": "Natilla",
       "facet": "Comidas y bebidas navideñas",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Buñuelo",
       "facet": "Comidas y bebidas navideñas",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hojuelas",
       "facet": "Comidas y bebidas navideñas",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tamal",
@@ -81,7 +84,8 @@
     {
       "name": "Lechona",
       "facet": "Comidas y bebidas navideñas",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pavo",
@@ -106,7 +110,8 @@
     {
       "name": "Sabajón",
       "facet": "Comidas y bebidas navideñas",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mazapán",
@@ -126,12 +131,14 @@
     {
       "name": "Hallaca",
       "facet": "Comidas y bebidas navideñas",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pan de jamón",
       "facet": "Comidas y bebidas navideñas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Polvorones",
@@ -151,7 +158,8 @@
     {
       "name": "Pudín de Navidad",
       "facet": "Comidas y bebidas navideñas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Stollen",
@@ -161,32 +169,38 @@
     {
       "name": "Tronco de Navidad",
       "facet": "Comidas y bebidas navideñas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Novena de Aguinaldos",
       "facet": "Novena y villancicos",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gozos",
       "facet": "Novena y villancicos",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Consideraciones de la novena",
       "facet": "Novena y villancicos",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fray Fernando de Jesús Larrea",
       "facet": "Novena y villancicos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Madre María Ignacia",
       "facet": "Novena y villancicos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Villancico",
@@ -201,7 +215,8 @@
     {
       "name": "Los peces en el río",
       "facet": "Novena y villancicos",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El tamborilero",
@@ -211,22 +226,26 @@
     {
       "name": "Mi burrito sabanero",
       "facet": "Novena y villancicos",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tutaina",
       "facet": "Novena y villancicos",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Antón Tiruliruliru",
       "facet": "Novena y villancicos",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Campana sobre campana",
       "facet": "Novena y villancicos",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Jingle Bells",
@@ -241,7 +260,8 @@
     {
       "name": "Hugo Blanco",
       "facet": "Novena y villancicos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Franz Gruber",
@@ -316,7 +336,8 @@
     {
       "name": "Olentzero",
       "facet": "Personajes de la Navidad",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ded Moroz",
@@ -331,7 +352,8 @@
     {
       "name": "Tió de Nadal",
       "facet": "Personajes de la Navidad",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Christkind",
@@ -341,7 +363,8 @@
     {
       "name": "Viejito Pascuero",
       "facet": "Personajes de la Navidad",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ángel de la Navidad",
@@ -496,7 +519,8 @@
     {
       "name": "Moño",
       "facet": "Adornos y decoración",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Nieve artificial",
@@ -516,7 +540,8 @@
     {
       "name": "Farolito",
       "facet": "Adornos y decoración",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Estrella del árbol",
@@ -551,7 +576,8 @@
     {
       "name": "Día de los Santos Inocentes",
       "facet": "Fechas y calendario navideño",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Nochevieja",
@@ -571,7 +597,8 @@
     {
       "name": "Día de la Candelaria",
       "facet": "Fechas y calendario navideño",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Misa de Gallo",
@@ -586,7 +613,8 @@
     {
       "name": "Boxing Day",
       "facet": "Fechas y calendario navideño",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Día de la Inmaculada Concepción",
@@ -621,7 +649,8 @@
     {
       "name": "Las Posadas",
       "facet": "Navidad en el mundo",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Uvas de la suerte",
@@ -631,7 +660,8 @@
     {
       "name": "Lotería de El Gordo",
       "facet": "Navidad en el mundo",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cabra de Gävle",
@@ -661,12 +691,14 @@
     {
       "name": "Parrandas puertorriqueñas",
       "facet": "Navidad en el mundo",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gaitas zulianas",
       "facet": "Navidad en el mundo",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pollo frito de Navidad en Japón",
@@ -676,107 +708,128 @@
     {
       "name": "Parol",
       "facet": "Navidad en el mundo",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Wigilia",
       "facet": "Navidad en el mundo",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Noche de Rábanos",
       "facet": "Navidad en el mundo",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Día de las Velitas",
       "facet": "Navidad en Colombia",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Alumbrados de Medellín",
       "facet": "Navidad en Colombia",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Muñeco de Año Viejo",
       "facet": "Navidad en Colombia",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pólvora",
       "facet": "Navidad en Colombia",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Juegos de aguinaldos",
       "facet": "Navidad en Colombia",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pajita en boca",
       "facet": "Navidad en Colombia",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tres pies",
       "facet": "Navidad en Colombia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Dar y no recibir",
       "facet": "Navidad en Colombia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sí y no",
       "facet": "Navidad en Colombia",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Estatua",
       "facet": "Navidad en Colombia",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Feria de Cali",
       "facet": "Navidad en Colombia",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Carnaval de Negros y Blancos",
       "facet": "Navidad en Colombia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Festival de Luces de Villa de Leyva",
       "facet": "Navidad en Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Festival de Velas y Faroles de Quimbaya",
       "facet": "Navidad en Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Prima de Navidad",
       "facet": "Navidad en Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Agüero de la maleta",
       "facet": "Navidad en Colombia",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ropa interior amarilla",
       "facet": "Navidad en Colombia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Lentejas de Año Nuevo",
       "facet": "Navidad en Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mi pobre angelito",
@@ -826,7 +879,8 @@
     {
       "name": "Klaus",
       "facet": "Navidad en películas y cuentos",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "El expreso polar",
@@ -851,12 +905,14 @@
     {
       "name": "Santa Cláusula",
       "facet": "Navidad en películas y cuentos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Arthur Christmas",
       "facet": "Navidad en películas y cuentos",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "La pequeña cerillera",
@@ -921,7 +977,8 @@
     {
       "name": "Henry Cole",
       "facet": "Origen e historia de costumbres",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Tregua de Navidad de 1914",
@@ -931,12 +988,14 @@
     {
       "name": "Christmas cracker",
       "facet": "Origen e historia de costumbres",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Edward Johnson",
       "facet": "Origen e historia de costumbres",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "San Nicolás de Bari",
@@ -1001,7 +1060,8 @@
     {
       "name": "Aguinaldo",
       "facet": "Palabras y expresiones navideñas",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Natividad",
@@ -1016,7 +1076,8 @@
     {
       "name": "Próspero año nuevo",
       "facet": "Palabras y expresiones navideñas",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Xmas",
@@ -1046,22 +1107,26 @@
     {
       "name": "Inocentada",
       "facet": "Palabras y expresiones navideñas",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cuesta de enero",
       "facet": "Palabras y expresiones navideñas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Parranda",
       "facet": "Palabras y expresiones navideñas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Felices Pascuas",
       "facet": "Palabras y expresiones navideñas",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Emmanuel",
@@ -1081,12 +1146,228 @@
     {
       "name": "Cotillón",
       "facet": "Palabras y expresiones navideñas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Brindis",
       "facet": "Palabras y expresiones navideñas",
       "known_at": 5
+    },
+    {
+      "name": "Eggnog",
+      "facet": "Comidas y bebidas navideñas",
+      "known_at": 7,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Mince pie",
+      "facet": "Comidas y bebidas navideñas",
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Mulled wine",
+      "facet": "Comidas y bebidas navideñas",
+      "known_at": 9
+    },
+    {
+      "name": "Fruitcake",
+      "facet": "Comidas y bebidas navideñas",
+      "known_at": 6,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Gingerbread house",
+      "facet": "Comidas y bebidas navideñas",
+      "known_at": 3
+    },
+    {
+      "name": "We Wish You a Merry Christmas",
+      "facet": "Novena y villancicos",
+      "known_at": 3
+    },
+    {
+      "name": "Deck the Halls",
+      "facet": "Novena y villancicos",
+      "known_at": 7
+    },
+    {
+      "name": "Last Christmas",
+      "facet": "Novena y villancicos",
+      "known_at": 7
+    },
+    {
+      "name": "Carol of the Bells",
+      "facet": "Novena y villancicos",
+      "known_at": 10
+    },
+    {
+      "name": "Handel's Messiah",
+      "facet": "Novena y villancicos",
+      "known_at": 13
+    },
+    {
+      "name": "Frosty the Snowman",
+      "facet": "Personajes de la Navidad",
+      "known_at": 4,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Yule Lads",
+      "facet": "Personajes de la Navidad",
+      "known_at": 13
+    },
+    {
+      "name": "Yule Cat",
+      "facet": "Personajes de la Navidad",
+      "known_at": 13
+    },
+    {
+      "name": "Snegurochka",
+      "facet": "Personajes de la Navidad",
+      "known_at": 12
+    },
+    {
+      "name": "Church of the Nativity",
+      "facet": "Pesebre y relato bíblico",
+      "known_at": 11
+    },
+    {
+      "name": "Gospel of Matthew",
+      "facet": "Pesebre y relato bíblico",
+      "known_at": 11
+    },
+    {
+      "name": "Holy Family",
+      "facet": "Pesebre y relato bíblico",
+      "known_at": 6
+    },
+    {
+      "name": "Tinsel",
+      "facet": "Adornos y decoración",
+      "known_at": 4
+    },
+    {
+      "name": "Christmas wreath",
+      "facet": "Adornos y decoración",
+      "known_at": 3
+    },
+    {
+      "name": "Snow globe",
+      "facet": "Adornos y decoración",
+      "known_at": 2
+    },
+    {
+      "name": "Christmas pyramid",
+      "facet": "Adornos y decoración",
+      "known_at": 13
+    },
+    {
+      "name": "North Pole",
+      "facet": "Navidad en el mundo",
+      "known_at": 1
+    },
+    {
+      "name": "Christmas Island",
+      "facet": "Navidad en el mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Jólabókaflóð",
+      "facet": "Navidad en el mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Donald Duck on Swedish Christmas Eve",
+      "facet": "Navidad en el mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Caganer",
+      "facet": "Navidad en el mundo",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Japanese Christmas cake",
+      "facet": "Navidad en el mundo",
+      "known_at": 12
+    },
+    {
+      "name": "The Nutcracker",
+      "facet": "Navidad en películas y cuentos",
+      "known_at": 5
+    },
+    {
+      "name": "The Snowman",
+      "facet": "Navidad en películas y cuentos",
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "A Charlie Brown Christmas",
+      "facet": "Navidad en películas y cuentos",
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "The Gift of the Magi",
+      "facet": "Navidad en películas y cuentos",
+      "known_at": 13
+    },
+    {
+      "name": "Tiny Tim",
+      "facet": "Navidad en películas y cuentos",
+      "known_at": 10
+    },
+    {
+      "name": "Oliver Cromwell's Christmas ban",
+      "facet": "Origen e historia de costumbres",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Mistletoe",
+      "facet": "Plantas y animales navideños",
+      "known_at": 5
+    },
+    {
+      "name": "Ivy",
+      "facet": "Plantas y animales navideños",
+      "known_at": 7
+    },
+    {
+      "name": "Christmas cactus",
+      "facet": "Plantas y animales navideños",
+      "known_at": 10
+    },
+    {
+      "name": "Roasted chestnuts",
+      "facet": "Plantas y animales navideños",
+      "known_at": 6
+    },
+    {
+      "name": "Bah, humbug!",
+      "facet": "Palabras y expresiones navideñas",
+      "known_at": 11
+    },
+    {
+      "name": "Naughty or nice list",
+      "facet": "Palabras y expresiones navideñas",
+      "known_at": 4
+    },
+    {
+      "name": "Season's greetings",
+      "facet": "Palabras y expresiones navideñas",
+      "known_at": 8
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-15",
+      "added": 40,
+      "unused": 167
     }
   ]
 }

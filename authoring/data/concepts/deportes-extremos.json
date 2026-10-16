@@ -461,7 +461,8 @@
     {
       "name": "NASCAR",
       "facet": "Motor y velocidad extrema",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Freestyle motocross",
@@ -701,7 +702,8 @@
     {
       "name": "Rayssa Leal",
       "facet": "Atletas y hazañas famosas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sky Brown",
@@ -791,62 +793,74 @@
     {
       "name": "Mariana Pajón",
       "facet": "Deportes extremos en Colombia",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Buceo en San Andrés",
       "facet": "Deportes extremos en Colombia",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "San Gil",
       "facet": "Deportes extremos en Colombia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Juan Pablo Montoya",
       "facet": "Deportes extremos en Colombia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sierra Nevada del Cocuy",
       "facet": "Deportes extremos en Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Lago Calima",
       "facet": "Deportes extremos en Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Río Suárez",
       "facet": "Deportes extremos en Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mesa de los Santos",
       "facet": "Deportes extremos en Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Suesca",
       "facet": "Deportes extremos en Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Carlos Ramírez",
       "facet": "Deportes extremos en Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Roldanillo",
       "facet": "Deportes extremos en Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Río Fonce",
       "facet": "Deportes extremos en Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Juegos Olímpicos de Invierno",
@@ -896,7 +910,8 @@
     {
       "name": "Iditarod",
       "facet": "Competencias y eventos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Maratón de las Arenas",

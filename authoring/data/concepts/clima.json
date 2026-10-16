@@ -326,7 +326,8 @@
     {
       "name": "Huracán Iota",
       "facet": "Tormentas y fenómenos extremos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Escala Saffir-Simpson",
@@ -366,7 +367,8 @@
     {
       "name": "Vientos de agosto",
       "facet": "Vientos y presión atmosférica",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Presión atmosférica",
@@ -506,7 +508,8 @@
     {
       "name": "IDEAM",
       "facet": "Instrumentos y pronóstico del tiempo",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Frente frío",
@@ -556,7 +559,8 @@
     {
       "name": "Desierto de la Tatacoa",
       "facet": "Zonas climáticas y biomas",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Zona intertropical",
@@ -596,22 +600,26 @@
     {
       "name": "Barranquilla",
       "facet": "Pisos térmicos de Colombia",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Frailejón",
       "facet": "Pisos térmicos de Colombia",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Piso cálido",
       "facet": "Pisos térmicos de Colombia",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Piso frío",
       "facet": "Pisos térmicos de Colombia",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Páramo",
@@ -621,22 +629,26 @@
     {
       "name": "Medellín, ciudad de la eterna primavera",
       "facet": "Pisos térmicos de Colombia",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Zona cafetera",
       "facet": "Pisos térmicos de Colombia",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sierra Nevada de Santa Marta",
       "facet": "Pisos térmicos de Colombia",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Piso templado",
       "facet": "Pisos térmicos de Colombia",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Nieves perpetuas",
@@ -646,7 +658,8 @@
     {
       "name": "Piso térmico",
       "facet": "Pisos térmicos de Colombia",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Altitud",
@@ -656,22 +669,26 @@
     {
       "name": "Nevado del Ruiz",
       "facet": "Pisos térmicos de Colombia",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tunja",
       "facet": "Pisos térmicos de Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pico Cristóbal Colón",
       "facet": "Pisos térmicos de Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Glaciares de Colombia",
       "facet": "Pisos térmicos de Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gradiente térmico",
@@ -716,12 +733,14 @@
     {
       "name": "Veranillo de San Juan",
       "facet": "Estaciones y temporadas de lluvia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Régimen bimodal de lluvias",
       "facet": "Estaciones y temporadas de lluvia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Panel solar",
@@ -921,12 +940,14 @@
     {
       "name": "En abril, aguas mil",
       "facet": "Dichos y palabras del clima",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Una golondrina no hace verano",
       "facet": "Dichos y palabras del clima",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Contra viento y marea",
@@ -956,7 +977,8 @@
     {
       "name": "Sol de los venados",
       "facet": "Dichos y palabras del clima",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Capear el temporal",
@@ -971,7 +993,8 @@
     {
       "name": "Cielo empedrado, suelo mojado",
       "facet": "Dichos y palabras del clima",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Arca de Noé",
@@ -986,7 +1009,8 @@
     {
       "name": "Lluvia de hamburguesas",
       "facet": "Clima en historia y cultura",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Thor",
@@ -1016,7 +1040,8 @@
     {
       "name": "Tláloc",
       "facet": "Clima en historia y cultura",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Eolo",
@@ -1026,7 +1051,8 @@
     {
       "name": "Bochica",
       "facet": "Clima en historia y cultura",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Invierno ruso y Napoleón",
@@ -1056,7 +1082,8 @@
     {
       "name": "Chaac",
       "facet": "Clima en historia y cultura",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Año sin verano",

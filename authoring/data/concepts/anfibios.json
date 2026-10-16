@@ -101,7 +101,8 @@
     {
       "name": "Rana cornuda argentina",
       "facet": "Ranas y sapos del mundo",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rana leopardo",
@@ -111,7 +112,8 @@
     {
       "name": "Coquí",
       "facet": "Ranas y sapos del mundo",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rana de Budgett",
@@ -171,7 +173,8 @@
     {
       "name": "Pueblo emberá",
       "facet": "Ranas venenosas y colores de advertencia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Epibatidina",
@@ -586,7 +589,8 @@
     {
       "name": "Sapo dorado",
       "facet": "Hábitats, peligros y conservación",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pasos de fauna",
@@ -611,57 +615,68 @@
     {
       "name": "Rana kokoi",
       "facet": "Anfibios de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rana sabanera",
       "facet": "Anfibios de Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rana de lluvia",
       "facet": "Anfibios de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rana venenosa de Lehmann",
       "facet": "Anfibios de Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rana arlequín de Santa Marta",
       "facet": "Anfibios de Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Colombia, país de anfibios",
       "facet": "Anfibios de Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rana de oro tairona",
       "facet": "Anfibios de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Oophaga histrionica",
       "facet": "Anfibios de Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Andinobates",
       "facet": "Anfibios de Colombia",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rana toro en Colombia",
       "facet": "Anfibios de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La rana René",
       "facet": "Anfibios en cuentos, cine y juegos",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Frogger",
@@ -696,7 +711,8 @@
     {
       "name": "Trevor",
       "facet": "Anfibios en cuentos, cine y juegos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Ranas de chocolate",
@@ -711,12 +727,14 @@
     {
       "name": "Sapo y Sepo",
       "facet": "Anfibios en cuentos, cine y juegos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Rey Harold",
       "facet": "Anfibios en cuentos, cine y juegos",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Tsuyu Asui",
@@ -751,32 +769,38 @@
     {
       "name": "Echar sapos y culebras",
       "facet": "Palabras y dichos de sapos y ranas",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sapear",
       "facet": "Palabras y dichos de sapos y ranas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tragarse el sapo",
       "facet": "Palabras y dichos de sapos y ranas",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cuando la rana eche pelos",
       "facet": "Palabras y dichos de sapos y ranas",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Salir rana",
       "facet": "Palabras y dichos de sapos y ranas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sapo de otro pozo",
       "facet": "Palabras y dichos de sapos y ranas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Besar sapos",
@@ -831,7 +855,8 @@
     {
       "name": "Sapo gigante colombiano",
       "facet": "Récords y gigantes anfibios",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Prionosuchus",

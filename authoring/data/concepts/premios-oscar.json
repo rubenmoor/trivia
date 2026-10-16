@@ -481,7 +481,8 @@
     {
       "name": "Jorge Drexler",
       "facet": "Latinoamérica y Colombia en los Óscar",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Emmanuel Lubezki",
@@ -496,27 +497,32 @@
     {
       "name": "La historia oficial",
       "facet": "Latinoamérica y Colombia en los Óscar",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Una mujer fantástica",
       "facet": "Latinoamérica y Colombia en los Óscar",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Historia de un oso",
       "facet": "Latinoamérica y Colombia en los Óscar",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Emilio Fernández",
       "facet": "Latinoamérica y Colombia en los Óscar",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Catalina Sandino Moreno",
       "facet": "Latinoamérica y Colombia en los Óscar",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Aún estoy aquí",
@@ -591,7 +597,8 @@
     {
       "name": "Volver a empezar",
       "facet": "Cine internacional premiado",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Academia de Artes y Ciencias Cinematográficas",

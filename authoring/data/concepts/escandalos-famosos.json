@@ -66,7 +66,8 @@
     {
       "name": "Garganta Profunda",
       "facet": "Escándalos políticos y de gobierno",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Impeachment",
@@ -111,7 +112,8 @@
     {
       "name": "Lava Jato",
       "facet": "Escándalos políticos y de gobierno",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Partygate",
@@ -121,22 +123,26 @@
     {
       "name": "Tangentopoli",
       "facet": "Escándalos políticos y de gobierno",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Vladivideos",
       "facet": "Escándalos políticos y de gobierno",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Teapot Dome",
       "facet": "Escándalos políticos y de gobierno",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Mensalão",
       "facet": "Escándalos políticos y de gobierno",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Escándalo de los gastos parlamentarios británicos",
@@ -206,7 +212,8 @@
     {
       "name": "Allen Stanford",
       "facet": "Fraudes y burbujas financieras",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Dopaje",
@@ -231,22 +238,26 @@
     {
       "name": "Rosie Ruiz",
       "facet": "Trampas en el deporte",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Calciopoli",
       "facet": "Trampas en el deporte",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Black Sox",
       "facet": "Trampas en el deporte",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Deflategate",
       "facet": "Trampas en el deporte",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Mano de Thierry Henry",
@@ -256,7 +267,8 @@
     {
       "name": "Escándalo de la lija",
       "facet": "Trampas en el deporte",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Tonya Harding",
@@ -281,17 +293,20 @@
     {
       "name": "Crashgate",
       "facet": "Trampas en el deporte",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Bloodgate",
       "facet": "Trampas en el deporte",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Pacto de Gijón",
       "facet": "Trampas en el deporte",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Baloncesto paralímpico de Sídney 2000",
@@ -301,7 +316,8 @@
     {
       "name": "Hombre de Nebraska",
       "facet": "Fraudes científicos y falsos hallazgos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Archaeoraptor",
@@ -391,7 +407,8 @@
     {
       "name": "Galería Knoedler",
       "facet": "Falsificaciones y robos de arte",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "La guerra de los mundos",
@@ -466,12 +483,14 @@
     {
       "name": "Princesa Caraboo",
       "facet": "Impostores y falsas identidades",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Demandante de Tichborne",
       "facet": "Impostores y falsas identidades",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "George Psalmanazar",
@@ -497,12 +516,14 @@
     {
       "name": "Clark Rockefeller",
       "facet": "Impostores y falsas identidades",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Tania Head",
       "facet": "Impostores y falsas identidades",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Collar de la reina",
@@ -522,12 +543,14 @@
     {
       "name": "Cacería de Botsuana",
       "facet": "Escándalos de reyes y cortes",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Caso Nóos",
       "facet": "Escándalos de reyes y cortes",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Incitatus",
@@ -542,7 +565,8 @@
     {
       "name": "Manuel Godoy",
       "facet": "Escándalos de reyes y cortes",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Asunto de los venenos",
@@ -607,12 +631,14 @@
     {
       "name": "Ashlee Simpson",
       "facet": "Escándalos del espectáculo y la música",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Payola",
       "facet": "Escándalos del espectáculo y la música",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Error del Óscar de La La Land",
@@ -647,7 +673,8 @@
     {
       "name": "Concursos amañados de Twenty-One",
       "facet": "Escándalos del espectáculo y la música",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Fyre Festival",
@@ -662,7 +689,8 @@
     {
       "name": "Music Sessions #53",
       "facet": "Escándalos del espectáculo y la música",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Caderas de Elvis",
@@ -712,7 +740,8 @@
     {
       "name": "Cártel Phoebus",
       "facet": "Escándalos de empresas y productos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Batterygate",
@@ -732,12 +761,14 @@
     {
       "name": "Escándalo de la carne de caballo",
       "facet": "Escándalos de empresas y productos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Pepsi Points",
       "facet": "Escándalos de empresas y productos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Error del Pentium",
@@ -747,72 +778,700 @@
     {
       "name": "Proceso 8000",
       "facet": "Escándalos de la historia colombiana",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "A mis espaldas",
       "facet": "Escándalos de la historia colombiana",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Odebrecht",
       "facet": "Escándalos de la historia colombiana",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "DMG",
       "facet": "Escándalos de la historia colombiana",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "David Murcia Guzmán",
       "facet": "Escándalos de la historia colombiana",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Agro Ingreso Seguro",
       "facet": "Escándalos de la historia colombiana",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Carrusel de la contratación",
       "facet": "Escándalos de la historia colombiana",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Reficar",
       "facet": "Escándalos de la historia colombiana",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Yidispolítica",
       "facet": "Escándalos de la historia colombiana",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chuzadas del DAS",
       "facet": "Escándalos de la historia colombiana",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Elecciones de 1970",
       "facet": "Escándalos de la historia colombiana",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Centros Poblados",
       "facet": "Escándalos de la historia colombiana",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mermelada",
       "facet": "Escándalos de la historia colombiana",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Robo del Banco de la República de Valledupar",
       "facet": "Escándalos de la historia colombiana",
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Profumo affair",
+      "facet": "Escándalos políticos y de gobierno",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Clinton–Lewinsky scandal",
+      "facet": "Escándalos políticos y de gobierno",
+      "known_at": 12
+    },
+    {
+      "name": "Lockheed bribery scandals",
+      "facet": "Escándalos políticos y de gobierno",
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "1MDB scandal",
+      "facet": "Escándalos políticos y de gobierno",
+      "known_at": 14
+    },
+    {
+      "name": "Imelda Marcos's shoes",
+      "facet": "Escándalos políticos y de gobierno",
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Boss Tweed",
+      "facet": "Escándalos políticos y de gobierno",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "2000 Florida recount",
+      "facet": "Escándalos políticos y de gobierno",
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Gerrymandering",
+      "facet": "Escándalos políticos y de gobierno",
+      "known_at": 12
+    },
+    {
+      "name": "Sinking of the Rainbow Warrior",
+      "facet": "Escándalos políticos y de gobierno",
+      "known_at": 13
+    },
+    {
+      "name": "Ems Dispatch",
+      "facet": "Escándalos políticos y de gobierno",
+      "known_at": 14
+    },
+    {
+      "name": "Fernando Collor de Mello",
+      "facet": "Escándalos políticos y de gobierno",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "State capture in South Africa",
+      "facet": "Escándalos políticos y de gobierno",
+      "known_at": 14
+    },
+    {
+      "name": "Saturday Night Massacre",
+      "facet": "Escándalos políticos y de gobierno",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Rotten boroughs",
+      "facet": "Escándalos políticos y de gobierno",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Ballot stuffing",
+      "facet": "Escándalos políticos y de gobierno",
+      "known_at": 11
+    },
+    {
+      "name": "Ponzi scheme",
+      "facet": "Fraudes y burbujas financieras",
+      "known_at": 11
+    },
+    {
+      "name": "Pyramid scheme",
+      "facet": "Fraudes y burbujas financieras",
+      "known_at": 9
+    },
+    {
+      "name": "Dot-com bubble",
+      "facet": "Fraudes y burbujas financieras",
+      "known_at": 11
+    },
+    {
+      "name": "Black Monday (1987)",
+      "facet": "Fraudes y burbujas financieras",
+      "known_at": 13
+    },
+    {
+      "name": "WorldCom",
+      "facet": "Fraudes y burbujas financieras",
+      "known_at": 14
+    },
+    {
+      "name": "Arthur Andersen",
+      "facet": "Fraudes y burbujas financieras",
+      "known_at": 14
+    },
+    {
+      "name": "Bre-X",
+      "facet": "Fraudes y burbujas financieras",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Libor scandal",
+      "facet": "Fraudes y burbujas financieras",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Poyais",
+      "facet": "Fraudes y burbujas financieras",
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Railway Mania",
+      "facet": "Fraudes y burbujas financieras",
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Mt. Gox",
+      "facet": "Fraudes y burbujas financieras",
+      "known_at": 14
+    },
+    {
+      "name": "Insider trading",
+      "facet": "Fraudes y burbujas financieras",
+      "known_at": 12
+    },
+    {
+      "name": "GameStop short squeeze",
+      "facet": "Fraudes y burbujas financieras",
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Hand of God",
+      "facet": "Trampas en el deporte",
+      "known_at": 5
+    },
+    {
+      "name": "Fred Lorz",
+      "facet": "Trampas en el deporte",
+      "known_at": 12
+    },
+    {
+      "name": "Hansie Cronje",
+      "facet": "Trampas en el deporte",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Festina affair",
+      "facet": "Trampas en el deporte",
+      "known_at": 13
+    },
+    {
+      "name": "Operación Puerto",
+      "facet": "Trampas en el deporte",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Salt Lake City Olympic bribery scandal",
+      "facet": "Trampas en el deporte",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "2002 Olympic figure skating scandal",
+      "facet": "Trampas en el deporte",
+      "known_at": 13
+    },
+    {
+      "name": "Luis Suárez's handball against Ghana",
+      "facet": "Trampas en el deporte",
+      "known_at": 12
+    },
+    {
+      "name": "Pete Rose",
+      "facet": "Trampas en el deporte",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "BALCO",
+      "facet": "Trampas en el deporte",
+      "known_at": 14
+    },
+    {
+      "name": "Houston Astros sign-stealing scandal",
+      "facet": "Trampas en el deporte",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Meldonium",
+      "facet": "Trampas en el deporte",
+      "known_at": 12
+    },
+    {
+      "name": "East German doping program",
+      "facet": "Trampas en el deporte",
+      "known_at": 13
+    },
+    {
+      "name": "Underarm bowling incident",
+      "facet": "Trampas en el deporte",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Boris Onishchenko",
+      "facet": "Trampas en el deporte",
       "known_at": 15
+    },
+    {
+      "name": "Spygate (Formula One)",
+      "facet": "Trampas en el deporte",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Piltdown Man",
+      "facet": "Fraudes científicos y falsos hallazgos",
+      "known_at": 12
+    },
+    {
+      "name": "Cardiff Giant",
+      "facet": "Fraudes científicos y falsos hallazgos",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Cottingley Fairies",
+      "facet": "Fraudes científicos y falsos hallazgos",
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Surgeon's Photograph",
+      "facet": "Fraudes científicos y falsos hallazgos",
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Mechanical Turk",
+      "facet": "Fraudes científicos y falsos hallazgos",
+      "known_at": 11
+    },
+    {
+      "name": "Beringer's Lying Stones",
+      "facet": "Fraudes científicos y falsos hallazgos",
+      "known_at": 15
+    },
+    {
+      "name": "Sokal affair",
+      "facet": "Fraudes científicos y falsos hallazgos",
+      "known_at": 14
+    },
+    {
+      "name": "Shroud of Turin",
+      "facet": "Fraudes científicos y falsos hallazgos",
+      "known_at": 11
+    },
+    {
+      "name": "Face on Mars",
+      "facet": "Fraudes científicos y falsos hallazgos",
+      "known_at": 11
+    },
+    {
+      "name": "Patterson–Gimlin film",
+      "facet": "Fraudes científicos y falsos hallazgos",
+      "known_at": 10
+    },
+    {
+      "name": "Theft of the Mona Lisa",
+      "facet": "Falsificaciones y robos de arte",
+      "known_at": 9
+    },
+    {
+      "name": "Isabella Stewart Gardner Museum theft",
+      "facet": "Falsificaciones y robos de arte",
+      "known_at": 13
+    },
+    {
+      "name": "Theft of The Scream",
+      "facet": "Falsificaciones y robos de arte",
+      "known_at": 11
+    },
+    {
+      "name": "Amber Room",
+      "facet": "Falsificaciones y robos de arte",
+      "known_at": 12
+    },
+    {
+      "name": "Elgin Marbles",
+      "facet": "Falsificaciones y robos de arte",
+      "known_at": 11
+    },
+    {
+      "name": "Dresden Green Vault heist",
+      "facet": "Falsificaciones y robos de arte",
+      "known_at": 13
+    },
+    {
+      "name": "Donation of Constantine",
+      "facet": "Falsificaciones y robos de arte",
+      "known_at": 14
+    },
+    {
+      "name": "Vinland Map",
+      "facet": "Falsificaciones y robos de arte",
+      "known_at": 14
+    },
+    {
+      "name": "Hitler Diaries",
+      "facet": "Engaños y bromas mediáticas",
+      "known_at": 12
+    },
+    {
+      "name": "The Blair Witch Project",
+      "facet": "Engaños y bromas mediáticas",
+      "known_at": 12
+    },
+    {
+      "name": "Rickrolling",
+      "facet": "Engaños y bromas mediáticas",
+      "known_at": 9
+    },
+    {
+      "name": "Left-handed Whopper",
+      "facet": "Engaños y bromas mediáticas",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Jackalope",
+      "facet": "Engaños y bromas mediáticas",
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Dihydrogen monoxide hoax",
+      "facet": "Engaños y bromas mediáticas",
+      "known_at": 13
+    },
+    {
+      "name": "Stephen Glass",
+      "facet": "Engaños y bromas mediáticas",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Moon landing conspiracy theory",
+      "facet": "Engaños y bromas mediáticas",
+      "known_at": 9
+    },
+    {
+      "name": "Alien autopsy film",
+      "facet": "Engaños y bromas mediáticas",
+      "known_at": 12
+    },
+    {
+      "name": "Man in the Iron Mask",
+      "facet": "Impostores y falsas identidades",
+      "known_at": 10
+    },
+    {
+      "name": "Lambert Simnel",
+      "facet": "Impostores y falsas identidades",
+      "known_at": 15
+    },
+    {
+      "name": "Pope Joan",
+      "facet": "Impostores y falsas identidades",
+      "known_at": 13
+    },
+    {
+      "name": "Captain of Köpenick",
+      "facet": "Impostores y falsas identidades",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Henry VIII's break with Rome",
+      "facet": "Escándalos de reyes y cortes",
+      "known_at": 9
+    },
+    {
+      "name": "Anne Boleyn",
+      "facet": "Escándalos de reyes y cortes",
+      "known_at": 10
+    },
+    {
+      "name": "“Let them eat cake”",
+      "facet": "Escándalos de reyes y cortes",
+      "known_at": 7
+    },
+    {
+      "name": "Diana's Panorama interview",
+      "facet": "Escándalos de reyes y cortes",
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Ludwig II of Bavaria",
+      "facet": "Escándalos de reyes y cortes",
+      "known_at": 12
+    },
+    {
+      "name": "Borgia family",
+      "facet": "Escándalos de reyes y cortes",
+      "known_at": 12
+    },
+    {
+      "name": "Madame de Pompadour",
+      "facet": "Escándalos de reyes y cortes",
+      "known_at": 13
+    },
+    {
+      "name": "Nero and the Great Fire of Rome",
+      "facet": "Escándalos de reyes y cortes",
+      "known_at": 9
+    },
+    {
+      "name": "Princes in the Tower",
+      "facet": "Escándalos de reyes y cortes",
+      "known_at": 11
+    },
+    {
+      "name": "Zimmermann Telegram",
+      "facet": "Espionaje y juicios célebres",
+      "known_at": 12
+    },
+    {
+      "name": "Cambridge Five",
+      "facet": "Espionaje y juicios célebres",
+      "known_at": 13
+    },
+    {
+      "name": "Julius and Ethel Rosenberg",
+      "facet": "Espionaje y juicios célebres",
+      "known_at": 13
+    },
+    {
+      "name": "Nuremberg trials",
+      "facet": "Espionaje y juicios célebres",
+      "known_at": 10
+    },
+    {
+      "name": "Eichmann trial",
+      "facet": "Espionaje y juicios célebres",
+      "known_at": 13
+    },
+    {
+      "name": "Trial of Joan of Arc",
+      "facet": "Espionaje y juicios célebres",
+      "known_at": 9
+    },
+    {
+      "name": "Rivonia Trial",
+      "facet": "Espionaje y juicios célebres",
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Trial of Oscar Wilde",
+      "facet": "Espionaje y juicios célebres",
+      "known_at": 13
+    },
+    {
+      "name": "Anna Chapman",
+      "facet": "Espionaje y juicios célebres",
+      "known_at": 13
+    },
+    {
+      "name": "Operation Mincemeat",
+      "facet": "Espionaje y juicios célebres",
+      "known_at": 13
+    },
+    {
+      "name": "McCarthyism",
+      "facet": "Espionaje y juicios célebres",
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "The Thing (Great Seal bug)",
+      "facet": "Espionaje y juicios célebres",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Pegasus spyware",
+      "facet": "Espionaje y juicios célebres",
+      "known_at": 13
+    },
+    {
+      "name": "Vanilla Ice and “Under Pressure”",
+      "facet": "Escándalos del espectáculo y la música",
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "“Stairway to Heaven” lawsuit",
+      "facet": "Escándalos del espectáculo y la música",
+      "known_at": 14
+    },
+    {
+      "name": "Tom Cruise's couch jump",
+      "facet": "Escándalos del espectáculo y la música",
+      "known_at": 12
+    },
+    {
+      "name": "#OscarsSoWhite",
+      "facet": "Escándalos del espectáculo y la música",
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Coughing Major",
+      "facet": "Escándalos del espectáculo y la música",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Eras Tour ticket fiasco",
+      "facet": "Escándalos del espectáculo y la música",
+      "known_at": 11
+    },
+    {
+      "name": "Boeing 737 MAX",
+      "facet": "Escándalos de empresas y productos",
+      "known_at": 12
+    },
+    {
+      "name": "Takata airbags",
+      "facet": "Escándalos de empresas y productos",
+      "known_at": 14
+    },
+    {
+      "name": "Thalidomide",
+      "facet": "Escándalos de empresas y productos",
+      "known_at": 13
+    },
+    {
+      "name": "2008 Chinese milk scandal",
+      "facet": "Escándalos de empresas y productos",
+      "known_at": 13
+    },
+    {
+      "name": "Planned obsolescence",
+      "facet": "Escándalos de empresas y productos",
+      "known_at": 12
+    },
+    {
+      "name": "McDonald's hot coffee lawsuit",
+      "facet": "Escándalos de empresas y productos",
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Red Ring of Death",
+      "facet": "Escándalos de empresas y productos",
+      "known_at": 11
+    },
+    {
+      "name": "Cyberpunk 2077 launch",
+      "facet": "Escándalos de empresas y productos",
+      "known_at": 11
+    },
+    {
+      "name": "Loot boxes",
+      "facet": "Escándalos de empresas y productos",
+      "known_at": 10
+    },
+    {
+      "name": "McDonald's Monopoly fraud",
+      "facet": "Escándalos de empresas y productos",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Hoover free flights promotion",
+      "facet": "Escándalos de empresas y productos",
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-15",
+      "added": 114,
+      "unused": 205
     }
   ]
 }

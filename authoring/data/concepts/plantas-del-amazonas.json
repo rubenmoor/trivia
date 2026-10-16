@@ -12,7 +12,9 @@
     "Capas y ecología del bosque",
     "Plantas amazónicas en la cocina",
     "Exploradores y botánicos del Amazonas",
-    "Nombres indígenas de plantas"
+    "Nombres indígenas de plantas",
+    "Pueblos indígenas y sus plantas",
+    "Deforestación y conservación"
   ],
   "axis_fit": {
     "move": {
@@ -66,7 +68,8 @@
     {
       "name": "Shihuahuaco",
       "facet": "Árboles gigantes de la selva",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cedro amazónico",
@@ -76,17 +79,20 @@
     {
       "name": "Lupuna",
       "facet": "Árboles gigantes de la selva",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Capirona",
       "facet": "Árboles gigantes de la selva",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tornillo",
       "facet": "Árboles gigantes de la selva",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Árbol bala de cañón",
@@ -96,12 +102,14 @@
     {
       "name": "Huayruro",
       "facet": "Árboles gigantes de la selva",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cumala",
       "facet": "Árboles gigantes de la selva",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Itaúba",
@@ -111,12 +119,14 @@
     {
       "name": "Achapo",
       "facet": "Árboles gigantes de la selva",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Quinilla",
       "facet": "Árboles gigantes de la selva",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pashaco",
@@ -132,7 +142,8 @@
     {
       "name": "Copoazú",
       "facet": "Frutas amazónicas comestibles",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Camu camu",
@@ -142,7 +153,8 @@
     {
       "name": "Arazá",
       "facet": "Frutas amazónicas comestibles",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Guaraná",
@@ -162,7 +174,8 @@
     {
       "name": "Cocona",
       "facet": "Frutas amazónicas comestibles",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Umarí",
@@ -172,7 +185,8 @@
     {
       "name": "Uva caimarona",
       "facet": "Frutas amazónicas comestibles",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bacurí",
@@ -187,12 +201,14 @@
     {
       "name": "Zapote amazónico",
       "facet": "Frutas amazónicas comestibles",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Guama",
       "facet": "Frutas amazónicas comestibles",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Marañón",
@@ -232,7 +248,8 @@
     {
       "name": "Gramalote",
       "facet": "Plantas acuáticas y de inundación",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cabomba",
@@ -308,7 +325,8 @@
     {
       "name": "Chuchuhuasi",
       "facet": "Plantas medicinales y sagradas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ipecacuana",
@@ -318,27 +336,32 @@
     {
       "name": "Paico",
       "facet": "Plantas medicinales y sagradas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chiric sanango",
       "facet": "Plantas medicinales y sagradas",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Clavo huasca",
       "facet": "Plantas medicinales y sagradas",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ojé",
       "facet": "Plantas medicinales y sagradas",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ambil",
       "facet": "Plantas medicinales y sagradas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pasiflora",
@@ -383,12 +406,14 @@
     {
       "name": "Canangucho",
       "facet": "Palmas amazónicas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Milpesos",
       "facet": "Palmas amazónicas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Palma caminante",
@@ -398,7 +423,8 @@
     {
       "name": "Chambira",
       "facet": "Palmas amazónicas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Babasú",
@@ -428,7 +454,8 @@
     {
       "name": "Huicungo",
       "facet": "Palmas amazónicas",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Estípite",
@@ -438,7 +465,8 @@
     {
       "name": "Pambil",
       "facet": "Palmas amazónicas",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Látex",
@@ -458,7 +486,8 @@
     {
       "name": "Huito",
       "facet": "Plantas que dieron materias primas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Barbasco",
@@ -488,7 +517,8 @@
     {
       "name": "Yanchama",
       "facet": "Plantas que dieron materias primas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Copal",
@@ -498,7 +528,8 @@
     {
       "name": "Siringuero",
       "facet": "Plantas que dieron materias primas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Matapalo",
@@ -603,7 +634,8 @@
     {
       "name": "Tucupí",
       "facet": "Plantas amazónicas en la cocina",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sacha inchi",
@@ -618,27 +650,32 @@
     {
       "name": "Tacacá",
       "facet": "Plantas amazónicas en la cocina",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Juane",
       "facet": "Plantas amazónicas en la cocina",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Caguana",
       "facet": "Plantas amazónicas en la cocina",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Patarashca",
       "facet": "Plantas amazónicas en la cocina",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Masato",
       "facet": "Plantas amazónicas en la cocina",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tapioca",
@@ -648,7 +685,8 @@
     {
       "name": "José Celestino Mutis",
       "facet": "Exploradores y botánicos del Amazonas",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Henry Wickham",
@@ -658,7 +696,8 @@
     {
       "name": "Expedición Botánica",
       "facet": "Exploradores y botánicos del Amazonas",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Carl von Martius",
@@ -698,17 +737,20 @@
     {
       "name": "Sacha",
       "facet": "Nombres indígenas de plantas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Huasca",
       "facet": "Nombres indígenas de plantas",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Caá",
       "facet": "Nombres indígenas de plantas",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ipê",
@@ -728,17 +770,503 @@
     {
       "name": "Uitoto",
       "facet": "Nombres indígenas de plantas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Kawchu",
       "facet": "Nombres indígenas de plantas",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cacao",
       "facet": "Plantas amazónicas en la cocina",
       "known_at": 2
+    },
+    {
+      "name": "Rubber tree",
+      "facet": "Árboles gigantes de la selva",
+      "known_at": 6
+    },
+    {
+      "name": "Big-leaf mahogany",
+      "facet": "Árboles gigantes de la selva",
+      "known_at": 10
+    },
+    {
+      "name": "Cecropia",
+      "facet": "Árboles gigantes de la selva",
+      "known_at": 12
+    },
+    {
+      "name": "Balsa tree",
+      "facet": "Árboles gigantes de la selva",
+      "known_at": 9
+    },
+    {
+      "name": "Purpleheart",
+      "facet": "Árboles gigantes de la selva",
+      "known_at": 13
+    },
+    {
+      "name": "Jatobá",
+      "facet": "Árboles gigantes de la selva",
+      "known_at": 13
+    },
+    {
+      "name": "Soursop",
+      "facet": "Frutas amazónicas comestibles",
+      "known_at": 8
+    },
+    {
+      "name": "Hog plum",
+      "facet": "Frutas amazónicas comestibles",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Macambo",
+      "facet": "Frutas amazónicas comestibles",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Nance",
+      "facet": "Frutas amazónicas comestibles",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Guava",
+      "facet": "Frutas amazónicas comestibles",
+      "known_at": 4
+    },
+    {
+      "name": "Achachairú",
+      "facet": "Frutas amazónicas comestibles",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Floating meadow",
+      "facet": "Plantas acuáticas y de inundación",
+      "known_at": 12
+    },
+    {
+      "name": "Mangrove",
+      "facet": "Plantas acuáticas y de inundación",
+      "known_at": 6
+    },
+    {
+      "name": "Amazon frogbit",
+      "facet": "Plantas acuáticas y de inundación",
+      "known_at": 13
+    },
+    {
+      "name": "Meeting of Waters",
+      "facet": "Plantas acuáticas y de inundación",
+      "known_at": 10
+    },
+    {
+      "name": "Blackwater river",
+      "facet": "Plantas acuáticas y de inundación",
+      "known_at": 11
+    },
+    {
+      "name": "Cinchona tree",
+      "facet": "Plantas medicinales y sagradas",
+      "known_at": 11
+    },
+    {
+      "name": "Cat's claw",
+      "facet": "Plantas medicinales y sagradas",
+      "known_at": 11
+    },
+    {
+      "name": "Jaborandi",
+      "facet": "Plantas medicinales y sagradas",
+      "known_at": 14
+    },
+    {
+      "name": "Ethnobotany",
+      "facet": "Plantas medicinales y sagradas",
+      "known_at": 12
+    },
+    {
+      "name": "Vanilla orchid",
+      "facet": "Flores, orquídeas y bromelias",
+      "known_at": 9
+    },
+    {
+      "name": "Cattleya",
+      "facet": "Flores, orquídeas y bromelias",
+      "known_at": 12
+    },
+    {
+      "name": "Bromeliad",
+      "facet": "Flores, orquídeas y bromelias",
+      "known_at": 8
+    },
+    {
+      "name": "Hot lips plant",
+      "facet": "Flores, orquídeas y bromelias",
+      "known_at": 7
+    },
+    {
+      "name": "Anthurium",
+      "facet": "Flores, orquídeas y bromelias",
+      "known_at": 8
+    },
+    {
+      "name": "Dieffenbachia",
+      "facet": "Flores, orquídeas y bromelias",
+      "known_at": 11
+    },
+    {
+      "name": "Caladium",
+      "facet": "Flores, orquídeas y bromelias",
+      "known_at": 11
+    },
+    {
+      "name": "Prayer plant",
+      "facet": "Flores, orquídeas y bromelias",
+      "known_at": 10
+    },
+    {
+      "name": "Nerve plant",
+      "facet": "Flores, orquídeas y bromelias",
+      "known_at": 11
+    },
+    {
+      "name": "Amazon moonflower",
+      "facet": "Flores, orquídeas y bromelias",
+      "known_at": 13
+    },
+    {
+      "name": "Sensitive plant",
+      "facet": "Flores, orquídeas y bromelias",
+      "known_at": 8
+    },
+    {
+      "name": "Orchid",
+      "facet": "Flores, orquídeas y bromelias",
+      "known_at": 3
+    },
+    {
+      "name": "Sundew",
+      "facet": "Plantas carnívoras, trepadoras y estranguladoras",
+      "known_at": 8
+    },
+    {
+      "name": "Ant plant",
+      "facet": "Plantas carnívoras, trepadoras y estranguladoras",
+      "known_at": 12
+    },
+    {
+      "name": "Parasitic plant",
+      "facet": "Plantas carnívoras, trepadoras y estranguladoras",
+      "known_at": 10
+    },
+    {
+      "name": "Tendril",
+      "facet": "Plantas carnívoras, trepadoras y estranguladoras",
+      "known_at": 9
+    },
+    {
+      "name": "Aerial root",
+      "facet": "Plantas carnívoras, trepadoras y estranguladoras",
+      "known_at": 9
+    },
+    {
+      "name": "Canopy",
+      "facet": "Capas y ecología del bosque",
+      "known_at": 5
+    },
+    {
+      "name": "Understory",
+      "facet": "Capas y ecología del bosque",
+      "known_at": 7
+    },
+    {
+      "name": "Leaf litter",
+      "facet": "Capas y ecología del bosque",
+      "known_at": 8
+    },
+    {
+      "name": "Flying rivers",
+      "facet": "Capas y ecología del bosque",
+      "known_at": 11
+    },
+    {
+      "name": "Photosynthesis",
+      "facet": "Capas y ecología del bosque",
+      "known_at": 7
+    },
+    {
+      "name": "Mycorrhiza",
+      "facet": "Capas y ecología del bosque",
+      "known_at": 13
+    },
+    {
+      "name": "Saharan dust",
+      "facet": "Capas y ecología del bosque",
+      "known_at": 12
+    },
+    {
+      "name": "Biodiversity",
+      "facet": "Capas y ecología del bosque",
+      "known_at": 7
+    },
+    {
+      "name": "Tropical rainforest",
+      "facet": "Capas y ecología del bosque",
+      "known_at": 3
+    },
+    {
+      "name": "Seed dispersal",
+      "facet": "Capas y ecología del bosque",
+      "known_at": 8
+    },
+    {
+      "name": "Pollination",
+      "facet": "Capas y ecología del bosque",
+      "known_at": 6
+    },
+    {
+      "name": "Drip tip",
+      "facet": "Capas y ecología del bosque",
+      "known_at": 11
+    },
+    {
+      "name": "Evapotranspiration",
+      "facet": "Capas y ecología del bosque",
+      "known_at": 12
+    },
+    {
+      "name": "Carbon sink",
+      "facet": "Capas y ecología del bosque",
+      "known_at": 12
+    },
+    {
+      "name": "Leafcutter ant",
+      "facet": "Capas y ecología del bosque",
+      "known_at": 6
+    },
+    {
+      "name": "Devil's garden",
+      "facet": "Capas y ecología del bosque",
+      "known_at": 14
+    },
+    {
+      "name": "Agouti",
+      "facet": "Capas y ecología del bosque",
+      "known_at": 9
+    },
+    {
+      "name": "Orchid bee",
+      "facet": "Capas y ecología del bosque",
+      "known_at": 13
+    },
+    {
+      "name": "Tambaqui",
+      "facet": "Capas y ecología del bosque",
+      "known_at": 13
+    },
+    {
+      "name": "Palm heart",
+      "facet": "Plantas amazónicas en la cocina",
+      "known_at": 8
+    },
+    {
+      "name": "Tonka bean",
+      "facet": "Plantas amazónicas en la cocina",
+      "known_at": 12
+    },
+    {
+      "name": "Jambu",
+      "facet": "Plantas amazónicas en la cocina",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Duck in tucupi",
+      "facet": "Plantas amazónicas en la cocina",
+      "known_at": 14
+    },
+    {
+      "name": "Tacacho",
+      "facet": "Plantas amazónicas en la cocina",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Açaí bowl",
+      "facet": "Plantas amazónicas en la cocina",
+      "known_at": 6
+    },
+    {
+      "name": "Peach palm",
+      "facet": "Palmas amazónicas",
+      "known_at": 10
+    },
+    {
+      "name": "Tucumã",
+      "facet": "Palmas amazónicas",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Piassava",
+      "facet": "Palmas amazónicas",
+      "known_at": 14
+    },
+    {
+      "name": "Murumuru",
+      "facet": "Palmas amazónicas",
+      "known_at": 14
+    },
+    {
+      "name": "Annatto",
+      "facet": "Plantas que dieron materias primas",
+      "known_at": 10
+    },
+    {
+      "name": "Kew Gardens",
+      "facet": "Plantas que dieron materias primas",
+      "known_at": 11
+    },
+    {
+      "name": "Vulcanization",
+      "facet": "Plantas que dieron materias primas",
+      "known_at": 12
+    },
+    {
+      "name": "Hammock",
+      "facet": "Plantas que dieron materias primas",
+      "known_at": 6
+    },
+    {
+      "name": "Dugout canoe",
+      "facet": "Plantas que dieron materias primas",
+      "known_at": 6
+    },
+    {
+      "name": "Robert Schomburgk",
+      "facet": "Exploradores y botánicos del Amazonas",
+      "known_at": 15
+    },
+    {
+      "name": "Joseph Paxton",
+      "facet": "Exploradores y botánicos del Amazonas",
+      "known_at": 14
+    },
+    {
+      "name": "Maracujá",
+      "facet": "Nombres indígenas de plantas",
+      "known_at": 11
+    },
+    {
+      "name": "Arawak",
+      "facet": "Nombres indígenas de plantas",
+      "known_at": 13
+    },
+    {
+      "name": "Shipibo-Konibo",
+      "facet": "Pueblos indígenas y sus plantas",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Chacra",
+      "facet": "Pueblos indígenas y sus plantas",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Shaman",
+      "facet": "Pueblos indígenas y sus plantas",
+      "known_at": 5
+    },
+    {
+      "name": "Blowgun",
+      "facet": "Pueblos indígenas y sus plantas",
+      "known_at": 8
+    },
+    {
+      "name": "Deforestation",
+      "facet": "Deforestación y conservación",
+      "known_at": 6
+    },
+    {
+      "name": "Slash-and-burn",
+      "facet": "Deforestación y conservación",
+      "known_at": 10
+    },
+    {
+      "name": "Amazon tipping point",
+      "facet": "Deforestación y conservación",
+      "known_at": 13
+    },
+    {
+      "name": "Cattle ranching",
+      "facet": "Deforestación y conservación",
+      "known_at": 9
+    },
+    {
+      "name": "Soybean farming",
+      "facet": "Deforestación y conservación",
+      "known_at": 10
+    },
+    {
+      "name": "Logging",
+      "facet": "Deforestación y conservación",
+      "known_at": 7
+    },
+    {
+      "name": "Reforestation",
+      "facet": "Deforestación y conservación",
+      "known_at": 7
+    },
+    {
+      "name": "Agroforestry",
+      "facet": "Deforestación y conservación",
+      "known_at": 12
+    },
+    {
+      "name": "Biopiracy",
+      "facet": "Deforestación y conservación",
+      "known_at": 13
+    },
+    {
+      "name": "Yasuní National Park",
+      "facet": "Deforestación y conservación",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Manu National Park",
+      "facet": "Deforestación y conservación",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Chiribiquete National Park",
+      "facet": "Deforestación y conservación",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Trans-Amazonian Highway",
+      "facet": "Deforestación y conservación",
+      "known_at": 12
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-15",
+      "added": 93,
+      "unused": 172
     }
   ]
 }

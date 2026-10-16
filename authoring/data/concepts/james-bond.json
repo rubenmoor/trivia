@@ -102,12 +102,14 @@
     {
       "name": "Remington Steele",
       "facet": "Actores que fueron Bond",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "El Santo (serie de TV)",
       "facet": "Actores que fueron Bond",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Benoit Blanc",
@@ -887,7 +889,8 @@
     {
       "name": "Tira cómica del Daily Express",
       "facet": "Ian Fleming y las novelas",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Agitado, no revuelto",
@@ -977,7 +980,8 @@
     {
       "name": "El Superagente 86",
       "facet": "Videojuegos, parodias y cultura Bond",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Spy Kids",
@@ -1007,7 +1011,8 @@
     {
       "name": "Agente Cody Banks",
       "facet": "Videojuegos, parodias y cultura Bond",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Hank Scorpio",

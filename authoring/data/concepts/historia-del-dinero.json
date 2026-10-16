@@ -261,37 +261,44 @@
     {
       "name": "Moneda de 1.000 pesos",
       "facet": "Dinero en la historia de Colombia",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Moneda de 200 pesos",
       "facet": "Dinero en la historia de Colombia",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Moneda de 50 pesos",
       "facet": "Dinero en la historia de Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Moneda de 100 pesos",
       "facet": "Dinero en la historia de Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Moneda de 500 pesos",
       "facet": "Dinero en la historia de Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bonanza cafetera",
       "facet": "Dinero en la historia de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Quinto real",
       "facet": "Dinero en la historia de Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Macuquina",
@@ -301,7 +308,8 @@
     {
       "name": "Eliminación de tres ceros",
       "facet": "Dinero en la historia de Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Moneda de chocolate",
@@ -326,17 +334,20 @@
     {
       "name": "Vueltas",
       "facet": "Palabras y expresiones del dinero",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mesada",
       "facet": "Palabras y expresiones del dinero",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fiado",
       "facet": "Palabras y expresiones del dinero",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tacaño",
@@ -346,7 +357,8 @@
     {
       "name": "Chichiguas",
       "facet": "Palabras y expresiones del dinero",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sueldo",
@@ -371,7 +383,8 @@
     {
       "name": "Dolarización de Ecuador",
       "facet": "Monedas del mundo y su origen",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tarjeta de crédito",
@@ -471,7 +484,8 @@
     {
       "name": "Corralito argentino",
       "facet": "Crisis, inflación y falsificación",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Recorte de monedas",

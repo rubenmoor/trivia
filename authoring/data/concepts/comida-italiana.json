@@ -231,7 +231,8 @@
     {
       "name": "Pizza estilo Chicago",
       "facet": "Pizza y sus variedades",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Panzerotti",
@@ -531,7 +532,8 @@
     {
       "name": "Milanesa",
       "facet": "Platos típicos y entradas",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Berenjenas a la parmesana",
@@ -647,7 +649,8 @@
     {
       "name": "Turrón italiano",
       "facet": "Postres, helados y dulces",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Zeppole",
@@ -1027,12 +1030,14 @@
     {
       "name": "Papa's Pizzeria",
       "facet": "Comida italiana en películas y juegos",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Good Pizza, Great Pizza",
       "facet": "Comida italiana en películas y juegos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Pizza Tower",
@@ -1047,12 +1052,14 @@
     {
       "name": "Peter Parker repartidor de pizza",
       "facet": "Comida italiana en películas y juegos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Big Night",
       "facet": "Comida italiana en películas y juegos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Spaghetti western",

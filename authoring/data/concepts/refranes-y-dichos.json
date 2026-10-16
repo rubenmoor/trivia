@@ -131,7 +131,8 @@
     {
       "name": "Las cuentas claras y el chocolate espeso",
       "facet": "Refranes de comida y cocina",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ser pan comido",
@@ -206,7 +207,8 @@
     {
       "name": "Hasta el cuarenta de mayo no te quites el sayo",
       "facet": "Refranes sobre el tiempo y el clima",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Más vale tarde que nunca",
@@ -241,27 +243,32 @@
     {
       "name": "Dar papaya",
       "facet": "Dichos colombianos y regionalismos",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Qué pena con usted",
       "facet": "Dichos colombianos y regionalismos",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hacer una vaca",
       "facet": "Dichos colombianos y regionalismos",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bacano",
       "facet": "Dichos colombianos y regionalismos",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Parcero",
       "facet": "Dichos colombianos y regionalismos",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Al que no quiere caldo se le dan dos tazas",
@@ -271,62 +278,74 @@
     {
       "name": "El que nace pa' tamal, del cielo le caen las hojas",
       "facet": "Dichos colombianos y regionalismos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mamar gallo",
       "facet": "Dichos colombianos y regionalismos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chévere",
       "facet": "Dichos colombianos y regionalismos",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Llave",
       "facet": "Dichos colombianos y regionalismos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hacerse el de la oreja mocha",
       "facet": "Dichos colombianos y regionalismos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Paila",
       "facet": "Dichos colombianos y regionalismos",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ñapa",
       "facet": "Dichos colombianos y regionalismos",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Berraco",
       "facet": "Dichos colombianos y regionalismos",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sacar la piedra",
       "facet": "Dichos colombianos y regionalismos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Embarrarla",
       "facet": "Dichos colombianos y regionalismos",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pedir cacao",
       "facet": "Dichos colombianos y regionalismos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Estar en la olla",
       "facet": "Dichos colombianos y regionalismos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tomar el pelo",
@@ -541,7 +560,8 @@
     {
       "name": "Ponerse las pilas",
       "facet": "Frases hechas y modismos cotidianos",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tirar la toalla",
@@ -646,7 +666,8 @@
     {
       "name": "Más largo que un día sin pan",
       "facet": "Comparaciones populares (más… que…)",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Más claro que el agua",
@@ -732,7 +753,8 @@
     {
       "name": "Poderoso caballero es don Dinero",
       "facet": "Dichos de dinero y trabajo",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ganarse el pan con el sudor de la frente",
@@ -747,7 +769,8 @@
     {
       "name": "Estar sin un peso",
       "facet": "Dichos de dinero y trabajo",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hacer su agosto",
@@ -772,7 +795,8 @@
     {
       "name": "Manirroto",
       "facet": "Dichos de dinero y trabajo",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pagar el pato",
@@ -807,7 +831,8 @@
     {
       "name": "Poner una pica en Flandes",
       "facet": "Origen histórico de las expresiones",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Estar en el limbo",
@@ -837,12 +862,14 @@
     {
       "name": "Las cosas de palacio van despacio",
       "facet": "Origen histórico de las expresiones",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Estar sin blanca",
       "facet": "Origen histórico de las expresiones",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Salvado por la campana",
@@ -872,7 +899,8 @@
     {
       "name": "Meterse en camisa de once varas",
       "facet": "Origen histórico de las expresiones",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ojo por ojo, diente por diente",
@@ -887,7 +915,8 @@
     {
       "name": "Estar en Babia",
       "facet": "Origen histórico de las expresiones",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Trabajo de Hércules",
@@ -987,7 +1016,8 @@
     {
       "name": "Ich verstehe nur Bahnhof",
       "facet": "Equivalentes de refranes en otros idiomas",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     }
   ]
 }

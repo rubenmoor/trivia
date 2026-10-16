@@ -376,17 +376,20 @@
     {
       "name": "Villarrica",
       "facet": "Volcanes famosos del mundo",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tungurahua",
       "facet": "Volcanes famosos del mundo",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Monte Rainier",
       "facet": "Volcanes famosos del mundo",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Santorini",
@@ -406,77 +409,92 @@
     {
       "name": "Volcán Galeras",
       "facet": "Volcanes de Colombia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Nevado del Huila",
       "facet": "Volcanes de Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Volcán Puracé",
       "facet": "Volcanes de Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Nevado del Tolima",
       "facet": "Volcanes de Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Volcán Cerro Machín",
       "facet": "Volcanes de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Volcán Doña Juana",
       "facet": "Volcanes de Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Volcán Azufral",
       "facet": "Volcanes de Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Volcán Cumbal",
       "facet": "Volcanes de Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Nevado de Santa Isabel",
       "facet": "Volcanes de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Volcán de lodo El Totumo",
       "facet": "Volcanes de Colombia",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Paramillo del Quindío",
       "facet": "Volcanes de Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Volcán Sotará",
       "facet": "Volcanes de Colombia",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Volcán Chiles",
       "facet": "Volcanes de Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Parque Nacional Natural Los Nevados",
       "facet": "Volcanes de Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Volcanes de lodo de Arboletes",
       "facet": "Volcanes de Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pompeya",
@@ -516,7 +534,8 @@
     {
       "name": "Tragedia de Armero",
       "facet": "Erupciones históricas",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Plinio el Joven",
@@ -541,7 +560,8 @@
     {
       "name": "Erupción de La Palma de 2021",
       "facet": "Erupciones históricas",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Erupción del Monte Pelée de 1902",
@@ -606,7 +626,8 @@
     {
       "name": "Old Faithful",
       "facet": "Paisajes y fenómenos volcánicos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Aguas termales",
@@ -671,7 +692,8 @@
     {
       "name": "Parque Nacional de Timanfaya",
       "facet": "Paisajes y fenómenos volcánicos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fuente de lava",
@@ -701,12 +723,14 @@
     {
       "name": "Semáforo de alerta volcánica",
       "facet": "Vulcanología y monitoreo",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Servicio Geológico Colombiano",
       "facet": "Vulcanología y monitoreo",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Observatorio vulcanológico",

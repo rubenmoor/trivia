@@ -101,12 +101,14 @@
     {
       "name": "Café Sello Rojo",
       "facet": "Marcas colombianas tradicionales",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Leonisa",
       "facet": "Marcas colombianas tradicionales",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Dove",
@@ -126,7 +128,8 @@
     {
       "name": "Sedal",
       "facet": "Aseo, hogar y cuidado personal",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Palmolive",
@@ -181,12 +184,14 @@
     {
       "name": "Iberia",
       "facet": "Aerolíneas, transporte y servicios",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "LATAM",
       "facet": "Aerolíneas, transporte y servicios",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Lufthansa",
@@ -256,7 +261,8 @@
     {
       "name": "Chicle Chiclets",
       "facet": "Marcas que se volvieron palabras",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pósit",
@@ -266,7 +272,8 @@
     {
       "name": "Maicena",
       "facet": "Marcas que se volvieron palabras",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Jacuzzi",

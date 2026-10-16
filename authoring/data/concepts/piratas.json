@@ -360,7 +360,8 @@
     {
       "name": "Saloma marinera",
       "facet": "Vida y costumbres a bordo",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ratas a bordo",
@@ -405,7 +406,8 @@
     {
       "name": "Marinero de agua dulce",
       "facet": "Vocabulario y jerga pirata",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Nudo",
@@ -415,7 +417,8 @@
     {
       "name": "Zafarrancho de combate",
       "facet": "Vocabulario y jerga pirata",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "¡Tierra a la vista!",
@@ -480,7 +483,8 @@
     {
       "name": "Isla de Providencia",
       "facet": "Piratas en el Caribe y Colombia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Flota de Indias",
@@ -500,12 +504,14 @@
     {
       "name": "Ataque de Drake a Cartagena",
       "facet": "Piratas en el Caribe y Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ataque del barón de Pointis",
       "facet": "Piratas en el Caribe y Colombia",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sitio de Cartagena de 1741",
@@ -515,7 +521,8 @@
     {
       "name": "Riohacha",
       "facet": "Piratas en el Caribe y Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La Española",
@@ -530,27 +537,32 @@
     {
       "name": "Castillo San Felipe de Barajas",
       "facet": "Ciudades, fuertes y defensas costeras",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Torre del Reloj de Cartagena",
       "facet": "Ciudades, fuertes y defensas costeras",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Las Bóvedas",
       "facet": "Ciudades, fuertes y defensas costeras",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fuerte de San Fernando de Bocachica",
       "facet": "Ciudades, fuertes y defensas costeras",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Blas de Lezo",
       "facet": "Ciudades, fuertes y defensas costeras",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Castillo del Morro de La Habana",
@@ -560,22 +572,26 @@
     {
       "name": "Castillo San Felipe del Morro",
       "facet": "Ciudades, fuertes y defensas costeras",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Castillo de San Marcos",
       "facet": "Ciudades, fuertes y defensas costeras",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Castillo de San Lorenzo el Real del Chagres",
       "facet": "Ciudades, fuertes y defensas costeras",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Murallas de Campeche",
       "facet": "Ciudades, fuertes y defensas costeras",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Baluarte",
@@ -670,7 +686,8 @@
     {
       "name": "Amaro Pargo",
       "facet": "Corsarios, bucaneros y filibusteros",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hermanos de la Costa",
@@ -720,7 +737,8 @@
     {
       "name": "Jake y los piratas del País de Nunca Jamás",
       "facet": "Piratas en películas, libros y juegos",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "One Piece",
@@ -751,7 +769,8 @@
     {
       "name": "El Corsario Negro",
       "facet": "Piratas en películas, libros y juegos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sandokán",

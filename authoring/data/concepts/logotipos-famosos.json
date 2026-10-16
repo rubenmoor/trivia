@@ -12,7 +12,9 @@
     "Animales en los logotipos",
     "Historia y cambios de logos",
     "Colores, formas y mensajes ocultos",
-    "Nombres de marcas y su significado"
+    "Nombres de marcas y su significado",
+    "Logos de aerolíneas y transporte",
+    "Símbolos y organizaciones famosas"
   ],
   "axis_fit": {
     "move": {
@@ -66,22 +68,26 @@
     {
       "name": "Little Caesars",
       "facet": "Logos de comida rápida",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Papa John's",
       "facet": "Logos de comida rápida",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Krispy Kreme",
       "facet": "Logos de comida rápida",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Carl's Jr.",
       "facet": "Logos de comida rápida",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Dairy Queen",
@@ -91,12 +97,14 @@
     {
       "name": "Five Guys",
       "facet": "Logos de comida rápida",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Chick-fil-A",
       "facet": "Logos de comida rápida",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Tim Hortons",
@@ -107,12 +115,14 @@
     {
       "name": "Telepizza",
       "facet": "Logos de comida rápida",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pollo Campero",
       "facet": "Logos de comida rápida",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Red Bull",
@@ -202,7 +212,8 @@
     {
       "name": "Bajaj",
       "facet": "Logos de carros y motos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Under Armour",
@@ -272,17 +283,20 @@
     {
       "name": "Quicky",
       "facet": "Mascotas y personajes de marcas",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chester Cheetos",
       "facet": "Mascotas y personajes de marcas",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Osito Bimbo",
       "facet": "Mascotas y personajes de marcas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rey de Burger King",
@@ -292,7 +306,8 @@
     {
       "name": "Maestro Limpio",
       "facet": "Mascotas y personajes de marcas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Conejo de Energizer",
@@ -307,72 +322,86 @@
     {
       "name": "Mr. Peanut",
       "facet": "Mascotas y personajes de marcas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Pillsbury Doughboy",
       "facet": "Mascotas y personajes de marcas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Bebé Gerber",
       "facet": "Mascotas y personajes de marcas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Hombre de Quaker",
       "facet": "Mascotas y personajes de marcas",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Gecko de Geico",
       "facet": "Mascotas y personajes de marcas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Ramo",
       "facet": "Logos de marcas colombianas",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Jet",
       "facet": "Logos de marcas colombianas",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Alpina",
       "facet": "Logos de marcas colombianas",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bancolombia",
       "facet": "Logos de marcas colombianas",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Éxito",
       "facet": "Logos de marcas colombianas",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Crem Helado",
       "facet": "Logos de marcas colombianas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Águila Roja",
       "facet": "Logos de marcas colombianas",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Olímpica",
       "facet": "Logos de marcas colombianas",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "D1",
       "facet": "Logos de marcas colombianas",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "MGM",
@@ -432,7 +461,8 @@
     {
       "name": "Ram",
       "facet": "Animales en los logotipos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Le Coq Sportif",
@@ -442,7 +472,8 @@
     {
       "name": "Hush Puppies",
       "facet": "Animales en los logotipos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Penguin Books",
@@ -462,7 +493,8 @@
     {
       "name": "NBC",
       "facet": "Animales en los logotipos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Pájaro de Twitter",
@@ -497,17 +529,20 @@
     {
       "name": "Frank Mason Robinson",
       "facet": "Historia y cambios de logos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Letra Spencer",
       "facet": "Historia y cambios de logos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Logo de Gap de 2010",
       "facet": "Historia y cambios de logos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Rebranding",
@@ -582,7 +617,8 @@
     {
       "name": "Tour de Francia",
       "facet": "Colores, formas y mensajes ocultos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Shell",
@@ -658,6 +694,119 @@
       "name": "Eslogan",
       "facet": "Nombres de marcas y su significado",
       "known_at": 9
+    },
+    {
+      "name": "Milka",
+      "facet": "Logos de bebidas y mecato",
+      "known_at": 6
+    },
+    {
+      "name": "Firefox",
+      "facet": "Logos de tecnología e internet",
+      "known_at": 8
+    },
+    {
+      "name": "Mini",
+      "facet": "Logos de carros y motos",
+      "known_at": 8
+    },
+    {
+      "name": "Sonic the Hedgehog",
+      "facet": "Mascotas y personajes de marcas",
+      "known_at": 3
+    },
+    {
+      "name": "Duo the Duolingo owl",
+      "facet": "Mascotas y personajes de marcas",
+      "known_at": 6
+    },
+    {
+      "name": "Coca-Cola polar bear",
+      "facet": "Mascotas y personajes de marcas",
+      "known_at": 7
+    },
+    {
+      "name": "Mr. Monopoly",
+      "facet": "Mascotas y personajes de marcas",
+      "known_at": 7
+    },
+    {
+      "name": "Tiffany Blue",
+      "facet": "Colores, formas y mensajes ocultos",
+      "known_at": 12
+    },
+    {
+      "name": "Apple rainbow logo",
+      "facet": "Historia y cambios de logos",
+      "known_at": 11
+    },
+    {
+      "name": "X (formerly Twitter)",
+      "facet": "Historia y cambios de logos",
+      "known_at": 6
+    },
+    {
+      "name": "Saul Bass",
+      "facet": "Historia y cambios de logos",
+      "known_at": 14
+    },
+    {
+      "name": "Coca-Cola contour bottle",
+      "facet": "Historia y cambios de logos",
+      "known_at": 9
+    },
+    {
+      "name": "Air France",
+      "facet": "Logos de aerolíneas y transporte",
+      "known_at": 10
+    },
+    {
+      "name": "London Underground roundel",
+      "facet": "Logos de aerolíneas y transporte",
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Olympic rings",
+      "facet": "Símbolos y organizaciones famosas",
+      "known_at": 2
+    },
+    {
+      "name": "Red Cross",
+      "facet": "Símbolos y organizaciones famosas",
+      "known_at": 4
+    },
+    {
+      "name": "United Nations",
+      "facet": "Símbolos y organizaciones famosas",
+      "known_at": 8
+    },
+    {
+      "name": "Recycling symbol",
+      "facet": "Símbolos y organizaciones famosas",
+      "known_at": 4
+    },
+    {
+      "name": "Peace symbol",
+      "facet": "Símbolos y organizaciones famosas",
+      "known_at": 5
+    },
+    {
+      "name": "International Symbol of Access",
+      "facet": "Símbolos y organizaciones famosas",
+      "known_at": 8
+    },
+    {
+      "name": "Doctors Without Borders",
+      "facet": "Símbolos y organizaciones famosas",
+      "known_at": 12
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-15",
+      "added": 21,
+      "unused": 101
     }
   ]
 }

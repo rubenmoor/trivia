@@ -60,62 +60,74 @@
     {
       "name": "Santa Catalina",
       "facet": "Islas de Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Isla Barú",
       "facet": "Islas de Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Isla Múcura",
       "facet": "Islas de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Santa Cruz del Islote",
       "facet": "Islas de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Isla Fuerte",
       "facet": "Islas de Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tierra Bomba",
       "facet": "Islas de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Isla de Mompox",
       "facet": "Islas de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gorgonilla",
       "facet": "Islas de Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Archipiélago de San Bernardo",
       "facet": "Islas de Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Isla Tintipán",
       "facet": "Islas de Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Isla de los Micos",
       "facet": "Islas de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cayo Bolívar",
       "facet": "Islas de Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Groenlandia",
@@ -230,7 +242,8 @@
     {
       "name": "Isla Margarita",
       "facet": "Islas del Caribe",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Martinica",
@@ -375,7 +388,8 @@
     {
       "name": "Cangrejo negro de Providencia",
       "facet": "Animales y plantas de islas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pez loro",
@@ -390,7 +404,8 @@
     {
       "name": "Guanahaní",
       "facet": "Islas en la historia y la exploración",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Isla de Santa Elena",
@@ -415,7 +430,8 @@
     {
       "name": "Isla Ellis",
       "facet": "Islas en la historia y la exploración",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Pearl Harbor",
@@ -440,7 +456,8 @@
     {
       "name": "Archipiélago Juan Fernández",
       "facet": "Islas en la historia y la exploración",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Robinson Crusoe",
@@ -485,7 +502,8 @@
     {
       "name": "Isla de Sodor",
       "facet": "Islas en películas, libros y juegos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Liliput",
@@ -505,7 +523,8 @@
     {
       "name": "Isla Berk",
       "facet": "Islas en películas, libros y juegos",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Isla de los Cerdos (Angry Birds)",

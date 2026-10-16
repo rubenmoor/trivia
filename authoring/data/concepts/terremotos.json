@@ -66,7 +66,8 @@
     {
       "name": "Placa del Caribe",
       "facet": "Placas tectónicas y fallas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Falla geológica",
@@ -206,7 +207,8 @@
     {
       "name": "Servicio Geológico de Estados Unidos",
       "facet": "Medición: escalas e instrumentos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Escala Shindo",
@@ -376,12 +378,14 @@
     {
       "name": "Terremoto de México de 1985",
       "facet": "Terremotos históricos del mundo",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Terremoto de México de 2017",
       "facet": "Terremotos históricos del mundo",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Terremoto de Kobe de 1995",
@@ -401,7 +405,8 @@
     {
       "name": "Terremoto de Ecuador de 2016",
       "facet": "Terremotos históricos del mundo",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Terremoto de Turquía y Siria de 2023",
@@ -421,7 +426,8 @@
     {
       "name": "Terremoto de Northridge de 1994",
       "facet": "Terremotos históricos del mundo",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Terremoto de Chile de 2010",
@@ -441,72 +447,86 @@
     {
       "name": "Terremoto de Popayán de 1983",
       "facet": "Sismos en Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Terremoto del Eje Cafetero de 1999",
       "facet": "Sismos en Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Terremoto de Cúcuta de 1875",
       "facet": "Sismos en Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tsunami de Tumaco de 1979",
       "facet": "Sismos en Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Terremoto de Tumaco de 1906",
       "facet": "Sismos en Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Nido sísmico de Bucaramanga",
       "facet": "Sismos en Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Red Sismológica Nacional de Colombia",
       "facet": "Sismos en Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Falla de Romeral",
       "facet": "Sismos en Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Terremoto de Murindó de 1992",
       "facet": "Sismos en Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Terremoto de Bogotá de 1917",
       "facet": "Sismos en Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sismo de Quetame de 2008",
       "facet": "Sismos en Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sismo de Paratebueno de 2023",
       "facet": "Sismos en Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Terremoto de Páez de 1994",
       "facet": "Sismos en Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Unidad Nacional para la Gestión del Riesgo de Desastres",
       "facet": "Sismos en Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "California",
@@ -586,7 +606,8 @@
     {
       "name": "Defensa Civil",
       "facet": "Prevención, simulacros y seguridad",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Plan familiar de emergencia",
@@ -616,7 +637,8 @@
     {
       "name": "Frida",
       "facet": "Prevención, simulacros y seguridad",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Construcción sismorresistente",
@@ -651,7 +673,8 @@
     {
       "name": "Bahareque",
       "facet": "Construcción sismorresistente",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Adobe",
@@ -671,7 +694,8 @@
     {
       "name": "NSR-10",
       "facet": "Construcción sismorresistente",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ladrillo",
@@ -686,7 +710,8 @@
     {
       "name": "Torre Latinoamericana",
       "facet": "Construcción sismorresistente",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Muros incas",
@@ -716,7 +741,8 @@
     {
       "name": "Tapia pisada",
       "facet": "Construcción sismorresistente",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Giuseppe Mercalli",
@@ -776,12 +802,14 @@
     {
       "name": "Jesús Emilio Ramírez",
       "facet": "Sismólogos y descubrimientos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Instituto Geofísico de la Universidad Javeriana",
       "facet": "Sismólogos y descubrimientos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Aristóteles",
@@ -791,7 +819,8 @@
     {
       "name": "San Andrés (película)",
       "facet": "Terremotos en mitos, cine y cultura",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "2012 (película)",
@@ -811,7 +840,8 @@
     {
       "name": "Chibchacum",
       "facet": "Terremotos en mitos, cine y cultura",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pachacámac",
@@ -821,12 +851,14 @@
     {
       "name": "Señor de los Temblores",
       "facet": "Terremotos en mitos, cine y cultura",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cándido",
       "facet": "Terremotos en mitos, cine y cultura",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Terremoto (movimiento Pokémon)",
@@ -846,7 +878,8 @@
     {
       "name": "The Big One",
       "facet": "Terremotos en mitos, cine y cultura",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     }
   ]
 }

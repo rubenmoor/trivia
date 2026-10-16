@@ -296,7 +296,8 @@
     {
       "name": "Piedras de Tunja en Facatativá",
       "facet": "Arte rupestre y pinturas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mamut",
@@ -331,7 +332,8 @@
     {
       "name": "Toxodonte",
       "facet": "Megafauna de la Edad de Hielo",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Lobo terrible",
@@ -496,7 +498,8 @@
     {
       "name": "Tumbaga",
       "facet": "Edad de los Metales",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Herrería",
@@ -601,47 +604,56 @@
     {
       "name": "El Abra",
       "facet": "Poblamiento de América y Colombia prehistórica",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hombre de Tequendama",
       "facet": "Poblamiento de América y Colombia prehistórica",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cultura Tumaco-La Tolita",
       "facet": "Poblamiento de América y Colombia prehistórica",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cultura Quimbaya",
       "facet": "Poblamiento de América y Colombia prehistórica",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cultura Tairona",
       "facet": "Poblamiento de América y Colombia prehistórica",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cultura Zenú",
       "facet": "Poblamiento de América y Colombia prehistórica",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Puerto Hormiga",
       "facet": "Poblamiento de América y Colombia prehistórica",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gonzalo Correal Urrego",
       "facet": "Poblamiento de América y Colombia prehistórica",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Taima-Taima",
       "facet": "Poblamiento de América y Colombia prehistórica",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Paleoindios",
@@ -706,12 +718,14 @@
     {
       "name": "Pablo Mármol",
       "facet": "Prehistoria en películas y caricaturas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Diego",
       "facet": "Prehistoria en películas y caricaturas",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Los Croods",

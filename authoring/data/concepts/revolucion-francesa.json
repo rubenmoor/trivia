@@ -967,12 +967,14 @@
     {
       "name": "Antonio Nariño",
       "facet": "Ecos en America y Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Traducción de los Derechos del Hombre de Nariño",
       "facet": "Ecos en América y Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Revolución haitiana",
@@ -987,22 +989,26 @@
     {
       "name": "Alexandre Pétion",
       "facet": "Ecos en América y Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Grito de Independencia de 1810",
       "facet": "Ecos en América y Colombia",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Florero de Llorente",
       "facet": "Ecos en América y Colombia",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Revolución de los Comuneros",
       "facet": "Ecos en América y Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Invasión napoleónica de España",
@@ -1017,27 +1023,32 @@
     {
       "name": "Juntas de gobierno",
       "facet": "Ecos en América y Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Camilo Torres Tenorio",
       "facet": "Ecos en América y Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Memorial de agravios",
       "facet": "Ecos en América y Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Patria Boba",
       "facet": "Ecos en América y Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Constitución de Cádiz",
       "facet": "Ecos en América y Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     }
   ]
 }

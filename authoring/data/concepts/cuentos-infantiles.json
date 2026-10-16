@@ -516,7 +516,8 @@
     {
       "name": "La ratita presumida",
       "facet": "Animales que hablan y fábulas",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El cuervo y el zorro",
@@ -541,7 +542,8 @@
     {
       "name": "Rafael Pombo",
       "facet": "Autores y recopiladores de cuentos",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Esopo",
@@ -586,7 +588,8 @@
     {
       "name": "Horacio Quiroga",
       "facet": "Autores y recopiladores de cuentos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rudyard Kipling",
@@ -606,7 +609,8 @@
     {
       "name": "Gloria Fuertes",
       "facet": "Autores y recopiladores de cuentos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Beatrix Potter",
@@ -616,7 +620,8 @@
     {
       "name": "Félix María Samaniego",
       "facet": "Autores y recopiladores de cuentos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "L. Frank Baum",
@@ -626,7 +631,8 @@
     {
       "name": "Tomás de Iriarte",
       "facet": "Autores y recopiladores de cuentos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Enredados",
@@ -681,7 +687,8 @@
     {
       "name": "Érase una vez (serie)",
       "facet": "Cuentos en el cine y la televisión",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Blancanieves y la leyenda del cazador",
@@ -692,12 +699,14 @@
     {
       "name": "Por siempre Cenicienta",
       "facet": "Cuentos en el cine y la televisión",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Había una vez",
       "facet": "Fórmulas y frases de cuento",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Y vivieron felices para siempre",
@@ -707,7 +716,8 @@
     {
       "name": "Colorín colorado",
       "facet": "Fórmulas y frases de cuento",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Espejito, espejito",
@@ -727,17 +737,20 @@
     {
       "name": "Soplaré y soplaré",
       "facet": "Fórmulas y frases de cuento",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fueron felices y comieron perdices",
       "facet": "Fórmulas y frases de cuento",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Las doce campanadas",
       "facet": "Fórmulas y frases de cuento",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Beso de amor verdadero",
@@ -772,7 +785,8 @@
     {
       "name": "Fi, fai, fo, fum",
       "facet": "Fórmulas y frases de cuento",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Casita de chocolate",
@@ -862,22 +876,26 @@
     {
       "name": "Los pollitos dicen",
       "facet": "Cuentos y rimas latinoamericanas",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Arroz con leche",
       "facet": "Cuentos y rimas latinoamericanas",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Un elefante se balanceaba",
       "facet": "Cuentos y rimas latinoamericanas",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Aserrín, aserrán",
       "facet": "Cuentos y rimas latinoamericanas",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El patio de mi casa",
@@ -887,77 +905,92 @@
     {
       "name": "Ratón Pérez",
       "facet": "Cuentos y rimas latinoamericanas",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Doña Blanca",
       "facet": "Cuentos y rimas latinoamericanas",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El renacuajo paseador",
       "facet": "Cuentos y rimas latinoamericanas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Simón el bobito",
       "facet": "Cuentos y rimas latinoamericanas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tío Conejo",
       "facet": "Cuentos y rimas latinoamericanas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La pobre viejecita",
       "facet": "Cuentos y rimas latinoamericanas",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mirringa Mirronga",
       "facet": "Cuentos y rimas latinoamericanas",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mambrú se fue a la guerra",
       "facet": "Cuentos y rimas latinoamericanas",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Michín",
       "facet": "Cuentos y rimas latinoamericanas",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El gato bandido",
       "facet": "Cuentos y rimas latinoamericanas",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La pastorcita",
       "facet": "Cuentos y rimas latinoamericanas",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cuentos de la selva",
       "facet": "Cuentos y rimas latinoamericanas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pedro Urdemales",
       "facet": "Cuentos y rimas latinoamericanas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Los zapaticos de rosa",
       "facet": "Cuentos y rimas latinoamericanas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La Edad de Oro",
       "facet": "Cuentos y rimas latinoamericanas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Campanita",
@@ -1027,7 +1060,8 @@
     {
       "name": "Patasola",
       "facet": "Seres fantásticos: hadas, duendes, gigantes",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Los duendes y el zapatero",
@@ -1052,7 +1086,8 @@
     {
       "name": "Diario de Greg",
       "facet": "Libros infantiles ilustrados modernos",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "El monstruo de colores",
@@ -1067,7 +1102,8 @@
     {
       "name": "Capitán Calzoncillos",
       "facet": "Libros infantiles ilustrados modernos",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "La oruga muy hambrienta",
@@ -1082,17 +1118,20 @@
     {
       "name": "Perico el conejo travieso",
       "facet": "Libros infantiles ilustrados modernos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "El grúfalo",
       "facet": "Libros infantiles ilustrados modernos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Adivina cuánto te quiero",
       "facet": "Libros infantiles ilustrados modernos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Donde viven los monstruos",
@@ -1102,12 +1141,14 @@
     {
       "name": "Elmer",
       "facet": "Libros infantiles ilustrados modernos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Olivia",
       "facet": "Libros infantiles ilustrados modernos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Babar",
@@ -1117,17 +1158,20 @@
     {
       "name": "Teo",
       "facet": "Libros infantiles ilustrados modernos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Harold y el lápiz color morado",
       "facet": "Libros infantiles ilustrados modernos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Frederick",
       "facet": "Libros infantiles ilustrados modernos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Ferdinando el toro",
@@ -1137,7 +1181,8 @@
     {
       "name": "Pequeño Azul y Pequeño Amarillo",
       "facet": "Libros infantiles ilustrados modernos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     }
   ]
 }

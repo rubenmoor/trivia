@@ -372,12 +372,14 @@
     {
       "name": "Los Munster",
       "facet": "Terror animado y familiar",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Escalofríos (Goosebumps)",
       "facet": "Terror animado y familiar",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Conde Orlok",
@@ -557,7 +559,8 @@
     {
       "name": "Jinete sin cabeza",
       "facet": "Novelas y cuentos llevados al cine",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Los pájaros",
@@ -588,32 +591,38 @@
     {
       "name": "La maldición de La Llorona",
       "facet": "Leyendas latinoamericanas en pantalla",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El Sombrerón",
       "facet": "Leyendas latinoamericanas en pantalla",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El Hombre Caimán",
       "facet": "Leyendas latinoamericanas en pantalla",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La Tunda",
       "facet": "Leyendas latinoamericanas en pantalla",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El Cadejo",
       "facet": "Leyendas latinoamericanas en pantalla",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La Sayona",
       "facet": "Leyendas latinoamericanas en pantalla",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La Mula sin cabeza",
@@ -624,7 +633,8 @@
     {
       "name": "El Santo, el Enmascarado de Plata",
       "facet": "Leyendas latinoamericanas en pantalla",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Carlos Enrique Taboada",
@@ -670,7 +680,8 @@
     {
       "name": "Cuentos de la cripta",
       "facet": "Terror en series y videojuegos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Little Nightmares",
@@ -695,7 +706,8 @@
     {
       "name": "Chica final",
       "facet": "Trucos, efectos y vocabulario del género",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Sangre falsa",

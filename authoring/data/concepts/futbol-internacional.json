@@ -121,7 +121,8 @@
     {
       "name": "Liga MX",
       "facet": "Ligas nacionales del mundo",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Brasileirão",
@@ -131,7 +132,8 @@
     {
       "name": "Liga Profesional Argentina",
       "facet": "Ligas nacionales del mundo",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Liga Saudí",
@@ -156,7 +158,8 @@
     {
       "name": "Estadio Monumental de Buenos Aires",
       "facet": "Estadios icónicos del mundo",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Parque de los Príncipes",
@@ -171,7 +174,8 @@
     {
       "name": "Estadio Hernando Siles",
       "facet": "Estadios icónicos del mundo",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La Canarinha",
@@ -216,7 +220,8 @@
     {
       "name": "La Vinotinto",
       "facet": "Selecciones y sus apodos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Los Samuráis Azules",

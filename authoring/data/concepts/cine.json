@@ -366,12 +366,14 @@
     {
       "name": "Cantinflas",
       "facet": "Actores y actrices famosos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sofía Vergara",
       "facet": "Actores y actrices famosos",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Salma Hayek",
@@ -466,12 +468,14 @@
     {
       "name": "Premios Goya",
       "facet": "Premios y festivales de cine",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Premios BAFTA",
       "facet": "Premios y festivales de cine",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Festival de Sundance",
@@ -481,17 +485,20 @@
     {
       "name": "Premios Razzie",
       "facet": "Premios y festivales de cine",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Premios Platino",
       "facet": "Premios y festivales de cine",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Festival Internacional de Cine de Cartagena",
       "facet": "Premios y festivales de cine",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mejor película",
@@ -501,17 +508,20 @@
     {
       "name": "Premios Ariel",
       "facet": "Premios y festivales de cine",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Premios India Catalina",
       "facet": "Premios y festivales de cine",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Festival de San Sebastián",
       "facet": "Premios y festivales de cine",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cine mudo",
@@ -701,7 +711,8 @@
     {
       "name": "No se habla de Bruno",
       "facet": "Frases y bandas sonoras célebres",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "\"Mi tesoro\"",
@@ -756,57 +767,68 @@
     {
       "name": "La estrategia del caracol",
       "facet": "Cine colombiano y latinoamericano",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rodrigo D: No futuro",
       "facet": "Cine colombiano y latinoamericano",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "María llena eres de gracia",
       "facet": "Cine colombiano y latinoamericano",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pájaros de verano",
       "facet": "Cine colombiano y latinoamericano",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Víctor Gaviria",
       "facet": "Cine colombiano y latinoamericano",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ciro Guerra",
       "facet": "Cine colombiano y latinoamericano",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sergio Cabrera",
       "facet": "Cine colombiano y latinoamericano",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Dago García",
       "facet": "Cine colombiano y latinoamericano",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El paseo",
       "facet": "Cine colombiano y latinoamericano",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Relatos salvajes",
       "facet": "Cine colombiano y latinoamericano",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El secreto de sus ojos",
       "facet": "Cine colombiano y latinoamericano",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ciudad de Dios",
@@ -821,22 +843,26 @@
     {
       "name": "Monos",
       "facet": "Cine colombiano y latinoamericano",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Los colores de la montaña",
       "facet": "Cine colombiano y latinoamericano",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Soñar no cuesta nada",
       "facet": "Cine colombiano y latinoamericano",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Condorito: la película",
       "facet": "Cine colombiano y latinoamericano",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hollywood",
@@ -876,7 +902,8 @@
     {
       "name": "Valle de Cocora",
       "facet": "Lugares y escenarios de película",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cinecittà",
@@ -896,12 +923,14 @@
     {
       "name": "Crispetas",
       "facet": "Ir a cine: salas y costumbres",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Boleta",
       "facet": "Ir a cine: salas y costumbres",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tráiler",
@@ -966,12 +995,14 @@
     {
       "name": "Cine al parque",
       "facet": "Ir a cine: salas y costumbres",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Taquillazo",
       "facet": "Ir a cine: salas y costumbres",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     }
   ]
 }

@@ -12,7 +12,9 @@
     "Jerga y términos de realities",
     "Baile, moda y transformación",
     "Historia y orígenes del género",
-    "Realities de citas y familias"
+    "Realities de citas y familias",
+    "Business and work shows",
+    "Animal and nature shows"
   ],
   "axis_fit": {
     "move": {
@@ -96,7 +98,8 @@
     {
       "name": "Tu cara me suena",
       "facet": "Concursos de talento musical",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rising Star",
@@ -121,22 +124,26 @@
     {
       "name": "Pequeños Gigantes",
       "facet": "Concursos de talento musical",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La Academia",
       "facet": "Concursos de talento musical",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Objetivo Fama",
       "facet": "Concursos de talento musical",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Latin American Idol",
       "facet": "Concursos de talento musical",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Eurovisión",
@@ -171,7 +178,8 @@
     {
       "name": "Pesadilla en la cocina",
       "facet": "Realities de cocina",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Nailed It!",
@@ -186,17 +194,20 @@
     {
       "name": "Cupcake Wars",
       "facet": "Realities de cocina",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Chopped",
       "facet": "Realities de cocina",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Cake Boss",
       "facet": "Realities de cocina",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Iron Chef",
@@ -211,7 +222,8 @@
     {
       "name": "Diners, Drive-Ins and Dives",
       "facet": "Realities de cocina",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "The Final Table",
@@ -226,7 +238,8 @@
     {
       "name": "Ace of Cakes",
       "facet": "Realities de cocina",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Gran Hermano",
@@ -236,12 +249,14 @@
     {
       "name": "La casa de los famosos",
       "facet": "Encierro y convivencia (Gran Hermano)",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La Granja",
       "facet": "Encierro y convivencia (Gran Hermano)",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Jersey Shore",
@@ -251,12 +266,14 @@
     {
       "name": "Acapulco Shore",
       "facet": "Encierro y convivencia (Gran Hermano)",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Geordie Shore",
       "facet": "Encierro y convivencia (Gran Hermano)",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "The Circle",
@@ -291,7 +308,8 @@
     {
       "name": "Hotel Glam",
       "facet": "Encierro y convivencia (Gran Hermano)",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El Bar",
@@ -302,7 +320,8 @@
     {
       "name": "Kid Nation",
       "facet": "Encierro y convivencia (Gran Hermano)",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Survivor",
@@ -312,7 +331,8 @@
     {
       "name": "Supervivientes",
       "facet": "Supervivencia y aventura",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fear Factor",
@@ -327,7 +347,8 @@
     {
       "name": "Pekín Express",
       "facet": "Supervivencia y aventura",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ninja Warrior",
@@ -337,12 +358,14 @@
     {
       "name": "Humor Amarillo",
       "facet": "Supervivencia y aventura",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El último superviviente",
       "facet": "Supervivencia y aventura",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Alone",
@@ -367,7 +390,8 @@
     {
       "name": "Exatlón",
       "facet": "Supervivencia y aventura",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "I'm a Celebrity... Get Me Out of Here!",
@@ -392,77 +416,92 @@
     {
       "name": "El muro infernal",
       "facet": "Supervivencia y aventura",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gladiadores americanos",
       "facet": "Supervivencia y aventura",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Grand Prix del verano",
       "facet": "Supervivencia y aventura",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Desafío",
       "facet": "Realities colombianos",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Yo me llamo",
       "facet": "Realities colombianos",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "A Otro Nivel",
       "facet": "Realities colombianos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Protagonistas de novela",
       "facet": "Realities colombianos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Protagonistas de nuestra tele",
       "facet": "Realities colombianos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Colombia tiene talento",
       "facet": "Realities colombianos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Factor XS",
       "facet": "Realities colombianos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Idol Colombia",
       "facet": "Realities colombianos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Colombia's Next Top Model",
       "facet": "Realities colombianos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La casa de los famosos Colombia",
       "facet": "Realities colombianos",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La Voz Teens",
       "facet": "Realities colombianos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La Descarga",
       "facet": "Realities colombianos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gordon Ramsay",
@@ -477,17 +516,20 @@
     {
       "name": "Amparo Grisales",
       "facet": "Presentadores y jurados famosos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "César Escola",
       "facet": "Presentadores y jurados famosos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Jorge Rausch",
       "facet": "Presentadores y jurados famosos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Christopher Carpentier",
@@ -498,12 +540,14 @@
     {
       "name": "Nicolás de Zubiría",
       "facet": "Presentadores y jurados famosos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Claudia Bahamón",
       "facet": "Presentadores y jurados famosos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bear Grylls",
@@ -523,7 +567,8 @@
     {
       "name": "Ryan Seacrest",
       "facet": "Presentadores y jurados famosos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Heidi Klum",
@@ -538,37 +583,44 @@
     {
       "name": "Jorge Javier Vázquez",
       "facet": "Presentadores y jurados famosos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mercedes Milá",
       "facet": "Presentadores y jurados famosos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pepe Rodríguez",
       "facet": "Presentadores y jurados famosos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Jordi Cruz",
       "facet": "Presentadores y jurados famosos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Alberto Chicote",
       "facet": "Presentadores y jurados famosos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Paul Hollywood",
       "facet": "Presentadores y jurados famosos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Paula Abdul",
       "facet": "Presentadores y jurados famosos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Susan Boyle",
@@ -598,32 +650,38 @@
     {
       "name": "Little Mix",
       "facet": "Ganadores y participantes famosos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Leona Lewis",
       "facet": "Ganadores y participantes famosos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Paul Potts",
       "facet": "Ganadores y participantes famosos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "David Bisbal",
       "facet": "Ganadores y participantes famosos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chenoa",
       "facet": "Ganadores y participantes famosos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Aitana",
       "facet": "Ganadores y participantes famosos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Jennifer Hudson",
@@ -638,12 +696,14 @@
     {
       "name": "Richard Hatch",
       "facet": "Ganadores y participantes famosos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Olly Murs",
       "facet": "Ganadores y participantes famosos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Eliminación",
@@ -688,7 +748,8 @@
     {
       "name": "Delantal negro",
       "facet": "Reglas y mecánicas del juego",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Robo de coach",
@@ -803,7 +864,8 @@
     {
       "name": "Mira quién baila",
       "facet": "Baile, moda y transformación",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "So You Think You Can Dance",
@@ -813,7 +875,8 @@
     {
       "name": "Bailando por un sueño",
       "facet": "Baile, moda y transformación",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Dance Moms",
@@ -858,22 +921,26 @@
     {
       "name": "Extreme Makeover: Home Edition",
       "facet": "Baile, moda y transformación",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Cambio radical",
       "facet": "Baile, moda y transformación",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Property Brothers",
       "facet": "Baile, moda y transformación",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Fixer Upper",
       "facet": "Baile, moda y transformación",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Pimp My Ride",
@@ -883,7 +950,8 @@
     {
       "name": "Overhaulin'",
       "facet": "Baile, moda y transformación",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Lego Masters",
@@ -893,7 +961,8 @@
     {
       "name": "Blown Away",
       "facet": "Baile, moda y transformación",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "An American Family",
@@ -908,7 +977,8 @@
     {
       "name": "Candid Camera",
       "facet": "Historia y orígenes del género",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "John de Mol",
@@ -958,17 +1028,20 @@
     {
       "name": "Star Search",
       "facet": "Historia y orígenes del género",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Cops",
       "facet": "Historia y orígenes del género",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Queen for a Day",
       "facet": "Historia y orígenes del género",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "The Bachelor",
@@ -1004,22 +1077,26 @@
     {
       "name": "Casados a primera vista",
       "facet": "Realities de citas y familias",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "¿Quién quiere casarse con mi hijo?",
       "facet": "Realities de citas y familias",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Granjero busca esposa",
       "facet": "Realities de citas y familias",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Mujeres y hombres y viceversa",
       "facet": "Realities de citas y familias",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ex on the Beach",
@@ -1044,22 +1121,249 @@
     {
       "name": "19 Kids and Counting",
       "facet": "Realities de citas y familias",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Jon & Kate Plus 8",
       "facet": "Realities de citas y familias",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "El precio de la historia",
       "facet": "Realities de citas y familias",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Duck Dynasty",
       "facet": "Realities de citas y familias",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Star Academy",
+      "facet": "Concursos de talento musical",
+      "known_at": 12
+    },
+    {
+      "name": "Produce 101",
+      "facet": "Concursos de talento musical",
+      "known_at": 12
+    },
+    {
+      "name": "Pentatonix",
+      "facet": "Ganadores y participantes famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Darci Lynne",
+      "facet": "Ganadores y participantes famosos",
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Nadiya Hussain",
+      "facet": "Ganadores y participantes famosos",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Mary Berry",
+      "facet": "Presentadores y jurados famosos",
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Joe Bastianich",
+      "facet": "Presentadores y jurados famosos",
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Ant & Dec",
+      "facet": "Presentadores y jurados famosos",
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Tim Gunn",
+      "facet": "Presentadores y jurados famosos",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Guy Fieri",
+      "facet": "Presentadores y jurados famosos",
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Buddy Valastro",
+      "facet": "Presentadores y jurados famosos",
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Marie Kondo",
+      "facet": "Baile, moda y transformación",
+      "known_at": 9
+    },
+    {
+      "name": "RuPaul's Drag Race",
+      "facet": "Baile, moda y transformación",
+      "known_at": 10
+    },
+    {
+      "name": "Forged in Fire",
+      "facet": "Baile, moda y transformación",
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Meerkat Manor",
+      "facet": "Animal and nature shows",
+      "known_at": 13
+    },
+    {
+      "name": "Man vs. Wild",
+      "facet": "Supervivencia y aventura",
+      "known_at": 8
+    },
+    {
+      "name": "Naked and Afraid",
+      "facet": "Supervivencia y aventura",
+      "known_at": 12
+    },
+    {
+      "name": "Floor Is Lava",
+      "facet": "Supervivencia y aventura",
+      "known_at": 5
+    },
+    {
+      "name": "Race Across the World",
+      "facet": "Supervivencia y aventura",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Shark Tank",
+      "facet": "Business and work shows",
+      "known_at": 9
+    },
+    {
+      "name": "The Apprentice",
+      "facet": "Business and work shows",
+      "known_at": 10
+    },
+    {
+      "name": "Pawn Stars",
+      "facet": "Business and work shows",
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Storage Wars",
+      "facet": "Business and work shows",
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "MythBusters",
+      "facet": "Business and work shows",
+      "known_at": 9
+    },
+    {
+      "name": "Deadliest Catch",
+      "facet": "Business and work shows",
+      "known_at": 12
+    },
+    {
+      "name": "Kids Baking Championship",
+      "facet": "Realities de cocina",
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Single's Inferno",
+      "facet": "Realities de citas y familias",
+      "known_at": 12
+    },
+    {
+      "name": "Gogglebox",
+      "facet": "Realities de citas y familias",
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Nomination",
+      "facet": "Reglas y mecánicas del juego",
+      "known_at": 9
+    },
+    {
+      "name": "Star Baker",
+      "facet": "Reglas y mecánicas del juego",
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Lip sync for your life",
+      "facet": "Reglas y mecánicas del juego",
+      "known_at": 12
+    },
+    {
+      "name": "Showmance",
+      "facet": "Jerga y términos de realities",
+      "known_at": 12
+    },
+    {
+      "name": "Season finale",
+      "facet": "Jerga y términos de realities",
+      "known_at": 8
+    },
+    {
+      "name": "Scripted reality",
+      "facet": "Jerga y términos de realities",
+      "known_at": 12
+    },
+    {
+      "name": "“You're fired!”",
+      "facet": "Jerga y términos de realities",
+      "known_at": 11
+    },
+    {
+      "name": "“The tribe has spoken”",
+      "facet": "Jerga y términos de realities",
+      "known_at": 13
+    },
+    {
+      "name": "Nineteen Eighty-Four",
+      "facet": "Historia y orígenes del género",
+      "known_at": 11
+    },
+    {
+      "name": "Simon Fuller",
+      "facet": "Historia y orígenes del género",
       "known_at": 14
+    },
+    {
+      "name": "America's Funniest Home Videos",
+      "facet": "Historia y orígenes del género",
+      "known_at": 8,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Just for Laughs Gags",
+      "facet": "Historia y orígenes del género",
+      "known_at": 8
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-15",
+      "added": 40,
+      "unused": 151
     }
   ]
 }

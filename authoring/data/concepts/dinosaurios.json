@@ -613,7 +613,8 @@
     {
       "name": "Villa de Leyva",
       "facet": "Fósiles y prehistoria en Colombia",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cerrejón",
@@ -623,7 +624,8 @@
     {
       "name": "Museo Paleontológico de Villa de Leyva",
       "facet": "Fósiles y prehistoria en Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pinturas rupestres de Chiribiquete",
@@ -633,17 +635,20 @@
     {
       "name": "Sáchica",
       "facet": "Fósiles y prehistoria en Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Padillasaurus",
       "facet": "Fósiles y prehistoria en Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Platypterygius sachicarum",
       "facet": "Fósiles y prehistoria en Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rex de Toy Story",
@@ -658,7 +663,8 @@
     {
       "name": "Dino de Los Picapiedra",
       "facet": "Dinosaurios en el cine y los juegos",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Blue",

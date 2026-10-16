@@ -61,7 +61,8 @@
     {
       "name": "Caneca de reciclaje",
       "facet": "Reciclaje y manejo de basuras",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Papel reciclado",
@@ -81,12 +82,14 @@
     {
       "name": "Reciclador",
       "facet": "Reciclaje y manejo de basuras",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Código de colores de las canecas",
       "facet": "Reciclaje y manejo de basuras",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Botella PET",
@@ -276,7 +279,8 @@
     {
       "name": "Paloma migratoria americana",
       "facet": "Especies en peligro y conservación",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Parque nacional",
@@ -306,12 +310,14 @@
     {
       "name": "Parque Los Nevados",
       "facet": "Parques naturales y áreas protegidas",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Torres del Paine",
       "facet": "Parques naturales y áreas protegidas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Patrimonio natural de la UNESCO",
@@ -331,7 +337,8 @@
     {
       "name": "Parque Banff",
       "facet": "Parques naturales y áreas protegidas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Llave goteando",
@@ -396,7 +403,8 @@
     {
       "name": "Arco de deforestación amazónica",
       "facet": "Deforestación y suelos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Depredador",

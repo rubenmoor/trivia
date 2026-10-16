@@ -541,7 +541,8 @@
     {
       "name": "Paseo de la Fama de Hollywood",
       "facet": "Estrellas en el cine y la cultura",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Cuando pides a una estrella",
@@ -566,7 +567,8 @@
     {
       "name": "Logo de Subaru",
       "facet": "Estrellas en el cine y la cultura",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     }
   ]
 }

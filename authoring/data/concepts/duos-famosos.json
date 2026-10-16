@@ -311,7 +311,8 @@
     {
       "name": "Efraín y María",
       "facet": "Parejas de la literatura",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fermina Daza y Florentino Ariza",
@@ -331,22 +332,26 @@
     {
       "name": "Calisto y Melibea",
       "facet": "Parejas de la literatura",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Wisin y Yandel",
       "facet": "Dúos musicales",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Jesse & Joy",
       "facet": "Dúos musicales",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ha*Ash",
       "facet": "Dúos musicales",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Twenty One Pilots",
@@ -361,22 +366,26 @@
     {
       "name": "Sin Bandera",
       "facet": "Dúos musicales",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pimpinela",
       "facet": "Dúos musicales",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Andy y Lucas",
       "facet": "Dúos musicales",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Binomio de Oro",
       "facet": "Dúos musicales",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Lennon y McCartney",
@@ -391,7 +400,8 @@
     {
       "name": "Silvestre Dangond y Juancho de la Espriella",
       "facet": "Dúos musicales",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Simon & Garfunkel",
@@ -426,12 +436,14 @@
     {
       "name": "Dúo Dinámico",
       "facet": "Dúos musicales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hall & Oates",
       "facet": "Dúos musicales",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Mr. Bean y Teddy",
@@ -456,7 +468,8 @@
     {
       "name": "Tonto y Retonto",
       "facet": "Dúos cómicos de cine y TV",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sheldon y Leonard",
@@ -486,27 +499,32 @@
     {
       "name": "Kenan y Kel",
       "facet": "Dúos cómicos de cine y TV",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Abbott y Costello",
       "facet": "Dúos cómicos de cine y TV",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Key & Peele",
       "facet": "Dúos cómicos de cine y TV",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Starsky y Hutch",
       "facet": "Dúos cómicos de cine y TV",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Los Morancos",
       "facet": "Dúos cómicos de cine y TV",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Dean Martin y Jerry Lewis",
@@ -516,12 +534,14 @@
     {
       "name": "Cruz y Raya",
       "facet": "Dúos cómicos de cine y TV",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cheech y Chong",
       "facet": "Dúos cómicos de cine y TV",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Mario y Luigi",
@@ -641,17 +661,20 @@
     {
       "name": "Simón Bolívar y Francisco de Paula Santander",
       "facet": "Parejas de la historia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Simón Bolívar y Manuela Sáenz",
       "facet": "Parejas de la historia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Simón Bolívar y Antonio José de Sucre",
       "facet": "Parejas de la historia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Marco Antonio y Cleopatra",
@@ -701,7 +724,8 @@
     {
       "name": "Francisco Pizarro y Diego de Almagro",
       "facet": "Parejas de la historia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Roosevelt y Churchill",
@@ -721,7 +745,8 @@
     {
       "name": "Sacco y Vanzetti",
       "facet": "Parejas de la historia",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Marie y Pierre Curie",
@@ -821,7 +846,8 @@
     {
       "name": "Atlético Nacional e Independiente Medellín",
       "facet": "Dúos del deporte",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Nadal y Federer",
@@ -856,7 +882,8 @@
     {
       "name": "Valderrama y Rincón",
       "facet": "Dúos del deporte",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Muhammad Ali y Joe Frazier",
@@ -951,7 +978,8 @@
     {
       "name": "Arroz con fríjoles",
       "facet": "Pares inseparables cotidianos",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hilo y aguja",
@@ -1151,17 +1179,20 @@
     {
       "name": "Sué y Chía",
       "facet": "Gemelos y pares de mitos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Manco Cápac y Mama Ocllo",
       "facet": "Gemelos y pares de mitos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hunahpú e Ixbalanqué",
       "facet": "Gemelos y pares de mitos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hipnos y Tánatos",

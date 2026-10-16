@@ -436,7 +436,8 @@
     {
       "name": "Volqueta",
       "facet": "Tipos de vehículos",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Convertible",
@@ -506,7 +507,8 @@
     {
       "name": "Carretera Panamericana",
       "facet": "Historia del automóvil",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Manivela de arranque",
@@ -646,7 +648,8 @@
     {
       "name": "Policía acostado",
       "facet": "Señales y normas de tránsito",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ceda el paso",
@@ -731,7 +734,8 @@
     {
       "name": "Buseta",
       "facet": "Carros en Colombia",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Peaje",
@@ -741,12 +745,14 @@
     {
       "name": "Campero",
       "facet": "Carros en Colombia",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Colectivo",
       "facet": "Carros en Colombia",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Jeep Willys",
@@ -761,47 +767,56 @@
     {
       "name": "Fotomulta",
       "facet": "Carros en Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "SOAT",
       "facet": "Carros en Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Comparendo",
       "facet": "Carros en Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Túnel de La Línea",
       "facet": "Carros en Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Revisión técnico-mecánica",
       "facet": "Carros en Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Desfile de Yipaos",
       "facet": "Carros en Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chevrolet Sprint",
       "facet": "Carros en Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "GM Colmotores",
       "facet": "Carros en Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sofasa",
       "facet": "Carros en Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bomba de gasolina",
@@ -816,7 +831,8 @@
     {
       "name": "Galón",
       "facet": "Combustibles y energía",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Contaminación del aire",
@@ -841,17 +857,20 @@
     {
       "name": "Ecopetrol",
       "facet": "Combustibles y energía",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "ACPM",
       "facet": "Combustibles y energía",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gas natural vehicular",
       "facet": "Combustibles y energía",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Autonomía",

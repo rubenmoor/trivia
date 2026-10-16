@@ -321,7 +321,8 @@
     {
       "name": "Babilla",
       "facet": "Cocodrilos, caimanes y babillas",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Caimán negro",
@@ -376,7 +377,8 @@
     {
       "name": "Caimán overo",
       "facet": "Cocodrilos, caimanes y babillas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Anaconda verde",
@@ -391,62 +393,74 @@
     {
       "name": "Talla X",
       "facet": "Reptiles de Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cabeza de candado",
       "facet": "Reptiles de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Caimán del Orinoco",
       "facet": "Reptiles de Colombia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Morrocoy",
       "facet": "Reptiles de Colombia",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tortuga charapa",
       "facet": "Reptiles de Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tortuga hicotea",
       "facet": "Reptiles de Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Lobo pollero",
       "facet": "Reptiles de Colombia",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Lagarto azul de Gorgona",
       "facet": "Reptiles de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tortuga de río del Magdalena",
       "facet": "Reptiles de Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Estación Roberto Franco",
       "facet": "Reptiles de Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bejuquilla",
       "facet": "Reptiles de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tortuga carranchina",
       "facet": "Reptiles de Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Lengua bífida",
@@ -781,7 +795,8 @@
     {
       "name": "Tic-Tac",
       "facet": "Reptiles en películas y cultura",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pascal",
@@ -846,7 +861,8 @@
     {
       "name": "Cocodrilo de Lacoste",
       "facet": "Reptiles en películas y cultura",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Titanoboa",
@@ -911,7 +927,8 @@
     {
       "name": "Kronosaurio de Villa de Leyva",
       "facet": "Reptiles prehistóricos y evolución",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fósil",
@@ -986,17 +1003,20 @@
     {
       "name": "Caimanes en las alcantarillas",
       "facet": "Mitos, palabras y dichos reptiles",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Lengua de víbora",
       "facet": "Mitos, palabras y dichos reptiles",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "San Patricio y las serpientes",
       "facet": "Mitos, palabras y dichos reptiles",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Jörmungandr",

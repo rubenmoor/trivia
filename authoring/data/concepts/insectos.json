@@ -401,7 +401,8 @@
     {
       "name": "Cucarrón",
       "facet": "Escarabajos y mariquitas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Escarabajo bombardero",
@@ -471,7 +472,8 @@
     {
       "name": "Zapatero",
       "facet": "Grillos, libélulas, mantis y compañía",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mantis orquídea",
@@ -496,7 +498,8 @@
     {
       "name": "Zancudo",
       "facet": "Insectos de la casa y plagas",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Piojo",
@@ -581,7 +584,8 @@
     {
       "name": "Chinche pito",
       "facet": "Picaduras y enfermedades transmitidas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Aedes aegypti",
@@ -631,12 +635,14 @@
     {
       "name": "Piquiña",
       "facet": "Picaduras y enfermedades transmitidas",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Toldillo",
       "facet": "Picaduras y enfermedades transmitidas",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ronald Ross",
@@ -646,7 +652,8 @@
     {
       "name": "Carlos Finlay",
       "facet": "Picaduras y enfermedades transmitidas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Miel",
@@ -706,27 +713,32 @@
     {
       "name": "Hormiga culona",
       "facet": "Insectos de Colombia y el trópico",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mariposa 88",
       "facet": "Insectos de Colombia y el trópico",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Broca del café",
       "facet": "Insectos de Colombia y el trópico",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mariposario del Quindío",
       "facet": "Insectos de Colombia y el trópico",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hormiga conga",
       "facet": "Insectos de Colombia y el trópico",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mariposa Heliconius",
@@ -736,27 +748,32 @@
     {
       "name": "Abeja africanizada",
       "facet": "Insectos de Colombia y el trópico",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Machaca",
       "facet": "Insectos de Colombia y el trópico",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chapola",
       "facet": "Insectos de Colombia y el trópico",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gusano pollo",
       "facet": "Insectos de Colombia y el trópico",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Selva del Chocó",
       "facet": "Insectos de Colombia y el trópico",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Weta gigante",
@@ -826,7 +843,8 @@
     {
       "name": "Hormigaz",
       "facet": "Insectos en cine, cuentos y juegos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La abeja Maya",
@@ -876,7 +894,8 @@
     {
       "name": "Mariposas amarillas de Mauricio Babilonia",
       "facet": "Insectos en cine, cuentos y juegos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ray (La princesa y el sapo)",

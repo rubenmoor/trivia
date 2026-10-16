@@ -66,7 +66,8 @@
     {
       "name": "Galeras",
       "facet": "Volcanes y erupciones",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Piroclastos",
@@ -96,7 +97,8 @@
     {
       "name": "Terremoto del Eje Cafetero",
       "facet": "Terremotos y tsunamis",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Charles Richter",
@@ -171,7 +173,8 @@
     {
       "name": "Callejón de los Tornados",
       "facet": "Huracanes, tornados y vientos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Petricor",
@@ -266,7 +269,8 @@
     {
       "name": "La Mojana",
       "facet": "El Niño, sequías e inundaciones",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Oscilación del Sur",
@@ -276,7 +280,8 @@
     {
       "name": "Dust Bowl",
       "facet": "El Niño, sequías e inundaciones",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Avalancha de nieve",
@@ -301,7 +306,8 @@
     {
       "name": "Cañón del Chicamocha",
       "facet": "Deslizamientos, avalanchas y erosión",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Terrazas de cultivo",
@@ -391,7 +397,8 @@
     {
       "name": "Termales de Santa Rosa de Cabal",
       "facet": "Géiseres, cuevas y aguas termales",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cenote",
@@ -406,7 +413,8 @@
     {
       "name": "Termales de Paipa",
       "facet": "Géiseres, cuevas y aguas termales",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Espeleología",

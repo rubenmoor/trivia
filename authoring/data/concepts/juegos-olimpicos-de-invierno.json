@@ -426,7 +426,8 @@
     {
       "name": "Squaw Valley",
       "facet": "Sedes y ciudades anfitrionas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Juegos de invierno de 1924",
@@ -501,7 +502,8 @@
     {
       "name": "Lindsey Vonn",
       "facet": "Atletas y leyendas olímpicas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Marit Bjørgen",
@@ -516,7 +518,8 @@
     {
       "name": "Eric Heiden",
       "facet": "Atletas y leyendas olímpicas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Yuzuru Hanyu",
@@ -526,7 +529,8 @@
     {
       "name": "Apolo Anton Ohno",
       "facet": "Atletas y leyendas olímpicas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Ingemar Stenmark",
@@ -556,7 +560,8 @@
     {
       "name": "Eddie el Águila",
       "facet": "Atletas y leyendas olímpicas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Kim Yuna",
@@ -581,7 +586,8 @@
     {
       "name": "Torvill y Dean",
       "facet": "Atletas y leyendas olímpicas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Hermann Maier",
@@ -601,7 +607,8 @@
     {
       "name": "Miga y Quatchi",
       "facet": "Mascotas, antorcha y símbolos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Schuss",
@@ -616,7 +623,8 @@
     {
       "name": "Tina y Milo",
       "facet": "Mascotas, antorcha y símbolos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Pictogramas olímpicos",
@@ -691,7 +699,8 @@
     {
       "name": "Kiss and cry",
       "facet": "Reglas, puntuación y vocabulario",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Aterrizaje telemark",
@@ -706,67 +715,80 @@
     {
       "name": "Colombia en los Juegos de invierno",
       "facet": "Latinoamérica y Colombia en invierno",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pedro Causil",
       "facet": "Latinoamérica y Colombia en invierno",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Laura Gómez",
       "facet": "Latinoamérica y Colombia en invierno",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cynthia Denzler",
       "facet": "Latinoamérica y Colombia en invierno",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Patinaje de carreras",
       "facet": "Latinoamérica y Colombia en invierno",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Nevado del Cocuy",
       "facet": "Latinoamérica y Colombia en invierno",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Valle Nevado",
       "facet": "Latinoamérica y Colombia en invierno",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Portillo",
       "facet": "Latinoamérica y Colombia en invierno",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bariloche",
       "facet": "Latinoamérica y Colombia en invierno",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ushuaia",
       "facet": "Latinoamérica y Colombia en invierno",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hubertus von Hohenlohe",
       "facet": "Latinoamérica y Colombia en invierno",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Argentina en los Juegos de invierno",
       "facet": "Latinoamérica y Colombia en invierno",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bobsleigh de Brasil",
       "facet": "Latinoamérica y Colombia en invierno",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Jamaica bajo cero",
@@ -781,7 +803,8 @@
     {
       "name": "Yo, Tonya",
       "facet": "Invierno olímpico en películas y cultura",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Patinando a la gloria",
@@ -791,7 +814,8 @@
     {
       "name": "Los campeones (Mighty Ducks)",
       "facet": "Invierno olímpico en películas y cultura",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Mario y Sonic en los Juegos Olímpicos de invierno",
@@ -821,12 +845,14 @@
     {
       "name": "NHL (videojuego)",
       "facet": "Invierno olímpico en películas y cultura",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Milagro (película)",
       "facet": "Invierno olímpico en películas y cultura",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Pista de hielo del Rockefeller Center",
@@ -836,7 +862,8 @@
     {
       "name": "Hans Brinker y los patines de plata",
       "facet": "Invierno olímpico en películas y cultura",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Posición de huevo",

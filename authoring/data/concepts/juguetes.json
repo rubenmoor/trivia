@@ -126,37 +126,44 @@
     {
       "name": "Coca",
       "facet": "Juguetes tradicionales colombianos",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Zumbambico",
       "facet": "Juguetes tradicionales colombianos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cauchera",
       "facet": "Juguetes tradicionales colombianos",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Carro de balineras",
       "facet": "Juguetes tradicionales colombianos",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Muñeca de tusa",
       "facet": "Juguetes tradicionales colombianos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tejo",
       "facet": "Juguetes tradicionales colombianos",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Yermis",
       "facet": "Juguetes tradicionales colombianos",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Matraca",
@@ -166,12 +173,14 @@
     {
       "name": "Caballitos de Ráquira",
       "facet": "Juguetes tradicionales colombianos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pito de barro",
       "facet": "Juguetes tradicionales colombianos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ken",
@@ -201,12 +210,14 @@
     {
       "name": "Cabbage Patch Kids",
       "facet": "Muñecas y figuras de acción",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Max Steel",
       "facet": "Muñecas y figuras de acción",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Baby Born",
@@ -216,7 +227,8 @@
     {
       "name": "Action Man",
       "facet": "Muñecas y figuras de acción",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Sylvanian Families",
@@ -231,7 +243,8 @@
     {
       "name": "Nenuco",
       "facet": "Muñecas y figuras de acción",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Muñeca de porcelana",
@@ -281,12 +294,14 @@
     {
       "name": "Lincoln Logs",
       "facet": "Juguetes de construcción",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Tinkertoy",
       "facet": "Juguetes de construcción",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Bloques de madera",
@@ -301,12 +316,14 @@
     {
       "name": "Tente",
       "facet": "Juguetes de construcción",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rasti",
       "facet": "Juguetes de construcción",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Play-Doh",
@@ -316,12 +333,14 @@
     {
       "name": "Ositos Cariñositos",
       "facet": "Peluches y muñecos de felpa",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Beanie Babies",
       "facet": "Peluches y muñecos de felpa",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Steiff",
@@ -342,12 +361,14 @@
     {
       "name": "Jellycat",
       "facet": "Peluches y muñecos de felpa",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Build-A-Bear",
       "facet": "Peluches y muñecos de felpa",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Máquina de garra",
@@ -357,7 +378,8 @@
     {
       "name": "Tickle Me Elmo",
       "facet": "Peluches y muñecos de felpa",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Totoro",
@@ -502,7 +524,8 @@
     {
       "name": "Matchbox",
       "facet": "Vehículos de juguete y radiocontrol",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Carro a control remoto",
@@ -522,7 +545,8 @@
     {
       "name": "Tonka",
       "facet": "Vehículos de juguete y radiocontrol",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Majorette",
@@ -532,7 +556,8 @@
     {
       "name": "Lionel",
       "facet": "Vehículos de juguete y radiocontrol",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Carro de pedales",
@@ -677,7 +702,8 @@
     {
       "name": "Los marcianitos",
       "facet": "Juguetes en el cine y la TV",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Andy",
@@ -697,7 +723,8 @@
     {
       "name": "La casa de muñecas de Gabby",
       "facet": "Juguetes en el cine y la TV",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Fidget spinner",
@@ -717,7 +744,8 @@
     {
       "name": "Tazos",
       "facet": "Juguetes electrónicos y de moda",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Labubu",
@@ -773,7 +801,8 @@
     {
       "name": "Mascota de piedra",
       "facet": "Juguetes electrónicos y de moda",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Margarete Steiff",
@@ -783,12 +812,14 @@
     {
       "name": "Richard James",
       "facet": "Historia e inventores de juguetes",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Pedro Flores",
       "facet": "Historia e inventores de juguetes",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Mattel",
@@ -813,12 +844,14 @@
     {
       "name": "Wham-O",
       "facet": "Historia e inventores de juguetes",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Hamleys",
       "facet": "Historia e inventores de juguetes",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Kinder Sorpresa",
@@ -828,7 +861,8 @@
     {
       "name": "Salón Nacional de la Fama del Juguete",
       "facet": "Historia e inventores de juguetes",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     }
   ]
 }

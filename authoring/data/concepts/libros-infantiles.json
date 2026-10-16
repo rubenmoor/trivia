@@ -86,82 +86,98 @@
     {
       "name": "Cartilla Nacho",
       "facet": "Literatura infantil colombiana",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cuentos pintados para niños",
       "facet": "Literatura infantil colombiana",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ivar Da Coll",
       "facet": "Literatura infantil colombiana",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Jairo Aníbal Niño",
       "facet": "Literatura infantil colombiana",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cuentos morales para niños formales",
       "facet": "Literatura infantil colombiana",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Juan Chunguero",
       "facet": "Literatura infantil colombiana",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La alegría de querer",
       "facet": "Literatura infantil colombiana",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Yolanda Reyes",
       "facet": "Literatura infantil colombiana",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Celso Román",
       "facet": "Literatura infantil colombiana",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Triunfo Arciniegas",
       "facet": "Literatura infantil colombiana",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pilar Lozano",
       "facet": "Literatura infantil colombiana",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Irene Vasco",
       "facet": "Literatura infantil colombiana",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Estrellita, ¿dónde estás?",
       "facet": "Rimas, nanas y adivinanzas",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Pin Pon",
       "facet": "Rimas, nanas y adivinanzas",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tres tristes tigres",
       "facet": "Rimas, nanas y adivinanzas",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tengo una muñeca vestida de azul",
       "facet": "Rimas, nanas y adivinanzas",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La vaca lechera",
@@ -171,12 +187,14 @@
     {
       "name": "Debajo de un botón",
       "facet": "Rimas, nanas y adivinanzas",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Juguemos en el bosque",
       "facet": "Rimas, nanas y adivinanzas",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Canción de cuna",
@@ -186,22 +204,26 @@
     {
       "name": "La gallina turuleca",
       "facet": "Rimas, nanas y adivinanzas",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Arrorró mi niño",
       "facet": "Rimas, nanas y adivinanzas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pito, pito, colorito",
       "facet": "Rimas, nanas y adivinanzas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Humpty Dumpty",
       "facet": "Rimas, nanas y adivinanzas",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Retahíla",
@@ -211,7 +233,8 @@
     {
       "name": "Mamá Gansa",
       "facet": "Rimas, nanas y adivinanzas",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Pinocho",
@@ -311,7 +334,8 @@
     {
       "name": "Manuelita la tortuga",
       "facet": "Literatura infantil hispanoamericana",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El reino del revés",
@@ -321,62 +345,74 @@
     {
       "name": "María Elena Walsh",
       "facet": "Literatura infantil hispanoamericana",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Papelucho",
       "facet": "Literatura infantil hispanoamericana",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La tortuga gigante",
       "facet": "Literatura infantil hispanoamericana",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Marcela Paz",
       "facet": "Literatura infantil hispanoamericana",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Elsa Bornemann",
       "facet": "Literatura infantil hispanoamericana",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La peor señora del mundo",
       "facet": "Literatura infantil hispanoamericana",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "A Margarita Debayle",
       "facet": "Literatura infantil hispanoamericana",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Paco Yunque",
       "facet": "Literatura infantil hispanoamericana",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Francisco Hinojosa",
       "facet": "Literatura infantil hispanoamericana",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Graciela Montes",
       "facet": "Literatura infantil hispanoamericana",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ema Wolf",
       "facet": "Literatura infantil hispanoamericana",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Laura Devetach",
       "facet": "Literatura infantil hispanoamericana",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Geronimo Stilton",
@@ -386,7 +422,8 @@
     {
       "name": "Wigetta",
       "facet": "Sagas juveniles modernas",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Una serie de eventos desafortunados",
@@ -421,12 +458,14 @@
     {
       "name": "Kika Superbruja",
       "facet": "Sagas juveniles modernas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Los Futbolísimos",
       "facet": "Sagas juveniles modernas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Alas de fuego",
@@ -441,12 +480,14 @@
     {
       "name": "Manolito Gafotas",
       "facet": "Sagas juveniles modernas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Memorias de Idhún",
       "facet": "Sagas juveniles modernas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Libro para colorear",
@@ -481,7 +522,8 @@
     {
       "name": "Choco encuentra una mamá",
       "facet": "Álbumes ilustrados y primeros libros",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Orejas de mariposa",
@@ -507,7 +549,8 @@
     {
       "name": "El cazo de Lorenzo",
       "facet": "Álbumes ilustrados y primeros libros",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Winnie the Pooh",
@@ -542,12 +585,14 @@
     {
       "name": "Platero",
       "facet": "Animales protagonistas de libros",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Azabache",
       "facet": "Animales protagonistas de libros",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rikki-Tikki-Tavi",
@@ -683,6 +728,462 @@
       "name": "Colofón",
       "facet": "El libro y sus partes",
       "known_at": 14
+    },
+    {
+      "name": "Cinderella",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 1
+    },
+    {
+      "name": "Snow White",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 1
+    },
+    {
+      "name": "Little Red Riding Hood",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 1
+    },
+    {
+      "name": "Sleeping Beauty",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 1
+    },
+    {
+      "name": "Hansel and Gretel",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 2
+    },
+    {
+      "name": "The Three Little Pigs",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 1
+    },
+    {
+      "name": "Goldilocks and the Three Bears",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 2
+    },
+    {
+      "name": "The Little Mermaid",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 1
+    },
+    {
+      "name": "The Ugly Duckling",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 2
+    },
+    {
+      "name": "Puss in Boots",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 2
+    },
+    {
+      "name": "Beauty and the Beast",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 1
+    },
+    {
+      "name": "The Princess and the Pea",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 3
+    },
+    {
+      "name": "The Snow Queen",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 6
+    },
+    {
+      "name": "Thumbelina",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 4
+    },
+    {
+      "name": "The Emperor's New Clothes",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 4
+    },
+    {
+      "name": "The Pied Piper of Hamelin",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 5
+    },
+    {
+      "name": "Brothers Grimm",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 6
+    },
+    {
+      "name": "One Thousand and One Nights",
+      "facet": "Cuentos de hadas clásicos",
+      "known_at": 8
+    },
+    {
+      "name": "The Tortoise and the Hare",
+      "facet": "Fábulas y sus moralejas",
+      "known_at": 2
+    },
+    {
+      "name": "The Ant and the Grasshopper",
+      "facet": "Fábulas y sus moralejas",
+      "known_at": 3
+    },
+    {
+      "name": "The Boy Who Cried Wolf",
+      "facet": "Fábulas y sus moralejas",
+      "known_at": 3
+    },
+    {
+      "name": "The Fox and the Grapes",
+      "facet": "Fábulas y sus moralejas",
+      "known_at": 6
+    },
+    {
+      "name": "The Lion and the Mouse",
+      "facet": "Fábulas y sus moralejas",
+      "known_at": 3
+    },
+    {
+      "name": "The Crow and the Pitcher",
+      "facet": "Fábulas y sus moralejas",
+      "known_at": 6
+    },
+    {
+      "name": "The Goose That Laid the Golden Eggs",
+      "facet": "Fábulas y sus moralejas",
+      "known_at": 4
+    },
+    {
+      "name": "The Town Mouse and the Country Mouse",
+      "facet": "Fábulas y sus moralejas",
+      "known_at": 4
+    },
+    {
+      "name": "Aesop",
+      "facet": "Fábulas y sus moralejas",
+      "known_at": 8
+    },
+    {
+      "name": "Panchatantra",
+      "facet": "Fábulas y sus moralejas",
+      "known_at": 13
+    },
+    {
+      "name": "Old MacDonald Had a Farm",
+      "facet": "Rimas, nanas y adivinanzas",
+      "known_at": 2
+    },
+    {
+      "name": "Itsy Bitsy Spider",
+      "facet": "Rimas, nanas y adivinanzas",
+      "known_at": 2
+    },
+    {
+      "name": "Tongue twister",
+      "facet": "Rimas, nanas y adivinanzas",
+      "known_at": 3
+    },
+    {
+      "name": "Riddle",
+      "facet": "Rimas, nanas y adivinanzas",
+      "known_at": 2
+    },
+    {
+      "name": "Treasure Island",
+      "facet": "Clásicos juveniles de aventuras",
+      "known_at": 6
+    },
+    {
+      "name": "Gulliver's Travels",
+      "facet": "Clásicos juveniles de aventuras",
+      "known_at": 6
+    },
+    {
+      "name": "Alice's Adventures in Wonderland",
+      "facet": "Clásicos juveniles de aventuras",
+      "known_at": 2
+    },
+    {
+      "name": "The Jungle Book",
+      "facet": "Clásicos juveniles de aventuras",
+      "known_at": 2
+    },
+    {
+      "name": "The Wonderful Wizard of Oz",
+      "facet": "Clásicos juveniles de aventuras",
+      "known_at": 4
+    },
+    {
+      "name": "Little Women",
+      "facet": "Clásicos juveniles de aventuras",
+      "known_at": 8
+    },
+    {
+      "name": "The Secret Garden",
+      "facet": "Clásicos juveniles de aventuras",
+      "known_at": 9
+    },
+    {
+      "name": "The Three Musketeers",
+      "facet": "Clásicos juveniles de aventuras",
+      "known_at": 7
+    },
+    {
+      "name": "The Wonderful Adventures of Nils",
+      "facet": "Clásicos juveniles de aventuras",
+      "known_at": 10
+    },
+    {
+      "name": "A Christmas Carol",
+      "facet": "Clásicos juveniles de aventuras",
+      "known_at": 6
+    },
+    {
+      "name": "Jules Verne",
+      "facet": "Autores infantiles del mundo",
+      "known_at": 8
+    },
+    {
+      "name": "Tove Jansson",
+      "facet": "Autores infantiles del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Hergé",
+      "facet": "Autores infantiles del mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Julia Donaldson",
+      "facet": "Autores infantiles del mundo",
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "South American Jungle Tales",
+      "facet": "Literatura infantil hispanoamericana",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "The Hunger Games",
+      "facet": "Sagas juveniles modernas",
+      "known_at": 6
+    },
+    {
+      "name": "Diary of a Wimpy Kid",
+      "facet": "Sagas juveniles modernas",
+      "known_at": 4
+    },
+    {
+      "name": "Twilight",
+      "facet": "Sagas juveniles modernas",
+      "known_at": 8
+    },
+    {
+      "name": "The Chronicles of Narnia",
+      "facet": "Sagas juveniles modernas",
+      "known_at": 6
+    },
+    {
+      "name": "Captain Underpants",
+      "facet": "Sagas juveniles modernas",
+      "known_at": 6,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Dog Man",
+      "facet": "Sagas juveniles modernas",
+      "known_at": 5,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "The Hobbit",
+      "facet": "Sagas juveniles modernas",
+      "known_at": 7
+    },
+    {
+      "name": "The Lord of the Rings",
+      "facet": "Sagas juveniles modernas",
+      "known_at": 7
+    },
+    {
+      "name": "Moomins",
+      "facet": "Sagas juveniles modernas",
+      "known_at": 9
+    },
+    {
+      "name": "The Very Hungry Caterpillar",
+      "facet": "Álbumes ilustrados y primeros libros",
+      "known_at": 2
+    },
+    {
+      "name": "Where the Wild Things Are",
+      "facet": "Álbumes ilustrados y primeros libros",
+      "known_at": 5
+    },
+    {
+      "name": "The Gruffalo",
+      "facet": "Álbumes ilustrados y primeros libros",
+      "known_at": 4,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Guess How Much I Love You",
+      "facet": "Álbumes ilustrados y primeros libros",
+      "known_at": 6
+    },
+    {
+      "name": "Where's Waldo?",
+      "facet": "Álbumes ilustrados y primeros libros",
+      "known_at": 3,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "The Cat in the Hat",
+      "facet": "Álbumes ilustrados y primeros libros",
+      "known_at": 4
+    },
+    {
+      "name": "Elmer the Patchwork Elephant",
+      "facet": "Álbumes ilustrados y primeros libros",
+      "known_at": 7,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "The Color Monster",
+      "facet": "Álbumes ilustrados y primeros libros",
+      "known_at": 6
+    },
+    {
+      "name": "Lift-the-flap book",
+      "facet": "Álbumes ilustrados y primeros libros",
+      "known_at": 4
+    },
+    {
+      "name": "Paddington Bear",
+      "facet": "Animales protagonistas de libros",
+      "known_at": 3
+    },
+    {
+      "name": "Curious George",
+      "facet": "Animales protagonistas de libros",
+      "known_at": 5,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Clifford the Big Red Dog",
+      "facet": "Animales protagonistas de libros",
+      "known_at": 5,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Cheshire Cat",
+      "facet": "Animales protagonistas de libros",
+      "known_at": 5
+    },
+    {
+      "name": "Eeyore",
+      "facet": "Animales protagonistas de libros",
+      "known_at": 4
+    },
+    {
+      "name": "Snowy",
+      "facet": "Animales protagonistas de libros",
+      "known_at": 5
+    },
+    {
+      "name": "Charlie and the Chocolate Factory",
+      "facet": "Libros llevados al cine",
+      "known_at": 3
+    },
+    {
+      "name": "The NeverEnding Story",
+      "facet": "Libros llevados al cine",
+      "known_at": 8
+    },
+    {
+      "name": "James and the Giant Peach",
+      "facet": "Libros llevados al cine",
+      "known_at": 8
+    },
+    {
+      "name": "The Witches",
+      "facet": "Libros llevados al cine",
+      "known_at": 7
+    },
+    {
+      "name": "Doctor Dolittle",
+      "facet": "Libros llevados al cine",
+      "known_at": 6
+    },
+    {
+      "name": "How the Grinch Stole Christmas!",
+      "facet": "Libros llevados al cine",
+      "known_at": 4
+    },
+    {
+      "name": "Kiki's Delivery Service",
+      "facet": "Libros llevados al cine",
+      "known_at": 11
+    },
+    {
+      "name": "Table of contents",
+      "facet": "El libro y sus partes",
+      "known_at": 6
+    },
+    {
+      "name": "Prologue",
+      "facet": "El libro y sus partes",
+      "known_at": 8
+    },
+    {
+      "name": "Footnote",
+      "facet": "El libro y sus partes",
+      "known_at": 11
+    },
+    {
+      "name": "Preface",
+      "facet": "El libro y sus partes",
+      "known_at": 10
+    },
+    {
+      "name": "Index",
+      "facet": "El libro y sus partes",
+      "known_at": 9
+    },
+    {
+      "name": "Publisher",
+      "facet": "El libro y sus partes",
+      "known_at": 8
+    },
+    {
+      "name": "Illustration",
+      "facet": "El libro y sus partes",
+      "known_at": 2
+    },
+    {
+      "name": "Happily ever after",
+      "facet": "El libro y sus partes",
+      "known_at": 1
+    },
+    {
+      "name": "Sequel",
+      "facet": "El libro y sus partes",
+      "known_at": 7
+    },
+    {
+      "name": "Trilogy",
+      "facet": "El libro y sus partes",
+      "known_at": 7
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-15",
+      "added": 88,
+      "unused": 156
     }
   ]
 }

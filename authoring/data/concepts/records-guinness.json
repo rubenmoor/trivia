@@ -168,7 +168,8 @@
     {
       "name": "Wayne Gretzky",
       "facet": "Hazañas deportivas y atléticas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Michael Jordan",
@@ -208,7 +209,8 @@
     {
       "name": "Gran Pirámide de Cholula",
       "facet": "Edificios y construcciones gigantes",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Concorde",
@@ -410,37 +412,44 @@
     {
       "name": "White Christmas",
       "facet": "Récords de cine, música y videojuegos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Aves de Colombia",
       "facet": "Récords colombianos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mariposas de Colombia",
       "facet": "Récords colombianos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Orquídeas de Colombia",
       "facet": "Récords colombianos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Egan Bernal",
       "facet": "Récords colombianos",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Caterine Ibargüen",
       "facet": "Récords colombianos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Óscar Figueroa",
       "facet": "Récords colombianos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Libro Guinness de los récords",
@@ -502,12 +511,14 @@
     {
       "name": "Ripley's ¡Aunque usted no lo crea!",
       "facet": "Historia del libro Guinness",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Condado de Wexford",
       "facet": "Historia del libro Guinness",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     }
   ]
 }

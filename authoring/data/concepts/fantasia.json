@@ -221,7 +221,8 @@
     {
       "name": "Vela mágica de los Madrigal",
       "facet": "Objetos y armas mágicas",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mapa del Merodeador",

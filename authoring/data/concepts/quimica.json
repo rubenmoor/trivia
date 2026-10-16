@@ -602,7 +602,8 @@
     {
       "name": "Sal de frutas",
       "facet": "Química en la cocina",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Jabón",
@@ -637,7 +638,8 @@
     {
       "name": "Límpido",
       "facet": "Limpieza, aseo y cosméticos",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hipoclorito de sodio",

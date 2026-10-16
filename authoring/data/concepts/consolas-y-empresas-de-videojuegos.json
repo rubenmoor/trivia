@@ -581,7 +581,8 @@
     {
       "name": "Family Game",
       "facet": "Historia y generaciones de consolas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Consolas retro mini",
@@ -606,7 +607,8 @@
     {
       "name": "Salón de maquinitas",
       "facet": "Arcades y máquinas recreativas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cabina de arcade",
@@ -906,7 +908,8 @@
     {
       "name": "Clasificación ESRB",
       "facet": "Ferias, ventas y negocio del videojuego",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "PEGI",
@@ -921,7 +924,8 @@
     {
       "name": "GameStop",
       "facet": "Ferias, ventas y negocio del videojuego",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     }
   ]
 }

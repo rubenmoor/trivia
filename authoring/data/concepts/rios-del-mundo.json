@@ -71,7 +71,8 @@
     {
       "name": "Río Magdalena",
       "facet": "Grandes ríos de América",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Orinoco",
@@ -81,7 +82,8 @@
     {
       "name": "Río Cauca",
       "facet": "Grandes ríos de América",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Paraná",
@@ -96,7 +98,8 @@
     {
       "name": "Río Colorado",
       "facet": "Grandes ríos de América",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "San Lorenzo",
@@ -106,22 +109,26 @@
     {
       "name": "Yukón",
       "facet": "Grandes ríos de América",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Misuri",
       "facet": "Grandes ríos de América",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Río Uruguay",
       "facet": "Grandes ríos de América",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Río Paraguay",
       "facet": "Grandes ríos de América",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Río Negro",
@@ -131,12 +138,14 @@
     {
       "name": "Río Columbia",
       "facet": "Grandes ríos de América",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Hudson",
       "facet": "Grandes ríos de América",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Madeira",
@@ -146,12 +155,14 @@
     {
       "name": "Río Atrato",
       "facet": "Grandes ríos de América",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ohio",
       "facet": "Grandes ríos de América",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Danubio",
@@ -186,17 +197,20 @@
     {
       "name": "Ebro",
       "facet": "Grandes ríos de Europa",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tajo",
       "facet": "Grandes ríos de Europa",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Guadalquivir",
       "facet": "Grandes ríos de Europa",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Loira",
@@ -206,7 +220,8 @@
     {
       "name": "Duero",
       "facet": "Grandes ríos de Europa",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Elba",
@@ -501,7 +516,8 @@
     {
       "name": "Salto del Tequendama",
       "facet": "Cataratas y rápidos",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Garganta del Diablo",
@@ -551,7 +567,8 @@
     {
       "name": "Cataratas de Yosemite",
       "facet": "Cataratas y rápidos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Lagos de Plitvice",
@@ -561,7 +578,8 @@
     {
       "name": "Annie Edson Taylor",
       "facet": "Cataratas y rápidos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Estuario",
@@ -581,7 +599,8 @@
     {
       "name": "Delta del Misisipi",
       "facet": "Desembocaduras, deltas y estuarios",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Delta del Okavango",
@@ -606,12 +625,14 @@
     {
       "name": "Delta del Ebro",
       "facet": "Desembocaduras, deltas y estuarios",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bocas de Ceniza",
       "facet": "Desembocaduras, deltas y estuarios",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Marisma",
@@ -741,7 +762,8 @@
     {
       "name": "Puente Pumarejo",
       "facet": "Ciudades y puentes sobre ríos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Manaos",
@@ -756,7 +778,8 @@
     {
       "name": "Honda",
       "facet": "Ciudades y puentes sobre ríos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Varanasi",
@@ -816,12 +839,14 @@
     {
       "name": "Lewis y Clark",
       "facet": "Ríos en la historia y las civilizaciones",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Fiebre del oro de Klondike",
       "facet": "Ríos en la historia y las civilizaciones",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Expedición de Humboldt",
@@ -836,7 +861,8 @@
     {
       "name": "Batalla del Puente de Boyacá",
       "facet": "Ríos en la historia y las civilizaciones",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "David Livingstone",
@@ -861,7 +887,8 @@
     {
       "name": "Washington cruzando el Delaware",
       "facet": "Ríos en la historia y las civilizaciones",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Shaduf",
@@ -886,7 +913,8 @@
     {
       "name": "La Llorona",
       "facet": "Ríos en mitos, películas y canciones",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Moisés en el Nilo",
@@ -901,7 +929,8 @@
     {
       "name": "Huckleberry Finn",
       "facet": "Ríos en mitos, películas y canciones",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Moon River",
@@ -926,7 +955,8 @@
     {
       "name": "Yacumama",
       "facet": "Ríos en mitos, películas y canciones",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hapi",
@@ -981,7 +1011,8 @@
     {
       "name": "Hidroituango",
       "facet": "Usos del río: navegación, represas y agua",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Esclusa",

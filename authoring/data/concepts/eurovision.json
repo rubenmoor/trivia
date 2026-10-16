@@ -86,12 +86,14 @@
     {
       "name": "Massiel",
       "facet": "Ganadores históricos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Salomé",
       "facet": "Ganadores históricos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Johnny Logan",
@@ -161,7 +163,8 @@
     {
       "name": "Brotherhood of Man",
       "facet": "Ganadores históricos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Waterloo",
@@ -196,7 +199,8 @@
     {
       "name": "Eres tú",
       "facet": "Canciones famosas del festival",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rise Like a Phoenix",
@@ -241,12 +245,14 @@
     {
       "name": "Cha Cha Cha",
       "facet": "Canciones famosas del festival",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Save Your Kisses for Me",
       "facet": "Canciones famosas del festival",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Puppet on a String",
@@ -306,7 +312,8 @@
     {
       "name": "Millstreet",
       "facet": "Ciudades y sedes",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Edimburgo",
@@ -416,7 +423,8 @@
     {
       "name": "Falda arrancada de Bucks Fizz",
       "facet": "Puestas en escena y vestuario",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Rueda de hámster",
@@ -476,7 +484,8 @@
     {
       "name": "Jedward",
       "facet": "Puestas en escena y vestuario",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Dschinghis Khan",
@@ -646,7 +655,8 @@
     {
       "name": "Raphael",
       "facet": "Estrellas lanzadas por Eurovisión",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mocedades",
@@ -656,12 +666,14 @@
     {
       "name": "Cliff Richard",
       "facet": "Estrellas lanzadas por Eurovisión",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Engelbert Humperdinck",
       "facet": "Estrellas lanzadas por Eurovisión",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Bonnie Tyler",
@@ -686,27 +698,32 @@
     {
       "name": "Rosa López",
       "facet": "Estrellas lanzadas por Eurovisión",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chanel",
       "facet": "Estrellas lanzadas por Eurovisión",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Blanca Paloma",
       "facet": "Estrellas lanzadas por Eurovisión",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pastora Soler",
       "facet": "Estrellas lanzadas por Eurovisión",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Edurne",
       "facet": "Estrellas lanzadas por Eurovisión",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mahmood",
@@ -726,7 +743,8 @@
     {
       "name": "Melody",
       "facet": "Estrellas lanzadas por Eurovisión",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Patricia Kaas",
@@ -846,17 +864,20 @@
     {
       "name": "Graham Norton",
       "facet": "Eurovisión en el cine y la TV",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Terry Wogan",
       "facet": "Eurovisión en el cine y la TV",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "José Luis Uribarri",
       "facet": "Eurovisión en el cine y la TV",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Petra Mede",
@@ -866,17 +887,20 @@
     {
       "name": "Rodolfo Chikilicuatre",
       "facet": "Eurovisión en el cine y la TV",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Operación Triunfo",
       "facet": "Eurovisión en el cine y la TV",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Father Ted",
       "facet": "Eurovisión en el cine y la TV",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Comentarista de Eurovisión",
@@ -896,7 +920,8 @@
     {
       "name": "Benidorm Fest",
       "facet": "Versiones y festivales hermanos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Festival de Sanremo",
@@ -906,7 +931,8 @@
     {
       "name": "American Song Contest",
       "facet": "Versiones y festivales hermanos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Intervisión",
@@ -916,7 +942,8 @@
     {
       "name": "Festival OTI de la Canción",
       "facet": "Versiones y festivales hermanos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Eurovision Choir",

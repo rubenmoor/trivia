@@ -244,67 +244,80 @@
     {
       "name": "Viaducto César Gaviria Trujillo",
       "facet": "Puentes de Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Puente Hisgaura",
       "facet": "Puentes de Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Puente del Común",
       "facet": "Puentes de Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Puente Ortiz",
       "facet": "Puentes de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Puente Internacional Simón Bolívar",
       "facet": "Puentes de Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Puente Internacional de Rumichaca",
       "facet": "Puentes de Colombia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Puente Navarro",
       "facet": "Puentes de Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Puente de Plato",
       "facet": "Puentes de Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Puente Gilberto Echeverri Mejía",
       "facet": "Puentes de Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Puente Chirajara",
       "facet": "Puentes de Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Puente de San Antonio de Cali",
       "facet": "Puentes de Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Puente Guillermo Gaviria Correa",
       "facet": "Puentes de Colombia",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Puente Heredia",
       "facet": "Puentes de Colombia",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Puente Romano de Alcántara",
@@ -404,7 +417,8 @@
     {
       "name": "Calzada del lago Pontchartrain",
       "facet": "Récords y megaestructuras",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Puente del Rey Fahd",
@@ -444,7 +458,8 @@
     {
       "name": "Puente Seven Mile",
       "facet": "Récords y megaestructuras",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Puente de cristal de Zhangjiajie",
@@ -495,7 +510,8 @@
     {
       "name": "José María Villa",
       "facet": "Ingenieros y hazañas de construcción",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Puente de Tacoma Narrows",
@@ -576,7 +592,8 @@
     {
       "name": "Puente natural de Icononzo",
       "facet": "Puentes naturales y colgantes de cuerda",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rainbow Bridge de Utah",
@@ -596,7 +613,8 @@
     {
       "name": "Tarabita",
       "facet": "Puentes naturales y colgantes de cuerda",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Puente tibetano",
@@ -651,12 +669,14 @@
     {
       "name": "Puente festivo",
       "facet": "Puentes en lenguaje y costumbres",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ley Emiliani",
       "facet": "Puentes en lenguaje y costumbres",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Candados del amor",
@@ -671,7 +691,8 @@
     {
       "name": "A enemigo que huye, puente de plata",
       "facet": "Puentes en lenguaje y costumbres",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pontífice",

@@ -216,7 +216,8 @@
     {
       "name": "Templo Mayor",
       "facet": "Pirámides mesoamericanas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tikal",
@@ -241,12 +242,14 @@
     {
       "name": "Calakmul",
       "facet": "Pirámides mesoamericanas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El Tajín",
       "facet": "Pirámides mesoamericanas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Eco del quetzal",
@@ -361,7 +364,8 @@
     {
       "name": "Huaca del Sol",
       "facet": "Zigurats y otras pirámides antiguas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pirámide Cestia",
@@ -371,7 +375,8 @@
     {
       "name": "Pirámides de Güímar",
       "facet": "Zigurats y otras pirámides antiguas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Borobudur",
@@ -461,12 +466,14 @@
     {
       "name": "Pirámide de Memphis",
       "facet": "Pirámides modernas y geometría",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Transamerica Pyramid",
       "facet": "Pirámides modernas y geometría",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Pirámide de Tirana",

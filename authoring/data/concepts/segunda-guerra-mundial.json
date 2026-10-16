@@ -796,7 +796,8 @@
     {
       "name": "Pepe Carioca",
       "facet": "Latinoamérica y Colombia en guerra",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Juan Domingo Perón",
@@ -806,22 +807,26 @@
     {
       "name": "Submarinos alemanes en el Caribe",
       "facet": "Latinoamérica y Colombia en guerra",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Neutralidad argentina",
       "facet": "Latinoamérica y Colombia en guerra",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fuerza Expedicionaria Brasileña",
       "facet": "Latinoamérica y Colombia en guerra",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Escuadrón 201",
       "facet": "Latinoamérica y Colombia en guerra",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Batalla del Río de la Plata",
@@ -836,22 +841,26 @@
     {
       "name": "Eduardo Santos",
       "facet": "Latinoamérica y Colombia en guerra",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Alfonso López Pumarejo",
       "facet": "Latinoamérica y Colombia en guerra",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "SCADTA",
       "facet": "Latinoamérica y Colombia en guerra",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ruptura de relaciones de Colombia con el Eje",
       "facet": "Latinoamérica y Colombia en guerra",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Adolf Eichmann",
@@ -861,27 +870,32 @@
     {
       "name": "Goleta Resolute",
       "facet": "Latinoamérica y Colombia en guerra",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hotel Sabaneta de Fusagasugá",
       "facet": "Latinoamérica y Colombia en guerra",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Getúlio Vargas",
       "facet": "Latinoamérica y Colombia en guerra",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hundimiento del Potrero del Llano",
       "facet": "Latinoamérica y Colombia en guerra",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Soldados del caucho",
       "facet": "Latinoamérica y Colombia en guerra",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Política del Buen Vecino",
@@ -1006,7 +1020,8 @@
     {
       "name": "Keep Calm and Carry On",
       "facet": "Palabras, apodos y símbolos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "V de la victoria",

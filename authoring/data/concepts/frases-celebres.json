@@ -121,7 +121,8 @@
     {
       "name": "Nunca tantos debieron tanto a tan pocos",
       "facet": "Frases de líderes y próceres",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Hasta la victoria siempre",
@@ -141,7 +142,8 @@
     {
       "name": "Las armas os han dado la independencia, las leyes os darán la libertad",
       "facet": "Frases de líderes y próceres",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Derribe este muro",
@@ -166,7 +168,8 @@
     {
       "name": "El respeto al derecho ajeno es la paz",
       "facet": "Frases de líderes y próceres",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gobierno del pueblo, por el pueblo y para el pueblo",
@@ -277,7 +280,8 @@
     {
       "name": "Verde que te quiero verde",
       "facet": "Frases de la literatura clásica",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Elemental, querido Watson",
@@ -287,7 +291,8 @@
     {
       "name": "Con diez cañones por banda",
       "facet": "Frases de la literatura clásica",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Algo huele a podrido en Dinamarca",
@@ -307,7 +312,8 @@
     {
       "name": "Juventud, divino tesoro",
       "facet": "Frases de la literatura clásica",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Muchos años después, frente al pelotón de fusilamiento",
@@ -317,7 +323,8 @@
     {
       "name": "El coronel no tiene quien le escriba",
       "facet": "Frases de García Márquez y letras colombianas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La vida no es la que uno vivió, sino la que uno recuerda",
@@ -337,32 +344,38 @@
     {
       "name": "Érase una viejecita sin nadita que comer",
       "facet": "Frases de García Márquez y letras colombianas",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El hijo de Rana, Rinrín Renacuajo",
       "facet": "Frases de García Márquez y letras colombianas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pastorcita perdió sus ovejas",
       "facet": "Frases de García Márquez y letras colombianas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Una noche toda llena de perfumes",
       "facet": "Frases de García Márquez y letras colombianas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "María de Jorge Isaacs",
       "facet": "Frases de García Márquez y letras colombianas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Los devoró la selva",
       "facet": "Frases de García Márquez y letras colombianas",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La soledad de América Latina",
@@ -377,7 +390,8 @@
     {
       "name": "Yo no vine a decir un discurso",
       "facet": "Frases de García Márquez y letras colombianas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Esto es Esparta",
@@ -392,7 +406,8 @@
     {
       "name": "Mi casa, teléfono",
       "facet": "Frases de películas",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ohana significa familia",
@@ -437,17 +452,20 @@
     {
       "name": "¡Se me chispoteó!",
       "facet": "Frases de dibujos animados y series",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Que no panda el cúnico",
       "facet": "Frases de dibujos animados y series",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "¿Cómo estás tú?",
       "facet": "Frases de dibujos animados y series",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cowabunga",
@@ -547,7 +565,8 @@
     {
       "name": "Victory Royale",
       "facet": "Frases de videojuegos y superhéroes",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Vuela como mariposa, pica como abeja",
@@ -562,7 +581,8 @@
     {
       "name": "Once contra once y siempre gana Alemania",
       "facet": "Frases del deporte y el fútbol",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Barrilete cósmico",
@@ -652,7 +672,8 @@
     {
       "name": "Godspeed, John Glenn",
       "facet": "Frases de la exploración espacial",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Fracasar no es una opción",
@@ -717,7 +738,8 @@
     {
       "name": "Yo soy yo y mi circunstancia",
       "facet": "Frases de filósofos y pensadores",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El infierno son los otros",
@@ -762,17 +784,20 @@
     {
       "name": "¡Oh gloria inmarcesible!",
       "facet": "Lemas, himnos y frases patrias",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Libertad y Orden",
       "facet": "Lemas, himnos y frases patrias",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "E pluribus unum",
       "facet": "Lemas, himnos y frases patrias",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Orden y progreso",
@@ -782,22 +807,26 @@
     {
       "name": "Marchemos, hijos de la patria",
       "facet": "Lemas, himnos y frases patrias",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mexicanos, al grito de guerra",
       "facet": "Lemas, himnos y frases patrias",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Oíd, mortales, el grito sagrado",
       "facet": "Lemas, himnos y frases patrias",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Dios salve al rey",
       "facet": "Lemas, himnos y frases patrias",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Plus ultra",
@@ -807,7 +836,8 @@
     {
       "name": "Cesó la horrible noche",
       "facet": "Lemas, himnos y frases patrias",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Unidos en la diversidad",
@@ -822,17 +852,20 @@
     {
       "name": "Somos libres, seámoslo siempre",
       "facet": "Lemas, himnos y frases patrias",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Oh libertad que perfumas",
       "facet": "Lemas, himnos y frases patrias",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Puro, Chile, es tu cielo azulado",
       "facet": "Lemas, himnos y frases patrias",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     }
   ]
 }

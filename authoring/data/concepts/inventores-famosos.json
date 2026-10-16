@@ -216,7 +216,8 @@
     {
       "name": "Sello postal",
       "facet": "Inventores de las comunicaciones",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Mensaje de texto",
@@ -346,7 +347,8 @@
     {
       "name": "Isaac Peral",
       "facet": "Pioneros del transporte y el vuelo",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Alexander Fleming",
@@ -446,7 +448,8 @@
     {
       "name": "Curita",
       "facet": "Inventos médicos y sus creadores",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Resonancia magnética",
@@ -916,17 +919,20 @@
     {
       "name": "Superpegante",
       "facet": "Inventos por accidente y sus historias",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Válvula de Hakim",
       "facet": "Inventores latinoamericanos y colombianos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Guillermo González Camarena",
       "facet": "Inventores latinoamericanos y colombianos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ladislao Biro",
@@ -941,7 +947,8 @@
     {
       "name": "Juan Vucetich",
       "facet": "Inventores latinoamericanos y colombianos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Huellas dactilares",
@@ -956,7 +963,8 @@
     {
       "name": "Luis Federico Leloir",
       "facet": "Inventores latinoamericanos y colombianos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Quipu",
@@ -981,7 +989,8 @@
     {
       "name": "Hipsómetro",
       "facet": "Inventores latinoamericanos y colombianos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hermanos Lumière",
@@ -1186,7 +1195,8 @@
     {
       "name": "Rueda de Chicago",
       "facet": "Inventos de juguetes y entretenimiento",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Oso de peluche",

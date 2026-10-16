@@ -441,12 +441,14 @@
     {
       "name": "Bolera de la Casa Blanca",
       "facet": "La Casa Blanca",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Carrera de huevos de Pascua de la Casa Blanca",
       "facet": "La Casa Blanca",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Camp David",
@@ -816,7 +818,8 @@
     {
       "name": "Perdón presidencial del pavo",
       "facet": "Mascotas y curiosidades presidenciales",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Bo",
@@ -826,37 +829,44 @@
     {
       "name": "Fala",
       "facet": "Mascotas y curiosidades presidenciales",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Socks",
       "facet": "Mascotas y curiosidades presidenciales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Major",
       "facet": "Mascotas y curiosidades presidenciales",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Macaroni",
       "facet": "Mascotas y curiosidades presidenciales",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Caimán de John Quincy Adams",
       "facet": "Mascotas y curiosidades presidenciales",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Mapache de Coolidge",
       "facet": "Mascotas y curiosidades presidenciales",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Bañera de Taft",
       "facet": "Mascotas y curiosidades presidenciales",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "William Howard Taft",
@@ -876,7 +886,8 @@
     {
       "name": "Gomitas de Reagan",
       "facet": "Mascotas y curiosidades presidenciales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Saxofón de Bill Clinton",
@@ -896,7 +907,8 @@
     {
       "name": "Lincoln luchador",
       "facet": "Mascotas y curiosidades presidenciales",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Hamilton",
@@ -961,7 +973,8 @@
     {
       "name": "Sala de los Presidentes de Disney",
       "facet": "Presidentes en el cine y la cultura pop",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Bill y Ted",
@@ -981,7 +994,8 @@
     {
       "name": "Tratados Torrijos-Carter",
       "facet": "Presidentes y América Latina",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Política del Gran Garrote",
@@ -991,12 +1005,14 @@
     {
       "name": "Visita de Kennedy a Colombia",
       "facet": "Presidentes y América Latina",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Kennedy (localidad de Bogotá)",
       "facet": "Presidentes y América Latina",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bahía de Cochinos",
@@ -1036,7 +1052,8 @@
     {
       "name": "Plan Colombia",
       "facet": "Presidentes y América Latina",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Muro fronterizo con México",

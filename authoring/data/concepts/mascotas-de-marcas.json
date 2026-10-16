@@ -12,7 +12,8 @@
     "Animales en emblemas de marca",
     "Mascotas de Mundiales y Olímpicos",
     "Lemas, frases y comerciales famosos",
-    "Historia y creadores de mascotas"
+    "Historia y creadores de mascotas",
+    "Mascotas de Japón y Asia"
   ],
   "axis_fit": {
     "move": {
@@ -61,7 +62,8 @@
     {
       "name": "Melvin el elefante",
       "facet": "Mascotas de cereales y desayunos",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Sam el Tucán",
@@ -71,17 +73,20 @@
     {
       "name": "Conejo de Trix",
       "facet": "Mascotas de cereales y desayunos",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Capitán Crunch",
       "facet": "Mascotas de cereales y desayunos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Count Chocula",
       "facet": "Mascotas de cereales y desayunos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Snap, Crackle y Pop",
@@ -91,7 +96,8 @@
     {
       "name": "Buzz la abeja de Honey Nut Cheerios",
       "facet": "Mascotas de cereales y desayunos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Lucky el duende",
@@ -106,7 +112,8 @@
     {
       "name": "Sonny el pájaro cucú",
       "facet": "Mascotas de cereales y desayunos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Chef Wendell",
@@ -117,27 +124,32 @@
     {
       "name": "Fruity Pebbles",
       "facet": "Mascotas de cereales y desayunos",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Dig'em la rana",
       "facet": "Mascotas de cereales y desayunos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Birdie",
       "facet": "Mascotas de comida rápida",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Fry Kids",
       "facet": "Mascotas de comida rápida",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Alcalde McCheese",
       "facet": "Mascotas de comida rápida",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "McDonaldland",
@@ -147,12 +159,14 @@
     {
       "name": "Jack de Jack in the Box",
       "facet": "Mascotas de comida rápida",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Little Caesar",
       "facet": "Mascotas de comida rápida",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Chihuahua de Taco Bell",
@@ -177,17 +191,20 @@
     {
       "name": "Elfos de Keebler",
       "facet": "Mascotas de dulces y pasabocas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Twinkie the Kid",
       "facet": "Mascotas de dulces y pasabocas",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Little Debbie",
       "facet": "Mascotas de dulces y pasabocas",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Vaca Milka",
@@ -207,7 +224,8 @@
     {
       "name": "Sun-Maid",
       "facet": "Mascotas de dulces y pasabocas",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "La vaca que ríe",
@@ -222,7 +240,8 @@
     {
       "name": "Kool-Aid Man",
       "facet": "Mascotas de bebidas y jugos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Toros de Red Bull",
@@ -252,7 +271,8 @@
     {
       "name": "Chocolate Abuelita",
       "facet": "Mascotas de bebidas y jugos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Garra de Monster Energy",
@@ -267,67 +287,80 @@
     {
       "name": "Punchy de Hawaiian Punch",
       "facet": "Mascotas de bebidas y jugos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Elsie la vaca",
       "facet": "Mascotas de bebidas y jugos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Mula Conchita",
       "facet": "Mascotas de marcas colombianas",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gaseosa Colombiana",
       "facet": "Mascotas de marcas colombianas",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hamburguesas El Corral",
       "facet": "Mascotas de marcas colombianas",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Jabón Rey",
       "facet": "Mascotas de marcas colombianas",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Galletas Noel",
       "facet": "Mascotas de marcas colombianas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chocolisto",
       "facet": "Mascotas de marcas colombianas",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Supercoco",
       "facet": "Mascotas de marcas colombianas",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Trululú",
       "facet": "Mascotas de marcas colombianas",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pato Purific",
       "facet": "Mascotas de aseo y hogar",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Osos de Charmin",
       "facet": "Mascotas de aseo y hogar",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Osito Snuggle",
       "facet": "Mascotas de aseo y hogar",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Cachorro de Scottex",
@@ -354,17 +387,20 @@
     {
       "name": "Técnico de Maytag",
       "facet": "Mascotas de aseo y hogar",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Pato de Aflac",
       "facet": "Mascotas de aseo y hogar",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Scrubbing Bubbles",
       "facet": "Mascotas de aseo y hogar",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Gato de Whiskas",
@@ -619,12 +655,14 @@
     {
       "name": "Got Milk?",
       "facet": "Lemas, frases y comerciales famosos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Where's the beef?",
       "facet": "Lemas, frases y comerciales famosos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Connecting People",
@@ -654,17 +692,423 @@
     {
       "name": "Javier Mariscal",
       "facet": "Historia y creadores de mascotas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Willard Scott",
       "facet": "Historia y creadores de mascotas",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Mascota (palabra)",
       "facet": "Historia y creadores de mascotas",
       "known_at": 12
+    },
+    {
+      "name": "Tony the Tiger",
+      "facet": "Mascotas de cereales y desayunos",
+      "known_at": 3
+    },
+    {
+      "name": "Quaker Oats Man",
+      "facet": "Mascotas de cereales y desayunos",
+      "known_at": 9
+    },
+    {
+      "name": "Coco the Monkey",
+      "facet": "Mascotas de cereales y desayunos",
+      "known_at": 6
+    },
+    {
+      "name": "Honey Monster",
+      "facet": "Mascotas de cereales y desayunos",
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Chip the Wolf",
+      "facet": "Mascotas de cereales y desayunos",
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Boo Berry",
+      "facet": "Mascotas de cereales y desayunos",
+      "known_at": 13
+    },
+    {
+      "name": "The Burger King",
+      "facet": "Mascotas de comida rápida",
+      "known_at": 8
+    },
+    {
+      "name": "M&M's Red",
+      "facet": "Mascotas de dulces y pasabocas",
+      "known_at": 4
+    },
+    {
+      "name": "M&M's Yellow",
+      "facet": "Mascotas de dulces y pasabocas",
+      "known_at": 5
+    },
+    {
+      "name": "M&M's Green",
+      "facet": "Mascotas de dulces y pasabocas",
+      "known_at": 8
+    },
+    {
+      "name": "Chupa Chups logo",
+      "facet": "Mascotas de dulces y pasabocas",
+      "known_at": 5
+    },
+    {
+      "name": "Jolly Green Giant",
+      "facet": "Mascotas de dulces y pasabocas",
+      "known_at": 11
+    },
+    {
+      "name": "Gerber Baby",
+      "facet": "Mascotas de dulces y pasabocas",
+      "known_at": 11
+    },
+    {
+      "name": "Morton Salt Girl",
+      "facet": "Mascotas de dulces y pasabocas",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "California Raisins",
+      "facet": "Mascotas de dulces y pasabocas",
+      "known_at": 13
+    },
+    {
+      "name": "Coca-Cola Polar Bears",
+      "facet": "Mascotas de bebidas y jugos",
+      "known_at": 5
+    },
+    {
+      "name": "Coca-Cola Santa Claus",
+      "facet": "Mascotas de bebidas y jugos",
+      "known_at": 6
+    },
+    {
+      "name": "Starbucks Siren",
+      "facet": "Mascotas de bebidas y jugos",
+      "known_at": 8
+    },
+    {
+      "name": "Evian Roller Babies",
+      "facet": "Mascotas de bebidas y jugos",
+      "known_at": 12
+    },
+    {
+      "name": "Mr. Clean",
+      "facet": "Mascotas de aseo y hogar",
+      "known_at": 7
+    },
+    {
+      "name": "Mr. Muscle",
+      "facet": "Mascotas de aseo y hogar",
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Dulux Dog",
+      "facet": "Mascotas de aseo y hogar",
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Energizer Bunny",
+      "facet": "Mascotas de aseo y hogar",
+      "known_at": 7
+    },
+    {
+      "name": "Duracell Bunny",
+      "facet": "Mascotas de aseo y hogar",
+      "known_at": 7
+    },
+    {
+      "name": "GEICO Gecko",
+      "facet": "Mascotas de aseo y hogar",
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Aleksandr the Meerkat",
+      "facet": "Mascotas de aseo y hogar",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Old Spice Guy",
+      "facet": "Mascotas de aseo y hogar",
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Larry the Bird",
+      "facet": "Mascotas de carros, llantas y tecnología",
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Chrome Dino",
+      "facet": "Mascotas de carros, llantas y tecnología",
+      "known_at": 5
+    },
+    {
+      "name": "Spirit of Ecstasy",
+      "facet": "Mascotas de carros, llantas y tecnología",
+      "known_at": 11
+    },
+    {
+      "name": "Mack Bulldog",
+      "facet": "Mascotas de carros, llantas y tecnología",
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Moby Dock",
+      "facet": "Mascotas de carros, llantas y tecnología",
+      "known_at": 14
+    },
+    {
+      "name": "Rabbids",
+      "facet": "Mascotas de videojuegos y estudios",
+      "known_at": 7
+    },
+    {
+      "name": "Woody Woodpecker",
+      "facet": "Mascotas de videojuegos y estudios",
+      "known_at": 5
+    },
+    {
+      "name": "Pathé Rooster",
+      "facet": "Mascotas de videojuegos y estudios",
+      "known_at": 14
+    },
+    {
+      "name": "Lacoste Crocodile",
+      "facet": "Animales en emblemas de marca",
+      "known_at": 6
+    },
+    {
+      "name": "Puma Cat",
+      "facet": "Animales en emblemas de marca",
+      "known_at": 6
+    },
+    {
+      "name": "Jaguar Leaper",
+      "facet": "Animales en emblemas de marca",
+      "known_at": 8
+    },
+    {
+      "name": "Lamborghini Bull",
+      "facet": "Animales en emblemas de marca",
+      "known_at": 6
+    },
+    {
+      "name": "Dodge Ram",
+      "facet": "Animales en emblemas de marca",
+      "known_at": 11
+    },
+    {
+      "name": "Lufthansa Crane",
+      "facet": "Animales en emblemas de marca",
+      "known_at": 13
+    },
+    {
+      "name": "Nestlé Nest",
+      "facet": "Animales en emblemas de marca",
+      "known_at": 10
+    },
+    {
+      "name": "Dove Bird",
+      "facet": "Animales en emblemas de marca",
+      "known_at": 11
+    },
+    {
+      "name": "Saab Griffin",
+      "facet": "Animales en emblemas de marca",
+      "known_at": 14
+    },
+    {
+      "name": "Holden Lion",
+      "facet": "Animales en emblemas de marca",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "The Spheriks",
+      "facet": "Mascotas de Mundiales y Olímpicos",
+      "known_at": 13
+    },
+    {
+      "name": "Clutch",
+      "facet": "Mascotas de Mundiales y Olímpicos",
+      "known_at": 6
+    },
+    {
+      "name": "Maple",
+      "facet": "Mascotas de Mundiales y Olímpicos",
+      "known_at": 6
+    },
+    {
+      "name": "Sam the Olympic Eagle",
+      "facet": "Mascotas de Mundiales y Olímpicos",
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Hodori",
+      "facet": "Mascotas de Mundiales y Olímpicos",
+      "known_at": 13
+    },
+    {
+      "name": "Wenlock and Mandeville",
+      "facet": "Mascotas de Mundiales y Olímpicos",
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Syd, Olly and Millie",
+      "facet": "Mascotas de Mundiales y Olímpicos",
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Tina and Milo",
+      "facet": "Mascotas de Mundiales y Olímpicos",
+      "known_at": 7,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Red Bull Gives You Wings",
+      "facet": "Lemas, frases y comerciales famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Have a Break, Have a KitKat",
+      "facet": "Lemas, frases y comerciales famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Taste the Rainbow",
+      "facet": "Lemas, frases y comerciales famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Share a Coke",
+      "facet": "Lemas, frases y comerciales famosos",
+      "known_at": 7
+    },
+    {
+      "name": "The Best a Man Can Get",
+      "facet": "Lemas, frases y comerciales famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Eat Fresh",
+      "facet": "Lemas, frases y comerciales famosos",
+      "known_at": 10
+    },
+    {
+      "name": "You're Not You When You're Hungry",
+      "facet": "Lemas, frases y comerciales famosos",
+      "known_at": 10
+    },
+    {
+      "name": "The Happiest Place on Earth",
+      "facet": "Lemas, frases y comerciales famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Life's Good",
+      "facet": "Lemas, frases y comerciales famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Think Small",
+      "facet": "Lemas, frases y comerciales famosos",
+      "known_at": 14
+    },
+    {
+      "name": "I'd Like to Buy the World a Coke",
+      "facet": "Lemas, frases y comerciales famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Vorsprung durch Technik",
+      "facet": "Lemas, frases y comerciales famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Yuko Shimizu",
+      "facet": "Historia y creadores de mascotas",
+      "known_at": 14
+    },
+    {
+      "name": "Michelin brothers",
+      "facet": "Historia y creadores de mascotas",
+      "known_at": 13
+    },
+    {
+      "name": "Francis Barraud",
+      "facet": "Historia y creadores de mascotas",
+      "known_at": 15
+    },
+    {
+      "name": "Super Bowl commercials",
+      "facet": "Historia y creadores de mascotas",
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Kumamon",
+      "facet": "Mascotas de Japón y Asia",
+      "known_at": 10
+    },
+    {
+      "name": "Glico Man",
+      "facet": "Mascotas de Japón y Asia",
+      "known_at": 12
+    },
+    {
+      "name": "Domo-kun",
+      "facet": "Mascotas de Japón y Asia",
+      "known_at": 11
+    },
+    {
+      "name": "Amul Girl",
+      "facet": "Mascotas de Japón y Asia",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Koala's March",
+      "facet": "Mascotas de Japón y Asia",
+      "known_at": 9
+    },
+    {
+      "name": "Rilakkuma",
+      "facet": "Mascotas de Japón y Asia",
+      "known_at": 9
+    },
+    {
+      "name": "Peko-chan",
+      "facet": "Mascotas de Japón y Asia",
+      "known_at": 13
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-15",
+      "added": 76,
+      "unused": 150
     }
   ]
 }

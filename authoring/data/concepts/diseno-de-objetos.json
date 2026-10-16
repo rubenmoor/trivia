@@ -376,7 +376,8 @@
     {
       "name": "Bus escolar amarillo",
       "facet": "Diseño de carros y transporte",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Patineta eléctrica",
@@ -386,7 +387,8 @@
     {
       "name": "Motocarro",
       "facet": "Diseño de carros y transporte",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Vespa",
@@ -416,7 +418,8 @@
     {
       "name": "Balero",
       "facet": "Juguetes y juegos de diseño",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Interruptor de luz",
@@ -546,7 +549,8 @@
     {
       "name": "Hamaca de San Jacinto",
       "facet": "Artesanía y diseño colombiano",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Filigrana de Mompox",
@@ -561,17 +565,20 @@
     {
       "name": "Barniz de Pasto",
       "facet": "Artesanía y diseño colombiano",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Palma de iraca",
       "facet": "Artesanía y diseño colombiano",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Werregue",
       "facet": "Artesanía y diseño colombiano",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Botella de Coca-Cola",
@@ -611,7 +618,8 @@
     {
       "name": "Logo de Juan Valdez",
       "facet": "Logotipos, envases y empaques",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Caja de Toblerone",
@@ -621,7 +629,8 @@
     {
       "name": "Logo I ♥ NY",
       "facet": "Logotipos, envases y empaques",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Lata de sopa Campbell",

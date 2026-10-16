@@ -61,17 +61,20 @@
     {
       "name": "Queso costeño",
       "facet": "Quesos colombianos y campesinos",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Quesillo",
       "facet": "Quesos colombianos y campesinos",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Queso campesino",
       "facet": "Quesos colombianos y campesinos",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cuajada",
@@ -81,52 +84,62 @@
     {
       "name": "Queso Paipa",
       "facet": "Quesos colombianos y campesinos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Queso doble crema",
       "facet": "Quesos colombianos y campesinos",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Queso de capa",
       "facet": "Quesos colombianos y campesinos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Queso pera",
       "facet": "Quesos colombianos y campesinos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Queso de hoja",
       "facet": "Quesos colombianos y campesinos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Suero costeño",
       "facet": "Quesos colombianos y campesinos",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Queso del Caquetá",
       "facet": "Quesos colombianos y campesinos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Queso molido",
       "facet": "Quesos colombianos y campesinos",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ubaté",
       "facet": "Quesos colombianos y campesinos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Quesito antioqueño",
       "facet": "Quesos colombianos y campesinos",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Queso blanco",
@@ -191,7 +204,8 @@
     {
       "name": "Stilton",
       "facet": "Quesos famosos del mundo",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Pecorino",
@@ -206,12 +220,14 @@
     {
       "name": "Queso Oaxaca",
       "facet": "Quesos famosos del mundo",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Wensleydale",
       "facet": "Quesos famosos del mundo",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Cuajo",
@@ -331,7 +347,8 @@
     {
       "name": "Vaca Normando",
       "facet": "Leches y animales lecheros",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ordeño",
@@ -431,7 +448,8 @@
     {
       "name": "Queso tajado",
       "facet": "Tipos y familias de queso",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Denominación de origen",
@@ -536,12 +554,14 @@
     {
       "name": "Arepa de queso",
       "facet": "Platos y comidas con queso",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tequeño",
       "facet": "Platos y comidas con queso",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cheesecake",
@@ -556,12 +576,14 @@
     {
       "name": "Chocolate con queso",
       "facet": "Platos y comidas con queso",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Papas chorreadas",
       "facet": "Platos y comidas con queso",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pão de queijo",
@@ -631,7 +653,8 @@
     {
       "name": "Lonchera",
       "facet": "Quesos en la cocina diaria",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pastor árabe",
@@ -671,7 +694,8 @@
     {
       "name": "Queso gigante de Jefferson",
       "facet": "Historia y leyendas del queso",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Coladores de cerámica de Polonia",
@@ -701,12 +725,14 @@
     {
       "name": "Chester Cheetah",
       "facet": "Queso en caricaturas y películas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Cheese Touch",
       "facet": "Queso en caricaturas y películas",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "¿Quién se ha llevado mi queso?",
@@ -721,7 +747,8 @@
     {
       "name": "Cheese Shop de Monty Python",
       "facet": "Queso en caricaturas y películas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Luna de queso",
@@ -731,7 +758,8 @@
     {
       "name": "Chuck E. Cheese",
       "facet": "Queso en caricaturas y películas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Caseus",
@@ -756,32 +784,38 @@
     {
       "name": "Say cheese",
       "facet": "Palabras y dichos del queso",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Uvas con queso saben a beso",
       "facet": "Palabras y dichos del queso",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Dársela con queso",
       "facet": "Palabras y dichos del queso",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Queso de cerdo",
       "facet": "Palabras y dichos del queso",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Big cheese",
       "facet": "Palabras y dichos del queso",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Cheesy",
       "facet": "Palabras y dichos del queso",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Quesero",

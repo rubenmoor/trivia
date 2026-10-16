@@ -381,7 +381,8 @@
     {
       "name": "Balón de fútbol americano",
       "facet": "Formas en objetos cotidianos",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Domo geodésico",
@@ -406,7 +407,8 @@
     {
       "name": "Mola",
       "facet": "Teselados, patrones y arte geométrico",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Op art",
@@ -431,7 +433,8 @@
     {
       "name": "Cuadros escoceses",
       "facet": "Teselados, patrones y arte geométrico",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Cinta de Möbius",

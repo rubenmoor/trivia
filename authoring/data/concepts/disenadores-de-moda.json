@@ -61,7 +61,8 @@
     {
       "name": "Burberry",
       "facet": "Grandes casas de moda",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Fendi",
@@ -271,32 +272,38 @@
     {
       "name": "Esteban Cortázar",
       "facet": "Diseñadores latinoamericanos y colombianos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Francesca Miranda",
       "facet": "Diseñadores latinoamericanos y colombianos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hernán Zajar",
       "facet": "Diseñadores latinoamericanos y colombianos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pepa Pombo",
       "facet": "Diseñadores latinoamericanos y colombianos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Amelia Toro",
       "facet": "Diseñadores latinoamericanos y colombianos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ricardo Piñeres",
       "facet": "Diseñadores latinoamericanos y colombianos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Haider Ackermann",
@@ -306,37 +313,44 @@
     {
       "name": "Lina Cantillo",
       "facet": "Diseñadores latinoamericanos y colombianos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Kika Vargas",
       "facet": "Diseñadores latinoamericanos y colombianos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Olga Piedrahita",
       "facet": "Diseñadores latinoamericanos y colombianos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Narciso Rodriguez",
       "facet": "Diseñadores latinoamericanos y colombianos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Isabel Toledo",
       "facet": "Diseñadores latinoamericanos y colombianos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Arturo Calle",
       "facet": "Diseñadores latinoamericanos y colombianos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Agua Bendita",
       "facet": "Diseñadores latinoamericanos y colombianos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Vestidito negro",
@@ -406,7 +420,8 @@
     {
       "name": "Vestido verde de Jennifer Lopez",
       "facet": "Prendas y creaciones icónicas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Doble C de Chanel",
@@ -446,7 +461,8 @@
     {
       "name": "Cuadros de Burberry",
       "facet": "Logos, marcas y símbolos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Triángulo de Prada",
@@ -486,22 +502,26 @@
     {
       "name": "Bandera de Tommy Hilfiger",
       "facet": "Logos, marcas y símbolos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Bogotá Fashion Week",
       "facet": "Capitales y semanas de la moda",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cali Exposhow",
       "facet": "Capitales y semanas de la moda",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pasarela Cibeles",
       "facet": "Capitales y semanas de la moda",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "São Paulo Fashion Week",
@@ -511,7 +531,8 @@
     {
       "name": "Rodeo Drive",
       "facet": "Capitales y semanas de la moda",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Avenue Montaigne",
@@ -521,7 +542,8 @@
     {
       "name": "Quinta Avenida",
       "facet": "Capitales y semanas de la moda",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Via Montenapoleone",
@@ -706,7 +728,8 @@
     {
       "name": "El hilo invisible",
       "facet": "Diseñadores en cine, series y animación",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Coco antes de Chanel",
@@ -816,12 +839,14 @@
     {
       "name": "Vélez",
       "facet": "Calzado, accesorios y perfumes de autor",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mercedes Salazar",
       "facet": "Calzado, accesorios y perfumes de autor",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Adidas",
@@ -886,7 +911,8 @@
     {
       "name": "Totto",
       "facet": "Moda deportiva y urbana",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gorra de béisbol",

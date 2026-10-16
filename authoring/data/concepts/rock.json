@@ -621,7 +621,8 @@
     {
       "name": "Born in the U.S.A.",
       "facet": "Álbumes y portadas icónicas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Paranoid",
@@ -646,42 +647,50 @@
     {
       "name": "Caifanes",
       "facet": "Rock en español y latino",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Café Tacvba",
       "facet": "Rock en español y latino",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Los Fabulosos Cadillacs",
       "facet": "Rock en español y latino",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Héroes del Silencio",
       "facet": "Rock en español y latino",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Charly García",
       "facet": "Rock en español y latino",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fito Páez",
       "facet": "Rock en español y latino",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Enanitos Verdes",
       "facet": "Rock en español y latino",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Los Prisioneros",
       "facet": "Rock en español y latino",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Molotov",
@@ -691,57 +700,68 @@
     {
       "name": "Hombres G",
       "facet": "Rock en español y latino",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Zoé",
       "facet": "Rock en español y latino",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El Tri",
       "facet": "Rock en español y latino",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Los Pericos",
       "facet": "Rock en español y latino",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bersuit Vergarabat",
       "facet": "Rock en español y latino",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rata Blanca",
       "facet": "Rock en español y latino",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Miguel Ríos",
       "facet": "Rock en español y latino",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Andrés Calamaro",
       "facet": "Rock en español y latino",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Los Bunkers",
       "facet": "Rock en español y latino",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Aterciopelados",
       "facet": "Rock colombiano",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Andrea Echeverri",
       "facet": "Rock colombiano",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Juanes",
@@ -751,72 +771,86 @@
     {
       "name": "Ekhymosis",
       "facet": "Rock colombiano",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Elkin Ramírez",
       "facet": "Rock colombiano",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "1280 Almas",
       "facet": "Rock colombiano",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Doctor Krápula",
       "facet": "Rock colombiano",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Diamante Eléctrico",
       "facet": "Rock colombiano",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Los Speakers",
       "facet": "Rock colombiano",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Los Yetis",
       "facet": "Rock colombiano",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pestilencia",
       "facet": "Rock colombiano",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La Derecha",
       "facet": "Rock colombiano",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Compañía Ilimitada",
       "facet": "Rock colombiano",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Superlitio",
       "facet": "Rock colombiano",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Masacre",
       "facet": "Rock colombiano",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Don Tetto",
       "facet": "Rock colombiano",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hora Local",
       "facet": "Rock colombiano",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Woodstock",
@@ -866,7 +900,8 @@
     {
       "name": "Festival Estéreo Picnic",
       "facet": "Festivales y conciertos históricos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Download Festival",
@@ -876,12 +911,14 @@
     {
       "name": "Vive Latino",
       "facet": "Festivales y conciertos históricos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cosquín Rock",
       "facet": "Festivales y conciertos históricos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Coachella",
@@ -896,7 +933,8 @@
     {
       "name": "Los Beatles en The Ed Sullivan Show",
       "facet": "Festivales y conciertos históricos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Pink Floyd en Pompeya",
@@ -906,7 +944,8 @@
     {
       "name": "Concierto de los Rolling Stones en La Habana",
       "facet": "Festivales y conciertos históricos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Beatlemanía",

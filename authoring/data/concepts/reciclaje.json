@@ -136,32 +136,38 @@
     {
       "name": "Caneca blanca",
       "facet": "Separación de residuos y colores de canecas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Caneca negra",
       "facet": "Separación de residuos y colores de canecas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Caneca verde",
       "facet": "Separación de residuos y colores de canecas",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Caneca azul",
       "facet": "Separación de residuos y colores de canecas",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Caneca amarilla",
       "facet": "Separación de residuos y colores de canecas",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Caneca roja",
       "facet": "Separación de residuos y colores de canecas",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Punto ecológico",
@@ -186,7 +192,8 @@
     {
       "name": "Resolución 2184 de 2019",
       "facet": "Separación de residuos y colores de canecas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Contenedor de vidrio",
@@ -206,7 +213,8 @@
     {
       "name": "Shut de basuras",
       "facet": "Separación de residuos y colores de canecas",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Día de recolección",
@@ -271,7 +279,8 @@
     {
       "name": "Tidyman",
       "facet": "Símbolos, sellos y códigos de reciclaje",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Gary Anderson",
@@ -286,7 +295,8 @@
     {
       "name": "Sello Ambiental Colombiano",
       "facet": "Símbolos, sellos y códigos de reciclaje",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Planta de reciclaje",
@@ -427,7 +437,8 @@
     {
       "name": "Bocashi",
       "facet": "Compostaje y residuos orgánicos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Biogás",
@@ -452,7 +463,8 @@
     {
       "name": "Paca digestora Silva",
       "facet": "Compostaje y residuos orgánicos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Relación carbono-nitrógeno",
@@ -512,7 +524,8 @@
     {
       "name": "Ecoladrillo",
       "facet": "Reducir, reutilizar y las tres erres",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Supraciclaje",
@@ -592,7 +605,8 @@
     {
       "name": "Ley 2232 de 2022",
       "facet": "Plásticos y contaminación de océanos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Microesferas",
@@ -692,7 +706,8 @@
     {
       "name": "Pilas con el Ambiente",
       "facet": "Basura electrónica, pilas y residuos peligrosos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Reciclador de oficio",
@@ -707,7 +722,8 @@
     {
       "name": "Relleno Sanitario Doña Juana",
       "facet": "Recicladores, rellenos sanitarios y gestión de basuras",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Botadero a cielo abierto",
@@ -757,17 +773,20 @@
     {
       "name": "Nohra Padilla",
       "facet": "Recicladores, rellenos sanitarios y gestión de basuras",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Asociación de Recicladores de Bogotá",
       "facet": "Recicladores, rellenos sanitarios y gestión de basuras",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fresh Kills",
       "facet": "Recicladores, rellenos sanitarios y gestión de basuras",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Valorización energética",
@@ -777,7 +796,8 @@
     {
       "name": "Tarifa de aseo",
       "facet": "Recicladores, rellenos sanitarios y gestión de basuras",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Biodegradable",
@@ -847,7 +867,8 @@
     {
       "name": "Rocky de Paw Patrol",
       "facet": "Reciclaje en películas, campañas y personajes",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Óscar el Gruñón",
@@ -888,7 +909,8 @@
     {
       "name": "Orquesta de Instrumentos Reciclados de Cateura",
       "facet": "Reciclaje en películas, campañas y personajes",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Waste Land",
@@ -898,12 +920,14 @@
     {
       "name": "Mr. Trash Wheel",
       "facet": "Reciclaje en películas, campañas y personajes",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Los Wombles",
       "facet": "Reciclaje en películas, campañas y personajes",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Julio sin plástico",
@@ -933,7 +957,8 @@
     {
       "name": "Traperos",
       "facet": "Historia y economía circular",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Papel de trapo",

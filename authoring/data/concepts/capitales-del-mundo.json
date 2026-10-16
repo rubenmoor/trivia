@@ -421,7 +421,8 @@
     {
       "name": "Capitolio de Washington",
       "facet": "Monumentos famosos de capitales",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Obelisco de Buenos Aires",
@@ -431,17 +432,20 @@
     {
       "name": "Ángel de la Independencia",
       "facet": "Monumentos famosos de capitales",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Santuario de Monserrate",
       "facet": "Monumentos famosos de capitales",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Museo del Oro",
       "facet": "Monumentos famosos de capitales",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Torre de Belém",
@@ -521,12 +525,14 @@
     {
       "name": "Río Potomac",
       "facet": "Ríos, montañas y paisajes capitalinos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Río Rímac",
       "facet": "Ríos, montañas y paisajes capitalinos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Río Moldava",
@@ -536,7 +542,8 @@
     {
       "name": "Río Liffey",
       "facet": "Ríos, montañas y paisajes capitalinos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Río Han",
@@ -551,32 +558,38 @@
     {
       "name": "Cerros Orientales",
       "facet": "Ríos, montañas y paisajes capitalinos",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Volcán Pichincha",
       "facet": "Ríos, montañas y paisajes capitalinos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Nevado Illimani",
       "facet": "Ríos, montañas y paisajes capitalinos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cerro Ávila",
       "facet": "Ríos, montañas y paisajes capitalinos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cerro San Cristóbal",
       "facet": "Ríos, montañas y paisajes capitalinos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Montaña de la Mesa",
       "facet": "Ríos, montañas y paisajes capitalinos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Canales de Ámsterdam",
@@ -681,7 +694,8 @@
     {
       "name": "Paddington",
       "facet": "Capitales en películas y series",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Mary Poppins",
@@ -701,7 +715,8 @@
     {
       "name": "La casa de papel",
       "facet": "Capitales en películas y series",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Emily en París",
@@ -736,12 +751,14 @@
     {
       "name": "Sherlock",
       "facet": "Capitales en películas y series",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Bridgerton",
       "facet": "Capitales en películas y series",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Anastasia",
@@ -766,17 +783,20 @@
     {
       "name": "La Nevera",
       "facet": "Nombres y apodos de capitales",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Santafé",
       "facet": "Nombres y apodos de capitales",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Distrito Capital",
       "facet": "Nombres y apodos de capitales",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tenochtitlan",
@@ -806,17 +826,20 @@
     {
       "name": "Ciudad de los Reyes",
       "facet": "Nombres y apodos de capitales",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ciudad de las Cien Torres",
       "facet": "Nombres y apodos de capitales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ciudad de la Furia",
       "facet": "Nombres y apodos de capitales",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ciudad de las Siete Colinas",
@@ -916,17 +939,20 @@
     {
       "name": "Ciclovía",
       "facet": "Vida y costumbres en las capitales",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "TransMilenio",
       "facet": "Vida y costumbres en las capitales",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pico y placa",
       "facet": "Vida y costumbres en las capitales",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cambio de guardia",
@@ -936,7 +962,8 @@
     {
       "name": "Té de las cinco",
       "facet": "Vida y costumbres en las capitales",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Baguette",
@@ -946,17 +973,20 @@
     {
       "name": "Mate",
       "facet": "Vida y costumbres en las capitales",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Churros con chocolate",
       "facet": "Vida y costumbres en las capitales",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tapas",
       "facet": "Vida y costumbres en las capitales",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mercado flotante",

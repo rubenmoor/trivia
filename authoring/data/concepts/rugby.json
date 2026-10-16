@@ -206,7 +206,8 @@
     {
       "name": "Garryowen",
       "facet": "Jugadas y formaciones",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Grubber",
@@ -466,12 +467,14 @@
     {
       "name": "Los Teros",
       "facet": "Selecciones y apodos famosos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Los Cóndores",
       "facet": "Selecciones y apodos famosos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Seis Naciones",
@@ -516,17 +519,20 @@
     {
       "name": "Hugo Porta",
       "facet": "Leyendas y figuras del rugby",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Agustín Pichot",
       "facet": "Leyendas y figuras del rugby",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Felipe Contepomi",
       "facet": "Leyendas y figuras del rugby",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Brian O'Driscoll",
@@ -606,7 +612,8 @@
     {
       "name": "Melrose Sevens",
       "facet": "Rugby 7 y Juegos Olímpicos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Rugby 7 femenino",
@@ -636,7 +643,8 @@
     {
       "name": "Rugby 7 en los Juegos Panamericanos",
       "facet": "Rugby 7 y Juegos Olímpicos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "William Webb Ellis",
@@ -661,7 +669,8 @@
     {
       "name": "Rugby Football Union",
       "facet": "Origen e historia del rugby",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Gran División de 1895",
@@ -701,7 +710,8 @@
     {
       "name": "Tom Brown's School Days",
       "facet": "Origen e historia del rugby",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Ka Mate",
@@ -746,12 +756,14 @@
     {
       "name": "Swing Low, Sweet Chariot",
       "facet": "Tradiciones y cultura (haka)",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Flower of Scotland",
       "facet": "Tradiciones y cultura (haka)",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Helecho plateado",
@@ -766,12 +778,14 @@
     {
       "name": "Calcutta Cup",
       "facet": "Tradiciones y cultura (haka)",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Bledisloe Cup",
       "facet": "Tradiciones y cultura (haka)",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Respeto al árbitro",
@@ -781,17 +795,20 @@
     {
       "name": "Los Tucanes",
       "facet": "Rugby en Colombia y Latinoamérica",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Federación Colombiana de Rugby",
       "facet": "Rugby en Colombia y Latinoamérica",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Juegos Suramericanos",
       "facet": "Rugby en Colombia y Latinoamérica",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rugby subacuático",
@@ -801,52 +818,62 @@
     {
       "name": "Sudamérica Rugby",
       "facet": "Rugby en Colombia y Latinoamérica",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Super Rugby Américas",
       "facet": "Rugby en Colombia y Latinoamérica",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Unión Argentina de Rugby",
       "facet": "Rugby en Colombia y Latinoamérica",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Jaguares",
       "facet": "Rugby en Colombia y Latinoamérica",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Dogos XV",
       "facet": "Rugby en Colombia y Latinoamérica",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Peñarol Rugby",
       "facet": "Rugby en Colombia y Latinoamérica",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Selknam",
       "facet": "Rugby en Colombia y Latinoamérica",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Chile en el Mundial de Rugby 2023",
       "facet": "Rugby en Colombia y Latinoamérica",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tupís",
       "facet": "Rugby en Colombia y Latinoamérica",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bronce de Argentina en 2007",
       "facet": "Rugby en Colombia y Latinoamérica",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Invictus",
@@ -881,7 +908,8 @@
     {
       "name": "Forever Strong",
       "facet": "Rugby en cine y videojuegos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "All or Nothing: New Zealand All Blacks",
@@ -891,7 +919,8 @@
     {
       "name": "Chasing Great",
       "facet": "Rugby en cine y videojuegos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "All Out!!",
@@ -912,7 +941,8 @@
     {
       "name": "Rugby 08",
       "facet": "Rugby en cine y videojuegos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Rugby 25",

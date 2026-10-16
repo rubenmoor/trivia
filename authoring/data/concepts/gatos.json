@@ -100,7 +100,8 @@
     {
       "name": "Británico de pelo corto",
       "facet": "Razas de gatos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Scottish Fold",
@@ -150,7 +151,8 @@
     {
       "name": "Gato criollo",
       "facet": "Razas de gatos",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bigotes",
@@ -495,7 +497,8 @@
     {
       "name": "Don Gato",
       "facet": "Gatos famosos de ficción",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hello Kitty",
@@ -505,7 +508,8 @@
     {
       "name": "Duquesa",
       "facet": "Gatos famosos de ficción",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gato Félix",
@@ -540,7 +544,8 @@
     {
       "name": "Gatobús",
       "facet": "Gatos famosos de ficción",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Crookshanks",
@@ -550,7 +555,8 @@
     {
       "name": "Señora Norris",
       "facet": "Gatos famosos de ficción",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Cats",
@@ -625,12 +631,14 @@
     {
       "name": "Gatos de Hemingway",
       "facet": "Gatos en la historia y mitos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Unsinkable Sam",
       "facet": "Gatos en la historia y mitos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Gatos cazadores de ratones en graneros",
@@ -640,47 +648,56 @@
     {
       "name": "Gato por liebre",
       "facet": "Gatos en el idioma y refranes",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cuatro gatos",
       "facet": "Gatos en el idioma y refranes",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "De noche todos los gatos son pardos",
       "facet": "Gatos en el idioma y refranes",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Buscarle tres pies al gato",
       "facet": "Gatos en el idioma y refranes",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Llevarse el gato al agua",
       "facet": "Gatos en el idioma y refranes",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gato escaldado del agua fría huye",
       "facet": "Gatos en el idioma y refranes",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "La curiosidad mató al gato",
       "facet": "Gatos en el idioma y refranes",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Cuando el gato no está, los ratones bailan",
       "facet": "Gatos en el idioma y refranes",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Aquí hay gato encerrado",
       "facet": "Gatos en el idioma y refranes",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ponerle el cascabel al gato",
@@ -690,12 +707,14 @@
     {
       "name": "Como perros y gatos",
       "facet": "Gatos en el idioma y refranes",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Gatear",
       "facet": "Gatos en el idioma y refranes",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Felino",
@@ -705,17 +724,20 @@
     {
       "name": "Michi",
       "facet": "Gatos en el idioma y refranes",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Minino",
       "facet": "Gatos en el idioma y refranes",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gato hidráulico",
       "facet": "Gatos en el idioma y refranes",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ojo de gato",
@@ -785,12 +807,14 @@
     {
       "name": "Gatera",
       "facet": "Gatos en el hogar y la vida diaria",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Guacal transportador",
       "facet": "Gatos en el hogar y la vida diaria",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Torre para gatos",
@@ -845,7 +869,8 @@
     {
       "name": "Creme Puff",
       "facet": "Récords y curiosidades felinas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Grumpy Cat",
@@ -905,12 +930,14 @@
     {
       "name": "Gatos de Torre Argentina",
       "facet": "Récords y curiosidades felinas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gato herrumbroso",
       "facet": "Récords y curiosidades felinas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bigotes del mismo ancho del cuerpo",

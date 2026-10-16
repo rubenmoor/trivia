@@ -215,7 +215,8 @@
     {
       "name": "Cotorra argentina",
       "facet": "Loros y aves exóticas",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Lori arcoíris",
@@ -370,12 +371,14 @@
     {
       "name": "Costra",
       "facet": "Mascotas raras de ficción",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Norberto",
       "facet": "Mascotas raras de ficción",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Gary",
@@ -385,7 +388,8 @@
     {
       "name": "Rufus",
       "facet": "Mascotas raras de ficción",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Gizmo",
@@ -395,7 +399,8 @@
     {
       "name": "Hipopótamos de Pablo Escobar",
       "facet": "Mascotas insólitas en la historia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Harriet",
@@ -460,12 +465,14 @@
     {
       "name": "Loro orejiamarillo",
       "facet": "Fauna silvestre colombiana y tráfico",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mico maicero",
       "facet": "Fauna silvestre colombiana y tráfico",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rescate de fauna silvestre",
@@ -500,17 +507,20 @@
     {
       "name": "Chia Pet",
       "facet": "Modas y mascotas virtuales",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Littlest Pet Shop",
       "facet": "Modas y mascotas virtuales",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Zhu Zhu Pets",
       "facet": "Modas y mascotas virtuales",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     }
   ]
 }

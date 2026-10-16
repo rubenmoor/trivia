@@ -291,17 +291,20 @@
     {
       "name": "Puerto de Buenaventura",
       "facet": "Comercio internacional y exportaciones",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mercosur",
       "facet": "Comercio internacional y exportaciones",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Comunidad Andina",
       "facet": "Comercio internacional y exportaciones",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Globalización",
@@ -311,7 +314,8 @@
     {
       "name": "Cuota inicial",
       "facet": "Ahorro, crédito y finanzas personales",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fondo de pensiones",
@@ -366,27 +370,32 @@
     {
       "name": "Café colombiano",
       "facet": "Economía colombiana",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Flores colombianas",
       "facet": "Economía colombiana",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Carbón del Cerrejón",
       "facet": "Economía colombiana",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Banano de Urabá",
       "facet": "Economía colombiana",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bonanza marimbera",
       "facet": "Economía colombiana",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Zona franca",
@@ -396,22 +405,26 @@
     {
       "name": "San Andresito",
       "facet": "Economía colombiana",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Plaza de mercado",
       "facet": "Economía colombiana",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Estrato socioeconómico",
       "facet": "Economía colombiana",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Medellín, ciudad industrial",
       "facet": "Economía colombiana",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Potosí",

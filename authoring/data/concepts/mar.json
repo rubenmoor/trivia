@@ -566,12 +566,14 @@
     {
       "name": "San Andrés",
       "facet": "Mar Caribe y Pacífico colombiano",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Providencia",
       "facet": "Mar Caribe y Pacífico colombiano",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cartagena",
@@ -581,47 +583,56 @@
     {
       "name": "Santa Marta",
       "facet": "Mar Caribe y Pacífico colombiano",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Isla Gorgona",
       "facet": "Mar Caribe y Pacífico colombiano",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Isla de Malpelo",
       "facet": "Mar Caribe y Pacífico colombiano",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bahía Solano",
       "facet": "Mar Caribe y Pacífico colombiano",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Buenaventura",
       "facet": "Mar Caribe y Pacífico colombiano",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tumaco",
       "facet": "Mar Caribe y Pacífico colombiano",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Islas del Rosario",
       "facet": "Mar Caribe y Pacífico colombiano",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Parque Tayrona",
       "facet": "Mar Caribe y Pacífico colombiano",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mar de los siete colores",
       "facet": "Mar Caribe y Pacífico colombiano",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ballena jorobada",
@@ -631,32 +642,38 @@
     {
       "name": "Golfo de Urabá",
       "facet": "Mar Caribe y Pacífico colombiano",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Nuquí",
       "facet": "Mar Caribe y Pacífico colombiano",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cabo de la Vela",
       "facet": "Mar Caribe y Pacífico colombiano",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Barú",
       "facet": "Mar Caribe y Pacífico colombiano",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Capurganá",
       "facet": "Mar Caribe y Pacífico colombiano",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Galeón San José",
       "facet": "Mar Caribe y Pacífico colombiano",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ancla",
@@ -726,7 +743,8 @@
     {
       "name": "Buque Gloria",
       "facet": "Navegación, barcos y exploradores",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Camarón",
@@ -751,12 +769,14 @@
     {
       "name": "Mojarra frita",
       "facet": "Pesca y mariscos en la mesa",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Arroz con coco",
       "facet": "Pesca y mariscos en la mesa",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ostra",
@@ -796,12 +816,14 @@
     {
       "name": "Pargo rojo",
       "facet": "Pesca y mariscos en la mesa",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Piangua",
       "facet": "Pesca y mariscos en la mesa",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pesca de arrastre",
@@ -811,7 +833,8 @@
     {
       "name": "Cazuela de mariscos",
       "facet": "Pesca y mariscos en la mesa",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Mejillón",
@@ -821,7 +844,8 @@
     {
       "name": "Chipichipi",
       "facet": "Pesca y mariscos en la mesa",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Caviar",
@@ -846,7 +870,8 @@
     {
       "name": "Salinas de Manaure",
       "facet": "Sal, agua de mar y química del océano",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cloruro de sodio",
@@ -1001,7 +1026,8 @@
     {
       "name": "Veda de pesca",
       "facet": "Contaminación y protección del mar",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Zona muerta",
@@ -1096,7 +1122,8 @@
     {
       "name": "Popeye",
       "facet": "El mar en películas y leyendas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "La Odisea",
@@ -1106,7 +1133,8 @@
     {
       "name": "Mohán",
       "facet": "El mar en películas y leyendas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Capitán Nemo",

@@ -690,7 +690,8 @@
     {
       "name": "County Championship",
       "facet": "Torneos y trofeos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Trofeo Border-Gavaskar",
@@ -710,7 +711,8 @@
     {
       "name": "Wisden Cricketers' Almanack",
       "facet": "Torneos y trofeos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "ICC",
@@ -816,7 +818,8 @@
     {
       "name": "Long Room",
       "facet": "Estadios y lugares famosos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Marylebone Cricket Club",
@@ -836,7 +839,8 @@
     {
       "name": "Hambledon Club",
       "facet": "Historia y origen del críquet",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Imperio británico",
@@ -881,7 +885,8 @@
     {
       "name": "Partido Estados Unidos-Canadá de 1844",
       "facet": "Historia y origen del críquet",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Pastores ingleses",
@@ -936,12 +941,14 @@
     {
       "name": "Test Match Special",
       "facet": "Críquet en el cine y la cultura",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Cricket, Lovely Cricket",
       "facet": "Críquet en el cine y la cultura",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "P. G. Wodehouse",
@@ -951,7 +958,8 @@
     {
       "name": "Richie Benaud",
       "facet": "Críquet en el cine y la cultura",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Harold Pinter",
@@ -971,7 +979,8 @@
     {
       "name": "Stoolball",
       "facet": "Críquet frente a otros deportes de bate",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Croquet",
@@ -1026,7 +1035,8 @@
     {
       "name": "Stickball",
       "facet": "Críquet frente a otros deportes de bate",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Guante de béisbol",

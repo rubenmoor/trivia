@@ -71,7 +71,8 @@
     {
       "name": "Saetera",
       "facet": "Partes de un castillo",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Patio de armas",
@@ -81,7 +82,8 @@
     {
       "name": "Adarve",
       "facet": "Partes de un castillo",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Gran salón",
@@ -91,12 +93,14 @@
     {
       "name": "Poterna",
       "facet": "Partes de un castillo",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Aljibe",
       "facet": "Partes de un castillo",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Torre albarrana",
@@ -126,17 +130,20 @@
     {
       "name": "Castillo de Conwy",
       "facet": "Castillos medievales de Europa",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Castillo de Warwick",
       "facet": "Castillos medievales de Europa",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Castillo de Coca",
       "facet": "Castillos medievales de Europa",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Castillo de Chillon",
@@ -146,12 +153,14 @@
     {
       "name": "Castillo de Eltz",
       "facet": "Castillos medievales de Europa",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Castillo de Loarre",
       "facet": "Castillos medievales de Europa",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Castillo de Wawel",
@@ -161,7 +170,8 @@
     {
       "name": "Castillo de Bodiam",
       "facet": "Castillos medievales de Europa",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Neuschwanstein",
@@ -331,12 +341,14 @@
     {
       "name": "Murallas de Cartagena",
       "facet": "Fuertes y murallas de Colombia y América",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Castillo de Salgar",
       "facet": "Fuertes y murallas de Colombia y América",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Castillo de Chapultepec",
@@ -346,12 +358,14 @@
     {
       "name": "Fuerte de San Lorenzo",
       "facet": "Fuertes y murallas de Colombia y América",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Castillo San Cristóbal de San Juan",
       "facet": "Fuertes y murallas de Colombia y América",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sacsayhuamán",
@@ -361,7 +375,8 @@
     {
       "name": "Fortaleza de Santa Teresa",
       "facet": "Fuertes y murallas de Colombia y América",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "San Juan de Ulúa",
@@ -371,7 +386,8 @@
     {
       "name": "Fortaleza del Real Felipe",
       "facet": "Fuertes y murallas de Colombia y América",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ciudadela Laferrière",
@@ -381,7 +397,8 @@
     {
       "name": "Fuertes de Portobelo",
       "facet": "Fuertes y murallas de Colombia y América",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Castillo de Himeji",
@@ -441,7 +458,8 @@
     {
       "name": "Fernando el Católico",
       "facet": "Reyes, reinas y señores famosos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Luis II de Baviera",
@@ -526,7 +544,8 @@
     {
       "name": "Castillo de Glamis",
       "facet": "Leyendas y misterios de castillos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Fantasma",
@@ -546,7 +565,8 @@
     {
       "name": "Alcazaba",
       "facet": "Palabras y nombres de castillos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ciudadela",
@@ -576,7 +596,8 @@
     {
       "name": "Castro",
       "facet": "Palabras y nombres de castillos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Torre de ajedrez",
@@ -586,7 +607,8 @@
     {
       "name": "Castillos en el aire",
       "facet": "Palabras y nombres de castillos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bastión",
@@ -596,12 +618,14 @@
     {
       "name": "Castilla",
       "facet": "Palabras y nombres de castillos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Castellano",
       "facet": "Palabras y nombres de castillos",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Castillo de arena",

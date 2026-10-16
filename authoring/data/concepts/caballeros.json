@@ -221,7 +221,8 @@
     {
       "name": "Alcázar de Segovia",
       "facet": "Castillos y asedios",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Carcasona",
@@ -336,7 +337,8 @@
     {
       "name": "Coronel de lanza",
       "facet": "Torneos y justas",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Prenda de la dama",
@@ -346,17 +348,20 @@
     {
       "name": "Palenque",
       "facet": "Torneos y justas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Juego de cañas",
       "facet": "Torneos y justas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bohordo",
       "facet": "Torneos y justas",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Feria medieval",
@@ -536,17 +541,20 @@
     {
       "name": "Orden de Santiago",
       "facet": "Órdenes militares y cruzadas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Orden de Calatrava",
       "facet": "Órdenes militares y cruzadas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Orden de Alcántara",
       "facet": "Órdenes militares y cruzadas",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Primera Cruzada",
@@ -586,7 +594,8 @@
     {
       "name": "Orden de la Jarretera",
       "facet": "Órdenes militares y cruzadas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Toisón de Oro",
@@ -601,7 +610,8 @@
     {
       "name": "Reconquista",
       "facet": "Órdenes militares y cruzadas",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ricardo Corazón de León",
@@ -616,12 +626,14 @@
     {
       "name": "Tizona",
       "facet": "Caballeros históricos famosos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Babieca",
       "facet": "Caballeros históricos famosos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Juana de Arco",
@@ -631,7 +643,8 @@
     {
       "name": "Guillermo el Mariscal",
       "facet": "Caballeros históricos famosos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Bertrand du Guesclin",
@@ -642,7 +655,8 @@
     {
       "name": "Príncipe Negro",
       "facet": "Caballeros históricos famosos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Carlomagno",
@@ -672,7 +686,8 @@
     {
       "name": "Robert the Bruce",
       "facet": "Caballeros históricos famosos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Guillermo el Conquistador",
@@ -682,12 +697,14 @@
     {
       "name": "Jaime I el Conquistador",
       "facet": "Caballeros históricos famosos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fernán González",
       "facet": "Caballeros históricos famosos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Rey Arturo",
@@ -797,7 +814,8 @@
     {
       "name": "Amadís de Gaula",
       "facet": "Leyendas artúricas y libros de caballerías",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cantar de Roldán",
@@ -807,7 +825,8 @@
     {
       "name": "Tirant lo Blanch",
       "facet": "Leyendas artúricas y libros de caballerías",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ivanhoe",
@@ -832,7 +851,8 @@
     {
       "name": "Los caballeros de la mesa cuadrada",
       "facet": "Caballeros en cine y videojuegos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Corazón de caballero",
@@ -887,7 +907,8 @@
     {
       "name": "Mike el Caballero",
       "facet": "Caballeros en cine y videojuegos",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Brienne de Tarth",
@@ -967,12 +988,14 @@
     {
       "name": "Tercios españoles",
       "facet": "Feudalismo y fin de la caballería",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Hidalgo",
       "facet": "Feudalismo y fin de la caballería",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Carta Magna",
@@ -1052,7 +1075,8 @@
     {
       "name": "Lanceros llaneros",
       "facet": "Guerreros a caballo de otras culturas",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Comanches",

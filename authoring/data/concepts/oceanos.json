@@ -191,22 +191,26 @@
     {
       "name": "Johnny Cay",
       "facet": "Mares y costas de Colombia",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Reserva de Biosfera Seaflower",
       "facet": "Mares y costas de Colombia",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Playa Blanca de Barú",
       "facet": "Mares y costas de Colombia",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ciénaga Grande de Santa Marta",
       "facet": "Mares y costas de Colombia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Avistamiento de ballenas",

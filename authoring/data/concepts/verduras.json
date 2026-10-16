@@ -311,7 +311,8 @@
     {
       "name": "Pimiento de Padrón",
       "facet": "Verduras de fruto",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Fríjol",
@@ -386,7 +387,8 @@
     {
       "name": "Chocho",
       "facet": "Legumbres y granos tiernos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Tirabeque",
@@ -596,42 +598,50 @@
     {
       "name": "Patacón",
       "facet": "Verduras de la cocina colombiana",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Papa criolla",
       "facet": "Verduras de la cocina colombiana",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Sancocho",
       "facet": "Verduras de la cocina colombiana",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ahuyama",
       "facet": "Verduras de la cocina colombiana",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ajiaco",
       "facet": "Verduras de la cocina colombiana",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cebolla larga",
       "facet": "Verduras de la cocina colombiana",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Arracacha",
       "facet": "Verduras de la cocina colombiana",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Guascas",
       "facet": "Verduras de la cocina colombiana",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ñame",
@@ -641,17 +651,20 @@
     {
       "name": "Fríjol cargamanto",
       "facet": "Verduras de la cocina colombiana",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ají dulce",
       "facet": "Verduras de la cocina colombiana",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Papa sabanera",
       "facet": "Verduras de la cocina colombiana",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Malanga",
@@ -661,22 +674,26 @@
     {
       "name": "Cubios",
       "facet": "Verduras de la cocina colombiana",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Ulluco",
       "facet": "Verduras de la cocina colombiana",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Cilantro cimarrón",
       "facet": "Verduras de la cocina colombiana",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Bore",
       "facet": "Verduras de la cocina colombiana",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Aztecas",
@@ -996,7 +1013,8 @@
     {
       "name": "Hogao",
       "facet": "Preparaciones y técnicas de cocina",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Pesto",
@@ -1111,22 +1129,26 @@
     {
       "name": "Importar un pepino",
       "facet": "Verduras en dichos, cuentos y pantallas",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "VeggieTales",
       "facet": "Verduras en dichos, cuentos y pantallas",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
     },
     {
       "name": "Dar calabazas",
       "facet": "Verduras en dichos, cuentos y pantallas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Estar como una lechuga",
       "facet": "Verduras en dichos, cuentos y pantallas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "El nabo gigante",

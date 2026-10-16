@@ -336,7 +336,8 @@
     {
       "name": "Juan Ramón Jiménez",
       "facet": "Nobel de Literatura",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "William Faulkner",
@@ -366,7 +367,8 @@
     {
       "name": "Camilo José Cela",
       "facet": "Nobel de Literatura",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Aleksandr Solzhenitsyn",
@@ -702,17 +704,20 @@
     {
       "name": "Aracataca",
       "facet": "Colombianos y latinoamericanos premiados",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Liqui liqui",
       "facet": "Colombianos y latinoamericanos premiados",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Juan Manuel Santos",
       "facet": "Colombianos y latinoamericanos premiados",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Acuerdo de paz de Colombia",
@@ -727,27 +732,32 @@
     {
       "name": "Óscar Arias",
       "facet": "Colombianos y latinoamericanos premiados",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Adolfo Pérez Esquivel",
       "facet": "Colombianos y latinoamericanos premiados",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Baruj Benacerraf",
       "facet": "Colombianos y latinoamericanos premiados",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Carlos Saavedra Lamas",
       "facet": "Colombianos y latinoamericanos premiados",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Alfonso García Robles",
       "facet": "Colombianos y latinoamericanos premiados",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
     },
     {
       "name": "Derek Walcott",
