@@ -17917,10 +17917,10 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/17-publishing.md`, `plans/18-steam-integration.md`: every open `[ ]` row (today PUB-3, PUB-4, PUB-6..PUB-11, SW-5..SW-7, SW-9..SW-14) either `[x]` with a dated note and source (task, decision or section) or left open with "*Deferred (S6 close-out, <date>): <why>, see backlog B-<n>*". A row a release still needs is not deferred: `pm task add` in its owning plan, named in this task''s note. `**Status:**` lines current. (OQ-35 is answered: decision 108: Is release content public (OQ-35)?)
 - `plans/backlog.md`: new rows (origin `S6 close-out`, status `later`), each naming where the spec lives:
   - more regions and languages: `15-i18n.md`, `15c-regional-questions.md`; decision 27: Spanish variety (OQ-31); decision 110: Regional packs at launch
-  - SW-13 Remote Play Together: no backlog row; milestone 17: Remote Play Together owns it
   - SW-14 macOS build (developer account, notarization)
   - first week''s and first patch''s leftovers, only if plans 95/96 didn''t file them (`pm show 710`, `pm show 716` notes)
-- No backlog rows for the multiplayer modes or their controls (MD-8, MD-9, IN-6): milestone 16: Local multiplayer: game modes and controls owns them; 11/13/14 rows for them point there, not to the backlog.
+- SW-13 Remote Play Together: no backlog row (plan 97''s "SW-13 backlog row" predates the milestone): `milestone 17: Remote Play Together` owns it; SW-13 in 11/18 and the "Later" row point to milestone 17.
+- No backlog rows for the multiplayer modes or their controls (MD-8, MD-9, IN-6): `milestone 16: Local multiplayer: game modes and controls` owns them; where 11/17/18 or the "Later" row mention them, point to milestone 16 (its own plans rewrite the 13/14 markers).
 - Existing backlog numbering and columns: follow the file.
 
 ## Done when
@@ -17937,7 +17937,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Steps
 - `plans/README.md`: status column for `11-steam.md`, `17-publishing.md`, `17a-store-page.md`, `18-steam-integration.md` (13/14/15* only if S6 changed them) matches their `**Status:**` lines.
-- `plans/project.md`: "Steam track" paragraph says S6 done (release date, first patch); each S6 part row (parts 1–8: plans 91–97, 103, 104) present and `[x]`; open-questions rows S6 resolved removed; "Later" points to the backlog rows from task 718.
+- `plans/project.md`: "Steam track" paragraph says S6 done (release date, first patch); each S6 part row (parts 1–8: plans 91–97, 103, 104) present and `[x]`; open-questions rows S6 resolved removed; "Later" points to the backlog rows from task 718 (Remote Play Together: `milestone 17: Remote Play Together`; local multiplayer: `milestone 16: Local multiplayer: game modes and controls`).
 - `README.md`:
   - "Status": released on Steam; the Steam build is the only game (decision 111).
   - "How to …", commands only, one entry each, merged with what earlier plans wrote (plan 92''s "Upload to Steam", task 710''s release note, task 701''s report how-tos, plan 103''s server how-tos, task 712''s `qgen patch-notes`, task 713''s patch how-to): no duplicates.
@@ -17945,6 +17945,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
     - "Send a content patch" (task 713): link "Content updates (ST-5)"
     - "Pull player reports" (`qgen flag --pull`, where the pull token lives) and "a player pasted a report" (`qgen flag`)
     - "Run the report server": local dev, deploy, rotate secrets (plan 103)
+- `directory.md`: files S6 added listed (e.g. `authoring/steam/release_check.py`, `report-server/`, the `qgen flag`/`patch-notes` modules, `state/reports-pulled.json`); check, don''t rewrite.
 - Milestone check, cited in the task note:
   - answered "Released? date, build id" (task 710) and "Content patch v<x> live? …" (task 716): ids, dates, version, BuildID
   - the released candidate''s ST-4 decision (plan 95, tasks 708/709): id; `report` row (send under Steam → `qgen flag --pull` → needs_work) and `offline` row (send fails cleanly, copy fallback) passed
@@ -17954,6 +17955,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - Milestone 11''s "Done when" (released; content updates go out as patches; report round trip under Steam and copy fallback) holds and is cited in the task note.
+- `plans/README.md`, `plans/project.md`, `README.md`, `directory.md` in sync.
 - `npm run check`, `qgen validate` pass.', '2026-10-13T09:21:14Z', NULL, 717, 0, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (720, 78, 'Review Steam release and store tooling: authoring/steam/, authoring/store/', 'work', 'done', NULL, '2026-10-13, authoring/steam/steam.py, authoring/steam/smoke.mjs, authoring/store/screenshots.mjs, code-review.md', 'Part 6 (`plan 78: Desktop shell and packaging review (code review part 6)`) covers `app/desktop/` only; the Steam release and store tooling outside it has no review task. Found by `task 524: code-review.md skeleton, inventory and directory.md entry` (inventory assigns these files to part 6).
 
@@ -35881,8 +35883,8 @@ Milestone 11 is S6 of the Steam track (D-34, `plans/11-steam.md`, ST-3..ST-5): t
 ## Out of scope (from the milestone)
 - Local multiplayer modes and their controls: only in `milestone 16: Local multiplayer: game modes and controls`, not a backlog row.
 - More regions and languages (later); Remote Play Together (SW-13), macOS (SW-14); marketing beyond Steam''s own wishlist and follow features; telemetry and any network request other than the clicked report.', '2026-10-16T19:29:44Z', NULL, 1364, 0, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1390, 97, 'create tasks for plan 97: S6 close-out', 'split', 'open', 1000, NULL, 'Split plan 97 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T19:31:30Z', NULL, 1388, 0, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1390, 97, 'create tasks for plan 97: S6 close-out', 'split', 'done', 1000, '2026-10-16, tasks.sql: tasks 718/719 aligned with plan 97 (719: directory.md check, sync in Done when; 718: SW-13 points to milestone 17: Remote Play Together instead of a backlog row, since that milestone now owns it; multiplayer pointers for 11/17/18 and Later). No new decisions: the closing ones come from tasks 709/710/716.', 'Split plan 97 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T19:31:30Z', '2026-10-16T19:32:32Z', 1388, 0, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -41485,6 +41487,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1395, 1386, '2026-10-16T19:30:31Z', '2026-10-16T19:30:51Z', 'done', NULL, 0, 'f82f3f110e67ec6672d301760fe02834e5d87c23', 'claude-opus-5-5', 'bf57da49-ff0f-4e6f-be34-42fccb898ae0', NULL, 4, 8, 1141, 128875, 31028, 0.29685100000000003, 4144524);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1396, 1387, '2026-10-16T19:30:51Z', '2026-10-16T19:31:12Z', 'done', NULL, 0, '56385e0da16588eb2a1aaf0bc6653bd34883931a', 'claude-opus-5-5', '1217b870-36ef-4a2b-a549-c45b9e9b261c', NULL, 4, 8, 1014, 130894, 31787, 0.3007868, 4144524);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1397, 1388, '2026-10-16T19:31:12Z', '2026-10-16T19:31:38Z', 'done', NULL, 0, '08c81da298045ca9e83d17bd925318c722c4a5f7', 'claude-opus-5-5', '850afd43-cc3f-48c6-ba66-43fe5a37c9ce', NULL, 6, 12, 2321, 222703, 35165, 0.3723286, 4144524);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1398, 1390, '2026-10-16T19:31:38Z', '2026-10-16T19:32:37Z', 'done', NULL, 0, '5c2b4e2d43af6143305ad2b39052b47178552475', 'claude-opus-5-5', 'a9697a77-f822-4b42-b159-073b560d2532', NULL, 11, 18, 6324, 320159, 35515, 0.4747038, 4144524);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
