@@ -1,9 +1,11 @@
 // The gamepad source (plans/14-input.md, IN-4; plan 45): polls standard pads each frame while one
-// is connected and dispatches their actions like keys (input.svelte.ts). Any pad drives the game.
+// is connected and dispatches their actions like keys (input.svelte.ts). Any pad drives the game; in a local
+// multiplayer session only a pad whose seat may act (plan 161).
 import { steam } from "./desktop.ts";
 import { BUTTONS, FRESH, held, step, steamStyle, styleOf, type PadState, type PadStyle } from "./gamepad.ts";
 import { show } from "./focus.ts";
-import { dispatch, lastDevice, padMap, release, resetTravel } from "./input.svelte.ts";
+import { dispatch, gate, lastDevice, padMap, release, resetTravel, type Device } from "./input.svelte.ts";
+import { seating } from "./seats.svelte.ts";
 
 /** The glyph set of the pad that acted last (IN-5). */
 export const padStyle = $state({ current: "xbox" as PadStyle });
@@ -19,6 +21,24 @@ async function refreshSteam() {
 
 function pads() {
   return navigator.getGamepads().filter((g): g is Gamepad => g !== null && g.mapping === "standard");
+}
+
+/** A pad's glyph set: all of Steam's pads PlayStation → PlayStation, else its id (Steam per handle unproven,
+ * plans/14-input.md section 3). */
+const styleFor = (g: Gamepad): PadStyle => (fromSteam === "playstation" ? fromSteam : styleOf(g.id));
+
+/** The glyph set of the pad at `index`; `xbox` while it is gone. */
+function padStyleOf(index: number): PadStyle {
+  const g = navigator.getGamepads()[index];
+  return g ? styleFor(g) : "xbox";
+}
+
+/** A seat's device for its prompts (turn banner, claim prompts): its pad's glyph set, else the keyboard; null: unbound.
+ * @public turn banner and timed screens (plans 163, 164) */
+export function seatDevice(seat: number): { device: Device; style?: PadStyle } | null {
+  const b = seating.binding[seat];
+  if (!b) return null;
+  return typeof b === "object" && "pad" in b ? { device: "gamepad", style: padStyleOf(b.pad) } : { device: "keyboard" };
 }
 
 /** A switch without an action: the focused control gets the ring if none has it (as a key press does). */
@@ -44,19 +64,23 @@ export function listenPads(first: () => void): () => void {
       const { next, actions, touched } = step(prev.get(g.index) ?? FRESH, pad, padMap(BUTTONS));
       prev.set(g.index, next);
       if (actions.length) void refreshSteam(); // Steam may list a new pad after Chromium does
-      if (touched) {
-        padStyle.current = fromSteam ?? styleOf(g.id);
+      const source = { pad: g.index };
+      const acts = touched && gate(source).ok; // in a session a pad that may not act leaves the prompts alone
+      if (acts) {
+        padStyle.current = styleFor(g);
         resetTravel();
       }
       if (touched && !actions.length) {
         first();
-        lastDevice.current = "gamepad";
-        showFocused();
+        if (acts) {
+          lastDevice.current = "gamepad";
+          showFocused();
+        }
       }
       for (const intent of actions) {
-        padStyle.current = fromSteam ?? styleOf(g.id);
+        if (gate(source, intent).ok) padStyle.current = styleFor(g);
         first();
-        dispatch({ ...intent, device: "gamepad" });
+        dispatch({ ...intent, device: "gamepad", source });
       }
     }
   }

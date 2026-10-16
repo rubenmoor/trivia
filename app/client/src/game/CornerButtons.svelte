@@ -49,6 +49,7 @@
     onmousedown={(e) => e.preventDefault()}
     tabindex="-1"
     data-nofocus
+    data-shared
     aria-label={t("a11y.menu")}
     title={t("a11y.menu")}
   >
