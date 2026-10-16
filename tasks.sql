@@ -9343,6 +9343,92 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 ## Done when
 - Both modes play start to finish on the dev server with 3, 5 and 8 seats, every end reached (team win, team loss, a seat out, last standing, first to 12)
 - Solo and gamemaster screens unchanged; per-commit checks pass', 'In the two turn-based multiplayer modes, the family takes turns answering on one TV, either climbing one shared tower as a team or each climbing their own. These screens show the room whose turn it is (name, colour, controller), the team''s tower or every player''s own tower side by side, the helpers left, and the moments that matter: a player knocked out, the team losing, a winner crowned. They reuse the existing game screens, so the multiplayer modes look and feel like the game the family already knows.', '2026-10-16T21:11:19Z', 1398);
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (164, 16, 'Timed game screens, drama and sound', 380, 'Part 8 of `plan 152: masterplan`. The client side of `timed` (Competitive timed) from the first round screen to Victory: one question for all, the 30 s clock and hints, claims and the claimer''s 6 s, hearts per seat, the drama, pause, sudden death and the ends. On the engine of `plan 159: Competitive (timed) in the engine` (`view().session.timed`, `claim`/`answer`/`expire`/`pause`/`resume`, `task 1447: Timed: the question clock starts on show, not at the previous question''s end`), the claim inputs of `plan 161: Per-player controls` (`claim` intent, `claimLabel`, `seatDevice`, the filter), the seat tag of `plan 163: Round-robin game screens` (`SeatTag.svelte`, session Victory) and the seat colours of `plan 162: Mode row, session setup and join screen`. Sounds through `game/sound.svelte.ts`, synth until `plan 32: Recorded sound effects (UI-10)`.
+
+## Binding
+- Milestone 16 "Outcome", Competitive (timed): 30 s per question, a hint every 8 s, claim → 6 s, hearts, the drama lines; `plans/13-game-modes.md` "Competitive timed" (D-80)
+- `decision 295: Timed mode: the claimer answers with one press, no final-answer step, a short reveal` (this plan)
+- `decision 296: Timed mode: a round screen with a countdown before each round, and the question clock starts when the question is on screen` (this plan)
+- `decision 275: Timed mode, keyboard-only: how does the claimer answer in the 6 seconds?`: mouse click or the answer keys (A–D/1–4); pads: face buttons
+- `decision 290: Timed mode: the claim input per kind of player`: LB/RB, Space or a click on the claim control (keyboard-and-mouse seat), each key seat''s picked key
+- `decision 282: Timed mode: the Esc menu and the Steam overlay pause the clock and hide the question`; `decision 288: Local multiplayer: who opens the Esc menu in a session, and who drives it`; `decision 289: Local multiplayer: a controller lost mid-session waits for a controller to take the seat` (its dialog pauses through the same helper)
+- `decision 276: Timed mode: after a drop-out, how many questions does a round have?`, `decision 280: Timed mode: everyone out at one round end means nobody wins`, `decision 281: Timed mode: round 12 without a correct answer repeats as another sudden-death round`: what the screens show, decided by the engine
+- `decision 285: Achievements from multiplayer sessions: every seat earns for the save; tower achievements need a win at the top level`: unlock toasts unchanged
+- Decision 199 (import, don''t copy): the question pieces in `game/question/` (Card, Answers, Media), `SeatTag`, `Tower`, Level/Victory/Wrong screens, `Glyph`, `Prompt`, `timing.ts`
+- Mod screens (`modding/README.md` "same props"): the new screen in `screens/registry.ts`; new props on existing screens additive and optional
+- Unpolished visuals (hearts, red frame, claim banner): `PLACEHOLDER(<id of task 5 below>)` in code and on screen (AGENTS.md)
+- UI strings in es, es-ES, en, de with their screens, per `locales/style/<locale>.md`; gallery shots are part 9''s (`task 1400: write plan: Multiplayer UI strings and gallery`)
+- Deck sizes: fits 1280×800, 1280×720, 1920×1080; 8 seats still fit; reduced motion (`timing.ts` `reducedMotion`): pulses become a steady highlight, sound stays
+
+## What exists (2026-10-16)
+- `game/screens/Question.svelte` (546 lines): lock-in, padlock, «Respuesta final», `REVEAL_WAIT_S` drum roll, jokers; built from `game/question/` (Card, Answers, Media, FinalAnswer, Scope)
+- `game/sound.svelte.ts`: `sfx(cue, level)` (recordings in `SAMPLE_FOR`, synth `RECIPES` fallback; `heartbeat`, `tick`, `glass-break`, `whistle-down`, `boom`, `fanfare` exist), `music(track)` with synth loops (`generate`), `duck`
+- `game/Game.svelte`: screen machine, `MUSIC` per screen, Overlay on Esc; `lib/input.svelte.ts` already listens to `visibilitychange`
+- `lib/desktop.ts`: `overlay.enabled()` only, no overlay-activated event from the shell
+- Hints in the view: `question.hints` = the shown ones (Soplo notes, D-27)
+
+## Flow (decision 296)
+- `Game.svelte` with a `timed` session: Level (as round screen) → Timed → … → round end → Level → … → Victory / no-winner end; no Select (no cards), no Correct/Wrong screens between questions
+- Round screen (Level with `session.timed`): «Ronda n de 12» or «Muerte súbita» (repeat count from `timed.repeat`), a row of seat tags with hearts; the hearts lost at the last round end crack there (`glass-break`), seats out muted; 3-2-1 countdown, then on by itself; Esc menu still opens
+- Timed screen (`game/screens/Timed.svelte`, new, in `SCREENS` + `screenFor`): fades in, then `show` (task 1447); the next question inside a round: the reveal beat, card flip or fade to the next, `show` again
+- Resume from Start (a reload mid-session): the round screen if the question isn''t shown yet, else the Timed screen as the view says (claim still open: its remaining seconds; paused: the paused veil)
+
+## Timed screen
+- Top: round line («Ronda 3 de 12» / «Muerte súbita»), question in round («Pregunta 2 de 4», from `round_size`, `question_in_round`)
+- Clock: a 30 s bar or ring from `timed.deadline` (local `requestAnimationFrame`, display only); stops on a claim
+- Question and answers: Card, Answers, Media from `game/question/`; no jokers, no tray
+- Hints: a note slides in at 8, 16, 24 s (`rustle`); the client re-reads the game (`fetchGame`) at each 8 s mark, the engine''s `hints_shown` decides what shows
+- Seat strip (bottom): per seat in join order a `SeatTag` (small), 3 hearts, the claim prompt (`claimLabel(seat)`: bumper glyph, «Espacio», or the key), ✓ once correct this round, out seats muted with the struck mark; wraps for 8 seats
+- Claim (plan 161''s `claim` intent, any seat that `may`): `gameAction("claim", {seat})`; `claim_taken` or a late claim: silent, the new view wins; a click on the claim control acts for the keyboard-and-mouse seat
+- Claimed: a banner with the claimer''s large `SeatTag` («¡Ana!»), a 6 s ring from `claim.deadline`, others'' seat cards dimmed, answers pickable only by the claimer (filter: plan 161); prompts in the claimer''s device glyphs
+- Answer (decision 295): the first pick is the answer, `gameAction("answer", {seat, index})`; tiles lock at once; after `TIMED_REVEAL_MS` (`timing.ts`) the right answer shows to all; correct: «¡Correcto, Ana!», ✓ on the seat; wrong or the 6 s run out: «¡Fuera, Ana!», the seat''s hearts go grey and the card mutes
+- Unclaimed 30 s: «Se acabó el tiempo», the right answer shown, then the next question
+- Expire: a local timer at `deadline` / `claim.deadline` sends `expire`; `not_expired` (ms left) re-arms it; nothing on screen decides an outcome without the engine
+- Errors: `errorText` as the Question screen
+
+## Drama (milestone 16)
+- Last chance (`seat.last_chance`): that seat''s hearts pulse; on its last heart (lives 1) a stronger, faster pulse and a `heartbeat` on each beat while the question is open (once per seat per question if several, not stacked)
+- Claim''s last 3 s: one tick per second, louder and higher each time (new cue `countdown`, `level` 1–3 sets gain and pitch), and a pulsing red frame round the screen edge
+- `all_at_risk`: the same red frame, slower pulse, for the whole question; no ticks
+- Sudden death: the round screen''s «Muerte súbita» with `boom`; the Timed screen''s round line in red; the first correct answer → Victory
+- Music: a new `Track` `"timed"` (synth `generate`, faster than `"question"`); ducked during a claim so the ticks carry; the round screen keeps `"normal"`
+- New synth cues (`Cue`, `RECIPES`, no `SAMPLE_FOR` entry): `claim` (a short buzzer sting), `countdown`; reused: `heartbeat`, `glass-break`, `whistle-down` (time up, drop-out), `fanfare` (correct), `rustle` (hint), `boom`; checked with `TRIVIA_SOUND=1`; the new cues added to `plans/04-ui-tv-display.md` "Sound assets" so plan 32 can replace them
+
+## Pause (decision 282)
+- One helper (`game/timedPause.ts` or in `Game.svelte`): `pause` on Esc overlay open, `document.hidden`, the Steam overlay; `resume` on close / visible; idempotent (`already_paused`, `not_paused` ignored); plan 161''s `SeatLost` dialog (`task 1434: Lost pads and the Esc menu in a session`) uses the same helper, whichever lands first adds it
+- Steam overlay: the shell (`app/desktop`, steamworks binding) forwards the overlay-activated callback to the page (`desktop.ts` `overlay.onActive(cb)`), if the binding exposes it; else Esc and hidden window only, and a follow-up task in `plan 85: Steamworks binding in the shell (SW-8)`
+- Paused: the question and answers are hidden (view nulls them); a «Pausa» veil over the Timed screen; clocks frozen at their remaining time
+
+## Ends
+- Round-12 win, last one standing: plan 163''s session Victory (winner''s large seat tag, crown, fireworks), title «¡Gana Ana!»; last standing: «Último en pie»; the others'' seat tags with their hearts beside
+- Nobody wins (decision 280): Wrong screen with a session line «Nadie gana esta vez», all seat tags muted, «Inicio»
+- Start''s resume line for a timed session: mode name, players («Ana, Luis y 2 más»), the round (plan 163''s resume line, `timed` variant)
+- Rich presence: «Ronda n de 12» if a token exists, else none; no new Steamworks token
+
+## Check (throw-away)
+- Node dev server, devMode (decision 293), a timed session through plan 162''s Join screen with fake pads (stubbed `navigator.getGamepads()`), or a hand-built session save in `TRIVIA_SAVE_DIR`
+- 3 key seats keyboard-only, 4 pads + keyboard and mouse (5 seats), 8 seats at 1280×800 and 1920×1080
+- Each path: claim and correct, claim and wrong, claim timeout, unclaimed 30 s, round end with a life lost, a drop-out shrinking the next round, last chance and last heart pulses, the claim''s last 3 s, `all_at_risk`, Esc pause mid-claim (seconds kept), hidden window, reload mid-claim, sudden death and a repeat, each end
+- `TRIVIA_SOUND=1`: ticks rise, heartbeat not stacked, music ducks during a claim
+- Solo, gamemaster and the round-robin screens unchanged
+- Per commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`
+
+## Tasks
+1. Timed screen and flow (`--model opus`): `Game.svelte` timed routing, round screen on Level (round line, seat tags with hearts, crack on loss, countdown), `Timed.svelte` from `game/question/` pieces, `show` after fade-in, clock bar, hint re-read, seat strip with claim prompts, claim and claimed banner, one-press answer and `TIMED_REVEAL_MS` reveal, unclaimed time up, `expire` timers, reload resume, registry entry, strings in four locales; after `task 1412: Timed core in the engine: clock, claims, rounds, lives, ends`, `task 1413: Timed pause and view in the engine`, `task 1447: Timed: the question clock starts on show, not at the previous question''s end`, `task 1433: Timed claim inputs: claim intent, bumpers, Space, picked keys`, `task 1438: Join screen: seats, names, keyboard rules, claim keys, seat colours` and plan 163''s first task (`SeatTag`)
+2. Pause: the pause helper, Esc overlay and hidden window, the Steam overlay event through the shell and `desktop.ts` (or the plan 85 follow-up), the «Pausa» veil; after task 1 and `task 1413: Timed pause and view in the engine`
+3. Drama and sound: heart pulses (last chance, last heart), heartbeat, claim''s last 3 s ticks and red frame, `all_at_risk` frame, the `"timed"` track, `claim` and `countdown` cues, ducking, reduced motion, `PLACEHOLDER(<task 5>)` on hearts and frame; `plans/04-ui-tv-display.md` "Sound assets"; checked with `TRIVIA_SOUND=1`; after task 1
+4. Sudden death and ends: «Muerte súbita» round screen and repeat count, red round line, Victory with the winner and last-standing line (plan 163''s session Victory), the no-winner Wrong, Start''s timed resume line, strings in four locales; `plans/04-ui-tv-display.md` timed lines (round screen, Timed, ends), `plans/13-game-modes.md` "Competitive timed" screens line; after task 1 and plan 163''s second task (session Victory)
+5. Timed visuals polish (low priority, after the developer has seen tasks 1–4 on the TV): hearts, red frame, claim banner as the developer asks; removes the `PLACEHOLDER` marks
+
+## Out of scope
+- Engine rules and the clock (plan 159), claim inputs, filter, lost-pad dialog (plan 161), Join screen and session start (plan 162)
+- Round-robin screens (plan 163), gallery demo saves and shots (part 9), `BUILT_MODES` and store texts (`task 1401: write plan: Shipping the multiplayer modes and docs`)
+- Recorded effects and music (plans 32, 33)
+
+## Done when
+- A `timed` session plays start to finish on the dev server with 3 key seats, 5 seats and 8 seats, every end reached (round-12 win, last standing, nobody wins, a sudden-death repeat)
+- The drama shows and sounds as specified with `TRIVIA_SOUND=1`; a pause keeps everyone''s seconds
+- Solo, gamemaster and round-robin screens unchanged; per-commit checks pass', 'In the timed race every player sees the same question at once, anyone can grab it, and whoever grabs it has six seconds to answer, with three lives each over twelve rounds. These screens are what the family watches on the TV during that race: the shrinking clock, the hints appearing, who grabbed the question, everyone''s hearts, and the moments of tension (a heart beating on someone''s last chance, ticks getting louder, a red pulsing frame when time is nearly up). It also covers pausing the race fairly, the sudden-death final round and the winner''s moment, with sounds made by the game itself until recorded ones replace them.', '2026-10-16T21:14:29Z', 1399);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -36999,6 +37085,19 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - 5 seats (4 pads + keyboard and mouse) and 8 seats: tracks fit at 1280×800, 1280×720, 1920×1080; an out seat crumbles and is skipped; last standing → Wrong «Siguiente» → Victory; first to 12 → Victory
 - rr-coop and a solo game unchanged
 - `npm run check`, `npm test`, `npm run build`, `qgen validate`', '2026-10-16T21:11:56Z', NULL, 1444, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1447, 159, 'Timed: the question clock starts on show, not at the previous question''s end', 'work', 'open', NULL, NULL, '`decision 296: Timed mode: a round screen with a countdown before each round, and the question clock starts when the question is on screen`: the reveal beat, the fade and the round screen of the timed screens (part 8 of `plan 152: masterplan`, `task 1399: write plan: Timed game screens, drama and sound`) must not come off a question''s 30 s. Plan 159 as written sets `shown_at` = ms at the session start and at each question end.
+
+- `row.state.timed.shown_at: number | null`: null after the session start and after each question end (next question drawn, not yet on screen)
+- New action `show` (no seat, a clock action as `expire`; plan 157''s `actor` skips it): `settle` first; `shown_at` null → `shown_at = ms`; already set → no-op, the view back (idempotent, a reload re-sends it); refused while paused (`paused`)
+- `claim` / `answer` while `shown_at` is null: `not_shown` (new `ERRORS` code, D-57); `expire` with `shown_at` null: `not_expired`
+- `settle`: an unshown question never expires
+- `view().session.timed`: `shown: boolean`; `deadline` null while unshown; hints 0
+- `resume` shifts `shown_at` only when set
+- `session.test.ts` (timed part): a claim before `show` refused; the 30 s run from `show`, not from the previous answer
+- After `task 1412: Timed core in the engine: clock, claims, rounds, lives, ends`; with or after `task 1413: Timed pause and view in the engine`; `plans/13-game-modes.md` "Competitive timed" clock line
+- Done: per-commit checks pass (`npm run check`, `npm test`, `npm run build`, `qgen validate`)', '2026-10-16T21:13:27Z', NULL, 1399, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1448, 164, 'create tasks for plan 164: Timed game screens, drama and sound', 'split', 'open', 1000, NULL, 'Split plan 164 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T21:14:29Z', NULL, 1399, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -41389,6 +41488,8 @@ Proposal (`qgen taxonomy --bundle germany`, from the general list of decision 21
   - `gdr-everyday-life` Everyday life in the GDR (de: Alltag in der DDR)
 
 left out: []', 'The new German question pack needs its own list of topics, so its questions cover life in Germany evenly. The proposal keeps the general topics every regional pack has, adds one topic of its own (the former East Germany), and splits them into 53 subtopics, about 38 questions each at 2000 questions. Applying it fixes the pack''s structure; the Spanish topic names are drafted at that point.', NULL, NULL, '2026-10-16T21:10:05Z', NULL, 1277, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (295, 'Timed mode: the claimer answers with one press, no final-answer step, a short reveal', 'answered', '[]', 'Decision 290 and decision 275 say the claimer answers as on the Question screen; that names the inputs, not the two-step lock-in. The lock-in plus PADLOCK_MS (1.4 s) leaves under 5 s to think and invites claim timeouts that feel like input failures. The pace of the race needs a quick reveal; the drama is in the clock, not the wait.', 'In the timed race, the player who grabs a question has only six seconds to answer. The normal game makes players pick an answer, wait for a padlock and confirm it as their final answer, then holds a drum roll of several seconds before the reveal; that would eat most of the six seconds and slow the race. Here a single press is the answer, and the result shows after a short fixed beat.', 'In timed, the claimer''s first pick (pad face button, A–D/1–4, or a click) is the answer: no lock-in, no padlock, no «Respuesta final», no level-dependent drum roll; the reveal follows after a fixed TIMED_REVEAL_MS beat (about 1.2 s, timing.ts), visible to everyone, then the next question or the round end', NULL, '2026-10-16T21:13:18Z', '2026-10-16T21:13:18Z', 1399, NULL, 'rule', 1399, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (296, 'Timed mode: a round screen with a countdown before each round, and the question clock starts when the question is on screen', 'answered', '[]', 'With shown_at set at the previous question''s end (plan 159 as written), the reveal beat, the fade and a round screen would come off the next question''s 30 s, and a slow machine would lose more. A press to continue would need a rule for which player may press; the countdown is fair to all and keeps the pace.', 'Between rounds of the timed race, the screen shows the round number and every player''s hearts, including the hearts just lost. Somebody has to move on from there, and the question''s 30 seconds must not start ticking while the screen is still fading in or showing the last answer. This rule moves on by itself after a short countdown, and starts each question''s clock only once the question is visible.', 'Each round opens on the Level screen as a round screen (round n of 12 or sudden death, hearts per player, the hearts lost at the last round end break there, players out marked) and moves on by itself after a 3-2-1 countdown (no press, so no player has to be the one to press; the Esc menu still opens); inside a round the next question follows the reveal directly; the engine starts a question''s 30 s on a show action the client sends once the question has faded in, not at the end of the previous one', NULL, '2026-10-16T21:13:18Z', '2026-10-16T21:13:18Z', 1399, NULL, 'rule', 1399, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
