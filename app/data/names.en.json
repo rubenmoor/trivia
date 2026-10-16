@@ -21,6 +21,10 @@
     "uk": {
       "name": "Regional: United Kingdom",
       "description": "For anyone with ties to the United Kingdom: its places, food, customs, people, music, sport and words."
+    },
+    "spain": {
+      "name": "Regional: Spain",
+      "description": "For anyone with ties to Spain: its places, food, customs, people, music, sport and words."
     }
   },
   "age_groups": {
