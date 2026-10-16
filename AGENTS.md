@@ -15,6 +15,13 @@ Family trivia party game, shown on a TV: the family plays against the gamemaster
 - Milestones are mine; edit them with pm when we answer decisions: `pm decision list`, `pm milestone set <id> --body - <<'EOF'`, then `pm decision answer <id> …`.
 - note that editing a milestones triggers pm to add a task that rewrites its decendant plans and task; this is why editing a milestone is usually enough
 
+## Work trees
+- pm runs tasks in `../trivia-worktrees/<name>` (`[worktrees]` in `project-manager.toml`); gitignored state lives only in the main checkout
+- Each work tree symlinks it, else `qgen batch` restarts a run from scratch and media steps fail:
+  `for x in work media state .env.local; do ln -s "$PWD/$x" ../trivia-worktrees/<name>/$x; done` (from the main checkout)
+- `/work`, `/media`, `/state` in `.git/info/exclude` (the `.gitignore` `dir/` patterns miss symlinks; untracked = dirty tree, RUNBOOK step 1)
+- Before linking a new work tree: move its own `work/` runs into the main checkout's `work/`
+
 ## Rules
 - Push directly to `main`. No feature branches or pull requests.
 - Human review work (`trivia-authoring` reviews, spot checks, `qgen health ack`, the developer's hand edits to the pool): always in `../trivia-review`, then merge into `main` (README "Review in a separate worktree"); never in the main checkout, where `pm run` moves unstaged changes to a `pm/task-…-left` branch.
