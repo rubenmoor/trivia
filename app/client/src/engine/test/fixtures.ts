@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import type { Category } from "../../lib/types.ts";
 import {
@@ -53,8 +53,8 @@ export function realCategories(): Category[] {
 export const realBundles = (): Bundle[] => parseBundles(data("bundles.json"));
 export const realAgeGroups = (): AgeGroup[] => parseAgeGroups(data("age-groups.json"));
 
-/** The real es pool: base's and the packs' (decision 66). */
+/** The real es pool: base's and the packs' (decision 66); a pack without a pool file is not offered (decision 112). */
 export function realPool(): PoolQuestion[] {
-  const packs = Object.fromEntries(packsFor(realBundles(), "es").map((b) => [b.id, data(poolFile("es", b.id))]));
+  const packs = Object.fromEntries(packsFor(realBundles(), "es").filter((b) => existsSync(join(DATA, poolFile("es", b.id)))).map((b) => [b.id, data(poolFile("es", b.id))]));
   return withPacks(parsePool(data("pool.json")), realBundles(), "es", packs).pool;
 }

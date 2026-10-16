@@ -1,4 +1,138 @@
 {
   "about": "Categories of the mexico bundle (D-41, D-43): structure only, keyed by English slugs unique within the bundle (decision 259); names in names.<locale>.json.",
-  "categories": []
+  "categories": [
+    {
+      "slug": "geography",
+      "subcategories": [
+        "states-and-capitals",
+        "cities-and-towns",
+        "landscapes",
+        "landmarks"
+      ]
+    },
+    {
+      "slug": "nature",
+      "subcategories": [
+        "animals",
+        "plants",
+        "reserves-and-climate"
+      ]
+    },
+    {
+      "slug": "history",
+      "subcategories": [
+        "conquest-and-colony",
+        "independence-and-19th-century",
+        "revolution",
+        "20th-century"
+      ]
+    },
+    {
+      "slug": "ancient-mexico",
+      "subcategories": [
+        "mexica",
+        "maya",
+        "other-cultures"
+      ]
+    },
+    {
+      "slug": "people",
+      "subcategories": [
+        "scientists-and-inventors",
+        "indigenous-peoples"
+      ]
+    },
+    {
+      "slug": "food-and-drink",
+      "subcategories": [
+        "antojitos-and-street-food",
+        "regional-dishes",
+        "sweets-and-bread",
+        "drinks",
+        "ingredients"
+      ]
+    },
+    {
+      "slug": "festivals-and-traditions",
+      "subcategories": [
+        "day-of-the-dead",
+        "christmas-season",
+        "civic-holidays",
+        "regional-fiestas",
+        "crafts-and-dress",
+        "traditional-games"
+      ]
+    },
+    {
+      "slug": "myths-and-legends",
+      "subcategories": [
+        "legends",
+        "pre-hispanic-gods",
+        "folk-beliefs"
+      ]
+    },
+    {
+      "slug": "music-and-dance",
+      "subcategories": [
+        "mariachi-and-ranchera",
+        "regional-mexican",
+        "pop-and-rock",
+        "traditional-dances",
+        "childrens-songs"
+      ]
+    },
+    {
+      "slug": "art-and-literature",
+      "subcategories": [
+        "painters-and-muralists",
+        "writers-and-poets",
+        "comics"
+      ]
+    },
+    {
+      "slug": "film-and-television",
+      "subcategories": [
+        "golden-age-cinema",
+        "contemporary-cinema",
+        "telenovelas",
+        "chespirito",
+        "tv-shows-and-hosts"
+      ]
+    },
+    {
+      "slug": "sports",
+      "subcategories": [
+        "liga-mx",
+        "national-team",
+        "lucha-libre",
+        "boxing",
+        "other-sports"
+      ]
+    },
+    {
+      "slug": "how-people-speak",
+      "subcategories": [
+        "slang",
+        "sayings",
+        "indigenous-words"
+      ]
+    },
+    {
+      "slug": "daily-life",
+      "subcategories": [
+        "money",
+        "brands-and-snacks",
+        "transport",
+        "school-and-services",
+        "home-and-street"
+      ]
+    },
+    {
+      "slug": "symbols",
+      "subcategories": [
+        "national-symbols",
+        "state-symbols"
+      ]
+    }
+  ]
 }
