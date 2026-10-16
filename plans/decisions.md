@@ -939,15 +939,16 @@ Template:
   - **Languages:** the region's language + en (`colombia`: es + en); en via `qgen batch --translate en --bundle <id>` (plan 98 task 829).
   - **Default:** off on the configure screen in every locale (pm decision 33, D-97 unchanged); the family's save keeps base + `colombia` (D-85, D-59).
   - **Free DLC**, optional install (D-94, D-95, D-98).
-  - **Bundle-scoped taxonomy:** a category or subcategory is bundle + name; names may repeat verbatim across bundles («Historia» in `base` and in `colombia`), still separate entries; unique within a bundle. The 19 `colombia` questions on `base` subcategories move to `colombia`'s own (plan 98 tasks 826, 827).
+  - **Bundle-scoped taxonomy:** a category or subcategory is bundle + name (amended by D-110: bundle + slug); names may repeat verbatim across bundles («Historia» in `base` and in `colombia`), still separate entries; unique within a bundle. The 19 `colombia` questions on `base` subcategories move to `colombia`'s own (plan 98 tasks 826, 827).
   - **Pilot `colombia`:** 102 → 2000 via `qgen batch --bundle colombia`, then its en translation; effort measured: $ per approved (`qgen report --cost`) and the developer's review time per 100 (review tool timestamps, plan 98 task 830).
   - **More packs** (candidates `mexico`, `argentina`): a new pm decision "More regional bundles at launch?" after the pilot, with its numbers (plan 84).
   - **Launch doesn't wait:** it ships what `colombia` has then; updates bring the rest.
 - Consequences: `qgen report --simulate` defaults to the locale's default game (`base` for every locale); `--bundles` for packs. Plan 98 builds the rest (taxonomy, `colombia` list, target, `--translate --bundle`, effort report).
-- Supersedes / related: D-43 (uniqueness across bundles), D-49, D-53, D-84 (amends); amended by D-109 (`colombia`'s list); D-39, D-85, D-94, D-95, D-97, D-98; OQ-46; RG-5; pm decisions 33, 37, 66, 110; plans 84, 98
+- Supersedes / related: D-43 (uniqueness across bundles), D-49, D-53, D-84 (amends); amended by D-109 (`colombia`'s list), D-110 (bundle + slug); D-39, D-85, D-94, D-95, D-97, D-98; OQ-46; RG-5; pm decisions 33, 37, 66, 110; plans 84, 98
 
 ## D-100: Subcategory keys: bundle + name in code
 - Date: 2026-10-14
+- Amended by D-110 (pm decision 259): keys are English slugs, not names; the one-string `subKey` form stays; names come from `names.<locale>.json` only.
 - Context: D-99 makes a category or subcategory bundle + name; code looked subcategories up by name alone (D-43). Plan 98 task 826.
 - Decision:
   - **Python:** a subcategory is `(bundle, name)` (`categories.key(q)`, `broad_of()`, `category_of(bundle, sub)`); concept lists, drafts, saturation, reports and `validate` take the bundle; `validate` checks uniqueness within each bundle only.
@@ -1086,3 +1087,20 @@ Template:
   - **`validate`:** a question's subcategory is in its own bundle's list; D-100's grace for `colombia` questions on `base` subcategories is gone
 - Consequences: all 109 `colombia` questions on `colombia` subcategories (91 moved, none added); concepts 17 kept, 41 cleared; concept lists: 3 renamed («Frutas de Colombia», «Fútbol colombiano de clubes», «Parques naturales y ecosistemas de Colombia»), 7 deleted, 3 unchanged; the first `qgen batch --bundle colombia` makes the missing lists
 - Supersedes / related: D-43, D-99 (amends: `colombia`'s list); D-100 (its grace ends); D-49, BN-13; pm decisions 18, 166, 213, 249; plans 98, 138
+
+## D-110: Category and subcategory keys: English slugs
+- Date: 2026-10-16
+- Context: milestone 9, "Slug keys for categories" (developer, 2026-10-16); plan 149; pm decisions 259, 258 (the list for `base` and `colombia`). Spanish names as keys tie every bundle to Spanish before the next regional taxonomies (`usa`, `germany`, `uk`, `spain`, `mexico`).
+- Decision:
+  - **Key:** English slug `^[a-z0-9]+(-[a-z0-9]+)*$`, unique within its bundle per kind; a category and a subcategory may share one (`history`)
+  - **One-string form kept** (D-100): `subKey` = `base`'s bare slug, else `<bundle>/<slug>`; Python `(bundle, slug)`
+  - **`categories.json`:** structure only, `{"categories": [{"slug", "subcategories": ["<slug>", …]}]}`
+  - **Names:** `names.<locale>.json` for `en`, `es`, `de` (`names.es.json` new: today's Spanish names); `es-ES` reads `names.es.json`, then `names.es-ES.json` (optional, existing keys only) where Spain differs
+  - **Lookup order** (client, `load_names`, reports): locale file → base language file (`es` for `es-ES`) → `name` field in `categories.json` (mods) → the key
+  - **Old keys:** `app/data/old-keys.json` (written once by the migration, shipped), `{"categories": {…}, "subcategories": {…}}` for `base` and `colombia`; read by save load, the frozen fixtures' normalizer, `patch_notes.py`, `played.py`
+  - **Saves:** old keys mapped on load (`purged`, `swapped_to`, joker log, settings/history keys, `notified_exhausted`); idempotent, no save version bump unless a field needs one
+  - **Mods:** today's format stays valid (a plain string is key and name); slugs + names files optional
+  - **Prompts:** display names in the prompt's locale, never slugs; output mapped back to slugs by code
+  - Not in scope: bundle ids, `bundles.json`'s `name`/`description`
+- Consequences: plan 149 (Python readers and `qgen rekey`, engine/client, migration, review tool and reports, mods, taxonomy on slugs, docs)
+- Supersedes / related: supersedes pm decision 165's name-as-key part; amends D-99 (bundle + slug), D-100 (slug keys); D-59, D-109; pm decisions 133, 250, 258

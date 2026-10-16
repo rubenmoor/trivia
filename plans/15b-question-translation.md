@@ -35,7 +35,7 @@ Option A is decided in D-81; the options below are kept as history.
 - **A: one file per locale** (`authoring/data/questions.en.json`) with the same IDs and only the translated fields plus their own `difficulty`, `status`, `review`. `questions.json` stays the source file (sources in any locale since D-107). Small diffs, easy to review.
 - **B: a `translations` map inside each question.** One file, but `questions.json` grows with every language and gets harder to diff.
 - Draft preference: **A**. The export (PORT-6) builds one playable pool per locale either way.
-- Decided: A (D-81, pm plan 63). `questions.<locale>.json` with `source_hash` (`stale` derived, left out of the export), `translatable: false` on sources, names in `app/data/names.<locale>.json` (+ per bundle); export → `app/data/pool.<locale>.json`.
+- Decided: A (D-81, pm plan 63). `questions.<locale>.json` with `source_hash` (`stale` derived, left out of the export), `translatable: false` on sources, names in `app/data/names.<locale>.json` (+ per bundle; `en`, `es`, `de`, keyed by slug, D-110; `es-ES` reads `names.es.json`, `names.es-ES.json` overrides where Spain differs); export → `app/data/pool.<locale>.json`.
 - Whole-pool rewrites of the source (`qgen tighten`, `qgen neutralize` on es sources, masterplan part 8) stale every touched translation: full runs come after them.
 
 ## Review tool
