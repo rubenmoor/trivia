@@ -77,7 +77,7 @@ function startable(mode: unknown = "gamemaster"): true {
 }
 
 /** Actions without an acting seat: start, end, timed's clock (plan 159). */
-const CLOCK = new Set(["new", "abandon", "expire", "pause", "resume"]);
+const CLOCK = new Set(["new", "abandon", "expire", "pause", "resume", "show"]);
 
 type Action = (save: SaveData) => { save: SaveData; event?: JokerEvent };
 
@@ -94,6 +94,7 @@ export function gameAction(save: SaveData, data: EngineData, io: Io, action: str
     expire: (s) => game.expire(s, data, io),
     pause: (s) => game.pause(s, data, io),
     resume: (s) => game.resume(s, data, io),
+    show: (s) => game.show(s, data, io),
     reveal: (s) => game.reveal(s, data, io),
     skip: (s) => game.skip(s, data, io, pyTruthy(body.everyone)),
     undo: (s) => game.undo(s, io),
