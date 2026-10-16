@@ -27,7 +27,9 @@ export type Intent =
   /** The one hold (plan 113): down on press, up on release. */
   | { type: "peek"; down: boolean }
   /** A screen's own letter key (a bundle on Choice); `key` lower case. */
-  | { type: "letter"; key: string };
+  | { type: "letter"; key: string }
+  /** Timed (plan 161): claim the question; `key`: a keyboard-only player's picked key, lower case. */
+  | { type: "claim"; key?: string };
 export type Action = Intent & { device: Device; source: Source };
 /** A scope's extra keys, lower case (e.g. `n` → new on Start). */
 export type Keys = Record<string, Intent>;
@@ -72,7 +74,7 @@ function toIntent(e: Key, keys: Keys = {}, text = false): Intent | null {
   if (text) return dir === "up" || dir === "down" ? { type: "navigate", dir } : null;
   if (dir) return { type: "navigate", dir };
   if (e.ctrlKey || e.metaKey || e.altKey) return null;
-  if (e.key === " ") return { type: "confirm" };
+  if (e.key === " ") return keys[" "] ?? { type: "confirm" };
   if (e.key === "Backspace") return { type: "back" };
   const k = e.key.toLowerCase();
   if (k in keys) return keys[k];
@@ -100,6 +102,7 @@ export function keyLabel(i: Intent): string | null {
   if (i.type === "pick") return String(i.n);
   if (i.type === "navigate") return ARROW_LABELS[i.dir];
   if (i.type === "letter") return i.key.toUpperCase();
+  if (i.type === "claim") return i.key?.toUpperCase() ?? t("picker.space");
   return keyLabels()[i.type] ?? null;
 }
 

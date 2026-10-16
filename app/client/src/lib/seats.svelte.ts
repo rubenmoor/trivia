@@ -1,6 +1,8 @@
 // The running session's seat binding (plan 161): set by the join screen, kept in sessionStorage by game id for a
 // reload, cleared when the session ends. Outside a session `seating.view` is null: no filter, every device acts.
-import type { Binding, SessionView } from "./seats.ts";
+import { CLAIM_PAD } from "./gamepad.ts";
+import type { Keys } from "./input.svelte.ts";
+import { claimKeys, type Binding, type SessionView } from "./seats.ts";
 import type { Game } from "./types.ts";
 
 /** `binding` per seat in join order, null: unbound (a lost pad, a reload without the stored binding, decision 289). */
@@ -61,4 +63,11 @@ export function actingSeat(): number | null {
   const view = seating.view;
   if (!view) return null;
   return acting.seat ?? (view.timed ? (view.timed.claim?.seat ?? null) : view.turn);
+}
+
+/** The `keys` and `pad` of the timed question scope (plan 164): the claim inputs of the session's seats; a claim
+ * click is any `[data-claim]` control's handler, the mouse filter lets only the `kbm` seat through.
+ * @public timed screens (plan 164) */
+export function claimInput(): { keys: Keys; pad: typeof CLAIM_PAD } {
+  return { keys: claimKeys(seating.binding), pad: CLAIM_PAD };
 }

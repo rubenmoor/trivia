@@ -2,9 +2,9 @@
 // is connected and dispatches their actions like keys (input.svelte.ts). Any pad drives the game; in a local
 // multiplayer session only a pad whose seat may act (plan 161).
 import { steam } from "./desktop.ts";
-import { BUTTONS, FRESH, held, step, steamStyle, styleOf, type PadState, type PadStyle } from "./gamepad.ts";
+import { BUTTONS, CLAIM_PAD, FRESH, held, step, steamStyle, styleOf, type PadState, type PadStyle } from "./gamepad.ts";
 import { show } from "./focus.ts";
-import { dispatch, gate, lastDevice, padMap, release, resetTravel, type Device } from "./input.svelte.ts";
+import { dispatch, gate, keyLabel, lastDevice, padMap, release, resetTravel, type Device } from "./input.svelte.ts";
 import { seating } from "./seats.svelte.ts";
 
 /** The glyph set of the pad that acted last (IN-5). */
@@ -39,6 +39,16 @@ export function seatDevice(seat: number): { device: Device; style?: PadStyle } |
   const b = seating.binding[seat];
   if (!b) return null;
   return typeof b === "object" && "pad" in b ? { device: "gamepad", style: padStyleOf(b.pad) } : { device: "keyboard" };
+}
+
+/** What a seat's claim prompt shows (decision 290): the bumpers' glyphs (`buttons`) of its pad, else a text («Espacio»
+ * or the picked key); null: unbound.
+ * @public timed screens (plan 164) */
+export function claimLabel(seat: number): { buttons: number[]; style: PadStyle } | { text: string } | null {
+  const b = seating.binding[seat];
+  if (!b) return null;
+  if (typeof b === "object" && "pad" in b) return { buttons: Object.keys(CLAIM_PAD).map(Number), style: padStyleOf(b.pad) };
+  return { text: keyLabel({ type: "claim", key: typeof b === "object" && "key" in b ? b.key : undefined }) ?? "" };
 }
 
 /** A switch without an action: the focused control gets the ring if none has it (as a key press does). */
