@@ -4892,16 +4892,6 @@ TAXONOMY_SCHEMA = {"type": "object", "required": ["region", "categories", "left_
                                             "properties": {"name": STR, "reason": STR}}}}}
 
 
-def slug_prompts():
-    """True once the taxonomy prompts on slug keys are applied (decision 262: Taxonomy prompts on slug keys: apply?): slugs + en names, names from any language."""
-    return ("{language}" in (PROMPTS / "taxonomy.md").read_text(encoding="utf-8")
-            and "{source}" in (PROMPTS / "taxonomy-names.md").read_text(encoding="utf-8"))
-
-
-NOT_ON_SLUGS = ("taxonomy.md / taxonomy-names.md predate slug keys (decision 262: Taxonomy prompts on slug keys: apply?); "
-                "`task 1316: Apply the taxonomy prompts on slug keys` applies them")
-
-
 def names_locale(locale):
     """The names file a locale's names go in: es-ES's in es's, which es-ES reads first (decision 259)."""
     return "es" if locale.startswith("es") else locale
@@ -4969,8 +4959,6 @@ def cmd_taxonomy(args):
     d.mkdir(parents=True, exist_ok=True)
     if args.apply:
         return apply_taxonomy(args.bundle, Path(args.apply), d)
-    if not slug_prompts():
-        sys.exit(NOT_ON_SLUGS)
     total = targets.load_targets(args.bundle)["total"]
     per = PER_SUBCATEGORY
     loc = translations.draft_locale(b)
@@ -5049,8 +5037,6 @@ def draft_names(bundle, todo, d):
     for i, e in enumerate(todo):
         by_src.setdefault("en" if "en" in e["names"] else next(iter(e["names"])), []).append((str(i), e))
     for src, items in by_src.items():
-        if src != "es" and not slug_prompts():
-            sys.exit(NOT_ON_SLUGS)
         locales = [l for l in categories.NAMES_LOCALES if any(l not in e["names"] for _, e in items)]
         rows = [{"key": k, "name": e["names"][src], "scope": e.get("scope", "")} for k, e in items]
         schema = {"type": "object", "required": ["items"], "properties": {"items": {"type": "array", "items": {

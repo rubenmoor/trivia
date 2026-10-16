@@ -1,10 +1,10 @@
 # Task: move a regional bundle's questions onto its new taxonomy
 
-A regional bundle got a new list of categories and subcategories. Its existing questions still carry old subcategory names, some of them from `base`, the main pool. You give every question the subcategory of the new list it fits best, and say what happens to the old concept lists.
+A regional bundle got a new list of categories and subcategories. Its existing questions still carry old subcategory names, some of them from `base`, the main pool. Every name below is in the bundle's language; answer with names in that language too. You give every question the subcategory of the new list it fits best, and say what happens to the old concept lists.
 
 ## Questions
 - For every question, `subcategory`: one name from the new list, exactly as written. Judge by what the question asks about (question, answer and hints together), not by its old subcategory's name. Use the scopes: a borderline topic goes where the scope says.
-- Only when no subcategory of the new list fits at all: a new one. `subcategory`: a new Spanish name in the style of the list (unique within the bundle, the region's angle clear from the name); `category`: the existing category it goes into, or a new category name when none fits; `scope`: one English line, what belongs in it so it doesn't overlap its neighbours. A new subcategory must be able to hold 150 concepts the region's families know; a narrower topic goes into the closest existing subcategory instead. Several questions may share one new subcategory: write its name, category and scope the same way each time.
+- Only when no subcategory of the new list fits at all: a new one. `subcategory`: a new name in the style of the list (unique within the bundle, the region's angle clear from the name); `category`: the existing category it goes into, exactly as written in the list, or a new category name when none fits; `scope`: one English line, what belongs in it so it doesn't overlap its neighbours. A new subcategory must be able to hold 150 concepts the region's families know; a narrower topic goes into the closest existing subcategory instead. Several questions may share one new subcategory: write its name, category and scope the same way each time.
 - For a subcategory of the new list: `category` and `scope` are empty strings.
 - `reason`: one short English sentence, only when the question changes subcategory (empty string otherwise).
 
