@@ -27763,7 +27763,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Bound change: `authoring/data/targets.json` "media share" min; also note it under `decision 13: Batch health thresholds and stop rule?`''s consequences.
 - "None": only the consequences line.
 - From batch-9 `base` is drafted in English (milestone 9): query hints (if approved) go into the English drafter prompt; decision 227''s simulated numbers come from batch-8''s Spanish subcats, a guide for batch-9, not a forecast (`plan 146: Media yield` "English-first from batch-9").', '2026-10-15T22:01:32Z', NULL, 1189, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1191, 17, 'Extended review of batch-8: 120-question spot check (decision 228)', 'work', 'open', 650, NULL, '`decision 228: batch-9: health stop, ack?` answered: before `task 1185: run batch-9` goes on, an extensive review of batch-8: spot-check sample quadrupled to 120, the developer reviews those first, their feedback is incorporated, then we see.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1191, 17, 'Extended review of batch-8: 120-question spot check (decision 228)', 'work', 'done', 650, '2026-10-16, authoring/reports/batch-8.md (Changes from this QC); decision 231 → tasks 1248–1252 in plan 17. Earlier runs: 120-question spot check and audit, QC section.', '`decision 228: batch-9: health stop, ack?` answered: before `task 1185: run batch-9` goes on, an extensive review of batch-8: spot-check sample quadrupled to 120, the developer reviews those first, their feedback is incorporated, then we see.
 
 - Tooling: let batch-8''s spot check show 120 questions (`/review?batch=batch-8&sample=1`), not `quality.spot_check_size` 30 (`authoring/data/targets.json`); e.g. a per-run size or `&size=120`. Keep the default 30 for other batches unless a decision says otherwise.
   - `audit_sample` (`authoring/tools/qgen.py`) is a seeded, proportional prefix order; the first 30 (already reviewed, `authoring/data/spot-checks.json`, `decision 215: Spot check batch-8 done?`) stay a subset of the 120.
@@ -27772,7 +27772,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Then `authoring/QC.md` steps 2–4 for batch-8: `pm decision add "Spot check batch-8 (120) done?"` (link, size, `trivia-authoring`), pending, stop; once answered, `qgen report --qc batch-8`, proposals decision ("QC batch-8 (120): which changes?"), pending, stop; approved proposals become tasks in plan 17 at priority 650 (like `task 1182: Ambiguity in riddles: generic answers and one question per text (QC batch-8 A)`).
 - Not here: `qgen health ack` (the developer''s), batch-9 itself.
 
-Done when: 120 spot-checked, QC section of `authoring/reports/batch-8.md` updated, the proposals decision answered and its tasks added.', '2026-10-15T22:07:47Z', NULL, 1185, 0);
+Done when: 120 spot-checked, QC section of `authoring/reports/batch-8.md` updated, the proposals decision answered and its tasks added.', '2026-10-15T22:07:47Z', '2026-10-16T02:15:08Z', 1185, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1192, 9, 'revise the masterplan of milestone 9: Steam S4: content for release', 'revise', 'done', 1000, '2026-10-15, plan 9 body: English-first drafting for base (new part 15, priority 710), parts 4, 6, 8, 9, 11, 12, rules, preconditions and order updated', '`milestone 9: Steam S4: content for release` changed. Bring `plan 9: masterplan`, the masterplan, in line with it (`pm plan edit 9 --body -`), or
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-15T23:12:36Z', '2026-10-16T00:26:15Z', NULL, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1193, 1, 'revise the masterplan of milestone 1: Enough content for game nights', 'revise', 'done', 1000, '2026-10-15, tasks.sql: plan 1 body: English-first from batch-9 (owner milestone 9, count rule, effects on parts 2–5), state 2026-10-15, answered decisions cited', '`milestone 1: Enough content for game nights` changed. Bring `plan 1: masterplan`, the masterplan, in line with it (`pm plan edit 1 --body -`), or
@@ -29500,6 +29500,72 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm decision consequences 245 "…"`.
 
 Done when: `qgen validate`, `npm run check`, `npm test`, `npm run build` pass.', '2026-10-16T02:12:58Z', NULL, 1204, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1248, 17, 'No "Three clues:" label in questions (QC batch-8 120 A)', 'work', 'open', 650, NULL, 'QC batch-8 (120) proposal A, approved in `decision 231: QC batch-8 (120): which changes?` (answer "all: A–E"). Source: `authoring/reports/batch-8.md` "## Quality control"; q-1581 (developer: "the ''three hints'' style should be purged. this one has two hints"), q-1973 (rejected); both open with "Tres pistas:".
+
+Why: the label clashes with the game''s own hints (Soplo joker), and the announced count is often wrong.
+
+## Changes
+- `authoring/tools/prompts/house-style.md`: the question text never announces its clues ("Three clues:", "Clues:", "Tres pistas:", "Pistas:", numbered "1) … 2) …"); the `three_facts` form (`authoring/data/question-axes.json`) stays, written as plain facts in one sentence or two.
+- `authoring/data/question-axes.json` `three_facts` description: add "no label like ''Three clues:''" if the draft prompt reads it there.
+- `authoring/tools/prompts/review.md`: such a label → needs_work (style, reason 6 or the style problem list); `fix` drops the label and rewords minimally.
+- `authoring/tools/prompts/audit.md`: label = retired style (check 7 or its style check); don''t duplicate what it gets from `house-style.md`.
+
+## Rules
+- Prompts/axes only; no `qgen.py` change, no batch run. The pool''s existing labels are task "Strip the clue label from approved base questions (QC batch-8 120 B)".
+- Ultra-short wording, matching the prompts'' style.
+
+## Check
+- `qgen validate`, `npm run check` clean.', '2026-10-16T02:14:59Z', NULL, 1191, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1249, 17, 'Strip the clue label from approved base questions (QC batch-8 120 B)', 'work', 'open', 640, NULL, 'QC batch-8 (120) proposal B, approved in `decision 231: QC batch-8 (120): which changes?`; goes with proposal A (task "No \"Three clues:\" label in questions (QC batch-8 120 A)", runs first by priority).
+
+Approved `base` questions whose text opens with "Tres pistas…"/"Pistas:" (21 on 2026-10-16): batch-7 q-0600, q-0618, q-0626, q-0630, q-0735, q-0819, q-0852, q-0904, q-0943, q-0944, q-0953, q-0962, q-0964, q-1049, q-1052, q-1056, q-1156, q-1201; batch-8 q-1577, q-1747, q-1750. Re-check with a scan of `authoring/data/questions.json` (status approved, question text matching `pistas`, case-insensitive) for any others, also in needs_work questions.
+
+## Changes
+- Edit each question text by hand (the developer approved a manual pool edit here): drop the label ("Tres pistas:", "Tres pistas sobre X:", "Pistas: 1) … 2) …"), minimal rewording so the facts read as one plain sentence or two and the question still asks one thing; keep facts, answer, hints, difficulty, status.
+- "Tres pistas sobre <the answer>" (e.g. q-1049 Lope de Aguirre, q-1056 Boyan Slat, q-0852 Uffizi): check the rewording still asks what the answer options answer.
+- Translations: the usual stale mechanism (source text changed → translations stale); don''t edit them by hand.
+- `qgen validate`, `qgen export` (stage `app/data/pool.json`).
+
+## Rules
+- No `qgen rework`/batch run; no other text changes.
+
+## Check
+- Scan finds no approved question opening with a clue label; `qgen validate` clean; `npm run check` clean.', '2026-10-16T02:14:59Z', NULL, 1191, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1250, 17, 'Media shows what the question names (QC batch-8 120 C)', 'work', 'open', 650, NULL, 'QC batch-8 (120) proposal C, approved in `decision 231: QC batch-8 (120): which changes?`. Source: `authoring/reports/batch-8.md` "## Quality control" and "## Audit"; q-1897 (rover photo instead of the Blue Marble: "needs photo of earth from space"), q-1246 (a Yucatán note, "didn''t actually show a peso bill"), q-1331 (landscape instead of the rock art), audit q-2199 (boutonniere instead of an ascot).
+
+## Changes
+- `authoring/tools/prompts/house-style.md` media section: when the question names something showable that isn''t the answer (a photo, an artwork, a banknote, an object, "like this one"), the media query and the picked image show that very thing; a merely nearby subject isn''t enough.
+- `authoring/tools/prompts/review.md` media pick / media check: image shows a related but different subject than the one the question names → pick another candidate, else needs_work (media).
+- If the media query prompt (rg `media` in `authoring/tools/prompts/`) writes the query separately, the same rule there in one line.
+
+## Rules
+- Prompts only; no `qgen.py` change, no batch run, no pool or media change (the four questions go through the normal needs_work/rework path).
+- Ultra-short wording.
+
+## Check
+- `qgen validate`, `npm run check` clean.', '2026-10-16T02:14:59Z', NULL, 1191, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1251, 17, 'Audit: hint giveaways are minor unless they name the answer (QC batch-8 120 D)', 'work', 'open', 650, NULL, 'QC batch-8 (120) proposal D, approved in `decision 231: QC batch-8 (120): which changes?`. Source: `authoring/reports/batch-8.md` "## Audit" and "## Quality control": 7 audit majors on approved questions, the developer approved 6 (q-1316, q-1378, q-1531, q-1774, q-2033, q-2199), mostly hint giveaways; q-2035: "the first hint gives away the answer, BUT … no real problem". Hints only come through the Soplo joker, so a hint that narrows the options is not a defect of the question.
+
+## Changes
+- `authoring/tools/prompts/audit.md` check 3 (giveaway) / severity: hint 1 or 2 narrowing the options is `minor`; `major` only when it names, translates or defines the answer. Description, question text and media title giveaways stay as they are.
+- `review.md`, `house-style.md` unchanged.
+
+## Rules
+- Prompt only; no `qgen.py` change, no re-audit, no batch run.
+
+## Check
+- `qgen validate`, `npm run check` clean.', '2026-10-16T02:14:59Z', NULL, 1191, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1252, 17, 'Review: no clue that is a translation of the answer''s own words (QC batch-8 120 E)', 'work', 'open', 650, NULL, 'QC batch-8 (120) proposal E, approved in `decision 231: QC batch-8 (120): which changes?` (the developer chose "all: A–E"; E was not recommended: one case, the developer was unsure). Source: q-1950 (developer: "not sure how this question translates to english"): the clue is the Spanish meaning of an English title, which collapses once translated to `en`.
+
+## Changes
+- `authoring/tools/prompts/review.md`: a `base` question whose clue is a translation of the answer''s own words (title, name, phrase) → needs_work: the question collapses in the answer''s language. Fit it into the existing reason that covers translatability/regional premise (`task 1183: Regional premise: no Spain-only words or brands in base (QC batch-8 B)` added one) rather than a new reason number if it fits.
+- With English-first drafting the same holds the other way round (an English clue translating a foreign title); word it language-neutrally.
+
+## Rules
+- Prompt only; one or two lines; no `qgen.py` change, no batch run.
+
+## Check
+- `qgen validate`, `npm run check` clean.', '2026-10-16T02:15:00Z', NULL, 1191, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -31752,7 +31818,7 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 - **D. Audit: hint giveaways are minor** (6 of 7 audit majors overruled; q-2035: "the first hint gives away the answer, BUT … no real problem"). Hints come only through the Soplo joker. `audit.md` check 3 / severity: hint 1 or 2 narrowing the options is `minor`; `major` only when it names, translates or defines the answer. `review.md`, `house-style.md` unchanged.
 - **E. Translatable premise** (not recommended: one case, you were unsure). q-1950: the clue is the Spanish meaning of an English title, which collapses in `en`. `review.md`: a `base` question whose clue is a translation of the answer''s own words → needs_work.
 
-Not proposed (one case each, below QC.md''s threshold of 2): q-1646 overgeneralization ("every bill has a thread"); q-1452/q-2043 false needs_work (no pattern).', 'all: A–E', NULL, '2026-10-15T23:08:12Z', '2026-10-16T00:27:58Z', 1191, NULL, 'rule', NULL, '');
+Not proposed (one case each, below QC.md''s threshold of 2): q-1646 overgeneralization ("every bill has a thread"); q-1452/q-2043 false needs_work (no pattern).', 'all: A–E', NULL, '2026-10-15T23:08:12Z', '2026-10-16T00:27:58Z', 1191, NULL, 'rule', NULL, '2026-10-16, task 1191: tasks in plan 17: task 1248 (A: no clue label, prompts/axes), task 1249 (B: strip the label from 21 approved base questions, by hand), task 1250 (C: media shows what the question names), task 1251 (D: audit hint giveaways minor unless they name the answer), task 1252 (E: no clue that translates the answer''s own words); authoring/reports/batch-8.md ''Changes from this QC'' lists them');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (232, 'Overlap of English drafts against the es-sourced base pool: which keys?', 'answered', '[]', 'plan 147: English-first batches: calibration, overlap and QC across languages, part 3. overlap_candidates/_overlap_keys/duplicates match normalized Spanish answers and stems, so an English draft barely matches the es pool. The en entries alone depend on milestone 9''s es → en timing; Wikidata ids cover few answers (dates, phrases, concepts) and need a lookup step; an LLM pass per draft costs every batch. A one-time key translation of ~1100 short strings is cheap and independent of that timing.', 'English keys per pool question: its en entry where milestone 9 made one, else a cached English answer + concept per es-sourced question (one batched claude call, refreshed for new or changed es questions); no Wikidata ids, no per-draft LLM pass', NULL, '2026-10-16T00:19:36Z', '2026-10-16T00:19:36Z', 1198, NULL, 'rule', 1198, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (233, 'Batch health trend rule across the switch to English drafts?', 'answered', '["Trend only within one source locale: batch-9 has no trend check, batch-10 compares with batch-9 alone, from batch-11 the mean of the previous two en batches; absolute thresholds always", "Trend across the switch as today (batch-9 vs. the mean of batch-7/8)", "No trend rule for batch-9 and batch-10; from batch-11 as today"]', '`plan 147: English-first batches: calibration, overlap and QC across languages`, part 4. `decision 13: Batch health thresholds and stop rule?` stops the next `qgen batch` when a batch fails an absolute threshold or the trend rule: no metric worse than the mean of the previous two batches by more than half its threshold''s margin (`authoring/tools/health.py`, `targets.py`). batch-9 is the first `en`-sourced batch: its drop, needs_work, overlap, calibration and fun numbers come from a new pipeline, not from drift, and batch-7/8 are es batches. The absolute thresholds stay either way. The answer decides how batch-9''s and batch-10''s health is read (task 1186: QC batch-9, and the stop before batch-10).', 'Trend across the switch as today (batch-9 vs. the mean of batch-7/8)', NULL, '2026-10-16T00:23:31Z', '2026-10-16T00:26:19Z', 1199, NULL, 'rule', NULL, '2026-10-16, task 1207: no code change to the check: decision 13 has no trend stop (trends side by side only), and batch-9''s report table already shows batch-7/8; authoring/tools/health.py health_section now names the compared batches and decision 233; batches.md already said so (task 1206).');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (234, 'Spot-check size for batch-9 and batch-10 (first English batches)?', 'answered', '["batch-9: 120, batch-10: 60, then 30 again if both reach ≥ 90 %", "120 for both", "60 for both", "30 (decision 2 unchanged)"]', '`plan 147: English-first batches: calibration, overlap and QC across languages`, part 5. `decision 2: When is batch quality "fine": human spot-check size and agreement rate with the LLM review?` sets 30 per batch, ≥ 90 % agreement; batch-8 got 120 (`decision 228: batch-9: health stop, ack?`; 108/120 = 90 %, decision 230). batch-9 is the first batch drafted in English with a new chain (drafts, rating, review in English). The size is per run (`spot-checks.json` "size", `spot_check_size()` in `qgen.py`) and also sets how many questions the batch''s audit reads (`audit_size()`), so it must be known before batch-9 runs. 30 take ~10–15 min, 120 ~45–60 min.', '30 (decision 2 unchanged)', NULL, '2026-10-16T00:23:31Z', '2026-10-16T00:26:51Z', 1199, NULL, 'rule', NULL, '2026-10-16, task 1208: 30 is the default (`quality.spot_check_size`), so `spot_check_size("batch-9")`/`("batch-10")` already return 30 and `audit_size()` 60 before the runs; no pre-run size option or spot-checks.json entry needed, no code change. task 1186: QC batch-9 phase 1 now cites decision 234 directly (its grep "spot check" missed "Spot-check"); batch-10''s QC task inherits the body.');
@@ -33777,6 +33843,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1201, 1203, '2026-10-16T01:49:24Z', '2026-10-16T01:50:40Z', 'done', NULL, 0, '772df3078fee1a1045f5c82c404425264f10d61b', 'claude-opus-5-5[1m]', '2a8776c9-b117-4c60-8cc3-40cab4774162', 10, 20, 4195, 350888, 31305, 0.40459759999999995, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1202, 1240, '2026-10-16T01:50:40Z', '2026-10-16T01:55:14Z', 'done', NULL, 0, 'e62551f5d9eda3adf7a0d4d5d8aa7aad90ea1bbc', 'claude-opus-5-5[1m]', '56a4e01c-ef35-435b-8a39-6109538d1564', 28, 52, 12317, 1851723, 80832, 1.2635486000000002, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1203, 1204, '2026-10-16T01:55:15Z', '2026-10-16T02:14:11Z', 'done', NULL, 0, '9f91e747e9fa31a485f9af1d2a27fc4f446dc508', 'claude-opus-5-5[1m]', '711d905e-0dc7-4f00-ba53-286c40033ace', 52, 104, 31985, 4337693, 116500, 2.4396545999999995, 3857742);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1204, 1191, '2026-10-16T02:14:12Z', '2026-10-16T02:15:15Z', 'done', NULL, 0, '414ad8e56d8c318e10e8dd449041e2d086a70be0', 'claude-opus-5-5[1m]', 'ba28095e-67e7-4c55-9e1e-47eb0ddde692', 15, 26, 6074, 551935, 42691, 0.573499, 3857742);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

@@ -127,7 +127,7 @@ Disagreements with the LLM review, by the human's problems:
 - **q-1452** LLM needs_work → human approved, audit ok (http://127.0.0.1:8001/review/q-1452)
 - **q-2043** LLM needs_work → human approved, audit ok (http://127.0.0.1:8001/review/q-2043)
 
-Changes from this QC: 1182, 1183
+Changes from this QC: 1182, 1183, 1248, 1249, 1250, 1251, 1252
 
 ## Needs work
 
