@@ -111,6 +111,14 @@
         <p class="hint">{t("credits.elgar")}</p>
       </section>
       <section>
+        <h3>{t("credits.horizon")} <small>{credits.horizon.entries.length}</small></h3>
+        <ul>
+          {#each credits.horizon.entries as h (h.file)}
+            {@render row(h.used_for, h.author, h.license, h.source, h.source_url)}
+          {/each}
+        </ul>
+      </section>
+      <section>
         <h3>{t("credits.fonts")} <small>{credits.fonts.length}</small></h3>
         <ul>
           {#each credits.fonts as f (f.name)}{@render row(f.name, "", f.license, null, f.license_file)}{/each}

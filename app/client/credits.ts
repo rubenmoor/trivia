@@ -2,7 +2,7 @@
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import type { Plugin } from "vite";
-import type { Credits, CreditKind as Kind, MediaCredit, SoundCredit } from "./src/lib/types.ts";
+import type { Credits, CreditKind as Kind, AssetCredit, MediaCredit } from "./src/lib/types.ts";
 
 const client = fileURLToPath(new URL(".", import.meta.url));
 const repo = `${client}../../`;
@@ -15,6 +15,7 @@ const pools = (): string[] => [
 
 const KINDS: Kind[] = ["image", "audio", "video", "background"];
 // Same file rules as authoring/steam/credits_check.mjs.
+const HORIZON = /\.webp$/i;
 const AUDIO = /\.(m4a|mp3|ogg|oga|opus|wav)$/i;
 const PROVIDERS: Record<string, string> = { commons: "Wikimedia Commons", freesound: "Freesound", openverse: "Openverse" };
 
@@ -84,16 +85,17 @@ function media(warnings: string[]): MediaCredit[] {
   );
 }
 
-/** Rows of public/audio/CREDITS.md, one per sound file. */
-function sounds(): { entries: SoundCredit[]; md: string[] } {
-  const dir = `${client}public/audio/`;
-  const rows = readFileSync(`${dir}CREDITS.md`, "utf8")
+/** Rows of public/<dir>/CREDITS.md, one per asset file matching `files`. */
+function assets(dir: string, files: RegExp): { entries: AssetCredit[]; md: string[] } {
+  const where = `${client}public/${dir}/`;
+  const name = `public/${dir}/CREDITS.md`;
+  const rows = readFileSync(`${where}CREDITS.md`, "utf8")
     .split("\n")
     .filter((l) => l.startsWith("|") && !/^\|\s*(File|-)/.test(l));
   const entries = rows.map((row) => {
     const cells = row.split("|").slice(1, -1).map((c) => c.trim());
     const file = cells[0]?.match(/^`([^`]+)`$/)?.[1];
-    if (cells.length !== 5 || !file) throw new Error(`credits: unparsable row in public/audio/CREDITS.md: ${row}`);
+    if (cells.length !== 5 || !file) throw new Error(`credits: unparsable row in ${name}: ${row}`);
     return {
       file,
       used_for: cells[1],
@@ -104,10 +106,10 @@ function sounds(): { entries: SoundCredit[]; md: string[] } {
     };
   });
   const listed = new Set(entries.map((e) => e.file));
-  const unlisted = readdirSync(dir).filter((f) => AUDIO.test(f) && !listed.has(f));
-  if (unlisted.length) throw new Error(`credits: sounds without a row in public/audio/CREDITS.md: ${unlisted.join(", ")}`);
-  const absent = [...listed].filter((f) => !existsSync(dir + f));
-  if (absent.length) throw new Error(`credits: rows in public/audio/CREDITS.md without a file: ${absent.join(", ")}`);
+  const unlisted = readdirSync(where).filter((f) => files.test(f) && !listed.has(f));
+  if (unlisted.length) throw new Error(`credits: files without a row in ${name}: ${unlisted.join(", ")}`);
+  const absent = [...listed].filter((f) => !existsSync(where + f));
+  if (absent.length) throw new Error(`credits: rows in ${name} without a file: ${absent.join(", ")}`);
   return { entries, md: rows };
 }
 
@@ -209,6 +211,7 @@ const link = (text: string, url: string | null) =>
 function markdown(
   c: Credits,
   soundRows: string[],
+  horizonRows: string[],
   svelteLicence: string,
   electronLicence: string | null,
   packageLicences: { name: string; text: string }[],
@@ -250,6 +253,12 @@ function markdown(
     ...soundRows,
     "",
     ELGAR,
+    "",
+    "## Start screen images",
+    "",
+    "| File | Used for | Source | Author | Licence |",
+    "|---|---|---|---|---|",
+    ...horizonRows,
     "",
     "## Fonts",
     "",
@@ -303,7 +312,8 @@ function buildCredits(): { json: Credits; md: string; warnings: string[] } {
     for (const file of [f.file, f.license_file])
       if (!existsSync(`${client}public/${file}`)) throw new Error(`credits: missing public/${file}`);
   }
-  const s = sounds();
+  const s = assets("audio", AUDIO);
+  const h = assets("horizon", HORIZON);
   const lib = svelte();
   const shell = electron();
   const desktop = desktopPackages();
@@ -312,12 +322,13 @@ function buildCredits(): { json: Credits; md: string; warnings: string[] } {
     game: game(),
     media: media(warnings),
     sounds: { entries: s.entries },
+    horizon: { entries: h.entries },
     fonts: FONTS,
     glyphs: existsSync(`${client}src/game/Glyph.svelte`),
     achievements: existsSync(`${repo}app/desktop/achievements/FIRST_WIN.svg`),
     libraries: [lib.entry, ...(shell?.entries ?? []), ...desktop.entries],
   };
-  return { json, md: markdown(json, s.md, lib.text, shell?.text ?? null, desktop.texts, existsSync(`${repo}app/desktop/icon.png`)), warnings };
+  return { json, md: markdown(json, s.md, h.md, lib.text, shell?.text ?? null, desktop.texts, existsSync(`${repo}app/desktop/icon.png`)), warnings };
 }
 
 /** Emits credits.json and CREDITS.md into dist/; serves /credits.json in dev. */

@@ -9,6 +9,7 @@ import { cacheName, shippedName } from "../../app/desktop/resolve.mjs";
 const asar = createRequire(new URL("../../app/desktop/package.json", import.meta.url))("@electron/asar");
 
 const AUDIO = /\.(m4a|mp3|ogg|oga|opus|wav)$/i;
+const HORIZON = /\.webp$/i;
 const FONT = /\.(woff2?|ttf|otf)$/i;
 const SDK = "Steamworks SDK";
 
@@ -59,6 +60,11 @@ function check(root) {
   for (const f of audio) if (!sounds.has(f)) problems.push(`sound without row: audio/${f}`);
   for (const f of sounds) if (!audio.includes(f)) problems.push(`sound row without file: audio/${f}`);
 
+  const horizonRows = new Set(credits.horizon.entries.map((s) => s.file));
+  const horizon = files(path.join(client, "horizon")).filter((f) => HORIZON.test(f));
+  for (const f of horizon) if (!horizonRows.has(f)) problems.push(`horizon image without row: horizon/${f}`);
+  for (const f of horizonRows) if (!horizon.includes(f)) problems.push(`horizon row without file: horizon/${f}`);
+
   const fonts = new Set(credits.fonts.map((f) => f.file));
   const fontFiles = files(path.join(client, "fonts")).filter((f) => FONT.test(f)).map((f) => `fonts/${f}`);
   for (const f of fontFiles) if (!fonts.has(f)) problems.push(`font without entry: ${f}`);
@@ -78,7 +84,7 @@ function check(root) {
     if (!existsSync(f)) problems.push(`missing ${path.relative(root, f)}`);
   }
   console.log(
-    `${problems.length ? "✗" : "✓"} credits ${root}: ${shipped.size} media, ${audio.length} sounds, ` +
+    `${problems.length ? "✗" : "✓"} credits ${root}: ${shipped.size} media, ${audio.length} sounds, ${horizon.length} horizon images, ` +
       `${fontFiles.length} fonts, ${libs.size} libraries`,
   );
   for (const p of problems) console.log(`  ${p}`);

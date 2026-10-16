@@ -127,6 +127,7 @@ export const en = {
     media: "Question images, audio and video",
     sounds: "Sounds",
     elgar: "Victory march: Pomp and Circumstance No. 1, composed by Edward Elgar († 1934, public domain); recording by the United States Marine Band, a US government work (public domain).",
+    horizon: "Start screen images",
     fonts: "Fonts",
     glyphs: "Controller buttons",
     glyphsText: "Original, drawn for the game",

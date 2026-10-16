@@ -3,5 +3,6 @@
   "dlc": { "colombia": 75 },
   "default_dlc": 75,
   "file": 5,
+  "horizon": 2,
   "video": 100
 }

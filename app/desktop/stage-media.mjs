@@ -120,6 +120,12 @@ if (check) {
     console.log(`${over ? "✗" : "✓"} ${name}: ${files.length} files, ${mb.toFixed(0)} MB of ${max} MB`);
     if (over) fails.push(`${name} over budget: ${mb.toFixed(0)} > ${max} MB`);
   }
+  const horizonDir = path.join(REPO, "app", "client", "public", "horizon");
+  const horizon = readdirSync(horizonDir).filter((f) => f.endsWith(".webp")).map((f) => [f, statSync(path.join(horizonDir, f)).size]);
+  const horizonMb = horizon.reduce((n, [, b]) => n + b, 0) / MB;
+  console.log(`${horizonMb > budget.horizon ? "✗" : "✓"} horizon: ${horizon.length} files, ${horizonMb.toFixed(1)} MB of ${budget.horizon} MB`);
+  if (horizonMb > budget.horizon) fails.push(`horizon over budget: ${horizonMb.toFixed(1)} > ${budget.horizon} MB`);
+  for (const [f, n] of horizon) if (n / MB > budget.file) fails.push(`horizon/${f} ${(n / MB).toFixed(1)} MB > ${budget.file} MB`);
   const big = [...size].filter(([, n]) => n > MB).sort((a, b) => b[1] - a[1]);
   for (const [f, n] of big) {
     const max = KIND[path.extname(f)] === "video" ? budget.video : budget.file;

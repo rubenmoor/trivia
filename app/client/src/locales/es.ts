@@ -146,6 +146,7 @@ const es = {
     sounds: "Sonidos",
     /** Victory march (task 745). */
     elgar: "Marcha de la victoria: Pompa y circunstancia n.º 1, compuesta por Edward Elgar († 1934, dominio público); grabación de la Banda de la Infantería de Marina de los Estados Unidos, obra del gobierno de EE. UU. (dominio público).",
+    horizon: "Imágenes de la pantalla de inicio",
     fonts: "Fuentes",
     glyphs: "Botones del control",
     glyphsText: "Originales, dibujados para el juego",

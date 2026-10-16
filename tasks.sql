@@ -378,13 +378,18 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
   - authoring''s Python moves into `authoring/`: `app/server/paths.py`, `save.py`, `media_cache.py`, `http_base.py` (whatever authoring still imports) become authoring modules; `app/` has no Python left
   - browser checks for workers: a small Node dev server (e.g. Vite middleware for the save and `/media` from the cache, temp state dir), replacing "walk it on `trivia` with a temp `TRIVIA_STATE`" in AGENTS.md, plan files and open tasks
   - docs: AGENTS.md, README.md, directory.md, `plans/decisions.md` (D-59 superseded by decision 111)
-- Bundle selection on its own full screen (developer, 2026-10-16, gallery flag; layout from the decision 263 review): in every mode, before the choice screen; replaces decision 158''s "own section"; base bundle named explicitly in every locale (not "Basics")
-  - two columns: left the base bundle(s), right the optional bundles
-  - built for many bundles: the right column scrolls (pad, keys, focus follow), no wrapping grid
+- Bundle selection on its own full screen (developer, 2026-10-16, gallery flags; layout from the decision 263 and 264 reviews): in every mode; replaces decision 158''s "own section"; base bundle named explicitly in every locale (not "Basics")
+  - flow: Player → Choice → Bundles → Level in both modes; Choice''s main button is «Seguir» (continue), not «¡A jugar!»; the game starts from the bundle screen; Back from Bundles returns to Choice
+  - supply report, short-group marks and the running-out notice move to the bundle screen (age group, levels and cards are known by then); Choice shows no bundle line any more
+  - base bundle: shown for information only, no «Elijan uno» heading or pick prompt; a narrow column on the left, as little screen space as possible; a session still has exactly one base bundle (a mod''s extra base bundle: open question for the plan, not a reason for a pick prompt here)
+  - a vertical ruler separates the base bundle from the optional bundles
+  - optional bundles: fixed-width tiles that flow into rows and columns to fit the screen (1920×1080, 1280×800); the area scrolls when they don''t fit (pad, keys, focus follow)
+  - obvious highlighting: a clear hover/focus state and a clearly different selected-for-this-game state (more than a small «activado» line)
+  - every tile shows its question count as a fixed string: base bundle «5000+», every other bundle «2000+»; a bundle well away from 2000 (e.g. a small mod) shows its own rounded-down count instead
   - optional bundles ordered: the regional bundle of the player''s region first, then non-regional bundles, then regional bundles of other regions
   - player''s region: the machine''s locale country (Electron `app.getLocaleCountryCode()`, offline, machine-wide, no setting)
   - every regional bundle has its country (ISO code, required: `app/data/bundles.json`, mod bundles too, `modding/README.md`, `qgen validate` and `--check-mod` refuse a regional bundle without one); its icon is always that country''s flag (`Flags.svelte`''s drawings, no pin), wherever a bundle shows its icon
-  - tiles show the bundle''s name only: no descriptions on this screen
+  - tiles show name, icon and count only: no descriptions on this screen
 
 ## Constraints
 - Offline, no accounts, no telemetry (AGENTS.md).
@@ -659,6 +664,35 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 ## Done when
 - A bundle mod, a CSS theme mod, a code add-on and a minimal full conversion each load from `mods/` and from the Workshop on a second Steam account
 - The modding guide is linked on the store page', '2026-10-13T16:55:00Z', NULL, 0);
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (16, 'Multiplayer modes and mixed input', 'open', 'The three multiplayer modes specced in milestone 7 ("Game modes") get built: several players on one TV, each with a gamepad or the keyboard and mouse, mixed freely. Single-player controller support exists already (milestone 8: action layer, focus navigation, gamepad, glyphs, Deck layout); this milestone adds several players, their binding to devices, and the modes themselves.
+
+## Outcome
+- The three modes exactly as milestone 7 specs them (D-77, `timed` D-80; MD-8, MD-9 in `plans/13-game-modes.md`): engine first, then screens
+  - round-robin co-op: turns, one team, one age group, one shared standard joker set
+  - round-robin competitive: turns, each player their own game, own jokers, own age group
+  - competitive (timed): 12 rounds, as many questions per round as players, 30 s per question, a hint every 8 s, claim + 6 s to answer, no jokers
+- Multiplayer input (IN-6, `plans/14-input.md` section 3):
+  - join screen: «press A to join» per pad; keyboard-and-mouse players join too
+  - pad ↔ player binding; up to 4 pads
+  - mixed devices, no switching step (developer, 2026-10-16): a player can use their gamepad or the keyboard and mouse at any moment, and the next input from either one just works; no «press to take over», no mode toggle; glyphs follow the last-used device per player
+  - shared keyboard for players without a pad (decision 24): a dedicated key per player where the mode needs to tell them apart (`timed` claims); in turn-based modes keyboard and mouse simply act for the player whose turn it is
+  - `timed` claim: a pad button per player, or the player''s claim key
+- Seen events for the save per mode (D-82); `qgen report --simulate`''s stand-ins for MD-8/MD-9 replaced by the engine''s modes (`plans/16-content-target.md`)
+- Each mode joins `BUILT_MODES` only once its win achievement (`WIN_RR_COOP`, `WIN_RR_COMPETITIVE`, `WIN_TIMED`) is in Steamworks and `steam-achievements.vdf` (plan 86); store texts name it then (decision 168)
+- UI strings in es, es-ES, en, de per `locales/style/<locale>.md`; gallery shots of every new screen
+
+## Constraints
+- Offline, no accounts, no phones, no LAN server (D-77).
+- Every mode rule from milestone 7: no skip, no undo, no joker changes mid-game; achievements unless customized.
+- Remote Play Together: not built separately; works once local multi-pad input works.
+
+## Out of scope
+- Online play.
+- Changes to Gamemaster mode or «Alone or as group», apart from the mixed-device rule holding there too.
+
+## Done when
+- Each of the three modes can be played start to finish by 2–4 players with any mix of pads and keyboard/mouse, including a player switching device mid-turn.
+- The developer has played each mode on the TV with the family.', '2026-10-16T16:03:30Z', NULL, 1);
 
 INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (1, 1, 'masterplan', 1000, 'Milestone 1 grows the `base` bundle from about 1000 to **5000 approved questions** (D-52), with clearly fewer questions at the top of the difficulty scale (1–15, D-38) but still enough of them. It also sets up quality control after every batch, and on the generation process itself, so we can tell whether quality holds as the pool grows. From batch-9 on, `base` is drafted in English with an international angle and translated to es, es-ES and de (milestone 9, "English-first drafting for `base`").
 
@@ -8510,6 +8544,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 - The milestone''s bundle-screen line holds: own full screen before Choice in every mode; two columns, scrolling right column with focus follow, region-first order, country flags as regional icons, names only; base bundle named explicitly in every locale
 - `country` required and checked by `qgen validate`, `--check-mod` and the client''s loader
 - `plans/04-ui-tv-display.md`, `plans/22-bundles.md`, D-97, `modding/README.md`, `modding/bundles.md` updated; the gallery flag marked fixed; the new review decision answered "approved"', 'Before a game starts, players pick which sets of questions to play: the general set plus optional extras, such as questions for people with ties to Colombia. This picking now has a full screen of its own. After a first look, the developer asked for a different layout: the general set on the left, the extras in a scrolling list on the right with the player''s own country first, each country''s set shown with its flag, and only names on the tiles. The list will grow with player-made sets, so it must stay easy to use with a game controller.', '2026-10-16T13:54:45Z', 1335);
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (152, 16, 'masterplan', 1000, 'tbd.', '', '2026-10-16T16:03:30Z', NULL);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -33721,7 +33756,7 @@ The plan covers, per the masterplan''s part 5:
 - D-45 licences only, offline, no new npm or Python dependencies.', '2026-10-16T13:47:27Z', '2026-10-16T13:48:52Z', 1322, 0, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1326, 150, 'create tasks for plan 150: Start screen horizon', 'split', 'done', 1000, '2026-10-16, tasks.sql only: tasks 1327-1331 for plan 150; picks and gallery decisions raised by tasks 1329 and 1331 as the plan says', 'Split plan 150 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T13:48:49Z', '2026-10-16T13:50:29Z', 1325, 0, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1327, 150, 'Horizon assets and credits', 'work', 'open', NULL, NULL, 'Plan 150, parts "Assets and credits": encode the approved horizon picks and credit them, both ways. Waits on the picks decision raised by the pick task (`task-pending-decision`); read its answer in `pm show`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1327, 150, 'Horizon assets and credits', 'work', 'done', NULL, '2026-10-16, app/client/public/horizon/ (16 webp + CREDITS.md), app/client/credits.ts, src/lib/types.ts, Credits.svelte, locales en/es/de, authoring/steam/credits_check.mjs, app/desktop/media-budget.json, stage-media.mjs', 'Plan 150, parts "Assets and credits": encode the approved horizon picks and credit them, both ways. Waits on the picks decision raised by the pick task (`task-pending-decision`); read its answer in `pm show`.
 
 - Source: the approved originals in `work/horizon/candidates/` (from the pick task); replacements the developer asked for: pick them under plan 150''s "Picks" rules (Commons, D-45 allowlist, cut-out/alpha, no flags/text/logos/faces/symbols, no country bias) and list them in the done note
 - Encode one-off with imagemagick: `magick <src> -strip -resize ''x360>'' -quality 80 app/client/public/horizon/<slug>.webp` (alpha kept, no upscaling); ASCII kebab-case slugs; each ≤ 150 KB, the set ≤ 2 MB (lower quality or height for an outlier, note it)
@@ -33732,7 +33767,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `app/desktop/media-budget.json`: new key `"horizon": 2` (MB); `stage-media.mjs --check` sums `app/client/public/horizon/` against it and each file against `file`
 - `directory.md`: add `public/horizon/` only if it lists `public/audio/`
 
-Done when: the credits screen lists every image; `node authoring/steam/credits_check.mjs` (or its release-check step) and `stage-media.mjs --check` pass; per commit `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-16T13:50:04Z', NULL, 1326, 0, NULL);
+Done when: the credits screen lists every image; `node authoring/steam/credits_check.mjs` (or its release-check step) and `stage-media.mjs --check` pass; per commit `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-16T13:50:04Z', '2026-10-16T16:04:06Z', 1326, 0, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1328, 150, 'Horizon on the Start screen', 'work', 'open', 290, NULL, 'Plan 150, parts "Look and layout" and "Docs": show the horizon on Start. After `task 1327: Horizon assets and credits` (the images in `app/client/public/horizon/`); waits on the same picks decision.
 
 - New `app/client/src/game/Horizon.svelte`, used only by `screens/Start.svelte`: `aria-hidden`, `pointer-events: none`, absolute along the bottom, height `min(33.3vh, …)`, behind title, subtitle, buttons, save notice, mods button, held line, language button (all stay on top and clickable)
@@ -34375,6 +34410,11 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - The screen has two columns, a scrolling right column with focus follow, region-first order, names only; docs updated', '2026-10-16T15:09:06Z', '2026-10-16T15:31:32Z', 1349, 0, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1352, 8, 'revise the masterplan of milestone 8: Steam S3: playable desktop build', 'revise', 'open', 1000, NULL, '`milestone 8: Steam S3: playable desktop build` changed. Bring `plan 8: masterplan`, the masterplan, in line with it (`pm plan edit 8 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-16T16:03:11Z', NULL, NULL, 0, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1353, 152, 'write the masterplan of milestone 16: Multiplayer modes and mixed input', 'masterplan', 'open', NULL, NULL, 'Write plan 152, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
+divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
+plan for one part.', '2026-10-16T16:03:30Z', NULL, NULL, 0, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -38446,7 +38486,7 @@ INSERT INTO decision (id, subject, status, options, body, intro, answer, reason,
 - `choice-supply-report`: supply report stays on Choice (`decision 260: Bundle screen: where it sits, supply report, in-game settings`)
 - base bundle names (`decision 261: Name of the base bundle per UI language (not «Basics»)`): «Paquete básico», «Base bundle», «Grundpaket»; letter keys es P, en B, de G
 Worker''s check: no overflow or cut text, 0 unmatched catalog texts in `manifest.json`.', 'Picking which sets of questions to play now has its own full screen, shown before the game options, and the main question set has a clearer name in each language. Before this counts as finished, the developer looks at screenshots of the new screen and the changed options screen in all four languages. The answer is either a go-ahead or a list of problems, each of which becomes its own fix.', 'problems: layout, scrolling, order, country flags and no descriptions, now in milestone 8''s bundle-screen line (2026-10-16 edit); plan 151''s revision covers them, no separate fix tasks', NULL, '2026-10-16T14:53:07Z', '2026-10-16T15:00:15Z', 1340, NULL, 'rule', NULL, '2026-10-16, task 1340: Bundle screen redone as two columns (base bundle left, optional bundles right, scrolling with focus follow), names only, no descriptions; optional order: regional bundle of the player''s region, then non-regional, then other regions (task 1351). Regional bundles carry a required ISO `country` (bundles.json, qgen validate, mods, --check-mod, modding docs) and always show that country''s flag as icon, no pin (task 1350). Plan 151 revised instead of separate fix tasks; reviewed again in task 1340.');
-INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (264, 'Bundle screen (two columns) reviewed in /gallery?', 'pending', '["approved", "problems (listed in the answer)"]', 'Shots in work/gallery/<locale>/ for es, es-ES, en, de: bundles, choice-solo, choice-gamemaster, choice-supply-report (1920×1080; no unmatched catalog text, no overflow or cut text seen). Changed since decision 263: left column base bundle, right column optional bundles, names only, regional bundle shows its country''s flag, region-first order, scrolling right column with fade. Not covered by the gallery: ~15 fake mod bundles (it cannot load a mods dir) and 1280×800 (no --size option yet); scrolling is only checked on the dev server per task 1351.', 'The screen where players choose which question bundles to play was rebuilt after your last review: two columns, country flags, and a list that scrolls when there are many bundles. Please look at the new screenshots and say whether it is good enough or what still needs fixing. Approving closes the earlier gallery flag on this screen.', NULL, NULL, '2026-10-16T15:34:10Z', NULL, 1340, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (264, 'Bundle screen (two columns) reviewed in /gallery?', 'answered', '["approved", "problems (listed in the answer)"]', 'Shots in work/gallery/<locale>/ for es, es-ES, en, de: bundles, choice-solo, choice-gamemaster, choice-supply-report (1920×1080; no unmatched catalog text, no overflow or cut text seen). Changed since decision 263: left column base bundle, right column optional bundles, names only, regional bundle shows its country''s flag, region-first order, scrolling right column with fade. Not covered by the gallery: ~15 fake mod bundles (it cannot load a mods dir) and 1280×800 (no --size option yet); scrolling is only checked on the dev server per task 1351.', 'The screen where players choose which question bundles to play was rebuilt after your last review: two columns, country flags, and a list that scrolls when there are many bundles. Please look at the new screenshots and say whether it is good enough or what still needs fixing. Approving closes the earlier gallery flag on this screen.', 'problems: base bundle info only (no «Elijan uno»), narrow, vertical ruler; optional bundles fixed-width tiles flowing in rows and columns; obvious hover and selected states; counts «5000+» / «2000+»; flow Player → Choice («Seguir») → Bundles → Level, supply report on the bundle screen; all in milestone 8''s bundle-screen line (2026-10-16 edit), plan 151''s revision covers them', NULL, '2026-10-16T15:34:10Z', '2026-10-16T16:03:11Z', 1340, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (265, 'Start horizon: approve the image picks?', 'answered', '["Approve all", "Approve with changes (list numbers to drop or replace)"]', 'Contact sheet: `work/horizon/contact-sheet.png` (16 tiles on `--night-800`, number + name). Originals: `work/horizon/candidates/NN-<slug>.svg`; the slug becomes the shipped `<slug>.webp`.
 
 All 16 are CC0 or PD vector cut-outs (SVG, so real alpha) from Wikimedia Commons, mostly Open Clip Art imports. No photos: Commons has almost no usable photo cut-outs with alpha for these subjects. Style is flat clipart, not photographic; the plan said "natural colours", the vectors are the usable reading of it. All File pages: `https://commons.wikimedia.org/wiki/File:<title>`.
@@ -39927,6 +39967,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1353, 1329, '2026-10-16T15:34:14Z', '2026-10-16T15:41:48Z', 'done', NULL, 0, 'f66ad83e5e8bd88144a66d82b9b34b50102e421c', 'claude-sonnet-5-5', '993759ba-7dc6-4e51-8565-75ef43fb81e5', NULL, 39, 70, 18729, 2459541, 97012, 1.0673862, 4144524);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1354, 1330, '2026-10-16T15:41:48Z', '2026-10-16T15:43:18Z', 'done', NULL, 0, '0ea5e1b341ed47cbe3a1e8d600a4ece4973a4d52', 'claude-sonnet-5-5', '993759ba-7dc6-4e51-8565-75ef43fb81e5', 1353, 13, 24, 4945, 1595682, 34159, 1.5726566000000004, 4144524);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1355, 1275, '2026-10-16T15:43:18Z', '2026-10-16T16:01:51Z', 'blocked', NULL, 0, 'bbebc940e215945e50234a075440e11fb4f793a0', 'claude-sonnet-5-5', '2c898c97-f287-4ab7-b9be-f48c9af2ca4c', NULL, 42, 76, 14046, 2935000, 87567, 1.07788, 4144524);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1356, 1327, '2026-10-16T16:01:51Z', '2026-10-16T16:04:17Z', 'done', NULL, 0, '6a8a5d6a28760c7465292a097007bd2ad63633a1', 'claude-sonnet-5-5', 'e5b0d21d-f8d2-463d-b37b-caf4bf49fbd6', NULL, 16, 30, 7861, 804519, 58308, 0.47280580000000005, 4144524);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -40399,6 +40440,7 @@ INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (186, 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (236, 37, 'last clause only: «once es meets its target, the en/de source shortfall drives es drafting»; milestone 9: «replaces … decision 37''s last clause and D-84 (the en/de source shortfall driving es drafting)»; per-locale deficits on targets.json base stay');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (236, 219, 'which locales steer drafting: milestone 9 «replaces … decision 219 (DRIVES_DRAFTING: English is the source, no locale steers es drafting)»; the launch question locales en, es, es-ES, de steer English drafting, milestone 12''s only by plan 60''s decision; a locale no bundle lists still only warns in qgen validate');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (259, 165, '');
+INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (264, 260, '');
 
 INSERT INTO summary (id, task_id, body, head_commit, created_at) VALUES (1, 1132, '# Trivia: executive summary
 

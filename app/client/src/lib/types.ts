@@ -199,7 +199,8 @@ export interface MediaCredit {
   file_url: string;
 }
 
-export interface SoundCredit {
+/** A row of a public/<dir>/CREDITS.md table (sounds, horizon images). */
+export interface AssetCredit {
   file: string;
   used_for: string;
   source: string;
@@ -213,7 +214,8 @@ export interface Credits {
   /** Licence files at the repo root (plan 40), with their first line. */
   game: { file: string; title: string }[];
   media: MediaCredit[];
-  sounds: { entries: SoundCredit[] };
+  sounds: { entries: AssetCredit[] };
+  horizon: { entries: AssetCredit[] };
   fonts: { name: string; file: string; license: string; license_file: string }[];
   /** Controller glyphs drawn for the game (Glyph.svelte). */
   glyphs: boolean;

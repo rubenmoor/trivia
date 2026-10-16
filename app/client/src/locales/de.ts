@@ -127,6 +127,7 @@ export const de = {
     media: "Bilder, Audio und Video der Fragen",
     sounds: "Klänge",
     elgar: "Siegesmarsch: Pomp and Circumstance Nr. 1, komponiert von Edward Elgar († 1934, gemeinfrei); Aufnahme der United States Marine Band, ein Werk der US-Regierung (gemeinfrei).",
+    horizon: "Bilder des Startbildschirms",
     fonts: "Schriften",
     glyphs: "Controller-Tasten",
     glyphsText: "Eigene, für das Spiel gezeichnet",
