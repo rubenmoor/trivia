@@ -159,6 +159,7 @@ Split per decision 84: SteamCMD source and depot split for Steam uploads; build 
 - [ ] `colombia`: OS all, language all, tied to the colombia DLC app (next block).
 - [ ] `usa`: OS all, language all, tied to the usa DLC app (next block); only if `app/data/bundles/usa/` ships at upload time.
 - [ ] `germany`: OS all, language all, tied to the germany DLC app (next block); only if `app/data/bundles/germany/` ships at upload time.
+- [ ] `uk`: OS all, language all, tied to the uk DLC app (next block); only if `app/data/bundles/uk/` ships at upload time.
 - [ ] IDs → `authoring/steam/steam.json` (task 1045 / task 681), via the decision.
 
 ### DLC (All Associated Packages, DLC, Demos And Tools → Add New DLC)
@@ -166,8 +167,9 @@ Free DLC per shipped pack (decision 66: Price model (OQ-33); decision 110: Regio
 - [ ] `colombia`: name «Regional: Colombia» (es, es-ES, en); de «Regional: Kolumbien» only once a de pack pool ships.
 - [ ] `usa`: name «Regional: United States» (en); de «Regional: USA» (`names.<locale>.json` `bundles.usa`); en only (`languages: ["en"]`).
 - [ ] `germany`: name «Regional: Germany» (en); de «Regional: Deutschland»; es/es-ES «Regional: Alemania» (`names.<locale>.json` `bundles.germany`); `languages: ["de"]`, en joins once en translations exist.
+- [ ] `uk`: name «Regional: United Kingdom» (en); de «Regional: Vereinigtes Königreich»; es/es-ES «Regional: Reino Unido» (`names.<locale>.json` `bundles.uk`); en only (`languages: ["en"]`).
 - [ ] Price free; optional (installed when owned and ticked in Properties → DLC).
-- [ ] Depot `colombia` linked to it; the base app lists it. Same for `usa` (depot `usa`) and `germany` (depot `germany`); its app ID and depot ID go into decision 179: Steamworks app configured (SW-7)? IDs? like colombia's.
+- [ ] Depot `colombia` linked to it; the base app lists it. Same for `usa` (depot `usa`), `germany` (depot `germany`) and `uk` (depot `uk`); their app IDs and depot IDs go into decision 179: Steamworks app configured (SW-7)? IDs? like colombia's.
 - [ ] Store texts: `plans/17a-store-page.md` "Free DLC" (decision 173).
 
 ### SteamPipe → Builds (branches)
