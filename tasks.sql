@@ -1056,16 +1056,16 @@ The gamemaster answered OQ-30 and OQ-37 directly (pm decisions 19, 20, 23, 24 an
 ## Constraints (from the milestone)
 - The gamemaster answers; workers prepare options and recommendations as pm decisions.
 - Out of scope: S3–S6 (desktop build, release content, Steamworks, launch).', '', '2026-10-11T21:54:56Z', NULL);
-INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (8, 8, 'masterplan', 1000, 'Milestone 8 is S3 of the Steam track (D-34, `plans/11-steam.md`): the first build a family can install and play without the gamemaster''s dev setup (no Nix, no Python, no browser). It wraps the built client in the desktop shell chosen in S2, saves to a file, and is playable with a controller only, including on the Steam Deck (best effort without a Deck at hand, decision 125); on image questions a held button peeks at the whole picture. A credits screen covers the licences, and bundle selection gets its own full screen before the choice screen. With decision 111: Steam only, the desktop build now replaces the browser game: the family''s save moves into it, the Python game server goes, `app/` becomes Node/TS only, and workers check UI changes with a small Node dev server instead of `trivia`. No Steamworks features (S5).
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (8, 8, 'masterplan', 1000, 'Milestone 8 is S3 of the Steam track (D-34, `plans/11-steam.md`): the first build a family can install and play without the gamemaster''s dev setup (no Nix, no Python, no browser). It wraps the built client in the desktop shell chosen in S2, saves to a file, and is playable with a controller only, including on the Steam Deck (best effort without a Deck at hand, decision 125); on image questions a held button peeks at the whole picture. A credits screen covers the licences, and bundle selection gets its own full screen between the choice screen and the first level. With decision 111: Steam only, the desktop build now replaces the browser game: the family''s save moves into it, the Python game server goes, `app/` becomes Node/TS only, and workers check UI changes with a small Node dev server instead of `trivia`. No Steamworks features (S5).
 
 **The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 8 …`, priority as suggested), and that plan''s tasks do the work.
 
-## Status (revised 2026-10-16, task 1343)
+## Status (revised 2026-10-16, task 1352)
 - Parts 1–7: plans written and implemented (plans 54, 55, 56, 44, 45, 46, 47); plan 65 (seen counters) also done. Plan 56 keeps task 332 "record the start test": per decision 39 it records the start test as skipped (Steam only), not failed.
 - Part 8: plan 48, revised for decisions 111 and 125; tasks open, runs last.
 - Part 9: plan 99, steps 1–3 done (dev server, import, authoring''s Python moved); deletions and docs open (`task 765: Delete app/server, ServerStore, the trivia command and nix build .#app`, `task 766: Docs: desktop as the only game, dev server, D-59 superseded`).
 - Part 10: plan 113, done.
-- Part 11: plan 151; own screen and base names done (tasks 1338, 1339); the developer''s gallery review (`decision 263: Bundle screen reviewed in /gallery?`) flagged layout, scrolling, order, country flags and descriptions, now in the milestone''s bundle-screen line (edit of 2026-10-16): plan 151 needs revising for them.
+- Part 11: plan 151; own screen, base names, country field and flags, two-column layout done (tasks 1338, 1339, 1350, 1351); the developer''s second review (`decision 264: Bundle screen (two columns) reviewed in /gallery?`, answer "problems", supersedes `decision 260: Bundle screen: where it sits, supply report, in-game settings`) changed the flow (Player → Choice → Bundles → Level), the layout (narrow info-only base column, vertical ruler, flowing fixed-width tiles), highlighting, counts and the supply report''s place: milestone''s bundle-screen line (edit of 2026-10-16); plan 151 needs revising for them, no separate fix tasks.
 
 ## Preconditions
 - TS engine (milestone 2), shell decision (decision 12: Desktop shell (OQ-29)? → Electron), licence data (plan 26): all in.
@@ -1093,7 +1093,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 8. **S3 close-out and platform test**: plan 48 (priority 140, last).
    - Revise for decision 111 and part 9: platforms are the Steam targets (Windows x64, Linux x64, Deck); no "clean machine without Node/Python", "Linux without Nix" or "network off before install" rows for the plain artefacts (decision 39: that start test lives in the Steam beta test, task 263: write plan: Beta test and S5 close-out); the "Current-game check" (`trivia` + browser on the TV) becomes "family check": `trivia-desktop` with the imported save shows the family''s players and seen counters, plays a round.
    - Revise for decision 125 and part 10: no real Deck at hand, so the Deck table is a 1280×800 window run (Linux build, pad only) plus the peek rows; "Deck in Game Mode" rows (suspend/resume, arm''s-length reading, built-in controls) move to plan 90 (milestone 10) or are marked "skipped: no Deck (decision 125)", not failed. New rows on every platform: on an image question, holding the peek button (pad and key) shows the whole picture, release brings the UI back.
-   - Revise for part 11: the family check and every platform pass through the bundle screen in both modes (pad only): two columns, regional order, country flags, the right column scrolls with focus.
+   - Revise for part 11: the family check and every platform pass through the bundle screen in both modes (pad only), after Choice («Seguir»): narrow base column, ruler, optional tiles in rows and columns, regional order, country flags, counts, clear focus and selected states, the tile area scrolls with focus, supply report there.
    - Waits for parts 9, 10 and 11 (guard: every other milestone-8 plan without open tasks).
    - Done when: the milestone''s "Done when" holds.
 
@@ -1118,29 +1118,32 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
    - Done when: the milestone''s peek line holds; owning plan files ticked with notes.
    - Suggested priority: 400 (UI; after part 9''s dev server at 450, before plan 48 at 140).
 
-11. **Bundle selection on its own full screen** (new; developer, 2026-10-16, gallery flag)
-   - Owner: `plans/04-ui-tv-display.md` (screen flow, layout), `plans/22-bundles.md` (bundle names, country field, order), `modding/README.md` (country of a mod''s regional bundle); `plans/decisions.md` D-97 amended.
-   - Status: plan 151; own screen (`task 1338: Bundle screen between Player and Choice; Choice without the selector`) and base names (`task 1339: Base bundle names per locale: Paquete básico, Base bundle, Grundpaket`) done; `decision 263: Bundle screen reviewed in /gallery?` answered "problems": the layout below (milestone edit of 2026-10-16) replaces plan 151''s "Screen" section (large tiles with descriptions, wrapping, no scroll). Revise plan 151, no separate fix tasks (decision 263''s answer).
-   - Behaviour: in every mode («Solo o en grupo» and «Modo anfitrión») a full screen of its own for the question bundles, shown before the Choice screen; the shared `BundleSelector` (letter keys, mouse, pad) moves there out of the Choice screen and gamemaster settings. Replaces `decision 158: Bundle selection in every mode, apart from customization`''s "own section" with "own screen"; the rest of decision 158 holds (never part of «Personalizar partida», not counted in customized; preset = playerChoice). Back returns to the previous step; supply warnings (decision 206: report on the Choice screen) stay where the plan finds they fit, the plan says which.
-   - Layout (developer''s review, decision 263):
-     - two columns: left the base bundle(s), right the optional bundles
-     - built for many bundles: the right column scrolls (pad, keys, focus follow: the focused tile is always in view), no wrapping grid
-     - tiles show the bundle''s name only (and its icon): no descriptions on this screen (descriptions stay where else they show, e.g. «Ajustes de la partida», if the plan keeps them there)
-   - Order of the optional bundles: the regional bundle of the player''s region first, then non-regional bundles, then regional bundles of other regions (within each group: the plan picks a stable order, e.g. `bundles.json` order, mods after)
-   - Player''s region: the machine''s locale country, Electron `app.getLocaleCountryCode()` (offline, machine-wide, no setting); the shell passes it to the client through the desktop bridge; dev server and browser: a fallback (e.g. from `navigator.language`''s region, or none: then no group first)
-   - Country of a regional bundle: an ISO 3166-1 alpha-2 code, required for every regional bundle (`kind: region`) in `app/data/bundles.json` (colombia: `CO`) and in mod bundles (`modding/README.md`); `qgen validate` and `trivia-desktop --check-mod` refuse a regional bundle without one; the client''s mod loading the same
-   - Icon: a regional bundle''s icon is always its country''s flag (`Flags.svelte`''s drawings; a missing flag drawing is added there; no pin), wherever a bundle shows its icon (bundle screen, Choice line if it shows icons, «Ajustes de la partida», Esc overlay, mods)
-   - Naming: the base bundle is named explicitly in every UI language, not "Basics" (today `app/data/bundles.json` «Básico»): a name that says it is the general question bundle; `decision 50: Play-test of age groups and bundles`''s term "question bundle" holds. New names are a `pm decision` for the developer (per locale, en, es, es-ES, de; zh-Hans, ru, pt-BR where catalogs exist); read `locales/style/<locale>.md` first.
-   - Focus and input per plan 44''s action layer (a new scope for the screen), pad and key; fits at 1280×800 (plan 46).
-   - Check: dev server at 1280×800 and 1920×1080, both modes, pad and key; with enough mod bundles (`TRIVIA_MODS_DIR` or fake ones) that the right column scrolls, focus follows; order with the machine''s region set and unset; `trivia-gallery` shots (plan 100) and a new developer review decision like decision 263.
-   - Done when: the milestone''s bundle-screen line holds (two columns, scrolling, order, country flags, names only); owning plan files, `modding/README.md` and D-97 updated.
+11. **Bundle selection on its own full screen** (new; developer, 2026-10-16, gallery flags)
+   - Owner: `plans/04-ui-tv-display.md` (screen flow, layout), `plans/22-bundles.md` (bundle names, country field, order, counts), `modding/README.md` (country of a mod''s regional bundle); `plans/decisions.md` D-97 amended.
+   - Status: plan 151; done: own screen (`task 1338: Bundle screen between Player and Choice; Choice without the selector`), base names (`task 1339: Base bundle names per locale: Paquete básico, Base bundle, Grundpaket`), country field and flags (`task 1350: Country field for regional bundles and flag icons`), two-column layout and region order (`task 1351: Bundle screen: two columns, scrolling optional column, order by region`). `decision 264: Bundle screen (two columns) reviewed in /gallery?` answered "problems": the flow, layout, highlighting, counts and supply report below (milestone edit of 2026-10-16) replace plan 151''s "Screen layout" and decision 260''s place of the screen and the supply report. Revise plan 151, no separate fix tasks (decision 264''s answer); `task 1340: Gallery run of the two-column bundle screen and developer review` runs again after the rework, with a new review decision.
+   - Kept from earlier work: country field (ISO 3166-1 alpha-2, required for `kind: region` in `app/data/bundles.json` and mods; `qgen validate`, `--check-mod`, client loader refuse it missing), flag icons from `Flags.svelte` wherever a bundle shows its icon (no pin), player''s region from Electron `app.getLocaleCountryCode()` through the bridge (browser fallback, `?region=`), base names per `decision 261: Name of the base bundle per UI language (not «Basics»)`, `decision 158: Bundle selection in every mode, apart from customization` with "own screen" (never part of «Personalizar partida», not counted in customized; preset = playerChoice).
+   - Flow, both modes («Solo o en grupo», «Modo anfitrión»), also with one offered bundle: Player → Choice → Bundles → Level
+     - Choice''s main button «Seguir» (continue), not «¡A jugar!»; Choice shows no bundle line any more
+     - the game starts from the bundle screen (its main button starts it, through the supply notice when needed); Back from Bundles returns to Choice, both screens keep their picks
+   - Supply report, short-group marks and the running-out notice (plan 65, `decision 31: Low-supply warning: below how many fresh games left (K) should the game start warn?`''s criterion) move from Choice to the bundle screen: age group, levels and cards are known by then; amends `decision 206: Play-test: no supply report on Start, report on the Choice screen only`''s "Choice screen" to the bundle screen (plan 151 records it).
+   - Layout:
+     - base bundle: information only, no «Elijan uno» heading or pick prompt, a narrow column on the left using as little screen space as possible; a session still has exactly one base bundle (a mod''s extra base bundle: open question for plan 151, e.g. a `pm decision`, not a reason for a pick prompt here)
+     - a vertical ruler between the base column and the optional bundles
+     - optional bundles: fixed-width tiles that flow into rows and columns to fit the screen (1920×1080, 1280×800); the tile area scrolls when they don''t fit (mouse wheel, touch; pad and keys move focus in 2D, the focused tile always in view)
+     - obvious highlighting: a clear hover/focus state and a clearly different selected-for-this-game state (more than a small «activado» line)
+     - tiles: name, icon and count only, no descriptions on this screen (descriptions stay in «Ajustes de la partida» if plan 151 keeps them there)
+   - Counts: a fixed string per tile, base bundle «5000+», every other bundle «2000+»; a bundle well away from 2000 (e.g. a small mod) shows its own rounded-down count instead (plan 151 picks "well away" and the rounding, and where the count comes from for mods)
+   - Order of the optional bundles: the regional bundle of the player''s region first, then non-regional bundles, then regional bundles of other regions (done in task 1351; stays)
+   - Focus and input per plan 44''s action layer (scope `bundles`), pad and key; fits at 1280×800 (plan 46).
+   - Check: dev server at 1280×800 and 1920×1080, both modes, pad and key: Player → Choice → Bundles → Level, Back to Choice; with ~15 fake mod bundles the tile area scrolls and focus follows; order with the region set and unset; supply report and notice on the bundle screen; `trivia-gallery` shots at both sizes (`--size`, `task 1330: Gallery size option`, done) and a new developer review decision like decision 264.
+   - Done when: the milestone''s bundle-screen line holds (flow, narrow base column, ruler, flowing tiles with scroll, highlighting, counts, order, country flags, names only, supply report there); owning plan files, `modding/README.md` and D-97 updated; the review decision answered "approved".
    - Suggested priority: 400 (UI; before plan 48 at 140).
 
 ## Order
 - Parts 1–7 done; part 10 done.
 - Part 9: dev server → import + family switch (decision) → move authoring''s Python → deletions → docs.
 - Part 10: after part 9''s dev server (step 1) if possible; else check in `trivia-desktop`.
-- Part 11: plan 151''s revision (layout, order, country flags) next; uses the dev server (done).
+- Part 11: plan 151''s revision for decision 264 (flow, layout, counts, supply report) next; then its rework and a new gallery review.
 - Part 8 last, after parts 9, 10 and 11.
 
 ## Out of scope (from the milestone)
@@ -34410,11 +34413,310 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - The screen has two columns, a scrolling right column with focus follow, region-first order, names only; docs updated', '2026-10-16T15:09:06Z', '2026-10-16T15:31:32Z', 1349, 0, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1352, 8, 'revise the masterplan of milestone 8: Steam S3: playable desktop build', 'revise', 'open', 1000, NULL, '`milestone 8: Steam S3: playable desktop build` changed. Bring `plan 8: masterplan`, the masterplan, in line with it (`pm plan edit 8 --body -`), or
-leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-16T16:03:11Z', NULL, NULL, 0, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1352, 8, 'revise the masterplan of milestone 8: Steam S3: playable desktop build', 'revise', 'done', 1000, '2026-10-16, plan 8 body: status, part 8 and part 11 for decision 264''s bundle-screen flow and layout', '`milestone 8: Steam S3: playable desktop build` changed. Bring `plan 8: masterplan`, the masterplan, in line with it (`pm plan edit 8 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-16T16:03:11Z', '2026-10-16T16:04:59Z', NULL, 0, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1353, 152, 'write the masterplan of milestone 16: Multiplayer modes and mixed input', 'masterplan', 'open', NULL, NULL, 'Write plan 152, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-16T16:03:30Z', NULL, NULL, 0, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1354, 8, 'create tasks for plan 8: masterplan', 'split', 'open', 1000, NULL, 'Split plan 8 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T16:04:59Z', NULL, 1352, 0, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1355, 48, 'revise plan 48: S3 close-out and platform test', 'revise', 'open', 1000, NULL, '`plan 8: masterplan`, the plan above `plan 48: S3 close-out and platform test`, changed; it is quoted below. Bring `plan 48: S3 close-out and platform test` in line with it
+(`pm plan edit 48 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 8: masterplan
+
+Milestone 8 is S3 of the Steam track (D-34, `plans/11-steam.md`): the first build a family can install and play without the gamemaster''s dev setup (no Nix, no Python, no browser). It wraps the built client in the desktop shell chosen in S2, saves to a file, and is playable with a controller only, including on the Steam Deck (best effort without a Deck at hand, decision 125); on image questions a held button peeks at the whole picture. A credits screen covers the licences, and bundle selection gets its own full screen between the choice screen and the first level. With decision 111: Steam only, the desktop build now replaces the browser game: the family''s save moves into it, the Python game server goes, `app/` becomes Node/TS only, and workers check UI changes with a small Node dev server instead of `trivia`. No Steamworks features (S5).
+
+**The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 8 …`, priority as suggested), and that plan''s tasks do the work.
+
+## Status (revised 2026-10-16, task 1352)
+- Parts 1–7: plans written and implemented (plans 54, 55, 56, 44, 45, 46, 47); plan 65 (seen counters) also done. Plan 56 keeps task 332 "record the start test": per decision 39 it records the start test as skipped (Steam only), not failed.
+- Part 8: plan 48, revised for decisions 111 and 125; tasks open, runs last.
+- Part 9: plan 99, steps 1–3 done (dev server, import, authoring''s Python moved); deletions and docs open (`task 765: Delete app/server, ServerStore, the trivia command and nix build .#app`, `task 766: Docs: desktop as the only game, dev server, D-59 superseded`).
+- Part 10: plan 113, done.
+- Part 11: plan 151; own screen, base names, country field and flags, two-column layout done (tasks 1338, 1339, 1350, 1351); the developer''s second review (`decision 264: Bundle screen (two columns) reviewed in /gallery?`, answer "problems", supersedes `decision 260: Bundle screen: where it sits, supply report, in-game settings`) changed the flow (Player → Choice → Bundles → Level), the layout (narrow info-only base column, vertical ruler, flowing fixed-width tiles), highlighting, counts and the supply report''s place: milestone''s bundle-screen line (edit of 2026-10-16); plan 151 needs revising for them, no separate fix tasks.
+
+## Preconditions
+- TS engine (milestone 2), shell decision (decision 12: Desktop shell (OQ-29)? → Electron), licence data (plan 26): all in.
+- Decision 4 (static + `/api/save` only) and decision 25 (Python referee gone) left the Python game server as static files + save; part 9 removes the rest.
+
+## Rules for every part
+- Steam only (decision 111): no work, checks, fixes or docs for running the builds outside Steam; no "without Steam" / "clean machine without Nix" rows in checklists or done-whens. Supersedes D-59''s bridge ("the current game keeps working until this build replaces it").
+- The family keeps playing until the switch: part 9 imports their `state/game.json` before anything of the browser game is deleted.
+- Shipped code under `app/` (D-35); `directory.md` and `plans/19-repo-layout.md` updated with it. Nothing in `app/` reads `authoring/`; `authoring/` may import from `app/`.
+- Dependencies: Electron and electron-builder (decision 12) plus what the shell plans already took; anything else needs a `pm decision` (a Node dev server should reuse Vite, already a dev dependency).
+- Offline, no accounts, no telemetry. No Steamworks features beyond what plans 54/85 already wired (S5).
+- Deck (decision 125: Steam Deck: best effort, review without a Deck at hand): fit at 1280×800 (plan 46) plus the image peek (part 10) is the S3 Deck bar; checks run in a 1280×800 window, no real-Deck test in S3. The real-Deck test is plan 90 (milestone 10) once a Deck is at hand.
+- Owning plan files get their tasks `[x]` with a note (`18-steam-integration.md`, `14-input.md`, `17-publishing.md`); `plans/project.md` kept in sync.
+
+## Parts
+
+1. **Desktop shell skeleton (SW-2)**: plan 54, done.
+2. **File saves (SW-3)**: plan 55, done. Import of a save file was optional there; part 9 makes it required.
+3. **Local builds for Windows and Linux (SW-5, SW-6)**: plan 56, done except task 332 (start test recorded as skipped, decision 39). SW-6 is local CI in S5 (decision 14).
+4. **Action layer and focus navigation (IN-2, IN-3)**: plan 44, done.
+5. **Gamepad input and button glyphs (IN-4, IN-5)**: plan 45, done.
+6. **Deck layout and controller-only text entry (SW-4)**: plan 46, done.
+7. **Credits screen and generated `CREDITS.md` (PUB-5)**: plan 47, done.
+
+8. **S3 close-out and platform test**: plan 48 (priority 140, last).
+   - Revise for decision 111 and part 9: platforms are the Steam targets (Windows x64, Linux x64, Deck); no "clean machine without Node/Python", "Linux without Nix" or "network off before install" rows for the plain artefacts (decision 39: that start test lives in the Steam beta test, task 263: write plan: Beta test and S5 close-out); the "Current-game check" (`trivia` + browser on the TV) becomes "family check": `trivia-desktop` with the imported save shows the family''s players and seen counters, plays a round.
+   - Revise for decision 125 and part 10: no real Deck at hand, so the Deck table is a 1280×800 window run (Linux build, pad only) plus the peek rows; "Deck in Game Mode" rows (suspend/resume, arm''s-length reading, built-in controls) move to plan 90 (milestone 10) or are marked "skipped: no Deck (decision 125)", not failed. New rows on every platform: on an image question, holding the peek button (pad and key) shows the whole picture, release brings the UI back.
+   - Revise for part 11: the family check and every platform pass through the bundle screen in both modes (pad only), after Choice («Seguir»): narrow base column, ruler, optional tiles in rows and columns, regional order, country flags, counts, clear focus and selected states, the tile area scrolls with focus, supply report there.
+   - Waits for parts 9, 10 and 11 (guard: every other milestone-8 plan without open tasks).
+   - Done when: the milestone''s "Done when" holds.
+
+9. **Retire the browser game and the Python game server**: plan 99 (priority 450), tasks open.
+   - Owner: `plans/18-steam-integration.md` (desktop as the only game), `plans/01-architecture.md`, `plans/19-repo-layout.md`; `plans/decisions.md` D-59 marked superseded by decision 111.
+   - Order inside the plan (each step leaves per-commit checks green):
+     1. Node dev server for workers'' browser checks: serves the built or dev client, `app/data/` at `/data/`, `/media` from the media cache, and the save through the same Store the client uses (FileStore-like, in a temp state dir given by env/flag); one command (e.g. an `npm run` script or a flake app). Replaces "walk it on `trivia` with a temp `TRIVIA_STATE`" in AGENTS.md, plan files and open task bodies (`pm task set` for open tasks; grep tasks with `pm queue` / `pm show`).
+     2. `trivia-desktop --import-save <file>`: reads the family''s `state/game.json` (and migrates as `save.migrate()` did, if still needed), writes the desktop save atomically, refuses to overwrite a non-empty save without `--force`, keeps a backup. Then a pm decision for the gamemaster: "Family save imported into trivia-desktop?" (the family plays `trivia-desktop` from then on; later the Steam beta). Deletions in step 4 wait for its answer.
+     3. Authoring''s Python off `app/`: `app/server/paths.py`, `save.py`, `media_cache.py`, `http_base.py` (whatever `authoring/` still imports: `qgen.py`, `layout.py`, `save_file.py`, `download.py`, `media.py`, `categories.py`, `authoring/server/*`) move into `authoring/` modules; imports updated; `trivia-authoring`, `qgen`, `trivia-media` behave as before. Decision 104 (Python ↔ Node/TS twins: won''t fix) still holds: move, don''t sync. Authoring keeps reading flags from the save the desktop writes (apply_flags), path per the desktop save location.
+     4. Delete: `app/server/main.py`, `ServerStore` and `/api/save` (incl. task 724''s backup endpoint) in `lib/store.ts`, the `trivia` command (flake `trivia-dev`), `nix build .#app` (flake package `app`), its `trivia-release-check` step and docs mentions; `app/` has no `.py` left.
+     5. Docs: AGENTS.md (Commands: `trivia`, `nix build .#app` out; the dev server in), README.md, directory.md, `plans/decisions.md` (D-59 superseded by decision 111), `plans/01-architecture.md`, `plans/19-repo-layout.md`, `plans/12-client-engine.md` where they describe the browser game.
+   - Check the other milestones'' open plans and tasks that still name `trivia`, `/api/save`, `ServerStore` or `nix build .#app` (e.g. plan 89 "Builds, depots and upload", plan 30''s browser play-test, decision 50): adjust open task bodies with `pm task set`, or a follow-up task in the owning plan.
+   - Done when: no Python under `app/`; the family''s save lives in the desktop build (decision answered); workers'' browser checks run on the Node dev server; per-commit checks pass; `trivia-release-check` runs without the removed `nix build .#app` step.
+   - Suggested priority: 450 (after plan 56''s builds at 460, before plan 48 at 140).
+
+10. **Image peek on image questions** (new; decision 125)
+   - Owner: `plans/14-input.md` (the peek action, pad and key), `plans/04-ui-tv-display.md` (Question screen), `plans/18-steam-integration.md` (Deck: replace "Test on a real Deck before applying" with decision 125''s best-effort rule).
+   - Behaviour: on a question with an image, holding one button hides every panel (question text, answers, joker tray, HUD, prompts) and shows only the image, whole, fitted to the screen; release brings the UI back unchanged (focus, armed joker, timers as before). Not on video/audio questions or other screens.
+   - Input: a new action in plan 44''s action layer (`lib/input.svelte.ts`), hold semantics (press/release, not a toggle); pad: a button free in the Question scope''s map (decision 9: Y/X/B/A, RT, LT, LB/RB, Start are taken; e.g. View/Back or a stick click: the plan picks it); key: per catalog (decision 53: keys per UI language), collision rule checked; a `<Prompt>` with the glyph on image questions. Mouse/touch: press-and-hold on the image, if cheap.
+   - Timed modes: the clock keeps running while peeking (no pause exploit).
+   - Check: dev server (part 9) or `trivia-desktop` at 1280×800, 1280×720 and 1920×1080: for the image questions of `app/data/pool.json` (a throw-away script finds the ones whose picture panels cover), the peek shows the full picture; pad (or forced `device: "gamepad"`) and key; UI comes back as before.
+   - Done when: the milestone''s peek line holds; owning plan files ticked with notes.
+   - Suggested priority: 400 (UI; after part 9''s dev server at 450, before plan 48 at 140).
+
+11. **Bundle selection on its own full screen** (new; developer, 2026-10-16, gallery flags)
+   - Owner: `plans/04-ui-tv-display.md` (screen flow, layout), `plans/22-bundles.md` (bundle names, country field, order, counts), `modding/README.md` (country of a mod''s regional bundle); `plans/decisions.md` D-97 amended.
+   - Status: plan 151; done: own screen (`task 1338: Bundle screen between Player and Choice; Choice without the selector`), base names (`task 1339: Base bundle names per locale: Paquete básico, Base bundle, Grundpaket`), country field and flags (`task 1350: Country field for regional bundles and flag icons`), two-column layout and region order (`task 1351: Bundle screen: two columns, scrolling optional column, order by region`). `decision 264: Bundle screen (two columns) reviewed in /gallery?` answered "problems": the flow, layout, highlighting, counts and supply report below (milestone edit of 2026-10-16) replace plan 151''s "Screen layout" and decision 260''s place of the screen and the supply report. Revise plan 151, no separate fix tasks (decision 264''s answer); `task 1340: Gallery run of the two-column bundle screen and developer review` runs again after the rework, with a new review decision.
+   - Kept from earlier work: country field (ISO 3166-1 alpha-2, required for `kind: region` in `app/data/bundles.json` and mods; `qgen validate`, `--check-mod`, client loader refuse it missing), flag icons from `Flags.svelte` wherever a bundle shows its icon (no pin), player''s region from Electron `app.getLocaleCountryCode()` through the bridge (browser fallback, `?region=`), base names per `decision 261: Name of the base bundle per UI language (not «Basics»)`, `decision 158: Bundle selection in every mode, apart from customization` with "own screen" (never part of «Personalizar partida», not counted in customized; preset = playerChoice).
+   - Flow, both modes («Solo o en grupo», «Modo anfitrión»), also with one offered bundle: Player → Choice → Bundles → Level
+     - Choice''s main button «Seguir» (continue), not «¡A jugar!»; Choice shows no bundle line any more
+     - the game starts from the bundle screen (its main button starts it, through the supply notice when needed); Back from Bundles returns to Choice, both screens keep their picks
+   - Supply report, short-group marks and the running-out notice (plan 65, `decision 31: Low-supply warning: below how many fresh games left (K) should the game start warn?`''s criterion) move from Choice to the bundle screen: age group, levels and cards are known by then; amends `decision 206: Play-test: no supply report on Start, report on the Choice screen only`''s "Choice screen" to the bundle screen (plan 151 records it).
+   - Layout:
+     - base bundle: information only, no «Elijan uno» heading or pick prompt, a narrow column on the left using as little screen space as possible; a session still has exactly one base bundle (a mod''s extra base bundle: open question for plan 151, e.g. a `pm decision`, not a reason for a pick prompt here)
+     - a vertical ruler between the base column and the optional bundles
+     - optional bundles: fixed-width tiles that flow into rows and columns to fit the screen (1920×1080, 1280×800); the tile area scrolls when they don''t fit (mouse wheel, touch; pad and keys move focus in 2D, the focused tile always in view)
+     - obvious highlighting: a clear hover/focus state and a clearly different selected-for-this-game state (more than a small «activado» line)
+     - tiles: name, icon and count only, no descriptions on this screen (descriptions stay in «Ajustes de la partida» if plan 151 keeps them there)
+   - Counts: a fixed string per tile, base bundle «5000+», every other bundle «2000+»; a bundle well away from 2000 (e.g. a small mod) shows its own rounded-down count instead (plan 151 picks "well away" and the rounding, and where the count comes from for mods)
+   - Order of the optional bundles: the regional bundle of the player''s region first, then non-regional bundles, then regional bundles of other regions (done in task 1351; stays)
+   - Focus and input per plan 44''s action layer (scope `bundles`), pad and key; fits at 1280×800 (plan 46).
+   - Check: dev server at 1280×800 and 1920×1080, both modes, pad and key: Player → Choice → Bundles → Level, Back to Choice; with ~15 fake mod bundles the tile area scrolls and focus follows; order with the region set and unset; supply report and notice on the bundle screen; `trivia-gallery` shots at both sizes (`--size`, `task 1330: Gallery size option`, done) and a new developer review decision like decision 264.
+   - Done when: the milestone''s bundle-screen line holds (flow, narrow base column, ruler, flowing tiles with scroll, highlighting, counts, order, country flags, names only, supply report there); owning plan files, `modding/README.md` and D-97 updated; the review decision answered "approved".
+   - Suggested priority: 400 (UI; before plan 48 at 140).
+
+## Order
+- Parts 1–7 done; part 10 done.
+- Part 9: dev server → import + family switch (decision) → move authoring''s Python → deletions → docs.
+- Part 10: after part 9''s dev server (step 1) if possible; else check in `trivia-desktop`.
+- Part 11: plan 151''s revision for decision 264 (flow, layout, counts, supply report) next; then its rework and a new gallery review.
+- Part 8 last, after parts 9, 10 and 11.
+
+## Out of scope (from the milestone)
+- Steamworks features (overlay, Cloud setup, achievements, on-screen keyboard, SW-7..SW-14), store page (S5); translations (S4); media resizing (SW-9, S5); couch co-op input (IN-6, IN-7, later).
+- Porting authoring''s Python (qgen, `trivia-authoring`) to Node/TS: later, own milestone.', '2026-10-16T16:04:59Z', NULL, 1352, 0, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1356, 99, 'revise plan 99: Retire the browser game and the Python game server', 'revise', 'open', 1000, NULL, '`plan 8: masterplan`, the plan above `plan 99: Retire the browser game and the Python game server`, changed; it is quoted below. Bring `plan 99: Retire the browser game and the Python game server` in line with it
+(`pm plan edit 99 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 8: masterplan
+
+Milestone 8 is S3 of the Steam track (D-34, `plans/11-steam.md`): the first build a family can install and play without the gamemaster''s dev setup (no Nix, no Python, no browser). It wraps the built client in the desktop shell chosen in S2, saves to a file, and is playable with a controller only, including on the Steam Deck (best effort without a Deck at hand, decision 125); on image questions a held button peeks at the whole picture. A credits screen covers the licences, and bundle selection gets its own full screen between the choice screen and the first level. With decision 111: Steam only, the desktop build now replaces the browser game: the family''s save moves into it, the Python game server goes, `app/` becomes Node/TS only, and workers check UI changes with a small Node dev server instead of `trivia`. No Steamworks features (S5).
+
+**The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 8 …`, priority as suggested), and that plan''s tasks do the work.
+
+## Status (revised 2026-10-16, task 1352)
+- Parts 1–7: plans written and implemented (plans 54, 55, 56, 44, 45, 46, 47); plan 65 (seen counters) also done. Plan 56 keeps task 332 "record the start test": per decision 39 it records the start test as skipped (Steam only), not failed.
+- Part 8: plan 48, revised for decisions 111 and 125; tasks open, runs last.
+- Part 9: plan 99, steps 1–3 done (dev server, import, authoring''s Python moved); deletions and docs open (`task 765: Delete app/server, ServerStore, the trivia command and nix build .#app`, `task 766: Docs: desktop as the only game, dev server, D-59 superseded`).
+- Part 10: plan 113, done.
+- Part 11: plan 151; own screen, base names, country field and flags, two-column layout done (tasks 1338, 1339, 1350, 1351); the developer''s second review (`decision 264: Bundle screen (two columns) reviewed in /gallery?`, answer "problems", supersedes `decision 260: Bundle screen: where it sits, supply report, in-game settings`) changed the flow (Player → Choice → Bundles → Level), the layout (narrow info-only base column, vertical ruler, flowing fixed-width tiles), highlighting, counts and the supply report''s place: milestone''s bundle-screen line (edit of 2026-10-16); plan 151 needs revising for them, no separate fix tasks.
+
+## Preconditions
+- TS engine (milestone 2), shell decision (decision 12: Desktop shell (OQ-29)? → Electron), licence data (plan 26): all in.
+- Decision 4 (static + `/api/save` only) and decision 25 (Python referee gone) left the Python game server as static files + save; part 9 removes the rest.
+
+## Rules for every part
+- Steam only (decision 111): no work, checks, fixes or docs for running the builds outside Steam; no "without Steam" / "clean machine without Nix" rows in checklists or done-whens. Supersedes D-59''s bridge ("the current game keeps working until this build replaces it").
+- The family keeps playing until the switch: part 9 imports their `state/game.json` before anything of the browser game is deleted.
+- Shipped code under `app/` (D-35); `directory.md` and `plans/19-repo-layout.md` updated with it. Nothing in `app/` reads `authoring/`; `authoring/` may import from `app/`.
+- Dependencies: Electron and electron-builder (decision 12) plus what the shell plans already took; anything else needs a `pm decision` (a Node dev server should reuse Vite, already a dev dependency).
+- Offline, no accounts, no telemetry. No Steamworks features beyond what plans 54/85 already wired (S5).
+- Deck (decision 125: Steam Deck: best effort, review without a Deck at hand): fit at 1280×800 (plan 46) plus the image peek (part 10) is the S3 Deck bar; checks run in a 1280×800 window, no real-Deck test in S3. The real-Deck test is plan 90 (milestone 10) once a Deck is at hand.
+- Owning plan files get their tasks `[x]` with a note (`18-steam-integration.md`, `14-input.md`, `17-publishing.md`); `plans/project.md` kept in sync.
+
+## Parts
+
+1. **Desktop shell skeleton (SW-2)**: plan 54, done.
+2. **File saves (SW-3)**: plan 55, done. Import of a save file was optional there; part 9 makes it required.
+3. **Local builds for Windows and Linux (SW-5, SW-6)**: plan 56, done except task 332 (start test recorded as skipped, decision 39). SW-6 is local CI in S5 (decision 14).
+4. **Action layer and focus navigation (IN-2, IN-3)**: plan 44, done.
+5. **Gamepad input and button glyphs (IN-4, IN-5)**: plan 45, done.
+6. **Deck layout and controller-only text entry (SW-4)**: plan 46, done.
+7. **Credits screen and generated `CREDITS.md` (PUB-5)**: plan 47, done.
+
+8. **S3 close-out and platform test**: plan 48 (priority 140, last).
+   - Revise for decision 111 and part 9: platforms are the Steam targets (Windows x64, Linux x64, Deck); no "clean machine without Node/Python", "Linux without Nix" or "network off before install" rows for the plain artefacts (decision 39: that start test lives in the Steam beta test, task 263: write plan: Beta test and S5 close-out); the "Current-game check" (`trivia` + browser on the TV) becomes "family check": `trivia-desktop` with the imported save shows the family''s players and seen counters, plays a round.
+   - Revise for decision 125 and part 10: no real Deck at hand, so the Deck table is a 1280×800 window run (Linux build, pad only) plus the peek rows; "Deck in Game Mode" rows (suspend/resume, arm''s-length reading, built-in controls) move to plan 90 (milestone 10) or are marked "skipped: no Deck (decision 125)", not failed. New rows on every platform: on an image question, holding the peek button (pad and key) shows the whole picture, release brings the UI back.
+   - Revise for part 11: the family check and every platform pass through the bundle screen in both modes (pad only), after Choice («Seguir»): narrow base column, ruler, optional tiles in rows and columns, regional order, country flags, counts, clear focus and selected states, the tile area scrolls with focus, supply report there.
+   - Waits for parts 9, 10 and 11 (guard: every other milestone-8 plan without open tasks).
+   - Done when: the milestone''s "Done when" holds.
+
+9. **Retire the browser game and the Python game server**: plan 99 (priority 450), tasks open.
+   - Owner: `plans/18-steam-integration.md` (desktop as the only game), `plans/01-architecture.md`, `plans/19-repo-layout.md`; `plans/decisions.md` D-59 marked superseded by decision 111.
+   - Order inside the plan (each step leaves per-commit checks green):
+     1. Node dev server for workers'' browser checks: serves the built or dev client, `app/data/` at `/data/`, `/media` from the media cache, and the save through the same Store the client uses (FileStore-like, in a temp state dir given by env/flag); one command (e.g. an `npm run` script or a flake app). Replaces "walk it on `trivia` with a temp `TRIVIA_STATE`" in AGENTS.md, plan files and open task bodies (`pm task set` for open tasks; grep tasks with `pm queue` / `pm show`).
+     2. `trivia-desktop --import-save <file>`: reads the family''s `state/game.json` (and migrates as `save.migrate()` did, if still needed), writes the desktop save atomically, refuses to overwrite a non-empty save without `--force`, keeps a backup. Then a pm decision for the gamemaster: "Family save imported into trivia-desktop?" (the family plays `trivia-desktop` from then on; later the Steam beta). Deletions in step 4 wait for its answer.
+     3. Authoring''s Python off `app/`: `app/server/paths.py`, `save.py`, `media_cache.py`, `http_base.py` (whatever `authoring/` still imports: `qgen.py`, `layout.py`, `save_file.py`, `download.py`, `media.py`, `categories.py`, `authoring/server/*`) move into `authoring/` modules; imports updated; `trivia-authoring`, `qgen`, `trivia-media` behave as before. Decision 104 (Python ↔ Node/TS twins: won''t fix) still holds: move, don''t sync. Authoring keeps reading flags from the save the desktop writes (apply_flags), path per the desktop save location.
+     4. Delete: `app/server/main.py`, `ServerStore` and `/api/save` (incl. task 724''s backup endpoint) in `lib/store.ts`, the `trivia` command (flake `trivia-dev`), `nix build .#app` (flake package `app`), its `trivia-release-check` step and docs mentions; `app/` has no `.py` left.
+     5. Docs: AGENTS.md (Commands: `trivia`, `nix build .#app` out; the dev server in), README.md, directory.md, `plans/decisions.md` (D-59 superseded by decision 111), `plans/01-architecture.md`, `plans/19-repo-layout.md`, `plans/12-client-engine.md` where they describe the browser game.
+   - Check the other milestones'' open plans and tasks that still name `trivia`, `/api/save`, `ServerStore` or `nix build .#app` (e.g. plan 89 "Builds, depots and upload", plan 30''s browser play-test, decision 50): adjust open task bodies with `pm task set`, or a follow-up task in the owning plan.
+   - Done when: no Python under `app/`; the family''s save lives in the desktop build (decision answered); workers'' browser checks run on the Node dev server; per-commit checks pass; `trivia-release-check` runs without the removed `nix build .#app` step.
+   - Suggested priority: 450 (after plan 56''s builds at 460, before plan 48 at 140).
+
+10. **Image peek on image questions** (new; decision 125)
+   - Owner: `plans/14-input.md` (the peek action, pad and key), `plans/04-ui-tv-display.md` (Question screen), `plans/18-steam-integration.md` (Deck: replace "Test on a real Deck before applying" with decision 125''s best-effort rule).
+   - Behaviour: on a question with an image, holding one button hides every panel (question text, answers, joker tray, HUD, prompts) and shows only the image, whole, fitted to the screen; release brings the UI back unchanged (focus, armed joker, timers as before). Not on video/audio questions or other screens.
+   - Input: a new action in plan 44''s action layer (`lib/input.svelte.ts`), hold semantics (press/release, not a toggle); pad: a button free in the Question scope''s map (decision 9: Y/X/B/A, RT, LT, LB/RB, Start are taken; e.g. View/Back or a stick click: the plan picks it); key: per catalog (decision 53: keys per UI language), collision rule checked; a `<Prompt>` with the glyph on image questions. Mouse/touch: press-and-hold on the image, if cheap.
+   - Timed modes: the clock keeps running while peeking (no pause exploit).
+   - Check: dev server (part 9) or `trivia-desktop` at 1280×800, 1280×720 and 1920×1080: for the image questions of `app/data/pool.json` (a throw-away script finds the ones whose picture panels cover), the peek shows the full picture; pad (or forced `device: "gamepad"`) and key; UI comes back as before.
+   - Done when: the milestone''s peek line holds; owning plan files ticked with notes.
+   - Suggested priority: 400 (UI; after part 9''s dev server at 450, before plan 48 at 140).
+
+11. **Bundle selection on its own full screen** (new; developer, 2026-10-16, gallery flags)
+   - Owner: `plans/04-ui-tv-display.md` (screen flow, layout), `plans/22-bundles.md` (bundle names, country field, order, counts), `modding/README.md` (country of a mod''s regional bundle); `plans/decisions.md` D-97 amended.
+   - Status: plan 151; done: own screen (`task 1338: Bundle screen between Player and Choice; Choice without the selector`), base names (`task 1339: Base bundle names per locale: Paquete básico, Base bundle, Grundpaket`), country field and flags (`task 1350: Country field for regional bundles and flag icons`), two-column layout and region order (`task 1351: Bundle screen: two columns, scrolling optional column, order by region`). `decision 264: Bundle screen (two columns) reviewed in /gallery?` answered "problems": the flow, layout, highlighting, counts and supply report below (milestone edit of 2026-10-16) replace plan 151''s "Screen layout" and decision 260''s place of the screen and the supply report. Revise plan 151, no separate fix tasks (decision 264''s answer); `task 1340: Gallery run of the two-column bundle screen and developer review` runs again after the rework, with a new review decision.
+   - Kept from earlier work: country field (ISO 3166-1 alpha-2, required for `kind: region` in `app/data/bundles.json` and mods; `qgen validate`, `--check-mod`, client loader refuse it missing), flag icons from `Flags.svelte` wherever a bundle shows its icon (no pin), player''s region from Electron `app.getLocaleCountryCode()` through the bridge (browser fallback, `?region=`), base names per `decision 261: Name of the base bundle per UI language (not «Basics»)`, `decision 158: Bundle selection in every mode, apart from customization` with "own screen" (never part of «Personalizar partida», not counted in customized; preset = playerChoice).
+   - Flow, both modes («Solo o en grupo», «Modo anfitrión»), also with one offered bundle: Player → Choice → Bundles → Level
+     - Choice''s main button «Seguir» (continue), not «¡A jugar!»; Choice shows no bundle line any more
+     - the game starts from the bundle screen (its main button starts it, through the supply notice when needed); Back from Bundles returns to Choice, both screens keep their picks
+   - Supply report, short-group marks and the running-out notice (plan 65, `decision 31: Low-supply warning: below how many fresh games left (K) should the game start warn?`''s criterion) move from Choice to the bundle screen: age group, levels and cards are known by then; amends `decision 206: Play-test: no supply report on Start, report on the Choice screen only`''s "Choice screen" to the bundle screen (plan 151 records it).
+   - Layout:
+     - base bundle: information only, no «Elijan uno» heading or pick prompt, a narrow column on the left using as little screen space as possible; a session still has exactly one base bundle (a mod''s extra base bundle: open question for plan 151, e.g. a `pm decision`, not a reason for a pick prompt here)
+     - a vertical ruler between the base column and the optional bundles
+     - optional bundles: fixed-width tiles that flow into rows and columns to fit the screen (1920×1080, 1280×800); the tile area scrolls when they don''t fit (mouse wheel, touch; pad and keys move focus in 2D, the focused tile always in view)
+     - obvious highlighting: a clear hover/focus state and a clearly different selected-for-this-game state (more than a small «activado» line)
+     - tiles: name, icon and count only, no descriptions on this screen (descriptions stay in «Ajustes de la partida» if plan 151 keeps them there)
+   - Counts: a fixed string per tile, base bundle «5000+», every other bundle «2000+»; a bundle well away from 2000 (e.g. a small mod) shows its own rounded-down count instead (plan 151 picks "well away" and the rounding, and where the count comes from for mods)
+   - Order of the optional bundles: the regional bundle of the player''s region first, then non-regional bundles, then regional bundles of other regions (done in task 1351; stays)
+   - Focus and input per plan 44''s action layer (scope `bundles`), pad and key; fits at 1280×800 (plan 46).
+   - Check: dev server at 1280×800 and 1920×1080, both modes, pad and key: Player → Choice → Bundles → Level, Back to Choice; with ~15 fake mod bundles the tile area scrolls and focus follows; order with the region set and unset; supply report and notice on the bundle screen; `trivia-gallery` shots at both sizes (`--size`, `task 1330: Gallery size option`, done) and a new developer review decision like decision 264.
+   - Done when: the milestone''s bundle-screen line holds (flow, narrow base column, ruler, flowing tiles with scroll, highlighting, counts, order, country flags, names only, supply report there); owning plan files, `modding/README.md` and D-97 updated; the review decision answered "approved".
+   - Suggested priority: 400 (UI; before plan 48 at 140).
+
+## Order
+- Parts 1–7 done; part 10 done.
+- Part 9: dev server → import + family switch (decision) → move authoring''s Python → deletions → docs.
+- Part 10: after part 9''s dev server (step 1) if possible; else check in `trivia-desktop`.
+- Part 11: plan 151''s revision for decision 264 (flow, layout, counts, supply report) next; then its rework and a new gallery review.
+- Part 8 last, after parts 9, 10 and 11.
+
+## Out of scope (from the milestone)
+- Steamworks features (overlay, Cloud setup, achievements, on-screen keyboard, SW-7..SW-14), store page (S5); translations (S4); media resizing (SW-9, S5); couch co-op input (IN-6, IN-7, later).
+- Porting authoring''s Python (qgen, `trivia-authoring`) to Node/TS: later, own milestone.', '2026-10-16T16:04:59Z', NULL, 1352, 0, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1357, 151, 'revise plan 151: Bundle selection on its own full screen', 'revise', 'open', 1000, NULL, '`plan 8: masterplan`, the plan above `plan 151: Bundle selection on its own full screen`, changed; it is quoted below. Bring `plan 151: Bundle selection on its own full screen` in line with it
+(`pm plan edit 151 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 8: masterplan
+
+Milestone 8 is S3 of the Steam track (D-34, `plans/11-steam.md`): the first build a family can install and play without the gamemaster''s dev setup (no Nix, no Python, no browser). It wraps the built client in the desktop shell chosen in S2, saves to a file, and is playable with a controller only, including on the Steam Deck (best effort without a Deck at hand, decision 125); on image questions a held button peeks at the whole picture. A credits screen covers the licences, and bundle selection gets its own full screen between the choice screen and the first level. With decision 111: Steam only, the desktop build now replaces the browser game: the family''s save moves into it, the Python game server goes, `app/` becomes Node/TS only, and workers check UI changes with a small Node dev server instead of `trivia`. No Steamworks features (S5).
+
+**The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 8 …`, priority as suggested), and that plan''s tasks do the work.
+
+## Status (revised 2026-10-16, task 1352)
+- Parts 1–7: plans written and implemented (plans 54, 55, 56, 44, 45, 46, 47); plan 65 (seen counters) also done. Plan 56 keeps task 332 "record the start test": per decision 39 it records the start test as skipped (Steam only), not failed.
+- Part 8: plan 48, revised for decisions 111 and 125; tasks open, runs last.
+- Part 9: plan 99, steps 1–3 done (dev server, import, authoring''s Python moved); deletions and docs open (`task 765: Delete app/server, ServerStore, the trivia command and nix build .#app`, `task 766: Docs: desktop as the only game, dev server, D-59 superseded`).
+- Part 10: plan 113, done.
+- Part 11: plan 151; own screen, base names, country field and flags, two-column layout done (tasks 1338, 1339, 1350, 1351); the developer''s second review (`decision 264: Bundle screen (two columns) reviewed in /gallery?`, answer "problems", supersedes `decision 260: Bundle screen: where it sits, supply report, in-game settings`) changed the flow (Player → Choice → Bundles → Level), the layout (narrow info-only base column, vertical ruler, flowing fixed-width tiles), highlighting, counts and the supply report''s place: milestone''s bundle-screen line (edit of 2026-10-16); plan 151 needs revising for them, no separate fix tasks.
+
+## Preconditions
+- TS engine (milestone 2), shell decision (decision 12: Desktop shell (OQ-29)? → Electron), licence data (plan 26): all in.
+- Decision 4 (static + `/api/save` only) and decision 25 (Python referee gone) left the Python game server as static files + save; part 9 removes the rest.
+
+## Rules for every part
+- Steam only (decision 111): no work, checks, fixes or docs for running the builds outside Steam; no "without Steam" / "clean machine without Nix" rows in checklists or done-whens. Supersedes D-59''s bridge ("the current game keeps working until this build replaces it").
+- The family keeps playing until the switch: part 9 imports their `state/game.json` before anything of the browser game is deleted.
+- Shipped code under `app/` (D-35); `directory.md` and `plans/19-repo-layout.md` updated with it. Nothing in `app/` reads `authoring/`; `authoring/` may import from `app/`.
+- Dependencies: Electron and electron-builder (decision 12) plus what the shell plans already took; anything else needs a `pm decision` (a Node dev server should reuse Vite, already a dev dependency).
+- Offline, no accounts, no telemetry. No Steamworks features beyond what plans 54/85 already wired (S5).
+- Deck (decision 125: Steam Deck: best effort, review without a Deck at hand): fit at 1280×800 (plan 46) plus the image peek (part 10) is the S3 Deck bar; checks run in a 1280×800 window, no real-Deck test in S3. The real-Deck test is plan 90 (milestone 10) once a Deck is at hand.
+- Owning plan files get their tasks `[x]` with a note (`18-steam-integration.md`, `14-input.md`, `17-publishing.md`); `plans/project.md` kept in sync.
+
+## Parts
+
+1. **Desktop shell skeleton (SW-2)**: plan 54, done.
+2. **File saves (SW-3)**: plan 55, done. Import of a save file was optional there; part 9 makes it required.
+3. **Local builds for Windows and Linux (SW-5, SW-6)**: plan 56, done except task 332 (start test recorded as skipped, decision 39). SW-6 is local CI in S5 (decision 14).
+4. **Action layer and focus navigation (IN-2, IN-3)**: plan 44, done.
+5. **Gamepad input and button glyphs (IN-4, IN-5)**: plan 45, done.
+6. **Deck layout and controller-only text entry (SW-4)**: plan 46, done.
+7. **Credits screen and generated `CREDITS.md` (PUB-5)**: plan 47, done.
+
+8. **S3 close-out and platform test**: plan 48 (priority 140, last).
+   - Revise for decision 111 and part 9: platforms are the Steam targets (Windows x64, Linux x64, Deck); no "clean machine without Node/Python", "Linux without Nix" or "network off before install" rows for the plain artefacts (decision 39: that start test lives in the Steam beta test, task 263: write plan: Beta test and S5 close-out); the "Current-game check" (`trivia` + browser on the TV) becomes "family check": `trivia-desktop` with the imported save shows the family''s players and seen counters, plays a round.
+   - Revise for decision 125 and part 10: no real Deck at hand, so the Deck table is a 1280×800 window run (Linux build, pad only) plus the peek rows; "Deck in Game Mode" rows (suspend/resume, arm''s-length reading, built-in controls) move to plan 90 (milestone 10) or are marked "skipped: no Deck (decision 125)", not failed. New rows on every platform: on an image question, holding the peek button (pad and key) shows the whole picture, release brings the UI back.
+   - Revise for part 11: the family check and every platform pass through the bundle screen in both modes (pad only), after Choice («Seguir»): narrow base column, ruler, optional tiles in rows and columns, regional order, country flags, counts, clear focus and selected states, the tile area scrolls with focus, supply report there.
+   - Waits for parts 9, 10 and 11 (guard: every other milestone-8 plan without open tasks).
+   - Done when: the milestone''s "Done when" holds.
+
+9. **Retire the browser game and the Python game server**: plan 99 (priority 450), tasks open.
+   - Owner: `plans/18-steam-integration.md` (desktop as the only game), `plans/01-architecture.md`, `plans/19-repo-layout.md`; `plans/decisions.md` D-59 marked superseded by decision 111.
+   - Order inside the plan (each step leaves per-commit checks green):
+     1. Node dev server for workers'' browser checks: serves the built or dev client, `app/data/` at `/data/`, `/media` from the media cache, and the save through the same Store the client uses (FileStore-like, in a temp state dir given by env/flag); one command (e.g. an `npm run` script or a flake app). Replaces "walk it on `trivia` with a temp `TRIVIA_STATE`" in AGENTS.md, plan files and open task bodies (`pm task set` for open tasks; grep tasks with `pm queue` / `pm show`).
+     2. `trivia-desktop --import-save <file>`: reads the family''s `state/game.json` (and migrates as `save.migrate()` did, if still needed), writes the desktop save atomically, refuses to overwrite a non-empty save without `--force`, keeps a backup. Then a pm decision for the gamemaster: "Family save imported into trivia-desktop?" (the family plays `trivia-desktop` from then on; later the Steam beta). Deletions in step 4 wait for its answer.
+     3. Authoring''s Python off `app/`: `app/server/paths.py`, `save.py`, `media_cache.py`, `http_base.py` (whatever `authoring/` still imports: `qgen.py`, `layout.py`, `save_file.py`, `download.py`, `media.py`, `categories.py`, `authoring/server/*`) move into `authoring/` modules; imports updated; `trivia-authoring`, `qgen`, `trivia-media` behave as before. Decision 104 (Python ↔ Node/TS twins: won''t fix) still holds: move, don''t sync. Authoring keeps reading flags from the save the desktop writes (apply_flags), path per the desktop save location.
+     4. Delete: `app/server/main.py`, `ServerStore` and `/api/save` (incl. task 724''s backup endpoint) in `lib/store.ts`, the `trivia` command (flake `trivia-dev`), `nix build .#app` (flake package `app`), its `trivia-release-check` step and docs mentions; `app/` has no `.py` left.
+     5. Docs: AGENTS.md (Commands: `trivia`, `nix build .#app` out; the dev server in), README.md, directory.md, `plans/decisions.md` (D-59 superseded by decision 111), `plans/01-architecture.md`, `plans/19-repo-layout.md`, `plans/12-client-engine.md` where they describe the browser game.
+   - Check the other milestones'' open plans and tasks that still name `trivia`, `/api/save`, `ServerStore` or `nix build .#app` (e.g. plan 89 "Builds, depots and upload", plan 30''s browser play-test, decision 50): adjust open task bodies with `pm task set`, or a follow-up task in the owning plan.
+   - Done when: no Python under `app/`; the family''s save lives in the desktop build (decision answered); workers'' browser checks run on the Node dev server; per-commit checks pass; `trivia-release-check` runs without the removed `nix build .#app` step.
+   - Suggested priority: 450 (after plan 56''s builds at 460, before plan 48 at 140).
+
+10. **Image peek on image questions** (new; decision 125)
+   - Owner: `plans/14-input.md` (the peek action, pad and key), `plans/04-ui-tv-display.md` (Question screen), `plans/18-steam-integration.md` (Deck: replace "Test on a real Deck before applying" with decision 125''s best-effort rule).
+   - Behaviour: on a question with an image, holding one button hides every panel (question text, answers, joker tray, HUD, prompts) and shows only the image, whole, fitted to the screen; release brings the UI back unchanged (focus, armed joker, timers as before). Not on video/audio questions or other screens.
+   - Input: a new action in plan 44''s action layer (`lib/input.svelte.ts`), hold semantics (press/release, not a toggle); pad: a button free in the Question scope''s map (decision 9: Y/X/B/A, RT, LT, LB/RB, Start are taken; e.g. View/Back or a stick click: the plan picks it); key: per catalog (decision 53: keys per UI language), collision rule checked; a `<Prompt>` with the glyph on image questions. Mouse/touch: press-and-hold on the image, if cheap.
+   - Timed modes: the clock keeps running while peeking (no pause exploit).
+   - Check: dev server (part 9) or `trivia-desktop` at 1280×800, 1280×720 and 1920×1080: for the image questions of `app/data/pool.json` (a throw-away script finds the ones whose picture panels cover), the peek shows the full picture; pad (or forced `device: "gamepad"`) and key; UI comes back as before.
+   - Done when: the milestone''s peek line holds; owning plan files ticked with notes.
+   - Suggested priority: 400 (UI; after part 9''s dev server at 450, before plan 48 at 140).
+
+11. **Bundle selection on its own full screen** (new; developer, 2026-10-16, gallery flags)
+   - Owner: `plans/04-ui-tv-display.md` (screen flow, layout), `plans/22-bundles.md` (bundle names, country field, order, counts), `modding/README.md` (country of a mod''s regional bundle); `plans/decisions.md` D-97 amended.
+   - Status: plan 151; done: own screen (`task 1338: Bundle screen between Player and Choice; Choice without the selector`), base names (`task 1339: Base bundle names per locale: Paquete básico, Base bundle, Grundpaket`), country field and flags (`task 1350: Country field for regional bundles and flag icons`), two-column layout and region order (`task 1351: Bundle screen: two columns, scrolling optional column, order by region`). `decision 264: Bundle screen (two columns) reviewed in /gallery?` answered "problems": the flow, layout, highlighting, counts and supply report below (milestone edit of 2026-10-16) replace plan 151''s "Screen layout" and decision 260''s place of the screen and the supply report. Revise plan 151, no separate fix tasks (decision 264''s answer); `task 1340: Gallery run of the two-column bundle screen and developer review` runs again after the rework, with a new review decision.
+   - Kept from earlier work: country field (ISO 3166-1 alpha-2, required for `kind: region` in `app/data/bundles.json` and mods; `qgen validate`, `--check-mod`, client loader refuse it missing), flag icons from `Flags.svelte` wherever a bundle shows its icon (no pin), player''s region from Electron `app.getLocaleCountryCode()` through the bridge (browser fallback, `?region=`), base names per `decision 261: Name of the base bundle per UI language (not «Basics»)`, `decision 158: Bundle selection in every mode, apart from customization` with "own screen" (never part of «Personalizar partida», not counted in customized; preset = playerChoice).
+   - Flow, both modes («Solo o en grupo», «Modo anfitrión»), also with one offered bundle: Player → Choice → Bundles → Level
+     - Choice''s main button «Seguir» (continue), not «¡A jugar!»; Choice shows no bundle line any more
+     - the game starts from the bundle screen (its main button starts it, through the supply notice when needed); Back from Bundles returns to Choice, both screens keep their picks
+   - Supply report, short-group marks and the running-out notice (plan 65, `decision 31: Low-supply warning: below how many fresh games left (K) should the game start warn?`''s criterion) move from Choice to the bundle screen: age group, levels and cards are known by then; amends `decision 206: Play-test: no supply report on Start, report on the Choice screen only`''s "Choice screen" to the bundle screen (plan 151 records it).
+   - Layout:
+     - base bundle: information only, no «Elijan uno» heading or pick prompt, a narrow column on the left using as little screen space as possible; a session still has exactly one base bundle (a mod''s extra base bundle: open question for plan 151, e.g. a `pm decision`, not a reason for a pick prompt here)
+     - a vertical ruler between the base column and the optional bundles
+     - optional bundles: fixed-width tiles that flow into rows and columns to fit the screen (1920×1080, 1280×800); the tile area scrolls when they don''t fit (mouse wheel, touch; pad and keys move focus in 2D, the focused tile always in view)
+     - obvious highlighting: a clear hover/focus state and a clearly different selected-for-this-game state (more than a small «activado» line)
+     - tiles: name, icon and count only, no descriptions on this screen (descriptions stay in «Ajustes de la partida» if plan 151 keeps them there)
+   - Counts: a fixed string per tile, base bundle «5000+», every other bundle «2000+»; a bundle well away from 2000 (e.g. a small mod) shows its own rounded-down count instead (plan 151 picks "well away" and the rounding, and where the count comes from for mods)
+   - Order of the optional bundles: the regional bundle of the player''s region first, then non-regional bundles, then regional bundles of other regions (done in task 1351; stays)
+   - Focus and input per plan 44''s action layer (scope `bundles`), pad and key; fits at 1280×800 (plan 46).
+   - Check: dev server at 1280×800 and 1920×1080, both modes, pad and key: Player → Choice → Bundles → Level, Back to Choice; with ~15 fake mod bundles the tile area scrolls and focus follows; order with the region set and unset; supply report and notice on the bundle screen; `trivia-gallery` shots at both sizes (`--size`, `task 1330: Gallery size option`, done) and a new developer review decision like decision 264.
+   - Done when: the milestone''s bundle-screen line holds (flow, narrow base column, ruler, flowing tiles with scroll, highlighting, counts, order, country flags, names only, supply report there); owning plan files, `modding/README.md` and D-97 updated; the review decision answered "approved".
+   - Suggested priority: 400 (UI; before plan 48 at 140).
+
+## Order
+- Parts 1–7 done; part 10 done.
+- Part 9: dev server → import + family switch (decision) → move authoring''s Python → deletions → docs.
+- Part 10: after part 9''s dev server (step 1) if possible; else check in `trivia-desktop`.
+- Part 11: plan 151''s revision for decision 264 (flow, layout, counts, supply report) next; then its rework and a new gallery review.
+- Part 8 last, after parts 9, 10 and 11.
+
+## Out of scope (from the milestone)
+- Steamworks features (overlay, Cloud setup, achievements, on-screen keyboard, SW-7..SW-14), store page (S5); translations (S4); media resizing (SW-9, S5); couch co-op input (IN-6, IN-7, later).
+- Porting authoring''s Python (qgen, `trivia-authoring`) to Node/TS: later, own milestone.', '2026-10-16T16:04:59Z', NULL, 1352, 0, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -39968,6 +40270,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1354, 1330, '2026-10-16T15:41:48Z', '2026-10-16T15:43:18Z', 'done', NULL, 0, '0ea5e1b341ed47cbe3a1e8d600a4ece4973a4d52', 'claude-sonnet-5-5', '993759ba-7dc6-4e51-8565-75ef43fb81e5', 1353, 13, 24, 4945, 1595682, 34159, 1.5726566000000004, 4144524);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1355, 1275, '2026-10-16T15:43:18Z', '2026-10-16T16:01:51Z', 'blocked', NULL, 0, 'bbebc940e215945e50234a075440e11fb4f793a0', 'claude-sonnet-5-5', '2c898c97-f287-4ab7-b9be-f48c9af2ca4c', NULL, 42, 76, 14046, 2935000, 87567, 1.07788, 4144524);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1356, 1327, '2026-10-16T16:01:51Z', '2026-10-16T16:04:17Z', 'done', NULL, 0, '6a8a5d6a28760c7465292a097007bd2ad63633a1', 'claude-sonnet-5-5', 'e5b0d21d-f8d2-463d-b37b-caf4bf49fbd6', NULL, 16, 30, 7861, 804519, 58308, 0.47280580000000005, 4144524);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1357, 1352, '2026-10-16T16:04:17Z', '2026-10-16T16:05:07Z', 'done', NULL, 0, '0f66461b184d7a202895ee377e0084a6f80ed076', 'claude-opus-5-5', '23cdf1e9-9836-4ae9-b7f2-6a79271f0f41', NULL, 8, 16, 4894, 337844, 42159, 0.5027848, 4144524);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
