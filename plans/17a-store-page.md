@@ -87,17 +87,17 @@ Texts per store language for Steamworks → Edit Store Page → "Description" (s
   [h2]Cinco comodines[/h2]
   [list]
   [*][b]Soplo:[/b] muestra una pista de la pregunta, hasta tres por pregunta.
-  [*][b]Paso:[/b] cambia la pregunta por otra carta; si quieren, ese tema sale del juego.
-  [*][b]Bájale:[/b] cambia la pregunta por una más fácil del mismo tema.
-  [*][b]Cambiazo:[/b] ustedes eligen otro tema.
-  [*][b]Francotirador:[/b] disparen a una respuesta falsa y queda tachada. Si le dan a la correcta, el nivel vuelve a empezar.
+  [*][b]Paso y fuera:[/b] cambia la pregunta por otra carta; si quieren, ese tema sale del juego.
+  [*][b]Hada madrina:[/b] cambia la pregunta por una más fácil del mismo tema.
+  [*][b]Doña Exigente:[/b] ustedes eligen otro tema.
+  [*][b]Tiro mágico:[/b] disparen a una respuesta falsa y queda tachada. Si le dan a la correcta, el nivel vuelve a empezar.
   [/list]
 
   [h2]Características[/h2]
   [list]
   [*]12 preguntas seguidas hasta la cima de la torre
   [*]Dos modos: Solo o en grupo, Modo anfitrión
-  [*]Cinco comodines: Soplo, Paso, Bájale, Cambiazo, Francotirador
+  [*]Cinco comodines: Soplo, Paso y fuera, Hada madrina, Doña Exigente, Tiro mágico
   [*]Cuatro grupos de edad, de niños a adultos
   [*]Preguntas con imagen, sonido y video
   [*]Paquetes de preguntas regionales gratis como DLC, apagados por defecto
@@ -120,7 +120,7 @@ Only the fields that differ from `es`: «vosotros», «vídeo», «ordenador», 
 - **About This Game:** `es` with these replacements
   - «Todos en la sala juegan … respondan doce preguntas seguidas y la corona es suya. … así que usen bien sus comodines.» → «Todos en el salón jugáis como un solo equipo contra el juego: responded doce preguntas seguidas y la corona es vuestra. … así que usad bien vuestros comodines.»
   - «ponen un sonido o un video corto» → «ponen un sonido o un vídeo corto»
-  - Paso: «si quieren» → «si queréis»; Cambiazo: «ustedes eligen otro tema» → «elegís otro tema»; Francotirador: «disparen … Si le dan a la correcta» → «disparad … Si le dais a la correcta»
+  - Paso y fuera: «si quieren» → «si queréis»; Doña Exigente: «ustedes eligen otro tema» → «elegís otro tema»; Tiro mágico: «disparen … Si le dan a la correcta» → «disparad … Si le dais a la correcta»
   - «Preguntas con imagen, sonido y video» → «… vídeo»; «Control, teclado o mouse» → «Mando, teclado o ratón»; «Hecho para el televisor de la casa» → «Hecho para la tele de casa»
   - Privacy: «en su computador y en su Steam Cloud» → «en vuestro ordenador y en vuestro Steam Cloud»; «si ustedes lo permiten: … si aceptan, … cuando presionan Enviar» → «si lo permitís: … si aceptáis, … cuando pulsáis Enviar»
   - Controller: «controles de Xbox y PlayStation, teclado o mouse» → «mandos de Xbox y PlayStation, teclado o ratón»
@@ -145,9 +145,9 @@ Only the fields that differ from `es`: «vosotros», «vídeo», «ordenador», 
 
   [h2]Fünf Joker[/h2]
   [list]
-  [*][b]Zaunpfahl:[/b] zeigt einen Hinweis zur Frage, bis zu drei pro Frage.
-  [*][b]Näxt:[/b] tauscht die Frage gegen eine andere Karte; auf Wunsch fliegt das Thema aus dem Spiel.
-  [*][b]Gang runter:[/b] tauscht die Frage gegen eine leichtere zum selben Thema.
+  [*][b]Wink:[/b] zeigt einen Hinweis zur Frage, bis zu drei pro Frage.
+  [*][b]Näxt & Weg:[/b] tauscht die Frage gegen eine andere Karte; auf Wunsch fliegt das Thema aus dem Spiel.
+  [*][b]Glücksfee:[/b] tauscht die Frage gegen eine leichtere zum selben Thema.
   [*][b]Wunschzeit:[/b] ein anderes Thema wählen.
   [*][b]Finte:[/b] auf eine falsche Antwort zielen, und sie wird gestrichen. Ein Treffer auf die richtige: Die Stufe beginnt von vorn.
   [/list]
@@ -156,7 +156,7 @@ Only the fields that differ from `es`: «vosotros», «vídeo», «ordenador», 
   [list]
   [*]Zwölf Fragen in Folge bis zum Gipfel des Turms
   [*]Zwei Modi: Allein oder in der Gruppe, Spielleitermodus
-  [*]Fünf Joker: Zaunpfahl, Näxt, Gang runter, Wunschzeit, Finte
+  [*]Fünf Joker: Wink, Näxt & Weg, Glücksfee, Wunschzeit, Finte
   [*]Vier Altersgruppen, von Kindern bis Erwachsenen
   [*]Fragen mit Bildern, Tönen und Videos
   [*]Kostenlose regionale Fragenpakete als DLC, standardmäßig aus
@@ -565,7 +565,7 @@ Values for Steamworks → Edit Store Page → "Basic Info" (requirements, langua
 - Output: `authoring/store/out/screenshots/<lang>/NN-<screen>.png` (gitignored)
 - Set and order (decision 79; the developer approves the order with the render, `task 845: Store media: render screenshots and trailers for approval`):
   1. `question-locked`: a question with a locked-in answer (q-0030)
-  2. `joker-snipe`: Francotirador aiming (q-0019)
+  2. `joker-snipe`: Tiro mágico aiming (q-0019)
   3. `modes`: mode choice, «Solo o en grupo» with the age groups
   4. `bundles`: bundle selector, Regional: Colombia switched on
   5. `customize`: «Personalizar partida»
@@ -583,7 +583,7 @@ Values for Steamworks → Edit Store Page → "Basic Info" (requirements, langua
   1. Start → level 4 question, Soplo's hint
   2. right answer locked, «Respuesta final», reveal
   3. the tower, level 5
-  4. next question: Francotirador shoots a wrong answer
+  4. next question: Tiro mágico shoots a wrong answer
   5. a wrong answer locked, reveal, «¡Oh no!»: the loss
 - Raw take ≈60 s, cut to ≈20 s by `CUT` (marks set during the walk, 80 ms audio fades at each cut); `--keep-raw` keeps the take
 - Output: `authoring/store/out/trailer/<lang>.mp4` (gitignored); on a failed walk `<lang>-failed.png`
