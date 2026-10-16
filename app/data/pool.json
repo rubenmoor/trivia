@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "14f07cdb",
+  "hash": "8c4c3839",
   "questions": [
     {
       "id": "q-0001",
@@ -5139,6 +5139,49 @@
       "background": null
     },
     {
+      "id": "q-0202",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "Animales del Amazonas",
+      "bundle": "base",
+      "description": "El despertador de la selva no tiene botón para apagarlo.",
+      "question": "Escucha: ¿qué animal de la selva amazónica hace este sonido?",
+      "answer": "El mono aullador",
+      "wrong_answers": [
+        "El jaguar",
+        "El tapir",
+        "El caimán"
+      ],
+      "hints": [
+        "Vive en lo alto de los árboles, no en el suelo.",
+        "Se cuelga de las ramas con la cola y suele 'cantar' al amanecer en grupo.",
+        "Su nombre describe justo lo que está haciendo en la grabación."
+      ],
+      "fun_fact": "El mono aullador es uno de los animales terrestres más ruidosos: sus aullidos se oyen a varios kilómetros de distancia.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Mantled_Howler_Monkey_%28Alouatta_palliata%29_%28W_ALOUATTA_PALLIATA_R1_C2%29.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMantled_Howler_Monkey_%28Alouatta_palliata%29_%28W_ALOUATTA_PALLIATA_R1_C2%29.ogg",
+        "credit": "CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": null,
+        "author_url": null
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Misty_river_in_Mentawai_rainforest_at_sunrise.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMisty_river_in_Mentawai_rainforest_at_sunrise.jpg",
+        "credit": "Andrian salis · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Andrian salis",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Andrian_salis"
+      }
+    },
+    {
       "id": "q-0203",
       "status": "approved",
       "difficulty": 4,
@@ -7442,40 +7485,6 @@
         "author": "Theactivistuk",
         "author_url": "https://commons.wikimedia.org/wiki/User:Theactivistuk"
       }
-    },
-    {
-      "id": "q-0285",
-      "status": "approved",
-      "difficulty": 4,
-      "subcategory": "Fenómenos naturales",
-      "bundle": "base",
-      "description": "Este pedazo de suelo tiene más mal genio que tu hermano cuando lo despiertan temprano.",
-      "question": "Mira el video: este agujero en el suelo burbujea y echa vapor. ¿Qué pasa después?",
-      "answer": "Sale un chorro de agua hirviendo",
-      "wrong_answers": [
-        "Sale un río de lava ardiente",
-        "El agua se congela de golpe",
-        "El suelo se hunde de repente"
-      ],
-      "hints": [
-        "Esto pasa en lugares donde hay muchísimo calor debajo de la tierra.",
-        "El agua de abajo se calienta tanto que el vapor empuja todo hacia arriba.",
-        "Es como cuando la olla de la sopa hierve tan fuerte que la tapa sale volando, pero hacia el cielo."
-      ],
-      "fun_fact": "La palabra 'géiser' viene de Geysir, un géiser de Islandia cuyo nombre significa 'el que brota'.",
-      "media": {
-        "type": "video",
-        "role": "essential",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/d/dc/Old_Faithful_Geyser_Eruption_selection_2019.webm/Old_Faithful_Geyser_Eruption_selection_2019.webm.1080p.vp9.webm",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AOld_Faithful_Geyser_Eruption_selection_2019.webm",
-        "credit": "UrsRuebli · CC BY 3.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY 3.0",
-        "license_url": "https://creativecommons.org/licenses/by/3.0",
-        "author": "UrsRuebli",
-        "author_url": null
-      },
-      "background": null
     },
     {
       "id": "q-0286",
@@ -10549,7 +10558,7 @@
     {
       "id": "q-0385",
       "status": "approved",
-      "difficulty": 4,
+      "difficulty": 5,
       "subcategory": "Mascotas raras",
       "bundle": "base",
       "description": "En inglés lo llaman 'cerdito', aunque no hace oink ni se revuelca en el barro.",
@@ -11433,7 +11442,7 @@
     {
       "id": "q-0417",
       "status": "approved",
-      "difficulty": 9,
+      "difficulty": 11,
       "subcategory": "Terremotos",
       "bundle": "base",
       "description": "Un día en que el planeta decidió subirle todo el volumen al temblor.",
@@ -13043,40 +13052,6 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Cindy Shebley",
         "author_url": "https://www.flickr.com/people/25636851@N03"
-      },
-      "background": null
-    },
-    {
-      "id": "q-0473",
-      "status": "approved",
-      "difficulty": 2,
-      "subcategory": "Cuentos infantiles",
-      "bundle": "base",
-      "description": "Un zapato tan delicado que con él no se puede ni jugar un partidito.",
-      "question": "Mira la foto: ¿de qué cuento es este famoso zapato?",
-      "answer": "La Cenicienta",
-      "wrong_answers": [
-        "Blancanieves",
-        "La Bella Durmiente",
-        "Rapunzel"
-      ],
-      "hints": [
-        "La protagonista vive con una madrastra y dos hermanastras.",
-        "Un hada madrina le consigue vestido y carroza para ir al baile.",
-        "Tiene que salir corriendo cuando el reloj marca la medianoche."
-      ],
-      "fun_fact": "En la versión de los hermanos Grimm, el zapato de Cenicienta no era de cristal sino de oro.",
-      "media": {
-        "type": "image",
-        "role": "essential",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Acrylic_Heels.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AAcrylic_Heels.jpg",
-        "credit": "Tu Foto · CC BY 2.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY 2.0",
-        "license_url": "https://creativecommons.org/licenses/by/2.0",
-        "author": "Tu Foto",
-        "author_url": "https://www.flickr.com/photos/26401359@N00"
       },
       "background": null
     },
@@ -28995,40 +28970,6 @@
       "background": null
     },
     {
-      "id": "q-1009",
-      "status": "approved",
-      "difficulty": 10,
-      "subcategory": "Mundiales de fútbol",
-      "bundle": "base",
-      "description": "El jugador que barre todo lo que sus compañeros dejan suelto en la defensa.",
-      "question": "Es un defensa sin marca fija que juega detrás de los demás, y Franz Beckenbauer lo hizo famoso. ¿Cómo se llama esa posición?",
-      "answer": "Líbero",
-      "wrong_answers": [
-        "Carrilero",
-        "Stopper",
-        "Lateral"
-      ],
-      "hints": [
-        "Su nombre viene del italiano.",
-        "Es el último hombre antes del portero.",
-        "Suena a 'libre'."
-      ],
-      "fun_fact": "Beckenbauer ganó el Mundial como jugador en 1974 y como entrenador de Alemania en 1990.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Olympiastadion%2C_M%C3%BAnich%2C_Alemania_2012-04-28%2C_DD_04.JPG/3840px-Olympiastadion%2C_M%C3%BAnich%2C_Alemania_2012-04-28%2C_DD_04.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AOlympiastadion%2C_M%C3%BAnich%2C_Alemania_2012-04-28%2C_DD_04.JPG",
-        "credit": "Diego Delso · CC BY-SA 3.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-        "author": "Diego Delso",
-        "author_url": "https://www.wikidata.org/wiki/Q28147777"
-      },
-      "background": null
-    },
-    {
       "id": "q-1010",
       "status": "approved",
       "difficulty": 10,
@@ -31137,6 +31078,40 @@
       "background": null
     },
     {
+      "id": "q-1077",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "Robots",
+      "bundle": "base",
+      "description": "Hasta los robots tienen partes con nombres que nadie sabe decir en una fiesta.",
+      "question": "Un brazo robótico trabaja en una fábrica de automóviles. Si de repente se dañaran todos sus actuadores, ¿qué le pasaría?",
+      "answer": "Se quedaría quieto",
+      "wrong_answers": [
+        "Perdería la vista",
+        "Olvidaría su programa",
+        "Se quedaría sin energía"
+      ],
+      "hints": [
+        "Los actuadores no ven, no recuerdan y no guardan energía.",
+        "En un cuerpo humano, cumplirían el papel de los músculos.",
+        "Son los motores y pistones que producen el movimiento."
+      ],
+      "fun_fact": "Un robot suele tener un actuador por cada articulación, así que un brazo de seis articulaciones usa al menos seis motores.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/UR16e_robot_arm.png/3840px-UR16e_robot_arm.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUR16e_robot_arm.png",
+        "credit": "Auledas · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Auledas",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Auledas"
+      },
+      "background": null
+    },
+    {
       "id": "q-1078",
       "status": "approved",
       "difficulty": 4,
@@ -33041,40 +33016,6 @@
       "background": null
     },
     {
-      "id": "q-1134",
-      "status": "approved",
-      "difficulty": 6,
-      "subcategory": "Comida japonesa",
-      "bundle": "base",
-      "description": "Un triángulo que sí se puede comer en la clase de geometría.",
-      "question": "En un anime, una estudiante saca de su caja del almuerzo un triángulo blanco envuelto con una tira de alga negra. ¿De qué está hecho principalmente?",
-      "answer": "Arroz",
-      "wrong_answers": [
-        "Puré de papa",
-        "Queso",
-        "Masa de pan"
-      ],
-      "hints": [
-        "Viene de una planta.",
-        "Se cocina en una olla y los granos se pegan entre sí.",
-        "Es el mismo ingrediente blanco del sushi."
-      ],
-      "fun_fact": "Las bolitas de arroz llamadas onigiri se venden en todas las tiendas de barrio de Japón, con rellenos como salmón o ciruela salada.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Hitane_Elementary_School_classroom_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AHitane_Elementary_School_classroom_2.jpg",
-        "credit": "Douglas P Perkins · CC BY 3.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY 3.0",
-        "license_url": "https://creativecommons.org/licenses/by/3.0",
-        "author": "Douglas P Perkins",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Douglaspperkins"
-      },
-      "background": null
-    },
-    {
       "id": "q-1135",
       "status": "approved",
       "difficulty": 9,
@@ -34539,7 +34480,7 @@
     {
       "id": "q-1179",
       "status": "approved",
-      "difficulty": 10,
+      "difficulty": 6,
       "subcategory": "Trenes",
       "bundle": "base",
       "description": "Un tren con nombre de pájaro y velocidad de susto.",

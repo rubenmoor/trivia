@@ -4009,11 +4009,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-16",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T07:39:08"
       },
       "background": null,
       "difficulty_original": 5,
@@ -4326,11 +4334,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-16",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T07:39:01"
       },
       "background": null,
       "difficulty_original": 9,
@@ -11029,11 +11045,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-16",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T07:44:15"
       },
       "background": null,
       "difficulty_original": 7,
@@ -13633,11 +13657,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-16",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T07:42:07"
       },
       "background": null,
       "bundle": "base",
@@ -14533,7 +14565,7 @@
     },
     {
       "id": "q-0202",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "El despertador de la selva no tiene botón para apagarlo.",
       "question": "Escucha: ¿qué animal de la selva amazónica hace este sonido?",
@@ -14582,15 +14614,23 @@
       "needs_media": true,
       "batch": "batch-3",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Verificación de datos: uncertain. The answer is right, but the audio is a mantled howler (Alouatta palliata), which lives in Central America and northwestern South America, not the Amazon. The question says 'selva amazónica'. This is from memory, not searched.",
-        "problems": [
-          "fact"
-        ],
-        "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-16",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Verificación de datos: uncertain. The answer is right, but the audio is a mantled howler (Alouatta palliata), which lives in Central America and northwestern South America, not the Amazon. The question says 'selva amazónica'. This is from memory, not searched.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T07:46:12"
       },
       "background": {
         "query": "misty rainforest river",
@@ -17485,11 +17525,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-16",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T07:41:08"
       },
       "background": null,
       "bundle": "base",
@@ -20944,7 +20992,7 @@
     },
     {
       "id": "q-0285",
-      "status": "approved",
+      "status": "needs_work",
       "difficulty": 4,
       "description": "Este pedazo de suelo tiene más mal genio que tu hermano cuando lo despiertan temprano.",
       "question": "Mira el video: este agujero en el suelo burbujea y echa vapor. ¿Qué pasa después?",
@@ -20993,13 +21041,21 @@
       "needs_media": true,
       "batch": "batch-3",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "decision": "needs_work",
+        "feedback": "the video actually shows how the water squirts out. not sure if this question works",
+        "reviewed_on": "2026-10-16",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T07:42:55"
       },
       "background": null,
       "bundle": "base",
@@ -27710,11 +27766,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-16",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T07:45:43"
       },
       "background": null,
       "bundle": "base",
@@ -28493,7 +28557,7 @@
     {
       "id": "q-0385",
       "status": "approved",
-      "difficulty": 4,
+      "difficulty": 5,
       "description": "En inglés lo llaman 'cerdito', aunque no hace oink ni se revuelca en el barro.",
       "question": "¿De qué continente viene originalmente el cuy, ese roedor que muchos tienen como mascota?",
       "answer": "Sudamérica",
@@ -28543,11 +28607,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-16",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T07:49:59"
       },
       "background": null,
       "bundle": "base",
@@ -28567,7 +28639,8 @@
           "fun_fact": "Cuando un cuy está muy feliz, da saltitos en el aire; a eso se le llama 'popcorning', como si fuera una crispeta."
         },
         "revised_on": "2026-10-15"
-      }
+      },
+      "difficulty_original": 4
     },
     {
       "id": "q-0386",
@@ -30472,11 +30545,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-16",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T07:44:10"
       },
       "background": null,
       "bundle": "base",
@@ -30871,7 +30952,7 @@
     {
       "id": "q-0417",
       "status": "approved",
-      "difficulty": 9,
+      "difficulty": 11,
       "description": "Un día en que el planeta decidió subirle todo el volumen al temblor.",
       "question": "¿En qué país ocurrió el terremoto más fuerte jamás registrado?",
       "answer": "Chile",
@@ -30921,11 +31002,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-16",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T07:33:51"
       },
       "background": null,
       "bundle": "base",
@@ -30948,7 +31037,8 @@
           ]
         },
         "revised_on": "2026-10-15"
-      }
+      },
+      "difficulty_original": 9
     },
     {
       "id": "q-0418",
@@ -31072,11 +31162,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-16",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T07:41:04"
       },
       "background": null,
       "bundle": "base",
@@ -33836,11 +33934,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-16",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T07:45:50"
       },
       "background": null,
       "bundle": "base",
@@ -34990,7 +35096,7 @@
     },
     {
       "id": "q-0473",
-      "status": "approved",
+      "status": "needs_work",
       "difficulty": 2,
       "description": "Un zapato tan delicado que con él no se puede ni jugar un partidito.",
       "question": "Mira la foto: ¿de qué cuento es este famoso zapato?",
@@ -35039,13 +35145,21 @@
       "needs_media": true,
       "batch": "batch-5",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "decision": "needs_work",
+        "feedback": "claude is right, the image doesn't match. would need a glass slipper",
+        "reviewed_on": "2026-10-16",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T07:40:21"
       },
       "background": null,
       "bundle": "base",
@@ -35631,11 +35745,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-16",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T07:41:12"
       },
       "background": null,
       "bundle": "base",
@@ -36321,11 +36443,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-16",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T07:39:14"
       },
       "background": null,
       "bundle": "base",
@@ -37158,11 +37288,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-16",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T07:42:10"
       },
       "background": null,
       "bundle": "base",
@@ -46723,11 +46861,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-16",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T07:41:28"
       },
       "bundle": "base",
       "background": null,
@@ -50685,11 +50831,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-16",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T07:41:36"
       },
       "bundle": "base",
       "background": null,
@@ -61383,11 +61537,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-16",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T07:40:59"
       },
       "bundle": "base",
       "background": null,
@@ -62712,11 +62874,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-16",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T07:42:15"
       },
       "bundle": "base",
       "background": null,
@@ -65499,11 +65669,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-16",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T07:46:34"
       },
       "bundle": "base",
       "background": null,
@@ -74528,11 +74706,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-16",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T07:42:02"
       },
       "bundle": "base",
       "background": null,
@@ -75884,7 +76070,7 @@
     },
     {
       "id": "q-1009",
-      "status": "approved",
+      "status": "needs_work",
       "difficulty": 10,
       "description": "El jugador que barre todo lo que sus compañeros dejan suelto en la defensa.",
       "question": "Es un defensa sin marca fija que juega detrás de los demás, y Franz Beckenbauer lo hizo famoso. ¿Cómo se llama esa posición?",
@@ -75902,17 +76088,19 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Olympiastadion Munich",
+        "query": "fußball",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AOlympiastadion%2C_M%C3%BAnich%2C_Alemania_2012-04-28%2C_DD_04.JPG",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Olympiastadion%2C_M%C3%BAnich%2C_Alemania_2012-04-28%2C_DD_04.JPG/3840px-Olympiastadion%2C_M%C3%BAnich%2C_Alemania_2012-04-28%2C_DD_04.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Diego Delso · CC BY-SA 3.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2014-10-03_Fussball-L%C3%A4nder-Cup_der_Geh%C3%B6rlosen_2014_in_Hannover_%2848%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/2014-10-03_Fussball-L%C3%A4nder-Cup_der_Geh%C3%B6rlosen_2014_in_Hannover_%2848%29.jpg/3840px-2014-10-03_Fussball-L%C3%A4nder-Cup_der_Geh%C3%B6rlosen_2014_in_Hannover_%2848%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Thomas Fries · CC BY-SA 3.0 de · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-        "author": "Diego Delso",
-        "author_url": "https://www.wikidata.org/wiki/Q28147777",
-        "restrictions": [],
+        "license": "CC BY-SA 3.0 de",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+        "author": "Thomas Fries",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Jean11",
+        "restrictions": [
+          "personality"
+        ],
         "pd_reasons": []
       },
       "fun_fact": "Beckenbauer ganó el Mundial como jugador en 1974 y como entrenador de Alemania en 1990.",
@@ -75941,13 +76129,21 @@
       "needs_media": false,
       "batch": "batch-7",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "decision": "needs_work",
+        "feedback": "i picked a new image that clearly shows the sport in question",
+        "reviewed_on": "2026-10-16",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T07:45:20"
       },
       "bundle": "base",
       "background": null,
@@ -78112,11 +78308,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-16",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T07:41:47"
       },
       "bundle": "base",
       "background": null,
@@ -81123,7 +81327,7 @@
     },
     {
       "id": "q-1077",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Hasta los robots tienen partes con nombres que nadie sabe decir en una fiesta.",
       "question": "Un brazo robótico trabaja en una fábrica de automóviles. Si de repente se dañaran todos sus actuadores, ¿qué le pasaría?",
@@ -81180,15 +81384,23 @@
       "needs_media": false,
       "batch": "batch-7",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La pista 1 («Los actuadores no ven, no recuerdan y no guardan energía») descarta una por una las tres respuestas incorrectas, así que ya en la primera pista solo queda «Se quedaría quieto». Hay que cambiarla por una pista vaga que no elimine opciones, por ejemplo una sobre que todo robot tiene sensores, un controlador y actuadores.",
-        "problems": [
-          "giveaway"
-        ],
-        "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-16",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La pista 1 («Los actuadores no ven, no recuerdan y no guardan energía») descarta una por una las tres respuestas incorrectas, así que ya en la primera pista solo queda «Se quedaría quieto». Hay que cambiarla por una pista vaga que no elimine opciones, por ejemplo una sobre que todo robot tiene sensores, un controlador y actuadores.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T07:40:33"
       },
       "bundle": "base",
       "background": null,
@@ -85454,7 +85666,7 @@
     },
     {
       "id": "q-1134",
-      "status": "approved",
+      "status": "needs_work",
       "difficulty": 6,
       "description": "Un triángulo que sí se puede comer en la clase de geometría.",
       "question": "En un anime, una estudiante saca de su caja del almuerzo un triángulo blanco envuelto con una tira de alga negra. ¿De qué está hecho principalmente?",
@@ -85511,13 +85723,21 @@
       "needs_media": false,
       "batch": "batch-7",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "decision": "needs_work",
+        "feedback": "it could be made of anything, all answers are correct. the question would have to mention the name of that food to make it specific",
+        "reviewed_on": "2026-10-16",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T07:43:57"
       },
       "bundle": "base",
       "background": null,
@@ -88236,11 +88456,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-16",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T07:38:28"
       },
       "bundle": "base",
       "background": null,
@@ -88901,7 +89129,7 @@
     {
       "id": "q-1179",
       "status": "approved",
-      "difficulty": 10,
+      "difficulty": 6,
       "description": "Un tren con nombre de pájaro y velocidad de susto.",
       "question": "Te subes en Madrid a un tren llamado AVE, sigla de 'Alta Velocidad Española'. ¿Más o menos a qué velocidad máxima puede llevar pasajeros?",
       "answer": "Unos 300 km/h",
@@ -88959,11 +89187,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-16",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T07:33:09"
       },
       "bundle": "base",
       "background": null,
@@ -88983,7 +89219,8 @@
           ]
         },
         "revised_on": "2026-10-15"
-      }
+      },
+      "difficulty_original": 10
     },
     {
       "id": "q-1180",
@@ -89659,11 +89896,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-15",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-16",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-15",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T07:37:56"
       },
       "bundle": "base",
       "background": null,
