@@ -25,6 +25,10 @@
     "spain": {
       "name": "Regional: Spanien",
       "description": "Für alle mit Bezug zu Spanien: Orte, Essen, Bräuche, Menschen, Musik, Sport und Wörter von dort."
+    },
+    "mexico": {
+      "name": "Regional: Mexiko",
+      "description": "Für alle mit Bezug zu Mexiko: Orte, Essen, Bräuche, Menschen, Musik, Sport und Wörter von dort."
     }
   },
   "age_groups": {

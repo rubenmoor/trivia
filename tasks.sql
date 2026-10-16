@@ -37896,6 +37896,9 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Done when: per the answer, as above; `npm run check`, `npm test`, `npm run build` pass.
 
 Decision 284 (pending): Remote Play Together gate: single player, controller input and local multiplayer playtested?', '2026-10-16T21:30:27Z', NULL, 1484, 0, 'opus', 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1488, 130, 'DLC app for regional bundle mexico', 'work', 'open', NULL, NULL, 'Bundle `mexico` (`languages: ["es"]`; en joins `languages` once en translations exist, per `decision 110: Regional packs at launch (RG-5, OQ-46)`): free DLC like `colombia` (`decision 66: Price model (OQ-33)`). In `plans/18-steam-integration.md` Steamworks checklist: DLC app «Regional: México» (es; en «Regional: Mexico»; de «Regional: Mexiko»), price free, optional, off by default, depot `mexico` linked; `authoring/steam/steam.json` `dlc` entry `mexico` (`null` IDs until entered); the SW-7 decision lists its IDs like colombia''s. Names: `app/data/names.<locale>.json` `bundles.mexico`. Only if the pack ships at upload time (`app/data/bundles/mexico/`).', '2026-10-16T21:36:09Z', NULL, 1280, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1489, 89, 'DLC depot for regional bundle mexico', 'work', 'open', NULL, NULL, 'Bundle `mexico` (`languages: ["es"]`, en joins after translation): like `task 748: DLC depots for packs (decision 66)`: `steam.json` `dlc` entry `mexico`, depot VDF, exclusions in the OS and `content` depots, `trivia-steam stage` union check, smoke game with and without the pack (an es save is offered it, others not until en joins `languages`). `trivia-steam upload --dry-run` renders its depot with placeholder IDs. Only once `app/data/bundles/mexico/pool.json` ships.', '2026-10-16T21:36:10Z', NULL, 1280, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1490, 88, 'Store text and capsules for DLC mexico', 'work', 'open', NULL, NULL, 'Bundle `mexico` (`languages: ["es"]`, en joins after translation; description in `app/data/names.es.json`/`names.en.json` `bundles.mexico`): free DLC store page in `plans/17a-store-page.md` "Free DLC": store name «Regional: México» (en «Regional: Mexico»), short and long description in es (Mexican Spanish) and, once en translations exist, en (free, needs the base game, optional, off by default), capsules via `authoring/store/capsules.mjs`. Approval via pm decision like colombia''s (`task 783: Free DLC store texts in 17a`).', '2026-10-16T21:36:10Z', NULL, 1280, 0, NULL, 'app');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -42474,6 +42477,87 @@ INSERT INTO decision (id, subject, status, options, body, intro, answer, reason,
 - Smoke: host starts ¡Trivia! from `beta`, invites the guest; guest sees the picture, hears the sound; one guest pad press moves the focus
 
 Answer `decision 302: Remote Play Together live probe: guests'' pads, keyboard and mouse on a Windows and a Linux host`''s setup line by this.', 'Before friends far away can join a game through Steam''s Remote Play Together, the feature has to be switched on in Steam''s developer settings, a test version has to be on Steam, and there have to be two computers with two Steam accounts that are friends. Only the developer can do this. Choose whether everything is ready, not yet ready, or ready with problems; every real test of remote play waits for this answer.', NULL, NULL, '2026-10-16T21:27:54Z', NULL, 1480, NULL, 'once', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (304, 'mexico taxonomy: categories and subcategories', 'pending', '["Apply the proposal as it stands", "Apply with changes (say which)"]', 'Bundle `mexico` (Mexican Spanish, `languages: ["es"]`, en joins after translation, country MX, target 2000 ≈ 34 per subcategory).
+
+Rule: Answering needs a connection to Mexico: Mexican places, food, customs, fiestas, people, music, sport, media, words, sayings or history that players outside Mexico mostly wouldn''t know; things families anywhere know (Mexico City as a capital, tacos as a dish) stay in `base`, and the topics of other Latin American regions (`colombia`) and of Spain (`spain`) are not here.
+
+Voice: Mexican Spanish: "computadora", "celular", "carro", "camión" (bus), "platicar", "chamarra", "padre" (cool), "ahorita", "ustedes" (no vosotros), dates as "20 de julio de 1969", metric units
+
+Proposal (`qgen taxonomy --bundle mexico`, from the general list of `decision 213: General category list for regional bundles`): 15 categories, 58 subcategories. Slug, English name, Spanish (Mexico) name in brackets (the bundle''s language; de names are drafted on apply). Full proposal with scopes and samples: `work/taxonomy/mexico/proposal.md`. Left out of the general list: none.
+
+- `geography` Geography of Mexico (Geografía de México) (4, general)
+  - `states-and-capitals` Mexican states and capitals (Estados de México y sus capitales)
+  - `cities-and-towns` Cities and Pueblos Mágicos (Ciudades y Pueblos Mágicos)
+  - `landscapes` Volcanoes, rivers and coasts of Mexico (Volcanes, ríos, lagos y costas)
+  - `landmarks` Mexican landmarks and monuments (Monumentos y lugares emblemáticos)
+- `nature` Nature of Mexico (Naturaleza de México) (3, general)
+  - `animals` Animals of Mexico (Animales de México)
+  - `plants` Plants and flowers of Mexico (Plantas y flores de México)
+  - `reserves-and-climate` Mexican reserves, climate and quakes (Reservas, clima y fenómenos naturales)
+- `history` History of Mexico (Historia de México) (4, general)
+  - `conquest-and-colony` Conquest and New Spain (Conquista y Colonia)
+  - `independence-and-19th-century` Independence and the 19th century (Independencia y siglo XIX)
+  - `revolution` The Mexican Revolution (La Revolución Mexicana)
+  - `20th-century` Mexico in the 20th century (México en el siglo XX)
+- `ancient-mexico` Ancient Mexico (México prehispánico) (3, region)
+  - `mexica` The Mexica (Los mexicas)
+  - `maya` The Maya (Los mayas)
+  - `other-cultures` Olmecs, Teotihuacan and other cultures (Olmecas, teotihuacanos y otras culturas)
+- `people` People of Mexico (Personajes de México) (2, general)
+  - `scientists-and-inventors` Mexican scientists and inventors (Científicos, inventores y emprendedores)
+  - `indigenous-peoples` Indigenous peoples of Mexico today (Pueblos indígenas de hoy)
+- `food-and-drink` Mexican food and drink (Comida y bebida mexicana) (5, general)
+  - `antojitos-and-street-food` Antojitos and street food (Antojitos y comida callejera)
+  - `regional-dishes` Mexican regional dishes (Platillos y guisos regionales)
+  - `sweets-and-bread` Mexican sweets and pan dulce (Dulces típicos y pan dulce)
+  - `drinks` Mexican drinks (Bebidas mexicanas)
+  - `ingredients` Chiles, corn and Mexican ingredients (Chiles, maíz y otros ingredientes)
+- `festivals-and-traditions` Mexican festivals and traditions (Fiestas y tradiciones mexicanas) (6, general)
+  - `day-of-the-dead` Day of the Dead (Día de Muertos)
+  - `christmas-season` Posadas, Christmas and Reyes (Posadas, Navidad y Reyes)
+  - `civic-holidays` Fiestas patrias and civic days (Fiestas patrias y días cívicos)
+  - `regional-fiestas` Mexican fairs and regional fiestas (Ferias y fiestas regionales)
+  - `crafts-and-dress` Mexican crafts and traditional dress (Artesanías y vestimenta tradicional)
+  - `traditional-games` Mexican games and toys (Juegos y juguetes tradicionales)
+- `myths-and-legends` Myths and legends of Mexico (Mitos y leyendas de México) (3, general)
+  - `legends` Mexican legends and ghost stories (Leyendas y relatos de espantos)
+  - `pre-hispanic-gods` Pre-Hispanic gods and myths (Dioses y mitos prehispánicos)
+  - `folk-beliefs` Mexican beliefs and folk remedies (Creencias, remedios y supersticiones)
+- `music-and-dance` Music and dance of Mexico (Música y baile de México) (5, general)
+  - `mariachi-and-ranchera` Mariachi, ranchera and bolero (Mariachi, ranchera y bolero)
+  - `regional-mexican` Banda, norteño and regional sounds (Banda, norteño y sones regionales)
+  - `pop-and-rock` Mexican pop and rock (Pop y rock mexicano)
+  - `traditional-dances` Mexican folk dances (Danzas y bailes tradicionales)
+  - `childrens-songs` Cri-Cri and children''s songs (Cri-Cri y canciones infantiles)
+- `art-and-literature` Art and literature of Mexico (Arte y literatura de México) (3, general)
+  - `painters-and-muralists` Mexican painters and muralists (Pintores y muralistas)
+  - `writers-and-poets` Mexican writers and poets (Escritores y poetas)
+  - `comics` Mexican comics and cartoonists (Historietas y moneros)
+- `film-and-television` Film and television of Mexico (Cine y televisión de México) (5, general)
+  - `golden-age-cinema` Golden age of Mexican cinema (Época de Oro del cine mexicano)
+  - `contemporary-cinema` Contemporary Mexican cinema (Cine mexicano contemporáneo)
+  - `telenovelas` Mexican telenovelas (Telenovelas mexicanas)
+  - `chespirito` Chespirito''s shows (El Chavo, el Chapulín y Chespirito)
+  - `tv-shows-and-hosts` Mexican TV shows, hosts and youtubers (Programas, conductores e internet)
+- `sports` Sport in Mexico (Deporte en México) (5, general)
+  - `liga-mx` Liga MX and its clubs (Liga MX y sus clubes)
+  - `national-team` Mexico national football team (La Selección Mexicana)
+  - `lucha-libre` Lucha libre (Lucha libre)
+  - `boxing` Mexican boxing (Box mexicano)
+  - `other-sports` Mexican Olympians and other sports (Atletas olímpicos y otros deportes)
+- `how-people-speak` How Mexico speaks (Así hablamos en México) (3, general)
+  - `slang` Mexican slang and words (Modismos y palabras mexicanas)
+  - `sayings` Mexican sayings and expressions (Dichos y refranes)
+  - `indigenous-words` Nahuatl and indigenous languages (Náhuatl y lenguas indígenas)
+- `daily-life` Daily life in Mexico (La vida diaria en México) (5, general)
+  - `money` Mexican money and banknotes (Dinero, billetes y monedas)
+  - `brands-and-snacks` Mexican brands and snacks (Marcas y botanas mexicanas)
+  - `transport` Metro, buses and Mexican transport (Metro, camiones y transporte)
+  - `school-and-services` Mexican school and public services (Escuela y servicios públicos)
+  - `home-and-street` Life at home and on the street (Vida en la casa y en la calle)
+- `symbols` Symbols of Mexico (Símbolos de México) (2, general)
+  - `national-symbols` Mexican flag, coat of arms and anthem (Bandera, escudo e himno)
+  - `state-symbols` Mexican demonyms, nicknames and state emblems (Gentilicios, apodos y escudos de los estados)', 'The new Mexican question pack needs its own list of topics, so its questions cover life in Mexico evenly. The proposal starts from the general topics every regional pack has, adds one for ancient Mexico, and splits them into 58 subtopics, about 34 questions each at 2000 questions. Applying it fixes the pack''s structure; the English and German topic names are drafted at that point.', NULL, NULL, '2026-10-16T21:35:56Z', NULL, 1280, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -43932,10 +44016,11 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1438, 1480, '2026-10-16T21:27:28Z', '2026-10-16T21:28:16Z', 'done', NULL, 0, '953dc9ef3500a2a8ff6ac8fa18ee40c1ba4f46a4', NULL, 'claude-opus-5-5', '7dab3c2e-ee4e-4ebd-bb70-f762e8b469ca', NULL, 7, 14, 4509, 244859, 34383, 0.4142718, 74883);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1439, 1420, '2026-10-16T21:27:38Z', '2026-10-16T21:29:22Z', 'done', NULL, 0, '953dc9ef3500a2a8ff6ac8fa18ee40c1ba4f46a4', 'app', 'claude-opus-5-5', 'e6014024-0947-41f5-9dab-ad4a6a828a63', NULL, 8, 16, 9430, 357383, 52581, 0.6807886, 74883);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1440, 1279, '2026-10-16T21:27:45Z', '2026-10-16T21:28:44Z', 'done', NULL, 0, '1577093d01675406818b41e7bf55f05919123cd4', 'questions', 'claude-sonnet-5-5', 'dc9e610d-63a2-44c6-b4b6-8d24ce6431f9', NULL, 10, 18, 2345, 382126, 38968, 0.25578320000000004, 74883);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1441, 1280, '2026-10-16T21:28:44Z', NULL, 'running', NULL, NULL, '2d40397231010c58c3b89ec989814692a006119d', 'questions', NULL, NULL, 1440, NULL, NULL, NULL, NULL, NULL, NULL, 74883);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1441, 1280, '2026-10-16T21:28:44Z', '2026-10-16T21:36:17Z', 'blocked', NULL, 0, '2d40397231010c58c3b89ec989814692a006119d', 'questions', 'claude-sonnet-5-5', 'dc9e610d-63a2-44c6-b4b6-8d24ce6431f9', 1440, 11, 22, 5009, 818918, 35148, 0.61029280000000008, 74883);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1442, 1484, '2026-10-16T21:29:14Z', '2026-10-16T21:30:52Z', 'done', NULL, 0, '887394ac289f7da27500d48f571d80e39b2db7d9', NULL, 'claude-opus-5-5', 'f8693ba1-8895-46ce-b06c-e7963ab56809', NULL, 12, 24, 7072, 494680, 41365, 0.5713919999999999, 74883);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1443, 1405, '2026-10-16T21:29:22Z', '2026-10-16T21:32:56Z', 'done', NULL, 0, '887394ac289f7da27500d48f571d80e39b2db7d9', 'app', 'claude-sonnet-5-5', 'b965acb8-5a32-454a-90e9-58d2d2328993', NULL, 29, 58, 12520, 1606281, 58456, 0.6803962, 74883);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1444, 1406, '2026-10-16T21:32:57Z', '2026-10-16T21:35:06Z', 'done', NULL, 0, '975e07d3d787b3800f04ae0a74cb7fd115c21249', 'app', 'claude-sonnet-5-5', 'b965acb8-5a32-454a-90e9-58d2d2328993', 1443, 11, 22, 7037, 965947, 26087, 1.0483476, 74883);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1445, 1478, '2026-10-16T21:35:06Z', NULL, 'running', NULL, NULL, '662ced0682d140b586b8daff6a85e5db5ec720ed', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 74883);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -44399,6 +44484,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1279, 300);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1280, 250);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1280, 258);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1280, 266);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1280, 304);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1294, 62);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1294, 63);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1294, 64);

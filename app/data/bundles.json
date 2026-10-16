@@ -74,6 +74,18 @@
       "description": "Para quien tiene relación con España: lugares, comida, costumbres, gente, música, deporte y palabras de aquí.",
       "rule": "Answering needs a connection to Spain: Spanish places, food, customs, fiestas, people, music, sport, media, words, sayings or history that players outside Spain mostly wouldn't know; things families anywhere know (Madrid as a capital, Don Quixote, paella as a dish) stay in `base`, and the topics of Latin American regions (`colombia`, `mexico`) are not here.",
       "voice": "Spanish as spoken in Spain (es-ES): peninsular words (\"ordenador\", \"móvil\", \"coche\", \"zumo\", \"patata\", \"vale\"), \"vosotros\" forms, dates as \"20 de julio de 1969\", metric units"
+    },
+    {
+      "id": "mexico",
+      "kind": "region",
+      "country": "MX",
+      "languages": [
+        "es"
+      ],
+      "name": "Regional: México",
+      "description": "Para quien tiene relación con México: lugares, comida, costumbres, gente, música, deporte y palabras de allá.",
+      "rule": "Answering needs a connection to Mexico: Mexican places, food, customs, fiestas, people, music, sport, media, words, sayings or history that players outside Mexico mostly wouldn't know; things families anywhere know (Mexico City as a capital, tacos as a dish) stay in `base`, and the topics of other Latin American regions (`colombia`) and of Spain (`spain`) are not here.",
+      "voice": "Mexican Spanish: \"computadora\", \"celular\", \"carro\", \"camión\" (bus), \"platicar\", \"chamarra\", \"padre\" (cool), \"ahorita\", \"ustedes\" (no vosotros), dates as \"20 de julio de 1969\", metric units"
     }
   ]
 }
