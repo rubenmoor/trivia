@@ -1,12 +1,13 @@
 <script lang="ts">
   // Start (04, "Start"): wordmark, resume or new game, the save notice (plan 55), the Mods button
-  // in the shell (plan 118), the language button top right (plan 126).
+  // in the shell (plan 118), the language button top right (plan 126), the horizon along the bottom (plan 150).
   import type { takeSaveNotice } from "../../lib/engine.ts";
   import { endonym, lang, t } from "../../lib/i18n.ts";
   import type { Game } from "../../lib/types.ts";
   import EffectsDemo from "../EffectsDemo.svelte";
   import Fireworks from "../Fireworks.svelte";
   import Flags from "../Flags.svelte";
+  import Horizon from "../Horizon.svelte";
   import Icon from "../Icon.svelte";
   import Prompt from "../Prompt.svelte";
 
@@ -46,6 +47,7 @@
 {#if preview}<Fireworks mode={preview === "finale" ? "finale" : "single"} variant={preview} />{/if}
 {#if effectsDemo}<EffectsDemo />{/if}
 <section class="screen start">
+  <Horizon />
   {#if !notice}
     <button class="language glass" onclick={onlanguage} disabled={busy} data-focus-id="language" aria-label={t("screen.start.language", { name: endonym(lang) })}>
       <Flags tag={lang} size="1.1em" />
@@ -82,6 +84,12 @@
   {#if mods?.held && !notice}<p class="held">{t("mods.held", { n: mods.held })}</p>{/if}</section>
 
 <style>
+  .wordmark,
+  .subtitle,
+  .buttons,
+  .held {
+    position: relative; /* above the horizon */
+  }
   p {
     margin: 0;
   }
