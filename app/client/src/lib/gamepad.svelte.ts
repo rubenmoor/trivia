@@ -3,7 +3,7 @@
 import { steam } from "./desktop.ts";
 import { BUTTONS, FRESH, held, step, steamStyle, styleOf, type PadState, type PadStyle } from "./gamepad.ts";
 import { show } from "./focus.ts";
-import { dispatch, lastDevice, padMap, release } from "./input.svelte.ts";
+import { dispatch, lastDevice, padMap, release, resetTravel } from "./input.svelte.ts";
 
 /** The glyph set of the pad that acted last (IN-5). */
 export const padStyle = $state({ current: "xbox" as PadStyle });
@@ -44,7 +44,10 @@ export function listenPads(first: () => void): () => void {
       const { next, actions, touched } = step(prev.get(g.index) ?? FRESH, pad, padMap(BUTTONS));
       prev.set(g.index, next);
       if (actions.length) void refreshSteam(); // Steam may list a new pad after Chromium does
-      if (touched) padStyle.current = fromSteam ?? styleOf(g.id);
+      if (touched) {
+        padStyle.current = fromSteam ?? styleOf(g.id);
+        resetTravel();
+      }
       if (touched && !actions.length) {
         first();
         lastDevice.current = "gamepad";

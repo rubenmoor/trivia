@@ -186,6 +186,7 @@ function keydown(e: KeyboardEvent, first: () => void) {
   if (e.repeat) return;
   first();
   lastDevice.current = "keyboard";
+  resetTravel();
   const text = textField(document.activeElement);
   const keys = Object.assign({}, ...stack.map((s) => s.keys ?? {}));
   const intent = toIntent(e, keys, text);
@@ -201,6 +202,25 @@ function keydown(e: KeyboardEvent, first: () => void) {
   }
 }
 
+/** Mouse travel (px) after the last key or pad input that flips the prompts back to keys (plan 156). */
+const MOVE_PX = 4;
+let travel = 0;
+let seen: [number, number] | null = null;
+
+/** A key or pad input restarts the mouse's travel count. */
+export function resetTravel() {
+  travel = 0;
+}
+
+function pointermove(e: PointerEvent) {
+  if (e.pointerType !== "mouse") return;
+  const from = seen;
+  seen = [e.screenX, e.screenY];
+  if (!from || lastDevice.current === "mouse") return;
+  travel += Math.hypot(seen[0] - from[0], seen[1] - from[1]); // 0 for a synthetic move
+  if (travel >= MOVE_PX) lastDevice.current = "mouse";
+}
+
 /** Start listening (Game.svelte, once); `first` runs on every key and click (audio unlock). */
 export function listen(opts: { busy: () => boolean; first: () => void }): () => void {
   busy = opts.busy;
@@ -214,6 +234,7 @@ export function listen(opts: { busy: () => boolean; first: () => void }): () => 
   window.addEventListener("blur", release);
   document.addEventListener("visibilitychange", onhidden);
   window.addEventListener("pointerdown", onpointer);
+  window.addEventListener("pointermove", pointermove);
   window.addEventListener("click", opts.first);
   window.addEventListener("focusin", bump);
   window.addEventListener("focusout", bump);
@@ -223,6 +244,7 @@ export function listen(opts: { busy: () => boolean; first: () => void }): () => 
     window.removeEventListener("blur", release);
     document.removeEventListener("visibilitychange", onhidden);
     window.removeEventListener("pointerdown", onpointer);
+    window.removeEventListener("pointermove", pointermove);
     window.removeEventListener("click", opts.first);
     window.removeEventListener("focusin", bump);
     window.removeEventListener("focusout", bump);
