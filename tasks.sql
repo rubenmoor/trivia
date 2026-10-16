@@ -8771,6 +8771,81 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 ## Done when
 - the milestone''s two input lines hold (one player from every device; prompts follow the last input, every mode, every screen, no glyph without a pad shortcut)
 - `plans/14-input.md` and `plans/04-ui-tv-display.md` updated; per-commit checks pass', 'The game can be played with a controller, a keyboard or a mouse, and the hints on screen show either keyboard keys or controller button pictures, depending on what was used last. Today the switch only happens for some inputs: moving the mouse or pressing a controller button that does nothing on the current screen leaves the old hints up, which confuses a family passing the controller around. This work makes every touch of any device count, so the hints always match the device in hand, without flickering when a controller lies idle.', '2026-10-16T19:23:14Z', 1375);
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (157, 16, 'Session model and save format', 900, 'Part 1 of `plan 152: masterplan`. The save and engine shape for a local multiplayer session: players in join order, the mode, shared settings, per-player state, the turn pointer, and an action API where every action names the acting player. No mode logic: parts 2 and 3 (`task 1393: write plan: Round-robin modes in the engine`, `task 1394: write plan: Competitive (timed) in the engine`) fill it in.
+
+## Binding
+- `decision 277: Multiplayer sessions in the save: one games[] row per session, with seats` (this plan''s choice)
+- D-82 (`plans/decisions.md`), plan 65: seen = one row per event, whole save, every player and mode
+- `decision 119: Telemetry recording: derived from the save into a per-install side file`, `decision 139: Achievement triggers derived without a save change (SW-11)`: telemetry and achievements stay derived; this plan adds no field for them
+- `decision 91: Game version: single source of truth` (`plans/11-steam.md`): a `SAVE_VERSION` change = minor app version; `plans/12-client-engine.md` "Shape change": `SAVE_VERSION + 1` + `UPGRADES` entry + `save.test.ts` case
+- Device-agnostic (`milestone 17: Remote Play Together`): the save and the engine know seats, never devices; the device → seat binding lives in the client (part 5)
+
+## What exists (2026-10-16)
+- `engine/state.ts`: `SAVE_VERSION = 4`; `GameRow {id, started_on, finished_on, result, player_id, locale?, state}`; `GameState` (level, phase, table, history, jokers, settings with `mode`); `newest()`
+- `engine/game.ts`: `latest()` / `running()` = the newest row; `see()` writes `{question_id, game_id, seen_on}`; `players()`, `deletePlayer()`, `newestGame()` / `playerChoice()` / `playerMode()` filter on `player_id`; `MODES` has `rr-coop`, `rr-competitive`, `timed`, `BUILT_MODES` doesn''t
+- `engine/api.ts` `gameAction`: one body per action, no actor
+- `engine/save.ts`: `UPGRADES` 1–3, `parseSave` envelope checks, `mapOldKeys` over `games[].state` (and `undo`)
+- Readers of `games[]`: `engine/achievements.ts` `earned`, `lib/achievements.ts` (ended-game keys), `engine/telemetry.ts` (key `<id>@<started_on>`, history slice), `engine/outlook.ts`, `game.ts` `repair`/`view`, `authoring/tools/demo_saves.mjs`, `authoring/steam/smoke.mjs`; `qgen report --played` (`authoring/tools/played.py`) reads telemetry, not the save
+- Python: `authoring/tools/save_file.py` reads `seen`, `blocked`, `flags` only (branches on version < 3, < 4); `app/server/save.py` `VERSION`/`LISTS` until `task 765: Delete app/server, ServerStore, the trivia command and nix build .#app`
+
+## Shape (save v5)
+- `GameRow`, additive:
+  - `seats?: Seat[]`: a multiplayer session (milestone 16), join order; missing = a one-player game (`player_id`)
+  - `turn?: number`: seat index on turn (round-robin modes); missing outside them
+  - `player_id`: `null` on session rows (comment: "null: games before D-28 or a multiplayer session"), so solo presets (`playerChoice`, `playerMode`) never pick a session
+- `Seat`:
+  - `player_id: number | null`: a `players[]` row (picked or created on the join screen); `null` after `deletePlayer`
+  - `state?: GameState`: `rr-competitive` only: the seat''s own game (own level, jokers, age group in its `settings`)
+  - `lives?: number`, `out?: true`: `timed` lives (3 at start) and drop-out; `out` also `rr-competitive`''s wrong answer
+  - `result?: "won" | "lost"`: per seat in `rr-competitive` and `timed` once decided; `rr-coop` uses the row''s
+- `row.state` per mode:
+  - `rr-coop`: the team''s game (level, one joker set, history); `settings` as solo''s (one age group)
+  - `timed`: the shared question flow: `level` = round, history of every question shown; claim and timestamp fields are part 3''s (additive, no further bump while `timed` isn''t built)
+  - `rr-competitive`: shared settings only (mode, bundles; `phase` mirrors the session''s end), empty history; play is in `seats[].state`
+- `row.result`: `won` when the team or one seat won, `lost` when nobody did, `abandoned`; per-seat outcomes in `Seat.result`
+- `HistoryEntry.seat?: number`: who answered (`rr-coop`, `timed`); missing = the row''s one player
+- Locale: `row.locale` for the whole session (one language, `decision 156: One language for UI and questions`)
+- No device, pad index or key in the save
+
+## Helpers (`engine/state.ts`)
+- `rowPlayers(row): (number | null)[]`: `seats` → their `player_id`s, else `[player_id]`
+- `rowStates(row): GameState[]`: `rr-competitive` → every `seats[].state`, else `[row.state]`
+- `seatResult(row, i)`: `Seat.result`, else the row''s (`rr-coop`)
+- Readers move onto them where they would otherwise miss a session: `players()` (a session counts as a game for every seated player; a win per `seatResult`), `deletePlayer()` (sessions stay, the seat''s `player_id` → `null`, a running session with them is abandoned; seen rows untouched), `mapOldKeys` and `repair` (every state of `rowStates`), `achievements.ts` / `telemetry.ts` only where they''d break on the shape; what multiplayer feeds them is part 4''s
+
+## Version 5
+- `SAVE_VERSION = 5`; `UPGRADES[4]`: identity (no v4 save has sessions); the bump makes an older build back the save up as `newer` (`SaveNewerError`) instead of reading a session as a gamemaster game (Steam Cloud, `beta` vs `default`, `plans/12-client-engine.md` "Beta vs. default")
+- `parseSave`: `seats`, when present, a non-empty list of objects with `player_id` number or null; `turn` an integer index into `seats`; a seat''s `state` an object
+- `authoring/tools/save_file.py`: reads the same three fields; docstring names v5, no branch needed; check it parses a v5 save
+- `app/server/save.py`: `VERSION = 5`, `LISTS[5]` while task 765 is open (else the browser server answers 400 `bad_save`); if task 765 is done, nothing
+- `authoring/tools/demo_saves.mjs`: follows `SAVE_VERSION` already
+- `release_check.py` reports the save-version change by itself; nothing to do
+
+## Seen events (D-82)
+- Unchanged `see(work, qid, gid)`, `gid` = the session row: one row per question shown, however many players saw it
+- `rr-coop`, `timed`: one row per question put on screen (as solo: answered, revealed, skipped by snipe); `timed`: also an unclaimed question that ran out (part 3 writes it)
+- `rr-competitive`: each seat''s question one row, same session `game_id`
+- Supply counts (`countOf`) unchanged: per save, not per player
+
+## Engine API: the acting seat
+- Every game action''s body may carry `seat` (integer, join-order index); `api.ts` `gameAction` passes it on, `game.ts` actions take it
+- One check in `game.ts`, before any mode logic: `actor(row, seat)`:
+  - one-player row: `seat` missing or 0; else `seat_unknown`
+  - session row: `seat` missing → `seat_missing`; not an index → `seat_unknown`; `Seat.out` → `seat_out`
+  - round-robin: `seat !== row.turn` → `not_your_turn` (helper ready for part 2)
+  - `timed`''s claim rules (`not_your_claim`, …) are part 3''s, through the same check
+- Error codes in `state.ts` `ERRORS` (D-57); refused = 409 with the save unchanged, as every `GameError`
+- `new` for a session: body `players: string[]` (names, join order) instead of `player`; shared part here: `cleanName` each, distinct by casefold (`player_twice`), at least 2 (`players_too_few`), known names reuse their row, new ones get one; mode-specific state init is parts 2 and 3; until then `mode_not_built` still refuses (BUILT_MODES, part 10)
+- Solo and gamemaster: no `seat` sent, nothing changes; the frozen fixtures (`engine/fixtures/`, `game.test.ts`) replay unchanged
+
+## Tasks
+1. Save v5: `Seat`, `GameRow.seats`/`turn`, `HistoryEntry.seat`, the three helpers, readers on them (`players`, `deletePlayer`, `mapOldKeys`, `repair`), `SAVE_VERSION` 5 + `UPGRADES[4]` + `parseSave` checks, `save_file.py`, `app/server/save.py` (if still there); one `save.test.ts` case: a v4 save upgrades unchanged, a hand-built v5 session row round-trips through `parseSave` (and `mapOldKeys`); docs `plans/12-client-engine.md` (save v5 line), `plans/decisions.md` D-82 note (session rows)
+2. Acting seat: `seat` through `api.ts` → `game.ts`, `actor()` with the error codes, the session half of `new` (players list, checks, rows) still behind `mode_not_built`; fixture replay unchanged; `plans/13-game-modes.md` "Modes": the actor rule one bullet
+
+## Done when
+- `npm run check`, `npm test` (fixture replay unchanged), `npm run build`, `qgen validate` pass
+- The family''s real save (a copy) loads as v5, plays a solo game, writes v5; `save_file.py` reads it
+- No mode logic: no session can be started yet (`mode_not_built`)', 'Local multiplayer lets several people in one room play on the same TV, each with their own controller. Before any game rules can be built, the game''s save file has to be able to hold such a session: who joined in which order, whose turn it is, and each player''s own progress where the mode gives them one. This part also makes the game refuse an action from a player whose turn it isn''t, so a misbehaving controller can never play for someone else.', '2026-10-16T19:40:48Z', 1392);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -35972,12 +36047,12 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T19:31:30Z', '2026-10-16T19:32:32Z', 1388, 0, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1391, 152, 'create tasks for plan 152: masterplan', 'split', 'done', 1000, '2026-10-16, tasks 1392–1402; 1394/1395 wait for decision 276, 1396 for 273/274/275, 1397 for 273/274, 1399 for 275', 'Split plan 152 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T19:35:36Z', '2026-10-16T19:37:14Z', 1353, 0, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1392, 152, 'write plan: Session model and save format', 'plan', 'open', 1000, NULL, 'Write the plan for part 1 of `plan 152: masterplan` ("Session model and save format"): `pm plan list` first, then `pm plan add 16 "Session model and save format" --priority 900 --intro "…"` with the full body.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1392, 152, 'write plan: Session model and save format', 'plan', 'done', 1000, '2026-10-16, plan 157: Session model and save format, decision 277', 'Write the plan for part 1 of `plan 152: masterplan` ("Session model and save format"): `pm plan list` first, then `pm plan add 16 "Session model and save format" --priority 900 --intro "…"` with the full body.
 
 - Cover everything part 1 lists: session shape (players in join order, mode, shared settings, per-player state, turn/round pointer), how it maps onto `games[]` (record the choice with `pm decision record`), `SAVE_VERSION` bump with `engine/save.ts` `UPGRADES` and `authoring/tools/save_file.py` (and `app/server/save.py` while `plan 99: Retire the browser game and the Python game server` hasn''t removed it), seen events per D-82, engine API where every action carries the acting player and wrong-player actions are refused (`not_your_turn`, …)
 - Read the code first: `app/client/src/engine/state.ts`, `engine/save.ts`, the readers of `games[]` (stats, flags, achievements, telemetry, `qgen report --played`)
 - Keep the player binding device-agnostic for `milestone 17: Remote Play Together`
-- Done: no mode logic; types, save round-trip, `parseSave` upgrade; old saves and fixture replay unchanged', '2026-10-16T19:37:07Z', NULL, 1391, 0, NULL);
+- Done: no mode logic; types, save round-trip, `parseSave` upgrade; old saves and fixture replay unchanged', '2026-10-16T19:37:07Z', '2026-10-16T19:41:00Z', 1391, 0, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1393, 152, 'write plan: Round-robin modes in the engine', 'plan', 'open', 1000, NULL, 'Write the plan for part 2 of `plan 152: masterplan` ("Round-robin modes in the engine"): `pm plan list` first, then `pm plan add 16 "Round-robin modes in the engine" --priority 600 --intro "…"`, built on part 1''s plan (`Session model and save format`).
 
 - `rr-coop` and `rr-competitive` exactly as part 2 and milestone 16 spec them: turns in join order, shared vs. per-player jokers (`STANDARD_JOKERS`), age groups, end conditions
@@ -36036,6 +36111,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Each mode start to finish: pads only, keyboard only, 4 pads + keyboard and mouse (5 players); fake pads headless where real ones are missing, real pads by the developer
 - A playtest decision for the developer (`--once`): each mode played on the TV with the family; failures become follow-up tasks
 - Feeds `milestone 17: Remote Play Together`''s gate C', '2026-10-16T19:37:09Z', NULL, 1391, 0, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1403, 157, 'create tasks for plan 157: Session model and save format', 'split', 'open', 1000, NULL, 'Split plan 157 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T19:40:48Z', NULL, 1392, 0, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -40236,6 +40313,7 @@ INSERT INTO decision (id, subject, status, options, body, intro, answer, reason,
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (276, 'Timed mode: after a drop-out, how many questions does a round have?', 'pending', '["players still in at the round''s start", "players at the session''s start"]', 'Milestone 16: Local multiplayer: game modes and controls says "each round has as many questions as there are players"; `plans/13-game-modes.md` "Competitive timed" lists it as an open detail. `qgen report --simulate`''s stand-in already uses the players still in; backlog B-15 (`outlook.seenPerLevel` counts 1 per round) waits for this.
 - Option 1: questions per round = players still in at the round''s start
 - Option 2: questions per round = players at the session''s start, for the whole game', 'In the timed competitive mode each round has as many questions as there are players. Once players drop out, a round could keep its starting number of questions or shrink to the players still in. Shrinking keeps the game tight and uses fewer questions; keeping the count gives the remaining players more chances per round to avoid losing a life.', NULL, NULL, '2026-10-16T19:34:50Z', NULL, 1353, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (277, 'Multiplayer sessions in the save: one games[] row per session, with seats', 'answered', '[]', 'One running row keeps latest()/running()/newest(), the seen rows'' game_id, telemetry''s one game key and achievements'' ended-game check working unchanged; one row per player would mean several running rows at once (every action''s running() lookup changes) and rr-coop''s shared level/jokers and timed''s shared question copied into every player''s row. Readers that need every player or every game state of a row go through two helpers in engine/state.ts (the row''s players, the row''s game states), so stats and achievements don''t special-case modes. player_id null keeps sessions out of a solo player''s preset (playerChoice). The seat index, not a device or a name, names the actor, so milestone 17''s remote guests are just more seats. Version bump so an older build backs the save up as newer instead of reading a session row as a gamemaster game.', 'A local multiplayer game has several players at once, and the game file has to remember them: who sat down in which order, whose turn it is, and each player''s own progress where the mode gives them one. It could store one game entry per session with a list of players, or one entry per player tied together by a session number. The choice decides how simple the player statistics, achievements, usage reports and the ''find the running game'' logic stay.', 'One games[] row per session: GameRow.seats (join order: player_id, per-seat state where the mode needs it: rr-competitive''s own GameState, timed''s lives/out, a per-seat result) and GameRow.turn; row.state is the shared game (rr-coop''s team game, timed''s question flow; rr-competitive: the shared settings only); player_id null on session rows; history entries carry the answering seat; actions name the acting seat by index (device-agnostic); SAVE_VERSION 5', NULL, '2026-10-16T19:40:00Z', '2026-10-16T19:40:00Z', 1392, NULL, 'rule', 1392, '2026-10-16, task 1392: written into plan 157: Session model and save format (Shape, Helpers, Version 5).');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -41655,6 +41733,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1399, 1389, '2026-10-16T19:32:37Z', '2026-10-16T19:32:51Z', 'done', NULL, 0, '7266640608ea59ca22d4b1a2c225b89680ce16ca', 'claude-opus-5-5', '3c5db4c8-5f41-48ab-ad32-a2c6369fea81', NULL, 4, 8, 909, 131844, 30963, 0.2922848, 4144524);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1400, 1353, '2026-10-16T19:32:51Z', '2026-10-16T19:36:17Z', 'done', NULL, 0, '1d8745943bf4ee231306405bb431657e134ba148', 'claude-opus-5-5', '8dad8a53-0f54-45e8-9675-1b241c7c9ce2', NULL, 21, 42, 15882, 1489584, 90993, 1.3436688, 4144524);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1401, 1391, '2026-10-16T19:36:18Z', '2026-10-16T19:37:19Z', 'done', NULL, 0, 'dc7e89277c7c01ac3954102ff14bdb750cb68e36', 'claude-opus-5-5', '7fcffe9f-684e-4de2-8dae-c2bae59415b9', NULL, 8, 16, 6394, 310205, 40626, 0.51499299999999992, 4144524);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1402, 1392, '2026-10-16T19:37:20Z', '2026-10-16T19:41:13Z', 'done', NULL, 0, '0661e6eda10c2f02bfb2b14a4a862f5158416dd5', 'claude-opus-5-5', '21642c54-cda0-4b53-90cf-d61515e48981', NULL, 16, 30, 14554, 1065077, 96603, 1.2770394, 4144524);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
