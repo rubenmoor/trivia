@@ -78,7 +78,7 @@ Mods carry bundles in our own format, loaded by our own loader (pm plan 115, dec
 - Achievements: player questions count like ours except `BUNDLE_*` and `ALL_CATEGORIES` (ours only) (decision 123: Achievements in games with mods on: allowed or off?; decision 146: Achievements, mods screen and rich presence with mods on).
 
 ## In the game (BN-6)
-Players choose bundles on their own screen, Bundles (Player → Choice → Bundles → Level), before every session; selection uses only the active bundles.
+Players choose bundles on their own screen, Bundles (Player → Choice → Bundles → Level; multiplayer modes: Player → Choice → Join → Bundles → Level), before every session; selection uses only the active bundles.
 
 - **Languages** (D-85): every bundle lists `languages`; the game offers only the bundles of its language (`bundlesFor`), others refused (`bundle_not_offered`). `base`: es, es-ES, en, de; `colombia`: es; `usa`: en; `germany`: de (en later); `uk`: en; `spain`: es-ES (en later); `mexico`: es (en later).
 - **Base bundles** (D-85): `kind: base`; toggles like every other bundle, any combination (2026-10-16); a selection with no question for the choice is refused (`no_questions`), the Bundles screen's start stays off and says why. The preset keeps the language's first base bundle on.

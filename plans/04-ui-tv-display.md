@@ -28,8 +28,12 @@ stateDiagram-v2
   Start --> Player: «¡Jugar!» (new game)
   Player --> Choice: name chosen
   Choice --> Player: «Atrás» / Backspace
-  Choice --> Bundles: «Seguir»
+  Choice --> Bundles: «Seguir» (solo, gamemaster)
+  Choice --> Join: «Seguir» (multiplayer modes, decision 291)
+  Join --> Choice: «Atrás» / Backspace (seats kept)
+  Join --> Bundles: «Seguir» (≥ 2 seats, all named)
   Bundles --> Choice: «Atrás» / Backspace (picks kept)
+  Bundles --> Join: «Atrás» / Backspace (multiplayer modes)
   Bundles --> Level: «¡A jugar!» (new game, «¡Hola, …!»)
   Level --> Select: continue
   Select --> Question: pick a description
@@ -66,6 +70,7 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 | Start | Title, «¡Jugar!», "continue game" if one is running; along the bottom third a horizon of Commons cut-outs (`Horizon.svelte`, `public/horizon/`, plan 150), same in every language, behind the content | Click / `Enter` | Normal |
 | Player | «¿Quién juega?»: known names, new name | Click a name / `1`–`9` / `Enter` (most recent name, nothing focused) / type + `Enter` | Normal |
 | Choice | «¿Cómo juega …?»: mode (MD-7); gamemaster mode: the configure game screen (MD-11: difficulty, levels, cards, video, audio, answers (D-105), jokers); «Solo o en grupo»: age group, «Personalizar partida»; no bundles, no supply | «Seguir» / `Enter`; «Atrás» / `Backspace` | Normal |
+| Join | Multiplayer modes only: «press A to join» per pad, keyboard card, seat cards (colour, device, name, rr-competitive: age group) | «Seguir» (≥ 2 seats, all named) / `Enter`; «Atrás» / `Backspace` | Normal |
 | Bundles | «¿Qué preguntas juega …?»: the question bundles (plan 151); the supply report | «¡A jugar!» / `Enter`; «Atrás» / `Backspace` | Normal |
 | Level | The tower, «Nivel N de 12» | Click / `Enter` / `Space` | Normal |
 | Select | 4 description cards | Click a card / `1`–`4` | Normal |
@@ -113,7 +118,7 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 - Idle animation so the TV doesn't look frozen, e.g. the empty foundation slowly breathing, or floating question marks.
 
 ### Bundles (plan 151, BN-6)
-- `game/screens/Bundles.svelte`, «¿Qué preguntas juega Sofía?»: after Choice in every mode, also with one offered bundle (decision 264: Bundle screen (two columns) reviewed in /gallery?; D-97; task 1361's layout): Player → Choice → Bundles → Level.
+- `game/screens/Bundles.svelte`, «¿Qué preguntas juega Sofía?»: after Choice in every mode, also with one offered bundle (decision 264: Bundle screen (two columns) reviewed in /gallery?; D-97; task 1361's layout): Player → Choice → Bundles → Level; multiplayer modes: Player → Choice → Join → Bundles → Level (plural titles «¿Qué preguntas juegan?», supply for the whole session, decision 291).
 - The shared `game/BundleSelector.svelte`, `large`: a narrow base column on the left (toggle tiles, no heading), a vertical ruler, the optional bundles as fixed-width tiles (26 units) flowing in a CSS grid (`auto-fill`); icon (flag for regional) + name + question count, no descriptions (decision 263), no headings; selected = filled sky tile with a check mark, hover lifts, focus keeps the global ring; counts per decision 267 (`countShown`: base «5000+», others «2000+», a mod bundle its own rounded-down count from `fetchChoiceOptions`' `count`); the optional area has a fixed height between title and buttons and scrolls (wheel, touch), a fade at a cut edge; fits 1280×720, 1280×800, 1920×1080 with 1 and 15 optional bundles. «Ajustes de la partida» reuses the compact selector with descriptions (MD-12), same order and icons.
 - Icons: base a book, a regional bundle its country's flag (mods too), other mod bundles the puzzle.
 - Bundles: only those of the new game's question locale (`bundlesFor`; the language's, else `es`, D-96), names in that language; order `orderBundles` (D-97): base bundles in file order (ours, then mods); optional: regional of the player's region, then non-regional, then regional of other countries, file order within each.
@@ -128,7 +133,7 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 
 ### Choice (plan 29, AG-7, BN-6)
 - `game/Choice.svelte`, «¿Cómo juega Sofía?»: what the next game plays, between Player and Bundles; preset: the player's newest game, else the language's defaults (engine `choice` route, plan 71); returning from Bundles shows the picks kept (`choiceDraft.ts`). «Seguir» is always enabled; no bundle line, no supply report, no short-group marks (decision 268).
-- Mode row (MD-7, plan 36), on top: the built modes (`BUILT_MODES`), in the order «Solo o en grupo», «Modo anfitrión» (decision 50; multiplayer modes when built), name + one-line about, keys `mode.*Key` (es `G` grupo, `A` anfitrión; en `A`, `G`). Preset: `?mode=gamemaster|solo` launch option, else the player's newest game's mode (`playerMode`), else gamemaster mode; Enter straight through = today's game.
+- Mode row (MD-7, plan 36), on top: the built modes (`BUILT_MODES`; in dev mode the unbuilt ones too, marked `PLACEHOLDER`, decision 293), in the order «Solo o en grupo», «Modo anfitrión» (decision 50), rr-coop, rr-competitive, `timed` (five tiles fit the Deck sizes), name + one-line about, keys `mode.*Key` (es `G` grupo, `A` anfitrión; en `A`, `G`). Preset: `?mode=gamemaster|solo` launch option, else the player's newest game's mode (`playerMode`), else gamemaster mode; Enter straight through = today's game.
 - Gamemaster mode: the configure game screen (MD-11, D-88, decision 33: Configure game screen: which fields?); every field preset from the player's newest game (`playerChoice`), a fresh player: `young_teens`, `STANDARD_JOKERS`, video/audio on, 12 levels, 4 cards.
   - Left «Partida»: Difficulty (age groups, then «A medida»; «Desde» / «Hasta» rows always shown: with a group its span, read-only (no −/+, skipped by ↑/↓ and the focus ring), with «A medida» editable 1–15, end ≥ start, starting at the group's span; plan 125), Niveles 1–20, Cartas por nivel 0–4 (0: «pregunta directa»), Preguntas con video / audio, «Responder para avanzar» (switches; D-105, `answers`, sent only as `false`). Right «Comodines»: «Conjunto» preset row (Estándar | Sin límite | Personalizado, decision 99: ←/→ Estándar ↔ Sin límite fills the rows), then one row per joker (`TOKENS` order), 0–9 or ∞, clamped (← stops at 0, → stops at ∞; decision 105).
   - Lines (`data-line`): ↑/↓ (D-pad, stick) move line by line, left column then right; ←/→ change a value on a stepper or switch; −/+ and switch clicks with the mouse; `Enter`/A on a switch toggles, on a stepper or «Seguir» continues; `1`–`4` pick a group.
@@ -137,7 +142,14 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
   - Dialog `game/Customize.svelte` (modal scope): preset row «Conjunto» (Estándar | Sin límite | Personalizado, decision 99), then one row per joker, 0–9 or ∞ (MD-4 steppers); ↑/↓ rows, ←/→ or −/+ change, «Listo» / `Enter` / `Esc` / `Backspace` close, focus back on the button.
   - `new` gets `mode: "solo"` and `jokers` only when they differ from the standard set; the engine sets `customized` (D-74: no achievements).
 - Age group: four tiles in `age-groups.json` order, name + ages («6–10 años», «23+ años»), keys `1`–`4`; the window isn't shown.
-- «Seguir» / `Enter`: the Bundles screen with these picks; the game starts there.
+- Multiplayer modes (decision 291): plural title «¿Cómo juegan?»; rr-coop, `timed`: the age group line; rr-competitive: no group line, «each player picks on the next screen»; «Personalizar partida» (jokers, same for every seat) in rr-coop and rr-competitive, none in `timed`.
+- «Seguir» / `Enter`: the Bundles screen with these picks (multiplayer modes: the Join screen); the game starts on Bundles.
+
+### Join (plan 162, decisions 291, 292)
+- `game/screens/Join.svelte`, multiplayer modes only, between Choice and Bundles: a grid of seat cards in join order (seat colour from `game/seats.ts`, device glyph or «Teclado y ratón» / the claim key, name, rr-competitive: age group stepper, remove), a «press A to join» card per unbound pad, a «join with keyboard» card; the grid scrolls (`data-nav-scroll`), no cap of our own.
+- Rules: unbound pad A joins, a bound pad's B leaves; keyboard card (Enter/click): no pad seated → any number of keyboard seats (round-robin `shared`, no key, decision 273; `timed`: «press your key» capture, `claimKeyOk`, decision 290); a pad seated → one keyboard-and-mouse seat only (decision 274); a pad's A is refused with a notice while 2+ keyboard seats exist; a lone keyboard seat becomes `kbm` when a pad joins.
+- Names: every seat named, distinct by casefold; the name control opens `NamePicker.svelte` (known players, new name, letter picker / Steam keyboard); first seat preset to the Player screen's name.
+- «Seguir» needs ≥ 2 seats, all named (keyboard-only `timed`: all with keys), reason shown under it. Before the session starts every device drives the shared UI; only join/leave are per device.
 - «Atrás» / `Backspace`: back to Player. `Esc`: the overlay.
 
 ### Level (between questions)
