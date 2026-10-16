@@ -4,7 +4,12 @@
     {
       "id": "base",
       "kind": "base",
-      "languages": ["es", "es-ES", "en", "de"],
+      "languages": [
+        "es",
+        "es-ES",
+        "en",
+        "de"
+      ],
       "name": "Paquete básico",
       "description": "Preguntas de todo un poco, para jugar en cualquier parte.",
       "rule": "Everything that isn't in another bundle: answerable by families anywhere in the world, whatever their language; well-known facts about any country belong here (Colombia's capital, Japan's flag, Italian pasta, García Márquez), knowledge only one country's or one language's players have doesn't.",
@@ -14,11 +19,25 @@
       "id": "colombia",
       "kind": "region",
       "country": "CO",
-      "languages": ["es"],
+      "languages": [
+        "es"
+      ],
       "name": "Regional: Colombia",
       "description": "Para quien tiene relación con Colombia: lugares, comida, costumbres, gente, música y palabras de allá.",
       "rule": "Answering needs a connection to Colombia: Colombian places, food, customs, festivals, people, music, sport, words, sayings or history that the players outside Colombia mostly wouldn't know.",
       "voice": "Spanish with Colombian usage: \"bombillo\", \"carro\", \"celular\", \"gripa\", \"crispetas\", \"arquero\", \"tinto\" (black coffee), \"parcero\" only in jokes"
+    },
+    {
+      "id": "usa",
+      "kind": "region",
+      "country": "US",
+      "languages": [
+        "en"
+      ],
+      "name": "Regional: Estados Unidos",
+      "description": "Para quien tiene relación con Estados Unidos: lugares, comida, costumbres, gente, música, deporte y palabras de allá.",
+      "rule": "Answering needs a connection to the United States: American places, food, customs, holidays, people, music, sport, media, words, sayings or history that players outside the US mostly wouldn't know; topics shared across the English-speaking world, and British-only ones (those belong to `uk`), are not here.",
+      "voice": "American English: US spelling (\"color\", \"gray\"), US words (\"soccer\", \"cookie\", \"truck\", \"vacation\", \"sidewalk\"), dates as \"July 20, 1969\", imperial units with metric in brackets only where it helps"
     }
   ]
 }
