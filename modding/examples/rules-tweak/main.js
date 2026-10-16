@@ -5,7 +5,7 @@ const RULE = {
   es: "Con este mod: un Soplo más por partida.",
   "es-ES": "Con este mod: un Soplo más por partida.",
   en: "With this mod: one extra Hint per game.",
-  de: "Mit diesem Mod: ein Zaunpfahl mehr pro Spiel.",
+  de: "Mit diesem Mod: ein Wink mehr pro Spiel.",
 };
 
 export default async function setup(trivia) {

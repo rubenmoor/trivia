@@ -5,7 +5,7 @@ How the UI talks in `es.ts`, the source catalog: neutral Latin American Spanish 
 ## Glossary
 Fixed terms; use them as written, never a synonym.
 - Modes: «Modo anfitrión» (`mode.gamemaster`), «Solo o en grupo» (`mode.solo`); the role: «el anfitrión» («Trucos del anfitrión»)
-- Jokers: «comodín»; names «Soplo» (S), «Paso» (P), «Bájale» (F), «Cambiazo» (T), «Francotirador» (X) (D-91); plain skip «Paso»
+- Jokers: «comodín»; names «Soplo» (S), «Paso y fuera» (P), «Hada madrina» (H), «Doña Exigente» (E), «Tiro mágico» (T) (D-108, decision 210); plain skip «Solo paso»
 - Level: «nivel»; the tower, the top: «la torre», «la cima», «la corona»
 - Question, answer, topic: «pregunta», «respuesta», «tema» (category on screen); a question card: «carta»
 - Question bundle: «paquete de preguntas» (Steam DLC, decision 50; never «Temas»); base bundle «paquete básico»; bundle names from `app/data/bundles.json` («Básico», «Regional: Colombia»)
@@ -40,3 +40,4 @@ Seen in review; guidance, not a lint. Wrong → right.
 - Bare «logros»: «Una partida personalizada no gana logros.» → «… no gana logros de Steam.» (TV check)
 - Parenthesized explanations in a row: «Terminar partida (configurar otra)» → say the effect in the name
 - Spain-only words in `es`: «Pulsa otra vez» → «Presiona otra vez» (decision 59)
+- Old joker names, don't use (D-108): «Paso» → «Paso y fuera», «Bájale» → «Hada madrina», «Cambiazo» → «Doña Exigente», «Francotirador» → «Tiro mágico»

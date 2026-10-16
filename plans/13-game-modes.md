@@ -25,13 +25,13 @@ Plan 29's Choice screen in gamemaster form, no second screen. Opens on the playe
 - **Jokers:** one row per joker (`TOKENS` order), 0–9 or ∞, clamped (←/→, −/+; `stepUses`, decision 105); `settings.jokers` via `new {jokers}` as today. Default (fresh player): `STANDARD_JOKERS`; `new` without `jokers` in gamemaster mode stays unlimited (fixtures). Preset row above them (decision 99, supersedes decision 33 here): Estándar (`STANDARD_JOKERS`) | Sin límite (all ∞) | Personalizado; ←/→ picks Estándar ↔ Sin límite and fills the rows, edited rows or a saved budget show their preset (`game/jokers.ts` `presetOf`); UI only, same in «Personalizar partida».
 - **Allow video questions / allow audio questions:** two switches, default on; new `settings.video` / `settings.audio`, stored only as `false` (missing = allowed). Off: `availableNow` and `supply` drop questions whose `media.type` is `video` / `audio`; images and backgrounds stay.
 - **Number of levels:** 1–20, default 12; new `settings.levels` (missing = 12). Won at level `levels`; the Tower draws `levels` steps. With an age group: level i of n uses the group's range at step round(1 + 11·(i − 1)/(n − 1)) (n = 1: step 1; n > 12 repeats steps). `selection.LEVELS` becomes a per-game value (`answer`, `laterLevels`, `selection.draw`, `assign`, `supply`). Errors: `levels_invalid`.
-- **Cards per level:** 0–4, default 4; new `settings.cards` (missing = 4). The table shows that many cards (`selection.PER_LEVEL` per game; the supply needs max(cards, 1) per level). 0: one card is drawn and opened at once (no select phase); every return to the table (next level, skip, Paso, replace, jump) does the same. Errors: `cards_invalid`; switches: `switch_invalid`.
+- **Cards per level:** 0–4, default 4; new `settings.cards` (missing = 4). The table shows that many cards (`selection.PER_LEVEL` per game; the supply needs max(cards, 1) per level). 0: one card is drawn and opened at once (no select phase); every return to the table (next level, skip, Paso y fuera, replace, jump) does the same. Errors: `cards_invalid`; switches: `switch_invalid`.
 - **Select answer to advance to next level (D-105):** switch, default on; new `settings.answers`, stored only as `false` (missing = on); gamemaster mode only (`new` / `settings` elsewhere → `gamemaster_only`). Off:
   - Question screen: answers not selectable; the padlock is clickable at once (Enter/A, click) → engine `reveal` (no index; question phase, only with answers off, else `answers_on`; `answer` → `answers_off`)
   - reveal: seen row as for an answer; history `revealed: true` (stats, telemetry, achievements skip it as right/wrong); `last` with `chosen: null` + `correct_index`; undo snapshot as for `answer`; level +1, new table
   - after a reveal: neutral «Siguiente ronda», no fanfare, no sad trombone; never game over
   - last level: phase and result `completed` (not a win, not a loss); neutral «Cuestionario completado», fireworks ok, no victory music, no Victory screen
-  - jokers stay, except Francotirador: unavailable with answers off (reason string)
+  - jokers stay, except Tiro mágico: unavailable with answers off (reason string)
   - no "game over on false answer" option
 - Supply check (GF-5) and outlook (plan 65) run on the whole configuration; «Jugar» disabled with the reason when short (`supply_short`).
 
@@ -89,7 +89,7 @@ Shared by the three: no skip, no undo, no joker changes mid-game; flagging only 
 Spec for MD-6/MD-7 (plan 36) and MD-10..MD-12 (plan 59).
 - `settings.mode`: `gamemaster` | `solo` | `rr-coop` | `rr-competitive` | `timed`; missing = `gamemaster`, old saves unchanged. Today's game = gamemaster mode.
 - `settings.jokers` (MD-1..MD-4, `null` = unlimited) stays; `new` in gamemaster mode without `jokers` stays unlimited; the configure screen's fresh default is the standard set (D-88).
-- Standard joker set: one engine constant (3 × Soplo, 1 × Paso, Bájale, Cambiazo, Francotirador); every non-gamemaster game starts with it.
+- Standard joker set: one engine constant (3 × Soplo, 1 × Paso y fuera, Hada madrina, Doña Exigente, Tiro mágico); every non-gamemaster game starts with it.
 - `settings.customized`: `true` after any change via "Customize game"; feeds achievements (S5).
 - Refusals outside gamemaster mode (engine, not only UI): undo, skip, replace, level, settings, joker budget changes (D-88).
 - `ReportRow`: logs the current question to a local report list (a page to copy from); not seen-counted, no replacement; the player answers or uses a joker.

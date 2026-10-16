@@ -1818,9 +1818,9 @@ def report_subcategories(avail, ranges):
     empty = sum(1 for c in categories.load() for sub in c["subcategories"] if (c["bundle"], sub) not in by_sub)
     easier = sum(1 for q in avail if any(d < q["difficulty"] for d in by_sub[categories.key(q)]))
     print(f"  empty subcategories: {empty}")
-    print(f"  «Bájale» possible on {easier} of {len(avail)} questions "
+    print(f"  «Hada madrina» possible on {easier} of {len(avail)} questions "
           f"({easier * 100 // max(len(avail), 1)} %): an easier one exists in the same subcategory")
-    print("  «Cambiazo» choices per level, young teens (subcategories with a question in the level's range):")
+    print("  «Doña Exigente» choices per level, young teens (subcategories with a question in the level's range):")
     for level, (lo, hi) in ((int(l), r) for l, r in ranges.items()):
         n = sum(1 for ds in by_sub.values() if any(lo <= d <= hi for d in ds))
         print(f"    level {level:2} (difficulty {lo}–{hi}): {n:3}")
@@ -2285,10 +2285,10 @@ def report_simulate(args):
           f"per cell, each stops at the first game that offers a seen card or after {cap} games; {time.monotonic() - t0:.0f} s")
     print(f"  models: strong = always right; typical = p(right) {lo} at level 1 → {hi} at level 12; "
           "standard jokers once each at a random level; rr-competitive (a game = a round), timed modelled until MD-8/MD-9")
-    print("  median/p10/bound: games until the first repeat (bound = min over seeds, strong only); cambiazo: seeds whose "
-          "first repeat was a Cambiazo card; draw: games until a level draw repeats (median/bound); k = the engine's "
+    print("  median/p10/bound: games until the first repeat (bound = min over seeds, strong only); exigente: seeds whose "
+          "first repeat was a Doña Exigente card; draw: games until a level draw repeats (median/bound); k = the engine's "
           "fresh games left for a fresh profile (supply outlook), a cross-check of the draw bound")
-    rows = [("locale", "bundles", "mode", "n", "age group", "player", "median", "p10", "bound", "cambiazo", "draw", "k",
+    rows = [("locale", "bundles", "mode", "n", "age group", "player", "median", "p10", "bound", "exigente", "draw", "k",
              "first draw repeat")]
     for r in results:
         head = (r["locale"], ",".join(r["bundles"] or []), r["mode"], str(r["players"]), r["age_group"], r["player"])

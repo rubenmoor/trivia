@@ -5,7 +5,7 @@ How the UI talks in `en.ts`: plain, friendly English for a family or a single pl
 ## Glossary
 Fixed terms; use them as written, never a synonym.
 - Modes: «Gamemaster mode» (`mode.gamemaster`), «Alone or as group» (`mode.solo`, D-74); the role: «the gamemaster» («Gamemaster cheats»)
-- Jokers: «joker»; names «Hint» (H), «Pass & Purge» (P), «Fairy» (F), «Ms Picky» (K), «Trick Shot» (T) (D-89, D-91); plain skip «Just pass»
+- Jokers: «joker»; names «Hint» (H), «Pass & Purge» (P), «Fairy» (F), «Ms Picky» (K), «Trick Shot» (T) (D-89, D-91, kept by D-108); plain skip «Just pass»
 - Level: «level»; the tower, the top, the crown
 - Question, answer, topic: «question», «answer», «topic» (category on screen); a question card: «card»
 - Question bundle: «question bundle» (decision 50; «bundle» once the context is clear); base bundle «base bundle»; bundle names from `app/data/names.en.json` («Basics», «Regional: Colombia»)

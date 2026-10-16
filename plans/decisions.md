@@ -1060,3 +1060,16 @@ Template:
   - **Regional bundles unchanged:** drafted in the region's language (`colombia`: Colombian Spanish), translated to `en` (D-99).
 - Consequences: plan 148: schema/export, `es-ES` pool in the game, `qgen batch` per locale, `--translate` from either source, targets, review tool, prompts, docs; batch-9 waits for it.
 - Supersedes / related: amends D-6 (Colombian usage not for `base`), D-78 and D-83 (es-419 by translation, `es-ES` own pool), D-84 (two-stage source shortfall), D-86 / D-96 (`es-ES` questions), D-87 (es the only source locale); pm decisions 27 (for `base`, decision 237), 37 (last clause), 219, 235, 236
+
+## D-108: Joker names English first, one symbol per joker
+- Date: 2026-10-16
+- Context: milestone 9, "Joker names, defined again" (developer, 2026-10-14); plan 136; pm decisions 188, 190–194 (en), 209 (symbols), 210 (es), 211 (es-ES), 212 (de)
+- Decision:
+  - **Symbols** (pm decision 209): one per joker in every language: `hint` bulb with rays, `skip` broom, `easier` wand with star, `category` pointing hand, `snipe` crosshair with curved arrow
+  - **en** (pm decisions 190–194): all kept: Hint `H`, Pass & Purge `P`, Fairy `F`, Ms Picky `K`, Trick Shot `T`
+  - **es / es-ES** (pm decisions 210, 211), translated from the English: Soplo `S`, Paso y fuera `P`, Hada madrina `H`, Doña Exigente `E`, Tiro mágico `T`; plain skip «Solo paso»; `es-ES` differs only in «vosotros» leaves
+  - **de** (pm decision 212): Wink `K`, Näxt & Weg `N`, Glücksfee `G`, Wunschzeit `W`, Finte `F`; keys mnemonic per pm decisions 53, 247 (`W`, `F` taken)
+  - `es` changes despite D-78/pm decision 59: a decided exception, the family's game gets the new names
+  - Unchanged: code ids, Steam API names (`FIRST_SOPLO` …), save fields, code comments
+- Consequences: `app/client/src/locales/{es,es-ES,de}.ts`, `locales/style/*.md` (old names as bad patterns), `modding/examples/rules-tweak/main.js`, `qgen.py` supply/simulate output; store and achievement texts in task 1100
+- Supersedes / related: supersedes D-89's and D-91's names and `es`/`de` keys; D-78, D-91 (key rule); pm decisions 40–44, 53, 54–59, 188, 190–194, 209–212, 247

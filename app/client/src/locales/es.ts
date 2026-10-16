@@ -242,16 +242,16 @@ const es = {
   joker: {
     /** `rule`: the one line on the printed card (JK-11). */
     hint: { name: "Soplo", key: "S", rule: "Muestra una pista de la pregunta. Hasta tres por pregunta." },
-    skip: { name: "Paso", key: "P", pass: "Paso", stamp: "ELIMINADO", purge: "Paso, y fuera el tema «{name}»",
+    skip: { name: "Paso y fuera", key: "P", pass: "Solo paso", stamp: "ELIMINADO", purge: "Paso y fuera: adiós al tema «{name}»",
       rule: "Cambia la pregunta por otra carta. Si quieren, ese tema sale del juego.",
     },
-    easier: { name: "Bájale", key: "F", dial: "Dificultad", rule: "Cambia la pregunta por una más fácil del mismo tema." },
-    category: { name: "Cambiazo", key: "T", title: "Cambiazo: ¿qué tema quieren?",
+    easier: { name: "Hada madrina", key: "H", dial: "Dificultad", rule: "Cambia la pregunta por una más fácil del mismo tema." },
+    category: { name: "Doña Exigente", key: "E", title: "Doña Exigente: ¿qué tema quieren?",
       rule: "Ustedes eligen otro tema; la dificultad sigue parecida.",
     },
     snipe: {
-      name: "Francotirador",
-      key: "X",
+      name: "Tiro mágico",
+      key: "T",
       /** Aim hint: «{aim} <b>{false}</b> · Enter {shoot}». */
       aim: "Elijan la respuesta que creen que es",
       false: "falsa",
@@ -501,10 +501,10 @@ const es = {
     /** By joker id. */
     joker_spent: {
       hint: "ya no les quedan Soplos",
-      skip: "ya no les quedan Pasos",
-      easier: "ya no les quedan Bájales",
-      category: "ya no les quedan Cambiazos",
-      snipe: "ya no les quedan Francotiradores",
+      skip: "ya no les queda ningún Paso y fuera",
+      easier: "ya no les quedan Hadas madrinas",
+      category: "ya no les queda ninguna Doña Exigente",
+      snipe: "ya no les quedan Tiros mágicos",
     },
     age_group_unknown: "grupo de edad desconocido: '{group}'",
     bundle_unknown: "paquete desconocido: '{bundle}'",

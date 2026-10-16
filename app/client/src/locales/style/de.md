@@ -5,7 +5,7 @@ How the UI talks in `de.ts`: natural German for whoever sits at the TV, one play
 ## Glossary
 Fixed terms; use them as written, never a synonym.
 - Modes: «Spielleitermodus» (`mode.gamemaster`, TV check 2026-10-13), «Allein oder in der Gruppe» (`mode.solo`); the role: «die Spielleitung» («Tricks der Spielleitung», «Die Spielleitung steuert alles»)
-- Jokers: «Joker»; names «Zaunpfahl» (Z), «Näxt» (N), «Gang runter» (G), «Wunschzeit» (W), «Finte» (F) (decisions 54–58, D-91); plain skip «Nur passen»
+- Jokers: «Joker»; names «Wink» (K), «Näxt & Weg» (N), «Glücksfee» (G), «Wunschzeit» (W), «Finte» (F) (D-108, decision 212); plain skip «Nur passen»
 - Level: «Stufe»; the tower, the top: «Turm», «Gipfel», «Krone»
 - Question, answer, topic: «Frage», «Antwort», «Thema» (category on screen); a question card: «Karte»
 - Question bundle: «Fragenpaket» (decision 50; «Paket» once the context is clear); base bundle «Grundpaket»; bundle names from `app/data/names.de.json` («Basis», «Regional: Kolumbien»)
@@ -57,3 +57,4 @@ Seen in review; guidance, not a lint. Wrong → right.
 - «…» on a menu row, stiff verb: «Zu Frage gehen…» → «Zu einer Frage springen» (`overlay.goTo`)
 - Filler words: «12 Fragen am Stück bis zum Gipfel» → «12 Fragen bis zum Gipfel» (`screen.start.subtitle`)
 - Colloquial «aus» for a state: «Mods gefunden, aus bis zur Freigabe» → «Mods gefunden, deaktiviert bis zur Freigabe» (`mods.held`)
+- Old joker names, don't use (D-108): «Zaunpfahl» → «Wink», «Näxt» → «Näxt & Weg», «Gang runter» → «Glücksfee»

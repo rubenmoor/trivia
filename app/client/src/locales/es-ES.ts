@@ -34,7 +34,7 @@ export const esES = {
   },
   joker: {
     skip: { rule: "Cambia la pregunta por otra carta. Si queréis, ese tema sale del juego." },
-    category: { title: "Cambiazo: ¿qué tema queréis?", rule: "Elegís otro tema; la dificultad sigue parecida." },
+    category: { title: "Doña Exigente: ¿qué tema queréis?", rule: "Elegís otro tema; la dificultad sigue parecida." },
     snipe: {
       aim: "Elegid la respuesta que creéis que es",
       hit: "¡Habéis dado a la correcta! Este nivel se repite.",
@@ -101,10 +101,10 @@ export const esES = {
     snipe_no_repeat: "si dais a la correcta, no quedan preguntas para repetir el nivel",
     joker_spent: {
       hint: "ya no os quedan Soplos",
-      skip: "ya no os quedan Pasos",
-      easier: "ya no os quedan Bájales",
-      category: "ya no os quedan Cambiazos",
-      snipe: "ya no os quedan Francotiradores",
+      skip: "ya no os queda ningún Paso y fuera",
+      easier: "ya no os quedan Hadas madrinas",
+      category: "ya no os queda ninguna Doña Exigente",
+      snipe: "ya no os quedan Tiros mágicos",
     },
   },
 } satisfies Override;

@@ -33,8 +33,8 @@ stateDiagram-v2
   Select --> Question: pick a description
   Question --> Correct: final answer right
   Question --> Wrong: final answer wrong
-  Question --> Select: joker «Paso» (09)
-  Question --> Level: joker «Francotirador» hits the right answer, same level (09)
+  Question --> Select: joker «Paso y fuera» (09)
+  Question --> Level: joker «Tiro mágico» hits the right answer, same level (09)
   Correct --> Level: level < 12 (a block is added)
   Correct --> Victory: level 12 answered
   Wrong --> Start: «Volver al inicio»
@@ -66,7 +66,7 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 | Choice | «¿Cómo juega …?»: mode (MD-7); gamemaster mode: the configure game screen (MD-11: difficulty, levels, cards, video, audio, answers (D-105), jokers, bundles); «Solo o en grupo»: age group, «Personalizar partida», bundles | «¡A jugar!» / `Enter`; «Atrás» / `Backspace` | Normal |
 | Level | The tower, «Nivel N de 12» | Click / `Enter` / `Space` | Normal |
 | Select | 4 description cards | Click a card / `1`–`4` | Normal |
-| Question | Question, 4 answers, media, lock, final button, joker tray | Final answer; jokers Paso / Francotirador hit | Intense (off while question media plays); after submitting: most intense |
+| Question | Question, 4 answers, media, lock, final button, joker tray | Final answer; jokers Paso y fuera / Tiro mágico hit | Intense (off while question media plays); after submitting: most intense |
 | Correct | Fanfare, fireworks overlay, correct answer, `fun_fact` | Click / `Enter` | Fanfare replaces the music, then Normal |
 | Wrong | Dark animation, correct answer, consolation | «Volver al inicio» | Off; a sad sting |
 | Victory | Full 12-block tower, big finale | «Volver al inicio» | «Pomp and Circumstance» (`victory`), over cheers |
@@ -166,8 +166,8 @@ Four cards, each showing only a question's `description` (D-8). The players pick
   | Wait before the reveal | 3 s | 4 s | 5 s | 6 s | 8 s | 10 s | 12 s |
 
   The values are a starting point, to be tuned on the TV (UI-6). At the reveal, the music transitions straight into the fanfare (right) or the sad sting (wrong), with no silence in between. The right answer flashes green. On a wrong answer, the chosen answer flashes red as well, and the right one flashes green, so the players always see the right answer (D-22). Then the result screen follows.
-- **Answers off (D-105, gamemaster mode, `settings.answers: false`):** the tiles show but can't be picked (no `A`–`D` / `1`–`4`, no pad pick glyphs); no «Respuesta final»: the padlock is a button «Mostrar respuesta», clickable at once (`Enter`/A, click) → engine `reveal`. It opens (padlock-open sound), the correct answer flashes green, no drum roll, no fanfare, no sad trombone; then Next («Siguiente ronda»), or at the last level Completed. Jokers stay, Francotirador locked (engine reason). Tower: one block per level behind (`level − 1`). Mid-game toggle: «Ajustes de la partida» dialog (task 1124); toggled back on, the tower counts correct answers only again.
-- **Peek (plan 113, decision 126):** on a question with a sharp picture (image, not decorative, loaded), holding `R3` or `V` (catalog `screen.question.peekKey`), or pressing and holding the mouse on the bare picture, fades every panel out (~150 ms: HUD, card, answers, tray, prompts, «Respuesta final», credit, corner ☰ and flag) and shows the whole picture (D-51 fit), unfiltered; release brings it back unchanged (focus, locked answer, armed joker). Prompt «Ver imagen» in the HUD row, on image questions only. Not on video/audio/decorative questions, nor with Paso, Francotirador, Cambiazo, the flag dialog or the overlay open (opening one ends the peek). Timed mode: the clock keeps running. Panels fade by `opacity` + `pointer-events: none`, not `visibility: hidden`, which drops DOM focus. Checked at 1280×800, 1280×720, 1920×1080 on every image question (task 923).
+- **Answers off (D-105, gamemaster mode, `settings.answers: false`):** the tiles show but can't be picked (no `A`–`D` / `1`–`4`, no pad pick glyphs); no «Respuesta final»: the padlock is a button «Mostrar respuesta», clickable at once (`Enter`/A, click) → engine `reveal`. It opens (padlock-open sound), the correct answer flashes green, no drum roll, no fanfare, no sad trombone; then Next («Siguiente ronda»), or at the last level Completed. Jokers stay, Tiro mágico locked (engine reason). Tower: one block per level behind (`level − 1`). Mid-game toggle: «Ajustes de la partida» dialog (task 1124); toggled back on, the tower counts correct answers only again.
+- **Peek (plan 113, decision 126):** on a question with a sharp picture (image, not decorative, loaded), holding `R3` or `V` (catalog `screen.question.peekKey`), or pressing and holding the mouse on the bare picture, fades every panel out (~150 ms: HUD, card, answers, tray, prompts, «Respuesta final», credit, corner ☰ and flag) and shows the whole picture (D-51 fit), unfiltered; release brings it back unchanged (focus, locked answer, armed joker). Prompt «Ver imagen» in the HUD row, on image questions only. Not on video/audio/decorative questions, nor with Paso y fuera, Tiro mágico, Doña Exigente, the flag dialog or the overlay open (opening one ends the peek). Timed mode: the clock keeps running. Panels fade by `opacity` + `pointer-events: none`, not `visibility: hidden`, which drops DOM focus. Checked at 1280×800, 1280×720, 1920×1080 on every image question (task 923).
 
 ### Correct
 - A **fanfare / jingle** plays (several variants, picked at random so it doesn't get stale).
