@@ -31,7 +31,7 @@ function gamemasterOnly(state: GameState, what: string): void {
 type Result = GameRow["result"];
 
 /** Fewest seats in a session. */
-const MIN_SEATS = 2;
+export const MIN_SEATS = 2;
 
 /** The acting seat of an action (plan 157): index into `row.seats`, 0 in a one-player game; refused before any mode logic. */
 export function actor(row: GameRow, seat: unknown): number {

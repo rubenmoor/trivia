@@ -2,7 +2,7 @@
   // The Choice screen (plans/04-ui-tv-display.md, "Choice"; plan 29, AG-7, BN-6): «¿Cómo juega …?»,
   // between Player and Bundles. Mode row (MD-7); gamemaster mode: the configure game screen (MD-11, D-88):
   // difficulty, levels, cards, video, audio, answers (D-105), jokers; «Solo o en grupo»: age group (1–4) and «Personalizar partida»
-  // (joker counts). «Seguir» goes to the Bundles screen, which holds the supply report and starts the game (decision 264).
+  // (joker counts). «Seguir» goes to the Join screen in a multiplayer mode (decision 291), else to the Bundles screen, which holds the supply report and starts the game (decision 264).
   // Preset: `?mode=`, the player's newest game (every field but the bundles), else the defaults; a returning draft wins. ↑/↓ move between lines, ←/→ change a value.
   import { onMount, untrack } from "svelte";
   import {
@@ -17,7 +17,7 @@
   import Customize from "../Customize.svelte";
   import { presetOf, stepPreset, stepUses, TOKENS } from "../jokers.ts";
   import { clamp, spanOf, stepDifficulty } from "../difficulty.ts";
-  import { defaultDraft, type ChoiceDraft } from "../choiceDraft.ts";
+  import { defaultDraft, isSession, type ChoiceDraft } from "../choiceDraft.ts";
   import Icon, { type IconName } from "../Icon.svelte";
   import Prompt from "../Prompt.svelte";
 
@@ -30,7 +30,7 @@
   }: {
     player: string;
     busy: boolean;
-    /** The picks kept in Game.svelte from an earlier visit (Back from Bundles), else null: the preset applies. */
+    /** The picks kept in Game.svelte from an earlier visit (Back from Join or Bundles), else null: the preset applies. */
     draft: ChoiceDraft | null;
     onnext: (draft: ChoiceDraft) => void;
     onback: () => void;
@@ -128,7 +128,7 @@
     return true;
   }
 
-  /** «Seguir»: the Bundles screen, with these picks kept. */
+  /** «Seguir»: the Join screen (a multiplayer mode) or the Bundles screen, with these picks kept. */
   function next() {
     if (busy || !options) return;
     onnext({ mode, group, jokers, custom, difficulty, levels, cards, video, audio, answers, budget });
@@ -143,7 +143,7 @@
     { id: "timed", name: t("mode.timed"), about: t("mode.timedAbout"), key: t("mode.timedKey").toLowerCase(), icon: "rocket", ships: "1467" },
   ];
   const modes = MODE_ROW.filter((m) => BUILT_MODES.includes(m.id) || (devMode && m.ships));
-  const session = $derived(mode !== "solo" && mode !== "gamemaster");
+  const session = $derived(isSession(mode));
   /** «Personalizar partida»: every mode but gamemaster and timed (no jokers). */
   const jokerMode = $derived(mode !== "gamemaster" && mode !== "timed");
   const CUSTOMIZE_KEY = t("customize.openKey").toLowerCase();

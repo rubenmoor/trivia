@@ -36,16 +36,14 @@ export function may(seat: number | null, view: SessionView): boolean {
   return !view.timed.claim || view.timed.claim.seat === seat;
 }
 
-/** The pad of a confirm from a pad bound to no seat (join, a lost seat's rebind), else null.
- * @public join screen (plan 162), lost pads (task 1434) */
+/** The pad of a confirm from a pad bound to no seat (join, a lost seat's rebind), else null. */
 export function unboundPad(source: Source, intent: { type: string }, binding: readonly (Binding | null)[]): number | null {
   if (typeof source !== "object" || intent.type !== "confirm") return null;
   return binding.some((b) => padOf(b) === source.pad) ? null : source.pad;
 }
 
 /** A pad joins as a new seat; a lone keyboard seat becomes the `kbm` seat; null: already seated, or two or more
- * keyboard seats (decisions 274, 292).
- * @public join screen (plan 162) */
+ * keyboard seats (decisions 274, 292). */
 export function joinPad(binding: readonly Binding[], pad: number): Binding[] | null {
   if (binding.some((b) => padOf(b) === pad)) return null;
   if (binding.filter((b) => padOf(b) === null).length > 1) return null;
@@ -53,8 +51,7 @@ export function joinPad(binding: readonly Binding[], pad: number): Binding[] | n
 }
 
 /** The keyboard joins: with a pad seated the one `kbm` seat; without, a key seat (`timed`: its picked key) or a
- * shared one (round-robin, `key` null); null: keyboard and mouse already one seat (decisions 273, 274, 292).
- * @public join screen (plan 162) */
+ * shared one (round-robin, `key` null); null: keyboard and mouse already one seat (decisions 273, 274, 292). */
 export function joinKeyboard(binding: readonly Binding[], key: string | null): Binding[] | null {
   if (binding.includes("kbm")) return null;
   if (binding.some((b) => padOf(b) !== null)) return [...binding, "kbm"];

@@ -41,8 +41,8 @@ export type Scope = {
   handle: (action: Action) => boolean;
   /** Where arrows move focus and confirm presses the focused control; a scope without one keeps confirm. */
   root?: () => HTMLElement | undefined;
-  /** False: confirm on this shown control goes to `handle` instead of clicking it (a locked answer submits). */
-  pressable?: (el: HTMLElement) => boolean;
+  /** False: confirm on this shown control goes to `handle` instead of clicking it (a locked answer submits, a pad joins). */
+  pressable?: (el: HTMLElement, action: Action) => boolean;
   /** Keeps its focus memory when pushed again (Start); others start fresh (new content). */
   keep?: boolean;
   /** Blocks every scope below; always above the non-modal ones. */
@@ -187,7 +187,7 @@ function route(action: Action): boolean {
   const always = action.type === "menu" || action.type === "flag" || (action.type === "peek" && !action.down);
   const top = stack.at(-1);
   const root = top?.root?.();
-  if (action.type === "confirm" && root && !busy() && press(root, top?.pressable)) return true;
+  if (action.type === "confirm" && root && !busy() && press(root, top?.pressable && ((el) => top.pressable!(el, action)))) return true;
   for (let i = stack.length - 1; i >= 0; i--) {
     const s = stack[i];
     if ((always || s.whileBusy || !busy()) && s.handle(action)) return true;

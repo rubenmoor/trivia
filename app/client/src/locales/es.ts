@@ -422,6 +422,28 @@ const es = {
       confirmBody: "Se borran el nombre y {lose}. Las preguntas que ya vio siguen contando como vistas. No se puede deshacer.",
       confirm: "Sí, borrar",
     },
+    /** Local multiplayer seats (plan 162): who plays with which device. */
+    join: {
+      title: "¿Quiénes juegan?",
+      padJoin: "Presionen para unirse",
+      keyboardJoin: "Unirse con el teclado",
+      keyboardMouse: "Teclado y mouse",
+      pickName: "Elegir nombre",
+      nameTitle: "¿Quién es?",
+      nameTaken: "«{name}» ya está jugando",
+      remove: "Quitar jugador",
+      /** Keyboard-only Contrarreloj: each player's claim key. */
+      pickKey: "Elegir tecla",
+      changeKey: "Cambiar",
+      keyTitle: "Elegir tecla",
+      keyBody: "Presionen una letra o un número: con esa tecla reclaman la pregunta.",
+      keyTaken: "{key} ya es de otro jugador",
+      keyReserved: "{key} ya se usa en el juego",
+      padRefused: "Con dos o más jugadores en el teclado no se pueden unir mandos",
+      tooFew: "Hacen falta al menos {min} jugadores",
+      unnamed: "Cada jugador necesita un nombre",
+      keyless: "Cada jugador necesita su tecla",
+    },
     level: {
       kicker: "Nivel",
       of: "de {n}",

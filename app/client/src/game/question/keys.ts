@@ -15,8 +15,7 @@ export function questionKeys(): Keys {
 }
 
 /** A keyboard-only `timed` player's claim key: one letter or digit no Question key, not 1–9 or the flag key, distinct
- * from `taken` (decision 290).
- * @public join screen (plan 162) */
+ * from `taken` (decision 290). */
 export function claimKeyOk(key: string, taken: readonly string[]): boolean {
   const k = key.toLowerCase();
   if (!/^(\p{L}|\d)$/u.test(k) || /[1-9]/.test(k) || k === t("flag.key").toLowerCase() || k in questionKeys()) return false;

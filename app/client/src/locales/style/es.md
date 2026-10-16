@@ -16,6 +16,7 @@ Fixed terms; use them as written, never a synonym.
 - Start screen: «menú principal» when named
 - Steam terms as Steam writes them in Spanish: «logros de Steam» (never bare «logros»), «Steam Cloud», «Steam Deck», «Workshop de Steam»
 - Media: «video» (not «vídeo»), «audio», «imagen»
+- Devices: «mando» (pad), «teclado», «Teclado y mouse» (not «ratón»)
 - Mods: «mod», «encender» / «apagar»
 
 ## Address

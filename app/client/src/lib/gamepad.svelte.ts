@@ -28,7 +28,7 @@ function pads() {
 const styleFor = (g: Gamepad): PadStyle => (fromSteam === "playstation" ? fromSteam : styleOf(g.id));
 
 /** The glyph set of the pad at `index`; `xbox` while it is gone. */
-function padStyleOf(index: number): PadStyle {
+export function padStyleOf(index: number): PadStyle {
   const g = navigator.getGamepads()[index];
   return g ? styleFor(g) : "xbox";
 }
