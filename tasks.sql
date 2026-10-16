@@ -9632,6 +9632,50 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 
 ## Out of scope
 - Bridge API, fake guests switch, join screen, game input (parts 3–5); timed lag measurement (part 6, separate probe)', 'Steam can stream a game running at home to friends elsewhere and send their controller, keyboard and mouse back, so they play as if sitting in the room. Before building on that, we need to know exactly what Steam tells the game: who joined, which controller belongs to whom, and whether a friend''s keyboard and mouse can be told apart from the host''s. This is the research that answers those questions, partly with a small test on real machines, and ends with a clear yes or no on remote keyboard players.', '2026-10-16T21:26:01Z', 1418);
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (169, 17, 'Steamworks switch and Remote Play test setup', 700, 'Part 2 of `plan 153: masterplan`. The developer''s one-time Steamworks and test setup that every live Remote Play run of `milestone 17: Remote Play Together` needs: Remote Play Together on for the real App ID, a `beta` build carrying the milestone''s code, a Windows host, a Linux or Deck machine, a second Steam account. Docs and one decision; workers never log in to Steamworks.
+
+## Binding
+- `decision 111: Steam only: no effort outside Steam; Steam features are the reason to buy`: Steam''s stream and invites only
+- Real App ID first: `plan 130: Steamworks app configuration (SW-7)`, its decision "Steamworks app configured (SW-7)? IDs?" and `task 1045: Real App ID in the repo and SW-7 close-out`; Spacewar 480 is no test (Remote Play Together settings are per app)
+- `beta` build: `plan 89: Builds, depots and upload (SW-10, SW-6)` (`trivia-steam upload --branch beta`, first upload `task 681: First beta upload: checklist and decision`); nothing here uploads
+- Second account and machine: `decision 135: Steamworks: enable Workshop for ¡Trivia! and a second Steam account?` (pending) asks for a second account owning the game; Remote Play guests need no copy, only a Steam friend on another machine, so either account works
+- Store: the public «Remote Play Together» feature listing is part 8''s (`plans/17a-store-page.md`, after part 9 passes); here only what Steamworks requires to turn it on
+- Gate `decision 284: Remote Play Together gate: single player, controller input and local multiplayer playtested?`: this plan''s tasks are docs and a developer check, not gated; the code in the `beta` build comes from other plans'' tasks, gated or not by their own plans (the probe switch of `plan 168: Investigation: Remote Play input and session API` is not gated)
+
+## The setup decision (subject, for the other parts)
+- `pm decision add "Remote Play Together test setup ready? Switch on, beta build, two machines, second account" --once`
+- Waiting on it: `decision 302: Remote Play Together live probe: guests'' pads, keyboard and mouse on a Windows and a Linux host` (plan 168 task 3 "Findings and the answer"), part 6''s measurement (the plan "Timed mode over a Remote Play stream"), part 9''s playtest (the plan "Remote Play close-out: play with remote guests"); their plans find it with `pm decision list --grep "test setup ready"` and link their live tasks with `pm task-pending-decision`
+
+## Checklist (task 1 writes it; Valve''s page and field names unverified, recheck at entry)
+- Preconditions: SW-7 decision answered (real App ID, `beta` branch); first `beta` upload done (task 681''s decision)
+- Steamworks → Remote Play settings of the app (App Admin; recheck the page): Remote Play Together on; Remote Play on TV/phone/tablet left at Steam''s default
+  - if Steamworks ties it to store categories (local multiplayer / co-op / PvP): set the categories milestone 16''s modes justify; report which were needed; the store page isn''t public yet, the feature line in the store texts stays part 8''s
+  - Publish the Steamworks changes
+  - if Steam refuses Remote Play Together for an unreleased app or a password `beta` branch: report it, don''t work around it
+- `beta` build with this milestone''s code: `trivia-steam upload --branch beta` of a commit with the code the live run needs (first: plan 168''s `--rp-probe` switch); report the BuildID and the `v<version>` tag
+- Machines:
+  - host A Windows (overlay works there, `decision 70: Steam overlay in the Electron shell`: in-game invite through the overlay)
+  - host B Linux or the Deck (invite from Steam''s friends list)
+  - each the host once, the other the guest; guest on any OS; wired and Wi-Fi as available (part 6)
+- Accounts: the developer''s on the host; a second account (decision 135''s, or a family member''s) on the guest, Steam friends with the first
+- Pads: at least one pad on the guest machine, one on the host; a second guest pad if at hand
+- Smoke: host starts ¡Trivia! from the `beta` branch, invites the guest; the guest sees the picture and hears the sound; one pad press on the guest''s side moves the focus
+
+## Tasks
+1. SW-13 checklist in plan 18 and the setup decision (`--worktree app`, not gated)
+   - `plans/18-steam-integration.md`: new section "Remote Play Together setup (SW-13)" after "Steamworks app configuration (SW-7)": intro paragraph, `- [ ]` rows per the checklist above, pointers instead of copies (SW-7 section, "Builds and depots", decision 135)
+   - same file: the "Steam features" bullet «Remote Play Together: enabled … once multi-controller input works (IN-6)» and the SW-13 row in "Tasks" point to milestone 17 and the new section; nothing else rewritten (part 8 owns the rest: `plans/11-steam.md`, `plans/14-input.md`, the store)
+   - the decision above: intro (plain English), body = the checklist''s rows in short plus «answer decision 302''s setup line by this», options `ready (App ID, BuildID, host OSes, what Steamworks required)` (recommended), `not yet (why)`, `issues (rows)`
+   - link existing waiting tasks: `pm task list --grep` for plan 168''s task 3 and for any live task of parts 6 and 9 already split → `pm task-pending-decision <task> <id>`; not-yet-split plans find it by subject
+   - task 2 pending on the decision
+   - done when: section written; decision pending; existing live tasks and task 2 wait on it
+2. Record the Remote Play setup (`--worktree app`, after the decision; not gated)
+   - answer → the section''s rows `[x]` with date, BuildID, what Steamworks required (categories, page name), host OSes; issues → follow-up tasks in the owning plan (130 Steamworks values, 89 uploads) and a retry decision, this task pending on it
+   - SW-13 stays `[ ]` (closed by part 8 after part 9); `pm decision consequences`
+   - done when: the section matches what was set up
+
+## Out of scope
+- The store feature line and docs beyond the two pointers (part 8), the probe and its live steps (plan 168), lag measurement (part 6), uploads (plan 89), SW-7 values (plan 130)', 'Steam can stream a game running at home to friends elsewhere, but only after the game''s owner switches the feature on in Steam''s developer settings, and testing it needs a real test version on Steam, two computers and a second Steam account. This covers that one-time setup: a checklist the developer follows and a single check-in once everything is ready. Every real test of playing together over the internet waits for it.', '2026-10-16T21:27:26Z', 1419);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -37688,6 +37732,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - findings in `plans/14-input.md`, the decision recorded, probe gone, usual checks pass', '2026-10-16T21:26:33Z', NULL, 1476, 0, 'opus', 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1480, 169, 'create tasks for plan 169: Steamworks switch and Remote Play test setup', 'split', 'open', 1000, NULL, 'Split plan 169 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T21:27:26Z', NULL, 1419, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -43706,6 +43752,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1434, 1476, '2026-10-16T21:26:03Z', '2026-10-16T21:26:43Z', 'done', NULL, 0, '9c420ffea82f40ed16c93d34182dc5db6bbb8c0b', NULL, 'claude-opus-5-5', '0f770bbf-c5b9-48eb-8e2f-d8b248ef22c1', NULL, 6, 12, 3826, 201126, 32300, 0.3751932, 74883);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1435, 1277, '2026-10-16T21:26:15Z', '2026-10-16T21:26:58Z', 'done', NULL, 0, '14387b4e4a0e091cec56ea705c1e9d0536bd1356', 'questions', 'claude-sonnet-5-5', 'c9e60d97-8c35-42d0-99c7-a9a97ccde861', 1433, 4, 8, 1067, 281083, 18292, 0.60477920000000007, 74883);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1436, 1419, '2026-10-16T21:26:25Z', NULL, 'running', NULL, NULL, '9c420ffea82f40ed16c93d34182dc5db6bbb8c0b', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 74883);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1437, 1278, '2026-10-16T21:26:58Z', NULL, 'running', NULL, NULL, '76bf2089f55d9f05433b6a8f07e5cab85992cfa2', 'questions', NULL, NULL, 1435, NULL, NULL, NULL, NULL, NULL, NULL, 74883);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
