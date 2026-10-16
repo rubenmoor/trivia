@@ -27324,6 +27324,10 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Done when: `app/data/bundles/colombia/categories.json` and its names files match the answer.', '2026-10-15T19:02:56Z', '2026-10-16T03:32:08Z', 1136, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1140, 138, 'Remap colombia''s existing questions onto its new taxonomy', 'work', 'open', NULL, NULL, 'Part 4 of `plan 138: Regional taxonomy: a general list, colombia reworked`, only for `colombia` (`decision 166: colombia subcategories (OQ-46): where the 19 go, and the list for 2000`). Runs after `task 1139: colombia taxonomy: proposal, the developer''s answer, apply`; still open → stop and say so.
 
+## State from task 1139
+- Done: `app/data/bundles/colombia/categories.json` is decision 249''s list (14 categories, 53 subcategories), committed.
+- `qgen validate` fails on 67 `colombia` questions on removed subcategories; `app/data/pool.json` not re-exported since: this task fixes both.
+
 ## Migration step in `qgen`
 - Like `cmd_bundles` (`authoring/tools/qgen.py`, prompt `prompts/bundles.md`): an LLM proposes, the proposal is kept in `work/`, then applied through `qgen`; no hand edits of `authoring/data/questions.json`. Reports its claude calls (`decision 208: What must a script that calls claude report to its caller?`).
 - Every `colombia` question (all 109, any status, also the 19 on `base` subcategories) gets the fitting subcategory of the new list.
@@ -27339,6 +27343,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - D-entry in `plans/decisions.md` (amends D-43/D-99 for colombia''s list; points at `authoring/data/regional-categories.json` and `qgen taxonomy`).
 - `plans/22-bundles.md` (colombia''s list), `plans/15c-regional-questions.md`.
 - `pm decision consequences 166 "…"`.
+
+Out of scope: other regional bundles (`plan 98: Regional packs (RG-3..RG-5)`, tasks 1275–1280); they have no questions to move.
 
 Done when: every `colombia` question is on a `colombia` subcategory, `validate` enforces it, checks pass.', '2026-10-15T19:02:56Z', NULL, 1136, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1141, 72, 'post-milestone cleanup of milestone 13: Code quality', 'cleanup', 'done', NULL, '2026-10-15, AGENTS.md, README.md, code-review.md; directory.md bullets dropped from open tasks 479, 652, 658, 664, 719, 766, 869, 897, 993, 1137, 1138 (decision 196)', '* rewrite top-level .md files to reflect the current state of the project
@@ -31100,8 +31106,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Plans 130, 89, 88 have a DLC task for `mexico`; 22 and 15c list it.', '2026-10-16T03:40:05Z', NULL, 1273, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1281, 128, 'create tasks for plan 128: S4 close-out', 'split', 'done', 1000, '2026-10-15, tasks.sql: tasks 1032–1034 aligned to regional chains 4–5; task 1035 rewritten as Regional bundles record (no More regional bundles decision); no new decisions needed up front', 'Split plan 128 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T03:41:03Z', '2026-10-16T03:41:55Z', 1264, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1282, 138, 'create tasks for plan 138: Regional taxonomy: a general list, colombia reworked', 'split', 'open', 1000, NULL, 'Split plan 138 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T03:42:33Z', NULL, 1274, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1282, 138, 'create tasks for plan 138: Regional taxonomy: a general list, colombia reworked', 'split', 'done', 1000, '2026-10-15, tasks.sql: plan 138''s tasks still fit the revised plan (1137–1139 done); task 1140 body: state left by task 1139 (67 questions fail validate, pool.json stale), other regions out of scope; no new decisions', 'Split plan 138 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T03:42:33Z', '2026-10-16T03:43:03Z', 1274, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -35592,6 +35598,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1240, 1281, '2026-10-16T03:41:12Z', '2026-10-16T03:42:01Z', 'done', NULL, 0, '49c7decdb610818dc8a163515df78e73c83108b6', 'claude-opus-5-5[1m]', 'e94b301f-8596-4a21-b97c-0101d63c32ec', 8, 16, 5027, 347594, 47724, 0.5519148, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1241, 1265, '2026-10-16T03:42:02Z', '2026-10-16T03:42:14Z', 'done', NULL, 0, '44cd2dd590043cba50e11a0e38c4639427c07199', 'claude-opus-5-5[1m]', '993c9bc5-9b3e-4ea4-b374-05dadc163001', 4, 8, 851, 152804, 38609, 0.3564848, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1242, 1274, '2026-10-16T03:42:15Z', '2026-10-16T03:42:38Z', 'done', NULL, 0, 'b3154af1b8cf28de81b03be3d17f21d476218359', 'claude-opus-5-5[1m]', '46eb6126-61e1-4005-bcdf-3b9ab6b742f7', 5, 10, 2072, 175506, 32490, 0.33650120000000006, 3857742);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1243, 1282, '2026-10-16T03:42:38Z', '2026-10-16T03:43:07Z', 'done', NULL, 0, 'e682cfa781ec74d4ddf7306b02fb4f2b8ddc872e', 'claude-opus-5-5[1m]', '050c4616-cc5f-4cd5-a51c-4677d5223b03', 8, 16, 2518, 277474, 31272, 0.3560948, 3857742);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
