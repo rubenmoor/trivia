@@ -70,6 +70,12 @@ export function choice(save: SaveData, data: EngineData, body: Record<string, un
   });
 }
 
+/** `new`'s mode must be built (the engine itself starts any, for tests and simulations); an unknown one is the engine's error. */
+function startable(mode: unknown = "gamemaster"): true {
+  if ((game.MODES as unknown[]).includes(mode) && !(game.BUILT_MODES as unknown[]).includes(mode)) throw new GameError("mode_not_built", { mode });
+  return true;
+}
+
 type Action = (save: SaveData) => { save: SaveData; event?: JokerEvent };
 
 /** POST /api/game/<action> */
@@ -77,10 +83,10 @@ export function gameAction(save: SaveData, data: EngineData, io: Io, action: str
   Reply<{ game: Game | null; event?: JokerEvent }> {
   const index = () => pyInt("index" in body ? body.index : -1);
   const actions: Record<string, Action> = {
-    new: (s) => "players" in body ? game.newSession(s, data, io, body.players, pick(body, [...game.CHOICE_KEYS, "mode"]))
+    new: (s) => startable(body.mode) && "players" in body ? game.newSession(s, data, io, body.players, pick(body, [...game.CHOICE_KEYS, "mode"]))
       : game.newGame(s, data, io, body.player, pick(body, [...game.CHOICE_KEYS, "mode"])),
-    pick: (s) => game.pick(s, data, io, index()),
-    answer: (s) => game.answer(s, data, io, index()),
+    pick: (s) => game.pick(s, data, io, index(), body.seat),
+    answer: (s) => game.answer(s, data, io, index(), body.seat),
     reveal: (s) => game.reveal(s, data, io),
     skip: (s) => game.skip(s, data, io, pyTruthy(body.everyone)),
     undo: (s) => game.undo(s, io),
@@ -90,7 +96,7 @@ export function gameAction(save: SaveData, data: EngineData, io: Io, action: str
     level: (s) => game.jumpLevel(s, data, io, body.level),
     goto: (s) => game.goTo(s, data, io, body.id),
     settings: (s) => game.changeSettings(s, data, io, pick(body, ["age_group", "difficulty", "bundles", "answers"])),
-    joker: (s) => game.joker(s, data, io, pyStr(body.joker), pick(body, ["purge", "subcategory", "index"])),
+    joker: (s) => game.joker(s, data, io, pyStr(body.joker), pick(body, ["purge", "subcategory", "index"]), body.seat),
   };
   if (!Object.hasOwn(actions, action)) return { save, status: 404, body: NOT_FOUND };
   return guard(save, 409, () => {

@@ -253,6 +253,30 @@ export function playerChoice(save: SaveData, data: EngineData, player?: unknown)
   return { ...d, bundles: d.bundles.filter((id) => data.bundles.find((b) => b.id === id)?.kind === "base") };
 }
 
+/** A new game's state before the first table: settings from `args` as `newGame` documents. */
+function freshState(args: ChoiceArgs, choice: Choice, mode: GameMode, overrides: Partial<JokerBudget>): GameState {
+  const state = withDefaults({
+    level: 1, phase: "select", options: [], offered: [], current: null,
+    answers: [], history: [], last: null, undo: null,
+  } as unknown as GameState);
+  if (choice.difficulty) state.settings.difficulty = choice.difficulty;
+  else if (args.age_group !== undefined) state.settings.age_group = choice.age_group!;
+  if (args.bundles !== undefined) state.settings.bundles = choice.bundles;
+  if (args.levels !== undefined) state.settings.levels = choice.levels;
+  if (args.cards !== undefined) state.settings.cards = choice.cards;
+  if (!choice.video) state.settings.video = false;
+  if (!choice.audio) state.settings.audio = false;
+  if (!choice.answers) state.settings.answers = false;
+  if (args.mode !== undefined) state.settings.mode = mode;
+  if (mode === "gamemaster") Object.assign(state.settings.jokers, overrides);
+  else {
+    const jokers = { ...STANDARD_JOKERS, ...overrides };
+    state.settings.jokers = jokers;
+    state.settings.customized = JOKERS.some((j) => jokers[j] !== STANDARD_JOKERS[j]);
+  }
+  return state;
+}
+
 /** Start a game for `player` (known or new, D-28); a running game is abandoned. The settings get
  * `age_group` / `difficulty` / `bundles` / `mode` / `levels` / `cards` only when `args` carries them,
  * `video` / `audio` / `answers` only when off; `answers` in gamemaster mode only (D-105). */
@@ -265,7 +289,6 @@ export function newGame(
   const choice = resolveChoice(data, rest);
   const mode = args.mode ?? "gamemaster";
   if (!(MODES as unknown[]).includes(mode)) throw new GameError("mode_unknown", { mode: String(mode) });
-  if (!(BUILT_MODES as unknown[]).includes(mode)) throw new GameError("mode_not_built", { mode });
   if (args.answers !== undefined && mode !== "gamemaster") throw new GameError("gamemaster_only", { action: "answers" });
   const overrides = args.jokers === undefined ? {} : checkBudget(args.jokers);
   const report = supply(save, data, choice);
@@ -278,25 +301,7 @@ export function newGame(
       pid = nextId(work.players);
       work.players.push({ id: pid, name, created_on: io.now });
     }
-    const state = withDefaults({
-      level: 1, phase: "select", options: [], offered: [], current: null,
-      answers: [], history: [], last: null, undo: null,
-    } as unknown as GameState);
-    if (choice.difficulty) state.settings.difficulty = choice.difficulty;
-    else if (args.age_group !== undefined) state.settings.age_group = choice.age_group!;
-    if (args.bundles !== undefined) state.settings.bundles = choice.bundles;
-    if (args.levels !== undefined) state.settings.levels = choice.levels;
-    if (args.cards !== undefined) state.settings.cards = choice.cards;
-    if (!choice.video) state.settings.video = false;
-    if (!choice.audio) state.settings.audio = false;
-    if (!choice.answers) state.settings.answers = false;
-    if (args.mode !== undefined) state.settings.mode = mode as GameMode;
-    if (mode === "gamemaster") Object.assign(state.settings.jokers, overrides);
-    else {
-      const jokers = { ...STANDARD_JOKERS, ...overrides };
-      state.settings.jokers = jokers;
-      state.settings.customized = JOKERS.some((j) => jokers[j] !== STANDARD_JOKERS[j]);
-    }
+    const state = freshState(args, choice, mode as GameMode, overrides);
     deal(work, state, data, io);
     work.games.push({
       id: nextId(work.games), started_on: io.now, finished_on: null, result: null, player_id: pid,
@@ -306,9 +311,10 @@ export function newGame(
   });
 }
 
-/** `new` for a session (body `players`, join order). Mode state: plans 158 and 159; until then `mode_not_built`. */
+/** `new` for a session (body `players`, join order): rr-coop plays in `row.state` (plan 158), the seats carry no state.
+ * Unbuilt modes start here too; `api.ts` refuses them (`mode_not_built`). rr-competitive and timed: tasks 1408, plan 159. */
 export function newSession(
-  save: SaveData, _data: EngineData, io: Io, players: unknown, args: ChoiceArgs = {},
+  save: SaveData, data: EngineData, io: Io, players: unknown, args: ChoiceArgs = {},
 ): { save: SaveData; state: GameState } {
   const mode = args.mode ?? "gamemaster";
   if (!(MODES as unknown[]).includes(mode)) throw new GameError("mode_unknown", { mode: String(mode) });
@@ -320,10 +326,24 @@ export function newSession(
   }
   if (names.length < MIN_SEATS) throw new GameError("players_too_few", { min: MIN_SEATS });
   if (mode === "gamemaster" || mode === "solo") throw new GameError("mode_single", { mode });
-  if (!(BUILT_MODES as unknown[]).includes(mode)) throw new GameError("mode_not_built", { mode });
+  if (mode !== "rr-coop") throw new Error("session rows: task 1408 and plan 159");
+  const { jokers: _, ...rest } = args;
+  const choice = resolveChoice(data, rest);
+  if (args.answers !== undefined) throw new GameError("gamemaster_only", { action: "answers" });
+  const overrides = args.jokers === undefined ? {} : checkBudget(args.jokers);
+  const report = supply(save, data, choice);
+  if (!report.ok) throw supplyShort(report);
   return action(save, (work) => {
-    seatPlayers(work, names, io);
-    throw new Error("session rows: plans 158 and 159");
+    const game = latest(work);
+    if (game && game.row.result === null) saveGame(game.row, game.state, io, "abandoned");
+    const seats = seatPlayers(work, names, io).map((player_id) => ({ player_id }));
+    const state = freshState(args, choice, mode, overrides);
+    deal(work, state, data, io);
+    work.games.push({
+      id: nextId(work.games), started_on: io.now, finished_on: null, result: null, player_id: null,
+      ...(data.locale === "es" ? {} : { locale: data.locale }), seats, turn: 0, state: structuredClone(state),
+    });
+    return state;
   });
 }
 
@@ -351,9 +371,10 @@ function deal(work: SaveData, state: GameState, data: EngineData, io: Io): void 
   openIfNoCards(state, data, io);
 }
 
-export function pick(save: SaveData, data: EngineData, io: Io, index: number): { save: SaveData; state: GameState } {
+export function pick(save: SaveData, data: EngineData, io: Io, index: number, seat?: unknown): { save: SaveData; state: GameState } {
   return action(save, (work) => {
     const { row, state } = running(work);
+    actor(row, seat);
     if (state.phase !== "select") throw new GameError("no_cards");
     if (!(0 <= index && index < state.options.length)) throw new GameError("card_invalid", { n: index + 1 });
     open(state, data, io, index);
@@ -363,9 +384,10 @@ export function pick(save: SaveData, data: EngineData, io: Io, index: number): {
 }
 
 /** The final answer: check it, record it as seen, move on (next level, won or lost). */
-export function answer(save: SaveData, data: EngineData, io: Io, index: number): { save: SaveData; state: GameState } {
+export function answer(save: SaveData, data: EngineData, io: Io, index: number, seat?: unknown): { save: SaveData; state: GameState } {
   return action(save, (work) => {
     const { row, state } = running(work);
+    const who = actor(row, seat);
     if (state.phase !== "question") throw new GameError("no_question");
     if (state.settings.answers === false) throw new GameError("answers_off");
     if (!(0 <= index && index < state.answers.length) || state.struck.includes(index))
@@ -374,7 +396,7 @@ export function answer(save: SaveData, data: EngineData, io: Io, index: number):
     const before: GameState = { ...structuredClone(state), undo: null };
     const correct = state.answers[index] === q.answer;
     see(work, q.id, row.id, io);
-    state.history.push({ level: state.level, question_id: q.id, correct, jokers: state.jokers });
+    state.history.push({ level: state.level, question_id: q.id, correct, jokers: state.jokers, ...(row.seats ? { seat: who } : {}) });
     state.last = { question_id: q.id, chosen: index, correct, correct_index: state.answers.indexOf(q.answer) };
     state.undo = before;
     let result: Result = null;
@@ -388,6 +410,7 @@ export function answer(save: SaveData, data: EngineData, io: Io, index: number):
       deal(work, state, data, io);
     }
     saveGame(row, state, io, result);
+    if (row.seats && result === null) row.turn = (who + 1) % row.seats.length;
     return state;
   });
 }
@@ -610,15 +633,18 @@ const PLAYS: Record<JokerName, Play> = {
 
 /** Play a joker on the question on screen; `event` is what happened (for the animation). */
 export function joker(
-  save: SaveData, data: EngineData, io: Io, name: string, args: JokerArgs = {},
+  save: SaveData, data: EngineData, io: Io, name: string, args: JokerArgs = {}, seat?: unknown,
 ): { save: SaveData; state: GameState; event: JokerEvent } {
   if (!(JOKERS as string[]).includes(name)) throw new GameError("joker_unknown", { joker: name });
   const jname = name as JokerName;
   const { save: out, result } = transact(save, (work) => {
     const { row, state } = running(work);
+    const who = actor(row, seat);
     if (state.phase !== "question") throw new GameError("joker_not_question");
     if (jokersLeft(state)[jname] === 0) throw new GameError("joker_spent", { joker: jname });
+    const before = state.history.length;
     const event = PLAYS[jname](work, row.id, state, data, io, args);
+    if (row.seats) for (const h of state.history.slice(before)) h.seat = who;
     saveGame(row, state, io);
     return { state, event: { joker: jname, ...event } as JokerEvent };
   });
@@ -891,8 +917,9 @@ export function view(save: SaveData, data: EngineData, io: Io): Game | null {
   const by = data.byId;
   const playing = result === null && state.phase === "question" && state.current !== null && by.has(state.current);
   const jokers = playing ? jokersView(save, row, state, data, io) : null;
+  const named = (id: number | null) => save.players.find((p) => p.id === id)?.name ?? null;
   const out: Game = {
-    id: row.id, player: save.players.find((p) => p.id === row.player_id)?.name ?? null, result,
+    id: row.id, player: named(row.seats ? row.seats[row.turn ?? 0].player_id : row.player_id), result,
     level: state.level, phase: state.phase,
     options: state.options.filter((i) => by.has(i)).map((i) => ({ description: by.get(i)!.description })),
     history: state.history.filter((h) => h.correct !== undefined).map((h) => ({ level: h.level, correct: h.correct! })),
@@ -900,6 +927,17 @@ export function view(save: SaveData, data: EngineData, io: Io): Game | null {
     purged: state.purged, repeat: state.repeat, jokers,
     settings: state.settings, jokers_left: jokersLeft(state), question: null, last: null,
   };
+  if (row.seats) {
+    const left = jokersLeft(state);
+    out.session = {
+      mode: gameMode(state), turn: row.turn ?? 0,
+      seats: row.seats.map((seat, i) => {
+        const r = seatResult(row, i);
+        const status = r === "won" || r === "lost" ? r : seat.out ? "out" : "playing";
+        return { player: named(seat.player_id), status, level: state.level, age_group: gameChoice(state, data).age_group ?? null, jokers_left: left };
+      }),
+    };
+  }
   const q = state.current === null ? undefined : by.get(state.current);
   if (q) {
     // Only the hints shown through «Soplo» (D-26, D-27); no description (04, "Question").
@@ -910,6 +948,9 @@ export function view(save: SaveData, data: EngineData, io: Io): Game | null {
     };
   }
   const last = state.last && by.get(state.last.question_id);
-  if (state.last && last) out.last = { ...state.last, answer: last.answer, fun_fact: last.fun_fact };
+  if (state.last && last) {
+    const seat = row.seats ? [...state.history].reverse().find((h) => h.correct !== undefined && h.question_id === state.last!.question_id)?.seat : undefined;
+    out.last = { ...state.last, answer: last.answer, fun_fact: last.fun_fact, ...(seat === undefined ? {} : { seat }) };
+  }
   return out;
 }
