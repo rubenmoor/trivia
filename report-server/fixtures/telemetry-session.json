@@ -15,6 +15,7 @@
       "result": "lost",
       "customized": false,
       "mods": false,
+      "players": 1,
       "jokers": {"hint": 3, "skip": 1, "easier": 0, "category": 1, "snipe": 0},
       "answers": [
         {"question": "q-0001", "level": 1, "correct": true, "jokers": {}},

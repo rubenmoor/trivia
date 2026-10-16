@@ -47,7 +47,7 @@ Helps the developer tune question difficulty and see how the game is played. Off
 - per game played in the session:
   - mode, question language, question pool version
   - age group or difficulty range, levels set and level reached, result (won, lost, completed, abandoned, still open)
-  - whether the settings were customized, whether mods were on, jokers used
+  - whether the settings were customized, whether mods were on, how many players shared the screen, jokers used
 - per answered question: question id, right or wrong, level, jokers used on it
 - not sent: names, Steam account id, IP address (Cloudflare sees it, the server doesn't store it), free text, questions from mods
 - a one-time Steam ticket proves a real copy; Valve checks it, the account id isn't kept
