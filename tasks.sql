@@ -36869,6 +36869,9 @@ What:
 - Style: bullets, ultra-concise (AGENTS.md)
 
 Done when: no doc describes the old flow for multiplayer modes; per-commit checks pass.', '2026-10-16T21:09:53Z', NULL, 1435, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1441, 130, 'DLC app for regional bundle germany', 'work', 'open', NULL, NULL, 'Bundle `germany` (`languages: ["de"]`, en joins once en translations exist: then de + en, like `colombia`): free DLC like `colombia` (`decision 66: Price model (OQ-33)`). In `plans/18-steam-integration.md` Steamworks checklist: DLC app «Regional: Germany» (de «Regional: Deutschland»; es/es-ES «Regional: Alemania»), price free, optional, off by default, depot `germany` linked; `authoring/steam/steam.json` `dlc` entry `germany` (`null` IDs until entered); the SW-7 decision lists its IDs like colombia''s. Names: `app/data/names.<locale>.json` `bundles.germany`. Only if the pack ships at upload time (`app/data/bundles/germany/`).', '2026-10-16T21:10:17Z', NULL, 1277, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1442, 89, 'DLC depot for regional bundle germany', 'work', 'open', NULL, NULL, 'Bundle `germany` (`languages: ["de"]`, en joins after translation): like `task 748: DLC depots for packs (decision 66)`: `steam.json` `dlc` entry `germany`, depot VDF, exclusions in the OS and `content` depots, `trivia-steam stage` union check, smoke game with and without the pack (a de save is offered it, others not; an en save too once `languages` lists en). `trivia-steam upload --dry-run` renders its depot with placeholder IDs. Only once `app/data/bundles/germany/pool.json` ships.', '2026-10-16T21:10:17Z', NULL, 1277, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1443, 88, 'Store text and capsules for DLC germany', 'work', 'open', NULL, NULL, 'Bundle `germany` (`languages: ["de"]`, en joins after translation; description in `app/data/names.de.json` and `names.en.json` `bundles.germany`): free DLC store page in `plans/17a-store-page.md` "Free DLC": store name «Regional: Deutschland» (en «Regional: Germany»), short and long description in de and en (free, needs the base game, optional, off by default), capsules via `authoring/store/capsules.mjs` for its languages. en text only once en translations of the pack exist. Approval via pm decision like colombia''s (`task 783: Free DLC store texts in 17a`).', '2026-10-16T21:10:18Z', NULL, 1277, 0, NULL, 'app');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -41181,6 +41184,84 @@ INSERT INTO decision (id, subject, status, options, body, intro, answer, reason,
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (291, 'Local multiplayer setup: flow and where each setting lives', 'answered', '[]', 'Keeps the existing Choice and Bundles screens (decision 158, decision 264, decision 268) and adds one screen; the Join screen must come before Bundles because the supply check needs the player count and per-seat groups; per-seat groups need seats, so rr-competitive''s groups sit on Join.', 'Before a multiplayer game starts, the family picks a game mode, says who plays, and sets difficulty and question sets. This settles the order of those screens and on which screen each setting sits, so every mode is set up the same way and nobody has to set the same thing twice.', 'Player → Choice (mode row with the multiplayer modes) → Join (multiplayer modes only) → Bundles → Level. The name picked on the Player screen is the first seat''s preset name. Choice: one age group for rr-coop and timed; rr-competitive has no group line there, each seat sets its own on the Join screen (preset: that player''s newest game''s group, else the default). «Personalizar partida» (joker counts, same for every seat) in rr-coop and rr-competitive, not in timed (no jokers). Bundles: one list per session, preset from the Player-screen player, supply checked for the whole session (player count, per-seat groups). Back: Bundles → Join → Choice, picks kept.', NULL, '2026-10-16T21:08:28Z', '2026-10-16T21:08:28Z', 1397, NULL, 'rule', 1397, '2026-10-16, task 1397: written into plan 162: Mode row, session setup and join screen.');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (292, 'Join screen: joining, leaving, names and claim keys', 'answered', '[]', 'Plan 161''s join helpers (bind an unbound pad''s A, the kbm join, claimKeyOk) do the binding; the screen only adds names, groups and removal; refusing pads instead of silently dropping keyboard seats keeps names nobody asked to lose.', 'On the join screen each person in the room signs in with their own controller, or the keyboard joins for those without one. This settles how someone joins and leaves, how names are chosen, and how keyboard-only players pick their personal key for the timed race, so the screen works the same with controllers, keyboard only, or both.', 'An unbound pad''s A joins it as a new seat; a bound pad''s B leaves its own seat (A again rejoins); every bound pad, keyboard and mouse drive the shared UI otherwise. The keyboard joins through a «join with keyboard» control (Enter or click); with no pad seated each press adds another keyboard seat (rr-*: they share keyboard and mouse, decision 273; timed: each picks its claim key right away, claimKeyOk, decision 290), once a pad is seated only one keyboard-and-mouse seat (decision 274) and a pad''s A is refused with a notice while two or more keyboard seats exist; a single keyboard seat becomes the keyboard-and-mouse seat when a pad joins (its picked key dropped, Space claims). Every seat row has a remove control. Names: each seat needs one before start, distinct by casefold; a name chooser per seat (known players not yet seated, keys 1–9, plus a new name with the field, LetterPicker for pads or Steam''s floating keyboard); the first seat preset to the Player screen''s name. Seat colour by join order. No cap of our own, start needs at least 2 seats.', NULL, '2026-10-16T21:08:29Z', '2026-10-16T21:08:29Z', 1397, NULL, 'rule', 1397, '2026-10-16, task 1397: written into plan 162: Mode row, session setup and join screen.');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (293, 'Unbuilt multiplayer modes: on the mode row in dev mode only', 'answered', '[]', 'plan 158 moves mode_not_built to api.ts new; the gallery and the checks of parts 6–8 and 11 need the modes before part 10 ships them (decision 168: Store texts name only the built game modes; BUILT_MODES gate).', 'The new multiplayer modes are built screen by screen long before they ship, and they only appear for players once their Steam achievement exists. Until then the developer and the automated screenshots still need to reach them. This settles that they show up only in the game''s developer mode.', 'While a mode isn''t in BUILT_MODES, the Choice screen''s mode row shows it only in devMode (dev server, TRIVIA_DEV_STEAM_USER), marked PLACEHOLDER(<task id>) with the task that ships it; the engine''s api new accepts an unbuilt mode only with a dev flag the client sets in devMode; a real Steam user never sees or starts one.', NULL, '2026-10-16T21:08:29Z', '2026-10-16T21:08:29Z', 1397, NULL, 'rule', 1397, '2026-10-16, task 1397: written into plan 162: Mode row, session setup and join screen.');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (294, 'germany taxonomy: categories and subcategories', 'pending', '["the proposal as is (15 categories, 53 subcategories)", "changes (say which)"]', 'Bundle `germany` (German (Germany), `languages: ["de"]`, country DE, target 2000 ≈ 38 per subcategory).
+
+Rule: Answering needs a connection to Germany: German places, food, customs, holidays, people, music, sport, media, words, sayings or history that players outside Germany mostly wouldn''t know; things known to families anywhere (Berlin''s wall, Beethoven, Oktoberfest as a fact) stay in `base`, and Austrian or Swiss topics are not here.
+
+Voice: Standard German as spoken in Germany: German spelling with "ß", German words ("Brötchen", "Handy", "Fahrrad", "Bürgersteig"), dates as "20. Juli 1969", metric units
+
+Proposal (`qgen taxonomy --bundle germany`, from the general list of decision 213: General category list for regional bundles): 15 categories, 53 subcategories, none of the general list left out, one region category (`east-germany`). Slug, English name, German name (the bundle''s language; es names are drafted on apply). Full proposal with scopes and samples: `work/taxonomy/germany/proposal.md`.
+
+- `geography` Geography of Germany (de: Geographie Deutschlands; 5, general)
+  - `states-and-capitals` German states and their capitals (de: Bundesländer und Landeshauptstädte)
+  - `cities-and-towns` German cities and towns (de: Städte und Orte in Deutschland)
+  - `rivers-lakes-and-coasts` Rivers, lakes and coasts of Germany (de: Flüsse, Seen und Küsten Deutschlands)
+  - `mountains-and-landscapes` Mountains and landscapes of Germany (de: Gebirge und Landschaften Deutschlands)
+  - `sights-and-landmarks` Sights and landmarks in Germany (de: Sehenswürdigkeiten in Deutschland)
+- `nature` Nature of Germany (de: Natur in Deutschland; 3, general)
+  - `native-animals` Animals of Germany (de: Tiere in Deutschland)
+  - `plants-and-forests` Plants and forests of Germany (de: Pflanzen und Wald in Deutschland)
+  - `parks-weather-and-climate` National parks, weather and climate in Germany (de: Nationalparks, Wetter und Klima)
+- `history` History of Germany (de: Geschichte Deutschlands; 5, general)
+  - `early-history` Germanic tribes, Romans and Middle Ages (de: Germanen, Römer und Mittelalter)
+  - `reformation-to-empire` From the Reformation to 1871 (de: Von der Reformation bis zur Reichsgründung)
+  - `empire-weimar-and-nazi-era` Empire, Weimar Republic and Nazi era (de: Kaiserreich, Weimarer Republik und NS-Zeit)
+  - `federal-republic-and-reunification` Federal Republic and reunification (de: Bundesrepublik und Wiedervereinigung)
+  - `chancellors-and-presidents` German chancellors and presidents (de: Bundeskanzler und Bundespräsidenten)
+- `people` People of Germany (de: Bekannte Deutsche; 2, general)
+  - `inventors-and-scientists` German inventors and scientists (de: Erfinder und Forscher)
+  - `founders-and-entrepreneurs` German founders and entrepreneurs (de: Unternehmer und Firmengründer)
+- `food-and-drink` German food and drink (de: Essen und Trinken in Deutschland; 5, general)
+  - `regional-dishes` German regional dishes (de: Regionale Gerichte)
+  - `sausages-and-cheese` German sausages, cheese and Brotzeit (de: Wurst, Käse und Brotzeit)
+  - `bread-and-baked-goods` German bread and baked goods (de: Brot, Brötchen und Gebäck)
+  - `cakes-and-sweets` German cakes and sweets (de: Kuchen und Süßigkeiten)
+  - `drinks` German drinks (de: Getränke in Deutschland)
+- `festivals-and-traditions` Festivals and traditions of Germany (de: Feste und Bräuche in Deutschland; 4, general)
+  - `advent-and-christmas` Advent and Christmas in Germany (de: Advent und Weihnachten)
+  - `carnival-and-fairs` Carnival and fairs in Germany (de: Karneval, Fasching und Volksfeste)
+  - `holidays-through-the-year` German holidays through the year (de: Feiertage und Bräuche im Jahreslauf)
+  - `family-customs-and-dress` Family customs, dress and crafts (de: Familienbräuche, Trachten und Handwerk)
+- `myths-and-legends` Myths and legends of Germany (de: Sagen und Legenden aus Deutschland; 2, general)
+  - `legends-and-figures` German legends and legendary figures (de: Sagen und Sagengestalten)
+  - `superstitions-and-folk-beliefs` German superstitions and folk beliefs (de: Aberglaube und Volksglaube)
+- `music-and-dance` Music and dance of Germany (de: Musik aus Deutschland; 4, general)
+  - `schlager-and-folk-music` Schlager and Volksmusik (de: Schlager und Volksmusik)
+  - `pop-and-rock` German pop and rock (de: Deutschpop, Rock und Neue Deutsche Welle)
+  - `rap-and-electronic` German rap and electronic music (de: Deutschrap und elektronische Musik)
+  - `childrens-and-folk-songs` German children''s and folk songs (de: Kinderlieder und Volkslieder)
+- `art-and-literature` German art and literature (de: Kunst und Literatur aus Deutschland; 3, general)
+  - `classic-literature` German literature (de: Deutsche Literatur)
+  - `childrens-books-and-comics` German children''s books and comics (de: Kinderbücher und Comics)
+  - `art-architecture-and-museums` German art, architecture and museums (de: Kunst, Architektur und Museen)
+- `film-and-television` German film and television (de: Film und Fernsehen in Deutschland; 4, general)
+  - `series-and-crime` German TV series and crime shows (de: Serien und Krimis)
+  - `childrens-tv-and-audio-dramas` German children''s TV and audio dramas (de: Kinderfernsehen und Hörspiele)
+  - `shows-and-presenters` German TV shows, presenters and internet stars (de: Shows, Moderatoren und Internetstars)
+  - `films-and-actors` German films, actors and comedians (de: Deutsche Filme, Schauspieler und Komiker)
+- `sports` Sport in Germany (de: Sport in Deutschland; 4, general)
+  - `bundesliga-and-clubs` Bundesliga and German clubs (de: Bundesliga und Vereine)
+  - `national-team` Germany''s national football teams (de: Die Nationalmannschaft)
+  - `athletes-and-other-sports` German athletes (de: Deutsche Sportlerinnen und Sportler)
+  - `winter-sports` Winter sports in Germany (de: Wintersport)
+- `how-people-speak` How Germany speaks (de: So spricht Deutschland; 3, general)
+  - `dialects-and-regional-words` German dialects and regional words (de: Dialekte und regionale Wörter)
+  - `sayings-and-idioms` German sayings and idioms (de: Redewendungen und Sprichwörter)
+  - `slang-and-everyday-words` German slang and everyday words (de: Umgangssprache und Jugendsprache)
+- `daily-life` Daily life in Germany (de: Alltag in Deutschland; 5, general)
+  - `brands-and-products` German brands and products (de: Marken und Produkte)
+  - `money-and-shopping` Money and shopping in Germany (de: Geld und Einkaufen)
+  - `school-and-education` School in Germany (de: Schule und Ausbildung)
+  - `transport` Getting around in Germany (de: Verkehr, Bahn und Autobahn)
+  - `home-and-public-life` Home life and public services in Germany (de: Haushalt, Ämter und Alltagsregeln)
+- `symbols` Symbols of Germany (de: Symbole Deutschlands; 2, general)
+  - `national-symbols-and-state` National symbols and the German state (de: Staatssymbole und Grundgesetz)
+  - `state-and-city-emblems` Emblems of German states and cities (de: Wappen der Länder und Städte)
+- `east-germany` The GDR (de: Die DDR; 2, region)
+  - `gdr-history` History of the GDR (de: Geschichte der DDR)
+  - `gdr-everyday-life` Everyday life in the GDR (de: Alltag in der DDR)
+
+left out: []', 'The new German question pack needs its own list of topics, so its questions cover life in Germany evenly. The proposal keeps the general topics every regional pack has, adds one topic of its own (the former East Germany), and splits them into 53 subtopics, about 38 questions each at 2000 questions. Applying it fixes the pack''s structure; the Spanish topic names are drafted at that point.', NULL, NULL, '2026-10-16T21:10:05Z', NULL, 1277, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -42613,7 +42694,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1412, 1410, '2026-10-16T21:01:59Z', '2026-10-16T21:02:38Z', 'done', NULL, 0, 'c444c5be8c1620d4d6633553d8581a34474f3d9e', NULL, 'claude-opus-5-5', 'c966ecbd-b549-43d7-a8d1-88d42cce2691', NULL, 6, 12, 3919, 192123, 29801, 0.3552606, 74883);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1413, 1411, '2026-10-16T21:02:38Z', '2026-10-16T21:04:10Z', 'done', NULL, 0, '4f09072dd4f39d244e850866b94ef91f63915fc1', NULL, 'claude-opus-5-5', '9ec52bb6-a1ce-4538-96f3-5928358efb59', NULL, 9, 16, 8198, 310960, 39895, 0.545376, 74883);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1414, 1396, '2026-10-16T21:03:21Z', '2026-10-16T21:06:33Z', 'done', NULL, 0, '4f09072dd4f39d244e850866b94ef91f63915fc1', 'app', 'claude-opus-5-5', '4d7303f8-8b8f-428f-ae28-eb591aa500cb', NULL, 12, 24, 17487, 701889, 76721, 1.1039818, 74883);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1415, 1277, '2026-10-16T21:03:53Z', NULL, 'running', NULL, NULL, 'bb6850d7d2a069c8089fd7befac81513eb047765', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 74883);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1415, 1277, '2026-10-16T21:03:53Z', '2026-10-16T21:10:27Z', 'blocked', NULL, 0, 'bb6850d7d2a069c8089fd7befac81513eb047765', 'questions', 'claude-sonnet-5-5', 'ef7b4f01-afe6-46cc-bc94-4f5edb3e163e', NULL, 14, 28, 5528, 820899, 69095, 0.49589580000000005, 74883);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1416, 1414, '2026-10-16T21:04:11Z', '2026-10-16T21:05:04Z', 'done', NULL, 0, 'ffdac333d8f12093316dc5d4ab9306fead035daa', NULL, 'claude-opus-5-5', '35e54f8a-747e-4a33-98de-c745d4609031', NULL, 6, 12, 3762, 227766, 39323, 0.43542520000000012, 74883);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1417, 1430, '2026-10-16T21:06:22Z', '2026-10-16T21:07:22Z', 'done', NULL, 0, '4393f5a48d3125443dce7cfd5239d84220da6596', NULL, 'claude-opus-5-5', '180a0562-d8ec-4f1f-bd87-7f32e031cdd0', NULL, 7, 14, 6252, 282605, 40989, 0.509529, 74883);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1418, 1397, '2026-10-16T21:06:33Z', '2026-10-16T21:09:40Z', 'done', NULL, 0, '4393f5a48d3125443dce7cfd5239d84220da6596', 'app', 'claude-opus-5-5', '6cd724ff-ce69-4b8a-9e30-65a8b8249bf7', NULL, 21, 40, 16192, 1448434, 87573, 1.3142707999999999, 74883);
@@ -43070,6 +43151,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1276, 287);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1277, 250);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1277, 258);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1277, 266);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1277, 294);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1278, 250);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1278, 258);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1278, 266);
