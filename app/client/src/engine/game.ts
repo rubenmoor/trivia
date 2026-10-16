@@ -8,7 +8,7 @@ import { catKey, categoryOf, subKey, subOf } from "./pool.ts";
 import { casefold, pyLen, pySplitJoin, pyTruthy } from "./pycompat.ts";
 import * as selection from "./selection.ts";
 import type { EngineData, GameRow, GameState, Io, Outcome, SaveData } from "./state.ts";
-import { GameError, UNLIMITED, gameLocale, newest, nextId, transact, trial, withDefaults } from "./state.ts";
+import { GameError, UNLIMITED, gameLocale, newest, nextId, rowPlayers, rowStates, seatResult, transact, trial, withDefaults } from "./state.ts";
 
 export { GameError, UNLIMITED };
 export {
@@ -44,9 +44,9 @@ export function cleanName(name: unknown): string {
 /** Known players, the most recent first, with their game counts (UI-16). */
 export function players(save: SaveData): Player[] {
   const rows = [...save.players].sort((a, b) => a.id - b.id).map((p) => {
-    const games = save.games.filter((g) => g.player_id === p.id);
-    const last = games.reduce<string | null>((m, g) => (m === null || g.started_on > m ? g.started_on : m), null);
-    return { p, games: games.length, won: games.filter((g) => g.result === "won").length, last }; // `completed`: not a win (D-105)
+    const games = save.games.flatMap((g) => rowPlayers(g).flatMap((id, i) => (id === p.id ? [{ g, i }] : [])));
+    const last = games.reduce<string | null>((m, { g }) => (m === null || g.started_on > m ? g.started_on : m), null);
+    return { p, games: games.length, won: games.filter(({ g, i }) => seatResult(g, i) === "won").length, last }; // `completed`: not a win (D-105)
   });
   rows.sort((a, b) => {
     const ka = a.last ?? a.p.created_on, kb = b.last ?? b.p.created_on;
@@ -68,14 +68,23 @@ export function countOf(save: SaveData): (q: PoolQuestion) => number {
   return (q) => counts.get(q.id) ?? 0;
 }
 
-/** Delete a player (GF-7): the name and their games (a running one too); the seen rows stay. */
-export function deletePlayer(save: SaveData, name: unknown): { save: SaveData } {
+/** Delete a player (GF-7): the name and their games (a running one too); the seen rows stay. A session stays
+ * with the seat's player_id null, abandoned if it was running. */
+export function deletePlayer(save: SaveData, name: unknown, io: Io): { save: SaveData } {
   return transact(save, (work) => {
     const pid = playerId(work, cleanName(name));
     if (pid === null) throw new GameError("player_unknown", { name });
     const gone = new Set(work.games.filter((g) => g.player_id === pid).map((g) => g.id));
     for (const s of work.seen) if (gone.has(s.game_id)) s.game_id = 0;
     work.games = work.games.filter((g) => g.player_id !== pid);
+    for (const g of work.games) {
+      const seats = g.seats?.filter((x) => x.player_id === pid) ?? [];
+      for (const x of seats) x.player_id = null;
+      if (seats.length && g.result === null) {
+        g.result = "abandoned";
+        g.finished_on = io.now;
+      }
+    }
     work.players = work.players.filter((p) => p.id !== pid);
   });
 }
@@ -778,31 +787,42 @@ function lacks(state: GameState | null, data: EngineData): boolean {
 export function repair(save: SaveData, data: EngineData, io: Io): SaveData {
   const game = latest(save);
   if (!game || game.row.result !== null || gameLocale(game.row) !== data.locale) return save;
-  if (!lacks(game.state, data) && !lacks(game.state.undo, data)) return save;
+  if (!rowStates(game.row).map((s) => withDefaults(structuredClone(s))).some((s) => lacks(s, data) || lacks(s.undo, data))) return save;
   return transact(save, (work) => {
-    const { row, state } = running(work);
-    const has = (id: string) => data.byId.has(id);
-    if (state.current !== null && !has(state.current)) {
-      const jokers = state.jokers;
-      state.phase = "select";
-      leaveQuestion(state);
-      state.jokers = jokers;
+    const { row } = running(work);
+    const owners: { state: GameState; set: (s: GameState) => void }[] =
+      rowStates(row)[0] === row.state ? [{ state: row.state, set: (s) => saveGame(row, s, io) }]
+        : row.seats!.flatMap((seat) => (seat.state ? [{ state: seat.state, set: (s: GameState) => { seat.state = structuredClone(s); } }] : []));
+    for (const o of owners) {
+      const state = withDefaults(structuredClone(o.state));
+      mend(work, state, data, io);
+      o.set(state);
     }
-    if (state.last && !has(state.last.question_id)) state.last = null;
-    if (lacks(state.undo, data)) state.undo = null;
-    const missing = state.options.filter((i) => !has(i)).length;
-    if (missing) {
-      let fresh: string[] = [];
-      try {
-        fresh = draw(work, state, data, io, missing, state.options.filter(has).map((i) => data.byId.get(i)!));
-      } catch (e) {
-        if (!(e instanceof GameError)) throw e;
-      }
-      state.options = state.options.flatMap((i) => (has(i) ? [i] : fresh.splice(0, 1)));
-    }
-    if (state.options.length) openIfNoCards(state, data, io);
-    saveGame(row, state, io);
   }).save;
+}
+
+/** repair's fix for one game state. */
+function mend(work: SaveData, state: GameState, data: EngineData, io: Io): void {
+  const has = (id: string) => data.byId.has(id);
+  if (state.current !== null && !has(state.current)) {
+    const jokers = state.jokers;
+    state.phase = "select";
+    leaveQuestion(state);
+    state.jokers = jokers;
+  }
+  if (state.last && !has(state.last.question_id)) state.last = null;
+  if (lacks(state.undo, data)) state.undo = null;
+  const missing = state.options.filter((i) => !has(i)).length;
+  if (missing) {
+    let fresh: string[] = [];
+    try {
+      fresh = draw(work, state, data, io, missing, state.options.filter(has).map((i) => data.byId.get(i)!));
+    } catch (e) {
+      if (!(e instanceof GameError)) throw e;
+    }
+    state.options = state.options.flatMap((i) => (has(i) ? [i] : fresh.splice(0, 1)));
+  }
+  if (state.options.length) openIfNoCards(state, data, io);
 }
 
 /** The newest game as the TV sees it: no correct answer before the final answer. */

@@ -1,11 +1,11 @@
 """The family's save as one JSON document, written whole by the client (plans/49, D-67).
 
-    game.json   {"version": 4, "players": [...], "games": [...], "seen": [...], "blocked": [...],
+    game.json   {"version": 5, "players": [...], "games": [...], "seen": [...], "blocked": [...],
                  "notified_exhausted": [...], "flags": {...}}
 
 Version 3 (plan 65) replaces `burned` with `seen` rows and `blocked`; version 4 (decision 60) merges
 `reports` into `flags`. `migrate()` still writes version 2; the client upgrades it on load (engine/save.ts)
-and writes version 4 back.
+and writes version 5 back (version 5, plan 157, adds session rows to `games`; the server never reads them).
 
 The server only checks the envelope; the game rules live in the client's engine.
 `migrate()` carries game.sqlite + flags.json over once (PORT-5) at server start; nothing else reads them.
@@ -16,10 +16,10 @@ import json, os, sqlite3, tempfile, threading, time
 import paths
 
 FILE = paths.STATE / "game.json"
-VERSION = 4  # the client upgrades older saves (engine/save.ts)
+VERSION = 5  # the client upgrades older saves (engine/save.ts)
 MIGRATE_VERSION = 2  # what migrate() writes
 LISTS = {2: ("players", "games", "burned", "reports"), 3: ("players", "games", "seen", "blocked", "reports"),
-         4: ("players", "games", "seen", "blocked")}
+         4: ("players", "games", "seen", "blocked"), 5: ("players", "games", "seen", "blocked")}
 MAX_BYTES = 10 * 1024 * 1024
 BACKUPS = paths.STATE / "backup"
 KINDS = ("corrupt", "newer")

@@ -4,6 +4,8 @@ Reads the desktop save: TRIVIA_SAVE_DIR/game.json if set, else state/desktop/<us
 the newest; named on stderr). Without one: no seen counts, blocked questions or flags. Never writes the save;
 only its own ledger:
 
+Version 5 (plan 157) adds multiplayer session rows to `games` (`seats`); this module reads none of that.
+
     flags-applied.json   {"<question id>": "<flagged_on>[ <note>]"}   flags already turned into reviews (stamp())
 """
 import json, os, sys

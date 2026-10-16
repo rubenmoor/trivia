@@ -6,7 +6,7 @@ import { broadOf, byId, subKey } from "./pool.ts";
 import { pyRepr } from "./pycompat.ts";
 import type { Rng } from "./rng.ts";
 
-export const SAVE_VERSION = 4; // bump authoring/tools/save_file.py's upgrades too (and app/server/save.py VERSION/LISTS until task 765)
+export const SAVE_VERSION = 5; // bump authoring/tools/save_file.py's upgrades too (and app/server/save.py VERSION/LISTS until task 765)
 
 export type { Language };
 
@@ -61,12 +61,36 @@ export interface GameRow {
   finished_on: string | null;
   /** `completed`: the last level reached by reveals (D-105), neither won nor lost. */
   result: "won" | "lost" | "completed" | "abandoned" | null;
-  /** null only for games from before D-28. */
+  /** null: games before D-28 or a multiplayer session. */
   player_id: number | null;
+  /** A multiplayer session (milestone 16), join order; missing = a one-player game (`player_id`). Since version 5. */
+  seats?: Seat[];
+  /** Seat index on turn (round-robin modes); missing outside them. */
+  turn?: number;
   /** The question locale the game plays in (plan 68); missing = es. */
   locale?: string;
   state: GameState;
 }
+
+/** One player of a session. `state`: rr-competitive's own game; `lives` / `out`: timed (`out` also rr-competitive's wrong answer). */
+export interface Seat {
+  /** null after the player was deleted. */
+  player_id: number | null;
+  state?: GameState;
+  lives?: number;
+  out?: true;
+  result?: "won" | "lost";
+}
+
+/** The players of a row, in seat order (a one-player game: its player). */
+export const rowPlayers = (row: GameRow): (number | null)[] => row.seats?.map((s) => s.player_id) ?? [row.player_id];
+
+/** Every game state of a row: rr-competitive's seats' own, else the row's. */
+export const rowStates = (row: GameRow): GameState[] =>
+  row.state.settings.mode === "rr-competitive" && row.seats ? row.seats.flatMap((s) => (s.state ? [s.state] : [])) : [row.state];
+
+/** A seat's outcome: its own, else the row's (rr-coop). */
+export const seatResult = (row: GameRow, i: number): GameRow["result"] => row.seats?.[i]?.result ?? row.result;
 
 export const gameLocale = (row: GameRow): string => row.locale ?? "es";
 
@@ -93,6 +117,8 @@ interface HistoryEntry {
   outcome?: Outcome;
   /** Missing in games from before JK-2. */
   jokers?: JokerName[];
+  /** Who answered (rr-coop, timed); missing = the row's one player. */
+  seat?: number;
 }
 
 /** A reveal (D-105): `chosen` null, `correct` false, `revealed`. */
