@@ -6,6 +6,7 @@
   import { focusControl, pushScope } from "../../lib/input.svelte.ts";
   import { setTelemetryConsent } from "../../lib/telemetry.ts";
   import Icon from "../Icon.svelte";
+  import Prompt from "../Prompt.svelte";
 
   let { ondone }: { ondone: () => void } = $props();
 
@@ -51,7 +52,7 @@
 <section class="screen consent" bind:this={section}>
   <h1 class="title">{t("consent.title")}</h1>
   <p class="body">{t("consent.body")}</p>
-  <p class="line">{t("consent.noNames")}<br />{t("consent.change")}</p>
+  <p class="line">{t("consent.noNames")}<br />{t("consent.change")} <Prompt action="menu" /></p>
   <div class="options">
     {#each OPTIONS as yes, i (yes)}
       <button

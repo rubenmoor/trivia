@@ -126,7 +126,7 @@ const es = {
     title: "¿Nos ayudas a mejorar el juego?",
     body: "Si aceptas, al cerrarse el juego envía datos anónimos de las partidas: qué preguntas se respondieron, si bien o mal, nivel, grupo de edad y comodines.",
     noNames: "Sin nombres, sin cuenta de Steam, sin dirección IP.",
-    change: "Lo puedes cambiar en el menú (Esc).",
+    change: "Lo puedes cambiar en el menú.",
     no: "No",
     yes: "Sí, enviar datos",
   },
