@@ -342,7 +342,8 @@ def health_section(run, pool=None):
     pool = pool if pool is not None else load(POOL)["questions"]
     runs = [r for r in batch_runs() if num(r) < num(run)][-2:] + [run]
     return ["## Health", "",
-            "Batch health (plan 15): this batch and the two before it, ✓/✗ against the thresholds in "
+            f"Batch health (plan 15): this batch and the two before it ({', '.join(runs[:-1]) or 'none'}; "
+            "across the source-locale switch too, decision 233), ✓/✗ against the thresholds in "
             "`authoring/data/targets.json`; a ✗ stops the next `qgen batch` until `qgen health ack` (D-55). "
             "Needs-work counts are `record`'s decisions; `problems guessed` = classified from feedback.", "",
             *table(runs, pool), "", deficit_line(pool=pool), ""]
