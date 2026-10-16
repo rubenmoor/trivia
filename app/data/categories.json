@@ -12,7 +12,7 @@
       "Comida mexicana",
       "Comida japonesa",
       "Comida rápida",
-      "Comida latinoamericana",
+      "Cocinas del mundo",
       "Bebidas",
       "Quesos",
       "Dulces y chocolate",
@@ -160,7 +160,7 @@
       "Fantasía",
       "Cine de terror",
       "Reality shows",
-      "Telenovelas",
+      "Telenovelas del mundo",
       "James Bond",
       "Harry Potter",
       "El Señor de los Anillos"
@@ -202,10 +202,10 @@
       "Fotografía"
     ]},
     {"slug": "idiomas-palabras", "name": "Idiomas y palabras", "subcategories": [
-      "Idioma",
+      "Lenguaje",
       "Idiomas del mundo",
       "Frases célebres",
-      "Refranes y dichos"
+      "Refranes del mundo"
     ]},
     {"slug": "juegos-curiosidades", "name": "Juegos y curiosidades", "subcategories": [
       "Juguetes",

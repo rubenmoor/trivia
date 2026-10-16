@@ -189,7 +189,7 @@
         "pd_reasons": []
       },
       "fun_fact": "La arepa de huevo es típica de la Costa Caribe: ¡se fríe con un huevo adentro!",
-      "subcategory": "Comida latinoamericana",
+      "subcategory": "Cocinas del mundo",
       "style": null,
       "quality": {
         "correct": 5,
@@ -214,7 +214,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Arepa",
+      "axes": {
+        "move": "made_of",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "colombia"
+      }
     },
     {
       "id": "q-0004",
@@ -8113,7 +8121,7 @@
         "pd_reasons": []
       },
       "fun_fact": "La rayita de la ñ se llama virgulilla.",
-      "subcategory": "Idioma",
+      "subcategory": "Lenguaje",
       "style": null,
       "quality": {
         "correct": 5,
@@ -8152,7 +8160,15 @@
         },
         "revised_on": "2026-10-06"
       },
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Ñ",
+      "axes": {
+        "move": "identify",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "language"
+      }
     },
     {
       "id": "q-0111",
@@ -8329,7 +8345,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Casi todas las palabras que terminan en z hacen el plural con '-ces': pez, peces; voz, voces.",
-      "subcategory": "Idioma",
+      "subcategory": "Lenguaje",
       "style": null,
       "quality": {
         "correct": 5,
@@ -8355,7 +8371,15 @@
       },
       "background": null,
       "difficulty_original": 5,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Plural",
+      "axes": {
+        "move": "sequence",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0114",
@@ -8470,7 +8494,7 @@
         "pd_reasons": []
       },
       "fun_fact": "'Rápido' es un adjetivo; si le agregas '-mente', se vuelve adverbio.",
-      "subcategory": "Idioma",
+      "subcategory": "Lenguaje",
       "style": null,
       "quality": {
         "correct": 5,
@@ -8495,7 +8519,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Adverb",
+      "axes": {
+        "move": "name_concept",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "group",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0116",
@@ -10639,7 +10671,7 @@
         "pd_reasons": []
       },
       "fun_fact": "'Anita lava la tina' es una frase entera que se lee igual al revés. ¡Haz la prueba!",
-      "subcategory": "Idioma",
+      "subcategory": "Lenguaje",
       "style": "name the concept: describe a key term of the category and ask for its name (e.g. \"what is it called when people move from the countryside to the cities?\" → urbanization)",
       "quality": {
         "correct": 5,
@@ -10663,7 +10695,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Palindrome",
+      "axes": {
+        "move": "name_concept",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "language"
+      }
     },
     {
       "id": "q-0148",
@@ -10699,7 +10739,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Hay unos insectos llamados efímeras: de adultos, algunos viven apenas un día.",
-      "subcategory": "Idioma",
+      "subcategory": "Lenguaje",
       "style": "what does this word mean",
       "quality": {
         "correct": 5,
@@ -10723,7 +10763,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Ephemeral",
+      "axes": {
+        "move": "word_meaning",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "language"
+      }
     },
     {
       "id": "q-0149",
@@ -10759,7 +10807,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Algunas palabras no tienen un contrario claro: ¿cuál sería lo contrario de 'jirafa'?",
-      "subcategory": "Idioma",
+      "subcategory": "Lenguaje",
       "style": "guess the word from its definition",
       "quality": {
         "correct": 5,
@@ -10784,7 +10832,15 @@
       },
       "background": null,
       "difficulty_original": 4,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Antonym",
+      "axes": {
+        "move": "name_concept",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "word",
+        "lens": "school"
+      }
     },
     {
       "id": "q-0150",
@@ -10820,7 +10876,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Cada idioma imita a los animales a su manera: en español el perro dice 'guau' y en inglés, 'woof'.",
-      "subcategory": "Idioma",
+      "subcategory": "Lenguaje",
       "style": "asking for a logical relation",
       "quality": {
         "correct": 5,
@@ -10845,7 +10901,15 @@
       },
       "background": null,
       "difficulty_original": 7,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Neigh",
+      "axes": {
+        "move": "analogy",
+        "stimulus": "none",
+        "clue": "completion",
+        "answer_kind": "word",
+        "lens": "language"
+      }
     },
     {
       "id": "q-0151",
@@ -13172,7 +13236,7 @@
         "pd_reasons": []
       },
       "fun_fact": "La palabra 'empanada' viene de 'empanar', que significa envolver algo en masa o pan.",
-      "subcategory": "Comida latinoamericana",
+      "subcategory": "Cocinas del mundo",
       "style": "showing a zoomed-in detail of a picture and asking what it is",
       "quality": {
         "correct": 5,
@@ -13197,7 +13261,15 @@
       },
       "background": null,
       "difficulty_original": 4,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Empanada",
+      "axes": {
+        "move": "identify",
+        "stimulus": "detail",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "colombia"
+      }
     },
     {
       "id": "q-0187",
@@ -26132,7 +26204,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Si las claras quedan bien batidas, puedes voltear el recipiente sobre tu cabeza y no se caen.",
-      "subcategory": "Comida latinoamericana",
+      "subcategory": "Cocinas del mundo",
       "style": "what is it made of",
       "quality": {
         "correct": 5,
@@ -26165,6 +26237,14 @@
           "question": "El merengón, postre típico de Bogotá con frutas y crema, tiene como base el merengue. ¿De qué está hecho el merengue?"
         },
         "revised_on": "2026-10-10"
+      },
+      "concept": "Meringue",
+      "axes": {
+        "move": "made_of",
+        "stimulus": "none",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "colombia"
       }
     },
     {
@@ -28596,7 +28676,7 @@
         "pd_reasons": []
       },
       "fun_fact": "En Cartagena, las palenqueras venden cocadas de muchos sabores, como de guayaba, de piña y hasta de leche.",
-      "subcategory": "Comida latinoamericana",
+      "subcategory": "Cocinas del mundo",
       "style": "showing a picture of a thing and asking for its name",
       "quality": {
         "correct": 5,
@@ -28621,7 +28701,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Cocada",
+      "axes": {
+        "move": "identify",
+        "stimulus": "photo",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "colombia"
+      }
     },
     {
       "id": "q-0398",
@@ -28657,7 +28745,7 @@
         "pd_reasons": []
       },
       "fun_fact": "El arroz con leche se prepara en casi todos los países de habla hispana, y hasta tiene una canción infantil: 'Arroz con leche, me quiero casar'.",
-      "subcategory": "Comida latinoamericana",
+      "subcategory": "Cocinas del mundo",
       "style": "showing a zoomed-in detail of a picture and asking what it is",
       "quality": {
         "correct": 5,
@@ -28682,7 +28770,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Rice pudding",
+      "axes": {
+        "move": "identify",
+        "stimulus": "detail",
+        "clue": "direct",
+        "answer_kind": "thing",
+        "lens": "everyday"
+      }
     },
     {
       "id": "q-0399",
@@ -30702,7 +30798,7 @@
         "pd_reasons": []
       },
       "fun_fact": "El camarón pistola cierra su tenaza tan rápido que hace un chasquido fortísimo bajo el agua, capaz de aturdir a sus presas.",
-      "subcategory": "Idioma",
+      "subcategory": "Lenguaje",
       "style": "asking for a plain fact",
       "quality": {
         "correct": 5,
@@ -30727,7 +30823,15 @@
         "previous": null
       },
       "background": null,
-      "bundle": "base"
+      "bundle": "base",
+      "concept": "Proverb",
+      "axes": {
+        "move": "sequence",
+        "stimulus": "none",
+        "clue": "completion",
+        "answer_kind": "word",
+        "lens": "language"
+      }
     },
     {
       "id": "q-0429",
@@ -135144,7 +135248,7 @@
         "pd_reasons": []
       },
       "fun_fact": "El baile del limbo, de Trinidad y Tobago, no tiene nada que ver: ahí se pasa por debajo de una vara cada vez más baja.",
-      "subcategory": "Refranes y dichos",
+      "subcategory": "Refranes del mundo",
       "style": null,
       "concept": "Estar en el limbo",
       "axes": {
@@ -135215,7 +135319,7 @@
         "pd_reasons": []
       },
       "fun_fact": "El pan es uno de los alimentos más antiguos: en el antiguo Egipto ya se horneaba hace miles de años.",
-      "subcategory": "Refranes y dichos",
+      "subcategory": "Refranes del mundo",
       "style": null,
       "concept": "Pan para hoy, hambre para mañana",
       "axes": {
@@ -135286,7 +135390,7 @@
         "pd_reasons": []
       },
       "fun_fact": "En inglés el dicho es casi igual: 'to kill two birds with one stone', con una piedra en vez de un tiro.",
-      "subcategory": "Refranes y dichos",
+      "subcategory": "Refranes del mundo",
       "style": null,
       "concept": "Matar dos pájaros de un tiro",
       "axes": {
@@ -135357,7 +135461,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Este refrán viene de la Biblia, del libro del profeta Oseas.",
-      "subcategory": "Refranes y dichos",
+      "subcategory": "Refranes del mundo",
       "style": null,
       "concept": "Quien siembra vientos recoge tempestades",
       "axes": {
@@ -135428,7 +135532,7 @@
         "pd_reasons": []
       },
       "fun_fact": "El olmo da unas semillas planas y redondas con alas, llamadas sámaras, pero ninguna fruta que se pueda comer.",
-      "subcategory": "Refranes y dichos",
+      "subcategory": "Refranes del mundo",
       "style": null,
       "concept": "Pedir peras al olmo",
       "axes": {
@@ -135499,7 +135603,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Gracias a los intereses del banco, el dinero ahorrado a veces sí 'llama' un poquito más de dinero.",
-      "subcategory": "Refranes y dichos",
+      "subcategory": "Refranes del mundo",
       "style": null,
       "concept": "Dinero llama dinero",
       "axes": {
@@ -135582,7 +135686,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Las moscas pueden saborear con las patas, porque tienen sensores del gusto en ellas.",
-      "subcategory": "Refranes y dichos",
+      "subcategory": "Refranes del mundo",
       "style": null,
       "concept": "En boca cerrada no entran moscas",
       "axes": {
@@ -135666,7 +135770,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Muchos billetes no se hacen con papel de árbol, sino con fibras de algodón.",
-      "subcategory": "Refranes y dichos",
+      "subcategory": "Refranes del mundo",
       "style": null,
       "concept": "El dinero no crece en los árboles",
       "axes": {
@@ -152702,7 +152806,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Existe una expresión parecida, 'estar con la soga al cuello', que también describe un apuro muy grande.",
-      "subcategory": "Refranes y dichos",
+      "subcategory": "Refranes del mundo",
       "style": null,
       "concept": "Estar con el agua al cuello",
       "axes": {
@@ -152785,7 +152889,7 @@
         "pd_reasons": []
       },
       "fun_fact": "España ganó esa batalla en 1557 el día de San Lorenzo, y por eso Felipe II dedicó a ese santo el monasterio de El Escorial.",
-      "subcategory": "Refranes y dichos",
+      "subcategory": "Refranes del mundo",
       "style": null,
       "concept": "Armarse la de San Quintín",
       "axes": {
@@ -152856,7 +152960,7 @@
         "pd_reasons": []
       },
       "fun_fact": "En inglés se dice 'put your foot in your mouth': meterse el pie en la boca.",
-      "subcategory": "Refranes y dichos",
+      "subcategory": "Refranes del mundo",
       "style": null,
       "concept": "Meter la pata",
       "axes": {
@@ -152939,7 +153043,7 @@
         "pd_reasons": []
       },
       "fun_fact": "El estómago tarda unos 20 minutos en avisarle al cerebro que ya está lleno.",
-      "subcategory": "Refranes y dichos",
+      "subcategory": "Refranes del mundo",
       "style": null,
       "concept": "Barriga llena, corazón contento",
       "axes": {
@@ -155104,7 +155208,7 @@
         "pd_reasons": []
       },
       "fun_fact": "'La madrastra' de Televisa (2005), con Victoria Ruffo, es una nueva versión de una telenovela chilena de 1981.",
-      "subcategory": "Telenovelas",
+      "subcategory": "Telenovelas del mundo",
       "style": null,
       "concept": "La madrastra",
       "axes": {
@@ -155175,7 +155279,7 @@
         "pd_reasons": []
       },
       "fun_fact": "'Senda prohibida' tuvo 60 capítulos de unos 30 minutos, emitidos de lunes a viernes en 1958.",
-      "subcategory": "Telenovelas",
+      "subcategory": "Telenovelas del mundo",
       "style": null,
       "concept": "Senda prohibida",
       "axes": {
@@ -155255,7 +155359,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Otra forma de llamarla es 'bofetada', y en España también se dice 'tortazo'.",
-      "subcategory": "Telenovelas",
+      "subcategory": "Telenovelas del mundo",
       "style": null,
       "concept": "Cachetada",
       "axes": {
@@ -162143,7 +162247,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Gabriela Spanic interpretó a las dos gemelas, así que en muchas escenas tuvo que actuar frente a sí misma.",
-      "subcategory": "Telenovelas",
+      "subcategory": "Telenovelas del mundo",
       "style": null,
       "concept": "Paola Bracho",
       "axes": {
@@ -162216,7 +162320,7 @@
         ]
       },
       "fun_fact": "En inglés esto se llama 'cliffhanger' ('colgado del precipicio'), por una novela de 1873 en la que un personaje queda colgando de un acantilado al final de una entrega.",
-      "subcategory": "Telenovelas",
+      "subcategory": "Telenovelas del mundo",
       "style": null,
       "concept": "Final de capítulo en suspenso",
       "axes": {
@@ -162301,7 +162405,7 @@
         ]
       },
       "fun_fact": "Los últimos capítulos de las telenovelas más populares paralizaban países enteros: hasta las calles quedaban vacías.",
-      "subcategory": "Telenovelas",
+      "subcategory": "Telenovelas del mundo",
       "style": null,
       "concept": "Final feliz con boda",
       "axes": {
@@ -162372,7 +162476,7 @@
         "pd_reasons": []
       },
       "fun_fact": "En las telenovelas la memoria suele volver con otro golpe en la cabeza, algo que en la vida real no funciona así.",
-      "subcategory": "Telenovelas",
+      "subcategory": "Telenovelas del mundo",
       "style": null,
       "concept": "Amnesia",
       "axes": {
@@ -162443,7 +162547,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Belinda tenía apenas 10 años cuando grabó esta telenovela.",
-      "subcategory": "Telenovelas",
+      "subcategory": "Telenovelas del mundo",
       "style": null,
       "concept": "Amigos x siempre",
       "axes": {
@@ -162514,7 +162618,7 @@
         "pd_reasons": []
       },
       "fun_fact": "La historia volvió en 1997 en México, otra vez con el nombre de 'Esmeralda' y con Leticia Calderón como protagonista.",
-      "subcategory": "Telenovelas",
+      "subcategory": "Telenovelas del mundo",
       "style": null,
       "concept": "Topacio",
       "axes": {

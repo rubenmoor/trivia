@@ -1,0 +1,655 @@
+{
+  "subcategory": "Cocinas del mundo",
+  "facets": [
+    "Famous national dishes",
+    "Breads and flatbreads",
+    "Pasta, noodles and dumplings",
+    "Rice dishes around the world",
+    "Street food and snacks",
+    "Sweets and desserts worldwide",
+    "Spices, herbs and sauces",
+    "Cheeses and dairy foods",
+    "Cooking tools and techniques",
+    "Food customs and table manners",
+    "Festive and holiday foods",
+    "Famous chefs and food history"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 2,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Couscous",
+      "facet": "Famous national dishes",
+      "known_at": 7
+    },
+    {
+      "name": "Goulash",
+      "facet": "Famous national dishes",
+      "known_at": 9
+    },
+    {
+      "name": "Moussaka",
+      "facet": "Famous national dishes",
+      "known_at": 10
+    },
+    {
+      "name": "Bobotie",
+      "facet": "Famous national dishes",
+      "known_at": 14
+    },
+    {
+      "name": "Wiener schnitzel",
+      "facet": "Famous national dishes",
+      "known_at": 8
+    },
+    {
+      "name": "Pho",
+      "facet": "Famous national dishes",
+      "known_at": 10
+    },
+    {
+      "name": "Asado",
+      "facet": "Famous national dishes",
+      "known_at": 10
+    },
+    {
+      "name": "Naan",
+      "facet": "Breads and flatbreads",
+      "known_at": 8
+    },
+    {
+      "name": "Tortilla",
+      "facet": "Breads and flatbreads",
+      "known_at": 4
+    },
+    {
+      "name": "Pita",
+      "facet": "Breads and flatbreads",
+      "known_at": 7
+    },
+    {
+      "name": "Arepa",
+      "facet": "Breads and flatbreads",
+      "known_at": 8
+    },
+    {
+      "name": "Chapati",
+      "facet": "Breads and flatbreads",
+      "known_at": 11
+    },
+    {
+      "name": "Ciabatta",
+      "facet": "Breads and flatbreads",
+      "known_at": 10,
+      "retired": "unaskable: own subcategory (Comida italiana/mexicana/japonesa), decision 245 (task 1247)"
+    },
+    {
+      "name": "Pumpernickel",
+      "facet": "Breads and flatbreads",
+      "known_at": 12
+    },
+    {
+      "name": "Sourdough",
+      "facet": "Breads and flatbreads",
+      "known_at": 8
+    },
+    {
+      "name": "Brioche",
+      "facet": "Breads and flatbreads",
+      "known_at": 9
+    },
+    {
+      "name": "Lavash",
+      "facet": "Breads and flatbreads",
+      "known_at": 13
+    },
+    {
+      "name": "Damper",
+      "facet": "Breads and flatbreads",
+      "known_at": 14
+    },
+    {
+      "name": "Matzo",
+      "facet": "Breads and flatbreads",
+      "known_at": 11
+    },
+    {
+      "name": "Ravioli",
+      "facet": "Pasta, noodles and dumplings",
+      "known_at": 4,
+      "retired": "unaskable: own subcategory (Comida italiana/mexicana/japonesa), decision 245 (task 1247)"
+    },
+    {
+      "name": "Gnocchi",
+      "facet": "Pasta, noodles and dumplings",
+      "known_at": 8,
+      "retired": "unaskable: own subcategory (Comida italiana/mexicana/japonesa), decision 245 (task 1247)"
+    },
+    {
+      "name": "Pelmeni",
+      "facet": "Pasta, noodles and dumplings",
+      "known_at": 13
+    },
+    {
+      "name": "Manti",
+      "facet": "Pasta, noodles and dumplings",
+      "known_at": 14
+    },
+    {
+      "name": "Spaghetti carbonara",
+      "facet": "Pasta, noodles and dumplings",
+      "known_at": 8,
+      "retired": "unaskable: own subcategory (Comida italiana/mexicana/japonesa), decision 245 (task 1247)"
+    },
+    {
+      "name": "Durum wheat",
+      "facet": "Pasta, noodles and dumplings",
+      "known_at": 12
+    },
+    {
+      "name": "Biryani",
+      "facet": "Rice dishes around the world",
+      "known_at": 10
+    },
+    {
+      "name": "Fried rice",
+      "facet": "Rice dishes around the world",
+      "known_at": 3
+    },
+    {
+      "name": "Pilaf",
+      "facet": "Rice dishes around the world",
+      "known_at": 11
+    },
+    {
+      "name": "Jambalaya",
+      "facet": "Rice dishes around the world",
+      "known_at": 12
+    },
+    {
+      "name": "Nasi goreng",
+      "facet": "Rice dishes around the world",
+      "known_at": 12
+    },
+    {
+      "name": "Bibimbap",
+      "facet": "Rice dishes around the world",
+      "known_at": 10
+    },
+    {
+      "name": "Arroz con pollo",
+      "facet": "Rice dishes around the world",
+      "known_at": 9
+    },
+    {
+      "name": "Congee",
+      "facet": "Rice dishes around the world",
+      "known_at": 12
+    },
+    {
+      "name": "Basmati rice",
+      "facet": "Rice dishes around the world",
+      "known_at": 10
+    },
+    {
+      "name": "Arborio rice",
+      "facet": "Rice dishes around the world",
+      "known_at": 13,
+      "retired": "unaskable: own subcategory (Comida italiana/mexicana/japonesa), decision 245 (task 1247)"
+    },
+    {
+      "name": "Sticky rice",
+      "facet": "Rice dishes around the world",
+      "known_at": 8
+    },
+    {
+      "name": "Rice and beans",
+      "facet": "Rice dishes around the world",
+      "known_at": 6
+    },
+    {
+      "name": "Dolma",
+      "facet": "Rice dishes around the world",
+      "known_at": 12
+    },
+    {
+      "name": "Hainanese chicken rice",
+      "facet": "Rice dishes around the world",
+      "known_at": 13
+    },
+    {
+      "name": "Socarrat",
+      "facet": "Rice dishes around the world",
+      "known_at": 15
+    },
+    {
+      "name": "Empanada",
+      "facet": "Street food and snacks",
+      "known_at": 7
+    },
+    {
+      "name": "Satay",
+      "facet": "Street food and snacks",
+      "known_at": 11
+    },
+    {
+      "name": "Bunny chow",
+      "facet": "Street food and snacks",
+      "known_at": 14
+    },
+    {
+      "name": "Donut",
+      "facet": "Sweets and desserts worldwide",
+      "known_at": 1
+    },
+    {
+      "name": "Apple strudel",
+      "facet": "Sweets and desserts worldwide",
+      "known_at": 10
+    },
+    {
+      "name": "Meringue",
+      "facet": "Sweets and desserts worldwide",
+      "known_at": 6
+    },
+    {
+      "name": "Cocada",
+      "facet": "Sweets and desserts worldwide",
+      "known_at": 12
+    },
+    {
+      "name": "Rice pudding",
+      "facet": "Sweets and desserts worldwide",
+      "known_at": 5
+    },
+    {
+      "name": "Black Forest cake",
+      "facet": "Sweets and desserts worldwide",
+      "known_at": 9
+    },
+    {
+      "name": "Lamington",
+      "facet": "Sweets and desserts worldwide",
+      "known_at": 13
+    },
+    {
+      "name": "Malva pudding",
+      "facet": "Sweets and desserts worldwide",
+      "known_at": 14
+    },
+    {
+      "name": "Basil",
+      "facet": "Spices, herbs and sauces",
+      "known_at": 6
+    },
+    {
+      "name": "Mole",
+      "facet": "Spices, herbs and sauces",
+      "known_at": 11,
+      "retired": "unaskable: own subcategory (Comida italiana/mexicana/japonesa), decision 245 (task 1247)"
+    },
+    {
+      "name": "Harissa",
+      "facet": "Spices, herbs and sauces",
+      "known_at": 13
+    },
+    {
+      "name": "Béchamel sauce",
+      "facet": "Spices, herbs and sauces",
+      "known_at": 11
+    },
+    {
+      "name": "Scoville scale",
+      "facet": "Spices, herbs and sauces",
+      "known_at": 11
+    },
+    {
+      "name": "Parmesan",
+      "facet": "Cheeses and dairy foods",
+      "known_at": 5,
+      "retired": "unaskable: own subcategory (Comida italiana/mexicana/japonesa), decision 245 (task 1247)"
+    },
+    {
+      "name": "Paneer",
+      "facet": "Cheeses and dairy foods",
+      "known_at": 12
+    },
+    {
+      "name": "Yogurt",
+      "facet": "Cheeses and dairy foods",
+      "known_at": 1
+    },
+    {
+      "name": "Butter",
+      "facet": "Cheeses and dairy foods",
+      "known_at": 1
+    },
+    {
+      "name": "Ghee",
+      "facet": "Cheeses and dairy foods",
+      "known_at": 12
+    },
+    {
+      "name": "Cottage cheese",
+      "facet": "Cheeses and dairy foods",
+      "known_at": 6
+    },
+    {
+      "name": "Rennet",
+      "facet": "Cheeses and dairy foods",
+      "known_at": 13
+    },
+    {
+      "name": "Rolling pin",
+      "facet": "Cooking tools and techniques",
+      "known_at": 2
+    },
+    {
+      "name": "Tagine pot",
+      "facet": "Cooking tools and techniques",
+      "known_at": 12
+    },
+    {
+      "name": "Barbecue grill",
+      "facet": "Cooking tools and techniques",
+      "known_at": 2
+    },
+    {
+      "name": "Frying",
+      "facet": "Cooking tools and techniques",
+      "known_at": 2
+    },
+    {
+      "name": "Baking",
+      "facet": "Cooking tools and techniques",
+      "known_at": 2
+    },
+    {
+      "name": "Steaming",
+      "facet": "Cooking tools and techniques",
+      "known_at": 5
+    },
+    {
+      "name": "Smoking",
+      "facet": "Cooking tools and techniques",
+      "known_at": 7
+    },
+    {
+      "name": "Sous vide",
+      "facet": "Cooking tools and techniques",
+      "known_at": 13
+    },
+    {
+      "name": "Flambé",
+      "facet": "Cooking tools and techniques",
+      "known_at": 11
+    },
+    {
+      "name": "Caramelization",
+      "facet": "Cooking tools and techniques",
+      "known_at": 8
+    },
+    {
+      "name": "Maillard reaction",
+      "facet": "Cooking tools and techniques",
+      "known_at": 14
+    },
+    {
+      "name": "Air fryer",
+      "facet": "Cooking tools and techniques",
+      "known_at": 5
+    },
+    {
+      "name": "Earth oven",
+      "facet": "Cooking tools and techniques",
+      "known_at": 12
+    },
+    {
+      "name": "Eating with the hands",
+      "facet": "Food customs and table manners",
+      "known_at": 5
+    },
+    {
+      "name": "Chopstick etiquette",
+      "facet": "Food customs and table manners",
+      "known_at": 10
+    },
+    {
+      "name": "Slurping noodles",
+      "facet": "Food customs and table manners",
+      "known_at": 10
+    },
+    {
+      "name": "Tipping",
+      "facet": "Food customs and table manners",
+      "known_at": 9
+    },
+    {
+      "name": "Smörgåsbord",
+      "facet": "Food customs and table manners",
+      "known_at": 12
+    },
+    {
+      "name": "Mezze",
+      "facet": "Food customs and table manners",
+      "known_at": 12
+    },
+    {
+      "name": "Vegetarianism",
+      "facet": "Food customs and table manners",
+      "known_at": 4
+    },
+    {
+      "name": "Thali",
+      "facet": "Food customs and table manners",
+      "known_at": 13
+    },
+    {
+      "name": "Hot pot",
+      "facet": "Food customs and table manners",
+      "known_at": 10
+    },
+    {
+      "name": "Toast",
+      "facet": "Food customs and table manners",
+      "known_at": 6
+    },
+    {
+      "name": "Lazy Susan",
+      "facet": "Food customs and table manners",
+      "known_at": 12
+    },
+    {
+      "name": "Gingerbread",
+      "facet": "Festive and holiday foods",
+      "known_at": 3
+    },
+    {
+      "name": "Roast turkey",
+      "facet": "Festive and holiday foods",
+      "known_at": 5
+    },
+    {
+      "name": "Mochi pounding",
+      "facet": "Festive and holiday foods",
+      "known_at": 13,
+      "retired": "unaskable: own subcategory (Comida italiana/mexicana/japonesa), decision 245 (task 1247)"
+    },
+    {
+      "name": "Toshikoshi soba",
+      "facet": "Festive and holiday foods",
+      "known_at": 14,
+      "retired": "unaskable: own subcategory (Comida italiana/mexicana/japonesa), decision 245 (task 1247)"
+    },
+    {
+      "name": "Diwali sweets",
+      "facet": "Festive and holiday foods",
+      "known_at": 11
+    },
+    {
+      "name": "Candied apple",
+      "facet": "Festive and holiday foods",
+      "known_at": 4
+    },
+    {
+      "name": "Spice trade",
+      "facet": "Famous chefs and food history",
+      "known_at": 10
+    },
+    {
+      "name": "Canned food",
+      "facet": "Famous chefs and food history",
+      "known_at": 9
+    },
+    {
+      "name": "Margherita pizza",
+      "facet": "Famous chefs and food history",
+      "known_at": 10,
+      "retired": "unaskable: own subcategory (Comida italiana/mexicana/japonesa), decision 245 (task 1247)"
+    },
+    {
+      "name": "Tom yum",
+      "facet": "Famous national dishes",
+      "known_at": 11
+    },
+    {
+      "name": "Bulgogi",
+      "facet": "Famous national dishes",
+      "known_at": 10
+    },
+    {
+      "name": "Butter chicken",
+      "facet": "Famous national dishes",
+      "known_at": 9
+    },
+    {
+      "name": "Challah",
+      "facet": "Breads and flatbreads",
+      "known_at": 12
+    },
+    {
+      "name": "Wonton",
+      "facet": "Pasta, noodles and dumplings",
+      "known_at": 7
+    },
+    {
+      "name": "Jasmine rice",
+      "facet": "Rice dishes around the world",
+      "known_at": 9
+    },
+    {
+      "name": "Gimbap",
+      "facet": "Rice dishes around the world",
+      "known_at": 9
+    },
+    {
+      "name": "Pancake",
+      "facet": "Sweets and desserts worldwide",
+      "known_at": 1
+    },
+    {
+      "name": "Stroopwafel",
+      "facet": "Sweets and desserts worldwide",
+      "known_at": 9
+    },
+    {
+      "name": "Fish sauce",
+      "facet": "Spices, herbs and sauces",
+      "known_at": 10
+    },
+    {
+      "name": "Tahini",
+      "facet": "Spices, herbs and sauces",
+      "known_at": 10
+    },
+    {
+      "name": "Colander",
+      "facet": "Cooking tools and techniques",
+      "known_at": 6
+    },
+    {
+      "name": "Kneading",
+      "facet": "Cooking tools and techniques",
+      "known_at": 5
+    },
+    {
+      "name": "Julienne",
+      "facet": "Cooking tools and techniques",
+      "known_at": 12
+    },
+    {
+      "name": "Potluck",
+      "facet": "Food customs and table manners",
+      "known_at": 9
+    },
+    {
+      "name": "Bento box",
+      "facet": "Food customs and table manners",
+      "known_at": 6,
+      "retired": "unaskable: own subcategory (Comida italiana/mexicana/japonesa), decision 245 (task 1247)"
+    },
+    {
+      "name": "Yule log",
+      "facet": "Festive and holiday foods",
+      "known_at": 8
+    },
+    {
+      "name": "Michelin Guide",
+      "facet": "Famous chefs and food history",
+      "known_at": 10
+    },
+    {
+      "name": "Molecular gastronomy",
+      "facet": "Famous chefs and food history",
+      "known_at": 13
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-15",
+      "added": 19,
+      "unused": 100
+    }
+  ]
+}

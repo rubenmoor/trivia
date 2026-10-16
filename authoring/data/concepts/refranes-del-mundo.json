@@ -1,5 +1,5 @@
 {
-  "subcategory": "Refranes y dichos",
+  "subcategory": "Refranes del mundo",
   "facets": [
     "Refranes con animales",
     "Refranes de comida y cocina",
@@ -12,7 +12,10 @@
     "Dichos de dinero y trabajo",
     "Origen histórico de las expresiones",
     "Refranes y frases en libros y películas",
-    "Equivalentes de refranes en otros idiomas"
+    "Equivalentes de refranes en otros idiomas",
+    "Proverbs from Asia and Africa",
+    "Untranslatable words of the world",
+    "Latin phrases and famous quotes"
   ],
   "axis_fit": {
     "move": {
@@ -1018,6 +1021,321 @@
       "facet": "Equivalentes de refranes en otros idiomas",
       "known_at": 15,
       "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Curiosity killed the cat",
+      "facet": "Refranes con animales",
+      "known_at": 8
+    },
+    {
+      "name": "Don't count your chickens before they hatch",
+      "facet": "Refranes con animales",
+      "known_at": 8
+    },
+    {
+      "name": "A bird in the hand is worth two in the bush",
+      "facet": "Refranes con animales",
+      "known_at": 8
+    },
+    {
+      "name": "Barking dogs seldom bite",
+      "facet": "Refranes con animales",
+      "known_at": 7
+    },
+    {
+      "name": "The elephant in the room",
+      "facet": "Refranes con animales",
+      "known_at": 9
+    },
+    {
+      "name": "Crocodile tears",
+      "facet": "Refranes con animales",
+      "known_at": 9
+    },
+    {
+      "name": "Let the cat out of the bag",
+      "facet": "Refranes con animales",
+      "known_at": 9
+    },
+    {
+      "name": "A wolf in sheep's clothing",
+      "facet": "Refranes con animales",
+      "known_at": 7
+    },
+    {
+      "name": "The lion's share",
+      "facet": "Refranes con animales",
+      "known_at": 10
+    },
+    {
+      "name": "The goose that lays the golden eggs",
+      "facet": "Refranes con animales",
+      "known_at": 5
+    },
+    {
+      "name": "Sour grapes",
+      "facet": "Refranes con animales",
+      "known_at": 10
+    },
+    {
+      "name": "Elephants never forget",
+      "facet": "Refranes con animales",
+      "known_at": 6
+    },
+    {
+      "name": "An apple a day keeps the doctor away",
+      "facet": "Refranes de comida y cocina",
+      "known_at": 5
+    },
+    {
+      "name": "Too many cooks spoil the broth",
+      "facet": "Refranes de comida y cocina",
+      "known_at": 9
+    },
+    {
+      "name": "Don't put all your eggs in one basket",
+      "facet": "Refranes de comida y cocina",
+      "known_at": 7
+    },
+    {
+      "name": "The proof of the pudding is in the eating",
+      "facet": "Refranes de comida y cocina",
+      "known_at": 13
+    },
+    {
+      "name": "You can't have your cake and eat it too",
+      "facet": "Refranes de comida y cocina",
+      "known_at": 10
+    },
+    {
+      "name": "Rome wasn't built in a day",
+      "facet": "Refranes sobre el tiempo y el clima",
+      "known_at": 7
+    },
+    {
+      "name": "Red sky at night, sailor's delight",
+      "facet": "Refranes sobre el tiempo y el clima",
+      "known_at": 11
+    },
+    {
+      "name": "April showers bring May flowers",
+      "facet": "Refranes sobre el tiempo y el clima",
+      "known_at": 8
+    },
+    {
+      "name": "The calm before the storm",
+      "facet": "Refranes sobre el tiempo y el clima",
+      "known_at": 8
+    },
+    {
+      "name": "Lightning never strikes twice",
+      "facet": "Refranes sobre el tiempo y el clima",
+      "known_at": 8
+    },
+    {
+      "name": "Under the weather",
+      "facet": "Equivalentes de refranes en otros idiomas",
+      "known_at": 10
+    },
+    {
+      "name": "Butterflies in the stomach",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 6
+    },
+    {
+      "name": "Cold feet",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 10
+    },
+    {
+      "name": "Keep your fingers crossed",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 4
+    },
+    {
+      "name": "Head in the clouds",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 6
+    },
+    {
+      "name": "Green thumb",
+      "facet": "Expresiones con partes del cuerpo",
+      "known_at": 9
+    },
+    {
+      "name": "Achilles' heel",
+      "facet": "Origen histórico de las expresiones",
+      "known_at": 9
+    },
+    {
+      "name": "Practice makes perfect",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 4
+    },
+    {
+      "name": "Slow and steady wins the race",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 4
+    },
+    {
+      "name": "The pen is mightier than the sword",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 10
+    },
+    {
+      "name": "Beauty is in the eye of the beholder",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 10
+    },
+    {
+      "name": "The grass is always greener on the other side",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 8
+    },
+    {
+      "name": "Knowledge is power",
+      "facet": "Refranes de consejos y sabiduría",
+      "known_at": 9
+    },
+    {
+      "name": "A journey of a thousand miles begins with a single step",
+      "facet": "Proverbs from Asia and Africa",
+      "known_at": 9
+    },
+    {
+      "name": "Fall seven times, stand up eight",
+      "facet": "Proverbs from Asia and Africa",
+      "known_at": 9
+    },
+    {
+      "name": "It takes a village to raise a child",
+      "facet": "Proverbs from Asia and Africa",
+      "known_at": 10
+    },
+    {
+      "name": "Three wise monkeys",
+      "facet": "Proverbs from Asia and Africa",
+      "known_at": 6
+    },
+    {
+      "name": "Frog in a well",
+      "facet": "Proverbs from Asia and Africa",
+      "known_at": 13
+    },
+    {
+      "name": "Trojan horse",
+      "facet": "Origen histórico de las expresiones",
+      "known_at": 8
+    },
+    {
+      "name": "Crossing the Rubicon",
+      "facet": "Origen histórico de las expresiones",
+      "known_at": 12
+    },
+    {
+      "name": "Pyrrhic victory",
+      "facet": "Origen histórico de las expresiones",
+      "known_at": 13
+    },
+    {
+      "name": "Meet your Waterloo",
+      "facet": "Origen histórico de las expresiones",
+      "known_at": 13
+    },
+    {
+      "name": "Bite the bullet",
+      "facet": "Origen histórico de las expresiones",
+      "known_at": 11
+    },
+    {
+      "name": "Gordian knot",
+      "facet": "Origen histórico de las expresiones",
+      "known_at": 13
+    },
+    {
+      "name": "Et tu, Brute?",
+      "facet": "Latin phrases and famous quotes",
+      "known_at": 11,
+      "retired": "unaskable: not a proverb, scope of Frases célebres / Idiomas del mundo (task 1247)"
+    },
+    {
+      "name": "May the Force be with you",
+      "facet": "Refranes y frases en libros y películas",
+      "known_at": 5,
+      "retired": "unaskable: not a proverb, scope of Frases célebres / Idiomas del mundo (task 1247)"
+    },
+    {
+      "name": "Houston, we have a problem",
+      "facet": "Refranes y frases en libros y películas",
+      "known_at": 9,
+      "retired": "unaskable: not a proverb, scope of Frases célebres / Idiomas del mundo (task 1247)"
+    },
+    {
+      "name": "Life is like a box of chocolates",
+      "facet": "Refranes y frases en libros y películas",
+      "known_at": 10,
+      "retired": "unaskable: not a proverb, scope of Frases célebres / Idiomas del mundo (task 1247)"
+    },
+    {
+      "name": "To be or not to be",
+      "facet": "Refranes y frases en libros y películas",
+      "known_at": 8,
+      "retired": "unaskable: not a proverb, scope of Frases célebres / Idiomas del mundo (task 1247)"
+    },
+    {
+      "name": "Just keep swimming",
+      "facet": "Refranes y frases en libros y películas",
+      "known_at": 4,
+      "retired": "unaskable: not a proverb, scope of Frases célebres / Idiomas del mundo (task 1247)"
+    },
+    {
+      "name": "With great power comes great responsibility",
+      "facet": "Refranes y frases en libros y películas",
+      "known_at": 7,
+      "retired": "unaskable: not a proverb, scope of Frases célebres / Idiomas del mundo (task 1247)"
+    },
+    {
+      "name": "There's no place like home",
+      "facet": "Refranes y frases en libros y películas",
+      "known_at": 8,
+      "retired": "unaskable: not a proverb, scope of Frases célebres / Idiomas del mundo (task 1247)"
+    },
+    {
+      "name": "Open sesame",
+      "facet": "Refranes y frases en libros y películas",
+      "known_at": 6,
+      "retired": "unaskable: not a proverb, scope of Frases célebres / Idiomas del mundo (task 1247)"
+    },
+    {
+      "name": "You shall not pass",
+      "facet": "Refranes y frases en libros y películas",
+      "known_at": 8,
+      "retired": "unaskable: not a proverb, scope of Frases célebres / Idiomas del mundo (task 1247)"
+    },
+    {
+      "name": "Ubuntu",
+      "facet": "Untranslatable words of the world",
+      "known_at": 13,
+      "retired": "unaskable: not a proverb, scope of Frases célebres / Idiomas del mundo (task 1247)"
+    },
+    {
+      "name": "Schadenfreude",
+      "facet": "Untranslatable words of the world",
+      "known_at": 12,
+      "retired": "unaskable: not a proverb, scope of Frases célebres / Idiomas del mundo (task 1247)"
+    },
+    {
+      "name": "Wanderlust",
+      "facet": "Untranslatable words of the world",
+      "known_at": 11,
+      "retired": "unaskable: not a proverb, scope of Frases célebres / Idiomas del mundo (task 1247)"
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-15",
+      "added": 59,
+      "unused": 202
     }
   ]
 }

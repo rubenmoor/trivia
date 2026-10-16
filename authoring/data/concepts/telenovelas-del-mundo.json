@@ -1,5 +1,5 @@
 {
-  "subcategory": "Telenovelas",
+  "subcategory": "Telenovelas del mundo",
   "facets": [
     "Telenovelas colombianas clásicas",
     "Telenovelas mexicanas y de Televisa",
@@ -1350,6 +1350,31 @@
       "name": "Santa Barbara",
       "facet": "Soap operas en inglés",
       "known_at": 14
+    },
+    {
+      "name": "Days of Our Lives",
+      "facet": "Soap operas en inglés",
+      "known_at": 12
+    },
+    {
+      "name": "Dynasty",
+      "facet": "Soap operas en inglés",
+      "known_at": 12
+    },
+    {
+      "name": "The Young and the Restless",
+      "facet": "Soap operas en inglés",
+      "known_at": 13
+    },
+    {
+      "name": "Jewel in the Palace (Dae Jang Geum)",
+      "facet": "Dizis turcas y dramas asiáticos",
+      "known_at": 14
+    },
+    {
+      "name": "Meteor Garden",
+      "facet": "Dizis turcas y dramas asiáticos",
+      "known_at": 14
     }
   ],
   "top_ups": [
@@ -1357,6 +1382,11 @@
       "date": "2026-10-15",
       "added": 36,
       "unused": 120
+    },
+    {
+      "date": "2026-10-15",
+      "added": 5,
+      "unused": 121
     }
   ]
 }
