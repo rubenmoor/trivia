@@ -10,6 +10,7 @@
   } from "../../lib/api.ts";
   import { errorText } from "../../lib/errors.ts";
   import { candidates, show } from "../../lib/focus.ts";
+  import { devMode } from "../../lib/desktop.ts";
   import { t } from "../../lib/i18n.ts";
   import { pushScope, type Keys } from "../../lib/input.svelte.ts";
   import type { GameMode, JokerName } from "../../lib/types.ts";
@@ -63,7 +64,7 @@
       const [opts, preset, last] = await Promise.all([fetchChoiceOptions(), fetchChoice({ player }), fetchPlayerMode(player)]);
       options = opts;
       const launch = new URLSearchParams(location.search).get("mode") as GameMode | null;
-      mode = launch && BUILT_MODES.includes(launch) ? launch : last;
+      mode = launch && modes.some((m) => m.id === launch) ? launch : last;
       const c = preset.choice;
       group = c.age_group ?? DEFAULT_AGE_GROUP;
       custom = c.difficulty !== null;
@@ -133,18 +134,25 @@
     onnext({ mode, group, jokers, custom, difficulty, levels, cards, video, audio, answers, budget });
   }
 
-  const MODE_ROW: { id: GameMode; name: string; about: string; key: string }[] = [
-    { id: "solo", name: t("mode.solo"), about: t("mode.soloAbout"), key: t("mode.soloKey").toLowerCase() },
-    { id: "gamemaster", name: t("mode.gamemaster"), about: t("mode.gamemasterAbout"), key: t("mode.gamemasterKey").toLowerCase() },
+  // `ships`: the task that ships an unbuilt mode, which dev mode shows marked (decision 293)
+  const MODE_ROW: { id: GameMode; name: string; about: string; key: string; icon: IconName; ships?: string }[] = [
+    { id: "solo", name: t("mode.solo"), about: t("mode.soloAbout"), key: t("mode.soloKey").toLowerCase(), icon: "family" },
+    { id: "gamemaster", name: t("mode.gamemaster"), about: t("mode.gamemasterAbout"), key: t("mode.gamemasterKey").toLowerCase(), icon: "mic" },
+    { id: "rr-coop", name: t("mode.rrCoop"), about: t("mode.rrCoopAbout"), key: t("mode.rrCoopKey").toLowerCase(), icon: "puzzle", ships: "1465" },
+    { id: "rr-competitive", name: t("mode.rrCompetitive"), about: t("mode.rrCompetitiveAbout"), key: t("mode.rrCompetitiveKey").toLowerCase(), icon: "crown", ships: "1466" },
+    { id: "timed", name: t("mode.timed"), about: t("mode.timedAbout"), key: t("mode.timedKey").toLowerCase(), icon: "rocket", ships: "1467" },
   ];
-  const modes = MODE_ROW.filter((m) => BUILT_MODES.includes(m.id));
+  const modes = MODE_ROW.filter((m) => BUILT_MODES.includes(m.id) || (devMode && m.ships));
+  const session = $derived(mode !== "solo" && mode !== "gamemaster");
+  /** «Personalizar partida»: every mode but gamemaster and timed (no jokers). */
+  const jokerMode = $derived(mode !== "gamemaster" && mode !== "timed");
   const CUSTOMIZE_KEY = t("customize.openKey").toLowerCase();
   const GROUP_ICONS: Record<string, IconName> = { kids: "balloon", young_teens: "skateboard", young_adults: "headphones", adults: "mug" };
   const letter = (key: string) => [key, { type: "letter", key }] as const;
   const keys = $derived<Keys>(
     Object.fromEntries([
       ...modes.map((m) => letter(m.key)),
-      ...(mode === "gamemaster" ? [] : [letter(CUSTOMIZE_KEY)]),
+      ...(jokerMode ? [letter(CUSTOMIZE_KEY)] : []),
     ]),
   );
   const customized = $derived(presetOf(jokers) !== "standard");
@@ -167,7 +175,7 @@
         if (a.type === "navigate" && (a.dir === "up" || a.dir === "down")) return moveLine(a.dir);
         if (a.type === "navigate" && stepping) step(stepping, a.dir === "right" ? 1 : -1);
         else if (a.type === "letter" && modes.some((m) => m.key === a.key)) pickMode(modes.find((m) => m.key === a.key)!.id);
-        else if (a.type === "letter" && mode !== "gamemaster" && a.key === CUSTOMIZE_KEY) customizing = !busy;
+        else if (a.type === "letter" && jokerMode && a.key === CUSTOMIZE_KEY) customizing = !busy;
         else if (a.type === "pick" && options && a.n <= options.groups.length) pickGroup(options.groups[a.n - 1].id);
         else if (a.type === "confirm") next();
         else if (a.type === "back") onback();
@@ -179,12 +187,14 @@
 </script>
 
 <section class="choice" bind:this={section}>
-  <h1 class="title">{t("choice.titleOpen")}<span class="name">{player}</span>{t("choice.titleClose")}</h1>
+  <h1 class="title">
+    {#if session}{t("choice.titleMany")}{:else}{t("choice.titleOpen")}<span class="name">{player}</span>{t("choice.titleClose")}{/if}
+  </h1>
 
   {#if options}
     {#if modes.length > 1}
       <p class="label heading">{t("mode.heading")}</p>
-      <div class="row" role="radiogroup" data-line>
+      <div class="row modes" role="radiogroup" data-line>
         {#each modes as m, i (m.id)}
           <button
             class="tile mode glass"
@@ -197,8 +207,9 @@
             data-focus-id="mode-{m.id}"
           >
             <Prompt action={{ type: "letter", key: m.key }} hold />
-            <span class="name-text"><Icon name={m.id === "gamemaster" ? "mic" : "family"} /> {m.name}</span>
+            <span class="name-text"><Icon name={m.icon} /> {m.name}</span>
             <span class="label">{m.about}</span>
+            {#if m.ships && !BUILT_MODES.includes(m.id)}<span class="label warn">{`PLACEHOLDER(${m.ships})`}</span>{/if}
           </button>
         {/each}
       </div>
@@ -229,6 +240,9 @@
         </div>
       </div>
     {:else}
+      {#if mode === "rr-competitive"}
+        <p class="label heading">{t("choice.groupsEach")}</p>
+      {:else}
       <p class="label heading">{t("choice.groups")}</p>
       <div class="row" role="radiogroup" data-line>
         {#each options.groups as g, i (g.id)}
@@ -248,12 +262,15 @@
           </button>
         {/each}
       </div>
+      {/if}
+      {#if jokerMode}
       <div class="row" data-line>
         <button class="secondary customize" onclick={() => (customizing = true)} disabled={busy} data-focus-id="customize">
           <Icon name="sliders" /> {t("customize.open")} <Prompt action={{ type: "letter", key: CUSTOMIZE_KEY }} />
         </button>
         <span class="label" class:warn={customized}>{t(customized ? "customize.custom" : "customize.standard")}</span>
       </div>
+      {/if}
     {/if}
 
     <div class="row actions" data-line>
@@ -348,8 +365,15 @@
     background: rgba(76, 201, 240, 0.16);
     transform: translateY(calc(-0.3 * var(--u)));
   }
+  .modes {
+    max-width: calc(120 * var(--u));
+  }
   .mode {
-    min-width: calc(26 * var(--u));
+    min-width: calc(20 * var(--u));
+    max-width: calc(23 * var(--u));
+  }
+  .mode .name-text {
+    font-size: calc(1.6 * var(--u));
   }
   .row:has(.customize) {
     align-items: center;

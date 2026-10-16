@@ -70,9 +70,10 @@ export function choice(save: SaveData, data: EngineData, body: Record<string, un
   });
 }
 
-/** `new`'s mode must be built (the engine itself starts any, for tests and simulations); an unknown one is the engine's error. */
-function startable(mode: unknown = "gamemaster"): true {
-  if ((game.MODES as unknown[]).includes(mode) && !(game.BUILT_MODES as unknown[]).includes(mode)) throw new GameError("mode_not_built", { mode });
+/** `new`'s mode must be built (the engine itself starts any, for tests and simulations; `dev`, set in dev mode only, lifts the check,
+ * decision 293); an unknown one is the engine's error. */
+function startable(mode: unknown = "gamemaster", dev = false): true {
+  if (!dev && (game.MODES as unknown[]).includes(mode) && !(game.BUILT_MODES as unknown[]).includes(mode)) throw new GameError("mode_not_built", { mode });
   return true;
 }
 
@@ -86,7 +87,7 @@ export function gameAction(save: SaveData, data: EngineData, io: Io, action: str
   Reply<{ game: Game | null; event?: JokerEvent }> {
   const index = () => pyInt("index" in body ? body.index : -1);
   const actions: Record<string, Action> = {
-    new: (s) => startable(body.mode) && "players" in body ? game.newSession(s, data, io, body.players, pick(body, [...game.CHOICE_KEYS, "mode", "age_groups"]))
+    new: (s) => startable(body.mode, body.dev === true) && "players" in body ? game.newSession(s, data, io, body.players, pick(body, [...game.CHOICE_KEYS, "mode", "age_groups"]))
       : game.newGame(s, data, io, body.player, pick(body, [...game.CHOICE_KEYS, "mode"])),
     pick: (s) => game.pick(s, data, io, index(), body.seat),
     answer: (s) => game.answer(s, data, io, index(), body.seat),

@@ -8,6 +8,9 @@ export const esES = {
     confirm: "¿Seguro? Pulsa otra vez",
     media: "Audio y vídeo de las preguntas",
   },
+  choice: {
+    titleMany: "¿Cómo jugáis?",
+  },
   seat: {
     lostBody: "Reconectadlo o usad otro mando libre.",
   },
