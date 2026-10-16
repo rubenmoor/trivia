@@ -60,6 +60,12 @@ export const esES = {
     player: {
       firstLabel: "Escribid vuestro nombre",
     },
+    join: {
+      title: "¿Quiénes jugáis?",
+      padJoin: "Pulsad para uniros",
+      keyboardMouse: "Teclado y ratón",
+      keyBody: "Pulsad una letra o un número: con esa tecla reclamáis la pregunta.",
+    },
     level: {
       again: "¡Otra vez! Habéis dado a la correcta.",
     },

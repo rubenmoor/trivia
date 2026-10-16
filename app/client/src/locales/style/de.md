@@ -16,6 +16,7 @@ Fixed terms; use them as written, never a synonym.
 - Start screen: «Hauptmenü» when named
 - Steam terms as Steam writes them in German: «Steam-Erfolge» (never bare «Erfolge»), «Steam Cloud», «Steam Deck», «Steam-Workshop»
 - Credits: «Mitwirkende»
+- Devices: «Controller» (pad), «Tastatur und Maus»
 
 ## Address
 - Never assume a plural: no «ihr», «euch», «euer», no «-t» plural imperatives («Wählt», «Schreibt», «Zielt»)

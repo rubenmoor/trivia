@@ -20,6 +20,9 @@ export interface ChoiceDraft {
   budget: JokerBudget;
 }
 
+/** A local multiplayer mode: the Join screen comes between Choice and Bundles (decision 291). */
+export const isSession = (mode: GameMode): boolean => mode !== "solo" && mode !== "gamemaster";
+
 export const defaultDraft = (): ChoiceDraft => ({
   mode: "gamemaster", group: DEFAULT_AGE_GROUP, jokers: { ...STANDARD_JOKERS }, custom: false,
   difficulty: { start: 1, end: DIFFICULTY_MAX }, levels: DEFAULT_LEVELS, cards: CARDS_MAX, video: true, audio: true, answers: true,

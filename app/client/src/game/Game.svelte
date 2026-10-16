@@ -1,6 +1,6 @@
 <script lang="ts">
   // The game on the TV (plans/04-ui-tv-display.md, D-21, D-25): a state machine over the screens
-  // Start → Player → Choice → Bundles → Level → Select → Question → Correct / Wrong → … → Victory (answers off, D-105:
+  // Start → Player → Choice → (Join, multiplayer) → Bundles → Level → Select → Question → Correct / Wrong → … → Victory (answers off, D-105:
   // Question → Next → … → Completed), with one transition routine and the admin overlay on Esc. The engine
   // keeps the game (engine/, lib/api.ts).
   import { onDestroy, onMount, tick, untrack } from "svelte";
@@ -30,7 +30,8 @@
   import Stage from "./Stage.svelte";
   import { swap } from "./swap.ts";
   import CornerButtons from "./CornerButtons.svelte";
-  import { type ChoiceDraft } from "./choiceDraft.ts";
+  import { isSession, type ChoiceDraft } from "./choiceDraft.ts";
+  import type { SeatDraft } from "./seats.ts";
   import Bundles from "./screens/Bundles.svelte";
   import Choice from "./screens/Choice.svelte";
   import Consent from "./screens/Consent.svelte";
@@ -39,6 +40,7 @@
   import Language from "./screens/Language.svelte";
   import Level from "./screens/Level.svelte";
   import Mods, { fetchModList, heldOff } from "./screens/Mods.svelte";
+  import Join from "./screens/Join.svelte";
   import Player from "./screens/Player.svelte";
   import Question, { type JokerPlay } from "./screens/Question.svelte";
   import Revealed from "./screens/Revealed.svelte";
@@ -51,7 +53,7 @@
   import { BLOCK_DROP_MS, FADE_MS, FLIP_MS, GREETING_MS, PICK_MS, PRELOAD_MAX_MS, TEAR_MS, sleep } from "./timing.ts";
   import Veil from "./Veil.svelte";
 
-  type Screen = "language" | "consent" | "start" | "player" | "bundles" | "choice" | "level" | "select" | "question" | "correct" | "wrong" | "victory" | "next" | "completed";
+  type Screen = "language" | "consent" | "start" | "player" | "bundles" | "choice" | "join" | "level" | "select" | "question" | "correct" | "wrong" | "victory" | "next" | "completed";
 
   const MUSIC: Record<Screen, Track | null> = {
     language: "normal",
@@ -60,6 +62,7 @@
     player: "normal",
     bundles: "normal",
     choice: "normal",
+    join: "normal",
     level: "normal",
     select: "normal",
     question: "question",
@@ -71,7 +74,7 @@
   };
 
   // Next and Completed: both `Revealed` (answers off, D-105).
-  const OURS = { Start, Language, Player, Bundles, Choice, Level, Select, Question, Correct, Wrong, Next: Revealed, Completed: Revealed, Victory };
+  const OURS = { Start, Language, Player, Bundles, Choice, Join, Level, Select, Question, Correct, Wrong, Next: Revealed, Completed: Revealed, Victory };
   type Name = keyof typeof OURS;
   /** Each screen: ours or a mod's (plan 117), read once; a failing one falls back to ours. */
   let S = $state.raw(Object.fromEntries(Object.entries(OURS).map(([n, c]) => [n, screenFor(n as Name, c)])) as typeof OURS);
@@ -108,6 +111,8 @@
   let chosen = $state<string | null>(null);
   /** The Choice screen's picks, kept for Back from Bundles; null: a fresh visit (plan 151). */
   let draft = $state<ChoiceDraft | null>(null);
+  /** The Join screen's seats (plan 162), kept across Choice ↔ Join ↔ Bundles. */
+  let seats = $state<SeatDraft[]>([]);
   /** The Bundles screen's pick; null until its preset loads. */
   let bundlePick = $state<string[] | null>(null);
   /** Why `new` refused the choice on the Bundles screen (plan 29). */
@@ -347,17 +352,18 @@
     if (busy) return;
     chosen = name;
     draft = null;
+    seats = [];
     bundlePick = null;
     refused = null;
     await go("choice", "whoosh");
   }
 
-  /** The Choice screen's «Seguir»: the Bundles screen with these picks kept. */
+  /** The Choice screen's «Seguir»: the Join screen (multiplayer) or the Bundles screen, with these picks kept. */
   async function choicePicked(d: ChoiceDraft) {
     if (busy) return;
     draft = d;
     refused = null;
-    await go("bundles", "whoosh");
+    await go(isSession(d.mode) ? "join" : "bundles", "whoosh");
   }
 
   /** The Bundles screen's «¡A jugar!»: start the game, greet, then the Level screen. */
@@ -600,7 +606,7 @@
 
   $effect(() => {
     const on = screen;
-    if (on === "language" || on === "consent" || on === "player" || on === "bundles" || on === "choice" || on === "question") return; // they push their own
+    if (on === "language" || on === "consent" || on === "player" || on === "bundles" || on === "choice" || on === "join" || on === "question") return; // they push their own
     return pushScope({
       name: on,
       keys: on === "start" ? { [NEW_KEY]: { type: "new" }, [LANGUAGE_KEY]: { type: "language" } } : undefined,
@@ -665,9 +671,12 @@
     {:else if screen === "choice" && chosen !== null}
       <Stage />
       <S.Choice player={chosen} {busy} {draft} onnext={choicePicked} onback={() => go("player", "whoosh")} />
+    {:else if screen === "join" && chosen !== null && draft}
+      <Stage />
+      <S.Join mode={draft.mode} player={chosen} {busy} {seats} onseats={(s) => (seats = s)} onnext={() => go("bundles", "whoosh")} onback={() => go("choice", "whoosh")} />
     {:else if screen === "bundles" && chosen !== null && draft}
       <Stage />
-      <S.Bundles player={chosen} {draft} {busy} {greeting} {refused} picked={bundlePick} onpick={(ids) => (bundlePick = ids)} onstart={startGame} onback={() => go("choice", "whoosh")} />
+      <S.Bundles player={chosen} {draft} {busy} {greeting} {refused} picked={bundlePick} onpick={(ids) => (bundlePick = ids)} onstart={startGame} onback={() => go(isSession(draft!.mode) ? "join" : "choice", "whoosh")} />
     {:else if screen === "level" && game}
       <Stage />
       <div class="corner-hud"><Hud level={null} player={game.player} /></div>

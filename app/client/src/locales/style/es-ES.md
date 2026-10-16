@@ -4,7 +4,7 @@
 
 ## Glossary
 Differences from `es` only.
-- «vídeo» (not «video»), «iconos» (not «íconos»), «hoja A4» (not «hoja carta»)
+- «vídeo» (not «video»), «Teclado y ratón» (not «mouse»), «iconos» (not «íconos»), «hoja A4» (not «hoja carta»)
 - «Pulsa» (`es` «Presiona», decision 59), «¡Qué pasada!» (`es` «¡Qué maravilla!»)
 - Jokers, modes, Esc rows, Steam terms: as in `es` («Modo anfitrión», «Volver al menú principal», «Salir del juego», «logros de Steam»)
 
