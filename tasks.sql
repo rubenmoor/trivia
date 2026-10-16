@@ -8126,12 +8126,18 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - A second `research` round, query hints ("blank map", no logos as `essential`), a role change at record: only if task B''s diagnosis says they pay off.
 - IMG-16/17 (`plans/06-images.md`, 4K target and old picks) are about picture quality, not yield. Not part of this plan.
 
+## English-first from batch-9
+- Batches 6–8 above are Spanish drafts; from batch-9 `base` is drafted in English with an international angle (`plan 1: masterplan`, milestone 9). Running media search, review and record on English text is milestone 9''s, not this plan''s.
+- Task A''s funnel rows read review JSON fields (`media_funnel` in `authoring/tools/health.py`), not text: they carry over unchanged.
+- Media share depends on the subcategory mix and concept lists, which change with the international angle (`plan 147: English-first batches: calibration, overlap and QC across languages` part 2). `decision 227: Media share below 15 %: lower the none weight, and which residual-miss fixes?` was simulated on batch-8''s subcats: its numbers are a guide for batch-9, not a forecast.
+- batch-9''s media rows are compared with batch-7/8 with the language change noted, not read as drift (masterplan part 4).
+
 ## Tasks
 - A. Media funnel in the batch report: round-1 no pick, recovered by research, needs_work at record, so each QC sees where picks fail (`authoring/tools/health.py`, `authoring/reports/<batch>.md` "## Health").
 - B. Media share below 15 %: read-only diagnosis over batches 6–8, plus a proposal decision covering the residual-miss fixes above.
 
 ## Done when
-- Task A''s rows show up in the next batch report, and task B''s decision is answered, with any approved change added as a task.
+- Task A''s rows show up in the next batch report (batch-9, the first English one), and task B''s decision is answered, with any approved change added as a task.
 - Plan 17''s trigger stays as it is: if media needs_work reaches ≥ 10 % in two batches in a row, revisit this plan.', '2026-10-15T21:54:05Z', 1184);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (147, 1, 'English-first batches: calibration, overlap and QC across languages', 700, 'From batch-9 on, `base` is drafted in English with an international angle (milestone 9, "English-first drafting for `base`"). Milestone 1''s parts 2–5 were built on Spanish drafts: `plan 13: Aim batches at difficulty gaps`, `plan 14: More subcategories`, `plan 15: Duplicate and drift detection`, `plan 16: Quality control after every batch` (all done). This plan adapts what they built so batch-9 is calibrated, deduplicated against the es-sourced pool and checked as closely as a new pipeline deserves.
 
@@ -27745,7 +27751,7 @@ Rough order: 1 and 2 first, since they steer every later batch; 3–5 alongside;
 - `qgen report` shows ≥ 5000 approved `base` questions (source locale, each once), and every difficulty meets part 1''s target.
 - The last two batches pass part 4''s thresholds, and part 5''s human spot checks agree with the LLM review at the agreed rate.
 - `qgen validate` is clean; `trivia-media sync --status approved` has filled the cache.', '2026-10-16T00:16:39Z', '2026-10-16T00:20:34Z', 1193, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1197, 146, 'revise plan 146: Media yield', 'revise', 'open', 1000, NULL, '`plan 1: masterplan`, the plan above `plan 146: Media yield`, changed; it is quoted below. Bring `plan 146: Media yield` in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1197, 146, 'revise plan 146: Media yield', 'revise', 'done', 1000, '2026-10-15, tasks.sql: plan 146 gets an ''English-first from batch-9'' section (batches 6–8 are Spanish; funnel rows language-neutral; decision 227''s simulation a guide only; batch-9 compared with language change noted); done-when names batch-9', '`plan 1: masterplan`, the plan above `plan 146: Media yield`, changed; it is quoted below. Bring `plan 146: Media yield` in line with it
 (`pm plan edit 146 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -27786,7 +27792,7 @@ Rough order: 1 and 2 first, since they steer every later batch; 3–5 alongside;
 ## Done when
 - `qgen report` shows ≥ 5000 approved `base` questions (source locale, each once), and every difficulty meets part 1''s target.
 - The last two batches pass part 4''s thresholds, and part 5''s human spot checks agree with the LLM review at the agreed rate.
-- `qgen validate` is clean; `trivia-media sync --status approved` has filled the cache.', '2026-10-16T00:16:39Z', NULL, 1193, 0);
+- `qgen validate` is clean; `trivia-media sync --status approved` has filled the cache.', '2026-10-16T00:16:39Z', '2026-10-16T00:21:52Z', 1193, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1198, 1, 'write plan: English-first batches: calibration, overlap and QC across languages', 'plan', 'done', 1000, '2026-10-16, plan 147: English-first batches: calibration, overlap and QC across languages (split queued: task 1199); decision recorded on cross-language overlap keys', 'Write the plan for the masterplan''s "English-first from batch-9" section, parts 2–5 (`pm plan add 1 …`). Their plans are done (`plan 13: Aim batches at difficulty gaps`, `plan 14: More subcategories`, `plan 15: Duplicate and drift detection`, `plan 16: Quality control after every batch`), so what the switch changes for them needs its own plan. Part 6''s share is `plan 17: Batch runs`'' (its revision, `task 1196: revise plan 17: Batch runs`); media is `plan 146: Media yield`''s.
 
 First check milestone 9''s English-first part (milestone 9, "English-first drafting for `base`"; `task 1192: revise the masterplan of milestone 9: Steam S4: content for release` and the plan it leads to, `pm plan list`). Milestone 9 owns the drafting switch and "the whole chain works on the English text"; plan here only what it doesn''t, refer to its plan where it does. No duplicate tasks.
@@ -27804,6 +27810,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T00:19:25Z', NULL, 1198, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1200, 17, 'create tasks for plan 17: Batch runs', 'split', 'done', 1000, '2026-10-16, tasks.sql: task 1185 body (English gate: switch + plan 147 done, else decision; decision 229), task 1186 body (first-English QC: spot-check size per plan 147 part 5, difficulty/health/overlap vs batch-7/8, decision 232, English findings → plan 147, media → plan 146); task 1191 unchanged; no new decisions', 'Split plan 17 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T00:20:30Z', '2026-10-16T00:21:16Z', 1196, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1201, 146, 'create tasks for plan 146: Media yield', 'split', 'open', 1000, NULL, 'Split plan 146 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T00:21:49Z', NULL, 1197, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -31238,6 +31246,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1162, 1198, '2026-10-16T00:17:42Z', '2026-10-16T00:19:44Z', 'done', NULL, 0, '90e0de3437a69334f73c744859f5f2245d723ffe', 'claude-opus-5-5[1m]', '984681a8-7aff-4a18-86ed-78a359d23869', 15, 30, 9664, 865692, 66629, 0.89957039999999977, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1163, 1196, '2026-10-16T00:19:45Z', '2026-10-16T00:20:42Z', 'done', NULL, 0, 'b4827ca27e394df8ee14de11671c8c3c934a4a5b', 'claude-opus-5-5[1m]', 'ed6736d8-48c3-4feb-8171-4cb15a586fd5', 8, 16, 5322, 309078, 41036, 0.4966076, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1164, 1200, '2026-10-16T00:20:43Z', '2026-10-16T00:21:22Z', 'done', NULL, 0, 'fecd3a3af33e8d7b2d32ce6089cc6f11d81cee44', 'claude-opus-5-5[1m]', '9c9fc0c9-d87b-46ac-bce9-3c00a40635ec', 6, 12, 3946, 193340, 33305, 0.38407600000000003, 3857742);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1165, 1197, '2026-10-16T00:21:22Z', '2026-10-16T00:21:58Z', 'done', NULL, 0, '9ed80023bfc8c30dfa6c8e80146e8271ac74685a', 'claude-opus-5-5[1m]', '4cd0d6b0-229d-4d62-a9f2-572003940719', 7, 14, 2616, 274194, 37824, 0.4098068, 3857742);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
