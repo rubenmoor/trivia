@@ -30,6 +30,7 @@ The question is read aloud on a TV; the family should get it in one breath.
 - A bit of extra context (a surprising detail, a setting) is allowed, but always optional: cut it when it makes the question long.
 - No invented story around the question: no relatives, friends, guides or influencers telling you something ("Your uncle…", "Your cousin dares you…", "A friend…"), no "Imagine that…", no backstory. A situation ("You're in the kitchen and…") only when it is the clue itself, in one short clause.
 - Don't explain what the hints, the fun fact or the description already say.
+- The text never announces its clues: no "Three clues:", "Clues:", "Tres pistas:", "Pistas:", no numbered "1) … 2) …" (clashes with the game's hints). Several facts are plain facts in one sentence or two.
 
 ## International angle
 A `base` question is played in every language of the game (English, Spanish for Latin America and for Spain, German, more later), by families anywhere. Write it so it travels:

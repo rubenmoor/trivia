@@ -18,7 +18,7 @@ Answer `approved` unless one of these is true; then answer `needs_work` and say 
 3. Something gives the answer away: the description, the question text, hint 1 or 2, or the media.
 4. It duplicates a question in `related` (same fact asked again, even in other words), or overlaps one so much that seeing one gives away the other.
 5. No candidate is adequate (below), and a new search can't help or was already tried.
-6. The question text breaks house style "Keep it short": it is long-winded, or wrapped in an invented story (a relative, friend or guide telling you something, "Imagine that…"), or it asks two questions, one unquoted inside a riddle. The `fix` says what to cut, or puts the inner question in quotes (the "Language" section's quote marks).
+6. The question text breaks house style "Keep it short": it is long-winded, or wrapped in an invented story (a relative, friend or guide telling you something, "Imagine that…"), or it asks two questions, one unquoted inside a riddle, or it announces its clues ("Three clues:", "Pistas:", "1) … 2) …"). The `fix` says what to cut, puts the inner question in quotes (the "Language" section's quote marks), or drops the clue label and rewords minimally.
 7. It asks what several given things have in common ("What do … have in common?"). This style is retired; leave `fix` empty.
 8. Its wording doesn't match its locale's and bundle's voice (house style "Language"): a word, brand-as-generic or usage the section rules out (in `es`: one known in one country only, Spain included: "gripa", "cinta Scotch", "ordenador"; in `en`: a UK or US word where both differ), where a common word exists. `feedback` names it as regional; the `fix` names each word and its replacement.
 9. A `base` question breaks the house style's "International angle": it needs knowledge of one country or language region that families elsewhere don't have, or lives on wordplay, a sound or the spelling of one language. Questions written before batch-9 (Spanish sources) are exempt from this reason. The `fix` names what to change, if it can be fixed without becoming a different question; else leave `fix` empty.
@@ -55,6 +55,6 @@ For audio questions, also pick `background_pick` from the background candidates 
   - `giveaway`: the description, question text, a hint or the media gives the answer away (reason 3);
   - `overlap`: same fact as a `related` question, or one gives the other away (reason 4);
   - `media`: no adequate candidate (reason 5);
-  - `style`: long-winded, an invented story, two questions in one text, the retired "what do they have in common" style, the wrong voice for its locale or bundle, or not international (reasons 6, 7, 8, 9);
+  - `style`: long-winded, an invented story, two questions in one text, a clue label, the retired "what do they have in common" style, the wrong voice for its locale or bundle, or not international (reasons 6, 7, 8, 9);
   - `difficulty`: never alone (an off difficulty isn't a reason); add it to another problem when the difficulty is also badly off;
   - `other`: anything else; say what in `feedback`.

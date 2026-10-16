@@ -29500,7 +29500,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm decision consequences 245 "…"`.
 
 Done when: `qgen validate`, `npm run check`, `npm test`, `npm run build` pass.', '2026-10-16T02:12:58Z', NULL, 1204, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1248, 17, 'No "Three clues:" label in questions (QC batch-8 120 A)', 'work', 'open', 650, NULL, 'QC batch-8 (120) proposal A, approved in `decision 231: QC batch-8 (120): which changes?` (answer "all: A–E"). Source: `authoring/reports/batch-8.md` "## Quality control"; q-1581 (developer: "the ''three hints'' style should be purged. this one has two hints"), q-1973 (rejected); both open with "Tres pistas:".
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1248, 17, 'No "Three clues:" label in questions (QC batch-8 120 A)', 'work', 'done', 650, '2026-10-15, authoring/tools/prompts/house-style.md (Keep it short: no clue label), review.md (reason 6 + style problem: label, fix drops it), audit.md (check 7: retired clue label), authoring/data/question-axes.json (three_facts: one sentence or two, no label)', 'QC batch-8 (120) proposal A, approved in `decision 231: QC batch-8 (120): which changes?` (answer "all: A–E"). Source: `authoring/reports/batch-8.md` "## Quality control"; q-1581 (developer: "the ''three hints'' style should be purged. this one has two hints"), q-1973 (rejected); both open with "Tres pistas:".
 
 Why: the label clashes with the game''s own hints (Soplo joker), and the announced count is often wrong.
 
@@ -29515,7 +29515,7 @@ Why: the label clashes with the game''s own hints (Soplo joker), and the announc
 - Ultra-short wording, matching the prompts'' style.
 
 ## Check
-- `qgen validate`, `npm run check` clean.', '2026-10-16T02:14:59Z', NULL, 1191, 0);
+- `qgen validate`, `npm run check` clean.', '2026-10-16T02:14:59Z', '2026-10-16T02:16:23Z', 1191, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1249, 17, 'Strip the clue label from approved base questions (QC batch-8 120 B)', 'work', 'open', 640, NULL, 'QC batch-8 (120) proposal B, approved in `decision 231: QC batch-8 (120): which changes?`; goes with proposal A (task "No \"Three clues:\" label in questions (QC batch-8 120 A)", runs first by priority).
 
 Approved `base` questions whose text opens with "Tres pistas…"/"Pistas:" (21 on 2026-10-16): batch-7 q-0600, q-0618, q-0626, q-0630, q-0735, q-0819, q-0852, q-0904, q-0943, q-0944, q-0953, q-0962, q-0964, q-1049, q-1052, q-1056, q-1156, q-1201; batch-8 q-1577, q-1747, q-1750. Re-check with a scan of `authoring/data/questions.json` (status approved, question text matching `pistas`, case-insensitive) for any others, also in needs_work questions.
@@ -33844,6 +33844,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1202, 1240, '2026-10-16T01:50:40Z', '2026-10-16T01:55:14Z', 'done', NULL, 0, 'e62551f5d9eda3adf7a0d4d5d8aa7aad90ea1bbc', 'claude-opus-5-5[1m]', '56a4e01c-ef35-435b-8a39-6109538d1564', 28, 52, 12317, 1851723, 80832, 1.2635486000000002, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1203, 1204, '2026-10-16T01:55:15Z', '2026-10-16T02:14:11Z', 'done', NULL, 0, '9f91e747e9fa31a485f9af1d2a27fc4f446dc508', 'claude-opus-5-5[1m]', '711d905e-0dc7-4f00-ba53-286c40033ace', 52, 104, 31985, 4337693, 116500, 2.4396545999999995, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1204, 1191, '2026-10-16T02:14:12Z', '2026-10-16T02:15:15Z', 'done', NULL, 0, '414ad8e56d8c318e10e8dd449041e2d086a70be0', 'claude-opus-5-5[1m]', 'ba28095e-67e7-4c55-9e1e-47eb0ddde692', 15, 26, 6074, 551935, 42691, 0.573499, 3857742);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1205, 1248, '2026-10-16T02:15:15Z', '2026-10-16T02:16:29Z', 'done', NULL, 0, '3eb41ca9c81b2ec14b411c8e2dec926c7542d170', 'claude-opus-5-5[1m]', '20cde614-4734-48ff-b5b6-a86519046cb0', 10, 20, 2854, 380934, 36375, 0.42434679999999997, 3857742);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

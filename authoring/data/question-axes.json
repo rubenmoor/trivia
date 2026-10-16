@@ -41,7 +41,7 @@
         "riddle": "a riddle in the first person: \"Tengo…, vivo en…, ¿qué soy?\"",
         "scenario": "one short clause of everyday situation that is part of the clue: \"Estás en la cocina y…\"; no invented relatives, friends or backstory",
         "completion": "complete a saying, a famous line or a well-known phrase",
-        "three_facts": "three short facts that together point to exactly one answer"
+        "three_facts": "three short facts, in one sentence or two, that together point to exactly one answer; no label like \"Three clues:\""
       }
     },
     "answer_kind": {
