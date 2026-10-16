@@ -14,7 +14,7 @@ import pool_export
 # question locales (D-78, decision 235); zh-Hans, ru, pt-BR when milestone 12 resumes
 LANGUAGES = {"es": "Spanish (Latin America)", "es-ES": "Spanish (Spain)", "en": "English", "de": "German"}
 LOCALES = tuple(LANGUAGES)
-NAMED = tuple(l for l in LOCALES if not l.startswith("es"))  # own names files; es, es-ES: categories.json (data.ts namesOf)
+NAMED = tuple(l for l in LOCALES if not l.startswith("es"))  # names files with bundle and age-group names too; es: names.es.json (decision 259) or categories.json
 ENGLISH_FROM = 9  # base's batch-N drafts in English from N = 9 on (plan 148)
 TEXT_FIELDS = ["question", "answer", "wrong_answers", "hints", "description", "fun_fact"]
 

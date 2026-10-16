@@ -33379,7 +33379,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `rg` "Spanish keys", "bundle + name" in `plans/` to catch other spots in those two files; the full code/doc sweep is plan 149''s last task.
 
 Done when: the decision is recorded with its supersede link, the three plan files say slugs; `.md` only, no checks beyond `qgen validate` needed.', '2026-10-16T12:44:56Z', '2026-10-16T12:45:51Z', 1308, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1310, 149, 'Python: slug keys, names lookup, validate rule, qgen rekey', 'work', 'open', NULL, NULL, 'Task 2 of `plan 149: Slug keys for categories` (read its Model). Python side of slug keys; old data must keep working (the migration is a later task of this plan).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1310, 149, 'Python: slug keys, names lookup, validate rule, qgen rekey', 'work', 'done', NULL, '2026-10-16, authoring/tools/categories.py (display, resolve, category_name, load_names es/es-ES, slug_keys), qgen.py (prompts get display names; --subcategories and remap output resolved to keys; validate slug rule; qgen rekey CLI), rekey.py (new), patch_notes.py, providers/__init__.py, translations.py; scratch copy: rekey --apply, export, validate with slug rule OK, rerun idempotent', 'Task 2 of `plan 149: Slug keys for categories` (read its Model). Python side of slug keys; old data must keep working (the migration is a later task of this plan).
 
 Files: `authoring/tools/categories.py`, `qgen.py`, `paths.py`, `pool_export.py`, `concepts.py`, the prompt-filling code.
 
@@ -33390,7 +33390,7 @@ Files: `authoring/tools/categories.py`, `qgen.py`, `paths.py`, `pool_export.py`,
 - Map input: `work/slugs/proposal.json` (gitignored, from `decision 258: Slug keys for base and colombia: the list`; rebuild from the decision text if missing). Don''t wait for the answer: the format is fixed, the list may change.
 - Check: throw-away scratch copy of the repo, `qgen rekey --apply` there, `qgen validate` with the slug rule on passes, `qgen export` works; delete the copy. Nothing applied in the real tree.
 
-Done when: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass on today''s data; the scratch run is clean.', '2026-10-16T12:44:56Z', NULL, 1308, 0);
+Done when: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass on today''s data; the scratch run is clean.', '2026-10-16T12:44:56Z', '2026-10-16T13:00:22Z', 1308, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1311, 149, 'Engine and client: slug keys, names for every locale, old saves mapped', 'work', 'open', NULL, NULL, 'Task 3 of `plan 149: Slug keys for categories` (read its Model). Client side; works with old data and with migrated data.
 
 Files: `app/client/src/engine/pool.ts`, `state.ts`, `lib/data.ts` (`namesOf`), `lib/names.svelte.ts`, `game.test.ts`, `selection.test.ts`, save load code.
@@ -33410,6 +33410,9 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Game check (Node dev server, `TRIVIA_MUTE=1`): es names unchanged, en/de unchanged, an old save (copy of `state/game.json` into the dev save dir, never `state/` itself) loads and plays on.
 - `pm decision consequences 258 "…"` (files changed, counts).
 - Stage the printed changes incl. `app/data/old-keys.json`, renamed concept files.
+
+- After `--apply`: drop the old key `espacio` from `SPACE_CATEGORIES` in `authoring/tools/providers/__init__.py` (kept beside `space` by task 1310 until the migration).
+- `qgen rekey` warns (`note` lines) about concept lists or `targets.json` / `question-axes.json` / `spot-checks.json` / `ui-flags.json` values equal to an old key; none on 2026-10-16; check any it prints.
 
 Done when: every category and subcategory of base and colombia is a slug; `categories.json` holds no names; `names.{en,es,de}.json` complete; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-16T12:44:56Z', NULL, 1308, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1313, 149, 'Slug keys in review tool, stats, reports and patch notes', 'work', 'open', NULL, NULL, 'Task 5 of `plan 149: Slug keys for categories`. Runs after the migration task of this plan (`pm show p149`); if that isn''t done, stop and say so.
@@ -38528,6 +38531,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1309, 1305, '2026-10-16T12:39:10Z', '2026-10-16T12:43:44Z', 'done', NULL, 0, '04585cc4a55be3624a0e900f628a69f0f18b2eaf', 'claude-opus-5-5[1m]', '3980cc83-d308-4e73-8ac3-7d78fb67e017', 25, 50, 20671, 1839223, 91075, 1.5100646000000002, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1310, 1308, '2026-10-16T12:43:44Z', '2026-10-16T12:45:15Z', 'done', NULL, 0, '54609aa0cf9d47d99725a30946513efb67631669', 'claude-opus-5-5[1m]', 'e7180221-d99a-47ac-83a1-a332bb97f613', 7, 14, 8556, 303662, 48173, 0.61729240000000007, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1311, 1309, '2026-10-16T12:45:16Z', '2026-10-16T12:45:56Z', 'done', NULL, 0, '7e2cb397935f31a4d22dbdac7162a2a5ca30b8bd', 'claude-opus-5-5[1m]', '2f5ad6d3-51b1-44ab-8636-40de820c1260', 7, 14, 4260, 265208, 37095, 0.4350576, 3857742);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1312, 1310, '2026-10-16T12:45:57Z', '2026-10-16T13:00:34Z', 'done', NULL, 0, '366e2bd60a1d356343d21e0edb1ea4dc4188263a', 'claude-opus-5-5[1m]', '83d42e63-eef2-4c4c-b0ea-816479726cf4', 58, 114, 45309, 6637075, 159567, 3.5105869999999997, 3857742);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

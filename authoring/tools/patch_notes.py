@@ -68,7 +68,7 @@ def read(ref, path):
 
 def snapshot(ref):
     """{"version", "pools": {locale: pool}, "sub": {subcategory: slug}, "names": {locale: {slug: name}}};
-    subcategories and slugs as categories.sub_key (bundle + name, D-99)."""
+    subcategories and slugs as categories.sub_key (bundle + key, D-99)."""
     fs = files(ref)
     pools = {}  # per locale: base's questions and the packs', base's hash
     for f in fs:
@@ -82,7 +82,7 @@ def snapshot(ref):
         if m := CATS_RE.fullmatch(f):
             b = m.group(1) or "base"
             for c in read(ref, f)["categories"]:
-                names["es"][sub_key(b, c["slug"])] = c["name"]
+                names["es"][sub_key(b, c["slug"])] = c.get("name") or c["slug"]  # slug keys: names.es.json below
                 sub.update({sub_key(b, s): sub_key(b, c["slug"]) for s in c["subcategories"]})
         elif m := NAMES_RE.fullmatch(f):
             b = m.group(1) or "base"
