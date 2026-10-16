@@ -1,5 +1,5 @@
 {
-  "about": "Bundles (plans/22-bundles.md, D-39): sets of questions chosen before a session. `languages`: the locales a bundle is offered in; the game offers only its language's bundles (D-85). `kind: base`: a base bundle, exactly one per session; players switch the other bundles on or off. Every question is in exactly one bundle (`bundle`, default base). Bundles add questions and don't own a topic. `rule` (English) is how the pipeline decides membership, `voice` (English) its Spanish usage in prompts (D-78); `name` and `description` are for the game.",
+  "about": "Bundles (plans/22-bundles.md, D-39): sets of questions chosen before a session. `languages`: the locales a bundle is offered in; the game offers only its language's bundles (D-85). `kind: base`: a base bundle, exactly one per session; players switch the other bundles on or off. Every question is in exactly one bundle (`bundle`, default base). Bundles add questions and don't own a topic. `rule` (English) is how the pipeline decides membership, `voice` (English) the language variety of its own text in prompts (D-78): a regional bundle's drafts, in its first `languages` entry; base's es text. `name` and `description` are for the game, in Spanish (es, es-ES); en and de in names.<locale>.json.",
   "bundles": [
     {
       "id": "base",

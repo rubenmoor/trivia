@@ -35360,6 +35360,168 @@ National and departmental symbols: flag, anthem, coat of arms, national bird, tr
 - Deportes extremos: 1 (1 approved)
 - Museos: 1 (1 approved)
 - Colombianos famosos: 1 (1 approved)', 'the proposal as is (14 categories, 53 subcategories)', NULL, '2026-10-16T03:20:51Z', '2026-10-16T03:25:18Z', 1139, NULL, 'rule', NULL, '2026-10-16, task 1139: `qgen taxonomy --bundle colombia --apply work/taxonomy/colombia/proposal.json` (proposal unchanged) wrote `app/data/bundles/colombia/categories.json` (14 categories, 53 subcategories; old 6/31 replaced) and en/de names in `names.{en,de}.json`; `pool.test.ts` now checks «Regiones y departamentos de Colombia». `qgen validate` fails only on the 67 colombia questions on removed subcategories, fixed by `task 1140: Remap colombia''s existing questions onto its new taxonomy`; `qgen export` not run until then.');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (250, 'Regional drafting in en, de, es-ES: prompts apply?', 'pending', '["apply", "apply with changes", "don''t apply"]', '`task 1275: Regional drafting in any launch language (en US/UK, de, es-ES, es)` (`plan 98: Regional packs (RG-3..RG-5)`, part 10). The bundles `usa` (en, US English), `germany` (de), `uk` (en, British English), `spain` (es-ES), `mexico` (es, Mexican Spanish) draft in their region''s language and variety; today the regional prompts assume Spanish (`colombia`). Below: each prompt change as verbatim old → new, in `authoring/tools/prompts/` (and `authoring/data/regional-categories.json`, the general list of `decision 213: General category list for regional bundles`, which the taxonomy prompt reads). Nothing applied yet.
+
+Already done in code (staged, no prompt text):
+- `qgen bundle new --kind region --language <L> --voice "…"`: `languages: [L]`; both required for a region.
+- A bundle''s `voice` describes its own text in one locale: a regional bundle''s drafts (its first `languages` entry), base''s es text. `bundle_text()` passes it to drafts in that locale, whatever the language; `{voices}` lists the voices of the prompt''s locale only (es: base, colombia, later mexico; en: later usa, uk; de: germany; es-ES: spain). Side effect: base''s es-419 voice no longer reaches es-ES text (it contradicted `locale-es-ES.md`).
+- `qgen taxonomy --apply`: the bundle''s voice goes to the names call for its own language (British spelling in uk''s `names.en.json`).
+
+How variety inside one question locale works (the task''s proposal): **the voice wins over the locale prompt''s spelling/word lines, for the bundle''s own questions only**; no `locale-<L>-<region>.md` files. Every step (draft, rate, review, audit, fix) reads `locale-<L>.md` with its `{voices}`, so a reviewer sees uk''s British voice next to the US line and won''t flag "colour"; translations into en of other bundles (colombia, germany) aren''t listed there and keep US English.
+
+Names stay Spanish keys in every bundle (no prompt choice, what the game needs): `namesOf` in `app/client/src/lib/data.ts` shows es and es-ES the categories.json names as they are and reads en/de from `names.<locale>.json`; a German or English key would show untranslated to a Spanish UI. So `usa`''s categories are «Geografía de Estados Unidos» etc., with en/de names drafted on `--apply`, like base''s (drafted in English since batch-9, Spanish keys).
+
+Not changed: `house-style.md` (its "International angle" already sends regional bundles to their own rule; it has no `{voices}`), `draft.md`, `rate.md`, `review.md`, `audit.md` (language-neutral since `decision 239: English-first drafting prompts: apply?`), `translate.md`.
+
+---
+
+## 1. `taxonomy.md`
+
+### 1a. Intro
+old:
+```
+A regional bundle is a pack of trivia questions for families with a connection to one region: they live there, come from there or have family there. Its questions need that connection to answer (the bundle''s rule below). Everything players anywhere in the Spanish-speaking world answer without it stays in `base`, the main pool (its subcategories are listed below).
+
+You propose the bundle''s broad categories and their subcategories. Drafting later picks concepts per subcategory (150–250 each) and writes questions about them, at every difficulty from 1 to 15.
+```
+new:
+```
+A regional bundle is a pack of trivia questions for families with a connection to one region: they live there, come from there or have family there. Its questions need that connection to answer (the bundle''s rule below). Everything families anywhere in the world answer without it, whatever their language, stays in `base`, the main pool (its subcategories are listed below).
+
+You propose the bundle''s broad categories and their subcategories. Drafting later picks concepts per subcategory (150–250 each) and writes questions about them, at every difficulty from 1 to 15, in the bundle''s language and voice (under "Bundle").
+
+Category and subcategory names are the game''s keys and are always Spanish, whatever language the bundle''s questions are in: Spanish-speaking players see them as written, English and German names are made from them later.
+```
+
+### 1b. Step 1
+old:
+```
+1. **General list.** Start from the general category list for regional bundles. Fill `{región}` with the region''s name, in the Spanish form the players use («Comida y bebida de Colombia»). Keep a general category unless the region has too little to ask in it; a left-out one goes into `left_out` with the reason.
+```
+new:
+```
+1. **General list.** Start from the general category list for regional bundles. Fill `{región}` with the region''s name in Spanish, with the article Spanish needs («Comida y bebida de Colombia», «Deporte de Alemania», «Historia del Reino Unido»). Keep a general category unless the region has too little to ask in it; a left-out one goes into `left_out` with the reason.
+```
+
+### 1c. Each subcategory
+old:
+```
+- `name`: Spanish, short, in the bundle''s voice; unique within the bundle (it may repeat a `base` name only if the region''s angle is clear from the name: «Ríos de Colombia», not «Ríos»).
+```
+new:
+```
+- `name`: Spanish, short; in the bundle''s voice when the bundle is Spanish-speaking, else plain Spanish with the region''s own names as Spanish speakers write them («Ríos de Alemania», «Comida del sur de Estados Unidos»); unique within the bundle (it may repeat a `base` name only if the region''s angle is clear from the name: «Ríos de Colombia», not «Ríos»).
+```
+old:
+```
+- `samples`: about 10 concepts from easy to hard, each with `known_at`.
+```
+new:
+```
+- `samples`: about 10 concepts from easy to hard, each with `known_at`, named in the bundle''s language as its families say them.
+```
+
+## 2. `taxonomy-names.md`
+old:
+```
+- English: sentence case. German: standard German, «ß».
+```
+new:
+```
+- English: sentence case. German: standard German, «ß».
+- A language under "Voice" is the bundle''s own: its names follow that voice ("Colours of …" for a British voice).
+```
+
+## 3. `authoring/data/regional-categories.json` (general list, input of `qgen taxonomy`)
+`about`, old:
+```
+… {región} = the region''s name; names repeat across bundles (decision 110 (d)). Everywhere excluded (D-49): what players anywhere in the Spanish-speaking world answer without a connection to the region, and world topics: they stay in base.
+```
+new:
+```
+… {región} = the region''s name in Spanish (names are Spanish keys in every bundle; en/de names files); names repeat across bundles (decision 110 (d)). Everywhere excluded (D-49): what families anywhere answer without a connection to the region, whatever their language, and world topics: they stay in base.
+```
+«Comida y bebida de {región}» `excludes`, old → new (base names since `decision 245: base subcategories scoped to one language area: widen for the international pool?`):
+```
+International food (base Comida y bebida, Comida latinoamericana: arepa as a name, coffee in general).
+International food (base Comida y bebida, Cocinas del mundo: a dish known worldwide by name, coffee in general).
+```
+«Así se habla en {región}» `excludes`, old → new:
+```
+Spanish in general (base Idiomas y palabras, Refranes y dichos).
+The region''s language in general (base Idiomas y palabras, Refranes del mundo).
+```
+
+## 4. `locale-en.md`
+old (first two bullets):
+```
+- All content is in English, whether you write the question or translate it.
+- Plain, natural English that every English speaker reads easily: short common words, no slang, no idioms of one country.
+```
+new:
+```
+- All content is in English, whether you write the question or translate it.
+- A bundle with a voice below writes its own questions in that variety; for them, the voice wins over this section''s spelling, words, idioms and date format (a British voice: "colour", "football", "biscuit", "20 July 1969"). Every other question, translations into English included, follows this section as written:
+{voices}
+- Plain, natural English that every English speaker reads easily: short common words, no slang, no idioms of one country.
+```
+
+## 5. `locale-es.md`
+old:
+```
+- `colombia` only: Colombian references where they fit naturally (places, food, music, sport, people, Encanto); don''t force them. A `base` question never needs a connection to Colombia or any one country to answer (house style "International angle"); a Colombian voice is the `colombia` bundle''s.
+```
+new:
+```
+- A regional bundle (its voice above, e.g. `colombia`): its region''s references where they fit naturally (`colombia`: places, food, music, sport, people, Encanto); don''t force them. For its own questions its voice''s words win over the `base` line above. A `base` question never needs a connection to one country to answer (house style "International angle"); a national voice is a regional bundle''s.
+```
+
+## 6. `locale-es-ES.md`
+old:
+```
+- All content is in Spain''s Spanish (castellano de España), whether you adapt a Spanish question from Latin America or translate one: the words, spelling and usage a family in Spain uses.
+```
+new:
+```
+- All content is in Spain''s Spanish (castellano de España), whether you write the question, adapt a Spanish question from Latin America or translate one: the words, spelling and usage a family in Spain uses.
+- A bundle with a voice below writes its own questions in that voice, with its region''s references where they fit naturally; every other question follows this section:
+{voices}
+```
+
+## 7. `locale-de.md`
+old:
+```
+- All content is in German: standard German, spelled as in Germany (with "ß").
+```
+new:
+```
+- All content is in German, whether you write the question or translate it: standard German, spelled as in Germany (with "ß").
+- A bundle with a voice below writes its own questions in that voice, with its region''s references where they fit naturally; every other question follows this section:
+{voices}
+```
+old:
+```
+- Address (UI style guide `de`): never assume a plural: no "ihr", "euch", "euer", no plural imperatives ("Hört zu", "Schaut"). Where the source speaks to the players ("you", "tú"), use a generic "du" ("Hör zu: …", "wenn du niest") or an impersonal form ("Zu hören ist …"); never "Sie".
+```
+new:
+```
+- Address (UI style guide `de`): never assume a plural: no "ihr", "euch", "euer", no plural imperatives ("Hört zu", "Schaut"). Where a question speaks to the players (yours, or the source''s "you", "tú"), use a generic "du" ("Hör zu: …", "wenn du niest") or an impersonal form ("Zu hören ist …"); never "Sie".
+```
+
+## 8. `translate-region.md` (any source language; `{source_language}` is filled since plan 148)
+old:
+```
+- **The region''s own things keep their own names:** dishes, festivals, places, people, music, sayings ("arepa", "bandeja paisa", "Feria de las Flores", "vallenato"). Add a short gloss in the target language only where the question can''t be understood without it ("tinto (black coffee)"), never one that gives the answer away.
+- **Regional words travel:** a question about a regional Spanish word or saying (what a «tinto» is, what «parcero» means) is asked in the target language about the Spanish word; these players know such words. `about_language` stays for questions on Spanish spelling, grammar or wordplay.
+```
+new:
+```
+- **The region''s own things keep their own names:** dishes, festivals, places, people, music, sayings ("arepa", "Feria de las Flores", "vallenato"; "Spätzle", "Schützenfest"). Add a short gloss in the target language only where the question can''t be understood without it ("tinto (black coffee)"), never one that gives the answer away.
+- **Regional words travel:** a question about a word or saying of the region (what a «tinto» is, what a „Schultüte“ is) is asked in the target language about the original word; these players know such words. `about_language` stays for questions on the spelling, grammar or wordplay of {source_language}.
+```
+
+---
+Options: "apply" applies 1–8 as drafted; "apply with changes" — say which.', NULL, NULL, '2026-10-16T03:59:29Z', NULL, 1275, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -36633,6 +36795,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1253, 1289, '2026-10-16T03:52:53Z', '2026-10-16T03:53:33Z', 'done', NULL, 0, '639a17cd4ea4bc83dc316722315994deb2397e79', 'claude-opus-5-5[1m]', 'c70bd647-70c3-443f-83bf-d0a1f32f8a74', 9, 18, 3558, 438749, 48980, 0.55082179999999992, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1254, 1293, '2026-10-16T03:53:33Z', '2026-10-16T03:54:21Z', 'done', NULL, 0, '1156682353a5d081f6f121a2a831303493d36dc1', 'claude-opus-5-5[1m]', '1f662eff-da72-49fe-9c12-e488129304d6', 10, 20, 4651, 407460, 39603, 0.49141599999999996, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1255, 1290, '2026-10-16T03:54:22Z', '2026-10-16T03:54:35Z', 'done', NULL, 0, 'b960b297c94580de4866383fa622ff8d5bfc281c', 'claude-opus-5-5[1m]', '042594fa-d9d4-45f7-82c5-372ee0bbd93b', 4, 8, 860, 167140, 45423, 0.414044, 3857742);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1256, 1275, '2026-10-16T03:54:35Z', '2026-10-16T03:59:40Z', 'blocked', NULL, 0, '2075d915d9a9b807d42d6782a218dbe06b0908a9', 'claude-opus-5-5[1m]', '38c3f0df-d714-46db-b484-e1f62dd00c7d', 50, 84, 30283, 4046982, 129836, 2.4540804, 3857742);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -37033,6 +37196,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1208, 234);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1239, 239);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1239, 240);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1247, 245);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1275, 250);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1294, 62);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1294, 63);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1294, 64);

@@ -11,7 +11,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
 
     qgen concepts [--subcategories "Volcanes,Piratas"] [--top-up] [--fill]   # concept lists (D-37)
     qgen bundles                    # sort the pool into bundles (D-39)
-    qgen bundle new <id> --name … --description … --kind region|theme --rule …   # an empty bundle (D-41)
+    qgen bundle new <id> --name … --description … --kind region|theme --language <L> --rule … --voice …   # an empty bundle (D-41)
     qgen taxonomy --bundle <id> [--apply work/taxonomy/<id>/proposal.json]   # a regional bundle's categories (plan 138)
     qgen remap --bundle <id> [--apply work/remap/<id>/proposal.json]   # its questions onto a new taxonomy (plan 138)
     qgen draft --run <run> --subcategories "Volcanes,Piratas" [--bundle <id>]
@@ -161,9 +161,15 @@ def bundles_text():
     return "\n".join(f"- `{b['id']}`: {b['rule']}" for b in load_bundles())
 
 
-def voices_text():
-    """Each bundle's Spanish voice, for house-style.md (D-78)."""
-    return "\n".join(f"  - `{b['id']}`: {b.get('voice') or VOICE}" for b in load_bundles())
+def voice_locale(b):
+    """The locale a bundle's `voice` describes (D-78, plan 98): a regional bundle's drafts; base's and a theme's es text."""
+    return translations.draft_locale(b) if b["kind"] == "region" else "es"
+
+
+def voices_text(locale):
+    """The voices of the bundles whose text in `locale` has one, for the locale prompts' {voices} (D-78)."""
+    return "\n".join(f"  - `{b['id']}`: {b.get('voice') or VOICE}" for b in load_bundles()
+                     if voice_locale(b) == locale) or "  - none"
 
 
 def bundle_row(bundle):
@@ -171,9 +177,9 @@ def bundle_row(bundle):
 
 
 def bundle_text(bundle, locale="es"):
-    """The one bundle a batch writes for, as a content limit for the drafter (D-41); its Spanish voice only for Spanish drafts."""
+    """The one bundle a batch writes for, as a content limit for the drafter (D-41); its voice for text in its voice's locale."""
     b = bundle_row(bundle)
-    voice = f"\nVoice: {b.get('voice') or VOICE}" if locale.startswith("es") else ""
+    voice = f"\nVoice: {b.get('voice') or VOICE}" if locale == voice_locale(b) else ""
     return f"Every question you write is in the `{bundle}` bundle: {b['rule']}{voice}"
 
 
@@ -194,7 +200,8 @@ def not_in_bundle(subs, bundle):
 def prompt(*names, locale="es", bundle="base", source_locale=None):
     """Prompt files joined; {age_groups} and {players} are filled from app/data/age-groups.json,
     {locale} from prompts/locale-<locale>.md, the language of the questions at hand (else locale-<language>.md;
-    + translate-region.md for a regional bundle's translation, decision 167), {voices} from app/data/bundles.json, {source_language} from a translation's source locale (plan 148)."""
+    + translate-region.md for a regional bundle's translation, decision 167), {voices} from app/data/bundles.json (the
+    voices of `locale`), {source_language} from a translation's source locale (plan 148)."""
     ag, focus = load_age_groups(), focus_group()
     groups = [f"{g['id'].replace('_', ' ')} ({ages_text(g)})" for g in ag["groups"]]
     if focus:
@@ -219,7 +226,7 @@ def prompt(*names, locale="es", bundle="base", source_locale=None):
     if source_locale:
         text = text.replace("{source_language}", LANGUAGES[source_locale])
     return (text.replace("{age_groups}", ", ".join(groups[:-1]) + " and " + groups[-1])
-            .replace("{players}", players).replace("{voices}", voices_text()))
+            .replace("{players}", players).replace("{voices}", voices_text(locale)))
 
 def run_dir(args):
     d = WORK / args.run
@@ -4745,7 +4752,9 @@ def cmd_bundle_new(args):
     data = load_json(layout.BUNDLES)
     if any(b["id"] == args.id for b in data["bundles"]):
         sys.exit(f"Bundle {args.id!r} already exists.")
-    data["bundles"].append({"id": args.id, "kind": args.kind, "languages": ["es"], "name": args.name,
+    if args.kind == "region" and not (args.language and args.voice):
+        sys.exit("A regional bundle needs --language (the region's) and --voice (its language variety).")
+    data["bundles"].append({"id": args.id, "kind": args.kind, "languages": [args.language or "es"], "name": args.name,
                             "description": args.description, "rule": args.rule,
                             **({"voice": args.voice} if args.voice else {})})
     save_json(layout.BUNDLES, data)
@@ -4914,7 +4923,9 @@ def write_taxonomy(bundle, p, d):
         schema = {"type": "object", "required": ["items"], "properties": {"items": {"type": "array", "items": {
             "type": "object", "required": ["key", *locales],
             "properties": {"key": STR, **{l: STR for l in locales}}}}}}
-        user = ("## Target languages\n" + "\n".join(f"- `{l}`: {LANGUAGES[l]}" for l in locales)
+        b = bundle_row(bundle)
+        voice = (f"\n\n## Voice\n`{voice_locale(b)}`: {b['voice']}" if b.get("voice") and voice_locale(b) in locales else "")
+        user = ("## Target languages\n" + "\n".join(f"- `{l}`: {LANGUAGES[l]}" for l in locales) + voice
                 + "\n\n## Names\n" + json.dumps(items, ensure_ascii=False, indent=1))
         out = claude((PROMPTS / "taxonomy-names.md").read_text(encoding="utf-8"), user, schema, NAMES_MODEL, d)
         drafted = {tuple(r["key"].split(":", 1)): r for r in out["items"]}
@@ -5135,11 +5146,14 @@ def main():
     bnew = bn.add_parser("new", help="create an empty bundle")
     bnew.set_defaults(fn=cmd_bundle_new)
     bnew.add_argument("id")
-    bnew.add_argument("--name", required=True, help="Spanish name shown in the game")
-    bnew.add_argument("--description", required=True, help="Spanish description shown in the game")
+    bnew.add_argument("--name", required=True, help="name shown in the game, in Spanish (es, es-ES; en and de in names.<locale>.json)")
+    bnew.add_argument("--description", required=True, help="description shown in the game, in Spanish like --name")
     bnew.add_argument("--kind", required=True, choices=["region", "theme"])
+    bnew.add_argument("--language", choices=translations.LOCALES,
+                      help="region: the locale it drafts in, its only `languages` entry until en joins (decision 110); theme: default es")
     bnew.add_argument("--rule", required=True, help="one English sentence: when a question belongs in it")
-    bnew.add_argument("--voice", help=f"English: its Spanish usage in prompts (default: {VOICE})")
+    bnew.add_argument("--voice", help="English: the language variety of its own text in prompts, e.g. \"British English: …\" "
+                      f"(region: required; theme: its es text, default: {VOICE})")
     tx = add("taxonomy", cmd_taxonomy, "opus", run=False)
     tx.add_argument("--bundle", required=True, help="a regional bundle")
     tx.add_argument("--apply", metavar="PROPOSAL", help="write categories.json and names from this proposal.json "

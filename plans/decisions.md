@@ -719,7 +719,7 @@ Template:
   - **Media in scan runs (`neutralize`, `tighten`; task 1194):** a slot keeps the pool's pick (no search, research, re-pick or download) unless `fix` changed it or it has no usable pick; `qgen rework` still searches again (QG-23).
   - **`es-ES` for questions:** no `questions.es-ES.json` at launch; the scan lists words with no pan-Hispanic form, a sparse override can follow if there are many.
 - Consequences: RUNBOOK and AGENTS.md list `qgen neutralize` (only when the developer asks); a run gets a batch's QC (`authoring/QC.md`). It stales touched translations (D-81), so full translation runs come after it. The run itself is masterplan part 11.
-- Supersedes / related: D-6, D-36, D-56, D-78, D-79, D-81; B-13; plan 64; pm decision 32; amended by D-107 (`base` voice idiomatic Latin American, not understood in Spain; `es-ES` its own pool, `questions.es-ES.json`; `qgen neutralize` only on es-sourced questions)
+- Supersedes / related: D-6, D-36, D-56, D-78, D-79, D-81; B-13; plan 64; pm decision 32; amended by D-107 (`base` voice idiomatic Latin American, not understood in Spain; `es-ES` its own pool, `questions.es-ES.json`; `qgen neutralize` only on es-sourced questions); voices per draft locale (plan 98 task 1275: a regional bundle's `voice` reaches its drafts in any language; `{voices}` in every `locale-<L>.md`, the voices of that locale's text)
 
 ## D-84: Per-locale targets and gaps
 - Date: 2026-10-12
