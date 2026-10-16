@@ -48,9 +48,9 @@ export function getPlayers(save: SaveData): Reply<Player[]> {
 }
 
 /** POST /api/players/delete {name} */
-export function deletePlayer(save: SaveData, body: Record<string, unknown>): Reply<Player[]> {
+export function deletePlayer(save: SaveData, body: Record<string, unknown>, io: Io): Reply<Player[]> {
   return guard(save, 409, () => {
-    const out = game.deletePlayer(save, body.name).save;
+    const out = game.deletePlayer(save, body.name, io).save;
     return { save: out, status: 200, body: game.players(out) };
   });
 }

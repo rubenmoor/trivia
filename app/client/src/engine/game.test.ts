@@ -67,7 +67,7 @@ for (const file of scenarios) {
       if (seen.some((q) => !offered.has(q))) break;
       const r = step.call === "get_game" ? getGame(save, d, io, step.args.player as string | undefined)
         : step.call === "players" ? getPlayers(save)
-        : step.call === "delete_player" ? deletePlayer(save, step.args)
+        : step.call === "delete_player" ? deletePlayer(save, step.args, io)
         : gameAction(save, d, io, step.call, keyed(step.args));
       // Recorded get_game bodies carry a supply; getGame no longer does (plan 133).
       if (step.call === "get_game" && r.status === 200) {

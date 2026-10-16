@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { parseSave, setFlag, setReported } from "./save.ts";
+import { mapOldKeys, parseSave, setFlag, setReported } from "./save.ts";
 import { emptySave, SAVE_VERSION, SPANISH, type SaveData } from "./state.ts";
 import { fixture } from "./test/fixtures.ts";
 import { snapshot, upgradeDb } from "./test/save.ts";
@@ -62,6 +62,22 @@ test("v3 → v4: reports become flags or add their note", () => {
     q2: { flagged_on: "t2", player: "Bo", level: 4 },
   });
   assert.ok(!("reports" in out));
+});
+
+test("v4 → v5 unchanged; a session row round-trips parseSave and mapOldKeys", () => {
+  assert.deepEqual(parseSave({ ...full, version: 4 }), full);
+  const state = { ...db.games[0].state, purged: ["old"] };
+  const session = {
+    ...db.games[0], id: 99, player_id: null, turn: 1, seats: [{ player_id: 1 }, { player_id: null, state, lives: 3, out: true as const }],
+  };
+  const doc = { ...full, games: [...full.games, session] };
+  assert.deepEqual(parseSave(JSON.stringify(doc)), doc);
+  const mapped = mapOldKeys(doc, { categories: {}, subcategories: { old: "new" } });
+  assert.deepEqual(mapped.games.at(-1)!.seats?.[1].state?.purged, ["new"]);
+  assert.deepEqual(mapped.games.at(-1)!.seats?.[0], { player_id: 1 });
+  for (const bad of [{ seats: [] }, { seats: [1] }, { seats: [{ player_id: "a" }] }, { seats: [{ player_id: 1, state: 1 }] },
+    { seats: [{ player_id: 1 }], turn: 1 }, { turn: 1.5 }])
+    assert.throws(() => parseSave({ ...full, games: [{ ...session, ...bad }] }), JSON.stringify(bad));
 });
 
 test("parseSave rejects newer versions and broken shapes", () => {

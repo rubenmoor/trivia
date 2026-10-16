@@ -20,7 +20,7 @@ export async function fetchPlayers(): Promise<Player[]> {
 
 /** Delete a player's name and games (GF-7), not what the family saw; returns the remaining players. */
 export async function deletePlayer(name: string): Promise<Player[]> {
-  return run((save) => engine.deletePlayer(save, { name }));
+  return run((save, _data, io) => engine.deletePlayer(save, { name }, io));
 }
 
 /** Flagged questions (GM-5, decision 60), newest first; the running question's answer stays hidden. */

@@ -9,6 +9,7 @@ const UPGRADES: Record<number, (doc: Record<string, any>) => Record<string, any>
   1: (doc) => ({ ...doc, reports: [] }), // plan 36: «Reportar pregunta»
   2: upgradeBurns, // plan 65: seen counters
   3: mergeReports, // decision 60: one entry per flag
+  4: (doc) => doc, // plan 157: session rows (seats); no v4 save has any, the bump keeps older builds off a session
 };
 
 /** v2 → v3: a player's burn → one seen row; a burn for everyone (player_id null) → blocked. */
@@ -34,6 +35,18 @@ function mergeReports({ reports, ...doc }: Record<string, any>): Record<string, 
     };
   }
   return { ...doc, flags };
+}
+
+/** A session row's `seats` and `turn` (plan 157). */
+function checkSession(g: Record<string, any>): void {
+  if (g.seats !== undefined) {
+    if (!Array.isArray(g.seats) || !g.seats.length || !g.seats.every(isObject)) throw new Error("seats must be a non-empty list of objects");
+    if (!g.seats.every((s: Record<string, any>) => s.player_id === null || typeof s.player_id === "number"))
+      throw new Error("a seat's player_id must be a number or null");
+    if (!g.seats.every((s: Record<string, any>) => s.state === undefined || isObject(s.state))) throw new Error("a seat's state must be an object");
+  }
+  if (g.turn !== undefined && !(Number.isInteger(g.turn) && g.turn >= 0 && g.turn < (g.seats?.length ?? 0)))
+    throw new Error("turn must be an index into seats");
 }
 
 /** A save from a newer game (plan 55): the desktop backs it up as `newer`, not `corrupt`. */
@@ -62,6 +75,7 @@ export function parseSave(json: unknown): SaveData {
   if (!doc.games.every((g: Record<string, any>) => isObject(g.state))) throw new Error("every game needs a state");
   if (!doc.games.every((g: Record<string, any>) => g.locale === undefined || typeof g.locale === "string"))
     throw new Error("a game's locale must be text");
+  for (const g of doc.games) checkSession(g);
   const flags = doc.flags ?? {};
   if (!isObject(flags)) throw new Error("flags must be an object");
   const stored = doc.language ?? SPANISH;
@@ -94,7 +108,10 @@ export function mapOldKeys(save: SaveData, old: OldKeys | null): SaveData {
     return { ...s, ...(s.purged ? { purged } : {}), swapped_to: swapped, undo: s.undo && state(s.undo) };
   };
   const out = {
-    ...save, games: save.games.map((g) => ({ ...g, state: state(g.state) })), notified_exhausted: list(save.notified_exhausted),
+    ...save, notified_exhausted: list(save.notified_exhausted),
+    games: save.games.map((g) => ({
+      ...g, state: state(g.state), ...(g.seats ? { seats: g.seats.map((x) => (x.state ? { ...x, state: state(x.state) } : x)) } : {}),
+    })),
   };
   return changed ? out : save;
 }
