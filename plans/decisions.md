@@ -916,6 +916,7 @@ Template:
   - **Preset** in both modes: `playerChoice`, the player's newest game's bundles, else the locale's first base bundle, non-base off (pm decision 33).
   - **Order** (amended 2026-10-16, decision 263; plan 151): base bundles in one column; optional ones in another: regional of the player's region (machine locale country), non-regional, regional of other countries; file order within each, mods after ours.
   - **Any combination and start check** (amended 2026-10-16, milestone 8; plan 151): every bundle, base ones too, toggles; the Bundles screen's start is off, with a short reason, when the selection has no question for the choice (`no_questions` in the engine's `new` and in-game settings).
+  - **Counts** (amended 2026-10-16, decision 267; plan 151): every tile shows its question count: base «5000+», other shipped bundles «2000+», a mod bundle its own rounded-down count capped at its kind's string.
   - **Flag icons** (amended 2026-10-16, decision 263; plan 151): a regional bundle's icon is its `country`'s flag wherever a bundle shows an icon, mod bundles too; no pin for regional bundles.
 - Consequences: a fresh solo game plays base only (was: every offered bundle); a non-base mod bundle is off by default in solo too.
 - Supersedes / related: pm decision 51 (solo plays the defaults); pm decisions 33, 38 in part (fresh default on the configure screen only); D-85, D-88

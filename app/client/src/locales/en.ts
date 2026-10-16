@@ -242,12 +242,13 @@ export const en = {
     print: "Print",
   },
   bundles: {
+    /** A tile's question count (decision 267): shipped bundles 5000+ / 2000+, a mod bundle's rounded-down count. */
+    count: "{n}",
+    countPlus: "{n}+",
     /** Start disabled: the chosen bundles have no question for the game (plan 151). */
     noQuestions: "None of the chosen bundles has questions for this game",
     titleOpen: "Which questions does ",
     titleClose: " play?",
-    baseHeading: "Pick one",
-    extraHeading: "Add any you like",
     playerMade: "Player-made · {mod}",
   },
   choice: {
