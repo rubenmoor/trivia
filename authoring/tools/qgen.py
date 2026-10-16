@@ -4718,17 +4718,21 @@ def english_keys_problems(questions):
 
 
 def run_ids(run):
-    """The ids of a back-audit (plan 57) or neutralize run (plan 64), or None for any other name."""
+    """The ids of a back-audit (plan 57) or neutralize run (plan 64), or None for any other name.
+    work/<run>/run.json, else the run's "ids" in spot-checks.json (tracked, for a checkout without work/)."""
     m = re.fullmatch(r"(backaudit|neutralize)-\d+", run)
     if not m:
         return None
     cfg = load_json(WORK / run / "run.json", {}) or {}
-    return cfg.get("ids") if cfg.get("mode") == m.group(1) else None
+    if cfg.get("mode") == m.group(1):
+        return cfg.get("ids")
+    return ((load_json(layout.SPOT_CHECKS, {}) or {}).get(run) or {}).get("ids")
 
 
 def spot_check_problems(questions, scale):
     """Errors in authoring/data/spot-checks.json (plan 16): batches (or back-audit, neutralize runs) and ids exist, values in range;
-    a translation run's (tr-<locale>-<n>) items are its translations, with "locale" (plan 67)."""
+    a translation run's (tr-<locale>-<n>) items are its translations, with "locale" (plan 67);
+    a back-audit or neutralize run's members are its entry's "ids", never work/ (gitignored)."""
     checks = load_json(layout.SPOT_CHECKS)
     if checks is None:
         return []
@@ -4741,9 +4745,11 @@ def spot_check_problems(questions, scale):
         if locale and locale not in tr_batches:
             tr_batches[locale] = {t["id"]: t.get("batch") for t in translations.load(locale)["questions"]}
         batch_of = tr_batches[locale] if locale else pool_batches
-        ids = run_ids(b)
-        if ids is not None:
-            batch_of = {i: b for i in ids}
+        if re.fullmatch(r"(backaudit|neutralize)-\d+", b):
+            if not (isinstance(entry.get("ids"), list) and entry["ids"]):
+                out.append(f"{rel}: {b}: needs its run's ids")
+                continue
+            batch_of = {i: b for i in entry["ids"]}
         if b not in batch_of.values():
             out.append(f"{rel}: no batch {b!r} in {f'questions.{locale}.json' if locale else 'the pool'}")
             continue

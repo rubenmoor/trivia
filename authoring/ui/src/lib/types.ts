@@ -129,7 +129,7 @@ export interface SpotCheckItem {
 export interface SpotChecks {
   size: number;
   problems: string[];
-  checks: Record<string, { size: number; seed: string; items: Record<string, SpotCheckItem> }>;
+  checks: Record<string, { size: number; seed: string; ids?: string[]; items: Record<string, SpotCheckItem> }>;
 }
 
 export interface Question {

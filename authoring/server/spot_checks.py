@@ -54,6 +54,8 @@ def record(batch, q, media_changed):
     with atomic.locked(FILE):
         data = load()
         entry = data.setdefault(batch, {"size": size(batch), "seed": batch, "items": {}})
+        if (ids := qgen.run_ids(batch)) is not None:
+            entry["ids"] = ids  # tracked: validate needs no work/
         entry["items"][q["id"]] = item
         save(data)
     return item
