@@ -350,6 +350,12 @@ const es = {
     exhausted: { one: "A este paquete le quedan pocas preguntas: {list}", other: "A estos paquetes les quedan pocas preguntas: {list}" },
   },
   /** The letter picker: a new name with a pad only (plan 46). */
+  /** A seat's controller is gone (decision 289). */
+  seat: {
+    lostTitle: "Mando de {name} desconectado",
+    lostBody: "Reconéctenlo o usen otro mando libre.",
+    take: "Tomar su lugar",
+  },
   picker: {
     /** The keys, in order; `marks`: extra keys for a note. */
     letters: "ABCDEFGHIJKLMNOPQRSTUVWXYZÑÁÉÍÓÚÜ-",

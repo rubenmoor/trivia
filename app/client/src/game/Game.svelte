@@ -14,7 +14,8 @@
   import { t } from "../lib/i18n.ts";
   import { listenPads } from "../lib/gamepad.svelte.ts";
   import { listen, pushScope, type Action } from "../lib/input.svelte.ts";
-  import { watchGame } from "../lib/seats.svelte.ts";
+  import { holdPause } from "../lib/pause.ts";
+  import { lostSeat, watchGame } from "../lib/seats.svelte.ts";
   import { emit, loadedMods, watchLayers, type ModLayer } from "../lib/mods.ts";
   import type { Game, GameMode, JokerBudget, JokerEvent, Flagged } from "../lib/types.ts";
   import FlagDialog from "./FlagDialog.svelte";
@@ -24,6 +25,7 @@
   import JokerTray from "./JokerTray.svelte";
   import { levelsOf, onTwelve } from "./levels.ts";
   import Overlay from "./Overlay.svelte";
+  import SeatLost from "./SeatLost.svelte";
   import { music, sfx, unlock, type Cue, type Track } from "./sound.svelte.ts";
   import Stage from "./Stage.svelte";
   import { swap } from "./swap.ts";
@@ -422,16 +424,25 @@
     pausedMedia = [];
   }
 
+  /** Timed: the Esc menu pauses the clock (decision 282); released on close or leave. */
+  let releasePause = () => {};
+  /** The game after a pause or resume, if it is still the one on screen. */
+  const applyClock = (g: Game | null) => {
+    if (g && g.id === game?.id) game = g;
+  };
+
   /** Not during a transition: an action from the overlay would run a second `go` (the mouse button; keys wait anyway). */
   function openOverlay() {
-    if (busy) return;
+    if (busy || overlayOpen) return;
     overlayOpen = true;
+    releasePause = holdPause(applyClock);
     sfx("menu-open");
     pauseMedia();
   }
 
   function closeOverlay() {
     overlayOpen = false;
+    releasePause();
     sfx("menu-close");
     resumeMedia();
   }
@@ -439,6 +450,7 @@
   /** An overlay action closes it; the screen changes, so the paused media stays paused. */
   function leaveOverlay() {
     overlayOpen = false;
+    releasePause();
     pausedMedia = [];
   }
 
@@ -718,6 +730,9 @@
     <DomScreen render={layer.render} props={{ close: layer.close }} onclose={layer.close} onerror={layer.fail} />
   {/each}
 
+  {#if lostSeat() !== null}
+    <SeatLost seat={lostSeat()!} onmenu={openOverlay} onpause={applyClock} />
+  {/if}
   {#if overlayOpen}
     <Overlay
       {mode}

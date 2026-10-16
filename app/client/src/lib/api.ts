@@ -249,7 +249,7 @@ function events(action: string, body: GameActionBody, before: Before | null, gam
 
 /** A game action on the engine (engine/api.ts); returns the game afterwards. */
 export async function gameAction(
-  action: "new" | "pick" | "answer" | "claim" | "reveal" | "skip" | "undo" | "abandon" | "jokers" | "replace" | "level" | "goto" | "settings",
+  action: "new" | "pick" | "answer" | "claim" | "pause" | "resume" | "reveal" | "skip" | "undo" | "abandon" | "jokers" | "replace" | "level" | "goto" | "settings",
   body: GameActionBody = {},
 ): Promise<Game | null> {
   const scope = action === "new" ? "next" : "game";
