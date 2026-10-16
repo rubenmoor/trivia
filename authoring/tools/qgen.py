@@ -14,6 +14,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen bundle new <id> --name … --description … --kind region|theme --rule …   # an empty bundle (D-41)
     qgen draft --run <run> --subcategories "Volcanes,Piratas" [--bundle <id>]
     qgen draft | rate | factcheck | dedupe | revise | apply | merge --run <run>
+    qgen english-keys               # English answer + concept per non-en source, for en runs' overlap checks (decision 232)
     qgen translate --run <run> [--locale en --ids q-0001,…]   # a translation run's first step (plan 66)
     qgen media | sheets | review [--round 2] | fix | research | record | sync | batch-report --run <run>
     qgen audit [--batch <batch>]    # a second LLM reader of a seeded sample (plan 16); changes nothing
@@ -47,7 +48,7 @@ Revising questions that are already in the pool (07, QG-13):
     qgen import --run <run> --batch <batch> [--assign-unbatched]
     qgen rate | factcheck | revise | apply --run <run>
 """
-import argparse, atexit, concurrent.futures, datetime, difflib, json, os, random, re, subprocess, sys, threading, time, unicodedata
+import argparse, atexit, concurrent.futures, datetime, difflib, hashlib, json, os, random, re, subprocess, sys, threading, time, unicodedata
 import urllib.parse
 from pathlib import Path
 from collections import Counter
@@ -1227,16 +1228,17 @@ def for_review(q):
 def rate_candidates(d):
     """tmp_id → overlap candidates for `rate` (plan 15): pool questions of every bundle (not rejected)
     and earlier drafts of the run; revised drafts count as later than the first round.
-    A translation run: the locale's approved questions (in_locale) instead of the pool."""
-    locale = run_locale(d)
+    A translation run: the locale's approved questions (in_locale) instead of the pool. An en run sees the pool
+    through English keys (as_locale)."""
+    locale, lang = run_locale(d), text_locale(d)
     others = ([q for q in in_locale(locale) if q["status"] == "approved"] if locale
-              else [q for q in load_json(POOL)["questions"] if q["status"] != "rejected"])
+              else as_locale([q for q in load_json(POOL)["questions"] if q["status"] != "rejected"], lang))
     out, cache = {}, {}
     for _, qs in sorted(drafts(d), key=lambda f: (f[0].startswith("revised-"), f[0])):
         for q in qs:
             out[q["tmp_id"]] = [{"id": p.get("id") or p["tmp_id"], "question": p["question"], "answer": p["answer"],
                                  "concept": p.get("concept")}
-                                for p, _, _ in overlap_candidates(q, others, cache)
+                                for p in (p.get("of", p) for p, _, _ in overlap_candidates(q, others, cache, lang))
                                 if (p.get("id") or p["tmp_id"]) != q["tmp_id"]]
             others.append(q)
     return out
@@ -1304,55 +1306,138 @@ def cmd_factcheck(args):
     return parallel(work, todo, args.jobs, "factcheck", "calls")
 
 
-def duplicates(q, pool_questions):
-    """Return a reason if q duplicates a pool question, else None.
+def duplicates(q, pool_questions, locale="es"):
+    """Return a reason if q duplicates a pool question, else None. pool_questions in q's language
+    (`as_locale`).
 
     Only questions with the same answer can be duplicates: similar wording with a
     different answer is just a shared template ("Escucha: ¿qué … suena?"). Same
     answer counts when the wording is similar too, or both need the same kind of
     essential picture/sound (e.g. two "Mira la foto" questions about the Komodo dragon).
     """
-    qa, qq = norm(q["answer"]), norm(q["question"])
+    qa, qq = overlap_norm(q["answer"], locale), overlap_norm(q["question"], locale)
     if qa.replace(" ", "").isdigit():
         return None
     for p in pool_questions:
-        if qa != norm(p["answer"]):
+        if qa != overlap_norm(p["answer"], locale):
             continue
-        sim = difflib.SequenceMatcher(None, qq, norm(p["question"])).ratio()
+        sim = difflib.SequenceMatcher(None, qq, overlap_norm(p["question"], locale)).ratio()
         both_essential = (q["media"]["role"] == p["media"]["role"] == "essential"
                           and q["media"]["type"] == p["media"]["type"])
         if sim > 0.6 or both_essential:
+            p = p.get("of", p)
             return f"like {p.get('id') or p.get('tmp_id')}: {p['question']} → {p['answer']}"
     return None
 
 
-def stem(text):
-    """norm() with every word's trailing «s», then «e», dropped: Almenas → almena, padres → padr."""
-    return " ".join(re.sub(r"e$", "", re.sub(r"s$", "", w)) if len(w) > 3 else w for w in norm(text).split())
+def overlap_norm(text, locale="es"):
+    """norm(); English also without a leading "the", "a", "an"."""
+    t = norm(text)
+    return re.sub(r"^(?:the|an?) (?=.)", "", t) if locale == "en" else t
 
 
-def _overlap_keys(q, cache):
+def stem(text, locale="es"):
+    """overlap_norm() with every word's plural ending dropped. Spanish: trailing «s», then «e»: Almenas → almena,
+    padres → padr. English: -ies → y, -es after s/x/z/ch/sh, else -s (not -ss): cities → city, boxes → box."""
+    def en(w):
+        return (re.sub(r"ies$", "y", w) if w.endswith("ies") else re.sub(r"(s|x|z|ch|sh)es$", r"\1", w)
+                if re.search(r"(s|x|z|ch|sh)es$", w) else re.sub(r"(?<!s)s$", "", w))
+    return " ".join((en(w) if locale == "en" else re.sub(r"e$", "", re.sub(r"s$", "", w))) if len(w) > 3 else w
+                    for w in overlap_norm(text, locale).split())
+
+
+def keys_hash(q):
+    """First 12 hex of sha256 over a source's answer and concept: when its English keys are stale."""
+    return hashlib.sha256(json.dumps([q["answer"], q.get("concept")], ensure_ascii=False).encode()).hexdigest()[:12]
+
+
+def as_locale(questions, locale):
+    """The overlap checks' view of pool questions in `locale` (decision 232). Only en changes: sources in another
+    language through their en translation's text and the cached English answer and concept (english-keys.json),
+    their own concept kept as a key; "of" is the question itself. es and other locales as they are."""
+    if locale != "en":
+        return questions
+    tr = {t["id"]: t for t in translations.load("en")["questions"]}
+    keys = (load_json(layout.ENGLISH_KEYS, {}) or {}).get("questions", {})
+    out = []
+    for q in questions:
+        if translations.source_locale(q) == "en" or "id" not in q:
+            out.append(q)
+            continue
+        t, k = tr.get(q["id"]), keys.get(q["id"])
+        k = k if k and k["hash"] == keys_hash(q) else None
+        out.append({**q, **({f: t[f] for f in ("question", "answer", "fun_fact")} if t else {}),
+                    **({"answer": t["answer"] if t else k["answer"], "concept": k["concept"]} if k else {}),
+                    "also": q.get("concept"), "of": q})
+    return out
+
+
+ENGLISH_KEYS_SIZE = 250  # sources per english-keys call
+ENGLISH_KEYS_SCHEMA = {"type": "object", "required": ["items"], "properties": {"items": {
+    "type": "array", "items": {"type": "object", "required": ["id", "answer", "concept"],
+                               "properties": {"id": STR, "answer": STR, "concept": STR}}}}}
+
+
+def cmd_english_keys(args):
+    """english-keys.json (decision 232): an English answer and concept per source question in another language (not
+    rejected), for as_locale; new or changed ones (keys_hash) asked, gone ones dropped. Before an en batch's rate."""
+    pool = [q for q in load_json(POOL)["questions"]
+            if q["status"] != "rejected" and translations.source_locale(q) != "en"]
+    have = (load_json(layout.ENGLISH_KEYS, {}) or {}).get("questions", {})
+    keys = {q["id"]: have[q["id"]] for q in pool if q["id"] in have and have[q["id"]]["hash"] == keys_hash(q)}
+    todo = [q for q in pool if q["id"] not in keys]
+    progress.resumed("english keys", len(keys), len(todo), "questions")
+    lock = threading.Lock()
+
+    def save():
+        save_json(layout.ENGLISH_KEYS, {"version": 1, "about": "decision 232: English answer and concept per source "
+                                        "question in another language, for the overlap checks (qgen english-keys)",
+                                        "questions": dict(sorted(keys.items(), key=lambda kv: natural_key(kv[0])))})
+
+    def work(qs):
+        user = "## Items\n" + json.dumps([{"id": q["id"], "answer": q["answer"], "concept": q.get("concept") or ""}
+                                          for q in qs], ensure_ascii=False)
+        out = claude(prompt("english-keys"), user, ENGLISH_KEYS_SCHEMA, args.model, run_dir(args))
+        got = {r["id"]: r for r in out["items"]}
+        with lock:
+            for q in qs:
+                if q["id"] in got:
+                    r = got[q["id"]]
+                    keys[q["id"]] = {"hash": keys_hash(q), "answer": r["answer"],
+                                     "concept": r["concept"] if q.get("concept") else None}
+            save()
+        missing = [q["id"] for q in qs if q["id"] not in got]
+        if missing:
+            raise RuntimeError(f"no English keys for {', '.join(missing)}")
+
+    errors = parallel(work, chunks(todo, ENGLISH_KEYS_SIZE), args.jobs, "english keys", "calls") if todo else []
+    save()  # also drops stale entries
+    return errors
+
+
+def _overlap_keys(q, cache, locale):
     k = cache.get(id(q))  # id(q) → (q, keys); holding q keeps its id unique
     if k is None:
-        keys = [t for t in (q["answer"], q.get("concept")) if t]
-        keys = [t for t in keys if not re.search(r"\d", t) and norm(t) not in {"si", "no"}]
+        keys = [t for t in (q["answer"], q.get("concept"), q.get("also")) if t]
+        keys = [t for t in keys if not re.search(r"\d", t) and norm(t) not in {"si", "no", "yes"}]
         k = cache[id(q)] = (q, {
-            "answer": norm(q["answer"]) if q["answer"] in keys else None,
-            "stems": {stem(t) for t in keys} - {""},
-            "text": f" {stem(q['question'] + ' ' + q.get('fun_fact', ''))} ",
-            "question": norm(q["question"])})
+            "answer": overlap_norm(q["answer"], locale) if q["answer"] in keys else None,
+            "stems": {stem(t, locale) for t in keys} - {""},
+            "text": f" {stem(q['question'] + ' ' + q.get('fun_fact', ''), locale)} ",
+            "question": overlap_norm(q["question"], locale)})
     return k[1]
 
 
-def overlap_candidates(q, others, cache, cap=8):
+def overlap_candidates(q, others, cache, locale="es", cap=8):
     """[(other, why, rank)] for B-5 (plan 15): questions that may ask the same fact as q, closest first.
     Rank 0 same answer, 1 similar answer, 2 stem-equal concept or answer, 3 one's concept/answer in
-    the other's text. Answers with digits and yes/no only match through the concept."""
-    a, found = _overlap_keys(q, cache), []
+    the other's text. Answers with digits and yes/no only match through the concept. q and others in `locale`
+    (`as_locale`); one cache per locale."""
+    a, found = _overlap_keys(q, cache, locale), []
     for p in others:
         if p is q:
             continue
-        b, why, rank = _overlap_keys(p, cache), None, 9
+        b, why, rank = _overlap_keys(p, cache, locale), None, 9
         if a["answer"] and b["answer"]:
             if a["answer"] == b["answer"]:
                 why, rank = "same answer", 0
@@ -1389,11 +1474,11 @@ def collect(d):
 
 def cmd_dedupe(args):
     d = run_dir(args)
-    pool = load_json(POOL)["questions"]
-    seen = list(pool)
+    locale = text_locale(d)
+    seen = as_locale(load_json(POOL)["questions"], locale)
     for _, qs in drafts(d):
         for q in qs:
-            why = duplicates(q, seen)
+            why = duplicates(q, seen, locale)
             if why: print(f"  {q['tmp_id']}: {q['question']} → {q['answer']}\n      {why}")
             seen.append(q)
 
@@ -1415,6 +1500,7 @@ def cmd_merge(args):
         added, dropped = [], load_json(d / "dropped.json", [])
         ids = load_json(d / "ids.json", {})  # tmp_id -> pool id, for the review step
         locale = text_locale(d)
+        seen = as_locale(pool, locale)  # merged drafts are appended to both
         by_id = {q["id"]: q for q in pool} | {q["tmp_id"]: q for _, qs in drafts(d) for q in qs}
         for _, qs in drafts(d):
             for q in qs:
@@ -1432,7 +1518,7 @@ def cmd_merge(args):
                     reason = "hard fail: " + ", ".join(f"{k} {r.get(k, '-')}" for k in HARD_CRITERIA)
                 elif c and c["verdict"] == "wrong": reason = f"fact-check wrong: {c['problem']}"
                 elif soft_score(r) < args.min_score: reason = f"soft score {soft_score(r):.2f} < {args.min_score}"
-                else: reason = (dup := duplicates(q, pool)) and "duplicate " + dup
+                else: reason = (dup := duplicates(q, seen, locale)) and "duplicate " + dup
                 if reason:
                     if not reason.startswith("not "):
                         dropped.append({"tmp_id": tid, "reason": reason, "question": q["question"], "answer": q["answer"]})
@@ -1455,6 +1541,7 @@ def cmd_merge(args):
                 }
                 next_id += 1
                 pool.append(new); added.append(new["id"]); merged.add(tid); ids[tid] = new["id"]
+                if seen is not pool: seen.append(new)
         save_json(POOL, data)
     save_json(d / "ids.json", ids)
     save_json(d / "merged.json", sorted(merged))
@@ -1871,9 +1958,15 @@ def report_calibration(runs):
 
 def report_overlaps():
     """Overlap candidates among approved questions (plan 15), for cleanup in the review tool. No LLM."""
-    pool, cache = [q for q in load_json(POOL)["questions"] if q["status"] == "approved"], {}
-    pairs = sorted(((rank, p["id"], q["id"], p, q, why) for i, q in enumerate(pool)
-                    for p, why, rank in overlap_candidates(q, pool[:i], cache)), key=lambda x: x[:3])
+    pool = [q for q in load_json(POOL)["questions"] if q["status"] == "approved"]
+    en = [q for q in pool if translations.source_locale(q) == "en"]
+    rest, cache, en_cache = [q for q in pool if translations.source_locale(q) != "en"], {}, {}
+    seen = as_locale(rest, "en")  # an en question against everything else, through English keys
+    pairs = [(p, q, why, rank) for i, q in enumerate(rest) for p, why, rank in overlap_candidates(q, rest[:i], cache)]
+    for q in en:
+        pairs += [(p.get("of", p), q, why, rank) for p, why, rank in overlap_candidates(q, seen, en_cache, "en")]
+        seen.append(q)
+    pairs = sorted(((rank, p["id"], q["id"], p, q, why) for p, q, why, rank in pairs), key=lambda x: x[:3])
     print(f"{len(pairs)} overlap candidate pair(s) among {len(pool)} approved questions, strongest first:")
     for *_, p, q, why in pairs:
         print(f"  {p['id']} / {q['id']}  {why}: {p['answer']} | {q['answer']}\n"
@@ -3616,6 +3709,7 @@ def cmd_batch(args):
     steps = [
         ("concepts", cmd_concepts, ns(model="opus", subcategories=None, top_up=True)),
         ("draft", cmd_draft, ns(model="opus", seed=1, slots=BATCH_SLOTS, subcategories=None, bundle=args.bundle)),
+        *([("english-keys", cmd_english_keys, ns(model="sonnet"))] if locale == "en" else []),
         ("rate", cmd_rate, ns(model="opus")),
         ("factcheck", cmd_factcheck, ns(model="sonnet")),
         ("revise", cmd_revise, ns(model="opus")),
@@ -3647,7 +3741,8 @@ def cmd_batch(args):
     concept_dir = concepts.concepts_dir(args.bundle).relative_to(ROOT).as_posix()
     pool_file = layout.POOL_FILE(locale, "base").relative_to(ROOT).as_posix()
     print("Commit exactly this:\n"
-          f"  git add authoring/data/questions.json {pool_file} app/data/bundles/ {concept_dir}/ authoring/reports/{run}.md\n"
+          f"  git add authoring/data/questions.json {pool_file} app/data/bundles/ {concept_dir}/ authoring/reports/{run}.md"
+          + (" authoring/data/english-keys.json" if locale == "en" else "") + "\n"
           f"  git commit -m \"{run}: {len(qs)} {'' if args.bundle == 'base' else args.bundle + ' '}questions, "
           f"{n_ok} approved (qgen batch)\"")
 
@@ -4273,6 +4368,7 @@ def validate_pool():
     errors += targets.health_problems(health.THRESHOLDABLE)
     errors += targets.quality_problems()
     errors += spot_check_problems(data["questions"], (lo, hi))
+    errors += english_keys_problems(data["questions"])
     for q in data["questions"]:
         qid = q.get("id", "?")
         for k in ["id", "status", "subcategory", "difficulty", "description", "question", "answer",
@@ -4514,6 +4610,27 @@ def names_warnings(data):
     return out
 
 
+def english_keys_problems(questions):
+    """Shape of authoring/data/english-keys.json (decision 232): version 1; per pool id a 12-hex hash, an answer
+    and a concept (string or null). Stale entries are fine: the next `qgen english-keys` drops them."""
+    doc = load_json(layout.ENGLISH_KEYS)
+    if doc is None:
+        return []
+    rel = "authoring/data/english-keys.json"
+    if doc.get("version") != 1 or not isinstance(doc.get("questions"), dict):
+        return [f"{rel}: needs version 1 and a questions object"]
+    ids, out = {q["id"] for q in questions}, []
+    for i, k in doc["questions"].items():
+        if i not in ids:
+            out.append(f"{rel}: {i}: not in the pool")
+        elif not (isinstance(k, dict) and set(k) == {"hash", "answer", "concept"}
+                  and isinstance(k["hash"], str) and re.fullmatch(r"[0-9a-f]{12}", k["hash"])
+                  and isinstance(k["answer"], str) and k["answer"].strip()
+                  and (k["concept"] is None or isinstance(k["concept"], str))):
+            out.append(f"{rel}: {i}: needs hash (12 hex), answer and concept (string or null)")
+    return out
+
+
 def spot_check_problems(questions, scale):
     """Errors in authoring/data/spot-checks.json (plan 16): batches and ids exist, values in range;
     a translation run's (tr-<locale>-<n>) items are its translations, with "locale" (plan 67)."""
@@ -4671,6 +4788,8 @@ def main():
     add("rate", cmd_rate, "opus")
     add("factcheck", cmd_factcheck, "sonnet")
     add("dedupe", cmd_dedupe)
+    add("english-keys", cmd_english_keys, "sonnet", run=False).add_argument(
+        "--run", default="english-keys", help="work/<run>/ for the calls log")
     add("merge", cmd_merge).add_argument("--min-score", type=float, default=0,
                                          help="minimum mean of distractors/age_fit/fun/description "
                                               "(default 0: off; the pilot showed it doesn't predict the developer)")
