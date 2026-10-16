@@ -8308,6 +8308,55 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - `qgen batch` for `base` drafts English questions with `locale: "en"`, the whole chain on English text; `--translate` runs en → `es`, `es-ES`, `de` and es → `en`, `de`, `es-ES`; `pool.es-ES.json` exported and played by an `es-ES` save once its supply passes.
 - The family''s `es` game plays as today plus `es` translations of English sources.
 - Decisions superseded, prompts answered and applied, docs in sync; `qgen validate`, `npm run check`, `npm test`, `npm run build` pass.', '2026-10-16T00:30:03Z', 1217);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (149, 9, 'Slug keys for categories', 880, 'Part 16 of `plan 9: masterplan` (milestone 9, "Slug keys for categories", developer 2026-10-16). Today a subcategory''s key is its Spanish name (`decision 165: Subcategory keys in code: bundle + name; base keeps bare names`, D-99, D-100) and `categories.json` carries the Spanish display names; es/es-ES show the keys as they are (`namesOf` in `app/client/src/lib/data.ts`). This plan makes every category and subcategory, in every bundle, keyed by an English slug unique within its bundle, with every display name (en included) from `names.<locale>.json`, before the next regional taxonomies (`usa`, `germany`, `uk`, `spain`, `mexico`) are made in other languages.
+
+## Model
+- Key: slug `^[a-z0-9]+(-[a-z0-9]+)*$`, unique within its bundle per kind (category slugs; subcategory slugs); a category and a subcategory may share one (`history`). Engine/names one-string form of decision 165 kept: `subKey` = base''s bare slug, else `<bundle>/<slug>`; Python `(bundle, slug)`.
+- `categories.json` (base, `bundles/<id>/`): `{"categories": [{"slug", "subcategories": ["<slug>", …]}]}`, no names.
+- Names: `names.<locale>.json` for `en`, `es`, `de` (`names.es.json` new: today''s Spanish names, unchanged); `es-ES` reads `names.es.json`, then `names.es-ES.json` overrides where Spain differs (optional file, only existing keys). Lookup order everywhere (client, `load_names`, reports): locale file → base language file (`es` for `es-ES`) → a `name` field in `categories.json` (mods) → the key itself.
+- Mods (decision 133 kit, `modding/`): today''s format stays valid: a plain string is key and name, a category''s `name` is its name; slugs + names files optional; the lookup order above covers both.
+- Old keys: `app/data/old-keys.json` (written once by the migration, shipped): `{"categories": {"<old catKey>": "<new>"}, "subcategories": {"<old subKey>": "<new>"}}` for `base` and `colombia`; read by save load, the frozen engine fixtures'' normalizer, `patch_notes.py` (old tags'' pools) and authoring readers of saves (`played.py`).
+- Saves: on load map `purged`, `swapped_to`, the joker log''s `purged`, settings/history entries with sub or category keys, and any sub key left in `notified_exhausted` (bundle ids since `decision 195: Supply notice: bundles running out instead of exhausted subcategories`; unknown ones are pruned anyway). Idempotent, no save version bump unless the task finds a field that needs one (then `pm decision record`).
+- Prompts get display names in the prompt''s locale, never slugs; a prompt that returns a subcategory (taxonomy, `remap.md`, concepts, audit suggestions) is answered back to slugs by code, or returns slugs if its decision says so.
+- Not in scope: bundle ids (already slugs), `bundles.json`''s `name`/`description`.
+
+## Decisions
+- `decision 258: Slug keys for base and colombia: the list` (added by task 1305; pending): the slug list, en names beside the Spanish ones; `work/slugs/proposal.json` holds the same list as JSON (gitignored; rebuild from the decision text if missing). Waiting on it: tasks 1275–1280 and this plan''s migration task.
+- Prompt changes (taxonomy) are the developer''s: drafted verbatim old → new in a pm decision (task 6), applied after the answer (task 7); `decision 250: Regional drafting in en, de, es-ES: prompts apply?` answer 3 waits for them.
+
+## Tasks
+1. **Supersede and record** (first): `pm decision record "Category and subcategory keys: English slugs" --supersedes 165 …` (name-as-key part of decision 165; D-99''s "a category or subcategory is bundle + name"; D-100''s name keys); new D-entry in `plans/decisions.md` (the Model above), D-99/D-100 amended notes; `plans/22-bundles.md` Layout bullets ("Spanish keys in every bundle" → slugs + names files), `plans/15b-question-translation.md` Storage (names files incl. `names.es.json`, es-ES override).
+2. **Python: slug keys, names lookup, validate rule, `qgen rekey`** (`authoring/tools/categories.py`, `qgen.py`, `paths.py`, `pool_export.py`, `concepts.py`)
+   - Readers accept both formats (old data keeps working until task 4): `categories.load` without `name`; `categories.display(bundle, key, locale)` with the lookup order; `load_names` for `es`/`es-ES`.
+   - Prompts filled with display names in the prompt''s locale (drafts, concepts, rate, review, audit, translate, remap); model output mapped back to keys.
+   - `qgen validate`: slug form, unique per bundle per kind, names files `en`/`es`/`de` complete for every shipped bundle, `names.es-ES.json` keys exist, every question''s `subcategory` a slug of its bundle (once task 4 ran: a rule flag or the presence of `names.es.json` switches it on).
+   - `qgen rekey --map <proposal.json> [--apply]` (dry run by default, prints every file it would change): `categories.json` (base, bundles), names files (keys renamed, `names.es.json` written from today''s names), `questions.json` and every `questions.<locale>.json`, `targets.json` (if keyed by sub/category), `question-axes.json` (per bundle, if keyed), concept files (`authoring/data/concepts/`, `bundles/<id>/concepts/`: renamed to `<slug>.json`), `spot-checks.json` / `ui-flags.json` / `state/` review files if they hold sub keys, work files of in-flight batches (`work/<batch>/` drafts, concepts, translation chunks: file names and `subcategory` fields; `work/concepts/`); writes `app/data/old-keys.json`. Checked on a scratch copy of the repo (throw-away), not applied here.
+3. **Engine and client** (`app/client/src/engine/pool.ts`, `state.ts`, `lib/data.ts`, `lib/names.svelte.ts`, `game.test.ts`, `selection.test.ts`)
+   - `namesOf` for every locale incl. `es` (`names.es.json`) and `es-ES` (es + override); the lookup order (mods: plain string = key and name); «Cambiazo», supply notice, configure screen show names, send keys.
+   - Save load maps old keys through `old-keys.json` (fields in Model); frozen fixtures replay through the normalizer with the map.
+   - Works with old data (no map, no `names.es.json`: keys shown as names = today''s Spanish) and with a scratch migrated copy (browser check on the Node dev server, `TRIVIA_MUTE=1`: es game shows today''s names, en/de unchanged, an old save with a purged sub and `swapped_to` plays on).
+4. **Apply the slug migration** (after decision 258 and tasks 2, 3; `pm task-pending-decision` on 258)
+   - Between batches: check `pm show 1185` / `pm show 1295` (`task 1185: run batch-9`, `task 1295: run colombia batch (batch-<n>)`) and `work/<batch>/`; a mid-run batch''s work files are mapped by `qgen rekey`, never hand-edited.
+   - `qgen rekey --map work/slugs/proposal.json` (as answered) dry run, then `--apply`; `qgen export`; `qgen validate` with the slug rule on; `trivia-media sync` not needed (no media change); game check (es names unchanged, en/de unchanged, old `state/` save loads); `pm decision consequences 258 "…"`.
+5. **Review tool, stats, reports, patch notes** (`authoring/ui`, `authoring/server`, `reviews.py`, `played.py`, `patch_notes.py`, `qgen report`)
+   - URLs and filters by key (`/review?sub=`, stats), labels from names (`es` by default); `qgen report` / `--simulate` / `--cost` show slugs or names consistently (bottleneck lines name both); `patch_notes.py` maps an old tag''s keys through `old-keys.json` so a rename isn''t reported as a change; `played.py` maps old save keys.
+6. **Taxonomy on slugs: code and prompt drafts** (`qgen taxonomy`, `authoring/tools/prompts/taxonomy.md`, `taxonomy-names.md`, `remap.md`, `authoring/data/regional-categories.json`)
+   - `qgen taxonomy --bundle <id>` proposes slugs with en names (+ the bundle''s own-language names), `--apply` writes `categories.json` (structure) and drafts the missing `en`/`es`/`de` names (`names.es.json` included); `category_slug()`''s `<bundle>-<name>` prefix gone; `regional-categories.json` in English with slugs (`{region}` pattern for en, es/de names drafted on `--apply`).
+   - Prompt drafts verbatim old → new (taxonomy, taxonomy-names, remap, `regional-categories.json` `about`/entries), built on decision 250''s text where it still holds; `pm decision add "Taxonomy prompts on slug keys: apply?"` (apply / apply with changes / don''t), `pm task-pending-decision <task 7> <id>`, `pm task-pending-decision 1275 <id>`; stage the code, close the task.
+7. **Apply the taxonomy prompts** (after task 6''s decision): apply as answered, `pm decision consequences`; throw-away check on a scratch copy: a fake `en` region''s `qgen taxonomy` proposal has slugs + en names, `--apply` writes es/de names; remove the copy.
+8. **Mods** (`modding/bundles.md`, `modding/template-bundle/`, `modding/examples/`, `app/desktop/check-mod.mjs`, `bundle-prompt.md`)
+   - Both formats documented: plain strings (key = name) or slugs + `names.<locale>.json` (incl. `names.es.json`); `--check-mod`: `subcategory` checked against keys, `bad_names` for unknown keys in a names file; examples stay valid (`trivia-release-check` `mods` step).
+9. **Docs and gate** (last)
+   - `authoring/RUNBOOK.md` (taxonomy step, slugs), `directory.md` if new files, `plans/22-bundles.md` / `15b` final; `rg` "bundle + name", "Spanish keys", "Spanish name" in comments and `.md` (decision 200).
+   - Gate: tasks 1276–1280 (`task 1276: Set up regional bundle usa` … `task 1280: Set up regional bundle mexico`) can run once tasks 4 and 7 are done; if they still wait only on decision 258, nothing more to do (they also need task 1275, which waits on task 6''s decision).
+
+## Order
+- Task 1 → 2, 3 (any order, both keep old data working) → 4 (decision 258) → 5, 8 → 6 → 7 → 9. Task 6 may start after 2 (it needs slug readers, not the migrated data) but applies on migrated data.
+
+## Done when
+- Every category and subcategory of `base` and `colombia` is keyed by an English slug; `categories.json` holds no names; `names.{en,es,de}.json` complete; the family''s es game shows the same names; an old save loads and plays on.
+- `qgen taxonomy` proposes slugs + en names; mods in today''s format still load and pass `--check-mod`.
+- Decisions superseded and recorded; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-16T12:43:19Z', 1305);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -33297,7 +33346,7 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 
 ## Out of scope (from the milestone)
 - Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-16T12:30:33Z', '2026-10-16T12:39:07Z', 1297, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1305, 9, 'write plan: Slug keys for categories', 'plan', 'open', 880, NULL, 'Part 16 of `plan 9: masterplan` (milestone 9, developer 2026-10-16): write the plan (`pm plan add 9 "Slug keys for categories" --priority 880`, schema: keys everywhere) and its tasks.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1305, 9, 'write plan: Slug keys for categories', 'plan', 'done', 880, '2026-10-16, plan 149: Slug keys for categories (9 tasks in its body), decision 258: Slug keys for base and colombia: the list (tasks 1275–1280 pending on it), decision 250 consequence; work/slugs/proposal.json (gitignored)', 'Part 16 of `plan 9: masterplan` (milestone 9, developer 2026-10-16): write the plan (`pm plan add 9 "Slug keys for categories" --priority 880`, schema: keys everywhere) and its tasks.
 
 ## What
 - Every category and subcategory in every bundle (`base`, `colombia`, new ones) keyed by an English slug (`world-cuisines`), unique within its bundle; existing Spanish category slugs become English.
@@ -33314,11 +33363,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Owners: `plans/22-bundles.md` (taxonomy, keys), `plans/15b-question-translation.md` (names files).
 
 ## Done when
-- Plan added with tasks (decisions, migration step, validate rule, engine/save mapping, client names, review tool/reports, mods, taxonomy prompts, docs); tasks 1275–1280 wait on its decision.', '2026-10-16T12:33:18Z', NULL, 1298, 0);
+- Plan added with tasks (decisions, migration step, validate rule, engine/save mapping, client names, review tool/reports, mods, taxonomy prompts, docs); tasks 1275–1280 wait on its decision.', '2026-10-16T12:33:18Z', '2026-10-16T12:43:28Z', 1298, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1306, 98, 'create tasks for plan 98: Regional packs (RG-3..RG-5)', 'split', 'done', 1000, '2026-10-16, tasks.sql: tasks 1275–1280 and 752 brought in line with revised plan 98 (slug keys, part 16): 1275 waits for slugs, keeps run 1256''s code, prompt redraft as ''Regional drafting in en, de, es-ES: prompts apply? (after slug keys)''; 1276–1280 slug + en name proposals, --apply writes names files, wait for slugs; 752 waits for part 16. No new tasks or decisions: the slug decision belongs to task 1305''s plan.', 'Split plan 98 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T12:35:45Z', '2026-10-16T12:37:01Z', 1302, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1307, 128, 'create tasks for plan 128: S4 close-out', 'split', 'done', 1000, '2026-10-16, tasks.sql: tasks 1294, 1033 (subject + slug-key rows), 1034 brought in line with plan 128''s slug keys (part 16, task 1305); task 1035 unchanged', 'Split plan 128 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T12:37:38Z', '2026-10-16T12:38:48Z', 1303, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1308, 149, 'create tasks for plan 149: Slug keys for categories', 'split', 'open', 1000, NULL, 'Split plan 149 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T12:43:19Z', NULL, 1305, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -36714,7 +36765,7 @@ new:
 ```
 
 ---
-Options: "apply" applies 1–8 as drafted; "apply with changes" — say which.', '3: don''t apply; redraft after slug category keys (milestone 9): taxonomy prompts and regional-categories.json propose slugs + en names; the locale-prompt parts (4–8) come back mostly unchanged', NULL, '2026-10-16T03:59:29Z', '2026-10-16T12:29:42Z', 1275, NULL, 'rule', NULL, '');
+Options: "apply" applies 1–8 as drafted; "apply with changes" — say which.', '3: don''t apply; redraft after slug category keys (milestone 9): taxonomy prompts and regional-categories.json propose slugs + en names; the locale-prompt parts (4–8) come back mostly unchanged', NULL, '2026-10-16T03:59:29Z', '2026-10-16T12:29:42Z', 1275, NULL, 'rule', NULL, '2026-10-16, task 1305: slug keys in plan 149: Slug keys for categories; its slug list is decision 258: Slug keys for base and colombia: the list (tasks 1275–1280 pending on it); the taxonomy prompt redraft is plan 149''s task 6, task 1275 builds on it.');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (251, 'Scan runs: which slots keep their pick after fix?', 'answered', '[]', 'task 1244: qgen scan runs: review shows the kept pick, not candidates. kept_slots used fix.changed, so a note-only change dropped the slot from kept_slots and deleted its candidates while the file stayed: a pointless re-search and re-pick. revise_in_pool already unpicks on a type/query change, so a remaining file_url is the signal; the review sees the kept file and can send the question to needs_work if it no longer fits the new wording.', 'Every slot still picked with a usable licence; fix unpicks a slot only when its type or query changes (a note or role change keeps the file and its candidates)', NULL, '2026-10-16T04:11:19Z', '2026-10-16T04:11:19Z', 1244, NULL, 'rule', 1244, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (252, 'review.md: lines for a scan run''s kept media: apply?', 'pending', '["apply as drafted", "apply with changes"]', '`task 1244: qgen scan runs: review shows the kept pick, not candidates`: in a scan run (`qgen neutralize`, `qgen tighten`) a kept slot''s review input is now `{type, role, query, note, kept: true, title}`: no candidates, no sheet, `can_search_again: false` (code done, staged). `authoring/tools/prompts/review.md` needs to say what to do with it (D-36: prompt changes need your OK). Exact text:
 
@@ -36751,6 +36802,315 @@ Output verbatim:
     See `qgen report --batches` or authoring/reports/batches.md. The developer looks at it and clears the stop with: qgen health ack batch-8 "<note>"
 
 No claude calls (stopped before any step; no `claude:` line printed).', NULL, NULL, '2026-10-16T04:21:02Z', NULL, 1185, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (258, 'Slug keys for base and colombia: the list', 'pending', '["as proposed", "with changes (name the rows and their slugs)", "keep the region in colombia''s slugs"]', 'Milestone 9, "Slug keys for categories" (developer, 2026-10-16); `plan 9: masterplan` part 16, written by `task 1305: write plan: Slug keys for categories`. Every category and subcategory of `base` and `colombia` gets an English slug as its key: questions'' `subcategory`, `targets.json`, concept file names, engine key (`subKey`: base bare, else `<bundle>/<slug>`), saves (old keys mapped on load), reports, review tool. Display names, en included, then come only from `names.<locale>.json` (`names.es.json` new, holding today''s Spanish names unchanged; the family''s game shows the same names, D-59).
+
+How the list below was made (no claude call):
+- Slug = today''s en name in `names.en.json`, lowercased, accents and apostrophes dropped, other runs of non-letters → `-` (form `^[a-z0-9]+(-[a-z0-9]+)*$`). Kept as the en names are spelled today (e.g. `maths`, `colours`); the en names themselves don''t change.
+- `colombia`: the region dropped from its slugs (`colombia/animals`, not `colombia/animals-of-colombia`): the engine key already carries the bundle; a few cut by hand (`19th-century`, `national-symbols`, `people` for «Personajes de Colombia», `how-colombia-speaks`).
+- Unique within each bundle, per kind; a category and one of its subcategories may share a slug (`history` / `history`, `football` / `football`): they live in separate maps (categories vs. subcategories); the migration task checks no code mixes them.
+- Format per row: **old category slug → new**: «Spanish name» / en name; under it each subcategory: `new slug`: «Spanish name (today''s key)» / en name.
+- Not in scope: bundle ids (already English slugs) and `bundles.json`''s Spanish `name`/`description` stay as they are.
+
+### `base`
+
+- **`fiestas-tradiciones` → `holidays-and-traditions`**: «Fiestas y tradiciones» / Holidays and traditions
+  - `christmas`: «Navidad» / Christmas
+  - `celebrations-around-the-world`: «Celebraciones del mundo» / Celebrations around the world
+  - `calendars-and-new-year`: «Calendarios y Año Nuevo» / Calendars and New Year
+  - `manners-and-customs`: «Modales y costumbres del mundo» / Manners and customs
+- **`comida-bebida` → `food-and-drink`**: «Comida y bebida» / Food and drink
+  - `vegetables`: «Verduras» / Vegetables
+  - `italian-food`: «Comida italiana» / Italian food
+  - `mexican-food`: «Comida mexicana» / Mexican food
+  - `japanese-food`: «Comida japonesa» / Japanese food
+  - `fast-food`: «Comida rápida» / Fast food
+  - `world-cuisines`: «Cocinas del mundo» / World cuisines
+  - `drinks`: «Bebidas» / Drinks
+  - `cheese`: «Quesos» / Cheese
+  - `sweets-and-chocolate`: «Dulces y chocolate» / Sweets and chocolate
+  - `food-history`: «Historia de los alimentos» / Food history
+- **`geografia-mundo` → `world-geography`**: «Geografía del mundo» / World geography
+  - `continents`: «Continentes» / Continents
+  - `countries`: «Países del mundo» / Countries
+  - `capital-cities`: «Capitales del mundo» / Capital cities
+  - `flags`: «Banderas del mundo» / Flags
+  - `rivers`: «Ríos del mundo» / Rivers
+  - `mountains`: «Montañas del mundo» / Mountains
+  - `deserts`: «Desiertos» / Deserts
+  - `islands`: «Islas» / Islands
+- **`planeta-tierra` → `planet-earth`**: «Planeta Tierra» / Planet Earth
+  - `planet-earth`: «Planeta Tierra» / Planet Earth
+  - `the-sea`: «Mar» / The sea
+  - `oceans`: «Océanos» / Oceans
+  - `weather-and-climate`: «Clima» / Weather and climate
+  - `natural-phenomena`: «Fenómenos naturales» / Natural phenomena
+  - `volcanoes`: «Volcanes» / Volcanoes
+  - `earthquakes`: «Terremotos» / Earthquakes
+  - `natures-records`: «Récords de la naturaleza» / Nature''s records
+  - `rocks-and-minerals`: «Rocas y minerales» / Rocks and minerals
+- **`plantas-medio-ambiente` → `plants-and-environment`**: «Plantas y medio ambiente» / Plants and environment
+  - `plants`: «Plantas» / Plants
+  - `trees`: «Árboles» / Trees
+  - `environment`: «Medio ambiente» / Environment
+  - `recycling`: «Reciclaje» / Recycling
+- **`amazonas` → `amazon`**: «Amazonas» / Amazon
+  - `amazon-animals`: «Animales del Amazonas» / Amazon animals
+  - `amazon-plants`: «Plantas del Amazonas» / Amazon plants
+  - `indigenous-peoples-of-the-amazon`: «Pueblos indígenas del Amazonas» / Indigenous peoples of the Amazon
+  - `amazon-history-and-exploration`: «Historia y exploración del Amazonas» / Amazon history and exploration
+- **`animales` → `animals`**: «Animales» / Animals
+  - `mammals`: «Mamíferos» / Mammals
+  - `birds`: «Aves» / Birds
+  - `reptiles`: «Reptiles» / Reptiles
+  - `amphibians`: «Anfibios» / Amphibians
+  - `fish`: «Peces» / Fish
+  - `insects`: «Insectos» / Insects
+  - `strange-creatures`: «Bichos raros» / Strange creatures
+  - `animal-records`: «Récords de animales» / Animal records
+  - `african-wildlife`: «Fauna africana» / African wildlife
+- **`mascotas-granja` → `pets-and-farm`**: «Mascotas y granja» / Pets and farm
+  - `farm-animals`: «Animales de la granja» / Farm animals
+  - `dogs`: «Perros» / Dogs
+  - `cats`: «Gatos» / Cats
+  - `unusual-pets`: «Mascotas raras» / Unusual pets
+- **`ciencia-matematicas` → `science-and-maths`**: «Ciencia y matemáticas» / Science and maths
+  - `science`: «Ciencia» / Science
+  - `maths`: «Matemáticas» / Maths
+  - `numbers`: «Números» / Numbers
+  - `shapes`: «Formas» / Shapes
+  - `chemistry`: «Química» / Chemistry
+  - `physics`: «Física» / Physics
+  - `famous-scientists`: «Científicos famosos» / Famous scientists
+  - `nobel-prizes`: «Premios Nobel» / Nobel Prizes
+- **`cuerpo-humano` → `human-body`**: «Cuerpo humano» / Human body
+  - `human-body`: «Cuerpo humano» / Human body
+  - `body-oddities`: «Cosas raras del cuerpo humano» / Body oddities
+  - `medicine-and-health`: «Medicina y salud» / Medicine and health
+  - `brain-and-mind`: «Cerebro y mente» / Brain and mind
+- **`espacio` → `space`**: «Espacio» / Space
+  - `space`: «Espacio» / Space
+  - `solar-system`: «Sistema solar» / Solar system
+  - `space-race-and-astronauts`: «Carrera espacial y astronautas» / Space race and astronauts
+  - `stars-and-galaxies`: «Estrellas y galaxias» / Stars and galaxies
+- **`inventos-tecnologia` → `inventions-and-technology`**: «Inventos y tecnología» / Inventions and technology
+  - `inventions`: «Inventos» / Inventions
+  - `famous-inventors`: «Inventores famosos» / Famous inventors
+  - `accidental-inventions`: «Inventos por accidente» / Accidental inventions
+  - `technology`: «Tecnología» / Technology
+  - `robots`: «Robots» / Robots
+  - `artificial-intelligence`: «Inteligencia artificial» / Artificial intelligence
+  - `internet`: «Internet» / Internet
+  - `social-media`: «Redes sociales» / Social media
+  - `youtubers`: «YouTubers» / YouTubers
+- **`transporte` → `transport`**: «Transporte» / Transport
+  - `cars`: «Carros» / Cars
+  - `planes`: «Aviones» / Planes
+  - `trains`: «Trenes» / Trains
+  - `ships-and-boats`: «Barcos» / Ships and boats
+- **`historia` → `history`**: «Historia» / History
+  - `history`: «Historia» / History
+  - `prehistory`: «Prehistoria» / Prehistory
+  - `dinosaurs`: «Dinosaurios» / Dinosaurs
+  - `pharaohs`: «Faraones» / Pharaohs
+  - `pyramids`: «Pirámides» / Pyramids
+  - `mummies`: «Momias» / Mummies
+  - `knights`: «Caballeros» / Knights
+  - `castles`: «Castillos» / Castles
+  - `pirates`: «Piratas» / Pirates
+  - `roman-empire`: «Imperio romano» / Roman Empire
+  - `french-revolution`: «Revolución francesa» / French Revolution
+  - `explorers-and-discoveries`: «Exploradores y descubrimientos» / Explorers and discoveries
+  - `world-war-ii`: «Segunda Guerra Mundial» / World War II
+  - `cold-war`: «Guerra Fría» / Cold War
+  - `us-presidents`: «Presidentes de Estados Unidos» / US presidents
+  - `british-royals`: «Monarquía británica» / British royals
+  - `famous-crimes`: «Crímenes famosos» / Famous crimes
+  - `famous-scandals`: «Escándalos famosos» / Famous scandals
+- **`mitos-leyendas` → `myths-and-legends`**: «Mitos y leyendas» / Myths and legends
+  - `greek-gods`: «Dioses griegos» / Greek gods
+  - `greek-heroes`: «Héroes griegos» / Greek heroes
+  - `roman-mythology`: «Mitología romana» / Roman mythology
+  - `norse-mythology`: «Mitología nórdica» / Norse mythology
+  - `legends-and-superstitions`: «Leyendas y supersticiones» / Legends and superstitions
+- **`musica` → `music`**: «Música» / Music
+  - `musical-instruments`: «Instrumentos musicales» / Musical instruments
+  - `classical-music`: «Música clásica» / Classical music
+  - `world-music`: «Música del mundo» / World music
+  - `rock`: «Rock» / Rock
+  - `pop-music`: «Música pop» / Pop music
+  - `hip-hop-and-rap`: «Hip hop y rap» / Hip hop and rap
+  - `eurovision`: «Eurovisión» / Eurovision
+  - `musicals`: «Musicales» / Musicals
+  - `childrens-songs`: «Canciones infantiles» / Children''s songs
+- **`cine-series-superheroes` → `film-tv-and-superheroes`**: «Cine, series y superhéroes» / Film, TV and superheroes
+  - `film`: «Cine» / Film
+  - `tv-series`: «Series» / TV series
+  - `disney-films`: «Películas de Disney» / Disney films
+  - `pixar-films`: «Películas de Pixar» / Pixar films
+  - `anime`: «Anime» / Anime
+  - `cartoons`: «Caricaturas» / Cartoons
+  - `marvel-superheroes`: «Superhéroes de Marvel» / Marvel superheroes
+  - `dc-superheroes`: «Superhéroes de DC» / DC superheroes
+  - `famous-villains`: «Villanos famosos» / Famous villains
+  - `oscars`: «Premios Óscar» / Oscars
+  - `science-fiction`: «Ciencia ficción» / Science fiction
+  - `fantasy`: «Fantasía» / Fantasy
+  - `horror-films`: «Cine de terror» / Horror films
+  - `reality-tv`: «Reality shows» / Reality TV
+  - `telenovelas-and-soaps`: «Telenovelas del mundo» / Telenovelas and soaps
+  - `james-bond`: «James Bond» / James Bond
+  - `harry-potter`: «Harry Potter» / Harry Potter
+  - `the-lord-of-the-rings`: «El Señor de los Anillos» / The Lord of the Rings
+- **`videojuegos` → `video-games`**: «Videojuegos» / Video games
+  - `video-games`: «Videojuegos» / Video games
+  - `retro-games`: «Videojuegos clásicos» / Retro games
+  - `video-game-characters`: «Personajes de videojuegos» / Video game characters
+  - `consoles-and-game-companies`: «Consolas y empresas de videojuegos» / Consoles and game companies
+- **`futbol` → `football`**: «Fútbol» / Football
+  - `football`: «Fútbol» / Football
+  - `world-cups`: «Mundiales de fútbol» / World Cups
+  - `football-history`: «Historia del fútbol» / Football history
+  - `international-football`: «Fútbol internacional» / International football
+- **`deportes` → `sports`**: «Deportes» / Sports
+  - `basketball`: «Baloncesto» / Basketball
+  - `tennis`: «Tenis» / Tennis
+  - `swimming`: «Natación» / Swimming
+  - `athletics`: «Atletismo» / Athletics
+  - `extreme-sports`: «Deportes extremos» / Extreme sports
+  - `summer-olympics`: «Juegos Olímpicos de verano» / Summer Olympics
+  - `winter-olympics`: «Juegos Olímpicos de invierno» / Winter Olympics
+  - `formula-1-and-motorsport`: «Fórmula 1 y automovilismo» / Formula 1 and motorsport
+  - `rugby`: «Rugby» / Rugby
+  - `cricket`: «Críquet» / Cricket
+- **`arte-literatura` → `art-and-literature`**: «Arte y literatura» / Art and literature
+  - `art`: «Arte» / Art
+  - `museums`: «Museos» / Museums
+  - `colours`: «Colores» / Colours
+  - `literature`: «Literatura» / Literature
+  - `fairy-tales`: «Cuentos infantiles» / Fairy tales
+  - `childrens-books`: «Libros infantiles» / Children''s books
+  - `shakespeare`: «Shakespeare» / Shakespeare
+  - `poetry`: «Poesía» / Poetry
+  - `crime-fiction`: «Novela policiaca» / Crime fiction
+  - `photography`: «Fotografía» / Photography
+- **`idiomas-palabras` → `languages-and-words`**: «Idiomas y palabras» / Languages and words
+  - `language`: «Lenguaje» / Language
+  - `languages-of-the-world`: «Idiomas del mundo» / Languages of the world
+  - `famous-quotes`: «Frases célebres» / Famous quotes
+  - `proverbs-of-the-world`: «Refranes del mundo» / Proverbs of the world
+- **`juegos-curiosidades` → `games-and-curiosities`**: «Juegos y curiosidades» / Games and curiosities
+  - `toys`: «Juguetes» / Toys
+  - `board-games`: «Juegos de mesa» / Board games
+  - `magic`: «Magia» / Magic
+  - `tricks`: «Trucos» / Tricks
+  - `optical-illusions`: «Ilusiones ópticas» / Optical illusions
+  - `guinness-world-records`: «Récords Guinness» / Guinness World Records
+  - `circus`: «Circo» / Circus
+  - `famous-duos`: «Dúos famosos» / Famous duos
+- **`moda` → `fashion-and-design`**: «Moda y diseño» / Fashion and design
+  - `fashion-history`: «Historia de la moda» / Fashion history
+  - `fashion-designers`: «Diseñadores de moda» / Fashion designers
+  - `traditional-dress`: «Trajes típicos del mundo» / Traditional dress
+  - `shoes-and-accessories`: «Zapatos y accesorios» / Shoes and accessories
+  - `product-design`: «Diseño de objetos» / Product design
+- **`arquitectura` → `architecture-and-landmarks`**: «Arquitectura y monumentos» / Architecture and landmarks
+  - `wonders-of-the-world`: «Maravillas del mundo» / Wonders of the world
+  - `famous-landmarks`: «Monumentos famosos» / Famous landmarks
+  - `skyscrapers`: «Rascacielos» / Skyscrapers
+  - `famous-bridges`: «Puentes famosos» / Famous bridges
+  - `temples-and-cathedrals`: «Templos y catedrales» / Temples and cathedrals
+  - `architectural-styles`: «Estilos arquitectónicos» / Architectural styles
+- **`monedas-dinero` → `money-and-currencies`**: «Monedas y dinero» / Money and currencies
+  - `world-currencies`: «Monedas del mundo» / World currencies
+  - `banknotes`: «Billetes del mundo» / Banknotes
+  - `history-of-money`: «Historia del dinero» / History of money
+  - `saving-and-banks`: «Ahorro y bancos» / Saving and banks
+  - `economy-and-stock-market`: «Economía y bolsa» / Economy and stock market
+- **`religiones` → `religion-and-philosophy`**: «Religiones y filosofía» / Religion and philosophy
+  - `world-religions`: «Religiones del mundo» / World religions
+  - `bible-stories`: «Historias de la Biblia» / Bible stories
+  - `sacred-places`: «Lugares sagrados» / Sacred places
+  - `famous-philosophers`: «Filósofos famosos» / Famous philosophers
+  - `big-questions`: «Preguntas filosóficas» / Big questions
+- **`marcas-logos` → `brands-and-logos`**: «Marcas y logotipos» / Brands and logos
+  - `famous-logos`: «Logotipos famosos» / Famous logos
+  - `advertising-slogans`: «Eslóganes publicitarios» / Advertising slogans
+  - `brand-mascots`: «Mascotas de marcas» / Brand mascots
+  - `brand-origins`: «Origen de las marcas» / Brand origins
+  - `famous-companies`: «Empresas famosas» / Famous companies
+  - `supermarket-products`: «Productos del supermercado» / Supermarket products
+
+### `colombia`
+
+- **`colombia-geografia` → `geography`**: «Geografía de Colombia» / Geography of Colombia
+  - `regions-and-departments`: «Regiones y departamentos de Colombia» / Regions and departments of Colombia
+  - `cities-and-towns`: «Ciudades y pueblos de Colombia» / Cities and towns of Colombia
+  - `rivers-seas-and-islands`: «Ríos, mares e islas de Colombia» / Rivers, seas and islands of Colombia
+  - `mountains-and-landscapes`: «Montañas y paisajes de Colombia» / Mountains and landscapes of Colombia
+  - `places-and-monuments`: «Lugares y monumentos de Colombia» / Places and monuments of Colombia
+- **`colombia-naturaleza` → `nature`**: «Naturaleza de Colombia» / Nature of Colombia
+  - `animals`: «Animales de Colombia» / Animals of Colombia
+  - `plants-and-flowers`: «Plantas y flores de Colombia» / Plants and flowers of Colombia
+  - `natural-parks-and-ecosystems`: «Parques naturales y ecosistemas de Colombia» / Natural parks and ecosystems of Colombia
+- **`colombia-historia` → `history`**: «Historia de Colombia» / History of Colombia
+  - `pre-columbian-cultures`: «Culturas precolombinas de Colombia» / Pre-Columbian cultures of Colombia
+  - `conquest-and-colonial-era`: «Conquista y Colonia en Colombia» / Conquest and colonial era in Colombia
+  - `independence`: «Independencia de Colombia» / Colombian independence
+  - `19th-century`: «Colombia en el siglo XIX» / Colombia in the 19th century
+  - `20th-century`: «Colombia en el siglo XX» / Colombia in the 20th century
+- **`colombia-personajes` → `people`**: «Personajes de Colombia» / Notable Colombians
+  - `scientists-and-inventors`: «Científicos e inventores colombianos» / Colombian scientists and inventors
+  - `pioneers-and-popular-figures`: «Pioneros y personajes populares de Colombia» / Pioneers and popular figures of Colombia
+- **`colombia-comida-y-bebida` → `food-and-drink`**: «Comida y bebida de Colombia» / Colombian food and drink
+  - `typical-dishes`: «Platos típicos de Colombia» / Typical Colombian dishes
+  - `street-food-and-bakery`: «Comida callejera y panadería colombiana» / Colombian street food and bakery
+  - `sweets-and-desserts`: «Dulces y postres colombianos» / Colombian sweets and desserts
+  - `drinks`: «Bebidas colombianas» / Colombian drinks
+  - `fruits`: «Frutas de Colombia» / Fruits of Colombia
+- **`colombia-fiestas-y-tradiciones` → `festivals-and-traditions`**: «Fiestas y tradiciones de Colombia» / Colombian festivals and traditions
+  - `carnivals-and-fairs`: «Carnavales y ferias de Colombia» / Colombian carnivals and fairs
+  - `christmas-and-special-dates`: «Navidad y fechas especiales en Colombia» / Christmas and special dates in Colombia
+  - `crafts-and-traditional-dress`: «Artesanías y trajes típicos de Colombia» / Colombian crafts and traditional dress
+  - `traditional-games`: «Juegos tradicionales colombianos» / Traditional Colombian games
+- **`colombia-mitos-y-leyendas` → `myths-and-legends`**: «Mitos y leyendas de Colombia» / Myths and legends of Colombia
+  - `ghosts-and-creatures`: «Espantos y criaturas de Colombia» / Ghosts and creatures of Colombia
+  - `indigenous-myths-and-folk-beliefs`: «Mitos indígenas y creencias populares» / Indigenous myths and folk beliefs
+- **`colombia-musica-y-baile` → `music-and-dance`**: «Música y baile de Colombia» / Colombian music and dance
+  - `rhythms-dances-and-instruments`: «Ritmos, bailes e instrumentos de Colombia» / Rhythms, dances and instruments of Colombia
+  - `vallenato`: «Vallenato» / Vallenato
+  - `salsa-and-tropical-music`: «Salsa y música tropical colombiana» / Colombian salsa and tropical music
+  - `pop-rock-and-urban-music`: «Pop, rock y urbano colombiano» / Colombian pop, rock and urban music
+  - `popular-and-andean-music`: «Música popular y andina colombiana» / Colombian popular and Andean music
+- **`colombia-arte-y-literatura` → `art-and-literature`**: «Arte y literatura de Colombia» / Colombian art and literature
+  - `writers-and-books`: «Escritores y libros colombianos» / Colombian writers and books
+  - `poetry-and-childrens-stories`: «Poesía y cuentos infantiles colombianos» / Colombian poetry and children''s stories
+  - `painters-sculptors-and-museums`: «Pintores, escultores y museos de Colombia» / Painters, sculptors and museums of Colombia
+- **`colombia-cine-y-television` → `film-and-television`**: «Cine y televisión de Colombia» / Colombian film and television
+  - `telenovelas`: «Telenovelas colombianas» / Colombian telenovelas
+  - `tv-shows-and-series`: «Programas y series de la TV colombiana» / Colombian TV shows and series
+  - `hosts-actors-and-comedians`: «Presentadores, actores y humoristas colombianos» / Colombian hosts, actors and comedians
+  - `cinema`: «Cine colombiano» / Colombian cinema
+- **`colombia-deporte` → `sports`**: «Deporte de Colombia» / Colombian sports
+  - `national-team`: «Selección Colombia» / Colombia national team
+  - `club-football`: «Fútbol colombiano de clubes» / Colombian club football
+  - `cycling`: «Ciclismo colombiano» / Colombian cycling
+  - `olympic-medallists`: «Medallistas olímpicos colombianos» / Colombian Olympic medallists
+  - `other-sports`: «Otros deportes en Colombia» / Other sports in Colombia
+- **`colombia-asi-se-habla` → `how-colombia-speaks`**: «Así se habla en Colombia» / How Colombians speak
+  - `words`: «Palabras colombianas» / Colombian words
+  - `sayings-and-expressions`: «Dichos y expresiones colombianas» / Colombian sayings and expressions
+  - `regional-speech`: «Hablas regionales de Colombia» / Regional speech of Colombia
+  - `languages`: «Lenguas de Colombia» / Languages of Colombia
+- **`colombia-vida-diaria` → `daily-life`**: «Vida diaria en Colombia» / Daily life in Colombia
+  - `banknotes-and-coins`: «Billetes y monedas de Colombia» / Colombian banknotes and coins
+  - `brands-and-products`: «Marcas y productos colombianos» / Colombian brands and products
+  - `transport`: «Transporte en Colombia» / Transport in Colombia
+  - `home-school-and-paperwork`: «Casa, colegio y trámites en Colombia» / Home, school and paperwork in Colombia
+- **`colombia-simbolos` → `symbols`**: «Símbolos de Colombia» / Symbols of Colombia
+  - `national-symbols`: «Símbolos patrios de Colombia» / Colombia''s national symbols
+  - `symbols-of-departments-and-cities`: «Símbolos de departamentos y ciudades» / Symbols of departments and cities
+
+Options: "as proposed" applies the list as is (plan task "Apply the slug migration"); "with changes": name the rows and their new slugs; "keep the region in colombia''s slugs": `colombia/animals-of-colombia` etc., straight from the en names.', NULL, NULL, '2026-10-16T12:42:38Z', NULL, 1305, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -38077,6 +38437,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1306, 1303, '2026-10-16T12:37:08Z', '2026-10-16T12:37:50Z', 'done', NULL, 0, '96796266e2a5f8f75719ca3f5b45f086b52fe981', 'claude-opus-5-5[1m]', '89e7fc3d-d5e8-4706-b1e5-5dec23037b84', 8, 16, 3810, 377751, 47205, 0.5294542, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1307, 1307, '2026-10-16T12:37:50Z', '2026-10-16T12:38:56Z', 'done', NULL, 0, 'b759c9c31a8df0a677ba15ddb602448942b7ab6f', 'claude-opus-5-5[1m]', 'a9974630-3c95-4d90-8d76-5cd54f6e1bd3', 11, 20, 5357, 422122, 43197, 0.5372204, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1308, 1304, '2026-10-16T12:38:56Z', '2026-10-16T12:39:10Z', 'done', NULL, 0, '5565532b7c1a3bbf2ed950c416a5cd9c9d87c01a', 'claude-opus-5-5[1m]', '95e93578-05ab-4aa1-b9d2-4a9b750a23d0', 4, 8, 940, 154086, 41343, 0.38039320000000004, 3857742);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1309, 1305, '2026-10-16T12:39:10Z', '2026-10-16T12:43:44Z', 'done', NULL, 0, '04585cc4a55be3624a0e900f628a69f0f18b2eaf', 'claude-opus-5-5[1m]', '3980cc83-d308-4e73-8ac3-7d78fb67e017', 25, 50, 20671, 1839223, 91075, 1.5100646000000002, 3857742);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -38510,11 +38871,17 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1270, 250);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1271, 250);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1272, 250);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1275, 250);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1275, 258);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1276, 250);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1276, 258);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1277, 250);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1277, 258);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1278, 250);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1278, 258);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1279, 250);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1279, 258);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1280, 250);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1280, 258);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1294, 62);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1294, 63);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1294, 64);
