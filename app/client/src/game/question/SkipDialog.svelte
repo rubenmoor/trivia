@@ -5,6 +5,8 @@
   import { pushScope } from "../../lib/input.svelte.ts";
   import { displayName } from "../../lib/names.svelte.ts";
   import type { Jokers } from "../../lib/types.ts";
+  import Icon from "../Icon.svelte";
+  import { jokerIcon } from "../jokers.ts";
   import Prompt from "../Prompt.svelte";
 
   let {
@@ -37,7 +39,7 @@
 
 <div class="backdrop-dim">
   <div class="dialog glass-strong" bind:this={dialog}>
-    <h2>{t("joker.skip.name")}</h2>
+    <h2><Icon name={jokerIcon("skip")} /> {t("joker.skip.name")}</h2>
     <button class="candy" onclick={() => onpick(false)}>{t("joker.skip.pass")} <Prompt action={{ type: "pick", n: 1 }} hold /></button>
     <button class="secondary purge" onclick={() => onpick(true)} disabled={!purge.available}>
       {t("joker.skip.purge", { name: displayName("subcategory", purge.subcategory) })} <Prompt action={{ type: "pick", n: 2 }} hold />

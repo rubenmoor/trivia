@@ -7,6 +7,8 @@
   import { t } from "../lib/i18n.ts";
   import { displayName, questionLocale } from "../lib/names.svelte.ts";
   import { focusControl, pushScope } from "../lib/input.svelte.ts";
+  import Icon from "./Icon.svelte";
+  import { jokerIcon } from "./jokers.ts";
   import Prompt from "./Prompt.svelte";
 
   type Group = Jokers["category"]["categories"][number];
@@ -62,7 +64,7 @@
 
 <div class="backdrop">
   <div class="picker glass-strong" bind:this={picker}>
-    <h2 lang={group ? questionLocale() : undefined}>{group ? displayName("category", group.key) : t("joker.category.title")}</h2>
+    <h2 lang={group ? questionLocale() : undefined}><Icon name={jokerIcon("category")} /> {group ? displayName("category", group.key) : t("joker.category.title")}</h2>
     {#key group}
       <div class="grid" class:subs={group} bind:this={grid} lang={questionLocale()}>
         {#if group}

@@ -3,6 +3,7 @@
   // Markup only: aiming keys stay in screens/Question.svelte's input scope.
   import { t } from "../../lib/i18n.ts";
   import Icon from "../Icon.svelte";
+  import { jokerIcon } from "../jokers.ts";
   import Prompt from "../Prompt.svelte";
 
   let {
@@ -44,7 +45,7 @@
 {/if}
 {#if aiming}
   <p class="aim-hint glass-strong">
-    <Icon name="crosshair" /> {t("joker.snipe.aim")} <b>{t("joker.snipe.false")}</b> · <Prompt action="confirm" /> {t("joker.snipe.shoot")}
+    <Icon name={jokerIcon("snipe")} /> {t("joker.snipe.aim")} <b>{t("joker.snipe.false")}</b> · <Prompt action="confirm" /> {t("joker.snipe.shoot")}
     <button class="secondary cancel" onclick={oncancel}>{t("action.cancel")} <Prompt action="menu" pad="back" /></button>
   </p>
 {/if}

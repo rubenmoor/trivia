@@ -4,6 +4,8 @@
   import { onMount } from "svelte";
   import { DIFFICULTY_MAX } from "../engine/choice.ts";
   import { t } from "../lib/i18n.ts";
+  import Icon from "./Icon.svelte";
+  import { jokerIcon } from "./jokers.ts";
   import { DIAL_HOLD_MS, DIAL_START_MS, DIAL_STEP_MS } from "./timing.ts";
 
   let { from, to }: { from: number; to: number } = $props();
@@ -21,7 +23,7 @@
 </script>
 
 <div class="dial glass-strong" class:gone aria-hidden="true">
-  <span class="label">{t("joker.easier.dial")}</span>
+  <span class="label"><Icon name={jokerIcon("easier")} /> {t("joker.easier.dial")}</span>
   <span class="stairs" style:--n={DIFFICULTY_MAX}>
     {#each Array.from({ length: DIFFICULTY_MAX }, (_, i) => i + 1) as d (d)}
       <span class="step" class:lit={d <= shown} class:now={d === shown} style:--h={d}></span>

@@ -6,6 +6,7 @@
   import { displayName, questionLocale } from "../../lib/names.svelte.ts";
   import type { Game, JokerEvent } from "../../lib/types.ts";
   import Icon from "../Icon.svelte";
+  import { jokerIcon } from "../jokers.ts";
   import Prompt from "../Prompt.svelte";
   import { cardFlip, crossfade } from "../swap.ts";
 
@@ -49,7 +50,7 @@
     <div class="notes" lang={questionLocale()}>
       {#each question.hints as hint, i (i)}
         <p class="note" style:--tilt="{[-2.5, 1.8, -1.2][i]}deg" class:strong={i === 2}>
-          <span class="note-label">{t("screen.question.hint", { n: i + 1 })}</span>{hint}
+          <span class="note-label"><Icon name={jokerIcon("hint")} /> {t("screen.question.hint", { n: i + 1 })}</span>{hint}
         </p>
       {/each}
     </div>

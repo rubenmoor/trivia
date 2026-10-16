@@ -20,6 +20,9 @@ export const TOKENS: { name: JokerName; label: string; key: string; icon: IconNa
   icon,
 }));
 
+/** A joker's symbol, for its follow-up UI (plans/09-jokers.md, "UI"). */
+export const jokerIcon = (name: JokerName): IconName => ICONS.find(([n]) => n === name)![1];
+
 /** Most uses a budget stepper shows before ∞ (configure screen, Customize, the gamemaster menu; decision 105). */
 const MAX_USES = 9;
 

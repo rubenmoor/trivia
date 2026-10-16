@@ -16,7 +16,7 @@
   import JokerFlight from "../JokerFlight.svelte";
   import JokerTray from "../JokerTray.svelte";
   import Prompt from "../Prompt.svelte";
-  import { TOKENS } from "../jokers.ts";
+  import { jokerIcon, TOKENS } from "../jokers.ts";
   import { DEFAULT_LEVELS, onTwelve } from "../levels.ts";
   import Answers, { LETTERS } from "../question/Answers.svelte";
   import Card from "../question/Card.svelte";
@@ -448,7 +448,7 @@
   </aside>
   {#if flight}
     {@const f = flight}
-    <JokerFlight from={f.from} icon={TOKENS.find((t) => t.name === f.name)!.icon} ondone={f.done} />
+    <JokerFlight from={f.from} icon={jokerIcon(f.name)} ondone={f.done} />
   {/if}
 
   {#if mode === "skip" && jokers}
