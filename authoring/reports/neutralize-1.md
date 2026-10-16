@@ -449,6 +449,32 @@ Major findings on approved questions:
 - **q-1172**: style, giveaway, media — This `base` question depends on knowing what an English word means ("lap" + "top"). That breaks the International angle rule: in the English version the answer sits right in the question, so it can't be played in every language. Hint 2 translates "lap", which gives the answer away. The essential photo shows a laptop on a desk, which points to the wrong answer "Sobre el escritorio" and isn't needed for the question anyway. The fun fact is roughly right: sources give the Osborne 1's weight as 10.7–11.1 kg. (http://127.0.0.1:8001/review/q-1172)
 - **q-1188**: giveaway, difficulty — The question text says the trick "hace aparecer y desaparecer bolitas", and the answer "Los cubiletes y las bolitas" is the only option that mentions balls, so anyone can match the word without knowing the trick. That brings the real difficulty down to about 3, not 7. The facts check out: Seneca mentions cups and balls in Epistle 45, the lemon is a common final load, and "almost 2000 years" is fine for Seneca (died 65 AD). Hint 2 (upside-down containers) also nearly points to the answer on its own. (http://127.0.0.1:8001/review/q-1188)
 
+## Quality control
+
+The developer's blind spot check (`/review?batch=…&sample=1`) against the LLM review and the audit (plan 16, `qgen report --qc`). Agree = both accept or both don't.
+
+- Spot check: 30 decided of 30
+- Agreement with the LLM review: 24 of 30 (80 %) ✗ (bar: ≥ 30 questions, ≥ 90 %)
+- Release bar (D-79): ✗ not release-ready: agreement 80 % < 90 % (→ QC step 4)
+- False approve (LLM approved, human not): 4 of 30 (13 %); the audit flagged 2
+- False needs work (LLM not approved, human approved): 2 of 30 (7 %)
+- Difficulty |Δ| ≥ 2: 5 of 30 (17 %)
+- Media changed: 1 of 30 (3 %)
+- Audit/human agreement: 26 of 30 (87 %)
+
+Disagreements with the LLM review, by the human's problems:
+
+### no problem given (6)
+
+- **q-0473** LLM approved → human needs_work, audit problem: claude is right, the image doesn't match. would need a glass slipper (http://127.0.0.1:8001/review/q-0473)
+- **q-0285** LLM approved → human needs_work, audit problem: the video actually shows how the water squirts out. not sure if this question works (http://127.0.0.1:8001/review/q-0285)
+- **q-1134** LLM approved → human needs_work, audit ok: it could be made of anything, all answers are correct. the question would have to mention the name of that food to make it specific (http://127.0.0.1:8001/review/q-1134)
+- **q-1009** LLM approved → human needs_work, audit ok: i picked a new image that clearly shows the sport in question (http://127.0.0.1:8001/review/q-1009)
+- **q-1077** LLM needs_work → human approved, audit ok (http://127.0.0.1:8001/review/q-1077)
+- **q-0202** LLM needs_work → human approved, audit ok (http://127.0.0.1:8001/review/q-0202)
+
+Changes from this QC: none yet (QC step 4)
+
 ## Needs work
 
 - **q-0042** ¿Cuál es el hueso más largo del cuerpo humano? → El fémur: La pista 2 ("Va de la cadera a la rodilla") prácticamente define el fémur y regala la respuesta antes de la pista 3, que encima es más débil ("Está en el muslo"). Hay que cambiar la pista 2 por algo más vago (por ejemplo, que soporta mucho peso al caminar o al saltar) y dejar la ubicación en el muslo para la pista 3.
