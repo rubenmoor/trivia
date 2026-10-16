@@ -27252,7 +27252,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Per-commit checks (AGENTS.md).
 
 Done when: the decision is answered and the file matches the answer.', '2026-10-15T19:02:56Z', '2026-10-16T03:09:28Z', 1136, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1138, 138, 'qgen taxonomy --bundle <id>: propose and apply a region''s taxonomy', 'work', 'open', NULL, NULL, 'Part 2 of `plan 138: Regional taxonomy: a general list, colombia reworked`. Runs after `task 1137: General regional category list` (needs `authoring/data/regional-categories.json`); still open → stop and say so.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1138, 138, 'qgen taxonomy --bundle <id>: propose and apply a region''s taxonomy', 'work', 'done', NULL, '2026-10-15, authoring/tools/qgen.py (cmd_taxonomy, apply_taxonomy, bundle new Next: line), prompts/taxonomy.md, prompts/taxonomy-names.md, README.md, plans/22-bundles.md. Smoke on colombia: proposal 15 categories (14 general + Pueblos y culturas de Colombia), 54 subcategories, opus $0.48; --apply on the live files then restored: categories.json + names.en/de (sonnet $0.07) valid, validate errors only on colombia questions on removed subcategories (task 1140). Smoke output deleted; task 1139 reruns the proposal.', 'Part 2 of `plan 138: Regional taxonomy: a general list, colombia reworked`. Runs after `task 1137: General regional category list` (needs `authoring/data/regional-categories.json`); still open → stop and say so.
 
 ## Propose: `qgen taxonomy --bundle <id>`
 - One opus call per bundle; input: `authoring/data/regional-categories.json`, the bundle''s `rule`/`voice` in `bundles.json`, its target in `authoring/data/targets.json` (colombia 2000, D-101).
@@ -27273,7 +27273,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Smoke: run the proposal for a throw-away bundle or `colombia` without `--apply` once; don''t keep the output in git (`work/` is ignored).
 - Per-commit checks.
 
-Done when: `qgen taxonomy --bundle colombia` writes a proposal and `--apply` on it writes a valid `categories.json` (verified on a copy, not committed).', '2026-10-15T19:02:56Z', NULL, 1136, 0);
+Done when: `qgen taxonomy --bundle colombia` writes a proposal and `--apply` on it writes a valid `categories.json` (verified on a copy, not committed).', '2026-10-15T19:02:56Z', '2026-10-16T03:16:40Z', 1136, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1139, 138, 'colombia taxonomy: proposal, the developer''s answer, apply', 'work', 'open', NULL, NULL, 'Part 3 of `plan 138: Regional taxonomy: a general list, colombia reworked`. Runs after `task 1138: qgen taxonomy --bundle <id>: propose and apply a region''s taxonomy`; still open → stop and say so.
 
 ## First run: propose and ask
@@ -33890,6 +33890,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1217, 1100, '2026-10-16T02:57:58Z', '2026-10-16T02:59:46Z', 'done', NULL, 0, 'e0a4c638e3536a0a291d627077e9abfe4d2286b3', 'claude-opus-5-5[1m]', 'eedcf204-63dd-4922-b4d7-ea705f050753', 12, 24, 7021, 598250, 57756, 0.72221400000000013, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1218, 1101, '2026-10-16T02:59:46Z', '2026-10-16T03:08:24Z', 'blocked', NULL, 0, '44d39c73330b0e1b73d6a843189ec43f00c2be3c', 'claude-opus-5-5[1m]', 'bf984fe2-2a15-4aa0-81c8-57d9c5f96d4c', 31, 46, 6195, 1124328, 58053, 0.8133735999999997, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1219, 1137, '2026-10-16T03:08:24Z', '2026-10-16T03:09:35Z', 'done', NULL, 0, 'eb39e12f3b7d73a4987c031a95bb942c402c7bdf', 'claude-opus-5-5[1m]', '115cb8aa-4e4f-4be7-86dc-ad920c04cc16', 13, 26, 4563, 505454, 34928, 0.47187879999999993, 3857742);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1220, 1138, '2026-10-16T03:09:36Z', '2026-10-16T03:16:49Z', 'done', NULL, 0, '6784e16cd81ca377d325cc6b355fa4f96e50c8ae', 'claude-opus-5-5[1m]', 'c4686026-e3f1-440b-95f3-4a113de7087e', 32, 54, 18327, 2205253, 97535, 1.5880865999999998, 3857742);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
