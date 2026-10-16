@@ -588,8 +588,9 @@ def cmd_concepts(args):
         path = d / "raw" / concept_file(bundle, sub)
         r = load_json(path, {})
         axes_def = concepts.load_axes(bundle)
-        intro = subcategory_header(bundle, sub) + "\n\n## Question axes\n" + concepts.axes_text(axes_def)
         loc = translations.draft_locale(bundle_row(bundle))
+        intro = (subcategory_header(bundle, sub) + "\n\n## Bundle\n" + bundle_text(bundle, loc)
+                 + "\n\n## Question axes\n" + concepts.axes_text(axes_def))
         if "facets" not in r:
             r.update(claude(prompt("house-style", "concepts-facets", locale=loc, bundle=bundle), intro, facets_schema(axes_def), args.model, d))
             save_json(path, r)
@@ -622,10 +623,11 @@ def cmd_concepts(args):
         if path.exists():
             return
         lst = concepts.load(*bs)
-        user = (subcategory_header(*bs) + f"\n\n## How many\nAdd about {wanted(bs)} new concepts."
+        loc = translations.draft_locale(bundle_row(bundle))
+        user = (subcategory_header(*bs) + "\n\n## Bundle\n" + bundle_text(bundle, loc) + f"\n\n## How many\nAdd about {wanted(bs)} new concepts."
                 + "\n\n## Facets\n" + "\n".join(f"- {f}" for f in lst["facets"])
                 + "\n\n## Concepts already in the list\n" + "\n".join(f"- {c['name']} ({c['facet']})" for c in lst["concepts"]))
-        out = claude(prompt("house-style", "concepts-topup", locale=translations.draft_locale(bundle_row(bundle)), bundle=bundle),
+        out = claude(prompt("house-style", "concepts-topup", locale=loc, bundle=bundle),
                      user, TOPUP_SCHEMA, args.model, d)
         save_json(path, out)
         progress.detail(f"  top-up: {sub}: {len(out['concepts'])} new concepts")

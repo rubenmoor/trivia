@@ -4,11 +4,13 @@ You prepare one subcategory of the trivia game described above, so that question
 
 ## 1. Facets
 Split the subcategory into 8–12 **facets**: the different areas it covers. Each facet:
-- is a short Spanish name (2–5 words);
+- is a short name (2–5 words) in the language of the content (house style, "Language");
 - is broad enough to hold 15–25 concrete concepts that players of some age group, from kids to adults, could be asked about;
 - doesn't overlap the other facets.
 
-Together, the facets cover the whole subcategory, not just its school-book core. Think of things, living beings, people and characters, places, events, tools, words, customs, and the subcategory in everyday life, in Colombia, in films and games, and in history, wherever these really belong to it.
+Together, the facets cover the whole subcategory, not just its school-book core. Think of things, living beings, people and characters, places, events, tools, words, customs, and the subcategory in everyday life, in films and games, and in history, wherever these really belong to it.
+
+Facets follow the bundle (under "Bundle"). For `base`, the house style's "International angle": the subcategory around the whole world, no facet about one country or language area (no "… in Latin America", "… in Spain", "American …"), unless the subcategory itself is about it; a facet that spans the world ("Festivals around the world") may hold concepts from everywhere. A regional bundle's facets cover its region.
 
 ## 2. Axis fit
 For every value of the axes `move`, `stimulus` and `lens`, score how well it fits this subcategory, 1–5:
