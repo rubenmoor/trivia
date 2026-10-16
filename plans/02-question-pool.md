@@ -49,9 +49,10 @@ Review result, set by the review tool (`08-review-tool.md`, D-11) or an LLM revi
     "decision": "needs_work", "feedback": "demasiado difícil", "reviewed_on": "2026-10-07",
     "reviewer": "human",        // human | llm (D-33)
     "model": null,              // the model for an LLM review, e.g. "claude-opus-5-5"; null for a human
-    "previous": null            // only on a human review that replaced an LLM review: that LLM review
+    "previous": null            // human review over an LLM one: that LLM review; LLM review after a rework or scan run (or re-translation): the review before it
   }
 ```
+- Between such a run's `fix` (or a re-translation's merge) and `record`: `review: null`, the old review as top-level `previous` (task 1241).
 
 Seen counts and blocked questions are not in this file; they live in the save (`seen`, `blocked`, save v3, D-82, `03-game-flow.md`).
 

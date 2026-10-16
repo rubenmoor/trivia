@@ -57,7 +57,7 @@
     <b>{current.status.replace("_", " ")}</b> ({current.review.reviewed_on})
     {#if current.review.feedback}: “{current.review.feedback}”{/if}
     {#if current.review.previous}
-      <span class="muted">· before: {current.review.previous.model}
+      <span class="muted">· before: {current.review.previous.model ?? "developer"}
         {current.review.previous.decision.replace("_", " ")}{#if current.review.previous.feedback}:
           “{current.review.previous.feedback}”{/if}</span>
     {/if}

@@ -3034,6 +3034,8 @@ def cmd_fix(args):
                     if fix["action"] == "revise":
                         changed[x["id"]] = revise_in_pool(x, rev["question"], rev["reason"], today)
                     if rework or scanned:
+                        if x.get("review"):
+                            x["previous"] = x["review"]  # record chains it (task 1241)
                         x["status"], x["review"] = "draft", None
                 changes[q["id"]] = change
         if changes:
@@ -3215,20 +3217,28 @@ def cmd_record(args):
             problems.append(r["reasons"])
         review = {"decision": decision, "feedback": " ".join(problems) if decision == "needs_work" else None,
                   "problems": [p for p in PROBLEMS if p in kinds] if decision == "needs_work" else [],
-                  "reviewed_on": today, "reviewer": "llm", "model": r["model"], "previous": None}
+                  "reviewed_on": today, "reviewer": "llm", "model": r["model"]}
 
         def change(x, review=review, fields=fields, check=check if "factcheck" in (full.get("fix") or {}) else None):
             for slot, f in fields.items():
                 media_tool.apply_pick(x[slot], f)
             if check:
                 x["fact_checked"] = check["verdict"] == "confirmed"
-            x.update(review=review, status=review["decision"])
+            x.update(review={**review, "previous": review_before(x, snapshot)}, status=review["decision"])
         changes[q["id"]] = change
         snapshot[q["id"]] = {"decision": review["decision"], "problems": review["problems"]}
         progress.detail(f"  record: {q['id']}: {decision}")
     update_pool(changes)
     save_json(d / "recorded.json", snapshot)  # record's decisions, for batch health (plan 15)
     return failed(f"{len(missing)} question(s) without a review: {', '.join(missing)}") if missing else []
+
+
+def review_before(x, recorded):
+    """The review x had before this run, for record's `previous`: kept by fix or merge as top-level `previous`;
+    on a second record of the run the one it chained already."""
+    if "previous" in x:
+        return x.pop("previous")
+    return (x.get("review") or {}).get("previous") if x["id"] in recorded else None
 
 
 def record_translations(args, d):
@@ -3244,7 +3254,10 @@ def record_translations(args, d):
     def review_of(decision, feedback, kinds, model):
         return {"decision": decision, "feedback": feedback if decision != "approved" else None,
                 "problems": [p for p in PROBLEMS if p in kinds] if decision != "approved" else [],
-                "reviewed_on": today, "reviewer": "llm", "model": model, "previous": None}
+                "reviewed_on": today, "reviewer": "llm", "model": model}
+
+    def record(t, review, status):
+        t.update(review={**review, "previous": review_before(t, snapshot)}, status=status)
 
     for q in batch_questions(args.run):
         full = load_json(d / "reviews" / f"{q['id']}.json", {})
@@ -3262,7 +3275,7 @@ def record_translations(args, d):
         if decision == "needs_work" and not problems:
             problems.append(r["reasons"])
         review = review_of(decision, " ".join(problems), kinds, r["model"])
-        changes[q["id"]] = lambda t, review=review: t.update(review=review, status=review["decision"])
+        changes[q["id"]] = lambda t, review=review: record(t, review, review["decision"])
         snapshot[q["id"]] = {"decision": decision, "problems": review["problems"]}
         progress.detail(f"  record: {q['id']}: {decision}")
     away, confirmed = load_json(d / "not-travelling.json", []), {}
@@ -3276,7 +3289,7 @@ def record_translations(args, d):
             confirmed[x["id"]] = review_of("rejected", f"Doesn't travel ({x['reason']}): {r['reasons']}", {"other"}, r["model"])
         progress.detail(f"  record: {x['id']}: not travelling, " + ("confirmed" if x["id"] in confirmed else "translate again"))
     for i, review in confirmed.items():
-        changes.setdefault(i, lambda t, review=review: t.update(review=review, status="rejected"))
+        changes.setdefault(i, lambda t, review=review: record(t, review, "rejected"))
     update_translations(locale, changes)
     if confirmed:
         update_pool({i: lambda q: q.update(translatable=False) for i in confirmed})
@@ -4513,8 +4526,9 @@ def review_problems(q):
     if rv.get("reviewer") not in {"human", "llm"}: out.append("review.reviewer must be human or llm")
     if (rv.get("reviewer") == "llm") != bool(rv.get("model")): out.append("review.model must be set exactly for an llm review")
     prev = rv.get("previous")
-    if prev is not None and (rv.get("reviewer") != "human" or prev.get("reviewer") != "llm"):
-        out.append("review.previous must be an llm review under a human one")
+    if prev is not None and (prev.get("reviewer") not in {"human", "llm"}
+                             or rv.get("reviewer") == "human" and prev.get("reviewer") != "llm"):
+        out.append("review.previous must be a review, an llm one under a human one")
     return out
 
 
