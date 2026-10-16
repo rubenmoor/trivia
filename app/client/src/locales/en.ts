@@ -110,7 +110,7 @@ export const en = {
     title: "Help us improve the game?",
     body: "If you agree, the game sends anonymous game data when it closes: which questions were answered, right or wrong, level, age group and jokers.",
     noNames: "No names, no Steam account, no IP address.",
-    change: "You can change this in the menu (Esc).",
+    change: "You can change this in the menu.",
     no: "No",
     yes: "Yes, send data",
   },

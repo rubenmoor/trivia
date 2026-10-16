@@ -11,7 +11,7 @@ export const esES = {
   consent: {
     title: "¿Nos ayudáis a mejorar el juego?",
     body: "Si aceptáis, al cerrarse el juego envía datos anónimos de las partidas: qué preguntas se respondieron, si bien o mal, nivel, grupo de edad y comodines.",
-    change: "Lo podéis cambiar en el menú (Esc).",
+    change: "Lo podéis cambiar en el menú.",
   },
   flag: {
     pickerTitle: "Escribid una nota",

@@ -110,7 +110,7 @@ export const de = {
     title: "Beim Verbessern des Spiels helfen?",
     body: "Bei Zustimmung sendet das Spiel beim Schließen anonyme Spieldaten: welche Fragen beantwortet wurden, richtig oder falsch, Stufe, Altersgruppe und Joker.",
     noNames: "Keine Namen, kein Steam-Konto, keine IP-Adresse.",
-    change: "Jederzeit im Menü (Esc) änderbar.",
+    change: "Jederzeit im Menü änderbar.",
     no: "Nein",
     yes: "Ja, Daten senden",
   },
