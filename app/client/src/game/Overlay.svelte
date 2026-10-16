@@ -206,7 +206,7 @@
     }
   }
 
-  /** «Edad: Adolescentes», «Paquetes de preguntas: Básico, …»; empty without a running game. */
+  /** «Edad: Adolescentes», «Paquetes de preguntas: Paquete básico, …»; empty without a running game. */
   let choiceLines = $state<string[]>([]);
   $effect(() => {
     const s = running ? game?.settings : null;

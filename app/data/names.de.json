@@ -3,7 +3,7 @@
   "locale": "de",
   "bundles": {
     "base": {
-      "name": "Basis",
+      "name": "Grundpaket",
       "description": "Von allem etwas, zum Spielen überall."
     },
     "colombia": {

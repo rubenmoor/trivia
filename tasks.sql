@@ -33943,7 +33943,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Node dev server (`npm run dev -w app/client`) at 1280×800 and 1920×1080, both modes, key and pad (or forced `device: "gamepad"`): Player → Bundles (toggle colombia, base stays one) → Choice → Back → Bundles (pick kept) → Choice → «¡A jugar!»; a too-small pick shows the report on Choice, Back fixes it
 - `trivia-gallery --only bundles,choice-solo,choice-gamemaster,choice-supply-report --locale es` runs
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass', '2026-10-16T13:57:26Z', '2026-10-16T14:18:21Z', 1336, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1339, 151, 'Base bundle names per locale: Paquete básico, Base bundle, Grundpaket', 'work', 'open', NULL, NULL, 'Part 2 of `plan 151: Bundle selection on its own full screen`, applying `decision 261: Name of the base bundle per UI language (not «Basics»)` → option 1: es / es-ES «Paquete básico» (no es-ES override), en «Base bundle», de «Grundpaket». Descriptions (`about`) unchanged.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1339, 151, 'Base bundle names per locale: Paquete básico, Base bundle, Grundpaket', 'work', 'done', NULL, '2026-10-16, app/data/bundles.json, names.en.json, names.de.json, locales/style/{es,en,de}.md, Overlay.svelte, plans/22-bundles.md, plans/04-ui-tv-display.md, authoring/data/ui-flags.json (flag 16 fixed_on); keys es P/C, en B/C, de G/K, no collision with flag M; gallery bundles shot checked in 4 locales', 'Part 2 of `plan 151: Bundle selection on its own full screen`, applying `decision 261: Name of the base bundle per UI language (not «Basics»)` → option 1: es / es-ES «Paquete básico» (no es-ES override), en «Base bundle», de «Grundpaket». Descriptions (`about`) unchanged.
 
 ## What
 - `app/data/bundles.json` (base''s es name), `app/data/names.en.json`, `app/data/names.de.json`
@@ -33955,7 +33955,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - Bundle screen and Choice line show the new names in es, es-ES, en, de (dev server or `trivia-gallery --only bundles`)
-- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass', '2026-10-16T13:57:26Z', NULL, 1336, 0);
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass', '2026-10-16T13:57:26Z', '2026-10-16T14:50:38Z', 1336, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1340, 151, 'Gallery run of the bundle screen and developer review', 'work', 'open', NULL, NULL, 'Part 3 of `plan 151: Bundle selection on its own full screen`, after `task 1338: Bundle screen between Player and Choice; Choice without the selector` and `task 1339: Base bundle names per locale: Paquete básico, Base bundle, Grundpaket`.
 
 ## What
@@ -39383,6 +39383,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1334, 1317, '2026-10-16T14:23:29Z', '2026-10-16T14:43:15Z', 'failed', 'interrupted', NULL, '1bf98638d04b2e07118a0878a8b0495122ac38be', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 4064407);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1335, 1317, '2026-10-16T14:43:23Z', '2026-10-16T14:44:35Z', 'done', NULL, 0, 'f0d6c16f92eb250f896b841ab24773c8c77f4046', 'claude-opus-5-5[1m]', '4918e20b-ab5a-4020-8fa0-ac1de944f339', NULL, 13, 24, 3733, 534599, 49961, 0.5813638, 4113781);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1336, 1341, '2026-10-16T14:44:35Z', '2026-10-16T14:46:25Z', 'done', NULL, 0, '7c5a5666f94da63c0edf94e7238384e1f2428942', 'claude-opus-5-5[1m]', '3ff78cb6-3e44-4aff-ab7f-e56d6b3ddac5', NULL, 20, 36, 6399, 792738, 42469, 0.6264236, 4113781);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1337, 1339, '2026-10-16T14:46:25Z', '2026-10-16T14:50:45Z', 'done', NULL, 0, '34fee3ee3b73ca17ed6792c66eef4524758a5937', 'claude-opus-5-5[1m]', '6057b269-be36-47c8-a700-2d2c9d0ccd7f', NULL, 16, 30, 4478, 592980, 40925, 0.535676, 4113781);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

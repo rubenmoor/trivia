@@ -8,7 +8,7 @@ Fixed terms; use them as written, never a synonym.
 - Jokers: «joker»; names «Hint» (H), «Pass & Purge» (P), «Fairy» (F), «Ms Picky» (K), «Trick Shot» (T) (D-89, D-91, kept by D-108); plain skip «Just pass»
 - Level: «level»; the tower, the top, the crown
 - Question, answer, topic: «question», «answer», «topic» (category on screen); a question card: «card»
-- Question bundle: «question bundle» (decision 50; «bundle» once the context is clear); base bundle «base bundle»; bundle names from `app/data/names.en.json` («Basics», «Regional: Colombia»)
+- Question bundle: «question bundle» (decision 50; «bundle» once the context is clear); base bundle «base bundle»; bundle names from `app/data/names.en.json` («Base bundle», «Regional: Colombia»)
 - Age group: «Age» (label), «age group»
 - Difficulty: «Difficulty», «From» / «To», «Custom»
 - Flag: «flag» / «Flag for review», «Flag this question», «Flagged questions», «report» (gallery review 2026-10-14; never «mark»)

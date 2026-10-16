@@ -8,7 +8,7 @@ Fixed terms; use them as written, never a synonym.
 - Jokers: «Joker»; names «Wink» (K), «Näxt & Weg» (N), «Glücksfee» (G), «Wunschzeit» (W), «Finte» (F) (D-108, decision 212); plain skip «Nur passen»
 - Level: «Stufe»; the tower, the top: «Turm», «Gipfel», «Krone»
 - Question, answer, topic: «Frage», «Antwort», «Thema» (category on screen); a question card: «Karte»
-- Question bundle: «Fragenpaket» (decision 50; «Paket» once the context is clear); base bundle «Grundpaket»; bundle names from `app/data/names.de.json` («Basis», «Regional: Kolumbien»)
+- Question bundle: «Fragenpaket» (decision 50; «Paket» once the context is clear); base bundle «Grundpaket»; bundle names from `app/data/names.de.json` («Grundpaket», «Regional: Kolumbien»)
 - Age group: «Alter» (label), «Altersgruppe»
 - Difficulty: «Schwierigkeit», «Von» / «Bis», «Eigene»
 - Flag: «melden» / «Zum Prüfen melden», «Diese Frage melden», «Gemeldete Fragen», «Meldung» (gallery review 2026-10-14; never «markieren»)

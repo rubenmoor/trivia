@@ -8,7 +8,7 @@ Fixed terms; use them as written, never a synonym.
 - Jokers: «comodín»; names «Soplo» (S), «Paso y fuera» (P), «Hada madrina» (H), «Doña Exigente» (E), «Tiro mágico» (T) (D-108, decision 210); plain skip «Solo paso»
 - Level: «nivel»; the tower, the top: «la torre», «la cima», «la corona»
 - Question, answer, topic: «pregunta», «respuesta», «tema» (category on screen); a question card: «carta»
-- Question bundle: «paquete de preguntas» (Steam DLC, decision 50; never «Temas»); base bundle «paquete básico»; bundle names from `app/data/bundles.json` («Básico», «Regional: Colombia»)
+- Question bundle: «paquete de preguntas» (Steam DLC, decision 50; never «Temas»); base bundle «paquete básico»; bundle names from `app/data/bundles.json` («Paquete básico», «Regional: Colombia»)
 - Age group: «Edad» (label), «grupo de edad»
 - Difficulty: «Dificultad», «Desde» / «Hasta», «A medida»
 - Flag: «marcar» / «Marcar para revisar», «Preguntas marcadas», «reporte»

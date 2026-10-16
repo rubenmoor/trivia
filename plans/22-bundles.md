@@ -15,7 +15,7 @@ A **bundle** is a named set of questions that players can switch on or off befor
 ## The first bundles
 | id | kind | Name | Rule (for the pipeline) |
 |---|---|---|---|
-| `base` | base | Básico | Everything else: answerable by families anywhere in the world, whatever their language, including well-known facts about any country (Colombia's included; decision 240). |
+| `base` | base | Paquete básico (en «Base bundle», de «Grundpaket»; decision 261) | Everything else: answerable by families anywhere in the world, whatever their language, including well-known facts about any country (Colombia's included; decision 240). |
 | `colombia` | region | Regional: Colombia | Answering needs a connection to Colombia: places, food, customs, people, music, sport, words or history that the players outside Colombia mostly wouldn't know. |
 
 ## In the pipeline
@@ -78,7 +78,7 @@ Players choose bundles on their own screen, Bundles (Player → Bundles → Choi
 - **Languages** (D-85): every bundle lists `languages`; the game offers only the bundles of its language (`bundlesFor`), others refused (`bundle_not_offered`). `base`: es, es-ES, en, de; `colombia`: es.
 - **Base bundles** (D-85): `kind: base`; exactly one per session, zero or two refused (`base_bundle_count`); picked like a radio button among the language's base bundles. Other bundles: any number, on or off.
 - **Every mode** (D-97, decision 158): «Solo o en grupo» and gamemaster mode show the same `BundleSelector` on the Bundles screen (plan 151, decision 260), apart from «Personalizar partida»; Choice shows the pick as a read-only line with the supply report; preset: the player's newest game's bundles, else the language's first base bundle, non-base off.
-- **Names:** «Básico», «Regional: Colombia»; the overlay line labels them «Paquetes de preguntas: …» (plan 125).
+- **Names:** «Paquete básico» (en «Base bundle», de «Grundpaket»; decision 261), «Regional: Colombia»; the overlay line labels them «Paquetes de preguntas: …» (plan 125).
 - **`qgen validate`:** each launch language has a base bundle; `languages` and `kind` valid, no legacy keys (D-85).
 - **«Cambiazo»:** shows the categories of the active bundles only.
 

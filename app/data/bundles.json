@@ -5,7 +5,7 @@
       "id": "base",
       "kind": "base",
       "languages": ["es", "es-ES", "en", "de"],
-      "name": "Básico",
+      "name": "Paquete básico",
       "description": "Preguntas de todo un poco, para jugar en cualquier parte.",
       "rule": "Everything that isn't in another bundle: answerable by families anywhere in the world, whatever their language; well-known facts about any country belong here (Colombia's capital, Japan's flag, Italian pasta, García Márquez), knowledge only one country's or one language's players have doesn't.",
       "voice": "idiomatic Latin American Spanish (es-419): words a family anywhere in Latin America uses; Spain has its own es-ES text"

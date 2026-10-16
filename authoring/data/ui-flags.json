@@ -155,7 +155,8 @@
     "text": "Basics",
     "shot": "choice-gamemaster",
     "note": "two problems here: first, \"basics\" is wrong. it's literally the \"base bundle\" with corresponding translations that must be just as explicit. second, the question bundle selection happens on its own full screen, which isn't implemented yet it seems",
-    "flagged_on": "2026-10-16"
+    "flagged_on": "2026-10-16",
+    "fixed_on": "2026-10-16"
   },
   {
     "id": 17,
