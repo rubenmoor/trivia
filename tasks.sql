@@ -32305,6 +32305,134 @@ VOICE = "idiomatic Latin American Spanish (es-419)"
 ## Applying (task 1239, together with decision 239)
 - The three edits above; `qgen validate`, `npm test` (bundles.json shape unchanged).
 - `rg` "Spanish-speaking world", "understood across Latin America and in Spain", "neutral Latin American Spanish" over `.md` and fix the hits that describe `base` (decision 200).', NULL, NULL, '2026-10-16T01:25:13Z', NULL, 1245, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (241, 'Calibration examples for an international English pool: apply?', 'pending', '["apply", "apply with changes (list them)", "keep"]', '`task 1202: International calibration examples for the 1–15 scale` (`plan 147: English-first batches: calibration, overlap and QC across languages`, part 1). From batch-9 on, `base` is drafted in English for families anywhere; the house style''s difficulty examples still assume Colombian/Spanish-speaking teens (empanada, Cartagena, Tunja, «lápiz», Cervantes, García Márquez). `decision 239: English-first drafting prompts: apply?` leaves the house style''s "Difficulty" section and the locale files'' difficulty bullet to this task; this draft applies on top of it (after `task 1239: Apply the English-first prompts`). Nothing applied yet.
+
+Summary:
+- Scale, "who can answer it" rules, "Hard questions" rules, anchors 9–15 (`decision 11: Difficulty anchors 9–15: are these levels right?`): unchanged, except names in English spelling.
+- Calibration lists: examples in English; the international ones kept with their observed guesses (trumpet, WALL·E, microwave, horse/neigh analogy, antonym, ants, stegosaurus, Link, Pac-Man, Greek gods, Saturn, Columbus, the seven notes).
+- Six local examples replaced by international analogues that teach the same lesson; they **keep the old example''s guess** (the lesson: "AI said N, teens showed M"), they are not new observations:
+  - 1: Colombian food photo → empanada (guessed 4) → everyday food photo → pizza (guessed 4)
+  - 6: Cartagena''s clock tower photo (guessed 4); walls against pirates (guessed 5) → Sydney Opera House from a photo, which city (guessed 4); what the Great Wall of China was built against (guessed 5)
+  - 9: highest Colombian city → Tunja (guessed 3) → in which country Kilimanjaro stands → Tanzania (guessed 3)
+  - 2: plural of «lápiz» (guessed 5) → in which country the Eiffel Tower stands → France (guessed 5) (a plural question breaks decision 239''s "International angle")
+  - 5: who wrote Don Quijote → Cervantes (guessed 8) → who wrote "Romeo and Juliet" → Shakespeare (guessed 8)
+  - 7: Colombian Nobel 1982 → García Márquez (lowered to 3) → the only person with Nobel Prizes in two sciences → Marie Curie (lowered to 3)
+- New: a level-4 pool example (only level without one: q-1655 jazz), and one rule line: one country''s home knowledge is not easy for the others.
+- `locale-en.md`, `locale-de.md`: the difficulty bullet loses "(the calibration examples are about Spanish speakers, the scale isn''t)", like decision 239''s `locale-es.md` / `locale-es-ES.md`.
+- `draft.md`, `rate.md`, `revise.md`, `audit.md`: no change; they point to the house style''s calibration, and no calibration line in them assumes Spanish speakers (decision 239 covers their Spanish examples).
+- Not here: Bonmatí (anchor 12) stays: a world champion and Ballon d''Or, confirmed in decision 11; say "replace" under "apply with changes" if you want a non-Spanish anchor. `concepts-list.md`''s "(Sol)" is `task 1203: International angle in the concept prompts`''.
+- Judgement to check: the analogues'' levels (pizza 1, Sydney Opera House 6, Great Wall 6, Kilimanjaro 9, Eiffel Tower 2, Shakespeare 5, Marie Curie 7) are mine for an international family; correct any under "apply with changes".
+
+---
+
+## 1. `house-style.md`, section "Difficulty" (from "Calibration from the developer" to the end of the anchors)
+
+old:
+```
+Calibration from the developer, observed with young teens (final level, with the first guess in brackets). AI estimates tend to **overrate what young people know from school** (mythology, geography details) and **underrate what they know from everyday life, films and games**:
+- 1: "Escucha: ¿qué instrumento suena?" → la trompeta (guessed 5)
+- 1: WALL·E, the Pixar robot that compacts garbage (guessed 5)
+- 1: the microwave, invented after a chocolate bar melted next to a radar (guessed 4)
+- 1: close-up photo of a Colombian food → empanada (guessed 4)
+- 2: "''Perro'' es a ''ladrar'' como ''caballo'' es a…" → relinchar (guessed 7)
+- 3: the word for opposites, "frío"/"caliente" → antónimo (guessed 4)
+- 3: three ants walking: how many legs in total? → 18 (guessed 4)
+- 6: photo of a skeleton: which dinosaur? → estegosaurio (guessed 2)
+- 6: Cartagena''s clock tower from a photo (guessed 4); Cartagena''s walls against pirates (guessed 5)
+- 8: Link from Zelda, described (guessed 5); Pac-Man''s shape inspired by a pizza (guessed 7)
+- 9: Greek gods: Poseidón from his trident, Atenea from her owl (guessed 5)
+- 9: which Colombian city lies highest → Tunja (guessed 3)
+
+Famous world facts that people meet early in cartoons, films and everyday talk are easier than they look:
+- 2: the planet famous for its huge rings → Saturno (guessed 4)
+- 2: plural of "lápiz" → lápices (guessed 5)
+- 2: who reached America in 1492 → Cristóbal Colón (guessed 3)
+- 5: who wrote "Don Quijote" → Cervantes (guessed 8)
+
+But don''t overcorrect: names of prizes, years and school theory are still hard for young teens:
+- 7: which Colombian writer won the Nobel Prize in 1982 → García Márquez (lowered to 3 by mistake)
+- 7: how many notes the basic scale has (do, re, mi…) → 7 (lowered to 3 by mistake)
+
+Anchors for 9–15, confirmed by the developer:
+- 9: capital of Australia → Canberra
+- 10: painted stone bust found in Amarna in 1912 → Nefertiti
+- 11: French 17th-century philosopher who made x, y, z the unknowns → Descartes
+- 12: Spanish midfielder, 2023 world champion, best player of the World Cup and Ballon d''Or → Aitana Bonmatí
+- 13: who created the World Wide Web and HTML → Tim Berners-Lee
+- 13: style of the Paris metro entrances, Mucha''s posters and Horta''s houses → Art nouveau
+- 14: the seven bridges of Königsberg, proven impossible in 1736 → Euler
+- 14: in which of these years did February have no 29th? → 1900
+- 15: harmless butterfly that copies a bad-tasting one, named after an English naturalist → Batesian mimicry
+- 15: tempura came to Japan about 450 years ago from which European country? → Portugal
+```
+new:
+```
+The players are families anywhere in the world. Rate what children and adults everywhere meet, not one country''s school, TV or home life: what only one country''s children know (their own cities, dishes, school canon, shows) is not easy for anyone else (house style "International angle").
+
+Calibration from the developer, observed with young teens (final level, with the AI''s first guess in brackets). AI estimates tend to **overrate what young people know from school** (mythology, geography details) and **underrate what they know from everyday life, films and games**:
+- 1: "Listen: which instrument is this?" → the trumpet (guessed 5)
+- 1: WALL·E, the Pixar robot that compacts garbage (guessed 5)
+- 1: the microwave, invented after a chocolate bar melted next to a radar (guessed 4)
+- 1: close-up photo of an everyday food → pizza (guessed 4)
+- 2: "Dog is to bark as horse is to…" → neigh (guessed 7)
+- 3: the word for opposites, "cold"/"hot" → antonym (guessed 4)
+- 3: three ants walking: how many legs in total? → 18 (guessed 4)
+- 4: born in New Orleans, full of improvisation, Louis Armstrong played it on his trumpet → jazz
+- 6: photo of a skeleton: which dinosaur? → stegosaurus (guessed 2)
+- 6: the Sydney Opera House from a photo: which city? (guessed 4); what the Great Wall of China was built against → invaders from the north (guessed 5)
+- 8: Link from Zelda, described (guessed 5); Pac-Man''s shape inspired by a pizza (guessed 7)
+- 9: Greek gods: Poseidon from his trident, Athena from her owl (guessed 5)
+- 9: in which country is Mount Kilimanjaro? → Tanzania (guessed 3)
+
+Famous world facts that people meet early in cartoons, films and everyday talk are easier than they look:
+- 2: the planet famous for its huge rings → Saturn (guessed 4)
+- 2: in which country is the Eiffel Tower? → France (guessed 5)
+- 2: who reached America in 1492 → Christopher Columbus (guessed 3)
+- 5: who wrote "Romeo and Juliet" → Shakespeare (guessed 8)
+
+But don''t overcorrect: names of prizes, years and school theory are still hard for young teens:
+- 7: the only person with Nobel Prizes in two different sciences → Marie Curie (lowered to 3 by mistake)
+- 7: how many notes the basic scale has (do, re, mi…) → 7 (lowered to 3 by mistake)
+
+Anchors for 9–15, confirmed by the developer:
+- 9: capital of Australia → Canberra
+- 10: painted stone bust found in Amarna in 1912 → Nefertiti
+- 11: French 17th-century philosopher who made x, y, z the unknowns → Descartes
+- 12: Spanish midfielder, 2023 world champion, best player of the World Cup and Ballon d''Or → Aitana Bonmatí
+- 13: who created the World Wide Web and HTML → Tim Berners-Lee
+- 13: style of the Paris metro entrances, Mucha''s posters and Horta''s houses → Art Nouveau
+- 14: the seven bridges of Königsberg, proven impossible in 1736 → Euler
+- 14: in which of these years did February have no 29th? → 1900
+- 15: harmless butterfly that copies a bad-tasting one, named after an English naturalist → Batesian mimicry
+- 15: tempura came to Japan about 450 years ago from which European country? → Portugal
+```
+
+## 2. `locale-en.md` (on top of decision 239''s new file)
+
+old:
+```
+- Difficulty and distractors on the same scale 1–15 (the calibration examples are about Spanish speakers, the scale isn''t).
+```
+new:
+```
+- Difficulty and distractors on the same scale 1–15.
+```
+
+## 3. `locale-de.md`
+
+old:
+```
+- Difficulty and distractors on the same scale 1–15 (the calibration examples are about Spanish speakers, the scale isn''t).
+```
+new:
+```
+- Difficulty and distractors on the same scale 1–15.
+```
+
+## What applying means (task 1202)
+- The three files as above (after task 1239 applied decision 239).
+- `decision 167: Translation prompt for a regional bundle (en for colombia)`''s locale-en/de wording: its difficulty parenthesis goes; consequence noted on 167 too.
+- `rg` the old example names over `.md` (decision 200): empanada, Tunja, Cartagena, lápiz, Cervantes, García Márquez in `authoring/` and `plans/` (history entries in `plans/07-question-generation.md` stay: they record what was observed).', NULL, NULL, '2026-10-16T01:27:33Z', NULL, 1202, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -33514,6 +33642,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1189, 1237, '2026-10-16T01:14:10Z', '2026-10-16T01:20:13Z', 'done', NULL, 0, '05b5a5cf93c62cc56122b5deca3c86158517575e', 'claude-opus-5-5[1m]', 'b0e2b1fb-4bae-44e6-9ce0-264c68b5d3b8', 54, 98, 33476, 5496581, 147565, 2.9497482000000006, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1190, 1238, '2026-10-16T01:20:13Z', '2026-10-16T01:24:20Z', 'done', NULL, 0, 'b8629258d006ded1a122c808cb1d8da99e68b1f6', 'claude-opus-5-5[1m]', '7389d8aa-1a06-4ab0-9fef-84e3e0ebe4aa', 21, 42, 26909, 1385100, 89007, 1.5274240000000001, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1191, 1245, '2026-10-16T01:24:20Z', '2026-10-16T01:25:29Z', 'done', NULL, 0, '888ae7cbb7b106dd7dce08ce93a1254bb29583c4', 'claude-opus-5-5[1m]', '9102afa2-61c4-4337-96dd-c3f480d0b1ed', 13, 26, 6306, 582495, 46844, 0.617475, 3857742);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1192, 1202, '2026-10-16T01:25:29Z', '2026-10-16T01:27:44Z', 'blocked', NULL, 0, 'ec34d8c93201efbc30df9b5b6cc991f5bf018907', 'claude-opus-5-5[1m]', '43e5b3a0-d70c-4599-a299-a0e1f785174c', 23, 42, 13365, 1462813, 94467, 1.3157666000000001, 3857742);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -33895,11 +34024,13 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1185, 233);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1185, 234);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1185, 239);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1185, 240);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1185, 241);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1186, 228);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1186, 229);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1190, 227);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1191, 230);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1191, 231);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1202, 241);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1207, 233);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1208, 234);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1239, 239);
