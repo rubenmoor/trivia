@@ -17,6 +17,10 @@
     "germany": {
       "name": "Regional: Deutschland",
       "description": "Für alle mit Bezug zu Deutschland: Orte, Essen, Bräuche, Menschen, Musik, Sport und Wörter von hier."
+    },
+    "uk": {
+      "name": "Regional: Vereinigtes Königreich",
+      "description": "Für alle mit Bezug zum Vereinigten Königreich: Orte, Essen, Bräuche, Menschen, Musik, Sport und Wörter von dort."
     }
   },
   "age_groups": {

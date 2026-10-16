@@ -50,6 +50,18 @@
       "description": "Para quien tiene relación con Alemania: lugares, comida, costumbres, gente, música, deporte y palabras de allá.",
       "rule": "Answering needs a connection to Germany: German places, food, customs, holidays, people, music, sport, media, words, sayings or history that players outside Germany mostly wouldn't know; things known to families anywhere (Berlin's wall, Beethoven, Oktoberfest as a fact) stay in `base`, and Austrian or Swiss topics are not here.",
       "voice": "Standard German as spoken in Germany: German spelling with \"ß\", German words (\"Brötchen\", \"Handy\", \"Fahrrad\", \"Bürgersteig\"), dates as \"20. Juli 1969\", metric units"
+    },
+    {
+      "id": "uk",
+      "kind": "region",
+      "country": "GB",
+      "languages": [
+        "en"
+      ],
+      "name": "Regional: Reino Unido",
+      "description": "Para quien tiene relación con el Reino Unido: lugares, comida, costumbres, gente, música, deporte y palabras de allá.",
+      "rule": "Answering needs a connection to the United Kingdom: British places, food, customs, holidays, people, music, sport, media, words, sayings or history that players outside the UK mostly wouldn't know; topics shared across the English-speaking world, and American-only ones (those belong to `usa`), are not here.",
+      "voice": "British English: UK spelling (\"colour\", \"grey\", \"realise\"), UK words (\"football\", \"biscuit\", \"lorry\", \"holiday\", \"pavement\"), dates as \"20 July 1969\", metric units with miles and pints where Britons use them"
     }
   ]
 }

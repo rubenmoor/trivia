@@ -17,6 +17,10 @@
     "germany": {
       "name": "Regional: Germany",
       "description": "For anyone with ties to Germany: its places, food, customs, people, music, sport and words."
+    },
+    "uk": {
+      "name": "Regional: United Kingdom",
+      "description": "For anyone with ties to the United Kingdom: its places, food, customs, people, music, sport and words."
     }
   },
   "age_groups": {
