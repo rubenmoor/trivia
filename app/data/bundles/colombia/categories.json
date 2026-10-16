@@ -1,44 +1,142 @@
 {
   "about": "Categories of the colombia bundle (D-41, D-43): its own taxonomy for `qgen batch --bundle colombia`. Subcategory names and slugs are unique within the bundle; they may repeat another bundle's (D-99).",
   "categories": [
-    {"slug": "colombia-pais", "name": "Colombia", "subcategories": [
-      "Regiones de Colombia",
-      "Ciudades de Colombia",
-      "Ríos de Colombia",
-      "Parques naturales de Colombia",
-      "Símbolos patrios de Colombia",
-      "Animales de Colombia"
-    ]},
-    {"slug": "colombia-fiestas", "name": "Fiestas, mitos y tradiciones de Colombia", "subcategories": [
-      "Fiestas colombianas",
-      "Tradiciones colombianas",
-      "Carnaval de Barranquilla",
-      "Feria de las Flores",
-      "Mitos colombianos",
-      "Leyendas colombianas"
-    ]},
-    {"slug": "colombia-comida", "name": "Comida colombiana", "subcategories": [
-      "Platos típicos colombianos",
-      "Dulces colombianos",
-      "Postres colombianos",
-      "Bebidas colombianas",
-      "Frutas exóticas de Colombia"
-    ]},
-    {"slug": "colombia-musica-gente", "name": "Música y gente de Colombia", "subcategories": [
-      "Ritmos colombianos",
-      "Cantantes colombianos",
-      "Colombianos famosos"
-    ]},
-    {"slug": "colombia-deportes", "name": "Deporte colombiano", "subcategories": [
-      "Selección Colombia",
-      "Clubes de fútbol colombianos",
-      "Ciclismo colombiano",
-      "Medallistas olímpicos colombianos",
-      "Deportes tradicionales colombianos"
-    ]},
-    {"slug": "colombia-habla", "name": "Así hablamos en Colombia", "subcategories": [
-      "Palabras colombianas",
-      "Dichos colombianos"
-    ]}
+    {
+      "slug": "colombia-geografia",
+      "name": "Geografía de Colombia",
+      "subcategories": [
+        "Regiones y departamentos de Colombia",
+        "Ciudades y pueblos de Colombia",
+        "Ríos, mares e islas de Colombia",
+        "Montañas y paisajes de Colombia",
+        "Lugares y monumentos de Colombia"
+      ]
+    },
+    {
+      "slug": "colombia-naturaleza",
+      "name": "Naturaleza de Colombia",
+      "subcategories": [
+        "Animales de Colombia",
+        "Plantas y flores de Colombia",
+        "Parques naturales y ecosistemas de Colombia"
+      ]
+    },
+    {
+      "slug": "colombia-historia",
+      "name": "Historia de Colombia",
+      "subcategories": [
+        "Culturas precolombinas de Colombia",
+        "Conquista y Colonia en Colombia",
+        "Independencia de Colombia",
+        "Colombia en el siglo XIX",
+        "Colombia en el siglo XX"
+      ]
+    },
+    {
+      "slug": "colombia-personajes",
+      "name": "Personajes de Colombia",
+      "subcategories": [
+        "Científicos e inventores colombianos",
+        "Pioneros y personajes populares de Colombia"
+      ]
+    },
+    {
+      "slug": "colombia-comida-y-bebida",
+      "name": "Comida y bebida de Colombia",
+      "subcategories": [
+        "Platos típicos de Colombia",
+        "Comida callejera y panadería colombiana",
+        "Dulces y postres colombianos",
+        "Bebidas colombianas",
+        "Frutas de Colombia"
+      ]
+    },
+    {
+      "slug": "colombia-fiestas-y-tradiciones",
+      "name": "Fiestas y tradiciones de Colombia",
+      "subcategories": [
+        "Carnavales y ferias de Colombia",
+        "Navidad y fechas especiales en Colombia",
+        "Artesanías y trajes típicos de Colombia",
+        "Juegos tradicionales colombianos"
+      ]
+    },
+    {
+      "slug": "colombia-mitos-y-leyendas",
+      "name": "Mitos y leyendas de Colombia",
+      "subcategories": [
+        "Espantos y criaturas de Colombia",
+        "Mitos indígenas y creencias populares"
+      ]
+    },
+    {
+      "slug": "colombia-musica-y-baile",
+      "name": "Música y baile de Colombia",
+      "subcategories": [
+        "Ritmos, bailes e instrumentos de Colombia",
+        "Vallenato",
+        "Salsa y música tropical colombiana",
+        "Pop, rock y urbano colombiano",
+        "Música popular y andina colombiana"
+      ]
+    },
+    {
+      "slug": "colombia-arte-y-literatura",
+      "name": "Arte y literatura de Colombia",
+      "subcategories": [
+        "Escritores y libros colombianos",
+        "Poesía y cuentos infantiles colombianos",
+        "Pintores, escultores y museos de Colombia"
+      ]
+    },
+    {
+      "slug": "colombia-cine-y-television",
+      "name": "Cine y televisión de Colombia",
+      "subcategories": [
+        "Telenovelas colombianas",
+        "Programas y series de la TV colombiana",
+        "Presentadores, actores y humoristas colombianos",
+        "Cine colombiano"
+      ]
+    },
+    {
+      "slug": "colombia-deporte",
+      "name": "Deporte de Colombia",
+      "subcategories": [
+        "Selección Colombia",
+        "Fútbol colombiano de clubes",
+        "Ciclismo colombiano",
+        "Medallistas olímpicos colombianos",
+        "Otros deportes en Colombia"
+      ]
+    },
+    {
+      "slug": "colombia-asi-se-habla",
+      "name": "Así se habla en Colombia",
+      "subcategories": [
+        "Palabras colombianas",
+        "Dichos y expresiones colombianas",
+        "Hablas regionales de Colombia",
+        "Lenguas de Colombia"
+      ]
+    },
+    {
+      "slug": "colombia-vida-diaria",
+      "name": "Vida diaria en Colombia",
+      "subcategories": [
+        "Billetes y monedas de Colombia",
+        "Marcas y productos colombianos",
+        "Transporte en Colombia",
+        "Casa, colegio y trámites en Colombia"
+      ]
+    },
+    {
+      "slug": "colombia-simbolos",
+      "name": "Símbolos de Colombia",
+      "subcategories": [
+        "Símbolos patrios de Colombia",
+        "Símbolos de departamentos y ciudades"
+      ]
+    }
   ]
 }

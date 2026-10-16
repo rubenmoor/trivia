@@ -392,7 +392,11 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 - Translated, re-rated and reviewed questions (QT-*, `plans/15b-question-translation.md`).
 - Regional bundles (RG-3..RG-5, `plans/15c-regional-questions.md`; decision 110): 2000 approved each, in the region''s language + en, free DLC, off by default; own bundle-scoped categories and subcategories (names may repeat across bundles).
   - pilot `colombia`: 102 → 2000 via `qgen batch --bundle colombia`, then its en translation; effort measured: $ per approved (`qgen report --cost`) and the gamemaster''s review time per 100 (review tool timestamps)
-  - after the pilot: a pm decision "More regional bundles at launch?" with the measured effort (candidates mexico, argentina)
+  - more regional bundles, by Steam audience in the launch languages (developer, 2026-10-15; share of Steam download bandwidth, GameDiscoverCo 2024): `usa` (en, ≈20 %), `germany` (de + en, ≈4.4 %), `uk` (en, ≈3.3 %), `spain` (es-ES + en), `mexico` (es + en); later candidates `canada`, `australia`, `argentina`
+  - same rules as `colombia` (decision 110): 2000 approved each, region''s language + en (en regions: en only), free DLC, off by default, own taxonomy via `qgen taxonomy --bundle <id>`; drafted in the region''s language and variety (US English, British English, German, Spain''s Spanish, Mexican Spanish)
+  - order by audience; each starts once `colombia`''s taxonomy and first `qgen batch --bundle colombia` have proven the chain, not after colombia''s 2000; the pilot''s effort is still measured and sets the pace
+  - replaces decision 110''s "more bundles only after a new decision with the pilot''s numbers"
+  - each needs its DLC entry (`steam.json` `dlc`, store texts, capsules) like `colombia`
   - launch doesn''t wait for the pilot: it ships what `colombia` has then; updates bring the rest
 - The content target reached and measurable (CT-*, `plans/16-content-target.md`).
 - Language on first start (I18N-2; replaces plan 68''s "no first-start language screen"):
@@ -437,7 +441,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 ## Done when
 - `qgen report --simulate` meets the target for every launch language.
 - A fresh save asks for the language once; an existing save doesn''t.
-- `colombia` has 2000 approved in es and en (may land after launch), the pilot''s effort is recorded and the follow-up decision answered.
+- `colombia`, `usa`, `germany`, `uk`, `spain`, `mexico` have 2000 approved each in their languages (may land after launch); the pilot''s effort is recorded.
 - Style guides exist for every UI locale; the TV-check fixes are in; the gamemaster has reviewed the screen gallery in every UI language.
 - New `base` questions are drafted in English and translated to es, es-ES and de; the es-sourced ones have en, de and es-ES pool entries.
 - Every joker has one English-first name, translated in every catalog, and one symbol across languages, shown in its follow-up dialog.
@@ -27275,7 +27279,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Per-commit checks.
 
 Done when: `qgen taxonomy --bundle colombia` writes a proposal and `--apply` on it writes a valid `categories.json` (verified on a copy, not committed).', '2026-10-15T19:02:56Z', '2026-10-16T03:16:40Z', 1136, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1139, 138, 'colombia taxonomy: proposal, the developer''s answer, apply', 'work', 'open', NULL, NULL, 'Part 3 of `plan 138: Regional taxonomy: a general list, colombia reworked`. Runs after `task 1138: qgen taxonomy --bundle <id>: propose and apply a region''s taxonomy`; still open → stop and say so.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1139, 138, 'colombia taxonomy: proposal, the developer''s answer, apply', 'work', 'done', NULL, '2026-10-15, app/data/bundles/colombia/{categories,names.en,names.de}.json, app/client/src/engine/pool.test.ts: decision 249 applied via qgen taxonomy --apply (proposal as is, 14 categories, 53 subcategories; sonnet names: 1 call, $0.08). check, test, build pass; qgen validate fails only on 67 colombia questions on removed subcategories (task 1140 remaps them); pool.json not re-exported. Files left staged per the task body.', 'Part 3 of `plan 138: Regional taxonomy: a general list, colombia reworked`. Runs after `task 1138: qgen taxonomy --bundle <id>: propose and apply a region''s taxonomy`; still open → stop and say so.
 
 ## First run: propose and ask
 - `nix develop -c qgen taxonomy --bundle colombia` → `work/taxonomy/colombia/proposal.{json,md}`.
@@ -27288,7 +27292,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - If questions on removed subcategories break `qgen validate` or `qgen export`, don''t commit a broken pool: stage the new list together with the remap task''s work instead, i.e. leave the files staged and say so in the note.
 - `pm decision consequences <decision> "…"`.
 
-Done when: `app/data/bundles/colombia/categories.json` and its names files match the answer.', '2026-10-15T19:02:56Z', NULL, 1136, 0);
+Done when: `app/data/bundles/colombia/categories.json` and its names files match the answer.', '2026-10-15T19:02:56Z', '2026-10-16T03:32:08Z', 1136, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1140, 138, 'Remap colombia''s existing questions onto its new taxonomy', 'work', 'open', NULL, NULL, 'Part 4 of `plan 138: Regional taxonomy: a general list, colombia reworked`, only for `colombia` (`decision 166: colombia subcategories (OQ-46): where the 19 go, and the list for 2000`). Runs after `task 1139: colombia taxonomy: proposal, the developer''s answer, apply`; still open → stop and say so.
 
 ## Migration step in `qgen`
@@ -29597,6 +29601,8 @@ Gap in the mod API (plan 117): `Game.svelte` emits the `screen` event with `{ na
 - `SCREENS`, `OURS`, the render branch via `S.…`, `screenError`''s fallback; `modding/README.md` screen names; `plans/18-steam-integration.md` mod API section if it lists screens.
 
 Done when: a mod''s `screens.replace` / `screens.dom` for the new name(s) shows on an answers-off game (gamemaster mode, «Responder para avanzar» off); `npm run check`, `npm test`, `npm run build` pass.', '2026-10-16T03:28:28Z', NULL, 1255, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1257, 9, 'revise the masterplan of milestone 9: Steam S4: content for release', 'revise', 'open', 1000, NULL, '`milestone 9: Steam S4: content for release` changed. Bring `plan 9: masterplan`, the masterplan, in line with it (`pm plan edit 9 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-16T03:30:29Z', NULL, NULL, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -32826,7 +32832,7 @@ National and departmental symbols: flag, anthem, coat of arms, national bird, tr
 - Árboles: 1 (1 approved)
 - Deportes extremos: 1 (1 approved)
 - Museos: 1 (1 approved)
-- Colombianos famosos: 1 (1 approved)', 'the proposal as is (14 categories, 53 subcategories)', NULL, '2026-10-16T03:20:51Z', '2026-10-16T03:25:18Z', 1139, NULL, 'rule', NULL, '');
+- Colombianos famosos: 1 (1 approved)', 'the proposal as is (14 categories, 53 subcategories)', NULL, '2026-10-16T03:20:51Z', '2026-10-16T03:25:18Z', 1139, NULL, 'rule', NULL, '2026-10-16, task 1139: `qgen taxonomy --bundle colombia --apply work/taxonomy/colombia/proposal.json` (proposal unchanged) wrote `app/data/bundles/colombia/categories.json` (14 categories, 53 subcategories; old 6/31 replaced) and en/de names in `names.{en,de}.json`; `pool.test.ts` now checks «Regiones y departamentos de Colombia». `qgen validate` fails only on the 67 colombia questions on removed subcategories, fixed by `task 1140: Remap colombia''s existing questions onto its new taxonomy`; `qgen export` not run until then.');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -34072,6 +34078,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1225, 1190, '2026-10-16T03:22:27Z', '2026-10-16T03:23:49Z', 'done', NULL, 0, 'f70b824a25bc5925cde6c1765db8b7911a6346f2', 'claude-opus-5-5[1m]', '2c760d09-a031-494d-9444-7c7224ccc670', 13, 22, 3480, 381142, 30405, 0.38915639999999996, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1226, 1051, '2026-10-16T03:23:49Z', '2026-10-16T03:25:53Z', 'done', NULL, 0, '2a99811c4b7dec7eae40c199ed840e3f0de240c6', 'claude-opus-5-5[1m]', '754882ef-6546-4609-bcaf-a1cea721d030', 23, 46, 6539, 1067645, 47779, 0.72672500000000007, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1227, 1255, '2026-10-16T03:25:53Z', '2026-10-16T03:29:28Z', 'done', NULL, 0, '7e66d885f716c63c35c8f9352913719751c35af4', 'claude-opus-5-5[1m]', '593170df-258c-4386-95c5-f9eb7a17c3b8', 55, 108, 16609, 4880590, 114558, 2.2251939999999997, 3857742);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1228, 1139, '2026-10-16T03:29:28Z', '2026-10-16T03:32:17Z', 'done', NULL, 0, 'dd580ec947757319d4a787c477abe9646ab95787', 'claude-opus-5-5[1m]', '44fda5a6-6aa8-464c-a38b-adbbeca7a70d', 17, 32, 4758, 582170, 31584, 0.46439399999999992, 3857742);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
