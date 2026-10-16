@@ -27617,6 +27617,34 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-15T23:12:36Z', NULL, NULL, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1193, 1, 'revise the masterplan of milestone 1: Enough content for game nights', 'revise', 'open', 1000, NULL, '`milestone 1: Enough content for game nights` changed. Bring `plan 1: masterplan`, the masterplan, in line with it (`pm plan edit 1 --body -`), or
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-15T23:12:36Z', NULL, NULL, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1194, NULL, 'qgen: scan runs keep media unless fix changed it; review qgen for bugs, follow-up tasks', 'exec', 'open', 900, NULL, 'Developer''s intervention (2026-10-15). `task 632: run neutralize-1` was stopped in `record`: the scan modes reuse the rework chain (`revise_steps`, `authoring/tools/qgen.py`), so a wording-only rewrite searched media again and the reviewers re-picked images.
+
+## State of neutralize-1 (don''t lose it)
+- `authoring/data/questions.json` staged: stash merged per `decision 214: neutralize-1: qgen validate fails after fix`, `fix` applied, 377 reworded questions in `draft` with `review: null`; `record` never ran, so no pick reached the pool.
+- `work/neutralize-1/reviews/<id>.json`: round 1 and 2 reviews with new picks. Of 375 reworded questions with media: 70 same URL, 213 same file but thumbnail (3840px) → original URL, 92 a different image (e.g. q-0004).
+- `record` was downloading every uncached pick serially (`media.checked` → `download.cached`), ~47 per 10 min, 294 left; no output (`progress.verbose = False`).
+- Leave the staged `questions.json` as it is; don''t run `qgen neutralize` here.
+
+## 1. Fix (this task)
+- Scan modes (`neutralize`, `tighten`; `SCANS`): media is out of scope unless `fix` changed `media`/`background` (`fix.changed`) or the question had no usable pick. Then no new media search and no re-pick: `record` keeps the pool''s `media`/`background` fields as they are, no download.
+- `qgen rework` keeps its new media search (QG-23).
+- Resuming `neutralize-1` with the fixed code must reach `record` without new claude calls (reviews on disk stay valid) and keep the 375 questions'' current picks. Check with a throw-away copy (temp `TRIVIA_WORK`/`TRIVIA_STATE`, as in `code-review.md`''s temp-worktree checks), not on the staged tree.
+- `cmd_record`''s docstring ("without downloading") is stale since task 1181: fix it.
+- Update `authoring/RUNBOOK.md` / `plans/decisions.md` (D-83) if they describe the scan modes'' media step.
+
+## 2. Review qgen generally
+- Read `authoring/tools/qgen.py` and the modules it calls (`media.py`, `download.py`, `translations.py`, `targets.py`, …) for bugs of this kind: steps that do more than their mode needs, state lost on resume, silent long steps, history lost, docstrings that no longer hold.
+- Known so far (each a follow-up task, not fixed here unless trivial):
+  - `fix` sets `review: None` on reworded questions (scan modes, rework): the earlier review (incl. a human approval) is lost; keep it as `previous`.
+  - Long steps without progress output (`record`''s downloads with `progress.verbose = False`).
+  - Serial downloads in `record`.
+- Every bug found: `pm task add <plan> "<subject>"` with what, where, how to reproduce, how to tell it''s fixed, in the plan that owns the area (`pm plan list`; qgen pipeline work: plan 17 `Batch runs` unless a better one fits), priority above -85 so it runs before content runs. A choice only the developer can make: `pm decision add`.
+- Don''t change prompts, the pool or media (D-36).
+
+## Done when
+- Scan modes keep media as described; the throw-away resume check passes; `npm run check`, `npm test`, `npm run build`, `qgen validate` (on a clean tree) pass.
+- Follow-up tasks added; note lists the fix''s files and the follow-up task ids.
+- Then `task 632: run neutralize-1` resumes with plain `qgen neutralize` (its investigation task, if pm queued one, should see this note).', '2026-10-16T00:11:43Z', NULL, NULL, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
