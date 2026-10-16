@@ -84,7 +84,7 @@ Every decision is saved into `authoring/data/questions.json` and re-exported to 
 
 #### Review in a separate worktree
 
-`pm run` works in the main checkout and moves files it didn't stage, including your reviews, to a `pm/task-…-left` branch. Review in a second worktree instead, so pm never sees your edits:
+`pm run` works in the main checkout and moves files it didn't stage, including your reviews and `qgen health ack`s, to a `pm/task-…-left` branch. Review in a second worktree instead, so pm never sees your edits:
 
 ```sh
 # once
