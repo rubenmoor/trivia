@@ -8362,6 +8362,45 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - Every category and subcategory of `base` and `colombia` is keyed by an English slug; `categories.json` holds no names; `names.{en,es,de}.json` complete; the family''s es game shows the same names; an old save loads and plays on.
 - `qgen taxonomy` proposes slugs + en names; mods in today''s format still load and pass `--check-mod`.
 - Decisions superseded and recorded; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-16T12:43:19Z', 1305);
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (150, 6, 'Start screen horizon', 300, 'Part 5 of `plan 6: masterplan`: the bottom third of Start shows a colourful horizon, a row of overlapping Commons cut-outs (landmarks, animals, objects from many topics and regions) like a skyline (developer, 2026-10-16). Shipped as app assets with their own credits, the same in every language; the developer approves the picks before anything ships, then the result in the screen gallery.
+
+## Picks (decision first)
+- Wikimedia Commons only, D-45 allowlist (CC0, PD, CC BY, CC BY-SA, as in the allowlist); GFDL-only no; prefer files already cut out (PNG/SVG with alpha); a photo without alpha only if the cut-out exists as a derivative on Commons (credited as such)
+- 12–20 candidates, one fixed set for every language: spread over continents (Africa, Americas north and south, Asia, Europe, Oceania) and topics (landmark, animal, plant, object, vehicle, instrument); no flags, text, logos, people''s faces, religious or political symbols; nothing that marks one country as "ours" (no Colombia/Spain/Germany favourite; Colombia at most one item like any other country)
+- Silhouette variety: tall (tower, giraffe), wide (bridge, bus), small (teapot, cactus), so the row reads as a skyline
+- Pick task (`--web`): downloads candidates to `work/horizon/candidates/` (originals, kept for the build), contact sheet `work/horizon/contact-sheet.png` (imagemagick `montage`, number + short name per tile, on `--night-800`), raises `pm decision add` (once) listing per candidate: number, file page URL, author, licence, why; options "approve all", "approve with changes (list numbers to drop/replace)"; makes the build tasks pending on it (`pm task-pending-decision`)
+- Nothing ships before the answer; replacements the developer asks for: the build task picks them under the same rules and lists them in its note
+
+## Assets and credits
+- `app/client/public/horizon/` (committed, like `public/audio/`): `<slug>.webp` with alpha, ASCII kebab-case names (e.g. `giraffe.webp`); height 360 px (1080p band ≈ 360 px; no upscaling: a smaller source stays its size), quality ~80, each ≤ 150 KB, the set ≤ 2 MB
+- Encode: imagemagick from the dev shell (`magick … -resize x360 -quality 80 x.webp`, alpha kept, metadata stripped); a one-off, not part of `stage-media.mjs` (decision 185 covers the media depots; its WebP choice applies, its 3840×2160 fit doesn''t); the command goes into the CREDITS.md intro
+- `app/client/public/horizon/CREDITS.md`: same table as `public/audio/CREDITS.md` (`File | Used for | Source | Author | Licence`; "Used for": what it shows, e.g. "Giraffe, Kenya"); note "cut-out/resized from …" for adaptations (CC BY-SA: the adaptation stays CC BY-SA)
+- `app/client/credits.ts`: generalize `sounds()` into one reader for a `public/<dir>/CREDITS.md` table (import, don''t copy, decision 199); `Credits` gets `horizon: { entries, … }` like `sounds`; shipped `CREDITS.md` gets a "Start screen images" section; both ways: a file without a row or a row without a file throws
+- `Credits.svelte`: a section like the sounds'' with a new key `credits.horizon` («Imágenes de la pantalla de inicio», all four catalogs, `locales/style/<locale>.md` read first)
+- `authoring/steam/credits_check.mjs`: `resources/client/horizon/*.webp` against `credits.horizon.entries`, both ways; the summary line counts them
+- Budget: new key `"horizon": 2` (MB, the set) and per file `file` (5 MB, existing) in `app/desktop/media-budget.json`; `stage-media.mjs --check` (release check `media-budget` step) sums `app/client/public/horizon/` against it
+
+## Look and layout
+- New `app/client/src/game/Horizon.svelte`, used only by `screens/Start.svelte`: `aria-hidden`, `pointer-events: none`, absolute along the bottom, height `min(33.3vh, …)`, behind the content (title, buttons, notice, held line, language button stay on top and clickable)
+- Images in a fixed order from a list in the component (file, height share 0.55–1, horizontal overlap ~25 %), spread so no region clusters; the row spans the full width at 16:9 and 16:10 (overflow cut at the edges, never squeezed)
+- Palette (`plans/10-visual-design.md`): natural colours, slightly lowered saturation (`filter: saturate(0.85)`) so amber stays the strongest colour; a soft ground glow along the bottom (amber/coral/sky tokens at low alpha), the top edge fades into `--night-800` (mask gradient); tokens only, no raw hex (VD-2)
+- Motion: each item bobs gently (≤ 0.4 `--u`, 6–9 s, staggered); off under `prefers-reduced-motion` (theme.css''s rule already stops `.game` animations; check it does)
+- Readability: title, subtitle, buttons, save notice, mods button and held line, language button readable at 1920 × 1080 and 1280 × 800, all four catalogs (de longest); if the buttons sit over the band, the band goes lower/shorter, never the other way round; no change to keys, focus, prompts, catalogs of Start
+- Only on Start (not Language, Credits or Mods overlays above it, which cover it as they do now)
+
+## Check and approval
+- `trivia-gallery --only start,start-resume,start-save-notice,language-from-start,credits` for all four locales; the gallery has no size option: add `--size WxH` (default 1920x1080; other sizes write `work/gallery/<locale>@<W>x<H>/`) and run it at 1280x800 as well
+- Developer decision (once): approve the horizon in `/gallery` (like `plan 135: Playful icons and language flags before a game session`''s review); a fix task waits on it
+- Per commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`
+
+## Docs
+- `plans/04-ui-tv-display.md` "Start": the horizon line
+- `plans/10-visual-design.md`: a VD entry for the horizon (sources, look, motion)
+- `directory.md`: no new top-level dir; `public/horizon/` only if the file lists `public/audio/`
+- `plans/project.md` / milestone 6 Done-when line: left to the close-out
+
+## Constraints
+- D-45 licences only; nothing fetched at runtime; no new npm or Python dependencies (imagemagick and cwebp are already in the shells)', '2026-10-16T13:48:49Z', 1325);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -33557,7 +33596,7 @@ Milestone 6 closes the leftovers of M3/M4, preloading before a screen fades in (
 ## Order and constraints
 - Parts are independent; 2 → 3 shared conventions (done).
 - D-45 licences only; everything offline; no new npm or Python dependencies.', '2026-10-16T13:46:46Z', NULL, 1320, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1325, 6, 'write plan: Start screen horizon', 'plan', 'open', 1000, NULL, 'Write the plan for part 5 of `plan 6: masterplan` (milestone 6: Screen polish leftovers): `pm plan add 6 "Start screen horizon" --priority 300 < body.md`, then split it into tasks (or leave that to its split task).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1325, 6, 'write plan: Start screen horizon', 'plan', 'done', 1000, '2026-10-16, plan 150: Start screen horizon (tasks.sql only; split left to its split task)', 'Write the plan for part 5 of `plan 6: masterplan` (milestone 6: Screen polish leftovers): `pm plan add 6 "Start screen horizon" --priority 300 < body.md`, then split it into tasks (or leave that to its split task).
 
 The plan covers, per the masterplan''s part 5:
 - What: the bottom third of Start (`app/client/src/game/screens/Start.svelte`) shows a row of overlapping cut-outs (transparent background: landmarks, animals, objects from many topics and regions) like a skyline, tinted or framed to Start''s palette (VD palettes, `plans/10-visual-design.md`); static or gently moving (plan decides; reduced motion respected if the game has such a setting).
@@ -33568,7 +33607,9 @@ The plan covers, per the masterplan''s part 5:
 - Layout: title, buttons, save notice, mods notice and the language button readable at 1920 × 1080 and 1280 × 800, all four catalogs; keys, focus, prompts unchanged.
 - Check: `trivia-gallery --only` Start shots for all four languages, then a developer decision to approve the horizon in `/gallery` (like `plan 135: Playful icons and language flags before a game session`).
 - Docs: `plans/04-ui-tv-display.md` (Start), `plans/10-visual-design.md`, `directory.md` if a new top-level dir.
-- D-45 licences only, offline, no new npm or Python dependencies.', '2026-10-16T13:47:27Z', NULL, 1322, 0);
+- D-45 licences only, offline, no new npm or Python dependencies.', '2026-10-16T13:47:27Z', '2026-10-16T13:48:52Z', 1322, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1326, 150, 'create tasks for plan 150: Start screen horizon', 'split', 'open', 1000, NULL, 'Split plan 150 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T13:48:49Z', NULL, 1325, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -38647,6 +38688,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1316, 1314, '2026-10-16T13:33:41Z', '2026-10-16T13:46:09Z', 'done', NULL, 0, 'ba45b9d18467320a2543602cc513e5192c62ab40', 'claude-opus-5-5[1m]', '1208d556-c2fd-4a60-9065-509d7e555803', 36, 70, 16219, 2301611, 73785, 1.3752622000000003, 4064407);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1317, 1320, '2026-10-16T13:46:09Z', '2026-10-16T13:47:02Z', 'done', NULL, 0, 'ae772a5d1452c6e744115f71d51b0d72369ebb9b', 'claude-opus-5-5[1m]', '91e00df3-a47c-46fc-a764-a0c7b365cbb0', 12, 24, 4671, 448901, 34568, 0.45984020000000003, 4064407);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1318, 1322, '2026-10-16T13:47:02Z', '2026-10-16T13:47:35Z', 'done', NULL, 0, 'b676699ee35b106d3f94fb2f09abb84fd52dcaf0', 'claude-opus-5-5[1m]', '9e1334bb-f4d9-4d41-987b-b65ce0ca174d', 6, 12, 2065, 182809, 27639, 0.29902180000000006, 4064407);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1319, 1325, '2026-10-16T13:47:35Z', '2026-10-16T13:49:03Z', 'done', NULL, 0, 'f1132b1f0cd241d0edfb40b5d505acd6406389ba', 'claude-opus-5-5[1m]', 'c1974191-d3be-4cae-8dd8-2828d0b39288', 11, 20, 7477, 469981, 55055, 0.6840562, 4064407);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
