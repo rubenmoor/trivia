@@ -3,8 +3,8 @@
 import type { Dir, Intent } from "./input.svelte.ts";
 
 export type Pad = { buttons: readonly boolean[]; axes: readonly number[] };
-/** Buttons down last frame; the stick's direction, or "held" until it is let go. */
-export type PadState = { buttons: readonly boolean[]; stick: Dir | "held" | null };
+/** Buttons down last frame; the left stick's direction, or "held" until it is let go; the right stick past `ON`. */
+export type PadState = { buttons: readonly boolean[]; stick: Dir | "held" | null; right: boolean };
 export type PadStyle = "xbox" | "playstation";
 
 /** Standard mapping: A, B, Y, LB/RB, View, Start, D-pad; X and triggers only per scope (Scope.pad). */
@@ -24,9 +24,9 @@ export const BUTTONS: Record<number, Intent> = {
 const ON = 0.5;
 const OFF = 0.3;
 
-export const FRESH: PadState = { buttons: [], stick: null };
+export const FRESH: PadState = { buttons: [], stick: null, right: false };
 /** All `n` buttons count as down: nothing fires until released (focus return). */
-export const held = (n: number): PadState => ({ buttons: Array(n).fill(true), stick: "held" });
+export const held = (n: number): PadState => ({ buttons: Array(n).fill(true), stick: "held", right: true });
 
 /** The dominant axis past the dead zone, or null. */
 function stickDir(x: number, y: number): Dir | null {
@@ -39,10 +39,13 @@ function along(d: Dir, x: number, y: number) {
   return d === "right" ? x : d === "left" ? -x : d === "down" ? y : -y;
 }
 
-/** One frame: press edges and stick moves → intents; no repeat while held. A hold (peek) also has its release edge. */
-export function step(prev: PadState, pad: Pad, map = BUTTONS): { next: PadState; actions: Intent[] } {
+/** One frame: press edges and stick moves → intents; no repeat while held. A hold (peek) also has its release edge.
+ * `touched`: any button pressed or either stick pushed past `ON` from rest (plan 156), mapped or not. */
+export function step(prev: PadState, pad: Pad, map = BUTTONS): { next: PadState; actions: Intent[]; touched: boolean } {
   const actions: Intent[] = [];
+  let touched = false;
   pad.buttons.forEach((down, i) => {
+    if (down && !prev.buttons[i]) touched = true;
     const intent = map[i];
     if (!intent || down === !!prev.buttons[i]) return;
     if (intent.type === "peek") actions.push({ type: "peek", down });
@@ -53,9 +56,16 @@ export function step(prev: PadState, pad: Pad, map = BUTTONS): { next: PadState;
   if (stick === "held" ? Math.max(Math.abs(x), Math.abs(y)) < OFF : stick && along(stick, x, y) < OFF) stick = null;
   if (stick === null) {
     stick = stickDir(x, y);
-    if (stick) actions.push({ type: "navigate", dir: stick });
+    if (stick) {
+      actions.push({ type: "navigate", dir: stick });
+      touched = true;
+    }
   }
-  return { next: { buttons: [...pad.buttons], stick }, actions };
+  const [rx = 0, ry = 0] = pad.axes.slice(2);
+  const mag = Math.max(Math.abs(rx), Math.abs(ry));
+  const right = prev.right ? mag >= OFF : mag > ON;
+  if (right && !prev.right) touched = true;
+  return { next: { buttons: [...pad.buttons], stick, right }, actions, touched };
 }
 
 const same = (a: Intent, b: Intent) =>
