@@ -35464,7 +35464,7 @@ Milestone 11 is S6 of the Steam track (D-34, `plans/11-steam.md`, ST-3..ST-5): t
 ## Out of scope (from the milestone)
 - Local multiplayer modes and their controls: only in `milestone 16: Local multiplayer: game modes and controls`, not a backlog row.
 - More regions and languages (later); Remote Play Together (SW-13), macOS (SW-14); marketing beyond Steam''s own wishlist and follow features; telemetry and any network request other than the clicked report.', '2026-10-16T19:29:44Z', '2026-10-16T19:30:26Z', 1364, 0, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1386, 95, 'revise plan 95: Launch', 'revise', 'open', 1000, NULL, '`plan 11: masterplan`, the plan above `plan 95: Launch`, changed; it is quoted below. Bring `plan 95: Launch` in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1386, 95, 'revise plan 95: Launch', 'revise', 'done', 1000, '2026-10-16, no files: plan 95 still fits masterplan 11 (the revision only moved local multiplayer to milestone 16 and added an intro; plan 95 doesn''t touch either)', '`plan 11: masterplan`, the plan above `plan 95: Launch`, changed; it is quoted below. Bring `plan 95: Launch` in line with it
 (`pm plan edit 95 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -35567,7 +35567,7 @@ Milestone 11 is S6 of the Steam track (D-34, `plans/11-steam.md`, ST-3..ST-5): t
 
 ## Out of scope (from the milestone)
 - Local multiplayer modes and their controls: only in `milestone 16: Local multiplayer: game modes and controls`, not a backlog row.
-- More regions and languages (later); Remote Play Together (SW-13), macOS (SW-14); marketing beyond Steam''s own wishlist and follow features; telemetry and any network request other than the clicked report.', '2026-10-16T19:29:44Z', NULL, 1364, 0, NULL);
+- More regions and languages (later); Remote Play Together (SW-13), macOS (SW-14); marketing beyond Steam''s own wishlist and follow features; telemetry and any network request other than the clicked report.', '2026-10-16T19:29:44Z', '2026-10-16T19:30:47Z', 1364, 0, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1387, 96, 'revise plan 96: Content updates as patches (ST-5)', 'revise', 'open', 1000, NULL, '`plan 11: masterplan`, the plan above `plan 96: Content updates as patches (ST-5)`, changed; it is quoted below. Bring `plan 96: Content updates as patches (ST-5)` in line with it
 (`pm plan edit 96 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
@@ -41479,6 +41479,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1392, 1364, '2026-10-16T19:29:10Z', '2026-10-16T19:29:52Z', 'done', NULL, 0, 'd2eec541ce1e95cebcdd7e6c375962d79f81f942', 'claude-opus-5-5', '5990cb9a-d326-40d0-984f-12dc6191558e', NULL, 10, 20, 2918, 388099, 35495, 0.4200198, 4144524);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1393, 1384, '2026-10-16T19:29:52Z', '2026-10-16T19:30:11Z', 'done', NULL, 0, 'cac9b962949c33a25309eb0f52cd257b59ada6aa', 'claude-opus-5-5', '19e2d52b-55f2-465c-b384-f5a223415fd1', NULL, 5, 10, 1371, 188984, 43088, 0.4099608, 4144524);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1394, 1385, '2026-10-16T19:30:11Z', '2026-10-16T19:30:31Z', 'done', NULL, 0, '6f0f5892a7188bad5e836ec201a7699728972598', 'claude-opus-5-5', '5c21031a-c9bd-4918-b09e-1db5768daa6e', NULL, 4, 8, 1461, 126935, 31169, 0.30399099999999996, 4144524);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1395, 1386, '2026-10-16T19:30:31Z', '2026-10-16T19:30:51Z', 'done', NULL, 0, 'f82f3f110e67ec6672d301760fe02834e5d87c23', 'claude-opus-5-5', 'bf57da49-ff0f-4e6f-be34-42fccb898ae0', NULL, 4, 8, 1141, 128875, 31028, 0.29685100000000003, 4144524);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
