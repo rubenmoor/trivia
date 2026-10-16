@@ -36909,6 +36909,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1294, 1271, '2026-10-16T04:25:28Z', '2026-10-16T04:25:40Z', 'blocked', NULL, 0, 'eca937ddbb57a4651bd3ca450526ff2c29496ff4', 'claude-opus-5-5[1m]', '720fc7fd-d606-47a7-b102-0eae9cbaec82', 4, 8, 778, 130452, 31423, 0.29306640000000006, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1295, 1272, '2026-10-16T04:25:40Z', '2026-10-16T04:25:56Z', 'blocked', NULL, 0, 'ef39cc757b2c29d4846976f77c2a12593b3f084a', 'claude-opus-5-5[1m]', '82c144a0-971b-4030-b5e9-7ff26659f972', 4, 8, 808, 135274, 33376, 0.3102548, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1296, 1295, '2026-10-16T04:25:56Z', '2026-10-16T04:26:19Z', 'blocked', NULL, 0, 'c516f718a55db7ed8c336819b9fc3f18c5ea4637', 'claude-opus-5-5[1m]', '5404cc2c-1b3f-43eb-8a17-07a0120a816e', 6, 12, 1436, 236081, 37599, 0.37677619999999995, 3857742);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1297, 1296, '2026-10-16T04:26:19Z', '2026-10-16T04:26:35Z', 'blocked', NULL, 0, '192b3b388e0c8eaf07133ba498ba18ef715408ac', 'claude-opus-5-5[1m]', '2e03eadf-21d0-42fe-a581-e623354e0428', 4, 8, 668, 133508, 31541, 0.2924216, 3857742);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -37351,6 +37352,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1294, 64);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1294, 65);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1294, 203);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1295, 257);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1296, 257);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
