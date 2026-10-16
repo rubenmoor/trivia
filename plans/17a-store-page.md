@@ -66,6 +66,7 @@ Texts per store language for Steamworks → Edit Store Page → "Description" (s
   ```
 - **Language note** (until `pool.en.json` ships; last paragraph of About This Game):
   > The interface is in English; the questions are in Spanish for now. English questions follow in an update.
+- **At launch** (not on the beta page; 17a "Modding", decision 175): the Modding section's `en` feature bullet before the Steam achievements bullet, its link line before Privacy
 
 ### Spanish – Latin America (`es`, es-419)
 - **Name:** Trivia en Familia
@@ -112,6 +113,7 @@ Texts per store language for Steamworks → Edit Store Page → "Description" (s
 
   [b]Controles:[/b] se juega con controles de Xbox y PlayStation, teclado o mouse.
   ```
+- **At launch** (not on the beta page; 17a "Modding", decision 175): the Modding section's `es` feature bullet before the Logros de Steam bullet, its link line before Privacidad
 
 ### Spanish – Spain (`es-ES`)
 Only the fields that differ from `es`: «vosotros», «vídeo», «ordenador», «ratón», «mando» (es-ES style guide); name as `es`.
@@ -124,6 +126,7 @@ Only the fields that differ from `es`: «vosotros», «vídeo», «ordenador», 
   - «Preguntas con imagen, sonido y video» → «… vídeo»; «Control, teclado o mouse» → «Mando, teclado o ratón»; «Hecho para el televisor de la casa» → «Hecho para la tele de casa»
   - Privacy: «en su computador y en su Steam Cloud» → «en vuestro ordenador y en vuestro Steam Cloud»; «si ustedes lo permiten: … si aceptan, … cuando presionan Enviar» → «si lo permitís: … si aceptáis, … cuando pulsáis Enviar»
   - Controller: «controles de Xbox y PlayStation, teclado o mouse» → «mandos de Xbox y PlayStation, teclado o ratón»
+- **At launch** (not on the beta page; 17a "Modding", decision 175): the Modding section's `es-ES` feature bullet («Hacedlo vuestro: …») instead of the `es` one, same place; link line as `es`
 
 ### German (`de`)
 - **Name:** Wohnzimmer-Quiz (decision 78; PUB-7 passed, decision 176)
@@ -173,6 +176,7 @@ Only the fields that differ from `es`: «vosotros», «vídeo», «ordenador», 
   ```
 - **Language note** (until `pool.de.json` ships; last paragraph of About This Game):
   > Die Oberfläche ist auf Deutsch; die Fragen sind vorerst auf Spanisch. Deutsche Fragen folgen mit einem Update.
+- **At launch** (not on the beta page; 17a "Modding", decision 175): the Modding section's `de` feature bullet before the Steam-Erfolge bullet, its link line before Datenschutz
 
 ## Free DLC
 Store texts for each shipped question bundle, one free DLC app each (decision 66: price model, decision 110: regional packs at launch: `colombia` only, es + en, off by default). Entered on the DLC app's own store page (Steamworks → DLC app → Edit Store Page), same fields as the base game. Drafted 2026-10-14 (`task 783`); approved through pm decision "DLC store texts approved? (colombia)".
@@ -250,7 +254,7 @@ Store texts for each shipped question bundle, one free DLC app each (decision 66
 - Capsules: the DLC store name equals the in-game name, so `dlc-colombia/` capsules from `task 669` stay as rendered (no re-run)
 
 ## Modding
-Store and Workshop texts for modding (milestone 15, plan 121): one feature bullet per store language, a link line to the modding guide, and the Workshop hub description. Drafted 2026-10-14 (`task 990`); approved through pm decision "Store texts: modding bullet and guide link?"; entered at launch (milestone 11), once the Workshop works for players (`plan 122: Modding end-to-end check and close-out`), never on the beta page.
+Store and Workshop texts for modding (milestone 15, plan 121): one feature bullet per store language, a link line to the modding guide, and the Workshop hub description. Drafted 2026-10-14 (`task 990`); approved as drafted 2026-10-16 (decision 175: Store texts: modding bullet and guide link?); entered at launch (milestone 11), once the Workshop works for players (`plan 122: Modding end-to-end check and close-out`), never on the beta page.
 
 ### Rules and fields
 - Guide: `https://github.com/rubenmoor/trivia/blob/main/modding/README.md` (decision 134, English only; decision 108: repo public)
