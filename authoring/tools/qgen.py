@@ -188,10 +188,11 @@ def not_in_bundle(subs, bundle):
     return [s for s in subs if s not in known]
 
 
-def prompt(*names, locale="es", bundle="base"):
+def prompt(*names, locale="es", bundle="base", source_locale=None):
     """Prompt files joined; {age_groups} and {players} are filled from app/data/age-groups.json,
-    {locale} from prompts/locale-<locale>.md, the language of the questions at hand (+ translate-region.md for a
-    regional bundle's translation, decision 167), {voices} from app/data/bundles.json."""
+    {locale} from prompts/locale-<locale>.md, the language of the questions at hand (locale-es.md for es-ES until it
+    has its own; + translate-region.md for a regional bundle's translation, decision 167), {voices} from
+    app/data/bundles.json, {source_language} from a translation's source locale (plan 148)."""
     ag, focus = load_age_groups(), focus_group()
     groups = [f"{g['id'].replace('_', ' ')} ({ages_text(g)})" for g in ag["groups"]]
     if focus:
@@ -206,12 +207,15 @@ def prompt(*names, locale="es", bundle="base"):
                    f"whose window contains its difficulty ({windows}). Write for those players: their knowledge, "
                    'their world, their humour. "The players" below means them, for the question at hand.')
     text = "\n\n".join((PROMPTS / f"{n}.md").read_text(encoding="utf-8") for n in names)
-    loc = (PROMPTS / f"locale-{locale}.md").read_text(encoding="utf-8").rstrip()
+    f = PROMPTS / f"locale-{locale}.md"
+    loc = (f if f.exists() else PROMPTS / f"locale-{locale.split('-')[0]}.md").read_text(encoding="utf-8").rstrip()
     b = bundle_row(bundle)
     if b["kind"] == "region" and locale != translations.draft_locale(b):
         loc += "\n\n" + ((PROMPTS / "translate-region.md").read_text(encoding="utf-8").rstrip()
                           .replace("{bundle}", bundle).replace("{rule}", b["rule"]))
     text = text.replace("{locale}", loc)
+    if source_locale:
+        text = text.replace("{source_language}", LANGUAGES[source_locale])
     return (text.replace("{age_groups}", ", ".join(groups[:-1]) + " and " + groups[-1])
             .replace("{players}", players).replace("{voices}", voices_text()))
 
@@ -1023,7 +1027,8 @@ def translated_drafts(d):
             if t["travels"] != "yes":
                 continue
             q = src[t["id"]]
-            out.append({"tmp_id": q["id"], "locale": locale, "subcategory": q["subcategory"],
+            out.append({"tmp_id": q["id"], "locale": locale, "source_locale": translations.source_locale(q),
+                        "subcategory": q["subcategory"],
                         "bundle": q.get("bundle") or "base", "axes": q.get("axes"), "style": q.get("style"),
                         "difficulty": q["difficulty"], **{k: t[k] for k in translations.TEXT_FIELDS},
                         "media": {k: q["media"].get(k) for k in ("type", "role", "query", "note")},
@@ -1039,12 +1044,14 @@ def media_title(q, slot="media"):
 
 
 def translate_chunks(ids, src):
-    """[(name, questions)]: the run's sources per subcategory, at most TRANSLATE_CHUNK per chunk."""
+    """[(name, questions)]: the run's sources per subcategory and source locale (a non-es one in the name),
+    at most TRANSLATE_CHUNK per chunk."""
     by_sub = {}
     for i in ids:
-        by_sub.setdefault(categories.key(src[i]), []).append(src[i])
-    return [(f"{concept_file(*bs)[:-5]}-{n // TRANSLATE_CHUNK + 1}", qs[n:n + TRANSLATE_CHUNK])
-            for bs, qs in by_sub.items() for n in range(0, len(qs), TRANSLATE_CHUNK)]
+        by_sub.setdefault((*categories.key(src[i]), translations.source_locale(src[i])), []).append(src[i])
+    return [(f"{concept_file(b, s)[:-5]}{'' if loc == 'es' else '-' + loc}-{n // TRANSLATE_CHUNK + 1}",
+             qs[n:n + TRANSLATE_CHUNK])
+            for (b, s, loc), qs in by_sub.items() for n in range(0, len(qs), TRANSLATE_CHUNK)]
 
 
 def cmd_translate(args):
@@ -1055,15 +1062,16 @@ def cmd_translate(args):
     if not cfg:
         if not (args.locale and args.ids):
             sys.exit(f"{args.run} has no run.json: give --locale and --ids")
-        if args.locale not in translations.TRANSLATE_TO:
-            sys.exit(f"--locale must be one of {', '.join(translations.TRANSLATE_TO)}")
+        if args.locale not in translations.LOCALES:
+            sys.exit(f"--locale must be one of {', '.join(translations.LOCALES)}")
         cfg = {"mode": "translate", "locale": args.locale, "ids": split_list(args.ids),
                "started": datetime.date.today().isoformat()}
         save_json(d / "run.json", cfg)
     locale, src = cfg["locale"], {q["id"]: q for q in load_json(POOL)["questions"]}
     if unknown := [i for i in cfg["ids"] if i not in src]:
         sys.exit(f"no such source id: {', '.join(unknown)}")
-    system = prompt("house-style", "translate", locale=locale, bundle=run_bundle(d))
+    if own := [i for i in cfg["ids"] if translations.source_locale(src[i]) == locale]:
+        sys.exit(f"already in {LANGUAGES[locale]}: {', '.join(own)}")
     all_chunks = translate_chunks(cfg["ids"], src)
     todo = [c for c in all_chunks if not (d / "translations" / f"{c[0]}.json").exists()]
     progress.resumed("translate", len(all_chunks) - len(todo), len(todo), "chunks")
@@ -1074,8 +1082,10 @@ def cmd_translate(args):
                   **{k: q[k] for k in translations.TEXT_FIELDS},
                   "media": {"type": q["media"]["type"], "role": q["media"]["role"], "query": q["media"].get("query"),
                             "title": media_title(q)}} for q in qs]
-        out = claude(system, "## Questions (Spanish)\n" + json.dumps(items, ensure_ascii=False), TRANSLATE_SCHEMA,
-                     args.model, d)
+        sl = translations.source_locale(qs[0])
+        system = prompt("house-style", "translate", locale=locale, bundle=run_bundle(d), source_locale=sl)
+        out = claude(system, f"## Questions ({LANGUAGES[sl]})\n" + json.dumps(items, ensure_ascii=False),
+                     TRANSLATE_SCHEMA, args.model, d)
         got = {t["id"]: t for t in out["items"]}
         if missing := [q["id"] for q in qs if q["id"] not in got]:
             raise RuntimeError(f"no translation for {', '.join(missing)}")
@@ -1139,13 +1149,19 @@ def merge_translations(d):
 
 def locale_questions(locale):
     """The locale's translations as played: the source's play fields under the translated text,
-    difficulty, status, batch and review; `source` is the Spanish text."""
+    difficulty, status, batch and review; `source` is the source's text, `source_locale` its language."""
     src = {q["id"]: q for q in load_json(POOL)["questions"]}
     return [{**{k: src[t["id"]].get(k) for k in ("id", "subcategory", "bundle", "axes", "style", "media", "background")},
              **{k: t[k] for k in translations.TEXT_FIELDS},
              **{k: t.get(k) for k in ("difficulty", "status", "batch", "review")}, "locale": locale,
+             "source_locale": translations.source_locale(src[t["id"]]),
              "source": {k: src[t["id"]][k] for k in translations.TEXT_FIELDS}}
             for t in translations.load(locale)["questions"] if t["id"] in src]
+
+
+def in_locale(locale):
+    """Everything in the locale (decision 235): its translations (locale_questions) and its own sources."""
+    return locale_questions(locale) + [q for q in load_json(POOL)["questions"] if translations.source_locale(q) == locale]
 
 
 def update_translations(locale, changes):
@@ -1179,10 +1195,12 @@ def chunks(items, size=GROUP_SIZE):
 
 
 def locale_chunks(items, size=GROUP_SIZE):
-    """chunks() of (q, …) tuples or questions, one text language per chunk (plan 148)."""
+    """chunks() of (q, …) tuples or questions, one text language (and a translation's source locale) per chunk
+    (plan 148)."""
     by = {}
     for it in items:
-        by.setdefault(translations.source_locale(it[0] if isinstance(it, tuple) else it), []).append(it)
+        q = it[0] if isinstance(it, tuple) else it
+        by.setdefault((translations.source_locale(q), q.get("source_locale")), []).append(it)
     return [c for its in by.values() for c in chunks(its, size)]
 
 
@@ -1191,7 +1209,8 @@ def grouped(files, size=GROUP_SIZE):
     A file is never split (a draft file is one subcategory); a bigger file is a group of its own."""
     groups, cur, n = [], [], 0
     for name, items in files:
-        if cur and n + len(items) > size:
+        if cur and (n + len(items) > size or items[:1] and cur[0][1][:1]
+                    and items[0].get("source_locale") != cur[0][1][0].get("source_locale")):
             groups.append(cur)
             cur, n = [], 0
         cur.append((name, items))
@@ -1208,9 +1227,9 @@ def for_review(q):
 def rate_candidates(d):
     """tmp_id → overlap candidates for `rate` (plan 15): pool questions of every bundle (not rejected)
     and earlier drafts of the run; revised drafts count as later than the first round.
-    A translation run: the locale's approved translations instead of the pool."""
+    A translation run: the locale's approved questions (in_locale) instead of the pool."""
     locale = run_locale(d)
-    others = ([t for t in translations.load(locale)["questions"] if t["status"] == "approved"] if locale
+    others = ([q for q in in_locale(locale) if q["status"] == "approved"] if locale
               else [q for q in load_json(POOL)["questions"] if q["status"] != "rejected"])
     out, cache = {}, {}
     for _, qs in sorted(drafts(d), key=lambda f: (f[0].startswith("revised-"), f[0])):
@@ -1225,7 +1244,6 @@ def rate_candidates(d):
 
 def cmd_rate(args):
     d = run_dir(args)
-    system = prompt("house-style", "rate", locale=text_locale(d), bundle=run_bundle(d))
     files = [(name, qs) for name, qs in drafts(d) if qs]
     todo = [(name, qs) for name, qs in files if not (d / "ratings" / f"{name}.json").exists()]
     progress.resumed("rate", len(files) - len(todo), len(todo), "draft files")
@@ -1235,6 +1253,8 @@ def cmd_rate(args):
         qs = [q for _, qq in group for q in qq]
         items = [{**for_review(q), "overlap_candidates": cands.get(q["tmp_id"], [])} for q in qs]
         user = "## Questions\n" + json.dumps(items, ensure_ascii=False)
+        system = prompt("house-style", "rate", locale=text_locale(d), bundle=run_bundle(d),
+                        source_locale=qs[0].get("source_locale"))
         out = claude(system, user, RATE_SCHEMA, args.model, d)
         got = {r["id"]: r for r in out["ratings"]}
         missing = []
@@ -1259,7 +1279,6 @@ def needs_check(q):
 
 def cmd_factcheck(args):
     d = run_dir(args)
-    system = prompt("factcheck", locale=text_locale(d))
     language = LANGUAGES[text_locale(d)]
     _, done = collect(d)  # includes verdicts kept through a revision (PE-3)
     todo, checked = [], 0
@@ -1273,6 +1292,7 @@ def cmd_factcheck(args):
     def work(item):
         name, qs = item
         user = f"## Questions ({language})\n" + json.dumps([for_review(q) for q in qs], ensure_ascii=False)
+        system = prompt("factcheck", locale=text_locale(d), source_locale=qs[0].get("source_locale"))
         out = claude(system, user, FACT_SCHEMA, args.model, d, web=True)
         f = d / "factchecks" / f"{name}.json"
         save_json(f, {**load_json(f, {}), **{c["id"]: c for c in out["checks"]}})  # a rerun asks only the missing
@@ -2737,14 +2757,14 @@ def slot_input(d, q, slot):
 def cmd_review(args):
     """The LLM review (D-32 criteria, prompts/review.md): one call per question.
     Round 1 reviews every merged question; round 2 only those whose media was searched again.
-    A translation run (plan 66): the translation with its Spanish source and the source's picked media,
+    A translation run (plan 66): the translation with its source and the source's picked media,
     no new search; round 1 also decides its not-travelling ids in one line."""
     d = run_dir(args)
     reviews = d / "reviews"
     tmp_of = tmp_ids(d)
     ratings, checks = collect(d)
     locale = run_locale(d)
-    pool = locale_questions(locale) if locale else load_json(POOL)["questions"]
+    pool = in_locale(locale) if locale else load_json(POOL)["questions"]
     names = ["house-style", "review", *(["translate-review"] if locale else [])]
     notes = translator_notes(d) if locale else {}
     mode = run_mode(args.run)
@@ -2759,7 +2779,8 @@ def cmd_review(args):
             todo.append((q, r))
     if locale and args.round == 1:
         src = {q["id"]: q for q in load_json(POOL)["questions"]}
-        todo += [({**x, "not_travelling": True, "source": src[x["id"]]}, r)
+        todo += [({**x, "not_travelling": True, "source": src[x["id"]],
+                   "source_locale": translations.source_locale(src[x["id"]])}, r)
                  for x in load_json(d / "not-travelling.json", [])
                  if "round1" not in (r := load_json(reviews / f"{x['id']}.json", {}))]
     progress.resumed(f"review {args.round}", done, len(todo), "questions")
@@ -2799,7 +2820,8 @@ def cmd_review(args):
             "only_shortened": mode in SCANS,  # already in the game, only reworded
         }
         user = "## Question to review\n" + json.dumps(payload, ensure_ascii=False)
-        system = prompt(*names, locale=locale or translations.source_locale(q), bundle=run_bundle(d))
+        system = prompt(*names, locale=locale or translations.source_locale(q), bundle=run_bundle(d),
+                        source_locale=q.get("source_locale"))
         out, model = claude(system, user, REVIEW_SCHEMA, args.model, d, read=True, with_model=True)
         r[f"round{args.round}"] = {**out, "model": model}
         save_json(reviews / f"{q['id']}.json", r)
@@ -2825,7 +2847,7 @@ def cmd_fix(args):
     Unfixable ones (no `fix`, or the reviser keeps or drops) stay needs_work for the developer.
     In a `qgen rework` run (QG-23) the issue is the needs_work feedback; kept and revised questions
     go back to draft, are all fact-checked and reviewed again, with a new media search if needed.
-    A translation run (plan 66): the reviser sees the Spanish source; only the translated text and
+    A translation run (plan 66): the reviser sees the source; only the translated text and
     difficulty are taken (media stays the source's), `fix.previous` keeps the old text."""
     d = run_dir(args)
     mode = run_mode(args.run)
@@ -2854,7 +2876,8 @@ def cmd_fix(args):
 
     def ask(group, items):
         """(q, path, r, rev, fix) per answered question; a malformed revision becomes action `malformed`."""
-        system = prompt("house-style", "revise", locale=translations.source_locale(group[0][0]), bundle=run_bundle(d))
+        system = prompt("house-style", "revise", locale=translations.source_locale(group[0][0]), bundle=run_bundle(d),
+                        source_locale=group[0][0].get("source_locale"))
         out = claude(system, "## Questions with issues\n" + json.dumps(items, ensure_ascii=False), REVISE_SCHEMA,
                      args.model, d)
         got = {x["id"]: x for x in out["results"]}
@@ -2904,7 +2927,8 @@ def cmd_fix(args):
     def work_translation(group):
         answered, missing = ask(group, [
             {**for_review({**q, "tmp_id": q["id"]}), "source": q["source"],
-             "issues": issues_of(f"translation into {LANGUAGES[locale]} of the Spanish `source`, which stays as it is; {issue}",
+             "issues": issues_of(f"translation into {LANGUAGES[locale]} of the {LANGUAGES[q['source_locale']]} `source`, "
+                                 f"which stays as it is; {issue}",
                                  checks.get(q["id"])),
              "background_query": "", "needs_media": False} for q, _, _, issue in group])
         changes = {}
@@ -2926,7 +2950,8 @@ def cmd_fix(args):
               if x["id"] in ids]
         loc = translations.source_locale(group[0][0])
         user = f"## Questions ({LANGUAGES[loc]})\n" + json.dumps([for_review({**q, "tmp_id": q["id"]}) for q in qs], ensure_ascii=False)
-        out = claude(prompt("factcheck", locale=loc), user, FACT_SCHEMA, args.check_model, d, web=True)
+        out = claude(prompt("factcheck", locale=loc, source_locale=group[0][0].get("source_locale")), user, FACT_SCHEMA,
+                     args.check_model, d, web=True)
         got = {c["id"]: c for c in out["checks"]}
         for q, path, r in group:
             if q["id"] in got:
@@ -3255,9 +3280,9 @@ def is_major(a):
 
 
 def run_questions(run):
-    """The questions a run's audit reads: the locale's translations for a translation run, else the pool."""
+    """The questions a run's audit reads: everything in the locale for a translation run (in_locale), else the pool."""
     locale = run_locale(WORK / run)
-    return locale_questions(locale) if locale else load_json(POOL)["questions"]
+    return in_locale(locale) if locale else load_json(POOL)["questions"]
 
 
 def audit_input(q, pool):
@@ -3306,7 +3331,8 @@ def audit_ids(run, ids, args):
 
     def work(q):
         user = "## Question to audit\n" + json.dumps(audit_input(q, pool), ensure_ascii=False)
-        system = prompt(*names, locale=translations.source_locale(q), bundle=run_bundle(WORK / run))
+        system = prompt(*names, locale=translations.source_locale(q), bundle=run_bundle(WORK / run),
+                        source_locale=q.get("source_locale"))
         out, model = claude(system, user, AUDIT_SCHEMA, args.model, d, web=True, with_model=True)
         if not lo <= out["difficulty_estimate"] <= hi:
             raise RuntimeError(f"difficulty_estimate {out['difficulty_estimate']} not {lo}–{hi}")
@@ -3643,10 +3669,11 @@ def spread(qs, offset=0.0):
 
 
 def translate_selection(locale, n, bundle="base"):
-    """(ids, stale ids) for the next run (plan 66, D-36): approved, translatable sources of the bundle without an
-    approved non-stale translation and not rejected in the locale; stale ones first, then one at a time
-    from the subcategory with the fewest approved translations (picks count), spread over difficulty;
-    ties in categories.json order. Within a subcategory, the source whose es level has the most locale
+    """(ids, stale ids) for the next run (plan 66, D-36): approved, translatable sources of the bundle in another
+    locale (decision 235) without an approved non-stale translation and not rejected in the locale; stale ones
+    first, then one at a time from the subcategory with the fewest approved translations (picks count), spread
+    over difficulty;
+    ties in categories.json order. Within a subcategory, the source whose level has the most locale
     deficit per pick so far (D-84, D'Hondt); levels without deficit last."""
     pool = load_json(POOL)["questions"]
     have = {t["id"]: t for t in translations.load(locale)["questions"]}
@@ -3658,7 +3685,8 @@ def translate_selection(locale, n, bundle="base"):
         if t and t["status"] == "approved" and not translations.is_stale(t, q):
             done[q["subcategory"]] += 1
             continue
-        if q["status"] != "approved" or not translations.translatable(q) or (t and t["status"] == "rejected"):
+        if (q["status"] != "approved" or not translations.translatable(q) or translations.source_locale(q) == locale
+                or (t and t["status"] == "rejected")):
             continue
         (stale if t and translations.is_stale(t, q) else open_).append(q)
     stale = [q["id"] for q in sorted(stale, key=lambda q: natural_key(q["id"]))][:n]
@@ -3693,8 +3721,6 @@ def cmd_translate_batch(args):
     fix → review 2 → record → audit → export → validate → report. Rerunning it continues where it stopped."""
     import health  # authoring/tools/health.py (imports qgen)
     locale = args.translate
-    if locale not in translations.TRANSLATE_TO:
-        sys.exit(f"--translate must be one of {', '.join(translations.TRANSLATE_TO)}")
     bundle = args.bundle
     check_bundle(bundle)
     if args.run:
@@ -3725,6 +3751,8 @@ def cmd_translate_batch(args):
             src = {q["id"]: q for q in load_json(POOL)["questions"]}
             if other := [i for i in ids if (src.get(i, {}).get("bundle") or "base") != bundle or i not in src]:
                 sys.exit(f"Not {bundle} questions: {', '.join(other)}")
+            if own := [i for i in ids if translations.source_locale(src[i]) == locale]:
+                sys.exit(f"Already in {LANGUAGES[locale]}: {', '.join(own)}")
         else:
             pilot = not translations.path(locale).exists()
             ids, stale = translate_selection(locale, args.count or (TRANSLATE_PILOT if pilot else TRANSLATE_SIZE), bundle)
@@ -4631,7 +4659,7 @@ def main():
     dp.add_argument("--slots", type=int, default=4, help="slots per subcategory")
     dp.add_argument("--bundle", default="base", help="bundle of the run's questions, first call only (D-41)")
     tp = add("translate", cmd_translate, "opus")
-    tp.add_argument("--locale", help="new run only: one of " + ", ".join(translations.TRANSLATE_TO))
+    tp.add_argument("--locale", help="new run only: one of " + ", ".join(translations.LOCALES))
     tp.add_argument("--ids", help="new run only: comma-separated source ids")
     add("rate", cmd_rate, "opus")
     add("factcheck", cmd_factcheck, "sonnet")
@@ -4745,7 +4773,7 @@ def main():
     b.add_argument("--subcategories", help=argparse.SUPPRESS)  # tests and debugging only
     b.add_argument("--count", type=int, help=argparse.SUPPRESS)  # default: batches.SHARE of the bundle's subcategories
     b.add_argument("--jobs", type=int, default=3, help=argparse.SUPPRESS)
-    b.add_argument("--translate", metavar="LOCALE", choices=translations.TRANSLATE_TO,
+    b.add_argument("--translate", metavar="LOCALE", choices=translations.LOCALES,
                    help="translate the bundle's approved questions into this locale (plan 66); only when the user names a language")
     b.add_argument("--dry-run", action="store_true", help="with --translate: print the next run's sources, no LLM calls")
     b.add_argument("--ids", help=argparse.SUPPRESS)  # with --translate: these source ids (tests and debugging only)

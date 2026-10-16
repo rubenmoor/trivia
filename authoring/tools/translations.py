@@ -16,7 +16,6 @@ LANGUAGES = {"es": "Spanish (Latin America)", "es-ES": "Spanish (Spain)", "en": 
 LOCALES = tuple(LANGUAGES)
 NAMED = tuple(l for l in LOCALES if not l.startswith("es"))  # own names files; es, es-ES: categories.json (data.ts namesOf)
 ENGLISH_FROM = 9  # base's batch-N drafts in English from N = 9 on (plan 148)
-TRANSLATE_TO = ("en", "de")  # --translate's targets until task 1235 (es sources only)
 TEXT_FIELDS = ["question", "answer", "wrong_answers", "hints", "description", "fun_fact"]
 
 
@@ -117,7 +116,7 @@ def exports(source_pool):
 
 def yield_rate(locale):
     """Approved / decided translations from tr-<locale>-* runs; 1.0 before any (plan 70)."""
-    decided = [t for t in load(locale)["questions"] if (t.get("batch") or "").startswith(f"tr-{locale}-")
+    decided = [t for t in load(locale)["questions"] if run_locale(t.get("batch") or "") == locale
                and t.get("status") in ("approved", "needs_work", "rejected")]
     return sum(t["status"] == "approved" for t in decided) / len(decided) if decided else 1.0
 
