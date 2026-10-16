@@ -21,6 +21,10 @@
     "uk": {
       "name": "Regional: Vereinigtes Königreich",
       "description": "Für alle mit Bezug zum Vereinigten Königreich: Orte, Essen, Bräuche, Menschen, Musik, Sport und Wörter von dort."
+    },
+    "spain": {
+      "name": "Regional: Spanien",
+      "description": "Für alle mit Bezug zu Spanien: Orte, Essen, Bräuche, Menschen, Musik, Sport und Wörter von dort."
     }
   },
   "age_groups": {
