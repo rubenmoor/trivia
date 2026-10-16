@@ -67,6 +67,7 @@ Shared by the three: no skip, no undo, no joker changes mid-game; flagging only 
 - Drop-out and win: a wrong answer ends the game for the team, as today; level 12 = everyone wins.
 - No timer.
 - Seen events (D-82): ≈ 1 game's (12 + the standard set's skips and swaps).
+- As built (task 1407): engine only (`newSession` in `engine/game.ts`; `BUILT_MODES` unchanged, `api.ts` `new` refuses unbuilt modes): `row.state` is the team's game, `seats[]` without `state`, `row.turn` rotates after each final answer; `HistoryEntry.seat`, `view().session`, `last.seat`; tests in `engine/session.test.ts`.
 
 ### Round-robin competitive (`rr-competitive`; es proposal «Por turnos, todos contra todos»)
 - Turn order: one question per player, in join order; each turn plays that player's own game.

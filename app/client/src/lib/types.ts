@@ -179,7 +179,16 @@ export interface Game {
     correct_index: number;
     answer: string;
     fun_fact: string;
+    /** In a session: the seat that gave this final answer. */
+    seat?: number;
   } | null;
+  /** The multiplayer session (milestone 16); absent outside one (the frozen fixtures replay unchanged). `seats` in join order; the top-level fields are the turn seat's game
+   * (rr-coop: the team's, so `level` and `jokers_left` repeat on every seat). */
+  session?: {
+    mode: GameMode;
+    turn: number;
+    seats: { player: string | null; status: "playing" | "out" | "won" | "lost"; level: number; age_group: string | null; jokers_left: JokerBudget }[];
+  };
 }
 
 /** credits.json, made by app/client/credits.ts at build time (PUB-5, plan 47). */
