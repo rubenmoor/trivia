@@ -50,11 +50,15 @@ export function realCategories(): Category[] {
 }
 
 /** The real app/data/ bundles and age groups. */
-export const realBundles = (): Bundle[] => parseBundles(data("bundles.json"));
+export const realBundles = (): Bundle[] => withPacks([], parseBundles(data("bundles.json")), "es", esPacks()).bundles;
 export const realAgeGroups = (): AgeGroup[] => parseAgeGroups(data("age-groups.json"));
 
-/** The real es pool: base's and the packs' (decision 66); a pack without a pool file is not offered (decision 112). */
-export function realPool(): PoolQuestion[] {
-  const packs = Object.fromEntries(packsFor(realBundles(), "es").filter((b) => existsSync(join(DATA, poolFile("es", b.id)))).map((b) => [b.id, data(poolFile("es", b.id))]));
-  return withPacks(parsePool(data("pool.json")), realBundles(), "es", packs).pool;
+/** The es packs' pool files that exist; a pack without one is not offered (decision 112). */
+function esPacks(): Record<string, unknown> {
+  const all = parseBundles(data("bundles.json"));
+  return Object.fromEntries(packsFor(all, "es").filter((b) => existsSync(join(DATA, poolFile("es", b.id)))).map((b) => [b.id, data(poolFile("es", b.id))]));
 }
+
+/** The real es pool: base's and the packs' (decision 66). */
+export const realPool = (): PoolQuestion[] =>
+  withPacks(parsePool(data("pool.json")), parseBundles(data("bundles.json")), "es", esPacks()).pool;
