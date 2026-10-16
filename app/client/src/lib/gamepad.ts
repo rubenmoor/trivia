@@ -21,6 +21,8 @@ export const BUTTONS: Record<number, Intent> = {
   14: { type: "navigate", dir: "left" },
   15: { type: "navigate", dir: "right" },
 };
+/** The timed question scope's pad map: LB/RB claim (no jokers there; decision 290). */
+export const CLAIM_PAD: Record<number, Intent> = { 4: { type: "claim" }, 5: { type: "claim" } };
 const ON = 0.5;
 const OFF = 0.3;
 

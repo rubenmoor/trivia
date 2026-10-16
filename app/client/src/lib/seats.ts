@@ -1,5 +1,6 @@
 // Per-player controls (plans/14-input.md section 3, plan 161): which seat of a local multiplayer session a device
 // acts for and whether it may act now. Pure, so a script can feed it fake pads; the state is seats.svelte.ts.
+import type { Keys } from "./input.svelte.ts";
 import type { Game } from "./types.ts";
 
 /** Where an action came from: a pad by `Gamepad.index`, the keyboard, the mouse. */
@@ -58,4 +59,14 @@ export function joinKeyboard(binding: readonly Binding[], key: string | null): B
   if (binding.includes("kbm")) return null;
   if (binding.some((b) => padOf(b) !== null)) return [...binding, "kbm"];
   return [...binding, key === null ? "shared" : { key: key.toLowerCase() }];
+}
+
+/** The timed question scope's claim keys: Space for the `kbm` seat, each key seat's picked key (decision 290). */
+export function claimKeys(binding: readonly (Binding | null)[]): Keys {
+  const keys: Keys = binding.includes("kbm") ? { " ": { type: "claim" } } : {};
+  for (const b of binding) {
+    const key = keyOf(b);
+    if (key) keys[key] = { type: "claim", key };
+  }
+  return keys;
 }
