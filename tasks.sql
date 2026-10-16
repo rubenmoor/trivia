@@ -238,7 +238,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 - The audit''s replacement list is empty.
 
 Plan files: `plans/17-publishing.md`.', '2026-10-11T21:54:55Z', '2026-10-14T05:12:00Z', 0);
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (5, 'Age groups and bundles in the game', 'open', 'Before a session, players choose their age group and which bundles to play; selection uses the group''s window on the shared difficulty scale 1–15 and only the active bundles. The family''s default stays young teens with every bundle on, so nothing changes unless they opt in. Easier after the TypeScript engine, since it changes selection.
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (5, 'Age groups and bundles in the game', 'implemented', 'Before a session, players choose their age group and which bundles to play; selection uses the group''s window on the shared difficulty scale 1–15 and only the active bundles. The family''s default stays young teens with every bundle on, so nothing changes unless they opt in. Easier after the TypeScript engine, since it changes selection.
 
 ## Outcome
 - Choose an age group; levels map to the group''s window; windows and per-group level weights tuned (AG-7, D-38).
@@ -269,7 +269,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 - The draft windows are tuned.
 - Start never shows a supply report; a pool too small for the chosen group and bundles shows on the Choice screen only.
 
-Plan files: `plans/21-age-groups.md`, `plans/22-bundles.md`.', '2026-10-11T21:54:56Z', NULL, 0);
+Plan files: `plans/21-age-groups.md`, `plans/22-bundles.md`.', '2026-10-11T21:54:56Z', '2026-10-16T02:26:26Z', 0);
 INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (6, 'Screen polish leftovers', 'open', 'Leftovers from the finished visual and sound milestones (M3, M4), plus playful iconography before a game session.
 
 ## Outcome
