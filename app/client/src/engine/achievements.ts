@@ -5,9 +5,9 @@ import { BUILT_MODES, gameMode, jokersUsed } from "./game.ts";
 import { categoryOf, isModId } from "./pool.ts";
 import { LEVELS, PER_LEVEL } from "./selection.ts";
 import type { EngineData, GameRow, GameState, SaveData } from "./state.ts";
-import { gameLocale } from "./state.ts";
+import { gameLocale, rowStates } from "./state.ts";
 
-/** API names in Steamworks; `mode`: entered with that mode (MD-8). */
+/** API names in Steamworks; `mode`: entered with that mode (milestone 16). */
 export const ACHIEVEMENTS = [
   { id: "FIRST_WIN" }, { id: "WINS_10" }, { id: "WINS_50" }, { id: "WIN_ADULTS" }, { id: "WIN_ALL_AGES" },
   { id: "FIRST_SOPLO" }, { id: "FIRST_PASO" }, { id: "FIRST_BAJALE" }, { id: "FIRST_CAMBIAZO" }, { id: "FIRST_FRANCOTIRADOR" },
@@ -45,13 +45,30 @@ export function inSteamworks(id: AchievementId): boolean {
   return id.startsWith("BUNDLE_") ? DLC_BUNDLES.some((b) => bundleAchievement(b) === id) : true;
 }
 
-/** Standard rules only (decisions 19, 74): not gamemaster, not customized, 12 levels, 4 cards, answers on, no «Ir a pregunta…».
+/** Standard rules only (decisions 19, 74, 285): not gamemaster, not customized, 12 levels, 4 cards (timed: 0), answers on,
+ * no «Ir a pregunta…»; every game of a session.
  * @internal exported for tests */
 export function qualifies(row: GameRow): boolean {
-  const s = row.state.settings ?? {};
-  return gameMode(row.state) !== "gamemaster" && !s.customized && !s.difficulty
-    && (s.levels ?? LEVELS) === LEVELS && (s.cards ?? PER_LEVEL) === PER_LEVEL && s.answers !== false
-    && !(row.state.history ?? []).some((h) => h.outcome === "admin_replace");
+  const mode = gameMode(row.state);
+  const cards = mode === "timed" ? 0 : PER_LEVEL;
+  return mode !== "gamemaster" && [row.state, ...rowStates(row)].every((state) => {
+    const s = state.settings ?? {};
+    return !s.customized && !s.difficulty && (s.levels ?? LEVELS) === LEVELS && (s.cards ?? PER_LEVEL) === cards && s.answers !== false
+      && !(state.history ?? []).some((h) => h.outcome === "admin_replace");
+  });
+}
+
+/** A won row's winning game when it answered the last level right (decision 285); last-standing wins: null. */
+function towerWin(row: GameRow): GameState | null {
+  if (row.result !== "won") return null;
+  const mode = gameMode(row.state);
+  if (mode !== "rr-competitive" && mode !== "timed") return row.state;
+  const seat = row.seats?.findIndex((s) => s.result === "won") ?? -1;
+  const state = mode === "timed"
+    ? { ...row.state, history: (row.state.history ?? []).filter((h) => h.seat === seat) }
+    : row.seats?.[seat]?.state;
+  const last = state?.history?.at(-1);
+  return state && last?.level === LEVELS && last.correct === true ? state : null;
 }
 
 type Entry = GameState["history"][number];
@@ -68,9 +85,13 @@ function entries(state: GameState): Entry[] {
 export function earned(save: SaveData, data: EngineData): AchievementId[] {
   const out = new Set<AchievementId>();
   const games = save.games.filter(qualifies);
-  const won = games.filter((g) => g.result === "won");
+  const states = games.flatMap(rowStates);
+  const won = games.flatMap((row) => {
+    const state = towerWin(row);
+    return state ? [{ row, state }] : [];
+  });
   const cat = categoryOf(data.broad);
-  const correct = games.flatMap((g) => (g.state.history ?? []).filter((h) => h.correct === true))
+  const correct = states.flatMap((s) => (s.history ?? []).filter((h) => h.correct === true))
     .flatMap((h) => data.byId.get(h.question_id) ?? []);
   const count = <T>(items: T[], key: (x: T) => string | null): Map<string, number> => {
     const m = new Map<string, number>();
@@ -84,12 +105,12 @@ export function earned(save: SaveData, data: EngineData): AchievementId[] {
   if (won.length) out.add("FIRST_WIN");
   if (won.length >= 10) out.add("WINS_10");
   if (won.length >= MANY) out.add("WINS_50");
-  const ages = new Set(won.map((g) => g.state.settings.age_group ?? DEFAULT_AGE_GROUP));
+  const ages = new Set(won.map((w) => w.state.settings.age_group ?? DEFAULT_AGE_GROUP));
   if (ages.has("adults")) out.add("WIN_ADULTS");
   if (data.ageGroups.length && data.ageGroups.every((a) => ages.has(a.id))) out.add("WIN_ALL_AGES");
 
-  for (const g of games) {
-    const all = entries(g.state);
+  for (const g of states) {
+    const all = entries(g);
     for (const e of all) {
       const jokers = e.jokers ?? [];
       for (const j of jokers) out.add(FIRST_USE[j]);
@@ -97,20 +118,21 @@ export function earned(save: SaveData, data: EngineData): AchievementId[] {
       if (hints && jokers.filter((j) => j === "hint").length >= hints) out.add("ALL_HINTS");
       if (e.outcome === "sniped" && e.level === LEVELS) out.add("SNIPER_TOP");
     }
-    if ((g.state.purged ?? []).length) out.add("PURGE");
+    if ((g.purged ?? []).length) out.add("PURGE");
     const levels = (outcome: Entry["outcome"]) => new Set(all.filter((e) => e.outcome === outcome).map((e) => e.level));
     const easier = levels("easier");
     if ([...levels("skipped")].some((l) => easier.has(l))) out.add("SUPER_PICKY");
   }
 
-  for (const g of won) {
-    const used = Object.values(jokersUsed({ history: g.state.history ?? [], jokers: g.state.jokers ?? [] }));
-    const mode = gameMode(g.state);
-    if (used.every((n) => n === 0) && JOKER_MODES.includes(mode)) out.add("WIN_NO_JOKERS");
+  for (const { row, state } of won) {
+    const used = Object.values(jokersUsed({ history: state.history ?? [], jokers: state.jokers ?? [] }));
+    if (used.every((n) => n === 0) && JOKER_MODES.includes(gameMode(state))) out.add("WIN_NO_JOKERS");
     if (used.every((n) => n > 0)) out.add("ALL_JOKERS_WIN");
-    if (g.state.history?.at(-1)?.jokers?.includes("hint")) out.add("SOPLO_SAVE");
-    if (g.finished_on && Number(g.finished_on.slice(11, 13)) < NIGHT_END) out.add("NIGHT_OWL");
-    const modeWin = MODE_WIN.get(mode);
+    if (state.history?.at(-1)?.jokers?.includes("hint")) out.add("SOPLO_SAVE");
+    if (row.finished_on && Number(row.finished_on.slice(11, 13)) < NIGHT_END) out.add("NIGHT_OWL");
+  }
+  for (const g of games) {
+    const modeWin = g.result === "won" ? MODE_WIN.get(gameMode(g.state)) : undefined;
     if (modeWin) out.add(modeWin);
   }
 
@@ -119,8 +141,8 @@ export function earned(save: SaveData, data: EngineData): AchievementId[] {
   const hit = count(correct, cat);
   if (base.some((c) => offered.has(c)) && base.every((c) => !offered.has(c) || hit.has(c))) out.add("ALL_CATEGORIES");
   if ([...hit.values()].some((n) => n >= MANY)) out.add("SPECIALIST");
-  if (new Set(games.flatMap((g) => (g.state.history ?? []).map((h) => h.question_id))).size >= SEEN) out.add("QUESTIONS_1000");
-  if (new Set(won.map(gameLocale)).size >= LANGUAGES) out.add("POLYGLOT");
+  if (new Set(states.flatMap((s) => (s.history ?? []).map((h) => h.question_id))).size >= SEEN) out.add("QUESTIONS_1000");
+  if (new Set(won.map((w) => gameLocale(w.row))).size >= LANGUAGES) out.add("POLYGLOT");
 
   const days = games.flatMap((g) => [g.started_on, g.finished_on ?? g.started_on].map((d) => d.slice(0, 10)));
   if (new Set(games.map((g) => g.started_on.slice(0, 10))).size >= DAYS) out.add("GAME_NIGHTS");
