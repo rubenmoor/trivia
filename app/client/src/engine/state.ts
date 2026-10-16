@@ -117,7 +117,7 @@ interface HistoryEntry {
   outcome?: Outcome;
   /** Missing in games from before JK-2. */
   jokers?: JokerName[];
-  /** Who answered (rr-coop, timed); missing = the row's one player. */
+  /** Who answered (sessions); missing = the row's one player. */
   seat?: number;
 }
 
@@ -128,6 +128,8 @@ interface LastAnswer {
   correct: boolean;
   revealed?: true;
   correct_index: number;
+  /** In a session: who answered. */
+  seat?: number;
 }
 
 export interface GameState {
@@ -189,7 +191,7 @@ const ERRORS: Record<string, string | ((p: Params) => string)> = {
   level_empty: (p) => `no questions left for level ${p.level} (difficulty ${p.lo}–${p.hi})`,
   supply_short: (p) =>
     "not enough questions: " +
-    (p.levels as Params[]).map((l) => `level ${l.level} (difficulty ${l.lo}–${l.hi}): ${l.missing} missing`).join(", "),
+    (p.levels as Params[]).map((l) => `${l.seat === undefined ? "" : `seat ${l.seat} `}level ${l.level} (difficulty ${l.lo}–${l.hi}): ${l.missing} missing`).join(", "),
   no_cards: "no cards on the table",
   card_invalid: (p) => `no card ${p.n}`,
   no_question: "no question to answer",

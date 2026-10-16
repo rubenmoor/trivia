@@ -7,7 +7,7 @@ import type { LevelRanges, PoolQuestion } from "./pool.ts";
 import { catKey, categoryOf, subKey, subOf } from "./pool.ts";
 import { casefold, pyLen, pySplitJoin, pyTruthy } from "./pycompat.ts";
 import * as selection from "./selection.ts";
-import type { EngineData, GameRow, GameState, Io, Outcome, SaveData } from "./state.ts";
+import type { EngineData, GameRow, GameState, Io, Outcome, SaveData, Seat } from "./state.ts";
 import { GameError, UNLIMITED, gameLocale, newest, nextId, rowPlayers, rowStates, seatResult, transact, trial, withDefaults } from "./state.ts";
 
 export { GameError, UNLIMITED };
@@ -148,6 +148,24 @@ function running(work: SaveData): Latest {
   return game;
 }
 
+/** The game `seat` plays (a copy, defaults filled in): rr-competitive's own, else the row's. */
+function seatState(row: GameRow, seat: number): GameState {
+  return withDefaults(structuredClone(row.seats?.[seat]?.state ?? row.state));
+}
+
+/** Save `state` back where `seatState` found it. */
+function saveSeat(row: GameRow, seat: number, state: GameState, io: Io): void {
+  const own = row.seats?.[seat];
+  if (own?.state) own.state = structuredClone(state);
+  else saveGame(row, state, io);
+}
+
+/** The next seat on turn after `seat`, in join order, skipping out seats. */
+function nextTurn(seats: Seat[], seat: number): number {
+  for (let i = 1; i < seats.length; i++) if (!seats[(seat + i) % seats.length].out) return (seat + i) % seats.length;
+  return seat;
+}
+
 function question(data: EngineData, id: string | null): PoolQuestion {
   const q = id === null ? undefined : data.byId.get(id);
   if (!q) throw new Error(`KeyError: ${id}`);
@@ -175,12 +193,21 @@ export function availableFor(save: SaveData, data: EngineData, choice: Choice, b
   return selection.available(data.pool, save.blocked, [], new Set(bundles)).filter(mediaAllowed(choice));
 }
 
-/** Questions that can still come up in this game: approved, not blocked, not offered, not purged; seen ones too. */
-function availableNow(work: SaveData, state: GameState, data: EngineData): PoolQuestion[] {
+/** rr-competitive: what the session's seats hold (no card twice in a session, plan 158): every seat's offered, with
+ * `tables` only their tables. The state's own seat in `work` may be stale; its `offered` covers that. */
+function sessionTaken(work: SaveData, state: GameState, tables: boolean): string[] {
+  if (gameMode(state) !== "rr-competitive") return [];
+  return newest(work.games)?.seats?.flatMap((s) => (s.state ? (tables ? s.state.options : s.state.offered) : [])) ?? [];
+}
+
+/** Questions that can still come up in this game: approved, not blocked, not offered, not purged; seen ones too.
+ * rr-competitive: not held by another seat either (`sessionTaken`). */
+function availableNow(work: SaveData, state: GameState, data: EngineData, tables = false): PoolQuestion[] {
   const purged = new Set<string | null>(state.purged);
   const bundles = new Set(gameChoice(state, data).bundles);
   const media = mediaAllowed(state.settings);
-  return selection.available(data.pool, work.blocked, state.offered, bundles).filter((q) => !purged.has(subOf(q)) && media(q));
+  return selection.available(data.pool, work.blocked, [...state.offered, ...sessionTaken(work, state, tables)], bundles)
+    .filter((q) => !purged.has(subOf(q)) && media(q));
 }
 
 /** Draw n cards for the state's level from what's still available in this game, lowest seen count first. */
@@ -188,10 +215,13 @@ function draw(
   work: SaveData, state: GameState, data: EngineData, io: Io, n = perLevel(cardsOf(state)), keep: PoolQuestion[] = [],
 ): string[] {
   const ranges = rangesOf(state, data);
-  const drawn = selection.draw(state.level, availableNow(work, state, data), {
+  const opts = {
     ranges, n, perLevel: perLevel(cardsOf(state)), keep, avoidCategories: askedCategories(state, data), categoryOf: categoryOf(data.broad),
     countOf: countOf(work), rng: io.rng,
-  });
+  };
+  let drawn = selection.draw(state.level, availableNow(work, state, data), opts);
+  // rr-competitive: other seats' past questions rather than none
+  if (drawn === null && gameMode(state) === "rr-competitive") drawn = selection.draw(state.level, availableNow(work, state, data, true), opts);
   if (drawn === null) {
     const [lo, hi] = ranges[state.level - 1];
     throw new GameError("level_empty", { level: state.level, lo, hi });
@@ -218,9 +248,21 @@ export function supply(save: SaveData, data: EngineData, choice: Choice = defaul
   return { ok: !levels.some((l) => l.missing), available: avail.length, levels };
 }
 
+/** rr-competitive's supply check: one matching over every seat's levels (seat × level), each seat with its own
+ * ranges; `choices` per seat, the same but for the age group. */
+function seatsSupply(save: SaveData, data: EngineData, choices: Choice[]): Supply {
+  const avail = availableFor(save, data, choices[0]);
+  const ranges = choices.flatMap((c) => rangesFor(data, c));
+  const n = choices[0].levels;
+  const levels = selection.supply(avail, ranges, perLevel(choices[0].cards))
+    .map((l) => ({ ...l, level: (l.level - 1) % n + 1, seat: Math.floor((l.level - 1) / n) }));
+  return { ok: !levels.some((l) => l.missing), available: avail.length, levels };
+}
+
 /** «supply_short» naming the levels that miss questions; `report` goes to the client. */
 function supplyShort(report: Supply): GameError {
-  const short = report.levels.filter((l) => l.missing).map((l) => ({ level: l.level, lo: l.range[0], hi: l.range[1], missing: l.missing }));
+  const short = report.levels.filter((l) => l.missing)
+    .map((l) => ({ level: l.level, lo: l.range[0], hi: l.range[1], missing: l.missing, ...(l.seat === undefined ? {} : { seat: l.seat }) }));
   return new GameError("supply_short", { levels: short }, report);
 }
 
@@ -229,6 +271,8 @@ export interface ChoiceArgs extends ChoiceInput {
   mode?: unknown;
   /** Overrides of the mode's joker set (not of `Choice.jokers`); in `solo` a difference sets `customized`. */
   jokers?: unknown;
+  /** rr-competitive: one age group per player, join order; a missing entry = `age_group`. */
+  age_groups?: unknown;
 }
 
 function newestGame(save: SaveData, player?: unknown): GameRow | null {
@@ -311,8 +355,9 @@ export function newGame(
   });
 }
 
-/** `new` for a session (body `players`, join order): rr-coop plays in `row.state` (plan 158), the seats carry no state.
- * Unbuilt modes start here too; `api.ts` refuses them (`mode_not_built`). rr-competitive and timed: tasks 1408, plan 159. */
+/** `new` for a session (body `players`, join order; plan 158): rr-coop plays in `row.state`, the seats carry no state;
+ * rr-competitive: every seat its own game (`age_groups`), `row.state` the shared settings only.
+ * Unbuilt modes start here too; `api.ts` refuses them (`mode_not_built`). timed: plan 159. */
 export function newSession(
   save: SaveData, data: EngineData, io: Io, players: unknown, args: ChoiceArgs = {},
 ): { save: SaveData; state: GameState } {
@@ -326,24 +371,35 @@ export function newSession(
   }
   if (names.length < MIN_SEATS) throw new GameError("players_too_few", { min: MIN_SEATS });
   if (mode === "gamemaster" || mode === "solo") throw new GameError("mode_single", { mode });
-  if (mode !== "rr-coop") throw new Error("session rows: task 1408 and plan 159");
-  const { jokers: _, ...rest } = args;
+  if (mode === "timed") throw new Error("session rows: plan 159");
+  const { jokers: _, age_groups, ...rest } = args;
   const choice = resolveChoice(data, rest);
   if (args.answers !== undefined) throw new GameError("gamemaster_only", { action: "answers" });
   const overrides = args.jokers === undefined ? {} : checkBudget(args.jokers);
-  const report = supply(save, data, choice);
+  const competitive = mode === "rr-competitive";
+  if (age_groups !== undefined && !Array.isArray(age_groups)) throw new GameError("age_group_unknown", { group: String(age_groups) });
+  const groups = (age_groups ?? []) as unknown[];
+  const seatArgs = names.map((_, i) => (groups[i] == null ? rest : { ...rest, age_group: groups[i] }));
+  const choices = competitive ? seatArgs.map((a) => resolveChoice(data, a)) : [choice];
+  const report = competitive ? seatsSupply(save, data, choices) : supply(save, data, choice);
   if (!report.ok) throw supplyShort(report);
   return action(save, (work) => {
     const game = latest(work);
     if (game && game.row.result === null) saveGame(game.row, game.state, io, "abandoned");
-    const seats = seatPlayers(work, names, io).map((player_id) => ({ player_id }));
-    const state = freshState(args, choice, mode, overrides);
-    deal(work, state, data, io);
-    work.games.push({
+    const ids = seatPlayers(work, names, io);
+    const row: GameRow = {
       id: nextId(work.games), started_on: io.now, finished_on: null, result: null, player_id: null,
-      ...(data.locale === "es" ? {} : { locale: data.locale }), seats, turn: 0, state: structuredClone(state),
-    });
-    return state;
+      ...(data.locale === "es" ? {} : { locale: data.locale }), turn: 0,
+      seats: ids.map((player_id, i) => (competitive
+        ? { player_id, state: freshState({ ...seatArgs[i], age_group: choices[i].age_group ?? undefined }, choices[i], mode as GameMode, overrides) }
+        : { player_id })),
+      state: freshState(competitive ? { ...rest, age_group: undefined } : args, choice, mode as GameMode, overrides),
+    };
+    work.games.push(row);
+    if (!competitive) deal(work, row.state, data, io);
+    // one seat after the other: each draw sees the tables dealt before it
+    for (const seat of row.seats!) if (seat.state) deal(work, seat.state, data, io);
+    return seatState(row, 0);
   });
 }
 
@@ -373,12 +429,13 @@ function deal(work: SaveData, state: GameState, data: EngineData, io: Io): void 
 
 export function pick(save: SaveData, data: EngineData, io: Io, index: number, seat?: unknown): { save: SaveData; state: GameState } {
   return action(save, (work) => {
-    const { row, state } = running(work);
-    actor(row, seat);
+    const { row } = running(work);
+    const who = actor(row, seat);
+    const state = seatState(row, who);
     if (state.phase !== "select") throw new GameError("no_cards");
     if (!(0 <= index && index < state.options.length)) throw new GameError("card_invalid", { n: index + 1 });
     open(state, data, io, index);
-    saveGame(row, state, io);
+    saveSeat(row, who, state, io);
     return state;
   });
 }
@@ -386,8 +443,9 @@ export function pick(save: SaveData, data: EngineData, io: Io, index: number, se
 /** The final answer: check it, record it as seen, move on (next level, won or lost). */
 export function answer(save: SaveData, data: EngineData, io: Io, index: number, seat?: unknown): { save: SaveData; state: GameState } {
   return action(save, (work) => {
-    const { row, state } = running(work);
+    const { row } = running(work);
     const who = actor(row, seat);
+    const state = seatState(row, who);
     if (state.phase !== "question") throw new GameError("no_question");
     if (state.settings.answers === false) throw new GameError("answers_off");
     if (!(0 <= index && index < state.answers.length) || state.struck.includes(index))
@@ -396,8 +454,9 @@ export function answer(save: SaveData, data: EngineData, io: Io, index: number, 
     const before: GameState = { ...structuredClone(state), undo: null };
     const correct = state.answers[index] === q.answer;
     see(work, q.id, row.id, io);
-    state.history.push({ level: state.level, question_id: q.id, correct, jokers: state.jokers, ...(row.seats ? { seat: who } : {}) });
-    state.last = { question_id: q.id, chosen: index, correct, correct_index: state.answers.indexOf(q.answer) };
+    const by = row.seats ? { seat: who } : {};
+    state.history.push({ level: state.level, question_id: q.id, correct, jokers: state.jokers, ...by });
+    state.last = { question_id: q.id, chosen: index, correct, correct_index: state.answers.indexOf(q.answer), ...by };
     state.undo = before;
     let result: Result = null;
     if (!correct) {
@@ -409,10 +468,28 @@ export function answer(save: SaveData, data: EngineData, io: Io, index: number, 
       leaveQuestion(state);
       deal(work, state, data, io);
     }
-    saveGame(row, state, io, result);
-    if (row.seats && result === null) row.turn = (who + 1) % row.seats.length;
+    if (row.seats?.[who].state) seatAnswered(row, who, state, io);
+    else saveGame(row, state, io, result);
+    if (row.seats && row.result === null) row.turn = nextTurn(row.seats, who);
     return state;
   });
+}
+
+/** rr-competitive after a final answer: the seat's game back into its seat, the session's `last` into `row.state`; a wrong
+ * answer puts the seat out; its win at the last level or the last seat in (decision 278) ends the session. */
+function seatAnswered(row: GameRow, who: number, state: GameState, io: Io): void {
+  const seats = row.seats!;
+  if (state.phase === "lost") Object.assign(seats[who], { out: true, result: "lost" });
+  const left = seats.flatMap((s, i) => (s.out ? [] : [i]));
+  const winner = state.phase === "won" ? who : left.length === 1 ? left[0] : null;
+  seats[who].state = structuredClone(state);
+  const shared = withDefaults(structuredClone(row.state));
+  shared.last = state.last;
+  if (winner !== null) {
+    for (const i of left) seats[i].result = i === winner ? "won" : "lost";
+    seats[winner].state!.phase = shared.phase = "won";
+  }
+  saveGame(row, shared, io, winner === null ? null : "won");
 }
 
 /** With answers off (D-105): the correct answer is shown, seen, one level up; after the last level `completed`. */
@@ -638,14 +715,15 @@ export function joker(
   if (!(JOKERS as string[]).includes(name)) throw new GameError("joker_unknown", { joker: name });
   const jname = name as JokerName;
   const { save: out, result } = transact(save, (work) => {
-    const { row, state } = running(work);
+    const { row } = running(work);
     const who = actor(row, seat);
+    const state = seatState(row, who);
     if (state.phase !== "question") throw new GameError("joker_not_question");
     if (jokersLeft(state)[jname] === 0) throw new GameError("joker_spent", { joker: jname });
     const before = state.history.length;
     const event = PLAYS[jname](work, row.id, state, data, io, args);
     if (row.seats) for (const h of state.history.slice(before)) h.seat = who;
-    saveGame(row, state, io);
+    saveSeat(row, who, state, io);
     return { state, event: { joker: jname, ...event } as JokerEvent };
   });
   return { save: out, ...result };
@@ -756,7 +834,9 @@ function questionId(id: unknown): string {
  * pregunta» (not seen) but any mode, ignoring level range, age group, bundles and seen. */
 export function goTo(save: SaveData, data: EngineData, io: Io, id: unknown): { save: SaveData; state: GameState } {
   return action(save, (work) => {
-    const { row, state } = running(work);
+    const { row } = running(work);
+    const who = row.turn ?? 0;
+    const state = seatState(row, who);
     if (state.phase !== "question") throw new GameError("no_question");
     const fresh = data.byId.get(questionId(id));
     if (!fresh) throw new GameError("question_unknown", { id: String(id ?? "") });
@@ -764,7 +844,7 @@ export function goTo(save: SaveData, data: EngineData, io: Io, id: unknown): { s
     state.options = state.options.filter((i) => i !== fresh.id);
     state.history.push({ level: state.level, question_id: state.current!, outcome: "admin_replace", jokers: state.jokers });
     putOn(state, fresh, io);
-    saveGame(row, state, io);
+    saveSeat(row, who, state, io);
     return state;
   });
 }
@@ -908,18 +988,27 @@ function mend(work: SaveData, state: GameState, data: EngineData, io: Io): void 
   if (state.options.length) openIfNoCards(state, data, io);
 }
 
-/** The newest game as the TV sees it: no correct answer before the final answer. */
+/** The seat whose game a session's view shows: the turn's; a finished session: the winner's, else the last answerer's. */
+function shownSeat(row: GameRow): number {
+  const won = row.seats!.findIndex((s) => s.result === "won");
+  return won >= 0 ? won : row.result === null ? row.turn ?? 0 : row.state.last?.seat ?? row.turn ?? 0;
+}
+
+/** The newest game as the TV sees it: no correct answer before the final answer. In a session the top-level
+ * fields are the shown seat's game, `last` the session's last final answer. */
 export function view(save: SaveData, data: EngineData, io: Io): Game | null {
   const game = latest(save);
   if (!game) return null;
-  const { row, state } = game;
+  const { row } = game;
+  const shown = row.seats ? shownSeat(row) : 0;
+  const state = seatState(row, shown);
   const result = row.result;
   const by = data.byId;
   const playing = result === null && state.phase === "question" && state.current !== null && by.has(state.current);
   const jokers = playing ? jokersView(save, row, state, data, io) : null;
   const named = (id: number | null) => save.players.find((p) => p.id === id)?.name ?? null;
   const out: Game = {
-    id: row.id, player: named(row.seats ? row.seats[row.turn ?? 0].player_id : row.player_id), result,
+    id: row.id, player: named(row.seats ? row.seats[shown].player_id : row.player_id), result,
     level: state.level, phase: state.phase,
     options: state.options.filter((i) => by.has(i)).map((i) => ({ description: by.get(i)!.description })),
     history: state.history.filter((h) => h.correct !== undefined).map((h) => ({ level: h.level, correct: h.correct! })),
@@ -928,13 +1017,13 @@ export function view(save: SaveData, data: EngineData, io: Io): Game | null {
     settings: state.settings, jokers_left: jokersLeft(state), question: null, last: null,
   };
   if (row.seats) {
-    const left = jokersLeft(state);
     out.session = {
       mode: gameMode(state), turn: row.turn ?? 0,
       seats: row.seats.map((seat, i) => {
         const r = seatResult(row, i);
         const status = r === "won" || r === "lost" ? r : seat.out ? "out" : "playing";
-        return { player: named(seat.player_id), status, level: state.level, age_group: gameChoice(state, data).age_group ?? null, jokers_left: left };
+        const own = seatState(row, i);
+        return { player: named(seat.player_id), status, level: own.level, age_group: gameChoice(own, data).age_group ?? null, jokers_left: jokersLeft(own) };
       }),
     };
   }
@@ -947,10 +1036,8 @@ export function view(save: SaveData, data: EngineData, io: Io): Game | null {
       struck: state.struck, swapped_to: state.swapped_to,
     };
   }
-  const last = state.last && by.get(state.last.question_id);
-  if (state.last && last) {
-    const seat = row.seats ? [...state.history].reverse().find((h) => h.correct !== undefined && h.question_id === state.last!.question_id)?.seat : undefined;
-    out.last = { ...state.last, answer: last.answer, fun_fact: last.fun_fact, ...(seat === undefined ? {} : { seat }) };
-  }
+  const final = row.seats ? row.state.last : state.last;
+  const last = final && by.get(final.question_id);
+  if (final && last) out.last = { ...final, answer: last.answer, fun_fact: last.fun_fact };
   return out;
 }
