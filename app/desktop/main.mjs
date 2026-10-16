@@ -102,11 +102,11 @@ function steamSdkDir() {
 }
 
 const USAGE =
-  "known flags: --import-save <file> [--force], --no-mods, --check-mod <folder>, --publish-mod <folder> [--changenote <text>] [--visibility public|friends|unlisted|private] [--content-only] [--dry-run], --rp-probe";
+  "known flags: --import-save <file> [--force], --no-mods, --check-mod <folder>, --publish-mod <folder> [--changenote <text>] [--visibility public|friends|unlisted|private] [--content-only] [--dry-run], --rp-probe, --lag-probe";
 // Our flags' namespace; anything else (Electron/Chromium switches, the dev app path, Steam's) passes.
-const OWN = /^--(import|export|save|trivia|no-mods|force|check|publish|changenote|visibility|content-only|dry-run|rp-probe)/;
+const OWN = /^--(import|export|save|trivia|no-mods|force|check|publish|changenote|visibility|content-only|dry-run|rp-probe|lag-probe)/;
 const VALUE = { "--import-save": "a file", "--check-mod": "a folder", "--publish-mod": "a folder", "--changenote": "a text", "--visibility": "a value" };
-const SWITCH = new Set(["--no-mods", "--force", "--content-only", "--dry-run", "--rp-probe"]);
+const SWITCH = new Set(["--no-mods", "--force", "--content-only", "--dry-run", "--rp-probe", "--lag-probe"]);
 
 /** Our flags from argv: `{ importSave, force, noMods, checkMod, publish }`, or `{ error }` for an unknown own-looking flag or a missing value. */
 function parseArgs(argv) {
@@ -139,7 +139,7 @@ function parseArgs(argv) {
     dryRun: !!v["--dry-run"],
   };
   const checkMod = v["--check-mod"] ? path.resolve(v["--check-mod"]) : null;
-  return { importSave: v["--import-save"] ?? null, force: !!v["--force"], noMods: !!v["--no-mods"], rpProbe: !!v["--rp-probe"], checkMod, publish: publish || null };
+  return { importSave: v["--import-save"] ?? null, force: !!v["--force"], noMods: !!v["--no-mods"], rpProbe: !!v["--rp-probe"], lagProbe: !!v["--lag-probe"], checkMod, publish: publish || null };
 }
 
 /** argv for a relaunch: our own flags dropped (with their values), Electron's and Steam's kept. */
@@ -634,8 +634,34 @@ async function importSave(file, force) {
   }
 }
 
+// PLACEHOLDER(1486): lag probe (plan 170), `--lag-probe`; task 1486 removes this block, the page and the flag.
+function lagProbe() {
+  const logFile = path.join(app.getPath("userData"), "lag-probe.log");
+  mkdirSync(path.dirname(logFile), { recursive: true });
+  win = new BrowserWindow({
+    fullscreen: true,
+    show: false,
+    backgroundColor: "#000000",
+    title: "lag probe",
+    webPreferences: { contextIsolation: true, sandbox: true, nodeIntegration: false },
+  });
+  win.once("ready-to-show", () => win.show());
+  win.on("closed", () => (win = null));
+  const wc = win.webContents;
+  wc.setAudioMuted(true);
+  wc.on("console-message", (event) => {
+    if (!event.message.startsWith("lag-probe ")) return;
+    const line = `${new Date().toISOString().slice(11, 23)} ${event.message.slice(10)}`;
+    appendFileSync(logFile, `${line}\n`);
+    console.error(`lag-probe: ${line}`);
+  });
+  console.error(`lag-probe: log ${logFile}`);
+  win.loadFile(path.join(path.dirname(fileURLToPath(import.meta.url)), "lag-probe.html"), { query: { log: logFile } });
+}
+
 async function start() {
   await startSteam();
+  if (args.lagProbe) return lagProbe();
   if (args.rpProbe) await rpProbeStart();
   validUser = checkUser();
   if (validUser) {

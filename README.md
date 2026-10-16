@@ -164,7 +164,7 @@ trivia-authoring & npm run dev -w authoring/ui     # authoring UI with hot reloa
 npm run check                                      # type-check both clients (strict tsconfig flags) + on-screen literals + knip (unused exports, files, deps; knip.jsonc) + ruff (Python, ruff.toml)
 npm test                                           # game engine tests (node:test)
 npm run check:literals -w app/client               # on-screen literals outside the UI catalog (src/game by default)
-npm run build -w app/client && trivia-desktop      # the game in the Electron desktop shell, no Python (no Steam: nothing saved; TRIVIA_DEV_STEAM_USER=1: state/desktop/dev/game.json; `--rp-probe`: throw-away Remote Play probe, log in `<userData>/rp-probe.log`, plan 168)
+npm run build -w app/client && trivia-desktop      # the game in the Electron desktop shell, no Python (no Steam: nothing saved; TRIVIA_DEV_STEAM_USER=1: state/desktop/dev/game.json; `--rp-probe`: throw-away Remote Play probe, log in `<userData>/rp-probe.log`, plan 168; `--lag-probe`: throw-away input-lag probe page, log in `<userData>/lag-probe.log`, plan 170)
 ```
 
 The dev servers forward the Python servers' routes (`/api`, `/data`, `/media`; authoring also `/reports`), so run both. Before changing anything: milestones, plans, tasks and decisions are in `pm` (`pm status`, `pm decision list --answered`; [`AGENTS.md`](AGENTS.md)); older plans and D-numbers in [`plans/README.md`](plans/README.md), [`plans/decisions.md`](plans/decisions.md).

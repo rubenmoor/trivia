@@ -1,0 +1,89 @@
+<!doctype html>
+<!-- PLACEHOLDER(1486): lag probe (plan 170), `--lag-probe`; task 1486 removes this page and the flag. -->
+<meta charset="utf-8">
+<title>lag probe</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #000; color: #fff; font: 28px monospace; overflow: hidden; }
+  #ms { font-size: 20vw; text-align: center; margin-top: 4vh; }
+  #info { position: fixed; left: 2vw; bottom: 2vh; right: 2vw; white-space: pre; font-size: 22px; }
+  #flash { position: fixed; inset: 0; background: #fff; display: none; }
+</style>
+<div id="ms">0</div>
+<div id="info"></div>
+<div id="flash"></div>
+<script>
+(() => {
+  const FLASH_MS = 200;
+  const MISS_MS = 2000;
+  const ms = document.getElementById("ms");
+  const info = document.getElementById("info");
+  const flash = document.getElementById("flash");
+  const lines = [];
+  const samples = {}; // device → ms since flash onset (hits only)
+  let onset = -Infinity;
+  const logPath = new URLSearchParams(location.search).get("log") ?? "";
+
+  const median = (a) => {
+    const s = [...a].sort((x, y) => x - y);
+    const m = s.length >> 1;
+    return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
+  };
+  const q = (a, p) => [...a].sort((x, y) => x - y)[Math.min(a.length - 1, Math.floor(p * a.length))];
+
+  function render() {
+    const stats = Object.entries(samples).map(
+      ([d, a]) => `${d}: n ${a.length} median ${median(a).toFixed(0)} ms, spread ${q(a, 0.1).toFixed(0)}–${q(a, 0.9).toFixed(0)} ms (p10–p90)`,
+    );
+    info.textContent = `log ${logPath}\n${stats.join("\n")}\n${lines.join("\n")}`;
+  }
+
+  function press(device, stamp) {
+    const now = performance.now();
+    const since = now - onset;
+    const miss = since > MISS_MS;
+    const line = `${device} ${miss ? "miss" : since.toFixed(1) + " ms"} stamp ${stamp.toFixed(1)} now ${now.toFixed(1)}`;
+    if (!miss) (samples[device] ??= []).push(since);
+    lines.push(line);
+    if (lines.length > 8) lines.shift();
+    console.log("lag-probe " + line);
+    render();
+  }
+
+  function nextFlash() {
+    setTimeout(() => {
+      flash.style.display = "block";
+      requestAnimationFrame(() => {
+        onset = performance.now();
+        console.log("lag-probe flash " + onset.toFixed(1));
+        setTimeout(() => (flash.style.display = "none"), FLASH_MS);
+        nextFlash();
+      });
+    }, 2000 + Math.random() * 3000);
+  }
+
+  addEventListener("keydown", (e) => {
+    if (!e.repeat) press(`key ${e.key}`, e.timeStamp);
+  });
+
+  const down = new Map(); // pad index → pressed button indices
+  function frame() {
+    ms.textContent = Math.round(performance.now());
+    for (const pad of navigator.getGamepads()) {
+      if (!pad) continue;
+      const prev = down.get(pad.index) ?? new Set();
+      const cur = new Set();
+      pad.buttons.forEach((b, i) => {
+        if (!b.pressed) return;
+        cur.add(i);
+        if (!prev.has(i)) press(`pad ${pad.index} ${pad.id} button ${i}`, pad.timestamp);
+      });
+      down.set(pad.index, cur);
+    }
+    requestAnimationFrame(frame);
+  }
+
+  nextFlash();
+  requestAnimationFrame(frame);
+  render();
+})();
+</script>
