@@ -630,35 +630,40 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 - A bundle mod, a CSS theme mod, a code add-on and a minimal full conversion each load from `mods/` and from the Workshop on a second Steam account
 - The modding guide is linked on the store page', '2026-10-13T16:55:00Z', NULL, 0);
 
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (1, 1, 'masterplan', 1000, 'Milestone 1 grows the `base` bundle from about 1000 to **5000 approved questions** (D-52), with clearly fewer questions at the top of the difficulty scale (1–15, D-38) but still enough of them. It also sets up quality control after every batch, and on the generation process itself, so we can tell whether quality holds as the pool grows.
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (1, 1, 'masterplan', 1000, 'Milestone 1 grows the `base` bundle from about 1000 to **5000 approved questions** (D-52), with clearly fewer questions at the top of the difficulty scale (1–15, D-38) but still enough of them. It also sets up quality control after every batch, and on the generation process itself, so we can tell whether quality holds as the pool grows. From batch-9 on, `base` is drafted in English with an international angle and translated to es, es-ES and de (milestone 9, "English-first drafting for `base`").
 
 **This masterplan''s own tasks are not implementation work.** Each one writes the plan for one part below (`pm plan add 1 …`). That plan''s tasks do the work.
 
-## Where we stand (2026-10-11)
+## Where we stand (2026-10-11, updated 2026-10-15)
 - Approved `base` questions: 1035. By difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 - `focus: null` in `app/data/age-groups.json`: `draft` already aims evenly at 1–15 (D-40). But high targets come out too easy (B-6), and subcategories are picked by fewest approved, not by difficulty gaps.
-- One `base` batch (D-46): about 57 subcategories × 18 slots, ~1000 drafts, ~600 merged, ~500 approved, ~$120 at list price (batch-7). 5000 approved means **about 8 more batches**. batch-8 is in progress (`work/batch-8`, commit d7fb13f).
+- One `base` batch (D-46): about 57 subcategories × 18 slots, ~1000 drafts, ~600 merged, ~500 approved, ~$120 at list price (batch-7). 5000 approved means **about 8 more batches**.
+- 2026-10-15: batch-8 done (Spanish, the last Spanish `base` batch); QC and the 120-question spot check of `decision 228: batch-9: health stop, ack?` done. `task 1185: run batch-9` waits on `decision 229: Continue batch-9 after the extended batch-8 review?`.
 - batch-7 needs_work reasons: mostly a giveaway hint, overlap with a pool question (q-0644/q-0957, q-0646/q-0217, q-0689/q-0279), or no usable media.
-- Leftovers that belong here: PE-6, PE-13, MP-11 (batch comparisons), B-5 (dedupe misses rewordings), B-6 (high difficulties), QP-6 (media for every question), the 33 `needs_work` questions.
+- Leftovers that belong here: PE-6, PE-13, MP-11 (batch comparisons), B-5 (dedupe misses rewordings), B-6 (high difficulties), QP-6 (media for every question), the `needs_work` questions.
+
+## English-first from batch-9
+- Owner: milestone 9, "English-first drafting for `base`": the drafting switch (`qgen batch` drafts `en`, international angle, `es`/`es-ES`/`de` via translation), the Spanish voices, the es-sourced questions'' en, de, es-ES entries. This milestone doesn''t build it; it runs batches with it.
+- batch-9 is the first English batch and runs only once `qgen batch` drafts in English (milestone 9; `task 1185: run batch-9`). No more Spanish `base` drafts.
+- Count for this milestone: approved `base` questions in their source locale, each question once (es-sourced up to batch-8, en-sourced from batch-9). The 5000 per question locale (en, es, es-ES, de; decision 21: Content target per player and language (OQ-32)?) is milestone 9''s.
+- What the switch means for the parts below:
+  - Part 2: difficulty calibration starts over for English drafts; batch-9''s target vs. rated vs. reviewed difficulty is checked like batch-7/8''s.
+  - Part 3: new subcategories and concept lists suit an international, English-drafted pool (no Spanish-speaking-world focus, no Anglo/US bias).
+  - Part 4: dedupe and overlap compare English drafts against the es-sourced pool too (across languages); batch-9''s health is compared with batch-7/8, with the language change noted, not read as drift.
+  - Part 5: audit and spot check run on the English text; the spot-check agreement of the first English batches is watched closely.
 
 ## Parts
 Rough order: 1 and 2 first, since they steer every later batch; 3–5 alongside; 6 keeps running at the lowest priority.
 
-1. **Targets and progress.** A target count per difficulty that adds up to 5000 and tapers at the top. Draft for the human to decide: ~420 each at 3–8, ~300 at 9–11, ~200 at 12–13, ~100 at 14–15, the rest at 1–2. Plus a progress view: approved vs. target per difficulty and per category (`qgen report` and `/stats/difficulty`). It also states what "quality is fine" means: the exit check of the milestone. Mostly backend/tooling, priority ~700.
-2. **Aim batches at difficulty gaps (B-6).** `draft` draws targets weighted by what''s missing against part 1''s targets, not evenly. Also check how well targets come out (target vs. rated vs. reviewed difficulty for batch-7/8), and fix the prompts or concept `known_at` choice where 11–15 drafts land at 7–9. Changes to `qgen.py`/prompts are the gamemaster''s prompts (RUNBOOK): the plan does them as implementation tasks, never as a workaround inside a batch run. Priority ~700.
-3. **More subcategories.** The category list is treated as complete, but concept lists and the per-subcategory avoid list run dry as subcategories fill up, and that drives duplicates. Find saturated subcategories (approved count, concept use, duplicate rate) and propose new `base` subcategories, especially ones that carry hard questions. New subcategories are the gamemaster''s call (RUNBOOK): propose them through a decision, then add the approved ones with their concept lists. Priority ~600.
-4. **Duplicate and drift detection (B-5).** `dedupe` compares question text only. Compare answers, concepts and topics against the whole approved pool, before merge, so overlaps get dropped rather than ending up `needs_work`. Plus per-batch health metrics in `authoring/reports/<batch>.md` and across batches: drop rate, needs_work rate by reason, duplicate rate, difficulty spread vs. targets, axis/style variety, cost per approved question. Thresholds that say "stop and look before the next batch". Absorbs PE-6, PE-13, MP-11. Priority ~700.
-5. **Quality control after every batch.** A fixed procedure run once a batch is committed: (a) an LLM audit with a different prompt from `review.md` on a sample of the batch (facts, ambiguity, giveaways, difficulty, house style); (b) a human spot check of a random sample in the review tool (e.g. `/review?batch=…` with a sample filter), recording agree/disagree; (c) findings turned into prompt or house-style changes before the next batch. Also the trend over batches: the human''s disagreement rate with the LLM review is the main "is quality fine" signal. Tooling priority ~650; the QC runs themselves are tasks in part 6.
-6. **Batch runs.** The recurring work: finish batch-8, then one `qgen batch` per task (RUNBOOK, unchanged), each followed by part 5''s QC, until part 1''s targets are met. **Every task that runs `qgen batch` has priority -100**, so it runs only when every implementation task is done or waits for a decision. Add batch tasks one or two at a time, not all eight up front, so the results of parts 2–5 shape later batches. Media yield (no usable media → `needs_work`) is watched here; when it limits throughput, it becomes its own plan with the media plans (`06`, `23`, IMG-16/17). The last task is the exit check.
-
-## Decisions for the human (raised by the part plans)
-- Target curve per difficulty (part 1).
-- What sample size and disagreement rate count as "quality is fine" (parts 1, 5).
-- Which new subcategories to add (part 3).
-- Whether the 33 `needs_work` questions and future ones are decided in the review tool or via `qgen rework` (part 6; RUNBOOK: only on the gamemaster''s word).
+1. **Targets and progress.** A target count per difficulty that adds up to 5000 and tapers at the top (`decision 1: Target count per difficulty (1–15) for 5000 approved base questions?`). Plus a progress view: approved vs. target per difficulty and per category (`qgen report` and `/stats/difficulty`). It also states what "quality is fine" means: the exit check of the milestone (`decision 2: When is batch quality "fine": human spot-check size and agreement rate with the LLM review?`). Priority ~700.
+2. **Aim batches at difficulty gaps (B-6).** `draft` draws targets weighted by what''s missing against part 1''s targets, not evenly. Also check how well targets come out (target vs. rated vs. reviewed difficulty per batch), and fix the prompts or concept `known_at` choice where 11–15 drafts land at 7–9. Changes to `qgen.py`/prompts are the developer''s prompts (RUNBOOK): the plan does them as implementation tasks, never as a workaround inside a batch run. Priority ~700.
+3. **More subcategories.** Find saturated subcategories (approved count, concept use, duplicate rate) and propose new `base` subcategories, especially ones that carry hard questions. New subcategories are the developer''s call (RUNBOOK): proposed through a decision (`decision 18: Which new base subcategories?`), then added with their concept lists. Priority ~600.
+4. **Duplicate and drift detection (B-5).** Compare answers, concepts and topics against the whole approved pool, before merge, so overlaps get dropped rather than ending up `needs_work`. Per-batch health metrics in `authoring/reports/<batch>.md` and across batches: drop rate, needs_work rate by reason, duplicate rate, difficulty spread vs. targets, axis/style variety, cost per approved question. Thresholds that say "stop and look before the next batch". Absorbs PE-6, PE-13, MP-11. Priority ~700.
+5. **Quality control after every batch.** A fixed procedure run once a batch is committed: (a) an LLM audit with a different prompt from `review.md` on a sample of the batch; (b) a human spot check of a random sample in the review tool, recording agree/disagree; (c) findings turned into prompt or house-style changes before the next batch. The trend of the developer''s disagreement rate with the LLM review is the main "is quality fine" signal. Tooling priority ~650; the QC runs themselves are tasks in part 6.
+6. **Batch runs.** The recurring work: one `qgen batch` per task (RUNBOOK, unchanged), each followed by part 5''s QC and `qgen rework` per `decision 3: How are needs_work questions (33 now, more per batch) resolved?`, until part 1''s targets are met. **Every task that runs `qgen batch` has priority -100**, so it runs only when every implementation task is done or waits for a decision. Batch tasks one or two at a time, so the results of parts 2–5 shape later batches. Media yield: `plan 146: Media yield`. The last task is the exit check.
 
 ## Done when
-- `qgen report` shows ≥ 5000 approved `base` questions, and every difficulty meets part 1''s target.
+- `qgen report` shows ≥ 5000 approved `base` questions (source locale, each once), and every difficulty meets part 1''s target.
 - The last two batches pass part 4''s thresholds, and part 5''s human spot checks agree with the LLM review at the agreed rate.
 - `qgen validate` is clean; `trivia-media sync --status approved` has filled the cache.', '2026-10-11T20:08:18Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (2, 2, 'masterplan', 1000, 'The game referee moves from Python into `app/client/src/engine/`, a pure TypeScript module, with the same rules and the family''s saves kept; afterwards the game runs without Python, which the Steam desktop shell needs. Source plan: `plans/12-client-engine.md` (tasks PORT-1..PORT-8; PORT-6, the pool export, is done).
@@ -27615,20 +27620,20 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Done when: 120 spot-checked, QC section of `authoring/reports/batch-8.md` updated, the proposals decision answered and its tasks added.', '2026-10-15T22:07:47Z', NULL, 1185, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1192, 9, 'revise the masterplan of milestone 9: Steam S4: content for release', 'revise', 'open', 1000, NULL, '`milestone 9: Steam S4: content for release` changed. Bring `plan 9: masterplan`, the masterplan, in line with it (`pm plan edit 9 --body -`), or
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-15T23:12:36Z', NULL, NULL, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1193, 1, 'revise the masterplan of milestone 1: Enough content for game nights', 'revise', 'open', 1000, NULL, '`milestone 1: Enough content for game nights` changed. Bring `plan 1: masterplan`, the masterplan, in line with it (`pm plan edit 1 --body -`), or
-leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-15T23:12:36Z', NULL, NULL, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1193, 1, 'revise the masterplan of milestone 1: Enough content for game nights', 'revise', 'done', 1000, '2026-10-15, tasks.sql: plan 1 body: English-first from batch-9 (owner milestone 9, count rule, effects on parts 2–5), state 2026-10-15, answered decisions cited', '`milestone 1: Enough content for game nights` changed. Bring `plan 1: masterplan`, the masterplan, in line with it (`pm plan edit 1 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-15T23:12:36Z', '2026-10-16T00:16:42Z', NULL, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1194, NULL, 'qgen: scan runs keep media unless fix changed it; review qgen for bugs, follow-up tasks', 'exec', 'open', 900, NULL, 'Developer''s intervention (2026-10-15). `task 632: run neutralize-1` was stopped in `record`: the scan modes reuse the rework chain (`revise_steps`, `authoring/tools/qgen.py`), so a wording-only rewrite searched media again and the reviewers re-picked images.
 
 ## State of neutralize-1 (don''t lose it)
-- `authoring/data/questions.json` staged: stash merged per `decision 214: neutralize-1: qgen validate fails after fix`, `fix` applied, 377 reworded questions in `draft` with `review: null`; `record` never ran, so no pick reached the pool.
+- `authoring/data/questions.json` on branch `pm/task-632-run-1159-left` (commit `0b795c2`, pushed; not on main): stash merged per `decision 214: neutralize-1: qgen validate fails after fix`, `fix` applied, 377 reworded questions in `draft` with `review: null`; `record` never ran, so no pick reached the pool.
 - `work/neutralize-1/reviews/<id>.json`: round 1 and 2 reviews with new picks. Of 375 reworded questions with media: 70 same URL, 213 same file but thumbnail (3840px) → original URL, 92 a different image (e.g. q-0004).
 - `record` was downloading every uncached pick serially (`media.checked` → `download.cached`), ~47 per 10 min, 294 left; no output (`progress.verbose = False`).
-- Leave the staged `questions.json` as it is; don''t run `qgen neutralize` here.
+- Don''t change that branch; don''t run `qgen neutralize` here.
 
 ## 1. Fix (this task)
 - Scan modes (`neutralize`, `tighten`; `SCANS`): media is out of scope unless `fix` changed `media`/`background` (`fix.changed`) or the question had no usable pick. Then no new media search and no re-pick: `record` keeps the pool''s `media`/`background` fields as they are, no download.
 - `qgen rework` keeps its new media search (QG-23).
-- Resuming `neutralize-1` with the fixed code must reach `record` without new claude calls (reviews on disk stay valid) and keep the 375 questions'' current picks. Check with a throw-away copy (temp `TRIVIA_WORK`/`TRIVIA_STATE`, as in `code-review.md`''s temp-worktree checks), not on the staged tree.
+- Resuming `neutralize-1` with the fixed code must reach `record` without new claude calls (reviews on disk stay valid) and keep the 375 questions'' current picks. Check in a throw-away worktree of `pm/task-632-run-1159-left` with the fixed `qgen.py` (temp `TRIVIA_WORK`/`TRIVIA_STATE` with a copy of `work/neutralize-1`, as in `code-review.md`''s temp-worktree checks).
 - `cmd_record`''s docstring ("without downloading") is stale since task 1181: fix it.
 - Update `authoring/RUNBOOK.md` / `plans/decisions.md` (D-83) if they describe the scan modes'' media step.
 
@@ -27644,7 +27649,94 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - Scan modes keep media as described; the throw-away resume check passes; `npm run check`, `npm test`, `npm run build`, `qgen validate` (on a clean tree) pass.
 - Follow-up tasks added; note lists the fix''s files and the follow-up task ids.
-- Then `task 632: run neutralize-1` resumes with plain `qgen neutralize` (its investigation task, if pm queued one, should see this note).', '2026-10-16T00:11:43Z', NULL, NULL, 0);
+- `task 632: run neutralize-1`''s body (`pm task set 632 --body -`, open again once pm recorded run 1159 as failed) gets a first step: restore `authoring/data/questions.json` from `pm/task-632-run-1159-left` into the working tree, unstaged (as pm''s stash would), conflicts with main''s later changes resolved per question (main''s version wins where main changed a question), then delete the branch (local and `origin`); only then plain `qgen neutralize`. Don''t restore it in this task: pm would move a closed task''s unstaged leftovers to a branch.
+- If pm queued "investigate the failure of task 632": its body can''t be known here; the 632 body step above is what it and 632 see.', '2026-10-16T00:11:43Z', NULL, NULL, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1195, 1, 'create tasks for plan 1: masterplan', 'split', 'open', 1000, NULL, 'Split plan 1 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T00:16:39Z', NULL, 1193, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1196, 17, 'revise plan 17: Batch runs', 'revise', 'open', 1000, NULL, '`plan 1: masterplan`, the plan above `plan 17: Batch runs`, changed; it is quoted below. Bring `plan 17: Batch runs` in line with it
+(`pm plan edit 17 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 1: masterplan
+
+Milestone 1 grows the `base` bundle from about 1000 to **5000 approved questions** (D-52), with clearly fewer questions at the top of the difficulty scale (1–15, D-38) but still enough of them. It also sets up quality control after every batch, and on the generation process itself, so we can tell whether quality holds as the pool grows. From batch-9 on, `base` is drafted in English with an international angle and translated to es, es-ES and de (milestone 9, "English-first drafting for `base`").
+
+**This masterplan''s own tasks are not implementation work.** Each one writes the plan for one part below (`pm plan add 1 …`). That plan''s tasks do the work.
+
+## Where we stand (2026-10-11, updated 2026-10-15)
+- Approved `base` questions: 1035. By difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
+- `focus: null` in `app/data/age-groups.json`: `draft` already aims evenly at 1–15 (D-40). But high targets come out too easy (B-6), and subcategories are picked by fewest approved, not by difficulty gaps.
+- One `base` batch (D-46): about 57 subcategories × 18 slots, ~1000 drafts, ~600 merged, ~500 approved, ~$120 at list price (batch-7). 5000 approved means **about 8 more batches**.
+- 2026-10-15: batch-8 done (Spanish, the last Spanish `base` batch); QC and the 120-question spot check of `decision 228: batch-9: health stop, ack?` done. `task 1185: run batch-9` waits on `decision 229: Continue batch-9 after the extended batch-8 review?`.
+- batch-7 needs_work reasons: mostly a giveaway hint, overlap with a pool question (q-0644/q-0957, q-0646/q-0217, q-0689/q-0279), or no usable media.
+- Leftovers that belong here: PE-6, PE-13, MP-11 (batch comparisons), B-5 (dedupe misses rewordings), B-6 (high difficulties), QP-6 (media for every question), the `needs_work` questions.
+
+## English-first from batch-9
+- Owner: milestone 9, "English-first drafting for `base`": the drafting switch (`qgen batch` drafts `en`, international angle, `es`/`es-ES`/`de` via translation), the Spanish voices, the es-sourced questions'' en, de, es-ES entries. This milestone doesn''t build it; it runs batches with it.
+- batch-9 is the first English batch and runs only once `qgen batch` drafts in English (milestone 9; `task 1185: run batch-9`). No more Spanish `base` drafts.
+- Count for this milestone: approved `base` questions in their source locale, each question once (es-sourced up to batch-8, en-sourced from batch-9). The 5000 per question locale (en, es, es-ES, de; decision 21: Content target per player and language (OQ-32)?) is milestone 9''s.
+- What the switch means for the parts below:
+  - Part 2: difficulty calibration starts over for English drafts; batch-9''s target vs. rated vs. reviewed difficulty is checked like batch-7/8''s.
+  - Part 3: new subcategories and concept lists suit an international, English-drafted pool (no Spanish-speaking-world focus, no Anglo/US bias).
+  - Part 4: dedupe and overlap compare English drafts against the es-sourced pool too (across languages); batch-9''s health is compared with batch-7/8, with the language change noted, not read as drift.
+  - Part 5: audit and spot check run on the English text; the spot-check agreement of the first English batches is watched closely.
+
+## Parts
+Rough order: 1 and 2 first, since they steer every later batch; 3–5 alongside; 6 keeps running at the lowest priority.
+
+1. **Targets and progress.** A target count per difficulty that adds up to 5000 and tapers at the top (`decision 1: Target count per difficulty (1–15) for 5000 approved base questions?`). Plus a progress view: approved vs. target per difficulty and per category (`qgen report` and `/stats/difficulty`). It also states what "quality is fine" means: the exit check of the milestone (`decision 2: When is batch quality "fine": human spot-check size and agreement rate with the LLM review?`). Priority ~700.
+2. **Aim batches at difficulty gaps (B-6).** `draft` draws targets weighted by what''s missing against part 1''s targets, not evenly. Also check how well targets come out (target vs. rated vs. reviewed difficulty per batch), and fix the prompts or concept `known_at` choice where 11–15 drafts land at 7–9. Changes to `qgen.py`/prompts are the developer''s prompts (RUNBOOK): the plan does them as implementation tasks, never as a workaround inside a batch run. Priority ~700.
+3. **More subcategories.** Find saturated subcategories (approved count, concept use, duplicate rate) and propose new `base` subcategories, especially ones that carry hard questions. New subcategories are the developer''s call (RUNBOOK): proposed through a decision (`decision 18: Which new base subcategories?`), then added with their concept lists. Priority ~600.
+4. **Duplicate and drift detection (B-5).** Compare answers, concepts and topics against the whole approved pool, before merge, so overlaps get dropped rather than ending up `needs_work`. Per-batch health metrics in `authoring/reports/<batch>.md` and across batches: drop rate, needs_work rate by reason, duplicate rate, difficulty spread vs. targets, axis/style variety, cost per approved question. Thresholds that say "stop and look before the next batch". Absorbs PE-6, PE-13, MP-11. Priority ~700.
+5. **Quality control after every batch.** A fixed procedure run once a batch is committed: (a) an LLM audit with a different prompt from `review.md` on a sample of the batch; (b) a human spot check of a random sample in the review tool, recording agree/disagree; (c) findings turned into prompt or house-style changes before the next batch. The trend of the developer''s disagreement rate with the LLM review is the main "is quality fine" signal. Tooling priority ~650; the QC runs themselves are tasks in part 6.
+6. **Batch runs.** The recurring work: one `qgen batch` per task (RUNBOOK, unchanged), each followed by part 5''s QC and `qgen rework` per `decision 3: How are needs_work questions (33 now, more per batch) resolved?`, until part 1''s targets are met. **Every task that runs `qgen batch` has priority -100**, so it runs only when every implementation task is done or waits for a decision. Batch tasks one or two at a time, so the results of parts 2–5 shape later batches. Media yield: `plan 146: Media yield`. The last task is the exit check.
+
+## Done when
+- `qgen report` shows ≥ 5000 approved `base` questions (source locale, each once), and every difficulty meets part 1''s target.
+- The last two batches pass part 4''s thresholds, and part 5''s human spot checks agree with the LLM review at the agreed rate.
+- `qgen validate` is clean; `trivia-media sync --status approved` has filled the cache.', '2026-10-16T00:16:39Z', NULL, 1193, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1197, 146, 'revise plan 146: Media yield', 'revise', 'open', 1000, NULL, '`plan 1: masterplan`, the plan above `plan 146: Media yield`, changed; it is quoted below. Bring `plan 146: Media yield` in line with it
+(`pm plan edit 146 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 1: masterplan
+
+Milestone 1 grows the `base` bundle from about 1000 to **5000 approved questions** (D-52), with clearly fewer questions at the top of the difficulty scale (1–15, D-38) but still enough of them. It also sets up quality control after every batch, and on the generation process itself, so we can tell whether quality holds as the pool grows. From batch-9 on, `base` is drafted in English with an international angle and translated to es, es-ES and de (milestone 9, "English-first drafting for `base`").
+
+**This masterplan''s own tasks are not implementation work.** Each one writes the plan for one part below (`pm plan add 1 …`). That plan''s tasks do the work.
+
+## Where we stand (2026-10-11, updated 2026-10-15)
+- Approved `base` questions: 1035. By difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
+- `focus: null` in `app/data/age-groups.json`: `draft` already aims evenly at 1–15 (D-40). But high targets come out too easy (B-6), and subcategories are picked by fewest approved, not by difficulty gaps.
+- One `base` batch (D-46): about 57 subcategories × 18 slots, ~1000 drafts, ~600 merged, ~500 approved, ~$120 at list price (batch-7). 5000 approved means **about 8 more batches**.
+- 2026-10-15: batch-8 done (Spanish, the last Spanish `base` batch); QC and the 120-question spot check of `decision 228: batch-9: health stop, ack?` done. `task 1185: run batch-9` waits on `decision 229: Continue batch-9 after the extended batch-8 review?`.
+- batch-7 needs_work reasons: mostly a giveaway hint, overlap with a pool question (q-0644/q-0957, q-0646/q-0217, q-0689/q-0279), or no usable media.
+- Leftovers that belong here: PE-6, PE-13, MP-11 (batch comparisons), B-5 (dedupe misses rewordings), B-6 (high difficulties), QP-6 (media for every question), the `needs_work` questions.
+
+## English-first from batch-9
+- Owner: milestone 9, "English-first drafting for `base`": the drafting switch (`qgen batch` drafts `en`, international angle, `es`/`es-ES`/`de` via translation), the Spanish voices, the es-sourced questions'' en, de, es-ES entries. This milestone doesn''t build it; it runs batches with it.
+- batch-9 is the first English batch and runs only once `qgen batch` drafts in English (milestone 9; `task 1185: run batch-9`). No more Spanish `base` drafts.
+- Count for this milestone: approved `base` questions in their source locale, each question once (es-sourced up to batch-8, en-sourced from batch-9). The 5000 per question locale (en, es, es-ES, de; decision 21: Content target per player and language (OQ-32)?) is milestone 9''s.
+- What the switch means for the parts below:
+  - Part 2: difficulty calibration starts over for English drafts; batch-9''s target vs. rated vs. reviewed difficulty is checked like batch-7/8''s.
+  - Part 3: new subcategories and concept lists suit an international, English-drafted pool (no Spanish-speaking-world focus, no Anglo/US bias).
+  - Part 4: dedupe and overlap compare English drafts against the es-sourced pool too (across languages); batch-9''s health is compared with batch-7/8, with the language change noted, not read as drift.
+  - Part 5: audit and spot check run on the English text; the spot-check agreement of the first English batches is watched closely.
+
+## Parts
+Rough order: 1 and 2 first, since they steer every later batch; 3–5 alongside; 6 keeps running at the lowest priority.
+
+1. **Targets and progress.** A target count per difficulty that adds up to 5000 and tapers at the top (`decision 1: Target count per difficulty (1–15) for 5000 approved base questions?`). Plus a progress view: approved vs. target per difficulty and per category (`qgen report` and `/stats/difficulty`). It also states what "quality is fine" means: the exit check of the milestone (`decision 2: When is batch quality "fine": human spot-check size and agreement rate with the LLM review?`). Priority ~700.
+2. **Aim batches at difficulty gaps (B-6).** `draft` draws targets weighted by what''s missing against part 1''s targets, not evenly. Also check how well targets come out (target vs. rated vs. reviewed difficulty per batch), and fix the prompts or concept `known_at` choice where 11–15 drafts land at 7–9. Changes to `qgen.py`/prompts are the developer''s prompts (RUNBOOK): the plan does them as implementation tasks, never as a workaround inside a batch run. Priority ~700.
+3. **More subcategories.** Find saturated subcategories (approved count, concept use, duplicate rate) and propose new `base` subcategories, especially ones that carry hard questions. New subcategories are the developer''s call (RUNBOOK): proposed through a decision (`decision 18: Which new base subcategories?`), then added with their concept lists. Priority ~600.
+4. **Duplicate and drift detection (B-5).** Compare answers, concepts and topics against the whole approved pool, before merge, so overlaps get dropped rather than ending up `needs_work`. Per-batch health metrics in `authoring/reports/<batch>.md` and across batches: drop rate, needs_work rate by reason, duplicate rate, difficulty spread vs. targets, axis/style variety, cost per approved question. Thresholds that say "stop and look before the next batch". Absorbs PE-6, PE-13, MP-11. Priority ~700.
+5. **Quality control after every batch.** A fixed procedure run once a batch is committed: (a) an LLM audit with a different prompt from `review.md` on a sample of the batch; (b) a human spot check of a random sample in the review tool, recording agree/disagree; (c) findings turned into prompt or house-style changes before the next batch. The trend of the developer''s disagreement rate with the LLM review is the main "is quality fine" signal. Tooling priority ~650; the QC runs themselves are tasks in part 6.
+6. **Batch runs.** The recurring work: one `qgen batch` per task (RUNBOOK, unchanged), each followed by part 5''s QC and `qgen rework` per `decision 3: How are needs_work questions (33 now, more per batch) resolved?`, until part 1''s targets are met. **Every task that runs `qgen batch` has priority -100**, so it runs only when every implementation task is done or waits for a decision. Batch tasks one or two at a time, so the results of parts 2–5 shape later batches. Media yield: `plan 146: Media yield`. The last task is the exit check.
+
+## Done when
+- `qgen report` shows ≥ 5000 approved `base` questions (source locale, each once), and every difficulty meets part 1''s target.
+- The last two batches pass part 4''s thresholds, and part 5''s human spot checks agree with the LLM review at the agreed rate.
+- `qgen validate` is clean; `trivia-media sync --status approved` has filled the cache.', '2026-10-16T00:16:39Z', NULL, 1193, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -31073,6 +31165,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1157, 1186, '2026-10-15T22:13:33Z', '2026-10-15T22:13:54Z', 'blocked', NULL, 0, 'b3d624059378126cf1537edec669559a39b95cb0', 'claude-opus-5-5[1m]', '4aa3b121-40eb-4caf-976d-170220622420', 5, 12, 896, 136765, 21911, 0.22060900000000003, 3709948);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1158, 1191, '2026-10-15T23:05:46Z', '2026-10-15T23:08:36Z', 'blocked', NULL, 0, '51f52d9c1778eca4a044de3b365ece417b0aa38b', 'claude-opus-5-5[1m]', '33b26d4b-536c-464a-9a8c-c42f18897a5c', 19, 38, 11770, 940924, 68191, 0.9692648, 3709948);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1159, 632, '2026-10-15T23:08:36Z', '2026-10-16T00:15:57Z', 'failed', 'interrupted', NULL, '2ca5c2e9dda3bfb87f113532f43e7826271cffa6', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 3709948);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1160, 1193, '2026-10-16T00:15:57Z', '2026-10-16T00:16:48Z', 'done', NULL, 0, 'af25cb88d6eeb53ee3cd3f9065c30a629e59fb6c', 'claude-opus-5-5[1m]', '656cc2bf-74c9-430c-bdbc-f5de658bc944', 7, 14, 5105, 249283, 50108, 0.5528766, 3857742);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
