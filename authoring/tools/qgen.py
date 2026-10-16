@@ -50,8 +50,7 @@ Revising questions that are already in the pool (07, QG-13):
     qgen import --run <run> --batch <batch> [--assign-unbatched]
     qgen rate | factcheck | revise | apply --run <run>
 """
-import argparse, atexit, concurrent.futures, datetime, difflib, hashlib, json, os, random, re, subprocess, sys, threading, time, unicodedata
-import urllib.parse
+import argparse, atexit, concurrent.futures, contextlib, datetime, difflib, hashlib, json, os, random, re, subprocess, sys, threading, time, unicodedata
 from pathlib import Path
 from collections import Counter
 
@@ -3174,7 +3173,7 @@ def cmd_record(args):
     tmp_of = tmp_ids(d)
     _, checks = collect(d)
     today = datetime.date.today().isoformat()
-    changes, missing = {}, []
+    changes, missing, reviewed, picks = {}, [], [], {}
     snapshot = load_json(d / "recorded.json", {})
     for q in batch_questions(args.run):
         full = load_json(d / "reviews" / f"{q['id']}.json", {})
@@ -3182,25 +3181,28 @@ def cmd_record(args):
         if r is None:
             missing.append(q["id"])
             continue
-        decision, problems, fields = r["decision"], [r["feedback"].strip()] if r["feedback"].strip() else [], {}
-        kinds = set(r.get("problems") or [])
-        say = RECORD_TEXT["es" if translations.source_locale(q).startswith("es") else "en"]
+        reviewed.append((q, full, r))
         kept = kept_slots(args.run, q)
         for slot, key in [("media", "pick"), ("background", "background_pick")]:
             if slot not in slots_of(q) or slot in kept:
                 continue
             found = (media_tool.load_candidates(q["id"], slot) or {"candidates": []})["candidates"]
             n = r[key]
-            if n is None or not 1 <= n <= len(found):
+            picks[q["id"], slot] = media_tool.pick_fields(found[n - 1], slot) if n is not None and 1 <= n <= len(found) else None
+    check_picks(picks)
+    for q, full, r in reviewed:
+        decision, problems, fields = r["decision"], [r["feedback"].strip()] if r["feedback"].strip() else [], {}
+        kinds = set(r.get("problems") or [])
+        say = RECORD_TEXT["es" if translations.source_locale(q).startswith("es") else "en"]
+        for slot in media_tool.SLOTS:
+            if (q["id"], slot) not in picks:
+                continue
+            if picks[q["id"], slot] is None:
                 decision = "needs_work"
                 kinds.add("media")
                 problems.append(say[f"no {slot}"])
                 continue
-            fields[slot] = media_tool.pick_fields(found[n - 1], slot)
-            try:
-                fields[slot] = media_tool.checked(fields[slot])
-            except Exception as e:  # noqa: BLE001 — the sync step downloads and checks it again
-                progress.say(f"  not checked: {q['id']} {slot}: {e}", err=True)
+            fields[slot] = picks[q["id"], slot]
             verdict, reasons = providers.licence_verdict(fields[slot])
             if verdict == "replace":  # plan 53
                 decision = "needs_work"
@@ -3231,6 +3233,27 @@ def cmd_record(args):
     update_pool(changes)
     save_json(d / "recorded.json", snapshot)  # record's decisions, for batch health (plan 15)
     return failed(f"{len(missing)} question(s) without a review: {', '.join(missing)}") if missing else []
+
+
+def check_picks(picks):
+    """Download and check record's picks in place ({(qid, slot): fields or None}), a log line per download (task 1242).
+    A failed download leaves the pick unchecked: the sync step downloads and checks it again."""
+    todo = {k for k, f in picks.items() if f and not media.cache_path(f["file_url"]).is_file()}
+    if todo:
+        progress.say(f"  record: {len(todo)} pick(s) to download")
+    with progress.Bar("record", len(todo), "downloads") as bar:
+        for (qid, slot), f in picks.items():
+            if not f:
+                continue
+            try:
+                with media_tool.downloading("record", qid, slot, f["file_url"]) if (qid, slot) in todo else contextlib.nullcontext():
+                    picks[qid, slot] = media_tool.checked(f)
+                ok = True
+            except Exception as e:  # noqa: BLE001 — see the docstring
+                progress.say(f"  not checked: {qid} {slot}: {e}", err=True)
+                ok = False
+            if (qid, slot) in todo:
+                bar.finished(ok)
 
 
 def review_before(x, recorded):
@@ -3590,7 +3613,7 @@ def cmd_sync_run(args):
         for qid, slot, url in todo:
             label = qid if slot == "media" else f"{qid} background"
             try:
-                with progress.item("sync", label), progress.waiting(f"download {urllib.parse.urlparse(url).hostname}"):
+                with media_tool.downloading("sync", qid, slot, url):
                     problem = download.file_problem(download.cached(url))
                 if problem:
                     broken[qid, slot] = problem

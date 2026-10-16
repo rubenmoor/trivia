@@ -19,7 +19,7 @@ files to replace before a public release, grouped by reason (providers.licence_v
 restriction flags for information, and a tally per licence. Skips rejected questions; exits 1
 while the replacement list isn't empty.
 """
-import argparse, hashlib, itertools, json, re, subprocess, sys, urllib.parse
+import argparse, contextlib, hashlib, itertools, json, re, subprocess, sys, urllib.parse
 
 from layout import CANDIDATES, SOURCE_POOL as POOL
 from download import RateLimited, cached, file_problem, http_get
@@ -192,6 +192,14 @@ def checked(fields):
     return {**fields, "file_problem": problem} if problem else fields
 
 
+@contextlib.contextmanager
+def downloading(step, qid, slot, url):
+    """Start and result lines for downloading one pick's file (progress.waiting)."""
+    with progress.item(step, qid if slot == "media" else f"{qid} {slot}"), \
+            progress.waiting(f"download {urllib.parse.urlparse(url).hostname}"):
+        yield
+
+
 def apply_pick(target, fields):
     """Store a pick's fields in a pool slot; an earlier pick's file_problem goes."""
     target.pop("file_problem", None)
@@ -254,7 +262,7 @@ def cmd_sync(args):
     for qid, slot, url in todo:
         label = qid if slot == "media" else f"{qid} background"
         try:
-            with progress.item("sync", label), progress.waiting(f"download {urllib.parse.urlparse(url).hostname}"):
+            with downloading("sync", qid, slot, url):
                 problem = file_problem(cached(url))
             if problem:
                 broken[qid, slot] = problem
