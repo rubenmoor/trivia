@@ -140,3 +140,97 @@ test("rr-competitive: the supply check counts every seat's levels", () => {
   assert.ok(short instanceof game.GameError && short.code === "supply_short");
   assert.ok(short.details!.levels.some((l) => l.seat === 39));
 });
+
+// timed (plan 159): a seeded clock, every action at `ms`
+const T0 = Date.parse("2026-10-16T00:00:00Z");
+function timed(save: SaveData, action: string, body: Record<string, unknown>, ms: number): { save: SaveData; error?: string; params?: Record<string, unknown> } {
+  const r = gameAction(save, data, { ...io(++step), ms }, action, body);
+  if (r.status === 200) return { save: r.save };
+  const e = r.body as { error: string; params?: Record<string, unknown> };
+  return { save, error: e.error, params: e.params };
+}
+const startTimed = (players: string[]) =>
+  game.newSession(emptySave(), data, { ...io(4), ms: T0 }, players, { mode: "timed", bundles: ["base"], age_group: "adults" }).save;
+const flow = (save: SaveData) => row(save).state.timed!;
+const wrongOf = (save: SaveData) => [0, 1, 2, 3].find((i) => i !== correct(save))!;
+/** `seat` claims at `ms` and answers a second later. */
+const claimAnswer = (save: SaveData, seat: number, ok: boolean, ms: number) =>
+  timed(timed(save, "claim", { seat }, ms).save, "answer", { seat, index: ok ? correct(save) : wrongOf(save) }, ms + 1000).save;
+/** Every question of the round left unclaimed: expired one after the other. */
+function idleRound(save: SaveData): SaveData {
+  const level = row(save).state.level, repeat = flow(save).repeat;
+  while (row(save).result === null && row(save).state.level === level && flow(save).repeat === repeat)
+    save = timed(save, "expire", {}, flow(save).shown_at + game.QUESTION_MS + 1).save;
+  return save;
+}
+
+test("timed: claims, a claim run out, an unclaimed question, the round end's lives and size", () => {
+  const players = ["Ana", "Beto", "Cami"];
+  assert.throws(() => game.newSession(emptySave(), data, io(4), players, { mode: "timed", jokers: { hint: 1 } }), /no jokers/);
+  let save = startTimed(players);
+  const s = row(save).state;
+  assert.deepEqual([s.phase, s.settings.cards, s.settings.customized, s.settings.jokers.hint, row(save).turn], ["question", 0, false, 0, undefined]);
+  assert.deepEqual(row(save).seats!.map((x) => x.lives), [3, 3, 3]);
+  assert.deepEqual(flow(save), { round_size: 3, round_done: 0, round_correct: [], shown_at: T0, claim: null, paused_at: null, repeat: 0 });
+
+  assert.equal(timed(save, "answer", { seat: 0, index: 0 }, T0 + 1000).error, "claim_first");
+  const early = timed(save, "expire", {}, T0 + game.QUESTION_MS);
+  assert.deepEqual([early.error, early.params], ["not_expired", { ms: 0 }]);
+  save = timed(save, "claim", { seat: 0 }, T0 + 29000).save; // a claim at 29 s still gets its 6 s
+  assert.equal(timed(save, "claim", { seat: 1 }, T0 + 29500).error, "claim_taken");
+  assert.equal(timed(save, "answer", { seat: 1, index: 0 }, T0 + 29500).error, "not_your_claim");
+  assert.equal(timed(save, "joker", { joker: "hint", seat: 0 }, T0 + 29500).error, "timed_no_jokers");
+  const q1 = data.byId.get(row(save).state.current!)!;
+  save = timed(save, "answer", { seat: 0, index: correct(save) }, T0 + 29000 + game.CLAIM_MS).save;
+  assert.deepEqual(row(save).state.history.at(-1), { level: 1, question_id: q1.id, seat: 0, chosen: row(save).state.last!.chosen, correct: true, hints: Math.min(q1.hints.length, 3) });
+  assert.deepEqual([flow(save).round_correct, flow(save).round_done, flow(save).shown_at], [[0], 1, T0 + 35000]);
+
+  save = timed(save, "claim", { seat: 1 }, T0 + 36000).save;
+  assert.equal(timed(save, "expire", {}, T0 + 42000).error, "not_expired");
+  save = timed(save, "expire", {}, T0 + 42001).save; // Beto's 6 s ran out: out at once
+  assert.deepEqual([row(save).seats![1].out, row(save).seats![1].result], [true, "lost"]);
+  assert.deepEqual([row(save).state.last!.timeout, row(save).state.history.at(-1)!.correct], [true, false]);
+  assert.equal(timed(save, "claim", { seat: 1 }, T0 + 43000).error, "seat_out");
+
+  save = timed(save, "claim", { seat: 2 }, flow(save).shown_at + game.QUESTION_MS + 1).save; // too late: settled, no claim
+  assert.equal(row(save).state.history.at(-1)!.unclaimed, true);
+  assert.equal(row(save).state.history.at(-1)!.correct, undefined);
+  // round end: Cami without a correct answer loses a life; round 2 has the two seats still in (decision 276)
+  assert.deepEqual(row(save).seats!.map((x) => x.lives), [3, 3, 2]);
+  assert.deepEqual([row(save).state.level, flow(save).round_size, flow(save).round_done, flow(save).claim], [2, 2, 0, null]);
+  assert.equal(save.seen.filter((x) => x.game_id === row(save).id).length, 3);
+  assert.equal(new Set(row(save).state.offered).size, 4);
+});
+
+test("timed: a correct answer in round 12 wins", () => {
+  let save = startTimed(["Ana", "Beto"]);
+  let ms = T0;
+  for (let round = 1; round <= 11; round++) for (const seat of [0, 1]) save = claimAnswer(save, seat, true, ms += 2000);
+  assert.deepEqual([row(save).state.level, row(save).result], [12, null]);
+  assert.deepEqual(row(save).seats!.map((x) => x.lives), [3, 3]);
+  save = claimAnswer(save, 1, true, ms += 2000);
+  assert.deepEqual([row(save).result, row(save).state.phase], ["won", "won"]);
+  assert.deepEqual(row(save).seats!.map((x) => x.result), ["lost", "won"]);
+  assert.equal(save.seen.filter((x) => x.game_id === row(save).id).length, 23);
+});
+
+test("timed: a wrong answer leaves the last one standing", () => {
+  let save = startTimed(["Ana", "Beto", "Cami"]);
+  save = claimAnswer(save, 2, false, T0 + 1000);
+  assert.equal(row(save).result, null);
+  save = claimAnswer(save, 0, false, T0 + 3000);
+  assert.deepEqual([row(save).result, row(save).seats!.map((x) => x.result)], ["won", ["lost", "won", "lost"]]);
+  assert.ok(row(save).finished_on);
+});
+
+test("timed: round 12 without a correct answer repeats, everyone out means nobody wins", () => {
+  let save = startTimed(["Ana", "Beto"]);
+  let ms = T0;
+  for (let round = 1; round <= 11; round++) for (const seat of [0, 1]) save = claimAnswer(save, seat, true, ms += 2000);
+  save = idleRound(save);
+  assert.deepEqual([row(save).state.level, flow(save).repeat, flow(save).round_size], [12, 1, 2]);
+  assert.deepEqual(row(save).seats!.map((x) => x.lives), [2, 2]);
+  save = idleRound(idleRound(save));
+  assert.deepEqual([row(save).result, row(save).state.phase], ["lost", "lost"]);
+  assert.deepEqual(row(save).seats!.map((x) => [x.lives, x.out, x.result]), [[0, true, "lost"], [0, true, "lost"]]);
+});

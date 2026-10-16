@@ -2,18 +2,18 @@
 // (save, data, io, …) → {save, …}; inside, they mutate a transact() copy like the Python port.
 import type { Choice, Game, GameMode, JokerBudget, JokerEvent, JokerName, JokerState, Jokers, Player, Supply } from "../lib/types.ts";
 import type { ChoiceInput } from "./choice.ts";
-import { JOKERS, STANDARD_JOKERS, checkBudget, checkCount, defaultChoice, gameChoice, mediaAllowed, rangesFor, resolveChoice } from "./choice.ts";
+import { CLAIM_MS, HINT_MS, JOKERS, LIVES, QUESTION_MS, STANDARD_JOKERS, checkBudget, checkCount, defaultChoice, gameChoice, mediaAllowed, rangesFor, resolveChoice } from "./choice.ts";
 import type { LevelRanges, PoolQuestion } from "./pool.ts";
 import { catKey, categoryOf, subKey, subOf } from "./pool.ts";
 import { casefold, pyLen, pySplitJoin, pyTruthy } from "./pycompat.ts";
 import * as selection from "./selection.ts";
-import type { EngineData, GameRow, GameState, Io, Outcome, SaveData, Seat } from "./state.ts";
+import type { EngineData, GameRow, GameState, Io, Outcome, SaveData, Seat, TimedState } from "./state.ts";
 import { GameError, UNLIMITED, gameLocale, newest, nextId, rowPlayers, rowStates, seatResult, transact, trial, withDefaults } from "./state.ts";
 
 export { GameError, UNLIMITED };
 export {
-  CARDS_MAX, CHOICE_KEYS, DEFAULT_AGE_GROUP, DIFFICULTY_MAX, LEVELS_MAX, STANDARD_JOKERS, defaultChoice, gameChoice,
-  rangesFor, resolveChoice,
+  CARDS_MAX, CHOICE_KEYS, CLAIM_MS, DEFAULT_AGE_GROUP, DIFFICULTY_MAX, LEVELS_MAX, QUESTION_MS, STANDARD_JOKERS, defaultChoice,
+  gameChoice, rangesFor, resolveChoice,
 } from "./choice.ts";
 
 export const MODES: readonly GameMode[] = ["gamemaster", "solo", "rr-coop", "rr-competitive", "timed"];
@@ -356,8 +356,9 @@ export function newGame(
 }
 
 /** `new` for a session (body `players`, join order; plan 158): rr-coop plays in `row.state`, the seats carry no state;
- * rr-competitive: every seat its own game (`age_groups`), `row.state` the shared settings only.
- * Unbuilt modes start here too; `api.ts` refuses them (`mode_not_built`). timed: plan 159. */
+ * rr-competitive: every seat its own game (`age_groups`), `row.state` the shared settings only; timed (plan 159): the
+ * shared question flow in `row.state`, no jokers, no cards, N questions per level, lives per seat, no turn.
+ * Unbuilt modes start here too; `api.ts` refuses them (`mode_not_built`). */
 export function newSession(
   save: SaveData, data: EngineData, io: Io, players: unknown, args: ChoiceArgs = {},
 ): { save: SaveData; state: GameState } {
@@ -371,17 +372,19 @@ export function newSession(
   }
   if (names.length < MIN_SEATS) throw new GameError("players_too_few", { min: MIN_SEATS });
   if (mode === "gamemaster" || mode === "solo") throw new GameError("mode_single", { mode });
-  if (mode === "timed") throw new Error("session rows: plan 159");
-  const { jokers: _, age_groups, ...rest } = args;
+  const timed = mode === "timed";
+  const { jokers: _, age_groups, ...rest } = timed ? { ...args, cards: 0 } : args;
   const choice = resolveChoice(data, rest);
   if (args.answers !== undefined) throw new GameError("gamemaster_only", { action: "answers" });
+  if (timed && args.jokers !== undefined) throw new GameError("timed_no_jokers");
   const overrides = args.jokers === undefined ? {} : checkBudget(args.jokers);
   const competitive = mode === "rr-competitive";
   if (age_groups !== undefined && !Array.isArray(age_groups)) throw new GameError("age_group_unknown", { group: String(age_groups) });
   const groups = (age_groups ?? []) as unknown[];
   const seatArgs = names.map((_, i) => (groups[i] == null ? rest : { ...rest, age_group: groups[i] }));
   const choices = competitive ? seatArgs.map((a) => resolveChoice(data, a)) : [choice];
-  const report = competitive ? seatsSupply(save, data, choices) : supply(save, data, choice);
+  const report = competitive ? seatsSupply(save, data, choices)
+    : supply(save, data, timed ? { ...choice, cards: names.length } : choice);
   if (!report.ok) throw supplyShort(report);
   return action(save, (work) => {
     const game = latest(work);
@@ -389,14 +392,15 @@ export function newSession(
     const ids = seatPlayers(work, names, io);
     const row: GameRow = {
       id: nextId(work.games), started_on: io.now, finished_on: null, result: null, player_id: null,
-      ...(data.locale === "es" ? {} : { locale: data.locale }), turn: 0,
+      ...(data.locale === "es" ? {} : { locale: data.locale }), ...(timed ? {} : { turn: 0 }),
       seats: ids.map((player_id, i) => (competitive
         ? { player_id, state: freshState({ ...seatArgs[i], age_group: choices[i].age_group ?? undefined }, choices[i], mode as GameMode, overrides) }
-        : { player_id })),
-      state: freshState(competitive ? { ...rest, age_group: undefined } : args, choice, mode as GameMode, overrides),
+        : timed ? { player_id, lives: LIVES } : { player_id })),
+      state: freshState(competitive ? { ...rest, age_group: undefined } : timed ? rest : args, choice, mode as GameMode, overrides),
     };
     work.games.push(row);
-    if (!competitive) deal(work, row.state, data, io);
+    if (timed) timedStart(work, row, data, io);
+    else if (!competitive) deal(work, row.state, data, io);
     // one seat after the other: each draw sees the tables dealt before it
     for (const seat of row.seats!) if (seat.state) deal(work, seat.state, data, io);
     return seatState(row, 0);
@@ -445,6 +449,7 @@ export function answer(save: SaveData, data: EngineData, io: Io, index: number, 
   return action(save, (work) => {
     const { row } = running(work);
     const who = actor(row, seat);
+    if (gameMode(row.state) === "timed") return timedAnswer(work, row, who, index, data, io);
     const state = seatState(row, who);
     if (state.phase !== "question") throw new GameError("no_question");
     if (state.settings.answers === false) throw new GameError("answers_off");
@@ -718,6 +723,7 @@ export function joker(
     const { row } = running(work);
     const who = actor(row, seat);
     const state = seatState(row, who);
+    if (gameMode(state) === "timed") throw new GameError("timed_no_jokers");
     if (state.phase !== "question") throw new GameError("joker_not_question");
     if (jokersLeft(state)[jname] === 0) throw new GameError("joker_spent", { joker: jname });
     const before = state.history.length;
@@ -789,6 +795,188 @@ export function setJokers(save: SaveData, io: Io, budget: unknown): { save: Save
     Object.assign(state.settings.jokers, budget);
     saveGame(row, state, io);
     return state;
+  });
+}
+
+// Competitive timed (plan 159) ----------------------------------------------------------------
+
+/** A timed action's working set: `state` a copy of `row.state`, `t` its timed part, `ms` the action's time. */
+interface Timed {
+  work: SaveData;
+  row: GameRow;
+  state: GameState;
+  t: TimedState;
+  data: EngineData;
+  io: Io;
+  ms: number;
+}
+
+/** The action's epoch ms; missing (tests, fixtures) = `io.now`. */
+const msOf = (io: Io): number => io.ms ?? Date.parse(io.now);
+
+function timedOf(work: SaveData, row: GameRow, data: EngineData, io: Io, what: string): Timed {
+  const state = withDefaults(structuredClone(row.state));
+  if (gameMode(state) !== "timed") throw new GameError("timed_only", { action: what });
+  return { work, row, state, t: state.timed!, data, io, ms: msOf(io) };
+}
+
+/** Save the flow back; a won or lost phase ends the session. */
+function timedSave(c: Timed): GameState {
+  const p = c.state.phase;
+  saveGame(c.row, c.state, c.io, p === "won" || p === "lost" ? p : null);
+  return c.state;
+}
+
+/** Seat indexes still in. */
+const seatsIn = (row: GameRow): number[] => row.seats!.flatMap((s, i) => (s.out ? [] : [i]));
+
+/** The session's first question (`row.state` in place): no budget, every seat in for round 1. */
+function timedStart(work: SaveData, row: GameRow, data: EngineData, io: Io): void {
+  const state = row.state;
+  state.settings.jokers = Object.fromEntries(JOKERS.map((j) => [j, 0])) as JokerBudget;
+  state.settings.customized = false;
+  const t: TimedState = { round_size: row.seats!.length, round_done: 0, round_correct: [], shown_at: 0, claim: null, paused_at: null, repeat: 0 };
+  state.timed = t;
+  nextQuestion({ work, row, state, t, data, io, ms: msOf(io) });
+}
+
+/** One question at the level, every later level keeping `round_size`; none: the age group's whole range (decision 281);
+ * null if that is empty too. Never one offered earlier in the session. */
+function timedDraw(c: Timed): string | null {
+  const { work, state, data, io, t } = c;
+  const ranges = rangesOf(state, data);
+  const avail = availableNow(work, state, data);
+  const opts = {
+    n: 1, perLevel: t.round_size, avoidCategories: askedCategories(state, data), categoryOf: categoryOf(data.broad),
+    countOf: countOf(work), rng: io.rng,
+  };
+  const whole: LevelRanges = [[Math.min(...ranges.map((r) => r[0])), Math.max(...ranges.map((r) => r[1]))]];
+  const drawn = selection.draw(state.level, avail, { ...opts, ranges }) ?? selection.draw(1, avail, { ...opts, ranges: whole });
+  return drawn?.[0].id ?? null;
+}
+
+/** The next question on screen, its clock from now; nothing left to draw: nobody wins. */
+function nextQuestion(c: Timed): void {
+  const { state, t } = c;
+  state.phase = "select";
+  leaveQuestion(state);
+  const id = timedDraw(c);
+  if (id === null) return timedEnd(c, null);
+  state.options = [id];
+  state.offered.push(id);
+  open(state, c.data, c.io, 0);
+  t.shown_at = c.ms;
+}
+
+/** The session ends: `winner` won, every other seat still in lost; null: nobody wins (decision 280). */
+function timedEnd(c: Timed, winner: number | null): void {
+  for (const i of seatsIn(c.row)) c.row.seats![i].result = i === winner ? "won" : "lost";
+  c.state.phase = winner === null ? "lost" : "won";
+  c.t.claim = null;
+}
+
+interface Ending {
+  seat?: number;
+  chosen: number | null;
+  correct?: boolean;
+  /** The claim's time, or the question's end when unclaimed: what the hints shown count to. */
+  at: number;
+  timeout?: true;
+  unclaimed?: true;
+}
+
+/** A question ends: seen, logged; a correct answer at the last level wins, a wrong one puts the seat out; then the
+ * next question or the round end. */
+function questionEnd(c: Timed, e: Ending): void {
+  const { work, row, state, t, data, io } = c;
+  const q = question(data, state.current);
+  const { at, ...rest } = e;
+  see(work, q.id, row.id, io);
+  state.history.push({ level: state.level, question_id: q.id, ...rest, hints: Math.min(q.hints.length, Math.floor((at - t.shown_at) / HINT_MS)) });
+  const { correct: _, ...flags } = rest;
+  state.last = { ...flags, question_id: q.id, correct: e.correct ?? false, correct_index: state.answers.indexOf(q.answer) };
+  t.claim = null;
+  t.round_done += 1;
+  if (e.correct) {
+    t.round_correct.push(e.seat!);
+    if (state.level >= levelCount(state)) return timedEnd(c, e.seat!);
+  } else if (e.seat !== undefined) {
+    Object.assign(row.seats![e.seat], { out: true, result: "lost" });
+    const left = seatsIn(row);
+    if (left.length === 1) return timedEnd(c, left[0]);
+  }
+  if (t.round_done >= t.round_size) roundEnd(c);
+  else nextQuestion(c);
+}
+
+/** Seats in without a correct answer lose a life; then the end, the next level or, at the last, another sudden-death
+ * round (decision 281); the new round's size: seats in (decision 276). */
+function roundEnd(c: Timed): void {
+  const { row, state, t } = c;
+  for (const i of seatsIn(row)) {
+    if (t.round_correct.includes(i)) continue;
+    const seat = row.seats![i];
+    seat.lives = (seat.lives ?? LIVES) - 1;
+    if (seat.lives <= 0) Object.assign(seat, { out: true, result: "lost" });
+  }
+  const left = seatsIn(row);
+  if (left.length <= 1) return timedEnd(c, left[0] ?? null);
+  if (state.level < levelCount(state)) state.level += 1;
+  else t.repeat += 1;
+  Object.assign(t, { round_size: left.length, round_done: 0, round_correct: [] });
+  nextQuestion(c);
+}
+
+/** A passed deadline first in every timed action: a claim past `CLAIM_MS` is a wrong answer, an unclaimed question past
+ * `QUESTION_MS` ends (deadlines inclusive); true if one did. Not while paused. */
+function settle(c: Timed): boolean {
+  const { t } = c;
+  if (t.paused_at !== null) return false;
+  if (t.claim) {
+    if (c.ms <= t.claim.at + CLAIM_MS) return false;
+    questionEnd(c, { seat: t.claim.seat, chosen: null, correct: false, at: t.claim.at, timeout: true });
+  } else {
+    if (c.ms <= t.shown_at + QUESTION_MS) return false;
+    questionEnd(c, { chosen: null, at: t.shown_at + QUESTION_MS, unclaimed: true });
+  }
+  return true;
+}
+
+/** Claim the question on screen: `CLAIM_MS` to answer, the question clock stops; too late: the settled flow, no error. */
+export function claim(save: SaveData, data: EngineData, io: Io, seat?: unknown): { save: SaveData; state: GameState } {
+  return action(save, (work) => {
+    const { row } = running(work);
+    const who = actor(row, seat);
+    const c = timedOf(work, row, data, io, "claim");
+    if (!settle(c)) {
+      if (c.t.claim) throw new GameError("claim_taken");
+      c.t.claim = { seat: who, at: c.ms };
+    }
+    return timedSave(c);
+  });
+}
+
+/** The claimer's answer; late: settled as the timeout, not an error. */
+function timedAnswer(work: SaveData, row: GameRow, who: number, index: number, data: EngineData, io: Io): GameState {
+  const c = timedOf(work, row, data, io, "answer");
+  if (settle(c)) return timedSave(c);
+  const { t, state } = c;
+  if (!t.claim) throw new GameError("claim_first");
+  if (t.claim.seat !== who) throw new GameError("not_your_claim");
+  if (!(0 <= index && index < state.answers.length)) throw new GameError("answer_invalid", { n: index + 1 });
+  questionEnd(c, { seat: who, chosen: index, correct: state.answers[index] === question(data, state.current).answer, at: t.claim.at });
+  return timedSave(c);
+}
+
+/** The client's clock ran out: settle; nothing passed yet → `not_expired` with the ms left. */
+export function expire(save: SaveData, data: EngineData, io: Io): { save: SaveData; state: GameState } {
+  return action(save, (work) => {
+    const c = timedOf(work, running(work).row, data, io, "expire");
+    if (!settle(c)) {
+      const deadline = c.t.claim ? c.t.claim.at + CLAIM_MS : c.t.shown_at + QUESTION_MS;
+      throw new GameError("not_expired", { ms: deadline - c.ms });
+    }
+    return timedSave(c);
   });
 }
 

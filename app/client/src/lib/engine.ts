@@ -95,7 +95,7 @@ function localIsoSeconds(d = new Date()): string {
 }
 
 function io(): Io {
-  return { rng: seededRng(randomSeed()), now: localIsoSeconds() };
+  return { rng: seededRng(randomSeed()), now: localIsoSeconds(), ms: Date.now() };
 }
 
 /** Promise-chain mutex: one call at a time (was the server's _lock). */

@@ -119,6 +119,11 @@ interface HistoryEntry {
   jokers?: JokerName[];
   /** Who answered (sessions); missing = the row's one player. */
   seat?: number;
+  /** timed (plan 159): the answer picked (null: none), hints shown by then; a claim run out or nobody claimed. */
+  chosen?: number | null;
+  hints?: number;
+  timeout?: true;
+  unclaimed?: true;
 }
 
 /** A reveal (D-105): `chosen` null, `correct` false, `revealed`. */
@@ -130,6 +135,23 @@ interface LastAnswer {
   correct_index: number;
   /** In a session: who answered. */
   seat?: number;
+  /** timed: the claim ran out, or nobody claimed (`chosen` null, `correct` false). */
+  timeout?: true;
+  unclaimed?: true;
+}
+
+/** Competitive timed's shared question flow (plan 159); times in epoch ms. */
+export interface TimedState {
+  /** Seats in at the round's start (decision 276). */
+  round_size: number;
+  round_done: number;
+  /** Seats with a correct answer this round. */
+  round_correct: number[];
+  shown_at: number;
+  claim: { seat: number; at: number } | null;
+  paused_at: number | null;
+  /** Extra sudden-death rounds at the last level (decision 281). */
+  repeat: number;
 }
 
 export interface GameState {
@@ -148,6 +170,8 @@ export interface GameState {
   jokers: JokerName[];
   swapped_to: string | null;
   repeat: boolean;
+  /** timed only. */
+  timed?: TimedState;
   /** age_group / bundles / mode: only when the new game's request carried them (plan 27, plan 36);
    * missing mode = gamemaster. `customized`: outside gamemaster mode only. D-88: `difficulty` (then no
    * age_group), `levels` (missing 12), `cards` (missing 4), `video` / `audio` (only false; missing = allowed); D-105: `answers` (only false; missing = on). */
@@ -239,6 +263,12 @@ const ERRORS: Record<string, string | ((p: Params) => string)> = {
   answers_on: "the answer is only revealed with answers off",
   answers_off: "answers are off: reveal the answer",
   snipe_answers_off: "answers are off",
+  claim_taken: "another seat has claimed the question",
+  claim_first: "claim the question first",
+  not_your_claim: "another seat claimed the question",
+  not_expired: (p) => `the clock still runs (${p.ms} ms left)`,
+  timed_no_jokers: "no jokers in timed mode",
+  timed_only: (p) => `${p.action} only in timed mode`,
   cheat_not_select: (p) => `${p.action} only with the cards on the table`,
   language_unknown: (p) => `no language ${pyRepr(String(p.lang))}`,
 };
@@ -267,6 +297,8 @@ export class GameError extends Error {
 export interface Io {
   rng: Rng;
   now: string;
+  /** Epoch ms of the action (timed's clock, plan 159); missing = `now`. */
+  ms?: number;
 }
 
 /** Display names of one locale (D-81): base's names file merged with every bundle's. */
