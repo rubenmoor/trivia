@@ -16,6 +16,16 @@
     return [...bundles].sort((a, b) => rank(a) - rank(b));
   }
 
+  /** The count a tile shows (decision 267): shipped bundles fixed 5000+ (base) / 2000+, a mod's own count rounded
+   * down (hundreds from 100, tens from 10), capped at the fixed string of its kind. */
+  export function countShown(b: Bundle): { n: number; plus: boolean } {
+    const cap = b.base ? 5000 : 2000;
+    const n = b.count;
+    if (n === undefined || n >= cap) return { n: cap, plus: true };
+    const n10 = n >= 100 ? Math.floor(n / 100) * 100 : n >= 10 ? Math.floor(n / 10) * 10 : n;
+    return { n: n10, plus: n10 !== n };
+  }
+
   /** One key per bundle (plan 29): the first letter of its name (after a «Regional:»-style prefix), accents
    * stripped, not taken by an earlier bundle nor in `reserved`, else the name's next letter; "" if none is left. */
   export function bundleKeys(names: string[], reserved: string[]): string[] {
@@ -32,8 +42,8 @@
 
 <script lang="ts">
   // Shared bundle selector (D-88): every bundle a toggle, base ones apart from the others; any combination
-  // (plan 151). Bundles screen in every mode (plan 151): two columns, names only, the optional
-  // column scrolls with focus; «Ajustes de la partida» (MD-12): compact, with descriptions.
+  // (plan 151). Bundles screen in every mode (plan 151): narrow base column, ruler, flowing optional
+  // tiles (names, counts) that scroll with focus; «Ajustes de la partida» (MD-12): compact, with descriptions.
   import { playerRegion } from "../lib/desktop.ts";
   import { t } from "../lib/i18n.ts";
   import Flags from "./Flags.svelte";
@@ -57,7 +67,7 @@
     keyOf?: (b: Bundle) => string;
     /** Animation index of the first tile. */
     first?: number;
-    /** The Bundles screen's two columns. */
+    /** The Bundles screen's layout. */
     large?: boolean;
     onchange: (ids: string[]) => void;
   } = $props();
@@ -93,8 +103,7 @@
 
 {#if large}
   <div class="bundles large" data-line>
-    <div class="column">
-      <h2 class="heading">{t("bundles.baseHeading")}</h2>
+    <div class="column base">
       <div class="group">
         {#each base as b, i (b.id)}
           {@render tile(b, first + i)}
@@ -102,10 +111,10 @@
       </div>
     </div>
     {#if others.length}
+      <span class="ruler"></span>
       <div class="column">
-        <h2 class="heading">{t("bundles.extraHeading")}</h2>
         <div
-          class="group scroll"
+          class="group grid scroll"
           class:cut-top={cutTop}
           class:cut-bottom={cutBottom}
           bind:this={list}
@@ -157,7 +166,13 @@
       {#if b.region}<Flags country={b.country} />{:else}<Icon name={b.source === "mod" ? "puzzle" : b.base ? "book" : "pin"} />{/if}
       {b.name}
     </span>
-    <span class="switch label">{t(on ? "choice.on" : "choice.off")}</span>
+    {#if large}
+      {@const c = countShown(b)}
+      <span class="label count">{t(c.plus ? "bundles.countPlus" : "bundles.count", { n: c.n })}</span>
+      {#if on}<span class="check"><Icon name="check" /></span>{/if}
+    {:else}
+      <span class="switch label">{t(on ? "choice.on" : "choice.off")}</span>
+    {/if}
     {#if !large}<span class="label description">{b.description}</span>{/if}
     {#if b.source === "mod"}<span class="label made"><Icon name="puzzle" /> {t("bundles.playerMade", { mod: b.modName ?? "" })}</span>{/if}
   </button>
@@ -232,34 +247,41 @@
   .made {
     color: var(--amber);
   }
-  /* Bundles screen: two columns of one tile per row; the optional column scrolls (plan 151). */
+  /* Bundles screen (plan 151): a narrow base column, a ruler, fixed-width optional tiles flowing in a grid that
+     scrolls with a fade at a cut edge. */
   .bundles.large {
     flex-wrap: nowrap;
     align-items: stretch;
-    gap: calc(4 * var(--u));
+    gap: calc(2.4 * var(--u));
     min-height: 0;
-    max-width: none;
+    max-width: calc(100 * var(--u));
   }
   .column {
     display: flex;
     flex-direction: column;
-    gap: calc(0.8 * var(--u));
-    width: calc(36 * var(--u));
     min-height: 0;
   }
-  .heading {
-    margin: 0;
-    font-size: calc(1.4 * var(--u));
-    color: var(--slate-400);
-    text-align: left;
-    padding-left: calc(0.8 * var(--u));
-  }
   .large .group {
+    padding: calc(0.6 * var(--u));
+  }
+  .large .base .group {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-start;
     gap: calc(1 * var(--u));
-    padding: calc(0.6 * var(--u));
+  }
+  .ruler {
+    flex: none;
+    width: calc(0.15 * var(--u));
+    background: var(--slate-600);
+    border-radius: calc(0.1 * var(--u));
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, calc(26 * var(--u)));
+    justify-content: start;
+    align-content: start;
+    gap: calc(1 * var(--u));
   }
   .scroll {
     min-height: 0;
@@ -277,19 +299,44 @@
     --fb: calc(4 * var(--u));
   }
   .large .tile {
+    position: relative;
     max-width: none;
     min-width: 0;
-    padding: calc(1.2 * var(--u)) calc(1.8 * var(--u));
+    padding: calc(1 * var(--u)) calc(3.4 * var(--u)) calc(1 * var(--u)) calc(1.4 * var(--u));
     row-gap: calc(0.2 * var(--u));
   }
-  .large .tile.on,
   .large .tile:hover:not(:disabled) {
+    transform: translateY(calc(-0.3 * var(--u)));
+    border-color: var(--slate-400);
+  }
+  .large .tile.on,
+  .large .tile.on:hover:not(:disabled) {
     transform: none;
+    background: var(--sky);
+    border-color: var(--sky);
+  }
+  .large .tile.on:hover:not(:disabled) {
+    transform: translateY(calc(-0.3 * var(--u)));
+  }
+  .large .bundle.on .name-text,
+  .large .bundle.on .count {
+    color: var(--ink);
+    text-shadow: none;
   }
   .large .name-text {
-    font-size: calc(2.4 * var(--u));
+    font-size: calc(1.9 * var(--u));
   }
   .large .label {
-    font-size: calc(1.3 * var(--u));
+    font-size: calc(1.2 * var(--u));
+  }
+  .count {
+    color: var(--slate-400);
+  }
+  .check {
+    position: absolute;
+    top: calc(0.5 * var(--u));
+    right: calc(0.6 * var(--u));
+    width: calc(2 * var(--u));
+    color: var(--ink);
   }
 </style>

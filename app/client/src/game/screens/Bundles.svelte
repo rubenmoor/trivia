@@ -1,6 +1,6 @@
 <script lang="ts">
   // The Bundles screen (plans/04-ui-tv-display.md, "Bundles"; plan 151, decisions 158, 264): «¿Qué preguntas
-  // juega …?», after Choice in every mode; «¡A jugar!» starts the game. The shared BundleSelector, two columns; any
+  // juega …?», after Choice in every mode; «¡A jugar!» starts the game. The shared BundleSelector, base column and flowing tiles; any
   // combination, base bundles toggle too. Preset: the player's newest game's bundles, else the locale's first base bundle (decision 33).
   // The supply of the whole choice (Choice's picks + bundles) is checked on every toggle: report and disabled start
   // when short (decisions 206, 268); the running-out notice (plan 65, decision 31) comes before level 1.
