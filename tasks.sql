@@ -585,7 +585,8 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 
 ## Constraints
 - On hold until the gamemaster starts it (pending decision on the masterplan task).
-- No native speaker in the family: review needs paid or volunteer native reviewers; plan who and how before generating.
+- Translations without human control, as in milestone 9 (developer, 2026-10-16): no native reviewers; replaces decision 220 (volunteer reviewers) and decision 221 (offline review sheet).
+- zh-drafted `chinese-base` questions are translated to en; the developer''s spot check of their batches works on the en translation (source zh alongside), as for any draft batch (decision 2).
 
 ## Out of scope
 - Languages beyond these three.
