@@ -3,7 +3,7 @@
   // Start → Player → Choice → Bundles → Level → Select → Question → Correct / Wrong → … → Victory (answers off, D-105:
   // Question → Next → … → Completed), with one transition routine and the admin overlay on Esc. The engine
   // keeps the game (engine/, lib/api.ts).
-  import { onDestroy, onMount, tick } from "svelte";
+  import { onDestroy, onMount, tick, untrack } from "svelte";
   import { fetchFlags, fetchGame, gameAction, noteRunningOut, playJoker, setFlag, type GameActionBody } from "../lib/api.ts";
   import { isOurs } from "../engine/pool.ts";
   import { GameError } from "../lib/http.ts";
@@ -14,6 +14,7 @@
   import { t } from "../lib/i18n.ts";
   import { listenPads } from "../lib/gamepad.svelte.ts";
   import { listen, pushScope, type Action } from "../lib/input.svelte.ts";
+  import { watchGame } from "../lib/seats.svelte.ts";
   import { emit, loadedMods, watchLayers, type ModLayer } from "../lib/mods.ts";
   import type { Game, GameMode, JokerBudget, JokerEvent, Flagged } from "../lib/types.ts";
   import FlagDialog from "./FlagDialog.svelte";
@@ -595,7 +596,14 @@
       handle: (a) => onScreen(on, a),
       root: () => main,
       keep: on === "start",
+      shared: on === "wrong" || on === "victory" || on === "completed",
     });
+  });
+
+  // Local multiplayer: the running session's seats filter input (plan 161).
+  $effect(() => {
+    const g = game;
+    untrack(() => watchGame(g));
   });
 
   // Steam rich presence «Nivel 7 de 12» while playing (plan 85).

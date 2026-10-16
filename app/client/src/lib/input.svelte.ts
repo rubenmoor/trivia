@@ -1,8 +1,11 @@
 // The action layer (plans/14-input.md, IN-2; plan 44): keys and pad buttons (gamepad.svelte.ts) become
-// actions, and the top scope of a stack gets them. The only keydown listener of the client.
+// actions, and the top scope of a stack gets them. The only keydown listener of the client. In a local multiplayer
+// session only the seat that may act gets through (plan 161, seats.ts).
 import { untrack } from "svelte";
 import { forget, keyPressed, navigate, opener, press, show, track } from "./focus.ts";
 import { t } from "./i18n.ts";
+import { may, seatOf, type Source } from "./seats.ts";
+import { acting, seating } from "./seats.svelte.ts";
 import type { JokerName } from "./types.ts";
 
 export type Device = "keyboard" | "mouse" | "gamepad";
@@ -25,7 +28,7 @@ export type Intent =
   | { type: "peek"; down: boolean }
   /** A screen's own letter key (a bundle on Choice); `key` lower case. */
   | { type: "letter"; key: string };
-export type Action = Intent & { device: Device };
+export type Action = Intent & { device: Device; source: Source };
 /** A scope's extra keys, lower case (e.g. `n` → new on Start). */
 export type Keys = Record<string, Intent>;
 
@@ -48,6 +51,8 @@ export type Scope = {
   pad?: () => Record<number, Intent>;
   /** A letter no scope wants focuses this field and goes into it (Player). */
   text?: () => HTMLInputElement | undefined;
+  /** In a session every device drives it and what opens above it (Esc menu, flag dialog, results; decision 288). */
+  shared?: boolean;
 };
 
 export const lastDevice = $state({ current: "keyboard" as Device });
@@ -133,24 +138,45 @@ export function focusControl(el: HTMLElement | null | undefined) {
   else show(el);
 }
 
+/** The seat `source` acts for and whether it may act now (plan 161); outside a session every device acts, for no seat.
+ * `menu` and shared scopes take everyone. */
+export function gate(source: Source, intent?: Intent): { ok: boolean; seat: number | null } {
+  const view = seating.view;
+  if (!view) return { ok: true, seat: null };
+  const seat = seatOf(source, intent, view, seating.binding);
+  return { ok: intent?.type === "menu" || stack.some((s) => s.shared) || may(seat, view), seat };
+}
+
 let busy = () => false;
-/** A peek is held; its key, if a key started it. */
+/** A peek is held; its key, if a key started it; the source that holds it. */
 let holding = false;
 let holdKey: string | null = null;
+let holdSource: Source = "keyboard";
 
-/** Run an action through the scopes, top first; true if one handled it. The gamepad loop calls it too. */
+/** Run an action through the scopes, top first; true if one handled it. The gamepad loop calls it too. A dropped
+ * action (another seat's turn) does nothing. */
 export function dispatch(action: Action): boolean {
-  if (action.type !== "peek") return route(action);
-  if (!action.down && !holding) return false;
-  const done = route(action);
-  holding = action.down && done;
-  return done;
+  const letGo = action.type === "peek" && !action.down;
+  const { ok, seat } = gate(action.source, action);
+  if (!ok && !letGo) return false;
+  const was = acting.seat;
+  acting.seat = seat;
+  try {
+    if (action.type !== "peek") return route(action);
+    if (letGo && !holding) return false;
+    const done = route(action);
+    holding = action.down && done;
+    if (holding) holdSource = action.source;
+    return done;
+  } finally {
+    acting.seat = was;
+  }
 }
 
 /** Ends a held peek (blur, hidden page, pad gone, a modal scope). */
 export function release() {
   holdKey = null;
-  if (holding) dispatch({ type: "peek", down: false, device: lastDevice.current });
+  if (holding) dispatch({ type: "peek", down: false, device: lastDevice.current, source: holdSource });
 }
 
 function route(action: Action): boolean {
@@ -185,12 +211,13 @@ function keydown(e: KeyboardEvent, first: () => void) {
   keyPressed(e.key);
   if (e.repeat) return;
   first();
-  lastDevice.current = "keyboard";
-  resetTravel();
   const text = textField(document.activeElement);
   const keys = Object.assign({}, ...stack.map((s) => s.keys ?? {}));
   const intent = toIntent(e, keys, text);
-  if (intent && dispatch({ ...intent, device: "keyboard" })) {
+  if (!gate("keyboard", intent ?? undefined).ok) return e.preventDefault(); // no Tab focus move either
+  lastDevice.current = "keyboard";
+  resetTravel();
+  if (intent && dispatch({ ...intent, device: "keyboard", source: "keyboard" })) {
     if (intent.type === "peek") holdKey = e.key.toLowerCase();
     return e.preventDefault();
   }
@@ -216,19 +243,35 @@ function pointermove(e: PointerEvent) {
   if (e.pointerType !== "mouse") return;
   const from = seen;
   seen = [e.screenX, e.screenY];
-  if (!from || lastDevice.current === "mouse") return;
+  if (!from || lastDevice.current === "mouse" || !gate("mouse").ok) return;
   travel += Math.hypot(seen[0] - from[0], seen[1] - from[1]); // 0 for a synthetic move
   if (travel >= MOVE_PX) lastDevice.current = "mouse";
+}
+
+/** Capture phase, before any handler: in a session a click of a seat that may not act is dropped; an accepted one
+ * runs as its seat. `[data-shared]` controls (the menu button) and `el.click()` from a pad's confirm always pass. */
+function gateClick(e: Event) {
+  if (!e.isTrusted || (e.target instanceof Element && e.target.closest("[data-shared]"))) return;
+  const { ok, seat } = gate("mouse");
+  if (!ok) {
+    e.preventDefault();
+    e.stopImmediatePropagation();
+  } else if (e.type === "click" && seat !== null) {
+    acting.seat = seat;
+    setTimeout(() => (acting.seat = null)); // after every handler of this click
+  }
 }
 
 /** Start listening (Game.svelte, once); `first` runs on every key and click (audio unlock). */
 export function listen(opts: { busy: () => boolean; first: () => void }): () => void {
   busy = opts.busy;
   const onkey = (e: KeyboardEvent) => keydown(e, opts.first);
-  const onpointer = () => (lastDevice.current = "mouse");
+  const onpointer = () => gate("mouse").ok && (lastDevice.current = "mouse");
   const onkeyup = (e: KeyboardEvent) => e.key.toLowerCase() === holdKey && release();
   const onhidden = () => document.hidden && release();
   const untrackFocus = track();
+  window.addEventListener("pointerdown", gateClick, true);
+  window.addEventListener("click", gateClick, true);
   window.addEventListener("keydown", onkey);
   window.addEventListener("keyup", onkeyup);
   window.addEventListener("blur", release);
@@ -239,6 +282,8 @@ export function listen(opts: { busy: () => boolean; first: () => void }): () => 
   window.addEventListener("focusin", bump);
   window.addEventListener("focusout", bump);
   return () => {
+    window.removeEventListener("pointerdown", gateClick, true);
+    window.removeEventListener("click", gateClick, true);
     window.removeEventListener("keydown", onkey);
     window.removeEventListener("keyup", onkeyup);
     window.removeEventListener("blur", release);

@@ -83,7 +83,7 @@ export function styleOf(id: string): PadStyle {
   return /054c|playstation|dualshock|dualsense|wireless controller/i.test(id) ? "playstation" : "xbox";
 }
 
-/** Steam's pad types → one set: all PlayStation → playstation, mixed → xbox (per player: IN-6); none → null. */
+/** Steam's pad types → one set: all PlayStation → playstation, else xbox; none → null. Per pad: `styleFor` in gamepad.svelte.ts. */
 export function steamStyle(types: readonly PadStyle[] | null): PadStyle | null {
   if (!types?.length) return null;
   return types.every((t) => t === "playstation") ? "playstation" : "xbox";

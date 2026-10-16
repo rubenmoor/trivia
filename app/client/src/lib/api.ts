@@ -9,6 +9,7 @@ import { newest, withDefaults, type EngineData, type SaveData } from "../engine/
 import { messageOf } from "./http.ts";
 import { language as fetchLanguage, nextLocale, read, run, type DataScope, type Route } from "./engine.ts";
 import { emit, runAfter, runBefore } from "./mods.ts";
+import { actingSeat } from "./seats.svelte.ts";
 import type { Choice, Difficulty, Flagged, Game, GameMode, JokerBudget, JokerEvent, JokerName, Language, Player, Supply } from "./types.ts";
 
 // The game's only door to the referee: the TS engine on an in-memory save, persisted by lib/store.ts (plan 50, PORT-7).
@@ -72,8 +73,10 @@ export async function fetchGame(): Promise<{ game: Game | null }> {
 
 /** The body of a game action: `index` for pick/answer, `player` for new, `everyone` for skip (D-28),
  * `jokers` for the joker budget (MD-4); new: the configuration (D-88); cheats (MD-12): `seen` for
- * replace, `level` for level, age_group / difficulty / bundles / answers for settings; `id` for goto (dev mode). */
+ * replace, `level` for level, age_group / difficulty / bundles / answers for settings; `id` for goto (dev mode);
+ * `seat`: the acting seat in a session (plan 161), set by `hooked`. */
 export interface GameActionBody {
+  seat?: number;
   index?: number;
   player?: string;
   everyone?: boolean;
@@ -209,9 +212,11 @@ interface Before {
   game: Game | null;
 }
 
-/** An engine action between the mods' `before` and `after` hooks; emits the game events. */
+/** An engine action between the mods' `before` and `after` hooks; emits the game events. In a session the body
+ * names the acting seat, read before the first await (plan 161). */
 async function hooked(action: string, input: object, scope: DataScope): Promise<{ game: Game | null; event?: JokerEvent }> {
-  const body = runBefore(action, { ...input });
+  const seat = actingSeat();
+  const body = runBefore(action, { ...(seat === null ? {} : { seat }), ...input });
   const seen: { before: Before | null } = { before: null };
   const route: Route<{ game: Game | null; event?: JokerEvent }> = (save, data, io) => {
     const row = newest(save.games);

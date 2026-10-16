@@ -8,7 +8,7 @@
   import { errorText } from "../../lib/errors.ts";
   import { t } from "../../lib/i18n.ts";
   import { displayName, questionLocale } from "../../lib/names.svelte.ts";
-  import { focusControl, pushScope, type Action, type Dir, type Intent, type Keys } from "../../lib/input.svelte.ts";
+  import { focusControl, pushScope, type Action, type Dir, type Intent } from "../../lib/input.svelte.ts";
   import type { Game, JokerBudget, JokerEvent, JokerName, Jokers } from "../../lib/types.ts";
   import CategoryPicker from "../CategoryPicker.svelte";
   import DifficultyDial from "../DifficultyDial.svelte";
@@ -16,11 +16,12 @@
   import JokerFlight from "../JokerFlight.svelte";
   import JokerTray from "../JokerTray.svelte";
   import Prompt from "../Prompt.svelte";
-  import { jokerIcon, TOKENS } from "../jokers.ts";
+  import { jokerIcon } from "../jokers.ts";
   import { DEFAULT_LEVELS, onTwelve } from "../levels.ts";
-  import Answers, { LETTERS } from "../question/Answers.svelte";
+  import Answers from "../question/Answers.svelte";
   import Card from "../question/Card.svelte";
   import FinalAnswer from "../question/FinalAnswer.svelte";
+  import { questionKeys } from "../question/keys.ts";
   import Media from "../question/Media.svelte";
   import Scope from "../question/Scope.svelte";
   import SkipDialog from "../question/SkipDialog.svelte";
@@ -326,13 +327,7 @@
   }
 
   // Input (lib/input.svelte.ts): A–D/1–4 pick, joker letters, R replay; dialogs and aiming are modal.
-  const REPLAY_KEY = t("screen.question.replayKey");
-  const KEYS: Keys = {
-    ...Object.fromEntries(TOKENS.map((t) => [t.key.toLowerCase(), { type: "joker", name: t.name }])),
-    ...Object.fromEntries(LETTERS.map((l, i) => [l.toLowerCase(), { type: "pick", n: i + 1 }])),
-    [REPLAY_KEY.toLowerCase()]: { type: "replay" },
-    [t("screen.question.peekKey").toLowerCase()]: { type: "peek", down: true },
-  };
+  const KEYS = questionKeys();
   // Pad (decision 9): Y/B/X/A pick by position, RT submits, LT unlocks; on a token A/B are confirm/back.
   const PAD_PICKS: Record<number, Intent> = Object.fromEntries([3, 1, 2, 0].map((b, i) => [b, { type: "pick", n: i + 1 }]));
   const PAD_FINAL: Record<number, Intent> = { 6: { type: "back" }, 7: { type: "submit" }, 11: { type: "peek", down: true } };

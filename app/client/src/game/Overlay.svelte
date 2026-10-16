@@ -332,7 +332,7 @@
     return true;
   }
 
-  $effect(() => pushScope({ name: "overlay", handle, modal: true, whileBusy: true }));
+  $effect(() => pushScope({ name: "overlay", handle, modal: true, whileBusy: true, shared: true }));
 
   let menu = $state<HTMLElement>();
   /** A menu taller than the screen scrolls (B-17): keep the selected row in view. */

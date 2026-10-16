@@ -40,6 +40,7 @@
     const pop = pushScope({
       name: "flag-dialog",
       modal: true,
+      shared: true,
       whileBusy: true,
       root: () => dialog,
       text: () => input,
