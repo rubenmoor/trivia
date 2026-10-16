@@ -289,8 +289,6 @@ const es = {
     groups: "Edad",
     ages: "{lo}–{hi} años",
     agesFrom: "{lo}+ años",
-    /** A group whose window can't fill a game with these bundles. */
-    short: "Faltan preguntas",
     on: "activado",
     off: "desactivado",
     start: "¡A jugar!",

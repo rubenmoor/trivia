@@ -254,7 +254,6 @@ export const en = {
     groups: "Age",
     ages: "{lo}–{hi} years",
     agesFrom: "{lo}+ years",
-    short: "Not enough questions",
     on: "on",
     off: "off",
     start: "Let's play!",

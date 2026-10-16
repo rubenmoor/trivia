@@ -92,36 +92,22 @@ async function gameplay(lang, saveDir, data, ui) {
   await shoot(lang, "joker-snipe");
 }
 
-/** Start → player → the Bundles screen. */
-async function toBundles(saveDir, data, ui) {
+/** Start → player → the Choice screen in `mode`. */
+async function toChoice(saveDir, data, ui, mode) {
   await load(saveDir, baseSave(ui, data.locale));
   await click("button.candy");
   await waitFor(visibleEl(".name-button"), "player screen");
   await sleep(800);
   await click(".name-button");
-  await waitFor(visibleEl('[data-focus-id="next"]'), "bundles screen");
-}
-
-/** Bundles → the Choice screen in `mode`. */
-async function toChoice(mode) {
-  await click('[data-focus-id="next"]');
+  await waitFor(visibleEl(`[data-focus-id="mode-${mode}"]`), "choice screen");
   await click(`[data-focus-id="mode-${mode}"]`);
 }
 
 const focus = (sel) => evaluate(`document.querySelector(${JSON.stringify(sel)}).focus()`);
 
-/** The 5 informative shots (decision 79): modes, bundles, Customize game, configure screen, joker presets. */
+/** The 5 informative shots (decision 79): modes, Customize game, configure screen, joker presets, bundles (the last screen before the game). */
 async function menus(lang, saveDir, data, ui) {
-  await toBundles(saveDir, data, ui);
-  const pack = '[data-focus-id="bundle-colombia"]';
-  if (await evaluate(`!!document.querySelector(${JSON.stringify(pack)})`)) {
-    await click(pack);
-    await focus(pack);
-  }
-  await sleep(1200);
-  await shoot(lang, "bundles");
-
-  await toChoice("solo");
+  await toChoice(saveDir, data, ui, "solo");
   await click('[data-focus-id="group-young_teens"]');
   await sleep(3000);
   await shoot(lang, "modes");
@@ -131,8 +117,7 @@ async function menus(lang, saveDir, data, ui) {
   await sleep(1200);
   await shoot(lang, "customize");
 
-  await toBundles(saveDir, data, ui);
-  await toChoice("gamemaster");
+  await toChoice(saveDir, data, ui, "gamemaster");
   await waitFor(visibleEl('[data-focus-id="config-preset"]'), "configure screen");
   await sleep(2500);
   await shoot(lang, "configure");
@@ -141,46 +126,14 @@ async function menus(lang, saveDir, data, ui) {
   await focus('[data-focus-id="config-preset"]');
   await sleep(1000);
   await shoot(lang, "joker-presets");
-}
 
-// Main ---------------------------------------------------------------------------------------
-
-async function main() {
-  if (!existsSync(path.join(REPO, "app", "client", "dist", "index.html"))) throw new Error("client not built: npm run build");
-  const es = loadData("es");
-  for (const id of Object.values(Q)) {
-    const url = es.byId.get(id)?.media?.file_url;
-    if (!url) throw new Error(`${id}: not in the pool or no media; pick another in Q`);
-    if (!existsSync(path.join(MEDIA, cacheName(url)))) throw new Error(`${id}: media not cached: trivia-media sync --status approved`);
+  await click('[data-focus-id="next"]');
+  await waitFor(visibleEl('[data-focus-id="start"]'), "bundles screen");
+  const pack = '[data-focus-id="bundle-colombia"]';
+  if (await evaluate(`!!document.querySelector(${JSON.stringify(pack)})`)) {
+    await click(pack);
+    await focus(pack);
   }
-
-  // dev user: saves and flags on under the gate (plan 87), no notice
-  const shell = await launchShell({ name: "shots", width: W, height: H, visible, env: { TRIVIA_DEV_STEAM_USER: "1" } });
-  const tmp = shell.saveDir;
-  try {
-    page = shell.page;
-    ({ evaluate, waitFor, click } = pageHelpers(page));
-    await page.send("Emulation.setDeviceMetricsOverride", { width: W, height: H, deviceScaleFactor: 1, mobile: false });
-
-    const followUp = [];
-    for (const ui of LANGS) {
-      console.log(ui);
-      await rm(path.join(OUT, ui), { recursive: true, force: true });
-      await mkdir(path.join(OUT, ui), { recursive: true });
-      const own = loadData(ui.split("-")[0]);
-      const data = own ?? es; // menu shots on the es pool show no question text
-      if (own) await gameplay(ui, tmp, data, ui);
-      else followUp.push(ui);
-      await menus(ui, tmp, data, ui);
-    }
-    console.log(`${shots.length} screenshots in ${path.relative(REPO, OUT)}/`);
-    if (followUp.length) console.log(`no question pool for ${followUp.join(", ")}: the 2 question shots skipped (decision 80); re-run once it lands`);
-  } finally {
-    await shell.stop();
-  }
+  await sleep(1200);
+  await shoot(lang, "bundles");
 }
-
-main().catch((e) => {
-  console.error(`screenshots: ${e.message}`);
-  process.exitCode = 1;
-});

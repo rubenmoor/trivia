@@ -448,11 +448,7 @@ def choice(r):
     r.wait(".name-button")
     r.settle(0.8)
     r.click(".name-button")
-    r.wait('[data-focus-id="next"]:enabled')  # force-click ignores disabled (busy)
-    r.settle(1.5)
-    r.shot("bundles")
-    r.click('[data-focus-id="next"]')
-    r.wait('[data-focus-id="mode-gamemaster"]:enabled')
+    r.wait('[data-focus-id="mode-gamemaster"]:enabled')  # force-click ignores disabled (busy)
     r.click('[data-focus-id="mode-gamemaster"]')
     r.wait(".config")
     r.settle(1.5)
@@ -467,8 +463,12 @@ def choice(r):
     r.shot("customize")
     r.key("Escape")
     r.settle(0.6)
+    r.click('[data-focus-id="next"]')
+    r.wait('[data-focus-id="start"]:enabled')
+    r.settle(1.5)
+    r.shot("bundles")
     r.click('[data-focus-id="start"]')
-    r.wait(".choice .title.hello", 5000)
+    r.wait(".bundles-screen .title.hello", 5000)
     r.settle(0.2)
     r.shot("greeting")
 
@@ -494,9 +494,9 @@ def supply(r):
     r.click(".name-button")
     r.wait('[data-focus-id="next"]:enabled')
     r.click('[data-focus-id="next"]')
-    r.wait(".choice .supply")
+    r.wait(".bundles-screen .supply")
     r.settle(1.2)
-    r.shot("choice-supply-report")
+    r.shot("bundles-supply-report")
 
 
 def table(r):
@@ -650,8 +650,8 @@ STEPS = [
     (["language", "consent"], first_start),
     (["start", "language-from-start", "start-resume", "start-save-notice"], start),
     (["player", "player-delete-confirm", "letter-picker"], player),
-    (["bundles", "choice-gamemaster", "choice-solo", "customize", "greeting"], choice),
-    (["supply-notice", "choice-supply-report"], supply),
+    (["choice-gamemaster", "choice-solo", "customize", "bundles", "greeting"], choice),
+    (["supply-notice", "bundles-supply-report"], supply),
     (["level", "select", "game-settings"], table),
     (["question", "question-locked", "joker-hint-armed", "joker-hint", "joker-skip", "joker-category", "joker-snipe",
       "joker-easier"], question),

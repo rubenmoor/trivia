@@ -254,7 +254,6 @@ export const de = {
     groups: "Alter",
     ages: "{lo}–{hi} Jahre",
     agesFrom: "ab {lo} Jahren",
-    short: "Zu wenige Fragen",
     on: "an",
     off: "aus",
     start: "Los geht’s!",

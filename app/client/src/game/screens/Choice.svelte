@@ -1,83 +1,65 @@
 <script lang="ts">
   // The Choice screen (plans/04-ui-tv-display.md, "Choice"; plan 29, AG-7, BN-6): «¿Cómo juega …?»,
-  // between Bundles and Level. Mode row (MD-7); gamemaster mode: the configure game screen (MD-11, D-88):
+  // between Player and Bundles. Mode row (MD-7); gamemaster mode: the configure game screen (MD-11, D-88):
   // difficulty, levels, cards, video, audio, answers (D-105), jokers; «Solo o en grupo»: age group (1–4) and «Personalizar partida»
-  // (joker counts). The bundles come from the Bundles screen, shown as a read-only line (decision 260). Preset: `?mode=`,
-  // the player's newest game (every field but the bundles), else the defaults. ↑/↓ move between lines, ←/→ change a value.
-  import { onMount } from "svelte";
+  // (joker counts). «Seguir» goes to the Bundles screen, which holds the supply report and starts the game (decision 264).
+  // Preset: `?mode=`, the player's newest game (every field but the bundles), else the defaults; a returning draft wins. ↑/↓ move between lines, ←/→ change a value.
+  import { onMount, untrack } from "svelte";
   import {
-    BUILT_MODES, CARDS_MAX, DEFAULT_AGE_GROUP, DIFFICULTY_MAX, fetchChoice, fetchChoiceOptions, fetchOutlook, fetchPlayerMode,
-    LEVELS_MAX, STANDARD_JOKERS, type ChoiceBody, type ChoiceOptions, type Outlook,
+    BUILT_MODES, CARDS_MAX, DEFAULT_AGE_GROUP, fetchChoice, fetchChoiceOptions, fetchPlayerMode, LEVELS_MAX, type ChoiceOptions,
   } from "../../lib/api.ts";
-  import { GameError } from "../../lib/http.ts";
   import { errorText } from "../../lib/errors.ts";
   import { candidates, show } from "../../lib/focus.ts";
   import { t } from "../../lib/i18n.ts";
   import { pushScope, type Keys } from "../../lib/input.svelte.ts";
-  import type { Difficulty, GameMode, JokerBudget, JokerName, Supply } from "../../lib/types.ts";
+  import type { GameMode, JokerName } from "../../lib/types.ts";
   import Customize from "../Customize.svelte";
   import { presetOf, stepPreset, stepUses, TOKENS } from "../jokers.ts";
   import { clamp, spanOf, stepDifficulty } from "../difficulty.ts";
-  import { DEFAULT_LEVELS } from "../levels.ts";
+  import { defaultDraft, type ChoiceDraft } from "../choiceDraft.ts";
   import Icon, { type IconName } from "../Icon.svelte";
   import Prompt from "../Prompt.svelte";
-  import SupplyNotice, { worthShowing } from "../SupplyNotice.svelte";
-  import SupplyReport from "../SupplyReport.svelte";
 
   let {
     player,
-    bundles,
     busy,
-    greeting,
-    refused,
-    onstart,
+    draft,
+    onnext,
     onback,
   }: {
     player: string;
-    /** Picked on the Bundles screen. */
-    bundles: string[];
     busy: boolean;
-    /** The name while «¡Hola, …!» plays into the transition, else null. */
-    greeting: string | null;
-    /** Why the last `new` was refused (supply, `base_bundle_count`, `bundle_not_offered`), or null. */
-    refused: GameError | null;
-    /** `runningOut`: the bundles the supply notice showed (plan 65). */
-    onstart: (choice: ChoiceBody & { mode: GameMode }, runningOut: string[]) => void;
+    /** The picks kept in Game.svelte from an earlier visit (Back from Bundles), else null: the preset applies. */
+    draft: ChoiceDraft | null;
+    onnext: (draft: ChoiceDraft) => void;
     onback: () => void;
   } = $props();
 
+  const start = untrack(() => draft) ?? defaultDraft();
   let options = $state<ChoiceOptions | null>(null);
-  let group = $state(DEFAULT_AGE_GROUP);
-  let mode = $state<GameMode>("gamemaster");
+  let group = $state(start.group);
+  let mode = $state<GameMode>(start.mode);
   /** «Solo o en grupo»'s joker counts; a difference from the standard set makes the game customized. */
-  let jokers = $state<JokerBudget>({ ...STANDARD_JOKERS });
+  let jokers = $state(start.jokers);
   let customizing = $state(false);
   /** Gamemaster mode's fields (D-88); `custom`: the difficulty instead of the group. */
-  let custom = $state(false);
-  let difficulty = $state<Difficulty>({ start: 1, end: DIFFICULTY_MAX });
-  let levels = $state(DEFAULT_LEVELS);
-  let cards = $state(CARDS_MAX);
-  let video = $state(true);
-  let audio = $state(true);
-  let answers = $state(true);
-  let budget = $state<JokerBudget>({ ...STANDARD_JOKERS });
-  /** The supply of the current choice; null while unknown or refused. */
-  let supply = $state<Supply | null>(null);
-  /** Why the engine refuses the current choice (zero or two base bundles). */
-  let reason = $state<string | null>(null);
-  /** Groups that can't fill a game with the current bundles. */
-  let short = $state<Record<string, boolean>>({});
+  let custom = $state(start.custom);
+  let difficulty = $state(start.difficulty);
+  let levels = $state(start.levels);
+  let cards = $state(start.cards);
+  let video = $state(start.video);
+  let audio = $state(start.audio);
+  let answers = $state(start.answers);
+  let budget = $state(start.budget);
   let error = $state<string | null>(null);
-  /** The choice changed since `refused` came. */
-  let stale = $state(false);
   let section = $state<HTMLElement>();
-  /** The supply notice before level 1 (decision 31), or null; `checking` while it's computed. */
-  let notice = $state<{ outlook: Outlook; choice: ChoiceBody & { mode: GameMode } } | null>(null);
-  let checking = false;
-  let seq = 0;
 
   onMount(async () => {
     try {
+      if (draft) {
+        options = await fetchChoiceOptions();
+        return;
+      }
       const [opts, preset, last] = await Promise.all([fetchChoiceOptions(), fetchChoice({ player }), fetchPlayerMode(player)]);
       options = opts;
       const launch = new URLSearchParams(location.search).get("mode") as GameMode | null;
@@ -88,56 +70,20 @@
       difficulty = c.difficulty ?? spanOf(opts.groups, group);
       ({ levels, cards, video, audio, answers } = c);
       budget = { ...c.jokers };
-      await check();
     } catch (e) {
       error = errorText(e);
     }
   });
 
-  $effect(() => {
-    void refused;
-    stale = false;
-  });
-
-  /** Supply of the current choice and of each group with the current bundles (in-client engine). */
-  async function check() {
-    if (!options) return;
-    const n = ++seq;
-    const wanted = mode === "gamemaster" ? { ...config(), jokers: undefined } : { age_group: group, bundles: [...bundles] };
-    const [mine, ...each] = await Promise.allSettled([
-      fetchChoice(wanted),
-      ...options.groups.map((g) => fetchChoice({ ...wanted, age_group: g.id, difficulty: undefined })),
-    ]);
-    if (n !== seq) return;
-    supply = mine.status === "fulfilled" ? mine.value.supply : null;
-    reason = mine.status === "rejected" ? errorText(mine.reason) : null;
-    short = Object.fromEntries(options.groups.map((g, i) => [g.id, each[i].status === "fulfilled" && !each[i].value.supply.ok]));
-  }
-
-  function changed() {
-    stale = true;
-    check();
-  }
-
   function pickMode(m: GameMode) {
     if (busy || m === mode) return;
     mode = m;
-    changed();
   }
 
   function pickGroup(id: string) {
     if (busy) return;
     group = id;
     custom = false;
-    changed();
-  }
-
-  /** Gamemaster mode's whole configuration, every field (D-88). */
-  function config(): ChoiceBody {
-    return {
-      ...(custom ? { difficulty: { ...difficulty } } : { age_group: group }),
-      bundles: [...bundles], levels, cards, video, audio, answers, jokers: { ...budget },
-    };
   }
 
   /** A joker's count by one: 0–9, then ∞, clamped (decision 105). */
@@ -157,7 +103,6 @@
     else if (id === "answers") answers = !answers;
     else if (id === "preset") return void (budget = stepPreset(budget, by));
     else if (id.startsWith("joker-")) return stepJoker(id.slice(6) as JokerName, by);
-    changed();
   }
 
   /** ↑/↓: the previous or next line (`data-line`), its control nearest across; false outside a line. */
@@ -182,29 +127,10 @@
     return true;
   }
 
-  const ready = $derived(!!options && !!supply?.ok && !reason);
-  const shownRefusal = $derived(refused && !stale ? refused : null);
-  /** A supply report is shown: tighter gaps, so a long one fits at 720p (plan 46). */
-  const reporting = $derived(!!shownRefusal?.supply || (!shownRefusal && !reason && supply?.ok === false));
-
-  /** «¡A jugar!»: the supply notice first if it has something to say (plan 65), else the game. */
-  async function start() {
-    if (!ready || busy || checking) return;
-    const choice: ChoiceBody & { mode: GameMode } = mode === "gamemaster"
-      ? { mode, ...config() }
-      : { mode, age_group: group, bundles: [...bundles], ...(customized ? { jokers: { ...jokers } } : {}) };
-    checking = true;
-    const outlook = await fetchOutlook(choice).catch(() => null); // informational: never blocks a game
-    checking = false;
-    if (outlook && worthShowing(outlook)) notice = { outlook, choice };
-    else onstart(choice, []);
-  }
-
-  function play() {
-    if (!notice) return;
-    const { outlook, choice } = notice;
-    notice = null;
-    onstart(choice, outlook.runningOut);
+  /** «Seguir»: the Bundles screen, with these picks kept. */
+  function next() {
+    if (busy || !options) return;
+    onnext({ mode, group, jokers, custom, difficulty, levels, cards, video, audio, answers, budget });
   }
 
   const MODE_ROW: { id: GameMode; name: string; about: string; key: string }[] = [
@@ -222,11 +148,6 @@
     ]),
   );
   const customized = $derived(presetOf(jokers) !== "standard");
-  /** The picked bundles' names, base first (as in the Esc overlay). */
-  const names = $derived(
-    [...(options?.bundles ?? [])].sort((a, b) => Number(b.base) - Number(a.base)).filter((b) => bundles.includes(b.id)).map((b) => b.name),
-  );
-
   function ages([lo, hi]: readonly [number, number | null]) {
     return hi === null ? t("choice.agesFrom", { lo }) : t("choice.ages", { lo, hi });
   }
@@ -248,7 +169,7 @@
         else if (a.type === "letter" && modes.some((m) => m.key === a.key)) pickMode(modes.find((m) => m.key === a.key)!.id);
         else if (a.type === "letter" && mode !== "gamemaster" && a.key === CUSTOMIZE_KEY) customizing = !busy;
         else if (a.type === "pick" && options && a.n <= options.groups.length) pickGroup(options.groups[a.n - 1].id);
-        else if (a.type === "confirm") start();
+        else if (a.type === "confirm") next();
         else if (a.type === "back") onback();
         else return false;
         return true;
@@ -257,113 +178,92 @@
   );
 </script>
 
-<section class="choice" class:reporting bind:this={section}>
-  {#if greeting}
-    <h1 class="title hello">{t("screen.player.helloOpen")}<span class="name">{greeting}</span>{t("screen.player.helloClose")}</h1>
-  {:else}
-    <h1 class="title">{t("choice.titleOpen")}<span class="name">{player}</span>{t("choice.titleClose")}</h1>
+<section class="choice" bind:this={section}>
+  <h1 class="title">{t("choice.titleOpen")}<span class="name">{player}</span>{t("choice.titleClose")}</h1>
 
-    {#if options}
-      {#if modes.length > 1}
-        <p class="label heading">{t("mode.heading")}</p>
-        <div class="row" role="radiogroup" data-line>
-          {#each modes as m, i (m.id)}
-            <button
-              class="tile mode glass"
-              class:on={m.id === mode}
-              style:--i={i + 1}
-              role="radio"
-              aria-checked={m.id === mode}
-              onclick={() => pickMode(m.id)}
-              disabled={busy}
-              data-focus-id="mode-{m.id}"
-            >
-              <Prompt action={{ type: "letter", key: m.key }} hold />
-              <span class="name-text"><Icon name={m.id === "gamemaster" ? "mic" : "family"} /> {m.name}</span>
-              <span class="label">{m.about}</span>
-            </button>
-          {/each}
-        </div>
-      {/if}
-
-      {#if mode === "gamemaster"}
-        {@const g = options.groups.find((x) => x.id === group)}
-        {@const span = custom ? difficulty : spanOf(options.groups, group)}
-        <div class="config">
-          <div class="lines">
-            <p class="label heading">{t("configure.game")}</p>
-            {@render stepper("difficulty", t("configure.difficulty"), custom ? t("configure.custom") : (g?.name ?? group),
-              custom ? "" : g ? ages(g.ages) : "", !custom && short[group])}
-            {@render stepper("start", t("configure.start"), String(span.start), "", false, !custom)}
-            {@render stepper("end", t("configure.end"), String(span.end), "", false, !custom)}
-            {@render stepper("levels", t("configure.levels"), String(levels))}
-            {@render stepper("cards", t("configure.cards"), String(cards), cards ? "" : t("configure.noCards"))}
-            {@render toggle("video", t("configure.video"), video, "film")}
-            {@render toggle("audio", t("configure.audio"), audio, "speaker")}
-            {@render toggle("answers", t("configure.answers"), answers, "lock")}
-          </div>
-          <div class="lines">
-            <p class="label heading">{t("configure.jokers")}</p>
-            {@render stepper("preset", t("configure.preset"), t(`configure.presets.${presetOf(budget)}`))}
-            {#each TOKENS as token (token.name)}
-              {@render stepper(`joker-${token.name}`, token.label, String(budget[token.name] ?? "∞"), "", false, false, token.icon)}
-            {/each}
-          </div>
-        </div>
-      {:else}
-        <p class="label heading">{t("choice.groups")}</p>
-        <div class="row" role="radiogroup" data-line>
-          {#each options.groups as g, i (g.id)}
-            <button
-              class="tile glass"
-              class:on={g.id === group}
-              class:short={short[g.id]}
-              style:--i={i + 1}
-              role="radio"
-              aria-checked={g.id === group}
-              onclick={() => pickGroup(g.id)}
-              disabled={busy}
-              data-focus-id="group-{g.id}"
-            >
-              <Prompt action={{ type: "pick", n: i + 1 }} hold />
-              <span class="name-text">{#if GROUP_ICONS[g.id]}<Icon name={GROUP_ICONS[g.id]} />{/if} {g.name}</span>
-              <span class="label">{ages(g.ages)}</span>
-              {#if short[g.id]}<span class="label warn">{t("choice.short")}</span>{/if}
-            </button>
-          {/each}
-        </div>
-        <div class="row" data-line>
-          <button class="secondary customize" onclick={() => (customizing = true)} disabled={busy} data-focus-id="customize">
-            <Icon name="sliders" /> {t("customize.open")} <Prompt action={{ type: "letter", key: CUSTOMIZE_KEY }} />
+  {#if options}
+    {#if modes.length > 1}
+      <p class="label heading">{t("mode.heading")}</p>
+      <div class="row" role="radiogroup" data-line>
+        {#each modes as m, i (m.id)}
+          <button
+            class="tile mode glass"
+            class:on={m.id === mode}
+            style:--i={i + 1}
+            role="radio"
+            aria-checked={m.id === mode}
+            onclick={() => pickMode(m.id)}
+            disabled={busy}
+            data-focus-id="mode-{m.id}"
+          >
+            <Prompt action={{ type: "letter", key: m.key }} hold />
+            <span class="name-text"><Icon name={m.id === "gamemaster" ? "mic" : "family"} /> {m.name}</span>
+            <span class="label">{m.about}</span>
           </button>
-          <span class="label" class:warn={customized}>{t(customized ? "customize.custom" : "customize.standard")}</span>
-        </div>
-      {/if}
-      <p class="label bundles">{t("choice.lineBundles", { bundles: names.join(", ") })}</p>
-
-      <div class="row actions" data-line>
-        <button class="secondary" onclick={onback} disabled={busy} data-focus-id="back"><Icon name="back" /> {t("action.back")} <Prompt action="back" /></button>
-        <button class="candy" onclick={start} disabled={busy || !ready} data-focus-default data-focus-id="start"><Icon name="rocket" /> {t("choice.start")} <Prompt action="confirm" off={!ready} /></button>
+        {/each}
       </div>
-
-      {#if shownRefusal?.supply}
-        <SupplyReport supply={shownRefusal.supply} />
-      {:else if shownRefusal}
-        <p class="error">{errorText(shownRefusal)}</p>
-      {:else if reason}
-        <p class="error">{reason}</p>
-      {:else if supply}
-        <SupplyReport {supply} />
-      {/if}
     {/if}
 
-    {#if error}<p class="error">{error}</p>{/if}
-  {/if}
-</section>
+    {#if mode === "gamemaster"}
+      {@const g = options.groups.find((x) => x.id === group)}
+      {@const span = custom ? difficulty : spanOf(options.groups, group)}
+      <div class="config">
+        <div class="lines">
+          <p class="label heading">{t("configure.game")}</p>
+          {@render stepper("difficulty", t("configure.difficulty"), custom ? t("configure.custom") : (g?.name ?? group),
+            custom ? "" : g ? ages(g.ages) : "")}
+          {@render stepper("start", t("configure.start"), String(span.start), "", false, !custom)}
+          {@render stepper("end", t("configure.end"), String(span.end), "", false, !custom)}
+          {@render stepper("levels", t("configure.levels"), String(levels))}
+          {@render stepper("cards", t("configure.cards"), String(cards), cards ? "" : t("configure.noCards"))}
+          {@render toggle("video", t("configure.video"), video, "film")}
+          {@render toggle("audio", t("configure.audio"), audio, "speaker")}
+          {@render toggle("answers", t("configure.answers"), answers, "lock")}
+        </div>
+        <div class="lines">
+          <p class="label heading">{t("configure.jokers")}</p>
+          {@render stepper("preset", t("configure.preset"), t(`configure.presets.${presetOf(budget)}`))}
+          {#each TOKENS as token (token.name)}
+            {@render stepper(`joker-${token.name}`, token.label, String(budget[token.name] ?? "∞"), "", false, false, token.icon)}
+          {/each}
+        </div>
+      </div>
+    {:else}
+      <p class="label heading">{t("choice.groups")}</p>
+      <div class="row" role="radiogroup" data-line>
+        {#each options.groups as g, i (g.id)}
+          <button
+            class="tile glass"
+            class:on={g.id === group}
+            style:--i={i + 1}
+            role="radio"
+            aria-checked={g.id === group}
+            onclick={() => pickGroup(g.id)}
+            disabled={busy}
+            data-focus-id="group-{g.id}"
+          >
+            <Prompt action={{ type: "pick", n: i + 1 }} hold />
+            <span class="name-text">{#if GROUP_ICONS[g.id]}<Icon name={GROUP_ICONS[g.id]} />{/if} {g.name}</span>
+            <span class="label">{ages(g.ages)}</span>
+          </button>
+        {/each}
+      </div>
+      <div class="row" data-line>
+        <button class="secondary customize" onclick={() => (customizing = true)} disabled={busy} data-focus-id="customize">
+          <Icon name="sliders" /> {t("customize.open")} <Prompt action={{ type: "letter", key: CUSTOMIZE_KEY }} />
+        </button>
+        <span class="label" class:warn={customized}>{t(customized ? "customize.custom" : "customize.standard")}</span>
+      </div>
+    {/if}
 
-{#if notice}
-  <SupplyNotice outlook={notice.outlook} onplay={play} onback={() => (notice = null)} />
-{/if}
+    <div class="row actions" data-line>
+      <button class="secondary" onclick={onback} disabled={busy} data-focus-id="back"><Icon name="back" /> {t("action.back")} <Prompt action="back" /></button>
+      <button class="candy" onclick={next} disabled={busy || !options} data-focus-default data-focus-id="next"><Icon name="next" /> {t("action.next")} <Prompt action="confirm" /></button>
+    </div>
+  {/if}
+
+  {#if error}<p class="error">{error}</p>{/if}
+</section>
 
 {#if customizing}
   <Customize {jokers} onchange={(j) => (jokers = j)} onclose={() => (customizing = false)} />
@@ -399,9 +299,6 @@
     gap: calc(1.2 * var(--u));
     padding: var(--safe-y) var(--safe-x);
     text-align: center;
-  }
-  .choice.reporting {
-    gap: calc(0.8 * var(--u));
   }
   .title {
     animation: arrive 0.6s var(--spring) backwards;
@@ -450,9 +347,6 @@
     border-color: var(--sky);
     background: rgba(76, 201, 240, 0.16);
     transform: translateY(calc(-0.3 * var(--u)));
-  }
-  .tile.short:not(.on) {
-    opacity: 0.55;
   }
   .mode {
     min-width: calc(26 * var(--u));
@@ -547,10 +441,6 @@
     font-weight: 800;
     line-height: 1.1;
   }
-  .bundles {
-    margin: 0;
-    color: var(--slate-200);
-  }
   .warn {
     color: var(--amber);
   }
@@ -563,15 +453,5 @@
     margin: 0;
     color: var(--coral);
     font-size: calc(1.1 * var(--u));
-  }
-  .hello {
-    font-size: calc(7 * var(--u));
-    animation: hello 0.8s var(--spring) backwards;
-  }
-  @keyframes hello {
-    from {
-      opacity: 0;
-      transform: scale(0.5) rotate(-4deg);
-    }
   }
 </style>

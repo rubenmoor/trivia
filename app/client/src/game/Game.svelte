@@ -1,6 +1,6 @@
 <script lang="ts">
   // The game on the TV (plans/04-ui-tv-display.md, D-21, D-25): a state machine over the screens
-  // Start → Player → Bundles → Choice → Level → Select → Question → Correct / Wrong → … → Victory (answers off, D-105:
+  // Start → Player → Choice → Bundles → Level → Select → Question → Correct / Wrong → … → Victory (answers off, D-105:
   // Question → Next → … → Completed), with one transition routine and the admin overlay on Esc. The engine
   // keeps the game (engine/, lib/api.ts).
   import { onDestroy, onMount, tick } from "svelte";
@@ -27,6 +27,7 @@
   import Stage from "./Stage.svelte";
   import { swap } from "./swap.ts";
   import CornerButtons from "./CornerButtons.svelte";
+  import { type ChoiceDraft } from "./choiceDraft.ts";
   import Bundles from "./screens/Bundles.svelte";
   import Choice from "./screens/Choice.svelte";
   import Consent from "./screens/Consent.svelte";
@@ -100,11 +101,13 @@
   let main = $state<HTMLElement>();
   /** The chosen name while «¡Hola, …!» plays (UI-16). */
   let greeting = $state<string | null>(null);
-  /** The name picked on Player, for the Bundles and Choice screens. */
+  /** The name picked on Player, for the Choice and Bundles screens. */
   let chosen = $state<string | null>(null);
-  /** The Bundles screen's pick; null until its preset loads (plan 151). */
+  /** The Choice screen's picks, kept for Back from Bundles; null: a fresh visit (plan 151). */
+  let draft = $state<ChoiceDraft | null>(null);
+  /** The Bundles screen's pick; null until its preset loads. */
   let bundlePick = $state<string[] | null>(null);
-  /** Why `new` refused the Choice screen's choice (plan 29). */
+  /** Why `new` refused the choice on the Bundles screen (plan 29). */
   let refused = $state<GameError | null>(null);
   /** The save file was unusable and moved to a backup (plan 55): shown once on Start. */
   let notice = $state<ReturnType<typeof takeSaveNotice>>(null);
@@ -336,23 +339,25 @@
     await go("player", "whoosh");
   }
 
-  /** A name was picked or typed: their bundles next, a fresh pick (plan 151). */
+  /** A name was picked or typed: their choice next, fresh picks (plan 151). */
   async function choosePlayer(name: string) {
     if (busy) return;
     chosen = name;
+    draft = null;
     bundlePick = null;
-    refused = null;
-    await go("bundles", "whoosh");
-  }
-
-  /** The Bundles screen's «Seguir»: the Choice screen with that pick. */
-  async function bundlesPicked() {
-    if (busy) return;
     refused = null;
     await go("choice", "whoosh");
   }
 
-  /** The Choice screen's «¡A jugar!»: start the game, greet, then the Level screen. */
+  /** The Choice screen's «Seguir»: the Bundles screen with these picks kept. */
+  async function choicePicked(d: ChoiceDraft) {
+    if (busy) return;
+    draft = d;
+    refused = null;
+    await go("bundles", "whoosh");
+  }
+
+  /** The Bundles screen's «¡A jugar!»: start the game, greet, then the Level screen. */
   async function startGame(choice: GameActionBody & { mode: GameMode }, runningOut: string[]) {
     if (busy || chosen === null) return;
     busy = true;
@@ -637,12 +642,12 @@
     {:else if screen === "player"}
       <Stage />
       <S.Player {busy} onchoose={choosePlayer} ondeleted={refresh} />
-    {:else if screen === "bundles" && chosen !== null}
+    {:else if screen === "choice" && chosen !== null}
       <Stage />
-      <S.Bundles player={chosen} {busy} picked={bundlePick} onpick={(ids) => (bundlePick = ids)} onnext={bundlesPicked} onback={() => go("player", "whoosh")} />
-    {:else if screen === "choice" && chosen !== null && bundlePick}
+      <S.Choice player={chosen} {busy} {draft} onnext={choicePicked} onback={() => go("player", "whoosh")} />
+    {:else if screen === "bundles" && chosen !== null && draft}
       <Stage />
-      <S.Choice player={chosen} bundles={bundlePick} {busy} {greeting} {refused} onstart={startGame} onback={() => go("bundles", "whoosh")} />
+      <S.Bundles player={chosen} {draft} {busy} {greeting} {refused} picked={bundlePick} onpick={(ids) => (bundlePick = ids)} onstart={startGame} onback={() => go("choice", "whoosh")} />
     {:else if screen === "level" && game}
       <Stage />
       <div class="corner-hud"><Hud level={null} player={game.player} /></div>

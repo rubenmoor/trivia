@@ -910,7 +910,7 @@ Template:
 - Date: 2026-10-14
 - Context: problem 5 of pm decision 50 (Play-test of age groups and bundles); plan 125, task 1017; pm decision 158.
 - Decision:
-  - **Every mode** shows the shared `BundleSelector` on its own screen, Bundles, between Player and Choice (amended 2026-10-16, pm decisions 158, 260; plan 151): «Solo o en grupo» too, with letter keys (`keyOf`), mouse and pad; Choice shows the pick as a read-only line and keeps the supply report.
+  - **Every mode** shows the shared `BundleSelector` on its own screen, Bundles, after Choice, flow Player → Choice → Bundles → Level (amended 2026-10-16, pm decisions 158, 264; plan 151): «Solo o en grupo» too, with letter keys (`keyOf`), mouse and pad; Choice shows no bundles and no supply; «Seguir» goes to Bundles, which holds the supply report and starts the game.
   - **Not customization:** its own screen; not in «Personalizar partida», not counted in `customized`.
   - **Preset** in both modes: `playerChoice`, the player's newest game's bundles, else the locale's first base bundle, non-base off (pm decision 33).
   - **Order** (amended 2026-10-16, decision 263; plan 151): base bundles in one column; optional ones in another: regional of the player's region (machine locale country), non-regional, regional of other countries; file order within each, mods after ours.
