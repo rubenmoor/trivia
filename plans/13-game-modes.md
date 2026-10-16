@@ -86,7 +86,12 @@ Shared by the three: no skip, no undo, no joker changes mid-game; flagging only 
 - Win: round 12 is sudden death (first claim + correct answer wins at once); only one player left = wins at once.
 - Visuals: rounds and hearts; a heart pulses at a player's last chance in a round without a correct answer, stronger on their last heart; last 3 s of a claim: a clock ticks once per second, louder each tick, plus a pulsing red frame (impending-death warning of a first-person shooter); the same red frame when everyone is at risk at once (all on their last life, nobody correct this round yet).
 - Seen events (D-82): ≈ N questions per round (N players), up to 12 rounds, fewer after drop-outs; no jokers.
-- Open detail (not a decision): after drop-outs, do questions per round follow the players still in?
+- As built (plan 159, engine only):
+  - Clock: all deadlines are epoch ms in the save; the client counts down from `view().session.timed` and sends `expire`; the engine checks every claim and answer against the stored timestamps (late = settled, not an error).
+  - Round size = players still in at the round's start (decision 276: Timed mode: after a drop-out, how many questions does a round have?).
+  - Everyone out at one round end: nobody wins (decision 280: Timed mode: everyone out at one round end means nobody wins).
+  - Round 12 without a correct answer repeats as another sudden-death round (decision 281: Timed mode: round 12 without a correct answer repeats as another sudden-death round).
+  - `pause` / `resume` (decision 282: Timed mode: the Esc menu and the Steam overlay pause the clock and hide the question): `claim`, `answer`, `expire` refused (`paused`); the view hides question, answers and hints; `resume` shifts the question and claim deadlines by the paused time. Nothing pauses outside `timed` (D-92).
 
 ## Implementation notes
 Spec for MD-6/MD-7 (plan 36) and MD-10..MD-12 (plan 59).

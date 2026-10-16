@@ -234,3 +234,24 @@ test("timed: round 12 without a correct answer repeats, everyone out means nobod
   assert.deepEqual([row(save).result, row(save).state.phase], ["lost", "lost"]);
   assert.deepEqual(row(save).seats!.map((x) => [x.lives, x.out, x.result]), [[0, true, "lost"], [0, true, "lost"]]);
 });
+
+test("timed: a pause shifts the question and claim deadlines and refuses play", () => {
+  let save = startTimed(["Ana", "Beto"]);
+  assert.equal(timed(save, "resume", {}, T0 + 1000).error, "not_paused");
+  save = timed(save, "pause", {}, T0 + 10000).save;
+  assert.equal(timed(save, "pause", {}, T0 + 11000).error, "already_paused");
+  for (const a of ["claim", "answer", "expire"]) assert.equal(timed(save, a, { seat: 0, index: 0 }, T0 + 99000).error, "paused");
+  const shown = game.view(save, data, { ...io(1), ms: T0 + 12000 })!;
+  assert.deepEqual([shown.question, shown.session!.timed!.paused, shown.session!.timed!.deadline], [null, true, null]);
+  save = timed(save, "resume", {}, T0 + 40000).save; // 30 s paused
+  assert.equal(flow(save).shown_at, T0 + 30000);
+  assert.equal(game.view(save, data, { ...io(1), ms: T0 + 40000 })!.session!.timed!.deadline, T0 + 30000 + game.QUESTION_MS);
+  save = timed(save, "claim", { seat: 0 }, T0 + 41000).save;
+  save = timed(save, "pause", {}, T0 + 43000).save;
+  save = timed(save, "resume", {}, T0 + 50000).save;
+  assert.equal(flow(save).claim!.at, T0 + 48000);
+  assert.equal(timed(save, "expire", {}, T0 + 48000 + game.CLAIM_MS).error, "not_expired");
+  const t = game.view(save, data, { ...io(1), ms: T0 + 51000 })!.session!;
+  assert.deepEqual(t.timed!.claim, { seat: 0, deadline: T0 + 48000 + game.CLAIM_MS });
+  assert.deepEqual(t.seats.map((s) => s.lives), [3, 3]);
+});
