@@ -138,5 +138,23 @@
     "note": "Gemeldete Fragen",
     "flagged_on": "2026-10-14",
     "fixed_on": "2026-10-14"
+  },
+  {
+    "id": 15,
+    "locale": "en",
+    "key": "joker.skip.purge",
+    "text": "Pass & Purge: goodbye to “Deportes tradicionales colombianos”",
+    "shot": "joker-skip",
+    "note": "not explicit enough, it should plainly say: `remove all questions of the category \"...\"`",
+    "flagged_on": "2026-10-16"
+  },
+  {
+    "id": 16,
+    "locale": "en",
+    "key": null,
+    "text": "Basics",
+    "shot": "choice-gamemaster",
+    "note": "two problems here: first, \"basics\" is wrong. it's literally the \"base bundle\" with corresponding translations that must be just as explicit. second, the question bundle selection happens on its own full screen, which isn't implemented yet it seems",
+    "flagged_on": "2026-10-16"
   }
 ]
