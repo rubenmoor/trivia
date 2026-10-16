@@ -10,6 +10,7 @@ directories:
 files:
   - package.json
   - main.mjs
+  - lag-probe.html  # PLACEHOLDER(1486)
   - mods.mjs
   - mute.mjs
   - workshop.mjs
