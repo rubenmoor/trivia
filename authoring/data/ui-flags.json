@@ -156,5 +156,50 @@
     "shot": "choice-gamemaster",
     "note": "two problems here: first, \"basics\" is wrong. it's literally the \"base bundle\" with corresponding translations that must be just as explicit. second, the question bundle selection happens on its own full screen, which isn't implemented yet it seems",
     "flagged_on": "2026-10-16"
+  },
+  {
+    "id": 17,
+    "locale": "en",
+    "key": "joker.skip.name",
+    "text": "Pass & Purge",
+    "shot": "customize",
+    "note": "all mention jokers here need their corresponding icon",
+    "flagged_on": "2026-10-15"
+  },
+  {
+    "id": 18,
+    "locale": "en",
+    "key": "screen.question.final",
+    "text": "Final answer",
+    "shot": "question-locked",
+    "note": "needs a nice icon",
+    "flagged_on": "2026-10-15"
+  },
+  {
+    "id": 19,
+    "locale": "en",
+    "key": "joker.skip.name",
+    "text": "Pass & Purge",
+    "shot": "joker-skip",
+    "note": "needs the joker icon",
+    "flagged_on": "2026-10-15"
+  },
+  {
+    "id": 20,
+    "locale": "en",
+    "key": "joker.category.title",
+    "text": "Ms Picky: which topic do you want?",
+    "shot": "joker-category",
+    "note": "needs the joker icon",
+    "flagged_on": "2026-10-15"
+  },
+  {
+    "id": 21,
+    "locale": "en",
+    "key": "overlay.quit",
+    "text": "Quit game",
+    "shot": "menu-start",
+    "note": "needs icon",
+    "flagged_on": "2026-10-15"
   }
 ]
