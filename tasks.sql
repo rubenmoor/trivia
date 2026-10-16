@@ -29096,8 +29096,8 @@ The plan covers:
 - Gate: every task batch-9 needs runs before task 1185; a decision batch-9 needs also gets `pm task-pending-decision 1185 <decision>`. `plan 84: Release content runs` gets the en → L and `es-ES` translation runs (its revision, not this plan).
 
 Before writing: `pm plan list`, `pm show p147`, `pm decision list --answered --grep source --grep es-ES --grep DRIVES --grep Spain --grep neutral`.', '2026-10-16T00:27:05Z', '2026-10-16T00:30:07Z', 1209, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1218, 148, 'create tasks for plan 148: English-first drafting for base', 'split', 'open', 1000, NULL, 'Split plan 148 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T00:30:03Z', NULL, 1217, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1218, 148, 'create tasks for plan 148: English-first drafting for base', 'split', 'done', 1000, '2026-10-16, tasks 1231–1240 for plan 148 (tasks.sql only)', 'Split plan 148 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T00:30:03Z', '2026-10-16T00:40:25Z', 1217, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1219, 70, 'create tasks for plan 70: Cost, budget and generation plan by gap (CT-3, CT-4)', 'split', 'done', 1000, '2026-10-15, task 463 body brought in line with plan 70 (four question locales, en-first rows, wait on plan 148''s --cost per source locale task); no new tasks or decisions', 'Split plan 70 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T00:31:44Z', '2026-10-16T00:32:22Z', 1212, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1220, 84, 'create tasks for plan 84: Release content runs', 'split', 'done', 1000, '2026-10-16, tasks.sql only: tasks 632, 634, 636–643 aligned with plan 84 (English-first, either-source translations, chain numbers, no es top-up); added 1221–1229 (es-ES/es pilots, go/no-go, full runs)', 'Split plan 84 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -29257,6 +29257,149 @@ Done when: both decisions answered, change tasks and the next pair (or the 15b l
 - Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T00:36:02Z', NULL, 1220, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1230, 128, 'create tasks for plan 128: S4 close-out', 'split', 'done', 1000, '2026-10-15, tasks.sql: tasks 1032–1034 brought in line with the revised plan 128 (four question locales, decisions 235 and 156, plans 138/147/148 in the guard, plan 84 chains 1–3, es-ES and en-sourced browser rows, docs for source locale and Spanish varieties); task 1035 already matched; no new decisions needed', 'Split plan 128 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T00:37:27Z', '2026-10-16T00:38:26Z', 1215, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1231, 148, 'Supersede the decisions replaced by English-first drafting', 'work', 'open', NULL, NULL, 'Part 1 of `plan 148: English-first drafting for base`; runs first. Milestone 9''s section "English-first drafting for `base`" (developer, 2026-10-15) replaces older answers. Record that in the decision log and in `plans/decisions.md`.
+
+- Supersede each one and quote the milestone''s text in the note:
+  - `decision 27: Spanish variety (OQ-31): which Spanish does base speak, and which Steam store languages to tick?`: for `base`, es-419 comes from translation and not from Spanish drafts; `es-ES` gets its own question pool and is no longer a UI-only variant. This is the developer''s answer, and a worker can''t supersede it. Raise `pm decision add` naming decision 27, with the milestone''s text as the recommended option. Make the dependent tasks of plan 148 pending on it only if they would really contradict decision 27 while it is unanswered. The milestone already states the replacement.
+  - `decision 37: Per-locale content targets and gap aiming`: only the last clause (the en/de source shortfall drives es drafting). Use `pm decision supersede <new> 37 --note "…"`.
+  - `decision 219: Do the new locales (zh-Hans, ru, pt-BR) steer es drafting from the start?`: the launch question locales (`en`, `es`, `es-ES`, `de`) steer English drafting. Milestone 12''s locales steer it only through `plan 60`''s own decision later.
+  - For a worker''s own answer (37, 219): `pm decision record "English-first drafting for base: …" --answer "…" --body "…" --supersedes <id>`, or `pm decision supersede`.
+- `plans/decisions.md`:
+  - Add a D-entry "English-first drafting for `base`": source locale per question (`decision 235: Source locale per question and translations from either source (English-first base)`), the four question locales, and what it replaces.
+  - Mark D-6 (Colombian usage: no longer for `base`), D-84 (two-stage source shortfall) and D-87 (es as the only source locale) as amended by it.
+- `rg` the decision numbers and D-ids in `plans/*.md` and fix the stale wording (decision 200).
+
+Done when: `pm decision list --all --grep 27 --grep 37 --grep 219` shows the supersede links, or the pending decision for decision 27; `plans/decisions.md` has the entry and the amend marks.', '2026-10-16T00:40:09Z', NULL, 1218, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1232, 148, 'Source locale per question: schema, translations and export from either source', 'work', 'open', NULL, NULL, 'Part 2 of `plan 148: English-first drafting for base`. Implements `decision 235: Source locale per question and translations from either source (English-first base)` in the data layer. Files: `authoring/tools/translations.py`, `layout.py`, `pool_export.py`, and export and validate in `qgen.py`.
+
+- Question locales `es`, `es-ES`, `en`, `de`, with names (e.g. "Spanish (Latin America)", "Spanish (Spain)", "English", "German"). `translations.LANGUAGES` is `en`, `de` today.
+- `source_locale(q)` = `q.get("locale", "es")`, in one place, imported everywhere else (decision 199). A translation into L exists only for sources whose locale ≠ L.
+- New translation files `questions.es.json` and `questions.es-ES.json`, in base and in bundle dirs, created only when needed. Same shape as `questions.en.json`.
+- Export:
+  - `pool.json` = approved es-sourced questions + the playing entries of `questions.es.json`.
+  - `pool.<L>.json` for `en`, `de`, `es-ES` follows the same rule (approved sources in L + playing translations into L).
+  - Packs the same way (`app/data/bundles/<id>/pool.<L>.json`).
+- `qgen validate` checks:
+  - `locale` is known.
+  - No translation entry in its source''s own locale.
+  - A `base` question from `batch-N` with N ≥ 9 has `locale: "en"`.
+  - A regional bundle''s sources are in its region''s language (`colombia`: `es`).
+  - Bundle `languages` vs. exported pools (D-85), `es-ES` included.
+- Throw-away check, then delete it:
+  - A fake en-sourced approved question with an `es` translation lands in `pool.json` and only once in `pool.en.json`.
+  - Without one, today''s export is byte-identical.
+- No `app/` change here (task "es-ES question pool in the game"). No change to `--translate` (its own task).
+
+Done when: the checks pass; `qgen validate`, `npm run check`, `npm test`, `npm run build` pass; `rg` for old assumptions such as `LANGUAGES = ("en", "de")` is clean (decision 200).', '2026-10-16T00:40:09Z', NULL, 1218, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1233, 148, 'es-ES question pool in the game and engine', 'work', 'open', NULL, NULL, 'Part 3 of `plan 148: English-first drafting for base`. Needs the task "Source locale per question: schema, translations and export from either source" (it exports `pool.es-ES.json`).
+
+- Files: `app/client/src/lib/data.ts` (`LOCALES`), `lib/engine.ts` (`localeOf`), `engine/save.ts` (`defaultLanguage`), `app/data/bundles.json` (`base.languages`), names fallback.
+- An `es-ES` save plays `pool.es-ES.json` once the supply of its default bundles passes. Until then it plays `pool.json` (`decision 156: One language for UI and questions`; seam from `plan 68: Language setting and per-locale pool (I18N-2)`).
+- Remove D-86''s "`es-ES` → questions `es`" mapping (code and `plans/decisions.md` D-86, marked amended).
+- The family''s save stays unchanged: no `language` field = `es`, `pool.json`.
+- Flags already carry the game''s locale (`decision 102: Game flags from a translated game: whose review do they change?`). Nothing else in `app/` learns about source locales; `app/` never reads `authoring/data/`.
+- Browser check (Node dev server, `TRIVIA_MUTE=1`):
+  - With a temporary `pool.es-ES.json` above the supply bar, an `es-ES` save plays it.
+  - Without one, it falls back to `es`.
+  - Remove the temporary file afterwards.
+
+Done when: the check passes; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass; `rg` for D-86''s old mapping in code and `.md` is clean.', '2026-10-16T00:40:09Z', NULL, 1218, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1234, 148, 'qgen batch drafts en for base: the whole chain on the question''s locale', 'work', 'open', NULL, NULL, 'Part 4 of `plan 148: English-first drafting for base`. Needs the task "Source locale per question: schema, translations and export from either source" (`source_locale`). From batch-9 on, every new `base` question is drafted and processed in English (milestone 9).
+
+- Draft locale per bundle:
+  - `base` → `en`; regional bundles → their language (`colombia`: `es`, `decision 110: Regional packs at launch (RG-5, OQ-46)`).
+  - Keep it on the authoring side, e.g. `authoring/data/bundles/<id>/` or a field that `qgen bundle new` writes. `app/` never reads it.
+- Every step uses the question''s own locale. Fill `prompt(…, locale=)` from the run''s draft locale for: concepts, draft, rate, factcheck, revise, media queries, review, fix, research, audit, batch report.
+- `qgen rework` and `qgen tighten` use each question''s locale. `qgen neutralize` runs on es-sourced questions only.
+- New drafts get `locale: "en"`; `run.json` records the draft locale.
+- Spanish-only helpers in the chain (`stem()`, `norm()`, number style checks, Spanish-only lints): make them per locale, or skip them for `en`. The overlap keys are `task 1205: English keys for the overlap check against the es-sourced pool`, not here.
+- Prompt texts aren''t changed here: the task "English-first prompt drafts" drafts them. The code only passes the locale and the locale block.
+- Throw-away check:
+  - On a scratch copy of `authoring/data/`, `qgen batch` up to `draft` for one subcategory.
+  - Report claude calls and totals per `decision 208: What must a script that calls claude report to its caller?`.
+  - Expect English text and `locale: "en"`. Delete the copy afterwards.
+
+Done when: the check passes; `qgen validate`, `npm run check`, `npm test`, `npm run build` pass.', '2026-10-16T00:40:09Z', NULL, 1218, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1235, 148, '--translate from either source; es and es-ES as targets', 'work', 'open', NULL, NULL, 'Part 5 of `plan 148: English-first drafting for base`. Needs the task "Source locale per question: schema, translations and export from either source". Files: `qgen.py` (`cmd_translate` and the tr-* steps), `authoring/tools/translations.py`.
+
+- `qgen batch --translate <L>` for `es`, `es-ES`, `en`, `de`.
+- Selection: approved, translatable sources whose locale ≠ L. D-87''s order stays unchanged.
+- Pass `{source_language}` to the translate, rate, factcheck, review, fix and audit prompts. The prompt texts themselves are changed by the task "English-first prompt drafts"; until then, fill the placeholder only where it already exists.
+- Run names `tr-es-<n>` and `tr-es-ES-<n>`; check that `tr-es-` doesn''t collide with `tr-es-ES-` when parsing run names.
+- Rate and factcheck per target market: `es` = Latin America (`locale-es.md`), `es-ES` = Spain (new `locale-es-ES.md`, drafted by the prompt task; until then fall back to `locale-es.md`).
+- `not travelling` and `translatable: false` work for en sources too.
+- The regional path (`translate-region.md`, `decision 167: Translation prompt for a regional bundle (en for colombia)`) stays unchanged.
+- Throw-away check:
+  - On a scratch copy, `--translate es` with a fake en-sourced approved question selects it; `--translate en` doesn''t.
+  - Stop before claude calls, or report them (decision 208).
+  - Delete the copy afterwards.
+
+Done when: the check passes; `qgen validate`, `npm run check`, `npm test`, `npm run build` pass.', '2026-10-16T00:40:10Z', NULL, 1218, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1236, 148, 'Targets and gap aiming for four question locales', 'work', 'open', NULL, NULL, 'Part 6 of `plan 148: English-first drafting for base`. Needs the task "Source locale per question: schema, translations and export from either source". Files: `authoring/tools/targets.py`, `qgen report`, the `about` of `targets.json`.
+
+- `approved_by_level(…, locale)`: sources in that locale + its playing translations. Deficits per question locale: `en`, `es`, `es-ES`, `de`, 5000 each (`decision 21: Content target per player and language (OQ-32)?`).
+- `draft_gaps` for `base`, i.e. what English drafting must add per level:
+  - the largest, over the four locales, of (deficit / yield − approved translatable sources not yet in that locale).
+  - Replaces D-84''s two-stage rule and `source_shortfall` as "es drafting for en/de".
+  - Remove `DRIVES_DRAFTING` (decision 219) if present.
+  - Regional bundles keep their own deficit (D-101), unchanged.
+- `qgen report --locale L` and `--cost` per source locale; `--simulate` per question locale, `es-ES` included.
+- Batch and QC views are `task 1206: Source locale in qgen report --batches and --qc`, not here.
+
+Done when: `qgen report`, `--locale es-ES`, `--simulate` and `--cost` run and show the four locales; `qgen validate`, `npm run check`, `npm test`, `npm run build` pass; `rg source_shortfall DRIVES_DRAFTING` over code and `.md` is clean or matches the new rule (decision 200).', '2026-10-16T00:40:10Z', NULL, 1218, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1237, 148, 'Review tool, spot check and flags for either source locale', 'work', 'open', NULL, NULL, 'Part 7 of `plan 148: English-first drafting for base`. Needs the task "Source locale per question: schema, translations and export from either source". Files: `authoring/ui`, `authoring/server/main.py`, `reviews.py`, `played.py`, `patch_notes.py`.
+
+- `/review?batch=batch-9` reviews English sources: labels and source text are no longer assumed Spanish.
+- `/review?…&locale=L` shows the translation side by side with its source, whichever the source''s locale is.
+- Stats and the spot-check sample per locale, with es-sourced vs. en-sourced visible.
+- `apply_flags` per `decision 235: Source locale per question and translations from either source (English-first base)`:
+  - a flag in the source''s locale lands on the source review, else on that locale''s translation (`decision 102: Game flags from a translated game: whose review do they change?`, generalised);
+  - `es-ES` flags go to `questions.es-ES.json`.
+- Sweep the remaining assumptions that `"es"` means the source in `authoring/tools` and `authoring/server` (`rg ''"es"''`). Code outside this task''s files that this plan''s other tasks cover stays theirs.
+- Browser check: run `trivia-authoring` in `../trivia-review` with a temporary en-sourced question, then remove it.
+
+Done when: the check passes; `qgen validate`, `npm run check`, `npm test`, `npm run build` pass.', '2026-10-16T00:40:10Z', NULL, 1218, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1238, 148, 'English-first prompt drafts for the developer', 'work', 'open', NULL, NULL, 'Part 8 of `plan 148: English-first drafting for base`. Prompts are the developer''s (RUNBOOK): draft, don''t apply. Prompts are in `authoring/tools/prompts/`.
+
+Write the drafts as verbatim old → new in the decision''s body:
+- Drafting prompts language-neutral or English:
+  - `house-style.md`''s "all content in Spanish" and "where this house style says Spanish";
+  - the Spanish assumptions in `draft.md`, `rate.md`, `factcheck.md`, `revise.md`, `review.md`, `audit.md`.
+- The international-angle rule, in one place, read by the drafting prompts: no focus on the Spanish-speaking world, no Anglo/US bias, no wordplay that only works in one language. `task 1203: International angle in the concept prompts` refers to it.
+- `locale-en.md` as a drafting voice, not only a translation target (keep `decision 167: Translation prompt for a regional bundle (en for colombia)`''s wording).
+- `locale-es.md`: idiomatic Latin American Spanish. Drop "understood … in Spain". The Colombian-reference bullet only for `colombia`.
+- New `locale-es-ES.md`: Spain''s Spanish, `tú`, Spain market.
+- `neutralize.md` without its Spain-oriented rules.
+- `translate.md` and `translate-review.md` translate from `{source_language}`.
+- Not here: calibration examples (`task 1202: International calibration examples for the 1–15 scale`), concept prompts (task 1203).
+
+Then:
+- `pm decision add "English-first drafting prompts: apply?"` with the options apply / apply with changes / keep, the drafts in its body.
+- `pm task-pending-decision 1239 <decision>` (`task 1239: Apply the English-first prompts`).
+- `pm task-pending-decision 1185 <decision>` (`task 1185: run batch-9` must not draft before the prompts are in).
+
+Done when: the decision exists with both pending links; no prompt file changed.', '2026-10-16T00:40:10Z', NULL, 1218, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1239, 148, 'Apply the English-first prompts', 'work', 'open', NULL, NULL, 'Part 9 of `plan 148: English-first drafting for base`. Waits for the decision "English-first drafting prompts: apply?" raised by `task 1238: English-first prompt drafts for the developer`.
+
+- Apply the answer to `authoring/tools/prompts/` exactly: apply, apply with changes, or keep.
+- Where the code from `task 1234: qgen batch drafts en for base: the whole chain on the question''s locale` and `task 1235: --translate from either source; es and es-ES as targets` falls back (e.g. `locale-es.md` for `es-ES`), switch it to the new files.
+- `pm decision consequences <id> "…"`.
+- `rg` the old wording ("all content in Spanish", "understood … in Spain", …) over `.md` files and fix every hit (decision 200).
+
+Done when: the prompts match the answer; `qgen validate`, `npm run check`, `npm test`, `npm run build` pass.', '2026-10-16T00:40:10Z', NULL, 1218, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1240, 148, 'Docs for English-first drafting; gate for batch-9', 'work', 'open', 700, NULL, 'Part 10 of `plan 148: English-first drafting for base`; runs last, after the plan''s other tasks.
+
+- Docs:
+  - `authoring/RUNBOOK.md` and D-36: `qgen batch` drafts `en` for `base`; `--translate <L>` from either source; `es` and `es-ES` as targets.
+  - `authoring/QC.md`: spot checks per locale.
+  - `plans/15b-question-translation.md`: source locale per question.
+  - `plans/15-i18n.md`: Spanish varieties (`es` idiomatic Latin American, `es-ES` its own pool).
+  - `plans/16-content-target.md`: four question locales and the gap rule.
+  - `AGENTS.md` "Making questions" if it names Spanish drafts; `directory.md` if there are new top-level files.
+- `rg` "drafts Spanish", "es-sourced only", `LANGUAGES` and similar over `.md` files; fix every hit (decision 200).
+- Gate: `pm show 1185`. Check that every other task of plan 148 is done and that the decision "English-first drafting prompts: apply?" is answered. A note on task 1185 isn''t needed when the pending links exist. Anything missing: a follow-up task, not a workaround here.
+
+Done when: the docs match the code; `qgen validate`, `npm run check`, `npm test`, `npm run build` pass.', '2026-10-16T00:40:10Z', NULL, 1218, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -32710,6 +32853,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1178, 1215, '2026-10-16T00:36:46Z', '2026-10-16T00:37:42Z', 'done', NULL, 0, '8897598bf007e613a4ac8cfb56edecaa08426d5f', 'claude-opus-5-5[1m]', 'a600ee7e-361e-4745-a030-127978f8c44e', 10, 20, 5287, 510600, 54172, 0.641316, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1179, 1230, '2026-10-16T00:37:42Z', '2026-10-16T00:38:33Z', 'done', NULL, 0, '15afa616d5e0d1442031adcbbab25dcb2d8b86b3', 'claude-opus-5-5[1m]', '2b6e959f-0e57-40f7-b154-9604bdb91b3a', 9, 18, 5343, 352467, 37542, 0.4777614, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1180, 1216, '2026-10-16T00:38:33Z', '2026-10-16T00:38:55Z', 'done', NULL, 0, '5ebb857310c805040e1fafaa881018ca49b03757', 'claude-opus-5-5[1m]', '4d81b2ab-6bea-4654-9dd4-a89b80b2e153', 4, 8, 1096, 160864, 44572, 0.41070080000000003, 3857742);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1181, 1218, '2026-10-16T00:38:55Z', '2026-10-16T00:40:31Z', 'done', NULL, 0, '0b45dcce20d3329279286dbe4f1b33b6e9d1ff10', 'claude-opus-5-5[1m]', '2f9aab7c-8e73-4548-8613-97c59bc09026', 9, 18, 10160, 415695, 53138, 0.711515, 3857742);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
