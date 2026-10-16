@@ -33,7 +33,8 @@ export interface Category {
 export interface Supply {
   ok: boolean;
   available: number;
-  levels: { level: number; range: [number, number]; candidates: number; missing: number }[];
+  /** `seat`: rr-competitive's session check, one row per seat × level. */
+  levels: { level: number; range: [number, number]; candidates: number; missing: number; seat?: number }[];
 }
 
 /** A custom difficulty ramp (D-88): integers 1–15, end ≥ start. */
@@ -183,7 +184,7 @@ export interface Game {
     seat?: number;
   } | null;
   /** The multiplayer session (milestone 16); absent outside one (the frozen fixtures replay unchanged). `seats` in join order; the top-level fields are the turn seat's game
-   * (rr-coop: the team's, so `level` and `jokers_left` repeat on every seat). */
+   * (a finished session: the winner's, else the last answerer's; rr-coop: the team's, so `level` and `jokers_left` repeat on every seat), `last` the session's last final answer. */
   session?: {
     mode: GameMode;
     turn: number;

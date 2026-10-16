@@ -75,6 +75,7 @@ Shared by the three: no skip, no undo, no joker changes mid-game; flagging only 
 - Drop-out and win: a wrong answer ends only that player's game; first to level 12 wins.
 - No timer.
 - Seen events (D-82): ≈ N players × 1 game's; every seen event counts for the save, whichever player saw it.
+- As built (task 1408): engine only: every seat's own game in `seats[].state` (`age_groups` per seat), `row.state` the shared settings and the session's `last`; supply checked over seat × level; no card twice in a session (other seats' tables only as a fallback); a wrong answer puts the seat out, the turn skips it; first to the last level wins, and the last seat in wins at once (decision 278: Round-robin competitive: the last player standing wins at once); tests in `engine/session.test.ts`.
 
 ### Competitive timed (`timed`; es proposal «Contrarreloj»; D-80, replaces D-77's timed part)
 - 12 rounds; round = level (the question's difficulty follows the round); questions per round = number of players.
