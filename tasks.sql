@@ -398,6 +398,14 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
   - replaces decision 110''s "more bundles only after a new decision with the pilot''s numbers"
   - each needs its DLC entry (`steam.json` `dlc`, store texts, capsules) like `colombia`
   - launch doesn''t wait for the pilot: it ships what `colombia` has then; updates bring the rest
+  - Slug keys for categories (developer, 2026-10-16), before the next regional taxonomies (`usa`, `germany`, `uk`, `spain`, `mexico`):
+    - every category and subcategory in every bundle (base, colombia, new ones) is keyed by an English slug (`world-cuisines`), unique within its bundle; existing Spanish category slugs become English
+    - slugs are the keys everywhere: questions'' `subcategory`, `targets.json`, concept file names, engine key (bundle + slug; base bare), reports
+    - `categories.json` holds structure only; every display name, en included, comes from `names.<locale>.json` (en, es, de; es-ES reads `names.es.json`, `names.es-ES.json` only where Spain differs)
+    - saves: old keys (Spanish names, old category slugs) mapped on load (purged, swapped_to, notified_exhausted); engine fixtures through the normalizer
+    - mods: today''s format stays valid (a plain string is key and name); slugs + names files optional
+    - `qgen taxonomy` proposes slugs with en names and drafts es/de names on `--apply`; `regional-categories.json` follows
+    - replaces the name-as-key part of decision 165, D-99, D-100
 - The content target reached and measurable (CT-*, `plans/16-content-target.md`).
 - Language on first start (I18N-2; replaces plan 68''s "no first-start language screen"):
   - a fresh save opens on a language screen with the guessed language preselected; the player confirms or picks another
@@ -446,6 +454,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 - Style guides exist for every UI locale; the TV-check fixes are in; the gamemaster has reviewed the screen gallery in every UI language.
 - New `base` questions are drafted in English and translated to es, es-ES and de; the es-sourced ones have en, de and es-ES pool entries.
 - Every joker has one English-first name, translated in every catalog, and one symbol across languages, shown in its follow-up dialog.
+- Every category and subcategory, in every bundle, is keyed by an English slug; all display names come from `names.<locale>.json`; old saves load.
 
 Plan files: `plans/11-steam.md`, `plans/15-i18n.md`, `plans/15a-ui-translation.md`, `plans/15b-question-translation.md`, `plans/15c-regional-questions.md`, `plans/16-content-target.md`.', '2026-10-11T21:55:09Z', NULL, 0);
 INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (10, 'Steam S5: Steamworks and store', 'open', 'The game on Steam as a beta: Steamworks app, Cloud saves, achievements, depots, beta branch, store page and disclosures. Steam only (decision 111): the Steam integration is the reason to buy, and no effort goes into running the game outside Steam. Price model and account holder: decisions 66 and 67 (OQ-33); licence: OQ-35.
@@ -32163,6 +32172,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths a command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
 - Note on done: the QC numbers (approved, rejected, needs_work, agreement, $ per approved, review time per 100).', '2026-10-16T04:23:18Z', NULL, 643, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1297, 9, 'revise the masterplan of milestone 9: Steam S4: content for release', 'revise', 'open', 1000, NULL, '`milestone 9: Steam S4: content for release` changed. Bring `plan 9: masterplan`, the masterplan, in line with it (`pm plan edit 9 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-16T12:29:42Z', NULL, NULL, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
