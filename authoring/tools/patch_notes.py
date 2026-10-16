@@ -20,7 +20,6 @@ FIXED_FIELDS = ["question", "answer", "wrong_answers", "hints", "fun_fact", "dif
 POOL_RE = re.compile(r"app/data/(bundles/[^/]+/)?pool(?:\.([A-Za-z-]+))?\.json")  # a pack's in bundles/<id>/ (decision 66)
 CATS_RE = re.compile(r"app/data/(?:bundles/([^/]+)/)?categories\.json")
 NAMES_RE = re.compile(r"app/data/(?:bundles/([^/]+)/)?names\.([A-Za-z-]+)\.json")
-LAUNCH = translations.LAUNCH  # D-78; EVENT needs each one (qgen validate)
 OTHER = "other"
 # Steam event strings per launch language (authoring, not t()); tone of plans/11-steam.md "Announcement texts".
 EVENT = {
@@ -38,6 +37,7 @@ EVENT = {
            "fixed1": "1 Frage korrigiert (danke für eure Meldungen).",
            "removed": "{n} Fragen entfernt.", "removed1": "1 Frage entfernt.", "other": "Sonstige"},
 }
+LAUNCH = tuple(l for l in translations.LOCALES if l in EVENT)  # qgen validate: EVENT for every locale with a pool
 CHANGES = "<Changes: fill in>"
 
 

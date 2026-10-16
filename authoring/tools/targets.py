@@ -99,7 +99,7 @@ def source_supply(pool_questions, bundle="base"):
     """Per translation locale (plan 70, CT-4): yield, and per source level the es sources its deficit
     needs (deficit / yield) and the approved, translatable ones not yet translated (or stale)."""
     out = {}
-    for l in translations.LOCALES:
+    for l in [x for x in translations.LOCALES if x != "es"]:  # es sources' targets; task 1236 for en sources
         ts = {t["id"]: t for t in translations.load(l)["questions"]}
         y = translations.yield_rate(l)
         untranslated = Counter(q["difficulty"] for q in pool_questions

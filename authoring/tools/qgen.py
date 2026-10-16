@@ -1038,8 +1038,8 @@ def cmd_translate(args):
     if not cfg:
         if not (args.locale and args.ids):
             sys.exit(f"{args.run} has no run.json: give --locale and --ids")
-        if args.locale not in translations.LOCALES:
-            sys.exit(f"--locale must be one of {', '.join(translations.LOCALES)}")
+        if args.locale not in translations.TRANSLATE_TO:
+            sys.exit(f"--locale must be one of {', '.join(translations.TRANSLATE_TO)}")
         cfg = {"mode": "translate", "locale": args.locale, "ids": split_list(args.ids),
                "started": datetime.date.today().isoformat()}
         save_json(d / "run.json", cfg)
@@ -2104,7 +2104,7 @@ def target_check(locale, pool=None):
 
 def report_simulate(args):
     """Games per new player until the first repeat (plan 62, CT-2; plan 65), information only; exit code = D-75's target check."""
-    locales = args.locale.split(",") if args.locale else translations.LAUNCH
+    locales = args.locale.split(",") if args.locale else translations.LOCALES
     bundles = load_json(layout.BUNDLES)["bundles"]
     default = {l: [next((b["id"] for b in bundles if b.get("kind") == "base" and l in b.get("languages", [])), "base")]
                for l in locales}  # the locale's default game: its first base bundle, packs off (D-99)
@@ -2220,7 +2220,7 @@ def cost_report(pool):
     rated = lambda rs: (sum(r["cost"] for r in rs) / n if (n := sum(r["approved"] or 0 for r in rs)) else None)
     batches = [r for r in runs if r["kind"] == "batch" and r["merged"]]
     last3 = batches[-3:]
-    tr = {l: [r for r in runs if r["locale"] == l] for l in translations.LAUNCH if l != "es"}
+    tr = {l: [r for r in runs if r["locale"] == l] for l in translations.LOCALES if l != "es"}
     batch_cost = sum(r["cost"] for r in batches)
     overhead = sum(r["cost"] + r["audit"] for r in runs if r["kind"] not in ("batch", "translation")) \
         + sum(r["audit"] for r in batches)
@@ -2234,7 +2234,7 @@ def cost_report(pool):
     spent = {"es": sum(r["cost"] + r["audit"] for r in runs if r["kind"] != "translation"),
              **{l: sum(r["cost"] + r["audit"] for r in rs) for l, rs in tr.items()}}
     projection = []
-    for l in translations.LAUNCH:
+    for l in translations.LOCALES:
         deficit = sum((targets.deficits(pool, "base", l) or {}).values())
         rate = rates["draft"] if l == "es" else rates["translation"][l]
         cost = deficit * rate * (1 + (ratio or 0)) if rate is not None else None
@@ -2243,7 +2243,7 @@ def cost_report(pool):
                            "spent": spent[l], "budget": budget.get(l)})
     rate = rates["draft"]
     by_bundle = bundle_costs(pool, runs, rates, ratio)
-    sources = {"count": extra, "per_approved": rate, "yield": {l: translations.yield_rate(l) for l in translations.LOCALES},
+    sources = {"count": extra, "per_approved": rate, "yield": {l: translations.yield_rate(l) for l in translations.LOCALES if l != "es"},
                "cost": extra * rate * (1 + (ratio or 0)) if rate is not None else None}
     return {"runs": runs, "rates": rates, "projection": projection, "bundles": by_bundle, "es_sources": sources,
             "skipped": skipped}
@@ -3648,8 +3648,8 @@ def cmd_translate_batch(args):
     fix → review 2 → record → audit → export → validate → report. Rerunning it continues where it stopped."""
     import health  # authoring/tools/health.py (imports qgen)
     locale = args.translate
-    if locale not in translations.LOCALES:
-        sys.exit(f"--translate must be one of {', '.join(translations.LOCALES)}")
+    if locale not in translations.TRANSLATE_TO:
+        sys.exit(f"--translate must be one of {', '.join(translations.TRANSLATE_TO)}")
     bundle = args.bundle
     check_bundle(bundle)
     if args.run:
@@ -4160,15 +4160,15 @@ def cmd_telemetry(args):
 def cmd_export(args):
     pool = load_json(POOL)
     pool_export.write(pool)
-    n = Counter(q["bundle"] for q in pool["questions"] if q["status"] == "approved")
-    print(f"exported {n.pop('base', 0)} approved question(s) to {layout.EXPORT.relative_to(ROOT)}")
-    for b, k in n.items():
-        print(f"exported {k} approved question(s) to {layout.POOL_FILE('es', b).relative_to(ROOT)}")
     for l in translations.LOCALES:
+        if not translations.exported(l, pool):
+            continue
+        n = Counter(e["bundle"] for e in translations.play_entries(l, pool))
+        for b in ["base", *sorted(set(n) - {"base"})]:
+            print(f"exported {n[b]} {l} question(s) to {layout.POOL_FILE(l, b).relative_to(ROOT)}")
         if translations.path(l).exists():
             c = translations.counts(l, pool)
-            print(f"exported {c['exported']} {l} question(s) to {layout.LOCALE_POOL(l).relative_to(ROOT)} and the packs'; "
-                  f"{c['stale']} stale, {c['left_out']} left out (source not approved or not translatable)")
+            print(f"  {l} translations: {c['stale']} stale, {c['left_out']} left out (source not approved or not translatable)")
 
 
 def validate_pool():
@@ -4181,6 +4181,7 @@ def validate_pool():
     lo, hi = load_age_groups()["scale"]
     bundles = load_bundles()
     bundle_ids = {b["id"] for b in bundles}
+    bundle_of = {b["id"]: b for b in bundles}
     errors += taxonomy_problems()
     e, w = bundle_problems(bundles)
     errors += e
@@ -4200,6 +4201,7 @@ def validate_pool():
         ids.add(qid)
         if q.get("status") not in {"draft", "approved", "rejected", "needs_work"}: errors.append(f"{qid}: bad status")
         errors += [f"{qid}: {p}" for p in review_problems(q)]
+        errors += [f"{qid}: {p}" for p in source_locale_problems(q, bundle_of.get(q.get("bundle")))]
         if "translatable" in q and q["translatable"] is not False: errors.append(f"{qid}: translatable must be false when set (absent = translatable, D-81)")
         key = categories.key(q)
         if key not in subcategories and (q.get("bundle") == "base" or ("base", key[1]) not in subcategories):
@@ -4256,8 +4258,8 @@ def validate_pool():
     for p in pool_export.stale_packs(pool_export.exports(data)):
         errors.append(f"{p.relative_to(ROOT)}: not written by `qgen export` (pack without questions); delete it")
     for l in translations.LOCALES:
-        if layout.LOCALE_POOL(l).exists() and not translations.path(l).exists():
-            errors.append(f"{layout.LOCALE_POOL(l).relative_to(ROOT)}: no {translations.path(l).relative_to(ROOT)}; delete it")
+        if layout.LOCALE_POOL(l).exists() and not translations.exported(l, data):
+            errors.append(f"{layout.LOCALE_POOL(l).relative_to(ROOT)}: no {l} source or translation; delete it")
     tag, released = released_ids()
     gone = sorted(released - ids, key=natural_key) if tag else []
     if gone:
@@ -4282,6 +4284,20 @@ def released_ids():
         if re.fullmatch(r"app/data/(bundles/[^/]+/)?pool(\.[A-Za-z-]+)?\.json", f):
             ids |= {q["id"] for q in json.loads(git("show", f"{tags[0]}:{f}").stdout)["questions"]}
     return tags[0], ids
+
+
+def source_locale_problems(q, bundle):
+    """A source's locale (decision 235): known; base from batch-9 on en; a regional bundle's in its region's
+    language, the first of its languages (decision 110)."""
+    loc, out = translations.source_locale(q), []
+    if loc not in translations.LOCALES:
+        return [f"locale must be one of {', '.join(translations.LOCALES)}"]
+    m = re.fullmatch(r"batch-(\d+)", q.get("batch") or "")
+    if bundle and bundle["kind"] == "base" and m and int(m.group(1)) >= translations.ENGLISH_FROM and loc != "en":
+        out.append(f"locale must be en: base drafts in English from batch-{translations.ENGLISH_FROM} on (plan 148)")
+    if bundle and bundle["kind"] == "region" and loc != (bundle.get("languages") or ["es"])[0]:
+        out.append(f"locale must be {bundle['languages'][0]}, {bundle['id']}'s language (decision 110)")
+    return out
 
 
 def review_problems(q):
@@ -4335,6 +4351,9 @@ def translation_problems(data):
             errors += [f"{where}: {x}" for x in review_problems(t)]
             if all(k in t for k in ["wrong_answers", "hints", "difficulty", "answer"]):
                 errors += [f"{where}: {x}" for x in check_question_shape(t)]
+            if translations.source_locale(q) == l:
+                errors.append(f"{where}: the source is in {l} already; delete the entry (decision 235)")
+                continue
             if t.get("status") == "rejected":
                 continue
             if q.get("status") == "rejected" or not translations.translatable(q):
@@ -4346,13 +4365,13 @@ def translation_problems(data):
             warnings.append(f"{rel}: {len(stale)} stale translation(s) (source text changed): {first_ids(stale)}")
         if orphaned:
             warnings.append(f"{rel}: {len(orphaned)} approved translation(s) of a source not approved: {first_ids(orphaned)}")
-    return errors + names_problems(data), warnings + names_warnings()
+    return errors + names_problems(data), warnings + names_warnings(data)
 
 
 def names_problems(data):
     """Errors in the names files: header, unknown keys; a name missing for what pool.<locale>.json uses."""
     errors, cats = [], categories.load()
-    for l in translations.LOCALES:
+    for l in translations.NAMED:
         for b in categories.bundle_ids():
             p = layout.NAMES(l, b)
             if not p.exists():
@@ -4376,7 +4395,7 @@ def names_problems(data):
                 empty = sorted(n for n, v in names.items() if not name_ok(v, k == "bundles"))
                 if empty:
                     errors.append(f"{rel}: {k} with an empty or malformed name: {first_ids(empty)}")
-        if not translations.path(l).exists():
+        if not translations.exported(l, data):
             continue
         names, broad = categories.load_names(l), categories.broad_of()
         missing = set()
@@ -4398,11 +4417,11 @@ def name_ok(v, bundle):
     return isinstance(v, str) and bool(v.strip())
 
 
-def names_warnings():
-    """Missing names per locale, once the locale has a translation or a names file."""
+def names_warnings(data):
+    """Missing names per locale, once the locale has a pool or a names file."""
     out, cats = [], categories.load()
-    for l in translations.LOCALES:
-        if not (translations.path(l).exists() or any(layout.NAMES(l, b).exists() for b in categories.bundle_ids())):
+    for l in translations.NAMED:
+        if not (translations.exported(l, data) or any(layout.NAMES(l, b).exists() for b in categories.bundle_ids())):
             continue
         names = categories.load_names(l)
         n = (len(set(categories.bundle_ids()) - set(names["bundles"]))
@@ -4471,24 +4490,24 @@ def bundle_problems(bundles):
     errors, warnings, rel = [], [], "app/data/bundles.json"
     for b in bundles:
         bid, langs = b.get("id", "?"), b.get("languages")
-        if not (isinstance(langs, list) and langs and len(set(langs)) == len(langs) and set(langs) <= set(translations.LAUNCH)):
-            errors.append(f"{rel}: {bid}: languages must be a non-empty list of distinct codes from {', '.join(translations.LAUNCH)}")
+        if not (isinstance(langs, list) and langs and len(set(langs)) == len(langs) and set(langs) <= set(translations.LOCALES)):
+            errors.append(f"{rel}: {bid}: languages must be a non-empty list of distinct codes from {', '.join(translations.LOCALES)}")
         if "always_on" in b:
             errors.append(f"{rel}: {bid}: always_on is gone; kind base marks a base bundle")
         if b.get("kind") not in {"base", "region", "theme"}:
             errors.append(f"{rel}: {bid}: kind must be base, region or theme")
-    listed = {l: {b["id"] for b in bundles if l in (b.get("languages") or [])} for l in translations.LAUNCH}
-    for l in translations.LAUNCH:
+    listed = {l: {b["id"] for b in bundles if l in (b.get("languages") or [])} for l in translations.LOCALES}
+    for l in translations.LOCALES:
+        path = layout.POOL_FILE(l, "base")
+        if not (listed[l] or path.exists()):  # a locale without pool nor bundle, e.g. es-ES before its pool
+            continue
         if not any(b.get("kind") == "base" and b["id"] in listed[l] for b in bundles):
             errors.append(f"{rel}: no base bundle for {l}")
         if l not in patch_notes.EVENT:
             errors.append(f"authoring/tools/patch_notes.py: no Steam event texts (EVENT) for {l}")
-        if l == "es":  # the source: every bundle starts there (`qgen bundle new`)
-            continue
         missing = {b for b in listed[l] if not layout.POOL_FILE(l, b).exists()}
         warnings += [f"{layout.POOL_FILE(l, b).relative_to(ROOT)}: missing; {b} is listed for {l}" for b in sorted(missing)]
-        path = layout.LOCALE_POOL(l)
-        pool =[q for p in layout.POOL_FILES() if p.name == path.name for q in load_json(p)["questions"]]
+        pool = [q for p in layout.POOL_FILES() if p.name == path.name for q in load_json(p)["questions"]]
         have = {q.get("bundle") or "base" for q in pool if q.get("status", "approved") == "approved"}
         warnings += [f"{path.name}: no approved {b} question; {b} is listed for {l}" for b in sorted(listed[l] - have - missing)]
         warnings += [f"{path.name}: approved {b} questions, but {b} isn't listed for {l}" for b in sorted(have - listed[l])]
@@ -4566,7 +4585,7 @@ def main():
     dp.add_argument("--slots", type=int, default=4, help="slots per subcategory")
     dp.add_argument("--bundle", default="base", help="bundle of the run's questions, first call only (D-41)")
     tp = add("translate", cmd_translate, "opus")
-    tp.add_argument("--locale", help="new run only: one of " + ", ".join(translations.LOCALES))
+    tp.add_argument("--locale", help="new run only: one of " + ", ".join(translations.TRANSLATE_TO))
     tp.add_argument("--ids", help="new run only: comma-separated source ids")
     add("rate", cmd_rate, "opus")
     add("factcheck", cmd_factcheck, "sonnet")
@@ -4680,7 +4699,7 @@ def main():
     b.add_argument("--subcategories", help=argparse.SUPPRESS)  # tests and debugging only
     b.add_argument("--count", type=int, help=argparse.SUPPRESS)  # default: batches.SHARE of the bundle's subcategories
     b.add_argument("--jobs", type=int, default=3, help=argparse.SUPPRESS)
-    b.add_argument("--translate", metavar="LOCALE", choices=translations.LOCALES,
+    b.add_argument("--translate", metavar="LOCALE", choices=translations.TRANSLATE_TO,
                    help="translate the bundle's approved questions into this locale (plan 66); only when the user names a language")
     b.add_argument("--dry-run", action="store_true", help="with --translate: print the next run's sources, no LLM calls")
     b.add_argument("--ids", help=argparse.SUPPRESS)  # with --translate: these source ids (tests and debugging only)

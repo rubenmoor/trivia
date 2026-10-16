@@ -1,5 +1,6 @@
-"""Translated questions (D-81): authoring/data/questions.<locale>.json per locale, keyed by the
-Spanish source's ids. The one reader/writer for the pipeline, the review pages and the export.
+"""Translated questions (D-81, decision 235): authoring/data/questions.<locale>.json per locale, keyed by the
+source's ids; a source's language is its `locale` (absent = es). The one reader/writer for the pipeline,
+the review pages and the export.
 
 Each entry has the translated text, its own difficulty, status, batch and review, and the
 source_hash of the source text it was made from; everything else comes from the source by id.
@@ -10,10 +11,18 @@ import atomic
 import layout
 import pool_export
 
-LANGUAGES = {"en": "English", "de": "German"}  # D-78; zh-Hans, ru, pt-BR when milestone 12 resumes
+# question locales (D-78, decision 235); zh-Hans, ru, pt-BR when milestone 12 resumes
+LANGUAGES = {"es": "Spanish (Latin America)", "es-ES": "Spanish (Spain)", "en": "English", "de": "German"}
 LOCALES = tuple(LANGUAGES)
-LAUNCH = ("es", *LOCALES)  # the source first
+NAMED = tuple(l for l in LOCALES if not l.startswith("es"))  # own names files; es, es-ES: categories.json (data.ts namesOf)
+ENGLISH_FROM = 9  # base's batch-N drafts in English from N = 9 on (plan 148)
+TRANSLATE_TO = ("en", "de")  # --translate's targets until task 1235 (es sources only)
 TEXT_FIELDS = ["question", "answer", "wrong_answers", "hints", "description", "fun_fact"]
+
+
+def source_locale(q):
+    """The language a source question is written in (decision 235)."""
+    return q.get("locale", "es")
 
 
 def path(locale):
@@ -71,25 +80,33 @@ def plays(t, q):
 
 
 def play_entries(locale, source_pool):
-    """pool.<locale>.json's entries, in source order: the source's play fields (subcategory,
-    bundle, media, background) with the translated text and difficulty."""
-    by_id = {t["id"]: t for t in load(locale)["questions"]}
+    """The locale's pool entries, in source order (decision 235): its approved sources, and the playing
+    translations into it: the source's play fields (subcategory, bundle, media, background) with the
+    translated text and difficulty."""
+    by_id = {t["id"]: t for t in load(locale)["questions"]} if path(locale).exists() else {}
     out = []
     for q in source_pool["questions"]:
-        t = by_id.get(q["id"])
-        if t and plays(t, q):
+        if source_locale(q) == locale:
+            if q["status"] == "approved":
+                out.append(pool_export.play_entry(q))
+        elif (t := by_id.get(q["id"])) and plays(t, q):
             out.append(pool_export.play_entry({**q, **{k: t[k] for k in TEXT_FIELDS + ["difficulty"]}}))
     return out
 
 
 def export_texts(locale, source_pool):
-    """{path: text}: pool.<locale>.json and the packs' (decision 66)."""
+    """{path: text}: the locale's pool file (pool.json for es) and the packs' (decision 66)."""
     return pool_export.split(play_entries(locale, source_pool), locale)
 
 
+def exported(locale, source_pool):
+    """The locale has a pool: es always, another with a translation file or a source in it."""
+    return locale == "es" or path(locale).exists() or any(source_locale(q) == locale for q in source_pool["questions"])
+
+
 def exports(source_pool):
-    """{path: text} for every locale with a translation file (no pool.es.json)."""
-    return {p: t for l in LOCALES if path(l).exists() for p, t in export_texts(l, source_pool).items()}
+    """{path: text} for every locale with a pool."""
+    return {p: t for l in LOCALES if exported(l, source_pool) for p, t in export_texts(l, source_pool).items()}
 
 
 def yield_rate(locale):

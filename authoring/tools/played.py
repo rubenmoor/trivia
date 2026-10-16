@@ -61,12 +61,13 @@ def _add_level(d, key, right, rated):
 
 
 def rated():
-    """{locale: {id: (difficulty, reviewed_on)}}: es from the source pool, the others their own (D-81)."""
+    """{locale: {id: (difficulty, reviewed_on)}}: sources under their locale, translations under theirs (D-81, decision 235)."""
     def entry(q):
         return q["difficulty"], (q.get("review") or {}).get("reviewed_on")
-    out = {"es": {q["id"]: entry(q) for q in json.loads(layout.SOURCE_POOL.read_text(encoding="utf-8"))["questions"]}}
-    for l in translations.LOCALES:
-        out[l] = {t["id"]: entry(t) for t in translations.load(l)["questions"] if t.get("difficulty") is not None}
+    out = {l: {t["id"]: entry(t) for t in translations.load(l)["questions"] if t.get("difficulty") is not None}
+           for l in translations.LOCALES}
+    for q in json.loads(layout.SOURCE_POOL.read_text(encoding="utf-8"))["questions"]:
+        out[translations.source_locale(q)][q["id"]] = entry(q)
     return out
 
 

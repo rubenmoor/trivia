@@ -1,6 +1,6 @@
-"""The game's pool (D-35): app/data/pool.json is generated from authoring/data/questions.json;
-app/data/pool.<locale>.json from it and authoring/data/questions.<locale>.json (D-81).
-base's questions only; each pack (non-base bundle) has its own app/data/bundles/<id>/pool[.<locale>].json (decision 66)."""
+"""The game's pool (D-35): app/data/pool.<locale>.json (es: pool.json) is generated from the approved sources
+in authoring/data/questions.json in that locale and authoring/data/questions.<locale>.json's translations
+(D-81, decision 235). base's questions only; each pack (non-base bundle) has its own app/data/bundles/<id>/pool[.<locale>].json (decision 66)."""
 import hashlib
 import json
 
@@ -38,15 +38,10 @@ def split(entries, locale="es"):
     return {layout.POOL_FILE(locale, b): pool_text(es) for b, es in by.items()}
 
 
-def export_texts(pool):
-    """{path: text} of the approved questions: pool.json and the packs' pool.json."""
-    return split([play_entry(q) for q in pool["questions"] if q["status"] == "approved"])
-
-
 def exports(pool):
-    """{path: text}: es and every locale with a translation file."""
+    """{path: text}: every locale with a pool (translations.exports)."""
     import translations  # authoring/tools/translations.py (imports this module)
-    return {**export_texts(pool), **translations.exports(pool)}
+    return translations.exports(pool)
 
 
 def stale_packs(texts, locale=None):
