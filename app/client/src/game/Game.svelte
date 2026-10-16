@@ -64,7 +64,8 @@
     completed: "normal", // no victory music (D-105)
   };
 
-  const OURS = { Start, Language, Player, Choice, Level, Select, Question, Correct, Wrong, Victory };
+  // Next and Completed: both `Revealed` (answers off, D-105).
+  const OURS = { Start, Language, Player, Choice, Level, Select, Question, Correct, Wrong, Next: Revealed, Completed: Revealed, Victory };
   type Name = keyof typeof OURS;
   /** Each screen: ours or a mod's (plan 117), read once; a failing one falls back to ours. */
   let S = $state.raw(Object.fromEntries(Object.entries(OURS).map(([n, c]) => [n, screenFor(n as Name, c)])) as typeof OURS);
@@ -662,9 +663,12 @@
     {:else if screen === "wrong" && game?.last}
       <Stage mood="wrong" />
       <S.Wrong {game} last={game.last} {levels} {blocks} {busy} onhome={toStart} />
-    {:else if (screen === "next" || screen === "completed") && game?.last}
+    {:else if screen === "next" && game?.last}
       <Stage />
-      <Revealed last={game.last} completed={screen === "completed"} {busy} onnext={screen === "completed" ? toStart : toLevel} />
+      <S.Next last={game.last} completed={false} {busy} onnext={toLevel} />
+    {:else if screen === "completed" && game?.last}
+      <Stage />
+      <S.Completed last={game.last} completed {busy} onnext={toStart} />
     {:else if screen === "victory" && game}
       <Stage mood="victory" />
       <S.Victory {game} {levels} {busy} onhome={toStart} />
