@@ -29372,7 +29372,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Browser check: run `trivia-authoring` in `../trivia-review` with a temporary en-sourced question, then remove it.
 
 Done when: the check passes; `qgen validate`, `npm run check`, `npm test`, `npm run build` pass.', '2026-10-16T00:40:10Z', '2026-10-16T01:20:02Z', 1218, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1238, 148, 'English-first prompt drafts for the developer', 'work', 'open', NULL, NULL, 'Part 8 of `plan 148: English-first drafting for base`. Prompts are the developer''s (RUNBOOK): draft, don''t apply. Prompts are in `authoring/tools/prompts/`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1238, 148, 'English-first prompt drafts for the developer', 'work', 'done', NULL, '2026-10-16, decision 239: English-first drafting prompts: apply? (drafts for house-style, locale-en/es/de, new locale-es-ES, draft, rate, factcheck, review, audit, neutralize, translate, translate-review, translate-region); tasks 1239 and 1185 pending on it; no prompt file changed', 'Part 8 of `plan 148: English-first drafting for base`. Prompts are the developer''s (RUNBOOK): draft, don''t apply. Prompts are in `authoring/tools/prompts/`.
 
 Write the drafts as verbatim old → new in the decision''s body:
 - Drafting prompts language-neutral or English:
@@ -29391,7 +29391,7 @@ Then:
 - `pm task-pending-decision 1239 <decision>` (`task 1239: Apply the English-first prompts`).
 - `pm task-pending-decision 1185 <decision>` (`task 1185: run batch-9` must not draft before the prompts are in).
 
-Done when: the decision exists with both pending links; no prompt file changed.', '2026-10-16T00:40:10Z', NULL, 1218, 0);
+Done when: the decision exists with both pending links; no prompt file changed.', '2026-10-16T00:40:10Z', '2026-10-16T01:24:08Z', 1218, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1239, 148, 'Apply the English-first prompts', 'work', 'open', NULL, NULL, 'Part 9 of `plan 148: English-first drafting for base`. Waits for the decision "English-first drafting prompts: apply?" raised by `task 1238: English-first prompt drafts for the developer`.
 
 - Apply the answer to `authoring/tools/prompts/` exactly: apply, apply with changes, or keep.
@@ -31733,6 +31733,534 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (236, 'English-first drafting for base: what drives drafting and which locales steer it', 'answered', '[]', 'Milestone 9, section ''English-first drafting for base'' (developer, 2026-10-15): «from batch-9 on, qgen batch for base drafts in English: en is the source locale of every new base question»; «target: 5000 approved per question locale (decision 21) for en, es, es-ES, de; English drafting aims at the locales'' deficits»; «replaces: decision 27 for base (es-419 comes from translation, not from Spanish drafts); decision 37''s last clause and D-84 (the en/de source shortfall driving es drafting); decision 219 (DRIVES_DRAFTING: English is the source, no locale steers es drafting)». Source locale per question: `decision 235: Source locale per question and translations from either source (English-first base)`. Implemented by `plan 148: English-first drafting for base` (targets: task 1236). plans/decisions.md D-107.', 'base drafts in English from batch-9 on; the launch question locales en, es, es-ES, de steer English drafting by their deficits (draft gap per level = largest over the four of deficit / yield − approved translatable sources not yet in that locale); es drafting for base stops, so no en/de source shortfall drives es drafting and translations.DRIVES_DRAFTING goes; milestone 12''s locales (zh-Hans, ru, pt-BR) steer only by plan 60''s own decision later; regional bundles keep their own deficit (D-101)', NULL, '2026-10-16T00:45:53Z', '2026-10-16T00:45:53Z', 1231, NULL, 'rule', 1231, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (237, 'Supersede decision 27: Spanish variety (OQ-31): which Spanish does base speak, and which Steam store languages to tick? by English-first drafting for base?', 'answered', '["Supersede decision 27 for base as the milestone says: es-419 from translation of English sources (es-sourced ≤ batch-8 stay), es idiomatic Latin American, es-ES its own question pool; colombia and the store languages unchanged", "Keep decision 27 as is (the milestone''s section changes instead)"]', 'Decision 27 (your answer, 2026-10-12): base in neutral Latin American Spanish (es-419), es-ES a variant only where the wording differs. Milestone 9, section ''English-first drafting for base'' (you, 2026-10-15), replaces it for base: «replaces: decision 27 for base (es-419 comes from translation, not from Spanish drafts)»; «two Spanish question locales, like the UI: es (es-419) and es-ES, each its own pool»; «es is idiomatic Latin American Spanish, no longer a compromise with Spain»; «es-ES is Spain''s Spanish». Workers may supersede only a worker''s choice, so this needs your answer. Unchanged: colombia keeps its Colombian voice; Steam store languages Spanish – Latin America and Spain. `plan 148: English-first drafting for base` goes ahead on the milestone''s text; no task waits for this. Related: `decision 236: English-first drafting for base: what drives drafting and which locales steer it`, `decision 235: Source locale per question and translations from either source (English-first base)`, plans/decisions.md D-107.', 'Supersede decision 27 for base as the milestone says: es-419 from translation of English sources (es-sourced ≤ batch-8 stay), es idiomatic Latin American, es-ES its own question pool; colombia and the store languages unchanged', NULL, '2026-10-16T00:46:00Z', '2026-10-16T00:49:56Z', 1231, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (238, 'Draft gap for the drafting locale itself: 1:1, not deficit / yield', 'answered', '[]', 'decision 236: English-first drafting for base: what drives drafting and which locales steer it gives one formula for all four locales. An approved en draft counts 1:1 toward en''s deficit (no translation step), while es sources reach en only through es → en translation at en''s yield; dividing en''s deficit by the es → en yield would over-ask drafts. Both coincide while yields are 1.0 (no pilots yet). targets.locale_gap, D-107, task 1236.', 'for en (base''s drafting locale) the gap is deficit − untranslated × en yield; the other three locales keep decision 236''s deficit / yield − untranslated', NULL, '2026-10-16T01:13:26Z', '2026-10-16T01:13:26Z', 1236, NULL, 'rule', 1236, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (239, 'English-first drafting prompts: apply?', 'pending', '["apply", "apply with changes (list them)", "keep"]', '`task 1238: English-first prompt drafts for the developer` (`plan 148: English-first drafting for base`, part 8; milestone 9 "English-first drafting for `base`"). From batch-9 on, `base` drafts in English (`task 1234: qgen batch drafts en for base: the whole chain on the question''s locale`); every step reads `house-style.md` + `locale-<L>.md` of the question''s own locale, and the translation prompts already get `{source_language}` filled (`qgen.py` `prompt(…, source_locale=)`, task 1235). Today the prompts still assume Spanish text and Spanish sources. Below: each change as verbatim old → new, in `authoring/tools/prompts/`. Nothing applied yet.
+
+Summary:
+- `house-style.md`: language-neutral; examples in English; new section "International angle" (the one place for the rule; drafting, rating, review, audit, revise read it through the house style; `task 1203: International angle in the concept prompts` refers to it).
+- `locale-en.md`: a drafting voice (decision 167''s wording kept); "where this house style says Spanish" gone.
+- `locale-es.md`: idiomatic Latin American Spanish, no "understood … in Spain"; Colombian references only for `colombia`.
+- New `locale-es-ES.md`: Spain''s Spanish, `tú`, Spain''s words and titles (`prompt()` already picks `locale-es-ES.md` once it exists, else `locale-es.md`).
+- `locale-de.md`: "the Spanish"/"than Spanish" → the source; "where this house style says Spanish" gone.
+- `draft.md`, `rate.md`, `factcheck.md`, `review.md`, `audit.md`: Spanish examples and Spanish-only rules → per locale. `revise.md`: no Spanish assumption, unchanged.
+- `neutralize.md`: Spain-oriented rules gone (no "understood in Spain" compromise words); only on es-sourced `base` questions.
+- `translate.md`, `translate-review.md`, `translate-region.md`: from `{source_language}`; travel reason `about_spanish` → `about_language` (code: `TRAVEL_REASONS` in `qgen.py`; no stored entry uses it today).
+- Not here: the calibration examples (house style "Difficulty", `task 1202: International calibration examples for the 1–15 scale`), the concept prompts (task 1203), `base.rule` / `base.voice` in `app/data/bundles.json` (`task 1245: base bundle rule and voice for English-first drafting`; `locale-es.md`''s `{voices}` reads `base.voice`, so its "and in Spain" goes with 1245), `tighten.md`, `bundles.md` (Spanish examples only illustrate).
+- One judgement call to check: `review.md` `feedback` "(Spanish, …)" → English, like `fix`, `reasons` and `notes`; say "keep Spanish" under "apply with changes" if you read feedback better in Spanish.
+
+---
+
+## 1. `house-style.md`
+
+### 1a. Use the four options honestly
+old:
+```
+- A superlative or comparison asks about the **real world**: "¿Cuál es el dinosaurio más largo que ha existido?", and the answer is the real record holder. Never "¿Cuál de estos es el más largo?", where the answer is only the biggest among the four options: the options are not a meaningful set, and the question teaches nothing.
+- The same goes for "¿Cuál de estas ciudades está a mayor altura?": ask "¿Cuál es la capital departamental más alta de Colombia?" instead.
+- The clue in the question must point to the answer **in the real world**, not just among the four options. Before writing, ask: "What else in the world fits this clue?" If anything does, use a clue that only the answer has.
+  - Bad: "¿Qué ritmo del Caribe colombiano se baila con velas en la mano?" Other dances use candles too.
+  - Bad: "¿En qué deporte se usa una raqueta y una pelota amarilla?" Pádel and frontenis do too, and tennis doesn''t depend on the ball''s colour.
+```
+new:
+```
+- A superlative or comparison asks about the **real world**: "What is the longest dinosaur that ever lived?", and the answer is the real record holder. Never "Which of these is the longest?", where the answer is only the biggest among the four options: the options are not a meaningful set, and the question teaches nothing.
+- The same goes for "Which of these mountains is the highest?": ask "What is the highest mountain in Africa?" instead.
+- The clue in the question must point to the answer **in the real world**, not just among the four options. Before writing, ask: "What else in the world fits this clue?" If anything does, use a clue that only the answer has.
+  - Bad: "Which dance is performed with candles in the dancers'' hands?" Many dances use candles.
+  - Bad: "Which sport is played with a racket and a yellow ball?" Padel and squash do too, and tennis doesn''t depend on the ball''s colour.
+```
+
+### 1b. Keep it short
+old:
+```
+- It asks exactly one thing. A rhetorical question or thought inside a riddle goes in quotes, so players don''t hear two questions: "Me preguntaron «¿Con qué grano dejé de merecer mi nombre?». ¿Qué paradoja soy?"
+```
+new:
+```
+- It asks exactly one thing. A rhetorical question or thought inside a riddle goes in quotes, so players don''t hear two questions: "The Sphinx asked “What walks on four legs in the morning, two at noon and three in the evening?”. Who solved the riddle?"
+```
+old:
+```
+- No invented story around the question: no relatives, friends, guides or influencers telling you something ("Tu tío…", "Tu prima te reta…", "Un amigo…"), no "Imagina que…", no backstory. A situation ("Estás en la cocina y…") only when it is the clue itself, in one short clause.
+```
+new:
+```
+- No invented story around the question: no relatives, friends, guides or influencers telling you something ("Your uncle…", "Your cousin dares you…", "A friend…"), no "Imagine that…", no backstory. A situation ("You''re in the kitchen and…") only when it is the clue itself, in one short clause.
+```
+
+### 1c. New section, after "## Keep it short" (before "## No giveaways")
+new:
+```
+## International angle
+A `base` question is played in every language of the game (English, Spanish for Latin America and for Spain, German, more later), by families anywhere. Write it so it travels:
+- No focus on the Spanish-speaking world: Latin American or Spanish places, people, food and customs only in the share any other region gets, and only when families everywhere know them.
+- No Anglo or US bias: no US or UK school knowledge, holidays, money, sports leagues, TV or brands treated as everyone''s; the world is the default, not one country.
+- Spread places, people, customs, food, music and history across the world; a famous fact from anywhere is welcome.
+- No question that lives on one language: no wordplay, pun, rhyme or sound joke, and no question about one language''s spelling, plurals, letters or words, unless it works the same in every language.
+- A regional bundle (e.g. `colombia`) follows its own rule (under "Bundle") instead.
+```
+
+### 1d. Description
+old:
+```
+Every question has a `description`: one full, humorous Spanish sentence shown *before* the question, instead of the category, in the style of "You Don''t Know Jack". It relates to the question''s content, can be absurd, and must not give the answer away or rule out options (e.g. don''t say "un nevado" when only two options are nevados). Examples from the pool:
+- Café: "Los papás no funcionan por la mañana hasta que les echas este combustible."
+- Capybara (chigüiro): "Un ratón al que se le fue la mano en el almuerzo."
+- Light bulb: "Una idea tan buena que hasta tiene forma de idea."
+- Saturno: "Un planeta que nunca se quita sus joyas."
+- Año luz: "Una pregunta engañosa, como cuando tu mamá dice ''ya casi llegamos''."
+- Hipérbole: "Esta es la mejor pregunta de la historia del universo, sin exagerar."
+```
+new:
+```
+Every question has a `description`: one full, humorous sentence in the question''s language, shown *before* the question, instead of the category, in the style of "You Don''t Know Jack". It relates to the question''s content, can be absurd, and must not give the answer away or rule out options (e.g. don''t say "a volcano" when only two options are volcanoes). Examples from the pool, in English:
+- Coffee: "Parents don''t start in the morning until you fill them up with this fuel."
+- Capybara: "A mouse that went a little overboard at lunch."
+- Light bulb: "An idea so good it''s even shaped like one."
+- Saturn: "A planet that never takes off its jewelry."
+- Light-year: "A trick question, like when your mom says ''we''re almost there''."
+- Hyperbole: "This is the best question in the history of the universe, no exaggeration."
+```
+
+### 1e. Media
+old:
+```
+Examples: "¿Quién escribió Don Quijote?" → "Consuegra windmills"; "¿Cuál es la capital de Australia?" → "kangaroo" (Australia, but no city that could be an option).
+```
+new:
+```
+Examples: "Who wrote Don Quixote?" → "Consuegra windmills"; "What is the capital of Australia?" → "kangaroo" (Australia, but no city that could be an option).
+```
+old:
+```
+(e.g. "¿Qué planeta tiene anillos enormes?": any space picture might show Saturn).
+  - "essential": the media is part of the question, e.g. "Escucha: ¿qué instrumento suena?".
+```
+new:
+```
+(e.g. "Which planet has huge rings?": any space picture might show Saturn).
+  - "essential": the media is part of the question, e.g. "Listen: which instrument is this?".
+```
+old:
+```
+Not for rare or regional objects (e.g. a gaita),
+```
+new:
+```
+Not for rare or regional objects (e.g. a Colombian gaita flute),
+```
+old:
+```
+(a question about a Colombian fruit → "Colombian fruit market"; about a Greek god → "Greek temple ruins")
+```
+new:
+```
+(a question about a tropical fruit → "tropical fruit market"; about a Greek god → "Greek temple ruins")
+```
+
+### 1f. Fun fact
+old:
+```
+`fun_fact`: one short Spanish sentence shown after the answer is revealed. True, surprising, family-friendly.
+```
+new:
+```
+`fun_fact`: one short sentence in the question''s language, shown after the answer is revealed. True, surprising, family-friendly.
+```
+
+### 1g. Difficulty
+Unchanged here: the calibration examples are `task 1202: International calibration examples for the 1–15 scale`''s.
+
+## 2. `locale-en.md` (drafting voice and translation target)
+
+old (whole file):
+```
+- All content is in English.
+- US spelling ("color", "center"). Words all English speakers understand; where US and UK English differ ("soccer"/"football", "fries"/"chips", "cookie"/"biscuit"), reword around it if that stays natural, else the US word.
+- Units: metric first; add imperial in brackets in the question text and fun fact where English speakers think in it ("8849 m (29,032 ft)", "30 °C (86 °F)"). The four options use one unit, all in the same form.
+- Numbers: comma as thousands separator from 1,000 ("42,195 people"), decimal point ("42.195 km"), years without separator; large round numbers in words ("3 million"). Dates: "July 20, 1969".
+- Names and titles as English speakers know them: "Christopher Columbus", "Joan of Arc", the English title of a film or book ("Inside Out", "One Hundred Years of Solitude"). A name without an English form stays as it is.
+- Address (UI style guide `en`): "you", for one player or the whole family; never "you all", "you guys", "yourselves".
+- Quotes in the text fields: “…” (curly double quotes).
+- Watch "a"/"an": an article in the question must fit all four options.
+- Difficulty and distractors on the same scale 1–15 (the calibration examples are about Spanish speakers, the scale isn''t).
+- Where this house style says Spanish (the description, the fun fact), read English. Its examples stay in Spanish: they show the style, not the language.
+```
+new (whole file):
+```
+- All content is in English, whether you write the question or translate it.
+- Plain, natural English that every English speaker reads easily: short common words, no slang, no idioms of one country.
+- US spelling ("color", "center"). Words all English speakers understand; where US and UK English differ ("soccer"/"football", "fries"/"chips", "cookie"/"biscuit"), reword around it if that stays natural, else the US word. US spelling is about the words, not the topics (house style "International angle").
+- Units: metric first; add imperial in brackets in the question text and fun fact where English speakers think in it ("8849 m (29,032 ft)", "30 °C (86 °F)"). The four options use one unit, all in the same form.
+- Numbers: comma as thousands separator from 1,000 ("42,195 people"), decimal point ("42.195 km"), years without separator; large round numbers in words ("3 million"). Dates: "July 20, 1969".
+- Names and titles as English speakers know them: "Christopher Columbus", "Joan of Arc", the English title of a film or book ("Inside Out", "One Hundred Years of Solitude"). A name without an English form stays as it is.
+- Address (UI style guide `en`): "you", for one player or the whole family; never "you all", "you guys", "yourselves".
+- Quotes in the text fields: “…” (curly double quotes).
+- Watch "a"/"an": an article in the question must fit all four options.
+- Difficulty and distractors on the same scale 1–15 (the calibration examples are about Spanish speakers, the scale isn''t).
+```
+(The difficulty bullet keeps decision 167''s wording; task 1202 updates its parenthesis with the examples.)
+
+## 3. `locale-es.md` (idiomatic Latin American Spanish)
+
+old (whole file):
+```
+- All content is in Spanish. The voice depends on the question''s bundle:
+{voices}
+- Neutral means: a word understood across Latin America and in Spain where one exists ("bombilla", "palomitas", "gripe", "portero", "café"); no regional diminutives ("pelota", not "pelotica"); no word, brand-as-generic or usage known in one country only, Spain included ("cinta adhesiva", not "cinta Scotch"; "computadora", not "ordenador"). Where no word is shared ("carro"/"coche"/"auto", "celular"/"móvil"), reword around it if that stays natural ("vehículo", "teléfono"); else take the most widespread Latin American form.
+- Address: one generic "tú" where a question speaks to the players ("Escucha: …", "si estornudas…"), as the pool does; never "vos", "vosotros", "usted". (The UI''s "ustedes" is for the game''s own prompts, not question texts.)
+- Use Colombian references where they fit naturally (places, food, music, sport, people, Encanto), but don''t force them. Each batch writes for one bundle (D-41): a `base` question may use Colombian references anyone in the Spanish-speaking world knows, but never needs a connection to Colombia to answer; that is the `colombia` bundle''s job. A neutral voice is about the words, not the topics.
+- Numbers (all bundles): no thousands separator up to 9999 ("2640 metros"), a space from 10 000 ("42 195 personas"), a decimal comma ("42,195 km"); large round numbers in words ("3 millones").
+```
+new (whole file):
+```
+- All content is in Spanish, whether you write the question or translate it. The voice depends on the question''s bundle:
+{voices}
+- `base` is idiomatic Latin American Spanish: natural words a family anywhere in Latin America uses ("computadora", "jugo", "papa", "celular", "palomitas", "lentes"). It doesn''t need to read as Spain''s Spanish: Spain gets its own `es-ES` text. No Spain-only word or usage ("ordenador", "zumo", "patata", "móvil", "vale"), no regional diminutives ("pelota", not "pelotica"), no word, brand-as-generic or usage known in one Latin American country only ("cinta adhesiva", not "cinta Scotch"; "gripe", not "gripa"). Where Latin American countries differ ("carro"/"auto", "piscina"/"alberca"/"pileta"), reword around it if that stays natural ("vehículo"); else take the most widespread Latin American form.
+- Names and titles as Latin American Spanish speakers know them: "Cristóbal Colón", "Juana de Arco", the Latin American release title of a film or book ("Intensa-Mente", "Buscando a Nemo"). A name without a Spanish form stays as it is.
+- Address: one generic "tú" where a question speaks to the players ("Escucha: …", "si estornudas…"), as the pool does; never "vos", "vosotros", "usted". (The UI''s "ustedes" is for the game''s own prompts, not question texts.)
+- `colombia` only: Colombian references where they fit naturally (places, food, music, sport, people, Encanto); don''t force them. A `base` question never needs a connection to Colombia or any one country to answer (house style "International angle"); a Colombian voice is the `colombia` bundle''s.
+- Units: metric only. Numbers (all bundles): no thousands separator up to 9999 ("2640 metros"), a space from 10 000 ("42 195 personas"), a decimal comma ("42,195 km"); large round numbers in words ("3 millones"). Dates: "20 de julio de 1969".
+- Articles and gender (el/la, un/una) must fit all four options.
+- Difficulty and distractors on the same scale 1–15.
+```
+
+## 4. New `locale-es-ES.md` (Spain''s Spanish)
+
+new (whole file):
+```
+- All content is in Spain''s Spanish (castellano de España), whether you adapt a Spanish question from Latin America or translate one: the words, spelling and usage a family in Spain uses.
+- Spain''s common words: "ordenador", "móvil", "coche", "zumo", "patata", "gafas", "piscina", "palomitas", "vídeo". No word known in one part of Spain only (Canarian "guagua", Andalusian or Catalan-only words), no slang, no brand-as-generic ("cinta adhesiva", not "celo"). Latin American words where Spain has its own ("computadora", "jugo", "carro", "celular", "lentes") become Spain''s.
+- Names and titles as they are known in Spain: "Cristóbal Colón", "Juana de Arco", the Spanish release title of a film or book in Spain ("Del revés" for "Inside Out", "Buscando a Nemo"). A name without a Spanish form stays as it is.
+- Address: one generic "tú" where a question speaks to the players ("Escucha: …", "si estornudas…"); never "vosotros", "usted", "vos". (The UI''s "vosotros" is for the game''s own prompts, not question texts.)
+- Quotes in the text fields: «…» (angle quotes).
+- Units: metric only. Numbers: no thousands separator up to 9999 ("2640 metros"), a space from 10 000 ("42 195 personas"), a decimal comma ("42,195 km"); large round numbers in words ("3 millones"). Dates: "20 de julio de 1969".
+- Articles and gender (el/la, un/una) must fit all four options.
+- Difficulty and distractors on the same scale 1–15.
+```
+
+## 5. `locale-de.md`
+
+old:
+```
+- Address (UI style guide `de`): never assume a plural: no "ihr", "euch", "euer", no plural imperatives ("Hört zu", "Schaut"). Where the Spanish speaks to the players ("tú"), use a generic "du" ("Hör zu: …", "wenn du niest") or an impersonal form ("Zu hören ist …"); never "Sie".
+```
+new:
+```
+- Address (UI style guide `de`): never assume a plural: no "ihr", "euch", "euer", no plural imperatives ("Hört zu", "Schaut"). Where the source speaks to the players ("you", "tú"), use a generic "du" ("Hör zu: …", "wenn du niest") or an impersonal form ("Zu hören ist …"); never "Sie".
+```
+old:
+```
+- House style "Keep it short" holds; German may run a little longer than Spanish, but stays under 160 characters.
+```
+new:
+```
+- House style "Keep it short" holds; German may run a little longer than the source, but stays under 160 characters.
+```
+old (drop):
+```
+- Where this house style says Spanish (the description, the fun fact), read German. Its examples stay in Spanish: they show the style, not the language.
+```
+new: (line removed)
+
+## 6. `draft.md`
+
+old:
+```
+- Set `needs_fact_check` to true if the question, answer, hints or fun fact contain a number, date, record, superlative ("el más grande") or any fact that could be wrong.
+- **Stay inside the bundle** (under "Bundle"): judge by what a player needs to know to answer, not by the topic. A question in `base` must be answerable without a connection to Colombia or any other bundle''s world; if a slot can''t give one, skip it (`retire` `"no"`).
+```
+new:
+```
+- Set `needs_fact_check` to true if the question, answer, hints or fun fact contain a number, date, record, superlative ("the largest") or any fact that could be wrong.
+- **Stay inside the bundle** (under "Bundle"): judge by what a player needs to know to answer, not by the topic. A question in `base` must be answerable without a connection to Colombia or any other bundle''s world, and follows the house style''s "International angle"; if a slot can''t give one, skip it (`retire` `"no"`).
+- Write every text field in the language of the house style''s "Language" section; the concept names may be in another language: use the name the players know in theirs.
+```
+
+## 7. `rate.md`
+
+old:
+```
+- `age_fit`: fits its stated difficulty on the shared scale and suits the players (house style, Audience); nothing adult-only.
+```
+new:
+```
+- `age_fit`: fits its stated difficulty on the shared scale and suits the players (house style, Audience); nothing adult-only. For `base`: score ≤ 3 when it needs knowledge of one country or language region that families elsewhere don''t have (house style, "International angle"), and say so in `notes`.
+```
+old:
+```
+- `no_overlap`: … The same answer to the same kind of question counts as the same fact, even with other examples (two «¿Qué tienen en común…?» questions with the same answer). …
+```
+new:
+```
+- `no_overlap`: … The same answer to the same kind of question counts as the same fact, even with other examples (two "What do … have in common?" questions with the same answer). …
+```
+(only the quoted example changes; the overlap candidates may be in another language than the question: compare the facts, not the words — added as a last sentence of the bullet: "Candidates may be written in another language: compare the facts, not the words.")
+old:
+```
+Score `unambiguous` ≤ 3 for "¿Cuál de estos es el más …?" questions where the answer is only the record among the four options rather than the real-world record holder.
+
+Score `unambiguous` ≤ 3 when the question''s clue also fits something outside the four options (e.g. "el deporte con raqueta y pelotica amarilla" also fits pádel; "el ritmo que se baila con velas" fits more than cumbia). Ask yourself: "What else in the world fits this clue?" Name it in `notes`.
+```
+new:
+```
+Score `unambiguous` ≤ 3 for "Which of these is the most …?" questions where the answer is only the record among the four options rather than the real-world record holder.
+
+Score `unambiguous` ≤ 3 when the question''s clue also fits something outside the four options (e.g. "the sport with a racket and a yellow ball" also fits padel; "the dance with candles in the dancers'' hands" fits more than one). Ask yourself: "What else in the world fits this clue?" Name it in `notes`.
+
+Score `fun` ≤ 3 when a `base` question lives on wordplay, a sound or the spelling of one language (house style, "International angle"); say so in `notes`.
+```
+
+## 8. `factcheck.md`
+
+old:
+```
+List the URLs you relied on in `sources`. Keep `problem` and `correction` short, in English (corrections to Spanish text in Spanish).
+```
+new:
+```
+List the URLs you relied on in `sources`. Keep `problem` and `correction` short, in English (a correction to the question''s text in the question''s language).
+```
+
+## 9. `revise.md`
+No Spanish assumption (it reads the house style and "Language" of the question''s locale): unchanged.
+
+## 10. `review.md`
+
+old:
+```
+Answer `approved` unless one of these is true; then answer `needs_work` and say what is wrong in `feedback` (Spanish, one or two sentences the developer can act on):
+```
+new:
+```
+Answer `approved` unless one of these is true; then answer `needs_work` and say what is wrong in `feedback` (English, one or two sentences the developer can act on):
+```
+old:
+```
+2. A second option is defensible, or the clue fits something in the real world outside the four options. A riddle ("¿Quién soy?") with a generic answer (a kind of person, not a named one): check each wrong answer against every event described; if one could have done it too ("un arqueólogo británico" could have thrown a stone into a cave), the `fix` adds a detail only the answer has.
+```
+new:
+```
+2. A second option is defensible, or the clue fits something in the real world outside the four options. A riddle ("Who am I?") with a generic answer (a kind of person, not a named one): check each wrong answer against every event described; if one could have done it too ("a British archaeologist" could have thrown a stone into a cave), the `fix` adds a detail only the answer has.
+```
+old:
+```
+6. The question text breaks house style "Keep it short": it is long-winded, or wrapped in an invented story (a relative, friend or guide telling you something, "Imagina que…"), or it asks two questions, one unquoted inside a riddle. The `fix` says what to cut, or puts the inner question in quotes («…»).
+7. It asks what several given things have in common ("¿qué tienen en común…?"). This style is retired; leave `fix` empty.
+8. Its wording doesn''t match its bundle''s voice (house style "Language"): a `base` question uses, or rests on, a word, brand-as-generic or usage known in one country only, Spain included ("gripa", "cinta Scotch", "ordenador"), where a neutral word exists. `feedback` names it as regional; the `fix` names each word and its replacement.
+```
+new:
+```
+6. The question text breaks house style "Keep it short": it is long-winded, or wrapped in an invented story (a relative, friend or guide telling you something, "Imagine that…"), or it asks two questions, one unquoted inside a riddle. The `fix` says what to cut, or puts the inner question in quotes (the "Language" section''s quote marks).
+7. It asks what several given things have in common ("What do … have in common?"). This style is retired; leave `fix` empty.
+8. Its wording doesn''t match its locale''s and bundle''s voice (house style "Language"): a word, brand-as-generic or usage the section rules out (in `es`: one known in one country only, Spain included: "gripa", "cinta Scotch", "ordenador"; in `en`: a UK or US word where both differ), where a common word exists. `feedback` names it as regional; the `fix` names each word and its replacement.
+9. A `base` question breaks the house style''s "International angle": it needs knowledge of one country or language region that families elsewhere don''t have, or lives on wordplay, a sound or the spelling of one language. Questions written before batch-9 (Spanish sources) are exempt from this reason. The `fix` names what to change, if it can be fixed without becoming a different question; else leave `fix` empty.
+```
+old:
+```
+When `can_fix` is true and you decide `needs_work` for a problem in the text (1–4, 6, 8), write `fix`:
+```
+new:
+```
+When `can_fix` is true and you decide `needs_work` for a problem in the text (1–4, 6, 8, 9), write `fix`:
+```
+old:
+```
+Examples: "Hint 1 names the composer''s country, which gives the answer away; replace it with a vague hint about the era." "The fun fact''s date is wrong (1969, not 1971); correct it." "''Saturno'' is also defensible because it has rings too; replace that wrong answer with a planet without visible rings."
+```
+new:
+```
+Examples: "Hint 1 names the composer''s country, which gives the answer away; replace it with a vague hint about the era." "The fun fact''s date is wrong (1969, not 1971); correct it." "''Saturn'' is also defensible because it has rings too; replace that wrong answer with a planet without visible rings."
+```
+old:
+```
+  - `style`: long-winded, an invented story, two questions in one text, the retired "what do they have in common" style, or the wrong voice for its bundle (reasons 6, 7, 8);
+```
+new:
+```
+  - `style`: long-winded, an invented story, two questions in one text, the retired "what do they have in common" style, the wrong voice for its locale or bundle, or not international (reasons 6, 7, 8, 9);
+```
+(The "Exempt before batch-9" clause: the reviewer sees only the question; task 1239 passes whether the question is es-sourced, e.g. its `locale`, if the review input lacks it today.)
+
+## 11. `audit.md`
+
+old:
+```
+7. **style**: house style "Keep it short" is broken (long-winded, an invented story, "Imagina que…"), it uses a retired style ("¿qué tienen en común…?"), or its wording doesn''t match its bundle''s voice (house style "Language"; a `base` question with Colombian or other national words where a neutral one exists).
+```
+new:
+```
+7. **style**: house style "Keep it short" is broken (long-winded, an invented story, "Imagine that…"), it uses a retired style ("What do … have in common?"), its wording doesn''t match its locale''s and bundle''s voice (house style "Language"; a word of one country where a common one exists), or an English-sourced `base` question breaks the house style''s "International angle" (needs one country''s or language''s knowledge, or wordplay that only works in one language).
+```
+
+## 12. `neutralize.md` (es-sourced `base` questions only, task 1234)
+
+old:
+```
+You get questions from the `base` bundle of the trivia game described above, with their id: description, question, answer, wrong answers, hints and fun fact. `base` is played anywhere in the Spanish-speaking world, so its voice is neutral Latin American Spanish (house style "Language"). Find every question whose wording, in any of these fields, uses Colombian or other national usage, Spain''s included, where a neutral word exists:
+- regional words: "bombillo" → "bombilla", "crispetas" → "palomitas", "gripa" → "gripe", "arquero" → "portero", "tinto" → "café", "computador" → "computadora";
+- Spain-only words: "ordenador" → "computadora", "zumo" → "jugo", "patata" → "papa";
+- brands as generic words: "cinta Scotch" → "cinta adhesiva";
+- regional diminutives and slang: "pelotica" → "pelota", "parcero";
+- "vos" or "vosotros" forms → "tú"/"ustedes";
+- numbers with a dot as thousands separator: "2.640" → "2640", "42.195" → "42 195".
+```
+new:
+```
+You get Spanish questions from the `base` bundle of the trivia game described above, with their id: description, question, answer, wrong answers, hints and fun fact. `base` in `es` is played anywhere in Latin America, so its voice is idiomatic Latin American Spanish (house style "Language"); Spain has its own `es-ES` text. Find every question whose wording, in any of these fields, uses Colombian or other one-country usage where a word common across Latin America exists:
+- one-country words: "crispetas" → "palomitas", "gripa" → "gripe", "tinto" → "café", "computador" → "computadora";
+- Spain-only words: "ordenador" → "computadora", "zumo" → "jugo", "patata" → "papa";
+- brands as generic words: "cinta Scotch" → "cinta adhesiva";
+- regional diminutives and slang: "pelotica" → "pelota", "parcero";
+- "vos" or "vosotros" forms → "tú";
+- numbers with a dot as thousands separator: "2.640" → "2640", "42.195" → "42 195".
+```
+(Gone: "bombillo" → "bombilla" and "arquero" → "portero": Spain''s forms, swapped in only to be understood in Spain; "bombillo", "foco" and "arquero" are common Latin American words. "→ ustedes" gone: question texts use "tú".)
+old:
+```
+- words with no shared form ("carro"/"coche"/"auto", "celular"/"móvil") when no natural rewording exists; list them in `no_neutral_form` instead.
+```
+new:
+```
+- Latin American words that Spain says differently ("carro", "celular", "computadora", "jugo"): they are right for `es`;
+- words with no form shared across Latin America ("carro"/"auto", "piscina"/"alberca"/"pileta") when no natural rewording exists; list them in `no_neutral_form` instead.
+```
+
+## 13. `translate.md`
+
+old:
+```
+You translate approved Spanish questions of the trivia game described above into the language of the "Language" section, for its players. The Spanish questions were written, rated, fact-checked and reviewed already. Your translation is rated, fact-checked and reviewed again. Adapt, don''t translate literally: the players must meet the same question as a Spanish family does, in natural words of their own language.
+```
+new:
+```
+You translate approved questions of the trivia game described above from {source_language} into the language of the "Language" section, for its players. The source questions were written, rated, fact-checked and reviewed already. Your translation is rated, fact-checked and reviewed again. Adapt, don''t translate literally: the players must meet the same question as the source''s players do, in natural words of their own language.
+
+When source and target are two varieties of one language (Spanish (Latin America) → Spanish (Spain), or back), keep the text and change only what the target says differently: words, titles, names, usage; the rest stays word for word.
+```
+old:
+```
+- **The same answer**, in the form the players know it: "Cristóbal Colón" → "Christopher Columbus"; a film or book by its release title in the market ("Intensa-Mente" → "Inside Out"). A name without a form of its own stays as it is ("Gabriel García Márquez", "arepa").
+- **Don''t fix the source.** If a Spanish fact looks wrong to you, translate it anyway and say so in `notes` ("source fact doubtful: …").
+```
+new:
+```
+- **The same answer**, in the form the players know it: "Christopher Columbus" ↔ "Cristóbal Colón" ↔ "Christoph Kolumbus"; a film or book by its release title in the market ("Inside Out" → "Intensa-Mente" in Spanish (Latin America), "Del revés" in Spanish (Spain), "Alles steht Kopf" in German). A name without a form of its own stays as it is ("Gabriel García Márquez", "arepa").
+- **Don''t fix the source.** If a source fact looks wrong to you, translate it anyway and say so in `notes` ("source fact doubtful: …").
+```
+old:
+```
+  - none became correct or a synonym of the answer (two Spanish words can share one translation);
+```
+new:
+```
+  - none became correct or a synonym of the answer (two source words can share one translation);
+```
+old:
+```
+  - none stands out by grammar: an article ("a"/"an", "der"/"die"/"das"), a gender or case ending that fits only one option;
+```
+new:
+```
+  - none stands out by grammar: an article ("a"/"an", "el"/"la", "der"/"die"/"das"), a gender or case ending that fits only one option;
+```
+old:
+```
+- **Hints:** keep the order from vague to strong. A hint that plays on the Spanish word (first letter, rhyme, syllables, gender, a Spanish saying) is rewritten to do the same job in the target language. Hint 3 must not contain the answer in the target language.
+```
+new:
+```
+- **Hints:** keep the order from vague to strong. A hint that plays on the source word (first letter, rhyme, syllables, gender, a saying in {source_language}) is rewritten to do the same job in the target language. Hint 3 must not contain the answer in the target language.
+```
+old:
+```
+- **Media mentioned in the text** ("Escucha:…", "En la foto…") is translated naturally. The file stays as it is.
+```
+new:
+```
+- **Media mentioned in the text** ("Listen: …", "In the photo …") is translated naturally. The file stays as it is.
+```
+old:
+```
+- `wordplay`: the question or its clue lives on a Spanish pun or sound that can''t be rebuilt;
+- `about_spanish`: it asks about the Spanish language itself (a spelling, a Spanish plural, what a Spanish word means);
+- `needs_local_knowledge`: the answer only makes sense to someone who lives in the Spanish-speaking world;
+```
+new:
+```
+- `wordplay`: the question or its clue lives on a pun or sound in {source_language} that can''t be rebuilt;
+- `about_language`: it asks about the source language itself (a spelling, a plural, what a word means in {source_language});
+- `needs_local_knowledge`: the answer only makes sense to someone who lives where the source''s players live (one country or language region);
+```
+old:
+```
+Don''t give up early: a language question with a clean equivalent travels (the word for opposites → "antonym"), and a question that is only harder for these players travels too (the rater re-rates it).
+```
+new:
+```
+Don''t give up early: a language question with a clean equivalent travels (the word for opposites: "antonym", «antónimo», „Antonym“), and a question that is only harder for these players travels too (the rater re-rates it).
+```
+
+## 14. `translate-review.md`
+
+old:
+```
+The question above is a translation of an approved Spanish question. You see the Spanish one as `source`, and the translator''s `notes`. The source was reviewed already: judge the translation, as the players will meet it. Everything above applies to the translation, with these changes.
+```
+new:
+```
+The question above is a translation of an approved question in {source_language}. You see that one as `source`, and the translator''s `notes`. The source was reviewed already: judge the translation, as the players will meet it. Everything above applies to the translation, with these changes.
+```
+old:
+```
+- **Voice:** "Language" means the section above for this locale, not Spanish. Report wording that isn''t natural for its players (a literal idiom, translationese, the wrong spelling or unit convention) as `style`.
+```
+new:
+```
+- **Voice:** "Language" means the section above for this locale, not the source''s. Report wording that isn''t natural for its players (a literal idiom, translationese, the wrong spelling or unit convention, a word of the source''s variety where the target''s differs) as `style`.
+- **International angle:** the source passed it already; don''t report it again.
+```
+old:
+```
+- **Hints:** a hint that still plays on the Spanish word, or names the answer in the target language before hint 3, is `giveaway`.
+```
+new:
+```
+- **Hints:** a hint that still plays on the source word, or names the answer in the target language before hint 3, is `giveaway`.
+```
+old:
+```
+An item without a translation comes with the translator''s `reason` (`wordplay`, `about_spanish`, `needs_local_knowledge`, `other`). Decide in one line:
+- `approved`: right, it doesn''t travel; it stays in Spanish only.
+```
+new:
+```
+An item without a translation comes with the translator''s `reason` (`wordplay`, `about_language`, `needs_local_knowledge`, `other`). Decide in one line:
+- `approved`: right, it doesn''t travel; it isn''t played in this language.
+```
+
+## 15. `translate-region.md` (follows the reason rename)
+
+old:
+```
+`about_spanish` stays for questions on Spanish spelling, grammar or wordplay.
+```
+new:
+```
+`about_language` stays for questions on Spanish spelling, grammar or wordplay.
+```
+old:
+```
+A question doesn''t travel only for `wordplay`, `about_spanish` (as above) or `other`.
+```
+new:
+```
+A question doesn''t travel only for `wordplay`, `about_language` (as above) or `other`.
+```
+
+## What applying means (task 1239)
+- The prompt files as above; `TRAVEL_REASONS` `about_spanish` → `about_language` in `qgen.py`.
+- Review reason 9''s exemption: the review/audit input carries the question''s source locale (or batch) if it doesn''t already.
+- `rg` the old wording over `.md` (decision 200): `about_spanish`, "Spanish sentence", "understood across Latin America and in Spain".', NULL, NULL, '2026-10-16T01:24:05Z', NULL, 1238, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -32940,6 +33468,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1187, 1235, '2026-10-16T01:05:59Z', '2026-10-16T01:10:19Z', 'done', NULL, 0, '8eb67f5157d66ed7647585e8769555781cf92b12', 'claude-opus-5-5[1m]', 'c311dcb6-c9d4-4ee6-83a6-13d780e57986', 28, 54, 18008, 1960227, 83108, 1.4172854, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1188, 1236, '2026-10-16T01:10:19Z', '2026-10-16T01:14:10Z', 'done', NULL, 0, 'af6fafc5e4f3a591e50b6d2e161649876dce7222', 'claude-opus-5-5[1m]', '331f3ba6-3f07-4b4c-ab8a-ad1459decf12', 32, 56, 19273, 2004829, 85068, 1.4671938, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1189, 1237, '2026-10-16T01:14:10Z', '2026-10-16T01:20:13Z', 'done', NULL, 0, '05b5a5cf93c62cc56122b5deca3c86158517575e', 'claude-opus-5-5[1m]', 'b0e2b1fb-4bae-44e6-9ce0-264c68b5d3b8', 54, 98, 33476, 5496581, 147565, 2.9497482000000006, 3857742);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1190, 1238, '2026-10-16T01:20:13Z', '2026-10-16T01:24:20Z', 'done', NULL, 0, 'b8629258d006ded1a122c808cb1d8da99e68b1f6', 'claude-opus-5-5[1m]', '7389d8aa-1a06-4ab0-9fef-84e3e0ebe4aa', 21, 42, 26909, 1385100, 89007, 1.5274240000000001, 3857742);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -33319,6 +33848,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1185, 228);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1185, 229);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1185, 233);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1185, 234);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1185, 239);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1186, 228);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1186, 229);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1190, 227);
@@ -33326,6 +33856,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1191, 230);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1191, 231);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1207, 233);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1208, 234);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1239, 239);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
