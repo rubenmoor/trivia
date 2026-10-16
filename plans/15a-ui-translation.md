@@ -7,7 +7,7 @@ Sub-plan of [15](15-i18n.md). Translates everything on screen that isn't a quest
 ## Approach
 - **No i18n library.** A tiny `t(key, params)` in `app/client/src/lib/i18n.ts` with one catalog per language (`app/client/src/locales/es.ts`, `en.ts`, …) as typed TypeScript objects, so a missing key is a type error (`npm run check`). Plurals via `Intl.PluralRules`, numbers via `Intl.NumberFormat`.
 - **Copy with variants** (`copy.ts`: several milestone and consolation lines per level) stays as arrays per language; translations don't have to match the count.
-- **Joker names are content, not labels:** «Soplo», «Paso», «Bájale», «Cambiazo», «Francotirador» are playful Spanish names. Each language gets its own playful names, not literal translations.
+- **Joker names are content, not labels:** playful names, made in English first to fit one shared symbol, then translated per language ("Joker names" below).
 - **Keyboard keys follow the names today** (`S` Soplo, `P` Paso, `F`, `T`, `X`). Options: language-dependent keys from the catalog, or neutral keys for all languages (e.g. `Q W E R T` in a row, or `F1`–`F5`). Decide in LUI-4. `A`–`D` stay for the answers everywhere.
 - **Fonts:** Baloo 2 and Nunito (VD-3) cover Latin scripts, including Vietnamese with Baloo 2. Cyrillic, Greek, CJK or Arabic would need other fonts and RTL work. The launch stays with Latin-script languages.
 - **Text length:** German and French run 20–35 % longer than Spanish or English. Every screen gets a check with the longest language (pseudo-locale `xx` that pads strings by 40 % and adds accents, for testing).
@@ -42,7 +42,8 @@ Milestone 9 defines the joker names again (pm decision 188, pm plan 136): one sy
     - purge «Näxt & weg: tschüss, Thema „{name}“»; title «Frau Pingelig: Welches Thema soll es sein?»
 - Answers (D-108; applied by pm task 1098): `es`/`es-ES` as recommended, Soplo (S), Paso y fuera (P), Hada madrina (H), Doña Exigente (E), Tiro mágico (T); `de` Wink (K), Näxt & Weg (N), Glücksfee (G), Wunschzeit (W), Finte (F) (keys, pm decision 247: `W`, `F` taken, so Wink `K`, Glücksfee `G`)
   - `de` leaves: hint note «Wink {n}», purge «Näxt & Weg: tschüss, Thema „{name}“», «kein Wink / „Näxt & Weg“ mehr übrig», «keine Glücksfee mehr übrig»
-- Gallery check (pm task 1101, 2026-10-15): joker shots in all four locales at 1920 × 1080 and 1280 × 800, nothing clips; the developer's review: pm decision 248 (`task 459` waits on it; flags → a fix task in plan 136)
+- Gallery check (pm task 1101, 2026-10-15): joker shots in all four locales at 1920 × 1080 and 1280 × 800, nothing clips
+- Developer's review (pm decision 248, 2026-10-16): flags in /gallery; purge button text not explicit enough (flag 15), "Final answer" and "Quit game" without icon (18, 21) → pm task 1342; joker icons in Customize, skip dialog, category picker (17, 19, 20) already in since pm task 1099; base bundle name (16) → pm plan 151
 
 ## Tasks
 - [x] LUI-1 `t()` helper and the `es` catalog; move every string from `copy.ts` and the components into it. No visible change (check with `grep` for Spanish characters left in `app/client/src/game`).

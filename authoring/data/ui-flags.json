@@ -165,7 +165,8 @@
     "text": "Pass & Purge",
     "shot": "customize",
     "note": "all mention jokers here need their corresponding icon",
-    "flagged_on": "2026-10-15"
+    "flagged_on": "2026-10-15",
+    "fixed_on": "2026-10-16"
   },
   {
     "id": 18,
@@ -183,7 +184,8 @@
     "text": "Pass & Purge",
     "shot": "joker-skip",
     "note": "needs the joker icon",
-    "flagged_on": "2026-10-15"
+    "flagged_on": "2026-10-15",
+    "fixed_on": "2026-10-16"
   },
   {
     "id": 20,
@@ -192,7 +194,8 @@
     "text": "Ms Picky: which topic do you want?",
     "shot": "joker-category",
     "note": "needs the joker icon",
-    "flagged_on": "2026-10-15"
+    "flagged_on": "2026-10-15",
+    "fixed_on": "2026-10-16"
   },
   {
     "id": 21,
