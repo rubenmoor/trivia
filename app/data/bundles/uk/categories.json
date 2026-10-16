@@ -1,4 +1,136 @@
 {
   "about": "Categories of the uk bundle (D-41, D-43): structure only, keyed by English slugs unique within the bundle (decision 259); names in names.<locale>.json.",
-  "categories": []
+  "categories": [
+    {
+      "slug": "geography",
+      "subcategories": [
+        "cities-and-towns",
+        "london",
+        "counties-and-regions",
+        "rivers-coasts-and-islands",
+        "hills-moors-and-national-parks",
+        "landmarks-and-castles"
+      ]
+    },
+    {
+      "slug": "nature",
+      "subcategories": [
+        "wildlife",
+        "birds",
+        "plants-and-gardens",
+        "weather-and-seasons"
+      ]
+    },
+    {
+      "slug": "history",
+      "subcategories": [
+        "early-britain",
+        "middle-ages",
+        "tudors-and-stuarts",
+        "georgians-and-victorians",
+        "twentieth-century",
+        "parliament-and-prime-ministers"
+      ]
+    },
+    {
+      "slug": "people",
+      "subcategories": [
+        "scientists-and-inventors",
+        "pioneers-and-heroes"
+      ]
+    },
+    {
+      "slug": "food-and-drink",
+      "subcategories": [
+        "classic-dishes",
+        "regional-specialities",
+        "cakes-puddings-and-biscuits",
+        "sweets-and-crisps",
+        "drinks"
+      ]
+    },
+    {
+      "slug": "festivals-and-traditions",
+      "subcategories": [
+        "holidays-and-celebrations",
+        "christmas-in-britain",
+        "customs-and-ceremonies"
+      ]
+    },
+    {
+      "slug": "myths-and-legends",
+      "subcategories": [
+        "legendary-heroes",
+        "creatures-ghosts-and-superstitions"
+      ]
+    },
+    {
+      "slug": "music-and-dance",
+      "subcategories": [
+        "pop-and-rock",
+        "traditional-music-and-dance",
+        "nursery-rhymes-and-singalongs"
+      ]
+    },
+    {
+      "slug": "art-and-literature",
+      "subcategories": [
+        "writers-and-poets",
+        "childrens-books-and-comics",
+        "art-and-architecture"
+      ]
+    },
+    {
+      "slug": "film-and-television",
+      "subcategories": [
+        "childrens-tv",
+        "soaps-and-dramas",
+        "game-shows-and-presenters",
+        "british-films"
+      ]
+    },
+    {
+      "slug": "comedy",
+      "subcategories": [
+        "sitcoms",
+        "comedians-and-panel-shows"
+      ]
+    },
+    {
+      "slug": "sports",
+      "subcategories": [
+        "football",
+        "rugby-and-cricket",
+        "team-gb-and-olympians",
+        "sporting-events",
+        "pub-and-playground-games"
+      ]
+    },
+    {
+      "slug": "how-people-speak",
+      "subcategories": [
+        "slang-and-words",
+        "sayings-and-idioms",
+        "accents-and-dialects",
+        "languages-of-britain"
+      ]
+    },
+    {
+      "slug": "daily-life",
+      "subcategories": [
+        "money-and-shopping",
+        "brands-and-adverts",
+        "transport",
+        "school-and-childhood",
+        "home-and-public-services"
+      ]
+    },
+    {
+      "slug": "symbols",
+      "subcategories": [
+        "flags-and-emblems",
+        "crown-and-state"
+      ]
+    }
+  ]
 }
