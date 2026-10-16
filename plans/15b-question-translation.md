@@ -32,10 +32,10 @@ Option A is decided in D-81; the options below are kept as history.
 - Whole-pool rewrites of the source (`qgen tighten`, neutral Spanish rewrite, masterplan part 8) stale every touched translation: full runs come after them.
 
 ## Review tool
-Done (pm plan 67, RV-24..RV-26). The developer and native speakers review `questions.<locale>.json` in `trivia-authoring` with the Spanish source alongside.
+Done (pm plan 67, RV-24..RV-26). The developer and native speakers review `questions.<locale>.json` in `trivia-authoring` with the source alongside, whichever its language (decision 235).
 
-- `/review?locale=en|de` (+ the usual filters, `stale=1`): locale switch es · en · de, keeps the other params.
-- Side by side (`SourcePanel.svelte`): Spanish source read-only (difficulty, status) | translation; rows question, answer, wrong answers, hints, description, fun fact.
+- `/review?locale=es|es-ES|en|de` (+ the usual filters, `stale=1`): locale switch sources · es · es-ES · en · de, keeps the other params.
+- Side by side (`SourcePanel.svelte`): source read-only, in its own language (difficulty, status) | translation; rows question, answer, wrong answers, hints, description, fun fact.
 - Subcategory and bundle in the locale's names (`GET /api/names?locale=`) plus the Spanish key.
 - Same verdicts, feedback, problems, difficulty, undo, keys; writes the locale file, re-exports `app/data/pool.<locale>.json`; `pool.json` untouched.
 - Stale translation: banner, no approve; the next `--translate` run redoes it.

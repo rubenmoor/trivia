@@ -2471,12 +2471,15 @@ def report_played(args):
             jokers[j] += v
     share = lambda key: sum(v for d, v in stats["games"][key].items() if d >= since)
     cells = [c for c in a["cells"] if c["n"] >= played.MIN_N and c["observed"] is not None]
-    candidates = Counter(l for _, l in {(c["id"], c["locale"]) for o in ("too_easy", "too_hard") for c in a["outliers"][o]})
+    src = {q["id"]: translations.source_locale(q) for q in load_json(POOL)["questions"]}
+    # per review view: None = the sources (an outlier in its source's language), else that locale's translations
+    candidates = Counter(None if src.get(i) == l else l
+                         for i, l in {(c["id"], c["locale"]) for o in ("too_easy", "too_hard") for c in a["outliers"][o]})
     if args.json:
         return print(json.dumps({"curves": a["curves"], "outliers": a["outliers"], "cells": cells if args.all else None,
                                  "sessions": dict(sessions), "games": games, "answers": dict(answers),
                                  "levels": {f"{g}|{l}": v for (g, l), v in sorted(levels.items())},
-                                 "candidates": dict(candidates)}, ensure_ascii=False, indent=1))
+                                 "candidates": {l or "sources": n for l, n in candidates.items()}}, ensure_ascii=False, indent=1))
     pct = lambda r, n: f"{100 * r / n:.0f} %" if n else "–"
     print(f"data: {min(days, default='–')} – {max(days, default='–')}, {sum(sessions.values())} sessions, {games} games, "
           f"{sum(answers.values())} answers ({answers['1']} clean, {answers['0']} with help), "
@@ -2526,8 +2529,8 @@ def report_played(args):
         for c in sorted(cells, key=lambda c: -abs(c["delta"])):
             print(line(c))
     url = "http://localhost:8001/review?played=outliers"
-    for l, n in sorted(candidates.items()) or [((locales or ["es"])[0], 0)]:
-        print(f"review candidates: {n} → {url}" + ("" if l == "es" else f"&locale={l}"))
+    for l, n in sorted(candidates.items(), key=lambda kv: kv[0] or "") or [(None, 0)]:
+        print(f"review candidates: {n} → {url}" + (f"&locale={l}" if l else " (sources)"))
 
 
 def engine_model(results):
@@ -4116,7 +4119,7 @@ def apply_reports(reports, dry_run=False):
     """Reports (reviews.report_feedback's dicts) → human needs_work reviews; returns (applied, already, skipped)."""
     known, n = {}, Counter()
     for r in reports:
-        where = r["question"] + (f" ({r['lang']})" if r["lang"] != "es" else "")
+        where = f"{r['question']} ({r['lang']})"
         new = reviews.needs_work(r["question"], r["lang"], reviews.report_feedback(r), known, dry_run)
         if new is None:
             print(f"  {where}: unknown question, skipped", file=sys.stderr)

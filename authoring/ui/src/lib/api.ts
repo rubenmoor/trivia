@@ -33,11 +33,11 @@ export interface QuestionFilter {
   licence?: "replace" | null;
   /** "outliers": played difficulty outliers of `qgen report --played`, by |Δ| (plan 109). */
   played?: "outliers" | null;
-  /** A translation locale (en, de): its translations with the Spanish source (plan 67); absent = Spanish. */
+  /** A locale (es, es-ES, en, de): its translations with their source (plan 67); absent = the sources, any language. */
   locale?: string | null;
   /** With locale: "1" = only stale translations. */
   stale?: string | null;
-  /** With locale: "1" = only playing translations (translations.plays). */
+  /** With locale: "1" = the locale's pool, playing translations (translations.plays) and its approved sources. */
   plays?: string | null;
 }
 
@@ -87,7 +87,7 @@ export async function setTranslatable(id: string, translatable: boolean, locale:
   return send(`/api/questions/${encodeURIComponent(id)}/translatable`, { translatable, locale });
 }
 
-/** Display names in a translation locale (names.<locale>.json, D-81); null for Spanish. */
+/** Display names in a locale (names.<locale>.json, D-81); null for es and es-ES (categories.json's names). */
 export async function fetchNames(locale: string): Promise<Names | null> {
   return get(`/api/names?${new URLSearchParams({ locale })}`);
 }

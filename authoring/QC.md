@@ -47,7 +47,7 @@ A `qgen batch --translate <locale>` run (D-87) gets the same steps, with `tr-<lo
 
 - Report: `authoring/reports/tr-<locale>-<n>.md` (Health, Audit, Not travelling, Stale re-translated).
 - Spot check (native speaker): `http://127.0.0.1:8001/review?batch=tr-<locale>-<n>&locale=<locale>&sample=1`; source and translation side by side (plan 67).
-  - Steps as step 2: Spanish source left, translation right; LLM review, feedback, audit and the translation's status hidden until you decide.
+  - Steps as step 2: source left (its own language), translation right; LLM review, feedback, audit and the translation's status hidden until you decide.
   - Stale translation: no approve (the next run redoes it); a question that only works in Spanish: "doesn't travel".
   - Recorded in `authoring/data/spot-checks.json` under the run, with `locale`; pm worker: the same decision as step 2.
 - Extra checks: faithful to the source, natural in the language, hints and wrong answers that work in it, difficulty for the locale's market; text in media is never a problem (decision 35).

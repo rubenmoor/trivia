@@ -3,7 +3,8 @@
   // and subcategory, per difficulty and per media (RV-23), approved questions only (the ones a game can use).
   // URL: /stats/categories, /stats/subcategories, /stats/difficulty or /stats/media; ?bundle=colombia counts one
   // bundle only (RV-21), without it every bundle (the family's default, D-39).
-  // ?locale=en|de: the locale's playing translations with their own difficulty, its names (plan 67).
+  // ?locale=<L>: the locale's pool, its own approved sources and playing translations with their own difficulty,
+  // its names (plan 67, decision 235); without: every approved source, whatever its language.
   import { onMount } from "svelte";
   import { LOCALES } from "$app/lib/data.ts";
   import { messageOf } from "$app/lib/http.ts";
@@ -25,10 +26,10 @@
         : "categories";
   const params = new URLSearchParams(location.search);
   const bundle = params.get("bundle");
-  const locale = params.get("locale") === "es" ? null : params.get("locale");
+  const locale = params.get("locale");
   /** Link to a stats page, bundle or locale, keeping the other choices. */
   function href(path: string, b: string | null = bundle, l: string | null = locale) {
-    const q = new URLSearchParams({ ...(b ? { bundle: b } : {}), ...(l && l !== "es" ? { locale: l } : {}) });
+    const q = new URLSearchParams({ ...(b ? { bundle: b } : {}), ...(l ? { locale: l } : {}) });
     return q.size ? `${path}?${q}` : path;
   }
   const path = `/stats/${page}`;
@@ -46,6 +47,16 @@
   /** Bundles in view (`breakdown`): the chosen one, else the locale's (`languages`); null: every bundle. */
   const scope = $derived(
     bundle ? new Set([bundle]) : locale ? new Set(bundles.filter((b) => b.languages.includes(locale)).map((b) => b.id)) : null,
+  );
+  /** Questions per source language (decision 235): es-sourced vs. en-sourced. */
+  const bySource = $derived(
+    Object.entries(
+      questions.reduce<Record<string, number>>((n, q) => {
+        const l = q.source?.locale ?? q.locale ?? "es";
+        n[l] = (n[l] ?? 0) + 1;
+        return n;
+      }, {}),
+    ),
   );
   let loading = $state(true);
   let error = $state<string | null>(null);
@@ -94,13 +105,15 @@
   </nav>
 
   <p class="scope muted">
-    {locale ? "Playing translations only" : "Approved questions only"} · bundles:
+    {locale ? `The ${locale} pool: approved sources in ${locale}, playing translations` : "Approved sources, any language"} · bundles:
     <a href={href(path, null)} class:current={!bundle}>all</a>
     {#each bundles as b (b.id)}{" · "}<a href={href(path, b.id)} class:current={bundle === b.id}
         >{names?.bundles[b.id]?.name ?? b.name}</a
       >{/each}
     · language:
-    {#each LOCALES as l, k}{k ? " · " : ""}<a href={href(path, bundle, l)} class:current={l === (locale ?? "es")}>{l}</a>{/each}
+    <a href={href(path, bundle, null)} class:current={!locale}>sources</a>
+    {#each LOCALES as l (l)}{" · "}<a href={href(path, bundle, l)} class:current={l === locale}>{l}</a>{/each}
+    {#if bySource.length}· by source language: {bySource.map(([l, n]) => `${l} ${n}`).join(" · ")}{/if}
   </p>
 
   {#if loading}

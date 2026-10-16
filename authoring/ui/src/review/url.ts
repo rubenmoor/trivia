@@ -6,10 +6,11 @@ import type { QuestionFilter } from "../lib/api.ts";
 // back to it. Decisions themselves live in authoring/data/questions.json.
 // With batch: sample=1 is the blind spot check (plan 16), audit=flagged the audit's major findings.
 // run=backaudit-<k>: a back-audit run's questions, with the same two (plan 57).
-// locale=en|de: the translations next to their Spanish source; media and bundle stay on the source (plan 67).
+// locale=es|es-ES|en|de: the translations into it next to their source, whichever its language; media and bundle
+// stay on the source (plan 67, decision 235). Without: the sources in any language.
 export function reviewUrl() {
   const params = new URLSearchParams(location.search);
-  const locale = params.get("locale") === "es" ? null : params.get("locale");
+  const locale = params.get("locale");
   const batch = params.get("batch");
   const run = params.get("run");
   /** Where spot checks are recorded: the batch or the back-audit run. */
@@ -61,10 +62,10 @@ export function reviewUrl() {
   return { locale, checkGroup, sampleMode, filter, licenceMode, playedMode, filterText, singleId, startId, debugKeys };
 }
 
-/** This page in another locale, the other params kept. */
-export function localeHref(l: string) {
+/** This page in another locale (null: the sources), the other params kept. */
+export function localeHref(l: string | null) {
   const url = new URL(location.href);
-  if (l === "es") url.searchParams.delete("locale");
+  if (!l) url.searchParams.delete("locale");
   else url.searchParams.set("locale", l);
   return url.pathname + url.search;
 }

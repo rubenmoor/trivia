@@ -170,7 +170,8 @@ export interface Question {
   played: PlayedCell[];
   /** D-81: false = doesn't travel (absent = true). */
   translatable?: boolean;
-  /** Locale view (plan 67): the translation's locale, its Spanish source and whether that changed since. */
+  /** Added by the server: the item's language, the source's (decision 235) or in the locale view (plan 67) the
+   *  translation's, with its source and whether that changed since. */
   locale?: string;
   source?: SourceText;
   stale?: boolean;
@@ -187,11 +188,11 @@ export interface PlayedCell {
   bound: "≤" | "≥" | null;
 }
 
-/** The Spanish side of a translation item (plan 67). */
+/** The source side of a translation item, in its own language (plan 67, decision 235). */
 export type SourceText = Pick<
   Question,
   "question" | "answer" | "wrong_answers" | "hints" | "description" | "fun_fact" | "difficulty" | "status"
->;
+> & { locale: string };
 
 /** A question bundle (app/data/bundles.json, D-39): the engine's fields plus `rule`. */
 export interface Bundle extends PoolBundle {
@@ -240,12 +241,19 @@ export interface Overview {
     human: number;
     llm_approved: number;
     report: string | null;
-    /** A translation run (tr-*): its locale (plan 67); null for Spanish batches. */
+    /** A translation run (tr-*): its locale (plan 67); null for source batches. */
     locale: string | null;
+    /** The source locales of its questions (decision 235): ["en"] from batch-9, ["es", "en"] for a mixed tr-* run. */
+    sources: string[];
   }[];
-  /** Per locale with a translation file (plan 67); untranslated, not_translatable: approved sources. */
+  /** Per locale with a pool (plan 67, decision 235): its translations by status; untranslated, not_translatable:
+   *  approved sources in other languages. */
   locales: {
     locale: string;
+    /** Approved sources written in it. */
+    own: number;
+    /** Approved translations per source locale. */
+    from: Record<string, number>;
     approved: number;
     needs_work: number;
     draft: number;

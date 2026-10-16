@@ -30,7 +30,9 @@
   {:else}
     <span class="progress">{index + 1} / {total}</span>
   {/if}
-  {#if locale}<span class="locale">{locale}</span>{/if}
+  <span class="locale" title={locale ? "translations into this locale" : "the source's language"}
+    >{locale ?? `${current.locale ?? "es"} source`}</span
+  >
   {#if downloads}<span class="downloads">⬇ downloading media… ({downloads})</span>{/if}
   {#if spotCount !== null}
     <span class="counts">spot check: {spotCount} decided · agree {agreed}</span>
@@ -57,8 +59,9 @@
     >{#if names}&nbsp;<span class="key">({current.bundle})</span>{/if}
   </span>
   <span><a class="stats" href="/">Start</a> · <a class="stats" href="/stats/categories">Stats</a> ·
-    {#each LOCALES as l, k}{#if k}&nbsp;·&nbsp;{/if}{#if l === (locale ?? "es")}<b>{l}</b>{:else}<a class="stats" href={localeHref(l)}>{l}</a
-      >{/if}{/each}</span>
+    {#if !locale}<b>sources</b>{:else}<a class="stats" href={localeHref(null)}>sources</a>{/if}{#each LOCALES as l (l)}&nbsp;·&nbsp;{#if l === locale}<b
+        >{l}</b
+      >{:else}<a class="stats" href={localeHref(l)}>{l}</a>{/if}{/each}</span>
 </header>
 
 <style>

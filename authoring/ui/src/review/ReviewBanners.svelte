@@ -37,7 +37,7 @@
 
 {#if current.stale}
   <div class="previous stale">
-    Stale: the Spanish source changed since this translation. No approve; the next <code>--translate</code> run redoes it.
+    Stale: the source changed since this translation. No approve; the next <code>--translate</code> run redoes it.
   </div>
 {/if}
 {#if current.translatable === false}

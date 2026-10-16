@@ -1,7 +1,8 @@
 """Review writes on the source pool and the locale files, shared by trivia-authoring and qgen (plan 93).
 
 Player feedback (game flags, pasted or pulled reports) becomes a human needs_work review: the new feedback first,
-the older after «Antes:»; es reviews the source, en/de that locale's translation (decision 102).
+the older after «Antes:»; a game in the source's language reviews the source, any other that locale's translation
+(decision 102, generalised by decision 235).
 """
 import datetime, json, re
 
@@ -92,29 +93,42 @@ def set_review(qid, review, update=update_question, timed=True):
 
 
 def questions_of(locale):
-    """{id: question} of the source (es) or a locale's translations; {} for another locale."""
-    if locale == "es":
+    """{id: question} of the source pool (locale None) or a locale's translations; {} for an unknown locale."""
+    if locale is None:
         return {q["id"]: q for q in load_pool()["questions"]}
     if locale in translations.LOCALES:
         return {t["id"]: t for t in translations.load(locale)["questions"]}
     return {}
 
 
-def needs_work(qid, locale, feedback, known, dry_run=False):
-    """`feedback` as a human needs_work review, older feedback kept after «Antes:».
-    `known`: {locale: questions_of(locale)}, filled as needed and kept current.
-    Returns the new feedback, None for an unknown question, "" when `feedback` is already there."""
-    if locale not in known:
-        known[locale] = questions_of(locale)
-    q = known[locale].get(qid)
-    if q is None:
+def landing(qid, locale, known):
+    """Where player feedback from a game in `locale` lands (decision 235): None = the source, written in `locale`,
+    else that locale's translation. → (where, entry), or None for an unknown question or translation.
+    `known`: {None | locale: questions_of(…)}, filled as needed and kept current."""
+    for where in (None, locale):
+        if where not in known:
+            known[where] = questions_of(where)
+    src = known[None].get(qid)
+    if src is None:
         return None
+    where = None if translations.source_locale(src) == locale else locale
+    q = known[where].get(qid)
+    return (where, q) if q else None
+
+
+def needs_work(qid, locale, feedback, known, dry_run=False):
+    """`feedback` as a human needs_work review where `landing` puts it, older feedback kept after «Antes:».
+    Returns the new feedback, None for an unknown question, "" when `feedback` is already there."""
+    hit = landing(qid, locale, known)
+    if hit is None:
+        return None
+    where, q = hit
     old = (q.get("review") or {}).get("feedback")
     if old and feedback in old:
         return ""
     new = f"{feedback} Antes: {old}" if old else feedback
-    known[locale][qid] = {**q, "review": {**(q.get("review") or {}), "feedback": new}} if dry_run else set_review(
-        qid, {"decision": "needs_work", "feedback": new}, update_translation(locale) if locale != "es" else update_question,
+    known[where][qid] = {**q, "review": {**(q.get("review") or {}), "feedback": new}} if dry_run else set_review(
+        qid, {"decision": "needs_work", "feedback": new}, update_translation(where) if where else update_question,
         timed=False)
     return new
 

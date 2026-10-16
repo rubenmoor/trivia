@@ -1,5 +1,5 @@
 <script lang="ts">
-  // Locale view (plan 67): the Spanish source (read-only) next to the translation, row by row.
+  // Locale view (plan 67): the source (read-only, in its own language) next to the translation, row by row.
   import type { Question, SourceText } from "../lib/types.ts";
 
   // blind: the spot check (plan 16) hides the translation's status, the LLM's verdict.
@@ -9,7 +9,7 @@
 </script>
 
 <div class="side">
-  <h2>Español · difficulty {source.difficulty} · {source.status.replace("_", " ")}</h2>
+  <h2>Source {source.locale} · difficulty {source.difficulty} · {source.status.replace("_", " ")}</h2>
   <h2>{question.locale} · difficulty {question.difficulty}{blind ? "" : ` · ${question.status.replace("_", " ")}`}</h2>
 
   <p class="description">{source.description}</p>

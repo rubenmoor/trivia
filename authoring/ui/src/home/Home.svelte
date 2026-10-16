@@ -151,6 +151,7 @@
           <thead>
             <tr>
               <th>Batch</th>
+              <th title="source language of its questions">From</th>
               <th>Last review</th>
               <th class="num">Merged</th>
               <th class="num">Approved</th>
@@ -170,6 +171,7 @@
                   >
                   {#if b.locale}<a class="muted small" href={review({ batch: b.name, locale: b.locale, sample: "1" })}>sample</a>{/if}
                 </td>
+                <td class="muted">{b.sources.join(", ")}</td>
                 <td class="muted">{b.date ?? "–"}</td>
                 <td class="num">{b.merged}</td>
                 <td class="num">{b.approved}</td>
@@ -187,16 +189,18 @@
 
     {#if overview.locales.length}
       <section class="panel">
-        <h2>Translations</h2>
+        <h2>Question locales</h2>
         <p class="muted small">
-          Per locale its translations by status; stale: the Spanish text changed since. Approved sources not
-          translatable or without a translation yet.
+          Per locale its pool: approved sources written in it, then its translations by status (approved: per source
+          language); stale: the source text changed since. Approved sources in other languages not translatable or
+          without a translation yet.
         </p>
         <div class="scroll">
           <table>
             <thead>
               <tr>
                 <th>Locale</th>
+                <th class="num">Own sources</th>
                 <th class="num">Approved</th>
                 <th class="num">Needs work</th>
                 <th class="num">Draft</th>
@@ -211,7 +215,12 @@
               {#each overview.locales as l (l.locale)}
                 <tr>
                   <td><a href={review({ locale: l.locale })}>{l.locale}</a></td>
-                  <td class="num"><a href={review({ locale: l.locale, status: "approved" })}>{l.approved}</a></td>
+                  <td class="num">{l.own}</td>
+                  <td class="num"><a href={review({ locale: l.locale, status: "approved" })}>{l.approved}</a>
+                    {#if l.approved}<span class="muted small"
+                        >({Object.entries(l.from).map(([s, n]) => `${s} ${n}`).join(" · ")})</span
+                      >{/if}</td
+                  >
                   <td class="num" class:warn={l.needs_work > 0}
                     ><a href={review({ locale: l.locale, status: "needs_work" })}>{l.needs_work}</a></td
                   >

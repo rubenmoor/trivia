@@ -85,6 +85,7 @@ def fold(stats, sessions, known):
     """Add sessions (GET /telemetry rows) to stats in place; known: rated(). → counts."""
     n = {"sessions": 0, "games": 0, "answers": 0, "unknown": 0}
     g = stats["games"]
+    anywhere = {i: e for k in known.values() for i, e in k.items()}  # a source or translation in any locale
     for s in sessions:
         day = s["received_day"]
         n["sessions"] += 1
@@ -106,9 +107,9 @@ def fold(stats, sessions, known):
                 _add(g["mods"], day)
             for a in game["answers"]:
                 right = int(a["correct"])
-                e = known.get(game["locale"], {}).get(a["question"]) or known["es"].get(a["question"])
+                e = known.get(game["locale"], {}).get(a["question"]) or anywhere.get(a["question"])
                 _add_level(stats["levels"], f"{group}|{a['level']}|{mode}|{day}", right, e[0] if e else None)
-                if a["question"] not in known["es"]:
+                if a["question"] not in anywhere:
                     stats["unknown"] += 1
                     n["unknown"] += 1
                     continue

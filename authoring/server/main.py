@@ -7,7 +7,7 @@ printable joker cards and the screen gallery (plan 100), with the question API. 
 It edits authoring/data/questions.json (translations: questions.<locale>.json) and re-exports
 app/data/pool.json (pool.<locale>.json) after every change, so the game (port 8000) sees reviews at once.
 At startup it turns the questions flagged in the game (the desktop save's flags, save_file.py) into needs-work reviews
-(D-47; a flag from an en/de game: of that translation, decision 102) and prints the link to every
+(D-47; a flag from a game in another language than the source's: of that translation, decisions 102, 235) and prints the link to every
 question that isn't approved (/review?status=!approved, RV-22).
 
 API:
@@ -26,14 +26,15 @@ API:
          &licence=replace                          licence=replace: not rejected, a picked file to replace, plan 53;
          &played=outliers                          played=outliers: played difficulty outliers of `qgen report --played`
                                                    (too easy / too hard, not mixed), by |Δ|, plan 109)
-    GET  /api/questions?locale=en&stale=1          locale (translations.LOCALES; es or absent = the above): one item per
+    GET  /api/questions?locale=en&stale=1          locale (translations.LOCALES; absent = the above, the sources in any
+                                                   language, each with its locale, decision 235): one item per
                                                    entry of questions.<locale>.json, the source with the translation's
                                                    text, difficulty(_original), status, batch, review laid over it, plus
-                                                   source (Spanish text, difficulty, status), stale, locale; batch, status,
+                                                   source (its text, difficulty, status, locale), stale, locale; batch, status,
                                                    reviewer, sample, audit filter the translation (audit: its own,
                                                    work/<batch>/audit/<id>.json), bundle, subcategory, media, licence the
-                                                   source; stale=1 only stale ones, plays=1 only playing ones
-                                                   (translations.plays: the stats pages) (plan 67)
+                                                   source; stale=1 only stale ones, plays=1 the locale's pool: playing
+                                                   translations and its approved sources (the stats pages) (plan 67)
     POST /api/questions/<id>/review                body {"review": null | {"decision", "feedback"}}
                                                    sets review + status as a human review (D-33), returns
                                                    the question; undo sends back a whole earlier review
@@ -58,8 +59,8 @@ API:
     GET  /api/overview                             what the start page shows (RV-12, authoring/server/overview.py);
                                                    rows per locale and its tr-* runs (plan 67)
     GET  /api/stats/media?bundle=colombia          approved questions per media role and image resolution
-         &locale=en                                (RV-23, authoring/server/media_stats.py); locale: the sources of
-                                                   its playing translations (plan 67)
+         &locale=en                                (RV-23, authoring/server/media_stats.py); locale: its pool's
+                                                   sources (written in it or with a playing translation, plan 67)
     GET  /api/gallery                              trivia-gallery's work/gallery/manifest.json (null before its first
                                                    run) and the UI string flags, authoring/data/ui-flags.json (plan 100)
     POST /api/gallery/flags                        body {"flag": {locale, key, text, shot, note}} adds,
@@ -105,35 +106,39 @@ download.WAIT_ON_RATE_LIMIT = False  # report rate limits to the review tool ins
 
 
 def locale_of(value):
-    """A translation locale, or None for Spanish (es or absent)."""
-    if value in (None, "", "es"):
+    """A translation locale, or None for the source view (absent)."""
+    if value in (None, ""):
         return None
     if value not in translations.LOCALES:
         raise ValueError(f"unknown locale {value!r}")
     return value
 
 
-def with_extras(q, data=None, locale="es"):
-    """data: played.review_data, loaded once per request (None: no played data)."""
+def with_extras(q, data=None, locale=None):
+    """data: played.review_data, loaded once per request (None: no played data); locale: the item's language,
+    default the source's (decision 235)."""
+    locale = locale or translations.source_locale(q)
     found = media.load_candidates(q["id"])
     bg = media.load_candidates(q["id"], "background") if q.get("background") else None
     return {**q, "media_candidates": found["candidates"] if found else None,
             "background_candidates": bg["candidates"] if bg else None, "audit": audit_of(q) or None,
-            "licence": media.licence_of(q), "played": data["played"].get((q["id"], locale), []) if data else []}
+            "licence": media.licence_of(q), "played": data["played"].get((q["id"], locale), []) if data else [],
+            "locale": locale}
 
 
 def locale_item(t, q, locale, data=None):
-    """The source with the translation laid over it, plus the Spanish side (plan 67)."""
+    """The source with the translation laid over it, plus the source side in its own language (plan 67)."""
     own = {k: v for k, v in t.items() if k != "source_hash"}
     return {**with_extras(q, data, locale), "difficulty_original": None, "review": None, "batch": None, **own,
             "audit": translation_audit_of(t), "locale": locale, "stale": translations.is_stale(t, q),
-            "source": {k: q.get(k) for k in [*translations.TEXT_FIELDS, "difficulty", "status"]}}
+            "source": {**{k: q.get(k) for k in [*translations.TEXT_FIELDS, "difficulty", "status"]},
+                       "locale": translations.source_locale(q)}}
 
 
 def item_of(qid, locale):
     """What a POST returns: the question, or with a locale its translation item."""
     q = find_question(qid)
-    data = played.review_data(locale or "es")
+    data = played.review_data(locale)
     if not locale:
         return with_extras(q, data)
     t = next((t for t in translations.load(locale)["questions"] if t["id"] == qid), None)
@@ -142,10 +147,10 @@ def item_of(qid, locale):
     return locale_item(t, q, locale, data)
 
 
-def played_outliers(items, data, id_of=lambda x: x["id"]):
-    """played=outliers: the review candidates, by |Δ| (plan 109)."""
-    by_id = {id_of(x): x for x in items}
-    return [by_id[i] for i, _, _ in (data or {"outliers": []})["outliers"] if i in by_id]
+def played_outliers(items, data, key_of=lambda x: (x["id"], translations.source_locale(x))):
+    """played=outliers: the review candidates, by |Δ| (plan 109); key_of: (id, locale) as played data keys it."""
+    by_key = {key_of(x): x for x in items}
+    return [by_key[(i, l)] for i, l, _ in (data or {"outliers": []})["outliers"] if (i, l) in by_key]
 
 
 def locale_questions(locale, query):
@@ -174,13 +179,17 @@ def locale_questions(locale, query):
         pairs = [(t, q) for t, q in pairs if translations.plays(t, q)]
     data = played.review_data(locale)
     if query.get("played") == "outliers":
-        pairs = played_outliers(pairs, data, lambda p: p[0]["id"])
+        pairs = played_outliers(pairs, data, lambda p: (p[0]["id"], locale))
     if query.get("sample") and query.get("batch"):
         by_id = {t["id"]: (t, q) for t, q in pairs}
         pairs = [by_id[i] for i in spot_checks.sample(query["batch"]) if i in by_id]
     if query.get("audit") == "flagged":
         pairs = [(t, q) for t, q in pairs if (a := translation_audit_of(t)) and is_major(a)]
-    return [locale_item(t, q, locale, data) for t, q in pairs]
+    items = [locale_item(t, q, locale, data) for t, q in pairs]
+    if query.get("plays") == "1":  # the pool for the locale also has its own sources (decision 235)
+        own = {k: query[k] for k in ("bundle", "subcategory", "media", "licence") if k in query}
+        items += [x for x in source_questions({**own, "status": "approved"}) if x["locale"] == locale]
+    return items
 
 
 def source_questions(query):
@@ -211,7 +220,7 @@ def source_questions(query):
         qs = [q for q in qs if media.to_replace(q)]
     if query.get("audit") == "flagged":
         qs = [q for q in qs if (a := audit_of(q)) and is_major(a)]
-    data = played.review_data("es")
+    data = played.review_data()
     if query.get("played") == "outliers":
         qs = played_outliers(qs, data)
     return [with_extras(q, data) for q in qs]
@@ -223,19 +232,21 @@ def questions_of(query):
 
 
 def media_stats_of(query):
-    """GET /api/stats/media: a bundle's approved questions; with a locale the sources of its playing translations."""
+    """GET /api/stats/media: a bundle's approved questions; with a locale its pool's: the sources written in it
+    and those of its playing translations (decision 235)."""
     locale = locale_of(query.get("locale"))
     bundle = query.get("bundle")
     qs = [q for q in load_pool()["questions"] if q["status"] == "approved" and (not bundle or q.get("bundle") == bundle)]
     if locale:
         tr = {t["id"]: t for t in translations.load(locale)["questions"]}
-        qs = [q for q in qs if q["id"] in tr and translations.plays(tr[q["id"]], q)]
+        qs = [q for q in qs if translations.source_locale(q) == locale
+              or q["id"] in tr and translations.plays(tr[q["id"]], q)]
     return media_stats.build(qs)
 
 
 def names_of(query):
     locale = locale_of(query.get("locale"))
-    return categories.load_names(locale) if locale else None
+    return categories.load_names(locale) if locale in translations.NAMED else None
 
 
 def slot_of(body):
@@ -336,7 +347,8 @@ def reject(t):
 
 def apply_flags():
     """Questions flagged in the game become human needs-work reviews (GM-5, D-47); returns their IDs.
-    A flag from an en/de game reviews that translation, else the source (decision 102); the feedback quotes
+    A flag from a game in the source's language reviews the source, else that locale's translation
+    (reviews.landing; decisions 102, 235); the feedback quotes
     the question as the player saw it. Runs only at startup: a question that left the pool while on screen
     would break a running game. The flags stay in the save; state/flags-applied.json records the applied ones (D-59)."""
     ledger = save_file.applied()
@@ -354,7 +366,7 @@ def apply_flags():
         if reviews.needs_work(qid, locale, f"Marcada en el juego ({where}){note}{seen}", known) is None:
             print(f"Flag for unknown question {qid} ({locale}) dropped", file=sys.stderr)
             continue
-        done.append(qid if locale == "es" else f"{qid} ({locale})")
+        done.append(qid if reviews.landing(qid, locale, known)[0] is None else f"{qid} ({locale})")
     if pending:
         save_file.record_applied({k: save_file.stamp(v) for k, v in pending.items()})
     return done
@@ -456,7 +468,7 @@ class Handler(BaseHandler):
             locale = locale_of(body.get("locale"))
             update = update_translation(locale) if locale else update_question
             if locale and action in ("bundle", "media", "media/search"):
-                raise ValueError(f"{action} lives on the source: change it in the Spanish view, without locale")
+                raise ValueError(f"{action} lives on the source: change it in the source view, without locale")
             if action == "review":
                 set_review(qid, body.get("review"), update)
                 return self.send_json(200, item_of(qid, locale))
@@ -474,7 +486,7 @@ class Handler(BaseHandler):
                 q = search_media(qid, body.get("query"), slot_of(body), body.get("all") is True)
             else:
                 return self.send_json(404, {"error": "not found"})
-            return self.send_json(200, with_extras(q, played.review_data("es")))
+            return self.send_json(200, with_extras(q, played.review_data()))
         except NoQuestion:
             return self.send_json(404, {"error": f"no question {qid}"})
         except (ValueError, TypeError, AttributeError) as e:

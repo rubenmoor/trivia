@@ -286,7 +286,7 @@
 
   /** Locale view: media and bundle live on the source (plan 67). */
   function onSource(action: () => void) {
-    return locale ? () => flash("Media and bundle: change them in the Spanish view") : action;
+    return locale ? () => flash("Media and bundle: change them in the source view") : action;
   }
 
   async function mediaAction(label: string, what: string, run: () => Promise<Question>) {
@@ -508,7 +508,7 @@
     <article>
       {#if locale && current.source}
         <SourcePanel question={current} source={current.source} {blind} />
-        <p class="muted">Media and bundle live on the source: <a href={`/review?id=${encodeURIComponent(current.id)}`}>change them in the Spanish view</a>.</p>
+        <p class="muted">Media and bundle live on the source: <a href={`/review?id=${encodeURIComponent(current.id)}`}>change them in the source view</a>.</p>
       {:else}
         <p class="description">{current.description}</p>
         <h1 class="question">{current.question}</h1>

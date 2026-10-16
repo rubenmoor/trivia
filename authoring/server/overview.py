@@ -31,9 +31,10 @@ def unfinished_translate_runs():
             if translations.run_locale(r) and not (qgen.load_json(layout.WORK / r / "run.json") or {}).get("done")]
 
 
-def batch_rows(pool, locale=None):
+def batch_rows(pool, locale=None, src=None):
     """One row per batch, newest first (pool order is merge order); batch None is "none".
-    With a locale: its translation entries' tr-* runs, by run number (plan 67)."""
+    With a locale: its translation entries' tr-* runs, by run number (plan 67); src: {id: source}.
+    `sources`: the source locales in the row (decision 235), e.g. ["en"] for batch-9, ["es", "en"] for a tr-de run."""
     by_batch = {}
     for q in pool:
         by_batch.setdefault(q.get("batch"), []).append(q)
@@ -56,29 +57,35 @@ def batch_rows(pool, locale=None):
             "llm_approved": sum(q["status"] == "approved" and r.get("reviewer") == "llm" for q, r in zip(qs, reviews)),
             "report": f"/reports/{name}.md" if report else None,
             "locale": locale,
+            "sources": sorted({translations.source_locale((src or {}).get(q["id"], q)) for q in qs},
+                              key=translations.LOCALES.index),
         })
     return rows
 
 
 def locale_rows(pool):
-    """Per locale with a translation file: its entries by status, stale ones, and the approved sources
-    that don't travel or have no translation yet (plan 67)."""
+    """Per locale with a pool (translations.exported): its entries by status, stale ones, the approved sources
+    written in it (`own`), its approved translations per source locale (`from`), and the other approved sources
+    that don't travel or have no translation yet (plan 67, decision 235)."""
     approved = [q for q in pool if q["status"] == "approved"]
     src = {q["id"]: q for q in pool}
     rows = []
     for locale in translations.LOCALES:
-        if not translations.path(locale).exists():
+        if not translations.exported(locale, {"questions": pool}):
             continue
         entries = [t for t in translations.load(locale)["questions"] if t["id"] in src]
         have = {t["id"] for t in entries}
         status = Counter(t.get("status") for t in entries)
+        other = [q for q in approved if translations.source_locale(q) != locale]
         rows.append({
             "locale": locale,
             "approved": status["approved"], "needs_work": status["needs_work"],
             "draft": status["draft"], "rejected": status["rejected"],
             "stale": translations.counts(locale, {"questions": pool})["stale"],
-            "not_translatable": sum(not translations.translatable(q) for q in approved),
-            "untranslated": sum(translations.translatable(q) and q["id"] not in have for q in approved),
+            "own": len(approved) - len(other),
+            "from": dict(Counter(translations.source_locale(src[t["id"]]) for t in entries if t.get("status") == "approved")),
+            "not_translatable": sum(not translations.translatable(q) for q in other),
+            "untranslated": sum(translations.translatable(q) and q["id"] not in have for q in other),
         })
     return rows
 
@@ -106,7 +113,8 @@ def build(pool, bundles):
         },
         "llm_approved": sum((q.get("review") or {}).get("reviewer") == "llm" for q in approved),
         "unfinished_runs": batches.unfinished_runs() + unfinished_translate_runs(),
-        "batches": [r for l in translations.LOCALES for r in batch_rows(translations.load(l)["questions"], l)]
+        "batches": [r for l in translations.LOCALES
+                    for r in batch_rows(translations.load(l)["questions"], l, {q["id"]: q for q in pool})]
                    + batch_rows(pool),
         "locales": locale_rows(pool),
         "per_level": sup.pop("per_level"),
