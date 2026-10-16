@@ -1,0 +1,1508 @@
+{
+  "version": 1,
+  "locale": "es-ES",
+  "questions": [
+    {
+      "id": "q-0019",
+      "question": "¿Cuál es la montaña más alta del mundo?",
+      "answer": "El monte Everest",
+      "wrong_answers": [
+        "El Aconcagua",
+        "El Kilimanjaro",
+        "El pico Cristóbal Colón"
+      ],
+      "hints": [
+        "Está en la cordillera del Himalaya.",
+        "Está en la frontera entre Nepal y China.",
+        "Mide casi 8850 metros."
+      ],
+      "description": "Para llegar arriba necesitas semanas, mucho oxígeno y muy buenos calcetines.",
+      "fun_fact": "Las montañas más altas de Colombia, los picos Cristóbal Colón y Simón Bolívar, miden unos 5700 metros.",
+      "difficulty": 3,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "5acbfbf6911d"
+    },
+    {
+      "id": "q-0030",
+      "question": "¿Cuál es el animal terrestre más rápido?",
+      "answer": "El guepardo",
+      "wrong_answers": [
+        "El león",
+        "El caballo",
+        "El avestruz"
+      ],
+      "hints": [
+        "Es un felino.",
+        "Vive en las sabanas de África.",
+        "Tiene manchas negras y redondas."
+      ],
+      "description": "Este animal nunca recibe multas de tráfico porque nadie lo alcanza.",
+      "fun_fact": "Puede correr a más de 100 km/h, pero solo durante unos segundos.",
+      "difficulty": 3,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "642ea988e639"
+    },
+    {
+      "id": "q-0047",
+      "question": "¿Qué metal es líquido a temperatura ambiente?",
+      "answer": "El mercurio",
+      "wrong_answers": [
+        "El plomo",
+        "El aluminio",
+        "El hierro"
+      ],
+      "hints": [
+        "Antes se usaba en los termómetros.",
+        "Es plateado y brillante.",
+        "Tiene el mismo nombre que un planeta."
+      ],
+      "description": "Un metal que nunca se decidió entre ser sólido o ser zumo.",
+      "fun_fact": "Es muy tóxico; por eso ya casi no se usa en termómetros.",
+      "difficulty": 6,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "6cf41d0fa49a"
+    },
+    {
+      "id": "q-0124",
+      "question": "¿Cuál es el ave más grande del mundo?",
+      "answer": "El avestruz",
+      "wrong_answers": [
+        "La gallina",
+        "La paloma",
+        "El loro"
+      ],
+      "hints": [
+        "Vive en África.",
+        "No puede volar, pero corre rapidísimo.",
+        "Pone los huevos más grandes de todas las aves."
+      ],
+      "description": "Aquí medimos pájaros con metro, y no precisamente con el de Madrid.",
+      "fun_fact": "El ojo de un avestruz es más grande que su cerebro.",
+      "difficulty": 2,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "c81dfa5d2ccc"
+    },
+    {
+      "id": "q-0126",
+      "question": "Este trocito es de una bandera: ¿de qué país es?",
+      "answer": "México",
+      "wrong_answers": [
+        "Ecuador",
+        "Albania",
+        "Egipto"
+      ],
+      "hints": [
+        "Es un país de América.",
+        "Sus colores son verde, blanco y rojo.",
+        "Es famoso por los tacos y los mariachis."
+      ],
+      "description": "Una comida de lujo encima de un cactus, servida en plena bandera.",
+      "fun_fact": "Cuenta la leyenda que los aztecas fundaron su gran ciudad, Tenochtitlan, justo donde vieron un águila sobre un nopal comiéndose una serpiente.",
+      "difficulty": 6,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "4be36b0e8895"
+    },
+    {
+      "id": "q-0186",
+      "question": "Mira este primer plano: ¿qué comida colombiana es?",
+      "answer": "Empanada",
+      "wrong_answers": [
+        "Buñuelo",
+        "Arepa",
+        "Pandebono"
+      ],
+      "hints": [
+        "Se fríe en aceite hasta que queda dorada y crujiente.",
+        "Por dentro casi siempre lleva patata y carne.",
+        "Tiene forma de media luna y se come con ají, una salsa picante."
+      ],
+      "description": "Un sobre que no trae cartas, sino algo mucho más sabroso dentro.",
+      "fun_fact": "La palabra «empanada» viene de «empanar», que significa envolver algo en masa o pan.",
+      "difficulty": 3,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "e419e630c15b"
+    },
+    {
+      "id": "q-0205",
+      "question": "¿Qué tipo de árbol es el más alto del mundo?",
+      "answer": "La secuoya roja",
+      "wrong_answers": [
+        "El baobab",
+        "La palma de cera",
+        "La ceiba"
+      ],
+      "hints": [
+        "Crece en bosques cerca de la costa de California, en Estados Unidos.",
+        "El más alto mide más que un edificio de 30 plantas.",
+        "Su nombre lleva el color de su corteza, rojiza y esponjosa."
+      ],
+      "description": "Una pregunta para la que vas a necesitar torcer mucho el cuello.",
+      "fun_fact": "La secuoya más alta conocida se llama Hyperion, mide unos 116 metros y su ubicación exacta se mantiene en secreto para protegerla.",
+      "difficulty": 8,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "0c2dd4c9217a"
+    },
+    {
+      "id": "q-0293",
+      "question": "En la tienda compras 3 empanadas de 2500 pesos cada una y un refresco de 3000 pesos. Pagas con un billete de 20 000 pesos. ¿Cuánto te devuelven?",
+      "answer": "9500 pesos",
+      "wrong_answers": [
+        "10 500 pesos",
+        "8500 pesos",
+        "9000 pesos"
+      ],
+      "hints": [
+        "Primero calcula cuánto cuestan las tres empanadas.",
+        "Las tres empanadas cuestan 7500 pesos; ahora súmale el refresco.",
+        "En total gastas 10 500 pesos: réstalos de 20 000."
+      ],
+      "description": "Una pregunta para saber si te llega para la merienda o si toca pedirle dinero prestado a tu hermano.",
+      "fun_fact": "El antiguo billete colombiano de 20 000 pesos llevaba la cara de Julio Garavito, un astrónomo bogotano que tiene un cráter de la Luna con su nombre.",
+      "difficulty": 4,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "13e8b0df5bac"
+    },
+    {
+      "id": "q-0324",
+      "question": "¿Qué postre italiano con café tiene un nombre que significa «levántame» o «anímame»?",
+      "answer": "Tiramisú",
+      "wrong_answers": [
+        "Panna cotta",
+        "Cannoli",
+        "Zabaione"
+      ],
+      "hints": [
+        "Se sirve frío y por encima lleva cacao en polvo.",
+        "Se monta por capas en un molde, con bizcochos alargados.",
+        "Su nombre empieza por «tira»..."
+      ],
+      "description": "Un postre con cafeína: por fin algo que padres e hijos quieren compartir.",
+      "fun_fact": "Dos regiones de Italia, el Véneto y Friuli, llevan años discutiendo cuál de las dos inventó el tiramisú.",
+      "difficulty": 5,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "687f7e397c1d"
+    },
+    {
+      "id": "q-0359",
+      "question": "En números romanos, ¿qué número representa la letra D?",
+      "answer": "500",
+      "wrong_answers": [
+        "50",
+        "100",
+        "1000"
+      ],
+      "hints": [
+        "Es un número de tres cifras.",
+        "Es más grande que la C, que vale 100.",
+        "Vale exactamente la mitad de la M, que es 1000."
+      ],
+      "description": "Los romanos conquistaron medio mundo sin calculadora, y así apuntaban las cuentas.",
+      "fun_fact": "Los romanos no tenían ningún símbolo para el cero.",
+      "difficulty": 7,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "8b19bebe1752"
+    },
+    {
+      "id": "q-0416",
+      "question": "Un terremoto nace en un punto bajo tierra. ¿Cómo se llama el punto de la superficie que queda justo encima de ese lugar?",
+      "answer": "Epicentro",
+      "wrong_answers": [
+        "Hipocentro",
+        "Cráter",
+        "Falla"
+      ],
+      "hints": [
+        "Esta palabra sale mucho en las noticias cada vez que hay un terremoto.",
+        "Empieza por una partícula griega que significa «sobre» o «encima».",
+        "Es, literalmente, «el centro de encima»."
+      ],
+      "description": "Cuando la Tierra se pone a bailar sin permiso, este es el sitio donde empieza la fiesta… al menos visto desde arriba.",
+      "fun_fact": "El punto bajo tierra donde de verdad nace el terremoto se llama hipocentro, y a veces está a más de 600 km de profundidad.",
+      "difficulty": 7,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "90a2fd2956b7"
+    },
+    {
+      "id": "q-0461",
+      "question": "¿Cómo se llama la cría de la oveja?",
+      "answer": "Cordero",
+      "wrong_answers": [
+        "Ternero",
+        "Potro",
+        "Cabrito"
+      ],
+      "hints": [
+        "No es la cría de la vaca ni la del caballo.",
+        "De su madre sale la lana para hacer bufandas.",
+        "En los belenes de Navidad suele aparecer uno pequeñito, blanco y lanudo junto a los pastores."
+      ],
+      "description": "Tan esponjoso que dan ganas de usarlo de almohada, pero él prefiere que no.",
+      "fun_fact": "Una oveja puede reconocer las caras de unas 50 ovejas y recordarlas durante años.",
+      "difficulty": 2,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "72ea11eb40ca"
+    },
+    {
+      "id": "q-0466",
+      "question": "Mira esta imagen tomada muy, muy de cerca: ¿qué es?",
+      "answer": "Ala de mariposa",
+      "wrong_answers": [
+        "Piel de serpiente",
+        "Ala de libélula",
+        "Pluma de pavo real"
+      ],
+      "hints": [
+        "Esas tejitas son tan diminutas que, juntas, parecen polvo.",
+        "Su dueño vuela, pero no es un pájaro.",
+        "Si la tocas con los dedos, te quedas con un polvillo de colores."
+      ],
+      "description": "Tejas de colores para un tejado del tamaño de una uña.",
+      "fun_fact": "El «polvillo» que se queda en los dedos al tocar una mariposa son miles de escamas diminutas de su ala.",
+      "difficulty": 5,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "30be29cafd69"
+    },
+    {
+      "id": "q-0490",
+      "question": "Mira la foto: ¿cómo se llama esta planta carnívora?",
+      "answer": "Venus atrapamoscas",
+      "wrong_answers": [
+        "Planta jarra",
+        "Rocío del sol",
+        "Grasilla"
+      ],
+      "hints": [
+        "Crece de forma natural solo en unos pantanos de Estados Unidos.",
+        "Sus hojas parecen una boca con dientes y se cierran de golpe cuando un insecto las toca.",
+        "Su nombre lleva el de un planeta y dice lo que caza."
+      ],
+      "description": "Una planta que pidió comida a domicilio y se la trajeron volando.",
+      "fun_fact": "Para no gastar energía en falsas alarmas, la trampa solo se cierra si el insecto toca sus pelos sensores dos veces en pocos segundos.",
+      "difficulty": 3,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "ed6dbac1195a"
+    },
+    {
+      "id": "q-0502",
+      "question": "¿Cuál es el río más largo de África?",
+      "answer": "El Nilo",
+      "wrong_answers": [
+        "El Congo",
+        "El Níger",
+        "El Zambeze"
+      ],
+      "hints": [
+        "Atraviesa un desierto enorme antes de llegar al mar Mediterráneo.",
+        "En sus orillas vivieron los antiguos egipcios.",
+        "Las pirámides y los faraones dependían de él para tener agua y cosechas."
+      ],
+      "description": "Un río tan largo que si lo recorres en piragua, llegas con barba aunque no tengas.",
+      "fun_fact": "El Nilo recorre unos 6650 km y pasa por 11 países; durante miles de años sus crecidas fertilizaban los campos de Egipto.",
+      "difficulty": 3,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "855f1fb1e41b"
+    },
+    {
+      "id": "q-0514",
+      "question": "Este animal de las selvas colombianas se llama saíno y parece un cerdo salvaje, pero no lo es. ¿A qué grupo de animales pertenece en realidad?",
+      "answer": "Los pecaríes",
+      "wrong_answers": [
+        "Los jabalíes",
+        "Los tapires",
+        "Los hipopótamos"
+      ],
+      "hints": [
+        "Es un grupo que solo vive en América, desde el sur de Estados Unidos hasta Argentina.",
+        "Se parecen a los cerdos, pero son parientes separados desde hace millones de años.",
+        "A este grupo los científicos también lo llaman tayasuidos."
+      ],
+      "description": "Tiene cara de cerdo, olor de perfume barato y cero ganas de que lo confundan.",
+      "fun_fact": "El saíno tiene una glándula en la espalda que suelta un olor fuerte, y la manada lo usa para reconocerse entre sí.",
+      "difficulty": 11,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "29623331737e"
+    },
+    {
+      "id": "q-0537",
+      "question": "«Mitad hombre y mitad caballo» es a centauro como «mitad mujer y mitad pez» es a…",
+      "answer": "Sirena",
+      "wrong_answers": [
+        "Hada",
+        "Ninfa",
+        "Medusa"
+      ],
+      "hints": [
+        "Vive en el mar, aunque es un ser de leyenda.",
+        "Según las historias, canta precioso para atraer a los marineros.",
+        "Ariel, la de la película de Disney, es una de ellas."
+      ],
+      "description": "Una cantante que nunca sale a dar conciertos porque no tiene pies.",
+      "fun_fact": "Cuando Cristóbal Colón vio manatíes en el Caribe, escribió que había visto sirenas, ¡pero que no eran tan bonitas como las pintaban!",
+      "difficulty": 2,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "8abd4c4a3691"
+    },
+    {
+      "id": "q-0545",
+      "question": "Si atas un vaso de poliestireno a un robot submarino y lo bajas a más de 6000 metros, ¿qué le pasa?",
+      "answer": "Se encoge y queda en miniatura",
+      "wrong_answers": [
+        "Explota en mil pedacitos",
+        "Se infla como un globo",
+        "Se derrite por el calor"
+      ],
+      "hints": [
+        "Piensa en todo el peso del agua que hay encima del vaso.",
+        "La presión allí abajo es cientos de veces mayor que en la superficie.",
+        "El poliestireno tiene burbujitas de aire, y la presión las aplasta."
+      ],
+      "description": "Allí abajo el agua aprieta más que un abrazo de la abuela.",
+      "fun_fact": "En las expediciones de mar profundo, los científicos suelen decorar vasos de poliestireno y mandarlos al fondo: vuelven como recuerdos del tamaño de un dedal.",
+      "difficulty": 8,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "505056f0ac44"
+    },
+    {
+      "id": "q-0561",
+      "question": "Soy un dicho que repiten las abuelas cuando por fin se acaban los problemas. Empiezo así: «Después de la tormenta llega la…». ¿Con qué palabra termino?",
+      "answer": "calma",
+      "wrong_answers": [
+        "noche",
+        "lluvia",
+        "niebla"
+      ],
+      "hints": [
+        "Piensa en cómo queda todo cuando la tormenta por fin se va.",
+        "También se dice de un mar sin olas ni viento.",
+        "Rima con «palma» y significa tranquilidad."
+      ],
+      "description": "Un dicho para los días en que todo sale mal… hasta que deja de salir mal.",
+      "fun_fact": "Este dicho tiene una variante igual de famosa: «Después de la tormenta sale el sol».",
+      "difficulty": 3,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "c7b3e08b59a2"
+    },
+    {
+      "id": "q-0563",
+      "question": "¿Cómo se llama la desembocadura de un río que se abre en muchos brazos formando un triángulo, como la del Nilo?",
+      "answer": "Delta",
+      "wrong_answers": [
+        "Estuario",
+        "Meandro",
+        "Fiordo"
+      ],
+      "hints": [
+        "Es una palabra que también se usa en matemáticas y física.",
+        "La letra griega que le dio el nombre tiene forma de triángulo.",
+        "Es la cuarta letra del alfabeto griego: alfa, beta, gamma…"
+      ],
+      "description": "Un río tan largo que al final se cansa y se abre como un abanico.",
+      "fun_fact": "El historiador griego Heródoto llamó «delta» a la desembocadura del Nilo porque se parecía a la letra griega Δ.",
+      "difficulty": 7,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "947b23f7729a"
+    },
+    {
+      "id": "q-0594",
+      "question": "En 1816 nevó en junio en Europa por la ceniza del volcán Tambora, en Indonesia. Más o menos, ¿a qué distancia de Europa está?",
+      "answer": "Unos 12 000 km",
+      "wrong_answers": [
+        "Unos 300 km",
+        "Unos 1500 km",
+        "Unos 50 000 km"
+      ],
+      "hints": [
+        "Indonesia está en el otro lado del mundo, en Asia.",
+        "Ningún punto de la Tierra está a más de unos 20 000 km de otro.",
+        "Es más o menos la distancia de ir en avión de Madrid a Japón."
+      ],
+      "description": "Pediste unas vacaciones de verano y te mandaron un invierno envuelto para regalo.",
+      "fun_fact": "A 1816 lo llamaron «el año sin verano», y por el mal tiempo Mary Shelley se quedó encerrada en casa y escribió «Frankenstein».",
+      "difficulty": 6,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "2f3c350d8385"
+    },
+    {
+      "id": "q-0596",
+      "question": "Adivina: soy una rana enorme de Norteamérica. Me criaron en granjas de otros países, me escapé y ahora me como a las ranas de allí. ¿Qué especie soy?",
+      "answer": "Especie invasora",
+      "wrong_answers": [
+        "Especie endémica",
+        "Especie migratoria",
+        "Especie domesticada"
+      ],
+      "hints": [
+        "Es un problema para la naturaleza del lugar adonde llegó.",
+        "Es lo contrario de una especie nativa del lugar.",
+        "Es como alguien que entra en una casa ajena y se adueña de todo."
+      ],
+      "description": "Una rana con apetito de toro y modales de invitado que nadie ha invitado.",
+      "fun_fact": "La rana toro puede comer casi cualquier cosa que le quepa en la boca: insectos, peces, otras ranas ¡y hasta pajaritos!",
+      "difficulty": 7,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "8cad4256fc3a"
+    },
+    {
+      "id": "q-0604",
+      "question": "Una mariposa inofensiva copia los colores de otra de mal sabor, y los pájaros no se la comen. El truco lleva el apellido de un naturalista inglés. ¿Cuál es?",
+      "answer": "Mimetismo batesiano",
+      "wrong_answers": [
+        "Mimetismo mülleriano",
+        "Mimetismo darwiniano",
+        "Mimetismo wallaceano"
+      ],
+      "hints": [
+        "El naturalista pasó once años recogiendo insectos en la selva amazónica.",
+        "Viajó al Amazonas junto a Alfred Russel Wallace, pero el truco no lleva el nombre de Wallace.",
+        "Su nombre de pila era Henry Walter."
+      ],
+      "description": "El disfraz de Halloween más exitoso de la naturaleza dura todo el año.",
+      "fun_fact": "Henry Walter Bates recogió en el Amazonas unas 14 700 especies, de las cuales unas 8000 eran nuevas para la ciencia.",
+      "difficulty": 15,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "fb685bdc4a39"
+    },
+    {
+      "id": "q-0652",
+      "question": "¿Cuál de estas ciudades es la capital de su país?",
+      "answer": "Abuja",
+      "wrong_answers": [
+        "Estambul",
+        "Nueva York",
+        "Zúrich"
+      ],
+      "hints": [
+        "Es una ciudad planificada, construida casi desde cero.",
+        "Sustituyó a Lagos como capital en 1991.",
+        "Está en Nigeria."
+      ],
+      "description": "El GPS de este influencer necesita una actualización urgente.",
+      "fun_fact": "Nigeria trasladó su capital a Abuja en parte porque está más cerca del centro del país que Lagos.",
+      "difficulty": 9,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "5988a5003270"
+    },
+    {
+      "id": "q-0693",
+      "question": "Mira la foto: este dulce japonés es la comida favorita de un famoso personaje de dibujos animados. ¿De quién?",
+      "answer": "Doraemon",
+      "wrong_answers": [
+        "Pikachu",
+        "Hello Kitty",
+        "Totoro"
+      ],
+      "hints": [
+        "Es un personaje que viene del futuro.",
+        "Tiene un bolsillo mágico lleno de inventos.",
+        "Es un gato robot azul sin orejas."
+      ],
+      "description": "Dos tortitas que se abrazan con un relleno dulce en el medio.",
+      "fun_fact": "El relleno del dorayaki es una pasta dulce de judía roja llamada «anko».",
+      "difficulty": 4,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "991323d699f8"
+    },
+    {
+      "id": "q-0708",
+      "question": "Completa: «Las patatas fritas se hacen con patata, y el coleslaw, esa ensalada rallada con mayonesa, se hace con…»",
+      "answer": "Col",
+      "wrong_answers": [
+        "Lechuga",
+        "Pepino",
+        "Coliflor"
+      ],
+      "hints": [
+        "Es una verdura de hojas apretadas en forma de bola.",
+        "«Cole» viene de una palabra neerlandesa para esta verdura.",
+        "Es pariente del brócoli y también se le llama repollo."
+      ],
+      "description": "Una ensalada con nombre en inglés que suena a hechizo de mago.",
+      "fun_fact": "«Coleslaw» viene del neerlandés «koolsla», que quiere decir algo así como «ensalada de col».",
+      "difficulty": 7,
+      "status": "needs_work",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "needs_work",
+        "feedback": "The translation changed the answer from 'Repollo' to 'Col'. Now 'coleslaw' in the question already sounds like the answer, and hint 2 («\"Cole\" viene de una palabra neerlandesa para esta verdura») points straight at 'Col'. 'Coliflor' also starts with 'col', so that is the only thing left to rule out. 'Repollo' is a common word in Spain. Go back to answer 'Repollo', and make hint 3 say «también se le llama col», as in the source.",
+        "problems": [
+          "giveaway"
+        ],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "2a6fc2a14019"
+    },
+    {
+      "id": "q-0725",
+      "question": "Mira la foto: los nómadas mongoles del desierto de Gobi viven en esta casa redonda que pueden desmontar y llevar consigo. ¿Cómo se llama?",
+      "answer": "Yurta",
+      "wrong_answers": [
+        "Tipi",
+        "Jaima",
+        "Iglú"
+      ],
+      "hints": [
+        "Está hecha de un armazón de madera cubierto con fieltro de lana.",
+        "No es la tienda de los beduinos ni la de los pueblos de las praderas de Norteamérica.",
+        "En mongol se llama «ger»."
+      ],
+      "description": "Una casa que se monta, se desmonta y se lleva en camello, ideal para escapar de las visitas.",
+      "fun_fact": "Una familia mongola puede desmontar su yurta en una o dos horas y cargarla en unos pocos animales.",
+      "difficulty": 9,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "7eb5966a6696"
+    },
+    {
+      "id": "q-0729",
+      "question": "Es un pozo natural de agua dulce, se forma cuando se hunde el techo de una cueva, y la península de Yucatán, en México, tiene miles. ¿Cómo se llama?",
+      "answer": "Cenote",
+      "wrong_answers": [
+        "Géiser",
+        "Fiordo",
+        "Atolón"
+      ],
+      "hints": [
+        "Los mayas los usaban para sacar agua.",
+        "Mucha gente viaja a México para nadar en ellos.",
+        "La palabra viene del maya «ts'ono'ot»."
+      ],
+      "description": "Una piscina natural que se hizo sola cuando el suelo se cansó de aguantar.",
+      "fun_fact": "Los mayas creían que los cenotes eran entradas a Xibalbá, el inframundo.",
+      "difficulty": 9,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "9dd59b3d7e68"
+    },
+    {
+      "id": "q-0738",
+      "question": "Mira esta planta: a muchos gatos los vuelve locos de felicidad. ¿De qué familia de plantas es pariente?",
+      "answer": "De la familia de la menta",
+      "wrong_answers": [
+        "De la familia de las rosas",
+        "De la familia del girasol",
+        "De la familia del césped"
+      ],
+      "hints": [
+        "Fíjate en la forma de sus hojas, con bordes como de serrucho.",
+        "Sus primas se usan mucho en la cocina y en las infusiones.",
+        "Si la estrujas, huele parecido a una planta que se usa en chicles y en los mojitos."
+      ],
+      "description": "La única planta que convierte a un gato serio en un hippie de los años setenta.",
+      "fun_fact": "Más o menos un tercio de los gatos no siente nada con la hierba gatera: reaccionar a ella se hereda.",
+      "difficulty": 8,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "2d1a751d398b"
+    },
+    {
+      "id": "q-0751",
+      "question": "En 1947, unas moscas de la fruta como esta fueron los primeros animales enviados al espacio. ¿Qué país las lanzó?",
+      "answer": "Estados Unidos",
+      "wrong_answers": [
+        "Unión Soviética",
+        "Alemania",
+        "Francia"
+      ],
+      "hints": [
+        "No fue el país de la perrita Laika.",
+        "Usaron un cohete V-2 capturado después de la Segunda Guerra Mundial.",
+        "El lanzamiento fue desde el desierto de Nuevo México."
+      ],
+      "description": "Antes que perros, monos y astronautas, la primera en ir al espacio fue la que se come tu fruta.",
+      "fun_fact": "Las moscas regresaron vivas en una cápsula con paracaídas, y así se supo que los seres vivos podían sobrevivir a esa altura.",
+      "difficulty": 10,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "c1cceb08e785"
+    },
+    {
+      "id": "q-0817",
+      "question": "Adivina, adivinanza: vivo dentro del mando a distancia y de los juguetes, les doy energía y, cuando me gasto, no me debes tirar a la basura normal. ¿Qué soy?",
+      "answer": "Una pila",
+      "wrong_answers": [
+        "Una bombilla",
+        "Una botella de plástico",
+        "Una lata de refresco"
+      ],
+      "hints": [
+        "Las hay de varios tamaños: AA, AAA, cuadradas y redondas como botones.",
+        "Cuando un juguete deja de encenderse, casi siempre hay que cambiarme.",
+        "Tengo un lado «+» y un lado «−»."
+      ],
+      "description": "Pequeñita, llena de energía y con un final muy delicado: como un primo de cinco años después de una fiesta.",
+      "fun_fact": "Las pilas llevan metales como el zinc, el manganeso o el litio, que se pueden recuperar si las llevas a un punto de recogida.",
+      "difficulty": 1,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "102138276d15"
+    },
+    {
+      "id": "q-0863",
+      "question": "Cena especial con toda la familia, turrón y villancicos la noche del 24 de diciembre. ¿Cómo se llama esa noche?",
+      "answer": "Nochebuena",
+      "wrong_answers": [
+        "Nochevieja",
+        "Noche de San Juan",
+        "Noche de Brujas"
+      ],
+      "hints": [
+        "Es la noche justo antes del día de Navidad.",
+        "No es la del 31 de diciembre.",
+        "Su nombre es lo contrario de una «noche mala»."
+      ],
+      "description": "La única noche del año en que toda la familia está despierta a medianoche sin que nadie regañe.",
+      "fun_fact": "En inglés se llama «Christmas Eve», y «eve» viene de una palabra antigua que significa «víspera» o «anochecer».",
+      "difficulty": 2,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "939cff614ca9"
+    },
+    {
+      "id": "q-0866",
+      "question": "Abres un atlas viejo y aparece «Macedonia»; en uno nuevo pone «Macedonia del Norte». ¿En qué año se cambió el nombre oficial?",
+      "answer": "2019",
+      "wrong_answers": [
+        "1991",
+        "2003",
+        "2011"
+      ],
+      "hints": [
+        "Fue hace pocos años, no en el siglo pasado.",
+        "El cambio llegó tras un acuerdo con Grecia, que tiene una región llamada Macedonia.",
+        "Fue justo un año antes de la pandemia."
+      ],
+      "description": "Un país que tuvo que añadirse un punto cardinal para hacer las paces con el vecino.",
+      "fun_fact": "La disputa con Grecia por el nombre «Macedonia» duró casi 30 años.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "07017349116c"
+    },
+    {
+      "id": "q-0885",
+      "question": "«Colombia es a país como América es a…». ¿Qué palabra completa la frase?",
+      "answer": "Continente",
+      "wrong_answers": [
+        "Océano",
+        "Isla",
+        "Ciudad"
+      ],
+      "hints": [
+        "América es mucho más grande que Colombia.",
+        "Dentro de América caben muchos países.",
+        "África, Europa y Asia también lo son."
+      ],
+      "description": "Un acertijo de tablero con más tierra que una maceta.",
+      "fun_fact": "Según cómo se cuenten, hay 5, 6 o 7 continentes: en Colombia suele enseñarse que América es uno solo.",
+      "difficulty": 3,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "902afd5b0479"
+    },
+    {
+      "id": "q-0919",
+      "question": "Soy un pino de las montañas de California con más de 4800 años. Me pusieron el nombre de un personaje de la Biblia famoso por vivir 969 años. ¿Quién es?",
+      "answer": "Matusalén",
+      "wrong_answers": [
+        "Noé",
+        "Moisés",
+        "Abraham"
+      ],
+      "hints": [
+        "Era abuelo de un personaje famoso por construir un arca.",
+        "Se dice «más viejo que…» para hablar de alguien muy viejo.",
+        "Su nombre empieza por M."
+      ],
+      "description": "Un árbol tan viejo que su tarta de cumpleaños necesitaría un bosque de velas.",
+      "fun_fact": "La ubicación exacta del pino Matusalén es secreta, para protegerlo de visitantes que quieran llevarse un recuerdo.",
+      "difficulty": 10,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "bce07219e520"
+    },
+    {
+      "id": "q-0968",
+      "question": "El nombre de las Islas Canarias viene del latín y esconde un animal. ¿Cuál?",
+      "answer": "Perros",
+      "wrong_answers": [
+        "Canarios",
+        "Cangrejos",
+        "Caballos"
+      ],
+      "hints": [
+        "Los romanos ya conocían estas islas del Atlántico.",
+        "En latín, este animal se decía «canis».",
+        "Es el animal que mueve la cola cuando llegas a casa."
+      ],
+      "description": "Un nombre que parece obvio, pero que guarda una sorpresa desde los tiempos de los romanos.",
+      "fun_fact": "Fue al revés de lo que se piensa: el pájaro canario se llama así por las islas, no las islas por el pájaro.",
+      "difficulty": 8,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "dc46d8c3ad2e"
+    },
+    {
+      "id": "q-1040",
+      "question": "Soy el río Amazonas: en la temporada de lluvias subo varios metros y me meto en la selva. ¿Qué pasa entonces?",
+      "answer": "Los peces nadan entre los árboles",
+      "wrong_answers": [
+        "Los delfines rosados se van al mar",
+        "Los monos bajan a vivir al suelo",
+        "Las plantas dejan de dar fruta"
+      ],
+      "hints": [
+        "Durante meses, el bosque queda medio bajo el agua.",
+        "Ahí abajo empiezan a aparecer visitantes con aletas.",
+        "Algunos se comen la fruta que cae de las ramas."
+      ],
+      "description": "Un río que cada año se sale de casa sin pedir permiso.",
+      "fun_fact": "Algunos peces del Amazonas comen fruta y luego sueltan las semillas lejos, así que ayudan a sembrar la selva.",
+      "difficulty": 4,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "2973309053db"
+    },
+    {
+      "id": "q-1051",
+      "question": "Un tronco gigante se ahueca con fuego y hacha, y se deja alargado y puntiagudo por los dos lados. ¿Para qué se usa?",
+      "answer": "Para navegar por el río",
+      "wrong_answers": [
+        "Para guardar agua de lluvia",
+        "Para guardar la cosecha de yuca",
+        "Para tocar música"
+      ],
+      "hints": [
+        "Las puntas ayudan a cortar algo que se mueve.",
+        "En la selva, los ríos son como las carreteras.",
+        "Le van a hacer falta unos remos."
+      ],
+      "description": "Un árbol al que le han sacado las tripas para darle un oficio nuevo.",
+      "fun_fact": "Algunas canoas talladas de un solo tronco pueden llevar a más de diez personas.",
+      "difficulty": 3,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "a090e2ba7a87"
+    },
+    {
+      "id": "q-1053",
+      "question": "En una feria del colegio, un tique equivale a una empanadilla. En el mercado de bonos de carbono, un bono equivale a… ¿qué?",
+      "answer": "Una tonelada de CO₂ que no llega al aire",
+      "wrong_answers": [
+        "Un kilo de CO₂ que no llega al aire",
+        "Un litro de CO₂ que no llega al aire",
+        "Cien toneladas de CO₂ que no llegan al aire"
+      ],
+      "hints": [
+        "Es una cantidad de gas de efecto invernadero.",
+        "Es una unidad bastante grande, no de las que se pesan en la cocina.",
+        "Son mil kilos de dióxido de carbono."
+      ],
+      "description": "Contaminar con permiso: la versión adulta de «te cambio mi postre por tus deberes».",
+      "fun_fact": "Los bonos de carbono se hicieron famosos con el Protocolo de Kioto, adoptado en Japón en 1997.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "f4f6d344fd71"
+    },
+    {
+      "id": "q-1118",
+      "question": "Soy un santo muy famoso de Irlanda. Cuenta la leyenda que usaba un trébol de tres hojas para enseñar, y en mi día, el 17 de marzo, medio mundo se viste de verde. ¿Quién soy?",
+      "answer": "San Patricio",
+      "wrong_answers": [
+        "San Valentín",
+        "San Nicolás",
+        "San Jorge"
+      ],
+      "hints": [
+        "Viví hace más de mil años.",
+        "Hay una catedral enorme con mi nombre en Nueva York.",
+        "En inglés me llaman Patrick."
+      ],
+      "description": "Un santo tan verde que hasta su símbolo es una planta.",
+      "fun_fact": "En Chicago tiñen de verde el río de la ciudad para celebrar el Día de San Patricio.",
+      "difficulty": 6,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "5aed271d607c"
+    },
+    {
+      "id": "q-1141",
+      "question": "Soy una masa frita que se come en Navidad. En México soy una torta plana y crujiente con miel; en Colombia, una bolita de queso. ¿Qué soy?",
+      "answer": "Buñuelo",
+      "wrong_answers": [
+        "Arepa",
+        "Empanada",
+        "Churro"
+      ],
+      "hints": [
+        "Me fríen en aceite bien caliente.",
+        "En España a veces me rellenan de crema.",
+        "Mi nombre empieza por «bu»."
+      ],
+      "description": "Masa, aceite caliente y paciencia: la receta de la felicidad de diciembre.",
+      "fun_fact": "Los buñuelos llegaron a América con los españoles, y cada país los transformó a su manera.",
+      "difficulty": 6,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "c0ad04026954"
+    },
+    {
+      "id": "q-1199",
+      "question": "¿Qué insectos, que sueltan un líquido amarillo por las patas si los molestas, se sueltan en los huertos para comerse los pulgones?",
+      "answer": "Las mariquitas",
+      "wrong_answers": [
+        "Las abejas",
+        "Las mariposas",
+        "Las hormigas"
+      ],
+      "hints": [
+        "Esos insectos son cazadores.",
+        "Los agricultores los usan como control natural de plagas.",
+        "Suelen ser rojos con puntos negros."
+      ],
+      "description": "Un bicho pequeñito que se bebe el zumo de tus plantas sin pedir permiso.",
+      "fun_fact": "Algunas hormigas cuidan a los pulgones como si fueran vacas, para beberse el líquido dulce que sueltan.",
+      "difficulty": 5,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "84177ea4eaa3"
+    },
+    {
+      "id": "q-1227",
+      "question": "Soy una leche fermentada que nace del Cáucaso; me preparan con unos granitos blancos que parecen coliflor pequeña. ¿Qué soy?",
+      "answer": "Kéfir",
+      "wrong_answers": [
+        "Yogur",
+        "Kumis",
+        "Lassi"
+      ],
+      "hints": [
+        "Mis granitos son una mezcla de bacterias y levaduras.",
+        "Soy un poco ácido y burbujeante.",
+        "Mi nombre empieza por K y tiene tilde."
+      ],
+      "description": "Una leche que viene con mascotas incluidas.",
+      "fun_fact": "Los granos de kéfir crecen y se multiplican, así que se pueden regalar a otros para que hagan su propio kéfir.",
+      "difficulty": 10,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "43a271f8115e"
+    },
+    {
+      "id": "q-1468",
+      "question": "Es rojizo, sale de la piel del hipopótamo y no es sangre. ¿A qué tipo de producto humano se parece por su función?",
+      "answer": "Protectores solares",
+      "wrong_answers": [
+        "Perfumes",
+        "Tintes para el pelo",
+        "Pegamentos"
+      ],
+      "hints": [
+        "El hipopótamo pasa muchas horas bajo el sol africano.",
+        "Su piel es delicada y se agrieta fácilmente.",
+        "Lo usarías en la playa para no quemarte."
+      ],
+      "description": "El hipopótamo tiene su propia línea de cosméticos y no la vende.",
+      "fun_fact": "Ese «sudor rojo» también ayuda a evitar infecciones en las heridas del hipopótamo.",
+      "difficulty": 8,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "fa0326de67f9"
+    },
+    {
+      "id": "q-1697",
+      "question": "Mira este diente fósil, enorme y con bordes de sierra. ¿De qué tipo de animal es?",
+      "answer": "De un tiburón",
+      "wrong_answers": [
+        "De un dinosaurio",
+        "De un cocodrilo",
+        "De una ballena"
+      ],
+      "hints": [
+        "Su dueño perdía dientes toda la vida y le salían otros nuevos.",
+        "Su dueño no tenía huesos, sino cartílago.",
+        "Era un enorme cazador marino con aletas, y sus parientes vivos aún cazan en todos los océanos."
+      ],
+      "description": "Un cepillo de dientes no habría servido de mucho con este dueño.",
+      "fun_fact": "Un tiburón puede gastar miles de dientes en su vida: los de repuesto avanzan en filas, como en una cinta transportadora.",
+      "difficulty": 6,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "8d069e5ebc83"
+    },
+    {
+      "id": "q-1705",
+      "question": "En una competición oficial de agility con reglas de la FCI, el perro zigzaguea entre las estacas del slalom. ¿Cuántas estacas son?",
+      "answer": "12",
+      "wrong_answers": [
+        "8",
+        "10",
+        "16"
+      ],
+      "hints": [
+        "Es un número par.",
+        "Es más de 10.",
+        "Es la misma cantidad que los meses del año."
+      ],
+      "description": "Un perro que esquiva obstáculos mejor que tú en un centro comercial en temporada de rebajas.",
+      "fun_fact": "El agility nació en Inglaterra a finales de los años 70, inspirado en las competiciones de saltos a caballo.",
+      "difficulty": 15,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "de66d6c3beca"
+    },
+    {
+      "id": "q-1781",
+      "question": "Es francés, de corteza blanca, lleva el nombre de una región cerca de París y, según la leyenda, en 1815 lo coronaron «rey de los quesos». ¿Cuál es?",
+      "answer": "Brie",
+      "wrong_answers": [
+        "Camembert",
+        "Roquefort",
+        "Gruyère"
+      ],
+      "hints": [
+        "Es blando y cremoso por dentro.",
+        "Su corteza es blanca y aterciopelada, no azul ni dura.",
+        "Su nombre es corto: solo cuatro letras."
+      ],
+      "description": "Un queso con corona, capa blanca y aires de realeza francesa.",
+      "fun_fact": "Según la leyenda, en el Congreso de Viena los diplomáticos hicieron un concurso de quesos y ganó el Brie.",
+      "difficulty": 11,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "b7fe98c81e47"
+    },
+    {
+      "id": "q-1834",
+      "question": "Mira de cerca esta cola. ¿De qué serpiente es?",
+      "answer": "De una serpiente de cascabel",
+      "wrong_answers": [
+        "De una cobra",
+        "De una anaconda",
+        "De una boa"
+      ],
+      "hints": [
+        "Sus anillos están hechos de queratina, como tus uñas.",
+        "Cuando se siente en peligro, la sacude como una maraca.",
+        "Su nombre es también el de una campanita."
+      ],
+      "description": "Una cola que viene con su propia banda sonora.",
+      "fun_fact": "Cada vez que la serpiente muda la piel, a su cascabel se le suma un segmento nuevo.",
+      "difficulty": 4,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "efbfa6eca694"
+    },
+    {
+      "id": "q-1967",
+      "question": "Soy Hanno, un elefante blanco. En 1514 viajé desde Lisboa hasta Roma como regalo. ¿De quién fui mascota?",
+      "answer": "De un papa",
+      "wrong_answers": [
+        "De un emperador romano",
+        "De un faraón egipcio",
+        "De un sultán otomano"
+      ],
+      "hints": [
+        "En 1514 ya no había emperadores en Roma desde hacía mil años.",
+        "Mi dueño vivía en el centro de Roma y era muy importante para los católicos.",
+        "Mi dueño se llamaba León X."
+      ],
+      "description": "Hubo una vez una mascota tan grande que no cabía por ninguna puerta.",
+      "fun_fact": "Cuentan que Hanno se arrodillaba ante su dueño y lanzaba agua con la trompa a la multitud.",
+      "difficulty": 6,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "39e083d8193b"
+    },
+    {
+      "id": "q-2123",
+      "question": "Este bombón se llama como un manjar carísimo que se busca bajo tierra con perros o cerdos. ¿Qué ser vivo es ese manjar?",
+      "answer": "Un hongo",
+      "wrong_answers": [
+        "Un tubérculo",
+        "Una semilla",
+        "Un caracol"
+      ],
+      "hints": [
+        "Crece pegado a las raíces de árboles como el roble.",
+        "Se reproduce con esporas.",
+        "Es pariente de los champiñones."
+      ],
+      "description": "Un bombón que se disfrazó de algo que se busca con el hocico.",
+      "fun_fact": "Las trufas de chocolate se inventaron en Francia, y se llaman así porque recuerdan a las trufas negras cubiertas de tierra.",
+      "difficulty": 8,
+      "status": "approved",
+      "batch": "tr-es-ES-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "2cc3789f75eb"
+    }
+  ]
+}
