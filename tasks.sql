@@ -863,7 +863,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - New bundles, regional packs (`plans/15c-regional-questions.md`); `chinese-base` (milestone 12).
 - Batches per age group (AG-8), targets from the windows (D-53).
 - Mixed-age sessions; log in `plans/open-questions.md` if it comes up.', '2026-10-11T21:54:56Z', NULL);
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (6, 6, 'masterplan', 1000, 'Milestone 6 closes the leftovers of M3/M4, preloading before a screen fades in (UI-7) and recorded sounds for everything still synthesized (UI-10), and adds playful iconography to the screens before a game session (developer, 2026-10-14): icons on their buttons, national flags for the languages. Owner plan files: `plans/04-ui-tv-display.md` ("Transitions", "Sound assets", UI-7, UI-10), `plans/10-visual-design.md` (VD-8 icon set).
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (6, 6, 'masterplan', 1000, 'Milestone 6 closes the leftovers of M3/M4, preloading before a screen fades in (UI-7) and recorded sounds for everything still synthesized (UI-10), and adds playful visuals to the screens before a game session: icons on their buttons, national flags for the languages (developer, 2026-10-14), and a colourful horizon of Commons cut-outs along the bottom of Start (developer, 2026-10-16). Owner plan files: `plans/04-ui-tv-display.md` ("Transitions", "Sound assets", UI-7, UI-10), `plans/10-visual-design.md` (VD-8 icon set, palettes).
 
 **This masterplan''s tasks are not implementation work: each of them writes the plan for one part below** (`pm plan add 6 …`), with that part''s tasks.
 
@@ -877,18 +877,17 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - Planned and built: `plan 33: Recorded music loops (UI-10)`; open: `task 149: Gamemaster check of the music loops on the TV`, `task 150: Close UI-10 in the plans`.
 
 ## Part 4: Playful icons and language flags before a game session, priority 400
+- Done: `plan 135: Playful icons and language flags before a game session` (tasks 1081, 1082, 1083, 1103); flags per `decision 186: Language flags instead of the globe`.
+
+## Part 5: Start screen horizon, priority 300
 - New plan (`pm plan add 6 …`), not yet written.
-- Icons on every button of the screens before play: Start (play/resume, new game, mods, language), Language, Player (pick, new name, write, delete already has `trash`), Choice (modes, age group, bundles, «Personalizar partida», start, back), Customize, Mods, Consent, Credits; the plan lists the exact buttons from the code (`app/client/src/game/screens/`, `Customize.svelte`, `BundleSelector.svelte`, `Credits.svelte`).
-- Style: VD-8 (`app/client/src/game/Icon.svelte`: inline SVG, 24×24, `currentColor`, rounded strokes, 0.25 fill); playful, no emoji; new names added to `IconName`. Out of scope: in-game screens and the Esc menu (shared with play).
-- Language flags: inline SVG, simplified (no detailed coats of arms), own drawings (public-domain designs, D-45: nothing downloaded); own component (e.g. `Flags.svelte`; `Icon`''s `flag` is the report flag), keyed by language tag:
-  - `es`: a few Latin American flags (plan picks, e.g. Mexico, Colombia, Argentina)
-  - `es-ES`: Spain; `en`: UK and US; `de`: Germany, Austria, Switzerland
-  - a mod''s UI language (plan 117, `ENDONYMS` from a mod catalog) has no flags: keep the globe for it
-- Where: each option on the Language screen (`Language.svelte`, next to the endonym) and Start''s language button (`Start.svelte`, replaces the globe SVG).
-- Supersedes `decision 157: Start''s language button: globe and endonym, key per catalog, pad Y` in part (globe → flags; key, pad Y, endonym unchanged): the plan task records it (`pm decision record`) and updates the docs that describe the button (04, D-96 in `plans/decisions.md`).
-- Layout: Start''s button and the Language options stay readable at TV size and in all four catalogs (de is longest); icons don''t change keys, prompts or focus.
-- Check: `trivia-gallery` for all four languages; a developer decision to review icons and flags in `/gallery` (like `plan 100: UI wording: style guides, TV-check fixes, screen gallery`''s review decisions); VD-8 note in 10 updated.
-- Overlap: `task 1026: Gallery fixes from the review flags` may touch the same screens'' strings; whichever runs second adapts.
+- What: the bottom third of Start (`app/client/src/game/screens/Start.svelte`) shows a colourful horizon: a row of cut-outs (transparent background) of landmarks, animals and objects from many topics and regions, overlapping like a skyline; tinted or framed to match Start''s palette (VD palettes in `plans/10-visual-design.md`); static or gently moving (plan decides; respects reduced motion if the game has such a setting).
+- Sources: Wikimedia Commons only, allowlisted licences (D-45: CC0, PD, CC BY, CC BY-SA as in the allowlist); prefer files already cut out (PNG/SVG with alpha); nothing fetched at runtime.
+- No country bias: one fixed set for every language; spread over continents and topics (e.g. a landmark, an animal, an object per region); no flags, text or logos in the images; nothing that marks one country as "ours".
+- Picks: a pick task proposes 12–20 candidates (file page URL, author, licence, why) as a developer decision (`pm decision add`, contact sheet image in `work/`); nothing ships before the answer.
+- Shipped as app assets, not the media cache: e.g. `app/client/public/horizon/` as WebP with alpha (sized for 1920 px wide, small), with a `CREDITS.md` like `app/client/public/audio/CREDITS.md`; `app/client/credits.ts` reads it for the Credits screen and shipped CREDITS.md; the release check''s credits step (`authoring/steam/credits_check.mjs`) covers it both ways; size within `app/desktop/media-budget.json` (new budget entry or under an existing one, plan decides); the encode follows `decision 185: Shipped media: formats, names and where the encode runs (SW-9)` where it applies.
+- Layout: title, buttons, save notice, mods notice and the language button stay readable over or above the horizon at 1920 × 1080 and 1280 × 800, all four catalogs; no change to keys, focus or prompts.
+- Check: `trivia-gallery --only` Start shots for all four languages; a developer decision to approve the horizon in `/gallery` (like Part 4''s review); docs: `plans/04-ui-tv-display.md` (Start), `plans/10-visual-design.md`, `directory.md` if a new top-level dir.
 
 ## Order and constraints
 - Parts are independent; 2 → 3 shared conventions (done).
@@ -33482,10 +33481,82 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
   - drafts: `drafts/colombia--drinks.json` and `revised-01-1.json` have `drinks` / `animals` (mapped as colombia), `revised-01-3.json` `Inventores famosos`, `revised-01-4.json` `Piratas`, `world-cups.json` `Mundiales de fútbol` (unmapped, while slots.json has `famous-inventors`, `pirates`, `world-cups`).
 - Fix in `authoring/tools/rekey.py` (work-file mapping: a base run''s bare pre-D-99 names that `app/data/old-keys.json` maps under `colombia/…`; revised-*.json and drafts named after a subcategory), then rerun `qgen rekey --map work/slugs/proposal.json --apply` (idempotent) or a one-off mapping through `old-keys.json`, never hand edits; check every `work/*/slots.json` against its drafts'' `subcategory` fields (and ratings/revisions).
 - Check: `qgen report --cost` and `qgen health` run; `qgen validate` passes.', '2026-10-16T13:32:11Z', NULL, 1313, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1320, 6, 'revise the masterplan of milestone 6: Screen polish leftovers', 'revise', 'open', 1000, NULL, '`milestone 6: Screen polish leftovers` changed. Bring `plan 6: masterplan`, the masterplan, in line with it (`pm plan edit 6 --body -`), or
-leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-16T13:38:43Z', NULL, NULL, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1320, 6, 'revise the masterplan of milestone 6: Screen polish leftovers', 'revise', 'done', 1000, '2026-10-16, tasks.sql: masterplan of milestone 6 adds Part 5 (Start screen horizon, priority 300, plan to write); Part 4 marked done (plan 135)', '`milestone 6: Screen polish leftovers` changed. Bring `plan 6: masterplan`, the masterplan, in line with it (`pm plan edit 6 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-16T13:38:43Z', '2026-10-16T13:46:54Z', NULL, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1321, 8, 'revise the masterplan of milestone 8: Steam S3: playable desktop build', 'revise', 'open', 1000, NULL, '`milestone 8: Steam S3: playable desktop build` changed. Bring `plan 8: masterplan`, the masterplan, in line with it (`pm plan edit 8 --body -`), or
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-16T13:38:43Z', NULL, NULL, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1322, 6, 'create tasks for plan 6: masterplan', 'split', 'open', 1000, NULL, 'Split plan 6 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T13:46:46Z', NULL, 1320, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1323, 32, 'revise plan 32: Recorded sound effects (UI-10)', 'revise', 'open', 1000, NULL, '`plan 6: masterplan`, the plan above `plan 32: Recorded sound effects (UI-10)`, changed; it is quoted below. Bring `plan 32: Recorded sound effects (UI-10)` in line with it
+(`pm plan edit 32 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 6: masterplan
+
+Milestone 6 closes the leftovers of M3/M4, preloading before a screen fades in (UI-7) and recorded sounds for everything still synthesized (UI-10), and adds playful visuals to the screens before a game session: icons on their buttons, national flags for the languages (developer, 2026-10-14), and a colourful horizon of Commons cut-outs along the bottom of Start (developer, 2026-10-16). Owner plan files: `plans/04-ui-tv-display.md` ("Transitions", "Sound assets", UI-7, UI-10), `plans/10-visual-design.md` (VD-8 icon set, palettes).
+
+**This masterplan''s tasks are not implementation work: each of them writes the plan for one part below** (`pm plan add 6 …`), with that part''s tasks.
+
+## Part 1: Preload the next screen''s media (UI-7), priority 500
+- Done: `plan 31: Preload the next screen''s media (UI-7)` (tasks 140, 141); `Placeholder.svelte` is gone.
+
+## Part 2: Recorded sound effects (UI-10), priority 200
+- Planned and built: `plan 32: Recorded sound effects (UI-10)`; open: `task 146: Gamemaster check of the recorded effects on the TV`.
+
+## Part 3: Recorded music loops (UI-10), priority 190
+- Planned and built: `plan 33: Recorded music loops (UI-10)`; open: `task 149: Gamemaster check of the music loops on the TV`, `task 150: Close UI-10 in the plans`.
+
+## Part 4: Playful icons and language flags before a game session, priority 400
+- Done: `plan 135: Playful icons and language flags before a game session` (tasks 1081, 1082, 1083, 1103); flags per `decision 186: Language flags instead of the globe`.
+
+## Part 5: Start screen horizon, priority 300
+- New plan (`pm plan add 6 …`), not yet written.
+- What: the bottom third of Start (`app/client/src/game/screens/Start.svelte`) shows a colourful horizon: a row of cut-outs (transparent background) of landmarks, animals and objects from many topics and regions, overlapping like a skyline; tinted or framed to match Start''s palette (VD palettes in `plans/10-visual-design.md`); static or gently moving (plan decides; respects reduced motion if the game has such a setting).
+- Sources: Wikimedia Commons only, allowlisted licences (D-45: CC0, PD, CC BY, CC BY-SA as in the allowlist); prefer files already cut out (PNG/SVG with alpha); nothing fetched at runtime.
+- No country bias: one fixed set for every language; spread over continents and topics (e.g. a landmark, an animal, an object per region); no flags, text or logos in the images; nothing that marks one country as "ours".
+- Picks: a pick task proposes 12–20 candidates (file page URL, author, licence, why) as a developer decision (`pm decision add`, contact sheet image in `work/`); nothing ships before the answer.
+- Shipped as app assets, not the media cache: e.g. `app/client/public/horizon/` as WebP with alpha (sized for 1920 px wide, small), with a `CREDITS.md` like `app/client/public/audio/CREDITS.md`; `app/client/credits.ts` reads it for the Credits screen and shipped CREDITS.md; the release check''s credits step (`authoring/steam/credits_check.mjs`) covers it both ways; size within `app/desktop/media-budget.json` (new budget entry or under an existing one, plan decides); the encode follows `decision 185: Shipped media: formats, names and where the encode runs (SW-9)` where it applies.
+- Layout: title, buttons, save notice, mods notice and the language button stay readable over or above the horizon at 1920 × 1080 and 1280 × 800, all four catalogs; no change to keys, focus or prompts.
+- Check: `trivia-gallery --only` Start shots for all four languages; a developer decision to approve the horizon in `/gallery` (like Part 4''s review); docs: `plans/04-ui-tv-display.md` (Start), `plans/10-visual-design.md`, `directory.md` if a new top-level dir.
+
+## Order and constraints
+- Parts are independent; 2 → 3 shared conventions (done).
+- D-45 licences only; everything offline; no new npm or Python dependencies.', '2026-10-16T13:46:46Z', NULL, 1320, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1324, 33, 'revise plan 33: Recorded music loops (UI-10)', 'revise', 'open', 1000, NULL, '`plan 6: masterplan`, the plan above `plan 33: Recorded music loops (UI-10)`, changed; it is quoted below. Bring `plan 33: Recorded music loops (UI-10)` in line with it
+(`pm plan edit 33 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 6: masterplan
+
+Milestone 6 closes the leftovers of M3/M4, preloading before a screen fades in (UI-7) and recorded sounds for everything still synthesized (UI-10), and adds playful visuals to the screens before a game session: icons on their buttons, national flags for the languages (developer, 2026-10-14), and a colourful horizon of Commons cut-outs along the bottom of Start (developer, 2026-10-16). Owner plan files: `plans/04-ui-tv-display.md` ("Transitions", "Sound assets", UI-7, UI-10), `plans/10-visual-design.md` (VD-8 icon set, palettes).
+
+**This masterplan''s tasks are not implementation work: each of them writes the plan for one part below** (`pm plan add 6 …`), with that part''s tasks.
+
+## Part 1: Preload the next screen''s media (UI-7), priority 500
+- Done: `plan 31: Preload the next screen''s media (UI-7)` (tasks 140, 141); `Placeholder.svelte` is gone.
+
+## Part 2: Recorded sound effects (UI-10), priority 200
+- Planned and built: `plan 32: Recorded sound effects (UI-10)`; open: `task 146: Gamemaster check of the recorded effects on the TV`.
+
+## Part 3: Recorded music loops (UI-10), priority 190
+- Planned and built: `plan 33: Recorded music loops (UI-10)`; open: `task 149: Gamemaster check of the music loops on the TV`, `task 150: Close UI-10 in the plans`.
+
+## Part 4: Playful icons and language flags before a game session, priority 400
+- Done: `plan 135: Playful icons and language flags before a game session` (tasks 1081, 1082, 1083, 1103); flags per `decision 186: Language flags instead of the globe`.
+
+## Part 5: Start screen horizon, priority 300
+- New plan (`pm plan add 6 …`), not yet written.
+- What: the bottom third of Start (`app/client/src/game/screens/Start.svelte`) shows a colourful horizon: a row of cut-outs (transparent background) of landmarks, animals and objects from many topics and regions, overlapping like a skyline; tinted or framed to match Start''s palette (VD palettes in `plans/10-visual-design.md`); static or gently moving (plan decides; respects reduced motion if the game has such a setting).
+- Sources: Wikimedia Commons only, allowlisted licences (D-45: CC0, PD, CC BY, CC BY-SA as in the allowlist); prefer files already cut out (PNG/SVG with alpha); nothing fetched at runtime.
+- No country bias: one fixed set for every language; spread over continents and topics (e.g. a landmark, an animal, an object per region); no flags, text or logos in the images; nothing that marks one country as "ours".
+- Picks: a pick task proposes 12–20 candidates (file page URL, author, licence, why) as a developer decision (`pm decision add`, contact sheet image in `work/`); nothing ships before the answer.
+- Shipped as app assets, not the media cache: e.g. `app/client/public/horizon/` as WebP with alpha (sized for 1920 px wide, small), with a `CREDITS.md` like `app/client/public/audio/CREDITS.md`; `app/client/credits.ts` reads it for the Credits screen and shipped CREDITS.md; the release check''s credits step (`authoring/steam/credits_check.mjs`) covers it both ways; size within `app/desktop/media-budget.json` (new budget entry or under an existing one, plan decides); the encode follows `decision 185: Shipped media: formats, names and where the encode runs (SW-9)` where it applies.
+- Layout: title, buttons, save notice, mods notice and the language button stay readable over or above the horizon at 1920 × 1080 and 1280 × 800, all four catalogs; no change to keys, focus or prompts.
+- Check: `trivia-gallery --only` Start shots for all four languages; a developer decision to approve the horizon in `/gallery` (like Part 4''s review); docs: `plans/04-ui-tv-display.md` (Start), `plans/10-visual-design.md`, `directory.md` if a new top-level dir.
+
+## Order and constraints
+- Parts are independent; 2 → 3 shared conventions (done).
+- D-45 licences only; everything offline; no new npm or Python dependencies.', '2026-10-16T13:46:46Z', NULL, 1320, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -38562,6 +38633,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1314, 1312, '2026-10-16T13:22:37Z', '2026-10-16T13:28:29Z', 'done', NULL, 0, '3727e04af1dc74e1d3aa71860013679099ab9476', 'claude-opus-5-5[1m]', 'a5444a65-14f2-4571-8adf-e097f84a6739', 44, 86, 14575, 2631574, 68072, 1.3627348, 4064407);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1315, 1313, '2026-10-16T13:28:29Z', '2026-10-16T13:33:41Z', 'done', NULL, 0, '070c5a67a31547aa099cc51cbaef026ea5908470', 'claude-opus-5-5[1m]', 'a41f3476-e063-42a3-b64d-2f31b02782ec', 51, 98, 24423, 4422030, 112430, 2.2726979999999997, 4064407);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1316, 1314, '2026-10-16T13:33:41Z', '2026-10-16T13:46:09Z', 'done', NULL, 0, 'ba45b9d18467320a2543602cc513e5192c62ab40', 'claude-opus-5-5[1m]', '1208d556-c2fd-4a60-9065-509d7e555803', 36, 70, 16219, 2301611, 73785, 1.3752622000000003, 4064407);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1317, 1320, '2026-10-16T13:46:09Z', '2026-10-16T13:47:02Z', 'done', NULL, 0, 'ae772a5d1452c6e744115f71d51b0d72369ebb9b', 'claude-opus-5-5[1m]', '91e00df3-a47c-46fc-a764-a0c7b365cbb0', 12, 24, 4671, 448901, 34568, 0.45984020000000003, 4064407);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
