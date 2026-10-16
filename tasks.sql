@@ -34095,7 +34095,7 @@ Milestone 8 is S3 of the Steam track (D-34, `plans/11-steam.md`): the first buil
 ## Out of scope (from the milestone)
 - Steamworks features (overlay, Cloud setup, achievements, on-screen keyboard, SW-7..SW-14), store page (S5); translations (S4); media resizing (SW-9, S5); couch co-op input (IN-6, IN-7, later).
 - Porting authoring''s Python (qgen, `trivia-authoring`) to Node/TS: later, own milestone.', '2026-10-16T15:02:15Z', '2026-10-16T15:03:26Z', 1343, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1346, 99, 'revise plan 99: Retire the browser game and the Python game server', 'revise', 'open', 1000, NULL, '`plan 8: masterplan`, the plan above `plan 99: Retire the browser game and the Python game server`, changed; it is quoted below. Bring `plan 99: Retire the browser game and the Python game server` in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1346, 99, 'revise plan 99: Retire the browser game and the Python game server', 'revise', 'done', 1000, '2026-10-16, no file changes: plan 99 still fits the revised masterplan (part 9 unchanged; steps 1-3 done, tasks 765/766 wait on decision 150: Family save imported into trivia-desktop?)', '`plan 8: masterplan`, the plan above `plan 99: Retire the browser game and the Python game server`, changed; it is quoted below. Bring `plan 99: Retire the browser game and the Python game server` in line with it
 (`pm plan edit 99 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -34190,7 +34190,7 @@ Milestone 8 is S3 of the Steam track (D-34, `plans/11-steam.md`): the first buil
 
 ## Out of scope (from the milestone)
 - Steamworks features (overlay, Cloud setup, achievements, on-screen keyboard, SW-7..SW-14), store page (S5); translations (S4); media resizing (SW-9, S5); couch co-op input (IN-6, IN-7, later).
-- Porting authoring''s Python (qgen, `trivia-authoring`) to Node/TS: later, own milestone.', '2026-10-16T15:02:15Z', NULL, 1343, 0);
+- Porting authoring''s Python (qgen, `trivia-authoring`) to Node/TS: later, own milestone.', '2026-10-16T15:02:15Z', '2026-10-16T15:05:37Z', 1343, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1347, 151, 'revise plan 151: Bundle selection on its own full screen', 'revise', 'open', 1000, NULL, '`plan 8: masterplan`, the plan above `plan 151: Bundle selection on its own full screen`, changed; it is quoted below. Bring `plan 151: Bundle selection on its own full screen` in line with it
 (`pm plan edit 151 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
@@ -39723,6 +39723,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1343, 1345, '2026-10-16T15:02:53Z', '2026-10-16T15:03:32Z', 'done', NULL, 0, 'b130bb8b233fbd5f8652f23c2c1bd6cd3b05250c', 'claude-opus-5-5[1m]', '8d95cb32-0736-4a9b-b3e5-9d67fc75db4c', NULL, 7, 14, 3147, 280508, 37980, 0.42293759999999997, 4113781);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1344, 1348, '2026-10-16T15:03:32Z', '2026-10-16T15:04:38Z', 'done', NULL, 0, 'e8aec02a97d0da7286b2505aef478ad5131324ab', 'claude-opus-5-5[1m]', 'db2b6d78-cf6a-4a49-a1b0-041c01a9ba95', NULL, 11, 22, 4612, 410730, 34671, 0.451842, 4113781);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1345, 1318, '2026-10-16T15:04:38Z', '2026-10-16T15:05:29Z', 'done', NULL, 0, '72609529417a563cfd06141ac08558cb53531a39', 'claude-opus-5-5[1m]', '0990e1c4-6b92-4ab7-b07d-eaf105e485f6', NULL, 7, 14, 2060, 219731, 26986, 0.30109020000000003, 4113781);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1346, 1346, '2026-10-16T15:05:29Z', '2026-10-16T15:05:41Z', 'done', NULL, 0, '89d53682ce41b092a175a3b7d2d9efc74a153e6b', 'claude-opus-5-5[1m]', '85383b1d-291a-48fc-85f4-dc28353b7b32', NULL, 3, 6, 755, 88538, 29548, 0.26921560000000006, 4113781);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
