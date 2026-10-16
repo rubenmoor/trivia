@@ -37838,8 +37838,64 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - SW-13 row in "Tasks" stays `[ ]` (part 8 closes it after the close-out playtest)
 - `pm decision consequences 303 "<date>, task <id>: …"`
 - done when: the section matches what was set up', '2026-10-16T21:28:06Z', NULL, 1480, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1484, 170, 'create tasks for plan 170: Timed mode over a Remote Play stream', 'split', 'open', 1000, NULL, 'Split plan 170 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T21:29:11Z', NULL, 1420, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1484, 170, 'create tasks for plan 170: Timed mode over a Remote Play stream', 'split', 'done', 1000, '2026-10-16, tasks.sql: tasks 1485-1487 for plan 170; 1487 pending on decision 284; 1485 raises the measurement decision and links 1486', 'Split plan 170 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T21:29:11Z', '2026-10-16T21:30:42Z', 1420, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1485, 170, 'Lag probe switch in the shell (--lag-probe)', 'work', 'open', NULL, NULL, 'Part 1 of `plan 170: Timed mode over a Remote Play stream` (not gated by `decision 284: Remote Play Together gate: single player, controller input and local multiplayer playtested?`: a measuring tool, not game code). The plan''s section "Lag probe (task 1)" is the spec; summary:
+
+- `--lag-probe` flag in `app/desktop/main.mjs` (Steam launch option, Windows and Linux): the window loads `app/desktop/lag-probe.html` (self-contained, inline script) instead of the game; packaged via `app/desktop/electron-builder.yml`
+  - Steam init as in the normal start (Steam Input and the stream behave as in a game); no Steam calls of the probe''s own (`decision 111: Steam only: no effort outside Steam; Steam features are the reason to buy`: no clock sync, no netcode)
+  - flag branch and page marked `PLACEHOLDER(1486)` (`task 1486: Lag findings, the lag decision and probe removal`); that task removes both
+  - `task 1478: Remote Play probe switch in the shell` adds `--rp-probe` to the same file: keep the two flags separate, don''t merge them
+- Page:
+  - large running ms counter (host `performance.now()`), always on
+  - full-screen white flash at random 2–5 s intervals; onset = first `requestAnimationFrame` after it is painted
+  - presses: any `navigator.getGamepads()` button (polled every frame) and any key; per press: device (pad index + `Gamepad.id`, or `key`), ms since last flash onset, `Gamepad.timestamp` or event timestamp; no flash in the last 2 s → logged as a miss
+  - last 8 lines on screen; running median and spread per device
+- Log: `<userData>/lag-probe.log` (renderer `console-message` → main) and stderr; path shown on screen
+- Docs: `--lag-probe` in the README row of `trivia-desktop` and in `AGENTS.md` Commands (task 1486 removes both)
+
+Check (headless): `TRIVIA_DEV_STEAM_USER=1 TRIVIA_MUTE=1 trivia-desktop --lag-probe` (under Xvfb if no display) starts, flashes, logs key presses with ms to the log file. Stop it by PID.
+
+Then the developer''s measurement decision (`pm decision add … --once`; check `pm decision add -h` for the flag):
+- subject e.g. «Remote Play lag measured? Picture and input delay per host and network»
+- intro in plain English (what is measured and why: friends far away see the question later and their grab arrives later)
+- body: how to launch (Steam launch option `--lag-probe`, Linux `%command% --lag-probe`; needs a `beta` upload with the probe, `plan 89: Builds, depots and upload (SW-10, SW-6)`; this task doesn''t upload; it may ride the same upload as `--rp-probe`), then the plan''s "Measurement (task 2…)" method and matrix as a `- [ ]` checklist: `R_local`, `R_remote`, `V + I ≈ R_remote − R_local`, photos for `V`, Steam''s streaming overlay figures if any (unverified that it has latency figures); rows Windows host / Linux or Deck host, guest wired / Wi-Fi, at least one internet row (guest on another network, e.g. phone hotspot); per row `V`, `V + I`, spread, oddities; attach the log
+- options: `measured (numbers per row)` (recommended), `partly (which rows)`, `not possible (why)`
+- the body says first: answer only after `decision 303: Remote Play Together test setup ready? Switch on, beta build, two machines, second account` is answered «ready» (decisions can''t wait on decisions)
+- `pm task-pending-decision 1486 <new decision>`
+
+Done when: probe flag and page work as checked; README and AGENTS.md rows; decision pending; task 1486 waits on it.', '2026-10-16T21:29:53Z', NULL, 1484, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1486, 170, 'Lag findings, the lag decision and probe removal', 'work', 'open', NULL, NULL, 'Part 3 of `plan 170: Timed mode over a Remote Play stream` (not gated by `decision 284: Remote Play Together gate: single player, controller input and local multiplayer playtested?`). Waits for the developer''s measurement decision raised by `task 1485: Lag probe switch in the shell (--lag-probe)`; its answer has `V` (picture delay) and `V + I` (picture plus input delay) per row (host OS, guest wired/Wi-Fi, internet).
+- No answered measurement decision yet (e.g. task 1485 couldn''t link it): link this task to it with `pm task-pending-decision 1486 <id>` and stop
+
+- Findings: `pm plan edit 170 --body -` adds a section "Findings" (per row `V`, `V + I`, spread, oddities; which rows are missing); one line in `plans/14-input.md` "Remote Play Together" (measured lag, pointer to plan 170)
+- `pm decision add` «Timed mode over Remote Play: accept the lag or adjust claiming?»: intro in plain English; body with the numbers and the plan''s section "The decision"; options (recommended first, by the numbers: «accept» if the internet-row `V + I` is under about 100 ms, else the grace window):
+  - accept: no engine change; guests ≈ `V + I` behind in claim races, `6 s − (V + I)` to answer
+  - claim grace window: remote seats carry allowance `L`; first claim provisional for `L` ms; a later claim wins if arrival − its seat''s allowance is earlier; tie: first arrival keeps it; no remote seats → `L` = 0
+  - grace window plus deadlines: as above, and the remote claimer''s 6 s and the hint times stretched by `L`
+  - other (the developer''s own)
+- Remove the probe: `--lag-probe` branch in `app/desktop/main.mjs`, `app/desktop/lag-probe.html`, its `electron-builder.yml` entry, README and `AGENTS.md` lines; `rg lag-probe` and `rg ''PLACEHOLDER\(<this task id>\)''` empty afterwards (decision 200)
+- `pm task-pending-decision 1487 <new decision>` (`task 1487: Remote claim compensation in the engine`) (it already waits on decision 284)
+- If the answer is «not possible» or «partly» without an internet row: the decision says so and recommends accepting for now; a re-measure follow-up only if the developer asks
+
+Done when: findings in the plan and plans/14-input.md; decision pending with numbers; probe gone; engine task waits on it.', '2026-10-16T21:30:27Z', NULL, 1484, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1487, 170, 'Remote claim compensation in the engine', 'work', 'open', NULL, NULL, 'Part 4 of `plan 170: Timed mode over a Remote Play stream`. Waits for `decision 284: Remote Play Together gate: single player, controller input and local multiplayer playtested?` and for the lag decision («Timed mode over Remote Play: accept the lag or adjust claiming?») raised by `task 1486: Lag findings, the lag decision and probe removal`. Also needs `task 1412: Timed core in the engine: clock, claims, rounds, lives, ends`, `task 1413: Timed pause and view in the engine` and `task 1447: Timed: the question clock starts on show, not at the previous question''s end` done; if not, stop and say so.
+
+- Answer «accept»: only one line in `plans/13-game-modes.md` "Competitive timed" («remote guests: no claim compensation, measured lag …» with the numbers from the plan''s "Findings"); done
+- Answer «grace window» (or «plus deadlines»), in plan 159''s timestamp model (host epoch ms via `Io.ms`, no engine timer, first arrival wins, deadlines inclusive, no grace for local seats):
+  - remote seat fact: `Seat.remote?: true` (or the allowance) set at session start from the plan "Remote guests as players" of `milestone 17: Remote Play Together`; if that plan doesn''t mark seats remote, add a follow-up task there and stop; don''t guess
+  - claim stores arrival and adjusted times; `settle` finalizes a provisional claim once `at + L` has passed; a tie keeps the first arrival
+  - `view().session.timed.claim.provisional` for the Timed screen (`plan 164: Timed game screens, drama and sound`): wait or swap the banner, as the answer says
+  - `expire`-style client nudge at the window''s end
+  - «plus deadlines»: the remote claimer''s 6 s (`CLAIM_MS`) and hint times (`HINT_MS`) stretched by `L`
+  - save: new seat or claim fields additive, no `SAVE_VERSION` bump (`decision 277: Multiplayer sessions in the save: one games[] row per session, with seats`)
+  - `session.test.ts`: remote claim overtaking a local one inside the window; one arriving too late; no remote seats behaves as today
+  - `plans/13-game-modes.md` "Competitive timed": the rule as built
+- Answer «other»: per the answer; anything unclear → `pm decision add`, this task pending on it
+
+Done when: per the answer, as above; `npm run check`, `npm test`, `npm run build` pass.
+
+Decision 284 (pending): Remote Play Together gate: single player, controller input and local multiplayer playtested?', '2026-10-16T21:30:27Z', NULL, 1484, 0, 'opus', 'app');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -43874,9 +43930,11 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1436, 1419, '2026-10-16T21:26:25Z', '2026-10-16T21:27:38Z', 'done', NULL, 0, '9c420ffea82f40ed16c93d34182dc5db6bbb8c0b', 'app', 'claude-opus-5-5', '02fe3281-291f-4972-8a63-b210cbf5311a', NULL, 8, 16, 6357, 357366, 50079, 0.59930919999999988, 74883);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1437, 1278, '2026-10-16T21:26:58Z', '2026-10-16T21:27:45Z', 'done', NULL, 0, '76bf2089f55d9f05433b6a8f07e5cab85992cfa2', 'questions', 'claude-sonnet-5-5', 'c9e60d97-8c35-42d0-99c7-a9a97ccde861', 1435, 3, 6, 994, 257243, 15341, 0.72754380000000007, 74883);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1438, 1480, '2026-10-16T21:27:28Z', '2026-10-16T21:28:16Z', 'done', NULL, 0, '953dc9ef3500a2a8ff6ac8fa18ee40c1ba4f46a4', NULL, 'claude-opus-5-5', '7dab3c2e-ee4e-4ebd-bb70-f762e8b469ca', NULL, 7, 14, 4509, 244859, 34383, 0.4142718, 74883);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1439, 1420, '2026-10-16T21:27:38Z', NULL, 'running', NULL, NULL, '953dc9ef3500a2a8ff6ac8fa18ee40c1ba4f46a4', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 74883);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1439, 1420, '2026-10-16T21:27:38Z', '2026-10-16T21:29:22Z', 'done', NULL, 0, '953dc9ef3500a2a8ff6ac8fa18ee40c1ba4f46a4', 'app', 'claude-opus-5-5', 'e6014024-0947-41f5-9dab-ad4a6a828a63', NULL, 8, 16, 9430, 357383, 52581, 0.6807886, 74883);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1440, 1279, '2026-10-16T21:27:45Z', '2026-10-16T21:28:44Z', 'done', NULL, 0, '1577093d01675406818b41e7bf55f05919123cd4', 'questions', 'claude-sonnet-5-5', 'dc9e610d-63a2-44c6-b4b6-8d24ce6431f9', NULL, 10, 18, 2345, 382126, 38968, 0.25578320000000004, 74883);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1441, 1280, '2026-10-16T21:28:44Z', NULL, 'running', NULL, NULL, '2d40397231010c58c3b89ec989814692a006119d', 'questions', NULL, NULL, 1440, NULL, NULL, NULL, NULL, NULL, NULL, 74883);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1442, 1484, '2026-10-16T21:29:14Z', '2026-10-16T21:30:52Z', 'done', NULL, 0, '887394ac289f7da27500d48f571d80e39b2db7d9', NULL, 'claude-opus-5-5', 'f8693ba1-8895-46ce-b06c-e7963ab56809', NULL, 12, 24, 7072, 494680, 41365, 0.5713919999999999, 74883);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1443, 1405, '2026-10-16T21:29:22Z', NULL, 'running', NULL, NULL, '887394ac289f7da27500d48f571d80e39b2db7d9', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 74883);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -44374,6 +44432,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1453, 297);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1479, 302);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1479, 303);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1483, 303);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1487, 284);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
