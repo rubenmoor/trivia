@@ -8846,6 +8846,80 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 - `npm run check`, `npm test` (fixture replay unchanged), `npm run build`, `qgen validate` pass
 - The family''s real save (a copy) loads as v5, plays a solo game, writes v5; `save_file.py` reads it
 - No mode logic: no session can be started yet (`mode_not_built`)', 'Local multiplayer lets several people in one room play on the same TV, each with their own controller. Before any game rules can be built, the game''s save file has to be able to hold such a session: who joined in which order, whose turn it is, and each player''s own progress where the mode gives them one. This part also makes the game refuse an action from a player whose turn it isn''t, so a misbehaving controller can never play for someone else.', '2026-10-16T19:40:48Z', 1392);
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (158, 16, 'Round-robin modes in the engine', 600, 'Part 2 of `plan 152: masterplan`. The engine rules of the two turn-based multiplayer modes, `rr-coop` and `rr-competitive`, on the session shape of `plan 157: Session model and save format` (seats, `turn`, the acting seat). Engine only: no screens, no input binding, no `BUILT_MODES` change.
+
+## Binding
+- Milestone 16 "Outcome" and `plans/13-game-modes.md` "Round-robin co-op" / "Round-robin competitive": the spec; replaces `decision 23: Competitive format (OQ-37)?` where it differs
+- `decision 277: Multiplayer sessions in the save: one games[] row per session, with seats`: rr-coop plays in `row.state`, rr-competitive in `seats[].state`; `HistoryEntry.seat`; `turn`
+- `decision 278: Round-robin competitive: the last player standing wins at once`
+- Rules shared with solo (D-74, D-88): no skip, undo, replace, level, settings, joker budget changes (`gamemasterOnly` already refuses outside gamemaster mode); `answers` off refused (`gamemaster_only`); flag only logs (`decision 60: One mechanism for questions with problems: flag or report?`)
+- `decision 158: Bundle selection in every mode, apart from customization`: one bundle list per session
+- D-82 / plan 65: seen per save, one row per question shown, `game_id` = the session row (plan 157 "Seen events")
+- Gate: plan 157''s `actor(row, seat)` runs first in every action (`seat_missing`, `seat_unknown`, `seat_out`, `not_your_turn`)
+
+## Starting a session (`new` with `players`)
+- Builds on plan 157''s session half of `new` (names → seat rows, `player_twice`, `players_too_few`); here the mode''s state
+- Body: `players: string[]`, `mode`, `bundles`, `age_group` (shared), `jokers` (overrides, as solo''s: a difference from `STANDARD_JOKERS` sets `customized`); rr-competitive also `age_groups?: string[]` (one per player, join order; missing entries = `age_group`); other fields as solo''s `new` accepts and refuses
+- `rr-coop`: `row.state` as a solo game: one age group, `STANDARD_JOKERS` (+ overrides), one table dealt; `turn: 0`; `seats[]` without `state`
+- `rr-competitive`: `row.state` shared settings only (mode, bundles, `customized`), empty history; each seat a full `GameState` (own `age_group`, own joker set: same overrides for every seat, own table dealt at once); `turn: 0`
+- `mode_not_built`: moves from `game.ts` `newGame` to `api.ts`''s `new`, so engine tests (and part 4''s `qgen report --simulate`) can start the unbuilt modes; the UI still can''t until part 10
+- Supply check (GF-5) before the session starts, `supply_short` as today:
+  - `rr-coop`: as solo (one game)
+  - `rr-competitive`: one matching over all seats: virtual levels seat × level, each with its seat''s range (`selection.assign` on concatenated ranges), so N seats of one age group need N × cards per level; `supply_short` levels carry `seat`; `Supply.levels[].seat?` in `lib/types.ts`
+
+## Turns
+- `row.turn` = seat on turn; only that seat''s actions pass (`not_your_turn`)
+- A turn = one question, ended by its final answer: card pick, jokers, then `answer` all by the turn''s seat
+- «Paso y fuera», a «Tiro mágico» hit (level repeats): same seat keeps the turn (no final answer yet)
+- After a final answer: `turn` → next seat in join order (`rr-competitive`: skipping `out` seats); wraps around
+- `HistoryEntry.seat` on every entry the seat caused (answers, joker drops, skips): stats and part 4 read who did what
+
+## rr-coop
+- One team game in `row.state`: level climbs one per correct answer, whoever answered; the next seat plays the next level
+- Jokers: the one shared set; any seat on turn uses what''s left (`jokersLeft` over the team history, unchanged)
+- Wrong answer: `row.result = "lost"`, everyone lost (`Seat.result` unset, `seatResult` falls back to the row''s)
+- Correct at the last level: `row.result = "won"`, everyone won
+- Selection, draws, joker plays: solo''s code on `row.state`, unchanged
+
+## rr-competitive
+- Each seat''s game in `seats[i].state`; actions run on the acting seat''s state (a `seatState(row, seat)` helper next to `running()`), saved back into its seat
+- Correct answer: that seat''s level +1, new table at its level; turn passes
+- Wrong answer: that seat''s `phase = "lost"`, `out: true`, `result: "lost"`; turn passes
+- Correct at the last level: seat `won`, the session ends: every other seat still in → `lost`, `row.result = "won"`
+- One seat left in (decision 278): it wins at once (`won`, `row.result = "won"`), whatever its level
+- `row.state.phase` mirrors the end (`won`); `row.finished_on` set as solo''s
+- Selection per seat: `selection.draw` with the seat''s own ranges (`rangesFor` of its age group), own `purged`, own asked categories; `availableNow` also excludes every other seat''s `offered` (no card twice in one session); if a draw fails only because of that, retry excluding just the other seats'' current tables (seen counts still order: lowest first); then `level_empty` as today
+- Jokers: per seat, `jokersLeft(seatState)`; replacements (GF-2) check the seat''s own later levels
+
+## Ending a session
+- `abandon` and a new `new`: the whole session `abandoned` (row''s `result`; seats unset)
+- `repair` after a patch: every state of `rowStates(row)` (plan 157)
+
+## `view()` for the screens
+- Top-level fields (level, phase, options, question, jokers, jokers_left, settings) = the game the turn''s seat plays: `row.state` (rr-coop) or `seats[turn].state` (rr-competitive); a finished session: the winner''s, else the last answerer''s
+- `last` = the session''s last final answer, with `seat` (the Correct/Wrong screens show whose answer it was even after the turn moved)
+- New `session` (null outside sessions), `lib/types.ts` `Game.session`:
+  - `mode`, `turn`, `seats: {player, status: "playing" | "out" | "won" | "lost", level, age_group, jokers_left}[]` (rr-coop: level and jokers the team''s, on every seat or once in the block: pick what part 7 needs least to repeat)
+- `player`: the turn seat''s name in a session
+- `can_undo` false (not gamemaster)
+
+## Outlook (plan 65, decision 31)
+- Session outlook at the Choice screen: `outlook.ts` takes the session''s seats: `rr-coop` = solo''s; `rr-competitive` = one outlook per distinct age group with `players` = its seats (`seenPerLevel` × that count), the lowest `k` shown
+- The MD-8 stand-in constants in `seenPerLevel` and `qgen report --simulate` stay for part 4 (`task 1395: write plan: Engine consumers of multiplayer sessions`); the Choice screen''s notice is part 6''s
+
+## Tests (AGENTS.md: few, lasting)
+- One `session.test.ts`: a scripted rr-coop session (turn rotation, `not_your_turn`, shared jokers, wrong = all lost) and a rr-competitive one with two age groups (no card twice, out seat skipped, last standing wins, first to 12 wins); seeded `Io`
+- Frozen fixtures (`engine/fixtures/`, `game.test.ts`) replay unchanged; no new fixture
+
+## Tasks
+1. `rr-coop`: session start (state, turn, jokers, `customized`), `mode_not_built` to `api.ts`, turn rotation and the turn''s seat in `pick`/`joker`/`answer`, `HistoryEntry.seat`, team end, `view().session` + `last.seat`, `lib/types.ts`; the rr-coop half of `session.test.ts`; `plans/13-game-modes.md` "Round-robin co-op": as-built line
+2. `rr-competitive` (`--model opus`): per-seat states and `age_groups`, session supply check (seat × level matching, `Supply.levels[].seat`), per-seat draw with the cross-seat exclusion and its fallback, turns skipping out seats, out/first-to-12/last-standing ends, `view()` per seat; the rr-competitive half of `session.test.ts`; `plans/13-game-modes.md` "Round-robin competitive": as-built line, decision 278
+3. Session outlook: `outlook.ts` per age group for rr-competitive, rr-coop as solo; exported for the Choice screen (part 6); `outlook.test.ts` one case only if the per-age-group split needs it
+
+## Done when
+- `npm run check`, `npm test` (fixture replay unchanged), `npm run build`, `qgen validate` pass
+- Engine tests play both modes start to finish, each end condition reached
+- The UI still offers neither mode (`BUILT_MODES` unchanged)', 'Two of the new multiplayer modes take turns: in the team version everyone climbs one shared ladder of questions together, one question each in turn, with one shared set of helpers; in the competitive version each player climbs their own ladder with their own helpers and difficulty, and a wrong answer knocks only them out. This part writes those rules into the game''s core, so the screens built later only show what the rules decide. It also makes sure two players in one game never get the same question and that the question supply is checked for everyone before a game starts.', '2026-10-16T19:43:17Z', 1393);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -36053,12 +36127,12 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Read the code first: `app/client/src/engine/state.ts`, `engine/save.ts`, the readers of `games[]` (stats, flags, achievements, telemetry, `qgen report --played`)
 - Keep the player binding device-agnostic for `milestone 17: Remote Play Together`
 - Done: no mode logic; types, save round-trip, `parseSave` upgrade; old saves and fixture replay unchanged', '2026-10-16T19:37:07Z', '2026-10-16T19:41:00Z', 1391, 0, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1393, 152, 'write plan: Round-robin modes in the engine', 'plan', 'open', 1000, NULL, 'Write the plan for part 2 of `plan 152: masterplan` ("Round-robin modes in the engine"): `pm plan list` first, then `pm plan add 16 "Round-robin modes in the engine" --priority 600 --intro "…"`, built on part 1''s plan (`Session model and save format`).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1393, 152, 'write plan: Round-robin modes in the engine', 'plan', 'done', 1000, '2026-10-16, plan 158: Round-robin modes in the engine, decision 278', 'Write the plan for part 2 of `plan 152: masterplan` ("Round-robin modes in the engine"): `pm plan list` first, then `pm plan add 16 "Round-robin modes in the engine" --priority 600 --intro "…"`, built on part 1''s plan (`Session model and save format`).
 
 - `rr-coop` and `rr-competitive` exactly as part 2 and milestone 16 spec them: turns in join order, shared vs. per-player jokers (`STANDARD_JOKERS`), age groups, end conditions
 - Settle and record (`pm decision record`) `rr-competitive`''s last player standing (wins or plays on)
 - Selection per player (`selection.draw`), supply check (GF-5), outlook for the session, `view()` for the screens
-- Tests only where they stay useful (AGENTS.md); fixture replay unchanged', '2026-10-16T19:37:07Z', NULL, 1391, 0, NULL);
+- Tests only where they stay useful (AGENTS.md); fixture replay unchanged', '2026-10-16T19:37:07Z', '2026-10-16T19:43:21Z', 1391, 0, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1394, 152, 'write plan: Competitive (timed) in the engine', 'plan', 'open', 1000, NULL, 'Write the plan for part 3 of `plan 152: masterplan` ("Competitive (timed) in the engine"): `pm plan list` first, then `pm plan add 16 "Competitive (timed) in the engine" --priority 590 --intro "…"`, built on part 1''s plan (`Session model and save format`).
 
 - Rules as milestone 16 specs them: 12 rounds = levels, one age group, no jokers, 30 s per question, hint every 8 s, claim + 6 s, lives, drop-outs, round 12 sudden death, last one left wins; questions per round per `decision 276: Timed mode: after a drop-out, how many questions does a round have?`
@@ -36113,6 +36187,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Feeds `milestone 17: Remote Play Together`''s gate C', '2026-10-16T19:37:09Z', NULL, 1391, 0, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1403, 157, 'create tasks for plan 157: Session model and save format', 'split', 'open', 1000, NULL, 'Split plan 157 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T19:40:48Z', NULL, 1392, 0, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1404, 158, 'create tasks for plan 158: Round-robin modes in the engine', 'split', 'open', 1000, NULL, 'Split plan 158 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T19:43:17Z', NULL, 1393, 0, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -40314,6 +40390,11 @@ INSERT INTO decision (id, subject, status, options, body, intro, answer, reason,
 - Option 1: questions per round = players still in at the round''s start
 - Option 2: questions per round = players at the session''s start, for the whole game', 'In the timed competitive mode each round has as many questions as there are players. Once players drop out, a round could keep its starting number of questions or shrink to the players still in. Shrinking keeps the game tight and uses fewer questions; keeping the count gives the remaining players more chances per round to avoid losing a life.', NULL, NULL, '2026-10-16T19:34:50Z', NULL, 1353, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (277, 'Multiplayer sessions in the save: one games[] row per session, with seats', 'answered', '[]', 'One running row keeps latest()/running()/newest(), the seen rows'' game_id, telemetry''s one game key and achievements'' ended-game check working unchanged; one row per player would mean several running rows at once (every action''s running() lookup changes) and rr-coop''s shared level/jokers and timed''s shared question copied into every player''s row. Readers that need every player or every game state of a row go through two helpers in engine/state.ts (the row''s players, the row''s game states), so stats and achievements don''t special-case modes. player_id null keeps sessions out of a solo player''s preset (playerChoice). The seat index, not a device or a name, names the actor, so milestone 17''s remote guests are just more seats. Version bump so an older build backs the save up as newer instead of reading a session row as a gamemaster game.', 'A local multiplayer game has several players at once, and the game file has to remember them: who sat down in which order, whose turn it is, and each player''s own progress where the mode gives them one. It could store one game entry per session with a list of players, or one entry per player tied together by a session number. The choice decides how simple the player statistics, achievements, usage reports and the ''find the running game'' logic stay.', 'One games[] row per session: GameRow.seats (join order: player_id, per-seat state where the mode needs it: rr-competitive''s own GameState, timed''s lives/out, a per-seat result) and GameRow.turn; row.state is the shared game (rr-coop''s team game, timed''s question flow; rr-competitive: the shared settings only); player_id null on session rows; history entries carry the answering seat; actions name the acting seat by index (device-agnostic); SAVE_VERSION 5', NULL, '2026-10-16T19:40:00Z', '2026-10-16T19:40:00Z', 1392, NULL, 'rule', 1392, '2026-10-16, task 1392: written into plan 157: Session model and save format (Shape, Helpers, Version 5).');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (278, 'Round-robin competitive: the last player standing wins at once', 'answered', '[]', 'Milestone 16: Local multiplayer: game modes and controls specs ''first to level 12 wins'' for rr-competitive and ''one player left: they win'' for timed; plan 152 part 2 asks to settle rr-competitive''s last player standing.
+- Same rule as timed: one rule for both competitive modes, easy to explain at the table
+- Playing on alone turns the end into a solo game the others watch, and burns up to 12 more questions per session (D-82: seen per save)
+- Turns are one at a time, so exactly one player is left when the second-to-last drops out; nobody-left can''t happen
+- The winner may be at a lower level than a player who dropped out: outlasting is the competition', 'In the turn-based competitive mode every player climbs their own ladder of questions, and a wrong answer knocks a player out. When everyone but one player has been knocked out, the game could either declare that player the winner straight away or let them play on alone until they reach the top. Winning at once matches the timed competitive mode, ends the evening''s game sooner and uses fewer questions.', 'The last player still in wins at once (their seat won, the session ends), whatever their level; first to level 12 still wins too', NULL, '2026-10-16T19:42:42Z', '2026-10-16T19:42:42Z', 1393, NULL, 'rule', 1393, '2026-10-16, task 1393: written into plan 158: Round-robin modes in the engine (rr-competitive ends).');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -41734,6 +41815,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1400, 1353, '2026-10-16T19:32:51Z', '2026-10-16T19:36:17Z', 'done', NULL, 0, '1d8745943bf4ee231306405bb431657e134ba148', 'claude-opus-5-5', '8dad8a53-0f54-45e8-9675-1b241c7c9ce2', NULL, 21, 42, 15882, 1489584, 90993, 1.3436688, 4144524);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1401, 1391, '2026-10-16T19:36:18Z', '2026-10-16T19:37:19Z', 'done', NULL, 0, 'dc7e89277c7c01ac3954102ff14bdb750cb68e36', 'claude-opus-5-5', '7fcffe9f-684e-4de2-8dae-c2bae59415b9', NULL, 8, 16, 6394, 310205, 40626, 0.51499299999999992, 4144524);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1402, 1392, '2026-10-16T19:37:20Z', '2026-10-16T19:41:13Z', 'done', NULL, 0, '0661e6eda10c2f02bfb2b14a4a862f5158416dd5', 'claude-opus-5-5', '21642c54-cda0-4b53-90cf-d61515e48981', NULL, 16, 30, 14554, 1065077, 96603, 1.2770394, 4144524);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1403, 1393, '2026-10-16T19:41:13Z', '2026-10-16T19:43:31Z', 'done', NULL, 0, '3142df71bd7bd81da52752be4bc6cd203fddf608', 'claude-opus-5-5', 'f96421bd-d2b8-44ff-9a96-9637a30d1ee4', NULL, 11, 20, 10957, 607170, 79829, 0.9792860000000001, 4144524);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
