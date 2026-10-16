@@ -2,7 +2,8 @@
 // is connected and dispatches their actions like keys (input.svelte.ts). Any pad drives the game.
 import { steam } from "./desktop.ts";
 import { BUTTONS, FRESH, held, step, steamStyle, styleOf, type PadState, type PadStyle } from "./gamepad.ts";
-import { dispatch, padMap, release } from "./input.svelte.ts";
+import { show } from "./focus.ts";
+import { dispatch, lastDevice, padMap, release } from "./input.svelte.ts";
 
 /** The glyph set of the pad that acted last (IN-5). */
 export const padStyle = $state({ current: "xbox" as PadStyle });
@@ -20,6 +21,12 @@ function pads() {
   return navigator.getGamepads().filter((g): g is Gamepad => g !== null && g.mapping === "standard");
 }
 
+/** A switch without an action: the focused control gets the ring if none has it (as a key press does). */
+function showFocused() {
+  const el = document.activeElement;
+  if (el instanceof HTMLElement && el !== document.body && !document.querySelector("[data-nav]")) show(el);
+}
+
 /** Start polling (Game.svelte, once); `first` runs on every pad action (audio unlock). */
 export function listenPads(first: () => void): () => void {
   let frame = 0;
@@ -34,9 +41,15 @@ export function listenPads(first: () => void): () => void {
         continue;
       }
       const pad = { buttons: g.buttons.map((b) => b.pressed), axes: g.axes };
-      const { next, actions } = step(prev.get(g.index) ?? FRESH, pad, padMap(BUTTONS));
+      const { next, actions, touched } = step(prev.get(g.index) ?? FRESH, pad, padMap(BUTTONS));
       prev.set(g.index, next);
       if (actions.length) void refreshSteam(); // Steam may list a new pad after Chromium does
+      if (touched) padStyle.current = fromSteam ?? styleOf(g.id);
+      if (touched && !actions.length) {
+        first();
+        lastDevice.current = "gamepad";
+        showFocused();
+      }
       for (const intent of actions) {
         padStyle.current = fromSteam ?? styleOf(g.id);
         first();
