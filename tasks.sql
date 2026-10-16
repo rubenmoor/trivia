@@ -9540,6 +9540,48 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 ## Done when
 - Each mode in `BUILT_MODES` with its win achievement published in Steamworks and in `steam-achievements.vdf`, and named in the approved store texts
 - `rg "MD-8|MD-9|IN-6|Later"` finds no stale pointer for the multiplayer modes; the docs name milestone 16', 'The three new multiplayer ways to play are built behind a switch and only become visible to players once each is truly finished. This part flips that switch one game type at a time: the matching Steam trophy is set up by the developer first, the store page starts mentioning the new game type, and the project''s planning notes stop calling multiplayer a future idea. Doing it per game type means a half-finished one never shows up on a player''s screen or the store page.', '2026-10-16T21:18:44Z', 1401);
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (167, 16, 'Local multiplayer close-out and family playtest', 130, 'Part 11 of `plan 152: masterplan`, last: proves `milestone 16: Local multiplayer: game modes and controls`'' "Done when" and closes it. A headless run plays each mode start to finish on the packaged build with fake pads in three setups and stays in the release check; the developer then plays each mode on the TV with the family through one checklist decision; failures go back to the plan that owns them; the answer feeds `milestone 17: Remote Play Together`''s gate C. Workers never play with real pads or answer for the developer.
+
+## Builds on (don''t rebuild)
+- Plans 157–165 (session save, both engines, consumers, per-player controls, setup and join, round-robin and timed screens, strings and gallery); `plan 166: Shipping the multiplayer modes and docs` (`BUILT_MODES`, store texts, docs pointing to milestone 16)
+- `decision 293: Unbuilt multiplayer modes: on the mode row in dev mode only`: the headless run and the playtest reach a mode before its ship task (dev Steam user = `devMode`)
+- `authoring/steam/smoke.mjs` (packaged Linux build, Xvfb, CDP, temp `HOME`, `TRIVIA_DEV_STEAM_USER=1`, `--mods` as a second mode); `authoring/steam/release_check.py` (`STEPS`, `MANUAL` rows)
+- Fake pads: `task 1459: Gallery: N fake pads, session binding, setup and in-session shots` (`__pads(n, ids)`, `__press(button, pad)` in `authoring/tools/gallery.py`''s stub)
+- `decision 277: Multiplayer sessions in the save: one games[] row per session, with seats`, `decision 285: Achievements from multiplayer sessions: every seat earns for the save; tower achievements need a win at the top level`, `decision 289: Local multiplayer: a controller lost mid-session waits for a controller to take the seat`, `decision 273`, `decision 274`, `decision 275`, `decision 290: Timed mode: the claim input per kind of player`
+- `decision 284: Remote Play Together gate: single player, controller input and local multiplayer playtested?`: its C row = this plan''s playtest; the developer answers 284, not a worker
+- `decision 111: Steam only: no effort outside Steam; Steam features are the reason to buy`; AGENTS.md: no tests by default, the smoke step is the one kept check
+
+## Decisions taken here
+- `decision 299: Local multiplayer stays in the release check: smoke step multiplayer and a real-pad row`: step `multiplayer` (always, after `smoke`), manual row `multiplayer-pads` (full only)
+- One playtest decision (`--once`) for all three modes and setups, rows ✓/✗ + note, not one per mode
+- `failed` routing: save shape, resume → plan 157; round-robin rules, turns, supply → plan 158; timed rules, clock, lives, sudden death → plan 159; achievements, telemetry, outlook → plan 160; a device acting for the wrong seat, claim inputs, lost pad, Esc menu → plan 161; mode row, Join screen, setup, names, claim keys → plan 162; round-robin screens → plan 163; timed screens, drama, sound → plan 164; strings → plan 165; `BUILT_MODES`, store, achievements in Steamworks → plan 166; once a plan is done: a new plan in milestone 16 (`pm plan add 16 …`) named after the failure
+
+## Tasks to split into
+1. **Headless: every mode start to finish, release-check step `multiplayer`** (`--model opus`)
+   - Wait: all implementation tasks of plans 157–165 done (task 1459''s stub included); else stop without closing and say which
+   - `smoke.mjs --multiplayer`: the packaged Linux build as `smoke` does, dev Steam user, fake pads injected by CDP; the stub from task 1459 moved into one JS file both `gallery.py` and `smoke.mjs` load if it''s inline in Python (decision 199)
+   - Matrix, 9 sessions: `rr-coop`, `rr-competitive`, `timed` × pads only (3 pads), keyboard only (round-robin: 3 shared seats; timed: 3 key seats per decision 273), 4 pads + keyboard and mouse (5 seats); each through Choice → mode row → Join → setup → Bundles → game → an end
+   - Ends spread so each is reached once: rr-coop team win and team loss; rr-competitive a seat out, first to 12, last standing per plan 158''s rule; timed a claim timeout (6 s), a round-end life loss, last standing, round-12 sudden-death win; answers picked from the shipped pool as the solo smoke does
+   - Per session: a press from a seat that may not act changes nothing (pad off turn; another pad during a claim); one run quits and restarts mid-session: resume, rebind dialog per decision 289, A on each pad takes its seat
+   - After each: the save has one `games[]` row with its seats (decision 277); the mode''s win achievement derived for the save (decision 285, `engine/achievements.ts`)
+   - Gamemaster mode and «Solo o en grupo» untouched: the plain `smoke` step still passes
+   - `release_check.py`: step `multiplayer` after `smoke`, `MANUAL` row `multiplayer-pads` (full): "beta under Steam with real pads (Steam Input on): one session per mode with every pad present, through Join to the first turn change or claim; every pad joins (note how many), each acts only for its seat"; header comment of `release_check.py` and `smoke.mjs`, AGENTS.md `trivia-release-check` line, `plans/11-steam.md` "Release checklist (ST-4)"
+   - A failure → follow-up per routing; the step lands only green (`--skip multiplayer` is no way out here)
+2. **The developer: each mode on the TV with the family** (after 1) — `pm decision add --once` "Local multiplayer: each mode played on the TV with the family?", body written against what was built (commands, names, keys checked by `rg`):
+   - setup: the `beta` build under Steam if plan 166 shipped the modes and it''s uploaded (Steam Input as players have it), else `trivia-desktop` with `TRIVIA_DEV_STEAM_USER=1` (dev mode, decision 293); answer says which
+   - rows per mode (`rr-coop`, `rr-competitive`, `timed`): pads only; keyboard only (timed: claim keys picked on Join, answer by mouse or keys per decision 275); 4 pads + keyboard and mouse, or every pad the developer owns + keyboard and mouse (note the count; a 5th pad listed or not, task 1431''s finding)
+   - each row start to finish; plus: prompts follow the last input, each pad''s glyphs on its turn; a pad unplugged and replugged mid-session (decision 289); Esc menu from any seat; timed drama: heartbeat, last-3-s ticks, red frame, sudden death with sound (`TRIVIA_SOUND=1` off-Steam); text fits on the TV
+   - answer: date, build, ✓/✗ per row + note; "passed" (recommended) | "failed (list: mode, setup, screen, what happened)"
+   - `pm task-pending-decision <this task> <decision>` and stop; after the answer: ✗ → follow-ups per routing, plus one task in this plan "Family playtest again" that raises a new decision of the same shape once those follow-ups are done (as decision 155 followed decision 50); ✓ → `pm decision consequences 284 "C: passed per decision <id>"` (284 stays the developer''s to answer)
+3. **Close-out** (after 2 passed, or its "again" task passed)
+   - Check plan 166''s docs task landed (no "Later" for MD-8, MD-9, IN-6); fill only gaps
+   - `plans/project.md` Steam track list (or the modes section, wherever milestone 15''s line sits): `[x] Local multiplayer: three modes, per-player controls, join screen, timed drama (<date>, pm milestone 16, plans 152, 157–167; decisions 273–277, 282, 285, 288–290, 293, 299)`, with the real plan and decision ids at that time
+   - `plans/13-game-modes.md`: status line names the playtest date
+   - Milestone 16 "Done when" checked against tasks 1 and 2; a gap → follow-up task; `pm decision consequences` on decisions whose built result differs (from task 1''s and 2''s notes); per-commit checks
+
+## Done when
+- `trivia-release-check`''s `multiplayer` step plays all 9 sessions green; the `multiplayer-pads` row is in `MANUAL`
+- The developer''s playtest decision answered «passed» (after any "again" round), and decision 284''s C has that note', 'The new ways for several people in one room to play together on one TV are only finished when a real family has played them. This last step first lets the computer play every new game type from start to end with pretend controllers, a check that keeps running before every release, and then asks the developer to play each one on the TV with the family. Whatever goes wrong goes back to the part that built it, and the result also opens the way for playing with friends over the internet.', '2026-10-16T21:20:45Z', 1402);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -37486,6 +37528,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/decisions.md`: history, unchanged
 
 Done when: `rg -n "MD-8|MD-9|IN-6|Later" plans/ app/ authoring/ modding/ README.md directory.md` shows no stale pointer for the multiplayer modes or their controls (decisions.md aside; "Later" for unrelated things stays); per-commit checks (AGENTS.md) pass.', '2026-10-16T21:19:33Z', NULL, 1464, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1469, 167, 'create tasks for plan 167: Local multiplayer close-out and family playtest', 'split', 'open', 1000, NULL, 'Split plan 167 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T21:20:45Z', NULL, 1402, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -41959,6 +42003,81 @@ Proposal (`qgen taxonomy --bundle uk`, from the general list of `decision 213: G
   - `flags-and-emblems` Flags and emblems
   - `crown-and-state` Crown and state symbols', 'The new British question pack needs its own list of topics, so its questions cover life in the United Kingdom evenly. The proposal keeps the general topics every regional pack has, adds one topic of its own (British comedy), and splits them into 56 subtopics, about 36 questions each at 2000 questions. Applying it fixes the pack''s structure; the Spanish and German topic names are drafted at that point.', 'Apply the proposal as written', NULL, '2026-10-16T21:16:18Z', '2026-10-16T21:19:37Z', 1278, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (299, 'Local multiplayer stays in the release check: smoke step multiplayer and a real-pad row', 'answered', '[]', 'Decided by task 1402 for plan 152 part 11 (milestone 16 close-out). Always, not full only: a content-only patch changes the pool, and session supply per seat (plans 158, 159) can fail on data alone. Fake pads can''t see Chromium''s or Steam Input''s real pad limits (task 1431), hence the manual row on full releases, where shell or client code changes. Same pattern as plan 122''s mods step and workshop row.', 'The three multiplayer modes have no other check that plays a whole game on the real, packaged build, so a later change could quietly break them before a Steam upload. This settles that every release candidate plays each mode through automatically, with pretend controllers, and that full releases add one short hand check with real controllers under Steam.', 'Yes: release-check step multiplayer (always, after smoke: smoke.mjs --multiplayer on the packaged Linux build, fake pads, every mode with pads only, keyboard only and 4 pads + keyboard and mouse) and manual row multiplayer-pads (full only: real pads under Steam Input on the beta, one session per mode to its first turn change or claim).', NULL, '2026-10-16T21:20:14Z', '2026-10-16T21:20:14Z', 1402, NULL, 'rule', 1402, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (300, 'spain taxonomy: categories and subcategories', 'pending', '["Apply the proposal as it stands", "Apply with changes (name them in the answer)"]', 'Bundle `spain` (Spain''s Spanish, `languages: ["es-ES"]`, en joins after translation, country ES, target 2000 ≈ 38 per subcategory).
+
+Rule: Answering needs a connection to Spain: Spanish places, food, customs, fiestas, people, music, sport, media, words, sayings or history that players outside Spain mostly wouldn''t know; things families anywhere know (Madrid as a capital, Don Quixote, paella as a dish) stay in `base`, and the topics of Latin American regions (`colombia`, `mexico`) are not here.
+
+Voice: Spanish as spoken in Spain (es-ES): peninsular words ("ordenador", "móvil", "coche", "zumo", "patata", "vale"), "vosotros" forms, dates as "20 de julio de 1969", metric units
+
+Proposal (`qgen taxonomy --bundle spain`, from the general list of `decision 213: General category list for regional bundles`): 14 categories, 53 subcategories. Slug, English name, Spanish (Spain) name in brackets (the bundle''s language; de names are drafted on apply). Full proposal with scopes and samples: `work/taxonomy/spain/proposal.md`. Left out of the general list: none.
+
+- `geography` Geography of Spain (Geografía de España) (5, general)
+  - `regions-and-provinces` Spanish regions and provinces (Comunidades y provincias)
+  - `cities-and-towns` Spanish cities and towns (Ciudades y pueblos de España)
+  - `rivers-and-mountains` Rivers and mountains of Spain (Ríos y montañas de España)
+  - `coasts-and-islands` Coasts and islands of Spain (Costas e islas de España)
+  - `monuments` Monuments of Spain (Monumentos de España)
+- `nature` Nature of Spain (Naturaleza de España) (3, general)
+  - `wildlife` Spanish wildlife (Fauna ibérica)
+  - `plants-and-climate` Spanish plants, landscapes and weather (Flora, paisajes y clima de España)
+  - `protected-areas` Spanish national parks (Parques naturales de España)
+- `history` History of Spain (Historia de España) (6, general)
+  - `ancient-hispania` Ancient Hispania (Prehistoria e Hispania antigua)
+  - `al-andalus-and-reconquista` Al-Andalus and the medieval kingdoms (Al-Ándalus y los reinos medievales)
+  - `empire` The Spanish empire (Reyes Católicos y los Austrias)
+  - `bourbons-and-19th-century` Bourbons and the 19th century (Los Borbones y el siglo XIX)
+  - `20th-century` Spain in the 20th century (España en el siglo XX)
+  - `transition-and-democracy` Transition and democracy (La Transición y la democracia)
+- `people` People of Spain (Personajes de España) (2, general)
+  - `scientists-and-explorers` Spanish scientists, inventors and explorers (Científicos, inventores y exploradores)
+  - `famous-figures` Spanish chefs, entrepreneurs and celebrities (Cocineros, empresarios y famosos)
+- `food-and-drink` Spanish food and drink (Gastronomía de España) (5, general)
+  - `regional-dishes` Spanish regional dishes (Platos regionales)
+  - `tapas` Tapas and bar food (Tapas y bares)
+  - `sweets-and-desserts` Spanish sweets and desserts (Dulces y postres)
+  - `ham-cheese-and-produce` Spanish ham, cheese and produce (Jamón, quesos y productos)
+  - `drinks` Spanish drinks (Bebidas de España)
+- `festivals-and-traditions` Spanish festivals and traditions (Fiestas y tradiciones de España) (3, general)
+  - `fiestas` Spanish fiestas (Fiestas populares)
+  - `christmas-and-holidays` Christmas and Holy Week in Spain (Navidad, Semana Santa y festivos)
+  - `dress-crafts-and-games` Spanish traditional dress, crafts and games (Trajes, artesanía y juegos tradicionales)
+- `myths-and-legends` Spanish myths and legends (Mitos y leyendas de España) (2, general)
+  - `creatures` Spanish legendary creatures (Criaturas legendarias)
+  - `legends-and-superstitions` Spanish legends and superstitions (Leyendas y supersticiones)
+- `music-and-dance` Spanish music and dance (Música y baile de España) (4, general)
+  - `flamenco-and-copla` Flamenco and copla (Flamenco y copla)
+  - `folk-music-and-dance` Spanish folk music and dance (Música y bailes tradicionales)
+  - `pop-and-rock` Spanish pop and rock to 2000 (Pop y rock español hasta 2000)
+  - `current-music` Spanish music today (Música española actual)
+- `art-and-literature` Spanish art and literature (Arte y literatura de España) (4, general)
+  - `classic-literature` Classic Spanish literature (Literatura clásica española)
+  - `modern-literature` Modern Spanish literature (Literatura española moderna)
+  - `painting-and-architecture` Spanish painters, sculptors and architects (Pintores, escultores y arquitectos)
+  - `comics-and-childrens-books` Spanish comics and children''s books (Tebeos y libros infantiles)
+- `film-and-television` Spanish film and television (Cine y televisión de España) (5, general)
+  - `spanish-cinema` Spanish cinema (Cine español)
+  - `tv-series` Spanish TV series (Series españolas)
+  - `tv-shows-and-presenters` Spanish TV shows and presenters (Programas y presentadores de televisión)
+  - `childrens-tv` Spanish children''s TV (Televisión infantil en España)
+  - `radio-and-internet` Spanish radio and internet stars (Radio, youtubers y streamers)
+- `sports` Sport in Spain (Deporte en España) (4, general)
+  - `football-clubs` Spanish football clubs (Clubes de fútbol españoles)
+  - `footballers-and-national-team` Spanish footballers and La Roja (Futbolistas y la Selección)
+  - `sportspeople` Spanish sportspeople (Deportistas españoles)
+  - `team-and-traditional-sports` Spanish basketball, team and traditional sports (Baloncesto, otros deportes y deportes tradicionales)
+- `how-people-speak` How Spain speaks (Cómo se habla en España) (4, general)
+  - `slang` Spanish slang (Jerga y palabras coloquiales)
+  - `sayings` Spanish sayings and expressions (Refranes y frases hechas)
+  - `regional-speech` Regional accents and words of Spain (Acentos y palabras regionales)
+  - `co-official-languages` Languages of Spain (Lenguas de España)
+- `daily-life` Daily life in Spain (Vida cotidiana en España) (4, general)
+  - `brands-and-shops` Spanish brands and shops (Marcas y tiendas españolas)
+  - `transport` Transport in Spain (Transporte en España)
+  - `school-and-home` School and home in Spain (Colegio, casa y costumbres)
+  - `money-and-services` Money and public services in Spain (Dinero, trámites y servicios)
+- `symbols` Symbols of Spain (Símbolos de España) (2, general)
+  - `national-symbols` National symbols of Spain (Símbolos nacionales)
+  - `regional-symbols` Regional flags and emblems of Spain (Banderas y emblemas regionales)', 'The new Spanish question pack needs its own list of topics, so its questions cover life in Spain evenly. The proposal uses the general topics every regional pack has, all 14 of them, and splits them into 53 subtopics, about 38 questions each at 2000 questions. Applying it fixes the pack''s structure; the English and German topic names are drafted at that point.', NULL, NULL, '2026-10-16T21:20:43Z', NULL, 1279, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -43866,6 +43985,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1278, 298);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1279, 250);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1279, 258);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1279, 266);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1279, 300);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1280, 250);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1280, 258);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1280, 266);
