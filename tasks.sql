@@ -32653,6 +32653,164 @@ How to review:
 Names: en Hint H, Pass & Purge P, Fairy F, Ms Picky K, Trick Shot T; es/es-ES Soplo S, Paso y fuera P, Hada madrina H, Doña Exigente E, Tiro mágico T; de Wink K, Näxt & Weg N, Glücksfee G, Wunschzeit W, Finte F.
 
 On "flags in /gallery": a fix task in plan 136 takes the flags. `task 459: LUI-5: playtest fixes and close-out` waits on this decision.', NULL, NULL, '2026-10-16T03:07:43Z', NULL, 1101, NULL, 'once', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (249, 'colombia taxonomy: categories and subcategories', 'pending', '["the proposal as is (14 categories, 53 subcategories)", "the proposal with changes (name them: renames, merges, moves, drops, additions; e.g. merge 15 into 14)"]', 'Output of `qgen taxonomy --bundle colombia` (`task 1139: colombia taxonomy: proposal, the developer''s answer, apply`), from `decision 213: General category list for regional bundles`. Claude: 1 call (opus, 0 failed), 28k tokens, $0.43, 3m26s.
+
+- Replaces the old list (6 categories, 31 subcategories), not merged with it.
+- The 109 existing `colombia` questions are remapped afterwards (`task 1140: Remap colombia''s existing questions onto its new taxonomy`); the last section lists where they sit today.
+- Samples only illustrate the scope; `--apply` writes names and scopes, concept lists come from the next `qgen batch --bundle colombia`.
+- Worker''s notes on the proposal (for a "changes" answer):
+  - samples with the model''s own self-corrections («X? no: Y») in 15, 31, 36, 42, 45, 46, 49, incl. two vulgar ones dropped in 46
+  - 15 «Pioneros y personajes populares de Colombia» is the weakest: mixed scope, Juan Valdez twice (also in 49); candidate to merge into 14 or drop
+  - overlaps: Tinto in 19 and 44; Policarpa and banknote people in 48 vs. 11/15
+
+# Taxonomy proposal: `colombia`
+
+14 categories, 53 subcategories; target 2000 approved, ≈ 38 per subcategory. Sample concepts: name (known_at).
+
+## Counts per category
+- Geografía de Colombia: 5
+- Naturaleza de Colombia: 3
+- Historia de Colombia: 5
+- Personajes de Colombia: 2
+- Comida y bebida de Colombia: 5
+- Fiestas y tradiciones de Colombia: 4
+- Mitos y leyendas de Colombia: 2
+- Música y baile de Colombia: 5
+- Arte y literatura de Colombia: 3
+- Cine y televisión de Colombia: 4
+- Deporte de Colombia: 5
+- Así se habla en Colombia: 4
+- Vida diaria en Colombia: 4
+- Símbolos de Colombia: 2
+
+## Geografía de Colombia
+Natural regions, departments, cities and towns, rivers, seas, islands, mountains and landmarks of Colombia. Reason: Colombian families travel, study and talk about their departments, rivers and towns; most of it is unknown outside the country.
+1. **Regiones y departamentos de Colombia**. The six natural regions, the 32 departments, their capitals, borders and nicknames; individual towns go to Ciudades y pueblos. Reason: School geography every Colombian learns, and the frame for all other regional questions. Samples: Antioquia (2), Región Caribe (3), Valle del Cauca (4), San Andrés, Providencia y Santa Catalina (5), Medellín capital de Antioquia (5), Eje Cafetero (6), Orinoquía (8), Mitú capital del Vaupés (11), Puerto Carreño capital del Vichada (12), Inírida capital del Guainía (13).
+2. **Ciudades y pueblos de Colombia**. Cities, municipalities and towns, their nicknames, founding and what they are known for; tourist monuments in them go to Lugares y monumentos. Reason: Nicknames like «la Ciudad de la Eterna Primavera» and famous pueblos are everyday Colombian knowledge. Samples: Cartagena (2), Cali, la Sucursal del Cielo (5), Medellín, Ciudad de la Eterna Primavera (5), Bucaramanga, Ciudad Bonita (7), Villa de Leyva (7), Guatapé (8), Mompox (10), Barichara (11), Aracataca (11), Jardín, Antioquia (13).
+3. **Ríos, mares e islas de Colombia**. Rivers, lakes, lagoons, ciénagas, the two coasts, bays and islands. Reason: The Magdalena, the two oceans and the islands shape Colombian life and school lessons. Samples: Río Magdalena (3), Mar Caribe y océano Pacífico (3), Isla de San Andrés (4), Río Cauca (6), Islas del Rosario (7), Laguna de Guatavita (8), Lago de Tota (10), Ciénaga Grande de Santa Marta (11), Isla Gorgona (11), Río Atrato (12).
+4. **Montañas y paisajes de Colombia**. The three cordilleras, Sierra Nevada, volcanoes, nevados, valleys, plains, deserts and canyons; protected areas as parks go to Naturaleza. Reason: Colombia''s relief and pisos térmicos are a central school topic with many local names. Samples: Cordillera de los Andes (3), Sierra Nevada de Santa Marta (5), Las tres cordilleras (6), Llanos Orientales (6), Nevado del Ruiz (7), Desierto de la Tatacoa (8), Cañón del Chicamocha (9), Volcán Galeras (10), Pico Cristóbal Colón (11), Serranía de la Macarena (12).
+5. **Lugares y monumentos de Colombia**. Monuments, buildings, squares, churches, bridges and tourist sites; architects and styles go to Arte. Reason: Places Colombian families visit or see on postcards, mostly unknown to outsiders. Samples: Monserrate (3), Catedral de Sal de Zipaquirá (5), Castillo de San Felipe de Barajas (6), Peñol de Guatapé (6), Plaza de Bolívar (6), Santuario de Las Lajas (8), Torre del Reloj de Cartagena (8), Cristo Rey de Cali (9), Puente de Boyacá (10), Capitolio Nacional (11).
+
+## Naturaleza de Colombia
+Native animals and plants, national parks, ecosystems and climate of Colombia. Reason: Colombia''s biodiversity is a source of national pride and taught early in school.
+6. **Animales de Colombia**. Native animals and those emblematic of Colombian regions, with local names; the condor as national symbol goes to Símbolos. Reason: Local animal names (chigüiro, marimonda) and endemic species are known to Colombian kids, not outsiders. Samples: Guacamaya (2), Chigüiro (3), Delfín rosado (5), Rana dorada venenosa (6), Ballenas jorobadas en el Pacífico (7), Oso de anteojos (8), Hipopótamos del Magdalena Medio (9), Tití cabeciblanco (10), Marimonda (11), Paujil de pico azul (14).
+7. **Plantas y flores de Colombia**. Native plants, trees, flowers and the flower industry; fruits as food go to Frutas de Colombia. Reason: Frailejones, orchids and the flower exports are distinctly Colombian topics. Samples: Orquídeas (4), Frailejón (5), Guadua (7), Ceiba (8), Flores de exportación de la Sabana (9), Guayacán amarillo (9), Yarumo (10), Samán (11), Cañaguate (12), Siete cueros (13).
+8. **Parques naturales y ecosistemas de Colombia**. National parks, reserves, páramos, jungles, mangroves, pisos térmicos and climate phenomena of Colombia. Reason: Parks like Tayrona and ideas like pisos térmicos are core Colombian knowledge. Samples: Parque Tayrona (4), Páramo (5), Temporada de lluvias y verano (5), Pisos térmicos (6), Caño Cristales (7), Valle de Cocora (7), Páramo de Sumapaz (10), Amacayacu (11), Chiribiquete (11), Santuario de Fauna Malpelo (13).
+
+## Historia de Colombia
+Pre-Columbian peoples, conquest and colony, independence, 19th and 20th centuries up to the 1991 Constitution. Reason: Colombian history is taught in every school and is barely covered by base.
+9. **Culturas precolombinas de Colombia**. Indigenous cultures before 1500, their goldwork, sites and the El Dorado ritual; myths go to Mitos. Reason: Muiscas, Taironas and San Agustín are taught as the roots of the nation. Samples: Muiscas (5), Leyenda de El Dorado (6), Taironas (7), Ciudad Perdida (8), Balsa Muisca (9), San Agustín (9), Zipa y zaque (10), Tierradentro (11), Cultura Quimbaya (11), Cultura Zenú (12).
+10. **Conquista y Colonia en Colombia**. Spanish conquerors, city foundations, the Nuevo Reino de Granada, viceroyalty, colonial life and slavery up to 1810. Reason: Founders of Colombian cities and colonial figures are school knowledge specific to Colombia. Samples: Gonzalo Jiménez de Quesada (7), Fundación de Bogotá (7), Virreinato de la Nueva Granada (9), Expedición Botánica (10), Revolución de los Comuneros (10), Rodrigo de Bastidas (11), Benkos Biohó (11), San Pedro Claver (11), Sebastián de Belalcázar (11), José Antonio Galán (12).
+11. **Independencia de Colombia**. Events and heroes from 1810 to the dissolution of the Gran Colombia (1830). Reason: The 20 de julio, the Florero de Llorente and Boyacá are national touchstones. Samples: Simón Bolívar (3), 20 de julio de 1810 (4), Florero de Llorente (6), Batalla de Boyacá (6), Policarpa Salavarrieta (6), Francisco de Paula Santander (7), Antonio Nariño (8), Gran Colombia (9), Pantano de Vargas (10), Camilo Torres y el Memorial de agravios (12).
+12. **Colombia en el siglo XIX**. From 1830 to 1900: republic names, constitutions, civil wars, presidents, abolition, the Regeneración and the War of a Thousand Days. Reason: The country''s changing names and constitutions are distinctive Colombian history. Samples: Nombres de Colombia: Nueva Granada, Estados Unidos de Colombia (9), Guerra de los Mil Días (9), Constitución de 1886 (10), Rafael Núñez (10), Partidos Liberal y Conservador fundados (10), Abolición de la esclavitud en 1851 (11), José Hilario López (12), Tomás Cipriano de Mosquera (12), Constitución de Rionegro (12), Comisión Corográfica (13).
+13. **Colombia en el siglo XX**. From 1900 to the 1991 Constitution: loss of Panamá, Bogotazo, presidents, Frente Nacional, women''s vote, major events; no armed-conflict episodes as entertainment. Reason: Gaitán, the Bogotazo and the 1991 Constitution are what Colombian adults discuss about their recent past. Samples: Constitución de 1991 (7), Jorge Eliécer Gaitán (8), El Bogotazo (9), Separación de Panamá (9), Tragedia de Armero (9), Frente Nacional (10), Gustavo Rojas Pinilla (10), Voto femenino en 1957 (11), Masacre de las bananeras (11), Guerra con el Perú de 1932 (13).
+
+## Personajes de Colombia
+Colombians notable in science, medicine, exploration, business and public life not covered by arts, music, sport or TV. Reason: Colombians are proud of their inventors and pioneers, mostly unknown abroad.
+14. **Científicos e inventores colombianos**. Scientists, physicians, inventors and naturalists from Colombia, past and present. Reason: Names like Patarroyo, Llinás or Reynolds are taught in Colombian schools as national pride. Samples: Manuel Elkin Patarroyo (8), Francisco José de Caldas (9), José Celestino Mutis (9), Rodolfo Llinás (10), Jorge Reynolds y el marcapasos (11), Salomón Hakim y la válvula (12), Emilio Yunis (13), Nubia Muñoz (14), Raúl Cuero (14), Diego Sánchez Aguiar, Planetario (15).
+15. **Pioneros y personajes populares de Colombia**. Business founders, aviators, explorers, astronaut, record holders and beloved figures of public life; entertainers go to Cine y televisión. Reason: Gathers pioneers and popular figures that families recognise but no other category holds. Samples: Diego Torres? no: Juan Valdez (personaje) (4), Juan Valdez y su mula Conchita (6), Gabriela Mistral? no: Policarpa como billete (8), Paulina Vega (8), Marcos Rodríguez? no: Diana Trujillo de la NASA (10), Avianca, primera aerolínea de América (10), Julio Mario Santo Domingo (11), Esperanza Ospina? no: Luz Marina Zuluaga, Miss Universo 1958 (11), Ernesto Cortissoz (13), Gonzalo Mejía (14).
+
+## Comida y bebida de Colombia
+Typical dishes, street food, sweets, drinks and fruits of Colombia and its regions. Reason: Food is a constant family topic and full of names outsiders don''t know.
+16. **Platos típicos de Colombia**. Main dishes and soups by region: bandeja paisa, ajiaco, sancocho, lechona, tamales, mute; fried snacks go to Comida callejera. Reason: Regional dishes are the heart of Colombian identity at the table. Samples: Bandeja paisa (3), Sancocho (3), Ajiaco santafereño (4), Tamal (4), Lechona tolimense (6), Cazuela de mariscos (7), Mamona o ternera a la llanera (9), Mute santandereano (10), Cuy asado de Nariño (10), Rondón (12).
+17. **Comida callejera y panadería colombiana**. Arepas by region, empanadas, fritos, breads and bakery items, street snacks, and everyday meals like the corrientazo. Reason: The pandebono, the arepa de huevo and the panadería de barrio are daily Colombian life. Samples: Empanada (2), Buñuelo (3), Pandebono (4), Salchipapa (4), Arepa de huevo (5), Almojábana (6), Pan de yuca (7), Carimañola (9), Corrientazo (10), Pastel de garbanzo (11).
+18. **Dulces y postres colombianos**. Traditional sweets, desserts and confectionery; packaged brand sweets go to Marcas y productos. Reason: Bocadillo, arequipe and obleas are childhood favourites with Colombian names. Samples: Arequipe (2), Obleas (3), Bocadillo veleño (4), Natilla (4), Cocadas (5), Brevas con arequipe (7), Merengón (8), Postre de natas (9), Enyucado (10), Cortado de leche (11).
+19. **Bebidas colombianas**. Coffee culture (tinto, regions, Federación), aguapanela, chocolate santafereño, juices, sodas, chicha, guarapo, aguardiente and refajo. Reason: Tinto and aguapanela name everyday drinks that outsiders misread. Samples: Aguapanela (3), Tinto (4), Colombiana (gaseosa) (4), Chocolate con queso (5), Avena colombiana (6), Refajo (9), Aguardiente (9), Chicha (9), Lulada (10), Viche del Pacífico (13).
+20. **Frutas de Colombia**. Fruits and their local names, how they are eaten, and produce markets. Reason: Colombia''s fruits (lulo, guanábana, uchuva) are a source of pride and unknown abroad. Samples: Mango biche (4), Maracuyá (4), Lulo (5), Guanábana (5), Granadilla (6), Uchuva (7), Pitahaya (7), Chontaduro (8), Zapote (9), Borojó (11).
+
+## Fiestas y tradiciones de Colombia
+Carnivals, fairs, holidays, Christmas customs, crafts, traditional dress and children''s games. Reason: Colombia''s carnivals and Christmas traditions are a family conversation all year round.
+21. **Carnavales y ferias de Colombia**. Carnivals, fairs and festivals with their characters, events and dates; music contests go to Música. Reason: Barranquilla, the Feria de las Flores and Blancos y Negros are national celebrations. Samples: Carnaval de Barranquilla (3), Feria de las Flores (5), Desfile de silleteros (6), Feria de Cali (7), Joselito Carnaval (8), Carnaval de Negros y Blancos (8), Marimonda del carnaval (8), Feria de Manizales (9), Fiestas de San Pedro en Neiva (11), Carnaval del Diablo de Riosucio (12).
+22. **Navidad y fechas especiales en Colombia**. Día de las Velitas, novena, aguinaldos, Año Viejo, Semana Santa, Amor y Amistad in September, puentes festivos and other dated customs. Reason: Colombian Christmas and holidays have their own customs distinct from base''s general Navidad. Samples: Día de las Velitas (3), Novena de aguinaldos (3), Muñeco de Año Viejo (5), Amor y Amistad en septiembre (6), Las doce uvas y la maleta (6), Alumbrados de Medellín (6), Juegos de aguinaldos: pajita en boca (7), Puentes festivos (7), Semana Santa de Popayán (10), Ley Emiliani (13).
+23. **Artesanías y trajes típicos de Colombia**. Crafts, hats, bags, textiles, ceramics and traditional dress by region. Reason: The sombrero vueltiao and the mochila wayuu are icons Colombians recognise by region. Samples: Sombrero vueltiao (4), Ruana (5), Mochila wayuu (6), Carriel paisa (7), Chiva de cerámica de Pitalito (9), Hamaca de San Jacinto (10), Molas (10), Cerámica de Ráquira (10), Sombrero aguadeño (11), Barniz de Pasto (12).
+24. **Juegos tradicionales colombianos**. Children''s and street games, toys and rhymes; tejo and competitive traditional sports go to Deporte. Reason: The games Colombian children and grandparents played, with their local names. Samples: Trompo (2), Escondidas (2), Golosa (3), Lleva (3), Coca (5), Stop (5), Yermis (6), Ponchado (6), Catapis (11), Cuclí cuclí (12).
+
+## Mitos y leyendas de Colombia
+Legendary creatures, ghost stories, indigenous myths, superstitions and popular beliefs of Colombia. Reason: Colombian grandparents still tell stories of the Patasola and the Mohán.
+25. **Espantos y criaturas de Colombia**. Legendary creatures and ghosts of Colombian folklore and their stories by region. Reason: A rich set of creatures children learn from family and school. Samples: La Llorona (3), La Patasola (5), La Madremonte (5), El Hombre Caimán (6), El Mohán (7), El Silbón (8), El Sombrerón (9), La Tunda (11), El Hojarasquín del monte (11), La Candileja (12).
+26. **Mitos indígenas y creencias populares**. Indigenous creation myths and gods, popular superstitions, agüeros and folk remedies of Colombia. Reason: Bachué, Bochica and Colombian agüeros are part of family lore and schooling. Samples: Mariposa negra de mal agüero (5), Agüeros de Año Nuevo (6), Mal de ojo (7), Bachué (8), Bochica (9), Salto del Tequendama en el mito (10), Cabañuelas (11), Sué y Chía (12), Chiminigagua (13), Mito de Furatena (14).
+
+## Música y baile de Colombia
+Rhythms, dances, instruments, singers, bands, songs and music festivals of Colombia. Reason: Music is perhaps Colombia''s biggest cultural export and a daily family topic.
+27. **Ritmos, bailes e instrumentos de Colombia**. Traditional and popular rhythms and dances and their instruments; artists go to the genre subcategories. Reason: Cumbia, bambuco and currulao with their gaitas and tiples are taught in Colombian schools. Samples: Cumbia (3), Vallenato (ritmo) (3), Acordeón, caja y guacharaca (6), Champeta (6), Bambuco (8), Joropo (8), Tiple (9), Gaita colombiana (9), Currulao y marimba de chonta (10), Bullerengue (12).
+28. **Vallenato**. Vallenato singers, accordionists, classic songs, juglares and the Festival de la Leyenda Vallenata. Reason: Vallenato has enough artists and songs for its own subcategory, and outsiders know almost none of them. Samples: Silvestre Dangond (6), Diomedes Díaz (7), Festival de la Leyenda Vallenata (7), Binomio de Oro (8), Jorge Celedón (8), La gota fría (8), Rafael Escalona (10), Los Hermanos Zuleta (10), Francisco el Hombre (11), Alejo Durán (12).
+29. **Salsa y música tropical colombiana**. Salsa, porro, cumbia orchestras, champeta artists and decembrina songs from Colombia. Reason: Cali''s salsa and December party music are what every Colombian family dances to. Samples: Grupo Niche (7), Joe Arroyo (7), Rebelión (8), Fruko y sus Tesos (9), Guayacán Orquesta (9), La Sonora Dinamita (9), Lucho Bermúdez (10), Pastor López (10), Los Hispanos (11), Rodolfo Aicardi (12).
+30. **Pop, rock y urbano colombiano**. Colombian pop, rock, reggaeton and urban artists and their songs beyond global basics. Reason: Regional angle on artists like Carlos Vives, Aterciopelados or Karol G, from songs to hometowns. Samples: Carlos Vives (4), Karol G, la Bichota (5), J Balvin de Medellín (6), Morat (7), Fonseca (8), ChocQuibTown (9), Aterciopelados (10), Rock al Parque (10), Bomba Estéreo (10), Kraken (13).
+31. **Música popular y andina colombiana**. Música de carrilera, despecho, música popular, guasca, andean duets, llanera and children''s songs of Colombia. Reason: Despecho and Andean duets fill Colombian tiendas and family parties. Samples: Pipe Bueno (7), Darío Gómez, el Rey del Despecho (8), Jhonny Rivera (8), Galy Galiano (9), Pueblito viejo (10), Garzón y Collazos (11), Reynaldo Armas? no: Cholo Valderrama (11), Helenita Vargas (11), El Charrito Negro (12), Los Visconti (13).
+
+## Arte y literatura de Colombia
+Writers, poets, children''s literature, painters, sculptors, architects and museums of Colombia. Reason: Colombian literature and art go far beyond the García Márquez basics in base.
+32. **Escritores y libros colombianos**. Novelists, chroniclers and their works, including García Márquez beyond his basic fame; poets and children''s authors go to Poesía. Reason: María, La vorágine and Macondo details are Colombian school reading. Samples: Macondo (7), María de Jorge Isaacs (9), Coronel Aureliano Buendía (10), La vorágine (11), Héctor Abad Faciolince (12), Laura Restrepo (12), Tomás Carrasquilla (12), Álvaro Mutis (12), Fernando Vallejo (12), Manuel Mejía Vallejo (14).
+33. **Poesía y cuentos infantiles colombianos**. Colombian poets and verse, Rafael Pombo''s fables, children''s books and comics. Reason: Pombo''s Renacuajo paseador is every Colombian child''s first poem. Samples: El renacuajo paseador (2), Rin Rin Renacuajo (3), Simón el bobito (4), La pobre viejecita (4), Rafael Pombo (5), Mirringa Mirronga (5), Jairo Aníbal Niño (10), José Asunción Silva, Nocturno (11), León de Greiff (13), Porfirio Barba Jacob (13).
+34. **Pintores, escultores y museos de Colombia**. Painters, sculptors, architects, art works and museums of Colombia. Reason: Botero''s gordas, Obregón and the Museo del Oro are national references. Samples: Fernando Botero (5), Museo del Oro (6), Gatos de Botero / Plaza Botero (7), Gato del río de Cali (Hernando Tejada) (9), Museo Nacional de Colombia (10), Alejandro Obregón (11), Débora Arango (12), Rogelio Salmona (12), Doris Salcedo (13), Omar Rayo (13).
+
+## Cine y televisión de Colombia
+Telenovelas, series, TV shows, presenters, actors, humorists, radio, films and internet personalities of Colombia. Reason: Colombian TV is shared family memory across generations.
+35. **Telenovelas colombianas**. Colombian telenovelas, their characters, plots and theme songs; no narco series. Reason: From Café con aroma de mujer to Pedro el escamoso, telenovelas are a national pastime. Samples: Yo soy Betty, la fea (4), Pedro el escamoso (6), Don Armando Mendoza (6), Café con aroma de mujer (7), Pasión de gavilanes (7), Los Reyes (9), Francisco el matemático (9), Las Juanas (11), La saga, negocio de familia (12), Gallito Ramírez (12).
+36. **Programas y series de la TV colombiana**. Comedy and family series, children''s programs, game shows, news programs, channels and radio programs. Reason: Sábados Felices, Club 10 and Oki Doki are Colombian TV memories no outsider shares. Samples: Sábados Felices (4), Caracol y RCN (4), Señal Colombia (7), Oki Doki (8), El man es Germán (8), Club 10 (9), Padres e hijos (9), Dejémonos de vainas (11), Plaza Sésamo? no: Animalandia (12), Quac, el noticero (13).
+37. **Presentadores, actores y humoristas colombianos**. TV hosts, actors, comedians, radio voices and Colombian internet personalities. Reason: Faces Colombian families see every week, from Jota Mario to Suso. Samples: Sofía Vergara de Barranquilla (6), Jota Mario Valencia (7), Suso el paspi (7), Alejandra Azcárate (10), Andrés López, La pelota de letras (10), Frank Martínez (10), Montecristo (11), Fernando González Pacheco (11), Gloria Valencia de Castaño (12), Carlos Muñoz (12).
+38. **Cine colombiano**. Colombian films, directors, actors in films and film festivals. Reason: Films like El abrazo de la serpiente or La estrategia del caracol are Colombian references. Samples: Encanto (Colombia en Disney) (3), El paseo (7), El abrazo de la serpiente (11), La estrategia del caracol (11), Dago García (11), Festival de Cine de Cartagena (12), Ciro Guerra (12), Los viajes del viento (13), Víctor Gaviria (13), Bolívar soy yo (13).
+
+## Deporte de Colombia
+Selección Colombia, clubs, cycling, Olympic athletes and other sports in Colombia, including tejo. Reason: Colombians follow their footballers and cyclists with passion.
+39. **Selección Colombia**. National football teams (men''s and women''s), their players, matches, coaches and records. Reason: The Selección unites the country; its players beyond global stars are local knowledge. Samples: James Rodríguez (3), Falcao (4), Luis Díaz (4), Carlos «el Pibe» Valderrama (5), René Higuita y el escorpión (7), Linda Caicedo (7), El 5-0 a Argentina (9), Freddy Rincón (9), Francisco Maturana (10), Copa América 2001 (10).
+40. **Fútbol colombiano de clubes**. Clubs, stadiums, derbies, league titles, hinchadas and club idols of Colombian football. Reason: Club loyalties (Nacional, Millonarios, América) divide Colombian families. Samples: Atlético Nacional (3), Millonarios (4), Estadio El Campín (6), El Clásico capitalino (7), Deportes Tolima (7), Libertadores de Nacional 1989 (9), Estadio Pascual Guerrero (9), Once Caldas campeón de la Libertadores 2004 (10), El Dorado del fútbol colombiano (11), Alfredo Di Stéfano en Millonarios (12).
+41. **Ciclismo colombiano**. Colombian cyclists, their victories, the Vuelta a Colombia and the escarabajos history. Reason: The escarabajos are a national passion from Cochise to Egan. Samples: Egan Bernal (5), Nairo Quintana (5), Rigoberto Urán (6), Mariana Pajón (BMX) (6), Escarabajos (8), Lucho Herrera (9), Vuelta a Colombia (9), Cochise Rodríguez (11), Fabio Parra (12), Ramón Hoyos (13).
+42. **Medallistas olímpicos colombianos**. Colombian Olympic and Paralympic medallists in all sports and their medals. Reason: Each Colombian medal is a national event remembered by name. Samples: Caterine Ibargüen (5), María Isabel Urrutia, primer oro (8), Óscar Figueroa (9), Yuberjén Martínez (10), Anthony Zambrano (10), Carlos Ramírez BMX (11), Ingrit Valencia (12), María Luisa Calle (12), Helmut Bellingrodt (13), Juan Pablo Montoya? no: Moisés Fuentes (paralímpico) (14).
+43. **Otros deportes en Colombia**. Boxing, skating, motor racing, tennis, golf, baseball, tejo, coleo and other non-football sports outside Olympic medals. Reason: Patinaje, tejo and the boxing legends round out Colombian sport. Samples: Tejo (5), Juan Pablo Montoya (7), Patinaje colombiano (8), Kid Pambelé (9), Bolirana (9), Coleo (10), Edgar Rentería (10), Turmequé (11), Camilo Villegas (11), Fabiola Zuluaga (12).
+
+## Así se habla en Colombia
+Colombian words, slang, sayings, regional accents and the country''s indigenous and creole languages. Reason: Colombian Spanish is famously rich and regionally varied.
+44. **Palabras colombianas**. Colombian words and slang used nationwide; region-bound words go to Hablas regionales. Reason: Words like chévere, guayabo and bacano define Colombian Spanish. Samples: Chévere (3), Bacano (5), Tinto (5), Guayabo (7), Gamín (8), Chuspa (8), Mamar gallo (9), Lagarto (10), Chichipato (11), Embolatado (11).
+45. **Dichos y expresiones colombianas**. Colombian sayings, idioms and set phrases and their meanings. Reason: Colombian dichos (¿quiubo?, a la orden) carry local humour and wisdom. Samples: ¡A la orden! (3), ¿Quiubo? (4), Dar papaya (6), Hacer vaca (7), Estar en la olla (8), Echar los perros (9), No dar papaya, papaya puesta papaya partida (9), Más colombiano que el ajiaco? no: Más largo que una semana sin carne (11), Se le corrió el champú (12), Más perdido que el hijo de Lindbergh (13).
+46. **Hablas regionales de Colombia**. Accents and region-bound words: paisa, costeño, rolo, pastuso, valluno, santandereano, llanero, plus voseo and usted. Reason: Telling a paisa from a costeño by their words is a Colombian family game. Samples: Parce (paisa) (5), Ajá (costeño) (6), Rolo (6), Gonorrea como muletilla? no: Pues al final (paisa) (7), Sumercé (7), Ve, oís (valluno) (8), Eche (costeño) (8), Usted entre familiares en Boyacá (10), Mondá? no: Erda (costeño) (11), Achichay (pastuso) (12).
+47. **Lenguas de Colombia**. Indigenous and creole languages of Colombia, words borrowed from them and their speakers. Reason: Colombia has around 65 indigenous languages plus palenquero and creole. Samples: Totuma (7), Chinchorro (palabra indígena) (8), Guacharaca palabra (9), Wayuunaiki (10), Palenquero (10), Creole de San Andrés (10), Unos 65 idiomas indígenas (11), Chía significa luna (12), Embera (12), Nasa yuwe (13).
+
+## Vida diaria en Colombia
+Money, brands, transport, schooling, home life, documents and public services in Colombia. Reason: Everyday objects and habits are what Colombian families share without thinking.
+48. **Billetes y monedas de Colombia**. Colombian peso notes and coins, who appears on them, nicknames like luca and palo. Reason: Billetes carry Colombian personalities and slang (luca, palo) outsiders don''t know. Samples: Peso colombiano (3), Luca (5), Un palo (7), Gabriel García Márquez en el billete de 50.000 (8), Moneda de 1.000 con tortuga caguama (8), Banco de la República (9), Policarpa en el billete de 10.000 anterior (10), Moneda de 500 con el frailejón (10), Billete de 100.000 con Lleras Restrepo (11), Debora Arango en el billete de 2.000 (12).
+49. **Marcas y productos colombianos**. Colombian brands, packaged foods and sweets, stores and their slogans and mascots. Reason: Chocoramo, Jet and Postobón are childhood brands only Colombians grew up with. Samples: Chocoramo (3), Chocolatina Jet y sus láminas (3), Bon Bon Bum (3), Postobón (4), Frunas (4), Fab y el muñeco? no: Pony Malta (4), Juan Valdez Café (5), Éxito (5), Bon Bril (6), Manimoto (6).
+50. **Transporte en Colombia**. Urban and intercity transport: TransMilenio, Metro and Metrocable of Medellín, chivas, busetas, flotas, jeeps Willys, pico y placa, airports. Reason: Pico y placa and the chiva are uniquely Colombian ways of getting around. Samples: TransMilenio (4), Metro de Medellín (4), Chiva (5), Buseta (6), Pico y placa (7), Metrocable (7), Aeropuerto El Dorado (7), Bicitaxi (8), Jeep Willys del Eje Cafetero (9), MIO de Cali (9).
+51. **Casa, colegio y trámites en Colombia**. Schooling (grados, ICFES/Saber 11), documents (cédula), estratos, tienda de barrio, home objects, public services and customs of daily life. Reason: Estratos, the ICFES and la tienda de la esquina are shared Colombian experiences. Samples: Tienda de barrio (3), Onces (5), Tarjeta de identidad (6), Cédula de ciudadanía (7), Fiado en la tienda (7), Prueba Saber 11 (ICFES) (9), Estratos (9), EPS (10), Prima de diciembre (11), Libreta militar (11).
+
+## Símbolos de Colombia
+National and departmental symbols: flag, anthem, coat of arms, national bird, tree and flower, emblems of departments and cities. Reason: Símbolos patrios are a school subject in Colombia with plenty of detail.
+52. **Símbolos patrios de Colombia**. Flag, anthem lyrics and authors, coat of arms elements, cóndor, palma de cera, orquídea and their history. Reason: Every Colombian child memorises the anthem and the escudo''s meaning. Samples: Amarillo, azul y rojo (1), Cóndor de los Andes (4), ¡Oh gloria inmarcesible! (4), Palma de cera (5), Orquídea Cattleya trianae (7), Libertad y Orden (8), Rafael Núñez, autor de la letra del himno (9), Granada en el escudo (9), Istmo de Panamá en el escudo (10), Oreste Sindici, compositor (11).
+53. **Símbolos de departamentos y ciudades**. Flags, anthems, coats of arms and emblems of Colombian departments and cities. Reason: Regional pride shows in flags like Antioquia''s or Barranquilla''s anthem lines. Samples: Bandera de Bogotá amarilla y roja (6), Bandera de Antioquia blanca y verde (8), Himno Antioqueño «Oh libertad» (9), Bandera de Cali (10), Bandera de Barranquilla (10), Escudo de Bogotá con águila (11), Bandera de Santander (12), Bandera del Valle del Cauca (12), Flor emblema de Medellín: orquídea (12), Himno de Boyacá (13).
+
+## Questions on subcategories not in the proposal (moved by the remap)
+- Regiones de Colombia: 7 (6 approved, 1 rejected)
+- Tradiciones colombianas: 6 (6 approved)
+- Ritmos colombianos: 5 (3 approved, 2 rejected)
+- Ríos de Colombia: 4 (4 approved)
+- Deportes tradicionales colombianos: 4 (4 approved)
+- Carnaval de Barranquilla: 4 (4 approved)
+- Ciudades de Colombia: 4 (3 approved, 1 rejected)
+- Frutas exóticas de Colombia: 4 (4 approved)
+- Dulces colombianos: 4 (4 approved)
+- Fiestas colombianas: 4 (4 approved)
+- Feria de las Flores: 4 (3 approved, 1 rejected)
+- Historia: 3 (3 approved)
+- Cantantes colombianos: 3 (3 approved)
+- Mitos colombianos: 3 (3 approved)
+- Parques naturales de Colombia: 3 (3 approved)
+- Leyendas colombianas: 2 (2 approved)
+- Piratas: 2 (2 approved)
+- Desiertos: 2 (2 approved)
+- Navidad: 2 (2 approved)
+- Clubes de fútbol colombianos: 2 (1 rejected, 1 approved)
+- Dichos colombianos: 2 (2 approved)
+- Mundiales de fútbol: 2 (2 approved)
+- Aves: 1 (1 approved)
+- Cuentos infantiles: 1 (1 approved)
+- Literatura: 1 (1 approved)
+- Islas: 1 (1 approved)
+- Platos típicos colombianos: 1 (1 approved)
+- Reciclaje: 1 (1 approved)
+- Árboles: 1 (1 approved)
+- Deportes extremos: 1 (1 approved)
+- Museos: 1 (1 approved)
+- Colombianos famosos: 1 (1 approved)', NULL, NULL, '2026-10-16T03:20:51Z', NULL, 1139, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -33891,6 +34049,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1218, 1101, '2026-10-16T02:59:46Z', '2026-10-16T03:08:24Z', 'blocked', NULL, 0, '44d39c73330b0e1b73d6a843189ec43f00c2be3c', 'claude-opus-5-5[1m]', 'bf984fe2-2a15-4aa0-81c8-57d9c5f96d4c', 31, 46, 6195, 1124328, 58053, 0.8133735999999997, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1219, 1137, '2026-10-16T03:08:24Z', '2026-10-16T03:09:35Z', 'done', NULL, 0, 'eb39e12f3b7d73a4987c031a95bb942c402c7bdf', 'claude-opus-5-5[1m]', '115cb8aa-4e4f-4be7-86dc-ad920c04cc16', 13, 26, 4563, 505454, 34928, 0.47187879999999993, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1220, 1138, '2026-10-16T03:09:36Z', '2026-10-16T03:16:49Z', 'done', NULL, 0, '6784e16cd81ca377d325cc6b355fa4f96e50c8ae', 'claude-opus-5-5[1m]', 'c4686026-e3f1-440b-95f3-4a113de7087e', 32, 54, 18327, 2205253, 97535, 1.5880865999999998, 3857742);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1221, 1139, '2026-10-16T03:16:49Z', '2026-10-16T03:21:05Z', 'blocked', NULL, 0, '6f43f37be7cabc22c85ea21b87cf83dba9fed629', 'claude-opus-5-5[1m]', '1083eef0-722a-4e57-aec6-dc7d30a106c4', 8, 16, 2499, 305043, 42542, 0.4513886, 3857742);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -34261,6 +34420,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1135, 209);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1137, 213);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1138, 213);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1139, 213);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1139, 249);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1140, 213);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1144, 216);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1148, 217);
