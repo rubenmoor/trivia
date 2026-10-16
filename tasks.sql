@@ -33368,8 +33368,95 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T12:35:45Z', '2026-10-16T12:37:01Z', 1302, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1307, 128, 'create tasks for plan 128: S4 close-out', 'split', 'done', 1000, '2026-10-16, tasks.sql: tasks 1294, 1033 (subject + slug-key rows), 1034 brought in line with plan 128''s slug keys (part 16, task 1305); task 1035 unchanged', 'Split plan 128 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T12:37:38Z', '2026-10-16T12:38:48Z', 1303, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1308, 149, 'create tasks for plan 149: Slug keys for categories', 'split', 'open', 1000, NULL, 'Split plan 149 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T12:43:19Z', NULL, 1305, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1308, 149, 'create tasks for plan 149: Slug keys for categories', 'split', 'done', 1000, '2026-10-16, tasks 1309–1317 for plan 149; 1312, 1313, 1314, 1316, 1317 pending on decision 258', 'Split plan 149 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T12:43:19Z', '2026-10-16T12:45:09Z', 1305, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1309, 149, 'Slug keys: supersede decision 165, record the slug model', 'work', 'open', NULL, NULL, 'First task of `plan 149: Slug keys for categories` (read its Model section; the milestone''s "Slug keys for categories", developer 2026-10-16). Records the model before code lands; no code here.
+
+- `pm decision record "Category and subcategory keys: English slugs" --supersedes 165 --answer "…" --body "…"`: the Model of plan 149 (slug form `^[a-z0-9]+(-[a-z0-9]+)*$`, unique per bundle per kind; `subKey` = base''s bare slug, else `<bundle>/<slug>`, Python `(bundle, slug)`; `categories.json` structure only; names lookup order locale file → base language file (`es` for `es-ES`) → `name` field (mods) → key; `app/data/old-keys.json` for old saves/fixtures/patch notes; mods'' plain strings stay valid). Supersedes the name-as-key part of `decision 165: Subcategory keys in code: bundle + name; base keeps bare names` (the one-string form is kept). Check `pm decision record -h` for the supersede flag''s exact form.
+- `plans/decisions.md`: new D-entry with the model; amend notes on D-99 ("a category or subcategory is bundle + name" → bundle + slug) and D-100 (name keys → slug keys), pointing at the new D-entry and the pm decision.
+- `plans/22-bundles.md` Layout: "Spanish keys in every bundle" → slugs + `names.<locale>.json` (incl. `names.es.json`, `names.es-ES.json` override).
+- `plans/15b-question-translation.md` Storage: names files incl. `names.es.json` and the es-ES override.
+- `rg` "Spanish keys", "bundle + name" in `plans/` to catch other spots in those two files; the full code/doc sweep is plan 149''s last task.
+
+Done when: the decision is recorded with its supersede link, the three plan files say slugs; `.md` only, no checks beyond `qgen validate` needed.', '2026-10-16T12:44:56Z', NULL, 1308, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1310, 149, 'Python: slug keys, names lookup, validate rule, qgen rekey', 'work', 'open', NULL, NULL, 'Task 2 of `plan 149: Slug keys for categories` (read its Model). Python side of slug keys; old data must keep working (the migration is a later task of this plan).
+
+Files: `authoring/tools/categories.py`, `qgen.py`, `paths.py`, `pool_export.py`, `concepts.py`, the prompt-filling code.
+
+- Readers accept both formats: `categories.load` without `name` fields (new `{"categories": [{"slug", "subcategories": ["<slug>", …]}]}`) and today''s; `categories.display(bundle, key, locale)` with the lookup order (locale file → `es` for `es-ES` → `name` field → key); `load_names` for `es` (`names.es.json`) and `es-ES` (`names.es.json` + optional `names.es-ES.json` override, only existing keys).
+- Prompts get display names in the prompt''s locale, never slugs (drafts, concepts, rate, review, audit, translate, remap); model output naming a subcategory mapped back to keys by code.
+- `qgen validate`: slug form, unique per bundle per kind (a category and a subcategory may share one), `names.{en,es,de}.json` complete for every shipped bundle, `names.es-ES.json` keys exist, every question''s `subcategory` a slug of its bundle. Switched on by the presence of `names.es.json` (or a rule flag), so today''s data still validates.
+- `qgen rekey --map <proposal.json> [--apply]`: dry run by default, prints every file it would change. Rewrites `categories.json` (base, `bundles/<id>/`), names files (keys renamed, `names.es.json` written from today''s Spanish names), `questions.json` and every `questions.<locale>.json`, `targets.json` and `question-axes.json` if keyed by sub/category, concept files (`authoring/data/concepts/`, `bundles/<id>/concepts/` → `<slug>.json`), `spot-checks.json` / `ui-flags.json` / `state/` review files if they hold sub keys, in-flight batch work files (`work/<batch>/` drafts, concepts, translation chunks: file names and `subcategory` fields; `work/concepts/`); writes `app/data/old-keys.json` (`{"categories": {old: new}, "subcategories": {oldSubKey: newSubKey}}`, base and colombia). `rg` the code for every other reader of sub keys before deciding the file list.
+- Map input: `work/slugs/proposal.json` (gitignored, from `decision 258: Slug keys for base and colombia: the list`; rebuild from the decision text if missing). Don''t wait for the answer: the format is fixed, the list may change.
+- Check: throw-away scratch copy of the repo, `qgen rekey --apply` there, `qgen validate` with the slug rule on passes, `qgen export` works; delete the copy. Nothing applied in the real tree.
+
+Done when: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass on today''s data; the scratch run is clean.', '2026-10-16T12:44:56Z', NULL, 1308, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1311, 149, 'Engine and client: slug keys, names for every locale, old saves mapped', 'work', 'open', NULL, NULL, 'Task 3 of `plan 149: Slug keys for categories` (read its Model). Client side; works with old data and with migrated data.
+
+Files: `app/client/src/engine/pool.ts`, `state.ts`, `lib/data.ts` (`namesOf`), `lib/names.svelte.ts`, `game.test.ts`, `selection.test.ts`, save load code.
+
+- `namesOf` for every locale incl. `es` (`names.es.json`) and `es-ES` (es + `names.es-ES.json` override); lookup order locale file → base language → `name` field in `categories.json` (mods; a plain string = key and name) → key. «Cambiazo», supply notice, configure screen show names and send keys.
+- Save load maps old keys through `app/data/old-keys.json` (missing file = no mapping): `purged`, `swapped_to`, the joker log''s `purged`, settings/history entries with sub or category keys, any sub key left in `notified_exhausted` (bundle ids since `decision 195: Supply notice: bundles running out instead of exhausted subcategories`; unknown ones pruned anyway). Idempotent. No save version bump unless a field needs one; then `pm decision record`.
+- Frozen engine fixtures replay through the normalizer with the map (`decision 165: Subcategory keys in code: bundle + name; base keeps bare names` introduced the normalizer).
+- Check: (a) today''s data: keys shown as names = today''s Spanish, unchanged game; (b) a throw-away scratch migrated copy (`qgen rekey --apply` from this plan''s Python task if done, else a hand-made small copy of `app/data/` with slugs, `names.es.json`, `old-keys.json`): browser check on the Node dev server, `TRIVIA_MUTE=1`, es game shows today''s names, en/de unchanged, an old save with a purged sub and `swapped_to` plays on. Delete the scratch copy.
+
+Done when: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass; both checks above hold.', '2026-10-16T12:44:56Z', NULL, 1308, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1312, 149, 'Apply the slug migration to base and colombia', 'work', 'open', NULL, NULL, 'Task 4 of `plan 149: Slug keys for categories`. Needs `decision 258: Slug keys for base and colombia: the list` answered and this plan''s Python task (`qgen rekey`) and engine/client task done (`pm show p149`); if they aren''t, stop and say so.
+
+- Between batches: `pm show 1185` / `pm show 1295` (`task 1185: run batch-9`, `task 1295: run colombia batch (batch-<n>)`) and `work/<batch>/`; a mid-run batch''s work files are mapped by `qgen rekey`, never hand-edited.
+- `work/slugs/proposal.json` brought in line with decision 258''s answer (rebuild from the decision text if missing; changes the answer asks for applied to the JSON).
+- `qgen rekey --map work/slugs/proposal.json` dry run, read the file list, then `--apply`; `qgen export`; `qgen validate` with the slug rule on.
+- `trivia-media sync` not needed (no media change).
+- Game check (Node dev server, `TRIVIA_MUTE=1`): es names unchanged, en/de unchanged, an old save (copy of `state/game.json` into the dev save dir, never `state/` itself) loads and plays on.
+- `pm decision consequences 258 "…"` (files changed, counts).
+- Stage the printed changes incl. `app/data/old-keys.json`, renamed concept files.
+
+Done when: every category and subcategory of base and colombia is a slug; `categories.json` holds no names; `names.{en,es,de}.json` complete; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-16T12:44:56Z', NULL, 1308, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1313, 149, 'Slug keys in review tool, stats, reports and patch notes', 'work', 'open', NULL, NULL, 'Task 5 of `plan 149: Slug keys for categories`. Runs after the migration task of this plan (`pm show p149`); if that isn''t done, stop and say so.
+
+Files: `authoring/ui`, `authoring/server`, `reviews.py`, `played.py`, `patch_notes.py`, `qgen report`.
+
+- URLs and filters by key (`/review?sub=`, stats pages); labels from names (`es` by default) via the shared lookup from this plan''s Python task (decision 199: import, don''t copy).
+- `qgen report`, `--simulate`, `--cost`: slugs or names consistently; bottleneck lines name both.
+- `patch_notes.py`: an old tag''s pool keys mapped through `app/data/old-keys.json`, so a rename isn''t reported as a change.
+- `played.py` (reads saves): old save keys mapped through `old-keys.json`.
+- Check: `trivia-authoring` in `../trivia-review` worktree if it exists (else a temp port), review page with `?sub=<slug>` and stats show names; `qgen report` runs; patch notes against the previous `v*` tag show no category renames.
+
+Done when: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-16T12:44:56Z', NULL, 1308, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1314, 149, 'Mods: slug keys and names files, both formats', 'work', 'open', NULL, NULL, 'Task 8 of `plan 149: Slug keys for categories` (Model: mods). Runs after this plan''s migration task (`pm show p149`); if that isn''t done, stop and say so.
+
+Files: `modding/bundles.md`, `modding/template-bundle/`, `modding/examples/`, `app/desktop/check-mod.mjs`, `bundle-prompt.md`.
+
+- Document both formats: today''s (plain strings, key = name; a category''s `name` is its name) and slugs + `names.<locale>.json` (incl. `names.es.json`, optional `names.es-ES.json`); the lookup order.
+- `--check-mod`: a question''s `subcategory` checked against keys (either format); `bad_names` for unknown keys in a names file.
+- Template bundle: pick one format and say why in one line; examples stay valid (at least one example in each format if cheap).
+- Check: `trivia-desktop --check-mod <folder>` on every example (exit 0) and on a throw-away broken one (unknown key in names file → `bad_names`); `smoke.mjs --mods` (`trivia-release-check` `mods` step) passes.
+
+Done when: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-16T12:44:56Z', NULL, 1308, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1315, 149, 'Taxonomy on slugs: code and prompt drafts', 'work', 'open', NULL, NULL, 'Task 6 of `plan 149: Slug keys for categories`. Needs `task 1310: Python: slug keys, names lookup, validate rule, qgen rekey` done (slug readers); the migration may still be pending.
+
+Files: `qgen taxonomy` code, `authoring/tools/prompts/taxonomy.md`, `taxonomy-names.md`, `remap.md`, `authoring/data/regional-categories.json`.
+
+- Code: `qgen taxonomy --bundle <id>` proposes slugs with en names (+ the bundle''s own-language names where not en); `--apply` writes `categories.json` (structure only) and drafts the missing `en`/`es`/`de` names (`names.es.json` included); `category_slug()`''s `<bundle>-<name>` prefix gone. `remap.md`''s answer mapped back to slugs by code.
+- Prompt drafts, not applied: verbatim old → new for `taxonomy.md`, `taxonomy-names.md`, `remap.md`, and `regional-categories.json` (`about` and entries in English with slugs, `{region}` pattern for en names; es/de names drafted on `--apply`). Build on `decision 250: Regional drafting in en, de, es-ES: prompts apply?` (its taxonomy parts) where it still holds; its answer 3 waits for these.
+- `pm decision add "Taxonomy prompts on slug keys: apply?"` with the drafts, options apply / apply with changes / don''t; then `pm task-pending-decision 1316 <decision>` (`task 1316: Apply the taxonomy prompts on slug keys`), `pm task-pending-decision 1275 <decision>` (`task 1275: Regional drafting in any launch language (en US/UK, de, es-ES, es)`) and `pm task-pending-decision 1317 <decision>` (`task 1317: Slug keys: docs sweep and regional gate`).
+- Stage the code (it must work with the current prompts too, or be guarded until they''re applied), close this task.
+
+Done when: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass; the decision is pending with the three tasks waiting on it.', '2026-10-16T12:44:57Z', NULL, 1308, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1316, 149, 'Apply the taxonomy prompts on slug keys', 'work', 'open', NULL, NULL, 'Task 7 of `plan 149: Slug keys for categories`. Waits on the decision "Taxonomy prompts on slug keys: apply?" added by this plan''s task "Taxonomy on slugs: code and prompt drafts"; also needs this plan''s migration task done (`pm show p149`), else stop and say so.
+
+- Apply the prompt drafts as answered (`taxonomy.md`, `taxonomy-names.md`, `remap.md`, `authoring/data/regional-categories.json`); `pm decision consequences <id> "…"`.
+- Throw-away check on a scratch copy of the repo: a fake `en` region (`qgen bundle new --kind region --language en …`), `qgen taxonomy --bundle <it>`: the proposal has slugs + en names; `--apply` writes `categories.json` without names and `names.{en,es,de}.json`. Script reports its claude calls and totals (decision 208). Remove the copy.
+
+Done when: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-16T12:44:57Z', NULL, 1308, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1317, 149, 'Slug keys: docs sweep and regional gate', 'work', 'open', NULL, NULL, 'Last task of `plan 149: Slug keys for categories`. Runs once every other task of the plan is done (`pm show p149`); if one is open, stop and say so.
+
+- `authoring/RUNBOOK.md` (taxonomy step, slugs), `directory.md` if new top-level files, `plans/22-bundles.md` and `plans/15b-question-translation.md` final.
+- Decision 200 sweep: `rg` "bundle + name", "Spanish keys", "Spanish name", "name as key", old `<bundle>-<name>` category slugs in comments and `.md`; fix every hit.
+- Gate: tasks 1276–1280 (`task 1276: Set up regional bundle usa` … `task 1280: Set up regional bundle mexico`) and `task 1275: Regional drafting in any launch language (en US/UK, de, es-ES, es)` can now run on slugs; check `pm show` for each: if any still waits only on `decision 258: Slug keys for base and colombia: the list` (answered by now), nothing more to do; note in the done note what each still waits on.
+- Plan 149 "Done when": check each line and say so in the done note.
+
+Done when: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-16T12:44:57Z', NULL, 1308, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -38438,6 +38525,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1307, 1307, '2026-10-16T12:37:50Z', '2026-10-16T12:38:56Z', 'done', NULL, 0, 'b759c9c31a8df0a677ba15ddb602448942b7ab6f', 'claude-opus-5-5[1m]', 'a9974630-3c95-4d90-8d76-5cd54f6e1bd3', 11, 20, 5357, 422122, 43197, 0.5372204, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1308, 1304, '2026-10-16T12:38:56Z', '2026-10-16T12:39:10Z', 'done', NULL, 0, '5565532b7c1a3bbf2ed950c416a5cd9c9d87c01a', 'claude-opus-5-5[1m]', '95e93578-05ab-4aa1-b9d2-4a9b750a23d0', 4, 8, 940, 154086, 41343, 0.38039320000000004, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1309, 1305, '2026-10-16T12:39:10Z', '2026-10-16T12:43:44Z', 'done', NULL, 0, '04585cc4a55be3624a0e900f628a69f0f18b2eaf', 'claude-opus-5-5[1m]', '3980cc83-d308-4e73-8ac3-7d78fb67e017', 25, 50, 20671, 1839223, 91075, 1.5100646000000002, 3857742);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1310, 1308, '2026-10-16T12:43:44Z', '2026-10-16T12:45:15Z', 'done', NULL, 0, '54609aa0cf9d47d99725a30946513efb67631669', 'claude-opus-5-5[1m]', 'e7180221-d99a-47ac-83a1-a332bb97f613', 7, 14, 8556, 303662, 48173, 0.61729240000000007, 3857742);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -38889,6 +38977,11 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1294, 65);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1294, 203);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1295, 257);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1296, 257);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1312, 258);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1313, 258);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1314, 258);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1316, 258);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1317, 258);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
