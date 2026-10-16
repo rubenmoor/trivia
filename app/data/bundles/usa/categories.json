@@ -1,4 +1,125 @@
 {
   "about": "Categories of the usa bundle (D-41, D-43): structure only, keyed by English slugs unique within the bundle (decision 259); names in names.<locale>.json.",
-  "categories": []
+  "categories": [
+    {
+      "slug": "geography",
+      "subcategories": [
+        "states-and-capitals",
+        "cities-and-towns",
+        "rivers-lakes-and-mountains",
+        "roads-and-landmarks"
+      ]
+    },
+    {
+      "slug": "nature",
+      "subcategories": [
+        "wildlife",
+        "plants-and-trees",
+        "national-parks",
+        "weather-and-seasons"
+      ]
+    },
+    {
+      "slug": "history",
+      "subcategories": [
+        "native-nations",
+        "colonies-and-founding",
+        "nineteenth-century",
+        "twentieth-century",
+        "civics"
+      ]
+    },
+    {
+      "slug": "people",
+      "subcategories": [
+        "inventors-and-founders",
+        "trailblazers"
+      ]
+    },
+    {
+      "slug": "food-and-drink",
+      "subcategories": [
+        "regional-dishes",
+        "home-cooking",
+        "desserts-and-baking",
+        "candy-and-snacks",
+        "restaurant-chains"
+      ]
+    },
+    {
+      "slug": "festivals-and-traditions",
+      "subcategories": [
+        "holidays",
+        "winter-holidays",
+        "fairs-and-festivals",
+        "family-and-school-traditions"
+      ]
+    },
+    {
+      "slug": "myths-and-legends",
+      "subcategories": [
+        "folk-heroes-and-tall-tales",
+        "cryptids-and-ufos",
+        "ghosts-and-superstitions"
+      ]
+    },
+    {
+      "slug": "music-and-dance",
+      "subcategories": [
+        "country-and-folk",
+        "roots-and-soul",
+        "traditional-songs"
+      ]
+    },
+    {
+      "slug": "art-and-literature",
+      "subcategories": [
+        "american-literature",
+        "childrens-books",
+        "comics-and-art"
+      ]
+    },
+    {
+      "slug": "film-and-television",
+      "subcategories": [
+        "tv-shows",
+        "kids-tv",
+        "hosts-and-game-shows",
+        "movie-favorites"
+      ]
+    },
+    {
+      "slug": "sports",
+      "subcategories": [
+        "american-football",
+        "baseball",
+        "college-sports",
+        "more-sports"
+      ]
+    },
+    {
+      "slug": "how-people-speak",
+      "subcategories": [
+        "words-and-slang",
+        "sayings-and-idioms",
+        "place-names"
+      ]
+    },
+    {
+      "slug": "daily-life",
+      "subcategories": [
+        "money-and-shopping",
+        "school-life",
+        "household-brands",
+        "getting-around"
+      ]
+    },
+    {
+      "slug": "symbols",
+      "subcategories": [
+        "national-symbols",
+        "state-symbols"
+      ]
+    }
+  ]
 }

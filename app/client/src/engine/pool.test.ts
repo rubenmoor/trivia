@@ -40,7 +40,7 @@ test("real categories: base first, every subcategory once per bundle", () => {
   const subs = cats.flatMap((c) => c.subcategories);
   const broad = broadOf(cats);
   assert.equal(broad.size, subs.length);
-  assert.equal(subsOf(cats, "base").length + subsOf(cats, "colombia").length, subs.length);
+  assert.equal([...new Set(bundles)].reduce((n, b) => n + subsOf(cats, b).length, 0), subs.length);
   assert.equal(broad.get("drinks")?.slug, "food-and-drink");
   assert.equal(broad.get("colombia/regions-and-departments")?.slug, "geography");
   assert.equal(broad.get("colombia/regions-and-departments")?.bundle, "colombia");
