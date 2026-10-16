@@ -1,0 +1,1476 @@
+{
+  "version": 1,
+  "locale": "en",
+  "questions": [
+    {
+      "id": "q-0019",
+      "question": "What is the highest mountain in the world?",
+      "answer": "Mount Everest",
+      "wrong_answers": [
+        "Aconcagua",
+        "Kilimanjaro",
+        "Pico Cristóbal Colón"
+      ],
+      "hints": [
+        "It is in the Himalayas.",
+        "It sits on the border between Nepal and China.",
+        "It is almost 8,850 m (about 29,000 ft) high."
+      ],
+      "description": "Getting to the top takes weeks, lots of oxygen and really good socks.",
+      "fun_fact": "Colombia's highest mountains, Pico Cristóbal Colón and Pico Simón Bolívar, are both about 5,700 m (18,700 ft) high.",
+      "difficulty": 3,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "5acbfbf6911d"
+    },
+    {
+      "id": "q-0030",
+      "question": "What is the fastest land animal?",
+      "answer": "The cheetah",
+      "wrong_answers": [
+        "The lion",
+        "The horse",
+        "The ostrich"
+      ],
+      "hints": [
+        "It's a member of the cat family.",
+        "It lives on the savannas of Africa.",
+        "It has round black spots."
+      ],
+      "description": "This animal never gets a speeding ticket, because nobody can catch it.",
+      "fun_fact": "It can run faster than 100 km/h (62 mph), but only for a few seconds.",
+      "difficulty": 3,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "642ea988e639"
+    },
+    {
+      "id": "q-0047",
+      "question": "Which metal is a liquid at room temperature?",
+      "answer": "Mercury",
+      "wrong_answers": [
+        "Lead",
+        "Aluminum",
+        "Iron"
+      ],
+      "hints": [
+        "It used to be found inside thermometers.",
+        "It is silvery and shiny.",
+        "It has the same name as a planet."
+      ],
+      "description": "A metal that never could decide between being a solid and being a smoothie.",
+      "fun_fact": "It is very toxic, which is why thermometers hardly use it anymore.",
+      "difficulty": 7,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "6cf41d0fa49a"
+    },
+    {
+      "id": "q-0124",
+      "question": "What is the biggest bird in the world?",
+      "answer": "The ostrich",
+      "wrong_answers": [
+        "The chicken",
+        "The pigeon",
+        "The parrot"
+      ],
+      "hints": [
+        "It lives in Africa.",
+        "It can't fly, but it runs super fast.",
+        "It lays the biggest eggs of any bird."
+      ],
+      "description": "Today we're measuring birds, so we'll need a very, very tall ruler.",
+      "fun_fact": "An ostrich's eye is bigger than its brain.",
+      "difficulty": 2,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "c81dfa5d2ccc"
+    },
+    {
+      "id": "q-0126",
+      "question": "This small piece comes from a flag. Which country's flag is it?",
+      "answer": "Mexico",
+      "wrong_answers": [
+        "Ecuador",
+        "Albania",
+        "Egypt"
+      ],
+      "hints": [
+        "It is a country in the Americas.",
+        "Its colors are green, white and red.",
+        "It is famous for tacos and mariachis."
+      ],
+      "description": "A fancy lunch on top of a cactus, served right in the middle of a flag.",
+      "fun_fact": "Legend says the Aztecs founded their great city, Tenochtitlan, right where they saw an eagle on a cactus eating a snake.",
+      "difficulty": 7,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "4be36b0e8895"
+    },
+    {
+      "id": "q-0186",
+      "question": "Look at this close-up: which Colombian food is it?",
+      "answer": "Empanada",
+      "wrong_answers": [
+        "Buñuelo",
+        "Arepa",
+        "Pandebono"
+      ],
+      "hints": [
+        "It is fried in oil until it turns golden and crispy.",
+        "Inside, it almost always has potato and meat.",
+        "It is shaped like a half moon and eaten with ají, a spicy sauce."
+      ],
+      "description": "An envelope that brings no letters, just something much tastier inside.",
+      "fun_fact": "The word “empanada” comes from the Spanish “empanar”, which means to wrap something in dough or bread.",
+      "difficulty": 4,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "e419e630c15b"
+    },
+    {
+      "id": "q-0205",
+      "question": "What kind of tree is the tallest in the world?",
+      "answer": "The coast redwood",
+      "wrong_answers": [
+        "The baobab",
+        "The wax palm",
+        "The kapok tree"
+      ],
+      "hints": [
+        "It grows in forests near the coast of California, in the United States.",
+        "The tallest one is taller than a 30-story building.",
+        "Its name tells you the color of its bark and wood."
+      ],
+      "description": "A question you'll need to tilt your head way, way back for.",
+      "fun_fact": "The tallest known redwood is called Hyperion, it is about 116 m (381 ft) tall, and its exact location is kept secret to protect it.",
+      "difficulty": 8,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "0c2dd4c9217a"
+    },
+    {
+      "id": "q-0293",
+      "question": "At a store, you buy 3 empanadas at 2,500 pesos each and a soft drink for 3,000 pesos. You pay with a 20,000-peso bill. How much change do you get?",
+      "answer": "9,500 pesos",
+      "wrong_answers": [
+        "10,500 pesos",
+        "8,500 pesos",
+        "9,000 pesos"
+      ],
+      "hints": [
+        "First work out how much the three empanadas cost.",
+        "The three empanadas cost 7,500 pesos; now add the drink.",
+        "You spend 10,500 pesos in total: subtract that from 20,000."
+      ],
+      "description": "A question to find out if you can afford your snack or need to borrow money from your brother.",
+      "fun_fact": "Colombia's old 20,000-peso bill showed Julio Garavito, an astronomer from Bogotá who has a crater on the Moon named after him.",
+      "difficulty": 5,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "13e8b0df5bac"
+    },
+    {
+      "id": "q-0324",
+      "question": "Which Italian coffee dessert has a name that means “pick me up” or “cheer me up”?",
+      "answer": "Tiramisu",
+      "wrong_answers": [
+        "Panna cotta",
+        "Cannoli",
+        "Zabaione"
+      ],
+      "hints": [
+        "It is served cold, with cocoa powder dusted on top.",
+        "It is built in layers in a dish, using long sponge cookies called ladyfingers.",
+        "Its name starts with “tira”..."
+      ],
+      "description": "A dessert with caffeine: finally, something parents and kids both want to share.",
+      "fun_fact": "Two Italian regions, Veneto and Friuli, have been arguing for years over which one invented tiramisu.",
+      "difficulty": 7,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "687f7e397c1d"
+    },
+    {
+      "id": "q-0359",
+      "question": "In Roman numerals, what number does the letter D stand for?",
+      "answer": "500",
+      "wrong_answers": [
+        "50",
+        "100",
+        "1,000"
+      ],
+      "hints": [
+        "It's a three-digit number.",
+        "It's bigger than C, which stands for 100.",
+        "It's exactly half of M, which stands for 1,000."
+      ],
+      "description": "The Romans conquered half the world without a calculator, and this is how they wrote their sums.",
+      "fun_fact": "The Romans had no symbol at all for zero.",
+      "difficulty": 8,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "8b19bebe1752"
+    },
+    {
+      "id": "q-0416",
+      "question": "An earthquake starts at a point deep underground. What is the point on the surface right above it called?",
+      "answer": "Epicenter",
+      "wrong_answers": [
+        "Hypocenter",
+        "Crater",
+        "Fault"
+      ],
+      "hints": [
+        "This word comes up a lot in the news every time the ground shakes.",
+        "It starts with a Greek prefix that means “on” or “above.”",
+        "It literally means “the center on top.”"
+      ],
+      "description": "When the Earth starts dancing without asking, this is where the party begins… at least when you look from above.",
+      "fun_fact": "The underground point where an earthquake really starts is called the hypocenter, and it can be more than 600 km (370 miles) deep.",
+      "difficulty": 7,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "90a2fd2956b7"
+    },
+    {
+      "id": "q-0461",
+      "question": "What is a baby sheep called?",
+      "answer": "Lamb",
+      "wrong_answers": [
+        "Calf",
+        "Foal",
+        "Kid"
+      ],
+      "hints": [
+        "It's not the baby of a cow or a horse.",
+        "Its mom's wool is used to make scarves.",
+        "Nativity scenes often have a small, white, woolly one next to the shepherds."
+      ],
+      "description": "So fluffy you'd love to use it as a pillow, but it would rather you didn't.",
+      "fun_fact": "A sheep can recognize the faces of about 50 other sheep and remember them for years.",
+      "difficulty": 2,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "72ea11eb40ca"
+    },
+    {
+      "id": "q-0466",
+      "question": "Look at this picture, taken very, very close up: what is it?",
+      "answer": "Butterfly wing",
+      "wrong_answers": [
+        "Snake skin",
+        "Dragonfly wing",
+        "Peacock feather"
+      ],
+      "hints": [
+        "These little tiles are so tiny that, all together, they look like dust.",
+        "Its owner flies, but it isn't a bird.",
+        "If you touch it with your fingers, you're left with a colorful powder."
+      ],
+      "description": "Colorful tiles for a roof the size of a fingernail.",
+      "fun_fact": "The “dust” left on your fingers after touching a butterfly is thousands of tiny scales from its wings.",
+      "difficulty": 6,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "30be29cafd69"
+    },
+    {
+      "id": "q-0502",
+      "question": "What is the longest river in Africa?",
+      "answer": "The Nile",
+      "wrong_answers": [
+        "The Congo",
+        "The Niger",
+        "The Zambezi"
+      ],
+      "hints": [
+        "It crosses a huge desert before it reaches the Mediterranean Sea.",
+        "The ancient Egyptians lived along its banks.",
+        "The pyramids and the pharaohs depended on it for water and crops."
+      ],
+      "description": "A river so long that if you paddle it in a canoe, you'll grow a beard on the way, even if you can't grow one.",
+      "fun_fact": "The Nile runs about 6,650 km (4,130 miles) through 11 countries, and for thousands of years its floods made Egypt's fields fertile.",
+      "difficulty": 5,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "855f1fb1e41b"
+    },
+    {
+      "id": "q-0514",
+      "question": "In the rainforests of Colombia, this animal is called a saíno. It looks like a wild pig, but it isn't one. What group does it really belong to?",
+      "answer": "Peccaries",
+      "wrong_answers": [
+        "Wild boars",
+        "Tapirs",
+        "Hippopotamuses"
+      ],
+      "hints": [
+        "This group lives only in the Americas, from the southern United States down to Argentina.",
+        "They look like pigs, but their family split off from pigs millions of years ago.",
+        "Scientists also call this group tayassuids."
+      ],
+      "description": "It has the face of a pig, the smell of cheap perfume and zero interest in being mistaken for one.",
+      "fun_fact": "The saíno has a gland on its back that gives off a strong smell, and the herd uses it to recognize each other.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "29623331737e"
+    },
+    {
+      "id": "q-0537",
+      "question": "“Half man, half horse” is to centaur as “half woman, half fish” is to…",
+      "answer": "Mermaid",
+      "wrong_answers": [
+        "Fairy",
+        "Nymph",
+        "Medusa"
+      ],
+      "hints": [
+        "She lives in the sea, but she is a creature from legends.",
+        "In the stories, she sings beautifully to lure sailors.",
+        "Ariel, from the Disney movie, is one of them."
+      ],
+      "description": "A singer who never goes on tour because she has no feet.",
+      "fun_fact": "When Christopher Columbus saw manatees in the Caribbean, he wrote that he had seen mermaids, but that they were not as pretty as people painted them!",
+      "difficulty": 2,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "8abd4c4a3691"
+    },
+    {
+      "id": "q-0545",
+      "question": "If you tie a polystyrene foam cup to an underwater robot and send it down more than 6,000 m (19,700 ft), what happens to it?",
+      "answer": "It shrinks into a tiny cup",
+      "wrong_answers": [
+        "It bursts into a thousand bits",
+        "It puffs up like a balloon",
+        "It melts from the heat"
+      ],
+      "hints": [
+        "Think about all the weight of the water above the cup.",
+        "The pressure down there is hundreds of times greater than at the surface.",
+        "Polystyrene foam is full of tiny air bubbles, and the pressure squashes them."
+      ],
+      "description": "Down there, the water squeezes harder than a hug from Grandma.",
+      "fun_fact": "Scientists on deep-sea trips often decorate foam cups and send them to the bottom, and they come back as souvenirs the size of a thimble.",
+      "difficulty": 8,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "505056f0ac44"
+    },
+    {
+      "id": "q-0561",
+      "question": "I'm a saying grandmas repeat when troubles are finally over. I start like this: “After the storm comes the…”. What word do I end with?",
+      "answer": "calm",
+      "wrong_answers": [
+        "night",
+        "rain",
+        "fog"
+      ],
+      "hints": [
+        "Think about how everything feels when the storm finally goes away.",
+        "It also describes a sea with no waves and no wind.",
+        "It rhymes with “palm” and means peace and quiet."
+      ],
+      "description": "A saying for days when everything goes wrong… until it stops going wrong.",
+      "fun_fact": "Many languages share this saying, and Spanish has an equally famous version: “After the storm, the sun comes out.”",
+      "difficulty": 3,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "c7b3e08b59a2"
+    },
+    {
+      "id": "q-0563",
+      "question": "What do you call a river mouth that splits into many branches and forms a triangle, like the Nile's?",
+      "answer": "Delta",
+      "wrong_answers": [
+        "Estuary",
+        "Meander",
+        "Fjord"
+      ],
+      "hints": [
+        "The same word is also used in math and physics.",
+        "It is named after a Greek letter shaped like a triangle.",
+        "It is the fourth letter of the Greek alphabet: alpha, beta, gamma…"
+      ],
+      "description": "A river so long that by the end it gets tired and spreads out like a fan.",
+      "fun_fact": "The Greek historian Herodotus called the mouth of the Nile a “delta” because it looked like the Greek letter Δ.",
+      "difficulty": 7,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "947b23f7729a"
+    },
+    {
+      "id": "q-0594",
+      "question": "In 1816, it snowed in June in Europe because of ash from Tambora, a volcano in Indonesia. Roughly how far is it from Europe?",
+      "answer": "About 12,000 km",
+      "wrong_answers": [
+        "About 300 km",
+        "About 1,500 km",
+        "About 50,000 km"
+      ],
+      "hints": [
+        "Indonesia is on the other side of the world, in Asia.",
+        "No two places on Earth are more than about 20,000 km (12,400 miles) apart.",
+        "It's roughly the distance of a flight from New York to Tokyo."
+      ],
+      "description": "You asked for a summer vacation and got a winter, gift-wrapped with a bow.",
+      "fun_fact": "People called 1816 “the year without a summer”, and the bad weather kept Mary Shelley indoors, where she wrote “Frankenstein”.",
+      "difficulty": 6,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "2f3c350d8385"
+    },
+    {
+      "id": "q-0596",
+      "question": "Riddle: I'm a huge frog from North America. I was raised on farms in other countries, escaped, and now I eat the frogs there. What kind of species am I?",
+      "answer": "Invasive species",
+      "wrong_answers": [
+        "Endemic species",
+        "Migratory species",
+        "Domesticated species"
+      ],
+      "hints": [
+        "It's a problem for the wildlife of the place where it arrived.",
+        "It's the opposite of a species native to that place.",
+        "It's like someone who walks into a stranger's house and takes over everything."
+      ],
+      "description": "A frog with the appetite of a bull and the manners of a guest nobody invited.",
+      "fun_fact": "A bullfrog will eat almost anything that fits in its mouth: insects, fish, other frogs, and even small birds!",
+      "difficulty": 7,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "8cad4256fc3a"
+    },
+    {
+      "id": "q-0604",
+      "question": "A harmless butterfly copies the colors of a bad-tasting one, so birds don't eat it. The trick is named after an English naturalist. What is it called?",
+      "answer": "Batesian mimicry",
+      "wrong_answers": [
+        "Müllerian mimicry",
+        "Darwinian mimicry",
+        "Wallacean mimicry"
+      ],
+      "hints": [
+        "The naturalist spent eleven years collecting insects in the Amazon rainforest.",
+        "He traveled to the Amazon with Alfred Russel Wallace, but the trick isn't named after Wallace.",
+        "His first names were Henry Walter."
+      ],
+      "description": "Nature's most successful Halloween costume is worn all year round.",
+      "fun_fact": "In the Amazon, Henry Walter Bates collected about 14,700 species, and about 8,000 of them were new to science.",
+      "difficulty": 15,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "fb685bdc4a39"
+    },
+    {
+      "id": "q-0652",
+      "question": "Which of these cities is the capital of its country?",
+      "answer": "Abuja",
+      "wrong_answers": [
+        "Istanbul",
+        "New York",
+        "Zurich"
+      ],
+      "hints": [
+        "It is a planned city, built almost from scratch.",
+        "It replaced Lagos as the capital in 1991.",
+        "It is in Nigeria."
+      ],
+      "description": "This influencer's GPS badly needs an update.",
+      "fun_fact": "Nigeria moved its capital to Abuja partly because it is closer to the center of the country than Lagos.",
+      "difficulty": 7,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "5988a5003270"
+    },
+    {
+      "id": "q-0693",
+      "question": "Look at the photo: this Japanese sweet is the favorite food of a famous cartoon character. Whose?",
+      "answer": "Doraemon",
+      "wrong_answers": [
+        "Pikachu",
+        "Hello Kitty",
+        "Totoro"
+      ],
+      "hints": [
+        "This character comes from the future.",
+        "It has a magic pocket full of gadgets.",
+        "It's a blue robot cat with no ears."
+      ],
+      "description": "Two pancakes in a tight hug, with something sweet squeezed in between.",
+      "fun_fact": "The filling of a dorayaki is a sweet red bean paste called “anko.”",
+      "difficulty": 6,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "991323d699f8"
+    },
+    {
+      "id": "q-0708",
+      "question": "Complete: “Fries are to potatoes as coleslaw, the shredded salad with mayonnaise, is to…”",
+      "answer": "Cabbage",
+      "wrong_answers": [
+        "Lettuce",
+        "Cucumber",
+        "Cauliflower"
+      ],
+      "hints": [
+        "It's a vegetable with tightly packed leaves in the shape of a ball.",
+        "The “cole” part comes from a Dutch word for this vegetable.",
+        "It's a relative of broccoli, and sauerkraut is made from it."
+      ],
+      "description": "A salad whose name sounds like a wizard's spell gone slightly wrong.",
+      "fun_fact": "“Coleslaw” comes from the Dutch “koolsla”, which means something like “cabbage salad”.",
+      "difficulty": 7,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "2a6fc2a14019"
+    },
+    {
+      "id": "q-0725",
+      "question": "Look at the photo: Mongolian nomads in the Gobi Desert live in this round home they can take apart and carry along. What is it called?",
+      "answer": "Yurt",
+      "wrong_answers": [
+        "Tepee",
+        "Wigwam",
+        "Igloo"
+      ],
+      "hints": [
+        "It has a wooden frame covered with wool felt.",
+        "It isn't the cone-shaped tent of the North American plains peoples.",
+        "In Mongolian, it's called a “ger.”"
+      ],
+      "description": "A house you can put up, take down and load onto a camel: perfect for escaping unwanted visitors.",
+      "fun_fact": "A Mongolian family can take down its yurt in one or two hours and load it onto just a few animals.",
+      "difficulty": 9,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "7eb5966a6696"
+    },
+    {
+      "id": "q-0729",
+      "question": "It's a natural freshwater pool that forms when the roof of a cave falls in, and Mexico's Yucatán Peninsula has thousands. What is it called?",
+      "answer": "Cenote",
+      "wrong_answers": [
+        "Geyser",
+        "Fjord",
+        "Atoll"
+      ],
+      "hints": [
+        "The Maya used them to get water.",
+        "Many people travel to Mexico to swim in them.",
+        "The word comes from the Maya word “ts'ono'ot”."
+      ],
+      "description": "A natural swimming pool that made itself when the ground got tired of holding up.",
+      "fun_fact": "The Maya believed cenotes were doorways to Xibalba, the underworld.",
+      "difficulty": 10,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "9dd59b3d7e68"
+    },
+    {
+      "id": "q-0738",
+      "question": "Look at this plant: it makes many cats wild with joy. Which plant family does it belong to?",
+      "answer": "The mint family",
+      "wrong_answers": [
+        "The rose family",
+        "The sunflower family",
+        "The grass family"
+      ],
+      "hints": [
+        "Look at the shape of its leaves, with edges like a saw.",
+        "Its cousins are used a lot in cooking and in herbal teas.",
+        "If you crush it, it smells a bit like a plant used in chewing gum and mojitos."
+      ],
+      "description": "The only plant that turns a serious cat into a 1970s hippie.",
+      "fun_fact": "About one in three cats feels nothing at all from catnip: whether a cat reacts to it is inherited.",
+      "difficulty": 10,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "2d1a751d398b"
+    },
+    {
+      "id": "q-0751",
+      "question": "In 1947, fruit flies like this one became the first animals sent into space. Which country launched them?",
+      "answer": "United States",
+      "wrong_answers": [
+        "Soviet Union",
+        "Germany",
+        "France"
+      ],
+      "hints": [
+        "It wasn't the country of Laika the dog.",
+        "They used a V-2 rocket captured after the Second World War.",
+        "The launch took place in the New Mexico desert."
+      ],
+      "description": "Before dogs, monkeys and astronauts, space was reached by the little pest that keeps landing on your bananas.",
+      "fun_fact": "The flies came back alive in a capsule with a parachute, which showed that living things could survive that high up.",
+      "difficulty": 11,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "c1cceb08e785"
+    },
+    {
+      "id": "q-0817",
+      "question": "Riddle me this: I live inside remote controls and toys and give them power, and when I run out, you shouldn't throw me in the regular trash. What am I?",
+      "answer": "A battery",
+      "wrong_answers": [
+        "A light bulb",
+        "A plastic bottle",
+        "A soda can"
+      ],
+      "hints": [
+        "I come in many sizes: AA, AAA, square ones, and round ones as small as buttons.",
+        "When a toy stops turning on, you almost always need to change me.",
+        "I have a “+” end and a “−” end."
+      ],
+      "description": "Tiny, full of energy, and with a very delicate ending: just like a five-year-old cousin after a party.",
+      "fun_fact": "Batteries contain metals like zinc, manganese, and lithium, which can be recovered if you take them to a collection point.",
+      "difficulty": 1,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "102138276d15"
+    },
+    {
+      "id": "q-0863",
+      "question": "A special family dinner, hugs at midnight and presents under the tree on the night of December 24. What is this night called?",
+      "answer": "Christmas Eve",
+      "wrong_answers": [
+        "New Year's Eve",
+        "St. John's Eve",
+        "Halloween"
+      ],
+      "hints": [
+        "It's the night just before Christmas Day.",
+        "It's not the night of December 31.",
+        "It's the night when children wait for Santa Claus to bring presents."
+      ],
+      "description": "The only night of the year when the whole family is awake at midnight and nobody gets scolded.",
+      "fun_fact": "In Spanish it's called “Nochebuena”, which means “the good night”.",
+      "difficulty": 2,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "939cff614ca9"
+    },
+    {
+      "id": "q-0866",
+      "question": "An old atlas says “Macedonia”; a new one says “North Macedonia”. In what year did the official name change?",
+      "answer": "2019",
+      "wrong_answers": [
+        "1991",
+        "2003",
+        "2011"
+      ],
+      "hints": [
+        "It happened only a few years ago, not in the last century.",
+        "The change came after a deal with Greece, which has a region called Macedonia.",
+        "It was just one year before the pandemic began."
+      ],
+      "description": "A country that added a compass direction to its name just to make peace with the neighbors.",
+      "fun_fact": "The fight with Greece over the name “Macedonia” lasted almost 30 years.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "07017349116c"
+    },
+    {
+      "id": "q-0885",
+      "question": "“Colombia is to country as South America is to…”. Which word completes the sentence?",
+      "answer": "Continent",
+      "wrong_answers": [
+        "Ocean",
+        "Island",
+        "City"
+      ],
+      "hints": [
+        "South America is much bigger than Colombia.",
+        "Many countries fit inside South America.",
+        "Africa, Europe and Asia are one too."
+      ],
+      "description": "A word puzzle with more ground to cover than a family road trip.",
+      "fun_fact": "South America has 12 independent countries, and Brazil alone covers almost half of its land.",
+      "difficulty": 3,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "902afd5b0479"
+    },
+    {
+      "id": "q-0919",
+      "question": "I'm a pine tree in the mountains of California, over 4,800 years old. I'm named after a Bible figure famous for living 969 years. Who is he?",
+      "answer": "Methuselah",
+      "wrong_answers": [
+        "Noah",
+        "Moses",
+        "Abraham"
+      ],
+      "hints": [
+        "He was the grandfather of someone famous for building an ark.",
+        "People say someone is “as old as…” him when they mean very, very old.",
+        "His name starts with M."
+      ],
+      "description": "A tree so old its birthday cake would need a whole forest of candles.",
+      "fun_fact": "The exact location of the Methuselah tree is kept secret to protect it from visitors who might want to take home a souvenir.",
+      "difficulty": 11,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "bce07219e520"
+    },
+    {
+      "id": "q-0968",
+      "question": "The name of the Canary Islands comes from Latin and hides an animal. Which one?",
+      "answer": "Dogs",
+      "wrong_answers": [
+        "Canaries",
+        "Crabs",
+        "Horses"
+      ],
+      "hints": [
+        "The Romans already knew about these islands in the Atlantic.",
+        "In Latin, this animal was called “canis.”",
+        "It's the animal that wags its tail when you come home."
+      ],
+      "description": "A name that looks obvious, but has hidden a surprise since Roman times.",
+      "fun_fact": "It's the other way around from what most people think: the canary bird is named after the islands, not the islands after the bird.",
+      "difficulty": 9,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "dc46d8c3ad2e"
+    },
+    {
+      "id": "q-1040",
+      "question": "I'm the Amazon River: in the rainy season I rise several meters and spill into the rainforest. What happens then?",
+      "answer": "Fish swim among the trees",
+      "wrong_answers": [
+        "Pink river dolphins leave for the sea",
+        "Monkeys move down to live on the ground",
+        "The plants stop growing fruit"
+      ],
+      "hints": [
+        "For months, the forest is half underwater.",
+        "Down there, visitors with fins start showing up.",
+        "Some of them eat the fruit that falls from the branches."
+      ],
+      "description": "A river that leaves home every year without asking permission.",
+      "fun_fact": "Some Amazon fish eat fruit and drop the seeds far away, so they help plant the rainforest.",
+      "difficulty": 5,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "2973309053db"
+    },
+    {
+      "id": "q-1051",
+      "question": "A giant tree trunk is hollowed out with fire and an ax, and left long and pointed at both ends. What is it used for?",
+      "answer": "To travel on the river",
+      "wrong_answers": [
+        "To store rainwater",
+        "To store the cassava harvest",
+        "To make music"
+      ],
+      "hints": [
+        "The pointed ends help it cut through something that moves.",
+        "In the rainforest, rivers are like roads.",
+        "It's going to need some paddles."
+      ],
+      "description": "A tree that got hollowed out and found itself a whole new career.",
+      "fun_fact": "Some canoes carved from a single tree trunk can carry more than ten people.",
+      "difficulty": 3,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "a090e2ba7a87"
+    },
+    {
+      "id": "q-1053",
+      "question": "At a school fair, one ticket buys one cupcake. In the carbon credit market, one credit stands for… what?",
+      "answer": "One metric ton of CO₂ kept out of the air",
+      "wrong_answers": [
+        "One kilogram of CO₂ kept out of the air",
+        "One liter of CO₂ kept out of the air",
+        "100 metric tons of CO₂ kept out of the air"
+      ],
+      "hints": [
+        "It's an amount of greenhouse gas.",
+        "It's a fairly big unit, not one you'd use on a kitchen scale.",
+        "It's a thousand kilograms of carbon dioxide."
+      ],
+      "description": "Polluting with permission: the grown-up version of “I'll trade you my dessert for your homework.”",
+      "fun_fact": "Carbon credits became famous with the Kyoto Protocol, adopted in Japan in 1997.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "f4f6d344fd71"
+    },
+    {
+      "id": "q-1118",
+      "question": "I'm a famous saint of Ireland. Legend says I taught with a three-leaf clover, and on my day, March 17, half the world wears green. Who am I?",
+      "answer": "Saint Patrick",
+      "wrong_answers": [
+        "Saint Valentine",
+        "Saint Nicholas",
+        "Saint George"
+      ],
+      "hints": [
+        "I lived more than a thousand years ago.",
+        "A huge cathedral in New York is named after me.",
+        "In Irish, my name is Pádraig."
+      ],
+      "description": "A saint so green that even his symbol is a plant.",
+      "fun_fact": "In Chicago, the city's river is dyed green to celebrate Saint Patrick's Day.",
+      "difficulty": 7,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "5aed271d607c"
+    },
+    {
+      "id": "q-1141",
+      "question": "I'm fried dough eaten at Christmas. In Mexico I'm flat and crunchy with honey; in Colombia I'm a little cheese ball. What am I?",
+      "answer": "Buñuelo",
+      "wrong_answers": [
+        "Arepa",
+        "Empanada",
+        "Churro"
+      ],
+      "hints": [
+        "I'm fried in very hot oil.",
+        "In Spain I'm sometimes filled with cream.",
+        "My name starts with “Bu”."
+      ],
+      "description": "Dough, hot oil and a little patience: the recipe for happiness in December.",
+      "fun_fact": "Buñuelos came to the Americas with the Spanish, and each country changed them in its own way.",
+      "difficulty": 8,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "c0ad04026954"
+    },
+    {
+      "id": "q-1199",
+      "question": "Which insects ooze a yellow liquid from their legs when disturbed and are set loose in vegetable gardens to eat aphids?",
+      "answer": "Ladybugs",
+      "wrong_answers": [
+        "Bees",
+        "Butterflies",
+        "Ants"
+      ],
+      "hints": [
+        "These insects are hunters.",
+        "Farmers use them as a natural way to control pests.",
+        "They are usually red with black spots."
+      ],
+      "description": "A tiny bug that drinks your plants' juice without asking first.",
+      "fun_fact": "Some ants look after aphids like cows, so they can drink the sweet liquid the aphids give off.",
+      "difficulty": 5,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "84177ea4eaa3"
+    },
+    {
+      "id": "q-1227",
+      "question": "I'm a fermented milk from the Caucasus, made with little white grains that look like tiny cauliflower. What am I?",
+      "answer": "Kefir",
+      "wrong_answers": [
+        "Yogurt",
+        "Kumis",
+        "Lassi"
+      ],
+      "hints": [
+        "My grains are a mix of bacteria and yeasts.",
+        "I taste a little sour and a bit fizzy.",
+        "My name starts with K and ends with R."
+      ],
+      "description": "A milk that comes with its own little pets.",
+      "fun_fact": "Kefir grains grow and multiply, so you can give some away for others to make their own kefir.",
+      "difficulty": 10,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "43a271f8115e"
+    },
+    {
+      "id": "q-1468",
+      "question": "It's reddish, it comes out of a hippo's skin, and it isn't blood. Which human product does it act like?",
+      "answer": "Sunscreen",
+      "wrong_answers": [
+        "Perfume",
+        "Hair dye",
+        "Glue"
+      ],
+      "hints": [
+        "Hippos spend many hours under the African sun.",
+        "Their skin is delicate and cracks easily.",
+        "You'd put it on at the beach so you don't get burned."
+      ],
+      "description": "The hippo has its own beauty line, and it refuses to sell it.",
+      "fun_fact": "This “red sweat” also helps keep the hippo's wounds from getting infected.",
+      "difficulty": 7,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "fa0326de67f9"
+    },
+    {
+      "id": "q-1697",
+      "question": "Look at this huge fossil tooth with saw-like edges. What kind of animal did it come from?",
+      "answer": "A shark",
+      "wrong_answers": [
+        "A dinosaur",
+        "A crocodile",
+        "A whale"
+      ],
+      "hints": [
+        "Its owner lost teeth all its life and kept growing new ones.",
+        "Its owner had no bones, only cartilage.",
+        "It was a giant sea hunter with fins, and its living relatives still hunt in every ocean."
+      ],
+      "description": "This owner would have needed a very big toothbrush, and a whole box of spares.",
+      "fun_fact": "A shark can go through thousands of teeth in its life: the spare ones move forward in rows, like on a conveyor belt.",
+      "difficulty": 6,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "8d069e5ebc83"
+    },
+    {
+      "id": "q-1705",
+      "question": "In an official agility competition under FCI rules, the dog zigzags through the weave poles. How many poles are there?",
+      "answer": "12",
+      "wrong_answers": [
+        "8",
+        "10",
+        "16"
+      ],
+      "hints": [
+        "It's an even number.",
+        "It's more than 10.",
+        "It's the same as the number of months in a year."
+      ],
+      "description": "A dog that dodges obstacles better than you do at the mall on the first day of a big sale.",
+      "fun_fact": "Agility was born in England in the late 1970s, inspired by show jumping competitions for horses.",
+      "difficulty": 15,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "de66d6c3beca"
+    },
+    {
+      "id": "q-1781",
+      "question": "It's French, has a white rind, is named after a region near Paris, and legend says it was crowned “king of cheeses” in 1815. Which is it?",
+      "answer": "Brie",
+      "wrong_answers": [
+        "Camembert",
+        "Roquefort",
+        "Gruyère"
+      ],
+      "hints": [
+        "It's soft and creamy inside.",
+        "Its rind is white and velvety, not blue and not hard.",
+        "Its name is short: just four letters."
+      ],
+      "description": "A cheese with a crown, a white cape and the airs of French royalty.",
+      "fun_fact": "Legend says diplomats at the Congress of Vienna held a cheese contest, and Brie won.",
+      "difficulty": 10,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "b7fe98c81e47"
+    },
+    {
+      "id": "q-1834",
+      "question": "Take a close look at this tail. Which snake does it belong to?",
+      "answer": "Rattlesnake",
+      "wrong_answers": [
+        "Cobra",
+        "Anaconda",
+        "Boa"
+      ],
+      "hints": [
+        "Its rings are made of keratin, just like your fingernails.",
+        "When it feels in danger, it shakes it like a maraca.",
+        "Its name includes a noisy baby toy."
+      ],
+      "description": "A tail that comes with its own soundtrack.",
+      "fun_fact": "Every time the snake sheds its skin, a new segment is added to its rattle.",
+      "difficulty": 4,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "efbfa6eca694"
+    },
+    {
+      "id": "q-1967",
+      "question": "I'm Hanno, a white elephant. In 1514, I traveled from Lisbon to Rome as a gift. Who kept me as a pet?",
+      "answer": "A pope",
+      "wrong_answers": [
+        "A Roman emperor",
+        "An Egyptian pharaoh",
+        "An Ottoman sultan"
+      ],
+      "hints": [
+        "By 1514, Rome hadn't had an emperor for about a thousand years.",
+        "My owner lived in the middle of Rome and was very important to Catholics.",
+        "My owner's name was Leo X."
+      ],
+      "description": "Once upon a time, there was a pet so big it couldn't fit through any door.",
+      "fun_fact": "Hanno is said to have knelt before his owner and sprayed the crowd with water from his trunk.",
+      "difficulty": 8,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "39e083d8193b"
+    },
+    {
+      "id": "q-2123",
+      "question": "This chocolate is named after a very expensive delicacy that dogs or pigs sniff out underground. What kind of living thing is that delicacy?",
+      "answer": "A fungus",
+      "wrong_answers": [
+        "A tuber",
+        "A seed",
+        "A snail"
+      ],
+      "hints": [
+        "It grows attached to the roots of trees like the oak.",
+        "It reproduces with spores.",
+        "It's a relative of mushrooms."
+      ],
+      "description": "A chocolate dressed up as something pigs hunt down with their noses.",
+      "fun_fact": "Chocolate truffles were invented in France and got their name because they look like black truffles covered in soil.",
+      "difficulty": 9,
+      "status": "approved",
+      "batch": "tr-en-1",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-10-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "2cc3789f75eb"
+    }
+  ]
+}
