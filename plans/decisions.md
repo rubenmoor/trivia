@@ -50,7 +50,7 @@ Template:
 - Context: OQ-6, OQ-7 and OQ-9 were open. The developer described the players.
 - Decision: The players are two Colombian kids, aged 11 and 12. All content is in Spanish, Colombian usage ("bombillo", "gripa", "crispetas"), with Colombian references where natural. Difficulty is a 1–10 scale: 1 = a 6-year-old can answer it, 10 = a 16-year-old can answer it. The first pool targets ~120 questions (10 games of 12).
 - Consequences: Distractors and hints must suit kids. The pool is spread evenly over the 10 levels (12 per level) until OQ-3 decides the ladder curve.
-- Supersedes / related: OQ-6, OQ-7, OQ-9; QP-1, QP-3
+- Supersedes / related: OQ-6, OQ-7, OQ-9; QP-1, QP-3; amended by D-107 (Colombian usage no longer for `base`: `colombia` only)
 
 ## D-7: Question format
 - Date: 2026-10-06
@@ -649,7 +649,7 @@ Template:
     - No finer variants; regional flavour comes from bundles (later e.g. `mexico`, `argentina`).
   - **Steam store languages:** Spanish – Latin America, Spanish – Spain, English, German.
 - Consequences: LUI-5 = `en`, `de` catalogs plus an `es-ES` override of `es`; QT-6 targets `en`, `de`; the house style says neutral Latin American Spanish for `base`. D-75's target applies to es, en, de; whether a translated pool counts toward a language's 5000 is left to 15b/S4 (not decided here). Plan 24 (`en.ts`) becomes launch work.
-- Supersedes / related: D-6 (Colombian usage, now `colombia` only), D-39, D-49, D-50, D-75; plans 15, 15a, 15b, 15c, 24, 37, 38
+- Supersedes / related: D-6 (Colombian usage, now `colombia` only), D-39, D-49, D-50, D-75; plans 15, 15a, 15b, 15c, 24, 37, 38; amended by D-107 (`base` drafted in `en`; `es` from translation, idiomatic Latin American; `es-ES` its own question pool)
 
 ## D-79: The Steam release bar is D-56's quality bar
 - Date: 2026-10-12
@@ -719,7 +719,7 @@ Template:
   - **Media in scan runs (`neutralize`, `tighten`; task 1194):** a slot keeps the pool's pick (no search, research, re-pick or download) unless `fix` changed it or it has no usable pick; `qgen rework` still searches again (QG-23).
   - **`es-ES` for questions:** no `questions.es-ES.json` at launch; the scan lists words with no pan-Hispanic form, a sparse override can follow if there are many.
 - Consequences: RUNBOOK and AGENTS.md list `qgen neutralize` (only when the developer asks); a run gets a batch's QC (`authoring/QC.md`). It stales touched translations (D-81), so full translation runs come after it. The run itself is masterplan part 11.
-- Supersedes / related: D-6, D-36, D-56, D-78, D-79, D-81; B-13; plan 64; pm decision 32
+- Supersedes / related: D-6, D-36, D-56, D-78, D-79, D-81; B-13; plan 64; pm decision 32; amended by D-107 (`base` voice idiomatic Latin American, not understood in Spain; `es-ES` its own pool, `questions.es-ES.json`; `qgen neutralize` only on es-sourced questions)
 
 ## D-84: Per-locale targets and gaps
 - Date: 2026-10-12
@@ -731,7 +731,7 @@ Template:
   - `draft` and the subcategory ranking for `base`: the `es` deficit while any (D-54); then the source shortfall, so `es` drafting goes past its target; even weights (D-40) when both are zero.
   - Simulation bottlenecks are information, not weights.
 - Consequences: `qgen report --locale L`, `--simulate`'s target check and `--cost` (`es` sources past the target) use it. Whether `es` grows past 5000 is part of the release budget (plan 70 task 463).
-- Supersedes / related: D-40, D-53, D-54 (amends), D-75, D-78, D-81; pm decision 37; amended by D-99 (regional bundles: 2000 approved each)
+- Supersedes / related: D-40, D-53, D-54 (amends), D-75, D-78, D-81; pm decision 37; amended by D-99 (regional bundles: 2000 approved each); amended by D-107 (two-stage source shortfall gone: English drafting aims at the four question locales' deficits)
 
 ## D-85: Base bundles and bundle languages
 - Date: 2026-10-12
@@ -762,6 +762,7 @@ Template:
 - Consequences: only `es` ships today, so no rows and no screen; `en`, `de`, `es-ES` catalogs (plans 24, 69) and translated pools (plan 66) turn them on with no code change. Steam client language: milestone 10, `guessTag()`.
 - Supersedes / related: plan 68's earlier "no first-start language screen"; D-59, D-70, D-78, D-81, D-82; pm decisions 26, 27, 36
 - **Superseded in part by D-96** (one language for UI and questions: no question-language setting or option list, no Esc menu rows; changed only on Start).
+- **Amended by D-107**: `es-ES` → questions `es-ES` (own pool), no longer `es`.
 
 ## D-87: Translations through `qgen batch --translate`
 - Date: 2026-10-12
@@ -776,7 +777,7 @@ Template:
   - **Stop (exit 2, D-55):** after the pilot `tr-<locale>-1` always, and after a run failing a threshold that applies (decision 45), until `qgen health ack <run> "<note>"`.
   - **Text in media** is never a problem (decision 35): no `media_text` flag, no media problem for it.
 - Consequences: RUNBOOK step 2 names `--translate`; QC adds a native-speaker spot check for `tr-*` runs (review view per locale: plan 67). Commit lines: the locale file, `pool.<locale>.json`, the report, `questions.json` when `translatable` changed.
-- Supersedes / related: D-36 (amends), D-55, D-56, D-79, D-81, D-84; plan 66; pm decisions 35, 45, 110, 112
+- Supersedes / related: D-36 (amends), D-55, D-56, D-79, D-81, D-84; plan 66; pm decisions 35, 45, 110, 112; amended by D-107 (sources in either locale, `es` and `es-ES` as targets)
 
 ## D-88: Gamemaster mode: configure screen fields and gamemaster menu
 - Date: 2026-10-12
@@ -903,7 +904,7 @@ Template:
   - **Question locale** (`localeOf` / `nextLocale` in `lib/engine.ts`): the language if `pool.<language>.json` exists and its default bundles' supply passes, else `es` (`pool.json`, es bundles via `bundlesFor`). Used for `loadEngineData`, `newGame`'s locale (from the loaded data) and the bundles offered. All UI languages stay selectable; en, de, es-ES and mod UI languages play the Spanish questions until their translation ships.
   - **POLYGLOT** counts `GameRow.locale`: a de UI on Spanish questions is an `es` game.
 - Consequences: «Idioma de las preguntas» and its strings gone; the play-test's en/de question language check is replaced by this (plan 30).
-- Supersedes / related: D-86 in part (two settings, the question-language option list, the Esc menu rows, first start setting both); D-70, D-78, D-82, D-85; pm decisions 36, 50, 156, 157
+- Supersedes / related: D-86 in part (two settings, the question-language option list, the Esc menu rows, first start setting both); D-70, D-78, D-82, D-85; pm decisions 36, 50, 156, 157; amended by D-107 (`es-ES` plays `pool.es-ES.json` once its supply passes)
 
 ## D-97: Bundle selection in every mode
 - Date: 2026-10-14
@@ -1044,3 +1045,15 @@ Template:
 - Consequences:
   - Steamworks launch options, `trivia-steam stage`, `smoke.mjs`, `release_check.py` (modkit), `modding/` docs, README, plan 18
 - Supersedes / related: D-50, D-73 (artefact names), D-94; B-11; pm decisions 87, 176
+
+## D-107: English-first drafting for `base`
+- Date: 2026-10-16
+- Context: milestone 9, "English-first drafting for `base`" (developer, 2026-10-15); plan 148 (tasks 1231–1240). Questions should travel to every language; Spanish drafts tied the pool to one market and made `en`/`de` translation-only.
+- Decision:
+  - **Source locale per question** (pm decision 235): `locale` on every source in `questions.json`, absent = `es`; `base` from batch-9 `en`, `base` ≤ batch-8 `es`, regional bundles their region's language. `questions.<L>.json` = translations into L of sources whose locale ≠ L (new `questions.es.json`, `questions.es-ES.json`); pool for L = approved sources in L + playing translations into L.
+  - **Four question locales:** `en`, `es` (es-419, idiomatic Latin American, no compromise with Spain), `es-ES` (Spain's Spanish, own pool `pool.es-ES.json`), `de`; target 5000 approved each (D-75, pm decision 21).
+  - **Drafting:** `qgen batch` for `base` drafts in English, international angle (no Spanish-world focus, no Anglo/US bias, no one-language wordplay); the whole chain on the English text; each en source → three translation jobs (`es`, `es-ES`, `de`). es-sourced questions stay es-sourced and get `en`, `de`, `es-ES` entries.
+  - **Gap aiming:** the four question locales' deficits steer English drafting (pm decision 236); milestone 12's locales only by plan 60's decision.
+  - **Regional bundles unchanged:** drafted in the region's language (`colombia`: Colombian Spanish), translated to `en` (D-99).
+- Consequences: plan 148: schema/export, `es-ES` pool in the game, `qgen batch` per locale, `--translate` from either source, targets, review tool, prompts, docs; batch-9 waits for it.
+- Supersedes / related: amends D-6 (Colombian usage not for `base`), D-78 and D-83 (es-419 by translation, `es-ES` own pool), D-84 (two-stage source shortfall), D-86 / D-96 (`es-ES` questions), D-87 (es the only source locale); pm decisions 27 (for `base`, pending decision 237), 37 (last clause), 219, 235, 236
