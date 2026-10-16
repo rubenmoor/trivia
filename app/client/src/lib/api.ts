@@ -1,3 +1,4 @@
+import { devMode } from "./desktop.ts";
 import * as engine from "../engine/api.ts";
 import { gameChoice, jokersUsed, playerMode, view } from "../engine/game.ts";
 import { seededRng } from "../engine/rng.ts";
@@ -227,7 +228,7 @@ async function hooked(action: string, input: object, scope: DataScope): Promise<
       const game = action === "new" && running ? view(save, data, { ...io, rng: seededRng(0) }) : null;
       seen.before = { id: row.id, result: row.result, question: row.state.current ?? null, level: row.state.level, game };
     }
-    return engine.gameAction(save, data, io, action, body as Record<string, unknown>);
+    return engine.gameAction(save, data, io, action, { ...body, ...(devMode ? { dev: true } : {}) } as Record<string, unknown>);
   };
   const out = await run(route, scope);
   events(action, body, seen.before, out.game);

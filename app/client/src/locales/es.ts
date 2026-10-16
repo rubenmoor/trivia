@@ -287,6 +287,10 @@ const es = {
     /** «¿Cómo juega <name>?» with the name highlighted. */
     titleOpen: "¿Cómo juega ",
     titleClose: "?",
+    /** Title in the multiplayer modes: no single name. */
+    titleMany: "¿Cómo juegan?",
+    /** rr-competitive: no group line here, each seat picks its own on the Join screen. */
+    groupsEach: "Cada jugador elige su edad en la siguiente pantalla",
     groups: "Edad",
     ages: "{lo}–{hi} años",
     agesFrom: "{lo}+ años",
@@ -308,6 +312,15 @@ const es = {
     solo: "Solo o en grupo",
     soloAbout: "Sin trucos, comodines estándar",
     soloKey: "G",
+    rrCoop: "Por turnos en equipo",
+    rrCoopAbout: "Juegan todos juntos contra el juego",
+    rrCoopKey: "E",
+    rrCompetitive: "Por turnos, todos contra todos",
+    rrCompetitiveAbout: "Cada uno juega su propia partida",
+    rrCompetitiveKey: "T",
+    timed: "Contrarreloj",
+    timedAbout: "Quien reclama la pregunta, responde",
+    timedKey: "R",
   },
   /** «Personalizar partida» in «Solo o en grupo» (MD-7): the joker counts. */
   customize: {
