@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // trivia-gallery's demo saves (plan 100): built with the engine on the es pool, made-up players.
 // Usage: node authoring/tools/gallery_saves.mjs <ui locale> → JSON {saves: {name: save}, meta: {name: {...}}} on stdout.
-import { answer, pick } from "../../app/client/src/engine/game.ts";
+import { answer, pick, view } from "../../app/client/src/engine/game.ts";
 import { baseSave, checkVersion, io, latestState, PLAYERS, playTo, rightOf } from "./demo_saves.mjs";
 import { loadData } from "./engine_data.mjs";
 
@@ -20,14 +20,15 @@ function best(ids) {
 
 const base = () => baseSave(ui, "es");
 
-/** `player` plays to `level` (the levels below won); `onQuestion`: its best card picked. */
+/** `player` plays to `level` (the levels below won); `onQuestion`: its best card picked, every joker playable first. */
 function play(save, player, level, opts, onQuestion) {
   save = playTo(data, save, player, level, opts);
-  if (onQuestion) {
-    const s = latestState(save);
-    ({ save } = pick(save, data, io(), s.options.indexOf(best(s.options))));
-  }
-  return save;
+  if (!onQuestion) return save;
+  const { options } = latestState(save);
+  const picked = options.map((id) => pick(structuredClone(save), data, io(), options.indexOf(id)).save);
+  const allJokers = (s) => Object.values(view(s, data, io()).jokers).every((j) => j.available);
+  const ok = options.filter((_, i) => allJokers(picked[i]));
+  return picked[options.indexOf(best(ok.length ? ok : options))];
 }
 
 /** History: a won and a lost game, so Player, Victory and Wrong have counts to show. */
