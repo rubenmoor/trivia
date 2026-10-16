@@ -242,6 +242,8 @@ export const en = {
     print: "Print",
   },
   bundles: {
+    /** Start disabled: the chosen bundles have no question for the game (plan 151). */
+    noQuestions: "None of the chosen bundles has questions for this game",
     titleOpen: "Which questions does ",
     titleClose: " play?",
     baseHeading: "Pick one",
@@ -457,7 +459,7 @@ export const en = {
     bundle_unknown: "unknown bundle: '{bundle}'",
     bundles_not_list: "bundles must be a list",
     bundle_not_offered: "the bundle '{bundle}' isn't available in this language",
-    base_bundle_count: "pick exactly one base bundle",
+    no_questions: "no questions for this choice: pick a bundle that has some",
     difficulty_invalid: "custom difficulty: 1 to 15, end not below start",
     levels_invalid: "number of levels: {min} to {max}",
     cards_invalid: "cards per level: {min} to {max}",

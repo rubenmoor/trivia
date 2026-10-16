@@ -9,7 +9,7 @@ Everything runs locally and offline: the game (a Svelte client with the game eng
 **The family game is done** (October 2026): a full game night on the TV with sound, jokers and the final look, played by player name without touching code.
 
 - **Questions:** about 2,140 approved (base ~2,040, «Regional: Colombia» ~100) on the shared difficulty scale 1–15 (D-38), with images, audio or video; more batches are being made.
-- **Age groups and bundles:** before each game the Bundles screen picks one base bundle and any regional bundles, then the Choice screen an age group (or a custom difficulty range in gamemaster mode); the game offers only the bundles of its language (milestone 5).
+- **Age groups and bundles:** before each game the Bundles screen the Choice screen sets an age group (or a custom difficulty range in gamemaster mode), then the Bundles screen toggles any combination of bundles, base and regional (start needs at least one question); the game offers only the bundles of its language (milestone 5).
 - **Modes:** gamemaster mode (configure screen, Esc menu cheats; «Responder para avanzar» off: the padlock only reveals the answer, no win or loss) and «Solo o en grupo» (standard jokers, no skips); the three multiplayer modes are specified, not built (D-74, D-77, D-80, D-105; [`plans/13-game-modes.md`](plans/13-game-modes.md)).
 - **Engine:** the referee runs in the browser (TypeScript, `app/client/src/engine/`); the Python server only serves files and the save (D-90).
 - **UI:** every on-screen string comes from a catalog (`es`, `es-ES`, `en`, `de`); one language setting for UI and questions, picked at first start; question translations aren't shipped yet, so every language plays the Spanish questions.

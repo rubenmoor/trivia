@@ -259,8 +259,10 @@ function seatsSupply(save: SaveData, data: EngineData, choices: Choice[]): Suppl
   return { ok: !levels.some((l) => l.missing), available: avail.length, levels };
 }
 
-/** «supply_short» naming the levels that miss questions; `report` goes to the client. */
+/** «no_questions» when no level has a candidate (e.g. no bundle chosen), else «supply_short» naming the levels
+ * that miss questions; `report` goes to the client. */
 function supplyShort(report: Supply): GameError {
+  if (report.levels.every((l) => l.candidates === 0)) return new GameError("no_questions", {}, report);
   const short = report.levels.filter((l) => l.missing)
     .map((l) => ({ level: l.level, lo: l.range[0], hi: l.range[1], missing: l.missing, ...(l.seat === undefined ? {} : { seat: l.seat }) }));
   return new GameError("supply_short", { levels: short }, report);

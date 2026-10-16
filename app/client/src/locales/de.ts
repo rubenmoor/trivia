@@ -242,6 +242,8 @@ export const de = {
     print: "Drucken",
   },
   bundles: {
+    /** Start disabled: the chosen bundles have no question for the game (plan 151). */
+    noQuestions: "Keines der gewählten Pakete hat Fragen für dieses Spiel",
     titleOpen: "Welche Fragen spielt ",
     titleClose: "?",
     baseHeading: "Eines wählen",
@@ -456,7 +458,7 @@ export const de = {
     bundle_unknown: "unbekanntes Paket: „{bundle}“",
     bundles_not_list: "die Pakete müssen eine Liste sein",
     bundle_not_offered: "das Paket „{bundle}“ gibt es in dieser Sprache nicht",
-    base_bundle_count: "genau ein Grundpaket wählen",
+    no_questions: "keine Fragen für diese Auswahl: ein Paket mit Fragen wählen",
     difficulty_invalid: "eigene Schwierigkeit: 1 bis 15, das Ende nicht unter dem Anfang",
     levels_invalid: "Anzahl der Stufen: {min} bis {max}",
     cards_invalid: "Karten pro Stufe: {min} bis {max}",

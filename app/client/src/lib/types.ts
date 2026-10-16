@@ -48,7 +48,7 @@ export interface Choice {
   /** null with a custom `difficulty`. */
   age_group: string | null;
   difficulty: Difficulty | null;
-  /** In bundles.json order, exactly one base bundle (plan 71). */
+  /** In bundles.json order, any combination (plan 71, plan 151). */
   bundles: string[];
   /** 1–20. */
   levels: number;

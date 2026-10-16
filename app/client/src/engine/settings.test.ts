@@ -134,7 +134,7 @@ test("cheats: settings mid-game; a refusal keeps the game", () => {
   assert.deepEqual([s.level, s.settings.difficulty, s.settings.age_group, s.history.length], [2, { start: 10, end: 14 }, undefined, 1]);
   cardsInRange({ difficulty: { start: 10, end: 14 } })(s);
   refused(save, "settings", { difficulty: { start: 15, end: 15 } }, "supply_short");
-  refused(save, "settings", { bundles: [] }, "base_bundle_count");
+  refused(save, "settings", { bundles: [] }, "no_questions");
   save = ok(save, "settings", { age_group: "young_teens" });
   assert.deepEqual([stateOf(save).settings.age_group, stateOf(save).settings.difficulty], ["young_teens", undefined]);
 });

@@ -3,9 +3,9 @@
 
   export type Bundle = ChoiceOptions["bundles"][number];
 
-  /** `selected` after picking `b`: a base bundle replaces the other base bundle; another bundle toggles. */
+  /** `selected` after picking `b`: every bundle toggles, base ones too (any combination, plan 151). */
   export function toggled(bundles: Bundle[], selected: string[], b: Bundle): string[] {
-    const on = (x: Bundle) => (b.base && x.base ? x.id === b.id : x.id === b.id ? !selected.includes(x.id) : selected.includes(x.id));
+    const on = (x: Bundle) => (x.id === b.id ? !selected.includes(x.id) : selected.includes(x.id));
     return bundles.filter(on).map((x) => x.id);
   }
 
@@ -31,8 +31,8 @@
 </script>
 
 <script lang="ts">
-  // Shared bundle selector (D-88): the base bundles as a radio group, apart from the others (toggles);
-  // exactly one base bundle (D-85). Bundles screen in every mode (plan 151): two columns, names only, the optional
+  // Shared bundle selector (D-88): every bundle a toggle, base ones apart from the others; any combination
+  // (plan 151). Bundles screen in every mode (plan 151): two columns, names only, the optional
   // column scrolls with focus; «Ajustes de la partida» (MD-12): compact, with descriptions.
   import { playerRegion } from "../lib/desktop.ts";
   import { t } from "../lib/i18n.ts";
@@ -95,9 +95,9 @@
   <div class="bundles large" data-line>
     <div class="column">
       <h2 class="heading">{t("bundles.baseHeading")}</h2>
-      <div class="group" role="radiogroup">
+      <div class="group">
         {#each base as b, i (b.id)}
-          {@render tile(b, "radio", first + i)}
+          {@render tile(b, first + i)}
         {/each}
       </div>
     </div>
@@ -115,7 +115,7 @@
           onfocusin={follow}
         >
           {#each others as b, i (b.id)}
-            {@render tile(b, "switch", first + base.length + i)}
+            {@render tile(b, first + base.length + i)}
           {/each}
         </div>
       </div>
@@ -123,30 +123,30 @@
   </div>
 {:else}
   <div class="bundles" data-line>
-    <div class="group" role="radiogroup">
+    <div class="group">
       {#each base as b, i (b.id)}
-        {@render tile(b, "radio", first + i)}
+        {@render tile(b, first + i)}
       {/each}
     </div>
     {#if others.length}
       <span class="divider"></span>
       <div class="group">
         {#each others as b, i (b.id)}
-          {@render tile(b, "switch", first + base.length + i)}
+          {@render tile(b, first + base.length + i)}
         {/each}
       </div>
     {/if}
   </div>
 {/if}
 
-{#snippet tile(b: Bundle, role: "radio" | "switch", i: number)}
+{#snippet tile(b: Bundle, i: number)}
   {@const on = selected.includes(b.id)}
   {@const key = keyOf(b)}
   <button
     class="tile bundle glass"
     class:on
     style:--i={i}
-    {role}
+    role="switch"
     aria-checked={on}
     onclick={() => toggle(b)}
     disabled={busy}
@@ -157,7 +157,7 @@
       {#if b.region}<Flags country={b.country} />{:else}<Icon name={b.source === "mod" ? "puzzle" : b.base ? "book" : "pin"} />{/if}
       {b.name}
     </span>
-    {#if role === "switch"}<span class="switch label">{t(on ? "choice.on" : "choice.off")}</span>{/if}
+    <span class="switch label">{t(on ? "choice.on" : "choice.off")}</span>
     {#if !large}<span class="label description">{b.description}</span>{/if}
     {#if b.source === "mod"}<span class="label made"><Icon name="puzzle" /> {t("bundles.playerMade", { mod: b.modName ?? "" })}</span>{/if}
   </button>

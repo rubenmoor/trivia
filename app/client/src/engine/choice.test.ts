@@ -104,12 +104,12 @@ test("defaults per locale: the first base bundle and the locale's other bundles"
   assert.deepEqual(game.defaultChoice(twoBases).bundles, ["base", "colombia"]);
 });
 
-test("not exactly one base bundle, or a bundle not offered → 409, save unchanged", () => {
+test("an empty selection or a bundle not offered → 409, save unchanged; base off is fine", () => {
+  assert.deepEqual(game.resolveChoice(data, { bundles: ["colombia"] }).bundles, ["colombia"]);
+  assert.deepEqual(game.resolveChoice(twoBases, { bundles: ["base", "base2"] }).bundles, ["base", "base2"]);
   const save = game.newGame(emptySave(), data, io(11), "ana").save;
   for (const [d, bundles, code] of [
-    [data, [], "base_bundle_count"],
-    [data, ["colombia"], "base_bundle_count"],
-    [twoBases, ["base", "base2"], "base_bundle_count"],
+    [data, [], "no_questions"],
     [enData, ["base", "colombia"], "bundle_not_offered"],
   ] as const) {
     const at = { ...save, language: d.locale };
