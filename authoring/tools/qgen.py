@@ -1278,11 +1278,17 @@ def cmd_rate(args):
         qs = [q for _, qq in group for q in qq]
         items = [{**for_review(q), "overlap_candidates": cands.get(q["tmp_id"], []),
                   **({"translated_from": LANGUAGES[q["source_locale"]]} if q.get("source_locale") else {})} for q in qs]
-        user = "## Questions\n" + json.dumps(items, ensure_ascii=False)
         system = prompt("house-style", "rate", locale=text_locale(d), bundle=run_bundle(d),
                         source_locale=qs[0].get("source_locale"))
-        out = claude(system, user, RATE_SCHEMA, args.model, d)
-        got = {r["id"]: r for r in out["ratings"]}
+
+        def ask(its):
+            user = "## Questions\n" + json.dumps(its, ensure_ascii=False)
+            return {r["id"]: r for r in claude(system, user, RATE_SCHEMA, args.model, d)["ratings"]}
+
+        got = ask(items)
+        lost = [it for it in items if it["id"] not in got]
+        if lost:  # the model sometimes skips one item every time; a narrower call rates it
+            got |= ask(lost)
         missing = []
         for name, qq in group:
             ids = [q["tmp_id"] for q in qq]
