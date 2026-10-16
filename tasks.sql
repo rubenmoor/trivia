@@ -172,6 +172,8 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 
  once we have 5000 questions and a good reason to assume the quality is fine, we are done with this.
 
+ from batch-9 on, base questions are drafted in English with an international angle, then translated to es, es-ES and de (milestone 9, "English-first drafting for `base`"). batch-9 is the first English batch.
+
  cf. those past plans for reference:
 
  Plan files: `plans/02-question-pool.md`, `plans/06-images.md`, `plans/07-question-generation.md`, `plans/20-pipeline-efficiency.md`, `plans/21-age-groups.md`, `plans/23-media-providers.md`.', '2026-10-11T20:08:18Z', NULL, 0);
@@ -415,6 +417,16 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
   - new names wherever joker names appear: catalogs and keys, `/comodines`, style guide glossaries, store texts
   - the dialog that follows a joker (e.g. category pick, snipe) shows the joker''s symbol
   - lands before the playtests (decisions 62–65)
+- English-first drafting for `base` (developer, 2026-10-15):
+  - from batch-9 on, `qgen batch` for `base` drafts in English: `en` is the source locale of every new `base` question; the whole chain (concepts, drafts, rating, fact-check, revision, media, audit, review tool, spot check, rework) works on the English text
+  - angle: international; questions travel to every language (es, es-ES, de, milestone 12''s); no Spanish-speaking-world focus, no Anglo/US bias, no wordplay that only works in one language
+  - two Spanish question locales, like the UI: `es` (es-419) and `es-ES`, each its own pool; an English-sourced question gets three translation jobs: en → es, en → es-ES, en → de
+  - Spanish voices: `es` is idiomatic Latin American Spanish, no longer a compromise with Spain (drop "understood … in Spain" from `base`''s voice and the Spain-oriented rules from `neutralize.md`); `es-ES` is Spain''s Spanish; both are translation/adaptation targets with their own style
+  - existing Spanish `base` questions (up to batch-8) stay es-sourced: `neutralize-1` (decision 214) and the es → en / es → de pilots run as planned; they also need an es-ES pool entry
+  - regional bundles unchanged: drafted in the region''s language (`colombia`: Colombian Spanish), then translated to en (decision 110 (b))
+  - target: 5000 approved per question locale (decision 21) for en, es, es-ES, de; English drafting aims at the locales'' deficits
+  - replaces: decision 27 for `base` (es-419 comes from translation, not from Spanish drafts); decision 37''s last clause and D-84 (the en/de source shortfall driving es drafting); decision 219 (`DRIVES_DRAFTING`: English is the source, no locale steers es drafting); D-87 where it assumes es as the only source locale; D-6 (Colombian usage) for `base`
+  - batch-9 (`task 1185: run batch-9`, decision 229) runs only once `qgen batch` drafts in English; no more Spanish drafts for `base`
 
 ## Constraints
 - Questions only through `qgen batch` (D-36); the quality bar in plan 16 applies.
@@ -427,6 +439,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 - A fresh save asks for the language once; an existing save doesn''t.
 - `colombia` has 2000 approved in es and en (may land after launch), the pilot''s effort is recorded and the follow-up decision answered.
 - Style guides exist for every UI locale; the TV-check fixes are in; the gamemaster has reviewed the screen gallery in every UI language.
+- New `base` questions are drafted in English and translated to es, es-ES and de; the es-sourced ones have en, de and es-ES pool entries.
 - Every joker has one English-first name, translated in every catalog, and one symbol across languages, shown in its follow-up dialog.
 
 Plan files: `plans/11-steam.md`, `plans/15-i18n.md`, `plans/15a-ui-translation.md`, `plans/15b-question-translation.md`, `plans/15c-regional-questions.md`, `plans/16-content-target.md`.', '2026-10-11T21:55:09Z', NULL, 0);
@@ -27600,6 +27613,10 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Not here: `qgen health ack` (the developer''s), batch-9 itself.
 
 Done when: 120 spot-checked, QC section of `authoring/reports/batch-8.md` updated, the proposals decision answered and its tasks added.', '2026-10-15T22:07:47Z', NULL, 1185, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1192, 9, 'revise the masterplan of milestone 9: Steam S4: content for release', 'revise', 'open', 1000, NULL, '`milestone 9: Steam S4: content for release` changed. Bring `plan 9: masterplan`, the masterplan, in line with it (`pm plan edit 9 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-15T23:12:36Z', NULL, NULL, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1193, 1, 'revise the masterplan of milestone 1: Enough content for game nights', 'revise', 'open', 1000, NULL, '`milestone 1: Enough content for game nights` changed. Bring `plan 1: masterplan`, the masterplan, in line with it (`pm plan edit 1 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-15T23:12:36Z', NULL, NULL, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -31027,6 +31044,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1156, 1191, '2026-10-15T22:07:58Z', '2026-10-15T22:13:32Z', 'blocked', NULL, 0, 'fab9353581f06619b4b57dc34ab1dc47dc852f96', 'claude-opus-5-5[1m]', '061709e6-f17c-4576-8c62-ced7d8ec3c45', 24, 42, 8153, 1142516, 59212, 0.86542720000000006, 3709948);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1157, 1186, '2026-10-15T22:13:33Z', '2026-10-15T22:13:54Z', 'blocked', NULL, 0, 'b3d624059378126cf1537edec669559a39b95cb0', 'claude-opus-5-5[1m]', '4aa3b121-40eb-4caf-976d-170220622420', 5, 12, 896, 136765, 21911, 0.22060900000000003, 3709948);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1158, 1191, '2026-10-15T23:05:46Z', '2026-10-15T23:08:36Z', 'blocked', NULL, 0, '51f52d9c1778eca4a044de3b365ece417b0aa38b', 'claude-opus-5-5[1m]', '33b26d4b-536c-464a-9a8c-c42f18897a5c', 19, 38, 11770, 940924, 68191, 0.9692648, 3709948);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1159, 632, '2026-10-15T23:08:36Z', NULL, 'running', NULL, NULL, '2ca5c2e9dda3bfb87f113532f43e7826271cffa6', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 3709948);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
