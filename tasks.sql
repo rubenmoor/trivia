@@ -9990,7 +9990,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 3. Once answered: apply the feedback (swap or drop files, adjust rates/levels). Re-checking an effect: launch with `TRIVIA_SOUND=1` (muted under PM_WORKER otherwise).
 4. Update UI-10''s note in `plans/04-ui-tv-display.md` (what is recorded now, what stays synthesized and why) and `plans/project.md`. UI-10 stays `[~]` until plan 33 (music loops) is done.
 
-Done when: the gamemaster approved; audio folder within budget; `CREDITS.md` complete; `npm run check` and `npm run build` pass.', '2026-10-12T00:36:02Z', NULL, 138, 0, NULL, NULL);
+Done when: the gamemaster approved; audio folder within budget; `CREDITS.md` complete; `npm run check` and `npm run build` pass.', '2026-10-12T00:36:02Z', NULL, 138, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (147, 33, 'Source and convert a matched set of CC0 music loops', 'work', 'done', NULL, '2026-10-13, app/client/public/audio/{musica-normal,musica-pregunta,musica-enviada}.m4a (707 kB together, folder 2.8 MB), CREDITS.md rows. Matched set found: OpenGameArt ''Music loop variations'' by obscure music, CC0 (checked on the page), 3 intensity steps x 2 flavours (good/evil), 100 bpm, 4/4; Kenney has no music loops (only Music Jingles). Picks: normal = level1-step1 (good, F major), pregunta = level1-step2-evil (F minor), enviada = level1-step3-evil (F minor); normal↔question changes key only across the 600/800 ms fades, question↔submitted share key and tempo. Loops: 19.2 s = 8 bars each (step1/step2 are 4-bar sources repeated x2; just under the 20 s minimum, kept equal so the cut can continue at position mod 19.2 s). Sources had 1 extra sample (trimmed to exact bars) and a 0.09–0.14 jump at the wrap: 5 ms fade-out at each 4-bar end fixes it (decoded wrap now ≤0.03). Gain only (no dynamic loudnorm): −18 LUFS each (redoble −17.8), TP ≤ −1.3 dBTP; AAC 96k stereo 44.1 kHz. Loop points: AAC decodes 846848 samples (128 padding at the end, start aligned, offset 0) → use loopStart 0, loopEnd 19.2 for all three. Alternative for task 149 if the gamemaster wants calmer: the good step2/step3 (F major) from the same zip, same pipeline. check, test, build, qgen validate pass.', 'First task of plan 33: find one matched set of recordings for `normal`, `question`, `submitted` and put the converted files in place (plan 33 "Sources and licences", "Pipeline"). Conversion is here, not in the wiring task: downloads live outside the repo and don''t survive between runs.
 
 - Sources: Kenney.nl CC0 first (music loops / jingles packs), then OpenGameArt CC0, Freesound CC0; D-45 allowlist only (CC0 preferred; CC BY ok with credit; no NC/ND/unknown). Download outside the repo; don''t commit zips.
@@ -10018,14 +10018,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 1. `pm decision add` asking the gamemaster to check the music on the TV via `/?efectos` and a real game: clicks at the seam, the `question` ↔ `submitted` cuts, level against effects and question media. Body: what is recorded, what stayed synthesized, sources. Options e.g. «approve» / «changes: …». Make this task pending on it (`pm task-pending-decision`), stage, stop.
 2. Once answered: apply the feedback (loop points, levels, cut behaviour, swap files; keep `CREDITS.md` and budget in line). Re-checking a loop: launch with `TRIVIA_SOUND=1` (muted under PM_WORKER otherwise).
 
-Done when: the gamemaster approved; `npm run check`, `npm run build` pass.', '2026-10-12T00:36:37Z', NULL, 139, 0, NULL, NULL);
+Done when: the gamemaster approved; `npm run check`, `npm run build` pass.', '2026-10-12T00:36:37Z', NULL, 139, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (150, 33, 'Close UI-10 in the plans', 'work', 'open', NULL, NULL, 'Last task of plan 33; runs after the gamemaster approved the music (and plan 32''s effects check, task 146).
 
 - `plans/04-ui-tv-display.md`: UI-10 `[x]` with a note (what is recorded now, what stayed synthesized and why, effects and music); "Sound assets": flat `app/client/public/audio/` folder (the `music/`, `sfx/` subfolders were never used), `CREDITS.md`, budget.
 - `plans/project.md`: M6 / UI-10 line.
 - Check: whole audio folder ≤ 3.5 MB; `CREDITS.md` has a row per recorded file.
 
-Done when: 04 and `plans/project.md` updated; `grep -rn PLACEHOLDER app/client/src` result noted for the milestone.', '2026-10-12T00:36:37Z', NULL, 139, 0, NULL, NULL);
+Done when: 04 and `plans/project.md` updated; `grep -rn PLACEHOLDER app/client/src` result noted for the milestone.', '2026-10-12T00:36:37Z', NULL, 139, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (151, 7, 'create tasks for plan 7', 'split', 'done', 1000, '2026-10-11, tasks 162-171 (tasks.sql)', 'Split plan 7 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T00:37:56Z', '2026-10-12T00:38:54Z', 7, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (152, 7, 'write plan: Desktop shell (OQ-29)', 'plan', 'dropped', 1000, 'created too early by task 7; task 151 (create tasks for plan 7) adds the part tasks', 'Write the plan for part 1 of masterplan 7 ("Desktop shell (OQ-29)"): read the part in `pm show` of this task''s plan and the owning plan file, then `pm plan add 7 "Desktop shell (OQ-29)" --priority 700`. Follow "How a decision part works" in the masterplan.', '2026-10-12T00:38:01Z', '2026-10-12T00:38:10Z', 7, 0, NULL, NULL);
@@ -10628,7 +10628,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 Done when: the section shows a passing result for every non-optional row.
 
-Binding: decision 111: Steam only; decision 125: Steam Deck: best effort, review without a Deck at hand; decision 39: Local builds start offline? (skipped, not failed; Steam beta test, task 263); `decision 264: Bundle screen (two columns) reviewed in /gallery?` and milestone 8''s any-combination edit (2026-10-16; supersedes `decision 269: Bundle screen: a mod''s extra base bundle`''s info-only / radio tiles) (bundle flow, layout and combination rows; supersedes `decision 260: Bundle screen: where it sits, supply report, in-game settings`; failures go to plan 151); `decision 263: Bundle screen reviewed in /gallery?` (region order and country flags); `decision 272: Right stick: what it does beyond switching prompts to the pad` (prompts row; failures go to plan 156).', '2026-10-12T01:07:02Z', NULL, 221, 0, NULL, NULL);
+Binding: decision 111: Steam only; decision 125: Steam Deck: best effort, review without a Deck at hand; decision 39: Local builds start offline? (skipped, not failed; Steam beta test, task 263); `decision 264: Bundle screen (two columns) reviewed in /gallery?` and milestone 8''s any-combination edit (2026-10-16; supersedes `decision 269: Bundle screen: a mod''s extra base bundle`''s info-only / radio tiles) (bundle flow, layout and combination rows; supersedes `decision 260: Bundle screen: where it sits, supply report, in-game settings`; failures go to plan 151); `decision 263: Bundle screen reviewed in /gallery?` (region order and country flags); `decision 272: Right stick: what it does beyond switching prompts to the pad` (prompts row; failures go to plan 156).', '2026-10-12T01:07:02Z', NULL, 221, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (237, 48, 'S3 close-out: plan files, indexes and later masterplans', 'work', 'open', NULL, NULL, 'Plan 48 task 3, after task 236 (waits for the same decision). Docs and pm only; no code.
 
 **Guard first:** stop without changes if task 236 is still open; pending decision → `pm task-pending-decision 237 <its id>` and stop.
@@ -10639,7 +10639,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Masterplans 9–11 (S4–S6, `pm show` a task of each): "tbd." → nothing. Written and S3 changed their scope (media bundle size or depot layout, Deck findings for SW-12, letter picker vs. on-screen keyboard for SW-8) → short dated note via `pm plan edit <id> --body -`. Plan 90 (Deck test): if it still says S3 checked a real Deck ("plan 48''s S3 Deck rows"), a dated note that S3 ran only the 1280×800 window (decision 125), so its real-Deck rows aren''t covered elsewhere. Milestone bodies (`pm milestone set <id> --body -`) only if they name something S3 ruled out; list such changes in the task note.
 - Don''t set milestone 8''s status (pm''s post-milestone cleanup does).
 
-Done when: milestone 8''s "Done when" holds (a local build plays on Windows and Linux with a controller only, and in a 1280×800 window per decision 125; every image question''s picture visible whole via the peek at 1280×800; no Python under `app/`; the family''s save lives in the desktop build; workers check UI changes with the Node dev server) and is cited in the task note (decision ids incl. "S3 test passed?" and decision 150: Family save imported into trivia-desktop?, date); `qgen validate` unaffected.', '2026-10-12T01:07:02Z', NULL, 221, 0, NULL, NULL);
+Done when: milestone 8''s "Done when" holds (a local build plays on Windows and Linux with a controller only, and in a 1280×800 window per decision 125; every image question''s picture visible whole via the peek at 1280×800; no Python under `app/`; the family''s save lives in the desktop build; workers check UI changes with the Node dev server) and is cited in the task note (decision ids incl. "S3 test passed?" and decision 150: Family save imported into trivia-desktop?, date); `qgen validate` unaffected.', '2026-10-12T01:07:02Z', NULL, 221, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (238, 48, 'S3 platform test: checklist and the test decision', 'work', 'open', 150, NULL, 'Plan 48 task 1 (priority 150: before tasks 236 and 237). Writes the S3 platform test checklist and hands it to the developer as a pm decision. Docs and pm only; no code. Workers own no Windows machine or Deck: never fill a result yourself.
 
 **Guard first:** `pm show p48` and `pm plans list`. If any other milestone-8 plan still has open tasks (54, 55, 56, 44, 45, 46, 47, 65, 99, 113, 151 incl. its revisions for decision 264 and the any-combination edit and its new gallery review decision, 156, and masterplan 8''s own): if one of them waits for a pending decision, `pm task-pending-decision 238 <that decision>` and stop; otherwise stop without changes and say so (the queue brings the task back). Plan 151''s gallery review decision must be answered "approved". Never drop tasks of other plans.
@@ -10670,7 +10670,7 @@ Binding: decision 111: Steam only (no "without Steam", "clean machine without No
 - `did=$(pm decision add "S3 test passed?" --intro … --body - --option "passed" --option "passed with minor issues (list them; they go to the backlog)" --option "failed (list the failing rows)")`, body: the whole checklist (platform tables as Markdown, build commit, artefact names, how to start the 1280×800 window) and how to report (copy the tables, fill result and note; "skipped" needs a reason).
 - `pm task-pending-decision 236 $did` and `pm task-pending-decision 237 $did`.
 
-Done when: the section exists, the decision is pending, tasks 236 and 237 wait for it.', '2026-10-12T01:07:16Z', NULL, 221, 0, NULL, NULL);
+Done when: the section exists, the decision is pending, tasks 236 and 237 wait for it.', '2026-10-12T01:07:16Z', NULL, 221, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (239, 9, 'create tasks for plan 9', 'split', 'done', 1000, '2026-10-11, tasks 240–251 (plan-writing for parts 1–12); task 241 waits on decision 2', 'Split plan 9 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T01:09:32Z', '2026-10-12T01:10:59Z', 9, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (240, 9, 'write plan: Simulation: games per new player (CT-2)', 'plan', 'done', 490, '2026-10-12, pm plan 62, plans/16-content-target.md', 'Write the plan for part 1 of the masterplan (plan 9): `pm plan add 9 "Simulation: games per new player (CT-2)" --priority 570`.
@@ -11350,13 +11350,13 @@ Phases (the task runs again after each decision is answered; check which decisio
 
 Never here: prompt or `qgen.py` changes, editing the pool. needs_work from flagged ones go through `qgen rework` only when the gamemaster asks.
 
-Done when: phase 4 done; note: cost/question, flagged rate, spot-check agreement, release bar, decisions, created slice tasks.', '2026-10-12T04:03:37Z', NULL, 335, 0, NULL, NULL);
+Done when: phase 4 done; note: cost/question, flagged rate, spot-check agreement, release bar, decisions, created slice tasks.', '2026-10-12T04:03:37Z', NULL, 335, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (340, 57, 'Close CT-5: release bar and back-audit results in plan 16, project.md', 'work', 'open', -120, NULL, 'Plan 57 task 6. Runs after every back-audit slice task (priority -105) is done; if one is still open, stop without changes and say so in the note.
 
 - `plans/16-content-target.md` "Quality bar": release bar values (D-entry), back-audit per slice (size, flagged rate, spot-check agreement, release-ready or the decision why not), total cost; CT-5 `[x]` with the numbers.
 - `plans/project.md`: CT-5 line.
 
-Done when: both files updated; every approved pre-D-56 batch/slice is release-ready in `qgen report --qc` or has a recorded decision why not.', '2026-10-12T04:03:37Z', NULL, 335, 0, NULL, NULL);
+Done when: both files updated; every approved pre-D-56 batch/slice is release-ready in `qgen report --qc` or has a recorded decision why not.', '2026-10-12T04:03:37Z', NULL, 335, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (341, 1, 'write plan: Fable as an opt-in model for qgen rework', 'plan', 'done', 1000, '2026-10-11, plan 58 (tasks.sql)', 'Find the right home for this idea and write it there. Candidates: milestone 1''s plan 16 "Quality control after every batch" (quality of reworked questions), plan 15 or a new plan in milestone 1; another milestone if one fits better. Extend an existing plan with `pm plan edit` if it fits; otherwise `pm plan add <milestone> "…" --priority N` (see `pm plan list`). Don''t implement anything.
 
 ## The idea
@@ -13838,7 +13838,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/15a-ui-translation.md`: LUI-4, LUI-5 `[x]` with notes (date, what changed); status line.
 - `plans/project.md`; `plans/11-steam.md` row 15 if 15a is done.
 
-Done when: `npm run check`, `check:literals`, `npm run build` pass; every launch language passed its playtest, after plan 136''s joker names.', '2026-10-12T19:44:18Z', NULL, 452, 0, NULL, NULL);
+Done when: `npm run check`, `check:literals`, `npm run build` pass; every launch language passed its playtest, after plan 136''s joker names.', '2026-10-12T19:44:18Z', NULL, 452, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (460, 70, 'create tasks for plan 70', 'split', 'done', 1000, '2026-10-12, tasks 461-463 (no new decisions needed now; budget decision is task 463''s own)', 'Split plan 70 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-12T19:46:01Z', '2026-10-12T19:46:46Z', 248, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (461, 70, 'qgen report --cost: $/approved per run kind and projection per language (CT-3)', 'work', 'done', NULL, '2026-10-12, authoring/tools/qgen.py (report --cost [--json]), AGENTS.md, plans/16-content-target.md Cost: batch-4..7 0.16/0.37/0.30/0.24 match batches.md; draft $0.26, overhead ratio 0.70, es ~$1750 to go, en/de no pilot yet', 'Plan 70 design "Cost report (CT-3)". `qgen report --cost [--json]` in `authoring/qgen.py`, reusing `costs()` and the `health` metrics.
@@ -17271,7 +17271,7 @@ Done when: both decisions answered, change tasks added, note with agreement and 
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop. Applies whether or not plan 17''s task 50 (RUNBOOK: batch runs under pm run) is done.
-- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-13T05:14:16Z', NULL, 631, 0, NULL, NULL);
+- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-13T05:14:16Z', NULL, 631, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (634, 84, 'run tr-en-1', 'work', 'open', -90, NULL, 'Plan 84 chain 2, translation pilot (QT-5, `plans/15b-question-translation.md`): run `tr-en-1`, 50 approved es-sourced `base` questions into English (es → en, plan 66, D-87, decision 45''s selection).
 
 - Waits for chain 1 (D-81: pilot translations mustn''t go stale): if task 633 (QC neutralize-1) isn''t done or dropped, `pm task-pending-decision <this task>` on the decision blocking task 632 or 633, stop.
@@ -17283,7 +17283,7 @@ Done when: `authoring/reports/tr-en-1.md` exists, printed paths staged, note wit
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 148 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop. Applies whether or not plan 17''s task 50 (RUNBOOK: batch runs under pm run) is done.
-- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-13T05:14:26Z', NULL, 631, 0, NULL, NULL);
+- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-13T05:14:26Z', NULL, 631, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (635, 84, 'QC tr-en-1', 'work', 'open', -90, NULL, 'Plan 84 chain 2: QC of the pilot `tr-en-1` per `authoring/QC.md` steps 1–4 and section "Translation runs".
 
 - If task 634 (run tr-en-1) isn''t done: pend on the decision that blocks it, stop. Dropped → drop this one too.
@@ -17299,7 +17299,7 @@ Done when: both decisions answered, change tasks added, note with the numbers ab
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop. Applies whether or not plan 17''s task 50 (RUNBOOK: batch runs under pm run) is done.
-- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-13T05:14:26Z', NULL, 631, 0, NULL, NULL);
+- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-13T05:14:26Z', NULL, 631, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (636, 84, 'run tr-de-1', 'work', 'open', -90, NULL, 'Plan 84 chain 2, translation pilot (QT-5, `plans/15b-question-translation.md`): run `tr-de-1`, 50 approved `base` sources into German (es → de, plan 66, D-87, decision 45''s selection; if English sources already exist, `qgen` may pick some: the note says how many per source locale).
 
 - Waits for chain 1 (D-81: pilot translations mustn''t go stale): if task 633 (QC neutralize-1) isn''t done or dropped, `pm task-pending-decision <this task>` on the decision blocking task 632 or 633, stop.
@@ -17311,7 +17311,7 @@ Done when: `authoring/reports/tr-de-1.md` exists, printed paths staged, note wit
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 148 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop. Applies whether or not plan 17''s task 50 (RUNBOOK: batch runs under pm run) is done.
-- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-13T05:14:26Z', NULL, 631, 0, NULL, NULL);
+- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-13T05:14:26Z', NULL, 631, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (637, 84, 'QC tr-de-1', 'work', 'open', -90, NULL, 'Plan 84 chain 2: QC of the pilot `tr-de-1` per `authoring/QC.md` steps 1–4 and section "Translation runs".
 
 - If task 636 (run tr-de-1) isn''t done: pend on the decision that blocks it, stop. Dropped → drop this one too.
@@ -17327,7 +17327,7 @@ Done when: both decisions answered, change tasks added, note with the numbers ab
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 148 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop. Applies whether or not plan 17''s task 50 (RUNBOOK: batch runs under pm run) is done.
-- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-13T05:14:26Z', NULL, 631, 0, NULL, NULL);
+- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-13T05:14:26Z', NULL, 631, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (638, 84, 'Translation pilot go/no-go en, de (QT-5)', 'work', 'open', -90, NULL, 'Plan 84 chain 2: pilot go/no-go (QT-5) for `en` and `de`, after tasks 635 (QC tr-en-1) and 637 (QC tr-de-1). The `es-ES` + `es` pilots have their own go/no-go task.
 
 - If either QC task isn''t done: pend on the decision that blocks it (or its run task), stop.
@@ -17348,7 +17348,7 @@ Done when: the decision is answered and 15b updated; note with the table.
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 148 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop. Applies whether or not plan 17''s task 50 (RUNBOOK: batch runs under pm run) is done.
-- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-13T05:14:33Z', NULL, 631, 0, NULL, NULL);
+- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-13T05:14:33Z', NULL, 631, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (639, 84, 'run tr-en-2', 'work', 'open', -110, NULL, 'Plan 84 chain 3, full translation (QT-6): run `tr-en-2`, up to 300 approved `base` sources of either source locale ≠ `en` into English (plan 66, D-87; `decision 235: Source locale per question and translations from either source (English-first base)`).
 
 Before running, in this order; the first that fails → `pm task-pending-decision <this task> <decision>`, stop:
@@ -17363,7 +17363,7 @@ Done when: `authoring/reports/tr-en-2.md` exists, printed paths staged, note wit
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 148 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop. Applies whether or not plan 17''s task 50 (RUNBOOK: batch runs under pm run) is done.
-- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-13T05:14:48Z', NULL, 631, 0, NULL, NULL);
+- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-13T05:14:48Z', NULL, 631, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (640, 84, 'QC tr-en-2', 'work', 'open', -110, NULL, 'Plan 84 chain 3: QC of `tr-en-2` per `authoring/QC.md` steps 1–4 and "Translation runs", then the next pair of the chain.
 
 - If task 639 (run tr-en-2) isn''t done: pend on the decision that blocks it, stop. Dropped → drop this one too.
@@ -17381,7 +17381,7 @@ Done when: both decisions answered, change tasks and the next pair (or the 15b l
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 148 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop. Applies whether or not plan 17''s task 50 (RUNBOOK: batch runs under pm run) is done.
-- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-13T05:14:48Z', NULL, 631, 0, NULL, NULL);
+- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-13T05:14:48Z', NULL, 631, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (641, 84, 'run tr-de-2', 'work', 'open', -110, NULL, 'Plan 84 chain 3, full translation (QT-6): run `tr-de-2`, up to 300 approved `base` sources of either source locale ≠ `de` into German (plan 66, D-87; `decision 235: Source locale per question and translations from either source (English-first base)`).
 
 Before running, in this order; the first that fails → `pm task-pending-decision <this task> <decision>`, stop:
@@ -17396,7 +17396,7 @@ Done when: `authoring/reports/tr-de-2.md` exists, printed paths staged, note wit
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 148 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop. Applies whether or not plan 17''s task 50 (RUNBOOK: batch runs under pm run) is done.
-- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-13T05:14:48Z', NULL, 631, 0, NULL, NULL);
+- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-13T05:14:48Z', NULL, 631, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (642, 84, 'QC tr-de-2', 'work', 'open', -110, NULL, 'Plan 84 chain 3: QC of `tr-de-2` per `authoring/QC.md` steps 1–4 and "Translation runs", then the next pair of the chain.
 
 - If task 641 (run tr-de-2) isn''t done: pend on the decision that blocks it, stop. Dropped → drop this one too.
@@ -17414,7 +17414,7 @@ Done when: both decisions answered, change tasks and the next pair (or the 15b l
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 148 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop. Applies whether or not plan 17''s task 50 (RUNBOOK: batch runs under pm run) is done.
-- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-13T05:14:48Z', NULL, 631, 0, NULL, NULL);
+- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-13T05:14:48Z', NULL, 631, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (643, 84, 'Regional pilot `colombia`: start', 'work', 'done', -110, '2026-10-15, tasks.sql: prerequisites met (plan 138 done, colombia 2000 in targets.json); first es pair added: task 1295 run colombia batch (batch-<n>), task 1296 QC colombia batch (batch-<n>); decision 110 consequences recorded', 'Plan 84 chain 4: start the regional pilot `colombia` (decision 110: Regional packs at launch (RG-5, OQ-46)): grow `colombia` from 102 to 2000 approved in es, then translate to en, measuring the effort. Launch (milestone 11) doesn''t wait for this chain. Chain 5 (`usa`, `germany`, `uk`, `spain`, `mexico`) starts once this chain''s first `QC batch-<n>` is done. Owners: `plans/15c-regional-questions.md`, `plans/16-content-target.md`.
 
 ## Before starting
@@ -17509,7 +17509,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Docs: `plans/18-steam-integration.md` SW-8 `[x]` with note and "Steam features" updated (overlay: Windows only, D-92; valid user + `TRIVIA_DEV_STEAM_USER`; dev mode «Ir a pregunta…»); `plans/14-input.md` (glyphs, keyboard); `plans/15-i18n.md` ("Model", I18N-2 note: Steam language wired); `plans/project.md`.
 - Failures from the check → follow-up tasks in plan 85.
 
-Done when: decision 113 answered as passed and the docs updated.', '2026-10-13T05:18:18Z', NULL, 644, 0, NULL, NULL);
+Done when: decision 113 answered as passed and the docs updated.', '2026-10-13T05:18:18Z', NULL, 644, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (653, 86, 'create tasks for plan 86', 'split', 'done', 1000, '2026-10-13, tasks 654-658 (tasks.sql)', 'Split plan 86 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T05:47:45Z', '2026-10-13T05:48:42Z', 257, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (654, 86, 'Achievement list as a pm decision', 'work', 'done', NULL, '2026-10-13, decision 73 consequences (tasks.sql only)', 'Plan 86 task 1: get the achievement list approved by the gamemaster before code, icons and Steamworks values.
@@ -17541,13 +17541,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `app/desktop/steam-achievements.vdf` in Steamworks'' achievement-localization upload format (check Valve''s docs; like `steam-presence.vdf`) if Steamworks accepts an upload; otherwise only the table in plan 18.
 - `pm decision add "Achievements entered and published in Steamworks?"` (steps: enter, upload icons/VDF, publish; needs the real App ID from SW-7, `task 254: write plan: Steamworks app configuration (SW-7)` — say so in the body); `pm task-pending-decision` this task; after the answer record consequences and finish.
 
-Done when: values documented, decision answered.', '2026-10-13T05:48:40Z', NULL, 653, 0, NULL, NULL);
+Done when: values documented, decision answered.', '2026-10-13T05:48:40Z', NULL, 653, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (658, 86, 'SW-11 close-out: gamemaster check and docs', 'work', 'open', NULL, NULL, 'Plan 86 task 5. After tasks 655, 656, 657.
 
 - `pm decision add` one gamemaster check under Steam with the real App ID and a logged-in user (fresh account or reset stats): win a solo game → `FIRST_WIN` toast; a customized game and a gamemaster game unlock nothing; a save with earlier qualifying wins (e.g. brought in with `--import-save`, plan 99) unlocks them on the next start. Options: passes (recommended) / issues. Pending this task on it. Steam only (decision 111: Steam only: no effort outside Steam): no "without Steam" row.
 - Docs: `plans/18-steam-integration.md` SW-11 `[x]` with note; rewrite the "Achievements" bullet under "Steam features" (drop presets/Experto wording, per decision 19: Default mode: presets, checkpoints and won levels; valid user per decision 111); `plans/13-game-modes.md`: note that milestone 16 enters the mode-win achievements in Steamworks when a mode ships; `plans/project.md`.
 
-Done when: check passed, docs updated; issues → follow-up tasks.', '2026-10-13T05:48:40Z', NULL, 653, 0, NULL, NULL);
+Done when: check passed, docs updated; issues → follow-up tasks.', '2026-10-13T05:48:40Z', NULL, 653, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (659, 87, 'create tasks for plan 87', 'split', 'done', 1000, '2026-10-13, tasks 660-664 in plan 87; no files', 'Split plan 87 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T05:51:42Z', '2026-10-13T05:53:01Z', 433, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (660, 87, 'Per-user save folder in the shell', 'work', 'done', NULL, '2026-10-13, app/desktop/main.mjs (Steam first, userSaveDir: <steamid64>/ or local/, TRIVIA_SAVE_DIR as is), app/desktop/save.mjs (migrateToLocal), D-72, plans/18-steam-integration.md, README.md, directory.md. Checked: S3 layout in state/desktop migrated to local/ (game.json + backup/); Spacewar → state/desktop/76561198034262782/game.json; --import-save into the chosen folder; TRIVIA_SAVE_DIR one fixed file. Not checked visually: playing after migration (no screenshot tool).', 'Plan 87 part 1: the desktop save moves into one folder per Steam user, `B/<steamid64>/game.json`, or `B/local/game.json` without Steam; S3''s single save migrates to `local/`.
@@ -17626,7 +17626,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/12-client-engine.md` Store bullet: "one save per Steam user" (`save/<steamid64>/`), memory-only without one.
 - `plans/decisions.md` D-72 matches what shipped (per SteamID, `dev/`, no `local/`).
 - `plans/project.md` S5 Cloud line, `README.md` desktop save line in sync.
-- `pm decision consequences 75 "…"`.', '2026-10-13T05:52:56Z', NULL, 659, 0, NULL, NULL);
+- `pm decision consequences 75 "…"`.', '2026-10-13T05:52:56Z', NULL, 659, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (665, 88, 'create tasks for plan 88', 'split', 'done', 1000, '2026-10-13, pm tasks 666-672, pm decision 78', 'Split plan 88 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T06:05:26Z', '2026-10-13T06:07:10Z', 258, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (666, 88, 'Store texts per language in 17a (LUI-6)', 'work', 'done', NULL, '2026-10-14, plans/17a-store-page.md (Store texts: en, es, es-ES, de; placeholders Free DLC, AI disclosure, capsules, trailer, entry checklist), plans/README.md; decisions 168 (recorded: built modes only), 169-171 (approval en, es + es-ES, de); LUI-6 [x] after approval (task 672)', 'Plan 88 task 1. Free DLC texts are `task 783` (same plan).
@@ -17697,7 +17697,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm decision add "Store page entered for the beta?"` (options: entered / issues); pend this task on it.
 - After the answer: PUB-8 `[x]` in `plans/17-publishing.md` with a note; LUI-6 `[x]` in `plans/15a-ui-translation.md` (if `task 666` didn''t); `plans/17a-store-page.md` status in `plans/README.md`; `plans/project.md` in sync. Issues → follow-up tasks.
 
-Done when: gamemaster reports the store page (base and free DLC) entered; PUB-8 and LUI-6 marked done.', '2026-10-13T06:07:04Z', NULL, 665, 0, NULL, NULL);
+Done when: gamemaster reports the store page (base and free DLC) entered; PUB-8 and LUI-6 marked done.', '2026-10-13T06:07:04Z', NULL, 665, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (673, 88, 'Store media: en and de question shots and trailers once their pools land', 'work', 'open', NULL, NULL, 'Plan 88 tasks 6–7, en/de part. Decision 80: the 2 question shots (decision 79''s set: locked-in answer, joker in use) and the trailer for en/de wait for `app/data/pool.en.json` / `pool.de.json`; until then the en/de pages carry the 5 menu shots (`task 845`). Also after decision 116''s go-ahead (render late, decision 79).
 
 - Wait for both pools (plan 70 content, `qgen batch --translate`, `qgen export`). Missing → `pm decision add "en/de question pools exported?"` and pend on it (decision 80 is answered, it doesn''t block).
@@ -17707,7 +17707,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Look at the PNGs and videos (demo players, no "progress needs Steam" notice), then add the paths to the pending "Store screenshots and trailers approved?" decision (`task 845`) or add one for en/de.
 - `pm decision consequences 80 "<text>"` (last open task that waited on it).
 
-Done when: 7 shots and a trailer per en/de rendered, approval asked.', '2026-10-13T06:21:11Z', NULL, 670, 0, NULL, NULL);
+Done when: 7 shots and a trailer per en/de rendered, approval asked.', '2026-10-13T06:21:11Z', NULL, 670, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (674, 3, 'post-milestone cleanup', 'cleanup', 'done', NULL, '2026-10-13, plans/project.md (M9 done; M10, M11 status; PUB-1 ticked). No unused catalog keys or i18n code; README, directory.md, 15a, 22 already current. Pending decision 76 duplicates 77 (human: mark 76 irrelevant); decision 39''s save path predates plan 87 (save/local/)', '* rewrite top-level .md files to reflect the current state of the project
 * remove files that have become redundant
 * suggest entirely new files, if necessary
@@ -17778,11 +17778,11 @@ Work:
   - `trivia-steam upload --branch beta`
   - check the build appears on `beta` and installs on the author''s machine via the beta password (and a free DLC installs, if shipped)
   - Steam only (decision 111): no checks of the archives or a start without Steam
-- `pm decision add "First beta upload done? BuildID?"` with the checklist as body, options "uploaded (BuildID …)", "failed (paste the error)"; `pm task-pending-decision` on task 682: Record the first beta upload.', '2026-10-13T06:54:20Z', NULL, 675, 0, NULL, NULL);
+- `pm decision add "First beta upload done? BuildID?"` with the checklist as body, options "uploaded (BuildID …)", "failed (paste the error)"; `pm task-pending-decision` on task 682: Record the first beta upload.', '2026-10-13T06:54:20Z', NULL, 675, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (682, 89, 'Record the first beta upload', 'work', 'open', 210, NULL, 'Plan 89 task 7. Waits for the decision "First beta upload done? BuildID?" added by task 681: First beta upload: checklist and decision. If it isn''t answered (or doesn''t exist yet): link with `pm task-pending-decision` if it exists, else stop and say so.
 
 - Pass: `plans/18-steam-integration.md` SW-10 `[x]` and SW-6 `[x]` with date, BuildID, files; `plans/project.md`; `pm decision consequences <id> "…"`.
-- Failure: one fix task in plan 89 per error (`pm task add 89 …`), a re-try decision (`pm decision add`), this task pending on it; stage and stop without closing.', '2026-10-13T06:54:20Z', NULL, 675, 0, NULL, NULL);
+- Failure: one fix task in plan 89 per error (`pm task add 89 …`), a re-try decision (`pm decision add`), this task pending on it; stage and stop without closing.', '2026-10-13T06:54:20Z', NULL, 675, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (683, 89, 'Windows exe icon and metadata (B-11)', 'work', 'done', 290, '2026-10-14, app/desktop/icon.png, app/desktop/electron-builder.yml (win.icon, linux.icon, extraMetadata.description), app/client/credits.ts (Game icon), plans/18-steam-integration.md, plans/17a-store-page.md, plans/backlog.md (B-11 closed), directory.md', 'Plan 89 task 8. `Trivia.exe` has Electron''s icon and file metadata, `plans/backlog.md` B-11.
 
 - Icon per decision 87: Windows exe icon (B-11): the 1024×1024 icon rendered by plan 88''s capsule script (`task 669: Capsules, logo and icon: render per store language`): `authoring/store/out/capsules/icon-1024.png` (gitignored; render with `node authoring/store/capsules.mjs --only icon` from the dev shell after `npm run build`). The build needs a tracked copy (e.g. `app/desktop/build/icon.png`, or wherever electron-builder''s `buildResources` points): copy it in, don''t make the build run the script. Approval of the art: decision 172 (Capsules and icon approved?); if it asks for icon fixes, use the re-rendered file.
@@ -17814,7 +17814,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
   - extra guard: if Valve needs the store page, plan 88''s paste-in decision "Store page entered for the beta?" (`task 672: Store page entry checklist and PUB-8 close-out`) answered; pending → `pm task-pending-decision 685 <id>`; task open → stop
   - `did=$(pm decision add "Deck compatibility review requested? Result?" --body - …)` with the exact steps (Steamworks app → Steam Deck Compatibility → request; branch and password if asked; what to paste from the criteria table); options `Verified`, `Playable (Valve''s notes)`, `Unsupported (notes)`, `not yet reviewed`; `pm task-pending-decision 687 $did`
 - Only after release or coming soon: no decision; `plans/11-steam.md` ST-4 gains "request Deck review (SW-12), Valve''s timing: …"; masterplan 11 gets a dated note via `pm plan edit 11 --body -` only if it''s written and doesn''t list it; task 687 records the deferral.
-- Done when: section written; decision pending with task 687 waiting, or the S6 note in place.', '2026-10-13T08:20:04Z', NULL, 684, 0, NULL, NULL);
+- Done when: section written; decision pending with task 687 waiting, or the S6 note in place.', '2026-10-13T08:20:04Z', NULL, 684, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (686, 90, 'Record the Deck test', 'work', 'dropped', NULL, 'plan 90 revised (decision 125): no real-Deck test before the review; its checklist is written by task 685 for later, run once a Deck is at hand (backlog)', 'Plan 90 task 2 (SW-12). Waits on decision "Steam Deck beta test passed?" (raised by `task 685: Deck checklist and the test decision`).
 - Fill the "Deck beta test" table in `plans/18-steam-integration.md` ("Steam Deck Verified") from the answer, incl. the valid-user row (decision 111: Steam only) and the free DLC install/uninstall row (decision 66, decision 112: Pack layout), or its n/a reason.
 - Minor issues → `plans/backlog.md`, prefix SW-12.
@@ -17829,7 +17829,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `not yet reviewed`: a fresh copy of the decision, this task pending on it; stage and stop.
 - A finding that settles something (e.g. "Deck via Proton needed") → D-entry in `plans/decisions.md` + `pm decision record`.
 - Docs: plan 18 SW-12 `[x]` (Valve''s result, or "review in S6" with reason; real-Deck test pending a Deck, decision 125); `plans/14-input.md` Steam Deck line; `plans/project.md` in sync.
-- Done when: the result (or S6 deferral) is recorded and SW-12 is ticked.', '2026-10-13T08:20:04Z', NULL, 684, 0, NULL, NULL);
+- Done when: the result (or S6 deferral) is recorded and SW-12 is ticked.', '2026-10-13T08:20:04Z', NULL, 684, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (688, 88, 'Store requirements: apply decision 90 and the media bundle''s size', 'work', 'done', NULL, '2026-10-14, plans/17a-store-page.md: decision 90 applied (Partial controller, en/de interface only, storage 3 GB estimate, re-measured 2.96 GB); storage after the media bundle and the Linux distro moved to task 1028', 'Follow-up of `task 668`. `plans/17a-store-page.md`, "System requirements, languages, controller".
 - Decision 90 (Store requirements, languages and controller flags?): apply the answer (fixes, Full vs Partial controller support, en/de language rows); `pm decision consequences 90`.
 - Storage: after part 6''s media bundle (SW-9, `task 260`, decision 82) rebuild `trivia-desktop-build --dir`, `du -sb` the three depots (`release/{win,linux}-unpacked` minus `resources/media`, `app/desktop/build/media`), set "Storage" to the installed size rounded up; update "Measured".
@@ -18013,7 +18013,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm decision consequences <id> "<what changed>"`.
 - Docs only; never log in to Steamworks or contact Valve.
 
-Done when: the answer is recorded as above; on "live", part 4 can read the earliest release date in `plans/11-steam.md`.', '2026-10-13T09:02:03Z', NULL, 702, 0, NULL, NULL);
+Done when: the answer is recorded as above; on "live", part 4 can read the earliest release date in `plans/11-steam.md`.', '2026-10-13T09:02:03Z', NULL, 702, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (705, 95, 'create tasks for plan 95', 'split', 'done', 1000, '2026-10-13, tasks 706–710 in plan 95 (tasks.sql only)', 'Split plan 95 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T09:06:07Z', '2026-10-13T09:07:06Z', 269, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (706, 95, 'Launch section, Valve''s rules and the go decision', 'work', 'done', NULL, '2026-10-13, plans/11-steam.md (Launch (S6)), plans/17-publishing.md; decision 95, task 708 pending on it; Valve docs unreadable (no web access): marked unverified', 'Plan 95 task 1. Docs + one decision; can run now. Never log in to Steamworks or contact Valve.
@@ -18058,7 +18058,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm task-pending-decision 709 <did>`.
 - A failed candidate never reuses its tag (plan 95 rules). Never upload, log in or tag on the gamemaster''s behalf.
 
-Done when: version is `1.0.0` staged, counts filled, candidate decision raised and task 709 waits on it (or, not yet: blocker decision raised, this task pending).', '2026-10-13T09:07:02Z', NULL, 705, 0, NULL, NULL);
+Done when: version is `1.0.0` staged, counts filled, candidate decision raised and task 709 waits on it (or, not yet: blocker decision raised, this task pending).', '2026-10-13T09:07:02Z', NULL, 705, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (709, 95, 'Record the candidate and the store facts; release decision', 'work', 'open', NULL, NULL, 'Plan 95 task 4. Waits for `Release candidate v1.0.0 passed?` (raised by `task 708: Release candidate v1.0.0`); read the answer with `pm show`. Not raised/answered yet → stop.
 
 Per ST-4''s "Worker on the answer" (`plans/11-steam.md` "Release checklist (ST-4)"):
@@ -18068,7 +18068,7 @@ Per ST-4''s "Worker on the answer" (`plans/11-steam.md` "Release checklist (ST-4
 - Then raise `Released? date, build id` (kind once) with the launch-day checklist from "Launch (S6)" as the body (release date ≥ earliest from ST-3; build review submitted in time per the timeline; store facts entered); options `released on <date>, BuildID <n>` (recommended), `Valve''s build review returned issues (list)`, `not yet (blocker)`. `pm task-pending-decision 710 <did>`.
 - `pm decision consequences` on the candidate decision.
 
-Done when: the candidate result and store facts are recorded and either the "Released?" decision waits on task 710, or (failed) the fix tasks and the next candidate task exist.', '2026-10-13T09:07:02Z', NULL, 705, 0, NULL, NULL);
+Done when: the candidate result and store facts are recorded and either the "Released?" decision waits on task 710, or (failed) the fix tasks and the next candidate task exist.', '2026-10-13T09:07:02Z', NULL, 705, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (710, 95, 'Record the release and the first week', 'work', 'open', NULL, NULL, 'Plan 95 task 5. Waits for `Released? date, build id` (raised by task 709); read the answer with `pm show`. Not raised/answered yet → stop.
 
 - Released: `plans/11-steam.md` S6 row and a "Launch (S6)" note with date, version, BuildID, price, report URL; rows the launch closes in `plans/17-publishing.md` (PUB-11 live) and `plans/18-steam-integration.md` (SW-12 review if requested) noted; `plans/project.md` and `README.md` in sync (the Steam build is the release; no browser-game note: plan 99 retires it); `pm decision consequences <did> "…"`.
@@ -18077,7 +18077,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - On released: raise `First week after launch: what came in?` (kind once; body: the first-week steps from "Launch (S6)"; options `nothing to fix`, `issues (list: reports, bugs, review themes)`), and add a task in plan 95 "Triage the first week after launch" pending on it, body: each bug → a task in its owning plan or a `plans/backlog.md` row; reports are already `needs_work` via `qgen flag --pull` / `qgen flag` (plan 93) and go through `qgen batch` review; a wrong-answer or crash fix → a hotfix candidate via plan 96''s patch path and ST-4.
 - Docs only; never log in to Steamworks or contact players.
 
-Done when: the release is recorded in the plan files and the first-week decision waits on its triage task (or the issue/blocker path is set up).', '2026-10-13T09:07:02Z', NULL, 705, 0, NULL, NULL);
+Done when: the release is recorded in the plan files and the first-week decision waits on its triage task (or the issue/blocker path is set up).', '2026-10-13T09:07:02Z', NULL, 705, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (711, 96, 'create tasks for plan 96', 'split', 'done', 1000, '2026-10-13, tasks.sql: tasks 712–716; decision 96 raised (plan task 1 done here), task 713 pending on it', 'Split plan 96 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T09:13:38Z', '2026-10-13T09:14:45Z', 270, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (712, 96, 'qgen patch-notes: counts-only notes between two releases', 'work', 'done', NULL, '2026-10-13, authoring/tools/patch_notes.py (new: qgen patch-notes), authoring/tools/qgen.py, authoring/steam/release_check.py (previous_tag/kind/save_version take a rev), README.md, directory.md; decision 97 recorded; checked in a throw-away clone (counts match by hand, from==to → no content changes, full kind + SAVE_VERSION change)', 'Plan 96 task 2. New `qgen patch-notes <from-ref> [<to-ref>]` under `authoring/` (D-35, no new dependency): drafts a content patch''s notes by diffing the shipped pool between two git refs.
@@ -18118,7 +18118,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `not yet`: new decision naming the blocker (`pm decision add --once`, options as the go decision), this task pending on it (`pm task-pending-decision`), stop.
 - A failed candidate never reuses its tag. Never upload, log in or tag on the gamemaster''s behalf. Steam build only (decision 111): no "without Steam" rows.
 
-Done when: version staged, notes drafted and logged, candidate decision raised and task 715 waits on it (or, not yet: blocker decision raised, this task pending).', '2026-10-13T09:14:42Z', NULL, 711, 0, NULL, NULL);
+Done when: version staged, notes drafted and logged, candidate decision raised and task 715 waits on it (or, not yet: blocker decision raised, this task pending).', '2026-10-13T09:14:42Z', NULL, 711, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (715, 96, 'Record the patch candidate; live decision', 'work', 'open', NULL, NULL, 'Plan 96 task 5. Waits for `Release candidate v1.0.<n> passed?` (raised by task 714: First content patch candidate); read it with `pm show`. Not raised or not answered: stop.
 
 - Act per `plans/11-steam.md` "Release checklist (ST-4)" → "Worker on the answer" (rows as revised by plan 104): `passed` / `passed with minor issues`: `trivia-release-check --manual FILE` with the answers so `work/steam/v<x>/release-check.md` holds them; minor issues → `plans/backlog.md` bullets.
@@ -18126,13 +18126,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - On pass: raise `did=$(pm decision add --once "Content patch v<x> live? date, build id" --body … --option "live on <date>, BuildID <n>" --option "not yet (blocker)")`. Body: gamemaster steps: Steamworks → set the BuildID live on `default`; post the Steam event from `work/steam/v<x>/patch-notes.md` (one per language, event type per "Content updates (ST-5)").
 - `pm task-pending-decision 716 $did` (task 716: Record the first content patch).
 
-Done when: the answer is recorded in the report and the live decision blocks task 716 (or, failed: fix tasks and a new candidate task exist).', '2026-10-13T09:14:43Z', NULL, 711, 0, NULL, NULL);
+Done when: the answer is recorded in the report and the live decision blocks task 716 (or, failed: fix tasks and a new candidate task exist).', '2026-10-13T09:14:43Z', NULL, 711, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (716, 96, 'Record the first content patch', 'work', 'open', NULL, NULL, 'Plan 96 task 6. Waits for `Content patch v<x> live? date, build id` (raised by task 715: Record the patch candidate; live decision); read it with `pm show`. Not raised or not answered: stop.
 
 - `live on <date>, BuildID <n>`: `plans/11-steam.md` ST-5 `[x]` (only once plan 93 and plan 103 are done too; else note the content half done) with version, date, BuildID; S6 row status in "Phases"; "Content updates (ST-5)" "Patch notes" log entry dated; `plans/16-content-target.md` and `plans/project.md` in sync; `pm decision consequences <did> "<what changed>"`.
 - `not yet (blocker)`: same pattern as plan 95''s "Record the release and the first week" (task 710): a task per blocker in its owning plan, then a new candidate (shape of task 714: First content patch candidate) if code or content changed, else a fresh live decision and a new record task pending on it.
 
-Done when: the first content patch is recorded as live (milestone 11 "Done when": content updates go out as patches).', '2026-10-13T09:14:43Z', NULL, 711, 0, NULL, NULL);
+Done when: the first content patch is recorded as live (milestone 11 "Done when": content updates go out as patches).', '2026-10-13T09:14:43Z', NULL, 711, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (717, 97, 'create tasks for plan 97', 'split', 'done', 1000, '2026-10-13, tasks 718 Plan files and backlog, 719 Indexes, how-tos and the milestone check; no new decisions (the release and patch decisions come from tasks 709/710, 715/716; guards wait on them)', 'Split plan 97 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T09:20:44Z', '2026-10-13T09:21:17Z', 271, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (718, 97, 'Plan files and backlog', 'work', 'open', NULL, NULL, 'Task 1 of plan 97: S6 close-out. Docs and pm only; no code.
@@ -18163,7 +18163,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - No open row in 11/17/18 lacks a note; the backlog rows exist; `qgen validate` unaffected.
-- `pm task done <task> "<date>, files; tasks added: …"`.', '2026-10-13T09:21:14Z', NULL, 717, 0, NULL, NULL);
+- `pm task done <task> "<date>, files; tasks added: …"`.', '2026-10-13T09:21:14Z', NULL, 717, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (719, 97, 'Indexes, how-tos and the milestone check', 'work', 'open', NULL, NULL, 'Task 2 of plan 97: S6 close-out; runs after task 718: Plan files and backlog. Docs and pm only; no code.
 
 ## Guard (first)
@@ -18194,7 +18194,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - Milestone 11''s "Done when" (released; content updates go out as patches; report round trip under Steam and copy fallback) holds and is cited in the task note.
 - `plans/README.md`, `plans/project.md`, `README.md`, `directory.md` in sync.
-- `npm run check`, `qgen validate` pass.', '2026-10-13T09:21:14Z', NULL, 717, 0, NULL, NULL);
+- `npm run check`, `qgen validate` pass.', '2026-10-13T09:21:14Z', NULL, 717, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (720, 78, 'Review Steam release and store tooling: authoring/steam/, authoring/store/', 'work', 'done', NULL, '2026-10-13, authoring/steam/steam.py, authoring/steam/smoke.mjs, authoring/store/screenshots.mjs, code-review.md', 'Part 6 (`plan 78: Desktop shell and packaging review (code review part 6)`) covers `app/desktop/` only; the Steam release and store tooling outside it has no review task. Found by `task 524: code-review.md skeleton, inventory and directory.md entry` (inventory assigns these files to part 6).
 
 ## What
@@ -18757,7 +18757,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Don''t delete `state/game.json`, `game.sqlite`, `flags.json` (family''s data, gitignored).
 - AGENTS.md Commands: remove the `trivia` and `nix build .#app` lines/mentions so it doesn''t name dead commands (rest of the docs: step-5 task).
 - Done when: per-commit checks pass; `trivia-release-check --skip tag …` runs without a `nix` step; `grep -rn "api/save\|ServerStore\|app/server\|\.#app" app authoring flake.nix` finds nothing live; the dev server (step 1) still plays a game.
-- Guard: if decision "Family save imported into trivia-desktop?" is missing or not answered "imported…", run `pm task-pending-decision 765 <its id>` (raise it as in task 763 if missing) and stop without deleting anything.', '2026-10-13T15:19:48Z', NULL, 759, 0, NULL, NULL);
+- Guard: if decision "Family save imported into trivia-desktop?" is missing or not answered "imported…", run `pm task-pending-decision 765 <its id>` (raise it as in task 763 if missing) and stop without deleting anything.', '2026-10-13T15:19:48Z', NULL, 759, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (766, 99, 'Docs: desktop as the only game, dev server, D-59 superseded', 'work', 'open', NULL, NULL, 'Step 5 of plan 99, after the deletion task ("Delete app/server, ServerStore, the trivia command and nix build .#app").
 
 - AGENTS.md Commands: no `trivia`, no `nix build .#app`; the dev server (command, port, save dir: `TRIVIA_SAVE_DIR` or a printed temp dir); `trivia-release-check` line without `nix build .#app`.
@@ -18766,7 +18766,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/decisions.md`: D-59 marked superseded by decision 111: Steam only.
 - `plans/01-architecture.md`, `plans/19-repo-layout.md`, `plans/12-client-engine.md`, `plans/18-steam-integration.md` (desktop as the only game; part 9 note), `plans/project.md` in sync.
 - `pm decision consequences 111 "<date>, task <id>: …"` with what changed (Python server, `/api/save`, `trivia`, `nix build .#app` gone; dev server; import; authoring reads the desktop save).
-- Done when: `grep -rn "nix build .#app\|/api/save\|ServerStore\|TRIVIA_STATE\|app/server" AGENTS.md README.md directory.md plans/` finds only historical mentions (decision log, superseded notes); per-commit checks pass.', '2026-10-13T15:19:48Z', NULL, 759, 0, NULL, NULL);
+- Done when: `grep -rn "nix build .#app\|/api/save\|ServerStore\|TRIVIA_STATE\|app/server" AGENTS.md README.md directory.md plans/` finds only historical mentions (decision log, superseded notes); per-commit checks pass.', '2026-10-13T15:19:48Z', NULL, 759, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (767, 99, 'Sweep other plans and tasks for the retired browser game', 'work', 'done', NULL, '2026-10-13, tasks.sql only. Bodies updated: task 200 (nix build .#app → trivia-desktop-build, licence in electron-builder.yml), task 591 (nix build .#app/result/bin/trivia/TRIVIA_STATE → nix develop + trivia-desktop-build), task 741 (decision 104 answered won''t fix: code-review row update only, Python twins now in authoring/tools, app/server going), task 744 (npmDepsHash/nix build .#app only if task 765 still open), task 826 (family save check: desktop save copy in temp TRIVIA_SAVE_DIR on the dev server), task 958 (trivia --publish-mod → trivia-desktop --publish-mod). Already fine: 238 (task 756), 719, 802, 786, 998; tasks 652/699/700/710 closed or no stale text; plans 30/40/82/83/100/111/115 bodies stale but their open tasks aren''t, so no follow-up tasks and no plan edits (no requeue); decision 50 answered; pending decisions: only decision 150 names state/game.json, correctly. trivia --check-mod mentions = packaged executable, kept.', 'Step 6 of plan 99, after the deletion task ("Delete app/server, ServerStore, the trivia command and nix build .#app").
 
 - Find open plans, tasks and pending decisions that still name `trivia` (the command), `/api/save`, `ServerStore`, `nix build .#app`, `TRIVIA_STATE` or "browser game" (`pm queue`, `pm show <id>`, `grep` on `tasks.sql` read-only).
@@ -22672,7 +22672,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/17a-store-page.md` "Screenshots" / "Trailer": paths, order, render date.
 - Approval: `pm decision add "Store screenshots and trailers approved?"` with the paths and the order; fixes → follow-up task in plan 88.
 
-Done when: rendered and approval asked.', '2026-10-13T17:00:29Z', NULL, 842, 0, NULL, NULL);
+Done when: rendered and approval asked.', '2026-10-13T17:00:29Z', NULL, 842, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (846, 89, 'create tasks for plan 89', 'split', 'done', 1000, '2026-10-13, tasks.sql: task 683 body follows decision 87 (icon from task 669) and decision 88 (resedit, signExecutable: false); other open tasks (681, 682, 786) already fit plan 89', 'Split plan 89 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:01:20Z', '2026-10-13T17:01:46Z', 840, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (847, 11, 'create tasks for plan 11', 'split', 'done', 1000, '2026-10-13, tasks.sql: tasks 854 (plan: report server, part 8), 855 (plan: release checklist rows, part 3 update; plan 92 done); plans 93–97 already have revise tasks 848–852; plans 91, 92 done', 'Split plan 11 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -23331,7 +23331,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
   - Answer = URL + date.
 - `pm task-pending-decision <this task> <decision>` and stop.
 - After the answer: `reportUrl` in the build config (task 699 put it in `app/desktop/package.json`), the URL in `plans/11-steam.md` ST-5, `pm decision consequences`. Per-commit checks (AGENTS.md).
-- From task 865 (`report-server/` exists): the wrapper is `trivia-report-server` (`deploy`, `tail`, `secret <NAME>` = `wrangler secret put`); the database name is `trivia-reports`, its id replaces `PLACEHOLDER(868)` in `report-server/wrangler.toml`; `STEAM_APP_ID` var there is `""` until `authoring/steam/steam.json` has the App ID; `.dev.vars` writes `PULL_TOKEN` (base64url) and `HASH_SALT` (hex) with `openssl rand`: reuse those lines. Re-check the free-tier numbers on Cloudflare''s pricing pages (Workers, D1) and fix them in ST-5 if they differ (task 865 had no web access).', '2026-10-13T17:21:55Z', NULL, 856, 0, NULL, NULL);
+- From task 865 (`report-server/` exists): the wrapper is `trivia-report-server` (`deploy`, `tail`, `secret <NAME>` = `wrangler secret put`); the database name is `trivia-reports`, its id replaces `PLACEHOLDER(868)` in `report-server/wrangler.toml`; `STEAM_APP_ID` var there is `""` until `authoring/steam/steam.json` has the App ID; `.dev.vars` writes `PULL_TOKEN` (base64url) and `HASH_SALT` (hex) with `openssl rand`: reuse those lines. Re-check the free-tier numbers on Cloudflare''s pricing pages (Workers, D1) and fix them in ST-5 if they differ (task 865 had no web access).', '2026-10-13T17:21:55Z', NULL, 856, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (869, 103, 'Plan 103 close-out: docs, how-tos, decision consequences', 'work', 'open', 680, NULL, 'Plan 103 task 5: run after the plan''s other tasks.
 
 - `plans/11-steam.md` ST-5 server half `[x]` with a note (API v1, hosting, retention, URL).
@@ -23340,7 +23340,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `README.md` how-tos: "run the report server locally", "deploy / rotate secrets" (`PULL_TOKEN`: new secret + new local file; `HASH_SALT`: only resets today''s counts).
 - `plans/project.md` in sync.
 - `pm decision consequences` on decision 93 and decision 117.
-- Check plan 103''s "Done when"; a gap → follow-up task. Per-commit checks (AGENTS.md).', '2026-10-13T17:21:55Z', NULL, 856, 0, NULL, NULL);
+- Check plan 103''s "Done when"; a gap → follow-up task. Per-commit checks (AGENTS.md).', '2026-10-13T17:21:55Z', NULL, 856, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (870, 104, 'Release check: report row, report step, Steam offline row', 'work', 'done', NULL, '2026-10-13, authoring/steam/release_check.py (offline/report rows, report step reading reportUrl from linux-unpacked app.asar, else app/desktop/package.json), plans/11-steam.md, plans/18-steam-integration.md, AGENTS.md, README.md; checked: report ✓ against trivia-report-server dev, ✗ server down with URL, ✗ empty URL, --manual file with report row, content-only auto-skip', 'Plan 104 task 1. Bring `trivia-release-check` and the ST-4 checklist in line with decision 111 (Steam only) and decision 93 (own report server). Details: plan 104 "Decisions taken here". Runs after plan 93 (550) and plan 103 (700) tasks; if plan 93''s `report:send` / `qgen flag --pull` or plan 103''s `trivia-report-server dev` aren''t there yet, stop with a follow-up note, don''t stub them into the release check.
 
 - `authoring/steam/release_check.py`:
@@ -23618,7 +23618,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm task-pending-decision <this task> <decision>` and stop.
 - After the answer: ✗ rows → follow-up tasks per the plan''s `failed` routing (server → plan 105, texts → plan 108; closed plan: `pm task add <plan>` anyway); `pm decision consequences` (deployed date, store text live or scheduled); ST-5 note in `plans/11-steam.md` (deploy date). Per-commit checks (AGENTS.md).
 
-Done when: the decision is answered, ✗ rows have follow-up tasks, consequences and the ST-5 note are written.', '2026-10-13T17:43:24Z', NULL, 883, 0, NULL, NULL);
+Done when: the decision is answered, ✗ rows have follow-up tasks, consequences and the ST-5 note are written.', '2026-10-13T17:43:24Z', NULL, 883, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (895, 110, 'Release check: telemetry row', 'work', 'done', NULL, '2026-10-14, authoring/steam/release_check.py (MANUAL telemetry, full only), plans/11-steam.md (ST-4 row, Patch variant, template, failed routing, ST-4 note); checked: --manual file with every row parses, all-steps-skipped run lists telemetry, content-only checklist auto-skips it', 'Plan 110 task 2 (read "Decisions taken here" in the plan body). Needs plans 106–109 done and task 870: Release check: report row, report step, Steam offline row closed; if one isn''t, leave this task as it is.
 
 - `authoring/steam/release_check.py`: new `MANUAL["telemetry"]`, `full` only (like plan 104''s `report` row: a content-only patch ships no client or shell code; the server deploys apart from builds). No automated step: the `report` step already checks the base URL''s `/health`, the only shared dependency. Row text: `beta` under Steam, online: answer «Sí» (or Esc menu on), play one game, quit → `qgen telemetry --pull` folds ≥ 1 session from that version, `qgen report --played` lists it in its session stats; switch off, play, quit → main log `trivia: telemetry off`, no `telemetry →` line, the next pull folds 0. Check the log lines and commands against plans 107/109 as built.
@@ -23640,7 +23640,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm task-pending-decision <this task> <decision>` and stop.
 - After the answer: ✗ → follow-up tasks per the plan''s `failed` routing; `pm decision consequences` on the decision; note in the body of task 897: Close-out docs (telemetry) (`pm task set … --body`) whether milestone 14''s "Done when" is met and the Steam close behaviour found. Per-commit checks (AGENTS.md).
 
-Done when: the decision is answered, ✗ rows have follow-up tasks, the close-out task has the findings.', '2026-10-13T17:43:24Z', NULL, 883, 0, NULL, NULL);
+Done when: the decision is answered, ✗ rows have follow-up tasks, the close-out task has the findings.', '2026-10-13T17:43:24Z', NULL, 883, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (897, 110, 'Close-out docs (telemetry)', 'work', 'open', NULL, NULL, 'Plan 110 task 4. Needs task 896: Gamemaster: telemetry end-to-end on beta under Steam done (its findings are added to this body); if not, leave this task as it is.
 
 - `plans/11-steam.md`: principle 3 → "Offline, no accounts; opt-in telemetry only (milestone 14)": the game works without network, sends nothing without a stored yes; ST-5''s "(no telemetry, so by hand …)" → reports via plan 103''s server, opt-in telemetry see milestone 14 (plans 105–109); ST-5 note with deploy date and retention (30 days, decision 118: Telemetry server storage and pull token).
@@ -23651,7 +23651,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `grep -rni "no telemetry\|never phones home"` over docs and code: none left.
 - `pm decision consequences` on decisions 118–121 where the built result differs or adds facts; check milestone 14''s "Done when" and plan 101''s; a gap → follow-up task. Per-commit checks (AGENTS.md).
 
-Done when: no doc says "no telemetry" or "never phones home"; docs, how-tos and decision consequences match the built telemetry.', '2026-10-13T17:43:24Z', NULL, 883, 0, NULL, NULL);
+Done when: no doc says "no telemetry" or "never phones home"; docs, how-tos and decision consequences match the built telemetry.', '2026-10-13T17:43:24Z', NULL, 883, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (898, 102, 'create tasks for plan 102', 'split', 'done', 1000, '2026-10-13, tasks 899–910 (plan tasks for parts 1–12; 906 waits for decision 123)', 'Split plan 102 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T17:46:00Z', '2026-10-13T17:47:31Z', 834, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (899, 102, 'write plan: Readable client build', 'plan', 'done', 1000, '2026-10-13, plan 111 (Readable client build), decision 124; test build in /tmp, nothing in the repo', 'Write the plan for part 1 of masterplan 15 (plan 102): "Readable client build". Read plan 102 (ground rules apply), milestone 15, `app/client/vite.config.ts`, the `credits` plugin, `app/desktop/main.mjs`/`resolve.mjs`. Create it with `pm plan add 15 "Readable client build" --priority 560 < body.md` (runs first among the parts'' work: parts 4, 10, 11 name module paths; adjust the priority if `pm plan list` says otherwise).
@@ -25053,7 +25053,7 @@ Workers never log in to Steam: this task only writes the checklist and handles t
 - link this task to it (`pm task-pending-decision`) and stop
 - after the answer: each failing row → a follow-up task in plan 114; then done
 
-Done when: the gamemaster answered; failures have follow-up tasks.', '2026-10-13T18:30:39Z', NULL, 934, 0, NULL, NULL);
+Done when: the gamemaster answered; failures have follow-up tasks.', '2026-10-13T18:30:39Z', NULL, 934, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (959, 115, 'Shell: merged bundles.json and mod bundle folders', 'work', 'done', NULL, '2026-10-13, app/desktop/mods.mjs (bundleRows: structure/slug checks, bundle_row/bundle_json warnings, rows on readManifest''s entry), resolve.mjs (merged /data/bundles.json built once: ours then loaded mods top first, ids <mod>:<id>, source/mod/modName; /data/bundles/<mod>:<bundle>/ from that mod''s folder via contained(), only listed bundles of loaded mods; other /data/ ours only, plan 112''s /data/ layering removed), main.mjs (loaded mods → makeResolver), resolve.test.mjs (merge, bad rows, namespaced routing, escapes, mod data/pool.json not served). Checked: npm test, check, build, qgen validate; trivia-desktop with TRIVIA_DEV_STEAM_USER=1 and a temp mod: page fetch of /data/bundles.json = base, colombia, tempbundle:cats (mod, Temp Bundle), log shows bundle_row; temp mod and state/desktop/mods.json removed', 'Plan 115, task 1. Runs after plan 112''s `task 950: mods.mjs: mod.json validator, discovery, mods.json settings, arrange`, `task 951: resolve.mjs: mod layers, symlink-safe contained(), MIME, resolve.test.mjs`, `task 952: main.mjs: discover mods, mods.json, layers into the resolver, --no-mods` (plan 114''s `mods:list` optional, for the warnings). Binding: decision 128: Bundles from mods: the shell merges bundles.json; mod ids namespaced `<mod id>:<id>`; decision 111 (mods only with a valid Steam user).
 
 ## What
@@ -25357,7 +25357,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
   - `--visibility public` → visible to the second account, which subscribes and sees it load (plan 114''s check, task 958; may share the session)
   - on Windows: the log file beside the mod folder and the message box appear
 - Options "all ok" (recommended) / "problems: …"; `pm task-pending-decision <this task> <id>`; close with the answer
-- Done when: the gamemaster answers; a follow-up task in plan 119 for every failure.', '2026-10-13T18:35:04Z', NULL, 939, 0, NULL, NULL);
+- Done when: the gamemaster answers; a follow-up task in plan 119 for every failure.', '2026-10-13T18:35:04Z', NULL, 939, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (981, 120, 'modPool: text-only questions and per-question drop reasons', 'work', 'done', NULL, '2026-10-14, app/client/src/engine/pool.ts, pool.test.ts: modPool reason codes per decision 133 (bad_id with the raw id rule, duplicate_id, no_text, wrong_answers, hints (exactly 3), difficulty, subcategory, status, bad_media), ModIssue {id, reason, dropped} (bad_media not dropped = only the media/background removed), missing/null media → decorative NO_MEDIA, counts for modIssues() unchanged; built engine/pool.js imports in plain Node. Card.svelte unchanged: its line already shows for mods only when a set file failed (essential without a file is dropped). Checked in trivia-desktop (dev user, temp TRIVIA_MODS_DIR + TRIVIA_SAVE_DIR): text-only mod question played and answered, no missing-media line.', 'Part 1 of plan 120 (player bundle kit). After `task 960: Loader: mod packs, namespaced ids, media, modIssues()` (plan 115 task 2).
 
 Why: player bundles (and the AI prompt, task 4 of this plan) produce questions without media; `trivia --check-mod` (next task) must list every dropped question with a reason. One validator for loader, check and publish (plan 102, decision 133: Player bundle kit: check with trivia --check-mod, kit in modding/ shipped in the install folder).
@@ -25558,7 +25558,7 @@ Then `pm task-pending-decision <this task> <decision>`, stage, stop.
 - The four item ids and the visibility go into task 993''s body (`pm task set`) if not yet there.
 
 ## Done when
-- The decision is answered; ✗ rows routed as follow-ups; consequences recorded; ids handed to task 993.', '2026-10-13T18:37:57Z', NULL, 943, 0, NULL, NULL);
+- The decision is answered; ✗ rows routed as follow-ups; consequences recorded; ids handed to task 993.', '2026-10-13T18:37:57Z', NULL, 943, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (992, 122, 'Gamemaster: guide link on the store page', 'work', 'open', NULL, NULL, 'Part of plan 122 (milestone 15). Confirms the milestone''s "The modding guide is linked on the store page". Workers never log into Steamworks.
 
 ## Needs (else stop, say which, don''t close)
@@ -25581,7 +25581,7 @@ Options: "live on the store page" (recommended; coming-soon page counts) | "ente
 - `pm decision consequences` on decision 134.
 
 ## Done when
-- The decision is answered and 17a''s "Modding" notes the state.', '2026-10-13T18:37:57Z', NULL, 943, 0, NULL, NULL);
+- The decision is answered and 17a''s "Modding" notes the state.', '2026-10-13T18:37:57Z', NULL, 943, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (993, 122, 'Close-out docs: modding as built in plans, README, AGENTS.md, directory.md', 'work', 'open', NULL, NULL, 'Part of plan 122 (milestone 15), last task. Runs after task 991: Gamemaster: the four examples from the Workshop on a second account and task 992: Gamemaster: guide link on the store page are answered and applied (else stop, say which). Check what plans 111–121 already wrote; fill only gaps, no duplicated prose. Style per AGENTS.md (bullets, ultra-concise).
 
 ## Work
@@ -25596,7 +25596,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Check milestone 15''s "Done when" and plan 102''s against tasks 991, 992 and task 942; a gap → follow-up task in the owning plan (or `pm plan add 15 …` if it''s done).
 
 ## Done when
-- Plans 18, 01, 11, `project.md`, README, AGENTS.md describe modding as built; example ids committed. Per-commit checks (AGENTS.md) pass.', '2026-10-13T18:37:57Z', NULL, 943, 0, NULL, NULL);
+- Plans 18, 01, 11, `project.md`, README, AGENTS.md describe modding as built; example ids committed. Per-commit checks (AGENTS.md) pass.', '2026-10-13T18:37:57Z', NULL, 943, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (994, 112, 'electron-builder.yml: ship mods.mjs in the packaged shell', 'work', 'done', NULL, '2026-10-13, app/desktop/electron-builder.yml: mods.mjs in files: (no *.test.mjs); trivia-desktop-build --dir, release/linux-unpacked/trivia with TRIVIA_DEV_STEAM_USER=1 and a throw-away mod logs ''trivia: mods: 1 loaded''; checks pass', '- `app/desktop/electron-builder.yml` `files:` lists `main.mjs`, `resolve.mjs`, `save.mjs`, `preload.cjs` only; `mods.mjs` (task 950) is missing.
 - Once `main.mjs` imports `./mods.mjs` (task 952), the packaged build fails at start (module not found).
 - Add `- mods.mjs` to `files:`; don''t ship `*.test.mjs`.
@@ -25862,7 +25862,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Storage: once the media bundle writes `app/desktop/build/media/`, rebuild `trivia-desktop-build --dir`, `du -sb` the depots (`release/{win,linux}-unpacked` minus `resources/media`, `app/desktop/build/media`, DLC media from `build/dlc`/plan 89''s DLC depots), set "Storage" in both requirement tables to the installed size rounded up; update "Measured".
 - Linux OS row: the non-Nix start test is the Steam beta test (decision 39); replace "Ubuntu 22.04" with the distro played there, if any.
 - en/de "Subtitles" ✓ once `pool.en.json` / `pool.de.json` ship (decision 80, decision 90).
-- Controller: Full instead of Partial once the developer''s real-pad run passes (decision 90).', '2026-10-14T19:13:27Z', NULL, 688, 0, NULL, NULL);
+- Controller: Full instead of Partial once the developer''s real-pad run passes (decision 90).', '2026-10-14T19:13:27Z', NULL, 688, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1029, 88, 'Store screenshots and capsules: shell on Xvfb, not the desktop''s Wayland', 'work', 'done', NULL, '2026-10-14, authoring/store/capsules.mjs, authoring/store/screenshots.mjs: shell into Xvfb (no WAYLAND_DISPLAY/NIXOS_OZONE_WL, --ozone-platform=x11) unless --visible; checked under Wayland: window on Xvfb, output as before', 'Found in `task 844: Store trailer command trivia-trailer`.
 
 - `authoring/store/screenshots.mjs` and `authoring/store/capsules.mjs` start `trivia-desktop` with `DISPLAY` set to their Xvfb, but pass `WAYLAND_DISPLAY` (and `NIXOS_OZONE_WL`) from the developer''s session through: Electron picks Wayland, the window opens on the developer''s desktop and Xvfb stays empty (`xwininfo -root -tree` shows no children). The shots are still right (CDP `Page.captureScreenshot` + `Emulation.setDeviceMetricsOverride`), so this is about windows popping up and a dead Xvfb.
@@ -25935,7 +25935,7 @@ Binding: D-96 (`decision 50: Play-test of age groups and bundles` item 7, plan 1
 - Jokers, in `en` and `de`: the tray shows the five symbols; each follow-up dialog (skip dialog, category picker both steps, snipe scope, difficulty dial, hint note) shows its joker''s symbol (the tray''s, from `TOKENS`) and the new name; `/comodines?lang=<L>` (`trivia-authoring`) per locale: new names, same symbols.
 - Failure → `pm task add 126` (language picker), `pm task add 136` (jokers), the slug-keys plan (save mapping, names) or the owning plan, with the steps to reproduce, stop.
 
-Done when: every row passes; the result (date, commit) is in `plans/15-i18n.md` "Model" (I18N-2) and `plans/15a-ui-translation.md` "Wording and review" and "Joker names"; slug keys in `plans/22-bundles.md` (taxonomy, keys).', '2026-10-14T21:34:37Z', NULL, 1031, 0, NULL, NULL);
+Done when: every row passes; the result (date, commit) is in `plans/15-i18n.md` "Model" (I18N-2) and `plans/15a-ui-translation.md` "Wording and review" and "Joker names"; slug keys in `plans/22-bundles.md` (taxonomy, keys).', '2026-10-14T21:34:37Z', NULL, 1031, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1034, 128, 'Docs close-out of S4', 'work', 'open', NULL, NULL, 'Task 3 of `plan 128: S4 close-out`: bring plan files, indexes and the later masterplans in line with milestone 9''s outcome. Runs after `task 1294: Content target check` and `task 1033: Language picker, UI wording, joker and slug-key check` are done (stop without changes otherwise). Docs and pm only.
 
 Binding: `decision 21` (D-75; 5000 per question locale `en`, `es`, `es-ES`, `de`), `decision 26` (D-78), `decision 235: Source locale per question and translations from either source (English-first base)`, `decision 156: One language for UI and questions`, D-96 (`decision 50` item 7), `decision 110` (D-99, `colombia` 2000 es + en may land after launch), `decision 66` (packs are free DLC), decision 96 (content updates). Slug keys (masterplan part 16, developer 2026-10-16): supersede the name-as-key part of `decision 165: Subcategory keys in code: bundle + name; base keeps bare names`, D-99, D-100.
@@ -25947,7 +25947,7 @@ Binding: `decision 21` (D-75; 5000 per question locale `en`, `es`, `es-ES`, `de`
 - Masterplans of milestones 10 and 11 (`plan 10: masterplan`, `plan 11: masterplan`): compare with S4''s outcome; if scope changed, append a short dated note via `pm plan edit <id> --body -` (whole body): store languages `es`, `en`, `de` (+ `es-ES`, UI and own question pool); one free DLC depot per pack with its languages (`colombia`, `usa`, `germany`, `uk`, `spain`, `mexico`); packs grow after launch via content updates (`plan 96: Content updates as patches (ST-5)`, decision 96); install size with four pools (`es`, `es-ES`, `en`, `de`) + pack pools (task 1294''s file sizes); Steam''s language as the picker''s guess (D-96). No note if nothing changed. Milestone bodies untouched; anything they get wrong → `pm decision add`.
 - `qgen validate`, `npm run check` unaffected.
 
-Done when: milestone 9''s "Done when" holds except the regional bundles row (slug keys included); task note cites decision ids and dates.', '2026-10-14T21:34:37Z', NULL, 1031, 0, NULL, NULL);
+Done when: milestone 9''s "Done when" holds except the regional bundles row (slug keys included); task note cites decision ids and dates.', '2026-10-14T21:34:37Z', NULL, 1031, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1035, 128, 'Regional bundles record', 'work', 'open', -140, NULL, 'Task 4 of `plan 128: S4 close-out`: record the regional bundles (`colombia` pilot with its effort, then `usa`, `germany`, `uk`, `spain`, `mexico`; 2000 approved each in their languages). May land after launch; the launch (milestone 11) never waits for it. Runs after `task 1034: Docs close-out of S4`. Docs, checks and pm only.
 
 Binding: `decision 110: Regional packs at launch (RG-5, OQ-46)` (D-99): every regional bundle 2000 approved in its region''s language + en (en regions: en only), `colombia` (es + en) the pilot, effort measured ($ per approved, review time per 100). Its "more bundles only after a new decision with the pilot''s numbers" is replaced (milestone 9, developer 2026-10-15): `usa` (en), `germany` (de + en), `uk` (en), `spain` (es-ES + en), `mexico` (es + en), run by `plan 84: Release content runs` chain 5; no "More regional bundles?" decision. `decision 66: Price model (OQ-33): how is the game sold on Steam?` (packs are free DLC). D-59: the family''s save keeps base + `colombia`.
@@ -25964,7 +25964,7 @@ Binding: `decision 110: Regional packs at launch (RG-5, OQ-46)` (D-99): every re
 - DLC entries per bundle (`steam.json` `dlc`, store texts, capsules; plans 130, 89, 88): present or an open follow-up task there; else `pm task add 98` naming the bundle and what''s missing.
 - `plans/11-steam.md` S4 row: regional bundles done (date, counts per bundle and language, pilot numbers); `plans/project.md`; RG-5 ticked in `15c`.
 
-Done when: milestone 9''s "Done when" holds in full; task note cites decision 110 and milestone 9''s 2026-10-15 change.', '2026-10-14T21:34:37Z', NULL, 1031, 0, NULL, NULL);
+Done when: milestone 9''s "Done when" holds in full; task note cites decision 110 and milestone 9''s 2026-10-15 change.', '2026-10-14T21:34:37Z', NULL, 1031, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1036, 129, 'create tasks for plan 129: Partner account, name check and AI terms (PUB-6, PUB-7, PUB-10)', 'split', 'done', 1000, '2026-10-14, tasks.sql: tasks 1037-1042; decisions ''Store names pass PUB-7?'' and ''Steamworks app created? App ID?'' added by tasks 1038 and 1040 once their research is written', 'Split plan 129 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-14T21:35:41Z', '2026-10-14T21:36:42Z', 253, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1037, 129, 'PUB-10 Anthropic terms for the pipeline''s outputs', 'work', 'done', NULL, '2026-10-14, plans/17-publishing.md: PUB-10 [x]; Consumer Terms govern claude -p on the subscription, outputs assigned to the user and sellable, no attribution; no decision needed', 'Part 1 of `plan 129: Partner account, name check and AI terms (PUB-6, PUB-7, PUB-10)`. Research only; never log in or contact anyone.
@@ -26016,13 +26016,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Created: App ID, app credit payment date and Developer/Publisher label into `plans/17-publishing.md` (PUB-6 `[x]` with the note) and `plans/11-steam.md` (S5 prerequisites).
 - Not here: depots, branch (`decision 89: Steamworks App ID, depot IDs and beta branch entered? (for the first beta upload)`, plan 89); the switch from Spacewar 480 to the real App ID (`steam_appid.txt`, `TRIVIA_STEAM_APPID`) is `task 254: write plan: Steamworks app configuration (SW-7)`''s plan.
 - "Not yet": a new decision with the same question; this task pending on it.
-- `pm decision consequences` on the answered decision.', '2026-10-14T21:36:31Z', NULL, 1036, 0, NULL, NULL);
+- `pm decision consequences` on the answered decision.', '2026-10-14T21:36:31Z', NULL, 1036, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1042, 129, 'Close-out of PUB-6, PUB-7, PUB-10', 'work', 'open', 690, NULL, 'Part 4 of `plan 129: Partner account, name check and AI terms (PUB-6, PUB-7, PUB-10)`; last task of the plan.
 
 - `plans/17-publishing.md`: PUB-6, PUB-7, PUB-10 `[x]` with notes (PUB-10''s line with source, PUB-7 findings table and result, PUB-6 checklist with App ID and payment date); status line.
 - `plans/project.md` and `plans/11-steam.md` (S5 prerequisites) in sync.
 - Each answered decision of this plan has `pm decision consequences`.
-- A row still open (a pending decision): make this task pending on it, don''t close.', '2026-10-14T21:36:31Z', NULL, 1036, 0, NULL, NULL);
+- A row still open (a pending decision): make this task pending on it, don''t close.', '2026-10-14T21:36:31Z', NULL, 1036, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1043, 130, 'create tasks for plan 130: Steamworks app configuration (SW-7)', 'split', 'done', 1000, '2026-10-14, tasks.sql: tasks 1044, 1045 (1045 waits on decision 177)', 'Split plan 130 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-14T21:50:30Z', '2026-10-14T21:51:26Z', 254, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1044, 130, 'SW-7 checklist in plan 18 and the ''configured'' decision', 'work', 'done', NULL, '2026-10-14, plans/18-steam-integration.md: SW-7 checklist section, Deck Verified pointer; decision 179 pending, task 1045 waits on it', 'Part 1 of `plan 130: Steamworks app configuration (SW-7)`: write the Steamworks values the developer enters as one checklist, and the pm decision that collects the results. Docs and pm only; no Steamworks access (never log in, never enter values).
@@ -26046,7 +26046,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Out of scope: `report-server/wrangler.toml` `STEAM_APP_ID` (decision 147''s follow-up).
 
 Check: `npm run check`; `trivia-steam vdf` (or `--dry-run`) writes the VDFs with the real IDs; `rg -n ''\b480\b'' app authoring README.md` shows no default outside `--dry-run`.
-Done when: no 480 default left outside `--dry-run`; SW-7 ticked.', '2026-10-14T21:51:13Z', NULL, 1043, 0, NULL, NULL);
+Done when: no 480 default left outside `--dry-run`; SW-7 ticked.', '2026-10-14T21:51:13Z', NULL, 1043, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1046, 131, 'create tasks for plan 131: Content survey, rating and price (PUB-9, PUB-11)', 'split', 'done', 1000, '2026-10-14, tasks 1047-1050 in plan 131 (tasks.sql only)', 'Split plan 131 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-14T21:55:25Z', '2026-10-14T21:56:16Z', 259, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1047, 131, 'Content survey and age rating: research and draft (PUB-9)', 'work', 'done', NULL, '2026-10-14, plans/17a-store-page.md ''Content survey (PUB-9)''; decision 181 pending', 'Part of `plan 131: Content survey, rating and price (PUB-9, PUB-11)`. Research Valve''s current content survey rules, scan the game, draft the answers, and get them approved through a pm decision. Never log into Steamworks or contact Valve or a rating body. Steam only (`decision 111: Steam only: no effort outside Steam; Steam features are the reason to buy`).
@@ -26117,7 +26117,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/project.md` S5 row in sync; `pm decision consequences` on the decisions of tasks 1047, 1048 and 1049.
 
 ## Done when
-- PUB-9 and PUB-11 ticked; the launch discount waits only for the launch day (`plan 95: Launch`).', '2026-10-14T21:56:10Z', NULL, 1046, 0, NULL, NULL);
+- PUB-9 and PUB-11 ticked; the launch discount waits only for the launch day (`plan 95: Launch`).', '2026-10-14T21:56:10Z', NULL, 1046, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1051, 42, 'Freesound: re-pick its 2 audio slots from Commons, drop it from the audio order', 'work', 'done', NULL, '2026-10-15, authoring/data/questions.json, app/data/pool.json, plans/decisions.md, plans/23-media-providers.md, plans/open-questions.md, plans/11-steam.md, plans/project.md', 'Follow-up of `task 205: Freesound: record the answer`; `decision 82: Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?` → (a), D-103 in `plans/decisions.md`.
 
 - Remove `freesound` from `providers.ORDER["audio"]` in `authoring/tools/providers/__init__.py` (audio: Commons only); can go first, so new batches stop picking it. Keep `providers/freesound.py` (unasked). Check the review tool''s search modal and `PROVIDERS` users still work without it in the order.
@@ -26265,7 +26265,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm task-pending-decision` for tasks 2 (Record the beta result) and 3 (S5 docs close-out) of plan 134 on `did`.
 
 ## Done when
-- The section exists, the decision is pending, tasks 2 and 3 wait for it.', '2026-10-14T23:39:31Z', NULL, 1067, 0, NULL, NULL);
+- The section exists, the decision is pending, tasks 2 and 3 wait for it.', '2026-10-14T23:39:31Z', NULL, 1067, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1069, 134, 'Record the beta result', 'work', 'open', NULL, NULL, 'Task 2 of `plan 134: Beta test and S5 close-out`: copy the developer''s answer to "S5 beta test passed?" (added by task 1 of plan 134: Beta checklist and the test decision) into `plans/18-steam-integration.md` "S5 beta test". Docs and pm only.
 
 ## Do
@@ -26276,7 +26276,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - A finding that settles something (e.g. the Linux runtime) → D-entry in `plans/decisions.md` and `pm decision record`.
 
 ## Done when
-- Every non-optional row shows pass.', '2026-10-14T23:39:32Z', NULL, 1067, 0, NULL, NULL);
+- Every non-optional row shows pass.', '2026-10-14T23:39:32Z', NULL, 1067, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1070, 134, 'S5 docs close-out', 'work', 'open', NULL, NULL, 'Task 3 of `plan 134: Beta test and S5 close-out`, after task 2 (Record the beta result). Docs and pm only; never drop or edit tasks of other plans; pm''s cleanup sets the milestone status.
 
 ## Guard
@@ -26295,7 +26295,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - S6 scope changed (Deck review moved, task 673 carried over, Linux distro / pad-run facts for `decision 90: Store requirements, languages and controller flags?`, a DLC finding) → short dated note in `plan 11: masterplan` via `pm plan edit 11 --body -`.
 
 ## Done when
-- The task note cites milestone 10''s "Done when": beta installed from Steam on a second machine and played by the family; without a Steam user nothing persists and flags are off; with one, saves sync through Steam Cloud (decision 75 or the beta Cloud row); Deck review requested and its result (or S6 deferral) noted in plan 18; `qgen validate` unaffected.', '2026-10-14T23:39:32Z', NULL, 1067, 0, NULL, NULL);
+- The task note cites milestone 10''s "Done when": beta installed from Steam on a second machine and played by the family; without a Steam user nothing persists and flags are off; with one, saves sync through Steam Cloud (decision 75 or the beta Cloud row); Deck review requested and its result (or S6 deferral) noted in plan 18; `qgen validate` unaffected.', '2026-10-14T23:39:32Z', NULL, 1067, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1071, 95, 'German launch announcement: game name per decision 78', 'work', 'done', NULL, '2026-10-14, plans/11-steam.md: German announcement title/body «Wohnzimmer-Quiz» (decision 78, 17a), «Spielleitermodus» per de.md (was «Mit Spielleitung»), facts line names the German store name; body already infinitive/impersonal, no ihr', '`plans/11-steam.md` "Launch (S6)" → "Announcement texts" → "German" uses «Living Room Trivia» (title, body) and the facts line says "German: no localized name"; `decision 78: German store name (PUB-8, D-50): keep «Living Room Trivia» or a localized one?` picked «Wohnzimmer-Quiz» (provisional until PUB-7''s check, `plans/17a-store-page.md` "German"). Use the German store name as 17a has it at the time, fix the facts line. Also check the German body against `app/client/src/locales/style/de.md` (no «ihr» imperatives: «Markiert», «öffnet» style left elsewhere in the text). Docs only.', '2026-10-14T23:42:05Z', '2026-10-14T23:42:56Z', 862, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1072, 94, 'Coming soon checklist: German store name per decision 78', 'work', 'done', NULL, '2026-10-14, plans/11-steam.md', '`plans/11-steam.md` "Launch (S6)" → "Developer checklist" step 1 says "Names per D-50 set in Steamworks: «Living Room Trivia», localized «Trivia en Familia»" and omits German; `decision 78: German store name (PUB-8, D-50): keep «Living Room Trivia» or a localized one?` picked «Wohnzimmer-Quiz» (provisional until PUB-7''s check, `plans/17a-store-page.md` "German"). Add the German localized name as 17a has it, cite decision 78, PUB-7 check for all three names. Also line 69 (OQ-34 row) names only en/es: add de. Docs only.', '2026-10-14T23:42:56Z', '2026-10-14T23:43:11Z', 1071, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1073, 6, 'revise the masterplan of milestone 6: Screen polish leftovers', 'revise', 'done', 1000, '2026-10-15, plan 6 body (part 4: icons and language flags; parts 1–3 status)', '`milestone 6: Screen polish leftovers` changed. Bring `plan 6: masterplan`, the masterplan, in line with it (`pm plan edit 6 --body -`), or
@@ -28080,7 +28080,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Waits for `decision 217: chinese-base membership: how does a translated base question count for chinese-base?`; implement its answer in the translation layout, `export`, `validate` (D-81 amended, new D-entry in `plans/decisions.md`).
 - Scope: masterplan part 2: `qgen bundle new chinese-base --kind base`, `languages: ["zh-Hans"]`, `voice`, `rule`; `targets.json` 5000 in D-53''s mix; own taxonomy and concept lists (D-43, D-99, D-100) reusing `base`''s where they fit, plus China-centric categories, with a pm decision for the developer to approve the list (as `plan 138: Regional taxonomy: a general list, colombia reworked`); zh offers only `chinese-base` (`bundlesFor`, default base bundle, Choice screen, `qgen report --simulate --bundles`); achievements: `ALL_CATEGORIES` in a `chinese-base` game, `BUNDLE_*` regional only (decision 73, decision 146).
 - Waits for part 1''s plan (new locales in data and pipeline); name it.
-- Plan priority ~880.', '2026-10-15T20:09:27Z', NULL, 1146, 0, NULL, NULL);
+- Plan priority ~880.', '2026-10-15T20:09:27Z', NULL, 1146, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1149, 60, 'write plan: Translation prompts and markets per locale', 'plan', 'done', 1000, '2026-10-15, plan 140: Translation prompts and markets per locale (tasks.sql only)', 'Write the plan for part 3 of `plan 60: masterplan` (`pm plan add 12 …`): translation prompts for `zh-Hans`, `ru`, `pt-BR` and the `chinese-base` fit pass prompt.
 
 - Scope: masterplan part 3: `authoring/tools/prompts/locale-{zh-Hans,ru,pt-BR}.md` like `locale-en.md` / `locale-de.md` (decisions 35, 160, 167); per-locale rules (Simplified characters, Chinese punctuation, 万; Russian case endings across options, «ёлочки», Cyrillic transliteration; Brazilian usage, «você»; numbers and units).
@@ -28104,7 +28104,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Waits for `decision 218: New China-centric questions for chinese-base: drafted in Spanish and translated, or drafted in Chinese?` (and the plans of parts 2–4).
 - Scope: masterplan part 6: fit pass over `base`''s zh translations (part 2''s model), developer corrects, sample to the native reviewer; new China-centric questions per decision 218; pilot first (QT-5: 50, `qgen health ack`), cost and reject rate → budget pm decision (as `plan 70: Cost, budget and generation plan by gap (CT-3, CT-4)`); runs to 5000 approved (`qgen report --bundle chinese-base --locale zh-Hans`, `--simulate` ✓).
 - Runs follow `authoring/RUNBOOK.md` (`qgen batch …` only); batch tasks like `plan 17: Batch runs` / `plan 84: Release content runs`.
-- Plan priority ~-120.', '2026-10-15T20:09:27Z', NULL, 1146, 0, NULL, NULL);
+- Plan priority ~-120.', '2026-10-15T20:09:27Z', NULL, 1146, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1153, 60, 'write plan: Russian and Portuguese pools', 'plan', 'done', 1000, '2026-10-15, plan 143: Russian and Portuguese pools (tasks.sql only)', 'Write the plan for part 7 of `plan 60: masterplan` (`pm plan add 12 …`): approved `ru` and `pt-BR` pools of 5000 each from translated `base`.
 
 - Scope: masterplan part 7: `qgen batch --translate ru` / `--translate pt-BR`: pilot `tr-<locale>-1`, native spot check (part 4), `qgen health ack`, budget pm decision, full runs to 5000 approved each.
@@ -28153,13 +28153,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Check
 - Rerun the four commands; es/en/de output identical to the baseline apart from the new locales'' rows/lines and the zh warning.
-- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass. Missing `names.{zh-Hans,ru,pt-BR}.json` only warns (next task adds them).', '2026-10-15T20:25:33Z', NULL, 1156, 0, NULL, NULL);
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass. Missing `names.{zh-Hans,ru,pt-BR}.json` only warns (next task adds them).', '2026-10-15T20:25:33Z', NULL, 1156, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1164, 139, 'Names files for zh-Hans, ru, pt-BR', 'work', 'open', NULL, NULL, 'Part 2 of `plan 139: New locales in data and pipeline`; after the locale lists task.
 
 - `app/data/names.ru.json`, `app/data/names.pt-BR.json`: same shape as `names.en.json`; `base`''s categories and subcategories, bundle `base`, age groups. Not `colombia` (no bundle lists ru/pt-BR besides `base`).
 - `app/data/names.zh-Hans.json`: age groups only; `chinese-base`''s names come with its taxonomy (part 2 of `plan 60: masterplan`).
 - Drafted by the worker from `names.en.json` + the Spanish (`names` in `bundles.json` / taxonomy); pt-BR spelling, Simplified characters. No marker in the files: list them in the task''s done note as "for the native reviewers (part 4)".
-- Check: `qgen validate` has no names warnings for the three; `npm run check`, `npm test`, `npm run build` pass.', '2026-10-15T20:25:33Z', NULL, 1156, 0, NULL, NULL);
+- Check: `qgen validate` has no names warnings for the three; `npm run check`, `npm test`, `npm run build` pass.', '2026-10-15T20:25:33Z', NULL, 1156, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1165, 139, 'Check pass and docs for the new locales', 'work', 'open', NULL, NULL, 'Part 3 of `plan 139: New locales in data and pipeline`; after the locale lists and names files tasks. Fixes only what breaks; anything larger is a follow-up task.
 
 ## Check with empty pools for zh-Hans, ru, pt-BR
@@ -28174,7 +28174,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `directory.md` only if a new file kind appeared (names files aren''t new).
 
 ## Done when
-- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass; plan 139''s "Done when" holds.', '2026-10-15T20:25:34Z', NULL, 1156, 0, NULL, NULL);
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass; plan 139''s "Done when" holds.', '2026-10-15T20:25:34Z', NULL, 1156, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1166, 140, 'Translation prompt zh-Hans: draft, approval, locale-zh-Hans.md', 'work', 'open', NULL, NULL, 'Write `authoring/tools/prompts/locale-zh-Hans.md`, the Simplified Chinese market block that `prompt()` fills into `{locale}` of translate, rate, review, fix and audit (`decision 35: Translation prompts and markets per locale (plan 66)`, D-87). No code change. Prompts are the developer''s (D-36): the file is written only after the developer approves the draft in a pm decision.
 
 ## Steps
@@ -28187,7 +28187,7 @@ Needs `plan 139: New locales in data and pipeline` (zh-Hans in `translations.LAN
 
 Docs (after the file is written): add `locale-zh-Hans.md` to the "Prompts" line of `plans/15b-question-translation.md` and its locale to D-87 in `plans/decisions.md`; `authoring/QC.md` only if the translation spot check reads differently for this locale.
 
-Done when: file exists as approved, decision answered with consequences, `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-15T20:26:31Z', NULL, 1157, 0, NULL, NULL);
+Done when: file exists as approved, decision answered with consequences, `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-15T20:26:31Z', NULL, 1157, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1167, 140, 'Translation prompt ru: draft, approval, locale-ru.md', 'work', 'open', NULL, NULL, 'Write `authoring/tools/prompts/locale-ru.md`, the Russian market block that `prompt()` fills into `{locale}` of translate, rate, review, fix and audit (`decision 35: Translation prompts and markets per locale (plan 66)`, D-87). No code change. Prompts are the developer''s (D-36): the file is written only after the developer approves the draft in a pm decision.
 
 ## Steps
@@ -28199,7 +28199,7 @@ Needs `plan 139: New locales in data and pipeline` (ru in `translations.LANGUAGE
 
 Docs (after the file is written): add `locale-ru.md` to the "Prompts" line of `plans/15b-question-translation.md` and its locale to D-87 in `plans/decisions.md`; `authoring/QC.md` only if the translation spot check reads differently for this locale.
 
-Done when: file exists as approved, decision answered with consequences, `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-15T20:26:31Z', NULL, 1157, 0, NULL, NULL);
+Done when: file exists as approved, decision answered with consequences, `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-15T20:26:31Z', NULL, 1157, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1168, 140, 'Translation prompt pt-BR: draft, approval, locale-pt-BR.md', 'work', 'open', NULL, NULL, 'Write `authoring/tools/prompts/locale-pt-BR.md`, the Brazilian Portuguese market block that `prompt()` fills into `{locale}` of translate, rate, review, fix and audit (`decision 35: Translation prompts and markets per locale (plan 66)`, D-87). No code change. Prompts are the developer''s (D-36): the file is written only after the developer approves the draft in a pm decision.
 
 ## Steps
@@ -28211,7 +28211,7 @@ Needs `plan 139: New locales in data and pipeline` (pt-BR in `translations.LANGU
 
 Docs (after the file is written): add `locale-pt-BR.md` to the "Prompts" line of `plans/15b-question-translation.md` and its locale to D-87 in `plans/decisions.md`; `authoring/QC.md` only if the translation spot check reads differently for this locale.
 
-Done when: file exists as approved, decision answered with consequences, `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-15T20:26:31Z', NULL, 1157, 0, NULL, NULL);
+Done when: file exists as approved, decision answered with consequences, `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-15T20:26:31Z', NULL, 1157, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1169, 140, 'Fit pass prompt: draft, approval, prompts/fit.md', 'work', 'open', 690, NULL, 'Write `authoring/tools/prompts/fit.md`, the prompt of the `chinese-base` fit pass: it judges which approved `zh-Hans` translations of `base` questions fit a Chinese family (milestone 12). Only the prompt; the step that runs it (qgen command or `tr-zh-Hans-*` step, schema, where `fit` is stored, review toggle) is part 2''s plan (from `task 1148: write plan: chinese-base bundle: model and setup`). Prompts are the developer''s (D-36): written only after approval in a pm decision.
 
 Waits for `decision 217: chinese-base membership: how does a translated base question count for chinese-base?`.
@@ -28224,7 +28224,7 @@ Waits for `decision 217: chinese-base membership: how does a translated base que
 
 If part 2''s plan wants another placeholder set or output shape than above, follow part 2''s plan and say so in the decision body.
 
-Done when: file exists as approved, decision answered with consequences, `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-15T20:26:31Z', NULL, 1157, 0, NULL, NULL);
+Done when: file exists as approved, decision answered with consequences, `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-15T20:26:31Z', NULL, 1157, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1170, 140, 'Docs: new locale prompts in 15b and D-87', 'work', 'dropped', 680, 'folded into tasks 1166-1168: a separate docs task would run while they wait on their decisions', 'Docs for the three locale prompts of `plan 140: Translation prompts and markets per locale`, after `task 1166: Translation prompt zh-Hans: draft, approval, locale-zh-Hans.md`, `task 1167: Translation prompt ru: draft, approval, locale-ru.md` and `task 1168: Translation prompt pt-BR: draft, approval, locale-pt-BR.md` are done (check `pm show`; if one isn''t, stop without closing: it waits on its decision).
 
 - `plans/15b-question-translation.md` "Prompts" line: name `locale-zh-Hans.md`, `locale-ru.md`, `locale-pt-BR.md` (`fit.md` is added by its own task).
@@ -28247,7 +28247,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - For the developer, a short section: per job what to send (sheet, gallery zip from `trivia-gallery`, Steam key, store text draft) and what to do with the reply (`qgen spotcheck import`, `qgen report --qc`, answer the playtest or store decisions). Names, contacts, payments stay out of the repo.
 - `directory.md` unchanged (file inside `authoring/`).
 
-Done when: the file exists and reads as a one-page brief; `npm run check` passes.', '2026-10-15T20:27:37Z', NULL, 1158, 0, NULL, NULL);
+Done when: the file exists and reads as a one-page brief; `npm run check` passes.', '2026-10-15T20:27:37Z', NULL, 1158, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1172, 141, 'qgen spotcheck export and import: offline sheet for outside reviewers', 'work', 'open', NULL, NULL, 'Build the offline spot-check sheet of `decision 221: How does an outside native reviewer reach the review tool?`, as specified in `plan 141: Native reviewers` "Spot-check sheet" (read it in full).
 
 - `authoring/tools/spotcheck.py` (new): export and import; reuse `authoring/server/spot_checks.py` (`sample`, `record`, `size`) and `authoring/tools/reviews.py`; `qgen.py` only dispatches `qgen spotcheck export|import` (`decision 101: qgen.py stays one module (code review part 7)`: no package split).
@@ -28258,7 +28258,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Check end to end: no `tr-*` run exists yet in this repo; if still none, make a throw-away one in a scratch copy (e.g. `git worktree` + `TRIVIA_WORK`), export, open the sheet in a browser, fill a verdict file by hand, `--dry-run` import plus one real import in the scratch copy, `qgen report --qc`; nothing committed under `authoring/data/` or `work/`.
 - Docs: `authoring/QC.md` "Translation runs" (outside reviewer: sheet + import; pm worker still `pm decision add "Spot check tr-<locale>-<n> done?"`, body names the sheet path), README how-to, D-entry (next free, D-106 or later) in `plans/decisions.md`, QT-6 note in `plans/15b-question-translation.md`.
 
-Done when: export/import work as above; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-15T20:27:37Z', NULL, 1158, 0, NULL, NULL);
+Done when: export/import work as above; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-15T20:27:37Z', NULL, 1158, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1173, 141, 'Fit-sample sheet for chinese-base (zh only)', 'work', 'open', NULL, NULL, 'Extend the offline sheet (`task 1172: qgen spotcheck export and import: offline sheet for outside reviewers`) for the `chinese-base` fit pass: the zh native reviewer checks a sample of the fit pass''s picks (`plan 141: Native reviewers`, task 3).
 
 - Waits on `decision 217: chinese-base membership: how does a translated base question count for chinese-base?` and on the fit model from the `chinese-base` model plan (written by `task 1148: write plan: chinese-base bundle: model and setup`) and the fit pass prompt (`task 1169: Fit pass prompt: draft, approval, prompts/fit.md`). Use the command name and field that plan names; else `qgen spotcheck export --fit <run>`.
@@ -28267,14 +28267,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Brief: add the fit job''s how-to to `authoring/NATIVE-REVIEW.md` if not yet there.
 - Check on a throw-away copy as task 1172 did; nothing committed under `authoring/data/`.
 
-Done when: a fit sheet exports, a hand-filled verdict file imports into the fit field; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-15T20:27:48Z', NULL, 1158, 0, NULL, NULL);
+Done when: a fit sheet exports, a hand-filled verdict file imports into the fit field; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-15T20:27:48Z', NULL, 1158, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1174, 141, 'Native reviewer requests and the engaged decisions per locale', 'work', 'open', NULL, NULL, 'After `decision 220: Native reviewers for zh-Hans, ru, pt-BR: paid freelancers, volunteers, or mixed?` is answered (`plan 141: Native reviewers`, "Gate"):
 
 - Per locale (`zh-Hans`, `ru`, `pt-BR`) a posting / request text in `work/native-review/<locale>.md` (not committed): the jobs and hours from decision 220 and `authoring/NATIVE-REVIEW.md`, rate (paid) or credit + free key (volunteer) per the answer, trial = the pilot''s spot-check sheet, return by e-mail, ~1 week per sheet; zh adds the `chinese-base` fit sample (and full source review if `decision 218: New China-centric questions for chinese-base: drafted in Spanish and translated, or drafted in Chinese?` went Chinese). No names, contacts or payments in the repo.
 - Raise three `once` decisions `Native reviewer for <locale> engaged?` with option "engaged"; body names the request file. The pilot tasks of the ru/pt-BR pools plan (`plan 143: Russian and Portuguese pools`) and of the `chinese-base` content plan get pending on them: link any that already exist with `pm task-pending-decision`; else say so in the consequences, so those plans'' split tasks do it.
 - `pm decision consequences 220 "<what changed>"`.
 
-Done when: three request files in `work/native-review/`, three engaged decisions raised and linked where possible, consequences recorded.', '2026-10-15T20:27:49Z', NULL, 1158, 0, NULL, NULL);
+Done when: three request files in `work/native-review/`, three engaged decisions raised and linked where possible, consequences recorded.', '2026-10-15T20:27:49Z', NULL, 1158, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1175, 142, 'Decisions: fonts per script, keys on non-Latin layouts, picker letters', 'work', 'open', 410, NULL, 'Task 1 of `plan 142: UI in the new languages`: raise the three developer decisions the plan''s "Decisions" section lists; no game code changes.
 
 ## Fonts per script
@@ -28298,7 +28298,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Links
 - Every other open task of plan 142 (2–10) gets pending on all three decisions: `pm task-pending-decision <task> <decision>`, so they run in id order once answered.
 
-Done when: three pending decisions with renders and sizes in their bodies; tasks 2–10 of plan 142 pending on them; `work/fonts/` left uncommitted (delete or note it in the decision body that it''s local).', '2026-10-15T20:28:58Z', NULL, 1159, 0, NULL, NULL);
+Done when: three pending decisions with renders and sizes in their bodies; tasks 2–10 of plan 142 pending on them; `work/fonts/` left uncommitted (delete or note it in the decision body that it''s local).', '2026-10-15T20:28:58Z', NULL, 1159, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1176, 142, 'Fonts for ru and zh-Hans in the client and build', 'work', 'open', NULL, NULL, 'Task 2 of `plan 142: UI in the new languages` (plan "Design: Fonts"); per the font decision raised by task 1 (`pm show` lists it).
 
 - Font files in `app/client/public/fonts/` + their OFL texts; `@font-face` per family with `unicode-range` (Cyrillic, CJK), so a Latin page never loads them.
@@ -28309,7 +28309,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Credits: `CREDITS.md` source / credits screen (`credits.ts`) list the new fonts with licence.
 - `/comodines` (`authoring/ui/src/print/JokerCards.svelte`) loads the same fonts.
 
-Check: `npm run check`, `npm test`, `npm run build`, `qgen validate`; `?lang=xx` / es page: network tab loads no Cyrillic/CJK font file; a throw-away page with ru/zh text renders in the new fonts (zh catalog may not exist yet: `names.zh-Hans.json` text suffices).', '2026-10-15T20:28:58Z', NULL, 1159, 0, NULL, NULL);
+Check: `npm run check`, `npm test`, `npm run build`, `qgen validate`; `?lang=xx` / es page: network tab loads no Cyrillic/CJK font file; a throw-away page with ru/zh text renders in the new fonts (zh catalog may not exist yet: `names.zh-Hans.json` text suffices).', '2026-10-15T20:28:58Z', NULL, 1159, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1177, 142, 'Wiring of zh-Hans, ru, pt-BR in client, shell and tools', 'work', 'open', NULL, NULL, 'Task 3 of `plan 142: UI in the new languages`; per the key and picker decisions raised by task 1 (`pm show` lists them) and `decision 222: New UI languages (zh-Hans, ru, pt-BR): offered only once their pool ships`.
 
 - Catalogs `app/client/src/locales/{zh-Hans,ru,pt-BR}.ts`: start as copies of `en.ts` (`satisfies Catalog`), statically imported; tasks 4–6 translate them.
@@ -28323,7 +28323,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `authoring/tools/gallery.py` `LOCALES` += the three.
 - `/comodines?lang=`: zh-Hans, ru, pt-BR, all A4 (`@page size`).
 
-Check: `npm run check`, `npm test`, `npm run build`, `qgen validate`; `?lang=ru` in the dev client plays with Latin keys on a Russian layout (simulate `e.key` `ф` with `e.code` `KeyA` in a throw-away test); es/es-ES/en/de gallery shots unchanged (`trivia-gallery --only` a few).', '2026-10-15T20:28:58Z', NULL, 1159, 0, NULL, NULL);
+Check: `npm run check`, `npm test`, `npm run build`, `qgen validate`; `?lang=ru` in the dev client plays with Latin keys on a Russian layout (simulate `e.key` `ф` with `e.code` `KeyA` in a throw-away test); es/es-ES/en/de gallery shots unchanged (`trivia-gallery --only` a few).', '2026-10-15T20:28:58Z', NULL, 1159, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1178, NULL, 'answer: what was the result of the code review?', 'exec', 'done', 10000, '2026-10-15, report answer', 'The owner of this project asks:
 
 what was the result of the code review?
@@ -28415,7 +28415,7 @@ Phases (the task runs again after each decision is answered; check which decisio
 
 Missing tooling: do what exists, list the rest in the note. No prompt or `qgen.py` changes here.
 
-Done when: phase 6 done; note lists decisions, change tasks, numbers.', '2026-10-15T21:51:41Z', NULL, 53, 0, NULL, NULL);
+Done when: phase 6 done; note lists decisions, change tasks, numbers.', '2026-10-15T21:51:41Z', NULL, 53, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1187, 146, 'create tasks for plan 146: Media yield', 'split', 'done', 1000, '2026-10-15, tasks 1188 (media funnel rows, plan 146 A), 1189 (media share diagnosis + proposal decision, plan 146 B); no decision needed up front: 1189 raises it', 'Split plan 146 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T21:54:05Z', '2026-10-15T21:54:52Z', 1184, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1188, 146, 'Media funnel rows in the batch health table', 'work', 'done', NULL, '2026-10-15, authoring/tools/health.py (media_funnel: 3 info rows after needs_work: media; n/a without work/<run>/reviews), authoring/reports/batch-8.md (only the 3 rows spliced in: a full batch-report rewrites the needs-work list and QC text from today''s post-rework pool), batches.md regenerated (was missing batch-8). batch-8: 101 no pick in review 1, 92 recovered, 9 no pick at record (= the report''s 9 ''No se encontró'' lines; plan 146''s ~21 was a hand estimate); batch-7: 69/26/43; batch-6: 6/0/6', 'Make the media loss visible end to end in every batch report, per `plan 146: Media yield` task A. Today `authoring/reports/<batch>.md` "## Health" only shows `needs_work: media` (record''s verdict) and `media share`; where picks fail before record is invisible.
@@ -29826,7 +29826,7 @@ Done when: `authoring/reports/tr-es-ES-1.md` exists, printed paths staged, note 
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 148 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop. Applies whether or not plan 17''s task 50 (RUNBOOK: batch runs under pm run) is done.
-- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T00:35:49Z', NULL, 1220, 0, NULL, NULL);
+- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T00:35:49Z', NULL, 1220, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1222, 84, 'QC tr-es-ES-1', 'work', 'open', -90, NULL, 'Plan 84 chain 2: QC of the pilot `tr-es-ES-1` per `authoring/QC.md` steps 1–4 and section "Translation runs".
 
 - If task 1221 (run tr-es-ES-1) isn''t done: pend on the decision that blocks it, stop. Dropped → drop this one too.
@@ -29842,7 +29842,7 @@ Done when: both decisions answered, change tasks added, note with the numbers ab
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 148 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop. Applies whether or not plan 17''s task 50 (RUNBOOK: batch runs under pm run) is done.
-- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T00:35:49Z', NULL, 1220, 0, NULL, NULL);
+- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T00:35:49Z', NULL, 1220, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1223, 84, 'run tr-es-1', 'work', 'open', -90, NULL, 'Plan 84 chain 2, translation pilot (QT-5, `plans/15b-question-translation.md`): run `tr-es-1`, 50 approved English-sourced `base` questions into idiomatic Latin American Spanish (en → es; es-sourced questions are already `es`), D-87''s selection; lands in `questions.es.json` per `decision 235: Source locale per question and translations from either source (English-first base)`.
 
 Before running, in this order; the first that fails → `pm task-pending-decision <this task> <decision>`, stop:
@@ -29857,7 +29857,7 @@ Done when: `authoring/reports/tr-es-1.md` exists, printed paths staged, note wit
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 148 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop. Applies whether or not plan 17''s task 50 (RUNBOOK: batch runs under pm run) is done.
-- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T00:35:49Z', NULL, 1220, 0, NULL, NULL);
+- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T00:35:49Z', NULL, 1220, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1224, 84, 'QC tr-es-1', 'work', 'open', -90, NULL, 'Plan 84 chain 2: QC of the pilot `tr-es-1` per `authoring/QC.md` steps 1–4 and section "Translation runs".
 
 - If task 1223 (run tr-es-1) isn''t done: pend on the decision that blocks it, stop. Dropped → drop this one too.
@@ -29873,7 +29873,7 @@ Done when: both decisions answered, change tasks added, note with the numbers ab
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 148 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop. Applies whether or not plan 17''s task 50 (RUNBOOK: batch runs under pm run) is done.
-- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T00:35:49Z', NULL, 1220, 0, NULL, NULL);
+- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T00:35:49Z', NULL, 1220, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1225, 84, 'Translation pilot go/no-go es-ES, es (QT-5)', 'work', 'open', -90, NULL, 'Plan 84 chain 2: pilot go/no-go (QT-5) for `es-ES` and `es`, after tasks 1222 (QC tr-es-ES-1) and 1224 (QC tr-es-1). Same pattern as `task 638: Translation pilot go/no-go en, de (QT-5)`.
 
 - If either QC task isn''t done: pend on the decision that blocks it (or its run task), stop.
@@ -29894,7 +29894,7 @@ Done when: the decision is answered and 15b updated; note with the table.
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 148 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop. Applies whether or not plan 17''s task 50 (RUNBOOK: batch runs under pm run) is done.
-- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T00:36:02Z', NULL, 1220, 0, NULL, NULL);
+- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T00:36:02Z', NULL, 1220, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1226, 84, 'run tr-es-ES-2', 'work', 'open', NULL, NULL, 'Plan 84 chain 3, full translation (QT-6): run `tr-es-ES-2`, up to 300 approved `base` sources of either source locale ≠ `es-ES` into Spain''s Spanish (plan 66, D-87; `decision 235: Source locale per question and translations from either source (English-first base)`).
 
 Before running, in this order; the first that fails → `pm task-pending-decision <this task> <decision>`, stop:
@@ -29909,7 +29909,7 @@ Done when: `authoring/reports/tr-es-ES-2.md` exists, printed paths staged, note 
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 148 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop. Applies whether or not plan 17''s task 50 (RUNBOOK: batch runs under pm run) is done.
-- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T00:36:02Z', NULL, 1220, 0, NULL, NULL);
+- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T00:36:02Z', NULL, 1220, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1227, 84, 'QC tr-es-ES-2', 'work', 'open', NULL, NULL, 'Plan 84 chain 3: QC of `tr-es-ES-2` per `authoring/QC.md` steps 1–4 and "Translation runs", then the next pair of the chain.
 
 - If task 1226 (run tr-es-ES-2) isn''t done: pend on the decision that blocks it, stop. Dropped → drop this one too.
@@ -29927,7 +29927,7 @@ Done when: both decisions answered, change tasks and the next pair (or the 15b l
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 148 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop. Applies whether or not plan 17''s task 50 (RUNBOOK: batch runs under pm run) is done.
-- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T00:36:02Z', NULL, 1220, 0, NULL, NULL);
+- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T00:36:02Z', NULL, 1220, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1228, 84, 'run tr-es-2', 'work', 'open', NULL, NULL, 'Plan 84 chain 3, full translation (QT-6): run `tr-es-2`, up to 300 approved `base` sources of either source locale ≠ `es` into idiomatic Latin American Spanish (en → es only) (plan 66, D-87; `decision 235: Source locale per question and translations from either source (English-first base)`).
 
 Before running, in this order; the first that fails → `pm task-pending-decision <this task> <decision>`, stop:
@@ -29942,7 +29942,7 @@ Done when: `authoring/reports/tr-es-2.md` exists, printed paths staged, note wit
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 148 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop. Applies whether or not plan 17''s task 50 (RUNBOOK: batch runs under pm run) is done.
-- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T00:36:02Z', NULL, 1220, 0, NULL, NULL);
+- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T00:36:02Z', NULL, 1220, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1229, 84, 'QC tr-es-2', 'work', 'open', NULL, NULL, 'Plan 84 chain 3: QC of `tr-es-2` per `authoring/QC.md` steps 1–4 and "Translation runs", then the next pair of the chain.
 
 - If task 1228 (run tr-es-2) isn''t done: pend on the decision that blocks it, stop. Dropped → drop this one too.
@@ -29960,7 +29960,7 @@ Done when: both decisions answered, change tasks and the next pair (or the 15b l
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 148 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop. Applies whether or not plan 17''s task 50 (RUNBOOK: batch runs under pm run) is done.
-- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T00:36:02Z', NULL, 1220, 0, NULL, NULL);
+- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T00:36:02Z', NULL, 1220, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1230, 128, 'create tasks for plan 128: S4 close-out', 'split', 'done', 1000, '2026-10-15, tasks.sql: tasks 1032–1034 brought in line with the revised plan 128 (four question locales, decisions 235 and 156, plans 138/147/148 in the guard, plan 84 chains 1–3, es-ES and en-sourced browser rows, docs for source locale and Spanish varieties); task 1035 already matched; no new decisions needed', 'Split plan 128 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T00:37:27Z', '2026-10-16T00:38:26Z', 1215, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1231, 148, 'Supersede the decisions replaced by English-first drafting', 'work', 'done', NULL, '2026-10-16, plans/decisions.md (D-107; amend marks D-6, D-78, D-83, D-84, D-86, D-87, D-96), plans/16-content-target.md; pm decision 236 supersedes 37 (last clause) and 219 in part; decision 237 pending for decision 27, no task waits on it', 'Part 1 of `plan 148: English-first drafting for base`; runs first. Milestone 9''s section "English-first drafting for `base`" (developer, 2026-10-15) replaces older answers. Record that in the decision log and in `plans/decisions.md`.
@@ -31486,7 +31486,7 @@ Done when: the first drafting pair is added (or this task pends on the blocking 
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (98, 138, 148 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
-- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T03:37:02Z', NULL, 1267, 0, NULL, NULL);
+- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T03:37:02Z', NULL, 1267, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1269, 84, 'Regional runs `germany`: start', 'work', 'open', NULL, NULL, 'Plan 84 chain 5: start the regional bundle `germany` (milestone 9, developer 2026-10-15; same rules as `colombia`, decision 110: Regional packs at launch (RG-5, OQ-46)): 2000 approved in de, drafted in German, then translated to en. Launch (milestone 11) doesn''t wait for this chain. DLC entry, store texts and capsules are plans 130, 89, 88''s, not this task''s. Owner: `plans/15c-regional-questions.md`.
 
 ## Before starting
@@ -31510,7 +31510,7 @@ Done when: the first drafting pair is added (or this task pends on the blocking 
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (98, 138, 148 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
-- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T03:37:02Z', NULL, 1267, 0, NULL, NULL);
+- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T03:37:02Z', NULL, 1267, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1270, 84, 'Regional runs `uk`: start', 'work', 'open', NULL, NULL, 'Plan 84 chain 5: start the regional bundle `uk` (milestone 9, developer 2026-10-15; same rules as `colombia`, decision 110: Regional packs at launch (RG-5, OQ-46)): 2000 approved in en, drafted in British English. Launch (milestone 11) doesn''t wait for this chain. DLC entry, store texts and capsules are plans 130, 89, 88''s, not this task''s. Owner: `plans/15c-regional-questions.md`.
 
 ## Before starting
@@ -31534,7 +31534,7 @@ Done when: the first drafting pair is added (or this task pends on the blocking 
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (98, 138, 148 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
-- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T03:37:02Z', NULL, 1267, 0, NULL, NULL);
+- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T03:37:02Z', NULL, 1267, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1271, 84, 'Regional runs `spain`: start', 'work', 'open', NULL, NULL, 'Plan 84 chain 5: start the regional bundle `spain` (milestone 9, developer 2026-10-15; same rules as `colombia`, decision 110: Regional packs at launch (RG-5, OQ-46)): 2000 approved in es-ES, drafted in Spain''s Spanish, then translated to en. Launch (milestone 11) doesn''t wait for this chain. DLC entry, store texts and capsules are plans 130, 89, 88''s, not this task''s. Owner: `plans/15c-regional-questions.md`.
 
 ## Before starting
@@ -31558,7 +31558,7 @@ Done when: the first drafting pair is added (or this task pends on the blocking 
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (98, 138, 148 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
-- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T03:37:03Z', NULL, 1267, 0, NULL, NULL);
+- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T03:37:03Z', NULL, 1267, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1272, 84, 'Regional runs `mexico`: start', 'work', 'open', NULL, NULL, 'Plan 84 chain 5: start the regional bundle `mexico` (milestone 9, developer 2026-10-15; same rules as `colombia`, decision 110: Regional packs at launch (RG-5, OQ-46)): 2000 approved in es, drafted in Mexican Spanish, then translated to en. Launch (milestone 11) doesn''t wait for this chain. DLC entry, store texts and capsules are plans 130, 89, 88''s, not this task''s. Owner: `plans/15c-regional-questions.md`.
 
 ## Before starting
@@ -31582,7 +31582,7 @@ Done when: the first drafting pair is added (or this task pends on the blocking 
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (98, 138, 148 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
-- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T03:37:03Z', NULL, 1267, 0, NULL, NULL);
+- Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-16T03:37:03Z', NULL, 1267, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1273, 98, 'create tasks for plan 98: Regional packs (RG-3..RG-5)', 'split', 'done', 1000, '2026-10-15, tasks.sql: plan 98 tasks 10 (task 1275) and 11–15 (tasks 1276–1280) added; task 752 close-out brought in line (new bundles, tasks 1268–1272, D-entry amending decision 110). No new decisions now: task 1275 adds the prompt decision, 1276–1280 their taxonomy decisions.', 'Split plan 98 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T03:38:57Z', '2026-10-16T03:40:22Z', 1263, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1274, 138, 'revise plan 138: Regional taxonomy: a general list, colombia reworked', 'revise', 'done', 1000, '2026-10-15, plan 138 body: plan 98''s further bundles in Builds on; out of scope points at tasks 1275–1280 instead of ''after the pilot decision''', '`plan 98: Regional packs (RG-3..RG-5)`, the plan above `plan 138: Regional taxonomy: a general list, colombia reworked`, changed; it is quoted below. Bring `plan 138: Regional taxonomy: a general list, colombia reworked` in line with it
@@ -31680,7 +31680,7 @@ Binding: `decision 110: Regional packs at launch (RG-5, OQ-46)` as amended by mi
 ## Done when
 - `qgen bundle new --kind region --language <L>` works for all four locales; drafts carry the bundle''s voice in any language; British and Mexican variety reach the draft prompt.
 - `qgen taxonomy --bundle` proposes slugs + en names for an en and a de region; `--translate en --bundle` works from `de` and `es-ES`.
-- The prompt decision is answered and applied; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-16T03:39:47Z', NULL, 1273, 0, NULL, NULL);
+- The prompt decision is answered and applied; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-16T03:39:47Z', NULL, 1273, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1276, 98, 'Set up regional bundle usa', 'work', 'open', NULL, NULL, 'Plan 98 part 11 (tasks 11–15, in the order `usa`, `germany`, `uk`, `spain`, `mexico`). Creates the regional bundle `usa` (US English; languages: `["en"]`) with its taxonomy and 2000 target, so `task 1268: Regional runs usa: start` (plan 84 chain 5) can run its first `qgen batch --bundle usa`. Same rules as `colombia` (`decision 110: Regional packs at launch (RG-5, OQ-46)`, amended by milestone 9, developer 2026-10-15): 2000 approved, region''s language + en (en regions en only), free DLC, off by default, own bundle-scoped taxonomy keyed by English slugs, display names only from `names.<locale>.json` (milestone 9''s slug keys, developer 2026-10-16; masterplan part 16) (`decision 213: General category list for regional bundles`, `plan 138: Regional taxonomy: a general list, colombia reworked`).
 
 ## Before starting
@@ -31695,7 +31695,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - `app/data/bundles.json` has `usa` (`languages` as above, rule, voice), `targets.json` 2000, its slug-keyed taxonomy applied as answered (names in `names.<locale>.json`); `qgen validate`, `npm run check`, `npm test`, `npm run build` pass.
-- Plans 130, 89, 88 have a DLC task for `usa`; 22 and 15c list it.', '2026-10-16T03:40:04Z', NULL, 1273, 0, NULL, NULL);
+- Plans 130, 89, 88 have a DLC task for `usa`; 22 and 15c list it.', '2026-10-16T03:40:04Z', NULL, 1273, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1277, 98, 'Set up regional bundle germany', 'work', 'open', NULL, NULL, 'Plan 98 part 12 (tasks 11–15, in the order `usa`, `germany`, `uk`, `spain`, `mexico`). Creates the regional bundle `germany` (German (Germany); languages: `["de"]`, en joins after translation) with its taxonomy and 2000 target, so `task 1269: Regional runs germany: start` (plan 84 chain 5) can run its first `qgen batch --bundle germany`. Same rules as `colombia` (`decision 110: Regional packs at launch (RG-5, OQ-46)`, amended by milestone 9, developer 2026-10-15): 2000 approved, region''s language + en (en regions en only), free DLC, off by default, own bundle-scoped taxonomy keyed by English slugs, display names only from `names.<locale>.json` (milestone 9''s slug keys, developer 2026-10-16; masterplan part 16) (`decision 213: General category list for regional bundles`, `plan 138: Regional taxonomy: a general list, colombia reworked`).
 
 ## Before starting
@@ -31710,7 +31710,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - `app/data/bundles.json` has `germany` (`languages` as above, rule, voice), `targets.json` 2000, its slug-keyed taxonomy applied as answered (names in `names.<locale>.json`); `qgen validate`, `npm run check`, `npm test`, `npm run build` pass.
-- Plans 130, 89, 88 have a DLC task for `germany`; 22 and 15c list it.', '2026-10-16T03:40:05Z', NULL, 1273, 0, NULL, NULL);
+- Plans 130, 89, 88 have a DLC task for `germany`; 22 and 15c list it.', '2026-10-16T03:40:05Z', NULL, 1273, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1278, 98, 'Set up regional bundle uk', 'work', 'open', NULL, NULL, 'Plan 98 part 13 (tasks 11–15, in the order `usa`, `germany`, `uk`, `spain`, `mexico`). Creates the regional bundle `uk` (British English; languages: `["en"]`) with its taxonomy and 2000 target, so `task 1270: Regional runs uk: start` (plan 84 chain 5) can run its first `qgen batch --bundle uk`. Same rules as `colombia` (`decision 110: Regional packs at launch (RG-5, OQ-46)`, amended by milestone 9, developer 2026-10-15): 2000 approved, region''s language + en (en regions en only), free DLC, off by default, own bundle-scoped taxonomy keyed by English slugs, display names only from `names.<locale>.json` (milestone 9''s slug keys, developer 2026-10-16; masterplan part 16) (`decision 213: General category list for regional bundles`, `plan 138: Regional taxonomy: a general list, colombia reworked`).
 
 ## Before starting
@@ -31725,7 +31725,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - `app/data/bundles.json` has `uk` (`languages` as above, rule, voice), `targets.json` 2000, its slug-keyed taxonomy applied as answered (names in `names.<locale>.json`); `qgen validate`, `npm run check`, `npm test`, `npm run build` pass.
-- Plans 130, 89, 88 have a DLC task for `uk`; 22 and 15c list it.', '2026-10-16T03:40:05Z', NULL, 1273, 0, NULL, NULL);
+- Plans 130, 89, 88 have a DLC task for `uk`; 22 and 15c list it.', '2026-10-16T03:40:05Z', NULL, 1273, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1279, 98, 'Set up regional bundle spain', 'work', 'open', NULL, NULL, 'Plan 98 part 14 (tasks 11–15, in the order `usa`, `germany`, `uk`, `spain`, `mexico`). Creates the regional bundle `spain` (Spain''s Spanish; languages: `["es-ES"]`, en joins after translation) with its taxonomy and 2000 target, so `task 1271: Regional runs spain: start` (plan 84 chain 5) can run its first `qgen batch --bundle spain`. Same rules as `colombia` (`decision 110: Regional packs at launch (RG-5, OQ-46)`, amended by milestone 9, developer 2026-10-15): 2000 approved, region''s language + en (en regions en only), free DLC, off by default, own bundle-scoped taxonomy keyed by English slugs, display names only from `names.<locale>.json` (milestone 9''s slug keys, developer 2026-10-16; masterplan part 16) (`decision 213: General category list for regional bundles`, `plan 138: Regional taxonomy: a general list, colombia reworked`).
 
 ## Before starting
@@ -31740,7 +31740,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - `app/data/bundles.json` has `spain` (`languages` as above, rule, voice), `targets.json` 2000, its slug-keyed taxonomy applied as answered (names in `names.<locale>.json`); `qgen validate`, `npm run check`, `npm test`, `npm run build` pass.
-- Plans 130, 89, 88 have a DLC task for `spain`; 22 and 15c list it.', '2026-10-16T03:40:05Z', NULL, 1273, 0, NULL, NULL);
+- Plans 130, 89, 88 have a DLC task for `spain`; 22 and 15c list it.', '2026-10-16T03:40:05Z', NULL, 1273, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1280, 98, 'Set up regional bundle mexico', 'work', 'open', NULL, NULL, 'Plan 98 part 15 (tasks 11–15, in the order `usa`, `germany`, `uk`, `spain`, `mexico`). Creates the regional bundle `mexico` (Mexican Spanish; languages: `["es"]`, en joins after translation) with its taxonomy and 2000 target, so `task 1272: Regional runs mexico: start` (plan 84 chain 5) can run its first `qgen batch --bundle mexico`. Same rules as `colombia` (`decision 110: Regional packs at launch (RG-5, OQ-46)`, amended by milestone 9, developer 2026-10-15): 2000 approved, region''s language + en (en regions en only), free DLC, off by default, own bundle-scoped taxonomy keyed by English slugs, display names only from `names.<locale>.json` (milestone 9''s slug keys, developer 2026-10-16; masterplan part 16) (`decision 213: General category list for regional bundles`, `plan 138: Regional taxonomy: a general list, colombia reworked`).
 
 ## Before starting
@@ -31755,7 +31755,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - `app/data/bundles.json` has `mexico` (`languages` as above, rule, voice), `targets.json` 2000, its slug-keyed taxonomy applied as answered (names in `names.<locale>.json`); `qgen validate`, `npm run check`, `npm test`, `npm run build` pass.
-- Plans 130, 89, 88 have a DLC task for `mexico`; 22 and 15c list it.', '2026-10-16T03:40:05Z', NULL, 1273, 0, NULL, NULL);
+- Plans 130, 89, 88 have a DLC task for `mexico`; 22 and 15c list it.', '2026-10-16T03:40:05Z', NULL, 1273, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1281, 128, 'create tasks for plan 128: S4 close-out', 'split', 'done', 1000, '2026-10-15, tasks.sql: tasks 1032–1034 aligned to regional chains 4–5; task 1035 rewritten as Regional bundles record (no More regional bundles decision); no new decisions needed up front', 'Split plan 128 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T03:41:03Z', '2026-10-16T03:41:55Z', 1264, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1282, 138, 'create tasks for plan 138: Regional taxonomy: a general list, colombia reworked', 'split', 'done', 1000, '2026-10-15, tasks.sql: plan 138''s tasks still fit the revised plan (1137–1139 done); task 1140 body: state left by task 1139 (67 questions fail validate, pool.json stale), other regions out of scope; no new decisions', 'Split plan 138 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -32793,7 +32793,7 @@ Binding: `decision 21: Content target per player and language (OQ-32)?` (D-75): 
 ## Shortfall
 - A ✗ or a slice not release-ready: no fix. If plan 84 has no open run/QC pair for that locale: `pm decision add "S4 target not met for <locale>: more runs or lower the target?"` (body: the numbers; options "more runs: plan 84 adds pairs" (recommended), "lower the target (D-75 amended)", "ship as is"), `pm task-pending-decision` for this task and tasks 2–3 of plan 128 (`task 1033: Language picker, UI wording, joker and slug-key check`, `task 1034: Docs close-out of S4`), stop. On the answer "more runs": `pm task add 84` the next run/QC pair, stop (this task waits for it).
 
-Done when: `qgen report --simulate` exits 0 for all four question locales (or an answered decision accepts the shortfall), the result is in `plans/16-content-target.md`.', '2026-10-16T03:54:03Z', NULL, 1293, 0, NULL, NULL);
+Done when: `qgen report --simulate` exits 0 for all four question locales (or an answered decision accepts the shortfall), the result is in `plans/16-content-target.md`.', '2026-10-16T03:54:03Z', NULL, 1293, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1295, 84, 'run colombia batch (batch-<n>)', 'work', 'open', NULL, NULL, 'Plan 84 chain 4, first es pair of the regional pilot `colombia` (`decision 110: Regional packs at launch (RG-5, OQ-46)`), added by `task 643: Regional pilot colombia: start`. Prerequisites done: `plan 138: Regional taxonomy: a general list, colombia reworked` (colombia''s taxonomy applied, questions remapped), colombia target 2000 in `authoring/data/targets.json`.
 
 ## Run
@@ -32806,7 +32806,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 98, 138, 148 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
-- Note on done: the "Done:" line and the report path.', '2026-10-16T04:23:18Z', NULL, 643, 0, NULL, NULL);
+- Note on done: the "Done:" line and the report path.', '2026-10-16T04:23:18Z', NULL, 643, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1296, 84, 'QC colombia batch (batch-<n>)', 'work', 'open', NULL, NULL, 'Plan 84 chain 4: QC of colombia''s first batch (`task 1295: run colombia batch (batch-<n>)`; that task renames this one to the real run name). Owners: `plans/15c-regional-questions.md`, `plans/16-content-target.md`.
 
 ## QC
@@ -32828,7 +32828,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 98, 138, 148 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths a command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop.
-- Note on done: the QC numbers (approved, rejected, needs_work, agreement, $ per approved, review time per 100).', '2026-10-16T04:23:18Z', NULL, 643, 0, NULL, NULL);
+- Note on done: the QC numbers (approved, rejected, needs_work, agreement, $ per approved, review time per 100).', '2026-10-16T04:23:18Z', NULL, 643, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1297, 9, 'revise the masterplan of milestone 9: Steam S4: content for release', 'revise', 'done', 1000, '2026-10-16, plan 9 body: part 16 slug keys for categories (priority 880), parts 10/12, intro and order updated', '`milestone 9: Steam S4: content for release` changed. Bring `plan 9: masterplan`, the masterplan, in line with it (`pm plan edit 9 --body -`), or
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-16T12:29:42Z', '2026-10-16T12:32:43Z', NULL, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1298, 9, 'create tasks for plan 9: masterplan', 'split', 'done', 1000, '2026-10-16, tasks.sql: task 1305 (write plan: Slug keys for categories, part 16); other parts already have plans, plans 98/128 revisions queued (tasks 1302, 1303)', 'Split plan 9 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -34429,7 +34429,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - On the answer: problems → fix tasks in plan 151; approved → mark the gallery flag on `choice-gamemaster` in `authoring/data/ui-flags.json` fixed, then done
 
 ## Done when
-- Shots for all four locales at both sizes, decision 264''s consequences recorded (263''s are already), the new review decision answered "approved"; problems have fix tasks', '2026-10-16T13:57:26Z', NULL, 1336, 0, NULL, NULL);
+- Shots for all four locales at both sizes, decision 264''s consequences recorded (263''s are already), the new review decision answered "approved"; problems have fix tasks', '2026-10-16T13:57:26Z', NULL, 1336, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1341, 57, 'qgen validate: spot-checks.json depends on gitignored work/<run>/run.json', 'work', 'done', NULL, '2026-10-16, authoring/tools/qgen.py (run_ids falls back to spot-checks.json ids; validate reads run members from the entry''s ids), authoring/server/spot_checks.py (record stores ids), authoring/data/spot-checks.json (neutralize-1 ids backfilled; backaudit-1 has no entry yet, gets ids on its first record), authoring/ui/src/lib/types.ts, authoring/QC.md; qgen validate passes in a fresh worktree without work/', '- `qgen validate` fails in `../trivia-review`: `authoring/data/spot-checks.json: no batch ''neutralize-1'' in the pool`; passes in the main checkout
 - Cause: `run_ids()` (`authoring/tools/qgen.py`) reads a back-audit/neutralize run''s ids from `work/<run>/run.json`, gitignored; a fresh worktree or clone has none
 - Fix: keep the run''s ids in tracked data (e.g. `ids` in its `spot-checks.json` entry, or a tracked run file), so validate needs nothing under `work/`; check `backaudit-1` the same way
@@ -35144,8 +35144,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `npm run check`, `npm test`, `npm run build`, `qgen validate`
 
 ## Done when
-- Base column with toggle tiles, ruler, flowing tiles with scroll and focus follow, focus and selected states, counts as above; docs updated', '2026-10-16T16:10:41Z', NULL, 1359, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1362, 150, 'Horizon fixes from the gallery review', 'work', 'open', NULL, NULL, 'Fix what the developer flagged in `/gallery` for the Start horizon (`decision` linked to this task): flagged images (replace under plan 150''s pick rules, update `app/client/public/horizon/` and its CREDITS.md), order, layout in `app/client/src/game/Horizon.svelte`. Re-run the changed shots (`trivia-gallery --only start,start-resume,start-save-notice,language-from-start,credits`, also `--size 1280x800`), then `pm decision consequences <decision id> "<text>"`. If approved with no flags, nothing to fix: close the task.', '2026-10-16T16:26:07Z', NULL, 1331, 0, NULL, NULL);
+- Base column with toggle tiles, ruler, flowing tiles with scroll and focus follow, focus and selected states, counts as above; docs updated', '2026-10-16T16:10:41Z', NULL, 1359, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1362, 150, 'Horizon fixes from the gallery review', 'work', 'open', NULL, NULL, 'Fix what the developer flagged in `/gallery` for the Start horizon (`decision` linked to this task): flagged images (replace under plan 150''s pick rules, update `app/client/public/horizon/` and its CREDITS.md), order, layout in `app/client/src/game/Horizon.svelte`. Re-run the changed shots (`trivia-gallery --only start,start-resume,start-save-notice,language-from-start,credits`, also `--size 1280x800`), then `pm decision consequences <decision id> "<text>"`. If approved with no flags, nothing to fix: close the task.', '2026-10-16T16:26:07Z', NULL, 1331, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1363, 8, 'revise the masterplan of milestone 8: Steam S3: playable desktop build', 'revise', 'done', 1000, '2026-10-16, tasks.sql (plan 8: any bundle combination in part 11, new part 12 prompts follow the last input, plan 48 rows, multiplayer out of scope → milestone 16)', '`milestone 8: Steam S3: playable desktop build` changed. Bring `plan 8: masterplan`, the masterplan, in line with it (`pm plan edit 8 --body -`), or
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-16T16:56:11Z', '2026-10-16T19:20:30Z', NULL, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1364, 11, 'revise the masterplan of milestone 11: Steam S6: release', 'revise', 'done', 1000, '2026-10-16, tasks.sql: plan 11 out of scope and part 7 leftovers: local multiplayer only in milestone 16, no backlog row; intro added', '`milestone 11: Steam S6: release` changed. Bring `plan 11: masterplan`, the masterplan, in line with it (`pm plan edit 11 --body -`), or
@@ -35173,8 +35173,8 @@ Read-only diagnosis:
 - All three calls returned ok but without a rating for `inventions-16` only (see `work/batch-9/calls.jsonl`). Cause not confirmed: look at that question in the draft (odd text/id, a rate.md rule it can''t rate, overlap candidates listing itself?) and at the reply; likely the model skips it deterministically.
 - Suggested fix: find why it''s skipped; in `cmd_rate` retry only the missing ids once with a narrower call instead of failing the whole file (or fix the input that confuses the rating).
 
-Check: `qgen batch` resumes past `rate` for batch-9 (`work/batch-9/ratings/revised-01-19.json` exists). Partial batch-9 data is staged (`authoring/data` passes `qgen validate`).', '2026-10-16T19:19:07Z', NULL, 1185, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1370, 17, 'Finish batch-9 after task 1369: Fix qgen rate: the model returns no rating for inventions-16 in revised-01-19', 'work', 'open', -99, NULL, 'Follow `authoring/RUNBOOK.md` (including "Under `pm run`"); plain `qgen batch` resumes batch-9 at step `rate`. Same Done-when as `task 1185: run batch-9`: `authoring/reports/batch-9.md` exists, the printed `git add` paths staged; note the "Done:" line and report path. Also record the consequences of decisions 233, 234, 239, 240, 241, 242 that task 1185 was meant to record (`pm decision consequences <id> "<text>"`). Then QC: `task 1186: QC batch-9`.', '2026-10-16T19:19:07Z', NULL, 1185, 0, NULL, NULL);
+Check: `qgen batch` resumes past `rate` for batch-9 (`work/batch-9/ratings/revised-01-19.json` exists). Partial batch-9 data is staged (`authoring/data` passes `qgen validate`).', '2026-10-16T19:19:07Z', NULL, 1185, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1370, 17, 'Finish batch-9 after task 1369: Fix qgen rate: the model returns no rating for inventions-16 in revised-01-19', 'work', 'open', -99, NULL, 'Follow `authoring/RUNBOOK.md` (including "Under `pm run`"); plain `qgen batch` resumes batch-9 at step `rate`. Same Done-when as `task 1185: run batch-9`: `authoring/reports/batch-9.md` exists, the printed `git add` paths staged; note the "Done:" line and report path. Also record the consequences of decisions 233, 234, 239, 240, 241, 242 that task 1185 was meant to record (`pm decision consequences <id> "<text>"`). Then QC: `task 1186: QC batch-9`.', '2026-10-16T19:19:07Z', NULL, 1185, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1371, 8, 'create tasks for plan 8: masterplan', 'split', 'done', 1000, '2026-10-16, tasks.sql only: task 1375 (write plan: Prompts follow the last input) for part 12; parts 8, 9, 11 covered by queued revise tasks 1372, 1373, 1374; no new decisions needed', 'Split plan 8 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T19:20:28Z', '2026-10-16T19:21:31Z', 1363, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1372, 48, 'revise plan 48: S3 close-out and platform test', 'revise', 'done', 1000, '2026-10-16, plan 48 body and intro: rows and binding for any bundle combination (base toggle tiles, base off, nothing selected → start disabled) and for plan 156: Prompts follow the last input (decision 272); depends on plan 156', '`plan 8: masterplan`, the plan above `plan 48: S3 close-out and platform test`, changed; it is quoted below. Bring `plan 48: S3 close-out and platform test` in line with it
@@ -35565,7 +35565,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `npm run check`, `npm test`, `npm run build`, `qgen validate`
 
 ## Done when
-- No `base_bundle_count` left; any combination plays, an empty one can''t start and shows why; docs and consequences on decisions 38, 155, 269 recorded', '2026-10-16T19:27:58Z', NULL, 1378, 0, NULL, NULL);
+- No `base_bundle_count` left; any combination plays, an empty one can''t start and shows why; docs and consequences on decisions 38, 155, 269 recorded', '2026-10-16T19:27:58Z', NULL, 1378, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1380, 156, 'Pad: any button or stick switches prompts to glyphs', 'work', 'open', NULL, NULL, 'Step 1 of `plan 156: Prompts follow the last input`. Today `lastDevice`/`padStyle` change only when `dispatch` gets a mapped action, so unmapped buttons (X outside Question, triggers off-Question, L3) and the right stick never switch prompts to glyphs.
 
 - `app/client/src/lib/gamepad.ts`: `step` also returns `touched`: any button''s press edge (not release; triggers via `pressed`), or either stick (left axes 0–1, right 2–3) crossing `ON` from below `OFF` (same hysteresis as left-stick navigation); per-stick held state in `PadState`, set by `held()` on focus return so a resting deflection doesn''t fire
@@ -35574,21 +35574,21 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - a switch without an action doesn''t move focus; if no control shows the ring, show it on the focused control (`focus.ts` `show`), as a key press does
 - no flicker: idle stick drift (±0.1), analog trigger noise below `pressed`, a button held across focus return never switch
 
-Done when: throw-away check with a stubbed `navigator.getGamepads()` on the Node dev server (`npm run dev -w app/client`): an unmapped button and the right stick switch prompts to glyphs; a drifting idle stick and noisy trigger don''t; per-commit checks pass.', '2026-10-16T19:29:01Z', NULL, 1376, 0, NULL, NULL);
+Done when: throw-away check with a stubbed `navigator.getGamepads()` on the Node dev server (`npm run dev -w app/client`): an unmapped button and the right stick switch prompts to glyphs; a drifting idle stick and noisy trigger don''t; per-commit checks pass.', '2026-10-16T19:29:01Z', NULL, 1376, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1381, 156, 'Mouse move switches prompts to keys', 'work', 'open', NULL, NULL, 'Step 2 of `plan 156: Prompts follow the last input`. Today only `pointerdown` sets `lastDevice` to `mouse` (`app/client/src/lib/input.svelte.ts`, `listen`).
 
 - add a `pointermove` listener (added/removed with the others in `listen`): `pointerType === "mouse"` only; sets `mouse` only after real movement: `screenX/Y` changed since the last seen position and accumulated ≥ a few px (constant next to the listener) since the last keyboard/pad input; synthetic moves at the same position (after scroll, layout or focus change) ignored
 - `pointerdown` unchanged (touch and pen too)
 - `focusControl`: with `mouse` last, focus without ring, as today; check it still holds
 
-Done when: on the Node dev server, a Playwright mouse move after a key press switches prompts to keys; a scroll or layout change with a still mouse doesn''t; per-commit checks pass.', '2026-10-16T19:29:01Z', NULL, 1376, 0, NULL, NULL);
+Done when: on the Node dev server, a Playwright mouse move after a key press switches prompts to keys; a scroll or layout change with a still mouse doesn''t; per-commit checks pass.', '2026-10-16T19:29:01Z', NULL, 1376, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1382, 156, 'No key labels in pad mode outside Prompt', 'work', 'open', NULL, NULL, 'Step 3 of `plan 156: Prompts follow the last input`. A control without a pad binding shows no glyph in pad mode (`Prompt.svelte` already does); every place that prints a key itself must follow.
 
 - audit: `rg lastDevice`, `rg "<kbd|class=\"key"` and letter-key spans under `app/client/src/game/`; known: `JokerTray.svelte` letters (already hidden in pad mode), `BundleSelector.svelte` tile letters (via `<Prompt … hold />`), `screens/Player.svelte`, `screens/Mods.svelte`, `FlagDialog.svelte`, `GoToDialog.svelte`, `Credits.svelte` `.keys` line, `screens/Choice.svelte` letters; fix any that still show a key in pad mode or a glyph without a pad binding
 - the bundle screen follows whatever `plan 151: Bundle selection on its own full screen` leaves it as
 - mods'' `input.lastDevice` (`app/client/src/lib/mods.ts`) keeps its meaning; `modding/README.md` mentions the switch rule if it describes `lastDevice`
 
-Done when: no key label shows in pad mode on any screen or dialog (gallery pad shots or a quick dev-server walk); per-commit checks pass.', '2026-10-16T19:29:02Z', NULL, 1376, 0, NULL, NULL);
+Done when: no key label shows in pad mode on any screen or dialog (gallery pad shots or a quick dev-server walk); per-commit checks pass.', '2026-10-16T19:29:02Z', NULL, 1376, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1383, 156, 'Input docs and walk check for prompts following the last input', 'work', 'open', 490, NULL, 'Step 4 of `plan 156: Prompts follow the last input`, after the other tasks of the plan.
 
 - `plans/14-input.md` IN-2/IN-5: one player, every device; what switches prompts (pad: any button press or stick past dead zone; mouse move or click; key); right stick only switches (`decision 272: Right stick: what it does beyond switching prompts to the pad`)
@@ -35598,7 +35598,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `trivia-gallery` pad shots unchanged: if its Playwright clicks/moves now flip them to keys, make the gallery press through its fake pad or park the mouse first (`authoring/tools/gallery.py`)
 - a failure found in the walk that the other tasks missed: follow-up task in this plan
 
-Done when: docs updated, walk passes, gallery pad shots still show glyphs; per-commit checks pass.', '2026-10-16T19:29:02Z', NULL, 1376, 0, NULL, NULL);
+Done when: docs updated, walk passes, gallery pad shots still show glyphs; per-commit checks pass.', '2026-10-16T19:29:02Z', NULL, 1376, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1384, 11, 'create tasks for plan 11: masterplan', 'split', 'done', 1000, '2026-10-16, no changes: parts 1–8 already have plans (94, 91, 92, 95, 93, 96, 97, 103; plus 104) and done plan-writing tasks; task 1364''s change (local multiplayer → milestone 16, not backlog) is carried by task 1388: revise plan 97: S6 close-out; no new decisions', 'Split plan 11 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T19:29:44Z', '2026-10-16T19:30:06Z', 1364, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1385, 94, 'revise plan 94: Coming soon page (ST-3)', 'revise', 'done', 1000, '2026-10-16, no change: plan 94 still fits masterplan part 1; decision 90''s provisional values reach the store page via task 672/688, checklist and decision 94 already in place', '`plan 11: masterplan`, the plan above `plan 94: Coming soon page (ST-3)`, changed; it is quoted below. Bring `plan 94: Coming soon page (ST-3)` in line with it
@@ -36143,13 +36143,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Time from action timestamps (the `Io` clock), no timers in the engine; client sends `tick`/`expire`, engine checks them
 - Settle and record the edge cases part 3 lists: everyone out at one round end, round 12 exhausted with no correct answer, Esc menu / Steam overlay during a question (pause or not; D-92)
 - Seen events per question shown, claimed or not
-- Mark the core work task `--model opus`', '2026-10-16T19:37:08Z', NULL, 1391, 0, NULL, NULL);
+- Mark the core work task `--model opus`', '2026-10-16T19:37:08Z', NULL, 1391, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1395, 152, 'write plan: Engine consumers of multiplayer sessions', 'plan', 'open', 1000, NULL, 'Write the plan for part 4 of `plan 152: masterplan` ("Engine consumers"): `pm plan list` first, then `pm plan add 16 "Engine consumers of multiplayer sessions" --priority 580 --intro "…"`, after the plans of parts 1–3.
 
 - Achievements (`engine/achievements.ts`): `WIN_RR_COOP`, `WIN_RR_COMPETITIVE`, `WIN_TIMED`; settle and record which other achievements sessions feed (one Steam user per machine); `qualifies` per mode; links `plan 86: Achievements (SW-11)`
 - Telemetry (`engine/telemetry.ts`): mode and player count, nothing personal
 - Outlook (`engine/outlook.ts` `seenPerLevel`, backlog B-15) and `qgen report --simulate` (`authoring/tools/sim/simulate.ts`, `qgen.py` `SIM_MODES`): replace the MD-8/MD-9 stand-ins (`plans/16-content-target.md`); Choice screen supply notice per mode; follows `decision 276: Timed mode: after a drop-out, how many questions does a round have?`
-- Readers of `games[]` (`qgen report --played`, authoring pages, `authoring/tools/*saves.mjs`) follow part 1''s shape', '2026-10-16T19:37:08Z', NULL, 1391, 0, NULL, NULL);
+- Readers of `games[]` (`qgen report --played`, authoring pages, `authoring/tools/*saves.mjs`) follow part 1''s shape', '2026-10-16T19:37:08Z', NULL, 1391, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1396, 152, 'write plan: Per-player controls', 'plan', 'open', 1000, NULL, 'Write the plan for part 5 of `plan 152: masterplan` ("Per-player controls"): `pm plan list` first, then `pm plan add 16 "Per-player controls" --priority 480 --intro "…"`; after `plan 156: Prompts follow the last input` and part 1''s plan (the acting player in the engine API).
 
 - First a throw-away investigation task (report in the plan): pads listed by `navigator.getGamepads()` in Electron on Linux and Windows, with and without Steam Input (Chromium may stop at 4); pad identity across disconnect/reconnect; Steam input type per handle ↔ `Gamepad.index` (`lib/gamepad.ts` `padStyle`)
@@ -36157,38 +36157,38 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Before the session: every device drives the shared UI; in a session the action layer (`lib/input.svelte.ts`, `lib/gamepad.svelte.ts`) tags actions with the player; only the acting player''s actions reach the game
 - `timed` claim per device; claimer''s answer per `decision 275: Timed mode, keyboard-only: how does the claimer answer in the 6 seconds?`
 - Settle and record: overlay (Esc/Start) in a session; pad lost mid-session (pause + «reconnect» or skip the player)
-- Prompts per player where it matters', '2026-10-16T19:37:08Z', NULL, 1391, 0, NULL, NULL);
+- Prompts per player where it matters', '2026-10-16T19:37:08Z', NULL, 1391, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1397, 152, 'write plan: Mode row, session setup and join screen', 'plan', 'open', 1000, NULL, 'Write the plan for part 6 of `plan 152: masterplan` ("Mode row, session setup and join screen"): `pm plan list` first, then `pm plan add 16 "Mode row, session setup and join screen" --priority 400 --intro "…"`; after parts 1 and 5; refer to `plan 151: Bundle selection on its own full screen`.
 
 - Three modes on the Choice screen''s mode row, gated by `BUILT_MODES`; names per `plans/15a-ui-translation.md` "Mode names"
 - Join screen: «press A to join» per pad, keyboard and mouse as one player, key picking per `decision 273: Keyboard-only turn-based sessions: what does a player''s own key do?` and `decision 274: Pads plus keyboard: one keyboard player, or several key players?`; names (save player rows or new, `LetterPicker.svelte`); leave/rejoin; no cap of our own, minimum 2
 - Per-mode setup: age group per player or for all, bundles (`decision 158: Bundle selection in every mode, apart from customization`), «Personalizar partida» where allowed (no achievements), supply check
-- Screens in `screens/registry.ts`; Deck size 1280×800', '2026-10-16T19:37:08Z', NULL, 1391, 0, NULL, NULL);
+- Screens in `screens/registry.ts`; Deck size 1280×800', '2026-10-16T19:37:08Z', NULL, 1391, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1398, 152, 'write plan: Round-robin game screens', 'plan', 'open', 1000, NULL, 'Write the plan for part 7 of `plan 152: masterplan` ("Round-robin game screens"): `pm plan list` first, then `pm plan add 16 "Round-robin game screens" --priority 390 --intro "…"`; after part 2''s plan.
 
 - Turn banner (whose turn, their device glyph), shared Tower (`rr-coop`) or one track per player (`rr-competitive`), shared or per-player joker tray, a player out, the session''s Victory/Wrong screens per mode
 - Reuse Level, Select, Question, Correct, Wrong (`game/screens/`), no copies (decision 199)
-- Strings land with their screens (part 9)', '2026-10-16T19:37:08Z', NULL, 1391, 0, NULL, NULL);
+- Strings land with their screens (part 9)', '2026-10-16T19:37:08Z', NULL, 1391, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1399, 152, 'write plan: Timed game screens, drama and sound', 'plan', 'open', 1000, NULL, 'Write the plan for part 8 of `plan 152: masterplan` ("Timed game screens, drama and sound"): `pm plan list` first, then `pm plan add 16 "Timed game screens, drama and sound" --priority 380 --intro "…"`; after part 3''s plan.
 
 - One question for all: 30 s countdown, hint every 8 s, claim prompt per player, the claimer''s 6 s, rounds and hearts per player; claimer''s answer input per `decision 275: Timed mode, keyboard-only: how does the claimer answer in the 6 seconds?`
 - Drama as milestone 16 specs: pulsing heart at last chance in a round, stronger on the last heart; last 3 s after a claim: rising ticks and pulsing red frame; same frame when every player is at risk
 - Sounds through `game/sound.svelte.ts` (synth until `plan 32: Recorded sound effects (UI-10)`), checked with `TRIVIA_SOUND=1`
-- Sudden death round 12 and the winner screen; `PLACEHOLDER(<task id>)` for unpolished visuals', '2026-10-16T19:37:09Z', NULL, 1391, 0, NULL, NULL);
+- Sudden death round 12 and the winner screen; `PLACEHOLDER(<task id>)` for unpolished visuals', '2026-10-16T19:37:09Z', NULL, 1391, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1400, 152, 'write plan: Multiplayer UI strings and gallery', 'plan', 'open', 1000, NULL, 'Write the plan for part 9 of `plan 152: masterplan` ("UI strings and gallery"): `pm plan list` first, then `pm plan add 16 "Multiplayer UI strings and gallery" --priority 360 --intro "…"`; alongside parts 6–8 (strings land with their screens, the gallery after); refer to `plan 69: UI catalogs for the launch languages (LUI-4, LUI-5)`.
 
 - Every new string in es, es-ES, en, de (`app/client/src/locales/`), per `locales/style/<locale>.md`; claim keys under the key collision rule of `npm run check` (`decision 53: Joker and action keys per UI language (LUI-4)?`)
-- `trivia-gallery`: demo saves in `authoring/tools/gallery_saves.mjs` for each new screen and state (join with 5 players, each mode mid-game, timed claim, last heart, red frame, each victory); shots for all four locales', '2026-10-16T19:37:09Z', NULL, 1391, 0, NULL, NULL);
+- `trivia-gallery`: demo saves in `authoring/tools/gallery_saves.mjs` for each new screen and state (join with 5 players, each mode mid-game, timed claim, last heart, red frame, each victory); shots for all four locales', '2026-10-16T19:37:09Z', NULL, 1391, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1401, 152, 'write plan: Shipping the multiplayer modes and docs', 'plan', 'open', 1000, NULL, 'Write the plan for part 10 of `plan 152: masterplan` ("Shipping the modes and docs"): `pm plan list` first, then `pm plan add 16 "Shipping the multiplayer modes and docs" --priority 340 --intro "…"`; refer to `plan 86: Achievements (SW-11)` and `plan 88: Store page and AI disclosure (PUB-8, LUI-6)`.
 
 - Per mode: a `--once` decision for the developer (win achievement entered in Steamworks); the mode''s `steam-achievements.vdf` + `BUILT_MODES` task waits for it, and for that mode''s screens passing
 - Store texts name a mode once built (`decision 168: Store texts name only the built game modes`, `plans/17a-store-page.md`); controller line if a pad-only run changes `decision 90`
-- Docs: `plans/13-game-modes.md`, `plans/14-input.md` section 3, `plans/11-steam.md`, `plans/16-content-target.md`, `plans/17a-store-page.md`, `plans/backlog.md` (B-15) point to milestone 16; `rg "MD-8|MD-9|IN-6|Later"` leaves none for these (decision 200)', '2026-10-16T19:37:09Z', NULL, 1391, 0, NULL, NULL);
+- Docs: `plans/13-game-modes.md`, `plans/14-input.md` section 3, `plans/11-steam.md`, `plans/16-content-target.md`, `plans/17a-store-page.md`, `plans/backlog.md` (B-15) point to milestone 16; `rg "MD-8|MD-9|IN-6|Later"` leaves none for these (decision 200)', '2026-10-16T19:37:09Z', NULL, 1391, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1402, 152, 'write plan: Local multiplayer close-out and family playtest', 'plan', 'open', 1000, NULL, 'Write the plan for part 11 of `plan 152: masterplan` ("Close-out: end-to-end runs and family playtest"): `pm plan list` first, then `pm plan add 16 "Local multiplayer close-out and family playtest" --priority 130 --intro "…"`; last.
 
 - Each mode start to finish: pads only, keyboard only, 4 pads + keyboard and mouse (5 players); fake pads headless where real ones are missing, real pads by the developer
 - A playtest decision for the developer (`--once`): each mode played on the TV with the family; failures become follow-up tasks
-- Feeds `milestone 17: Remote Play Together`''s gate C', '2026-10-16T19:37:09Z', NULL, 1391, 0, NULL, NULL);
+- Feeds `milestone 17: Remote Play Together`''s gate C', '2026-10-16T19:37:09Z', NULL, 1391, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1403, 157, 'create tasks for plan 157: Session model and save format', 'split', 'open', 1000, NULL, 'Split plan 157 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T19:40:48Z', NULL, 1392, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1404, 158, 'create tasks for plan 158: Round-robin modes in the engine', 'split', 'open', 1000, NULL, 'Split plan 158 into tasks and identify all decisions that need to be made. If the plan already has tasks,
