@@ -1,5 +1,5 @@
 -- pm database. Change it with pm; after a hand edit run `pm validate`.
-PRAGMA user_version = 26;
+PRAGMA user_version = 27;
 
 CREATE TABLE milestone (
     id             INTEGER PRIMARY KEY,
@@ -37,11 +37,11 @@ CREATE TABLE task (
     created_by_task INTEGER REFERENCES task (id),
     web             INTEGER NOT NULL DEFAULT 0 CHECK (web IN (0, 1)),  -- 1: its worker gets WebSearch and WebFetch
     model           TEXT CHECK (model IS NULL OR trim(model) <> ''),  -- claude --model; NULL: [models] in the config
-    worktree        TEXT CHECK (worktree GLOB '[a-z0-9]*' AND worktree NOT GLOB '*[^a-z0-9-]*'),  -- NULL: the main checkout
+    worktree        TEXT CHECK (worktree GLOB '[a-z0-9]*' AND worktree NOT GLOB '*[^a-z0-9-]*'),  -- [worktrees]; NULL: the trunk
     CONSTRAINT "an open task needs a body" CHECK (status <> 'open' OR trim(body) <> ''),
     CONSTRAINT "retired_at is set exactly when done or dropped" CHECK ((status = 'open') = (retired_at IS NULL)),
     CONSTRAINT "an exec task has no plan, every other task has one" CHECK ((kind = 'exec') = (plan_id IS NULL)),
-    CONSTRAINT "an exec task runs in the main checkout" CHECK (kind <> 'exec' OR worktree IS NULL)
+    CONSTRAINT "exec, planning and cleanup tasks run in the trunk" CHECK (kind NOT IN ('exec', 'masterplan', 'split', 'revise', 'cleanup') OR worktree IS NULL)
 ) STRICT;
 
 CREATE TABLE decision (
@@ -79,7 +79,7 @@ CREATE TABLE run (                                         -- one worker run of 
     reason                TEXT,                            -- failed: why; limit: the message
     exit_code             INTEGER,
     base_commit           TEXT,                            -- HEAD when the run started
-    worktree              TEXT,                            -- the task's work tree then; NULL: the main checkout
+    worktree              TEXT,                            -- the task's work tree then; NULL: the trunk
     model                 TEXT,                            -- from here on: the worker's JSON output, if any
     session_id            TEXT,
     continues_run         INTEGER REFERENCES run (id),     -- warm hand-off: the run whose Claude session it resumed
@@ -41823,7 +41823,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1401, 1391, '2026-10-16T19:36:18Z', '2026-10-16T19:37:19Z', 'done', NULL, 0, 'dc7e89277c7c01ac3954102ff14bdb750cb68e36', NULL, 'claude-opus-5-5', '7fcffe9f-684e-4de2-8dae-c2bae59415b9', NULL, 8, 16, 6394, 310205, 40626, 0.51499299999999992, 4144524);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1402, 1392, '2026-10-16T19:37:20Z', '2026-10-16T19:41:13Z', 'done', NULL, 0, '0661e6eda10c2f02bfb2b14a4a862f5158416dd5', NULL, 'claude-opus-5-5', '21642c54-cda0-4b53-90cf-d61515e48981', NULL, 16, 30, 14554, 1065077, 96603, 1.2770394, 4144524);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1403, 1393, '2026-10-16T19:41:13Z', '2026-10-16T19:43:31Z', 'done', NULL, 0, '3142df71bd7bd81da52752be4bc6cd203fddf608', NULL, 'claude-opus-5-5', 'f96421bd-d2b8-44ff-9a96-9637a30d1ee4', NULL, 11, 20, 10957, 607170, 79829, 0.9792860000000001, 4144524);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1404, 1398, '2026-10-16T19:43:31Z', NULL, 'running', NULL, NULL, '43977b03c74c56d48c04f4748ccb2d8cc9dfac4d', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 4144524);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1404, 1398, '2026-10-16T19:43:31Z', '2026-10-16T20:50:53Z', 'failed', 'interrupted', NULL, '43977b03c74c56d48c04f4748ccb2d8cc9dfac4d', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 4144524);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
