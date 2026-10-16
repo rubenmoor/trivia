@@ -26,7 +26,7 @@ Before writing anything, ask me all of this in ONE message, with your suggestion
    - Young adults, 15–22: difficulty 4–13
    - Adults, 23+: difficulty 5–15
    - Everyone: difficulty 1–15
-3. Question language(s): one or more of Spanish (es), English (en), German (de).
+3. Question language(s): one or more of Spanish (Latin America, es), Spanish (Spain, es-ES), English (en), German (de).
 4. How many questions (suggest 30–60; at least 12, one game's worth).
 5. Bundle name, and a one-sentence description for the bundle selector.
 6. Add-on or base: "add-on" (default, recommended) adds the questions next to the game's own; "base" replaces the game's whole base set and only makes sense for several hundred all-round questions over the full range.
@@ -62,7 +62,7 @@ d) data/bundles/<bundle id>/names.<lang>.json, one per language other than the m
   "subcategories": { "<subcategory name as in categories.json>": "<translated name>" }
 }
 
-e) The pool file per language: Spanish → data/bundles/<bundle id>/pool.json, English → pool.en.json, German → pool.de.json.
+e) The pool file per language: Spanish (Latin America) → data/bundles/<bundle id>/pool.json, Spanish (Spain) → pool.es-ES.json, English → pool.en.json, German → pool.de.json.
 { "version": 1, "questions": [ { …question… }, … ] }
 Each question has exactly these fields:
 {

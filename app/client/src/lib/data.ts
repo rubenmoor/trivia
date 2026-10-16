@@ -15,7 +15,7 @@ async function get(file: string, optional = false): Promise<unknown> {
 }
 
 /** Question locales a pool may exist for (D-78); es always has one. */
-export const LOCALES = ["es", "en", "de"] as const;
+export const LOCALES = ["es", "es-ES", "en", "de"] as const;
 
 const cache = new Map<string, Promise<Loaded>>();
 const withUi = new Map<string, Promise<EngineData>>();

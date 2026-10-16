@@ -4,7 +4,7 @@
     {
       "id": "base",
       "kind": "base",
-      "languages": ["es", "en", "de"],
+      "languages": ["es", "es-ES", "en", "de"],
       "name": "Básico",
       "description": "Preguntas de todo un poco, para jugar en cualquier parte.",
       "rule": "Everything that isn't in another bundle: answerable by the players anywhere in the Spanish-speaking world, including well-known facts about Colombia (its capital, its flag, coffee, García Márquez).",

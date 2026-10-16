@@ -6,7 +6,7 @@ import { bundleRows, readManifest } from "./mods.mjs";
 import { contained } from "./resolve.mjs";
 
 // LOCALES in app/client/src/lib/data.ts.
-const LOCALES = ["es", "en", "de"];
+const LOCALES = ["es", "es-ES", "en", "de"];
 
 const ERRORS = {
   not_a_folder: () => "not a folder",
@@ -26,7 +26,7 @@ const WARNINGS = {
   unknown_language: (w) => `mod.json languages: "${w.tag}" isn't a game language`,
   unknown_key: (w) => `mod.json: unknown key "${w.key}"`,
   game_version: (w) => `made for ${w.game}, running ${w.running}`,
-  bundle_language: (w) => `bundle ${w.bundle}: language "${w.tag}" has no questions in the game (es, en, de), ignored`,
+  bundle_language: (w) => `bundle ${w.bundle}: language "${w.tag}" has no questions in the game (es, es-ES, en, de), ignored`,
   no_pool_file: (w) => `${w.file}: missing, bundle ${w.bundle} not offered in ${w.locale}`,
   bad_names: (w) => `${w.file}: not a JSON object, ignored`,
 };

@@ -23,11 +23,16 @@ NAMES_RE = re.compile(r"app/data/(?:bundles/([^/]+)/)?names\.([A-Za-z-]+)\.json"
 OTHER = "other"
 # Steam event strings per launch language (authoring, not t()); tone of plans/11-steam.md "Announcement texts".
 EVENT = {
-    "es": {"lang": "Spanish (es-419 and es-ES)", "title": "Actualización v{v}", "new": ": {n} preguntas nuevas",
+    "es": {"lang": "Spanish (Latin America)", "title": "Actualización v{v}", "new": ": {n} preguntas nuevas",
            "new1": ": 1 pregunta nueva", "list": "Preguntas nuevas:",
            "fixed": "Corregimos {n} preguntas (gracias por sus reportes).",
            "fixed1": "Corregimos 1 pregunta (gracias por sus reportes).",
            "removed": "Quitamos {n} preguntas.", "removed1": "Quitamos 1 pregunta.", "other": "Otras"},
+    "es-ES": {"lang": "Spanish (Spain)", "title": "Actualización v{v}", "new": ": {n} preguntas nuevas",
+              "new1": ": 1 pregunta nueva", "list": "Preguntas nuevas:",
+              "fixed": "Corregimos {n} preguntas (gracias por vuestros avisos).",
+              "fixed1": "Corregimos 1 pregunta (gracias por vuestros avisos).",
+              "removed": "Quitamos {n} preguntas.", "removed1": "Quitamos 1 pregunta.", "other": "Otras"},
     "en": {"lang": "English", "title": "Update v{v}", "new": ": {n} new questions", "new1": ": 1 new question",
            "list": "New questions:", "fixed": "Fixed {n} questions (thanks for your reports).",
            "fixed1": "Fixed 1 question (thanks for your reports).",
@@ -105,7 +110,7 @@ def diff(old, new, old_sub, new_sub):
 
 
 def order(locale):
-    """Launch languages first (es, en, de), then the rest."""
+    """Launch languages first (es, es-ES, en, de), then the rest."""
     return (LAUNCH.index(locale) if locale in LAUNCH else len(LAUNCH), locale)
 
 
