@@ -129,14 +129,14 @@ The decision keys set `status` and `review` together. Feedback sets `status: "ne
 
 **API.** `GET /api/overview` returns everything above except the statistics (they use `/api/questions?status=approved` like the stats pages) in one JSON object, built on the server so the page doesn't fetch the whole pool with media candidates. It reuses `selection.supply` (`app/server/`, allowed by D-35) and `save_file.blocked_ids` / `seen_counts` (plan 65: one profile per save, rows "any" and "unseen") and the same unfinished-run test as `qgen.next_batch`; that test moves into a small shared helper rather than being copied. Reading the game save is read-only; when `state/` doesn't exist everything counts as unseen.
 
-**New review filters**, so the links above open the right queue: `GET /api/questions` and the review screen accept `status=<status>` and `reviewer=human|llm|none` (the API already does both), `media=missing` (approved questions whose media has no picked file) and `subcategory=<name>` (new in the API too). The URL keeps them like `batch` and `bundle`.
+**New review filters**, so the links above open the right queue: `GET /api/questions` and the review screen accept `status=<status>` and `reviewer=human|llm|none` (the API already does both), `media=missing` (approved questions whose media has no picked file) and `subcategory=<key>` (new in the API too; a display name works too, decision 259). The URL keeps them like `batch` and `bundle`.
 
 
 ## Statistics on approved questions (RV-18..RV-21)
 The stats pages (QP-13, `/stats/categories`, `/stats/difficulty`) count approved questions only, the ones a game can use. They get three fixes and one new page, and the start page shows them compact (section 5 above). Today: 483 approved, 24 categories, 140 subcategories.
 
 - **Difficulty histogram over the whole scale 1–15** (D-38). It stops at 10 today, so a difficulty of 11–15 set in the review tool (AG-9) isn't counted. Mark the young-teen window (1–10, `app/data/age-groups.json`) on the axis, so the thin top end (9: 26, 10: 2, B-6) is visible at a glance.
-- **Category and subcategory breakdown.** The category bars stay sorted by count. Clicking a bar opens its subcategories as bars below it, instead of the hover-only tooltip, so the breakdown also works without a mouse and can stay open. A new page, `/stats/subcategories`, lists all 140 subcategories grouped by category, with the count of each and a link to `/review?subcategory=<name>&status=approved`.
+- **Category and subcategory breakdown.** The category bars stay sorted by count. Clicking a bar opens its subcategories as bars below it, instead of the hover-only tooltip, so the breakdown also works without a mouse and can stay open. A new page, `/stats/subcategories`, lists all 140 subcategories grouped by category, with the count of each and a link to `/review?subcategory=<key>&status=approved`.
 - **Sparse areas.** One list, worst first, on `/stats/subcategories` and on the start page:
   - **Categories with fewer than 12 approved questions.** A game asks 12 questions, so below that a category can't cover every level even once. Today that's 5: Amazonas 9, Cuerpo humano 11, Espacio 11, Videojuegos 11, Fútbol 11.
   - **Subcategories with fewer than 3 approved questions.** One player sees them all in one or two games. Today that's 27 (none is empty).

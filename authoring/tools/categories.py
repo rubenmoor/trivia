@@ -8,7 +8,7 @@ and in mods, a plain string is key and Spanish name, a category's `name` its nam
 import json
 import re
 
-from paths import BUNDLES, BUNDLE_DATA, CATEGORIES, names  # authoring/tools/paths.py
+from paths import BUNDLES, BUNDLE_DATA, CATEGORIES, OLD_KEYS, names  # authoring/tools/paths.py
 
 
 def path(bundle):
@@ -53,6 +53,23 @@ def key(q):
 def sub_key(bundle, name):
     """A subcategory's or category's key in one string, as the engine's subKey: base's bare, else <bundle>/<key>."""
     return name if bundle == "base" else f"{bundle}/{name}"
+
+
+def parse_key(k):
+    """sub_key's string back to (bundle, key)."""
+    b, _, rest = k.rpartition("/")
+    return (b or "base", rest)
+
+
+def labelled(k, locale="es", kind="subcategories"):
+    """A sub_key with its display name: `key (Name)`, the key alone if they are the same."""
+    name = display(*parse_key(k), locale, kind)
+    return k if name == parse_key(k)[1] else f"{k} ({name})"
+
+
+def old_keys():
+    """app/data/old-keys.json: {"categories", "subcategories"}: old sub_key → new sub_key; empty without it."""
+    return _read(OLD_KEYS) if OLD_KEYS.exists() else {"categories": {}, "subcategories": {}}
 
 
 def broad_of():

@@ -87,8 +87,8 @@ export async function setTranslatable(id: string, translatable: boolean, locale:
   return send(`/api/questions/${encodeURIComponent(id)}/translatable`, { translatable, locale });
 }
 
-/** Display names in a locale (names.<locale>.json, D-81); null for es and es-ES (categories.json's names). */
-export async function fetchNames(locale: string): Promise<Names | null> {
+/** Display names in a locale (names.<locale>.json, D-81; decision 259); es by default. */
+export async function fetchNames(locale = "es"): Promise<Names> {
   return get(`/api/names?${new URLSearchParams({ locale })}`);
 }
 

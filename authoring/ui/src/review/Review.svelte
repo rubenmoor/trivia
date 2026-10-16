@@ -111,7 +111,7 @@
   onMount(async () => {
     try {
       const [qs, bs, spots, ns, ag] = await Promise.all([
-        fetchQuestions(filter), fetchBundles(), fetchSpotChecks(), locale ? fetchNames(locale) : null, fetchAgeGroups(),
+        fetchQuestions(filter), fetchBundles(), fetchSpotChecks(), fetchNames(locale ?? undefined), fetchAgeGroups(),
       ]);
       [questions, bundles, problemKinds, names, ageGroups] = [qs, bs, spots.problems, ns, ag];
       if (sampleMode) spotItems = spots.checks[checkGroup!]?.items ?? {};

@@ -13,13 +13,15 @@ question that isn't approved (/review?status=!approved, RV-22).
 API:
     GET  /api/categories                           every bundle's broad categories with subcategories (D-19, D-43)
     GET  /api/bundles                              app/data/bundles.json: the question bundles (D-39)
-    GET  /api/names?locale=en                      categories.load_names: bundle, category, subcategory names (plan 67)
+    GET  /api/names?locale=en                      categories.load_names: bundle, category, subcategory names (plan 67;
+                                                   no locale: es, decision 259)
     GET  /api/age-groups                           app/data/age-groups.json: the difficulty scale and age groups (D-38)
     GET  /api/targets                              authoring/data/targets.json: pool targets per bundle (D-53, plan 12)
     GET  /api/questions?batch=pilot&status=draft   matching questions (all filters optional;
          &reviewer=human|llm|none&bundle=colombia  batch=none selects questions without a batch,
                                                    status=!approved every status but approved;
-         &subcategory=Pirámides&media=missing      media=missing: no picked media file;
+         &subcategory=pyramids&media=missing       subcategory: its key or a display name (decision 259);
+                                                   media=missing: no picked media file;
          &sample=1&audit=flagged                   with batch: sample=1 its spot-check sample in order,
                                                    audit=flagged its audited ones with a major finding, plan 16;
          &run=backaudit-1                          run: a back-audit run's questions, also with sample/audit, plan 57;
@@ -105,6 +107,11 @@ import translations  # noqa: E402  (authoring/tools/translations.py)
 download.WAIT_ON_RATE_LIMIT = False  # report rate limits to the review tool instead of hanging
 
 
+def sub_of(query):
+    """The `subcategory` filter as a key: a key or a display name (decision 259)."""
+    return categories.resolve(query.get("bundle") or "base", query["subcategory"]) or query["subcategory"]
+
+
 def locale_of(value):
     """A translation locale, or None for the source view (absent)."""
     if value in (None, ""):
@@ -168,7 +175,7 @@ def locale_questions(locale, query):
     if "bundle" in query:
         pairs = [(t, q) for t, q in pairs if q.get("bundle") == query["bundle"]]
     if "subcategory" in query:
-        pairs = [(t, q) for t, q in pairs if q["subcategory"] == query["subcategory"]]
+        pairs = [(t, q) for t, q in pairs if q["subcategory"] == sub_of(query)]
     if query.get("media") == "missing":
         pairs = [(t, q) for t, q in pairs if not q["media"].get("file_url")]
     if query.get("licence") == "replace":
@@ -210,7 +217,7 @@ def source_questions(query):
         want = None if query["reviewer"] == "none" else query["reviewer"]
         qs = [q for q in qs if (q.get("review") or {}).get("reviewer") == want]
     if "subcategory" in query:
-        qs = [q for q in qs if q["subcategory"] == query["subcategory"]]
+        qs = [q for q in qs if q["subcategory"] == sub_of(query)]
     if query.get("media") == "missing":
         qs = [q for q in qs if not q["media"].get("file_url")]
     if query.get("sample") and (group := query.get("batch") or query.get("run")):
@@ -245,8 +252,7 @@ def media_stats_of(query):
 
 
 def names_of(query):
-    locale = locale_of(query.get("locale"))
-    return categories.load_names(locale) if locale in translations.NAMED else None
+    return categories.load_names(locale_of(query.get("locale")) or "es")
 
 
 def slot_of(body):

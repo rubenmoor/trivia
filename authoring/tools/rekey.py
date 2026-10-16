@@ -18,7 +18,7 @@ import layout
 import translations
 from layout import REPO as ROOT, SOURCE_POOL, WORK
 
-OLD_KEYS = layout.app_paths.DATA / "old-keys.json"
+OLD_KEYS = layout.app_paths.OLD_KEYS
 CHECKED = [layout.TARGETS, layout.AXES_FILE, layout.SPOT_CHECKS, layout.UI_FLAGS]  # warned about, never rewritten
 STEM_DIRS = ["ratings", "factchecks", "revisions"]  # named like the draft files
 

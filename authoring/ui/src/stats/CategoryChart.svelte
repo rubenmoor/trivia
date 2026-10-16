@@ -1,6 +1,7 @@
 <script lang="ts">
   // Questions per broad category (D-19), most first. Click a bar to open its subcategories
   // (RV-19); each one links to its approved questions in the review tool. With targets: approved / derived share (D-53).
+  import { catKey } from "$app/engine/pool.ts";
   import type { BundleTargets, Category, Names, Question } from "../lib/types.ts";
   import { breakdown, reviewLink, type CategoryRow } from "./breakdown.ts";
   import "./chart.css";
@@ -21,7 +22,7 @@
     targets?: BundleTargets | null;
     bundle?: string | null;
     compact?: boolean;
-    /** A translation locale's names and code (plan 67): labels and review links. */
+    /** A locale's names and code (plan 67, decision 259): labels and review links. */
     names?: Names | null;
     locale?: string | null;
     /** Bundles in view (`breakdown`). */
@@ -33,13 +34,13 @@
   const max = $derived(Math.max(1, ...rows.map((r) => r.count)));
   /** Subcategory bars share one scale across categories, so they compare. */
   const subMax = $derived(Math.max(1, ...rows.flatMap((r) => r.subs.map((s) => s.count))));
-  /** Derived share per category name: total × its subcategories / the bundle's (a guide, plan 12). */
+  /** Derived share per category key: total × its subcategories / the bundle's (a guide, plan 12). */
   const shares = $derived.by(() => {
     if (!targets || !bundle) return new Map<string, number>();
     const t = targets;
     const own = categories.filter((c) => c.bundle === bundle);
     const n = own.reduce((k, c) => k + c.subcategories.length, 0);
-    return new Map(own.map((c) => [c.name, n ? Math.round((t.total * c.subcategories.length) / n) : 0]));
+    return new Map(own.map((c) => [catKey(c), n ? Math.round((t.total * c.subcategories.length) / n) : 0]));
   });
   const empty = $derived(rows.filter((r) => r.count === 0).length);
 

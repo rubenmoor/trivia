@@ -15,6 +15,7 @@ CATEGORIES = DATA / "categories.json"  # D-19: base's categories
 BUNDLE_DATA = DATA / "bundles"  # D-43: another bundle's categories in bundles/<id>/categories.json
 AGE_GROUPS = DATA / "age-groups.json"  # D-38
 BUNDLES = DATA / "bundles.json"  # D-39
+OLD_KEYS = DATA / "old-keys.json"  # decision 259: old category / subcategory keys → slugs
 
 
 def locale_pool(locale):

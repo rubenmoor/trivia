@@ -11,7 +11,7 @@ from pathlib import Path
 
 from layout import REPO as ROOT, WORK
 import translations  # authoring/tools/translations.py
-from categories import key, sub_key  # authoring/tools/categories.py (D-99)
+from categories import key, old_keys, parse_key, sub_key  # authoring/tools/categories.py (D-99)
 
 sys.path.insert(0, str(ROOT / "authoring" / "steam"))
 import release_check  # noqa: E402
@@ -68,13 +68,15 @@ def read(ref, path):
 
 def snapshot(ref):
     """{"version", "pools": {locale: pool}, "sub": {subcategory: slug}, "names": {locale: {slug: name}}};
-    subcategories and slugs as categories.sub_key (bundle + key, D-99)."""
-    fs = files(ref)
+    subcategories and slugs as categories.sub_key (bundle + key, D-99), an old ref's keys mapped to today's
+    through old-keys.json (decision 259), so a rename isn't a change."""
+    fs, old = files(ref), old_keys()
+    new = lambda kind, b, k: old[kind].get(sub_key(b, k), sub_key(b, k))
     pools = {}  # per locale: base's questions and the packs', base's hash
     for f in fs:
         if m := POOL_RE.fullmatch(f):
             p, pool = read(ref, f), pools.setdefault(m.group(2) or "es", {"hash": None, "questions": []})
-            pool["questions"] += p["questions"]
+            pool["questions"] += [{**q, "subcategory": parse_key(new("subcategories", *key(q)))[1]} for q in p["questions"]]
             if not m.group(1):
                 pool["hash"] = p.get("hash")
     sub, names = {}, {"es": {}}
@@ -82,11 +84,11 @@ def snapshot(ref):
         if m := CATS_RE.fullmatch(f):
             b = m.group(1) or "base"
             for c in read(ref, f)["categories"]:
-                names["es"][sub_key(b, c["slug"])] = c.get("name") or c["slug"]  # slug keys: names.es.json below
-                sub.update({sub_key(b, s): sub_key(b, c["slug"]) for s in c["subcategories"]})
+                names["es"][new("categories", b, c["slug"])] = c.get("name") or c["slug"]  # slug keys: names.es.json below
+                sub.update({new("subcategories", b, s): new("categories", b, c["slug"]) for s in c["subcategories"]})
         elif m := NAMES_RE.fullmatch(f):
             b = m.group(1) or "base"
-            names.setdefault(m.group(2), {}).update({sub_key(b, k): v for k, v in (read(ref, f).get("categories") or {}).items()})
+            names.setdefault(m.group(2), {}).update({new("categories", b, k): v for k, v in (read(ref, f).get("categories") or {}).items()})
     pkg = read(ref, "app/desktop/package.json")
     return {"version": pkg and pkg["version"], "pools": pools, "sub": sub, "names": names}
 
@@ -141,7 +143,7 @@ def total(c, key):
 def event(locale, d):
     """(title, BBCode body) of the Steam event in a launch language."""
     s, c, v = EVENT[locale], d["counts"].get(locale, {}), d["to"]["version"]
-    names = d["category_names"].get(locale) or d["category_names"].get("es", {})
+    names = {**d["category_names"].get("es", {}), **d["category_names"].get(locale, {})}
     added, fixed, dropped = total(c, "added"), total(c, "fixed"), total(c, "dropped")
     title = s["title"].format(v=v) + (s["new1"] if added == 1 else s["new"].format(n=added) if added else "")
     body = []

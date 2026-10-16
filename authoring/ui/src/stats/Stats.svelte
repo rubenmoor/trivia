@@ -75,7 +75,7 @@
         [mediaStats, bundles, names] = await Promise.all([
           fetchMediaStats(bundle, locale),
           fetchBundles(),
-          locale ? fetchNames(locale) : null,
+          fetchNames(locale ?? undefined),
         ]);
         return;
       }
@@ -84,7 +84,7 @@
         fetchCategories(),
         fetchAgeGroups(),
         fetchBundles(),
-        locale ? fetchNames(locale) : null,
+        fetchNames(locale ?? undefined),
       ]);
     } catch (e) {
       error = messageOf(e);

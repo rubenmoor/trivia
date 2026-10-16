@@ -1833,7 +1833,7 @@ def report_subcategories(avail, ranges):
     print("supply per subcategory × difficulty (JK-10; '.' = none):")
     print(f"  {'':34}" + "".join(f"{d:>3}" for d in scale) + "  total")
     for c in categories.load():
-        print(f"  {cat_name(c, 'es')}" + (f" ({c['bundle']})" if c["bundle"] != "base" else ""))
+        print(f"  {categories.sub_key(c['bundle'], c['slug'])}")
         for sub in c["subcategories"]:
             ds = by_sub.get((c["bundle"], sub), [])
             cells = "".join(f"{ds.count(d) or '.':>3}" for d in scale)
@@ -1906,7 +1906,7 @@ def report_saturation(pool, bundle):
     for c in categories.load():
         if c["bundle"] != bundle:
             continue
-        print(f"  {cat_name(c, 'es')}")
+        print(f"  {c['slug']}")
         for sub in c["subcategories"]:
             r = rows[sub]
             supply = (f"{r['list']:4}  {r['unused']:6}  {r['hard']:4}  {r['top_ups']:7}" if r["list"] is not None
@@ -1925,7 +1925,7 @@ def report_saturation(pool, bundle):
         if c["bundle"] != bundle:
             continue
         rs = [rows[s] for s in c["subcategories"]]
-        print(f"  {cat_name(c, 'es')[:32]:32}  {len(rs):13}  {sum(r['approved'] for r in rs):8}  "
+        print(f"  {c['slug'][:32]:32}  {len(rs):13}  {sum(r['approved'] for r in rs):8}  "
               f"{sum(r['hard'] or 0 for r in rs):11}  {sum(bool(r['flags']) for r in rs):9}")
 
 
@@ -2325,7 +2325,8 @@ def report_simulate(args):
             where = f"none in {cap} games"
         else:
             rng = f"{b['lo']}" if b["lo"] == b["hi"] else f"{b['lo']}–{b['hi']}"
-            where = f"level {b['level']} (difficulty {rng}): {', '.join(b['dry']) or '–'}"
+            dry = ", ".join(categories.labelled(k, r["locale"]) for k in b["dry"])
+            where = f"level {b['level']} (difficulty {rng}): {dry or '–'}"
         if d["capped"]:
             where += f"; {d['capped']} seeds capped"
         rows.append(head + (f"{g['median']:g}", f"{g['p10']:g}", str(g["min"]) if strong else "–", str(g["cambiazo"]),
@@ -2690,7 +2691,7 @@ def cmd_report(args):
         return print(health.deficit_line())
     pool = load_json(POOL)["questions"]
     broad = categories.broad_of()
-    cat = lambda q: (c := broad.get(categories.key(q))) and (c["slug"] if c["bundle"] == "base" else f"{c['bundle']}/{c['slug']}")
+    cat = lambda q: (c := broad.get(categories.key(q))) and categories.sub_key(c["bundle"], c["slug"])
     print(f"pool: {len(pool)} questions")
     for title, key in [("status", lambda q: q["status"]), ("difficulty", lambda q: q["difficulty"]),
                        ("category", cat), ("style", lambda q: q.get("style")),

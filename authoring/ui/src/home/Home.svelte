@@ -4,9 +4,9 @@
   // every number links to the page or review queue that works it off.
   import { onMount } from "svelte";
   import { messageOf } from "$app/lib/http.ts";
-  import { fetchAgeGroups, fetchCategories, fetchOverview, fetchQuestions } from "../lib/api.ts";
+  import { fetchAgeGroups, fetchCategories, fetchNames, fetchOverview, fetchQuestions } from "../lib/api.ts";
   import Nav from "../lib/Nav.svelte";
-  import type { AgeGroups, Category, Overview, Question } from "../lib/types.ts";
+  import type { AgeGroups, Category, Names, Overview, Question } from "../lib/types.ts";
   import CategoryChart from "../stats/CategoryChart.svelte";
   import DifficultyChart from "../stats/DifficultyChart.svelte";
   import SparseList from "../stats/SparseList.svelte";
@@ -15,16 +15,18 @@
   let approved = $state<Question[]>([]);
   let categories = $state<Category[]>([]);
   let ageGroups = $state<AgeGroups | null>(null);
+  let names = $state<Names | null>(null);
   let error = $state<string | null>(null);
   let goId = $state("");
 
   onMount(async () => {
     try {
-      [overview, approved, categories, ageGroups] = await Promise.all([
+      [overview, approved, categories, ageGroups, names] = await Promise.all([
         fetchOverview(),
         fetchQuestions({ status: "approved" }),
         fetchCategories(),
         fetchAgeGroups(),
+        fetchNames(),
       ]);
     } catch (e) {
       error = messageOf(e);
@@ -285,11 +287,11 @@
           </div>
         {/if}
         <div>
-          <SparseList questions={approved} {categories} nextBatch={overview.next_batch_subcategories} compact />
+          <SparseList questions={approved} {categories} nextBatch={overview.next_batch_subcategories} {names} compact />
           <a class="more" href="/stats/subcategories">subcategories →</a>
         </div>
       </div>
-      <CategoryChart questions={approved} {categories} compact />
+      <CategoryChart questions={approved} {categories} {names} compact />
       <a class="more" href="/stats/categories">categories →</a>
     </section>
 
