@@ -10,6 +10,7 @@ The steps run in order; a pm worker stops at each decision and continues when it
    - Major audit findings on approved questions: `http://127.0.0.1:8001/review?batch=<batch>&audit=flagged`.
 2. **Blind spot check (developer only).** Run `trivia-authoring`, open `http://127.0.0.1:8001/review?batch=<batch>&sample=1`.
    - 30 questions (`quality.spot_check_size` in `authoring/data/targets.json`), a subset of the audit sample, same ones on every reload; ~10–15 min.
+   - Per source locale (plan 148): a batch's questions are in its source locale (`base` ≤ batch-8 `es`, from batch-9 `en`; a regional bundle its region's), checked in that language; batch-9 and batch-10 keep 30 (decision 234); `qgen report --qc` shows each batch's source locale, so en agreement is read apart from es.
    - Larger check of one run (decision 228: batch-8, 120): its `"size"` in `authoring/data/spot-checks.json`; the first 30 stay a prefix; `qgen audit --batch <batch>` audits up to that size.
    - The LLM decision, feedback and audit stay hidden until you decide; then they show next to yours. Mark the problem kinds in the feedback box.
    - Recorded in `authoring/data/spot-checks.json`; undo removes the item.
@@ -43,12 +44,12 @@ A `qgen neutralize` run (D-83) changes approved questions, so it gets the same s
 
 ## Translation runs
 
-A `qgen batch --translate <locale>` run (D-87) gets the same steps, with `tr-<locale>-<n>` in place of `<batch>`; the spot check is by a native speaker of the locale.
+A `qgen batch --translate <locale>` run (D-87; `es`, `es-ES`, `en`, `de`, from sources in any other locale, D-107) gets the same steps, with `tr-<locale>-<n>` in place of `<batch>`; the spot check is by a native speaker of the locale (`es`: Latin American, `es-ES`: Spain).
 
 - Report: `authoring/reports/tr-<locale>-<n>.md` (Health, Audit, Not travelling, Stale re-translated).
 - Spot check (native speaker): `http://127.0.0.1:8001/review?batch=tr-<locale>-<n>&locale=<locale>&sample=1`; source and translation side by side (plan 67).
   - Steps as step 2: source left (its own language), translation right; LLM review, feedback, audit and the translation's status hidden until you decide.
-  - Stale translation: no approve (the next run redoes it); a question that only works in Spanish: "doesn't travel".
+  - Stale translation: no approve (the next run redoes it); a question that only works in its source language: "doesn't travel".
   - Recorded in `authoring/data/spot-checks.json` under the run, with `locale`; pm worker: the same decision as step 2.
 - Extra checks: faithful to the source, natural in the language, hints and wrong answers that work in it, difficulty for the locale's market; text in media is never a problem (decision 35).
 - QC report: `qgen report --qc tr-<locale>-<n>`; the trend table has a column per run.
@@ -59,7 +60,7 @@ A `qgen batch --translate <locale>` run (D-87) gets the same steps, with `tr-<lo
 
 Players report questions from the game (plan 93); each report becomes a human `needs_work` review, outside the batch steps.
 
-- Pasted report text (copied from «Preguntas marcadas»): `qgen flag [--dry-run] < reports.txt`; feedback «Reporte de jugador (…)» in `/review?status=needs_work`, older feedback after «Antes:»; es → source, en/de → that translation; unknown ids skipped, a repeated report adds nothing.
+- Pasted report text (copied from «Preguntas marcadas»): `qgen flag [--dry-run] < reports.txt`; feedback «Reporte de jugador (…)» in `/review?status=needs_work`, older feedback after «Antes:»; a report in the source's locale → source, else that locale's translation (decision 235); unknown ids skipped, a repeated report adds nothing.
 - Sent reports (report server, plan 103): `qgen flag --pull [--url URL] [--dry-run]`; same feedback, then acked; token `TRIVIA_REPORT_TOKEN` or `state/report-token`; ledger `state/reports-pulled.json`; mod and unknown ids skipped and acked.
 - Played outliers (opt-in telemetry, plan 109, decision 122): `qgen telemetry --pull`, then `qgen report --played`; candidates in `/review?played=outliers[&locale=…]`; the developer changes the difficulty or sets `needs_work` by hand, nothing automatic.
 

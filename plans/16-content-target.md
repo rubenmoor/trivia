@@ -2,11 +2,12 @@
 
 **Status:** target decided (D-75); CT-2, CT-4 done; CT-3, CT-5 open (S4)
 
-Part of the Steam plan ([11](11-steam.md)). The release target is set per launch language (D-75): buyers judge a trivia game by how long it lasts before questions repeat, and by how often an answer is wrong.
+Part of the Steam plan ([11](11-steam.md)). The release target is set per question locale (D-75; `en`, `es`, `es-ES`, `de` since D-107): buyers judge a trivia game by how long it lasts before questions repeat, and by how often an answer is wrong.
 
 ## Where we stand (2026-10-12)
 - Spanish: 1136 approved (`base` 1034, `colombia` 102); `base` target 5000 is pm milestone 1 (D-52).
 - English, German: no pool yet (launch languages, pm decision 26; translation: 15b).
+- Since D-107 (2026-10-16): `base` drafts in English from batch-9; `es`, `es-ES`, `de` get those by translation, `en`, `de`, `es-ES` the es sources (≤ batch-8).
 
 ## What one game needs
 - A game **shows** 48 cards (4 per level × 12) and **sees** at least 12 (seen counters, D-82), plus whatever the jokers swap away (D-27).
@@ -14,20 +15,21 @@ Part of the Steam plan ([11](11-steam.md)). The release target is set per launch
 - The tight spots are the ends of the ladder: level 1 draws only difficulty 1, and level 12 only 9–10 (D-22, D-31). Bájale and Cambiazo also need depth *per subcategory*.
 
 ## Metric
-- Target metric: approved questions per launch language vs. D-53's mix (`qgen report`).
-- **Pass/fail = D-75's count**: `qgen report --simulate` ends with a ✓/✗ per launch language (`es`, `en`, `de`, D-78): approved in `app/data/pool.<locale>.json` (`es`: `pool.json`) vs. `targets.json` `base` (5000 + per difficulty) until part 9 sets per-locale targets. No pool = ✗. Exit 1 on any ✗; the games numbers never change it.
+- Target metric: approved questions per question locale vs. D-53's mix (`qgen report --locale L`): sources in L + playing translations into L (`targets.approved_entries`, decision 235).
+- **Pass/fail = D-75's count**: `qgen report --simulate` ends with a ✓/✗ per question locale (`es`, `es-ES`, `en`, `de`; D-78, D-107): approved in `app/data/pool.<locale>.json` (`es`: `pool.json`) vs. `targets.json` `base` (5000 + per difficulty) until part 9 sets per-locale targets. No pool = ✗. Exit 1 on any ✗; the games numbers never change it.
 - Information only (no bar, D-75): "games per new player", CT-2. Headline since D-82: games until the first repeat (seen count ≥ 1 drawn), plus k (fresh games left) for a fresh profile as a cross-check (plan 65, task 426). Game after game on one v3 save on the engine (`authoring/tools/sim/`, D-60, plan 62), selection by seen count, per locale × bundles × mode × age group × player model until the first repeat, at most 500 games (`MAX_GAMES`, capped seeds reported). Columns: median, p10, strong bound (min over seeds) of games until the first repeat; seeds whose first repeat was a Cambiazo card (random subcategory, often thin); games until a level draw repeats (median, strong bound) + `k` beside it; first-draw-repeat level + difficulty + top 3 subcategories all seen there. Default 40 seeds per cell (`--mode all --seeds 2` ≈ 10 s).
-- Bundles: default = the locale's default game, its first base bundle with packs off (`base` for es, en, de; D-99, pm decision 110); `--bundles base,colombia` for a pack. Regional packs' own 2000 target: `qgen report --bundle <id>` (plan 98 task 828), not this check.
+- Bundles: default = the locale's default game, its first base bundle with packs off (`base` for es, es-ES, en, de; D-99, pm decision 110); `--bundles base,colombia` for a pack. Regional packs' own 2000 target: `qgen report --bundle <id>` (plan 98 task 828), not this check.
 - Player models: `strong` = always right, reaches 12 every game (lower bound); `typical` = p(right) linear 0.95 at level 1 → 0.6 at level 12 (`TYPICAL_P` in `simulate.ts`; only a model, tune from real play).
 - Joker policy: standard set (D-74), each joker once at a random level; a joker the engine refuses is skipped. `gamemaster` mode not simulated.
 - Mode approximations: `solo` = `rr-coop` (D-77). `rr-competitive` until MD-8: N solo games per session, every shown question seen-counted for the save (D-82). `timed` until MD-9: up to 12 rounds, one question per player still in (`selection.draw`), seen-counted for the save (D-82), no jokers; `typical` drops out at p(level), `strong` nobody. Swap in the engine's modes once MD-8/MD-9 land.
 
 ## Target (decided, D-75)
-- **5000 approved per launch language** (es, en, de), with D-53's per-level mix (`authoring/data/targets.json`).
+- **5000 approved per question locale** (es, es-ES, en, de; D-107), with D-53's per-level mix (`authoring/data/targets.json`).
 - No games-per-player number (pm decision 21). Estimate at 5000, strong player, old Normal joker budget: ≥ 80 games in every age group (bottleneck: adults, difficulty 13–15).
 - Later languages (zh-Hans, ru, pt-BR, milestone 12): no target now.
 - **Regional packs:** 2000 approved each, D-53's mix scaled (`targets.json` `colombia`: 100 … 50), per locale (region's language + en); progress: `qgen report --bundle <id> [--locale L]` (D-101).
-- Open: whether a translated pool counts toward a language's 5000, or only once its own approved pool (re-rated, fact-checked, reviewed, 15b) meets it; follows plan 37's D-entry (OQ-31).
+- Translations count: a locale's 5000 = approved sources in it + its playing translations (re-rated, fact-checked, reviewed, 15b; decision 235).
+- **Gap rule (D-107, pm decision 236):** English drafting for `base` aims at the largest per level over the four locales of deficit / yield − approved translatable sources not yet in that locale (`targets.draft_gaps`, `locale_gap`); regional packs their own deficit (D-101).
 - The release also needs **every subcategory** to have depth at several difficulties, or it is merged into a neighbour (D-19).
 
 ## Quality bar
@@ -39,7 +41,7 @@ Part of the Steam plan ([11](11-steam.md)). The release target is set per launch
 - Patches (ST-5, [`11`](11-steam.md) "Content updates (ST-5)"): new approved questions per language, fixed questions, dropped ones by status; monthly, only if ≥ 100 new approved per launch language or a reported fix waits; hotfixes any time (decision 96).
 
 ## Cost
-`costs.log` records the cost per generated question. A full run for 5000 questions × 3 launch languages (with translation, rating and fact-checking) needs a budget estimate before it starts (CT-3).
+`costs.log` records the cost per generated question. A full run for 5000 questions × 4 question locales (English drafts plus three translations each, with translation, rating and fact-checking) needs a budget estimate before it starts (CT-3).
 - pm plan 70: `qgen report --cost` (CT-3), per-locale deficits + `es` source shortfall for `en`/`de` (CT-4, pm decision 37; the shortfall replaced by English drafting for the four question locales' deficits, D-107, pm decision 236), release budget per language as a pm decision after the translation pilot, before full runs.
 - `qgen report --cost [--json]` (task 461): $ per run (own log + `audit/`), draft $/approved (last 3 batches, weighted), translation $/approved per locale, overhead ratio, projection per language, spent vs. `targets.json` `"budget"`.
 - Numbers 2026-10-12 (list price): batch-4..7 $0.16 / $0.37 / $0.30 / $0.24 per approved; draft $0.26 (batch-5..7); overhead $129 (concepts $65, tighten $38, rework $6, pilot/first-120 $16, bundles $2, audit $3) / batches $183 = 0.70; `es` 3966 to go → ~$1750; `en`/`de` no pilot yet; spent $343 (`es`, incl. batch-8 in progress $31); batch-3's cost unknown (no `work/`).

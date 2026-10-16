@@ -2,41 +2,48 @@
 
 **Status:** layout (D-81), pipeline (D-87) and review tool (plan 67) done; pilot and full runs open
 
-Sub-plan of [15](15-i18n.md). Translates the question pool into the launch languages: English and German (D-78); Simplified Chinese, Russian and Portuguese (Brazil) later (milestone 12, on hold). This is the big one: a question is more than its text. Its difficulty, distractors, hints and image all have to work in the new language and culture, so every translated question goes through rating, fact-checking and review again.
+Sub-plan of [15](15-i18n.md). Translates the question pool between the four question locales `en`, `es` (Latin American), `es-ES` (Spain), `de` (D-78, D-107); Simplified Chinese, Russian and Portuguese (Brazil) later (milestone 12, on hold). This is the big one: a question is more than its text. Its difficulty, distractors, hints and image all have to work in the new language and culture, so every translated question goes through rating, fact-checking and review again.
+
+## Source locale (D-107, decision 235)
+- `locale` on every source in `questions.json`, absent = `es`: `base` ≤ batch-8 `es`, `base` from batch-9 `en`, a regional bundle its region's language (`colombia` `es`).
+- `questions.<L>.json`: translations into L of sources whose locale ≠ L (`questions.es.json`, `questions.es-ES.json`, `questions.en.json`, `questions.de.json`).
+- Pool for L: approved sources in L + playing translations into L; `pool.json` = `es`, `pool.<L>.json` for the others.
+- An en source gets three jobs (→ `es`, `es-ES`, `de`), an es source three (→ `en`, `de`, `es-ES`).
 
 ## What a translation has to get right
 - **Text:** the question, the answer, the three wrong answers, the three hints, the description (D-8) and the `fun_fact`. Adapt, don't translate literally: units, the answer format, idioms.
-- **Questions that don't travel:** wordplay, questions about the Spanish language itself ("¿Qué palabra…?"), and Colombian references whose answer only makes sense to Colombians. The translator says so instead of forcing it; once the review confirms, the source gets `translatable: false` and stays in Spanish only. Colombian-only questions are in the `colombia` bundle (D-41), which isn't translated.
-- **Distractors:** wrong answers that are plausible in Spanish can be absurd in another language (or accidentally correct). The rate step checks them again.
-- **Hints:** a hint that plays on the Spanish word ("empieza por B") has to be rewritten.
+- **Questions that don't travel:** wordplay, questions about the source language itself ("¿Qué palabra…?"), and local references whose answer only makes sense in one country. The translator says so instead of forcing it; once the review confirms, the source gets `translatable: false` and stays in its source language only. Colombian-only questions are in the `colombia` bundle (D-41), which isn't translated.
+- **Distractors:** wrong answers that are plausible in the source language can be absurd in another language (or accidentally correct). The rate step checks them again.
+- **Hints:** a hint that plays on the source word ("empieza por B") has to be rewritten.
 - **Difficulty:** re-rated per locale (15). The shared scale (D-38) stays the same; the rating is "for that language's main market".
-- **Media:** stays the source's. Text in media (Spanish or any language) is never a problem (decision 35): no flag, no review problem.
+- **Media:** stays the source's. Text in media (any language) is never a problem (decision 35): no flag, no review problem.
 
 ## Pipeline
 Decided: D-87 (pm plan 66). One command, `qgen batch --translate <locale>` (`authoring/RUNBOOK.md`), reusing the batch steps through the run's `locale`.
 
 - Run `tr-<locale>-<n>`: 300 sources (`TRANSLATE_SIZE`); the locale's first run is the 50-question pilot (QT-5), after which the next run exits 2 until `qgen health ack tr-<locale>-1`.
-- Selection: approved, translatable sources of one bundle (`base`, or `--bundle <id>`, plan 98); stale translations first, then subcategories with the fewest approved translations, levels by the locale's deficit (D-84).
+- Locales: `es`, `es-ES`, `en`, `de`; sources in any locale but the target; `{source_language}` in the prompts; rate and factcheck for the target's market (`es`: Latin America, `es-ES`: Spain).
+- Selection: approved, translatable sources of one bundle (`base`, or `--bundle <id>`, plan 98) not in the target locale; stale translations first, then subcategories with the fewest approved translations, levels by the locale's deficit (D-84).
 - Steps: translate → rate → factcheck (changed facts only) → merge → review 1 → fix → review 2 → record → audit → export → report.
-- Prompts: `translate.md`, `translate-review.md`, `locale-<locale>.md` (spelling and usage: `en` US spelling, words US and UK share; `de` as in Germany; no player location, decision 35, decision 167); a regional bundle adds `translate-region.md` (players with a link to the region, decision 167).
+- Prompts: `translate.md`, `translate-review.md`, `locale-<locale>.md` (spelling and usage: `en` US spelling, words US and UK share; `es` idiomatic Latin American; `es-ES` Spain; `de` as in Germany; no player location, decision 35, decision 167); a regional bundle adds `translate-region.md` (players with a link to the region, decision 167).
 - Health: decision 45's subset of the batch thresholds; native-speaker spot check per run (`authoring/QC.md`).
 - Cost per approved translation in each run's report and `qgen report --cost` (CT-3).
 
 ## Storage (decided: D-81)
 Option A is decided in D-81; the options below are kept as history.
 
-- **A: one file per locale** (`authoring/data/questions.en.json`) with the same IDs and only the translated fields plus their own `difficulty`, `status`, `review`. The Spanish file stays the source. Small diffs, easy to review.
+- **A: one file per locale** (`authoring/data/questions.en.json`) with the same IDs and only the translated fields plus their own `difficulty`, `status`, `review`. `questions.json` stays the source file (sources in any locale since D-107). Small diffs, easy to review.
 - **B: a `translations` map inside each question.** One file, but `questions.json` grows with every language and gets harder to diff.
 - Draft preference: **A**. The export (PORT-6) builds one playable pool per locale either way.
 - Decided: A (D-81, pm plan 63). `questions.<locale>.json` with `source_hash` (`stale` derived, left out of the export), `translatable: false` on sources, names in `app/data/names.<locale>.json` (+ per bundle); export → `app/data/pool.<locale>.json`.
-- Whole-pool rewrites of the source (`qgen tighten`, neutral Spanish rewrite, masterplan part 8) stale every touched translation: full runs come after them.
+- Whole-pool rewrites of the source (`qgen tighten`, `qgen neutralize` on es sources, masterplan part 8) stale every touched translation: full runs come after them.
 
 ## Review tool
 Done (pm plan 67, RV-24..RV-26). The developer and native speakers review `questions.<locale>.json` in `trivia-authoring` with the source alongside, whichever its language (decision 235).
 
 - `/review?locale=es|es-ES|en|de` (+ the usual filters, `stale=1`): locale switch sources · es · es-ES · en · de, keeps the other params.
 - Side by side (`SourcePanel.svelte`): source read-only, in its own language (difficulty, status) | translation; rows question, answer, wrong answers, hints, description, fun fact.
-- Subcategory and bundle in the locale's names (`GET /api/names?locale=`) plus the Spanish key.
+- Subcategory and bundle in the locale's names (`GET /api/names?locale=`) plus the key.
 - Same verdicts, feedback, problems, difficulty, undo, keys; writes the locale file, re-exports `app/data/pool.<locale>.json`; `pool.json` untouched.
 - Stale translation: banner, no approve; the next `--translate` run redoes it.
 - Media: shown, not pickable; link to `/review?id=<id>` to change the source's; `bundle`, `media`, `media/search` with a locale → 400. No `media_text` flag (decision 35).
@@ -50,5 +57,5 @@ Done (pm plan 67, RV-24..RV-26). The developer and native speakers review `quest
 - [x] QT-2 `qgen.py translate` with `translatable: false` / region detection; prompts in `authoring/tools/prompts/`. Done 2026-10-12 (pm plan 66, D-87): `qgen batch --translate <locale>`.
 - [x] QT-3 `rate` and `factcheck` per locale. Done 2026-10-12 (pm plan 66, D-87): through `run.json` `locale`.
 - [x] QT-4 Review tool: side-by-side locale view. Done 2026-10-12 (pm plan 67): see "Review tool".
-- [ ] QT-5 Pilot: 50 questions per launch language (`tr-en-1`, `tr-de-1`), reject rate and cost, go/no-go pm decision before the full runs. Runs: pm plan 84.
-- [ ] QT-6 Full translation per launch language: `en`, `de` (D-78); native-speaker spot check; runs and QC per pm plan 84. Later: `zh-Hans`, `ru`, `pt-BR` (milestone 12).
+- [ ] QT-5 Pilot: 50 questions per target locale (`tr-en-1`, `tr-de-1`, `tr-es-1`, `tr-es-ES-1`), reject rate and cost, go/no-go pm decision before the full runs. Runs: pm plan 84.
+- [ ] QT-6 Full translation per question locale: `en`, `de`, `es`, `es-ES` (D-78, D-107); native-speaker spot check; runs and QC per pm plan 84. Later: `zh-Hans`, `ru`, `pt-BR` (milestone 12).

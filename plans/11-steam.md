@@ -397,7 +397,7 @@ After launch, new and fixed questions reach players only as Steam patches: a new
 - Hotfix (wrong answer, crash): any time, no cadence wait.
 
 ### Patch path
-1. Questions: `qgen batch` per `authoring/RUNBOOK.md` (`--translate en|de` for the translations).
+1. Questions: `qgen batch` per `authoring/RUNBOOK.md` (`--translate es|es-ES|en|de` for the translations, D-107).
 2. Reports: `qgen flag --pull` (players' reports, report server, plan 103); `qgen flag` for pasted copy-fallback text; both → `needs_work`; `qgen rework` only when the developer asks.
 3. `qgen export`, then `qgen validate` (clean; also guards id continuity against the newest tag).
 4. `qgen patch-notes`: draft notes (counts only, decision 97); check kind and save version.
