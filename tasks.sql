@@ -32433,6 +32433,85 @@ new:
 - The three files as above (after task 1239 applied decision 239).
 - `decision 167: Translation prompt for a regional bundle (en for colombia)`''s locale-en/de wording: its difficulty parenthesis goes; consequence noted on 167 too.
 - `rg` the old example names over `.md` (decision 200): empanada, Tunja, Cartagena, lápiz, Cervantes, García Márquez in `authoring/` and `plans/` (history entries in `plans/07-question-generation.md` stay: they record what was observed).', NULL, NULL, '2026-10-16T01:27:33Z', NULL, 1202, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (242, 'International angle for base concept lists: apply?', 'pending', '["apply", "apply with changes", "keep"]', '`task 1203: International angle in the concept prompts` (`plan 147: English-first batches: calibration, overlap and QC across languages`, part 2, rules). From batch-9 on `base` drafts in English with an international angle (milestone 9); the concept prompts still ask for Spanish names and facets "in Colombia". Nothing applied yet.
+
+Checked first:
+- `plan 148: English-first drafting for base` doesn''t regenerate or translate the concept lists; `task 1234: qgen batch drafts en for base: the whole chain on the question''s locale` already calls `qgen concepts` with `locale=draft_locale(bundle)` (`base` → `en`), so the house style''s `{locale}` block says "All content is in English". Concept names follow it (milestone 9: "the whole chain (concepts, …) works on the English text").
+- The general rule is written once, in the house style''s new "International angle" section (`decision 239: English-first drafting prompts: apply?`, 1c); concept prompts read `house-style` + `concepts-*`, so they refer to it instead of repeating it. Self-contained fallback wording below in case 239 is answered "keep".
+- The concept prompts serve every bundle (`colombia` too); "in Colombia" becomes "the bundle''s rule", so the concept calls need the bundle line they lack today (code below).
+- Rebalancing the existing 174 Spanish lists: `task 1204: Audit and rebalance base concept lists for the international angle`, not here.
+
+## 1. `concepts-facets.md`
+old:
+```
+- is a short Spanish name (2–5 words);
+```
+new:
+```
+- is a short name (2–5 words) in the language of the content (house style, "Language");
+```
+old:
+```
+Together, the facets cover the whole subcategory, not just its school-book core. Think of things, living beings, people and characters, places, events, tools, words, customs, and the subcategory in everyday life, in Colombia, in films and games, and in history, wherever these really belong to it.
+```
+new:
+```
+Together, the facets cover the whole subcategory, not just its school-book core. Think of things, living beings, people and characters, places, events, tools, words, customs, and the subcategory in everyday life, in films and games, and in history, wherever these really belong to it.
+
+Facets follow the bundle (under "Bundle"). For `base`, the house style''s "International angle": the subcategory around the whole world, no facet about one country or language area (no "… in Latin America", "… in Spain", "American …"), unless the subcategory itself is about it; a facet that spans the world ("Festivals around the world") may hold concepts from everywhere. A regional bundle''s facets cover its region.
+```
+
+## 2. `concepts-list.md`
+old:
+```
+- A concept is a bare Spanish name: a thing, animal, plant, person, character, place, event, object, custom or term ("Saturno", "Eclipse solar", "Neil Armstrong", "Telescopio"). **No facts, descriptions or question ideas.**
+```
+new:
+```
+- A concept is a bare name in the language of the content (house style, "Language"): a thing, animal, plant, person, character, place, event, object, custom or term (in English: "Saturn", "Solar eclipse", "Neil Armstrong", "Telescope"). **No facts, descriptions or question ideas.**
+```
+new bullet, after "Something players of some age group …":
+```
+- Follows the bundle (under "Bundle"). For `base`, the house style''s "International angle": spread the concepts of every facet across the world''s regions (Africa, Asia, Europe, the Americas, Oceania) as far as the facet allows; no Spanish-speaking-world focus, no Anglo/US default; a concept known only to one country''s players belongs to that country''s regional bundle, not here.
+```
+old:
+```
+`known_at` (1–15): the lowest point on the shared difficulty scale (house style) at which people know the concept: 1 = a 6-year-old knows it (Sol), 5 = an 11-year-old, 10 = a 16-year-old with good school knowledge, 12 = most adults, 15 = trivia specialists. Use the calibration in the house style: people know more from everyday life, films and games, and less from school theory, than expected.
+```
+new:
+```
+`known_at` (1–15): the lowest point on the shared difficulty scale (house style) at which people know the concept: 1 = a 6-year-old knows it (the Sun), 5 = an 11-year-old, 10 = a 16-year-old with good school knowledge, 12 = most adults, 15 = trivia specialists. For `base`, judge families anywhere, not one country''s: a national hero known at 3 at home may be 13 abroad. Use the calibration in the house style: people know more from everyday life, films and games, and less from school theory, than expected.
+```
+(Section 2 "Existing questions" unchanged: es-sourced questions are tagged with a concept from the list, whatever its language.)
+
+## 3. `concepts-topup.md`
+old:
+```
+- Use the existing facets, or add up to 3 new facets (short Spanish names, 2–5 words) for areas of the subcategory that the facets miss. Put new facet names in `new_facets`.
+- A concept is a bare Spanish name: a thing, animal, plant, person, character, place, event, object, custom or term. **No facts, descriptions or question ideas.** Concrete and specific.
+```
+new:
+```
+- Use the existing facets, or add up to 3 new facets (short names, 2–5 words) for areas of the subcategory that the facets miss. Put new facet names in `new_facets`.
+- A concept is a bare name in the language of the content (house style, "Language"), whatever language the list already uses: a thing, animal, plant, person, character, place, event, object, custom or term. **No facts, descriptions or question ideas.** Concrete and specific.
+- Follows the bundle (under "Bundle"). For `base`, the house style''s "International angle": add where the list is thin, i.e. regions, peoples and traditions it lacks; no Spanish-speaking-world focus, no Anglo/US default.
+```
+old:
+```
+- **Not** a concept already in the list, nor a synonym, nickname, singular/plural or part of one.
+- `known_at` (1–15): the lowest point on the shared difficulty scale (house style) at which people know it: 1 = a 6-year-old, 5 = an 11-year-old, 10 = a 16-year-old with good school knowledge, 12 = most adults, 15 = trivia specialists.
+```
+new:
+```
+- **Not** a concept already in the list, in any language ("Saturn" is «Saturno»), nor a synonym, nickname, singular/plural or part of one.
+- `known_at` (1–15): the lowest point on the shared difficulty scale (house style) at which people know it: 1 = a 6-year-old, 5 = an 11-year-old, 10 = a 16-year-old with good school knowledge, 12 = most adults, 15 = trivia specialists. For `base`, families anywhere, not one country''s.
+```
+
+## 4. Code (`authoring/tools/qgen.py` `cmd_concepts`)
+- The facets/list intro and the top-up message get `"\n\n## Bundle\n" + bundle_text(bundle, loc)` (the same line drafts get, D-41), so "under \"Bundle\"" has something to point to; today the concept calls see only the subcategory.
+
+## If decision 239 is answered "keep"
+- "the house style''s \"International angle\"" → inline: "no focus on the Spanish-speaking world, no Anglo/US bias; places, people, customs spread across the world".', NULL, NULL, '2026-10-16T01:28:50Z', NULL, 1203, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -33643,6 +33722,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1190, 1238, '2026-10-16T01:20:13Z', '2026-10-16T01:24:20Z', 'done', NULL, 0, 'b8629258d006ded1a122c808cb1d8da99e68b1f6', 'claude-opus-5-5[1m]', '7389d8aa-1a06-4ab0-9fef-84e3e0ebe4aa', 21, 42, 26909, 1385100, 89007, 1.5274240000000001, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1191, 1245, '2026-10-16T01:24:20Z', '2026-10-16T01:25:29Z', 'done', NULL, 0, '888ae7cbb7b106dd7dce08ce93a1254bb29583c4', 'claude-opus-5-5[1m]', '9102afa2-61c4-4337-96dd-c3f480d0b1ed', 13, 26, 6306, 582495, 46844, 0.617475, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1192, 1202, '2026-10-16T01:25:29Z', '2026-10-16T01:27:44Z', 'blocked', NULL, 0, 'ec34d8c93201efbc30df9b5b6cc991f5bf018907', 'claude-opus-5-5[1m]', '43e5b3a0-d70c-4599-a299-a0e1f785174c', 23, 42, 13365, 1462813, 94467, 1.3157666000000001, 3857742);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1193, 1203, '2026-10-16T01:27:44Z', '2026-10-16T01:29:00Z', 'blocked', NULL, 0, '53f9aba7ffe2b185c6b70afa8fd8b1c62dd64788', 'claude-opus-5-5[1m]', '59f5c793-d134-42b6-8902-b1c6defcbb90', 13, 26, 7018, 650814, 57323, 0.72921080000000016, 3857742);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -34025,12 +34105,14 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1185, 234);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1185, 239);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1185, 240);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1185, 241);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1185, 242);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1186, 228);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1186, 229);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1190, 227);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1191, 230);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1191, 231);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1202, 241);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1203, 242);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1207, 233);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1208, 234);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1239, 239);
