@@ -31280,7 +31280,7 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 
 ## Out of scope (from the milestone)
 - Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-16T03:49:29Z', '2026-10-16T03:50:27Z', 1283, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1286, 69, 'revise plan 69: UI catalogs for the launch languages (LUI-4, LUI-5)', 'revise', 'open', 1000, NULL, '`plan 9: masterplan`, the plan above `plan 69: UI catalogs for the launch languages (LUI-4, LUI-5)`, changed; it is quoted below. Bring `plan 69: UI catalogs for the launch languages (LUI-4, LUI-5)` in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1286, 69, 'revise plan 69: UI catalogs for the launch languages (LUI-4, LUI-5)', 'revise', 'done', 1000, '2026-10-15, no change: plan 9''s revision (cost information only, parts 9, 11, 15, Order) doesn''t touch part 7; plan 69 still fits', '`plan 9: masterplan`, the plan above `plan 69: UI catalogs for the launch languages (LUI-4, LUI-5)`, changed; it is quoted below. Bring `plan 69: UI catalogs for the launch languages (LUI-4, LUI-5)` in line with it
 (`pm plan edit 69 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -31446,7 +31446,7 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 - Part 2 any time after plan 16. Part 12 last.
 
 ## Out of scope (from the milestone)
-- Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-16T03:49:29Z', NULL, 1283, 0);
+- Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-16T03:49:29Z', '2026-10-16T03:50:42Z', 1283, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1287, 84, 'revise plan 84: Release content runs', 'revise', 'open', 1000, NULL, '`plan 9: masterplan`, the plan above `plan 84: Release content runs`, changed; it is quoted below. Bring `plan 84: Release content runs` in line with it
 (`pm plan edit 84 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
@@ -36612,6 +36612,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1245, 1283, '2026-10-16T03:48:56Z', '2026-10-16T03:49:38Z', 'done', NULL, 0, '29bb8a70f5daee436a32dd9ab7f7d0c46795c9ff', 'claude-opus-5-5[1m]', 'd35e272f-d781-4189-9285-3edf04c8fc30', 8, 16, 3107, 396920, 50574, 0.54617999999999989, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1246, 1284, '2026-10-16T03:49:38Z', '2026-10-16T03:50:07Z', 'done', NULL, 0, 'e6049c06779e7fdac378567a6c899d4af14f64be', 'claude-opus-5-5[1m]', '943ae6c4-3533-45b6-8697-881cd19d9e33', 7, 14, 2148, 299426, 44999, 0.4628932, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1247, 1285, '2026-10-16T03:50:07Z', '2026-10-16T03:50:31Z', 'done', NULL, 0, '2ad3135c24a8608db6af317da170c0334886ce74', 'claude-opus-5-5[1m]', 'b4b49ef8-172b-473c-a9de-9e62ee8ff16b', 4, 8, 1981, 148302, 38180, 0.37475240000000004, 3857742);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1248, 1286, '2026-10-16T03:50:32Z', '2026-10-16T03:50:45Z', 'done', NULL, 0, '257c380bbd43055ee89e1b3aca77ce6a2cc899cb', 'claude-opus-5-5[1m]', 'b1afa0f2-ca82-46ed-bb8e-2eda058aaff8', 4, 8, 1028, 156222, 40644, 0.3769884, 3857742);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
