@@ -1,0 +1,10 @@
+{
+  "categories": {
+    "solar-system": "El sistema solar"
+  },
+  "subcategories": {
+    "planets": "Planetas",
+    "sun-and-moons": "El Sol y las lunas",
+    "space-travel": "Viajes espaciales"
+  }
+}

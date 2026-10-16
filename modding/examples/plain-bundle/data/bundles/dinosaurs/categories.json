@@ -1,0 +1,9 @@
+{
+  "categories": [
+    {"slug": "dinosaurs", "name": "Dinosaurios", "subcategories": [
+      "Dinosaurios carnívoros",
+      "Dinosaurios herbívoros",
+      "La era de los dinosaurios"
+    ]}
+  ]
+}

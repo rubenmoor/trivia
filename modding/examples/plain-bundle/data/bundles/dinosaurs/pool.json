@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "questions": [
+    {
+      "id": "dino-001",
+      "difficulty": 2,
+      "subcategory": "Dinosaurios carnívoros",
+      "description": "Un gigante temible que no alcanzaba a rascarse la nariz.",
+      "question": "¿Qué gran dinosaurio carnívoro tenía unos brazos muy cortos?",
+      "answer": "Tiranosaurio",
+      "wrong_answers": ["Triceratops", "Estegosaurio", "Braquiosaurio"],
+      "hints": [
+        "Caminaba sobre dos patas.",
+        "Su nombre significa «lagarto tirano».",
+        "Muchos lo llaman T. rex."
+      ],
+      "fun_fact": "Sus dientes más grandes, con raíz, medían unos 30 centímetros."
+    },
+    {
+      "id": "dino-002",
+      "difficulty": 4,
+      "subcategory": "Dinosaurios herbívoros",
+      "description": "Llevaba tres adornos en la cara y ninguno era para la fiesta.",
+      "question": "¿Qué dinosaurio herbívoro tenía tres cuernos en la cabeza?",
+      "answer": "Triceratops",
+      "wrong_answers": ["Estegosaurio", "Diplodocus", "Anquilosaurio"],
+      "hints": [
+        "Tenía un gran escudo de hueso detrás de la cabeza.",
+        "Caminaba sobre cuatro patas.",
+        "Su nombre significa «cara con tres cuernos»."
+      ],
+      "fun_fact": "Su cráneo es uno de los más grandes de todos los animales terrestres conocidos."
+    },
+    {
+      "id": "dino-003",
+      "difficulty": 8,
+      "subcategory": "La era de los dinosaurios",
+      "description": "Una época tan larga que hasta los continentes tuvieron tiempo de mudarse.",
+      "question": "¿En qué era geológica vivieron los dinosaurios no avianos?",
+      "answer": "Mesozoica",
+      "wrong_answers": ["Paleozoica", "Cenozoica", "Neoproterozoica"],
+      "hints": [
+        "Se divide en Triásico, Jurásico y Cretácico.",
+        "Terminó hace unos 66 millones de años.",
+        "Su nombre significa «animales de en medio»."
+      ],
+      "fun_fact": "Las aves descienden de dinosaurios, así que algunos siguen entre nosotros."
+    }
+  ]
+}

@@ -4,7 +4,7 @@
     {
       "id": "solar-001",
       "difficulty": 1,
-      "subcategory": "El Sol y las lunas",
+      "subcategory": "sun-and-moons",
       "description": "The only lamp nobody has to switch off at night.",
       "question": "What gives us light and warmth during the day?",
       "answer": "The Sun",
@@ -19,7 +19,7 @@
     {
       "id": "solar-002",
       "difficulty": 2,
-      "subcategory": "Planetas",
+      "subcategory": "planets",
       "description": "A planet that never leaves the house without its jewellery.",
       "question": "Look at the picture: which planet is this?",
       "answer": "Saturn",
@@ -40,7 +40,7 @@
     {
       "id": "solar-003",
       "difficulty": 3,
-      "subcategory": "Planetas",
+      "subcategory": "planets",
       "description": "A planet that went rusty because nobody dried it after the rain.",
       "question": "Which planet is known as the Red Planet?",
       "answer": "Mars",
@@ -55,7 +55,7 @@
     {
       "id": "solar-004",
       "difficulty": 4,
-      "subcategory": "Planetas",
+      "subcategory": "planets",
       "description": "A big family that keeps walking around the same stove.",
       "question": "How many planets are there in the solar system?",
       "answer": "8",
@@ -70,7 +70,7 @@
     {
       "id": "solar-005",
       "difficulty": 5,
-      "subcategory": "Planetas",
+      "subcategory": "planets",
       "description": "The big brother who got the biggest bedroom.",
       "question": "What is the largest planet in the solar system?",
       "answer": "Jupiter",
@@ -85,7 +85,7 @@
     {
       "id": "solar-006",
       "difficulty": 6,
-      "subcategory": "Viajes espaciales",
+      "subcategory": "space-travel",
       "description": "Footprints nobody has swept away in more than fifty years.",
       "question": "Who was the first person to walk on the Moon?",
       "answer": "Neil Armstrong",
@@ -100,7 +100,7 @@
     {
       "id": "solar-007",
       "difficulty": 7,
-      "subcategory": "Planetas",
+      "subcategory": "planets",
       "description": "The one who sat so close to the fireplace that its toes went numb.",
       "question": "Which planet is closest to the Sun?",
       "answer": "Mercury",
@@ -115,7 +115,7 @@
     {
       "id": "solar-008",
       "difficulty": 8,
-      "subcategory": "Viajes espaciales",
+      "subcategory": "space-travel",
       "description": "A trip around the world without a single stopover.",
       "question": "Who was the first person to travel into space?",
       "answer": "Yuri Gagarin",
@@ -130,7 +130,7 @@
     {
       "id": "solar-009",
       "difficulty": 9,
-      "subcategory": "Planetas",
+      "subcategory": "planets",
       "description": "A sauna so extreme it melts lead.",
       "question": "What is the hottest planet in the solar system?",
       "answer": "Venus",
@@ -145,7 +145,7 @@
     {
       "id": "solar-010",
       "difficulty": 10,
-      "subcategory": "El Sol y las lunas",
+      "subcategory": "sun-and-moons",
       "description": "The fastest messenger in the universe, and still it's late.",
       "question": "How long does sunlight take to reach the Earth?",
       "answer": "About 8 minutes",
@@ -160,7 +160,7 @@
     {
       "id": "solar-011",
       "difficulty": 11,
-      "subcategory": "Viajes espaciales",
+      "subcategory": "space-travel",
       "description": "A year when half of humanity sat glued to the TV watching grey dust.",
       "question": "In which year did a human first set foot on the Moon?",
       "answer": "1969",
@@ -175,7 +175,7 @@
     {
       "id": "solar-012",
       "difficulty": 12,
-      "subcategory": "Planetas",
+      "subcategory": "planets",
       "description": "Kicked out of the group chat, and nobody told it.",
       "question": "Since 2006, what do astronomers call Pluto?",
       "answer": "A dwarf planet",
@@ -190,7 +190,7 @@
     {
       "id": "solar-013",
       "difficulty": 13,
-      "subcategory": "Planetas",
+      "subcategory": "planets",
       "description": "A planet that lay down for a nap and never got up again.",
       "question": "Which planet spins almost lying down, its axis tipped on its side?",
       "answer": "Uranus",
@@ -205,7 +205,7 @@
     {
       "id": "solar-014",
       "difficulty": 14,
-      "subcategory": "Viajes espaciales",
+      "subcategory": "space-travel",
       "description": "A spacecraft that popped out for bread in the seventies and is still on its way.",
       "question": "Which spacecraft is the farthest human-made object from Earth?",
       "answer": "Voyager 1",
@@ -220,7 +220,7 @@
     {
       "id": "solar-015",
       "difficulty": 15,
-      "subcategory": "El Sol y las lunas",
+      "subcategory": "sun-and-moons",
       "description": "A moon that thinks it's a planet.",
       "question": "What is the largest moon in the solar system?",
       "answer": "Ganymede",

@@ -1,0 +1,11 @@
+{
+  "bundles": [
+    {
+      "id": "dinosaurs",
+      "kind": "topic",
+      "languages": ["es"],
+      "name": "Dinosaurios",
+      "description": "Tres preguntas de ejemplo sobre dinosaurios."
+    }
+  ]
+}

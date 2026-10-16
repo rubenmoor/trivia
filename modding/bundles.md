@@ -1,6 +1,6 @@
 # Make your own question bundle
 
-A question bundle is a set of questions the family can switch on before a game, next to the game's own. You make one as a mod: a folder with a few JSON files and, if you like, pictures. Start from `template-bundle/` beside this file (15 questions about the solar system, Spanish and English) or let an AI write the files with `bundle-prompt.md`. The game checks your folder with `living-room-trivia --check-mod <folder>`. No stability promise: a game update may change this format.
+A question bundle is a set of questions the family can switch on before a game, next to the game's own. You make one as a mod: a folder with a few JSON files and, if you like, pictures. Start from `template-bundle/` beside this file (15 questions about the solar system, Spanish and English), `examples/plain-bundle/` (3 questions, the plain format) or let an AI write the files with `bundle-prompt.md`. The game checks your folder with `living-room-trivia --check-mod <folder>`. No stability promise: a game update may change this format.
 
 ## Folder layout
 - `mod.json`: who the mod is (below)
@@ -8,7 +8,7 @@ A question bundle is a set of questions the family can switch on before a game, 
 - `data/bundles/<bundle>/`: one folder per bundle, named by its `id`
   - `categories.json`: categories and subcategories
   - `pool.json`: Spanish questions; `pool.en.json`, `pool.de.json`: English, German
-  - `names.en.json`, `names.de.json`: translated names (optional)
+  - `names.<locale>.json`: names per language (`names.es.json`, `names.en.json`, …; optional in the plain format)
   - pictures, sounds, videos: anywhere inside the bundle folder, e.g. `img/owl.png`
 - All files UTF-8 JSON; copy the template and change what you need.
 
@@ -33,23 +33,29 @@ A question bundle is a set of questions the family can switch on before a game, 
 - In the game your ids become `<mod id>:<id>`, e.g. `template-bundle:solar-system`; your bundle is marked player-made.
 
 ## `categories.json`
-- `{ "categories": [ { "slug", "name", "subcategories": [ … ] } ] }`
-- `slug`: lowercase id of the category; `name`: shown in the game; `subcategories`: names, at least one
-- Every question's `subcategory` is one of these names, in every language's pool file: the names in `categories.json` are the keys, `names.<locale>.json` translates them.
-- Slugs and subcategory names only need to be unique within the bundle; they may repeat the game's or other mods' names («Historia»): each bundle keeps its own.
+Two formats; both load. Plain: every subcategory's name is its key, simplest for one language. Slugs: short English ids as keys, every name (your main language too) in `names.<locale>.json`, like the game's own bundles; easiest to translate. The template uses slugs, `examples/plain-bundle/` the plain format.
+- Plain: `{ "categories": [ { "slug", "name", "subcategories": ["<name>", …] } ] }`
+  - `slug`: lowercase id of the category; `name`: shown in the game; `subcategories`: names, at least one
+- Slugs: `{ "categories": [ { "slug", "subcategories": ["<slug>", …] } ] }`
+  - every slug lowercase letters, digits and `-`, e.g. `space-travel`; names in `names.<locale>.json`
+- Every question's `subcategory` is one of the `subcategories` entries exactly, in every language's pool file.
+- Category slugs and subcategory keys only need to be unique within the bundle; they may repeat the game's or other mods' («history»): each bundle keeps its own.
 
 ## `names.<locale>.json`
-- Optional, one per extra language; anything missing shows in the original.
+- One per language: `names.es.json`, `names.es-ES.json` (only where Spain differs: Spain reads `names.es.json` first), `names.en.json`, `names.de.json`.
 - `bundles`: `{ "<bundle id>": { "name", "description" } }` (the id from `bundles.json`, without your mod id)
-- `categories`: `{ "<slug>": "<name>" }`
-- `subcategories`: `{ "<name in categories.json>": "<translated name>" }`
+- `categories`: `{ "<category slug>": "<name>" }`
+- `subcategories`: `{ "<key from categories.json>": "<name>" }`
+- Which name the game shows: the language's file → for `es-ES` `names.es.json` → the `name` in `categories.json` / `bundles.json` → the key itself.
+  - Plain format: anything missing shows in the original; slugs: give every language its names, or players see `space-travel`.
+- `--check-mod` warns `bad_names` for a key that isn't in `categories.json` or `bundles.json`.
 
 ## Pool files
 - `{ "version": 1, "questions": [ … ] }`; one file per language; the same `id` in two files = the same question translated.
 - Question fields:
   - `id`: lowercase letters, digits and `-`, up to 64 characters, unique in your mod, e.g. `dino-001`
   - `difficulty`: whole number 1–15 (below)
-  - `subcategory`: a name from `categories.json`
+  - `subcategory`: a key from `categories.json` (a name or a slug)
   - `description`: one funny sentence shown before the question; must not give the answer away
   - `question`, `answer`
   - `wrong_answers`: exactly 3
@@ -129,6 +135,7 @@ Difficulty means who can answer it, not how obscure the fact is.
   - `status`: something other than `approved`
   - `bad_media`: `file_url` a web address or outside the folder; only the media is dropped, unless `essential`
 - Other errors: `media_missing` (file not found), `bad_categories`, `bundle_row`, `bad_field` (in `mod.json`), `no_pool` (no pool file for any language).
+- Warnings: `bad_names` (a names file not JSON, or a key not in `categories.json` / `bundles.json`), `no_pool_file`, `bundle_language`.
 
 ## Share it
 - `living-room-trivia --publish-mod <folder>` uploads it as a Steam Workshop item (Steam running; `--dry-run` to try without uploading); run it again to update.

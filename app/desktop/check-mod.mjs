@@ -16,7 +16,7 @@ const ERRORS = {
   entry_missing: () => "mod.json: entry file not found in the folder",
   bundle_json: () => "data/bundles.json: not a JSON object with a bundles list",
   bundle_row: (e) => `data/bundles.json: row ${e.id ? `"${e.id}"` : "without an id"} needs id, kind (slugs), languages, name, description; ids unique`,
-  bad_categories: (e) => `${e.file}: missing, or not categories with slug, name and subcategories (unique)`,
+  bad_categories: (e) => `${e.file}: missing, or not categories with slug and subcategories (unique)`,
   bad_pool: (e) => `${e.file}: ${e.message}`,
   no_pool: (e) => `bundle ${e.bundle}: no pool file for any of its languages`,
   no_bundles: () => "kind bundle but no bundles in data/bundles.json",
@@ -28,7 +28,7 @@ const WARNINGS = {
   game_version: (w) => `made for ${w.game}, running ${w.running}`,
   bundle_language: (w) => `bundle ${w.bundle}: language "${w.tag}" has no questions in the game (es, es-ES, en, de), ignored`,
   no_pool_file: (w) => `${w.file}: missing, bundle ${w.bundle} not offered in ${w.locale}`,
-  bad_names: (w) => `${w.file}: not a JSON object, ignored`,
+  bad_names: (w) => `${w.file}: ${w.key ? `${w.kind} "${w.key}" not in ${w.kind === "bundles" ? "data/bundles.json" : "categories.json"}` : "not a JSON object"}, ignored`,
 };
 // modPool's reasons (engine/pool.ts).
 const REASONS = {
@@ -146,13 +146,22 @@ export async function checkMod(folder, { dist, data, gameVersion }, out = () => 
         for (let d = lo; d <= hi; d++) if (!inWindow.some((q) => q.difficulty === d)) none.push(d);
         out(`    ${g.id} (${lo}-${hi}): ${inWindow.length} questions${none.length ? `, none at ${none.join(", ")}` : ""}`);
       }
-      if (locale !== "es") {
-        const names = await readJson(dir, `names.${locale}.json`);
-        if (names instanceof Error || (names !== undefined && (names === null || typeof names !== "object" || Array.isArray(names))))
-          warning({ code: "bad_names", file: rel(`names.${locale}.json`) });
-      }
     }
     if (!pools) error({ code: "no_pool", bundle: row.id });
+    // Every UI language's names file (namesFiles in engine/state.ts), unknown keys too.
+    const known = { bundles: new Set(rows.rows.map((r) => r.id)), categories: new Set(tax.slugs), subcategories: new Set(tax.subs) };
+    for (const locale of LOCALES) {
+      const file = rel(`names.${locale}.json`);
+      const names = await readJson(dir, `names.${locale}.json`);
+      if (names === undefined) continue;
+      if (names instanceof Error || names === null || typeof names !== "object" || Array.isArray(names)) {
+        warning({ code: "bad_names", file });
+        continue;
+      }
+      for (const [kind, keys] of Object.entries(known))
+        for (const key of Object.keys(typeof names[kind] === "object" ? (names[kind] ?? {}) : {}))
+          if (!keys.has(key.startsWith(`${id}:`) ? key.slice(id.length + 1) : key)) warning({ code: "bad_names", file, kind, key });
+    }
   }
   return done(mod.id);
 }

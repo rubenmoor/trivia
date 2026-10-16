@@ -1,9 +1,9 @@
 {
   "categories": [
-    {"slug": "solar-system", "name": "El sistema solar", "subcategories": [
-      "Planetas",
-      "El Sol y las lunas",
-      "Viajes espaciales"
+    {"slug": "solar-system", "subcategories": [
+      "planets",
+      "sun-and-moons",
+      "space-travel"
     ]}
   ]
 }

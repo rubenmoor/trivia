@@ -51,16 +51,17 @@ b) data/bundles.json
 { "bundles": [ { "id": "<bundle id>", "kind": "topic" (or "base"), "languages": ["<lang>", …], "name": "<name in main language>", "description": "<description in main language>" } ] }
 
 c) data/bundles/<bundle id>/categories.json
-{ "categories": [ { "slug": "<category slug>", "name": "<category name>", "subcategories": ["<name>", "<name>", …] } ] }
-- One category (two at most), 2–4 subcategories, all names in the MAIN language.
-- Names must be specific to the topic, never generic like "Animals", "History" or "Science" (the game rejects names its own categories use). Good: "Dinosaurs of the Jurassic", "Dinosaur fossils". The slug is lowercase a-z, 0-9 and "-", e.g. "dinosaurs".
+{ "categories": [ { "slug": "<category slug>", "subcategories": ["<subcategory slug>", "<subcategory slug>", …] } ] }
+- One category (two at most), 2–4 subcategories.
+- Slugs are short English ids: lowercase a-z, 0-9 and "-", e.g. "dinosaurs", "jurassic-dinosaurs", "dinosaur-fossils"; unique within the file.
 
-d) data/bundles/<bundle id>/names.<lang>.json, one per language other than the main one (skip if only one language):
+d) data/bundles/<bundle id>/names.<file lang>.json, one per language, the main one too; <file lang> is es for both Spanish varieties (names.es.json), plus names.es-ES.json only if Spain's names differ:
 {
-  "bundles": { "<bundle id>": { "name": "<translated name>", "description": "<translated description>" } },
-  "categories": { "<slug>": "<translated category name>" },
-  "subcategories": { "<subcategory name as in categories.json>": "<translated name>" }
+  "bundles": { "<bundle id>": { "name": "<name>", "description": "<description>" } },
+  "categories": { "<category slug>": "<category name>" },
+  "subcategories": { "<subcategory slug>": "<subcategory name>" }
 }
+- Names must be specific to the topic, never generic like "Animals", "History" or "Science". Good: "Dinosaurs of the Jurassic", "Dinosaur fossils".
 
 e) The pool file per language: Spanish (Latin America) → data/bundles/<bundle id>/pool.json, Spanish (Spain) → pool.es-ES.json, English → pool.en.json, German → pool.de.json.
 { "version": 1, "questions": [ { …question… }, … ] }
@@ -68,7 +69,7 @@ Each question has exactly these fields:
 {
   "id": "<prefix>-001",
   "difficulty": <whole number>,
-  "subcategory": "<a subcategory name EXACTLY as in categories.json, main language, in EVERY pool file>",
+  "subcategory": "<a subcategory slug EXACTLY as in categories.json, the same in EVERY pool file>",
   "description": "<one funny sentence shown before the question>",
   "question": "<the question>",
   "answer": "<the correct answer>",

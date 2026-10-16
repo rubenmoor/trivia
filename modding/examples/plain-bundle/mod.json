@@ -1,0 +1,9 @@
+{
+  "id": "plain-bundle",
+  "name": "Example: Dinosaurs (plain names)",
+  "description": "A tiny question bundle in the plain format: subcategory names are their own keys, no names files. Three questions in Spanish.",
+  "version": "1.0.0",
+  "game": "0.1.0",
+  "languages": ["es"],
+  "kind": ["bundle"]
+}

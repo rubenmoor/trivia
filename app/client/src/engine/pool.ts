@@ -143,11 +143,11 @@ export function modPool(json: unknown, bundle: string, subcategories: Iterable<s
   return { questions, reasons, badQuestions: raw.length - questions.length, badMedia };
 }
 
-/** A categories file's subcategories if well-formed (slugs, names, unique within it), else null. */
+/** A categories file's subcategories if well-formed (slugs, keys unique within it; `name` optional, decision 259), else null. */
 export function modSubcategories(file: unknown): { slugs: string[]; subs: string[] } | null {
   const cats = (file as { categories?: unknown } | null)?.categories;
   if (!Array.isArray(cats) || !cats.length) return null;
-  const ok = cats.every((c) => typeof c?.slug === "string" && c.slug && typeof c.name === "string" && Array.isArray(c.subcategories)
+  const ok = cats.every((c) => typeof c?.slug === "string" && c.slug && (c.name === undefined || typeof c.name === "string") && Array.isArray(c.subcategories)
     && c.subcategories.length && c.subcategories.every((s: unknown) => typeof s === "string" && s));
   if (!ok) return null;
   const slugs = cats.map((c) => c.slug as string);

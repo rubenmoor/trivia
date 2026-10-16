@@ -228,7 +228,8 @@ export default async function setup(trivia) {
 - Licence: the game's code and everything in `modding/` (guide, examples, template) are MIT: copy freely; our questions are not (all rights reserved): don't copy them into your mods
 
 ## Examples
-- [`template-bundle/`](template-bundle/): a question bundle, 15 questions about the solar system (es, en)
+- [`template-bundle/`](template-bundle/): a question bundle, 15 questions about the solar system (es, en), slugs + names files
+- [`examples/plain-bundle/`](examples/plain-bundle/): a question bundle in the plain format (names as keys), 3 questions (es)
 - [`examples/theme/`](examples/theme/): a plum palette by root `style.css`, colour variables and one component class
 - [`examples/rules-tweak/`](examples/rules-tweak/): one more hint per game with `actions.before`, `i18n.add`, `on("game:end")`
 - [`examples/conversion/`](examples/conversion/): a full conversion, guess the number, with our fonts; Esc or pad B quits

@@ -9,8 +9,8 @@
     "solar-system": "The solar system"
   },
   "subcategories": {
-    "Planetas": "Planets",
-    "El Sol y las lunas": "The Sun and the moons",
-    "Viajes espaciales": "Space travel"
+    "planets": "Planets",
+    "sun-and-moons": "The Sun and the moons",
+    "space-travel": "Space travel"
   }
 }
