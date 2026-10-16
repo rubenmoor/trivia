@@ -52,6 +52,21 @@
     history.replaceState(null, "", `/gallery?${new URLSearchParams({ locale, shot })}`);
   }
 
+  function move(delta: number) {
+    if (!shots.length) return;
+    go(locale, shots[(shots.indexOf(shot) + delta + shots.length) % shots.length]);
+    requestAnimationFrame(() => document.querySelector(".shots a.on")?.scrollIntoView({ block: "nearest" }));
+  }
+
+  const steps: Record<string, number> = { ArrowDown: 1, ArrowRight: 1, ArrowUp: -1, ArrowLeft: -1 };
+
+  function onKey(e: KeyboardEvent) {
+    const delta = steps[e.key];
+    if (!delta || e.ctrlKey || e.metaKey || e.altKey || (e.target as Element).closest?.("input, textarea, select")) return;
+    e.preventDefault();
+    move(delta);
+  }
+
   function pick(it: GalleryItem) {
     selected = it;
     key = it.keys?.[0] ?? null;
@@ -84,6 +99,8 @@
     `left:${(b[0] / W) * 100}%;top:${(b[1] / H) * 100}%;width:${(b[2] / W) * 100}%;height:${(b[3] / H) * 100}%`;
 </script>
 
+<svelte:window onkeydown={onKey} />
+
 <svelte:head><title>Screen gallery · Trivia authoring</title></svelte:head>
 
 <main>
@@ -98,7 +115,7 @@
   {:else}
     <p class="muted small">
       Run {manifest.run.replace("T", " ")} at {manifest.commit}. Click a text to see its catalog key and flag it; a fix pass
-      reads the flags. Re-run <code>trivia-gallery</code> for fresh shots.
+      reads the flags. Arrow keys step through the shots. Re-run <code>trivia-gallery</code> for fresh shots.
     </p>
     <div class="locales">
       {#each Object.keys(manifest.locales) as l (l)}
