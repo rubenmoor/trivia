@@ -10,17 +10,17 @@ import type { EngineData, SaveData } from "./state.ts";
 const JOKER_SEEN = Object.entries(STANDARD_JOKERS).reduce((s, [j, n]) => (j === "hint" ? s : s + (n ?? 0)), 0);
 
 /** Seen events per level per game (D-75, D-77): one game = its levels + the standard set's; rr-competitive
- * × N players; timed: one shared question per round, no jokers. Gamemaster as solo. */
+ * × N players; timed: one question per player still in, no jokers, nobody dropping out (decision 276). Gamemaster,
+ * rr-coop as solo. */
 function seenPerLevel(mode: GameMode, players = 1, levels = LEVELS): number {
+  if (mode === "timed") return players;
   const game = (levels + JOKER_SEEN) / levels;
-  if (mode === "rr-competitive") return game * players;
-  if (mode === "timed") return 1;
-  return game;
+  return mode === "rr-competitive" ? game * players : game;
 }
 
 interface OutlookChoice extends Choice {
   mode: GameMode;
-  /** rr-competitive: players in the game. */
+  /** rr-competitive, timed: players in the game. */
   players?: number;
 }
 
@@ -138,7 +138,8 @@ function runningOutBundles(save: SaveData, data: EngineData, choice: Choice): st
 export function outlook(save: SaveData, data: EngineData, choice: OutlookChoice): Outlook {
   const ranges = rangesFor(data, choice);
   const b = seenPerLevel(choice.mode, choice.players, choice.levels);
-  const per = Math.max(choice.cards, 1);
+  // timed: no cards, N questions per level (the session's supply check)
+  const per = choice.mode === "timed" ? choice.players ?? 1 : Math.max(choice.cards, 1);
   const count = countOf(save);
   const freshIn = (bundles: Iterable<string>) =>
     freshCounts(availableFor(save, data, choice, bundles).filter((q) => count(q) === 0));
@@ -168,11 +169,11 @@ export interface SessionOutlook {
 }
 
 /** Outlook of a multiplayer session (plan 158): rr-coop as solo; rr-competitive one per distinct age group,
- * `players` = its seats; `seatGroups` = each seat's age group, join order. `choice.age_group` is the shared one. */
+ * `players` = its seats; timed one for all; `seatGroups` = each seat's age group, join order. `choice.age_group` is the shared one. */
 export function sessionOutlook(save: SaveData, data: EngineData, choice: OutlookChoice, seatGroups: (string | null)[] = []): SessionOutlook {
   const counts = new Map<string | null, number>();
   if (choice.mode === "rr-competitive") for (const g of seatGroups) counts.set(g ?? choice.age_group, (counts.get(g ?? choice.age_group) ?? 0) + 1);
-  if (!counts.size) counts.set(choice.age_group, choice.mode === "rr-competitive" ? choice.players ?? 1 : 1);
+  if (!counts.size) counts.set(choice.age_group, choice.players ?? 1);
   const groups = [...counts].map(([age_group, players]) => ({
     age_group, players, outlook: outlook(save, data, { ...choice, age_group, players }),
   }));
