@@ -118,6 +118,7 @@ qgen tighten             # Claude reads the whole pool (approved too), shortens 
 qgen bundle new <id> --name … --description … --kind region|theme --rule …   # an empty bundle; then fill app/data/bundles/<id>/categories.json (region: qgen taxonomy)
 qgen taxonomy --bundle <id>    # a regional bundle's categories and subcategories proposed → work/taxonomy/<id>/proposal.md
 qgen taxonomy --bundle <id> --apply work/taxonomy/<id>/proposal.json   # writes them (proposal edited to the developer's answer) and their en/de names
+qgen remap --bundle <id> [--apply work/remap/<id>/proposal.json]   # its questions onto a new list: proposal → work/remap/<id>/proposal.md, then applied
 ```
 
 Don't run the pipeline steps by hand; the batch command does it all and can be resumed. Details: [`authoring/RUNBOOK.md`](authoring/RUNBOOK.md). Afterwards, review the batch in the review tool.

@@ -358,7 +358,7 @@ Template:
 - Context: Batch-6 wrote `base` questions with a Colombian flavour because 27 of `base`'s subcategories are about Colombia (OQ-42). D-41 gives each bundle its own taxonomy but left the layout open (OQ-41).
 - Decision: `base`'s categories stay in `app/data/categories.json`. Another bundle's categories are in `app/data/bundles/<id>/categories.json`. They ship because the game's «Cambiazo» picker shows every bundle's categories while the game plays every bundle (until BN-6). Its concept lists are in `authoring/data/bundles/<id>/concepts/`, and its optional question axes in `authoring/data/bundles/<id>/question-axes.json` (otherwise `base`'s). Subcategory names and broad-category slugs are unique across all bundles, and question ids stay global. Concept names are unique within a bundle. The taxonomy steers generation; the question's `bundle` steers play. A question may keep a subcategory from another bundle's list (a well-known fact about Colombia stays in `base`). The 27 Colombian subcategories move into `colombia`'s own list (6 broad categories), and their concept lists move with them. Existing questions keep their bundle. A `base` batch keeps Colombia-only content out through the prompt alone (OQ-43); the developer moves the rest with `n` in the review tool.
 - Consequences: `qgen batch` picks from `base`'s 113 subcategories; `qgen batch --bundle colombia` picks from the 27 Colombian ones. `qgen bundle new <id>` creates the entry and an empty `categories.json`. `validate` checks the uniqueness rules. The game's picker gets 6 more tiles (29 broad categories).
-- Supersedes / related: D-19, D-37, D-39, D-41; OQ-41, OQ-42, OQ-43; BN-8..BN-12; amended by D-49, D-99 (names unique per bundle only; a `colombia` question uses a `colombia` subcategory), D-100 (keys: bundle + name)
+- Supersedes / related: D-19, D-37, D-39, D-41; OQ-41, OQ-42, OQ-43; BN-8..BN-12; amended by D-49, D-99 (names unique per bundle only; a `colombia` question uses a `colombia` subcategory), D-100 (keys: bundle + name), D-109 (`colombia`'s list from the general regional list)
 
 ## D-44: One house style for every bundle
 - Date: 2026-10-08
@@ -944,7 +944,7 @@ Template:
   - **More packs** (candidates `mexico`, `argentina`): a new pm decision "More regional bundles at launch?" after the pilot, with its numbers (plan 84).
   - **Launch doesn't wait:** it ships what `colombia` has then; updates bring the rest.
 - Consequences: `qgen report --simulate` defaults to the locale's default game (`base` for every locale); `--bundles` for packs. Plan 98 builds the rest (taxonomy, `colombia` list, target, `--translate --bundle`, effort report).
-- Supersedes / related: D-43 (uniqueness across bundles), D-49, D-53, D-84 (amends); D-39, D-85, D-94, D-95, D-97, D-98; OQ-46; RG-5; pm decisions 33, 37, 66, 110; plans 84, 98
+- Supersedes / related: D-43 (uniqueness across bundles), D-49, D-53, D-84 (amends); amended by D-109 (`colombia`'s list); D-39, D-85, D-94, D-95, D-97, D-98; OQ-46; RG-5; pm decisions 33, 37, 66, 110; plans 84, 98
 
 ## D-100: Subcategory keys: bundle + name in code
 - Date: 2026-10-14
@@ -955,7 +955,7 @@ Template:
   - **Names:** each names file keys its own bundle's slugs and Spanish names; merged by key (`mergeNames`, `load_names`).
   - **Joker view:** «Cambiazo» categories and subcategories carry `key`; the client sends the subcategory's key. Frozen engine fixtures (plan 51) replay through a normalizer in `game.test.ts` (bare names, no `key`).
   - **Work files** of a non-`base` subcategory (`work/concepts/`, translation chunks) are prefixed `<bundle>--`.
-- Consequences: Until plan 98 task 827, the 19 `colombia` questions on `base` subcategories pass `validate` (D-49's other direction) but have no broad category in play or reports (`None`); a `colombia` name already in a save's `notified_exhausted` is pruned and may be shown once more. Mods: `taxonomy_clash` goes in task 995.
+- Consequences: Until plan 138 task 1140 (D-109), the 19 `colombia` questions on `base` subcategories pass `validate` (D-49's other direction) but have no broad category in play or reports (`None`); a `colombia` name already in a save's `notified_exhausted` is pruned and may be shown once more. Mods: `taxonomy_clash` goes in task 995.
 - Supersedes / related: D-43 (amends: lookups by name alone), D-49, D-81, D-99; pm decision 110; plan 98
 
 ## D-101: Regional bundle targets in `targets.json`
@@ -1074,3 +1074,15 @@ Template:
   - Unchanged: code ids, Steam API names (`FIRST_SOPLO` …), save fields, code comments
 - Consequences: `app/client/src/locales/{es,es-ES,de}.ts`, `locales/style/*.md` (old names as bad patterns), `modding/examples/rules-tweak/main.js`, `qgen.py` supply/simulate output; store and achievement texts in task 1100
 - Supersedes / related: supersedes D-89's and D-91's names and `es`/`de` keys; D-78, D-91 (key rule); pm decisions 40–44, 53, 54–59, 188, 190–194, 209–212, 247
+
+## D-109: Regional taxonomies from a general list; `colombia` reworked
+- Date: 2026-10-16
+- Context: pm decision 166 rejected the proposed `colombia` list and asked for a rework from a general regional list; plan 138 (tasks 1137–1140); pm decisions 213, 249
+- Decision:
+  - **General list:** `authoring/data/regional-categories.json` (14 categories, `{región}` pattern; pm decision 213), authoring only
+  - **Per region:** `qgen taxonomy --bundle <id>` proposes categories and subcategories from it (decision 18's format), the developer answers in a pm decision, `--apply` writes `categories.json` and en/de names
+  - **`colombia`:** 14 categories, 53 subcategories (pm decision 249), replacing D-43's 6/27 and D-99's list
+  - **Remap:** `qgen remap --bundle <id>` (LLM proposal in `work/remap/<id>/`, `--apply`): every question of the bundle onto its list; new subcategories only if none fits; concepts per BN-13; an old concept list renamed to the same-topic subcategory, else deleted
+  - **`validate`:** a question's subcategory is in its own bundle's list; D-100's grace for `colombia` questions on `base` subcategories is gone
+- Consequences: all 109 `colombia` questions on `colombia` subcategories (91 moved, none added); concepts 17 kept, 41 cleared; concept lists: 3 renamed («Frutas de Colombia», «Fútbol colombiano de clubes», «Parques naturales y ecosistemas de Colombia»), 7 deleted, 3 unchanged; the first `qgen batch --bundle colombia` makes the missing lists
+- Supersedes / related: D-43, D-99 (amends: `colombia`'s list); D-100 (its grace ends); D-49, BN-13; pm decisions 18, 166, 213, 249; plans 98, 138

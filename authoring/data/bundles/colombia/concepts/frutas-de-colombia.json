@@ -1,5 +1,5 @@
 {
-  "subcategory": "Frutas exóticas de Colombia",
+  "subcategory": "Frutas de Colombia",
   "facets": [
     "Frutas del Caribe y la costa",
     "Frutas amazónicas y de selva",
@@ -12,7 +12,8 @@
     "Plaza de mercado y venta callejera",
     "Nombres regionales de las frutas",
     "Frutas colombianas de exportación",
-    "Partes, semillas y cultivo"
+    "Partes, semillas y cultivo",
+    "Jugos y frutas para beber"
   ],
   "axis_fit": {
     "move": {
@@ -837,6 +838,11 @@
       "name": "Fruto climatérico",
       "facet": "Partes, semillas y cultivo",
       "known_at": 15
+    },
+    {
+      "name": "Zapote",
+      "facet": "Jugos y frutas para beber",
+      "known_at": 11
     }
   ]
 }

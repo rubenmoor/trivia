@@ -13,6 +13,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen bundles                    # sort the pool into bundles (D-39)
     qgen bundle new <id> --name … --description … --kind region|theme --rule …   # an empty bundle (D-41)
     qgen taxonomy --bundle <id> [--apply work/taxonomy/<id>/proposal.json]   # a regional bundle's categories (plan 138)
+    qgen remap --bundle <id> [--apply work/remap/<id>/proposal.json]   # its questions onto a new taxonomy (plan 138)
     qgen draft --run <run> --subcategories "Volcanes,Piratas" [--bundle <id>]
     qgen draft | rate | factcheck | dedupe | revise | apply | merge --run <run>
     qgen english-keys               # English answer + concept per non-en source, for en runs' overlap checks (decision 232)
@@ -4399,8 +4400,8 @@ def validate_pool():
         errors += [f"{qid}: {p}" for p in source_locale_problems(q, bundle_of.get(q.get("bundle")))]
         if "translatable" in q and q["translatable"] is not False: errors.append(f"{qid}: translatable must be false when set (absent = translatable, D-81)")
         key = categories.key(q)
-        if key not in subcategories and (q.get("bundle") == "base" or ("base", key[1]) not in subcategories):
-            errors.append(f"{qid}: subcategory not in its bundle's categories (D-19, D-49, D-99)")  # base's allowed until task 827
+        if key not in subcategories:
+            errors.append(f"{qid}: subcategory not in its bundle's categories (D-19, D-49, D-99, D-109)")
         if q.get("bundle") not in bundle_ids: errors.append(f"{qid}: bundle must be one of app/data/bundles.json (D-39)")
         m = q.get("media", {})
         if m.get("type") not in {"image", "audio", "video"} or m.get("role") not in {"decorative", "illustrative", "essential"}:
@@ -4426,8 +4427,6 @@ def validate_pool():
             errors += [f"{qid}: {p}" for p in e]
             warnings += [f"{qid}: {p}" for p in w]
         if q.get("concept") is not None and isinstance(q.get("subcategory"), str):
-            if key not in subcategories:
-                key = ("base", key[1])  # a base subcategory's list, until task 827
             if key not in lists:
                 lists[key] = {c["name"] for c in (concepts.load(*key) or {}).get("concepts", [])}
             if q["concept"] not in lists[key]:
@@ -4885,6 +4884,18 @@ def apply_taxonomy(bundle, src, d):
         sys.exit(f"{src}: not found")
     if errors := taxonomy_errors(p, bundle):
         sys.exit(f"{src}: " + "; ".join(errors))
+    subs = write_taxonomy(bundle, p, d)
+    if found := off_list(bundle, set(subs)):
+        print(f"{sum(sum(c.values()) for c in found.values())} {bundle} question(s) on subcategories not in the list "
+              f"(`qgen remap --bundle {bundle}` moves them):\n" + "\n".join(off_list_lines(found)))
+    errors, _ = validate_pool()
+    if errors:
+        print(f"qgen validate fails ({len(errors)} error(s)); expected only for questions on subcategories not in "
+              f"the list:\n" + "\n".join(f"  {e}" for e in errors[:20]))
+
+
+def write_taxonomy(bundle, p, d):
+    """categories.json and the names files from a proposal (`scope` only needed for new names); returns the subcategories."""
     path = categories.path(bundle)
     doc = load_json(path, {})
     cats = [{"slug": c["slug"], "name": c["name"], "subcategories": [s["name"] for s in c["subcategories"]]}
@@ -4918,13 +4929,174 @@ def apply_taxonomy(bundle, src, d):
             f[k] = {n: have[n] if n in have else drafted[(k, n)][l] for n in keys}
         save_json(layout.NAMES(l, bundle), f)
         print(f"{layout.NAMES(l, bundle).relative_to(ROOT)}: {new} new name(s) drafted, {stale} dropped")
-    if found := off_list(bundle, set(subs)):
-        print(f"{sum(sum(c.values()) for c in found.values())} {bundle} question(s) on subcategories not in the list "
-              "(the remap moves them, plan 138):\n" + "\n".join(off_list_lines(found)))
-    errors, _ = validate_pool()
+    return subs
+
+
+REMAP_SCHEMA = {"type": "object", "required": ["questions", "lists"], "properties": {
+    "questions": {"type": "array", "items": {"type": "object", "required": ["id", "subcategory", "category", "scope", "reason"],
+                                            "properties": {"id": STR, "subcategory": STR, "category": STR, "scope": STR, "reason": STR}}},
+    "lists": {"type": "array", "items": {"type": "object", "required": ["subcategory", "target", "reason"],
+                                        "properties": {"subcategory": STR, "target": STR, "reason": STR}}}}}
+
+
+def old_lists(bundle, subs):
+    """{subcategory: list} of the bundle's concept lists whose subcategory is not in subs."""
+    out = {}
+    for p in sorted(concepts.concepts_dir(bundle).glob("*.json")):
+        lst = load_json(p)
+        if lst.get("subcategory") not in subs:
+            out[lst.get("subcategory") or p.stem] = lst
+    return out
+
+
+def remap_errors(p, bundle):
+    """Problems of a remap proposal against the bundle's list; new subcategories must agree across questions."""
+    subs, cats = set(categories.subcategories(bundle)), {c["name"] for c in categories.load(bundle)}
+    ids = {q["id"] for q in load_json(POOL)["questions"] if q.get("bundle") == bundle}
+    got = {r["id"] for r in p["questions"]}
+    errors = [f"no subcategory for {', '.join(sorted(ids - got))}"] if ids - got else []
+    errors += [f"{i}: not a {bundle} question" for i in sorted(got - ids)]
+    new = {}
+    for r in p["questions"]:
+        if r["subcategory"] in subs:
+            continue
+        if not (r["category"].strip() and r["scope"].strip()):
+            errors.append(f"{r['id']}: {r['subcategory']!r} is not in the list and has no category and scope")
+        elif new.setdefault(r["subcategory"], r["category"]) != r["category"]:
+            errors.append(f"{r['subcategory']!r}: in two categories")
+    targets_ = subs | set(new)
+    errors += [f"list {x['subcategory']!r}: target {x['target']!r} is not a subcategory" for x in p["lists"]
+               if x["target"] and x["target"] not in targets_]
+    return errors, new, cats
+
+
+def remap_md(p, new, cats, by_id):
+    lines = [f"# Remap proposal: `{p['bundle']}`", "", f"{len(p['questions'])} questions; "
+             f"{sum(r['subcategory'] != by_id[r['id']]['subcategory'] for r in p['questions'] if r['id'] in by_id)} change subcategory.", ""]
+    if new:
+        lines += ["## Additions"] + [f"- {s} → {c}{'' if c in cats else ' (new category)'}" for s, c in sorted(new.items())] + [""]
+    lines += ["## Questions"]
+    for r in sorted((r for r in p["questions"] if r["id"] in by_id), key=lambda r: (r["subcategory"], r["id"])):
+        q = by_id[r["id"]]
+        lines.append(f"- {r['id']} ({q['status']}) {q['subcategory']} → **{r['subcategory']}**: {q['question'][:80]} "
+                     f"→ {q['answer']}" + (f" ({r['reason']})" if r["reason"] else ""))
+    lines += ["", "## Old concept lists"] + [f"- {x['subcategory']} → {x['target'] or 'deleted'} ({x['reason']})" for x in p["lists"]]
+    return "\n".join(lines) + "\n"
+
+
+def cmd_remap(args):
+    """A regional bundle's questions onto its new taxonomy (plan 138, decision 166): one opus call proposes a
+    subcategory per question (all statuses) and a target for every concept list whose subcategory is gone
+    → work/remap/<id>/proposal.{json,md}; `--apply <proposal.json>` adds new subcategories to categories.json
+    (names drafted), renames or deletes old concept lists, moves the questions and their concepts (BN-13)."""
+    b = next((x for x in load_bundles() if x["id"] == args.bundle), None)
+    if not b or b["kind"] != "region":
+        sys.exit(f"{args.bundle!r} is not a regional bundle in app/data/bundles.json")
+    d = WORK / "remap" / args.bundle
+    d.mkdir(parents=True, exist_ok=True)
+    if args.apply:
+        return apply_remap(args, Path(args.apply), d)
+    subs = categories.subcategories(args.bundle)
+    tx = load_json(WORK / "taxonomy" / args.bundle / "proposal.json", {}) or {}
+    scopes = {s["name"]: s["scope"] for c in tx.get("categories", []) for s in c["subcategories"]}
+    qs = [q for q in load_json(POOL)["questions"] if q.get("bundle") == args.bundle]
+    lists = old_lists(args.bundle, set(subs))
+    user = "\n\n".join([
+        f"## Bundle\n`{args.bundle}`: {b['name']}\n{bundle_text(args.bundle, translations.draft_locale(b))}",
+        "## New list\n" + "\n".join(f"### {c['name']}\n" + "\n".join(f"- {s}" + (f": {scopes[s]}" if s in scopes else "")
+                                                                   for s in c["subcategories"]) for c in categories.load(args.bundle)),
+        "## Questions\n" + json.dumps([{k: q.get(k) for k in ["id", "subcategory", "question", "answer", "hints", "concept"]}
+                                       for q in qs], ensure_ascii=False),
+        "## Old concept lists\n" + (json.dumps([{"subcategory": s, "facets": l.get("facets", []), "concepts": len(l["concepts"]),
+                                                 "examples": [c["name"] for c in l["concepts"][:25]]}
+                                                for s, l in lists.items()], ensure_ascii=False) if lists else "none")])
+    out = claude((PROMPTS / "remap.md").read_text(encoding="utf-8"), user, REMAP_SCHEMA, args.model, d)
+    p = {"bundle": args.bundle, **out}
+    save_json(d / "proposal.json", p)
+    errors, new, cats = remap_errors(p, args.bundle)
+    (d / "proposal.md").write_text(remap_md(p, new, cats, {q["id"]: q for q in qs}), encoding="utf-8")
+    print(f"{(d / 'proposal.md').relative_to(ROOT)}: {len(new)} new subcategories; then `qgen remap --bundle "
+          f"{args.bundle} --apply {(d / 'proposal.json').relative_to(ROOT)}`")
     if errors:
-        print(f"qgen validate fails ({len(errors)} error(s)); expected only for questions on subcategories not in "
-              f"the list:\n" + "\n".join(f"  {e}" for e in errors[:20]))
+        sys.exit("proposal has problems (edit proposal.json or rerun):\n" + "\n".join(f"  {e}" for e in errors))
+
+
+def apply_remap(args, src, d):
+    bundle = args.bundle
+    p = load_json(src)
+    if p is None or p.get("bundle") != bundle:
+        sys.exit(f"{src}: no remap proposal for {bundle}")
+    errors, new, cats = remap_errors(p, bundle)
+    if errors:
+        sys.exit(f"{src}:\n" + "\n".join(f"  {e}" for e in errors))
+    lo, hi = load_age_groups()["scale"]
+    data = load_json(POOL)
+    sources = {}  # concept key → its entry in the list the question used before
+    for q in data["questions"]:
+        if q.get("bundle") == bundle and q.get("concept"):
+            lst = concepts.load(*categories.key(q)) or concepts.load("base", q["subcategory"]) or {}
+            sources |= {concepts.key(c["name"]): c for c in lst.get("concepts", []) if c["name"] == q["concept"]}
+    if new:
+        old = {c["name"]: c["slug"] for c in categories.load(bundle)}
+        scope = {r["subcategory"]: r["scope"] for r in p["questions"]}
+        cats_ = [{"name": c["name"], "slug": c["slug"], "scope": "",
+                  "subcategories": [{"name": s, "scope": ""} for s in c["subcategories"]]} for c in categories.load(bundle)]
+        for s, c in new.items():
+            cat = next((x for x in cats_ if x["name"] == c), None)
+            if not cat:
+                cat = {"name": c, "slug": category_slug(bundle, c, bundle_row(bundle)["name"].split(": ")[-1], old),
+                       "scope": scope[s], "subcategories": []}
+                cats_.append(cat)
+            cat["subcategories"].append({"name": s, "scope": scope[s]})
+        write_taxonomy(bundle, {"bundle": bundle, "categories": cats_}, d)
+    subs = set(categories.subcategories(bundle))
+    for s, lst in old_lists(bundle, subs).items():
+        t = next((x["target"] for x in p["lists"] if x["subcategory"] == s), "")
+        concepts.path(bundle, s).unlink()
+        if not t:
+            print(f"  concept list {s}: deleted ({len(lst['concepts'])} concepts)")
+            continue
+        have = concepts.load(bundle, t)
+        if have:  # a second list for the same target: merged
+            own = {concepts.key(c["name"]) for c in have["concepts"]}
+            have["concepts"] += [c for c in lst["concepts"] if concepts.key(c["name"]) not in own]
+            have["facets"] += [f for f in lst.get("facets", []) if f not in have["facets"]]
+            lst = have
+        concepts.save(bundle, t, {**lst, "subcategory": t})
+        print(f"  concept list {s} → {t}")
+    moved, kept, cleared = [], 0, 0
+    with atomic.locked(POOL):
+        data = load_json(POOL)
+        target = {r["id"]: r["subcategory"] for r in p["questions"]}
+        for q in data["questions"]:
+            if q.get("bundle") != bundle:
+                continue
+            if q["subcategory"] != target[q["id"]]:
+                moved.append(f"{q['id']}: {q['subcategory']} → {target[q['id']]}")
+                q["subcategory"] = target[q["id"]]
+            if not q.get("concept"):
+                continue
+            lst = concepts.load(bundle, q["subcategory"])
+            if lst is None:
+                q.pop("concept")
+                cleared += 1
+                continue
+            k = concepts.key(q["concept"])
+            if same := next((c["name"] for c in lst["concepts"] if concepts.key(c["name"]) == k), None):
+                q["concept"] = same
+            else:
+                src_ = sources.get(k, {})
+                facet = src_.get("facet") or (lst.get("facets") or ["general"])[0]
+                if facet not in lst.setdefault("facets", []):
+                    lst["facets"].append(facet)
+                lst["concepts"].append({"name": q["concept"], "facet": facet,
+                                        "known_at": min(hi, max(lo, src_.get("known_at") or q["difficulty"]))})
+                concepts.save(bundle, q["subcategory"], lst)
+            kept += 1
+        save_json(POOL, data)
+        cmd_export(args)
+    print("\n".join(f"  {m}" for m in moved))
+    print(f"{len(moved)} question(s) moved, {len(new)} subcategories added; concepts: {kept} kept, {cleared} cleared (BN-13)")
 
 
 def cmd_validate(args):
@@ -4972,6 +5144,10 @@ def main():
     tx.add_argument("--bundle", required=True, help="a regional bundle")
     tx.add_argument("--apply", metavar="PROPOSAL", help="write categories.json and names from this proposal.json "
                     "(edited to the developer's answer); no LLM call but the names")
+    rm = add("remap", cmd_remap, "opus", run=False)
+    rm.add_argument("--bundle", required=True, help="a regional bundle")
+    rm.add_argument("--apply", metavar="PROPOSAL", help="move the questions as this proposal.json says "
+                    "(edited if needed); no LLM call but names of new subcategories")
     dp = add("draft", cmd_draft, "opus")
     dp.add_argument("--subcategories", help="comma-separated, first call only")
     dp.add_argument("--seed", type=int, default=1)

@@ -413,7 +413,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Mide más de 1.500 kilómetros.",
-      "subcategory": "Ríos de Colombia",
+      "subcategory": "Ríos, mares e islas de Colombia",
       "style": null,
       "quality": {
         "correct": 5,
@@ -650,7 +650,7 @@
         "pd_reasons": []
       },
       "fun_fact": "La pelea por el 'florero de Llorente' fue la chispa que encendió la revuelta del 20 de julio.",
-      "subcategory": "Historia",
+      "subcategory": "Independencia de Colombia",
       "style": null,
       "quality": {
         "correct": 5,
@@ -711,7 +711,7 @@
         "pd_reasons": []
       },
       "fun_fact": "El rojo viene de una planta llamada Macarenia clavigera, que crece sobre sus rocas.",
-      "subcategory": "Ríos de Colombia",
+      "subcategory": "Ríos, mares e islas de Colombia",
       "style": null,
       "quality": {
         "correct": 5,
@@ -774,7 +774,7 @@
         ]
       },
       "fun_fact": "Simón Bolívar dirigió al ejército patriota, que ganó la batalla en unas dos horas.",
-      "subcategory": "Historia",
+      "subcategory": "Independencia de Colombia",
       "style": null,
       "quality": {
         "correct": 5,
@@ -861,7 +861,7 @@
         ]
       },
       "fun_fact": "El departamento más grande es Amazonas; el más pequeño, San Andrés y Providencia.",
-      "subcategory": "Regiones de Colombia",
+      "subcategory": "Regiones y departamentos de Colombia",
       "style": null,
       "quality": {
         "correct": 5,
@@ -902,7 +902,6 @@
         "revised_on": "2026-10-06"
       },
       "bundle": "colombia",
-      "concept": "Departamentos de Colombia",
       "axes": {
         "move": "count",
         "stimulus": "none",
@@ -2680,7 +2679,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Colombia tiene más de 160 especies de colibríes, ¡más que casi cualquier otro país!",
-      "subcategory": "Aves",
+      "subcategory": "Animales de Colombia",
       "style": null,
       "quality": {
         "correct": 4,
@@ -4901,7 +4900,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Karol G se llama en realidad Carolina Giraldo Navarro.",
-      "subcategory": "Cantantes colombianos",
+      "subcategory": "Pop, rock y urbano colombiano",
       "style": null,
       "quality": {
         "correct": 4,
@@ -4940,7 +4939,6 @@
         "revised_on": "2026-10-06"
       },
       "bundle": "colombia",
-      "concept": "Medellín",
       "axes": {
         "move": "origin",
         "stimulus": "none",
@@ -4985,7 +4983,7 @@
         "pd_reasons": []
       },
       "fun_fact": "El vallenato es Patrimonio Cultural Inmaterial de la Humanidad desde 2015.",
-      "subcategory": "Ritmos colombianos",
+      "subcategory": "Ritmos, bailes e instrumentos de Colombia",
       "style": null,
       "quality": {
         "correct": 4,
@@ -5166,7 +5164,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Los bailarines de salsa caleña son famosos por mover los pies rapidísimo.",
-      "subcategory": "Ritmos colombianos",
+      "subcategory": "Salsa y música tropical colombiana",
       "style": null,
       "quality": {
         "correct": 5,
@@ -5289,7 +5287,7 @@
         "credit": null
       },
       "fun_fact": "Nació en la región del río Magdalena y viajó por toda América Latina.",
-      "subcategory": "Ritmos colombianos",
+      "subcategory": "Ritmos, bailes e instrumentos de Colombia",
       "style": null,
       "quality": {
         "correct": 5,
@@ -6673,7 +6671,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Es deporte nacional por ley desde el año 2000.",
-      "subcategory": "Deportes tradicionales colombianos",
+      "subcategory": "Otros deportes en Colombia",
       "style": null,
       "quality": {
         "correct": 5,
@@ -7616,7 +7614,7 @@
         "pd_reasons": []
       },
       "fun_fact": "La Balsa Muisca, encontrada en 1969, muestra al cacique cubierto de oro en una balsa.",
-      "subcategory": "Leyendas colombianas",
+      "subcategory": "Culturas precolombinas de Colombia",
       "style": null,
       "quality": {
         "correct": 5,
@@ -7642,7 +7640,6 @@
       },
       "background": null,
       "bundle": "colombia",
-      "concept": "Muiscas",
       "axes": {
         "move": "origin",
         "stimulus": "none",
@@ -7908,7 +7905,7 @@
         ]
       },
       "fun_fact": "Panamá fue parte de Colombia durante casi todo el siglo XIX.",
-      "subcategory": "Historia",
+      "subcategory": "Colombia en el siglo XX",
       "style": null,
       "quality": {
         "correct": 5,
@@ -8207,7 +8204,7 @@
         ]
       },
       "fun_fact": "El renacuajo del cuento se llama Rin Rin.",
-      "subcategory": "Cuentos infantiles",
+      "subcategory": "Poesía y cuentos infantiles colombianos",
       "style": null,
       "quality": {
         "correct": 5,
@@ -8233,7 +8230,6 @@
       },
       "background": null,
       "bundle": "colombia",
-      "concept": "Rafael Pombo",
       "axes": {
         "move": "who",
         "stimulus": "none",
@@ -8798,7 +8794,7 @@
         "pd_reasons": []
       },
       "fun_fact": "'La vorágine' es de José Eustasio Rivera y trata sobre la selva.",
-      "subcategory": "Literatura",
+      "subcategory": "Escritores y libros colombianos",
       "style": null,
       "quality": {
         "correct": 5,
@@ -8824,7 +8820,6 @@
       },
       "background": null,
       "bundle": "colombia",
-      "concept": "María (novela)",
       "axes": {
         "move": "identify",
         "stimulus": "none",
@@ -9405,7 +9400,7 @@
         "pd_reasons": []
       },
       "fun_fact": "La Marimonda nació en Barranquilla como una forma divertida de burlarse de los señores elegantes y los políticos.",
-      "subcategory": "Carnaval de Barranquilla",
+      "subcategory": "Carnavales y ferias de Colombia",
       "style": "showing a picture of a thing and asking for its name",
       "quality": {
         "correct": 5,
@@ -9430,7 +9425,6 @@
       },
       "background": null,
       "bundle": "colombia",
-      "concept": "Marimonda",
       "axes": {
         "move": "identify",
         "stimulus": "photo",
@@ -9473,7 +9467,7 @@
         "pd_reasons": []
       },
       "fun_fact": "En 2003 la UNESCO declaró el Carnaval de Barranquilla Obra Maestra del Patrimonio Oral e Inmaterial de la Humanidad.",
-      "subcategory": "Carnaval de Barranquilla",
+      "subcategory": "Carnavales y ferias de Colombia",
       "style": "asking for a plain fact",
       "quality": {
         "correct": 5,
@@ -9498,7 +9492,6 @@
       },
       "background": null,
       "bundle": "colombia",
-      "concept": "Quien lo vive es quien lo goza",
       "axes": {
         "move": "identify",
         "stimulus": "none",
@@ -9541,7 +9534,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Antes de la torre, en ese lugar había un puente levadizo que se subía de noche para que nadie pudiera entrar a la ciudad.",
-      "subcategory": "Ciudades de Colombia",
+      "subcategory": "Ciudades y pueblos de Colombia",
       "style": "showing a picture of a thing and asking for its name",
       "quality": {
         "correct": 4,
@@ -9617,7 +9610,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Las procesiones de Semana Santa de Popayán son Patrimonio Cultural Inmaterial de la Humanidad según la UNESCO.",
-      "subcategory": "Ciudades de Colombia",
+      "subcategory": "Ciudades y pueblos de Colombia",
       "style": "asking for a plain fact",
       "quality": {
         "correct": 5,
@@ -9677,7 +9670,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Tunja está a unos 2.800 metros de altura: es la capital de departamento más alta de Colombia, más alta incluso que Bogotá.",
-      "subcategory": "Ciudades de Colombia",
+      "subcategory": "Ciudades y pueblos de Colombia",
       "style": "which one is the biggest / smallest / oldest / fastest",
       "quality": {
         "correct": 5,
@@ -9731,7 +9724,7 @@
         "credit": null
       },
       "fun_fact": "La UNESCO declaró el Carnaval de Barranquilla 'Obra Maestra del Patrimonio Oral e Inmaterial de la Humanidad' en 2003.",
-      "subcategory": "Ciudades de Colombia",
+      "subcategory": "Ciudades y pueblos de Colombia",
       "style": "guess the person from three clues about them",
       "quality": {
         "correct": 5,
@@ -10531,7 +10524,7 @@
         ]
       },
       "fun_fact": "En Ecuador al lulo lo llaman 'naranjilla', aunque no tiene nada que ver con la naranja.",
-      "subcategory": "Frutas exóticas de Colombia",
+      "subcategory": "Frutas de Colombia",
       "style": "showing a picture of a thing and asking for its name",
       "quality": {
         "correct": 5,
@@ -10603,7 +10596,7 @@
         ]
       },
       "fun_fact": "Colombia es el mayor exportador de uchuvas del mundo; en inglés la llaman 'golden berry'.",
-      "subcategory": "Frutas exóticas de Colombia",
+      "subcategory": "Frutas de Colombia",
       "style": "asking for a plain fact",
       "quality": {
         "correct": 5,
@@ -12063,7 +12056,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Antes de ser Parque Nacional, la isla Gorgona fue una cárcel, hasta 1984.",
-      "subcategory": "Islas",
+      "subcategory": "Animales de Colombia",
       "style": "asking for a plain fact",
       "quality": {
         "correct": 4,
@@ -12202,7 +12195,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Dicen que al Mohán le encanta fumar tabaco y tocar música, y que con eso atrae a la gente a la orilla.",
-      "subcategory": "Mitos colombianos",
+      "subcategory": "Espantos y criaturas de Colombia",
       "style": "asking for a plain fact",
       "quality": {
         "correct": 5,
@@ -12262,7 +12255,7 @@
         "pd_reasons": []
       },
       "fun_fact": "En Antioquia y el Eje Cafetero cuentan que la Madremonte hace perder el camino a quienes cortan árboles o ensucian las quebradas.",
-      "subcategory": "Mitos colombianos",
+      "subcategory": "Espantos y criaturas de Colombia",
       "style": "guess the person from three clues about them",
       "quality": {
         "correct": 5,
@@ -12322,7 +12315,7 @@
         "pd_reasons": []
       },
       "fun_fact": "En Plato, Magdalena, hay una estatua del Hombre Caimán y cada año celebran un festival en su honor.",
-      "subcategory": "Mitos colombianos",
+      "subcategory": "Espantos y criaturas de Colombia",
       "style": "where does it come from (origin of a food, invention or animal)",
       "quality": {
         "correct": 5,
@@ -12382,7 +12375,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Los frailejones crecen muy despacio, más o menos un centímetro al año, así que uno alto puede tener muchísimos años.",
-      "subcategory": "Parques naturales de Colombia",
+      "subcategory": "Plantas y flores de Colombia",
       "style": "showing a picture of a thing and asking for its name",
       "quality": {
         "correct": 5,
@@ -12407,7 +12400,6 @@
       },
       "background": null,
       "bundle": "colombia",
-      "concept": "Frailejón",
       "axes": {
         "move": "identify",
         "stimulus": "photo",
@@ -12450,7 +12442,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Dentro del parque están las ruinas de Pueblito, un antiguo poblado construido por los indígenas taironas.",
-      "subcategory": "Parques naturales de Colombia",
+      "subcategory": "Parques naturales y ecosistemas de Colombia",
       "style": "asking for a plain fact",
       "quality": {
         "correct": 5,
@@ -12518,7 +12510,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Chiribiquete fue declarado Patrimonio de la Humanidad por la UNESCO en 2018 y guarda miles de pinturas antiguas en sus rocas, muchas de jaguares.",
-      "subcategory": "Parques naturales de Colombia",
+      "subcategory": "Parques naturales y ecosistemas de Colombia",
       "style": "which one is the biggest / smallest / oldest / fastest",
       "quality": {
         "correct": 5,
@@ -13107,7 +13099,7 @@
         ]
       },
       "fun_fact": "El corsario inglés Francis Drake se tomó Cartagena en 1586 y solo se fue cuando le pagaron un enorme rescate.",
-      "subcategory": "Piratas",
+      "subcategory": "Conquista y Colonia en Colombia",
       "style": "asking for a plain fact",
       "quality": {
         "correct": 5,
@@ -13133,7 +13125,6 @@
       "background": null,
       "difficulty_original": 5,
       "bundle": "colombia",
-      "concept": "Cartagena de Indias",
       "axes": {
         "move": "identify",
         "stimulus": "none",
@@ -13176,7 +13167,7 @@
         "pd_reasons": []
       },
       "fun_fact": "La bandeja paisa lleva tantas cosas que no cabe en un plato normal: por eso se sirve en una bandeja.",
-      "subcategory": "Platos típicos colombianos",
+      "subcategory": "Platos típicos de Colombia",
       "style": "showing a picture of a thing and asking for its name",
       "quality": {
         "correct": 4,
@@ -13621,7 +13612,7 @@
         "pd_reasons": []
       },
       "fun_fact": "La música de marimba y los cantos del Pacífico Sur de Colombia son Patrimonio Cultural Inmaterial de la Humanidad según la UNESCO.",
-      "subcategory": "Ritmos colombianos",
+      "subcategory": "Ritmos, bailes e instrumentos de Colombia",
       "style": "where does it come from (origin of a food, invention or animal)",
       "quality": {
         "correct": 5,
@@ -13674,7 +13665,7 @@
         "credit": null
       },
       "fun_fact": "El joropo se baila a los dos lados de la frontera: también es el baile nacional de Venezuela.",
-      "subcategory": "Ritmos colombianos",
+      "subcategory": "Ritmos, bailes e instrumentos de Colombia",
       "style": "showing a picture of a thing and asking for its name",
       "quality": {
         "correct": 5,
@@ -16326,7 +16317,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Punta Gallinas, cerca de las dunas de Taroa, es el punto más al norte de toda Suramérica.",
-      "subcategory": "Desiertos",
+      "subcategory": "Montañas y paisajes de Colombia",
       "style": "asking for a plain fact",
       "quality": {
         "correct": 5,
@@ -16359,7 +16350,6 @@
       },
       "background": null,
       "bundle": "colombia",
-      "concept": "Dunas de Taroa",
       "axes": {
         "move": "identify",
         "stimulus": "none",
@@ -16478,7 +16468,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Floridablanca, en Santander, es famosa en toda Colombia por sus obleas.",
-      "subcategory": "Dulces colombianos",
+      "subcategory": "Dulces y postres colombianos",
       "style": "showing a picture of a thing and asking for its name",
       "quality": {
         "correct": 5,
@@ -16546,7 +16536,7 @@
         "pd_reasons": []
       },
       "fun_fact": "El bocadillo veleño se envuelve en hojas de bijao, una planta que le ayuda a conservarse.",
-      "subcategory": "Dulces colombianos",
+      "subcategory": "Dulces y postres colombianos",
       "style": "what is it made of",
       "quality": {
         "correct": 5,
@@ -16614,7 +16604,7 @@
         "pd_reasons": []
       },
       "fun_fact": "El manjar blanco se hace revolviendo leche, azúcar y arroz durante horas en una paila de cobre.",
-      "subcategory": "Dulces colombianos",
+      "subcategory": "Dulces y postres colombianos",
       "style": "where does it come from (origin of a food, invention or animal)",
       "quality": {
         "correct": 4,
@@ -16682,7 +16672,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Se cree que el nombre 'arequipe' viene de Arequipa, una ciudad de Perú.",
-      "subcategory": "Dulces colombianos",
+      "subcategory": "Dulces y postres colombianos",
       "style": "asking for a plain fact",
       "quality": {
         "correct": 4,
@@ -17054,7 +17044,7 @@
         "pd_reasons": []
       },
       "fun_fact": "En 2009 la UNESCO declaró el Carnaval de Negros y Blancos Patrimonio Cultural Inmaterial de la Humanidad.",
-      "subcategory": "Fiestas colombianas",
+      "subcategory": "Carnavales y ferias de Colombia",
       "style": "asking for a plain fact",
       "quality": {
         "correct": 5,
@@ -17087,7 +17077,6 @@
       },
       "background": null,
       "bundle": "colombia",
-      "concept": "Carnaval de Negros y Blancos",
       "axes": {
         "move": "origin",
         "stimulus": "none",
@@ -18355,7 +18344,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Los gozos de la novena los escribió una monja bogotana, la Madre María Ignacia, a finales del siglo XIX.",
-      "subcategory": "Navidad",
+      "subcategory": "Navidad y fechas especiales en Colombia",
       "style": "complete the song lyric",
       "quality": {
         "correct": 5,
@@ -18388,7 +18377,6 @@
       },
       "background": null,
       "bundle": "colombia",
-      "concept": "Gozos",
       "axes": {
         "move": "sequence",
         "stimulus": "none",
@@ -19032,7 +19020,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Los recicladores de oficio recogen gran parte del material que se recicla en Colombia, y desde hace años la ley los reconoce como prestadores del servicio de aseo.",
-      "subcategory": "Reciclaje",
+      "subcategory": "Casa, colegio y trámites en Colombia",
       "style": "asking for a plain fact",
       "quality": {
         "correct": 5,
@@ -19065,7 +19053,6 @@
       },
       "background": null,
       "bundle": "colombia",
-      "concept": "Caneca blanca",
       "axes": {
         "move": "identify",
         "stimulus": "none",
@@ -19556,7 +19543,7 @@
         "pd_reasons": []
       },
       "fun_fact": "La palma de cera puede pasar de 50 metros de altura y es la palma más alta del mundo.",
-      "subcategory": "Árboles",
+      "subcategory": "Símbolos patrios de Colombia",
       "style": "showing a picture of a thing and asking for its name",
       "quality": {
         "correct": 5,
@@ -19925,7 +19912,7 @@
         "credit": null
       },
       "fun_fact": "El Campín se inauguró en 1938, cuando la ciudad cumplía 400 años de fundada.",
-      "subcategory": "Clubes de fútbol colombianos",
+      "subcategory": "Fútbol colombiano de clubes",
       "style": "what do these three things have in common",
       "quality": {
         "correct": 5,
@@ -20001,7 +19988,7 @@
         "pd_reasons": []
       },
       "fun_fact": "En 1989 Atlético Nacional fue el primer club colombiano en ganar la Copa Libertadores, y la volvió a ganar en 2016.",
-      "subcategory": "Clubes de fútbol colombianos",
+      "subcategory": "Fútbol colombiano de clubes",
       "style": "asking for a plain fact",
       "quality": {
         "correct": 5,
@@ -20307,7 +20294,7 @@
         ]
       },
       "fun_fact": "Aunque le dicen desierto, la Tatacoa es en realidad un bosque seco tropical.",
-      "subcategory": "Desiertos",
+      "subcategory": "Montañas y paisajes de Colombia",
       "style": "showing a picture of a thing and asking for its name",
       "quality": {
         "correct": 5,
@@ -20340,7 +20327,6 @@
       },
       "background": null,
       "bundle": "colombia",
-      "concept": "Desierto de la Tatacoa",
       "axes": {
         "move": "identify",
         "stimulus": "photo",
@@ -21468,7 +21454,7 @@
         "pd_reasons": []
       },
       "fun_fact": "La Novena de Aguinaldos la escribió un fraile hace unos 240 años, y se reza sobre todo en Colombia y Ecuador.",
-      "subcategory": "Navidad",
+      "subcategory": "Navidad y fechas especiales en Colombia",
       "style": "asking for a plain fact",
       "quality": {
         "correct": 5,
@@ -21501,7 +21487,6 @@
       },
       "background": null,
       "bundle": "colombia",
-      "concept": "Novena de Aguinaldos",
       "axes": {
         "move": "when",
         "stimulus": "none",
@@ -23694,7 +23679,7 @@
         "pd_reasons": []
       },
       "fun_fact": "El dicho tiene segunda parte: «a papaya puesta, papaya partida», o sea, si alguien se descuida, siempre habrá otro que aproveche.",
-      "subcategory": "Dichos colombianos",
+      "subcategory": "Dichos y expresiones colombianas",
       "style": "what does this word mean",
       "quality": {
         "correct": 5,
@@ -23770,7 +23755,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Algunas silletas grandes pesan tanto como un niño de 12 años, ¡y los silleteros las cargan durante todo el desfile!",
-      "subcategory": "Feria de las Flores",
+      "subcategory": "Carnavales y ferias de Colombia",
       "style": "showing a picture of a thing and asking for its name",
       "quality": {
         "correct": 5,
@@ -23803,7 +23788,6 @@
       },
       "background": null,
       "bundle": "colombia",
-      "concept": "Silleta",
       "axes": {
         "move": "identify",
         "stimulus": "photo",
@@ -23854,7 +23838,7 @@
         "pd_reasons": []
       },
       "fun_fact": "En la Feria de las Flores no solo desfilan flores: también hay un desfile de carros clásicos y antiguos que recorre Medellín.",
-      "subcategory": "Feria de las Flores",
+      "subcategory": "Carnavales y ferias de Colombia",
       "style": "asking for a plain fact",
       "quality": {
         "correct": 5,
@@ -23887,7 +23871,6 @@
       },
       "background": null,
       "bundle": "colombia",
-      "concept": "Agosto",
       "axes": {
         "move": "when",
         "stimulus": "none",
@@ -27333,7 +27316,7 @@
         "pd_reasons": []
       },
       "fun_fact": "En el parque El Gallineral de San Gil, los árboles están cubiertos de unas barbas grises (la planta llamada 'barba de viejo') que cuelgan como cortinas.",
-      "subcategory": "Deportes extremos",
+      "subcategory": "Ciudades y pueblos de Colombia",
       "style": "asking for a plain fact",
       "quality": {
         "correct": 5,
@@ -27366,7 +27349,6 @@
       },
       "background": null,
       "bundle": "colombia",
-      "concept": "San Gil",
       "axes": {
         "move": "identify",
         "stimulus": "none",
@@ -28393,7 +28375,7 @@
         "pd_reasons": []
       },
       "fun_fact": "El Museo del Oro guarda más de 30.000 objetos de oro y otros metales hechos por pueblos indígenas de Colombia.",
-      "subcategory": "Museos",
+      "subcategory": "Pintores, escultores y museos de Colombia",
       "style": "asking for a plain fact",
       "quality": {
         "correct": 5,
@@ -28426,7 +28408,6 @@
       },
       "background": null,
       "bundle": "colombia",
-      "concept": "Museo del Oro",
       "axes": {
         "move": "identify",
         "stimulus": "none",
@@ -29212,7 +29193,7 @@
         "pd_reasons": []
       },
       "fun_fact": "En Quimbaya, Quindío, cada año compiten los barrios en un festival de velas y faroles que llena todo el pueblo de luz.",
-      "subcategory": "Tradiciones colombianas",
+      "subcategory": "Navidad y fechas especiales en Colombia",
       "style": "asking for a plain fact",
       "quality": {
         "correct": 5,
@@ -29281,7 +29262,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Entre más vueltas de trenza tiene un sombrero vueltiao (puede tener 21, 23 o más), más fino y costoso es.",
-      "subcategory": "Tradiciones colombianas",
+      "subcategory": "Artesanías y trajes típicos de Colombia",
       "style": "what is it made of",
       "quality": {
         "correct": 5,
@@ -30235,7 +30216,7 @@
         "pd_reasons": []
       },
       "fun_fact": "El Desfile de Silleteros se hace desde 1957, y algunas silletas son tan grandes que pesan más de 60 kilos.",
-      "subcategory": "Tradiciones colombianas",
+      "subcategory": "Carnavales y ferias de Colombia",
       "style": "showing a picture of a thing and asking for its name",
       "quality": {
         "correct": 4,
@@ -30730,7 +30711,7 @@
         "pd_reasons": []
       },
       "fun_fact": "En México también le dicen así al tacaño, y para decirlo sin hablar, la gente se da golpecitos en esa parte del brazo.",
-      "subcategory": "Dichos colombianos",
+      "subcategory": "Palabras colombianas",
       "style": "guess the word from its definition",
       "quality": {
         "correct": 5,
@@ -31712,7 +31693,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Los muiscas jugaban algo parecido al tejo hace siglos, y según se cuenta lanzaban discos de piedra o de oro.",
-      "subcategory": "Deportes tradicionales colombianos",
+      "subcategory": "Otros deportes en Colombia",
       "style": "where does it come from (origin of a food, invention or animal)",
       "quality": {
         "correct": 5,
@@ -32610,7 +32591,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Amazonas es el departamento más grande de Colombia, pero uno de los que tienen menos habitantes.",
-      "subcategory": "Regiones de Colombia",
+      "subcategory": "Regiones y departamentos de Colombia",
       "style": "showing a map outline and asking which country or department it is",
       "quality": {
         "correct": 5,
@@ -32643,7 +32624,6 @@
       },
       "background": null,
       "bundle": "colombia",
-      "concept": "Amazonas (departamento)",
       "axes": {
         "move": "identify",
         "stimulus": "map_outline",
@@ -32686,7 +32666,7 @@
         "pd_reasons": []
       },
       "fun_fact": "En el Chocó llueve tanto que está entre los lugares más lluviosos de todo el mundo.",
-      "subcategory": "Regiones de Colombia",
+      "subcategory": "Regiones y departamentos de Colombia",
       "style": "asking for a plain fact",
       "quality": {
         "correct": 5,
@@ -32719,7 +32699,6 @@
       },
       "background": null,
       "bundle": "colombia",
-      "concept": "Chocó",
       "axes": {
         "move": "identify",
         "stimulus": "none",
@@ -34193,7 +34172,7 @@
         "pd_reasons": []
       },
       "fun_fact": "En Perú se juega casi igual, pero allá le dicen 'el sapo'.",
-      "subcategory": "Deportes tradicionales colombianos",
+      "subcategory": "Juegos tradicionales colombianos",
       "style": "showing a picture of a thing and asking for its name",
       "quality": {
         "correct": 5,
@@ -34261,7 +34240,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Las mechas tienen forma de triangulito, y reventar una da más puntos que solo caer cerca del bocín.",
-      "subcategory": "Deportes tradicionales colombianos",
+      "subcategory": "Otros deportes en Colombia",
       "style": "what is it made of",
       "quality": {
         "correct": 5,
@@ -34329,7 +34308,7 @@
         "pd_reasons": []
       },
       "fun_fact": "La Feria de Cali empezó en 1957 y hoy abre con el Salsódromo, un desfile con cientos de bailarines de salsa.",
-      "subcategory": "Fiestas colombianas",
+      "subcategory": "Carnavales y ferias de Colombia",
       "style": "asking for a plain fact",
       "quality": {
         "correct": 5,
@@ -34362,7 +34341,6 @@
       },
       "background": null,
       "bundle": "colombia",
-      "concept": "Feria de Cali",
       "axes": {
         "move": "when",
         "stimulus": "none",
@@ -34527,7 +34505,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Según la leyenda, el Silbón silba las notas do, re, mi, fa, sol, la, si, y por eso dicen que en el llano da miedo oír a alguien chiflando la escala de noche.",
-      "subcategory": "Leyendas colombianas",
+      "subcategory": "Espantos y criaturas de Colombia",
       "style": "which character from a movie or game is described",
       "quality": {
         "correct": 5,
@@ -34560,7 +34538,6 @@
       },
       "background": null,
       "bundle": "colombia",
-      "concept": "El Silbón",
       "axes": {
         "move": "identify",
         "stimulus": "none",
@@ -35175,7 +35152,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Ciudad Perdida fue construida hacia el año 800, unos 650 años antes que Machu Picchu.",
-      "subcategory": "Regiones de Colombia",
+      "subcategory": "Culturas precolombinas de Colombia",
       "style": "showing a picture of a thing and asking for its name",
       "quality": {
         "correct": 4,
@@ -35208,7 +35185,6 @@
       },
       "background": null,
       "bundle": "colombia",
-      "concept": "Ciudad Perdida",
       "axes": {
         "move": "identify",
         "stimulus": "photo",
@@ -35251,7 +35227,7 @@
         "pd_reasons": []
       },
       "fun_fact": "El Salto del Tequendama mide unos 157 metros de alto, y la vieja casona que está al lado hoy es un museo.",
-      "subcategory": "Ríos de Colombia",
+      "subcategory": "Ríos, mares e islas de Colombia",
       "style": "asking for a plain fact",
       "quality": {
         "correct": 5,
@@ -35654,7 +35630,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Una lechona grande puede alimentar a más de 50 personas, por eso es la reina de las fiestas familiares.",
-      "subcategory": "Tradiciones colombianas",
+      "subcategory": "Platos típicos de Colombia",
       "style": "where does it come from (origin of a food, invention or animal)",
       "quality": {
         "correct": 5,
@@ -35854,7 +35830,7 @@
         "pd_reasons": []
       },
       "fun_fact": "El Cauca y el Magdalena corren casi en paralelo durante más de mil kilómetros, separados por la cordillera Central, y solo se juntan cerca de Mompox.",
-      "subcategory": "Ríos de Colombia",
+      "subcategory": "Ríos, mares e islas de Colombia",
       "style": "which one is the biggest / smallest / oldest / fastest in the world (the real record holder, never just the biggest among the four options)",
       "quality": {
         "correct": 4,
@@ -36313,7 +36289,7 @@
         "pd_reasons": []
       },
       "fun_fact": "En los pueblos, la chiva lleva en el techo de todo: bultos de café, racimos de plátano y a veces hasta gallinas.",
-      "subcategory": "Tradiciones colombianas",
+      "subcategory": "Transporte en Colombia",
       "style": "showing a picture of a thing and asking for its name",
       "quality": {
         "correct": 5,
@@ -36382,7 +36358,7 @@
         "pd_reasons": []
       },
       "fun_fact": "En muchas casas la natilla se revuelve durante largo rato en una paila grande, y no se puede dejar de mover para que no se pegue.",
-      "subcategory": "Tradiciones colombianas",
+      "subcategory": "Dulces y postres colombianos",
       "style": "what is it made of",
       "quality": {
         "correct": 5,
@@ -36911,9 +36887,8 @@
         "pd_reasons": []
       },
       "fun_fact": "Los costeños suelen 'comerse' la s al final de las palabras, y por eso 'los cocos' puede sonar como 'lo' coco'.",
-      "subcategory": "Carnaval de Barranquilla",
+      "subcategory": "Hablas regionales de Colombia",
       "style": null,
-      "concept": "Costeño",
       "axes": {
         "move": "cause_effect",
         "stimulus": "none",
@@ -37072,9 +37047,8 @@
         "pd_reasons": []
       },
       "fun_fact": "La universidad que lleva su nombre se fundó en Bogotá en 1954, casi 140 años después de su presidencia.",
-      "subcategory": "Colombianos famosos",
+      "subcategory": "Independencia de Colombia",
       "style": null,
-      "concept": "Jorge Tadeo Lozano",
       "axes": {
         "move": "origin",
         "stimulus": "none",
@@ -37376,9 +37350,8 @@
         "pd_reasons": []
       },
       "fun_fact": "En el Valle de Aburrá no hay una sola ciudad: allí viven diez municipios, unidos en un área metropolitana.",
-      "subcategory": "Feria de las Flores",
+      "subcategory": "Ciudades y pueblos de Colombia",
       "style": null,
-      "concept": "Valle de Aburrá",
       "axes": {
         "move": "analogy",
         "stimulus": "none",
@@ -37460,9 +37433,8 @@
         "pd_reasons": []
       },
       "fun_fact": "Las astromelias cortadas pueden durar hasta unas dos semanas en un florero, por eso les encantan a los floristas.",
-      "subcategory": "Feria de las Flores",
+      "subcategory": "Plantas y flores de Colombia",
       "style": null,
-      "concept": "Astromelia",
       "axes": {
         "move": "name_concept",
         "stimulus": "none",
@@ -37544,9 +37516,8 @@
         "pd_reasons": []
       },
       "fun_fact": "La pólvora se inventó en China hace más de mil años.",
-      "subcategory": "Fiestas colombianas",
+      "subcategory": "Navidad y fechas especiales en Colombia",
       "style": null,
-      "concept": "Pólvora",
       "axes": {
         "move": "name_concept",
         "stimulus": "none",
@@ -37697,7 +37668,7 @@
         "pd_reasons": []
       },
       "fun_fact": "La champola de guanábana es típica del Caribe colombiano, y en Cuba también se toma una bebida con ese mismo nombre.",
-      "subcategory": "Frutas exóticas de Colombia",
+      "subcategory": "Bebidas colombianas",
       "style": null,
       "concept": "Champola",
       "axes": {
@@ -38703,9 +38674,8 @@
         "pd_reasons": []
       },
       "fun_fact": "Ese gol ganó el Premio Puskás de la FIFA al mejor gol del año 2014.",
-      "subcategory": "Mundiales de fútbol",
+      "subcategory": "Selección Colombia",
       "style": null,
-      "concept": "Gol de James a Uruguay",
       "axes": {
         "move": "when",
         "stimulus": "none",
@@ -38789,9 +38759,8 @@
         ]
       },
       "fun_fact": "Colombia le ganó 2-1 a Alemania en ese partido, con un gol de cabeza de Manuela Vanegas en los últimos segundos.",
-      "subcategory": "Mundiales de fútbol",
+      "subcategory": "Selección Colombia",
       "style": null,
-      "concept": "Gol de Linda Caicedo a Alemania",
       "axes": {
         "move": "estimate",
         "stimulus": "none",
@@ -39636,9 +39605,8 @@
         "pd_reasons": []
       },
       "fun_fact": "El Chocó es uno de los lugares más lluviosos del planeta: en algunas zonas llueve casi todos los días del año.",
-      "subcategory": "Regiones de Colombia",
+      "subcategory": "Regiones y departamentos de Colombia",
       "style": null,
-      "concept": "Chocoano",
       "axes": {
         "move": "odd_one_out",
         "stimulus": "none",
@@ -39720,9 +39688,8 @@
         "pd_reasons": []
       },
       "fun_fact": "La rana de cristal de la moneda de 500 tiene la barriga tan transparente que se le pueden ver los órganos por dentro.",
-      "subcategory": "Animales de Colombia",
+      "subcategory": "Billetes y monedas de Colombia",
       "style": null,
-      "concept": "Moneda de 500 pesos",
       "axes": {
         "move": "connection",
         "stimulus": "none",
@@ -39879,7 +39846,7 @@
         "pd_reasons": []
       },
       "fun_fact": "La pulpa del zapote es tan fibrosa que, al comerlo, a uno se le quedan hilitos entre los dientes.",
-      "subcategory": "Bebidas colombianas",
+      "subcategory": "Frutas de Colombia",
       "style": null,
       "concept": "Zapote",
       "axes": {
@@ -39963,9 +39930,8 @@
         "pd_reasons": []
       },
       "fun_fact": "Por eso en Colombia se dice que alguien «está con la tusa»: quedó vacío, como la mazorca después de que se comieron todos los granos.",
-      "subcategory": "Cantantes colombianos",
+      "subcategory": "Palabras colombianas",
       "style": null,
-      "concept": "Tusa",
       "axes": {
         "move": "word_meaning",
         "stimulus": "none",
@@ -40052,9 +40018,8 @@
         "pd_reasons": []
       },
       "fun_fact": "El gran Joe Arroyo empezó su carrera cantando con Fruko y sus Tesos antes de armar su propia orquesta.",
-      "subcategory": "Cantantes colombianos",
+      "subcategory": "Salsa y música tropical colombiana",
       "style": null,
-      "concept": "Fruko y sus Tesos",
       "axes": {
         "move": "analogy",
         "stimulus": "none",
@@ -40205,7 +40170,7 @@
         "pd_reasons": []
       },
       "fun_fact": "El Junior dejó el Romelio Martínez cuando se inauguró el Estadio Metropolitano, uno de los más grandes de Colombia.",
-      "subcategory": "Carnaval de Barranquilla",
+      "subcategory": "Fútbol colombiano de clubes",
       "style": null,
       "concept": "Estadio Romelio Martínez",
       "axes": {
@@ -40682,9 +40647,8 @@
         "pd_reasons": []
       },
       "fun_fact": "La hora loca es tan popular en las fiestas colombianas que hay empresas dedicadas solo a animarla.",
-      "subcategory": "Fiestas colombianas",
+      "subcategory": "Casa, colegio y trámites en Colombia",
       "style": null,
-      "concept": "Hora loca",
       "axes": {
         "move": "sequence",
         "stimulus": "none",
@@ -40843,7 +40807,7 @@
         "pd_reasons": []
       },
       "fun_fact": "La atemoya nació de cruces hechos a propósito en Florida a principios del siglo XX (hacia 1907), y su nombre mezcla «ate» (otro nombre del anón) con «chirimoya».",
-      "subcategory": "Frutas exóticas de Colombia",
+      "subcategory": "Frutas de Colombia",
       "style": null,
       "concept": "Atemoya",
       "axes": {
@@ -41819,9 +41783,8 @@
         ]
       },
       "fun_fact": "En 1671 el pirata Henry Morgan tomó el castillo de San Lorenzo antes de cruzar el istmo y saquear la ciudad de Panamá.",
-      "subcategory": "Piratas",
+      "subcategory": "Conquista y Colonia en Colombia",
       "style": null,
-      "concept": "Castillo de San Lorenzo el Real del Chagres",
       "axes": {
         "move": "odd_one_out",
         "stimulus": "none",
@@ -41985,9 +41948,8 @@
         "pd_reasons": []
       },
       "fun_fact": "En la costa Caribe a la gente del interior andino, bogotanos incluidos, se le dice «cachacos».",
-      "subcategory": "Regiones de Colombia",
+      "subcategory": "Hablas regionales de Colombia",
       "style": null,
-      "concept": "Rolo",
       "axes": {
         "move": "word_meaning",
         "stimulus": "none",
@@ -42061,9 +42023,8 @@
         "pd_reasons": []
       },
       "fun_fact": "En San Andrés se oyen tres lenguas: el creole, el español y el inglés.",
-      "subcategory": "Regiones de Colombia",
+      "subcategory": "Lenguas de Colombia",
       "style": null,
-      "concept": "Creole sanandresano",
       "axes": {
         "move": "made_of",
         "stimulus": "photo",
@@ -42275,7 +42236,7 @@
         "pd_reasons": []
       },
       "fun_fact": "Los gallinazos pueden comer carne podrida sin enfermarse gracias a sus jugos gástricos, que son muy ácidos.",
-      "subcategory": "Símbolos patrios de Colombia",
+      "subcategory": "Animales de Colombia",
       "style": null,
       "concept": "Gallinazo",
       "axes": {
@@ -42359,9 +42320,8 @@
         "pd_reasons": []
       },
       "fun_fact": "La Casa de Nariño está en el lugar donde nació Antonio Nariño, el prócer que tradujo al español los Derechos del Hombre.",
-      "subcategory": "Símbolos patrios de Colombia",
+      "subcategory": "Lugares y monumentos de Colombia",
       "style": null,
-      "concept": "Casa de Nariño",
       "axes": {
         "move": "purpose",
         "stimulus": "photo",
@@ -42435,9 +42395,8 @@
         "pd_reasons": []
       },
       "fun_fact": "En la bandera de Antioquia, el blanco representa la pureza y el verde la esperanza y la abundancia.",
-      "subcategory": "Símbolos patrios de Colombia",
+      "subcategory": "Símbolos de departamentos y ciudades",
       "style": null,
-      "concept": "Bandera de Antioquia",
       "axes": {
         "move": "analogy",
         "stimulus": "none",

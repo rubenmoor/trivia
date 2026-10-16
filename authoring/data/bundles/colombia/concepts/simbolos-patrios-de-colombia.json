@@ -11,7 +11,8 @@
     "Lugares y monumentos patrios",
     "Protocolo y uso de los símbolos",
     "Historia de los símbolos patrios",
-    "Banderas y escudos departamentales"
+    "Banderas y escudos departamentales",
+    "Árboles de Colombia"
   ],
   "axis_fit": {
     "move": {
@@ -741,6 +742,11 @@
       "name": "Bandera del Quindío",
       "facet": "Banderas y escudos departamentales",
       "known_at": 13
+    },
+    {
+      "name": "Palma de cera",
+      "facet": "Árboles de Colombia",
+      "known_at": 5
     }
   ]
 }

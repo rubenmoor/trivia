@@ -12,7 +12,9 @@
     "Animales del campo y la finca",
     "Ecosistemas y regiones de fauna",
     "Animales en cultura y Encanto",
-    "Nombres y dichos de animales"
+    "Nombres y dichos de animales",
+    "Animales y plantas de islas",
+    "Cóndor, orquídea y palma de cera"
   ],
   "axis_fit": {
     "move": {
@@ -697,6 +699,16 @@
       "name": "Kikiriki",
       "facet": "Nombres y dichos de animales",
       "known_at": 1
+    },
+    {
+      "name": "Ballena jorobada",
+      "facet": "Animales y plantas de islas",
+      "known_at": 5
+    },
+    {
+      "name": "Gallinazo",
+      "facet": "Cóndor, orquídea y palma de cera",
+      "known_at": 5
     }
   ]
 }

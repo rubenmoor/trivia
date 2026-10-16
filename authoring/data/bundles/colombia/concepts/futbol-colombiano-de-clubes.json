@@ -1,5 +1,5 @@
 {
-  "subcategory": "Clubes de fútbol colombianos",
+  "subcategory": "Fútbol colombiano de clubes",
   "facets": [
     "Clubes grandes y sus títulos",
     "Apodos y mascotas de clubes",
@@ -12,7 +12,8 @@
     "Liga colombiana: formato y reglas",
     "Hinchadas, barras y cantos",
     "Historia y fundación de clubes",
-    "Récords y momentos memorables"
+    "Récords y momentos memorables",
+    "Barranquilla: ciudad y lugares"
   ],
   "axis_fit": {
     "move": {
@@ -1017,6 +1018,11 @@
       "name": "Penal a lo Panenka",
       "facet": "Récords y momentos memorables",
       "known_at": 11
+    },
+    {
+      "name": "Estadio Romelio Martínez",
+      "facet": "Barranquilla: ciudad y lugares",
+      "known_at": 12
     }
   ]
 }

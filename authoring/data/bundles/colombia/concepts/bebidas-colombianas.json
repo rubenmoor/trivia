@@ -12,7 +12,8 @@
     "Preparación y utensilios",
     "Bebidas en fiestas y costumbres",
     "Historia de las bebidas colombianas",
-    "Palabras y dichos de bebidas"
+    "Palabras y dichos de bebidas",
+    "Anonáceas y frutas cremosas"
   ],
   "axis_fit": {
     "move": {
@@ -1082,6 +1083,11 @@
       "name": "Gaseosa",
       "facet": "Palabras y dichos de bebidas",
       "known_at": 2
+    },
+    {
+      "name": "Champola",
+      "facet": "Anonáceas y frutas cremosas",
+      "known_at": 12
     }
   ]
 }
