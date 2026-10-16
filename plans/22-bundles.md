@@ -15,14 +15,14 @@ A **bundle** is a named set of questions that players can switch on or off befor
 ## The first bundles
 | id | kind | Name | Rule (for the pipeline) |
 |---|---|---|---|
-| `base` | base | Básico | Everything else: answerable by the players anywhere in the Spanish-speaking world, including well-known facts about Colombia. |
+| `base` | base | Básico | Everything else: answerable by families anywhere in the world, whatever their language, including well-known facts about any country (Colombia's included; decision 240). |
 | `colombia` | region | Regional: Colombia | Answering needs a connection to Colombia: places, food, customs, people, music, sport, words or history that the players outside Colombia mostly wouldn't know. |
 
 ## In the pipeline
 - **Existing pool:** every question gets `bundle: "base"`; then `qgen bundles` (an LLM pass, about 20 questions per call) proposes `colombia` where the rule fits and writes it into the pool. The developer checks the proposals in the review tool (`/review?bundle=colombia`) and changes any that are wrong there.
 - **New questions:** until BN-8 the drafter picked the bundle by the rules. Since BN-8 the batch's bundle is set by the command (see "Batches per bundle"); the developer can still change it in the review tool.
 - **Checks and output:** `validate` (bundle must exist), `export` (the game needs `bundle`), `report` (questions and supply per bundle).
-- **House style:** base questions may use Colombian references that anyone in the Spanish-speaking world knows; anything more goes into `colombia`.
+- **House style:** base questions follow its "International angle" (well-known facts about any country, Colombia's included); anything more goes into `colombia`.
 
 ## Batches per bundle (D-41)
 The developer's direction (2026-10-07): a batch writes for **one bundle, chosen by the command**, never by the drafter.

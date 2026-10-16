@@ -1,5 +1,6 @@
-- All content is in English.
-- US spelling ("color", "center"). Words all English speakers understand; where US and UK English differ ("soccer"/"football", "fries"/"chips", "cookie"/"biscuit"), reword around it if that stays natural, else the US word.
+- All content is in English, whether you write the question or translate it.
+- Plain, natural English that every English speaker reads easily: short common words, no slang, no idioms of one country.
+- US spelling ("color", "center"). Words all English speakers understand; where US and UK English differ ("soccer"/"football", "fries"/"chips", "cookie"/"biscuit"), reword around it if that stays natural, else the US word. US spelling is about the words, not the topics (house style "International angle").
 - Units: metric first; add imperial in brackets in the question text and fun fact where English speakers think in it ("8849 m (29,032 ft)", "30 °C (86 °F)"). The four options use one unit, all in the same form.
 - Numbers: comma as thousands separator from 1,000 ("42,195 people"), decimal point ("42.195 km"), years without separator; large round numbers in words ("3 million"). Dates: "July 20, 1969".
 - Names and titles as English speakers know them: "Christopher Columbus", "Joan of Arc", the English title of a film or book ("Inside Out", "One Hundred Years of Solitude"). A name without an English form stays as it is.
@@ -7,4 +8,3 @@
 - Quotes in the text fields: “…” (curly double quotes).
 - Watch "a"/"an": an article in the question must fit all four options.
 - Difficulty and distractors on the same scale 1–15 (the calibration examples are about Spanish speakers, the scale isn't).
-- Where this house style says Spanish (the description, the fun fact), read English. Its examples stay in Spanish: they show the style, not the language.

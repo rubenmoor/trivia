@@ -147,7 +147,7 @@ def ages_text(g):
     return f"{lo}–{hi}" if hi else f"{lo}+"
 
 
-VOICE = "neutral Latin American Spanish (es-419)"
+VOICE = "idiomatic Latin American Spanish (es-419)"
 
 
 def load_bundles():
@@ -191,9 +191,8 @@ def not_in_bundle(subs, bundle):
 
 def prompt(*names, locale="es", bundle="base", source_locale=None):
     """Prompt files joined; {age_groups} and {players} are filled from app/data/age-groups.json,
-    {locale} from prompts/locale-<locale>.md, the language of the questions at hand (locale-es.md for es-ES until it
-    has its own; + translate-region.md for a regional bundle's translation, decision 167), {voices} from
-    app/data/bundles.json, {source_language} from a translation's source locale (plan 148)."""
+    {locale} from prompts/locale-<locale>.md, the language of the questions at hand (else locale-<language>.md;
+    + translate-region.md for a regional bundle's translation, decision 167), {voices} from app/data/bundles.json, {source_language} from a translation's source locale (plan 148)."""
     ag, focus = load_age_groups(), focus_group()
     groups = [f"{g['id'].replace('_', ' ')} ({ages_text(g)})" for g in ag["groups"]]
     if focus:
@@ -516,7 +515,7 @@ FACT_SCHEMA = {"type": "object", "required": ["checks"], "properties": {"checks"
         "properties": {"id": STR, "verdict": {"type": "string", "enum": ["confirmed", "wrong", "uncertain"]},
                        "problem": STR, "correction": STR, "sources": STR_LIST}}}}}
 
-TRAVEL_REASONS = ["wordplay", "about_spanish", "needs_local_knowledge", "other"]
+TRAVEL_REASONS = ["wordplay", "about_language", "needs_local_knowledge", "other"]
 TRANSLATE_SCHEMA = {"type": "object", "required": ["items"], "properties": {"items": {
     "type": "array", "items": {"type": "object",
         "required": ["id", "travels", "reason", *translations.TEXT_FIELDS, "notes"],
@@ -1253,7 +1252,8 @@ def cmd_rate(args):
 
     def work(group):
         qs = [q for _, qq in group for q in qq]
-        items = [{**for_review(q), "overlap_candidates": cands.get(q["tmp_id"], [])} for q in qs]
+        items = [{**for_review(q), "overlap_candidates": cands.get(q["tmp_id"], []),
+                  **({"translated_from": LANGUAGES[q["source_locale"]]} if q.get("source_locale") else {})} for q in qs]
         user = "## Questions\n" + json.dumps(items, ensure_ascii=False)
         system = prompt("house-style", "rate", locale=text_locale(d), bundle=run_bundle(d),
                         source_locale=qs[0].get("source_locale"))
@@ -2920,7 +2920,8 @@ def cmd_review(args):
         q, r = item
         tmp = tmp_of.get(q["id"])
         payload = translation_payload(q, r, tmp) if locale else {
-            "question": {k: q[k] for k in ["id", "bundle", "subcategory", *QUESTION_FIELDS]},
+            "question": {k: q[k] for k in ["id", "bundle", "subcategory", *QUESTION_FIELDS]}
+                        | {"locale": translations.source_locale(q)},
             "rater_notes": (ratings.get(tmp) or {}).get("notes") or (q.get("quality") or {}).get("notes"),
             "fact_check": ({k: check[k] for k in ["verdict", "problem", "correction"]}
                            if (check := fact_check(r, checks.get(tmp))) else "not needed (no number, date or record)"),
@@ -3405,7 +3406,8 @@ def audit_input(q, pool, pool_en=None):
         pick = next((c for c in found if spec.get("source_url") and c.get("page_url") == spec["source_url"]), None)
         return {"type": spec.get("type", "image"), "role": spec.get("role", "decorative"),
                 "title": pick["title"] if pick else None}
-    return {"question": {k: q[k] for k in ["id", "bundle", "subcategory", *QUESTION_FIELDS]},
+    return {"question": {k: q[k] for k in ["id", "bundle", "subcategory", *QUESTION_FIELDS]}
+                        | ({} if q.get("source") else {"locale": translations.source_locale(q)}),
             "media": slot(q["media"], "media"),
             "background": slot(q["background"], "background") if q.get("background") else None,
             "related": related_questions(q, pool, pool_en), **({"source": q["source"]} if q.get("source") else {})}

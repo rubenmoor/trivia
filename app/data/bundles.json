@@ -7,8 +7,8 @@
       "languages": ["es", "es-ES", "en", "de"],
       "name": "Básico",
       "description": "Preguntas de todo un poco, para jugar en cualquier parte.",
-      "rule": "Everything that isn't in another bundle: answerable by the players anywhere in the Spanish-speaking world, including well-known facts about Colombia (its capital, its flag, coffee, García Márquez).",
-      "voice": "neutral Latin American Spanish (es-419): words understood across Latin America and in Spain"
+      "rule": "Everything that isn't in another bundle: answerable by families anywhere in the world, whatever their language; well-known facts about any country belong here (Colombia's capital, Japan's flag, Italian pasta, García Márquez), knowledge only one country's or one language's players have doesn't.",
+      "voice": "idiomatic Latin American Spanish (es-419): words a family anywhere in Latin America uses; Spain has its own es-ES text"
     },
     {
       "id": "colombia",

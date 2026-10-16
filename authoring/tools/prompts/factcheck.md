@@ -7,4 +7,4 @@ For each question, give a `verdict`:
 - "wrong": something is false. Say what in `problem` and give a `correction`.
 - "uncertain": sources disagree or you couldn't verify it.
 
-List the URLs you relied on in `sources`. Keep `problem` and `correction` short, in English (corrections to Spanish text in Spanish).
+List the URLs you relied on in `sources`. Keep `problem` and `correction` short, in English (a correction to the question's text in the question's language).

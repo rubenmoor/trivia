@@ -17,19 +17,27 @@ The game has four age groups: {age_groups}. Every question has one difficulty on
 - Exactly three `hints`, from vague to strong. The third hint may nearly give the answer away, but must not literally contain it.
 
 ## Use the four options honestly
-- A superlative or comparison asks about the **real world**: "¿Cuál es el dinosaurio más largo que ha existido?", and the answer is the real record holder. Never "¿Cuál de estos es el más largo?", where the answer is only the biggest among the four options: the options are not a meaningful set, and the question teaches nothing.
-- The same goes for "¿Cuál de estas ciudades está a mayor altura?": ask "¿Cuál es la capital departamental más alta de Colombia?" instead.
+- A superlative or comparison asks about the **real world**: "What is the longest dinosaur that ever lived?", and the answer is the real record holder. Never "Which of these is the longest?", where the answer is only the biggest among the four options: the options are not a meaningful set, and the question teaches nothing.
+- The same goes for "Which of these mountains is the highest?": ask "What is the highest mountain in Africa?" instead.
 - The clue in the question must point to the answer **in the real world**, not just among the four options. Before writing, ask: "What else in the world fits this clue?" If anything does, use a clue that only the answer has.
-  - Bad: "¿Qué ritmo del Caribe colombiano se baila con velas en la mano?" Other dances use candles too.
-  - Bad: "¿En qué deporte se usa una raqueta y una pelota amarilla?" Pádel and frontenis do too, and tennis doesn't depend on the ball's colour.
+  - Bad: "Which dance is performed with candles in the dancers' hands?" Many dances use candles.
+  - Bad: "Which sport is played with a racket and a yellow ball?" Padel and squash do too, and tennis doesn't depend on the ball's colour.
 
 ## Keep it short
 The question is read aloud on a TV; the family should get it in one breath.
 - `question`: one or two short sentences, ideally under 120 characters, rarely over 160.
-- It asks exactly one thing. A rhetorical question or thought inside a riddle goes in quotes, so players don't hear two questions: "Me preguntaron «¿Con qué grano dejé de merecer mi nombre?». ¿Qué paradoja soy?"
+- It asks exactly one thing. A rhetorical question or thought inside a riddle goes in quotes, so players don't hear two questions: "The Sphinx asked “What walks on four legs in the morning, two at noon and three in the evening?”. Who solved the riddle?"
 - A bit of extra context (a surprising detail, a setting) is allowed, but always optional: cut it when it makes the question long.
-- No invented story around the question: no relatives, friends, guides or influencers telling you something ("Tu tío…", "Tu prima te reta…", "Un amigo…"), no "Imagina que…", no backstory. A situation ("Estás en la cocina y…") only when it is the clue itself, in one short clause.
+- No invented story around the question: no relatives, friends, guides or influencers telling you something ("Your uncle…", "Your cousin dares you…", "A friend…"), no "Imagine that…", no backstory. A situation ("You're in the kitchen and…") only when it is the clue itself, in one short clause.
 - Don't explain what the hints, the fun fact or the description already say.
+
+## International angle
+A `base` question is played in every language of the game (English, Spanish for Latin America and for Spain, German, more later), by families anywhere. Write it so it travels:
+- No focus on the Spanish-speaking world: Latin American or Spanish places, people, food and customs only in the share any other region gets, and only when families everywhere know them.
+- No Anglo or US bias: no US or UK school knowledge, holidays, money, sports leagues, TV or brands treated as everyone's; the world is the default, not one country.
+- Spread places, people, customs, food, music and history across the world; a famous fact from anywhere is welcome.
+- No question that lives on one language: no wordplay, pun, rhyme or sound joke, and no question about one language's spelling, plurals, letters or words, unless it works the same in every language.
+- A regional bundle (e.g. `colombia`) follows its own rule (under "Bundle") instead.
 
 ## No giveaways
 Nothing may give the answer away: not the description, not the question text, not hints 1 and 2, not the media (an illustrative image is shown sharp, so it is the riskiest). Don't name things in the question that make it trivial (naming EVE and Pixar in a WALL·E question; a carnival's own slogan in a question about its city; a first clue that already identifies the answer). Hint 3 may come close.
@@ -92,30 +100,30 @@ Anchors for 9–15, confirmed by the developer:
 - 15: tempura came to Japan about 450 years ago from which European country? → Portugal
 
 ## Description
-Every question has a `description`: one full, humorous Spanish sentence shown *before* the question, instead of the category, in the style of "You Don't Know Jack". It relates to the question's content, can be absurd, and must not give the answer away or rule out options (e.g. don't say "un nevado" when only two options are nevados). Examples from the pool:
-- Café: "Los papás no funcionan por la mañana hasta que les echas este combustible."
-- Capybara (chigüiro): "Un ratón al que se le fue la mano en el almuerzo."
-- Light bulb: "Una idea tan buena que hasta tiene forma de idea."
-- Saturno: "Un planeta que nunca se quita sus joyas."
-- Año luz: "Una pregunta engañosa, como cuando tu mamá dice 'ya casi llegamos'."
-- Hipérbole: "Esta es la mejor pregunta de la historia del universo, sin exagerar."
+Every question has a `description`: one full, humorous sentence in the question's language, shown *before* the question, instead of the category, in the style of "You Don't Know Jack". It relates to the question's content, can be absurd, and must not give the answer away or rule out options (e.g. don't say "a volcano" when only two options are volcanoes). Examples from the pool, in English:
+- Coffee: "Parents don't start in the morning until you fill them up with this fuel."
+- Capybara: "A mouse that went a little overboard at lunch."
+- Light bulb: "An idea so good it's even shaped like one."
+- Saturn: "A planet that never takes off its jewelry."
+- Light-year: "A trick question, like when your mom says 'we're almost there'."
+- Hyperbole: "This is the best question in the history of the universe, no exaggeration."
 
 ## Media
 Every question has exactly one media item:
 - `type`: "image" (most questions), "audio" or "video".
 - `role`: "illustrative", "decorative" or "essential":
-  - "illustrative" (preferred): shows something that belongs to the question, shown sharp on the TV. Its subject, a place or object it mentions, the setting of a film. It must NOT show the answer or rule options in or out. Examples: "¿Quién escribió Don Quijote?" → "Consuegra windmills"; "¿Cuál es la capital de Australia?" → "kangaroo" (Australia, but no city that could be an option). Watch for text in pictures (dates on banners, names on signs).
-  - "decorative": mood only, shown blurred. Use it when every related image would give the answer away (e.g. "¿Qué planeta tiene anillos enormes?": any space picture might show Saturn).
-  - "essential": the media is part of the question, e.g. "Escucha: ¿qué instrumento suena?".
-- Use essential media only when the media sources very likely have a **clear, recognisable** photo or sound of exactly that thing: a famous landmark, a common animal, a well-known object or instrument. Not for rare or regional objects (e.g. a gaita), and never when a photo must convey something abstract, like which rhythm musicians are playing.
+  - "illustrative" (preferred): shows something that belongs to the question, shown sharp on the TV. Its subject, a place or object it mentions, the setting of a film. It must NOT show the answer or rule options in or out. Examples: "Who wrote Don Quixote?" → "Consuegra windmills"; "What is the capital of Australia?" → "kangaroo" (Australia, but no city that could be an option). Watch for text in pictures (dates on banners, names on signs).
+  - "decorative": mood only, shown blurred. Use it when every related image would give the answer away (e.g. "Which planet has huge rings?": any space picture might show Saturn).
+  - "essential": the media is part of the question, e.g. "Listen: which instrument is this?".
+- Use essential media only when the media sources very likely have a **clear, recognisable** photo or sound of exactly that thing: a famous landmark, a common animal, a well-known object or instrument. Not for rare or regional objects (e.g. a Colombian gaita flute), and never when a photo must convey something abstract, like which rhythm musicians are playing.
 - `query`: an English search term for the media sources, chosen so an illustrative or decorative image does not show the answer and does not suggest one of the wrong options. Short and concrete (2–4 words) works best.
-- A decorative image shows the **world of the question**: its topic, place or setting (a question about a Colombian fruit → "Colombian fruit market"; about a Greek god → "Greek temple ruins"). Never take the image from a metaphor or comparison in the wording (a fruit "like a paper lantern" must not get "paper lantern"), and never pick something that misleads (a tropical island for a question about Greenland).
+- A decorative image shows the **world of the question**: its topic, place or setting (a question about a tropical fruit → "tropical fruit market"; about a Greek god → "Greek temple ruins"). Never take the image from a metaphor or comparison in the wording (a fruit "like a paper lantern" must not get "paper lantern"), and never pick something that misleads (a tropical island for a question about Greenland).
 - **Media sources** (searched in this order): Wikimedia Commons for everything; NASA for space photos and videos; Openverse for more photos (Flickr, museums); Freesound for sounds. Audio only for things these have: animal sounds, single instruments, natural and everyday sounds (rain, a train, a crowd). **No songs, no film or TV clips, no game footage.** Questions about songs, films or games get an illustrative image (an instrument, a place from the film's world) or, if that would give the answer away, a decorative one. Video only for footage that is likely there (NASA, nature, sport, landscapes).
 - `note`: for audio/video, or essential images: exactly what must be shown or played. Otherwise null.
 - `background_query`: only for audio questions: an English search term for a generic, decorative background image shown while the sound plays (e.g. "misty forest" for a bird call). It must not show the answer. Empty string for all other questions.
 
 ## Fun fact
-`fun_fact`: one short Spanish sentence shown after the answer is revealed. True, surprising, family-friendly.
+`fun_fact`: one short sentence in the question's language, shown after the answer is revealed. True, surprising, family-friendly.
 
 ## Tone
 - Light and playful. Famous historical events and films are fine, even when people died in them (independence, the end of the Second World War, the film "Titanic"). Ask about the event, the date or the film, never about deaths or suffering, and don't make jokes about them.
