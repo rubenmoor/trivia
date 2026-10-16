@@ -28922,7 +28922,7 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 
 ## Out of scope (from the milestone)
 - Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-16T00:26:15Z', '2026-10-16T00:37:35Z', 1192, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1216, 136, 'revise plan 136: Joker names and symbols, defined again', 'revise', 'open', 1000, NULL, '`plan 9: masterplan`, the plan above `plan 136: Joker names and symbols, defined again`, changed; it is quoted below. Bring `plan 136: Joker names and symbols, defined again` in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1216, 136, 'revise plan 136: Joker names and symbols, defined again', 'revise', 'done', 1000, '2026-10-16, no change: plan 9''s revision (task 1192) added part 15 and changed parts 4, 6, 8, 9, 11, 12; part 14 is unchanged, plan 136 still fits', '`plan 9: masterplan`, the plan above `plan 136: Joker names and symbols, defined again`, changed; it is quoted below. Bring `plan 136: Joker names and symbols, defined again` in line with it
 (`pm plan edit 136 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -29081,7 +29081,7 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 - Part 2 any time after plan 16. Part 12 last.
 
 ## Out of scope (from the milestone)
-- Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-16T00:26:15Z', NULL, 1192, 0);
+- Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-16T00:26:15Z', '2026-10-16T00:38:46Z', 1192, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1217, 9, 'write plan: English-first drafting for base', 'plan', 'done', 1000, '2026-10-15, plan 148: English-first drafting for base (priority 710); decision 235 recorded', 'Write the plan for part 15 of `plan 9: masterplan` ("English-first drafting for `base`"; the milestone''s "English-first drafting for `base`", developer 2026-10-15): `pm plan add 9 "English-first drafting for base" --priority 710` (backend; above `plan 147: English-first batches: calibration, overlap and QC across languages` at 700, which builds on it; far above `task 1185: run batch-9` at -100).
 
 The plan covers:
@@ -32709,6 +32709,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1177, 1214, '2026-10-16T00:36:21Z', '2026-10-16T00:36:46Z', 'done', NULL, 0, '900c9176f4522fa76c7e4421bcd43a47ac26cdb5', 'claude-opus-5-5[1m]', 'ff720bd0-0957-4b38-8c2a-07b9b5d4548a', 4, 8, 1347, 163809, 44842, 0.41846979999999995, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1178, 1215, '2026-10-16T00:36:46Z', '2026-10-16T00:37:42Z', 'done', NULL, 0, '8897598bf007e613a4ac8cfb56edecaa08426d5f', 'claude-opus-5-5[1m]', 'a600ee7e-361e-4745-a030-127978f8c44e', 10, 20, 5287, 510600, 54172, 0.641316, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1179, 1230, '2026-10-16T00:37:42Z', '2026-10-16T00:38:33Z', 'done', NULL, 0, '15afa616d5e0d1442031adcbbab25dcb2d8b86b3', 'claude-opus-5-5[1m]', '2b6e959f-0e57-40f7-b154-9604bdb91b3a', 9, 18, 5343, 352467, 37542, 0.4777614, 3857742);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1180, 1216, '2026-10-16T00:38:33Z', '2026-10-16T00:38:55Z', 'done', NULL, 0, '5ebb857310c805040e1fafaa881018ca49b03757', 'claude-opus-5-5[1m]', '4d81b2ab-6bea-4654-9dd4-a89b80b2e153', 4, 8, 1096, 160864, 44572, 0.41070080000000003, 3857742);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
