@@ -100,7 +100,7 @@ test("bundles are normalized: bundles.json order, no duplicates, nothing added",
 
 test("defaults per locale: the first base bundle and the locale's other bundles", () => {
   assert.deepEqual(game.defaultChoice(data).bundles, ["base", "colombia"]);
-  assert.deepEqual(game.defaultChoice(enData).bundles, ["base"]);
+  assert.deepEqual(game.defaultChoice(enData).bundles, ["base", "usa", "uk"]);
   assert.deepEqual(game.defaultChoice(twoBases).bundles, ["base", "colombia"]);
 });
 
@@ -173,5 +173,5 @@ test("choice route: preset from the player's newest game, defaults otherwise, su
     { ...game.defaultChoice(data), jokers: game.UNLIMITED });
   save = game.newGame(save, data, io(15), "ana", { age_group: "kids", bundles: ["base", "colombia"] }).save;
   assert.deepEqual((choice(save, enData, { player: "ana" }).body as { choice: unknown }).choice,
-    { ...game.defaultChoice(enData), age_group: "kids", bundles: ["base"], jokers: game.UNLIMITED });
+    { ...game.defaultChoice(enData), age_group: "kids", jokers: game.UNLIMITED });
 });
