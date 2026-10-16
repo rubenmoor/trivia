@@ -33914,10 +33914,55 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm plan list` (don''t duplicate an open plan; `plan 150: Start screen horizon` touches the screen flow, refer to it if they overlap); `pm decision list --answered --grep bundle --grep Choice --grep BundleSelector`.
 - Read the current flow: `app/client/src/` screens around the Choice screen and `BundleSelector`, `app/data/bundles.json`, the gallery shot list.
 - `plan 48: S3 close-out and platform test` runs after this plan (priority 140); its revision for part 11 is `task 1333: revise plan 48: S3 close-out and platform test`, not this plan''s work.', '2026-10-16T13:52:03Z', '2026-10-16T13:54:49Z', 1332, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1336, 151, 'create tasks for plan 151: Bundle selection on its own full screen', 'split', 'open', 1000, NULL, 'Split plan 151 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T13:54:45Z', NULL, 1335, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1336, 151, 'create tasks for plan 151: Bundle selection on its own full screen', 'split', 'done', 1000, '2026-10-16, tasks.sql: tasks 1338–1340 for plan 151; decision 261 already answered, no new decisions', 'Split plan 151 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T13:54:45Z', '2026-10-16T13:57:37Z', 1335, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1337, 48, 'create tasks for plan 48: S3 close-out and platform test', 'split', 'done', 1000, '2026-10-16, tasks.sql: tasks 238, 236, 237 brought in line with revised plan 48 (plan 151 in guards and owning plans, bundle screen row per decision 260/158/261, family check through bundle screen in both modes)', 'Split plan 48 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T13:55:37Z', '2026-10-16T13:56:32Z', 1333, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1338, 151, 'Bundle screen between Player and Choice; Choice without the selector', 'work', 'open', NULL, NULL, 'Part 1 of `plan 151: Bundle selection on its own full screen`; the plan''s sections "Screen", "Choice screen", "Walkers", "Docs" are the spec. Binding: `decision 260: Bundle screen: where it sits, supply report, in-game settings`, `decision 158: Bundle selection in every mode, apart from customization` ("own section" → "own screen"), `decision 206: Play-test: no supply report on Start, report on the Choice screen only`, `decision 50: Play-test of age groups and bundles` (term "question bundle").
+
+## What
+- New `app/client/src/game/screens/Bundles.svelte`, Player → Bundles → Choice → Level in both modes, also with one offered bundle; `Game.svelte`: `Screen` type, `OURS`, «whoosh» transitions
+  - title per catalog (es «¿Qué preguntas juega {name}?»), shared `BundleSelector` large (descriptions always shown, bigger tiles), «Atrás» / «Seguir» with `Prompt`s
+  - preset: `fetchChoice({ player })`''s bundles on first entry; pick held in `Game.svelte` (like `chosen`): Choice → Back → Bundles keeps it; a new player from Player starts fresh
+  - Back → Player; «Seguir» → Choice with the bundles as a prop; disabled unless exactly one base bundle
+  - `bundleKeys` moves from `Choice.svelte` into `BundleSelector.svelte`''s module script (decision 199); reserved letters here: global ones only
+  - focus scope `bundles` (`pushScope`, `plan 44: Action layer and focus navigation (IN-2, IN-3)`): letters toggle, spatial arrows, A/Enter toggles a tile, Start/confirm continues, B/Backspace back, Esc → overlay
+  - fits 1280×800 and 1280×720 with 2–6 tiles (wrap, no scroll)
+- `Choice.svelte`: no `BundleSelector` or bundle letters; `bundles` prop; read-only line «Paquetes de preguntas: …» (`choice.lineBundles`, base first, as in the Esc overlay); Back → Bundles; supply check, `SupplyReport`, `short`, refusals, `SupplyNotice`, configure fields, «Personalizar partida» unchanged; dead heading index/animation and `reporting` CSS (`.bundle .description`) removed
+- `GameSettings.svelte` (MD-12) keeps `BundleSelector` (must still work after the `bundleKeys` move)
+- Mods: `"Bundles"` in `SCREENS` (`app/client/src/lib/mods.ts`), `modding/README.md` screen list
+- Catalog strings in es, en, de (es-ES only where Spain differs); read `app/client/src/locales/style/<locale>.md` first
+- Walkers through the new screen: `authoring/tools/gallery.py` (new shot `bundles`; `choice-solo`, `choice-gamemaster`, `choice-supply-report` via it), `authoring/steam/smoke.mjs`, `authoring/store/screenshots.mjs` (`toChoice`); `authoring/store/trailer.mjs` and `authoring/tools/sim/` don''t walk Choice (checked by task 1336), confirm with `rg`
+- Docs: `plans/04-ui-tv-display.md` (flow diagram with Back edges, screen table, "Bundles" section, Choice without bundles), `plans/22-bundles.md` (selection on its own screen), `plans/decisions.md` D-97 (own screen, decisions 158 and 260; drop "in gamemaster mode below the configure fields"), `plans/13-game-modes.md`, `plans/03-game-flow.md`, `plans/21-age-groups.md`, README.md where they place bundles on Choice
+- Base bundle names: not here (`Base bundle names per locale` task)
+
+## Done when
+- Node dev server (`npm run dev -w app/client`) at 1280×800 and 1920×1080, both modes, key and pad (or forced `device: "gamepad"`): Player → Bundles (toggle colombia, base stays one) → Choice → Back → Bundles (pick kept) → Choice → «¡A jugar!»; a too-small pick shows the report on Choice, Back fixes it
+- `trivia-gallery --only bundles,choice-solo,choice-gamemaster,choice-supply-report --locale es` runs
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass', '2026-10-16T13:57:26Z', NULL, 1336, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1339, 151, 'Base bundle names per locale: Paquete básico, Base bundle, Grundpaket', 'work', 'open', NULL, NULL, 'Part 2 of `plan 151: Bundle selection on its own full screen`, applying `decision 261: Name of the base bundle per UI language (not «Basics»)` → option 1: es / es-ES «Paquete básico» (no es-ES override), en «Base bundle», de «Grundpaket». Descriptions (`about`) unchanged.
+
+## What
+- `app/data/bundles.json` (base''s es name), `app/data/names.en.json`, `app/data/names.de.json`
+- Glossaries in `app/client/src/locales/style/{es,en,de}.md` (the bundle-name rows); `es-ES.md` untouched unless it names the old term
+- `rg` «Básico», «Basics», «Basis» (bundle name only) over code, tests, `.md` and plan files; fix every hit (decision 200), e.g. `app/client/src/game/Overlay.svelte`''s doc comment, `plans/22-bundles.md` (add the base bundle''s name per locale), `plans/04-ui-tv-display.md`; not `authoring/data/concepts/hip-hop-and-rap.json` («Nanpa Básico», unrelated); old names in pm text stay
+- `authoring/data/ui-flags.json`: the 2026-10-16 «Basics» flag on `choice-gamemaster` gets `fixed_on` (today''s date)
+- The base bundle''s letter key changes with the name (plan 29); check no collision with the screen''s other letters
+- `qgen export` if the pool export carries bundle names; `qgen validate`
+
+## Done when
+- Bundle screen and Choice line show the new names in es, es-ES, en, de (dev server or `trivia-gallery --only bundles`)
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass', '2026-10-16T13:57:26Z', NULL, 1336, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1340, 151, 'Gallery run of the bundle screen and developer review', 'work', 'open', NULL, NULL, 'Part 3 of `plan 151: Bundle selection on its own full screen`, after `task 1338: Bundle screen between Player and Choice; Choice without the selector` and `task 1339: Base bundle names per locale: Paquete básico, Base bundle, Grundpaket`.
+
+## What
+- `trivia-gallery --only bundles,choice-solo,choice-gamemaster,choice-supply-report` for all four locales (es, es-ES, en, de); with `--size 1280x800` too if `task 1330: Gallery size option` is done
+- Look at every shot yourself: overflow, cut text, unmatched catalog text in `manifest.json`, tiles wrap without scroll; fix small problems in this task, larger ones as follow-up tasks in plan 151
+- `pm decision add "Bundle screen reviewed in /gallery?"` for the developer (a go-ahead, like plan 100''s reviews): body lists the shots and what changed (own screen, Choice line, new base names); options "approved" (recommended), "problems (listed in the answer)"; make this task pending on it (`pm task-pending-decision`)
+- On the answer: problems → fix tasks in plan 151; approved → done
+
+## Done when
+- Gallery shots exist for all four locales and the developer''s review decision is answered; problems have fix tasks', '2026-10-16T13:57:26Z', NULL, 1336, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -39021,6 +39066,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1326, 1333, '2026-10-16T13:55:01Z', '2026-10-16T13:55:49Z', 'done', NULL, 0, '660b9db4fd9d3e884f454a22cedbcbe09503814a', 'claude-opus-5-5[1m]', '73683e27-2a13-477a-af27-762acfa1515d', 8, 16, 2890, 310994, 35132, 0.4011188, 4064407);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1327, 1337, '2026-10-16T13:55:49Z', '2026-10-16T13:56:39Z', 'done', NULL, 0, '119235c6ff3d60c7c55028e02d39de3563b262bb', 'claude-opus-5-5[1m]', '62928026-34b9-43e3-8e0b-83f185954dd2', 7, 14, 5466, 237989, 33520, 0.4251338, 4064407);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1328, 1334, '2026-10-16T13:56:39Z', '2026-10-16T13:56:53Z', 'done', NULL, 0, '665d1a137efb3db0361733e22dfea1c2b74262a0', 'claude-opus-5-5[1m]', '80b81b54-ab9b-48f1-bbd6-9e6578501fc8', 4, 8, 1073, 129176, 31603, 0.3001512, 4064407);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1329, 1336, '2026-10-16T13:56:54Z', '2026-10-16T13:57:43Z', 'done', NULL, 0, '0515619f63dfe43642e55a828d5a9baa1ab0bd8e', 'claude-opus-5-5[1m]', 'aabc3d89-5859-429b-a4e0-d78f901a5c6e', 7, 14, 4991, 256055, 35388, 0.434191, 4064407);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
