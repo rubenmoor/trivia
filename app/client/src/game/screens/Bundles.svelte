@@ -13,7 +13,8 @@
   import { pushScope, type Keys } from "../../lib/input.svelte.ts";
   import BundleSelector, { bundleKeys, orderBundles, toggled, type Bundle } from "../BundleSelector.svelte";
   import type { GameMode, Supply } from "../../lib/types.ts";
-  import { bodyOf, choiceOf, type ChoiceDraft } from "../choiceDraft.ts";
+  import { bodyOf, choiceOf, isSession, type ChoiceDraft } from "../choiceDraft.ts";
+  import type { SeatDraft } from "../seats.ts";
   import Icon from "../Icon.svelte";
   import Prompt from "../Prompt.svelte";
   import SupplyNotice, { worthShowing } from "../SupplyNotice.svelte";
@@ -22,6 +23,7 @@
   let {
     player,
     draft,
+    seats,
     busy,
     greeting,
     refused,
@@ -33,6 +35,8 @@
     player: string;
     /** Choice's picks. */
     draft: ChoiceDraft;
+    /** The Join screen's seats in a multiplayer session, else empty. */
+    seats: SeatDraft[];
     busy: boolean;
     /** The name while «¡Hola, …!» plays into the transition, else null. */
     greeting: string | null;
@@ -45,6 +49,13 @@
     onstart: (choice: ChoiceBody & { mode: GameMode }, runningOut: string[]) => void;
     onback: () => void;
   } = $props();
+
+  /** A session's supply is checked for the whole session: the player count and rr-competitive's group per seat (decision 291). */
+  const session = $derived(
+    isSession(draft.mode)
+      ? { mode: draft.mode, players: seats.length, ...(draft.mode === "rr-competitive" ? { age_groups: seats.map((s) => s.group) } : {}) }
+      : {},
+  );
 
   let options = $state<ChoiceOptions | null>(null);
   let error = $state<string | null>(null);
@@ -70,6 +81,7 @@
     }
   });
 
+  const seatNames = $derived(seats.map((s) => s.name ?? ""));
   const selected = $derived(picked ?? []);
   // No question for the choice (nothing selected, or the bundles hold none for the group and levels): start off.
   const empty = $derived(!!supply && supply.levels.every((l) => l.candidates === 0));
@@ -86,7 +98,7 @@
     if (!options || !picked) return;
     const ids = [...picked];
     const n = ++seq;
-    fetchChoice({ ...bodyOf(draft, ids), jokers: undefined }).then(
+    fetchChoice({ ...bodyOf(draft, ids), jokers: undefined, ...session }).then(
       (c) => {
         if (n === seq) ({ supply, reason } = { supply: c.supply, reason: null });
       },
@@ -107,7 +119,7 @@
     if (!ready || busy || checking) return;
     const choice = choiceOf(draft, selected);
     checking = true;
-    const outlook = await fetchOutlook(choice).catch(() => null); // informational: never blocks a game
+    const outlook = await fetchOutlook({ ...choice, ...session }).catch(() => null); // informational: never blocks a game
     checking = false;
     if (outlook && worthShowing(outlook)) notice = { outlook, choice };
     else onstart(choice, []);
@@ -151,9 +163,11 @@
 
 <section class="bundles-screen" class:reporting={!!supply && !supply.ok} bind:this={section}>
   {#if greeting}
-    <h1 class="title hello">{t("screen.player.helloOpen")}<span class="name">{greeting}</span>{t("screen.player.helloClose")}</h1>
+    <h1 class="title hello">{t("screen.player.helloOpen")}<span class="name greeted">{greeting}</span>{t("screen.player.helloClose")}</h1>
   {:else}
-    <h1 class="title">{t("bundles.titleOpen")}<span class="name">{player}</span>{t("bundles.titleClose")}</h1>
+    <h1 class="title">
+      {#if seats.length && isSession(draft.mode)}{t("bundles.titleMany")}{:else}{t("bundles.titleOpen")}<span class="name">{player}</span>{t("bundles.titleClose")}{/if}
+    </h1>
 
     {#if options}
       <BundleSelector bundles={options.bundles} {selected} {busy} {keyOf} large onchange={pick} />
@@ -164,7 +178,7 @@
       </div>
 
       {#if shownRefusal?.supply}
-        <SupplyReport supply={shownRefusal.supply} />
+        <SupplyReport supply={shownRefusal.supply} names={seatNames} />
       {:else if shownRefusal}
         <p class="error">{errorText(shownRefusal)}</p>
       {:else if empty}
@@ -172,7 +186,7 @@
       {:else if reason}
         <p class="error">{reason}</p>
       {:else if supply}
-        <SupplyReport {supply} />
+        <SupplyReport {supply} names={seatNames} />
       {/if}
     {/if}
 
@@ -205,6 +219,15 @@
   }
   .name {
     color: var(--amber);
+  }
+  /* Many players: one line, cut at the screen's width */
+  .greeted {
+    display: inline-block;
+    max-width: calc(100vw - 30 * var(--u));
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: bottom;
   }
   .actions {
     flex: none;

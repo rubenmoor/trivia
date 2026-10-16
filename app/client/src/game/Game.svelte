@@ -15,7 +15,7 @@
   import { listenPads } from "../lib/gamepad.svelte.ts";
   import { listen, pushScope, type Action } from "../lib/input.svelte.ts";
   import { holdPause } from "../lib/pause.ts";
-  import { lostSeat, watchGame } from "../lib/seats.svelte.ts";
+  import { bindSession, lostSeat, watchGame } from "../lib/seats.svelte.ts";
   import { emit, loadedMods, watchLayers, type ModLayer } from "../lib/mods.ts";
   import type { Game, GameMode, JokerBudget, JokerEvent, Flagged } from "../lib/types.ts";
   import FlagDialog from "./FlagDialog.svelte";
@@ -371,7 +371,12 @@
     if (busy || chosen === null) return;
     busy = true;
     try {
-      game = await gameAction("new", { player: chosen, ...choice });
+      const session = isSession(choice.mode);
+      const names = seats.map((x) => x.name ?? "");
+      game = await gameAction("new", session
+        ? { ...choice, players: names, ...(choice.mode === "rr-competitive" ? { age_groups: seats.map((x) => x.group) } : {}) }
+        : { player: chosen, ...choice });
+      if (session && game) bindSession(game.id, seats.map((x) => x.binding));
       await noteRunningOut(choice, runningOut).catch((e) => console.warn("noteRunningOut:", e)); // every start: it prunes too
       error = saveWarning();
       refused = null;
@@ -381,7 +386,7 @@
       busy = false;
       return;
     }
-    greeting = game?.player ?? chosen;
+    greeting = isSession(choice.mode) ? seats.map((x) => x.name).join(", ") : (game?.player ?? chosen);
     sfx("ready");
     await sleep(GREETING_MS);
     await go("level", "ready");
@@ -676,7 +681,7 @@
       <S.Join mode={draft.mode} player={chosen} {busy} {seats} onseats={(s) => (seats = s)} onnext={() => go("bundles", "whoosh")} onback={() => go("choice", "whoosh")} />
     {:else if screen === "bundles" && chosen !== null && draft}
       <Stage />
-      <S.Bundles player={chosen} {draft} {busy} {greeting} {refused} picked={bundlePick} onpick={(ids) => (bundlePick = ids)} onstart={startGame} onback={() => go(isSession(draft!.mode) ? "join" : "choice", "whoosh")} />
+      <S.Bundles player={chosen} {draft} {seats} {busy} {greeting} {refused} picked={bundlePick} onpick={(ids) => (bundlePick = ids)} onstart={startGame} onback={() => go(isSession(draft!.mode) ? "join" : "choice", "whoosh")} />
     {:else if screen === "level" && game}
       <Stage />
       <div class="corner-hud"><Hud level={null} player={game.player} /></div>

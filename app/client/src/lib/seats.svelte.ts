@@ -31,8 +31,7 @@ function stored(id: number, seats: number): (Binding | null)[] {
   return Array(seats).fill(null);
 }
 
-/** The join screen's binding as its session starts.
- * @public join screen (plan 162) */
+/** The Join screen's binding as its session starts (set by Game.svelte, plan 162). */
 export function bindSession(id: number, binding: readonly Binding[]) {
   store(id, binding);
   seating.id = id;

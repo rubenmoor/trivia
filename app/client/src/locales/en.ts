@@ -15,6 +15,7 @@ export const en = {
   supply: {
     short: "Not enough questions for a full game ({n} available):",
     level: "Level {level} (difficulty {lo}–{hi}): {missing} missing",
+    levelSeat: "{name}: level {level} (difficulty {lo}–{hi}): {missing} missing",
   },
   hud: {
     level: "Level {n}",
@@ -249,6 +250,7 @@ export const en = {
     noQuestions: "None of the chosen bundles has questions for this game",
     titleOpen: "Which questions does ",
     titleClose: " play?",
+    titleMany: "Which questions do you play?",
     playerMade: "Player-made · {mod}",
   },
   choice: {

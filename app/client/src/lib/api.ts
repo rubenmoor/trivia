@@ -83,6 +83,10 @@ export interface GameActionBody {
   everyone?: boolean;
   jokers?: Partial<JokerBudget>;
   mode?: GameMode;
+  /** `new` for a session: the names in join order (plan 162). */
+  players?: string[];
+  /** rr-competitive: one age group per player, join order. */
+  age_groups?: string[];
   age_group?: string | null;
   difficulty?: Difficulty | null;
   bundles?: string[];
@@ -175,12 +179,12 @@ export async function fetchJokersUsed(): Promise<Record<JokerName, number> | nul
 
 /** The player's preset (missing fields) and the supply of a choice (plan 27's `choice` route); a
  * refused choice throws GameError (`bundle_not_offered`). */
-export async function fetchChoice(body: ChoiceBody & { player?: string }): Promise<{ choice: Choice; supply: Supply }> {
+export async function fetchChoice(body: ChoiceBody & { player?: string; mode?: GameMode; players?: number; age_groups?: string[] }): Promise<{ choice: Choice; supply: Supply }> {
   return read((save, data) => engine.choice(save, data, { ...body }), "next");
 }
 
 /** The supply outlook of a new game (plan 65, decision 31): tight levels, none left, bundle hint, bundles running out. */
-export async function fetchOutlook(body: ChoiceBody & { mode: GameMode }): Promise<Outlook> {
+export async function fetchOutlook(body: ChoiceBody & { mode: GameMode; players?: number; age_groups?: string[] }): Promise<Outlook> {
   return read((save, data) => engine.outlook(save, data, { ...body }), "next");
 }
 
