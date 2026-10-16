@@ -1,4 +1,128 @@
 {
   "about": "Categories of the spain bundle (D-41, D-43): structure only, keyed by English slugs unique within the bundle (decision 259); names in names.<locale>.json.",
-  "categories": []
+  "categories": [
+    {
+      "slug": "geography",
+      "subcategories": [
+        "regions-and-provinces",
+        "cities-and-towns",
+        "rivers-and-mountains",
+        "coasts-and-islands",
+        "monuments"
+      ]
+    },
+    {
+      "slug": "nature",
+      "subcategories": [
+        "wildlife",
+        "plants-and-climate",
+        "protected-areas"
+      ]
+    },
+    {
+      "slug": "history",
+      "subcategories": [
+        "ancient-hispania",
+        "al-andalus-and-reconquista",
+        "empire",
+        "bourbons-and-19th-century",
+        "20th-century",
+        "transition-and-democracy"
+      ]
+    },
+    {
+      "slug": "people",
+      "subcategories": [
+        "scientists-and-explorers",
+        "famous-figures"
+      ]
+    },
+    {
+      "slug": "food-and-drink",
+      "subcategories": [
+        "regional-dishes",
+        "tapas",
+        "sweets-and-desserts",
+        "ham-cheese-and-produce",
+        "drinks"
+      ]
+    },
+    {
+      "slug": "festivals-and-traditions",
+      "subcategories": [
+        "fiestas",
+        "christmas-and-holidays",
+        "dress-crafts-and-games"
+      ]
+    },
+    {
+      "slug": "myths-and-legends",
+      "subcategories": [
+        "creatures",
+        "legends-and-superstitions"
+      ]
+    },
+    {
+      "slug": "music-and-dance",
+      "subcategories": [
+        "flamenco-and-copla",
+        "folk-music-and-dance",
+        "pop-and-rock",
+        "current-music"
+      ]
+    },
+    {
+      "slug": "art-and-literature",
+      "subcategories": [
+        "classic-literature",
+        "modern-literature",
+        "painting-and-architecture",
+        "comics-and-childrens-books"
+      ]
+    },
+    {
+      "slug": "film-and-television",
+      "subcategories": [
+        "spanish-cinema",
+        "tv-series",
+        "tv-shows-and-presenters",
+        "childrens-tv",
+        "radio-and-internet"
+      ]
+    },
+    {
+      "slug": "sports",
+      "subcategories": [
+        "football-clubs",
+        "footballers-and-national-team",
+        "sportspeople",
+        "team-and-traditional-sports"
+      ]
+    },
+    {
+      "slug": "how-people-speak",
+      "subcategories": [
+        "slang",
+        "sayings",
+        "regional-speech",
+        "co-official-languages"
+      ]
+    },
+    {
+      "slug": "daily-life",
+      "subcategories": [
+        "brands-and-shops",
+        "transport",
+        "school-and-home",
+        "money-and-services"
+      ]
+    },
+    {
+      "slug": "symbols",
+      "subcategories": [
+        "national-symbols",
+        "regional-symbols"
+      ]
+    }
+  ]
 }
