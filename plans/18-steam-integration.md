@@ -37,7 +37,7 @@ The shell's own code stays tiny: create a fullscreen window, load `app/client/di
 - **Glyphs:** Steam Input's `GetInputTypeForHandle` picks PlayStation or Xbox glyphs under Steam (14); without Steam `Gamepad.id`.
 - **Language:** a fresh save preselects Steam's language (`GetCurrentGameLanguage`: the game's language in Steam, else the client's) through `guessTag()` in `lib/engine.ts` (`latam` → es, `spanish` → es-ES, `english` → en, `german` → de; unknown → `navigator.language`); the first-start screen still asks (I18N-2, D-86); one language for UI and questions (D-96).
 - **Rich presence:** «Nivel 7 de 12» while a level is on screen (`#Level`, values `level`, `levels`), cleared otherwise and on quit; Steam shows only uploaded tokens: `app/desktop/steam-presence.vdf` (latam, spanish, english, german; from `screen.level.kicker` + `screen.level.of`), uploaded by the developer in Steamworks.
-- **Remote Play Together:** enabled in Steamworks once multi-controller input works (IN-6).
+- **Remote Play Together:** `milestone 17: Remote Play Together`; Steamworks switch and test setup in "Remote Play Together setup (SW-13)" below.
 - **Valid Steam user** (decision 111): `steam.available` and a non-zero SteamID, computed once in `main.mjs` after init → `--trivia-user` → `steam.user`; the page reads only `validUser` (`lib/desktop.ts`; also true under the dev server shim, plan 99). Dev switch `TRIVIA_DEV_STEAM_USER=1`: valid without Steam (`steamId()` stays null), packaged too (soft check); never set by builds, launch options or VDFs. Gates saves (plan 87) and flags (plan 93).
 - **Dev mode** (plan 85): the dev switch without a real Steam user → `--trivia-dev` → `steam.dev`; `devMode` (`lib/desktop.ts`, also the dev server shim). Esc menu row «Ir a pregunta…» (`GoToDialog.svelte`, engine `goTo`, action `goto`): id or bare number replaces the question on screen at the current level, any mode, ignores range/group/bundles/seen; old one `admin_replace`; unknown → `question_unknown`.
 - **Mute** (plan 123): muted when `PM_WORKER` is set or `TRIVIA_MUTE=1`; `TRIVIA_SOUND=1` overrides both (`app/desktop/mute.mjs` `muteReason`). Shell: `webContents.setAudioMuted(true)`, one stderr line `trivia: muted (PM_WORKER)`; session only, `trivia.volumes` and the Esc-menu volume UI unchanged. Dev server (`vite`, `vite preview`): same rule, `trivia dev: muted (PM_WORKER)`, shim flag `triviaShell.muted` → session mute in `sound.svelte.ts` (master gain 0, `mediaVolume()` 0, nothing stored); `?mute` does the same in any build. Smoke game runs with `TRIVIA_MUTE=1` (checks load, not audio).
@@ -202,6 +202,34 @@ Free DLC per shipped pack (decision 66: Price model (OQ-33); decision 110: Regio
 ### Dev (repo side, task 1045)
 - [ ] `app/desktop/main.mjs` `STEAM_APP_ID` 480 → the real App ID; `TRIVIA_STEAM_APPID` / `SteamAppId` overrides stay; `--dry-run` keeps 480.
 - [ ] No `steam_appid.txt` in the repo or in builds (`steam.py` `EXCLUDE`); a dev run that needs one writes it gitignored.
+
+## Remote Play Together setup (SW-13)
+The developer's one-time setup for every live Remote Play run of `milestone 17: Remote Play Together`: the feature on for the real App ID, a `beta` build with the code under test, two machines, two Steam accounts. Workers never log in to Steamworks; the developer ticks the rows and answers `decision 303: Remote Play Together test setup ready? Switch on, beta build, two machines, second account`. Steam only (decision 111).
+- Valve's page and field names are from memory: recheck at entry.
+- Spacewar 480 is no test: Remote Play Together settings are per app.
+
+### Preconditions
+- [ ] `decision 179: Steamworks app configured (SW-7)? IDs?` answered: real App ID, `beta` branch ("Steamworks app configuration (SW-7)")
+- [ ] First `beta` upload done (`task 681: First beta upload: checklist and decision`)
+
+### Steamworks → Remote Play settings of the app (App Admin; page unverified)
+- [ ] Remote Play Together on; Remote Play on TV/phone/tablet at Steam's default
+- [ ] If Steamworks ties it to store categories (local multiplayer / co-op / PvP): set what milestone 16's modes justify; note which were needed (the store feature line stays in `plans/17a-store-page.md`)
+- [ ] Publish the Steamworks changes
+- [ ] If Steam refuses it for an unreleased app or a password `beta` branch: report, don't work around
+
+### `beta` build
+- [ ] `trivia-steam upload --branch beta` of a commit with the code the live run needs (first: `--rp-probe` of `plan 168: Investigation: Remote Play input and session API`; see "Builds and depots"); note the BuildID and the `v<version>` tag
+
+### Machines, accounts, pads
+- [ ] Host A Windows (overlay invite, `decision 70: Steam overlay in the Electron shell`)
+- [ ] Host B Linux or the Deck (invite from Steam's friends list)
+- [ ] Each hosts once, the other is the guest; guest on any OS; wired and Wi-Fi as available
+- [ ] Your account on the host; a second account on the guest (`decision 135: Steamworks: enable Workshop for ¡Trivia! and a second Steam account?`, or a family member's), Steam friends with yours; guests need no copy
+- [ ] One pad on the guest machine, one on the host; a second guest pad if at hand
+
+### Smoke
+- [ ] Host starts ¡Trivia! from `beta`, invites the guest; the guest sees the picture and hears the sound; one guest pad press moves the focus
 
 ## Local build start test
 The developer's check that the local builds start and play offline on machines without the dev setup (SW-5; pm plan 56 task 3). Skipped, not failed: decision 39 (Steam only, decision 111); the clean-machine start test is covered by the Steam beta test (task 263). Tables kept as the checklist for that test.
@@ -479,5 +507,5 @@ A mod is a folder with a `mod.json` (pm plan 112). The validator `readManifest` 
 - [ ] SW-10 SteamCMD upload script; build account; beta branch. *Plan: pm plan 89; `trivia-release-check` and `trivia-steam upload --branch beta` (depots windows/linux/content) since 2026-10-13 (tasks 679, 680); first upload: tasks 681, 682.*
 - [x] SW-11 Achievements: list, icons, Steamworks setup. *Done 2026-10-13 (pm plan 86): list per decision 73 (25 now, 3 mode wins with MD-8, one per regional bundle with its DLC); `engine/achievements.ts` (`qualifies`, `earned`, `inSteamworks`), `lib/achievements.ts` (unlock after load and at game end, valid user + live bridge only), triggers without a save change (decision 139); icons `app/desktop/achievements/` (`render.sh`, 256×256); setup values above and `steam-achievements.vdf`. Pending: entering in Steamworks (pm decision 140) and the developer check under Steam (pm decision 141).*
 - [ ] SW-12 Steam Deck test and the Deck Verified review. *Plan: pm plan 90 (real-Deck checklist on the Steam-installed `beta`, Valve's criteria, Cloud, suspend/resume; review request or S6 note).*
-- [ ] SW-13 Remote Play Together (after IN-6).
+- [ ] SW-13 Remote Play Together. *Milestone 17; setup checklist: "Remote Play Together setup (SW-13)" above.*
 - [ ] SW-14 macOS build (later; developer account and notarization).
