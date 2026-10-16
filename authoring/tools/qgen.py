@@ -2260,7 +2260,7 @@ def report_exit_check(pool, bundle):
 
 
 SIM_MODES = ["solo", "rr-coop", "rr-competitive", "timed"]  # D-74, without gamemaster; = sim/simulate.ts (engine MODES)
-SIM_MULTI = {"rr-competitive", "timed"}
+SIM_MULTI = {"rr-coop", "rr-competitive", "timed"}  # sessions; = sim/simulate.ts MULTI
 
 
 def locale_pool(locale):
@@ -2313,7 +2313,8 @@ def report_simulate(args):
     print(f"games per new player until the first repeat (plan 62, plan 65, information only, D-75); {args.seeds} seeds "
           f"per cell, each stops at the first game that offers a seen card or after {cap} games; {time.monotonic() - t0:.0f} s")
     print(f"  models: strong = always right; typical = p(right) {lo} at level 1 → {hi} at level 12; "
-          "standard jokers once each at a random level; rr-competitive (a game = a round), timed modelled until MD-8/MD-9")
+          "standard jokers once each at a random level (rr-coop: the team's set; rr-competitive: per player); "
+          "multiplayer modes as the engine's sessions (a game = a session; timed: every question claimed by a random player still in)")
     print("  median/p10/bound: games until the first repeat (bound = min over seeds, strong only); exigente: seeds whose "
           "first repeat was a Doña Exigente card; draw: games until a level draw repeats (median/bound); k = the engine's "
           "fresh games left for a fresh profile (supply outlook), a cross-check of the draw bound")
@@ -5395,7 +5396,7 @@ def main():
     rp.add_argument("--age-group", help="with --simulate: comma-separated (default: all four)")
     rp.add_argument("--mode", help="with --simulate: solo|rr-coop|rr-competitive|timed|all (default solo); "
                     "with --played: one mode (default every mode)")
-    rp.add_argument("--players", type=int, help="with --simulate: players in rr-competitive and timed (default 4)")
+    rp.add_argument("--players", type=int, help="with --simulate: players in rr-coop, rr-competitive and timed (default 4)")
     rp.add_argument("--seeds", type=int, default=40, help="with --simulate: runs per cell")
     rp.add_argument("--cost", action="store_true",
                     help="$ per run and per approved by run kind, projection per launch language and per regional bundle "

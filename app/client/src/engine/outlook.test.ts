@@ -34,6 +34,8 @@ test("outlook: k, bottleneck (plan 65)", () => {
   assert.equal(outlook(emptySave(), data, { ...solo, bundles: ["base", "colombia"] }).k, 12);
   assert.equal(outlook(seen(emptySave(), "b7-0", "b7-1"), data, solo).k, 3);
   assert.equal(outlook(emptySave(), data, { ...solo, mode: "rr-competitive", players: 2 }).k, 2);
+  // timed, 3 players (decision 276): 3 + 3k ≤ 10 → k = 2.
+  assert.equal(outlook(emptySave(), data, { ...solo, mode: "timed", cards: 0, players: 3 }).k, 2);
   const dry = seen(emptySave(), ...pool.filter((x) => x.difficulty === 7).map((x) => x.id));
   assert.deepEqual(outlook(dry, data, solo).bottleneck, [[7, 7]]);
   assert.equal(outlook(dry, data, solo).k, 0);

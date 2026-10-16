@@ -1,13 +1,15 @@
-// Games per new player (plan 62, CT-2; plan 65): engine games on one v3 save until the first repeat (a seen card offered).
+// Games per new player (plan 62, CT-2; plan 65): engine sessions on one save until the first repeat (a seen card offered).
 // stdin: a cell {locale, bundles?, age_group?, mode?, player?, players?, seeds?, seed?} or an array of cells; stdout: JSON.
 import { readFileSync } from "node:fs";
 import { rangesFor } from "../../../app/client/src/engine/choice.ts";
-import { GameError, MODES, STANDARD_JOKERS, answer, joker, newGame, pick, resolveChoice, view } from "../../../app/client/src/engine/game.ts";
+import {
+  GameError, MODES, STANDARD_JOKERS, answer, claim, joker, newGame, newSession, pick, resolveChoice, show, view, type ChoiceArgs,
+} from "../../../app/client/src/engine/game.ts";
 import { outlook } from "../../../app/client/src/engine/outlook.ts";
-import { categoryOf, subOf, type LevelRanges } from "../../../app/client/src/engine/pool.ts";
+import { subOf } from "../../../app/client/src/engine/pool.ts";
 import { seededRng } from "../../../app/client/src/engine/rng.ts";
 import * as selection from "../../../app/client/src/engine/selection.ts";
-import { emptySave, type EngineData, type GameState, type Io, type SaveData } from "../../../app/client/src/engine/state.ts";
+import { emptySave, newest, rowStates, type EngineData, type GameRow, type GameState, type Io, type SaveData } from "../../../app/client/src/engine/state.ts";
 import type { GameMode, JokerName } from "../../../app/client/src/lib/types.ts";
 import { loadData, type Loaded } from "./load.ts";
 
@@ -15,8 +17,10 @@ import { loadData, type Loaded } from "./load.ts";
 const TYPICAL_P = [0.95, 0.6] as const;
 const NOW = "2026-01-01T00:00:00";
 const NAME = "Sim";
+/** Time between two engine actions: inside every timed deadline. */
+const STEP_MS = 1000;
 const SIM_MODES: readonly string[] = MODES.filter((m) => m !== "gamemaster"); // = qgen.SIM_MODES
-const MULTI = ["rr-competitive", "timed"];
+const MULTI = ["rr-coop", "rr-competitive", "timed"]; // = qgen.SIM_MULTI
 /** Runs stop here if no repeat came yet (`capped`). */
 const MAX_GAMES = 500;
 
@@ -26,7 +30,7 @@ interface Cell {
   age_group?: string;
   mode?: string;
   player?: "strong" | "typical";
-  /** rr-competitive, timed: default 4. */
+  /** Sessions: default 4. */
   players?: number;
   seeds?: number;
   seed?: number;
@@ -77,40 +81,36 @@ const NONE: Bottleneck = { level: 0, lo: 0, hi: 0, dry: [] };
 /** Ids with a seen row. */
 const seenIds = (save: SaveData) => new Set(save.seen.map((s) => s.question_id));
 
-/** One seed on one v3 save: games until the first that offers a seen card (count ≥ 1), and until the first
+/** One seed on one save: sessions until the first that offers a seen card (count ≥ 1), and until the first
  * whose level draw does; at most MAX_GAMES. */
 function run(data: EngineData, cell: Cell, seed: number): Run {
-  const io: Io = { rng: seededRng(seed), now: NOW };
+  const io: Io = { rng: seededRng(seed), now: NOW, ms: Date.parse(NOW) };
   const rand = uniform(seed ^ 0x9e3779b9);
   const r: Rand = { rand, randInt: (n) => Math.floor(rand() * n) };
-  const args = { mode: "solo", age_group: cell.age_group, bundles: cell.bundles };
+  const args = { mode: cell.mode as GameMode, age_group: cell.age_group, bundles: cell.bundles };
   const choice = resolveChoice(data, args);
   const bundles = new Set(choice.bundles);
   const ranges = rangesFor(data, choice);
-  if (cell.mode === "timed") return runTimed(data, cell, io, r, ranges, bundles);
-  // rr-competitive until MD-8: one solo game per player on the one save (D-82); a game = a round.
-  const names = cell.mode === "rr-competitive" ? Array.from({ length: cell.players! }, (_, i) => `${NAME} ${i + 1}`) : [NAME];
+  const names = cell.mode === "solo" ? [NAME] : Array.from({ length: cell.players! }, (_, i) => `${NAME} ${i + 1}`);
   let save: SaveData = { ...emptySave(), language: data.locale };
   let first: { games: number; cambiazo: boolean } | null = null;
   for (let games = 0; games < MAX_GAMES; games++) {
-    for (const name of names) {
-      const before = seenIds(save);
-      let got: Repeats;
-      try {
-        ({ save, ...got } = playGame(save, data, io, r, name, args, cell, before));
-      } catch (e) {
-        if (e instanceof GameError && e.code === "supply_short") {
-          return { ...(first ?? { games, cambiazo: false }), draw: games, capped: false, bottleneck: short(e, before, data, bundles) };
-        }
-        throw e;
+    const before = seenIds(save);
+    let got: Repeats;
+    try {
+      ({ save, ...got } = playSession(save, data, io, r, names, args, cell, before));
+    } catch (e) {
+      if (e instanceof GameError && e.code === "supply_short") {
+        return { ...(first ?? { games, cambiazo: false }), draw: games, capped: false, bottleneck: short(e, before, data, bundles) };
       }
-      if (!first && got.any !== null) first = { games, cambiazo: got.draw === null };
-      if (got.draw !== null) {
-        return { ...first!, draw: games, capped: false, bottleneck: dryAt(got.draw, ...ranges[got.draw - 1], before, data, bundles) };
-      }
-      // Finished games only slow every clone down; seen rows carry the counts.
-      save.games = [];
+      throw e;
     }
+    if (!first && got.any !== null) first = { games, cambiazo: got.draw === null };
+    if (got.draw !== null) {
+      return { ...first!, draw: games, capped: false, bottleneck: dryAt(got.draw, ...ranges[got.draw - 1], before, data, bundles) };
+    }
+    // Finished sessions only slow every clone down; seen rows carry the counts.
+    save.games = [];
   }
   return { ...(first ?? { games: MAX_GAMES, cambiazo: false }), draw: MAX_GAMES, capped: true, bottleneck: NONE };
 }
@@ -118,79 +118,108 @@ function run(data: EngineData, cell: Cell, seed: number): Run {
 /** First level that offered a seen card: any card, a level-draw card (not Cambiazo's); null = none. */
 type Repeats = { any: number | null; draw: number | null };
 
-/** One engine game from newGame to won or lost, with its repeats of `seen`; newGame's GameError passes through. */
-function playGame(
-  save: SaveData, data: EngineData, io: Io, { rand, randInt }: Rand, name: string, args: object, cell: Cell, seen: Set<string>,
+/** One session's working set; `save` moves on with every action. */
+interface Sim {
+  save: SaveData;
+  data: EngineData;
+  io: Io;
+  r: Rand;
+  cell: Cell;
+  check: (cambiazo?: boolean) => void;
+}
+
+const rowOf = (s: Sim): GameRow => newest(s.save.games)!;
+
+/** One engine action, `STEP_MS` after the previous one. */
+function act(s: Sim, fn: (save: SaveData) => { save: SaveData }): void {
+  s.io.ms! += STEP_MS;
+  s.save = fn(s.save).save;
+}
+
+/** One engine session from `new` to its end (solo: one game), with its repeats of `seen`; `new`'s GameError passes
+ * through. */
+function playSession(
+  save: SaveData, data: EngineData, io: Io, r: Rand, names: string[], args: ChoiceArgs, cell: Cell, seen: Set<string>,
 ): { save: SaveData } & Repeats {
-  let state: GameState;
   const reps: Repeats = { any: null, draw: null };
-  let n = 0;
-  const check = (cambiazo = false) => {
-    if (state.offered.slice(n).some((id) => seen.has(id))) {
-      reps.any ??= state.level;
-      if (!cambiazo) reps.draw ??= state.level;
+  const done: number[] = [];
+  const s: Sim = { save, data, io, r, cell, check: () => {} };
+  s.check = (cambiazo = false) => rowStates(rowOf(s)).forEach((st, i) => {
+    if (st.offered.slice(done[i] ?? 0).some((id) => seen.has(id))) {
+      reps.any ??= st.level;
+      if (!cambiazo) reps.draw ??= st.level;
     }
-    n = state.offered.length;
-  };
-  ({ save, state } = newGame(save, data, io, name, args));
-  check();
-  // Each joker of the standard set once, at a random level; a refused one is skipped.
-  const pending = (Object.entries(STANDARD_JOKERS) as [JokerName, number | null][])
+    done[i] = st.offered.length;
+  });
+  act(s, (sv) => (cell.mode === "solo" ? newGame(sv, data, io, names[0], args) : newSession(sv, data, io, names, args)));
+  s.check();
+  if (cell.mode === "timed") playTimed(s);
+  else playTurns(s);
+  return { save: s.save, ...reps };
+}
+
+/** The question's correct index, or a random wrong one not struck. */
+function chosen(data: EngineData, state: GameState, right: boolean, randInt: (n: number) => number): number {
+  const correct = state.answers.indexOf(data.byId.get(state.current!)!.answer);
+  const wrong = state.answers.map((_, i) => i).filter((i) => i !== correct && !state.struck.includes(i));
+  return right ? correct : wrong[randInt(wrong.length)];
+}
+
+/** solo, rr-coop, rr-competitive: the seat on turn picks, plays its due jokers, answers. Each joker of a game's
+ * standard set once, at a random level (rr-coop: the team's one set); a refused one is skipped. */
+function playTurns(s: Sim): void {
+  const { data, io, r: { rand, randInt } } = s;
+  const plan = () => (Object.entries(STANDARD_JOKERS) as [JokerName, number | null][])
     .flatMap(([j, n]) => Array.from({ length: n ?? 0 }, () => ({ joker: j, level: 1 + randInt(selection.LEVELS) })));
-  while (state.phase === "select" || state.phase === "question") {
-    if (state.phase === "select") ({ save, state } = pick(save, data, io, randInt(state.options.length)));
-    const due = pending.filter((p) => p.level === state.level);
-    for (const p of due) {
-      pending.splice(pending.indexOf(p), 1);
-      const jargs = jokerArgs(p.joker, save, data, io, state, randInt);
+  const perSeat = rowOf(s).state.settings.mode === "rr-competitive";
+  const pending = perSeat ? rowOf(s).seats!.map(plan) : [plan()];
+  const turn = () => {
+    const row = rowOf(s), seat = row.seats ? row.turn! : undefined;
+    return { seat, state: row.seats?.[seat!].state ?? row.state };
+  };
+  while (rowOf(s).result === null) {
+    const { seat, state: before } = turn();
+    if (before.phase === "select") act(s, (sv) => pick(sv, data, io, randInt(before.options.length), seat));
+    let { state } = turn();
+    const own = pending[perSeat ? seat! : 0];
+    for (const p of own.filter((p) => p.level === state.level)) {
+      own.splice(own.indexOf(p), 1);
+      const jargs = jokerArgs(p.joker, s.save, data, io, state, randInt);
       if (jargs === null) continue;
       try {
-        ({ save, state } = joker(save, data, io, p.joker, jargs));
-        check(p.joker === "category");
+        act(s, (sv) => joker(sv, data, io, p.joker, jargs, seat));
+        s.check(p.joker === "category");
       } catch (e) {
         if (!(e instanceof GameError)) throw e;
       }
+      ({ state } = turn());
       if (state.phase !== "question") break;
     }
     if (state.phase !== "question") continue;
-    const correct = state.answers.indexOf(data.byId.get(state.current!)!.answer);
-    const right = cell.player === "strong" || rand() < pCorrect(state.level);
-    const wrong = state.answers.map((_, i) => i).filter((i) => i !== correct && !state.struck.includes(i));
-    ({ save, state } = answer(save, data, io, right ? correct : wrong[randInt(wrong.length)]));
-    check();
+    const right = s.cell.player === "strong" || rand() < pCorrect(state.level);
+    act(s, (sv) => answer(sv, data, io, chosen(data, state, right, randInt), seat));
+    s.check();
   }
-  return { save, ...reps };
 }
 
-/** timed until MD-9 (D-80): round = level, one question per player still in, seen for the save; no jokers.
- * A wrong answer drops the player (strong: nobody); one left wins. Games until a round draws a seen card (both counts). */
-function runTimed(
-  data: EngineData, cell: Cell, io: Io, { rand }: Rand, ranges: LevelRanges, bundles: Set<string>,
-): Run {
-  const cat = categoryOf(data.broad);
-  const count = new Map<string, number>();
-  const pool = selection.available(data.pool, [], [], bundles);
-  const n = cell.players!, last = Math.min(n, 2) - 1;
-  for (let games = 0; games < MAX_GAMES; games++) {
-    const asked = new Set<string>(), cats = new Set<string | null>();
-    const before = new Set(count.keys());
-    let alive = n;
-    for (let level = 1; level <= selection.LEVELS && alive > last; level++) {
-      const drawn = selection.draw(level, pool.filter((q) => !asked.has(q.id)), {
-        ranges, n: alive, avoidCategories: cats, categoryOf: cat, countOf: (q) => count.get(q.id) ?? 0, rng: io.rng,
-      });
-      if (drawn === null || drawn.some((q) => before.has(q.id))) {
-        return { games, cambiazo: false, draw: games, capped: false, bottleneck: dryAt(level, ...ranges[level - 1], before, data, bundles) };
-      }
-      for (const q of drawn) {
-        count.set(q.id, (count.get(q.id) ?? 0) + 1);
-        asked.add(q.id);
-        cats.add(cat(q));
-      }
-      if (cell.player !== "strong") alive -= Array.from({ length: alive }, () => rand() >= pCorrect(level)).filter(Boolean).length;
+/** timed: each question shown, claimed by a random seat still in, answered right with pCorrect (strong: always, so
+ * round 12 ends it); the clock never runs out. */
+function playTimed(s: Sim): void {
+  const { data, io, r: { rand, randInt } } = s;
+  while (rowOf(s).result === null) {
+    const row = rowOf(s);
+    if (row.state.timed!.shown_at === null) {
+      act(s, (sv) => show(sv, data, io));
+      continue;
     }
+    const seats = row.seats!.flatMap((x, i) => (x.out ? [] : [i]));
+    const seat = seats[randInt(seats.length)];
+    act(s, (sv) => claim(sv, data, io, seat));
+    const state = rowOf(s).state;
+    const right = s.cell.player === "strong" || rand() < pCorrect(state.level);
+    act(s, (sv) => answer(sv, data, io, chosen(data, state, right, randInt), seat));
+    s.check();
   }
-  return { games: MAX_GAMES, cambiazo: false, draw: MAX_GAMES, capped: true, bottleneck: NONE };
 }
 
 /** Arguments for a joker, or null to skip it: Cambiazo takes a random subcategory the engine allows. */
@@ -215,7 +244,6 @@ function simulate(cell: Cell, loaded: Loaded) {
   const players = MULTI.includes(mode) ? cell.players ?? 4 : 1;
   const head = { locale: cell.locale, bundles: cell.bundles ?? null, age_group: cell.age_group ?? null, mode, player, players };
   if (!loaded.ok) return { ...head, result: "no_pool", pool: loaded.pool };
-  // rr-coop sees like solo (D-77); the engine runs it as solo.
   if (!SIM_MODES.includes(mode)) throw new Error(`mode ${mode} not simulated (${SIM_MODES.join(", ")})`);
   const t0 = performance.now();
   const base = cell.seed ?? 1, n = cell.seeds ?? 50;
