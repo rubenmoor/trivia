@@ -2206,5 +2206,797 @@
       "q-1198",
       "q-1199"
     ]
+  },
+  "tr-en-1": {
+    "size": 30,
+    "seed": "tr-en-1",
+    "items": {
+      "q-1227": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          10,
+          10
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "en"
+      },
+      "q-0466": {
+        "llm": "approved",
+        "audit": "problem",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          6,
+          6
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "en"
+      },
+      "q-1834": {
+        "llm": "approved",
+        "audit": "problem",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          4,
+          4
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "en"
+      },
+      "q-0186": {
+        "llm": "approved",
+        "audit": "problem",
+        "human": "needs_work",
+        "problems": [],
+        "difficulty": [
+          4,
+          4
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "en"
+      },
+      "q-0545": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          8,
+          8
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "en"
+      },
+      "q-0885": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          3,
+          3
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "en"
+      },
+      "q-0019": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          3,
+          3
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "en"
+      },
+      "q-0324": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          7,
+          7
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "en"
+      },
+      "q-0968": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          9,
+          9
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "en"
+      },
+      "q-0596": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          7,
+          7
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "en"
+      },
+      "q-0817": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          1,
+          1
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "en"
+      },
+      "q-0866": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          12,
+          12
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "en"
+      },
+      "q-1468": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          7,
+          7
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "en"
+      },
+      "q-0502": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          5,
+          5
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "en"
+      },
+      "q-0652": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          7,
+          7
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "en"
+      },
+      "q-1967": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          8,
+          8
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "en"
+      },
+      "q-0594": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          6,
+          6
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "en"
+      },
+      "q-0738": {
+        "llm": "approved",
+        "audit": "problem",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          10,
+          10
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "en"
+      },
+      "q-0030": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          3,
+          3
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "en"
+      },
+      "q-1040": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          5,
+          5
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "en"
+      },
+      "q-0126": {
+        "llm": "approved",
+        "audit": "problem",
+        "human": "needs_work",
+        "problems": [],
+        "difficulty": [
+          7,
+          7
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "en"
+      },
+      "q-1051": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          3,
+          3
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "en"
+      },
+      "q-1053": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          13,
+          13
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "en"
+      },
+      "q-0514": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          13,
+          13
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "en"
+      },
+      "q-0461": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          2,
+          2
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "en"
+      },
+      "q-0563": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          7,
+          7
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "en"
+      },
+      "q-1705": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          15,
+          15
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "en"
+      },
+      "q-0729": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          10,
+          10
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "en"
+      },
+      "q-1781": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          10,
+          10
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "en"
+      },
+      "q-0919": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          11,
+          11
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "en"
+      }
+    }
+  },
+  "tr-de-1": {
+    "size": 30,
+    "seed": "tr-de-1",
+    "items": {
+      "q-0968": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          10,
+          10
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "de"
+      },
+      "q-1141": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          11,
+          11
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "de"
+      },
+      "q-0738": {
+        "llm": "approved",
+        "audit": "problem",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          5,
+          5
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "de"
+      },
+      "q-0596": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          7,
+          7
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "de"
+      },
+      "q-1781": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          10,
+          10
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "de"
+      },
+      "q-1118": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          7,
+          7
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "de"
+      },
+      "q-0863": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          2,
+          2
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "de"
+      },
+      "q-0490": {
+        "llm": "approved",
+        "audit": "problem",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          3,
+          3
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "de"
+      },
+      "q-0359": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          7,
+          7
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "de"
+      },
+      "q-0466": {
+        "llm": "approved",
+        "audit": "problem",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          6,
+          6
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "de"
+      },
+      "q-1967": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          7,
+          7
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "de"
+      },
+      "q-0537": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          2,
+          2
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "de"
+      },
+      "q-1227": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          10,
+          10
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "de"
+      },
+      "q-0502": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          4,
+          4
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "de"
+      },
+      "q-0885": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          4,
+          4
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "de"
+      },
+      "q-0604": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          15,
+          15
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "de"
+      },
+      "q-1051": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          3,
+          3
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "de"
+      },
+      "q-0545": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          9,
+          9
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "de"
+      },
+      "q-1199": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          5,
+          5
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "de"
+      },
+      "q-1834": {
+        "llm": "approved",
+        "audit": "problem",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          4,
+          4
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "de"
+      },
+      "q-0866": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          12,
+          12
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "de"
+      },
+      "q-2123": {
+        "llm": "approved",
+        "audit": "problem",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          8,
+          8
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "de"
+      },
+      "q-1705": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          14,
+          14
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "de"
+      },
+      "q-0594": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          6,
+          6
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "de"
+      },
+      "q-0126": {
+        "llm": "approved",
+        "audit": "problem",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          7,
+          7
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "de"
+      },
+      "q-1468": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          6,
+          6
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "de"
+      },
+      "q-0725": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          9,
+          9
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "de"
+      },
+      "q-0708": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          8,
+          8
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "de"
+      },
+      "q-1697": {
+        "llm": "approved",
+        "audit": "problem",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          6,
+          6
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "de"
+      },
+      "q-0652": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          9,
+          9
+        ],
+        "media_changed": false,
+        "on": "2026-10-16",
+        "locale": "de"
+      }
+    }
   }
 }

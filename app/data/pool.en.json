@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "7c3add9d",
+  "hash": "797f61d1",
   "questions": [
     {
       "id": "q-0019",
@@ -135,74 +135,6 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Cosal",
         "author_url": "https://commons.wikimedia.org/wiki/User:Cosal"
-      },
-      "background": null
-    },
-    {
-      "id": "q-0126",
-      "status": "approved",
-      "difficulty": 7,
-      "subcategory": "flags",
-      "bundle": "base",
-      "description": "A fancy lunch on top of a cactus, served right in the middle of a flag.",
-      "question": "This small piece comes from a flag. Which country's flag is it?",
-      "answer": "Mexico",
-      "wrong_answers": [
-        "Ecuador",
-        "Albania",
-        "Egypt"
-      ],
-      "hints": [
-        "It is a country in the Americas.",
-        "Its colors are green, white and red.",
-        "It is famous for tacos and mariachis."
-      ],
-      "fun_fact": "Legend says the Aztecs founded their great city, Tenochtitlan, right where they saw an eagle on a cactus eating a snake.",
-      "media": {
-        "type": "image",
-        "role": "essential",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/New_Mexico_territory_coat_of_arms_%28illustrated%2C_1876%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ANew_Mexico_territory_coat_of_arms_%28illustrated%2C_1876%29.jpg",
-        "credit": "Henry Mitchell\n\nRestoration by Godot13 · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Henry Mitchell\n\nRestoration by Godot13",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Godot13"
-      },
-      "background": null
-    },
-    {
-      "id": "q-0186",
-      "status": "approved",
-      "difficulty": 4,
-      "subcategory": "world-cuisines",
-      "bundle": "base",
-      "description": "An envelope that brings no letters, just something much tastier inside.",
-      "question": "Look at this close-up: which Colombian food is it?",
-      "answer": "Empanada",
-      "wrong_answers": [
-        "Buñuelo",
-        "Arepa",
-        "Pandebono"
-      ],
-      "hints": [
-        "It is fried in oil until it turns golden and crispy.",
-        "Inside, it almost always has potato and meat.",
-        "It is shaped like a half moon and eaten with ají, a spicy sauce."
-      ],
-      "fun_fact": "The word “empanada” comes from the Spanish “empanar”, which means to wrap something in dough or bread.",
-      "media": {
-        "type": "image",
-        "role": "essential",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Empanada_barranquillera.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AEmpanada_barranquillera.jpg",
-        "credit": "Jdvillalobos · CC BY 3.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY 3.0",
-        "license_url": "https://creativecommons.org/licenses/by/3.0",
-        "author": "Jdvillalobos",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Jdvillalobos"
       },
       "background": null
     },

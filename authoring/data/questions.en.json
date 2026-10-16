@@ -24,11 +24,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T17:18:09"
       },
       "source_hash": "5acbfbf6911d"
     },
@@ -54,11 +62,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T17:20:11"
       },
       "source_hash": "642ea988e639"
     },
@@ -139,16 +155,24 @@
       "description": "A fancy lunch on top of a cactus, served right in the middle of a flag.",
       "fun_fact": "Legend says the Aztecs founded their great city, Tenochtitlan, right where they saw an eagle on a cactus eating a snake.",
       "difficulty": 7,
-      "status": "approved",
+      "status": "needs_work",
       "batch": "tr-en-1",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
+        "decision": "needs_work",
+        "feedback": "the flag says new mexico. so something's wrong. and either way the question doesn't wor",
         "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T17:21:04"
       },
       "source_hash": "4be36b0e8895"
     },
@@ -169,16 +193,24 @@
       "description": "An envelope that brings no letters, just something much tastier inside.",
       "fun_fact": "The word “empanada” comes from the Spanish “empanar”, which means to wrap something in dough or bread.",
       "difficulty": 4,
-      "status": "approved",
+      "status": "needs_work",
       "batch": "tr-en-1",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
+        "decision": "needs_work",
+        "feedback": "this doesn't belong in the base question bundle",
         "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T17:17:20"
       },
       "source_hash": "e419e630c15b"
     },
@@ -264,11 +296,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T17:18:18"
       },
       "source_hash": "687f7e397c1d"
     },
@@ -354,11 +394,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T17:22:00"
       },
       "source_hash": "72ea11eb40ca"
     },
@@ -384,11 +432,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T17:16:16"
       },
       "source_hash": "30be29cafd69"
     },
@@ -414,11 +470,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T17:19:31"
       },
       "source_hash": "855f1fb1e41b"
     },
@@ -444,11 +508,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T17:21:54"
       },
       "source_hash": "29623331737e"
     },
@@ -504,11 +576,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T17:17:49"
       },
       "source_hash": "505056f0ac44"
     },
@@ -564,11 +644,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T17:22:04"
       },
       "source_hash": "947b23f7729a"
     },
@@ -594,11 +682,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T17:19:56"
       },
       "source_hash": "2f3c350d8385"
     },
@@ -624,11 +720,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T17:19:02"
       },
       "source_hash": "8cad4256fc3a"
     },
@@ -684,11 +788,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T17:19:38"
       },
       "source_hash": "5988a5003270"
     },
@@ -804,11 +916,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T17:22:25"
       },
       "source_hash": "9dd59b3d7e68"
     },
@@ -834,11 +954,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T17:20:08"
       },
       "source_hash": "2d1a751d398b"
     },
@@ -894,11 +1022,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T17:19:08"
       },
       "source_hash": "102138276d15"
     },
@@ -954,11 +1090,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T17:19:16"
       },
       "source_hash": "07017349116c"
     },
@@ -984,11 +1128,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T17:18:05"
       },
       "source_hash": "902afd5b0479"
     },
@@ -1014,11 +1166,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T17:22:43"
       },
       "source_hash": "bce07219e520"
     },
@@ -1044,11 +1204,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T17:18:28"
       },
       "source_hash": "dc46d8c3ad2e"
     },
@@ -1074,11 +1242,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T17:20:28"
       },
       "source_hash": "2973309053db"
     },
@@ -1104,11 +1280,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T17:21:31"
       },
       "source_hash": "a090e2ba7a87"
     },
@@ -1134,11 +1318,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T17:21:44"
       },
       "source_hash": "f4f6d344fd71"
     },
@@ -1254,11 +1446,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T17:16:01"
       },
       "source_hash": "43a271f8115e"
     },
@@ -1284,11 +1484,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T17:19:27"
       },
       "source_hash": "fa0326de67f9"
     },
@@ -1344,11 +1552,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T17:22:16"
       },
       "source_hash": "de66d6c3beca"
     },
@@ -1374,11 +1590,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T17:22:28"
       },
       "source_hash": "b7fe98c81e47"
     },
@@ -1404,11 +1628,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T17:16:37"
       },
       "source_hash": "efbfa6eca694"
     },
@@ -1434,11 +1666,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
         "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-16T17:19:48"
       },
       "source_hash": "39e083d8193b"
     },

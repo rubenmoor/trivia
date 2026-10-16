@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "37318b05",
+  "hash": "ad37fb0b",
   "questions": [
     {
       "id": "q-0001",
@@ -3430,40 +3430,6 @@
       "background": null
     },
     {
-      "id": "q-0126",
-      "status": "approved",
-      "difficulty": 6,
-      "subcategory": "flags",
-      "bundle": "base",
-      "description": "Un almuerzo de lujo encima de un cactus, servido en plena bandera.",
-      "question": "Este pedacito es de una bandera: ¿de qué país es?",
-      "answer": "México",
-      "wrong_answers": [
-        "Ecuador",
-        "Albania",
-        "Egipto"
-      ],
-      "hints": [
-        "Es un país de América.",
-        "Sus colores son verde, blanco y rojo.",
-        "Es famoso por los tacos y los mariachis."
-      ],
-      "fun_fact": "Cuenta la leyenda que los aztecas fundaron su gran ciudad, Tenochtitlan, justo donde vieron un águila sobre un nopal comiéndose una serpiente.",
-      "media": {
-        "type": "image",
-        "role": "essential",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/New_Mexico_territory_coat_of_arms_%28illustrated%2C_1876%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ANew_Mexico_territory_coat_of_arms_%28illustrated%2C_1876%29.jpg",
-        "credit": "Henry Mitchell\n\nRestoration by Godot13 · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Henry Mitchell\n\nRestoration by Godot13",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Godot13"
-      },
-      "background": null
-    },
-    {
       "id": "q-0127",
       "status": "approved",
       "difficulty": 5,
@@ -4761,40 +4727,6 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Ferfive",
         "author_url": "https://commons.wikimedia.org/wiki/User:Ferfive"
-      },
-      "background": null
-    },
-    {
-      "id": "q-0186",
-      "status": "approved",
-      "difficulty": 1,
-      "subcategory": "world-cuisines",
-      "bundle": "base",
-      "description": "Un sobre que no trae cartas, sino algo mucho más sabroso adentro.",
-      "question": "Mira este acercamiento: ¿qué comida colombiana es?",
-      "answer": "Empanada",
-      "wrong_answers": [
-        "Buñuelo",
-        "Arepa",
-        "Pandebono"
-      ],
-      "hints": [
-        "Se fríe en aceite hasta quedar dorada y crujiente.",
-        "Por dentro casi siempre trae papa y carne.",
-        "Tiene forma de media luna y se come con ají."
-      ],
-      "fun_fact": "La palabra 'empanada' viene de 'empanar', que significa envolver algo en masa o pan.",
-      "media": {
-        "type": "image",
-        "role": "essential",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Empanada_barranquillera.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AEmpanada_barranquillera.jpg",
-        "credit": "Jdvillalobos · CC BY 3.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY 3.0",
-        "license_url": "https://creativecommons.org/licenses/by/3.0",
-        "author": "Jdvillalobos",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Jdvillalobos"
       },
       "background": null
     },

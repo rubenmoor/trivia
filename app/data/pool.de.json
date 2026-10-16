@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "5abde14d",
+  "hash": "51fe7a52",
   "questions": [
     {
       "id": "q-0019",
@@ -135,74 +135,6 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Cosal",
         "author_url": "https://commons.wikimedia.org/wiki/User:Cosal"
-      },
-      "background": null
-    },
-    {
-      "id": "q-0126",
-      "status": "approved",
-      "difficulty": 7,
-      "subcategory": "flags",
-      "bundle": "base",
-      "description": "Ein Mittagessen der Extraklasse auf einem Kaktus, serviert mitten auf einer Flagge.",
-      "question": "Dieser Ausschnitt stammt aus einer Flagge. Zu welchem Land gehört sie?",
-      "answer": "Mexiko",
-      "wrong_answers": [
-        "Ecuador",
-        "Albanien",
-        "Ägypten"
-      ],
-      "hints": [
-        "Das Land liegt in Amerika.",
-        "Die Flagge ist grün, weiß und rot.",
-        "Das Land ist berühmt für Tacos und Mariachi-Musik."
-      ],
-      "fun_fact": "Der Legende nach gründeten die Azteken ihre große Stadt Tenochtitlan genau dort, wo sie einen Adler auf einem Kaktus sahen, der eine Schlange fraß.",
-      "media": {
-        "type": "image",
-        "role": "essential",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/New_Mexico_territory_coat_of_arms_%28illustrated%2C_1876%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ANew_Mexico_territory_coat_of_arms_%28illustrated%2C_1876%29.jpg",
-        "credit": "Henry Mitchell\n\nRestoration by Godot13 · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Henry Mitchell\n\nRestoration by Godot13",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Godot13"
-      },
-      "background": null
-    },
-    {
-      "id": "q-0186",
-      "status": "approved",
-      "difficulty": 7,
-      "subcategory": "world-cuisines",
-      "bundle": "base",
-      "description": "Ein Briefumschlag ganz ohne Post, dafür mit etwas viel Leckererem drin.",
-      "question": "Sieh dir diese Nahaufnahme an: Welches kolumbianische Essen ist das?",
-      "answer": "Empanada",
-      "wrong_answers": [
-        "Buñuelo",
-        "Arepa",
-        "Pandebono"
-      ],
-      "hints": [
-        "Dieses Essen wird in Öl frittiert, bis es goldbraun und knusprig ist.",
-        "Drinnen stecken fast immer Kartoffeln und Fleisch.",
-        "Es hat die Form eines Halbmonds und wird mit scharfer Ají-Soße gegessen."
-      ],
-      "fun_fact": "Der Name kommt vom spanischen „empanar“, was so viel heißt wie „in Teig oder Brot einhüllen“.",
-      "media": {
-        "type": "image",
-        "role": "essential",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Empanada_barranquillera.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AEmpanada_barranquillera.jpg",
-        "credit": "Jdvillalobos · CC BY 3.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY 3.0",
-        "license_url": "https://creativecommons.org/licenses/by/3.0",
-        "author": "Jdvillalobos",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Jdvillalobos"
       },
       "background": null
     },
