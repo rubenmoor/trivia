@@ -5,7 +5,7 @@ import { steam } from "./desktop.ts";
 import { BUTTONS, CLAIM_PAD, FRESH, held, step, steamStyle, styleOf, type PadState, type PadStyle } from "./gamepad.ts";
 import { show } from "./focus.ts";
 import { dispatch, gate, keyLabel, lastDevice, padMap, release, resetTravel, type Device } from "./input.svelte.ts";
-import { seating } from "./seats.svelte.ts";
+import { seating, unbindPad } from "./seats.svelte.ts";
 
 /** The glyph set of the pad that acted last (IN-5). */
 export const padStyle = $state({ current: "xbox" as PadStyle });
@@ -111,6 +111,7 @@ export function listenPads(first: () => void): () => void {
 
   function disconnected(e: GamepadEvent) {
     prev.delete(e.gamepad.index);
+    unbindPad(e.gamepad.index);
     release();
     void refreshSteam();
     if (pads().length) return;

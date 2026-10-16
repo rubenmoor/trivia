@@ -302,6 +302,11 @@ export const en = {
     bundle: "Turning on the {bundle} bundle would add more.",
     exhausted: { one: "This bundle is running out of questions: {list}", other: "These bundles are running out of questions: {list}" },
   },
+  seat: {
+    lostTitle: "{name}'s controller disconnected",
+    lostBody: "Reconnect it or use another free controller.",
+    take: "Take over",
+  },
   picker: {
     letters: "ABCDEFGHIJKLMNOPQRSTUVWXYZ-'",
     marks: "0123456789.,?!",

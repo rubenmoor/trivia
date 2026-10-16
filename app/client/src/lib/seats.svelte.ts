@@ -13,6 +13,14 @@ export const acting: { seat: number | null } = { seat: null };
 
 const storeKey = (id: number) => `trivia.seats.${id}`;
 
+function store(id: number, binding: readonly (Binding | null)[]) {
+  try {
+    sessionStorage.setItem(storeKey(id), JSON.stringify(binding));
+  } catch {
+    /* private window: no reload rebind */
+  }
+}
+
 function stored(id: number, seats: number): (Binding | null)[] {
   try {
     const list: unknown = JSON.parse(sessionStorage.getItem(storeKey(id)) ?? "null");
@@ -26,11 +34,7 @@ function stored(id: number, seats: number): (Binding | null)[] {
 /** The join screen's binding as its session starts.
  * @public join screen (plan 162) */
 export function bindSession(id: number, binding: readonly Binding[]) {
-  try {
-    sessionStorage.setItem(storeKey(id), JSON.stringify(binding));
-  } catch {
-    /* private window: no reload rebind */
-  }
+  store(id, binding);
   seating.id = id;
   seating.binding = [...binding];
 }
@@ -70,4 +74,29 @@ export function actingSeat(): number | null {
  * @public timed screens (plan 164) */
 export function claimInput(): { keys: Keys; pad: typeof CLAIM_PAD } {
   return { keys: claimKeys(seating.binding), pad: CLAIM_PAD };
+}
+
+/** A pad is gone: its seat is unbound until a pad takes it (decision 289). */
+export function unbindPad(index: number) {
+  if (seating.id === null) return;
+  seating.binding = seating.binding.map((b) => (b !== null && typeof b === "object" && "pad" in b && b.pad === index ? null : b));
+  store(seating.id, seating.binding);
+}
+
+/** The seat that needs a pad now: round-robin the turn seat; `timed` the first one still in, at once (decision 289).
+ * A seat that is out never asks. */
+export function lostSeat(): number | null {
+  const view = seating.view;
+  if (!view || seating.id === null) return null;
+  const lost = (i: number) => seating.binding[i] === null && view.seats[i]?.status === "playing";
+  if (!view.timed) return lost(view.turn) ? view.turn : null;
+  const i = view.seats.findIndex((_, at) => lost(at));
+  return i < 0 ? null : i;
+}
+
+/** A pad takes `seat`. */
+export function rebindSeat(seat: number, pad: number) {
+  if (seating.id === null) return;
+  seating.binding = seating.binding.map((b, i) => (i === seat ? { pad } : b));
+  store(seating.id, seating.binding);
 }

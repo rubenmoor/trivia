@@ -302,6 +302,11 @@ export const de = {
     bundle: "Mit dem Paket {bundle} gäbe es mehr.",
     exhausted: { one: "Diesem Paket gehen die Fragen aus: {list}", other: "Diesen Paketen gehen die Fragen aus: {list}" },
   },
+  seat: {
+    lostTitle: "Controller von {name} getrennt",
+    lostBody: "Controller wieder verbinden oder einen freien nutzen.",
+    take: "Übernehmen",
+  },
   picker: {
     letters: "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜß-",
     marks: "0123456789.,?!",

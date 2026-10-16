@@ -8,6 +8,9 @@ export const esES = {
     confirm: "¿Seguro? Pulsa otra vez",
     media: "Audio y vídeo de las preguntas",
   },
+  seat: {
+    lostBody: "Reconectadlo o usad otro mando libre.",
+  },
   consent: {
     title: "¿Nos ayudáis a mejorar el juego?",
     body: "Si aceptáis, al cerrarse el juego envía datos anónimos de las partidas: qué preguntas se respondieron, si bien o mal, nivel, grupo de edad y comodines.",
