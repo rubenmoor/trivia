@@ -37046,7 +37046,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - `npm run check`, `npm test` (fixture replay in `game.test.ts` unchanged), `npm run build`, `qgen validate` pass
 - A copy of the family''s real save (never `state/` itself; temp dir) loads as v5, plays a solo game in the dev server (`TRIVIA_SAVE_DIR`), writes v5; `save_file.py` reads it', '2026-10-16T20:58:03Z', '2026-10-16T21:32:47Z', 1403, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1406, 157, 'Acting seat in the engine API', 'work', 'open', NULL, NULL, 'Implement "Engine API: the acting seat" of `plan 157: Session model and save format`, on top of the save v5 shape from the previous task of this plan (`Seat`, `GameRow.seats`/`turn`).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1406, 157, 'Acting seat in the engine API', 'work', 'done', NULL, '2026-10-16, engine/game.ts api.ts state.ts, locales en/es/de, plans/13-game-modes.md', 'Implement "Engine API: the acting seat" of `plan 157: Session model and save format`, on top of the save v5 shape from the previous task of this plan (`Seat`, `GameRow.seats`/`turn`).
 
 ## Do
 - Every game action body may carry `seat` (integer, join-order index): `app/client/src/engine/api.ts` `gameAction` passes it on, the `engine/game.ts` actions take it
@@ -37063,7 +37063,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - `npm run check`, `npm test` (frozen fixtures in `engine/fixtures/` replay unchanged), `npm run build`, `qgen validate` pass
-- No session can be started yet: `new` with `players` and a multiplayer mode → `mode_not_built`', '2026-10-16T20:58:03Z', NULL, 1403, 0, NULL, 'app');
+- No session can be started yet: `new` with `players` and a multiplayer mode → `mode_not_built`', '2026-10-16T20:58:03Z', '2026-10-16T21:34:58Z', 1403, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1407, 158, 'rr-coop in the engine: session start, turns, team game', 'work', 'open', NULL, NULL, 'Implement the rr-coop half of `plan 158: Round-robin modes in the engine` ("Starting a session", "Turns", "rr-coop", "Ending a session", "`view()` for the screens"), on the session shape and `actor(row, seat)` gate of `plan 157: Session model and save format` (`task 1405: Save v5: session rows with seats`, `task 1406: Acting seat in the engine API`). Engine only: no screens, no `BUILT_MODES` change. Binding: `decision 277: Multiplayer sessions in the save: one games[] row per session, with seats`.
 
 ## Do
@@ -43935,6 +43935,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1441, 1280, '2026-10-16T21:28:44Z', NULL, 'running', NULL, NULL, '2d40397231010c58c3b89ec989814692a006119d', 'questions', NULL, NULL, 1440, NULL, NULL, NULL, NULL, NULL, NULL, 74883);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1442, 1484, '2026-10-16T21:29:14Z', '2026-10-16T21:30:52Z', 'done', NULL, 0, '887394ac289f7da27500d48f571d80e39b2db7d9', NULL, 'claude-opus-5-5', 'f8693ba1-8895-46ce-b06c-e7963ab56809', NULL, 12, 24, 7072, 494680, 41365, 0.5713919999999999, 74883);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1443, 1405, '2026-10-16T21:29:22Z', '2026-10-16T21:32:56Z', 'done', NULL, 0, '887394ac289f7da27500d48f571d80e39b2db7d9', 'app', 'claude-sonnet-5-5', 'b965acb8-5a32-454a-90e9-58d2d2328993', NULL, 29, 58, 12520, 1606281, 58456, 0.6803962, 74883);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1444, 1406, '2026-10-16T21:32:57Z', '2026-10-16T21:35:06Z', 'done', NULL, 0, '975e07d3d787b3800f04ae0a74cb7fd115c21249', 'app', 'claude-sonnet-5-5', 'b965acb8-5a32-454a-90e9-58d2d2328993', 1443, 11, 22, 7037, 965947, 26087, 1.0483476, 74883);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

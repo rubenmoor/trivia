@@ -30,6 +30,30 @@ function gamemasterOnly(state: GameState, what: string): void {
 
 type Result = GameRow["result"];
 
+/** Fewest seats in a session. */
+const MIN_SEATS = 2;
+
+/** The acting seat of an action (plan 157): index into `row.seats`, 0 in a one-player game; refused before any mode logic. */
+export function actor(row: GameRow, seat: unknown): number {
+  if (!row.seats) {
+    if (seat === undefined || seat === 0) return 0;
+    throw new GameError("seat_unknown");
+  }
+  if (seat === undefined || seat === null) throw new GameError("seat_missing");
+  if (typeof seat !== "number" || !Number.isInteger(seat) || seat < 0 || seat >= row.seats.length) throw new GameError("seat_unknown");
+  if (row.seats[seat].out) throw new GameError("seat_out");
+  const mode = gameMode(row.state);
+  if ((mode === "rr-coop" || mode === "rr-competitive") && seat !== row.turn) throw new GameError("not_your_turn");
+  return seat;
+}
+
+/** The newest running game's actor check (every action but `new` and `abandon`); no game: left to the action's `no_game`. */
+export function checkActor(save: SaveData, seat: unknown): void {
+  const row = newest(save.games);
+  if (row && row.result === null) actor(row, seat);
+  else if (seat !== undefined && seat !== 0 && seat !== null) throw new GameError("seat_unknown");
+}
+
 /** Longest player name, in code points. */
 export const MAX_NAME = 30;
 
@@ -39,6 +63,18 @@ export function cleanName(name: unknown): string {
   if (!s) throw new GameError("name_missing");
   if (pyLen(s) > MAX_NAME) throw new GameError("name_too_long", { max: MAX_NAME });
   return s;
+}
+
+/** Session names (join order) as `players[]` ids: known names reuse their row, new ones get one. */
+function seatPlayers(work: SaveData, names: string[], io: Io): number[] {
+  return names.map((name) => {
+    let pid = playerId(work, name);
+    if (pid === null) {
+      pid = nextId(work.players);
+      work.players.push({ id: pid, name, created_on: io.now });
+    }
+    return pid;
+  });
 }
 
 /** Known players, the most recent first, with their game counts (UI-16). */
@@ -267,6 +303,27 @@ export function newGame(
       ...(locale === "es" ? {} : { locale }), state: structuredClone(state),
     });
     return state;
+  });
+}
+
+/** `new` for a session (body `players`, join order). Mode state: plans 158 and 159; until then `mode_not_built`. */
+export function newSession(
+  save: SaveData, _data: EngineData, io: Io, players: unknown, args: ChoiceArgs = {},
+): { save: SaveData; state: GameState } {
+  const mode = args.mode ?? "gamemaster";
+  if (!(MODES as unknown[]).includes(mode)) throw new GameError("mode_unknown", { mode: String(mode) });
+  if (!Array.isArray(players)) throw new GameError("players_too_few", { min: MIN_SEATS });
+  const names = players.map(cleanName);
+  if (new Set(names.map(casefold)).size < names.length) {
+    const seen = new Set<string>();
+    throw new GameError("player_twice", { name: names.find((n) => seen.size === seen.add(casefold(n)).size)! });
+  }
+  if (names.length < MIN_SEATS) throw new GameError("players_too_few", { min: MIN_SEATS });
+  if (mode === "gamemaster" || mode === "solo") throw new GameError("mode_single", { mode });
+  if (!(BUILT_MODES as unknown[]).includes(mode)) throw new GameError("mode_not_built", { mode });
+  return action(save, (work) => {
+    seatPlayers(work, names, io);
+    throw new Error("session rows: plans 158 and 159");
   });
 }
 

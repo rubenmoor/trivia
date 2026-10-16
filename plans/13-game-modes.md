@@ -10,6 +10,7 @@ Shared by every mode except gamemaster mode (D-74):
 - Flagging a question (decision 60, the flag with its note; was «Reportar pregunta») only logs; «Abandonar partida» and sound stay.
 - Steam achievements, except in customized games.
 - Input: gamepads, keyboard, mouse; no phones. Multiplayer modes add a "shared keyboard": one key per player hands them keyboard and mouse until their turn is done ([14](14-input.md)).
+- Acting seat (plan 157): every game action may carry `seat` (join-order index); `actor()` refuses before any mode logic: `seat_missing` / `seat_unknown` / `seat_out` in a session, `not_your_turn` in the round-robin modes; a one-player game takes no seat or 0. `new` for a session sends `players` (names, join order; `player_twice`, `players_too_few`); `abandon` names no seat.
 - Age group: the mode never shifts the age-group window (D-38, [21](21-age-groups.md)); no change to `age-groups.json`.
 
 ### Gamemaster mode (`gamemaster`, today's game; es proposal «Modo anfitrión»)
