@@ -188,7 +188,17 @@ export interface Game {
   session?: {
     mode: GameMode;
     turn: number;
-    seats: { player: string | null; status: "playing" | "out" | "won" | "lost"; level: number; age_group: string | null; jokers_left: JokerBudget }[];
+    seats: {
+      player: string | null; status: "playing" | "out" | "won" | "lost"; level: number; age_group: string | null; jokers_left: JokerBudget;
+      /** timed only: lives left, a correct answer this round, the round's last question without one yet. */
+      lives?: number; correct_this_round?: boolean; last_chance?: boolean;
+    }[];
+    /** timed only (plan 159): times are epoch ms; null while claimed or paused. */
+    timed?: {
+      round: number; sudden_death: boolean; repeat: number; round_size: number; question_in_round: number;
+      deadline: number | null; claim: { seat: number; deadline: number } | null; paused: boolean;
+      hints_shown: number | null; all_at_risk: boolean;
+    };
   };
 }
 
