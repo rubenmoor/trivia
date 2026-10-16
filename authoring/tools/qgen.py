@@ -1362,7 +1362,7 @@ def overlap_norm(text, locale="es"):
 
 def stem(text, locale="es"):
     """overlap_norm() with every word's plural ending dropped. Spanish: trailing «s», then «e»: Almenas → almena,
-    padres → padr. English: -ies → y, -es after s/x/z/ch/sh, else -s (not -ss): cities → city, boxes → box."""
+    padres → padr; German the same (Hunde → hund). English: -ies → y, -es after s/x/z/ch/sh, else -s (not -ss): cities → city, boxes → box."""
     def en(w):
         return (re.sub(r"ies$", "y", w) if w.endswith("ies") else re.sub(r"(s|x|z|ch|sh)es$", r"\1", w)
                 if re.search(r"(s|x|z|ch|sh)es$", w) else re.sub(r"(?<!s)s$", "", w))

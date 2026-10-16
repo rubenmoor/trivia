@@ -38447,7 +38447,7 @@ INSERT INTO decision (id, subject, status, options, body, intro, answer, reason,
 - base bundle names (`decision 261: Name of the base bundle per UI language (not «Basics»)`): «Paquete básico», «Base bundle», «Grundpaket»; letter keys es P, en B, de G
 Worker''s check: no overflow or cut text, 0 unmatched catalog texts in `manifest.json`.', 'Picking which sets of questions to play now has its own full screen, shown before the game options, and the main question set has a clearer name in each language. Before this counts as finished, the developer looks at screenshots of the new screen and the changed options screen in all four languages. The answer is either a go-ahead or a list of problems, each of which becomes its own fix.', 'problems: layout, scrolling, order, country flags and no descriptions, now in milestone 8''s bundle-screen line (2026-10-16 edit); plan 151''s revision covers them, no separate fix tasks', NULL, '2026-10-16T14:53:07Z', '2026-10-16T15:00:15Z', 1340, NULL, 'rule', NULL, '2026-10-16, task 1340: Bundle screen redone as two columns (base bundle left, optional bundles right, scrolling with focus follow), names only, no descriptions; optional order: regional bundle of the player''s region, then non-regional, then other regions (task 1351). Regional bundles carry a required ISO `country` (bundles.json, qgen validate, mods, --check-mod, modding docs) and always show that country''s flag as icon, no pin (task 1350). Plan 151 revised instead of separate fix tasks; reviewed again in task 1340.');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (264, 'Bundle screen (two columns) reviewed in /gallery?', 'pending', '["approved", "problems (listed in the answer)"]', 'Shots in work/gallery/<locale>/ for es, es-ES, en, de: bundles, choice-solo, choice-gamemaster, choice-supply-report (1920×1080; no unmatched catalog text, no overflow or cut text seen). Changed since decision 263: left column base bundle, right column optional bundles, names only, regional bundle shows its country''s flag, region-first order, scrolling right column with fade. Not covered by the gallery: ~15 fake mod bundles (it cannot load a mods dir) and 1280×800 (no --size option yet); scrolling is only checked on the dev server per task 1351.', 'The screen where players choose which question bundles to play was rebuilt after your last review: two columns, country flags, and a list that scrolls when there are many bundles. Please look at the new screenshots and say whether it is good enough or what still needs fixing. Approving closes the earlier gallery flag on this screen.', NULL, NULL, '2026-10-16T15:34:10Z', NULL, 1340, NULL, 'rule', NULL, '');
-INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (265, 'Start horizon: approve the image picks?', 'pending', '["Approve all", "Approve with changes (list numbers to drop or replace)"]', 'Contact sheet: `work/horizon/contact-sheet.png` (16 tiles on `--night-800`, number + name). Originals: `work/horizon/candidates/NN-<slug>.svg`; the slug becomes the shipped `<slug>.webp`.
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (265, 'Start horizon: approve the image picks?', 'answered', '["Approve all", "Approve with changes (list numbers to drop or replace)"]', 'Contact sheet: `work/horizon/contact-sheet.png` (16 tiles on `--night-800`, number + name). Originals: `work/horizon/candidates/NN-<slug>.svg`; the slug becomes the shipped `<slug>.webp`.
 
 All 16 are CC0 or PD vector cut-outs (SVG, so real alpha) from Wikimedia Commons, mostly Open Clip Art imports. No photos: Commons has almost no usable photo cut-outs with alpha for these subjects. Style is flat clipart, not photographic; the plan said "natural colours", the vectors are the usable reading of it. All File pages: `https://commons.wikimedia.org/wiki/File:<title>`.
 
@@ -38470,7 +38470,90 @@ All 16 are CC0 or PD vector cut-outs (SVG, so real alpha) from Wikimedia Commons
 | 15 | airplane | Plane in the sky mo 01.svg | OpenClipart "mo" | CC0 | vehicle, blue |
 | 16 | cactus | Vector cactus illustration (7).svg | Clker-Free-Vector-Images (Pixabay import) | CC0 | N. America, plant, tall, green |
 
-Known gaps (Commons search found nothing usable): no bridge, no bus (the Commons buses are cropped), no kangaroo/koala (Oceania only via the ukulele), no giraffe in colour, Africa only via the drum. 7 is a plain djembe drawing, 4 has a thin string above it. Name replacements by number if you want them; the build task picks them under the same rules.', 'The start screen of the game is getting a colourful row of small illustrations along the bottom, like a skyline: landmarks, animals, instruments and vehicles from around the world. Sixteen free-to-use drawings have been collected and put on one overview picture. You decide whether they go into the game as they are, or whether some should be dropped or swapped first; nothing is built until you answer.', NULL, NULL, '2026-10-16T15:41:40Z', NULL, 1329, NULL, 'once', NULL, '');
+Known gaps (Commons search found nothing usable): no bridge, no bus (the Commons buses are cropped), no kangaroo/koala (Oceania only via the ukulele), no giraffe in colour, Africa only via the drum. 7 is a plain djembe drawing, 4 has a thin string above it. Name replacements by number if you want them; the build task picks them under the same rules.', 'The start screen of the game is getting a colourful row of small illustrations along the bottom, like a skyline: landmarks, animals, instruments and vehicles from around the world. Sixteen free-to-use drawings have been collected and put on one overview picture. You decide whether they go into the game as they are, or whether some should be dropped or swapped first; nothing is built until you answer.', 'i approve all of them, but i can only actually decide when i see the rendered start screen. so please only have me decide on the final start screen and don''t have me decide on anything relating to the choice of pictures before that', NULL, '2026-10-16T15:41:40Z', '2026-10-16T15:44:41Z', 1329, NULL, 'once', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (266, 'Regional drafting in en, de, es-ES: prompts apply? (after slug keys)', 'pending', '["apply", "apply with changes", "don''t apply"]', '`task 1275: Regional drafting in any launch language (en US/UK, de, es-ES, es)` (`plan 98: Regional packs (RG-3..RG-5)`, part 10). The bundles `usa` (en, US English), `germany` (de), `uk` (en, British English), `spain` (es-ES), `mexico` (es, Mexican Spanish) draft in their region''s language and variety. After `decision 262: Taxonomy prompts on slug keys: apply?` (taxonomy prompts and the general list are applied) this redraft brings back the locale-prompt parts of `decision 250: Regional drafting in en, de, es-ES: prompts apply?` (its parts 4–8), unchanged, as verbatim old → new in `authoring/tools/prompts/`. The old texts below match the files today. Nothing applied yet.
+
+Already in code (staged): `qgen bundle new --kind region --language <L> --voice "…"`; `bundle_text()` gives a bundle''s voice to drafts in its own locale whatever the language; `{voices}` lists the voices of the prompt''s locale only (es: base, colombia, later mexico; en: later usa, uk; de: germany; es-ES: spain); `qgen taxonomy --apply` gives the voice to the names call of its language. `concepts.key()` (concept dedupe) maps «ß» to «ss» and drops «der/die/das» like Spanish articles, so German concepts don''t collapse («Straße» was «strae»).
+
+Throw-away check (scratch copy, removed): a `de` region and an `en` region with a British voice: `qgen taxonomy --bundle` proposed slugs + English names + the bundle''s language names (`germany` 16 categories, 50 subcategories; `uk` 14, 59), `--apply` wrote slug-keyed `categories.json` and `names.en|es|de.json`, concept lists and `qgen draft` wrote German and British text with the right draft locale, `--translate en|es-ES --bundle germany --dry-run` picked a `de` source. The game offers a pack when its `languages` list the save''s language (`pool.ts`): an en-only pack to en, a de pack to de, and to en once `languages` lists both. Cost of the check: about $2.4.
+
+How variety inside one question locale works: **the voice wins over the locale prompt''s spelling/word lines, for the bundle''s own questions only**; no `locale-<L>-<region>.md` files. Every step (draft, rate, review, audit, fix) reads `locale-<L>.md` with its `{voices}`, so a reviewer sees uk''s British voice next to the US line and won''t flag "colour"; translations into en of other bundles (colombia, germany) aren''t listed there and keep US English.
+
+Not changed: `house-style.md`, `draft.md`, `rate.md`, `review.md`, `audit.md`, `translate.md`.
+
+---
+
+## 1. `locale-en.md`
+old (first two bullets):
+```
+- All content is in English, whether you write the question or translate it.
+- Plain, natural English that every English speaker reads easily: short common words, no slang, no idioms of one country.
+```
+new:
+```
+- All content is in English, whether you write the question or translate it.
+- A bundle with a voice below writes its own questions in that variety; for them, the voice wins over this section''s spelling, words, idioms and date format (a British voice: "colour", "football", "biscuit", "20 July 1969"). Every other question, translations into English included, follows this section as written:
+{voices}
+- Plain, natural English that every English speaker reads easily: short common words, no slang, no idioms of one country.
+```
+
+## 2. `locale-es.md`
+old:
+```
+- `colombia` only: Colombian references where they fit naturally (places, food, music, sport, people, Encanto); don''t force them. A `base` question never needs a connection to Colombia or any one country to answer (house style "International angle"); a Colombian voice is the `colombia` bundle''s.
+```
+new:
+```
+- A regional bundle (its voice above, e.g. `colombia`): its region''s references where they fit naturally (`colombia`: places, food, music, sport, people, Encanto); don''t force them. For its own questions its voice''s words win over the `base` line above. A `base` question never needs a connection to one country to answer (house style "International angle"); a national voice is a regional bundle''s.
+```
+
+## 3. `locale-es-ES.md`
+old:
+```
+- All content is in Spain''s Spanish (castellano de España), whether you adapt a Spanish question from Latin America or translate one: the words, spelling and usage a family in Spain uses.
+```
+new:
+```
+- All content is in Spain''s Spanish (castellano de España), whether you write the question, adapt a Spanish question from Latin America or translate one: the words, spelling and usage a family in Spain uses.
+- A bundle with a voice below writes its own questions in that voice, with its region''s references where they fit naturally; every other question follows this section:
+{voices}
+```
+
+## 4. `locale-de.md`
+old:
+```
+- All content is in German: standard German, spelled as in Germany (with "ß").
+```
+new:
+```
+- All content is in German, whether you write the question or translate it: standard German, spelled as in Germany (with "ß").
+- A bundle with a voice below writes its own questions in that voice, with its region''s references where they fit naturally; every other question follows this section:
+{voices}
+```
+old:
+```
+- Address (UI style guide `de`): never assume a plural: no "ihr", "euch", "euer", no plural imperatives ("Hört zu", "Schaut"). Where the source speaks to the players ("you", "tú"), use a generic "du" ("Hör zu: …", "wenn du niest") or an impersonal form ("Zu hören ist …"); never "Sie".
+```
+new:
+```
+- Address (UI style guide `de`): never assume a plural: no "ihr", "euch", "euer", no plural imperatives ("Hört zu", "Schaut"). Where a question speaks to the players (yours, or the source''s "you", "tú"), use a generic "du" ("Hör zu: …", "wenn du niest") or an impersonal form ("Zu hören ist …"); never "Sie".
+```
+
+## 5. `translate-region.md` (any source language; `{source_language}` is filled since plan 148)
+old:
+```
+- **The region''s own things keep their own names:** dishes, festivals, places, people, music, sayings ("arepa", "bandeja paisa", "Feria de las Flores", "vallenato"). Add a short gloss in the target language only where the question can''t be understood without it ("tinto (black coffee)"), never one that gives the answer away.
+- **Regional words travel:** a question about a regional Spanish word or saying (what a «tinto» is, what «parcero» means) is asked in the target language about the Spanish word; these players know such words. `about_language` stays for questions on Spanish spelling, grammar or wordplay.
+```
+new:
+```
+- **The region''s own things keep their own names:** dishes, festivals, places, people, music, sayings ("arepa", "Feria de las Flores", "vallenato"; "Spätzle", "Schützenfest"). Add a short gloss in the target language only where the question can''t be understood without it ("tinto (black coffee)"), never one that gives the answer away.
+- **Regional words travel:** a question about a word or saying of the region (what a «tinto» is, what a „Schultüte“ is) is asked in the target language about the original word; these players know such words. `about_language` stays for questions on the spelling, grammar or wordplay of {source_language}.
+```
+
+
+---
+Options: "apply" applies 1–5 as drafted; "apply with changes": say which.', 'The regional question packs for the United States, Germany, the United Kingdom, Spain and Mexico must be written in each region''s own language and variety, for example British rather than American English. This is the wording of the instructions the question writer and translator read to do that: where a regional pack has its own voice, it wins over the general spelling and word rules, and a translation from German or Spanish keeps the region''s own words. Applying it lets those packs be set up; not applying leaves them writing in the general style.', NULL, NULL, '2026-10-16T16:01:11Z', NULL, 1275, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -39843,6 +39926,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1352, 1340, '2026-10-16T15:31:52Z', '2026-10-16T15:34:14Z', 'blocked', NULL, 0, '7e9f6a938a5322beaea1e8ce1a1516dfec8df8a4', 'claude-sonnet-5-5', '8b3226b9-513e-43df-b09a-1e5215b3185a', NULL, 10, 14, 2077, 233565, 51078, 0.271823, 4144524);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1353, 1329, '2026-10-16T15:34:14Z', '2026-10-16T15:41:48Z', 'done', NULL, 0, 'f66ad83e5e8bd88144a66d82b9b34b50102e421c', 'claude-sonnet-5-5', '993759ba-7dc6-4e51-8565-75ef43fb81e5', NULL, 39, 70, 18729, 2459541, 97012, 1.0673862, 4144524);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1354, 1330, '2026-10-16T15:41:48Z', '2026-10-16T15:43:18Z', 'done', NULL, 0, '0ea5e1b341ed47cbe3a1e8d600a4ece4973a4d52', 'claude-sonnet-5-5', '993759ba-7dc6-4e51-8565-75ef43fb81e5', 1353, 13, 24, 4945, 1595682, 34159, 1.5726566000000004, 4144524);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1355, 1275, '2026-10-16T15:43:18Z', '2026-10-16T16:01:51Z', 'blocked', NULL, 0, 'bbebc940e215945e50234a075440e11fb4f793a0', 'claude-sonnet-5-5', '2c898c97-f287-4ab7-b9be-f48c9af2ca4c', NULL, 42, 76, 14046, 2935000, 87567, 1.07788, 4144524);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -40278,6 +40362,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1272, 250);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1275, 250);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1275, 258);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1275, 262);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1275, 266);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1276, 250);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1276, 258);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1277, 250);

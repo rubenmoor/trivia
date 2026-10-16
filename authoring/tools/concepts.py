@@ -31,9 +31,9 @@ def slug(text):
 
 def key(name):
     """Normalized concept name: what has to be unique across subcategories (OQ-40)."""
-    text = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode().lower()
+    text = unicodedata.normalize("NFKD", name.replace("ß", "ss")).encode("ascii", "ignore").decode().lower()  # ß: de
     words = [w for w in re.sub(r"[^a-z0-9 ]+", " ", text).split()
-             if w not in {"el", "la", "los", "las", "un", "una", "de", "del"}]
+             if w not in {"el", "la", "los", "las", "un", "una", "de", "del", "der", "die", "das"}]
     return " ".join(words)
 
 
