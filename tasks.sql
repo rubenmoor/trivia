@@ -33561,7 +33561,7 @@ Milestone 6 closes the leftovers of M3/M4, preloading before a screen fades in (
 ## Order and constraints
 - Parts are independent; 2 → 3 shared conventions (done).
 - D-45 licences only; everything offline; no new npm or Python dependencies.', '2026-10-16T13:46:46Z', '2026-10-16T13:49:14Z', 1320, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1324, 33, 'revise plan 33: Recorded music loops (UI-10)', 'revise', 'open', 1000, NULL, '`plan 6: masterplan`, the plan above `plan 33: Recorded music loops (UI-10)`, changed; it is quoted below. Bring `plan 33: Recorded music loops (UI-10)` in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1324, 33, 'revise plan 33: Recorded music loops (UI-10)', 'revise', 'done', 1000, '2026-10-16, no change: plan 6''s Part 3 (planned and built; open tasks 149, 150) still matches plan 33; the masterplan''s new Part 5 (Start horizon) doesn''t touch music loops', '`plan 6: masterplan`, the plan above `plan 33: Recorded music loops (UI-10)`, changed; it is quoted below. Bring `plan 33: Recorded music loops (UI-10)` in line with it
 (`pm plan edit 33 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -33595,7 +33595,7 @@ Milestone 6 closes the leftovers of M3/M4, preloading before a screen fades in (
 
 ## Order and constraints
 - Parts are independent; 2 → 3 shared conventions (done).
-- D-45 licences only; everything offline; no new npm or Python dependencies.', '2026-10-16T13:46:46Z', NULL, 1320, 0);
+- D-45 licences only; everything offline; no new npm or Python dependencies.', '2026-10-16T13:46:46Z', '2026-10-16T13:49:28Z', 1320, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1325, 6, 'write plan: Start screen horizon', 'plan', 'done', 1000, '2026-10-16, plan 150: Start screen horizon (tasks.sql only; split left to its split task)', 'Write the plan for part 5 of `plan 6: masterplan` (milestone 6: Screen polish leftovers): `pm plan add 6 "Start screen horizon" --priority 300 < body.md`, then split it into tasks (or leave that to its split task).
 
 The plan covers, per the masterplan''s part 5:
@@ -38690,6 +38690,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1318, 1322, '2026-10-16T13:47:02Z', '2026-10-16T13:47:35Z', 'done', NULL, 0, 'b676699ee35b106d3f94fb2f09abb84fd52dcaf0', 'claude-opus-5-5[1m]', '9e1334bb-f4d9-4d41-987b-b65ce0ca174d', 6, 12, 2065, 182809, 27639, 0.29902180000000006, 4064407);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1319, 1325, '2026-10-16T13:47:35Z', '2026-10-16T13:49:03Z', 'done', NULL, 0, 'f1132b1f0cd241d0edfb40b5d505acd6406389ba', 'claude-opus-5-5[1m]', 'c1974191-d3be-4cae-8dd8-2828d0b39288', 11, 20, 7477, 469981, 55055, 0.6840562, 4064407);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1320, 1323, '2026-10-16T13:49:03Z', '2026-10-16T13:49:20Z', 'done', NULL, 0, 'e04ea09b29aa0f7056f08fc196fb33016343d1b0', 'claude-opus-5-5[1m]', '574ddc38-ead2-4430-8a83-055c06eb8910', 3, 6, 865, 72432, 21076, 0.20041840000000002, 4064407);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1321, 1324, '2026-10-16T13:49:20Z', '2026-10-16T13:49:32Z', 'done', NULL, 0, '4b38d0cfd2fb08c3e3c65f10529dbb466bfbb55d', 'claude-opus-5-5[1m]', 'd188ae50-b805-426f-832c-8955bd544b86', 3, 6, 814, 76383, 25082, 0.23223660000000002, 4064407);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
