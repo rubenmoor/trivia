@@ -6,7 +6,7 @@ Frozen on 2026-10-12: this file is history. New questions for the developer are 
 None.
 
 ## Resolved
-- **OQ-45** (Freesound) Freesound's API needs a UPF licence for commercial use: no asking; its 2 picks are re-picked from Commons before release and Freesound leaves the audio order (D-103).
+- **OQ-45** (Freesound) Freesound's API needs a UPF licence for commercial use: no asking; Freesound leaves the audio order; its 2 picks dropped, no Commons replacement (D-103, pm decision 184).
 - **OQ-35** Code MIT; questions all rights reserved (personal, non-commercial play allowed); the whole repo stays public, release content included (D-102).
 - **OQ-46** Yes: every bundle has its own categories and subcategories (names may repeat across bundles); the 19 `colombia` questions on `base` subcategories move to `colombia`'s own (D-99, pm decision 110, plan 98).
 - **OQ-33** Paid one-time purchase, $9.99 (final check PUB-11), regional pricing, launch discount; packs as free DLC, never paid; the developer holds the Steamworks account as a person after an advisor check, company later via app transfer (D-98).

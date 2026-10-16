@@ -134,7 +134,7 @@ No family-specific questions (D-30).
 ### Steam track (separate, D-34)
 Everything that only matters for a release on Steam (desktop shell, controller, game modes for players without a gamemaster, translations, content target, store and Steamworks) lives in [`11-steam.md`](11-steam.md), phases S2–S6. It builds on M7–M10. Its first phase, **S2**, is done (2026-10-14): OQ-29 D-63, OQ-30 D-74, OQ-31 D-78, OQ-32 D-75, OQ-33 D-98, OQ-34 D-50, OQ-35 D-102, OQ-36 D-38, OQ-37 D-77 (competitive timed revised D-80), OQ-45 (Freesound) D-103. Its implementation parts are done too: MD-6/MD-7 (pm plan 36), MD-10..MD-12 (pm plan 59).
 
-- [x] S2: SW-1, MD-5, IN-7, I18N-1, CT-1, PUB-4, ST-1: product defined (2026-10-14, pm milestone 7; Freesound re-pick pending: pm task 1051) — [`11`](11-steam.md)
+- [x] S2: SW-1, MD-5, IN-7, I18N-1, CT-1, PUB-4, ST-1: product defined (2026-10-14, pm milestone 7; Freesound picks dropped: pm task 1051, decision 184) — [`11`](11-steam.md)
 - [x] S3: SW-2 Electron desktop shell skeleton, `trivia-desktop`, whole game without Python (2026-10-12, pm plan 54, D-71; pending: play test decision 29, Steam binding decision 28) — [`18`](18-steam-integration.md)
 - [x] S3: SW-3 File saves: `save/game.json` in the user's config folder, atomic writes, backups, `--import-save` (2026-10-12, pm plan 55, D-72) — [`18`](18-steam-integration.md)
 - [x] S3: SW-5 Local builds: Windows zip + Linux tar.gz, media staged from the pool, `trivia-desktop-build`; packaged Linux build plays offline; start test outside Steam skipped (2026-10-13, pm plan 56, D-73, decision 39) — [`18`](18-steam-integration.md)

@@ -54540,7 +54540,7 @@
     },
     {
       "id": "q-0752",
-      "status": "approved",
+      "status": "needs_work",
       "difficulty": 3,
       "description": "El único músico que da su concierto justo en tu oreja a las tres de la mañana.",
       "question": "El médico Ronald Ross descubrió que la malaria la transmite el insecto que hace este sonido. Escucha: ¿cuál es?",
@@ -54560,16 +54560,9 @@
         "role": "essential",
         "query": "mosquito buzzing",
         "note": "Zumbido agudo de un zancudo (mosquito) volando cerca del micrófono, sin otros sonidos.",
-        "source_url": "https://freesound.org/people/melliug/sounds/721485/",
-        "file_url": "https://cdn.freesound.org/previews/721/721485_1318434-hq.mp3",
-        "credit": "melliug · CC0 1.0 · Freesound",
-        "provider": "freesound",
-        "license": "CC0 1.0",
-        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/",
-        "author": "melliug",
-        "author_url": "https://freesound.org/people/melliug/",
-        "restrictions": [],
-        "pd_reasons": []
+        "source_url": null,
+        "file_url": null,
+        "credit": null
       },
       "fun_fact": "Solo pican las hembras de zancudo: necesitan la sangre para producir sus huevos.",
       "subcategory": "Insectos",
@@ -54597,9 +54590,9 @@
       "needs_media": true,
       "batch": "batch-7",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "reviewed_on": "2026-10-10",
+        "decision": "needs_work",
+        "feedback": "No usable allowlisted sound (decision 184): the Freesound pick was dropped (D-103); needs a new audio pick or another stimulus.",
+        "reviewed_on": "2026-10-15",
         "reviewer": "human",
         "model": null,
         "previous": {
@@ -54609,7 +54602,8 @@
           "reviewer": "llm",
           "model": "claude-opus-5-5",
           "previous": null
-        }
+        },
+        "reviewed_at": "2026-10-15T22:24:35"
       },
       "bundle": "base",
       "background": {
@@ -74129,7 +74123,7 @@
     },
     {
       "id": "q-1016",
-      "status": "approved",
+      "status": "needs_work",
       "difficulty": 3,
       "description": "Este vecino del corral habla muchísimo, pero nadie le entiende nada.",
       "question": "Escucha: ¿qué animal hace este sonido?",
@@ -74149,16 +74143,9 @@
         "role": "essential",
         "query": "turkey gobble",
         "note": "The gobble ('glu-glu-glu') of a male domestic turkey, clearly audible, with no other animals in the recording.",
-        "source_url": "https://freesound.org/people/TheKingOfGeeks360/sounds/792531/",
-        "file_url": "https://cdn.freesound.org/previews/792/792531_15895934-hq.mp3",
-        "credit": "TheKingOfGeeks360 · CC0 1.0 · Freesound",
-        "provider": "freesound",
-        "license": "CC0 1.0",
-        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/",
-        "author": "TheKingOfGeeks360",
-        "author_url": "https://freesound.org/people/TheKingOfGeeks360/",
-        "restrictions": [],
-        "pd_reasons": []
+        "source_url": null,
+        "file_url": null,
+        "credit": null
       },
       "fun_fact": "En español existe un verbo solo para el sonido del pavo: 'gluglutear'.",
       "subcategory": "Navidad",
@@ -74186,12 +74173,20 @@
       "needs_media": true,
       "batch": "batch-7",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "reviewed_on": "2026-10-10",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "decision": "needs_work",
+        "feedback": "No usable allowlisted sound (decision 184): the Freesound pick was dropped (D-103); needs a new audio pick or another stimulus.",
+        "reviewed_on": "2026-10-15",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-10",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-15T22:24:36"
       },
       "bundle": "base",
       "background": {

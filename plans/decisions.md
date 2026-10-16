@@ -984,7 +984,7 @@ Template:
   - Professional checks still owed (lawyer, the developer's country + US): is the AI-drafted, human-reviewed pool protectable (copyright, database right); wording of "reserved, personal play allowed" next to MIT code; implied licence for forks of unlicensed commits; Anthropic's terms for commercial use of outputs (PUB-10).
 - Supersedes / related: D-17 (confirms), D-98; OQ-35; PUB-4, PUB-10; pm decisions 66, 107, 108, 134; plan 40
 
-## D-103: Freesound out before release; its 2 picks re-picked from Commons
+## D-103: Freesound out before release; its 2 picks replaced or dropped
 - Date: 2026-10-14
 - Context: OQ-45 (Freesound), plan 42 (task 204 prep, task 205); pm decision 82 (Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?). Paid release (D-98) = commercial use of the API, which needs a UPF licence; authoring-only use is a grey zone. 2 Freesound picks (q-0752 mosquito, q-1016 turkey; both CC0, approved) of 17 audio picks.
 - Decision:
@@ -993,6 +993,7 @@ Template:
   - No contact with Freesound/UPF.
 - Consequences:
   - Follow-up task in plan 42: re-pick both slots, remove Freesound from the order, `qgen validate` passes.
+  - 2026-10-15, task 1051, pm decision 184: no usable Commons sound; both picks dropped without a replacement, q-0752 and q-1016 → needs_work.
   - `providers/freesound.py` may stay as code but isn't asked; no SW-9 exclusion rule needed.
   - Slightly fewer everyday sounds in future batches.
 - Supersedes / related: D-36, D-45, D-98; OQ-45 (Freesound); MP-6; pm decisions 66, 82; plan 42

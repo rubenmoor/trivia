@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "7cfb3711",
+  "hash": "8b412143",
   "questions": [
     {
       "id": "q-0001",
@@ -21218,49 +21218,6 @@
       "background": null
     },
     {
-      "id": "q-0752",
-      "status": "approved",
-      "difficulty": 3,
-      "subcategory": "Insectos",
-      "bundle": "base",
-      "description": "El único músico que da su concierto justo en tu oreja a las tres de la mañana.",
-      "question": "El médico Ronald Ross descubrió que la malaria la transmite el insecto que hace este sonido. Escucha: ¿cuál es?",
-      "answer": "El zancudo",
-      "wrong_answers": [
-        "La abeja",
-        "La mosca",
-        "El grillo"
-      ],
-      "hints": [
-        "Hace un zumbido muy agudo y finito.",
-        "Te deja ronchas que pican.",
-        "Para dormir tranquilo en tierra caliente se usa un toldo contra él."
-      ],
-      "fun_fact": "Solo pican las hembras de zancudo: necesitan la sangre para producir sus huevos.",
-      "media": {
-        "type": "audio",
-        "role": "essential",
-        "file_url": "https://cdn.freesound.org/previews/721/721485_1318434-hq.mp3",
-        "source_url": "https://freesound.org/people/melliug/sounds/721485/",
-        "credit": "melliug · CC0 1.0 · Freesound",
-        "provider": "freesound",
-        "license": "CC0 1.0",
-        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/",
-        "author": "melliug",
-        "author_url": "https://freesound.org/people/melliug/"
-      },
-      "background": {
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Phu_Quoc_jungle_2025.jpg/3840px-Phu_Quoc_jungle_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3APhu_Quoc_jungle_2025.jpg",
-        "credit": "Elmschrat · CC0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC0",
-        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "author": "Elmschrat",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Elmschrat"
-      }
-    },
-    {
       "id": "q-0753",
       "status": "approved",
       "difficulty": 9,
@@ -29725,49 +29682,6 @@
         "author_url": "https://commons.wikimedia.org/wiki/User:Cccefalon"
       },
       "background": null
-    },
-    {
-      "id": "q-1016",
-      "status": "approved",
-      "difficulty": 3,
-      "subcategory": "Navidad",
-      "bundle": "base",
-      "description": "Este vecino del corral habla muchísimo, pero nadie le entiende nada.",
-      "question": "Escucha: ¿qué animal hace este sonido?",
-      "answer": "Pavo",
-      "wrong_answers": [
-        "Gallina",
-        "Pato",
-        "Ganso"
-      ],
-      "hints": [
-        "Es un ave grande de granja.",
-        "Cuando quiere lucirse, abre la cola como un abanico.",
-        "En muchos países es el plato estrella de la cena de Navidad."
-      ],
-      "fun_fact": "En español existe un verbo solo para el sonido del pavo: 'gluglutear'.",
-      "media": {
-        "type": "audio",
-        "role": "essential",
-        "file_url": "https://cdn.freesound.org/previews/792/792531_15895934-hq.mp3",
-        "source_url": "https://freesound.org/people/TheKingOfGeeks360/sounds/792531/",
-        "credit": "TheKingOfGeeks360 · CC0 1.0 · Freesound",
-        "provider": "freesound",
-        "license": "CC0 1.0",
-        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/",
-        "author": "TheKingOfGeeks360",
-        "author_url": "https://freesound.org/people/TheKingOfGeeks360/"
-      },
-      "background": {
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Granum_g%C3%A5rd%2C_Fluberg%2C_S%C3%B8ndre_Land%2C_Norway._L%C3%A5ve_fra_1800-tallet._%28Farm%2C_barn%29_2021-06-01_IMG_1755.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AGranum_g%C3%A5rd%2C_Fluberg%2C_S%C3%B8ndre_Land%2C_Norway._L%C3%A5ve_fra_1800-tallet._%28Farm%2C_barn%29_2021-06-01_IMG_1755.jpg",
-        "credit": "Wolfmann · CC BY-SA 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Wolfmann",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Wolfmann"
-      }
     },
     {
       "id": "q-1017",

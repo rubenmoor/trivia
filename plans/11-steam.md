@@ -70,11 +70,11 @@ Logged in [`open-questions.md`](open-questions.md) (frozen 2026-10-12; questions
 | OQ-35 | ~~Code and content license~~ answered: code MIT, questions all rights reserved; whole repo stays public (D-102) | 17 |
 | OQ-36 | ~~Audience~~ answered: four age groups on one shared scale (D-38) | 13, 16 |
 | OQ-37 | ~~Competitive and couch co-op~~ answered: round-robin co-op, round-robin competitive, competitive (timed); per-player gamepads + shared keyboard, no phones (D-77; timed revised D-80) | 13, 14 |
-| OQ-45 (Freesound) | ~~Freesound API for a commercial release~~ answered: re-pick its 2 picks from Commons, drop Freesound from the audio order (D-103) | 23, 17 |
+| OQ-45 (Freesound) | ~~Freesound API for a commercial release~~ answered: drop Freesound from the audio order, its 2 picks dropped (D-103, pm decision 184) | 23, 17 |
 
 ## Risks
 - **Content volume and factual errors** are the most likely reason for bad reviews. A wrong answer in a public product costs more than at home. See 16 (quality bar) and 13 (a "report this question" action instead of the gamemaster's «Saltar y quemar para todos»).
-- **Media licensing:** ~290 Commons files under nine license types. ShareAlike, PD-US-only and GFDL need care in a worldwide commercial release (17). Freesound: its 2 picks re-picked from Commons before release, audio Commons only (D-103).
+- **Media licensing:** ~290 Commons files under nine license types. ShareAlike, PD-US-only and GFDL need care in a worldwide commercial release (17). Freesound: its 2 picks dropped, audio Commons only (D-103, pm decision 184).
 - **Install size:** ~1.1 GB installed (2026-10-14): media re-encoded for shipping (SW-9, D-104) 2549 → 679 MB; grows with the pool, capped by `app/desktop/media-budget.json` (`stage-media.mjs --check`, release check step `media-budget`).
 - **Engine port regressions:** the referee has subtle supply and matching rules. 12 builds fixtures from the Python engine before the port.
 - **Scope creep:** the three multiplayer modes (D-77, D-80) stay "Later". The release ships gamemaster mode and «Solo o en grupo» and doesn't wait for them.
