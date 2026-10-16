@@ -6,4 +6,4 @@
 - Names and titles as German speakers know them: "Christoph Kolumbus", "Jeanne d'Arc", the German title of a film or book ("Alles steht Kopf", "Hundert Jahre Einsamkeit"). A name without a German form stays as it is.
 - Articles and case endings (der/die/das, ein/eine) must fit all four options: phrase the question so none of them stands out ("Welches Tier…?", options without articles).
 - House style "Keep it short" holds; German may run a little longer than the source, but stays under 160 characters.
-- Difficulty and distractors on the same scale 1–15 (the calibration examples are about Spanish speakers, the scale isn't).
+- Difficulty and distractors on the same scale 1–15.

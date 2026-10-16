@@ -7,4 +7,4 @@
 - Address (UI style guide `en`): "you", for one player or the whole family; never "you all", "you guys", "yourselves".
 - Quotes in the text fields: “…” (curly double quotes).
 - Watch "a"/"an": an article in the question must fit all four options.
-- Difficulty and distractors on the same scale 1–15 (the calibration examples are about Spanish speakers, the scale isn't).
+- Difficulty and distractors on the same scale 1–15.

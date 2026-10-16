@@ -63,28 +63,31 @@ Hard questions (11–15) are hard because **fewer people can answer them**, not 
 - Hard questions still have fair options: an expert must be able to tell the answer from the wrong ones.
 - Rate it as hard as it really is: a question most adults answer is a 12, even if teens would miss it.
 
-Calibration from the developer, observed with young teens (final level, with the first guess in brackets). AI estimates tend to **overrate what young people know from school** (mythology, geography details) and **underrate what they know from everyday life, films and games**:
-- 1: "Escucha: ¿qué instrumento suena?" → la trompeta (guessed 5)
+The players are families anywhere in the world. Rate what children and adults everywhere meet, not one country's school, TV or home life: what only one country's children know (their own cities, dishes, school canon, shows) is not easy for anyone else (house style "International angle").
+
+Calibration from the developer, observed with young teens (final level, with the AI's first guess in brackets; entries without brackets are plain level examples). AI estimates tend to **overrate what young people know from school** (mythology, geography details) and **underrate what they know from everyday life, films and games**:
+- 1: "Listen: which instrument is this?" → the trumpet (guessed 5)
 - 1: WALL·E, the Pixar robot that compacts garbage (guessed 5)
 - 1: the microwave, invented after a chocolate bar melted next to a radar (guessed 4)
-- 1: close-up photo of a Colombian food → empanada (guessed 4)
-- 2: "'Perro' es a 'ladrar' como 'caballo' es a…" → relinchar (guessed 7)
-- 3: the word for opposites, "frío"/"caliente" → antónimo (guessed 4)
+- 1: close-up photo of an everyday food → pizza
+- 2: "Dog is to bark as horse is to…" → neigh (guessed 7)
+- 3: the word for opposites, "cold"/"hot" → antonym (guessed 4)
 - 3: three ants walking: how many legs in total? → 18 (guessed 4)
-- 6: photo of a skeleton: which dinosaur? → estegosaurio (guessed 2)
-- 6: Cartagena's clock tower from a photo (guessed 4); Cartagena's walls against pirates (guessed 5)
+- 4: born in New Orleans, full of improvisation, Louis Armstrong played it on his trumpet → jazz
+- 6: photo of a skeleton: which dinosaur? → stegosaurus (guessed 2)
+- 6: the Sydney Opera House from a photo: which city?; what the Great Wall of China was built against → invaders from the north
 - 8: Link from Zelda, described (guessed 5); Pac-Man's shape inspired by a pizza (guessed 7)
-- 9: Greek gods: Poseidón from his trident, Atenea from her owl (guessed 5)
-- 9: which Colombian city lies highest → Tunja (guessed 3)
+- 9: Greek gods: Poseidon from his trident, Athena from her owl (guessed 5)
+- 9: in which country is Mount Kilimanjaro? → Tanzania
 
 Famous world facts that people meet early in cartoons, films and everyday talk are easier than they look:
-- 2: the planet famous for its huge rings → Saturno (guessed 4)
-- 2: plural of "lápiz" → lápices (guessed 5)
-- 2: who reached America in 1492 → Cristóbal Colón (guessed 3)
-- 5: who wrote "Don Quijote" → Cervantes (guessed 8)
+- 2: the planet famous for its huge rings → Saturn (guessed 4)
+- 2: in which country is the Eiffel Tower? → France
+- 2: who reached America in 1492 → Christopher Columbus (guessed 3)
+- 5: who wrote "Romeo and Juliet" → Shakespeare
 
 But don't overcorrect: names of prizes, years and school theory are still hard for young teens:
-- 7: which Colombian writer won the Nobel Prize in 1982 → García Márquez (lowered to 3 by mistake)
+- 7: the only person with Nobel Prizes in two different sciences → Marie Curie
 - 7: how many notes the basic scale has (do, re, mi…) → 7 (lowered to 3 by mistake)
 
 Anchors for 9–15, confirmed by the developer:
@@ -93,7 +96,7 @@ Anchors for 9–15, confirmed by the developer:
 - 11: French 17th-century philosopher who made x, y, z the unknowns → Descartes
 - 12: Spanish midfielder, 2023 world champion, best player of the World Cup and Ballon d'Or → Aitana Bonmatí
 - 13: who created the World Wide Web and HTML → Tim Berners-Lee
-- 13: style of the Paris metro entrances, Mucha's posters and Horta's houses → Art nouveau
+- 13: style of the Paris metro entrances, Mucha's posters and Horta's houses → Art Nouveau
 - 14: the seven bridges of Königsberg, proven impossible in 1736 → Euler
 - 14: in which of these years did February have no 29th? → 1900
 - 15: harmless butterfly that copies a bad-tasting one, named after an English naturalist → Batesian mimicry
