@@ -9120,6 +9120,78 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass
 - `qgen report --simulate --mode all` runs every mode on the engine; no MD-8/MD-9 stand-in left in code or `plans/16-content-target.md`
 - A scripted session of each mode (engine tests) gives the decision 285 achievements and the decision 286 telemetry games', 'Several parts of the game read what was played after the fact: Steam achievements, the anonymous play statistics players may opt into, the warning that the question supply is running low, and the developer''s tool that estimates how many games the question pool lasts. This part teaches each of them about multiplayer games, so that a family game night earns the right trophies, is counted fairly in the statistics, and that the supply estimates match how many questions the new modes really use.', '2026-10-16T21:03:04Z', 1395);
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (161, 16, 'Per-player controls', 480, 'Part 5 of `plan 152: masterplan`. The client layer between devices and the session''s seats: which device acts for which seat, the filter that lets only the acting seat''s input reach the game, the `timed` claim inputs, the Esc menu and lost pads in a session. After `plan 156: Prompts follow the last input` (its switch rule is reused) and `plan 157: Session model and save format` (the acting seat in the engine API).
+
+## Binding
+- Milestone 16 "Two kinds of control": before a session every device drives the shared UI; in a session each pad is one player, keyboard and mouse together one player
+- `decision 273: Keyboard-only turn-based sessions: what does a player''s own key do?`: nothing; keyboard and mouse act for whoever''s turn it is. Keys are picked only in keyboard-only `timed` sessions (the developer''s note: the answer''s "timed sessions" means keyboard-only ones; with a pad, keyboard and mouse are one player with one claim key)
+- `decision 274: Pads plus keyboard: one keyboard player, or several key players?`: keyboard and mouse exactly one player once a pad has joined
+- `decision 275: Timed mode, keyboard-only: how does the claimer answer in the 6 seconds?`: mouse click or the answer keys
+- `decision 288: Local multiplayer: who opens the Esc menu in a session, and who drives it` (this plan)
+- `decision 289: Local multiplayer: a controller lost mid-session waits for a controller to take the seat` (this plan)
+- `decision 290: Timed mode: the claim input per kind of player` (this plan)
+- `decision 282: Timed mode: the Esc menu and the Steam overlay pause the clock and hide the question`
+- `decision 277: Multiplayer sessions in the save: one games[] row per session, with seats`: no device in the save; the binding is client-only
+- `milestone 17: Remote Play Together`: device-agnostic; a remote guest is one more pad; no Remote Play code here
+- `decision 272: Right stick: what it does beyond switching prompts to the pad`, `decision 126: Image peek: which pad button and key?`: unchanged
+
+## What exists (2026-10-16)
+- `lib/input.svelte.ts`: scope stack, `dispatch(action)`, `Action = Intent & { device }`, one global `lastDevice`; mouse clicks go straight to DOM handlers, outside `dispatch`; `confirm` presses the focused control (`focus.ts` `press`) → `el.click()`
+- `lib/gamepad.svelte.ts`: polls all standard pads, any pad dispatches; `padStyle` one global, from Steam''s `inputTypes()` (all pads together, `steamStyle`) or `Gamepad.id`
+- Question pad map: face buttons pick, LT back, RT submit, R3 peek, LB/RB joker focus
+- Plan 156 adds `touched` (any button/stick switches prompts) and mouse-move switching
+
+## Investigation first (throw-away, findings into `plans/14-input.md` section 3)
+- `navigator.getGamepads()` length and listed pads in Electron (the shipped version) on Linux and Windows, with and without Steam Input; Chromium''s cap (`kItemsLengthCap`, 4 in older builds); XInput''s 4 on Windows
+- Pad identity: index after disconnect/reconnect, after a second pad connects meanwhile; `Gamepad.id` stability
+- Steam: `GetInputTypeForHandle` order ↔ `Gamepad.index` (is per-pad style reliable, or only the set); the Deck''s built-in pad
+- What a worker can''t measure (Windows, real pads, Steam Input) goes to the developer as a `once` decision with exact steps; nothing below waits for it: binding is by index, per-pad style falls back to `Gamepad.id`
+- No player cap of our own either way: the join screen takes every pad the platform lists
+
+## Model (`lib/seats.ts` pure core + `lib/seats.svelte.ts` state)
+- `Source`: `{ pad: index }` | `"keyboard"` | `"mouse"`; every `Action` carries it (`device` stays for prompts and mods)
+- `Binding` per seat, join order: `{ pad: index }` | `"kbm"` (keyboard and mouse) | `{ key: string }` (keyboard-only `timed`) | `"shared"` (keyboard-only round-robin: no device, keyboard and mouse act for the turn)
+- Session binding set by the join screen (part 6) when the session starts; cleared when the session ends; stored in `sessionStorage` by game id so a reload keeps it (missing → decision 289''s rebind dialog)
+- `seatOf(source, intent, view)`: pad → its seat; keyboard/mouse → the `kbm` seat, else (keyboard-only) the turn seat (round-robin) or the claimer (timed), a claim intent with a key → that key''s seat
+- `may(seat, view)`: round-robin: `seat === turn`; `timed`: no claim open → any seat in may claim, claim open → only the claimer; out seats never; from `view().session` (plans 158, 159)
+- No session: no filter, every device acts (as today)
+
+## Filter
+- In a session `dispatch` resolves the seat, then: `menu` always passes (decision 288); a scope marked `shared` (Esc menu, flag dialog, results/victory, the lost-pad dialog) takes every device; any other scope gets the action only if `may(seat)`; dropped actions do nothing (no sound, no focus move)
+- Mouse: a capture-phase `pointerdown`/`click` listener drops clicks when the top scope isn''t shared and the keyboard-and-mouse source may not act; `[data-shared]` controls (corner menu button) always pass
+- `acting.seat`: set synchronously while an accepted action or click runs; `lib/engine.ts` game actions add `seat` from it, so pad `confirm` → `click()` → handler carries the right seat; the engine''s `not_your_turn`/`not_your_claim` stay the backstop
+- Prompts: in a session only accepted input (and plan 156''s `touched` of a device that may act) moves `lastDevice` and `padStyle`; per-pad style `padStyleOf(index)` (Steam per handle if the investigation allows, else `styleOf(Gamepad.id)`); `seatDevice(seat)` → kind + style for part 7''s turn banner and part 8''s claim prompts
+- Shared focus ring: one, driven by whoever may act
+
+## `timed` claim (decision 290)
+- New intent `claim` (with `key` for key players): pad LB/RB in the timed question scope''s pad map; Space for the `kbm` seat; each picked key for key seats; a click on the claim control (drawn by part 8) for the `kbm` seat
+- Claimer''s answer: as the Question screen today (face buttons; A–D/1–4 or click, decision 275)
+- `claimKeyOk(key, taken)` for the join screen (part 6): single letter or digit, not bound by the Question screen, not Enter/Esc/Space/Backspace/arrows, distinct; the Question screen''s key list exported once (decision 199), not copied
+- `claimLabel(seat)` for prompts: bumper glyph, «Espacio», or the key
+
+## Esc menu and lost pads
+- Esc menu: any seat''s `menu` opens it; shared while open (decision 288); `timed` pause/resume on open/close is part 8''s wiring (`task 1399: write plan: Timed game screens, drama and sound`)
+- Pad lost (decision 289): seat unbound on `gamepaddisconnected`; `SeatLost.svelte` modal when the seat is needed (round-robin: its turn; `timed`: at once, sending `pause`, `resume` on close, through the same helper as part 8''s Esc wiring, whichever lands first adds it); A on the returning pad or any unbound pad takes the seat; a seat already out never asks
+- Strings for the dialog in es, es-ES, en, de per `locales/style/<locale>.md`
+
+## Tasks
+1. Investigation (`--web`): the measurements above, findings into `plans/14-input.md` section 3; a `once` decision for what needs the developer''s hardware
+2. Seats and the filter (`--model opus`): `Source` on actions (keys, pads, clicks), `lib/seats.ts`/`seats.svelte.ts` (binding, `seatOf`, `may`, sessionStorage), the `dispatch` filter and `shared` scopes, mouse capture, `acting.seat` into `lib/engine.ts`, prompts from accepted input only, `padStyleOf`/`seatDevice`, join helpers for part 6 (bind an unbound pad''s A, the `kbm` join, `claimKeyOk`); throw-away check with fake pads and a fake session view; `plans/14-input.md` section 3 and IN-6 rewritten (no "Later"), decision 24 noted as superseded by milestone 16
+3. Claim inputs: `claim` intent, LB/RB, Space, picked keys, claim-control click, `claimLabel`; after `task 1412: Timed core in the engine: clock, claims, rounds, lives, ends`
+4. Lost pads and the Esc menu in a session: `SeatLost.svelte`, rebind, reload rebind, `pause`/`resume` in `timed`, the overlay as shared scope and `[data-shared]` corner button; strings in four locales
+
+## Order and dependencies
+- 1 first (2 doesn''t wait for its developer decision); 2 after `task 1406: Acting seat in the engine API` and plan 156''s tasks (1380, 1381); 3 after 2 and task 1412; 4 after 2 and `task 1413: Timed pause and view in the engine`
+- Part 6 (join screen) builds on task 2''s helpers; parts 7 and 8 on `seatDevice`/`claimLabel`
+
+## Out of scope
+- Join screen UI, turn banner, timed screens and sounds (parts 6–8)
+- Steam Input action sets; phones; network
+- Gamemaster mode and «Solo o en grupo»: unchanged, every device drives the one player
+
+## Done when
+- With fake pads and a stubbed session view: a pad not on turn does nothing on a game screen and doesn''t flip prompts; the turn''s pad and the `kbm` seat act; the menu opens from anyone; a lost pad''s seat is taken by another pad
+- `plans/14-input.md` section 3 describes what''s built, no "Later" for IN-6; per-commit checks pass', 'In local multiplayer each person in the room plays with their own controller, or everyone shares the keyboard and mouse. The game has to know which controller belongs to which player, let only the right player act at each moment, and give each player an obvious way to grab a question in the timed race. This part builds that layer between the controllers and the game, and settles what happens with the pause menu and with a controller that drops out mid-game.', '2026-10-16T21:06:20Z', 1396);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -36613,6 +36685,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `qgen report --simulate --mode all` runs every mode; time it against today''s 56 s default matrix, note it in `plans/16-content-target.md` if it grows a lot
 
 Done when: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass; `qgen report --simulate --mode all` runs on the engine with no stand-in left.', '2026-10-16T21:04:49Z', NULL, 1414, 0, 'opus', 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1430, 161, 'create tasks for plan 161: Per-player controls', 'split', 'open', 1000, NULL, 'Split plan 161 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T21:06:20Z', NULL, 1396, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -40919,6 +40993,9 @@ Proposal (`qgen taxonomy --bundle usa`, from the general list of decision 213: G
 - `symbols` Symbols of the United States (2, general)
   - `national-symbols` National symbols
   - `state-symbols` State nicknames and symbols', 'The new United States question pack needs its own list of topics, so its questions cover the American side of life evenly. The proposal below keeps all 14 topics of the general list and splits them into 50 subtopics, about 40 questions each at 2000 questions. Applying it fixes the pack''s structure; the Spanish and German topic names are drafted at that point.', NULL, NULL, '2026-10-16T21:03:29Z', NULL, 1276, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (288, 'Local multiplayer: who opens the Esc menu in a session, and who drives it', 'answered', '[]', 'Families pause for real-world reasons that don''t wait for a turn; restricting it to the turn''s player would leave others unable to stop the game, and a pause can''t cheat: nothing in the menu changes the game in multiplayer modes but ending it, which already asks to confirm. Timed pause semantics are decision 282.', 'During a multiplayer game on the TV, someone has to be able to open the pause menu, for example to stop for dinner or end the game. The choice was between letting only the player on turn open it, or letting anyone do so. Anyone can open it, and once it is open every controller, the keyboard and the mouse can use it, as in the menus before a game.', 'Any player''s menu input (Esc, Start, the corner menu button) opens the Esc menu in a session; while it is open it is shared UI: every device drives it, as before the session. In timed it pauses the clock (decision 282). Its items stay as in the mode (skip, undo, level, settings are gamemaster only); restart ends the whole session, with the existing confirm.', NULL, '2026-10-16T21:05:44Z', '2026-10-16T21:05:44Z', 1396, NULL, 'rule', 1396, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (289, 'Local multiplayer: a controller lost mid-session waits for a controller to take the seat', 'answered', '[]', 'Skipping would need a new engine rule (an absent seat) and would cost the player a turn or a life for a flat battery; waiting is fair and needs no engine change. Binding by any free pad keeps the binding device-agnostic for Remote Play Together (a remote guest is one more pad). Pads reconnect at an index Chromium picks, so index identity is not relied on.', 'If a player''s controller runs out of battery or disconnects during a multiplayer game, the game has to decide what happens to that player. The options were to skip them and play on, or to wait until a controller takes their place. The game waits: a dialog asks for that player''s controller, and any free controller can take over the seat.', 'No skip. When a seat''s pad disconnects, the seat is unbound; a modal «Mando de <name> desconectado» dialog shows when that seat is needed (round-robin: when the turn reaches it; timed: at once, with the clock paused through the engine''s pause). A press of A on the reconnected pad or on any pad bound to no seat binds it to that seat and closes the dialog; the Esc menu stays reachable to end the session. The same dialog rebinds pad seats after a page reload when the stored binding is gone.', NULL, '2026-10-16T21:05:44Z', '2026-10-16T21:05:44Z', 1396, NULL, 'rule', 1396, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (290, 'Timed mode: the claim input per kind of player', 'answered', '[]', 'Bumpers can be hit without looking and don''t collide with the face buttons that answer; Space is the biggest free key for the one keyboard player. Excluding every key the Question screen binds keeps a claim key from also answering.', 'In the timed competitive mode, players race to grab each question before answering it, so each player needs one obvious button to grab with. The choice is which button that is on a controller, which key the keyboard player uses, and which keys players may pick when everyone shares one keyboard. A shoulder button on controllers, the space bar for the keyboard player, and any free letter for shared-keyboard players.', 'Pad player: LB or RB (no face button: those pick answers; no jokers in timed, so the bumpers are free). Keyboard-and-mouse player: Space or a click on the claim control. Keyboard-only timed session: each player''s picked key (decision 273); allowed: a single letter or digit the Question screen doesn''t bind (not the answer letters or 1–9, the peek, replay or flag keys) and not Enter, Esc, Space, Backspace, arrows; distinct per player. After a claim, the claimer answers as on the Question screen: pad face buttons; keys A–D/1–4 or a click for keyboard players (decision 275).', NULL, '2026-10-16T21:05:44Z', '2026-10-16T21:05:44Z', 1396, NULL, 'rule', 1396, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
