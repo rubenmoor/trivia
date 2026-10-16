@@ -88,3 +88,7 @@ earlier or later than the order you add the tasks in. Then use the plan's priori
 multiple of 10, e.g. `--priority 710` or `--priority 690` in a plan with priority 700, so priorities can be fine-tuned
 later.
 '''
+
+[worktrees]
+questions = "question authoring: code and script execution around questions, their translations, and review"
+app = "the game (everything else)"
