@@ -243,6 +243,8 @@ export const en = {
   bundles: {
     titleOpen: "Which questions does ",
     titleClose: " play?",
+    baseHeading: "Pick one",
+    extraHeading: "Add any you like",
     playerMade: "Player-made · {mod}",
   },
   choice: {

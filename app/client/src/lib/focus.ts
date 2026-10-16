@@ -60,17 +60,31 @@ function recalled(scope: string, list: HTMLElement[]) {
   return m === undefined ? undefined : list[m];
 }
 
-/** Arrows: from the focused control to its nearest neighbour; with nothing focused, the remembered or default one. */
+/** The `[data-nav-scroll]` box `el` is scrolled out of, else null. */
+function scrolledOut(el: HTMLElement): HTMLElement | null {
+  const box = el.parentElement?.closest<HTMLElement>("[data-nav-scroll]");
+  if (!box) return null;
+  const r = el.getBoundingClientRect();
+  const b = box.getBoundingClientRect();
+  return r.bottom <= b.top || r.top >= b.bottom || r.right <= b.left || r.left >= b.right ? box : null;
+}
+
+/** Arrows: from the focused control to its nearest neighbour; with nothing focused, the remembered or default one.
+ * A control scrolled out of its box is reached only from inside that box (plan 151). */
 export function navigate(dir: Dir, scope: string, root: HTMLElement): boolean {
-  const list = candidates(root);
-  const at = list.findIndex((el) => el === document.activeElement);
-  if (at < 0) {
-    const first = recalled(scope, list) ?? list.find((el) => el.hasAttribute("data-focus-default")) ?? list[0];
+  const all = candidates(root);
+  const from = all.find((el) => el === document.activeElement);
+  if (!from) {
+    const first = recalled(scope, all) ?? all.find((el) => el.hasAttribute("data-focus-default")) ?? all[0];
     if (first) show(first, scope, root);
     return true;
   }
-  const i = nearest(list[at].getBoundingClientRect(), dir, list.map((el) => el.getBoundingClientRect()));
-  show(i < 0 ? list[at] : list[i], scope, root); // at the edge the ring stays (and shows)
+  const list = all.filter((el) => {
+    const box = scrolledOut(el);
+    return !box || box.contains(from);
+  });
+  const i = nearest(from.getBoundingClientRect(), dir, list.map((el) => el.getBoundingClientRect()));
+  show(i < 0 ? from : list[i], scope, root); // at the edge the ring stays (and shows)
   return true;
 }
 

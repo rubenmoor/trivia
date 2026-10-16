@@ -1,13 +1,14 @@
 <script lang="ts">
   // The Bundles screen (plans/04-ui-tv-display.md, "Bundles"; plan 151, decisions 158, 260): «¿Qué preguntas
-  // juega …?», between Player and Choice in every mode. The shared BundleSelector, large; exactly one base
+  // juega …?», between Player and Choice in every mode. The shared BundleSelector, two columns; exactly one base
   // bundle (D-85). Preset: the player's newest game's bundles, else the locale's first base bundle (decision 33).
   import { onMount } from "svelte";
   import { fetchChoice, fetchChoiceOptions, type ChoiceOptions } from "../../lib/api.ts";
+  import { playerRegion } from "../../lib/desktop.ts";
   import { errorText } from "../../lib/errors.ts";
   import { t } from "../../lib/i18n.ts";
   import { pushScope, type Keys } from "../../lib/input.svelte.ts";
-  import BundleSelector, { bundleKeys, toggled, type Bundle } from "../BundleSelector.svelte";
+  import BundleSelector, { bundleKeys, orderBundles, toggled, type Bundle } from "../BundleSelector.svelte";
   import Icon from "../Icon.svelte";
   import Prompt from "../Prompt.svelte";
 
@@ -53,11 +54,12 @@
     if (ready && !busy) onnext();
   }
 
-  const letters = $derived(bundleKeys(options?.bundles.map((b) => b.name) ?? [], [t("flag.key")]));
-  const keyOf = (b: Bundle) => letters[options?.bundles.indexOf(b) ?? -1] ?? "";
+  const shown = $derived(orderBundles(options?.bundles ?? [], playerRegion));
+  const letters = $derived(bundleKeys(shown.map((b) => b.name), [t("flag.key")]));
+  const keyOf = (b: Bundle) => letters[shown.indexOf(b)] ?? "";
   const keys = $derived<Keys>(Object.fromEntries(letters.filter(Boolean).map((key) => [key, { type: "letter", key }])));
 
-  // A bundle's letter toggles it; arrows move between tiles and buttons, Enter/A presses the focused one;
+  // A bundle's letter toggles it and scrolls it into view (focus stays, Enter still continues); arrows move between tiles and buttons, Enter/A presses the focused one;
   // Backspace/B goes back; Esc falls through to the overlay.
   $effect(() =>
     pushScope({
@@ -68,7 +70,10 @@
       },
       handle: (a) => {
         const b = a.type === "letter" ? options?.bundles.find((x) => keyOf(x) === a.key) : undefined;
-        if (b && options) pick(toggled(options.bundles, selected, b));
+        if (b && options) {
+          pick(toggled(options.bundles, selected, b));
+          section?.querySelector(`[data-focus-id="bundle-${b.id}"]`)?.scrollIntoView({ block: "nearest" });
+        }
         else if (a.type === "confirm") next();
         else if (a.type === "back") onback();
         else return false;
@@ -106,12 +111,14 @@
     text-align: center;
   }
   .title {
+    flex: none;
     animation: arrive 0.6s var(--spring) backwards;
   }
   .name {
     color: var(--amber);
   }
   .actions {
+    flex: none;
     display: flex;
     gap: calc(1.2 * var(--u));
     align-items: center;

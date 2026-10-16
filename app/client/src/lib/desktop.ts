@@ -1,4 +1,5 @@
 // The Electron shell's bridge (plan 54, SW-2): app/desktop/preload.cjs. Null in the browser.
+import { COUNTRY } from "../engine/pool.ts";
 import type { PadStyle } from "./gamepad.ts";
 
 export interface DesktopBridge {
@@ -22,6 +23,8 @@ export interface DesktopBridge {
   readonly devServer?: true;
   /** Dev server under `PM_WORKER`/`TRIVIA_MUTE=1` (plan 123): session mute; the shell mutes in Electron instead. */
   readonly muted?: true;
+  /** The machine's locale country (`app.getLocaleCountryCode()`, plan 151), "" for none; missing in the dev server's shim. */
+  readonly region?: string;
 }
 
 export type BackupKind = "corrupt" | "newer";
@@ -171,3 +174,18 @@ export const report: ReportBridge | null = desktop?.report ?? null;
 export const validUser: boolean = steam?.user === true || desktop?.devServer === true;
 /** Dev switch or dev server (plan 85): «Ir a pregunta…»; a real Steam user is not dev mode. */
 export const devMode: boolean = steam?.dev === true || desktop?.devServer === true;
+
+const urlRegion = new URLSearchParams(location.search).get("region");
+/** The player's region (plan 151): `?region=XX` (`?region=` none), else the shell's, else `navigator.language`'s; "" none. */
+export const playerRegion: string = ((): string => {
+  const r = (urlRegion ?? desktop?.region ?? localeRegion()).toUpperCase();
+  return COUNTRY.test(r) ? r : "";
+})();
+
+function localeRegion(): string {
+  try {
+    return new Intl.Locale(navigator.language).region ?? "";
+  } catch {
+    return "";
+  }
+}

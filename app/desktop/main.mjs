@@ -481,6 +481,7 @@ async function start() {
         ...(steam ? ["--trivia-steam"] : []),
         ...(validUser ? ["--trivia-user"] : []),
         ...(validUser && !hasSteamId() ? ["--trivia-dev"] : []),
+        `--trivia-region=${localeCountry()}`,
       ],
     },
   });
@@ -849,6 +850,15 @@ async function sendSession(file, final, deadline) {
   const status = r?.res?.statusCode ?? 0;
   const kept = await telemetry.settle(file, status, final || tooLarge);
   console.error(`trivia: telemetry → ${tooLarge ? "too_large" : status} ${kept ? "kept" : "dropped"}`);
+}
+
+/** The machine's locale country (plan 151), "" for none; getLocaleCountryCode() is "" on Linux, so the system locale's region. */
+function localeCountry() {
+  try {
+    return app.getLocaleCountryCode() || (new Intl.Locale(app.getSystemLocale()).region ?? "");
+  } catch {
+    return "";
+  }
 }
 
 /** IPC for preload.cjs; only our own page may call. */

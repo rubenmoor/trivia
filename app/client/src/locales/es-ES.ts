@@ -41,6 +41,10 @@ export const esES = {
       rule: "Disparad a una respuesta falsa y queda tachada. Si dais a la correcta, el nivel se repite.",
     },
   },
+  bundles: {
+    baseHeading: "Elegid uno",
+    extraHeading: "Sumad los que queráis",
+  },
   cards: {
     intro: "Una hoja A4: 4 × {hint} y 2 × cada otro comodín. Imprimir al {scale} (sin «ajustar a la página»), luego recortar por las líneas.",
   },

@@ -273,6 +273,10 @@ const es = {
     /** The Bundles screen (plan 151): «¿Qué preguntas juega <name>?» with the name highlighted. */
     titleOpen: "¿Qué preguntas juega ",
     titleClose: "?",
+    /** Heading of the base bundles' column: exactly one. */
+    baseHeading: "Elijan uno",
+    /** Heading of the optional bundles' column: any number. */
+    extraHeading: "Sumen los que quieran",
     /** A mod's bundle (decision 128); `mod`: the mod's name. */
     playerMade: "Hecho por jugadores · {mod}",
   },

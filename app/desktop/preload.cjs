@@ -8,6 +8,8 @@ contextBridge.exposeInMainWorld("triviaShell", {
   loadSave: () => ipcRenderer.invoke("save:load"),
   writeSave: (text) => ipcRenderer.invoke("save:write", text),
   backupSave: (kind) => ipcRenderer.invoke("save:backup", kind),
+  // Plan 151: the machine's locale country, "" for none.
+  region: process.argv.find((a) => a.startsWith("--trivia-region="))?.slice("--trivia-region=".length) ?? "",
   // Plans 114, 118: mod list, mods.json writes, notice, restart, start confirmed.
   mods: {
     list: () => ipcRenderer.invoke("mods:list"),

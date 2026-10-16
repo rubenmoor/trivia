@@ -9,6 +9,13 @@
     return bundles.filter(on).map((x) => x.id);
   }
 
+  /** Display order (plan 151): base bundles, then the optional ones: regional of the player's `region`, non-regional,
+   * regional of other countries; file order (ours, then mods) within each group. */
+  export function orderBundles(bundles: Bundle[], region: string): Bundle[] {
+    const rank = (b: Bundle) => (b.base ? 0 : !b.region ? 2 : region && b.country === region ? 1 : 3);
+    return [...bundles].sort((a, b) => rank(a) - rank(b));
+  }
+
   /** One key per bundle (plan 29): the first letter of its name (after a «Regional:»-style prefix), accents
    * stripped, not taken by an earlier bundle nor in `reserved`, else the name's next letter; "" if none is left. */
   export function bundleKeys(names: string[], reserved: string[]): string[] {
@@ -25,7 +32,9 @@
 
 <script lang="ts">
   // Shared bundle selector (D-88): the base bundles as a radio group, apart from the others (toggles);
-  // exactly one base bundle (D-85). Bundles screen in every mode (plan 151); «Ajustes de la partida» reuses it (MD-12).
+  // exactly one base bundle (D-85). Bundles screen in every mode (plan 151): two columns, names only, the optional
+  // column scrolls with focus; «Ajustes de la partida» (MD-12): compact, with descriptions.
+  import { playerRegion } from "../lib/desktop.ts";
   import { t } from "../lib/i18n.ts";
   import Flags from "./Flags.svelte";
   import Icon from "./Icon.svelte";
@@ -48,34 +57,87 @@
     keyOf?: (b: Bundle) => string;
     /** Animation index of the first tile. */
     first?: number;
-    /** The Bundles screen's bigger tiles. */
+    /** The Bundles screen's two columns. */
     large?: boolean;
     onchange: (ids: string[]) => void;
   } = $props();
 
-  const base = $derived(bundles.filter((b) => b.base));
-  const others = $derived(bundles.filter((b) => !b.base));
+  const ordered = $derived(orderBundles(bundles, playerRegion));
+  const base = $derived(ordered.filter((b) => b.base));
+  const others = $derived(ordered.filter((b) => !b.base));
+
+  let list = $state<HTMLElement>();
+  let cutTop = $state(false);
+  let cutBottom = $state(false);
+
+  function edges() {
+    if (!list) return;
+    cutTop = list.scrollTop > 1;
+    cutBottom = list.scrollTop + list.clientHeight < list.scrollHeight - 1;
+  }
+
+  $effect(() => {
+    if (!list) return;
+    const ro = new ResizeObserver(edges);
+    ro.observe(list);
+    return () => ro.disconnect();
+  });
 
   function toggle(b: Bundle) {
     if (!busy) onchange(toggled(bundles, selected, b));
   }
+
+  /** Focus follows (arrows, pad, letters, Tab): the focused tile stays in view. */
+  const follow = (e: FocusEvent) => (e.target as HTMLElement).scrollIntoView({ block: "nearest" });
 </script>
 
-<div class="bundles" class:large data-line>
-  <div class="group" role="radiogroup">
-    {#each base as b, i (b.id)}
-      {@render tile(b, "radio", first + i)}
-    {/each}
+{#if large}
+  <div class="bundles large" data-line>
+    <div class="column">
+      <h2 class="heading">{t("bundles.baseHeading")}</h2>
+      <div class="group" role="radiogroup">
+        {#each base as b, i (b.id)}
+          {@render tile(b, "radio", first + i)}
+        {/each}
+      </div>
+    </div>
+    {#if others.length}
+      <div class="column">
+        <h2 class="heading">{t("bundles.extraHeading")}</h2>
+        <div
+          class="group scroll"
+          class:cut-top={cutTop}
+          class:cut-bottom={cutBottom}
+          bind:this={list}
+          data-nav-scroll
+          onscroll={edges}
+          onanimationend={edges}
+          onfocusin={follow}
+        >
+          {#each others as b, i (b.id)}
+            {@render tile(b, "switch", first + base.length + i)}
+          {/each}
+        </div>
+      </div>
+    {/if}
   </div>
-  {#if others.length}
-    <span class="divider"></span>
-    <div class="group">
-      {#each others as b, i (b.id)}
-        {@render tile(b, "switch", first + base.length + i)}
+{:else}
+  <div class="bundles" data-line>
+    <div class="group" role="radiogroup">
+      {#each base as b, i (b.id)}
+        {@render tile(b, "radio", first + i)}
       {/each}
     </div>
-  {/if}
-</div>
+    {#if others.length}
+      <span class="divider"></span>
+      <div class="group">
+        {#each others as b, i (b.id)}
+          {@render tile(b, "switch", first + base.length + i)}
+        {/each}
+      </div>
+    {/if}
+  </div>
+{/if}
 
 {#snippet tile(b: Bundle, role: "radio" | "switch", i: number)}
   {@const on = selected.includes(b.id)}
@@ -96,7 +158,7 @@
       {b.name}
     </span>
     {#if role === "switch"}<span class="switch label">{t(on ? "choice.on" : "choice.off")}</span>{/if}
-    <span class="label description">{b.description}</span>
+    {#if !large}<span class="label description">{b.description}</span>{/if}
     {#if b.source === "mod"}<span class="label made"><Icon name="puzzle" /> {t("bundles.playerMade", { mod: b.modName ?? "" })}</span>{/if}
   </button>
 {/snippet}
@@ -157,6 +219,9 @@
     font-weight: 800;
     line-height: 1.1;
   }
+  .name-text > :global(.flags) {
+    vertical-align: -0.15em;
+  }
   .bundle:not(.on) .name-text,
   .bundle:not(.on) .switch {
     color: var(--slate-400);
@@ -164,26 +229,67 @@
   .switch {
     color: var(--sky);
   }
-  .bundles.large {
-    flex-direction: column;
-    align-items: center;
+  .made {
+    color: var(--amber);
   }
-  .large .divider {
-    width: calc(40 * var(--u));
-    height: calc(0.15 * var(--u));
+  /* Bundles screen: two columns of one tile per row; the optional column scrolls (plan 151). */
+  .bundles.large {
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: calc(4 * var(--u));
+    min-height: 0;
+    max-width: none;
+  }
+  .column {
+    display: flex;
+    flex-direction: column;
+    gap: calc(0.8 * var(--u));
+    width: calc(36 * var(--u));
+    min-height: 0;
+  }
+  .heading {
+    margin: 0;
+    font-size: calc(1.4 * var(--u));
+    color: var(--slate-400);
+    text-align: left;
+    padding-left: calc(0.8 * var(--u));
+  }
+  .large .group {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: calc(1 * var(--u));
+    padding: calc(0.6 * var(--u));
+  }
+  .scroll {
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    --ft: 0px;
+    --fb: 0px;
+    mask-image: linear-gradient(to bottom, transparent, #000 var(--ft), #000 calc(100% - var(--fb)), transparent);
+  }
+  .scroll.cut-top {
+    --ft: calc(4 * var(--u));
+  }
+  .scroll.cut-bottom {
+    --fb: calc(4 * var(--u));
   }
   .large .tile {
-    min-width: calc(26 * var(--u));
-    padding: calc(1.4 * var(--u)) calc(2 * var(--u));
-    row-gap: calc(0.3 * var(--u));
+    max-width: none;
+    min-width: 0;
+    padding: calc(1.2 * var(--u)) calc(1.8 * var(--u));
+    row-gap: calc(0.2 * var(--u));
+  }
+  .large .tile.on,
+  .large .tile:hover:not(:disabled) {
+    transform: none;
   }
   .large .name-text {
-    font-size: calc(2.6 * var(--u));
+    font-size: calc(2.4 * var(--u));
   }
   .large .label {
     font-size: calc(1.3 * var(--u));
-  }
-  .made {
-    color: var(--amber);
   }
 </style>

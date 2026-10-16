@@ -81,6 +81,7 @@ Players choose bundles on their own screen, Bundles (Player → Bundles → Choi
 - **Names:** «Paquete básico» (en «Base bundle», de «Grundpaket»; decision 261), «Regional: Colombia»; the overlay line labels them «Paquetes de preguntas: …» (plan 125).
 - **`qgen validate`:** each launch language has a base bundle; `languages` and `kind` valid, `country` on regional bundles only and well-formed, no legacy keys (D-85).
 - **Icons** (D-97, plan 151): base a book, regional bundles their country's flag (`Flags.svelte`, globe without a drawing; mods too), other mod bundles the puzzle, our other bundles the pin.
+- **Order** (D-97, plan 151, `orderBundles`): base bundles first; then the regional bundles of the player's region (machine locale country, `?region=`), the non-regional ones, the regional ones of other countries; file order within each, mods after ours.
 - **«Cambiazo»:** shows the categories of the active bundles only.
 
 ## Tasks

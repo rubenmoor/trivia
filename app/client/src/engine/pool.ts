@@ -53,7 +53,7 @@ export const isModId = (id: string): boolean => id.includes(":");
 export const isOurs = (id: string): boolean => !isModId(id);
 
 /** A regional bundle's `country` (plan 151); COUNTRY in authoring/tools/qgen.py, countryOk in app/desktop/mods.mjs. */
-const COUNTRY = /^[A-Z]{2}$/;
+export const COUNTRY = /^[A-Z]{2}$/;
 
 /** `country` present and well-formed exactly on a regional bundle. */
 const countryOk = (kind: unknown, country: unknown): boolean =>

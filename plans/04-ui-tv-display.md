@@ -114,14 +114,16 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 
 ### Bundles (plan 151, BN-6)
 - `game/screens/Bundles.svelte`, «¿Qué preguntas juega Sofía?»: between Player and Choice in every mode, also with one offered bundle (decision 260: Bundle screen: where it sits, supply report, in-game settings; D-97).
-- The shared `game/BundleSelector.svelte`, `large`: base bundles in one row, a divider, the others below (wrap, no scroll at 2–6 tiles at 1280×720); descriptions always shown; «Ajustes de la partida» reuses the selector (MD-12).
-- Bundles: only those of the new game's question locale (`bundlesFor`; the language's, else `es`, D-96), file order, names in that language.
+- The shared `game/BundleSelector.svelte`, `large`: two columns, left the base bundles («Elijan uno»), right the optional ones («Sumen los que quieran»); one tile per row, icon + name only, no descriptions (decision 263); the right column has a fixed height between title and buttons and scrolls (wheel, touch), a fade at a cut edge; fits 1280×720, 1280×800, 1920×1080 with 1 and 15 optional bundles. «Ajustes de la partida» reuses the compact selector with descriptions (MD-12), same order and icons.
+- Icons: base a book, a regional bundle its country's flag (mods too), other mod bundles the puzzle.
+- Bundles: only those of the new game's question locale (`bundlesFor`; the language's, else `es`, D-96), names in that language; order `orderBundles` (D-97): base bundles in file order (ours, then mods); optional: regional of the player's region, then non-regional, then regional of other countries, file order within each.
+  - Player's region: the machine's locale country (shell: `app.getLocaleCountryCode()`, else the system locale's region; `triviaShell.region`); browser and dev server: `navigator.language`'s region; `?region=XX` (`?region=` none) overrides; `playerRegion` in `lib/desktop.ts`.
   - Base bundles: one-of-N tiles, exactly one selected; picking another deselects the first.
   - Others: on/off tiles («activado» / «desactivado»).
-  - Key per bundle (`bundleKeys`): first letter of its name (after a `Regional:`-style prefix; accents stripped) not taken by an earlier bundle, else its next letter; never the flag key (es `M`). es: `P` Paquete básico, `C` Regional: Colombia; en `B`, `C`; de `G`, `K`.
+  - Key per bundle (`bundleKeys`, in displayed order): first letter of its name (after a `Regional:`-style prefix; accents stripped) not taken by an earlier bundle, else its next letter; never the flag key (es `M`). es: `P` Paquete básico, `C` Regional: Colombia; en `B`, `C`; de `G`, `K`.
 - Preset: the player's newest game's bundles (`playerChoice`), else the locale's first base bundle, non-base off (decision 33). The pick lives in `Game.svelte`: Choice → «Atrás» shows it unchanged; a name chosen on Player starts fresh.
 - No supply here (decision 206: report on Choice only).
-- Input (scope `bundles`): a bundle's letter toggles it; arrows move spatially between tiles and buttons; `Enter`/A on a tile toggles, on «Seguir» continues (default focus); `Backspace`/B back to Player; `Esc` the overlay.
+- Input (scope `bundles`): a bundle's letter toggles it and scrolls it into view (focus stays); arrows move spatially: ←/→ between columns, ↑/↓ within one and down to the buttons; a tile scrolled out of view is reached only from inside its column (`data-nav-scroll`, `lib/focus.ts`), the focused tile scrolls into view; `Enter`/A on a tile toggles, on «Seguir» continues (default focus); `Backspace`/B back to Player; `Esc` the overlay.
 - «Seguir»: off unless exactly one base bundle; Choice with the pick.
 
 ### Choice (plan 29, AG-7, BN-6)

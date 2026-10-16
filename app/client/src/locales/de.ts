@@ -243,6 +243,8 @@ export const de = {
   bundles: {
     titleOpen: "Welche Fragen spielt ",
     titleClose: "?",
+    baseHeading: "Eines wählen",
+    extraHeading: "Beliebig viele dazu",
     playerMade: "Von Spielern · {mod}",
   },
   choice: {
