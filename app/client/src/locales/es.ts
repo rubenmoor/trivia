@@ -16,6 +16,7 @@ const es = {
   supply: {
     short: "No hay suficientes preguntas para una partida completa ({n} disponibles):",
     level: "Nivel {level} (dificultad {lo}–{hi}): faltan {missing}",
+    levelSeat: "{name}: nivel {level} (dificultad {lo}–{hi}): faltan {missing}",
   },
   hud: {
     level: "Nivel {n}",
@@ -279,6 +280,7 @@ const es = {
     /** The Bundles screen (plan 151): «¿Qué preguntas juega <name>?» with the name highlighted. */
     titleOpen: "¿Qué preguntas juega ",
     titleClose: "?",
+    titleMany: "¿Qué preguntas juegan?",
     /** A mod's bundle (decision 128); `mod`: the mod's name. */
     playerMade: "Hecho por jugadores · {mod}",
   },

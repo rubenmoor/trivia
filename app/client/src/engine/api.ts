@@ -66,7 +66,13 @@ export function choice(save: SaveData, data: EngineData, body: Record<string, un
   Reply<{ choice: Choice; supply: Supply }> {
   return guard(save, 409, () => {
     const out = game.resolveChoice(data, pick(body, game.CHOICE_KEYS), game.playerChoice(save, data, body.player));
-    return { save, status: 200, body: { choice: out, supply: game.supply(save, data, out) } };
+    // a session's start (plan 162): `mode`, `players` (count) and rr-competitive's `age_groups` give the whole session's supply
+    const players = typeof body.players === "number" && Number.isInteger(body.players) && body.players > 0 ? body.players : 0;
+    const mode = body.mode;
+    const report = players && (mode === "rr-coop" || mode === "rr-competitive" || mode === "timed")
+      ? game.sessionSupply(save, data, mode, out, players, Array.isArray(body.age_groups) ? body.age_groups : [])
+      : game.supply(save, data, out);
+    return { save, status: 200, body: { choice: out, supply: report } };
   });
 }
 

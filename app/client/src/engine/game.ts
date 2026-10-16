@@ -259,6 +259,15 @@ function seatsSupply(save: SaveData, data: EngineData, choices: Choice[]): Suppl
   return { ok: !levels.some((l) => l.missing), available: avail.length, levels };
 }
 
+/** The supply of a session start as `newSession` checks it: rr-competitive per seat (`groups`, join order, a missing entry =
+ * `choice.age_group`), timed one card per player, else the plain check. */
+export function sessionSupply(save: SaveData, data: EngineData, mode: GameMode, choice: Choice, players: number, groups: unknown[] = []): Supply {
+  if (mode === "rr-competitive") {
+    return seatsSupply(save, data, Array.from({ length: players }, (_, i) => (groups[i] == null ? choice : resolveChoice(data, { age_group: groups[i] as string }, choice))));
+  }
+  return supply(save, data, mode === "timed" ? { ...choice, cards: players } : choice);
+}
+
 /** «no_questions» when no level has a candidate (e.g. no bundle chosen), else «supply_short» naming the levels
  * that miss questions; `report` goes to the client. */
 function supplyShort(report: Supply): GameError {

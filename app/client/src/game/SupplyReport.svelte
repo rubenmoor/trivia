@@ -3,7 +3,8 @@
   import { t } from "../lib/i18n.ts";
   import type { Supply } from "../lib/types.ts";
 
-  let { supply }: { supply: Supply } = $props();
+  /** `names`: a session's seat names, join order; a short level of rr-competitive carries its `seat`. */
+  let { supply, names = [] }: { supply: Supply; names?: string[] } = $props();
   const short = $derived(supply.levels.filter((l) => l.missing));
 </script>
 
@@ -12,7 +13,7 @@
     <p>{t("supply.short", { n: supply.available })}</p>
     <ul class:many={short.length > 4}>
       {#each short as l (l.level)}
-        <li>{t("supply.level", { level: l.level, lo: l.range[0], hi: l.range[1], missing: l.missing })}</li>
+        <li>{t(l.seat === undefined ? "supply.level" : "supply.levelSeat", { name: names[l.seat ?? 0] ?? "", level: l.level, lo: l.range[0], hi: l.range[1], missing: l.missing })}</li>
       {/each}
     </ul>
   </div>

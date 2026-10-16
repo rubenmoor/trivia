@@ -15,6 +15,7 @@ export const de = {
   supply: {
     short: "Nicht genug Fragen für ein ganzes Spiel ({n} vorhanden):",
     level: "Stufe {level} (Schwierigkeit {lo}–{hi}): {missing} fehlen",
+    levelSeat: "{name}: Stufe {level} (Schwierigkeit {lo}–{hi}): {missing} fehlen",
   },
   hud: {
     level: "Stufe {n}",
@@ -249,6 +250,7 @@ export const de = {
     noQuestions: "Keines der gewählten Pakete hat Fragen für dieses Spiel",
     titleOpen: "Welche Fragen spielt ",
     titleClose: "?",
+    titleMany: "Welche Fragen spielt ihr?",
     playerMade: "Von Spielern · {mod}",
   },
   choice: {
