@@ -33998,16 +33998,18 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - Bundle screen and Choice line show the new names in es, es-ES, en, de (dev server or `trivia-gallery --only bundles`)
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass', '2026-10-16T13:57:26Z', '2026-10-16T14:50:38Z', 1336, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1340, 151, 'Gallery run of the bundle screen and developer review', 'work', 'open', NULL, NULL, 'Part 3 of `plan 151: Bundle selection on its own full screen`, after `task 1338: Bundle screen between Player and Choice; Choice without the selector` and `task 1339: Base bundle names per locale: Paquete básico, Base bundle, Grundpaket`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1340, 151, 'Gallery run of the two-column bundle screen and developer review', 'work', 'open', 390, NULL, 'Part 5 of `plan 151: Bundle selection on its own full screen`, after `task 1350: Country field for regional bundles and flag icons` and `task 1351: Bundle screen: two columns, scrolling optional column, order by region`. Replaces this task''s first round (`decision 263: Bundle screen reviewed in /gallery?`, answered "problems", covered by tasks 1350 and 1351).
 
 ## What
-- `trivia-gallery --only bundles,choice-solo,choice-gamemaster,choice-supply-report` for all four locales (es, es-ES, en, de); with `--size 1280x800` too if `task 1330: Gallery size option` is done
-- Look at every shot yourself: overflow, cut text, unmatched catalog text in `manifest.json`, tiles wrap without scroll; fix small problems in this task, larger ones as follow-up tasks in plan 151
-- `pm decision add "Bundle screen reviewed in /gallery?"` for the developer (a go-ahead, like plan 100''s reviews): body lists the shots and what changed (own screen, Choice line, new base names); options "approved" (recommended), "problems (listed in the answer)"; make this task pending on it (`pm task-pending-decision`)
-- On the answer: problems → fix tasks in plan 151; approved → done
+- `trivia-gallery --only bundles,choice-solo,choice-gamemaster,choice-supply-report` for all four locales (es, es-ES, en, de); `--size 1280x800` too if `task 1330: Gallery size option` is done
+- `bundles` with ~15 fake mod bundles too if the gallery can load a mods dir; else say so in the decision body
+- Look at every shot yourself: overflow, cut text, unmatched catalog text in `manifest.json`, columns, flags, scroll fade; fix small problems here, larger ones as fix tasks in plan 151
+- `pm decision consequences 263 "<text>"`: what changed because of its answer (country field, flags, two columns, order by region, names only; tasks 1350, 1351)
+- `pm decision add "Bundle screen (two columns) reviewed in /gallery?"` for the developer (a go-ahead, like decision 263): intro, body lists the shots and what changed since decision 263; options "approved" (recommended), "problems (listed in the answer)"; `pm task-pending-decision 1340 <id>`
+- On the answer: problems → fix tasks in plan 151; approved → mark the gallery flag on `choice-gamemaster` in `authoring/data/ui-flags.json` fixed, then done
 
 ## Done when
-- Gallery shots exist for all four locales and the developer''s review decision is answered; problems have fix tasks', '2026-10-16T13:57:26Z', NULL, 1336, 0);
+- Shots for all four locales, decision 263''s consequences recorded, the new review decision answered; problems have fix tasks', '2026-10-16T13:57:26Z', NULL, 1336, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1341, 57, 'qgen validate: spot-checks.json depends on gitignored work/<run>/run.json', 'work', 'done', NULL, '2026-10-16, authoring/tools/qgen.py (run_ids falls back to spot-checks.json ids; validate reads run members from the entry''s ids), authoring/server/spot_checks.py (record stores ids), authoring/data/spot-checks.json (neutralize-1 ids backfilled; backaudit-1 has no entry yet, gets ids on its first record), authoring/ui/src/lib/types.ts, authoring/QC.md; qgen validate passes in a fresh worktree without work/', '- `qgen validate` fails in `../trivia-review`: `authoring/data/spot-checks.json: no batch ''neutralize-1'' in the pool`; passes in the main checkout
 - Cause: `run_ids()` (`authoring/tools/qgen.py`) reads a back-audit/neutralize run''s ids from `work/<run>/run.json`, gitignored; a fresh worktree or clone has none
 - Fix: keep the run''s ids in tracked data (e.g. `ids` in its `spot-checks.json` entry, or a tracked run file), so validate needs nothing under `work/`; check `backaudit-1` the same way
@@ -34313,8 +34315,65 @@ Milestone 8 is S3 of the Steam track (D-34, `plans/11-steam.md`): the first buil
 - Porting authoring''s Python (qgen, `trivia-authoring`) to Node/TS: later, own milestone.', '2026-10-16T15:02:15Z', '2026-10-16T15:08:15Z', 1343, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1348, 48, 'create tasks for plan 48: S3 close-out and platform test', 'split', 'done', 1000, '2026-10-16, tasks.sql: tasks 238, 236, 237 brought in line with plan 48''s revision (decision 263 bundle layout rows, Deck-sized columns/scrolling, family check order/flag); no new tasks or decisions (S3 test decision is task 238''s; decision 150 already pending)', 'Split plan 48 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T15:03:22Z', '2026-10-16T15:04:32Z', 1345, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1349, 151, 'create tasks for plan 151: Bundle selection on its own full screen', 'split', 'open', 1000, NULL, 'Split plan 151 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T15:08:08Z', NULL, 1347, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1349, 151, 'create tasks for plan 151: Bundle selection on its own full screen', 'split', 'done', 1000, '2026-10-16, tasks 1350, 1351 added; task 1340 rewritten as the two-column review, priority 390 (tasks.sql)', 'Split plan 151 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T15:08:08Z', '2026-10-16T15:09:41Z', 1347, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1350, 151, 'Country field for regional bundles and flag icons', 'work', 'open', 410, NULL, 'Part 3 of `plan 151: Bundle selection on its own full screen` (sections "Country of a regional bundle", "Flag icons"). Before `task 1340: Gallery run of the two-column bundle screen and developer review` and the two-column layout task.
+
+## What
+- `country` field: ISO 3166-1 alpha-2, uppercase (`^[A-Z]{2}$`), required for `kind: "region"`, refused on other kinds
+  - `app/data/bundles.json`: colombia `"country": "CO"`; `about` text names the field
+  - `qgen validate` (`authoring/tools/qgen.py`): refuses a regional bundle without `country` or with a malformed one, and `country` on a non-regional bundle; `qgen bundle new … --kind region` requires `--country`
+  - mods: `app/desktop/mods.mjs` `bundleRows` and `check-mod.mjs` (`bundle_row` error; its text names `country` for regional rows) refuse it, so `trivia-desktop --check-mod` exits non-zero; the client''s mod bundle loading (`app/client/src/lib/data.ts`) skips such a row like any bad row
+  - `ChoiceOptions["bundles"]` (`lib/api.ts`) carries the kind (or `region: boolean`) and `country`
+- `Flags.svelte`: exported single-country mode (e.g. `<Flags country="CO" />`) from its existing drawings; `tag` mode unchanged; country without a drawing → the globe
+- `BundleSelector.svelte`: a regional bundle''s icon is its country''s flag (Bundles screen and «Ajustes de la partida»), mod regional bundles too (flag instead of the puzzle; «Player-made · <mod>» label stays); `pin` icon removed if nothing else uses it
+- Choice line and Esc overlay: names only, unchanged
+- Docs: `modding/bundles.md` (row fields), `modding/README.md` ("Player bundles"): `kind: "region"` needs `country`, shows its flag; template and examples stay valid; `plans/22-bundles.md`: `country` in the field list, flag icon; `plans/decisions.md` D-97: flag icons; `rg` "pin" for bundles over `.md` files (decision 200)
+
+## Check
+- `qgen validate` on a scratch copy with colombia''s `country` removed: refused
+- `trivia-desktop --check-mod` on a throw-away regional mod bundle without `country`: non-zero exit
+- Node dev server (`npm run dev -w app/client`): colombia tile shows the Colombian flag on the Bundles screen and in «Ajustes de la partida»
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`
+
+## Done when
+- `country` required and checked by `qgen validate`, `--check-mod` and the client loader; regional bundles show their flag wherever a bundle shows an icon', '2026-10-16T15:09:06Z', NULL, 1349, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1351, 151, 'Bundle screen: two columns, scrolling optional column, order by region', 'work', 'open', NULL, NULL, 'Part 4 of `plan 151: Bundle selection on its own full screen` (sections "Player''s region and order", "Screen layout", "Docs"). After `task 1350: Country field for regional bundles and flag icons` (needs `country` in `ChoiceOptions["bundles"]`).
+
+## Region
+- `app/desktop/main.mjs`: Electron `app.getLocaleCountryCode()`, passed through `preload.cjs` (e.g. `triviaShell.region()`), read in `app/client/src/lib/desktop.ts`; "" → none
+- Browser/dev server fallback: region of `navigator.language` (`es-CO` → `CO`), else none; `?region=XX` (`?region=` for none) overrides on any page
+
+## Order
+- One exported helper (e.g. `orderBundles` in `BundleSelector.svelte`''s module script), used by every caller (Bundles screen, «Ajustes de la partida»):
+  1. regional bundles whose `country` is the player''s region
+  2. non-regional optional bundles
+  3. regional bundles of other countries
+  - within a group: `bundles.json` order, mod bundles after ours in load order; no region → group 1 empty
+- Base bundles: `bundles.json` order, mods after
+- Letter keys: `bundleKeys` on the names in displayed order
+
+## Layout (replaces task 1338''s large tiles with descriptions)
+- `large` prop → two columns: left base bundle(s) (radio group), right optional bundles (switches); short heading per column from the catalogs (all four locales; read `locales/style/<locale>.md` first)
+- Tiles: icon + name only; one tile per row, no wrapping grid
+- Right column scrolls when tiles don''t fit (fixed height between title and actions): wheel and touch; focused tile always in view (`scrollIntoView({ block: "nearest" })` on arrows, pad, letter keys, Tab); fade at a cut edge
+- Spatial focus: ←/→ between columns, ↑/↓ within a column and down to the buttons; default focus as today
+- «Ajustes de la partida» (`GameSettings.svelte`) keeps the compact selector with descriptions, with the new order and flags
+- Fits at 1280×800, 1280×720, 1920×1080 with 1 and ~15 optional bundles
+
+## Docs
+- `plans/04-ui-tv-display.md` "Bundles": two columns, scroll, order, flags, names only
+- `plans/22-bundles.md`: order rule; `plans/decisions.md` D-97: order of optional bundles
+- `rg` the old wording ("descriptions always shown", "wraps, no scroll") over plan files and `.md` files; fix hits (decision 200)
+
+## Check
+- Node dev server at 1280×800 and 1920×1080, both modes, pad (or forced `device: "gamepad"`) and keys: Player → Bundles (toggle colombia, base stays one) → Choice → Back → Bundles (pick kept) → «¡A jugar!»
+- ~15 fake mod bundles (throw-away mod folder, some `kind: "region"` with drawn and undrawn countries, via the mods dir the dev server or `trivia-desktop` reads): right column scrolls, focus always in view with arrows, pad and letters
+- Order with `?region=CO`, `?region=`, `?region=DE`; once in `trivia-desktop`: the shell''s region reaches the page
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`
+
+## Done when
+- The screen has two columns, a scrolling right column with focus follow, region-first order, names only; docs updated', '2026-10-16T15:09:06Z', NULL, 1349, 0);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -39751,6 +39810,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1345, 1318, '2026-10-16T15:04:38Z', '2026-10-16T15:05:29Z', 'done', NULL, 0, '72609529417a563cfd06141ac08558cb53531a39', 'claude-opus-5-5[1m]', '0990e1c4-6b92-4ab7-b07d-eaf105e485f6', NULL, 7, 14, 2060, 219731, 26986, 0.30109020000000003, 4113781);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1346, 1346, '2026-10-16T15:05:29Z', '2026-10-16T15:05:41Z', 'done', NULL, 0, '89d53682ce41b092a175a3b7d2d9efc74a153e6b', 'claude-opus-5-5[1m]', '85383b1d-291a-48fc-85f4-dc28353b7b32', NULL, 3, 6, 755, 88538, 29548, 0.26921560000000006, 4113781);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1347, 1347, '2026-10-16T15:05:41Z', '2026-10-16T15:08:27Z', 'done', NULL, 0, '8c09e77128d236fe47a5da3d63ff338249d7e400', 'claude-opus-5-5[1m]', 'a206058c-c2e3-42c8-8186-8675398a60ee', NULL, 16, 32, 12825, 866069, 62004, 0.9258738, 4113781);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1348, 1349, '2026-10-16T15:08:27Z', '2026-10-16T15:09:49Z', 'done', NULL, 0, '6006ec276aabd2e53f11fb1396e34b6941b4cf21', 'claude-opus-5-5[1m]', '154f9f4a-4d1c-49aa-bc72-1477b4ccdf7c', NULL, 10, 20, 4807, 435962, 41011, 0.5115004, 4113781);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
