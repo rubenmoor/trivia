@@ -126,8 +126,8 @@ No family-specific questions (D-30).
 **Goal:** before a session, players choose their age group and which bundles to play; selection uses the group's window on the shared scale and only the active bundles. The family's default stays young teens with every bundle on.
 **Exit:** a session for each age group and with `colombia` off can be played; the draft windows are tuned.
 
-- [ ] AG-7 Choose an age group; levels map to the group's window; tune the windows and per-group level weights — [`21`](21-age-groups.md)
-- [ ] BN-6 Choose bundles before a session (`base` always on); selection filters by them — [`22`](22-bundles.md)
+- [x] AG-7 Choose an age group; levels map to the group's window; tune the windows and per-group level weights — [`21`](21-age-groups.md)
+- [x] BN-6 Choose bundles before a session (exactly one base bundle); selection filters by them — [`22`](22-bundles.md)
 
 ---
 

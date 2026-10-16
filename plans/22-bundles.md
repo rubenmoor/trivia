@@ -8,7 +8,7 @@ A **bundle** is a named set of questions that players can switch on or off befor
 - Bundles are listed in `app/data/bundles.json` (it ships; the game offers the choice, BN-6): `id`, Spanish `name` and `description` for the game, `kind` (`base`, `region`, `theme`), `languages` (locales the bundle is offered in, D-85), and `rule`: one English sentence the pipeline uses to decide membership.
 - **Every question is in exactly one bundle**: the field `bundle`, default `"base"`.
 - Bundles **add** questions; they don't own a topic. A sports question can be in `base`; a sports bundle later just adds many more. "¿Cuál es la capital de Colombia?" stays in `base`; only questions that need a real connection to Colombia go into `colombia`.
-- **Exactly one base bundle** (`kind: base`) per session (D-85, decision 38); `base` is the first and today the only one. Non-base bundles are off by default on the configure screen (decision 33).
+- **Exactly one base bundle** (`kind: base`) per session (D-85, decision 38); `base` is the first and today the only one. Non-base bundles are off by default in every mode (decision 33, D-97).
 - **Regional packs** (D-99, pm decision 110): 2000 approved each, in the region's language + en (`colombia`: es + en), free DLC; pilot `colombia`, more packs only after a decision with its effort numbers (plan 98, plan 84). Target: a `targets.json` entry per regional bundle, D-53's mix scaled to 2000; `qgen bundle new --kind region` writes it, `qgen validate` requires it (D-101).
 - A session plays the questions of the active bundles. Difficulty, age groups (D-38) and burning (D-28) work as before inside that set.
 
@@ -71,8 +71,15 @@ Mods carry bundles in our own format, loaded by our own loader (pm plan 115, dec
 - Save: mod ids stored as strings, no format change; removed mods' rows ignored; `authoring/tools/save_file.py` drops ids with `:`; telemetry keeps `isOurs` only.
 - Achievements: player questions count like ours except `BUNDLE_*` and `ALL_CATEGORIES` (ours only) (decision 123: Achievements in games with mods on: allowed or off?; decision 146: Achievements, mods screen and rich presence with mods on).
 
-## Later
-- **The game** (BN-6): a choice of bundles before a session, exactly one base bundle (D-38); selection filters by the active bundles. Engine: plan 27; Choice screen and overlay line: plan 29.
+## In the game (BN-6)
+Players choose bundles on the Choice screen before every session; selection uses only the active bundles.
+
+- **Languages** (D-85): every bundle lists `languages`; the game offers only the bundles of its language (`bundlesFor`), others refused (`bundle_not_offered`). `base`: es, es-ES, en, de; `colombia`: es.
+- **Base bundles** (D-85): `kind: base`; exactly one per session, zero or two refused (`base_bundle_count`); picked like a radio button among the language's base bundles. Other bundles: any number, on or off.
+- **Every mode** (D-97, decision 158): «Solo o en grupo» and gamemaster mode show the same `BundleSelector`, its own step apart from «Personalizar partida»; preset: the player's newest game's bundles, else the language's first base bundle, non-base off.
+- **Names:** «Básico», «Regional: Colombia»; the overlay line labels them «Paquetes de preguntas: …» (plan 125).
+- **`qgen validate`:** each launch language has a base bundle; `languages` and `kind` valid, no legacy keys (D-85).
+- **«Cambiazo»:** shows the categories of the active bundles only.
 
 ## Tasks
 - [x] BN-1 Decision D-39 and this plan; 15c's `region` replaced by bundles
@@ -80,8 +87,7 @@ Mods carry bundles in our own format, loaded by our own loader (pm plan 115, dec
 - [x] BN-3 `qgen bundles`: an LLM pass proposes `colombia` for existing questions and writes it. *2026-10-07: 504 questions (rejected ones skipped), 26 calls; 84 moved to `colombia`. Proposals and reasons in `work/bundles/proposals.json`. For the developer to check: `/review?bundle=colombia`. 2026-10-13: checked by the developer (decision 7): 84 kept in `colombia`, 0 moved to `base`.*
 - [x] BN-4 `draft` picks the bundle by the rules; house style explains bundles
 - [x] BN-5 `report` per bundle; review tool shows the bundle, filters by it (`?bundle=`) and lets the developer change it. *Key `n` moves a question to the next bundle. The server also accepts difficulty 1–15 now (D-38); the review tool's digit keys still set 1–10.*
-- [ ] BN-6 The game: choose bundles before a session; selection filters by them *(start screen: plan 29)*
-  - 2026-10-11 engine: bundle filter and choice per game, plan 27 (`always_on` bundles always in, «Cambiazo» groups of active bundles only). Open: start screen, play-test (plans 29–30).
+- [x] BN-6 The game: choose bundles before a session; selection filters by them. *2026-10-15: engine plan 27 (bundle filter, «Cambiazo» groups of active bundles only), Choice screen plan 29, `languages` and base bundles plan 71 (D-85), play-test fixes plan 125 (D-97); play-tested (pm decisions 50, 155, 206).*
 - [-] BN-7 `qgen batch` aimed at one bundle. *Replaced by BN-8..BN-12 (D-41).*
 - [x] BN-8 `qgen batch` writes `base` by default: `draft` sets the batch's bundle instead of picking one; prompts drop the bundle choice and keep the base rule as a content limit (D-41). *The bundle is stored in `run.json`; runs without one are `base`.*
 - [x] BN-9 `qgen bundle new <id>`: creates an empty bundle (entry in `bundles.json` plus its own categories, concept and optional axes files); layout per D-43. *`--name`, `--description`, `--kind`, `--rule`; writes an empty `categories.json` to fill by hand. Axes stay `base`'s until a `question-axes.json` is added.*

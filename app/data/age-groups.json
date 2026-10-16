@@ -1,5 +1,5 @@
 {
-  "about": "Age groups (plans/21-age-groups.md, D-38). Difficulty is one shared scale 1–15 (1 = a 6-year-old can answer it, 10 = a 16-year-old, 15 = trivia specialists); each group plays a window of it. `focus`: the group the authoring pipeline writes for; null writes across the whole scale with even targets (D-40). levels: 12 difficulty ranges per group, level 1 first; young_teens = D-22, the others tuned 2026-10-12 (AG-7, D-76). level_weights: per difficulty of the window, round(12 × Σ 1/(hi − lo + 1)) over the levels containing it, 3 × the expected cards per game (D-31); young_teens = qgen's LEVEL_WEIGHTS.",
+  "about": "Age groups (plans/21-age-groups.md, D-38). Difficulty is one shared scale 1–15 (1 = a 6-year-old can answer it, 10 = a 16-year-old, 15 = trivia specialists); each group plays a window of it. `focus`: the group the authoring pipeline writes for; null writes across the whole scale with even targets (D-40). levels: 12 difficulty ranges per group, level 1 first; young_teens = D-22, the others tuned 2026-10-12 (D-76); the game plays the chosen group's levels (AG-7). level_weights: per difficulty of the window, round(12 × Σ 1/(hi − lo + 1)) over the levels containing it, 3 × the expected cards per game (D-31); young_teens = qgen's LEVEL_WEIGHTS.",
   "scale": [1, 15],
   "focus": null,
   "groups": [

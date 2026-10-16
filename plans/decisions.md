@@ -538,7 +538,7 @@ Template:
 - Context: The TS referee plays one audience: 12 levels with D-22's fixed ranges over every bundle. Milestone 5 lets players pick an age group (AG-7) and bundles (BN-6) before a session; old saves and plan 18's fixtures must keep playing unchanged.
 - Decision: `age_group` and `bundles` live in each game's `settings`, next to `jokers`. Missing keys mean `young_teens` and every bundle in `bundles.json`, resolved on read, never written back. Every `always_on` bundle (only `base`) is always on. Level ranges per group live in `app/data/age-groups.json` (`levels`, 12 `[lo, hi]` pairs); `young_teens` = D-22, the others a draft until tuned (plan 28). Burns stay per player across groups and bundles (D-28).
 - Consequences: The engine drops its `LEVEL_RANGES` constant; the Python referee keeps its copy until PORT-8. `parseAgeGroups` and `qgen validate` check the `levels` rules. Plan 27 (engine), 29 (start screen), 28 (tuning).
-- Supersedes / related: D-22, D-28, D-38, D-39; plans 21, 22, 27
+- Supersedes / related: D-22, D-28, D-38, D-39; plans 21, 22, 27; superseded in part by D-85 (base bundles replace `always_on`)
 
 ## D-69: The engine runs in the browser behind `lib/api.ts`; data from `/data/`
 - Date: 2026-10-11

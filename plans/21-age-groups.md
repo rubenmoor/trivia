@@ -5,16 +5,16 @@
 The project was built for one audience: two Colombian kids aged 11 and 12 (D-6). The house style, the prompts and the difficulty scale all say so. From now on the game has **four age groups**, and the current focus is one of them, young teens. Nothing in the authoring pipeline names a fixed audience any more; it names the focus group, which is set in one file (D-38).
 
 ## Age groups
-In `app/data/age-groups.json` (it ships: the game will offer the choice, AG-7):
+In `app/data/age-groups.json` (it ships: the game offers the choice, AG-7):
 
 | id | Name | Ages | Window on the scale |
 |---|---|---|---|
 | `kids` | Niños | 6–10 | 1–6 |
-| `young_teens` | Adolescentes | 11–14 | 1–10 (the game's levels today, D-22) |
+| `young_teens` | Adolescentes | 11–14 | 1–10 (D-22's levels) |
 | `young_adults` | Jóvenes | 15–22 | 4–13 |
 | `adults` | Adultos | 23+ | 5–15 |
 
-`"focus": "young_teens"` in the same file is the group the pipeline writes for. `"focus": null` means no focus: the pipeline writes across the whole scale 1–15, with even targets, and each question is written for the groups whose window contains its difficulty (D-40). The game plays young teens (levels 1–10) until AG-7, whatever the focus. Windows, `levels` and `level_weights` tuned 2026-10-12 (AG-7, D-76).
+`"focus": "young_teens"` in the same file is the group the pipeline writes for. `"focus": null` means no focus: the pipeline writes across the whole scale 1–15, with even targets, and each question is written for the groups whose window contains its difficulty (D-40). Windows, `levels` and `level_weights` tuned 2026-10-12 (AG-7, D-76).
 
 ## One shared scale, 1–15
 Difficulty stays "who can answer it", one number per question, on one scale for every group. Each group plays a window of it. The old scale 1–10 keeps its meaning, so the existing pool needs no migration; 11–15 extend it past school:
@@ -38,7 +38,7 @@ Why one scale and not a difficulty per group: one number per question is simple 
 - **Targets:** `draft` draws target difficulties from the focus group's window; `LEVEL_WEIGHTS` are the young-teen weights (D-31) and must cover exactly that window. Without a focus, every level of the scale gets the same weight (D-40).
 - **Checks:** difficulty may be 1–15 (`check_question_shape`, `validate`).
 - **Prompts:** no prompt names kids or a fixed age; they say "players of the focus group" where the audience matters. `age_fit` (rate) keeps its name and means: fits its difficulty and suits the focus group.
-- **Not changed now:** the game (it plays young teens, levels 1–10 as today), selection, and the pool's difficulties.
+- **The game** (AG-7): players choose an age group before a session; selection uses its `levels` on the shared scale; the pool's difficulties unchanged.
 
 ## Tasks
 - [x] AG-1 Decision D-38 and this plan; OQ-36 answered (four age groups, adults included)
@@ -47,8 +47,7 @@ Why one scale and not a difficulty per group: one number per question is simple 
 - [x] AG-4 Prompts (draft, rate, revise, concepts) without a fixed age; `known_at` replaces `familiarity`
 - [x] AG-5 `qgen`: difficulty 1–15; targets from the focus window; `known_at` in drawing, lists and validation. *`draft` stops if `LEVEL_WEIGHTS` don't cover the focus window; a concept added for an existing question takes the question's difficulty as `known_at`.*
 - [x] AG-6 Espacio's concept list again, with `known_at`. *255 concepts (225 + a 30-concept fill), `known_at` 1–14; 146 in the young-teen window, 86 in the kids', 232 in each adult window.*
-- [ ] AG-7 The game: choose an age group; levels map to the group's window; tune the draft windows and per-group level weights *(start screen: plan 29)*
-  - 2026-10-11 engine: group ranges and choice per game, plan 27 (`gameChoice`, `resolveChoice`, `choice` route; `levels` in `age-groups.json`). Open: start screen, tuning, play-test (plans 28–30).
+- [x] AG-7 The game: choose an age group; levels map to the group's window; tune the windows and per-group level weights. *2026-10-15: engine plan 27 (`gameChoice`, `resolveChoice`; `levels` in `age-groups.json`), tuning plan 28 (D-76), Choice screen plan 29, play-test fixes plan 125; play-tested (pm decisions 50, 155, 206).*
 - [ ] AG-8 Batches for other age groups: `LEVEL_WEIGHTS` per group, and how a batch picks its group
 - [x] AG-10 No focus (D-40): `"focus": null` writes across the whole scale with even targets; house style, rate prompt and bundle rules say "the players" instead of "the focus group". *`target_weights()` in `qgen.py`; the house style's `{focus_group}` became `{players}`, which names the focus group or, without one, every group's window. `focus` is set to null for now.*
 - [x] AG-9 Review tool: set difficulties 11–15 (the server accepts 1–15; the digit keys only reach 1–10). *`d`, then type the number and press Enter; Backspace corrects, Esc cancels. The header shows the difficulty without "/10".*
