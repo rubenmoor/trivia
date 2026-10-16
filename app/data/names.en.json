@@ -13,6 +13,10 @@
     "usa": {
       "name": "Regional: United States",
       "description": "For anyone with ties to the United States: its places, food, customs, people, music, sport and words."
+    },
+    "germany": {
+      "name": "Regional: Germany",
+      "description": "For anyone with ties to Germany: its places, food, customs, people, music, sport and words."
     }
   },
   "age_groups": {

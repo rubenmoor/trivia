@@ -13,6 +13,10 @@
     "usa": {
       "name": "Regional: USA",
       "description": "Für alle mit Bezug zu den USA: Orte, Essen, Bräuche, Menschen, Musik, Sport und Wörter von dort."
+    },
+    "germany": {
+      "name": "Regional: Deutschland",
+      "description": "Für alle mit Bezug zu Deutschland: Orte, Essen, Bräuche, Menschen, Musik, Sport und Wörter von hier."
     }
   },
   "age_groups": {

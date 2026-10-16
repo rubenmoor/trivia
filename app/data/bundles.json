@@ -38,6 +38,18 @@
       "description": "Para quien tiene relación con Estados Unidos: lugares, comida, costumbres, gente, música, deporte y palabras de allá.",
       "rule": "Answering needs a connection to the United States: American places, food, customs, holidays, people, music, sport, media, words, sayings or history that players outside the US mostly wouldn't know; topics shared across the English-speaking world, and British-only ones (those belong to `uk`), are not here.",
       "voice": "American English: US spelling (\"color\", \"gray\"), US words (\"soccer\", \"cookie\", \"truck\", \"vacation\", \"sidewalk\"), dates as \"July 20, 1969\", imperial units with metric in brackets only where it helps"
+    },
+    {
+      "id": "germany",
+      "kind": "region",
+      "country": "DE",
+      "languages": [
+        "de"
+      ],
+      "name": "Regional: Alemania",
+      "description": "Para quien tiene relación con Alemania: lugares, comida, costumbres, gente, música, deporte y palabras de allá.",
+      "rule": "Answering needs a connection to Germany: German places, food, customs, holidays, people, music, sport, media, words, sayings or history that players outside Germany mostly wouldn't know; things known to families anywhere (Berlin's wall, Beethoven, Oktoberfest as a fact) stay in `base`, and Austrian or Swiss topics are not here.",
+      "voice": "Standard German as spoken in Germany: German spelling with \"ß\", German words (\"Brötchen\", \"Handy\", \"Fahrrad\", \"Bürgersteig\"), dates as \"20. Juli 1969\", metric units"
     }
   ]
 }
