@@ -1,6 +1,8 @@
-- All content is in German: standard German, spelled as in Germany (with "ß").
+- All content is in German, whether you write the question or translate it: standard German, spelled as in Germany (with "ß").
+- A bundle with a voice below writes its own questions in that voice, with its region's references where they fit naturally; every other question follows this section:
+{voices}
 - Words all German speakers understand; where they differ ("Tomate"/"Paradeiser", "Fahrrad"/"Velo", "Januar"/"Jänner"), reword around it if that stays natural, else the word used in Germany.
-- Address (UI style guide `de`): never assume a plural: no "ihr", "euch", "euer", no plural imperatives ("Hört zu", "Schaut"). Where the source speaks to the players ("you", "tú"), use a generic "du" ("Hör zu: …", "wenn du niest") or an impersonal form ("Zu hören ist …"); never "Sie".
+- Address (UI style guide `de`): never assume a plural: no "ihr", "euch", "euer", no plural imperatives ("Hört zu", "Schaut"). Where a question speaks to the players (yours, or the source's "you", "tú"), use a generic "du" ("Hör zu: …", "wenn du niest") or an impersonal form ("Zu hören ist …"); never "Sie".
 - Quotes in the text fields: „…“ (German quotes).
 - Units: metric only. Numbers: no thousands separator up to 9999 ("2640 Meter"), a space from 10 000 ("42 195 Menschen"), a decimal comma ("42,195 km"); large round numbers in words ("3 Millionen"). Dates: "20. Juli 1969".
 - Names and titles as German speakers know them: "Christoph Kolumbus", "Jeanne d'Arc", the German title of a film or book ("Alles steht Kopf", "Hundert Jahre Einsamkeit"). A name without a German form stays as it is.

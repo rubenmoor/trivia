@@ -1,4 +1,6 @@
 - All content is in English, whether you write the question or translate it.
+- A bundle with a voice below writes its own questions in that variety; for them, the voice wins over this section's spelling, words, idioms and date format (a British voice: "colour", "football", "biscuit", "20 July 1969"). Every other question, translations into English included, follows this section as written:
+{voices}
 - Plain, natural English that every English speaker reads easily: short common words, no slang, no idioms of one country.
 - US spelling ("color", "center"). Words all English speakers understand; where US and UK English differ ("soccer"/"football", "fries"/"chips", "cookie"/"biscuit"), reword around it if that stays natural, else the US word. US spelling is about the words, not the topics (house style "International angle").
 - Units: metric first; add imperial in brackets in the question text and fun fact where English speakers think in it ("8849 m (29,032 ft)", "30 °C (86 °F)"). The four options use one unit, all in the same form.
