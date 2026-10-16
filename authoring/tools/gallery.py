@@ -4,7 +4,7 @@
 The built client on the Node dev server (`npm run serve -w app/client`, a temp save dir, never state/), driven by
 nixpkgs Playwright at 1920×1080 with the desktop bridge stubbed (valid Steam user, mods, telemetry, reports).
 `?gallery` makes `t()` record rendered text → key (lib/i18n.ts); each shot's visible texts are matched against it.
-Output: work/gallery/<locale>/<shot>.png and work/gallery/manifest.json (merged on --locale/--only runs).
+Output: <locale>/<shot>.png and manifest.json in work/gallery/ ($TRIVIA_WORK/gallery/ if set; merged on --locale/--only runs).
 
 Usage: trivia-gallery [--locale en,es,es-ES,de] [--only <shot>[,<shot>…]] [--list] [--visible]
 """
@@ -23,10 +23,12 @@ import time
 import urllib.request
 from pathlib import Path
 
+import layout  # authoring/tools/layout.py
+
 REPO = Path(__file__).resolve().parent.parent.parent
 CLIENT = REPO / "app" / "client"
 DATA = REPO / "app" / "data"
-OUT = REPO / "work" / "gallery"
+OUT = layout.GALLERY  # honours TRIVIA_WORK
 LOCALES = ["en", "es", "es-ES", "de"]
 W, H = 1920, 1080
 
