@@ -3690,13 +3690,13 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 
 ## Release bar
 - New keys `quality.release` in `authoring/data/targets.json` (D-53''s file): `max_false_approve`, `max_fact_false_approve`, `spot_check_size` (values from decision 15; option 2 → only `min_agreement` reused). `qgen validate` checks them.
-- Applies per batch and per back-audit slice, per language later (translations: native speaker, plan 9 rules).
+- Applies per drafted batch (`base` in any source language, English from batch-9 on; regional bundles) and per back-audit slice. Not to translation runs (`tr-*`): their LLM translation review is their only review, no spot check, no release row (milestone 9, developer 2026-10-16); decision 45''s health thresholds still stop them.
 - `qgen report --qc` (trend) gets a row "release" ✓/✗ per batch/slice; `qgen report --qc <batch>` states which limit failed.
 - Above the limit → the batch or slice is **not release-ready** (family play unchanged; statuses stay as the gamemaster decided):
   1. `qgen audit --batch <b> --all`: audit every approved question of it, not only the sample (skips audited ones).
   2. Gamemaster decides the flagged ones in `/review?batch=<b>&audit=flagged`.
   3. Second spot check with a new seed (`<b>#2`), excluding already spot-checked ids; release-ready once it passes.
-- Release-ready state per batch/slice in `authoring/data/spot-checks.json` (derived from its items, not stored twice) and listed by `qgen report --qc`. Part 12 (S4 close-out) reads it: every batch/slice with approved questions in the release pool is release-ready.
+- Release-ready state per batch/slice in `authoring/data/spot-checks.json` (derived from its items, not stored twice) and listed by `qgen report --qc`. Part 12 (S4 close-out) reads it: every drafted batch/slice with approved questions in the release pool is release-ready; a translation counts through its source question''s batch.
 - D-entry (D-65 or next free): release bar, consequence, back-audit. QC.md gets a "Release bar" step after step 3.
 
 ## Back-audit
@@ -3724,7 +3724,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 ## Done when
 - The release bar is in `targets.json`, checked by `qgen report --qc`, and documented (QC.md, D-entry).
 - Every approved question approved before D-56 has an audit, and every slice is release-ready or has a decision why not.
-- `plans/16-content-target.md` CT-5 `[x]` with the numbers.', '', '2026-10-12T04:02:41Z', 241);
+- `plans/16-content-target.md` CT-5 `[x]` with the numbers.', 'Before the game goes on sale, every set of newly written questions has to pass a quality check: an AI audit plus a person checking a random sample blind. This sets the bar such a set must clear, what happens when it fails, and how the older questions written before these checks existed get audited in small slices. Translated questions are checked by an AI translation review only, so they don''t need this human sample.', '2026-10-12T04:02:41Z', 241);
 INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (58, 1, 'Fable as an opt-in model for qgen rework', 650, '`qgen rework` sends needs_work questions with specific feedback (giveaway, ambiguity, difficulty, overlap) once more through fix and review. These are the hardest cases and the volume is small, so a stronger model may pay off there first. This plan adds an opt-in `--model fable` to `qgen rework`, runs one experiment and lets the gamemaster decide from the numbers. Nothing changes for `qgen batch`. Sits next to plan 16 (quality control); its approval rate is a quality signal, not a replacement for QC.
 
 ## Today
@@ -37928,7 +37928,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-16T22:36:29Z', '2026-10-16T22:37:24Z', NULL, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1495, 9, 'create tasks for plan 9: masterplan', 'split', 'done', 1000, '2026-10-16, tasks.sql: task 1501 write plan: Translations without human control (parts 4, 5; plans 66, 67 done, so no revision reaches them); parts 1-16 otherwise have their plans; child-plan revisions 1496-1499 queued by pm', 'Split plan 9 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T22:37:19Z', '2026-10-16T22:38:21Z', 1494, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1496, 57, 'revise plan 57: Release quality bar and back-audit (CT-5)', 'revise', 'open', 1000, NULL, '`plan 9: masterplan`, the plan above `plan 57: Release quality bar and back-audit (CT-5)`, changed; it is quoted below. Bring `plan 57: Release quality bar and back-audit (CT-5)` in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1496, 57, 'revise plan 57: Release quality bar and back-audit (CT-5)', 'revise', 'done', 1000, '2026-10-16, tasks.sql: plan 57 release bar applies to drafted batches (base any source language, regional) and back-audit slices only; tr-* runs have no spot check or release row (milestone 9, developer 2026-10-16); close-out counts translations through their source batch', '`plan 9: masterplan`, the plan above `plan 57: Release quality bar and back-audit (CT-5)`, changed; it is quoted below. Bring `plan 57: Release quality bar and back-audit (CT-5)` in line with it
 (`pm plan edit 57 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -38110,7 +38110,7 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 - Part 2 any time after plan 16. Part 12 last.
 
 ## Out of scope (from the milestone)
-- Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-16T22:37:19Z', NULL, 1494, 0, NULL, NULL);
+- Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-16T22:37:19Z', '2026-10-16T22:39:05Z', 1494, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1497, 69, 'revise plan 69: UI catalogs for the launch languages (LUI-4, LUI-5)', 'revise', 'open', 1000, NULL, '`plan 9: masterplan`, the plan above `plan 69: UI catalogs for the launch languages (LUI-4, LUI-5)`, changed; it is quoted below. Bring `plan 69: UI catalogs for the launch languages (LUI-4, LUI-5)` in line with it
 (`pm plan edit 69 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
@@ -38693,6 +38693,8 @@ What the plan covers:
 - Review tool (`authoring/server/spot_checks.py`, `overview.py`, `authoring/ui/src/review/`): no translation spot-check sample or banner asking for one; the developer can still open and review any `tr-*` run (`/review?batch=…&locale=L`); `qgen flag` still sets `needs_work`. What happens to `spot-checks.json` entries and `qgen validate` rules for `tr-*` runs: the plan decides (keep existing records valid).
 - Docs: `authoring/QC.md` "Translation runs" (no spot check), `authoring/RUNBOOK.md`, `plans/15b-question-translation.md` (QT-5 without go/no-go, QT-6 without native-speaker spot check), D-87/D-55 in `plans/decisions.md` where they say otherwise; `rg` for "spot check", "go/no-go", "pilot" over `.md` files and comments (decision 200).
 - Before the full translation runs of part 11 (`task 639: run tr-en-2`, `task 641: run tr-de-2`, `task 1226: run tr-es-ES-2`); if those would otherwise wait on the pilot''s stop, the plan says how they proceed.', '2026-10-16T22:38:17Z', NULL, 1495, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1502, 57, 'create tasks for plan 57: Release quality bar and back-audit (CT-5)', 'split', 'open', 1000, NULL, 'Split plan 57 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T22:39:05Z', NULL, 1496, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -44894,6 +44896,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1490, 1494, '2026-10-16T22:36:30Z', '2026-10-16T22:37:33Z', 'done', NULL, 0, '643dbb50f9dfc184c67ec40d2ee1cf0d4094a80d', NULL, 'claude-opus-5-5', 'dbc04aec-7bc7-4601-917b-6eadaa72b705', NULL, 8, 16, 4204, 357337, 43134, 0.5006834, 74883);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1491, 1495, '2026-10-16T22:37:33Z', '2026-10-16T22:38:27Z', 'done', NULL, 0, '094ac17e27ffb2ad948b204dc8c6ac6a4cbfd9c3', NULL, 'claude-opus-5-5', 'b7a7055f-143b-4f75-af91-02d57b5d625c', NULL, 11, 22, 4587, 551846, 51289, 0.6125092, 74883);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1492, 1500, '2026-10-16T22:38:16Z', NULL, 'running', NULL, NULL, '094ac17e27ffb2ad948b204dc8c6ac6a4cbfd9c3', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 74883);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1493, 1496, '2026-10-16T22:38:28Z', '2026-10-16T22:39:11Z', 'done', NULL, 0, '1126462a95c531f8055e60c11274be5da5e5ca6c', NULL, 'claude-opus-5-5', '17173dd7-3d1c-4879-a6ae-b18ce1906d03', NULL, 8, 16, 3039, 376237, 44983, 0.4959554, 74883);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
