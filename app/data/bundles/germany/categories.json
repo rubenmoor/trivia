@@ -1,4 +1,133 @@
 {
   "about": "Categories of the germany bundle (D-41, D-43): structure only, keyed by English slugs unique within the bundle (decision 259); names in names.<locale>.json.",
-  "categories": []
+  "categories": [
+    {
+      "slug": "geography",
+      "subcategories": [
+        "states-and-capitals",
+        "cities-and-towns",
+        "rivers-lakes-and-coasts",
+        "mountains-and-landscapes",
+        "sights-and-landmarks"
+      ]
+    },
+    {
+      "slug": "nature",
+      "subcategories": [
+        "native-animals",
+        "plants-and-forests",
+        "parks-weather-and-climate"
+      ]
+    },
+    {
+      "slug": "history",
+      "subcategories": [
+        "early-history",
+        "reformation-to-empire",
+        "empire-weimar-and-nazi-era",
+        "federal-republic-and-reunification",
+        "chancellors-and-presidents"
+      ]
+    },
+    {
+      "slug": "people",
+      "subcategories": [
+        "inventors-and-scientists",
+        "founders-and-entrepreneurs"
+      ]
+    },
+    {
+      "slug": "food-and-drink",
+      "subcategories": [
+        "regional-dishes",
+        "sausages-and-cheese",
+        "bread-and-baked-goods",
+        "cakes-and-sweets",
+        "drinks"
+      ]
+    },
+    {
+      "slug": "festivals-and-traditions",
+      "subcategories": [
+        "advent-and-christmas",
+        "carnival-and-fairs",
+        "holidays-through-the-year",
+        "family-customs-and-dress"
+      ]
+    },
+    {
+      "slug": "myths-and-legends",
+      "subcategories": [
+        "legends-and-figures",
+        "superstitions-and-folk-beliefs"
+      ]
+    },
+    {
+      "slug": "music-and-dance",
+      "subcategories": [
+        "schlager-and-folk-music",
+        "pop-and-rock",
+        "rap-and-electronic",
+        "childrens-and-folk-songs"
+      ]
+    },
+    {
+      "slug": "art-and-literature",
+      "subcategories": [
+        "classic-literature",
+        "childrens-books-and-comics",
+        "art-architecture-and-museums"
+      ]
+    },
+    {
+      "slug": "film-and-television",
+      "subcategories": [
+        "series-and-crime",
+        "childrens-tv-and-audio-dramas",
+        "shows-and-presenters",
+        "films-and-actors"
+      ]
+    },
+    {
+      "slug": "sports",
+      "subcategories": [
+        "bundesliga-and-clubs",
+        "national-team",
+        "athletes-and-other-sports",
+        "winter-sports"
+      ]
+    },
+    {
+      "slug": "how-people-speak",
+      "subcategories": [
+        "dialects-and-regional-words",
+        "sayings-and-idioms",
+        "slang-and-everyday-words"
+      ]
+    },
+    {
+      "slug": "daily-life",
+      "subcategories": [
+        "brands-and-products",
+        "money-and-shopping",
+        "school-and-education",
+        "transport",
+        "home-and-public-life"
+      ]
+    },
+    {
+      "slug": "symbols",
+      "subcategories": [
+        "national-symbols-and-state",
+        "state-and-city-emblems"
+      ]
+    },
+    {
+      "slug": "east-germany",
+      "subcategories": [
+        "gdr-history",
+        "gdr-everyday-life"
+      ]
+    }
+  ]
 }
