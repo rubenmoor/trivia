@@ -46,7 +46,7 @@ Helps the developer tune question difficulty and see how the game is played. Off
   - game version, session length
 - per game played in the session:
   - mode, question language, question pool version
-  - age group or difficulty range, levels set and level reached, result (won, lost, abandoned, still open)
+  - age group or difficulty range, levels set and level reached, result (won, lost, completed, abandoned, still open)
   - whether the settings were customized, whether mods were on, jokers used
 - per answered question: question id, right or wrong, level, jokers used on it
 - not sent: names, Steam account id, IP address (Cloudflare sees it, the server doesn't store it), free text, questions from mods
@@ -100,7 +100,7 @@ Ayudan al desarrollador a ajustar la dificultad de las preguntas y a ver cómo s
   - versión del juego, duración de la sesión
 - por partida jugada en la sesión:
   - modo, idioma de las preguntas, versión del banco de preguntas
-  - grupo de edad o rango de dificultad, niveles elegidos y nivel alcanzado, resultado (ganada, perdida, abandonada, sin terminar)
+  - grupo de edad o rango de dificultad, niveles elegidos y nivel alcanzado, resultado (ganada, perdida, completada, abandonada, sin terminar)
   - si se personalizó la configuración, si había mods activos, comodines usados
 - por pregunta respondida: id de la pregunta, bien o mal, nivel, comodines usados en ella
 - no se envían: nombres, id de la cuenta de Steam, dirección IP (Cloudflare la ve, el servidor no la guarda), texto libre, preguntas de mods
@@ -154,7 +154,7 @@ Helfen dem Entwickler, die Schwierigkeit der Fragen abzustimmen und zu sehen, wi
   - Spielversion, Sitzungsdauer
 - pro Spiel der Sitzung:
   - Modus, Sprache der Fragen, Version des Fragenpools
-  - Altersgruppe oder Schwierigkeitsbereich, eingestellte und erreichte Stufen, Ergebnis (gewonnen, verloren, abgebrochen, offen)
+  - Altersgruppe oder Schwierigkeitsbereich, eingestellte und erreichte Stufen, Ergebnis (gewonnen, verloren, abgeschlossen, abgebrochen, offen)
   - ob die Einstellungen angepasst wurden, ob Mods an waren, benutzte Joker
 - pro beantworteter Frage: Fragen-ID, richtig oder falsch, Stufe, Joker auf dieser Frage
 - nicht gesendet: Namen, Steam-Konto-ID, IP-Adresse (Cloudflare sieht sie, der Server speichert sie nicht), freier Text, Fragen aus Mods

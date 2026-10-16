@@ -1,8 +1,8 @@
 <script lang="ts">
-  // The game on the TV (plans/04-ui-tv-display.md, D-21, D-25): a state machine over the
-  // screens Start → Player → Choice → Level → Select → Question → Correct / Wrong → … → Victory (answers off, D-105:
-  // Question → Next → … → Completed), with one
-  // transition routine and the admin overlay on Esc. The engine keeps the game (engine/, lib/api.ts).
+  // The game on the TV (plans/04-ui-tv-display.md, D-21, D-25): a state machine over the screens
+  // Start → Player → Choice → Level → Select → Question → Correct / Wrong → … → Victory (answers off, D-105:
+  // Question → Next → … → Completed), with one transition routine and the admin overlay on Esc. The engine
+  // keeps the game (engine/, lib/api.ts).
   import { onDestroy, onMount, tick } from "svelte";
   import { fetchFlags, fetchGame, gameAction, noteRunningOut, playJoker, setFlag, type GameActionBody } from "../lib/api.ts";
   import { isOurs } from "../engine/pool.ts";

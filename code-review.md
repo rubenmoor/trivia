@@ -2114,6 +2114,22 @@ Post-milestone cleanup of milestone 5 (age groups and bundles), per `decision 20
 | `app/client/src/game/GameSettings.svelte` | no findings beyond part 5's rows (stepper copy, task 584) | — | — | — |
 | `authoring/tools/qgen.py` (`bundle_problems`), `authoring/tools/age_groups.py` | no findings: kinds, `languages`, a base bundle per language with a pool or bundle, leftover `always_on`; `level_problems` mirrors `parseAgeGroups` (key order too) | — | — | — |
 
+## Milestone 7 review (task 1255)
+
+Post-milestone cleanup of milestone 7 (Steam S2: product definition), per `decision 201: Recurring code review: who reviews new code after milestone 13? (code review part 11)`. Most of its 103 commits are decisions and plan files; its code before 2026-10-14 (plans 36, 59: modes, «Reportar pregunta», configure screen, gamemaster menu) was in milestone 13's inventory and has its rows in parts 3–5. Read here: the later commits, plan 137's D-105 «select answer to advance» (tasks 1123–1125, 1127) and task 1051 (Freesound out of `providers.ORDER`).
+
+| file | finding | category | severity | status |
+|---|---|---|---|---|
+| `app/client/src/game/Game.svelte` | answers off: `nameOf` emits the mod `screen` event as `Next` / `Completed`, but neither is in `SCREENS` / `OURS`; `Revealed` rendered directly, so mods can't replace it; `modding/README.md` screen names lack them | inconsistency | low | open: task 1256 (plan 122) |
+| `app/client/src/game/Game.svelte` | header comment's line break mid-sentence (task 1125) | style | low | fixed (task 1255) |
+| `app/client/src/game/Game.svelte` | `blocks`: answers off = `level − 1`; toggled back on mid-game, the tower counts correct answers only and shrinks | bug | low | won't fix: gamemaster cheat, rare, noted in task 1125 |
+| `PRIVACY.md` | telemetry result list (en, es, de) lacks `completed` (`engine/telemetry.ts`, D-105) | inconsistency | low | fixed (task 1255) |
+| `authoring/tools/qgen.py` (`report_played`, `qgen report --played`) | games ending per level split lost / won / other; `completed` counts as other | inconsistency | low | won't fix: answers off is gamemaster mode only, the curves skip it anyway |
+| `report-server/src/validate-telemetry.ts` | accepts `completed`; an older deployed worker would refuse such sessions | — | — | no finding: not deployed yet (pm decision 147) |
+| `app/client/src/engine/game.ts` (`reveal`, `answer`, `newGame`, `changeSettings`, `playSnipe`), `state.ts`, `choice.ts`, `api.ts`, `achievements.ts`, `telemetry.ts` | no findings: `reveal` mirrors `answer`'s undo and `see`; `answers` refused outside gamemaster mode (`newGame`; `changeSettings` is `gamemasterOnly`); missing = on everywhere (`gameChoice`, `qualifies`) | — | — | — |
+| `app/client/src/game/screens/Question.svelte`, `question/FinalAnswer.svelte`, `question/Answers.svelte`, `screens/Revealed.svelte`, `screens/Choice.svelte`, `GameSettings.svelte`, `Overlay.svelte` | no findings: picks, pad glyphs and letter keys off with answers off; Enter/A/click reveal; switch rows like video/audio | — | — | — |
+| `authoring/tools/providers/__init__.py` | no findings: Freesound out of `ORDER["audio"]` (D-103); module kept, as plan 23 says | — | — | — |
+
 ## Inventory
 
 Every `git ls-files` path in scope, mapped to the one part that reviews it (2026-10-13, 174 files; produced by a throw-away script that reported no unassigned file). Files added later are added here by the part that reviews them.
@@ -2163,6 +2179,7 @@ Every `git ls-files` path in scope, mapped to the one part that reviews it (2026
 | `app/client/src/engine/` (`achievements.ts`, `achievements.test.ts`, `telemetry.ts`), `app/client/src/lib/` (`achievements.ts`, `telemetry.ts`), `app/client/src/game/report.ts`, `app/desktop/` (`telemetry.mjs`, `report.mjs`, `steam-libs.mjs`, `mute.mjs`, `steam-achievements.vdf`, `achievements/render.sh`) | 11 | 1109 |
 | `report-server/` (`src/` `index.ts`, `http.ts`, `steam.ts`, `telemetry.ts`, `validate.ts`, `validate-telemetry.ts`; `env.d.ts`, `seed-telemetry.mjs`, `migrations/` `0001_init.sql`, `0002_telemetry.sql`; `wrangler.toml`, `tsconfig.json`), `authoring/tools/` (`played.py`, `reviews.py`) | 11 | 1110 |
 | `authoring/tools/` (`gallery.py`, `gallery_saves.mjs`, `engine_data.mjs`; `http_base.py`, `media_cache.py`, `paths.py` moved from `app/server/` by task 764), `authoring/server/ui_flags.py`, `authoring/ui/src/gallery/Gallery.svelte`, `authoring/store/` (`capsules.mjs`, `trailer.mjs`), `app/client/` (`devserver.ts`, `devshell.js`, `node-test.d.ts`, `tsconfig.node.json`) | 11 | 1111 |
+| `app/client/src/game/screens/Revealed.svelte` (added by task 1125) | milestone 7 review | 1255 |
 
 Out of scope (milestone 13 "Scope", plan 72):
 - `*.json` data and fixtures (226: pools, concepts, bundles, `app/client/src/engine/fixtures/`, `app/data/`); in scope: `package*.json`, `tsconfig.json`, `authoring/steam/steam.json`

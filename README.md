@@ -10,6 +10,7 @@ Everything runs locally and offline: the game (a Svelte client with the game eng
 
 - **Questions:** about 2,140 approved (base ~2,040, «Regional: Colombia» ~100) on the shared difficulty scale 1–15 (D-38), with images, audio or video; more batches are being made.
 - **Age groups and bundles:** before each game the Choice screen picks an age group (or a custom difficulty range in gamemaster mode), one base bundle and any regional bundles; the game offers only the bundles of its language (milestone 5).
+- **Modes:** gamemaster mode (configure screen, Esc menu cheats; «Responder para avanzar» off: the padlock only reveals the answer, no win or loss) and «Solo o en grupo» (standard jokers, no skips); the three multiplayer modes are specified, not built (D-74, D-77, D-80, D-105; [`plans/13-game-modes.md`](plans/13-game-modes.md)).
 - **Engine:** the referee runs in the browser (TypeScript, `app/client/src/engine/`); the Python server only serves files and the save (D-90).
 - **UI:** every on-screen string comes from a catalog (`es`, `es-ES`, `en`, `de`); one language setting for UI and questions, picked at first start; question translations aren't shipped yet, so every language plays the Spanish questions.
 - **Code quality:** reviewed file by file (milestone 13, [`code-review.md`](code-review.md)); `npm run check` now also runs knip and ruff.
@@ -123,7 +124,7 @@ Don't run the pipeline steps by hand; the batch command does it all and can be r
 
 `trivia-media fetch --batch <batch>` searches Commons for media candidates for questions that have none yet. The single pipeline steps (`qgen draft`, `rate`, `factcheck`, …, and `qgen import` for revising questions already in the pool) stay available for debugging; work files go to `work/<run>/`. See [`plans/07-question-generation.md`](plans/07-question-generation.md).
 
-Media comes from Wikimedia Commons first, then NASA (space only), Openverse and Freesound (D-45, [`plans/23-media-providers.md`](plans/23-media-providers.md)). Keys go in `.env.local` (gitignored, loaded by direnv): `COMMONS_ACCESS_TOKEN` (an owner-only OAuth 2.0 consumer with basic rights on Meta-Wiki; higher Commons limits, IMG-15), `FREESOUND_API_KEY` (Freesound is skipped without it), and optionally `OPENVERSE_CLIENT_ID`/`OPENVERSE_CLIENT_SECRET` (Openverse works anonymously with 200 requests a day).
+Media comes from Wikimedia Commons first, then NASA (space only) and Openverse (D-45, [`plans/23-media-providers.md`](plans/23-media-providers.md)); Freesound is out of the order before release (D-103). Keys go in `.env.local` (gitignored, loaded by direnv): `COMMONS_ACCESS_TOKEN` (an owner-only OAuth 2.0 consumer with basic rights on Meta-Wiki; higher Commons limits, IMG-15), `FREESOUND_API_KEY` (unused while Freesound is out of the order), and optionally `OPENVERSE_CLIENT_ID`/`OPENVERSE_CLIENT_SECRET` (Openverse works anonymously with 200 requests a day).
 
 ### Check the question pool
 
