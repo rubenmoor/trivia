@@ -33545,7 +33545,7 @@ Files: `modding/bundles.md`, `modding/template-bundle/`, `modding/examples/`, `a
 - Check: `trivia-desktop --check-mod <folder>` on every example (exit 0) and on a throw-away broken one (unknown key in names file → `bad_names`); `smoke.mjs --mods` (`trivia-release-check` `mods` step) passes.
 
 Done when: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-16T12:44:56Z', '2026-10-16T13:46:00Z', 1308, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1315, 149, 'Taxonomy on slugs: code and prompt drafts', 'work', 'open', NULL, NULL, 'Task 6 of `plan 149: Slug keys for categories`. Needs `task 1310: Python: slug keys, names lookup, validate rule, qgen rekey` done (slug readers); the migration may still be pending.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1315, 149, 'Taxonomy on slugs: code and prompt drafts', 'work', 'done', NULL, '2026-10-16, authoring/tools/qgen.py (qgen taxonomy proposes slug + en + own-language names, --apply writes structure-only categories.json and drafts missing en/es/de names, category_slug gone, remap''s new subcategories get slugs from drafted en names, guarded until decision 262: Taxonomy prompts on slug keys: apply? is applied); prompt drafts in decision 262, tasks 1316, 1275, 1317 pending on it', 'Task 6 of `plan 149: Slug keys for categories`. Needs `task 1310: Python: slug keys, names lookup, validate rule, qgen rekey` done (slug readers); the migration may still be pending.
 
 Files: `qgen taxonomy` code, `authoring/tools/prompts/taxonomy.md`, `taxonomy-names.md`, `remap.md`, `authoring/data/regional-categories.json`.
 
@@ -33554,7 +33554,7 @@ Files: `qgen taxonomy` code, `authoring/tools/prompts/taxonomy.md`, `taxonomy-na
 - `pm decision add "Taxonomy prompts on slug keys: apply?"` with the drafts, options apply / apply with changes / don''t; then `pm task-pending-decision 1316 <decision>` (`task 1316: Apply the taxonomy prompts on slug keys`), `pm task-pending-decision 1275 <decision>` (`task 1275: Regional drafting in any launch language (en US/UK, de, es-ES, es)`) and `pm task-pending-decision 1317 <decision>` (`task 1317: Slug keys: docs sweep and regional gate`).
 - Stage the code (it must work with the current prompts too, or be guarded until they''re applied), close this task.
 
-Done when: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass; the decision is pending with the three tasks waiting on it.', '2026-10-16T12:44:57Z', NULL, 1308, 0);
+Done when: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass; the decision is pending with the three tasks waiting on it.', '2026-10-16T12:44:57Z', '2026-10-16T14:04:02Z', 1308, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1316, 149, 'Apply the taxonomy prompts on slug keys', 'work', 'open', NULL, NULL, 'Task 7 of `plan 149: Slug keys for categories`. Waits on the decision "Taxonomy prompts on slug keys: apply?" added by this plan''s task "Taxonomy on slugs: code and prompt drafts"; also needs this plan''s migration task done (`pm show p149`), else stop and say so.
 
 - Apply the prompt drafts as answered (`taxonomy.md`, `taxonomy-names.md`, `remap.md`, `authoring/data/regional-categories.json`); `pm decision consequences <id> "…"`.
@@ -37720,6 +37720,308 @@ Style guides read (`app/client/src/locales/style/*.md`): option 1 uses each glos
 | de | «Grundpaket» | «Allgemeinwissen» |
 
 Option 3: your own names per locale, listed in the answer.', '1: base-bundle term: «Paquete básico», «Base bundle», «Grundpaket»', NULL, '2026-10-16T13:54:19Z', '2026-10-16T13:56:06Z', 1335, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (262, 'Taxonomy prompts on slug keys: apply?', 'pending', '["apply", "apply with changes", "don''t apply"]', '`task 1315: Taxonomy on slugs: code and prompt drafts` (`plan 149: Slug keys for categories`, task 6). `decision 259: Category and subcategory keys: English slugs` makes every category and subcategory an English slug with names in `names.<locale>.json`; `decision 250: Regional drafting in en, de, es-ES: prompts apply?` (answer 3) asked to redraft its taxonomy parts on slugs + en names. Below: each change as verbatim old → new. Nothing applied yet. Per decision 259 ("returns slugs if its decision says so"), the taxonomy prompt returns slugs itself; remap keeps returning names, code maps them back.
+
+Already done in code (staged; `authoring/tools/qgen.py`):
+- `qgen taxonomy --bundle <id>`: the proposal has per category and subcategory `slug`, `en` (English name) and `name` (the bundle''s language; = `en` for an English bundle); the model sees base''s subcategories in English and the existing taxonomy as `slug` en (own); `{language}` = the bundle''s draft language. `proposal.md` lists `slug` English name (own name).
+- `--apply`: `categories.json` structure only; `en` → `names.en.json`, `name` → the bundle''s names file (`es`/`es-ES` → `names.es.json`, which es-ES reads first), existing names of the other locales kept, missing ones drafted (sonnet, `taxonomy-names.md`, from English); `{source}` = the language the names are drafted from. An old proposal without slugs is refused.
+- `category_slug()` (`<bundle>-<name>`) gone. `qgen remap --apply`: a new subcategory or category comes as a name in the bundle''s language; its names are drafted from it and its slug made from the English name without the region ("Arepas of Colombia" → `arepas`; a clash gets `-2`); question and list targets mapped back to slugs.
+- Guard until applied: `qgen taxonomy` (propose) and name drafting from a non-Spanish source exit with a pointer to `task 1316: Apply the taxonomy prompts on slug keys` while `taxonomy.md` lacks `{language}` or `taxonomy-names.md` lacks `{source}`; `qgen remap` works with the current prompts.
+- `qgen validate`: `regional-categories.json` slugs, once there, are present on every entry, slugs and unique.
+
+Not in this decision: decision 250''s locale-prompt parts (4–8: `locale-en.md`, `locale-es.md`, `locale-es-ES.md`, `locale-de.md`, `translate-region.md`); `task 1275: Regional drafting in any launch language (en US/UK, de, es-ES, es)` brings them back.
+
+---
+
+## 1. `authoring/tools/prompts/taxonomy.md` (whole file)
+old:
+```
+# Task: propose a regional bundle''s taxonomy
+
+A regional bundle is a pack of trivia questions for families with a connection to one region: they live there, come from there or have family there. Its questions need that connection to answer (the bundle''s rule below). Everything players anywhere in the Spanish-speaking world answer without it stays in `base`, the main pool (its subcategories are listed below).
+
+You propose the bundle''s broad categories and their subcategories. Drafting later picks concepts per subcategory (150–250 each) and writes questions about them, at every difficulty from 1 to 15.
+
+## Steps
+1. **General list.** Start from the general category list for regional bundles. Fill `{región}` with the region''s name, in the Spanish form the players use («Comida y bebida de Colombia»). Keep a general category unless the region has too little to ask in it; a left-out one goes into `left_out` with the reason.
+2. **Region''s own categories.** Add categories the region needs and the general list lacks: a topic its families talk about that no general category holds without crowding it out. Each with a `reason`. None is fine.
+3. **Subcategories.** For every category, its subcategories. Size them for the target: about {per_sub} approved questions per subcategory, so about {subs} subcategories in total; more where a category has more to ask, at least 2 per category. A subcategory must hold 150 concepts the region''s families know at some level; narrower topics go into a wider neighbour.
+
+## Each subcategory
+- `name`: Spanish, short, in the bundle''s voice; unique within the bundle (it may repeat a `base` name only if the region''s angle is clear from the name: «Ríos de Colombia», not «Ríos»).
+- `scope`: one English line: what belongs in it, so two neighbours don''t overlap.
+- `reason`: one English sentence: why the region needs it, what it adds next to its neighbours.
+- `samples`: about 10 concepts from easy to hard, each with `known_at`.
+
+`known_at` (1–15): the lowest point on the difficulty scale at which the region''s families know the concept: 1 = a 6-year-old there knows it, 5 = an 11-year-old, 10 = a 16-year-old with good school knowledge, 12 = most adults there, 15 = trivia specialists. Judge people of the region, not outsiders. Spread the samples: a subcategory with only hard concepts or only easy ones is a bad split.
+
+## Rules
+- The bundle''s rule decides: no subcategory whose questions players without the connection answer as well (world facts, the country''s capital, its most famous names known worldwide).
+- Neighbours don''t overlap: a concept belongs to exactly one subcategory. Say in the scope where a borderline topic goes.
+- Mix across the families'' ages: something for children (animals, sweets, festivals, cartoons, games) as well as for adults (history, politics of the past, how people speak).
+- No current party politics, no armed conflict as entertainment, no crime figures as celebrities.
+- The existing taxonomy is shown for context only: reuse a name where it fits, drop or split it where it doesn''t; your proposal stands on its own.
+- Category `name`: Spanish; `scope` and `reason`: English.
+```
+new:
+```
+# Task: propose a regional bundle''s taxonomy
+
+A regional bundle is a pack of trivia questions for families with a connection to one region: they live there, come from there or have family there. Its questions need that connection to answer (the bundle''s rule below). Everything families anywhere in the world answer without it, whatever their language, stays in `base`, the main pool (its subcategories are listed below).
+
+You propose the bundle''s broad categories and their subcategories. Drafting later picks concepts per subcategory (150–250 each) and writes questions about them, at every difficulty from 1 to 15, in the bundle''s language, {language}, and its voice (under "Bundle").
+
+## Keys and names
+Every category and every subcategory has:
+- `slug`: its key in code and files, never shown to players: English, lowercase ASCII words joined by dashes (`food-and-drink`, `rivers-and-lakes`); unique within the bundle among categories and among subcategories (a category and a subcategory may share one). No region in it, the bundle already says it: `history`, not `history-of-germany`. An existing category or subcategory (under "Existing taxonomy") whose topic stays the same keeps its slug.
+- `en`: the English name players see, short, sentence case, as on a game''s category screen ("Rivers of Colombia", "Colombian sweets"); for an English bundle in its voice ("Colours of …" for a British one).
+- `name`: the name in {language} the region''s players see, in the bundle''s voice («Ríos de Colombia», „Flüsse Deutschlands“); for an English bundle the same as `en`.
+
+Names in the game''s other languages are made from `en` later. `region`: the region''s name in English.
+
+## Steps
+1. **General list.** Start from the general category list for regional bundles. Take a general category''s `slug` as it is and fill `{region}` in its English `name` with the region''s English name, worded as English needs it ("Food and drink of Germany" or "German food and drink"); its `name` in {language} says the same. Keep a general category unless the region has too little to ask in it; a left-out one goes into `left_out` (its English name) with the reason.
+2. **Region''s own categories.** Add categories the region needs and the general list lacks: a topic its families talk about that no general category holds without crowding it out. Each with a `reason`. None is fine.
+3. **Subcategories.** For every category, its subcategories. Size them for the target: about {per_sub} approved questions per subcategory, so about {subs} subcategories in total; more where a category has more to ask, at least 2 per category. A subcategory must hold 150 concepts the region''s families know at some level; narrower topics go into a wider neighbour.
+
+## Each subcategory
+- `slug`, `en`, `name`: as above; `en` and `name` unique within the bundle (they may repeat a `base` name only if the region''s angle is clear from the name: "Rivers of Colombia", not "Rivers").
+- `scope`: one English line: what belongs in it, so two neighbours don''t overlap.
+- `reason`: one English sentence: why the region needs it, what it adds next to its neighbours.
+- `samples`: about 10 concepts from easy to hard, each with `known_at`, named in {language} as the region''s families say them.
+
+`known_at` (1–15): the lowest point on the difficulty scale at which the region''s families know the concept: 1 = a 6-year-old there knows it, 5 = an 11-year-old, 10 = a 16-year-old with good school knowledge, 12 = most adults there, 15 = trivia specialists. Judge people of the region, not outsiders. Spread the samples: a subcategory with only hard concepts or only easy ones is a bad split.
+
+## Rules
+- The bundle''s rule decides: no subcategory whose questions players without the connection answer as well (world facts, the country''s capital, its most famous names known worldwide).
+- Neighbours don''t overlap: a concept belongs to exactly one subcategory. Say in the scope where a borderline topic goes.
+- Mix across the families'' ages: something for children (animals, sweets, festivals, cartoons, games) as well as for adults (history, politics of the past, how people speak).
+- No current party politics, no armed conflict as entertainment, no crime figures as celebrities.
+- The existing taxonomy is shown for context only: reuse a slug and name where it fits, drop or split it where it doesn''t; your proposal stands on its own.
+- `scope` and `reason`: English.
+```
+
+## 2. `authoring/tools/prompts/taxonomy-names.md` (whole file)
+old:
+```
+# Task: name a regional bundle''s categories in other languages
+
+You get Spanish names of a trivia bundle''s broad categories and subcategories, each with its scope, and the target languages. Give each name in every target language, as it appears on a game''s category screen.
+
+- Short, natural, title-free: "Colombian sweets", "Rivers of Colombia", «Kolumbianische Süßigkeiten», «Flüsse Kolumbiens»; no articles in front.
+- A proper name stays as its speakers write it in that language («Carnaval de Barranquilla» → "Barranquilla Carnival", «Karneval von Barranquilla»); a local word without an equivalent stays as it is.
+- English: sentence case. German: standard German, «ß».
+- Every item once, the same `key`.
+```
+new:
+```
+# Task: name a regional bundle''s categories in other languages
+
+You get names in {source} of a trivia bundle''s broad categories and subcategories, each with its scope, and the target languages. Give each name in every target language, as it appears on a game''s category screen.
+
+- Short, natural, title-free: "Colombian sweets", "Rivers of Colombia", «Dulces colombianos», «Ríos de Colombia», «Kolumbianische Süßigkeiten», «Flüsse Kolumbiens»; no articles in front.
+- A proper name stays as its speakers write it in that language («Carnaval de Barranquilla» → "Barranquilla Carnival", «Karneval von Barranquilla»); a local word without an equivalent stays as it is.
+- English: sentence case. Spanish: words understood in Latin America and in Spain (both read these names). German: standard German, «ß».
+- A language under "Voice" is the bundle''s own: its names follow that voice ("Colours of …" for a British voice).
+- Every item once, the same `key`.
+```
+
+## 3. `authoring/tools/prompts/remap.md`
+old:
+```
+Its existing questions still carry old subcategory names, some of them from `base`, the main pool.
+```
+new:
+```
+Its existing questions still carry old subcategory names, some of them from `base`, the main pool. Every name below is in the bundle''s language; answer with names in that language too.
+```
+old:
+```
+`subcategory`: a new Spanish name in the style of the list (unique within the bundle, the region''s angle clear from the name); `category`: the existing category it goes into, or a new category name when none fits;
+```
+new:
+```
+`subcategory`: a new name in the style of the list (unique within the bundle, the region''s angle clear from the name); `category`: the existing category it goes into, exactly as written in the list, or a new category name when none fits;
+```
+
+## 4. `authoring/data/regional-categories.json` (general list, `decision 213: General category list for regional bundles`)
+Each entry gets a `slug` (colombia''s slugs from `decision 258: Slug keys for base and colombia: the list`, except `how-colombia-speaks` → `how-people-speak`); `name` in English with `{region}` (was Spanish with `{región}`); `excludes` name base''s subcategories by their English names (base names since `decision 245: base subcategories scoped to one language area: widen for the international pool?`); `scope` unchanged except «Así se habla»''s ("…, the region''s own languages and dialects").
+
+`about`, old:
+```
+General category list for regional bundles (decision 213, plan 138): input of `qgen taxonomy --bundle <id>`, which adds the region''s own categories and proposes subcategories; a category may be left out for a region with too little to ask. Authoring only, never read by app/. {región} = the region''s name; names repeat across bundles (decision 110 (d)). Everywhere excluded (D-49): what players anywhere in the Spanish-speaking world answer without a connection to the region, and world topics: they stay in base.
+```
+new:
+```
+General category list for regional bundles (decision 213, plan 138): input of `qgen taxonomy --bundle <id>`, which adds the region''s own categories and proposes subcategories; a category may be left out for a region with too little to ask. Authoring only, never read by app/. `slug`: the category''s key in every regional bundle (decision 259); `name`: its English name, {region} = the region''s English name; the name in the bundle''s language comes with the proposal, es/de names are drafted on `--apply`; slugs and names repeat across bundles (decision 110 (d)). Everywhere excluded (D-49): what families anywhere answer without a connection to the region, whatever their language, and world topics: they stay in base.
+```
+entries, old:
+```
+[
+ {
+  "name": "Geografía de {región}",
+  "scope": "Provinces/departments, cities and towns, rivers, mountains, coasts, islands, landmarks and monuments, roads and distances.",
+  "excludes": "Country-level facts known worldwide (base Capitales del mundo, Países del mundo, Monumentos famosos)."
+ },
+ {
+  "name": "Naturaleza de {región}",
+  "scope": "Native animals and plants, national parks and reserves, ecosystems, climate and seasons, natural phenomena.",
+  "excludes": "Animals and plants known worldwide without a regional angle (base Animales, Plantas, Amazonas)."
+ },
+ {
+  "name": "Historia de {región}",
+  "scope": "Indigenous peoples before the conquest, colony, independence, wars and founding figures, 19th–20th century, presidents and turning points.",
+  "excludes": "World history (base Historia); current party politics."
+ },
+ {
+  "name": "Personajes de {región}",
+  "scope": "Well-known people not covered by music, sport, arts or TV: scientists, inventors, business founders, heroes of daily life, popular characters.",
+  "excludes": "Names known worldwide (base); musicians, athletes, writers, actors go to their categories."
+ },
+ {
+  "name": "Comida y bebida de {región}",
+  "scope": "Typical dishes, sweets and desserts, drinks, fruits and ingredients, regional variants, markets and street food.",
+  "excludes": "International food (base Comida y bebida, Comida latinoamericana: arepa as a name, coffee in general)."
+ },
+ {
+  "name": "Fiestas y tradiciones de {región}",
+  "scope": "Festivals, carnivals, fairs, holidays, family customs, crafts, traditional dress and games.",
+  "excludes": "World festivals and customs (base Fiestas y tradiciones, Trajes típicos del mundo)."
+ },
+ {
+  "name": "Mitos y leyendas de {región}",
+  "scope": "Legendary creatures, ghost stories, popular beliefs and superstitions, indigenous myths.",
+  "excludes": "World mythologies and generic superstitions (base Mitos y leyendas, Leyendas y supersticiones)."
+ },
+ {
+  "name": "Música y baile de {región}",
+  "scope": "Rhythms and dances, instruments, singers and bands, famous songs, music festivals.",
+  "excludes": "World music and global stars by name only (base Música)."
+ },
+ {
+  "name": "Arte y literatura de {región}",
+  "scope": "Writers and books, poets, painters and sculptors, architecture, museums, comics.",
+  "excludes": "World literature and art (base Arte y literatura; García Márquez basics)."
+ },
+ {
+  "name": "Cine y televisión de {región}",
+  "scope": "Telenovelas, series, films, presenters, actors, radio, cartoons, internet celebrities.",
+  "excludes": "International film and TV (base Cine, series y superhéroes)."
+ },
+ {
+  "name": "Deporte de {región}",
+  "scope": "National teams, clubs, athletes, Olympic medals, the region''s favourite sports, traditional games and sports.",
+  "excludes": "World football and sport (base Fútbol, Deportes)."
+ },
+ {
+  "name": "Así se habla en {región}",
+  "scope": "Words and slang, sayings and expressions, accents, loanwords from indigenous languages, the region''s own languages.",
+  "excludes": "Spanish in general (base Idiomas y palabras, Refranes y dichos)."
+ },
+ {
+  "name": "Vida diaria en {región}",
+  "scope": "Money and banknotes, brands and products, shops, transport, school, home, everyday objects and habits, public services.",
+  "excludes": "World brands and money (base Marcas y logotipos, Monedas y dinero)."
+ },
+ {
+  "name": "Símbolos de {región}",
+  "scope": "Flag, anthem, coat of arms, national symbols (bird, tree, flower), emblems of the provinces/cities.",
+  "excludes": "The flag as recognised worldwide (base Banderas del mundo)."
+ }
+]
+```
+new:
+```
+[
+ {
+  "slug": "geography",
+  "name": "Geography of {region}",
+  "scope": "Provinces/departments, cities and towns, rivers, mountains, coasts, islands, landmarks and monuments, roads and distances.",
+  "excludes": "Country-level facts known worldwide (base Capital cities, Countries, Famous landmarks)."
+ },
+ {
+  "slug": "nature",
+  "name": "Nature of {region}",
+  "scope": "Native animals and plants, national parks and reserves, ecosystems, climate and seasons, natural phenomena.",
+  "excludes": "Animals and plants known worldwide without a regional angle (base Animals, Plants, Amazon)."
+ },
+ {
+  "slug": "history",
+  "name": "History of {region}",
+  "scope": "Indigenous peoples before the conquest, colony, independence, wars and founding figures, 19th–20th century, presidents and turning points.",
+  "excludes": "World history (base History); current party politics."
+ },
+ {
+  "slug": "people",
+  "name": "People of {region}",
+  "scope": "Well-known people not covered by music, sport, arts or TV: scientists, inventors, business founders, heroes of daily life, popular characters.",
+  "excludes": "Names known worldwide (base); musicians, athletes, writers, actors go to their categories."
+ },
+ {
+  "slug": "food-and-drink",
+  "name": "Food and drink of {region}",
+  "scope": "Typical dishes, sweets and desserts, drinks, fruits and ingredients, regional variants, markets and street food.",
+  "excludes": "International food (base Food and drink, World cuisines: a dish known worldwide by name, coffee in general)."
+ },
+ {
+  "slug": "festivals-and-traditions",
+  "name": "Festivals and traditions of {region}",
+  "scope": "Festivals, carnivals, fairs, holidays, family customs, crafts, traditional dress and games.",
+  "excludes": "World festivals and customs (base Holidays and traditions, Traditional dress)."
+ },
+ {
+  "slug": "myths-and-legends",
+  "name": "Myths and legends of {region}",
+  "scope": "Legendary creatures, ghost stories, popular beliefs and superstitions, indigenous myths.",
+  "excludes": "World mythologies and generic superstitions (base Myths and legends, Legends and superstitions)."
+ },
+ {
+  "slug": "music-and-dance",
+  "name": "Music and dance of {region}",
+  "scope": "Rhythms and dances, instruments, singers and bands, famous songs, music festivals.",
+  "excludes": "World music and global stars by name only (base Music)."
+ },
+ {
+  "slug": "art-and-literature",
+  "name": "Art and literature of {region}",
+  "scope": "Writers and books, poets, painters and sculptors, architecture, museums, comics.",
+  "excludes": "World literature and art (base Art and literature; García Márquez basics)."
+ },
+ {
+  "slug": "film-and-television",
+  "name": "Film and television of {region}",
+  "scope": "Telenovelas, series, films, presenters, actors, radio, cartoons, internet celebrities.",
+  "excludes": "International film and TV (base Film, TV and superheroes)."
+ },
+ {
+  "slug": "sports",
+  "name": "Sport in {region}",
+  "scope": "National teams, clubs, athletes, Olympic medals, the region''s favourite sports, traditional games and sports.",
+  "excludes": "World football and sport (base Football, Sports)."
+ },
+ {
+  "slug": "how-people-speak",
+  "name": "How {region} speaks",
+  "scope": "Words and slang, sayings and expressions, accents, loanwords from indigenous languages, the region''s own languages and dialects.",
+  "excludes": "The region''s language in general (base Languages and words, Proverbs of the world)."
+ },
+ {
+  "slug": "daily-life",
+  "name": "Daily life in {region}",
+  "scope": "Money and banknotes, brands and products, shops, transport, school, home, everyday objects and habits, public services.",
+  "excludes": "World brands and money (base Brands and logos, Money and currencies)."
+ },
+ {
+  "slug": "symbols",
+  "name": "Symbols of {region}",
+  "scope": "Flag, anthem, coat of arms, national symbols (bird, tree, flower), emblems of the provinces/cities.",
+  "excludes": "The flag as recognised worldwide (base Flags)."
+ }
+]
+```
+
+---
+Options: "apply" applies 1–4 as drafted (task 1316); "apply with changes": say which.', NULL, NULL, '2026-10-16T14:03:54Z', NULL, 1315, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -39067,6 +39369,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1327, 1337, '2026-10-16T13:55:49Z', '2026-10-16T13:56:39Z', 'done', NULL, 0, '119235c6ff3d60c7c55028e02d39de3563b262bb', 'claude-opus-5-5[1m]', '62928026-34b9-43e3-8e0b-83f185954dd2', 7, 14, 5466, 237989, 33520, 0.4251338, 4064407);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1328, 1334, '2026-10-16T13:56:39Z', '2026-10-16T13:56:53Z', 'done', NULL, 0, '665d1a137efb3db0361733e22dfea1c2b74262a0', 'claude-opus-5-5[1m]', '80b81b54-ab9b-48f1-bbd6-9e6578501fc8', 4, 8, 1073, 129176, 31603, 0.3001512, 4064407);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1329, 1336, '2026-10-16T13:56:54Z', '2026-10-16T13:57:43Z', 'done', NULL, 0, '0515619f63dfe43642e55a828d5a9baa1ab0bd8e', 'claude-opus-5-5[1m]', 'aabc3d89-5859-429b-a4e0-d78f901a5c6e', 7, 14, 4991, 256055, 35388, 0.434191, 4064407);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1330, 1315, '2026-10-16T13:57:43Z', '2026-10-16T14:04:12Z', 'done', NULL, 0, 'ffd9ff42b7082e30f8c41355c31cd8e3bd659b79', 'claude-opus-5-5[1m]', 'e46a2229-f6ec-4cf1-ba6f-b488d804f0da', 36, 70, 39142, 3112685, 112292, 2.303993, 4064407);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -39501,6 +39804,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1271, 250);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1272, 250);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1275, 250);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1275, 258);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1275, 262);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1276, 250);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1276, 258);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1277, 250);
@@ -39522,7 +39826,9 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1312, 258);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1313, 258);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1314, 258);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1316, 258);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1316, 262);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1317, 258);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1317, 262);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');

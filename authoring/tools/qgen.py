@@ -4785,6 +4785,10 @@ def taxonomy_problems():
         errors.append(f"{rel}: every category needs name, scope and excludes (decision 213)")
     if dup := sorted({n for n in names if isinstance(n, str) and names.count(n) > 1}):
         errors.append(f"{rel}: same name twice: {', '.join(dup)}")
+    slugs = [c["slug"] for c in regional if "slug" in c]
+    if slugs and (len(slugs) < len(regional) or len(set(slugs)) < len(slugs)
+                  or not all(isinstance(s, str) and categories.SLUG.fullmatch(s) for s in slugs)):
+        errors.append(f"{rel}: every category needs its own slug (decision 259)")
     return errors
 
 
@@ -4840,6 +4844,10 @@ def bundle_problems(bundles):
     return errors, warnings
 
 
+CATEGORIES_ABOUT = ("Categories of the {bundle} bundle (D-41, D-43): structure only, keyed by English slugs unique "
+                    "within the bundle (decision 259); names in names.<locale>.json.")
+
+
 def cmd_bundle_new(args):
     """An empty bundle (BN-9, D-41): its entry in app/data/bundles.json, a regional one's 2000 target
     (D-101) and an empty categories.json, for a regional one filled by `qgen taxonomy` (plan 138), else by hand. Concept lists come from `qgen batch --bundle <id>`; axes stay base's until
@@ -4860,8 +4868,7 @@ def cmd_bundle_new(args):
         save_json(layout.TARGETS, {**t, args.id: targets.scaled(targets.REGION_TOTAL)})
     path = categories.path(args.id)
     if not path.exists():
-        save_json(path, {"about": f"Categories of the {args.id} bundle (D-41, D-43). Subcategory names "
-                                  "and slugs are unique within the bundle; they may repeat another bundle's (D-99).", "categories": []})
+        save_json(path, {"about": CATEGORIES_ABOUT.format(bundle=args.id), "categories": []})
     nxt = (f"`qgen taxonomy --bundle {args.id}` proposes its categories and subcategories (plan 138), "
            f"`--apply` writes them" if args.kind == "region"
            else f"fill {path.relative_to(ROOT)} with broad categories and subcategories")
@@ -4870,26 +4877,40 @@ def cmd_bundle_new(args):
 
 PER_SUBCATEGORY = 40  # approved per subcategory a regional taxonomy is sized for (plan 138)
 NAMES_MODEL = "sonnet"  # names of a taxonomy's new categories and subcategories
+KEYED = {"slug": STR, "en": STR, "name": STR}  # key, English name, name in the bundle's language
 TAXONOMY_SCHEMA = {"type": "object", "required": ["region", "categories", "left_out"], "properties": {
     "region": STR,
     "categories": {"type": "array", "items": {
-        "type": "object", "required": ["name", "origin", "scope", "reason", "subcategories"], "properties": {
-            "name": STR, "origin": {"type": "string", "enum": ["general", "region"]}, "scope": STR, "reason": STR,
+        "type": "object", "required": [*KEYED, "origin", "scope", "reason", "subcategories"], "properties": {
+            **KEYED, "origin": {"type": "string", "enum": ["general", "region"]}, "scope": STR, "reason": STR,
             "subcategories": {"type": "array", "items": {
-                "type": "object", "required": ["name", "scope", "reason", "samples"], "properties": {
-                    "name": STR, "scope": STR, "reason": STR,
+                "type": "object", "required": [*KEYED, "scope", "reason", "samples"], "properties": {
+                    **KEYED, "scope": STR, "reason": STR,
                     "samples": {"type": "array", "items": {"type": "object", "required": ["name", "known_at"],
                                                            "properties": {"name": STR, "known_at": INT}}}}}}}}},
     "left_out": {"type": "array", "items": {"type": "object", "required": ["name", "reason"],
                                             "properties": {"name": STR, "reason": STR}}}}}
 
 
-def category_slug(bundle, name, region, old):
-    """A category's slug: the old one for an unchanged name, else <bundle>-<name without the region>."""
-    if name in old:
-        return old[name]
-    s = re.sub(rf"(^|-)((de|del|en)-)?{re.escape(slug(region))}($|-)", r"\1", slug(name)).strip("-") or "general"
-    return s if s.startswith(f"{bundle}-") else f"{bundle}-{s}"
+def slug_prompts():
+    """True once the taxonomy prompts on slug keys are applied (decision 262: Taxonomy prompts on slug keys: apply?): slugs + en names, names from any language."""
+    return ("{language}" in (PROMPTS / "taxonomy.md").read_text(encoding="utf-8")
+            and "{source}" in (PROMPTS / "taxonomy-names.md").read_text(encoding="utf-8"))
+
+
+NOT_ON_SLUGS = ("taxonomy.md / taxonomy-names.md predate slug keys (decision 262: Taxonomy prompts on slug keys: apply?); "
+                "`task 1316: Apply the taxonomy prompts on slug keys` applies them")
+
+
+def names_locale(locale):
+    """The names file a locale's names go in: es-ES's in es's, which es-ES reads first (decision 259)."""
+    return "es" if locale.startswith("es") else locale
+
+
+def derived_slug(en, region):
+    """A new entry's slug from its English name, without the region: "Rivers of Colombia" → rivers."""
+    r = re.escape(slug(region))
+    return re.sub(rf"^{r}-|-(of|in|from)-(the-)?{r}$", "", slug(en)) or slug(en)
 
 
 def off_list(bundle, subs):
@@ -4906,34 +4927,41 @@ def off_list_lines(found):
             for s, c in sorted(found.items(), key=lambda x: -sum(x[1].values()))]
 
 
+def keyed(x):
+    """`slug` English name (own-language name, if another)."""
+    return f"`{x['slug']}` {x['en']}" + (f" ({x['name']})" if x["name"] != x["en"] else "")
+
+
 def taxonomy_md(p, found):
     """proposal.md: what goes into the pm decision (decision 18's format)."""
     cats = p["categories"]
     n = sum(len(c["subcategories"]) for c in cats)
     lines = [f"# Taxonomy proposal: `{p['bundle']}`", "",
              f"{len(cats)} categories, {n} subcategories; target {p['target']} approved, "
-             f"≈ {round(p['target'] / max(n, 1))} per subcategory. Sample concepts: name (known_at).", "",
+             f"≈ {round(p['target'] / max(n, 1))} per subcategory. Each: `slug` English name (name in the bundle's "
+             "language). Sample concepts: name (known_at).", "",
              "## Counts per category"]
-    lines += [f"- {c['name']}{' (region)' if c['origin'] == 'region' else ''}: {len(c['subcategories'])}" for c in cats]
+    lines += [f"- {keyed(c)}{' (region)' if c['origin'] == 'region' else ''}: {len(c['subcategories'])}" for c in cats]
     if p["left_out"]:
         lines += ["", "## Left out of the general list"] + [f"- {c['name']}: {c['reason']}" for c in p["left_out"]]
     i = 0
     for c in cats:
-        lines += ["", f"## {c['name']}{' (region)' if c['origin'] == 'region' else ''}", f"{c['scope']}"
+        lines += ["", f"## {keyed(c)}{' (region)' if c['origin'] == 'region' else ''}", f"{c['scope']}"
                   + (f" Reason: {c['reason']}" if c["reason"] else "")]
         for s in c["subcategories"]:
             i += 1
             samples = ", ".join(f"{x['name']} ({x['known_at']})" for x in sorted(s["samples"], key=lambda x: x["known_at"]))
-            lines.append(f"{i}. **{s['name']}**. {s['scope']} Reason: {s['reason']} Samples: {samples}.")
+            lines.append(f"{i}. **{keyed(s)}**. {s['scope']} Reason: {s['reason']} Samples: {samples}.")
     if found:
         lines += ["", "## Questions on subcategories not in the proposal (moved by the remap)"] + off_list_lines(found)
     return "\n".join(lines) + "\n"
 
 
 def cmd_taxonomy(args):
-    """A regional bundle's taxonomy (plan 138): one opus call proposes categories and subcategories from the general
-    list (decision 213), the bundle's rule and voice and its target → work/taxonomy/<id>/proposal.{json,md};
-    `--apply <proposal.json>` writes categories.json and names.<locale>.json, touching no question or concept list."""
+    """A regional bundle's taxonomy (plan 138, decision 259): one opus call proposes categories and subcategories
+    (slug, English name, name in the bundle's language) from the general list (decision 213), the bundle's rule and
+    voice and its target → work/taxonomy/<id>/proposal.{json,md}; `--apply <proposal.json>` writes categories.json
+    and names.<locale>.json, touching no question or concept list."""
     b = next((x for x in load_bundles() if x["id"] == args.bundle), None)
     if not b or b["kind"] != "region":
         sys.exit(f"{args.bundle!r} is not a regional bundle in app/data/bundles.json")
@@ -4941,29 +4969,34 @@ def cmd_taxonomy(args):
     d.mkdir(parents=True, exist_ok=True)
     if args.apply:
         return apply_taxonomy(args.bundle, Path(args.apply), d)
+    if not slug_prompts():
+        sys.exit(NOT_ON_SLUGS)
     total = targets.load_targets(args.bundle)["total"]
     per = PER_SUBCATEGORY
+    loc = translations.draft_locale(b)
     system = (PROMPTS / "taxonomy.md").read_text(encoding="utf-8").replace("{per_sub}", str(per)).replace(
-        "{subs}", str(round(total / per)))
+        "{subs}", str(round(total / per))).replace("{language}", LANGUAGES[loc])
     approved = Counter(q["subcategory"] for q in load_json(POOL)["questions"]
                        if q.get("bundle") == args.bundle and q["status"] == "approved")
-    general, loc = load_json(layout.REGIONAL_CATEGORIES), translations.draft_locale(b)
+    general = load_json(layout.REGIONAL_CATEGORIES)
+    def own(x, kind):
+        en, name = (categories.display(args.bundle, x, l, kind) for l in ("en", loc))
+        return keyed({"slug": x, "en": en, "name": name})
     user = "\n\n".join([
-        f"## Bundle\n`{args.bundle}`: {b['name']}\n{bundle_text(args.bundle, translations.draft_locale(b))}",
+        f"## Bundle\n`{args.bundle}`: {b['name']}\nLanguage: {LANGUAGES[loc]}\n{bundle_text(args.bundle, loc)}",
         f"## Target\n{total} approved questions: ≈ {round(total / per)} subcategories of ≈ {per}.",
         f"## General list\n{general['about']}\n" + json.dumps(general["categories"], ensure_ascii=False, indent=1),
-        "## base's subcategories\n" + "\n".join(f"- {cat_name(c, loc)}: {', '.join(categories.display('base', s, loc) for s in c['subcategories'])}"
+        "## base's subcategories\n" + "\n".join(f"- {cat_name(c, 'en')}: {', '.join(categories.display('base', s, 'en') for s in c['subcategories'])}"
                                                  for c in categories.load("base")),
-        "## Existing taxonomy (context only; approved questions per subcategory)\n" + ("\n".join(
-            f"- {cat_name(c, loc)}: " + ", ".join(f"{categories.display(args.bundle, s, loc)} ({approved[s]})" for s in c["subcategories"])
+        "## Existing taxonomy (context only; `slug` English name (own name): approved questions)\n" + ("\n".join(
+            f"- {own(c['slug'], 'categories')}: " + ", ".join(f"{own(s, 'subcategories')}: {approved[s]}" for s in c["subcategories"])
             for c in categories.load(args.bundle)) or "none")])
     out = claude(system, user, TAXONOMY_SCHEMA, args.model, d)
-    old = {cat_name(c, loc): c["slug"] for c in categories.load(args.bundle)}
-    for c in out["categories"]:
-        c["slug"] = category_slug(args.bundle, c["name"], out["region"], old)
+    for x in [c for c in out["categories"]] + [s for c in out["categories"] for s in c["subcategories"]]:
+        x["slug"] = slug(x["slug"])
     p = {"bundle": args.bundle, "target": total, **out}
     save_json(d / "proposal.json", p)
-    subs = {s["name"] for c in p["categories"] for s in c["subcategories"]}
+    subs = {s["slug"] for c in p["categories"] for s in c["subcategories"]}
     (d / "proposal.md").write_text(taxonomy_md(p, off_list(args.bundle, subs)), encoding="utf-8")
     print(f"{len(p['categories'])} categories, {len(subs)} subcategories → {(d / 'proposal.md').relative_to(ROOT)}; "
           f"edit proposal.json to the developer's answer, then `qgen taxonomy --bundle {args.bundle} --apply "
@@ -4978,19 +5011,21 @@ def cat_name(c, locale):
 def taxonomy_errors(p, bundle):
     errors = [] if p.get("bundle") == bundle else [f"bundle must be {bundle!r}"]
     cats = p.get("categories") or []
-    names = [s.get("name") for c in cats for s in c.get("subcategories") or []]
-    for what, items in [("category name", [c.get("name") for c in cats]), ("category slug", [c.get("slug") for c in cats]),
-                        ("subcategory", names)]:
-        if not all(isinstance(x, str) and x.strip() for x in items):
-            errors.append(f"every {what} must be a non-empty string")
-        elif dup := sorted({x for x in items if items.count(x) > 1}):
-            errors.append(f"same {what} twice: {', '.join(dup)}")
-    errors += [f"{c.get('name')}: no subcategories" for c in cats if not c.get("subcategories")]
+    for what, items in [("category", cats), ("subcategory", [s for c in cats for s in c.get("subcategories") or []])]:
+        for f in KEYED:
+            vals = [x.get(f) for x in items]
+            if not all(isinstance(v, str) and v.strip() for v in vals):
+                errors.append(f"every {what} needs a non-empty {f}")
+            elif dup := sorted({v for v in vals if vals.count(v) > 1}):
+                errors.append(f"same {what} {f} twice: {', '.join(dup)}")
+        if bad := [x["slug"] for x in items if isinstance(x.get("slug"), str) and not categories.SLUG.fullmatch(x["slug"])]:
+            errors.append(f"not a slug (decision 259): {', '.join(bad)}")
+    errors += [f"{c.get('slug')}: no subcategories" for c in cats if not c.get("subcategories")]
     return errors + ([] if cats else ["no categories"])
 
 
 def apply_taxonomy(bundle, src, d):
-    """Writes the bundle's categories.json and its names files (stale entries dropped, new ones drafted)."""
+    """Writes the bundle's categories.json and its names files (stale entries dropped, missing ones drafted)."""
     p = load_json(src)
     if p is None:
         sys.exit(f"{src}: not found")
@@ -5006,43 +5041,75 @@ def apply_taxonomy(bundle, src, d):
               f"the list:\n" + "\n".join(f"  {e}" for e in errors[:20]))
 
 
+def draft_names(bundle, todo, d):
+    """Fills each entry's missing names ({locale: name}) in names.{en,es,de}.json's locales, from its English
+    name where it has one, else from its name in the bundle's language."""
+    b = bundle_row(bundle)
+    by_src = {}
+    for i, e in enumerate(todo):
+        by_src.setdefault("en" if "en" in e["names"] else next(iter(e["names"])), []).append((str(i), e))
+    for src, items in by_src.items():
+        if src != "es" and not slug_prompts():
+            sys.exit(NOT_ON_SLUGS)
+        locales = [l for l in categories.NAMES_LOCALES if any(l not in e["names"] for _, e in items)]
+        rows = [{"key": k, "name": e["names"][src], "scope": e.get("scope", "")} for k, e in items]
+        schema = {"type": "object", "required": ["items"], "properties": {"items": {"type": "array", "items": {
+            "type": "object", "required": ["key", *locales], "properties": {"key": STR, **{l: STR for l in locales}}}}}}
+        vl = names_locale(voice_locale(b))
+        voice = f"\n\n## Voice\n`{vl}`: {b['voice']}" if b.get("voice") and vl in locales else ""
+        user = ("## Target languages\n" + "\n".join(f"- `{l}`: {'Spanish (Latin America and Spain)' if l == 'es' else LANGUAGES[l]}"
+                                                for l in locales) + voice
+                + "\n\n## Names\n" + json.dumps(rows, ensure_ascii=False, indent=1))
+        system = (PROMPTS / "taxonomy-names.md").read_text(encoding="utf-8").replace("{source}", LANGUAGES[src])
+        got = {r["key"]: r for r in claude(system, user, schema, NAMES_MODEL, d)["items"]}
+        if missing := [e["names"][src] for k, e in items if k not in got]:
+            sys.exit(f"nothing written; no names drafted for {', '.join(missing)}: rerun")
+        for k, e in items:
+            e["names"] = {l: got[k][l] for l in locales} | e["names"]
+
+
 def write_taxonomy(bundle, p, d):
-    """categories.json and the names files from a proposal (`scope` only needed for new names); returns the subcategories."""
+    """categories.json (structure only) and names.{en,es,de}.json from a proposal (decision 259): an entry's `en` and
+    `name` (the bundle's language) win over the names files, missing names are drafted; an entry without `slug`
+    (a remap's new one) gets one from its English name. `scope` only needed for drafted names. Returns the subcategories."""
+    own = names_locale(translations.draft_locale(bundle_row(bundle)))
+    files = {l: load_json(layout.NAMES(l, bundle)) or {"version": 1, "locale": l} for l in categories.NAMES_LOCALES}
+    entries = {k: [] for k in categories.NAME_KINDS}
+    for c in p["categories"]:
+        entries["categories"].append(c)
+        entries["subcategories"] += c["subcategories"]
+    for k, es in entries.items():
+        for e in es:
+            have = {l: n for l in files if e.get("slug") and (n := (files[l].get(k) or {}).get(e["slug"]))}
+            e["names"] = have | {l: v for l, v in [("en", e.get("en")), (own, e.get("name"))] if v}
+            if not e["names"]:
+                e["names"] = {own: e["slug"]}
+    draft_names(bundle, [e for es in entries.values() for e in es if len(e["names"]) < len(files)], d)
+    for es in entries.values():
+        used = {e["slug"] for e in es if e.get("slug")}
+        for e in es:
+            if not e.get("slug"):
+                s = base_ = derived_slug(e["names"]["en"], p.get("region") or bundle)
+                n = 1
+                while s in used:
+                    n += 1
+                    s = f"{base_}-{n}"
+                used.add(e.setdefault("slug", s))
     path = categories.path(bundle)
     doc = load_json(path, {})
-    cats = [{"slug": c["slug"], "name": c["name"], "subcategories": [s["name"] for s in c["subcategories"]]}
-            for c in p["categories"]]
-    save_json(path, {"about": doc.get("about") or f"Categories of the {bundle} bundle (D-41, D-43, plan 138).", "categories": cats})
+    cats = [{"slug": c["slug"], "subcategories": [s["slug"] for s in c["subcategories"]]} for c in p["categories"]]
+    save_json(path, {"about": doc.get("about") or CATEGORIES_ABOUT.format(bundle=bundle), "categories": cats})
     subs = [s for c in cats for s in c["subcategories"]]
     print(f"{path.relative_to(ROOT)}: {len(cats)} categories, {len(subs)} subcategories")
-    scope = {("categories", c["slug"]): (c["name"], c["scope"]) for c in p["categories"]}
-    scope |= {("subcategories", s["name"]): (s["name"], s["scope"]) for c in p["categories"] for s in c["subcategories"]}
-    locales = [l for l in translations.NAMED if l in ("en", "de") or layout.NAMES(l, bundle).exists()]
-    files = {l: load_json(layout.NAMES(l, bundle)) or {"version": 1, "locale": l} for l in locales}
-    todo = sorted({k for l in locales for k in scope if k[1] not in (files[l].get(k[0]) or {})})
-    drafted = {}
-    if todo:
-        items = [{"key": f"{k}:{n}", "spanish": scope[(k, n)][0], "scope": scope[(k, n)][1]} for k, n in todo]
-        schema = {"type": "object", "required": ["items"], "properties": {"items": {"type": "array", "items": {
-            "type": "object", "required": ["key", *locales],
-            "properties": {"key": STR, **{l: STR for l in locales}}}}}}
-        b = bundle_row(bundle)
-        voice = (f"\n\n## Voice\n`{voice_locale(b)}`: {b['voice']}" if b.get("voice") and voice_locale(b) in locales else "")
-        user = ("## Target languages\n" + "\n".join(f"- `{l}`: {LANGUAGES[l]}" for l in locales) + voice
-                + "\n\n## Names\n" + json.dumps(items, ensure_ascii=False, indent=1))
-        out = claude((PROMPTS / "taxonomy-names.md").read_text(encoding="utf-8"), user, schema, NAMES_MODEL, d)
-        drafted = {tuple(r["key"].split(":", 1)): r for r in out["items"]}
-        if missing := [n for k, n in todo if (k, n) not in drafted]:
-            sys.exit(f"categories.json written; no names drafted for {', '.join(missing)}: rerun --apply")
     for l, f in files.items():
-        stale, new = 0, sum(1 for k, n in todo if n not in (f.get(k) or {}))
-        for k in ("categories", "subcategories"):
+        changed = stale = 0
+        for k, es in entries.items():
             have = f.get(k) or {}
-            keys = [c["slug"] for c in cats] if k == "categories" else subs
-            stale += len(set(have) - set(keys))
-            f[k] = {n: have[n] if n in have else drafted[(k, n)][l] for n in keys}
+            stale += len(set(have) - {e["slug"] for e in es})
+            changed += sum(have.get(e["slug"]) != e["names"][l] for e in es)
+            f[k] = {e["slug"]: e["names"][l] for e in es}
         save_json(layout.NAMES(l, bundle), f)
-        print(f"{layout.NAMES(l, bundle).relative_to(ROOT)}: {new} new name(s) drafted, {stale} dropped")
+        print(f"{layout.NAMES(l, bundle).relative_to(ROOT)}: {changed} name(s) new or changed, {stale} dropped")
     return subs
 
 
@@ -5113,7 +5180,7 @@ def cmd_remap(args):
         return apply_remap(args, Path(args.apply), d)
     subs = categories.subcategories(args.bundle)
     tx = load_json(WORK / "taxonomy" / args.bundle / "proposal.json", {}) or {}
-    scopes = {s["name"]: s["scope"] for c in tx.get("categories", []) for s in c["subcategories"]}
+    scopes = {s.get("slug") or s["name"]: s["scope"] for c in tx.get("categories", []) for s in c["subcategories"]}
     qs = [q for q in load_json(POOL)["questions"] if q.get("bundle") == args.bundle]
     lists = old_lists(args.bundle, set(subs))
     loc = translations.draft_locale(b)
@@ -5121,7 +5188,7 @@ def cmd_remap(args):
     user = "\n\n".join([
         f"## Bundle\n`{args.bundle}`: {b['name']}\n{bundle_text(args.bundle, loc)}",
         "## New list\n" + "\n".join(f"### {cat_name(c, loc)}\n" + "\n".join(
-            f"- {shown(s)}" + (f": {scopes[shown(s)]}" if shown(s) in scopes else "")
+            f"- {shown(s)}" + (f": {sc}" if (sc := scopes.get(s) or scopes.get(shown(s))) else "")
             for s in c["subcategories"]) for c in categories.load(args.bundle)),
         "## Questions\n" + json.dumps([{k: q.get(k) for k in ["id", "question", "answer", "hints", "concept"]}
                                        | {"subcategory": shown(q["subcategory"])} for q in qs], ensure_ascii=False),
@@ -5160,23 +5227,23 @@ def apply_remap(args, src, d):
         if q.get("bundle") == bundle and q.get("concept"):
             lst = concepts.load(*categories.key(q)) or concepts.load("base", q["subcategory"]) or {}
             sources |= {concepts.key(c["name"]): c for c in lst.get("concepts", []) if c["name"] == q["concept"]}
-    if new:
-        loc = translations.draft_locale(bundle_row(bundle))
-        old = {cat_name(c, loc): c["slug"] for c in categories.load(bundle)}
+    if new:  # new subcategories (and categories) come as names in the bundle's language: slugs from their en names
         scope = {r["subcategory"]: r["scope"] for r in p["questions"]}
-        cats_ = [{"name": cat_name(c, loc), "slug": c["slug"], "scope": "",
-                  "subcategories": [{"name": s, "scope": ""} for s in c["subcategories"]]} for c in categories.load(bundle)]
+        cats_ = [{"slug": c["slug"], "scope": "", "subcategories": [{"slug": s, "scope": ""} for s in c["subcategories"]]}
+                 for c in categories.load(bundle)]
         for s, c in new.items():
-            cat = next((x for x in cats_ if x["name"] == c), None)
+            cid = categories.resolve(bundle, c, "categories")
+            cat = next((x for x in cats_ if (x.get("slug") == cid if cid else x.get("name") == c)), None)
             if not cat:
-                cat = {"name": c, "slug": category_slug(bundle, c, bundle_row(bundle)["name"].split(": ")[-1], old),
-                       "scope": scope[s], "subcategories": []}
+                cat = {"name": c, "scope": scope[s], "subcategories": []}
                 cats_.append(cat)
             cat["subcategories"].append({"name": s, "scope": scope[s]})
-        write_taxonomy(bundle, {"bundle": bundle, "categories": cats_}, d)
+        tx = load_json(WORK / "taxonomy" / bundle / "proposal.json", {}) or {}
+        write_taxonomy(bundle, {"bundle": bundle, "region": tx.get("region"), "categories": cats_}, d)
+    key_of = lambda t: t and (categories.resolve(bundle, t) or t)
     subs = set(categories.subcategories(bundle))
     for s, lst in old_lists(bundle, subs).items():
-        t = next((x["target"] for x in p["lists"] if x["subcategory"] == s), "")
+        t = key_of(next((x["target"] for x in p["lists"] if x["subcategory"] == s), ""))
         concepts.path(bundle, s).unlink()
         if not t:
             print(f"  concept list {s}: deleted ({len(lst['concepts'])} concepts)")
@@ -5192,7 +5259,7 @@ def apply_remap(args, src, d):
     moved, kept, cleared = [], 0, 0
     with atomic.locked(POOL):
         data = load_json(POOL)
-        target = {r["id"]: r["subcategory"] for r in p["questions"]}
+        target = {r["id"]: key_of(r["subcategory"]) for r in p["questions"]}
         for q in data["questions"]:
             if q.get("bundle") != bundle:
                 continue
