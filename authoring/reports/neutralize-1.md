@@ -1,0 +1,474 @@
+# neutralize-1
+
+Made by `qgen neutralize` on 2026-10-15 (plan 64, D-78): `base` questions reworded from Colombian or other national usage into neutral Spanish. Generated file: don't edit by hand.
+
+- Scanned: 1066
+- Flagged: 388
+- Reworded: 388
+- Approved: 367
+- Needs work: 21
+- Claude calls: 60, about $2.74 at list price
+
+## Reworded
+
+- **q-0003**: hint 2: 'crispetas' → 'palomitas'
+- **q-0004**: description: 'toca portarse bien' → 'hay que portarse bien'; hint 2: '2.600' → '2600'; fun_fact: '2.640' → '2640'
+- **q-0014**: fun_fact: 'Suramérica' → 'América del Sur'
+- **q-0016**: fun_fact: '4.000' → '4000'
+- **q-0018**: question: 'Suramérica' → 'América del Sur'; fun_fact: 'Suramérica' → 'América del Sur'
+- **q-0019**: description: 'medias' → 'calcetines'; hint 3: '8.850' → '8850'; fun_fact: '5.700' → '5700'
+- **q-0020**: description: 'un tinto' → 'un café'
+- **q-0025**: hint 2: 'fincas' → 'granjas'
+- **q-0027**: description: 'un carro' → 'un automóvil'; fun_fact: 'un carro pequeño' → 'un automóvil pequeño'
+- **q-0028**: wrong_answers: 'Bananos' → 'Bananas'
+- **q-0031**: description: 'hace reversa mejor que tu papá parqueando' → 'da marcha atrás mejor que tu papá estacionando'
+- **q-0034**: wrong_answers: 'La babilla' → 'El caimán'; hint 1: 'quebradas' → 'arroyos'
+- **q-0037**: hint 3: 'gripa' → 'gripe'
+- **q-0039**: fun_fact: '100.000' → '100 000'
+- **q-0041**: description: '20.000' → '20 000'
+- **q-0042**: description: 'cartuchera' → 'estuche'
+- **q-0048**: answer: '300.000 km por segundo' → '300 000 km por segundo'; wrong_answers: '30.000 km por segundo' → '30 000 km por segundo', '3.000.000 km por segundo' → '3 000 000 km por segundo'; hint 3: '384.000' → '384 000'
+- **q-0053**: fun_fact: '1.000' → '1000'
+- **q-0057**: fun_fact: '100.000 y 400.000 millones' → '100 000 y 400 000 millones'
+- **q-0075**: fun_fact: 'computador' → 'computadora'.
+- **q-0086**: answer: 'El arquero' → 'El portero'; fun_fact: 'arquero colombiano' → 'portero colombiano'.
+- **q-0087**: hint 2: 'el arquero' → 'el portero'.
+- **q-0096**: fun_fact: '2.700' → '2700'.
+- **q-0098**: answer: 'El bombillo' → 'La bombilla'; hint 3: 'lo mejoró' → 'la mejoró' (to agree with 'bombilla'); fun_fact: 'bombillos LED' → 'bombillas LED'.
+- **q-0110**: description: 'turistas gringos' → 'turistas estadounidenses' ('gringos' is regional slang).
+- **q-0142**: description: 'conjunto residencial' → 'vecindario'; fun_fact: '2.920 metros' → '2920 metros'
+- **q-0144**: hint 1: 'del Día de Amor y Amistad' → 'de San Valentín'
+- **q-0150**: description: 'finca' → 'granja'
+- **q-0152**: hint 1: 'caricaturas' → 'dibujos animados'
+- **q-0162**: question: 'una chocolatina' → 'una barra de chocolate'; fun_fact: 'la chocolatina' → 'la barra de chocolate', 'crispetas' → 'palomitas'
+- **q-0164**: hint 1: 'tenis, chaquetas y morrales' → 'zapatos deportivos, chaquetas y mochilas'; hint 3: 'sin pegante' → 'sin pegamento'; fun_fact: 'los cadillos' → 'las semillas de cardo'
+- **q-0165**: wrong answer 'Se llenó de burbujas y nació la gaseosa' → 'Se llenó de burbujas y nació el refresco'
+- **q-0176**: fun_fact: 'pimentón' → 'pimiento'
+- **q-0177**: question: 'el robotico' → 'el robot'
+- **q-0178**: fun_fact: 'el pimentón verde' → 'el pimiento verde'
+- **q-0180**: description: 'de las maquinitas' → 'de los videojuegos'; wrong answer 'Una torta a la que le faltaba una tajada' → 'Un pastel al que le faltaba una rebanada'
+- **q-0186**: hint 1: 'crocante' → 'crujiente'
+- **q-0187**: fun_fact: 'más del triple de lo que va un carro por la autopista' → 'más del triple de la velocidad de un vehículo en la autopista'
+- **q-0188**: hint 3: 'tres personas adultas paradas una encima de la otra' → 'tres personas adultas de pie, una encima de la otra'
+- **q-0195**: description: 'Un carrito de control remoto' → 'Un vehículo de control remoto'
+- **q-0197**: question: 'una fábrica de carros' → 'una fábrica de automóviles'; fun_fact: 'las fábricas de carros' → 'las fábricas de automóviles'
+- **q-0199**: fun_fact: '3.776 metros' → '3776 metros'
+- **q-0202**: wrong_answers: 'La danta' → 'El tapir'; hint 2: 'micos' → 'monos'
+- **q-0212**: hint 2: 'un momentico' → 'un momento'; hint 3: 'una puntilla' → 'un clavo'
+- **q-0213**: question: 'Mira este escudo en un carro:' → 'Mira este escudo:'; hint 1: 'marca de carros deportivos' → 'marca de autos deportivos' (or 'marca de deportivos')
+- **q-0222**: question: 'pastica' → 'pasta'; hint 1: 'poquitico' → 'poquito'; hint 2: 'como el ají' → 'como el chile o la pimienta'
+- **q-0225**: hint 3: 'Tu celular' → 'Tu teléfono'
+- **q-0226**: hint 3: 'botellas grandes de gaseosa' → 'botellas grandes de refresco'
+- **q-0237**: hint 1: '4.000 años' → '4000 años'
+- **q-0238**: description: 'salir a rumbear' → 'salir de fiesta'; fun_fact: 'chiquitico' → 'pequeñito'
+- **q-0240**: fun_fact: 'La señal de PARE' → 'La señal de alto' (or 'La señal que obliga a detenerse')
+- **q-0244**: fun_fact: 'un gatico' → 'un gatito'
+- **q-0249**: description: 'en el parqués' → 'en el parchís'
+- **q-0252**: description: 'en el parqués' → 'en el parchís'
+- **q-0253**: hint 3: '7.000 metros' → '7000 metros'
+- **q-0254**: wrong_answers: 'La cayena' → 'El hibisco'; fun_fact: 'boliticas' → 'bolitas'
+- **q-0255**: hint 2: 'los carros como el Volkswagen' → 'los vehículos como el Volkswagen'
+- **q-0263**: description: change the usted forms to tú: 'tome un metal, échele otro, y bautice una época entera' → 'toma un metal, échale otro y bautiza una época entera'
+- **q-0264**: hint 2: 'piedritas pegadas' → 'piedras pequeñas pegadas'
+- **q-0266**: description: 'cáscaras de banano' → 'cáscaras de banana'
+- **q-0267**: wrong answers: 'Unos 1.000 metros' → 'Unos 1000 metros'; 'Unos 3.000 metros' → 'Unos 3000 metros'
+- **q-0271**: description: 'nos mandó carros' → 'nos mandó vehículos'; hint 2: 'gatico' → 'gatito'
+- **q-0273**: hint 1: 'las llantas de un avión normal' → 'las ruedas de un avión normal'
+- **q-0274**: description: 'le tocó rebuscarse' → 'tuvo que arreglárselas'; hint 1: 'fincas' → 'granjas'; hint 3: 'redondita' → 'redonda' and 'una pepa grande' → 'un hueso grande'
+- **q-0276**: description: '¡muévase!' → '¡muévete!'; answer: 'El pito de un carro' → 'La bocina de un carro'; hint 2: 'en el timón' → 'en el volante'; fun fact: 'no tenían pito eléctrico' → 'no tenían bocina eléctrica'
+- **q-0279**: hint 3: 'de paquetico' → 'de paquete'
+- **q-0280**: description: 'tu lista de mercado del mes' → 'tu lista de compras del mes'
+- **q-0285**: question: 'este hueco en el suelo' → 'este agujero en el suelo'
+- **q-0287**: fun fact: 'una sola islita de Escocia' → 'una sola isla pequeña de Escocia'
+- **q-0291**: hint 3: 'pero en chiquito' → 'pero en pequeño'
+- **q-0293**: description: 'para el algo' → 'para la merienda' and 'pedirle plata prestada' → 'pedirle dinero prestado'; question: '2.500' → '2500', '3.000' → '3000', '20.000' → '20 000', 'una gaseosa' → 'un refresco'; answer: '9.500 pesos' → '9500 pesos'; wrong answers: '10.500 pesos' → '10 500 pesos', '8.500 pesos' → '8500 pesos', '9.000 pesos' → '9000 pesos'; hint 2: '7.500' → '7500' and 'la gaseosa' → 'el refresco'; hint 3: '10.500' → '10 500', '20.000' → '20 000'; fun fact: '20.000 pesos' → '20 000 pesos'
+- **q-0294**: description: 'tan puntuda' → 'tan puntiaguda'
+- **q-0295**: question: '8.000 metros' → '8000 metros'
+- **q-0299**: fun fact: 'más que un bus' → 'más que un autobús'
+- **q-0300**: description: 'un niño de kínder' → 'un niño de preescolar'
+- **q-0303**: fun fact: 'unos 4.000 años' → 'unos 4000 años'
+- **q-0305**: wrong answers: 'Llantas viejas' → 'Neumáticos viejos'; hint 3: 'guardaron gaseosa o agua' → 'guardaron refresco o agua'
+- **q-0306**: hint 1: 'Suramérica' → 'América del Sur'
+- **q-0312**: description: 'más plata que un banco' → 'más dinero que un banco'; hint 2: 'un carro muy famoso' → 'un vehículo muy famoso'
+- **q-0314**: hint 1: 'todavía no existían los carros' → 'todavía no existían los automóviles'
+- **q-0324**: hint 2: 'bizcochos tipo soletas' → 'bizcochos alargados' ('soletas' is regional)
+- **q-0326**: hint 2: 'remen al tiempo' → 'remen a la vez'
+- **q-0330**: hint 3: 'virus de computador' → 'virus de computadora'; fun_fact: 'virus de computador' → 'virus de computadora'
+- **q-0332**: description: 'el celular nunca dejaría de sonar' → 'el teléfono nunca dejaría de sonar'
+- **q-0335**: description: 'qué tanto te duele' → 'cuánto te duele'
+- **q-0338**: hint 2: 'cada celular y computador' → 'cada teléfono y computadora'
+- **q-0340**: wrong_answers: 'Coca' (Colombian name for the cup-and-ball toy) → a non-spinning toy known everywhere, e.g. 'Matraca'
+- **q-0342**: hint 2: 'patos, carritos y yoyos' → 'patos, trenes y yoyos' ('carritos' is a regional diminutive of 'carro')
+- **q-0355**: description: 'cansón' → 'agotador'; 'pidiendo un tinto' → 'pidiendo un café'
+- **q-0356**: fun_fact: 'Los computadores usan' → 'Las computadoras usan'
+- **q-0358**: hint 3: '1.000.000.000' → '1 000 000 000'
+- **q-0359**: wrong_answers: '1.000' → '1000'; hint 3: 'que es 1.000' → 'que es 1000'
+- **q-0363**: description: 'acompañada de arequipe' → 'acompañada de dulce de leche'; question: 'postre de brevas con arequipe' → 'postre de brevas con dulce de leche'
+- **q-0365**: hint 3: 'cáscara café y gruesa' → 'cáscara marrón y gruesa'
+- **q-0367**: description: 'sin buscar en el celular' → 'sin buscar en el teléfono'
+- **q-0374**: hint 2: 'gotica' → 'gotita'
+- **q-0377**: hint 3: 'pepa' → 'semilla'
+- **q-0380**: description: 'levantar un carro' → 'levantar un camión'
+- **q-0381**: description: 'cortica' → 'cortita'; hint 1: 'desde chiquito' → 'desde pequeño'
+- **q-0382**: hint 1: 'Suramérica' → 'América del Sur'
+- **q-0383**: answer: 'computadores lejanos' → 'computadoras lejanas'; wrong answer 3: 'su propio celular' → 'su propio teléfono'; fun fact: 'miles de computadores' → 'miles de computadoras'
+- **q-0385**: answer: 'Suramérica' → 'Sudamérica'; fun fact: 'como si fuera una crispeta' → 'como si fuera una palomita de maíz'
+- **q-0386**: fun fact: '5.000 a 7.000' → '5000 a 7000'
+- **q-0388**: question: 'hueco' → 'agujero'; hint 2: 'las neveras viejas' → 'los refrigeradores viejos'; fun fact: 'el hueco de la capa de ozono' → 'el agujero de la capa de ozono'
+- **q-0389**: description: 'tetero' → 'biberón'
+- **q-0390**: fun fact: 'lo botaban' → 'lo tiraban'
+- **q-0394**: description: 'pararse de la cama' → 'levantarse de la cama'
+- **q-0395**: hint 3: 'se devuelven' → 'regresan'; fun fact: '10.000 tinas de baño' → '10 000 bañeras'
+- **q-0396**: description: 'un almuerzo corriente' → 'un almuerzo completo'; question: 'banano' → 'banana'
+- **q-0397**: hint 1: 'en poncheras sobre la cabeza' → 'en bandejas sobre la cabeza'
+- **q-0401**: wrong answer 3: 'por celular' → 'por teléfono'; hint 1: 'con el celular' → 'con el teléfono'; hint 2: 'con los celulares' → 'con los teléfonos inteligentes'
+- **q-0403**: description: 'en el parqueadero' → 'en el estacionamiento'
+- **q-0404**: description: 'las medias' → 'los calcetines'
+- **q-0411**: question: 'del computador' → 'de la computadora'; hint 1: 'del computador' → 'de la computadora'; fun fact: 'con un celular moderno' → 'con un teléfono moderno'
+- **q-0412**: description: 'el computador' → 'la computadora'; question: 'de un computador' → 'de una computadora'
+- **q-0413**: fun fact: 'el basquetbolista Larry Bird' → 'el jugador de baloncesto Larry Bird'
+- **q-0414**: description: 'un matrimonio de la tía rica' → 'una boda de la tía rica'; hint 1: 'las medias' → 'los calcetines'
+- **q-0417**: hint 2: 'Suramérica' → 'América del Sur'
+- **q-0419**: hint 1: 'entre más fuerte' → 'cuanto más fuerte'
+- **q-0421**: description: 'huevo pericos' → 'huevos revueltos'
+- **q-0422**: fun fact: 'el 1.000' → 'el 1000'; 'el número de tu celular' → 'el número de tu teléfono'
+- **q-0426**: hint 2: 'muchísimos celulares' → 'muchísimos teléfonos'
+- **q-0428**: description: 'cinco minuticos más' → 'cinco minutitos más'
+- **q-0432**: hint 1: 'cortica' → 'cortita'
+- **q-0434**: description: 'su tinto' → 'su café' (reword lightly if the repetition with the question bothers, e.g. 'no arrancan sin su taza de café'); question: 'la planta no es de aquí' assumes the players are in Colombia → 'la planta no es de allí'
+- **q-0437**: question: 'En las caricaturas' → 'En los dibujos animados'
+- **q-0440**: wrong answer: 'Café' → 'Marrón'; fun fact: 'afiches' → 'carteles'
+- **q-0442**: description: 'para chismosear con la abuela tocaba ir hasta su casa' → 'para chismear con la abuela había que ir hasta su casa'
+- **q-0443**: question: 'Un bombillo de larga duración' → 'Una bombilla de larga duración'; fun fact: '1.000 patentes' → '1000 patentes'
+- **q-0444**: wrong answer: 'El bombillo' → 'La bombilla'
+- **q-0446**: description: 'el álbum de láminas' → 'el álbum del Mundial' ('láminas' is regional; estampas/cromos/figuritas have no shared form)
+- **q-0447**: hint 1: 'Suramérica' → 'Sudamérica'
+- **q-0448**: description: 'con gripa' → 'con gripe'
+- **q-0449**: hint 1: 'Suramérica' → 'Sudamérica'
+- **q-0451**: description: 'el último trasteo' → 'la última mudanza'
+- **q-0453**: hint 2: 'también se comen como pasabocas' → 'también se comen tostadas como aperitivo'
+- **q-0456**: description: 'una tapa de gaseosa' → 'una tapa de botella'
+- **q-0459**: fun fact: 'gritan muy duro' → 'gritan muy fuerte'
+- **q-0461**: hint 2: 'hacer ruanas' → 'hacer suéteres'
+- **q-0463**: hint 2: 'en los matrimonios' → 'en las bodas'
+- **q-0465**: description: 'cura la gripa' → 'cura la gripe'
+- **q-0467**: description: 'Un señor con un carro que funciona a pura pata' → 'Un señor con un vehículo que funciona a pura pata'; question: '¿Qué personaje de caricatura es?' → '¿Qué personaje de dibujos animados es?'; hint 1: 'Es una caricatura muy vieja' → 'Es una serie de dibujos animados muy vieja'
+- **q-0471**: fun fact: 'las pantallas del celular y del televisor' → 'las pantallas del teléfono y del televisor'
+- **q-0473**: description: 'jugar un picadito' → 'jugar un partidito'
+- **q-0474**: hint 3: 'rubio y crespo' → 'rubio y rizado'
+- **q-0476**: answer: '1.001' → '1001'
+- **q-0481**: question: 'Antes del bombillo eléctrico' → 'Antes de la bombilla eléctrica'; hint 3: 'tu torta de cumpleaños' → 'tu pastel de cumpleaños'; fun fact: 'lograr un bombillo que durara muchas horas prendido' → 'lograr una bombilla que durara muchas horas encendida'
+- **q-0483**: description: 'se le perdió el celular' → 'se le perdió el teléfono'
+- **q-0487**: description: 'con gripa' → 'con gripe'
+- **q-0488**: description: 'bus' → 'autobús'.
+- **q-0489**: fun_fact: '7.000 km' → '7000 km'.
+- **q-0490**: description: 'pidió domicilio' (Colombian) → 'pidió comida a domicilio'.
+- **q-0499**: hint 1: 'computadores' → 'computadoras'; hint 2: 'un computador tan sencillo' → 'una computadora tan sencilla'.
+- **q-0502**: fun_fact: '6.650 km' → '6650 km'.
+- **q-0504**: question: 'se pone bravo' → 'se enoja'.
+- **q-0514**: description: 'cara de marrano' → 'cara de cerdo'; question: 'un marrano salvaje' → 'un cerdo salvaje'.
+- **q-0515**: description: 'la chocolatina de tu lonchera' → 'la barra de chocolate de tu lonchera'; question: 'clima caliente' → 'clima cálido'.
+- **q-0516**: description: 'cortico' → 'cortito'; hint 3: 'Suramérica' → 'Sudamérica'.
+- **q-0520**: fun_fact: '1.500 años' → '1500 años'.
+- **q-0528**: description: 'Antes de los celulares' → 'Antes de los teléfonos con cámara'; hint 2: 'el bombillo de Edison' → 'la bombilla de Edison'.
+- **q-0529**: question: 'este bombillo antiguo' → 'esta bombilla antigua'; hint 3: 'el bombillo se funde' → 'la bombilla se funde'; fun_fact: 'los bombillos modernos' → 'las bombillas modernas' and '3.000 grados' → '3000 grados'.
+- **q-0531**: description: 'sin plata' → 'sin dinero' and 'como si fueran el celular' → 'como si fueran el teléfono'; hint 2: 'al respaldo del título' → 'en el reverso del título'; fun_fact: 'cobrar arriendo' → 'cobrar alquiler'.
+- **q-0534**: answer: 'Según los agüeros, traen mala suerte' → 'Según las supersticiones, traen mala suerte'; wrong answer 1: 'Según los agüeros, traen buena suerte' → 'Según las supersticiones, traen buena suerte'; fun_fact: 'el agüero de no pasar' → 'la superstición de no pasar'.
+- **q-0535**: hint 3: 'no me cargaría nunca' → 'no me llevaría nunca'.
+- **q-0545**: question: 'un vaso de icopor' → 'un vaso de unicel (poliestireno)' and '6.000 metros' → '6000 metros'; hint 3: 'El icopor' → 'El unicel'; fun_fact: 'vasos de icopor' → 'vasos de unicel'.
+- **q-0546**: hint 3: 'lo que un carro' → 'lo que un automóvil'.
+- **q-0549**: question: '4.000 km' → '4000 km'; hint 1: 'Suramérica' → 'Sudamérica'.
+- **q-0562**: fun_fact: '10.000 km' → '10 000 km'
+- **q-0564**: question: 'el día de las bromas en Colombia' → 'el día de las bromas en muchos países de habla hispana' (the answer doesn't depend on Colombia); hint 3: the Colombian 'usted' catchphrase '¡Pásela por…!' → a neutral hint that doesn't contain the answer, e.g. 'Al que cae en la broma le dicen que fue muy ingenuo… o algo parecido.'
+- **q-0568**: description: 'saquen el celular' → 'saquen el teléfono'; question: 'una dona de metal' → 'un aro de metal' (optional: 'dona' is not used in Spain)
+- **q-0569**: hint 2: 'cobras arriendo' → 'cobras alquiler'
+- **q-0575**: description: 'En Asgard no hay carros' → 'En Asgard no hay tráfico'
+- **q-0579**: hint 3: 'una ruana' → 'un poncho'
+- **q-0590**: hint 3: 'el tinto caliente' → 'el café caliente'
+- **q-0591**: description: 'ganó más plata' → 'ganó más dinero'; 'amarrarse los zapatos' → 'atarse los zapatos'
+- **q-0593**: fun_fact: '4.800 km' → '4800 km'
+- **q-0594**: answer: 'Unos 12.000 km' → 'Unos 12 000 km'; wrong answers: 'Unos 1.500 km' → 'Unos 1500 km', 'Unos 50.000 km' → 'Unos 50 000 km'; hint 2: '20.000 km' → '20 000 km'
+- **q-0599**: description: 'sin carro, sin maletas' → 'sin vehículo, sin maletas' (or drop 'sin carro,')
+- **q-0600**: question: 'se infla como una bomba' → 'se infla como un globo'
+- **q-0601**: hint 2: 'los zancudos' → 'los mosquitos'
+- **q-0604**: fun_fact: '14.700 especies' → '14 700 especies'; 'unas 8.000' → 'unas 8000'
+- **q-0606**: hint 3: 'viven en muchas fincas' → 'viven en muchas granjas'
+- **q-0610**: description: 'vestida para un matrimonio' → 'vestida para una boda'
+- **q-0611**: hint 3: 'las llantas de los carros y los borradores' → 'los neumáticos de los vehículos y las gomas de borrar'; fun_fact: '3.000 años' → '3000 años'
+- **q-0613**: hint 1: 'fríjol' → 'frijol'
+- **q-0615**: question: 'alguien riega aceite en el piso' → 'alguien derrama aceite en el piso'; fun_fact: 'prensadas con pegante' → 'prensadas con pegamento'
+- **q-0620**: question: 'igualito' → 'igual' (no regional diminutives).
+- **q-0623**: description: 'Una rueda que no sirve para el carro, pero sí para pintar.' → 'Una rueda que no sirve para ningún vehículo, pero sí para pintar.' ('carro' is regional).
+- **q-0627**: hint 3: 'el primer carro cruza la meta' → 'el primer piloto cruza la meta'; fun_fact: 'carreras de carros' → 'carreras de automovilismo'.
+- **q-0632**: hint 2: 'sale un sirope dulce para los pancakes' → 'sale un jarabe muy dulce' ('sirope'/'pancakes' are regional or anglicisms).
+- **q-0633**: answer: '1.852 metros' → '1852 metros'; wrong_answers: '18.520 metros' → '18 520 metros'; hint 1: '1.600 metros' → '1600 metros'.
+- **q-0635**: fun_fact: '3.000 metros' → '3000 metros'.
+- **q-0636**: description: 'piratas, turistas y trapeadores' → 'piratas, turistas y marineros con balde'; question: 'friega el piso con un trapeador' → 'friega el piso' ('trapeador' has no shared form across the Spanish-speaking world).
+- **q-0638**: hint 2: 'no voltearse' → 'no volcarse'.
+- **q-0641**: question: 'gorrito, moñito' → 'gorro, lazo' (regional diminutives; 'moño' means a hair bun in Spain).
+- **q-0653**: wrong_answers: 'a más de 3.000 metros de altura' → 'a más de 3000 metros de altura'; fun_fact: 'Suramérica' → 'Sudamérica'.
+- **q-0654**: hint 3: '2.000 metros' → '2000 metros'; fun_fact: '2.355 metros' → '2355 metros'.
+- **q-0655**: description: 'tomarte un tinto' → 'tomarte un café'; fun_fact: '100.000 cuadros' → '100 000 cuadros'.
+- **q-0659**: question: 'sus papás' → 'sus padres'.
+- **q-0661**: description: 'un avión en El Dorado' → 'un avión en un aeropuerto' (Bogotá's airport is not widely known); question: 'la caricatura donde salimos' → 'la serie de dibujos animados donde salimos'.
+- **q-0668**: hint 2: 'muy cortico' → 'muy corto'.
+- **q-0670**: hint 2: 'rapidito' → 'rápido'; hint 3: 'Hay chupetes, bombones y chocolatinas.' → 'Hay caramelos, bombones y chocolates.' ('chupete' means a baby's pacifier in Spain; 'chocolatina' is regional).
+- **q-0671**: question: 'Soy una viejita' → 'Soy una anciana' (keep 'abuelita Elena' as it is: that's the character's name).
+- **q-0674**: hint 1: 'neveras' → 'refrigeradores'
+- **q-0677**: hint 2: 'la boleta' → 'la entrada'; hint 3: 'crispetas' → 'palomitas'
+- **q-0678**: fun_fact: 'un bus' → 'un autobús'
+- **q-0684**: question: 'de la nevera' → 'del refrigerador'
+- **q-0685**: description: 'la nevera está vacía' → 'el refrigerador está vacío'
+- **q-0694**: description: 'sin plata' → 'sin dinero'
+- **q-0696**: question: 'fríjoles' → 'frijoles'; hint 2: 'animal de la finca' → 'animal de la granja'
+- **q-0698**: wrong_answers: 'Fríjol' → 'Frijol'
+- **q-0704**: description: 'gaseosa' → 'refresco'
+- **q-0712**: description: 'trancones' → 'atascos'; hint 2: 'huequitos' → 'agujeritos'; fun_fact: '2.500' → '2500'
+- **q-0716**: answer: '4.000 metros' → '4000 metros'; wrong_answers: '40.000 metros' → '40 000 metros'; hint 2: '10.000 metros' → '10 000 metros'; fun_fact: '4.000 metros' → '4000 metros'
+- **q-0720**: wrong_answers: '2.000 km/h' → '2000 km/h', '20.000 km/h' → '20 000 km/h'; hint 1: 'un carro en la ciudad' → 'un vehículo en la ciudad'; hint 2: 'la velocidad de un carro de carreras' → 'la velocidad de un Fórmula 1'
+- **q-0724**: fun_fact: '2.000 millones' → '2000 millones'
+- **q-0726**: answer: '7.000 años' → '7000 años'; wrong_answers: '70.000 años' → '70 000 años', '700.000 años' → '700 000 años'; hint 2: '4.500 años' → '4500 años'
+- **q-0730**: answer: 'Unos 1.000 °C' → 'Unos 1000 °C'; wrong answer: 'Unos 10.000 °C' → 'Unos 10 000 °C'.
+- **q-0732**: description: 'el arco son dos morrales' → 'la portería son dos mochilas'.
+- **q-0733**: question: 'Mira estos guayos' → 'Mira estos zapatos de fútbol'; 'los taches que tienen en la suela' → 'las puntas que tienen en la suela'. hint 2: 'tenis normales' → 'zapatos deportivos normales'. hint 3: 'la grama' → 'el césped'. Keep the fun fact (it is about the regional names).
+- **q-0735**: description: 'crispetas' → 'palomitas'.
+- **q-0736**: question: 'frente al arco' → 'frente a la portería'. hint 2: 'el arquero' → 'el portero'. hint 3: 'del arco' → 'de la portería'. fun fact: 'El punto penal' → 'El punto de penalti'.
+- **q-0737**: wrong answer: 'Arqueros de la selección' → 'Porteros de la selección'.
+- **q-0738**: hint 1: 'como serruchito' → 'como de serrucho'. hint 2: 'en las aromáticas' → 'en las infusiones'.
+- **q-0739**: question: 'Los gaticos' → 'Los gatitos'. hint 1: 'los gaticos' → 'los gatitos'. fun fact: 'Todos los gaticos' → 'Todos los gatitos'.
+- **q-0740**: description: 'darle la cédula' → 'darle el documento de identidad'.
+- **q-0743**: hint 1: 'hace unos 1.400 años' → 'hace unos 1400 años'.
+- **q-0746**: description: 'bloqueador' → 'protector solar'.
+- **q-0749**: wrong answer: 'El zancudo' → 'El mosquito'.
+- **q-0751**: description: 'la que se come tus bananos' → 'la que se come tu fruta'.
+- **q-0752**: answer: 'El zancudo' → 'El mosquito'. hint 3: 'Para dormir tranquilo en tierra caliente se usa un toldo contra él' → 'Para dormir tranquilo en zonas cálidas se usa un mosquitero contra él'. fun fact: 'hembras de zancudo' → 'hembras de mosquito'.
+- **q-0753**: description: 'Apagas el celular' → 'Apagas el teléfono'.
+- **q-0757**: hint 3: 'fríjoles' → 'frijoles'.
+- **q-0759**: hint 2: 'bajito y parejo' → 'corto y parejo'. hint 3: 'pero solito' → 'pero solo'.
+- **q-0761**: description: 'un gatico' → 'un gatito'. wrong answer: 'En la cartelera del colegio' → 'En el tablón de anuncios del colegio' (keep lengths similar). hint 1: 'dentro del celular' → 'dentro del teléfono'.
+- **q-0762**: question: 'en el celular' → 'en el teléfono'. hint 2: 'las antenas de la empresa de tu celular' → 'las antenas de tu compañía telefónica'. hint 3: 'Tu plan de celular' → 'Tu plan de teléfono'. fun fact: 'del celular' → 'del teléfono'.
+- **q-0764**: question: 'un celular Android' → 'un teléfono Android'.
+- **q-0765**: question: 'de computador en computador' → 'de computadora en computadora'. hint 1: 'se reproduce solito' → 'se reproduce solo'. hint 3: 'el mismo animalito' → 'el mismo animal'.
+- **q-0768**: hint 2: 'un candadito' → 'un candado'.
+- **q-0771**: hint 2: 'un hueso o 'pepa' dura' → 'un hueso duro'.
+- **q-0773**: description: 'ni chapa' → 'ni cerradura'.
+- **q-0774**: description: 'tan chiquitica' → 'tan pequeña'. hint 3: 'como un carro de juguete' → 'como un tren de juguete'.
+- **q-0778**: description: 'sin pegante' → 'sin pegamento'
+- **q-0779**: description: 'Un carro que no echa gasolina' → 'Un vehículo que no usa gasolina' (keep the rest)
+- **q-0783**: hint 2: 'celulares' → 'teléfonos'
+- **q-0802**: description: 'vestido de baño' → 'traje de baño'
+- **q-0803**: description: 'modo «papel bond»' → 'modo «hoja en blanco»'
+- **q-0807**: description: 'nunca pide domicilio' → 'nunca pide comida a domicilio'
+- **q-0809**: answer: 'Unos 1.000 km' → 'Unos 1000 km'; wrong answer: 'Unos 10.000 km' → 'Unos 10 000 km'
+- **q-0811**: fun_fact: '2.000 años' → '2000 años'
+- **q-0815**: description: 'Tu celular' → 'Tu teléfono'; question: 'los computadores' → 'las computadoras'; hint 2: 'prendido o apagado' → 'encendido o apagado'
+- **q-0817**: wrong answer: 'Un bombillo' → 'Una bombilla'; wrong answer: 'Una lata de gaseosa' → 'Una lata de refresco'; question: 'no me debes botar a la basura normal' → 'no me debes tirar a la basura normal'; hint 2: 'deja de prender' → 'deja de encender'
+- **q-0818**: description: 'el bloqueador solar' → 'el protector solar'; fun_fact: '19.000 km²' → '19 000 km²'
+- **q-0820**: hint 3: 'llantas' → 'neumáticos'
+- **q-0825**: description: 'cobija, crispetas' → 'manta, palomitas'
+- **q-0832**: description: '3.000 años' → '3000 años'
+- **q-0835**: fun_fact: '4.000 años' → '4000 años'
+- **q-0840**: fun_fact: 'al arquero' → 'al portero'
+- **q-0841**: question: 'Soy arquero italiano' → 'Soy portero italiano'; 'seguí atajando' → 'seguí parando'
+- **q-0844**: description: 'el arquero' → 'el portero'; fun_fact: 'apuntando a los arcos' → 'apuntando a las porterías'
+- **q-0847**: description: 'sombrita' → 'sombra'; wrong_answers: 'El arquero' → 'El portero'
+- **q-0848**: wrong_answers: 'El mejor arquero del Mundial' → 'El mejor portero del Mundial'
+- **q-0853**: answer: 'Un banano' → 'Una banana'; fun_fact: 'el banano en sí' → 'la banana en sí'
+- **q-0854**: description: 'no pagan arriendo' → 'no pagan alquiler'
+- **q-0856**: hint 2: 'las bombas de cumpleaños' → 'los globos de cumpleaños'
+- **q-0861**: description: 'sin celular' → 'sin teléfono'
+- **q-0864**: hint 2: 'se repite igualita' → 'se repite igual'
+- **q-0870**: hint 1: 'de película de acción gringa' → 'de película de acción de Hollywood'
+- **q-0871**: description: 'un muñequito' → 'un muñeco'; question: 'tu propio muñequito' → 'tu propio muñeco'
+- **q-0872**: description: 'jugar parqués' → 'jugar parchís'; question: 'Estás en una maquinita' → 'Estás en una máquina de videojuegos'; hint 2: 'en las maquinitas de Capcom' → 'en las máquinas recreativas de Capcom'
+- **q-0874**: fun_fact: '10.000 años' → '10 000 años'
+- **q-0875**: fun_fact: 'llevando maquinitas' → 'llevando máquinas recreativas'
+- **q-0879**: hint 3: 'de un carro' → 'de un vehículo'
+- **q-0884**: fun_fact: 'mesones de cocina' → 'encimeras de cocina' (or reword to 'Muchas cocinas tienen superficies de granito'); hint 3: 'láminas finitas' → 'láminas finas'.
+- **q-0886**: description: 'ni el GPS del carro' → 'ni el GPS'; wrong answer: 'Hace unos 4.000 millones de años' → 'Hace unos 4000 millones de años'.
+- **q-0890**: description: 'pegante de colegio' → 'pegamento de colegio'; question: 'cinta pegante' → 'cinta adhesiva'.
+- **q-0891**: description: 'volqueta' → 'camión de carga'.
+- **q-0893**: question: 'Estás parado' → 'Estás de pie'; hint 3: 'tan poquita' → 'tan poca'.
+- **q-0894**: description: 'matera' → 'maceta'; question: 'escamitas plateadas' → 'escamas plateadas' and 'esas escamitas' → 'esas escamas'; hint 3: 'esponjitas' → 'esponjas'.
+- **q-0895**: hint 3: 'las plantitas nuevas' → 'las plantas nuevas'; fun_fact: 'cientos de plantitas' → 'cientos de plantas pequeñas'.
+- **q-0896**: hint 3: 'bombillos' → 'bombillas'; hint 2: 'unos bichitos' → 'unos bichos'.
+- **q-0898**: description: 'el domiciliario más valiente' → 'el repartidor más valiente'.
+- **q-0900**: hint 1: 'que se jala' → 'que se arrastra'; fun_fact: 'un palo puntudo jalado por personas' → 'un palo puntiagudo arrastrado por personas'.
+- **q-0901**: hint 3: 'latas de gaseosa' → 'latas de refresco'.
+- **q-0902**: question: 'un charquito de agua de lluvia' → 'un pequeño charco de agua de lluvia' and 'mi charquito de guardería' → 'mi charco de guardería'; answer: 'ranitas venenosas' → 'ranas venenosas'.
+- **q-0904**: question: 'para la plantica' → 'para la nueva planta'.
+- **q-0911**: hint 3: 'el gas natural de la estufa' → 'el gas natural de la cocina'.
+- **q-0912**: wrong answer: 'Tienda de segunda' → 'Tienda de segunda mano'.
+- **q-0914**: hint 1: 'poquito' → 'poco'; hint 3: 'sacándolos del bulto' → 'sacándolos del saco'.
+- **q-0916**: wrong answer: 'Unos 3.000 años' → 'Unos 3000 años'.
+- **q-0917**: fun_fact: '4.892 metros' → '4892 metros'.
+- **q-0918**: fun_fact: '1.500 metros cúbicos' → '1500 metros cúbicos' and '2.200 años' → '2200 años'.
+- **q-0919**: description: 'su torta de cumpleaños' → 'su pastel de cumpleaños'; question: '4.800 años' → '4800 años'.
+- **q-0921**: answer: 'Unas 13.500 toneladas' → 'Unas 13 500 toneladas'; wrong answers: 'Unas 1.350 toneladas' → 'Unas 1350 toneladas', 'Unas 135.000 toneladas' → 'Unas 135 000 toneladas'.
+- **q-0926**: description: 'oscuro, viejito y ya jubilado' → 'oscuro, viejo y ya jubilado'.
+- **q-0931**: fun_fact: 'tirada por burritos' → 'tirada por burros'.
+- **q-0935**: hint 3: 'Tienen llantas gigantes' → 'Tienen ruedas gigantes'.
+- **q-0941**: description: 'linterna del celular' → 'linterna del teléfono'
+- **q-0942**: fun_fact: '30.000 °C' → '30 000 °C'
+- **q-0944**: description: 'botas pantaneras' → 'botas de lluvia'
+- **q-0947**: answer: 'El bombillo' → 'La bombilla'
+- **q-0953**: description: 'el cuarto de los chécheres de la abuela' → 'el cuarto de los cachivaches de la abuela'
+- **q-0959**: hint 2: 'un computador' → 'una computadora'; fun_fact: 'las hojas de vida de mujeres' → 'los currículums de mujeres'
+- **q-0960**: hint 2: 'Los GPS de los carros' → 'Los GPS de los vehículos'; hint 3: 'por el parlante' → 'por el altavoz'
+- **q-0963**: description: 'cinco minuticos más' → 'cinco minutitos más'
+- **q-0969**: hint 3: 'se maneja por la izquierda' → 'se conduce por la izquierda'
+- **q-0971**: hint 2: 'el bus' → 'el autobús'
+- **q-0984**: description: 'Un paseo de olla' → 'Un paseo al campo'; question: 'agua de la llave' → 'agua del grifo'
+- **q-0988**: description: '2.000 años' → '2000 años'; question: '2.300 años' → '2300 años'; fun_fact: '2.000 años' → '2000 años'
+- **q-0990**: fun_fact: '2.520' → '2520'
+- **q-0991**: description: '2.000 años' → '2000 años'
+- **q-0992**: wrong answer 1: '6.000 pesos' → '6000 pesos'; wrong answer 2: 'Si un carro recorre' → 'Si un vehículo recorre'; wrong answer 3: '2.000 pesos' → '2000 pesos'
+- **q-0994**: description: 'solitas' → 'solas'
+- **q-0995**: fun_fact: 'un carro pequeño' → 'un vehículo pequeño'
+- **q-1004**: description: 'un ratico' → 'un rato'
+- **q-1006**: fun_fact: 'como dije en collares' → 'como colgante en collares'
+- **q-1009**: description: 'dejan regado' → 'dejan suelto'; hint 2: 'arquero' → 'portero'
+- **q-1012**: wrong answer 2: 'Para botar el agua de los oídos' → 'Para sacar el agua de los oídos'
+- **q-1013**: hint 2: 'la tina' → 'la bañera'
+- **q-1035**: wrong answer 1: 'Hace unos 10.000 años' → 'Hace unos 10 000 años'
+- **q-1038**: description: 'pitillo' → 'pajita'
+- **q-1042**: description: 'regar las matas' → 'regar las plantas'
+- **q-1043**: hint 2: '4.800 años' → '4800 años'
+- **q-1045**: description: 'Las maticas' → 'Las plantas'; question: 'una matica' → 'una planta'; fun fact: 'la matera' → 'la maceta', 'derechita' → 'derecha'.
+- **q-1046**: description: 'se pone su mejor pinta' → 'se pone su mejor traje'.
+- **q-1048**: wrong answer: 'Para espantar los zancudos' → 'Para espantar los mosquitos'.
+- **q-1050**: wrong answer: 'Una pantaloneta' → 'Un pantalón corto'.
+- **q-1052**: hint 3: 'Los zancudos se quedan por fuera zumbando.' → 'Los insectos que pican se quedan por fuera zumbando.' (avoid 'mosquitos', too close to the answer).
+- **q-1053**: question: 'un tiquete equivale' → 'un boleto equivale'.
+- **q-1054**: hint 1: 'en la droguería' → 'en la farmacia'.
+- **q-1055**: description: 'botar' → 'tirar'; question: 'usar y botar' → 'usar y tirar'.
+- **q-1057**: wrong answer: 'Prendería' → 'Casa de empeño'; hint 2: 'un carro destartalado' → 'un vehículo destartalado'; hint 3: 'cuando el motor no prende' → 'cuando el motor no arranca'.
+- **q-1058**: hint 3: '5.600 metros' → '5600 metros'; fun fact: '5.642 metros' → '5642 metros', '4.806 m' → '4806 m'.
+- **q-1060**: question: 'el viejito' → 'el anciano'; fun fact: '2.000 millones' → '2000 millones'.
+- **q-1063**: answer: '9.000 años' → '9000 años'; question: 'firmó el arriendo' → 'firmó el alquiler'; hint 1: 'cualquier arriendo normal' → 'cualquier alquiler normal'; fun fact: 'El arriendo' → 'El alquiler'.
+- **q-1066**: description: 'cualquier torta' → 'cualquier pastel'; answer: 'Unos 4.800 años' → 'Unos 4800 años'; wrong answer: 'Unos 48.000 años' → 'Unos 48 000 años'.
+- **q-1067**: hint 3: 'con cachos y cola' → 'con cuernos y cola'.
+- **q-1069**: fun fact: '1.000 kilómetros' → '1000 kilómetros'.
+- **q-1070**: hint 2: 'en un arco' → 'en una portería'; hint 3: 'Hay un arquero' → 'Hay un portero'.
+- **q-1072**: hint 3: 'los Olímpicos de París' → 'los Juegos Olímpicos de París'.
+- **q-1075**: question: 'prende luces' → 'enciende luces', 'no prende' → 'no se enciende'; hint 3: 'El celular' → 'El teléfono', 'poquita' → 'poca'.
+- **q-1077**: question: 'una fábrica de carros' → 'una fábrica de automóviles'.
+- **q-1079**: description: 'Un carro de juguete que costó más que todos los carros de tu barrio juntos' → 'Un vehículo de juguete que costó más que todos los vehículos de tu barrio juntos'; hint 1: 'un carro normal' → 'un automóvil normal'.
+- **q-1088**: hint 1: 'muchos computadores' → 'muchas computadoras'; hint 2: 'el computador' → 'la computadora'.
+- **q-1090**: hint 3: 'un bombillo' → 'una bombilla'.
+- **q-1092**: description: 'El saco negro elegante tiene muchos enemigos' → 'La chaqueta negra elegante tiene muchos enemigos'; question: 'cinta pegante' → 'cinta adhesiva', 'tu saco oscuro' → 'tu chaqueta oscura'; fun fact: 'La cinta pegante transparente' → 'La cinta adhesiva transparente'.
+- **q-1093**: question: 'la palabra 'PARE' pintada muy estirada en la calle' → 'las letras pintadas muy estiradas en la calle' (stop-sign word differs by country: PARE/ALTO/STOP); hint 3: 'dónde estés parado' → 'dónde te pongas'.
+- **q-1094**: wrong_answers[1]: 'celular' → 'teléfono' ('Sentir que el teléfono vibra en el bolsillo aunque no vibre'); fun_fact: '2.300' → '2300'
+- **q-1097**: question: 'fríjoles' → 'frijoles'; fun_fact: 'fríjoles' → 'frijoles'
+- **q-1100**: description: 'bombillo' → 'bombilla' ('del color de una bombilla')
+- **q-1102**: description: 'trancón' → 'embotellamiento' ('menos paciencia que un embotellamiento')
+- **q-1112**: wrong_answers[0]: 'buses' → 'autobuses' ('Los autobuses no tienen conductor')
+- **q-1113**: hint 1: 'perro bravo' → 'perro feroz'
+- **q-1115**: answer: 'Computador' → 'Computadora'; fun_fact: 'por computador' → 'por computadora'
+- **q-1120**: description: 'hueco' → 'agujero'
+- **q-1121**: description: 'hoja de vida' → 'currículum'
+- **q-1122**: question: 'habichuelas mágicas' → 'frijoles mágicos'
+- **q-1123**: hint 3: 'gaseosa de jengibre' → 'refresco de jengibre'
+- **q-1131**: hint 2: 'fríjoles' → 'frijoles'
+- **q-1134**: question: 'saca de su lonchera' → 'saca de su caja del almuerzo'
+- **q-1138**: description: 'da pesar comérselo' → 'da lástima comérselo'; question: 'Es una lonchera japonesa' → 'Es una caja de almuerzo japonesa'; fun_fact: 'concursos de loncheras decoradas' → 'concursos de cajas de almuerzo decoradas'
+- **q-1142**: hint 1: 'antes de que existieran las estufas' → 'antes de que existieran las cocinas modernas'
+- **q-1143**: hint 3: 'tiene una pepa enorme' → 'tiene una semilla enorme'
+- **q-1145**: description: 'cobijita' → 'mantita'
+- **q-1150**: question: 'chiquitico' → 'chiquito'
+- **q-1151**: description: 'cobra cero pesos' → 'no cobra ni un centavo' (pesos is a national currency)
+- **q-1154**: hint 3: 'un carro pequeño' → 'un automóvil pequeño'
+- **q-1159**: description: 'un celular nuevo' → 'un teléfono nuevo'
+- **q-1162**: description: 'los oficios de la casa' → 'los quehaceres de la casa'; question: 'corta el pasto' → 'corta el césped'; hint 2: 'los oficios' → 'los quehaceres'
+- **q-1164**: hint 2: 'los celulares con pantalla táctil' → 'los teléfonos con pantalla táctil'
+- **q-1166**: description: 'parquear' → 'estacionar'
+- **q-1170**: question: 'chiquitico' → 'chiquito'
+- **q-1171**: hint 1: 'computadores' → 'computadoras'
+- **q-1172**: description: 'Un computador que se cansó' → 'Una computadora que se cansó'; wrong answer: 'En el carro' → 'En el automóvil'; fun fact: 'Uno de los primeros computadores portátiles' → 'Una de las primeras computadoras portátiles'
+- **q-1173**: question: 'el cerebro del computador' → 'el cerebro de la computadora'; wrong answer: 'De miles de millones de bombillos' → 'De miles de millones de bombillas'
+- **q-1174**: description: 'tomando tinto' → 'tomando café'; hint 2: 'los computadores' → 'las computadoras'; hint 3: 'la pega de las pistolas de silicona' → 'las barras de las pistolas de silicona'
+- **q-1176**: question: 'tu celular' → 'tu teléfono'
+- **q-1178**: hint 3: 'se pincha el carro' → 'se pincha un automóvil'
+- **q-1179**: wrong answer: 'Unos 1.000 km/h' → 'Unos 1000 km/h'; hint 1: 'un carro en la autopista' → 'un automóvil en la autopista'; hint 3: 'un carro de Fórmula 1' → 'un auto de Fórmula 1' (or 'un Fórmula 1')
+- **q-1180**: description: 'tienes afán' → 'tienes prisa'; hint 2: 'pasar la plata' → 'pasar el dinero'
+- **q-1181**: description: 'tanquea' → 'carga combustible'
+- **q-1188**: hint 3: 'la pelotica' → 'la bolita'; fun fact: '2.000 años' → '2000 años'
+- **q-1194**: question: 'gaseosa de cola' → 'refresco de cola'
+- **q-1195**: wrong answer 3: 'Teclados de computador' → 'Teclados de computadora'; question: 'crema dental' → 'pasta de dientes' and 'trapito' → 'trapo'
+- **q-1196**: wrong answers: '16.000' → '16 000', '160.000' → '160 000', '1.600' → '1600'
+- **q-1197**: answer: 'Fríjoles' → 'Frijoles'; fun fact: 'fríjoles' → 'frijoles'; hint 1: 'garra' (Colombian cut of pork) → 'carne de cerdo'
+- **q-1198**: question: '10.000' → '10 000'
+- **q-1199**: question: 'un juguito amarillo' → 'un líquido amarillo'
+
+## No neutral form
+
+- q-0013: wrong_answers: 'agua de la llave' (llave/grifo/canilla)
+- q-0165: 'paleta' (answer: 'Se congeló y nació la paleta'). Spain says 'polo', Mexico and Colombia say 'paleta', Argentina says 'helado de palito'. 'Paleta helada' may be the most widely understood choice.
+- q-0213: carro (hint 1, if not reworded)
+- q-0214: carro (description), carros (question, fun_fact)
+- q-0215: carros (description, question, fun_fact), carro (hint 2)
+- q-0274: answer 'Canastas de duraznos' (durazno/melocotón): keep 'duraznos', the most widespread Latin American form
+- q-0276: answer 'carro' (carro/coche/auto): 'La bocina de un carro' could become 'La bocina de un auto', but no shared form exists; fun fact 'Los primeros carros' likewise
+- q-0375: papas fritas (patatas fritas in Spain)
+- q-0376: papas; ají (chile/guindilla)
+- q-0377: arveja (guisante/chícharo)
+- q-0379: patineta (monopatín/skate)
+- q-0423: patineta (monopatín/skate)
+- q-0424: repollo morado (col lombarda)
+- q-0462: 'garrocha' (answer, hint 1–3, fun fact): Spain says 'pértiga', but 'garrocha' is the most widespread Latin American form and is the answer itself
+- q-0512: durazno (Spain: melocotón); hint 3 depends on the fruit name, keep the widespread Latin American form
+- q-0685: ají (picante): chile in Mexico, guindilla in Spain; no shared form
+- q-0706: perro caliente (description pun and fun_fact): hot dog / perrito caliente / pancho vary by country
+- q-0760: description: 'nevera' (refrigerador/heladera/frigorífico); widely understood, can stay
+- q-0779: question: 'carrito de juguete' (carro/coche/auto)
+- q-0784: hint 3: 'carro de carreras' (carro/coche/auto)
+- q-1057: hint 3: 'carro' inside the quoted phrase «Ese carro ya está para…»; it could become 'coche' or 'auto', but neither is neutral, so keep 'carro' as the most widespread Latin American form unless the hint is reworded.
+- q-1114: hint 3: 'carro de carreras' (carro/coche/auto; no natural rewording)
+- q-1162: 'trapea' (question) and 'robots trapeadores' (fun fact): Spain says 'fregar', no natural shared verb
+- q-1196: ají/ajíes (chile, guindilla) in question and fun fact
+- q-1197: Arvejas (guisantes, chícharos) in wrong answers
+- q-1198: arvejas (guisantes, chícharos) in fun fact
+
+## Audit
+
+A second LLM reader of a seeded sample (plan 16, `prompts/audit.md`), blind to the review. It changes nothing in the pool; the developer decides its findings in the review tool.
+
+- Major among review approved: 6 of 57 (11 %)
+- Major among review needs work: 1 of 3 (33 %)
+- Problems by kind: giveaway 16 (4 major), fact 2 (0 major), media 8 (5 major), difficulty 6 (1 major), style 13 (2 major), other 1 (1 major)
+- Mean |audit − final difficulty|: 0.8; ≥ 3 on 5 of 60 (8 %)
+- Audit/review agreement (both accept or both not): 52 of 60 (87 %)
+- Sample: 60 audited of 60; 60 Claude calls, about $2.74
+
+Major findings on approved questions:
+
+- **q-0014**: style, other — The description ("saber si sabes dónde estás parado, literalmente") assumes the players live in Colombia, which is wrong for a `base` question played worldwide; it sounds like it belongs in the `colombia` bundle. Hint 2 ("Desde España…") also takes Spain's point of view, and the "America" answer won't carry over cleanly to languages where North and South America are separate continents. The answer, the wrong answers, the fun fact (Panama counts as Central America) and the Cartagena image all check out. (http://127.0.0.1:8001/review/q-0014)
+- **q-0057**: media — The illustrative image (title: "…one Perseid, Milky Way and Andromega galaxy…") shows the answer itself, the Milky Way band, sharp on the TV, plus one wrong option (Andromeda). That breaks the rule that illustrative media must not show the answer, so a decorative image or one of a generic spiral galaxy is needed. The facts check out: Vía Láctea is correct, the 100–400 billion star range is standard, and the Greek myth of spilled milk (Hera) is real. The difficulty of 3 fits. (http://127.0.0.1:8001/review/q-0057)
+- **q-0285**: giveaway, media — The essential video, "Old Faithful Geyser Eruption selection 2019", shows the eruption itself, so asking "¿Qué pasa después?" answers itself as soon as the jet of water appears. The file title also names the geyser eruption. The facts check out: geyser water is close to boiling, and Geysir comes from Old Norse geysa, "to gush". The difficulty of about 4 is fine. (http://127.0.0.1:8001/review/q-0285)
+- **q-0473**: media — The question needs an essential photo, but File:Acrylic Heels.jpg is a 2007 shot of a woman's leg in clear acrylic platform sandals. That is a modern club-style shoe, not a recognisable glass slipper, so the question's "este famoso zapato" doesn't match the picture, and the photo is out of place in a family game. The answer, the hints and the Grimm golden-slipper fun fact are correct, and it doesn't overlap with any related question. (http://127.0.0.1:8001/review/q-0473)
+- **q-1172**: style, giveaway, media — This `base` question depends on knowing what an English word means ("lap" + "top"). That breaks the International angle rule: in the English version the answer sits right in the question, so it can't be played in every language. Hint 2 translates "lap", which gives the answer away. The essential photo shows a laptop on a desk, which points to the wrong answer "Sobre el escritorio" and isn't needed for the question anyway. The fun fact is roughly right: sources give the Osborne 1's weight as 10.7–11.1 kg. (http://127.0.0.1:8001/review/q-1172)
+- **q-1188**: giveaway, difficulty — The question text says the trick "hace aparecer y desaparecer bolitas", and the answer "Los cubiletes y las bolitas" is the only option that mentions balls, so anyone can match the word without knowing the trick. That brings the real difficulty down to about 3, not 7. The facts check out: Seneca mentions cups and balls in Epistle 45, the lemon is a common final load, and "almost 2000 years" is fine for Seneca (died 65 AD). Hint 2 (upside-down containers) also nearly points to the answer on its own. (http://127.0.0.1:8001/review/q-1188)
+
+## Needs work
+
+- **q-0042** ¿Cuál es el hueso más largo del cuerpo humano? → El fémur: La pista 2 ("Va de la cadera a la rodilla") prácticamente define el fémur y regala la respuesta antes de la pista 3, que encima es más débil ("Está en el muslo"). Hay que cambiar la pista 2 por algo más vago (por ejemplo, que soporta mucho peso al caminar o al saltar) y dejar la ubicación en el muslo para la pista 3.
+- **q-0178** Alegría, Tristeza y Furia: ¿qué tienen en común? → Son emociones de 'Intensa-Mente': La descripción («Tres compañeros de trabajo que viven en tu cabeza…») describe la premisa de 'Intensa-Mente' y delata la respuesta antes de leer la pregunta. Hay que cambiarla por una frase sobre Pixar o el cine en general que no apunte a ninguna de las cuatro películas.
+- **q-0199** Mira la foto: ¿cómo se llama este famoso volcán nevado? → El monte Fuji: La pista 1 («Está en Asia») ya resuelve la pregunta: el Kilimanjaro está en África, el Nevado del Ruiz en América y el Etna en Europa, así que el Fuji es la única opción asiática. Cambia la pista 1 por algo vago que no descarte opciones (por ejemplo, sobre su forma casi perfecta de cono o sobre lo mucho que lo pintan los artistas), y suaviza un poco la pista 2.
+- **q-0202** Escucha: ¿qué animal de la selva amazónica hace este sonido? → El mono aullador: Verificación de datos: uncertain. The answer is right, but the audio is a mantled howler (Alouatta palliata), which lives in Central America and northwestern South America, not the Amazon. The question says 'selva amazónica'. This is from memory, not searched.
+- **q-0338** Mira la foto: ¿cómo se llama este aparato con antenas y lucecitas que reparte el wifi por toda la casa? → Router: Ningún candidato sirve como imagen esencial. Las fotos 1 y 2 muestran la parte de abajo de un router Huawei, sin antenas ni lucecitas y con etiquetas de marca y wifi legibles. La 3 es un espejo retrovisor con cámara y la 4 es un camión de bomberos. Hace falta una foto frontal y clara de un router doméstico con antenas y LEDs visibles, sin texto que diga la respuesta.
+- **q-0340** Mira la foto: ¿cómo se llama este juguete? → Trompo: Verificación de datos: uncertain. Text is correct (trompo; ancient tops found in Egypt and Greece), but the chosen image (Sasebo Koma, a Japanese top) may not be the classic wooden trompo with metal tip and string that the note requests. I did not view the image.
+- **q-0388** ¿Qué capa de gas, que tuvo un famoso 'agujero' sobre la Antártida, nos protege de los rayos ultravioleta del Sol? → La capa de ozono: El dato curioso dice que «casi todos los países firmaron el Protocolo de Montreal en 1987», pero en 1987 solo lo firmaron unas pocas decenas de países; la ratificación casi universal llegó después (universal en 2009). Reformular, p. ej.: «Gracias al Protocolo de Montreal, firmado en 1987 y adoptado luego por todos los países, el agujero se está cerrando poco a poco».
+- **q-0390** ¿Qué órgano dejaban los egipcios dentro de la momia porque creían que lo pesarían en el más allá? → El corazón: Se solapa con q-0834 (aprobada, misma subcategoría): su texto dice que el amuleto llevaba un hechizo «para que su corazón no hablara mal de ella en el juicio de los muertos», así que quien la vea ya sabe que el órgano juzgado en el más allá era el corazón. Hay que quitar una de las dos o reescribir q-0834 sin mencionar el corazón.
+- **q-0394** ¿Qué deportista ha ganado más medallas de oro olímpicas en toda la historia? → Michael Phelps: El fun fact ("En los Juegos de Pekín 2008, Michael Phelps ganó 8 medallas de oro") da exactamente la respuesta de q-1015 (aprobada), que pregunta en qué año ganó Phelps 8 oros en Pekín. Hay que cambiar el fun fact por otro dato (p. ej., que ganó 28 medallas en total) o retirar una de las dos preguntas.
+- **q-0451** ¿Para qué construyeron los antiguos egipcios las pirámides de Guiza? → Como tumbas para los faraones: Se solapa con q-1714 (aprobada), cuyo texto dice que las pirámides de Egipto «dentro guardaban momias»: quien vea esa pregunta ya sabe que eran tumbas. Conviene quedarse con una sola o reformular q-1714 sin la pista de las momias.
+- **q-0564** El 28 de diciembre es el día de las bromas en muchos países de habla hispana. ¿A qué grupo de un relato de la Biblia le debe su nombre? → Los Santos Inocentes: Se solapa con q-0497 (aprobada), que pregunta en qué fecha se celebra el Día de los Inocentes (28 de diciembre). Esta pregunta da esa fecha en su enunciado, y el texto de q-0497 nombra «Inocentes», así que cada una delata la respuesta de la otra. Hay que descartar una de las dos o cambiar el enfoque de esta por completo.
+- **q-0606** Mira la cabeza de esta ave de la selva, con su cresta rizada: ¿de qué aves es pariente cercana? → De las gallinas y los pavos: El dato curioso dice que el paujil «vive en lo alto de los árboles», pero eso es inexacto: busca comida caminando por el suelo de la selva y solo duerme y anida en los árboles. Además contradice la pista 1. Corregirlo, por ejemplo así: «El paujil vive en parejas, camina por el suelo de la selva y suele poner solo dos huevos por nidada». Verificación de datos: wrong. The fun fact says the curassow lives high in the trees. That contradicts the hint, and it is inaccurate: curassows mostly walk and forage on the forest floor and only nest and roost in trees. This is from memory, not searched.
+- **q-0654** La capital de este país, resaltado en el mapa, tiene un nombre que significa "flor nueva" en el idioma local. ¿Cuál es? → Addis Abeba: Verificación de datos: wrong. Text facts are right (Addis Ababa = 'new flower'), but the essential media doesn't match: the question says 'highlighted on the map', yet the file is a photo of Ethiopia's salt flats at sunrise, not a locator map. Also the fun fact says Addis is 'almost as high as Bogotá' (about 2640 m), which is loose.
+- **q-0684** En una pizzería, el chef saca del refrigerador ricotta, mozzarella y parmesano. ¿Qué son las tres cosas? → Quesos italianos: La descripción («Lo que pasa cuando la leche decide…») apunta directamente a la leche, y de las cuatro opciones solo el queso sale de la leche, así que delata la respuesta antes de la pregunta; la pista 1 («Las tres se hacen con leche») hace lo mismo. Hay que reescribir la descripción sin mencionar la leche ni los lácteos, y cambiar la pista 1 por algo más vago (por ejemplo, que en Italia cada región tiene los suyos).
+- **q-0732** Adivina: soy un partido sin árbitro, sin uniformes y sin estadio. Me juegan los amigos en la calle o en el parque, y se acaba cuando llaman a almorzar. ¿Cómo me llaman? → Picadito: La respuesta «Picadito» es un regionalismo rioplatense (Argentina/Uruguay); en el resto de Latinoamérica se dice cascarita, pichanga, chamusca, mejenga o partidito, así que una pregunta `base` no puede depender de esa palabra. Como no existe un término neutral compartido, conviene retirarla del bundle base o pasarla a un bundle regional. Además, Villa Fiorito está en la provincia de Buenos Aires, no en la ciudad.
+- **q-0752** El médico Ronald Ross descubrió que la malaria la transmite el insecto que hace este sonido. Escucha: ¿cuál es? → El zancudo: No usable allowlisted sound (decision 184): the Freesound pick was dropped (D-103); needs a new audio pick or another stimulus.
+- **q-1052** El 'toldillo' se cuelga del techo, se usa sobre todo de noche y está hecho de una tela llena de agujeritos muy finos. ¿Qué es un toldillo? → Un mosquitero: La pregunta está en el bundle `base`, pero se apoya por completo en «toldillo», una palabra regional de Colombia. Que alguien sepa responderla depende de conocer ese uso colombiano, así que corresponde al bundle `colombia` (o habría que reformularla en torno a «mosquitero», pero entonces sería otra pregunta).
+- **q-1077** Un brazo robótico trabaja en una fábrica de automóviles. Si de repente se dañaran todos sus actuadores, ¿qué le pasaría? → Se quedaría quieto: La pista 1 («Los actuadores no ven, no recuerdan y no guardan energía») descarta una por una las tres respuestas incorrectas, así que ya en la primera pista solo queda «Se quedaría quieto». Hay que cambiarla por una pista vaga que no elimine opciones, por ejemplo una sobre que todo robot tiene sensores, un controlador y actuadores.
+- **q-1143** Si en el mundo dicen 'Colombia' y piensan en café, cuando dicen 'Michoacán' piensan en… → Aguacate: La pista 2 («Es la base del guacamole») revela la respuesta: cualquiera sabe que el guacamole se hace con aguacate, así que la pregunta se resuelve antes de la pista 3, que en realidad es más vaga. Además, la pista 2 repite el dato de q-0377. Conviene cambiarla por una pista intermedia (por ejemplo, que es un fruto que muchos creen verdura) y dejar «verde por fuera, semilla enorme» como pista 3.
+- **q-1181** Si la locomotora de vapor es al carbón, las locomotoras de carga de hoy suelen ser al… → Diésel: La descripción («carga combustible en el mismo lado que los camiones») delata la respuesta: los camiones cargan diésel, y leña, agua y pilas quedan descartadas de inmediato. Hay que reescribir la descripción para que no aluda a gasolineras ni a camiones, por ejemplo con una broma sobre el humo o el ruido de las locomotoras.
+- **q-1197** Mira este acercamiento: ¿cómo se llaman estos granos? → Frijoles: Verificación de datos: uncertain. The text is correct. But the image file is a mixture of beans, peas and pardina lentils. If the picture isn't cropped to red kidney beans, it shows lentils and peas, which are listed as wrong answers.
