@@ -25,6 +25,10 @@
     "spain": {
       "name": "Regional: Spain",
       "description": "For anyone with ties to Spain: its places, food, customs, people, music, sport and words."
+    },
+    "mexico": {
+      "name": "Regional: Mexico",
+      "description": "For anyone with ties to Mexico: its places, food, customs, people, music, sport and words."
     }
   },
   "age_groups": {
