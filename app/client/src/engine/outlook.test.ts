@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { STANDARD_JOKERS } from "./game.ts";
-import { noteRunningOut, outlook } from "./outlook.ts";
+import { noteRunningOut, outlook, sessionOutlook } from "./outlook.ts";
 import type { AgeGroup, Bundle, PoolQuestion } from "./pool.ts";
 import { emptySave, engineData, type SaveData } from "./state.ts";
 
@@ -59,4 +59,12 @@ test("outlook: bundles running out, noted once, pruned when unseen again", () =>
   assert.deepEqual(outlook(noted, data, both).runningOut, []);
   assert.deepEqual(noteRunningOut({ ...noted, seen: [] }, data, both, []).notified_exhausted, []);
   assert.deepEqual(noteRunningOut({ ...save, notified_exhausted: ["X"] }, data, both, []).notified_exhausted, []);
+});
+
+test("sessionOutlook: rr-competitive splits by age group, lowest k wins", () => {
+  const rr = { ...solo, mode: "rr-competitive" as const };
+  const s = sessionOutlook(emptySave(), data, rr, ["g", "g"]);
+  assert.deepEqual(s.groups.map((g) => [g.age_group, g.players]), [["g", 2]]);
+  assert.equal(s.outlook.k, outlook(emptySave(), data, { ...rr, players: 2 }).k);
+  assert.equal(sessionOutlook(emptySave(), data, { ...solo, mode: "rr-coop" }).outlook.k, outlook(emptySave(), data, solo).k);
 });

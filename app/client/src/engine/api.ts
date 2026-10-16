@@ -1,7 +1,7 @@
 // The former game routes of app/server/main.py (gone since PORT-8) on the engine (PORT-3, plan 20): same {status, body} as recorded.
 import type { Choice, Game, GameMode, JokerEvent, Player, Supply } from "../lib/types.ts";
 import * as game from "./game.ts";
-import { noteRunningOut as noteRunningOutIn, outlook as outlookOf, type Outlook } from "./outlook.ts";
+import { noteRunningOut as noteRunningOutIn, outlook as outlookOf, sessionOutlook, type Outlook } from "./outlook.ts";
 import { pyInt, pyStr, pyTruthy } from "./pycompat.ts";
 import type { EngineData, Io, Language, SaveData } from "./state.ts";
 import { GameError } from "./state.ts";
@@ -108,14 +108,16 @@ export function gameAction(save: SaveData, data: EngineData, io: Io, action: str
   });
 }
 
-/** Supply outlook for the start screen (plan 65): body = choice + mode (+ players). */
+/** Supply outlook for the start screen (plan 65): body = choice + mode (+ players, or `age_groups` per seat: the session's lowest). */
 export function outlook(save: SaveData, data: EngineData, body: Record<string, unknown>): Reply<Outlook> {
   return guard(save, 409, () => {
     const choice = game.resolveChoice(data, pick(body, game.CHOICE_KEYS));
     const mode = body.mode ?? "gamemaster";
     if (!(game.MODES as unknown[]).includes(mode)) throw new GameError("mode_unknown", { mode: String(mode) });
     const players = typeof body.players === "number" && Number.isInteger(body.players) && body.players > 0 ? body.players : 1;
-    return { save, status: 200, body: outlookOf(save, data, { ...choice, mode: mode as GameMode, players }) };
+    const seatGroups = Array.isArray(body.age_groups) ? body.age_groups.filter((g): g is string => typeof g === "string") : [];
+    const full = { ...choice, mode: mode as GameMode, players };
+    return { save, status: 200, body: seatGroups.length ? sessionOutlook(save, data, full, seatGroups).outlook : outlookOf(save, data, full) };
   });
 }
 
