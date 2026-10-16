@@ -74,14 +74,21 @@ def health_problems(metrics):
     return out
 
 
+def approved_entries(pool_questions, bundle, locale=None):
+    """The bundle's approved questions in a locale (decision 235): its approved sources in that locale and the
+    playing translations into it, with the translation's difficulty; without a locale every approved source."""
+    src = [q for q in pool_questions if q.get("bundle") == bundle]
+    if locale is None:
+        return [q for q in src if q["status"] == "approved"]
+    ts = {t["id"]: t for t in translations.load(locale)["questions"]}
+    return [q if translations.source_locale(q) == locale else {**q, "difficulty": ts[q["id"]]["difficulty"]}
+            for q in src if (q["status"] == "approved" if translations.source_locale(q) == locale
+                             else q["id"] in ts and translations.plays(ts[q["id"]], q))]
+
+
 def approved_by_level(pool_questions, bundle, locale=None):
-    """Counter {difficulty: approved} of the bundle; with a locale other than es, its playing
-    translations by their own difficulty (D-81, plan 70)."""
-    if locale in (None, "es"):
-        return Counter(q["difficulty"] for q in pool_questions if q["status"] == "approved" and q.get("bundle") == bundle)
-    src = {q["id"]: q for q in pool_questions if q.get("bundle") == bundle}
-    return Counter(t["difficulty"] for t in translations.load(locale)["questions"]
-                   if t["id"] in src and translations.plays(t, src[t["id"]]))
+    """Counter {difficulty: approved} of approved_entries (D-81, plan 70, decision 235)."""
+    return Counter(q["difficulty"] for q in approved_entries(pool_questions, bundle, locale))
 
 
 def deficits(pool_questions, bundle, locale=None):
@@ -95,36 +102,38 @@ def deficits(pool_questions, bundle, locale=None):
     return out if any(out.values()) else None
 
 
-def source_supply(pool_questions, bundle="base"):
-    """Per translation locale (plan 70, CT-4): yield, and per source level the es sources its deficit
-    needs (deficit / yield) and the approved, translatable ones not yet translated (or stale)."""
+def source_supply(pool_questions, bundle="base", draft="en"):
+    """Per question locale (plan 70, decision 236): yield, the deficit, and per level the approved, translatable
+    sources in another locale not yet translated into it (or stale); `draft`: the drafting locale."""
     out = {}
-    for l in [x for x in translations.LOCALES if x != "es"]:  # es sources' targets; task 1236 for en sources
+    for l in translations.LOCALES:
         ts = {t["id"]: t for t in translations.load(l)["questions"]}
-        y = translations.yield_rate(l)
         untranslated = Counter(q["difficulty"] for q in pool_questions
                                if q["status"] == "approved" and q.get("bundle") == bundle and translations.translatable(q)
+                               and translations.source_locale(q) != l
                                and (q["id"] not in ts or translations.is_stale(ts[q["id"]], q)))
-        need = {lvl: math.ceil(n / max(y, MIN_YIELD)) for lvl, n in (deficits(pool_questions, bundle, l) or {}).items()}
-        out[l] = {"yield": y, "need": need, "untranslated": dict(untranslated)}
+        out[l] = {"yield": translations.yield_rate(l), "deficit": deficits(pool_questions, bundle, l) or {},
+                  "untranslated": dict(untranslated), "draft": l == draft}
     return out
 
 
-def source_shortfall(pool_questions, bundle="base", pending=None, supply=None):
-    """{level: es sources to draft for the translations}: largest over the locales of need −
-    untranslated (− `pending`: es deficits still to draft); None when zero (plan 70)."""
+def locale_gap(s, lvl):
+    """Sources to draft for one locale's deficit at a level (decision 236): deficit / yield − untranslated;
+    the drafting locale takes its drafts 1:1 and the others' translations at its yield."""
+    y = max(s["yield"], MIN_YIELD)
+    d, u = s["deficit"].get(lvl, 0), s["untranslated"].get(lvl, 0)
+    return max(0, math.ceil(d - u * y) if s["draft"] else math.ceil(d / y) - u)
+
+
+def draft_gaps(pool_questions, bundle, supply=None):
+    """What `draft` aims at (D-54): for base the largest over the question locales of locale_gap (decision 236),
+    else the bundle's own deficits (D-101); None: even weights (D-40)."""
+    if bundle != "base":
+        return deficits(pool_questions, bundle)
     supply = supply or source_supply(pool_questions, bundle)
-    pending = pending or {}
     levels = (load_targets(bundle) or {}).get("difficulty", {})
-    out = {lvl: max([0] + [s["need"].get(lvl, 0) - s["untranslated"].get(lvl, 0) - pending.get(lvl, 0)
-                           for s in supply.values()]) for lvl in levels}
+    out = {lvl: max(locale_gap(s, lvl) for s in supply.values()) for lvl in levels}
     return out if any(out.values()) else None
-
-
-def draft_gaps(pool_questions, bundle):
-    """What `draft` aims at (D-54, decision 37): the bundle's deficits; for base once they're met,
-    the es source shortfall of the translations; None: even weights (D-40)."""
-    return deficits(pool_questions, bundle) or (source_shortfall(pool_questions) if bundle == "base" else None)
 
 
 def category_shares(bundle):

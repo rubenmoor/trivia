@@ -965,7 +965,7 @@ Template:
   - **Entry per regional bundle:** `{"total": 2000, "difficulty": …}`, D-53's `base` mix scaled to 2000 (largest remainder, `targets.scaled`); `colombia`: 100, 140, 180 ×6, 132 ×3, 92 ×2, 50 ×2.
   - **Required:** `qgen validate` errors on a `kind: region` bundle without an entry; `qgen bundle new --kind region` writes it. Theme bundles: no target.
   - **Per locale:** the same numbers for each of the bundle's languages (`deficits(..., locale)`), as pm decision 37 for `base`.
-  - **Read by** `--bundle` drafting (`target_weights`, the subcategory ranking) and `qgen report --bundle <id> [--locale L]`. No `es` source shortfall for packs (`base` only, D-84).
+  - **Read by** `--bundle` drafting (`target_weights`, the subcategory ranking) and `qgen report --bundle <id> [--locale L]`. Packs aim at their own deficit, not `base`'s four-locale draft gap (D-107).
 - Consequences: `qgen report --bundle colombia` shows progress vs. 2000; `qgen batch --bundle colombia` aims at its deficits.
 - Supersedes / related: D-53 (amends: a regional bundle always has an entry), D-54, D-84, D-99; pm decisions 37, 110; plan 98
 
@@ -1054,6 +1054,9 @@ Template:
   - **Four question locales:** `en`, `es` (es-419, idiomatic Latin American, no compromise with Spain), `es-ES` (Spain's Spanish, own pool `pool.es-ES.json`), `de`; target 5000 approved each (D-75, pm decision 21).
   - **Drafting:** `qgen batch` for `base` drafts in English, international angle (no Spanish-world focus, no Anglo/US bias, no one-language wordplay); the whole chain on the English text; each en source → three translation jobs (`es`, `es-ES`, `de`). es-sourced questions stay es-sourced and get `en`, `de`, `es-ES` entries.
   - **Gap aiming:** the four question locales' deficits steer English drafting (pm decision 236); milestone 12's locales only by plan 60's decision.
+    - per question locale L: approved = `base` sources in L + playing translations into L (`targets.approved_entries`)
+    - draft gap per level = largest over the four of `targets.locale_gap`: deficit / yield − approved translatable sources not yet in L; `en` (the drafting locale) takes its drafts 1:1, untranslated es sources count at the en yield
+    - `qgen report [--locale L]`: progress per locale + the gap table; `--cost`: draft $/approved per source locale (es batches' rate until an en batch), translations into each of the four, projection = en drafts + the rest of each deficit translated
   - **Regional bundles unchanged:** drafted in the region's language (`colombia`: Colombian Spanish), translated to `en` (D-99).
 - Consequences: plan 148: schema/export, `es-ES` pool in the game, `qgen batch` per locale, `--translate` from either source, targets, review tool, prompts, docs; batch-9 waits for it.
 - Supersedes / related: amends D-6 (Colombian usage not for `base`), D-78 and D-83 (es-419 by translation, `es-ES` own pool), D-84 (two-stage source shortfall), D-86 / D-96 (`es-ES` questions), D-87 (es the only source locale); pm decisions 27 (for `base`, pending decision 237), 37 (last clause), 219, 235, 236
