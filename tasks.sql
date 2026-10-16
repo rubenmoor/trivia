@@ -16688,7 +16688,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
   - "no-go for <locale>" (one option per locale that misses)
 - Pend, stop. Never run `qgen health ack` yourself.
 - On the answer:
-  - go: QT-5 progress line for `en`, `de` in `plans/15b-question-translation.md` with the numbers (`[x]` only once all four locales are go, the other go/no-go task''s); the `decision 204: Translation pilot done (tr-en-1, tr-de-1)?` that task 463 (plan 70, release budget) waits on is the developer''s to answer.
+  - go: QT-5 progress line for `en`, `de` in `plans/15b-question-translation.md` with the numbers (`[x]` only once all four locales are go, the other go/no-go task''s).
   - changes first: check the change tasks exist (plan 66 / 148); add a second pilot pair `run tr-<locale>-2` / `QC tr-<locale>-2` only if the answer asks for it, else note it and leave the full chain to wait.
   - no-go for a locale: `pm decision add "Keep <locale> as a launch language?"` (decision 26 / D-78 are the developer''s), pend that locale''s full-run tasks (tasks 639–642 for its locale) on it.
 
@@ -16703,7 +16703,6 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 Before running, in this order; the first that fails → `pm task-pending-decision <this task> <decision>`, stop:
 - Task 638 (Translation pilot go/no-go en, de (QT-5)) done, and its answer is "go" for `en` (no-go or "changes first" still open → pend on that decision).
-- Task 463 (release budget per language, plan 70) done, `"budget"` in `targets.json` (open → pend on the decision blocking it).
 - Plan 17''s exit check (plan 17''s last task) done; if not, pend on the decision that blocks plan 17''s earliest open task (masterplan order: milestone 1''s batches first; the queue reaches -110 only when -100 is blocked).
 
 Then `nix develop -c qgen batch --translate en` (RUNBOOK steps 1–5). Exit 2 because `tr-en-1` isn''t acked: the decision rule below (the ack is the developer''s).
@@ -16720,14 +16719,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - If task 639 (run tr-en-2) isn''t done: pend on the decision that blocks it, stop. Dropped → drop this one too.
 - Spot check: `pm decision add "Spot check tr-en-2 done?"` (body: "native speaker of English needed", `trivia-authoring`, `http://127.0.0.1:8001/review?batch=tr-en-2&locale=en&sample=1`), pend, stop. The developer arranges the speaker; never answered by an LLM.
 - `qgen report --qc tr-en-2`; `pm decision add "QC tr-en-2: which changes?"`, pend; change tasks in plan 66 / 148 (or new plans) at their priority. Agreement below 90 % (decision 2, decision 15) only feeds the proposals. needs_work: nothing (picked again by the next run). Note approved, rejected and agreement per source locale (es → en, en → en) where `--qc` shows them.
-- Next step, first that applies (`qgen report --locale en`, `qgen report --cost`, `targets.json` `"budget"`):
+- Next step, first that applies (`qgen report --locale en`):
   1. Every level at `targets.json` `base` for `en` → no next pair; QT-6 progress line for `en` in `plans/15b-question-translation.md`; if `en`, `de`, `es-ES` and `es` are all done: QT-6 `[x]`, and `qgen report --locale <L>` for all four recorded in `plans/16-content-target.md`.
-  2. Spent ≥ `en`''s budget → `pm decision add "en over budget: continue?"`; add the next pair (`run tr-en-3` / `QC tr-en-3`, -110, bodies like task 639 / this one with n+1) and pend its run task on that decision.
-  3. The run selected fewer than 300 sources (approved sources not yet in `en` ran out) → the next pair still; its run task''s body adds: start only after a plan 17 batch QC done since `tr-en-2`, else pend on the decision blocking plan 17''s earliest open task. The remaining deficit is English drafting''s (plan 148''s gap aiming), never an `es` top-up.
-  4. Else the next pair `run tr-en-3` / `QC tr-en-3` (-110), bodies like task 639 / this one with n+1.
+  2. The run selected fewer than 300 sources (approved sources not yet in `en` ran out) → the next pair still; its run task''s body adds: start only after a plan 17 batch QC done since `tr-en-2`, else pend on the decision blocking plan 17''s earliest open task. The remaining deficit is English drafting''s (plan 148''s gap aiming), never an `es` top-up.
+  3. Else the next pair `run tr-en-3` / `QC tr-en-3` (-110), bodies like task 639 / this one with n+1.
 - One open pair per chain: don''t add a pair if one is already open.
 
-Done when: both decisions answered, change tasks and the next pair (or the 15b line) added; note with `--locale` levels and spent vs. budget.
+Done when: both decisions answered, change tasks and the next pair (or the 15b line) added; note with `--locale` levels and `qgen report --cost` ($ per approved, information only).
 
 ## pm-run rules (plan 84, plan 17 "Batch tasks under pm run")
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 148 or new).
@@ -16738,7 +16736,6 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 Before running, in this order; the first that fails → `pm task-pending-decision <this task> <decision>`, stop:
 - Task 638 (Translation pilot go/no-go en, de (QT-5)) done, and its answer is "go" for `de` (no-go or "changes first" still open → pend on that decision).
-- Task 463 (release budget per language, plan 70) done, `"budget"` in `targets.json` (open → pend on the decision blocking it).
 - Plan 17''s exit check (plan 17''s last task) done; if not, pend on the decision that blocks plan 17''s earliest open task (masterplan order: milestone 1''s batches first; the queue reaches -110 only when -100 is blocked).
 
 Then `nix develop -c qgen batch --translate de` (RUNBOOK steps 1–5). Exit 2 because `tr-de-1` isn''t acked: the decision rule below (the ack is the developer''s).
@@ -16755,14 +16752,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - If task 641 (run tr-de-2) isn''t done: pend on the decision that blocks it, stop. Dropped → drop this one too.
 - Spot check: `pm decision add "Spot check tr-de-2 done?"` (body: "native speaker of German needed", `trivia-authoring`, `http://127.0.0.1:8001/review?batch=tr-de-2&locale=de&sample=1`), pend, stop. The developer arranges the speaker; never answered by an LLM.
 - `qgen report --qc tr-de-2`; `pm decision add "QC tr-de-2: which changes?"`, pend; change tasks in plan 66 / 148 (or new plans) at their priority. Agreement below 90 % (decision 2, decision 15) only feeds the proposals. needs_work: nothing (picked again by the next run). Note approved, rejected and agreement per source locale (es → de, en → de) where `--qc` shows them.
-- Next step, first that applies (`qgen report --locale de`, `qgen report --cost`, `targets.json` `"budget"`):
+- Next step, first that applies (`qgen report --locale de`):
   1. Every level at `targets.json` `base` for `de` → no next pair; QT-6 progress line for `de` in `plans/15b-question-translation.md`; if `en`, `de`, `es-ES` and `es` are all done: QT-6 `[x]`, and `qgen report --locale <L>` for all four recorded in `plans/16-content-target.md`.
-  2. Spent ≥ `de`''s budget → `pm decision add "de over budget: continue?"`; add the next pair (`run tr-de-3` / `QC tr-de-3`, -110, bodies like task 641 / this one with n+1) and pend its run task on that decision.
-  3. The run selected fewer than 300 sources (approved sources not yet in `de` ran out) → the next pair still; its run task''s body adds: start only after a plan 17 batch QC done since `tr-de-2`, else pend on the decision blocking plan 17''s earliest open task. The remaining deficit is English drafting''s (plan 148''s gap aiming), never an `es` top-up.
-  4. Else the next pair `run tr-de-3` / `QC tr-de-3` (-110), bodies like task 641 / this one with n+1.
+  2. The run selected fewer than 300 sources (approved sources not yet in `de` ran out) → the next pair still; its run task''s body adds: start only after a plan 17 batch QC done since `tr-de-2`, else pend on the decision blocking plan 17''s earliest open task. The remaining deficit is English drafting''s (plan 148''s gap aiming), never an `es` top-up.
+  3. Else the next pair `run tr-de-3` / `QC tr-de-3` (-110), bodies like task 641 / this one with n+1.
 - One open pair per chain: don''t add a pair if one is already open.
 
-Done when: both decisions answered, change tasks and the next pair (or the 15b line) added; note with `--locale` levels and spent vs. budget.
+Done when: both decisions answered, change tasks and the next pair (or the 15b line) added; note with `--locale` levels and `qgen report --cost` ($ per approved, information only).
 
 ## pm-run rules (plan 84, plan 17 "Batch tasks under pm run")
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 148 or new).
@@ -16777,12 +16773,11 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Then: add the first es pair (priority -110)
 - `run batch-<n>` (next free batch number from `qgen`): `nix develop -c qgen batch --bundle colombia` (RUNBOOK steps 1–5; Colombian Spanish). Done when its report exists, printed paths staged, note with "Done:" line and report path.
-- `QC batch-<n>`: `authoring/QC.md` steps 1–4: spot check `pm decision add "Spot check batch-<n> done?"` (native speaker of Colombian Spanish; never answered by an LLM), `qgen report --qc batch-<n>`, `pm decision add "QC batch-<n>: which changes?"`, change tasks in their plans at their priority; decision 3''s `qgen rework` once after QC.
+- `QC batch-<n>`: `authoring/QC.md` steps 1–4: spot check `pm decision add "Spot check batch-<n> done?"` (native speaker of Colombian Spanish; never answered by an LLM), `qgen report --qc batch-<n>`, `pm decision add "QC batch-<n>: which changes?"`, change tasks in their plans at their priority; decision 3''s `qgen rework` once after QC; note `qgen report --cost` per bundle ($ per approved, information only).
   - The first QC of this chain also records the first effort numbers ($ per approved, `qgen report --cost` per bundle; the developer''s review time per 100, plan 98''s `qgen report` review-time line) in `plans/15c-regional-questions.md`: the chain is proven, chain 5''s start tasks read them.
   - Then, first that applies:
     1. `qgen report --bundle colombia` shows 2000 approved (es) → add the two closing tasks below.
-    2. Spent on `colombia` (`qgen report --cost`, per bundle) ≥ a bundle budget set by task 463 (plan 70), if any → `pm decision add "colombia over budget: continue?"`, add the next es pair and pend its run task on it.
-    3. Else the next es pair (same bodies, next batch number).
+    2. Else the next es pair (same bodies, next batch number).
 - Closing tasks (added by the QC that reaches 2000 es):
   - **Pilot effort**: $ per approved (`qgen report --cost`, per bundle) and the developer''s review time per 100 (plan 98''s `qgen report` line) recorded in `plans/15c-regional-questions.md` and `plans/16-content-target.md`. No "More regional bundles?" decision (chain 5 already runs them).
   - **First en pair**: `run tr-en-<n>` (`qgen batch --translate en --bundle colombia`; needs plan 98''s `--translate --bundle` done and the en pilot acked, chain 2 / `task 638: Translation pilot go/no-go en, de (QT-5)`; else pend on the blocking decision) + `QC tr-en-<n>` (QC.md "Translation runs": spot check "native speaker of English needed", `http://127.0.0.1:8001/review?batch=tr-en-<n>&locale=en&sample=1`, `trivia-authoring`; needs_work: nothing). The QC adds the next en pair until `qgen report --bundle colombia --locale en` (or the report plan 98 names) shows 2000 approved en; then `plans/15c-regional-questions.md` notes `colombia` es + en done.
@@ -29244,7 +29239,6 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 Before running, in this order; the first that fails → `pm task-pending-decision <this task> <decision>`, stop:
 - Task 1225 (Translation pilot go/no-go es-ES, es (QT-5)) done, and its answer is "go" for `es-ES` (no-go or "changes first" still open → pend on that decision).
-- Task 463 (release budget per language, plan 70) done, `"budget"` in `targets.json` (open → pend on the decision blocking it).
 - Plan 17''s exit check (plan 17''s last task) done; if not, pend on the decision that blocks plan 17''s earliest open task (masterplan order: milestone 1''s batches first; the queue reaches -110 only when -100 is blocked).
 
 Then `nix develop -c qgen batch --translate es-ES` (RUNBOOK steps 1–5). Exit 2 because `tr-es-ES-1` isn''t acked: the decision rule below (the ack is the developer''s).
@@ -29261,14 +29255,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - If task 1226 (run tr-es-ES-2) isn''t done: pend on the decision that blocks it, stop. Dropped → drop this one too.
 - Spot check: `pm decision add "Spot check tr-es-ES-2 done?"` (body: "native speaker of Spain''s Spanish needed", `trivia-authoring`, `http://127.0.0.1:8001/review?batch=tr-es-ES-2&locale=es-ES&sample=1`), pend, stop. The developer arranges the speaker; never answered by an LLM.
 - `qgen report --qc tr-es-ES-2`; `pm decision add "QC tr-es-ES-2: which changes?"`, pend; change tasks in plan 66 / 148 (or new plans) at their priority. Agreement below 90 % (decision 2, decision 15) only feeds the proposals. needs_work: nothing (picked again by the next run). Note approved, rejected and agreement per source locale (es → es-ES, en → es-ES) where `--qc` shows them.
-- Next step, first that applies (`qgen report --locale es-ES`, `qgen report --cost`, `targets.json` `"budget"`):
+- Next step, first that applies (`qgen report --locale es-ES`):
   1. Every level at `targets.json` `base` for `es-ES` → no next pair; QT-6 progress line for `es-ES` in `plans/15b-question-translation.md`; if `en`, `de`, `es-ES` and `es` are all done: QT-6 `[x]`, and `qgen report --locale <L>` for all four recorded in `plans/16-content-target.md`.
-  2. Spent ≥ `es-ES`''s budget → `pm decision add "es-ES over budget: continue?"`; add the next pair (`run tr-es-ES-3` / `QC tr-es-ES-3`, -110, bodies like task 1226 / this one with n+1) and pend its run task on that decision.
-  3. The run selected fewer than 300 sources (approved sources not yet in `es-ES` ran out) → the next pair still; its run task''s body adds: start only after a plan 17 batch QC done since `tr-es-ES-2`, else pend on the decision blocking plan 17''s earliest open task. The remaining deficit is English drafting''s (plan 148''s gap aiming), never an `es` top-up.
-  4. Else the next pair `run tr-es-ES-3` / `QC tr-es-ES-3` (-110), bodies like task 1226 / this one with n+1.
+  2. The run selected fewer than 300 sources (approved sources not yet in `es-ES` ran out) → the next pair still; its run task''s body adds: start only after a plan 17 batch QC done since `tr-es-ES-2`, else pend on the decision blocking plan 17''s earliest open task. The remaining deficit is English drafting''s (plan 148''s gap aiming), never an `es` top-up.
+  3. Else the next pair `run tr-es-ES-3` / `QC tr-es-ES-3` (-110), bodies like task 1226 / this one with n+1.
 - One open pair per chain: don''t add a pair if one is already open.
 
-Done when: both decisions answered, change tasks and the next pair (or the 15b line) added; note with `--locale` levels and spent vs. budget.
+Done when: both decisions answered, change tasks and the next pair (or the 15b line) added; note with `--locale` levels and `qgen report --cost` ($ per approved, information only).
 
 ## pm-run rules (plan 84, plan 17 "Batch tasks under pm run")
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 148 or new).
@@ -29279,7 +29272,6 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 Before running, in this order; the first that fails → `pm task-pending-decision <this task> <decision>`, stop:
 - Task 1225 (Translation pilot go/no-go es-ES, es (QT-5)) done, and its answer is "go" for `es` (no-go or "changes first" still open → pend on that decision).
-- Task 463 (release budget per language, plan 70) done, `"budget"` in `targets.json` (open → pend on the decision blocking it).
 - Plan 17''s exit check (plan 17''s last task) done; if not, pend on the decision that blocks plan 17''s earliest open task (masterplan order: milestone 1''s batches first; the queue reaches -110 only when -100 is blocked).
 
 Then `nix develop -c qgen batch --translate es` (RUNBOOK steps 1–5). Exit 2 because `tr-es-1` isn''t acked: the decision rule below (the ack is the developer''s).
@@ -29296,14 +29288,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - If task 1228 (run tr-es-2) isn''t done: pend on the decision that blocks it, stop. Dropped → drop this one too.
 - Spot check: `pm decision add "Spot check tr-es-2 done?"` (body: "native speaker of Latin American Spanish needed", `trivia-authoring`, `http://127.0.0.1:8001/review?batch=tr-es-2&locale=es&sample=1`), pend, stop. The developer arranges the speaker; never answered by an LLM.
 - `qgen report --qc tr-es-2`; `pm decision add "QC tr-es-2: which changes?"`, pend; change tasks in plan 66 / 148 (or new plans) at their priority. Agreement below 90 % (decision 2, decision 15) only feeds the proposals. needs_work: nothing (picked again by the next run). Note approved, rejected and agreement per source locale (es → es, en → es) where `--qc` shows them.
-- Next step, first that applies (`qgen report --locale es`, `qgen report --cost`, `targets.json` `"budget"`):
+- Next step, first that applies (`qgen report --locale es`):
   1. Every level at `targets.json` `base` for `es` → no next pair; QT-6 progress line for `es` in `plans/15b-question-translation.md`; if `en`, `de`, `es-ES` and `es` are all done: QT-6 `[x]`, and `qgen report --locale <L>` for all four recorded in `plans/16-content-target.md`.
-  2. Spent ≥ `es`''s budget → `pm decision add "es over budget: continue?"`; add the next pair (`run tr-es-3` / `QC tr-es-3`, -110, bodies like task 1228 / this one with n+1) and pend its run task on that decision.
-  3. The run selected fewer than 300 sources (approved sources not yet in `es` ran out) → the next pair still; its run task''s body adds: start only after a plan 17 batch QC done since `tr-es-2`, else pend on the decision blocking plan 17''s earliest open task. The remaining deficit is English drafting''s (plan 148''s gap aiming), never an `es` top-up.
-  4. Else the next pair `run tr-es-3` / `QC tr-es-3` (-110), bodies like task 1228 / this one with n+1.
+  2. The run selected fewer than 300 sources (approved sources not yet in `es` ran out) → the next pair still; its run task''s body adds: start only after a plan 17 batch QC done since `tr-es-2`, else pend on the decision blocking plan 17''s earliest open task. The remaining deficit is English drafting''s (plan 148''s gap aiming), never an `es` top-up.
+  3. Else the next pair `run tr-es-3` / `QC tr-es-3` (-110), bodies like task 1228 / this one with n+1.
 - One open pair per chain: don''t add a pair if one is already open.
 
-Done when: both decisions answered, change tasks and the next pair (or the 15b line) added; note with `--locale` levels and spent vs. budget.
+Done when: both decisions answered, change tasks and the next pair (or the 15b line) added; note with `--locale` levels and `qgen report --cost` ($ per approved, information only).
 
 ## pm-run rules (plan 84, plan 17 "Batch tasks under pm run")
 - D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 148 or new).
@@ -30822,11 +30813,10 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Then: add the first drafting pair (priority -110)
 - `run batch-<n>` (next free batch number from `qgen`): `nix develop -c qgen batch --bundle usa` (RUNBOOK steps 1–5; US English). Done when its report exists, printed paths staged, note with "Done:" line and report path.
-- `QC batch-<n>`: `authoring/QC.md` steps 1–4: spot check `pm decision add "Spot check batch-<n> done?"` (native speaker of US English needed, link and `trivia-authoring`; never answered by an LLM), `qgen report --qc batch-<n>`, `pm decision add "QC batch-<n>: which changes?"`, change tasks in their plans at their priority; decision 3''s `qgen rework` once after QC. Then, first that applies:
+- `QC batch-<n>`: `authoring/QC.md` steps 1–4: spot check `pm decision add "Spot check batch-<n> done?"` (native speaker of US English needed, link and `trivia-authoring`; never answered by an LLM), `qgen report --qc batch-<n>`, `pm decision add "QC batch-<n>: which changes?"`, change tasks in their plans at their priority; decision 3''s `qgen rework` once after QC; note `qgen report --cost` per bundle ($ per approved, information only). Then, first that applies:
   1. `qgen report --bundle usa` shows 2000 approved (en) → closing step below.
-  2. Spent on `usa` (`qgen report --cost`, per bundle) ≥ a bundle budget set by task 463 (plan 70), if any → `pm decision add "usa over budget: continue?"`, add the next pair and pend its run task on it.
-  3. colombia''s effort numbers look too costly for this pace → `pm decision add` asking the developer instead of adding the next pair.
-  4. Else the next pair (same bodies, next batch number).
+  2. colombia''s effort numbers look too costly for this pace → `pm decision add` asking the developer instead of adding the next pair.
+  3. Else the next pair (same bodies, next batch number).
 - At 2000 (en): nothing more (`usa` is en only); the closing QC notes `usa` done in `plans/15c-regional-questions.md`.
 - One open pair per language of the bundle; run names come from `qgen` (`batch-<n>`, `tr-en-<n>` shared with chains 2–4 and plan 17). Every added body repeats the pm-run rules below and names its run.
 
@@ -30847,11 +30837,10 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Then: add the first drafting pair (priority -110)
 - `run batch-<n>` (next free batch number from `qgen`): `nix develop -c qgen batch --bundle germany` (RUNBOOK steps 1–5; German). Done when its report exists, printed paths staged, note with "Done:" line and report path.
-- `QC batch-<n>`: `authoring/QC.md` steps 1–4: spot check `pm decision add "Spot check batch-<n> done?"` (native speaker of German needed, link and `trivia-authoring`; never answered by an LLM), `qgen report --qc batch-<n>`, `pm decision add "QC batch-<n>: which changes?"`, change tasks in their plans at their priority; decision 3''s `qgen rework` once after QC. Then, first that applies:
+- `QC batch-<n>`: `authoring/QC.md` steps 1–4: spot check `pm decision add "Spot check batch-<n> done?"` (native speaker of German needed, link and `trivia-authoring`; never answered by an LLM), `qgen report --qc batch-<n>`, `pm decision add "QC batch-<n>: which changes?"`, change tasks in their plans at their priority; decision 3''s `qgen rework` once after QC; note `qgen report --cost` per bundle ($ per approved, information only). Then, first that applies:
   1. `qgen report --bundle germany` shows 2000 approved (de) → closing step below.
-  2. Spent on `germany` (`qgen report --cost`, per bundle) ≥ a bundle budget set by task 463 (plan 70), if any → `pm decision add "germany over budget: continue?"`, add the next pair and pend its run task on it.
-  3. colombia''s effort numbers look too costly for this pace → `pm decision add` asking the developer instead of adding the next pair.
-  4. Else the next pair (same bodies, next batch number).
+  2. colombia''s effort numbers look too costly for this pace → `pm decision add` asking the developer instead of adding the next pair.
+  3. Else the next pair (same bodies, next batch number).
 - At 2000 (de): the closing QC adds the first en pair: `run tr-en-<n>` (`qgen batch --translate en --bundle germany`; needs plan 98''s `--translate en` from de done and the en pilot acked, `task 638: Translation pilot go/no-go en, de (QT-5)`; else pend on the blocking decision) + `QC tr-en-<n>` (QC.md "Translation runs": spot check "native speaker of English needed", `http://127.0.0.1:8001/review?batch=tr-en-<n>&locale=en&sample=1`, `trivia-authoring`; needs_work: nothing). That QC adds the next en pair until `qgen report --bundle germany --locale en` shows 2000 approved en; then `plans/15c-regional-questions.md` notes `germany` de + en done.
 - One open pair per language of the bundle; run names come from `qgen` (`batch-<n>`, `tr-en-<n>` shared with chains 2–4 and plan 17). Every added body repeats the pm-run rules below and names its run.
 
@@ -30872,11 +30861,10 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Then: add the first drafting pair (priority -110)
 - `run batch-<n>` (next free batch number from `qgen`): `nix develop -c qgen batch --bundle uk` (RUNBOOK steps 1–5; British English). Done when its report exists, printed paths staged, note with "Done:" line and report path.
-- `QC batch-<n>`: `authoring/QC.md` steps 1–4: spot check `pm decision add "Spot check batch-<n> done?"` (native speaker of British English needed, link and `trivia-authoring`; never answered by an LLM), `qgen report --qc batch-<n>`, `pm decision add "QC batch-<n>: which changes?"`, change tasks in their plans at their priority; decision 3''s `qgen rework` once after QC. Then, first that applies:
+- `QC batch-<n>`: `authoring/QC.md` steps 1–4: spot check `pm decision add "Spot check batch-<n> done?"` (native speaker of British English needed, link and `trivia-authoring`; never answered by an LLM), `qgen report --qc batch-<n>`, `pm decision add "QC batch-<n>: which changes?"`, change tasks in their plans at their priority; decision 3''s `qgen rework` once after QC; note `qgen report --cost` per bundle ($ per approved, information only). Then, first that applies:
   1. `qgen report --bundle uk` shows 2000 approved (en) → closing step below.
-  2. Spent on `uk` (`qgen report --cost`, per bundle) ≥ a bundle budget set by task 463 (plan 70), if any → `pm decision add "uk over budget: continue?"`, add the next pair and pend its run task on it.
-  3. colombia''s effort numbers look too costly for this pace → `pm decision add` asking the developer instead of adding the next pair.
-  4. Else the next pair (same bodies, next batch number).
+  2. colombia''s effort numbers look too costly for this pace → `pm decision add` asking the developer instead of adding the next pair.
+  3. Else the next pair (same bodies, next batch number).
 - At 2000 (en): nothing more (`uk` is en only); the closing QC notes `uk` done in `plans/15c-regional-questions.md`.
 - One open pair per language of the bundle; run names come from `qgen` (`batch-<n>`, `tr-en-<n>` shared with chains 2–4 and plan 17). Every added body repeats the pm-run rules below and names its run.
 
@@ -30897,11 +30885,10 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Then: add the first drafting pair (priority -110)
 - `run batch-<n>` (next free batch number from `qgen`): `nix develop -c qgen batch --bundle spain` (RUNBOOK steps 1–5; Spain''s Spanish). Done when its report exists, printed paths staged, note with "Done:" line and report path.
-- `QC batch-<n>`: `authoring/QC.md` steps 1–4: spot check `pm decision add "Spot check batch-<n> done?"` (native speaker of Spain''s Spanish needed, link and `trivia-authoring`; never answered by an LLM), `qgen report --qc batch-<n>`, `pm decision add "QC batch-<n>: which changes?"`, change tasks in their plans at their priority; decision 3''s `qgen rework` once after QC. Then, first that applies:
+- `QC batch-<n>`: `authoring/QC.md` steps 1–4: spot check `pm decision add "Spot check batch-<n> done?"` (native speaker of Spain''s Spanish needed, link and `trivia-authoring`; never answered by an LLM), `qgen report --qc batch-<n>`, `pm decision add "QC batch-<n>: which changes?"`, change tasks in their plans at their priority; decision 3''s `qgen rework` once after QC; note `qgen report --cost` per bundle ($ per approved, information only). Then, first that applies:
   1. `qgen report --bundle spain` shows 2000 approved (es-ES) → closing step below.
-  2. Spent on `spain` (`qgen report --cost`, per bundle) ≥ a bundle budget set by task 463 (plan 70), if any → `pm decision add "spain over budget: continue?"`, add the next pair and pend its run task on it.
-  3. colombia''s effort numbers look too costly for this pace → `pm decision add` asking the developer instead of adding the next pair.
-  4. Else the next pair (same bodies, next batch number).
+  2. colombia''s effort numbers look too costly for this pace → `pm decision add` asking the developer instead of adding the next pair.
+  3. Else the next pair (same bodies, next batch number).
 - At 2000 (es-ES): the closing QC adds the first en pair: `run tr-en-<n>` (`qgen batch --translate en --bundle spain`; needs plan 98''s `--translate en` from es-ES done and the en pilot acked, `task 638: Translation pilot go/no-go en, de (QT-5)`; else pend on the blocking decision) + `QC tr-en-<n>` (QC.md "Translation runs": spot check "native speaker of English needed", `http://127.0.0.1:8001/review?batch=tr-en-<n>&locale=en&sample=1`, `trivia-authoring`; needs_work: nothing). That QC adds the next en pair until `qgen report --bundle spain --locale en` shows 2000 approved en; then `plans/15c-regional-questions.md` notes `spain` es-ES + en done.
 - One open pair per language of the bundle; run names come from `qgen` (`batch-<n>`, `tr-en-<n>` shared with chains 2–4 and plan 17). Every added body repeats the pm-run rules below and names its run.
 
@@ -30922,11 +30909,10 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Then: add the first drafting pair (priority -110)
 - `run batch-<n>` (next free batch number from `qgen`): `nix develop -c qgen batch --bundle mexico` (RUNBOOK steps 1–5; Mexican Spanish). Done when its report exists, printed paths staged, note with "Done:" line and report path.
-- `QC batch-<n>`: `authoring/QC.md` steps 1–4: spot check `pm decision add "Spot check batch-<n> done?"` (native speaker of Mexican Spanish needed, link and `trivia-authoring`; never answered by an LLM), `qgen report --qc batch-<n>`, `pm decision add "QC batch-<n>: which changes?"`, change tasks in their plans at their priority; decision 3''s `qgen rework` once after QC. Then, first that applies:
+- `QC batch-<n>`: `authoring/QC.md` steps 1–4: spot check `pm decision add "Spot check batch-<n> done?"` (native speaker of Mexican Spanish needed, link and `trivia-authoring`; never answered by an LLM), `qgen report --qc batch-<n>`, `pm decision add "QC batch-<n>: which changes?"`, change tasks in their plans at their priority; decision 3''s `qgen rework` once after QC; note `qgen report --cost` per bundle ($ per approved, information only). Then, first that applies:
   1. `qgen report --bundle mexico` shows 2000 approved (es) → closing step below.
-  2. Spent on `mexico` (`qgen report --cost`, per bundle) ≥ a bundle budget set by task 463 (plan 70), if any → `pm decision add "mexico over budget: continue?"`, add the next pair and pend its run task on it.
-  3. colombia''s effort numbers look too costly for this pace → `pm decision add` asking the developer instead of adding the next pair.
-  4. Else the next pair (same bodies, next batch number).
+  2. colombia''s effort numbers look too costly for this pace → `pm decision add` asking the developer instead of adding the next pair.
+  3. Else the next pair (same bodies, next batch number).
 - At 2000 (es): the closing QC adds the first en pair: `run tr-en-<n>` (`qgen batch --translate en --bundle mexico`; needs plan 98''s `--translate en` from es done and the en pilot acked, `task 638: Translation pilot go/no-go en, de (QT-5)`; else pend on the blocking decision) + `QC tr-en-<n>` (QC.md "Translation runs": spot check "native speaker of English needed", `http://127.0.0.1:8001/review?batch=tr-en-<n>&locale=en&sample=1`, `trivia-authoring`; needs_work: nothing). That QC adds the next en pair until `qgen report --bundle mexico --locale en` shows 2000 approved en; then `plans/15c-regional-questions.md` notes `mexico` es + en done.
 - One open pair per language of the bundle; run names come from `qgen` (`batch-<n>`, `tr-en-<n>` shared with chains 2–4 and plan 17). Every added body repeats the pm-run rules below and names its run.
 
@@ -32113,8 +32099,8 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 
 ## Out of scope (from the milestone)
 - Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-16T03:49:29Z', NULL, 1283, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1291, 84, 'create tasks for plan 84: Release content runs', 'split', 'open', 1000, NULL, 'Split plan 84 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T03:51:12Z', NULL, 1287, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1291, 84, 'create tasks for plan 84: Release content runs', 'split', 'done', 1000, '2026-10-15, tasks.sql: budget gates (task 463, over-budget decisions) removed from tasks 638–643, 1226–1229, 1268–1272; QC tasks note qgen report --cost as information only', 'Split plan 84 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T03:51:12Z', '2026-10-16T03:52:01Z', 1287, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -36614,6 +36600,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1247, 1285, '2026-10-16T03:50:07Z', '2026-10-16T03:50:31Z', 'done', NULL, 0, '2ad3135c24a8608db6af317da170c0334886ce74', 'claude-opus-5-5[1m]', 'b4b49ef8-172b-473c-a9de-9e62ee8ff16b', 4, 8, 1981, 148302, 38180, 0.37475240000000004, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1248, 1286, '2026-10-16T03:50:32Z', '2026-10-16T03:50:45Z', 'done', NULL, 0, '257c380bbd43055ee89e1b3aca77ce6a2cc899cb', 'claude-opus-5-5[1m]', 'b1afa0f2-ca82-46ed-bb8e-2eda058aaff8', 4, 8, 1028, 156222, 40644, 0.3769884, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1249, 1287, '2026-10-16T03:50:45Z', '2026-10-16T03:51:18Z', 'done', NULL, 0, '1ae219582216984b4117c43fa52e2018e8ce3322', 'claude-opus-5-5[1m]', '703ff452-fbcb-47bf-9469-ade71b4d48aa', 6, 12, 2487, 291746, 50583, 0.5128012, 3857742);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1250, 1291, '2026-10-16T03:51:18Z', '2026-10-16T03:52:07Z', 'done', NULL, 0, '1055bcf45622b3779754338d1caf17c2ce77452a', 'claude-opus-5-5[1m]', '16c412b6-b232-40be-9fdf-154f0326b9cf', 10, 20, 4237, 510163, 54781, 0.6251006, 3857742);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
