@@ -33608,8 +33608,56 @@ The plan covers, per the masterplan''s part 5:
 - Check: `trivia-gallery --only` Start shots for all four languages, then a developer decision to approve the horizon in `/gallery` (like `plan 135: Playful icons and language flags before a game session`).
 - Docs: `plans/04-ui-tv-display.md` (Start), `plans/10-visual-design.md`, `directory.md` if a new top-level dir.
 - D-45 licences only, offline, no new npm or Python dependencies.', '2026-10-16T13:47:27Z', '2026-10-16T13:48:52Z', 1322, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1326, 150, 'create tasks for plan 150: Start screen horizon', 'split', 'open', 1000, NULL, 'Split plan 150 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T13:48:49Z', NULL, 1325, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1326, 150, 'create tasks for plan 150: Start screen horizon', 'split', 'done', 1000, '2026-10-16, tasks.sql only: tasks 1327-1331 for plan 150; picks and gallery decisions raised by tasks 1329 and 1331 as the plan says', 'Split plan 150 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T13:48:49Z', '2026-10-16T13:50:29Z', 1325, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1327, 150, 'Horizon assets and credits', 'work', 'open', NULL, NULL, 'Plan 150, parts "Assets and credits": encode the approved horizon picks and credit them, both ways. Waits on the picks decision raised by the pick task (`task-pending-decision`); read its answer in `pm show`.
+
+- Source: the approved originals in `work/horizon/candidates/` (from the pick task); replacements the developer asked for: pick them under plan 150''s "Picks" rules (Commons, D-45 allowlist, cut-out/alpha, no flags/text/logos/faces/symbols, no country bias) and list them in the done note
+- Encode one-off with imagemagick: `magick <src> -strip -resize ''x360>'' -quality 80 app/client/public/horizon/<slug>.webp` (alpha kept, no upscaling); ASCII kebab-case slugs; each ≤ 150 KB, the set ≤ 2 MB (lower quality or height for an outlier, note it)
+- `app/client/public/horizon/CREDITS.md`: intro with the encode command, table like `public/audio/CREDITS.md` (`File | Used for | Source | Author | Licence`; "Used for" e.g. "Giraffe, Kenya"; "cut-out/resized from …" for adaptations, CC BY-SA stays CC BY-SA)
+- `app/client/credits.ts`: generalize `sounds()` into one reader of a `public/<dir>/CREDITS.md` table (decision 199: import, don''t copy); `Credits.horizon: { entries, … }` like `sounds`; both ways (a `.webp` without a row or a row without a file) throws; shipped `CREDITS.md` gets a "Start screen images" section
+- `Credits.svelte`: a section like the sounds'' with key `credits.horizon` («Imágenes de la pantalla de inicio»), all four catalogs; read `locales/style/<locale>.md` first
+- `authoring/steam/credits_check.mjs`: `resources/client/horizon/*.webp` against `credits.horizon.entries`, both ways; the summary line counts them
+- `app/desktop/media-budget.json`: new key `"horizon": 2` (MB); `stage-media.mjs --check` sums `app/client/public/horizon/` against it and each file against `file`
+- `directory.md`: add `public/horizon/` only if it lists `public/audio/`
+
+Done when: the credits screen lists every image; `node authoring/steam/credits_check.mjs` (or its release-check step) and `stage-media.mjs --check` pass; per commit `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-16T13:50:04Z', NULL, 1326, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1328, 150, 'Horizon on the Start screen', 'work', 'open', 290, NULL, 'Plan 150, parts "Look and layout" and "Docs": show the horizon on Start. After `task 1327: Horizon assets and credits` (the images in `app/client/public/horizon/`); waits on the same picks decision.
+
+- New `app/client/src/game/Horizon.svelte`, used only by `screens/Start.svelte`: `aria-hidden`, `pointer-events: none`, absolute along the bottom, height `min(33.3vh, …)`, behind title, subtitle, buttons, save notice, mods button, held line, language button (all stay on top and clickable)
+- A fixed list in the component (file, height share 0.55–1, ~25 % horizontal overlap), ordered so no region or silhouette type clusters; full width at 16:9 and 16:10, overflow cut at the edges, never squeezed
+- Look (`plans/10-visual-design.md`): `filter: saturate(0.85)` so amber stays strongest; soft ground glow along the bottom (amber/coral/sky tokens, low alpha); top edge fades into `--night-800` via mask gradient; tokens only, no raw hex (VD-2)
+- Motion: gentle bob per item (≤ 0.4 `--u`, 6–9 s, staggered); off under `prefers-reduced-motion` (check theme.css''s rule covers it, else extend it)
+- Readability at 1920 × 1080 and 1280 × 800 in all four catalogs (de longest): if buttons sit over the band, the band goes lower/shorter, never the content; no change to Start''s keys, focus, prompts, catalogs
+- Only on Start: Language, Credits and Mods overlays cover it as now
+- Docs: `plans/04-ui-tv-display.md` "Start": the horizon line; `plans/10-visual-design.md`: a new VD entry (sources, look, motion)
+
+Done when: a browser check of Start (`npm run serve -w app/client`, 1920 × 1080 and 1280 × 800) shows the band and everything stays readable and clickable; per commit `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-16T13:50:05Z', NULL, 1326, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1329, 150, 'Pick the horizon images', 'work', 'open', 310, NULL, 'Plan 150, part "Picks (decision first)": choose 12–20 Commons cut-outs for the Start horizon and get the developer''s approval before anything ships.
+
+- Wikimedia Commons only, D-45 allowlist (CC0, PD, CC BY, CC BY-SA as in the allowlist; GFDL-only no); prefer PNG/SVG with alpha; a photo without alpha only if a cut-out derivative exists on Commons (credit it as such)
+- One set for every language: spread over Africa, Americas (north and south), Asia, Europe, Oceania and topics (landmark, animal, plant, object, vehicle, instrument); no flags, text, logos, faces, religious or political symbols; no "home" country (Colombia at most one item like any other)
+- Silhouette variety: tall (tower, giraffe), wide (bridge, bus), small (teapot, cactus)
+- Download originals to `work/horizon/candidates/` (kept for the build); contact sheet `work/horizon/contact-sheet.png` with imagemagick `montage` (number + short name per tile, background the `--night-800` value from theme.css)
+- `pm decision add --once "Start horizon: approve the image picks?"`, body: contact sheet path, per candidate number, file page URL, author, licence, why; options "approve all", "approve with changes (list numbers to drop/replace)"
+- `pm task-pending-decision` for `task 1327: Horizon assets and credits` and `task 1328: Horizon on the Start screen` on that decision
+- Nothing to stage (`work/` is not committed)
+
+Done when: the decision is raised, the candidates and contact sheet exist, both build tasks wait on it.', '2026-10-16T13:50:19Z', NULL, 1326, 1);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1330, 150, 'Gallery size option', 'work', 'open', NULL, NULL, 'Plan 150, part "Check and approval": `trivia-gallery` has no size option; the horizon must be checked at 1280 × 800 too.
+
+- Add `--size WxH` (default `1920x1080`); a non-default size writes `work/gallery/<locale>@<W>x<H>/` (shots + `manifest.json`), the default keeps `work/gallery/<locale>/`
+- `/gallery` in `trivia-authoring`: show the sized directories too (as their own locale entries or a size switch, whatever fits the page)
+- Update the `trivia-gallery` line in AGENTS.md and README if it lists the options
+
+Done when: `trivia-gallery --locale es --only start --size 1280x800` writes `work/gallery/es@1280x800/start.png` at that size and `/gallery` shows it; per commit `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-16T13:50:19Z', NULL, 1326, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1331, 150, 'Gallery run and review decision for the horizon', 'work', 'open', 280, NULL, 'Plan 150, part "Check and approval": the developer approves the horizon in `/gallery`, like `task 1083: Gallery run and review decision for icons and flags`. After `task 1328: Horizon on the Start screen` and `task 1330: Gallery size option`.
+
+- `trivia-gallery --only start,start-resume,start-save-notice,language-from-start,credits` for all four locales, at the default size and with `--size 1280x800`; fix plain breakage (missing image, overlap hiding a button or text) yourself
+- `pm decision add --once "Start horizon reviewed in /gallery?"` with a how-to (`trivia-gallery`, `trivia-authoring` → `/gallery`, both sizes, flag what to change); options: approved / flags in /gallery
+- `pm task add 150 "Horizon fixes from the gallery review"` (fix flagged images, order, layout; re-run the changed shots; `pm decision consequences`), made pending on the decision with `pm task-pending-decision`
+
+Done when: the decision is raised and the fix task waits on it.', '2026-10-16T13:50:19Z', NULL, 1326, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -38691,6 +38739,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1319, 1325, '2026-10-16T13:47:35Z', '2026-10-16T13:49:03Z', 'done', NULL, 0, 'f1132b1f0cd241d0edfb40b5d505acd6406389ba', 'claude-opus-5-5[1m]', 'c1974191-d3be-4cae-8dd8-2828d0b39288', 11, 20, 7477, 469981, 55055, 0.6840562, 4064407);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1320, 1323, '2026-10-16T13:49:03Z', '2026-10-16T13:49:20Z', 'done', NULL, 0, 'e04ea09b29aa0f7056f08fc196fb33016343d1b0', 'claude-opus-5-5[1m]', '574ddc38-ead2-4430-8a83-055c06eb8910', 3, 6, 865, 72432, 21076, 0.20041840000000002, 4064407);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1321, 1324, '2026-10-16T13:49:20Z', '2026-10-16T13:49:32Z', 'done', NULL, 0, '4b38d0cfd2fb08c3e3c65f10529dbb466bfbb55d', 'claude-opus-5-5[1m]', 'd188ae50-b805-426f-832c-8955bd544b86', 3, 6, 814, 76383, 25082, 0.23223660000000002, 4064407);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1322, 1326, '2026-10-16T13:49:32Z', '2026-10-16T13:50:35Z', 'done', NULL, 0, '2dbc73beb3e21c976a80b486ba16aa02e1e83ef3', 'claude-opus-5-5[1m]', '9ded8024-e2a4-464f-8733-6bc5f184ba33', 8, 16, 5273, 282922, 33224, 0.4279004, 4064407);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
