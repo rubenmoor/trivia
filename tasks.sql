@@ -33744,7 +33744,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Docs: `plans/04-ui-tv-display.md` "Start": the horizon line; `plans/10-visual-design.md`: a new VD entry (sources, look, motion)
 
 Done when: a browser check of Start (`npm run serve -w app/client`, 1920 × 1080 and 1280 × 800) shows the band and everything stays readable and clickable; per commit `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-16T13:50:05Z', NULL, 1326, 0, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1329, 150, 'Pick the horizon images', 'work', 'open', 310, NULL, 'Plan 150, part "Picks (decision first)": choose 12–20 Commons cut-outs for the Start horizon and get the developer''s approval before anything ships.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1329, 150, 'Pick the horizon images', 'work', 'done', 310, '2026-10-16, work/horizon/ (16 CC0/PD SVG candidates, contact-sheet.png), decision 265 raised; tasks 1327, 1328 wait on it', 'Plan 150, part "Picks (decision first)": choose 12–20 Commons cut-outs for the Start horizon and get the developer''s approval before anything ships.
 
 - Wikimedia Commons only, D-45 allowlist (CC0, PD, CC BY, CC BY-SA as in the allowlist; GFDL-only no); prefer PNG/SVG with alpha; a photo without alpha only if a cut-out derivative exists on Commons (credit it as such)
 - One set for every language: spread over Africa, Americas (north and south), Asia, Europe, Oceania and topics (landmark, animal, plant, object, vehicle, instrument); no flags, text, logos, faces, religious or political symbols; no "home" country (Colombia at most one item like any other)
@@ -33754,7 +33754,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm task-pending-decision` for `task 1327: Horizon assets and credits` and `task 1328: Horizon on the Start screen` on that decision
 - Nothing to stage (`work/` is not committed)
 
-Done when: the decision is raised, the candidates and contact sheet exist, both build tasks wait on it.', '2026-10-16T13:50:19Z', NULL, 1326, 1, NULL);
+Done when: the decision is raised, the candidates and contact sheet exist, both build tasks wait on it.', '2026-10-16T13:50:19Z', '2026-10-16T15:41:43Z', 1326, 1, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1330, 150, 'Gallery size option', 'work', 'open', NULL, NULL, 'Plan 150, part "Check and approval": `trivia-gallery` has no size option; the horizon must be checked at 1280 × 800 too.
 
 - Add `--size WxH` (default `1920x1080`); a non-default size writes `work/gallery/<locale>@<W>x<H>/` (shots + `manifest.json`), the default keeps `work/gallery/<locale>/`
@@ -38447,6 +38447,30 @@ INSERT INTO decision (id, subject, status, options, body, intro, answer, reason,
 - base bundle names (`decision 261: Name of the base bundle per UI language (not «Basics»)`): «Paquete básico», «Base bundle», «Grundpaket»; letter keys es P, en B, de G
 Worker''s check: no overflow or cut text, 0 unmatched catalog texts in `manifest.json`.', 'Picking which sets of questions to play now has its own full screen, shown before the game options, and the main question set has a clearer name in each language. Before this counts as finished, the developer looks at screenshots of the new screen and the changed options screen in all four languages. The answer is either a go-ahead or a list of problems, each of which becomes its own fix.', 'problems: layout, scrolling, order, country flags and no descriptions, now in milestone 8''s bundle-screen line (2026-10-16 edit); plan 151''s revision covers them, no separate fix tasks', NULL, '2026-10-16T14:53:07Z', '2026-10-16T15:00:15Z', 1340, NULL, 'rule', NULL, '2026-10-16, task 1340: Bundle screen redone as two columns (base bundle left, optional bundles right, scrolling with focus follow), names only, no descriptions; optional order: regional bundle of the player''s region, then non-regional, then other regions (task 1351). Regional bundles carry a required ISO `country` (bundles.json, qgen validate, mods, --check-mod, modding docs) and always show that country''s flag as icon, no pin (task 1350). Plan 151 revised instead of separate fix tasks; reviewed again in task 1340.');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (264, 'Bundle screen (two columns) reviewed in /gallery?', 'pending', '["approved", "problems (listed in the answer)"]', 'Shots in work/gallery/<locale>/ for es, es-ES, en, de: bundles, choice-solo, choice-gamemaster, choice-supply-report (1920×1080; no unmatched catalog text, no overflow or cut text seen). Changed since decision 263: left column base bundle, right column optional bundles, names only, regional bundle shows its country''s flag, region-first order, scrolling right column with fade. Not covered by the gallery: ~15 fake mod bundles (it cannot load a mods dir) and 1280×800 (no --size option yet); scrolling is only checked on the dev server per task 1351.', 'The screen where players choose which question bundles to play was rebuilt after your last review: two columns, country flags, and a list that scrolls when there are many bundles. Please look at the new screenshots and say whether it is good enough or what still needs fixing. Approving closes the earlier gallery flag on this screen.', NULL, NULL, '2026-10-16T15:34:10Z', NULL, 1340, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (265, 'Start horizon: approve the image picks?', 'pending', '["Approve all", "Approve with changes (list numbers to drop or replace)"]', 'Contact sheet: `work/horizon/contact-sheet.png` (16 tiles on `--night-800`, number + name). Originals: `work/horizon/candidates/NN-<slug>.svg`; the slug becomes the shipped `<slug>.webp`.
+
+All 16 are CC0 or PD vector cut-outs (SVG, so real alpha) from Wikimedia Commons, mostly Open Clip Art imports. No photos: Commons has almost no usable photo cut-outs with alpha for these subjects. Style is flat clipart, not photographic; the plan said "natural colours", the vectors are the usable reading of it. All File pages: `https://commons.wikimedia.org/wiki/File:<title>`.
+
+| # | Slug | File title | Author | Licence | Why |
+|---|---|---|---|---|---|
+| 1 | eiffel-tower | Landmark in city of Paris - Eiffel Tower.svg | shokunin | CC0 | Europe, landmark, tall |
+| 2 | toucan | Toucan by gnokii.svg | gnokii | CC0 | S. America, animal, bright colours |
+| 3 | royal-palace | Royal Palace Phnom Penh.svg | gnokii | CC0 | Asia, landmark, wide, gold |
+| 4 | teapot | Tea pot.svg | donchico | CC0 | object, small |
+| 5 | red-panda | Red panda.svg | revzack | CC0 | Asia, animal, warm orange |
+| 6 | banjo | Banjo.svg | gnokii | CC0 | N. America, instrument |
+| 7 | drum | African Drum 2.svg | Benji Park / Anonymous | CC0 | Africa, instrument, small |
+| 8 | penguin | Lemmling-Cartoon-penguin-1.svg | lemmling | CC0 | animal, wide-bodied, high contrast |
+| 9 | lighthouse | Lighthouse.svg | matthewg42 | Public domain | landmark, tall, red/white |
+| 10 | ukulele | Ukulele.svg | Deluge | CC0 | Oceania (Pacific), instrument, tall |
+| 11 | castle | Neuschwanstein Castle 1.svg | gurica | CC0 | Europe, landmark, wide (the only German item) |
+| 12 | volcano | Simple erupting volcano.svg | Madison Kingsford | CC0 | nature, orange/red |
+| 13 | orca | Orca-matthew-gates-r.svg | Totodu74 | CC0 | animal, wide, all oceans |
+| 14 | toy-train | Toy train.svg | gnokii | CC0 | vehicle, small, primary colours |
+| 15 | airplane | Plane in the sky mo 01.svg | OpenClipart "mo" | CC0 | vehicle, blue |
+| 16 | cactus | Vector cactus illustration (7).svg | Clker-Free-Vector-Images (Pixabay import) | CC0 | N. America, plant, tall, green |
+
+Known gaps (Commons search found nothing usable): no bridge, no bus (the Commons buses are cropped), no kangaroo/koala (Oceania only via the ukulele), no giraffe in colour, Africa only via the drum. 7 is a plain djembe drawing, 4 has a thin string above it. Name replacements by number if you want them; the build task picks them under the same rules.', 'The start screen of the game is getting a colourful row of small illustrations along the bottom, like a skyline: landmarks, animals, instruments and vehicles from around the world. Sixteen free-to-use drawings have been collected and put on one overview picture. You decide whether they go into the game as they are, or whether some should be dropped or swapped first; nothing is built until you answer.', NULL, NULL, '2026-10-16T15:41:40Z', NULL, 1329, NULL, 'once', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -39817,6 +39841,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1350, 1351, '2026-10-16T15:13:35Z', '2026-10-16T15:25:11Z', 'failed', 'pm run crashed: pm.FormatError: tasks.sql: schema version 25, this pm knows up to 24: update pm', NULL, '1fa8adbc1e2034b3950a5586963c39656fd9bcea', NULL, NULL, 1349, NULL, NULL, NULL, NULL, NULL, NULL, 4113781);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1351, 1351, '2026-10-16T15:25:41Z', '2026-10-16T15:31:51Z', 'done', NULL, 0, '10283b8f98b0e1719edeae63eb1976b4c01df7b8', 'claude-opus-5-5', '213040ee-7b22-43b1-935d-531a468ffca7', NULL, 36, 68, 15028, 2358165, 92198, 1.510049, 4144524);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1352, 1340, '2026-10-16T15:31:52Z', '2026-10-16T15:34:14Z', 'blocked', NULL, 0, '7e9f6a938a5322beaea1e8ce1a1516dfec8df8a4', 'claude-sonnet-5-5', '8b3226b9-513e-43df-b09a-1e5215b3185a', NULL, 10, 14, 2077, 233565, 51078, 0.271823, 4144524);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1353, 1329, '2026-10-16T15:34:14Z', '2026-10-16T15:41:48Z', 'done', NULL, 0, 'f66ad83e5e8bd88144a66d82b9b34b50102e421c', 'claude-sonnet-5-5', '993759ba-7dc6-4e51-8565-75ef43fb81e5', NULL, 39, 70, 18729, 2459541, 97012, 1.0673862, 4144524);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -40276,6 +40301,8 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1316, 258);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1316, 262);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1317, 258);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1317, 262);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1327, 265);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1328, 265);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1340, 263);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1340, 264);
 
