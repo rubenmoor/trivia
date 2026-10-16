@@ -1062,7 +1062,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 ## Out of scope (from the milestone)
 - Steamworks features (overlay, Cloud setup, achievements, on-screen keyboard, SW-7..SW-14), store page (S5); translations (S4); media resizing (SW-9, S5); couch co-op input (IN-6, IN-7, later).
 - Porting authoring''s Python (qgen, `trivia-authoring`) to Node/TS: later, own milestone.', '2026-10-11T21:55:09Z', NULL);
-INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (9, 9, 'masterplan', 1000, 'Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewed questions, in every launch language, that a stranger''s family plays many evenings before questions repeat, plus a measurement that proves it. It needs translated UI catalogs, translated, re-rated and reviewed questions, regional bundles (D-39; decision 110: 2000 approved each, region''s language + en, free DLC, `colombia` the pilot), `qgen report --simulate` passing the content target for every launch language, and UI wording the gamemaster has checked on the TV (style guides, screen gallery), and joker names made again English first, one symbol per joker in every language. Today: 1136 approved (`base` 1034, `colombia` 102), Spanish only; milestone 1 takes `base` to 5000 (D-52).
+INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created_by_task) VALUES (9, 9, 'masterplan', 1000, 'Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewed questions, in every launch language, that a stranger''s family plays many evenings before questions repeat, plus a measurement that proves it. It needs translated UI catalogs, translated, re-rated and reviewed questions, regional bundles (D-39; decision 110: 2000 approved each, region''s language + en, free DLC, `colombia` the pilot), `qgen report --simulate` passing the content target for every launch language, and UI wording the gamemaster has checked on the TV (style guides, screen gallery), joker names made again English first, one symbol per joker in every language, and English-first drafting for `base` (developer, 2026-10-15): from batch-9 on `en` is the source of every new `base` question, translated to `es`, `es-ES` and `de`, each its own pool with 5000 approved (decision 21: Content target per player and language (OQ-32)). Today: 1136 approved (`base` 1034, `colombia` 102), Spanish only; milestone 1 takes `base` to 5000 (D-52).
 
 **The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 9 …`, priority as suggested), and that plan''s tasks do the work.
 
@@ -1071,14 +1071,14 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - **If OQ-31 = Spanish only:** parts 3–7 shrink to nothing: their plan tasks drop with that reason (`pm task drop`), except what the Spanish variety needs (part 8). The rest still applies to Spanish.
 - TS engine (milestone 2, plans 19, 20; screens on the engine PORT-7): the simulation runs on it. Age-group windows and bundle filter in the engine (plan 27, milestone 5): the simulation and the bundle filter (RG-3) use them.
 - Catalog (milestone 3: plans 21, 22, 23, 24): `t()`, `es`, `xx`, draft `en`. Settings screen (plan 36, MD-7): the language setting goes there.
-- Pool growth and QC (milestone 1: plans 12 targets, 13 gap-aimed drafting, 15 drift, 16 QC/D-56, 17 batch runs). This milestone reuses them per language; it doesn''t rebuild them.
+- Pool growth and QC (milestone 1: plans 12 targets, 13 gap-aimed drafting, 15 drift, 16 QC/D-56, 17 batch runs). This milestone reuses them per language; it doesn''t rebuild them. The content side of the English switch (calibration examples, concept angle, cross-language overlap, health and spot check across the switch) is `plan 147: English-first batches: calibration, overlap and QC across languages` (milestone 1); part 15 doesn''t duplicate it.
 - Licence/price: answered (decision 66: Price model (OQ-33), bundles as free DLC; decision 107: Licence (OQ-35)). A part that writes files depending on them follows them.
 
 ## Rules for every part
 - Questions only through `qgen batch` (D-36). New pipeline steps (translate, re-rate, neutral Spanish) become `qgen batch` modes, with RUNBOOK and D-36 amended as an implementation task (like BN-11). Workers never edit pools or pick media by hand.
 - Quality bar of plan 16 / D-56 applies per language: LLM audit + blind human spot check per batch; for a translation, the human is a native speaker (the gamemaster arranges them; workers prepare the sample and a pm decision "spot check done?").
 - `app/` never reads `authoring/` (D-35): per-locale pools and category/bundle names are exported to `app/data/`.
-- The current game keeps working after every task until the Steam build replaces it (D-59): Spanish, Colombia on, same keys (unless LUI-4 changes them by decision).
+- The current game keeps working after every task until the Steam build replaces it (D-59): Spanish, Colombia on, same keys (unless LUI-4 changes them by decision). The family''s `es` pool keeps its es-sourced questions as they are; English-sourced ones join it as `es` translations.
 - Owning plan files get tasks `[x]` with a note (`15-i18n.md`, `15a`, `15b`, `15c`, `16-content-target.md`, `22-bundles.md`); `plans/project.md` in sync. Store page texts (LUI-6) are S5 (milestone''s out of scope); note it in 15a, don''t do it.
 
 ## Parts
@@ -1104,7 +1104,8 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 4. **Translation pipeline (QT-2, QT-3)**
    - Owner: `plans/15b-question-translation.md` ("Pipeline").
    - Steps `translate --to L` (adapt units, answer format, hints that play on Spanish words; detect non-travelling questions → propose `translatable: false`) → `rate --locale L` (difficulty for that language''s main market, D-38 scale) → `factcheck --locale L` → review (D-32/D-33) → audit (D-56) → merge into the locale file. Only `approved`, translatable sources; skips done ones; costs in `costs.log`.
-   - Entry point `qgen batch --translate L` (size like a batch, picks untranslated approved sources, fewest translated subcategories first); RUNBOOK + D-36 amended. Prompts in `authoring/tools/prompts/` (new prompts are the gamemaster''s: drafted here, approved by pm decision).
+   - Entry point `qgen batch --translate L` (size like a batch, picks untranslated approved sources, fewest translated subcategories first); RUNBOOK + D-36 amended.
+   - Source locale per question (part 15): es-sourced → `en`, `de`, `es-ES`; en-sourced → `es`, `es-ES`, `de`. Plan 66 (done) built es → L; the en → L direction and the `es-ES` target are part 15''s. Prompts in `authoring/tools/prompts/` (new prompts are the gamemaster''s: drafted here, approved by pm decision).
    - Suggested priority: 700.
 
 5. **Review tool for translations (QT-4)**
@@ -1116,6 +1117,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
    - Owner: `plans/15-i18n.md` ("Model"). Plan 68 (written): save field, per-locale pool, names, Esc menu rows (task 450, done).
    - UI language and question language in the save (`SaveData.language`); Esc menu of every mode. Engine loads `pool.<locale>.json`; seen counters by id (plan 65), so switching languages never repeats a question before unseen ones run out. Category/bundle names from the locale''s names. Supply check per locale.
    - **First start (milestone change; replaces plan 68''s "no first-start language screen"):** a fresh save opens on a language screen, the guessed language preselected; the player confirms or picks another; asked once. Guess: `navigator.language` now, Steam''s client language once milestone 10 provides it. A save without `language` (the family''s, = `es`) never sees it. Plan 68 gets the screen as a new task (revision of plan 68).
+   - `es-ES` gets its own question pool (part 15; until now a UI variant only, decision 156: One language for UI and questions picks `pool.es-ES.json` once its supply passes).
    - Current game: `es` fixed unless changed; the gamemaster mode unchanged.
    - Suggested priority: 480 (plan 68).
 
@@ -1129,12 +1131,14 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 8. **Spanish variety (only if OQ-31 picks neutral Spanish)**
    - Owner: `plans/15-i18n.md` ("Spanish varieties").
    - A `qgen batch` mode (e.g. `--neutralize`) that rewrites Colombian wording in `base` to neutral Latin American Spanish, through review; `colombia` keeps its wording. If OQ-31 keeps Colombian Spanish: the plan task drops with that reason.
+   - Plan 64 (done); `neutralize-1` runs as planned (decision 214: neutralize-1: qgen validate fails after fix). `es` is now idiomatic Latin American Spanish, no compromise with Spain: dropping "understood … in Spain" from `base`''s voice and the Spain-oriented rules from `neutralize.md` is part 15''s.
    - Suggested priority: 690 (tooling; the runs go to part 11).
 
 9. **Cost, budget and generation plan by gap (CT-3, CT-4)**
    - Owner: `plans/16-content-target.md` ("Cost").
    - Cost per approved question (draft → approved) and per translated question (from part 11''s pilot) from `costs.log`; budget for the release per language as a pm decision before full runs.
    - Gap plan: the simulation''s bottlenecks (part 1) → release targets per language/age group in `authoring/data/targets.json` (D-53, extended per locale), read by `draft` (D-54) and `--translate`. No new mechanism if plan 13''s covers it.
+   - Target 5000 approved per question locale (`en`, `es`, `es-ES`, `de`; decision 21). English drafting for `base` aims at the locales'' deficits; replaces decision 37''s last clause, D-84 and decision 219''s `DRIVES_DRAFTING` (the en/de source shortfall steering es drafting). The change is part 15''s; plan 70''s budget counts en drafting + three translations per question.
    - Suggested priority: 560 (after part 1).
 
 10. **Regional bundles (RG-3..RG-5)** (plan 98)
@@ -1152,6 +1156,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 
 11. **Release content runs**
     - The recurring `qgen batch` tasks: translation pilot (QT-5: 50 questions per language, measure reject rate and cost, go/no-go pm decision), then full translation per language (QT-6), neutral Spanish (part 8), regional bundle batches (part 10), and `base` top-ups where the simulation fails after milestone 1''s 5000. Each batch followed by D-56''s QC (plan 16 procedure, `authoring/QC.md`), native-speaker spot checks for translations.
+    - English-first `base` (part 15): `plan 17: Batch runs`'' batches draft `en` from batch-9 on (`task 1185: run batch-9`, decision 229: Continue batch-9 after the extended batch-8 review?); here their translation runs en → `es`, `es-ES`, `de`, and the es-sourced pool''s `es-ES` runs (besides `en`, `de`). No more Spanish `base` drafts or `es` top-ups.
     - Order inside: pilot first (priority -90, above the runs, so part 9''s budget has its cost); full runs after milestone 1''s batch runs (plan 17) so translations don''t go stale.
     - Regional pilot (decision 110): `qgen batch --bundle colombia` run/QC pairs from 102 to 2000 approved, then `--translate en --bundle colombia` pairs to 2000 en; once `colombia` reaches 2000 es: effort recorded ($ per approved, review time per 100) in `plans/15c-regional-questions.md` / `16-content-target.md`, then `pm decision add "More regional bundles at launch?"` with the numbers (candidates `mexico`, `argentina`); a "yes" adds `qgen bundle new` + taxonomy decisions in part 10''s plan and their run chains here.
     - Launch doesn''t wait for the regional chain: it ships what `colombia` has then; content updates (plan 96) bring the rest.
@@ -1163,6 +1168,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
     - `colombia` at 2000 approved in es and en, the pilot''s effort recorded, "More regional bundles at launch?" answered (may land after launch: the close-out of this milestone waits for it, the launch (milestone 11) doesn''t).
     - Style guides for every UI locale, the TV-check fixes in, the gamemaster''s screen gallery review done in every UI language (part 13''s decisions answered).
     - Every joker has one English-first name, translated in every catalog, and one symbol across languages, shown in its follow-up dialog (part 14).
+    - New `base` questions drafted in English and translated to `es`, `es-ES`, `de`; the es-sourced ones have `en`, `de`, `es-ES` pool entries (part 15).
     - `plans/11-steam.md` S4 row done; 15, 15a, 15b, 15c, 16 statuses and tasks; `plans/project.md`, `plans/README.md`; masterplans of milestones 10–11 (plans 10, 11) get a note if S4 changed their scope (store languages, DLC bundles and post-launch regional updates, install size of several pools).
     - Suggested priority: -130 (last, after part 11).
 
@@ -1186,6 +1192,18 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
     - Before the playtests (decisions 62–65, `Playtest passed?`): `plan 69: UI catalogs for the launch languages (LUI-4, LUI-5)`''s task 459 waits for it.
     - Suggested priority: 375 (after part 13''s style guides at 380, before plan 69''s playtest close-out).
 
+15. **English-first drafting for `base`** (milestone''s "English-first drafting for `base`", developer 2026-10-15)
+    - Owner: `plans/15b-question-translation.md` (source locale), `plans/15-i18n.md` (Spanish varieties), `plans/16-content-target.md` (targets); `authoring/tools/` (`qgen.py`, `translations.py`, `targets.py`, prompts), `authoring/data/`, `authoring/ui` (review tool), `authoring/RUNBOOK.md`.
+    - Source locale per question (schema, `qgen validate`): new `base` questions `en`, existing ones (≤ batch-8) `es`; regional bundles keep the region''s language (`colombia`: Colombian Spanish, then en; decision 110: Regional packs at launch (RG-5, OQ-46)).
+    - `qgen batch` for `base` drafts in English: concepts, draft, rate, fact-check, revise, media, audit, review tool, spot check, rework on the English text. Angle international: no Spanish-world focus, no Anglo/US bias, no wordplay that only works in one language (prompt rules shared with `plan 147: English-first batches: calibration, overlap and QC across languages`, not written twice).
+    - Translation from either source: en → `es`, `es-ES`, `de`; es → `en`, `de`, `es-ES` (part 4''s pipeline). `es-ES` a question locale with its own pool, prompt (`locale-es-ES.md`, Spain''s Spanish) and market; `es` voice idiomatic Latin American; `base`''s voice and `neutralize.md` lose their Spain-oriented rules. How the family''s `es` game gets English-sourced questions (an `es` translation in the `es` pool) is in the plan.
+    - Targets and gap aiming: 5000 approved per question locale (decision 21); English drafting aims at the locales'' deficits; `DRIVES_DRAFTING` and D-84''s source shortfall replaced (decision 219, decision 37''s last clause).
+    - Decisions this replaces, recorded with `pm decision record … --supersedes`: decision 27: Spanish variety (OQ-31) for `base` (es-419 from translation, not Spanish drafts; es-ES its own pool), decision 37: Per-locale content targets and gap aiming (last clause), decision 219: Do the new locales (zh-Hans, ru, pt-BR) steer es drafting from the start?; D-84, D-6 (Colombian usage) for `base` and D-87 where it assumes es as the only source in `plans/decisions.md`.
+    - Prompt changes are the developer''s (RUNBOOK): drafted by a task, shown in a pm decision, applied after the answer.
+    - RUNBOOK and D-36: `qgen batch` drafts `en` for `base`, `--translate` from either source.
+    - Gate: `task 1185: run batch-9` checks that `qgen batch` drafts `en`; every task of this plan that batch-9 needs runs before it, and a decision batch-9 needs also makes task 1185 pending on it (`pm task-pending-decision 1185 <decision>`).
+    - Suggested priority: 710 (backend; above plan 147 at 700, which builds on it, and far above batch-9 at -100).
+
 ## Order
 - Decisions first: plans 35, 37, 38, 41 (milestone 7) → parts 1, 3, 8, 10 can be written.
 - Engine (M2) + plan 27 → part 1 → part 9.
@@ -1193,6 +1211,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, created_at, created
 - Plan 36 + part 3 → part 6; plans 23/24 → part 7.
 - Part 13: style guides and TV-check fixes first, then the gallery, then the gamemaster''s review; before plan 69''s playtest close-out.
 - Part 14 after part 13''s style guides (glossaries get the new names), before plan 69''s playtests.
+- Part 15 before `task 1185: run batch-9` and before part 11''s runs of English-sourced questions; alongside plan 147.
 - Part 2 any time after plan 16. Part 12 last.
 
 ## Out of scope (from the milestone)
@@ -27675,8 +27694,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Not here: `qgen health ack` (the developer''s), batch-9 itself.
 
 Done when: 120 spot-checked, QC section of `authoring/reports/batch-8.md` updated, the proposals decision answered and its tasks added.', '2026-10-15T22:07:47Z', NULL, 1185, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1192, 9, 'revise the masterplan of milestone 9: Steam S4: content for release', 'revise', 'open', 1000, NULL, '`milestone 9: Steam S4: content for release` changed. Bring `plan 9: masterplan`, the masterplan, in line with it (`pm plan edit 9 --body -`), or
-leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-15T23:12:36Z', NULL, NULL, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1192, 9, 'revise the masterplan of milestone 9: Steam S4: content for release', 'revise', 'done', 1000, '2026-10-15, plan 9 body: English-first drafting for base (new part 15, priority 710), parts 4, 6, 8, 9, 11, 12, rules, preconditions and order updated', '`milestone 9: Steam S4: content for release` changed. Bring `plan 9: masterplan`, the masterplan, in line with it (`pm plan edit 9 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-15T23:12:36Z', '2026-10-16T00:26:15Z', NULL, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1193, 1, 'revise the masterplan of milestone 1: Enough content for game nights', 'revise', 'done', 1000, '2026-10-15, tasks.sql: plan 1 body: English-first from batch-9 (owner milestone 9, count rule, effects on parts 2–5), state 2026-10-15, answered decisions cited', '`milestone 1: Enough content for game nights` changed. Bring `plan 1: masterplan`, the masterplan, in line with it (`pm plan edit 1 --body -`), or
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-15T23:12:36Z', '2026-10-16T00:16:42Z', NULL, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1194, NULL, 'qgen: scan runs keep media unless fix changed it; review qgen for bugs, follow-up tasks', 'exec', 'open', 900, NULL, 'Developer''s intervention (2026-10-15). `task 632: run neutralize-1` was stopped in `record`: the scan modes reuse the rework chain (`revise_steps`, `authoring/tools/qgen.py`), so a wording-only rewrite searched media again and the reviewers re-picked images.
@@ -27871,6 +27890,1128 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm decision consequences 234 "<what changed>"`.
 
 Done when: `spot_check_size("batch-9")` returns the decided size before batch-9 exists; `qgen validate`, `npm run check`, `npm test`, `npm run build` pass.', '2026-10-16T00:24:20Z', NULL, 1199, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1209, 9, 'create tasks for plan 9: masterplan', 'split', 'open', 1000, NULL, 'Split plan 9 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T00:26:15Z', NULL, 1192, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1210, 57, 'revise plan 57: Release quality bar and back-audit (CT-5)', 'revise', 'open', 1000, NULL, '`plan 9: masterplan`, the plan above `plan 57: Release quality bar and back-audit (CT-5)`, changed; it is quoted below. Bring `plan 57: Release quality bar and back-audit (CT-5)` in line with it
+(`pm plan edit 57 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 9: masterplan
+
+Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewed questions, in every launch language, that a stranger''s family plays many evenings before questions repeat, plus a measurement that proves it. It needs translated UI catalogs, translated, re-rated and reviewed questions, regional bundles (D-39; decision 110: 2000 approved each, region''s language + en, free DLC, `colombia` the pilot), `qgen report --simulate` passing the content target for every launch language, and UI wording the gamemaster has checked on the TV (style guides, screen gallery), joker names made again English first, one symbol per joker in every language, and English-first drafting for `base` (developer, 2026-10-15): from batch-9 on `en` is the source of every new `base` question, translated to `es`, `es-ES` and `de`, each its own pool with 5000 approved (decision 21: Content target per player and language (OQ-32)). Today: 1136 approved (`base` 1034, `colombia` 102), Spanish only; milestone 1 takes `base` to 5000 (D-52).
+
+**The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 9 …`, priority as suggested), and that plan''s tasks do the work.
+
+## Preconditions (other milestones; a part''s plan task checks them first)
+- OQ-31 launch languages + Spanish variety: plan 37 (milestone 7). OQ-32 content target: plan 38. Default preset → burns per game: plan 35 (OQ-30). Burn multiplier for several players: plan 41 (OQ-37). If a needed decision is still pending, the plan task makes itself pending on it (`pm task-pending-decision`) and stops.
+- **If OQ-31 = Spanish only:** parts 3–7 shrink to nothing: their plan tasks drop with that reason (`pm task drop`), except what the Spanish variety needs (part 8). The rest still applies to Spanish.
+- TS engine (milestone 2, plans 19, 20; screens on the engine PORT-7): the simulation runs on it. Age-group windows and bundle filter in the engine (plan 27, milestone 5): the simulation and the bundle filter (RG-3) use them.
+- Catalog (milestone 3: plans 21, 22, 23, 24): `t()`, `es`, `xx`, draft `en`. Settings screen (plan 36, MD-7): the language setting goes there.
+- Pool growth and QC (milestone 1: plans 12 targets, 13 gap-aimed drafting, 15 drift, 16 QC/D-56, 17 batch runs). This milestone reuses them per language; it doesn''t rebuild them. The content side of the English switch (calibration examples, concept angle, cross-language overlap, health and spot check across the switch) is `plan 147: English-first batches: calibration, overlap and QC across languages` (milestone 1); part 15 doesn''t duplicate it.
+- Licence/price: answered (decision 66: Price model (OQ-33), bundles as free DLC; decision 107: Licence (OQ-35)). A part that writes files depending on them follows them.
+
+## Rules for every part
+- Questions only through `qgen batch` (D-36). New pipeline steps (translate, re-rate, neutral Spanish) become `qgen batch` modes, with RUNBOOK and D-36 amended as an implementation task (like BN-11). Workers never edit pools or pick media by hand.
+- Quality bar of plan 16 / D-56 applies per language: LLM audit + blind human spot check per batch; for a translation, the human is a native speaker (the gamemaster arranges them; workers prepare the sample and a pm decision "spot check done?").
+- `app/` never reads `authoring/` (D-35): per-locale pools and category/bundle names are exported to `app/data/`.
+- The current game keeps working after every task until the Steam build replaces it (D-59): Spanish, Colombia on, same keys (unless LUI-4 changes them by decision). The family''s `es` pool keeps its es-sourced questions as they are; English-sourced ones join it as `es` translations.
+- Owning plan files get tasks `[x]` with a note (`15-i18n.md`, `15a`, `15b`, `15c`, `16-content-target.md`, `22-bundles.md`); `plans/project.md` in sync. Store page texts (LUI-6) are S5 (milestone''s out of scope); note it in 15a, don''t do it.
+
+## Parts
+
+1. **Simulation: games per new player (CT-2)**
+   - Owner: `plans/16-content-target.md` ("Metric").
+   - `qgen report --simulate [--locale L] [--bundles …] [--age-group G] [--preset P] [--players N] [--seeds K]`: a new player plays game after game on the TS engine (Node, `authoring/` imports `app/`) with the default preset''s joker use, until supply fails. Median and 10th percentile; strong-player bound (always reaches 12); bottleneck level and subcategory.
+   - Pass/fail against the target of OQ-32''s D-entry, per launch language, default bundle set and every age group; exit 1 on fail. Feeds part 9 (gaps) and part 12 (exit).
+   - No second referee in Python: if the engine can''t run under Node without the client, the plan decides the small adapter.
+   - Suggested priority: 570 (after plans 20 and 27).
+
+2. **Release quality bar and back-audit (CT-5)**
+   - Owner: `plans/16-content-target.md` ("Quality bar"). D-56 covers new batches; the ~1100 questions approved before it never had an audit or a spot check.
+   - Release bar: D-56''s numbers (pm decision 2) or stricter for release (pm decision if the plan proposes stricter); error limit and what happens to a batch above it.
+   - Back-audit: `qgen audit` over the pre-D-56 approved pool in slices, through `qgen` (gamemaster asks, like `qgen rework`), findings → review tool (`audit=flagged`). Cost estimate first.
+   - Suggested priority: 640 (after plan 16 at 650).
+
+3. **Translation layout and schema (QT-1, I18N-3)**
+   - Owner: `plans/15b-question-translation.md` ("Storage"; draft preference A: `authoring/data/questions.<locale>.json`, same ids, translated fields + own `difficulty`, `status`, `review`, `source_hash` for `stale`).
+   - Also: `translatable: false` on source questions; translated category, subcategory and bundle names (`categories.json`, `bundles.json`, per bundle); `qgen export` writes `app/data/pool.<locale>.json` (+ names); `qgen validate` checks translations, `stale`, missing names. D-entry for the layout.
+   - Suggested priority: 890 (schema; after plan 26 at 900, which also changes pool fields).
+
+4. **Translation pipeline (QT-2, QT-3)**
+   - Owner: `plans/15b-question-translation.md` ("Pipeline").
+   - Steps `translate --to L` (adapt units, answer format, hints that play on Spanish words; detect non-travelling questions → propose `translatable: false`) → `rate --locale L` (difficulty for that language''s main market, D-38 scale) → `factcheck --locale L` → review (D-32/D-33) → audit (D-56) → merge into the locale file. Only `approved`, translatable sources; skips done ones; costs in `costs.log`.
+   - Entry point `qgen batch --translate L` (size like a batch, picks untranslated approved sources, fewest translated subcategories first); RUNBOOK + D-36 amended.
+   - Source locale per question (part 15): es-sourced → `en`, `de`, `es-ES`; en-sourced → `es`, `es-ES`, `de`. Plan 66 (done) built es → L; the en → L direction and the `es-ES` target are part 15''s. Prompts in `authoring/tools/prompts/` (new prompts are the gamemaster''s: drafted here, approved by pm decision).
+   - Suggested priority: 700.
+
+5. **Review tool for translations (QT-4)**
+   - Owner: `plans/15b-question-translation.md` ("Review tool"); `authoring/ui`, `authoring/server`.
+   - `/review?batch=…&locale=L`: source and translation side by side; same approve / needs work / reject; flag media with visible text per locale; blind spot-check sample mode per locale (plan 16''s sample mode, reused). Stats pages filter by locale.
+   - Suggested priority: 400.
+
+6. **Language setting, per-locale pool and first-start language screen (I18N-2)**
+   - Owner: `plans/15-i18n.md` ("Model"). Plan 68 (written): save field, per-locale pool, names, Esc menu rows (task 450, done).
+   - UI language and question language in the save (`SaveData.language`); Esc menu of every mode. Engine loads `pool.<locale>.json`; seen counters by id (plan 65), so switching languages never repeats a question before unseen ones run out. Category/bundle names from the locale''s names. Supply check per locale.
+   - **First start (milestone change; replaces plan 68''s "no first-start language screen"):** a fresh save opens on a language screen, the guessed language preselected; the player confirms or picks another; asked once. Guess: `navigator.language` now, Steam''s client language once milestone 10 provides it. A save without `language` (the family''s, = `es`) never sees it. Plan 68 gets the screen as a new task (revision of plan 68).
+   - `es-ES` gets its own question pool (part 15; until now a UI variant only, decision 156: One language for UI and questions picks `pool.es-ES.json` once its supply passes).
+   - Current game: `es` fixed unless changed; the gamemaster mode unchanged.
+   - Suggested priority: 480 (plan 68).
+
+7. **UI catalogs for the launch languages (LUI-4, LUI-5)**
+   - Owner: `plans/15a-ui-translation.md`. Builds on plans 21, 23, 24 (draft `en`).
+   - LUI-4: joker keys per language or neutral keys: pm decision with a recommendation (also gamepad glyphs from milestone 8, plan 45).
+   - LUI-5: one catalog per launch language beyond `es`/`en` draft; playful joker names per language (pm decision per joker, like plan 24); fonts checked for each script (Latin only at launch, 15a); length check with `xx`; `/comodines` cards per language; native-speaker playtest per language (gamemaster runs it; workers write the checklist and a pm decision "playtest passed?").
+   - Suggested priority: 390 (after plans 23, 24 at 400).
+   - Plan 69 (written; task 459 open): its playtest fixes follow the locale style guides of part 13 once they exist.
+
+8. **Spanish variety (only if OQ-31 picks neutral Spanish)**
+   - Owner: `plans/15-i18n.md` ("Spanish varieties").
+   - A `qgen batch` mode (e.g. `--neutralize`) that rewrites Colombian wording in `base` to neutral Latin American Spanish, through review; `colombia` keeps its wording. If OQ-31 keeps Colombian Spanish: the plan task drops with that reason.
+   - Plan 64 (done); `neutralize-1` runs as planned (decision 214: neutralize-1: qgen validate fails after fix). `es` is now idiomatic Latin American Spanish, no compromise with Spain: dropping "understood … in Spain" from `base`''s voice and the Spain-oriented rules from `neutralize.md` is part 15''s.
+   - Suggested priority: 690 (tooling; the runs go to part 11).
+
+9. **Cost, budget and generation plan by gap (CT-3, CT-4)**
+   - Owner: `plans/16-content-target.md` ("Cost").
+   - Cost per approved question (draft → approved) and per translated question (from part 11''s pilot) from `costs.log`; budget for the release per language as a pm decision before full runs.
+   - Gap plan: the simulation''s bottlenecks (part 1) → release targets per language/age group in `authoring/data/targets.json` (D-53, extended per locale), read by `draft` (D-54) and `--translate`. No new mechanism if plan 13''s covers it.
+   - Target 5000 approved per question locale (`en`, `es`, `es-ES`, `de`; decision 21). English drafting for `base` aims at the locales'' deficits; replaces decision 37''s last clause, D-84 and decision 219''s `DRIVES_DRAFTING` (the en/de source shortfall steering es drafting). The change is part 15''s; plan 70''s budget counts en drafting + three translations per question.
+   - Suggested priority: 560 (after part 1).
+
+10. **Regional bundles (RG-3..RG-5)** (plan 98)
+    - Owner: `plans/15c-regional-questions.md` (superseded by bundles, D-39) and `plans/22-bundles.md`. RG-3 is BN-6 (plan 27, milestone 5) plus part 1''s `--bundles`; RG-4 is `qgen batch --bundle` (BN-11, done): mark them so.
+    - RG-5 answered (decision 110: Regional packs at launch (RG-5, OQ-46); partly supersedes decision 37''s "packs have no target"):
+      - every regional bundle: 2000 approved, in its region''s language + en (`colombia`: es + en), free DLC (decision 66), off by default on the configure screen; the family''s save keeps base + `colombia` (D-59)
+      - bundle-scoped taxonomy: every bundle has its own categories and subcategories; names may repeat verbatim across bundles (e.g. «Historia» in `base` and in `colombia`), still separate entries; the 19 `colombia` questions on `base` subcategories move to `colombia`''s own (a `qgen` migration step, no hand edits; `validate` rule; engine, «Cambiazo», export and review tool keyed by bundle + subcategory, not by name)
+      - `colombia`''s subcategory list: the gamemaster''s (pm decision with a proposal)
+      - `qgen batch --translate <locale> --bundle <id>`: the selection takes the bundle''s approved sources; the bundle''s `languages` gains the locale once its translations are approved
+      - target per regional bundle (2000, D-53''s mix or the plan''s proposal) in `targets.json`, read by `--bundle` drafting and `qgen report`
+      - effort measurement for the pilot: $ per approved (`qgen report --cost`, per bundle) and the gamemaster''s review time per 100 (from the review tool''s timestamps; a `qgen report` line if none exists)
+      - packs as optional installs (plan 98 task 751, done); DLC depots in S5 (plan 89)
+    - New bundles (mexico, argentina, …) only after the pilot''s decision (part 11).
+    - Suggested priority: 300.
+
+11. **Release content runs**
+    - The recurring `qgen batch` tasks: translation pilot (QT-5: 50 questions per language, measure reject rate and cost, go/no-go pm decision), then full translation per language (QT-6), neutral Spanish (part 8), regional bundle batches (part 10), and `base` top-ups where the simulation fails after milestone 1''s 5000. Each batch followed by D-56''s QC (plan 16 procedure, `authoring/QC.md`), native-speaker spot checks for translations.
+    - English-first `base` (part 15): `plan 17: Batch runs`'' batches draft `en` from batch-9 on (`task 1185: run batch-9`, decision 229: Continue batch-9 after the extended batch-8 review?); here their translation runs en → `es`, `es-ES`, `de`, and the es-sourced pool''s `es-ES` runs (besides `en`, `de`). No more Spanish `base` drafts or `es` top-ups.
+    - Order inside: pilot first (priority -90, above the runs, so part 9''s budget has its cost); full runs after milestone 1''s batch runs (plan 17) so translations don''t go stale.
+    - Regional pilot (decision 110): `qgen batch --bundle colombia` run/QC pairs from 102 to 2000 approved, then `--translate en --bundle colombia` pairs to 2000 en; once `colombia` reaches 2000 es: effort recorded ($ per approved, review time per 100) in `plans/15c-regional-questions.md` / `16-content-target.md`, then `pm decision add "More regional bundles at launch?"` with the numbers (candidates `mexico`, `argentina`); a "yes" adds `qgen bundle new` + taxonomy decisions in part 10''s plan and their run chains here.
+    - Launch doesn''t wait for the regional chain: it ships what `colombia` has then; content updates (plan 96) bring the rest.
+    - Suggested priority: -110 (after plan 17''s -100).
+
+12. **S4 close-out**
+    - `qgen report --simulate` passes for every launch language (the milestone''s "Done when"); result recorded in `plans/16-content-target.md`.
+    - A fresh save asks for the language once; an existing save doesn''t (the milestone''s "Done when"; browser check).
+    - `colombia` at 2000 approved in es and en, the pilot''s effort recorded, "More regional bundles at launch?" answered (may land after launch: the close-out of this milestone waits for it, the launch (milestone 11) doesn''t).
+    - Style guides for every UI locale, the TV-check fixes in, the gamemaster''s screen gallery review done in every UI language (part 13''s decisions answered).
+    - Every joker has one English-first name, translated in every catalog, and one symbol across languages, shown in its follow-up dialog (part 14).
+    - New `base` questions drafted in English and translated to `es`, `es-ES`, `de`; the es-sourced ones have `en`, `de`, `es-ES` pool entries (part 15).
+    - `plans/11-steam.md` S4 row done; 15, 15a, 15b, 15c, 16 statuses and tasks; `plans/project.md`, `plans/README.md`; masterplans of milestones 10–11 (plans 10, 11) get a note if S4 changed their scope (store languages, DLC bundles and post-launch regional updates, install size of several pools).
+    - Suggested priority: -130 (last, after part 11).
+
+13. **UI wording: style guides, TV-check fixes, screen gallery** (milestone''s "UI wording and review", gamemaster''s TV check 2026-10-13)
+    - Owner: `plans/15a-ui-translation.md` (new section "Wording and review"); `app/client/src/locales/`, `authoring/ui`, `authoring/server`.
+    - Style guides `app/client/src/locales/style/<locale>.md` (`en`, `es`, `es-ES`, `de`): glossary of fixed terms, how players are addressed, button conventions, Steam''s own term where Steam has one, list of bad patterns seen so far. Guidance, not a lint. German: never assume plural, infinitive style («Frage wählen», not «Wählt eine Frage»); other locales keep their address form unless their guide says otherwise.
+    - Workers read the guide: a line in `AGENTS.md` (Rules) and in the translation prompts (`authoring/tools/prompts/`, gamemaster-approved by pm decision, like decision 35: Translation prompts and markets per locale) that every change to UI strings reads the locale''s guide; new bad patterns go into it.
+    - TV-check fixes in the catalogs: de mode name «Spielleitermodus» (en «Gamemaster mode», es «Modo anfitrión» stay); «Steam achievements» / «logros de Steam» / «Steam-Erfolge» wherever achievements are mentioned (decision 74: Gamemaster mode earns no achievements); Esc menu «Back to main menu» / «Volver al menú principal» / «Zurück zum Hauptmenü» (to the start screen) instead of «End game (set up another)», «Quit game» / «Salir del juego» / «Spiel beenden», the quit button in its own colour (within `--u`, D-29); `de` without plural address (every «ihr»/«euch»/«wählt»-style string). The family''s Spanish game changes only in these decided strings (D-59).
+    - Screen gallery: one command (e.g. `trivia-gallery`) renders every screen and dialog in every UI language from a demo save (headless browser; dev dependency only if decision 6''s throw-away Playwright doesn''t fit a re-runnable command: the plan decides, minimal deps); a `trivia-authoring` page shows the shots with each visible text''s catalog key, the gamemaster flags a string with a note; flags feed the next fix pass (a task reads them, fixes catalogs, adds patterns to the guide). Re-runnable any time; output under `work/` (gitignored).
+    - Gamemaster review: one `pm decision add --once` per UI language "Screen gallery reviewed?"; its flags become a fix task.
+    - Suggested priority: 380 (above plan 69''s playtest close-out, task 459 at 340, so the playtest sees the fixed wording).
+
+14. **Joker names and symbols, defined again** (milestone''s "Joker names, defined again", developer 2026-10-14)
+    - Replaces decisions 40–44 (English names: `decision 40: English name for the hint joker «Soplo»?` … `decision 44: English name for the snipe joker «Francotirador»?`) and 54–58 (German names); the new plan records that with `pm decision record … --supersedes` per old decision.
+    - Owner: `plans/15a-ui-translation.md` (joker names section), `plans/09-jokers.md` (JK-*); `app/client/src/locales/`, `app/client/src/game/` (tray, joker dialogs), `authoring/ui/src/print/JokerCards.svelte` (`/comodines`).
+    - One symbol per joker, the same in every language: today''s tray icons (bulb, door, stairs, compass, crosshair) unless a new name needs another; drawn in VD-8 style (`Icon.svelte`, like `plan 135: Playful icons and language flags before a game session`).
+    - Names English first, made to fit the symbol: one pm decision per joker (`hint`, `skip`, `easier`, `category`, `snipe`), 3–5 candidates, recommended first, ≤ 13 characters; then `es`, `es-ES`, `de` translated from the English names (one decision per locale listing all five, or per joker: the plan decides), `es` included: a decided exception to D-59, the family''s game gets the new names.
+    - Key letters follow the new names (`decision 53: Joker and action keys per UI language (LUI-4)?`: mnemonic per catalog, collision rule); `es` keys change only if its new names need it (listed in the `es` decision).
+    - New names everywhere they appear: catalogs and keys, notes like «Soplo 1/2/3», `/comodines` cards, style guide glossaries (part 13), store texts (`plan 88: Store page and AI disclosure (PUB-8, LUI-6)`; its approval decisions 169–171 see the new names), achievement texts (`plan 86: Achievements (SW-11)`; API names like `FIRST_SOPLO` stay).
+    - The dialog that follows a joker (category pick, snipe aim, Paso''s purge option, …) shows the joker''s symbol.
+    - Before the playtests (decisions 62–65, `Playtest passed?`): `plan 69: UI catalogs for the launch languages (LUI-4, LUI-5)`''s task 459 waits for it.
+    - Suggested priority: 375 (after part 13''s style guides at 380, before plan 69''s playtest close-out).
+
+15. **English-first drafting for `base`** (milestone''s "English-first drafting for `base`", developer 2026-10-15)
+    - Owner: `plans/15b-question-translation.md` (source locale), `plans/15-i18n.md` (Spanish varieties), `plans/16-content-target.md` (targets); `authoring/tools/` (`qgen.py`, `translations.py`, `targets.py`, prompts), `authoring/data/`, `authoring/ui` (review tool), `authoring/RUNBOOK.md`.
+    - Source locale per question (schema, `qgen validate`): new `base` questions `en`, existing ones (≤ batch-8) `es`; regional bundles keep the region''s language (`colombia`: Colombian Spanish, then en; decision 110: Regional packs at launch (RG-5, OQ-46)).
+    - `qgen batch` for `base` drafts in English: concepts, draft, rate, fact-check, revise, media, audit, review tool, spot check, rework on the English text. Angle international: no Spanish-world focus, no Anglo/US bias, no wordplay that only works in one language (prompt rules shared with `plan 147: English-first batches: calibration, overlap and QC across languages`, not written twice).
+    - Translation from either source: en → `es`, `es-ES`, `de`; es → `en`, `de`, `es-ES` (part 4''s pipeline). `es-ES` a question locale with its own pool, prompt (`locale-es-ES.md`, Spain''s Spanish) and market; `es` voice idiomatic Latin American; `base`''s voice and `neutralize.md` lose their Spain-oriented rules. How the family''s `es` game gets English-sourced questions (an `es` translation in the `es` pool) is in the plan.
+    - Targets and gap aiming: 5000 approved per question locale (decision 21); English drafting aims at the locales'' deficits; `DRIVES_DRAFTING` and D-84''s source shortfall replaced (decision 219, decision 37''s last clause).
+    - Decisions this replaces, recorded with `pm decision record … --supersedes`: decision 27: Spanish variety (OQ-31) for `base` (es-419 from translation, not Spanish drafts; es-ES its own pool), decision 37: Per-locale content targets and gap aiming (last clause), decision 219: Do the new locales (zh-Hans, ru, pt-BR) steer es drafting from the start?; D-84, D-6 (Colombian usage) for `base` and D-87 where it assumes es as the only source in `plans/decisions.md`.
+    - Prompt changes are the developer''s (RUNBOOK): drafted by a task, shown in a pm decision, applied after the answer.
+    - RUNBOOK and D-36: `qgen batch` drafts `en` for `base`, `--translate` from either source.
+    - Gate: `task 1185: run batch-9` checks that `qgen batch` drafts `en`; every task of this plan that batch-9 needs runs before it, and a decision batch-9 needs also makes task 1185 pending on it (`pm task-pending-decision 1185 <decision>`).
+    - Suggested priority: 710 (backend; above plan 147 at 700, which builds on it, and far above batch-9 at -100).
+
+## Order
+- Decisions first: plans 35, 37, 38, 41 (milestone 7) → parts 1, 3, 8, 10 can be written.
+- Engine (M2) + plan 27 → part 1 → part 9.
+- Part 3 → part 4 → part 5 → part 11''s pilot → part 9''s budget → full runs.
+- Plan 36 + part 3 → part 6; plans 23/24 → part 7.
+- Part 13: style guides and TV-check fixes first, then the gallery, then the gamemaster''s review; before plan 69''s playtest close-out.
+- Part 14 after part 13''s style guides (glossaries get the new names), before plan 69''s playtests.
+- Part 15 before `task 1185: run batch-9` and before part 11''s runs of English-sourced questions; alongside plan 147.
+- Part 2 any time after plan 16. Part 12 last.
+
+## Out of scope (from the milestone)
+- Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-16T00:26:15Z', NULL, 1192, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1211, 69, 'revise plan 69: UI catalogs for the launch languages (LUI-4, LUI-5)', 'revise', 'open', 1000, NULL, '`plan 9: masterplan`, the plan above `plan 69: UI catalogs for the launch languages (LUI-4, LUI-5)`, changed; it is quoted below. Bring `plan 69: UI catalogs for the launch languages (LUI-4, LUI-5)` in line with it
+(`pm plan edit 69 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 9: masterplan
+
+Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewed questions, in every launch language, that a stranger''s family plays many evenings before questions repeat, plus a measurement that proves it. It needs translated UI catalogs, translated, re-rated and reviewed questions, regional bundles (D-39; decision 110: 2000 approved each, region''s language + en, free DLC, `colombia` the pilot), `qgen report --simulate` passing the content target for every launch language, and UI wording the gamemaster has checked on the TV (style guides, screen gallery), joker names made again English first, one symbol per joker in every language, and English-first drafting for `base` (developer, 2026-10-15): from batch-9 on `en` is the source of every new `base` question, translated to `es`, `es-ES` and `de`, each its own pool with 5000 approved (decision 21: Content target per player and language (OQ-32)). Today: 1136 approved (`base` 1034, `colombia` 102), Spanish only; milestone 1 takes `base` to 5000 (D-52).
+
+**The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 9 …`, priority as suggested), and that plan''s tasks do the work.
+
+## Preconditions (other milestones; a part''s plan task checks them first)
+- OQ-31 launch languages + Spanish variety: plan 37 (milestone 7). OQ-32 content target: plan 38. Default preset → burns per game: plan 35 (OQ-30). Burn multiplier for several players: plan 41 (OQ-37). If a needed decision is still pending, the plan task makes itself pending on it (`pm task-pending-decision`) and stops.
+- **If OQ-31 = Spanish only:** parts 3–7 shrink to nothing: their plan tasks drop with that reason (`pm task drop`), except what the Spanish variety needs (part 8). The rest still applies to Spanish.
+- TS engine (milestone 2, plans 19, 20; screens on the engine PORT-7): the simulation runs on it. Age-group windows and bundle filter in the engine (plan 27, milestone 5): the simulation and the bundle filter (RG-3) use them.
+- Catalog (milestone 3: plans 21, 22, 23, 24): `t()`, `es`, `xx`, draft `en`. Settings screen (plan 36, MD-7): the language setting goes there.
+- Pool growth and QC (milestone 1: plans 12 targets, 13 gap-aimed drafting, 15 drift, 16 QC/D-56, 17 batch runs). This milestone reuses them per language; it doesn''t rebuild them. The content side of the English switch (calibration examples, concept angle, cross-language overlap, health and spot check across the switch) is `plan 147: English-first batches: calibration, overlap and QC across languages` (milestone 1); part 15 doesn''t duplicate it.
+- Licence/price: answered (decision 66: Price model (OQ-33), bundles as free DLC; decision 107: Licence (OQ-35)). A part that writes files depending on them follows them.
+
+## Rules for every part
+- Questions only through `qgen batch` (D-36). New pipeline steps (translate, re-rate, neutral Spanish) become `qgen batch` modes, with RUNBOOK and D-36 amended as an implementation task (like BN-11). Workers never edit pools or pick media by hand.
+- Quality bar of plan 16 / D-56 applies per language: LLM audit + blind human spot check per batch; for a translation, the human is a native speaker (the gamemaster arranges them; workers prepare the sample and a pm decision "spot check done?").
+- `app/` never reads `authoring/` (D-35): per-locale pools and category/bundle names are exported to `app/data/`.
+- The current game keeps working after every task until the Steam build replaces it (D-59): Spanish, Colombia on, same keys (unless LUI-4 changes them by decision). The family''s `es` pool keeps its es-sourced questions as they are; English-sourced ones join it as `es` translations.
+- Owning plan files get tasks `[x]` with a note (`15-i18n.md`, `15a`, `15b`, `15c`, `16-content-target.md`, `22-bundles.md`); `plans/project.md` in sync. Store page texts (LUI-6) are S5 (milestone''s out of scope); note it in 15a, don''t do it.
+
+## Parts
+
+1. **Simulation: games per new player (CT-2)**
+   - Owner: `plans/16-content-target.md` ("Metric").
+   - `qgen report --simulate [--locale L] [--bundles …] [--age-group G] [--preset P] [--players N] [--seeds K]`: a new player plays game after game on the TS engine (Node, `authoring/` imports `app/`) with the default preset''s joker use, until supply fails. Median and 10th percentile; strong-player bound (always reaches 12); bottleneck level and subcategory.
+   - Pass/fail against the target of OQ-32''s D-entry, per launch language, default bundle set and every age group; exit 1 on fail. Feeds part 9 (gaps) and part 12 (exit).
+   - No second referee in Python: if the engine can''t run under Node without the client, the plan decides the small adapter.
+   - Suggested priority: 570 (after plans 20 and 27).
+
+2. **Release quality bar and back-audit (CT-5)**
+   - Owner: `plans/16-content-target.md` ("Quality bar"). D-56 covers new batches; the ~1100 questions approved before it never had an audit or a spot check.
+   - Release bar: D-56''s numbers (pm decision 2) or stricter for release (pm decision if the plan proposes stricter); error limit and what happens to a batch above it.
+   - Back-audit: `qgen audit` over the pre-D-56 approved pool in slices, through `qgen` (gamemaster asks, like `qgen rework`), findings → review tool (`audit=flagged`). Cost estimate first.
+   - Suggested priority: 640 (after plan 16 at 650).
+
+3. **Translation layout and schema (QT-1, I18N-3)**
+   - Owner: `plans/15b-question-translation.md` ("Storage"; draft preference A: `authoring/data/questions.<locale>.json`, same ids, translated fields + own `difficulty`, `status`, `review`, `source_hash` for `stale`).
+   - Also: `translatable: false` on source questions; translated category, subcategory and bundle names (`categories.json`, `bundles.json`, per bundle); `qgen export` writes `app/data/pool.<locale>.json` (+ names); `qgen validate` checks translations, `stale`, missing names. D-entry for the layout.
+   - Suggested priority: 890 (schema; after plan 26 at 900, which also changes pool fields).
+
+4. **Translation pipeline (QT-2, QT-3)**
+   - Owner: `plans/15b-question-translation.md` ("Pipeline").
+   - Steps `translate --to L` (adapt units, answer format, hints that play on Spanish words; detect non-travelling questions → propose `translatable: false`) → `rate --locale L` (difficulty for that language''s main market, D-38 scale) → `factcheck --locale L` → review (D-32/D-33) → audit (D-56) → merge into the locale file. Only `approved`, translatable sources; skips done ones; costs in `costs.log`.
+   - Entry point `qgen batch --translate L` (size like a batch, picks untranslated approved sources, fewest translated subcategories first); RUNBOOK + D-36 amended.
+   - Source locale per question (part 15): es-sourced → `en`, `de`, `es-ES`; en-sourced → `es`, `es-ES`, `de`. Plan 66 (done) built es → L; the en → L direction and the `es-ES` target are part 15''s. Prompts in `authoring/tools/prompts/` (new prompts are the gamemaster''s: drafted here, approved by pm decision).
+   - Suggested priority: 700.
+
+5. **Review tool for translations (QT-4)**
+   - Owner: `plans/15b-question-translation.md` ("Review tool"); `authoring/ui`, `authoring/server`.
+   - `/review?batch=…&locale=L`: source and translation side by side; same approve / needs work / reject; flag media with visible text per locale; blind spot-check sample mode per locale (plan 16''s sample mode, reused). Stats pages filter by locale.
+   - Suggested priority: 400.
+
+6. **Language setting, per-locale pool and first-start language screen (I18N-2)**
+   - Owner: `plans/15-i18n.md` ("Model"). Plan 68 (written): save field, per-locale pool, names, Esc menu rows (task 450, done).
+   - UI language and question language in the save (`SaveData.language`); Esc menu of every mode. Engine loads `pool.<locale>.json`; seen counters by id (plan 65), so switching languages never repeats a question before unseen ones run out. Category/bundle names from the locale''s names. Supply check per locale.
+   - **First start (milestone change; replaces plan 68''s "no first-start language screen"):** a fresh save opens on a language screen, the guessed language preselected; the player confirms or picks another; asked once. Guess: `navigator.language` now, Steam''s client language once milestone 10 provides it. A save without `language` (the family''s, = `es`) never sees it. Plan 68 gets the screen as a new task (revision of plan 68).
+   - `es-ES` gets its own question pool (part 15; until now a UI variant only, decision 156: One language for UI and questions picks `pool.es-ES.json` once its supply passes).
+   - Current game: `es` fixed unless changed; the gamemaster mode unchanged.
+   - Suggested priority: 480 (plan 68).
+
+7. **UI catalogs for the launch languages (LUI-4, LUI-5)**
+   - Owner: `plans/15a-ui-translation.md`. Builds on plans 21, 23, 24 (draft `en`).
+   - LUI-4: joker keys per language or neutral keys: pm decision with a recommendation (also gamepad glyphs from milestone 8, plan 45).
+   - LUI-5: one catalog per launch language beyond `es`/`en` draft; playful joker names per language (pm decision per joker, like plan 24); fonts checked for each script (Latin only at launch, 15a); length check with `xx`; `/comodines` cards per language; native-speaker playtest per language (gamemaster runs it; workers write the checklist and a pm decision "playtest passed?").
+   - Suggested priority: 390 (after plans 23, 24 at 400).
+   - Plan 69 (written; task 459 open): its playtest fixes follow the locale style guides of part 13 once they exist.
+
+8. **Spanish variety (only if OQ-31 picks neutral Spanish)**
+   - Owner: `plans/15-i18n.md` ("Spanish varieties").
+   - A `qgen batch` mode (e.g. `--neutralize`) that rewrites Colombian wording in `base` to neutral Latin American Spanish, through review; `colombia` keeps its wording. If OQ-31 keeps Colombian Spanish: the plan task drops with that reason.
+   - Plan 64 (done); `neutralize-1` runs as planned (decision 214: neutralize-1: qgen validate fails after fix). `es` is now idiomatic Latin American Spanish, no compromise with Spain: dropping "understood … in Spain" from `base`''s voice and the Spain-oriented rules from `neutralize.md` is part 15''s.
+   - Suggested priority: 690 (tooling; the runs go to part 11).
+
+9. **Cost, budget and generation plan by gap (CT-3, CT-4)**
+   - Owner: `plans/16-content-target.md` ("Cost").
+   - Cost per approved question (draft → approved) and per translated question (from part 11''s pilot) from `costs.log`; budget for the release per language as a pm decision before full runs.
+   - Gap plan: the simulation''s bottlenecks (part 1) → release targets per language/age group in `authoring/data/targets.json` (D-53, extended per locale), read by `draft` (D-54) and `--translate`. No new mechanism if plan 13''s covers it.
+   - Target 5000 approved per question locale (`en`, `es`, `es-ES`, `de`; decision 21). English drafting for `base` aims at the locales'' deficits; replaces decision 37''s last clause, D-84 and decision 219''s `DRIVES_DRAFTING` (the en/de source shortfall steering es drafting). The change is part 15''s; plan 70''s budget counts en drafting + three translations per question.
+   - Suggested priority: 560 (after part 1).
+
+10. **Regional bundles (RG-3..RG-5)** (plan 98)
+    - Owner: `plans/15c-regional-questions.md` (superseded by bundles, D-39) and `plans/22-bundles.md`. RG-3 is BN-6 (plan 27, milestone 5) plus part 1''s `--bundles`; RG-4 is `qgen batch --bundle` (BN-11, done): mark them so.
+    - RG-5 answered (decision 110: Regional packs at launch (RG-5, OQ-46); partly supersedes decision 37''s "packs have no target"):
+      - every regional bundle: 2000 approved, in its region''s language + en (`colombia`: es + en), free DLC (decision 66), off by default on the configure screen; the family''s save keeps base + `colombia` (D-59)
+      - bundle-scoped taxonomy: every bundle has its own categories and subcategories; names may repeat verbatim across bundles (e.g. «Historia» in `base` and in `colombia`), still separate entries; the 19 `colombia` questions on `base` subcategories move to `colombia`''s own (a `qgen` migration step, no hand edits; `validate` rule; engine, «Cambiazo», export and review tool keyed by bundle + subcategory, not by name)
+      - `colombia`''s subcategory list: the gamemaster''s (pm decision with a proposal)
+      - `qgen batch --translate <locale> --bundle <id>`: the selection takes the bundle''s approved sources; the bundle''s `languages` gains the locale once its translations are approved
+      - target per regional bundle (2000, D-53''s mix or the plan''s proposal) in `targets.json`, read by `--bundle` drafting and `qgen report`
+      - effort measurement for the pilot: $ per approved (`qgen report --cost`, per bundle) and the gamemaster''s review time per 100 (from the review tool''s timestamps; a `qgen report` line if none exists)
+      - packs as optional installs (plan 98 task 751, done); DLC depots in S5 (plan 89)
+    - New bundles (mexico, argentina, …) only after the pilot''s decision (part 11).
+    - Suggested priority: 300.
+
+11. **Release content runs**
+    - The recurring `qgen batch` tasks: translation pilot (QT-5: 50 questions per language, measure reject rate and cost, go/no-go pm decision), then full translation per language (QT-6), neutral Spanish (part 8), regional bundle batches (part 10), and `base` top-ups where the simulation fails after milestone 1''s 5000. Each batch followed by D-56''s QC (plan 16 procedure, `authoring/QC.md`), native-speaker spot checks for translations.
+    - English-first `base` (part 15): `plan 17: Batch runs`'' batches draft `en` from batch-9 on (`task 1185: run batch-9`, decision 229: Continue batch-9 after the extended batch-8 review?); here their translation runs en → `es`, `es-ES`, `de`, and the es-sourced pool''s `es-ES` runs (besides `en`, `de`). No more Spanish `base` drafts or `es` top-ups.
+    - Order inside: pilot first (priority -90, above the runs, so part 9''s budget has its cost); full runs after milestone 1''s batch runs (plan 17) so translations don''t go stale.
+    - Regional pilot (decision 110): `qgen batch --bundle colombia` run/QC pairs from 102 to 2000 approved, then `--translate en --bundle colombia` pairs to 2000 en; once `colombia` reaches 2000 es: effort recorded ($ per approved, review time per 100) in `plans/15c-regional-questions.md` / `16-content-target.md`, then `pm decision add "More regional bundles at launch?"` with the numbers (candidates `mexico`, `argentina`); a "yes" adds `qgen bundle new` + taxonomy decisions in part 10''s plan and their run chains here.
+    - Launch doesn''t wait for the regional chain: it ships what `colombia` has then; content updates (plan 96) bring the rest.
+    - Suggested priority: -110 (after plan 17''s -100).
+
+12. **S4 close-out**
+    - `qgen report --simulate` passes for every launch language (the milestone''s "Done when"); result recorded in `plans/16-content-target.md`.
+    - A fresh save asks for the language once; an existing save doesn''t (the milestone''s "Done when"; browser check).
+    - `colombia` at 2000 approved in es and en, the pilot''s effort recorded, "More regional bundles at launch?" answered (may land after launch: the close-out of this milestone waits for it, the launch (milestone 11) doesn''t).
+    - Style guides for every UI locale, the TV-check fixes in, the gamemaster''s screen gallery review done in every UI language (part 13''s decisions answered).
+    - Every joker has one English-first name, translated in every catalog, and one symbol across languages, shown in its follow-up dialog (part 14).
+    - New `base` questions drafted in English and translated to `es`, `es-ES`, `de`; the es-sourced ones have `en`, `de`, `es-ES` pool entries (part 15).
+    - `plans/11-steam.md` S4 row done; 15, 15a, 15b, 15c, 16 statuses and tasks; `plans/project.md`, `plans/README.md`; masterplans of milestones 10–11 (plans 10, 11) get a note if S4 changed their scope (store languages, DLC bundles and post-launch regional updates, install size of several pools).
+    - Suggested priority: -130 (last, after part 11).
+
+13. **UI wording: style guides, TV-check fixes, screen gallery** (milestone''s "UI wording and review", gamemaster''s TV check 2026-10-13)
+    - Owner: `plans/15a-ui-translation.md` (new section "Wording and review"); `app/client/src/locales/`, `authoring/ui`, `authoring/server`.
+    - Style guides `app/client/src/locales/style/<locale>.md` (`en`, `es`, `es-ES`, `de`): glossary of fixed terms, how players are addressed, button conventions, Steam''s own term where Steam has one, list of bad patterns seen so far. Guidance, not a lint. German: never assume plural, infinitive style («Frage wählen», not «Wählt eine Frage»); other locales keep their address form unless their guide says otherwise.
+    - Workers read the guide: a line in `AGENTS.md` (Rules) and in the translation prompts (`authoring/tools/prompts/`, gamemaster-approved by pm decision, like decision 35: Translation prompts and markets per locale) that every change to UI strings reads the locale''s guide; new bad patterns go into it.
+    - TV-check fixes in the catalogs: de mode name «Spielleitermodus» (en «Gamemaster mode», es «Modo anfitrión» stay); «Steam achievements» / «logros de Steam» / «Steam-Erfolge» wherever achievements are mentioned (decision 74: Gamemaster mode earns no achievements); Esc menu «Back to main menu» / «Volver al menú principal» / «Zurück zum Hauptmenü» (to the start screen) instead of «End game (set up another)», «Quit game» / «Salir del juego» / «Spiel beenden», the quit button in its own colour (within `--u`, D-29); `de` without plural address (every «ihr»/«euch»/«wählt»-style string). The family''s Spanish game changes only in these decided strings (D-59).
+    - Screen gallery: one command (e.g. `trivia-gallery`) renders every screen and dialog in every UI language from a demo save (headless browser; dev dependency only if decision 6''s throw-away Playwright doesn''t fit a re-runnable command: the plan decides, minimal deps); a `trivia-authoring` page shows the shots with each visible text''s catalog key, the gamemaster flags a string with a note; flags feed the next fix pass (a task reads them, fixes catalogs, adds patterns to the guide). Re-runnable any time; output under `work/` (gitignored).
+    - Gamemaster review: one `pm decision add --once` per UI language "Screen gallery reviewed?"; its flags become a fix task.
+    - Suggested priority: 380 (above plan 69''s playtest close-out, task 459 at 340, so the playtest sees the fixed wording).
+
+14. **Joker names and symbols, defined again** (milestone''s "Joker names, defined again", developer 2026-10-14)
+    - Replaces decisions 40–44 (English names: `decision 40: English name for the hint joker «Soplo»?` … `decision 44: English name for the snipe joker «Francotirador»?`) and 54–58 (German names); the new plan records that with `pm decision record … --supersedes` per old decision.
+    - Owner: `plans/15a-ui-translation.md` (joker names section), `plans/09-jokers.md` (JK-*); `app/client/src/locales/`, `app/client/src/game/` (tray, joker dialogs), `authoring/ui/src/print/JokerCards.svelte` (`/comodines`).
+    - One symbol per joker, the same in every language: today''s tray icons (bulb, door, stairs, compass, crosshair) unless a new name needs another; drawn in VD-8 style (`Icon.svelte`, like `plan 135: Playful icons and language flags before a game session`).
+    - Names English first, made to fit the symbol: one pm decision per joker (`hint`, `skip`, `easier`, `category`, `snipe`), 3–5 candidates, recommended first, ≤ 13 characters; then `es`, `es-ES`, `de` translated from the English names (one decision per locale listing all five, or per joker: the plan decides), `es` included: a decided exception to D-59, the family''s game gets the new names.
+    - Key letters follow the new names (`decision 53: Joker and action keys per UI language (LUI-4)?`: mnemonic per catalog, collision rule); `es` keys change only if its new names need it (listed in the `es` decision).
+    - New names everywhere they appear: catalogs and keys, notes like «Soplo 1/2/3», `/comodines` cards, style guide glossaries (part 13), store texts (`plan 88: Store page and AI disclosure (PUB-8, LUI-6)`; its approval decisions 169–171 see the new names), achievement texts (`plan 86: Achievements (SW-11)`; API names like `FIRST_SOPLO` stay).
+    - The dialog that follows a joker (category pick, snipe aim, Paso''s purge option, …) shows the joker''s symbol.
+    - Before the playtests (decisions 62–65, `Playtest passed?`): `plan 69: UI catalogs for the launch languages (LUI-4, LUI-5)`''s task 459 waits for it.
+    - Suggested priority: 375 (after part 13''s style guides at 380, before plan 69''s playtest close-out).
+
+15. **English-first drafting for `base`** (milestone''s "English-first drafting for `base`", developer 2026-10-15)
+    - Owner: `plans/15b-question-translation.md` (source locale), `plans/15-i18n.md` (Spanish varieties), `plans/16-content-target.md` (targets); `authoring/tools/` (`qgen.py`, `translations.py`, `targets.py`, prompts), `authoring/data/`, `authoring/ui` (review tool), `authoring/RUNBOOK.md`.
+    - Source locale per question (schema, `qgen validate`): new `base` questions `en`, existing ones (≤ batch-8) `es`; regional bundles keep the region''s language (`colombia`: Colombian Spanish, then en; decision 110: Regional packs at launch (RG-5, OQ-46)).
+    - `qgen batch` for `base` drafts in English: concepts, draft, rate, fact-check, revise, media, audit, review tool, spot check, rework on the English text. Angle international: no Spanish-world focus, no Anglo/US bias, no wordplay that only works in one language (prompt rules shared with `plan 147: English-first batches: calibration, overlap and QC across languages`, not written twice).
+    - Translation from either source: en → `es`, `es-ES`, `de`; es → `en`, `de`, `es-ES` (part 4''s pipeline). `es-ES` a question locale with its own pool, prompt (`locale-es-ES.md`, Spain''s Spanish) and market; `es` voice idiomatic Latin American; `base`''s voice and `neutralize.md` lose their Spain-oriented rules. How the family''s `es` game gets English-sourced questions (an `es` translation in the `es` pool) is in the plan.
+    - Targets and gap aiming: 5000 approved per question locale (decision 21); English drafting aims at the locales'' deficits; `DRIVES_DRAFTING` and D-84''s source shortfall replaced (decision 219, decision 37''s last clause).
+    - Decisions this replaces, recorded with `pm decision record … --supersedes`: decision 27: Spanish variety (OQ-31) for `base` (es-419 from translation, not Spanish drafts; es-ES its own pool), decision 37: Per-locale content targets and gap aiming (last clause), decision 219: Do the new locales (zh-Hans, ru, pt-BR) steer es drafting from the start?; D-84, D-6 (Colombian usage) for `base` and D-87 where it assumes es as the only source in `plans/decisions.md`.
+    - Prompt changes are the developer''s (RUNBOOK): drafted by a task, shown in a pm decision, applied after the answer.
+    - RUNBOOK and D-36: `qgen batch` drafts `en` for `base`, `--translate` from either source.
+    - Gate: `task 1185: run batch-9` checks that `qgen batch` drafts `en`; every task of this plan that batch-9 needs runs before it, and a decision batch-9 needs also makes task 1185 pending on it (`pm task-pending-decision 1185 <decision>`).
+    - Suggested priority: 710 (backend; above plan 147 at 700, which builds on it, and far above batch-9 at -100).
+
+## Order
+- Decisions first: plans 35, 37, 38, 41 (milestone 7) → parts 1, 3, 8, 10 can be written.
+- Engine (M2) + plan 27 → part 1 → part 9.
+- Part 3 → part 4 → part 5 → part 11''s pilot → part 9''s budget → full runs.
+- Plan 36 + part 3 → part 6; plans 23/24 → part 7.
+- Part 13: style guides and TV-check fixes first, then the gallery, then the gamemaster''s review; before plan 69''s playtest close-out.
+- Part 14 after part 13''s style guides (glossaries get the new names), before plan 69''s playtests.
+- Part 15 before `task 1185: run batch-9` and before part 11''s runs of English-sourced questions; alongside plan 147.
+- Part 2 any time after plan 16. Part 12 last.
+
+## Out of scope (from the milestone)
+- Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-16T00:26:15Z', NULL, 1192, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1212, 70, 'revise plan 70: Cost, budget and generation plan by gap (CT-3, CT-4)', 'revise', 'open', 1000, NULL, '`plan 9: masterplan`, the plan above `plan 70: Cost, budget and generation plan by gap (CT-3, CT-4)`, changed; it is quoted below. Bring `plan 70: Cost, budget and generation plan by gap (CT-3, CT-4)` in line with it
+(`pm plan edit 70 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 9: masterplan
+
+Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewed questions, in every launch language, that a stranger''s family plays many evenings before questions repeat, plus a measurement that proves it. It needs translated UI catalogs, translated, re-rated and reviewed questions, regional bundles (D-39; decision 110: 2000 approved each, region''s language + en, free DLC, `colombia` the pilot), `qgen report --simulate` passing the content target for every launch language, and UI wording the gamemaster has checked on the TV (style guides, screen gallery), joker names made again English first, one symbol per joker in every language, and English-first drafting for `base` (developer, 2026-10-15): from batch-9 on `en` is the source of every new `base` question, translated to `es`, `es-ES` and `de`, each its own pool with 5000 approved (decision 21: Content target per player and language (OQ-32)). Today: 1136 approved (`base` 1034, `colombia` 102), Spanish only; milestone 1 takes `base` to 5000 (D-52).
+
+**The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 9 …`, priority as suggested), and that plan''s tasks do the work.
+
+## Preconditions (other milestones; a part''s plan task checks them first)
+- OQ-31 launch languages + Spanish variety: plan 37 (milestone 7). OQ-32 content target: plan 38. Default preset → burns per game: plan 35 (OQ-30). Burn multiplier for several players: plan 41 (OQ-37). If a needed decision is still pending, the plan task makes itself pending on it (`pm task-pending-decision`) and stops.
+- **If OQ-31 = Spanish only:** parts 3–7 shrink to nothing: their plan tasks drop with that reason (`pm task drop`), except what the Spanish variety needs (part 8). The rest still applies to Spanish.
+- TS engine (milestone 2, plans 19, 20; screens on the engine PORT-7): the simulation runs on it. Age-group windows and bundle filter in the engine (plan 27, milestone 5): the simulation and the bundle filter (RG-3) use them.
+- Catalog (milestone 3: plans 21, 22, 23, 24): `t()`, `es`, `xx`, draft `en`. Settings screen (plan 36, MD-7): the language setting goes there.
+- Pool growth and QC (milestone 1: plans 12 targets, 13 gap-aimed drafting, 15 drift, 16 QC/D-56, 17 batch runs). This milestone reuses them per language; it doesn''t rebuild them. The content side of the English switch (calibration examples, concept angle, cross-language overlap, health and spot check across the switch) is `plan 147: English-first batches: calibration, overlap and QC across languages` (milestone 1); part 15 doesn''t duplicate it.
+- Licence/price: answered (decision 66: Price model (OQ-33), bundles as free DLC; decision 107: Licence (OQ-35)). A part that writes files depending on them follows them.
+
+## Rules for every part
+- Questions only through `qgen batch` (D-36). New pipeline steps (translate, re-rate, neutral Spanish) become `qgen batch` modes, with RUNBOOK and D-36 amended as an implementation task (like BN-11). Workers never edit pools or pick media by hand.
+- Quality bar of plan 16 / D-56 applies per language: LLM audit + blind human spot check per batch; for a translation, the human is a native speaker (the gamemaster arranges them; workers prepare the sample and a pm decision "spot check done?").
+- `app/` never reads `authoring/` (D-35): per-locale pools and category/bundle names are exported to `app/data/`.
+- The current game keeps working after every task until the Steam build replaces it (D-59): Spanish, Colombia on, same keys (unless LUI-4 changes them by decision). The family''s `es` pool keeps its es-sourced questions as they are; English-sourced ones join it as `es` translations.
+- Owning plan files get tasks `[x]` with a note (`15-i18n.md`, `15a`, `15b`, `15c`, `16-content-target.md`, `22-bundles.md`); `plans/project.md` in sync. Store page texts (LUI-6) are S5 (milestone''s out of scope); note it in 15a, don''t do it.
+
+## Parts
+
+1. **Simulation: games per new player (CT-2)**
+   - Owner: `plans/16-content-target.md` ("Metric").
+   - `qgen report --simulate [--locale L] [--bundles …] [--age-group G] [--preset P] [--players N] [--seeds K]`: a new player plays game after game on the TS engine (Node, `authoring/` imports `app/`) with the default preset''s joker use, until supply fails. Median and 10th percentile; strong-player bound (always reaches 12); bottleneck level and subcategory.
+   - Pass/fail against the target of OQ-32''s D-entry, per launch language, default bundle set and every age group; exit 1 on fail. Feeds part 9 (gaps) and part 12 (exit).
+   - No second referee in Python: if the engine can''t run under Node without the client, the plan decides the small adapter.
+   - Suggested priority: 570 (after plans 20 and 27).
+
+2. **Release quality bar and back-audit (CT-5)**
+   - Owner: `plans/16-content-target.md` ("Quality bar"). D-56 covers new batches; the ~1100 questions approved before it never had an audit or a spot check.
+   - Release bar: D-56''s numbers (pm decision 2) or stricter for release (pm decision if the plan proposes stricter); error limit and what happens to a batch above it.
+   - Back-audit: `qgen audit` over the pre-D-56 approved pool in slices, through `qgen` (gamemaster asks, like `qgen rework`), findings → review tool (`audit=flagged`). Cost estimate first.
+   - Suggested priority: 640 (after plan 16 at 650).
+
+3. **Translation layout and schema (QT-1, I18N-3)**
+   - Owner: `plans/15b-question-translation.md` ("Storage"; draft preference A: `authoring/data/questions.<locale>.json`, same ids, translated fields + own `difficulty`, `status`, `review`, `source_hash` for `stale`).
+   - Also: `translatable: false` on source questions; translated category, subcategory and bundle names (`categories.json`, `bundles.json`, per bundle); `qgen export` writes `app/data/pool.<locale>.json` (+ names); `qgen validate` checks translations, `stale`, missing names. D-entry for the layout.
+   - Suggested priority: 890 (schema; after plan 26 at 900, which also changes pool fields).
+
+4. **Translation pipeline (QT-2, QT-3)**
+   - Owner: `plans/15b-question-translation.md` ("Pipeline").
+   - Steps `translate --to L` (adapt units, answer format, hints that play on Spanish words; detect non-travelling questions → propose `translatable: false`) → `rate --locale L` (difficulty for that language''s main market, D-38 scale) → `factcheck --locale L` → review (D-32/D-33) → audit (D-56) → merge into the locale file. Only `approved`, translatable sources; skips done ones; costs in `costs.log`.
+   - Entry point `qgen batch --translate L` (size like a batch, picks untranslated approved sources, fewest translated subcategories first); RUNBOOK + D-36 amended.
+   - Source locale per question (part 15): es-sourced → `en`, `de`, `es-ES`; en-sourced → `es`, `es-ES`, `de`. Plan 66 (done) built es → L; the en → L direction and the `es-ES` target are part 15''s. Prompts in `authoring/tools/prompts/` (new prompts are the gamemaster''s: drafted here, approved by pm decision).
+   - Suggested priority: 700.
+
+5. **Review tool for translations (QT-4)**
+   - Owner: `plans/15b-question-translation.md` ("Review tool"); `authoring/ui`, `authoring/server`.
+   - `/review?batch=…&locale=L`: source and translation side by side; same approve / needs work / reject; flag media with visible text per locale; blind spot-check sample mode per locale (plan 16''s sample mode, reused). Stats pages filter by locale.
+   - Suggested priority: 400.
+
+6. **Language setting, per-locale pool and first-start language screen (I18N-2)**
+   - Owner: `plans/15-i18n.md` ("Model"). Plan 68 (written): save field, per-locale pool, names, Esc menu rows (task 450, done).
+   - UI language and question language in the save (`SaveData.language`); Esc menu of every mode. Engine loads `pool.<locale>.json`; seen counters by id (plan 65), so switching languages never repeats a question before unseen ones run out. Category/bundle names from the locale''s names. Supply check per locale.
+   - **First start (milestone change; replaces plan 68''s "no first-start language screen"):** a fresh save opens on a language screen, the guessed language preselected; the player confirms or picks another; asked once. Guess: `navigator.language` now, Steam''s client language once milestone 10 provides it. A save without `language` (the family''s, = `es`) never sees it. Plan 68 gets the screen as a new task (revision of plan 68).
+   - `es-ES` gets its own question pool (part 15; until now a UI variant only, decision 156: One language for UI and questions picks `pool.es-ES.json` once its supply passes).
+   - Current game: `es` fixed unless changed; the gamemaster mode unchanged.
+   - Suggested priority: 480 (plan 68).
+
+7. **UI catalogs for the launch languages (LUI-4, LUI-5)**
+   - Owner: `plans/15a-ui-translation.md`. Builds on plans 21, 23, 24 (draft `en`).
+   - LUI-4: joker keys per language or neutral keys: pm decision with a recommendation (also gamepad glyphs from milestone 8, plan 45).
+   - LUI-5: one catalog per launch language beyond `es`/`en` draft; playful joker names per language (pm decision per joker, like plan 24); fonts checked for each script (Latin only at launch, 15a); length check with `xx`; `/comodines` cards per language; native-speaker playtest per language (gamemaster runs it; workers write the checklist and a pm decision "playtest passed?").
+   - Suggested priority: 390 (after plans 23, 24 at 400).
+   - Plan 69 (written; task 459 open): its playtest fixes follow the locale style guides of part 13 once they exist.
+
+8. **Spanish variety (only if OQ-31 picks neutral Spanish)**
+   - Owner: `plans/15-i18n.md` ("Spanish varieties").
+   - A `qgen batch` mode (e.g. `--neutralize`) that rewrites Colombian wording in `base` to neutral Latin American Spanish, through review; `colombia` keeps its wording. If OQ-31 keeps Colombian Spanish: the plan task drops with that reason.
+   - Plan 64 (done); `neutralize-1` runs as planned (decision 214: neutralize-1: qgen validate fails after fix). `es` is now idiomatic Latin American Spanish, no compromise with Spain: dropping "understood … in Spain" from `base`''s voice and the Spain-oriented rules from `neutralize.md` is part 15''s.
+   - Suggested priority: 690 (tooling; the runs go to part 11).
+
+9. **Cost, budget and generation plan by gap (CT-3, CT-4)**
+   - Owner: `plans/16-content-target.md` ("Cost").
+   - Cost per approved question (draft → approved) and per translated question (from part 11''s pilot) from `costs.log`; budget for the release per language as a pm decision before full runs.
+   - Gap plan: the simulation''s bottlenecks (part 1) → release targets per language/age group in `authoring/data/targets.json` (D-53, extended per locale), read by `draft` (D-54) and `--translate`. No new mechanism if plan 13''s covers it.
+   - Target 5000 approved per question locale (`en`, `es`, `es-ES`, `de`; decision 21). English drafting for `base` aims at the locales'' deficits; replaces decision 37''s last clause, D-84 and decision 219''s `DRIVES_DRAFTING` (the en/de source shortfall steering es drafting). The change is part 15''s; plan 70''s budget counts en drafting + three translations per question.
+   - Suggested priority: 560 (after part 1).
+
+10. **Regional bundles (RG-3..RG-5)** (plan 98)
+    - Owner: `plans/15c-regional-questions.md` (superseded by bundles, D-39) and `plans/22-bundles.md`. RG-3 is BN-6 (plan 27, milestone 5) plus part 1''s `--bundles`; RG-4 is `qgen batch --bundle` (BN-11, done): mark them so.
+    - RG-5 answered (decision 110: Regional packs at launch (RG-5, OQ-46); partly supersedes decision 37''s "packs have no target"):
+      - every regional bundle: 2000 approved, in its region''s language + en (`colombia`: es + en), free DLC (decision 66), off by default on the configure screen; the family''s save keeps base + `colombia` (D-59)
+      - bundle-scoped taxonomy: every bundle has its own categories and subcategories; names may repeat verbatim across bundles (e.g. «Historia» in `base` and in `colombia`), still separate entries; the 19 `colombia` questions on `base` subcategories move to `colombia`''s own (a `qgen` migration step, no hand edits; `validate` rule; engine, «Cambiazo», export and review tool keyed by bundle + subcategory, not by name)
+      - `colombia`''s subcategory list: the gamemaster''s (pm decision with a proposal)
+      - `qgen batch --translate <locale> --bundle <id>`: the selection takes the bundle''s approved sources; the bundle''s `languages` gains the locale once its translations are approved
+      - target per regional bundle (2000, D-53''s mix or the plan''s proposal) in `targets.json`, read by `--bundle` drafting and `qgen report`
+      - effort measurement for the pilot: $ per approved (`qgen report --cost`, per bundle) and the gamemaster''s review time per 100 (from the review tool''s timestamps; a `qgen report` line if none exists)
+      - packs as optional installs (plan 98 task 751, done); DLC depots in S5 (plan 89)
+    - New bundles (mexico, argentina, …) only after the pilot''s decision (part 11).
+    - Suggested priority: 300.
+
+11. **Release content runs**
+    - The recurring `qgen batch` tasks: translation pilot (QT-5: 50 questions per language, measure reject rate and cost, go/no-go pm decision), then full translation per language (QT-6), neutral Spanish (part 8), regional bundle batches (part 10), and `base` top-ups where the simulation fails after milestone 1''s 5000. Each batch followed by D-56''s QC (plan 16 procedure, `authoring/QC.md`), native-speaker spot checks for translations.
+    - English-first `base` (part 15): `plan 17: Batch runs`'' batches draft `en` from batch-9 on (`task 1185: run batch-9`, decision 229: Continue batch-9 after the extended batch-8 review?); here their translation runs en → `es`, `es-ES`, `de`, and the es-sourced pool''s `es-ES` runs (besides `en`, `de`). No more Spanish `base` drafts or `es` top-ups.
+    - Order inside: pilot first (priority -90, above the runs, so part 9''s budget has its cost); full runs after milestone 1''s batch runs (plan 17) so translations don''t go stale.
+    - Regional pilot (decision 110): `qgen batch --bundle colombia` run/QC pairs from 102 to 2000 approved, then `--translate en --bundle colombia` pairs to 2000 en; once `colombia` reaches 2000 es: effort recorded ($ per approved, review time per 100) in `plans/15c-regional-questions.md` / `16-content-target.md`, then `pm decision add "More regional bundles at launch?"` with the numbers (candidates `mexico`, `argentina`); a "yes" adds `qgen bundle new` + taxonomy decisions in part 10''s plan and their run chains here.
+    - Launch doesn''t wait for the regional chain: it ships what `colombia` has then; content updates (plan 96) bring the rest.
+    - Suggested priority: -110 (after plan 17''s -100).
+
+12. **S4 close-out**
+    - `qgen report --simulate` passes for every launch language (the milestone''s "Done when"); result recorded in `plans/16-content-target.md`.
+    - A fresh save asks for the language once; an existing save doesn''t (the milestone''s "Done when"; browser check).
+    - `colombia` at 2000 approved in es and en, the pilot''s effort recorded, "More regional bundles at launch?" answered (may land after launch: the close-out of this milestone waits for it, the launch (milestone 11) doesn''t).
+    - Style guides for every UI locale, the TV-check fixes in, the gamemaster''s screen gallery review done in every UI language (part 13''s decisions answered).
+    - Every joker has one English-first name, translated in every catalog, and one symbol across languages, shown in its follow-up dialog (part 14).
+    - New `base` questions drafted in English and translated to `es`, `es-ES`, `de`; the es-sourced ones have `en`, `de`, `es-ES` pool entries (part 15).
+    - `plans/11-steam.md` S4 row done; 15, 15a, 15b, 15c, 16 statuses and tasks; `plans/project.md`, `plans/README.md`; masterplans of milestones 10–11 (plans 10, 11) get a note if S4 changed their scope (store languages, DLC bundles and post-launch regional updates, install size of several pools).
+    - Suggested priority: -130 (last, after part 11).
+
+13. **UI wording: style guides, TV-check fixes, screen gallery** (milestone''s "UI wording and review", gamemaster''s TV check 2026-10-13)
+    - Owner: `plans/15a-ui-translation.md` (new section "Wording and review"); `app/client/src/locales/`, `authoring/ui`, `authoring/server`.
+    - Style guides `app/client/src/locales/style/<locale>.md` (`en`, `es`, `es-ES`, `de`): glossary of fixed terms, how players are addressed, button conventions, Steam''s own term where Steam has one, list of bad patterns seen so far. Guidance, not a lint. German: never assume plural, infinitive style («Frage wählen», not «Wählt eine Frage»); other locales keep their address form unless their guide says otherwise.
+    - Workers read the guide: a line in `AGENTS.md` (Rules) and in the translation prompts (`authoring/tools/prompts/`, gamemaster-approved by pm decision, like decision 35: Translation prompts and markets per locale) that every change to UI strings reads the locale''s guide; new bad patterns go into it.
+    - TV-check fixes in the catalogs: de mode name «Spielleitermodus» (en «Gamemaster mode», es «Modo anfitrión» stay); «Steam achievements» / «logros de Steam» / «Steam-Erfolge» wherever achievements are mentioned (decision 74: Gamemaster mode earns no achievements); Esc menu «Back to main menu» / «Volver al menú principal» / «Zurück zum Hauptmenü» (to the start screen) instead of «End game (set up another)», «Quit game» / «Salir del juego» / «Spiel beenden», the quit button in its own colour (within `--u`, D-29); `de` without plural address (every «ihr»/«euch»/«wählt»-style string). The family''s Spanish game changes only in these decided strings (D-59).
+    - Screen gallery: one command (e.g. `trivia-gallery`) renders every screen and dialog in every UI language from a demo save (headless browser; dev dependency only if decision 6''s throw-away Playwright doesn''t fit a re-runnable command: the plan decides, minimal deps); a `trivia-authoring` page shows the shots with each visible text''s catalog key, the gamemaster flags a string with a note; flags feed the next fix pass (a task reads them, fixes catalogs, adds patterns to the guide). Re-runnable any time; output under `work/` (gitignored).
+    - Gamemaster review: one `pm decision add --once` per UI language "Screen gallery reviewed?"; its flags become a fix task.
+    - Suggested priority: 380 (above plan 69''s playtest close-out, task 459 at 340, so the playtest sees the fixed wording).
+
+14. **Joker names and symbols, defined again** (milestone''s "Joker names, defined again", developer 2026-10-14)
+    - Replaces decisions 40–44 (English names: `decision 40: English name for the hint joker «Soplo»?` … `decision 44: English name for the snipe joker «Francotirador»?`) and 54–58 (German names); the new plan records that with `pm decision record … --supersedes` per old decision.
+    - Owner: `plans/15a-ui-translation.md` (joker names section), `plans/09-jokers.md` (JK-*); `app/client/src/locales/`, `app/client/src/game/` (tray, joker dialogs), `authoring/ui/src/print/JokerCards.svelte` (`/comodines`).
+    - One symbol per joker, the same in every language: today''s tray icons (bulb, door, stairs, compass, crosshair) unless a new name needs another; drawn in VD-8 style (`Icon.svelte`, like `plan 135: Playful icons and language flags before a game session`).
+    - Names English first, made to fit the symbol: one pm decision per joker (`hint`, `skip`, `easier`, `category`, `snipe`), 3–5 candidates, recommended first, ≤ 13 characters; then `es`, `es-ES`, `de` translated from the English names (one decision per locale listing all five, or per joker: the plan decides), `es` included: a decided exception to D-59, the family''s game gets the new names.
+    - Key letters follow the new names (`decision 53: Joker and action keys per UI language (LUI-4)?`: mnemonic per catalog, collision rule); `es` keys change only if its new names need it (listed in the `es` decision).
+    - New names everywhere they appear: catalogs and keys, notes like «Soplo 1/2/3», `/comodines` cards, style guide glossaries (part 13), store texts (`plan 88: Store page and AI disclosure (PUB-8, LUI-6)`; its approval decisions 169–171 see the new names), achievement texts (`plan 86: Achievements (SW-11)`; API names like `FIRST_SOPLO` stay).
+    - The dialog that follows a joker (category pick, snipe aim, Paso''s purge option, …) shows the joker''s symbol.
+    - Before the playtests (decisions 62–65, `Playtest passed?`): `plan 69: UI catalogs for the launch languages (LUI-4, LUI-5)`''s task 459 waits for it.
+    - Suggested priority: 375 (after part 13''s style guides at 380, before plan 69''s playtest close-out).
+
+15. **English-first drafting for `base`** (milestone''s "English-first drafting for `base`", developer 2026-10-15)
+    - Owner: `plans/15b-question-translation.md` (source locale), `plans/15-i18n.md` (Spanish varieties), `plans/16-content-target.md` (targets); `authoring/tools/` (`qgen.py`, `translations.py`, `targets.py`, prompts), `authoring/data/`, `authoring/ui` (review tool), `authoring/RUNBOOK.md`.
+    - Source locale per question (schema, `qgen validate`): new `base` questions `en`, existing ones (≤ batch-8) `es`; regional bundles keep the region''s language (`colombia`: Colombian Spanish, then en; decision 110: Regional packs at launch (RG-5, OQ-46)).
+    - `qgen batch` for `base` drafts in English: concepts, draft, rate, fact-check, revise, media, audit, review tool, spot check, rework on the English text. Angle international: no Spanish-world focus, no Anglo/US bias, no wordplay that only works in one language (prompt rules shared with `plan 147: English-first batches: calibration, overlap and QC across languages`, not written twice).
+    - Translation from either source: en → `es`, `es-ES`, `de`; es → `en`, `de`, `es-ES` (part 4''s pipeline). `es-ES` a question locale with its own pool, prompt (`locale-es-ES.md`, Spain''s Spanish) and market; `es` voice idiomatic Latin American; `base`''s voice and `neutralize.md` lose their Spain-oriented rules. How the family''s `es` game gets English-sourced questions (an `es` translation in the `es` pool) is in the plan.
+    - Targets and gap aiming: 5000 approved per question locale (decision 21); English drafting aims at the locales'' deficits; `DRIVES_DRAFTING` and D-84''s source shortfall replaced (decision 219, decision 37''s last clause).
+    - Decisions this replaces, recorded with `pm decision record … --supersedes`: decision 27: Spanish variety (OQ-31) for `base` (es-419 from translation, not Spanish drafts; es-ES its own pool), decision 37: Per-locale content targets and gap aiming (last clause), decision 219: Do the new locales (zh-Hans, ru, pt-BR) steer es drafting from the start?; D-84, D-6 (Colombian usage) for `base` and D-87 where it assumes es as the only source in `plans/decisions.md`.
+    - Prompt changes are the developer''s (RUNBOOK): drafted by a task, shown in a pm decision, applied after the answer.
+    - RUNBOOK and D-36: `qgen batch` drafts `en` for `base`, `--translate` from either source.
+    - Gate: `task 1185: run batch-9` checks that `qgen batch` drafts `en`; every task of this plan that batch-9 needs runs before it, and a decision batch-9 needs also makes task 1185 pending on it (`pm task-pending-decision 1185 <decision>`).
+    - Suggested priority: 710 (backend; above plan 147 at 700, which builds on it, and far above batch-9 at -100).
+
+## Order
+- Decisions first: plans 35, 37, 38, 41 (milestone 7) → parts 1, 3, 8, 10 can be written.
+- Engine (M2) + plan 27 → part 1 → part 9.
+- Part 3 → part 4 → part 5 → part 11''s pilot → part 9''s budget → full runs.
+- Plan 36 + part 3 → part 6; plans 23/24 → part 7.
+- Part 13: style guides and TV-check fixes first, then the gallery, then the gamemaster''s review; before plan 69''s playtest close-out.
+- Part 14 after part 13''s style guides (glossaries get the new names), before plan 69''s playtests.
+- Part 15 before `task 1185: run batch-9` and before part 11''s runs of English-sourced questions; alongside plan 147.
+- Part 2 any time after plan 16. Part 12 last.
+
+## Out of scope (from the milestone)
+- Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-16T00:26:15Z', NULL, 1192, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1213, 84, 'revise plan 84: Release content runs', 'revise', 'open', 1000, NULL, '`plan 9: masterplan`, the plan above `plan 84: Release content runs`, changed; it is quoted below. Bring `plan 84: Release content runs` in line with it
+(`pm plan edit 84 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 9: masterplan
+
+Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewed questions, in every launch language, that a stranger''s family plays many evenings before questions repeat, plus a measurement that proves it. It needs translated UI catalogs, translated, re-rated and reviewed questions, regional bundles (D-39; decision 110: 2000 approved each, region''s language + en, free DLC, `colombia` the pilot), `qgen report --simulate` passing the content target for every launch language, and UI wording the gamemaster has checked on the TV (style guides, screen gallery), joker names made again English first, one symbol per joker in every language, and English-first drafting for `base` (developer, 2026-10-15): from batch-9 on `en` is the source of every new `base` question, translated to `es`, `es-ES` and `de`, each its own pool with 5000 approved (decision 21: Content target per player and language (OQ-32)). Today: 1136 approved (`base` 1034, `colombia` 102), Spanish only; milestone 1 takes `base` to 5000 (D-52).
+
+**The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 9 …`, priority as suggested), and that plan''s tasks do the work.
+
+## Preconditions (other milestones; a part''s plan task checks them first)
+- OQ-31 launch languages + Spanish variety: plan 37 (milestone 7). OQ-32 content target: plan 38. Default preset → burns per game: plan 35 (OQ-30). Burn multiplier for several players: plan 41 (OQ-37). If a needed decision is still pending, the plan task makes itself pending on it (`pm task-pending-decision`) and stops.
+- **If OQ-31 = Spanish only:** parts 3–7 shrink to nothing: their plan tasks drop with that reason (`pm task drop`), except what the Spanish variety needs (part 8). The rest still applies to Spanish.
+- TS engine (milestone 2, plans 19, 20; screens on the engine PORT-7): the simulation runs on it. Age-group windows and bundle filter in the engine (plan 27, milestone 5): the simulation and the bundle filter (RG-3) use them.
+- Catalog (milestone 3: plans 21, 22, 23, 24): `t()`, `es`, `xx`, draft `en`. Settings screen (plan 36, MD-7): the language setting goes there.
+- Pool growth and QC (milestone 1: plans 12 targets, 13 gap-aimed drafting, 15 drift, 16 QC/D-56, 17 batch runs). This milestone reuses them per language; it doesn''t rebuild them. The content side of the English switch (calibration examples, concept angle, cross-language overlap, health and spot check across the switch) is `plan 147: English-first batches: calibration, overlap and QC across languages` (milestone 1); part 15 doesn''t duplicate it.
+- Licence/price: answered (decision 66: Price model (OQ-33), bundles as free DLC; decision 107: Licence (OQ-35)). A part that writes files depending on them follows them.
+
+## Rules for every part
+- Questions only through `qgen batch` (D-36). New pipeline steps (translate, re-rate, neutral Spanish) become `qgen batch` modes, with RUNBOOK and D-36 amended as an implementation task (like BN-11). Workers never edit pools or pick media by hand.
+- Quality bar of plan 16 / D-56 applies per language: LLM audit + blind human spot check per batch; for a translation, the human is a native speaker (the gamemaster arranges them; workers prepare the sample and a pm decision "spot check done?").
+- `app/` never reads `authoring/` (D-35): per-locale pools and category/bundle names are exported to `app/data/`.
+- The current game keeps working after every task until the Steam build replaces it (D-59): Spanish, Colombia on, same keys (unless LUI-4 changes them by decision). The family''s `es` pool keeps its es-sourced questions as they are; English-sourced ones join it as `es` translations.
+- Owning plan files get tasks `[x]` with a note (`15-i18n.md`, `15a`, `15b`, `15c`, `16-content-target.md`, `22-bundles.md`); `plans/project.md` in sync. Store page texts (LUI-6) are S5 (milestone''s out of scope); note it in 15a, don''t do it.
+
+## Parts
+
+1. **Simulation: games per new player (CT-2)**
+   - Owner: `plans/16-content-target.md` ("Metric").
+   - `qgen report --simulate [--locale L] [--bundles …] [--age-group G] [--preset P] [--players N] [--seeds K]`: a new player plays game after game on the TS engine (Node, `authoring/` imports `app/`) with the default preset''s joker use, until supply fails. Median and 10th percentile; strong-player bound (always reaches 12); bottleneck level and subcategory.
+   - Pass/fail against the target of OQ-32''s D-entry, per launch language, default bundle set and every age group; exit 1 on fail. Feeds part 9 (gaps) and part 12 (exit).
+   - No second referee in Python: if the engine can''t run under Node without the client, the plan decides the small adapter.
+   - Suggested priority: 570 (after plans 20 and 27).
+
+2. **Release quality bar and back-audit (CT-5)**
+   - Owner: `plans/16-content-target.md` ("Quality bar"). D-56 covers new batches; the ~1100 questions approved before it never had an audit or a spot check.
+   - Release bar: D-56''s numbers (pm decision 2) or stricter for release (pm decision if the plan proposes stricter); error limit and what happens to a batch above it.
+   - Back-audit: `qgen audit` over the pre-D-56 approved pool in slices, through `qgen` (gamemaster asks, like `qgen rework`), findings → review tool (`audit=flagged`). Cost estimate first.
+   - Suggested priority: 640 (after plan 16 at 650).
+
+3. **Translation layout and schema (QT-1, I18N-3)**
+   - Owner: `plans/15b-question-translation.md` ("Storage"; draft preference A: `authoring/data/questions.<locale>.json`, same ids, translated fields + own `difficulty`, `status`, `review`, `source_hash` for `stale`).
+   - Also: `translatable: false` on source questions; translated category, subcategory and bundle names (`categories.json`, `bundles.json`, per bundle); `qgen export` writes `app/data/pool.<locale>.json` (+ names); `qgen validate` checks translations, `stale`, missing names. D-entry for the layout.
+   - Suggested priority: 890 (schema; after plan 26 at 900, which also changes pool fields).
+
+4. **Translation pipeline (QT-2, QT-3)**
+   - Owner: `plans/15b-question-translation.md` ("Pipeline").
+   - Steps `translate --to L` (adapt units, answer format, hints that play on Spanish words; detect non-travelling questions → propose `translatable: false`) → `rate --locale L` (difficulty for that language''s main market, D-38 scale) → `factcheck --locale L` → review (D-32/D-33) → audit (D-56) → merge into the locale file. Only `approved`, translatable sources; skips done ones; costs in `costs.log`.
+   - Entry point `qgen batch --translate L` (size like a batch, picks untranslated approved sources, fewest translated subcategories first); RUNBOOK + D-36 amended.
+   - Source locale per question (part 15): es-sourced → `en`, `de`, `es-ES`; en-sourced → `es`, `es-ES`, `de`. Plan 66 (done) built es → L; the en → L direction and the `es-ES` target are part 15''s. Prompts in `authoring/tools/prompts/` (new prompts are the gamemaster''s: drafted here, approved by pm decision).
+   - Suggested priority: 700.
+
+5. **Review tool for translations (QT-4)**
+   - Owner: `plans/15b-question-translation.md` ("Review tool"); `authoring/ui`, `authoring/server`.
+   - `/review?batch=…&locale=L`: source and translation side by side; same approve / needs work / reject; flag media with visible text per locale; blind spot-check sample mode per locale (plan 16''s sample mode, reused). Stats pages filter by locale.
+   - Suggested priority: 400.
+
+6. **Language setting, per-locale pool and first-start language screen (I18N-2)**
+   - Owner: `plans/15-i18n.md` ("Model"). Plan 68 (written): save field, per-locale pool, names, Esc menu rows (task 450, done).
+   - UI language and question language in the save (`SaveData.language`); Esc menu of every mode. Engine loads `pool.<locale>.json`; seen counters by id (plan 65), so switching languages never repeats a question before unseen ones run out. Category/bundle names from the locale''s names. Supply check per locale.
+   - **First start (milestone change; replaces plan 68''s "no first-start language screen"):** a fresh save opens on a language screen, the guessed language preselected; the player confirms or picks another; asked once. Guess: `navigator.language` now, Steam''s client language once milestone 10 provides it. A save without `language` (the family''s, = `es`) never sees it. Plan 68 gets the screen as a new task (revision of plan 68).
+   - `es-ES` gets its own question pool (part 15; until now a UI variant only, decision 156: One language for UI and questions picks `pool.es-ES.json` once its supply passes).
+   - Current game: `es` fixed unless changed; the gamemaster mode unchanged.
+   - Suggested priority: 480 (plan 68).
+
+7. **UI catalogs for the launch languages (LUI-4, LUI-5)**
+   - Owner: `plans/15a-ui-translation.md`. Builds on plans 21, 23, 24 (draft `en`).
+   - LUI-4: joker keys per language or neutral keys: pm decision with a recommendation (also gamepad glyphs from milestone 8, plan 45).
+   - LUI-5: one catalog per launch language beyond `es`/`en` draft; playful joker names per language (pm decision per joker, like plan 24); fonts checked for each script (Latin only at launch, 15a); length check with `xx`; `/comodines` cards per language; native-speaker playtest per language (gamemaster runs it; workers write the checklist and a pm decision "playtest passed?").
+   - Suggested priority: 390 (after plans 23, 24 at 400).
+   - Plan 69 (written; task 459 open): its playtest fixes follow the locale style guides of part 13 once they exist.
+
+8. **Spanish variety (only if OQ-31 picks neutral Spanish)**
+   - Owner: `plans/15-i18n.md` ("Spanish varieties").
+   - A `qgen batch` mode (e.g. `--neutralize`) that rewrites Colombian wording in `base` to neutral Latin American Spanish, through review; `colombia` keeps its wording. If OQ-31 keeps Colombian Spanish: the plan task drops with that reason.
+   - Plan 64 (done); `neutralize-1` runs as planned (decision 214: neutralize-1: qgen validate fails after fix). `es` is now idiomatic Latin American Spanish, no compromise with Spain: dropping "understood … in Spain" from `base`''s voice and the Spain-oriented rules from `neutralize.md` is part 15''s.
+   - Suggested priority: 690 (tooling; the runs go to part 11).
+
+9. **Cost, budget and generation plan by gap (CT-3, CT-4)**
+   - Owner: `plans/16-content-target.md` ("Cost").
+   - Cost per approved question (draft → approved) and per translated question (from part 11''s pilot) from `costs.log`; budget for the release per language as a pm decision before full runs.
+   - Gap plan: the simulation''s bottlenecks (part 1) → release targets per language/age group in `authoring/data/targets.json` (D-53, extended per locale), read by `draft` (D-54) and `--translate`. No new mechanism if plan 13''s covers it.
+   - Target 5000 approved per question locale (`en`, `es`, `es-ES`, `de`; decision 21). English drafting for `base` aims at the locales'' deficits; replaces decision 37''s last clause, D-84 and decision 219''s `DRIVES_DRAFTING` (the en/de source shortfall steering es drafting). The change is part 15''s; plan 70''s budget counts en drafting + three translations per question.
+   - Suggested priority: 560 (after part 1).
+
+10. **Regional bundles (RG-3..RG-5)** (plan 98)
+    - Owner: `plans/15c-regional-questions.md` (superseded by bundles, D-39) and `plans/22-bundles.md`. RG-3 is BN-6 (plan 27, milestone 5) plus part 1''s `--bundles`; RG-4 is `qgen batch --bundle` (BN-11, done): mark them so.
+    - RG-5 answered (decision 110: Regional packs at launch (RG-5, OQ-46); partly supersedes decision 37''s "packs have no target"):
+      - every regional bundle: 2000 approved, in its region''s language + en (`colombia`: es + en), free DLC (decision 66), off by default on the configure screen; the family''s save keeps base + `colombia` (D-59)
+      - bundle-scoped taxonomy: every bundle has its own categories and subcategories; names may repeat verbatim across bundles (e.g. «Historia» in `base` and in `colombia`), still separate entries; the 19 `colombia` questions on `base` subcategories move to `colombia`''s own (a `qgen` migration step, no hand edits; `validate` rule; engine, «Cambiazo», export and review tool keyed by bundle + subcategory, not by name)
+      - `colombia`''s subcategory list: the gamemaster''s (pm decision with a proposal)
+      - `qgen batch --translate <locale> --bundle <id>`: the selection takes the bundle''s approved sources; the bundle''s `languages` gains the locale once its translations are approved
+      - target per regional bundle (2000, D-53''s mix or the plan''s proposal) in `targets.json`, read by `--bundle` drafting and `qgen report`
+      - effort measurement for the pilot: $ per approved (`qgen report --cost`, per bundle) and the gamemaster''s review time per 100 (from the review tool''s timestamps; a `qgen report` line if none exists)
+      - packs as optional installs (plan 98 task 751, done); DLC depots in S5 (plan 89)
+    - New bundles (mexico, argentina, …) only after the pilot''s decision (part 11).
+    - Suggested priority: 300.
+
+11. **Release content runs**
+    - The recurring `qgen batch` tasks: translation pilot (QT-5: 50 questions per language, measure reject rate and cost, go/no-go pm decision), then full translation per language (QT-6), neutral Spanish (part 8), regional bundle batches (part 10), and `base` top-ups where the simulation fails after milestone 1''s 5000. Each batch followed by D-56''s QC (plan 16 procedure, `authoring/QC.md`), native-speaker spot checks for translations.
+    - English-first `base` (part 15): `plan 17: Batch runs`'' batches draft `en` from batch-9 on (`task 1185: run batch-9`, decision 229: Continue batch-9 after the extended batch-8 review?); here their translation runs en → `es`, `es-ES`, `de`, and the es-sourced pool''s `es-ES` runs (besides `en`, `de`). No more Spanish `base` drafts or `es` top-ups.
+    - Order inside: pilot first (priority -90, above the runs, so part 9''s budget has its cost); full runs after milestone 1''s batch runs (plan 17) so translations don''t go stale.
+    - Regional pilot (decision 110): `qgen batch --bundle colombia` run/QC pairs from 102 to 2000 approved, then `--translate en --bundle colombia` pairs to 2000 en; once `colombia` reaches 2000 es: effort recorded ($ per approved, review time per 100) in `plans/15c-regional-questions.md` / `16-content-target.md`, then `pm decision add "More regional bundles at launch?"` with the numbers (candidates `mexico`, `argentina`); a "yes" adds `qgen bundle new` + taxonomy decisions in part 10''s plan and their run chains here.
+    - Launch doesn''t wait for the regional chain: it ships what `colombia` has then; content updates (plan 96) bring the rest.
+    - Suggested priority: -110 (after plan 17''s -100).
+
+12. **S4 close-out**
+    - `qgen report --simulate` passes for every launch language (the milestone''s "Done when"); result recorded in `plans/16-content-target.md`.
+    - A fresh save asks for the language once; an existing save doesn''t (the milestone''s "Done when"; browser check).
+    - `colombia` at 2000 approved in es and en, the pilot''s effort recorded, "More regional bundles at launch?" answered (may land after launch: the close-out of this milestone waits for it, the launch (milestone 11) doesn''t).
+    - Style guides for every UI locale, the TV-check fixes in, the gamemaster''s screen gallery review done in every UI language (part 13''s decisions answered).
+    - Every joker has one English-first name, translated in every catalog, and one symbol across languages, shown in its follow-up dialog (part 14).
+    - New `base` questions drafted in English and translated to `es`, `es-ES`, `de`; the es-sourced ones have `en`, `de`, `es-ES` pool entries (part 15).
+    - `plans/11-steam.md` S4 row done; 15, 15a, 15b, 15c, 16 statuses and tasks; `plans/project.md`, `plans/README.md`; masterplans of milestones 10–11 (plans 10, 11) get a note if S4 changed their scope (store languages, DLC bundles and post-launch regional updates, install size of several pools).
+    - Suggested priority: -130 (last, after part 11).
+
+13. **UI wording: style guides, TV-check fixes, screen gallery** (milestone''s "UI wording and review", gamemaster''s TV check 2026-10-13)
+    - Owner: `plans/15a-ui-translation.md` (new section "Wording and review"); `app/client/src/locales/`, `authoring/ui`, `authoring/server`.
+    - Style guides `app/client/src/locales/style/<locale>.md` (`en`, `es`, `es-ES`, `de`): glossary of fixed terms, how players are addressed, button conventions, Steam''s own term where Steam has one, list of bad patterns seen so far. Guidance, not a lint. German: never assume plural, infinitive style («Frage wählen», not «Wählt eine Frage»); other locales keep their address form unless their guide says otherwise.
+    - Workers read the guide: a line in `AGENTS.md` (Rules) and in the translation prompts (`authoring/tools/prompts/`, gamemaster-approved by pm decision, like decision 35: Translation prompts and markets per locale) that every change to UI strings reads the locale''s guide; new bad patterns go into it.
+    - TV-check fixes in the catalogs: de mode name «Spielleitermodus» (en «Gamemaster mode», es «Modo anfitrión» stay); «Steam achievements» / «logros de Steam» / «Steam-Erfolge» wherever achievements are mentioned (decision 74: Gamemaster mode earns no achievements); Esc menu «Back to main menu» / «Volver al menú principal» / «Zurück zum Hauptmenü» (to the start screen) instead of «End game (set up another)», «Quit game» / «Salir del juego» / «Spiel beenden», the quit button in its own colour (within `--u`, D-29); `de` without plural address (every «ihr»/«euch»/«wählt»-style string). The family''s Spanish game changes only in these decided strings (D-59).
+    - Screen gallery: one command (e.g. `trivia-gallery`) renders every screen and dialog in every UI language from a demo save (headless browser; dev dependency only if decision 6''s throw-away Playwright doesn''t fit a re-runnable command: the plan decides, minimal deps); a `trivia-authoring` page shows the shots with each visible text''s catalog key, the gamemaster flags a string with a note; flags feed the next fix pass (a task reads them, fixes catalogs, adds patterns to the guide). Re-runnable any time; output under `work/` (gitignored).
+    - Gamemaster review: one `pm decision add --once` per UI language "Screen gallery reviewed?"; its flags become a fix task.
+    - Suggested priority: 380 (above plan 69''s playtest close-out, task 459 at 340, so the playtest sees the fixed wording).
+
+14. **Joker names and symbols, defined again** (milestone''s "Joker names, defined again", developer 2026-10-14)
+    - Replaces decisions 40–44 (English names: `decision 40: English name for the hint joker «Soplo»?` … `decision 44: English name for the snipe joker «Francotirador»?`) and 54–58 (German names); the new plan records that with `pm decision record … --supersedes` per old decision.
+    - Owner: `plans/15a-ui-translation.md` (joker names section), `plans/09-jokers.md` (JK-*); `app/client/src/locales/`, `app/client/src/game/` (tray, joker dialogs), `authoring/ui/src/print/JokerCards.svelte` (`/comodines`).
+    - One symbol per joker, the same in every language: today''s tray icons (bulb, door, stairs, compass, crosshair) unless a new name needs another; drawn in VD-8 style (`Icon.svelte`, like `plan 135: Playful icons and language flags before a game session`).
+    - Names English first, made to fit the symbol: one pm decision per joker (`hint`, `skip`, `easier`, `category`, `snipe`), 3–5 candidates, recommended first, ≤ 13 characters; then `es`, `es-ES`, `de` translated from the English names (one decision per locale listing all five, or per joker: the plan decides), `es` included: a decided exception to D-59, the family''s game gets the new names.
+    - Key letters follow the new names (`decision 53: Joker and action keys per UI language (LUI-4)?`: mnemonic per catalog, collision rule); `es` keys change only if its new names need it (listed in the `es` decision).
+    - New names everywhere they appear: catalogs and keys, notes like «Soplo 1/2/3», `/comodines` cards, style guide glossaries (part 13), store texts (`plan 88: Store page and AI disclosure (PUB-8, LUI-6)`; its approval decisions 169–171 see the new names), achievement texts (`plan 86: Achievements (SW-11)`; API names like `FIRST_SOPLO` stay).
+    - The dialog that follows a joker (category pick, snipe aim, Paso''s purge option, …) shows the joker''s symbol.
+    - Before the playtests (decisions 62–65, `Playtest passed?`): `plan 69: UI catalogs for the launch languages (LUI-4, LUI-5)`''s task 459 waits for it.
+    - Suggested priority: 375 (after part 13''s style guides at 380, before plan 69''s playtest close-out).
+
+15. **English-first drafting for `base`** (milestone''s "English-first drafting for `base`", developer 2026-10-15)
+    - Owner: `plans/15b-question-translation.md` (source locale), `plans/15-i18n.md` (Spanish varieties), `plans/16-content-target.md` (targets); `authoring/tools/` (`qgen.py`, `translations.py`, `targets.py`, prompts), `authoring/data/`, `authoring/ui` (review tool), `authoring/RUNBOOK.md`.
+    - Source locale per question (schema, `qgen validate`): new `base` questions `en`, existing ones (≤ batch-8) `es`; regional bundles keep the region''s language (`colombia`: Colombian Spanish, then en; decision 110: Regional packs at launch (RG-5, OQ-46)).
+    - `qgen batch` for `base` drafts in English: concepts, draft, rate, fact-check, revise, media, audit, review tool, spot check, rework on the English text. Angle international: no Spanish-world focus, no Anglo/US bias, no wordplay that only works in one language (prompt rules shared with `plan 147: English-first batches: calibration, overlap and QC across languages`, not written twice).
+    - Translation from either source: en → `es`, `es-ES`, `de`; es → `en`, `de`, `es-ES` (part 4''s pipeline). `es-ES` a question locale with its own pool, prompt (`locale-es-ES.md`, Spain''s Spanish) and market; `es` voice idiomatic Latin American; `base`''s voice and `neutralize.md` lose their Spain-oriented rules. How the family''s `es` game gets English-sourced questions (an `es` translation in the `es` pool) is in the plan.
+    - Targets and gap aiming: 5000 approved per question locale (decision 21); English drafting aims at the locales'' deficits; `DRIVES_DRAFTING` and D-84''s source shortfall replaced (decision 219, decision 37''s last clause).
+    - Decisions this replaces, recorded with `pm decision record … --supersedes`: decision 27: Spanish variety (OQ-31) for `base` (es-419 from translation, not Spanish drafts; es-ES its own pool), decision 37: Per-locale content targets and gap aiming (last clause), decision 219: Do the new locales (zh-Hans, ru, pt-BR) steer es drafting from the start?; D-84, D-6 (Colombian usage) for `base` and D-87 where it assumes es as the only source in `plans/decisions.md`.
+    - Prompt changes are the developer''s (RUNBOOK): drafted by a task, shown in a pm decision, applied after the answer.
+    - RUNBOOK and D-36: `qgen batch` drafts `en` for `base`, `--translate` from either source.
+    - Gate: `task 1185: run batch-9` checks that `qgen batch` drafts `en`; every task of this plan that batch-9 needs runs before it, and a decision batch-9 needs also makes task 1185 pending on it (`pm task-pending-decision 1185 <decision>`).
+    - Suggested priority: 710 (backend; above plan 147 at 700, which builds on it, and far above batch-9 at -100).
+
+## Order
+- Decisions first: plans 35, 37, 38, 41 (milestone 7) → parts 1, 3, 8, 10 can be written.
+- Engine (M2) + plan 27 → part 1 → part 9.
+- Part 3 → part 4 → part 5 → part 11''s pilot → part 9''s budget → full runs.
+- Plan 36 + part 3 → part 6; plans 23/24 → part 7.
+- Part 13: style guides and TV-check fixes first, then the gallery, then the gamemaster''s review; before plan 69''s playtest close-out.
+- Part 14 after part 13''s style guides (glossaries get the new names), before plan 69''s playtests.
+- Part 15 before `task 1185: run batch-9` and before part 11''s runs of English-sourced questions; alongside plan 147.
+- Part 2 any time after plan 16. Part 12 last.
+
+## Out of scope (from the milestone)
+- Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-16T00:26:15Z', NULL, 1192, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1214, 98, 'revise plan 98: Regional packs (RG-3..RG-5)', 'revise', 'open', 1000, NULL, '`plan 9: masterplan`, the plan above `plan 98: Regional packs (RG-3..RG-5)`, changed; it is quoted below. Bring `plan 98: Regional packs (RG-3..RG-5)` in line with it
+(`pm plan edit 98 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 9: masterplan
+
+Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewed questions, in every launch language, that a stranger''s family plays many evenings before questions repeat, plus a measurement that proves it. It needs translated UI catalogs, translated, re-rated and reviewed questions, regional bundles (D-39; decision 110: 2000 approved each, region''s language + en, free DLC, `colombia` the pilot), `qgen report --simulate` passing the content target for every launch language, and UI wording the gamemaster has checked on the TV (style guides, screen gallery), joker names made again English first, one symbol per joker in every language, and English-first drafting for `base` (developer, 2026-10-15): from batch-9 on `en` is the source of every new `base` question, translated to `es`, `es-ES` and `de`, each its own pool with 5000 approved (decision 21: Content target per player and language (OQ-32)). Today: 1136 approved (`base` 1034, `colombia` 102), Spanish only; milestone 1 takes `base` to 5000 (D-52).
+
+**The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 9 …`, priority as suggested), and that plan''s tasks do the work.
+
+## Preconditions (other milestones; a part''s plan task checks them first)
+- OQ-31 launch languages + Spanish variety: plan 37 (milestone 7). OQ-32 content target: plan 38. Default preset → burns per game: plan 35 (OQ-30). Burn multiplier for several players: plan 41 (OQ-37). If a needed decision is still pending, the plan task makes itself pending on it (`pm task-pending-decision`) and stops.
+- **If OQ-31 = Spanish only:** parts 3–7 shrink to nothing: their plan tasks drop with that reason (`pm task drop`), except what the Spanish variety needs (part 8). The rest still applies to Spanish.
+- TS engine (milestone 2, plans 19, 20; screens on the engine PORT-7): the simulation runs on it. Age-group windows and bundle filter in the engine (plan 27, milestone 5): the simulation and the bundle filter (RG-3) use them.
+- Catalog (milestone 3: plans 21, 22, 23, 24): `t()`, `es`, `xx`, draft `en`. Settings screen (plan 36, MD-7): the language setting goes there.
+- Pool growth and QC (milestone 1: plans 12 targets, 13 gap-aimed drafting, 15 drift, 16 QC/D-56, 17 batch runs). This milestone reuses them per language; it doesn''t rebuild them. The content side of the English switch (calibration examples, concept angle, cross-language overlap, health and spot check across the switch) is `plan 147: English-first batches: calibration, overlap and QC across languages` (milestone 1); part 15 doesn''t duplicate it.
+- Licence/price: answered (decision 66: Price model (OQ-33), bundles as free DLC; decision 107: Licence (OQ-35)). A part that writes files depending on them follows them.
+
+## Rules for every part
+- Questions only through `qgen batch` (D-36). New pipeline steps (translate, re-rate, neutral Spanish) become `qgen batch` modes, with RUNBOOK and D-36 amended as an implementation task (like BN-11). Workers never edit pools or pick media by hand.
+- Quality bar of plan 16 / D-56 applies per language: LLM audit + blind human spot check per batch; for a translation, the human is a native speaker (the gamemaster arranges them; workers prepare the sample and a pm decision "spot check done?").
+- `app/` never reads `authoring/` (D-35): per-locale pools and category/bundle names are exported to `app/data/`.
+- The current game keeps working after every task until the Steam build replaces it (D-59): Spanish, Colombia on, same keys (unless LUI-4 changes them by decision). The family''s `es` pool keeps its es-sourced questions as they are; English-sourced ones join it as `es` translations.
+- Owning plan files get tasks `[x]` with a note (`15-i18n.md`, `15a`, `15b`, `15c`, `16-content-target.md`, `22-bundles.md`); `plans/project.md` in sync. Store page texts (LUI-6) are S5 (milestone''s out of scope); note it in 15a, don''t do it.
+
+## Parts
+
+1. **Simulation: games per new player (CT-2)**
+   - Owner: `plans/16-content-target.md` ("Metric").
+   - `qgen report --simulate [--locale L] [--bundles …] [--age-group G] [--preset P] [--players N] [--seeds K]`: a new player plays game after game on the TS engine (Node, `authoring/` imports `app/`) with the default preset''s joker use, until supply fails. Median and 10th percentile; strong-player bound (always reaches 12); bottleneck level and subcategory.
+   - Pass/fail against the target of OQ-32''s D-entry, per launch language, default bundle set and every age group; exit 1 on fail. Feeds part 9 (gaps) and part 12 (exit).
+   - No second referee in Python: if the engine can''t run under Node without the client, the plan decides the small adapter.
+   - Suggested priority: 570 (after plans 20 and 27).
+
+2. **Release quality bar and back-audit (CT-5)**
+   - Owner: `plans/16-content-target.md` ("Quality bar"). D-56 covers new batches; the ~1100 questions approved before it never had an audit or a spot check.
+   - Release bar: D-56''s numbers (pm decision 2) or stricter for release (pm decision if the plan proposes stricter); error limit and what happens to a batch above it.
+   - Back-audit: `qgen audit` over the pre-D-56 approved pool in slices, through `qgen` (gamemaster asks, like `qgen rework`), findings → review tool (`audit=flagged`). Cost estimate first.
+   - Suggested priority: 640 (after plan 16 at 650).
+
+3. **Translation layout and schema (QT-1, I18N-3)**
+   - Owner: `plans/15b-question-translation.md` ("Storage"; draft preference A: `authoring/data/questions.<locale>.json`, same ids, translated fields + own `difficulty`, `status`, `review`, `source_hash` for `stale`).
+   - Also: `translatable: false` on source questions; translated category, subcategory and bundle names (`categories.json`, `bundles.json`, per bundle); `qgen export` writes `app/data/pool.<locale>.json` (+ names); `qgen validate` checks translations, `stale`, missing names. D-entry for the layout.
+   - Suggested priority: 890 (schema; after plan 26 at 900, which also changes pool fields).
+
+4. **Translation pipeline (QT-2, QT-3)**
+   - Owner: `plans/15b-question-translation.md` ("Pipeline").
+   - Steps `translate --to L` (adapt units, answer format, hints that play on Spanish words; detect non-travelling questions → propose `translatable: false`) → `rate --locale L` (difficulty for that language''s main market, D-38 scale) → `factcheck --locale L` → review (D-32/D-33) → audit (D-56) → merge into the locale file. Only `approved`, translatable sources; skips done ones; costs in `costs.log`.
+   - Entry point `qgen batch --translate L` (size like a batch, picks untranslated approved sources, fewest translated subcategories first); RUNBOOK + D-36 amended.
+   - Source locale per question (part 15): es-sourced → `en`, `de`, `es-ES`; en-sourced → `es`, `es-ES`, `de`. Plan 66 (done) built es → L; the en → L direction and the `es-ES` target are part 15''s. Prompts in `authoring/tools/prompts/` (new prompts are the gamemaster''s: drafted here, approved by pm decision).
+   - Suggested priority: 700.
+
+5. **Review tool for translations (QT-4)**
+   - Owner: `plans/15b-question-translation.md` ("Review tool"); `authoring/ui`, `authoring/server`.
+   - `/review?batch=…&locale=L`: source and translation side by side; same approve / needs work / reject; flag media with visible text per locale; blind spot-check sample mode per locale (plan 16''s sample mode, reused). Stats pages filter by locale.
+   - Suggested priority: 400.
+
+6. **Language setting, per-locale pool and first-start language screen (I18N-2)**
+   - Owner: `plans/15-i18n.md` ("Model"). Plan 68 (written): save field, per-locale pool, names, Esc menu rows (task 450, done).
+   - UI language and question language in the save (`SaveData.language`); Esc menu of every mode. Engine loads `pool.<locale>.json`; seen counters by id (plan 65), so switching languages never repeats a question before unseen ones run out. Category/bundle names from the locale''s names. Supply check per locale.
+   - **First start (milestone change; replaces plan 68''s "no first-start language screen"):** a fresh save opens on a language screen, the guessed language preselected; the player confirms or picks another; asked once. Guess: `navigator.language` now, Steam''s client language once milestone 10 provides it. A save without `language` (the family''s, = `es`) never sees it. Plan 68 gets the screen as a new task (revision of plan 68).
+   - `es-ES` gets its own question pool (part 15; until now a UI variant only, decision 156: One language for UI and questions picks `pool.es-ES.json` once its supply passes).
+   - Current game: `es` fixed unless changed; the gamemaster mode unchanged.
+   - Suggested priority: 480 (plan 68).
+
+7. **UI catalogs for the launch languages (LUI-4, LUI-5)**
+   - Owner: `plans/15a-ui-translation.md`. Builds on plans 21, 23, 24 (draft `en`).
+   - LUI-4: joker keys per language or neutral keys: pm decision with a recommendation (also gamepad glyphs from milestone 8, plan 45).
+   - LUI-5: one catalog per launch language beyond `es`/`en` draft; playful joker names per language (pm decision per joker, like plan 24); fonts checked for each script (Latin only at launch, 15a); length check with `xx`; `/comodines` cards per language; native-speaker playtest per language (gamemaster runs it; workers write the checklist and a pm decision "playtest passed?").
+   - Suggested priority: 390 (after plans 23, 24 at 400).
+   - Plan 69 (written; task 459 open): its playtest fixes follow the locale style guides of part 13 once they exist.
+
+8. **Spanish variety (only if OQ-31 picks neutral Spanish)**
+   - Owner: `plans/15-i18n.md` ("Spanish varieties").
+   - A `qgen batch` mode (e.g. `--neutralize`) that rewrites Colombian wording in `base` to neutral Latin American Spanish, through review; `colombia` keeps its wording. If OQ-31 keeps Colombian Spanish: the plan task drops with that reason.
+   - Plan 64 (done); `neutralize-1` runs as planned (decision 214: neutralize-1: qgen validate fails after fix). `es` is now idiomatic Latin American Spanish, no compromise with Spain: dropping "understood … in Spain" from `base`''s voice and the Spain-oriented rules from `neutralize.md` is part 15''s.
+   - Suggested priority: 690 (tooling; the runs go to part 11).
+
+9. **Cost, budget and generation plan by gap (CT-3, CT-4)**
+   - Owner: `plans/16-content-target.md` ("Cost").
+   - Cost per approved question (draft → approved) and per translated question (from part 11''s pilot) from `costs.log`; budget for the release per language as a pm decision before full runs.
+   - Gap plan: the simulation''s bottlenecks (part 1) → release targets per language/age group in `authoring/data/targets.json` (D-53, extended per locale), read by `draft` (D-54) and `--translate`. No new mechanism if plan 13''s covers it.
+   - Target 5000 approved per question locale (`en`, `es`, `es-ES`, `de`; decision 21). English drafting for `base` aims at the locales'' deficits; replaces decision 37''s last clause, D-84 and decision 219''s `DRIVES_DRAFTING` (the en/de source shortfall steering es drafting). The change is part 15''s; plan 70''s budget counts en drafting + three translations per question.
+   - Suggested priority: 560 (after part 1).
+
+10. **Regional bundles (RG-3..RG-5)** (plan 98)
+    - Owner: `plans/15c-regional-questions.md` (superseded by bundles, D-39) and `plans/22-bundles.md`. RG-3 is BN-6 (plan 27, milestone 5) plus part 1''s `--bundles`; RG-4 is `qgen batch --bundle` (BN-11, done): mark them so.
+    - RG-5 answered (decision 110: Regional packs at launch (RG-5, OQ-46); partly supersedes decision 37''s "packs have no target"):
+      - every regional bundle: 2000 approved, in its region''s language + en (`colombia`: es + en), free DLC (decision 66), off by default on the configure screen; the family''s save keeps base + `colombia` (D-59)
+      - bundle-scoped taxonomy: every bundle has its own categories and subcategories; names may repeat verbatim across bundles (e.g. «Historia» in `base` and in `colombia`), still separate entries; the 19 `colombia` questions on `base` subcategories move to `colombia`''s own (a `qgen` migration step, no hand edits; `validate` rule; engine, «Cambiazo», export and review tool keyed by bundle + subcategory, not by name)
+      - `colombia`''s subcategory list: the gamemaster''s (pm decision with a proposal)
+      - `qgen batch --translate <locale> --bundle <id>`: the selection takes the bundle''s approved sources; the bundle''s `languages` gains the locale once its translations are approved
+      - target per regional bundle (2000, D-53''s mix or the plan''s proposal) in `targets.json`, read by `--bundle` drafting and `qgen report`
+      - effort measurement for the pilot: $ per approved (`qgen report --cost`, per bundle) and the gamemaster''s review time per 100 (from the review tool''s timestamps; a `qgen report` line if none exists)
+      - packs as optional installs (plan 98 task 751, done); DLC depots in S5 (plan 89)
+    - New bundles (mexico, argentina, …) only after the pilot''s decision (part 11).
+    - Suggested priority: 300.
+
+11. **Release content runs**
+    - The recurring `qgen batch` tasks: translation pilot (QT-5: 50 questions per language, measure reject rate and cost, go/no-go pm decision), then full translation per language (QT-6), neutral Spanish (part 8), regional bundle batches (part 10), and `base` top-ups where the simulation fails after milestone 1''s 5000. Each batch followed by D-56''s QC (plan 16 procedure, `authoring/QC.md`), native-speaker spot checks for translations.
+    - English-first `base` (part 15): `plan 17: Batch runs`'' batches draft `en` from batch-9 on (`task 1185: run batch-9`, decision 229: Continue batch-9 after the extended batch-8 review?); here their translation runs en → `es`, `es-ES`, `de`, and the es-sourced pool''s `es-ES` runs (besides `en`, `de`). No more Spanish `base` drafts or `es` top-ups.
+    - Order inside: pilot first (priority -90, above the runs, so part 9''s budget has its cost); full runs after milestone 1''s batch runs (plan 17) so translations don''t go stale.
+    - Regional pilot (decision 110): `qgen batch --bundle colombia` run/QC pairs from 102 to 2000 approved, then `--translate en --bundle colombia` pairs to 2000 en; once `colombia` reaches 2000 es: effort recorded ($ per approved, review time per 100) in `plans/15c-regional-questions.md` / `16-content-target.md`, then `pm decision add "More regional bundles at launch?"` with the numbers (candidates `mexico`, `argentina`); a "yes" adds `qgen bundle new` + taxonomy decisions in part 10''s plan and their run chains here.
+    - Launch doesn''t wait for the regional chain: it ships what `colombia` has then; content updates (plan 96) bring the rest.
+    - Suggested priority: -110 (after plan 17''s -100).
+
+12. **S4 close-out**
+    - `qgen report --simulate` passes for every launch language (the milestone''s "Done when"); result recorded in `plans/16-content-target.md`.
+    - A fresh save asks for the language once; an existing save doesn''t (the milestone''s "Done when"; browser check).
+    - `colombia` at 2000 approved in es and en, the pilot''s effort recorded, "More regional bundles at launch?" answered (may land after launch: the close-out of this milestone waits for it, the launch (milestone 11) doesn''t).
+    - Style guides for every UI locale, the TV-check fixes in, the gamemaster''s screen gallery review done in every UI language (part 13''s decisions answered).
+    - Every joker has one English-first name, translated in every catalog, and one symbol across languages, shown in its follow-up dialog (part 14).
+    - New `base` questions drafted in English and translated to `es`, `es-ES`, `de`; the es-sourced ones have `en`, `de`, `es-ES` pool entries (part 15).
+    - `plans/11-steam.md` S4 row done; 15, 15a, 15b, 15c, 16 statuses and tasks; `plans/project.md`, `plans/README.md`; masterplans of milestones 10–11 (plans 10, 11) get a note if S4 changed their scope (store languages, DLC bundles and post-launch regional updates, install size of several pools).
+    - Suggested priority: -130 (last, after part 11).
+
+13. **UI wording: style guides, TV-check fixes, screen gallery** (milestone''s "UI wording and review", gamemaster''s TV check 2026-10-13)
+    - Owner: `plans/15a-ui-translation.md` (new section "Wording and review"); `app/client/src/locales/`, `authoring/ui`, `authoring/server`.
+    - Style guides `app/client/src/locales/style/<locale>.md` (`en`, `es`, `es-ES`, `de`): glossary of fixed terms, how players are addressed, button conventions, Steam''s own term where Steam has one, list of bad patterns seen so far. Guidance, not a lint. German: never assume plural, infinitive style («Frage wählen», not «Wählt eine Frage»); other locales keep their address form unless their guide says otherwise.
+    - Workers read the guide: a line in `AGENTS.md` (Rules) and in the translation prompts (`authoring/tools/prompts/`, gamemaster-approved by pm decision, like decision 35: Translation prompts and markets per locale) that every change to UI strings reads the locale''s guide; new bad patterns go into it.
+    - TV-check fixes in the catalogs: de mode name «Spielleitermodus» (en «Gamemaster mode», es «Modo anfitrión» stay); «Steam achievements» / «logros de Steam» / «Steam-Erfolge» wherever achievements are mentioned (decision 74: Gamemaster mode earns no achievements); Esc menu «Back to main menu» / «Volver al menú principal» / «Zurück zum Hauptmenü» (to the start screen) instead of «End game (set up another)», «Quit game» / «Salir del juego» / «Spiel beenden», the quit button in its own colour (within `--u`, D-29); `de` without plural address (every «ihr»/«euch»/«wählt»-style string). The family''s Spanish game changes only in these decided strings (D-59).
+    - Screen gallery: one command (e.g. `trivia-gallery`) renders every screen and dialog in every UI language from a demo save (headless browser; dev dependency only if decision 6''s throw-away Playwright doesn''t fit a re-runnable command: the plan decides, minimal deps); a `trivia-authoring` page shows the shots with each visible text''s catalog key, the gamemaster flags a string with a note; flags feed the next fix pass (a task reads them, fixes catalogs, adds patterns to the guide). Re-runnable any time; output under `work/` (gitignored).
+    - Gamemaster review: one `pm decision add --once` per UI language "Screen gallery reviewed?"; its flags become a fix task.
+    - Suggested priority: 380 (above plan 69''s playtest close-out, task 459 at 340, so the playtest sees the fixed wording).
+
+14. **Joker names and symbols, defined again** (milestone''s "Joker names, defined again", developer 2026-10-14)
+    - Replaces decisions 40–44 (English names: `decision 40: English name for the hint joker «Soplo»?` … `decision 44: English name for the snipe joker «Francotirador»?`) and 54–58 (German names); the new plan records that with `pm decision record … --supersedes` per old decision.
+    - Owner: `plans/15a-ui-translation.md` (joker names section), `plans/09-jokers.md` (JK-*); `app/client/src/locales/`, `app/client/src/game/` (tray, joker dialogs), `authoring/ui/src/print/JokerCards.svelte` (`/comodines`).
+    - One symbol per joker, the same in every language: today''s tray icons (bulb, door, stairs, compass, crosshair) unless a new name needs another; drawn in VD-8 style (`Icon.svelte`, like `plan 135: Playful icons and language flags before a game session`).
+    - Names English first, made to fit the symbol: one pm decision per joker (`hint`, `skip`, `easier`, `category`, `snipe`), 3–5 candidates, recommended first, ≤ 13 characters; then `es`, `es-ES`, `de` translated from the English names (one decision per locale listing all five, or per joker: the plan decides), `es` included: a decided exception to D-59, the family''s game gets the new names.
+    - Key letters follow the new names (`decision 53: Joker and action keys per UI language (LUI-4)?`: mnemonic per catalog, collision rule); `es` keys change only if its new names need it (listed in the `es` decision).
+    - New names everywhere they appear: catalogs and keys, notes like «Soplo 1/2/3», `/comodines` cards, style guide glossaries (part 13), store texts (`plan 88: Store page and AI disclosure (PUB-8, LUI-6)`; its approval decisions 169–171 see the new names), achievement texts (`plan 86: Achievements (SW-11)`; API names like `FIRST_SOPLO` stay).
+    - The dialog that follows a joker (category pick, snipe aim, Paso''s purge option, …) shows the joker''s symbol.
+    - Before the playtests (decisions 62–65, `Playtest passed?`): `plan 69: UI catalogs for the launch languages (LUI-4, LUI-5)`''s task 459 waits for it.
+    - Suggested priority: 375 (after part 13''s style guides at 380, before plan 69''s playtest close-out).
+
+15. **English-first drafting for `base`** (milestone''s "English-first drafting for `base`", developer 2026-10-15)
+    - Owner: `plans/15b-question-translation.md` (source locale), `plans/15-i18n.md` (Spanish varieties), `plans/16-content-target.md` (targets); `authoring/tools/` (`qgen.py`, `translations.py`, `targets.py`, prompts), `authoring/data/`, `authoring/ui` (review tool), `authoring/RUNBOOK.md`.
+    - Source locale per question (schema, `qgen validate`): new `base` questions `en`, existing ones (≤ batch-8) `es`; regional bundles keep the region''s language (`colombia`: Colombian Spanish, then en; decision 110: Regional packs at launch (RG-5, OQ-46)).
+    - `qgen batch` for `base` drafts in English: concepts, draft, rate, fact-check, revise, media, audit, review tool, spot check, rework on the English text. Angle international: no Spanish-world focus, no Anglo/US bias, no wordplay that only works in one language (prompt rules shared with `plan 147: English-first batches: calibration, overlap and QC across languages`, not written twice).
+    - Translation from either source: en → `es`, `es-ES`, `de`; es → `en`, `de`, `es-ES` (part 4''s pipeline). `es-ES` a question locale with its own pool, prompt (`locale-es-ES.md`, Spain''s Spanish) and market; `es` voice idiomatic Latin American; `base`''s voice and `neutralize.md` lose their Spain-oriented rules. How the family''s `es` game gets English-sourced questions (an `es` translation in the `es` pool) is in the plan.
+    - Targets and gap aiming: 5000 approved per question locale (decision 21); English drafting aims at the locales'' deficits; `DRIVES_DRAFTING` and D-84''s source shortfall replaced (decision 219, decision 37''s last clause).
+    - Decisions this replaces, recorded with `pm decision record … --supersedes`: decision 27: Spanish variety (OQ-31) for `base` (es-419 from translation, not Spanish drafts; es-ES its own pool), decision 37: Per-locale content targets and gap aiming (last clause), decision 219: Do the new locales (zh-Hans, ru, pt-BR) steer es drafting from the start?; D-84, D-6 (Colombian usage) for `base` and D-87 where it assumes es as the only source in `plans/decisions.md`.
+    - Prompt changes are the developer''s (RUNBOOK): drafted by a task, shown in a pm decision, applied after the answer.
+    - RUNBOOK and D-36: `qgen batch` drafts `en` for `base`, `--translate` from either source.
+    - Gate: `task 1185: run batch-9` checks that `qgen batch` drafts `en`; every task of this plan that batch-9 needs runs before it, and a decision batch-9 needs also makes task 1185 pending on it (`pm task-pending-decision 1185 <decision>`).
+    - Suggested priority: 710 (backend; above plan 147 at 700, which builds on it, and far above batch-9 at -100).
+
+## Order
+- Decisions first: plans 35, 37, 38, 41 (milestone 7) → parts 1, 3, 8, 10 can be written.
+- Engine (M2) + plan 27 → part 1 → part 9.
+- Part 3 → part 4 → part 5 → part 11''s pilot → part 9''s budget → full runs.
+- Plan 36 + part 3 → part 6; plans 23/24 → part 7.
+- Part 13: style guides and TV-check fixes first, then the gallery, then the gamemaster''s review; before plan 69''s playtest close-out.
+- Part 14 after part 13''s style guides (glossaries get the new names), before plan 69''s playtests.
+- Part 15 before `task 1185: run batch-9` and before part 11''s runs of English-sourced questions; alongside plan 147.
+- Part 2 any time after plan 16. Part 12 last.
+
+## Out of scope (from the milestone)
+- Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-16T00:26:15Z', NULL, 1192, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1215, 128, 'revise plan 128: S4 close-out', 'revise', 'open', 1000, NULL, '`plan 9: masterplan`, the plan above `plan 128: S4 close-out`, changed; it is quoted below. Bring `plan 128: S4 close-out` in line with it
+(`pm plan edit 128 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 9: masterplan
+
+Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewed questions, in every launch language, that a stranger''s family plays many evenings before questions repeat, plus a measurement that proves it. It needs translated UI catalogs, translated, re-rated and reviewed questions, regional bundles (D-39; decision 110: 2000 approved each, region''s language + en, free DLC, `colombia` the pilot), `qgen report --simulate` passing the content target for every launch language, and UI wording the gamemaster has checked on the TV (style guides, screen gallery), joker names made again English first, one symbol per joker in every language, and English-first drafting for `base` (developer, 2026-10-15): from batch-9 on `en` is the source of every new `base` question, translated to `es`, `es-ES` and `de`, each its own pool with 5000 approved (decision 21: Content target per player and language (OQ-32)). Today: 1136 approved (`base` 1034, `colombia` 102), Spanish only; milestone 1 takes `base` to 5000 (D-52).
+
+**The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 9 …`, priority as suggested), and that plan''s tasks do the work.
+
+## Preconditions (other milestones; a part''s plan task checks them first)
+- OQ-31 launch languages + Spanish variety: plan 37 (milestone 7). OQ-32 content target: plan 38. Default preset → burns per game: plan 35 (OQ-30). Burn multiplier for several players: plan 41 (OQ-37). If a needed decision is still pending, the plan task makes itself pending on it (`pm task-pending-decision`) and stops.
+- **If OQ-31 = Spanish only:** parts 3–7 shrink to nothing: their plan tasks drop with that reason (`pm task drop`), except what the Spanish variety needs (part 8). The rest still applies to Spanish.
+- TS engine (milestone 2, plans 19, 20; screens on the engine PORT-7): the simulation runs on it. Age-group windows and bundle filter in the engine (plan 27, milestone 5): the simulation and the bundle filter (RG-3) use them.
+- Catalog (milestone 3: plans 21, 22, 23, 24): `t()`, `es`, `xx`, draft `en`. Settings screen (plan 36, MD-7): the language setting goes there.
+- Pool growth and QC (milestone 1: plans 12 targets, 13 gap-aimed drafting, 15 drift, 16 QC/D-56, 17 batch runs). This milestone reuses them per language; it doesn''t rebuild them. The content side of the English switch (calibration examples, concept angle, cross-language overlap, health and spot check across the switch) is `plan 147: English-first batches: calibration, overlap and QC across languages` (milestone 1); part 15 doesn''t duplicate it.
+- Licence/price: answered (decision 66: Price model (OQ-33), bundles as free DLC; decision 107: Licence (OQ-35)). A part that writes files depending on them follows them.
+
+## Rules for every part
+- Questions only through `qgen batch` (D-36). New pipeline steps (translate, re-rate, neutral Spanish) become `qgen batch` modes, with RUNBOOK and D-36 amended as an implementation task (like BN-11). Workers never edit pools or pick media by hand.
+- Quality bar of plan 16 / D-56 applies per language: LLM audit + blind human spot check per batch; for a translation, the human is a native speaker (the gamemaster arranges them; workers prepare the sample and a pm decision "spot check done?").
+- `app/` never reads `authoring/` (D-35): per-locale pools and category/bundle names are exported to `app/data/`.
+- The current game keeps working after every task until the Steam build replaces it (D-59): Spanish, Colombia on, same keys (unless LUI-4 changes them by decision). The family''s `es` pool keeps its es-sourced questions as they are; English-sourced ones join it as `es` translations.
+- Owning plan files get tasks `[x]` with a note (`15-i18n.md`, `15a`, `15b`, `15c`, `16-content-target.md`, `22-bundles.md`); `plans/project.md` in sync. Store page texts (LUI-6) are S5 (milestone''s out of scope); note it in 15a, don''t do it.
+
+## Parts
+
+1. **Simulation: games per new player (CT-2)**
+   - Owner: `plans/16-content-target.md` ("Metric").
+   - `qgen report --simulate [--locale L] [--bundles …] [--age-group G] [--preset P] [--players N] [--seeds K]`: a new player plays game after game on the TS engine (Node, `authoring/` imports `app/`) with the default preset''s joker use, until supply fails. Median and 10th percentile; strong-player bound (always reaches 12); bottleneck level and subcategory.
+   - Pass/fail against the target of OQ-32''s D-entry, per launch language, default bundle set and every age group; exit 1 on fail. Feeds part 9 (gaps) and part 12 (exit).
+   - No second referee in Python: if the engine can''t run under Node without the client, the plan decides the small adapter.
+   - Suggested priority: 570 (after plans 20 and 27).
+
+2. **Release quality bar and back-audit (CT-5)**
+   - Owner: `plans/16-content-target.md` ("Quality bar"). D-56 covers new batches; the ~1100 questions approved before it never had an audit or a spot check.
+   - Release bar: D-56''s numbers (pm decision 2) or stricter for release (pm decision if the plan proposes stricter); error limit and what happens to a batch above it.
+   - Back-audit: `qgen audit` over the pre-D-56 approved pool in slices, through `qgen` (gamemaster asks, like `qgen rework`), findings → review tool (`audit=flagged`). Cost estimate first.
+   - Suggested priority: 640 (after plan 16 at 650).
+
+3. **Translation layout and schema (QT-1, I18N-3)**
+   - Owner: `plans/15b-question-translation.md` ("Storage"; draft preference A: `authoring/data/questions.<locale>.json`, same ids, translated fields + own `difficulty`, `status`, `review`, `source_hash` for `stale`).
+   - Also: `translatable: false` on source questions; translated category, subcategory and bundle names (`categories.json`, `bundles.json`, per bundle); `qgen export` writes `app/data/pool.<locale>.json` (+ names); `qgen validate` checks translations, `stale`, missing names. D-entry for the layout.
+   - Suggested priority: 890 (schema; after plan 26 at 900, which also changes pool fields).
+
+4. **Translation pipeline (QT-2, QT-3)**
+   - Owner: `plans/15b-question-translation.md` ("Pipeline").
+   - Steps `translate --to L` (adapt units, answer format, hints that play on Spanish words; detect non-travelling questions → propose `translatable: false`) → `rate --locale L` (difficulty for that language''s main market, D-38 scale) → `factcheck --locale L` → review (D-32/D-33) → audit (D-56) → merge into the locale file. Only `approved`, translatable sources; skips done ones; costs in `costs.log`.
+   - Entry point `qgen batch --translate L` (size like a batch, picks untranslated approved sources, fewest translated subcategories first); RUNBOOK + D-36 amended.
+   - Source locale per question (part 15): es-sourced → `en`, `de`, `es-ES`; en-sourced → `es`, `es-ES`, `de`. Plan 66 (done) built es → L; the en → L direction and the `es-ES` target are part 15''s. Prompts in `authoring/tools/prompts/` (new prompts are the gamemaster''s: drafted here, approved by pm decision).
+   - Suggested priority: 700.
+
+5. **Review tool for translations (QT-4)**
+   - Owner: `plans/15b-question-translation.md` ("Review tool"); `authoring/ui`, `authoring/server`.
+   - `/review?batch=…&locale=L`: source and translation side by side; same approve / needs work / reject; flag media with visible text per locale; blind spot-check sample mode per locale (plan 16''s sample mode, reused). Stats pages filter by locale.
+   - Suggested priority: 400.
+
+6. **Language setting, per-locale pool and first-start language screen (I18N-2)**
+   - Owner: `plans/15-i18n.md` ("Model"). Plan 68 (written): save field, per-locale pool, names, Esc menu rows (task 450, done).
+   - UI language and question language in the save (`SaveData.language`); Esc menu of every mode. Engine loads `pool.<locale>.json`; seen counters by id (plan 65), so switching languages never repeats a question before unseen ones run out. Category/bundle names from the locale''s names. Supply check per locale.
+   - **First start (milestone change; replaces plan 68''s "no first-start language screen"):** a fresh save opens on a language screen, the guessed language preselected; the player confirms or picks another; asked once. Guess: `navigator.language` now, Steam''s client language once milestone 10 provides it. A save without `language` (the family''s, = `es`) never sees it. Plan 68 gets the screen as a new task (revision of plan 68).
+   - `es-ES` gets its own question pool (part 15; until now a UI variant only, decision 156: One language for UI and questions picks `pool.es-ES.json` once its supply passes).
+   - Current game: `es` fixed unless changed; the gamemaster mode unchanged.
+   - Suggested priority: 480 (plan 68).
+
+7. **UI catalogs for the launch languages (LUI-4, LUI-5)**
+   - Owner: `plans/15a-ui-translation.md`. Builds on plans 21, 23, 24 (draft `en`).
+   - LUI-4: joker keys per language or neutral keys: pm decision with a recommendation (also gamepad glyphs from milestone 8, plan 45).
+   - LUI-5: one catalog per launch language beyond `es`/`en` draft; playful joker names per language (pm decision per joker, like plan 24); fonts checked for each script (Latin only at launch, 15a); length check with `xx`; `/comodines` cards per language; native-speaker playtest per language (gamemaster runs it; workers write the checklist and a pm decision "playtest passed?").
+   - Suggested priority: 390 (after plans 23, 24 at 400).
+   - Plan 69 (written; task 459 open): its playtest fixes follow the locale style guides of part 13 once they exist.
+
+8. **Spanish variety (only if OQ-31 picks neutral Spanish)**
+   - Owner: `plans/15-i18n.md` ("Spanish varieties").
+   - A `qgen batch` mode (e.g. `--neutralize`) that rewrites Colombian wording in `base` to neutral Latin American Spanish, through review; `colombia` keeps its wording. If OQ-31 keeps Colombian Spanish: the plan task drops with that reason.
+   - Plan 64 (done); `neutralize-1` runs as planned (decision 214: neutralize-1: qgen validate fails after fix). `es` is now idiomatic Latin American Spanish, no compromise with Spain: dropping "understood … in Spain" from `base`''s voice and the Spain-oriented rules from `neutralize.md` is part 15''s.
+   - Suggested priority: 690 (tooling; the runs go to part 11).
+
+9. **Cost, budget and generation plan by gap (CT-3, CT-4)**
+   - Owner: `plans/16-content-target.md` ("Cost").
+   - Cost per approved question (draft → approved) and per translated question (from part 11''s pilot) from `costs.log`; budget for the release per language as a pm decision before full runs.
+   - Gap plan: the simulation''s bottlenecks (part 1) → release targets per language/age group in `authoring/data/targets.json` (D-53, extended per locale), read by `draft` (D-54) and `--translate`. No new mechanism if plan 13''s covers it.
+   - Target 5000 approved per question locale (`en`, `es`, `es-ES`, `de`; decision 21). English drafting for `base` aims at the locales'' deficits; replaces decision 37''s last clause, D-84 and decision 219''s `DRIVES_DRAFTING` (the en/de source shortfall steering es drafting). The change is part 15''s; plan 70''s budget counts en drafting + three translations per question.
+   - Suggested priority: 560 (after part 1).
+
+10. **Regional bundles (RG-3..RG-5)** (plan 98)
+    - Owner: `plans/15c-regional-questions.md` (superseded by bundles, D-39) and `plans/22-bundles.md`. RG-3 is BN-6 (plan 27, milestone 5) plus part 1''s `--bundles`; RG-4 is `qgen batch --bundle` (BN-11, done): mark them so.
+    - RG-5 answered (decision 110: Regional packs at launch (RG-5, OQ-46); partly supersedes decision 37''s "packs have no target"):
+      - every regional bundle: 2000 approved, in its region''s language + en (`colombia`: es + en), free DLC (decision 66), off by default on the configure screen; the family''s save keeps base + `colombia` (D-59)
+      - bundle-scoped taxonomy: every bundle has its own categories and subcategories; names may repeat verbatim across bundles (e.g. «Historia» in `base` and in `colombia`), still separate entries; the 19 `colombia` questions on `base` subcategories move to `colombia`''s own (a `qgen` migration step, no hand edits; `validate` rule; engine, «Cambiazo», export and review tool keyed by bundle + subcategory, not by name)
+      - `colombia`''s subcategory list: the gamemaster''s (pm decision with a proposal)
+      - `qgen batch --translate <locale> --bundle <id>`: the selection takes the bundle''s approved sources; the bundle''s `languages` gains the locale once its translations are approved
+      - target per regional bundle (2000, D-53''s mix or the plan''s proposal) in `targets.json`, read by `--bundle` drafting and `qgen report`
+      - effort measurement for the pilot: $ per approved (`qgen report --cost`, per bundle) and the gamemaster''s review time per 100 (from the review tool''s timestamps; a `qgen report` line if none exists)
+      - packs as optional installs (plan 98 task 751, done); DLC depots in S5 (plan 89)
+    - New bundles (mexico, argentina, …) only after the pilot''s decision (part 11).
+    - Suggested priority: 300.
+
+11. **Release content runs**
+    - The recurring `qgen batch` tasks: translation pilot (QT-5: 50 questions per language, measure reject rate and cost, go/no-go pm decision), then full translation per language (QT-6), neutral Spanish (part 8), regional bundle batches (part 10), and `base` top-ups where the simulation fails after milestone 1''s 5000. Each batch followed by D-56''s QC (plan 16 procedure, `authoring/QC.md`), native-speaker spot checks for translations.
+    - English-first `base` (part 15): `plan 17: Batch runs`'' batches draft `en` from batch-9 on (`task 1185: run batch-9`, decision 229: Continue batch-9 after the extended batch-8 review?); here their translation runs en → `es`, `es-ES`, `de`, and the es-sourced pool''s `es-ES` runs (besides `en`, `de`). No more Spanish `base` drafts or `es` top-ups.
+    - Order inside: pilot first (priority -90, above the runs, so part 9''s budget has its cost); full runs after milestone 1''s batch runs (plan 17) so translations don''t go stale.
+    - Regional pilot (decision 110): `qgen batch --bundle colombia` run/QC pairs from 102 to 2000 approved, then `--translate en --bundle colombia` pairs to 2000 en; once `colombia` reaches 2000 es: effort recorded ($ per approved, review time per 100) in `plans/15c-regional-questions.md` / `16-content-target.md`, then `pm decision add "More regional bundles at launch?"` with the numbers (candidates `mexico`, `argentina`); a "yes" adds `qgen bundle new` + taxonomy decisions in part 10''s plan and their run chains here.
+    - Launch doesn''t wait for the regional chain: it ships what `colombia` has then; content updates (plan 96) bring the rest.
+    - Suggested priority: -110 (after plan 17''s -100).
+
+12. **S4 close-out**
+    - `qgen report --simulate` passes for every launch language (the milestone''s "Done when"); result recorded in `plans/16-content-target.md`.
+    - A fresh save asks for the language once; an existing save doesn''t (the milestone''s "Done when"; browser check).
+    - `colombia` at 2000 approved in es and en, the pilot''s effort recorded, "More regional bundles at launch?" answered (may land after launch: the close-out of this milestone waits for it, the launch (milestone 11) doesn''t).
+    - Style guides for every UI locale, the TV-check fixes in, the gamemaster''s screen gallery review done in every UI language (part 13''s decisions answered).
+    - Every joker has one English-first name, translated in every catalog, and one symbol across languages, shown in its follow-up dialog (part 14).
+    - New `base` questions drafted in English and translated to `es`, `es-ES`, `de`; the es-sourced ones have `en`, `de`, `es-ES` pool entries (part 15).
+    - `plans/11-steam.md` S4 row done; 15, 15a, 15b, 15c, 16 statuses and tasks; `plans/project.md`, `plans/README.md`; masterplans of milestones 10–11 (plans 10, 11) get a note if S4 changed their scope (store languages, DLC bundles and post-launch regional updates, install size of several pools).
+    - Suggested priority: -130 (last, after part 11).
+
+13. **UI wording: style guides, TV-check fixes, screen gallery** (milestone''s "UI wording and review", gamemaster''s TV check 2026-10-13)
+    - Owner: `plans/15a-ui-translation.md` (new section "Wording and review"); `app/client/src/locales/`, `authoring/ui`, `authoring/server`.
+    - Style guides `app/client/src/locales/style/<locale>.md` (`en`, `es`, `es-ES`, `de`): glossary of fixed terms, how players are addressed, button conventions, Steam''s own term where Steam has one, list of bad patterns seen so far. Guidance, not a lint. German: never assume plural, infinitive style («Frage wählen», not «Wählt eine Frage»); other locales keep their address form unless their guide says otherwise.
+    - Workers read the guide: a line in `AGENTS.md` (Rules) and in the translation prompts (`authoring/tools/prompts/`, gamemaster-approved by pm decision, like decision 35: Translation prompts and markets per locale) that every change to UI strings reads the locale''s guide; new bad patterns go into it.
+    - TV-check fixes in the catalogs: de mode name «Spielleitermodus» (en «Gamemaster mode», es «Modo anfitrión» stay); «Steam achievements» / «logros de Steam» / «Steam-Erfolge» wherever achievements are mentioned (decision 74: Gamemaster mode earns no achievements); Esc menu «Back to main menu» / «Volver al menú principal» / «Zurück zum Hauptmenü» (to the start screen) instead of «End game (set up another)», «Quit game» / «Salir del juego» / «Spiel beenden», the quit button in its own colour (within `--u`, D-29); `de` without plural address (every «ihr»/«euch»/«wählt»-style string). The family''s Spanish game changes only in these decided strings (D-59).
+    - Screen gallery: one command (e.g. `trivia-gallery`) renders every screen and dialog in every UI language from a demo save (headless browser; dev dependency only if decision 6''s throw-away Playwright doesn''t fit a re-runnable command: the plan decides, minimal deps); a `trivia-authoring` page shows the shots with each visible text''s catalog key, the gamemaster flags a string with a note; flags feed the next fix pass (a task reads them, fixes catalogs, adds patterns to the guide). Re-runnable any time; output under `work/` (gitignored).
+    - Gamemaster review: one `pm decision add --once` per UI language "Screen gallery reviewed?"; its flags become a fix task.
+    - Suggested priority: 380 (above plan 69''s playtest close-out, task 459 at 340, so the playtest sees the fixed wording).
+
+14. **Joker names and symbols, defined again** (milestone''s "Joker names, defined again", developer 2026-10-14)
+    - Replaces decisions 40–44 (English names: `decision 40: English name for the hint joker «Soplo»?` … `decision 44: English name for the snipe joker «Francotirador»?`) and 54–58 (German names); the new plan records that with `pm decision record … --supersedes` per old decision.
+    - Owner: `plans/15a-ui-translation.md` (joker names section), `plans/09-jokers.md` (JK-*); `app/client/src/locales/`, `app/client/src/game/` (tray, joker dialogs), `authoring/ui/src/print/JokerCards.svelte` (`/comodines`).
+    - One symbol per joker, the same in every language: today''s tray icons (bulb, door, stairs, compass, crosshair) unless a new name needs another; drawn in VD-8 style (`Icon.svelte`, like `plan 135: Playful icons and language flags before a game session`).
+    - Names English first, made to fit the symbol: one pm decision per joker (`hint`, `skip`, `easier`, `category`, `snipe`), 3–5 candidates, recommended first, ≤ 13 characters; then `es`, `es-ES`, `de` translated from the English names (one decision per locale listing all five, or per joker: the plan decides), `es` included: a decided exception to D-59, the family''s game gets the new names.
+    - Key letters follow the new names (`decision 53: Joker and action keys per UI language (LUI-4)?`: mnemonic per catalog, collision rule); `es` keys change only if its new names need it (listed in the `es` decision).
+    - New names everywhere they appear: catalogs and keys, notes like «Soplo 1/2/3», `/comodines` cards, style guide glossaries (part 13), store texts (`plan 88: Store page and AI disclosure (PUB-8, LUI-6)`; its approval decisions 169–171 see the new names), achievement texts (`plan 86: Achievements (SW-11)`; API names like `FIRST_SOPLO` stay).
+    - The dialog that follows a joker (category pick, snipe aim, Paso''s purge option, …) shows the joker''s symbol.
+    - Before the playtests (decisions 62–65, `Playtest passed?`): `plan 69: UI catalogs for the launch languages (LUI-4, LUI-5)`''s task 459 waits for it.
+    - Suggested priority: 375 (after part 13''s style guides at 380, before plan 69''s playtest close-out).
+
+15. **English-first drafting for `base`** (milestone''s "English-first drafting for `base`", developer 2026-10-15)
+    - Owner: `plans/15b-question-translation.md` (source locale), `plans/15-i18n.md` (Spanish varieties), `plans/16-content-target.md` (targets); `authoring/tools/` (`qgen.py`, `translations.py`, `targets.py`, prompts), `authoring/data/`, `authoring/ui` (review tool), `authoring/RUNBOOK.md`.
+    - Source locale per question (schema, `qgen validate`): new `base` questions `en`, existing ones (≤ batch-8) `es`; regional bundles keep the region''s language (`colombia`: Colombian Spanish, then en; decision 110: Regional packs at launch (RG-5, OQ-46)).
+    - `qgen batch` for `base` drafts in English: concepts, draft, rate, fact-check, revise, media, audit, review tool, spot check, rework on the English text. Angle international: no Spanish-world focus, no Anglo/US bias, no wordplay that only works in one language (prompt rules shared with `plan 147: English-first batches: calibration, overlap and QC across languages`, not written twice).
+    - Translation from either source: en → `es`, `es-ES`, `de`; es → `en`, `de`, `es-ES` (part 4''s pipeline). `es-ES` a question locale with its own pool, prompt (`locale-es-ES.md`, Spain''s Spanish) and market; `es` voice idiomatic Latin American; `base`''s voice and `neutralize.md` lose their Spain-oriented rules. How the family''s `es` game gets English-sourced questions (an `es` translation in the `es` pool) is in the plan.
+    - Targets and gap aiming: 5000 approved per question locale (decision 21); English drafting aims at the locales'' deficits; `DRIVES_DRAFTING` and D-84''s source shortfall replaced (decision 219, decision 37''s last clause).
+    - Decisions this replaces, recorded with `pm decision record … --supersedes`: decision 27: Spanish variety (OQ-31) for `base` (es-419 from translation, not Spanish drafts; es-ES its own pool), decision 37: Per-locale content targets and gap aiming (last clause), decision 219: Do the new locales (zh-Hans, ru, pt-BR) steer es drafting from the start?; D-84, D-6 (Colombian usage) for `base` and D-87 where it assumes es as the only source in `plans/decisions.md`.
+    - Prompt changes are the developer''s (RUNBOOK): drafted by a task, shown in a pm decision, applied after the answer.
+    - RUNBOOK and D-36: `qgen batch` drafts `en` for `base`, `--translate` from either source.
+    - Gate: `task 1185: run batch-9` checks that `qgen batch` drafts `en`; every task of this plan that batch-9 needs runs before it, and a decision batch-9 needs also makes task 1185 pending on it (`pm task-pending-decision 1185 <decision>`).
+    - Suggested priority: 710 (backend; above plan 147 at 700, which builds on it, and far above batch-9 at -100).
+
+## Order
+- Decisions first: plans 35, 37, 38, 41 (milestone 7) → parts 1, 3, 8, 10 can be written.
+- Engine (M2) + plan 27 → part 1 → part 9.
+- Part 3 → part 4 → part 5 → part 11''s pilot → part 9''s budget → full runs.
+- Plan 36 + part 3 → part 6; plans 23/24 → part 7.
+- Part 13: style guides and TV-check fixes first, then the gallery, then the gamemaster''s review; before plan 69''s playtest close-out.
+- Part 14 after part 13''s style guides (glossaries get the new names), before plan 69''s playtests.
+- Part 15 before `task 1185: run batch-9` and before part 11''s runs of English-sourced questions; alongside plan 147.
+- Part 2 any time after plan 16. Part 12 last.
+
+## Out of scope (from the milestone)
+- Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-16T00:26:15Z', NULL, 1192, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1216, 136, 'revise plan 136: Joker names and symbols, defined again', 'revise', 'open', 1000, NULL, '`plan 9: masterplan`, the plan above `plan 136: Joker names and symbols, defined again`, changed; it is quoted below. Bring `plan 136: Joker names and symbols, defined again` in line with it
+(`pm plan edit 136 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 9: masterplan
+
+Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewed questions, in every launch language, that a stranger''s family plays many evenings before questions repeat, plus a measurement that proves it. It needs translated UI catalogs, translated, re-rated and reviewed questions, regional bundles (D-39; decision 110: 2000 approved each, region''s language + en, free DLC, `colombia` the pilot), `qgen report --simulate` passing the content target for every launch language, and UI wording the gamemaster has checked on the TV (style guides, screen gallery), joker names made again English first, one symbol per joker in every language, and English-first drafting for `base` (developer, 2026-10-15): from batch-9 on `en` is the source of every new `base` question, translated to `es`, `es-ES` and `de`, each its own pool with 5000 approved (decision 21: Content target per player and language (OQ-32)). Today: 1136 approved (`base` 1034, `colombia` 102), Spanish only; milestone 1 takes `base` to 5000 (D-52).
+
+**The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 9 …`, priority as suggested), and that plan''s tasks do the work.
+
+## Preconditions (other milestones; a part''s plan task checks them first)
+- OQ-31 launch languages + Spanish variety: plan 37 (milestone 7). OQ-32 content target: plan 38. Default preset → burns per game: plan 35 (OQ-30). Burn multiplier for several players: plan 41 (OQ-37). If a needed decision is still pending, the plan task makes itself pending on it (`pm task-pending-decision`) and stops.
+- **If OQ-31 = Spanish only:** parts 3–7 shrink to nothing: their plan tasks drop with that reason (`pm task drop`), except what the Spanish variety needs (part 8). The rest still applies to Spanish.
+- TS engine (milestone 2, plans 19, 20; screens on the engine PORT-7): the simulation runs on it. Age-group windows and bundle filter in the engine (plan 27, milestone 5): the simulation and the bundle filter (RG-3) use them.
+- Catalog (milestone 3: plans 21, 22, 23, 24): `t()`, `es`, `xx`, draft `en`. Settings screen (plan 36, MD-7): the language setting goes there.
+- Pool growth and QC (milestone 1: plans 12 targets, 13 gap-aimed drafting, 15 drift, 16 QC/D-56, 17 batch runs). This milestone reuses them per language; it doesn''t rebuild them. The content side of the English switch (calibration examples, concept angle, cross-language overlap, health and spot check across the switch) is `plan 147: English-first batches: calibration, overlap and QC across languages` (milestone 1); part 15 doesn''t duplicate it.
+- Licence/price: answered (decision 66: Price model (OQ-33), bundles as free DLC; decision 107: Licence (OQ-35)). A part that writes files depending on them follows them.
+
+## Rules for every part
+- Questions only through `qgen batch` (D-36). New pipeline steps (translate, re-rate, neutral Spanish) become `qgen batch` modes, with RUNBOOK and D-36 amended as an implementation task (like BN-11). Workers never edit pools or pick media by hand.
+- Quality bar of plan 16 / D-56 applies per language: LLM audit + blind human spot check per batch; for a translation, the human is a native speaker (the gamemaster arranges them; workers prepare the sample and a pm decision "spot check done?").
+- `app/` never reads `authoring/` (D-35): per-locale pools and category/bundle names are exported to `app/data/`.
+- The current game keeps working after every task until the Steam build replaces it (D-59): Spanish, Colombia on, same keys (unless LUI-4 changes them by decision). The family''s `es` pool keeps its es-sourced questions as they are; English-sourced ones join it as `es` translations.
+- Owning plan files get tasks `[x]` with a note (`15-i18n.md`, `15a`, `15b`, `15c`, `16-content-target.md`, `22-bundles.md`); `plans/project.md` in sync. Store page texts (LUI-6) are S5 (milestone''s out of scope); note it in 15a, don''t do it.
+
+## Parts
+
+1. **Simulation: games per new player (CT-2)**
+   - Owner: `plans/16-content-target.md` ("Metric").
+   - `qgen report --simulate [--locale L] [--bundles …] [--age-group G] [--preset P] [--players N] [--seeds K]`: a new player plays game after game on the TS engine (Node, `authoring/` imports `app/`) with the default preset''s joker use, until supply fails. Median and 10th percentile; strong-player bound (always reaches 12); bottleneck level and subcategory.
+   - Pass/fail against the target of OQ-32''s D-entry, per launch language, default bundle set and every age group; exit 1 on fail. Feeds part 9 (gaps) and part 12 (exit).
+   - No second referee in Python: if the engine can''t run under Node without the client, the plan decides the small adapter.
+   - Suggested priority: 570 (after plans 20 and 27).
+
+2. **Release quality bar and back-audit (CT-5)**
+   - Owner: `plans/16-content-target.md` ("Quality bar"). D-56 covers new batches; the ~1100 questions approved before it never had an audit or a spot check.
+   - Release bar: D-56''s numbers (pm decision 2) or stricter for release (pm decision if the plan proposes stricter); error limit and what happens to a batch above it.
+   - Back-audit: `qgen audit` over the pre-D-56 approved pool in slices, through `qgen` (gamemaster asks, like `qgen rework`), findings → review tool (`audit=flagged`). Cost estimate first.
+   - Suggested priority: 640 (after plan 16 at 650).
+
+3. **Translation layout and schema (QT-1, I18N-3)**
+   - Owner: `plans/15b-question-translation.md` ("Storage"; draft preference A: `authoring/data/questions.<locale>.json`, same ids, translated fields + own `difficulty`, `status`, `review`, `source_hash` for `stale`).
+   - Also: `translatable: false` on source questions; translated category, subcategory and bundle names (`categories.json`, `bundles.json`, per bundle); `qgen export` writes `app/data/pool.<locale>.json` (+ names); `qgen validate` checks translations, `stale`, missing names. D-entry for the layout.
+   - Suggested priority: 890 (schema; after plan 26 at 900, which also changes pool fields).
+
+4. **Translation pipeline (QT-2, QT-3)**
+   - Owner: `plans/15b-question-translation.md` ("Pipeline").
+   - Steps `translate --to L` (adapt units, answer format, hints that play on Spanish words; detect non-travelling questions → propose `translatable: false`) → `rate --locale L` (difficulty for that language''s main market, D-38 scale) → `factcheck --locale L` → review (D-32/D-33) → audit (D-56) → merge into the locale file. Only `approved`, translatable sources; skips done ones; costs in `costs.log`.
+   - Entry point `qgen batch --translate L` (size like a batch, picks untranslated approved sources, fewest translated subcategories first); RUNBOOK + D-36 amended.
+   - Source locale per question (part 15): es-sourced → `en`, `de`, `es-ES`; en-sourced → `es`, `es-ES`, `de`. Plan 66 (done) built es → L; the en → L direction and the `es-ES` target are part 15''s. Prompts in `authoring/tools/prompts/` (new prompts are the gamemaster''s: drafted here, approved by pm decision).
+   - Suggested priority: 700.
+
+5. **Review tool for translations (QT-4)**
+   - Owner: `plans/15b-question-translation.md` ("Review tool"); `authoring/ui`, `authoring/server`.
+   - `/review?batch=…&locale=L`: source and translation side by side; same approve / needs work / reject; flag media with visible text per locale; blind spot-check sample mode per locale (plan 16''s sample mode, reused). Stats pages filter by locale.
+   - Suggested priority: 400.
+
+6. **Language setting, per-locale pool and first-start language screen (I18N-2)**
+   - Owner: `plans/15-i18n.md` ("Model"). Plan 68 (written): save field, per-locale pool, names, Esc menu rows (task 450, done).
+   - UI language and question language in the save (`SaveData.language`); Esc menu of every mode. Engine loads `pool.<locale>.json`; seen counters by id (plan 65), so switching languages never repeats a question before unseen ones run out. Category/bundle names from the locale''s names. Supply check per locale.
+   - **First start (milestone change; replaces plan 68''s "no first-start language screen"):** a fresh save opens on a language screen, the guessed language preselected; the player confirms or picks another; asked once. Guess: `navigator.language` now, Steam''s client language once milestone 10 provides it. A save without `language` (the family''s, = `es`) never sees it. Plan 68 gets the screen as a new task (revision of plan 68).
+   - `es-ES` gets its own question pool (part 15; until now a UI variant only, decision 156: One language for UI and questions picks `pool.es-ES.json` once its supply passes).
+   - Current game: `es` fixed unless changed; the gamemaster mode unchanged.
+   - Suggested priority: 480 (plan 68).
+
+7. **UI catalogs for the launch languages (LUI-4, LUI-5)**
+   - Owner: `plans/15a-ui-translation.md`. Builds on plans 21, 23, 24 (draft `en`).
+   - LUI-4: joker keys per language or neutral keys: pm decision with a recommendation (also gamepad glyphs from milestone 8, plan 45).
+   - LUI-5: one catalog per launch language beyond `es`/`en` draft; playful joker names per language (pm decision per joker, like plan 24); fonts checked for each script (Latin only at launch, 15a); length check with `xx`; `/comodines` cards per language; native-speaker playtest per language (gamemaster runs it; workers write the checklist and a pm decision "playtest passed?").
+   - Suggested priority: 390 (after plans 23, 24 at 400).
+   - Plan 69 (written; task 459 open): its playtest fixes follow the locale style guides of part 13 once they exist.
+
+8. **Spanish variety (only if OQ-31 picks neutral Spanish)**
+   - Owner: `plans/15-i18n.md` ("Spanish varieties").
+   - A `qgen batch` mode (e.g. `--neutralize`) that rewrites Colombian wording in `base` to neutral Latin American Spanish, through review; `colombia` keeps its wording. If OQ-31 keeps Colombian Spanish: the plan task drops with that reason.
+   - Plan 64 (done); `neutralize-1` runs as planned (decision 214: neutralize-1: qgen validate fails after fix). `es` is now idiomatic Latin American Spanish, no compromise with Spain: dropping "understood … in Spain" from `base`''s voice and the Spain-oriented rules from `neutralize.md` is part 15''s.
+   - Suggested priority: 690 (tooling; the runs go to part 11).
+
+9. **Cost, budget and generation plan by gap (CT-3, CT-4)**
+   - Owner: `plans/16-content-target.md` ("Cost").
+   - Cost per approved question (draft → approved) and per translated question (from part 11''s pilot) from `costs.log`; budget for the release per language as a pm decision before full runs.
+   - Gap plan: the simulation''s bottlenecks (part 1) → release targets per language/age group in `authoring/data/targets.json` (D-53, extended per locale), read by `draft` (D-54) and `--translate`. No new mechanism if plan 13''s covers it.
+   - Target 5000 approved per question locale (`en`, `es`, `es-ES`, `de`; decision 21). English drafting for `base` aims at the locales'' deficits; replaces decision 37''s last clause, D-84 and decision 219''s `DRIVES_DRAFTING` (the en/de source shortfall steering es drafting). The change is part 15''s; plan 70''s budget counts en drafting + three translations per question.
+   - Suggested priority: 560 (after part 1).
+
+10. **Regional bundles (RG-3..RG-5)** (plan 98)
+    - Owner: `plans/15c-regional-questions.md` (superseded by bundles, D-39) and `plans/22-bundles.md`. RG-3 is BN-6 (plan 27, milestone 5) plus part 1''s `--bundles`; RG-4 is `qgen batch --bundle` (BN-11, done): mark them so.
+    - RG-5 answered (decision 110: Regional packs at launch (RG-5, OQ-46); partly supersedes decision 37''s "packs have no target"):
+      - every regional bundle: 2000 approved, in its region''s language + en (`colombia`: es + en), free DLC (decision 66), off by default on the configure screen; the family''s save keeps base + `colombia` (D-59)
+      - bundle-scoped taxonomy: every bundle has its own categories and subcategories; names may repeat verbatim across bundles (e.g. «Historia» in `base` and in `colombia`), still separate entries; the 19 `colombia` questions on `base` subcategories move to `colombia`''s own (a `qgen` migration step, no hand edits; `validate` rule; engine, «Cambiazo», export and review tool keyed by bundle + subcategory, not by name)
+      - `colombia`''s subcategory list: the gamemaster''s (pm decision with a proposal)
+      - `qgen batch --translate <locale> --bundle <id>`: the selection takes the bundle''s approved sources; the bundle''s `languages` gains the locale once its translations are approved
+      - target per regional bundle (2000, D-53''s mix or the plan''s proposal) in `targets.json`, read by `--bundle` drafting and `qgen report`
+      - effort measurement for the pilot: $ per approved (`qgen report --cost`, per bundle) and the gamemaster''s review time per 100 (from the review tool''s timestamps; a `qgen report` line if none exists)
+      - packs as optional installs (plan 98 task 751, done); DLC depots in S5 (plan 89)
+    - New bundles (mexico, argentina, …) only after the pilot''s decision (part 11).
+    - Suggested priority: 300.
+
+11. **Release content runs**
+    - The recurring `qgen batch` tasks: translation pilot (QT-5: 50 questions per language, measure reject rate and cost, go/no-go pm decision), then full translation per language (QT-6), neutral Spanish (part 8), regional bundle batches (part 10), and `base` top-ups where the simulation fails after milestone 1''s 5000. Each batch followed by D-56''s QC (plan 16 procedure, `authoring/QC.md`), native-speaker spot checks for translations.
+    - English-first `base` (part 15): `plan 17: Batch runs`'' batches draft `en` from batch-9 on (`task 1185: run batch-9`, decision 229: Continue batch-9 after the extended batch-8 review?); here their translation runs en → `es`, `es-ES`, `de`, and the es-sourced pool''s `es-ES` runs (besides `en`, `de`). No more Spanish `base` drafts or `es` top-ups.
+    - Order inside: pilot first (priority -90, above the runs, so part 9''s budget has its cost); full runs after milestone 1''s batch runs (plan 17) so translations don''t go stale.
+    - Regional pilot (decision 110): `qgen batch --bundle colombia` run/QC pairs from 102 to 2000 approved, then `--translate en --bundle colombia` pairs to 2000 en; once `colombia` reaches 2000 es: effort recorded ($ per approved, review time per 100) in `plans/15c-regional-questions.md` / `16-content-target.md`, then `pm decision add "More regional bundles at launch?"` with the numbers (candidates `mexico`, `argentina`); a "yes" adds `qgen bundle new` + taxonomy decisions in part 10''s plan and their run chains here.
+    - Launch doesn''t wait for the regional chain: it ships what `colombia` has then; content updates (plan 96) bring the rest.
+    - Suggested priority: -110 (after plan 17''s -100).
+
+12. **S4 close-out**
+    - `qgen report --simulate` passes for every launch language (the milestone''s "Done when"); result recorded in `plans/16-content-target.md`.
+    - A fresh save asks for the language once; an existing save doesn''t (the milestone''s "Done when"; browser check).
+    - `colombia` at 2000 approved in es and en, the pilot''s effort recorded, "More regional bundles at launch?" answered (may land after launch: the close-out of this milestone waits for it, the launch (milestone 11) doesn''t).
+    - Style guides for every UI locale, the TV-check fixes in, the gamemaster''s screen gallery review done in every UI language (part 13''s decisions answered).
+    - Every joker has one English-first name, translated in every catalog, and one symbol across languages, shown in its follow-up dialog (part 14).
+    - New `base` questions drafted in English and translated to `es`, `es-ES`, `de`; the es-sourced ones have `en`, `de`, `es-ES` pool entries (part 15).
+    - `plans/11-steam.md` S4 row done; 15, 15a, 15b, 15c, 16 statuses and tasks; `plans/project.md`, `plans/README.md`; masterplans of milestones 10–11 (plans 10, 11) get a note if S4 changed their scope (store languages, DLC bundles and post-launch regional updates, install size of several pools).
+    - Suggested priority: -130 (last, after part 11).
+
+13. **UI wording: style guides, TV-check fixes, screen gallery** (milestone''s "UI wording and review", gamemaster''s TV check 2026-10-13)
+    - Owner: `plans/15a-ui-translation.md` (new section "Wording and review"); `app/client/src/locales/`, `authoring/ui`, `authoring/server`.
+    - Style guides `app/client/src/locales/style/<locale>.md` (`en`, `es`, `es-ES`, `de`): glossary of fixed terms, how players are addressed, button conventions, Steam''s own term where Steam has one, list of bad patterns seen so far. Guidance, not a lint. German: never assume plural, infinitive style («Frage wählen», not «Wählt eine Frage»); other locales keep their address form unless their guide says otherwise.
+    - Workers read the guide: a line in `AGENTS.md` (Rules) and in the translation prompts (`authoring/tools/prompts/`, gamemaster-approved by pm decision, like decision 35: Translation prompts and markets per locale) that every change to UI strings reads the locale''s guide; new bad patterns go into it.
+    - TV-check fixes in the catalogs: de mode name «Spielleitermodus» (en «Gamemaster mode», es «Modo anfitrión» stay); «Steam achievements» / «logros de Steam» / «Steam-Erfolge» wherever achievements are mentioned (decision 74: Gamemaster mode earns no achievements); Esc menu «Back to main menu» / «Volver al menú principal» / «Zurück zum Hauptmenü» (to the start screen) instead of «End game (set up another)», «Quit game» / «Salir del juego» / «Spiel beenden», the quit button in its own colour (within `--u`, D-29); `de` without plural address (every «ihr»/«euch»/«wählt»-style string). The family''s Spanish game changes only in these decided strings (D-59).
+    - Screen gallery: one command (e.g. `trivia-gallery`) renders every screen and dialog in every UI language from a demo save (headless browser; dev dependency only if decision 6''s throw-away Playwright doesn''t fit a re-runnable command: the plan decides, minimal deps); a `trivia-authoring` page shows the shots with each visible text''s catalog key, the gamemaster flags a string with a note; flags feed the next fix pass (a task reads them, fixes catalogs, adds patterns to the guide). Re-runnable any time; output under `work/` (gitignored).
+    - Gamemaster review: one `pm decision add --once` per UI language "Screen gallery reviewed?"; its flags become a fix task.
+    - Suggested priority: 380 (above plan 69''s playtest close-out, task 459 at 340, so the playtest sees the fixed wording).
+
+14. **Joker names and symbols, defined again** (milestone''s "Joker names, defined again", developer 2026-10-14)
+    - Replaces decisions 40–44 (English names: `decision 40: English name for the hint joker «Soplo»?` … `decision 44: English name for the snipe joker «Francotirador»?`) and 54–58 (German names); the new plan records that with `pm decision record … --supersedes` per old decision.
+    - Owner: `plans/15a-ui-translation.md` (joker names section), `plans/09-jokers.md` (JK-*); `app/client/src/locales/`, `app/client/src/game/` (tray, joker dialogs), `authoring/ui/src/print/JokerCards.svelte` (`/comodines`).
+    - One symbol per joker, the same in every language: today''s tray icons (bulb, door, stairs, compass, crosshair) unless a new name needs another; drawn in VD-8 style (`Icon.svelte`, like `plan 135: Playful icons and language flags before a game session`).
+    - Names English first, made to fit the symbol: one pm decision per joker (`hint`, `skip`, `easier`, `category`, `snipe`), 3–5 candidates, recommended first, ≤ 13 characters; then `es`, `es-ES`, `de` translated from the English names (one decision per locale listing all five, or per joker: the plan decides), `es` included: a decided exception to D-59, the family''s game gets the new names.
+    - Key letters follow the new names (`decision 53: Joker and action keys per UI language (LUI-4)?`: mnemonic per catalog, collision rule); `es` keys change only if its new names need it (listed in the `es` decision).
+    - New names everywhere they appear: catalogs and keys, notes like «Soplo 1/2/3», `/comodines` cards, style guide glossaries (part 13), store texts (`plan 88: Store page and AI disclosure (PUB-8, LUI-6)`; its approval decisions 169–171 see the new names), achievement texts (`plan 86: Achievements (SW-11)`; API names like `FIRST_SOPLO` stay).
+    - The dialog that follows a joker (category pick, snipe aim, Paso''s purge option, …) shows the joker''s symbol.
+    - Before the playtests (decisions 62–65, `Playtest passed?`): `plan 69: UI catalogs for the launch languages (LUI-4, LUI-5)`''s task 459 waits for it.
+    - Suggested priority: 375 (after part 13''s style guides at 380, before plan 69''s playtest close-out).
+
+15. **English-first drafting for `base`** (milestone''s "English-first drafting for `base`", developer 2026-10-15)
+    - Owner: `plans/15b-question-translation.md` (source locale), `plans/15-i18n.md` (Spanish varieties), `plans/16-content-target.md` (targets); `authoring/tools/` (`qgen.py`, `translations.py`, `targets.py`, prompts), `authoring/data/`, `authoring/ui` (review tool), `authoring/RUNBOOK.md`.
+    - Source locale per question (schema, `qgen validate`): new `base` questions `en`, existing ones (≤ batch-8) `es`; regional bundles keep the region''s language (`colombia`: Colombian Spanish, then en; decision 110: Regional packs at launch (RG-5, OQ-46)).
+    - `qgen batch` for `base` drafts in English: concepts, draft, rate, fact-check, revise, media, audit, review tool, spot check, rework on the English text. Angle international: no Spanish-world focus, no Anglo/US bias, no wordplay that only works in one language (prompt rules shared with `plan 147: English-first batches: calibration, overlap and QC across languages`, not written twice).
+    - Translation from either source: en → `es`, `es-ES`, `de`; es → `en`, `de`, `es-ES` (part 4''s pipeline). `es-ES` a question locale with its own pool, prompt (`locale-es-ES.md`, Spain''s Spanish) and market; `es` voice idiomatic Latin American; `base`''s voice and `neutralize.md` lose their Spain-oriented rules. How the family''s `es` game gets English-sourced questions (an `es` translation in the `es` pool) is in the plan.
+    - Targets and gap aiming: 5000 approved per question locale (decision 21); English drafting aims at the locales'' deficits; `DRIVES_DRAFTING` and D-84''s source shortfall replaced (decision 219, decision 37''s last clause).
+    - Decisions this replaces, recorded with `pm decision record … --supersedes`: decision 27: Spanish variety (OQ-31) for `base` (es-419 from translation, not Spanish drafts; es-ES its own pool), decision 37: Per-locale content targets and gap aiming (last clause), decision 219: Do the new locales (zh-Hans, ru, pt-BR) steer es drafting from the start?; D-84, D-6 (Colombian usage) for `base` and D-87 where it assumes es as the only source in `plans/decisions.md`.
+    - Prompt changes are the developer''s (RUNBOOK): drafted by a task, shown in a pm decision, applied after the answer.
+    - RUNBOOK and D-36: `qgen batch` drafts `en` for `base`, `--translate` from either source.
+    - Gate: `task 1185: run batch-9` checks that `qgen batch` drafts `en`; every task of this plan that batch-9 needs runs before it, and a decision batch-9 needs also makes task 1185 pending on it (`pm task-pending-decision 1185 <decision>`).
+    - Suggested priority: 710 (backend; above plan 147 at 700, which builds on it, and far above batch-9 at -100).
+
+## Order
+- Decisions first: plans 35, 37, 38, 41 (milestone 7) → parts 1, 3, 8, 10 can be written.
+- Engine (M2) + plan 27 → part 1 → part 9.
+- Part 3 → part 4 → part 5 → part 11''s pilot → part 9''s budget → full runs.
+- Plan 36 + part 3 → part 6; plans 23/24 → part 7.
+- Part 13: style guides and TV-check fixes first, then the gallery, then the gamemaster''s review; before plan 69''s playtest close-out.
+- Part 14 after part 13''s style guides (glossaries get the new names), before plan 69''s playtests.
+- Part 15 before `task 1185: run batch-9` and before part 11''s runs of English-sourced questions; alongside plan 147.
+- Part 2 any time after plan 16. Part 12 last.
+
+## Out of scope (from the milestone)
+- Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-16T00:26:15Z', NULL, 1192, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -30123,7 +31264,7 @@ INSERT INTO decision (id, subject, status, options, body, answer, reason, create
 
 Not proposed (one case each, below QC.md''s threshold of 2): q-1646 overgeneralization ("every bill has a thread"); q-1452/q-2043 false needs_work (no pattern).', NULL, NULL, '2026-10-15T23:08:12Z', NULL, 1191, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (232, 'Overlap of English drafts against the es-sourced base pool: which keys?', 'answered', '[]', 'plan 147: English-first batches: calibration, overlap and QC across languages, part 3. overlap_candidates/_overlap_keys/duplicates match normalized Spanish answers and stems, so an English draft barely matches the es pool. The en entries alone depend on milestone 9''s es → en timing; Wikidata ids cover few answers (dates, phrases, concepts) and need a lookup step; an LLM pass per draft costs every batch. A one-time key translation of ~1100 short strings is cheap and independent of that timing.', 'English keys per pool question: its en entry where milestone 9 made one, else a cached English answer + concept per es-sourced question (one batched claude call, refreshed for new or changed es questions); no Wikidata ids, no per-draft LLM pass', NULL, '2026-10-16T00:19:36Z', '2026-10-16T00:19:36Z', 1198, NULL, 'rule', 1198, '');
-INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (233, 'Batch health trend rule across the switch to English drafts?', 'pending', '["Trend only within one source locale: batch-9 has no trend check, batch-10 compares with batch-9 alone, from batch-11 the mean of the previous two en batches; absolute thresholds always", "Trend across the switch as today (batch-9 vs. the mean of batch-7/8)", "No trend rule for batch-9 and batch-10; from batch-11 as today"]', '`plan 147: English-first batches: calibration, overlap and QC across languages`, part 4. `decision 13: Batch health thresholds and stop rule?` stops the next `qgen batch` when a batch fails an absolute threshold or the trend rule: no metric worse than the mean of the previous two batches by more than half its threshold''s margin (`authoring/tools/health.py`, `targets.py`). batch-9 is the first `en`-sourced batch: its drop, needs_work, overlap, calibration and fun numbers come from a new pipeline, not from drift, and batch-7/8 are es batches. The absolute thresholds stay either way. The answer decides how batch-9''s and batch-10''s health is read (task 1186: QC batch-9, and the stop before batch-10).', NULL, NULL, '2026-10-16T00:23:31Z', NULL, 1199, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (233, 'Batch health trend rule across the switch to English drafts?', 'answered', '["Trend only within one source locale: batch-9 has no trend check, batch-10 compares with batch-9 alone, from batch-11 the mean of the previous two en batches; absolute thresholds always", "Trend across the switch as today (batch-9 vs. the mean of batch-7/8)", "No trend rule for batch-9 and batch-10; from batch-11 as today"]', '`plan 147: English-first batches: calibration, overlap and QC across languages`, part 4. `decision 13: Batch health thresholds and stop rule?` stops the next `qgen batch` when a batch fails an absolute threshold or the trend rule: no metric worse than the mean of the previous two batches by more than half its threshold''s margin (`authoring/tools/health.py`, `targets.py`). batch-9 is the first `en`-sourced batch: its drop, needs_work, overlap, calibration and fun numbers come from a new pipeline, not from drift, and batch-7/8 are es batches. The absolute thresholds stay either way. The answer decides how batch-9''s and batch-10''s health is read (task 1186: QC batch-9, and the stop before batch-10).', 'Trend across the switch as today (batch-9 vs. the mean of batch-7/8)', NULL, '2026-10-16T00:23:31Z', '2026-10-16T00:26:19Z', 1199, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (234, 'Spot-check size for batch-9 and batch-10 (first English batches)?', 'pending', '["batch-9: 120, batch-10: 60, then 30 again if both reach ≥ 90 %", "120 for both", "60 for both", "30 (decision 2 unchanged)"]', '`plan 147: English-first batches: calibration, overlap and QC across languages`, part 5. `decision 2: When is batch quality "fine": human spot-check size and agreement rate with the LLM review?` sets 30 per batch, ≥ 90 % agreement; batch-8 got 120 (`decision 228: batch-9: health stop, ack?`; 108/120 = 90 %, decision 230). batch-9 is the first batch drafted in English with a new chain (drafts, rating, review in English). The size is per run (`spot-checks.json` "size", `spot_check_size()` in `qgen.py`) and also sets how many questions the batch''s audit reads (`audit_size()`), so it must be known before batch-9 runs. 30 take ~10–15 min, 120 ~45–60 min.', NULL, NULL, '2026-10-16T00:23:31Z', NULL, 1199, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
@@ -31310,6 +32451,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1165, 1197, '2026-10-16T00:21:22Z', '2026-10-16T00:21:58Z', 'done', NULL, 0, '9ed80023bfc8c30dfa6c8e80146e8271ac74685a', 'claude-opus-5-5[1m]', '4cd0d6b0-229d-4d62-a9f2-572003940719', 7, 14, 2616, 274194, 37824, 0.4098068, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1166, 1201, '2026-10-16T00:21:58Z', '2026-10-16T00:22:22Z', 'done', NULL, 0, 'f658a838151441a885154945a15052d8851b9d48', 'claude-opus-5-5[1m]', '756921d9-5af1-4330-821b-5baf8da5fdc9', 6, 12, 1752, 175216, 25034, 0.2704032, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1167, 1199, '2026-10-16T00:22:22Z', '2026-10-16T00:24:36Z', 'done', NULL, 0, 'f24507784f4ede7300859598de1c8d50ffeb96e6', 'claude-opus-5-5[1m]', '6cde1363-538b-4948-a22d-9cc569da9f31', 16, 32, 11593, 832084, 57458, 0.85806880000000008, 3857742);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1168, 1192, '2026-10-16T00:24:36Z', '2026-10-16T00:26:30Z', 'done', NULL, 0, 'babd54dee527ff95d38ffbb37e78c7b84ef06cd1', 'claude-opus-5-5[1m]', 'a50e434f-72b7-46f1-881c-02d5ba155f2e', 15, 28, 7195, 701639, 52505, 0.7043798, 3857742);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
