@@ -38660,7 +38660,7 @@ Milestone 9 is S4 of the Steam track (D-34, `plans/11-steam.md`): enough reviewe
 
 ## Out of scope (from the milestone)
 - Store page translations (LUI-6, S5); Steamworks language detection (S5, milestone 10; part 6 switches its guess to it); competitive mode and couch co-op (Later).', '2026-10-16T22:37:19Z', NULL, 1494, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1500, 17, 'investigate the failure of task 1370: Finish batch-9 after task 1369: Fix qgen rate: the model returns no rating for inventions-16 in revised-01-19', 'investigate', 'open', -97, NULL, '`task 1370: Finish batch-9 after task 1369: Fix qgen rate: the model returns no rating for inventions-16 in revised-01-19` failed in `pm run`; its summary is below. Find out why, don''t redo its work:
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1500, 17, 'investigate the failure of task 1370: Finish batch-9 after task 1369: Fix qgen rate: the model returns no rating for inventions-16 in revised-01-19', 'investigate', 'dropped', -97, '2026-10-16, cancelled by the developer: cause known, the questions worktree had its own empty work/ (gitignored), so qgen batch started batch-9 anew', '`task 1370: Finish batch-9 after task 1369: Fix qgen rate: the model returns no rating for inventions-16 in revised-01-19` failed in `pm run`; its summary is below. Find out why, don''t redo its work:
 * read its log, `pm show 1370`, and the stashes it left (`git stash show -p --include-untracked <sha>`); don''t apply or drop them, task 1370''s next run gets them
 * rerun the failing command or script to see the error yourself; find the cause in the code, not only the symptom
 Then, by what you find:
@@ -38683,7 +38683,7 @@ Your note on `pm task done`: the cause and what you queued.
         → Bash: git status --porcelain; pm show 1185 | tail -30; for d in 233 234 239 240 241 242; do pm show d$d | head -30; done
       Run the batch.
         → Bash: qgen batch > /tmp/b9.log 2>&1; echo exit $?; tail -40 /tmp/b9.log
-        → Bash: head -20 /tmp/b9.log; git status --porcelain | head', '2026-10-16T22:38:16Z', NULL, NULL, 0, NULL, 'questions');
+        → Bash: head -20 /tmp/b9.log; git status --porcelain | head', '2026-10-16T22:38:16Z', '2026-10-16T22:42:59Z', NULL, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1501, 9, 'write plan: Translations without human control', 'plan', 'open', 1000, NULL, 'Part 4 and part 5 of `plan 9: masterplan` changed (milestone 9, "Question translations without human control", developer 2026-10-16; the tr-en-1 and tr-de-1 spot checks found every translation good). `plan 66: Translation pipeline (QT-2, QT-3)` and `plan 67: Review tool for translations (QT-4)` are done, so no revision reaches them: this task writes the plan (`pm plan add 9 …`, priority 700, work tree `questions`) that brings the tooling and docs in line. `plan 84: Release content runs` drops the per-run QC tasks and the go/no-go itself (`task 1498: revise plan 84: Release content runs`); don''t duplicate that.
 
 What the plan covers:
