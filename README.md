@@ -185,9 +185,10 @@ Environment variables (empty = unset):
 ```sh
 trivia-gallery                                  # every screen and dialog in en, es, es-ES, de (~15 min)
 trivia-gallery --locale de --only menu-gamemaster,victory   # some shots again; --list names them
+trivia-gallery --locale es --only start --size 1280x800   # another window size
 ```
 
-Shots go to `work/gallery/<locale>/<shot>.png`; `work/gallery/manifest.json` has each visible text with its catalog key, and text without one (a literal) as unmatched. The game runs from demo saves in a temp folder, never your save.
+Shots go to `work/gallery/<locale>/<shot>.png` (another `--size`: `<locale>@<W>x<H>/`, its own entry in `/gallery`); `work/gallery/manifest.json` has each visible text with its catalog key, and text without one (a literal) as unmatched. The game runs from demo saves in a temp folder, never your save.
 
 Review them in `trivia-authoring` → `/gallery`: per language every shot; click a text for its catalog key, flag it with a note. Flags go to `authoring/data/ui-flags.json` for the next fix pass.
 

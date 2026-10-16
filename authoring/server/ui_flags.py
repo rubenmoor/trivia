@@ -22,8 +22,8 @@ def build():
 
 
 def shot_path(locale, shot):
-    """work/gallery/<locale>/<shot>.png, or None for a bad name or a missing file."""
-    if not re.fullmatch(r"[\w-]+", locale) or not re.fullmatch(r"[\w-]+\.png", shot):
+    """work/gallery/<locale>[@<W>x<H>]/<shot>.png, or None for a bad name or a missing file."""
+    if not re.fullmatch(r"[\w-]+(@\d+x\d+)?", locale) or not re.fullmatch(r"[\w-]+\.png", shot):
         return None
     path = layout.GALLERY / locale / shot
     return path if path.is_file() else None

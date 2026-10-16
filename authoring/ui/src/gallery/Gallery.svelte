@@ -7,8 +7,11 @@
   import Nav from "../lib/Nav.svelte";
   import type { GalleryItem, GalleryManifest, UiFlag } from "../lib/types.ts";
 
-  const W = 1920;
-  const H = 1080;
+  // Viewport of a locale entry: `es@1280x800`, else 1920 × 1080.
+  const sizeOf = (l: string): [number, number] => {
+    const m = /@(\d+)x(\d+)$/.exec(l);
+    return m ? [Number(m[1]), Number(m[2])] : [1920, 1080];
+  };
 
   let manifest = $state<GalleryManifest | null>(null);
   let flags = $state<UiFlag[]>([]);
@@ -18,6 +21,7 @@
 
   const params = new URLSearchParams(location.search);
   let locale = $state(params.get("locale") ?? "");
+  const [W, H] = $derived(sizeOf(locale));
   let shot = $state(params.get("shot") ?? "");
   let selected = $state<GalleryItem | null>(null);
   let key = $state<string | null>(null);

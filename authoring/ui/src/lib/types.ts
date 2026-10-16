@@ -289,7 +289,7 @@ export interface MediaStats {
   sizes: { size: string; questions: number }[];
 }
 
-/** A visible text of a gallery shot (authoring/tools/gallery.py); box: x, y, width, height in px of 1920 × 1080. */
+/** A visible text of a gallery shot (authoring/tools/gallery.py); box: x, y, width, height in px of the shot's viewport (1920 × 1080, or the `@<W>x<H>` of its locale entry). */
 export interface GalleryItem {
   text: string;
   box: [number, number, number, number];

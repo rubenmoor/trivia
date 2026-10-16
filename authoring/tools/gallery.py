@@ -2,11 +2,12 @@
 """trivia-gallery (plan 100, decision 115): every screen and dialog in every UI language, with each text's catalog key.
 
 The built client on the Node dev server (`npm run serve -w app/client`, a temp save dir, never state/), driven by
-nixpkgs Playwright at 1920×1080 with the desktop bridge stubbed (valid Steam user, mods, telemetry, reports).
+nixpkgs Playwright (1920×1080, `--size WxH`) with the desktop bridge stubbed (valid Steam user, mods, telemetry, reports).
 `?gallery` makes `t()` record rendered text → key (lib/i18n.ts); each shot's visible texts are matched against it.
-Output: <locale>/<shot>.png and manifest.json in work/gallery/ ($TRIVIA_WORK/gallery/ if set; merged on --locale/--only runs).
+Output: <locale>/<shot>.png and manifest.json in work/gallery/ ($TRIVIA_WORK/gallery/ if set; merged on --locale/--only runs);
+another size writes <locale>@<W>x<H>/ and a manifest entry of that name.
 
-Usage: trivia-gallery [--locale en,es,es-ES,de] [--only <shot>[,<shot>…]] [--list] [--visible]
+Usage: trivia-gallery [--locale en,es,es-ES,de] [--only <shot>[,<shot>…]] [--size WxH] [--list] [--visible]
 """
 import argparse
 import datetime
@@ -30,7 +31,7 @@ CLIENT = REPO / "app" / "client"
 DATA = REPO / "app" / "data"
 OUT = layout.GALLERY  # honours TRIVIA_WORK
 LOCALES = ["en", "es", "es-ES", "de"]
-W, H = 1920, 1080
+DEFAULT_SIZE = (1920, 1080)
 
 # Sample mods (plan 118): every kind, state and warning the Mods screen shows; ~20 rows.
 LONG = ("Preguntas de la abuela: historia, cocina y refranes de toda la vida, con fotos del álbum familiar "
@@ -302,12 +303,14 @@ class Server:
 class Run:
     """One UI language: scenes (a save, a stub config, a fresh page) and shots."""
 
-    def __init__(self, browser, server, ui, demo, data, only, manifest):
+    def __init__(self, browser, server, ui, size, demo, data, only, manifest):
         self.browser, self.server, self.save, self.ui = browser, server, server.save_dir / "game.json", ui
+        self.size = size
+        self.name = ui if size == DEFAULT_SIZE else f"{ui}@{size[0]}x{size[1]}"  # directory and manifest key
         self.saves, self.meta, self.data, self.only = demo["saves"], demo["meta"], data, only
-        self.shots = manifest.setdefault("locales", {}).setdefault(ui, {})
+        self.shots = manifest.setdefault("locales", {}).setdefault(self.name, {})
         self.context = self.page = None
-        (OUT / ui).mkdir(parents=True, exist_ok=True)
+        (OUT / self.name).mkdir(parents=True, exist_ok=True)
 
     def scene(self, save="base", *, raw=None, consent=False, mods="held", ready="main .start"):
         """A fresh page on `save` (None: no save file). `mods`: a list config, or None (no mods bridge)."""
@@ -326,7 +329,7 @@ class Run:
             "empty": {"mods": [], "notice": True, "noMods": True, "safeStart": {"reason": "flag"}, "validUser": True},
         }
         cfg = {"consent": consent, "mods": lists[mods] if mods else None}
-        self.context = self.browser.new_context(viewport={"width": W, "height": H}, device_scale_factor=1, locale=self.ui)
+        self.context = self.browser.new_context(viewport={"width": self.size[0], "height": self.size[1]}, device_scale_factor=1, locale=self.ui)
         self.context.add_init_script(STUB.replace("__CFG__", json.dumps(cfg)))
         self.page = self.context.new_page()
         self.page.goto(f"{self.server.url}/?gallery")
@@ -378,13 +381,13 @@ class Run:
         if self.only and name not in self.only:
             return
         self.settle(0.4)
-        path = OUT / self.ui / f"{name}.png"
+        path = OUT / self.name / f"{name}.png"
         self.page.screenshot(path=str(path))
         found = self.page.evaluate(TEXTS)
         items = match(found["items"], found["keys"], self.data)
         self.shots[name] = {"file": str(path.relative_to(OUT)), "items": items,
                             "unmatched": sorted({i["unmatched"] for i in items if "unmatched" in i})}
-        print(f"  {self.ui}/{name}: {sum(1 for i in items if 'keys' in i)} keyed, {len(self.shots[name]['unmatched'])} unmatched",
+        print(f"  {self.name}/{name}: {sum(1 for i in items if 'keys' in i)} keyed, {len(self.shots[name]['unmatched'])} unmatched",
               flush=True)
 
     def close(self):
@@ -663,6 +666,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("--locale", help="comma-separated UI languages (default: all)")
     ap.add_argument("--only", help="comma-separated shot names")
+    ap.add_argument("--size", default="1920x1080", help="viewport WxH (default 1920x1080)")
     ap.add_argument("--list", action="store_true", help="list the shot names")
     ap.add_argument("--visible", action="store_true", help="a visible browser window")
     a = ap.parse_args()
@@ -670,6 +674,9 @@ def main():
     if a.list:
         print("\n".join(names))
         return
+    if not (m := re.fullmatch(r"(\d{3,4})x(\d{3,4})", a.size)):
+        sys.exit(f"gallery: --size {a.size}: want WxH, e.g. 1280x800")
+    size = (int(m[1]), int(m[2]))
     locales = a.locale.split(",") if a.locale else LOCALES
     only = set(a.only.split(",")) if a.only else None
     if bad := [x for x in locales if x not in LOCALES] + sorted((only or set()) - set(names)):
@@ -694,20 +701,20 @@ def main():
                 print(ui, flush=True)
                 demo = json.loads(subprocess.run(["node", str(REPO / "authoring/tools/gallery_saves.mjs"), ui],
                                                  cwd=REPO, check=True, capture_output=True, text=True).stdout)
-                r = Run(browser, server, ui, demo, data_strings(demo["players"]), only, manifest)
+                r = Run(browser, server, ui, size, demo, data_strings(demo["players"]), only, manifest)
                 for shots, step in STEPS:
                     if only and not only.intersection(shots):
                         continue
                     try:
                         step(r)
                     except Exception as e:  # one broken step doesn't stop the gallery
-                        failed.append(f"{ui}/{step.__name__}: {str(e).splitlines()[0]}")
+                        failed.append(f"{r.name}/{step.__name__}: {str(e).splitlines()[0]}")
                         (OUT / "failed").mkdir(exist_ok=True)
                         if r.page:
-                            r.page.screenshot(path=str(OUT / "failed" / f"{ui}-{step.__name__}.png"))
+                            r.page.screenshot(path=str(OUT / "failed" / f"{r.name}-{step.__name__}.png"))
                         print(f"  FAILED {failed[-1]}", flush=True)
                 r.close()
-                manifest["locales"][ui] = dict(sorted(manifest["locales"][ui].items(), key=lambda kv: names.index(kv[0])
+                manifest["locales"][r.name] = dict(sorted(manifest["locales"][r.name].items(), key=lambda kv: names.index(kv[0])
                                                      if kv[0] in names else len(names)))
             browser.close()
     finally:
