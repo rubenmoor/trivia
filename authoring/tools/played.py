@@ -28,7 +28,7 @@ Z = 3.29  # 99.9 % Wilson interval: thousands of cells, few false candidates
 
 def empty():
     return {"version": 1, "answers": {}, "levels": {},
-            "games": {"results": {}, "reached": {}, "jokers": {}, "customized": {}, "mods": {}},
+            "games": {"results": {}, "reached": {}, "jokers": {}, "customized": {}, "mods": {}, "players": {}},
             "sessions": {}, "pending_ack": [], "unknown": 0}
 
 
@@ -85,6 +85,7 @@ def fold(stats, sessions, known):
     """Add sessions (GET /telemetry rows) to stats in place; known: rated(). → counts."""
     n = {"sessions": 0, "games": 0, "answers": 0, "unknown": 0}
     g = stats["games"]
+    g.setdefault("players", {})  # stats files from before milestone 16
     anywhere = {i: e for k in known.values() for i, e in k.items()}  # a source or translation in any locale
     for s in sessions:
         day = s["received_day"]
@@ -98,6 +99,7 @@ def fold(stats, sessions, known):
             group, mode = game["age_group"] or "custom", game["mode"]
             _add(g["results"], f"{day}|{s['version']}|{mode}|{group}|{game['result']}")
             _add(g["reached"], f"{day}|{group}|{mode}|{game['reached']}|{game['result']}")
+            _add(g["players"], f"{day}|{mode}|{game.get('players', 1)}")  # missing = 1 (older servers and clients)
             for joker, uses in game["jokers"].items():
                 if uses:
                     g["jokers"][f"{day}|{joker}"] = g["jokers"].get(f"{day}|{joker}", 0) + uses
@@ -113,7 +115,8 @@ def fold(stats, sessions, known):
                     stats["unknown"] += 1
                     n["unknown"] += 1
                     continue
-                clean = int(not any(a["jokers"].get(j) for j in HELP_JOKERS))
+                # timed: self-selected claims under a 6 s clock, never clean (decision 286)
+                clean = int(mode != "timed" and not any(a["jokers"].get(j) for j in HELP_JOKERS))
                 _add(stats["answers"], f"{a['question']}|{game['locale']}|{group}|{mode}|{day}|{clean}", right)
                 n["answers"] += 1
     return n

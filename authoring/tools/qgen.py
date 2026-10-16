@@ -2630,6 +2630,13 @@ def report_played(args):
         for key, v in results.items():
             c[key[i]] += v
         print(f"  games by {title}: {dict(c.most_common())}")
+    players = {}
+    for k, v in stats["games"].get("players", {}).items():
+        day, m, n = k.split("|")
+        if keep(day, None, m):
+            players.setdefault(m, Counter())[int(n)] += v
+    if players:
+        print("  games by players: " + ", ".join(f"{m} {dict(sorted(c.items()))}" for m, c in sorted(players.items())))
     if games:
         print(f"  customized {pct(share('customized'), games)}, mods {pct(share('mods'), games)} "
               f"(all modes and groups); joker uses per game: "

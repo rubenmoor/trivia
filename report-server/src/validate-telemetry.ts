@@ -28,6 +28,8 @@ export interface Game {
   result: string;
   customized: boolean;
   mods: boolean;
+  /** Seats in the session (milestone 16); missing = 1. */
+  players: number;
   jokers: Jokers;
   answers: Answer[];
 }
@@ -110,6 +112,7 @@ function game(v: unknown, path: string): Game {
     result: str(g["result"], /^(won|lost|completed|abandoned|open)$/, `${path}.result`),
     customized: bool(g["customized"], `${path}.customized`),
     mods: bool(g["mods"], `${path}.mods`),
+    players: g["players"] === undefined ? 1 : int(g["players"], 1, 64, `${path}.players`),
     jokers: jokers(g["jokers"], `${path}.jokers`),
     answers: arr(g["answers"], 100, `${path}.answers`).map((a, i) => {
       const p = `${path}.answers[${i}]`;

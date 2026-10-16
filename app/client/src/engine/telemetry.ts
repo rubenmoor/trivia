@@ -4,7 +4,7 @@ import { gameChoice, JOKERS } from "./choice.ts";
 import { gameMode } from "./game.ts";
 import { isOurs } from "./pool.ts";
 import { LEVELS } from "./selection.ts";
-import { gameLocale, type EngineData, type GameRow, type SaveData } from "./state.ts";
+import { gameLocale, rowPlayers, seatResult, type EngineData, type GameRow, type GameState, type SaveData } from "./state.ts";
 
 export interface TelemetryAnswer {
   question: string;
@@ -24,11 +24,13 @@ export interface TelemetryGame {
   result: "won" | "lost" | "completed" | "abandoned" | "open";
   customized: boolean;
   mods: boolean;
+  /** Seats in the session; 1 for solo and gamemaster (decision 286). */
+  players: number;
   jokers: Record<JokerName, number>;
   answers: TelemetryAnswer[];
 }
 
-/** `key` = `<game id>@<started_on>`; `from`: first history entry of this session. */
+/** `key` = `<game id>@<started_on>`, rr-competitive `…#<seat>`; `from`: first history entry of this session. */
 export interface TelemetryIndex {
   key: string;
   from: number;
@@ -46,9 +48,23 @@ const MAX_GAME_ANSWERS = 100;
 
 const gameKey = (row: GameRow): string => `${row.id}@${row.started_on}`;
 
+/** A telemetry game's source: a row, or one seat of an rr-competitive session (decision 286). */
+interface Unit {
+  key: string;
+  row: GameRow;
+  seat?: number;
+}
+
+const units = (row: GameRow): Unit[] =>
+  row.state.settings.mode === "rr-competitive" && row.seats
+    ? row.seats.flatMap((s, seat) => (s.state ? [{ key: `${gameKey(row)}#${seat}`, row, seat }] : []))
+    : [{ key: gameKey(row), row }];
+
+const unitState = ({ row, seat }: Unit): GameState => (seat === undefined ? row.state : row.seats![seat]!.state!);
+
 /** Snapshot at session start: every game known then; running ones keep their history length. */
 export function telemetryStart(save: SaveData): TelemetryStart {
-  return new Map(save.games.map((r) => [gameKey(r), r.result === null ? r.state.history.length : -1]));
+  return new Map(save.games.flatMap(units).map((u) => [u.key, u.row.result === null ? unitState(u).history.length : -1]));
 }
 
 function counts(jokers: readonly JokerName[] | undefined): Partial<Record<JokerName, number>> {
@@ -64,51 +80,56 @@ function ourQuestion(id: string, data: EngineData): boolean {
 }
 
 /** `mods`: this run's overlay isn't empty (decision 146). */
-function telemetryGame(row: GameRow, from: number, data: EngineData, mods: boolean): TelemetryGame {
-  const { state } = row;
+function telemetryGame(u: Unit, from: number, data: EngineData, mods: boolean): TelemetryGame {
+  const { row } = u;
+  const state = unitState(u);
+  const mode = row.state.settings.mode ?? gameMode(row.state);
+  const result = u.seat === undefined ? row.result : seatResult(row, u.seat);
+  const timed = mode === "timed";
   const choice = gameChoice(state, data);
   const levels = state.settings.levels ?? LEVELS;
   const slice = state.history.slice(from);
   const jokers = Object.fromEntries(JOKERS.map((j) => [j, 0])) as Record<JokerName, number>;
-  for (const j of [...slice.flatMap((h) => h.jokers ?? []), ...(state.jokers ?? [])]) jokers[j]++;
+  if (!timed) for (const j of [...slice.flatMap((h) => h.jokers ?? []), ...(state.jokers ?? [])]) jokers[j]++;
   const answers = slice
     .filter((h) => h.correct !== undefined && h.level >= 1 && h.level <= levels && ourQuestion(h.question_id, data))
     .slice(0, MAX_GAME_ANSWERS)
     .map((h) => ({ question: h.question_id, level: h.level, correct: h.correct!, jokers: counts(h.jokers) }));
   return {
-    mode: gameMode(state),
+    mode,
     locale: gameLocale(row),
     pool: data.poolHash,
     age_group: choice.age_group,
     difficulty: choice.difficulty,
     levels,
-    reached: row.result === "won" || row.result === "completed" ? levels : state.level,
-    result: row.result ?? "open",
+    reached: result === "won" || result === "completed" ? levels : state.level,
+    result: result ?? "open",
     customized: state.settings.customized ?? false,
     mods,
+    players: rowPlayers(row).length,
     jokers,
     answers,
   };
 }
 
-/** The session's rows: those already recorded (row null when gone), then rows new since `start` (from 0)
+/** The session's games: those already recorded (row null when gone), then new since `start` (from 0)
  * and those running at `start` (from its length). */
-export function sessionRows(save: SaveData, prev: Telemetry, start: TelemetryStart): { key: string; from: number; row: GameRow | null }[] {
-  const rows = new Map(save.games.map((r) => [gameKey(r), r]));
-  const out = prev.index.map(({ key, from }) => ({ key, from, row: rows.get(key) ?? null }));
+export function sessionRows(save: SaveData, prev: Telemetry, start: TelemetryStart): { key: string; from: number; unit: Unit | null }[] {
+  const all = new Map(save.games.flatMap(units).map((u) => [u.key, u]));
+  const out = prev.index.map(({ key, from }) => ({ key, from, unit: all.get(key) ?? null }));
   const known = new Set(prev.index.map((e) => e.key));
-  for (const [key, row] of rows) {
+  for (const [key, unit] of all) {
     const from = start.get(key) ?? 0;
-    if (!known.has(key) && from >= 0) out.push({ key, from, row });
+    if (!known.has(key) && from >= 0) out.push({ key, from, unit });
   }
   return out;
 }
 
-/** Rebuilds every session row; a recorded game whose row is gone stays as it was. `data`: per game locale. */
+/** Rebuilds every session game; a recorded game whose row is gone stays as it was. `data`: per game locale. */
 export function buildTelemetry(save: SaveData, prev: Telemetry, start: TelemetryStart, data: ReadonlyMap<string, EngineData>, mods: boolean): Telemetry {
   const out: Telemetry = { games: [], index: [] };
-  sessionRows(save, prev, start).forEach(({ key, from, row }, i) => {
-    out.games.push(row ? telemetryGame(row, from, data.get(gameLocale(row))!, mods) : prev.games[i]!);
+  sessionRows(save, prev, start).forEach(({ key, from, unit }, i) => {
+    out.games.push(unit ? telemetryGame(unit, from, data.get(gameLocale(unit.row))!, mods) : prev.games[i]!);
     out.index.push({ key, from });
   });
   return out;

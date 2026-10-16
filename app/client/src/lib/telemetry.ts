@@ -66,7 +66,7 @@ async function record(save: SaveData): Promise<void> {
     const stored = await telemetry.load();
     buffer = stored ? { games: stored.games as TelemetryGame[], index: stored.index } : { games: [], index: [] };
   }
-  const locales = new Set(sessionRows(save, buffer, start).flatMap(({ row }) => (row ? [gameLocale(row)] : [])));
+  const locales = new Set(sessionRows(save, buffer, start).flatMap(({ unit }) => (unit ? [gameLocale(unit.row)] : [])));
   const data = new Map<string, EngineData>(await Promise.all([...locales].map(async (l) => [l, await loadEngineData(l)] as const)));
   const next = buildTelemetry(save, buffer, start, data, modsOn());
   await telemetry.record(next);

@@ -74,6 +74,7 @@ Opt-in telemetry (plan 106, decision 119) is derived from the save, never stored
 - `engine/telemetry.ts` (pure): save + session start snapshot + recorded `index` → plan 105's contract games; `lib/telemetry.ts`: consent cache, data per game locale, bridge calls
 - Checkpoints: `lib/engine.ts` `load()` once, `exec()` after each adopted save; fire-and-forget, errors to the console only
 - Session games: rows new this run (`from` 0), the game running at load (`from` = its history length then); recorded keys keep their `from`; undo drops undone answers too
+- Sessions (decision 286: Telemetry of multiplayer sessions: one game per played game, a player count, timed answers not clean): rr-coop and timed one game per row, rr-competitive one per seat (key `<id>@<started_on>#<seat>`, the seat's own state and result); `players` = seats; timed: `reached` = round, no jokers, claimed answers only
 - Side file in the shell (`app/desktop/telemetry.mjs`, `<userData>/telemetry/`); no save field, no `SAVE_VERSION` bump
 - `games[].mods`: this run's `/mods.js` overlay isn't empty (`lib/mods.ts` `modsOn()`, failed setups included; `--no-mods`/safe start → `false`), passed into `buildTelemetry()`; per run, so per session slice; no save field (decision 146: Achievements, mods screen and rich presence with mods on; decision 123: Achievements in games with mods on: allowed or off?)
 - Consent gate: no bridge (browser game, dev shim), no valid user or consent not `true` → the builder never runs, no IPC beyond `state()`

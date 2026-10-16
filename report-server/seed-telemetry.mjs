@@ -80,6 +80,7 @@ function game() {
     age_group: g ? g.id : null, difficulty: g ? null : { start, end },
     levels: levels.length, reached, result,
     customized: custom || Math.random() < 0.1, mods: Math.random() < 0.05,
+    players: mode === "solo" || mode === "gamemaster" ? 1 : 2 + rnd(4),
     jokers, answers,
   };
 }
