@@ -2832,14 +2832,17 @@ RELATED_RATIO = 0.7  # answers this similar count as the same
 RELATED_MAX = 30
 
 
-def related_questions(q, pool):
-    """Pool questions the review must compare with: same or similar answer first, then same subcategory."""
-    a = norm(q["answer"])
+def related_questions(q, pool, pool_en=None):
+    """Pool questions the review must compare with: same or similar answer first, then same subcategory.
+    An en question's answer against the pool's English keys (as_locale; pool_en: that view, precomputed)."""
+    en = translations.source_locale(q) == "en"
+    keys = (pool_en if pool_en is not None else as_locale(pool, "en")) if en else pool
+    a = overlap_norm(q["answer"], "en") if en else norm(q["answer"])
     ranked = []
-    for i, p in enumerate(pool):
+    for i, (p, k) in enumerate(zip(pool, keys)):
         if p["id"] == q["id"] or p["status"] == "rejected":
             continue
-        b = norm(p["answer"])
+        b = overlap_norm(k["answer"], "en") if en else norm(p["answer"])
         ratio = 1.0 if a == b else difflib.SequenceMatcher(None, a, b).ratio()
         if ratio >= RELATED_RATIO:
             ranked.append((0, -ratio, i, p))
@@ -2873,6 +2876,7 @@ def cmd_review(args):
     ratings, checks = collect(d)
     locale = run_locale(d)
     pool = in_locale(locale) if locale else load_json(POOL)["questions"]
+    pool_en = None if locale else as_locale(pool, "en")
     names = ["house-style", "review", *(["translate-review"] if locale else [])]
     notes = translator_notes(d) if locale else {}
     mode = run_mode(args.run)
@@ -2920,7 +2924,7 @@ def cmd_review(args):
             "rater_notes": (ratings.get(tmp) or {}).get("notes") or (q.get("quality") or {}).get("notes"),
             "fact_check": ({k: check[k] for k in ["verdict", "problem", "correction"]}
                            if (check := fact_check(r, checks.get(tmp))) else "not needed (no number, date or record)"),
-            "related": related_questions(q, pool),
+            "related": related_questions(q, pool, pool_en),
             "media": slot_input(d, q, "media"),
             "background": slot_input(d, q, "background") if q.get("background") else None,
             "can_search_again": args.round == 1,
@@ -3393,7 +3397,7 @@ def run_questions(run):
     return in_locale(locale) if locale else load_json(POOL)["questions"]
 
 
-def audit_input(q, pool):
+def audit_input(q, pool, pool_en=None):
     """The question as played (plan 16): no review, fix, rater notes or fact check; a translation with its source."""
 
     def slot(spec, name):
@@ -3404,7 +3408,7 @@ def audit_input(q, pool):
     return {"question": {k: q[k] for k in ["id", "bundle", "subcategory", *QUESTION_FIELDS]},
             "media": slot(q["media"], "media"),
             "background": slot(q["background"], "background") if q.get("background") else None,
-            "related": related_questions(q, pool), **({"source": q["source"]} if q.get("source") else {})}
+            "related": related_questions(q, pool, pool_en), **({"source": q["source"]} if q.get("source") else {})}
 
 
 def cmd_audit(args):
@@ -3429,6 +3433,7 @@ def audit_ids(run, ids, args):
     d = WORK / run / "audit"
     d.mkdir(parents=True, exist_ok=True)
     pool = run_questions(run)
+    pool_en = None if run_locale(WORK / run) else as_locale(pool, "en")
     by_id = {q["id"]: q for q in pool}
     todo = [by_id[i] for i in ids if i in by_id and not (d / f"{i}.json").exists()]
     progress.resumed("audit", sum(i in by_id for i in ids) - len(todo), len(todo), "questions")
@@ -3438,7 +3443,7 @@ def audit_ids(run, ids, args):
     today = datetime.date.today().isoformat()
 
     def work(q):
-        user = "## Question to audit\n" + json.dumps(audit_input(q, pool), ensure_ascii=False)
+        user = "## Question to audit\n" + json.dumps(audit_input(q, pool, pool_en), ensure_ascii=False)
         system = prompt(*names, locale=translations.source_locale(q), bundle=run_bundle(WORK / run),
                         source_locale=q.get("source_locale"))
         out, model = claude(system, user, AUDIT_SCHEMA, args.model, d, web=True, with_model=True)
