@@ -1,0 +1,852 @@
+{
+  "subcategory": "brain-and-mind",
+  "facets": [
+    "Partes del cerebro",
+    "Neuronas y sistema nervioso",
+    "Química del ánimo y hormonas",
+    "Memoria y aprendizaje",
+    "Sueño y sueños",
+    "Emociones y sentimientos",
+    "Percepción e ilusiones ópticas",
+    "Reflejos y actos automáticos",
+    "Pensamiento, inteligencia y sesgos",
+    "Psicología y sus pioneros",
+    "Fobias y palabras de la mente",
+    "Cuidado y salud del cerebro"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 5,
+      "count": 2,
+      "estimate": 4,
+      "record": 3,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 5,
+      "cause_effect": 5,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 4,
+      "everyday": 4,
+      "colombia": 2,
+      "pop_culture": 5,
+      "popular_science": 5,
+      "science_news": 3,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 5,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Cráneo",
+      "facet": "Partes del cerebro",
+      "known_at": 2
+    },
+    {
+      "name": "Hemisferio izquierdo",
+      "facet": "Partes del cerebro",
+      "known_at": 6
+    },
+    {
+      "name": "Hemisferio derecho",
+      "facet": "Partes del cerebro",
+      "known_at": 6
+    },
+    {
+      "name": "Cerebelo",
+      "facet": "Partes del cerebro",
+      "known_at": 7
+    },
+    {
+      "name": "Corteza cerebral",
+      "facet": "Partes del cerebro",
+      "known_at": 9
+    },
+    {
+      "name": "Lóbulo frontal",
+      "facet": "Partes del cerebro",
+      "known_at": 9
+    },
+    {
+      "name": "Hipocampo",
+      "facet": "Partes del cerebro",
+      "known_at": 10
+    },
+    {
+      "name": "Tronco encefálico",
+      "facet": "Partes del cerebro",
+      "known_at": 10
+    },
+    {
+      "name": "Amígdala cerebral",
+      "facet": "Partes del cerebro",
+      "known_at": 11
+    },
+    {
+      "name": "Lóbulo occipital",
+      "facet": "Partes del cerebro",
+      "known_at": 11
+    },
+    {
+      "name": "Lóbulo temporal",
+      "facet": "Partes del cerebro",
+      "known_at": 11
+    },
+    {
+      "name": "Bulbo raquídeo",
+      "facet": "Partes del cerebro",
+      "known_at": 11
+    },
+    {
+      "name": "Hipotálamo",
+      "facet": "Partes del cerebro",
+      "known_at": 11
+    },
+    {
+      "name": "Hipófisis",
+      "facet": "Partes del cerebro",
+      "known_at": 11
+    },
+    {
+      "name": "Meninges",
+      "facet": "Partes del cerebro",
+      "known_at": 11
+    },
+    {
+      "name": "Lóbulo parietal",
+      "facet": "Partes del cerebro",
+      "known_at": 12
+    },
+    {
+      "name": "Cuerpo calloso",
+      "facet": "Partes del cerebro",
+      "known_at": 12
+    },
+    {
+      "name": "Tálamo",
+      "facet": "Partes del cerebro",
+      "known_at": 12
+    },
+    {
+      "name": "Glándula pineal",
+      "facet": "Partes del cerebro",
+      "known_at": 12
+    },
+    {
+      "name": "Circunvoluciones",
+      "facet": "Partes del cerebro",
+      "known_at": 12
+    },
+    {
+      "name": "Líquido cefalorraquídeo",
+      "facet": "Partes del cerebro",
+      "known_at": 12
+    },
+    {
+      "name": "Área de Broca",
+      "facet": "Partes del cerebro",
+      "known_at": 13
+    },
+    {
+      "name": "Área de Wernicke",
+      "facet": "Partes del cerebro",
+      "known_at": 14
+    },
+    {
+      "name": "Nervio",
+      "facet": "Neuronas y sistema nervioso",
+      "known_at": 4
+    },
+    {
+      "name": "Médula espinal",
+      "facet": "Neuronas y sistema nervioso",
+      "known_at": 6
+    },
+    {
+      "name": "Sistema nervioso central",
+      "facet": "Neuronas y sistema nervioso",
+      "known_at": 8
+    },
+    {
+      "name": "Nervio óptico",
+      "facet": "Neuronas y sistema nervioso",
+      "known_at": 8
+    },
+    {
+      "name": "Impulso nervioso",
+      "facet": "Neuronas y sistema nervioso",
+      "known_at": 8
+    },
+    {
+      "name": "Sinapsis",
+      "facet": "Neuronas y sistema nervioso",
+      "known_at": 10
+    },
+    {
+      "name": "Axón",
+      "facet": "Neuronas y sistema nervioso",
+      "known_at": 10
+    },
+    {
+      "name": "Dendrita",
+      "facet": "Neuronas y sistema nervioso",
+      "known_at": 10
+    },
+    {
+      "name": "Sistema nervioso periférico",
+      "facet": "Neuronas y sistema nervioso",
+      "known_at": 10
+    },
+    {
+      "name": "Nervio ciático",
+      "facet": "Neuronas y sistema nervioso",
+      "known_at": 10
+    },
+    {
+      "name": "Neurotransmisor",
+      "facet": "Neuronas y sistema nervioso",
+      "known_at": 10
+    },
+    {
+      "name": "Sistema nervioso autónomo",
+      "facet": "Neuronas y sistema nervioso",
+      "known_at": 11
+    },
+    {
+      "name": "Electroencefalograma",
+      "facet": "Neuronas y sistema nervioso",
+      "known_at": 11
+    },
+    {
+      "name": "Vaina de mielina",
+      "facet": "Neuronas y sistema nervioso",
+      "known_at": 12
+    },
+    {
+      "name": "Sistema nervioso simpático",
+      "facet": "Neuronas y sistema nervioso",
+      "known_at": 12
+    },
+    {
+      "name": "Neuroplasticidad",
+      "facet": "Neuronas y sistema nervioso",
+      "known_at": 12
+    },
+    {
+      "name": "Célula glial",
+      "facet": "Neuronas y sistema nervioso",
+      "known_at": 13
+    },
+    {
+      "name": "Nervio vago",
+      "facet": "Neuronas y sistema nervioso",
+      "known_at": 13
+    },
+    {
+      "name": "Pubertad",
+      "facet": "Química del ánimo y hormonas",
+      "known_at": 6
+    },
+    {
+      "name": "Hormona del crecimiento",
+      "facet": "Química del ánimo y hormonas",
+      "known_at": 7
+    },
+    {
+      "name": "Dopamina",
+      "facet": "Química del ánimo y hormonas",
+      "known_at": 8
+    },
+    {
+      "name": "Testosterona",
+      "facet": "Química del ánimo y hormonas",
+      "known_at": 9
+    },
+    {
+      "name": "Glándula tiroides",
+      "facet": "Química del ánimo y hormonas",
+      "known_at": 9
+    },
+    {
+      "name": "Oxitocina",
+      "facet": "Química del ánimo y hormonas",
+      "known_at": 10
+    },
+    {
+      "name": "Cortisol",
+      "facet": "Química del ánimo y hormonas",
+      "known_at": 10
+    },
+    {
+      "name": "Estrógeno",
+      "facet": "Química del ánimo y hormonas",
+      "known_at": 10
+    },
+    {
+      "name": "Sistema endocrino",
+      "facet": "Química del ánimo y hormonas",
+      "known_at": 10
+    },
+    {
+      "name": "Respuesta de lucha o huida",
+      "facet": "Química del ánimo y hormonas",
+      "known_at": 10
+    },
+    {
+      "name": "Glándulas suprarrenales",
+      "facet": "Química del ánimo y hormonas",
+      "known_at": 11
+    },
+    {
+      "name": "Memoria a corto plazo",
+      "facet": "Memoria y aprendizaje",
+      "known_at": 6
+    },
+    {
+      "name": "Memoria a largo plazo",
+      "facet": "Memoria y aprendizaje",
+      "known_at": 6
+    },
+    {
+      "name": "Memoria fotográfica",
+      "facet": "Memoria y aprendizaje",
+      "known_at": 6
+    },
+    {
+      "name": "Memoria muscular",
+      "facet": "Memoria y aprendizaje",
+      "known_at": 6
+    },
+    {
+      "name": "Aprendizaje por ensayo y error",
+      "facet": "Memoria y aprendizaje",
+      "known_at": 7
+    },
+    {
+      "name": "Memoria de trabajo",
+      "facet": "Memoria y aprendizaje",
+      "known_at": 11
+    },
+    {
+      "name": "Condicionamiento clásico",
+      "facet": "Memoria y aprendizaje",
+      "known_at": 11
+    },
+    {
+      "name": "Curva del olvido",
+      "facet": "Memoria y aprendizaje",
+      "known_at": 13
+    },
+    {
+      "name": "Repaso espaciado",
+      "facet": "Memoria y aprendizaje",
+      "known_at": 13
+    },
+    {
+      "name": "Memoria episódica",
+      "facet": "Memoria y aprendizaje",
+      "known_at": 13
+    },
+    {
+      "name": "Número mágico siete",
+      "facet": "Memoria y aprendizaje",
+      "known_at": 14
+    },
+    {
+      "name": "Hermann Ebbinghaus",
+      "facet": "Memoria y aprendizaje",
+      "known_at": 15
+    },
+    {
+      "name": "Henry Molaison",
+      "facet": "Memoria y aprendizaje",
+      "known_at": 15
+    },
+    {
+      "name": "Sueño profundo",
+      "facet": "Sueño y sueños",
+      "known_at": 6
+    },
+    {
+      "name": "Fase REM",
+      "facet": "Sueño y sueños",
+      "known_at": 9
+    },
+    {
+      "name": "Origen (película)",
+      "facet": "Sueño y sueños",
+      "known_at": 10
+    },
+    {
+      "name": "Apnea del sueño",
+      "facet": "Sueño y sueños",
+      "known_at": 11
+    },
+    {
+      "name": "Tristeza",
+      "facet": "Emociones y sentimientos",
+      "known_at": 1
+    },
+    {
+      "name": "Miedo",
+      "facet": "Emociones y sentimientos",
+      "known_at": 1
+    },
+    {
+      "name": "Sorpresa",
+      "facet": "Emociones y sentimientos",
+      "known_at": 1
+    },
+    {
+      "name": "Llanto",
+      "facet": "Emociones y sentimientos",
+      "known_at": 1
+    },
+    {
+      "name": "Risa",
+      "facet": "Emociones y sentimientos",
+      "known_at": 1
+    },
+    {
+      "name": "Ira",
+      "facet": "Emociones y sentimientos",
+      "known_at": 2
+    },
+    {
+      "name": "Asco",
+      "facet": "Emociones y sentimientos",
+      "known_at": 2
+    },
+    {
+      "name": "Aburrimiento",
+      "facet": "Emociones y sentimientos",
+      "known_at": 2
+    },
+    {
+      "name": "Vergüenza",
+      "facet": "Emociones y sentimientos",
+      "known_at": 3
+    },
+    {
+      "name": "Envidia",
+      "facet": "Emociones y sentimientos",
+      "known_at": 4
+    },
+    {
+      "name": "Sonrojo",
+      "facet": "Emociones y sentimientos",
+      "known_at": 5
+    },
+    {
+      "name": "Estrés",
+      "facet": "Emociones y sentimientos",
+      "known_at": 5
+    },
+    {
+      "name": "Ansiedad",
+      "facet": "Emociones y sentimientos",
+      "known_at": 6
+    },
+    {
+      "name": "Empatía",
+      "facet": "Emociones y sentimientos",
+      "known_at": 7
+    },
+    {
+      "name": "Inteligencia emocional",
+      "facet": "Emociones y sentimientos",
+      "known_at": 10
+    },
+    {
+      "name": "Paul Ekman",
+      "facet": "Emociones y sentimientos",
+      "known_at": 15
+    },
+    {
+      "name": "Ilusión del pato-conejo",
+      "facet": "Percepción e ilusiones ópticas",
+      "known_at": 9
+    },
+    {
+      "name": "Imagen persistente",
+      "facet": "Percepción e ilusiones ópticas",
+      "known_at": 10
+    },
+    {
+      "name": "Conos y bastones",
+      "facet": "Percepción e ilusiones ópticas",
+      "known_at": 10
+    },
+    {
+      "name": "Yanny o Laurel",
+      "facet": "Percepción e ilusiones ópticas",
+      "known_at": 11
+    },
+    {
+      "name": "Jarrón de Rubin",
+      "facet": "Percepción e ilusiones ópticas",
+      "known_at": 12
+    },
+    {
+      "name": "Cubo de Necker",
+      "facet": "Percepción e ilusiones ópticas",
+      "known_at": 14
+    },
+    {
+      "name": "Habitación de Ames",
+      "facet": "Percepción e ilusiones ópticas",
+      "known_at": 15
+    },
+    {
+      "name": "Respiración",
+      "facet": "Reflejos y actos automáticos",
+      "known_at": 1
+    },
+    {
+      "name": "Tiempo de reacción",
+      "facet": "Reflejos y actos automáticos",
+      "known_at": 7
+    },
+    {
+      "name": "Reflejo pupilar",
+      "facet": "Reflejos y actos automáticos",
+      "known_at": 8
+    },
+    {
+      "name": "Reflejo nauseoso",
+      "facet": "Reflejos y actos automáticos",
+      "known_at": 9
+    },
+    {
+      "name": "Reflejo de prensión",
+      "facet": "Reflejos y actos automáticos",
+      "known_at": 10
+    },
+    {
+      "name": "Arco reflejo",
+      "facet": "Reflejos y actos automáticos",
+      "known_at": 11
+    },
+    {
+      "name": "Creatividad",
+      "facet": "Pensamiento, inteligencia y sesgos",
+      "known_at": 3
+    },
+    {
+      "name": "Coeficiente intelectual",
+      "facet": "Pensamiento, inteligencia y sesgos",
+      "known_at": 8
+    },
+    {
+      "name": "Multitarea",
+      "facet": "Pensamiento, inteligencia y sesgos",
+      "known_at": 8
+    },
+    {
+      "name": "Pensamiento crítico",
+      "facet": "Pensamiento, inteligencia y sesgos",
+      "known_at": 10
+    },
+    {
+      "name": "Inteligencias múltiples",
+      "facet": "Pensamiento, inteligencia y sesgos",
+      "known_at": 12
+    },
+    {
+      "name": "Sesgo de confirmación",
+      "facet": "Pensamiento, inteligencia y sesgos",
+      "known_at": 12
+    },
+    {
+      "name": "Pensamiento lateral",
+      "facet": "Pensamiento, inteligencia y sesgos",
+      "known_at": 12
+    },
+    {
+      "name": "Efecto Dunning-Kruger",
+      "facet": "Pensamiento, inteligencia y sesgos",
+      "known_at": 13
+    },
+    {
+      "name": "Disonancia cognitiva",
+      "facet": "Pensamiento, inteligencia y sesgos",
+      "known_at": 13
+    },
+    {
+      "name": "Howard Gardner",
+      "facet": "Pensamiento, inteligencia y sesgos",
+      "known_at": 14
+    },
+    {
+      "name": "Efecto halo",
+      "facet": "Pensamiento, inteligencia y sesgos",
+      "known_at": 14
+    },
+    {
+      "name": "Sesgo de anclaje",
+      "facet": "Pensamiento, inteligencia y sesgos",
+      "known_at": 14
+    },
+    {
+      "name": "Psicología",
+      "facet": "Psicología y sus pioneros",
+      "known_at": 6
+    },
+    {
+      "name": "Diván",
+      "facet": "Psicología y sus pioneros",
+      "known_at": 9
+    },
+    {
+      "name": "Inconsciente",
+      "facet": "Psicología y sus pioneros",
+      "known_at": 10
+    },
+    {
+      "name": "Psicoanálisis",
+      "facet": "Psicología y sus pioneros",
+      "known_at": 11
+    },
+    {
+      "name": "Test de Rorschach",
+      "facet": "Psicología y sus pioneros",
+      "known_at": 12
+    },
+    {
+      "name": "Experimento del malvavisco",
+      "facet": "Psicología y sus pioneros",
+      "known_at": 12
+    },
+    {
+      "name": "Carl Jung",
+      "facet": "Psicología y sus pioneros",
+      "known_at": 13
+    },
+    {
+      "name": "Jean Piaget",
+      "facet": "Psicología y sus pioneros",
+      "known_at": 13
+    },
+    {
+      "name": "Ello, yo y superyó",
+      "facet": "Psicología y sus pioneros",
+      "known_at": 13
+    },
+    {
+      "name": "B. F. Skinner",
+      "facet": "Psicología y sus pioneros",
+      "known_at": 14
+    },
+    {
+      "name": "Abraham Maslow",
+      "facet": "Psicología y sus pioneros",
+      "known_at": 14
+    },
+    {
+      "name": "Experimento de Milgram",
+      "facet": "Psicología y sus pioneros",
+      "known_at": 14
+    },
+    {
+      "name": "Experimento de la cárcel de Stanford",
+      "facet": "Psicología y sus pioneros",
+      "known_at": 14
+    },
+    {
+      "name": "Arquetipo",
+      "facet": "Psicología y sus pioneros",
+      "known_at": 14
+    },
+    {
+      "name": "Wilhelm Wundt",
+      "facet": "Psicología y sus pioneros",
+      "known_at": 15
+    },
+    {
+      "name": "Experimento del muñeco Bobo",
+      "facet": "Psicología y sus pioneros",
+      "known_at": 15
+    },
+    {
+      "name": "Aracnofobia",
+      "facet": "Fobias y palabras de la mente",
+      "known_at": 7
+    },
+    {
+      "name": "Claustrofobia",
+      "facet": "Fobias y palabras de la mente",
+      "known_at": 7
+    },
+    {
+      "name": "Introvertido",
+      "facet": "Fobias y palabras de la mente",
+      "known_at": 9
+    },
+    {
+      "name": "Extrovertido",
+      "facet": "Fobias y palabras de la mente",
+      "known_at": 9
+    },
+    {
+      "name": "Melancolía",
+      "facet": "Fobias y palabras de la mente",
+      "known_at": 9
+    },
+    {
+      "name": "Acrofobia",
+      "facet": "Fobias y palabras de la mente",
+      "known_at": 10
+    },
+    {
+      "name": "Hidrofobia",
+      "facet": "Fobias y palabras de la mente",
+      "known_at": 10
+    },
+    {
+      "name": "Xenofobia",
+      "facet": "Fobias y palabras de la mente",
+      "known_at": 10
+    },
+    {
+      "name": "Manía",
+      "facet": "Fobias y palabras de la mente",
+      "known_at": 10
+    },
+    {
+      "name": "Resiliencia",
+      "facet": "Fobias y palabras de la mente",
+      "known_at": 10
+    },
+    {
+      "name": "Nomofobia",
+      "facet": "Fobias y palabras de la mente",
+      "known_at": 11
+    },
+    {
+      "name": "Hipocondría",
+      "facet": "Fobias y palabras de la mente",
+      "known_at": 11
+    },
+    {
+      "name": "Aerofobia",
+      "facet": "Fobias y palabras de la mente",
+      "known_at": 11
+    },
+    {
+      "name": "Narcisismo",
+      "facet": "Fobias y palabras de la mente",
+      "known_at": 11
+    },
+    {
+      "name": "Hipopotomonstrosesquipedaliofobia",
+      "facet": "Fobias y palabras de la mente",
+      "known_at": 11
+    },
+    {
+      "name": "Agorafobia",
+      "facet": "Fobias y palabras de la mente",
+      "known_at": 12
+    },
+    {
+      "name": "Coulrofobia",
+      "facet": "Fobias y palabras de la mente",
+      "known_at": 12
+    },
+    {
+      "name": "Ofidiofobia",
+      "facet": "Fobias y palabras de la mente",
+      "known_at": 12
+    },
+    {
+      "name": "Glosofobia",
+      "facet": "Fobias y palabras de la mente",
+      "known_at": 13
+    },
+    {
+      "name": "Catarsis",
+      "facet": "Fobias y palabras de la mente",
+      "known_at": 13
+    },
+    {
+      "name": "Hexakosioihexekontahexafobia",
+      "facet": "Fobias y palabras de la mente",
+      "known_at": 14
+    },
+    {
+      "name": "Dolor de cabeza",
+      "facet": "Cuidado y salud del cerebro",
+      "known_at": 1
+    },
+    {
+      "name": "Ejercicio físico",
+      "facet": "Cuidado y salud del cerebro",
+      "known_at": 3
+    },
+    {
+      "name": "Tiempo de pantalla",
+      "facet": "Cuidado y salud del cerebro",
+      "known_at": 4
+    },
+    {
+      "name": "Alzhéimer",
+      "facet": "Cuidado y salud del cerebro",
+      "known_at": 8
+    },
+    {
+      "name": "Epilepsia",
+      "facet": "Cuidado y salud del cerebro",
+      "known_at": 9
+    },
+    {
+      "name": "Dislexia",
+      "facet": "Cuidado y salud del cerebro",
+      "known_at": 9
+    },
+    {
+      "name": "Conmoción cerebral",
+      "facet": "Cuidado y salud del cerebro",
+      "known_at": 10
+    },
+    {
+      "name": "Párkinson",
+      "facet": "Cuidado y salud del cerebro",
+      "known_at": 10
+    },
+    {
+      "name": "Accidente cerebrovascular",
+      "facet": "Cuidado y salud del cerebro",
+      "known_at": 10
+    },
+    {
+      "name": "Tomografía",
+      "facet": "Cuidado y salud del cerebro",
+      "known_at": 11
+    },
+    {
+      "name": "TDAH",
+      "facet": "Cuidado y salud del cerebro",
+      "known_at": 11
+    }
+  ]
+}

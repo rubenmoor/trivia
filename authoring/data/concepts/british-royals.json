@@ -1,0 +1,1030 @@
+{
+  "subcategory": "british-royals",
+  "facets": [
+    "Reyes y reinas famosos",
+    "Isabel II y su reinado",
+    "Familia real actual",
+    "Coronaciones y joyas reales",
+    "Palacios y castillos reales",
+    "Símbolos y emblemas reales",
+    "Casas y dinastías reales",
+    "Ceremonias y tradiciones reales",
+    "Mascotas y animales reales",
+    "Bodas, bebés y escándalos reales",
+    "Monarquía en películas y series",
+    "Títulos, cargos y vocabulario real"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Enrique VIII",
+      "facet": "Reyes y reinas famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Isabel I",
+      "facet": "Reyes y reinas famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Reina Victoria",
+      "facet": "Reyes y reinas famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Juan sin Tierra",
+      "facet": "Reyes y reinas famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Ana Bolena",
+      "facet": "Reyes y reinas famosos",
+      "known_at": 10
+    },
+    {
+      "name": "María I de Inglaterra",
+      "facet": "Reyes y reinas famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Jorge III",
+      "facet": "Reyes y reinas famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Jorge VI",
+      "facet": "Reyes y reinas famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Eduardo VIII",
+      "facet": "Reyes y reinas famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Ricardo III",
+      "facet": "Reyes y reinas famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Carlos I de Inglaterra",
+      "facet": "Reyes y reinas famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Enrique V",
+      "facet": "Reyes y reinas famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Alfredo el Grande",
+      "facet": "Reyes y reinas famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Jaime I de Inglaterra",
+      "facet": "Reyes y reinas famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Guillermo III de Orange",
+      "facet": "Reyes y reinas famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Jorge V",
+      "facet": "Reyes y reinas famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Eduardo el Confesor",
+      "facet": "Reyes y reinas famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Eduardo VII",
+      "facet": "Reyes y reinas famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Felipe de Edimburgo",
+      "facet": "Isabel II y su reinado",
+      "known_at": 8
+    },
+    {
+      "name": "Sketch de Paddington y la reina",
+      "facet": "Isabel II y su reinado",
+      "known_at": 8
+    },
+    {
+      "name": "Retrato de la reina en los billetes",
+      "facet": "Isabel II y su reinado",
+      "known_at": 8
+    },
+    {
+      "name": "Funeral de Isabel II",
+      "facet": "Isabel II y su reinado",
+      "known_at": 7
+    },
+    {
+      "name": "Discurso de Navidad",
+      "facet": "Isabel II y su reinado",
+      "known_at": 9
+    },
+    {
+      "name": "Bolso de Isabel II",
+      "facet": "Isabel II y su reinado",
+      "known_at": 9
+    },
+    {
+      "name": "Jubileo de Platino",
+      "facet": "Isabel II y su reinado",
+      "known_at": 10
+    },
+    {
+      "name": "Jubileo de Diamante",
+      "facet": "Isabel II y su reinado",
+      "known_at": 11
+    },
+    {
+      "name": "Mancomunidad de Naciones",
+      "facet": "Isabel II y su reinado",
+      "known_at": 11
+    },
+    {
+      "name": "Princesa Margarita",
+      "facet": "Isabel II y su reinado",
+      "known_at": 12
+    },
+    {
+      "name": "Liz Truss",
+      "facet": "Isabel II y su reinado",
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Operación London Bridge",
+      "facet": "Isabel II y su reinado",
+      "known_at": 12
+    },
+    {
+      "name": "Annus horribilis",
+      "facet": "Isabel II y su reinado",
+      "known_at": 13
+    },
+    {
+      "name": "Servicio Territorial Auxiliar",
+      "facet": "Isabel II y su reinado",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Carlos III",
+      "facet": "Familia real actual",
+      "known_at": 5
+    },
+    {
+      "name": "Príncipe Guillermo",
+      "facet": "Familia real actual",
+      "known_at": 6
+    },
+    {
+      "name": "Príncipe Harry",
+      "facet": "Familia real actual",
+      "known_at": 6
+    },
+    {
+      "name": "Catalina, princesa de Gales",
+      "facet": "Familia real actual",
+      "known_at": 7
+    },
+    {
+      "name": "Meghan Markle",
+      "facet": "Familia real actual",
+      "known_at": 7
+    },
+    {
+      "name": "Reina Camila",
+      "facet": "Familia real actual",
+      "known_at": 9
+    },
+    {
+      "name": "Príncipe Jorge",
+      "facet": "Familia real actual",
+      "known_at": 9
+    },
+    {
+      "name": "Princesa Carlota",
+      "facet": "Familia real actual",
+      "known_at": 10
+    },
+    {
+      "name": "Príncipe Luis",
+      "facet": "Familia real actual",
+      "known_at": 11
+    },
+    {
+      "name": "Princesa Ana",
+      "facet": "Familia real actual",
+      "known_at": 11
+    },
+    {
+      "name": "Archie Mountbatten-Windsor",
+      "facet": "Familia real actual",
+      "known_at": 12
+    },
+    {
+      "name": "Lilibet Mountbatten-Windsor",
+      "facet": "Familia real actual",
+      "known_at": 12
+    },
+    {
+      "name": "Príncipe Eduardo",
+      "facet": "Familia real actual",
+      "known_at": 13
+    },
+    {
+      "name": "Beatriz de York",
+      "facet": "Familia real actual",
+      "known_at": 13
+    },
+    {
+      "name": "Eugenia de York",
+      "facet": "Familia real actual",
+      "known_at": 13
+    },
+    {
+      "name": "Zara Tindall",
+      "facet": "Familia real actual",
+      "known_at": 14
+    },
+    {
+      "name": "Sophie, duquesa de Edimburgo",
+      "facet": "Familia real actual",
+      "known_at": 14
+    },
+    {
+      "name": "Joyas de la Corona",
+      "facet": "Coronaciones y joyas reales",
+      "known_at": 6
+    },
+    {
+      "name": "Coronación de Carlos III",
+      "facet": "Coronaciones y joyas reales",
+      "known_at": 7
+    },
+    {
+      "name": "Abadía de Westminster",
+      "facet": "Coronaciones y joyas reales",
+      "known_at": 8
+    },
+    {
+      "name": "Corona Imperial del Estado",
+      "facet": "Coronaciones y joyas reales",
+      "known_at": 9
+    },
+    {
+      "name": "Coronación de Isabel II",
+      "facet": "Coronaciones y joyas reales",
+      "known_at": 9
+    },
+    {
+      "name": "Cetro del soberano",
+      "facet": "Coronaciones y joyas reales",
+      "known_at": 10
+    },
+    {
+      "name": "Orbe del soberano",
+      "facet": "Coronaciones y joyas reales",
+      "known_at": 10
+    },
+    {
+      "name": "Carroza de Oro",
+      "facet": "Coronaciones y joyas reales",
+      "known_at": 10
+    },
+    {
+      "name": "Anillo de compromiso de Diana",
+      "facet": "Coronaciones y joyas reales",
+      "known_at": 10
+    },
+    {
+      "name": "Koh-i-Noor",
+      "facet": "Coronaciones y joyas reales",
+      "known_at": 11
+    },
+    {
+      "name": "Corona de San Eduardo",
+      "facet": "Coronaciones y joyas reales",
+      "known_at": 12
+    },
+    {
+      "name": "Silla de la Coronación",
+      "facet": "Coronaciones y joyas reales",
+      "known_at": 12
+    },
+    {
+      "name": "Arzobispo de Canterbury",
+      "facet": "Coronaciones y joyas reales",
+      "known_at": 12
+    },
+    {
+      "name": "Diamante Cullinan",
+      "facet": "Coronaciones y joyas reales",
+      "known_at": 13
+    },
+    {
+      "name": "Piedra de Scone",
+      "facet": "Coronaciones y joyas reales",
+      "known_at": 13
+    },
+    {
+      "name": "Unción con aceite sagrado",
+      "facet": "Coronaciones y joyas reales",
+      "known_at": 13
+    },
+    {
+      "name": "Tiara Spencer",
+      "facet": "Coronaciones y joyas reales",
+      "known_at": 13
+    },
+    {
+      "name": "Balcón del Palacio de Buckingham",
+      "facet": "Palacios y castillos reales",
+      "known_at": 7
+    },
+    {
+      "name": "Palacio de Westminster",
+      "facet": "Palacios y castillos reales",
+      "known_at": 9
+    },
+    {
+      "name": "Castillo de Edimburgo",
+      "facet": "Palacios y castillos reales",
+      "known_at": 10
+    },
+    {
+      "name": "Castillo de Balmoral",
+      "facet": "Palacios y castillos reales",
+      "known_at": 11
+    },
+    {
+      "name": "Palacio de Kensington",
+      "facet": "Palacios y castillos reales",
+      "known_at": 11
+    },
+    {
+      "name": "Palacio de Hampton Court",
+      "facet": "Palacios y castillos reales",
+      "known_at": 13
+    },
+    {
+      "name": "Casa de Sandringham",
+      "facet": "Palacios y castillos reales",
+      "known_at": 13
+    },
+    {
+      "name": "Palacio de St. James",
+      "facet": "Palacios y castillos reales",
+      "known_at": 13
+    },
+    {
+      "name": "Frogmore Cottage",
+      "facet": "Palacios y castillos reales",
+      "known_at": 13
+    },
+    {
+      "name": "Palacio de Holyroodhouse",
+      "facet": "Palacios y castillos reales",
+      "known_at": 14
+    },
+    {
+      "name": "Clarence House",
+      "facet": "Palacios y castillos reales",
+      "known_at": 14
+    },
+    {
+      "name": "Castillo de Caernarfon",
+      "facet": "Palacios y castillos reales",
+      "known_at": 14
+    },
+    {
+      "name": "Pabellón Real de Brighton",
+      "facet": "Palacios y castillos reales",
+      "known_at": 14
+    },
+    {
+      "name": "Osborne House",
+      "facet": "Palacios y castillos reales",
+      "known_at": 15
+    },
+    {
+      "name": "Highgrove",
+      "facet": "Palacios y castillos reales",
+      "known_at": 15
+    },
+    {
+      "name": "Perfil del monarca en las monedas",
+      "facet": "Símbolos y emblemas reales",
+      "known_at": 7
+    },
+    {
+      "name": "León y unicornio",
+      "facet": "Símbolos y emblemas reales",
+      "known_at": 8
+    },
+    {
+      "name": "God Save the King",
+      "facet": "Símbolos y emblemas reales",
+      "known_at": 8
+    },
+    {
+      "name": "Escudo real del Reino Unido",
+      "facet": "Símbolos y emblemas reales",
+      "known_at": 9
+    },
+    {
+      "name": "Tres leones de Inglaterra",
+      "facet": "Símbolos y emblemas reales",
+      "known_at": 9
+    },
+    {
+      "name": "Estandarte real",
+      "facet": "Símbolos y emblemas reales",
+      "known_at": 11
+    },
+    {
+      "name": "Rosa Tudor",
+      "facet": "Símbolos y emblemas reales",
+      "known_at": 12
+    },
+    {
+      "name": "Cardo escocés",
+      "facet": "Símbolos y emblemas reales",
+      "known_at": 12
+    },
+    {
+      "name": "Arpa irlandesa",
+      "facet": "Símbolos y emblemas reales",
+      "known_at": 12
+    },
+    {
+      "name": "Penny Black",
+      "facet": "Símbolos y emblemas reales",
+      "known_at": 12
+    },
+    {
+      "name": "Cifra real",
+      "facet": "Símbolos y emblemas reales",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Dieu et mon droit",
+      "facet": "Símbolos y emblemas reales",
+      "known_at": 14
+    },
+    {
+      "name": "Garantía real",
+      "facet": "Símbolos y emblemas reales",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Casa de Windsor",
+      "facet": "Casas y dinastías reales",
+      "known_at": 9
+    },
+    {
+      "name": "Casa Tudor",
+      "facet": "Casas y dinastías reales",
+      "known_at": 10
+    },
+    {
+      "name": "Batalla de Hastings",
+      "facet": "Casas y dinastías reales",
+      "known_at": 10
+    },
+    {
+      "name": "Guerra de las Dos Rosas",
+      "facet": "Casas y dinastías reales",
+      "known_at": 11
+    },
+    {
+      "name": "Oliver Cromwell",
+      "facet": "Casas y dinastías reales",
+      "known_at": 11
+    },
+    {
+      "name": "Anglosajones",
+      "facet": "Casas y dinastías reales",
+      "known_at": 11
+    },
+    {
+      "name": "Casa de York",
+      "facet": "Casas y dinastías reales",
+      "known_at": 12
+    },
+    {
+      "name": "Casa de Lancaster",
+      "facet": "Casas y dinastías reales",
+      "known_at": 12
+    },
+    {
+      "name": "Casa Estuardo",
+      "facet": "Casas y dinastías reales",
+      "known_at": 13
+    },
+    {
+      "name": "Casa de Hannover",
+      "facet": "Casas y dinastías reales",
+      "known_at": 13
+    },
+    {
+      "name": "Plantagenet",
+      "facet": "Casas y dinastías reales",
+      "known_at": 13
+    },
+    {
+      "name": "Mountbatten",
+      "facet": "Casas y dinastías reales",
+      "known_at": 13
+    },
+    {
+      "name": "Guerra Civil Inglesa",
+      "facet": "Casas y dinastías reales",
+      "known_at": 13
+    },
+    {
+      "name": "Revolución Gloriosa",
+      "facet": "Casas y dinastías reales",
+      "known_at": 13
+    },
+    {
+      "name": "Casa de Sajonia-Coburgo-Gotha",
+      "facet": "Casas y dinastías reales",
+      "known_at": 14
+    },
+    {
+      "name": "Acta de Unión",
+      "facet": "Casas y dinastías reales",
+      "known_at": 14
+    },
+    {
+      "name": "Guardias del Palacio de Buckingham",
+      "facet": "Ceremonias y tradiciones reales",
+      "known_at": 4
+    },
+    {
+      "name": "Hora del té",
+      "facet": "Ceremonias y tradiciones reales",
+      "known_at": 5
+    },
+    {
+      "name": "Reverencia",
+      "facet": "Ceremonias y tradiciones reales",
+      "known_at": 7
+    },
+    {
+      "name": "Beefeaters",
+      "facet": "Ceremonias y tradiciones reales",
+      "known_at": 9
+    },
+    {
+      "name": "Trooping the Colour",
+      "facet": "Ceremonias y tradiciones reales",
+      "known_at": 11
+    },
+    {
+      "name": "Royal Ascot",
+      "facet": "Ceremonias y tradiciones reales",
+      "known_at": 11
+    },
+    {
+      "name": "Investidura de caballeros",
+      "facet": "Ceremonias y tradiciones reales",
+      "known_at": 11
+    },
+    {
+      "name": "Cumpleaños oficial del rey",
+      "facet": "Ceremonias y tradiciones reales",
+      "known_at": 11
+    },
+    {
+      "name": "Apertura Estatal del Parlamento",
+      "facet": "Ceremonias y tradiciones reales",
+      "known_at": 12
+    },
+    {
+      "name": "Discurso del Rey",
+      "facet": "Ceremonias y tradiciones reales",
+      "known_at": 12
+    },
+    {
+      "name": "Saludo de cañonazos",
+      "facet": "Ceremonias y tradiciones reales",
+      "known_at": 12
+    },
+    {
+      "name": "Fiesta en el jardín de Buckingham",
+      "facet": "Ceremonias y tradiciones reales",
+      "known_at": 12
+    },
+    {
+      "name": "Domingo del Recuerdo",
+      "facet": "Ceremonias y tradiciones reales",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Ceremonia de las Llaves",
+      "facet": "Ceremonias y tradiciones reales",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Dinero del Jueves Santo",
+      "facet": "Ceremonias y tradiciones reales",
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Corgi",
+      "facet": "Mascotas y animales reales",
+      "known_at": 5
+    },
+    {
+      "name": "Cuervos de la Torre de Londres",
+      "facet": "Mascotas y animales reales",
+      "known_at": 9
+    },
+    {
+      "name": "Caballería Real Doméstica",
+      "facet": "Mascotas y animales reales",
+      "known_at": 10
+    },
+    {
+      "name": "Caballos de carreras de Isabel II",
+      "facet": "Mascotas y animales reales",
+      "known_at": 11
+    },
+    {
+      "name": "Cisnes del Támesis",
+      "facet": "Mascotas y animales reales",
+      "known_at": 12
+    },
+    {
+      "name": "Caballerizas Reales",
+      "facet": "Mascotas y animales reales",
+      "known_at": 12
+    },
+    {
+      "name": "Dorgi",
+      "facet": "Mascotas y animales reales",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Casa de fieras de la Torre de Londres",
+      "facet": "Mascotas y animales reales",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Lupo",
+      "facet": "Mascotas y animales reales",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Labradores de Sandringham",
+      "facet": "Mascotas y animales reales",
+      "known_at": 13
+    },
+    {
+      "name": "Censo de los cisnes",
+      "facet": "Mascotas y animales reales",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Susan",
+      "facet": "Mascotas y animales reales",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Muick y Sandy",
+      "facet": "Mascotas y animales reales",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Esturión real",
+      "facet": "Mascotas y animales reales",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Burmese",
+      "facet": "Mascotas y animales reales",
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Diana de Gales",
+      "facet": "Bodas, bebés y escándalos reales",
+      "known_at": 5
+    },
+    {
+      "name": "Boda de Guillermo y Catalina",
+      "facet": "Bodas, bebés y escándalos reales",
+      "known_at": 8
+    },
+    {
+      "name": "Boda de Carlos y Diana",
+      "facet": "Bodas, bebés y escándalos reales",
+      "known_at": 9
+    },
+    {
+      "name": "Boda de Harry y Meghan",
+      "facet": "Bodas, bebés y escándalos reales",
+      "known_at": 9
+    },
+    {
+      "name": "Seis esposas de Enrique VIII",
+      "facet": "Bodas, bebés y escándalos reales",
+      "known_at": 9
+    },
+    {
+      "name": "Megxit",
+      "facet": "Bodas, bebés y escándalos reales",
+      "known_at": 11
+    },
+    {
+      "name": "Vestido de novia de Diana",
+      "facet": "Bodas, bebés y escándalos reales",
+      "known_at": 11
+    },
+    {
+      "name": "Entrevista con Oprah Winfrey",
+      "facet": "Bodas, bebés y escándalos reales",
+      "known_at": 12
+    },
+    {
+      "name": "Spare",
+      "facet": "Bodas, bebés y escándalos reales",
+      "known_at": 12
+    },
+    {
+      "name": "Wallis Simpson",
+      "facet": "Bodas, bebés y escándalos reales",
+      "known_at": 13
+    },
+    {
+      "name": "Anuncio de nacimiento en el caballete",
+      "facet": "Bodas, bebés y escándalos reales",
+      "known_at": 13
+    },
+    {
+      "name": "Vestido de novia de Catalina",
+      "facet": "Bodas, bebés y escándalos reales",
+      "known_at": 13
+    },
+    {
+      "name": "Pastel de bodas real",
+      "facet": "Bodas, bebés y escándalos reales",
+      "known_at": 13
+    },
+    {
+      "name": "Ala Lindo del Hospital St. Mary's",
+      "facet": "Bodas, bebés y escándalos reales",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Entrevista de Panorama",
+      "facet": "Bodas, bebés y escándalos reales",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Robin Hood de Disney",
+      "facet": "Monarquía en películas y series",
+      "known_at": 6
+    },
+    {
+      "name": "The Crown",
+      "facet": "Monarquía en películas y series",
+      "known_at": 9
+    },
+    {
+      "name": "Corgi: las mascotas de la reina",
+      "facet": "Monarquía en películas y series",
+      "known_at": 9
+    },
+    {
+      "name": "La reina",
+      "facet": "Monarquía en películas y series",
+      "known_at": 13
+    },
+    {
+      "name": "Victoria",
+      "facet": "Monarquía en películas y series",
+      "known_at": 13
+    },
+    {
+      "name": "Spencer",
+      "facet": "Monarquía en películas y series",
+      "known_at": 13
+    },
+    {
+      "name": "Elizabeth",
+      "facet": "Monarquía en películas y series",
+      "known_at": 13
+    },
+    {
+      "name": "Los Tudor",
+      "facet": "Monarquía en películas y series",
+      "known_at": 13
+    },
+    {
+      "name": "Harry & Meghan",
+      "facet": "Monarquía en películas y series",
+      "known_at": 13
+    },
+    {
+      "name": "Ricardo III de Shakespeare",
+      "facet": "Monarquía en películas y series",
+      "known_at": 13
+    },
+    {
+      "name": "La favorita",
+      "facet": "Monarquía en películas y series",
+      "known_at": 14
+    },
+    {
+      "name": "Six",
+      "facet": "Monarquía en películas y series",
+      "known_at": 14
+    },
+    {
+      "name": "Blackadder",
+      "facet": "Monarquía en películas y series",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Victoria y Abdul",
+      "facet": "Monarquía en películas y series",
+      "known_at": 14
+    },
+    {
+      "name": "La locura del rey Jorge",
+      "facet": "Monarquía en películas y series",
+      "known_at": 14
+    },
+    {
+      "name": "Heredero al trono",
+      "facet": "Títulos, cargos y vocabulario real",
+      "known_at": 7
+    },
+    {
+      "name": "Duque",
+      "facet": "Títulos, cargos y vocabulario real",
+      "known_at": 7
+    },
+    {
+      "name": "Su Majestad",
+      "facet": "Títulos, cargos y vocabulario real",
+      "known_at": 8
+    },
+    {
+      "name": "Príncipe de Gales",
+      "facet": "Títulos, cargos y vocabulario real",
+      "known_at": 9
+    },
+    {
+      "name": "Primer ministro",
+      "facet": "Títulos, cargos y vocabulario real",
+      "known_at": 9
+    },
+    {
+      "name": "Sir y Dame",
+      "facet": "Títulos, cargos y vocabulario real",
+      "known_at": 9
+    },
+    {
+      "name": "Lord",
+      "facet": "Títulos, cargos y vocabulario real",
+      "known_at": 9
+    },
+    {
+      "name": "Plebeyo",
+      "facet": "Títulos, cargos y vocabulario real",
+      "known_at": 9
+    },
+    {
+      "name": "Monarquía constitucional",
+      "facet": "Títulos, cargos y vocabulario real",
+      "known_at": 10
+    },
+    {
+      "name": "Alteza Real",
+      "facet": "Títulos, cargos y vocabulario real",
+      "known_at": 10
+    },
+    {
+      "name": "Conde",
+      "facet": "Títulos, cargos y vocabulario real",
+      "known_at": 10
+    },
+    {
+      "name": "Mayordomo real",
+      "facet": "Títulos, cargos y vocabulario real",
+      "known_at": 10
+    },
+    {
+      "name": "Abdicación",
+      "facet": "Títulos, cargos y vocabulario real",
+      "known_at": 11
+    },
+    {
+      "name": "Reina consorte",
+      "facet": "Títulos, cargos y vocabulario real",
+      "known_at": 11
+    },
+    {
+      "name": "Línea de sucesión",
+      "facet": "Títulos, cargos y vocabulario real",
+      "known_at": 11
+    },
+    {
+      "name": "Soberano",
+      "facet": "Títulos, cargos y vocabulario real",
+      "known_at": 11
+    },
+    {
+      "name": "Regente",
+      "facet": "Títulos, cargos y vocabulario real",
+      "known_at": 12
+    },
+    {
+      "name": "Dama de compañía",
+      "facet": "Títulos, cargos y vocabulario real",
+      "known_at": 12
+    },
+    {
+      "name": "Princesa real",
+      "facet": "Títulos, cargos y vocabulario real",
+      "known_at": 13
+    },
+    {
+      "name": "Lord Chambelán",
+      "facet": "Títulos, cargos y vocabulario real",
+      "known_at": 15
+    }
+  ]
+}

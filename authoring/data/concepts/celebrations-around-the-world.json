@@ -1,0 +1,1515 @@
+{
+  "subcategory": "celebrations-around-the-world",
+  "facets": [
+    "Navidad alrededor del mundo",
+    "Año Nuevo y calendarios",
+    "Carnavales y desfiles",
+    "Fiestas religiosas y espirituales",
+    "Festivales de luces y fuego",
+    "Día de Muertos y Halloween",
+    "Fiestas de cosecha y estaciones",
+    "Fiestas insólitas y populares",
+    "Comidas y dulces festivos",
+    "Personajes y seres festivos",
+    "Adornos, símbolos y regalos",
+    "Fiestas nacionales y patrias",
+    "Días internacionales",
+    "Cumpleaños y ritos de vida"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 4,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 3,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Mercado navideño",
+      "facet": "Navidad alrededor del mundo",
+      "known_at": 8
+    },
+    {
+      "name": "Santa Lucía en Suecia",
+      "facet": "Navidad alrededor del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Navidad en Japón",
+      "facet": "Navidad alrededor del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Navidad en Australia",
+      "facet": "Navidad alrededor del mundo",
+      "known_at": 7
+    },
+    {
+      "name": "Doce uvas",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 2
+    },
+    {
+      "name": "Año Nuevo chino",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 4
+    },
+    {
+      "name": "Horóscopo chino",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 6
+    },
+    {
+      "name": "Calendario gregoriano",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 11
+    },
+    {
+      "name": "Año bisiesto",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 5
+    },
+    {
+      "name": "Bola de Times Square",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 8
+    },
+    {
+      "name": "Nowruz",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 14
+    },
+    {
+      "name": "Hogmanay",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Auld Lang Syne",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 12
+    },
+    {
+      "name": "Calendario lunar",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 8
+    },
+    {
+      "name": "Maleta de Año Nuevo",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Songkran",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 13
+    },
+    {
+      "name": "Rosh Hashaná",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 13
+    },
+    {
+      "name": "Carnaval de Río de Janeiro",
+      "facet": "Carnavales y desfiles",
+      "known_at": 4
+    },
+    {
+      "name": "Carnaval de Barranquilla",
+      "facet": "Carnavales y desfiles",
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Carnaval de Venecia",
+      "facet": "Carnavales y desfiles",
+      "known_at": 7
+    },
+    {
+      "name": "Mardi Gras de Nueva Orleans",
+      "facet": "Carnavales y desfiles",
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Sambódromo",
+      "facet": "Carnavales y desfiles",
+      "known_at": 9
+    },
+    {
+      "name": "Escola de samba",
+      "facet": "Carnavales y desfiles",
+      "known_at": 9
+    },
+    {
+      "name": "Marimonda",
+      "facet": "Carnavales y desfiles",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Máscara veneciana",
+      "facet": "Carnavales y desfiles",
+      "known_at": 6
+    },
+    {
+      "name": "Desfile de Acción de Gracias de Macy's",
+      "facet": "Carnavales y desfiles",
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Carnaval de Notting Hill",
+      "facet": "Carnavales y desfiles",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Carnaval de Oruro",
+      "facet": "Carnavales y desfiles",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Carnaval de Cádiz",
+      "facet": "Carnavales y desfiles",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Carnaval de Santa Cruz de Tenerife",
+      "facet": "Carnavales y desfiles",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Carroza",
+      "facet": "Carnavales y desfiles",
+      "known_at": 3
+    },
+    {
+      "name": "Comparsa",
+      "facet": "Carnavales y desfiles",
+      "known_at": 7
+    },
+    {
+      "name": "Joselito Carnaval",
+      "facet": "Carnavales y desfiles",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Desfile de las Rosas de Pasadena",
+      "facet": "Carnavales y desfiles",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Semana Santa",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 2
+    },
+    {
+      "name": "Ramadán",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 8
+    },
+    {
+      "name": "Eid al-Fitr",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 13
+    },
+    {
+      "name": "Pésaj",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 12
+    },
+    {
+      "name": "Bar mitzvá",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 11
+    },
+    {
+      "name": "Vesak",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 14
+    },
+    {
+      "name": "Peregrinación a La Meca",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 10
+    },
+    {
+      "name": "Corpus Christi",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 10
+    },
+    {
+      "name": "Miércoles de Ceniza",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 6
+    },
+    {
+      "name": "Pentecostés",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 11
+    },
+    {
+      "name": "Domingo de Ramos",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 6
+    },
+    {
+      "name": "Kumbh Mela",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 14
+    },
+    {
+      "name": "Primera comunión",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 4
+    },
+    {
+      "name": "Yom Kipur",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 13
+    },
+    {
+      "name": "Semana Santa de Popayán",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Día de la Virgen de Guadalupe",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 10
+    },
+    {
+      "name": "Hanukkah",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 9
+    },
+    {
+      "name": "Noche de San Juan",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 10
+    },
+    {
+      "name": "Fallas de Valencia",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 11
+    },
+    {
+      "name": "Noche de Guy Fawkes",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Festival de los Faroles",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 9
+    },
+    {
+      "name": "Yi Peng",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 12
+    },
+    {
+      "name": "Up Helly Aa",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 15
+    },
+    {
+      "name": "Loy Krathong",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 14
+    },
+    {
+      "name": "Fiesta de las Luces de Lyon",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 14
+    },
+    {
+      "name": "Quema del Diablo",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Alumbrados navideños de Medellín",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Fuegos artificiales",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 1
+    },
+    {
+      "name": "Las Luminarias de San Bartolomé",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Día de Muertos",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 3
+    },
+    {
+      "name": "Halloween",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 1
+    },
+    {
+      "name": "Truco o trato",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 2
+    },
+    {
+      "name": "Calabaza de Halloween",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 1
+    },
+    {
+      "name": "Calaverita de azúcar",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 5
+    },
+    {
+      "name": "La Catrina",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 7
+    },
+    {
+      "name": "Altar de muertos",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 6
+    },
+    {
+      "name": "Flor de cempasúchil",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 7
+    },
+    {
+      "name": "Coco (película)",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 2
+    },
+    {
+      "name": "Samhain",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 14
+    },
+    {
+      "name": "Día de Todos los Santos",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 7
+    },
+    {
+      "name": "Disfraz",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 1
+    },
+    {
+      "name": "Alebrije",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 7
+    },
+    {
+      "name": "Xoloitzcuintle",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 9
+    },
+    {
+      "name": "Bruja",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 1
+    },
+    {
+      "name": "Acción de Gracias",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 4,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Festival del Medio Otoño",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 13
+    },
+    {
+      "name": "Hanami",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 10
+    },
+    {
+      "name": "Solsticio de verano",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 9
+    },
+    {
+      "name": "Sucot",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 15
+    },
+    {
+      "name": "Pongal",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 15
+    },
+    {
+      "name": "Chuseok",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 14
+    },
+    {
+      "name": "Vendimia",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 10
+    },
+    {
+      "name": "Día de la Marmota",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 8
+    },
+    {
+      "name": "Midsommar",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 13
+    },
+    {
+      "name": "Festival de la Nieve de Sapporo",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 13
+    },
+    {
+      "name": "Holi",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 7
+    },
+    {
+      "name": "Setsubun",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 15
+    },
+    {
+      "name": "Batalla del Vino de Haro",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Carrera del queso de Cooper's Hill",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 11
+    },
+    {
+      "name": "Feria de las Flores",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Festival de la Leyenda Vallenata",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Banquete de los monos de Lopburi",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 13
+    },
+    {
+      "name": "Carrera de cargar a la esposa",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 11
+    },
+    {
+      "name": "Festival del Hielo de Harbin",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 12
+    },
+    {
+      "name": "Festival del Barro de Boryeong",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 13
+    },
+    {
+      "name": "Batalla de las Naranjas de Ivrea",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 14
+    },
+    {
+      "name": "Tamborrada de San Sebastián",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "El Colacho",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 15
+    },
+    {
+      "name": "San Valentín",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 3
+    },
+    {
+      "name": "Rock al Parque",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Burning Man",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 13
+    },
+    {
+      "name": "Pavo de Acción de Gracias",
+      "facet": "Comidas y dulces festivos",
+      "known_at": 4,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Pan de muerto",
+      "facet": "Comidas y dulces festivos",
+      "known_at": 9
+    },
+    {
+      "name": "Pastel de luna",
+      "facet": "Comidas y dulces festivos",
+      "known_at": 13
+    },
+    {
+      "name": "Galleta de jengibre",
+      "facet": "Comidas y dulces festivos",
+      "known_at": 3
+    },
+    {
+      "name": "Jiaozi",
+      "facet": "Comidas y dulces festivos",
+      "known_at": 13
+    },
+    {
+      "name": "Fanesca",
+      "facet": "Comidas y dulces festivos",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Hot cross bun",
+      "facet": "Comidas y dulces festivos",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Conejo de Pascua",
+      "facet": "Personajes y seres festivos",
+      "known_at": 2
+    },
+    {
+      "name": "Rey Momo",
+      "facet": "Personajes y seres festivos",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Cupido",
+      "facet": "Personajes y seres festivos",
+      "known_at": 3
+    },
+    {
+      "name": "Leprechaun",
+      "facet": "Personajes y seres festivos",
+      "known_at": 8
+    },
+    {
+      "name": "Menorá",
+      "facet": "Adornos, símbolos y regalos",
+      "known_at": 11
+    },
+    {
+      "name": "Piñata",
+      "facet": "Adornos, símbolos y regalos",
+      "known_at": 1
+    },
+    {
+      "name": "Papel picado",
+      "facet": "Adornos, símbolos y regalos",
+      "known_at": 8
+    },
+    {
+      "name": "Huevo de Pascua",
+      "facet": "Adornos, símbolos y regalos",
+      "known_at": 2
+    },
+    {
+      "name": "Sobre rojo",
+      "facet": "Adornos, símbolos y regalos",
+      "known_at": 11
+    },
+    {
+      "name": "Trébol",
+      "facet": "Adornos, símbolos y regalos",
+      "known_at": 7
+    },
+    {
+      "name": "Esfera navideña",
+      "facet": "Adornos, símbolos y regalos",
+      "known_at": 1
+    },
+    {
+      "name": "Dreidel",
+      "facet": "Adornos, símbolos y regalos",
+      "known_at": 13
+    },
+    {
+      "name": "20 de julio",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "4 de julio",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 7
+    },
+    {
+      "name": "Toma de la Bastilla",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 11
+    },
+    {
+      "name": "Batalla de Boyacá",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Cinco de Mayo",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 11
+    },
+    {
+      "name": "Grito de Dolores",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Día de la Hispanidad",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Día de Australia",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 14
+    },
+    {
+      "name": "Día de Canadá",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 13
+    },
+    {
+      "name": "Fiestas Patrias de Chile",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Día del Rey en Países Bajos",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 13
+    },
+    {
+      "name": "Día Nacional de Noruega",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 15
+    },
+    {
+      "name": "Día de la Independencia de Brasil",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 13
+    },
+    {
+      "name": "Juneteenth",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Desfile militar",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 4
+    },
+    {
+      "name": "Día de la Reunificación alemana",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 13
+    },
+    {
+      "name": "Pasos de Semana Santa",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 8
+    },
+    {
+      "name": "Día de los Santos Inocentes",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 4
+    },
+    {
+      "name": "Carnavalero",
+      "facet": "Carnavales y desfiles",
+      "known_at": 3
+    },
+    {
+      "name": "Christmas Eve",
+      "facet": "Navidad alrededor del mundo",
+      "known_at": 2
+    },
+    {
+      "name": "Three Kings' Day",
+      "facet": "Navidad alrededor del mundo",
+      "known_at": 6
+    },
+    {
+      "name": "St. Nicholas Day",
+      "facet": "Navidad alrededor del mundo",
+      "known_at": 7
+    },
+    {
+      "name": "Christmas carol",
+      "facet": "Navidad alrededor del mundo",
+      "known_at": 4
+    },
+    {
+      "name": "Silent Night",
+      "facet": "Navidad alrededor del mundo",
+      "known_at": 6
+    },
+    {
+      "name": "Orthodox Christmas",
+      "facet": "Navidad alrededor del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Christmas in the Philippines",
+      "facet": "Navidad alrededor del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Christmas truce of 1914",
+      "facet": "Navidad alrededor del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "New Year's Eve",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 2
+    },
+    {
+      "name": "Tết",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 10
+    },
+    {
+      "name": "Seollal",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 11
+    },
+    {
+      "name": "Japanese New Year",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 10
+    },
+    {
+      "name": "Islamic calendar",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 10
+    },
+    {
+      "name": "Maya calendar",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 9
+    },
+    {
+      "name": "Julian calendar",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 11
+    },
+    {
+      "name": "New Year's resolution",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 6
+    },
+    {
+      "name": "Sydney New Year's Eve fireworks",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 7
+    },
+    {
+      "name": "Ethiopian calendar",
+      "facet": "Año Nuevo y calendarios",
+      "known_at": 13
+    },
+    {
+      "name": "Dragon dance",
+      "facet": "Carnavales y desfiles",
+      "known_at": 5
+    },
+    {
+      "name": "Lion dance",
+      "facet": "Carnavales y desfiles",
+      "known_at": 7
+    },
+    {
+      "name": "Carnival of Binche",
+      "facet": "Carnavales y desfiles",
+      "known_at": 13
+    },
+    {
+      "name": "Cologne Carnival",
+      "facet": "Carnavales y desfiles",
+      "known_at": 12
+    },
+    {
+      "name": "Basel Fasnacht",
+      "facet": "Carnavales y desfiles",
+      "known_at": 13
+    },
+    {
+      "name": "Trinidad and Tobago Carnival",
+      "facet": "Carnavales y desfiles",
+      "known_at": 12
+    },
+    {
+      "name": "Nice Carnival",
+      "facet": "Carnavales y desfiles",
+      "known_at": 12
+    },
+    {
+      "name": "Salvador Carnival",
+      "facet": "Carnavales y desfiles",
+      "known_at": 13
+    },
+    {
+      "name": "Shrove Tuesday",
+      "facet": "Carnavales y desfiles",
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Quebec Winter Carnival",
+      "facet": "Carnavales y desfiles",
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Eid al-Adha",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 10
+    },
+    {
+      "name": "Ganesh Chaturthi",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 12
+    },
+    {
+      "name": "Navratri",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 12
+    },
+    {
+      "name": "Durga Puja",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 12
+    },
+    {
+      "name": "Raksha Bandhan",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 12
+    },
+    {
+      "name": "Vaisakhi",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 13
+    },
+    {
+      "name": "Lent",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 8
+    },
+    {
+      "name": "Advent",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 6
+    },
+    {
+      "name": "Iftar",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 10
+    },
+    {
+      "name": "Rath Yatra",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 13
+    },
+    {
+      "name": "Timkat",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 14
+    },
+    {
+      "name": "Losar",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 14
+    },
+    {
+      "name": "Esala Perahera",
+      "facet": "Fiestas religiosas y espirituales",
+      "known_at": 14
+    },
+    {
+      "name": "Walpurgis Night",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 12
+    },
+    {
+      "name": "St. Martin's Day",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 11
+    },
+    {
+      "name": "Candlemas",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 12
+    },
+    {
+      "name": "Vivid Sydney",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 12
+    },
+    {
+      "name": "Lohri",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 13
+    },
+    {
+      "name": "Beltane",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 13
+    },
+    {
+      "name": "Kwanzaa",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 10
+    },
+    {
+      "name": "Sparkler",
+      "facet": "Festivales de luces y fuego",
+      "known_at": 3
+    },
+    {
+      "name": "Obon",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 11
+    },
+    {
+      "name": "Qingming Festival",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 12
+    },
+    {
+      "name": "All Souls' Day",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 9
+    },
+    {
+      "name": "Hungry Ghost Festival",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 12
+    },
+    {
+      "name": "Ghost",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 1
+    },
+    {
+      "name": "Vampire",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 3
+    },
+    {
+      "name": "Black cat",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 3
+    },
+    {
+      "name": "Haunted house",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 3
+    },
+    {
+      "name": "Bobbing for apples",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 8,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Frankenstein's monster",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 6
+    },
+    {
+      "name": "Stingy Jack",
+      "facet": "Día de Muertos y Halloween",
+      "known_at": 13
+    },
+    {
+      "name": "Onam",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 13
+    },
+    {
+      "name": "Makar Sankranti",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 13
+    },
+    {
+      "name": "Winter solstice",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 8
+    },
+    {
+      "name": "Equinox at Chichén Itzá",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Tanabata",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Hinamatsuri",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 12
+    },
+    {
+      "name": "Dragon Boat Festival",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 10
+    },
+    {
+      "name": "Harvest moon",
+      "facet": "Fiestas de cosecha y estaciones",
+      "known_at": 10
+    },
+    {
+      "name": "Running of the bulls",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 9
+    },
+    {
+      "name": "April Fools' Day",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 5
+    },
+    {
+      "name": "Palio di Siena",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 12
+    },
+    {
+      "name": "Naadam",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 13
+    },
+    {
+      "name": "Pushkar Camel Fair",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 13
+    },
+    {
+      "name": "Calgary Stampede",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Highland Games",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Albuquerque International Balloon Fiesta",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Edinburgh Festival Fringe",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Cheung Chau Bun Festival",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 14
+    },
+    {
+      "name": "Gion Matsuri",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 13
+    },
+    {
+      "name": "Burns Night",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Cannes Film Festival",
+      "facet": "Fiestas insólitas y populares",
+      "known_at": 9
+    },
+    {
+      "name": "Christmas pudding",
+      "facet": "Comidas y dulces festivos",
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Bûche de Noël",
+      "facet": "Comidas y dulces festivos",
+      "known_at": 9
+    },
+    {
+      "name": "King cake",
+      "facet": "Comidas y dulces festivos",
+      "known_at": 9
+    },
+    {
+      "name": "Candy cane",
+      "facet": "Comidas y dulces festivos",
+      "known_at": 2
+    },
+    {
+      "name": "Latkes",
+      "facet": "Comidas y dulces festivos",
+      "known_at": 11
+    },
+    {
+      "name": "Matzah",
+      "facet": "Comidas y dulces festivos",
+      "known_at": 10
+    },
+    {
+      "name": "Hamantaschen",
+      "facet": "Comidas y dulces festivos",
+      "known_at": 13
+    },
+    {
+      "name": "Zongzi",
+      "facet": "Comidas y dulces festivos",
+      "known_at": 12
+    },
+    {
+      "name": "Pumpkin pie",
+      "facet": "Comidas y dulces festivos",
+      "known_at": 6,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Ladoo",
+      "facet": "Comidas y dulces festivos",
+      "known_at": 12
+    },
+    {
+      "name": "Haggis",
+      "facet": "Comidas y dulces festivos",
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Oliebollen",
+      "facet": "Comidas y dulces festivos",
+      "known_at": 13
+    },
+    {
+      "name": "Rudolph the Red-Nosed Reindeer",
+      "facet": "Personajes y seres festivos",
+      "known_at": 2
+    },
+    {
+      "name": "Santa's elves",
+      "facet": "Personajes y seres festivos",
+      "known_at": 1
+    },
+    {
+      "name": "Three Wise Men",
+      "facet": "Personajes y seres festivos",
+      "known_at": 4
+    },
+    {
+      "name": "The Grinch",
+      "facet": "Personajes y seres festivos",
+      "known_at": 3
+    },
+    {
+      "name": "Tomte",
+      "facet": "Personajes y seres festivos",
+      "known_at": 12
+    },
+    {
+      "name": "Saint Patrick",
+      "facet": "Personajes y seres festivos",
+      "known_at": 6
+    },
+    {
+      "name": "Christmas tree",
+      "facet": "Adornos, símbolos y regalos",
+      "known_at": 1
+    },
+    {
+      "name": "Advent calendar",
+      "facet": "Adornos, símbolos y regalos",
+      "known_at": 3
+    },
+    {
+      "name": "Nativity scene",
+      "facet": "Adornos, símbolos y regalos",
+      "known_at": 4
+    },
+    {
+      "name": "Advent wreath",
+      "facet": "Adornos, símbolos y regalos",
+      "known_at": 7
+    },
+    {
+      "name": "Christmas stocking",
+      "facet": "Adornos, símbolos y regalos",
+      "known_at": 2,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Diya",
+      "facet": "Adornos, símbolos y regalos",
+      "known_at": 11
+    },
+    {
+      "name": "Rangoli",
+      "facet": "Adornos, símbolos y regalos",
+      "known_at": 11
+    },
+    {
+      "name": "Mardi Gras beads",
+      "facet": "Adornos, símbolos y regalos",
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Maypole",
+      "facet": "Adornos, símbolos y regalos",
+      "known_at": 9
+    },
+    {
+      "name": "Koinobori",
+      "facet": "Adornos, símbolos y regalos",
+      "known_at": 12
+    },
+    {
+      "name": "Daruma doll",
+      "facet": "Adornos, símbolos y regalos",
+      "known_at": 11
+    },
+    {
+      "name": "Fabergé egg",
+      "facet": "Adornos, símbolos y regalos",
+      "known_at": 11
+    },
+    {
+      "name": "Pysanka",
+      "facet": "Adornos, símbolos y regalos",
+      "known_at": 13
+    },
+    {
+      "name": "Mehndi",
+      "facet": "Adornos, símbolos y regalos",
+      "known_at": 9
+    },
+    {
+      "name": "Confetti",
+      "facet": "Adornos, símbolos y regalos",
+      "known_at": 2
+    },
+    {
+      "name": "Firecrackers",
+      "facet": "Adornos, símbolos y regalos",
+      "known_at": 4
+    },
+    {
+      "name": "St. Patrick's Day",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 5
+    },
+    {
+      "name": "Independence Day of India",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 11
+    },
+    {
+      "name": "Waitangi Day",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "National Day of China",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 12
+    },
+    {
+      "name": "Swiss National Day",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 13
+    },
+    {
+      "name": "Freedom Day in South Africa",
+      "facet": "Fiestas nacionales y patrias",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Mother's Day",
+      "facet": "Días internacionales",
+      "known_at": 2
+    },
+    {
+      "name": "Father's Day",
+      "facet": "Días internacionales",
+      "known_at": 2
+    },
+    {
+      "name": "International Women's Day",
+      "facet": "Días internacionales",
+      "known_at": 8
+    },
+    {
+      "name": "Earth Day",
+      "facet": "Días internacionales",
+      "known_at": 6
+    },
+    {
+      "name": "Children's Day",
+      "facet": "Días internacionales",
+      "known_at": 4
+    },
+    {
+      "name": "World Book Day",
+      "facet": "Días internacionales",
+      "known_at": 7
+    },
+    {
+      "name": "Earth Hour",
+      "facet": "Días internacionales",
+      "known_at": 9
+    },
+    {
+      "name": "International Workers' Day",
+      "facet": "Días internacionales",
+      "known_at": 9
+    },
+    {
+      "name": "Birthday cake",
+      "facet": "Cumpleaños y ritos de vida",
+      "known_at": 1
+    },
+    {
+      "name": "Happy Birthday to You",
+      "facet": "Cumpleaños y ritos de vida",
+      "known_at": 1
+    },
+    {
+      "name": "Wedding cake",
+      "facet": "Cumpleaños y ritos de vida",
+      "known_at": 3
+    },
+    {
+      "name": "Coming of Age Day in Japan",
+      "facet": "Cumpleaños y ritos de vida",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Shichi-Go-San",
+      "facet": "Cumpleaños y ritos de vida",
+      "known_at": 14
+    },
+    {
+      "name": "Baptism",
+      "facet": "Cumpleaños y ritos de vida",
+      "known_at": 6
+    },
+    {
+      "name": "Golden wedding anniversary",
+      "facet": "Cumpleaños y ritos de vida",
+      "known_at": 9
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-15",
+      "added": 136,
+      "unused": 227
+    }
+  ]
+}

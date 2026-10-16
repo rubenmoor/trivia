@@ -1,0 +1,868 @@
+{
+  "subcategory": "advertising-slogans",
+  "facets": [
+    "Eslóganes de comida rápida y snacks",
+    "Eslóganes de bebidas y refrescos",
+    "Eslóganes de marcas deportivas",
+    "Eslóganes de tecnología y videojuegos",
+    "Eslóganes de carros y transporte",
+    "Eslóganes de dulces y golosinas",
+    "Eslóganes de productos del hogar y aseo",
+    "Mascotas y personajes publicitarios",
+    "Eslóganes y jingles colombianos",
+    "Cuñas de radio y jingles famosos",
+    "Historia de la publicidad y sus pioneros",
+    "Recursos del lenguaje publicitario"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 1,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 4,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Me encanta (McDonald's)",
+      "facet": "Eslóganes de comida rápida y snacks",
+      "known_at": 4
+    },
+    {
+      "name": "Para chuparse los dedos (KFC)",
+      "facet": "Eslóganes de comida rápida y snacks",
+      "known_at": 7
+    },
+    {
+      "name": "A tu manera (Burger King)",
+      "facet": "Eslóganes de comida rápida y snacks",
+      "known_at": 10
+    },
+    {
+      "name": "Come fresco (Subway)",
+      "facet": "Eslóganes de comida rápida y snacks",
+      "known_at": 10
+    },
+    {
+      "name": "Una vez que haces pop, ya no hay stop (Pringles)",
+      "facet": "Eslóganes de comida rápida y snacks",
+      "known_at": 6
+    },
+    {
+      "name": "Nadie puede comer solo una (Lay's)",
+      "facet": "Eslóganes de comida rápida y snacks",
+      "known_at": 9
+    },
+    {
+      "name": "Piensa fuera del pan (Taco Bell)",
+      "facet": "Eslóganes de comida rápida y snacks",
+      "known_at": 13
+    },
+    {
+      "name": "30 minutos o gratis (Domino's)",
+      "facet": "Eslóganes de comida rápida y snacks",
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "¿Dónde está la carne? (Wendy's)",
+      "facet": "Eslóganes de comida rápida y snacks",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "¡Son grrrandiosas! (Zucaritas)",
+      "facet": "Eslóganes de comida rápida y snacks",
+      "known_at": 5
+    },
+    {
+      "name": "Galletas Oreo",
+      "facet": "Eslóganes de comida rápida y snacks",
+      "known_at": 3
+    },
+    {
+      "name": "Destapa la felicidad (Coca-Cola)",
+      "facet": "Eslóganes de bebidas y refrescos",
+      "known_at": 6
+    },
+    {
+      "name": "La chispa de la vida (Coca-Cola)",
+      "facet": "Eslóganes de bebidas y refrescos",
+      "known_at": 9
+    },
+    {
+      "name": "Siempre Coca-Cola",
+      "facet": "Eslóganes de bebidas y refrescos",
+      "known_at": 11
+    },
+    {
+      "name": "Comparte una Coca-Cola",
+      "facet": "Eslóganes de bebidas y refrescos",
+      "known_at": 8
+    },
+    {
+      "name": "Quiero comprarle al mundo una Coca-Cola",
+      "facet": "Eslóganes de bebidas y refrescos",
+      "known_at": 13
+    },
+    {
+      "name": "Fórmula secreta de Coca-Cola",
+      "facet": "Eslóganes de bebidas y refrescos",
+      "known_at": 8
+    },
+    {
+      "name": "Red Bull te da alas",
+      "facet": "Eslóganes de bebidas y refrescos",
+      "known_at": 4
+    },
+    {
+      "name": "Reto Pepsi",
+      "facet": "Eslóganes de bebidas y refrescos",
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "La elección de una nueva generación (Pepsi)",
+      "facet": "Eslóganes de bebidas y refrescos",
+      "known_at": 13
+    },
+    {
+      "name": "Nespresso. What else?",
+      "facet": "Eslóganes de bebidas y refrescos",
+      "known_at": 11
+    },
+    {
+      "name": "Obedece a tu sed (Sprite)",
+      "facet": "Eslóganes de bebidas y refrescos",
+      "known_at": 12
+    },
+    {
+      "name": "¿Tienes leche? (Got Milk?)",
+      "facet": "Eslóganes de bebidas y refrescos",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "¿Lo tienes? (Gatorade)",
+      "facet": "Eslóganes de bebidas y refrescos",
+      "known_at": 13
+    },
+    {
+      "name": "Nike (diosa)",
+      "facet": "Eslóganes de marcas deportivas",
+      "known_at": 9
+    },
+    {
+      "name": "Imposible no es nada (Adidas)",
+      "facet": "Eslóganes de marcas deportivas",
+      "known_at": 10
+    },
+    {
+      "name": "Tres franjas de Adidas",
+      "facet": "Eslóganes de marcas deportivas",
+      "known_at": 6
+    },
+    {
+      "name": "Rudolf Dassler",
+      "facet": "Eslóganes de marcas deportivas",
+      "known_at": 13
+    },
+    {
+      "name": "Logo de Puma",
+      "facet": "Eslóganes de marcas deportivas",
+      "known_at": 5
+    },
+    {
+      "name": "Forever Faster (Puma)",
+      "facet": "Eslóganes de marcas deportivas",
+      "known_at": 13
+    },
+    {
+      "name": "Asics (Anima Sana In Corpore Sano)",
+      "facet": "Eslóganes de marcas deportivas",
+      "known_at": 13
+    },
+    {
+      "name": "Off the Wall (Vans)",
+      "facet": "Eslóganes de marcas deportivas",
+      "known_at": 13
+    },
+    {
+      "name": "Air Max",
+      "facet": "Eslóganes de marcas deportivas",
+      "known_at": 9
+    },
+    {
+      "name": "Joga Bonito",
+      "facet": "Eslóganes de marcas deportivas",
+      "known_at": 11
+    },
+    {
+      "name": "Piensa diferente (Apple)",
+      "facet": "Eslóganes de tecnología y videojuegos",
+      "known_at": 10
+    },
+    {
+      "name": "Manzana mordida de Apple",
+      "facet": "Eslóganes de tecnología y videojuegos",
+      "known_at": 3
+    },
+    {
+      "name": "Comercial 1984 de Apple",
+      "facet": "Eslóganes de tecnología y videojuegos",
+      "known_at": 14
+    },
+    {
+      "name": "Intel Inside",
+      "facet": "Eslóganes de tecnología y videojuegos",
+      "known_at": 11
+    },
+    {
+      "name": "Connecting People (Nokia)",
+      "facet": "Eslóganes de tecnología y videojuegos",
+      "known_at": 12
+    },
+    {
+      "name": "Botones de PlayStation",
+      "facet": "Eslóganes de tecnología y videojuegos",
+      "known_at": 5
+    },
+    {
+      "name": "Sega does what Nintendon't",
+      "facet": "Eslóganes de tecnología y videojuegos",
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Wii",
+      "facet": "Eslóganes de tecnología y videojuegos",
+      "known_at": 7
+    },
+    {
+      "name": "Logo de Windows",
+      "facet": "Eslóganes de tecnología y videojuegos",
+      "known_at": 5
+    },
+    {
+      "name": "No seas malvado (Google)",
+      "facet": "Eslóganes de tecnología y videojuegos",
+      "known_at": 14
+    },
+    {
+      "name": "Voy a tener suerte (Google)",
+      "facet": "Eslóganes de tecnología y videojuegos",
+      "known_at": 12
+    },
+    {
+      "name": "Botón Me gusta",
+      "facet": "Eslóganes de tecnología y videojuegos",
+      "known_at": 5
+    },
+    {
+      "name": "Usted aprieta el botón, nosotros hacemos el resto (Kodak)",
+      "facet": "Eslóganes de tecnología y videojuegos",
+      "known_at": 15
+    },
+    {
+      "name": "Das Auto (Volkswagen)",
+      "facet": "Eslóganes de carros y transporte",
+      "known_at": 11
+    },
+    {
+      "name": "El placer de conducir (BMW)",
+      "facet": "Eslóganes de carros y transporte",
+      "known_at": 13
+    },
+    {
+      "name": "Lo mejor o nada (Mercedes-Benz)",
+      "facet": "Eslóganes de carros y transporte",
+      "known_at": 14
+    },
+    {
+      "name": "Vorsprung durch Technik (Audi)",
+      "facet": "Eslóganes de carros y transporte",
+      "known_at": 15
+    },
+    {
+      "name": "Cuatro aros de Audi",
+      "facet": "Eslóganes de carros y transporte",
+      "known_at": 8
+    },
+    {
+      "name": "Estrella de Mercedes-Benz",
+      "facet": "Eslóganes de carros y transporte",
+      "known_at": 8
+    },
+    {
+      "name": "Caballito de Ferrari",
+      "facet": "Eslóganes de carros y transporte",
+      "known_at": 5
+    },
+    {
+      "name": "Toro de Lamborghini",
+      "facet": "Eslóganes de carros y transporte",
+      "known_at": 7
+    },
+    {
+      "name": "Corbatín de Chevrolet",
+      "facet": "Eslóganes de carros y transporte",
+      "known_at": 9
+    },
+    {
+      "name": "Rombo de Renault",
+      "facet": "Eslóganes de carros y transporte",
+      "known_at": 9
+    },
+    {
+      "name": "Cualquier color, siempre que sea negro",
+      "facet": "Eslóganes de carros y transporte",
+      "known_at": 13
+    },
+    {
+      "name": "Zoom-Zoom (Mazda)",
+      "facet": "Eslóganes de carros y transporte",
+      "known_at": 13
+    },
+    {
+      "name": "The Power of Dreams (Honda)",
+      "facet": "Eslóganes de carros y transporte",
+      "known_at": 14
+    },
+    {
+      "name": "Se derrite en tu boca, no en tu mano (M&M's)",
+      "facet": "Eslóganes de dulces y golosinas",
+      "known_at": 9
+    },
+    {
+      "name": "Tómate un break, tómate un Kit Kat",
+      "facet": "Eslóganes de dulces y golosinas",
+      "known_at": 6
+    },
+    {
+      "name": "No eres tú cuando tienes hambre (Snickers)",
+      "facet": "Eslóganes de dulces y golosinas",
+      "known_at": 8
+    },
+    {
+      "name": "Prueba el arcoíris (Skittles)",
+      "facet": "Eslóganes de dulces y golosinas",
+      "known_at": 9
+    },
+    {
+      "name": "Twix",
+      "facet": "Eslóganes de dulces y golosinas",
+      "known_at": 8
+    },
+    {
+      "name": "Cuatro de cada cinco dentistas (Trident)",
+      "facet": "Eslóganes de dulces y golosinas",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Bubbaloo",
+      "facet": "Eslóganes de dulces y golosinas",
+      "known_at": 5
+    },
+    {
+      "name": "Hershey's Kisses",
+      "facet": "Eslóganes de dulces y golosinas",
+      "known_at": 7
+    },
+    {
+      "name": "Dispensador PEZ",
+      "facet": "Eslóganes de dulces y golosinas",
+      "known_at": 8,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Sonrisa Colgate",
+      "facet": "Eslóganes de productos del hogar y aseo",
+      "known_at": 6
+    },
+    {
+      "name": "Porque tú lo vales (L'Oréal)",
+      "facet": "Eslóganes de productos del hogar y aseo",
+      "known_at": 10
+    },
+    {
+      "name": "Lo mejor para el hombre (Gillette)",
+      "facet": "Eslóganes de productos del hogar y aseo",
+      "known_at": 12
+    },
+    {
+      "name": "Belleza real (Dove)",
+      "facet": "Eslóganes de productos del hogar y aseo",
+      "known_at": 13
+    },
+    {
+      "name": "Head & Shoulders",
+      "facet": "Eslóganes de productos del hogar y aseo",
+      "known_at": 8
+    },
+    {
+      "name": "Sigue y sigue (Energizer)",
+      "facet": "Eslóganes de productos del hogar y aseo",
+      "known_at": 10
+    },
+    {
+      "name": "Raid",
+      "facet": "Eslóganes de productos del hogar y aseo",
+      "known_at": 8,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Scotch-Brite",
+      "facet": "Eslóganes de productos del hogar y aseo",
+      "known_at": 8,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "No más lágrimas (Johnson's)",
+      "facet": "Eslóganes de productos del hogar y aseo",
+      "known_at": 8
+    },
+    {
+      "name": "Vick VapoRub",
+      "facet": "Eslóganes de productos del hogar y aseo",
+      "known_at": 5
+    },
+    {
+      "name": "Mata el 99,9 % de los gérmenes",
+      "facet": "Eslóganes de productos del hogar y aseo",
+      "known_at": 9
+    },
+    {
+      "name": "Efecto Axe",
+      "facet": "Eslóganes de productos del hogar y aseo",
+      "known_at": 13
+    },
+    {
+      "name": "Rexona no te abandona",
+      "facet": "Eslóganes de productos del hogar y aseo",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Fabuloso",
+      "facet": "Eslóganes de productos del hogar y aseo",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Clorox",
+      "facet": "Eslóganes de productos del hogar y aseo",
+      "known_at": 9
+    },
+    {
+      "name": "Listerine",
+      "facet": "Eslóganes de productos del hogar y aseo",
+      "known_at": 8
+    },
+    {
+      "name": "Pampers",
+      "facet": "Eslóganes de productos del hogar y aseo",
+      "known_at": 6
+    },
+    {
+      "name": "Tigre Toño",
+      "facet": "Mascotas y personajes publicitarios",
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Hombre Michelin",
+      "facet": "Mascotas y personajes publicitarios",
+      "known_at": 7
+    },
+    {
+      "name": "Mr. Músculo",
+      "facet": "Mascotas y personajes publicitarios",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Don Limpio",
+      "facet": "Mascotas y personajes publicitarios",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Conejo de Nesquik",
+      "facet": "Mascotas y personajes publicitarios",
+      "known_at": 4
+    },
+    {
+      "name": "Gallo de Kellogg's",
+      "facet": "Mascotas y personajes publicitarios",
+      "known_at": 8
+    },
+    {
+      "name": "Personajes de M&M's",
+      "facet": "Mascotas y personajes publicitarios",
+      "known_at": 5
+    },
+    {
+      "name": "Muñeco de Pillsbury",
+      "facet": "Mascotas y personajes publicitarios",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Señor de Quaker",
+      "facet": "Mascotas y personajes publicitarios",
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Conejo de Duracell",
+      "facet": "Mascotas y personajes publicitarios",
+      "known_at": 7
+    },
+    {
+      "name": "Mr. Pringles",
+      "facet": "Mascotas y personajes publicitarios",
+      "known_at": 6
+    },
+    {
+      "name": "Wendy",
+      "facet": "Mascotas y personajes publicitarios",
+      "known_at": 12
+    },
+    {
+      "name": "Melvin (Choco Krispis)",
+      "facet": "Mascotas y personajes publicitarios",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Tucán Sam",
+      "facet": "Mascotas y personajes publicitarios",
+      "known_at": 6
+    },
+    {
+      "name": "Colombiana, la nuestra",
+      "facet": "Eslóganes y jingles colombianos",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Alpinito",
+      "facet": "Eslóganes y jingles colombianos",
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Bon Yurt",
+      "facet": "Eslóganes y jingles colombianos",
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Chocoramo",
+      "facet": "Eslóganes y jingles colombianos",
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Café Águila Roja",
+      "facet": "Eslóganes y jingles colombianos",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Papas Margarita",
+      "facet": "Eslóganes y jingles colombianos",
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Jugos Hit",
+      "facet": "Eslóganes y jingles colombianos",
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Manimoto",
+      "facet": "Eslóganes y jingles colombianos",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Almacenes Éxito",
+      "facet": "Eslóganes y jingles colombianos",
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Colanta",
+      "facet": "Eslóganes y jingles colombianos",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Pa-ra-pa-pa-pa de McDonald's",
+      "facet": "Cuñas de radio y jingles famosos",
+      "known_at": 4
+    },
+    {
+      "name": "Melodía de Intel",
+      "facet": "Cuñas de radio y jingles famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Sonido de inicio de Windows",
+      "facet": "Cuñas de radio y jingles famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Tudum de Netflix",
+      "facet": "Cuñas de radio y jingles famosos",
+      "known_at": 6
+    },
+    {
+      "name": "Rugido del león de MGM",
+      "facet": "Cuñas de radio y jingles famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Fanfarria de 20th Century Fox",
+      "facet": "Cuñas de radio y jingles famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Ya llegan las fiestas (Coca-Cola)",
+      "facet": "Cuñas de radio y jingles famosos",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "La guerra de los mundos (radio, 1938)",
+      "facet": "Cuñas de radio y jingles famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Sonido de inicio de PlayStation",
+      "facet": "Cuñas de radio y jingles famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Jingle de Wheaties",
+      "facet": "Cuñas de radio y jingles famosos",
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Sonido de arranque de Mac",
+      "facet": "Cuñas de radio y jingles famosos",
+      "known_at": 13
+    },
+    {
+      "name": "THX Deep Note",
+      "facet": "Cuñas de radio y jingles famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Música del carrito de helados",
+      "facet": "Cuñas de radio y jingles famosos",
+      "known_at": 3,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Cuña radial",
+      "facet": "Cuñas de radio y jingles famosos",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "David Ogilvy",
+      "facet": "Historia de la publicidad y sus pioneros",
+      "known_at": 14
+    },
+    {
+      "name": "Valla publicitaria",
+      "facet": "Historia de la publicidad y sus pioneros",
+      "known_at": 6
+    },
+    {
+      "name": "Mad Men",
+      "facet": "Historia de la publicidad y sus pioneros",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Times Square",
+      "facet": "Historia de la publicidad y sus pioneros",
+      "known_at": 6
+    },
+    {
+      "name": "Comerciales del Super Bowl",
+      "facet": "Historia de la publicidad y sus pioneros",
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Comercial de televisión",
+      "facet": "Historia de la publicidad y sus pioneros",
+      "known_at": 2
+    },
+    {
+      "name": "Afiche",
+      "facet": "Historia de la publicidad y sus pioneros",
+      "known_at": 4
+    },
+    {
+      "name": "Henri de Toulouse-Lautrec",
+      "facet": "Historia de la publicidad y sus pioneros",
+      "known_at": 14
+    },
+    {
+      "name": "Alfons Mucha",
+      "facet": "Historia de la publicidad y sus pioneros",
+      "known_at": 15
+    },
+    {
+      "name": "Latas de sopa Campbell",
+      "facet": "Historia de la publicidad y sus pioneros",
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Hombre sándwich",
+      "facet": "Historia de la publicidad y sus pioneros",
+      "known_at": 10
+    },
+    {
+      "name": "Imprenta de Gutenberg",
+      "facet": "Historia de la publicidad y sus pioneros",
+      "known_at": 8
+    },
+    {
+      "name": "Papá Noel de Coca-Cola",
+      "facet": "Historia de la publicidad y sus pioneros",
+      "known_at": 8
+    },
+    {
+      "name": "Avisos clasificados",
+      "facet": "Historia de la publicidad y sus pioneros",
+      "known_at": 9
+    },
+    {
+      "name": "Letrero de neón",
+      "facet": "Historia de la publicidad y sus pioneros",
+      "known_at": 7
+    },
+    {
+      "name": "Anuncios pintados de Pompeya",
+      "facet": "Historia de la publicidad y sus pioneros",
+      "known_at": 14
+    },
+    {
+      "name": "Edward Bernays",
+      "facet": "Historia de la publicidad y sus pioneros",
+      "known_at": 15
+    },
+    {
+      "name": "Ventana emergente",
+      "facet": "Historia de la publicidad y sus pioneros",
+      "known_at": 8
+    },
+    {
+      "name": "Dirigible de Goodyear",
+      "facet": "Historia de la publicidad y sus pioneros",
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Comercial de Bulova",
+      "facet": "Historia de la publicidad y sus pioneros",
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Jingle",
+      "facet": "Recursos del lenguaje publicitario",
+      "known_at": 6
+    },
+    {
+      "name": "Juego de palabras",
+      "facet": "Recursos del lenguaje publicitario",
+      "known_at": 6
+    },
+    {
+      "name": "Modo imperativo",
+      "facet": "Recursos del lenguaje publicitario",
+      "known_at": 10
+    },
+    {
+      "name": "Público objetivo",
+      "facet": "Recursos del lenguaje publicitario",
+      "known_at": 11
+    },
+    {
+      "name": "Publicidad engañosa",
+      "facet": "Recursos del lenguaje publicitario",
+      "known_at": 9
+    },
+    {
+      "name": "Mensaje subliminal",
+      "facet": "Recursos del lenguaje publicitario",
+      "known_at": 11
+    },
+    {
+      "name": "Embajador de marca",
+      "facet": "Recursos del lenguaje publicitario",
+      "known_at": 9
+    },
+    {
+      "name": "Logotipo sonoro",
+      "facet": "Recursos del lenguaje publicitario",
+      "known_at": 12
+    },
+    {
+      "name": "Emplazamiento de producto",
+      "facet": "Recursos del lenguaje publicitario",
+      "known_at": 12
+    },
+    {
+      "name": "Llamado a la acción",
+      "facet": "Recursos del lenguaje publicitario",
+      "known_at": 13
+    }
+  ]
+}

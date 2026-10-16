@@ -1,0 +1,1242 @@
+{
+  "subcategory": "pop-music",
+  "facets": [
+    "Estrellas pop internacionales",
+    "Pop latino y reguetón",
+    "Artistas pop colombianos",
+    "Canciones y álbumes famosos",
+    "Bandas y grupos pop",
+    "Videoclips y coreografías",
+    "Pop en películas y series",
+    "Historia y décadas del pop",
+    "Instrumentos y producción musical",
+    "Premios, festivales y conciertos",
+    "Términos y jerga del pop",
+    "Fans, apodos y fenómenos virales",
+    "Pop de Asia y África"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 5,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 1,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 1,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Michael Jackson",
+      "facet": "Estrellas pop internacionales",
+      "known_at": 4
+    },
+    {
+      "name": "Madonna",
+      "facet": "Estrellas pop internacionales",
+      "known_at": 8
+    },
+    {
+      "name": "Britney Spears",
+      "facet": "Estrellas pop internacionales",
+      "known_at": 9
+    },
+    {
+      "name": "Beyoncé",
+      "facet": "Estrellas pop internacionales",
+      "known_at": 6
+    },
+    {
+      "name": "Lady Gaga",
+      "facet": "Estrellas pop internacionales",
+      "known_at": 6
+    },
+    {
+      "name": "Rihanna",
+      "facet": "Estrellas pop internacionales",
+      "known_at": 7
+    },
+    {
+      "name": "Ariana Grande",
+      "facet": "Estrellas pop internacionales",
+      "known_at": 5
+    },
+    {
+      "name": "Billie Eilish",
+      "facet": "Estrellas pop internacionales",
+      "known_at": 5
+    },
+    {
+      "name": "Ed Sheeran",
+      "facet": "Estrellas pop internacionales",
+      "known_at": 6
+    },
+    {
+      "name": "Bruno Mars",
+      "facet": "Estrellas pop internacionales",
+      "known_at": 6
+    },
+    {
+      "name": "Dua Lipa",
+      "facet": "Estrellas pop internacionales",
+      "known_at": 6
+    },
+    {
+      "name": "Katy Perry",
+      "facet": "Estrellas pop internacionales",
+      "known_at": 6
+    },
+    {
+      "name": "Adele",
+      "facet": "Estrellas pop internacionales",
+      "known_at": 7
+    },
+    {
+      "name": "Harry Styles",
+      "facet": "Estrellas pop internacionales",
+      "known_at": 7
+    },
+    {
+      "name": "Olivia Rodrigo",
+      "facet": "Estrellas pop internacionales",
+      "known_at": 7
+    },
+    {
+      "name": "Whitney Houston",
+      "facet": "Estrellas pop internacionales",
+      "known_at": 10
+    },
+    {
+      "name": "Prince",
+      "facet": "Estrellas pop internacionales",
+      "known_at": 12
+    },
+    {
+      "name": "Miley Cyrus",
+      "facet": "Estrellas pop internacionales",
+      "known_at": 6
+    },
+    {
+      "name": "Sabrina Carpenter",
+      "facet": "Estrellas pop internacionales",
+      "known_at": 8
+    },
+    {
+      "name": "The Weeknd",
+      "facet": "Estrellas pop internacionales",
+      "known_at": 8
+    },
+    {
+      "name": "Bad Bunny",
+      "facet": "Pop latino y reguetón",
+      "known_at": 5
+    },
+    {
+      "name": "Daddy Yankee",
+      "facet": "Pop latino y reguetón",
+      "known_at": 7
+    },
+    {
+      "name": "Luis Fonsi",
+      "facet": "Pop latino y reguetón",
+      "known_at": 7
+    },
+    {
+      "name": "Ricky Martin",
+      "facet": "Pop latino y reguetón",
+      "known_at": 7
+    },
+    {
+      "name": "Enrique Iglesias",
+      "facet": "Pop latino y reguetón",
+      "known_at": 8
+    },
+    {
+      "name": "Jennifer Lopez",
+      "facet": "Pop latino y reguetón",
+      "known_at": 6
+    },
+    {
+      "name": "Gloria Estefan",
+      "facet": "Pop latino y reguetón",
+      "known_at": 11
+    },
+    {
+      "name": "Selena Quintanilla",
+      "facet": "Pop latino y reguetón",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Thalía",
+      "facet": "Pop latino y reguetón",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Luis Miguel",
+      "facet": "Pop latino y reguetón",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Rosalía",
+      "facet": "Pop latino y reguetón",
+      "known_at": 9
+    },
+    {
+      "name": "Becky G",
+      "facet": "Pop latino y reguetón",
+      "known_at": 9
+    },
+    {
+      "name": "Ozuna",
+      "facet": "Pop latino y reguetón",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Anitta",
+      "facet": "Pop latino y reguetón",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Peso Pluma",
+      "facet": "Pop latino y reguetón",
+      "known_at": 10
+    },
+    {
+      "name": "Romeo Santos",
+      "facet": "Pop latino y reguetón",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Marc Anthony",
+      "facet": "Pop latino y reguetón",
+      "known_at": 9
+    },
+    {
+      "name": "Juan Gabriel",
+      "facet": "Pop latino y reguetón",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Alejandro Sanz",
+      "facet": "Pop latino y reguetón",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Tini",
+      "facet": "Pop latino y reguetón",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Danna Paola",
+      "facet": "Pop latino y reguetón",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Chayanne",
+      "facet": "Pop latino y reguetón",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Pitbull",
+      "facet": "Pop latino y reguetón",
+      "known_at": 8
+    },
+    {
+      "name": "J Balvin",
+      "facet": "Artistas pop colombianos",
+      "known_at": 5
+    },
+    {
+      "name": "Karol G",
+      "facet": "Artistas pop colombianos",
+      "known_at": 4
+    },
+    {
+      "name": "Maluma",
+      "facet": "Artistas pop colombianos",
+      "known_at": 5
+    },
+    {
+      "name": "Camilo",
+      "facet": "Artistas pop colombianos",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Fonseca",
+      "facet": "Artistas pop colombianos",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Feid",
+      "facet": "Artistas pop colombianos",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Manuel Turizo",
+      "facet": "Artistas pop colombianos",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Greeicy",
+      "facet": "Artistas pop colombianos",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Fanny Lu",
+      "facet": "Artistas pop colombianos",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Andrés Cepeda",
+      "facet": "Artistas pop colombianos",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Ryan Castro",
+      "facet": "Artistas pop colombianos",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Blessd",
+      "facet": "Artistas pop colombianos",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Kali Uchis",
+      "facet": "Artistas pop colombianos",
+      "known_at": 12
+    },
+    {
+      "name": "Mike Bahía",
+      "facet": "Artistas pop colombianos",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Reykon",
+      "facet": "Artistas pop colombianos",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Charlie Zaa",
+      "facet": "Artistas pop colombianos",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Macarena",
+      "facet": "Canciones y álbumes famosos",
+      "known_at": 5
+    },
+    {
+      "name": "Hips Don't Lie",
+      "facet": "Canciones y álbumes famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Shake It Off",
+      "facet": "Canciones y álbumes famosos",
+      "known_at": 6
+    },
+    {
+      "name": "Billie Jean",
+      "facet": "Canciones y álbumes famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Imagine",
+      "facet": "Canciones y álbumes famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Tusa",
+      "facet": "Canciones y álbumes famosos",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "La Camisa Negra",
+      "facet": "Canciones y álbumes famosos",
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Happy",
+      "facet": "Canciones y álbumes famosos",
+      "known_at": 6
+    },
+    {
+      "name": "Uptown Funk",
+      "facet": "Canciones y álbumes famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Shape of You",
+      "facet": "Canciones y álbumes famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Bad Guy",
+      "facet": "Canciones y álbumes famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Bzrp Music Sessions #53",
+      "facet": "Canciones y álbumes famosos",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Livin' la Vida Loca",
+      "facet": "Canciones y álbumes famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Dynamite",
+      "facet": "Canciones y álbumes famosos",
+      "known_at": 6
+    },
+    {
+      "name": "Mi Gente",
+      "facet": "Canciones y álbumes famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Pies Descalzos",
+      "facet": "Canciones y álbumes famosos",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "BTS",
+      "facet": "Bandas y grupos pop",
+      "known_at": 4
+    },
+    {
+      "name": "ABBA",
+      "facet": "Bandas y grupos pop",
+      "known_at": 8
+    },
+    {
+      "name": "One Direction",
+      "facet": "Bandas y grupos pop",
+      "known_at": 6
+    },
+    {
+      "name": "Backstreet Boys",
+      "facet": "Bandas y grupos pop",
+      "known_at": 9
+    },
+    {
+      "name": "Spice Girls",
+      "facet": "Bandas y grupos pop",
+      "known_at": 9
+    },
+    {
+      "name": "Jonas Brothers",
+      "facet": "Bandas y grupos pop",
+      "known_at": 8
+    },
+    {
+      "name": "Maroon 5",
+      "facet": "Bandas y grupos pop",
+      "known_at": 8
+    },
+    {
+      "name": "Morat",
+      "facet": "Bandas y grupos pop",
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Piso 21",
+      "facet": "Bandas y grupos pop",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "RBD",
+      "facet": "Bandas y grupos pop",
+      "known_at": 8
+    },
+    {
+      "name": "Blackpink",
+      "facet": "Bandas y grupos pop",
+      "known_at": 5
+    },
+    {
+      "name": "Jackson 5",
+      "facet": "Bandas y grupos pop",
+      "known_at": 10
+    },
+    {
+      "name": "Wisin & Yandel",
+      "facet": "Bandas y grupos pop",
+      "known_at": 10
+    },
+    {
+      "name": "Monsieur Periné",
+      "facet": "Bandas y grupos pop",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Daft Punk",
+      "facet": "Bandas y grupos pop",
+      "known_at": 9
+    },
+    {
+      "name": "Bee Gees",
+      "facet": "Bandas y grupos pop",
+      "known_at": 11
+    },
+    {
+      "name": "CNCO",
+      "facet": "Bandas y grupos pop",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Moonwalk",
+      "facet": "Videoclips y coreografías",
+      "known_at": 5
+    },
+    {
+      "name": "Floss",
+      "facet": "Videoclips y coreografías",
+      "known_at": 4
+    },
+    {
+      "name": "Dab",
+      "facet": "Videoclips y coreografías",
+      "known_at": 5,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Paso del robot",
+      "facet": "Videoclips y coreografías",
+      "known_at": 6
+    },
+    {
+      "name": "Baile del pollito",
+      "facet": "Videoclips y coreografías",
+      "known_at": 2,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Guante blanco de Michael Jackson",
+      "facet": "Videoclips y coreografías",
+      "known_at": 6
+    },
+    {
+      "name": "Videoclip",
+      "facet": "Videoclips y coreografías",
+      "known_at": 5
+    },
+    {
+      "name": "Bailarines de apoyo",
+      "facet": "Videoclips y coreografías",
+      "known_at": 7
+    },
+    {
+      "name": "Coreógrafo",
+      "facet": "Videoclips y coreografías",
+      "known_at": 8
+    },
+    {
+      "name": "Aserejé",
+      "facet": "Videoclips y coreografías",
+      "known_at": 7
+    },
+    {
+      "name": "Y.M.C.A.",
+      "facet": "Videoclips y coreografías",
+      "known_at": 8
+    },
+    {
+      "name": "Cha Cha Slide",
+      "facet": "Videoclips y coreografías",
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Running man",
+      "facet": "Videoclips y coreografías",
+      "known_at": 9
+    },
+    {
+      "name": "Inclinación antigravedad de Smooth Criminal",
+      "facet": "Videoclips y coreografías",
+      "known_at": 10
+    },
+    {
+      "name": "Take On Me",
+      "facet": "Videoclips y coreografías",
+      "known_at": 12
+    },
+    {
+      "name": "Vogue",
+      "facet": "Videoclips y coreografías",
+      "known_at": 13
+    },
+    {
+      "name": "Single Ladies",
+      "facet": "Videoclips y coreografías",
+      "known_at": 10
+    },
+    {
+      "name": "Let It Go",
+      "facet": "Pop en películas y series",
+      "known_at": 2
+    },
+    {
+      "name": "High School Musical",
+      "facet": "Pop en películas y series",
+      "known_at": 6
+    },
+    {
+      "name": "Fiebre del sábado noche",
+      "facet": "Pop en películas y series",
+      "known_at": 12
+    },
+    {
+      "name": "Barbie (película de 2023)",
+      "facet": "Pop en películas y series",
+      "known_at": 6
+    },
+    {
+      "name": "De nada (Moana)",
+      "facet": "Pop en películas y series",
+      "known_at": 3
+    },
+    {
+      "name": "Guerreras K-pop",
+      "facet": "Pop en películas y series",
+      "known_at": 4
+    },
+    {
+      "name": "Sing: ¡Ven y canta!",
+      "facet": "Pop en películas y series",
+      "known_at": 4
+    },
+    {
+      "name": "Trolls",
+      "facet": "Pop en películas y series",
+      "known_at": 3
+    },
+    {
+      "name": "El gran showman",
+      "facet": "Pop en películas y series",
+      "known_at": 8
+    },
+    {
+      "name": "La La Land",
+      "facet": "Pop en películas y series",
+      "known_at": 11
+    },
+    {
+      "name": "Camp Rock",
+      "facet": "Pop en películas y series",
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Violetta",
+      "facet": "Pop en películas y series",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Soy Luna",
+      "facet": "Pop en películas y series",
+      "known_at": 7
+    },
+    {
+      "name": "Recuérdame (Coco)",
+      "facet": "Pop en películas y series",
+      "known_at": 3
+    },
+    {
+      "name": "Wicked",
+      "facet": "Pop en películas y series",
+      "known_at": 8
+    },
+    {
+      "name": "Música disco",
+      "facet": "Historia y décadas del pop",
+      "known_at": 9
+    },
+    {
+      "name": "Años 80",
+      "facet": "Historia y décadas del pop",
+      "known_at": 8
+    },
+    {
+      "name": "iPod",
+      "facet": "Historia y décadas del pop",
+      "known_at": 9
+    },
+    {
+      "name": "Motown",
+      "facet": "Historia y décadas del pop",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Auto-Tune",
+      "facet": "Instrumentos y producción musical",
+      "known_at": 9
+    },
+    {
+      "name": "Caja de ritmos",
+      "facet": "Instrumentos y producción musical",
+      "known_at": 11
+    },
+    {
+      "name": "Estudio de grabación",
+      "facet": "Instrumentos y producción musical",
+      "known_at": 6
+    },
+    {
+      "name": "DJ",
+      "facet": "Instrumentos y producción musical",
+      "known_at": 4
+    },
+    {
+      "name": "Consola de mezcla",
+      "facet": "Instrumentos y producción musical",
+      "known_at": 9
+    },
+    {
+      "name": "Productor musical",
+      "facet": "Instrumentos y producción musical",
+      "known_at": 8
+    },
+    {
+      "name": "Sampleo",
+      "facet": "Instrumentos y producción musical",
+      "known_at": 12
+    },
+    {
+      "name": "Loop",
+      "facet": "Instrumentos y producción musical",
+      "known_at": 10
+    },
+    {
+      "name": "Tornamesa",
+      "facet": "Instrumentos y producción musical",
+      "known_at": 8
+    },
+    {
+      "name": "Beat",
+      "facet": "Instrumentos y producción musical",
+      "known_at": 7
+    },
+    {
+      "name": "Ukelele",
+      "facet": "Instrumentos y producción musical",
+      "known_at": 5
+    },
+    {
+      "name": "Premios Grammy",
+      "facet": "Premios, festivales y conciertos",
+      "known_at": 6
+    },
+    {
+      "name": "Grammy Latino",
+      "facet": "Premios, festivales y conciertos",
+      "known_at": 8
+    },
+    {
+      "name": "Show de medio tiempo del Super Bowl",
+      "facet": "Premios, festivales y conciertos",
+      "known_at": 7
+    },
+    {
+      "name": "Festival de Eurovisión",
+      "facet": "Premios, festivales y conciertos",
+      "known_at": 12
+    },
+    {
+      "name": "Festival de Viña del Mar",
+      "facet": "Premios, festivales y conciertos",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Disco de platino",
+      "facet": "Premios, festivales y conciertos",
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "MTV Video Music Awards",
+      "facet": "Premios, festivales y conciertos",
+      "known_at": 10
+    },
+    {
+      "name": "Billboard Hot 100",
+      "facet": "Premios, festivales y conciertos",
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Premios Lo Nuestro",
+      "facet": "Premios, festivales y conciertos",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Gira mundial",
+      "facet": "Premios, festivales y conciertos",
+      "known_at": 6
+    },
+    {
+      "name": "The Eras Tour",
+      "facet": "Premios, festivales y conciertos",
+      "known_at": 7
+    },
+    {
+      "name": "Gaviota de Plata",
+      "facet": "Premios, festivales y conciertos",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Óscar a mejor canción original",
+      "facet": "Premios, festivales y conciertos",
+      "known_at": 9
+    },
+    {
+      "name": "Premios Juventud",
+      "facet": "Premios, festivales y conciertos",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Estadio El Campín",
+      "facet": "Premios, festivales y conciertos",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Estribillo",
+      "facet": "Términos y jerga del pop",
+      "known_at": 6
+    },
+    {
+      "name": "Sencillo",
+      "facet": "Términos y jerga del pop",
+      "known_at": 8
+    },
+    {
+      "name": "Featuring",
+      "facet": "Términos y jerga del pop",
+      "known_at": 8
+    },
+    {
+      "name": "Remix",
+      "facet": "Términos y jerga del pop",
+      "known_at": 6
+    },
+    {
+      "name": "Hit",
+      "facet": "Términos y jerga del pop",
+      "known_at": 5
+    },
+    {
+      "name": "Playlist",
+      "facet": "Términos y jerga del pop",
+      "known_at": 4
+    },
+    {
+      "name": "Balada",
+      "facet": "Términos y jerga del pop",
+      "known_at": 7
+    },
+    {
+      "name": "Dueto",
+      "facet": "Términos y jerga del pop",
+      "known_at": 6
+    },
+    {
+      "name": "Puente (canción)",
+      "facet": "Términos y jerga del pop",
+      "known_at": 11
+    },
+    {
+      "name": "Acústico",
+      "facet": "Términos y jerga del pop",
+      "known_at": 8
+    },
+    {
+      "name": "Dembow",
+      "facet": "Términos y jerga del pop",
+      "known_at": 11
+    },
+    {
+      "name": "K-pop",
+      "facet": "Términos y jerga del pop",
+      "known_at": 5
+    },
+    {
+      "name": "Synth-pop",
+      "facet": "Términos y jerga del pop",
+      "known_at": 13
+    },
+    {
+      "name": "Bachata",
+      "facet": "Términos y jerga del pop",
+      "known_at": 8
+    },
+    {
+      "name": "Gancho (hook)",
+      "facet": "Términos y jerga del pop",
+      "known_at": 12
+    },
+    {
+      "name": "Álbum",
+      "facet": "Términos y jerga del pop",
+      "known_at": 4
+    },
+    {
+      "name": "EP",
+      "facet": "Términos y jerga del pop",
+      "known_at": 11
+    },
+    {
+      "name": "Fade out",
+      "facet": "Términos y jerga del pop",
+      "known_at": 13
+    },
+    {
+      "name": "Letra",
+      "facet": "Términos y jerga del pop",
+      "known_at": 3
+    },
+    {
+      "name": "Swifties",
+      "facet": "Fans, apodos y fenómenos virales",
+      "known_at": 7
+    },
+    {
+      "name": "ARMY",
+      "facet": "Fans, apodos y fenómenos virales",
+      "known_at": 7
+    },
+    {
+      "name": "Beliebers",
+      "facet": "Fans, apodos y fenómenos virales",
+      "known_at": 9
+    },
+    {
+      "name": "Rey del Pop",
+      "facet": "Fans, apodos y fenómenos virales",
+      "known_at": 5
+    },
+    {
+      "name": "Reina del Pop",
+      "facet": "Fans, apodos y fenómenos virales",
+      "known_at": 10
+    },
+    {
+      "name": "Pulseras de la amistad",
+      "facet": "Fans, apodos y fenómenos virales",
+      "known_at": 10
+    },
+    {
+      "name": "Little Monsters",
+      "facet": "Fans, apodos y fenómenos virales",
+      "known_at": 11
+    },
+    {
+      "name": "Directioners",
+      "facet": "Fans, apodos y fenómenos virales",
+      "known_at": 10
+    },
+    {
+      "name": "Reto de TikTok",
+      "facet": "Fans, apodos y fenómenos virales",
+      "known_at": 4
+    },
+    {
+      "name": "Lightstick",
+      "facet": "Fans, apodos y fenómenos virales",
+      "known_at": 9
+    },
+    {
+      "name": "Fandom",
+      "facet": "Fans, apodos y fenómenos virales",
+      "known_at": 7
+    },
+    {
+      "name": "La Bichota",
+      "facet": "Fans, apodos y fenómenos virales",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "El Conejo Malo",
+      "facet": "Fans, apodos y fenómenos virales",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Mr. Worldwide",
+      "facet": "Fans, apodos y fenómenos virales",
+      "known_at": 10
+    },
+    {
+      "name": "Stan",
+      "facet": "Fans, apodos y fenómenos virales",
+      "known_at": 13
+    },
+    {
+      "name": "Club de fans",
+      "facet": "Fans, apodos y fenómenos virales",
+      "known_at": 5
+    },
+    {
+      "name": "Mariah Carey",
+      "facet": "Estrellas pop internacionales",
+      "known_at": 6
+    },
+    {
+      "name": "Selena Gomez",
+      "facet": "Estrellas pop internacionales",
+      "known_at": 4
+    },
+    {
+      "name": "Shawn Mendes",
+      "facet": "Estrellas pop internacionales",
+      "known_at": 7
+    },
+    {
+      "name": "Stevie Wonder",
+      "facet": "Estrellas pop internacionales",
+      "known_at": 9
+    },
+    {
+      "name": "Waka Waka (This Time for Africa)",
+      "facet": "Canciones y álbumes famosos",
+      "known_at": 3
+    },
+    {
+      "name": "Dancing Queen",
+      "facet": "Canciones y álbumes famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Wannabe",
+      "facet": "Canciones y álbumes famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Blinding Lights",
+      "facet": "Canciones y álbumes famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Baby (Justin Bieber song)",
+      "facet": "Canciones y álbumes famosos",
+      "known_at": 6
+    },
+    {
+      "name": "Destiny's Child",
+      "facet": "Bandas y grupos pop",
+      "known_at": 9
+    },
+    {
+      "name": "Black Eyed Peas",
+      "facet": "Bandas y grupos pop",
+      "known_at": 8
+    },
+    {
+      "name": "NSYNC",
+      "facet": "Bandas y grupos pop",
+      "known_at": 10
+    },
+    {
+      "name": "Twice",
+      "facet": "Bandas y grupos pop",
+      "known_at": 9
+    },
+    {
+      "name": "Jerusalema dance challenge",
+      "facet": "Videoclips y coreografías",
+      "known_at": 9
+    },
+    {
+      "name": "Finger heart",
+      "facet": "Videoclips y coreografías",
+      "known_at": 6
+    },
+    {
+      "name": "We Don't Talk About Bruno",
+      "facet": "Pop en películas y series",
+      "known_at": 2
+    },
+    {
+      "name": "Shallow (A Star Is Born)",
+      "facet": "Pop en películas y series",
+      "known_at": 10
+    },
+    {
+      "name": "Vinyl record",
+      "facet": "Historia y décadas del pop",
+      "known_at": 6
+    },
+    {
+      "name": "Cassette tape",
+      "facet": "Historia y décadas del pop",
+      "known_at": 7
+    },
+    {
+      "name": "Synthesizer",
+      "facet": "Instrumentos y producción musical",
+      "known_at": 7
+    },
+    {
+      "name": "Keytar",
+      "facet": "Instrumentos y producción musical",
+      "known_at": 9
+    },
+    {
+      "name": "Microphone",
+      "facet": "Instrumentos y producción musical",
+      "known_at": 1
+    },
+    {
+      "name": "Wembley Stadium",
+      "facet": "Premios, festivales y conciertos",
+      "known_at": 8
+    },
+    {
+      "name": "Gold record",
+      "facet": "Premios, festivales y conciertos",
+      "known_at": 8
+    },
+    {
+      "name": "Boy band",
+      "facet": "Términos y jerga del pop",
+      "known_at": 6
+    },
+    {
+      "name": "Cover version",
+      "facet": "Términos y jerga del pop",
+      "known_at": 6
+    },
+    {
+      "name": "A cappella",
+      "facet": "Términos y jerga del pop",
+      "known_at": 8
+    },
+    {
+      "name": "Falsetto",
+      "facet": "Términos y jerga del pop",
+      "known_at": 10
+    },
+    {
+      "name": "Lip sync",
+      "facet": "Términos y jerga del pop",
+      "known_at": 7
+    },
+    {
+      "name": "One-hit wonder",
+      "facet": "Términos y jerga del pop",
+      "known_at": 9
+    },
+    {
+      "name": "Beyhive",
+      "facet": "Fans, apodos y fenómenos virales",
+      "known_at": 10
+    },
+    {
+      "name": "Afrobeats",
+      "facet": "Pop de Asia y África",
+      "known_at": 9
+    },
+    {
+      "name": "Burna Boy",
+      "facet": "Pop de Asia y África",
+      "known_at": 11
+    },
+    {
+      "name": "Hatsune Miku",
+      "facet": "Pop de Asia y África",
+      "known_at": 8
+    },
+    {
+      "name": "Bollywood music",
+      "facet": "Pop de Asia y África",
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Jai Ho",
+      "facet": "Pop de Asia y África",
+      "known_at": 11
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-15",
+      "added": 36,
+      "unused": 167
+    }
+  ]
+}

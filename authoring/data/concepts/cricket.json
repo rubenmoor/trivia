@@ -1,0 +1,1052 @@
+{
+  "subcategory": "cricket",
+  "facets": [
+    "Equipo y material del críquet",
+    "Reglas básicas y puntuación",
+    "Posiciones y funciones de los jugadores",
+    "Formatos de partido",
+    "Jerga y términos del críquet",
+    "Jugadores legendarios",
+    "Países y grandes rivalidades",
+    "Torneos y trofeos",
+    "Estadios y lugares famosos",
+    "Historia y origen del críquet",
+    "Críquet en el cine y la cultura",
+    "Críquet frente a otros deportes de bate"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 4,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 1,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 4,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Bate de críquet",
+      "facet": "Equipo y material del críquet",
+      "known_at": 5
+    },
+    {
+      "name": "Pelota de críquet",
+      "facet": "Equipo y material del críquet",
+      "known_at": 6
+    },
+    {
+      "name": "Wicket",
+      "facet": "Equipo y material del críquet",
+      "known_at": 9
+    },
+    {
+      "name": "Stumps",
+      "facet": "Equipo y material del críquet",
+      "known_at": 12
+    },
+    {
+      "name": "Bails",
+      "facet": "Equipo y material del críquet",
+      "known_at": 13
+    },
+    {
+      "name": "Casco de críquet",
+      "facet": "Equipo y material del críquet",
+      "known_at": 8
+    },
+    {
+      "name": "Espinilleras de bateador",
+      "facet": "Equipo y material del críquet",
+      "known_at": 9
+    },
+    {
+      "name": "Guantes del wicketkeeper",
+      "facet": "Equipo y material del críquet",
+      "known_at": 11
+    },
+    {
+      "name": "Madera de sauce",
+      "facet": "Equipo y material del críquet",
+      "known_at": 12
+    },
+    {
+      "name": "Pelota roja",
+      "facet": "Equipo y material del críquet",
+      "known_at": 10
+    },
+    {
+      "name": "Pelota blanca",
+      "facet": "Equipo y material del críquet",
+      "known_at": 12
+    },
+    {
+      "name": "Pelota rosada",
+      "facet": "Equipo y material del críquet",
+      "known_at": 13
+    },
+    {
+      "name": "Costura de la pelota",
+      "facet": "Equipo y material del críquet",
+      "known_at": 12
+    },
+    {
+      "name": "Cuero",
+      "facet": "Equipo y material del críquet",
+      "known_at": 8
+    },
+    {
+      "name": "Uniforme blanco de críquet",
+      "facet": "Equipo y material del críquet",
+      "known_at": 8
+    },
+    {
+      "name": "Marcador de críquet",
+      "facet": "Equipo y material del críquet",
+      "known_at": 12
+    },
+    {
+      "name": "Gorra verde de Australia",
+      "facet": "Equipo y material del críquet",
+      "known_at": 14
+    },
+    {
+      "name": "Run",
+      "facet": "Reglas básicas y puntuación",
+      "known_at": 9
+    },
+    {
+      "name": "Four",
+      "facet": "Reglas básicas y puntuación",
+      "known_at": 11
+    },
+    {
+      "name": "Over",
+      "facet": "Reglas básicas y puntuación",
+      "known_at": 12
+    },
+    {
+      "name": "Once jugadores",
+      "facet": "Reglas básicas y puntuación",
+      "known_at": 8
+    },
+    {
+      "name": "Out",
+      "facet": "Reglas básicas y puntuación",
+      "known_at": 7
+    },
+    {
+      "name": "LBW",
+      "facet": "Reglas básicas y puntuación",
+      "known_at": 14
+    },
+    {
+      "name": "Bowled",
+      "facet": "Reglas básicas y puntuación",
+      "known_at": 12
+    },
+    {
+      "name": "Caught",
+      "facet": "Reglas básicas y puntuación",
+      "known_at": 12
+    },
+    {
+      "name": "Run out",
+      "facet": "Reglas básicas y puntuación",
+      "known_at": 13
+    },
+    {
+      "name": "Stumped",
+      "facet": "Reglas básicas y puntuación",
+      "known_at": 14
+    },
+    {
+      "name": "No-ball",
+      "facet": "Reglas básicas y puntuación",
+      "known_at": 13
+    },
+    {
+      "name": "Wide",
+      "facet": "Reglas básicas y puntuación",
+      "known_at": 13
+    },
+    {
+      "name": "Innings",
+      "facet": "Reglas básicas y puntuación",
+      "known_at": 12
+    },
+    {
+      "name": "Brazo recto al lanzar",
+      "facet": "Reglas básicas y puntuación",
+      "known_at": 11
+    },
+    {
+      "name": "Umpire",
+      "facet": "Reglas básicas y puntuación",
+      "known_at": 12
+    },
+    {
+      "name": "Toss",
+      "facet": "Reglas básicas y puntuación",
+      "known_at": 12
+    },
+    {
+      "name": "Pitch",
+      "facet": "Reglas básicas y puntuación",
+      "known_at": 11
+    },
+    {
+      "name": "Crease",
+      "facet": "Reglas básicas y puntuación",
+      "known_at": 14
+    },
+    {
+      "name": "Boundary",
+      "facet": "Reglas básicas y puntuación",
+      "known_at": 12
+    },
+    {
+      "name": "Bateador",
+      "facet": "Posiciones y funciones de los jugadores",
+      "known_at": 5
+    },
+    {
+      "name": "Bowler",
+      "facet": "Posiciones y funciones de los jugadores",
+      "known_at": 9
+    },
+    {
+      "name": "Wicketkeeper",
+      "facet": "Posiciones y funciones de los jugadores",
+      "known_at": 11
+    },
+    {
+      "name": "Capitán de críquet",
+      "facet": "Posiciones y funciones de los jugadores",
+      "known_at": 8
+    },
+    {
+      "name": "Fildeador",
+      "facet": "Posiciones y funciones de los jugadores",
+      "known_at": 10
+    },
+    {
+      "name": "Fast bowler",
+      "facet": "Posiciones y funciones de los jugadores",
+      "known_at": 12
+    },
+    {
+      "name": "Spin bowler",
+      "facet": "Posiciones y funciones de los jugadores",
+      "known_at": 12
+    },
+    {
+      "name": "Leg spinner",
+      "facet": "Posiciones y funciones de los jugadores",
+      "known_at": 14
+    },
+    {
+      "name": "Off spinner",
+      "facet": "Posiciones y funciones de los jugadores",
+      "known_at": 14
+    },
+    {
+      "name": "All-rounder",
+      "facet": "Posiciones y funciones de los jugadores",
+      "known_at": 13
+    },
+    {
+      "name": "Opening batsman",
+      "facet": "Posiciones y funciones de los jugadores",
+      "known_at": 13
+    },
+    {
+      "name": "Duodécimo jugador",
+      "facet": "Posiciones y funciones de los jugadores",
+      "known_at": 13
+    },
+    {
+      "name": "Slip",
+      "facet": "Posiciones y funciones de los jugadores",
+      "known_at": 14,
+      "retired": "unaskable: Slip es una posición de fildeo oscura; imposible llevarla a dificultad baja."
+    },
+    {
+      "name": "Gully",
+      "facet": "Posiciones y funciones de los jugadores",
+      "known_at": 15
+    },
+    {
+      "name": "Silly point",
+      "facet": "Posiciones y funciones de los jugadores",
+      "known_at": 14
+    },
+    {
+      "name": "Square leg",
+      "facet": "Posiciones y funciones de los jugadores",
+      "known_at": 15
+    },
+    {
+      "name": "Third man",
+      "facet": "Posiciones y funciones de los jugadores",
+      "known_at": 15
+    },
+    {
+      "name": "Fine leg",
+      "facet": "Posiciones y funciones de los jugadores",
+      "known_at": 15
+    },
+    {
+      "name": "Nightwatchman",
+      "facet": "Posiciones y funciones de los jugadores",
+      "known_at": 15
+    },
+    {
+      "name": "Tail-ender",
+      "facet": "Posiciones y funciones de los jugadores",
+      "known_at": 15
+    },
+    {
+      "name": "Test match",
+      "facet": "Formatos de partido",
+      "known_at": 12
+    },
+    {
+      "name": "ODI",
+      "facet": "Formatos de partido",
+      "known_at": 13
+    },
+    {
+      "name": "Twenty20",
+      "facet": "Formatos de partido",
+      "known_at": 12
+    },
+    {
+      "name": "The Hundred",
+      "facet": "Formatos de partido",
+      "known_at": 14
+    },
+    {
+      "name": "T10",
+      "facet": "Formatos de partido",
+      "known_at": 14
+    },
+    {
+      "name": "First-class cricket",
+      "facet": "Formatos de partido",
+      "known_at": 15
+    },
+    {
+      "name": "Partido de cinco días",
+      "facet": "Formatos de partido",
+      "known_at": 10
+    },
+    {
+      "name": "Test día-noche",
+      "facet": "Formatos de partido",
+      "known_at": 14
+    },
+    {
+      "name": "Super over",
+      "facet": "Formatos de partido",
+      "known_at": 14
+    },
+    {
+      "name": "Método Duckworth-Lewis",
+      "facet": "Formatos de partido",
+      "known_at": 15
+    },
+    {
+      "name": "Pausa del té",
+      "facet": "Formatos de partido",
+      "known_at": 11
+    },
+    {
+      "name": "Empate en un test",
+      "facet": "Formatos de partido",
+      "known_at": 13
+    },
+    {
+      "name": "Follow-on",
+      "facet": "Formatos de partido",
+      "known_at": 15,
+      "retired": "unaskable: El follow-on es una regla técnica que el público no conoce; las opciones no encajan."
+    },
+    {
+      "name": "Declaración",
+      "facet": "Formatos de partido",
+      "known_at": 15
+    },
+    {
+      "name": "Críquet de patio",
+      "facet": "Formatos de partido",
+      "known_at": 12
+    },
+    {
+      "name": "Críquet de calle",
+      "facet": "Formatos de partido",
+      "known_at": 11
+    },
+    {
+      "name": "Críquet bajo techo",
+      "facet": "Formatos de partido",
+      "known_at": 13
+    },
+    {
+      "name": "Duck",
+      "facet": "Jerga y términos del críquet",
+      "known_at": 13
+    },
+    {
+      "name": "Golden duck",
+      "facet": "Jerga y términos del críquet",
+      "known_at": 14
+    },
+    {
+      "name": "Century",
+      "facet": "Jerga y términos del críquet",
+      "known_at": 12
+    },
+    {
+      "name": "Half-century",
+      "facet": "Jerga y términos del críquet",
+      "known_at": 13
+    },
+    {
+      "name": "Maiden over",
+      "facet": "Jerga y términos del críquet",
+      "known_at": 14
+    },
+    {
+      "name": "Yorker",
+      "facet": "Jerga y términos del críquet",
+      "known_at": 14
+    },
+    {
+      "name": "Bouncer",
+      "facet": "Jerga y términos del críquet",
+      "known_at": 13
+    },
+    {
+      "name": "Googly",
+      "facet": "Jerga y términos del críquet",
+      "known_at": 15
+    },
+    {
+      "name": "Doosra",
+      "facet": "Jerga y términos del críquet",
+      "known_at": 15
+    },
+    {
+      "name": "Sledging",
+      "facet": "Jerga y términos del críquet",
+      "known_at": 15
+    },
+    {
+      "name": "Howzat",
+      "facet": "Jerga y términos del críquet",
+      "known_at": 14
+    },
+    {
+      "name": "Sticky wicket",
+      "facet": "Jerga y términos del críquet",
+      "known_at": 14
+    },
+    {
+      "name": "Nelson",
+      "facet": "Jerga y términos del críquet",
+      "known_at": 15
+    },
+    {
+      "name": "Cover drive",
+      "facet": "Jerga y términos del críquet",
+      "known_at": 15
+    },
+    {
+      "name": "Reverse sweep",
+      "facet": "Jerga y términos del críquet",
+      "known_at": 15
+    },
+    {
+      "name": "Helicopter shot",
+      "facet": "Jerga y términos del críquet",
+      "known_at": 15
+    },
+    {
+      "name": "Not out",
+      "facet": "Jerga y términos del críquet",
+      "known_at": 13
+    },
+    {
+      "name": "Sachin Tendulkar",
+      "facet": "Jugadores legendarios",
+      "known_at": 12
+    },
+    {
+      "name": "Don Bradman",
+      "facet": "Jugadores legendarios",
+      "known_at": 14
+    },
+    {
+      "name": "Virat Kohli",
+      "facet": "Jugadores legendarios",
+      "known_at": 13
+    },
+    {
+      "name": "MS Dhoni",
+      "facet": "Jugadores legendarios",
+      "known_at": 14
+    },
+    {
+      "name": "Brian Lara",
+      "facet": "Jugadores legendarios",
+      "known_at": 14
+    },
+    {
+      "name": "Shane Warne",
+      "facet": "Jugadores legendarios",
+      "known_at": 14
+    },
+    {
+      "name": "Muttiah Muralitharan",
+      "facet": "Jugadores legendarios",
+      "known_at": 15
+    },
+    {
+      "name": "Viv Richards",
+      "facet": "Jugadores legendarios",
+      "known_at": 15
+    },
+    {
+      "name": "Imran Khan",
+      "facet": "Jugadores legendarios",
+      "known_at": 13
+    },
+    {
+      "name": "W. G. Grace",
+      "facet": "Jugadores legendarios",
+      "known_at": 15
+    },
+    {
+      "name": "Garfield Sobers",
+      "facet": "Jugadores legendarios",
+      "known_at": 15
+    },
+    {
+      "name": "Ian Botham",
+      "facet": "Jugadores legendarios",
+      "known_at": 15
+    },
+    {
+      "name": "Wasim Akram",
+      "facet": "Jugadores legendarios",
+      "known_at": 15
+    },
+    {
+      "name": "Kapil Dev",
+      "facet": "Jugadores legendarios",
+      "known_at": 15
+    },
+    {
+      "name": "Ricky Ponting",
+      "facet": "Jugadores legendarios",
+      "known_at": 15,
+      "retired": "unaskable: Ricky Ponting es desconocido para familias hispanohablantes; ninguna opción da una pregunta justa."
+    },
+    {
+      "name": "Jacques Kallis",
+      "facet": "Jugadores legendarios",
+      "known_at": 15
+    },
+    {
+      "name": "AB de Villiers",
+      "facet": "Jugadores legendarios",
+      "known_at": 15
+    },
+    {
+      "name": "Chris Gayle",
+      "facet": "Jugadores legendarios",
+      "known_at": 15
+    },
+    {
+      "name": "Ellyse Perry",
+      "facet": "Jugadores legendarios",
+      "known_at": 15
+    },
+    {
+      "name": "Mithali Raj",
+      "facet": "Jugadores legendarios",
+      "known_at": 15
+    },
+    {
+      "name": "Ben Stokes",
+      "facet": "Jugadores legendarios",
+      "known_at": 15
+    },
+    {
+      "name": "James Anderson",
+      "facet": "Jugadores legendarios",
+      "known_at": 15
+    },
+    {
+      "name": "Rashid Khan",
+      "facet": "Jugadores legendarios",
+      "known_at": 15
+    },
+    {
+      "name": "Bangladesh",
+      "facet": "Países y grandes rivalidades",
+      "known_at": 12
+    },
+    {
+      "name": "Afganistán",
+      "facet": "Países y grandes rivalidades",
+      "known_at": 13
+    },
+    {
+      "name": "Zimbabue",
+      "facet": "Países y grandes rivalidades",
+      "known_at": 14
+    },
+    {
+      "name": "Rivalidad India-Pakistán",
+      "facet": "Países y grandes rivalidades",
+      "known_at": 12
+    },
+    {
+      "name": "Copa del Mundo de Críquet",
+      "facet": "Torneos y trofeos",
+      "known_at": 10
+    },
+    {
+      "name": "The Ashes",
+      "facet": "Torneos y trofeos",
+      "known_at": 13
+    },
+    {
+      "name": "Urna de las Ashes",
+      "facet": "Torneos y trofeos",
+      "known_at": 14
+    },
+    {
+      "name": "IPL",
+      "facet": "Torneos y trofeos",
+      "known_at": 13
+    },
+    {
+      "name": "Mundial T20",
+      "facet": "Torneos y trofeos",
+      "known_at": 13
+    },
+    {
+      "name": "Champions Trophy",
+      "facet": "Torneos y trofeos",
+      "known_at": 15
+    },
+    {
+      "name": "Campeonato Mundial de Test",
+      "facet": "Torneos y trofeos",
+      "known_at": 15,
+      "retired": "unaskable: El Campeonato Mundial de Test es demasiado especializado para este público."
+    },
+    {
+      "name": "Big Bash League",
+      "facet": "Torneos y trofeos",
+      "known_at": 15
+    },
+    {
+      "name": "County Championship",
+      "facet": "Torneos y trofeos",
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Trofeo Border-Gavaskar",
+      "facet": "Torneos y trofeos",
+      "known_at": 15
+    },
+    {
+      "name": "Caribbean Premier League",
+      "facet": "Torneos y trofeos",
+      "known_at": 15
+    },
+    {
+      "name": "Pakistan Super League",
+      "facet": "Torneos y trofeos",
+      "known_at": 15
+    },
+    {
+      "name": "Wisden Cricketers' Almanack",
+      "facet": "Torneos y trofeos",
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "ICC",
+      "facet": "Torneos y trofeos",
+      "known_at": 13
+    },
+    {
+      "name": "Mundial de 1983",
+      "facet": "Torneos y trofeos",
+      "known_at": 15
+    },
+    {
+      "name": "Juegos Olímpicos de Los Ángeles 2028",
+      "facet": "Torneos y trofeos",
+      "known_at": 12
+    },
+    {
+      "name": "Juegos Olímpicos de París 1900",
+      "facet": "Torneos y trofeos",
+      "known_at": 14
+    },
+    {
+      "name": "Juegos de la Commonwealth",
+      "facet": "Torneos y trofeos",
+      "known_at": 13
+    },
+    {
+      "name": "Lord's",
+      "facet": "Estadios y lugares famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Melbourne Cricket Ground",
+      "facet": "Estadios y lugares famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Eden Gardens",
+      "facet": "Estadios y lugares famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Estadio Narendra Modi",
+      "facet": "Estadios y lugares famosos",
+      "known_at": 14
+    },
+    {
+      "name": "The Oval",
+      "facet": "Estadios y lugares famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Wankhede Stadium",
+      "facet": "Estadios y lugares famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Headingley",
+      "facet": "Estadios y lugares famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Sydney Cricket Ground",
+      "facet": "Estadios y lugares famosos",
+      "known_at": 14,
+      "retired": "unaskable: Los datos del Sydney Cricket Ground son solo para especialistas del críquet."
+    },
+    {
+      "name": "Edgbaston",
+      "facet": "Estadios y lugares famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Trent Bridge",
+      "facet": "Estadios y lugares famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Estadio de Galle",
+      "facet": "Estadios y lugares famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Kensington Oval",
+      "facet": "Estadios y lugares famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Newlands",
+      "facet": "Estadios y lugares famosos",
+      "known_at": 15
+    },
+    {
+      "name": "The Gabba",
+      "facet": "Estadios y lugares famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Adelaide Oval",
+      "facet": "Estadios y lugares famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Long Room",
+      "facet": "Estadios y lugares famosos",
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Marylebone Cricket Club",
+      "facet": "Historia y origen del críquet",
+      "known_at": 15
+    },
+    {
+      "name": "Sureste de Inglaterra",
+      "facet": "Historia y origen del críquet",
+      "known_at": 12
+    },
+    {
+      "name": "Siglo XVI",
+      "facet": "Historia y origen del críquet",
+      "known_at": 13
+    },
+    {
+      "name": "Hambledon Club",
+      "facet": "Historia y origen del críquet",
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Imperio británico",
+      "facet": "Historia y origen del críquet",
+      "known_at": 10
+    },
+    {
+      "name": "Primer test de 1877",
+      "facet": "Historia y origen del críquet",
+      "known_at": 15
+    },
+    {
+      "name": "Serie Bodyline",
+      "facet": "Historia y origen del críquet",
+      "known_at": 15
+    },
+    {
+      "name": "Leyes del críquet",
+      "facet": "Historia y origen del críquet",
+      "known_at": 14
+    },
+    {
+      "name": "Lanzamiento por debajo del brazo",
+      "facet": "Historia y origen del críquet",
+      "known_at": 13
+    },
+    {
+      "name": "Lanzamiento por encima del hombro",
+      "facet": "Historia y origen del críquet",
+      "known_at": 13
+    },
+    {
+      "name": "World Series Cricket",
+      "facet": "Historia y origen del críquet",
+      "known_at": 15
+    },
+    {
+      "name": "Primer ODI de 1971",
+      "facet": "Historia y origen del críquet",
+      "known_at": 15
+    },
+    {
+      "name": "Partido Estados Unidos-Canadá de 1844",
+      "facet": "Historia y origen del críquet",
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Pastores ingleses",
+      "facet": "Historia y origen del críquet",
+      "known_at": 13
+    },
+    {
+      "name": "Thomas Lord",
+      "facet": "Historia y origen del críquet",
+      "known_at": 15
+    },
+    {
+      "name": "Boicot a Sudáfrica por el apartheid",
+      "facet": "Historia y origen del críquet",
+      "known_at": 14
+    },
+    {
+      "name": "Primer test femenino de 1934",
+      "facet": "Historia y origen del críquet",
+      "known_at": 15
+    },
+    {
+      "name": "Lagaan",
+      "facet": "Críquet en el cine y la cultura",
+      "known_at": 14
+    },
+    {
+      "name": "83 (película)",
+      "facet": "Críquet en el cine y la cultura",
+      "known_at": 15
+    },
+    {
+      "name": "M.S. Dhoni: The Untold Story",
+      "facet": "Críquet en el cine y la cultura",
+      "known_at": 15
+    },
+    {
+      "name": "Fire in Babylon",
+      "facet": "Críquet en el cine y la cultura",
+      "known_at": 15
+    },
+    {
+      "name": "Pepito Grillo",
+      "facet": "Críquet en el cine y la cultura",
+      "known_at": 4
+    },
+    {
+      "name": "Krikkit",
+      "facet": "Críquet en el cine y la cultura",
+      "known_at": 15
+    },
+    {
+      "name": "Test Match Special",
+      "facet": "Críquet en el cine y la cultura",
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Cricket, Lovely Cricket",
+      "facet": "Críquet en el cine y la cultura",
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "P. G. Wodehouse",
+      "facet": "Críquet en el cine y la cultura",
+      "known_at": 15
+    },
+    {
+      "name": "Richie Benaud",
+      "facet": "Críquet en el cine y la cultura",
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Harold Pinter",
+      "facet": "Críquet en el cine y la cultura",
+      "known_at": 15
+    },
+    {
+      "name": "Rounders",
+      "facet": "Críquet frente a otros deportes de bate",
+      "known_at": 14
+    },
+    {
+      "name": "Pesäpallo",
+      "facet": "Críquet frente a otros deportes de bate",
+      "known_at": 15
+    },
+    {
+      "name": "Stoolball",
+      "facet": "Críquet frente a otros deportes de bate",
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Croquet",
+      "facet": "Críquet frente a otros deportes de bate",
+      "known_at": 10
+    },
+    {
+      "name": "Bate de béisbol",
+      "facet": "Críquet frente a otros deportes de bate",
+      "known_at": 2
+    },
+    {
+      "name": "Home run",
+      "facet": "Críquet frente a otros deportes de bate",
+      "known_at": 5
+    },
+    {
+      "name": "Pitcher",
+      "facet": "Críquet frente a otros deportes de bate",
+      "known_at": 6
+    },
+    {
+      "name": "Catcher",
+      "facet": "Críquet frente a otros deportes de bate",
+      "known_at": 7
+    },
+    {
+      "name": "Strike",
+      "facet": "Críquet frente a otros deportes de bate",
+      "known_at": 7
+    },
+    {
+      "name": "Inning de béisbol",
+      "facet": "Críquet frente a otros deportes de bate",
+      "known_at": 9
+    },
+    {
+      "name": "Diamante de béisbol",
+      "facet": "Críquet frente a otros deportes de bate",
+      "known_at": 7
+    },
+    {
+      "name": "Kilikiti",
+      "facet": "Críquet frente a otros deportes de bate",
+      "known_at": 15
+    },
+    {
+      "name": "Lapta",
+      "facet": "Críquet frente a otros deportes de bate",
+      "known_at": 15
+    },
+    {
+      "name": "Stickball",
+      "facet": "Críquet frente a otros deportes de bate",
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Guante de béisbol",
+      "facet": "Críquet frente a otros deportes de bate",
+      "known_at": 4
+    },
+    {
+      "name": "Grand slam de béisbol",
+      "facet": "Críquet frente a otros deportes de bate",
+      "known_at": 11
+    }
+  ]
+}

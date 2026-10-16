@@ -1,0 +1,1079 @@
+{
+  "subcategory": "football-history",
+  "facets": [
+    "Orígenes y reglas del fútbol",
+    "Historia de los Mundiales",
+    "Grandes leyendas del fútbol",
+    "Selección Colombia en la historia",
+    "Clubes históricos del mundo",
+    "Fútbol colombiano y sus clubes",
+    "Copa América y fútbol sudamericano",
+    "Estadios legendarios",
+    "Balones, uniformes y tecnología",
+    "Jugadas, goles y momentos célebres",
+    "Fútbol femenino en la historia",
+    "Mascotas, trofeos y símbolos",
+    "Entrenadores y tácticas",
+    "Eurocopa y otros torneos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 3,
+      "record": 5,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 3,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Definición por penaltis",
+      "facet": "Orígenes y reglas del fútbol",
+      "known_at": 4
+    },
+    {
+      "name": "Sustitución",
+      "facet": "Orígenes y reglas del fútbol",
+      "known_at": 6
+    },
+    {
+      "name": "The Football Association",
+      "facet": "Orígenes y reglas del fútbol",
+      "known_at": 12
+    },
+    {
+      "name": "Fair play",
+      "facet": "Orígenes y reglas del fútbol",
+      "known_at": 8
+    },
+    {
+      "name": "Mundial de Inglaterra 1966",
+      "facet": "Historia de los Mundiales",
+      "known_at": 12
+    },
+    {
+      "name": "Mundial de Argentina 1978",
+      "facet": "Historia de los Mundiales",
+      "known_at": 12
+    },
+    {
+      "name": "Mundial de España 1982",
+      "facet": "Historia de los Mundiales",
+      "known_at": 12
+    },
+    {
+      "name": "Mundial de Francia 1998",
+      "facet": "Historia de los Mundiales",
+      "known_at": 10
+    },
+    {
+      "name": "Mundial de Corea y Japón 2002",
+      "facet": "Historia de los Mundiales",
+      "known_at": 10
+    },
+    {
+      "name": "Mundial de Sudáfrica 2010",
+      "facet": "Historia de los Mundiales",
+      "known_at": 6
+    },
+    {
+      "name": "Ferenc Puskás",
+      "facet": "Grandes leyendas del fútbol",
+      "known_at": 12
+    },
+    {
+      "name": "George Best",
+      "facet": "Grandes leyendas del fútbol",
+      "known_at": 13
+    },
+    {
+      "name": "Michel Platini",
+      "facet": "Grandes leyendas del fútbol",
+      "known_at": 12
+    },
+    {
+      "name": "Marco van Basten",
+      "facet": "Grandes leyendas del fútbol",
+      "known_at": 13
+    },
+    {
+      "name": "Paolo Maldini",
+      "facet": "Grandes leyendas del fútbol",
+      "known_at": 11
+    },
+    {
+      "name": "Carlos \"El Pibe\" Valderrama",
+      "facet": "Selección Colombia en la historia",
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Freddy Rincón",
+      "facet": "Selección Colombia en la historia",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Juan Guillermo Cuadrado",
+      "facet": "Selección Colombia en la historia",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "David Ospina",
+      "facet": "Selección Colombia en la historia",
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Iván Ramiro Córdoba",
+      "facet": "Selección Colombia en la historia",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Francisco Maturana",
+      "facet": "Selección Colombia en la historia",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Néstor Lorenzo",
+      "facet": "Selección Colombia en la historia",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Colombia 5–0 Argentina",
+      "facet": "Selección Colombia en la historia",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Copa América 2024",
+      "facet": "Selección Colombia en la historia",
+      "known_at": 8
+    },
+    {
+      "name": "Marcos Coll",
+      "facet": "Selección Colombia en la historia",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Leonel Álvarez",
+      "facet": "Selección Colombia en la historia",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Arnoldo Iguarán",
+      "facet": "Selección Colombia en la historia",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Willington Ortiz",
+      "facet": "Selección Colombia en la historia",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Paris Saint-Germain",
+      "facet": "Clubes históricos del mundo",
+      "known_at": 3
+    },
+    {
+      "name": "Chelsea",
+      "facet": "Clubes históricos del mundo",
+      "known_at": 5
+    },
+    {
+      "name": "Arsenal",
+      "facet": "Clubes históricos del mundo",
+      "known_at": 6
+    },
+    {
+      "name": "AC Milan",
+      "facet": "Clubes históricos del mundo",
+      "known_at": 6
+    },
+    {
+      "name": "Inter de Milán",
+      "facet": "Clubes históricos del mundo",
+      "known_at": 7
+    },
+    {
+      "name": "Flamengo",
+      "facet": "Clubes históricos del mundo",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Peñarol",
+      "facet": "Clubes históricos del mundo",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Independiente de Avellaneda",
+      "facet": "Clubes históricos del mundo",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Benfica",
+      "facet": "Clubes históricos del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Celtic",
+      "facet": "Clubes históricos del mundo",
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Olympique de Marsella",
+      "facet": "Clubes históricos del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Deportivo Cali",
+      "facet": "Fútbol colombiano y sus clubes",
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Independiente Santa Fe",
+      "facet": "Fútbol colombiano y sus clubes",
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Independiente Medellín",
+      "facet": "Fútbol colombiano y sus clubes",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Deportes Tolima",
+      "facet": "Fútbol colombiano y sus clubes",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Atlético Bucaramanga",
+      "facet": "Fútbol colombiano y sus clubes",
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Cúcuta Deportivo",
+      "facet": "Fútbol colombiano y sus clubes",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Deportes Quindío",
+      "facet": "Fútbol colombiano y sus clubes",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Clásico paisa",
+      "facet": "Fútbol colombiano y sus clubes",
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Ballet Azul",
+      "facet": "Fútbol colombiano y sus clubes",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Título de Atlético Nacional en la Libertadores 1989",
+      "facet": "Fútbol colombiano y sus clubes",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Título de Once Caldas en la Libertadores 2004",
+      "facet": "Fútbol colombiano y sus clubes",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Pentacampeonato del América de Cali",
+      "facet": "Fútbol colombiano y sus clubes",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Copa Sudamericana",
+      "facet": "Copa América y fútbol sudamericano",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Eliminatorias sudamericanas",
+      "facet": "Copa América y fútbol sudamericano",
+      "known_at": 6
+    },
+    {
+      "name": "Superclásico argentino",
+      "facet": "Copa América y fútbol sudamericano",
+      "known_at": 9
+    },
+    {
+      "name": "Clásico del Río de la Plata",
+      "facet": "Copa América y fútbol sudamericano",
+      "known_at": 13
+    },
+    {
+      "name": "Campeonato Sudamericano de 1916",
+      "facet": "Copa América y fútbol sudamericano",
+      "known_at": 14
+    },
+    {
+      "name": "Copa América Centenario",
+      "facet": "Copa América y fútbol sudamericano",
+      "known_at": 12
+    },
+    {
+      "name": "Bicampeonato de Chile en la Copa América",
+      "facet": "Copa América y fútbol sudamericano",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Recopa Sudamericana",
+      "facet": "Copa América y fútbol sudamericano",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Copa Intercontinental",
+      "facet": "Copa América y fútbol sudamericano",
+      "known_at": 12
+    },
+    {
+      "name": "Mundial de Clubes",
+      "facet": "Copa América y fútbol sudamericano",
+      "known_at": 7
+    },
+    {
+      "name": "Estadio Centenario de Montevideo",
+      "facet": "Estadios legendarios",
+      "known_at": 12
+    },
+    {
+      "name": "Hampden Park",
+      "facet": "Estadios legendarios",
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Tango (balón)",
+      "facet": "Balones, uniformes y tecnología",
+      "known_at": 13
+    },
+    {
+      "name": "Balón de vejiga de cerdo",
+      "facet": "Balones, uniformes y tecnología",
+      "known_at": 13
+    },
+    {
+      "name": "Dorsal",
+      "facet": "Balones, uniformes y tecnología",
+      "known_at": 3
+    },
+    {
+      "name": "Red de portería",
+      "facet": "Balones, uniformes y tecnología",
+      "known_at": 5
+    },
+    {
+      "name": "Escorpión de Higuita",
+      "facet": "Jugadas, goles y momentos célebres",
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Elástica",
+      "facet": "Jugadas, goles y momentos célebres",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Gol de James a Uruguay en 2014",
+      "facet": "Jugadas, goles y momentos célebres",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Final del Mundial 2022",
+      "facet": "Jugadas, goles y momentos célebres",
+      "known_at": 5
+    },
+    {
+      "name": "Final de Estambul 2005",
+      "facet": "Jugadas, goles y momentos célebres",
+      "known_at": 12
+    },
+    {
+      "name": "Remontada del Barcelona ante el PSG",
+      "facet": "Jugadas, goles y momentos célebres",
+      "known_at": 10
+    },
+    {
+      "name": "Brandi Chastain",
+      "facet": "Fútbol femenino en la historia",
+      "known_at": 14
+    },
+    {
+      "name": "Yoreli Rincón",
+      "facet": "Fútbol femenino en la historia",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Liga Femenina de Colombia",
+      "facet": "Fútbol femenino en la historia",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Dick, Kerr Ladies",
+      "facet": "Fútbol femenino en la historia",
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Lily Parr",
+      "facet": "Fútbol femenino en la historia",
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Prohibición inglesa del fútbol femenino de 1921",
+      "facet": "Fútbol femenino en la historia",
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Copa del Mundo de la FIFA (trofeo)",
+      "facet": "Mascotas, trofeos y símbolos",
+      "known_at": 4
+    },
+    {
+      "name": "Premio The Best",
+      "facet": "Mascotas, trofeos y símbolos",
+      "known_at": 9
+    },
+    {
+      "name": "Premio Puskás",
+      "facet": "Mascotas, trofeos y símbolos",
+      "known_at": 10
+    },
+    {
+      "name": "Trofeo Pichichi",
+      "facet": "Mascotas, trofeos y símbolos",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Orejona",
+      "facet": "Mascotas, trofeos y símbolos",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Himno de la Champions League",
+      "facet": "Mascotas, trofeos y símbolos",
+      "known_at": 7
+    },
+    {
+      "name": "Estrellas sobre el escudo",
+      "facet": "Mascotas, trofeos y símbolos",
+      "known_at": 10
+    },
+    {
+      "name": "Juanito (mascota de México 70)",
+      "facet": "Mascotas, trofeos y símbolos",
+      "known_at": 15
+    },
+    {
+      "name": "Pique (mascota de México 86)",
+      "facet": "Mascotas, trofeos y símbolos",
+      "known_at": 14
+    },
+    {
+      "name": "Offside rule",
+      "facet": "Orígenes y reglas del fútbol",
+      "known_at": 6
+    },
+    {
+      "name": "Yellow card",
+      "facet": "Orígenes y reglas del fútbol",
+      "known_at": 2
+    },
+    {
+      "name": "Red card",
+      "facet": "Orígenes y reglas del fútbol",
+      "known_at": 2
+    },
+    {
+      "name": "Corner kick",
+      "facet": "Orígenes y reglas del fútbol",
+      "known_at": 3
+    },
+    {
+      "name": "Penalty kick",
+      "facet": "Orígenes y reglas del fútbol",
+      "known_at": 2
+    },
+    {
+      "name": "Throw-in",
+      "facet": "Orígenes y reglas del fútbol",
+      "known_at": 3
+    },
+    {
+      "name": "Free kick",
+      "facet": "Orígenes y reglas del fútbol",
+      "known_at": 3
+    },
+    {
+      "name": "Handball",
+      "facet": "Orígenes y reglas del fútbol",
+      "known_at": 2
+    },
+    {
+      "name": "Extra time",
+      "facet": "Orígenes y reglas del fútbol",
+      "known_at": 4
+    },
+    {
+      "name": "Golden goal",
+      "facet": "Orígenes y reglas del fútbol",
+      "known_at": 10
+    },
+    {
+      "name": "Back-pass rule",
+      "facet": "Orígenes y reglas del fútbol",
+      "known_at": 12
+    },
+    {
+      "name": "Away goals rule",
+      "facet": "Orígenes y reglas del fútbol",
+      "known_at": 10
+    },
+    {
+      "name": "Kemari",
+      "facet": "Orígenes y reglas del fútbol",
+      "known_at": 14
+    },
+    {
+      "name": "Cambridge Rules",
+      "facet": "Orígenes y reglas del fútbol",
+      "known_at": 14
+    },
+    {
+      "name": "Christmas Truce football match",
+      "facet": "Orígenes y reglas del fútbol",
+      "known_at": 11
+    },
+    {
+      "name": "Referee",
+      "facet": "Orígenes y reglas del fútbol",
+      "known_at": 1
+    },
+    {
+      "name": "1930 World Cup in Uruguay",
+      "facet": "Historia de los Mundiales",
+      "known_at": 9
+    },
+    {
+      "name": "1934 World Cup in Italy",
+      "facet": "Historia de los Mundiales",
+      "known_at": 12
+    },
+    {
+      "name": "1950 World Cup in Brazil",
+      "facet": "Historia de los Mundiales",
+      "known_at": 10
+    },
+    {
+      "name": "1954 World Cup in Switzerland",
+      "facet": "Historia de los Mundiales",
+      "known_at": 13
+    },
+    {
+      "name": "1958 World Cup in Sweden",
+      "facet": "Historia de los Mundiales",
+      "known_at": 11
+    },
+    {
+      "name": "1962 World Cup in Chile",
+      "facet": "Historia de los Mundiales",
+      "known_at": 12
+    },
+    {
+      "name": "1970 World Cup in Mexico",
+      "facet": "Historia de los Mundiales",
+      "known_at": 10
+    },
+    {
+      "name": "1974 World Cup in West Germany",
+      "facet": "Historia de los Mundiales",
+      "known_at": 12
+    },
+    {
+      "name": "1986 World Cup in Mexico",
+      "facet": "Historia de los Mundiales",
+      "known_at": 9
+    },
+    {
+      "name": "1990 World Cup in Italy",
+      "facet": "Historia de los Mundiales",
+      "known_at": 10
+    },
+    {
+      "name": "1994 World Cup in the United States",
+      "facet": "Historia de los Mundiales",
+      "known_at": 9
+    },
+    {
+      "name": "2006 World Cup in Germany",
+      "facet": "Historia de los Mundiales",
+      "known_at": 8
+    },
+    {
+      "name": "2014 World Cup in Brazil",
+      "facet": "Historia de los Mundiales",
+      "known_at": 6
+    },
+    {
+      "name": "2018 World Cup in Russia",
+      "facet": "Historia de los Mundiales",
+      "known_at": 6
+    },
+    {
+      "name": "2022 World Cup in Qatar",
+      "facet": "Historia de los Mundiales",
+      "known_at": 4
+    },
+    {
+      "name": "2026 World Cup",
+      "facet": "Historia de los Mundiales",
+      "known_at": 5
+    },
+    {
+      "name": "Miracle of Bern",
+      "facet": "Historia de los Mundiales",
+      "known_at": 13
+    },
+    {
+      "name": "Bobby Moore",
+      "facet": "Grandes leyendas del fútbol",
+      "known_at": 12
+    },
+    {
+      "name": "Zico",
+      "facet": "Grandes leyendas del fútbol",
+      "known_at": 11
+    },
+    {
+      "name": "Romário",
+      "facet": "Grandes leyendas del fútbol",
+      "known_at": 11
+    },
+    {
+      "name": "Roberto Baggio",
+      "facet": "Grandes leyendas del fútbol",
+      "known_at": 11
+    },
+    {
+      "name": "George Weah",
+      "facet": "Grandes leyendas del fútbol",
+      "known_at": 12
+    },
+    {
+      "name": "Didier Drogba",
+      "facet": "Grandes leyendas del fútbol",
+      "known_at": 8
+    },
+    {
+      "name": "Samuel Eto'o",
+      "facet": "Grandes leyendas del fútbol",
+      "known_at": 9
+    },
+    {
+      "name": "Hugo Sánchez",
+      "facet": "Grandes leyendas del fútbol",
+      "known_at": 11
+    },
+    {
+      "name": "Xavi Hernández",
+      "facet": "Grandes leyendas del fútbol",
+      "known_at": 8
+    },
+    {
+      "name": "Iker Casillas",
+      "facet": "Grandes leyendas del fútbol",
+      "known_at": 8
+    },
+    {
+      "name": "Dino Zoff",
+      "facet": "Grandes leyendas del fútbol",
+      "known_at": 13
+    },
+    {
+      "name": "Kaká",
+      "facet": "Grandes leyendas del fútbol",
+      "known_at": 8
+    },
+    {
+      "name": "Son Heung-min",
+      "facet": "Grandes leyendas del fútbol",
+      "known_at": 6
+    },
+    {
+      "name": "Stanley Matthews",
+      "facet": "Grandes leyendas del fútbol",
+      "known_at": 14
+    },
+    {
+      "name": "Santos FC",
+      "facet": "Clubes históricos del mundo",
+      "known_at": 9
+    },
+    {
+      "name": "Al Ahly",
+      "facet": "Clubes históricos del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "FC Porto",
+      "facet": "Clubes históricos del mundo",
+      "known_at": 8
+    },
+    {
+      "name": "Busby Babes",
+      "facet": "Clubes históricos del mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Arsenal Invincibles",
+      "facet": "Clubes históricos del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Leicester City's 2016 title",
+      "facet": "Clubes históricos del mundo",
+      "known_at": 10
+    },
+    {
+      "name": "El Dorado era of Colombian football",
+      "facet": "Fútbol colombiano y sus clubes",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Copa América 2021",
+      "facet": "Copa América y fútbol sudamericano",
+      "known_at": 7
+    },
+    {
+      "name": "2018 Copa Libertadores final in Madrid",
+      "facet": "Copa América y fútbol sudamericano",
+      "known_at": 12
+    },
+    {
+      "name": "Maracanã Stadium",
+      "facet": "Estadios legendarios",
+      "known_at": 6
+    },
+    {
+      "name": "Santiago Bernabéu Stadium",
+      "facet": "Estadios legendarios",
+      "known_at": 5
+    },
+    {
+      "name": "Lusail Stadium",
+      "facet": "Estadios legendarios",
+      "known_at": 10
+    },
+    {
+      "name": "Soccer City",
+      "facet": "Estadios legendarios",
+      "known_at": 12
+    },
+    {
+      "name": "Telstar (ball)",
+      "facet": "Balones, uniformes y tecnología",
+      "known_at": 12
+    },
+    {
+      "name": "Goal-line technology",
+      "facet": "Balones, uniformes y tecnología",
+      "known_at": 7
+    },
+    {
+      "name": "Vanishing spray",
+      "facet": "Balones, uniformes y tecnología",
+      "known_at": 6
+    },
+    {
+      "name": "Shin guards",
+      "facet": "Balones, uniformes y tecnología",
+      "known_at": 3
+    },
+    {
+      "name": "Goalkeeper gloves",
+      "facet": "Balones, uniformes y tecnología",
+      "known_at": 1
+    },
+    {
+      "name": "Captain's armband",
+      "facet": "Balones, uniformes y tecnología",
+      "known_at": 4
+    },
+    {
+      "name": "Football boots with studs",
+      "facet": "Balones, uniformes y tecnología",
+      "known_at": 2
+    },
+    {
+      "name": "Brazil's yellow jersey",
+      "facet": "Balones, uniformes y tecnología",
+      "known_at": 3
+    },
+    {
+      "name": "Netherlands' orange jersey",
+      "facet": "Balones, uniformes y tecnología",
+      "known_at": 6
+    },
+    {
+      "name": "Referee's whistle",
+      "facet": "Balones, uniformes y tecnología",
+      "known_at": 1
+    },
+    {
+      "name": "Goal of the Century",
+      "facet": "Jugadas, goles y momentos célebres",
+      "known_at": 11
+    },
+    {
+      "name": "Brazil 1–7 Germany",
+      "facet": "Jugadas, goles y momentos célebres",
+      "known_at": 7
+    },
+    {
+      "name": "Panenka penalty",
+      "facet": "Jugadas, goles y momentos célebres",
+      "known_at": 12
+    },
+    {
+      "name": "Bicycle kick",
+      "facet": "Jugadas, goles y momentos célebres",
+      "known_at": 5
+    },
+    {
+      "name": "Cruyff turn",
+      "facet": "Jugadas, goles y momentos célebres",
+      "known_at": 12
+    },
+    {
+      "name": "Olympic goal",
+      "facet": "Jugadas, goles y momentos célebres",
+      "known_at": 11
+    },
+    {
+      "name": "Roberto Carlos's free kick against France",
+      "facet": "Jugadas, goles y momentos célebres",
+      "known_at": 11
+    },
+    {
+      "name": "Iniesta's goal in the 2010 World Cup final",
+      "facet": "Jugadas, goles y momentos célebres",
+      "known_at": 9
+    },
+    {
+      "name": "Götze's goal in the 2014 World Cup final",
+      "facet": "Jugadas, goles y momentos célebres",
+      "known_at": 10
+    },
+    {
+      "name": "Agüero's last-minute title goal in 2012",
+      "facet": "Jugadas, goles y momentos célebres",
+      "known_at": 12
+    },
+    {
+      "name": "Zidane's volley in the 2002 Champions League final",
+      "facet": "Jugadas, goles y momentos célebres",
+      "known_at": 12
+    },
+    {
+      "name": "Asisat Oshoala",
+      "facet": "Fútbol femenino en la historia",
+      "known_at": 13
+    },
+    {
+      "name": "1991 Women's World Cup in China",
+      "facet": "Fútbol femenino en la historia",
+      "known_at": 13
+    },
+    {
+      "name": "2011 Women's World Cup",
+      "facet": "Fútbol femenino en la historia",
+      "known_at": 13
+    },
+    {
+      "name": "2023 Women's World Cup",
+      "facet": "Fútbol femenino en la historia",
+      "known_at": 8
+    },
+    {
+      "name": "Jules Rimet Trophy",
+      "facet": "Mascotas, trofeos y símbolos",
+      "known_at": 11
+    },
+    {
+      "name": "Ballon d'Or",
+      "facet": "Mascotas, trofeos y símbolos",
+      "known_at": 4
+    },
+    {
+      "name": "Golden Boot",
+      "facet": "Mascotas, trofeos y símbolos",
+      "known_at": 6
+    },
+    {
+      "name": "Golden Glove",
+      "facet": "Mascotas, trofeos y símbolos",
+      "known_at": 8
+    },
+    {
+      "name": "World Cup Golden Ball",
+      "facet": "Mascotas, trofeos y símbolos",
+      "known_at": 8
+    },
+    {
+      "name": "Henri Delaunay Trophy",
+      "facet": "Mascotas, trofeos y símbolos",
+      "known_at": 14
+    },
+    {
+      "name": "Goleo VI",
+      "facet": "Mascotas, trofeos y símbolos",
+      "known_at": 11
+    },
+    {
+      "name": "Helenio Herrera",
+      "facet": "Entrenadores y tácticas",
+      "known_at": 14
+    },
+    {
+      "name": "Mário Zagallo",
+      "facet": "Entrenadores y tácticas",
+      "known_at": 13
+    },
+    {
+      "name": "Total Football",
+      "facet": "Entrenadores y tácticas",
+      "known_at": 12
+    },
+    {
+      "name": "UEFA European Championship",
+      "facet": "Eurocopa y otros torneos",
+      "known_at": 5
+    },
+    {
+      "name": "Euro 1992 won by Denmark",
+      "facet": "Eurocopa y otros torneos",
+      "known_at": 13
+    },
+    {
+      "name": "Euro 2004 won by Greece",
+      "facet": "Eurocopa y otros torneos",
+      "known_at": 12
+    },
+    {
+      "name": "Euro 2016 won by Portugal",
+      "facet": "Eurocopa y otros torneos",
+      "known_at": 9
+    },
+    {
+      "name": "Euro 2024 won by Spain",
+      "facet": "Eurocopa y otros torneos",
+      "known_at": 6
+    },
+    {
+      "name": "Africa Cup of Nations",
+      "facet": "Eurocopa y otros torneos",
+      "known_at": 9
+    },
+    {
+      "name": "AFC Asian Cup",
+      "facet": "Eurocopa y otros torneos",
+      "known_at": 11
+    },
+    {
+      "name": "CONCACAF Gold Cup",
+      "facet": "Eurocopa y otros torneos",
+      "known_at": 11
+    },
+    {
+      "name": "Olympic football tournament",
+      "facet": "Eurocopa y otros torneos",
+      "known_at": 8
+    },
+    {
+      "name": "UEFA Europa League",
+      "facet": "Eurocopa y otros torneos",
+      "known_at": 7
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-15",
+      "added": 105,
+      "unused": 151
+    }
+  ]
+}

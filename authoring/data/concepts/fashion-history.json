@@ -1,0 +1,908 @@
+{
+  "subcategory": "fashion-history",
+  "facets": [
+    "Prendas con historia",
+    "Moda en la Antigüedad",
+    "Moda medieval y renacentista",
+    "Cortes, reyes y pelucas",
+    "Diseñadores y casas de moda",
+    "Moda del siglo XX por décadas",
+    "Tejidos, fibras e inventos",
+    "Accesorios, calzado y peinados",
+    "Moda en el cine y la cultura pop",
+    "Vestido tradicional colombiano",
+    "Uniformes y ropa de trabajo",
+    "Palabras y estilos de moda"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 1,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 3,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Bluyín",
+      "facet": "Prendas con historia",
+      "known_at": 1,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Pijama",
+      "facet": "Prendas con historia",
+      "known_at": 1
+    },
+    {
+      "name": "Minifalda",
+      "facet": "Prendas con historia",
+      "known_at": 5
+    },
+    {
+      "name": "Corbata",
+      "facet": "Prendas con historia",
+      "known_at": 3
+    },
+    {
+      "name": "Bikini",
+      "facet": "Prendas con historia",
+      "known_at": 6
+    },
+    {
+      "name": "Gabardina",
+      "facet": "Prendas con historia",
+      "known_at": 9
+    },
+    {
+      "name": "Falda escocesa",
+      "facet": "Prendas con historia",
+      "known_at": 4
+    },
+    {
+      "name": "Cárdigan",
+      "facet": "Prendas con historia",
+      "known_at": 10
+    },
+    {
+      "name": "Sudadera con capucha",
+      "facet": "Prendas con historia",
+      "known_at": 3
+    },
+    {
+      "name": "Camisa polo",
+      "facet": "Prendas con historia",
+      "known_at": 7
+    },
+    {
+      "name": "Pequeño vestido negro",
+      "facet": "Prendas con historia",
+      "known_at": 12
+    },
+    {
+      "name": "Corsé",
+      "facet": "Prendas con historia",
+      "known_at": 7
+    },
+    {
+      "name": "Sari",
+      "facet": "Prendas con historia",
+      "known_at": 9
+    },
+    {
+      "name": "Bermudas",
+      "facet": "Prendas con historia",
+      "known_at": 6
+    },
+    {
+      "name": "Leggins",
+      "facet": "Prendas con historia",
+      "known_at": 5
+    },
+    {
+      "name": "Traje sastre",
+      "facet": "Prendas con historia",
+      "known_at": 11
+    },
+    {
+      "name": "Toga romana",
+      "facet": "Moda en la Antigüedad",
+      "known_at": 6
+    },
+    {
+      "name": "Túnica",
+      "facet": "Moda en la Antigüedad",
+      "known_at": 5
+    },
+    {
+      "name": "Peplo",
+      "facet": "Moda en la Antigüedad",
+      "known_at": 14
+    },
+    {
+      "name": "Quitón",
+      "facet": "Moda en la Antigüedad",
+      "known_at": 14
+    },
+    {
+      "name": "Faldellín egipcio",
+      "facet": "Moda en la Antigüedad",
+      "known_at": 10
+    },
+    {
+      "name": "Kohl",
+      "facet": "Moda en la Antigüedad",
+      "known_at": 11
+    },
+    {
+      "name": "Clámide",
+      "facet": "Moda en la Antigüedad",
+      "known_at": 15
+    },
+    {
+      "name": "Fíbula",
+      "facet": "Moda en la Antigüedad",
+      "known_at": 14
+    },
+    {
+      "name": "Taparrabo",
+      "facet": "Moda en la Antigüedad",
+      "known_at": 4
+    },
+    {
+      "name": "Hennin",
+      "facet": "Moda medieval y renacentista",
+      "known_at": 13
+    },
+    {
+      "name": "Zapatos de punta medievales",
+      "facet": "Moda medieval y renacentista",
+      "known_at": 11
+    },
+    {
+      "name": "Calzas",
+      "facet": "Moda medieval y renacentista",
+      "known_at": 10
+    },
+    {
+      "name": "Jubón",
+      "facet": "Moda medieval y renacentista",
+      "known_at": 12
+    },
+    {
+      "name": "Hábito monacal",
+      "facet": "Moda medieval y renacentista",
+      "known_at": 7
+    },
+    {
+      "name": "Guardainfante",
+      "facet": "Moda medieval y renacentista",
+      "known_at": 14
+    },
+    {
+      "name": "Verdugado",
+      "facet": "Moda medieval y renacentista",
+      "known_at": 15
+    },
+    {
+      "name": "Leyes suntuarias",
+      "facet": "Moda medieval y renacentista",
+      "known_at": 14
+    },
+    {
+      "name": "Gremios de artesanos",
+      "facet": "Moda medieval y renacentista",
+      "known_at": 11
+    },
+    {
+      "name": "Cofia",
+      "facet": "Moda medieval y renacentista",
+      "known_at": 9
+    },
+    {
+      "name": "Tacones rojos de Luis XIV",
+      "facet": "Cortes, reyes y pelucas",
+      "known_at": 13
+    },
+    {
+      "name": "Lunar postizo",
+      "facet": "Cortes, reyes y pelucas",
+      "known_at": 12
+    },
+    {
+      "name": "Miriñaque",
+      "facet": "Cortes, reyes y pelucas",
+      "known_at": 12
+    },
+    {
+      "name": "Pouf",
+      "facet": "Cortes, reyes y pelucas",
+      "known_at": 14
+    },
+    {
+      "name": "Abanico",
+      "facet": "Cortes, reyes y pelucas",
+      "known_at": 3
+    },
+    {
+      "name": "Armiño",
+      "facet": "Cortes, reyes y pelucas",
+      "known_at": 12
+    },
+    {
+      "name": "Josefina Bonaparte",
+      "facet": "Cortes, reyes y pelucas",
+      "known_at": 13
+    },
+    {
+      "name": "Estilo imperio",
+      "facet": "Cortes, reyes y pelucas",
+      "known_at": 13
+    },
+    {
+      "name": "Beau Brummell",
+      "facet": "Cortes, reyes y pelucas",
+      "known_at": 15
+    },
+    {
+      "name": "Vestido de novia blanco",
+      "facet": "Cortes, reyes y pelucas",
+      "known_at": 4
+    },
+    {
+      "name": "Peluca de juez británico",
+      "facet": "Cortes, reyes y pelucas",
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Coco Chanel",
+      "facet": "Diseñadores y casas de moda",
+      "known_at": 8
+    },
+    {
+      "name": "Christian Dior",
+      "facet": "Diseñadores y casas de moda",
+      "known_at": 9
+    },
+    {
+      "name": "Yves Saint Laurent",
+      "facet": "Diseñadores y casas de moda",
+      "known_at": 11
+    },
+    {
+      "name": "Carolina Herrera",
+      "facet": "Diseñadores y casas de moda",
+      "known_at": 9
+    },
+    {
+      "name": "Giorgio Armani",
+      "facet": "Diseñadores y casas de moda",
+      "known_at": 10
+    },
+    {
+      "name": "Gianni Versace",
+      "facet": "Diseñadores y casas de moda",
+      "known_at": 10
+    },
+    {
+      "name": "Karl Lagerfeld",
+      "facet": "Diseñadores y casas de moda",
+      "known_at": 12
+    },
+    {
+      "name": "Óscar de la Renta",
+      "facet": "Diseñadores y casas de moda",
+      "known_at": 12
+    },
+    {
+      "name": "Cristóbal Balenciaga",
+      "facet": "Diseñadores y casas de moda",
+      "known_at": 12
+    },
+    {
+      "name": "Louis Vuitton",
+      "facet": "Diseñadores y casas de moda",
+      "known_at": 9
+    },
+    {
+      "name": "Gucci",
+      "facet": "Diseñadores y casas de moda",
+      "known_at": 7
+    },
+    {
+      "name": "Prada",
+      "facet": "Diseñadores y casas de moda",
+      "known_at": 9
+    },
+    {
+      "name": "Valentino",
+      "facet": "Diseñadores y casas de moda",
+      "known_at": 12
+    },
+    {
+      "name": "Ralph Lauren",
+      "facet": "Diseñadores y casas de moda",
+      "known_at": 11
+    },
+    {
+      "name": "Vivienne Westwood",
+      "facet": "Diseñadores y casas de moda",
+      "known_at": 14
+    },
+    {
+      "name": "Elsa Schiaparelli",
+      "facet": "Diseñadores y casas de moda",
+      "known_at": 15
+    },
+    {
+      "name": "Charles Frederick Worth",
+      "facet": "Diseñadores y casas de moda",
+      "known_at": 15
+    },
+    {
+      "name": "Paco Rabanne",
+      "facet": "Diseñadores y casas de moda",
+      "known_at": 12
+    },
+    {
+      "name": "Silvia Tcherassi",
+      "facet": "Diseñadores y casas de moda",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Johanna Ortiz",
+      "facet": "Diseñadores y casas de moda",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Levi Strauss",
+      "facet": "Diseñadores y casas de moda",
+      "known_at": 9
+    },
+    {
+      "name": "Zara",
+      "facet": "Diseñadores y casas de moda",
+      "known_at": 5
+    },
+    {
+      "name": "Mary Quant",
+      "facet": "Diseñadores y casas de moda",
+      "known_at": 14
+    },
+    {
+      "name": "Alexander McQueen",
+      "facet": "Diseñadores y casas de moda",
+      "known_at": 13
+    },
+    {
+      "name": "Años veinte",
+      "facet": "Moda del siglo XX por décadas",
+      "known_at": 8
+    },
+    {
+      "name": "Flapper",
+      "facet": "Moda del siglo XX por décadas",
+      "known_at": 13
+    },
+    {
+      "name": "New Look",
+      "facet": "Moda del siglo XX por décadas",
+      "known_at": 14
+    },
+    {
+      "name": "Pin-up",
+      "facet": "Moda del siglo XX por décadas",
+      "known_at": 11
+    },
+    {
+      "name": "Hippie",
+      "facet": "Moda del siglo XX por décadas",
+      "known_at": 6
+    },
+    {
+      "name": "Mods",
+      "facet": "Moda del siglo XX por décadas",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Pantalón de campana",
+      "facet": "Moda del siglo XX por décadas",
+      "known_at": 6
+    },
+    {
+      "name": "Twiggy",
+      "facet": "Moda del siglo XX por décadas",
+      "known_at": 14
+    },
+    {
+      "name": "Racionamiento de ropa",
+      "facet": "Moda del siglo XX por décadas",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Tie-dye",
+      "facet": "Moda del siglo XX por décadas",
+      "known_at": 8
+    },
+    {
+      "name": "Colores neón",
+      "facet": "Moda del siglo XX por décadas",
+      "known_at": 5
+    },
+    {
+      "name": "Moda hip hop",
+      "facet": "Moda del siglo XX por décadas",
+      "known_at": 8
+    },
+    {
+      "name": "Swinging London",
+      "facet": "Moda del siglo XX por décadas",
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Lana",
+      "facet": "Tejidos, fibras e inventos",
+      "known_at": 1
+    },
+    {
+      "name": "Licra",
+      "facet": "Tejidos, fibras e inventos",
+      "known_at": 7
+    },
+    {
+      "name": "Denim",
+      "facet": "Tejidos, fibras e inventos",
+      "known_at": 9
+    },
+    {
+      "name": "Terciopelo",
+      "facet": "Tejidos, fibras e inventos",
+      "known_at": 6
+    },
+    {
+      "name": "Botón",
+      "facet": "Tejidos, fibras e inventos",
+      "known_at": 1
+    },
+    {
+      "name": "Máquina de coser",
+      "facet": "Tejidos, fibras e inventos",
+      "known_at": 3
+    },
+    {
+      "name": "Isaac Singer",
+      "facet": "Tejidos, fibras e inventos",
+      "known_at": 13
+    },
+    {
+      "name": "Cachemira",
+      "facet": "Tejidos, fibras e inventos",
+      "known_at": 11
+    },
+    {
+      "name": "Encaje",
+      "facet": "Tejidos, fibras e inventos",
+      "known_at": 8
+    },
+    {
+      "name": "Tacón de aguja",
+      "facet": "Accesorios, calzado y peinados",
+      "known_at": 5
+    },
+    {
+      "name": "Converse All Star",
+      "facet": "Accesorios, calzado y peinados",
+      "known_at": 5
+    },
+    {
+      "name": "Mocasín",
+      "facet": "Accesorios, calzado y peinados",
+      "known_at": 8
+    },
+    {
+      "name": "Chancleta",
+      "facet": "Accesorios, calzado y peinados",
+      "known_at": 1
+    },
+    {
+      "name": "Bota vaquera",
+      "facet": "Accesorios, calzado y peinados",
+      "known_at": 3
+    },
+    {
+      "name": "Bombín",
+      "facet": "Accesorios, calzado y peinados",
+      "known_at": 8
+    },
+    {
+      "name": "Boina",
+      "facet": "Accesorios, calzado y peinados",
+      "known_at": 5
+    },
+    {
+      "name": "Gafas de sol",
+      "facet": "Accesorios, calzado y peinados",
+      "known_at": 1
+    },
+    {
+      "name": "Reloj de pulsera",
+      "facet": "Accesorios, calzado y peinados",
+      "known_at": 2
+    },
+    {
+      "name": "Collar de perlas",
+      "facet": "Accesorios, calzado y peinados",
+      "known_at": 4
+    },
+    {
+      "name": "Cresta mohicana",
+      "facet": "Accesorios, calzado y peinados",
+      "known_at": 6
+    },
+    {
+      "name": "Peinado afro",
+      "facet": "Accesorios, calzado y peinados",
+      "known_at": 5
+    },
+    {
+      "name": "Trenzas",
+      "facet": "Accesorios, calzado y peinados",
+      "known_at": 1
+    },
+    {
+      "name": "Corte bob",
+      "facet": "Accesorios, calzado y peinados",
+      "known_at": 11
+    },
+    {
+      "name": "Tupé",
+      "facet": "Accesorios, calzado y peinados",
+      "known_at": 9
+    },
+    {
+      "name": "Sombrero panamá",
+      "facet": "Accesorios, calzado y peinados",
+      "known_at": 11
+    },
+    {
+      "name": "Zapatos de plataforma",
+      "facet": "Accesorios, calzado y peinados",
+      "known_at": 7
+    },
+    {
+      "name": "Gorra",
+      "facet": "Accesorios, calzado y peinados",
+      "known_at": 1
+    },
+    {
+      "name": "Pañuelo",
+      "facet": "Accesorios, calzado y peinados",
+      "known_at": 2
+    },
+    {
+      "name": "Desayuno en Tiffany's",
+      "facet": "Moda en el cine y la cultura pop",
+      "known_at": 12
+    },
+    {
+      "name": "El diablo viste a la moda",
+      "facet": "Moda en el cine y la cultura pop",
+      "known_at": 10
+    },
+    {
+      "name": "Elsa de Frozen",
+      "facet": "Moda en el cine y la cultura pop",
+      "known_at": 1
+    },
+    {
+      "name": "Gala del Met",
+      "facet": "Moda en el cine y la cultura pop",
+      "known_at": 11
+    },
+    {
+      "name": "Princesa Diana",
+      "facet": "Moda en el cine y la cultura pop",
+      "known_at": 10
+    },
+    {
+      "name": "Ruana",
+      "facet": "Vestido tradicional colombiano",
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Mochila arhuaca",
+      "facet": "Vestido tradicional colombiano",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Alpargatas",
+      "facet": "Vestido tradicional colombiano",
+      "known_at": 5
+    },
+    {
+      "name": "Pollera colorá",
+      "facet": "Vestido tradicional colombiano",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Guayabera",
+      "facet": "Vestido tradicional colombiano",
+      "known_at": 8
+    },
+    {
+      "name": "Carriel",
+      "facet": "Vestido tradicional colombiano",
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Poncho antioqueño",
+      "facet": "Vestido tradicional colombiano",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Sombrero aguadeño",
+      "facet": "Vestido tradicional colombiano",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Manta wayuu",
+      "facet": "Vestido tradicional colombiano",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Traje de cumbia",
+      "facet": "Vestido tradicional colombiano",
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Traje de sanjuanero",
+      "facet": "Vestido tradicional colombiano",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Filigrana momposina",
+      "facet": "Vestido tradicional colombiano",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Silleteros",
+      "facet": "Vestido tradicional colombiano",
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Colombiamoda",
+      "facet": "Vestido tradicional colombiano",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Sombrero de Suaza",
+      "facet": "Vestido tradicional colombiano",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Overol",
+      "facet": "Uniformes y ropa de trabajo",
+      "known_at": 3
+    },
+    {
+      "name": "Bata de laboratorio",
+      "facet": "Uniformes y ropa de trabajo",
+      "known_at": 2
+    },
+    {
+      "name": "Uniforme escolar",
+      "facet": "Uniformes y ropa de trabajo",
+      "known_at": 1
+    },
+    {
+      "name": "Delantal",
+      "facet": "Uniformes y ropa de trabajo",
+      "known_at": 1
+    },
+    {
+      "name": "Casco de obra",
+      "facet": "Uniformes y ropa de trabajo",
+      "known_at": 2
+    },
+    {
+      "name": "Chaleco reflectivo",
+      "facet": "Uniformes y ropa de trabajo",
+      "known_at": 4
+    },
+    {
+      "name": "Traje de bombero",
+      "facet": "Uniformes y ropa de trabajo",
+      "known_at": 1
+    },
+    {
+      "name": "Gorro de chef",
+      "facet": "Uniformes y ropa de trabajo",
+      "known_at": 1
+    },
+    {
+      "name": "Guardia Suiza",
+      "facet": "Uniformes y ropa de trabajo",
+      "known_at": 11
+    },
+    {
+      "name": "Traje de buzo",
+      "facet": "Uniformes y ropa de trabajo",
+      "known_at": 2
+    },
+    {
+      "name": "Camiseta de fútbol",
+      "facet": "Uniformes y ropa de trabajo",
+      "known_at": 1
+    },
+    {
+      "name": "Ropa quirúrgica",
+      "facet": "Uniformes y ropa de trabajo",
+      "known_at": 5
+    },
+    {
+      "name": "Sotana",
+      "facet": "Uniformes y ropa de trabajo",
+      "known_at": 8
+    },
+    {
+      "name": "Traje de apicultor",
+      "facet": "Uniformes y ropa de trabajo",
+      "known_at": 4
+    },
+    {
+      "name": "Botas de caucho",
+      "facet": "Uniformes y ropa de trabajo",
+      "known_at": 2
+    },
+    {
+      "name": "Toga de graduación",
+      "facet": "Uniformes y ropa de trabajo",
+      "known_at": 5
+    },
+    {
+      "name": "Guardia de la Reina en Londres",
+      "facet": "Uniformes y ropa de trabajo",
+      "known_at": 6,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Alta costura",
+      "facet": "Palabras y estilos de moda",
+      "known_at": 11
+    },
+    {
+      "name": "Prêt-à-porter",
+      "facet": "Palabras y estilos de moda",
+      "known_at": 13
+    },
+    {
+      "name": "Pasarela",
+      "facet": "Palabras y estilos de moda",
+      "known_at": 5
+    },
+    {
+      "name": "Vintage",
+      "facet": "Palabras y estilos de moda",
+      "known_at": 8
+    },
+    {
+      "name": "Boutique",
+      "facet": "Palabras y estilos de moda",
+      "known_at": 8
+    },
+    {
+      "name": "Dandi",
+      "facet": "Palabras y estilos de moda",
+      "known_at": 12
+    },
+    {
+      "name": "Glamour",
+      "facet": "Palabras y estilos de moda",
+      "known_at": 8
+    },
+    {
+      "name": "Unisex",
+      "facet": "Palabras y estilos de moda",
+      "known_at": 7
+    },
+    {
+      "name": "Maniquí",
+      "facet": "Palabras y estilos de moda",
+      "known_at": 3
+    },
+    {
+      "name": "Bohemio",
+      "facet": "Palabras y estilos de moda",
+      "known_at": 11
+    },
+    {
+      "name": "Preppy",
+      "facet": "Palabras y estilos de moda",
+      "known_at": 12
+    },
+    {
+      "name": "Streetwear",
+      "facet": "Palabras y estilos de moda",
+      "known_at": 9
+    },
+    {
+      "name": "Hipster",
+      "facet": "Palabras y estilos de moda",
+      "known_at": 9
+    },
+    {
+      "name": "Talla",
+      "facet": "Palabras y estilos de moda",
+      "known_at": 2
+    },
+    {
+      "name": "Chic",
+      "facet": "Palabras y estilos de moda",
+      "known_at": 9
+    },
+    {
+      "name": "Kitsch",
+      "facet": "Palabras y estilos de moda",
+      "known_at": 13
+    },
+    {
+      "name": "Semana de la moda",
+      "facet": "Palabras y estilos de moda",
+      "known_at": 8
+    }
+  ]
+}

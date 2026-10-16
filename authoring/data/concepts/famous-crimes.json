@@ -1,0 +1,921 @@
+{
+  "subcategory": "famous-crimes",
+  "facets": [
+    "Robos de arte famosos",
+    "Grandes atracos y golpes",
+    "Fugas y prisiones célebres",
+    "Piratas y corsarios históricos",
+    "Forajidos del Viejo Oeste",
+    "Gánsteres y la Ley Seca",
+    "Estafas y falsificaciones célebres",
+    "Ciencia forense e investigación",
+    "Detectives y ladrones de ficción",
+    "Misterios sin resolver",
+    "Justicia y castigos de antaño",
+    "Casos célebres en Colombia"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 3,
+      "pop_culture": 5,
+      "popular_science": 3,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Museo Isabella Stewart Gardner",
+      "facet": "Robos de arte famosos",
+      "known_at": 14
+    },
+    {
+      "name": "El concierto de Vermeer",
+      "facet": "Robos de arte famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Bóveda Verde de Dresde",
+      "facet": "Robos de arte famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Salero de Cellini",
+      "facet": "Robos de arte famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Retrato del duque de Wellington",
+      "facet": "Robos de arte famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Cámara de Ámbar",
+      "facet": "Robos de arte famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Expolio nazi de arte",
+      "facet": "Robos de arte famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Robo del Louvre de 2025",
+      "facet": "Robos de arte famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Joyas de la Corona británica",
+      "facet": "Robos de arte famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Thomas Blood",
+      "facet": "Robos de arte famosos",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Natividad de Caravaggio",
+      "facet": "Robos de arte famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Robo del Museo Van Gogh",
+      "facet": "Robos de arte famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Huevos Fabergé",
+      "facet": "Robos de arte famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Gran robo del tren",
+      "facet": "Grandes atracos y golpes",
+      "known_at": 11
+    },
+    {
+      "name": "Robo del Banco Central de Fortaleza",
+      "facet": "Grandes atracos y golpes",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Robo del Banco Río",
+      "facet": "Grandes atracos y golpes",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Robo de diamantes de Amberes",
+      "facet": "Grandes atracos y golpes",
+      "known_at": 13
+    },
+    {
+      "name": "Robo de Hatton Garden",
+      "facet": "Grandes atracos y golpes",
+      "known_at": 14
+    },
+    {
+      "name": "Panteras Rosas",
+      "facet": "Grandes atracos y golpes",
+      "known_at": 13
+    },
+    {
+      "name": "Albert Spaggiari",
+      "facet": "Grandes atracos y golpes",
+      "known_at": 15
+    },
+    {
+      "name": "Robo de Brink's-Mat",
+      "facet": "Grandes atracos y golpes",
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Robo de Lufthansa",
+      "facet": "Grandes atracos y golpes",
+      "known_at": 14
+    },
+    {
+      "name": "Caja fuerte",
+      "facet": "Grandes atracos y golpes",
+      "known_at": 2
+    },
+    {
+      "name": "Túnel de atraco",
+      "facet": "Grandes atracos y golpes",
+      "known_at": 6
+    },
+    {
+      "name": "Bóveda bancaria",
+      "facet": "Grandes atracos y golpes",
+      "known_at": 5
+    },
+    {
+      "name": "Pasamontañas",
+      "facet": "Grandes atracos y golpes",
+      "known_at": 4
+    },
+    {
+      "name": "Fuga de Alcatraz de 1962",
+      "facet": "Fugas y prisiones célebres",
+      "known_at": 11
+    },
+    {
+      "name": "Isla del Diablo",
+      "facet": "Fugas y prisiones célebres",
+      "known_at": 12
+    },
+    {
+      "name": "Papillon",
+      "facet": "Fugas y prisiones célebres",
+      "known_at": 12
+    },
+    {
+      "name": "Bastilla",
+      "facet": "Fugas y prisiones célebres",
+      "known_at": 8
+    },
+    {
+      "name": "Castillo de If",
+      "facet": "Fugas y prisiones célebres",
+      "known_at": 12
+    },
+    {
+      "name": "Castillo de Colditz",
+      "facet": "Fugas y prisiones célebres",
+      "known_at": 14
+    },
+    {
+      "name": "Azkaban",
+      "facet": "Fugas y prisiones célebres",
+      "known_at": 5
+    },
+    {
+      "name": "Sing Sing",
+      "facet": "Fugas y prisiones célebres",
+      "known_at": 13
+    },
+    {
+      "name": "Giacomo Casanova",
+      "facet": "Fugas y prisiones célebres",
+      "known_at": 12
+    },
+    {
+      "name": "Puente de los Suspiros",
+      "facet": "Fugas y prisiones célebres",
+      "known_at": 10
+    },
+    {
+      "name": "Cadena perpetua (película)",
+      "facet": "Fugas y prisiones célebres",
+      "known_at": 11
+    },
+    {
+      "name": "Uniforme a rayas de presidiario",
+      "facet": "Fugas y prisiones célebres",
+      "known_at": 3
+    },
+    {
+      "name": "Ronnie Biggs",
+      "facet": "Fugas y prisiones célebres",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Barón de Pointis",
+      "facet": "Piratas y corsarios históricos",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Bucaneros",
+      "facet": "Piratas y corsarios históricos",
+      "known_at": 8
+    },
+    {
+      "name": "Filibusteros",
+      "facet": "Piratas y corsarios históricos",
+      "known_at": 11
+    },
+    {
+      "name": "Billy el Niño",
+      "facet": "Forajidos del Viejo Oeste",
+      "known_at": 8
+    },
+    {
+      "name": "Jesse James",
+      "facet": "Forajidos del Viejo Oeste",
+      "known_at": 11
+    },
+    {
+      "name": "Butch Cassidy",
+      "facet": "Forajidos del Viejo Oeste",
+      "known_at": 11
+    },
+    {
+      "name": "Sundance Kid",
+      "facet": "Forajidos del Viejo Oeste",
+      "known_at": 12
+    },
+    {
+      "name": "Wyatt Earp",
+      "facet": "Forajidos del Viejo Oeste",
+      "known_at": 12
+    },
+    {
+      "name": "Doc Holliday",
+      "facet": "Forajidos del Viejo Oeste",
+      "known_at": 13
+    },
+    {
+      "name": "Duelo en el OK Corral",
+      "facet": "Forajidos del Viejo Oeste",
+      "known_at": 12
+    },
+    {
+      "name": "Tombstone",
+      "facet": "Forajidos del Viejo Oeste",
+      "known_at": 13
+    },
+    {
+      "name": "Calamity Jane",
+      "facet": "Forajidos del Viejo Oeste",
+      "known_at": 11
+    },
+    {
+      "name": "Pat Garrett",
+      "facet": "Forajidos del Viejo Oeste",
+      "known_at": 14
+    },
+    {
+      "name": "Belle Starr",
+      "facet": "Forajidos del Viejo Oeste",
+      "known_at": 15
+    },
+    {
+      "name": "Sheriff",
+      "facet": "Forajidos del Viejo Oeste",
+      "known_at": 3
+    },
+    {
+      "name": "Estrella de sheriff",
+      "facet": "Forajidos del Viejo Oeste",
+      "known_at": 2
+    },
+    {
+      "name": "Cartel de 'Se busca'",
+      "facet": "Forajidos del Viejo Oeste",
+      "known_at": 3
+    },
+    {
+      "name": "Diligencia",
+      "facet": "Forajidos del Viejo Oeste",
+      "known_at": 6
+    },
+    {
+      "name": "Saloon",
+      "facet": "Forajidos del Viejo Oeste",
+      "known_at": 5
+    },
+    {
+      "name": "Cazarrecompensas",
+      "facet": "Forajidos del Viejo Oeste",
+      "known_at": 6
+    },
+    {
+      "name": "Revólver Colt",
+      "facet": "Forajidos del Viejo Oeste",
+      "known_at": 9
+    },
+    {
+      "name": "Wells Fargo",
+      "facet": "Forajidos del Viejo Oeste",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Pony Express",
+      "facet": "Forajidos del Viejo Oeste",
+      "known_at": 11
+    },
+    {
+      "name": "Al Capone",
+      "facet": "Gánsteres y la Ley Seca",
+      "known_at": 8
+    },
+    {
+      "name": "Ley Seca",
+      "facet": "Gánsteres y la Ley Seca",
+      "known_at": 10
+    },
+    {
+      "name": "Eliot Ness",
+      "facet": "Gánsteres y la Ley Seca",
+      "known_at": 13
+    },
+    {
+      "name": "Los Intocables",
+      "facet": "Gánsteres y la Ley Seca",
+      "known_at": 12
+    },
+    {
+      "name": "Bonnie y Clyde",
+      "facet": "Gánsteres y la Ley Seca",
+      "known_at": 9
+    },
+    {
+      "name": "John Dillinger",
+      "facet": "Gánsteres y la Ley Seca",
+      "known_at": 13
+    },
+    {
+      "name": "Lucky Luciano",
+      "facet": "Gánsteres y la Ley Seca",
+      "known_at": 14
+    },
+    {
+      "name": "Speakeasy",
+      "facet": "Gánsteres y la Ley Seca",
+      "known_at": 13
+    },
+    {
+      "name": "Contrabando de licor",
+      "facet": "Gánsteres y la Ley Seca",
+      "known_at": 10
+    },
+    {
+      "name": "Evasión de impuestos",
+      "facet": "Gánsteres y la Ley Seca",
+      "known_at": 9
+    },
+    {
+      "name": "Chicago",
+      "facet": "Gánsteres y la Ley Seca",
+      "known_at": 6
+    },
+    {
+      "name": "Ametralladora Thompson",
+      "facet": "Gánsteres y la Ley Seca",
+      "known_at": 12
+    },
+    {
+      "name": "FBI",
+      "facet": "Gánsteres y la Ley Seca",
+      "known_at": 5
+    },
+    {
+      "name": "J. Edgar Hoover",
+      "facet": "Gánsteres y la Ley Seca",
+      "known_at": 13
+    },
+    {
+      "name": "Enemigo público número uno",
+      "facet": "Gánsteres y la Ley Seca",
+      "known_at": 11
+    },
+    {
+      "name": "Mafia",
+      "facet": "Gánsteres y la Ley Seca",
+      "known_at": 6
+    },
+    {
+      "name": "Enmienda 18",
+      "facet": "Gánsteres y la Ley Seca",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Esquema Ponzi",
+      "facet": "Estafas y falsificaciones célebres",
+      "known_at": 11
+    },
+    {
+      "name": "Charles Ponzi",
+      "facet": "Estafas y falsificaciones célebres",
+      "known_at": 13
+    },
+    {
+      "name": "Bernie Madoff",
+      "facet": "Estafas y falsificaciones célebres",
+      "known_at": 13
+    },
+    {
+      "name": "Victor Lustig",
+      "facet": "Estafas y falsificaciones célebres",
+      "known_at": 13
+    },
+    {
+      "name": "Diarios de Hitler",
+      "facet": "Estafas y falsificaciones célebres",
+      "known_at": 13
+    },
+    {
+      "name": "Hombre de Piltdown",
+      "facet": "Estafas y falsificaciones célebres",
+      "known_at": 13
+    },
+    {
+      "name": "Frank Abagnale",
+      "facet": "Estafas y falsificaciones célebres",
+      "known_at": 11
+    },
+    {
+      "name": "Atrápame si puedes",
+      "facet": "Estafas y falsificaciones célebres",
+      "known_at": 10
+    },
+    {
+      "name": "Anna Sorokin",
+      "facet": "Estafas y falsificaciones célebres",
+      "known_at": 13
+    },
+    {
+      "name": "Theranos",
+      "facet": "Estafas y falsificaciones célebres",
+      "known_at": 13
+    },
+    {
+      "name": "Gigante de Cardiff",
+      "facet": "Estafas y falsificaciones célebres",
+      "known_at": 14
+    },
+    {
+      "name": "Hadas de Cottingley",
+      "facet": "Estafas y falsificaciones célebres",
+      "known_at": 13
+    },
+    {
+      "name": "El Turco",
+      "facet": "Estafas y falsificaciones célebres",
+      "known_at": 13
+    },
+    {
+      "name": "Donación de Constantino",
+      "facet": "Estafas y falsificaciones célebres",
+      "known_at": 15
+    },
+    {
+      "name": "Billete falso",
+      "facet": "Estafas y falsificaciones célebres",
+      "known_at": 4
+    },
+    {
+      "name": "Marca de agua",
+      "facet": "Estafas y falsificaciones célebres",
+      "known_at": 7
+    },
+    {
+      "name": "Pirámide financiera",
+      "facet": "Estafas y falsificaciones célebres",
+      "known_at": 10
+    },
+    {
+      "name": "Cuento del tío",
+      "facet": "Estafas y falsificaciones célebres",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Luminol",
+      "facet": "Ciencia forense e investigación",
+      "known_at": 12
+    },
+    {
+      "name": "Retrato hablado",
+      "facet": "Ciencia forense e investigación",
+      "known_at": 7
+    },
+    {
+      "name": "Polígrafo",
+      "facet": "Ciencia forense e investigación",
+      "known_at": 8
+    },
+    {
+      "name": "Grafología",
+      "facet": "Ciencia forense e investigación",
+      "known_at": 12
+    },
+    {
+      "name": "Balística",
+      "facet": "Ciencia forense e investigación",
+      "known_at": 12
+    },
+    {
+      "name": "Entomología forense",
+      "facet": "Ciencia forense e investigación",
+      "known_at": 14
+    },
+    {
+      "name": "Odontología forense",
+      "facet": "Ciencia forense e investigación",
+      "known_at": 13
+    },
+    {
+      "name": "Alphonse Bertillon",
+      "facet": "Ciencia forense e investigación",
+      "known_at": 15
+    },
+    {
+      "name": "Edmond Locard",
+      "facet": "Ciencia forense e investigación",
+      "known_at": 15
+    },
+    {
+      "name": "Principio de intercambio de Locard",
+      "facet": "Ciencia forense e investigación",
+      "known_at": 14
+    },
+    {
+      "name": "Ficha policial",
+      "facet": "Ciencia forense e investigación",
+      "known_at": 6
+    },
+    {
+      "name": "Rueda de reconocimiento",
+      "facet": "Ciencia forense e investigación",
+      "known_at": 9
+    },
+    {
+      "name": "Coartada",
+      "facet": "Ciencia forense e investigación",
+      "known_at": 9
+    },
+    {
+      "name": "Interpol",
+      "facet": "Ciencia forense e investigación",
+      "known_at": 9
+    },
+    {
+      "name": "Scotland Yard",
+      "facet": "Ciencia forense e investigación",
+      "known_at": 10
+    },
+    {
+      "name": "Sabueso",
+      "facet": "Ciencia forense e investigación",
+      "known_at": 4
+    },
+    {
+      "name": "Cámara de seguridad",
+      "facet": "Ciencia forense e investigación",
+      "known_at": 2
+    },
+    {
+      "name": "Doctor Watson",
+      "facet": "Detectives y ladrones de ficción",
+      "known_at": 7
+    },
+    {
+      "name": "Miss Marple",
+      "facet": "Detectives y ladrones de ficción",
+      "known_at": 13
+    },
+    {
+      "name": "Arsène Lupin",
+      "facet": "Detectives y ladrones de ficción",
+      "known_at": 11
+    },
+    {
+      "name": "Inspector Clouseau",
+      "facet": "Detectives y ladrones de ficción",
+      "known_at": 12
+    },
+    {
+      "name": "Danny Ocean",
+      "facet": "Detectives y ladrones de ficción",
+      "known_at": 11
+    },
+    {
+      "name": "Gru",
+      "facet": "Detectives y ladrones de ficción",
+      "known_at": 1
+    },
+    {
+      "name": "Nick Wilde",
+      "facet": "Detectives y ladrones de ficción",
+      "known_at": 3
+    },
+    {
+      "name": "Jessica Fletcher",
+      "facet": "Detectives y ladrones de ficción",
+      "known_at": 13
+    },
+    {
+      "name": "Columbo",
+      "facet": "Detectives y ladrones de ficción",
+      "known_at": 13
+    },
+    {
+      "name": "Chómpiras",
+      "facet": "Detectives y ladrones de ficción",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Padre Brown",
+      "facet": "Detectives y ladrones de ficción",
+      "known_at": 14
+    },
+    {
+      "name": "Los Hermanos Dalton",
+      "facet": "Detectives y ladrones de ficción",
+      "known_at": 9
+    },
+    {
+      "name": "D. B. Cooper",
+      "facet": "Misterios sin resolver",
+      "known_at": 13
+    },
+    {
+      "name": "Mary Celeste",
+      "facet": "Misterios sin resolver",
+      "known_at": 13
+    },
+    {
+      "name": "Colonia de Roanoke",
+      "facet": "Misterios sin resolver",
+      "known_at": 14
+    },
+    {
+      "name": "Monstruo del lago Ness",
+      "facet": "Misterios sin resolver",
+      "known_at": 4
+    },
+    {
+      "name": "Hombre de la máscara de hierro",
+      "facet": "Misterios sin resolver",
+      "known_at": 11
+    },
+    {
+      "name": "Kaspar Hauser",
+      "facet": "Misterios sin resolver",
+      "known_at": 15
+    },
+    {
+      "name": "Manuscrito Voynich",
+      "facet": "Misterios sin resolver",
+      "known_at": 13
+    },
+    {
+      "name": "Kryptos",
+      "facet": "Misterios sin resolver",
+      "known_at": 15
+    },
+    {
+      "name": "Gran duquesa Anastasia",
+      "facet": "Misterios sin resolver",
+      "known_at": 6
+    },
+    {
+      "name": "Pie Grande",
+      "facet": "Misterios sin resolver",
+      "known_at": 4
+    },
+    {
+      "name": "Isla Oak",
+      "facet": "Misterios sin resolver",
+      "known_at": 14
+    },
+    {
+      "name": "Maldición de Tutankamón",
+      "facet": "Misterios sin resolver",
+      "known_at": 8
+    },
+    {
+      "name": "Mapa de Piri Reis",
+      "facet": "Misterios sin resolver",
+      "known_at": 14
+    },
+    {
+      "name": "Picota",
+      "facet": "Justicia y castigos de antaño",
+      "known_at": 11
+    },
+    {
+      "name": "Cepo",
+      "facet": "Justicia y castigos de antaño",
+      "known_at": 9
+    },
+    {
+      "name": "Código de Hammurabi",
+      "facet": "Justicia y castigos de antaño",
+      "known_at": 10
+    },
+    {
+      "name": "Ley del talión",
+      "facet": "Justicia y castigos de antaño",
+      "known_at": 10
+    },
+    {
+      "name": "Inquisición",
+      "facet": "Justicia y castigos de antaño",
+      "known_at": 10
+    },
+    {
+      "name": "Ostracismo",
+      "facet": "Justicia y castigos de antaño",
+      "known_at": 12
+    },
+    {
+      "name": "Destierro",
+      "facet": "Justicia y castigos de antaño",
+      "known_at": 8
+    },
+    {
+      "name": "Colonia penal de Australia",
+      "facet": "Justicia y castigos de antaño",
+      "known_at": 12
+    },
+    {
+      "name": "Juicio a Galileo",
+      "facet": "Justicia y castigos de antaño",
+      "known_at": 10
+    },
+    {
+      "name": "Habeas corpus",
+      "facet": "Justicia y castigos de antaño",
+      "known_at": 13
+    },
+    {
+      "name": "Ley de las Doce Tablas",
+      "facet": "Justicia y castigos de antaño",
+      "known_at": 13
+    },
+    {
+      "name": "Jurado",
+      "facet": "Justicia y castigos de antaño",
+      "known_at": 7
+    },
+    {
+      "name": "Mazo del juez",
+      "facet": "Justicia y castigos de antaño",
+      "known_at": 3
+    },
+    {
+      "name": "Sambenito",
+      "facet": "Justicia y castigos de antaño",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Robo de la espada de Bolívar",
+      "facet": "Casos célebres en Colombia",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Robo del Banco de la República en Valledupar",
+      "facet": "Casos célebres en Colombia",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Noche Septembrina",
+      "facet": "Casos célebres en Colombia",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Jorge Eliécer Gaitán",
+      "facet": "Casos célebres en Colombia",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Policarpa Salavarrieta",
+      "facet": "Casos célebres en Colombia",
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Pablo Escobar",
+      "facet": "Casos célebres en Colombia",
+      "known_at": 8
+    },
+    {
+      "name": "La Catedral",
+      "facet": "Casos célebres en Colombia",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Cárcel La Picota",
+      "facet": "Casos célebres en Colombia",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Cárcel La Modelo",
+      "facet": "Casos célebres en Colombia",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Pirámide DMG",
+      "facet": "Casos célebres en Colombia",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Interbolsa",
+      "facet": "Casos célebres en Colombia",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Fiscalía General de la Nación",
+      "facet": "Casos célebres en Colombia",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Medicina Legal",
+      "facet": "Casos célebres en Colombia",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Guaquería",
+      "facet": "Casos célebres en Colombia",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    }
+  ]
+}

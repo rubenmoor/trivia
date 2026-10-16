@@ -41,10 +41,10 @@ test("real categories: base first, every subcategory once per bundle", () => {
   const broad = broadOf(cats);
   assert.equal(broad.size, subs.length);
   assert.equal(subsOf(cats, "base").length + subsOf(cats, "colombia").length, subs.length);
-  assert.equal(broad.get("Bebidas")?.slug, "comida-bebida");
-  assert.equal(broad.get("colombia/Regiones y departamentos de Colombia")?.slug, "colombia-geografia");
-  assert.equal(broad.get("colombia/Regiones y departamentos de Colombia")?.bundle, "colombia");
-  assert.equal(broad.get("Regiones y departamentos de Colombia"), undefined);
+  assert.equal(broad.get("drinks")?.slug, "food-and-drink");
+  assert.equal(broad.get("colombia/regions-and-departments")?.slug, "geography");
+  assert.equal(broad.get("colombia/regions-and-departments")?.bundle, "colombia");
+  assert.equal(broad.get("regions-and-departments"), undefined);
   assert.equal(broad.get("Nada"), undefined);
 });
 

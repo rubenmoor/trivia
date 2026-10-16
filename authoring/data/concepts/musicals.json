@@ -1,0 +1,1035 @@
+{
+  "subcategory": "musicals",
+  "facets": [
+    "Clásicos de Broadway y West End",
+    "Musicales animados de Disney",
+    "Películas musicales clásicas",
+    "Musicales modernos y de cine reciente",
+    "Canciones famosas de musicales",
+    "Personajes de musicales",
+    "Compositores y letristas",
+    "Estrellas e intérpretes del musical",
+    "Oficio y términos del escenario",
+    "Baile y coreografía en musicales",
+    "Orígenes: ópera, zarzuela y vodevil",
+    "Musicales del mundo hispano"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 2,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "West Side Story",
+      "facet": "Clásicos de Broadway y West End",
+      "known_at": 10
+    },
+    {
+      "name": "Cabaret",
+      "facet": "Clásicos de Broadway y West End",
+      "known_at": 12
+    },
+    {
+      "name": "Evita",
+      "facet": "Clásicos de Broadway y West End",
+      "known_at": 11
+    },
+    {
+      "name": "Jesucristo Superstar",
+      "facet": "Clásicos de Broadway y West End",
+      "known_at": 11
+    },
+    {
+      "name": "Oklahoma!",
+      "facet": "Clásicos de Broadway y West End",
+      "known_at": 14
+    },
+    {
+      "name": "Mi bella dama",
+      "facet": "Clásicos de Broadway y West End",
+      "known_at": 12
+    },
+    {
+      "name": "Hair",
+      "facet": "Clásicos de Broadway y West End",
+      "known_at": 13
+    },
+    {
+      "name": "A Chorus Line",
+      "facet": "Clásicos de Broadway y West End",
+      "known_at": 14
+    },
+    {
+      "name": "Rent",
+      "facet": "Clásicos de Broadway y West End",
+      "known_at": 13
+    },
+    {
+      "name": "El violinista en el tejado",
+      "facet": "Clásicos de Broadway y West End",
+      "known_at": 12
+    },
+    {
+      "name": "Hello, Dolly!",
+      "facet": "Clásicos de Broadway y West End",
+      "known_at": 13
+    },
+    {
+      "name": "Miss Saigon",
+      "facet": "Clásicos de Broadway y West End",
+      "known_at": 13
+    },
+    {
+      "name": "Show Boat",
+      "facet": "Clásicos de Broadway y West End",
+      "known_at": 15
+    },
+    {
+      "name": "Annie",
+      "facet": "Clásicos de Broadway y West End",
+      "known_at": 9
+    },
+    {
+      "name": "Oliver!",
+      "facet": "Clásicos de Broadway y West End",
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Sweeney Todd",
+      "facet": "Clásicos de Broadway y West End",
+      "known_at": 12
+    },
+    {
+      "name": "Broadway",
+      "facet": "Clásicos de Broadway y West End",
+      "known_at": 7
+    },
+    {
+      "name": "West End",
+      "facet": "Clásicos de Broadway y West End",
+      "known_at": 12
+    },
+    {
+      "name": "Wish",
+      "facet": "Musicales animados de Disney",
+      "known_at": 6
+    },
+    {
+      "name": "La novicia rebelde",
+      "facet": "Películas musicales clásicas",
+      "known_at": 9
+    },
+    {
+      "name": "Grease",
+      "facet": "Películas musicales clásicas",
+      "known_at": 9
+    },
+    {
+      "name": "Un americano en París",
+      "facet": "Películas musicales clásicas",
+      "known_at": 14
+    },
+    {
+      "name": "Siete novias para siete hermanos",
+      "facet": "Películas musicales clásicas",
+      "known_at": 14
+    },
+    {
+      "name": "Dirty Dancing",
+      "facet": "Películas musicales clásicas",
+      "known_at": 11
+    },
+    {
+      "name": "The Rocky Horror Picture Show",
+      "facet": "Películas musicales clásicas",
+      "known_at": 13
+    },
+    {
+      "name": "Chitty Chitty Bang Bang",
+      "facet": "Películas musicales clásicas",
+      "known_at": 11
+    },
+    {
+      "name": "Willy Wonka y la fábrica de chocolate",
+      "facet": "Películas musicales clásicas",
+      "known_at": 7
+    },
+    {
+      "name": "Gigi",
+      "facet": "Películas musicales clásicas",
+      "known_at": 15
+    },
+    {
+      "name": "Fama",
+      "facet": "Películas musicales clásicas",
+      "known_at": 12
+    },
+    {
+      "name": "Footloose",
+      "facet": "Películas musicales clásicas",
+      "known_at": 12
+    },
+    {
+      "name": "Flashdance",
+      "facet": "Películas musicales clásicas",
+      "known_at": 13
+    },
+    {
+      "name": "Los caballeros las prefieren rubias",
+      "facet": "Películas musicales clásicas",
+      "known_at": 14
+    },
+    {
+      "name": "Funny Girl",
+      "facet": "Películas musicales clásicas",
+      "known_at": 14
+    },
+    {
+      "name": "El rey y yo",
+      "facet": "Películas musicales clásicas",
+      "known_at": 13
+    },
+    {
+      "name": "Querido Evan Hansen",
+      "facet": "Musicales modernos y de cine reciente",
+      "known_at": 14
+    },
+    {
+      "name": "Moulin Rouge!",
+      "facet": "Musicales modernos y de cine reciente",
+      "known_at": 10
+    },
+    {
+      "name": "Hairspray",
+      "facet": "Musicales modernos y de cine reciente",
+      "known_at": 10
+    },
+    {
+      "name": "Rock of Ages",
+      "facet": "Musicales modernos y de cine reciente",
+      "known_at": 13
+    },
+    {
+      "name": "Matilda, el musical",
+      "facet": "Musicales modernos y de cine reciente",
+      "known_at": 8
+    },
+    {
+      "name": "Sing",
+      "facet": "Musicales modernos y de cine reciente",
+      "known_at": 3
+    },
+    {
+      "name": "Come From Away",
+      "facet": "Musicales modernos y de cine reciente",
+      "known_at": 15
+    },
+    {
+      "name": "Dando la nota",
+      "facet": "Musicales modernos y de cine reciente",
+      "known_at": 10
+    },
+    {
+      "name": "Descendientes",
+      "facet": "Musicales modernos y de cine reciente",
+      "known_at": 5
+    },
+    {
+      "name": "Zombies",
+      "facet": "Musicales modernos y de cine reciente",
+      "known_at": 6
+    },
+    {
+      "name": "Tick, Tick... Boom!",
+      "facet": "Musicales modernos y de cine reciente",
+      "known_at": 14
+    },
+    {
+      "name": "En el barrio",
+      "facet": "Musicales modernos y de cine reciente",
+      "known_at": 12
+    },
+    {
+      "name": "Memory",
+      "facet": "Canciones famosas de musicales",
+      "known_at": 12
+    },
+    {
+      "name": "Sobre el arcoíris",
+      "facet": "Canciones famosas de musicales",
+      "known_at": 9
+    },
+    {
+      "name": "Do-Re-Mi",
+      "facet": "Canciones famosas de musicales",
+      "known_at": 7
+    },
+    {
+      "name": "Ciudad de estrellas",
+      "facet": "Canciones famosas de musicales",
+      "known_at": 11
+    },
+    {
+      "name": "This Is Me",
+      "facet": "Canciones famosas de musicales",
+      "known_at": 9
+    },
+    {
+      "name": "No llores por mí, Argentina",
+      "facet": "Canciones famosas de musicales",
+      "known_at": 11
+    },
+    {
+      "name": "El ciclo de la vida",
+      "facet": "Canciones famosas de musicales",
+      "known_at": 3
+    },
+    {
+      "name": "Edelweiss",
+      "facet": "Canciones famosas de musicales",
+      "known_at": 12
+    },
+    {
+      "name": "Soñé un sueño",
+      "facet": "Canciones famosas de musicales",
+      "known_at": 13
+    },
+    {
+      "name": "Summer Nights",
+      "facet": "Canciones famosas de musicales",
+      "known_at": 10
+    },
+    {
+      "name": "Qué hay más allá",
+      "facet": "Canciones famosas de musicales",
+      "known_at": 3
+    },
+    {
+      "name": "Seasons of Love",
+      "facet": "Canciones famosas de musicales",
+      "known_at": 14
+    },
+    {
+      "name": "Defying Gravity",
+      "facet": "Canciones famosas de musicales",
+      "known_at": 11
+    },
+    {
+      "name": "Tomorrow",
+      "facet": "Canciones famosas de musicales",
+      "known_at": 12
+    },
+    {
+      "name": "All That Jazz",
+      "facet": "Canciones famosas de musicales",
+      "known_at": 14
+    },
+    {
+      "name": "Bella y Bestia son",
+      "facet": "Canciones famosas de musicales",
+      "known_at": 5
+    },
+    {
+      "name": "Elphaba",
+      "facet": "Personajes de musicales",
+      "known_at": 9
+    },
+    {
+      "name": "Dorothy",
+      "facet": "Personajes de musicales",
+      "known_at": 6
+    },
+    {
+      "name": "María von Trapp",
+      "facet": "Personajes de musicales",
+      "known_at": 10
+    },
+    {
+      "name": "Danny Zuko",
+      "facet": "Personajes de musicales",
+      "known_at": 10
+    },
+    {
+      "name": "Sandy Olsson",
+      "facet": "Personajes de musicales",
+      "known_at": 10
+    },
+    {
+      "name": "Fantine",
+      "facet": "Personajes de musicales",
+      "known_at": 13
+    },
+    {
+      "name": "Christine Daaé",
+      "facet": "Personajes de musicales",
+      "known_at": 13
+    },
+    {
+      "name": "Tevye",
+      "facet": "Personajes de musicales",
+      "known_at": 14
+    },
+    {
+      "name": "Eliza Doolittle",
+      "facet": "Personajes de musicales",
+      "known_at": 12
+    },
+    {
+      "name": "P. T. Barnum",
+      "facet": "Personajes de musicales",
+      "known_at": 10
+    },
+    {
+      "name": "Troy Bolton",
+      "facet": "Personajes de musicales",
+      "known_at": 6
+    },
+    {
+      "name": "Sharpay Evans",
+      "facet": "Personajes de musicales",
+      "known_at": 7
+    },
+    {
+      "name": "Olaf",
+      "facet": "Personajes de musicales",
+      "known_at": 1
+    },
+    {
+      "name": "Timón y Pumba",
+      "facet": "Personajes de musicales",
+      "known_at": 1
+    },
+    {
+      "name": "Grizabella",
+      "facet": "Personajes de musicales",
+      "known_at": 14
+    },
+    {
+      "name": "Roxie Hart",
+      "facet": "Personajes de musicales",
+      "known_at": 14
+    },
+    {
+      "name": "Aaron Burr",
+      "facet": "Personajes de musicales",
+      "known_at": 14
+    },
+    {
+      "name": "El Genio",
+      "facet": "Personajes de musicales",
+      "known_at": 2
+    },
+    {
+      "name": "Andrew Lloyd Webber",
+      "facet": "Compositores y letristas",
+      "known_at": 11
+    },
+    {
+      "name": "Stephen Sondheim",
+      "facet": "Compositores y letristas",
+      "known_at": 14
+    },
+    {
+      "name": "Alan Menken",
+      "facet": "Compositores y letristas",
+      "known_at": 13
+    },
+    {
+      "name": "Rodgers y Hammerstein",
+      "facet": "Compositores y letristas",
+      "known_at": 14
+    },
+    {
+      "name": "George Gershwin",
+      "facet": "Compositores y letristas",
+      "known_at": 13
+    },
+    {
+      "name": "Cole Porter",
+      "facet": "Compositores y letristas",
+      "known_at": 14
+    },
+    {
+      "name": "Irving Berlin",
+      "facet": "Compositores y letristas",
+      "known_at": 14
+    },
+    {
+      "name": "Tim Rice",
+      "facet": "Compositores y letristas",
+      "known_at": 14
+    },
+    {
+      "name": "Stephen Schwartz",
+      "facet": "Compositores y letristas",
+      "known_at": 14
+    },
+    {
+      "name": "Pasek y Paul",
+      "facet": "Compositores y letristas",
+      "known_at": 15
+    },
+    {
+      "name": "Hermanos Sherman",
+      "facet": "Compositores y letristas",
+      "known_at": 14
+    },
+    {
+      "name": "Claude-Michel Schönberg",
+      "facet": "Compositores y letristas",
+      "known_at": 15
+    },
+    {
+      "name": "Kurt Weill",
+      "facet": "Compositores y letristas",
+      "known_at": 15
+    },
+    {
+      "name": "Lerner y Loewe",
+      "facet": "Compositores y letristas",
+      "known_at": 15
+    },
+    {
+      "name": "Jerry Herman",
+      "facet": "Compositores y letristas",
+      "known_at": 15
+    },
+    {
+      "name": "Phil Collins",
+      "facet": "Compositores y letristas",
+      "known_at": 11
+    },
+    {
+      "name": "Kristen Anderson-Lopez y Robert Lopez",
+      "facet": "Compositores y letristas",
+      "known_at": 14
+    },
+    {
+      "name": "Julie Andrews",
+      "facet": "Estrellas e intérpretes del musical",
+      "known_at": 9
+    },
+    {
+      "name": "Judy Garland",
+      "facet": "Estrellas e intérpretes del musical",
+      "known_at": 11
+    },
+    {
+      "name": "Gene Kelly",
+      "facet": "Estrellas e intérpretes del musical",
+      "known_at": 12
+    },
+    {
+      "name": "Fred Astaire",
+      "facet": "Estrellas e intérpretes del musical",
+      "known_at": 12
+    },
+    {
+      "name": "Ginger Rogers",
+      "facet": "Estrellas e intérpretes del musical",
+      "known_at": 13
+    },
+    {
+      "name": "Liza Minnelli",
+      "facet": "Estrellas e intérpretes del musical",
+      "known_at": 13
+    },
+    {
+      "name": "Barbra Streisand",
+      "facet": "Estrellas e intérpretes del musical",
+      "known_at": 12
+    },
+    {
+      "name": "John Travolta",
+      "facet": "Estrellas e intérpretes del musical",
+      "known_at": 9
+    },
+    {
+      "name": "Hugh Jackman",
+      "facet": "Estrellas e intérpretes del musical",
+      "known_at": 7
+    },
+    {
+      "name": "Zac Efron",
+      "facet": "Estrellas e intérpretes del musical",
+      "known_at": 6
+    },
+    {
+      "name": "Vanessa Hudgens",
+      "facet": "Estrellas e intérpretes del musical",
+      "known_at": 8
+    },
+    {
+      "name": "Idina Menzel",
+      "facet": "Estrellas e intérpretes del musical",
+      "known_at": 9
+    },
+    {
+      "name": "Cynthia Erivo",
+      "facet": "Estrellas e intérpretes del musical",
+      "known_at": 11
+    },
+    {
+      "name": "Ryan Gosling",
+      "facet": "Estrellas e intérpretes del musical",
+      "known_at": 8
+    },
+    {
+      "name": "Emma Stone",
+      "facet": "Estrellas e intérpretes del musical",
+      "known_at": 8
+    },
+    {
+      "name": "Lea Michele",
+      "facet": "Estrellas e intérpretes del musical",
+      "known_at": 11
+    },
+    {
+      "name": "Michael Crawford",
+      "facet": "Estrellas e intérpretes del musical",
+      "known_at": 15
+    },
+    {
+      "name": "Sarah Brightman",
+      "facet": "Estrellas e intérpretes del musical",
+      "known_at": 14
+    },
+    {
+      "name": "Patti LuPone",
+      "facet": "Estrellas e intérpretes del musical",
+      "known_at": 15
+    },
+    {
+      "name": "Debbie Reynolds",
+      "facet": "Estrellas e intérpretes del musical",
+      "known_at": 13
+    },
+    {
+      "name": "Anne Hathaway",
+      "facet": "Estrellas e intérpretes del musical",
+      "known_at": 9
+    },
+    {
+      "name": "Kristin Chenoweth",
+      "facet": "Estrellas e intérpretes del musical",
+      "known_at": 14
+    },
+    {
+      "name": "Escenario",
+      "facet": "Oficio y términos del escenario",
+      "known_at": 1
+    },
+    {
+      "name": "Bambalinas",
+      "facet": "Oficio y términos del escenario",
+      "known_at": 9
+    },
+    {
+      "name": "Entreacto",
+      "facet": "Oficio y términos del escenario",
+      "known_at": 9
+    },
+    {
+      "name": "Ovación de pie",
+      "facet": "Oficio y términos del escenario",
+      "known_at": 7
+    },
+    {
+      "name": "Reparto",
+      "facet": "Oficio y términos del escenario",
+      "known_at": 7
+    },
+    {
+      "name": "Audición",
+      "facet": "Oficio y términos del escenario",
+      "known_at": 5
+    },
+    {
+      "name": "Utilería",
+      "facet": "Oficio y términos del escenario",
+      "known_at": 11
+    },
+    {
+      "name": "Camerino",
+      "facet": "Oficio y términos del escenario",
+      "known_at": 8
+    },
+    {
+      "name": "Suplente",
+      "facet": "Oficio y términos del escenario",
+      "known_at": 11
+    },
+    {
+      "name": "Reprise",
+      "facet": "Oficio y términos del escenario",
+      "known_at": 13
+    },
+    {
+      "name": "Musical de catálogo",
+      "facet": "Oficio y términos del escenario",
+      "known_at": 14
+    },
+    {
+      "name": "Matiné",
+      "facet": "Oficio y términos del escenario",
+      "known_at": 12
+    },
+    {
+      "name": "Proscenio",
+      "facet": "Oficio y términos del escenario",
+      "known_at": 13
+    },
+    {
+      "name": "Apuntador",
+      "facet": "Oficio y términos del escenario",
+      "known_at": 12
+    },
+    {
+      "name": "Vestuario",
+      "facet": "Oficio y términos del escenario",
+      "known_at": 4
+    },
+    {
+      "name": "Premios Tony",
+      "facet": "Oficio y términos del escenario",
+      "known_at": 11
+    },
+    {
+      "name": "Premios Olivier",
+      "facet": "Oficio y términos del escenario",
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Micrófono de diadema",
+      "facet": "Oficio y términos del escenario",
+      "known_at": 9
+    },
+    {
+      "name": "Rómpete una pierna",
+      "facet": "Oficio y términos del escenario",
+      "known_at": 12
+    },
+    {
+      "name": "Cuarta pared",
+      "facet": "Oficio y términos del escenario",
+      "known_at": 13
+    },
+    {
+      "name": "Claqué",
+      "facet": "Baile y coreografía en musicales",
+      "known_at": 8
+    },
+    {
+      "name": "Bob Fosse",
+      "facet": "Baile y coreografía en musicales",
+      "known_at": 14
+    },
+    {
+      "name": "Manos de jazz",
+      "facet": "Baile y coreografía en musicales",
+      "known_at": 10
+    },
+    {
+      "name": "Tango",
+      "facet": "Baile y coreografía en musicales",
+      "known_at": 6
+    },
+    {
+      "name": "Ballet",
+      "facet": "Baile y coreografía en musicales",
+      "known_at": 3
+    },
+    {
+      "name": "Cancán",
+      "facet": "Baile y coreografía en musicales",
+      "known_at": 10
+    },
+    {
+      "name": "Charlestón",
+      "facet": "Baile y coreografía en musicales",
+      "known_at": 12
+    },
+    {
+      "name": "Breakdance",
+      "facet": "Baile y coreografía en musicales",
+      "known_at": 7
+    },
+    {
+      "name": "Hip hop",
+      "facet": "Baile y coreografía en musicales",
+      "known_at": 5
+    },
+    {
+      "name": "Mambo",
+      "facet": "Baile y coreografía en musicales",
+      "known_at": 9
+    },
+    {
+      "name": "Swing",
+      "facet": "Baile y coreografía en musicales",
+      "known_at": 11
+    },
+    {
+      "name": "Busby Berkeley",
+      "facet": "Baile y coreografía en musicales",
+      "known_at": 15
+    },
+    {
+      "name": "Jerome Robbins",
+      "facet": "Baile y coreografía en musicales",
+      "known_at": 15
+    },
+    {
+      "name": "Línea de coristas",
+      "facet": "Baile y coreografía en musicales",
+      "known_at": 12
+    },
+    {
+      "name": "Las Rockettes",
+      "facet": "Baile y coreografía en musicales",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Pas de deux",
+      "facet": "Baile y coreografía en musicales",
+      "known_at": 13
+    },
+    {
+      "name": "Lindy hop",
+      "facet": "Baile y coreografía en musicales",
+      "known_at": 14
+    },
+    {
+      "name": "Twist",
+      "facet": "Baile y coreografía en musicales",
+      "known_at": 9
+    },
+    {
+      "name": "Salsa",
+      "facet": "Baile y coreografía en musicales",
+      "known_at": 3
+    },
+    {
+      "name": "Hand jive",
+      "facet": "Baile y coreografía en musicales",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Zarzuela",
+      "facet": "Orígenes: ópera, zarzuela y vodevil",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Vodevil",
+      "facet": "Orígenes: ópera, zarzuela y vodevil",
+      "known_at": 13
+    },
+    {
+      "name": "Opereta",
+      "facet": "Orígenes: ópera, zarzuela y vodevil",
+      "known_at": 13
+    },
+    {
+      "name": "Music hall",
+      "facet": "Orígenes: ópera, zarzuela y vodevil",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Teatro griego",
+      "facet": "Orígenes: ópera, zarzuela y vodevil",
+      "known_at": 9
+    },
+    {
+      "name": "Commedia dell'arte",
+      "facet": "Orígenes: ópera, zarzuela y vodevil",
+      "known_at": 14
+    },
+    {
+      "name": "Pantomima",
+      "facet": "Orígenes: ópera, zarzuela y vodevil",
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Gilbert y Sullivan",
+      "facet": "Orígenes: ópera, zarzuela y vodevil",
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Ziegfeld Follies",
+      "facet": "Orígenes: ópera, zarzuela y vodevil",
+      "known_at": 15
+    },
+    {
+      "name": "Jacques Offenbach",
+      "facet": "Orígenes: ópera, zarzuela y vodevil",
+      "known_at": 15
+    },
+    {
+      "name": "Teatro de revista",
+      "facet": "Orígenes: ópera, zarzuela y vodevil",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Ópera de Pekín",
+      "facet": "Orígenes: ópera, zarzuela y vodevil",
+      "known_at": 13
+    },
+    {
+      "name": "La verbena de la Paloma",
+      "facet": "Orígenes: ópera, zarzuela y vodevil",
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Hoy no me puedo levantar",
+      "facet": "Musicales del mundo hispano",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Mecano",
+      "facet": "Musicales del mundo hispano",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Misi",
+      "facet": "Musicales del mundo hispano",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Avenida Corrientes",
+      "facet": "Musicales del mundo hispano",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Gran Vía de Madrid",
+      "facet": "Musicales del mundo hispano",
+      "known_at": 13
+    },
+    {
+      "name": "Mentiras, el musical",
+      "facet": "Musicales del mundo hispano",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Cecilia Valdés",
+      "facet": "Musicales del mundo hispano",
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Vivo",
+      "facet": "Musicales del mundo hispano",
+      "known_at": 8
+    },
+    {
+      "name": "Selena",
+      "facet": "Musicales del mundo hispano",
+      "known_at": 12
+    },
+    {
+      "name": "Pedro Infante",
+      "facet": "Musicales del mundo hispano",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Jorge Negrete",
+      "facet": "Musicales del mundo hispano",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Carlos Gardel",
+      "facet": "Musicales del mundo hispano",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Marisol",
+      "facet": "Musicales del mundo hispano",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Joselito",
+      "facet": "Musicales del mundo hispano",
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Sara Montiel",
+      "facet": "Musicales del mundo hispano",
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Rita Moreno",
+      "facet": "Musicales del mundo hispano",
+      "known_at": 13
+    },
+    {
+      "name": "Chita Rivera",
+      "facet": "Musicales del mundo hispano",
+      "known_at": 15
+    },
+    {
+      "name": "Lola Flores",
+      "facet": "Musicales del mundo hispano",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    }
+  ]
+}

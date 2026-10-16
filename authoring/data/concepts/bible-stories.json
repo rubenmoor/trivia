@@ -1,0 +1,1020 @@
+{
+  "subcategory": "bible-stories",
+  "facets": [
+    "Creación y primeros relatos",
+    "Noé, el diluvio y Babel",
+    "Patriarcas: Abraham a José",
+    "Moisés y el Éxodo",
+    "Reyes y héroes de Israel",
+    "Profetas y sus aventuras",
+    "Mujeres de la Biblia",
+    "Nacimiento e infancia de Jesús",
+    "Milagros y parábolas de Jesús",
+    "Pasión, Pascua y apóstoles",
+    "Animales, objetos y lugares bíblicos",
+    "Expresiones y dichos bíblicos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 5,
+      "estimate": 3,
+      "record": 3,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 5,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 3,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 2,
+      "educational_media": 3,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 1,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Adán",
+      "facet": "Creación y primeros relatos",
+      "known_at": 2
+    },
+    {
+      "name": "Jardín del Edén",
+      "facet": "Creación y primeros relatos",
+      "known_at": 4
+    },
+    {
+      "name": "Fruto prohibido",
+      "facet": "Creación y primeros relatos",
+      "known_at": 3
+    },
+    {
+      "name": "Árbol del conocimiento del bien y del mal",
+      "facet": "Creación y primeros relatos",
+      "known_at": 8
+    },
+    {
+      "name": "Costilla de Adán",
+      "facet": "Creación y primeros relatos",
+      "known_at": 5
+    },
+    {
+      "name": "Creación en seis días",
+      "facet": "Creación y primeros relatos",
+      "known_at": 4
+    },
+    {
+      "name": "Séptimo día de descanso",
+      "facet": "Creación y primeros relatos",
+      "known_at": 5
+    },
+    {
+      "name": "Caín",
+      "facet": "Creación y primeros relatos",
+      "known_at": 6
+    },
+    {
+      "name": "Abel",
+      "facet": "Creación y primeros relatos",
+      "known_at": 6
+    },
+    {
+      "name": "Enoc",
+      "facet": "Creación y primeros relatos",
+      "known_at": 14
+    },
+    {
+      "name": "Querubines con espada de fuego",
+      "facet": "Creación y primeros relatos",
+      "known_at": 13
+    },
+    {
+      "name": "Expulsión del paraíso",
+      "facet": "Creación y primeros relatos",
+      "known_at": 5
+    },
+    {
+      "name": "Diluvio universal",
+      "facet": "Noé, el diluvio y Babel",
+      "known_at": 4
+    },
+    {
+      "name": "Animales de dos en dos",
+      "facet": "Noé, el diluvio y Babel",
+      "known_at": 2
+    },
+    {
+      "name": "Paloma con ramo de olivo",
+      "facet": "Noé, el diluvio y Babel",
+      "known_at": 6
+    },
+    {
+      "name": "Cuervo de Noé",
+      "facet": "Noé, el diluvio y Babel",
+      "known_at": 12
+    },
+    {
+      "name": "Arcoíris de la alianza",
+      "facet": "Noé, el diluvio y Babel",
+      "known_at": 6
+    },
+    {
+      "name": "Monte Ararat",
+      "facet": "Noé, el diluvio y Babel",
+      "known_at": 11
+    },
+    {
+      "name": "Cuarenta días y cuarenta noches",
+      "facet": "Noé, el diluvio y Babel",
+      "known_at": 7
+    },
+    {
+      "name": "Sem",
+      "facet": "Noé, el diluvio y Babel",
+      "known_at": 13
+    },
+    {
+      "name": "Cam",
+      "facet": "Noé, el diluvio y Babel",
+      "known_at": 13
+    },
+    {
+      "name": "Jafet",
+      "facet": "Noé, el diluvio y Babel",
+      "known_at": 13
+    },
+    {
+      "name": "Madera de gofer",
+      "facet": "Noé, el diluvio y Babel",
+      "known_at": 15
+    },
+    {
+      "name": "Confusión de lenguas",
+      "facet": "Noé, el diluvio y Babel",
+      "known_at": 7
+    },
+    {
+      "name": "Nimrod",
+      "facet": "Noé, el diluvio y Babel",
+      "known_at": 14
+    },
+    {
+      "name": "Isaac",
+      "facet": "Patriarcas: Abraham a José",
+      "known_at": 8
+    },
+    {
+      "name": "Sacrificio de Isaac",
+      "facet": "Patriarcas: Abraham a José",
+      "known_at": 10
+    },
+    {
+      "name": "Ismael",
+      "facet": "Patriarcas: Abraham a José",
+      "known_at": 12
+    },
+    {
+      "name": "Ur de los caldeos",
+      "facet": "Patriarcas: Abraham a José",
+      "known_at": 13
+    },
+    {
+      "name": "Melquisedec",
+      "facet": "Patriarcas: Abraham a José",
+      "known_at": 15
+    },
+    {
+      "name": "Lot",
+      "facet": "Patriarcas: Abraham a José",
+      "known_at": 11
+    },
+    {
+      "name": "Sodoma y Gomorra",
+      "facet": "Patriarcas: Abraham a José",
+      "known_at": 9
+    },
+    {
+      "name": "Jacob",
+      "facet": "Patriarcas: Abraham a José",
+      "known_at": 8
+    },
+    {
+      "name": "Esaú",
+      "facet": "Patriarcas: Abraham a José",
+      "known_at": 10
+    },
+    {
+      "name": "Plato de lentejas",
+      "facet": "Patriarcas: Abraham a José",
+      "known_at": 10
+    },
+    {
+      "name": "Escalera de Jacob",
+      "facet": "Patriarcas: Abraham a José",
+      "known_at": 12
+    },
+    {
+      "name": "Lucha de Jacob con el ángel",
+      "facet": "Patriarcas: Abraham a José",
+      "known_at": 13
+    },
+    {
+      "name": "Doce tribus de Israel",
+      "facet": "Patriarcas: Abraham a José",
+      "known_at": 9
+    },
+    {
+      "name": "José, hijo de Jacob",
+      "facet": "Patriarcas: Abraham a José",
+      "known_at": 7
+    },
+    {
+      "name": "Túnica de colores de José",
+      "facet": "Patriarcas: Abraham a José",
+      "known_at": 7
+    },
+    {
+      "name": "Sueños del faraón",
+      "facet": "Patriarcas: Abraham a José",
+      "known_at": 9
+    },
+    {
+      "name": "Siete vacas gordas y siete vacas flacas",
+      "facet": "Patriarcas: Abraham a José",
+      "known_at": 9
+    },
+    {
+      "name": "Benjamín",
+      "facet": "Patriarcas: Abraham a José",
+      "known_at": 12
+    },
+    {
+      "name": "Cesta en el río Nilo",
+      "facet": "Moisés y el Éxodo",
+      "known_at": 4
+    },
+    {
+      "name": "Hija del faraón",
+      "facet": "Moisés y el Éxodo",
+      "known_at": 7
+    },
+    {
+      "name": "Zarza ardiente",
+      "facet": "Moisés y el Éxodo",
+      "known_at": 7
+    },
+    {
+      "name": "Vara de Moisés",
+      "facet": "Moisés y el Éxodo",
+      "known_at": 6
+    },
+    {
+      "name": "Diez plagas de Egipto",
+      "facet": "Moisés y el Éxodo",
+      "known_at": 6
+    },
+    {
+      "name": "Plaga de ranas",
+      "facet": "Moisés y el Éxodo",
+      "known_at": 6
+    },
+    {
+      "name": "Aarón",
+      "facet": "Moisés y el Éxodo",
+      "known_at": 11
+    },
+    {
+      "name": "Separación del Mar Rojo",
+      "facet": "Moisés y el Éxodo",
+      "known_at": 3
+    },
+    {
+      "name": "Becerro de oro",
+      "facet": "Moisés y el Éxodo",
+      "known_at": 8
+    },
+    {
+      "name": "Serpiente de bronce",
+      "facet": "Moisés y el Éxodo",
+      "known_at": 13
+    },
+    {
+      "name": "Cuarenta años en el desierto",
+      "facet": "Moisés y el Éxodo",
+      "known_at": 8
+    },
+    {
+      "name": "Tierra prometida",
+      "facet": "Moisés y el Éxodo",
+      "known_at": 6
+    },
+    {
+      "name": "Pascua judía",
+      "facet": "Moisés y el Éxodo",
+      "known_at": 9
+    },
+    {
+      "name": "Éxodo",
+      "facet": "Moisés y el Éxodo",
+      "known_at": 8
+    },
+    {
+      "name": "Goliat",
+      "facet": "Reyes y héroes de Israel",
+      "known_at": 3
+    },
+    {
+      "name": "Honda de David",
+      "facet": "Reyes y héroes de Israel",
+      "known_at": 4
+    },
+    {
+      "name": "Arpa de David",
+      "facet": "Reyes y héroes de Israel",
+      "known_at": 10
+    },
+    {
+      "name": "Saúl",
+      "facet": "Reyes y héroes de Israel",
+      "known_at": 11
+    },
+    {
+      "name": "Jonatán",
+      "facet": "Reyes y héroes de Israel",
+      "known_at": 13
+    },
+    {
+      "name": "Absalón",
+      "facet": "Reyes y héroes de Israel",
+      "known_at": 14
+    },
+    {
+      "name": "Salomón",
+      "facet": "Reyes y héroes de Israel",
+      "known_at": 8
+    },
+    {
+      "name": "Juicio de Salomón",
+      "facet": "Reyes y héroes de Israel",
+      "known_at": 10
+    },
+    {
+      "name": "Sansón",
+      "facet": "Reyes y héroes de Israel",
+      "known_at": 5
+    },
+    {
+      "name": "Cabello de Sansón",
+      "facet": "Reyes y héroes de Israel",
+      "known_at": 6
+    },
+    {
+      "name": "Josué",
+      "facet": "Reyes y héroes de Israel",
+      "known_at": 11
+    },
+    {
+      "name": "Murallas de Jericó",
+      "facet": "Reyes y héroes de Israel",
+      "known_at": 9
+    },
+    {
+      "name": "Gedeón",
+      "facet": "Reyes y héroes de Israel",
+      "known_at": 13
+    },
+    {
+      "name": "Samuel",
+      "facet": "Reyes y héroes de Israel",
+      "known_at": 12
+    },
+    {
+      "name": "Jueces de Israel",
+      "facet": "Reyes y héroes de Israel",
+      "known_at": 13
+    },
+    {
+      "name": "Jonás",
+      "facet": "Profetas y sus aventuras",
+      "known_at": 4
+    },
+    {
+      "name": "Gran pez de Jonás",
+      "facet": "Profetas y sus aventuras",
+      "known_at": 4
+    },
+    {
+      "name": "Daniel",
+      "facet": "Profetas y sus aventuras",
+      "known_at": 7
+    },
+    {
+      "name": "Foso de los leones",
+      "facet": "Profetas y sus aventuras",
+      "known_at": 7
+    },
+    {
+      "name": "Sadrac, Mesac y Abednego",
+      "facet": "Profetas y sus aventuras",
+      "known_at": 14
+    },
+    {
+      "name": "Horno de fuego",
+      "facet": "Profetas y sus aventuras",
+      "known_at": 11
+    },
+    {
+      "name": "Nabucodonosor",
+      "facet": "Profetas y sus aventuras",
+      "known_at": 11
+    },
+    {
+      "name": "Festín de Baltasar",
+      "facet": "Profetas y sus aventuras",
+      "known_at": 14
+    },
+    {
+      "name": "Escritura en la pared",
+      "facet": "Profetas y sus aventuras",
+      "known_at": 13
+    },
+    {
+      "name": "Estatua con pies de barro",
+      "facet": "Profetas y sus aventuras",
+      "known_at": 12
+    },
+    {
+      "name": "Carro de fuego",
+      "facet": "Profetas y sus aventuras",
+      "known_at": 11
+    },
+    {
+      "name": "Cuervos que alimentan a Elías",
+      "facet": "Profetas y sus aventuras",
+      "known_at": 13
+    },
+    {
+      "name": "Profetas de Baal",
+      "facet": "Profetas y sus aventuras",
+      "known_at": 14
+    },
+    {
+      "name": "Eliseo",
+      "facet": "Profetas y sus aventuras",
+      "known_at": 13
+    },
+    {
+      "name": "Isaías",
+      "facet": "Profetas y sus aventuras",
+      "known_at": 10
+    },
+    {
+      "name": "Jeremías",
+      "facet": "Profetas y sus aventuras",
+      "known_at": 11
+    },
+    {
+      "name": "Ezequiel",
+      "facet": "Profetas y sus aventuras",
+      "known_at": 12
+    },
+    {
+      "name": "Valle de los huesos secos",
+      "facet": "Profetas y sus aventuras",
+      "known_at": 14
+    },
+    {
+      "name": "Job",
+      "facet": "Profetas y sus aventuras",
+      "known_at": 10
+    },
+    {
+      "name": "Sara",
+      "facet": "Mujeres de la Biblia",
+      "known_at": 9
+    },
+    {
+      "name": "Rebeca",
+      "facet": "Mujeres de la Biblia",
+      "known_at": 11
+    },
+    {
+      "name": "Raquel",
+      "facet": "Mujeres de la Biblia",
+      "known_at": 12
+    },
+    {
+      "name": "Lía",
+      "facet": "Mujeres de la Biblia",
+      "known_at": 13
+    },
+    {
+      "name": "Mujer de Lot",
+      "facet": "Mujeres de la Biblia",
+      "known_at": 10
+    },
+    {
+      "name": "Miriam",
+      "facet": "Mujeres de la Biblia",
+      "known_at": 13
+    },
+    {
+      "name": "Rahab",
+      "facet": "Mujeres de la Biblia",
+      "known_at": 14
+    },
+    {
+      "name": "Débora",
+      "facet": "Mujeres de la Biblia",
+      "known_at": 13
+    },
+    {
+      "name": "Dalila",
+      "facet": "Mujeres de la Biblia",
+      "known_at": 7
+    },
+    {
+      "name": "Rut",
+      "facet": "Mujeres de la Biblia",
+      "known_at": 11
+    },
+    {
+      "name": "Noemí",
+      "facet": "Mujeres de la Biblia",
+      "known_at": 13
+    },
+    {
+      "name": "Ana, madre de Samuel",
+      "facet": "Mujeres de la Biblia",
+      "known_at": 14
+    },
+    {
+      "name": "Betsabé",
+      "facet": "Mujeres de la Biblia",
+      "known_at": 13
+    },
+    {
+      "name": "Reina de Saba",
+      "facet": "Mujeres de la Biblia",
+      "known_at": 10
+    },
+    {
+      "name": "Jezabel",
+      "facet": "Mujeres de la Biblia",
+      "known_at": 13
+    },
+    {
+      "name": "Ester",
+      "facet": "Mujeres de la Biblia",
+      "known_at": 11
+    },
+    {
+      "name": "Judit",
+      "facet": "Mujeres de la Biblia",
+      "known_at": 13
+    },
+    {
+      "name": "Isabel, madre de Juan el Bautista",
+      "facet": "Mujeres de la Biblia",
+      "known_at": 10
+    },
+    {
+      "name": "María Magdalena",
+      "facet": "Mujeres de la Biblia",
+      "known_at": 8
+    },
+    {
+      "name": "Marta de Betania",
+      "facet": "Mujeres de la Biblia",
+      "known_at": 12
+    },
+    {
+      "name": "Visitación",
+      "facet": "Nacimiento e infancia de Jesús",
+      "known_at": 12
+    },
+    {
+      "name": "Censo de César Augusto",
+      "facet": "Nacimiento e infancia de Jesús",
+      "known_at": 11
+    },
+    {
+      "name": "Buey y mula",
+      "facet": "Nacimiento e infancia de Jesús",
+      "known_at": 2
+    },
+    {
+      "name": "Melchor, Gaspar y Baltasar",
+      "facet": "Nacimiento e infancia de Jesús",
+      "known_at": 4
+    },
+    {
+      "name": "Herodes el Grande",
+      "facet": "Nacimiento e infancia de Jesús",
+      "known_at": 8
+    },
+    {
+      "name": "Presentación en el templo",
+      "facet": "Nacimiento e infancia de Jesús",
+      "known_at": 12
+    },
+    {
+      "name": "Simeón",
+      "facet": "Nacimiento e infancia de Jesús",
+      "known_at": 14
+    },
+    {
+      "name": "Niño Jesús perdido en el templo",
+      "facet": "Nacimiento e infancia de Jesús",
+      "known_at": 10
+    },
+    {
+      "name": "Carpintero",
+      "facet": "Nacimiento e infancia de Jesús",
+      "known_at": 4
+    },
+    {
+      "name": "Bautismo de Jesús",
+      "facet": "Milagros y parábolas de Jesús",
+      "known_at": 7
+    },
+    {
+      "name": "Tentaciones en el desierto",
+      "facet": "Milagros y parábolas de Jesús",
+      "known_at": 10
+    },
+    {
+      "name": "Bodas de Caná",
+      "facet": "Milagros y parábolas de Jesús",
+      "known_at": 8
+    },
+    {
+      "name": "Agua convertida en vino",
+      "facet": "Milagros y parábolas de Jesús",
+      "known_at": 5
+    },
+    {
+      "name": "Multiplicación de los panes y los peces",
+      "facet": "Milagros y parábolas de Jesús",
+      "known_at": 4
+    },
+    {
+      "name": "Jesús camina sobre el agua",
+      "facet": "Milagros y parábolas de Jesús",
+      "known_at": 4
+    },
+    {
+      "name": "Tempestad calmada",
+      "facet": "Milagros y parábolas de Jesús",
+      "known_at": 8
+    },
+    {
+      "name": "Pesca milagrosa",
+      "facet": "Milagros y parábolas de Jesús",
+      "known_at": 8
+    },
+    {
+      "name": "Resurrección de Lázaro",
+      "facet": "Milagros y parábolas de Jesús",
+      "known_at": 8
+    },
+    {
+      "name": "Curación del ciego de nacimiento",
+      "facet": "Milagros y parábolas de Jesús",
+      "known_at": 9
+    },
+    {
+      "name": "Zaqueo",
+      "facet": "Milagros y parábolas de Jesús",
+      "known_at": 11
+    },
+    {
+      "name": "Sermón de la montaña",
+      "facet": "Milagros y parábolas de Jesús",
+      "known_at": 9
+    },
+    {
+      "name": "Bienaventuranzas",
+      "facet": "Milagros y parábolas de Jesús",
+      "known_at": 10
+    },
+    {
+      "name": "Hijo pródigo",
+      "facet": "Milagros y parábolas de Jesús",
+      "known_at": 8
+    },
+    {
+      "name": "Buen samaritano",
+      "facet": "Milagros y parábolas de Jesús",
+      "known_at": 7
+    },
+    {
+      "name": "Oveja perdida",
+      "facet": "Milagros y parábolas de Jesús",
+      "known_at": 5
+    },
+    {
+      "name": "Parábola del sembrador",
+      "facet": "Milagros y parábolas de Jesús",
+      "known_at": 10
+    },
+    {
+      "name": "Grano de mostaza",
+      "facet": "Milagros y parábolas de Jesús",
+      "known_at": 11
+    },
+    {
+      "name": "Parábola de los talentos",
+      "facet": "Milagros y parábolas de Jesús",
+      "known_at": 12
+    },
+    {
+      "name": "Vírgenes prudentes y necias",
+      "facet": "Milagros y parábolas de Jesús",
+      "known_at": 13
+    },
+    {
+      "name": "Expulsión de los mercaderes del templo",
+      "facet": "Milagros y parábolas de Jesús",
+      "known_at": 10
+    },
+    {
+      "name": "Doce apóstoles",
+      "facet": "Pasión, Pascua y apóstoles",
+      "known_at": 5
+    },
+    {
+      "name": "Pedro",
+      "facet": "Pasión, Pascua y apóstoles",
+      "known_at": 6
+    },
+    {
+      "name": "Andrés",
+      "facet": "Pasión, Pascua y apóstoles",
+      "known_at": 12
+    },
+    {
+      "name": "Juan Evangelista",
+      "facet": "Pasión, Pascua y apóstoles",
+      "known_at": 9
+    },
+    {
+      "name": "Mateo",
+      "facet": "Pasión, Pascua y apóstoles",
+      "known_at": 10
+    },
+    {
+      "name": "Tomás el incrédulo",
+      "facet": "Pasión, Pascua y apóstoles",
+      "known_at": 10
+    },
+    {
+      "name": "Judas Iscariote",
+      "facet": "Pasión, Pascua y apóstoles",
+      "known_at": 6
+    },
+    {
+      "name": "Treinta monedas de plata",
+      "facet": "Pasión, Pascua y apóstoles",
+      "known_at": 10
+    },
+    {
+      "name": "Lavatorio de los pies",
+      "facet": "Pasión, Pascua y apóstoles",
+      "known_at": 10
+    },
+    {
+      "name": "Huerto de Getsemaní",
+      "facet": "Pasión, Pascua y apóstoles",
+      "known_at": 11
+    },
+    {
+      "name": "Negaciones de Pedro",
+      "facet": "Pasión, Pascua y apóstoles",
+      "known_at": 9
+    },
+    {
+      "name": "Poncio Pilato",
+      "facet": "Pasión, Pascua y apóstoles",
+      "known_at": 8
+    },
+    {
+      "name": "Barrabás",
+      "facet": "Pasión, Pascua y apóstoles",
+      "known_at": 11
+    },
+    {
+      "name": "Corona de espinas",
+      "facet": "Pasión, Pascua y apóstoles",
+      "known_at": 6
+    },
+    {
+      "name": "Gólgota",
+      "facet": "Pasión, Pascua y apóstoles",
+      "known_at": 11
+    },
+    {
+      "name": "INRI",
+      "facet": "Pasión, Pascua y apóstoles",
+      "known_at": 11
+    },
+    {
+      "name": "Sepulcro vacío",
+      "facet": "Pasión, Pascua y apóstoles",
+      "known_at": 7
+    },
+    {
+      "name": "Resurrección de Jesús",
+      "facet": "Pasión, Pascua y apóstoles",
+      "known_at": 4
+    },
+    {
+      "name": "Ascensión",
+      "facet": "Pasión, Pascua y apóstoles",
+      "known_at": 9
+    },
+    {
+      "name": "Pablo de Tarso",
+      "facet": "Pasión, Pascua y apóstoles",
+      "known_at": 9
+    },
+    {
+      "name": "Camino de Damasco",
+      "facet": "Pasión, Pascua y apóstoles",
+      "known_at": 12
+    },
+    {
+      "name": "Mar de Galilea",
+      "facet": "Animales, objetos y lugares bíblicos",
+      "known_at": 9
+    },
+    {
+      "name": "Monte de los Olivos",
+      "facet": "Animales, objetos y lugares bíblicos",
+      "known_at": 11
+    },
+    {
+      "name": "Nínive",
+      "facet": "Animales, objetos y lugares bíblicos",
+      "known_at": 13
+    },
+    {
+      "name": "Burra de Balaam",
+      "facet": "Animales, objetos y lugares bíblicos",
+      "known_at": 14
+    },
+    {
+      "name": "Cordero pascual",
+      "facet": "Animales, objetos y lugares bíblicos",
+      "known_at": 7
+    },
+    {
+      "name": "Langostas y miel silvestre",
+      "facet": "Animales, objetos y lugares bíblicos",
+      "known_at": 11
+    },
+    {
+      "name": "Leviatán",
+      "facet": "Animales, objetos y lugares bíblicos",
+      "known_at": 12
+    },
+    {
+      "name": "Cedros del Líbano",
+      "facet": "Animales, objetos y lugares bíblicos",
+      "known_at": 13
+    },
+    {
+      "name": "Pan ácimo",
+      "facet": "Animales, objetos y lugares bíblicos",
+      "known_at": 10
+    },
+    {
+      "name": "Shofar",
+      "facet": "Animales, objetos y lugares bíblicos",
+      "known_at": 13
+    },
+    {
+      "name": "Poner la otra mejilla",
+      "facet": "Expresiones y dichos bíblicos",
+      "known_at": 8
+    },
+    {
+      "name": "Beso de Judas",
+      "facet": "Expresiones y dichos bíblicos",
+      "known_at": 10
+    },
+    {
+      "name": "Paciencia de Job",
+      "facet": "Expresiones y dichos bíblicos",
+      "known_at": 10
+    },
+    {
+      "name": "Chivo expiatorio",
+      "facet": "Expresiones y dichos bíblicos",
+      "known_at": 11
+    },
+    {
+      "name": "Lobo con piel de oveja",
+      "facet": "Expresiones y dichos bíblicos",
+      "known_at": 7
+    },
+    {
+      "name": "Tirar la primera piedra",
+      "facet": "Expresiones y dichos bíblicos",
+      "known_at": 9
+    },
+    {
+      "name": "Dar al César lo que es del César",
+      "facet": "Expresiones y dichos bíblicos",
+      "known_at": 11
+    },
+    {
+      "name": "No solo de pan vive el hombre",
+      "facet": "Expresiones y dichos bíblicos",
+      "known_at": 10
+    },
+    {
+      "name": "Camello por el ojo de una aguja",
+      "facet": "Expresiones y dichos bíblicos",
+      "known_at": 11
+    },
+    {
+      "name": "Echar perlas a los cerdos",
+      "facet": "Expresiones y dichos bíblicos",
+      "known_at": 12
+    },
+    {
+      "name": "Sal de la tierra",
+      "facet": "Expresiones y dichos bíblicos",
+      "known_at": 13
+    },
+    {
+      "name": "Nada nuevo bajo el sol",
+      "facet": "Expresiones y dichos bíblicos",
+      "known_at": 12
+    },
+    {
+      "name": "Vanidad de vanidades",
+      "facet": "Expresiones y dichos bíblicos",
+      "known_at": 14
+    },
+    {
+      "name": "Quien a hierro mata, a hierro muere",
+      "facet": "Expresiones y dichos bíblicos",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Muchos son los llamados y pocos los escogidos",
+      "facet": "Expresiones y dichos bíblicos",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Por sus frutos los conoceréis",
+      "facet": "Expresiones y dichos bíblicos",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Alfa y Omega",
+      "facet": "Expresiones y dichos bíblicos",
+      "known_at": 12
+    },
+    {
+      "name": "Armagedón",
+      "facet": "Expresiones y dichos bíblicos",
+      "known_at": 10
+    },
+    {
+      "name": "Talento",
+      "facet": "Expresiones y dichos bíblicos",
+      "known_at": 13
+    }
+  ]
+}

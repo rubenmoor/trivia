@@ -1,0 +1,540 @@
+{
+  "subcategory": "banknotes",
+  "facets": [
+    "Billetes de Colombia y sus personajes",
+    "Personajes históricos en billetes",
+    "Animales y plantas en billetes",
+    "Monumentos y paisajes en billetes",
+    "Nombres de monedas por país",
+    "Símbolos y abreviaturas de divisas",
+    "Seguridad y falsificación de billetes",
+    "Materiales y fabricación de billetes",
+    "Historia del papel moneda",
+    "Billetes curiosos y récords",
+    "Denominaciones, colores y tamaños",
+    "Billetes en cine, juegos y cultura popular"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 5,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 2,
+      "educational_media": 3,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Virginia Gutiérrez de Pineda",
+      "facet": "Billetes de Colombia y sus personajes",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Julio Garavito",
+      "facet": "Billetes de Colombia y sus personajes",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Peso oro",
+      "facet": "Billetes de Colombia y sus personajes",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Palo",
+      "facet": "Billetes de Colombia y sus personajes",
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Familia de billetes de 2016",
+      "facet": "Billetes de Colombia y sus personajes",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Carlos III del Reino Unido",
+      "facet": "Personajes históricos en billetes",
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Eva Perón",
+      "facet": "Personajes históricos en billetes",
+      "known_at": 11
+    },
+    {
+      "name": "Fukuzawa Yukichi",
+      "facet": "Personajes históricos en billetes",
+      "known_at": 15
+    },
+    {
+      "name": "Macarenia clavigera",
+      "facet": "Animales y plantas en billetes",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Puentes de los billetes de euro",
+      "facet": "Monumentos y paisajes en billetes",
+      "known_at": 12
+    },
+    {
+      "name": "Independence Hall",
+      "facet": "Monumentos y paisajes en billetes",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Fuerte Rojo",
+      "facet": "Monumentos y paisajes en billetes",
+      "known_at": 14
+    },
+    {
+      "name": "Río Li",
+      "facet": "Monumentos y paisajes en billetes",
+      "known_at": 14
+    },
+    {
+      "name": "Gran Salón del Pueblo",
+      "facet": "Monumentos y paisajes en billetes",
+      "known_at": 14
+    },
+    {
+      "name": "Lempira",
+      "facet": "Nombres de monedas por país",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Dírham",
+      "facet": "Nombres de monedas por país",
+      "known_at": 12
+    },
+    {
+      "name": "Shekel",
+      "facet": "Nombres de monedas por país",
+      "known_at": 13
+    },
+    {
+      "name": "Baht",
+      "facet": "Nombres de monedas por país",
+      "known_at": 13
+    },
+    {
+      "name": "Złoty",
+      "facet": "Nombres de monedas por país",
+      "known_at": 13
+    },
+    {
+      "name": "Símbolo del dólar",
+      "facet": "Símbolos y abreviaturas de divisas",
+      "known_at": 2
+    },
+    {
+      "name": "Símbolo del euro",
+      "facet": "Símbolos y abreviaturas de divisas",
+      "known_at": 5
+    },
+    {
+      "name": "Símbolo de la libra",
+      "facet": "Símbolos y abreviaturas de divisas",
+      "known_at": 8
+    },
+    {
+      "name": "Símbolo del yen",
+      "facet": "Símbolos y abreviaturas de divisas",
+      "known_at": 10
+    },
+    {
+      "name": "Símbolo de la rupia india",
+      "facet": "Símbolos y abreviaturas de divisas",
+      "known_at": 13
+    },
+    {
+      "name": "Símbolo del won",
+      "facet": "Símbolos y abreviaturas de divisas",
+      "known_at": 13
+    },
+    {
+      "name": "Símbolo del rublo",
+      "facet": "Símbolos y abreviaturas de divisas",
+      "known_at": 13
+    },
+    {
+      "name": "Símbolo del bitcoin",
+      "facet": "Símbolos y abreviaturas de divisas",
+      "known_at": 9
+    },
+    {
+      "name": "BRL",
+      "facet": "Símbolos y abreviaturas de divisas",
+      "known_at": 12
+    },
+    {
+      "name": "CHF",
+      "facet": "Símbolos y abreviaturas de divisas",
+      "known_at": 14
+    },
+    {
+      "name": "Motivo coincidente",
+      "facet": "Seguridad y falsificación de billetes",
+      "known_at": 13
+    },
+    {
+      "name": "Marcador detector de billetes falsos",
+      "facet": "Seguridad y falsificación de billetes",
+      "known_at": 9
+    },
+    {
+      "name": "Fibras fluorescentes",
+      "facet": "Seguridad y falsificación de billetes",
+      "known_at": 12
+    },
+    {
+      "name": "Marcas táctiles para ciegos",
+      "facet": "Seguridad y falsificación de billetes",
+      "known_at": 8
+    },
+    {
+      "name": "Operación Bernhard",
+      "facet": "Seguridad y falsificación de billetes",
+      "known_at": 14
+    },
+    {
+      "name": "Toca, mira y gira",
+      "facet": "Seguridad y falsificación de billetes",
+      "known_at": 10
+    },
+    {
+      "name": "Calcografía",
+      "facet": "Materiales y fabricación de billetes",
+      "known_at": 14
+    },
+    {
+      "name": "Impresión offset",
+      "facet": "Materiales y fabricación de billetes",
+      "known_at": 13
+    },
+    {
+      "name": "Pliego de billetes",
+      "facet": "Materiales y fabricación de billetes",
+      "known_at": 10
+    },
+    {
+      "name": "Banco central",
+      "facet": "Materiales y fabricación de billetes",
+      "known_at": 9
+    },
+    {
+      "name": "Oficina de Grabado e Impresión",
+      "facet": "Materiales y fabricación de billetes",
+      "known_at": 14
+    },
+    {
+      "name": "De La Rue",
+      "facet": "Materiales y fabricación de billetes",
+      "known_at": 15
+    },
+    {
+      "name": "Billete deteriorado",
+      "facet": "Materiales y fabricación de billetes",
+      "known_at": 6
+    },
+    {
+      "name": "Trituración de billetes",
+      "facet": "Materiales y fabricación de billetes",
+      "known_at": 10
+    },
+    {
+      "name": "Vida útil de un billete",
+      "facet": "Materiales y fabricación de billetes",
+      "known_at": 10
+    },
+    {
+      "name": "Tinta magnética",
+      "facet": "Materiales y fabricación de billetes",
+      "known_at": 12
+    },
+    {
+      "name": "Barniz protector",
+      "facet": "Materiales y fabricación de billetes",
+      "known_at": 13
+    },
+    {
+      "name": "Grabador de billetes",
+      "facet": "Materiales y fabricación de billetes",
+      "known_at": 12
+    },
+    {
+      "name": "Dinastía Song",
+      "facet": "Historia del papel moneda",
+      "known_at": 13
+    },
+    {
+      "name": "Letra de cambio",
+      "facet": "Historia del papel moneda",
+      "known_at": 12
+    },
+    {
+      "name": "Stockholms Banco",
+      "facet": "Historia del papel moneda",
+      "known_at": 15
+    },
+    {
+      "name": "Banco de Inglaterra",
+      "facet": "Historia del papel moneda",
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Hiperinflación en Alemania",
+      "facet": "Historia del papel moneda",
+      "known_at": 11
+    },
+    {
+      "name": "Greenback",
+      "facet": "Historia del papel moneda",
+      "known_at": 13
+    },
+    {
+      "name": "Asignados franceses",
+      "facet": "Historia del papel moneda",
+      "known_at": 15
+    },
+    {
+      "name": "Dólar continental",
+      "facet": "Historia del papel moneda",
+      "known_at": 14
+    },
+    {
+      "name": "Llegada del euro",
+      "facet": "Historia del papel moneda",
+      "known_at": 9
+    },
+    {
+      "name": "Fin del patrón oro de 1971",
+      "facet": "Historia del papel moneda",
+      "known_at": 14
+    },
+    {
+      "name": "Billete de 100 billones de dólares zimbabuenses",
+      "facet": "Billetes curiosos y récords",
+      "known_at": 10
+    },
+    {
+      "name": "Pengő húngaro",
+      "facet": "Billetes curiosos y récords",
+      "known_at": 14
+    },
+    {
+      "name": "Billete de 10.000 dólares",
+      "facet": "Billetes curiosos y récords",
+      "known_at": 12
+    },
+    {
+      "name": "Billete de 100.000 dólares",
+      "facet": "Billetes curiosos y récords",
+      "known_at": 13
+    },
+    {
+      "name": "Billete de 1.000 francos suizos",
+      "facet": "Billetes curiosos y récords",
+      "known_at": 13
+    },
+    {
+      "name": "Billete de 10.000 dólares de Singapur",
+      "facet": "Billetes curiosos y récords",
+      "known_at": 14
+    },
+    {
+      "name": "Billete vertical",
+      "facet": "Billetes curiosos y récords",
+      "known_at": 11
+    },
+    {
+      "name": "Billete de 0 rupias",
+      "facet": "Billetes curiosos y récords",
+      "known_at": 14
+    },
+    {
+      "name": "Billete de 2 dólares",
+      "facet": "Billetes curiosos y récords",
+      "known_at": 10
+    },
+    {
+      "name": "Billete de 500 euros",
+      "facet": "Billetes curiosos y récords",
+      "known_at": 9
+    },
+    {
+      "name": "Notgeld",
+      "facet": "Billetes curiosos y récords",
+      "known_at": 15
+    },
+    {
+      "name": "Billete conmemorativo",
+      "facet": "Billetes curiosos y récords",
+      "known_at": 9
+    },
+    {
+      "name": "Billete de 3 dólares",
+      "facet": "Billetes curiosos y récords",
+      "known_at": 11
+    },
+    {
+      "name": "Billete con error de impresión",
+      "facet": "Billetes curiosos y récords",
+      "known_at": 10
+    },
+    {
+      "name": "Billete de 50.000 pesos",
+      "facet": "Denominaciones, colores y tamaños",
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Billete de 20.000 pesos",
+      "facet": "Denominaciones, colores y tamaños",
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Billete de 10.000 pesos",
+      "facet": "Denominaciones, colores y tamaños",
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Billete de 5.000 pesos",
+      "facet": "Denominaciones, colores y tamaños",
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Billete de 2.000 pesos",
+      "facet": "Denominaciones, colores y tamaños",
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Billete de 1.000 pesos",
+      "facet": "Denominaciones, colores y tamaños",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Billete de 1 dólar",
+      "facet": "Denominaciones, colores y tamaños",
+      "known_at": 4
+    },
+    {
+      "name": "Billete de 20 dólares",
+      "facet": "Denominaciones, colores y tamaños",
+      "known_at": 8
+    },
+    {
+      "name": "Billete de 100 dólares",
+      "facet": "Denominaciones, colores y tamaños",
+      "known_at": 7
+    },
+    {
+      "name": "Billete de 5 euros",
+      "facet": "Denominaciones, colores y tamaños",
+      "known_at": 7
+    },
+    {
+      "name": "Billete de 20 euros",
+      "facet": "Denominaciones, colores y tamaños",
+      "known_at": 9
+    },
+    {
+      "name": "Billete de 100 euros",
+      "facet": "Denominaciones, colores y tamaños",
+      "known_at": 9
+    },
+    {
+      "name": "Billete de 200 euros",
+      "facet": "Denominaciones, colores y tamaños",
+      "known_at": 11
+    },
+    {
+      "name": "Billete de 10.000 yenes",
+      "facet": "Denominaciones, colores y tamaños",
+      "known_at": 13
+    },
+    {
+      "name": "Verde dólar",
+      "facet": "Denominaciones, colores y tamaños",
+      "known_at": 5
+    },
+    {
+      "name": "Tamaño de los billetes de euro",
+      "facet": "Denominaciones, colores y tamaños",
+      "known_at": 11
+    },
+    {
+      "name": "Fábrica Nacional de Moneda y Timbre",
+      "facet": "Billetes en cine, juegos y cultura popular",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "El billete de un millón de libras",
+      "facet": "Billetes en cine, juegos y cultura popular",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Pokédólar",
+      "facet": "Billetes en cine, juegos y cultura popular",
+      "known_at": 5
+    },
+    {
+      "name": "Billete de juguete",
+      "facet": "Billetes en cine, juegos y cultura popular",
+      "known_at": 2
+    },
+    {
+      "name": "Don Cangrejo",
+      "facet": "Billetes en cine, juegos y cultura popular",
+      "known_at": 3
+    }
+  ]
+}

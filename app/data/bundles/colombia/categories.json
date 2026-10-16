@@ -1,142 +1,86 @@
 {
-  "about": "Categories of the colombia bundle (D-41, D-43): its own taxonomy for `qgen batch --bundle colombia`. Subcategory names and slugs are unique within the bundle; they may repeat another bundle's (D-99).",
+  "about": "Categories of the colombia bundle (D-41, D-43): structure only, keyed by English slugs unique within the bundle (decision 259); names in names.<locale>.json.",
   "categories": [
-    {
-      "slug": "colombia-geografia",
-      "name": "Geografía de Colombia",
-      "subcategories": [
-        "Regiones y departamentos de Colombia",
-        "Ciudades y pueblos de Colombia",
-        "Ríos, mares e islas de Colombia",
-        "Montañas y paisajes de Colombia",
-        "Lugares y monumentos de Colombia"
-      ]
-    },
-    {
-      "slug": "colombia-naturaleza",
-      "name": "Naturaleza de Colombia",
-      "subcategories": [
-        "Animales de Colombia",
-        "Plantas y flores de Colombia",
-        "Parques naturales y ecosistemas de Colombia"
-      ]
-    },
-    {
-      "slug": "colombia-historia",
-      "name": "Historia de Colombia",
-      "subcategories": [
-        "Culturas precolombinas de Colombia",
-        "Conquista y Colonia en Colombia",
-        "Independencia de Colombia",
-        "Colombia en el siglo XIX",
-        "Colombia en el siglo XX"
-      ]
-    },
-    {
-      "slug": "colombia-personajes",
-      "name": "Personajes de Colombia",
-      "subcategories": [
-        "Científicos e inventores colombianos",
-        "Pioneros y personajes populares de Colombia"
-      ]
-    },
-    {
-      "slug": "colombia-comida-y-bebida",
-      "name": "Comida y bebida de Colombia",
-      "subcategories": [
-        "Platos típicos de Colombia",
-        "Comida callejera y panadería colombiana",
-        "Dulces y postres colombianos",
-        "Bebidas colombianas",
-        "Frutas de Colombia"
-      ]
-    },
-    {
-      "slug": "colombia-fiestas-y-tradiciones",
-      "name": "Fiestas y tradiciones de Colombia",
-      "subcategories": [
-        "Carnavales y ferias de Colombia",
-        "Navidad y fechas especiales en Colombia",
-        "Artesanías y trajes típicos de Colombia",
-        "Juegos tradicionales colombianos"
-      ]
-    },
-    {
-      "slug": "colombia-mitos-y-leyendas",
-      "name": "Mitos y leyendas de Colombia",
-      "subcategories": [
-        "Espantos y criaturas de Colombia",
-        "Mitos indígenas y creencias populares"
-      ]
-    },
-    {
-      "slug": "colombia-musica-y-baile",
-      "name": "Música y baile de Colombia",
-      "subcategories": [
-        "Ritmos, bailes e instrumentos de Colombia",
-        "Vallenato",
-        "Salsa y música tropical colombiana",
-        "Pop, rock y urbano colombiano",
-        "Música popular y andina colombiana"
-      ]
-    },
-    {
-      "slug": "colombia-arte-y-literatura",
-      "name": "Arte y literatura de Colombia",
-      "subcategories": [
-        "Escritores y libros colombianos",
-        "Poesía y cuentos infantiles colombianos",
-        "Pintores, escultores y museos de Colombia"
-      ]
-    },
-    {
-      "slug": "colombia-cine-y-television",
-      "name": "Cine y televisión de Colombia",
-      "subcategories": [
-        "Telenovelas colombianas",
-        "Programas y series de la TV colombiana",
-        "Presentadores, actores y humoristas colombianos",
-        "Cine colombiano"
-      ]
-    },
-    {
-      "slug": "colombia-deporte",
-      "name": "Deporte de Colombia",
-      "subcategories": [
-        "Selección Colombia",
-        "Fútbol colombiano de clubes",
-        "Ciclismo colombiano",
-        "Medallistas olímpicos colombianos",
-        "Otros deportes en Colombia"
-      ]
-    },
-    {
-      "slug": "colombia-asi-se-habla",
-      "name": "Así se habla en Colombia",
-      "subcategories": [
-        "Palabras colombianas",
-        "Dichos y expresiones colombianas",
-        "Hablas regionales de Colombia",
-        "Lenguas de Colombia"
-      ]
-    },
-    {
-      "slug": "colombia-vida-diaria",
-      "name": "Vida diaria en Colombia",
-      "subcategories": [
-        "Billetes y monedas de Colombia",
-        "Marcas y productos colombianos",
-        "Transporte en Colombia",
-        "Casa, colegio y trámites en Colombia"
-      ]
-    },
-    {
-      "slug": "colombia-simbolos",
-      "name": "Símbolos de Colombia",
-      "subcategories": [
-        "Símbolos patrios de Colombia",
-        "Símbolos de departamentos y ciudades"
-      ]
-    }
+    {"slug": "geography", "subcategories": [
+      "regions-and-departments",
+      "cities-and-towns",
+      "rivers-seas-and-islands",
+      "mountains-and-landscapes",
+      "places-and-monuments"
+    ]},
+    {"slug": "nature", "subcategories": [
+      "animals",
+      "plants-and-flowers",
+      "natural-parks-and-ecosystems"
+    ]},
+    {"slug": "history", "subcategories": [
+      "pre-columbian-cultures",
+      "conquest-and-colonial-era",
+      "independence",
+      "19th-century",
+      "20th-century"
+    ]},
+    {"slug": "people", "subcategories": [
+      "scientists-and-inventors",
+      "pioneers-and-popular-figures"
+    ]},
+    {"slug": "food-and-drink", "subcategories": [
+      "typical-dishes",
+      "street-food-and-bakery",
+      "sweets-and-desserts",
+      "drinks",
+      "fruits"
+    ]},
+    {"slug": "festivals-and-traditions", "subcategories": [
+      "carnivals-and-fairs",
+      "christmas-and-special-dates",
+      "crafts-and-traditional-dress",
+      "traditional-games"
+    ]},
+    {"slug": "myths-and-legends", "subcategories": [
+      "ghosts-and-creatures",
+      "indigenous-myths-and-folk-beliefs"
+    ]},
+    {"slug": "music-and-dance", "subcategories": [
+      "rhythms-dances-and-instruments",
+      "vallenato",
+      "salsa-and-tropical-music",
+      "pop-rock-and-urban-music",
+      "popular-and-andean-music"
+    ]},
+    {"slug": "art-and-literature", "subcategories": [
+      "writers-and-books",
+      "poetry-and-childrens-stories",
+      "painters-sculptors-and-museums"
+    ]},
+    {"slug": "film-and-television", "subcategories": [
+      "telenovelas",
+      "tv-shows-and-series",
+      "hosts-actors-and-comedians",
+      "cinema"
+    ]},
+    {"slug": "sports", "subcategories": [
+      "national-team",
+      "club-football",
+      "cycling",
+      "olympic-medallists",
+      "other-sports"
+    ]},
+    {"slug": "how-colombia-speaks", "subcategories": [
+      "words",
+      "sayings-and-expressions",
+      "regional-speech",
+      "languages"
+    ]},
+    {"slug": "daily-life", "subcategories": [
+      "banknotes-and-coins",
+      "brands-and-products",
+      "transport",
+      "home-school-and-paperwork"
+    ]},
+    {"slug": "symbols", "subcategories": [
+      "national-symbols",
+      "symbols-of-departments-and-cities"
+    ]}
   ]
 }

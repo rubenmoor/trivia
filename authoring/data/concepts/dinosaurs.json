@@ -1,0 +1,780 @@
+{
+  "subcategory": "dinosaurs",
+  "facets": [
+    "Dinosaurios carnívoros famosos",
+    "Dinosaurios herbívoros gigantes",
+    "Dinosaurios con cuernos, placas y corazas",
+    "Reptiles voladores y marinos",
+    "Eras y periodos geológicos",
+    "Fósiles y paleontología",
+    "Extinción de los dinosaurios",
+    "Dinosaurios y aves",
+    "Paleontólogos y grandes hallazgos",
+    "Fósiles y prehistoria en Colombia",
+    "Dinosaurios en el cine y los juegos",
+    "Nombres y palabras de dinosaurios"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 4,
+      "record": 5,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 3,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 3,
+      "pop_culture": 5,
+      "popular_science": 4,
+      "science_news": 4,
+      "educational_media": 5,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Espinosaurio",
+      "facet": "Dinosaurios carnívoros famosos",
+      "known_at": 6
+    },
+    {
+      "name": "Carnotauro",
+      "facet": "Dinosaurios carnívoros famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Dilofosaurio",
+      "facet": "Dinosaurios carnívoros famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Alosaurio",
+      "facet": "Dinosaurios carnívoros famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Giganotosaurio",
+      "facet": "Dinosaurios carnívoros famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Compsognathus",
+      "facet": "Dinosaurios carnívoros famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Ceratosaurio",
+      "facet": "Dinosaurios carnívoros famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Baryonyx",
+      "facet": "Dinosaurios carnívoros famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Deinonychus",
+      "facet": "Dinosaurios carnívoros famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Utahraptor",
+      "facet": "Dinosaurios carnívoros famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Troodonte",
+      "facet": "Dinosaurios carnívoros famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Megalosaurio",
+      "facet": "Dinosaurios carnívoros famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Albertosaurio",
+      "facet": "Dinosaurios carnívoros famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Carcharodontosaurio",
+      "facet": "Dinosaurios carnívoros famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Herrerasaurio",
+      "facet": "Dinosaurios carnívoros famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Abelisaurio",
+      "facet": "Dinosaurios carnívoros famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Braquiosaurio",
+      "facet": "Dinosaurios herbívoros gigantes",
+      "known_at": 3
+    },
+    {
+      "name": "Brontosaurio",
+      "facet": "Dinosaurios herbívoros gigantes",
+      "known_at": 4
+    },
+    {
+      "name": "Diplodocus",
+      "facet": "Dinosaurios herbívoros gigantes",
+      "known_at": 5
+    },
+    {
+      "name": "Parasaurolophus",
+      "facet": "Dinosaurios herbívoros gigantes",
+      "known_at": 6
+    },
+    {
+      "name": "Apatosaurio",
+      "facet": "Dinosaurios herbívoros gigantes",
+      "known_at": 7
+    },
+    {
+      "name": "Iguanodonte",
+      "facet": "Dinosaurios herbívoros gigantes",
+      "known_at": 8
+    },
+    {
+      "name": "Argentinosaurio",
+      "facet": "Dinosaurios herbívoros gigantes",
+      "known_at": 9
+    },
+    {
+      "name": "Hadrosaurio",
+      "facet": "Dinosaurios herbívoros gigantes",
+      "known_at": 10
+    },
+    {
+      "name": "Patagotitan",
+      "facet": "Dinosaurios herbívoros gigantes",
+      "known_at": 12
+    },
+    {
+      "name": "Mamenchisaurio",
+      "facet": "Dinosaurios herbívoros gigantes",
+      "known_at": 12
+    },
+    {
+      "name": "Edmontosaurio",
+      "facet": "Dinosaurios herbívoros gigantes",
+      "known_at": 12
+    },
+    {
+      "name": "Maiasaura",
+      "facet": "Dinosaurios herbívoros gigantes",
+      "known_at": 12
+    },
+    {
+      "name": "Plateosaurio",
+      "facet": "Dinosaurios herbívoros gigantes",
+      "known_at": 12,
+      "retired": "unaskable: All options need a person; who named Plateosaurus (von Meyer) is too obscure to ask fairly."
+    },
+    {
+      "name": "Camarasaurio",
+      "facet": "Dinosaurios herbívoros gigantes",
+      "known_at": 12
+    },
+    {
+      "name": "Dreadnoughtus",
+      "facet": "Dinosaurios herbívoros gigantes",
+      "known_at": 13
+    },
+    {
+      "name": "Supersaurio",
+      "facet": "Dinosaurios herbívoros gigantes",
+      "known_at": 13
+    },
+    {
+      "name": "Triceratops",
+      "facet": "Dinosaurios con cuernos, placas y corazas",
+      "known_at": 1
+    },
+    {
+      "name": "Estegosaurio",
+      "facet": "Dinosaurios con cuernos, placas y corazas",
+      "known_at": 3
+    },
+    {
+      "name": "Anquilosaurio",
+      "facet": "Dinosaurios con cuernos, placas y corazas",
+      "known_at": 4
+    },
+    {
+      "name": "Paquicefalosaurio",
+      "facet": "Dinosaurios con cuernos, placas y corazas",
+      "known_at": 6
+    },
+    {
+      "name": "Estiracosaurio",
+      "facet": "Dinosaurios con cuernos, placas y corazas",
+      "known_at": 8
+    },
+    {
+      "name": "Protoceratops",
+      "facet": "Dinosaurios con cuernos, placas y corazas",
+      "known_at": 10
+    },
+    {
+      "name": "Kentrosaurio",
+      "facet": "Dinosaurios con cuernos, placas y corazas",
+      "known_at": 12
+    },
+    {
+      "name": "Nodosaurio",
+      "facet": "Dinosaurios con cuernos, placas y corazas",
+      "known_at": 12
+    },
+    {
+      "name": "Gola",
+      "facet": "Dinosaurios con cuernos, placas y corazas",
+      "known_at": 12
+    },
+    {
+      "name": "Centrosaurio",
+      "facet": "Dinosaurios con cuernos, placas y corazas",
+      "known_at": 13
+    },
+    {
+      "name": "Psitacosaurio",
+      "facet": "Dinosaurios con cuernos, placas y corazas",
+      "known_at": 13
+    },
+    {
+      "name": "Thagomizer",
+      "facet": "Dinosaurios con cuernos, placas y corazas",
+      "known_at": 13
+    },
+    {
+      "name": "Euoplocephalus",
+      "facet": "Dinosaurios con cuernos, placas y corazas",
+      "known_at": 14
+    },
+    {
+      "name": "Escelidosaurio",
+      "facet": "Dinosaurios con cuernos, placas y corazas",
+      "known_at": 14
+    },
+    {
+      "name": "Pteranodon",
+      "facet": "Reptiles voladores y marinos",
+      "known_at": 5
+    },
+    {
+      "name": "Pterosaurio",
+      "facet": "Reptiles voladores y marinos",
+      "known_at": 9
+    },
+    {
+      "name": "Liopleurodon",
+      "facet": "Reptiles voladores y marinos",
+      "known_at": 12
+    },
+    {
+      "name": "Elasmosaurio",
+      "facet": "Reptiles voladores y marinos",
+      "known_at": 12
+    },
+    {
+      "name": "Arquelón",
+      "facet": "Reptiles voladores y marinos",
+      "known_at": 13
+    },
+    {
+      "name": "Rhamphorhynchus",
+      "facet": "Reptiles voladores y marinos",
+      "known_at": 14
+    },
+    {
+      "name": "Dimorphodon",
+      "facet": "Reptiles voladores y marinos",
+      "known_at": 14
+    },
+    {
+      "name": "Tupandactylus",
+      "facet": "Reptiles voladores y marinos",
+      "known_at": 14
+    },
+    {
+      "name": "Nothosaurio",
+      "facet": "Reptiles voladores y marinos",
+      "known_at": 14
+    },
+    {
+      "name": "Hatzegopteryx",
+      "facet": "Reptiles voladores y marinos",
+      "known_at": 15
+    },
+    {
+      "name": "Millones de años",
+      "facet": "Eras y periodos geológicos",
+      "known_at": 5
+    },
+    {
+      "name": "Cenozoico",
+      "facet": "Eras y periodos geológicos",
+      "known_at": 11
+    },
+    {
+      "name": "Tiempo geológico",
+      "facet": "Eras y periodos geológicos",
+      "known_at": 11
+    },
+    {
+      "name": "Paleozoico",
+      "facet": "Eras y periodos geológicos",
+      "known_at": 12,
+      "retired": "unaskable: The Paleozoic can't make a question a 6-year-old could answer."
+    },
+    {
+      "name": "Pérmico",
+      "facet": "Eras y periodos geológicos",
+      "known_at": 13
+    },
+    {
+      "name": "Carbonífero",
+      "facet": "Eras y periodos geológicos",
+      "known_at": 13
+    },
+    {
+      "name": "Cámbrico",
+      "facet": "Eras y periodos geológicos",
+      "known_at": 13
+    },
+    {
+      "name": "Precámbrico",
+      "facet": "Eras y periodos geológicos",
+      "known_at": 13
+    },
+    {
+      "name": "Cuaternario",
+      "facet": "Eras y periodos geológicos",
+      "known_at": 13
+    },
+    {
+      "name": "Huevo de dinosaurio",
+      "facet": "Fósiles y paleontología",
+      "known_at": 3
+    },
+    {
+      "name": "Huella fósil",
+      "facet": "Fósiles y paleontología",
+      "known_at": 6
+    },
+    {
+      "name": "Paleontología",
+      "facet": "Fósiles y paleontología",
+      "known_at": 7
+    },
+    {
+      "name": "Amonita",
+      "facet": "Fósiles y paleontología",
+      "known_at": 9
+    },
+    {
+      "name": "Petrificación",
+      "facet": "Fósiles y paleontología",
+      "known_at": 10
+    },
+    {
+      "name": "Fósil viviente",
+      "facet": "Fósiles y paleontología",
+      "known_at": 10
+    },
+    {
+      "name": "Estratos",
+      "facet": "Fósiles y paleontología",
+      "known_at": 11
+    },
+    {
+      "name": "Molde fósil",
+      "facet": "Fósiles y paleontología",
+      "known_at": 11
+    },
+    {
+      "name": "Gastrolito",
+      "facet": "Fósiles y paleontología",
+      "known_at": 13
+    },
+    {
+      "name": "Datación radiométrica",
+      "facet": "Fósiles y paleontología",
+      "known_at": 13
+    },
+    {
+      "name": "Mamíferos",
+      "facet": "Extinción de los dinosaurios",
+      "known_at": 5
+    },
+    {
+      "name": "Extinción masiva",
+      "facet": "Extinción de los dinosaurios",
+      "known_at": 8
+    },
+    {
+      "name": "Península de Yucatán",
+      "facet": "Extinción de los dinosaurios",
+      "known_at": 10
+    },
+    {
+      "name": "Invierno de impacto",
+      "facet": "Extinción de los dinosaurios",
+      "known_at": 12
+    },
+    {
+      "name": "Límite K-Pg",
+      "facet": "Extinción de los dinosaurios",
+      "known_at": 13
+    },
+    {
+      "name": "Hipótesis de Álvarez",
+      "facet": "Extinción de los dinosaurios",
+      "known_at": 13
+    },
+    {
+      "name": "Extinción del Pérmico",
+      "facet": "Extinción de los dinosaurios",
+      "known_at": 13
+    },
+    {
+      "name": "Sexta extinción",
+      "facet": "Extinción de los dinosaurios",
+      "known_at": 13
+    },
+    {
+      "name": "Iridio",
+      "facet": "Extinción de los dinosaurios",
+      "known_at": 14
+    },
+    {
+      "name": "Traps del Decán",
+      "facet": "Extinción de los dinosaurios",
+      "known_at": 14
+    },
+    {
+      "name": "Gallina",
+      "facet": "Dinosaurios y aves",
+      "known_at": 3
+    },
+    {
+      "name": "Plumas",
+      "facet": "Dinosaurios y aves",
+      "known_at": 6
+    },
+    {
+      "name": "Huesos huecos",
+      "facet": "Dinosaurios y aves",
+      "known_at": 10
+    },
+    {
+      "name": "Oviraptor",
+      "facet": "Dinosaurios y aves",
+      "known_at": 10
+    },
+    {
+      "name": "Fúrcula",
+      "facet": "Dinosaurios y aves",
+      "known_at": 11
+    },
+    {
+      "name": "Terópodos",
+      "facet": "Dinosaurios y aves",
+      "known_at": 12
+    },
+    {
+      "name": "Ave del terror",
+      "facet": "Dinosaurios y aves",
+      "known_at": 12
+    },
+    {
+      "name": "Microraptor",
+      "facet": "Dinosaurios y aves",
+      "known_at": 13
+    },
+    {
+      "name": "Yutyrannus",
+      "facet": "Dinosaurios y aves",
+      "known_at": 14
+    },
+    {
+      "name": "Sinosauropteryx",
+      "facet": "Dinosaurios y aves",
+      "known_at": 14
+    },
+    {
+      "name": "Saurisquios",
+      "facet": "Dinosaurios y aves",
+      "known_at": 14
+    },
+    {
+      "name": "Ornitisquios",
+      "facet": "Dinosaurios y aves",
+      "known_at": 14
+    },
+    {
+      "name": "Sue",
+      "facet": "Paleontólogos y grandes hallazgos",
+      "known_at": 12
+    },
+    {
+      "name": "Richard Owen",
+      "facet": "Paleontólogos y grandes hallazgos",
+      "known_at": 13
+    },
+    {
+      "name": "Guerra de los Huesos",
+      "facet": "Paleontólogos y grandes hallazgos",
+      "known_at": 13
+    },
+    {
+      "name": "Jack Horner",
+      "facet": "Paleontólogos y grandes hallazgos",
+      "known_at": 13
+    },
+    {
+      "name": "Luis Alvarez",
+      "facet": "Paleontólogos y grandes hallazgos",
+      "known_at": 13
+    },
+    {
+      "name": "Othniel Marsh",
+      "facet": "Paleontólogos y grandes hallazgos",
+      "known_at": 14
+    },
+    {
+      "name": "Edward Drinker Cope",
+      "facet": "Paleontólogos y grandes hallazgos",
+      "known_at": 14
+    },
+    {
+      "name": "Barnum Brown",
+      "facet": "Paleontólogos y grandes hallazgos",
+      "known_at": 14
+    },
+    {
+      "name": "Roy Chapman Andrews",
+      "facet": "Paleontólogos y grandes hallazgos",
+      "known_at": 14
+    },
+    {
+      "name": "Paul Sereno",
+      "facet": "Paleontólogos y grandes hallazgos",
+      "known_at": 14
+    },
+    {
+      "name": "Georges Cuvier",
+      "facet": "Paleontólogos y grandes hallazgos",
+      "known_at": 14
+    },
+    {
+      "name": "Gideon Mantell",
+      "facet": "Paleontólogos y grandes hallazgos",
+      "known_at": 14
+    },
+    {
+      "name": "Hell Creek",
+      "facet": "Paleontólogos y grandes hallazgos",
+      "known_at": 14
+    },
+    {
+      "name": "Villa de Leyva",
+      "facet": "Fósiles y prehistoria en Colombia",
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Cerrejón",
+      "facet": "Fósiles y prehistoria en Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Museo Paleontológico de Villa de Leyva",
+      "facet": "Fósiles y prehistoria en Colombia",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Pinturas rupestres de Chiribiquete",
+      "facet": "Fósiles y prehistoria en Colombia",
+      "known_at": 11
+    },
+    {
+      "name": "Sáchica",
+      "facet": "Fósiles y prehistoria en Colombia",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Padillasaurus",
+      "facet": "Fósiles y prehistoria en Colombia",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Platypterygius sachicarum",
+      "facet": "Fósiles y prehistoria en Colombia",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Rex de Toy Story",
+      "facet": "Dinosaurios en el cine y los juegos",
+      "known_at": 1
+    },
+    {
+      "name": "Jurassic World",
+      "facet": "Dinosaurios en el cine y los juegos",
+      "known_at": 3
+    },
+    {
+      "name": "Dino de Los Picapiedra",
+      "facet": "Dinosaurios en el cine y los juegos",
+      "known_at": 5,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Blue",
+      "facet": "Dinosaurios en el cine y los juegos",
+      "known_at": 6
+    },
+    {
+      "name": "Un gran dinosaurio",
+      "facet": "Dinosaurios en el cine y los juegos",
+      "known_at": 6
+    },
+    {
+      "name": "Rexy de Una noche en el museo",
+      "facet": "Dinosaurios en el cine y los juegos",
+      "known_at": 7
+    },
+    {
+      "name": "La tierra antes del tiempo",
+      "facet": "Dinosaurios en el cine y los juegos",
+      "known_at": 8
+    },
+    {
+      "name": "Rudy de La era de hielo",
+      "facet": "Dinosaurios en el cine y los juegos",
+      "known_at": 8
+    },
+    {
+      "name": "Ark: Survival Evolved",
+      "facet": "Dinosaurios en el cine y los juegos",
+      "known_at": 10
+    },
+    {
+      "name": "Ian Malcolm",
+      "facet": "Dinosaurios en el cine y los juegos",
+      "known_at": 11
+    },
+    {
+      "name": "Caminando con dinosaurios",
+      "facet": "Dinosaurios en el cine y los juegos",
+      "known_at": 12
+    },
+    {
+      "name": "El mundo perdido",
+      "facet": "Dinosaurios en el cine y los juegos",
+      "known_at": 13
+    },
+    {
+      "name": "Dinosaurio",
+      "facet": "Nombres y palabras de dinosaurios",
+      "known_at": 1
+    },
+    {
+      "name": "Reptil",
+      "facet": "Nombres y palabras de dinosaurios",
+      "known_at": 3
+    },
+    {
+      "name": "Raptor",
+      "facet": "Nombres y palabras de dinosaurios",
+      "known_at": 6
+    },
+    {
+      "name": "Cuadrúpedo",
+      "facet": "Nombres y palabras de dinosaurios",
+      "known_at": 6
+    },
+    {
+      "name": "Bípedo",
+      "facet": "Nombres y palabras de dinosaurios",
+      "known_at": 7
+    },
+    {
+      "name": "Saurio",
+      "facet": "Nombres y palabras de dinosaurios",
+      "known_at": 9
+    },
+    {
+      "name": "Saurópodo",
+      "facet": "Nombres y palabras de dinosaurios",
+      "known_at": 10
+    },
+    {
+      "name": "Megafauna",
+      "facet": "Nombres y palabras de dinosaurios",
+      "known_at": 11
+    },
+    {
+      "name": "Ptero",
+      "facet": "Nombres y palabras de dinosaurios",
+      "known_at": 12
+    },
+    {
+      "name": "Cerato",
+      "facet": "Nombres y palabras de dinosaurios",
+      "known_at": 12
+    },
+    {
+      "name": "Nomenclatura binomial",
+      "facet": "Nombres y palabras de dinosaurios",
+      "known_at": 13
+    },
+    {
+      "name": "Paleoarte",
+      "facet": "Nombres y palabras de dinosaurios",
+      "known_at": 13
+    },
+    {
+      "name": "Holotipo",
+      "facet": "Nombres y palabras de dinosaurios",
+      "known_at": 14
+    }
+  ]
+}

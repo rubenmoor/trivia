@@ -1,0 +1,469 @@
+{
+  "subcategory": "solar-system",
+  "facets": [
+    "El Sol y sus fenómenos",
+    "Planetas rocosos",
+    "Gigantes gaseosos y helados",
+    "La Luna y los eclipses",
+    "Lunas de otros planetas",
+    "Planetas enanos y cinturón de Kuiper",
+    "Asteroides, cometas y meteoritos",
+    "Órbitas, rotación y estaciones",
+    "Misiones y sondas espaciales",
+    "Astrónomos y descubrimientos históricos",
+    "Nombres, mitología y palabras del cielo",
+    "El sistema solar en películas y cultura"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 4,
+      "record": 5,
+      "origin": 3,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 5,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 3
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 2,
+      "pop_culture": 3,
+      "popular_science": 4,
+      "science_news": 5,
+      "educational_media": 5,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Rayos ultravioleta",
+      "facet": "El Sol y sus fenómenos",
+      "known_at": 6
+    },
+    {
+      "name": "Erupción solar",
+      "facet": "El Sol y sus fenómenos",
+      "known_at": 9
+    },
+    {
+      "name": "Núcleo solar",
+      "facet": "El Sol y sus fenómenos",
+      "known_at": 10
+    },
+    {
+      "name": "Enana amarilla",
+      "facet": "El Sol y sus fenómenos",
+      "known_at": 11
+    },
+    {
+      "name": "Fotosfera",
+      "facet": "El Sol y sus fenómenos",
+      "known_at": 13
+    },
+    {
+      "name": "Ciclo solar",
+      "facet": "El Sol y sus fenómenos",
+      "known_at": 13
+    },
+    {
+      "name": "Protuberancia solar",
+      "facet": "El Sol y sus fenómenos",
+      "known_at": 13
+    },
+    {
+      "name": "Tormenta geomagnética",
+      "facet": "El Sol y sus fenómenos",
+      "known_at": 13
+    },
+    {
+      "name": "Eyección de masa coronal",
+      "facet": "El Sol y sus fenómenos",
+      "known_at": 14
+    },
+    {
+      "name": "Heliosfera",
+      "facet": "El Sol y sus fenómenos",
+      "known_at": 14
+    },
+    {
+      "name": "Casquetes polares de Marte",
+      "facet": "Planetas rocosos",
+      "known_at": 10
+    },
+    {
+      "name": "Tormentas de polvo de Marte",
+      "facet": "Planetas rocosos",
+      "known_at": 10
+    },
+    {
+      "name": "Núcleo de hierro",
+      "facet": "Planetas rocosos",
+      "known_at": 10
+    },
+    {
+      "name": "Óxido de hierro",
+      "facet": "Planetas rocosos",
+      "known_at": 11
+    },
+    {
+      "name": "Valles Marineris",
+      "facet": "Planetas rocosos",
+      "known_at": 14
+    },
+    {
+      "name": "Cuenca Caloris",
+      "facet": "Planetas rocosos",
+      "known_at": 15
+    },
+    {
+      "name": "Gigante gaseoso",
+      "facet": "Gigantes gaseosos y helados",
+      "known_at": 8
+    },
+    {
+      "name": "Densidad de Saturno",
+      "facet": "Gigantes gaseosos y helados",
+      "known_at": 10
+    },
+    {
+      "name": "Gigante helado",
+      "facet": "Gigantes gaseosos y helados",
+      "known_at": 11
+    },
+    {
+      "name": "Inclinación de Urano",
+      "facet": "Gigantes gaseosos y helados",
+      "known_at": 12
+    },
+    {
+      "name": "Lluvia de diamantes",
+      "facet": "Gigantes gaseosos y helados",
+      "known_at": 12
+    },
+    {
+      "name": "Vientos de Neptuno",
+      "facet": "Gigantes gaseosos y helados",
+      "known_at": 12
+    },
+    {
+      "name": "Anillos de Júpiter",
+      "facet": "Gigantes gaseosos y helados",
+      "known_at": 12
+    },
+    {
+      "name": "Magnetosfera de Júpiter",
+      "facet": "Gigantes gaseosos y helados",
+      "known_at": 13
+    },
+    {
+      "name": "Gran Mancha Oscura",
+      "facet": "Gigantes gaseosos y helados",
+      "known_at": 14
+    },
+    {
+      "name": "Cráteres lunares",
+      "facet": "La Luna y los eclipses",
+      "known_at": 4
+    },
+    {
+      "name": "Rotación sincrónica",
+      "facet": "La Luna y los eclipses",
+      "known_at": 13
+    },
+    {
+      "name": "Teoría del gran impacto",
+      "facet": "La Luna y los eclipses",
+      "known_at": 13
+    },
+    {
+      "name": "Umbra",
+      "facet": "La Luna y los eclipses",
+      "known_at": 13
+    },
+    {
+      "name": "Volcanes de Ío",
+      "facet": "Lunas de otros planetas",
+      "known_at": 11
+    },
+    {
+      "name": "Mimas",
+      "facet": "Lunas de otros planetas",
+      "known_at": 12
+    },
+    {
+      "name": "Océano subterráneo",
+      "facet": "Lunas de otros planetas",
+      "known_at": 12
+    },
+    {
+      "name": "Miranda",
+      "facet": "Lunas de otros planetas",
+      "known_at": 14
+    },
+    {
+      "name": "Japeto",
+      "facet": "Lunas de otros planetas",
+      "known_at": 15
+    },
+    {
+      "name": "Reclasificación de Plutón",
+      "facet": "Planetas enanos y cinturón de Kuiper",
+      "known_at": 9
+    },
+    {
+      "name": "Corazón de Plutón",
+      "facet": "Planetas enanos y cinturón de Kuiper",
+      "known_at": 11
+    },
+    {
+      "name": "Planeta Nueve",
+      "facet": "Planetas enanos y cinturón de Kuiper",
+      "known_at": 13
+    },
+    {
+      "name": "Haumea",
+      "facet": "Planetas enanos y cinturón de Kuiper",
+      "known_at": 14
+    },
+    {
+      "name": "Makemake",
+      "facet": "Planetas enanos y cinturón de Kuiper",
+      "known_at": 14
+    },
+    {
+      "name": "Sedna",
+      "facet": "Planetas enanos y cinturón de Kuiper",
+      "known_at": 14
+    },
+    {
+      "name": "Arrokoth",
+      "facet": "Planetas enanos y cinturón de Kuiper",
+      "known_at": 14
+    },
+    {
+      "name": "Objeto transneptuniano",
+      "facet": "Planetas enanos y cinturón de Kuiper",
+      "known_at": 14
+    },
+    {
+      "name": "Quaoar",
+      "facet": "Planetas enanos y cinturón de Kuiper",
+      "known_at": 15
+    },
+    {
+      "name": "Disco disperso",
+      "facet": "Planetas enanos y cinturón de Kuiper",
+      "known_at": 15
+    },
+    {
+      "name": "Cráter Barringer",
+      "facet": "Asteroides, cometas y meteoritos",
+      "known_at": 14
+    },
+    {
+      "name": "Cometa Shoemaker-Levy 9",
+      "facet": "Asteroides, cometas y meteoritos",
+      "known_at": 14
+    },
+    {
+      "name": "Apophis",
+      "facet": "Asteroides, cometas y meteoritos",
+      "known_at": 14
+    },
+    {
+      "name": "Asteroide troyano",
+      "facet": "Asteroides, cometas y meteoritos",
+      "known_at": 14
+    },
+    {
+      "name": "Eje de la Tierra",
+      "facet": "Órbitas, rotación y estaciones",
+      "known_at": 8
+    },
+    {
+      "name": "Día de Venus",
+      "facet": "Órbitas, rotación y estaciones",
+      "known_at": 11
+    },
+    {
+      "name": "Leyes de Kepler",
+      "facet": "Órbitas, rotación y estaciones",
+      "known_at": 13
+    },
+    {
+      "name": "Afelio",
+      "facet": "Órbitas, rotación y estaciones",
+      "known_at": 14
+    },
+    {
+      "name": "Eclíptica",
+      "facet": "Órbitas, rotación y estaciones",
+      "known_at": 14
+    },
+    {
+      "name": "Movimiento retrógrado",
+      "facet": "Órbitas, rotación y estaciones",
+      "known_at": 14
+    },
+    {
+      "name": "Día sideral",
+      "facet": "Órbitas, rotación y estaciones",
+      "known_at": 15
+    },
+    {
+      "name": "Telescopio espacial Hubble",
+      "facet": "Misiones y sondas espaciales",
+      "known_at": 8
+    },
+    {
+      "name": "Sputnik 1",
+      "facet": "Misiones y sondas espaciales",
+      "known_at": 10
+    },
+    {
+      "name": "Telescopio espacial James Webb",
+      "facet": "Misiones y sondas espaciales",
+      "known_at": 10
+    },
+    {
+      "name": "Cassini-Huygens",
+      "facet": "Misiones y sondas espaciales",
+      "known_at": 12
+    },
+    {
+      "name": "Voyager 2",
+      "facet": "Misiones y sondas espaciales",
+      "known_at": 13
+    },
+    {
+      "name": "Sonda Rosetta",
+      "facet": "Misiones y sondas espaciales",
+      "known_at": 13
+    },
+    {
+      "name": "Sonda solar Parker",
+      "facet": "Misiones y sondas espaciales",
+      "known_at": 13
+    },
+    {
+      "name": "OSIRIS-REx",
+      "facet": "Misiones y sondas espaciales",
+      "known_at": 14
+    },
+    {
+      "name": "Claudio Ptolomeo",
+      "facet": "Astrónomos y descubrimientos históricos",
+      "known_at": 13
+    },
+    {
+      "name": "Giovanni Cassini",
+      "facet": "Astrónomos y descubrimientos históricos",
+      "known_at": 14
+    },
+    {
+      "name": "Urbain Le Verrier",
+      "facet": "Astrónomos y descubrimientos históricos",
+      "known_at": 15
+    },
+    {
+      "name": "Aristarco de Samos",
+      "facet": "Astrónomos y descubrimientos históricos",
+      "known_at": 15
+    },
+    {
+      "name": "Astrología",
+      "facet": "Nombres, mitología y palabras del cielo",
+      "known_at": 8
+    },
+    {
+      "name": "Gaia",
+      "facet": "Nombres, mitología y palabras del cielo",
+      "known_at": 11
+    },
+    {
+      "name": "Sábado",
+      "facet": "Nombres, mitología y palabras del cielo",
+      "known_at": 11
+    },
+    {
+      "name": "Planeta errante",
+      "facet": "Nombres, mitología y palabras del cielo",
+      "known_at": 12
+    },
+    {
+      "name": "Marvin el marciano",
+      "facet": "El sistema solar en películas y cultura",
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Armageddon",
+      "facet": "El sistema solar en películas y cultura",
+      "known_at": 11
+    },
+    {
+      "name": "La Luna (cortometraje de Pixar)",
+      "facet": "El sistema solar en películas y cultura",
+      "known_at": 11
+    },
+    {
+      "name": "Apolo 13 (película)",
+      "facet": "El sistema solar en películas y cultura",
+      "known_at": 12
+    },
+    {
+      "name": "Cosmos (serie)",
+      "facet": "El sistema solar en películas y cultura",
+      "known_at": 12
+    },
+    {
+      "name": "Viaje a la Luna de Méliès",
+      "facet": "El sistema solar en películas y cultura",
+      "known_at": 12
+    },
+    {
+      "name": "Aterrizaje en la Luna (Tintín)",
+      "facet": "El sistema solar en películas y cultura",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Fly Me to the Moon",
+      "facet": "El sistema solar en películas y cultura",
+      "known_at": 12
+    },
+    {
+      "name": "Clair de lune",
+      "facet": "El sistema solar en películas y cultura",
+      "known_at": 13
+    },
+    {
+      "name": "Los planetas de Holst",
+      "facet": "El sistema solar en películas y cultura",
+      "known_at": 14
+    }
+  ]
+}

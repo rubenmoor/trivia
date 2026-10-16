@@ -1,0 +1,783 @@
+{
+  "subcategory": "fish",
+  "facets": [
+    "Peces de río y de agua dulce",
+    "Peces de mar y de arrecife",
+    "Tiburones y rayas",
+    "Peces de las profundidades",
+    "Anatomía y cuerpo del pez",
+    "Respiración, nado y sentidos",
+    "Reproducción, crías y migraciones",
+    "Peces en la cocina y la pesca",
+    "Peces de Colombia",
+    "Peces de acuario y mascotas",
+    "Peces en películas y cuentos",
+    "Récords y peces raros"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 5,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 5,
+      "who": 2,
+      "when": 1
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 3
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 4,
+      "pop_culture": 5,
+      "popular_science": 3,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 2,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Trucha",
+      "facet": "Peces de río y de agua dulce",
+      "known_at": 3
+    },
+    {
+      "name": "Carpa",
+      "facet": "Peces de río y de agua dulce",
+      "known_at": 5
+    },
+    {
+      "name": "Esturión",
+      "facet": "Peces de río y de agua dulce",
+      "known_at": 10
+    },
+    {
+      "name": "Lucio",
+      "facet": "Peces de río y de agua dulce",
+      "known_at": 11
+    },
+    {
+      "name": "Perca",
+      "facet": "Peces de río y de agua dulce",
+      "known_at": 10
+    },
+    {
+      "name": "Pez gato",
+      "facet": "Peces de río y de agua dulce",
+      "known_at": 4
+    },
+    {
+      "name": "Pez arquero",
+      "facet": "Peces de río y de agua dulce",
+      "known_at": 10
+    },
+    {
+      "name": "Pejelagarto",
+      "facet": "Peces de río y de agua dulce",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Pez pulmonado",
+      "facet": "Peces de río y de agua dulce",
+      "known_at": 11
+    },
+    {
+      "name": "Pez espátula",
+      "facet": "Peces de río y de agua dulce",
+      "known_at": 12
+    },
+    {
+      "name": "Lamprea",
+      "facet": "Peces de río y de agua dulce",
+      "known_at": 11
+    },
+    {
+      "name": "Siluro",
+      "facet": "Peces de río y de agua dulce",
+      "known_at": 12
+    },
+    {
+      "name": "Tetra ciego de las cavernas",
+      "facet": "Peces de río y de agua dulce",
+      "known_at": 13
+    },
+    {
+      "name": "Pez payaso",
+      "facet": "Peces de mar y de arrecife",
+      "known_at": 1
+    },
+    {
+      "name": "Pez cirujano azul",
+      "facet": "Peces de mar y de arrecife",
+      "known_at": 3
+    },
+    {
+      "name": "Pez mariposa",
+      "facet": "Peces de mar y de arrecife",
+      "known_at": 7
+    },
+    {
+      "name": "Morena",
+      "facet": "Peces de mar y de arrecife",
+      "known_at": 6
+    },
+    {
+      "name": "Pez ángel",
+      "facet": "Peces de mar y de arrecife",
+      "known_at": 5
+    },
+    {
+      "name": "Pez piedra",
+      "facet": "Peces de mar y de arrecife",
+      "known_at": 9
+    },
+    {
+      "name": "Barracuda",
+      "facet": "Peces de mar y de arrecife",
+      "known_at": 7
+    },
+    {
+      "name": "Pez napoleón",
+      "facet": "Peces de mar y de arrecife",
+      "known_at": 11
+    },
+    {
+      "name": "Mero",
+      "facet": "Peces de mar y de arrecife",
+      "known_at": 9
+    },
+    {
+      "name": "Pez limpiador",
+      "facet": "Peces de mar y de arrecife",
+      "known_at": 8
+    },
+    {
+      "name": "Pez cofre",
+      "facet": "Peces de mar y de arrecife",
+      "known_at": 10
+    },
+    {
+      "name": "Pez trompeta",
+      "facet": "Peces de mar y de arrecife",
+      "known_at": 10
+    },
+    {
+      "name": "Tiburón martillo",
+      "facet": "Tiburones y rayas",
+      "known_at": 2
+    },
+    {
+      "name": "Tiburón ballena",
+      "facet": "Tiburones y rayas",
+      "known_at": 3
+    },
+    {
+      "name": "Tiburón tigre",
+      "facet": "Tiburones y rayas",
+      "known_at": 5
+    },
+    {
+      "name": "Tiburón toro",
+      "facet": "Tiburones y rayas",
+      "known_at": 9
+    },
+    {
+      "name": "Tiburón peregrino",
+      "facet": "Tiburones y rayas",
+      "known_at": 11
+    },
+    {
+      "name": "Tiburón nodriza",
+      "facet": "Tiburones y rayas",
+      "known_at": 9
+    },
+    {
+      "name": "Tiburón duende",
+      "facet": "Tiburones y rayas",
+      "known_at": 11
+    },
+    {
+      "name": "Tiburón zorro",
+      "facet": "Tiburones y rayas",
+      "known_at": 11
+    },
+    {
+      "name": "Raya águila",
+      "facet": "Tiburones y rayas",
+      "known_at": 10
+    },
+    {
+      "name": "Pez sierra",
+      "facet": "Tiburones y rayas",
+      "known_at": 6
+    },
+    {
+      "name": "Pez guitarra",
+      "facet": "Tiburones y rayas",
+      "known_at": 11
+    },
+    {
+      "name": "Raya eléctrica",
+      "facet": "Tiburones y rayas",
+      "known_at": 8
+    },
+    {
+      "name": "Dientes de tiburón",
+      "facet": "Tiburones y rayas",
+      "known_at": 4
+    },
+    {
+      "name": "Pez víbora",
+      "facet": "Peces de las profundidades",
+      "known_at": 10
+    },
+    {
+      "name": "Pez ojos de barril",
+      "facet": "Peces de las profundidades",
+      "known_at": 10
+    },
+    {
+      "name": "Pez borrón",
+      "facet": "Peces de las profundidades",
+      "known_at": 6
+    },
+    {
+      "name": "Pez dragón negro",
+      "facet": "Peces de las profundidades",
+      "known_at": 11
+    },
+    {
+      "name": "Anguila pelícano",
+      "facet": "Peces de las profundidades",
+      "known_at": 11
+    },
+    {
+      "name": "Pez linterna",
+      "facet": "Peces de las profundidades",
+      "known_at": 9
+    },
+    {
+      "name": "Pez remo",
+      "facet": "Peces de las profundidades",
+      "known_at": 10
+    },
+    {
+      "name": "Pez trípode",
+      "facet": "Peces de las profundidades",
+      "known_at": 12
+    },
+    {
+      "name": "Pez colmillo",
+      "facet": "Peces de las profundidades",
+      "known_at": 10
+    },
+    {
+      "name": "Pez caracol de las Marianas",
+      "facet": "Peces de las profundidades",
+      "known_at": 13
+    },
+    {
+      "name": "Branquias",
+      "facet": "Anatomía y cuerpo del pez",
+      "known_at": 3
+    },
+    {
+      "name": "Aleta dorsal",
+      "facet": "Anatomía y cuerpo del pez",
+      "known_at": 5
+    },
+    {
+      "name": "Aleta caudal",
+      "facet": "Anatomía y cuerpo del pez",
+      "known_at": 7
+    },
+    {
+      "name": "Aletas pectorales",
+      "facet": "Anatomía y cuerpo del pez",
+      "known_at": 8
+    },
+    {
+      "name": "Aleta adiposa",
+      "facet": "Anatomía y cuerpo del pez",
+      "known_at": 13
+    },
+    {
+      "name": "Opérculo",
+      "facet": "Anatomía y cuerpo del pez",
+      "known_at": 11
+    },
+    {
+      "name": "Espinas de pescado",
+      "facet": "Anatomía y cuerpo del pez",
+      "known_at": 2
+    },
+    {
+      "name": "Esqueleto cartilaginoso",
+      "facet": "Anatomía y cuerpo del pez",
+      "known_at": 10
+    },
+    {
+      "name": "Barbillas",
+      "facet": "Anatomía y cuerpo del pez",
+      "known_at": 8
+    },
+    {
+      "name": "Mucosa de los peces",
+      "facet": "Anatomía y cuerpo del pez",
+      "known_at": 8
+    },
+    {
+      "name": "Vertebrados",
+      "facet": "Anatomía y cuerpo del pez",
+      "known_at": 6
+    },
+    {
+      "name": "Peces óseos",
+      "facet": "Anatomía y cuerpo del pez",
+      "known_at": 10
+    },
+    {
+      "name": "Peces sin mandíbula",
+      "facet": "Anatomía y cuerpo del pez",
+      "known_at": 12
+    },
+    {
+      "name": "Ictiología",
+      "facet": "Anatomía y cuerpo del pez",
+      "known_at": 12
+    },
+    {
+      "name": "Vejiga natatoria",
+      "facet": "Respiración, nado y sentidos",
+      "known_at": 9
+    },
+    {
+      "name": "Línea lateral",
+      "facet": "Respiración, nado y sentidos",
+      "known_at": 10
+    },
+    {
+      "name": "Electrorrecepción",
+      "facet": "Respiración, nado y sentidos",
+      "known_at": 12
+    },
+    {
+      "name": "Ampollas de Lorenzini",
+      "facet": "Respiración, nado y sentidos",
+      "known_at": 14
+    },
+    {
+      "name": "Cardumen",
+      "facet": "Respiración, nado y sentidos",
+      "known_at": 6
+    },
+    {
+      "name": "Olfato del tiburón",
+      "facet": "Respiración, nado y sentidos",
+      "known_at": 5
+    },
+    {
+      "name": "Ventilación por embestida",
+      "facet": "Respiración, nado y sentidos",
+      "known_at": 11
+    },
+    {
+      "name": "Contracoloración",
+      "facet": "Respiración, nado y sentidos",
+      "known_at": 12
+    },
+    {
+      "name": "Forma hidrodinámica",
+      "facet": "Respiración, nado y sentidos",
+      "known_at": 9
+    },
+    {
+      "name": "Memoria de pez",
+      "facet": "Respiración, nado y sentidos",
+      "known_at": 5
+    },
+    {
+      "name": "Peces sin párpados",
+      "facet": "Respiración, nado y sentidos",
+      "known_at": 7
+    },
+    {
+      "name": "Desove",
+      "facet": "Reproducción, crías y migraciones",
+      "known_at": 9
+    },
+    {
+      "name": "Huevas",
+      "facet": "Reproducción, crías y migraciones",
+      "known_at": 6
+    },
+    {
+      "name": "Alevín",
+      "facet": "Reproducción, crías y migraciones",
+      "known_at": 9
+    },
+    {
+      "name": "Larva de pez",
+      "facet": "Reproducción, crías y migraciones",
+      "known_at": 8
+    },
+    {
+      "name": "Migración del salmón",
+      "facet": "Reproducción, crías y migraciones",
+      "known_at": 7
+    },
+    {
+      "name": "Anguila europea",
+      "facet": "Reproducción, crías y migraciones",
+      "known_at": 11
+    },
+    {
+      "name": "Incubación bucal",
+      "facet": "Reproducción, crías y migraciones",
+      "known_at": 11
+    },
+    {
+      "name": "Embarazo del caballito de mar macho",
+      "facet": "Reproducción, crías y migraciones",
+      "known_at": 6
+    },
+    {
+      "name": "Peces vivíparos",
+      "facet": "Reproducción, crías y migraciones",
+      "known_at": 10
+    },
+    {
+      "name": "Cambio de sexo en peces",
+      "facet": "Reproducción, crías y migraciones",
+      "known_at": 10
+    },
+    {
+      "name": "Pez espinoso",
+      "facet": "Reproducción, crías y migraciones",
+      "known_at": 13
+    },
+    {
+      "name": "Escalera de peces",
+      "facet": "Reproducción, crías y migraciones",
+      "known_at": 12
+    },
+    {
+      "name": "Peces anádromos",
+      "facet": "Reproducción, crías y migraciones",
+      "known_at": 14
+    },
+    {
+      "name": "Merluza",
+      "facet": "Peces en la cocina y la pesca",
+      "known_at": 9
+    },
+    {
+      "name": "Anchoa",
+      "facet": "Peces en la cocina y la pesca",
+      "known_at": 8
+    },
+    {
+      "name": "Arenque",
+      "facet": "Peces en la cocina y la pesca",
+      "known_at": 10
+    },
+    {
+      "name": "Tilapia",
+      "facet": "Peces en la cocina y la pesca",
+      "known_at": 6
+    },
+    {
+      "name": "Fugu",
+      "facet": "Peces en la cocina y la pesca",
+      "known_at": 11
+    },
+    {
+      "name": "Surimi",
+      "facet": "Peces en la cocina y la pesca",
+      "known_at": 11
+    },
+    {
+      "name": "Aceite de hígado de bacalao",
+      "facet": "Peces en la cocina y la pesca",
+      "known_at": 11
+    },
+    {
+      "name": "Omega 3",
+      "facet": "Peces en la cocina y la pesca",
+      "known_at": 10
+    },
+    {
+      "name": "Carnada",
+      "facet": "Peces en la cocina y la pesca",
+      "known_at": 5
+    },
+    {
+      "name": "Atarraya",
+      "facet": "Peces en la cocina y la pesca",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Pesca con mosca",
+      "facet": "Peces en la cocina y la pesca",
+      "known_at": 12
+    },
+    {
+      "name": "Bagre rayado",
+      "facet": "Peces de Colombia",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Capitán de la sabana",
+      "facet": "Peces de Colombia",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Sábalo",
+      "facet": "Peces de Colombia",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Dorada del Magdalena",
+      "facet": "Peces de Colombia",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Subienda",
+      "facet": "Peces de Colombia",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Viudo de capaz",
+      "facet": "Peces de Colombia",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Sancocho de pescado",
+      "facet": "Peces de Colombia",
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Lebranche",
+      "facet": "Peces de Colombia",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Raya motoro",
+      "facet": "Peces de Colombia",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Pez dorado",
+      "facet": "Peces de acuario y mascotas",
+      "known_at": 1
+    },
+    {
+      "name": "Guppy",
+      "facet": "Peces de acuario y mascotas",
+      "known_at": 7
+    },
+    {
+      "name": "Pez betta",
+      "facet": "Peces de acuario y mascotas",
+      "known_at": 6
+    },
+    {
+      "name": "Pez neón",
+      "facet": "Peces de acuario y mascotas",
+      "known_at": 6
+    },
+    {
+      "name": "Carpa koi",
+      "facet": "Peces de acuario y mascotas",
+      "known_at": 5
+    },
+    {
+      "name": "Molly",
+      "facet": "Peces de acuario y mascotas",
+      "known_at": 10
+    },
+    {
+      "name": "Platy",
+      "facet": "Peces de acuario y mascotas",
+      "known_at": 11
+    },
+    {
+      "name": "Corydora",
+      "facet": "Peces de acuario y mascotas",
+      "known_at": 12
+    },
+    {
+      "name": "Pleco",
+      "facet": "Peces de acuario y mascotas",
+      "known_at": 10
+    },
+    {
+      "name": "Pez cebra",
+      "facet": "Peces de acuario y mascotas",
+      "known_at": 9
+    },
+    {
+      "name": "Cíclido",
+      "facet": "Peces de acuario y mascotas",
+      "known_at": 12
+    },
+    {
+      "name": "Gurami",
+      "facet": "Peces de acuario y mascotas",
+      "known_at": 12
+    },
+    {
+      "name": "Pecera",
+      "facet": "Peces de acuario y mascotas",
+      "known_at": 1
+    },
+    {
+      "name": "Filtro de acuario",
+      "facet": "Peces de acuario y mascotas",
+      "known_at": 5
+    },
+    {
+      "name": "Oxigenador de acuario",
+      "facet": "Peces de acuario y mascotas",
+      "known_at": 5
+    },
+    {
+      "name": "Acuario público",
+      "facet": "Peces de acuario y mascotas",
+      "known_at": 3
+    },
+    {
+      "name": "Bruce",
+      "facet": "Peces en películas y cuentos",
+      "known_at": 5
+    },
+    {
+      "name": "Gill",
+      "facet": "Peces en películas y cuentos",
+      "known_at": 7
+    },
+    {
+      "name": "Cleo",
+      "facet": "Peces en películas y cuentos",
+      "known_at": 9
+    },
+    {
+      "name": "Señora Puff",
+      "facet": "Peces en películas y cuentos",
+      "known_at": 3
+    },
+    {
+      "name": "Oscar de El espantatiburones",
+      "facet": "Peces en películas y cuentos",
+      "known_at": 6
+    },
+    {
+      "name": "Nadarín",
+      "facet": "Peces en películas y cuentos",
+      "known_at": 8
+    },
+    {
+      "name": "El pescador y el pez dorado",
+      "facet": "Peces en películas y cuentos",
+      "known_at": 10
+    },
+    {
+      "name": "Pez saltarín del fango",
+      "facet": "Récords y peces raros",
+      "known_at": 10
+    },
+    {
+      "name": "Pez murciélago de labios rojos",
+      "facet": "Récords y peces raros",
+      "known_at": 10
+    },
+    {
+      "name": "Pez mano",
+      "facet": "Récords y peces raros",
+      "known_at": 12
+    },
+    {
+      "name": "Pez cuatro ojos",
+      "facet": "Récords y peces raros",
+      "known_at": 12
+    },
+    {
+      "name": "Dragón de mar foliado",
+      "facet": "Récords y peces raros",
+      "known_at": 9
+    },
+    {
+      "name": "Pez rémora",
+      "facet": "Récords y peces raros",
+      "known_at": 8
+    },
+    {
+      "name": "Pez sapo",
+      "facet": "Récords y peces raros",
+      "known_at": 11
+    },
+    {
+      "name": "Pez reloj anaranjado",
+      "facet": "Récords y peces raros",
+      "known_at": 13
+    },
+    {
+      "name": "Pez pipa",
+      "facet": "Récords y peces raros",
+      "known_at": 11
+    },
+    {
+      "name": "Pez aguja",
+      "facet": "Récords y peces raros",
+      "known_at": 9
+    },
+    {
+      "name": "Pez lagarto",
+      "facet": "Récords y peces raros",
+      "known_at": 12
+    },
+    {
+      "name": "Pez escorpión",
+      "facet": "Récords y peces raros",
+      "known_at": 9
+    },
+    {
+      "name": "Pez araña",
+      "facet": "Récords y peces raros",
+      "known_at": 12
+    }
+  ]
+}

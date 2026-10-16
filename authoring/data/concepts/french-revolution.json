@@ -1,0 +1,1054 @@
+{
+  "subcategory": "french-revolution",
+  "facets": [
+    "Causas y Antiguo Régimen",
+    "Toma de la Bastilla y 1789",
+    "Personajes revolucionarios",
+    "Luis XVI y María Antonieta",
+    "El Terror y la guillotina",
+    "Símbolos y canciones revolucionarias",
+    "Derechos e ideas ilustradas",
+    "Lugares de París revolucionario",
+    "Grupos y asambleas políticas",
+    "Cambios en la vida cotidiana",
+    "Napoleón y el fin de la Revolución",
+    "Ecos en América y Colombia",
+    "Ecos en America y Colombia"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 2,
+      "record": 1,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 2,
+      "colombia": 3,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Antiguo Régimen",
+      "facet": "Causas y Antiguo Régimen",
+      "known_at": 10
+    },
+    {
+      "name": "Monarquía absoluta",
+      "facet": "Causas y Antiguo Régimen",
+      "known_at": 8
+    },
+    {
+      "name": "Sociedad estamental",
+      "facet": "Causas y Antiguo Régimen",
+      "known_at": 11
+    },
+    {
+      "name": "Clero",
+      "facet": "Causas y Antiguo Régimen",
+      "known_at": 7
+    },
+    {
+      "name": "Nobleza",
+      "facet": "Causas y Antiguo Régimen",
+      "known_at": 6
+    },
+    {
+      "name": "Tercer estado",
+      "facet": "Causas y Antiguo Régimen",
+      "known_at": 10
+    },
+    {
+      "name": "Burguesía",
+      "facet": "Causas y Antiguo Régimen",
+      "known_at": 10
+    },
+    {
+      "name": "Campesinos franceses",
+      "facet": "Causas y Antiguo Régimen",
+      "known_at": 5
+    },
+    {
+      "name": "Privilegios",
+      "facet": "Causas y Antiguo Régimen",
+      "known_at": 9
+    },
+    {
+      "name": "Gabela",
+      "facet": "Causas y Antiguo Régimen",
+      "known_at": 14
+    },
+    {
+      "name": "Corvea",
+      "facet": "Causas y Antiguo Régimen",
+      "known_at": 14
+    },
+    {
+      "name": "Precio del pan",
+      "facet": "Causas y Antiguo Régimen",
+      "known_at": 8
+    },
+    {
+      "name": "Invierno de 1788",
+      "facet": "Causas y Antiguo Régimen",
+      "known_at": 14
+    },
+    {
+      "name": "Deuda del reino de Francia",
+      "facet": "Causas y Antiguo Régimen",
+      "known_at": 11
+    },
+    {
+      "name": "Guerra de Independencia de Estados Unidos",
+      "facet": "Causas y Antiguo Régimen",
+      "known_at": 9
+    },
+    {
+      "name": "Derecho divino de los reyes",
+      "facet": "Causas y Antiguo Régimen",
+      "known_at": 10
+    },
+    {
+      "name": "Luis XIV",
+      "facet": "Causas y Antiguo Régimen",
+      "known_at": 8
+    },
+    {
+      "name": "Jacques Necker",
+      "facet": "Causas y Antiguo Régimen",
+      "known_at": 13
+    },
+    {
+      "name": "Cuadernos de quejas",
+      "facet": "Causas y Antiguo Régimen",
+      "known_at": 13
+    },
+    {
+      "name": "14 de julio",
+      "facet": "Toma de la Bastilla y 1789",
+      "known_at": 6
+    },
+    {
+      "name": "Fiesta Nacional de Francia",
+      "facet": "Toma de la Bastilla y 1789",
+      "known_at": 5
+    },
+    {
+      "name": "Año 1789",
+      "facet": "Toma de la Bastilla y 1789",
+      "known_at": 8
+    },
+    {
+      "name": "Estados Generales",
+      "facet": "Toma de la Bastilla y 1789",
+      "known_at": 11
+    },
+    {
+      "name": "Juramento del Juego de Pelota",
+      "facet": "Toma de la Bastilla y 1789",
+      "known_at": 12
+    },
+    {
+      "name": "Gran Miedo",
+      "facet": "Toma de la Bastilla y 1789",
+      "known_at": 14
+    },
+    {
+      "name": "Noche del 4 de agosto",
+      "facet": "Toma de la Bastilla y 1789",
+      "known_at": 14
+    },
+    {
+      "name": "Abolición del feudalismo",
+      "facet": "Toma de la Bastilla y 1789",
+      "known_at": 12
+    },
+    {
+      "name": "Marcha sobre Versalles",
+      "facet": "Toma de la Bastilla y 1789",
+      "known_at": 12
+    },
+    {
+      "name": "Guardia Nacional",
+      "facet": "Toma de la Bastilla y 1789",
+      "known_at": 12
+    },
+    {
+      "name": "Llave de la Bastilla",
+      "facet": "Toma de la Bastilla y 1789",
+      "known_at": 14
+    },
+    {
+      "name": "Bernard-René de Launay",
+      "facet": "Toma de la Bastilla y 1789",
+      "known_at": 15
+    },
+    {
+      "name": "Camille Desmoulins",
+      "facet": "Toma de la Bastilla y 1789",
+      "known_at": 14
+    },
+    {
+      "name": "Fiesta de la Federación",
+      "facet": "Toma de la Bastilla y 1789",
+      "known_at": 13
+    },
+    {
+      "name": "Maximilien Robespierre",
+      "facet": "Personajes revolucionarios",
+      "known_at": 10
+    },
+    {
+      "name": "Georges Danton",
+      "facet": "Personajes revolucionarios",
+      "known_at": 12
+    },
+    {
+      "name": "Jean-Paul Marat",
+      "facet": "Personajes revolucionarios",
+      "known_at": 12
+    },
+    {
+      "name": "Marqués de La Fayette",
+      "facet": "Personajes revolucionarios",
+      "known_at": 11
+    },
+    {
+      "name": "Mirabeau",
+      "facet": "Personajes revolucionarios",
+      "known_at": 13
+    },
+    {
+      "name": "Emmanuel-Joseph Sieyès",
+      "facet": "Personajes revolucionarios",
+      "known_at": 14
+    },
+    {
+      "name": "Louis Antoine de Saint-Just",
+      "facet": "Personajes revolucionarios",
+      "known_at": 14
+    },
+    {
+      "name": "Charlotte Corday",
+      "facet": "Personajes revolucionarios",
+      "known_at": 13
+    },
+    {
+      "name": "Olympe de Gouges",
+      "facet": "Personajes revolucionarios",
+      "known_at": 12
+    },
+    {
+      "name": "Madame Roland",
+      "facet": "Personajes revolucionarios",
+      "known_at": 14
+    },
+    {
+      "name": "Condorcet",
+      "facet": "Personajes revolucionarios",
+      "known_at": 14
+    },
+    {
+      "name": "Jacques-René Hébert",
+      "facet": "Personajes revolucionarios",
+      "known_at": 15
+    },
+    {
+      "name": "Jacques-Louis David",
+      "facet": "Personajes revolucionarios",
+      "known_at": 12
+    },
+    {
+      "name": "Thomas Paine",
+      "facet": "Personajes revolucionarios",
+      "known_at": 13
+    },
+    {
+      "name": "Jacques Pierre Brissot",
+      "facet": "Personajes revolucionarios",
+      "known_at": 14
+    },
+    {
+      "name": "Gracchus Babeuf",
+      "facet": "Personajes revolucionarios",
+      "known_at": 15
+    },
+    {
+      "name": "Théroigne de Méricourt",
+      "facet": "Personajes revolucionarios",
+      "known_at": 15
+    },
+    {
+      "name": "Luis XVI",
+      "facet": "Luis XVI y María Antonieta",
+      "known_at": 8
+    },
+    {
+      "name": "María Antonieta",
+      "facet": "Luis XVI y María Antonieta",
+      "known_at": 7
+    },
+    {
+      "name": "Que coman pasteles",
+      "facet": "Luis XVI y María Antonieta",
+      "known_at": 8
+    },
+    {
+      "name": "Huida a Varennes",
+      "facet": "Luis XVI y María Antonieta",
+      "known_at": 12
+    },
+    {
+      "name": "Luis XVII",
+      "facet": "Luis XVI y María Antonieta",
+      "known_at": 13
+    },
+    {
+      "name": "Delfín de Francia",
+      "facet": "Luis XVI y María Antonieta",
+      "known_at": 11
+    },
+    {
+      "name": "Casa de Borbón",
+      "facet": "Luis XVI y María Antonieta",
+      "known_at": 10
+    },
+    {
+      "name": "Casa de Habsburgo",
+      "facet": "Luis XVI y María Antonieta",
+      "known_at": 12
+    },
+    {
+      "name": "María Teresa de Austria",
+      "facet": "Luis XVI y María Antonieta",
+      "known_at": 13
+    },
+    {
+      "name": "Pequeño Trianón",
+      "facet": "Luis XVI y María Antonieta",
+      "known_at": 12
+    },
+    {
+      "name": "Aldea de la Reina",
+      "facet": "Luis XVI y María Antonieta",
+      "known_at": 14
+    },
+    {
+      "name": "Asunto del collar de la reina",
+      "facet": "Luis XVI y María Antonieta",
+      "known_at": 13
+    },
+    {
+      "name": "Peinado pouf",
+      "facet": "Luis XVI y María Antonieta",
+      "known_at": 13
+    },
+    {
+      "name": "Rose Bertin",
+      "facet": "Luis XVI y María Antonieta",
+      "known_at": 15
+    },
+    {
+      "name": "Madame Royale",
+      "facet": "Luis XVI y María Antonieta",
+      "known_at": 14
+    },
+    {
+      "name": "Juicio de Luis XVI",
+      "facet": "Luis XVI y María Antonieta",
+      "known_at": 12
+    },
+    {
+      "name": "Ciudadano Capeto",
+      "facet": "Luis XVI y María Antonieta",
+      "known_at": 14
+    },
+    {
+      "name": "Cerrajería",
+      "facet": "Luis XVI y María Antonieta",
+      "known_at": 13
+    },
+    {
+      "name": "Axel von Fersen",
+      "facet": "Luis XVI y María Antonieta",
+      "known_at": 15
+    },
+    {
+      "name": "La rosa de Versalles",
+      "facet": "Luis XVI y María Antonieta",
+      "known_at": 13
+    },
+    {
+      "name": "Guillotina",
+      "facet": "El Terror y la guillotina",
+      "known_at": 5
+    },
+    {
+      "name": "Reinado del Terror",
+      "facet": "El Terror y la guillotina",
+      "known_at": 10
+    },
+    {
+      "name": "Joseph-Ignace Guillotin",
+      "facet": "El Terror y la guillotina",
+      "known_at": 11
+    },
+    {
+      "name": "Comité de Salvación Pública",
+      "facet": "El Terror y la guillotina",
+      "known_at": 13
+    },
+    {
+      "name": "Tribunal Revolucionario",
+      "facet": "El Terror y la guillotina",
+      "known_at": 13
+    },
+    {
+      "name": "Ley de Sospechosos",
+      "facet": "El Terror y la guillotina",
+      "known_at": 14
+    },
+    {
+      "name": "Tejedoras de la guillotina",
+      "facet": "El Terror y la guillotina",
+      "known_at": 14
+    },
+    {
+      "name": "Guerra de la Vendée",
+      "facet": "El Terror y la guillotina",
+      "known_at": 13
+    },
+    {
+      "name": "Carretas de los condenados",
+      "facet": "El Terror y la guillotina",
+      "known_at": 13
+    },
+    {
+      "name": "Charles-Henri Sanson",
+      "facet": "El Terror y la guillotina",
+      "known_at": 14
+    },
+    {
+      "name": "Madame Tussaud",
+      "facet": "El Terror y la guillotina",
+      "known_at": 11
+    },
+    {
+      "name": "Juicio de María Antonieta",
+      "facet": "El Terror y la guillotina",
+      "known_at": 12
+    },
+    {
+      "name": "André Chénier",
+      "facet": "El Terror y la guillotina",
+      "known_at": 15
+    },
+    {
+      "name": "Fouquier-Tinville",
+      "facet": "El Terror y la guillotina",
+      "known_at": 15
+    },
+    {
+      "name": "Carmelitas de Compiègne",
+      "facet": "El Terror y la guillotina",
+      "known_at": 15
+    },
+    {
+      "name": "Marianne",
+      "facet": "Símbolos y canciones revolucionarias",
+      "known_at": 10
+    },
+    {
+      "name": "Escarapela tricolor",
+      "facet": "Símbolos y canciones revolucionarias",
+      "known_at": 11
+    },
+    {
+      "name": "Libertad, igualdad, fraternidad",
+      "facet": "Símbolos y canciones revolucionarias",
+      "known_at": 8
+    },
+    {
+      "name": "Rouget de Lisle",
+      "facet": "Símbolos y canciones revolucionarias",
+      "known_at": 12
+    },
+    {
+      "name": "Ça ira",
+      "facet": "Símbolos y canciones revolucionarias",
+      "known_at": 14
+    },
+    {
+      "name": "La Carmañola",
+      "facet": "Símbolos y canciones revolucionarias",
+      "known_at": 14
+    },
+    {
+      "name": "Árbol de la libertad",
+      "facet": "Símbolos y canciones revolucionarias",
+      "known_at": 13
+    },
+    {
+      "name": "La muerte de Marat",
+      "facet": "Símbolos y canciones revolucionarias",
+      "known_at": 12
+    },
+    {
+      "name": "Batallón de Marsella",
+      "facet": "Símbolos y canciones revolucionarias",
+      "known_at": 13
+    },
+    {
+      "name": "Ojo de la Providencia",
+      "facet": "Símbolos y canciones revolucionarias",
+      "known_at": 14
+    },
+    {
+      "name": "Nivel de la igualdad",
+      "facet": "Símbolos y canciones revolucionarias",
+      "known_at": 15
+    },
+    {
+      "name": "Declaración de los Derechos del Hombre y del Ciudadano",
+      "facet": "Derechos e ideas ilustradas",
+      "known_at": 9
+    },
+    {
+      "name": "Ilustración",
+      "facet": "Derechos e ideas ilustradas",
+      "known_at": 9
+    },
+    {
+      "name": "Voltaire",
+      "facet": "Derechos e ideas ilustradas",
+      "known_at": 10
+    },
+    {
+      "name": "Jean-Jacques Rousseau",
+      "facet": "Derechos e ideas ilustradas",
+      "known_at": 11
+    },
+    {
+      "name": "Montesquieu",
+      "facet": "Derechos e ideas ilustradas",
+      "known_at": 11
+    },
+    {
+      "name": "Separación de poderes",
+      "facet": "Derechos e ideas ilustradas",
+      "known_at": 11
+    },
+    {
+      "name": "El contrato social",
+      "facet": "Derechos e ideas ilustradas",
+      "known_at": 12
+    },
+    {
+      "name": "Enciclopedia",
+      "facet": "Derechos e ideas ilustradas",
+      "known_at": 12
+    },
+    {
+      "name": "Denis Diderot",
+      "facet": "Derechos e ideas ilustradas",
+      "known_at": 13
+    },
+    {
+      "name": "John Locke",
+      "facet": "Derechos e ideas ilustradas",
+      "known_at": 13
+    },
+    {
+      "name": "Soberanía nacional",
+      "facet": "Derechos e ideas ilustradas",
+      "known_at": 12
+    },
+    {
+      "name": "Declaración de los Derechos de la Mujer y de la Ciudadana",
+      "facet": "Derechos e ideas ilustradas",
+      "known_at": 13
+    },
+    {
+      "name": "Constitución de 1791",
+      "facet": "Derechos e ideas ilustradas",
+      "known_at": 13
+    },
+    {
+      "name": "Abolición de la esclavitud de 1794",
+      "facet": "Derechos e ideas ilustradas",
+      "known_at": 13
+    },
+    {
+      "name": "Laicidad",
+      "facet": "Derechos e ideas ilustradas",
+      "known_at": 12
+    },
+    {
+      "name": "Sufragio universal masculino",
+      "facet": "Derechos e ideas ilustradas",
+      "known_at": 13
+    },
+    {
+      "name": "Libertad de expresión",
+      "facet": "Derechos e ideas ilustradas",
+      "known_at": 8
+    },
+    {
+      "name": "Igualdad ante la ley",
+      "facet": "Derechos e ideas ilustradas",
+      "known_at": 9
+    },
+    {
+      "name": "Ciudadano",
+      "facet": "Derechos e ideas ilustradas",
+      "known_at": 6
+    },
+    {
+      "name": "República",
+      "facet": "Derechos e ideas ilustradas",
+      "known_at": 7
+    },
+    {
+      "name": "Derechos humanos",
+      "facet": "Derechos e ideas ilustradas",
+      "known_at": 5
+    },
+    {
+      "name": "Plaza de la Bastilla",
+      "facet": "Lugares de París revolucionario",
+      "known_at": 11
+    },
+    {
+      "name": "Columna de Julio",
+      "facet": "Lugares de París revolucionario",
+      "known_at": 14
+    },
+    {
+      "name": "Plaza de la Concordia",
+      "facet": "Lugares de París revolucionario",
+      "known_at": 11
+    },
+    {
+      "name": "Conciergerie",
+      "facet": "Lugares de París revolucionario",
+      "known_at": 13
+    },
+    {
+      "name": "Palacio de las Tullerías",
+      "facet": "Lugares de París revolucionario",
+      "known_at": 12
+    },
+    {
+      "name": "Palacio de Versalles",
+      "facet": "Lugares de París revolucionario",
+      "known_at": 6
+    },
+    {
+      "name": "Los Inválidos",
+      "facet": "Lugares de París revolucionario",
+      "known_at": 10
+    },
+    {
+      "name": "Panteón de París",
+      "facet": "Lugares de París revolucionario",
+      "known_at": 12
+    },
+    {
+      "name": "Torre del Temple",
+      "facet": "Lugares de París revolucionario",
+      "known_at": 14
+    },
+    {
+      "name": "Campo de Marte",
+      "facet": "Lugares de París revolucionario",
+      "known_at": 9
+    },
+    {
+      "name": "Ayuntamiento de París",
+      "facet": "Lugares de París revolucionario",
+      "known_at": 12
+    },
+    {
+      "name": "Palais-Royal",
+      "facet": "Lugares de París revolucionario",
+      "known_at": 14
+    },
+    {
+      "name": "Catedral de Notre Dame",
+      "facet": "Lugares de París revolucionario",
+      "known_at": 5
+    },
+    {
+      "name": "Catacumbas de París",
+      "facet": "Lugares de París revolucionario",
+      "known_at": 10
+    },
+    {
+      "name": "Basílica de Saint-Denis",
+      "facet": "Lugares de París revolucionario",
+      "known_at": 14
+    },
+    {
+      "name": "Jacobinos",
+      "facet": "Grupos y asambleas políticas",
+      "known_at": 11
+    },
+    {
+      "name": "Girondinos",
+      "facet": "Grupos y asambleas políticas",
+      "known_at": 12
+    },
+    {
+      "name": "Sans-culottes",
+      "facet": "Grupos y asambleas políticas",
+      "known_at": 11
+    },
+    {
+      "name": "Asamblea Nacional Constituyente",
+      "facet": "Grupos y asambleas políticas",
+      "known_at": 10
+    },
+    {
+      "name": "Asamblea Legislativa",
+      "facet": "Grupos y asambleas políticas",
+      "known_at": 14
+    },
+    {
+      "name": "Convención Nacional",
+      "facet": "Grupos y asambleas políticas",
+      "known_at": 12
+    },
+    {
+      "name": "Directorio",
+      "facet": "Grupos y asambleas políticas",
+      "known_at": 12
+    },
+    {
+      "name": "Club de los Cordeleros",
+      "facet": "Grupos y asambleas políticas",
+      "known_at": 14
+    },
+    {
+      "name": "Fuldenses",
+      "facet": "Grupos y asambleas políticas",
+      "known_at": 15
+    },
+    {
+      "name": "Rabiosos",
+      "facet": "Grupos y asambleas políticas",
+      "known_at": 15
+    },
+    {
+      "name": "Izquierda y derecha política",
+      "facet": "Grupos y asambleas políticas",
+      "known_at": 9
+    },
+    {
+      "name": "Emigrados",
+      "facet": "Grupos y asambleas políticas",
+      "known_at": 13
+    },
+    {
+      "name": "Monárquicos",
+      "facet": "Grupos y asambleas políticas",
+      "known_at": 10
+    },
+    {
+      "name": "Comuna insurreccional de París",
+      "facet": "Grupos y asambleas políticas",
+      "known_at": 14
+    },
+    {
+      "name": "Federados",
+      "facet": "Grupos y asambleas políticas",
+      "known_at": 14
+    },
+    {
+      "name": "Chuanes",
+      "facet": "Grupos y asambleas políticas",
+      "known_at": 15
+    },
+    {
+      "name": "Calendario republicano",
+      "facet": "Cambios en la vida cotidiana",
+      "known_at": 11
+    },
+    {
+      "name": "Década revolucionaria",
+      "facet": "Cambios en la vida cotidiana",
+      "known_at": 12
+    },
+    {
+      "name": "Hora decimal",
+      "facet": "Cambios en la vida cotidiana",
+      "known_at": 13
+    },
+    {
+      "name": "Tuteo revolucionario",
+      "facet": "Cambios en la vida cotidiana",
+      "known_at": 14
+    },
+    {
+      "name": "Divorcio",
+      "facet": "Cambios en la vida cotidiana",
+      "known_at": 12
+    },
+    {
+      "name": "Departamentos de Francia",
+      "facet": "Cambios en la vida cotidiana",
+      "known_at": 11
+    },
+    {
+      "name": "Franco francés",
+      "facet": "Cambios en la vida cotidiana",
+      "known_at": 9
+    },
+    {
+      "name": "Asignados",
+      "facet": "Cambios en la vida cotidiana",
+      "known_at": 14
+    },
+    {
+      "name": "Restaurante",
+      "facet": "Cambios en la vida cotidiana",
+      "known_at": 10
+    },
+    {
+      "name": "Culto a la Razón",
+      "facet": "Cambios en la vida cotidiana",
+      "known_at": 13
+    },
+    {
+      "name": "Culto del Ser Supremo",
+      "facet": "Cambios en la vida cotidiana",
+      "known_at": 14
+    },
+    {
+      "name": "Ley del máximo",
+      "facet": "Cambios en la vida cotidiana",
+      "known_at": 14
+    },
+    {
+      "name": "Registro civil",
+      "facet": "Cambios en la vida cotidiana",
+      "known_at": 13
+    },
+    {
+      "name": "Abolición de los gremios",
+      "facet": "Cambios en la vida cotidiana",
+      "known_at": 14
+    },
+    {
+      "name": "Escuela Politécnica",
+      "facet": "Cambios en la vida cotidiana",
+      "known_at": 14
+    },
+    {
+      "name": "Peluca empolvada",
+      "facet": "Cambios en la vida cotidiana",
+      "known_at": 9
+    },
+    {
+      "name": "Napoleón Bonaparte",
+      "facet": "Napoleón y el fin de la Revolución",
+      "known_at": 4
+    },
+    {
+      "name": "Reacción de Termidor",
+      "facet": "Napoleón y el fin de la Revolución",
+      "known_at": 14
+    },
+    {
+      "name": "Golpe del 18 de brumario",
+      "facet": "Napoleón y el fin de la Revolución",
+      "known_at": 13
+    },
+    {
+      "name": "Consulado",
+      "facet": "Napoleón y el fin de la Revolución",
+      "known_at": 13
+    },
+    {
+      "name": "Josefina de Beauharnais",
+      "facet": "Napoleón y el fin de la Revolución",
+      "known_at": 10
+    },
+    {
+      "name": "Córcega",
+      "facet": "Napoleón y el fin de la Revolución",
+      "known_at": 9
+    },
+    {
+      "name": "Código Napoleónico",
+      "facet": "Napoleón y el fin de la Revolución",
+      "known_at": 12
+    },
+    {
+      "name": "Coronación de Napoleón",
+      "facet": "Napoleón y el fin de la Revolución",
+      "known_at": 11
+    },
+    {
+      "name": "Batalla de Waterloo",
+      "facet": "Napoleón y el fin de la Revolución",
+      "known_at": 9
+    },
+    {
+      "name": "Batalla de Austerlitz",
+      "facet": "Napoleón y el fin de la Revolución",
+      "known_at": 12
+    },
+    {
+      "name": "Campaña de Egipto",
+      "facet": "Napoleón y el fin de la Revolución",
+      "known_at": 11
+    },
+    {
+      "name": "Bicornio",
+      "facet": "Napoleón y el fin de la Revolución",
+      "known_at": 8
+    },
+    {
+      "name": "Batalla de Trafalgar",
+      "facet": "Napoleón y el fin de la Revolución",
+      "known_at": 12
+    },
+    {
+      "name": "Invasión de Rusia",
+      "facet": "Napoleón y el fin de la Revolución",
+      "known_at": 11
+    },
+    {
+      "name": "Cien Días",
+      "facet": "Napoleón y el fin de la Revolución",
+      "known_at": 13
+    },
+    {
+      "name": "Luis XVIII",
+      "facet": "Napoleón y el fin de la Revolución",
+      "known_at": 14
+    },
+    {
+      "name": "Restauración borbónica",
+      "facet": "Napoleón y el fin de la Revolución",
+      "known_at": 14
+    },
+    {
+      "name": "Antonio Nariño",
+      "facet": "Ecos en America y Colombia",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Traducción de los Derechos del Hombre de Nariño",
+      "facet": "Ecos en América y Colombia",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Revolución haitiana",
+      "facet": "Ecos en América y Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Toussaint Louverture",
+      "facet": "Ecos en América y Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Alexandre Pétion",
+      "facet": "Ecos en América y Colombia",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Grito de Independencia de 1810",
+      "facet": "Ecos en América y Colombia",
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Florero de Llorente",
+      "facet": "Ecos en América y Colombia",
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Revolución de los Comuneros",
+      "facet": "Ecos en América y Colombia",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Invasión napoleónica de España",
+      "facet": "Ecos en América y Colombia",
+      "known_at": 13
+    },
+    {
+      "name": "Fernando VII",
+      "facet": "Ecos en América y Colombia",
+      "known_at": 12
+    },
+    {
+      "name": "Juntas de gobierno",
+      "facet": "Ecos en América y Colombia",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Camilo Torres Tenorio",
+      "facet": "Ecos en América y Colombia",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Memorial de agravios",
+      "facet": "Ecos en América y Colombia",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Patria Boba",
+      "facet": "Ecos en América y Colombia",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Constitución de Cádiz",
+      "facet": "Ecos en América y Colombia",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    }
+  ]
+}

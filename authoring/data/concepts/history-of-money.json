@@ -1,0 +1,496 @@
+{
+  "subcategory": "history-of-money",
+  "facets": [
+    "Trueque y primeras monedas",
+    "Monedas antiguas y famosas",
+    "Billetes y papel moneda",
+    "Metales y materiales del dinero",
+    "Bancos y casas de moneda",
+    "Personajes y figuras en billetes",
+    "Dinero en la historia de Colombia",
+    "Tesoros, piratas y oro",
+    "Palabras y expresiones del dinero",
+    "Monedas del mundo y su origen",
+    "Del cheque a la tarjeta y lo digital",
+    "Crisis, inflación y falsificación"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 5,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 4,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 1,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Mercado",
+      "facet": "Trueque y primeras monedas",
+      "known_at": 2
+    },
+    {
+      "name": "Granos de cacao",
+      "facet": "Trueque y primeras monedas",
+      "known_at": 9
+    },
+    {
+      "name": "Ganado",
+      "facet": "Trueque y primeras monedas",
+      "known_at": 9
+    },
+    {
+      "name": "Conchas de cauri",
+      "facet": "Trueque y primeras monedas",
+      "known_at": 11
+    },
+    {
+      "name": "Tablillas de arcilla",
+      "facet": "Trueque y primeras monedas",
+      "known_at": 11
+    },
+    {
+      "name": "Siclo",
+      "facet": "Trueque y primeras monedas",
+      "known_at": 13
+    },
+    {
+      "name": "Lidia",
+      "facet": "Trueque y primeras monedas",
+      "known_at": 12
+    },
+    {
+      "name": "Creso",
+      "facet": "Trueque y primeras monedas",
+      "known_at": 13
+    },
+    {
+      "name": "Moneda de cuchillo china",
+      "facet": "Trueque y primeras monedas",
+      "known_at": 14
+    },
+    {
+      "name": "Wampum",
+      "facet": "Trueque y primeras monedas",
+      "known_at": 14
+    },
+    {
+      "name": "Cuentas de vidrio",
+      "facet": "Trueque y primeras monedas",
+      "known_at": 12
+    },
+    {
+      "name": "Dracma",
+      "facet": "Monedas antiguas y famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Tetradracma de Atenas",
+      "facet": "Monedas antiguas y famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Áureo",
+      "facet": "Monedas antiguas y famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Óbolo de Caronte",
+      "facet": "Monedas antiguas y famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Escudo de oro",
+      "facet": "Monedas antiguas y famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Ducado",
+      "facet": "Monedas antiguas y famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Florín de Florencia",
+      "facet": "Monedas antiguas y famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Thaler",
+      "facet": "Monedas antiguas y famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Dólar de plata",
+      "facet": "Monedas antiguas y famosas",
+      "known_at": 10
+    },
+    {
+      "name": "Penique",
+      "facet": "Monedas antiguas y famosas",
+      "known_at": 9
+    },
+    {
+      "name": "Soberano británico",
+      "facet": "Monedas antiguas y famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Krugerrand",
+      "facet": "Monedas antiguas y famosas",
+      "known_at": 14
+    },
+    {
+      "name": "Moneda china de agujero cuadrado",
+      "facet": "Monedas antiguas y famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Billete",
+      "facet": "Billetes y papel moneda",
+      "known_at": 1
+    },
+    {
+      "name": "Microimpresión",
+      "facet": "Billetes y papel moneda",
+      "known_at": 12
+    },
+    {
+      "name": "Marcas táctiles",
+      "facet": "Billetes y papel moneda",
+      "known_at": 11
+    },
+    {
+      "name": "Pirámide del billete de un dólar",
+      "facet": "Billetes y papel moneda",
+      "known_at": 12
+    },
+    {
+      "name": "Pepita de oro",
+      "facet": "Metales y materiales del dinero",
+      "known_at": 4
+    },
+    {
+      "name": "Lingote",
+      "facet": "Metales y materiales del dinero",
+      "known_at": 5
+    },
+    {
+      "name": "Latón",
+      "facet": "Metales y materiales del dinero",
+      "known_at": 10
+    },
+    {
+      "name": "Plata de ley",
+      "facet": "Metales y materiales del dinero",
+      "known_at": 12
+    },
+    {
+      "name": "Banco",
+      "facet": "Bancos y casas de moneda",
+      "known_at": 2
+    },
+    {
+      "name": "Cajero automático",
+      "facet": "Bancos y casas de moneda",
+      "known_at": 3
+    },
+    {
+      "name": "Préstamo",
+      "facet": "Bancos y casas de moneda",
+      "known_at": 5
+    },
+    {
+      "name": "Cuenta de ahorros",
+      "facet": "Bancos y casas de moneda",
+      "known_at": 6
+    },
+    {
+      "name": "Bolsa de valores",
+      "facet": "Bancos y casas de moneda",
+      "known_at": 9
+    },
+    {
+      "name": "Wall Street",
+      "facet": "Bancos y casas de moneda",
+      "known_at": 9
+    },
+    {
+      "name": "Banco Mundial",
+      "facet": "Bancos y casas de moneda",
+      "known_at": 11
+    },
+    {
+      "name": "Casa de Moneda de Potosí",
+      "facet": "Bancos y casas de moneda",
+      "known_at": 13
+    },
+    {
+      "name": "Moneda de 1.000 pesos",
+      "facet": "Dinero en la historia de Colombia",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Moneda de 200 pesos",
+      "facet": "Dinero en la historia de Colombia",
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Moneda de 50 pesos",
+      "facet": "Dinero en la historia de Colombia",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Moneda de 100 pesos",
+      "facet": "Dinero en la historia de Colombia",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Moneda de 500 pesos",
+      "facet": "Dinero en la historia de Colombia",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Bonanza cafetera",
+      "facet": "Dinero en la historia de Colombia",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Quinto real",
+      "facet": "Dinero en la historia de Colombia",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Macuquina",
+      "facet": "Dinero en la historia de Colombia",
+      "known_at": 14
+    },
+    {
+      "name": "Eliminación de tres ceros",
+      "facet": "Dinero en la historia de Colombia",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Moneda de chocolate",
+      "facet": "Tesoros, piratas y oro",
+      "known_at": 2
+    },
+    {
+      "name": "Tío Rico McPato",
+      "facet": "Tesoros, piratas y oro",
+      "known_at": 3
+    },
+    {
+      "name": "Cueva de Alí Babá",
+      "facet": "Tesoros, piratas y oro",
+      "known_at": 6
+    },
+    {
+      "name": "Fiebre del oro de California",
+      "facet": "Tesoros, piratas y oro",
+      "known_at": 11
+    },
+    {
+      "name": "Vueltas",
+      "facet": "Palabras y expresiones del dinero",
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Mesada",
+      "facet": "Palabras y expresiones del dinero",
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Fiado",
+      "facet": "Palabras y expresiones del dinero",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Tacaño",
+      "facet": "Palabras y expresiones del dinero",
+      "known_at": 7
+    },
+    {
+      "name": "Chichiguas",
+      "facet": "Palabras y expresiones del dinero",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Sueldo",
+      "facet": "Palabras y expresiones del dinero",
+      "known_at": 11
+    },
+    {
+      "name": "Pecuniario",
+      "facet": "Palabras y expresiones del dinero",
+      "known_at": 14
+    },
+    {
+      "name": "Rupia",
+      "facet": "Monedas del mundo y su origen",
+      "known_at": 11
+    },
+    {
+      "name": "Won",
+      "facet": "Monedas del mundo y su origen",
+      "known_at": 12
+    },
+    {
+      "name": "Dolarización de Ecuador",
+      "facet": "Monedas del mundo y su origen",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Tarjeta de crédito",
+      "facet": "Del cheque a la tarjeta y lo digital",
+      "known_at": 4
+    },
+    {
+      "name": "Clave PIN",
+      "facet": "Del cheque a la tarjeta y lo digital",
+      "known_at": 4
+    },
+    {
+      "name": "Tarjeta débito",
+      "facet": "Del cheque a la tarjeta y lo digital",
+      "known_at": 5
+    },
+    {
+      "name": "Cheque",
+      "facet": "Del cheque a la tarjeta y lo digital",
+      "known_at": 6
+    },
+    {
+      "name": "Datáfono",
+      "facet": "Del cheque a la tarjeta y lo digital",
+      "known_at": 6
+    },
+    {
+      "name": "Pago sin contacto",
+      "facet": "Del cheque a la tarjeta y lo digital",
+      "known_at": 7
+    },
+    {
+      "name": "Transferencia bancaria",
+      "facet": "Del cheque a la tarjeta y lo digital",
+      "known_at": 7
+    },
+    {
+      "name": "Billetera digital",
+      "facet": "Del cheque a la tarjeta y lo digital",
+      "known_at": 7
+    },
+    {
+      "name": "Chip de tarjeta",
+      "facet": "Del cheque a la tarjeta y lo digital",
+      "known_at": 8
+    },
+    {
+      "name": "Banda magnética",
+      "facet": "Del cheque a la tarjeta y lo digital",
+      "known_at": 9
+    },
+    {
+      "name": "NFT",
+      "facet": "Del cheque a la tarjeta y lo digital",
+      "known_at": 10
+    },
+    {
+      "name": "Blockchain",
+      "facet": "Del cheque a la tarjeta y lo digital",
+      "known_at": 11
+    },
+    {
+      "name": "Diners Club",
+      "facet": "Del cheque a la tarjeta y lo digital",
+      "known_at": 14
+    },
+    {
+      "name": "Detector de billetes",
+      "facet": "Crisis, inflación y falsificación",
+      "known_at": 7
+    },
+    {
+      "name": "Recesión",
+      "facet": "Crisis, inflación y falsificación",
+      "known_at": 11
+    },
+    {
+      "name": "Crac de 1929",
+      "facet": "Crisis, inflación y falsificación",
+      "known_at": 11
+    },
+    {
+      "name": "Billete de 100 billones de dólares de Zimbabue",
+      "facet": "Crisis, inflación y falsificación",
+      "known_at": 11
+    },
+    {
+      "name": "Hiperinflación de la República de Weimar",
+      "facet": "Crisis, inflación y falsificación",
+      "known_at": 13
+    },
+    {
+      "name": "Burbuja de los tulipanes",
+      "facet": "Crisis, inflación y falsificación",
+      "known_at": 13
+    },
+    {
+      "name": "Corralito argentino",
+      "facet": "Crisis, inflación y falsificación",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Recorte de monedas",
+      "facet": "Crisis, inflación y falsificación",
+      "known_at": 14
+    }
+  ]
+}

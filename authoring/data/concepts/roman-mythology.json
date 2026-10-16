@@ -1,0 +1,608 @@
+{
+  "subcategory": "roman-mythology",
+  "facets": [
+    "Dioses principales del Olimpo romano",
+    "Dioses menores y espíritus del hogar",
+    "Equivalencias con dioses griegos",
+    "Héroes y fundadores de Roma",
+    "Rómulo, Remo y la loba",
+    "Criaturas y seres fantásticos",
+    "Planetas, meses y días con nombres romanos",
+    "Palabras del español nacidas de dioses",
+    "Templos, fiestas y ritos romanos",
+    "Símbolos y atributos de los dioses",
+    "Mitología romana en cine, juegos y marcas",
+    "Obras y autores: Eneida y Metamorfosis"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 1,
+      "record": 2,
+      "origin": 4,
+      "made_of": 1,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 5,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 2,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Júpiter",
+      "facet": "Dioses principales del Olimpo romano",
+      "known_at": 6
+    },
+    {
+      "name": "Vulcano",
+      "facet": "Dioses principales del Olimpo romano",
+      "known_at": 8
+    },
+    {
+      "name": "Proserpina",
+      "facet": "Dioses menores y espíritus del hogar",
+      "known_at": 13
+    },
+    {
+      "name": "Fortuna",
+      "facet": "Dioses menores y espíritus del hogar",
+      "known_at": 11
+    },
+    {
+      "name": "Fauno",
+      "facet": "Dioses menores y espíritus del hogar",
+      "known_at": 9
+    },
+    {
+      "name": "Penates",
+      "facet": "Dioses menores y espíritus del hogar",
+      "known_at": 14
+    },
+    {
+      "name": "Flora",
+      "facet": "Dioses menores y espíritus del hogar",
+      "known_at": 11
+    },
+    {
+      "name": "Pomona",
+      "facet": "Dioses menores y espíritus del hogar",
+      "known_at": 14
+    },
+    {
+      "name": "Término",
+      "facet": "Dioses menores y espíritus del hogar",
+      "known_at": 15
+    },
+    {
+      "name": "Sol Invicto",
+      "facet": "Dioses menores y espíritus del hogar",
+      "known_at": 14
+    },
+    {
+      "name": "Belona",
+      "facet": "Dioses menores y espíritus del hogar",
+      "known_at": 15
+    },
+    {
+      "name": "Silvano",
+      "facet": "Dioses menores y espíritus del hogar",
+      "known_at": 15
+    },
+    {
+      "name": "Quirino",
+      "facet": "Dioses menores y espíritus del hogar",
+      "known_at": 15
+    },
+    {
+      "name": "Eros",
+      "facet": "Equivalencias con dioses griegos",
+      "known_at": 9
+    },
+    {
+      "name": "Heracles",
+      "facet": "Equivalencias con dioses griegos",
+      "known_at": 10
+    },
+    {
+      "name": "Anquises",
+      "facet": "Héroes y fundadores de Roma",
+      "known_at": 14
+    },
+    {
+      "name": "Horacio Cocles",
+      "facet": "Héroes y fundadores de Roma",
+      "known_at": 15
+    },
+    {
+      "name": "Mucio Escévola",
+      "facet": "Héroes y fundadores de Roma",
+      "known_at": 15
+    },
+    {
+      "name": "Horacios y Curiacios",
+      "facet": "Héroes y fundadores de Roma",
+      "known_at": 15
+    },
+    {
+      "name": "Cincinato",
+      "facet": "Héroes y fundadores de Roma",
+      "known_at": 15
+    },
+    {
+      "name": "Lavinia",
+      "facet": "Héroes y fundadores de Roma",
+      "known_at": 15
+    },
+    {
+      "name": "Alba Longa",
+      "facet": "Héroes y fundadores de Roma",
+      "known_at": 14
+    },
+    {
+      "name": "Rómulo y Remo",
+      "facet": "Rómulo, Remo y la loba",
+      "known_at": 6
+    },
+    {
+      "name": "Amulio",
+      "facet": "Rómulo, Remo y la loba",
+      "known_at": 15
+    },
+    {
+      "name": "Numitor",
+      "facet": "Rómulo, Remo y la loba",
+      "known_at": 15
+    },
+    {
+      "name": "Monte Aventino",
+      "facet": "Rómulo, Remo y la loba",
+      "known_at": 14
+    },
+    {
+      "name": "Fundación de Roma",
+      "facet": "Rómulo, Remo y la loba",
+      "known_at": 10
+    },
+    {
+      "name": "Cueva del Lupercal",
+      "facet": "Rómulo, Remo y la loba",
+      "known_at": 15
+    },
+    {
+      "name": "Siete colinas de Roma",
+      "facet": "Rómulo, Remo y la loba",
+      "known_at": 11
+    },
+    {
+      "name": "Augurio de los buitres",
+      "facet": "Rómulo, Remo y la loba",
+      "known_at": 15
+    },
+    {
+      "name": "Cesta en el río",
+      "facet": "Rómulo, Remo y la loba",
+      "known_at": 12
+    },
+    {
+      "name": "Rómulo",
+      "facet": "Rómulo, Remo y la loba",
+      "known_at": 9
+    },
+    {
+      "name": "Caco",
+      "facet": "Criaturas y seres fantásticos",
+      "known_at": 15
+    },
+    {
+      "name": "Lémures",
+      "facet": "Criaturas y seres fantásticos",
+      "known_at": 14
+    },
+    {
+      "name": "Ninfas",
+      "facet": "Criaturas y seres fantásticos",
+      "known_at": 9
+    },
+    {
+      "name": "Furias",
+      "facet": "Criaturas y seres fantásticos",
+      "known_at": 12
+    },
+    {
+      "name": "Planeta Mercurio",
+      "facet": "Planetas, meses y días con nombres romanos",
+      "known_at": 3
+    },
+    {
+      "name": "Planeta Venus",
+      "facet": "Planetas, meses y días con nombres romanos",
+      "known_at": 3
+    },
+    {
+      "name": "Planeta Marte",
+      "facet": "Planetas, meses y días con nombres romanos",
+      "known_at": 2
+    },
+    {
+      "name": "Planeta Júpiter",
+      "facet": "Planetas, meses y días con nombres romanos",
+      "known_at": 3
+    },
+    {
+      "name": "Planeta Saturno",
+      "facet": "Planetas, meses y días con nombres romanos",
+      "known_at": 2
+    },
+    {
+      "name": "Planeta Neptuno",
+      "facet": "Planetas, meses y días con nombres romanos",
+      "known_at": 4
+    },
+    {
+      "name": "Planeta enano Plutón",
+      "facet": "Planetas, meses y días con nombres romanos",
+      "known_at": 5
+    },
+    {
+      "name": "Planeta enano Ceres",
+      "facet": "Planetas, meses y días con nombres romanos",
+      "known_at": 12
+    },
+    {
+      "name": "Enero",
+      "facet": "Planetas, meses y días con nombres romanos",
+      "known_at": 9
+    },
+    {
+      "name": "Marzo",
+      "facet": "Planetas, meses y días con nombres romanos",
+      "known_at": 7
+    },
+    {
+      "name": "Mayo",
+      "facet": "Planetas, meses y días con nombres romanos",
+      "known_at": 13
+    },
+    {
+      "name": "Agosto",
+      "facet": "Planetas, meses y días con nombres romanos",
+      "known_at": 11
+    },
+    {
+      "name": "Lunes",
+      "facet": "Planetas, meses y días con nombres romanos",
+      "known_at": 7
+    },
+    {
+      "name": "Miércoles",
+      "facet": "Planetas, meses y días con nombres romanos",
+      "known_at": 8
+    },
+    {
+      "name": "Jueves",
+      "facet": "Planetas, meses y días con nombres romanos",
+      "known_at": 8
+    },
+    {
+      "name": "Viernes",
+      "facet": "Planetas, meses y días con nombres romanos",
+      "known_at": 8
+    },
+    {
+      "name": "Jovial",
+      "facet": "Palabras del español nacidas de dioses",
+      "known_at": 12
+    },
+    {
+      "name": "Marcial",
+      "facet": "Palabras del español nacidas de dioses",
+      "known_at": 10
+    },
+    {
+      "name": "Mercurio (elemento químico)",
+      "facet": "Palabras del español nacidas de dioses",
+      "known_at": 9
+    },
+    {
+      "name": "Neptunio",
+      "facet": "Palabras del español nacidas de dioses",
+      "known_at": 13
+    },
+    {
+      "name": "Vulcanizar",
+      "facet": "Palabras del español nacidas de dioses",
+      "known_at": 13
+    },
+    {
+      "name": "Fauna",
+      "facet": "Palabras del español nacidas de dioses",
+      "known_at": 8
+    },
+    {
+      "name": "Flora (vegetación)",
+      "facet": "Palabras del español nacidas de dioses",
+      "known_at": 8
+    },
+    {
+      "name": "Lunático",
+      "facet": "Palabras del español nacidas de dioses",
+      "known_at": 11
+    },
+    {
+      "name": "Furioso",
+      "facet": "Palabras del español nacidas de dioses",
+      "known_at": 11
+    },
+    {
+      "name": "Hogar (lar)",
+      "facet": "Palabras del español nacidas de dioses",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Venerar",
+      "facet": "Palabras del español nacidas de dioses",
+      "known_at": 14
+    },
+    {
+      "name": "Panteón de Roma",
+      "facet": "Templos, fiestas y ritos romanos",
+      "known_at": 10
+    },
+    {
+      "name": "Templo de Vesta",
+      "facet": "Templos, fiestas y ritos romanos",
+      "known_at": 13
+    },
+    {
+      "name": "Lupercales",
+      "facet": "Templos, fiestas y ritos romanos",
+      "known_at": 14
+    },
+    {
+      "name": "Augures",
+      "facet": "Templos, fiestas y ritos romanos",
+      "known_at": 13
+    },
+    {
+      "name": "Arúspices",
+      "facet": "Templos, fiestas y ritos romanos",
+      "known_at": 15
+    },
+    {
+      "name": "Pontífice máximo",
+      "facet": "Templos, fiestas y ritos romanos",
+      "known_at": 13
+    },
+    {
+      "name": "Templo de Júpiter Capitolino",
+      "facet": "Templos, fiestas y ritos romanos",
+      "known_at": 14
+    },
+    {
+      "name": "Capitolio",
+      "facet": "Templos, fiestas y ritos romanos",
+      "known_at": 11
+    },
+    {
+      "name": "Fuego sagrado",
+      "facet": "Templos, fiestas y ritos romanos",
+      "known_at": 11
+    },
+    {
+      "name": "Floralia",
+      "facet": "Templos, fiestas y ritos romanos",
+      "known_at": 15
+    },
+    {
+      "name": "Larario",
+      "facet": "Templos, fiestas y ritos romanos",
+      "known_at": 15
+    },
+    {
+      "name": "Sibila de Cumas",
+      "facet": "Templos, fiestas y ritos romanos",
+      "known_at": 14
+    },
+    {
+      "name": "Puertas del templo de Jano",
+      "facet": "Templos, fiestas y ritos romanos",
+      "known_at": 15
+    },
+    {
+      "name": "Triunfo romano",
+      "facet": "Templos, fiestas y ritos romanos",
+      "known_at": 12
+    },
+    {
+      "name": "Rayo de Júpiter",
+      "facet": "Símbolos y atributos de los dioses",
+      "known_at": 5
+    },
+    {
+      "name": "Águila de Júpiter",
+      "facet": "Símbolos y atributos de los dioses",
+      "known_at": 10
+    },
+    {
+      "name": "Arco y flechas de Cupido",
+      "facet": "Símbolos y atributos de los dioses",
+      "known_at": 3
+    },
+    {
+      "name": "Lechuza de Minerva",
+      "facet": "Símbolos y atributos de los dioses",
+      "known_at": 10
+    },
+    {
+      "name": "Pavo real de Juno",
+      "facet": "Símbolos y atributos de los dioses",
+      "known_at": 13
+    },
+    {
+      "name": "Lira de Apolo",
+      "facet": "Símbolos y atributos de los dioses",
+      "known_at": 11
+    },
+    {
+      "name": "Hoz de Saturno",
+      "facet": "Símbolos y atributos de los dioses",
+      "known_at": 14
+    },
+    {
+      "name": "Cornucopia",
+      "facet": "Símbolos y atributos de los dioses",
+      "known_at": 12
+    },
+    {
+      "name": "Martillo y yunque",
+      "facet": "Símbolos y atributos de los dioses",
+      "known_at": 8
+    },
+    {
+      "name": "Rueda de la Fortuna",
+      "facet": "Símbolos y atributos de los dioses",
+      "known_at": 11
+    },
+    {
+      "name": "Racimo de uvas",
+      "facet": "Símbolos y atributos de los dioses",
+      "known_at": 8
+    },
+    {
+      "name": "Concha marina de Venus",
+      "facet": "Símbolos y atributos de los dioses",
+      "known_at": 11
+    },
+    {
+      "name": "Dos caras de Jano",
+      "facet": "Símbolos y atributos de los dioses",
+      "known_at": 11
+    },
+    {
+      "name": "Hércules de Disney",
+      "facet": "Mitología romana en cine, juegos y marcas",
+      "known_at": 3
+    },
+    {
+      "name": "Programa Apolo",
+      "facet": "Mitología romana en cine, juegos y marcas",
+      "known_at": 8
+    },
+    {
+      "name": "Programa Mercury",
+      "facet": "Mitología romana en cine, juegos y marcas",
+      "known_at": 13
+    },
+    {
+      "name": "Sonda Juno",
+      "facet": "Mitología romana en cine, juegos y marcas",
+      "known_at": 13
+    },
+    {
+      "name": "Sega Saturn",
+      "facet": "Mitología romana en cine, juegos y marcas",
+      "known_at": 12
+    },
+    {
+      "name": "Vulcanos de Star Trek",
+      "facet": "Mitología romana en cine, juegos y marcas",
+      "known_at": 12
+    },
+    {
+      "name": "Fuente de Neptuno",
+      "facet": "Mitología romana en cine, juegos y marcas",
+      "known_at": 13
+    },
+    {
+      "name": "Fontana di Trevi",
+      "facet": "Mitología romana en cine, juegos y marcas",
+      "known_at": 10
+    },
+    {
+      "name": "Princesa Aurora",
+      "facet": "Mitología romana en cine, juegos y marcas",
+      "known_at": 3
+    },
+    {
+      "name": "Mujer Maravilla",
+      "facet": "Mitología romana en cine, juegos y marcas",
+      "known_at": 5
+    },
+    {
+      "name": "Logo de Maserati",
+      "facet": "Mitología romana en cine, juegos y marcas",
+      "known_at": 13
+    },
+    {
+      "name": "Asterix y Obelix",
+      "facet": "Mitología romana en cine, juegos y marcas",
+      "known_at": 8
+    },
+    {
+      "name": "Dido",
+      "facet": "Obras y autores: Eneida y Metamorfosis",
+      "known_at": 14
+    },
+    {
+      "name": "Eco y Narciso",
+      "facet": "Obras y autores: Eneida y Metamorfosis",
+      "known_at": 9
+    },
+    {
+      "name": "Orfeo y Eurídice",
+      "facet": "Obras y autores: Eneida y Metamorfosis",
+      "known_at": 12
+    },
+    {
+      "name": "Píramo y Tisbe",
+      "facet": "Obras y autores: Eneida y Metamorfosis",
+      "known_at": 14
+    },
+    {
+      "name": "Apolo y Dafne",
+      "facet": "Obras y autores: Eneida y Metamorfosis",
+      "known_at": 13
+    },
+    {
+      "name": "Ícaro y Dédalo",
+      "facet": "Obras y autores: Eneida y Metamorfosis",
+      "known_at": 7
+    },
+    {
+      "name": "Emperador Augusto",
+      "facet": "Obras y autores: Eneida y Metamorfosis",
+      "known_at": 11
+    }
+  ]
+}

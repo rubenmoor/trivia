@@ -1,0 +1,1148 @@
+{
+  "subcategory": "language",
+  "facets": [
+    "Word classes and grammar",
+    "Figures of speech",
+    "Word formation and borrowing",
+    "Writing systems and scripts",
+    "Codes, Braille and sign languages",
+    "Languages of the world",
+    "Speech sounds and accents",
+    "How children learn language",
+    "Deciphering ancient languages",
+    "Invented and fictional languages",
+    "Animal communication",
+    "Translation and language technology"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 3,
+      "record": 4,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 3,
+      "science_news": 2,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 3,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Noun",
+      "facet": "Word classes and grammar",
+      "known_at": 5
+    },
+    {
+      "name": "Verb",
+      "facet": "Word classes and grammar",
+      "known_at": 5
+    },
+    {
+      "name": "Adjective",
+      "facet": "Word classes and grammar",
+      "known_at": 6
+    },
+    {
+      "name": "Adverb",
+      "facet": "Word classes and grammar",
+      "known_at": 8
+    },
+    {
+      "name": "Pronoun",
+      "facet": "Word classes and grammar",
+      "known_at": 7
+    },
+    {
+      "name": "Preposition",
+      "facet": "Word classes and grammar",
+      "known_at": 9
+    },
+    {
+      "name": "Conjunction",
+      "facet": "Word classes and grammar",
+      "known_at": 9
+    },
+    {
+      "name": "Interjection",
+      "facet": "Word classes and grammar",
+      "known_at": 10
+    },
+    {
+      "name": "Article",
+      "facet": "Word classes and grammar",
+      "known_at": 7
+    },
+    {
+      "name": "Synonym",
+      "facet": "Word classes and grammar",
+      "known_at": 4
+    },
+    {
+      "name": "Antonym",
+      "facet": "Word classes and grammar",
+      "known_at": 3
+    },
+    {
+      "name": "Plural",
+      "facet": "Word classes and grammar",
+      "known_at": 3
+    },
+    {
+      "name": "Past tense",
+      "facet": "Word classes and grammar",
+      "known_at": 5
+    },
+    {
+      "name": "Subject",
+      "facet": "Word classes and grammar",
+      "known_at": 8
+    },
+    {
+      "name": "Sentence",
+      "facet": "Word classes and grammar",
+      "known_at": 3
+    },
+    {
+      "name": "Grammatical gender",
+      "facet": "Word classes and grammar",
+      "known_at": 9
+    },
+    {
+      "name": "Homonym",
+      "facet": "Word classes and grammar",
+      "known_at": 9
+    },
+    {
+      "name": "Diminutive",
+      "facet": "Word classes and grammar",
+      "known_at": 8
+    },
+    {
+      "name": "Question mark",
+      "facet": "Word classes and grammar",
+      "known_at": 2
+    },
+    {
+      "name": "Comma",
+      "facet": "Word classes and grammar",
+      "known_at": 4
+    },
+    {
+      "name": "Irony",
+      "facet": "Figures of speech",
+      "known_at": 10
+    },
+    {
+      "name": "Euphemism",
+      "facet": "Figures of speech",
+      "known_at": 12
+    },
+    {
+      "name": "Palindrome",
+      "facet": "Figures of speech",
+      "known_at": 7
+    },
+    {
+      "name": "Proverb",
+      "facet": "Figures of speech",
+      "known_at": 5
+    },
+    {
+      "name": "Pun",
+      "facet": "Figures of speech",
+      "known_at": 8
+    },
+    {
+      "name": "Anagram",
+      "facet": "Figures of speech",
+      "known_at": 9
+    },
+    {
+      "name": "Idiom",
+      "facet": "Figures of speech",
+      "known_at": 10
+    },
+    {
+      "name": "Rhetorical question",
+      "facet": "Figures of speech",
+      "known_at": 10
+    },
+    {
+      "name": "Prefix",
+      "facet": "Word formation and borrowing",
+      "known_at": 7
+    },
+    {
+      "name": "Suffix",
+      "facet": "Word formation and borrowing",
+      "known_at": 8
+    },
+    {
+      "name": "Compound word",
+      "facet": "Word formation and borrowing",
+      "known_at": 6
+    },
+    {
+      "name": "Acronym",
+      "facet": "Word formation and borrowing",
+      "known_at": 9
+    },
+    {
+      "name": "Abbreviation",
+      "facet": "Word formation and borrowing",
+      "known_at": 6
+    },
+    {
+      "name": "Loanword",
+      "facet": "Word formation and borrowing",
+      "known_at": 11
+    },
+    {
+      "name": "Etymology",
+      "facet": "Word formation and borrowing",
+      "known_at": 12
+    },
+    {
+      "name": "Neologism",
+      "facet": "Word formation and borrowing",
+      "known_at": 13
+    },
+    {
+      "name": "Portmanteau",
+      "facet": "Word formation and borrowing",
+      "known_at": 13
+    },
+    {
+      "name": "Ephemeral",
+      "facet": "Word formation and borrowing",
+      "known_at": 11
+    },
+    {
+      "name": "Kindergarten",
+      "facet": "Word formation and borrowing",
+      "known_at": 8
+    },
+    {
+      "name": "Algebra",
+      "facet": "Word formation and borrowing",
+      "known_at": 12
+    },
+    {
+      "name": "Shampoo",
+      "facet": "Word formation and borrowing",
+      "known_at": 13
+    },
+    {
+      "name": "Alphabet",
+      "facet": "Writing systems and scripts",
+      "known_at": 2
+    },
+    {
+      "name": "Latin alphabet",
+      "facet": "Writing systems and scripts",
+      "known_at": 8
+    },
+    {
+      "name": "Cyrillic alphabet",
+      "facet": "Writing systems and scripts",
+      "known_at": 10
+    },
+    {
+      "name": "Greek alphabet",
+      "facet": "Writing systems and scripts",
+      "known_at": 9
+    },
+    {
+      "name": "Arabic script",
+      "facet": "Writing systems and scripts",
+      "known_at": 8
+    },
+    {
+      "name": "Chinese characters",
+      "facet": "Writing systems and scripts",
+      "known_at": 6
+    },
+    {
+      "name": "Japanese kana",
+      "facet": "Writing systems and scripts",
+      "known_at": 12
+    },
+    {
+      "name": "Hangul",
+      "facet": "Writing systems and scripts",
+      "known_at": 12
+    },
+    {
+      "name": "Devanagari",
+      "facet": "Writing systems and scripts",
+      "known_at": 13
+    },
+    {
+      "name": "Hebrew alphabet",
+      "facet": "Writing systems and scripts",
+      "known_at": 10
+    },
+    {
+      "name": "Egyptian hieroglyphs",
+      "facet": "Writing systems and scripts",
+      "known_at": 5
+    },
+    {
+      "name": "Cuneiform",
+      "facet": "Writing systems and scripts",
+      "known_at": 10
+    },
+    {
+      "name": "Runes",
+      "facet": "Writing systems and scripts",
+      "known_at": 8
+    },
+    {
+      "name": "Ñ",
+      "facet": "Writing systems and scripts",
+      "known_at": 6
+    },
+    {
+      "name": "Umlaut",
+      "facet": "Writing systems and scripts",
+      "known_at": 12
+    },
+    {
+      "name": "Calligraphy",
+      "facet": "Writing systems and scripts",
+      "known_at": 8
+    },
+    {
+      "name": "Printing press",
+      "facet": "Writing systems and scripts",
+      "known_at": 8
+    },
+    {
+      "name": "At sign",
+      "facet": "Writing systems and scripts",
+      "known_at": 5
+    },
+    {
+      "name": "Ampersand",
+      "facet": "Writing systems and scripts",
+      "known_at": 12
+    },
+    {
+      "name": "Morse code",
+      "facet": "Codes, Braille and sign languages",
+      "known_at": 6
+    },
+    {
+      "name": "Sign language",
+      "facet": "Codes, Braille and sign languages",
+      "known_at": 3
+    },
+    {
+      "name": "Fingerspelling",
+      "facet": "Codes, Braille and sign languages",
+      "known_at": 10
+    },
+    {
+      "name": "Flag semaphore",
+      "facet": "Codes, Braille and sign languages",
+      "known_at": 12
+    },
+    {
+      "name": "NATO phonetic alphabet",
+      "facet": "Codes, Braille and sign languages",
+      "known_at": 10
+    },
+    {
+      "name": "Enigma machine",
+      "facet": "Codes, Braille and sign languages",
+      "known_at": 11
+    },
+    {
+      "name": "Caesar cipher",
+      "facet": "Codes, Braille and sign languages",
+      "known_at": 11
+    },
+    {
+      "name": "Smoke signals",
+      "facet": "Codes, Braille and sign languages",
+      "known_at": 5
+    },
+    {
+      "name": "Talking drums",
+      "facet": "Codes, Braille and sign languages",
+      "known_at": 12
+    },
+    {
+      "name": "Silbo Gomero",
+      "facet": "Codes, Braille and sign languages",
+      "known_at": 14
+    },
+    {
+      "name": "Navajo code talkers",
+      "facet": "Codes, Braille and sign languages",
+      "known_at": 13
+    },
+    {
+      "name": "Helen Keller",
+      "facet": "Codes, Braille and sign languages",
+      "known_at": 11
+    },
+    {
+      "name": "Mandarin Chinese",
+      "facet": "Languages of the world",
+      "known_at": 5,
+      "retired": "unaskable: scope of Idiomas del mundo, decision 245 (task 1247)"
+    },
+    {
+      "name": "English",
+      "facet": "Languages of the world",
+      "known_at": 2,
+      "retired": "unaskable: scope of Idiomas del mundo, decision 245 (task 1247)"
+    },
+    {
+      "name": "Spanish",
+      "facet": "Languages of the world",
+      "known_at": 2,
+      "retired": "unaskable: scope of Idiomas del mundo, decision 245 (task 1247)"
+    },
+    {
+      "name": "Arabic",
+      "facet": "Languages of the world",
+      "known_at": 6,
+      "retired": "unaskable: scope of Idiomas del mundo, decision 245 (task 1247)"
+    },
+    {
+      "name": "Portuguese",
+      "facet": "Languages of the world",
+      "known_at": 6,
+      "retired": "unaskable: scope of Idiomas del mundo, decision 245 (task 1247)"
+    },
+    {
+      "name": "French",
+      "facet": "Languages of the world",
+      "known_at": 3,
+      "retired": "unaskable: scope of Idiomas del mundo, decision 245 (task 1247)"
+    },
+    {
+      "name": "Swahili",
+      "facet": "Languages of the world",
+      "known_at": 9,
+      "retired": "unaskable: scope of Idiomas del mundo, decision 245 (task 1247)"
+    },
+    {
+      "name": "Russian",
+      "facet": "Languages of the world",
+      "known_at": 5,
+      "retired": "unaskable: scope of Idiomas del mundo, decision 245 (task 1247)"
+    },
+    {
+      "name": "Japanese",
+      "facet": "Languages of the world",
+      "known_at": 4,
+      "retired": "unaskable: scope of Idiomas del mundo, decision 245 (task 1247)"
+    },
+    {
+      "name": "Basque",
+      "facet": "Languages of the world",
+      "known_at": 13,
+      "retired": "unaskable: scope of Idiomas del mundo, decision 245 (task 1247)"
+    },
+    {
+      "name": "Icelandic",
+      "facet": "Languages of the world",
+      "known_at": 12,
+      "retired": "unaskable: scope of Idiomas del mundo, decision 245 (task 1247)"
+    },
+    {
+      "name": "Papua New Guinea",
+      "facet": "Languages of the world",
+      "known_at": 13,
+      "retired": "unaskable: scope of Idiomas del mundo, decision 245 (task 1247)"
+    },
+    {
+      "name": "Sanskrit",
+      "facet": "Languages of the world",
+      "known_at": 12,
+      "retired": "unaskable: scope of Idiomas del mundo, decision 245 (task 1247)"
+    },
+    {
+      "name": "Hawaiian",
+      "facet": "Languages of the world",
+      "known_at": 10,
+      "retired": "unaskable: scope of Idiomas del mundo, decision 245 (task 1247)"
+    },
+    {
+      "name": "Indonesian",
+      "facet": "Languages of the world",
+      "known_at": 12,
+      "retired": "unaskable: scope of Idiomas del mundo, decision 245 (task 1247)"
+    },
+    {
+      "name": "Vowel",
+      "facet": "Speech sounds and accents",
+      "known_at": 3
+    },
+    {
+      "name": "Consonant",
+      "facet": "Speech sounds and accents",
+      "known_at": 5
+    },
+    {
+      "name": "Syllable",
+      "facet": "Speech sounds and accents",
+      "known_at": 4
+    },
+    {
+      "name": "Accent",
+      "facet": "Speech sounds and accents",
+      "known_at": 5
+    },
+    {
+      "name": "Dialect",
+      "facet": "Speech sounds and accents",
+      "known_at": 10
+    },
+    {
+      "name": "Vocal cords",
+      "facet": "Speech sounds and accents",
+      "known_at": 6
+    },
+    {
+      "name": "Larynx",
+      "facet": "Speech sounds and accents",
+      "known_at": 10
+    },
+    {
+      "name": "Adam's apple",
+      "facet": "Speech sounds and accents",
+      "known_at": 7
+    },
+    {
+      "name": "Click consonants",
+      "facet": "Speech sounds and accents",
+      "known_at": 13
+    },
+    {
+      "name": "Tonal language",
+      "facet": "Speech sounds and accents",
+      "known_at": 12
+    },
+    {
+      "name": "International Phonetic Alphabet",
+      "facet": "Speech sounds and accents",
+      "known_at": 13
+    },
+    {
+      "name": "Rolled R",
+      "facet": "Speech sounds and accents",
+      "known_at": 8
+    },
+    {
+      "name": "Lisp",
+      "facet": "Speech sounds and accents",
+      "known_at": 10
+    },
+    {
+      "name": "Whisper",
+      "facet": "Speech sounds and accents",
+      "known_at": 2
+    },
+    {
+      "name": "Helium voice",
+      "facet": "Speech sounds and accents",
+      "known_at": 6
+    },
+    {
+      "name": "Ventriloquism",
+      "facet": "Speech sounds and accents",
+      "known_at": 9
+    },
+    {
+      "name": "Intonation",
+      "facet": "Speech sounds and accents",
+      "known_at": 11
+    },
+    {
+      "name": "Echo",
+      "facet": "Speech sounds and accents",
+      "known_at": 3
+    },
+    {
+      "name": "Babbling",
+      "facet": "How children learn language",
+      "known_at": 6
+    },
+    {
+      "name": "First word",
+      "facet": "How children learn language",
+      "known_at": 3
+    },
+    {
+      "name": "Mother tongue",
+      "facet": "How children learn language",
+      "known_at": 6
+    },
+    {
+      "name": "Bilingualism",
+      "facet": "How children learn language",
+      "known_at": 7
+    },
+    {
+      "name": "Critical period",
+      "facet": "How children learn language",
+      "known_at": 13
+    },
+    {
+      "name": "Baby talk",
+      "facet": "How children learn language",
+      "known_at": 6
+    },
+    {
+      "name": "Overregularization",
+      "facet": "How children learn language",
+      "known_at": 14
+    },
+    {
+      "name": "Language acquisition",
+      "facet": "How children learn language",
+      "known_at": 12
+    },
+    {
+      "name": "Picture book",
+      "facet": "How children learn language",
+      "known_at": 2
+    },
+    {
+      "name": "Dyslexia",
+      "facet": "How children learn language",
+      "known_at": 10
+    },
+    {
+      "name": "Phonics",
+      "facet": "How children learn language",
+      "known_at": 11
+    },
+    {
+      "name": "Imitation",
+      "facet": "How children learn language",
+      "known_at": 5
+    },
+    {
+      "name": "Linear B",
+      "facet": "Deciphering ancient languages",
+      "known_at": 14
+    },
+    {
+      "name": "Michael Ventris",
+      "facet": "Deciphering ancient languages",
+      "known_at": 15
+    },
+    {
+      "name": "Linear A",
+      "facet": "Deciphering ancient languages",
+      "known_at": 14
+    },
+    {
+      "name": "Maya script",
+      "facet": "Deciphering ancient languages",
+      "known_at": 11
+    },
+    {
+      "name": "Dead Sea Scrolls",
+      "facet": "Deciphering ancient languages",
+      "known_at": 12
+    },
+    {
+      "name": "Behistun Inscription",
+      "facet": "Deciphering ancient languages",
+      "known_at": 14
+    },
+    {
+      "name": "Voynich manuscript",
+      "facet": "Deciphering ancient languages",
+      "known_at": 13
+    },
+    {
+      "name": "Indus script",
+      "facet": "Deciphering ancient languages",
+      "known_at": 14
+    },
+    {
+      "name": "Etruscan",
+      "facet": "Deciphering ancient languages",
+      "known_at": 13
+    },
+    {
+      "name": "Rongorongo",
+      "facet": "Deciphering ancient languages",
+      "known_at": 15
+    },
+    {
+      "name": "Phaistos Disc",
+      "facet": "Deciphering ancient languages",
+      "known_at": 15
+    },
+    {
+      "name": "Sumerian",
+      "facet": "Deciphering ancient languages",
+      "known_at": 11
+    },
+    {
+      "name": "Epic of Gilgamesh",
+      "facet": "Deciphering ancient languages",
+      "known_at": 12
+    },
+    {
+      "name": "Cartouche",
+      "facet": "Deciphering ancient languages",
+      "known_at": 12
+    },
+    {
+      "name": "Papyrus",
+      "facet": "Deciphering ancient languages",
+      "known_at": 7
+    },
+    {
+      "name": "Clay tablet",
+      "facet": "Deciphering ancient languages",
+      "known_at": 8
+    },
+    {
+      "name": "Phoenician alphabet",
+      "facet": "Deciphering ancient languages",
+      "known_at": 12
+    },
+    {
+      "name": "Oracle bones",
+      "facet": "Deciphering ancient languages",
+      "known_at": 14
+    },
+    {
+      "name": "Esperanto",
+      "facet": "Invented and fictional languages",
+      "known_at": 10
+    },
+    {
+      "name": "L. L. Zamenhof",
+      "facet": "Invented and fictional languages",
+      "known_at": 14
+    },
+    {
+      "name": "Elvish",
+      "facet": "Invented and fictional languages",
+      "known_at": 8
+    },
+    {
+      "name": "Dothraki",
+      "facet": "Invented and fictional languages",
+      "known_at": 12
+    },
+    {
+      "name": "Minionese",
+      "facet": "Invented and fictional languages",
+      "known_at": 3
+    },
+    {
+      "name": "Simlish",
+      "facet": "Invented and fictional languages",
+      "known_at": 9
+    },
+    {
+      "name": "Newspeak",
+      "facet": "Invented and fictional languages",
+      "known_at": 12
+    },
+    {
+      "name": "Parseltongue",
+      "facet": "Invented and fictional languages",
+      "known_at": 7
+    },
+    {
+      "name": "Toki Pona",
+      "facet": "Invented and fictional languages",
+      "known_at": 14
+    },
+    {
+      "name": "Volapük",
+      "facet": "Invented and fictional languages",
+      "known_at": 15
+    },
+    {
+      "name": "Wookiee",
+      "facet": "Invented and fictional languages",
+      "known_at": 6
+    },
+    {
+      "name": "Hylian",
+      "facet": "Invented and fictional languages",
+      "known_at": 10
+    },
+    {
+      "name": "Neigh",
+      "facet": "Animal communication",
+      "known_at": 2
+    },
+    {
+      "name": "Waggle dance",
+      "facet": "Animal communication",
+      "known_at": 8
+    },
+    {
+      "name": "Whale song",
+      "facet": "Animal communication",
+      "known_at": 4
+    },
+    {
+      "name": "Dolphin whistle",
+      "facet": "Animal communication",
+      "known_at": 6
+    },
+    {
+      "name": "Wolf howl",
+      "facet": "Animal communication",
+      "known_at": 2
+    },
+    {
+      "name": "Birdsong",
+      "facet": "Animal communication",
+      "known_at": 2
+    },
+    {
+      "name": "Parrot",
+      "facet": "Animal communication",
+      "known_at": 1
+    },
+    {
+      "name": "Koko the gorilla",
+      "facet": "Animal communication",
+      "known_at": 11
+    },
+    {
+      "name": "Alex the parrot",
+      "facet": "Animal communication",
+      "known_at": 14
+    },
+    {
+      "name": "Firefly",
+      "facet": "Animal communication",
+      "known_at": 4
+    },
+    {
+      "name": "Pheromone",
+      "facet": "Animal communication",
+      "known_at": 11
+    },
+    {
+      "name": "Echolocation",
+      "facet": "Animal communication",
+      "known_at": 8
+    },
+    {
+      "name": "Vervet monkey alarm calls",
+      "facet": "Animal communication",
+      "known_at": 14
+    },
+    {
+      "name": "Prairie dog",
+      "facet": "Animal communication",
+      "known_at": 10
+    },
+    {
+      "name": "Elephant rumble",
+      "facet": "Animal communication",
+      "known_at": 10
+    },
+    {
+      "name": "Purring",
+      "facet": "Animal communication",
+      "known_at": 2
+    },
+    {
+      "name": "Cricket chirp",
+      "facet": "Animal communication",
+      "known_at": 4
+    },
+    {
+      "name": "Peacock display",
+      "facet": "Animal communication",
+      "known_at": 5
+    },
+    {
+      "name": "Lyrebird",
+      "facet": "Animal communication",
+      "known_at": 10
+    },
+    {
+      "name": "Clever Hans",
+      "facet": "Animal communication",
+      "known_at": 14
+    },
+    {
+      "name": "Translator",
+      "facet": "Translation and language technology",
+      "known_at": 3
+    },
+    {
+      "name": "Interpreter",
+      "facet": "Translation and language technology",
+      "known_at": 8
+    },
+    {
+      "name": "Dictionary",
+      "facet": "Translation and language technology",
+      "known_at": 3
+    },
+    {
+      "name": "Thesaurus",
+      "facet": "Translation and language technology",
+      "known_at": 10
+    },
+    {
+      "name": "Google Translate",
+      "facet": "Translation and language technology",
+      "known_at": 5
+    },
+    {
+      "name": "Machine translation",
+      "facet": "Translation and language technology",
+      "known_at": 11
+    },
+    {
+      "name": "Babel fish",
+      "facet": "Translation and language technology",
+      "known_at": 13
+    },
+    {
+      "name": "Tower of Babel",
+      "facet": "Translation and language technology",
+      "known_at": 9
+    },
+    {
+      "name": "Universal translator",
+      "facet": "Translation and language technology",
+      "known_at": 10
+    },
+    {
+      "name": "Autocorrect",
+      "facet": "Translation and language technology",
+      "known_at": 5
+    },
+    {
+      "name": "Speech recognition",
+      "facet": "Translation and language technology",
+      "known_at": 8
+    },
+    {
+      "name": "Voice assistant",
+      "facet": "Translation and language technology",
+      "known_at": 4
+    },
+    {
+      "name": "Large language model",
+      "facet": "Translation and language technology",
+      "known_at": 11
+    },
+    {
+      "name": "Bible",
+      "facet": "Translation and language technology",
+      "known_at": 9
+    },
+    {
+      "name": "The Little Prince",
+      "facet": "Translation and language technology",
+      "known_at": 10
+    },
+    {
+      "name": "Subtitles",
+      "facet": "Translation and language technology",
+      "known_at": 4
+    },
+    {
+      "name": "Simultaneous interpretation",
+      "facet": "Translation and language technology",
+      "known_at": 12
+    },
+    {
+      "name": "Official languages of the United Nations",
+      "facet": "Translation and language technology",
+      "known_at": 12
+    },
+    {
+      "name": "Optical character recognition",
+      "facet": "Translation and language technology",
+      "known_at": 13
+    },
+    {
+      "name": "Text-to-speech",
+      "facet": "Translation and language technology",
+      "known_at": 8
+    },
+    {
+      "name": "Exclamation mark",
+      "facet": "Word classes and grammar",
+      "known_at": 4
+    },
+    {
+      "name": "Period (punctuation mark)",
+      "facet": "Word classes and grammar",
+      "known_at": 4
+    },
+    {
+      "name": "Apostrophe",
+      "facet": "Word classes and grammar",
+      "known_at": 7
+    },
+    {
+      "name": "Quotation marks",
+      "facet": "Word classes and grammar",
+      "known_at": 5
+    },
+    {
+      "name": "Capital letter",
+      "facet": "Word classes and grammar",
+      "known_at": 2
+    },
+    {
+      "name": "Pangram",
+      "facet": "Figures of speech",
+      "known_at": 13
+    },
+    {
+      "name": "Pictogram",
+      "facet": "Writing systems and scripts",
+      "known_at": 7
+    },
+    {
+      "name": "QWERTY keyboard",
+      "facet": "Writing systems and scripts",
+      "known_at": 8
+    },
+    {
+      "name": "Pinyin",
+      "facet": "Writing systems and scripts",
+      "known_at": 12
+    },
+    {
+      "name": "German",
+      "facet": "Languages of the world",
+      "known_at": 3,
+      "retired": "unaskable: scope of Idiomas del mundo, decision 245 (task 1247)"
+    },
+    {
+      "name": "Italian",
+      "facet": "Languages of the world",
+      "known_at": 3,
+      "retired": "unaskable: scope of Idiomas del mundo, decision 245 (task 1247)"
+    },
+    {
+      "name": "Korean",
+      "facet": "Languages of the world",
+      "known_at": 5,
+      "retired": "unaskable: scope of Idiomas del mundo, decision 245 (task 1247)"
+    },
+    {
+      "name": "Hebrew",
+      "facet": "Languages of the world",
+      "known_at": 9,
+      "retired": "unaskable: scope of Idiomas del mundo, decision 245 (task 1247)"
+    },
+    {
+      "name": "Stutter",
+      "facet": "Speech sounds and accents",
+      "known_at": 6
+    },
+    {
+      "name": "Yodeling",
+      "facet": "Speech sounds and accents",
+      "known_at": 6
+    },
+    {
+      "name": "Throat singing",
+      "facet": "Speech sounds and accents",
+      "known_at": 11
+    },
+    {
+      "name": "Beatboxing",
+      "facet": "Speech sounds and accents",
+      "known_at": 7
+    },
+    {
+      "name": "Ogham",
+      "facet": "Deciphering ancient languages",
+      "known_at": 14
+    },
+    {
+      "name": "Tail wagging",
+      "facet": "Animal communication",
+      "known_at": 1
+    },
+    {
+      "name": "Meow",
+      "facet": "Animal communication",
+      "known_at": 1
+    },
+    {
+      "name": "Rooster crow",
+      "facet": "Animal communication",
+      "known_at": 1
+    },
+    {
+      "name": "Howler monkey",
+      "facet": "Animal communication",
+      "known_at": 8
+    },
+    {
+      "name": "Cuttlefish",
+      "facet": "Animal communication",
+      "known_at": 12
+    },
+    {
+      "name": "Polyglot",
+      "facet": "Translation and language technology",
+      "known_at": 11
+    },
+    {
+      "name": "Turing test",
+      "facet": "Translation and language technology",
+      "known_at": 13
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-15",
+      "added": 25,
+      "unused": 189
+    }
+  ]
+}

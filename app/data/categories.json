@@ -1,258 +1,258 @@
 {
   "categories": [
-    {"slug": "fiestas-tradiciones", "name": "Fiestas y tradiciones", "subcategories": [
-      "Navidad",
-      "Celebraciones del mundo",
-      "Calendarios y Año Nuevo",
-      "Modales y costumbres del mundo"
+    {"slug": "holidays-and-traditions", "subcategories": [
+      "christmas",
+      "celebrations-around-the-world",
+      "calendars-and-new-year",
+      "manners-and-customs"
     ]},
-    {"slug": "comida-bebida", "name": "Comida y bebida", "subcategories": [
-      "Verduras",
-      "Comida italiana",
-      "Comida mexicana",
-      "Comida japonesa",
-      "Comida rápida",
-      "Cocinas del mundo",
-      "Bebidas",
-      "Quesos",
-      "Dulces y chocolate",
-      "Historia de los alimentos"
+    {"slug": "food-and-drink", "subcategories": [
+      "vegetables",
+      "italian-food",
+      "mexican-food",
+      "japanese-food",
+      "fast-food",
+      "world-cuisines",
+      "drinks",
+      "cheese",
+      "sweets-and-chocolate",
+      "food-history"
     ]},
-    {"slug": "geografia-mundo", "name": "Geografía del mundo", "subcategories": [
-      "Continentes",
-      "Países del mundo",
-      "Capitales del mundo",
-      "Banderas del mundo",
-      "Ríos del mundo",
-      "Montañas del mundo",
-      "Desiertos",
-      "Islas"
+    {"slug": "world-geography", "subcategories": [
+      "continents",
+      "countries",
+      "capital-cities",
+      "flags",
+      "rivers",
+      "mountains",
+      "deserts",
+      "islands"
     ]},
-    {"slug": "planeta-tierra", "name": "Planeta Tierra", "subcategories": [
-      "Planeta Tierra",
-      "Mar",
-      "Océanos",
-      "Clima",
-      "Fenómenos naturales",
-      "Volcanes",
-      "Terremotos",
-      "Récords de la naturaleza",
-      "Rocas y minerales"
+    {"slug": "planet-earth", "subcategories": [
+      "planet-earth",
+      "the-sea",
+      "oceans",
+      "weather-and-climate",
+      "natural-phenomena",
+      "volcanoes",
+      "earthquakes",
+      "natures-records",
+      "rocks-and-minerals"
     ]},
-    {"slug": "plantas-medio-ambiente", "name": "Plantas y medio ambiente", "subcategories": [
-      "Plantas",
-      "Árboles",
-      "Medio ambiente",
-      "Reciclaje"
+    {"slug": "plants-and-environment", "subcategories": [
+      "plants",
+      "trees",
+      "environment",
+      "recycling"
     ]},
-    {"slug": "amazonas", "name": "Amazonas", "subcategories": [
-      "Animales del Amazonas",
-      "Plantas del Amazonas",
-      "Pueblos indígenas del Amazonas",
-      "Historia y exploración del Amazonas"
+    {"slug": "amazon", "subcategories": [
+      "amazon-animals",
+      "amazon-plants",
+      "indigenous-peoples-of-the-amazon",
+      "amazon-history-and-exploration"
     ]},
-    {"slug": "animales", "name": "Animales", "subcategories": [
-      "Mamíferos",
-      "Aves",
-      "Reptiles",
-      "Anfibios",
-      "Peces",
-      "Insectos",
-      "Bichos raros",
-      "Récords de animales",
-      "Fauna africana"
+    {"slug": "animals", "subcategories": [
+      "mammals",
+      "birds",
+      "reptiles",
+      "amphibians",
+      "fish",
+      "insects",
+      "strange-creatures",
+      "animal-records",
+      "african-wildlife"
     ]},
-    {"slug": "mascotas-granja", "name": "Mascotas y granja", "subcategories": [
-      "Animales de la granja",
-      "Perros",
-      "Gatos",
-      "Mascotas raras"
+    {"slug": "pets-and-farm", "subcategories": [
+      "farm-animals",
+      "dogs",
+      "cats",
+      "unusual-pets"
     ]},
-    {"slug": "ciencia-matematicas", "name": "Ciencia y matemáticas", "subcategories": [
-      "Ciencia",
-      "Matemáticas",
-      "Números",
-      "Formas",
-      "Química",
-      "Física",
-      "Científicos famosos",
-      "Premios Nobel"
+    {"slug": "science-and-maths", "subcategories": [
+      "science",
+      "maths",
+      "numbers",
+      "shapes",
+      "chemistry",
+      "physics",
+      "famous-scientists",
+      "nobel-prizes"
     ]},
-    {"slug": "cuerpo-humano", "name": "Cuerpo humano", "subcategories": [
-      "Cuerpo humano",
-      "Cosas raras del cuerpo humano",
-      "Medicina y salud",
-      "Cerebro y mente"
+    {"slug": "human-body", "subcategories": [
+      "human-body",
+      "body-oddities",
+      "medicine-and-health",
+      "brain-and-mind"
     ]},
-    {"slug": "espacio", "name": "Espacio", "subcategories": [
-      "Espacio",
-      "Sistema solar",
-      "Carrera espacial y astronautas",
-      "Estrellas y galaxias"
+    {"slug": "space", "subcategories": [
+      "space",
+      "solar-system",
+      "space-race-and-astronauts",
+      "stars-and-galaxies"
     ]},
-    {"slug": "inventos-tecnologia", "name": "Inventos y tecnología", "subcategories": [
-      "Inventos",
-      "Inventores famosos",
-      "Inventos por accidente",
-      "Tecnología",
-      "Robots",
-      "Inteligencia artificial",
-      "Internet",
-      "Redes sociales",
-      "YouTubers"
+    {"slug": "inventions-and-technology", "subcategories": [
+      "inventions",
+      "famous-inventors",
+      "accidental-inventions",
+      "technology",
+      "robots",
+      "artificial-intelligence",
+      "internet",
+      "social-media",
+      "youtubers"
     ]},
-    {"slug": "transporte", "name": "Transporte", "subcategories": [
-      "Carros",
-      "Aviones",
-      "Trenes",
-      "Barcos"
+    {"slug": "transport", "subcategories": [
+      "cars",
+      "planes",
+      "trains",
+      "ships-and-boats"
     ]},
-    {"slug": "historia", "name": "Historia", "subcategories": [
-      "Historia",
-      "Prehistoria",
-      "Dinosaurios",
-      "Faraones",
-      "Pirámides",
-      "Momias",
-      "Caballeros",
-      "Castillos",
-      "Piratas",
-      "Imperio romano",
-      "Revolución francesa",
-      "Exploradores y descubrimientos",
-      "Segunda Guerra Mundial",
-      "Guerra Fría",
-      "Presidentes de Estados Unidos",
-      "Monarquía británica",
-      "Crímenes famosos",
-      "Escándalos famosos"
+    {"slug": "history", "subcategories": [
+      "history",
+      "prehistory",
+      "dinosaurs",
+      "pharaohs",
+      "pyramids",
+      "mummies",
+      "knights",
+      "castles",
+      "pirates",
+      "roman-empire",
+      "french-revolution",
+      "explorers-and-discoveries",
+      "world-war-ii",
+      "cold-war",
+      "us-presidents",
+      "british-royals",
+      "famous-crimes",
+      "famous-scandals"
     ]},
-    {"slug": "mitos-leyendas", "name": "Mitos y leyendas", "subcategories": [
-      "Dioses griegos",
-      "Héroes griegos",
-      "Mitología romana",
-      "Mitología nórdica",
-      "Leyendas y supersticiones"
+    {"slug": "myths-and-legends", "subcategories": [
+      "greek-gods",
+      "greek-heroes",
+      "roman-mythology",
+      "norse-mythology",
+      "legends-and-superstitions"
     ]},
-    {"slug": "musica", "name": "Música", "subcategories": [
-      "Instrumentos musicales",
-      "Música clásica",
-      "Música del mundo",
-      "Rock",
-      "Música pop",
-      "Hip hop y rap",
-      "Eurovisión",
-      "Musicales",
-      "Canciones infantiles"
+    {"slug": "music", "subcategories": [
+      "musical-instruments",
+      "classical-music",
+      "world-music",
+      "rock",
+      "pop-music",
+      "hip-hop-and-rap",
+      "eurovision",
+      "musicals",
+      "childrens-songs"
     ]},
-    {"slug": "cine-series-superheroes", "name": "Cine, series y superhéroes", "subcategories": [
-      "Cine",
-      "Series",
-      "Películas de Disney",
-      "Películas de Pixar",
-      "Anime",
-      "Caricaturas",
-      "Superhéroes de Marvel",
-      "Superhéroes de DC",
-      "Villanos famosos",
-      "Premios Óscar",
-      "Ciencia ficción",
-      "Fantasía",
-      "Cine de terror",
-      "Reality shows",
-      "Telenovelas del mundo",
-      "James Bond",
-      "Harry Potter",
-      "El Señor de los Anillos"
+    {"slug": "film-tv-and-superheroes", "subcategories": [
+      "film",
+      "tv-series",
+      "disney-films",
+      "pixar-films",
+      "anime",
+      "cartoons",
+      "marvel-superheroes",
+      "dc-superheroes",
+      "famous-villains",
+      "oscars",
+      "science-fiction",
+      "fantasy",
+      "horror-films",
+      "reality-tv",
+      "telenovelas-and-soaps",
+      "james-bond",
+      "harry-potter",
+      "the-lord-of-the-rings"
     ]},
-    {"slug": "videojuegos", "name": "Videojuegos", "subcategories": [
-      "Videojuegos",
-      "Videojuegos clásicos",
-      "Personajes de videojuegos",
-      "Consolas y empresas de videojuegos"
+    {"slug": "video-games", "subcategories": [
+      "video-games",
+      "retro-games",
+      "video-game-characters",
+      "consoles-and-game-companies"
     ]},
-    {"slug": "futbol", "name": "Fútbol", "subcategories": [
-      "Fútbol",
-      "Mundiales de fútbol",
-      "Historia del fútbol",
-      "Fútbol internacional"
+    {"slug": "football", "subcategories": [
+      "football",
+      "world-cups",
+      "football-history",
+      "international-football"
     ]},
-    {"slug": "deportes", "name": "Deportes", "subcategories": [
-      "Baloncesto",
-      "Tenis",
-      "Natación",
-      "Atletismo",
-      "Deportes extremos",
-      "Juegos Olímpicos de verano",
-      "Juegos Olímpicos de invierno",
-      "Fórmula 1 y automovilismo",
-      "Rugby",
-      "Críquet"
+    {"slug": "sports", "subcategories": [
+      "basketball",
+      "tennis",
+      "swimming",
+      "athletics",
+      "extreme-sports",
+      "summer-olympics",
+      "winter-olympics",
+      "formula-1-and-motorsport",
+      "rugby",
+      "cricket"
     ]},
-    {"slug": "arte-literatura", "name": "Arte y literatura", "subcategories": [
-      "Arte",
-      "Museos",
-      "Colores",
-      "Literatura",
-      "Cuentos infantiles",
-      "Libros infantiles",
-      "Shakespeare",
-      "Poesía",
-      "Novela policiaca",
-      "Fotografía"
+    {"slug": "art-and-literature", "subcategories": [
+      "art",
+      "museums",
+      "colours",
+      "literature",
+      "fairy-tales",
+      "childrens-books",
+      "shakespeare",
+      "poetry",
+      "crime-fiction",
+      "photography"
     ]},
-    {"slug": "idiomas-palabras", "name": "Idiomas y palabras", "subcategories": [
-      "Lenguaje",
-      "Idiomas del mundo",
-      "Frases célebres",
-      "Refranes del mundo"
+    {"slug": "languages-and-words", "subcategories": [
+      "language",
+      "languages-of-the-world",
+      "famous-quotes",
+      "proverbs-of-the-world"
     ]},
-    {"slug": "juegos-curiosidades", "name": "Juegos y curiosidades", "subcategories": [
-      "Juguetes",
-      "Juegos de mesa",
-      "Magia",
-      "Trucos",
-      "Ilusiones ópticas",
-      "Récords Guinness",
-      "Circo",
-      "Dúos famosos"
+    {"slug": "games-and-curiosities", "subcategories": [
+      "toys",
+      "board-games",
+      "magic",
+      "tricks",
+      "optical-illusions",
+      "guinness-world-records",
+      "circus",
+      "famous-duos"
     ]},
-    {"slug": "moda", "name": "Moda y diseño", "subcategories": [
-      "Historia de la moda",
-      "Diseñadores de moda",
-      "Trajes típicos del mundo",
-      "Zapatos y accesorios",
-      "Diseño de objetos"
+    {"slug": "fashion-and-design", "subcategories": [
+      "fashion-history",
+      "fashion-designers",
+      "traditional-dress",
+      "shoes-and-accessories",
+      "product-design"
     ]},
-    {"slug": "arquitectura", "name": "Arquitectura y monumentos", "subcategories": [
-      "Maravillas del mundo",
-      "Monumentos famosos",
-      "Rascacielos",
-      "Puentes famosos",
-      "Templos y catedrales",
-      "Estilos arquitectónicos"
+    {"slug": "architecture-and-landmarks", "subcategories": [
+      "wonders-of-the-world",
+      "famous-landmarks",
+      "skyscrapers",
+      "famous-bridges",
+      "temples-and-cathedrals",
+      "architectural-styles"
     ]},
-    {"slug": "monedas-dinero", "name": "Monedas y dinero", "subcategories": [
-      "Monedas del mundo",
-      "Billetes del mundo",
-      "Historia del dinero",
-      "Ahorro y bancos",
-      "Economía y bolsa"
+    {"slug": "money-and-currencies", "subcategories": [
+      "world-currencies",
+      "banknotes",
+      "history-of-money",
+      "saving-and-banks",
+      "economy-and-stock-market"
     ]},
-    {"slug": "religiones", "name": "Religiones y filosofía", "subcategories": [
-      "Religiones del mundo",
-      "Historias de la Biblia",
-      "Lugares sagrados",
-      "Filósofos famosos",
-      "Preguntas filosóficas"
+    {"slug": "religion-and-philosophy", "subcategories": [
+      "world-religions",
+      "bible-stories",
+      "sacred-places",
+      "famous-philosophers",
+      "big-questions"
     ]},
-    {"slug": "marcas-logos", "name": "Marcas y logotipos", "subcategories": [
-      "Logotipos famosos",
-      "Eslóganes publicitarios",
-      "Mascotas de marcas",
-      "Origen de las marcas",
-      "Empresas famosas",
-      "Productos del supermercado"
+    {"slug": "brands-and-logos", "subcategories": [
+      "famous-logos",
+      "advertising-slogans",
+      "brand-mascots",
+      "brand-origins",
+      "famous-companies",
+      "supermarket-products"
     ]}
   ]
 }

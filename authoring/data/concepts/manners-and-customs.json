@@ -1,0 +1,759 @@
+{
+  "subcategory": "manners-and-customs",
+  "facets": [
+    "Saludos y despedidas",
+    "Modales en la mesa",
+    "Cubiertos, palillos y utensilios",
+    "Gestos y lenguaje corporal",
+    "Regalos, propinas y visitas",
+    "Vestimenta y prendas tradicionales",
+    "Costumbres de té, café y bebidas",
+    "Supersticiones y creencias populares",
+    "Normas de cortesía y etiqueta",
+    "Costumbres de la vida diaria",
+    "Ritos de paso y celebraciones familiares",
+    "Modales y costumbres en Colombia"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 1,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 4,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 3,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Apretón de manos",
+      "facet": "Saludos y despedidas",
+      "known_at": 1
+    },
+    {
+      "name": "Abrazo",
+      "facet": "Saludos y despedidas",
+      "known_at": 1
+    },
+    {
+      "name": "Saludo con la mano",
+      "facet": "Saludos y despedidas",
+      "known_at": 1
+    },
+    {
+      "name": "Choque de cinco",
+      "facet": "Saludos y despedidas",
+      "known_at": 2
+    },
+    {
+      "name": "Choque de puños",
+      "facet": "Saludos y despedidas",
+      "known_at": 3
+    },
+    {
+      "name": "Beso en la mejilla",
+      "facet": "Saludos y despedidas",
+      "known_at": 3
+    },
+    {
+      "name": "Saludo militar",
+      "facet": "Saludos y despedidas",
+      "known_at": 4
+    },
+    {
+      "name": "Reverencia japonesa",
+      "facet": "Saludos y despedidas",
+      "known_at": 5
+    },
+    {
+      "name": "Aloha",
+      "facet": "Saludos y despedidas",
+      "known_at": 6
+    },
+    {
+      "name": "Bonjour",
+      "facet": "Saludos y despedidas",
+      "known_at": 6
+    },
+    {
+      "name": "Namasté",
+      "facet": "Saludos y despedidas",
+      "known_at": 8
+    },
+    {
+      "name": "Sayonara",
+      "facet": "Saludos y despedidas",
+      "known_at": 8
+    },
+    {
+      "name": "Konnichiwa",
+      "facet": "Saludos y despedidas",
+      "known_at": 8
+    },
+    {
+      "name": "Shalom",
+      "facet": "Saludos y despedidas",
+      "known_at": 11
+    },
+    {
+      "name": "Salam aleikum",
+      "facet": "Saludos y despedidas",
+      "known_at": 12
+    },
+    {
+      "name": "Wai tailandés",
+      "facet": "Saludos y despedidas",
+      "known_at": 13
+    },
+    {
+      "name": "Hongi",
+      "facet": "Saludos y despedidas",
+      "known_at": 14
+    },
+    {
+      "name": "Lavarse las manos antes de comer",
+      "facet": "Modales en la mesa",
+      "known_at": 1
+    },
+    {
+      "name": "Servilleta",
+      "facet": "Modales en la mesa",
+      "known_at": 1
+    },
+    {
+      "name": "Masticar con la boca cerrada",
+      "facet": "Modales en la mesa",
+      "known_at": 2
+    },
+    {
+      "name": "Buen provecho",
+      "facet": "Modales en la mesa",
+      "known_at": 2
+    },
+    {
+      "name": "Mantel",
+      "facet": "Modales en la mesa",
+      "known_at": 2
+    },
+    {
+      "name": "Codos sobre la mesa",
+      "facet": "Modales en la mesa",
+      "known_at": 4
+    },
+    {
+      "name": "Pedir permiso para levantarse de la mesa",
+      "facet": "Modales en la mesa",
+      "known_at": 4
+    },
+    {
+      "name": "Bendecir la mesa",
+      "facet": "Modales en la mesa",
+      "known_at": 5
+    },
+    {
+      "name": "Esperar a que todos estén servidos",
+      "facet": "Modales en la mesa",
+      "known_at": 5
+    },
+    {
+      "name": "Cabecera de la mesa",
+      "facet": "Modales en la mesa",
+      "known_at": 7
+    },
+    {
+      "name": "Dejar comida en el plato",
+      "facet": "Modales en la mesa",
+      "known_at": 8
+    },
+    {
+      "name": "Comer con la mano derecha",
+      "facet": "Modales en la mesa",
+      "known_at": 12
+    },
+    {
+      "name": "Cuchillo",
+      "facet": "Cubiertos, palillos y utensilios",
+      "known_at": 1
+    },
+    {
+      "name": "Plato hondo",
+      "facet": "Cubiertos, palillos y utensilios",
+      "known_at": 2
+    },
+    {
+      "name": "Palillo de dientes",
+      "facet": "Cubiertos, palillos y utensilios",
+      "known_at": 2
+    },
+    {
+      "name": "Cucharón",
+      "facet": "Cubiertos, palillos y utensilios",
+      "known_at": 3
+    },
+    {
+      "name": "Pinzas de cocina",
+      "facet": "Cubiertos, palillos y utensilios",
+      "known_at": 3
+    },
+    {
+      "name": "Copa de vino",
+      "facet": "Cubiertos, palillos y utensilios",
+      "known_at": 5
+    },
+    {
+      "name": "Cuchillo de mantequilla",
+      "facet": "Cubiertos, palillos y utensilios",
+      "known_at": 6
+    },
+    {
+      "name": "Wok",
+      "facet": "Cubiertos, palillos y utensilios",
+      "known_at": 7
+    },
+    {
+      "name": "Orden de los cubiertos",
+      "facet": "Cubiertos, palillos y utensilios",
+      "known_at": 10
+    },
+    {
+      "name": "Tenedor de fondue",
+      "facet": "Cubiertos, palillos y utensilios",
+      "known_at": 10
+    },
+    {
+      "name": "Tenedor de pescado",
+      "facet": "Cubiertos, palillos y utensilios",
+      "known_at": 11
+    },
+    {
+      "name": "Pinzas para caracoles",
+      "facet": "Cubiertos, palillos y utensilios",
+      "known_at": 13
+    },
+    {
+      "name": "Injera",
+      "facet": "Cubiertos, palillos y utensilios",
+      "known_at": 14
+    },
+    {
+      "name": "Pulgar arriba",
+      "facet": "Gestos y lenguaje corporal",
+      "known_at": 1
+    },
+    {
+      "name": "Guiño",
+      "facet": "Gestos y lenguaje corporal",
+      "known_at": 2
+    },
+    {
+      "name": "Asentir con la cabeza",
+      "facet": "Gestos y lenguaje corporal",
+      "known_at": 2
+    },
+    {
+      "name": "Señal de OK",
+      "facet": "Gestos y lenguaje corporal",
+      "known_at": 3
+    },
+    {
+      "name": "Señalar con el dedo",
+      "facet": "Gestos y lenguaje corporal",
+      "known_at": 3
+    },
+    {
+      "name": "Encogerse de hombros",
+      "facet": "Gestos y lenguaje corporal",
+      "known_at": 4
+    },
+    {
+      "name": "Mano en el corazón",
+      "facet": "Gestos y lenguaje corporal",
+      "known_at": 5
+    },
+    {
+      "name": "Brazos cruzados",
+      "facet": "Gestos y lenguaje corporal",
+      "known_at": 5
+    },
+    {
+      "name": "Contacto visual",
+      "facet": "Gestos y lenguaje corporal",
+      "known_at": 6
+    },
+    {
+      "name": "Puño en alto",
+      "facet": "Gestos y lenguaje corporal",
+      "known_at": 8
+    },
+    {
+      "name": "Espacio personal",
+      "facet": "Gestos y lenguaje corporal",
+      "known_at": 8
+    },
+    {
+      "name": "Cuernos con la mano",
+      "facet": "Gestos y lenguaje corporal",
+      "known_at": 9
+    },
+    {
+      "name": "Mano en forma de pera italiana",
+      "facet": "Gestos y lenguaje corporal",
+      "known_at": 11
+    },
+    {
+      "name": "Tocar la cabeza en Tailandia",
+      "facet": "Gestos y lenguaje corporal",
+      "known_at": 13
+    },
+    {
+      "name": "Negar con la cabeza en Bulgaria",
+      "facet": "Gestos y lenguaje corporal",
+      "known_at": 13
+    },
+    {
+      "name": "Kinésica",
+      "facet": "Gestos y lenguaje corporal",
+      "known_at": 14
+    },
+    {
+      "name": "Sacar la lengua en el Tíbet",
+      "facet": "Gestos y lenguaje corporal",
+      "known_at": 15
+    },
+    {
+      "name": "Tocar el timbre",
+      "facet": "Regalos, propinas y visitas",
+      "known_at": 1
+    },
+    {
+      "name": "Envolver regalos",
+      "facet": "Regalos, propinas y visitas",
+      "known_at": 2
+    },
+    {
+      "name": "Tarjeta de felicitación",
+      "facet": "Regalos, propinas y visitas",
+      "known_at": 2
+    },
+    {
+      "name": "Llegar puntual",
+      "facet": "Regalos, propinas y visitas",
+      "known_at": 4
+    },
+    {
+      "name": "Quitarse los zapatos al entrar",
+      "facet": "Regalos, propinas y visitas",
+      "known_at": 5
+    },
+    {
+      "name": "Regalo de bodas",
+      "facet": "Regalos, propinas y visitas",
+      "known_at": 5
+    },
+    {
+      "name": "Nota de agradecimiento",
+      "facet": "Regalos, propinas y visitas",
+      "known_at": 6
+    },
+    {
+      "name": "Llegar con las manos vacías",
+      "facet": "Regalos, propinas y visitas",
+      "known_at": 8
+    },
+    {
+      "name": "Visita de cortesía",
+      "facet": "Regalos, propinas y visitas",
+      "known_at": 9
+    },
+    {
+      "name": "Lista de regalos",
+      "facet": "Regalos, propinas y visitas",
+      "known_at": 9
+    },
+    {
+      "name": "Abrir el regalo delante de quien lo da",
+      "facet": "Regalos, propinas y visitas",
+      "known_at": 10
+    },
+    {
+      "name": "Regalo para el anfitrión",
+      "facet": "Regalos, propinas y visitas",
+      "known_at": 11
+    },
+    {
+      "name": "Servicio incluido",
+      "facet": "Regalos, propinas y visitas",
+      "known_at": 11
+    },
+    {
+      "name": "Sobre rojo chino",
+      "facet": "Regalos, propinas y visitas",
+      "known_at": 12
+    },
+    {
+      "name": "Propina en Japón",
+      "facet": "Regalos, propinas y visitas",
+      "known_at": 12
+    },
+    {
+      "name": "Flores en número impar",
+      "facet": "Regalos, propinas y visitas",
+      "known_at": 13
+    },
+    {
+      "name": "Pan y sal de bienvenida",
+      "facet": "Regalos, propinas y visitas",
+      "known_at": 13
+    },
+    {
+      "name": "Reloj como regalo en China",
+      "facet": "Regalos, propinas y visitas",
+      "known_at": 14
+    },
+    {
+      "name": "Omiyage",
+      "facet": "Regalos, propinas y visitas",
+      "known_at": 14
+    },
+    {
+      "name": "Zuecos holandeses",
+      "facet": "Vestimenta y prendas tradicionales",
+      "known_at": 6
+    },
+    {
+      "name": "Kufiya",
+      "facet": "Vestimenta y prendas tradicionales",
+      "known_at": 13
+    },
+    {
+      "name": "Té con leche británico",
+      "facet": "Costumbres de té, café y bebidas",
+      "known_at": 8
+    },
+    {
+      "name": "Bombilla del mate",
+      "facet": "Costumbres de té, café y bebidas",
+      "known_at": 12
+    },
+    {
+      "name": "Té de menta marroquí",
+      "facet": "Costumbres de té, café y bebidas",
+      "known_at": 13
+    },
+    {
+      "name": "Lectura de la borra del café",
+      "facet": "Costumbres de té, café y bebidas",
+      "known_at": 13
+    },
+    {
+      "name": "Fika",
+      "facet": "Costumbres de té, café y bebidas",
+      "known_at": 14
+    },
+    {
+      "name": "Doce uvas de Año Nuevo",
+      "facet": "Supersticiones y creencias populares",
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Pedir perdón",
+      "facet": "Normas de cortesía y etiqueta",
+      "known_at": 1
+    },
+    {
+      "name": "Taparse la boca al estornudar",
+      "facet": "Normas de cortesía y etiqueta",
+      "known_at": 2
+    },
+    {
+      "name": "Silencio en la biblioteca",
+      "facet": "Normas de cortesía y etiqueta",
+      "known_at": 2
+    },
+    {
+      "name": "Hacer fila",
+      "facet": "Normas de cortesía y etiqueta",
+      "known_at": 3
+    },
+    {
+      "name": "Abrir la puerta a alguien",
+      "facet": "Normas de cortesía y etiqueta",
+      "known_at": 3
+    },
+    {
+      "name": "Decir salud al estornudar",
+      "facet": "Normas de cortesía y etiqueta",
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Ceder el asiento",
+      "facet": "Normas de cortesía y etiqueta",
+      "known_at": 4
+    },
+    {
+      "name": "Señor y señora",
+      "facet": "Normas de cortesía y etiqueta",
+      "known_at": 4
+    },
+    {
+      "name": "Puntualidad",
+      "facet": "Normas de cortesía y etiqueta",
+      "known_at": 5
+    },
+    {
+      "name": "Ceder el paso",
+      "facet": "Normas de cortesía y etiqueta",
+      "known_at": 5
+    },
+    {
+      "name": "Damas primero",
+      "facet": "Normas de cortesía y etiqueta",
+      "known_at": 5
+    },
+    {
+      "name": "Usted",
+      "facet": "Normas de cortesía y etiqueta",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Don y doña",
+      "facet": "Normas de cortesía y etiqueta",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Tutear",
+      "facet": "Normas de cortesía y etiqueta",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Escribir en mayúsculas en internet",
+      "facet": "Normas de cortesía y etiqueta",
+      "known_at": 10
+    },
+    {
+      "name": "Código de vestimenta",
+      "facet": "Normas de cortesía y etiqueta",
+      "known_at": 11
+    },
+    {
+      "name": "Netiqueta",
+      "facet": "Normas de cortesía y etiqueta",
+      "known_at": 12
+    },
+    {
+      "name": "Manual de Carreño",
+      "facet": "Normas de cortesía y etiqueta",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Lavarse los dientes",
+      "facet": "Costumbres de la vida diaria",
+      "known_at": 1
+    },
+    {
+      "name": "Comida rápida",
+      "facet": "Costumbres de la vida diaria",
+      "known_at": 3
+    },
+    {
+      "name": "Merienda",
+      "facet": "Costumbres de la vida diaria",
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Bicicleta en Ámsterdam",
+      "facet": "Costumbres de la vida diaria",
+      "known_at": 7
+    },
+    {
+      "name": "Desayuno inglés",
+      "facet": "Costumbres de la vida diaria",
+      "known_at": 8,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Conducir por la izquierda",
+      "facet": "Costumbres de la vida diaria",
+      "known_at": 8
+    },
+    {
+      "name": "Brunch",
+      "facet": "Costumbres de la vida diaria",
+      "known_at": 9
+    },
+    {
+      "name": "Sauna finlandesa",
+      "facet": "Costumbres de la vida diaria",
+      "known_at": 11
+    },
+    {
+      "name": "Cena tardía en España",
+      "facet": "Costumbres de la vida diaria",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Onsen",
+      "facet": "Costumbres de la vida diaria",
+      "known_at": 13
+    },
+    {
+      "name": "Hygge",
+      "facet": "Costumbres de la vida diaria",
+      "known_at": 14
+    },
+    {
+      "name": "Boda",
+      "facet": "Ritos de paso y celebraciones familiares",
+      "known_at": 2
+    },
+    {
+      "name": "Graduación",
+      "facet": "Ritos de paso y celebraciones familiares",
+      "known_at": 3
+    },
+    {
+      "name": "Quinceañera",
+      "facet": "Ritos de paso y celebraciones familiares",
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Luna de miel",
+      "facet": "Ritos de paso y celebraciones familiares",
+      "known_at": 6
+    },
+    {
+      "name": "Mayoría de edad",
+      "facet": "Ritos de paso y celebraciones familiares",
+      "known_at": 7
+    },
+    {
+      "name": "Baby shower",
+      "facet": "Ritos de paso y celebraciones familiares",
+      "known_at": 8,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Lanzar arroz a los novios",
+      "facet": "Ritos de paso y celebraciones familiares",
+      "known_at": 8
+    },
+    {
+      "name": "Despedida de soltero",
+      "facet": "Ritos de paso y celebraciones familiares",
+      "known_at": 9
+    },
+    {
+      "name": "Sweet sixteen",
+      "facet": "Ritos de paso y celebraciones familiares",
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Arras",
+      "facet": "Ritos de paso y celebraciones familiares",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Seijin no hi",
+      "facet": "Ritos de paso y celebraciones familiares",
+      "known_at": 15
+    },
+    {
+      "name": "Natilla y buñuelos",
+      "facet": "Modales y costumbres en Colombia",
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Bandeja paisa",
+      "facet": "Modales y costumbres en Colombia",
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Mucho gusto",
+      "facet": "Modales y costumbres en Colombia",
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "A la orden",
+      "facet": "Modales y costumbres en Colombia",
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Mecato",
+      "facet": "Modales y costumbres en Colombia",
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Señalar con la boca",
+      "facet": "Modales y costumbres en Colombia",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Sumercé",
+      "facet": "Modales y costumbres en Colombia",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Hora colombiana",
+      "facet": "Modales y costumbres en Colombia",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Salir con la maleta en Año Nuevo",
+      "facet": "Modales y costumbres en Colombia",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    }
+  ]
+}

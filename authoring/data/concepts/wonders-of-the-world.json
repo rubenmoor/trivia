@@ -1,0 +1,497 @@
+{
+  "subcategory": "wonders-of-the-world",
+  "facets": [
+    "Siete maravillas antiguas",
+    "Nuevas siete maravillas",
+    "Pirámides y Egipto antiguo",
+    "Ciudades perdidas y templos",
+    "Murallas, castillos y fortalezas",
+    "Torres y rascacielos famosos",
+    "Puentes, canales y presas",
+    "Estatuas y monumentos colosales",
+    "Palacios, catedrales y mausoleos",
+    "Maravillas naturales del planeta",
+    "Maravillas y patrimonio de Colombia",
+    "Constructores, leyendas y misterios"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 4,
+      "record": 5,
+      "origin": 5,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 3,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 4,
+      "pop_culture": 4,
+      "popular_science": 3,
+      "science_news": 3,
+      "educational_media": 5,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 1,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Gran Pirámide de Giza",
+      "facet": "Siete maravillas antiguas",
+      "known_at": 4
+    },
+    {
+      "name": "Jardines Colgantes de Babilonia",
+      "facet": "Siete maravillas antiguas",
+      "known_at": 8
+    },
+    {
+      "name": "Mausoleo de Halicarnaso",
+      "facet": "Siete maravillas antiguas",
+      "known_at": 12
+    },
+    {
+      "name": "Rodas",
+      "facet": "Siete maravillas antiguas",
+      "known_at": 11
+    },
+    {
+      "name": "Éfeso",
+      "facet": "Siete maravillas antiguas",
+      "known_at": 12
+    },
+    {
+      "name": "Fidias",
+      "facet": "Siete maravillas antiguas",
+      "known_at": 14
+    },
+    {
+      "name": "Filón de Bizancio",
+      "facet": "Siete maravillas antiguas",
+      "known_at": 15
+    },
+    {
+      "name": "Antípatro de Sidón",
+      "facet": "Siete maravillas antiguas",
+      "known_at": 15
+    },
+    {
+      "name": "Nabucodonosor II",
+      "facet": "Siete maravillas antiguas",
+      "known_at": 12
+    },
+    {
+      "name": "Artemisia II de Caria",
+      "facet": "Siete maravillas antiguas",
+      "known_at": 15
+    },
+    {
+      "name": "Isla de Faros",
+      "facet": "Siete maravillas antiguas",
+      "known_at": 14
+    },
+    {
+      "name": "New7Wonders",
+      "facet": "Nuevas siete maravillas",
+      "known_at": 12
+    },
+    {
+      "name": "Bernard Weber",
+      "facet": "Nuevas siete maravillas",
+      "known_at": 15
+    },
+    {
+      "name": "Agra",
+      "facet": "Nuevas siete maravillas",
+      "known_at": 11
+    },
+    {
+      "name": "Cusco",
+      "facet": "Nuevas siete maravillas",
+      "known_at": 8
+    },
+    {
+      "name": "Pirámide de Kukulcán",
+      "facet": "Nuevas siete maravillas",
+      "known_at": 10
+    },
+    {
+      "name": "Al-Khazneh",
+      "facet": "Nuevas siete maravillas",
+      "known_at": 12
+    },
+    {
+      "name": "Corcovado",
+      "facet": "Nuevas siete maravillas",
+      "known_at": 10
+    },
+    {
+      "name": "Shah Jahan",
+      "facet": "Nuevas siete maravillas",
+      "known_at": 12
+    },
+    {
+      "name": "Mumtaz Mahal",
+      "facet": "Nuevas siete maravillas",
+      "known_at": 12
+    },
+    {
+      "name": "Gladiadores",
+      "facet": "Nuevas siete maravillas",
+      "known_at": 4
+    },
+    {
+      "name": "Nabateos",
+      "facet": "Nuevas siete maravillas",
+      "known_at": 14
+    },
+    {
+      "name": "Huayna Picchu",
+      "facet": "Nuevas siete maravillas",
+      "known_at": 12
+    },
+    {
+      "name": "Pachacútec",
+      "facet": "Nuevas siete maravillas",
+      "known_at": 12
+    },
+    {
+      "name": "Luxor",
+      "facet": "Pirámides y Egipto antiguo",
+      "known_at": 11
+    },
+    {
+      "name": "Persépolis",
+      "facet": "Ciudades perdidas y templos",
+      "known_at": 14
+    },
+    {
+      "name": "Bagan",
+      "facet": "Ciudades perdidas y templos",
+      "known_at": 15
+    },
+    {
+      "name": "Mohenjo-Daro",
+      "facet": "Ciudades perdidas y templos",
+      "known_at": 14
+    },
+    {
+      "name": "Templo del Cielo",
+      "facet": "Ciudades perdidas y templos",
+      "known_at": 14
+    },
+    {
+      "name": "Monte Albán",
+      "facet": "Ciudades perdidas y templos",
+      "known_at": 14
+    },
+    {
+      "name": "Muralla de Ávila",
+      "facet": "Murallas, castillos y fortalezas",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Murallas de Dubrovnik",
+      "facet": "Murallas, castillos y fortalezas",
+      "known_at": 13
+    },
+    {
+      "name": "Torre CN",
+      "facet": "Torres y rascacielos famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Space Needle",
+      "facet": "Torres y rascacielos famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Shanghai Tower",
+      "facet": "Torres y rascacielos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Gustave Eiffel",
+      "facet": "Torres y rascacielos famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Edificio Chrysler",
+      "facet": "Torres y rascacielos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "One World Trade Center",
+      "facet": "Torres y rascacielos famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Giralda",
+      "facet": "Torres y rascacielos famosos",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Burj al Arab",
+      "facet": "Torres y rascacielos famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Tokyo Skytree",
+      "facet": "Torres y rascacielos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Represa Hoover",
+      "facet": "Puentes, canales y presas",
+      "known_at": 12
+    },
+    {
+      "name": "Pont du Gard",
+      "facet": "Puentes, canales y presas",
+      "known_at": 14
+    },
+    {
+      "name": "Puente colgante",
+      "facet": "Puentes, canales y presas",
+      "known_at": 6
+    },
+    {
+      "name": "Viaducto de Millau",
+      "facet": "Puentes, canales y presas",
+      "known_at": 13
+    },
+    {
+      "name": "Gran Canal de Venecia",
+      "facet": "Puentes, canales y presas",
+      "known_at": 8
+    },
+    {
+      "name": "Puente de Øresund",
+      "facet": "Puentes, canales y presas",
+      "known_at": 14
+    },
+    {
+      "name": "Ferdinand de Lesseps",
+      "facet": "Puentes, canales y presas",
+      "known_at": 14
+    },
+    {
+      "name": "Moáis",
+      "facet": "Estatuas y monumentos colosales",
+      "known_at": 6
+    },
+    {
+      "name": "Gran Buda de Leshan",
+      "facet": "Estatuas y monumentos colosales",
+      "known_at": 14
+    },
+    {
+      "name": "La Madre Patria llama",
+      "facet": "Estatuas y monumentos colosales",
+      "known_at": 14
+    },
+    {
+      "name": "Estatua de la Unidad",
+      "facet": "Estatuas y monumentos colosales",
+      "known_at": 14
+    },
+    {
+      "name": "Gateway Arch",
+      "facet": "Estatuas y monumentos colosales",
+      "known_at": 12
+    },
+    {
+      "name": "Budas de Bamiyán",
+      "facet": "Estatuas y monumentos colosales",
+      "known_at": 14
+    },
+    {
+      "name": "Frédéric Auguste Bartholdi",
+      "facet": "Estatuas y monumentos colosales",
+      "known_at": 14
+    },
+    {
+      "name": "Basílica de San Pedro",
+      "facet": "Palacios, catedrales y mausoleos",
+      "known_at": 8
+    },
+    {
+      "name": "Santa Sofía",
+      "facet": "Palacios, catedrales y mausoleos",
+      "known_at": 11
+    },
+    {
+      "name": "Mezquita de Córdoba",
+      "facet": "Palacios, catedrales y mausoleos",
+      "known_at": 12
+    },
+    {
+      "name": "Mausoleo de Lenin",
+      "facet": "Palacios, catedrales y mausoleos",
+      "known_at": 14
+    },
+    {
+      "name": "Catedral de San Basilio",
+      "facet": "Palacios, catedrales y mausoleos",
+      "known_at": 10
+    },
+    {
+      "name": "Catedral de Colonia",
+      "facet": "Palacios, catedrales y mausoleos",
+      "known_at": 13
+    },
+    {
+      "name": "Catedral de Santiago de Compostela",
+      "facet": "Palacios, catedrales y mausoleos",
+      "known_at": 12
+    },
+    {
+      "name": "Gárgola",
+      "facet": "Palacios, catedrales y mausoleos",
+      "known_at": 7
+    },
+    {
+      "name": "Mezquita Azul",
+      "facet": "Palacios, catedrales y mausoleos",
+      "known_at": 12
+    },
+    {
+      "name": "Duomo de Florencia",
+      "facet": "Palacios, catedrales y mausoleos",
+      "known_at": 12
+    },
+    {
+      "name": "Bahía de Ha Long",
+      "facet": "Maravillas naturales del planeta",
+      "known_at": 13
+    },
+    {
+      "name": "Volcán Paricutín",
+      "facet": "Maravillas naturales del planeta",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Géiser Old Faithful",
+      "facet": "Maravillas naturales del planeta",
+      "known_at": 12
+    },
+    {
+      "name": "Glaciar Perito Moreno",
+      "facet": "Maravillas naturales del planeta",
+      "known_at": 11
+    },
+    {
+      "name": "Monte Kilimanjaro",
+      "facet": "Maravillas naturales del planeta",
+      "known_at": 8
+    },
+    {
+      "name": "Santuario de Las Lajas",
+      "facet": "Maravillas y patrimonio de Colombia",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Santa Cruz de Mompox",
+      "facet": "Maravillas y patrimonio de Colombia",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Paisaje Cultural Cafetero",
+      "facet": "Maravillas y patrimonio de Colombia",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Puente de Boyacá",
+      "facet": "Maravillas y patrimonio de Colombia",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Monserrate",
+      "facet": "Maravillas y patrimonio de Colombia",
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Capitolio Nacional",
+      "facet": "Maravillas y patrimonio de Colombia",
+      "known_at": 10
+    },
+    {
+      "name": "Torre Colpatria",
+      "facet": "Maravillas y patrimonio de Colombia",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Laberinto del Minotauro",
+      "facet": "Constructores, leyendas y misterios",
+      "known_at": 9
+    },
+    {
+      "name": "Frank Lloyd Wright",
+      "facet": "Constructores, leyendas y misterios",
+      "known_at": 14
+    },
+    {
+      "name": "Oscar Niemeyer",
+      "facet": "Constructores, leyendas y misterios",
+      "known_at": 14
+    },
+    {
+      "name": "Christopher Wren",
+      "facet": "Constructores, leyendas y misterios",
+      "known_at": 15
+    },
+    {
+      "name": "Filippo Brunelleschi",
+      "facet": "Constructores, leyendas y misterios",
+      "known_at": 13
+    },
+    {
+      "name": "Arquitecto",
+      "facet": "Constructores, leyendas y misterios",
+      "known_at": 3
+    },
+    {
+      "name": "Patrimonio de la Humanidad",
+      "facet": "Constructores, leyendas y misterios",
+      "known_at": 9
+    },
+    {
+      "name": "UNESCO",
+      "facet": "Constructores, leyendas y misterios",
+      "known_at": 9,
+      "retired": "unaskable: La única opción posible (logo inspirado en un templo griego) no es un hecho seguro."
+    }
+  ]
+}

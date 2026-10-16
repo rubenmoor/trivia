@@ -1,0 +1,1243 @@
+{
+  "subcategory": "poetry",
+  "facets": [
+    "Poetas del mundo",
+    "Poetas colombianos y latinoamericanos",
+    "Poemas y versos famosos",
+    "Métrica, rima y estrofas",
+    "Figuras retóricas",
+    "Formas poéticas clásicas",
+    "Poesía infantil y rondas",
+    "Poesía oral y cantada",
+    "Movimientos y épocas poéticas",
+    "Poesía épica y mitológica",
+    "Premios, festivales y lugares poéticos",
+    "Poesía en canciones y cultura pop"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 4,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 2,
+      "cause_effect": 1,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 2,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Charles Baudelaire",
+      "facet": "Poetas del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Arthur Rimbaud",
+      "facet": "Poetas del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Rumi",
+      "facet": "Poetas del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Matsuo Bashō",
+      "facet": "Poetas del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Francisco de Quevedo",
+      "facet": "Poetas del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Luis de Góngora",
+      "facet": "Poetas del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Garcilaso de la Vega",
+      "facet": "Poetas del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Fernando Pessoa",
+      "facet": "Poetas del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "William Blake",
+      "facet": "Poetas del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Lord Byron",
+      "facet": "Poetas del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Safo",
+      "facet": "Poetas del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Miguel Hernández",
+      "facet": "Poetas del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "César Vallejo",
+      "facet": "Poetas colombianos y latinoamericanos",
+      "known_at": 12
+    },
+    {
+      "name": "Julio Flórez",
+      "facet": "Poetas colombianos y latinoamericanos",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Luis Carlos López",
+      "facet": "Poetas colombianos y latinoamericanos",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Candelario Obeso",
+      "facet": "Poetas colombianos y latinoamericanos",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Juana de Ibarbourou",
+      "facet": "Poetas colombianos y latinoamericanos",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Alejandra Pizarnik",
+      "facet": "Poetas colombianos y latinoamericanos",
+      "known_at": 14
+    },
+    {
+      "name": "Nicanor Parra",
+      "facet": "Poetas colombianos y latinoamericanos",
+      "known_at": 13
+    },
+    {
+      "name": "Raúl Gómez Jattin",
+      "facet": "Poetas colombianos y latinoamericanos",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Meira Delmar",
+      "facet": "Poetas colombianos y latinoamericanos",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Gonzalo Arango",
+      "facet": "Poetas colombianos y latinoamericanos",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Eduardo Carranza",
+      "facet": "Poetas colombianos y latinoamericanos",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Piedad Bonnett",
+      "facet": "Poetas colombianos y latinoamericanos",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Puedo escribir los versos más tristes esta noche",
+      "facet": "Poemas y versos famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Me gustas cuando callas",
+      "facet": "Poemas y versos famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Caminante, no hay camino",
+      "facet": "Poemas y versos famosos",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Volverán las oscuras golondrinas",
+      "facet": "Poemas y versos famosos",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "El cuervo",
+      "facet": "Poemas y versos famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Canción del pirata",
+      "facet": "Poemas y versos famosos",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Romance sonámbulo",
+      "facet": "Poemas y versos famosos",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Los heraldos negros",
+      "facet": "Poemas y versos famosos",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Coplas por la muerte de su padre",
+      "facet": "Poemas y versos famosos",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "A una nariz",
+      "facet": "Poemas y versos famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Sonatina",
+      "facet": "Poemas y versos famosos",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Hojas de hierba",
+      "facet": "Poemas y versos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Odas elementales",
+      "facet": "Poemas y versos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Hombres necios que acusáis",
+      "facet": "Poemas y versos famosos",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Se equivocó la paloma",
+      "facet": "Poemas y versos famosos",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Si (If—)",
+      "facet": "Poemas y versos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "No te salves",
+      "facet": "Poemas y versos famosos",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Sílaba métrica",
+      "facet": "Métrica, rima y estrofas",
+      "known_at": 10
+    },
+    {
+      "name": "Sinalefa",
+      "facet": "Métrica, rima y estrofas",
+      "known_at": 11
+    },
+    {
+      "name": "Endecasílabo",
+      "facet": "Métrica, rima y estrofas",
+      "known_at": 11
+    },
+    {
+      "name": "Octosílabo",
+      "facet": "Métrica, rima y estrofas",
+      "known_at": 10
+    },
+    {
+      "name": "Alejandrino",
+      "facet": "Métrica, rima y estrofas",
+      "known_at": 12
+    },
+    {
+      "name": "Verso libre",
+      "facet": "Métrica, rima y estrofas",
+      "known_at": 10
+    },
+    {
+      "name": "Cuarteto",
+      "facet": "Métrica, rima y estrofas",
+      "known_at": 10
+    },
+    {
+      "name": "Terceto",
+      "facet": "Métrica, rima y estrofas",
+      "known_at": 10
+    },
+    {
+      "name": "Redondilla",
+      "facet": "Métrica, rima y estrofas",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Quintilla",
+      "facet": "Métrica, rima y estrofas",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Encabalgamiento",
+      "facet": "Métrica, rima y estrofas",
+      "known_at": 13
+    },
+    {
+      "name": "Ley del acento final",
+      "facet": "Métrica, rima y estrofas",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Hiato",
+      "facet": "Métrica, rima y estrofas",
+      "known_at": 12
+    },
+    {
+      "name": "Lira",
+      "facet": "Métrica, rima y estrofas",
+      "known_at": 13
+    },
+    {
+      "name": "Hemistiquio",
+      "facet": "Métrica, rima y estrofas",
+      "known_at": 14
+    },
+    {
+      "name": "Cesura",
+      "facet": "Métrica, rima y estrofas",
+      "known_at": 14
+    },
+    {
+      "name": "Metonimia",
+      "facet": "Figuras retóricas",
+      "known_at": 13
+    },
+    {
+      "name": "Asíndeton",
+      "facet": "Figuras retóricas",
+      "known_at": 13
+    },
+    {
+      "name": "Apóstrofe",
+      "facet": "Figuras retóricas",
+      "known_at": 13
+    },
+    {
+      "name": "Sinécdoque",
+      "facet": "Figuras retóricas",
+      "known_at": 14
+    },
+    {
+      "name": "Elipsis",
+      "facet": "Figuras retóricas",
+      "known_at": 12
+    },
+    {
+      "name": "Oda",
+      "facet": "Formas poéticas clásicas",
+      "known_at": 10
+    },
+    {
+      "name": "Elegía",
+      "facet": "Formas poéticas clásicas",
+      "known_at": 11
+    },
+    {
+      "name": "Romance",
+      "facet": "Formas poéticas clásicas",
+      "known_at": 11
+    },
+    {
+      "name": "Égloga",
+      "facet": "Formas poéticas clásicas",
+      "known_at": 13
+    },
+    {
+      "name": "Madrigal",
+      "facet": "Formas poéticas clásicas",
+      "known_at": 13
+    },
+    {
+      "name": "Epigrama",
+      "facet": "Formas poéticas clásicas",
+      "known_at": 13
+    },
+    {
+      "name": "Caligrama",
+      "facet": "Formas poéticas clásicas",
+      "known_at": 10
+    },
+    {
+      "name": "Acróstico",
+      "facet": "Formas poéticas clásicas",
+      "known_at": 7
+    },
+    {
+      "name": "Limerick",
+      "facet": "Formas poéticas clásicas",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Silva",
+      "facet": "Formas poéticas clásicas",
+      "known_at": 14
+    },
+    {
+      "name": "Sextina",
+      "facet": "Formas poéticas clásicas",
+      "known_at": 14
+    },
+    {
+      "name": "Tanka",
+      "facet": "Formas poéticas clásicas",
+      "known_at": 13
+    },
+    {
+      "name": "Epitafio",
+      "facet": "Formas poéticas clásicas",
+      "known_at": 11
+    },
+    {
+      "name": "Letrilla",
+      "facet": "Formas poéticas clásicas",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Calavera literaria",
+      "facet": "Formas poéticas clásicas",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Greguería",
+      "facet": "Formas poéticas clásicas",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Antón Pirulero",
+      "facet": "Poesía infantil y rondas",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Los diez perritos",
+      "facet": "Poesía infantil y rondas",
+      "known_at": 3
+    },
+    {
+      "name": "Cinco lobitos",
+      "facet": "Poesía infantil y rondas",
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Trova paisa",
+      "facet": "Poesía oral y cantada",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Payador",
+      "facet": "Poesía oral y cantada",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Repentismo",
+      "facet": "Poesía oral y cantada",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Piquería vallenata",
+      "facet": "Poesía oral y cantada",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Contrapunteo llanero",
+      "facet": "Poesía oral y cantada",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Corrido",
+      "facet": "Poesía oral y cantada",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Slam de poesía",
+      "facet": "Poesía oral y cantada",
+      "known_at": 12
+    },
+    {
+      "name": "Bertsolari",
+      "facet": "Poesía oral y cantada",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Bardo",
+      "facet": "Poesía oral y cantada",
+      "known_at": 10
+    },
+    {
+      "name": "Griot",
+      "facet": "Poesía oral y cantada",
+      "known_at": 14
+    },
+    {
+      "name": "Rapsoda",
+      "facet": "Poesía oral y cantada",
+      "known_at": 13
+    },
+    {
+      "name": "Declamación",
+      "facet": "Poesía oral y cantada",
+      "known_at": 8
+    },
+    {
+      "name": "Saeta",
+      "facet": "Poesía oral y cantada",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Cantos de vaquería",
+      "facet": "Poesía oral y cantada",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Siglo de Oro",
+      "facet": "Movimientos y épocas poéticas",
+      "known_at": 9
+    },
+    {
+      "name": "Modernismo",
+      "facet": "Movimientos y épocas poéticas",
+      "known_at": 11
+    },
+    {
+      "name": "Vanguardias",
+      "facet": "Movimientos y épocas poéticas",
+      "known_at": 12
+    },
+    {
+      "name": "Generación del 27",
+      "facet": "Movimientos y épocas poéticas",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Generación del 98",
+      "facet": "Movimientos y épocas poéticas",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Nadaísmo",
+      "facet": "Movimientos y épocas poéticas",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Piedra y Cielo",
+      "facet": "Movimientos y épocas poéticas",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Los Nuevos",
+      "facet": "Movimientos y épocas poéticas",
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Ultraísmo",
+      "facet": "Movimientos y épocas poéticas",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Simbolismo",
+      "facet": "Movimientos y épocas poéticas",
+      "known_at": 13
+    },
+    {
+      "name": "Culteranismo",
+      "facet": "Movimientos y épocas poéticas",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Conceptismo",
+      "facet": "Movimientos y épocas poéticas",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Creacionismo",
+      "facet": "Movimientos y épocas poéticas",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Generación Beat",
+      "facet": "Movimientos y épocas poéticas",
+      "known_at": 13
+    },
+    {
+      "name": "Estridentismo",
+      "facet": "Movimientos y épocas poéticas",
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Poetas malditos",
+      "facet": "Movimientos y épocas poéticas",
+      "known_at": 13
+    },
+    {
+      "name": "El paraíso perdido",
+      "facet": "Poesía épica y mitológica",
+      "known_at": 13
+    },
+    {
+      "name": "Poema de Gilgamesh",
+      "facet": "Poesía épica y mitológica",
+      "known_at": 12
+    },
+    {
+      "name": "Mahabharata",
+      "facet": "Poesía épica y mitológica",
+      "known_at": 13
+    },
+    {
+      "name": "Ramayana",
+      "facet": "Poesía épica y mitológica",
+      "known_at": 13
+    },
+    {
+      "name": "La Araucana",
+      "facet": "Poesía épica y mitológica",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Martín Fierro",
+      "facet": "Poesía épica y mitológica",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Kalevala",
+      "facet": "Poesía épica y mitológica",
+      "known_at": 14
+    },
+    {
+      "name": "Calíope",
+      "facet": "Poesía épica y mitológica",
+      "known_at": 11
+    },
+    {
+      "name": "Monte Parnaso",
+      "facet": "Poesía épica y mitológica",
+      "known_at": 12
+    },
+    {
+      "name": "Teogonía",
+      "facet": "Poesía épica y mitológica",
+      "known_at": 14
+    },
+    {
+      "name": "Premio Princesa de Asturias",
+      "facet": "Premios, festivales y lugares poéticos",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Premio Reina Sofía de Poesía Iberoamericana",
+      "facet": "Premios, festivales y lugares poéticos",
+      "known_at": 14,
+      "retired": "unaskable: Any riddle about the Premio Reina Sofía either gives away its name or becomes a very obscure question."
+    },
+    {
+      "name": "Festival Internacional de Poesía de Medellín",
+      "facet": "Premios, festivales y lugares poéticos",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Día Mundial de la Poesía",
+      "facet": "Premios, festivales y lugares poéticos",
+      "known_at": 9
+    },
+    {
+      "name": "Isla Negra",
+      "facet": "Premios, festivales y lugares poéticos",
+      "known_at": 12
+    },
+    {
+      "name": "La Chascona",
+      "facet": "Premios, festivales y lugares poéticos",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Casa de Poesía Silva",
+      "facet": "Premios, festivales y lugares poéticos",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Fundación Rafael Pombo",
+      "facet": "Premios, festivales y lugares poéticos",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Poeta laureado",
+      "facet": "Premios, festivales y lugares poéticos",
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Juegos Florales",
+      "facet": "Premios, festivales y lugares poéticos",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Rincón de los Poetas",
+      "facet": "Premios, festivales y lugares poéticos",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Teatro del Globo",
+      "facet": "Premios, festivales y lugares poéticos",
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Fuente Vaqueros",
+      "facet": "Premios, festivales y lugares poéticos",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Moguer",
+      "facet": "Premios, festivales y lugares poéticos",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Guantanamera",
+      "facet": "Poesía en canciones y cultura pop",
+      "known_at": 7
+    },
+    {
+      "name": "Joan Manuel Serrat",
+      "facet": "Poesía en canciones y cultura pop",
+      "known_at": 11
+    },
+    {
+      "name": "Mercedes Sosa",
+      "facet": "Poesía en canciones y cultura pop",
+      "known_at": 11
+    },
+    {
+      "name": "Silvio Rodríguez",
+      "facet": "Poesía en canciones y cultura pop",
+      "known_at": 12
+    },
+    {
+      "name": "Joaquín Sabina",
+      "facet": "Poesía en canciones y cultura pop",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Víctor Jara",
+      "facet": "Poesía en canciones y cultura pop",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Leonard Cohen",
+      "facet": "Poesía en canciones y cultura pop",
+      "known_at": 13
+    },
+    {
+      "name": "Paco Ibáñez",
+      "facet": "Poesía en canciones y cultura pop",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Te quiero (Benedetti)",
+      "facet": "Poesía en canciones y cultura pop",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "La sociedad de los poetas muertos",
+      "facet": "Poesía en canciones y cultura pop",
+      "known_at": 11
+    },
+    {
+      "name": "El cartero (Il Postino)",
+      "facet": "Poesía en canciones y cultura pop",
+      "known_at": 13
+    },
+    {
+      "name": "Poema del Anillo",
+      "facet": "Poesía en canciones y cultura pop",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Cyrano de Bergerac",
+      "facet": "Poesía en canciones y cultura pop",
+      "known_at": 12
+    },
+    {
+      "name": "Amanda Gorman",
+      "facet": "Poesía en canciones y cultura pop",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Homer",
+      "facet": "Poetas del mundo",
+      "known_at": 7
+    },
+    {
+      "name": "Virgil",
+      "facet": "Poetas del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Johann Wolfgang von Goethe",
+      "facet": "Poetas del mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Li Bai",
+      "facet": "Poetas del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Omar Khayyam",
+      "facet": "Poetas del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Maya Angelou",
+      "facet": "Poetas del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Robert Frost",
+      "facet": "Poetas del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Alexander Pushkin",
+      "facet": "Poetas del mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Petrarch",
+      "facet": "Poetas del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "John Keats",
+      "facet": "Poetas del mundo",
+      "known_at": 13
+    },
+    {
+      "name": "The Road Not Taken",
+      "facet": "Poemas y versos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Ozymandias",
+      "facet": "Poemas y versos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Jabberwocky",
+      "facet": "Poemas y versos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Sonnet 18",
+      "facet": "Poemas y versos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Do Not Go Gentle into That Good Night",
+      "facet": "Poemas y versos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "The Tyger",
+      "facet": "Poemas y versos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Twenty Love Poems and a Song of Despair",
+      "facet": "Poemas y versos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Platero and I",
+      "facet": "Poemas y versos famosos",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Rubaiyat",
+      "facet": "Poemas y versos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Rhyme",
+      "facet": "Métrica, rima y estrofas",
+      "known_at": 2
+    },
+    {
+      "name": "Verse",
+      "facet": "Métrica, rima y estrofas",
+      "known_at": 5
+    },
+    {
+      "name": "Stanza",
+      "facet": "Métrica, rima y estrofas",
+      "known_at": 6
+    },
+    {
+      "name": "Assonant rhyme",
+      "facet": "Métrica, rima y estrofas",
+      "known_at": 10
+    },
+    {
+      "name": "Consonant rhyme",
+      "facet": "Métrica, rima y estrofas",
+      "known_at": 10
+    },
+    {
+      "name": "Couplet",
+      "facet": "Métrica, rima y estrofas",
+      "known_at": 9
+    },
+    {
+      "name": "Refrain",
+      "facet": "Métrica, rima y estrofas",
+      "known_at": 7
+    },
+    {
+      "name": "Iambic pentameter",
+      "facet": "Métrica, rima y estrofas",
+      "known_at": 13
+    },
+    {
+      "name": "Rhyme scheme",
+      "facet": "Métrica, rima y estrofas",
+      "known_at": 10
+    },
+    {
+      "name": "Metaphor",
+      "facet": "Figuras retóricas",
+      "known_at": 7
+    },
+    {
+      "name": "Simile",
+      "facet": "Figuras retóricas",
+      "known_at": 7
+    },
+    {
+      "name": "Hyperbole",
+      "facet": "Figuras retóricas",
+      "known_at": 7
+    },
+    {
+      "name": "Personification",
+      "facet": "Figuras retóricas",
+      "known_at": 7
+    },
+    {
+      "name": "Onomatopoeia",
+      "facet": "Figuras retóricas",
+      "known_at": 6
+    },
+    {
+      "name": "Alliteration",
+      "facet": "Figuras retóricas",
+      "known_at": 9
+    },
+    {
+      "name": "Oxymoron",
+      "facet": "Figuras retóricas",
+      "known_at": 11
+    },
+    {
+      "name": "Anaphora",
+      "facet": "Figuras retóricas",
+      "known_at": 12
+    },
+    {
+      "name": "Sonnet",
+      "facet": "Formas poéticas clásicas",
+      "known_at": 9
+    },
+    {
+      "name": "Ballad",
+      "facet": "Formas poéticas clásicas",
+      "known_at": 9
+    },
+    {
+      "name": "Villanelle",
+      "facet": "Formas poéticas clásicas",
+      "known_at": 14
+    },
+    {
+      "name": "Ghazal",
+      "facet": "Formas poéticas clásicas",
+      "known_at": 14
+    },
+    {
+      "name": "Prose poem",
+      "facet": "Formas poéticas clásicas",
+      "known_at": 12
+    },
+    {
+      "name": "Lullaby",
+      "facet": "Poesía infantil y rondas",
+      "known_at": 2
+    },
+    {
+      "name": "Mother Goose",
+      "facet": "Poesía infantil y rondas",
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Troubadour",
+      "facet": "Poesía oral y cantada",
+      "known_at": 9
+    },
+    {
+      "name": "Minstrel",
+      "facet": "Poesía oral y cantada",
+      "known_at": 10
+    },
+    {
+      "name": "Spoken word",
+      "facet": "Poesía oral y cantada",
+      "known_at": 11
+    },
+    {
+      "name": "Skald",
+      "facet": "Poesía oral y cantada",
+      "known_at": 14
+    },
+    {
+      "name": "Romanticism",
+      "facet": "Movimientos y épocas poéticas",
+      "known_at": 10
+    },
+    {
+      "name": "Surrealism",
+      "facet": "Movimientos y épocas poéticas",
+      "known_at": 11
+    },
+    {
+      "name": "Baroque",
+      "facet": "Movimientos y épocas poéticas",
+      "known_at": 11
+    },
+    {
+      "name": "Harlem Renaissance",
+      "facet": "Movimientos y épocas poéticas",
+      "known_at": 13
+    },
+    {
+      "name": "Négritude",
+      "facet": "Movimientos y épocas poéticas",
+      "known_at": 14
+    },
+    {
+      "name": "Renaissance",
+      "facet": "Movimientos y épocas poéticas",
+      "known_at": 9
+    },
+    {
+      "name": "Iliad",
+      "facet": "Poesía épica y mitológica",
+      "known_at": 8
+    },
+    {
+      "name": "Odyssey",
+      "facet": "Poesía épica y mitológica",
+      "known_at": 7
+    },
+    {
+      "name": "Aeneid",
+      "facet": "Poesía épica y mitológica",
+      "known_at": 11
+    },
+    {
+      "name": "Divine Comedy",
+      "facet": "Poesía épica y mitológica",
+      "known_at": 10
+    },
+    {
+      "name": "Shahnameh",
+      "facet": "Poesía épica y mitológica",
+      "known_at": 14
+    },
+    {
+      "name": "Muses",
+      "facet": "Poesía épica y mitológica",
+      "known_at": 8
+    },
+    {
+      "name": "Orpheus",
+      "facet": "Poesía épica y mitológica",
+      "known_at": 10
+    },
+    {
+      "name": "Lyre",
+      "facet": "Poesía épica y mitológica",
+      "known_at": 7
+    },
+    {
+      "name": "Apollo",
+      "facet": "Poesía épica y mitológica",
+      "known_at": 8
+    },
+    {
+      "name": "Song of the Cid",
+      "facet": "Poesía épica y mitológica",
+      "known_at": 11,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Epic of Sundiata",
+      "facet": "Poesía épica y mitológica",
+      "known_at": 14
+    },
+    {
+      "name": "Nobel Prize in Literature",
+      "facet": "Premios, festivales y lugares poéticos",
+      "known_at": 8
+    },
+    {
+      "name": "Cervantes Prize",
+      "facet": "Premios, festivales y lugares poéticos",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Laurel wreath",
+      "facet": "Premios, festivales y lugares poéticos",
+      "known_at": 7
+    },
+    {
+      "name": "Pulitzer Prize",
+      "facet": "Premios, festivales y lugares poéticos",
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Hamilton (musical)",
+      "facet": "Poesía en canciones y cultura pop",
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Ode to Joy",
+      "facet": "Poesía en canciones y cultura pop",
+      "known_at": 10
+    },
+    {
+      "name": "Violeta Parra",
+      "facet": "Poesía en canciones y cultura pop",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-15",
+      "added": 71,
+      "unused": 142
+    }
+  ]
+}

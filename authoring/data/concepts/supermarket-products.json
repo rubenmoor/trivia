@@ -1,0 +1,1031 @@
+{
+  "subcategory": "supermarket-products",
+  "facets": [
+    "Gaseosas, jugos y bebidas",
+    "Chocolatinas, dulces y golosinas",
+    "Paquetes y mecato salado",
+    "Lácteos, cereales y desayuno",
+    "Café, chocolate y panela",
+    "Despensa, enlatados y salsas",
+    "Aseo y limpieza del hogar",
+    "Higiene y cuidado personal",
+    "Mascotas y personajes publicitarios",
+    "Logotipos, empaques y colores",
+    "Cadenas de supermercados y tiendas",
+    "Marcas que se volvieron palabras"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 5,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 5,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Tutti Frutti",
+      "facet": "Gaseosas, jugos y bebidas",
+      "known_at": 6
+    },
+    {
+      "name": "Speed Max",
+      "facet": "Gaseosas, jugos y bebidas",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Agua Cristal",
+      "facet": "Gaseosas, jugos y bebidas",
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Agua Brisa",
+      "facet": "Gaseosas, jugos y bebidas",
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Bretaña",
+      "facet": "Gaseosas, jugos y bebidas",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Frutiño",
+      "facet": "Gaseosas, jugos y bebidas",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Tang",
+      "facet": "Gaseosas, jugos y bebidas",
+      "known_at": 6
+    },
+    {
+      "name": "Glacial",
+      "facet": "Gaseosas, jugos y bebidas",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Barrilete",
+      "facet": "Chocolatinas, dulces y golosinas",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Burbujet",
+      "facet": "Chocolatinas, dulces y golosinas",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Frunas",
+      "facet": "Chocolatinas, dulces y golosinas",
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Halls",
+      "facet": "Chocolatinas, dulces y golosinas",
+      "known_at": 6
+    },
+    {
+      "name": "Gala",
+      "facet": "Chocolatinas, dulces y golosinas",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Mogul",
+      "facet": "Chocolatinas, dulces y golosinas",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Choclitos",
+      "facet": "Paquetes y mecato salado",
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Super Ricas",
+      "facet": "Paquetes y mecato salado",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "De Todito",
+      "facet": "Paquetes y mecato salado",
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Tostacos",
+      "facet": "Paquetes y mecato salado",
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Natuchips",
+      "facet": "Paquetes y mecato salado",
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Yupi",
+      "facet": "Paquetes y mecato salado",
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Frito Lay",
+      "facet": "Paquetes y mecato salado",
+      "known_at": 8
+    },
+    {
+      "name": "Boliqueso",
+      "facet": "Paquetes y mecato salado",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Chitos",
+      "facet": "Paquetes y mecato salado",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Saltín Noel",
+      "facet": "Paquetes y mecato salado",
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Ducales",
+      "facet": "Paquetes y mecato salado",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Club Social",
+      "facet": "Paquetes y mecato salado",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Ritz",
+      "facet": "Paquetes y mecato salado",
+      "known_at": 8
+    },
+    {
+      "name": "Tosh",
+      "facet": "Paquetes y mecato salado",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Popetas",
+      "facet": "Paquetes y mecato salado",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Todo Rico",
+      "facet": "Paquetes y mecato salado",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Alquería",
+      "facet": "Lácteos, cereales y desayuno",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Yogo Yogo",
+      "facet": "Lácteos, cereales y desayuno",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Yox",
+      "facet": "Lácteos, cereales y desayuno",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Zucaritas",
+      "facet": "Lácteos, cereales y desayuno",
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Choco Krispis",
+      "facet": "Lácteos, cereales y desayuno",
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Froot Loops",
+      "facet": "Lácteos, cereales y desayuno",
+      "known_at": 5
+    },
+    {
+      "name": "Quaker",
+      "facet": "Lácteos, cereales y desayuno",
+      "known_at": 7
+    },
+    {
+      "name": "Klim",
+      "facet": "Lácteos, cereales y desayuno",
+      "known_at": 5
+    },
+    {
+      "name": "Bimbo",
+      "facet": "Lácteos, cereales y desayuno",
+      "known_at": 4
+    },
+    {
+      "name": "Gansito",
+      "facet": "Lácteos, cereales y desayuno",
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Parmalat",
+      "facet": "Lácteos, cereales y desayuno",
+      "known_at": 9
+    },
+    {
+      "name": "Mantequilla Rama",
+      "facet": "Lácteos, cereales y desayuno",
+      "known_at": 9
+    },
+    {
+      "name": "Sello Rojo",
+      "facet": "Café, chocolate y panela",
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Colcafé",
+      "facet": "Café, chocolate y panela",
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Café Oma",
+      "facet": "Café, chocolate y panela",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Chocolate Sol",
+      "facet": "Café, chocolate y panela",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Luker",
+      "facet": "Café, chocolate y panela",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Toddy",
+      "facet": "Café, chocolate y panela",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Café Buendía",
+      "facet": "Café, chocolate y panela",
+      "known_at": 13,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Fruco",
+      "facet": "Despensa, enlatados y salsas",
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Doria",
+      "facet": "Despensa, enlatados y salsas",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "La Muñeca",
+      "facet": "Despensa, enlatados y salsas",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Comarrico",
+      "facet": "Despensa, enlatados y salsas",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Van Camp's",
+      "facet": "Despensa, enlatados y salsas",
+      "known_at": 7,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Rica",
+      "facet": "Despensa, enlatados y salsas",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Ranchera",
+      "facet": "Despensa, enlatados y salsas",
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Knorr",
+      "facet": "Despensa, enlatados y salsas",
+      "known_at": 6
+    },
+    {
+      "name": "Hellmann's",
+      "facet": "Despensa, enlatados y salsas",
+      "known_at": 7
+    },
+    {
+      "name": "San Jorge",
+      "facet": "Despensa, enlatados y salsas",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Arroz Diana",
+      "facet": "Despensa, enlatados y salsas",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Arroz Roa",
+      "facet": "Despensa, enlatados y salsas",
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Florhuila",
+      "facet": "Despensa, enlatados y salsas",
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Aceite Gourmet",
+      "facet": "Despensa, enlatados y salsas",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Aceite Premier",
+      "facet": "Despensa, enlatados y salsas",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Refisal",
+      "facet": "Despensa, enlatados y salsas",
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Campbell's",
+      "facet": "Despensa, enlatados y salsas",
+      "known_at": 8
+    },
+    {
+      "name": "La Constancia",
+      "facet": "Despensa, enlatados y salsas",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Gelhada",
+      "facet": "Despensa, enlatados y salsas",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Del Monte",
+      "facet": "Despensa, enlatados y salsas",
+      "known_at": 10
+    },
+    {
+      "name": "Rindex",
+      "facet": "Aseo y limpieza del hogar",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Axión",
+      "facet": "Aseo y limpieza del hogar",
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Downy",
+      "facet": "Aseo y limpieza del hogar",
+      "known_at": 6
+    },
+    {
+      "name": "Suavitel",
+      "facet": "Aseo y limpieza del hogar",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Lysol",
+      "facet": "Aseo y limpieza del hogar",
+      "known_at": 7
+    },
+    {
+      "name": "Baygon",
+      "facet": "Aseo y limpieza del hogar",
+      "known_at": 6
+    },
+    {
+      "name": "Papel higiénico Familia",
+      "facet": "Aseo y limpieza del hogar",
+      "known_at": 3,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Scott",
+      "facet": "Aseo y limpieza del hogar",
+      "known_at": 6
+    },
+    {
+      "name": "Rosal",
+      "facet": "Aseo y limpieza del hogar",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Jabón Coco Varela",
+      "facet": "Aseo y limpieza del hogar",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Detergente 3D",
+      "facet": "Aseo y limpieza del hogar",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Blancox",
+      "facet": "Aseo y limpieza del hogar",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Brilla King",
+      "facet": "Aseo y limpieza del hogar",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Vanish",
+      "facet": "Aseo y limpieza del hogar",
+      "known_at": 8
+    },
+    {
+      "name": "Fluocardent",
+      "facet": "Higiene y cuidado personal",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Pantene",
+      "facet": "Higiene y cuidado personal",
+      "known_at": 6
+    },
+    {
+      "name": "Johnson's Baby",
+      "facet": "Higiene y cuidado personal",
+      "known_at": 4
+    },
+    {
+      "name": "Protex",
+      "facet": "Higiene y cuidado personal",
+      "known_at": 6
+    },
+    {
+      "name": "Pequeñín",
+      "facet": "Higiene y cuidado personal",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Winny",
+      "facet": "Higiene y cuidado personal",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Huggies",
+      "facet": "Higiene y cuidado personal",
+      "known_at": 6
+    },
+    {
+      "name": "Nosotras",
+      "facet": "Higiene y cuidado personal",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Vasenol",
+      "facet": "Higiene y cuidado personal",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Savital",
+      "facet": "Higiene y cuidado personal",
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Pond's",
+      "facet": "Higiene y cuidado personal",
+      "known_at": 9
+    },
+    {
+      "name": "Sensodyne",
+      "facet": "Higiene y cuidado personal",
+      "known_at": 9
+    },
+    {
+      "name": "Melvin",
+      "facet": "Mascotas y personajes publicitarios",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Cornelio",
+      "facet": "Mascotas y personajes publicitarios",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Conejito Duracell",
+      "facet": "Mascotas y personajes publicitarios",
+      "known_at": 8
+    },
+    {
+      "name": "Chiquita Banana",
+      "facet": "Mascotas y personajes publicitarios",
+      "known_at": 10
+    },
+    {
+      "name": "Rojo de Coca-Cola",
+      "facet": "Logotipos, empaques y colores",
+      "known_at": 3
+    },
+    {
+      "name": "Botella retornable",
+      "facet": "Logotipos, empaques y colores",
+      "known_at": 7
+    },
+    {
+      "name": "Octógono de advertencia",
+      "facet": "Logotipos, empaques y colores",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Tabla nutricional",
+      "facet": "Logotipos, empaques y colores",
+      "known_at": 8
+    },
+    {
+      "name": "Envase PET",
+      "facet": "Logotipos, empaques y colores",
+      "known_at": 10
+    },
+    {
+      "name": "Registro Invima",
+      "facet": "Logotipos, empaques y colores",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Empaque al vacío",
+      "facet": "Logotipos, empaques y colores",
+      "known_at": 7
+    },
+    {
+      "name": "Botella Contour",
+      "facet": "Logotipos, empaques y colores",
+      "known_at": 11
+    },
+    {
+      "name": "Sello Fairtrade",
+      "facet": "Logotipos, empaques y colores",
+      "known_at": 12
+    },
+    {
+      "name": "Anillo abrefácil",
+      "facet": "Logotipos, empaques y colores",
+      "known_at": 8
+    },
+    {
+      "name": "Carulla",
+      "facet": "Cadenas de supermercados y tiendas",
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Ara",
+      "facet": "Cadenas de supermercados y tiendas",
+      "known_at": 4,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Makro",
+      "facet": "Cadenas de supermercados y tiendas",
+      "known_at": 8
+    },
+    {
+      "name": "PriceSmart",
+      "facet": "Cadenas de supermercados y tiendas",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Alkosto",
+      "facet": "Cadenas de supermercados y tiendas",
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Justo & Bueno",
+      "facet": "Cadenas de supermercados y tiendas",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Colsubsidio",
+      "facet": "Cadenas de supermercados y tiendas",
+      "known_at": 8,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Surtimax",
+      "facet": "Cadenas de supermercados y tiendas",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "La 14",
+      "facet": "Cadenas de supermercados y tiendas",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Tienda de barrio",
+      "facet": "Cadenas de supermercados y tiendas",
+      "known_at": 2
+    },
+    {
+      "name": "Oxxo",
+      "facet": "Cadenas de supermercados y tiendas",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Cafam",
+      "facet": "Cadenas de supermercados y tiendas",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Farmatodo",
+      "facet": "Cadenas de supermercados y tiendas",
+      "known_at": 9,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Copitos",
+      "facet": "Marcas que se volvieron palabras",
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Fab",
+      "facet": "Marcas que se volvieron palabras",
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Varsol",
+      "facet": "Marcas que se volvieron palabras",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Bombril",
+      "facet": "Marcas que se volvieron palabras",
+      "known_at": 8
+    },
+    {
+      "name": "Maizena",
+      "facet": "Marcas que se volvieron palabras",
+      "known_at": 5
+    },
+    {
+      "name": "Zíper",
+      "facet": "Marcas que se volvieron palabras",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Colbón",
+      "facet": "Marcas que se volvieron palabras",
+      "known_at": 7,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "7 Up",
+      "facet": "Gaseosas, jugos y bebidas",
+      "known_at": 6
+    },
+    {
+      "name": "Capri-Sun",
+      "facet": "Gaseosas, jugos y bebidas",
+      "known_at": 3
+    },
+    {
+      "name": "Guaraná Antarctica",
+      "facet": "Gaseosas, jugos y bebidas",
+      "known_at": 12
+    },
+    {
+      "name": "Lipton Ice Tea",
+      "facet": "Gaseosas, jugos y bebidas",
+      "known_at": 6
+    },
+    {
+      "name": "Minute Maid",
+      "facet": "Gaseosas, jugos y bebidas",
+      "known_at": 7
+    },
+    {
+      "name": "Tropicana",
+      "facet": "Gaseosas, jugos y bebidas",
+      "known_at": 8
+    },
+    {
+      "name": "Pop Rocks",
+      "facet": "Chocolatinas, dulces y golosinas",
+      "known_at": 7
+    },
+    {
+      "name": "Ruffles",
+      "facet": "Paquetes y mecato salado",
+      "known_at": 6
+    },
+    {
+      "name": "Goldfish crackers",
+      "facet": "Paquetes y mecato salado",
+      "known_at": 8,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Indomie",
+      "facet": "Paquetes y mecato salado",
+      "known_at": 12
+    },
+    {
+      "name": "Cheerios",
+      "facet": "Lácteos, cereales y desayuno",
+      "known_at": 6
+    },
+    {
+      "name": "Activia",
+      "facet": "Lácteos, cereales y desayuno",
+      "known_at": 9
+    },
+    {
+      "name": "Babybel",
+      "facet": "Lácteos, cereales y desayuno",
+      "known_at": 6
+    },
+    {
+      "name": "Philadelphia cream cheese",
+      "facet": "Lácteos, cereales y desayuno",
+      "known_at": 9
+    },
+    {
+      "name": "Nido",
+      "facet": "Lácteos, cereales y desayuno",
+      "known_at": 8
+    },
+    {
+      "name": "Pop-Tarts",
+      "facet": "Lácteos, cereales y desayuno",
+      "known_at": 7,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Cola Cao",
+      "facet": "Café, chocolate y panela",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Lavazza",
+      "facet": "Café, chocolate y panela",
+      "known_at": 11
+    },
+    {
+      "name": "Twinings",
+      "facet": "Café, chocolate y panela",
+      "known_at": 12
+    },
+    {
+      "name": "Heinz Ketchup",
+      "facet": "Despensa, enlatados y salsas",
+      "known_at": 3
+    },
+    {
+      "name": "Barilla",
+      "facet": "Despensa, enlatados y salsas",
+      "known_at": 9
+    },
+    {
+      "name": "Kikkoman",
+      "facet": "Despensa, enlatados y salsas",
+      "known_at": 10
+    },
+    {
+      "name": "Vegemite",
+      "facet": "Despensa, enlatados y salsas",
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Marmite",
+      "facet": "Despensa, enlatados y salsas",
+      "known_at": 12,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Jell-O",
+      "facet": "Despensa, enlatados y salsas",
+      "known_at": 6,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Ajinomoto",
+      "facet": "Despensa, enlatados y salsas",
+      "known_at": 13
+    },
+    {
+      "name": "Tide",
+      "facet": "Aseo y limpieza del hogar",
+      "known_at": 7
+    },
+    {
+      "name": "Fairy",
+      "facet": "Aseo y limpieza del hogar",
+      "known_at": 9
+    },
+    {
+      "name": "Windex",
+      "facet": "Aseo y limpieza del hogar",
+      "known_at": 9,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Persil",
+      "facet": "Aseo y limpieza del hogar",
+      "known_at": 11
+    },
+    {
+      "name": "Glade",
+      "facet": "Aseo y limpieza del hogar",
+      "known_at": 8
+    },
+    {
+      "name": "Toucan Sam",
+      "facet": "Mascotas y personajes publicitarios",
+      "known_at": 6,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Mr. P (Pringles)",
+      "facet": "Mascotas y personajes publicitarios",
+      "known_at": 5
+    },
+    {
+      "name": "The Laughing Cow",
+      "facet": "Mascotas y personajes publicitarios",
+      "known_at": 6
+    },
+    {
+      "name": "Haribo Goldbear",
+      "facet": "Mascotas y personajes publicitarios",
+      "known_at": 5
+    },
+    {
+      "name": "Barcode",
+      "facet": "Logotipos, empaques y colores",
+      "known_at": 4
+    },
+    {
+      "name": "QR code",
+      "facet": "Logotipos, empaques y colores",
+      "known_at": 5
+    },
+    {
+      "name": "Aluminum can",
+      "facet": "Logotipos, empaques y colores",
+      "known_at": 3
+    },
+    {
+      "name": "Best-before date",
+      "facet": "Logotipos, empaques y colores",
+      "known_at": 6
+    },
+    {
+      "name": "Nestlé nest logo",
+      "facet": "Logotipos, empaques y colores",
+      "known_at": 9
+    },
+    {
+      "name": "Shopping cart",
+      "facet": "Cadenas de supermercados y tiendas",
+      "known_at": 1
+    },
+    {
+      "name": "Self-checkout",
+      "facet": "Cadenas de supermercados y tiendas",
+      "known_at": 5
+    },
+    {
+      "name": "Aspirin",
+      "facet": "Marcas que se volvieron palabras",
+      "known_at": 11
+    },
+    {
+      "name": "Scotch tape",
+      "facet": "Marcas que se volvieron palabras",
+      "known_at": 8
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-15",
+      "added": 44,
+      "unused": 79
+    }
+  ]
+}

@@ -1,0 +1,641 @@
+{
+  "subcategory": "product-design",
+  "facets": [
+    "Sillas y muebles icónicos",
+    "Objetos de cocina y mesa",
+    "Inventos cotidianos de diseño",
+    "Diseñadores y escuelas famosas",
+    "Movimientos y estilos de diseño",
+    "Diseño de carros y transporte",
+    "Aparatos electrónicos y tecnología",
+    "Juguetes y juegos de diseño",
+    "Ergonomía y forma-función",
+    "Materiales y técnicas de fabricación",
+    "Artesanía y diseño colombiano",
+    "Logotipos, envases y empaques"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 5,
+      "purpose": 5,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 3,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 3,
+      "everyday": 5,
+      "colombia": 4,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 3,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Silla Monobloc",
+      "facet": "Sillas y muebles icónicos",
+      "known_at": 5
+    },
+    {
+      "name": "Mecedora",
+      "facet": "Sillas y muebles icónicos",
+      "known_at": 3
+    },
+    {
+      "name": "Puf",
+      "facet": "Sillas y muebles icónicos",
+      "known_at": 4
+    },
+    {
+      "name": "Taburete",
+      "facet": "Sillas y muebles icónicos",
+      "known_at": 4
+    },
+    {
+      "name": "Silla plegable",
+      "facet": "Sillas y muebles icónicos",
+      "known_at": 3
+    },
+    {
+      "name": "Litera",
+      "facet": "Sillas y muebles icónicos",
+      "known_at": 3
+    },
+    {
+      "name": "Silla giratoria de oficina",
+      "facet": "Sillas y muebles icónicos",
+      "known_at": 3
+    },
+    {
+      "name": "Sofá cama",
+      "facet": "Sillas y muebles icónicos",
+      "known_at": 5
+    },
+    {
+      "name": "Chaise longue",
+      "facet": "Sillas y muebles icónicos",
+      "known_at": 10
+    },
+    {
+      "name": "Estantería Billy de IKEA",
+      "facet": "Sillas y muebles icónicos",
+      "known_at": 9
+    },
+    {
+      "name": "Silla Thonet n.º 14",
+      "facet": "Sillas y muebles icónicos",
+      "known_at": 13
+    },
+    {
+      "name": "Silla Wassily",
+      "facet": "Sillas y muebles icónicos",
+      "known_at": 13
+    },
+    {
+      "name": "Silla Barcelona",
+      "facet": "Sillas y muebles icónicos",
+      "known_at": 13
+    },
+    {
+      "name": "Silla Panton",
+      "facet": "Sillas y muebles icónicos",
+      "known_at": 13
+    },
+    {
+      "name": "Silla Eames Lounge",
+      "facet": "Sillas y muebles icónicos",
+      "known_at": 13
+    },
+    {
+      "name": "Silla Tulip",
+      "facet": "Sillas y muebles icónicos",
+      "known_at": 13
+    },
+    {
+      "name": "Silla Egg",
+      "facet": "Sillas y muebles icónicos",
+      "known_at": 13
+    },
+    {
+      "name": "Silla Louis Ghost",
+      "facet": "Sillas y muebles icónicos",
+      "known_at": 14
+    },
+    {
+      "name": "Silla Red and Blue",
+      "facet": "Sillas y muebles icónicos",
+      "known_at": 14
+    },
+    {
+      "name": "Tenedor",
+      "facet": "Objetos de cocina y mesa",
+      "known_at": 1
+    },
+    {
+      "name": "Cuchara",
+      "facet": "Objetos de cocina y mesa",
+      "known_at": 1
+    },
+    {
+      "name": "Palillos chinos",
+      "facet": "Objetos de cocina y mesa",
+      "known_at": 3
+    },
+    {
+      "name": "Colador",
+      "facet": "Objetos de cocina y mesa",
+      "known_at": 3
+    },
+    {
+      "name": "Sartén antiadherente",
+      "facet": "Objetos de cocina y mesa",
+      "known_at": 5
+    },
+    {
+      "name": "Sacacorchos",
+      "facet": "Objetos de cocina y mesa",
+      "known_at": 7
+    },
+    {
+      "name": "Mortero",
+      "facet": "Objetos de cocina y mesa",
+      "known_at": 7
+    },
+    {
+      "name": "Exprimidor Juicy Salif",
+      "facet": "Objetos de cocina y mesa",
+      "known_at": 14
+    },
+    {
+      "name": "Tijeras",
+      "facet": "Inventos cotidianos de diseño",
+      "known_at": 1
+    },
+    {
+      "name": "Sacapuntas",
+      "facet": "Inventos cotidianos de diseño",
+      "known_at": 2
+    },
+    {
+      "name": "Lápiz con borrador",
+      "facet": "Inventos cotidianos de diseño",
+      "known_at": 3
+    },
+    {
+      "name": "Pinza de ropa",
+      "facet": "Inventos cotidianos de diseño",
+      "known_at": 3
+    },
+    {
+      "name": "Grapadora",
+      "facet": "Inventos cotidianos de diseño",
+      "known_at": 4
+    },
+    {
+      "name": "Navaja suiza",
+      "facet": "Inventos cotidianos de diseño",
+      "known_at": 6
+    },
+    {
+      "name": "Anillo abrefácil de lata",
+      "facet": "Inventos cotidianos de diseño",
+      "known_at": 9
+    },
+    {
+      "name": "Antoni Gaudí",
+      "facet": "Diseñadores y escuelas famosas",
+      "known_at": 9
+    },
+    {
+      "name": "Jony Ive",
+      "facet": "Diseñadores y escuelas famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Le Corbusier",
+      "facet": "Diseñadores y escuelas famosas",
+      "known_at": 12
+    },
+    {
+      "name": "Charles y Ray Eames",
+      "facet": "Diseñadores y escuelas famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Philippe Starck",
+      "facet": "Diseñadores y escuelas famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Walter Gropius",
+      "facet": "Diseñadores y escuelas famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Ludwig Mies van der Rohe",
+      "facet": "Diseñadores y escuelas famosas",
+      "known_at": 13
+    },
+    {
+      "name": "Dieter Rams",
+      "facet": "Diseñadores y escuelas famosas",
+      "known_at": 14
+    },
+    {
+      "name": "Marcel Breuer",
+      "facet": "Diseñadores y escuelas famosas",
+      "known_at": 14
+    },
+    {
+      "name": "Arne Jacobsen",
+      "facet": "Diseñadores y escuelas famosas",
+      "known_at": 14
+    },
+    {
+      "name": "Alvar Aalto",
+      "facet": "Diseñadores y escuelas famosas",
+      "known_at": 14
+    },
+    {
+      "name": "Verner Panton",
+      "facet": "Diseñadores y escuelas famosas",
+      "known_at": 14
+    },
+    {
+      "name": "Raymond Loewy",
+      "facet": "Diseñadores y escuelas famosas",
+      "known_at": 14
+    },
+    {
+      "name": "Estilo retro",
+      "facet": "Movimientos y estilos de diseño",
+      "known_at": 6
+    },
+    {
+      "name": "Estilo vintage",
+      "facet": "Movimientos y estilos de diseño",
+      "known_at": 6
+    },
+    {
+      "name": "Diseño industrial",
+      "facet": "Movimientos y estilos de diseño",
+      "known_at": 8
+    },
+    {
+      "name": "Diseño sostenible",
+      "facet": "Movimientos y estilos de diseño",
+      "known_at": 8
+    },
+    {
+      "name": "Pop Art",
+      "facet": "Movimientos y estilos de diseño",
+      "known_at": 9
+    },
+    {
+      "name": "Diseño escandinavo",
+      "facet": "Movimientos y estilos de diseño",
+      "known_at": 10
+    },
+    {
+      "name": "Steampunk",
+      "facet": "Movimientos y estilos de diseño",
+      "known_at": 11
+    },
+    {
+      "name": "Art Déco",
+      "facet": "Movimientos y estilos de diseño",
+      "known_at": 11
+    },
+    {
+      "name": "Diseño orgánico",
+      "facet": "Movimientos y estilos de diseño",
+      "known_at": 12
+    },
+    {
+      "name": "Brutalismo",
+      "facet": "Movimientos y estilos de diseño",
+      "known_at": 13
+    },
+    {
+      "name": "Mid-century modern",
+      "facet": "Movimientos y estilos de diseño",
+      "known_at": 13
+    },
+    {
+      "name": "Grupo Memphis",
+      "facet": "Movimientos y estilos de diseño",
+      "known_at": 14
+    },
+    {
+      "name": "De Stijl",
+      "facet": "Movimientos y estilos de diseño",
+      "known_at": 14
+    },
+    {
+      "name": "Streamline",
+      "facet": "Movimientos y estilos de diseño",
+      "known_at": 14
+    },
+    {
+      "name": "Arts and Crafts",
+      "facet": "Movimientos y estilos de diseño",
+      "known_at": 14
+    },
+    {
+      "name": "Wabi-sabi",
+      "facet": "Movimientos y estilos de diseño",
+      "known_at": 14
+    },
+    {
+      "name": "Bus escolar amarillo",
+      "facet": "Diseño de carros y transporte",
+      "known_at": 2,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Patineta eléctrica",
+      "facet": "Diseño de carros y transporte",
+      "known_at": 3
+    },
+    {
+      "name": "Motocarro",
+      "facet": "Diseño de carros y transporte",
+      "known_at": 6,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Vespa",
+      "facet": "Diseño de carros y transporte",
+      "known_at": 7
+    },
+    {
+      "name": "Zepelín",
+      "facet": "Diseño de carros y transporte",
+      "known_at": 9
+    },
+    {
+      "name": "Televisor de tubo",
+      "facet": "Aparatos electrónicos y tecnología",
+      "known_at": 6
+    },
+    {
+      "name": "Teclado QWERTY",
+      "facet": "Aparatos electrónicos y tecnología",
+      "known_at": 8
+    },
+    {
+      "name": "Radio de transistores",
+      "facet": "Aparatos electrónicos y tecnología",
+      "known_at": 10
+    },
+    {
+      "name": "Balero",
+      "facet": "Juguetes y juegos de diseño",
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Interruptor de luz",
+      "facet": "Ergonomía y forma-función",
+      "known_at": 2
+    },
+    {
+      "name": "Asa",
+      "facet": "Ergonomía y forma-función",
+      "known_at": 3
+    },
+    {
+      "name": "Pasamanos",
+      "facet": "Ergonomía y forma-función",
+      "known_at": 3
+    },
+    {
+      "name": "Picaporte",
+      "facet": "Ergonomía y forma-función",
+      "known_at": 4
+    },
+    {
+      "name": "Tijeras para zurdos",
+      "facet": "Ergonomía y forma-función",
+      "known_at": 5
+    },
+    {
+      "name": "Suela antideslizante",
+      "facet": "Ergonomía y forma-función",
+      "known_at": 5
+    },
+    {
+      "name": "Postura",
+      "facet": "Ergonomía y forma-función",
+      "known_at": 6
+    },
+    {
+      "name": "Braille",
+      "facet": "Ergonomía y forma-función",
+      "known_at": 7
+    },
+    {
+      "name": "Teclado ergonómico",
+      "facet": "Ergonomía y forma-función",
+      "known_at": 8
+    },
+    {
+      "name": "Prototipo",
+      "facet": "Ergonomía y forma-función",
+      "known_at": 8
+    },
+    {
+      "name": "Ergonomía",
+      "facet": "Ergonomía y forma-función",
+      "known_at": 9
+    },
+    {
+      "name": "Accesibilidad",
+      "facet": "Ergonomía y forma-función",
+      "known_at": 9
+    },
+    {
+      "name": "Pictograma",
+      "facet": "Ergonomía y forma-función",
+      "known_at": 9
+    },
+    {
+      "name": "Señalética",
+      "facet": "Ergonomía y forma-función",
+      "known_at": 11
+    },
+    {
+      "name": "Diseño universal",
+      "facet": "Ergonomía y forma-función",
+      "known_at": 12
+    },
+    {
+      "name": "Usabilidad",
+      "facet": "Ergonomía y forma-función",
+      "known_at": 12
+    },
+    {
+      "name": "La forma sigue a la función",
+      "facet": "Ergonomía y forma-función",
+      "known_at": 13
+    },
+    {
+      "name": "Torno de alfarero",
+      "facet": "Materiales y técnicas de fabricación",
+      "known_at": 6
+    },
+    {
+      "name": "Vidrio soplado",
+      "facet": "Materiales y técnicas de fabricación",
+      "known_at": 7
+    },
+    {
+      "name": "Corte láser",
+      "facet": "Materiales y técnicas de fabricación",
+      "known_at": 8
+    },
+    {
+      "name": "Acrílico",
+      "facet": "Materiales y técnicas de fabricación",
+      "known_at": 8
+    },
+    {
+      "name": "Producción en cadena",
+      "facet": "Materiales y técnicas de fabricación",
+      "known_at": 9
+    },
+    {
+      "name": "Contrachapado",
+      "facet": "Materiales y técnicas de fabricación",
+      "known_at": 11
+    },
+    {
+      "name": "Moldeo por inyección",
+      "facet": "Materiales y técnicas de fabricación",
+      "known_at": 12
+    },
+    {
+      "name": "Madera curvada",
+      "facet": "Materiales y técnicas de fabricación",
+      "known_at": 13
+    },
+    {
+      "name": "Hamaca de San Jacinto",
+      "facet": "Artesanía y diseño colombiano",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Filigrana de Mompox",
+      "facet": "Artesanía y diseño colombiano",
+      "known_at": 11
+    },
+    {
+      "name": "Cerámica negra de La Chamba",
+      "facet": "Artesanía y diseño colombiano",
+      "known_at": 11
+    },
+    {
+      "name": "Barniz de Pasto",
+      "facet": "Artesanía y diseño colombiano",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Palma de iraca",
+      "facet": "Artesanía y diseño colombiano",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Werregue",
+      "facet": "Artesanía y diseño colombiano",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Botella de Coca-Cola",
+      "facet": "Logotipos, envases y empaques",
+      "known_at": 2
+    },
+    {
+      "name": "Logo de Apple",
+      "facet": "Logotipos, envases y empaques",
+      "known_at": 2
+    },
+    {
+      "name": "Arcos dorados de McDonald's",
+      "facet": "Logotipos, envases y empaques",
+      "known_at": 2
+    },
+    {
+      "name": "Cubeta de huevos",
+      "facet": "Logotipos, envases y empaques",
+      "known_at": 3
+    },
+    {
+      "name": "Aros olímpicos",
+      "facet": "Logotipos, envases y empaques",
+      "known_at": 3
+    },
+    {
+      "name": "Tubo de Pringles",
+      "facet": "Logotipos, envases y empaques",
+      "known_at": 4
+    },
+    {
+      "name": "Código de barras",
+      "facet": "Logotipos, envases y empaques",
+      "known_at": 5
+    },
+    {
+      "name": "Logo de Juan Valdez",
+      "facet": "Logotipos, envases y empaques",
+      "known_at": 5,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Caja de Toblerone",
+      "facet": "Logotipos, envases y empaques",
+      "known_at": 9
+    },
+    {
+      "name": "Logo I ♥ NY",
+      "facet": "Logotipos, envases y empaques",
+      "known_at": 11,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Lata de sopa Campbell",
+      "facet": "Logotipos, envases y empaques",
+      "known_at": 11
+    }
+  ]
+}

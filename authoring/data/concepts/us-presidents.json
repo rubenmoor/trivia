@@ -1,0 +1,1069 @@
+{
+  "subcategory": "us-presidents",
+  "facets": [
+    "Presidentes fundadores",
+    "Presidentes de la Guerra Civil",
+    "Presidentes del siglo XX",
+    "Presidentes recientes",
+    "La Casa Blanca",
+    "Monumentos y memoriales presidenciales",
+    "Elecciones y cargo presidencial",
+    "Frases y discursos famosos",
+    "Presidentes en billetes y monedas",
+    "Mascotas y curiosidades presidenciales",
+    "Presidentes en el cine y la cultura pop",
+    "Presidentes y América Latina"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 3,
+      "record": 4,
+      "origin": 2,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 2,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "George Washington",
+      "facet": "Presidentes fundadores",
+      "known_at": 3
+    },
+    {
+      "name": "Thomas Jefferson",
+      "facet": "Presidentes fundadores",
+      "known_at": 8
+    },
+    {
+      "name": "John Adams",
+      "facet": "Presidentes fundadores",
+      "known_at": 10
+    },
+    {
+      "name": "James Madison",
+      "facet": "Presidentes fundadores",
+      "known_at": 12
+    },
+    {
+      "name": "James Monroe",
+      "facet": "Presidentes fundadores",
+      "known_at": 12
+    },
+    {
+      "name": "John Quincy Adams",
+      "facet": "Presidentes fundadores",
+      "known_at": 13
+    },
+    {
+      "name": "Andrew Jackson",
+      "facet": "Presidentes fundadores",
+      "known_at": 12
+    },
+    {
+      "name": "Alexander Hamilton",
+      "facet": "Presidentes fundadores",
+      "known_at": 9
+    },
+    {
+      "name": "Declaración de Independencia de Estados Unidos",
+      "facet": "Presidentes fundadores",
+      "known_at": 8
+    },
+    {
+      "name": "Constitución de Estados Unidos",
+      "facet": "Presidentes fundadores",
+      "known_at": 9
+    },
+    {
+      "name": "Cruce del río Delaware",
+      "facet": "Presidentes fundadores",
+      "known_at": 12
+    },
+    {
+      "name": "Monte Vernon",
+      "facet": "Presidentes fundadores",
+      "known_at": 12
+    },
+    {
+      "name": "Monticello",
+      "facet": "Presidentes fundadores",
+      "known_at": 13
+    },
+    {
+      "name": "Compra de Luisiana",
+      "facet": "Presidentes fundadores",
+      "known_at": 12
+    },
+    {
+      "name": "Expedición de Lewis y Clark",
+      "facet": "Presidentes fundadores",
+      "known_at": 13
+    },
+    {
+      "name": "Martha Washington",
+      "facet": "Presidentes fundadores",
+      "known_at": 11
+    },
+    {
+      "name": "Abigail Adams",
+      "facet": "Presidentes fundadores",
+      "known_at": 13
+    },
+    {
+      "name": "Dentadura postiza de Washington",
+      "facet": "Presidentes fundadores",
+      "known_at": 10
+    },
+    {
+      "name": "Partido Federalista",
+      "facet": "Presidentes fundadores",
+      "known_at": 14
+    },
+    {
+      "name": "Abraham Lincoln",
+      "facet": "Presidentes de la Guerra Civil",
+      "known_at": 3
+    },
+    {
+      "name": "Guerra de Secesión",
+      "facet": "Presidentes de la Guerra Civil",
+      "known_at": 9
+    },
+    {
+      "name": "Proclamación de Emancipación",
+      "facet": "Presidentes de la Guerra Civil",
+      "known_at": 11
+    },
+    {
+      "name": "Discurso de Gettysburg",
+      "facet": "Presidentes de la Guerra Civil",
+      "known_at": 11
+    },
+    {
+      "name": "Batalla de Gettysburg",
+      "facet": "Presidentes de la Guerra Civil",
+      "known_at": 12
+    },
+    {
+      "name": "Ulysses S. Grant",
+      "facet": "Presidentes de la Guerra Civil",
+      "known_at": 12
+    },
+    {
+      "name": "Jefferson Davis",
+      "facet": "Presidentes de la Guerra Civil",
+      "known_at": 14
+    },
+    {
+      "name": "Robert E. Lee",
+      "facet": "Presidentes de la Guerra Civil",
+      "known_at": 13
+    },
+    {
+      "name": "Andrew Johnson",
+      "facet": "Presidentes de la Guerra Civil",
+      "known_at": 13
+    },
+    {
+      "name": "James Buchanan",
+      "facet": "Presidentes de la Guerra Civil",
+      "known_at": 15
+    },
+    {
+      "name": "Teatro Ford",
+      "facet": "Presidentes de la Guerra Civil",
+      "known_at": 13
+    },
+    {
+      "name": "John Wilkes Booth",
+      "facet": "Presidentes de la Guerra Civil",
+      "known_at": 14
+    },
+    {
+      "name": "Abolición de la esclavitud",
+      "facet": "Presidentes de la Guerra Civil",
+      "known_at": 8
+    },
+    {
+      "name": "Decimotercera Enmienda",
+      "facet": "Presidentes de la Guerra Civil",
+      "known_at": 13
+    },
+    {
+      "name": "Estados Confederados de América",
+      "facet": "Presidentes de la Guerra Civil",
+      "known_at": 10
+    },
+    {
+      "name": "La Unión",
+      "facet": "Presidentes de la Guerra Civil",
+      "known_at": 10
+    },
+    {
+      "name": "Sombrero de copa de Lincoln",
+      "facet": "Presidentes de la Guerra Civil",
+      "known_at": 6
+    },
+    {
+      "name": "Cabaña de troncos",
+      "facet": "Presidentes de la Guerra Civil",
+      "known_at": 11
+    },
+    {
+      "name": "Mary Todd Lincoln",
+      "facet": "Presidentes de la Guerra Civil",
+      "known_at": 14
+    },
+    {
+      "name": "Harriet Tubman",
+      "facet": "Presidentes de la Guerra Civil",
+      "known_at": 11
+    },
+    {
+      "name": "Lyndon B. Johnson",
+      "facet": "Presidentes del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Gerald Ford",
+      "facet": "Presidentes del siglo XX",
+      "known_at": 14
+    },
+    {
+      "name": "Herbert Hoover",
+      "facet": "Presidentes del siglo XX",
+      "known_at": 14
+    },
+    {
+      "name": "Calvin Coolidge",
+      "facet": "Presidentes del siglo XX",
+      "known_at": 15
+    },
+    {
+      "name": "George H. W. Bush",
+      "facet": "Presidentes del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Bill Clinton",
+      "facet": "Presidentes del siglo XX",
+      "known_at": 9
+    },
+    {
+      "name": "New Deal",
+      "facet": "Presidentes del siglo XX",
+      "known_at": 13
+    },
+    {
+      "name": "Escándalo Watergate",
+      "facet": "Presidentes del siglo XX",
+      "known_at": 11
+    },
+    {
+      "name": "Eleanor Roosevelt",
+      "facet": "Presidentes del siglo XX",
+      "known_at": 12
+    },
+    {
+      "name": "Jacqueline Kennedy",
+      "facet": "Presidentes del siglo XX",
+      "known_at": 11
+    },
+    {
+      "name": "George W. Bush",
+      "facet": "Presidentes recientes",
+      "known_at": 8
+    },
+    {
+      "name": "Donald Trump",
+      "facet": "Presidentes recientes",
+      "known_at": 4
+    },
+    {
+      "name": "Joe Biden",
+      "facet": "Presidentes recientes",
+      "known_at": 5
+    },
+    {
+      "name": "Kamala Harris",
+      "facet": "Presidentes recientes",
+      "known_at": 8
+    },
+    {
+      "name": "Michelle Obama",
+      "facet": "Presidentes recientes",
+      "known_at": 7
+    },
+    {
+      "name": "Hillary Clinton",
+      "facet": "Presidentes recientes",
+      "known_at": 9
+    },
+    {
+      "name": "Melania Trump",
+      "facet": "Presidentes recientes",
+      "known_at": 10
+    },
+    {
+      "name": "Jill Biden",
+      "facet": "Presidentes recientes",
+      "known_at": 13
+    },
+    {
+      "name": "Laura Bush",
+      "facet": "Presidentes recientes",
+      "known_at": 14
+    },
+    {
+      "name": "Dick Cheney",
+      "facet": "Presidentes recientes",
+      "known_at": 13
+    },
+    {
+      "name": "Mike Pence",
+      "facet": "Presidentes recientes",
+      "known_at": 13
+    },
+    {
+      "name": "Atentados del 11 de septiembre",
+      "facet": "Presidentes recientes",
+      "known_at": 7
+    },
+    {
+      "name": "Obamacare",
+      "facet": "Presidentes recientes",
+      "known_at": 11
+    },
+    {
+      "name": "Premio Nobel de la Paz de Obama",
+      "facet": "Presidentes recientes",
+      "known_at": 11
+    },
+    {
+      "name": "Elecciones presidenciales de 2000",
+      "facet": "Presidentes recientes",
+      "known_at": 13
+    },
+    {
+      "name": "Asalto al Capitolio de 2021",
+      "facet": "Presidentes recientes",
+      "known_at": 12
+    },
+    {
+      "name": "Despacho Oval",
+      "facet": "La Casa Blanca",
+      "known_at": 6
+    },
+    {
+      "name": "Ala Oeste",
+      "facet": "La Casa Blanca",
+      "known_at": 11
+    },
+    {
+      "name": "Jardín de las Rosas",
+      "facet": "La Casa Blanca",
+      "known_at": 11
+    },
+    {
+      "name": "Avenida Pensilvania 1600",
+      "facet": "La Casa Blanca",
+      "known_at": 12
+    },
+    {
+      "name": "Sala de Prensa de la Casa Blanca",
+      "facet": "La Casa Blanca",
+      "known_at": 12
+    },
+    {
+      "name": "Escritorio Resolute",
+      "facet": "La Casa Blanca",
+      "known_at": 14
+    },
+    {
+      "name": "Dormitorio Lincoln",
+      "facet": "La Casa Blanca",
+      "known_at": 13
+    },
+    {
+      "name": "Sala Este",
+      "facet": "La Casa Blanca",
+      "known_at": 14
+    },
+    {
+      "name": "Sala de Situaciones",
+      "facet": "La Casa Blanca",
+      "known_at": 12
+    },
+    {
+      "name": "Incendio de la Casa Blanca de 1814",
+      "facet": "La Casa Blanca",
+      "known_at": 14
+    },
+    {
+      "name": "Huerto de la Casa Blanca",
+      "facet": "La Casa Blanca",
+      "known_at": 13
+    },
+    {
+      "name": "Bolera de la Casa Blanca",
+      "facet": "La Casa Blanca",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Carrera de huevos de Pascua de la Casa Blanca",
+      "facet": "La Casa Blanca",
+      "known_at": 10,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Camp David",
+      "facet": "La Casa Blanca",
+      "known_at": 13
+    },
+    {
+      "name": "Servicio Secreto",
+      "facet": "La Casa Blanca",
+      "known_at": 8
+    },
+    {
+      "name": "Primera dama",
+      "facet": "La Casa Blanca",
+      "known_at": 6
+    },
+    {
+      "name": "Capitolio de Estados Unidos",
+      "facet": "La Casa Blanca",
+      "known_at": 7
+    },
+    {
+      "name": "James Hoban",
+      "facet": "La Casa Blanca",
+      "known_at": 15
+    },
+    {
+      "name": "Monumento a Washington",
+      "facet": "Monumentos y memoriales presidenciales",
+      "known_at": 8
+    },
+    {
+      "name": "Monumento a Lincoln",
+      "facet": "Monumentos y memoriales presidenciales",
+      "known_at": 7
+    },
+    {
+      "name": "Memorial a Jefferson",
+      "facet": "Monumentos y memoriales presidenciales",
+      "known_at": 12
+    },
+    {
+      "name": "Memorial a Franklin D. Roosevelt",
+      "facet": "Monumentos y memoriales presidenciales",
+      "known_at": 14
+    },
+    {
+      "name": "Memorial a Eisenhower",
+      "facet": "Monumentos y memoriales presidenciales",
+      "known_at": 15
+    },
+    {
+      "name": "National Mall",
+      "facet": "Monumentos y memoriales presidenciales",
+      "known_at": 12
+    },
+    {
+      "name": "Cementerio Nacional de Arlington",
+      "facet": "Monumentos y memoriales presidenciales",
+      "known_at": 12
+    },
+    {
+      "name": "Llama eterna de Kennedy",
+      "facet": "Monumentos y memoriales presidenciales",
+      "known_at": 14
+    },
+    {
+      "name": "Biblioteca presidencial",
+      "facet": "Monumentos y memoriales presidenciales",
+      "known_at": 13
+    },
+    {
+      "name": "Gutzon Borglum",
+      "facet": "Monumentos y memoriales presidenciales",
+      "known_at": 15
+    },
+    {
+      "name": "Dakota del Sur",
+      "facet": "Monumentos y memoriales presidenciales",
+      "known_at": 12
+    },
+    {
+      "name": "Aeropuerto Internacional John F. Kennedy",
+      "facet": "Monumentos y memoriales presidenciales",
+      "known_at": 9
+    },
+    {
+      "name": "Centro Kennedy",
+      "facet": "Monumentos y memoriales presidenciales",
+      "known_at": 14
+    },
+    {
+      "name": "Estado de Washington",
+      "facet": "Monumentos y memoriales presidenciales",
+      "known_at": 11
+    },
+    {
+      "name": "Piscina reflectante del Monumento a Lincoln",
+      "facet": "Monumentos y memoriales presidenciales",
+      "known_at": 12
+    },
+    {
+      "name": "Colegio Electoral",
+      "facet": "Elecciones y cargo presidencial",
+      "known_at": 12
+    },
+    {
+      "name": "Vicepresidente",
+      "facet": "Elecciones y cargo presidencial",
+      "known_at": 7
+    },
+    {
+      "name": "Día de la Investidura",
+      "facet": "Elecciones y cargo presidencial",
+      "known_at": 11
+    },
+    {
+      "name": "Juramento presidencial",
+      "facet": "Elecciones y cargo presidencial",
+      "known_at": 11
+    },
+    {
+      "name": "Partido Demócrata",
+      "facet": "Elecciones y cargo presidencial",
+      "known_at": 9
+    },
+    {
+      "name": "Partido Republicano",
+      "facet": "Elecciones y cargo presidencial",
+      "known_at": 9
+    },
+    {
+      "name": "Burro demócrata",
+      "facet": "Elecciones y cargo presidencial",
+      "known_at": 12
+    },
+    {
+      "name": "Elefante republicano",
+      "facet": "Elecciones y cargo presidencial",
+      "known_at": 11
+    },
+    {
+      "name": "Mandato de cuatro años",
+      "facet": "Elecciones y cargo presidencial",
+      "known_at": 9
+    },
+    {
+      "name": "Vigesimosegunda Enmienda",
+      "facet": "Elecciones y cargo presidencial",
+      "known_at": 14
+    },
+    {
+      "name": "Juicio político",
+      "facet": "Elecciones y cargo presidencial",
+      "known_at": 13
+    },
+    {
+      "name": "Elecciones primarias",
+      "facet": "Elecciones y cargo presidencial",
+      "known_at": 13
+    },
+    {
+      "name": "Martes de elecciones",
+      "facet": "Elecciones y cargo presidencial",
+      "known_at": 13
+    },
+    {
+      "name": "Estados bisagra",
+      "facet": "Elecciones y cargo presidencial",
+      "known_at": 14
+    },
+    {
+      "name": "Congreso de Estados Unidos",
+      "facet": "Elecciones y cargo presidencial",
+      "known_at": 9
+    },
+    {
+      "name": "Senado de Estados Unidos",
+      "facet": "Elecciones y cargo presidencial",
+      "known_at": 10
+    },
+    {
+      "name": "Corte Suprema de Estados Unidos",
+      "facet": "Elecciones y cargo presidencial",
+      "known_at": 10
+    },
+    {
+      "name": "Comandante en jefe",
+      "facet": "Elecciones y cargo presidencial",
+      "known_at": 10
+    },
+    {
+      "name": "Air Force One",
+      "facet": "Elecciones y cargo presidencial",
+      "known_at": 6
+    },
+    {
+      "name": "Marine One",
+      "facet": "Elecciones y cargo presidencial",
+      "known_at": 13
+    },
+    {
+      "name": "Maletín nuclear",
+      "facet": "Elecciones y cargo presidencial",
+      "known_at": 14
+    },
+    {
+      "name": "Yes we can",
+      "facet": "Frases y discursos famosos",
+      "known_at": 7
+    },
+    {
+      "name": "No preguntes qué puede hacer tu país por ti",
+      "facet": "Frases y discursos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Lo único que debemos temer es al miedo mismo",
+      "facet": "Frases y discursos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "No soy un delincuente",
+      "facet": "Frases y discursos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Habla suavemente y lleva un gran garrote",
+      "facet": "Frases y discursos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Una casa dividida contra sí misma no puede sostenerse",
+      "facet": "Frases y discursos famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Make America Great Again",
+      "facet": "Frases y discursos famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Elegimos ir a la Luna",
+      "facet": "Frases y discursos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Un día que vivirá en la infamia",
+      "facet": "Frases y discursos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "La responsabilidad termina aquí",
+      "facet": "Frases y discursos famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Lean mis labios: no más impuestos",
+      "facet": "Frases y discursos famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Charlas junto a la chimenea",
+      "facet": "Frases y discursos famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Discurso del Estado de la Unión",
+      "facet": "Frases y discursos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Discurso de despedida de Washington",
+      "facet": "Frases y discursos famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Las cuatro libertades",
+      "facet": "Frases y discursos famosos",
+      "known_at": 15
+    },
+    {
+      "name": "Cerezo de George Washington",
+      "facet": "Frases y discursos famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Billete de un dólar",
+      "facet": "Presidentes en billetes y monedas",
+      "known_at": 6
+    },
+    {
+      "name": "Billete de dos dólares",
+      "facet": "Presidentes en billetes y monedas",
+      "known_at": 13
+    },
+    {
+      "name": "Billete de cinco dólares",
+      "facet": "Presidentes en billetes y monedas",
+      "known_at": 10
+    },
+    {
+      "name": "Billete de diez dólares",
+      "facet": "Presidentes en billetes y monedas",
+      "known_at": 12
+    },
+    {
+      "name": "Billete de veinte dólares",
+      "facet": "Presidentes en billetes y monedas",
+      "known_at": 11
+    },
+    {
+      "name": "Billete de cincuenta dólares",
+      "facet": "Presidentes en billetes y monedas",
+      "known_at": 13
+    },
+    {
+      "name": "Billete de cien dólares",
+      "facet": "Presidentes en billetes y monedas",
+      "known_at": 9
+    },
+    {
+      "name": "Centavo de Lincoln",
+      "facet": "Presidentes en billetes y monedas",
+      "known_at": 9
+    },
+    {
+      "name": "Moneda de cinco centavos",
+      "facet": "Presidentes en billetes y monedas",
+      "known_at": 12
+    },
+    {
+      "name": "Moneda de diez centavos",
+      "facet": "Presidentes en billetes y monedas",
+      "known_at": 13
+    },
+    {
+      "name": "Moneda de veinticinco centavos",
+      "facet": "Presidentes en billetes y monedas",
+      "known_at": 11
+    },
+    {
+      "name": "Medio dólar de Kennedy",
+      "facet": "Presidentes en billetes y monedas",
+      "known_at": 14
+    },
+    {
+      "name": "Monedas de dólar presidenciales",
+      "facet": "Presidentes en billetes y monedas",
+      "known_at": 15
+    },
+    {
+      "name": "In God We Trust",
+      "facet": "Presidentes en billetes y monedas",
+      "known_at": 11
+    },
+    {
+      "name": "Ojo que todo lo ve",
+      "facet": "Presidentes en billetes y monedas",
+      "known_at": 11
+    },
+    {
+      "name": "Reserva Federal",
+      "facet": "Presidentes en billetes y monedas",
+      "known_at": 13
+    },
+    {
+      "name": "Perdón presidencial del pavo",
+      "facet": "Mascotas y curiosidades presidenciales",
+      "known_at": 8,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Bo",
+      "facet": "Mascotas y curiosidades presidenciales",
+      "known_at": 12
+    },
+    {
+      "name": "Fala",
+      "facet": "Mascotas y curiosidades presidenciales",
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Socks",
+      "facet": "Mascotas y curiosidades presidenciales",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Major",
+      "facet": "Mascotas y curiosidades presidenciales",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Macaroni",
+      "facet": "Mascotas y curiosidades presidenciales",
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Caimán de John Quincy Adams",
+      "facet": "Mascotas y curiosidades presidenciales",
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Mapache de Coolidge",
+      "facet": "Mascotas y curiosidades presidenciales",
+      "known_at": 15,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Bañera de Taft",
+      "facet": "Mascotas y curiosidades presidenciales",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "William Howard Taft",
+      "facet": "Mascotas y curiosidades presidenciales",
+      "known_at": 14
+    },
+    {
+      "name": "William Henry Harrison",
+      "facet": "Mascotas y curiosidades presidenciales",
+      "known_at": 14
+    },
+    {
+      "name": "Grover Cleveland",
+      "facet": "Mascotas y curiosidades presidenciales",
+      "known_at": 14
+    },
+    {
+      "name": "Gomitas de Reagan",
+      "facet": "Mascotas y curiosidades presidenciales",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Saxofón de Bill Clinton",
+      "facet": "Mascotas y curiosidades presidenciales",
+      "known_at": 11
+    },
+    {
+      "name": "Granja de maní de Jimmy Carter",
+      "facet": "Mascotas y curiosidades presidenciales",
+      "known_at": 13
+    },
+    {
+      "name": "Brócoli de George H. W. Bush",
+      "facet": "Mascotas y curiosidades presidenciales",
+      "known_at": 14
+    },
+    {
+      "name": "Lincoln luchador",
+      "facet": "Mascotas y curiosidades presidenciales",
+      "known_at": 13,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Hamilton",
+      "facet": "Presidentes en el cine y la cultura pop",
+      "known_at": 11
+    },
+    {
+      "name": "Lincoln (película)",
+      "facet": "Presidentes en el cine y la cultura pop",
+      "known_at": 12
+    },
+    {
+      "name": "Abraham Lincoln: cazador de vampiros",
+      "facet": "Presidentes en el cine y la cultura pop",
+      "known_at": 14
+    },
+    {
+      "name": "Air Force One (película)",
+      "facet": "Presidentes en el cine y la cultura pop",
+      "known_at": 13
+    },
+    {
+      "name": "Día de la Independencia",
+      "facet": "Presidentes en el cine y la cultura pop",
+      "known_at": 10
+    },
+    {
+      "name": "La leyenda del tesoro perdido",
+      "facet": "Presidentes en el cine y la cultura pop",
+      "known_at": 12
+    },
+    {
+      "name": "The West Wing",
+      "facet": "Presidentes en el cine y la cultura pop",
+      "known_at": 14
+    },
+    {
+      "name": "Todos los hombres del presidente",
+      "facet": "Presidentes en el cine y la cultura pop",
+      "known_at": 15
+    },
+    {
+      "name": "Frost/Nixon",
+      "facet": "Presidentes en el cine y la cultura pop",
+      "known_at": 15
+    },
+    {
+      "name": "JFK (película)",
+      "facet": "Presidentes en el cine y la cultura pop",
+      "known_at": 14
+    },
+    {
+      "name": "Jackie",
+      "facet": "Presidentes en el cine y la cultura pop",
+      "known_at": 15
+    },
+    {
+      "name": "Mars Attacks!",
+      "facet": "Presidentes en el cine y la cultura pop",
+      "known_at": 14
+    },
+    {
+      "name": "Sala de los Presidentes de Disney",
+      "facet": "Presidentes en el cine y la cultura pop",
+      "known_at": 14,
+      "retired": "unaskable: international angle, anglo-world only (task 1204)"
+    },
+    {
+      "name": "Bill y Ted",
+      "facet": "Presidentes en el cine y la cultura pop",
+      "known_at": 15
+    },
+    {
+      "name": "Doctrina Monroe",
+      "facet": "Presidentes y América Latina",
+      "known_at": 12
+    },
+    {
+      "name": "Separación de Panamá",
+      "facet": "Presidentes y América Latina",
+      "known_at": 12
+    },
+    {
+      "name": "Tratados Torrijos-Carter",
+      "facet": "Presidentes y América Latina",
+      "known_at": 15,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Política del Gran Garrote",
+      "facet": "Presidentes y América Latina",
+      "known_at": 14
+    },
+    {
+      "name": "Visita de Kennedy a Colombia",
+      "facet": "Presidentes y América Latina",
+      "known_at": 14,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Kennedy (localidad de Bogotá)",
+      "facet": "Presidentes y América Latina",
+      "known_at": 10,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Bahía de Cochinos",
+      "facet": "Presidentes y América Latina",
+      "known_at": 13
+    },
+    {
+      "name": "Visita de Obama a Cuba",
+      "facet": "Presidentes y América Latina",
+      "known_at": 13
+    },
+    {
+      "name": "Guerra hispano-estadounidense",
+      "facet": "Presidentes y América Latina",
+      "known_at": 13
+    },
+    {
+      "name": "Rough Riders",
+      "facet": "Presidentes y América Latina",
+      "known_at": 14
+    },
+    {
+      "name": "Guerra de Estados Unidos contra México",
+      "facet": "Presidentes y América Latina",
+      "known_at": 13
+    },
+    {
+      "name": "Anexión de Texas",
+      "facet": "Presidentes y América Latina",
+      "known_at": 14
+    },
+    {
+      "name": "El Álamo",
+      "facet": "Presidentes y América Latina",
+      "known_at": 13
+    },
+    {
+      "name": "Plan Colombia",
+      "facet": "Presidentes y América Latina",
+      "known_at": 12,
+      "retired": "unaskable: international angle, spanish-world only (task 1204)"
+    },
+    {
+      "name": "Muro fronterizo con México",
+      "facet": "Presidentes y América Latina",
+      "known_at": 9
+    },
+    {
+      "name": "Tratado de Libre Comercio de América del Norte",
+      "facet": "Presidentes y América Latina",
+      "known_at": 13
+    }
+  ]
+}
