@@ -913,6 +913,7 @@ Template:
   - **Every mode** shows the shared `BundleSelector` on its own screen, Bundles, between Player and Choice (amended 2026-10-16, pm decisions 158, 260; plan 151): «Solo o en grupo» too, with letter keys (`keyOf`), mouse and pad; Choice shows the pick as a read-only line and keeps the supply report.
   - **Not customization:** its own screen; not in «Personalizar partida», not counted in `customized`.
   - **Preset** in both modes: `playerChoice`, the player's newest game's bundles, else the locale's first base bundle, non-base off (pm decision 33).
+  - **Flag icons** (amended 2026-10-16, decision 263; plan 151): a regional bundle's icon is its `country`'s flag wherever a bundle shows an icon, mod bundles too; no pin for regional bundles.
 - Consequences: a fresh solo game plays base only (was: every offered bundle); a non-base mod bundle is off by default in solo too.
 - Supersedes / related: pm decision 51 (solo plays the defaults); pm decisions 33, 38 in part (fresh default on the configure screen only); D-85, D-88
 

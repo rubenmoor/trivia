@@ -36,6 +36,8 @@ export function poolHash(json: unknown): string | null {
 export interface Bundle {
   id: string;
   kind: string;
+  /** `kind: "region"` only, required there: ISO 3166-1 alpha-2 (plan 151); its flag is the bundle's icon. */
+  country?: string;
   /** Question locales it's offered in. */
   languages: string[];
   name: string;
@@ -50,13 +52,26 @@ export interface Bundle {
 export const isModId = (id: string): boolean => id.includes(":");
 export const isOurs = (id: string): boolean => !isModId(id);
 
+/** A regional bundle's `country` (plan 151); COUNTRY in authoring/tools/qgen.py, countryOk in app/desktop/mods.mjs. */
+const COUNTRY = /^[A-Z]{2}$/;
+
+/** `country` present and well-formed exactly on a regional bundle. */
+const countryOk = (kind: unknown, country: unknown): boolean =>
+  kind === "region" ? typeof country === "string" && COUNTRY.test(country) : country === undefined;
+
+/** Our rows throw when bad; a mod row with a bad `country` is skipped. */
 export function parseBundles(json: unknown): Bundle[] {
   const bundles = (json as { bundles?: unknown } | null)?.bundles;
   if (!Array.isArray(bundles) || bundles.length === 0) throw new Error("bundles.json: no bundles");
-  return bundles.map(({ id, kind, languages, name, description, source, mod, modName }) => {
+  return bundles.flatMap(({ id, kind, country, languages, name, description, source, mod, modName }) => {
     if (typeof kind !== "string" || !kind) throw new Error(`bundles.json: ${id}: no kind`);
     if (!Array.isArray(languages) || (languages.length === 0 && source !== "mod")) throw new Error(`bundles.json: ${id}: no languages`);
-    return source === "mod" ? { id, kind, languages, name, description, source, mod, modName } : { id, kind, languages, name, description };
+    if (!countryOk(kind, country)) {
+      if (source === "mod") return [];
+      throw new Error(`bundles.json: ${id}: country`);
+    }
+    const c = country === undefined ? {} : { country };
+    return [source === "mod" ? { id, kind, ...c, languages, name, description, source, mod, modName } : { id, kind, ...c, languages, name, description }];
   });
 }
 

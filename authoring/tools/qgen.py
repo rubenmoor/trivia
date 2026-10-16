@@ -11,7 +11,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
 
     qgen concepts [--subcategories "Volcanes,Piratas"] [--top-up] [--fill]   # concept lists (D-37)
     qgen bundles                    # sort the pool into bundles (D-39)
-    qgen bundle new <id> --name … --description … --kind region|theme --language <L> --rule … --voice …   # an empty bundle (D-41)
+    qgen bundle new <id> --name … --description … --kind region|theme --language <L> --country <CC> --rule … --voice …   # an empty bundle (D-41)
     qgen taxonomy --bundle <id> [--apply work/taxonomy/<id>/proposal.json]   # a regional bundle's categories (plan 138)
     qgen remap --bundle <id> [--apply work/remap/<id>/proposal.json]   # its questions onto a new taxonomy (plan 138)
     qgen rekey --map work/slugs/proposal.json [--apply]   # category and subcategory keys → English slugs (plan 149); dry run by default
@@ -4821,6 +4821,9 @@ def slug_problems():
     return errors
 
 
+COUNTRY = r"[A-Z]{2}"  # a regional bundle's country (plan 151); COUNTRY in app/client/src/engine/pool.ts
+
+
 def bundle_problems(bundles):
     """(errors, warnings): bundle languages and base bundles (plan 71)."""
     errors, warnings, rel = [], [], "app/data/bundles.json"
@@ -4832,6 +4835,10 @@ def bundle_problems(bundles):
             errors.append(f"{rel}: {bid}: always_on is gone; kind base marks a base bundle")
         if b.get("kind") not in {"base", "region", "theme"}:
             errors.append(f"{rel}: {bid}: kind must be base, region or theme")
+        if b.get("kind") == "region" and not re.fullmatch(COUNTRY, str(b.get("country", ""))):
+            errors.append(f"{rel}: {bid}: a regional bundle needs country, ISO 3166-1 alpha-2 in capitals (e.g. CO)")
+        if b.get("kind") != "region" and "country" in b:
+            errors.append(f"{rel}: {bid}: country only on a regional bundle")
     listed = {l: {b["id"] for b in bundles if l in (b.get("languages") or [])} for l in translations.LOCALES}
     for l in translations.LOCALES:
         path = layout.POOL_FILE(l, "base")
@@ -4863,9 +4870,12 @@ def cmd_bundle_new(args):
     data = load_json(layout.BUNDLES)
     if any(b["id"] == args.id for b in data["bundles"]):
         sys.exit(f"Bundle {args.id!r} already exists.")
-    if args.kind == "region" and not (args.language and args.voice):
-        sys.exit("A regional bundle needs --language (the region's) and --voice (its language variety).")
-    data["bundles"].append({"id": args.id, "kind": args.kind, "languages": [args.language or "es"], "name": args.name,
+    if args.kind == "region" and not (args.language and args.voice and args.country):
+        sys.exit("A regional bundle needs --language (the region's), --voice (its language variety) and --country.")
+    if args.country and (args.kind != "region" or not re.fullmatch(COUNTRY, args.country)):
+        sys.exit("--country: a regional bundle's ISO 3166-1 alpha-2 code in capitals, e.g. CO.")
+    data["bundles"].append({"id": args.id, "kind": args.kind, **({"country": args.country} if args.country else {}),
+                            "languages": [args.language or "es"], "name": args.name,
                             "description": args.description, "rule": args.rule,
                             **({"voice": args.voice} if args.voice else {})})
     save_json(layout.BUNDLES, data)
@@ -5324,6 +5334,7 @@ def main():
     bnew.add_argument("--kind", required=True, choices=["region", "theme"])
     bnew.add_argument("--language", choices=translations.LOCALES,
                       help="region: the locale it drafts in, its only `languages` entry until en joins (decision 110); theme: default es")
+    bnew.add_argument("--country", help="region: its ISO 3166-1 alpha-2 code in capitals, e.g. CO; the game shows its flag")
     bnew.add_argument("--rule", required=True, help="one English sentence: when a question belongs in it")
     bnew.add_argument("--voice", help="English: the language variety of its own text in prompts, e.g. \"British English: …\" "
                       f"(region: required; theme: its es text, default: {VOICE})")

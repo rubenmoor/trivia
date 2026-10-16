@@ -27,6 +27,7 @@
   // Shared bundle selector (D-88): the base bundles as a radio group, apart from the others (toggles);
   // exactly one base bundle (D-85). Bundles screen in every mode (plan 151); «Ajustes de la partida» reuses it (MD-12).
   import { t } from "../lib/i18n.ts";
+  import Flags from "./Flags.svelte";
   import Icon from "./Icon.svelte";
   import Prompt from "./Prompt.svelte";
 
@@ -90,7 +91,10 @@
     data-focus-id="bundle-{b.id}"
   >
     {#if key}<Prompt action={{ type: "letter", key }} hold />{/if}
-    <span class="name-text"><Icon name={b.source === "mod" ? "puzzle" : b.base ? "book" : "pin"} /> {b.name}</span>
+    <span class="name-text">
+      {#if b.region}<Flags country={b.country} />{:else}<Icon name={b.source === "mod" ? "puzzle" : b.base ? "book" : "pin"} />{/if}
+      {b.name}
+    </span>
     {#if role === "switch"}<span class="switch label">{t(on ? "choice.on" : "choice.off")}</span>{/if}
     <span class="label description">{b.description}</span>
     {#if b.source === "mod"}<span class="label made"><Icon name="puzzle" /> {t("bundles.playerMade", { mod: b.modName ?? "" })}</span>{/if}

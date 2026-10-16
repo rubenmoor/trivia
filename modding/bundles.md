@@ -28,6 +28,8 @@ A question bundle is a set of questions the family can switch on before a game, 
   - `kind`: `base` or anything else (e.g. `topic`)
     - anything else: an add-on next to our questions; off by default, the players switch it on before the game
     - `base`: a full replacement for our base bundle, offered as a second choice beside ours; only for a large, all-round set (a few hundred questions over the whole difficulty range); pick add-on when in doubt
+    - `region`: an add-on for people with a connection to one country; needs `country`
+  - `country`: only with `kind: "region"`, required there: the country's two-letter ISO 3166-1 code in capitals, e.g. `"CO"`; the bundle shows its flag (a globe if the game has no drawing of it); a row without it is skipped
   - `languages`: question languages, from `es`, `es-ES`, `en`, `de`; a language without its pool file isn't offered
   - `name`, `description`: plain text in your main language, shown in the bundle selector; translations in `names.<locale>.json`
 - In the game your ids become `<mod id>:<id>`, e.g. `template-bundle:solar-system`; your bundle is marked player-made.

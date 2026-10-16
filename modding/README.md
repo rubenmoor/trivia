@@ -189,6 +189,7 @@ export default async function setup(trivia) {
 - Files: `data/bundles.json` (one row per bundle) and `data/bundles/<bundle>/` (`categories.json`, `pool.json`, `pool.<locale>.json`, pictures inside)
 - Add-on bundle (any `kind` but `base`): off by default, players switch it on before a game
 - Base bundle (`kind: "base"`): a second choice beside ours; ours stays the default
+- Regional bundle (`kind: "region"`): needs `country` (ISO code, e.g. `"CO"`), shows that country's flag
 - Ids become `<mod id>:<id>` in the game (bundles and questions), so they never clash with ours
 - Shown as «Player-made · <mod name>» in the bundle selector; media credits from your questions' `credit` and `source_url` on the Credits screen
 - Never in our question pool, our seen counts, our question reports or telemetry; the flag action is hidden on player questions

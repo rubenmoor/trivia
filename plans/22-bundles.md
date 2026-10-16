@@ -5,7 +5,7 @@
 A **bundle** is a named set of questions that players can switch on or off before a session. Bundles let players shape their game: a regional bundle for people with a connection to a country, thematic bundles (sports, …) for more of what they like. This replaces the `region` field planned in [15c](15c-regional-questions.md) (D-39).
 
 ## Model
-- Bundles are listed in `app/data/bundles.json` (it ships; the game offers the choice, BN-6): `id`, Spanish `name` and `description` for the game, `kind` (`base`, `region`, `theme`), `languages` (locales the bundle is offered in, D-85), `rule`: one English sentence the pipeline uses to decide membership, and `voice` (English): the language variety of its own text in prompts (a regional bundle's drafts, base's es text; D-83).
+- Bundles are listed in `app/data/bundles.json` (it ships; the game offers the choice, BN-6): `id`, Spanish `name` and `description` for the game, `kind` (`base`, `region`, `theme`), `country` (ISO 3166-1 alpha-2 in capitals, `^[A-Z]{2}$`; required on `kind: region`, only there; plan 151; `colombia`: `CO`), `languages` (locales the bundle is offered in, D-85), `rule`: one English sentence the pipeline uses to decide membership, and `voice` (English): the language variety of its own text in prompts (a regional bundle's drafts, base's es text; D-83).
 - **Every question is in exactly one bundle**: the field `bundle`, default `"base"`.
 - Bundles **add** questions; they don't own a topic. A sports question can be in `base`; a sports bundle later just adds many more. "¿Cuál es la capital de Colombia?" stays in `base`; only questions that need a real connection to Colombia go into `colombia`.
 - **Exactly one base bundle** (`kind: base`) per session (D-85, decision 38); `base` is the first and today the only one. Non-base bundles are off by default in every mode (decision 33, D-97).
@@ -59,8 +59,8 @@ The developer's direction (2026-10-07): a batch writes for **one bundle, chosen 
 Player-facing: [`modding/README.md`](../modding/README.md).
 Mods carry bundles in our own format, loaded by our own loader (pm plan 115, decision 128: Bundles from mods: the shell merges bundles.json; mod ids namespaced <mod id>:<id>). Player content never mixes with our ids, seen counts, flags, reports or telemetry.
 - Player-facing format doc: `modding/bundles.md`; template `modding/template-bundle/`; AI prompt `modding/bundle-prompt.md`; check `living-room-trivia --check-mod <folder>` (pm plan 120, decision 133: Player bundle kit: check with trivia --check-mod, kit in modding/ shipped in the install folder).
-- Format: `<mod>/data/bundles.json` (rows as ours: `id`, `kind`, `languages`, `name`, `description`; `rule`, `voice`, `about` ignored); `<mod>/data/bundles/<id>/`: `categories.json`, `names.<locale>.json` (optional), `pool.json` / `pool.<locale>.json` (`version: 1`), media anywhere below; base bundles too.
-- Row checks: `bundleRows()` in `app/desktop/mods.mjs` (≤ 256 KB, slugs, structure); bad row dropped, warning `bundle_row`; bad file `bundle_json`. A mod with bundles has `kind` `bundle`.
+- Format: `<mod>/data/bundles.json` (rows as ours: `id`, `kind`, `country` (regional rows), `languages`, `name`, `description`; `rule`, `voice`, `about` ignored); `<mod>/data/bundles/<id>/`: `categories.json`, `names.<locale>.json` (optional), `pool.json` / `pool.<locale>.json` (`version: 1`), media anywhere below; base bundles too.
+- Row checks: `bundleRows()` in `app/desktop/mods.mjs` (≤ 256 KB, slugs, structure, `country` per kind; the client's `parseBundles` skips such a mod row too); bad row dropped, warning `bundle_row`; bad file `bundle_json`. A mod with bundles has `kind` `bundle`.
 - Namespacing: bundle and question ids → `<mod id>:<id>`; `:` never in our ids: `isModId()` / `isOurs()` in `app/client/src/engine/pool.ts`.
 - Merge: the shell serves one `/data/bundles.json`: ours first, then loaded mods' rows in load order, tagged `source: "mod"`, `mod`, `modName` (`app/desktop/resolve.mjs`).
 - Loading: mod bundles are packs (`withPacks`) in `app/client/src/lib/data.ts`; `modPool()` namespaces, rewrites media, drops invalid questions; offered in `languages` ∩ `LOCALES` with a pool file.
@@ -79,7 +79,8 @@ Players choose bundles on their own screen, Bundles (Player → Bundles → Choi
 - **Base bundles** (D-85): `kind: base`; exactly one per session, zero or two refused (`base_bundle_count`); picked like a radio button among the language's base bundles. Other bundles: any number, on or off.
 - **Every mode** (D-97, decision 158): «Solo o en grupo» and gamemaster mode show the same `BundleSelector` on the Bundles screen (plan 151, decision 260), apart from «Personalizar partida»; Choice shows the pick as a read-only line with the supply report; preset: the player's newest game's bundles, else the language's first base bundle, non-base off.
 - **Names:** «Paquete básico» (en «Base bundle», de «Grundpaket»; decision 261), «Regional: Colombia»; the overlay line labels them «Paquetes de preguntas: …» (plan 125).
-- **`qgen validate`:** each launch language has a base bundle; `languages` and `kind` valid, no legacy keys (D-85).
+- **`qgen validate`:** each launch language has a base bundle; `languages` and `kind` valid, `country` on regional bundles only and well-formed, no legacy keys (D-85).
+- **Icons** (D-97, plan 151): base a book, regional bundles their country's flag (`Flags.svelte`, globe without a drawing; mods too), other mod bundles the puzzle, our other bundles the pin.
 - **«Cambiazo»:** shows the categories of the active bundles only.
 
 ## Tasks

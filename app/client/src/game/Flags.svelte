@@ -1,7 +1,8 @@
 <script lang="ts" module>
-  // National flags per language tag (plans/10-visual-design.md, VD-8): own simplified drawings of the
-  // public-domain designs, fixed colours. Unknown tags (mod languages) show the globe.
-  type Flag = "mx" | "co" | "ar" | "es" | "gb" | "us" | "de" | "at" | "ch";
+  // National flags per language tag (plans/10-visual-design.md, VD-8) or one country (a regional bundle, plan 151):
+  // own simplified drawings of the public-domain designs, fixed colours. Unknown tags and countries show the globe.
+  const DRAWN = ["mx", "co", "ar", "es", "gb", "us", "de", "at", "ch"] as const;
+  type Flag = (typeof DRAWN)[number];
 
   const SETS: Record<string, Flag[]> = {
     es: ["mx", "co", "ar"],
@@ -14,9 +15,11 @@
 <script lang="ts">
   import Icon from "./Icon.svelte";
 
-  let { tag, size = "1em" }: { tag: string; size?: string } = $props();
+  /** `tag`: a language tag's flags; `country`: one ISO 3166-1 alpha-2 code's flag. */
+  let { tag, country, size = "1em" }: { tag?: string; country?: string; size?: string } = $props();
 
-  const flags = $derived(SETS[tag] ?? []);
+  const one = $derived(country?.toLowerCase() as Flag | undefined);
+  const flags = $derived(country ? (one && DRAWN.includes(one) ? [one] : []) : (SETS[tag ?? ""] ?? []));
 </script>
 
 {#if flags.length}

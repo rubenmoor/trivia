@@ -100,8 +100,8 @@ export type ChoiceBody = Pick<GameActionBody, "age_group" | "difficulty" | "bund
 export interface ChoiceOptions {
   /** `span`: lowest and highest difficulty of its levels (the «Custom» start, D-88). */
   groups: { id: string; name: string; ages: readonly [number, number | null]; span: readonly [number, number] }[];
-  /** `source`/`modName`: a mod's bundle (decision 128), marked player-made. */
-  bundles: { id: string; base: boolean; name: string; description: string; source?: "mod"; modName?: string }[];
+  /** `source`/`modName`: a mod's bundle (decision 128), marked player-made. `country`: a regional bundle's (plan 151). */
+  bundles: { id: string; base: boolean; region: boolean; country?: string; name: string; description: string; source?: "mod"; modName?: string }[];
 }
 
 /** A bundle's name in the UI language (plan 127), else bundles.json's. */
@@ -115,7 +115,8 @@ export async function fetchChoiceOptions(scope: DataScope = "next"): Promise<Cho
     const bundles = bundlesFor(data).map((b) => {
       const n = data.uiNames.bundles[b.id];
       return {
-        id: b.id, base: b.kind === "base", name: bundleName(data, b), description: n?.description ?? b.description,
+        id: b.id, base: b.kind === "base", region: b.kind === "region", ...(b.country && { country: b.country }),
+        name: bundleName(data, b), description: n?.description ?? b.description,
         ...(b.source === "mod" && { source: b.source, modName: b.modName ?? b.mod ?? b.id }),
       };
     });

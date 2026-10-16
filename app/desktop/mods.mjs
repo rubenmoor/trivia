@@ -122,6 +122,8 @@ export async function readManifest(dir, gameVersion) {
 
 const BUNDLE_BYTES = 256 * 1024;
 const SLUG = /^[a-z0-9][a-z0-9-]{0,63}$/;
+// countryOk in app/client/src/engine/pool.ts (plan 151).
+const countryOk = (row) => (row.kind === "region" ? typeof row.country === "string" && /^[A-Z]{2}$/.test(row.country) : row.country === undefined);
 
 /** `<dir>/data/bundles.json` rows (plan 115), structure and slugs only; ids as in the file. */
 export async function bundleRows(dir) {
@@ -146,6 +148,7 @@ export async function bundleRows(dir) {
       !ids.has(row.id) &&
       typeof row.kind === "string" &&
       SLUG.test(row.kind) &&
+      countryOk(row) &&
       Array.isArray(row.languages) &&
       row.languages.every((l) => typeof l === "string") &&
       typeof row.name === "string" &&
