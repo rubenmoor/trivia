@@ -35522,6 +35522,32 @@ new:
 
 ---
 Options: "apply" applies 1–8 as drafted; "apply with changes" — say which.', NULL, NULL, '2026-10-16T03:59:29Z', NULL, 1275, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (251, 'Scan runs: which slots keep their pick after fix?', 'answered', '[]', 'task 1244: qgen scan runs: review shows the kept pick, not candidates. kept_slots used fix.changed, so a note-only change dropped the slot from kept_slots and deleted its candidates while the file stayed: a pointless re-search and re-pick. revise_in_pool already unpicks on a type/query change, so a remaining file_url is the signal; the review sees the kept file and can send the question to needs_work if it no longer fits the new wording.', 'Every slot still picked with a usable licence; fix unpicks a slot only when its type or query changes (a note or role change keeps the file and its candidates)', NULL, '2026-10-16T04:11:19Z', '2026-10-16T04:11:19Z', 1244, NULL, 'rule', 1244, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (252, 'review.md: lines for a scan run''s kept media: apply?', 'pending', '["apply as drafted", "apply with changes"]', '`task 1244: qgen scan runs: review shows the kept pick, not candidates`: in a scan run (`qgen neutralize`, `qgen tighten`) a kept slot''s review input is now `{type, role, query, note, kept: true, title}`: no candidates, no sheet, `can_search_again: false` (code done, staged). `authoring/tools/prompts/review.md` needs to say what to do with it (D-36: prompt changes need your OK). Exact text:
+
+1. Input, new bullet after `background`:
+   - `kept` on `media` or `background` (scan runs, `qgen neutralize` and `qgen tighten`): the slot keeps the file it already has in the game; you see its `title`, no candidates and no sheet.
+
+2. "Pick the media", new first paragraph:
+   **Kept media:** for a slot with `kept: true` there is nothing to pick and no new search: leave its `pick` or `background_pick` null, and `new_query` null. Judge the kept file by its title, type, role and note against the question''s current wording: if it now gives the answer away (reason 3) or no longer shows what the question names, decide `needs_work` with problem `giveaway` or `media` and say so in `feedback`; a media-only problem leaves `fix` empty. Text in the media is never a problem by itself.
+
+3. Reason 5 becomes: "5. No candidate is adequate (below), and a new search can''t help or was already tried; or a kept file no longer fits (below)."
+
+`record` already keeps the model''s needs_work and feedback for such a slot (unchanged).', NULL, NULL, '2026-10-16T04:11:25Z', NULL, 1244, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (253, 'review.md: lines for a scan run''s kept media: apply?', 'pending', '["apply as drafted", "apply with changes"]', '', NULL, NULL, '2026-10-16T04:11:38Z', NULL, 1244, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (254, 'review.md: lines for a scan run''s kept media (corrected text): apply?', 'pending', '["apply as drafted", "apply with changes"]', 'Replaces decisions 252 and 253 (same subject; 252 has a wrong sentence, 253 an empty body, both worker mistakes: answer 253 "see 254", close 252 as irrelevant, it blocks nothing).
+
+`task 1244: qgen scan runs: review shows the kept pick, not candidates`: in a scan run (`qgen neutralize`, `qgen tighten`) a kept slot''s review input is now `{type, role, query, note, kept: true, title}`: no candidates, no sheet, `can_search_again: false` (code done, staged; `decision 251: Scan runs: which slots keep their pick after fix?`). `authoring/tools/prompts/review.md` needs to say what to do with it (D-36: prompt changes need your OK). Exact text:
+
+1. Input, new bullet after `background`:
+   - `kept` on `media` or `background` (scan runs, `qgen neutralize` and `qgen tighten`): the slot keeps the file it already has in the game; you see its `title`, no candidates and no sheet.
+
+2. "Pick the media", new first paragraph:
+   **Kept media:** for a slot with `kept: true` there is nothing to pick and no new search: leave its `pick` or `background_pick` null, and `new_query` null. Judge the kept file by its title, type, role and note against the question''s current wording: if it now gives the answer away (reason 3) or no longer shows what the question names, decide `needs_work` with problem `giveaway` or `media` and say so in `feedback`; a media-only problem leaves `fix` empty.
+
+3. Reason 5 becomes: "5. No candidate is adequate (below), and a new search can''t help or was already tried; or a kept file no longer fits (below)."
+
+`record` already keeps the model''s needs_work and feedback for such a slot (unchanged). After the answer, task 1244''s worker applies the text, runs `npm run check` and closes the task.', NULL, NULL, '2026-10-16T04:12:10Z', NULL, 1244, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -36806,6 +36832,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1264, 1241, '2026-10-16T04:02:39Z', '2026-10-16T04:06:08Z', 'done', NULL, 0, '7cbc6957bf4002f34e280daa06072301fb80d497', 'claude-opus-5-5[1m]', '1dc7c102-102c-4e6f-978c-5ed3dfc99164', 20, 38, 9826, 898143, 48452, 0.7639166, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1265, 1242, '2026-10-16T04:06:08Z', '2026-10-16T04:08:10Z', 'done', NULL, 0, 'b25e736ebc0f5c9dcb9ba12cd2f7a3c0ea2b0a8b', 'claude-opus-5-5[1m]', '583fb9b8-5b54-4f64-9f51-a55eef3e2607', 18, 34, 9730, 814516, 52879, 0.7806712, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1266, 1243, '2026-10-16T04:08:10Z', '2026-10-16T04:09:29Z', 'done', NULL, 0, '134b989c2485b7a94d69b06e3f63ec615766013c', 'claude-opus-5-5[1m]', 'b764ba22-9116-4561-a168-d33d9dfcbba5', 13, 26, 4323, 479320, 32969, 0.44617999999999997, 3857742);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1267, 1244, '2026-10-16T04:09:29Z', '2026-10-16T04:12:23Z', 'blocked', NULL, 0, '4662b4cf99e784453fcc0404dd316f81606a8104', 'claude-opus-5-5[1m]', '16e1e15c-4ff1-44e4-a170-8cecbceeea32', 33, 64, 14472, 1883207, 67118, 1.2032813999999998, 3857742);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -37206,6 +37233,8 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1207, 233);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1208, 234);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1239, 239);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1239, 240);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1244, 253);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1244, 254);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1247, 245);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1275, 250);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1276, 250);

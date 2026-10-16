@@ -1691,8 +1691,9 @@ def revise_in_pool(q, new, reason, today):
         q["difficulty_original"] = q["difficulty"]
     q.update(proposed)
     q["revision"] = {"action": "revise", "reason": reason, "previous": previous, "revised_on": today}
-    for slot in ("media", "background"):  # stale candidates for a changed search
-        if slot in previous:
+    searched = {"media": media_changed, "background": bool(old_bg) and new_bg is not old_bg}
+    for slot in ("media", "background"):  # stale candidates for a changed search (a note change keeps them)
+        if searched[slot]:
             path = media_tool.candidates_path(q["id"], slot)
             if path.exists():
                 path.unlink()
@@ -2781,13 +2782,11 @@ def slots_of(q):
 
 
 def kept_slots(run, q):
-    """A scan run's (SCANS) slots that keep the pool's pick: `fix` left them alone and the pick is usable.
-    No search, research or new pick for them (task 1194)."""
+    """A scan run's (SCANS) slots that keep the pool's pick: still picked (revise_in_pool unpicks a slot only
+    when its type or query changed) and usable. No search, research, sheet or new pick for them (tasks 1194, 1244)."""
     if run_mode(run) not in SCANS:
         return set()
-    changed = (load_json(WORK / run / "reviews" / f"{q['id']}.json", {}).get("fix") or {}).get("changed", [])
-    return {s for s in slots_of(q) if s not in changed and q[s].get("file_url")
-            and providers.licence_verdict(q[s])[0] == "ok"}
+    return {s for s in slots_of(q) if q[s].get("file_url") and providers.licence_verdict(q[s])[0] == "ok"}
 
 
 def sheet_path(d, qid, slot):
@@ -2815,10 +2814,10 @@ def cmd_media(args):
 
 
 def cmd_sheets(args):
-    """One contact sheet per slot (ImageMagick), for the review step to look at."""
+    """One contact sheet per slot (ImageMagick), for the review step to look at; none for a scan run's kept slots."""
     d = run_dir(args)
     errors = []
-    slots = [(q, slot) for q in batch_questions(args.run) for slot in slots_of(q)]
+    slots = [(q, slot) for q in batch_questions(args.run) for slot in slots_of(q) if slot not in kept_slots(args.run, q)]
     done = sum(sheet_path(d, q["id"], slot).exists() for q, slot in slots)
     todo = [(sheet_path(d, q["id"], slot), found) for q, slot in slots
             if not sheet_path(d, q["id"], slot).exists() and (found := media_tool.load_candidates(q["id"], slot))]
@@ -2863,9 +2862,13 @@ def related_questions(q, pool, pool_en=None):
             for *_, p in ranked[:RELATED_MAX]]
 
 
-def slot_input(d, q, slot):
-    found = media_tool.load_candidates(q["id"], slot) or {"candidates": []}
+def slot_input(d, q, slot, kept=False):
+    """The review's view of a slot: its candidates and sheet, or for a kept slot (kept_slots) the kept pick."""
     spec = q["media"] if slot == "media" else q["background"]
+    if kept:
+        return {"type": spec.get("type", "image"), "role": spec.get("role", "decorative"), "query": spec["query"],
+                "note": spec.get("note"), "kept": True, "title": media_title(q, slot)}
+    found = media_tool.load_candidates(q["id"], slot) or {"candidates": []}
     sheet = sheet_path(d, q["id"], slot)
     return {"type": spec.get("type", "image"), "role": spec.get("role", "decorative"), "query": spec["query"],
             "note": spec.get("note"), "sheet": sheet.relative_to(d).as_posix() if sheet.exists() else None,
@@ -2929,6 +2932,7 @@ def cmd_review(args):
     def work(item):
         q, r = item
         tmp = tmp_of.get(q["id"])
+        kept = set() if locale else kept_slots(args.run, q)
         payload = translation_payload(q, r, tmp) if locale else {
             "question": {k: q[k] for k in ["id", "bundle", "subcategory", *QUESTION_FIELDS]}
                         | {"locale": translations.source_locale(q)},
@@ -2936,9 +2940,9 @@ def cmd_review(args):
             "fact_check": ({k: check[k] for k in ["verdict", "problem", "correction"]}
                            if (check := fact_check(r, checks.get(tmp))) else "not needed (no number, date or record)"),
             "related": related_questions(q, pool, pool_en),
-            "media": slot_input(d, q, "media"),
-            "background": slot_input(d, q, "background") if q.get("background") else None,
-            "can_search_again": args.round == 1,
+            "media": slot_input(d, q, "media", "media" in kept),
+            "background": slot_input(d, q, "background", "background" in kept) if q.get("background") else None,
+            "can_search_again": args.round == 1 and "media" not in kept,
             "can_fix": args.round == 1 and not rework,
             "only_shortened": mode in SCANS,  # already in the game, only reworded
         }
