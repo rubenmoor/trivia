@@ -37,6 +37,7 @@ Pick exactly one candidate number for `pick`, or null if none is adequate:
 - **illustrative**: it must fit the topic and must not show the answer, a wrong option, or a name or date that solves the question. It is shown sharp.
 - **decorative**: it must fit the topic or setting and must not give the answer away. It is shown blurred.
 - **audio** (no picture on the sheet): judge by the title and duration. Pick one only if the title clearly names the right subject.
+If the question names something showable (a photo, an artwork, a banknote, an object, "like this one"), the picture must show that very thing; a related but different subject (a landscape instead of the rock art in it) isn't adequate.
 Prefer a clear photo over a drawing or a scan, and landscape over portrait. Among equally good candidates, take the lower number.
 
 If no candidate is adequate, set `pick` to null and give `new_query`: a better search term in English, 2–4 words (it searches all media sources again, Commons first), for the thing the slot needs (for example the Latin name of a plant, or "wooden spinning top"). Give `new_query` only when `can_search_again` is true; otherwise leave it null and decide `needs_work`.
