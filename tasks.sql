@@ -8559,76 +8559,86 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 
 ## Constraints
 - D-45 licences only; nothing fetched at runtime; no new npm or Python dependencies (imagemagick and cwebp are already in the shells)', '', '2026-10-16T13:48:49Z', 1325);
-INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (151, 8, 'Bundle selection on its own full screen', 400, 'Part 11 of `plan 8: masterplan` (developer''s gallery flags of 2026-10-16): the question bundles get a full screen of their own in both modes, the base bundle an explicit name in every UI language. Done: own screen, base names, country field and flags, two-column layout with region order (tasks 1338, 1339, 1350, 1351). The developer''s second review (`decision 264: Bundle screen (two columns) reviewed in /gallery?`, answer "problems", no separate fix tasks) changed the flow (Player → Choice → Bundles → Level), the layout (narrow info-only base column, vertical ruler, flowing fixed-width tiles), highlighting, counts and the supply report''s place; this revision adds that work.
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (151, 8, 'Bundle selection on its own full screen', 400, 'Part 11 of `plan 8: masterplan` (developer''s gallery flags of 2026-10-16): the question bundles get a full screen of their own in both modes, the base bundle an explicit name in every UI language. Done: own screen, base names, country field and flags, region order, flow after Choice with the supply report on Bundles (tasks 1338, 1339, 1350, 1351, 1360). The developer''s second review (`decision 264: Bundle screen (two columns) reviewed in /gallery?`) set the layout; the milestone edit of 2026-10-16 (later the same day) then allowed any bundle combination: base bundle(s) are toggle tiles like the optional ones, preset on, base off or nothing selected allowed on screen, start enabled only when the selection has questions. This revision adds that work (engine, selector, start check, docs) and changes the layout''s base column; no separate fix plan.
 
 ## Binding
-- `decision 158: Bundle selection in every mode, apart from customization`: "own section" → "own screen"; never part of «Personalizar partida», not counted in `customized`, preset = `playerChoice` (newest game''s bundles, else the locale''s first base bundle, non-base off)
-- `decision 264: Bundle screen (two columns) reviewed in /gallery?` (supersedes `decision 260: Bundle screen: where it sits, supply report, in-game settings`): flow, layout, highlighting, counts, supply report per milestone 8''s bundle-screen line; covered here, no separate fix tasks
+- `decision 158: Bundle selection in every mode, apart from customization`: "own section" → "own screen"; never part of «Personalizar partida», not counted in `customized`, preset = `playerChoice` (newest game''s bundles, else the locale''s first base bundle, non-base off): the preset keeps the base bundle on
+- `decision 264: Bundle screen (two columns) reviewed in /gallery?` (supersedes `decision 260: Bundle screen: where it sits, supply report, in-game settings`): flow, layout, highlighting, counts, supply report per milestone 8''s bundle-screen line; its "base bundle info only" is replaced by toggle tiles (milestone edit)
   - from decision 260 still holds: shown in both modes, also with one offered bundle; «Ajustes de la partida» (`GameSettings.svelte`, MD-12) keeps `BundleSelector` (compact, with descriptions)
-- `decision 206: Play-test: no supply report on Start, report on the Choice screen only`: "Choice screen" → bundle screen (decision 264); Start still shows none; record with `pm decision consequences 206` when done
+- Milestone 8''s any-combination line (developer, 2026-10-16) supersedes:
+  - `decision 269: Bundle screen: a mod''s extra base bundle` (info-only single base tile, radio tiles for two or more): every base bundle is a toggle tile
+  - "exactly one base bundle" of `decision 38: Base bundles and bundle languages` / D-85, BN-6 as closed under `decision 155: Play-test of age groups and bundles (again, after the decision 50 fixes)`, and the engine''s `base_bundle_count` refusal
+  - still holds from decision 38: `kind: base`, bundles offered per `languages` (`bundle_not_offered`), the locale''s first base bundle as default, stored choices that no longer resolve read as defaults (never written back); `qgen validate`''s "each launch language has a base bundle"
+- `decision 206: Play-test: no supply report on Start, report on the Choice screen only`: "Choice screen" → bundle screen (decision 264); Start still shows none; record with `pm decision consequences 206` if task 1360 didn''t
 - `decision 267: Bundle tiles: question count strings`: shipped bundles fixed «5000+» (base) / «2000+» (others); mod bundles their own count from the loaded pool, rounded down, capped at their kind''s string
 - `decision 268: Short-group marks after the flow change`: Choice shows no supply information; the bundle screen''s report covers the chosen group; no per-group marks
-- `decision 269: Bundle screen: a mod''s extra base bundle` (open, the developer''s): how a second base bundle (mods) is picked in the narrow column; the layout task waits for it
 - `decision 261: Name of the base bundle per UI language (not «Basics»)`: «Paquete básico», «Base bundle», «Grundpaket» (applied)
 - `decision 263: Bundle screen reviewed in /gallery?`: country flags, region order, names only (done in tasks 1350, 1351)
 - `decision 50: Play-test of age groups and bundles`: the term "question bundle" holds
 
-## Done (tasks 1338, 1339, 1350, 1351; stays)
-- `app/client/src/game/screens/Bundles.svelte`, scope `bundles`, letters via `bundleKeys` (`BundleSelector.svelte` module script, displayed order), pick kept in `Game.svelte`, guard on exactly one base bundle, `"Bundles"` in `SCREENS` (`lib/mods.ts`)
+## Done (tasks 1338, 1339, 1350, 1351, 1360; stays)
+- `app/client/src/game/screens/Bundles.svelte`, scope `bundles`, letters via `bundleKeys` (`BundleSelector.svelte` module script, displayed order), pick kept in `Game.svelte`, `"Bundles"` in `SCREENS` (`lib/mods.ts`)
 - Base names in `bundles.json`, `names.{en,de}.json`, style guides
 - `country` (ISO 3166-1 alpha-2, required for `kind: region` only): `bundles.json` (colombia `CO`), `qgen validate`, `qgen bundle new --country`, `mods.mjs` / `check-mod.mjs`, client loader, `modding/` docs, `ChoiceOptions["bundles"]` (`region`, `country`)
 - Flags: `Flags.svelte` single-country mode, regional icon = flag wherever a bundle shows an icon (globe for undrawn countries), no pin
 - Region: `app.getLocaleCountryCode()` → `preload.cjs` → `lib/desktop.ts` `playerRegion`; browser fallback `navigator.language`; `?region=XX` / `?region=`
 - Order: `orderBundles` (player''s region first, non-regional, other regions; `bundles.json` order then mods); base bundles `bundles.json` order, mods after
-- Scroll with fade and focus follow (`data-nav-scroll` in `lib/focus.ts`); replaced below by the flowing tile area, the mechanism stays
+- Flow (task 1360): Player → Choice («Seguir», no bundle line, no supply) → Bundles («¡A jugar!», through `SupplyNotice`) → Level in both modes; Back from Bundles → Choice, both picks kept; supply of the full choice on every toggle, `SupplyReport` and refusals on Bundles; walkers (gallery, smoke, screenshots, trailer) follow it
+- Scroll with fade and focus follow (`data-nav-scroll` in `lib/focus.ts`); the mechanism stays for the flowing tile area
 
-## Flow (replaces task 1338''s Player → Bundles → Choice)
-- Both modes («Solo o en grupo», «Modo anfitrión»), also with one offered bundle: Player → Choice → Bundles → Level
-- Choice: main button «Seguir» (catalog''s existing continue string if it fits, style guides first), always enabled once a group is set; no bundle line (`choice.lineBundles` off Choice; the Esc overlay''s line of a running game stays), no supply report, no short marks (decision 268); Back → Player; «Personalizar partida» stays on Choice
-- Bundles: main button starts the game («¡A jugar!»), through the running-out notice (`SupplyNotice`, plan 65, decision 31) when it has something to say; Back → Choice; both screens keep their picks (`Game.svelte`)
-- Supply on Bundles: supply of the full choice (Choice''s picks + bundles), recomputed on every toggle; `SupplyReport` when short, start disabled; the engine''s refusal (`base_bundle_count`, `bundle_not_offered`, supply) shown there as on Choice today
-- Choice''s supply code (`fetch` of supply, `short`, `notice`, refusal) moves to `Bundles.svelte`, not copied (decision 199)
-- Walkers follow the new order: `authoring/tools/gallery.py` (shots `bundles`, `choice-solo`, `choice-gamemaster`; `choice-supply-report` → `bundles-supply-report`), `authoring/steam/smoke.mjs`, `authoring/store/screenshots.mjs`, the trailer''s walk (`trivia-trailer`), `engine/*.test.ts` only if they assume the screen order
+## Any combination (engine, selector, start check)
+- Engine (`engine/choice.ts` `resolveBundles`, its callers in `new`, `settings`, defaults): drop the base count check and `base_bundle_count`; offered/unknown checks stay; a list without a base bundle resolves as given
+  - the supply of a selection (`outlook`/supply calls the bundle screen makes) works for any list, `[]` included: 0 questions, not an error
+  - `new` and in-game `settings`: a selection with no question for the choice (e.g. `[]`) is refused with a new code (e.g. `no_questions`) replacing `base_bundle_count`; the existing supply refusal stays for short-but-nonzero
+  - stored choices keep loading: every list valid before (exactly one base) stays valid; `playerChoice` of an old save unchanged
+  - `engine/*.test.ts`: the `base_bundle_count` cases become the new refusal / base-off acceptance (keep it few, AGENTS.md)
+- `BundleSelector.svelte`: `toggled` toggles every bundle (no radio replacement); base tiles `role="switch"` like the others; compact mode in «Ajustes de la partida» the same
+- Client guards on exactly one base bundle go (`Bundles.svelte` `reason`, `Game.svelte`, `lib/types.ts` / `lib/api.ts` comments)
+- Start check on Bundles: count the questions of the selected bundles for Choice''s age group (or custom range) and levels, from the supply already fetched on every toggle (no second engine path, decision 199); > 0 → «¡A jugar!» enabled (unless the supply report says short, as today); 0 → disabled with a short reason under the buttons (e.g. «Ningún paquete elegido tiene preguntas para esta partida»; catalogs `es`, `es-ES`, `en`, `de`; `locales/style/<locale>.md` first, the de guide''s `base_bundle_count` line updated); nothing selected shows the same reason
+- Error catalogs: `error.base_bundle_count` out of `es.ts`, `en.ts`, `de.ts` (and `es-ES` if it has one), `state.ts`; the new code in
+- Achievements and «Cambiazo» groups with the base bundle off: whatever reads "the" base bundle of a game (`rg "kind === \"base\""` in `engine/`, `lib/`) works with none; achievements tied to the base bundle simply don''t fire
 
 ## Layout (replaces task 1351''s two equal columns)
-- Left: base column, narrow (as little width as its tile needs), information only: no heading «Elijan uno», no pick prompt, not focusable with one base bundle; several base bundles (mods): per `decision 269: Bundle screen: a mod''s extra base bundle`
+- Left: base column, narrow (as little width as its tile needs); its tile(s) toggle tiles like the optional ones (focusable, letter keys, same highlighting), preset on; no heading «Elijan uno», no pick prompt; a mod''s extra base bundles stack in the same column
 - A vertical ruler between the base column and the optional area
 - Right: optional bundles as fixed-width tiles flowing into rows and columns (CSS grid, `auto-fill`); the area scrolls when they don''t fit (wheel, touch); fade at a cut edge; the focused tile always in view
-- 2D focus: arrows / D-pad move between tiles in rows and columns (`lib/focus.ts` spatial nav), down from the last row to the buttons; letters toggle and scroll into view; default focus as today
+- 2D focus: arrows / D-pad move between tiles in rows and columns and across the ruler (`lib/focus.ts` spatial nav), down from the last row to the buttons; letters toggle and scroll into view; default focus as today
 - Tiles: icon (flag for regional), name, count (decision 267); no descriptions; no column headings unless a short one is needed for the optional area (catalogs, all four locales, style guides first)
-- Highlighting: hover/focus a clear ring or lift; selected-for-this-game clearly different (filled tile in the accent colour plus a check mark), not only a small «activado» line; both visible at once on a focused selected tile
+- Highlighting (base and optional alike): hover/focus a clear ring or lift; selected-for-this-game clearly different (filled tile in the accent colour plus a check mark), not only a small «activado» line; both visible at once on a focused selected tile
 - Counts: shipped bundles from catalog strings («5000+», «2000+»; number formatting per locale); mod bundles counted from the pool the client loaded for the UI language (`lib/data.ts` / engine data), rounded per decision 267
 - Order: `orderBundles` as done
-- Fits at 1280×800, 1280×720 and 1920×1080 (`plan 46: Deck layout and controller-only text entry (SW-4)`) with 1 and ~15 optional bundles, with and without a supply report
+- Fits at 1280×800, 1280×720 and 1920×1080 (`plan 46: Deck layout and controller-only text entry (SW-4)`) with 1 and ~15 optional bundles, one and two base bundles, with and without a supply report or the start reason
 - «Ajustes de la partida»: compact selector with descriptions, order and flags unchanged; counts there only if cheap
 
 ## Docs
-- `plans/04-ui-tv-display.md`: screen flow (Player → Choice → Bundles → Level, «Seguir»), Bundles layout, supply report on Bundles, Choice without supply
-- `plans/22-bundles.md`: counts (decision 267), base column
-- `plans/decisions.md` D-97: flow and counts; D-entry of decision 206 if it has one
-- `plans/13-game-modes.md`, `plans/14-input.md` (scope `bundles`, 2D focus), plan 65''s file where it says "Choice screen" for the supply report
-- `modding/README.md`, `modding/bundles.md`: count shown for mod bundles; base-bundle wording per decision 269''s answer
-- `rg` the old wording ("Player → Bundles → Choice", "report on the Choice screen", "one tile per row", "Elijan uno", `lineBundles` on Choice) over plan files and `.md` files; fix hits (decision 200)
+- `plans/04-ui-tv-display.md`: Bundles layout (toggle base tiles, ruler, flowing tiles), start check and its reason; drop "one-of-N tiles, exactly one selected" and "zero or two base bundles"
+- `plans/22-bundles.md`: any combination (lines 11, 67, 79 today), counts (decision 267), base column; BN-6 note amended (any combination, 2026-10-16)
+- `plans/13-game-modes.md` (bundles line: radio group, `base_bundle_count`), `plans/14-input.md` (scope `bundles`, 2D focus), `plans/project.md` (BN-6 "exactly one base bundle")
+- `plans/decisions.md`: D-85 and D-97 amended (any combination, start check, counts); D-entry of decision 206 if it has one
+- `README.md` line on bundles ("picks one base bundle"): any combination, Choice before Bundles
+- `modding/README.md`, `modding/bundles.md`: a mod''s base bundle is a tile that toggles like any other, preset off (ours stays the preset); count shown for mod bundles
+- Code comments: `BundleSelector.svelte`, `Bundles.svelte`, `engine/choice.ts`, `lib/types.ts`, `lib/api.ts`; `code-review.md`''s `BundleSelector` row
+- `rg` "exactly one base", "base_bundle_count", "radio", "one-of-N", "Elijan uno", "one tile per row", "two columns", "Player → Bundles → Choice" over code comments, plan files and `.md` files; fix hits (decision 200)
+- Decisions: `pm decision consequences 269` (superseded by the milestone''s any-combination line: toggle tiles, no radio), `pm decision consequences 155` (BN-6''s "exactly one base bundle" dropped, `base_bundle_count` gone, the new refusal), `pm decision consequences 38` likewise
 
 ## Check
-- Node dev server (`npm run dev -w app/client`) at 1280×800 and 1920×1080, both modes, pad (or forced `device: "gamepad"`) and keys: Player → Choice («Seguir») → Bundles (toggle colombia) → start; Back from Bundles to Choice and forward again keeps both picks
+- Node dev server (`npm run dev -w app/client`) at 1280×800 and 1920×1080, both modes, pad (or forced `device: "gamepad"`) and keys: Player → Choice («Seguir») → Bundles (toggle colombia) → start; Back to Choice and forward keeps both picks
+- Base off + colombia on starts a game that plays colombia only; everything off → start disabled with the reason; base on alone as before; an old save (`blocked` demo or the family''s imported save) loads its stored bundles
+- «Ajustes de la partida» in a running game: base off accepted when the rest has questions; an empty selection refused with the reason
 - Blocked save (as the gallery''s `blocked`): report and disabled start on Bundles, none on Choice; running-out notice from Bundles
-- ~15 fake mod bundles (throw-away mod folder, regional with drawn and undrawn countries, small ones for counts): tiles flow, the area scrolls, focus in view with arrows, pad and letters; counts per decision 267
+- ~15 fake mod bundles (throw-away mod folder, one a second base bundle, regional with drawn and undrawn countries, small ones for counts): tiles flow, the area scrolls, focus in view with arrows, pad and letters, both base tiles toggle; counts per decision 267
 - Order with `?region=CO`, `?region=`, `?region=DE`
 - Per commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`
 
 ## Tasks (suggested)
-1. Done: `task 1338: Bundle screen between Player and Choice; Choice without the selector`
-2. Done: `task 1339: Base bundle names per locale: Paquete básico, Base bundle, Grundpaket`
-3. Done: `task 1350: Country field for regional bundles and flag icons`
-4. Done: `task 1351: Bundle screen: two columns, scrolling optional column, order by region`
-5. Flow and supply on the bundle screen: Choice «Seguir» without bundle line and supply, Bundles after Choice starts the game, supply report / refusal / running-out notice moved, walkers, docs for the flow (priority 410)
-6. Bundle screen layout: narrow info-only base column, ruler, flowing fixed-width tiles with 2D focus and scroll, highlighting, counts, catalogs, docs (after 5; `pm task-pending-decision` on decision 269)
-7. `task 1340: Gallery run of the two-column bundle screen and developer review` (after 6): shots `bundles` (with fake mod bundles if the gallery can load a mods dir, else noted), `bundles-supply-report`, `choice-solo`, `choice-gamemaster`, all four locales, at 1920×1080 and `--size 1280x800` (`task 1330: Gallery size option`, done); `pm decision consequences 263` and `264`; a new review decision like decision 264; problems → fix tasks here; approved → the gallery flag on `choice-gamemaster` in `authoring/data/ui-flags.json` fixed
+1–4, 5. Done: tasks 1338, 1339, 1350, 1351, 1360
+6. New: Any bundle combination: engine without `base_bundle_count`, toggle base tiles in `BundleSelector`, start check with reason on Bundles, catalogs, docs and decision consequences above (priority 410, before the layout)
+7. `task 1361: Bundle screen layout: narrow base column, ruler, flowing tiles, highlighting, counts` (after 6): body revised: base column with toggle tiles (no info-only tile, no radio tiles, no wait on decision 269), 2D focus across the ruler, the fit rows above
+8. `task 1340: Gallery run of the flowing-tile bundle screen and developer review` (after 7): as listed, plus a shot or note for base off / nothing selected (start reason) if the gallery can set it; consequences of decisions 263 and 264; a new review decision like decision 264
 
 ## Done when
-- The milestone''s bundle-screen line holds: flow Player → Choice («Seguir») → Bundles → Level in both modes; narrow info-only base column, ruler, flowing tiles with scroll and focus follow, clear focus and selected states, counts, region order, country flags, names only, supply report and notice on Bundles
-- Owning plan files, `modding/` docs and D-97 updated; consequences on decisions 206, 263, 264; the new review decision answered "approved"', 'Before a game starts, players pick which sets of questions to play: the general set plus optional extras, such as questions for people with ties to Colombia. These sets have a full screen of their own. After a second look the developer asked for changes: the screen now comes after the age-group choice, so it can warn when the picked sets run short; the general set sits in a narrow column for information only; the extras are tiles that flow across the screen, each with its flag or icon, a question count and a clear look when picked. The list will grow with player-made sets, so it must stay easy to use with a game controller.', '2026-10-16T13:54:45Z', 1335);
+- The milestone''s bundle-screen line holds: flow Player → Choice («Seguir») → Bundles → Level in both modes; narrow base column with toggle tiles, any combination with the start check, ruler, flowing tiles with scroll and focus follow, clear focus and selected states, counts, region order, country flags, names only, supply report and notice on Bundles
+- No `base_bundle_count` left; owning plan files, `modding/` docs, README and D-85 / D-97 updated; consequences on decisions 38, 155, 206, 263, 264, 269; the new review decision answered "approved"', 'Before a game starts, players pick which sets of questions to play: the general set plus optional extras, such as questions for people with ties to Colombia. These sets have a full screen of their own, after the age-group choice, so it can warn when the picked sets run short. Every set, the general one included, is now a tile that can be switched on or off, so a family can play only the extras if they like; the game only refuses to start when the picked sets hold no questions at all. The extras flow across the screen as tiles with a flag or icon, a question count and a clear look when picked, and the list stays easy to use with a game controller as player-made sets are added.', '2026-10-16T13:54:45Z', 1335);
 INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (152, 16, 'masterplan', 1000, 'tbd.', '', '2026-10-16T16:03:30Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (153, 17, 'masterplan', 1000, 'tbd.', '', '2026-10-16T17:05:30Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (154, 18, 'masterplan', 1000, 'tbd.', '', '2026-10-16T17:38:48Z', NULL);
@@ -35152,7 +35162,7 @@ Milestone 8 is S3 of the Steam track (D-34, `plans/11-steam.md`): the first buil
 - Steamworks features (overlay, Cloud setup, achievements, on-screen keyboard, SW-7..SW-14), store page (S5); translations (S4); media resizing (SW-9, S5).
 - Local multiplayer (distinct players per device, join screen, the multiplayer modes; IN-6, IN-7): milestone 16: Local multiplayer: game modes and controls.
 - Porting authoring''s Python (qgen, `trivia-authoring`) to Node/TS: later, own milestone.', '2026-10-16T19:20:28Z', '2026-10-16T19:25:48Z', 1363, 0, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1374, 151, 'revise plan 151: Bundle selection on its own full screen', 'revise', 'open', 1000, NULL, '`plan 8: masterplan`, the plan above `plan 151: Bundle selection on its own full screen`, changed; it is quoted below. Bring `plan 151: Bundle selection on its own full screen` in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1374, 151, 'revise plan 151: Bundle selection on its own full screen', 'revise', 'done', 1000, '2026-10-16, tasks.sql: plan 151 revised for any bundle combination (toggle base tiles, no base_bundle_count, start check), supersedes decision 269''s answer', '`plan 8: masterplan`, the plan above `plan 151: Bundle selection on its own full screen`, changed; it is quoted below. Bring `plan 151: Bundle selection on its own full screen` in line with it
 (`pm plan edit 151 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -35265,7 +35275,7 @@ Milestone 8 is S3 of the Steam track (D-34, `plans/11-steam.md`): the first buil
 ## Out of scope (from the milestone)
 - Steamworks features (overlay, Cloud setup, achievements, on-screen keyboard, SW-7..SW-14), store page (S5); translations (S4); media resizing (SW-9, S5).
 - Local multiplayer (distinct players per device, join screen, the multiplayer modes; IN-6, IN-7): milestone 16: Local multiplayer: game modes and controls.
-- Porting authoring''s Python (qgen, `trivia-authoring`) to Node/TS: later, own milestone.', '2026-10-16T19:20:28Z', NULL, 1363, 0, NULL);
+- Porting authoring''s Python (qgen, `trivia-authoring`) to Node/TS: later, own milestone.', '2026-10-16T19:20:28Z', '2026-10-16T19:27:20Z', 1363, 0, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1375, 8, 'write plan: Prompts follow the last input', 'plan', 'done', 1000, '2026-10-16, plan 156: Prompts follow the last input (priority 500); decision 272: Right stick: what it does beyond switching prompts to the pad (recorded: switch only)', 'Write the plan for part 12 of `plan 8: masterplan` (milestone edit of 2026-10-16): one player conceptually, every device (any pad, keyboard, mouse) drives that player, and the on-screen prompts follow whichever device was used last, in every mode and on every screen.
 
 - `pm plan add 8 "Prompts follow the last input" --priority 500 --intro …` (client code; before `plan 48: S3 close-out and platform test` at 140, independent of `plan 99: Retire the browser game and the Python game server` and `plan 151: Bundle selection on its own full screen`).
@@ -35279,6 +35289,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T19:23:14Z', NULL, 1375, 0, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1377, 48, 'create tasks for plan 48: S3 close-out and platform test', 'split', 'done', 1000, '2026-10-16, tasks 238, 236, 237 brought in line with revised plan 48 (plan 156 prompts row and guard, any-combination bundle rows, decision 272); no new decisions needed', 'Split plan 48 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T19:24:26Z', '2026-10-16T19:25:32Z', 1372, 0, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1378, 151, 'create tasks for plan 151: Bundle selection on its own full screen', 'split', 'open', 1000, NULL, 'Split plan 151 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T19:27:18Z', NULL, 1374, 0, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -40872,6 +40884,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1386, 1372, '2026-10-16T19:23:26Z', '2026-10-16T19:24:34Z', 'done', NULL, 0, 'e74f6437ca958b711d10b8c756c6e80f24ea35bb', 'claude-opus-5-5', '7a2e895b-7435-41b8-99cb-88bc6ba09b8c', NULL, 8, 16, 6063, 373319, 47363, 0.57489180000000006, 4144524);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1387, 1377, '2026-10-16T19:24:34Z', '2026-10-16T19:25:39Z', 'done', NULL, 0, 'fd087f1255e22c7ac78973c92a9eeb17d4546a5e', 'claude-opus-5-5', '80262b39-7627-4580-8592-6abe3da44003', NULL, 11, 18, 7710, 335730, 38439, 0.52893, 4144524);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1388, 1373, '2026-10-16T19:25:39Z', '2026-10-16T19:25:51Z', 'done', NULL, 0, '6cd130f3fc89e798ed69ea51d30aaa65890720a0', 'claude-opus-5-5', 'a9f681e4-fe66-43cc-b7d1-b7c4a6076c35', NULL, 4, 8, 886, 138772, 33709, 0.3151784, 4144524);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1389, 1374, '2026-10-16T19:25:51Z', '2026-10-16T19:27:28Z', 'done', NULL, 0, '74e2c86d99530ffa593231488dc418609787f542', 'claude-opus-5-5', '26df5209-e66d-4966-b44d-b3c815530804', NULL, 11, 22, 9940, 536282, 54959, 0.74581639999999994, 4144524);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
