@@ -2612,14 +2612,24 @@ def slots_of(q):
     return ["media"] + (["background"] if q.get("background") else [])
 
 
+def kept_slots(run, q):
+    """A scan run's (SCANS) slots that keep the pool's pick: `fix` left them alone and the pick is usable.
+    No search, research or new pick for them (task 1194)."""
+    if run_mode(run) not in SCANS:
+        return set()
+    changed = (load_json(WORK / run / "reviews" / f"{q['id']}.json", {}).get("fix") or {}).get("changed", [])
+    return {s for s in slots_of(q) if s not in changed and q[s].get("file_url")
+            and providers.licence_verdict(q[s])[0] == "ok"}
+
+
 def sheet_path(d, qid, slot):
     return d / "sheets" / (f"{qid}.jpg" if slot == "media" else f"{qid}-background.jpg")
 
 
 def cmd_media(args):
-    """Fetch media candidates for every slot of the run's merged questions."""
+    """Fetch media candidates for every slot of the run's merged questions, except a scan run's kept slots."""
     errors = []
-    slots = [(q, slot) for q in batch_questions(args.run) for slot in slots_of(q)]
+    slots = [(q, slot) for q in batch_questions(args.run) for slot in slots_of(q) if slot not in kept_slots(args.run, q)]
     todo = [(q, slot) for q, slot in slots if media_tool.load_candidates(q["id"], slot) is None]
     progress.resumed("media", len(slots) - len(todo), len(todo), "slots")
     with progress.Bar("media", len(todo), "searches") as bar:
@@ -2931,7 +2941,7 @@ def cmd_research(args):
         r1 = r.get("round1") or {}
         done += bool(r.get("researched"))
         if (r1.get("pick") is None and r1.get("new_query") and not r.get("researched")
-                and "media" not in (r.get("fix") or {}).get("changed", [])):
+                and "media" not in (r.get("fix") or {}).get("changed", []) and "media" not in kept_slots(args.run, q)):
             todo.append((q, path, r))
     progress.resumed("research", done, len(todo), "searches")
     with progress.Bar("research", len(todo), "searches") as bar:
@@ -2961,8 +2971,9 @@ def final_review(r):
 
 def cmd_record(args):
     """Write the reviews (D-33: reviewer llm + model) and the picks into the pool. Fixed rules on
-    top of the model's decision: no adequate media, a pick whose licence verdict is replace, or a fact check that isn't confirmed, means
-    needs_work. Picks are recorded without downloading; `sync` fills the cache."""
+    top of the model's decision: no adequate media, a pick whose licence verdict is replace or whose file is broken
+    (each pick is downloaded to check it, task 1181), or a fact check that isn't confirmed, means needs_work.
+    A scan run's kept slots (kept_slots) stay as they are: no pick, no download."""
     d = run_dir(args)
     if run_locale(d):
         return record_translations(args, d)
@@ -2979,8 +2990,9 @@ def cmd_record(args):
             continue
         decision, problems, fields = r["decision"], [r["feedback"].strip()] if r["feedback"].strip() else [], {}
         kinds = set(r.get("problems") or [])
+        kept = kept_slots(args.run, q)
         for slot, key in [("media", "pick"), ("background", "background_pick")]:
-            if slot not in slots_of(q):
+            if slot not in slots_of(q) or slot in kept:
                 continue
             found = (media_tool.load_candidates(q["id"], slot) or {"candidates": []})["candidates"]
             n = r[key]
@@ -3771,7 +3783,8 @@ def cmd_health_ack(args):
 
 
 def revise_steps(ns, model, review_model):
-    """fix → fact check → review with a new media search → record: rework and the scan modes (QG-23)."""
+    """fix → fact check → review with a new media search → record: rework and the scan modes (QG-23);
+    a scan run searches only slots without a kept pick (kept_slots)."""
     return [
         ("fix", cmd_fix, ns(model=model, check_model="sonnet")),
         ("media", cmd_media, ns()),

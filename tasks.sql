@@ -16560,12 +16560,21 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-13T05:13:28Z', '2026-10-13T05:15:01Z', 250, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (632, 84, 'run neutralize-1', 'work', 'open', -85, NULL, 'Plan 84 chain 1, run `neutralize-1`: neutral Spanish rewrite of the es-sourced `base` questions (≤ batch-8; plan 64, D-83). English-sourced questions (batch-9 on, `plan 148: English-first drafting for base`) aren''t touched; `colombia` keeps its voice. Runs before the translation pilots so pilot translations from `es` don''t go stale (D-81).
 
-- `decision 202: Run qgen neutralize on base now?` → go; `decision 214: neutralize-1: qgen validate fails after fix` → fix first (stash restore per its answer), then plain `qgen neutralize` (no arguments), RUNBOOK step 3''s exit-code handling; stage the printed paths.
+## First: restore run 1159''s state (`task 1194: qgen: scan runs keep media unless fix changed it; review qgen for bugs, follow-up tasks`)
+- Run 1159 was stopped in `record`; its `authoring/data/questions.json` (stash merged per decision 214, `fix` done, reworded questions in `draft`, `review: null`) is on branch `pm/task-632-run-1159-left` (commit `0b795c2`), not on main. `work/neutralize-1/` (reviews round 1 and 2) is intact on disk; don''t touch it.
+- Restore that file into the working tree, unstaged (as pm''s stash would): `git diff main...pm/task-632-run-1159-left -- authoring/data/questions.json` applied to the working tree (e.g. `git checkout pm/task-632-run-1159-left -- authoring/data/questions.json && git restore --staged authoring/data/questions.json` if main hasn''t changed the file since the merge base; else a 3-way merge).
+- Conflicts with main''s later changes: per question, main''s version wins where main changed a question since the merge base; the branch''s version elsewhere. `qgen validate` may fail until `export` (unexported pool); that''s expected.
+- Media queries: on the branch, `research` changed `media.query` of q-0338, q-0488, q-0654, q-0661, q-0752, q-0761, q-1162 while their pick stays; set those 7 `media.query` back to main''s value (the query must describe the kept file).
+- Then delete the branch, local and remote: `git branch -D pm/task-632-run-1159-left && git push origin --delete pm/task-632-run-1159-left`.
+- Only then plain `qgen neutralize`. With task 1194''s fix it resumes at `record` without new Claude calls: unchanged slots keep their pool pick (no re-pick, no download); only q-0276 (fix changed its media) gets its reviewed pick. Expected in the resume check: 367 approved, 21 needs_work of 388 reworded.
+
+
+- `decision 202: Run qgen neutralize on base now?` → go; `decision 214: neutralize-1: qgen validate fails after fix` → fix first (its stash restore is in the branch above), then plain `qgen neutralize` (no arguments), RUNBOOK step 3''s exit-code handling; stage the printed paths.
 
 Done when: the run exits 0, its report `authoring/reports/neutralize-1.md` exists, printed paths staged.
 
 ## pm-run rules (plan 84, plan 17 "Batch tasks under pm run")
-- D-36: no prompt, pool, media or `qgen.py` changes in this task; findings become decisions or tasks in their own plans (64, 66, 70, 148 or new).
+- D-36: no prompt, pool, media or `qgen.py` changes in this task beyond the restore step above (the developer''s, incl. the branch deletion on `origin`); findings become decisions or tasks in their own plans (64, 66, 70, 148 or new).
 - `tasks.sql` alone isn''t a dirty tree. Stage exactly the `git add` paths the command prints; don''t commit (pm commits as "task N: …").
 - Exit 75, exit 2, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines of output in the body, `pm task-pending-decision <this task> <id>`, stage nothing, stop. Applies whether or not plan 17''s task 50 (RUNBOOK: batch runs under pm run) is done.
 - Note on done: the "Done:" line and the report path (run tasks), or the QC numbers (QC tasks).', '2026-10-13T05:14:16Z', NULL, 631, 0);
@@ -27768,7 +27777,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-15T23:12:36Z', '2026-10-16T00:26:15Z', NULL, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1193, 1, 'revise the masterplan of milestone 1: Enough content for game nights', 'revise', 'done', 1000, '2026-10-15, tasks.sql: plan 1 body: English-first from batch-9 (owner milestone 9, count rule, effects on parts 2–5), state 2026-10-15, answered decisions cited', '`milestone 1: Enough content for game nights` changed. Bring `plan 1: masterplan`, the masterplan, in line with it (`pm plan edit 1 --body -`), or
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-15T23:12:36Z', '2026-10-16T00:16:42Z', NULL, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1194, NULL, 'qgen: scan runs keep media unless fix changed it; review qgen for bugs, follow-up tasks', 'exec', 'open', 900, NULL, 'Developer''s intervention (2026-10-15). `task 632: run neutralize-1` was stopped in `record`: the scan modes reuse the rework chain (`revise_steps`, `authoring/tools/qgen.py`), so a wording-only rewrite searched media again and the reviewers re-picked images.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1194, NULL, 'qgen: scan runs keep media unless fix changed it; review qgen for bugs, follow-up tasks', 'exec', 'done', 900, '2026-10-15, authoring/tools/qgen.py (kept_slots: scan runs keep a slot''s pool pick unless fix changed it or no usable pick; media, research, record skip kept slots; cmd_record and revise_steps docstrings), plans/decisions.md (D-83 media in scan runs). Resume check on a throw-away worktree of pm/task-632-run-1159-left with a copy of work/neutralize-1, claude/search/download stubbed: 0 Claude calls, 0 searches, 1 pick checked (q-0276, fix changed its media), 394 slots of 388 reworded unchanged; 367 approved, 21 needs_work. Follow-ups in plan 17: 1241 (review history through fix/record), 1242 (record progress lines), 1243 (record parallel downloads), 1244 (scan review shows kept pick; prompt change via decision). Task 632 body: restore step (branch file unstaged, 7 research-changed media.query back to main''s, delete branch local + origin), then qgen neutralize.', 'Developer''s intervention (2026-10-15). `task 632: run neutralize-1` was stopped in `record`: the scan modes reuse the rework chain (`revise_steps`, `authoring/tools/qgen.py`), so a wording-only rewrite searched media again and the reviewers re-picked images.
 
 ## State of neutralize-1 (don''t lose it)
 - `authoring/data/questions.json` on branch `pm/task-632-run-1159-left` (commit `0b795c2`, pushed; not on main): stash merged per `decision 214: neutralize-1: qgen validate fails after fix`, `fix` applied, 377 reworded questions in `draft` with `review: null`; `record` never ran, so no pick reached the pool.
@@ -27796,7 +27805,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Scan modes keep media as described; the throw-away resume check passes; `npm run check`, `npm test`, `npm run build`, `qgen validate` (on a clean tree) pass.
 - Follow-up tasks added; note lists the fix''s files and the follow-up task ids.
 - `task 632: run neutralize-1`''s body (`pm task set 632 --body -`, open again once pm recorded run 1159 as failed) gets a first step: restore `authoring/data/questions.json` from `pm/task-632-run-1159-left` into the working tree, unstaged (as pm''s stash would), conflicts with main''s later changes resolved per question (main''s version wins where main changed a question), then delete the branch (local and `origin`); only then plain `qgen neutralize`. Don''t restore it in this task: pm would move a closed task''s unstaged leftovers to a branch.
-- If pm queued "investigate the failure of task 632": its body can''t be known here; the 632 body step above is what it and 632 see.', '2026-10-16T00:11:43Z', NULL, NULL, 0);
+- If pm queued "investigate the failure of task 632": its body can''t be known here; the 632 body step above is what it and 632 see.', '2026-10-16T00:11:43Z', '2026-10-16T00:45:10Z', NULL, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1195, 1, 'create tasks for plan 1: masterplan', 'split', 'done', 1000, '2026-10-16, tasks.sql: task 1198 (plan task for the English-first changes to parts 2–5, whose plans 13–16 are done); plan 17 and 146 revisions already queued (tasks 1196, 1197); masterplan''s decisions 1, 2, 3, 18 answered, none new', 'Split plan 1 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T00:16:39Z', '2026-10-16T00:17:35Z', 1193, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1196, 17, 'revise plan 17: Batch runs', 'revise', 'done', 1000, '2026-10-16, plan 17 body: state after batch-8 and its extended review, English-first section (count by source locale, batch-9 gate on milestone 9''s switch and plan 147, QC of first en batches), change tasks in plan 147 or plan 17 at 650, needs_work per decision 3, media yield → plan 146; task 1200 queued', '`plan 1: masterplan`, the plan above `plan 17: Batch runs`, changed; it is quoted below. Bring `plan 17: Batch runs` in line with it
@@ -29400,6 +29409,62 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Gate: `pm show 1185`. Check that every other task of plan 148 is done and that the decision "English-first drafting prompts: apply?" is answered. A note on task 1185 isn''t needed when the pending links exist. Anything missing: a follow-up task, not a workaround here.
 
 Done when: the docs match the code; `qgen validate`, `npm run check`, `npm test`, `npm run build` pass.', '2026-10-16T00:40:10Z', NULL, 1218, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1241, 17, 'qgen: keep the earlier review as previous through fix and record', 'work', 'open', -80, NULL, 'Found by `task 1194: qgen: scan runs keep media unless fix changed it; review qgen for bugs, follow-up tasks`. A question''s earlier review (incl. a human approval or the developer''s needs_work feedback) is lost when a run rewords it.
+
+## What
+- `authoring/tools/qgen.py` `cmd_fix` (`work()` → `change`): in `qgen rework` and the scan modes (`neutralize`, `tighten`; `SCANS`) a revised (rework: also kept) question gets `status: draft, review: None`.
+- `cmd_record` then writes `review = {…, "previous": None}`; `record_translations` (`review_of`) the same for a re-translated question.
+- So `review.previous` never holds the review before the run; the review tool and QC can''t show "was approved by the developer, reworded by neutralize-1".
+
+## Fix
+- `cmd_fix`: keep the old review where record finds it, e.g. `x["review"] = {"previous": x["review"]}` or a `review_before` field; record sets `previous` to it (chain as `reviews.py` does for human reviews: check how `reviews.py` writes `previous` and reuse it, decision 199).
+- Same for `record_translations` (the translation''s earlier review).
+- `qgen validate`''s review checks (`review_problems`) must accept the draft-state shape you choose.
+- No change to prompts, the pool''s existing entries or media (D-36).
+
+## Reproduce / done when
+- Throw-away worktree, temp `TRIVIA_WORK` with a small `qgen rework` or `qgen tighten` run (or a script calling `cmd_fix`/`cmd_record` with `claude` stubbed): an approved question with `review.reviewer: "human"` that is revised ends with `review.previous` = that human review.
+- `npm run check`, `qgen validate` pass.', '2026-10-16T00:44:14Z', NULL, 1194, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1242, 17, 'qgen record: progress lines for its downloads', 'work', 'open', -80, NULL, 'Found by `task 1194: qgen: scan runs keep media unless fix changed it; review qgen for bugs, follow-up tasks`. `record` ran ~1 h silently in `task 632: run neutralize-1` (run 1159) before the developer stopped it.
+
+## What
+- `authoring/tools/qgen.py` `cmd_record`: every pick goes through `media_tool.checked` → `download.cached` (task 1181), with no `progress.waiting` line and no `progress.Bar`; the per-question `progress.detail` is off under `qgen batch`/`rework`/`tighten`/`neutralize` (`progress.verbose = False`). A run with hundreds of uncached picks prints nothing for an hour.
+- Compare `cmd_sync_run`: `progress.item` + `progress.waiting(f"download {host}")` per file and a `Bar`.
+
+## Fix
+- In `cmd_record`, wrap the check in `progress.item("record", label)` + `progress.waiting(...)` like `cmd_sync_run` (only for uncached URLs, `media.cache_path(url).is_file()`), and a `progress.Bar("record", n, "downloads")` or a `progress.resumed`-style line with the number to download.
+- Reuse `cmd_sync_run`''s pattern; don''t copy it twice (decision 199): a small shared helper if it fits.
+
+## Done when
+- A record step with uncached picks prints a start/result line per download and a summary line; `npm run check` passes.
+- Check with a throw-away script (temp `TRIVIA_WORK`/`TRIVIA_MEDIA`) and 2–3 picks; no test.', '2026-10-16T00:44:15Z', NULL, 1194, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1243, 17, 'qgen record: download picks in parallel', 'work', 'open', -80, NULL, 'Found by `task 1194: qgen: scan runs keep media unless fix changed it; review qgen for bugs, follow-up tasks`. In `task 632: run neutralize-1` (run 1159) `record` downloaded ~47 picks per 10 min, serially (294 left when stopped).
+
+## What
+- `authoring/tools/qgen.py` `cmd_record`: the loop over questions calls `media_tool.checked(fields)` (download + `file_problem`) one pick at a time.
+- `download.cached` is already thread-safe (per-URL lock); `parallel()` in qgen.py runs work with `--jobs`.
+
+## Fix
+- First collect every pick (question, slot, fields), then check the uncached ones with `parallel(...)` (args.jobs; record''s `ns()` has `jobs`), then build reviews and the one `update_pool` as now. Mind Commons'' rate limits (`download.http_get` waits out 429s); keep the jobs modest.
+- Combine with `qgen record: progress lines for its downloads` if both are open (same code).
+- Keep task 1181''s behaviour: a download failure leaves the pick unchecked (`sync` checks again), a broken file → `file_problem` → licence verdict `replace` → needs_work.
+
+## Done when
+- Throw-away run (temp `TRIVIA_WORK`/`TRIVIA_MEDIA`, ~20 uncached picks, `claude` not needed): wall time well below the serial one, same `file_problem` results; `npm run check` passes.', '2026-10-16T00:44:15Z', NULL, 1194, 0);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1244, 17, 'qgen scan runs: review shows the kept pick, not candidates', 'work', 'open', -80, NULL, 'Found by `task 1194: qgen: scan runs keep media unless fix changed it; review qgen for bugs, follow-up tasks`. Since task 1194, a scan run (`neutralize`, `tighten`; `SCANS`) keeps a slot''s pool pick (`kept_slots` in `authoring/tools/qgen.py`): no search, research, re-pick or download. The review still sees the old input.
+
+## What
+- `cmd_review` still sends `slot_input` for kept slots: the cached candidates, the contact sheet and `can_search_again: true`; the reviewer picks among candidates (ignored by `record`), may answer `pick: null` + `new_query` (research then skips it) and, per `prompts/review.md` ("If no candidate is adequate … decide needs_work"), may set `needs_work` for a media problem that `record` no longer acts on. In neutralize-1''s resume check, 1 of 21 needs_work had only `["media"]` as problem.
+- `cmd_sheets` still builds contact sheets (preview downloads) for kept slots.
+- `revise_in_pool`: any difference in the `media` dict (e.g. only `note` or `role`) counts as changed `media`, so the candidates are deleted and the slot leaves `kept_slots` though the file stays (only a `type`/`query` change unpicks it). Decide whether `kept_slots` should look at `type`/`query` instead of `fix.changed`.
+
+## Fix
+- For kept slots: the payload shows the kept pick (type, role, query, note, title via `media_title`, like `translation_payload`), no candidates/sheet, `can_search_again: false`; `cmd_sheets` skips them.
+- `prompts/review.md` needs a line for that case (like `translate-review.md`''s "Media" line): judge the kept file against the new wording (giveaway, fit), leave `pick`/`background_pick`/`new_query` null. A prompt change: show the developer the exact text first (`pm decision add`, D-36), then apply.
+- `record`: a kept slot with a media problem from the reviewer → needs_work with that feedback (today the model''s decision already stands; check it stays so).
+
+## Done when
+- A scan run''s review of a kept slot gets no candidates and no sheet; record keeps the pick; `npm run check`, `qgen validate` pass. Check with `claude` stubbed in a throw-away worktree (print the payload).', '2026-10-16T00:44:15Z', NULL, 1194, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -32854,6 +32919,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1179, 1230, '2026-10-16T00:37:42Z', '2026-10-16T00:38:33Z', 'done', NULL, 0, '15afa616d5e0d1442031adcbbab25dcb2d8b86b3', 'claude-opus-5-5[1m]', '2b6e959f-0e57-40f7-b154-9604bdb91b3a', 9, 18, 5343, 352467, 37542, 0.4777614, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1180, 1216, '2026-10-16T00:38:33Z', '2026-10-16T00:38:55Z', 'done', NULL, 0, '5ebb857310c805040e1fafaa881018ca49b03757', 'claude-opus-5-5[1m]', '4d81b2ab-6bea-4654-9dd4-a89b80b2e153', 4, 8, 1096, 160864, 44572, 0.41070080000000003, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1181, 1218, '2026-10-16T00:38:55Z', '2026-10-16T00:40:31Z', 'done', NULL, 0, '0b45dcce20d3329279286dbe4f1b33b6e9d1ff10', 'claude-opus-5-5[1m]', '2f9aab7c-8e73-4548-8613-97c59bc09026', 9, 18, 10160, 415695, 53138, 0.711515, 3857742);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1182, 1194, '2026-10-16T00:40:32Z', '2026-10-16T00:45:24Z', 'done', NULL, 0, 'a8a0785aebd9a0c38425654fbb5aa968fc7ba035', 'claude-opus-5-5[1m]', 'e7836b84-990c-44c8-8acf-2be19854cd71', 42, 74, 25298, 3276636, 118744, 2.1115352, 3857742);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

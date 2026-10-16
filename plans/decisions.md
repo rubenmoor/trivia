@@ -716,6 +716,7 @@ Template:
   - **Numbers (all bundles, RAE):** no separator up to 9999 ("2640"), a space from 10 000 ("42 195"), decimal comma ("42,195").
   - **Review/audit:** a `base` question in Colombian or other national wording is `needs_work` (`review.md`, `audit.md`).
   - **`qgen neutralize`:** one more developer-asked command (amends D-36), like `qgen tighten`: run `neutralize-<n>`, scan of `base` (approved + needs_work, `prompts/neutralize.md`) → fix → review 1 → research → review 2 → record → audit → export → sync; report `authoring/reports/neutralize-<n>.md`. `--dry-run`: scan, flagged ids, cost estimate.
+  - **Media in scan runs (`neutralize`, `tighten`; task 1194):** a slot keeps the pool's pick (no search, research, re-pick or download) unless `fix` changed it or it has no usable pick; `qgen rework` still searches again (QG-23).
   - **`es-ES` for questions:** no `questions.es-ES.json` at launch; the scan lists words with no pan-Hispanic form, a sparse override can follow if there are many.
 - Consequences: RUNBOOK and AGENTS.md list `qgen neutralize` (only when the developer asks); a run gets a batch's QC (`authoring/QC.md`). It stales touched translations (D-81), so full translation runs come after it. The run itself is masterplan part 11.
 - Supersedes / related: D-6, D-36, D-56, D-78, D-79, D-81; B-13; plan 64; pm decision 32
