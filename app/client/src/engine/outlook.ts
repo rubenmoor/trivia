@@ -160,6 +160,26 @@ export function outlook(save: SaveData, data: EngineData, choice: OutlookChoice)
   return { k, bottleneck, tight: merge(tight.levels.map(at)), none: tight.none, bundleHint, runningOut };
 }
 
+export interface SessionOutlook {
+  /** The session's: the group with the lowest `k` (first on a tie). */
+  outlook: Outlook;
+  /** One per distinct age group, in seat order (rr-coop: the team's one). */
+  groups: { age_group: string | null; players: number; outlook: Outlook }[];
+}
+
+/** Outlook of a multiplayer session (plan 158): rr-coop as solo; rr-competitive one per distinct age group,
+ * `players` = its seats; `seatGroups` = each seat's age group, join order. `choice.age_group` is the shared one. */
+export function sessionOutlook(save: SaveData, data: EngineData, choice: OutlookChoice, seatGroups: (string | null)[] = []): SessionOutlook {
+  const counts = new Map<string | null, number>();
+  if (choice.mode === "rr-competitive") for (const g of seatGroups) counts.set(g ?? choice.age_group, (counts.get(g ?? choice.age_group) ?? 0) + 1);
+  if (!counts.size) counts.set(choice.age_group, choice.mode === "rr-competitive" ? choice.players ?? 1 : 1);
+  const groups = [...counts].map(([age_group, players]) => ({
+    age_group, players, outlook: outlook(save, data, { ...choice, age_group, players }),
+  }));
+  const worst = groups.reduce((a, g) => (g.outlook.k < a.outlook.k ? g : a));
+  return { outlook: worst.outlook, groups };
+}
+
 /** Record `shown` in `notified_exhausted` (a new save); drops entries that aren't running out for `choice` any more
  * (also subcategory keys from before task 1104). Call it at every game start, `shown` empty or not, so the prune runs. */
 export function noteRunningOut(save: SaveData, data: EngineData, choice: Choice, shown: string[]): SaveData {

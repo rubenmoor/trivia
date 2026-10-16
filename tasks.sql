@@ -37099,7 +37099,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - `npm run check`, `npm test` (fixture replay unchanged), `npm run build`, `qgen validate` pass
 - Both end conditions reached in `session.test.ts`; `BUILT_MODES` unchanged', '2026-10-16T20:59:07Z', '2026-10-16T21:57:30Z', 1404, 0, 'opus', 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1409, 158, 'Session outlook per age group', 'work', 'open', NULL, NULL, '"Outlook" of `plan 158: Round-robin modes in the engine`, after its rr-coop and rr-competitive tasks (plan 65, decision 31: the Choice screen''s estimate of games left before questions repeat).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1409, 158, 'Session outlook per age group', 'work', 'done', NULL, '2026-10-16, app/client/src/engine/outlook.ts (sessionOutlook), api.ts (age_groups), outlook.test.ts', '"Outlook" of `plan 158: Round-robin modes in the engine`, after its rr-coop and rr-competitive tasks (plan 65, decision 31: the Choice screen''s estimate of games left before questions repeat).
 
 ## Do
 - `app/client/src/engine/outlook.ts` takes a session''s seats:
@@ -37110,7 +37110,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `outlook.test.ts`: one case only if the per-age-group split needs it
 
 ## Done when
-- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass', '2026-10-16T20:59:07Z', NULL, 1404, 0, NULL, 'app');
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass', '2026-10-16T20:59:07Z', '2026-10-16T21:58:47Z', 1404, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1410, 159, 'create tasks for plan 159: Competitive (timed) in the engine', 'split', 'done', 1000, '2026-10-16, tasks.sql: tasks 1412, 1413 for plan 159; no new decisions (276, 280-282 answered)', 'Split plan 159 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T21:00:14Z', '2026-10-16T21:02:33Z', 1394, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1411, 153, 'create tasks for plan 153: masterplan', 'split', 'done', 1000, '2026-10-16, tasks 1418–1426; task 1423 pending on decision 283; no files', 'Split plan 153 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -44060,6 +44060,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1469, 1408, '2026-10-16T21:49:32Z', '2026-10-16T21:57:41Z', 'done', NULL, 0, '5cfd6d2a77d644bba1d5eb1d5d3c3a1555a80ea7', 'app', 'claude-opus-5-5', '0df28338-d1cd-40a6-af8a-81e1202eec1f', NULL, 50, 96, 35938, 5352634, 137665, 2.8909908000000004, 74883);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1470, 635, '2026-10-16T21:49:45Z', '2026-10-16T21:49:59Z', 'blocked', NULL, 0, 'b8fb9a66edf880af50594ca842c6f600bc6ba67d', 'questions', 'claude-sonnet-5-5', '7fa0e35a-83a3-4e7b-a109-93a26b000f4a', NULL, 4, 8, 1029, 133548, 31404, 0.16263160000000004, 74883);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1471, 636, '2026-10-16T21:49:59Z', NULL, 'running', NULL, NULL, 'b8fb9a66edf880af50594ca842c6f600bc6ba67d', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 74883);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1472, 1409, '2026-10-16T21:57:42Z', '2026-10-16T21:58:52Z', 'done', NULL, 0, '579f6fddfa011c7bfcd46e386d879e751a76e4dd', 'app', 'claude-sonnet-5-5', '2adb9dd3-411e-46ed-b51a-253a964e92c2', NULL, 10, 20, 3614, 390628, 35279, 0.2554216, 74883);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
