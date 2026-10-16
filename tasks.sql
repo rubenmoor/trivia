@@ -29398,8 +29398,9 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Where the code from `task 1234: qgen batch drafts en for base: the whole chain on the question''s locale` and `task 1235: --translate from either source; es and es-ES as targets` falls back (e.g. `locale-es.md` for `es-ES`), switch it to the new files.
 - `pm decision consequences <id> "…"`.
 - `rg` the old wording ("all content in Spanish", "understood … in Spain", …) over `.md` files and fix every hit (decision 200).
+- Also apply `decision 240: base bundle rule and voice for English-first drafting: apply?` (`base.rule`, `base.voice` in `app/data/bundles.json`, `VOICE` in `qgen.py`), as its body says.
 
-Done when: the prompts match the answer; `qgen validate`, `npm run check`, `npm test`, `npm run build` pass.', '2026-10-16T00:40:10Z', NULL, 1218, 0);
+Done when: the prompts and `bundles.json` match the answers; `qgen validate`, `npm run check`, `npm test`, `npm run build` pass.', '2026-10-16T00:40:10Z', NULL, 1218, 0);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1240, 148, 'Docs for English-first drafting; gate for batch-9', 'work', 'open', 700, NULL, 'Part 10 of `plan 148: English-first drafting for base`; runs last, after the plan''s other tasks.
 
 - Docs:
@@ -29469,12 +29470,12 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - A scan run''s review of a kept slot gets no candidates and no sheet; record keeps the pick; `npm run check`, `qgen validate` pass. Check with `claude` stubbed in a throw-away worktree (print the payload).', '2026-10-16T00:44:15Z', NULL, 1194, 0);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1245, 148, 'base bundle rule and voice for English-first drafting', 'work', 'open', NULL, NULL, 'Follow-up of `task 1234: qgen batch drafts en for base: the whole chain on the question''s locale`. Part of `plan 148: English-first drafting for base`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web) VALUES (1245, 148, 'base bundle rule and voice for English-first drafting', 'work', 'done', NULL, '2026-10-16, decision 240: base bundle rule and voice for English-first drafting: apply? (base.rule, base.voice, qgen.py VOICE as old → new); tasks 1185 and 1239 pending on it, 1239''s body applies it; no file changed', 'Follow-up of `task 1234: qgen batch drafts en for base: the whole chain on the question''s locale`. Part of `plan 148: English-first drafting for base`.
 
 - `app/data/bundles.json` `base.rule` says "answerable by the players anywhere in the Spanish-speaking world, including well-known facts about Colombia"; `base.voice` is "neutral Latin American Spanish (es-419) … and in Spain".
 - `qgen draft` puts the rule into every draft call''s user message (`bundle_text(bundle, locale)` in `authoring/tools/qgen.py`); English drafts (`locale` en) already leave the Spanish `voice` out, but the rule still steers `base` drafts towards the Spanish-speaking world, against milestone 9''s international angle.
 - `rule` is also read by `qgen bundles` (membership) and shown nowhere in the game; `voice` feeds `{voices}` in `prompts/locale-es.md`.
-- Draft new wording (international rule; `es` voice idiomatic Latin American, no "and in Spain") as verbatim old → new for the developer, like `task 1238: English-first prompt drafts for the developer` (one decision there or its own: `pm decision add`), and make `task 1185: run batch-9` pending on it.', '2026-10-16T01:05:46Z', NULL, 1234, 0);
+- Draft new wording (international rule; `es` voice idiomatic Latin American, no "and in Spain") as verbatim old → new for the developer, like `task 1238: English-first prompt drafts for the developer` (one decision there or its own: `pm decision add`), and make `task 1185: run batch-9` pending on it.', '2026-10-16T01:05:46Z', '2026-10-16T01:25:20Z', 1234, 0);
 
 INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -32261,6 +32262,49 @@ A question doesn''t travel only for `wordplay`, `about_language` (as above) or `
 - The prompt files as above; `TRAVEL_REASONS` `about_spanish` → `about_language` in `qgen.py`.
 - Review reason 9''s exemption: the review/audit input carries the question''s source locale (or batch) if it doesn''t already.
 - `rg` the old wording over `.md` (decision 200): `about_spanish`, "Spanish sentence", "understood across Latin America and in Spain".', NULL, NULL, '2026-10-16T01:24:05Z', NULL, 1238, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (240, 'base bundle rule and voice for English-first drafting: apply?', 'pending', '["apply", "apply with changes (list them)", "keep"]', '`task 1245: base bundle rule and voice for English-first drafting` (`plan 148: English-first drafting for base`; milestone 9 "English-first drafting for `base`": international angle, `es` idiomatic Latin American). Companion of `decision 239: English-first drafting prompts: apply?` (prompt files); this one covers `app/data/bundles.json`, which isn''t a prompt file. Nothing applied yet.
+
+Where they are read (`authoring/tools/qgen.py`):
+- `rule`: `bundle_text()` puts it into every draft call''s user message ("Every question you write is in the `base` bundle: …"); `bundles_text()` feeds `qgen bundles` (membership, with `house-style` + `bundles.md`). Not shipped to the game (stripped on export; `pool.test.ts`).
+- `voice`: `bundle_text()` for Spanish drafts only (base now drafts en, so: none); `voices_text()` fills `{voices}` in `prompts/locale-es.md`, read by every `es` step (translate en → es, rate, factcheck, review on `es`, `neutralize`). `locale-es-ES.md` (decision 239 draft) has no `{voices}`.
+
+## 1. `base.rule` (`app/data/bundles.json`)
+old:
+```
+Everything that isn''t in another bundle: answerable by the players anywhere in the Spanish-speaking world, including well-known facts about Colombia (its capital, its flag, coffee, García Márquez).
+```
+new:
+```
+Everything that isn''t in another bundle: answerable by families anywhere in the world, whatever their language; well-known facts about any country belong here (Colombia''s capital, Japan''s flag, Italian pasta, García Márquez), knowledge only one country''s or one language''s players have doesn''t.
+```
+- Self-contained (no reference to the house style''s "International angle"), so `qgen bundles` reads the same rule with or without decision 239.
+- Boundary to `colombia` kept: famous facts about Colombia stay `base`; `colombia`''s rule ("…that the players outside Colombia mostly wouldn''t know") unchanged.
+- es-sourced questions (≤ batch-8) stay as they are (`decision 237: Supersede decision 27…`); the new rule only steers new drafts and future `qgen bundles` runs (where "When in doubt, choose `base`" still holds).
+
+## 2. `base.voice` (`app/data/bundles.json`)
+old:
+```
+neutral Latin American Spanish (es-419): words understood across Latin America and in Spain
+```
+new:
+```
+idiomatic Latin American Spanish (es-419): words a family anywhere in Latin America uses; Spain has its own es-ES text
+```
+- Matches decision 239''s draft of `locale-es.md` (its `base` bullet says the same at length).
+
+## 3. Fallback voice in `qgen.py` (`VOICE`, for a bundle without `voice`)
+old:
+```
+VOICE = "neutral Latin American Spanish (es-419)"
+```
+new:
+```
+VOICE = "idiomatic Latin American Spanish (es-419)"
+```
+
+## Applying (task 1239, together with decision 239)
+- The three edits above; `qgen validate`, `npm test` (bundles.json shape unchanged).
+- `rg` "Spanish-speaking world", "understood across Latin America and in Spain", "neutral Latin American Spanish" over `.md` and fix the hits that describe `base` (decision 200).', NULL, NULL, '2026-10-16T01:25:13Z', NULL, 1245, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -33469,6 +33513,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1188, 1236, '2026-10-16T01:10:19Z', '2026-10-16T01:14:10Z', 'done', NULL, 0, 'af6fafc5e4f3a591e50b6d2e161649876dce7222', 'claude-opus-5-5[1m]', '331f3ba6-3f07-4b4c-ab8a-ad1459decf12', 32, 56, 19273, 2004829, 85068, 1.4671938, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1189, 1237, '2026-10-16T01:14:10Z', '2026-10-16T01:20:13Z', 'done', NULL, 0, '05b5a5cf93c62cc56122b5deca3c86158517575e', 'claude-opus-5-5[1m]', 'b0e2b1fb-4bae-44e6-9ce0-264c68b5d3b8', 54, 98, 33476, 5496581, 147565, 2.9497482000000006, 3857742);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1190, 1238, '2026-10-16T01:20:13Z', '2026-10-16T01:24:20Z', 'done', NULL, 0, 'b8629258d006ded1a122c808cb1d8da99e68b1f6', 'claude-opus-5-5[1m]', '7389d8aa-1a06-4ab0-9fef-84e3e0ebe4aa', 21, 42, 26909, 1385100, 89007, 1.5274240000000001, 3857742);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1191, 1245, '2026-10-16T01:24:20Z', '2026-10-16T01:25:29Z', 'done', NULL, 0, '888ae7cbb7b106dd7dce08ce93a1254bb29583c4', 'claude-opus-5-5[1m]', '9102afa2-61c4-4337-96dd-c3f480d0b1ed', 13, 26, 6306, 582495, 46844, 0.617475, 3857742);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -33849,6 +33894,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1185, 229);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1185, 233);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1185, 234);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1185, 239);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1185, 240);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1186, 228);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1186, 229);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1190, 227);
@@ -33857,6 +33903,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1191, 231);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1207, 233);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1208, 234);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1239, 239);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1239, 240);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
