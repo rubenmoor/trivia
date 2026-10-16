@@ -41,3 +41,4 @@ Seen in review; guidance, not a lint. Wrong → right.
 - «mark» for flagging a question: «Mark this question?», «Marked questions» → «Flag this question», «Flagged questions» (gallery review 2026-10-14)
 - Dialog body that restates the title: «It gets noted for review; the question stays.» → «Optional: Tell us the issue» (`flag.body`)
 - «…» on a menu row: «Go to question…» → «Go to question» (`overlay.goTo`)
+- Vague purge wording: «Pass & Purge: goodbye to “…”» → «Remove all questions of the topic “…”» (`joker.skip.purge`, review 2026-10-16)

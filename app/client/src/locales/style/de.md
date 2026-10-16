@@ -57,4 +57,5 @@ Seen in review; guidance, not a lint. Wrong → right.
 - «…» on a menu row, stiff verb: «Zu Frage gehen…» → «Zu einer Frage springen» (`overlay.goTo`)
 - Filler words: «12 Fragen am Stück bis zum Gipfel» → «12 Fragen bis zum Gipfel» (`screen.start.subtitle`)
 - Colloquial «aus» for a state: «Mods gefunden, aus bis zur Freigabe» → «Mods gefunden, deaktiviert bis zur Freigabe» (`mods.held`)
+- Vague purge wording: «Näxt & Weg: tschüss, Thema „…“» → «Alle Fragen zum Thema „…“ entfernen» (`joker.skip.purge`, review 2026-10-16)
 - Old joker names, don't use (D-108): «Zaunpfahl» → «Wink», «Näxt» → «Näxt & Weg», «Gang runter» → «Glücksfee»

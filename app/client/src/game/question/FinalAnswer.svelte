@@ -47,7 +47,7 @@
     </button>
   {:else}
     <button class="candy final-button" class:ready onclick={onsubmit} disabled={!ready} tabindex={ready ? 0 : -1}>
-      {t("screen.question.final")} <Prompt action="submit" />
+      <Icon name="seal" /> {t("screen.question.final")} <Prompt action="submit" />
     </button>
     <div class="padlock" class:shaking={locked && !ready} class:open={ready} aria-hidden="true">
       <Icon name={ready ? "unlock" : "lock"} size="100%" />

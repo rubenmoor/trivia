@@ -41,9 +41,9 @@ Milestone 9 defines the joker names again (pm decision 188, pm plan 136): one sy
   - `de` (pm decision 212): `hint` Zaunpfahl (Z), Tipp (I), Geistesblitz (G); `skip` Näxt & weg (N), Und tschüss! (U), Weg damit! (W); `easier` Gute Fee (F), Glücksfee (F), Fee (F); `category` Frau Pingelig (P), Frau Mäkelig (K), Wunschzeit (W); `snipe` Trickschuss (T), Kunstschuss (S), Finte (F)
     - purge «Näxt & weg: tschüss, Thema „{name}“»; title «Frau Pingelig: Welches Thema soll es sein?»
 - Answers (D-108; applied by pm task 1098): `es`/`es-ES` as recommended, Soplo (S), Paso y fuera (P), Hada madrina (H), Doña Exigente (E), Tiro mágico (T); `de` Wink (K), Näxt & Weg (N), Glücksfee (G), Wunschzeit (W), Finte (F) (keys, pm decision 247: `W`, `F` taken, so Wink `K`, Glücksfee `G`)
-  - `de` leaves: hint note «Wink {n}», purge «Näxt & Weg: tschüss, Thema „{name}“», «kein Wink / „Näxt & Weg“ mehr übrig», «keine Glücksfee mehr übrig»
+  - `de` leaves: hint note «Wink {n}», purge «Alle Fragen zum Thema „{name}“ entfernen» (since pm task 1342), «kein Wink / „Näxt & Weg“ mehr übrig», «keine Glücksfee mehr übrig»
 - Gallery check (pm task 1101, 2026-10-15): joker shots in all four locales at 1920 × 1080 and 1280 × 800, nothing clips
-- Developer's review (pm decision 248, 2026-10-16): flags in /gallery; purge button text not explicit enough (flag 15), "Final answer" and "Quit game" without icon (18, 21) → pm task 1342; joker icons in Customize, skip dialog, category picker (17, 19, 20) already in since pm task 1099; base bundle name (16) → pm plan 151
+- Developer's review (pm decision 248, 2026-10-16): flags in /gallery; purge button text not explicit enough (flag 15), "Final answer" and "Quit game" without icon (18, 21) → fixed by pm task 1342 (purge: en «Remove all questions of the topic “{name}”», es «Quitar todas las preguntas del tema «{name}»», de «Alle Fragen zum Thema „{name}“ entfernen», no joker-name prefix; icons `seal` on «Final answer», `exit` on «Quit game»); joker icons in Customize, skip dialog, category picker (17, 19, 20) already in since pm task 1099; base bundle name (16) → pm plan 151
 
 ## Tasks
 - [x] LUI-1 `t()` helper and the `es` catalog; move every string from `copy.ts` and the components into it. No visible change (check with `grep` for Spanish characters left in `app/client/src/game`).

@@ -40,4 +40,5 @@ Seen in review; guidance, not a lint. Wrong → right.
 - Bare «logros»: «Una partida personalizada no gana logros.» → «… no gana logros de Steam.» (TV check)
 - Parenthesized explanations in a row: «Terminar partida (configurar otra)» → say the effect in the name
 - Spain-only words in `es`: «Pulsa otra vez» → «Presiona otra vez» (decision 59)
+- Vague purge wording: «Paso y fuera: adiós al tema «…»» → «Quitar todas las preguntas del tema «…»» (`joker.skip.purge`, review 2026-10-16)
 - Old joker names, don't use (D-108): «Paso» → «Paso y fuera», «Bájale» → «Hada madrina», «Cambiazo» → «Doña Exigente», «Francotirador» → «Tiro mágico»

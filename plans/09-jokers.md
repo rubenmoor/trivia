@@ -36,7 +36,7 @@ Names per UI language (D-108; English first, one symbol per joker, same in every
 - Hints are only shown through this joker (D-26).
 
 ### Paso y fuera (skip), optionally purging the subcategory
-- Playing it opens a small choice: «Solo paso» or «Paso y fuera: adiós al tema "<subcategory>"» (and «Cancelar»). This is one of the few places where a category name is shown (D-8 normally hides it), because the players need to know what they purge.
+- Playing it opens a small choice: «Solo paso» or «Quitar todas las preguntas del tema «<subcategory>»» (and «Cancelar»; plain purge wording since the review, pm decision 248). This is one of the few places where a category name is shown (D-8 normally hides it), because the players need to know what they purge.
 - The skipped question is burned for the player. Back to Select, the skipped card is replaced by a new one from the level's range.
 - **Purge:** the subcategory (D-19) is excluded from every later draw in this game. Any other card of that subcategory still on the table at this level is replaced too. The purge option is disabled if the remaining levels can't be filled without that subcategory.
 

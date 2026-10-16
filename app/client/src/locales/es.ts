@@ -242,7 +242,7 @@ const es = {
   joker: {
     /** `rule`: the one line on the printed card (JK-11). */
     hint: { name: "Soplo", key: "S", rule: "Muestra una pista de la pregunta. Hasta tres por pregunta." },
-    skip: { name: "Paso y fuera", key: "P", pass: "Solo paso", stamp: "ELIMINADO", purge: "Paso y fuera: adiós al tema «{name}»",
+    skip: { name: "Paso y fuera", key: "P", pass: "Solo paso", stamp: "ELIMINADO", purge: "Quitar todas las preguntas del tema «{name}»",
       rule: "Cambia la pregunta por otra carta. Si quieren, ese tema sale del juego.",
     },
     easier: { name: "Hada madrina", key: "H", dial: "Dificultad", rule: "Cambia la pregunta por una más fácil del mismo tema." },

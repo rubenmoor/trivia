@@ -216,7 +216,7 @@ export const en = {
   },
   joker: {
     hint: { name: "Hint", key: "H", rule: "Shows a hint for the question. Up to three per question." },
-    skip: { name: "Pass & Purge", key: "P", pass: "Just pass", stamp: "GONE", purge: "Pass & Purge: goodbye to “{name}”",
+    skip: { name: "Pass & Purge", key: "P", pass: "Just pass", stamp: "GONE", purge: "Remove all questions of the topic “{name}”",
       rule: "Swaps the question for another card. If you like, that topic leaves the game.",
     },
     easier: { name: "Fairy", key: "F", dial: "Difficulty", rule: "Swaps the question for an easier one on the same topic." },

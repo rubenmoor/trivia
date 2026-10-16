@@ -146,7 +146,8 @@
     "text": "Pass & Purge: goodbye to “Deportes tradicionales colombianos”",
     "shot": "joker-skip",
     "note": "not explicit enough, it should plainly say: `remove all questions of the category \"...\"`",
-    "flagged_on": "2026-10-16"
+    "flagged_on": "2026-10-16",
+    "fixed_on": "2026-10-16"
   },
   {
     "id": 16,
@@ -175,7 +176,8 @@
     "text": "Final answer",
     "shot": "question-locked",
     "note": "needs a nice icon",
-    "flagged_on": "2026-10-15"
+    "flagged_on": "2026-10-15",
+    "fixed_on": "2026-10-16"
   },
   {
     "id": 19,
@@ -204,6 +206,7 @@
     "text": "Quit game",
     "shot": "menu-start",
     "note": "needs icon",
-    "flagged_on": "2026-10-15"
+    "flagged_on": "2026-10-15",
+    "fixed_on": "2026-10-16"
   }
 ]

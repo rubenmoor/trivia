@@ -4,7 +4,7 @@
   export type IconName = "lock" | "unlock" | "speaker" | "film" | "check" | "cross" | "crown" | "trash"
     | "flag" | "idea" | "broom" | "wand" | "point" | "trick-shot" | "crosshair" | "puzzle"
     | "rocket" | "play" | "sparkle" | "next" | "back" | "person" | "person-plus" | "pencil" | "family" | "mic"
-    | "balloon" | "skateboard" | "headphones" | "mug" | "sliders" | "book" | "pin" | "refresh" | "power" | "globe";
+    | "balloon" | "skateboard" | "headphones" | "mug" | "sliders" | "book" | "pin" | "refresh" | "power" | "globe" | "exit" | "seal";
 </script>
 
 <script lang="ts">
@@ -156,6 +156,13 @@
   {:else if name === "globe"}
     <circle cx="12" cy="12" r="8.5" fill="currentColor" fill-opacity="0.2" />
     <path d="M3.5 12h17M12 3.5a13 13 0 0 1 0 17M12 3.5a13 13 0 0 0 0 17" />
+  {:else if name === "exit"}
+    <path d="M13.5 3.5H6a1.5 1.5 0 0 0-1.5 1.5v14A1.5 1.5 0 0 0 6 20.5h7.5z" fill="currentColor" fill-opacity="0.25" />
+    <circle cx="10.5" cy="12" r="0.6" fill="currentColor" />
+    <path d="M13 12h8M18 8.5l3.5 3.5-3.5 3.5" />
+  {:else if name === "seal"}
+    <path d="M12 2.5l2.3 1.7 2.8-.2.9 2.7 2.3 1.6-.9 2.7.9 2.7-2.3 1.6-.9 2.7-2.8-.2-2.3 1.7-2.3-1.7-2.8.2-.9-2.7L4.6 14.7l.9-2.7-.9-2.7 2.3-1.6.9-2.7 2.8.2z" fill="currentColor" fill-opacity="0.25" />
+    <path d="M8.5 12.2l2.4 2.4 4.6-4.8" />
   {/if}
 </svg>
 

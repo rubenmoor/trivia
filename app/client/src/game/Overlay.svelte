@@ -15,6 +15,7 @@
   import Credits from "./Credits.svelte";
   import GameSettings from "./GameSettings.svelte";
   import GoToDialog from "./GoToDialog.svelte";
+  import Icon from "./Icon.svelte";
   import { levelsOf } from "./levels.ts";
   import Prompt from "./Prompt.svelte";
   import type { Game, GameMode, JokerBudget, JokerName } from "../lib/types.ts";
@@ -390,6 +391,7 @@
       onclick={() => activate(i)}
       onmouseenter={() => item.enabled && (selected = i)}
     >
+      {#if item.quit}<Icon name="exit" />{/if}
       {confirming === i ? t("overlay.confirm") : item.label}
     </button>
   {/if}

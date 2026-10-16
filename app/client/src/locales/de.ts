@@ -216,7 +216,7 @@ export const de = {
   },
   joker: {
     hint: { name: "Wink", key: "K", rule: "Zeigt einen Hinweis zur Frage. Bis zu drei pro Frage." },
-    skip: { name: "Näxt & Weg", key: "N", pass: "Nur passen", stamp: "WEG", purge: "Näxt & Weg: tschüss, Thema „{name}“",
+    skip: { name: "Näxt & Weg", key: "N", pass: "Nur passen", stamp: "WEG", purge: "Alle Fragen zum Thema „{name}“ entfernen",
       rule: "Tauscht die Frage gegen eine andere Karte. Auf Wunsch fliegt das Thema raus.",
     },
     easier: { name: "Glücksfee", key: "G", dial: "Schwierigkeit", rule: "Tauscht die Frage gegen eine leichtere zum selben Thema." },
