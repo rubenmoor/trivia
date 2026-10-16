@@ -1603,7 +1603,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 
 7. **S6 close-out** (plan 97)
    - Docs: `plans/11-steam.md` (ST-3..ST-5 `[x]`, S6 row done), `plans/17-publishing.md`, `plans/18-steam-integration.md` leftovers done or deferred, `plans/project.md`, `plans/README.md`, `directory.md`, `README.md` (cut a release, send a patch, pull reports, run the report server: commands for humans).
-   - Leftovers to `plans/backlog.md` (competitive mode, couch co-op, more regions/languages, SW-13, SW-14).
+   - Leftovers to `plans/backlog.md` (more regions/languages, SW-13, SW-14); local multiplayer (modes and controls) is `milestone 16: Local multiplayer: game modes and controls`, not a backlog row.
    - Done when: the milestone''s "Done when" holds, including a flag from the released game under Steam arriving via `qgen flag --pull` as a needs_work review, and the copy fallback working with the server unreachable.
    - Suggested priority: 120.
 
@@ -1625,7 +1625,8 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 - Part 4 after milestone 15. Part 6 after part 4; part 7 last.
 
 ## Out of scope (from the milestone)
-- Competitive mode, couch co-op, more regions and languages (later); Remote Play Together (SW-13), macOS (SW-14); marketing beyond Steam''s own wishlist and follow features; telemetry and any network request other than the clicked report.', '', '2026-10-11T21:55:09Z', NULL);
+- Local multiplayer modes and their controls: only in `milestone 16: Local multiplayer: game modes and controls`, not a backlog row.
+- More regions and languages (later); Remote Play Together (SW-13), macOS (SW-14); marketing beyond Steam''s own wishlist and follow features; telemetry and any network request other than the clicked report.', 'This is the overall outline for putting the family trivia game on sale on Steam and keeping it alive afterwards. It covers the store page that collects wishlists before launch, the checks every public build must pass, the launch day itself, regular content updates, and a simple way for players to report a wrong question with one click. Local multiplayer is not part of this; it has its own separate effort.', '2026-10-11T21:55:09Z', NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (12, 1, 'Targets and progress', 700, 'Part 1 of the masterplan (plan 1). The `base` bundle grows to 5000 approved questions (D-52), with a target per difficulty that tapers at the top. This plan stores those targets where the authoring tools can read them, shows approved vs. target in `qgen report` and on `/stats/difficulty`, and turns the milestone''s "done when" into one command that says pass or fail.
 
 ## Targets file (D-53)
@@ -34906,8 +34907,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1362, 150, 'Horizon fixes from the gallery review', 'work', 'open', NULL, NULL, 'Fix what the developer flagged in `/gallery` for the Start horizon (`decision` linked to this task): flagged images (replace under plan 150''s pick rules, update `app/client/public/horizon/` and its CREDITS.md), order, layout in `app/client/src/game/Horizon.svelte`. Re-run the changed shots (`trivia-gallery --only start,start-resume,start-save-notice,language-from-start,credits`, also `--size 1280x800`), then `pm decision consequences <decision id> "<text>"`. If approved with no flags, nothing to fix: close the task.', '2026-10-16T16:26:07Z', NULL, 1331, 0, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1363, 8, 'revise the masterplan of milestone 8: Steam S3: playable desktop build', 'revise', 'done', 1000, '2026-10-16, tasks.sql (plan 8: any bundle combination in part 11, new part 12 prompts follow the last input, plan 48 rows, multiplayer out of scope → milestone 16)', '`milestone 8: Steam S3: playable desktop build` changed. Bring `plan 8: masterplan`, the masterplan, in line with it (`pm plan edit 8 --body -`), or
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-16T16:56:11Z', '2026-10-16T19:20:30Z', NULL, 0, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1364, 11, 'revise the masterplan of milestone 11: Steam S6: release', 'revise', 'open', 1000, NULL, '`milestone 11: Steam S6: release` changed. Bring `plan 11: masterplan`, the masterplan, in line with it (`pm plan edit 11 --body -`), or
-leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-16T16:56:11Z', NULL, NULL, 0, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1364, 11, 'revise the masterplan of milestone 11: Steam S6: release', 'revise', 'done', 1000, '2026-10-16, tasks.sql: plan 11 out of scope and part 7 leftovers: local multiplayer only in milestone 16, no backlog row; intro added', '`milestone 11: Steam S6: release` changed. Bring `plan 11: masterplan`, the masterplan, in line with it (`pm plan edit 11 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-16T16:56:11Z', '2026-10-16T19:29:47Z', NULL, 0, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1365, 153, 'write the masterplan of milestone 17: Remote Play Together', 'masterplan', 'open', NULL, NULL, 'Write plan 153, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-16T17:05:30Z', NULL, NULL, 0, NULL);
@@ -35357,6 +35358,528 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - a failure found in the walk that the other tasks missed: follow-up task in this plan
 
 Done when: docs updated, walk passes, gallery pad shots still show glyphs; per-commit checks pass.', '2026-10-16T19:29:02Z', NULL, 1376, 0, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1384, 11, 'create tasks for plan 11: masterplan', 'split', 'open', 1000, NULL, 'Split plan 11 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-16T19:29:44Z', NULL, 1364, 0, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1385, 94, 'revise plan 94: Coming soon page (ST-3)', 'revise', 'open', 1000, NULL, '`plan 11: masterplan`, the plan above `plan 94: Coming soon page (ST-3)`, changed; it is quoted below. Bring `plan 94: Coming soon page (ST-3)` in line with it
+(`pm plan edit 94 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 11: masterplan
+
+Milestone 11 is S6 of the Steam track (D-34, `plans/11-steam.md`, ST-3..ST-5): the Steam app from S5 (milestone 10) goes public. That means a "Coming soon" page that collects wishlists, a release checklist that every public build passes, store facts measured on the release candidate, the launch itself, content updates as patches, and question reports that players send on a click to our own small server (decision 93), with a copy fallback. The milestone is done when the game is released, content updates go out as patches, and a flag sent from the released game arrives via `qgen flag --pull`.
+
+**The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 11 …`, priority as suggested), and that plan''s tasks do the work. Parts 1–7 have plans (94, 91, 92, 95, 93, 96, 97); they are revised to this text, not rewritten. Part 8 is new.
+
+## Preconditions (other milestones; a part''s plan task checks them first)
+- Milestone 10 (S5), masterplan 10 (plan 10): App ID and names, app config + branches, media bundle, builds + upload command (plan 89), store page + AI disclosure (plan 88), survey + price (plan 39), Deck test (plan 90), Steam binding (plan 85), Cloud saves (plan 87), beta test. Read `pm plans list`, not this summary. S6 adds to the upload command; it doesn''t rebuild it.
+- Milestone 15 (Modding and Steam Workshop): launch waits for it (milestone constraint); part 4 checks it.
+- Decisions: decision 67: Steamworks account holder (person); decision 90: Store requirements, languages and controller flags? (provisional values now, final on the release candidate); decision 93: Question reports: where do players send them? (own endpoint); decision 96: Content patch cadence after launch?; decision 111: Steam only. If a part needs a decision that is still pending, its plan task makes itself pending on it (`pm task-pending-decision`) and stops.
+- Milestone 9 (S4): content target met for every launch language (plan 38, `qgen report --simulate`); the release waits for it.
+- «Reportar pregunta» (MD-6, plan 36, decision 60): flags with note and the flag list that parts 5 and 8 build on.
+- Credits (PUB-5, plan 47) and licence data (plan 26): part 3''s "credits complete" check reads them.
+
+## Rules for every part
+- **One network request, on a click.** The game sends a question report to our server only when the player clicks send (part 5/8). Nothing else goes out: no update check, no crash reporter, no analytics, no remote content, no background retry. Steam delivers updates.
+- **Steam only** (decision 111): work and checks only for the Steam build (Windows, Linux/SteamOS/Deck, launched by Steam); no "without Steam" rows in checklists or done-whens. Saves and flags need a valid Steam user. The browser game and Python server are retired by plan 99, not kept alive here.
+- **The gamemaster does what needs a person:** Steamworks web UI (coming-soon request, release date, the Release button, events/announcements, store page fields), Valve''s store and build reviews, uploads that need Steam Guard, the Cloudflare account and domain, the publisher Web API key, the weak-machine and Deck runs, the family test, answering players. Workers prepare checklists, exact texts and field values (owning plan file or a pm decision body) and record the result the gamemaster reports. Workers never enter credentials or contact Valve or players.
+- **Secrets never in git** (AGENTS.md): build account, beta password, Steam Guard files, publisher Web API key, report pull token.
+- A patch never breaks a save (plan 91).
+- Shipped code under `app/`, release tooling under `authoring/` or the flake (D-35); the report server in its own top-level directory (part 8, listed in `directory.md`); no new dependency without a pm decision.
+- Owning plan files get tasks `[x]` with a note (`11-steam.md` ST-3..ST-5, `17-publishing.md`, `18-steam-integration.md`); `plans/project.md` in sync.
+
+## Parts
+
+1. **"Coming soon" page (ST-3)** (plan 94)
+   - Owner: `plans/11-steam.md` (ST-3); store texts in `plans/17-publishing.md` (PUB-8).
+   - Needs: store page approved (plan 88) with decision 90''s provisional values (requirements, storage as estimate, controller Partial), App ID and names, survey.
+   - Checklist for the gamemaster: store page complete, Valve''s store review, fixes, then "Coming soon" with a date or "to be announced"; record the live date (pm decision).
+   - Timing: Valve''s rule (≥ 2 weeks before release; source in the plan); aim for longer. Part 4''s release date counts from it.
+   - Wishlists: only Steam''s own (wishlist, follow); no mailing list, no own website, no marketing.
+   - Suggested priority: 450.
+
+2. **Version numbers and patch-safe saves** (plan 91)
+   - Owner: `plans/18-steam-integration.md` ("Builds and depots"); save format in `plans/12-client-engine.md`.
+   - One semver version (decision 91) and a pool hash (decision 92), shown in the game and sent with each report (part 5); tag `v<version>` per release; build description = tag.
+   - Saves survive patches that add, fix or drop questions.
+   - Suggested priority: 600.
+
+3. **Release checklist (ST-4)** (plan 92)
+   - Owner: `plans/11-steam.md` (ST-4); `trivia-release-check` (plan 89, SW-6), extended, no new tool.
+   - Automated: tag gate, `qgen validate`, per-commit checks, pool export fresh, credits complete both ways, media bundle within budget, both platform builds, smoke game. Fails loudly, prints what''s left for the human.
+   - Manual rows, one pm decision per release candidate: offline test (network off, Steam running in offline mode, full game to level 12 or a won checkpoint; the report send fails cleanly into the copy fallback), Deck test (plan 90''s rows), Windows test, Cloud sync, report sent from the candidate arrives via `qgen flag --pull`, family sign-off on `beta`. No "Steam off" row (decision 111).
+   - Content-only patch variant allowed if the plan says why.
+   - Suggested priority: 700.
+
+4. **Launch** (plan 95)
+   - Owner: `plans/11-steam.md` (S6 row, "Launch (S6)").
+   - Gate: milestone 15 done (modding guide linked on the store page), milestone 9''s content target, part 8''s server live.
+   - Store facts measured on the release candidate (decision 90), store page updated to match before release:
+     - installed size of the RC build: base and each DLC (regional packs, decision 110: free DLC)
+     - minimum requirements from a full game with video questions on a weak machine (an older laptop) and on a Steam Deck (none at hand: the gamemaster borrows or buys one); worker drafts the run sheet and turns the results into field values
+     - controller flag from a pad-only game: Full if it passes, else Partial
+   - Release candidate: tag, upload to `beta`, part 3, family sign-off; Valve''s build review (lead time from the docs); the gamemaster sets the build live on `default` and presses Release on the date from part 1.
+   - Launch-day checklist: price from OQ-33 live; store languages match the build; privacy policy on the store page (part 8); launch announcement per launch language drafted (gamemaster posts it).
+   - First week: the gamemaster watches discussions, reviews and incoming reports (`qgen flag --pull`); bugs become tasks; a hotfix goes through part 3.
+   - Result via pm decision "Released? date, build id".
+   - Suggested priority: 160.
+
+5. **Question reports in the game and in authoring (ST-5)** (plan 93)
+   - Owner: `plans/11-steam.md` (ST-5); in-game `plans/13-game-modes.md` (MD-6).
+   - Channel (decision 93): our endpoint from part 8; the earlier Steam-thread/email options are dropped.
+   - Game: the flag list sends a report on the player''s click: question id, question language, the text the player saw, note, game version, pool hash (part 2), plus a Steam session ticket from the shell''s Steam bridge (plan 85; add `GetAuthTicketForWebApi` there). Only valid Steam users see the flag action (decision 111). Sent/failed state per flag; no automatic retry. Fallback when the server can''t be reached: copy the report text (per flag and all), as plan 93 already plans. Strings via `t()` for every launch language. The shell allows exactly the report URL, nothing else.
+   - Authoring: `qgen flag` turns pasted report text into a `needs_work` review (as planned); `qgen flag --pull` fetches new reports from part 8''s pull endpoint with the pull token (from the environment or a gitignored file, never git), turns each into a `needs_work` review with the report as note, and acknowledges them so they aren''t pulled twice. Reports for ids not in our pool (mods, milestone 15) are skipped with a count. No new storage beyond `authoring/data/questions.json` and a small pulled-ids ledger.
+   - Suggested priority: 550 (after part 8''s API contract).
+
+6. **Content updates as patches (ST-5)** (plan 96)
+   - Owner: `plans/11-steam.md` (ST-5); `plans/16-content-target.md`.
+   - Cadence (decision 96): monthly, only if ≥ 100 new approved per launch language or a player-reported fix is waiting; hotfixes any time.
+   - Patch = new version (part 2) + part 3 (content-only variant where it applies) + upload: new approved questions (`qgen batch`), fixes from reports (part 5), dropped questions; never changes rules or saves silently.
+   - Patch notes: `qgen patch-notes` diffs the pool between two tags and drafts the note; the gamemaster posts it as a Steam event.
+   - Done when: the first content patch after launch went out this way (pm decision with version and date).
+   - Suggested priority: 250.
+
+7. **S6 close-out** (plan 97)
+   - Docs: `plans/11-steam.md` (ST-3..ST-5 `[x]`, S6 row done), `plans/17-publishing.md`, `plans/18-steam-integration.md` leftovers done or deferred, `plans/project.md`, `plans/README.md`, `directory.md`, `README.md` (cut a release, send a patch, pull reports, run the report server: commands for humans).
+   - Leftovers to `plans/backlog.md` (more regions/languages, SW-13, SW-14); local multiplayer (modes and controls) is `milestone 16: Local multiplayer: game modes and controls`, not a backlog row.
+   - Done when: the milestone''s "Done when" holds, including a flag from the released game under Steam arriving via `qgen flag --pull` as a needs_work review, and the copy fallback working with the server unreachable.
+   - Suggested priority: 120.
+
+8. **Report server (`POST /reports`)** (new plan)
+   - Owner: `plans/11-steam.md` (ST-5, server half); new top-level directory for the server code, in `directory.md`.
+   - Hosting: Cloudflare Workers + D1 (free tier) unless the plan finds a better fit (compare briefly: limits, cost, lock-in; a pm decision only if it recommends something else). Tooling (e.g. `wrangler`) needs a pm decision as a new dependency; prefer running it via the flake/`npx` without adding it to the game''s packages.
+   - `POST /reports`: question id, question language, text seen, note, game version, pool hash, Steam session ticket. The server verifies the ticket with Steam''s Web API (`ISteamUserAuth/AuthenticateUserTicket`, publisher key) and rejects invalid users; rate limit per user via a salted hash of the SteamID; no SteamIDs or IPs stored; field size limits; the plan sets the retention.
+   - Pull endpoint for `qgen flag --pull` (part 5): bearer pull token, returns unacknowledged reports, acknowledge call; the API contract written down in the plan before part 5 builds on it.
+   - Secrets (publisher Web API key, pull token, hash salt) only as Worker secrets; never in git.
+   - Privacy policy text for the store page and the game''s report dialog: what is sent, what is kept, for how long; in every launch language; the gamemaster publishes it (part 4 checks it).
+   - Gamemaster setup checklist: Cloudflare account, domain, Steamworks publisher Web API key (needs the Steamworks account, decision 67), deploy command, a test report; the endpoint URL baked into the build as config, not a secret.
+   - A local dev mode (the server run locally, a fake ticket check behind an explicit dev switch) so workers can test client and `--pull` without Steam.
+   - Suggested priority: 700 (backend; before part 5).
+
+## Order
+- Part 2 → part 3 → part 4 (release candidate) and part 6.
+- Part 8 (API contract first) → part 5; both before part 4 (they ship in the launch build, and part 3 checks a report round trip).
+- Part 1 at least two weeks (better months) before part 4''s release date; it can start once the store page is approved.
+- Part 4 after milestone 15. Part 6 after part 4; part 7 last.
+
+## Out of scope (from the milestone)
+- Local multiplayer modes and their controls: only in `milestone 16: Local multiplayer: game modes and controls`, not a backlog row.
+- More regions and languages (later); Remote Play Together (SW-13), macOS (SW-14); marketing beyond Steam''s own wishlist and follow features; telemetry and any network request other than the clicked report.', '2026-10-16T19:29:44Z', NULL, 1364, 0, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1386, 95, 'revise plan 95: Launch', 'revise', 'open', 1000, NULL, '`plan 11: masterplan`, the plan above `plan 95: Launch`, changed; it is quoted below. Bring `plan 95: Launch` in line with it
+(`pm plan edit 95 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 11: masterplan
+
+Milestone 11 is S6 of the Steam track (D-34, `plans/11-steam.md`, ST-3..ST-5): the Steam app from S5 (milestone 10) goes public. That means a "Coming soon" page that collects wishlists, a release checklist that every public build passes, store facts measured on the release candidate, the launch itself, content updates as patches, and question reports that players send on a click to our own small server (decision 93), with a copy fallback. The milestone is done when the game is released, content updates go out as patches, and a flag sent from the released game arrives via `qgen flag --pull`.
+
+**The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 11 …`, priority as suggested), and that plan''s tasks do the work. Parts 1–7 have plans (94, 91, 92, 95, 93, 96, 97); they are revised to this text, not rewritten. Part 8 is new.
+
+## Preconditions (other milestones; a part''s plan task checks them first)
+- Milestone 10 (S5), masterplan 10 (plan 10): App ID and names, app config + branches, media bundle, builds + upload command (plan 89), store page + AI disclosure (plan 88), survey + price (plan 39), Deck test (plan 90), Steam binding (plan 85), Cloud saves (plan 87), beta test. Read `pm plans list`, not this summary. S6 adds to the upload command; it doesn''t rebuild it.
+- Milestone 15 (Modding and Steam Workshop): launch waits for it (milestone constraint); part 4 checks it.
+- Decisions: decision 67: Steamworks account holder (person); decision 90: Store requirements, languages and controller flags? (provisional values now, final on the release candidate); decision 93: Question reports: where do players send them? (own endpoint); decision 96: Content patch cadence after launch?; decision 111: Steam only. If a part needs a decision that is still pending, its plan task makes itself pending on it (`pm task-pending-decision`) and stops.
+- Milestone 9 (S4): content target met for every launch language (plan 38, `qgen report --simulate`); the release waits for it.
+- «Reportar pregunta» (MD-6, plan 36, decision 60): flags with note and the flag list that parts 5 and 8 build on.
+- Credits (PUB-5, plan 47) and licence data (plan 26): part 3''s "credits complete" check reads them.
+
+## Rules for every part
+- **One network request, on a click.** The game sends a question report to our server only when the player clicks send (part 5/8). Nothing else goes out: no update check, no crash reporter, no analytics, no remote content, no background retry. Steam delivers updates.
+- **Steam only** (decision 111): work and checks only for the Steam build (Windows, Linux/SteamOS/Deck, launched by Steam); no "without Steam" rows in checklists or done-whens. Saves and flags need a valid Steam user. The browser game and Python server are retired by plan 99, not kept alive here.
+- **The gamemaster does what needs a person:** Steamworks web UI (coming-soon request, release date, the Release button, events/announcements, store page fields), Valve''s store and build reviews, uploads that need Steam Guard, the Cloudflare account and domain, the publisher Web API key, the weak-machine and Deck runs, the family test, answering players. Workers prepare checklists, exact texts and field values (owning plan file or a pm decision body) and record the result the gamemaster reports. Workers never enter credentials or contact Valve or players.
+- **Secrets never in git** (AGENTS.md): build account, beta password, Steam Guard files, publisher Web API key, report pull token.
+- A patch never breaks a save (plan 91).
+- Shipped code under `app/`, release tooling under `authoring/` or the flake (D-35); the report server in its own top-level directory (part 8, listed in `directory.md`); no new dependency without a pm decision.
+- Owning plan files get tasks `[x]` with a note (`11-steam.md` ST-3..ST-5, `17-publishing.md`, `18-steam-integration.md`); `plans/project.md` in sync.
+
+## Parts
+
+1. **"Coming soon" page (ST-3)** (plan 94)
+   - Owner: `plans/11-steam.md` (ST-3); store texts in `plans/17-publishing.md` (PUB-8).
+   - Needs: store page approved (plan 88) with decision 90''s provisional values (requirements, storage as estimate, controller Partial), App ID and names, survey.
+   - Checklist for the gamemaster: store page complete, Valve''s store review, fixes, then "Coming soon" with a date or "to be announced"; record the live date (pm decision).
+   - Timing: Valve''s rule (≥ 2 weeks before release; source in the plan); aim for longer. Part 4''s release date counts from it.
+   - Wishlists: only Steam''s own (wishlist, follow); no mailing list, no own website, no marketing.
+   - Suggested priority: 450.
+
+2. **Version numbers and patch-safe saves** (plan 91)
+   - Owner: `plans/18-steam-integration.md` ("Builds and depots"); save format in `plans/12-client-engine.md`.
+   - One semver version (decision 91) and a pool hash (decision 92), shown in the game and sent with each report (part 5); tag `v<version>` per release; build description = tag.
+   - Saves survive patches that add, fix or drop questions.
+   - Suggested priority: 600.
+
+3. **Release checklist (ST-4)** (plan 92)
+   - Owner: `plans/11-steam.md` (ST-4); `trivia-release-check` (plan 89, SW-6), extended, no new tool.
+   - Automated: tag gate, `qgen validate`, per-commit checks, pool export fresh, credits complete both ways, media bundle within budget, both platform builds, smoke game. Fails loudly, prints what''s left for the human.
+   - Manual rows, one pm decision per release candidate: offline test (network off, Steam running in offline mode, full game to level 12 or a won checkpoint; the report send fails cleanly into the copy fallback), Deck test (plan 90''s rows), Windows test, Cloud sync, report sent from the candidate arrives via `qgen flag --pull`, family sign-off on `beta`. No "Steam off" row (decision 111).
+   - Content-only patch variant allowed if the plan says why.
+   - Suggested priority: 700.
+
+4. **Launch** (plan 95)
+   - Owner: `plans/11-steam.md` (S6 row, "Launch (S6)").
+   - Gate: milestone 15 done (modding guide linked on the store page), milestone 9''s content target, part 8''s server live.
+   - Store facts measured on the release candidate (decision 90), store page updated to match before release:
+     - installed size of the RC build: base and each DLC (regional packs, decision 110: free DLC)
+     - minimum requirements from a full game with video questions on a weak machine (an older laptop) and on a Steam Deck (none at hand: the gamemaster borrows or buys one); worker drafts the run sheet and turns the results into field values
+     - controller flag from a pad-only game: Full if it passes, else Partial
+   - Release candidate: tag, upload to `beta`, part 3, family sign-off; Valve''s build review (lead time from the docs); the gamemaster sets the build live on `default` and presses Release on the date from part 1.
+   - Launch-day checklist: price from OQ-33 live; store languages match the build; privacy policy on the store page (part 8); launch announcement per launch language drafted (gamemaster posts it).
+   - First week: the gamemaster watches discussions, reviews and incoming reports (`qgen flag --pull`); bugs become tasks; a hotfix goes through part 3.
+   - Result via pm decision "Released? date, build id".
+   - Suggested priority: 160.
+
+5. **Question reports in the game and in authoring (ST-5)** (plan 93)
+   - Owner: `plans/11-steam.md` (ST-5); in-game `plans/13-game-modes.md` (MD-6).
+   - Channel (decision 93): our endpoint from part 8; the earlier Steam-thread/email options are dropped.
+   - Game: the flag list sends a report on the player''s click: question id, question language, the text the player saw, note, game version, pool hash (part 2), plus a Steam session ticket from the shell''s Steam bridge (plan 85; add `GetAuthTicketForWebApi` there). Only valid Steam users see the flag action (decision 111). Sent/failed state per flag; no automatic retry. Fallback when the server can''t be reached: copy the report text (per flag and all), as plan 93 already plans. Strings via `t()` for every launch language. The shell allows exactly the report URL, nothing else.
+   - Authoring: `qgen flag` turns pasted report text into a `needs_work` review (as planned); `qgen flag --pull` fetches new reports from part 8''s pull endpoint with the pull token (from the environment or a gitignored file, never git), turns each into a `needs_work` review with the report as note, and acknowledges them so they aren''t pulled twice. Reports for ids not in our pool (mods, milestone 15) are skipped with a count. No new storage beyond `authoring/data/questions.json` and a small pulled-ids ledger.
+   - Suggested priority: 550 (after part 8''s API contract).
+
+6. **Content updates as patches (ST-5)** (plan 96)
+   - Owner: `plans/11-steam.md` (ST-5); `plans/16-content-target.md`.
+   - Cadence (decision 96): monthly, only if ≥ 100 new approved per launch language or a player-reported fix is waiting; hotfixes any time.
+   - Patch = new version (part 2) + part 3 (content-only variant where it applies) + upload: new approved questions (`qgen batch`), fixes from reports (part 5), dropped questions; never changes rules or saves silently.
+   - Patch notes: `qgen patch-notes` diffs the pool between two tags and drafts the note; the gamemaster posts it as a Steam event.
+   - Done when: the first content patch after launch went out this way (pm decision with version and date).
+   - Suggested priority: 250.
+
+7. **S6 close-out** (plan 97)
+   - Docs: `plans/11-steam.md` (ST-3..ST-5 `[x]`, S6 row done), `plans/17-publishing.md`, `plans/18-steam-integration.md` leftovers done or deferred, `plans/project.md`, `plans/README.md`, `directory.md`, `README.md` (cut a release, send a patch, pull reports, run the report server: commands for humans).
+   - Leftovers to `plans/backlog.md` (more regions/languages, SW-13, SW-14); local multiplayer (modes and controls) is `milestone 16: Local multiplayer: game modes and controls`, not a backlog row.
+   - Done when: the milestone''s "Done when" holds, including a flag from the released game under Steam arriving via `qgen flag --pull` as a needs_work review, and the copy fallback working with the server unreachable.
+   - Suggested priority: 120.
+
+8. **Report server (`POST /reports`)** (new plan)
+   - Owner: `plans/11-steam.md` (ST-5, server half); new top-level directory for the server code, in `directory.md`.
+   - Hosting: Cloudflare Workers + D1 (free tier) unless the plan finds a better fit (compare briefly: limits, cost, lock-in; a pm decision only if it recommends something else). Tooling (e.g. `wrangler`) needs a pm decision as a new dependency; prefer running it via the flake/`npx` without adding it to the game''s packages.
+   - `POST /reports`: question id, question language, text seen, note, game version, pool hash, Steam session ticket. The server verifies the ticket with Steam''s Web API (`ISteamUserAuth/AuthenticateUserTicket`, publisher key) and rejects invalid users; rate limit per user via a salted hash of the SteamID; no SteamIDs or IPs stored; field size limits; the plan sets the retention.
+   - Pull endpoint for `qgen flag --pull` (part 5): bearer pull token, returns unacknowledged reports, acknowledge call; the API contract written down in the plan before part 5 builds on it.
+   - Secrets (publisher Web API key, pull token, hash salt) only as Worker secrets; never in git.
+   - Privacy policy text for the store page and the game''s report dialog: what is sent, what is kept, for how long; in every launch language; the gamemaster publishes it (part 4 checks it).
+   - Gamemaster setup checklist: Cloudflare account, domain, Steamworks publisher Web API key (needs the Steamworks account, decision 67), deploy command, a test report; the endpoint URL baked into the build as config, not a secret.
+   - A local dev mode (the server run locally, a fake ticket check behind an explicit dev switch) so workers can test client and `--pull` without Steam.
+   - Suggested priority: 700 (backend; before part 5).
+
+## Order
+- Part 2 → part 3 → part 4 (release candidate) and part 6.
+- Part 8 (API contract first) → part 5; both before part 4 (they ship in the launch build, and part 3 checks a report round trip).
+- Part 1 at least two weeks (better months) before part 4''s release date; it can start once the store page is approved.
+- Part 4 after milestone 15. Part 6 after part 4; part 7 last.
+
+## Out of scope (from the milestone)
+- Local multiplayer modes and their controls: only in `milestone 16: Local multiplayer: game modes and controls`, not a backlog row.
+- More regions and languages (later); Remote Play Together (SW-13), macOS (SW-14); marketing beyond Steam''s own wishlist and follow features; telemetry and any network request other than the clicked report.', '2026-10-16T19:29:44Z', NULL, 1364, 0, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1387, 96, 'revise plan 96: Content updates as patches (ST-5)', 'revise', 'open', 1000, NULL, '`plan 11: masterplan`, the plan above `plan 96: Content updates as patches (ST-5)`, changed; it is quoted below. Bring `plan 96: Content updates as patches (ST-5)` in line with it
+(`pm plan edit 96 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 11: masterplan
+
+Milestone 11 is S6 of the Steam track (D-34, `plans/11-steam.md`, ST-3..ST-5): the Steam app from S5 (milestone 10) goes public. That means a "Coming soon" page that collects wishlists, a release checklist that every public build passes, store facts measured on the release candidate, the launch itself, content updates as patches, and question reports that players send on a click to our own small server (decision 93), with a copy fallback. The milestone is done when the game is released, content updates go out as patches, and a flag sent from the released game arrives via `qgen flag --pull`.
+
+**The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 11 …`, priority as suggested), and that plan''s tasks do the work. Parts 1–7 have plans (94, 91, 92, 95, 93, 96, 97); they are revised to this text, not rewritten. Part 8 is new.
+
+## Preconditions (other milestones; a part''s plan task checks them first)
+- Milestone 10 (S5), masterplan 10 (plan 10): App ID and names, app config + branches, media bundle, builds + upload command (plan 89), store page + AI disclosure (plan 88), survey + price (plan 39), Deck test (plan 90), Steam binding (plan 85), Cloud saves (plan 87), beta test. Read `pm plans list`, not this summary. S6 adds to the upload command; it doesn''t rebuild it.
+- Milestone 15 (Modding and Steam Workshop): launch waits for it (milestone constraint); part 4 checks it.
+- Decisions: decision 67: Steamworks account holder (person); decision 90: Store requirements, languages and controller flags? (provisional values now, final on the release candidate); decision 93: Question reports: where do players send them? (own endpoint); decision 96: Content patch cadence after launch?; decision 111: Steam only. If a part needs a decision that is still pending, its plan task makes itself pending on it (`pm task-pending-decision`) and stops.
+- Milestone 9 (S4): content target met for every launch language (plan 38, `qgen report --simulate`); the release waits for it.
+- «Reportar pregunta» (MD-6, plan 36, decision 60): flags with note and the flag list that parts 5 and 8 build on.
+- Credits (PUB-5, plan 47) and licence data (plan 26): part 3''s "credits complete" check reads them.
+
+## Rules for every part
+- **One network request, on a click.** The game sends a question report to our server only when the player clicks send (part 5/8). Nothing else goes out: no update check, no crash reporter, no analytics, no remote content, no background retry. Steam delivers updates.
+- **Steam only** (decision 111): work and checks only for the Steam build (Windows, Linux/SteamOS/Deck, launched by Steam); no "without Steam" rows in checklists or done-whens. Saves and flags need a valid Steam user. The browser game and Python server are retired by plan 99, not kept alive here.
+- **The gamemaster does what needs a person:** Steamworks web UI (coming-soon request, release date, the Release button, events/announcements, store page fields), Valve''s store and build reviews, uploads that need Steam Guard, the Cloudflare account and domain, the publisher Web API key, the weak-machine and Deck runs, the family test, answering players. Workers prepare checklists, exact texts and field values (owning plan file or a pm decision body) and record the result the gamemaster reports. Workers never enter credentials or contact Valve or players.
+- **Secrets never in git** (AGENTS.md): build account, beta password, Steam Guard files, publisher Web API key, report pull token.
+- A patch never breaks a save (plan 91).
+- Shipped code under `app/`, release tooling under `authoring/` or the flake (D-35); the report server in its own top-level directory (part 8, listed in `directory.md`); no new dependency without a pm decision.
+- Owning plan files get tasks `[x]` with a note (`11-steam.md` ST-3..ST-5, `17-publishing.md`, `18-steam-integration.md`); `plans/project.md` in sync.
+
+## Parts
+
+1. **"Coming soon" page (ST-3)** (plan 94)
+   - Owner: `plans/11-steam.md` (ST-3); store texts in `plans/17-publishing.md` (PUB-8).
+   - Needs: store page approved (plan 88) with decision 90''s provisional values (requirements, storage as estimate, controller Partial), App ID and names, survey.
+   - Checklist for the gamemaster: store page complete, Valve''s store review, fixes, then "Coming soon" with a date or "to be announced"; record the live date (pm decision).
+   - Timing: Valve''s rule (≥ 2 weeks before release; source in the plan); aim for longer. Part 4''s release date counts from it.
+   - Wishlists: only Steam''s own (wishlist, follow); no mailing list, no own website, no marketing.
+   - Suggested priority: 450.
+
+2. **Version numbers and patch-safe saves** (plan 91)
+   - Owner: `plans/18-steam-integration.md` ("Builds and depots"); save format in `plans/12-client-engine.md`.
+   - One semver version (decision 91) and a pool hash (decision 92), shown in the game and sent with each report (part 5); tag `v<version>` per release; build description = tag.
+   - Saves survive patches that add, fix or drop questions.
+   - Suggested priority: 600.
+
+3. **Release checklist (ST-4)** (plan 92)
+   - Owner: `plans/11-steam.md` (ST-4); `trivia-release-check` (plan 89, SW-6), extended, no new tool.
+   - Automated: tag gate, `qgen validate`, per-commit checks, pool export fresh, credits complete both ways, media bundle within budget, both platform builds, smoke game. Fails loudly, prints what''s left for the human.
+   - Manual rows, one pm decision per release candidate: offline test (network off, Steam running in offline mode, full game to level 12 or a won checkpoint; the report send fails cleanly into the copy fallback), Deck test (plan 90''s rows), Windows test, Cloud sync, report sent from the candidate arrives via `qgen flag --pull`, family sign-off on `beta`. No "Steam off" row (decision 111).
+   - Content-only patch variant allowed if the plan says why.
+   - Suggested priority: 700.
+
+4. **Launch** (plan 95)
+   - Owner: `plans/11-steam.md` (S6 row, "Launch (S6)").
+   - Gate: milestone 15 done (modding guide linked on the store page), milestone 9''s content target, part 8''s server live.
+   - Store facts measured on the release candidate (decision 90), store page updated to match before release:
+     - installed size of the RC build: base and each DLC (regional packs, decision 110: free DLC)
+     - minimum requirements from a full game with video questions on a weak machine (an older laptop) and on a Steam Deck (none at hand: the gamemaster borrows or buys one); worker drafts the run sheet and turns the results into field values
+     - controller flag from a pad-only game: Full if it passes, else Partial
+   - Release candidate: tag, upload to `beta`, part 3, family sign-off; Valve''s build review (lead time from the docs); the gamemaster sets the build live on `default` and presses Release on the date from part 1.
+   - Launch-day checklist: price from OQ-33 live; store languages match the build; privacy policy on the store page (part 8); launch announcement per launch language drafted (gamemaster posts it).
+   - First week: the gamemaster watches discussions, reviews and incoming reports (`qgen flag --pull`); bugs become tasks; a hotfix goes through part 3.
+   - Result via pm decision "Released? date, build id".
+   - Suggested priority: 160.
+
+5. **Question reports in the game and in authoring (ST-5)** (plan 93)
+   - Owner: `plans/11-steam.md` (ST-5); in-game `plans/13-game-modes.md` (MD-6).
+   - Channel (decision 93): our endpoint from part 8; the earlier Steam-thread/email options are dropped.
+   - Game: the flag list sends a report on the player''s click: question id, question language, the text the player saw, note, game version, pool hash (part 2), plus a Steam session ticket from the shell''s Steam bridge (plan 85; add `GetAuthTicketForWebApi` there). Only valid Steam users see the flag action (decision 111). Sent/failed state per flag; no automatic retry. Fallback when the server can''t be reached: copy the report text (per flag and all), as plan 93 already plans. Strings via `t()` for every launch language. The shell allows exactly the report URL, nothing else.
+   - Authoring: `qgen flag` turns pasted report text into a `needs_work` review (as planned); `qgen flag --pull` fetches new reports from part 8''s pull endpoint with the pull token (from the environment or a gitignored file, never git), turns each into a `needs_work` review with the report as note, and acknowledges them so they aren''t pulled twice. Reports for ids not in our pool (mods, milestone 15) are skipped with a count. No new storage beyond `authoring/data/questions.json` and a small pulled-ids ledger.
+   - Suggested priority: 550 (after part 8''s API contract).
+
+6. **Content updates as patches (ST-5)** (plan 96)
+   - Owner: `plans/11-steam.md` (ST-5); `plans/16-content-target.md`.
+   - Cadence (decision 96): monthly, only if ≥ 100 new approved per launch language or a player-reported fix is waiting; hotfixes any time.
+   - Patch = new version (part 2) + part 3 (content-only variant where it applies) + upload: new approved questions (`qgen batch`), fixes from reports (part 5), dropped questions; never changes rules or saves silently.
+   - Patch notes: `qgen patch-notes` diffs the pool between two tags and drafts the note; the gamemaster posts it as a Steam event.
+   - Done when: the first content patch after launch went out this way (pm decision with version and date).
+   - Suggested priority: 250.
+
+7. **S6 close-out** (plan 97)
+   - Docs: `plans/11-steam.md` (ST-3..ST-5 `[x]`, S6 row done), `plans/17-publishing.md`, `plans/18-steam-integration.md` leftovers done or deferred, `plans/project.md`, `plans/README.md`, `directory.md`, `README.md` (cut a release, send a patch, pull reports, run the report server: commands for humans).
+   - Leftovers to `plans/backlog.md` (more regions/languages, SW-13, SW-14); local multiplayer (modes and controls) is `milestone 16: Local multiplayer: game modes and controls`, not a backlog row.
+   - Done when: the milestone''s "Done when" holds, including a flag from the released game under Steam arriving via `qgen flag --pull` as a needs_work review, and the copy fallback working with the server unreachable.
+   - Suggested priority: 120.
+
+8. **Report server (`POST /reports`)** (new plan)
+   - Owner: `plans/11-steam.md` (ST-5, server half); new top-level directory for the server code, in `directory.md`.
+   - Hosting: Cloudflare Workers + D1 (free tier) unless the plan finds a better fit (compare briefly: limits, cost, lock-in; a pm decision only if it recommends something else). Tooling (e.g. `wrangler`) needs a pm decision as a new dependency; prefer running it via the flake/`npx` without adding it to the game''s packages.
+   - `POST /reports`: question id, question language, text seen, note, game version, pool hash, Steam session ticket. The server verifies the ticket with Steam''s Web API (`ISteamUserAuth/AuthenticateUserTicket`, publisher key) and rejects invalid users; rate limit per user via a salted hash of the SteamID; no SteamIDs or IPs stored; field size limits; the plan sets the retention.
+   - Pull endpoint for `qgen flag --pull` (part 5): bearer pull token, returns unacknowledged reports, acknowledge call; the API contract written down in the plan before part 5 builds on it.
+   - Secrets (publisher Web API key, pull token, hash salt) only as Worker secrets; never in git.
+   - Privacy policy text for the store page and the game''s report dialog: what is sent, what is kept, for how long; in every launch language; the gamemaster publishes it (part 4 checks it).
+   - Gamemaster setup checklist: Cloudflare account, domain, Steamworks publisher Web API key (needs the Steamworks account, decision 67), deploy command, a test report; the endpoint URL baked into the build as config, not a secret.
+   - A local dev mode (the server run locally, a fake ticket check behind an explicit dev switch) so workers can test client and `--pull` without Steam.
+   - Suggested priority: 700 (backend; before part 5).
+
+## Order
+- Part 2 → part 3 → part 4 (release candidate) and part 6.
+- Part 8 (API contract first) → part 5; both before part 4 (they ship in the launch build, and part 3 checks a report round trip).
+- Part 1 at least two weeks (better months) before part 4''s release date; it can start once the store page is approved.
+- Part 4 after milestone 15. Part 6 after part 4; part 7 last.
+
+## Out of scope (from the milestone)
+- Local multiplayer modes and their controls: only in `milestone 16: Local multiplayer: game modes and controls`, not a backlog row.
+- More regions and languages (later); Remote Play Together (SW-13), macOS (SW-14); marketing beyond Steam''s own wishlist and follow features; telemetry and any network request other than the clicked report.', '2026-10-16T19:29:44Z', NULL, 1364, 0, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1388, 97, 'revise plan 97: S6 close-out', 'revise', 'open', 1000, NULL, '`plan 11: masterplan`, the plan above `plan 97: S6 close-out`, changed; it is quoted below. Bring `plan 97: S6 close-out` in line with it
+(`pm plan edit 97 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 11: masterplan
+
+Milestone 11 is S6 of the Steam track (D-34, `plans/11-steam.md`, ST-3..ST-5): the Steam app from S5 (milestone 10) goes public. That means a "Coming soon" page that collects wishlists, a release checklist that every public build passes, store facts measured on the release candidate, the launch itself, content updates as patches, and question reports that players send on a click to our own small server (decision 93), with a copy fallback. The milestone is done when the game is released, content updates go out as patches, and a flag sent from the released game arrives via `qgen flag --pull`.
+
+**The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 11 …`, priority as suggested), and that plan''s tasks do the work. Parts 1–7 have plans (94, 91, 92, 95, 93, 96, 97); they are revised to this text, not rewritten. Part 8 is new.
+
+## Preconditions (other milestones; a part''s plan task checks them first)
+- Milestone 10 (S5), masterplan 10 (plan 10): App ID and names, app config + branches, media bundle, builds + upload command (plan 89), store page + AI disclosure (plan 88), survey + price (plan 39), Deck test (plan 90), Steam binding (plan 85), Cloud saves (plan 87), beta test. Read `pm plans list`, not this summary. S6 adds to the upload command; it doesn''t rebuild it.
+- Milestone 15 (Modding and Steam Workshop): launch waits for it (milestone constraint); part 4 checks it.
+- Decisions: decision 67: Steamworks account holder (person); decision 90: Store requirements, languages and controller flags? (provisional values now, final on the release candidate); decision 93: Question reports: where do players send them? (own endpoint); decision 96: Content patch cadence after launch?; decision 111: Steam only. If a part needs a decision that is still pending, its plan task makes itself pending on it (`pm task-pending-decision`) and stops.
+- Milestone 9 (S4): content target met for every launch language (plan 38, `qgen report --simulate`); the release waits for it.
+- «Reportar pregunta» (MD-6, plan 36, decision 60): flags with note and the flag list that parts 5 and 8 build on.
+- Credits (PUB-5, plan 47) and licence data (plan 26): part 3''s "credits complete" check reads them.
+
+## Rules for every part
+- **One network request, on a click.** The game sends a question report to our server only when the player clicks send (part 5/8). Nothing else goes out: no update check, no crash reporter, no analytics, no remote content, no background retry. Steam delivers updates.
+- **Steam only** (decision 111): work and checks only for the Steam build (Windows, Linux/SteamOS/Deck, launched by Steam); no "without Steam" rows in checklists or done-whens. Saves and flags need a valid Steam user. The browser game and Python server are retired by plan 99, not kept alive here.
+- **The gamemaster does what needs a person:** Steamworks web UI (coming-soon request, release date, the Release button, events/announcements, store page fields), Valve''s store and build reviews, uploads that need Steam Guard, the Cloudflare account and domain, the publisher Web API key, the weak-machine and Deck runs, the family test, answering players. Workers prepare checklists, exact texts and field values (owning plan file or a pm decision body) and record the result the gamemaster reports. Workers never enter credentials or contact Valve or players.
+- **Secrets never in git** (AGENTS.md): build account, beta password, Steam Guard files, publisher Web API key, report pull token.
+- A patch never breaks a save (plan 91).
+- Shipped code under `app/`, release tooling under `authoring/` or the flake (D-35); the report server in its own top-level directory (part 8, listed in `directory.md`); no new dependency without a pm decision.
+- Owning plan files get tasks `[x]` with a note (`11-steam.md` ST-3..ST-5, `17-publishing.md`, `18-steam-integration.md`); `plans/project.md` in sync.
+
+## Parts
+
+1. **"Coming soon" page (ST-3)** (plan 94)
+   - Owner: `plans/11-steam.md` (ST-3); store texts in `plans/17-publishing.md` (PUB-8).
+   - Needs: store page approved (plan 88) with decision 90''s provisional values (requirements, storage as estimate, controller Partial), App ID and names, survey.
+   - Checklist for the gamemaster: store page complete, Valve''s store review, fixes, then "Coming soon" with a date or "to be announced"; record the live date (pm decision).
+   - Timing: Valve''s rule (≥ 2 weeks before release; source in the plan); aim for longer. Part 4''s release date counts from it.
+   - Wishlists: only Steam''s own (wishlist, follow); no mailing list, no own website, no marketing.
+   - Suggested priority: 450.
+
+2. **Version numbers and patch-safe saves** (plan 91)
+   - Owner: `plans/18-steam-integration.md` ("Builds and depots"); save format in `plans/12-client-engine.md`.
+   - One semver version (decision 91) and a pool hash (decision 92), shown in the game and sent with each report (part 5); tag `v<version>` per release; build description = tag.
+   - Saves survive patches that add, fix or drop questions.
+   - Suggested priority: 600.
+
+3. **Release checklist (ST-4)** (plan 92)
+   - Owner: `plans/11-steam.md` (ST-4); `trivia-release-check` (plan 89, SW-6), extended, no new tool.
+   - Automated: tag gate, `qgen validate`, per-commit checks, pool export fresh, credits complete both ways, media bundle within budget, both platform builds, smoke game. Fails loudly, prints what''s left for the human.
+   - Manual rows, one pm decision per release candidate: offline test (network off, Steam running in offline mode, full game to level 12 or a won checkpoint; the report send fails cleanly into the copy fallback), Deck test (plan 90''s rows), Windows test, Cloud sync, report sent from the candidate arrives via `qgen flag --pull`, family sign-off on `beta`. No "Steam off" row (decision 111).
+   - Content-only patch variant allowed if the plan says why.
+   - Suggested priority: 700.
+
+4. **Launch** (plan 95)
+   - Owner: `plans/11-steam.md` (S6 row, "Launch (S6)").
+   - Gate: milestone 15 done (modding guide linked on the store page), milestone 9''s content target, part 8''s server live.
+   - Store facts measured on the release candidate (decision 90), store page updated to match before release:
+     - installed size of the RC build: base and each DLC (regional packs, decision 110: free DLC)
+     - minimum requirements from a full game with video questions on a weak machine (an older laptop) and on a Steam Deck (none at hand: the gamemaster borrows or buys one); worker drafts the run sheet and turns the results into field values
+     - controller flag from a pad-only game: Full if it passes, else Partial
+   - Release candidate: tag, upload to `beta`, part 3, family sign-off; Valve''s build review (lead time from the docs); the gamemaster sets the build live on `default` and presses Release on the date from part 1.
+   - Launch-day checklist: price from OQ-33 live; store languages match the build; privacy policy on the store page (part 8); launch announcement per launch language drafted (gamemaster posts it).
+   - First week: the gamemaster watches discussions, reviews and incoming reports (`qgen flag --pull`); bugs become tasks; a hotfix goes through part 3.
+   - Result via pm decision "Released? date, build id".
+   - Suggested priority: 160.
+
+5. **Question reports in the game and in authoring (ST-5)** (plan 93)
+   - Owner: `plans/11-steam.md` (ST-5); in-game `plans/13-game-modes.md` (MD-6).
+   - Channel (decision 93): our endpoint from part 8; the earlier Steam-thread/email options are dropped.
+   - Game: the flag list sends a report on the player''s click: question id, question language, the text the player saw, note, game version, pool hash (part 2), plus a Steam session ticket from the shell''s Steam bridge (plan 85; add `GetAuthTicketForWebApi` there). Only valid Steam users see the flag action (decision 111). Sent/failed state per flag; no automatic retry. Fallback when the server can''t be reached: copy the report text (per flag and all), as plan 93 already plans. Strings via `t()` for every launch language. The shell allows exactly the report URL, nothing else.
+   - Authoring: `qgen flag` turns pasted report text into a `needs_work` review (as planned); `qgen flag --pull` fetches new reports from part 8''s pull endpoint with the pull token (from the environment or a gitignored file, never git), turns each into a `needs_work` review with the report as note, and acknowledges them so they aren''t pulled twice. Reports for ids not in our pool (mods, milestone 15) are skipped with a count. No new storage beyond `authoring/data/questions.json` and a small pulled-ids ledger.
+   - Suggested priority: 550 (after part 8''s API contract).
+
+6. **Content updates as patches (ST-5)** (plan 96)
+   - Owner: `plans/11-steam.md` (ST-5); `plans/16-content-target.md`.
+   - Cadence (decision 96): monthly, only if ≥ 100 new approved per launch language or a player-reported fix is waiting; hotfixes any time.
+   - Patch = new version (part 2) + part 3 (content-only variant where it applies) + upload: new approved questions (`qgen batch`), fixes from reports (part 5), dropped questions; never changes rules or saves silently.
+   - Patch notes: `qgen patch-notes` diffs the pool between two tags and drafts the note; the gamemaster posts it as a Steam event.
+   - Done when: the first content patch after launch went out this way (pm decision with version and date).
+   - Suggested priority: 250.
+
+7. **S6 close-out** (plan 97)
+   - Docs: `plans/11-steam.md` (ST-3..ST-5 `[x]`, S6 row done), `plans/17-publishing.md`, `plans/18-steam-integration.md` leftovers done or deferred, `plans/project.md`, `plans/README.md`, `directory.md`, `README.md` (cut a release, send a patch, pull reports, run the report server: commands for humans).
+   - Leftovers to `plans/backlog.md` (more regions/languages, SW-13, SW-14); local multiplayer (modes and controls) is `milestone 16: Local multiplayer: game modes and controls`, not a backlog row.
+   - Done when: the milestone''s "Done when" holds, including a flag from the released game under Steam arriving via `qgen flag --pull` as a needs_work review, and the copy fallback working with the server unreachable.
+   - Suggested priority: 120.
+
+8. **Report server (`POST /reports`)** (new plan)
+   - Owner: `plans/11-steam.md` (ST-5, server half); new top-level directory for the server code, in `directory.md`.
+   - Hosting: Cloudflare Workers + D1 (free tier) unless the plan finds a better fit (compare briefly: limits, cost, lock-in; a pm decision only if it recommends something else). Tooling (e.g. `wrangler`) needs a pm decision as a new dependency; prefer running it via the flake/`npx` without adding it to the game''s packages.
+   - `POST /reports`: question id, question language, text seen, note, game version, pool hash, Steam session ticket. The server verifies the ticket with Steam''s Web API (`ISteamUserAuth/AuthenticateUserTicket`, publisher key) and rejects invalid users; rate limit per user via a salted hash of the SteamID; no SteamIDs or IPs stored; field size limits; the plan sets the retention.
+   - Pull endpoint for `qgen flag --pull` (part 5): bearer pull token, returns unacknowledged reports, acknowledge call; the API contract written down in the plan before part 5 builds on it.
+   - Secrets (publisher Web API key, pull token, hash salt) only as Worker secrets; never in git.
+   - Privacy policy text for the store page and the game''s report dialog: what is sent, what is kept, for how long; in every launch language; the gamemaster publishes it (part 4 checks it).
+   - Gamemaster setup checklist: Cloudflare account, domain, Steamworks publisher Web API key (needs the Steamworks account, decision 67), deploy command, a test report; the endpoint URL baked into the build as config, not a secret.
+   - A local dev mode (the server run locally, a fake ticket check behind an explicit dev switch) so workers can test client and `--pull` without Steam.
+   - Suggested priority: 700 (backend; before part 5).
+
+## Order
+- Part 2 → part 3 → part 4 (release candidate) and part 6.
+- Part 8 (API contract first) → part 5; both before part 4 (they ship in the launch build, and part 3 checks a report round trip).
+- Part 1 at least two weeks (better months) before part 4''s release date; it can start once the store page is approved.
+- Part 4 after milestone 15. Part 6 after part 4; part 7 last.
+
+## Out of scope (from the milestone)
+- Local multiplayer modes and their controls: only in `milestone 16: Local multiplayer: game modes and controls`, not a backlog row.
+- More regions and languages (later); Remote Play Together (SW-13), macOS (SW-14); marketing beyond Steam''s own wishlist and follow features; telemetry and any network request other than the clicked report.', '2026-10-16T19:29:44Z', NULL, 1364, 0, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model) VALUES (1389, 103, 'revise plan 103: Report server (POST /reports)', 'revise', 'open', 1000, NULL, '`plan 11: masterplan`, the plan above `plan 103: Report server (POST /reports)`, changed; it is quoted below. Bring `plan 103: Report server (POST /reports)` in line with it
+(`pm plan edit 103 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 11: masterplan
+
+Milestone 11 is S6 of the Steam track (D-34, `plans/11-steam.md`, ST-3..ST-5): the Steam app from S5 (milestone 10) goes public. That means a "Coming soon" page that collects wishlists, a release checklist that every public build passes, store facts measured on the release candidate, the launch itself, content updates as patches, and question reports that players send on a click to our own small server (decision 93), with a copy fallback. The milestone is done when the game is released, content updates go out as patches, and a flag sent from the released game arrives via `qgen flag --pull`.
+
+**The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 11 …`, priority as suggested), and that plan''s tasks do the work. Parts 1–7 have plans (94, 91, 92, 95, 93, 96, 97); they are revised to this text, not rewritten. Part 8 is new.
+
+## Preconditions (other milestones; a part''s plan task checks them first)
+- Milestone 10 (S5), masterplan 10 (plan 10): App ID and names, app config + branches, media bundle, builds + upload command (plan 89), store page + AI disclosure (plan 88), survey + price (plan 39), Deck test (plan 90), Steam binding (plan 85), Cloud saves (plan 87), beta test. Read `pm plans list`, not this summary. S6 adds to the upload command; it doesn''t rebuild it.
+- Milestone 15 (Modding and Steam Workshop): launch waits for it (milestone constraint); part 4 checks it.
+- Decisions: decision 67: Steamworks account holder (person); decision 90: Store requirements, languages and controller flags? (provisional values now, final on the release candidate); decision 93: Question reports: where do players send them? (own endpoint); decision 96: Content patch cadence after launch?; decision 111: Steam only. If a part needs a decision that is still pending, its plan task makes itself pending on it (`pm task-pending-decision`) and stops.
+- Milestone 9 (S4): content target met for every launch language (plan 38, `qgen report --simulate`); the release waits for it.
+- «Reportar pregunta» (MD-6, plan 36, decision 60): flags with note and the flag list that parts 5 and 8 build on.
+- Credits (PUB-5, plan 47) and licence data (plan 26): part 3''s "credits complete" check reads them.
+
+## Rules for every part
+- **One network request, on a click.** The game sends a question report to our server only when the player clicks send (part 5/8). Nothing else goes out: no update check, no crash reporter, no analytics, no remote content, no background retry. Steam delivers updates.
+- **Steam only** (decision 111): work and checks only for the Steam build (Windows, Linux/SteamOS/Deck, launched by Steam); no "without Steam" rows in checklists or done-whens. Saves and flags need a valid Steam user. The browser game and Python server are retired by plan 99, not kept alive here.
+- **The gamemaster does what needs a person:** Steamworks web UI (coming-soon request, release date, the Release button, events/announcements, store page fields), Valve''s store and build reviews, uploads that need Steam Guard, the Cloudflare account and domain, the publisher Web API key, the weak-machine and Deck runs, the family test, answering players. Workers prepare checklists, exact texts and field values (owning plan file or a pm decision body) and record the result the gamemaster reports. Workers never enter credentials or contact Valve or players.
+- **Secrets never in git** (AGENTS.md): build account, beta password, Steam Guard files, publisher Web API key, report pull token.
+- A patch never breaks a save (plan 91).
+- Shipped code under `app/`, release tooling under `authoring/` or the flake (D-35); the report server in its own top-level directory (part 8, listed in `directory.md`); no new dependency without a pm decision.
+- Owning plan files get tasks `[x]` with a note (`11-steam.md` ST-3..ST-5, `17-publishing.md`, `18-steam-integration.md`); `plans/project.md` in sync.
+
+## Parts
+
+1. **"Coming soon" page (ST-3)** (plan 94)
+   - Owner: `plans/11-steam.md` (ST-3); store texts in `plans/17-publishing.md` (PUB-8).
+   - Needs: store page approved (plan 88) with decision 90''s provisional values (requirements, storage as estimate, controller Partial), App ID and names, survey.
+   - Checklist for the gamemaster: store page complete, Valve''s store review, fixes, then "Coming soon" with a date or "to be announced"; record the live date (pm decision).
+   - Timing: Valve''s rule (≥ 2 weeks before release; source in the plan); aim for longer. Part 4''s release date counts from it.
+   - Wishlists: only Steam''s own (wishlist, follow); no mailing list, no own website, no marketing.
+   - Suggested priority: 450.
+
+2. **Version numbers and patch-safe saves** (plan 91)
+   - Owner: `plans/18-steam-integration.md` ("Builds and depots"); save format in `plans/12-client-engine.md`.
+   - One semver version (decision 91) and a pool hash (decision 92), shown in the game and sent with each report (part 5); tag `v<version>` per release; build description = tag.
+   - Saves survive patches that add, fix or drop questions.
+   - Suggested priority: 600.
+
+3. **Release checklist (ST-4)** (plan 92)
+   - Owner: `plans/11-steam.md` (ST-4); `trivia-release-check` (plan 89, SW-6), extended, no new tool.
+   - Automated: tag gate, `qgen validate`, per-commit checks, pool export fresh, credits complete both ways, media bundle within budget, both platform builds, smoke game. Fails loudly, prints what''s left for the human.
+   - Manual rows, one pm decision per release candidate: offline test (network off, Steam running in offline mode, full game to level 12 or a won checkpoint; the report send fails cleanly into the copy fallback), Deck test (plan 90''s rows), Windows test, Cloud sync, report sent from the candidate arrives via `qgen flag --pull`, family sign-off on `beta`. No "Steam off" row (decision 111).
+   - Content-only patch variant allowed if the plan says why.
+   - Suggested priority: 700.
+
+4. **Launch** (plan 95)
+   - Owner: `plans/11-steam.md` (S6 row, "Launch (S6)").
+   - Gate: milestone 15 done (modding guide linked on the store page), milestone 9''s content target, part 8''s server live.
+   - Store facts measured on the release candidate (decision 90), store page updated to match before release:
+     - installed size of the RC build: base and each DLC (regional packs, decision 110: free DLC)
+     - minimum requirements from a full game with video questions on a weak machine (an older laptop) and on a Steam Deck (none at hand: the gamemaster borrows or buys one); worker drafts the run sheet and turns the results into field values
+     - controller flag from a pad-only game: Full if it passes, else Partial
+   - Release candidate: tag, upload to `beta`, part 3, family sign-off; Valve''s build review (lead time from the docs); the gamemaster sets the build live on `default` and presses Release on the date from part 1.
+   - Launch-day checklist: price from OQ-33 live; store languages match the build; privacy policy on the store page (part 8); launch announcement per launch language drafted (gamemaster posts it).
+   - First week: the gamemaster watches discussions, reviews and incoming reports (`qgen flag --pull`); bugs become tasks; a hotfix goes through part 3.
+   - Result via pm decision "Released? date, build id".
+   - Suggested priority: 160.
+
+5. **Question reports in the game and in authoring (ST-5)** (plan 93)
+   - Owner: `plans/11-steam.md` (ST-5); in-game `plans/13-game-modes.md` (MD-6).
+   - Channel (decision 93): our endpoint from part 8; the earlier Steam-thread/email options are dropped.
+   - Game: the flag list sends a report on the player''s click: question id, question language, the text the player saw, note, game version, pool hash (part 2), plus a Steam session ticket from the shell''s Steam bridge (plan 85; add `GetAuthTicketForWebApi` there). Only valid Steam users see the flag action (decision 111). Sent/failed state per flag; no automatic retry. Fallback when the server can''t be reached: copy the report text (per flag and all), as plan 93 already plans. Strings via `t()` for every launch language. The shell allows exactly the report URL, nothing else.
+   - Authoring: `qgen flag` turns pasted report text into a `needs_work` review (as planned); `qgen flag --pull` fetches new reports from part 8''s pull endpoint with the pull token (from the environment or a gitignored file, never git), turns each into a `needs_work` review with the report as note, and acknowledges them so they aren''t pulled twice. Reports for ids not in our pool (mods, milestone 15) are skipped with a count. No new storage beyond `authoring/data/questions.json` and a small pulled-ids ledger.
+   - Suggested priority: 550 (after part 8''s API contract).
+
+6. **Content updates as patches (ST-5)** (plan 96)
+   - Owner: `plans/11-steam.md` (ST-5); `plans/16-content-target.md`.
+   - Cadence (decision 96): monthly, only if ≥ 100 new approved per launch language or a player-reported fix is waiting; hotfixes any time.
+   - Patch = new version (part 2) + part 3 (content-only variant where it applies) + upload: new approved questions (`qgen batch`), fixes from reports (part 5), dropped questions; never changes rules or saves silently.
+   - Patch notes: `qgen patch-notes` diffs the pool between two tags and drafts the note; the gamemaster posts it as a Steam event.
+   - Done when: the first content patch after launch went out this way (pm decision with version and date).
+   - Suggested priority: 250.
+
+7. **S6 close-out** (plan 97)
+   - Docs: `plans/11-steam.md` (ST-3..ST-5 `[x]`, S6 row done), `plans/17-publishing.md`, `plans/18-steam-integration.md` leftovers done or deferred, `plans/project.md`, `plans/README.md`, `directory.md`, `README.md` (cut a release, send a patch, pull reports, run the report server: commands for humans).
+   - Leftovers to `plans/backlog.md` (more regions/languages, SW-13, SW-14); local multiplayer (modes and controls) is `milestone 16: Local multiplayer: game modes and controls`, not a backlog row.
+   - Done when: the milestone''s "Done when" holds, including a flag from the released game under Steam arriving via `qgen flag --pull` as a needs_work review, and the copy fallback working with the server unreachable.
+   - Suggested priority: 120.
+
+8. **Report server (`POST /reports`)** (new plan)
+   - Owner: `plans/11-steam.md` (ST-5, server half); new top-level directory for the server code, in `directory.md`.
+   - Hosting: Cloudflare Workers + D1 (free tier) unless the plan finds a better fit (compare briefly: limits, cost, lock-in; a pm decision only if it recommends something else). Tooling (e.g. `wrangler`) needs a pm decision as a new dependency; prefer running it via the flake/`npx` without adding it to the game''s packages.
+   - `POST /reports`: question id, question language, text seen, note, game version, pool hash, Steam session ticket. The server verifies the ticket with Steam''s Web API (`ISteamUserAuth/AuthenticateUserTicket`, publisher key) and rejects invalid users; rate limit per user via a salted hash of the SteamID; no SteamIDs or IPs stored; field size limits; the plan sets the retention.
+   - Pull endpoint for `qgen flag --pull` (part 5): bearer pull token, returns unacknowledged reports, acknowledge call; the API contract written down in the plan before part 5 builds on it.
+   - Secrets (publisher Web API key, pull token, hash salt) only as Worker secrets; never in git.
+   - Privacy policy text for the store page and the game''s report dialog: what is sent, what is kept, for how long; in every launch language; the gamemaster publishes it (part 4 checks it).
+   - Gamemaster setup checklist: Cloudflare account, domain, Steamworks publisher Web API key (needs the Steamworks account, decision 67), deploy command, a test report; the endpoint URL baked into the build as config, not a secret.
+   - A local dev mode (the server run locally, a fake ticket check behind an explicit dev switch) so workers can test client and `--pull` without Steam.
+   - Suggested priority: 700 (backend; before part 5).
+
+## Order
+- Part 2 → part 3 → part 4 (release candidate) and part 6.
+- Part 8 (API contract first) → part 5; both before part 4 (they ship in the launch build, and part 3 checks a report round trip).
+- Part 1 at least two weeks (better months) before part 4''s release date; it can start once the store page is approved.
+- Part 4 after milestone 15. Part 6 after part 4; part 7 last.
+
+## Out of scope (from the milestone)
+- Local multiplayer modes and their controls: only in `milestone 16: Local multiplayer: game modes and controls`, not a backlog row.
+- More regions and languages (later); Remote Play Together (SW-13), macOS (SW-14); marketing beyond Steam''s own wishlist and follow features; telemetry and any network request other than the clicked report.', '2026-10-16T19:29:44Z', NULL, 1364, 0, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -40953,6 +41476,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1389, 1374, '2026-10-16T19:25:51Z', '2026-10-16T19:27:28Z', 'done', NULL, 0, '74e2c86d99530ffa593231488dc418609787f542', 'claude-opus-5-5', '26df5209-e66d-4966-b44d-b3c815530804', NULL, 11, 22, 9940, 536282, 54959, 0.74581639999999994, 4144524);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1390, 1378, '2026-10-16T19:27:28Z', '2026-10-16T19:28:29Z', 'done', NULL, 0, '3f8c06b52b2d21f366465b3dd98d3fe67092e86d', 'claude-opus-5-5', '4d01edf5-3370-4794-9986-434ca4fdeec1', NULL, 9, 18, 6660, 352250, 38827, 0.514338, 4144524);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1391, 1376, '2026-10-16T19:28:30Z', '2026-10-16T19:29:10Z', 'done', NULL, 0, '0162766253bd635da4e20a632f316834befa8f8f', 'claude-opus-5-5', '9183cf21-d8e3-4488-828e-2f4492de1518', NULL, 6, 12, 3561, 208636, 33857, 0.3838512, 4144524);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1392, 1364, '2026-10-16T19:29:10Z', '2026-10-16T19:29:52Z', 'done', NULL, 0, 'd2eec541ce1e95cebcdd7e6c375962d79f81f942', 'claude-opus-5-5', '5990cb9a-d326-40d0-984f-12dc6191558e', NULL, 10, 20, 2918, 388099, 35495, 0.4200198, 4144524);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
