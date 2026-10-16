@@ -2158,7 +2158,15 @@ def qc_trend(pool=None):
             ("difficulty |Δ| ≥ 2", lambda s: pct(s["difficulty_2"], s["human_n"])),
             ("audit/human agreement", lambda s: pct(s["audit_human_agreed"], s["audit_human_n"]))]
     bar = f"≥ {q['spot_check_size']} questions, ≥ {100 * q['min_agreement']:.0f} %" if q else "no quality keys"
+    src = {x["id"]: translations.source_locale(x) for x in pool}
+
+    def source(r):
+        """The run's source locale(s): its ids' (backaudit, tr-*) or its drafts' (plan 147); tr-*: → target."""
+        cfg = load_json(WORK / r / "run.json", {}) or {}
+        loc = "/".join(sorted({src[i] for i in cfg.get("ids") or [] if i in src})) or text_locale(WORK / r)
+        return f"{loc} → {cfg['locale']}" if cfg.get("locale") else loc
     return ["| metric | " + " | ".join(runs) + " |", "|---|" + "---:|" * len(runs),
+            "| source locale | " + " | ".join(map(source, runs)) + " |",
             *[f"| {k} | " + " | ".join(f(s) for s in cols) + " |" for k, f in rows],
             f"| **release** ({bar}, D-79) | " + " | ".join("✗ " + ", ".join(f) if (f := release_failures(s)) else "✓"
                                                             for s in cols) + " |"]
