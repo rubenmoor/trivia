@@ -39804,6 +39804,19 @@ Likely source: `authoring/data/question-axes.json`, axis `clue`, value `riddle` 
 - No changes to prompts, axes, `qgen.py` or pools (D-36); no `qgen batch`.', '2026-10-17T15:25:14Z', '2026-10-17T15:30:08Z', NULL, 0, 'opus', NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1575, 180, 'create tasks for plan 180: Drafting fixes after batch-10: overlap and riddles', 'split', 'open', 1000, NULL, 'Split plan 180 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-17T15:42:07Z', NULL, NULL, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1576, 180, 'Overlap: recalibrated threshold and cross-subcategory already_asked (decision 350 a, b)', 'work', 'open', NULL, NULL, 'Implements `decision 350: Overlap rate in drafting: which changes?` (answer 1), parts (a) and (b). Findings: `task 1573` note.
+
+## Changes
+- (a) `authoring/data/targets.json` `batch_health` ''overlap rate'' max 3 % → 20 % (a runaway alarm); ''needs_work: overlap'' ≤ 1 % stays the quality gate.
+- (b) `draw_slots` (`authoring/tools/qgen.py`): each slot''s `already_asked` also gets the pool questions a lexical probe on its concept finds in every subcategory and bundle (`overlap_candidates`, rank ≤ 2), in the draft locale via `as_locale`; the existing avoid list (`existing_answers`, same-concept `already_asked`) goes through `as_locale` too (es-sourced questions shown in English to an English draft).
+- Draft prompt: if its wording about `already_asked` assumes same-subcategory only, adjust it minimally.
+
+## Docs
+- `plans/` owner of overlap detection (15-*/D-55 rows), README/RUNBOOK lines that state the 3 % or what the drafter sees; a D-row for decision 350 in `plans/decisions.md`; `rg` old wording (decision 200).
+
+## Check
+- Throw-away: `draw_slots` on batch-10''s subcategories with today''s pool: share of slots with a cross-subcategory entry (decision 350 estimate ≈ 14–15 %), prompt length increase; no `qgen batch`.
+- `qgen validate`, `npm run check`, `npm test`.', '2026-10-17T15:42:07Z', NULL, NULL, 0, 'opus', 'questions');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
