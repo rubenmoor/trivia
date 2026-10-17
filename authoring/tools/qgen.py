@@ -1697,9 +1697,9 @@ def revise_in_pool(q, new, reason, today):
     media_changed = any(new_media[k] != q["media"][k] for k in ["type", "query"])
     if media_changed:
         new_media = media_tool.unpicked(new_media)
+    old_bg = q.get("background")
     if new_media["type"] == "audio":
         bgq = new.get("background_query") or (q.get("background") or {}).get("query") or new_media["query"]
-        old_bg = q.get("background")
         new_bg = old_bg if old_bg and old_bg["query"] == bgq else {
             "query": bgq, "source_url": None, "file_url": None, "credit": None}
     else:
