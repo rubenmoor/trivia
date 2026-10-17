@@ -75,6 +75,9 @@ export const esES = {
     select: {
       title: "Elegid una pregunta",
     },
+    timed: {
+      ready: "¡Preparaos!",
+    },
     victory: {
       title: "¡Habéis ganado!",
       top: "¡{name} ha llegado a la cima!",

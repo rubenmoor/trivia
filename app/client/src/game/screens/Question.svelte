@@ -23,7 +23,7 @@
   import Answers from "../question/Answers.svelte";
   import Card from "../question/Card.svelte";
   import FinalAnswer from "../question/FinalAnswer.svelte";
-  import { questionKeys } from "../question/keys.ts";
+  import { PAD_PICKS, questionKeys } from "../question/keys.ts";
   import Media from "../question/Media.svelte";
   import Scope from "../question/Scope.svelte";
   import SkipDialog from "../question/SkipDialog.svelte";
@@ -333,8 +333,7 @@
 
   // Input (lib/input.svelte.ts): A–D/1–4 pick, joker letters, R replay; dialogs and aiming are modal.
   const KEYS = questionKeys();
-  // Pad (decision 9): Y/B/X/A pick by position, RT submits, LT unlocks; on a token A/B are confirm/back.
-  const PAD_PICKS: Record<number, Intent> = Object.fromEntries([3, 1, 2, 0].map((b, i) => [b, { type: "pick", n: i + 1 }]));
+  // Pad (decision 9): Y/B/X/A pick (PAD_PICKS), RT submits, LT unlocks; on a token A/B are confirm/back.
   const PAD_FINAL: Record<number, Intent> = { 6: { type: "back" }, 7: { type: "submit" }, 11: { type: "peek", down: true } };
   const PAD_TOKEN: Record<number, Intent> = { 0: { type: "confirm" }, 1: { type: "back" } };
   function padMap(): Record<number, Intent> {

@@ -419,6 +419,16 @@ export const en = {
       out: "{name} is out!",
       completed: "Quiz completed",
     },
+    timed: {
+      kicker: "Round",
+      ready: "Get ready!",
+      round: "Round {n} of {of}",
+      question: "Question {n} of {of}",
+      claim: "Claim",
+      claimed: "{name}!",
+      correct: "Correct, {name}!",
+      timeUp: "Time's up",
+    },
     victory: {
       title: "You won!",
       /** rr-competitive: the winner. */

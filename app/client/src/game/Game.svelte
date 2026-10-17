@@ -1,7 +1,7 @@
 <script lang="ts">
   // The game on the TV (plans/04-ui-tv-display.md, D-21, D-25): a state machine over the screens
   // Start → Player → Choice → (Join, multiplayer) → Bundles → Level → Select → Question → Correct / Wrong → … → Victory (answers off, D-105:
-  // Question → Next → … → Completed), with one transition routine and the admin overlay on Esc. The engine
+  // Question → Next → … → Completed; timed, plan 164: Level as round screen → Timed → … → Level → …), with one transition routine and the admin overlay on Esc. The engine
   // keeps the game (engine/, lib/api.ts).
   import { onDestroy, onMount, tick, untrack } from "svelte";
   import { fetchFlags, fetchGame, gameAction, noteRunningOut, playJoker, setFlag, type GameActionBody } from "../lib/api.ts";
@@ -16,6 +16,7 @@
   import { listen, pushScope, type Action } from "../lib/input.svelte.ts";
   import { holdPause } from "../lib/pause.ts";
   import { bindSession, lostSeat, watchGame } from "../lib/seats.svelte.ts";
+  import type { SessionView } from "../lib/seats.ts";
   import { emit, loadedMods, watchLayers, type ModLayer } from "../lib/mods.ts";
   import type { Game, GameMode, JokerBudget, JokerEvent, Flagged } from "../lib/types.ts";
   import FlagDialog from "./FlagDialog.svelte";
@@ -48,13 +49,14 @@
   import { screenFailed, screenFor } from "./screens/registry.ts";
   import Select from "./screens/Select.svelte";
   import Start from "./screens/Start.svelte";
+  import Timed from "./screens/Timed.svelte";
   import Victory from "./screens/Victory.svelte";
   import Wrong from "./screens/Wrong.svelte";
   import "./theme.css";
   import { BLOCK_DROP_MS, FADE_MS, FLIP_MS, GREETING_MS, PICK_MS, PRELOAD_MAX_MS, TEAR_MS, sleep } from "./timing.ts";
   import Veil from "./Veil.svelte";
 
-  type Screen = "language" | "consent" | "start" | "player" | "bundles" | "choice" | "join" | "level" | "select" | "question" | "correct" | "wrong" | "victory" | "next" | "completed";
+  type Screen = "language" | "consent" | "start" | "player" | "bundles" | "choice" | "join" | "level" | "select" | "question" | "timed" | "correct" | "wrong" | "victory" | "next" | "completed";
 
   const MUSIC: Record<Screen, Track | null> = {
     language: "normal",
@@ -67,6 +69,7 @@
     level: "normal",
     select: "normal",
     question: "question",
+    timed: "question", // PLACEHOLDER(1451): the timed track
     correct: "normal", // the fanfare plays at the reveal, then this comes back
     wrong: null,
     victory: "victory", // «Pomp and Circumstance», over the cheers
@@ -75,7 +78,7 @@
   };
 
   // Next and Completed: both `Revealed` (answers off, D-105).
-  const OURS = { Start, Language, Player, Bundles, Choice, Join, Level, Select, Question, Correct, Wrong, Next: Revealed, Completed: Revealed, Victory };
+  const OURS = { Start, Language, Player, Bundles, Choice, Join, Level, Select, Question, Timed, Correct, Wrong, Next: Revealed, Completed: Revealed, Victory };
   type Name = keyof typeof OURS;
   /** Each screen: ours or a mod's (plan 117), read once; a failing one falls back to ours. */
   let S = $state.raw(Object.fromEntries(Object.entries(OURS).map(([n, c]) => [n, screenFor(n as Name, c)])) as typeof OURS);
@@ -105,6 +108,9 @@
   /** The first click unlocks audio and autoplay in the browser (04, "Start"). */
   let unlocked = false;
   let questionRef = $state<ReturnType<typeof Question>>();
+  let timedRef = $state<ReturnType<typeof Timed>>();
+  /** Timed: the seats before the last round's end, for the round screen's hearts lost. */
+  let roundBefore = $state<SessionView | null>(null);
   let main = $state<HTMLElement>();
   /** The chosen name while «¡Hola, …!» plays (UI-16). */
   let greeting = $state<string | null>(null);
@@ -250,9 +256,9 @@
     picked = null;
     swappedBy = null;
     if (next !== "select") fresh = new Set();
-    if (next === "question") {
+    if (next === "question" || next === "timed") {
       await tick();
-      await Promise.race([questionRef?.ready?.() ?? Promise.resolve(), sleep(PRELOAD_MAX_MS)]);
+      await Promise.race([(next === "question" ? questionRef : timedRef)?.ready?.() ?? Promise.resolve(), sleep(PRELOAD_MAX_MS)]);
     }
     emit("screen", { name: nameOf(next) });
     if (next === "question" && game?.question) emit("question:shown", { id: game.question.id, level: game.level });
@@ -339,11 +345,16 @@
     await landed;
   }
 
-  /** The table after the Level screen; with `cards: 0` the engine already opened the question (D-88). */
-  const table = (g: Game | null): Screen => (g?.phase === "question" ? "question" : "select");
+  /** The table after the Level screen; with `cards: 0` the engine already opened the question (D-88); timed: its question. */
+  const table = (g: Game | null): Screen => (g?.session?.timed ? "timed" : g?.phase === "question" ? "question" : "select");
 
-  /** Where a game continues: the Level screen before a choice, else its question. */
-  function resume() {
+  /** Where a game continues: the Level screen before a choice, else its question; timed: the round screen until the
+   * question is shown, a pause left by a reload ends. */
+  async function resume() {
+    roundBefore = null;
+    const timed = game?.session?.timed;
+    if (timed?.paused) await act("resume");
+    if (timed) return go(game?.session?.timed?.shown ? "timed" : "level", "whoosh");
     if (game?.phase === "question") return go("question", "swoosh");
     return go("level", game?.level === 1 ? "ready" : "whoosh");
   }
@@ -395,6 +406,7 @@
       return;
     }
     greeting = isSession(choice.mode) ? seats.map((x) => x.name).join(", ") : (game?.player ?? chosen);
+    roundBefore = null;
     sfx("ready");
     await sleep(GREETING_MS);
     await go("level", "ready");
@@ -429,6 +441,17 @@
     else if (next.phase === "completed") await go("completed", "whoosh", apply);
     else if (next.last?.revealed) await go("next", "whoosh", apply);
     else await go("correct", "applause", apply);
+  }
+
+  /** Timed: a round ended; its round screen. */
+  async function toRound(next: Game, before: SessionView) {
+    await go("level", "whoosh", () => ((game = next), (roundBefore = before)));
+  }
+
+  /** Timed: the session ended (PLACEHOLDER(1452): the timed ends). */
+  async function timedEnd(next: Game) {
+    if (next.result === "won") await go("victory", "applause-big", () => (game = next));
+    else await go("wrong", "boom", () => (game = next));
   }
 
   /** rr-competitive's Wrong «Seguir» (one seat out, decision 279): the next turn, or the last one standing wins. */
@@ -609,7 +632,7 @@
       else newGame();
     } else if (on === "start" && a.type === "new") newGame();
     else if (on === "start" && a.type === "language" && !notice) openLanguage();
-    else if (on === "level" && a.type === "confirm") go(table(game), "paper");
+    else if (on === "level" && a.type === "confirm" && !game?.session?.timed) go(table(game), "paper"); // timed: the countdown
     else if (on === "select" && a.type === "pick" && a.n <= 4 && picked === null) pick(a.n - 1);
     else if ((on === "correct" || on === "next") && a.type === "confirm") toLevel();
     else if (on === "wrong" && a.type === "confirm" && outGoesOn) afterOut();
@@ -632,7 +655,7 @@
 
   $effect(() => {
     const on = screen;
-    if (on === "language" || on === "consent" || on === "player" || on === "bundles" || on === "choice" || on === "join" || on === "question") return; // they push their own
+    if (on === "language" || on === "consent" || on === "player" || on === "bundles" || on === "choice" || on === "join" || on === "question" || on === "timed") return; // they push their own
     return pushScope({
       name: on,
       keys: on === "start" ? { [NEW_KEY]: { type: "new" }, [LANGUAGE_KEY]: { type: "language" } } : undefined,
@@ -640,7 +663,7 @@
       handle: (a) => onScreen(on, a),
       root: () => main,
       keep: on === "start",
-      shared: on === "wrong" || on === "victory" || on === "completed",
+      shared: on === "start" || on === "wrong" || on === "victory" || on === "completed", // Start: timed has no seat to act
     });
   });
 
@@ -713,9 +736,11 @@
       <S.Bundles player={chosen} {draft} {seats} {busy} {greeting} {refused} picked={bundlePick} onpick={(ids) => (bundlePick = ids)} onstart={startGame} onback={() => go(isSession(draft!.mode) ? "join" : "choice", "whoosh")} />
     {:else if screen === "level" && game}
       <Stage />
-      <div class="corner-hud"><Hud level={null} player={game.player} {session} /></div>
-      {@render tray(game)}
-      <S.Level {game} {levels} {blocks} drop={previous === "correct" || previous === "next"} {busy} onnext={() => go(table(game), "paper")} />
+      {#if !session?.timed}
+        <div class="corner-hud"><Hud level={null} player={game.player} {session} /></div>
+        {@render tray(game)}
+      {/if}
+      <S.Level {game} {levels} {blocks} drop={previous === "correct" || previous === "next"} {busy} before={roundBefore} paused={overlayOpen} onnext={() => go(table(game), "paper")} />
     {:else if screen === "select" && game}
       <Stage />
       <div class="corner-hud"><Hud level={game.level} {levels} player={game.player} {session} /></div>
@@ -741,6 +766,17 @@
           onanswered={answered}
         />
       {/key}
+    {:else if screen === "timed" && game?.session?.timed}
+      <S.Timed
+        bind:this={timedRef}
+        {game}
+        {levels}
+        paused={overlayOpen}
+        shown={!black && !busy}
+        onupdate={(g) => (game = g)}
+        onround={toRound}
+        onend={timedEnd}
+      />
     {:else if screen === "correct" && game?.last}
       <Stage mood="correct" />
       <S.Correct last={game.last} {busy} onnext={toLevel} {session} />

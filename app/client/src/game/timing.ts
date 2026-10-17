@@ -46,5 +46,11 @@ export const SHATTER_MS = 850;
 export const SNIPE_HIT_MS = 2500;
 /** How long the revealed answer stays on screen before the result screen. */
 export const AFTER_REVEAL_MS = 2500;
+/** Timed (decision 295): the beat between the claimer's pick and the reveal; then the result stays this long. */
+export const TIMED_REVEAL_MS = 1200;
+export const TIMED_RESULT_MS = 2200;
+/** Timed round screen (decision 296): the hearts crack, then 3-2-1, one step each. */
+export const ROUND_HOLD_MS = 1800;
+export const COUNTDOWN_STEP_MS = 900;
 
 export const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));

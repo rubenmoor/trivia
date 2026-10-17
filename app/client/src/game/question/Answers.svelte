@@ -4,6 +4,7 @@
 
 <script lang="ts">
   // The four answer tiles (04-ui-tv-display.md): lock, reveal, pad glyphs; Francotirador's target and shatter (09-jokers.md).
+  import type { ComponentProps } from "svelte";
   import { questionLocale } from "../../lib/names.svelte.ts";
   import Icon from "../Icon.svelte";
   import Prompt from "../Prompt.svelte";
@@ -15,6 +16,7 @@
     disabled,
     shattering,
     pickable = true,
+    device = null,
     tiles = $bindable(),
     onpick,
     onhover,
@@ -27,6 +29,8 @@
     shattering: number | null;
     /** False with answers off (D-105): no pad glyphs. */
     pickable?: boolean;
+    /** The pad glyphs of this seat's device, not the last input's (timed: the claimer's, plan 164). */
+    device?: ComponentProps<typeof Prompt>["device"];
     /** The tile elements, for the input scope and the scope's hole. */
     tiles: HTMLButtonElement[];
     onpick: (i: number) => void;
@@ -53,7 +57,7 @@
           {/each}
         </span>
       {/if}
-      <span class="letter">{LETTERS[i]}{#if pickable && !view.struck.includes(i)}<span class="pad-glyph"><Prompt action={{ type: "pick", n: i + 1 }} padOnly /></span>{/if}</span>
+      <span class="letter">{LETTERS[i]}{#if pickable && !view.struck.includes(i)}<span class="pad-glyph"><Prompt action={{ type: "pick", n: i + 1 }} padOnly {device} /></span>{/if}</span>
       <span class="text">{answer}</span>
       {#if badge}<span class="badge"><Icon name={badge} /></span>{/if}
     </button>

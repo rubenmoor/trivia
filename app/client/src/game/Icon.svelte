@@ -5,7 +5,7 @@
     | "flag" | "idea" | "broom" | "wand" | "point" | "trick-shot" | "crosshair" | "puzzle"
     | "rocket" | "play" | "sparkle" | "next" | "back" | "person" | "person-plus" | "pencil" | "family" | "mic"
     | "balloon" | "skateboard" | "headphones" | "mug" | "sliders" | "book" | "pin" | "refresh" | "power" | "globe" | "exit" | "seal"
-    | "gamepad" | "keyboard";
+    | "gamepad" | "keyboard" | "heart";
 </script>
 
 <script lang="ts">
@@ -172,6 +172,8 @@
   {:else if name === "keyboard"}
     <rect x="2.5" y="6" width="19" height="12" rx="2.5" fill="currentColor" fill-opacity="0.25" />
     <path d="M6 9.5h.01M9.3 9.5h.01M12.6 9.5h.01M15.9 9.5h.01M18 9.5h.01M7 12.5h.01M10.5 12.5h.01M14 12.5h.01M17 12.5h.01M8 15h8" />
+  {:else if name === "heart"}
+    <path d="M12 20.5s-8-4.9-8-10.6A4.4 4.4 0 0 1 12 7.3a4.4 4.4 0 0 1 8 2.6c0 5.7-8 10.6-8 10.6z" fill="currentColor" fill-opacity="var(--heart-fill, 0.85)" />
   {/if}
 </svg>
 
