@@ -38913,8 +38913,34 @@ Your note on `pm task done`: the cause and what you queued.
       
       `task 1453: Timed visuals polish: hearts, red frame, claim banner` is still open and has the same priority (340) in this work tree. Once it''s done, `pm run` can take 1467 again. If you want the hook satisfied now, tell me which of the three outcomes you prefer.
       [success: 4 turns, $0.15]', '2026-10-17T03:11:26Z', '2026-10-17T03:11:48Z', NULL, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1516, 172, 'create tasks for plan 172: Keyboard seats after a restart: a resumed session asks for a pad', 'split', 'open', 1000, NULL, 'Split plan 172 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-17T03:58:31Z', NULL, 1473, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1516, 172, 'create tasks for plan 172: Keyboard seats after a restart: a resumed session asks for a pad', 'split', 'done', 1000, '2026-10-16, tasks 1517, 1518 in plan 172; no files', 'Split plan 172 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-17T03:58:31Z', '2026-10-17T03:59:34Z', 1473, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1517, 172, 'Non-pad seats keep their binding across a restart', 'work', 'open', NULL, NULL, 'Fix the stuck resume of `plan 172: Keyboard seats after a restart: a resumed session asks for a pad`: after a shell restart, a session''s keyboard seats (`"shared"`, `"kbm"`, `{ key }`) must get their binding back without a pad; pad seats keep rebinding through the seat-lost dialog (`decision 289: Local multiplayer: a controller lost mid-session waits for a controller to take the seat`).
+
+## Cause
+- `app/client/src/lib/seats.svelte.ts` `stored()`: the binding lives only in sessionStorage (`trivia.seats.<id>`); after a restart every seat is `null`
+- `lostSeat()` treats every `null` as a lost pad; `SeatLost.svelte` binds pads only → a keyboard-only rr-coop session (3 `shared` seats, `decision 273: Keyboard-only turn-based sessions: what does a player''s own key do?`) can''t go on; a `kbm` seat in a mixed session could be taken by a free pad; a timed key seat (`{ key }`, claim key picked on Join, `decision 292: Join screen: joining, leaving, names and claim keys`) can''t be taken at all
+
+## Do
+- Make each seat''s device kind, and a key seat''s claim key, survive a restart. Recommended: store it in the save''s session row (`games[]` row `seats[]`, `Seat` in `app/client/src/engine/state.ts`, shape of `plan 157: Session model and save format`), e.g. `device?: "pad" | "kbm" | "shared" | { key: string }` (no pad index: pad numbering changes across restarts); validate it in `app/client/src/engine/save.ts` (old rows without it: as today); bump `SAVE_VERSION` with an upgrade only if the validator requires it. The alternative (the dialog lets keyboard/mouse take a non-pad seat, key seats re-pick their key Join-style) is acceptable if it turns out simpler; either way record the lasting choice with `pm decision record`
+- On resume (`watchGame` → `stored()` fallback): non-pad seats bound at once from the stored kind; a `kbm` seat back to `"kbm"` only when keyboard and mouse aren''t bound elsewhere; pad seats `null` → the existing dialog
+- `lostSeat()` / `SeatLost.svelte`: only a pad seat can be lost; a lost-pad dialog never offers a keyboard seat to a pad
+- Check the Join screen and `bindSession()` hand the device kinds to the engine/save (rr-coop, rr-competitive, timed)
+- `rg` comments and `.md` mentioning the sessionStorage-only binding (`plans/14-input.md` section 3, `seats.svelte.ts` header) and fix them (decision 200)
+
+## Check
+- Dev client: keyboard-only rr-coop, one turn, reload with sessionStorage cleared (or a fresh tab) → plays on without a dialog; same for a timed keyboard-only session (claim keys still work) and a mixed session''s `kbm` seat
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`
+- The smoke coverage is the next task in this plan', '2026-10-17T03:59:28Z', NULL, 1516, 0, 'opus', 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1518, 172, 'smoke --multiplayer: keyboard-only sessions restart mid-session', 'work', 'open', 470, NULL, 'Extend `authoring/steam/smoke.mjs --multiplayer` (`RUNS`, the timed pads session''s `restart` step shows how) so that the keyboard-only rr-coop session and a keyboard-only timed session (claim-key seats) quit mid-session, start again, resume and play on to the end without the seat-lost dialog; the mixed session (4 pads + keyboard and mouse), if cheap, also restarts and its `kbm` seat acts without a pad while the pads rebind (`decision 289: Local multiplayer: a controller lost mid-session waits for a controller to take the seat`).
+
+Needs `task 1517: Non-pad seats keep their binding across a restart` (runs before this one in the same work tree).
+
+- Update the header comment of `smoke.mjs` and the release-check `multiplayer` step''s description (`authoring/steam/release_check.py`, README/plan text if it lists the sessions) to name the new restarts
+
+## Check
+- `trivia-desktop-build --dir`, then `node authoring/steam/smoke.mjs --multiplayer`: all sessions green
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`', '2026-10-17T03:59:28Z', NULL, 1516, 0, NULL, 'app');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -45223,6 +45249,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1542, 1472, '2026-10-17T03:33:00Z', '2026-10-17T03:33:33Z', 'done', NULL, 0, '5dfd6bd7a80daf338d1a522cd7c239ecdafdf5ad', 'app', 'claude-sonnet-5-5', '73366ed4-7ca7-4089-8f76-4834244d1291', NULL, 7, 14, 3659, 261763, 38161, 0.2416146, 192091);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1543, 1490, '2026-10-17T03:33:33Z', '2026-10-17T03:33:53Z', 'done', NULL, 0, '6b24ea662f61e60dfb2154d71f159371e76f3fc6', 'app', 'claude-sonnet-5-5', '73366ed4-7ca7-4089-8f76-4834244d1291', 1542, 3, 6, 2864, 168552, 13126, 0.356481, 192091);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1544, 1473, '2026-10-17T03:33:54Z', NULL, 'running', NULL, NULL, '0212aaa4d6d34dc104233842b91e6f8ef8b7fe01', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 192091);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1545, 1516, '2026-10-17T03:58:33Z', '2026-10-17T03:59:43Z', 'done', NULL, 0, 'bcf954f2d8f82ae50d6f89be276c75ab28a3785c', NULL, 'claude-opus-5-5', '5eb1aec9-95da-4df1-b224-b686ae8a9f47', NULL, 10, 20, 4028, 403097, 38186, 0.46674740000000003, 192091);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
