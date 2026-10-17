@@ -494,6 +494,20 @@
     pauseMedia();
   }
 
+  // A hidden window pauses the timed clock too (decision 282); the Steam overlay isn't reported by the binding yet.
+  onMount(() => {
+    let release: (() => void) | null = null;
+    const sync = () => {
+      if (document.hidden && !release) release = holdPause(applyClock);
+      else if (!document.hidden && release) (release(), (release = null));
+    };
+    document.addEventListener("visibilitychange", sync);
+    return () => {
+      document.removeEventListener("visibilitychange", sync);
+      release?.();
+    };
+  });
+
   function closeOverlay() {
     overlayOpen = false;
     releasePause();

@@ -427,6 +427,8 @@ export const de = {
       claimed: "{name}!",
       correct: "Richtig, {name}!",
       timeUp: "Zeit abgelaufen",
+      /** The veil while the clock is paused. */
+      paused: "Pause",
     },
     victory: {
       title: "Gewonnen!",
