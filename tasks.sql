@@ -39768,6 +39768,18 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - `rg -i demo` over plans, README, AGENTS.md, directory.md finds nothing stale; `plans/project.md` marks milestone 18 done
 - Per-commit checks: `npm run check`, `npm test`, `npm run build`, `qgen validate`', '2026-10-17T13:41:08Z', NULL, 1569, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1573, NULL, 'Investigate: options to reduce the overlap rate when drafting new questions', 'exec', 'open', NULL, NULL, 'Batch health: overlap rate 5.5 % (batch-8), 15.4 % (batch-9), 14.9 % (batch-10), threshold 3 %; 165 / 154 drafts dropped for overlap in batch-9 / batch-10 (`authoring/reports/batches.md`). Acked each time "for now" (`authoring/data/health-acks.json`); the stop is global, so each failed base batch also blocks `task 1295: run colombia batch (batch-<n>)`. Approved quality is fine (needs_work overlap 0.7 %, batch-9 spot check 30/30), so the cost is wasted drafts, not bad questions.
+
+## Investigate
+- Where overlap is detected and dropped in `qgen` (step, method, threshold), and what the drafter sees of existing questions beforehand.
+- From `work/batch-9/`, `work/batch-10/`: the dropped-overlap drafts — by subcategory, concept, difficulty; overlap with en-drafted vs es-drafted (translated) questions; same concept reused vs same fact from another angle.
+- Why the jump at batch-9 (English-first drafting, decision 233/239/240) vs pool growth.
+- Options with expected effect and cost, e.g.: show the drafter the subcategory''s/concept''s existing questions or facts; retire or mark saturated concepts; skip saturated slots in favour of under-filled ones; new concepts for saturated subcategories; cheaper pre-draft overlap check; threshold recalibrated for a large pool; health per bundle so base doesn''t block regional runs.
+
+## Output
+- Findings and numbers in the task note.
+- One `pm decision add` "Overlap rate in drafting: which changes?" (options, recommended first, each with expected overlap rate and $ effect).
+- No changes to prompts, `qgen.py`, pools or thresholds (D-36); no `qgen batch`.', '2026-10-17T14:19:40Z', NULL, NULL, 0, 'opus', NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
