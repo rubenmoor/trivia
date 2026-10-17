@@ -309,19 +309,12 @@
     transform: translateY(calc(-0.3 * var(--u)));
     border-color: var(--slate-400);
   }
-  .large .tile.on,
-  .large .tile.on:hover:not(:disabled) {
+  .large .tile.on {
     transform: none;
-    background: var(--sky);
-    border-color: var(--sky);
   }
   .large .tile.on:hover:not(:disabled) {
     transform: translateY(calc(-0.3 * var(--u)));
-  }
-  .large .bundle.on .name-text,
-  .large .bundle.on .count {
-    color: var(--ink);
-    text-shadow: none;
+    border-color: var(--sky);
   }
   .large .name-text {
     font-size: calc(1.9 * var(--u));
@@ -337,6 +330,6 @@
     top: calc(0.5 * var(--u));
     right: calc(0.6 * var(--u));
     width: calc(2 * var(--u));
-    color: var(--ink);
+    color: var(--sky);
   }
 </style>
