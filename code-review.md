@@ -682,7 +682,7 @@ Module-level mutable state (constant tables such as schemas, field lists, `LISTS
 | `app/client/src/lib/focus.ts` | `shown`, `tabbing`, `memory` | 4 |
 | `app/client/src/lib/gamepad.svelte.ts` | `padStyle` (`$state`), `fromSteam`, `prev`, `warned` | 4 |
 | `app/client/src/lib/names.svelte.ts` | `data` (`$state.raw`) | 4 |
-| `app/client/src/game/sound.svelte.ts` | `sound` (`$state`), `ctx`, buses, `noiseBuffer`, `samples`, `samplesLoaded`, `samplesReady`, `current`, `synthMusic` | 5 |
+| `app/client/src/game/sound.svelte.ts` | `sound` (`$state`), `ctx`, buses, `noiseBuffer`, `samples`, `samplesLoaded`, `samplesReady`, `current`, `override` | 5 |
 | `app/client/scripts/check-literals.mjs` | `failed` (script) | 4 |
 | `authoring/tools/supply.ts` | `raw` (stdin buffer) | 8 |
 | `authoring/store/screenshots.mjs`, `authoring/steam/smoke.mjs` | `seed`, `page`/`evaluate`/`waitFor`/`click`; `step`, `page`/`h`/`home`/`display` (scripts) | 6 |

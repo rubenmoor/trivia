@@ -136,6 +136,11 @@ if (check) {
   console.log(`${horizonMb > budget.horizon ? "✗" : "✓"} horizon: ${horizon.length} files, ${horizonMb.toFixed(1)} MB of ${budget.horizon} MB`);
   if (horizonMb > budget.horizon) fails.push(`horizon over budget: ${horizonMb.toFixed(1)} > ${budget.horizon} MB`);
   for (const [f, n] of horizon) if (n / MB > budget.file) fails.push(`horizon/${f} ${(n / MB).toFixed(1)} MB > ${budget.file} MB`);
+  const audioDir = path.join(REPO, "app", "client", "public", "audio");
+  const audio = readdirSync(audioDir).filter((f) => f.endsWith(".m4a"));
+  const audioMb = audio.reduce((n, f) => n + statSync(path.join(audioDir, f)).size, 0) / MB;
+  console.log(`${audioMb > budget.audio ? "✗" : "✓"} audio: ${audio.length} files, ${audioMb.toFixed(1)} MB of ${budget.audio} MB`);
+  if (audioMb > budget.audio) fails.push(`audio over budget: ${audioMb.toFixed(1)} > ${budget.audio} MB`);
   const big = [...size].filter(([, n]) => n > MB).sort((a, b) => b[1] - a[1]);
   for (const [f, n] of big) {
     const max = KIND[path.extname(f)] === "video" ? budget.video : budget.file;

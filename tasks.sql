@@ -11409,13 +11409,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - If the decision from the previous task chose another option, implement that instead (e.g. one loop varied by rate / low-pass / synth layer).
 
 Done when: `npm run check`, `npm run build` pass; dev browser: the three loops play gapless, cuts and fades work; with the files removed the synth loops play.', '2026-10-12T00:36:37Z', '2026-10-13T06:49:21Z', 139, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (149, 33, 'Gamemaster check of the music loops on the TV', 'work', 'open', NULL, NULL, 'Plan 33 task 3. The TV check is answered: `decision 83: Recorded music loops: approve on the TV?` (the recordings sound better, the vibe is wrong; this set stays as one soundtrack among several).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (149, 33, 'Gamemaster check of the music loops on the TV', 'work', 'done', NULL, '2026-10-17, no changes: decision 83 → plan 182: Soundtracks', 'Plan 33 task 3. The TV check is answered: `decision 83: Recorded music loops: approve on the TV?` (the recordings sound better, the vibe is wrong; this set stays as one soundtrack among several).
 
 - Nothing to apply in this set: audio, loop points, level and cut stay as they are
 - The follow-up (more recorded sets, «Banda sonora» picker, rename to `musica-variaciones-*.m4a`, `audio` budget, default) is `plan 182: Soundtracks`; don''t do any of it here
 - Close: `pm task done 149 "2026-10-17, no changes: decision 83 → plan 182: Soundtracks"`; no code, nothing to stage
 
-Done when: task closed with that note.', '2026-10-12T00:36:37Z', NULL, 139, 0, NULL, 'app');
+Done when: task closed with that note.', '2026-10-12T00:36:37Z', '2026-10-17T23:57:05Z', 139, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (150, 33, 'Close UI-10 in the plans', 'work', 'open', 170, NULL, 'Plan 33 task 4, the last of plan 33. Runs after `plan 182: Soundtracks` (priority 180) and plan 32''s joker sounds (`task 1599: Joker sounds that say what the joker does: broom, microwave bing, fairy wand`, `task 146: Developer check of the three new joker sounds on the TV`); priority 170 puts it after them in the `app` work tree.
 
 Gate first:
@@ -40356,7 +40356,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-17T23:52:49Z', '2026-10-17T23:55:48Z', 1597, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1601, 33, 'create tasks for plan 33: Recorded music loops (UI-10)', 'split', 'done', 1000, '2026-10-17, tasks.sql: task 149 body → close per decision 83; task 150 body and priority 170 (after plan 182 and plan 32''s joker sounds, audio budget check, gate); no new decisions', 'Split plan 33 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-17T23:53:33Z', '2026-10-17T23:54:28Z', 1596, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1602, 182, 'Soundtrack engine, file layout and audio budget', 'work', 'open', NULL, NULL, 'Plan 182 task 1 (`plan 182: Soundtracks`, sections "File layout", "Engine", "Audition"). Turns today''s single recorded music set into a table of soundtracks; no picker UI yet (task 2), no new audio (task 3).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1602, 182, 'Soundtrack engine, file layout and audio budget', 'work', 'done', NULL, '2026-10-17, sound.svelte.ts, EffectsDemo.svelte, audio/ rename + CREDITS.md, media-budget.json, stage-media.mjs, plans/04, code-review.md', 'Plan 182 task 1 (`plan 182: Soundtracks`, sections "File layout", "Engine", "Audition"). Turns today''s single recorded music set into a table of soundtracks; no picker UI yet (task 2), no new audio (task 3).
 
 Binding: `decision 83: Recorded music loops: approve on the TV?`; D-45; decision 199 (import, don''t copy); decision 200 (rg old names).
 
@@ -40380,7 +40380,7 @@ Files:
 
 Check with `TRIVIA_SOUND=1` (throw-away, no tests): `setSoundtrack` from the console while each loop track plays (crossfade, no gap); `timed` per soundtrack; reload keeps the choice; files moved away → synth fallback.
 
-Done when: the above; `node app/desktop/stage-media.mjs --check` and `node authoring/steam/credits_check.mjs` pass; `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-17T23:55:32Z', NULL, 1600, 0, NULL, 'app');
+Done when: the above; `node app/desktop/stage-media.mjs --check` and `node authoring/steam/credits_check.mjs` pass; `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-17T23:55:32Z', '2026-10-17T23:59:13Z', 1600, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1603, 182, '«Banda sonora» picker in the Esc menu', 'work', 'open', NULL, NULL, 'Plan 182 task 2 (`plan 182: Soundtracks`, section "Picker"). After `task 1602: Soundtrack engine, file layout and audio budget` (needs `SOUNDTRACKS`, `setSoundtrack`, the stored choice).
 
 - `Overlay.svelte` «Sonido» (`sound: true` rows): a «Banda sonora» row above the volume rows: label + current soundtrack''s name
@@ -45391,6 +45391,12 @@ See `qgen report --batches` or authoring/reports/batches.md. The developer looks
 ```
 
 No `claude:` line was printed (the command stopped before any call). Answer "Ack": run `qgen health ack batch-11 "<note>"`, then the task reruns the same command.', 'A batch of Colombian trivia questions was stopped before it started because the previous batch lost too many questions along the way. Someone has to look at the numbers and decide whether that is acceptable. If acknowledged, the next batch runs; otherwise it stays blocked.', NULL, NULL, '2026-10-17T23:51:19Z', NULL, 1295, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (360, 'Joker sounds on the TV: approve Paso y fuera, Soplo and Hada madrina?', 'pending', '["approve", "changes: …"]', 'Listen via the sound list page (`/?efectos`, recorded vs synthesized) and in a real game (launch with `TRIVIA_SOUND=1`): play Paso y fuera, Soplo and Hada madrina.
+- Paso y fuera: cue `broom`, `barrido.m4a` (first 1.6 s of Freesound 118975 «Straw Broom Sweeping Gentle», esperri, CC0); plays on the sweep, replaces `escoba` there
+- Soplo: cue `bing`, `microondas.m4a` (first 0.75 s of Freesound 872984 «Bell_Microwave Oven Bell», CAT-FOX_ALEX, CC0); plays when the note lands, the rustle follows 300 ms later
+- Hada madrina: cue `wand`, `varita.m4a` (first 1.8 s of Freesound 683323 «Magic Spell Fairy Dust», zazz.sound.design, CC0); replaces the swanee whistle in the card flip
+- Doña Exigente and Tiro mágico unchanged; the category splash and Timed keep `escoba`, `silbato`, `susurro-papel`
+From `task 1599: Joker sounds that say what the joker does: broom, microwave bing, fairy wand`; follows `decision 81: Recorded sound effects: approve on the TV?`.', 'Three jokers in the game now have new sounds that are meant to say what the joker does: a broom sweeping, a microwave bell and a fairy''s magic wand. They were chosen by looking at the shape and brightness of the recordings, not by listening, so they need to be heard on the TV. Either they are approved as they are, or you say what to change and the sounds are swapped or adjusted.', NULL, NULL, '2026-10-17T23:56:58Z', NULL, 146, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -47094,6 +47100,9 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1655, 1599, '2026-10-17T23:53:01Z', '2026-10-17T23:56:49Z', 'done', NULL, 0, '0b1544443d682ffd4c7c0518d7aa0f9c97695443', 'app', 'claude-sonnet-5-5', '9f2a9bfd-fb64-4f4f-a0ed-d2bc977cb85d', NULL, 23, 46, 9308, 1190843, 57458, 0.5611726, 1197781);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1656, 1601, '2026-10-17T23:53:43Z', '2026-10-17T23:54:37Z', 'done', NULL, 0, '3654cfeb9fe95342d38a55c79e7e8d4523d2fd86', NULL, 'claude-opus-5-5', '4d2aa71e-beb5-47aa-be85-357918710f90', NULL, 7, 14, 4451, 274504, 39161, 0.45726479999999997, 1197781);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1657, 1600, '2026-10-17T23:54:37Z', '2026-10-17T23:55:56Z', 'done', NULL, 0, 'd028a25a5134304342f369536ee0d2e03f92d58e', NULL, 'claude-opus-5-5', 'f7f0bf4a-0d0d-4eba-b234-a838eddb498a', NULL, 8, 16, 5747, 299841, 35508, 0.45903620000000006, 1197781);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1658, 146, '2026-10-17T23:56:49Z', '2026-10-17T23:57:01Z', 'blocked', NULL, 0, 'b698ec623b7a04ed691b9990433008ec0401095a', 'app', 'claude-sonnet-5-5', '9f2a9bfd-fb64-4f4f-a0ed-d2bc977cb85d', 1655, 3, 6, 1171, 226921, 13399, 0.6718748, 1197781);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1659, 149, '2026-10-17T23:57:01Z', '2026-10-17T23:57:07Z', 'done', NULL, 0, 'b698ec623b7a04ed691b9990433008ec0401095a', 'app', 'claude-sonnet-5-5', '6f5d81b8-1d76-46d5-a6c0-313fe66f8b9f', NULL, 2, 4, 262, 42831, 20317, 0.092462200000000008, 1197781);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1660, 1602, '2026-10-17T23:57:07Z', '2026-10-17T23:59:22Z', 'done', NULL, 0, 'b698ec623b7a04ed691b9990433008ec0401095a', 'app', 'claude-sonnet-5-5', '1ddbf0f4-d4a3-4127-b618-f5419b92c0cd', NULL, 15, 26, 10829, 803907, 67506, 0.5391474, 1197781);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -47130,6 +47139,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (109, 8);
 INSERT INTO task_decision (task_id, decision_id) VALUES (113, 10);
 INSERT INTO task_decision (task_id, decision_id) VALUES (127, 22);
 INSERT INTO task_decision (task_id, decision_id) VALUES (146, 81);
+INSERT INTO task_decision (task_id, decision_id) VALUES (146, 360);
 INSERT INTO task_decision (task_id, decision_id) VALUES (149, 83);
 INSERT INTO task_decision (task_id, decision_id) VALUES (150, 81);
 INSERT INTO task_decision (task_id, decision_id) VALUES (150, 83);

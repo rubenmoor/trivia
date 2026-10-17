@@ -2,7 +2,7 @@
   // /?efectos: every effect, recorded and synthesized, to compare on the TV (dev aid, UI-10).
   import Splash from "./question/Splash.svelte";
   import { SPLASH_EXITS, type SplashExit } from "./question/splash.ts";
-  import { effects, music, sfx, sound, unlock, type Cue, type Track } from "./sound.svelte.ts";
+  import { effects, music, sfx, setSoundtrack, sound, SOUNDTRACKS, soundtrackIds, unlock, type Cue, type SoundtrackId, type Track } from "./sound.svelte.ts";
 
   const list = effects();
   /** The splash on show: a sample category over a sample subcategory (the names fall back to the keys). */
@@ -11,8 +11,9 @@
     unlock();
     splash = { exit, n: (splash?.n ?? 0) + 1 };
   }
+  const FILE_NAME: Record<Track, string> = { normal: "normal", question: "pregunta", submitted: "enviada", timed: "timed", roll: "roll", victory: "victory" };
   const loops: Track[] = ["normal", "question", "submitted", "timed"];
-  let synth = $state(false);
+  let shown = $state<SoundtrackId>(soundtrackIds[0]);
 
   function play(cue: Cue, synthesized: boolean) {
     unlock();
@@ -20,27 +21,29 @@
   }
 
   /** The loops keep looping, so the seam can be heard. */
-  function loop(track: Track | null, s = synth) {
+  function loop(track: Track | null, soundtrack = shown) {
     unlock();
-    synth = s;
-    music(track, { synth });
+    shown = soundtrack;
+    music(track, { soundtrack });
   }
 </script>
 
 <aside class="efectos">
   <table>
     <tbody>
-      {#each loops as track (track)}
-        <tr class:on={sound.music === track}>
-          <td>música {track}</td>
-          <td><button onclick={() => loop(track, false)}>grabado</button></td>
-          <td><button onclick={() => loop(track, true)}>sintetizado</button></td>
+      {#each soundtrackIds as id (id)}
+        <tr>
+          <td class:on={sound.soundtrack === id}><button onclick={() => setSoundtrack(id)} title="elegir (se guarda)">{id}</button></td>
+          {#each loops as track (track)}
+            <td class:on={sound.music === track && shown === id}>
+              <button onclick={() => loop(track, id)}>{"files" in SOUNDTRACKS[id] ? FILE_NAME[track] : track}</button>
+            </td>
+          {/each}
+          <td><button onclick={() => loop(sound.music === "question" ? "submitted" : "question", id)}>corte</button></td>
         </tr>
       {/each}
       <tr>
-        <td>{synth ? "sintetizado" : "grabado"}</td>
-        <td><button onclick={() => loop(sound.music === "question" ? "submitted" : "question")}>corte</button></td>
-        <td><button onclick={() => loop(null)}>parar</button></td>
+        <td colspan="6"><button onclick={() => loop(null)}>parar</button></td>
       </tr>
       {#each SPLASH_EXITS as exit (exit.id)}
         <tr>
