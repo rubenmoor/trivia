@@ -14,7 +14,7 @@ Texts per store language for Steamworks → Edit Store Page → "Description" (s
 - About This Game: BBCode (`[h2]`, `[b]`, `[list][*]`), no hard limit; no links to other stores, no prices
 - Feature bullets, privacy line, controller line: inside About This Game (bullets as `[list]`, the two lines as its last paragraphs)
 - Steam features named per decision 111: saves need Steam (Steam Cloud per Steam account, plan 87), Steam achievements (plan 86; only uncustomized games outside Gamemaster mode, decisions 19, 74)
-- Modes: only the built ones (`BUILT_MODES`: Gamemaster mode, Alone or as group; Round-robin co-op **draft, with rr-coop**, `task 1465`); the other multiplayer modes join the texts when `milestone 16: Local multiplayer: game modes and controls` ships each one (decision 168), not announced before
+- Modes: only the built ones (`BUILT_MODES`: Gamemaster mode, Alone or as group; Round-robin co-op **draft, with rr-coop**, `task 1465`; Round-robin competitive **draft, with rr-competitive**, `task 1466`); the other multiplayer modes join the texts when `milestone 16: Local multiplayer: game modes and controls` ships each one (decision 168), not announced before
 - No question count (pool grows; base ~1,000 approved es today)
 - Privacy line: says what the build really sends (opt-in telemetry, plan 106; a question report on the player's click, decision 93), not "sends nothing"; the developer confirms in the approval decision
 - Language note (en, de): only until `pool.en.json` / `pool.de.json` ship (decision 80; D-96: a language without its pool plays the Spanish questions)
@@ -34,6 +34,7 @@ Texts per store language for Steamworks → Edit Store Page → "Description" (s
   [list]
   [*][b]Alone or as group:[/b] one player, or the whole family as one team. Standard jokers, no cheats.
   [*][b]Round-robin co-op:[/b] take turns answering; everyone plays together to beat the game, with one set of standard jokers. One gamepad per player, or keyboard and mouse as one player.
+  [*][b]Round-robin competitive:[/b] take turns, but everyone plays their own game, with their own jokers and their own age group. Last one standing, or the first to the top, wins. One gamepad per player, or keyboard and mouse as one player.
   [*][b]Gamemaster mode:[/b] one person runs the show: sets difficulty, question bundles and jokers, and can skip, swap or undo any question.
   [/list]
 
@@ -49,7 +50,7 @@ Texts per store language for Steamworks → Edit Store Page → "Description" (s
   [h2]Features[/h2]
   [list]
   [*]12 questions in a row to the top of the tower
-  [*]Three modes: Alone or as group, Gamemaster mode, Round-robin co-op
+  [*]Four modes: Alone or as group, Gamemaster mode, Round-robin co-op, Round-robin competitive
   [*]Five jokers: Hint, Pass & Purge, Fairy, Ms Picky, Trick Shot
   [*]Four age groups, from kids to adults
   [*]Questions with pictures, sounds and videos
@@ -84,6 +85,7 @@ Texts per store language for Steamworks → Edit Store Page → "Description" (s
   [list]
   [*][b]Solo o en grupo:[/b] un jugador, o toda la familia como un equipo. Comodines estándar, sin trucos.
   [*][b]Por turnos en equipo:[/b] se turnan para responder; todos juegan juntos para ganarle al juego, con un solo juego de comodines estándar. Un control por jugador, o teclado y mouse como un solo jugador.
+  [*][b]Por turnos, todos contra todos:[/b] se turnan, pero cada uno juega su propia partida, con sus propios comodines y su propio grupo de edad. Gana el último en pie, o el primero en llegar a la cima. Un control por jugador, o teclado y mouse como un solo jugador.
   [*][b]Modo anfitrión:[/b] una persona lo maneja todo: elige la dificultad, los paquetes de preguntas y los comodines, y puede saltar, cambiar o deshacer cualquier pregunta.
   [/list]
 
@@ -99,7 +101,7 @@ Texts per store language for Steamworks → Edit Store Page → "Description" (s
   [h2]Características[/h2]
   [list]
   [*]12 preguntas seguidas hasta la cima de la torre
-  [*]Tres modos: Solo o en grupo, Modo anfitrión, Por turnos en equipo
+  [*]Cuatro modos: Solo o en grupo, Modo anfitrión, Por turnos en equipo, Por turnos, todos contra todos
   [*]Cinco comodines: Soplo, Paso y fuera, Hada madrina, Doña Exigente, Tiro mágico
   [*]Cuatro grupos de edad, de niños a adultos
   [*]Preguntas con imagen, sonido y video
@@ -129,6 +131,7 @@ Only the fields that differ from `es`: «vosotros», «vídeo», «ordenador», 
   - Privacy: «en su computador y en su Steam Cloud» → «en vuestro ordenador y en vuestro Steam Cloud»; «si ustedes lo permiten: … si aceptan, … cuando presionan Enviar» → «si lo permitís: … si aceptáis, … cuando pulsáis Enviar»
   - Controller: «controles de Xbox y PlayStation, teclado o mouse» → «mandos de Xbox y PlayStation, teclado o ratón»
   - Por turnos en equipo: «se turnan … todos juegan juntos para ganarle al juego … Un control por jugador, … teclado y mouse» → «os turnáis … todos jugáis juntos para ganar al juego … Un mando por jugador, … teclado y ratón»
+  - Por turnos, todos contra todos: «se turnan, pero cada uno juega su propia partida, con sus propios comodines … Un control por jugador, … teclado y mouse» → «os turnáis, pero cada uno juega su propia partida, con sus propios comodines … Un mando por jugador, … teclado y ratón»
 - **At launch** (not on the beta page; 17a "Modding", decision 175): the Modding section's `es-ES` feature bullet («Hacedlo vuestro: …») instead of the `es` one, same place; link line as `es`
 
 ### German (`de`)
@@ -147,6 +150,7 @@ Only the fields that differ from `es`: «vosotros», «vídeo», «ordenador», 
   [list]
   [*][b]Allein oder in der Gruppe:[/b] eine Person oder die ganze Familie als ein Team. Standard-Joker, keine Tricks.
   [*][b]Reihum im Team:[/b] Reihum wird geantwortet; alle spielen gemeinsam gegen das Spiel, mit einem gemeinsamen Satz Standard-Joker. Ein Gamepad pro Person, oder Tastatur und Maus als eine Person.
+  [*][b]Reihum gegeneinander:[/b] Reihum wird geantwortet, aber jede Person spielt ihr eigenes Spiel, mit eigenen Jokern und eigener Altersgruppe. Wer zuletzt übrig bleibt oder als Erste oder Erster den Gipfel erreicht, gewinnt. Ein Gamepad pro Person, oder Tastatur und Maus als eine Person.
   [*][b]Spielleitermodus:[/b] Die Spielleitung steuert alles: Schwierigkeit, Fragenpakete und Joker, und sie kann jede Frage überspringen, tauschen oder zurücknehmen.
   [/list]
 
@@ -162,7 +166,7 @@ Only the fields that differ from `es`: «vosotros», «vídeo», «ordenador», 
   [h2]Features[/h2]
   [list]
   [*]Zwölf Fragen in Folge bis zum Gipfel des Turms
-  [*]Drei Modi: Allein oder in der Gruppe, Spielleitermodus, Reihum im Team
+  [*]Vier Modi: Allein oder in der Gruppe, Spielleitermodus, Reihum im Team, Reihum gegeneinander
   [*]Fünf Joker: Wink, Näxt & Weg, Glücksfee, Wunschzeit, Finte
   [*]Vier Altersgruppen, von Kindern bis Erwachsenen
   [*]Fragen mit Bildern, Tönen und Videos
