@@ -40352,10 +40352,72 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `plans/09-jokers.md`: "Sound assets" list and JK-9 note
 
 Done when: the three cues play their recordings in `/?efectos` and in a game (`TRIVIA_SOUND=1`); splash and Timed sounds unchanged; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-17T23:52:18Z', NULL, 1595, 1, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1600, 182, 'create tasks for plan 182: Soundtracks', 'split', 'open', 1000, NULL, 'Split plan 182 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-17T23:52:49Z', NULL, 1597, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1600, 182, 'create tasks for plan 182: Soundtracks', 'split', 'done', 1000, '2026-10-17, tasks.sql: tasks 1602–1605 for plan 182; decisions deferred to tasks 1604 (fewer than 3 sets) and 1605 (default soundtrack)', 'Split plan 182 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-17T23:52:49Z', '2026-10-17T23:55:48Z', 1597, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1601, 33, 'create tasks for plan 33: Recorded music loops (UI-10)', 'split', 'done', 1000, '2026-10-17, tasks.sql: task 149 body → close per decision 83; task 150 body and priority 170 (after plan 182 and plan 32''s joker sounds, audio budget check, gate); no new decisions', 'Split plan 33 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-17T23:53:33Z', '2026-10-17T23:54:28Z', 1596, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1602, 182, 'Soundtrack engine, file layout and audio budget', 'work', 'open', NULL, NULL, 'Plan 182 task 1 (`plan 182: Soundtracks`, sections "File layout", "Engine", "Audition"). Turns today''s single recorded music set into a table of soundtracks; no picker UI yet (task 2), no new audio (task 3).
+
+Binding: `decision 83: Recorded music loops: approve on the TV?`; D-45; decision 199 (import, don''t copy); decision 200 (rg old names).
+
+Files:
+- `app/client/public/audio/`: `git mv` plan 33''s three loops `musica-normal|pregunta|enviada.m4a` → `musica-variaciones-normal|pregunta|enviada.m4a` (audio unchanged); `CREDITS.md` rows follow
+- `app/client/src/game/sound.svelte.ts`:
+  - `SOUNDTRACKS` table: id → three file names (none for `sintetizada`), `loopStart`/`loopEnd`, `level`, `sameBeat`; replaces `MUSIC_FILE`, `LOOP_END`, `MUSIC_LEVEL`; `variaciones` gets today''s values (19.2 s, 1.6, `sameBeat` true)
+  - `SAMPLE_NAMES` derived from the table; decode all sets at the unlock
+  - soundtrack in `sound` state, `localStorage` `trivia.soundtrack` next to `trivia.volumes` (same load/validate pattern as `loadVolumes`/`setVolumes`); unknown or missing id → default `sintetizada`
+  - `setSoundtrack(id)`: store; if `normal`/`question`/`submitted`/`timed` plays, crossfade ~0.8 s to the same track of the new soundtrack from 0; `roll`, `victory`, silence: nothing
+  - `beatGoesOn` on the `question` ↔ `submitted` cut only when `sameBeat`, else start at 0
+  - `timed`: recorded soundtrack → its `question` loop; `sintetizada` → generated `timed`; ducking unchanged
+  - missing or undecodable file → that track falls back to `generate()`
+  - `music(track, { synth })` → a soundtrack override (`{ soundtrack }`) for `/?efectos`, stored choice untouched
+  - header comment: what is recorded, what synthesized
+  - unchanged: `roll`, `victory`, effects, 600/800 ms fades, ~80 ms cuts, ducking
+- `EffectsDemo.svelte` (`/?efectos`): per soundtrack × loop (`normal`, `pregunta`, `enviada`, `timed`) a row, «corte» per soundtrack, «parar»; built from `SOUNDTRACKS`, so task 3''s sets appear without edits
+- `app/desktop/media-budget.json`: `"audio": 7` (MB, whole `app/client/public/audio/` folder); `app/desktop/stage-media.mjs --check`: ✓/✗ line like `horizon`, fails over budget
+- `plans/04-ui-tv-display.md`: "Music" (soundtracks, live switch, `timed` mapping, default `sintetizada` until the developer picks), "Sound assets" (flat folder, `musica-<soundtrack>-<track>.m4a`, `audio` budget; replaces the 3.5 MB folder note)
+- `rg` `musica-normal`, `musica-pregunta`, `musica-enviada`, `MUSIC_FILE`, `LOOP_END`, `MUSIC_LEVEL`, `3.5 MB` over code, comments and `.md`; fix hits (task 150''s body may keep its own 3.5 MB mention)
+
+Check with `TRIVIA_SOUND=1` (throw-away, no tests): `setSoundtrack` from the console while each loop track plays (crossfade, no gap); `timed` per soundtrack; reload keeps the choice; files moved away → synth fallback.
+
+Done when: the above; `node app/desktop/stage-media.mjs --check` and `node authoring/steam/credits_check.mjs` pass; `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-17T23:55:32Z', NULL, 1600, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1603, 182, '«Banda sonora» picker in the Esc menu', 'work', 'open', NULL, NULL, 'Plan 182 task 2 (`plan 182: Soundtracks`, section "Picker"). After `task 1602: Soundtrack engine, file layout and audio budget` (needs `SOUNDTRACKS`, `setSoundtrack`, the stored choice).
+
+- `Overlay.svelte` «Sonido» (`sound: true` rows): a «Banda sonora» row above the volume rows: label + current soundtrack''s name
+  - ←/→ (pad, keyboard) steps through `SOUNDTRACKS`, wrapping; Enter or click steps forward; mouse: ‹ › arrows where the volume slider sits; `tick` on change
+  - reuse the existing row kinds (value rows like `level`/`replace`) per decision 199; mod Overlay props unchanged
+  - calls `setSoundtrack`: switches live; check the music under the open Esc menu keeps playing (if the overlay ducks or mutes it, the choice still applies to what plays next; say so in the done note)
+- Catalog keys `overlay.soundtrack` and `soundtrack.<id>` (`sintetizada`, `variaciones`) in es, es-ES, en, de; read `app/client/src/locales/style/<locale>.md` first; names short, by mood, not the source''s title; new bad patterns go into the style file
+- Layout: fits 1280×800 with telemetry rows shown, and 1920×1080 (dev server or `trivia-gallery --only <overlay shot>`)
+- `plans/04-ui-tv-display.md` "Admin overlay": the row
+
+Done when: picker works by pad, keyboard and mouse; choice survives a reload; four catalogs; `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-17T23:55:32Z', NULL, 1600, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1604, 182, 'Source and convert 3–4 recorded soundtracks', 'work', 'open', NULL, NULL, 'Plan 182 task 3 (`plan 182: Soundtracks`, sections "Soundtracks", "Sourcing", "File layout"). After `task 1602: Soundtrack engine, file layout and audio budget`. Pipeline, loudness target and seam checks as plan 33''s `task 147: Source and convert a matched set of CC0 music loops` (read its done note and git log).
+
+Binding: `decision 83: Recorded music loops: approve on the TV?`; milestone 6 "Soundtracks"; D-45 (CC0 preferred, CC BY with credit; no NC/ND/unknown); offline; no new npm/Python deps.
+
+- Sources: Kenney.nl first, then OpenGameArt, Freesound; download by hand, no zips committed
+- A matched set: one piece at three intensities, or stems building up; same key and tempo family, ideally one tempo and loop length (`sameBeat`)
+- Vibe (the synthesized loops are the model): menu calm and relaxing; `question` noticeably more tense; `submitted` clearly the most tense; no lyrics; not like `variaciones` or another set already in
+- Conversion: `nix shell nixpkgs#ffmpeg-headless`; whole bars at the loop point; −18 LUFS; AAC `.m4a` 96–128 kbit/s; loops 20–40 s; seam checked; one set ≤ 1 MB
+- Files `app/client/public/audio/musica-<id>-normal|pregunta|enviada.m4a`, id ASCII lower case Spanish by mood; `CREDITS.md` one row per file (URL, pack, author, licence)
+- `SOUNDTRACKS` entries (loop points, `level`, `sameBeat`); `soundtrack.<id>` names in es, es-ES, en, de (read `locales/style/<locale>.md` first)
+- Fewer than 3 good sets: stage candidates under `work/soundtracks/`, `pm decision add` (kind rule) with per set source, licence, a line on the vibe, file paths; options e.g. take these, take fewer, vary one recording by rate/filter as plan 33''s options; `pm task-pending-decision` this task; stage what''s done and stop
+
+Done when: 3–4 sets in, each listed in `/?efectos` and the picker; `node app/desktop/stage-media.mjs --check` (`audio`) and `node authoring/steam/credits_check.mjs` pass; `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-17T23:55:32Z', NULL, 1600, 1, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1605, 182, 'Default soundtrack picked on the TV', 'work', 'open', NULL, NULL, 'Plan 182 task 4, the last (`plan 182: Soundtracks`). After `task 1602: Soundtrack engine, file layout and audio budget`, `task 1603: «Banda sonora» picker in the Esc menu`, `task 1604: Source and convert 3–4 recorded soundtracks`.
+
+First run (no decision yet):
+- Gate: any of those three still open → stop without changes
+- `pm decision add --once` "Default soundtrack: which one on the TV?", intro in plain English; body: how to listen (a real game, Esc menu «Sonido» → «Banda sonora», switches live; `/?efectos` per loop and «corte»; `TRIVIA_SOUND=1`); options one per soundtrack, `sintetizada` first (today''s default), then each recorded one by display name, plus «changes: <soundtrack> → …» (level, seam, drop a set)
+- `pm task-pending-decision <this task> <decision id>`; stop
+
+Answered:
+- Set the default in `sound.svelte.ts`; apply the changes asked (level, loop points, dropping a set: files, `CREDITS.md` rows, catalog keys, budget)
+- `plans/04-ui-tv-display.md` "Music": the default named
+- `pm decision consequences <id> "…"`
+
+Done when: default set and changes applied; `node app/desktop/stage-media.mjs --check`, `node authoring/steam/credits_check.mjs`; `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-10-17T23:55:32Z', NULL, 1600, 0, NULL, 'app');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -47031,6 +47093,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1654, 1596, '2026-10-17T23:52:52Z', '2026-10-17T23:53:43Z', 'done', NULL, 0, '0b1544443d682ffd4c7c0518d7aa0f9c97695443', NULL, 'claude-opus-5-5', 'ceacd1f3-b0d2-4bc2-a0f7-f0d447bdff10', NULL, 6, 12, 4677, 238553, 41238, 0.4712026, 1197781);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1655, 1599, '2026-10-17T23:53:01Z', NULL, 'running', NULL, NULL, '0b1544443d682ffd4c7c0518d7aa0f9c97695443', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1197781);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1656, 1601, '2026-10-17T23:53:43Z', '2026-10-17T23:54:37Z', 'done', NULL, 0, '3654cfeb9fe95342d38a55c79e7e8d4523d2fd86', NULL, 'claude-opus-5-5', '4d2aa71e-beb5-47aa-be85-357918710f90', NULL, 7, 14, 4451, 274504, 39161, 0.45726479999999997, 1197781);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1657, 1600, '2026-10-17T23:54:37Z', '2026-10-17T23:55:56Z', 'done', NULL, 0, 'd028a25a5134304342f369536ee0d2e03f92d58e', NULL, 'claude-opus-5-5', 'f7f0bf4a-0d0d-4eba-b234-a838eddb498a', NULL, 8, 16, 5747, 299841, 35508, 0.45903620000000006, 1197781);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
