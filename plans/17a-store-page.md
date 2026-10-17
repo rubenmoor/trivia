@@ -354,9 +354,43 @@ Store texts for each shipped question bundle, one free DLC app each (decision 66
   [/list]
   ```
 
+### `uk` (Regional: United Kingdom)
+- Languages: en only (British English; no es/de store text); `app/data/bundles/uk/pool.en.json` may not exist yet: **enter once the pack's en pool ships**
+- Facts: `app/data/bundles/uk/categories.json` (15 categories, incl. British comedy), `names.en.json`; description in `app/data/names.en.json` `bundles.uk`; no Steam achievement of its own, none mentioned
+- Drafted 2026-10-16 (`task 1456`); approved through pm decision "DLC store texts approved? (uk)", like colombia's (`task 783: Free DLC store texts in 17a`)
+
+#### English (`en`)
+- **Name:** Regional: United Kingdom
+- **Short description** (≤ 300):
+  > A free question bundle for Living Room Trivia, for anyone with ties to the United Kingdom: its places, food, customs, people, music, sport and words. Installs separately and starts switched off: turn it on in the question bundle step whenever you want to play it.
+- **About This Content:**
+  ```
+  [h2]Questions from the United Kingdom[/h2]
+  Regional: United Kingdom is a free question bundle for Living Room Trivia. It's for anyone with ties to the UK: questions people in Britain know and hardly anyone abroad would.
+
+  [list]
+  [*][b]Geography and nature:[/b] counties, cities, rivers, hills, national parks and wildlife
+  [*][b]History and people:[/b] kings and queens, the wars, politics and famous Britons
+  [*][b]British food and drink:[/b] regional dishes, puddings, biscuits, tea and the pub
+  [*][b]Festivals, traditions and legends:[/b] bank holidays, Bonfire Night, folklore and ghost stories
+  [*][b]Music, books, film and TV:[/b] bands, classic novels, soaps and British comedy
+  [*][b]Sport:[/b] football, rugby, cricket and more
+  [*][b]How Britain talks and lives:[/b] slang, sayings, place names, daily life and national symbols
+  [/list]
+
+  [h2]How it plays[/h2]
+  [list]
+  [*]Free; needs the base game Living Room Trivia
+  [*]Optional install: remove it and add it back in Steam any time
+  [*]Off by default: turn it on in the “Question bundles” step before a game; its questions mix with the base bundle's
+  [*]The bundle grows with updates
+  [/list]
+  ```
+
 ### After approval
 - Capsules: the DLC store name equals the in-game name, so `dlc-colombia/` capsules from `task 669` stay as rendered (no re-run)
 - `germany`: `capsules.mjs` renders `dlc-germany/de/` (bundle language) now; add `en` to its `langs` map in `dlcs()` once the en text is entered
+- `uk`: `capsules.mjs` renders `dlc-uk/en/` from the bundle language (en) and `names.en.json`; no script change
 - `usa`: `authoring/store/capsules.mjs` renders `dlc-usa/en/` from `bundles.json` languages (en) and the name in `names.en.json`; render with the other DLCs' capsules, approval with the capsule set
 
 ## Modding
