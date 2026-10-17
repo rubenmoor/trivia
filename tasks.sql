@@ -39142,12 +39142,12 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 - Raise the two decisions part 1 names, with the recommended options first: demo save separate or shared/imported; Steam features in the demo (one decision, options per feature: Cloud, achievements, Workshop/mods, telemetry, question reports). Link the plan''s tasks that wait for them.
 - Runs first: parts 2–5 build on the flag this plan defines.', '2026-10-17T13:21:48Z', '2026-10-17T13:24:17Z', 1524, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1526, 154, 'write plan: The demo base bundle', 'plan', 'open', 1000, NULL, 'Write the plan for part 2 of `plan 154: masterplan` ("The demo base bundle"): `pm plan list` first, then `pm plan add 18 "The demo base bundle" --priority 590 --intro "…"` with the full body, per part 2''s bullets; its work tasks go in the `questions` work tree.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1526, 154, 'write plan: The demo base bundle', 'plan', 'done', 1000, '2026-10-17, plan 174: The demo base bundle (priority 590); decision 339 recorded (list format); no files changed', 'Write the plan for part 2 of `plan 154: masterplan` ("The demo base bundle"): `pm plan list` first, then `pm plan add 18 "The demo base bundle" --priority 590 --intro "…"` with the full body, per part 2''s bullets; its work tasks go in the `questions` work tree.
 
 - Read part 1''s plan ("Demo build switch, identity and save") if it exists: the flag, and whether mods are on in the demo.
 - Settle and record the list format (`pm decision record`), also against "every question is in exactly one bundle" (`plans/22-bundles.md`).
 - The size comes from the supply check (`selection.ts` `supply`/`assign`) over every mode × age group × seat count, jokers'' replacements included.
-- The developer''s approval of the list: a `once` decision raised by the work task that produces it, not now.', '2026-10-17T13:21:48Z', NULL, 1524, 0, NULL, 'app');
+- The developer''s approval of the list: a `once` decision raised by the work task that produces it, not now.', '2026-10-17T13:21:48Z', '2026-10-17T13:29:10Z', 1524, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1527, 154, 'write plan: Deterministic selection in the demo', 'plan', 'open', 1000, NULL, 'Write the plan for part 3 of `plan 154: masterplan` ("Deterministic selection in the demo"): `pm plan list` first, then `pm plan add 18 "Deterministic selection in the demo" --priority 600 --intro "…"` with the full body, per part 3''s bullets.
 
 - Read part 1''s plan first (how `demo` reaches the engine, telemetry answer).
@@ -39241,8 +39241,68 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `rg -i demo` over `.md` files and comments: fix stale hits (decision 200)
 
 Done when: the docs match the code; `npm run check` passes.', '2026-10-17T13:25:09Z', NULL, 1532, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1542, 174, 'create tasks for plan 174: The demo base bundle', 'split', 'open', 1000, NULL, 'Split plan 174 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-17T13:29:07Z', NULL, 1526, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1542, 174, 'create tasks for plan 174: The demo base bundle', 'split', 'done', 1000, '2026-10-17, tasks 1543-1547 for plan 174; seat decision raised by task 1543 once its --sizes table exists', 'Split plan 174 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-17T13:29:07Z', '2026-10-17T13:30:10Z', 1526, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1543, 174, 'qgen demo: candidates, supply check, picker; raise the seat decision', 'work', 'open', NULL, NULL, 'Part 1 of `plan 174: The demo base bundle`: the script that sizes and picks the demo''s fixed question list. Read the plan''s "Ground rules", "Candidates", "Size from supply" and "Spread" first; they are the spec.
+
+## What
+- `authoring/tools/demo.ts` (Node, beside `authoring/tools/supply.ts`): imports the engine''s supply check and picker (`game.ts` `supply`, `sessionSupply` → `seatsSupply`, `mediaAllowed`, `level_weights`, age groups from `app/data/age-groups.json`); nothing re-implemented (D-60, `decision 199: AGENTS.md rule: import, don''t copy; a copy across a boundary names its source? (code review part 11)`)
+- Called through `authoring/tools/engine.py`; `qgen demo` in `authoring/tools/qgen.py` is the Python front
+- Candidates: `base` questions per the plan (approved source, `translatable` not false, approved in es, es-ES, en, de per `decision 235: Source locale per question and translations from either source (English-first base)`, not `needs_work`/flagged/health- or spot-check-blocked; media: file in `media/` and licence shippable via `authoring/tools/media.py` `licence_of` as the release check does); `pending` = all that but missing translations
+- Configurations per age group, defaults (12 levels, `CARDS_MAX` 4, standard jokers): solo/group, Gamemaster, rr-coop (one game); rr-competitive 2..S seats, every multiset of age groups; timed 2..S seats, cards = seats (`decision 276: Timed mode: after a drop-out, how many questions does a round have?`) plus sudden-death level-12 slots; each again with media off
+- Joker reserve R per level: read it off `game.ts` (skip, «Bájale», «Cambiazo», «Francotirador», Gamemaster «Cambiar pregunta» once); write R and its derivation in the script''s comment
+- «Bájale» share reported, picker favours subcategory pairs across difficulties; no hard bar
+- Deterministic: same pool files → same list; no time, no random seed; ties by question id; empty save (seen counts 0)
+- Spread and fill order as in the plan''s "Spread"
+
+## Commands
+- `qgen demo --sizes`: per S = 1..5 the minimum list size, full/pending candidate counts, the binding configuration
+- `qgen demo --propose [--seats S]` → `work/demo/proposal.json` (ids; per id subcategory, difficulty, media, full/pending) and `work/demo/proposal.md` (per configuration pass/fail, reserve, «Bájale» share, spread vs. targets, pending ids per locale)
+- `qgen demo --check [<file>]` (default `authoring/data/demo.json`; `{version: 1, ids, approved, seats}` per `decision 339: Demo bundle format: an id list of base questions, exported to app/data/demo/ pools, questions stay in base`): checks the list against the configurations at its `seats`, lists ids that are no longer candidates; exit 1 on failure (task "Demo pools in export and validate" calls it from `qgen validate`)
+- Reports per `decision 208: What must a script that calls claude report to its caller?` only if it calls claude (it shouldn''t)
+
+## Then
+- `pm decision add "Demo: cover multiplayer sessions up to how many seats?"` with an `--intro` and the `--sizes` table in the body; options: S = 5 recommended if its size is within reach of the translation runs, else the largest S whose list is ≤ ≈400; the answer goes into `authoring/data/demo.json`''s `seats`
+- `pm task-pending-decision 1547 <new decision id>`
+
+Done when: the three subcommands run on today''s pool, `--sizes` table is in the decision, `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-17T13:29:50Z', NULL, 1542, 0, 'opus', 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1544, 174, 'Demo pools in export and validate', 'work', 'open', NULL, NULL, 'Part 2 of `plan 174: The demo base bundle`, per `decision 339: Demo bundle format: an id list of base questions, exported to app/data/demo/ pools, questions stay in base`. Needs `qgen demo --check` from `task 1543: qgen demo: candidates, supply check, picker; raise the seat decision`.
+
+## What
+- `qgen export` (`authoring/tools/pool_export.py`): from `authoring/data/demo.json` write `app/data/demo/pool.json` (es) and `app/data/demo/pool.<locale>.json` (es-ES, en, de): base''s pool entries of the listed ids, unchanged (same ids, `bundle` base, base subcategories); no list → no files (and stale demo files removed)
+- `qgen validate`: every id exists and is `bundle` base; every id a full candidate (pending id: warning until `approved` is set, then error); `qgen demo --check` passes at the list''s `seats`; demo pools not stale (same mechanism as the stale `app/data/pool.json` check)
+- No `bundles.json` entry, no bundle id `demo`
+- Docs: `plans/22-bundles.md` "Demo" section (decision 339, layout row `app/data/demo/`); `AGENTS.md` Commands: `qgen demo` row, `qgen validate` row mentions the demo checks; `directory.md` only if a top-level row changes
+
+Done when: with a throw-away `authoring/data/demo.json` of a few ids, export writes the four files and validate passes; with a bad id it fails; without the list, nothing is written and validate passes (don''t commit the throw-away list). `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-17T13:29:50Z', NULL, 1542, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1545, 174, 'Translation runs take demo-listed ids first', 'work', 'open', 580, NULL, 'Part 3 of `plan 174: The demo base bundle`: the demo list needs every id approved in es, es-ES, en, de; translation runs should close those gaps first.
+
+## What
+- `qgen batch --translate <locale>` source selection: after stale translations, the ids of `authoring/data/demo.json` (else `work/demo/proposal.json`) without an approved translation in the locale; then the usual order. Arguments unchanged
+- A listed source that turns out not to travel (`translatable: false`) or whose translation is rejected: nothing special here; `qgen demo --check` reports it and the replacement step of `task 1547: Pick and approve the demo question list` covers it
+- Docs: `plans/15b-question-translation.md` names the order; `authoring/RUNBOOK.md` "Translation runs" line too (the only RUNBOOK change)
+
+Done when: a dry run / selection printout of `qgen batch --translate en` puts listed ids right after stale ones (throw-away check, no paid run); `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-17T13:29:51Z', NULL, 1542, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1546, 174, 'Demo pool in the client', 'work', 'open', 580, NULL, 'Part 4 of `plan 174: The demo base bundle`. Runs after `task 1534: Demo flag in the client, engine and dev server` (`decision 338: Demo flag: TRIVIA_DEMO at build, dist-demo, package.json demo, EngineData.demo`); if `buildInfo().demo` doesn''t exist yet, stop and say so.
+
+## What
+- `app/client/src/lib/data.ts` / `app/client/src/engine/pool.ts` `poolFile`: in a demo build (`buildInfo().demo`, read only here) base''s pool file of a locale is `demo/pool.json` / `demo/pool.<locale>.json`; no pack pools (`packsFor` empty, no mod packs)
+- A locale without its demo pool isn''t offered (masterplan ground rules of `plan 154: masterplan`)
+- The bundle tile''s name and count are not part of this (part 5 of the masterplan)
+- Without `TRIVIA_DEMO` nothing changes
+
+Done when: with a throw-away `app/data/demo/pool.json` (if the questions tasks haven''t exported a real one yet), `TRIVIA_DEMO=1 npm run dev -w app/client` plays only listed ids and offers no packs; without the flag the full pool and packs load as before. `npm run check`, `npm test`, `npm run build`, `qgen validate` pass; don''t commit throw-away pool files.', '2026-10-17T13:29:51Z', NULL, 1542, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1547, 174, 'Pick and approve the demo question list', 'work', 'open', 570, NULL, 'Part 5 of `plan 174: The demo base bundle`. Waits for the seat decision ("Demo: cover multiplayer sessions up to how many seats?", raised by `task 1543: qgen demo: candidates, supply check, picker; raise the seat decision`) and needs `task 1544: Demo pools in export and validate`.
+
+## What
+- `qgen demo --propose --seats <S>` (S from the answered decision) → `authoring/data/demo.json` (`{version: 1, ids, seats: S, approved: ""}`, ids sorted), `qgen export`, `qgen validate`
+- `/review?demo=1` on the authoring pages: filter to the listed ids (add it if `/review` has none)
+- `pm decision add --once "Demo question list: approve?"` with an `--intro`, the proposal''s table, `work/demo/proposal.md`''s content, the `/review?demo=1` link and the pending translations per locale; options: approve / replace these ids / change the rules; make this task pending on it, stage, stop
+- After the answer: approve → `approved` set to the decision id, export, validate; replace/change → redo the proposal accordingly and ask again
+- `qgen demo --replace`: proposes the nearest full candidate per broken id (same level ranges, subcategory, media kind; the check passes)
+- Replacement rule in `plans/22-bundles.md` "Demo": a listed id later flagged, retired, blocked or untranslatable → `qgen demo --check` fails `qgen validate`; `qgen demo --replace` proposes, the developer approves with a `--once` decision per replacement round
+
+Done when: `authoring/data/demo.json` approved, `app/data/demo/` holds the four pools (or the pending translations are listed as the remaining gap), `qgen demo --check` passes at the decided seats; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-17T13:29:51Z', NULL, 1542, 0, NULL, 'questions');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -45673,7 +45733,10 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1579, 1524, '2026-10-17T13:21:11Z', '2026-10-17T13:22:08Z', 'done', NULL, 0, 'd6c324ae6bf8a69b39f047565ff9f18bca0569fa', NULL, 'claude-opus-5-5', 'c2d1be67-b6a6-4aab-8928-4b2619a7fdb1', NULL, 5, 10, 4224, 161351, 31761, 0.37087820000000005, 192091);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1580, 1525, '2026-10-17T13:22:00Z', '2026-10-17T13:24:59Z', 'done', NULL, 0, 'd6c324ae6bf8a69b39f047565ff9f18bca0569fa', 'app', 'claude-opus-5-5', '6aa00ccb-432f-47c1-a56f-b6880b0cf1fc', NULL, 20, 40, 13877, 1107002, 63327, 1.0057164, 192091);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1581, 1532, '2026-10-17T13:24:03Z', '2026-10-17T13:25:19Z', 'done', NULL, 0, '985ff15d60613c3b21e30db5e31a6161f1501496', NULL, 'claude-opus-5-5', '244e2868-0e6e-4792-bb2e-427c912d695f', NULL, 8, 16, 7002, 303197, 39454, 0.5163754, 192091);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1582, 1526, '2026-10-17T13:24:59Z', NULL, 'running', NULL, NULL, '985ff15d60613c3b21e30db5e31a6161f1501496', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 192091);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1582, 1526, '2026-10-17T13:24:59Z', '2026-10-17T13:29:21Z', 'done', NULL, 0, '985ff15d60613c3b21e30db5e31a6161f1501496', 'app', 'claude-opus-5-5', '81ba3e65-11ac-4cbc-a303-a29e627fdd17', NULL, 28, 56, 18553, 1812069, 85383, 1.4167618, 192091);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1583, 1542, '2026-10-17T13:29:07Z', '2026-10-17T13:30:16Z', 'done', NULL, 0, '7fc41e8b3e36e20d36262aa71a993508a010bc89', NULL, 'claude-opus-5-5', '80f45bd7-397b-41ae-a4e3-e8a1b4d1b03b', NULL, 10, 20, 6780, 406632, 38999, 0.5289984, 192091);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1584, 1527, '2026-10-17T13:29:21Z', NULL, 'running', NULL, NULL, '7fc41e8b3e36e20d36262aa71a993508a010bc89', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 192091);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1585, 1543, '2026-10-17T13:30:12Z', NULL, 'running', NULL, NULL, '7fc41e8b3e36e20d36262aa71a993508a010bc89', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 192091);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
