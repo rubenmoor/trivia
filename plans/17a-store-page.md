@@ -292,8 +292,71 @@ Store texts for each shipped question bundle, one free DLC app each (decision 66
   [/list]
   ```
 
+### `germany` (Regional: Deutschland / Regional: Germany)
+- Languages: de (pool: `app/data/bundles/germany/pool.json`, enter once it ships); en text drafted, **enter only once the pack's en translations exist** (`pool.en.json`); until then the DLC page lists German only
+- Voice: German as spoken in Germany; facts: `app/data/bundles/germany/categories.json` (15 categories, incl. «Die DDR»), `names.de.json`, `names.en.json`; no Steam achievement of its own, none mentioned
+- Terms: de «Fragenpaket», «Spielleitung» (style guide `de.md`), du-form-neutral/infinitive as in the base `de` text; the question step is «Welche Fragen sollen es sein?» (`screen.bundles.titleMany`)
+- Drafted 2026-10-16 (`task 1443`); approved through pm decision "DLC store texts approved? (germany)", like colombia's (`task 783: Free DLC store texts in 17a`)
+
+#### German (`de`)
+- **Name:** Regional: Deutschland
+- **Short description** (≤ 300):
+  > Kostenloses Fragenpaket für Wohnzimmer-Quiz, für alle mit Bezug zu Deutschland: Orte, Essen, Bräuche, Menschen, Musik, Sport und Wörter von hier. Wird separat installiert und ist anfangs aus: in der Fragenauswahl einschalten, wenn es gespielt werden soll.
+- **About This Content:**
+  ```
+  [h2]Fragen aus Deutschland[/h2]
+  Regional: Deutschland ist ein kostenloses Fragenpaket für Wohnzimmer-Quiz. Es ist für alle mit Bezug zu Deutschland: Fragen, die man hier kennt und außerhalb kaum jemand.
+
+  [list]
+  [*][b]Land und Natur:[/b] Bundesländer, Städte, Flüsse, Gebirge, Nationalparks und Tiere
+  [*][b]Geschichte und Menschen:[/b] von den Anfängen bis heute, die DDR, bekannte Deutsche
+  [*][b]Essen und Trinken:[/b] regionale Gerichte, Brot, Kuchen, Getränke und Küche daheim
+  [*][b]Feste, Bräuche und Sagen:[/b] Karneval, Weihnachtsmärkte, Märchen und Legenden
+  [*][b]Musik, Kunst, Film und Fernsehen:[/b] Lieder, Bücher, Kino und Fernsehklassiker
+  [*][b]Sport:[/b] Fußball und mehr
+  [*][b]So spricht und lebt Deutschland:[/b] Wörter und Redensarten, Alltag und Symbole
+  [/list]
+
+  [h2]So wird gespielt[/h2]
+  [list]
+  [*]Kostenlos; braucht das Hauptspiel Wohnzimmer-Quiz
+  [*]Optionale Installation: in Steam jederzeit entfernen und wieder hinzufügen
+  [*]Standardmäßig aus: vor dem Spiel in der Fragenauswahl einschalten; die Fragen mischen sich mit denen des Grundpakets
+  [*]Das Paket wächst mit Updates
+  [/list]
+  ```
+
+#### English (`en`) — enter once the pack's en translations exist
+- **Name:** Regional: Germany
+- **Short description** (≤ 300):
+  > A free question bundle for Living Room Trivia, for anyone with ties to Germany: its places, food, customs, people, music, sport and words. Installs separately and starts switched off: turn it on in the question bundle step whenever you want to play it.
+- **About This Content:**
+  ```
+  [h2]Questions from Germany[/h2]
+  Regional: Germany is a free question bundle for Living Room Trivia. It's for anyone with ties to Germany: questions people in Germany know and hardly anyone outside would.
+
+  [list]
+  [*][b]Land and nature:[/b] states, cities, rivers, mountains, national parks and wildlife
+  [*][b]History and people:[/b] from the early days to today, the GDR, famous Germans
+  [*][b]Food and drink:[/b] regional dishes, bread, cakes, drinks and home cooking
+  [*][b]Festivals, customs and legends:[/b] carnival, Christmas markets, fairy tales and legends
+  [*][b]Music, art, film and TV:[/b] songs, books, cinema and TV classics
+  [*][b]Sport:[/b] football and more
+  [*][b]How Germany talks and lives:[/b] words and sayings, daily life and symbols
+  [/list]
+
+  [h2]How it plays[/h2]
+  [list]
+  [*]Free; needs the base game Living Room Trivia
+  [*]Optional install: remove it and add it back in Steam any time
+  [*]Off by default: turn it on in the “Question bundles” step before a game; its questions mix with the base bundle's
+  [*]The bundle grows with updates
+  [/list]
+  ```
+
 ### After approval
 - Capsules: the DLC store name equals the in-game name, so `dlc-colombia/` capsules from `task 669` stay as rendered (no re-run)
+- `germany`: `capsules.mjs` renders `dlc-germany/de/` (bundle language) now; add `en` to its `langs` map in `dlcs()` once the en text is entered
 - `usa`: `authoring/store/capsules.mjs` renders `dlc-usa/en/` from `bundles.json` languages (en) and the name in `names.en.json`; render with the other DLCs' capsules, approval with the capsule set
 
 ## Modding
