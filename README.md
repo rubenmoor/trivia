@@ -166,6 +166,8 @@ npm run check                                      # type-check both clients (st
 npm test                                           # game engine tests (node:test)
 npm run check:literals -w app/client               # on-screen literals outside the UI catalog (src/game by default)
 npm run build -w app/client && trivia-desktop      # the game in the Electron desktop shell, no Python (no Steam: nothing saved; TRIVIA_DEV_STEAM_USER=1: state/desktop/dev/game.json; `--rp-probe`: throw-away Remote Play probe, log in `<userData>/rp-probe.log`, plan 168; `--lag-probe`: throw-away input-lag probe page, log in `<userData>/lag-probe.log`, plan 170)
+TRIVIA_DEMO=1 npm run dev -w app/client            # the demo client (also `serve`, which previews dist-demo/ after `TRIVIA_DEMO=1 npm run build -w app/client`)
+TRIVIA_DEMO=1 npm run build -w app/client && TRIVIA_DEMO=1 trivia-desktop   # the demo in the desktop shell (see "Run the demo")
 ```
 
 The dev servers forward the Python servers' routes (`/api`, `/data`, `/media`; authoring also `/reports`), so run both. Before changing anything: milestones, plans, tasks and decisions are in `pm` (`pm status`, `pm decision list --answered`; [`AGENTS.md`](AGENTS.md)); older plans and D-numbers in [`plans/README.md`](plans/README.md), [`plans/decisions.md`](plans/decisions.md).
@@ -181,6 +183,13 @@ Environment variables (empty = unset):
 - `TRIVIA_STEAM_ACCOUNT`: `trivia-steam upload`'s Steam login; `TRIVIA_STEAMCMD_HOME`: SteamCMD's home (default `$XDG_DATA_HOME/trivia/steamcmd`)
 - `VITE_AUTHORING_URL` (build time): the game's links to the authoring pages; `""` hides them (default: same host, port 8001)
 
+### Run the demo
+
+The demo is the same code built with `TRIVIA_DEMO=1` (decisions 335, 338): build-time flag, no runtime toggle. Dev: `TRIVIA_DEMO=1 npm run dev -w app/client` (prints `trivia dev: demo`), or build `dist-demo/` and start `TRIVIA_DEMO=1 trivia-desktop` (without `dist-demo/` it exits, saying so).
+- In the demo: window title «¡Trivia! Demo», Steam App ID 480 until the demo app exists
+- Off in the demo (decisions 337, 346): mods and Workshop (`--check-mod`, `--publish-mod` exit 2), achievements, telemetry, question reports
+- Save: shared with the full game, same folder, mods file and single-instance lock (decisions 336, 345)
+
 ### Check the UI wording (screen gallery)
 
 ```sh
@@ -189,7 +198,7 @@ trivia-gallery --locale de --only menu-gamemaster,victory   # some shots again; 
 trivia-gallery --locale es --only start --size 1280x800   # another window size
 ```
 
-Shots go to `work/gallery/<locale>/<shot>.png` (another `--size`: `<locale>@<W>x<H>/`, its own entry in `/gallery`); `work/gallery/manifest.json` has each visible text with its catalog key, and text without one (a literal) as unmatched. The game runs from demo saves in a temp folder, never your save.
+Shots go to `work/gallery/<locale>/<shot>.png` (another `--size`: `<locale>@<W>x<H>/`, its own entry in `/gallery`); `work/gallery/manifest.json` has each visible text with its catalog key, and text without one (a literal) as unmatched. The game runs from demo saves in a temp folder, never your save. `TRIVIA_DEMO=1 trivia-gallery` shoots the demo client (`dist-demo/`, built if stale) into `work/gallery-demo/`.
 
 Review them in `trivia-authoring` → `/gallery`: per language every shot; click a text for its catalog key, flag it with a note. Flags go to `authoring/data/ui-flags.json` for the next fix pass.
 
@@ -216,6 +225,7 @@ The package contains only `app/`. It keeps its saves and media cache in `$XDG_DA
 trivia-media sync --status approved   # the pool's media must be in the cache
 trivia-desktop-build                  # → app/desktop/release/LivingRoomTrivia-<version>-win-x64.zip, …-linux-x64.tar.gz
 trivia-desktop-build --dir            # also win-unpacked/, linux-unpacked/ for the Steam depots
+trivia-desktop-build --dir --demo    # the demo: app/desktop/release/demo/LivingRoomTriviaDemo-<version>-…, `demo: true` in its package.json (`--demo` without `--dir`: archives only)
 trivia-steam stage                    # stages build/dlc/<pack>/; depot folders + build/media + DLC = the archives
 ```
 
