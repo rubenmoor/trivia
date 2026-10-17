@@ -5,6 +5,7 @@ The built client on the Node dev server (`npm run serve -w app/client`, a temp s
 nixpkgs Playwright (1920×1080, `--size WxH`) with the desktop bridge stubbed (valid Steam user, mods, telemetry, reports).
 `?gallery` makes `t()` record rendered text → key (lib/i18n.ts); each shot's visible texts are matched against it.
 Output: <locale>/<shot>.png and manifest.json in work/gallery/ ($TRIVIA_WORK/gallery/ if set; merged on --locale/--only runs);
+with `TRIVIA_DEMO=1` the demo client (dist-demo) is shot into work/gallery-demo/;
 another size writes <locale>@<W>x<H>/ and a manifest entry of that name.
 
 Usage: trivia-gallery [--locale en,es,es-ES,de] [--only <shot>[,<shot>…]] [--size WxH] [--list] [--visible]
@@ -29,7 +30,9 @@ import layout  # authoring/tools/layout.py
 REPO = Path(__file__).resolve().parent.parent.parent
 CLIENT = REPO / "app" / "client"
 DATA = REPO / "app" / "data"
-OUT = layout.GALLERY  # honours TRIVIA_WORK
+DEMO = os.environ.get("TRIVIA_DEMO") == "1"  # plan 173: the demo client, dist-demo
+DIST = "dist-demo" if DEMO else "dist"
+OUT = layout.GALLERY.with_name("gallery-demo") if DEMO else layout.GALLERY  # honours TRIVIA_WORK
 LOCALES = ["en", "es", "es-ES", "de"]
 DEFAULT_SIZE = (1920, 1080)
 
@@ -175,7 +178,7 @@ def data_strings(players):
             for x in v:
                 walk(x)
 
-    for f in [*DATA.rglob("*.json"), CLIENT / "dist" / "credits.json"]:
+    for f in [*DATA.rglob("*.json"), CLIENT / DIST / "credits.json"]:
         walk(json.loads(f.read_text(encoding="utf-8")))
     walk(sample_mods())
     i18n = (CLIENT / "src" / "lib" / "i18n.ts").read_text(encoding="utf-8")
@@ -245,14 +248,14 @@ def free_port():
 
 
 def build_if_stale():
-    dist = CLIENT / "dist" / "index.html"
+    dist = CLIENT / DIST / "index.html"
     inputs = [CLIENT / "index.html", CLIENT / "vite.config.ts", CLIENT / "credits.ts", REPO / "app" / "desktop" / "package.json",
               *(CLIENT / "src").rglob("*"), *(CLIENT / "public").rglob("*")]
     newest = max(f.stat().st_mtime for f in inputs if f.is_file())
     if dist.exists() and dist.stat().st_mtime >= newest:
         return
-    print("gallery: client stale, npm run build", flush=True)
-    subprocess.run(["npm", "run", "build"], cwd=REPO, check=True, stdout=subprocess.DEVNULL)
+    print(f"gallery: client stale, npm run build ({DIST})", flush=True)
+    subprocess.run(["npm", "run", "build", *(["-w", "app/client"] if DEMO else [])], cwd=REPO, check=True, stdout=subprocess.DEVNULL)
 
 
 class Server:
