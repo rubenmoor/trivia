@@ -3879,7 +3879,7 @@ def cmd_batch(args):
     concept_dir = concepts.concepts_dir(args.bundle).relative_to(ROOT).as_posix()
     pool_file = layout.POOL_FILE(locale, "base").relative_to(ROOT).as_posix()
     print("Commit exactly this:\n"
-          f"  git add authoring/data/questions.json {pool_file} app/data/bundles/ {concept_dir}/ authoring/reports/{run}.md"
+          f"  git add authoring/data/questions.json {pool_file} app/data/bundles/ {concept_dir}/ authoring/reports/{run}.md authoring/reports/batches.md"
           + (" authoring/data/english-keys.json" if locale == "en" else "") + "\n"
           f"  git commit -m \"{run}: {len(qs)} {'' if args.bundle == 'base' else args.bundle + ' '}questions, "
           f"{n_ok} approved (qgen batch)\"")
