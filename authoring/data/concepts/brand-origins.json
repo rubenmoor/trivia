@@ -305,5 +305,32 @@
       "facet": "Marcas que se volvieron palabras",
       "known_at": 13
     }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-10-16",
+      "added": 0,
+      "unused": 28
+    },
+    {
+      "date": "2026-10-16",
+      "added": 0,
+      "unused": 28
+    },
+    {
+      "date": "2026-10-16",
+      "added": 0,
+      "unused": 28
+    },
+    {
+      "date": "2026-10-16",
+      "added": 0,
+      "unused": 28
+    },
+    {
+      "date": "2026-10-16",
+      "added": 0,
+      "unused": 28
+    }
   ]
 }
