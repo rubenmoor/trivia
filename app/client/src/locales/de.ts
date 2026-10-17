@@ -250,7 +250,7 @@ export const de = {
     noQuestions: "Keines der gewählten Pakete hat Fragen für dieses Spiel",
     titleOpen: "Welche Fragen spielt ",
     titleClose: "?",
-    titleMany: "Welche Fragen spielt ihr?",
+    titleMany: "Welche Fragen sollen es sein?",
     playerMade: "Von Spielern · {mod}",
   },
   choice: {
@@ -395,7 +395,7 @@ export const de = {
       keyTaken: "{key} gehört schon jemand anderem",
       keyReserved: "{key} ist im Spiel schon belegt",
       padRefused: "Keine Controller, solange mehrere an der Tastatur spielen",
-      tooFew: "Mindestens {min} Spieler nötig",
+      tooFew: "Mindestens {min} Personen nötig",
       unnamed: "Jede Person braucht einen Namen",
       keyless: "Jede Person braucht eine Taste",
     },
@@ -442,7 +442,7 @@ export const de = {
       /** rr-competitive: the winner. */
       winner: "{name} gewinnt!",
       /** rr-competitive: won because every other player is out. */
-      standing: "Als Letzter übrig",
+      standing: "Zuletzt übrig",
       top: "{name} ist auf dem Gipfel!",
       /** The team round-robin mode: every player, cut short after four. */
       team: "{names} sind auf dem Gipfel!",

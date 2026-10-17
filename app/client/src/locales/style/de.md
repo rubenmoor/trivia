@@ -48,6 +48,10 @@ Seen in review; guidance, not a lint. Wrong → right.
   - «ihr seid schon bei diesem Thema» → «schon bei diesem Thema»
   - «Zielt auf die falsche Antwort» → «Ziel: die falsche Antwort» (`joker.snipe.aim`)
   - «Trefft ihr die richtige, …» → «Ein Treffer auf die richtige: …» (`joker.snipe.rule`)
+- Multiplayer strings (task 1458): «ihr» and the gendered masculine slipped in
+  - «Welche Fragen spielt ihr?» → «Welche Fragen sollen es sein?» (`screen.bundles.titleMany`)
+  - «Mindestens {min} Spieler nötig» → «Mindestens {min} Personen nötig» (`screen.join.tooFew`); «Spieler» for a seat only where `es` has «jugador» and no inclusive form fits
+  - «Als Letzter übrig» → «Zuletzt übrig» (`screen.victory.standing`)
 - Singular «du» imperative where an infinitive works: «wähle ein Paket mit Fragen» → «ein Paket mit Fragen wählen» (`error.no_questions`)
 - Mode name as a phrase: «Mit Spielleitung» → «Spielleitermodus» (TV check)
 - Esc row that names the wrong target and clashes with quit: «Spiel beenden (neues einrichten)» → «Zurück zum Hauptmenü» (TV check)

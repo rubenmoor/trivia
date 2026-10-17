@@ -133,15 +133,16 @@ const CATALOGS = {
   en: (await import("../src/locales/en.ts")).en,
   de: (await import("../src/locales/de.ts")).de,
 };
-/** Shortcut keys live together; `flag.key` works on every screen. */
+/** Shortcut keys live together; `flag.key` works on every screen. `join` binds no catalog key. */
 const SCREENS = {
   question: ["joker.hint.key", "joker.skip.key", "joker.easier.key", "joker.category.key", "joker.snipe.key", "screen.question.replayKey", "screen.question.peekKey"],
   start: ["screen.start.newKey", "screen.start.languageKey"],
   choice: ["mode.gamemasterKey", "mode.soloKey", "mode.rrCoopKey", "mode.rrCompetitiveKey", "mode.timedKey", "customize.openKey"],
 };
 /** Screens that show answers `A`–`D`. */
-const ANSWERS = ["question"];
+const ANSWERS = ["question", "timed"];
 /** Leaves that may read as in `es`: names, shortcut keys, symbols. */
+SCREENS.timed = SCREENS.question; // Timed binds the Question screen's keys (decision 290)
 const SAME_OK = [/^app\.title$/, /^overlay\.mods$/, /^mods\.(open|title)$/, /^consent\.no$/, /^screen\.start\.(name|close)$/, /^credits\.(audio|video)$/, /\.key$/, /Key$/];
 
 const isLeaf = (v) => typeof v === "string" || Array.isArray(v) || "other" in v;
