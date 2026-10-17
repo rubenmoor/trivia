@@ -39892,6 +39892,40 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - `/gallery?set=task-1340` shows those 4 shots × 8 entries; a set made after a one-line CSS change shows the shots it touched under "also changed"; `/gallery` unchanged
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass', '2026-10-17T16:25:11Z', NULL, NULL, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1582, 165, 'investigate the failure of task 1581: Gallery review sets: /gallery?set=<name>, picked shots and also changed, linked from the review decision', 'investigate', 'open', 622, NULL, '`task 1581: Gallery review sets: /gallery?set=<name>, picked shots and also changed, linked from the review decision` failed in `pm run`; its summary is below. Find out why, don''t redo its work:
+* read its log, `pm show 1581`, and the stashes it left (`git stash show -p --include-untracked <sha>`); don''t apply or drop them, task 1581''s next run gets them
+* rerun the failing command or script to see the error yourself; find the cause in the code, not only the symptom
+Then, by what you find:
+* a bug in a script, test, tool or config of the project: add a task that fixes it, `pm task add 165 "<subject>" --priority 621`, with the cause, where it is and how to check the fix; it runs before task 1581 does again
+* task 1581 itself is wrong or out of date: change it (`pm task set 1581 --body …`) or drop it (`pm task drop 1581 "<reason>"`)
+* it needs the human: `pm decision add` with what you found and the options, then `pm task-pending-decision 1581 <decision>`
+* nothing to fix (a passing outage): say so; task 1581 runs again as it is
+If earlier investigations of this task are listed below, don''t repeat their fix: raise a decision instead.
+Your note on `pm task done`: the cause and what you queued.
+
+# The failure
+
+    killed by SIGTERM (exit 143), after 22m02s, no result
+    last tool call: Bash: which trivia-gallery; time trivia-gallery --set task-1340 --pick bundles,bundles-supply-report,choice-solo,choice-gamemaster --note "Decision 328: bundle tiles in the Choice look." --set task-1463 --pick mode-kind,mode-single,mode-multi,choice-solo,choice-gamemaster,choice-rr-competitive,join-5,join
+    likely cause: killed from outside (out of memory, Ctrl-C, another process)
+    left behind: 6 files, stashed as 1b32ad8b (pm: task 1581 run 1615 failed); get them back with `git stash apply 1b32ad8b`
+    log: /home/ruben/code/trivia/.git/pm-logs/task-1581-run-1615.log
+    last output:
+        → Bash: pm instructions | head -60; pm show 1581 | head -5; pm decision list --answered --grep gallery | head -40
+        → Bash: cd authoring; wc -l tools/gallery.py ui/src/gallery/Gallery.svelte; grep -n "gallery" server/main.py | head -30; ls ../work/gallery 2>/dev/null | head
+        → Bash: cd /home/ruben/code/trivia-worktrees/app/authoring; sed -n 1,140p tools/gallery.py; grep -n "def \|argparse\|add_argument" tools/gallery.py | sed -n 1
+        → Bash: cd /home/ruben/code/trivia-worktrees/app/authoring; grep -n "gallery\|ui_flags" server/ui_flags.py | head -40; sed -n 425,445p server/main.py; ls -la 
+        → Bash: cd /home/ruben/code/trivia-worktrees/app/authoring; cat server/ui_flags.py | sed -n 1,70p; sed -n 290,335p tools/gallery.py; sed -n 376,400p tools/gal
+        → Bash: cd /home/ruben/code/trivia-worktrees/app/authoring; sed -n 1,200p ui/src/gallery/Gallery.svelte; python3 -c "
+        → Bash: cd /home/ruben/code/trivia-worktrees/app/authoring; pm show d329 | head -40; sed -n 200,260p ui/src/gallery/Gallery.svelte; grep -n -i "gallery" ui/sr
+        → Bash: cd /home/ruben/code/trivia-worktrees/app; ls -la work state .env.local media 2>&1 | head -5; git status --short | head; (trivia-gallery --list 2>&1 ||
+      Reading is done. I''m now adding the set options to `gallery.py`.
+        → Bash: cd /home/ruben/code/trivia-worktrees/app/authoring && python3 - <<''EOF''
+        → Bash: python3 - <<''EOF''
+        → Bash: python3 - <<''EOF''
+        → Bash: python3 - <<''EOF''
+        → Bash: python3 - <<''EOF''
+        → Bash: which trivia-gallery; time trivia-gallery --set task-1340 --pick bundles,bundles-supply-report,choice-solo,choice-gamemaster --note "Decision 328: bun', '2026-10-17T16:47:14Z', NULL, NULL, 0, NULL, 'app');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -46450,6 +46484,11 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1612, 1577, '2026-10-17T15:53:08Z', '2026-10-17T16:06:31Z', 'done', NULL, 0, '9155e63f5a305a3a35fc4e2f22804559e93ff722', 'questions', 'claude-opus-5-5', 'ded815df-a898-460b-af55-b0310bee5755', 1611, 9, 18, 7619, 800828, 18035, 1.5126924000000004, 192091);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1613, 1578, '2026-10-17T16:06:31Z', '2026-10-17T16:07:44Z', 'done', NULL, 0, '71e179d256d391cdd950f4caa21059e0be99e100', 'questions', 'claude-sonnet-5-5', 'e81c37d2-2a61-408b-a3f5-583b5bcf8936', NULL, 17, 34, 5025, 672366, 37253, 0.3338032, 192091);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1614, 1579, '2026-10-17T16:07:45Z', NULL, 'running', NULL, NULL, 'c3ec87f9de45ba022051995befdf396e6625dc51', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 192091);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1615, 1581, '2026-10-17T16:25:12Z', '2026-10-17T16:47:14Z', 'failed', 'killed by SIGTERM (exit 143), after 22m02s, no result
+last tool call: Bash: which trivia-gallery; time trivia-gallery --set task-1340 --pick bundles,bundles-supply-report,choice-solo,choice-gamemaster --note "Decision 328: bundle tiles in the Choice look." --set task-1463 --pick mode-kind,mode-single,mode-multi,choice-solo,choice-gamemaster,choice-rr-competitive,join-5,join
+likely cause: killed from outside (out of memory, Ctrl-C, another process)
+left behind: 6 files, stashed as 1b32ad8b (pm: task 1581 run 1615 failed); get them back with `git stash apply 1b32ad8b`
+log: /home/ruben/code/trivia/.git/pm-logs/task-1581-run-1615.log', 143, 'd2be638c3cdd4a72f8d31158d7c9631ea95ccf49', 'app', 'claude-sonnet-5-5', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 192091);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
