@@ -39785,6 +39785,20 @@ Simulation: a concept-name probe finds the partner of 40 % / 37 % of pool-overla
 - Findings and numbers in the task note.
 - One `pm decision add` "Overlap rate in drafting: which changes?" (options, recommended first, each with expected overlap rate and $ effect).
 - No changes to prompts, `qgen.py`, pools or thresholds (D-36); no `qgen batch`.', '2026-10-17T14:19:40Z', '2026-10-17T14:27:14Z', NULL, 0, 'opus', NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1574, NULL, 'Investigate: fewer first-person ''What am I?'' riddle questions', 'exec', 'open', NULL, NULL, 'The developer sees many "What am I?" / "¿Qué soy?" questions that would work as well as a straight question ("What is …?"). Approved with a first-person riddle stem (rough regex count): batch-7 86/576, batch-8 194/978, batch-9 105/914, batch-10 97/866; ≈ 0–1 % before batch-6.
+
+Likely source: `authoring/data/question-axes.json`, axis `clue`, value `riddle` ("a riddle in the first person: «Tengo…, vivo en…, ¿qué soy?»"), default weight 1 of 5 drawable clue values → ≈ 20 % of slots. Also `top clue` fails batch health (52.8 % / 51.4 %, ≤ 50 %).
+
+## Investigate
+- How `clue: riddle` is drawn (weights, `rules`, interaction with `move`/`stimulus`), its share per batch, and how drafting, rating and review prompts (`authoring/tools/prompts/`, incl. `review.md`) treat it.
+- Sample riddle questions from batch-8..10: share where the riddle adds something (a playful guess, clues that build up) vs. a plain question in disguise; by subcategory, difficulty, age group, en vs es source.
+- Which clue value(s) would replace it, and the effect on `top clue`.
+- Options, e.g.: lower or zero `riddle`''s weight; restrict it by rule (e.g. kids'' difficulties, `move: identify` only, at most N per subcategory); tighter definition in the draft prompt ("only when the clues build up to the answer"); a review check that sends a riddle that reads as a plain question to needs_work or rewrites it; `qgen rework`/`tighten` for existing ones (only if the developer asks, AGENTS.md).
+
+## Output
+- Findings and numbers in the task note.
+- One `pm decision add` "First-person riddle questions: which changes?" (options, recommended first, each with the expected riddle share and `top clue` effect; existing approved riddles: keep or rework, as a separate option).
+- No changes to prompts, axes, `qgen.py` or pools (D-36); no `qgen batch`.', '2026-10-17T15:25:14Z', NULL, NULL, 0, 'opus', NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -46315,6 +46329,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1604, 1539, '2026-10-17T15:02:47Z', '2026-10-17T15:04:08Z', 'done', NULL, 0, '436998bc521f0c7b5cf463fb1151999942c737e0', 'app', 'claude-sonnet-5-5', '41df999f-982d-4a82-8fd2-2afc82d25921', 1603, 11, 22, 3287, 703244, 20301, 0.567795, 192091);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1605, 1540, '2026-10-17T15:04:08Z', '2026-10-17T15:05:06Z', 'done', NULL, 0, 'a176cfd487975d0835b7422774fcef05ee09b2be', 'app', 'claude-sonnet-5-5', 'ecd5844b-c590-415a-8b4c-1ab6645e4ab3', NULL, 9, 16, 1902, 270021, 30736, 0.19600019999999999, 192091);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1606, 1541, '2026-10-17T15:05:06Z', '2026-10-17T15:06:03Z', 'done', NULL, 0, '88684cfd20a57887a7c5b18d3269a981b4382623', 'app', 'claude-sonnet-5-5', 'ecd5844b-c590-415a-8b4c-1ab6645e4ab3', 1605, 6, 12, 3681, 357713, 32271, 0.43346080000000004, 192091);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1607, 1557, '2026-10-17T15:06:04Z', NULL, 'running', NULL, NULL, 'c1c2245aa6c12411828b73119c23651dcc1a32f1', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 192091);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
