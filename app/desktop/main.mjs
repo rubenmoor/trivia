@@ -217,6 +217,10 @@ if (args.error) {
       app.exit(2);
     });
   else app.exit(2);
+} else if ((args.checkMod || args.publish) && isDemo()) {
+  // Demo: no mods or Workshop (decision 337).
+  console.error(`trivia: ${args.checkMod ? "--check-mod" : "--publish-mod"} is not available in the demo`);
+  app.exit(2);
 } else if (args.checkMod) {
   headless("--check-mod", () => checkModCmd(args.checkMod));
 } else if (args.publish) {
@@ -839,6 +843,7 @@ async function relaunch() {
 
 /** Discovery, mods.json, load order → overlay layers, loaded mods' bundles and `/mods.js`, fixed for the run; none with --no-mods. */
 async function loadMods() {
+  if (isDemo()) return { layers: [], mods: [], modsJs: modsScript([]) }; // decision 337: no mods in the demo
   const file = modsSettingsFile();
   const arranged = await arrangeMods(true);
   if (arranged.changed)
@@ -919,6 +924,7 @@ function modEntry(mod) {
 }
 
 async function listMods() {
+  if (isDemo()) return { mods: [], notice: true, noMods: true, safeStart: null, validUser }; // decision 337
   const { list, settings } = await arrangeMods();
   return {
     mods: list.filter((e) => e.state !== "missing").map(modEntry),
@@ -931,6 +937,7 @@ async function listMods() {
 
 /** One-time notice accepted (plan 118): new mods come on from now; existing rows kept. */
 async function acceptNotice() {
+  if (isDemo()) return listMods(); // mods.json is the full game's (decision 336)
   const { settings } = await arrangeMods();
   await writeSettings(modsSettingsFile(), withNotice(settings));
   return listMods();
@@ -945,6 +952,7 @@ async function restart() {
 
 /** `[{ id, on }]` in load order; ids left out keep their order after them. Next run's overlay only. */
 async function setMods(order) {
+  if (isDemo()) return listMods();
   const ok =
     Array.isArray(order) &&
     order.length <= 500 &&
@@ -1164,7 +1172,7 @@ function bridge() {
   handle("steam:steam-id", () => steam?.getStatus().steamId ?? null);
   handle("steam:language", () => steam?.apps.getCurrentGameLanguage() ?? null);
   handle("steam:unlock", async (id) => {
-    if (!steam || typeof id !== "string") return false;
+    if (!steam || typeof id !== "string" || isDemo()) return false; // decision 346: no achievements in the demo
     const ok = await steam.achievements.unlockAchievement(id);
     if (!ok) console.error(`trivia: steam: unlock ${id} refused`);
     return ok;
