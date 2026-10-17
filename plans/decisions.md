@@ -1131,3 +1131,14 @@ Template:
   - Deterministic under the seed; `slots.json` keeps a resumed run's draw
 - Consequences: batch-9's and batch-10's subcategories on the pool of 2026-10-17: 119 / 100 tied pairs without redraws → 0 with, no slot lost; no measurable extra time
 - Supersedes / related: completes D-111; PE-10; pm decision 350; plan 180
+
+## D-113: Riddles only where the answer is the speaker; top clue bound 60 %
+- Date: 2026-10-17
+- Context: batch-10 (pm decision 351, findings in pm task 1574): first-person riddles were often plain questions in disguise, or named themselves; `direct` is ≈ 50 % by the axes rules alone, since media and number/time moves must be `direct`
+- Decision:
+  - **Rule:** `clue: riddle` allows only the moves `identify`, `who`, `name_concept` (`question-axes.json`); `three_facts` weight 1 → 2
+  - **Prompts:** `draft.md` defines the riddle (answer is the speaker, never named, vague to specific, only when guessing is the fun, else `direct`/`three_facts`); `review.md` reason 6: a riddle that names itself, asks another fact or reads as a plain question → `needs_work`, `fix` rewrites it as a direct question
+  - **Health:** `targets.json` `batch_health` 'top clue' max 50 % → 60 % (amends D-55's threshold number, pm decision 13)
+  - Approved riddles stay; no `qgen rework`
+- Consequences: expected riddle share ≈ 5 %, top clue ≈ 51–53 %
+- Supersedes / related: amends D-55, PE-7; pm decisions 13, 351; plan 180

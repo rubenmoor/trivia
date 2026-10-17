@@ -38,7 +38,7 @@
       "label": "how the clue is worded",
       "values": {
         "direct": "a plain, direct question",
-        "riddle": "a riddle in the first person: \"Tengo…, vivo en…, ¿qué soy?\"",
+        "riddle": "a riddle in the first person: the answer is the speaker, never named: \"Tengo…, vivo en…, ¿qué soy?\"; only where guessing is the fun",
         "scenario": "one short clause of everyday situation that is part of the clue: \"Estás en la cocina y…\"; no invented relatives, friends or backstory",
         "completion": "complete a saying, a famous line or a well-known phrase",
         "three_facts": "three short facts, in one sentence or two, that together point to exactly one answer; no label like \"Three clues:\""
@@ -76,10 +76,11 @@
   },
   "weights": {
     "move": {"connection": 0},
-    "clue": {"scenario": 0.4},
+    "clue": {"scenario": 0.4, "three_facts": 2},
     "stimulus": {"none": 5, "photo": 1.5, "detail": 0.8, "silhouette": 0.4, "map_outline": 0.4, "sound": 0.8, "video": 0.3}
   },
   "rules": [
+    {"if": {"clue": ["riddle"]}, "then": {"move": ["identify", "who", "name_concept"]}},
     {"if": {"stimulus": ["sound", "silhouette", "detail", "map_outline"]}, "then": {"move": ["identify"], "clue": ["direct"]}},
     {"if": {"stimulus": ["photo"]}, "then": {"move": ["identify", "origin", "made_of", "purpose", "who", "count"], "clue": ["direct"]}},
     {"if": {"stimulus": ["video"]}, "then": {"move": ["identify", "sequence", "cause_effect"], "clue": ["direct"]}},
