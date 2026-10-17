@@ -101,6 +101,7 @@ git -C ../trivia push
 ```
 
 - The env vars share the main checkout's media cache, game flags and media candidates
+- `../trivia/work` holds every run, pm workers' too: each pm work tree (`../trivia-worktrees/<name>`) has `work/` symlinked to it (AGENTS.md "Work trees"); a work tree with its own real `work/` hides its runs from the review tool (`/review?batch=…` shows 0 questions)
 - `--ff-only` fails if `main` moved since: `git rebase main` in the worktree, then merge again
 
 Also on the authoring server: stats at `/stats/categories`, `/stats/subcategories`, `/stats/difficulty` and `/stats/media`, and printable joker cards at `/comodines`.
