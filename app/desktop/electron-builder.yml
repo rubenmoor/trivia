@@ -29,9 +29,9 @@ asarUnpack:
 extraResources:
   - from: ../client/${env.TRIVIA_CLIENT_DIST}  # dist, or dist-demo (package.json scripts)
     to: client
-  - from: ../data
+  - from: ${env.TRIVIA_DATA_DIR}  # ../data, or build/data-demo (stage-media --demo)
     to: data
-  - from: build/media
+  - from: ${env.TRIVIA_MEDIA_DIR}  # build/media, or build/media-demo
     to: media
 extraFiles:
   - from: ../client/${env.TRIVIA_CLIENT_DIST}/CREDITS.md
