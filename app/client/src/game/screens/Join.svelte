@@ -2,11 +2,11 @@
   // The Join screen (plans/04-ui-tv-display.md, "Join"; plan 162, decision 292): who plays a local multiplayer
   // session, with which device. An unbound pad's A joins it, a bound pad's B leaves its seat, the keyboard joins by its
   // card; every device drives the rest. Keyboard-only `timed` seats pick their claim key (decision 290). Seats, names
-  // and groups are Game.svelte's draft; «Seguir» goes to the Bundles screen.
+  // and groups are Game.svelte's draft (rr-competitive's groups are set on the Choice screen, decision 314); «Seguir» goes to the Choice screen.
   import { onMount, tick, untrack } from "svelte";
   import { casefold } from "../../engine/pycompat.ts";
   import { MIN_SEATS } from "../../engine/game.ts";
-  import { DEFAULT_AGE_GROUP, fetchChoice, fetchChoiceOptions, fetchPlayers, type ChoiceOptions } from "../../lib/api.ts";
+  import { DEFAULT_AGE_GROUP, fetchChoice, fetchPlayers } from "../../lib/api.ts";
   import { errorText } from "../../lib/errors.ts";
   import { padStyle, padStyleOf } from "../../lib/gamepad.svelte.ts";
   import { t } from "../../lib/i18n.ts";
@@ -54,7 +54,6 @@
   let list = $state(fit(untrack(() => seats)));
   untrack(() => onseats($state.snapshot(list) as SeatDraft[]));
   let players = $state<Player[]>([]);
-  let options = $state<ChoiceOptions | null>(null);
   let error = $state<string | null>(null);
   /** Why a pad's A didn't join. */
   let notice = $state<string | null>(null);
@@ -71,7 +70,7 @@
   onMount(() => {
     void (async () => {
       try {
-        [players, options] = await Promise.all([fetchPlayers(), fetchChoiceOptions()]);
+        players = await fetchPlayers();
       } catch (e) {
         error = errorText(e);
       }
@@ -160,13 +159,6 @@
     nameRefusal = null;
   }
 
-  function stepGroup(i: number, by: number) {
-    if (busy || !options) return;
-    const ids = options.groups.map((g) => g.id);
-    const at = Math.max(0, ids.indexOf(list[i].group));
-    update(list.map((s, j) => (j === i ? { ...s, group: ids[(at + by + ids.length) % ids.length] } : s)));
-  }
-
   const keyText = (k: string) => (k === " " ? t("picker.space") : k.toUpperCase());
 
   /** A key typed into the capture field: the seat's claim key, or why not (decision 290). */
@@ -199,24 +191,22 @@
     onnext();
   }
 
-  // An unbound pad's A joins, a bound pad's B leaves; Backspace and an unbound pad's B go back; ←/→ on a seat's group.
+  // An unbound pad's A joins, a bound pad's B leaves; Backspace and an unbound pad's B go back.
   $effect(() =>
     pushScope({
       name: "join",
       root: () => section,
-      pressable: (el, a) => unboundPad(a.source, a, bindings) === null && !el.dataset.step,
+      pressable: (_, a) => unboundPad(a.source, a, bindings) === null,
       handle: (a) => {
         padTick++;
         const pad = unboundPad(a.source, a, bindings);
-        const stepping = document.activeElement instanceof HTMLElement ? document.activeElement.dataset.step : undefined;
         if (pad !== null) joinWithPad(pad);
         else if (a.type === "back") {
           const at = typeof a.source === "object" ? bindings.findIndex((b) => padOf(b) === (a.source as { pad: number }).pad) : -1;
           if (at >= 0) leave(at);
           else onback();
         }
-        else if (a.type === "navigate" && (a.dir === "left" || a.dir === "right") && stepping) stepGroup(Number(stepping), a.dir === "right" ? 1 : -1);
-        else if (a.type === "confirm" && !stepping) next();
+        else if (a.type === "confirm") next();
         else return false;
         return true;
       },
@@ -262,15 +252,6 @@
         <button class="name" class:empty={!s.name} onclick={() => (naming = i)} disabled={busy} data-focus-id="seat-name-{i}">
           <Icon name={s.name ? "person" : "pencil"} /> {s.name ?? t("screen.join.pickName")}
         </button>
-        {#if mode === "rr-competitive" && options}
-          {@const g = options.groups.find((x) => x.id === s.group)}
-          <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
-          <div class="group" data-step={i} data-focusable tabindex="0" role="group" aria-label={t("choice.groups")} data-focus-id="seat-group-{i}">
-            <button class="step" onclick={() => stepGroup(i, -1)} disabled={busy} tabindex="-1" aria-label={t("overlay.less")}>−</button>
-            <span>{g?.name ?? s.group}</span>
-            <button class="step" onclick={() => stepGroup(i, 1)} disabled={busy} tabindex="-1" aria-label={t("overlay.more")}>+</button>
-          </div>
-        {/if}
       </div>
     {/each}
 
@@ -446,34 +427,6 @@
   .name:focus-visible,
   .name:global([data-nav]) {
     border-color: var(--seat);
-  }
-  .group {
-    display: grid;
-    grid-template-columns: calc(2.2 * var(--u)) 1fr calc(2.2 * var(--u));
-    align-items: center;
-    gap: calc(0.5 * var(--u));
-    padding: calc(0.2 * var(--u));
-    border: 1px solid var(--slate-600);
-    border-radius: calc(0.8 * var(--u));
-    font-size: calc(1.2 * var(--u));
-    font-weight: 700;
-    text-align: center;
-    outline: none;
-  }
-  .group:focus,
-  .group:global([data-nav]),
-  .group:hover {
-    border-color: var(--amber);
-  }
-  .step {
-    display: grid;
-    place-items: center;
-    height: calc(2 * var(--u));
-    padding: 0;
-    border-radius: calc(0.6 * var(--u));
-    background: var(--slate-600);
-    font-size: calc(1.3 * var(--u));
-    font-weight: 700;
   }
   .notice {
     margin: 0;

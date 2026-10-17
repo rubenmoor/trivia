@@ -438,19 +438,34 @@ def player(r):
     r.shot("letter-picker")
 
 
+def seguir(r, ready):
+    """«Seguir» once the screen takes input, then `ready` (a selector of the next screen)."""
+    r.wait('[data-focus-id="next"]:enabled')  # force-click ignores disabled (busy)
+    r.click('[data-focus-id="next"]')
+    r.wait(ready)
+    r.settle(0.6)
+
+
 def choice(r):
     r.scene("base")
     r.click('[data-focus-id="main"]')
     r.wait(".name-button")
     r.settle(0.8)
     r.click(".name-button")
-    r.wait('[data-focus-id="mode-gamemaster"]:enabled')  # force-click ignores disabled (busy)
+    r.wait('[data-focus-id="kind-single"]:enabled')
+    r.settle(1.5)
+    r.shot("mode-kind")
+    seguir(r, '[data-focus-id="mode-gamemaster"]')
+    r.settle(1)
+    r.shot("mode-single")
     r.click('[data-focus-id="mode-gamemaster"]')
-    r.wait(".config")
+    seguir(r, ".config")
     r.settle(1.5)
     r.shot("choice-gamemaster")
+    r.click('[data-focus-id="back"]')
+    r.wait('[data-focus-id="mode-solo"]:enabled')
     r.click('[data-focus-id="mode-solo"]')
-    r.wait('[data-focus-id="customize"]')
+    seguir(r, '[data-focus-id="customize"]')
     r.settle(1.5)
     r.shot("choice-solo")
     r.click('[data-focus-id="customize"]')
@@ -469,14 +484,21 @@ def choice(r):
     r.shot("greeting")
 
 
+def to_bundles(r):
+    """The default pick all the way: Mode, Mode again, Choice, then Bundles."""
+    seguir(r, '[data-focus-id="mode-gamemaster"]')
+    r.click('[data-focus-id="mode-gamemaster"]')
+    seguir(r, ".config")
+    seguir(r, ".bundles-screen")
+
+
 def supply(r):
     r.scene("seen")
     r.click('[data-focus-id="main"]')
     r.wait(".name-button")
     r.settle(0.8)
     r.click(".name-button")
-    r.wait('[data-focus-id="next"]:enabled')
-    r.click('[data-focus-id="next"]')
+    to_bundles(r)
     r.wait('[data-focus-id="start"]:enabled')
     r.settle(1)
     r.click('[data-focus-id="start"]')
@@ -489,8 +511,7 @@ def supply(r):
         r.wait(".name-button")
         r.settle(0.8)
         r.click(".name-button")
-        r.wait('[data-focus-id="next"]:enabled')
-        r.click('[data-focus-id="next"]')
+        to_bundles(r)
         r.wait(f".bundles-screen {sel}")
         r.settle(1.2)
         r.shot(name)
@@ -643,17 +664,19 @@ def mods(r):
     r.shot("mods-empty")
 
 
-def to_choice(r, save="base", pads=0):
+def to_mode(r, save="base", pads=0):
     r.scene(save, pads=pads)
     r.click('[data-focus-id="main"]')
     r.wait(".name-button")
     r.settle(0.8)
     r.click(".name-button")
-    r.wait('[data-focus-id="mode-solo"]:enabled')
+    r.wait('[data-focus-id="kind-multi"]:enabled')
 
 
 def to_join(r, mode, save="base", pads=0):
-    to_choice(r, save, pads)
+    to_mode(r, save, pads)
+    r.click('[data-focus-id="kind-multi"]')
+    seguir(r, f'[data-focus-id="mode-{mode}"]')
     r.click(f'[data-focus-id="mode-{mode}"]')
     r.settle(1.2)
     r.click('[data-focus-id="next"]')
@@ -685,10 +708,12 @@ def type_key(r, key):
 
 def multiplayer(r):
     # Five seats: four pads (Xbox and PlayStation ids alternate) and keyboard and mouse.
-    to_choice(r, pads=4)
+    to_mode(r, pads=4)
+    r.click('[data-focus-id="kind-multi"]')
+    seguir(r, '[data-focus-id="mode-rr-coop"]')
     r.click('[data-focus-id="mode-rr-coop"]')
     r.settle(1.5)
-    r.shot("choice-multiplayer")
+    r.shot("mode-multi")
     r.click('[data-focus-id="next"]')
     r.wait(".join .seat.open")
     r.settle(0.8)
@@ -705,7 +730,8 @@ def multiplayer(r):
     r.click(".backdrop .name-button")
     r.settle(0.6)
     r.shot("join-5")
-    r.click('[data-focus-id="next"]')
+    seguir(r, '[data-focus-id^="group-"]')
+    seguir(r, ".bundles-screen")
     r.wait('[data-focus-id="start"]:enabled')
     r.settle(1)
     r.click('[data-focus-id="start"]')
@@ -733,10 +759,11 @@ def multiplayer(r):
     to_join(r, "rr-competitive", "short", pads=2)
     join_pads(r, 2)
     name_seat(r, 1)
-    r.click('[data-focus-id="seat-group-1"] .step:last-child')
-    r.click('[data-focus-id="seat-group-1"] .step:last-child')
+    seguir(r, '[data-focus-id="config-seat-group-1"]')
+    r.click('[data-focus-id="config-seat-group-1"] .step:last-child')
+    r.click('[data-focus-id="config-seat-group-1"] .step:last-child')
     r.settle(0.6)
-    r.shot("join-age-groups")
+    r.shot("choice-rr-competitive")
     r.click('[data-focus-id="next"]')
     r.wait(".bundles-screen")
     r.settle(1.5)
@@ -871,7 +898,7 @@ STEPS = [
     (["language", "consent"], first_start),
     (["start", "language-from-start", "start-resume", "start-save-notice"], start),
     (["player", "player-delete-confirm", "letter-picker"], player),
-    (["choice-gamemaster", "choice-solo", "customize", "bundles", "greeting"], choice),
+    (["mode-kind", "mode-single", "choice-gamemaster", "choice-solo", "customize", "bundles", "greeting"], choice),
     (["supply-notice", "bundles-supply-report", "bundles-no-questions"], supply),
     (["level", "select", "game-settings"], table),
     (["question", "question-locked", "joker-hint-armed", "joker-hint", "joker-skip", "joker-category", "joker-snipe",
@@ -880,8 +907,8 @@ STEPS = [
     (["menu-start", "menu-solo", "menu-gamemaster", "menu-confirm", "goto", "goto-letter-picker", "credits"], overlay),
     (["flag-dialog", "flag-list"], flags),
     (["mods", "mods-notice", "mods-crashed", "mods-empty"], mods),
-    (["choice-multiplayer", "join-empty", "join-name-picker", "join-5", "greeting-session", "join-8", "join-keyboard-timed",
-      "join-age-groups", "bundles-session"], multiplayer),
+    (["mode-multi", "join-empty", "join-name-picker", "join-5", "greeting-session", "join-8", "join-keyboard-timed",
+      "choice-rr-competitive", "bundles-session"], multiplayer),
     (["start-resume-session", "menu-session", "seat-lost"], in_session),
     (["level-rr-coop", "select-rr-coop", "correct-rr-coop", "wrong-rr-coop", "victory-rr-coop", "level-rr-competitive",
       "wrong-rr-competitive", "victory-rr-competitive", "victory-last-standing"], round_robin),

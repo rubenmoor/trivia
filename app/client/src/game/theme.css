@@ -223,6 +223,56 @@
   transform: translateY(calc(-0.2 * var(--u)));
 }
 
+/* Pick tiles (Mode and Choice screens): the selected look is outline + tint (decision 314). */
+.game .pick-heading {
+  margin: calc(0.6 * var(--u)) 0 0;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  animation: arrive 0.5s 0.15s var(--spring) backwards;
+}
+.game .pick-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: calc(1.2 * var(--u));
+  max-width: calc(110 * var(--u));
+}
+.game .pick-tile {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: calc(1 * var(--u));
+  align-items: center;
+  min-width: calc(20 * var(--u));
+  padding: calc(1 * var(--u)) calc(1.6 * var(--u));
+  border-color: var(--slate-600);
+  text-align: left;
+  transition:
+    transform 0.2s var(--spring),
+    border-color 0.2s,
+    opacity 0.2s;
+  animation: arrive 0.5s calc(0.15s + var(--i) * 0.05s) var(--spring) backwards;
+}
+.game .pick-tile > kbd {
+  grid-row: span 3;
+}
+.game .pick-tile > :not(kbd) {
+  grid-column: 2;
+}
+.game .pick-tile:hover:not(:disabled) {
+  transform: translateY(calc(-0.3 * var(--u)));
+}
+.game .pick-tile.on {
+  border-color: var(--sky);
+  background: rgba(76, 201, 240, 0.16);
+  transform: translateY(calc(-0.3 * var(--u)));
+}
+.game .pick-name {
+  font-family: var(--font-display);
+  font-size: calc(2 * var(--u));
+  font-weight: 800;
+  line-height: 1.1;
+}
+
 /* Entrances shared by screens and dialogs; components keep their own variants. */
 @keyframes arrive {
   from {

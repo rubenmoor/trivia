@@ -284,15 +284,13 @@ const es = {
     /** A mod's bundle (decision 128); `mod`: the mod's name. */
     playerMade: "Hecho por jugadores · {mod}",
   },
-  /** The Choice screen (plan 29): mode, age group and the like before a game. */
+  /** The Choice screen (plan 29): the age group and the like before a game. */
   choice: {
     /** «¿Cómo juega <name>?» with the name highlighted. */
     titleOpen: "¿Cómo juega ",
     titleClose: "?",
     /** Title in the multiplayer modes: no single name. */
     titleMany: "¿Cómo juegan?",
-    /** rr-competitive: no group line here, each seat picks its own on the Join screen. */
-    groupsEach: "Cada jugador elige su edad en la siguiente pantalla",
     groups: "Edad",
     ages: "{lo}–{hi} años",
     agesFrom: "{lo}+ años",
@@ -305,9 +303,17 @@ const es = {
     /** A custom difficulty in place of the group (D-88). */
     difficulty: "Dificultad {start}–{end}",
   },
-  /** The mode row on the Choice screen (MD-7); names English first in code, Spanish per 15a. */
+  /** The Mode screens (MD-7, task 1463): «Solo o en grupo» or «Multijugador», then the mode; names English first in code, Spanish per 15a. */
   mode: {
-    heading: "Modo",
+    kindTitle: "¿Cómo se juega?",
+    title: "Modo de juego",
+    soloKind: "Un equipo, o un anfitrión que lo maneja todo",
+    multi: "Multijugador",
+    multiAbout: "Cada jugador con su mando o su teclado",
+    multiKey: "J",
+    standard: "Estándar",
+    collab: "En colaboración",
+    versus: "En competencia",
     gamemaster: "Modo anfitrión",
     gamemasterAbout: "El anfitrión lo maneja todo",
     gamemasterKey: "A",
