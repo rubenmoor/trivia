@@ -39802,8 +39802,8 @@ Likely source: `authoring/data/question-axes.json`, axis `clue`, value `riddle` 
 - Findings and numbers in the task note.
 - One `pm decision add` "First-person riddle questions: which changes?" (options, recommended first, each with the expected riddle share and `top clue` effect; existing approved riddles: keep or rework, as a separate option).
 - No changes to prompts, axes, `qgen.py` or pools (D-36); no `qgen batch`.', '2026-10-17T15:25:14Z', '2026-10-17T15:30:08Z', NULL, 0, 'opus', NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1575, 180, 'create tasks for plan 180: Drafting fixes after batch-10: overlap and riddles', 'split', 'open', 1000, NULL, 'Split plan 180 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-17T15:42:07Z', NULL, NULL, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1575, 180, 'create tasks for plan 180: Drafting fixes after batch-10: overlap and riddles', 'split', 'done', 1000, '2026-10-17, tasks.sql: plan 180 already split into tasks 1576, 1577, 1578; checked against decisions 350 (answer 1 a–c) and 351 (answer 1 + option 7), no changes or new decisions needed', 'Split plan 180 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-17T15:42:07Z', '2026-10-17T15:42:22Z', NULL, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1576, 180, 'Overlap: recalibrated threshold and cross-subcategory already_asked (decision 350 a, b)', 'work', 'open', NULL, NULL, 'Implements `decision 350: Overlap rate in drafting: which changes?` (answer 1), parts (a) and (b). Findings: `task 1573` note.
 
 ## Changes
@@ -39829,6 +39829,21 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Check
 - Throw-away: on batch-9''s and batch-10''s slot draws, the number of tied concept pairs before/after.
 - `qgen validate`, `npm run check`, `npm test`.', '2026-10-17T15:42:08Z', NULL, NULL, 0, 'opus', 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1578, 180, 'Riddle clue only where the answer is the speaker; top clue bound 60 % (decision 351)', 'work', 'open', NULL, NULL, 'Implements `decision 351: First-person riddle questions: which changes?` (answer 1, plus option 7 added by the developer on 2026-10-17). Findings: `task 1574` note. Existing approved riddles stay as they are (options 5/6 not chosen; no `qgen rework`).
+
+## Changes
+- `authoring/data/question-axes.json`: rule `clue: riddle` → `move` only `identify`, `who`, `name_concept`; `clue` weight `three_facts` 1 → 2.
+- `authoring/tools/prompts/draft.md`: define riddle — the answer is the speaker and is never named; clues build from vague to specific; only when the guess is the fun, else `direct` or `three_facts`.
+- `authoring/tools/prompts/review.md` reason 6: a riddle that names itself, asks another fact than its own identity, or reads as a plain question in disguise → `needs_work`, `fix` rewrites it as a direct question.
+- `audit.md` / `rate.md`: only if their riddle lines contradict the new definition.
+- Option 7: `authoring/data/targets.json` `batch_health` ''top clue'' max 50 % → 60 % (direct is ≈ 50 % by the axes rules alone: media and number/time moves must be direct).
+
+## Docs
+- `plans/20-pipeline-efficiency.md` (PE-7 axes) and the house style where riddles are described; batch-health threshold rows (decision 13 / D-55 owners); a D-row for decision 351 in `plans/decisions.md`; `rg` "riddle" / "¿qué soy?" and the 50 % bound over `.md` files (decision 200).
+
+## Check
+- Throw-away: the draw on batch-10''s subcategories with today''s pool: riddle share (expected ≈ 5 %), `top clue` (≈ 51–53 %, under the new 60 %).
+- `qgen validate`, `npm run check`, `npm test`.', '2026-10-17T15:42:08Z', NULL, NULL, 0, NULL, 'questions');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -46382,6 +46397,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1607, 1557, '2026-10-17T15:06:04Z', NULL, 'running', NULL, NULL, 'c1c2245aa6c12411828b73119c23651dcc1a32f1', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 192091);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1608, 1574, '2026-10-17T15:25:16Z', '2026-10-17T15:30:22Z', 'done', NULL, 0, '995fe28fd9c8ce9f4a59b0df1051ee2bed6e0d74', NULL, 'claude-opus-5-5', '00c035ee-4067-4a08-b24d-a0551d14d01f', NULL, 33, 66, 20464, 1765425, 70758, 1.3286930000000004, 192091);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1609, 1521, '2026-10-17T15:31:52Z', NULL, 'running', NULL, NULL, '4144691ee6928b91a712c48d09d3ac910a014a1f', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 192091);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1610, 1575, '2026-10-17T15:42:08Z', '2026-10-17T15:42:27Z', 'done', NULL, 0, 'e9f680c7b304bad8277291ed2163774dcfdca17d', NULL, 'claude-opus-5-5', '8ddc0a9d-8362-47f9-81a1-2832f6102c3d', NULL, 5, 10, 1316, 154172, 29169, 0.2905464, 192091);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
