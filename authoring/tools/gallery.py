@@ -7,8 +7,11 @@ nixpkgs Playwright (1920×1080, `--size WxH`) with the desktop bridge stubbed (v
 Output: <locale>/<shot>.png and manifest.json in work/gallery/ ($TRIVIA_WORK/gallery/ if set; merged on --locale/--only runs);
 with `TRIVIA_DEMO=1` the demo client (dist-demo) is shot into work/gallery-demo/;
 another size writes <locale>@<W>x<H>/ and a manifest entry of that name.
+Review set (task 1581): `--set task-<id> --only …` shoots into sets/<name>/<entry>/ and sets/<name>.json (the manifest's
+shape plus name, note, shots; overwritten), for /gallery?set=<name>; the full gallery stays untouched.
 
-Usage: trivia-gallery [--locale en,es,es-ES,de] [--only <shot>[,<shot>…]] [--size WxH] [--list] [--visible]
+Usage: trivia-gallery [--locale en,es,es-ES,de] [--only <shot>[,<shot>…]] [--size WxH[,WxH…]] [--list] [--visible]
+       trivia-gallery --set task-<id> --only <shot>[,<shot>…] [--note <text>] [--locale …] [--size …]
 """
 import argparse
 import datetime
@@ -291,14 +294,15 @@ class Server:
 class Run:
     """One UI language: scenes (a save, a stub config, a fresh page) and shots."""
 
-    def __init__(self, browser, server, ui, size, demo, data, only, manifest):
+    def __init__(self, browser, server, ui, size, demo, data, only, manifest, dest):
         self.browser, self.server, self.save, self.ui = browser, server, server.save_dir / "game.json", ui
         self.size = size
         self.name = ui if size == DEFAULT_SIZE else f"{ui}@{size[0]}x{size[1]}"  # directory and manifest key
         self.saves, self.meta, self.data, self.only = demo["saves"], demo["meta"], data, only
         self.shots = manifest.setdefault("locales", {}).setdefault(self.name, {})
         self.context = self.page = None
-        (OUT / self.name).mkdir(parents=True, exist_ok=True)
+        self.dir = dest / self.name
+        self.dir.mkdir(parents=True, exist_ok=True)
 
     def scene(self, save="base", *, raw=None, consent=False, mods="held", ready="main .start", pads=None, bound=False,
               at=None):
@@ -380,7 +384,7 @@ class Run:
         if self.only and name not in self.only:
             return
         self.settle(0.4)
-        path = OUT / self.name / f"{name}.png"
+        path = self.dir / f"{name}.png"
         self.page.screenshot(path=str(path))
         found = self.page.evaluate(TEXTS)
         items = match(found["items"], found["keys"], self.data)
@@ -496,18 +500,19 @@ def to_bundles(r):
 
 
 def supply(r):
-    r.scene("seen")
-    r.click('[data-focus-id="main"]')
-    r.wait(".name-button")
-    r.settle(0.8)
-    r.click(".name-button")
-    to_bundles(r)
-    r.wait('[data-focus-id="start"]:enabled')
-    r.settle(1)
-    r.click('[data-focus-id="start"]')
-    r.wait('[data-focus-id="notice-play"]')
-    r.settle(0.8)
-    r.shot("supply-notice")
+    if not r.only or "supply-notice" in r.only:
+        r.scene("seen")
+        r.click('[data-focus-id="main"]')
+        r.wait(".name-button")
+        r.settle(0.8)
+        r.click(".name-button")
+        to_bundles(r)
+        r.wait('[data-focus-id="start"]:enabled')
+        r.settle(1)
+        r.click('[data-focus-id="start"]')
+        r.wait('[data-focus-id="notice-play"]')
+        r.settle(0.8)
+        r.shot("supply-notice")
     for save, sel, name in (("short", ".supply", "bundles-supply-report"), ("blocked", ".error", "bundles-no-questions")):
         r.scene(save)
         r.click('[data-focus-id="main"]')
@@ -924,17 +929,23 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("--locale", help="comma-separated UI languages (default: all)")
     ap.add_argument("--only", help="comma-separated shot names")
-    ap.add_argument("--size", default="1920x1080", help="viewport WxH (default 1920x1080)")
+    ap.add_argument("--size", default="1920x1080", help="comma-separated viewports WxH (default 1920x1080)")
     ap.add_argument("--list", action="store_true", help="list the shot names")
+    ap.add_argument("--set", help="review set task-<id>: only --only's shots, into sets/<name>/")
+    ap.add_argument("--note", default="", help="the review set's note")
     ap.add_argument("--visible", action="store_true", help="a visible browser window")
     a = ap.parse_args()
     names = [n for shots, _ in STEPS for n in shots]
     if a.list:
         print("\n".join(names))
         return
-    if not (m := re.fullmatch(r"(\d{3,4})x(\d{3,4})", a.size)):
-        sys.exit(f"gallery: --size {a.size}: want WxH, e.g. 1280x800")
-    size = (int(m[1]), int(m[2]))
+    sizes = []
+    for x in a.size.split(","):
+        if not (m := re.fullmatch(r"(\d{3,4})x(\d{3,4})", x)):
+            sys.exit(f"gallery: --size {x}: want WxH, e.g. 1280x800")
+        sizes.append((int(m[1]), int(m[2])))
+    if a.set and not (re.fullmatch(r"task-\d+", a.set) and a.only):
+        sys.exit("gallery: --set task-<id> needs --only <shot>,…")
     locales = a.locale.split(",") if a.locale else LOCALES
     only = set(a.only.split(",")) if a.only else None
     if bad := [x for x in locales if x not in LOCALES] + sorted((only or set()) - set(names)):
@@ -942,24 +953,29 @@ def main():
     from playwright.sync_api import sync_playwright  # nixpkgs Playwright from the flake wrapper
 
     build_if_stale()
-    OUT.mkdir(parents=True, exist_ok=True)
-    manifest_file = OUT / "manifest.json"
-    manifest = json.loads(manifest_file.read_text(encoding="utf-8")) if manifest_file.exists() else {}
+    dest = OUT / "sets" / a.set if a.set else OUT
+    if a.set:
+        shutil.rmtree(dest, ignore_errors=True)
+    dest.mkdir(parents=True, exist_ok=True)
+    manifest_file = dest.with_suffix(".json") if a.set else OUT / "manifest.json"
+    manifest = json.loads(manifest_file.read_text(encoding="utf-8")) if manifest_file.exists() and not a.set else {}
+    if a.set:
+        manifest.update(name=a.set, note=a.note, shots=[n for n in names if n in only])
     commit = subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=REPO, capture_output=True, text=True).stdout.strip()
     dirty = subprocess.run(["git", "status", "--porcelain"], cwd=REPO, capture_output=True, text=True).stdout.strip()
     manifest.update(run=datetime.datetime.now().isoformat(timespec="seconds"), commit=commit + ("-dirty" if dirty else ""))
-    shutil.rmtree(OUT / "failed", ignore_errors=True)
+    shutil.rmtree(dest / "failed", ignore_errors=True)
     server = Server()
     failed = []
     try:
         with sync_playwright() as p:
             env = {k: v for k, v in os.environ.items() if k != "LD_LIBRARY_PATH"}
             browser = p.chromium.launch(headless=not a.visible, env=env)
-            for ui in locales:
+            for size, ui in [(z, u) for z in sizes for u in locales]:
                 print(ui, flush=True)
                 demo = json.loads(subprocess.run(["node", str(REPO / "authoring/tools/gallery_saves.mjs"), ui],
                                                  cwd=REPO, check=True, capture_output=True, text=True).stdout)
-                r = Run(browser, server, ui, size, demo, data_strings(demo["players"]), only, manifest)
+                r = Run(browser, server, ui, size, demo, data_strings(demo["players"]), only, manifest, dest)
                 for shots, step in STEPS:
                     if only and not only.intersection(shots):
                         continue
@@ -967,9 +983,9 @@ def main():
                         step(r)
                     except Exception as e:  # one broken step doesn't stop the gallery
                         failed.append(f"{r.name}/{step.__name__}: {str(e).splitlines()[0]}")
-                        (OUT / "failed").mkdir(exist_ok=True)
+                        (dest / "failed").mkdir(exist_ok=True)
                         if r.page:
-                            r.page.screenshot(path=str(OUT / "failed" / f"{r.name}-{step.__name__}.png"))
+                            r.page.screenshot(path=str(dest / "failed" / f"{r.name}-{step.__name__}.png"))
                         print(f"  FAILED {failed[-1]}", flush=True)
                 r.close()
                 manifest["locales"][r.name] = dict(sorted(manifest["locales"][r.name].items(), key=lambda kv: names.index(kv[0])
@@ -978,7 +994,7 @@ def main():
     finally:
         server.stop()
         manifest_file.write_text(json.dumps(manifest, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    print(f"gallery: {OUT.relative_to(REPO)}/ ({', '.join(locales)})")
+    print(f"gallery: {dest}/ ({', '.join(locales)})" + (f"; /gallery?set={a.set}" if a.set else ""))
     if failed:
         sys.exit("gallery: failed steps:\n  " + "\n  ".join(failed))
 

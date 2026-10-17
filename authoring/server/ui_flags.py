@@ -15,17 +15,23 @@ def load_flags():
     return json.loads(FILE.read_text(encoding="utf-8")) if FILE.exists() else []
 
 
-def build():
-    """GET /api/gallery: {"manifest": … or null before the first trivia-gallery run, "flags": [...]}."""
-    manifest = json.loads(MANIFEST.read_text(encoding="utf-8")) if MANIFEST.exists() else None
+def build(query):
+    """GET /api/gallery[?set=<name>]: {"manifest": … or null before the first trivia-gallery run, "flags": [...]};
+    with set, the manifest is the review set work/gallery/sets/<name>.json (task 1581), an unknown set an error."""
+    path, name = MANIFEST, query.get("set")
+    if name is not None:
+        path = layout.GALLERY / "sets" / f"{name}.json"
+        if not re.fullmatch(r"[\w-]+", name) or not path.is_file():
+            raise ValueError(f"no review set {name!r}: trivia-gallery --set {name} --only <shot>,… makes it")
+    manifest = json.loads(path.read_text(encoding="utf-8")) if path.exists() else None
     return {"manifest": manifest, "flags": load_flags()}
 
 
-def shot_path(locale, shot):
-    """work/gallery/<locale>[@<W>x<H>]/<shot>.png, or None for a bad name or a missing file."""
-    if not re.fullmatch(r"[\w-]+(@\d+x\d+)?", locale) or not re.fullmatch(r"[\w-]+\.png", shot):
+def shot_path(file):
+    """work/gallery/[sets/<name>/]<locale>[@<W>x<H>]/<shot>.png, or None for a bad name or a missing file."""
+    if not re.fullmatch(r"(sets/[\w-]+/)?[\w-]+(@\d+x\d+)?/[\w-]+\.png", file):
         return None
-    path = layout.GALLERY / locale / shot
+    path = layout.GALLERY / file
     return path if path.is_file() else None
 
 

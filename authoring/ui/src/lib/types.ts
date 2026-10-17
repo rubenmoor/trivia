@@ -308,7 +308,7 @@ export interface GalleryItem {
 }
 
 export interface GalleryShot {
-  /** <locale>/<shot>.png under work/gallery/. */
+  /** [sets/<name>/]<locale>/<shot>.png under work/gallery/. */
   file: string;
   items: GalleryItem[];
   /** Visible text without a catalog key (a literal). */
@@ -321,6 +321,10 @@ export interface GalleryManifest {
   commit: string;
   /** Shots per UI locale, in step order. */
   locales: Record<string, Record<string, GalleryShot>>;
+  /** A review set, work/gallery/sets/<name>.json (task 1581). */
+  name?: string;
+  note?: string;
+  shots?: string[];
 }
 
 /** A flag on a UI string (authoring/data/ui-flags.json, plan 100); key null: text without a catalog key. */

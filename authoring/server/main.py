@@ -64,11 +64,12 @@ API:
     GET  /api/stats/media?bundle=colombia          approved questions per media role and image resolution
          &locale=en                                (RV-23, authoring/server/media_stats.py); locale: its pool's
                                                    sources (written in it or with a playing translation, plan 67)
-    GET  /api/gallery                              trivia-gallery's work/gallery/manifest.json (null before its first
-                                                   run) and the UI string flags, authoring/data/ui-flags.json (plan 100)
+    GET  /api/gallery[?set=<name>]                 trivia-gallery's work/gallery/manifest.json (null before its first
+                                                   run) and the UI string flags, authoring/data/ui-flags.json (plan 100);
+                                                   set: the review set's work/gallery/sets/<name>.json instead (unknown: 400)
     POST /api/gallery/flags                        body {"flag": {locale, key, text, shot, note}} adds,
                                                    {"id", "note"} edits, {"id", "remove": true} removes; returns all flags
-    GET  /gallery/<locale>/<shot>.png              a shot from work/gallery/
+    GET  /gallery/[sets/<name>/]<locale>/<shot>.png  a shot from work/gallery/
     GET  /reports/<batch>.md                       a batch report (authoring/reports/), as plain text
     GET  /media?url=<file_url>                     a picked media file from the cache (any question in the
                                                    source pool, approved or not); downloaded first on a miss
@@ -400,7 +401,7 @@ GET_API = {
     "/api/bundles": lambda query: load_bundles(),
     "/api/names": names_of,
     "/api/targets": lambda query: targets.load_all(),
-    "/api/gallery": lambda query: ui_flags.build(),
+    "/api/gallery": ui_flags.build,
 }
 
 
@@ -433,8 +434,8 @@ class Handler(BaseHandler):
             return self.send_json(404, {"error": "not found"})
         if url.path.startswith("/reports/"):
             return self.send_report(url.path.removeprefix("/reports/"))
-        if (m := re.fullmatch(r"/gallery/([^/]+)/([^/]+)", url.path)) and m[2].endswith(".png"):
-            path = ui_flags.shot_path(m[1], m[2])
+        if url.path.startswith("/gallery/") and url.path.endswith(".png"):
+            path = ui_flags.shot_path(url.path.removeprefix("/gallery/"))
             return self.send_file(path) if path else self.send_json(404, {"error": "no such shot: run trivia-gallery"})
         if url.path == "/media":
             return self.send_media(parse_qs(url.query).get("url", [""])[0])

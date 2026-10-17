@@ -196,11 +196,14 @@ The demo is the same code built with `TRIVIA_DEMO=1` (decisions 335, 338): build
 trivia-gallery                                  # every screen and dialog in en, es, es-ES, de (~15 min)
 trivia-gallery --locale de --only menu-gamemaster,victory   # some shots again; --list names them
 trivia-gallery --locale es --only start --size 1280x800   # another window size
+trivia-gallery --set task-1463 --only join-5,join-8 --size 1920x1080,1280x800 --note "…"   # review set
 ```
 
 Shots go to `work/gallery/<locale>/<shot>.png` (another `--size`: `<locale>@<W>x<H>/`, its own entry in `/gallery`); `work/gallery/manifest.json` has each visible text with its catalog key, and text without one (a literal) as unmatched. The game runs from demo saves in a temp folder, never your save. `TRIVIA_DEMO=1 trivia-gallery` shoots the demo client (`dist-demo/`, built if stale) into `work/gallery-demo/`.
 
 Review them in `trivia-authoring` → `/gallery`: per language every shot; click a text for its catalog key, flag it with a note. Flags go to `authoring/data/ui-flags.json` for the next fix pass.
+
+A review set holds only the shots a change touched, for quick feedback: `--set task-<id>` (the task asking for review) shoots just `--only`'s shots, all four languages at 1920×1080 unless `--locale`/`--size` say otherwise, into `work/gallery/sets/<name>/` and `sets/<name>.json` (same name again overwrites; the full gallery stays as it is). Review it at `/gallery?set=<name>`: only its shots, arrows step through them, flags as usual. A review decision links its set, never a full run (decision 352).
 
 ### Store trailer
 
