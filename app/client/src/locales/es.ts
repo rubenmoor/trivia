@@ -371,6 +371,12 @@ const es = {
     lostTitle: "Mando de {name} desconectado",
     lostBody: "Reconéctenlo o usen otro mando libre.",
     take: "Tomar su lugar",
+    /** The Level screen's turn line (decision 279), above the turn player's name tag. */
+    turn: "Turno de",
+    /** Over the shared jokers in the team round-robin mode. */
+    team: "Del equipo",
+    /** The end of a list of names cut short («Ana, Luis y 2 más»). */
+    more: { one: "1 más", other: "{n} más" },
   },
   picker: {
     /** The keys, in order; `marks`: extra keys for a note. */
@@ -393,6 +399,8 @@ const es = {
       subtitle: { one: "1 pregunta para llegar a la cima", other: "{n} preguntas seguidas para llegar a la cima" },
       resume: "Continuar, nivel {level}",
       resumePlayer: "Continuar: {name}, nivel {level}",
+      /** A multiplayer session: {names} cut short after two; the mode's name below. */
+      resumeSession: "Continuar: {names}, nivel {level}",
       new: "Nueva partida",
       /** Shortcut for `new` (case-insensitive). */
       newKey: "N",
@@ -467,6 +475,8 @@ const es = {
     victory: {
       title: "¡Ganaron!",
       top: "¡{name} llegó a la cima!",
+      /** The team round-robin mode: every player, cut short after four. */
+      team: "¡{names} llegaron a la cima!",
     },
     question: {
       topic: "Tema: {name}",

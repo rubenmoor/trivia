@@ -1,11 +1,18 @@
 <script lang="ts">
   // The HUD (plans/10-visual-design.md, "Layout"): the level with a mini tower of one tick per level, and the
   // player's name (D-28). Shown on Select and Question, so the family always sees what's at stake;
-  // on Level the player's name only (`level` null), the level is the screen itself.
+  // on Level the player's name only (`level` null), the level is the screen itself. In a session the turn seat's tag.
   import { t } from "../lib/i18n.ts";
+  import type { SessionView } from "../lib/seats.ts";
   import { DEFAULT_LEVELS } from "./levels.ts";
+  import SeatTag from "./SeatTag.svelte";
 
-  let { level, levels = DEFAULT_LEVELS, player }: { level: number | null; levels?: number; player: string | null } = $props();
+  let {
+    level,
+    levels = DEFAULT_LEVELS,
+    player,
+    session = null,
+  }: { level: number | null; levels?: number; player: string | null; session?: SessionView | null } = $props();
 </script>
 
 <div class="hud">
@@ -19,7 +26,8 @@
       </span>
     </div>
   {/if}
-  {#if player}<div class="chip glass player">{player}</div>{/if}
+  {#if session}<SeatTag {session} seat={session.turn} small />
+  {:else if player}<div class="chip glass player">{player}</div>{/if}
 </div>
 
 <style>

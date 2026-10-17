@@ -322,6 +322,12 @@ export const de = {
     lostTitle: "Controller von {name} getrennt",
     lostBody: "Controller wieder verbinden oder einen freien nutzen.",
     take: "Übernehmen",
+    /** The Level screen's turn line (decision 279), above the turn player's name tag. */
+    turn: "Am Zug",
+    /** Over the shared jokers in the team round-robin mode. */
+    team: "Team",
+    /** The end of a list of names cut short («Ana, Luis y 2 más»). */
+    more: { one: "1 weitere", other: "{n} weitere" },
   },
   picker: {
     letters: "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜß-",
@@ -342,6 +348,8 @@ export const de = {
       subtitle: { one: "1 Frage bis zum Gipfel", other: "{n} Fragen bis zum Gipfel" },
       resume: "Weiterspielen, Stufe {level}",
       resumePlayer: "Weiterspielen: {name}, Stufe {level}",
+      /** A multiplayer session: {names} cut short after two; the mode's name below. */
+      resumeSession: "Weiterspielen: {names}, Stufe {level}",
       new: "Neues Spiel",
       newKey: "N",
       language: "Sprache: {name}",
@@ -409,6 +417,8 @@ export const de = {
     victory: {
       title: "Gewonnen!",
       top: "{name} ist auf dem Gipfel!",
+      /** The team round-robin mode: every player, cut short after four. */
+      team: "{names} sind auf dem Gipfel!",
     },
     question: {
       topic: "Thema: {name}",

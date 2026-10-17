@@ -1,10 +1,12 @@
 <script lang="ts">
-  // «¡Oh no!»: the tower crumbles, the right answer, a consolation line; back to Start.
+  // «¡Oh no!»: the tower crumbles, the right answer, a consolation line; back to Start. In a session the
+  // answerer's tag; with `onnext` (rr-competitive, one seat out, decision 279) «Seguir» instead of Start.
   import { t } from "../../lib/i18n.ts";
   import type { Game } from "../../lib/types.ts";
   import AnswerPanel from "../AnswerPanel.svelte";
   import { consolation } from "../copy.ts";
   import Prompt from "../Prompt.svelte";
+  import SeatTag from "../SeatTag.svelte";
   import Tower from "../Tower.svelte";
 
   let {
@@ -14,7 +16,16 @@
     blocks,
     busy,
     onhome,
-  }: { game: Game; last: NonNullable<Game["last"]>; levels: number; blocks: number; busy: boolean; onhome: () => void } = $props();
+    onnext,
+  }: {
+    game: Game;
+    last: NonNullable<Game["last"]>;
+    levels: number;
+    blocks: number;
+    busy: boolean;
+    onhome: () => void;
+    onnext?: () => void;
+  } = $props();
 </script>
 
 <section class="screen result wrong">
@@ -22,11 +33,16 @@
     <Tower filled={blocks} {levels} small crumble />
     <div class="stack">
       <h1 class="title bad">{t("screen.result.wrong")}</h1>
+      {#if game.session && last.seat !== undefined}<SeatTag session={game.session} seat={last.seat} />{/if}
       <AnswerPanel {last} label={t("screen.result.answerWas")} />
       <p class="consolation">{consolation(game.level, levels, game.id)}</p>
     </div>
   </div>
-  <button class="candy" onclick={onhome} disabled={busy} data-focus-default>{t("action.home")} <Prompt action="confirm" /></button>
+  {#if onnext}
+    <button class="candy" onclick={onnext} disabled={busy} data-focus-default>{t("action.next")} <Prompt action="confirm" /></button>
+  {:else}
+    <button class="candy" onclick={onhome} disabled={busy} data-focus-default>{t("action.home")} <Prompt action="confirm" /></button>
+  {/if}
 </section>
 
 <style>
