@@ -428,6 +428,8 @@ export const en = {
       claimed: "{name}!",
       correct: "Correct, {name}!",
       timeUp: "Time's up",
+      /** The veil while the clock is paused. */
+      paused: "Paused",
     },
     victory: {
       title: "You won!",

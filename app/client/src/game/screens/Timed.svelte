@@ -349,6 +349,10 @@
     </div>
   {/if}
 
+  {#if timedOf(game).paused}
+    <div class="veil" role="status"><p>{t("screen.timed.paused")}</p></div>
+  {/if}
+
   <div class="strip">
     {#each session.seats as s, i (i)}
       {@const out = s.status !== "playing" || (answered?.seat === i && !answered.correct)}
@@ -435,6 +439,21 @@
     gap: calc(1.2 * var(--u));
     padding: calc(0.8 * var(--u)) calc(1.6 * var(--u));
     animation: arrive 0.35s var(--spring) backwards;
+  }
+  .veil {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    display: grid;
+    place-items: center;
+    background: rgba(10, 12, 20, 0.94);
+  }
+  .veil p {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: calc(6 * var(--u));
+    font-weight: 800;
+    color: var(--amber);
   }
   .banner-text {
     display: flex;

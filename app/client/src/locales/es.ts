@@ -491,6 +491,8 @@ const es = {
       correct: "¡Correcto, {name}!",
       /** Nobody claimed in the 30 s. */
       timeUp: "Se acabó el tiempo",
+      /** The veil while the clock is paused. */
+      paused: "Pausa",
     },
     victory: {
       title: "¡Ganaron!",
