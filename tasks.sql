@@ -40093,6 +40093,16 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Done when: the developer approved the decision and its feedback is applied or queued.', '2026-10-17T18:01:04Z', '2026-10-17T19:02:03Z', 1585, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1591, 6, 'revise the masterplan of milestone 6: Screen polish leftovers', 'revise', 'open', 1000, NULL, '`milestone 6: Screen polish leftovers` changed. Bring `plan 6: masterplan`, the masterplan, in line with it (`pm plan edit 6 --body -`), or
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-17T20:09:42Z', NULL, NULL, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1592, 110, 'merge the trunk and work tree app', 'merge', 'open', 152, NULL, 'The trunk and work tree app (this checkout, branch `pm/wt/app`) conflict: merging one into the other fails. The
+work tree holds the work of `task 869: Plan 103 close-out: docs, how-tos, decision consequences`, `task 868: Report server: gamemaster setup and first test report`.
+* `git merge --no-commit main` (the trunk''s HEAD), then resolve every conflict so both sides'' intent survives;
+  read the tasks involved (`pm show <id>`) and the commits (`git log -p HEAD...main`) where it isn''t obvious
+* run the checks the project has for the files involved
+* stage the result (`git add`); pm commits the merge and merges this work tree into the trunk. Don''t
+  `git merge --abort`
+Your note on `pm task done`: what conflicted and how you resolved it.
+
+Conflicting files: report-server/wrangler.toml', '2026-10-17T20:35:33Z', NULL, NULL, 0, NULL, 'app');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
