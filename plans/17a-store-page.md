@@ -187,7 +187,7 @@ Only the fields that differ from `es`: «vosotros», «vídeo», «ordenador», 
 - **At launch** (not on the beta page; 17a "Modding", decision 175): the Modding section's `de` feature bullet before the Steam-Erfolge bullet, its link line before Datenschutz
 
 ## Free DLC
-Store texts for each shipped question bundle, one free DLC app each (decision 66: price model, decision 110: regional packs at launch: `colombia` only, es + en, off by default). Entered on the DLC app's own store page (Steamworks → DLC app → Edit Store Page), same fields as the base game. Drafted 2026-10-14 (`task 783`); approved through pm decision "DLC store texts approved? (colombia)".
+Store texts for each shipped question bundle, one free DLC app each (decision 66: price model, decision 110: regional packs at launch: `colombia` es + en, off by default; `usa` en only). Entered on the DLC app's own store page (Steamworks → DLC app → Edit Store Page), same fields as the base game. Drafted 2026-10-14 (`task 783`); approved through pm decision "DLC store texts approved? (colombia)".
 
 ### Fields and limits
 - Same fields and limits as the base game (above, from memory; recheck in the DLC app's admin at entry): name, short description ≤ 300 characters plain text, "About This Content" in BBCode
@@ -258,8 +258,43 @@ Store texts for each shipped question bundle, one free DLC app each (decision 66
   ```
 - Language note while the en pack pool is missing: none; the en text isn't entered before it ships
 
+### `usa` (Regional: United States)
+- Languages: en only (no es/de store text); `app/data/bundles/usa/pool.en.json` may not exist yet: **enter once the pack's en pool ships**
+- Voice: US English (`bundles.json` `voice`); content facts: `app/data/bundles/usa/categories.json` (14 categories), `names.en.json`; description in `app/data/names.en.json` `bundles.usa`
+- No Steam achievement of its own (only `BUNDLE_COLOMBIA` exists); the text doesn't mention one
+- Drafted 2026-10-16 (`task 1417`); approved through pm decision "DLC store texts approved? (usa)", like colombia's (`task 783: Free DLC store texts in 17a`)
+
+#### English (`en`)
+- **Name:** Regional: United States
+- **Short description** (≤ 300):
+  > A free question bundle for Living Room Trivia, for anyone with ties to the United States: its places, food, customs, people, music, sport and words. Installs separately and starts switched off: turn it on in the question bundle step whenever you want to play it.
+- **About This Content:**
+  ```
+  [h2]Questions from the United States[/h2]
+  Regional: United States is a free question bundle for Living Room Trivia. It's for anyone with ties to the United States: questions Americans grow up knowing and hardly anyone outside would.
+
+  [list]
+  [*][b]Geography and nature:[/b] states and capitals, cities, rivers, mountains, national parks and wildlife
+  [*][b]History and people:[/b] the founding, westward expansion and the Civil War, civics, inventors and trailblazers
+  [*][b]American food and drink:[/b] regional dishes, home cooking, desserts, candy, snacks and restaurant chains
+  [*][b]Holidays, festivals and legends:[/b] family and school traditions, fairs, tall tales, cryptids and ghost stories
+  [*][b]Music, books, film and TV:[/b] country, blues, jazz and soul, children's books, TV classics and game shows
+  [*][b]Sports:[/b] football, baseball, college sports, hockey and racing
+  [*][b]How America talks and lives:[/b] words, slang and sayings, place names, school, brands and national symbols
+  [/list]
+
+  [h2]How it plays[/h2]
+  [list]
+  [*]Free; needs the base game Living Room Trivia
+  [*]Optional install: remove it and add it back in Steam any time
+  [*]Off by default: turn it on in the “Question bundles” step before a game; its questions mix with the base bundle's
+  [*]The bundle grows with updates
+  [/list]
+  ```
+
 ### After approval
 - Capsules: the DLC store name equals the in-game name, so `dlc-colombia/` capsules from `task 669` stay as rendered (no re-run)
+- `usa`: `authoring/store/capsules.mjs` renders `dlc-usa/en/` from `bundles.json` languages (en) and the name in `names.en.json`; render with the other DLCs' capsules, approval with the capsule set
 
 ## Modding
 Store and Workshop texts for modding (milestone 15, plan 121): one feature bullet per store language, a link line to the modding guide, and the Workshop hub description. Drafted 2026-10-14 (`task 990`); approved as drafted 2026-10-16 (decision 175: Store texts: modding bullet and guide link?); entered at launch (milestone 11), once the Workshop works for players (`plan 122: Modding end-to-end check and close-out`), never on the beta page.
