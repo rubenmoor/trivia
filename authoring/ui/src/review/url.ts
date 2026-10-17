@@ -1,7 +1,7 @@
 import type { QuestionFilter } from "../lib/api.ts";
 
 // URL: ?batch=pilot&bundle=colombia&id=q-0123, plus the filters status, reviewer, subcategory and
-// media=missing (RV-13), licence=replace (plan 53), played=outliers (plan 109); status=!approved is every question that isn't
+// media=missing (RV-13), licence=replace (plan 53), demo=1 (the demo list, plan 174), played=outliers (plan 109); status=!approved is every question that isn't
 // approved, across batches (RV-22, D-47). The id follows the current question, so a reload (or a bookmark) comes
 // back to it. Decisions themselves live in authoring/data/questions.json.
 // With batch: sample=1 is the blind spot check (plan 16), audit=flagged the audit's major findings.
@@ -29,6 +29,7 @@ export function reviewUrl() {
     audit: params.get("audit"),
     licence: params.get("licence"),
     played: params.get("played"),
+    demo: params.get("demo"),
     locale,
     stale: params.get("stale"),
   } as QuestionFilter;
@@ -49,6 +50,7 @@ export function reviewUrl() {
     filter.audit === "flagged" && "flagged by the audit",
     licenceMode && "licence to replace",
     playedMode && "played difficulty outliers",
+    filter.demo === "1" && "demo list",
     locale && `locale ${locale}`,
     filter.stale === "1" && "stale",
   ]

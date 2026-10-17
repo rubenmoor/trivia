@@ -33,6 +33,8 @@ export interface QuestionFilter {
   licence?: "replace" | null;
   /** "outliers": played difficulty outliers of `qgen report --played`, by |Δ| (plan 109). */
   played?: "outliers" | null;
+  /** "1": only the demo list's ids (plan 174). */
+  demo?: string | null;
   /** A locale (es, es-ES, en, de): its translations with their source (plan 67); absent = the sources, any language. */
   locale?: string | null;
   /** With locale: "1" = only stale translations. */

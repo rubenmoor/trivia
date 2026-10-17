@@ -44614,6 +44614,32 @@ Candidates: 46 full (approved in all four locales), 3746 pending (missing transl
 - Sessions with more seats than S still start when the list happens to suffice; otherwise the demo shows its usual "not enough questions" notice
 - Recommendation S = 4: S = 5''s list (473) is above ≈ 400 and its ≈ 26 translation runs are far beyond the 3 done so far
 - The answer goes into `authoring/data/demo.json`''s `seats` (`task 1547: Pick and approve the demo question list`)', 'The free demo of the trivia game ships a small, fixed set of questions. The more players a multiplayer session in the demo may have, the more questions the set needs, because players in a competitive session never share a card: one player needs about 125 questions, five players about 470. Every question in the set must also be translated into all four game languages, so a larger set means much more translation work before the demo can ship. Choose the largest number of players a demo session must be guaranteed to support.', 'S = 1: 125 questions, no multiplayer guarantee', NULL, '2026-10-17T13:48:27Z', '2026-10-17T14:05:31Z', 1543, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (349, 'Demo question list: approve?', 'pending', '["Approve the list as proposed", "Replace these ids (name them)", "Change the rules (say which)"]', 'Proposal: `qgen demo --propose --seats 1` (decision 348: S = 1, no multiplayer guarantee) → `authoring/data/demo.json`: 125 base questions, `approved` empty. Exported to `app/data/demo/` (es 120, es-ES 46, en 51, de 46 questions today); `qgen demo --check` and `qgen validate` pass.
+
+Review the list: `trivia-authoring`, then `/review?demo=1` (add `&locale=en` etc. for a translation). Full proposal: `work/demo/proposal.md` (main checkout).
+
+## Configurations
+All 4 age groups × solo / Gamemaster / rr-coop, with and without video/audio: pass in es, es-ES, en, de, with the joker reserve (4 cards + 8 at one level). Binding: kids, media off (68 questions added for it).
+
+## Spread
+- Difficulty (es) listed/target: 1: 12/5, 2: 12/6, 3: 7/8, 4: 16/14, 5: 14/15, 6: 8/12, 7: 5/9, 8: 8/11, 9: 9/13, 10: 6/11, 11: 8/8, 12: 7/6, 13: 6/5, 14: 4/2, 15: 3/2 (easy end over target: kids need it)
+- Categories: 28, close to the pool''s shares (history 12/14, film 10/12, animals 9/5, planet-earth 8/5 the largest gaps)
+- 106 of 198 subcategories, at most 2 each
+- Media: image 124, video 1 (the pool''s audio + video share is ~1 %)
+- «Bájale»: 15 % of listed questions have an easier one of their subcategory in the list (no hard bar)
+
+## Pending translations (listed ids not yet approved in the locale)
+Only 46 of 125 are approved in all four locales; the rest need translation runs, which now take the listed ids first (`task 1545: Translation runs take demo-listed ids first`).
+- es-ES: 79
+- en: 74
+- de: 79
+- es: 5 (q-2386, q-2485, q-2873, q-3018, q-3201: their source is another locale)
+- Ids (es-ES and de): q-0016, q-0037, q-0045, q-0056, q-0061, q-0073, q-0074, q-0076, q-0078, q-0083, q-0095, q-0097, q-0100, q-0102, q-0109, q-0110, q-0116, q-0142, q-0148, q-0153, q-0176, q-0177, q-0203, q-0208, q-0212, q-0236, q-0248, q-0263, q-0303, q-0334, q-0335, q-0339, q-0366, q-0368, q-0392, q-0531, q-0551, q-0622, q-0624, q-0635, q-0655, q-0715, q-0722, q-0824, q-0826, q-0842, q-0872, q-1032, q-1071, q-1084, q-1099, q-1104, q-1214, q-1217, q-1247, q-1248, q-1292, q-1354, q-1355, q-1358, q-1395, q-1396, q-1401, q-1412, q-1422, q-1475, q-1542, q-1561, q-1614, q-1772, q-1777, q-1791, q-1922, q-2156, q-2386, q-2485, q-2873, q-3018, q-3201 (en lacks the first 74 of these, up to q-2156)
+
+## Options
+- Approve: `approved` set, the list stays; the translation runs fill the gap, and until every id is a full candidate `qgen validate` errors on the pending ones.
+- Replace these ids: name the ids to swap; a new proposal is made and asked again.
+- Change the rules: say which (size, spread, media share, subcategory cap); a new proposal follows.', 'The demo needs a fixed list of questions that every player gets, so every run plays the same. A first list of 125 questions has been picked automatically so that every game mode and age group can be played once, and it is ready for you to look through. You can accept it, swap out particular questions, or change the rules it was picked by. Accepting it fixes the list for the demo; the missing translations are then filled by the normal translation runs.', NULL, NULL, '2026-10-17T14:09:09Z', NULL, 1547, NULL, 'once', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, 73367);
@@ -46241,7 +46267,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1597, 1536, '2026-10-17T13:43:20Z', NULL, 'running', NULL, NULL, '76886b1695c469c928c5d925d5d47814aae3feca', 'app', NULL, NULL, 1596, NULL, NULL, NULL, NULL, NULL, NULL, 192091);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1598, 1544, '2026-10-17T13:48:47Z', '2026-10-17T13:50:30Z', 'done', NULL, 0, '687017dd0e8d08a858d6ebb26baa84b8b0b230a1', 'questions', 'claude-sonnet-5-5', '13b8f0e4-c20e-4232-991f-9b29eb6512e5', NULL, 18, 36, 6579, 893737, 49427, 0.44231739999999997, 192091);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1599, 1545, '2026-10-17T13:50:30Z', '2026-10-17T13:51:08Z', 'done', NULL, 0, '5dbe5ce80079b3d33d21f66989ceabc8c7f13e26', 'questions', 'claude-sonnet-5-5', '13b8f0e4-c20e-4232-991f-9b29eb6512e5', 1598, 6, 12, 2077, 442230, 17756, 0.62258140000000006, 192091);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1600, 1547, '2026-10-17T14:05:33Z', NULL, 'running', NULL, NULL, 'e2f2e57e03339fbc14553055a59dbfd8abc218b3', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 192091);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1600, 1547, '2026-10-17T14:05:33Z', '2026-10-17T14:09:18Z', 'blocked', NULL, 0, 'e2f2e57e03339fbc14553055a59dbfd8abc218b3', 'questions', 'claude-sonnet-5-5', '3c51c13d-ff47-469b-b56d-9bc9d4a8e208', NULL, 26, 50, 10089, 1427848, 63516, 0.64062360000000018, 192091);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -46788,6 +46814,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1539, 337);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1539, 346);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1540, 337);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1547, 348);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1547, 349);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1550, 337);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1554, 337);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1555, 337);

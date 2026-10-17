@@ -39,7 +39,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen report --played [--locale es|en|de|all] [--age-group …] [--mode …] [--since YYYY-MM-DD] [--all] [--json]
                                     # played vs. rated difficulty, outliers → /review?played=outliers (plan 109)
     qgen validate
-    qgen demo --sizes | --propose [--seats S] | --check [<file>]   # the demo's question list (plan 174)
+    qgen demo --sizes | --propose [--seats S] | --check [<file>] | --replace   # the demo's question list (plan 174)
     qgen patch-notes [<from-ref> [<to-ref>]] [--out FILE] [--json]   # counts-only notes of a content patch (plan 96)
 
 Writing steps call `claude -p --json-schema` with prompts from authoring/tools/prompts/, in the language of
@@ -5532,6 +5532,8 @@ def main():
     dmx = dm.add_mutually_exclusive_group(required=True)
     dmx.add_argument("--sizes", action="store_true", help="per seat count 1..5: the minimum list size and what binds")
     dmx.add_argument("--propose", action="store_true", help="write work/demo/proposal.json and proposal.md")
+    dmx.add_argument("--replace", action="store_true",
+                     help="propose the nearest full candidate for every listed id that is no candidate any more")
     dmx.add_argument("--check", nargs="?", const="", metavar="FILE",
                      help="check a list (default authoring/data/demo.json) at its seats; exit 1 on failure")
     dm.add_argument("--seats", type=int, default=1, choices=range(1, 6), help="with --propose: sessions up to S seats")
