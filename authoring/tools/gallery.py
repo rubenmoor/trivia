@@ -586,6 +586,30 @@ def question(r):
     r.shot("joker-easier")
 
 
+def splash(r):
+    # The splash frozen at its hold (window.__gallerySplash); the second shot on a long category and subcategory.
+    hold = "window.__gallerySplash = %s"
+    for name, topic, save in [("question-splash", "{}", "question"),
+                              ("question-splash-long", '{topic: {category: "inventions-and-technology", '
+                               'subcategory: "consoles-and-game-companies"}}', "question"),
+                              ("timed-splash", "{}", "timed-q")]:
+        if r.only and name not in r.only:
+            continue
+        if name == "timed-splash":
+            r.scene(save, pads=len(r.meta[save]["bound"]) - 1, bound=True, at=10)
+            r.page.evaluate(hold % topic)
+            r.click('[data-focus-id="main"]')
+            r.wait(".timed-screen .answers .answer")
+        else:
+            r.scene(save)
+            r.page.evaluate(hold % topic)
+            r.click('[data-focus-id="main"]')
+            r.wait(".answers .answer")
+        r.wait(".splash .category")
+        r.settle(0.8)
+        r.shot(name)
+
+
 def results(r):
     on_question(r, "solo")
     r.answer(r.meta["solo"]["right"])
@@ -911,6 +935,7 @@ STEPS = [
     (["level", "select", "game-settings"], table),
     (["question", "question-locked", "joker-hint-armed", "joker-hint", "joker-skip", "joker-category", "joker-snipe",
       "joker-easier"], question),
+    (["question-splash", "question-splash-long", "timed-splash"], splash),
     (["question-waiting", "correct", "wrong", "victory"], results),
     (["menu-start", "menu-solo", "menu-gamemaster", "menu-confirm", "goto", "goto-letter-picker", "credits"], overlay),
     (["flag-dialog", "flag-list"], flags),

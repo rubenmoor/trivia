@@ -5,11 +5,11 @@
   import { displayName, questionLocale } from "../../lib/names.svelte.ts";
   import { sfx } from "../sound.svelte.ts";
   import { SPLASH_EXIT_MS, SPLASH_HOLD_MS, SPLASH_SUB_MAX_MS, reducedMotion } from "../timing.ts";
-  import { pickExit, type SplashExit } from "./splash.ts";
+  import { galleryHold, pickExit, type SplashExit } from "./splash.ts";
 
   let {
-    category,
-    subcategory,
+    category: ownCategory,
+    subcategory: ownSub,
     start,
     delay = 0,
     exit: forced,
@@ -24,6 +24,9 @@
     exit?: SplashExit;
   } = $props();
 
+  const hook = galleryHold();
+  const category = hook?.topic?.category ?? ownCategory;
+  const subcategory = hook?.topic ? hook.topic.subcategory : ownSub;
   const picked = untrack(() => forced ?? pickExit());
   const reduced = reducedMotion();
   let phase = $state<"wait" | "hold" | "exit" | "gone">("wait");
@@ -59,6 +62,7 @@
         phase = "hold";
         timers.push(
           setTimeout(() => {
+            if (galleryHold()) return;
             phase = "exit";
             sfx(picked.cue);
             timers.push(setTimeout(() => (phase = "gone"), SPLASH_EXIT_MS + SPLASH_SUB_MAX_MS));

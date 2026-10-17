@@ -48,3 +48,8 @@ export function pickExit(table: SplashExit[] = SPLASH_EXITS): SplashExit {
   while (recent.length > Math.min(5, table.length - 1)) recent.shift();
   return exit;
 }
+
+/** Gallery hook (trivia-gallery): `window.__gallerySplash` freezes the splash at its hold, optionally on another topic. */
+export function galleryHold(): { topic?: { category: string; subcategory: string | null } } | undefined {
+  return (window as unknown as { __gallerySplash?: { topic?: { category: string; subcategory: string | null } } }).__gallerySplash;
+}
