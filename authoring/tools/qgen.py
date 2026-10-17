@@ -4448,6 +4448,8 @@ def cmd_export(args):
         if translations.path(l).exists():
             c = translations.counts(l, pool)
             print(f"  {l} translations: {c['stale']} stale, {c['left_out']} left out (source not approved or not translatable)")
+    for path in pool_export.demo_exports(pool):
+        print(f"exported {len(load_json(path)['questions'])} demo question(s) to {path.relative_to(ROOT)}")
 
 
 def validate_pool():
@@ -4539,11 +4541,38 @@ def validate_pool():
     for l in translations.LOCALES:
         if layout.LOCALE_POOL(l).exists() and not translations.exported(l, data):
             errors.append(f"{layout.LOCALE_POOL(l).relative_to(ROOT)}: no {l} source or translation; delete it")
+    e, w = demo_problems(data)
+    errors += e
+    warnings += w
     tag, released = released_ids()
     gone = sorted(released - ids, key=natural_key) if tag else []
     if gone:
         errors.append(f"{len(gone)} id(s) of {tag}'s pool missing from authoring/data/questions.json "
                       f"(drop = status change, never deletion; plan 91): {', '.join(gone)}")
+    return errors, warnings
+
+
+def demo_problems(data):
+    """(errors, warnings) for the demo list (decision 339) and its pools; none without a list."""
+    texts = pool_export.demo_exports(data)
+    if not layout.DEMO_LIST.exists():
+        return [f"{p.relative_to(ROOT)}: no {layout.DEMO_LIST.relative_to(ROOT)}; delete it" for p in pool_export.stale_demo(texts)], []
+    doc = load_json(layout.DEMO_LIST)
+    rel = layout.DEMO_LIST.relative_to(ROOT)
+    by_id = {q["id"]: q for q in data["questions"]}
+    errors = [f"{rel}: {i} is not in the pool" for i in doc["ids"] if i not in by_id]
+    errors += [f"{rel}: {i} is not a base question" for i in doc["ids"] if i in by_id and (by_id[i].get("bundle") or "base") != "base"]
+    if not errors:
+        e, w, _ = demo.problems(doc, data["questions"])
+        errors += [f"{rel}: {m}" for m in e]
+        warnings = [f"{rel}: {m}" for m in w]
+    else:
+        warnings = []
+    for path, text in texts.items():
+        if (path.read_text(encoding="utf-8") if path.exists() else None) != text:
+            errors.append(f"{path.relative_to(ROOT)} is not the current export of the demo list: run `qgen export`")
+    for p in pool_export.stale_demo(texts):
+        errors.append(f"{p.relative_to(ROOT)}: not written by `qgen export`; delete it")
     return errors, warnings
 
 

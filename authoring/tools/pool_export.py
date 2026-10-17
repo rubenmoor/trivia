@@ -44,6 +44,30 @@ def exports(pool):
     return translations.exports(pool)
 
 
+def demo_ids():
+    """The demo list's ids, or None without a list (decision 339)."""
+    if not layout.DEMO_LIST.exists():
+        return None
+    return json.loads(layout.DEMO_LIST.read_text(encoding="utf-8")).get("ids") or []
+
+
+def demo_exports(pool):
+    """{path: text}: app/data/demo/pool[.<locale>].json, base's entries of the listed ids unchanged; {} without a list."""
+    import translations  # authoring/tools/translations.py (imports this module)
+    ids = demo_ids()
+    if ids is None:
+        return {}
+    want = set(ids)
+    return {layout.DEMO_POOL(l): pool_text([e for e in translations.play_entries(l, pool)
+                                            if e["id"] in want and e["bundle"] == "base"])
+            for l in translations.LOCALES if translations.exported(l, pool)}
+
+
+def stale_demo(texts):
+    """Demo pool files that exist but aren't in texts."""
+    return [p for p in layout.DEMO_DATA.glob("pool*.json") if p not in texts]
+
+
 def stale_packs(texts, locale=None):
     """Pack pool files (of `locale`, else any) that exist but aren't in texts: a pack that lost its questions."""
     names = {"pool.json" if locale == "es" else f"pool.{locale}.json"} if locale else None
@@ -63,3 +87,10 @@ def write(pool):
     """Write the exports for this source pool (the parsed authoring/data/questions.json)."""
     with atomic.locked(layout.SOURCE_POOL):  # one writer of the exports at a time
         write_texts(exports(pool))
+        demo = demo_exports(pool)
+        for path, text in demo.items():
+            atomic.write_text(path, text)
+        for p in stale_demo(demo):
+            p.unlink()
+        if not demo and layout.DEMO_DATA.is_dir() and not any(layout.DEMO_DATA.iterdir()):
+            layout.DEMO_DATA.rmdir()

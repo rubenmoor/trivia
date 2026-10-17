@@ -34,6 +34,13 @@ def pool_files():
     return sorted([*DATA.glob("pool*.json"), *BUNDLE_DATA.glob("*/pool*.json")])
 
 
+DEMO_DATA = DATA / "demo"  # decision 339: the demo's pools (base's entries of the listed ids)
+
+
+def demo_pool(locale="es"):
+    return DEMO_DATA / ("pool.json" if locale == "es" else f"pool.{locale}.json")
+
+
 def names(locale, bundle="base"):
     """Display names in a locale (D-81): names.<locale>.json, a bundle's in bundles/<id>/."""
     return DATA / f"names.{locale}.json" if bundle == "base" else BUNDLE_DATA / bundle / f"names.{locale}.json"
