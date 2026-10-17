@@ -19,6 +19,9 @@ Steps, each ✓/✗ with its time; all automated steps run, exit 1 on any ✗:
   credits   node authoring/steam/credits_check.mjs on both unpacked builds: files ↔ credits.json, both ways
   smoke     node authoring/steam/smoke.mjs app/desktop/release/linux-unpacked: TRIVIA_DEV_STEAM_USER=1 (decision 111),
             network off; save and resume, no «progress needs Steam» notice (with packs: again without them)
+  multiplayer  node authoring/steam/smoke.mjs --multiplayer: rr-coop, rr-competitive, timed × 3 pads, 3 keyboard seats,
+            4 pads + keyboard and mouse (fake pads), each through Join to an end; seats act only for themselves, a
+            restart rebinds the pads, one games[] row with its seats, the win achievement (decision 299); always
   mods      node authoring/steam/smoke.mjs --mods: the build's modding/ examples as local mods: loaded, theme applied,
             player bundle played, rules tweak's extra hint, no crash marker; conversion on top; --no-mods; always
             (data changes can break the merged bundles.json, decision 128)
@@ -54,6 +57,7 @@ STEPS = {
                for m in ("template-bundle", *(f"examples/{e.name}" for e in sorted((REPO / "modding/examples").iterdir()) if e.is_dir()))],
     "credits": [["node", "authoring/steam/credits_check.mjs", UNPACKED, UNPACKED_WIN]],
     "smoke": [["node", "authoring/steam/smoke.mjs", UNPACKED]],
+    "multiplayer": [["node", "authoring/steam/smoke.mjs", "--multiplayer", UNPACKED]],
     "mods": [["node", "authoring/steam/smoke.mjs", "--mods", UNPACKED]],
 }
 SHIPPED = ("app/", "flake.nix", "flake.lock", "package.json", "package-lock.json")
@@ -85,6 +89,9 @@ MANUAL = {
     "cloud": ("full", "Cloud A→B (plan 87): play on A, quit, B shows the same players and seen counts", None),
     "sound": ("full", "sound: music, effects, audio and video questions", None),
     "red-frame": ("full", "timed competitive: pulsing red frame in the last 3 s", None),
+    "multiplayer-pads": ("full", "beta under Steam with real pads (Steam Input on): one session per mode with every pad "
+                         "present, through Join to the first turn change or claim; every pad joins (note how many), each "
+                         "acts only for its seat", None),
     "beta-save": ("save", "save version changed: testers stay on beta until this build is on default", None),
     "signoff": ("always", "the family plays the candidate from beta", "the developer's OK"),
 }
