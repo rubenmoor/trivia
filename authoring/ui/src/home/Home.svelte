@@ -171,7 +171,6 @@
                   <a href={review(b.locale ? { batch: b.name, locale: b.locale } : { batch: b.name })}
                     >{b.name === "none" ? "(no batch)" : b.name}</a
                   >
-                  {#if b.locale}<a class="muted small" href={review({ batch: b.name, locale: b.locale, sample: "1" })}>sample</a>{/if}
                 </td>
                 <td class="muted">{b.sources.join(", ")}</td>
                 <td class="muted">{b.date ?? "–"}</td>

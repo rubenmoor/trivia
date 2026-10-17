@@ -3995,8 +3995,6 @@ def cmd_translate_batch(args):
     print(f"\nDone: {run}: {h['translated']} translated, {h['approved']} approved, {h['needs_work']} need work, "
           f"{h['not travelling']} not travelling ({h['not travelling confirmed']} confirmed) "
           f"(took {progress.duration(time.monotonic() - t0)}).")
-    if run == f"tr-{locale}-1":
-        print(f"Pilot: the next `{again}` waits for the developer's go (`qgen health ack {run} \"<note>\"`).")
     files = [translations.path(locale), layout.POOL_FILE(locale, bundle), layout.BUNDLE_DATA, out]
     if h["not travelling confirmed"]:
         files.insert(1, POOL)
@@ -4028,7 +4026,7 @@ def write_translate_report(run):
              f"{h['not travelling'] - h['not travelling confirmed']} translated again next run)",
              f"- Claude calls: {len(calls)}, about ${sum(calls):.2f} at list price; "
              f"{usd(h['$ per approved'])} per approved translation (without the audit)",
-             f"- Spot check by a native speaker: {REVIEW_URL}?batch={run}&locale={locale}&sample=1",
+             f"- Review (optional): {REVIEW_URL}?batch={run}&locale={locale}",
              "", *health.translation_health_section(run), *audit_section(run), *qc_section(run), "## Needs work", ""]
     lines += [f"- **{q['id']}** ({q['subcategory']}) {q['question']} → {q['answer']}: {q['review']['feedback']}"
               for q in work] or ["None."]
