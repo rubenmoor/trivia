@@ -352,6 +352,7 @@ export const de = {
       resumePlayer: "Weiterspielen: {name}, Stufe {level}",
       /** A multiplayer session: {names} cut short after two; the mode's name below. */
       resumeSession: "Weiterspielen: {names}, Stufe {level}",
+      resumeTimed: "Weiterspielen: {names}, Runde {level}",
       new: "Neues Spiel",
       newKey: "N",
       language: "Sprache: {name}",
@@ -429,6 +430,12 @@ export const de = {
       timeUp: "Zeit abgelaufen",
       /** The veil while the clock is paused. */
       paused: "Pause",
+      /** Round 12: the first correct answer wins. */
+      suddenDeath: "Sudden Death",
+      /** Sudden death repeated after a round without a correct answer. */
+      again: "Noch eine Runde: {n}",
+      /** Everyone is out (decision 280). */
+      nobody: "Diesmal gewinnt niemand",
     },
     victory: {
       title: "Gewonnen!",

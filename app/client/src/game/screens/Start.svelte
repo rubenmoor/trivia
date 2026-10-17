@@ -69,7 +69,7 @@
         <Icon name="play" />
         {#if game?.session}
           <span class="resume-session">
-            {t("screen.start.resumeSession", { names: seatNames(game.session, 2), level: game.level })}
+            {t(game.session.timed ? "screen.start.resumeTimed" : "screen.start.resumeSession", { names: seatNames(game.session, 2), level: game.level })}
             <small>{modeName(game.session)}</small>
           </span>
         {:else}{game?.player

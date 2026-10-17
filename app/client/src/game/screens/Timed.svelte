@@ -329,7 +329,7 @@
 
 <div class="timed-screen" bind:this={screenEl}>
   <div class="top">
-    <p class="round-line">{t("screen.timed.round", { n: timed.round, of: levels })}</p>
+    <p class="round-line" class:sudden={timed.sudden_death}>{timed.sudden_death ? t("screen.timed.suddenDeath") : t("screen.timed.round", { n: timed.round, of: levels })}</p>
     <p class="label">{t("screen.timed.question", { n: timed.question_in_round, of: timed.round_size })}</p>
     <span class="label placeholder">{"PLACEHOLDER(1453)"}</span>
   </div>
@@ -435,6 +435,9 @@
     font-size: calc(1.8 * var(--u));
     font-weight: 800;
     color: var(--amber);
+  }
+  .round-line.sudden {
+    color: var(--coral);
   }
   .placeholder {
     color: var(--amber);
