@@ -70,17 +70,20 @@ meta.final = { right: rightOf(data, saves.final) };
 saves.table = play(structuredClone(done), PLAYERS[0], 3, { mode: "gamemaster" });
 // Flags for the flag list.
 saves.flags = flagged(structuredClone(saves.question), data.pool.slice(0, 2).map((q) => q.id));
+// A UI language with a pool of its own plays it (engine.ts localeOf), so these three also mark and block from it.
+const lpool = (loadData(ui) ?? data).pool;
+const midlevels = ui === "es" ? [] : lpool.filter((q) => q.bundle === "base" && q.difficulty >= 5 && q.difficulty <= 9).slice(1);
 // A game on base + colombia, every colombia question seen: the supply notice before level 1.
 saves.seen = play(structuredClone(done), PLAYERS[0], 1, { mode: "solo", bundles: ["base", "colombia"] }, true);
 ({ save: saves.seen } = answer(saves.seen, data, io(), (rightOf(data, saves.seen) + 1) % latestState(saves.seen).answers.length));
-saves.seen.seen.push(...data.pool.filter((q) => q.bundle === "colombia")
+saves.seen.seen.push(...data.pool.filter((q) => q.bundle === "colombia").concat(midlevels)
   .map((q) => ({ question_id: q.id, game_id: 0, seen_on: "2026-10-01T20:00:00" })));
 // Every question blocked: the start reason on Bundles (no question for the choice).
 saves.blocked = structuredClone(done);
-saves.blocked.blocked = data.pool.map((q) => q.id);
+saves.blocked.blocked = [...new Set([...data.pool, ...lpool].map((q) => q.id))];
 // All but a few blocked: short supply, the report on Bundles.
 saves.short = structuredClone(done);
-saves.short.blocked = data.pool.slice(40).map((q) => q.id);
+saves.short.blocked = [...new Set([...data.pool.slice(40), ...lpool.slice(40)].map((q) => q.id))];
 
 // Eight known names: the Join screen with up to eight seats.
 saves.crowd = withExtraPlayers(structuredClone(done));
