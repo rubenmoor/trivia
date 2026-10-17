@@ -39817,6 +39817,18 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Check
 - Throw-away: `draw_slots` on batch-10''s subcategories with today''s pool: share of slots with a cross-subcategory entry (decision 350 estimate ≈ 14–15 %), prompt length increase; no `qgen batch`.
 - `qgen validate`, `npm run check`, `npm test`.', '2026-10-17T15:42:07Z', NULL, NULL, 0, 'opus', 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1577, 180, 'Overlap: run-wide concept tie check across subcategories (decision 350 c)', 'work', 'open', NULL, NULL, 'Implements `decision 350: Overlap rate in drafting: which changes?` (answer 1), part (c); after `task 1576` (same probe).
+
+## Change
+- When one run draws its slots, two subcategories must not both draw a concept the lexical probe ties together (the same fact from two subcategories: batch-9 had 61 same-run collisions, 5 % of drafts); the later slot redraws its concept or, if none is free, gets the earlier slot''s question in `already_asked`.
+- Deterministic under the run''s seed; resumable runs (`qgen batch` restart) draw the same slots.
+
+## Docs
+- Same owner rows as `task 1576`; `rg` old wording.
+
+## Check
+- Throw-away: on batch-9''s and batch-10''s slot draws, the number of tied concept pairs before/after.
+- `qgen validate`, `npm run check`, `npm test`.', '2026-10-17T15:42:08Z', NULL, NULL, 0, 'opus', 'questions');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
