@@ -1,5 +1,5 @@
 -- pm database. Change it with pm; after a hand edit run `pm validate`.
-PRAGMA user_version = 27;
+PRAGMA user_version = 28;
 
 CREATE TABLE milestone (
     id             INTEGER PRIMARY KEY,
@@ -75,8 +75,8 @@ CREATE TABLE run (                                         -- one worker run of 
     task_id               INTEGER NOT NULL REFERENCES task (id),
     started_at            TEXT NOT NULL,
     ended_at              TEXT,                            -- NULL: running
-    result                TEXT NOT NULL CHECK (result IN ('running', 'done', 'blocked', 'failed', 'limit')),
-    reason                TEXT,                            -- failed: why; limit: the message
+    result                TEXT NOT NULL CHECK (result IN ('running', 'done', 'blocked', 'failed', 'limit', 'killed')),
+    reason                TEXT,                            -- failed: why; limit: the message; killed: by `pm kill`
     exit_code             INTEGER,
     base_commit           TEXT,                            -- HEAD when the run started
     worktree              TEXT,                            -- the task's work tree then; NULL: the trunk
@@ -46517,7 +46517,11 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1611, 1576, '2026-10-17T15:48:24Z', '2026-10-17T15:53:07Z', 'done', NULL, 0, '98df6f355cb7f1bc00e7f38de77c482240bc79f3', 'questions', 'claude-opus-5-5', 'ded815df-a898-460b-af55-b0310bee5755', NULL, 25, 50, 11335, 1493874, 66265, 1.0557948000000001, 192091);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1612, 1577, '2026-10-17T15:53:08Z', '2026-10-17T16:06:31Z', 'done', NULL, 0, '9155e63f5a305a3a35fc4e2f22804559e93ff722', 'questions', 'claude-opus-5-5', 'ded815df-a898-460b-af55-b0310bee5755', 1611, 9, 18, 7619, 800828, 18035, 1.5126924000000004, 192091);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1613, 1578, '2026-10-17T16:06:31Z', '2026-10-17T16:07:44Z', 'done', NULL, 0, '71e179d256d391cdd950f4caa21059e0be99e100', 'questions', 'claude-sonnet-5-5', 'e81c37d2-2a61-408b-a3f5-583b5bcf8936', NULL, 17, 34, 5025, 672366, 37253, 0.3338032, 192091);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1614, 1579, '2026-10-17T16:07:45Z', NULL, 'running', NULL, NULL, 'c3ec87f9de45ba022051995befdf396e6625dc51', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 192091);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1614, 1579, '2026-10-17T16:07:45Z', '2026-10-17T16:59:38Z', 'failed', 'interrupted (SIGINT), after 51m53s, no result
+last tool call: Bash: git status --porcelain; qgen batch 2>&1 | tail -40; echo EXIT ${PIPESTATUS[0]}
+likely cause: `pm run` stopped now
+left behind: 14 files, stashed as ec4ef956 (pm: task 1579 run 1614 failed); get them back with `git stash apply ec4ef956`
+log: /home/ruben/code/trivia/.git/pm-logs/task-1579-run-1614.log', 143, 'c3ec87f9de45ba022051995befdf396e6625dc51', 'questions', 'claude-sonnet-5-5', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 192091);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1615, 1581, '2026-10-17T16:25:12Z', '2026-10-17T16:47:14Z', 'failed', 'killed by SIGTERM (exit 143), after 22m02s, no result
 last tool call: Bash: which trivia-gallery; time trivia-gallery --set task-1340 --pick bundles,bundles-supply-report,choice-solo,choice-gamemaster --note "Decision 328: bundle tiles in the Choice look." --set task-1463 --pick mode-kind,mode-single,mode-multi,choice-solo,choice-gamemaster,choice-rr-competitive,join-5,join
 likely cause: killed from outside (out of memory, Ctrl-C, another process)
@@ -46537,6 +46541,8 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 last tool call: Bash: rm -rf /tmp/g1583; (TRIVIA_WORK=/tmp/g1583 TRIVIA_MUTE=1 setsid trivia-gallery --locale en > /tmp/g1583.log 2>&1; echo exit $?); tail -5 /tmp/g1583.log; grep -c keyed /tmp/g1583.log
 likely cause: killed from outside (out of memory, Ctrl-C, another process)
 log: /home/ruben/code/trivia/.git/pm-logs/task-1583-run-1619.log', 143, 'a0753c39569f336a459df2aabfab0524bd30b8f4', 'app', 'claude-opus-5-5', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 192091);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1620, 1581, '2026-10-17T16:59:44Z', NULL, 'running', NULL, NULL, '4ae0cc812ba8e2b306b6237f7ac7b191cd87addd', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 900089);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1621, 1579, '2026-10-17T16:59:44Z', NULL, 'running', NULL, NULL, '4ae0cc812ba8e2b306b6237f7ac7b191cd87addd', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 900089);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
