@@ -216,7 +216,8 @@
     "text": "Working together",
     "shot": "mode-multi",
     "note": "co-operative",
-    "flagged_on": "2026-10-17"
+    "flagged_on": "2026-10-17",
+    "fixed_on": "2026-10-17"
   },
   {
     "id": 23,
@@ -225,7 +226,8 @@
     "text": "Competing",
     "shot": "mode-multi",
     "note": "competitive",
-    "flagged_on": "2026-10-17"
+    "flagged_on": "2026-10-17",
+    "fixed_on": "2026-10-17"
   },
   {
     "id": 24,
@@ -234,7 +236,8 @@
     "text": "Round-robin co-op",
     "shot": "mode-multi",
     "note": "taking turns",
-    "flagged_on": "2026-10-17"
+    "flagged_on": "2026-10-17",
+    "fixed_on": "2026-10-17"
   },
   {
     "id": 26,
@@ -243,7 +246,8 @@
     "text": "Everyone plays together against the game",
     "shot": "mode-multi",
     "note": "Beat the game together taking turns",
-    "flagged_on": "2026-10-17"
+    "flagged_on": "2026-10-17",
+    "fixed_on": "2026-10-17"
   },
   {
     "id": 27,
@@ -252,7 +256,8 @@
     "text": "Everyone plays their own game",
     "shot": "mode-multi",
     "note": "Every player fights by themselves",
-    "flagged_on": "2026-10-17"
+    "flagged_on": "2026-10-17",
+    "fixed_on": "2026-10-17"
   },
   {
     "id": 28,
@@ -261,7 +266,8 @@
     "text": "Competitive (timed)",
     "shot": "mode-multi",
     "note": "Compete simultaneously",
-    "flagged_on": "2026-10-17"
+    "flagged_on": "2026-10-17",
+    "fixed_on": "2026-10-17"
   },
   {
     "id": 29,
@@ -270,6 +276,7 @@
     "text": "Whoever claims the question answers",
     "shot": "mode-multi",
     "note": "Whoever answers first gets the question",
-    "flagged_on": "2026-10-17"
+    "flagged_on": "2026-10-17",
+    "fixed_on": "2026-10-17"
   }
 ]
