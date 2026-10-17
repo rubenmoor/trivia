@@ -12,7 +12,7 @@ export type SplashExit = {
   subOffsetMs: number;
   cue: Cue;
   /** The category is split into letters: `spread` is the share of the exit spent staggering their starts, `order` staggers left to right, else randomly. */
-  letters?: { spread: number; order: boolean };
+  letters?: { spread: number; order: boolean; reverse?: boolean };
 };
 
 export const SPLASH_EXITS: SplashExit[] = [
@@ -27,6 +27,14 @@ export const SPLASH_EXITS: SplashExit[] = [
   { id: "wind", category: "wind", sub: "drift-right", subOffsetMs: 100, cue: "splash-wind", letters: { spread: 0.5, order: true } },
   { id: "blind", category: "blind", sub: "fade", subOffsetMs: -100, cue: "splash-blind" },
   { id: "drain", category: "drain", sub: "shrink", subOffsetMs: 0, cue: "splash-drain" },
+  { id: "zoom", category: "zoom", sub: "blur", subOffsetMs: 0, cue: "splash-zoom" },
+  { id: "shatter", category: "shatter", sub: "down", subOffsetMs: 100, cue: "splash-shatter", letters: { spread: 0.15, order: false } },
+  { id: "melt", category: "melt", sub: "down", subOffsetMs: 0, cue: "splash-melt" },
+  { id: "blackhole", category: "blackhole", sub: "shrink", subOffsetMs: 0, cue: "splash-blackhole" },
+  { id: "birds", category: "birds", sub: "fade", subOffsetMs: -100, cue: "splash-birds", letters: { spread: 0.25, order: false } },
+  { id: "typewriter", category: "typewriter", sub: "fade", subOffsetMs: 100, cue: "splash-typewriter", letters: { spread: 0.9, order: true, reverse: true } },
+  { id: "plane", category: "plane", sub: "drift-right", subOffsetMs: 100, cue: "splash-plane" },
+  { id: "jelly", category: "jelly", sub: "shrink", subOffsetMs: 100, cue: "splash-jelly" },
   { id: "pop", category: "pop", sub: "shrink", subOffsetMs: -100, cue: "splash-pop" },
 ];
 
