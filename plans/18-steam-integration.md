@@ -494,6 +494,15 @@ A mod is a folder with a `mod.json` (pm plan 112). The validator `readManifest` 
 }
 ```
 
+## Demo
+A playable demo is a build variant of the same code (plan 173, decision 335); no runtime toggle. Store: «Download demo» button on the full game's page, no own page (decision 343), released with the full game (decision 344).
+- Flag (decision 338): `TRIVIA_DEMO=1` at client build/dev time → `__DEMO__`, `app/client/dist-demo/`, `buildInfo().demo`, `EngineData.demo`; shell `isDemo()`: packaged `"demo": true` in `package.json`, unpackaged `TRIVIA_DEMO=1`; the demo shell loads `dist-demo/` and refuses to start without it
+- Names (decision 223 style): `app/desktop/electron-builder.demo.yml` extends the full config; appId `io.github.rubenmoor.trivia.demo`, productName «Living Room Trivia Demo», `living-room-trivia-demo`, `LivingRoomTriviaDemo.exe`, artefacts `LivingRoomTriviaDemo-<v>-…`, output `release/demo/`; `trivia-desktop-build --dir --demo`; window title «¡Trivia! Demo»
+- App ID: `main.mjs` `STEAM_DEMO_APP_ID` 480 until the demo app exists (plan 178); `authoring/steam/steam.json` `demo` holds `appid` and the depots windows, linux, content
+- Save (decisions 336, 345): shared with the full game, no separate paths: same `userData` folder, `mods.json`, telemetry folder and single-instance lock; Steam Cloud: the demo's «Shared cloud APP ID» is the full game (Steamworks, after its release)
+- Features (decisions 337, 346): Cloud on; off: mods scan and `/mods.js`, Workshop, `--check-mod`/`--publish-mod` (exit 2), achievements (`steam:unlock` returns false), telemetry (no store, no consent), question reports (`report:available` false)
+- Packaging, upload: plans 177 and 178
+
 ## Tasks
 - [x] SW-1 Decide the shell (OQ-29); record it in `decisions.md`. *Done 2026-10-12: Electron (D-63).*
 - [x] SW-2 Electron shell skeleton: window, fullscreen toggle, loads `app/client/dist/`, preload bridge; pick the Steam binding (steamworks-ffi-node or steamworks.js: maintenance, overlay, Electron version). *Done 2026-10-12 (pm plan 54, D-71): `app/desktop/` (`main.mjs`, `resolve.mjs`, `preload.cjs`, `package.json`), `app/client/src/lib/desktop.ts`, `lib/engine.ts` (`MemoryStore`), `Overlay.svelte`, `flake.nix` (`trivia-desktop`, `pkgs.electron` 43); whole game without Python checked over CDP under Xvfb (task 318: level 12, every joker, undo, abandon, media, samples, clean console). Developer play test: plays fine (pm decision 29, 2026-10-13). Binding: steamworks-ffi-node (pm decision 28, D-63; task 353).*
