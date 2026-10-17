@@ -296,6 +296,11 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
   - picked in the Esc menu''s «Sonido» section («Banda sonora»), saved like the volumes; it switches live so the developer can compare on the TV
   - `timed` (Competitive mode): a recorded soundtrack uses its question loop; the synthesized one keeps its own
   - the developer picks the default after listening on the TV
+- Joker sounds (developer, 2026-10-17, decision 81): each joker gets a sound that says what it does
+  - Paso y fuera (Pass & Purge): a broom sweeping (today''s `escoba` doesn''t read as a broom)
+  - Soplo (Hint): a microwave bell «bing»
+  - Hada madrina (Fairy): a fairy''s magic wand, sprinkling fairy dust (replaces the swanee whistle)
+  - Doña Exigente (Ms Picky), Tiro mágico (Trick Shot): keep as they are
 
 ## Constraints
 - CC0 or otherwise allowlisted licenses only (D-45); assets stay offline.
