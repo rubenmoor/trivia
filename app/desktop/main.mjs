@@ -179,7 +179,7 @@ protocol.registerSchemesAsPrivileged([
 ]);
 app.commandLine.appendSwitch("autoplay-policy", "no-user-gesture-required");
 Menu.setApplicationMenu(null);
-// Fixed folder, independent of the product name (plan 55); before ready and the instance lock.
+// Fixed folder, independent of the product name (plan 55); before ready and the instance lock. Demo and full game share it (decision 336): one save, one instance.
 if (app.isPackaged) app.setPath("userData", path.join(app.getPath("appData"), "trivia"));
 
 let win = null;
