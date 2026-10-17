@@ -77,6 +77,9 @@ export type JokerName = "hint" | "skip" | "easier" | "category" | "snipe";
 
 /** 13-game-modes.md "Implementation notes"; plan 36 builds `gamemaster` and `solo`. */
 export type GameMode = "gamemaster" | "solo" | "rr-coop" | "rr-competitive" | "timed";
+/** A session seat's device kind, kept in the save for a restart (plan 172): a pad (no index, numbering changes), keyboard
+ * and mouse, keyboard-only round-robin, a keyboard-only `timed` claim key. */
+export type SeatDevice = "pad" | "kbm" | "shared" | { key: string };
 
 /** A count per joker; null = unlimited (13-game-modes.md, MD-1). */
 export type JokerBudget = Record<JokerName, number | null>;
@@ -193,6 +196,8 @@ export interface Game {
     turn: number;
     seats: {
       player: string | null; status: "playing" | "out" | "won" | "lost"; level: number; age_group: string | null; jokers_left: JokerBudget;
+      /** Missing on sessions before plan 172. */
+      device?: SeatDevice;
       /** timed only: lives left, a correct answer this round, the round's last question without one yet. */
       lives?: number; correct_this_round?: boolean; last_chance?: boolean;
     }[];

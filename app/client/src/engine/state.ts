@@ -1,6 +1,6 @@
 // The save document and transaction helpers of the TS referee (PORT-3, plan 20).
 // SaveData = game.sqlite's tables as JSON plus flags (plan 49); GameState = games.state of the former Python referee.
-import type { Category, Difficulty, ErrorInfo, GameMode, JokerBudget, JokerName, Language, Supply } from "../lib/types.ts";
+import type { Category, Difficulty, ErrorInfo, GameMode, JokerBudget, JokerName, Language, SeatDevice, Supply } from "../lib/types.ts";
 import type { AgeGroup, Bundle, PoolQuestion } from "./pool.ts";
 import { broadOf, byId, subKey } from "./pool.ts";
 import { pyRepr } from "./pycompat.ts";
@@ -80,7 +80,13 @@ export interface Seat {
   lives?: number;
   out?: true;
   result?: "won" | "lost";
+  /** The seat's controls (plan 172); missing on older rows. */
+  device?: SeatDevice;
 }
+
+export const isSeatDevice = (v: unknown): v is SeatDevice =>
+  v === "pad" || v === "kbm" || v === "shared"
+  || (typeof v === "object" && v !== null && !Array.isArray(v) && Object.keys(v).length === 1 && typeof (v as { key?: unknown }).key === "string" && (v as { key: string }).key !== "");
 
 /** The players of a row, in seat order (a one-player game: its player). */
 export const rowPlayers = (row: GameRow): (number | null)[] => row.seats?.map((s) => s.player_id) ?? [row.player_id];

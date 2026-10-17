@@ -1,7 +1,7 @@
 // Per-player controls (plans/14-input.md section 3, plan 161): which seat of a local multiplayer session a device
 // acts for and whether it may act now. Pure, so a script can feed it fake pads; the state is seats.svelte.ts.
 import type { Keys } from "./input.svelte.ts";
-import type { Game } from "./types.ts";
+import type { Game, SeatDevice } from "./types.ts";
 
 /** Where an action came from: a pad by `Gamepad.index`, the keyboard, the mouse. */
 export type Source = { pad: number } | "keyboard" | "mouse";
@@ -57,6 +57,21 @@ export function joinKeyboard(binding: readonly Binding[], key: string | null): B
   if (binding.some((b) => padOf(b) !== null)) return [...binding, "kbm"];
   return [...binding, key === null ? "shared" : { key: key.toLowerCase() }];
 }
+
+/** A binding's device kind for the save (plan 172). */
+export const deviceOf = (b: Binding): SeatDevice => (padOf(b) !== null ? "pad" : (b as Exclude<Binding, { pad: number }>));
+
+/** A restart's binding from the saved device kinds: keyboard seats at once, pad seats (and seats of older sessions
+ * without a kind) null until a pad takes them (decision 289). */
+export function restoredBinding(view: SessionView): (Binding | null)[] {
+  return view.seats.map((s) => (s.device === undefined || s.device === "pad" ? null : s.device));
+}
+
+/** A null binding a pad may take: not a seat whose saved kind is a keyboard one. */
+export const padSeat = (view: SessionView, seat: number): boolean => {
+  const d = view.seats[seat]?.device;
+  return d === undefined || d === "pad";
+};
 
 /** The timed question scope's claim keys: Space for the `kbm` seat, each key seat's picked key (decision 290). */
 export function claimKeys(binding: readonly (Binding | null)[]): Keys {

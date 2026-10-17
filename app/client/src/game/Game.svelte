@@ -16,7 +16,7 @@
   import { listen, pushScope, type Action } from "../lib/input.svelte.ts";
   import { holdPause } from "../lib/pause.ts";
   import { bindSession, lostSeat, watchGame } from "../lib/seats.svelte.ts";
-  import type { SessionView } from "../lib/seats.ts";
+  import { deviceOf, type SessionView } from "../lib/seats.ts";
   import { emit, loadedMods, watchLayers, type ModLayer } from "../lib/mods.ts";
   import type { Game, GameMode, JokerBudget, JokerEvent, Flagged } from "../lib/types.ts";
   import FlagDialog from "./FlagDialog.svelte";
@@ -393,7 +393,7 @@
       const session = isSession(choice.mode);
       const names = seats.map((x) => x.name ?? "");
       game = await gameAction("new", session
-        ? { ...choice, players: names, ...(choice.mode === "rr-competitive" ? { age_groups: seats.map((x) => x.group) } : {}) }
+        ? { ...choice, players: names, devices: seats.map((x) => deviceOf(x.binding)), ...(choice.mode === "rr-competitive" ? { age_groups: seats.map((x) => x.group) } : {}) }
         : { player: chosen, ...choice });
       if (session && game) bindSession(game.id, seats.map((x) => x.binding));
       await noteRunningOut(choice, runningOut).catch((e) => console.warn("noteRunningOut:", e)); // every start: it prunes too
