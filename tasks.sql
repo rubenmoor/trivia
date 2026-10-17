@@ -39864,6 +39864,34 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 Missing tooling: do what exists, list the rest in the note. No prompt or `qgen.py` changes here.
 
 Done when: phase 6 done; note lists decisions, change tasks, numbers.', '2026-10-17T15:48:11Z', NULL, 1521, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1581, 165, 'Gallery review sets: /gallery?set=<name>, picked shots and also changed, linked from the review decision', 'work', 'open', 620, NULL, 'The developer reviews only the shots a change touched, not the whole gallery. A review decision gives the URL path of a set; `/gallery?set=<name>` shows the shots the task picked, then below them the shots whose picture changed anyway ("also changed").
+
+## Set
+- `trivia-gallery --set <name> --pick <shot,…>` (with `--locale`, `--size`, `--note`): writes `work/gallery/sets/<name>.json`: picked shots, also-changed shots, locale entries (incl. `@<W>x<H>`), run date, git commit, note; same name again overwrites
+- Name: `task-<id>` of the task that raises the review (the decision id doesn''t exist yet)
+- Plain `/gallery` stays the full gallery
+
+## Also changed
+- Baseline: `work/gallery/baseline/<entry>/<shot>.png`, the pictures as of the last set made; `--set` compares every shot of the run with it, after writing the set moves the baseline to the current shots
+- Also changed: every shot not picked whose picture differs from the baseline in any entry; a shot that''s new or has no baseline counts as changed
+- Only a full run (all shots, the set''s locales and sizes) can say what else changed: `--set` shoots all of them, or refuses when the run doesn''t cover them
+- Noise: two runs of the same commit must give no also-changed shots; a throw-away check on two runs, fix the cause (clock, animation, fonts), a pixel tolerance only as a last resort
+- No baseline yet: the first `--set` writes it, with "also changed" empty and the set''s note saying so
+
+## Page
+- `/gallery?set=<name>` (`authoring/ui/src/gallery/Gallery.svelte`, `authoring/server/main.py` `/api/gallery`): set name and note in the header; the shot list as two groups: picked, then "also changed"; only the set''s locale entries; arrows step through both groups; flags work as now; a missing set is an error, not the full gallery
+
+## Rule for review decisions
+- `pm decision record` (rule): every gallery review decision gives `/gallery?set=<name>` as the place to review; listing the shots in the body is optional
+- Docs: `plans/15a-ui-translation.md` "Wording and review", README "Check the UI wording", AGENTS.md `trivia-gallery` line; `rg` "/gallery" in open plans (165, 176) and in open task bodies'' wording that you''re allowed to change, and update them
+
+## Pending reviews
+- Sets `task-1340` (decision 328: bundles, bundles-supply-report, choice-solo, choice-gamemaster) and `task-1463` (decision 329: its shot list), es, es-ES, en, de at 1920x1080 and 1280x800; these write the first baseline (no also-changed)
+- Both URL paths in the task note (pm can''t edit pending decisions)
+
+## Done when
+- `/gallery?set=task-1340` shows those 4 shots × 8 entries; a set made after a one-line CSS change shows the shots it touched under "also changed"; `/gallery` unchanged
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass', '2026-10-17T16:25:11Z', NULL, NULL, 0, NULL, 'app');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -46421,6 +46449,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1611, 1576, '2026-10-17T15:48:24Z', '2026-10-17T15:53:07Z', 'done', NULL, 0, '98df6f355cb7f1bc00e7f38de77c482240bc79f3', 'questions', 'claude-opus-5-5', 'ded815df-a898-460b-af55-b0310bee5755', NULL, 25, 50, 11335, 1493874, 66265, 1.0557948000000001, 192091);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1612, 1577, '2026-10-17T15:53:08Z', '2026-10-17T16:06:31Z', 'done', NULL, 0, '9155e63f5a305a3a35fc4e2f22804559e93ff722', 'questions', 'claude-opus-5-5', 'ded815df-a898-460b-af55-b0310bee5755', 1611, 9, 18, 7619, 800828, 18035, 1.5126924000000004, 192091);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1613, 1578, '2026-10-17T16:06:31Z', '2026-10-17T16:07:44Z', 'done', NULL, 0, '71e179d256d391cdd950f4caa21059e0be99e100', 'questions', 'claude-sonnet-5-5', 'e81c37d2-2a61-408b-a3f5-583b5bcf8936', NULL, 17, 34, 5025, 672366, 37253, 0.3338032, 192091);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1614, 1579, '2026-10-17T16:07:45Z', NULL, 'running', NULL, NULL, 'c3ec87f9de45ba022051995befdf396e6625dc51', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 192091);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
