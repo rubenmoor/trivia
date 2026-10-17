@@ -1120,3 +1120,14 @@ Template:
   - **Run-wide concept tie check** (pm decision 350 c): task 1577
 - Consequences: batch-10's subcategories on the pool of 2026-10-17: 19 % of slots get a cross-subcategory entry, ≈ +57 KB of draft prompt per batch, ≈ 95 s once per run when the slots are drawn; expected overlap rate ≈ 10–11 %
 - Supersedes / related: amends D-55 (threshold number), PE-4, PE-10; pm decisions 13, 232, 350; plan 180
+
+## D-112: One run never draws tied concepts in two subcategories
+- Date: 2026-10-17
+- Context: D-111's run-wide part (pm decision 350 c): batch-9 had 61 same-run collisions (5 % of drafts); its slot draw had 87 cross-subcategory concept pairs the concept probe ties (rank ≤ 2), batch-10's 115
+- Decision:
+  - **Order:** `draw_slots` walks the run's subcategories in `run.json` order; each drawn concept is probed against the concepts of the earlier ones
+  - **Tied:** redrawn from the same level window (`draw_concepts`, the subcategory's seeded rng), up to `TIE_REDRAWS` (5) tries
+  - **Still tied:** kept; its `already_asked` gets "(this run, another subcategory: a question about «<concept>»)", since the other draft doesn't exist yet
+  - Deterministic under the seed; `slots.json` keeps a resumed run's draw
+- Consequences: batch-9's and batch-10's subcategories on the pool of 2026-10-17: 119 / 100 tied pairs without redraws → 0 with, no slot lost; no measurable extra time
+- Supersedes / related: completes D-111; PE-10; pm decision 350; plan 180

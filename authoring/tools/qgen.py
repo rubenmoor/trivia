@@ -860,14 +860,25 @@ def assign_difficulties(free, fresh, weights, seed, rounds=50):
     return out
 
 
+TIE_REDRAWS = 5  # draw_slots: redraws of a concept tied to an earlier subcategory's in the run
+
+
 def draw_slots(subs, pool_questions, axes_def, n, seed, bundle="base", locale="es"):
     """{subcategory: slots} for a run (PE-10): a concept, a target difficulty, up to 3 axis
     combinations and the questions already asked about the concept, per slot. Seeded. `already_asked`:
     the subcategory's questions on the concept plus, from every subcategory and bundle, the non-rejected
-    ones a concept probe finds (overlap_candidates rank ≤ 2, decision 350); all in `locale` (as_locale)."""
+    ones a concept probe finds (overlap_candidates rank ≤ 2, decision 350); all in `locale` (as_locale).
+    A concept the probe ties to one an earlier subcategory of the run drew is redrawn (TIE_REDRAWS tries);
+    still tied, its slot's `already_asked` names the other concept (decision 350 c)."""
     shown = as_locale(pool_questions, locale)
     others = [q for q in shown if q.get("of", q)["status"] != "rejected"]
-    cache = {}
+    cache, taken = {}, []  # taken: probes of earlier subcategories' concepts
+
+    def name_probe(c):
+        return {"question": c["name"], "answer": c["name"], "concept": c["name"]}
+
+    def ties(c):
+        return [p for p, _, rank in overlap_candidates(name_probe(c), taken, cache, locale) if rank <= 2]
     lists = {s: concepts.load(bundle, s) for s in subs}
     used = {s: concepts.uses(pool_questions, bundle, s) for s in subs}
     levels = assign_difficulties({s: n for s in subs},
@@ -878,6 +889,19 @@ def draw_slots(subs, pool_questions, axes_def, n, seed, bundle="base", locale="e
         rng = random.Random(f"{seed}:{s}")
         lst = lists[s]
         picked = concepts.draw_concepts(lst, used[s], levels[s], rng)  # scarce levels pick first
+        names = {c["name"] for c in picked}
+        for i, target in enumerate(levels[s][:len(picked)]):
+            tried = set()
+            while ties(picked[i]) and len(tried) < TIE_REDRAWS:
+                tried.add(picked[i]["name"])
+                alt = concepts.draw_concepts({"concepts": [c for c in lst["concepts"] if c["name"] not in names | tried]},
+                                             used[s], [target], rng)
+                if not alt:
+                    break
+                names = names - {picked[i]["name"]} | {alt[0]["name"]}
+                picked[i] = alt[0]
+        tied = {c["name"]: [p["concept"] for p in ties(c)] for c in picked}
+        taken += [name_probe(c) for c in picked]
         pairs = list(zip(picked, levels[s]))
         rng.shuffle(pairs)
         usage = concepts.axis_usage(pool_questions, bundle, s)
@@ -893,9 +917,9 @@ def draw_slots(subs, pool_questions, axes_def, n, seed, bundle="base", locale="e
                 continue
             own = [q for q in shown
                    if categories.key(q) == (bundle, s) and q.get("of", q).get("concept") == c["name"]]
-            probe = {"question": c["name"], "answer": c["name"], "concept": c["name"]}
-            found = [p for p, _, rank in overlap_candidates(probe, others, cache, locale) if rank <= 2]
+            found = [p for p, _, rank in overlap_candidates(name_probe(c), others, cache, locale) if rank <= 2]
             asked = list(dict.fromkeys(f"{q['question']} → {q['answer']}" for q in own + found))
+            asked += [f"(this run, another subcategory: a question about «{t}»)" for t in tied[c["name"]]]
             slots.append({"slot": len(slots), "concept": c["name"], "facet": c["facet"], "target_difficulty": target,
                           "options": [{"option": i, **combo} for i, combo in enumerate(combos, 1)],
                           "already_asked": asked})
