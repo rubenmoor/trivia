@@ -107,7 +107,8 @@
     {
       "name": "Cristóbal de Acuña",
       "facet": "Orellana y primeros viajes europeos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: Too obscure, and no option gives a fair question."
     },
     {
       "name": "Amazonas (guerreras mitológicas)",
@@ -147,7 +148,8 @@
     {
       "name": "Awajún",
       "facet": "Pueblos indígenas amazónicos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: The Awajún are too little known outside Peru to give a fair question with these options."
     },
     {
       "name": "Tsantsa",
@@ -531,7 +533,8 @@
     {
       "name": "Un viejo que leía novelas de amor",
       "facet": "El Amazonas en cine y literatura",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "used_up: The pool already asks for the author, and none of these options gives a good second question."
     },
     {
       "name": "Luis Sepúlveda",

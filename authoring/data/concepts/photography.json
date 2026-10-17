@@ -522,7 +522,8 @@
     {
       "name": "Fotografía instantánea",
       "facet": "Película, revelado y Polaroid",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: Instant cameras and Edwin Land are already in the pool; naming the concept again would repeat them."
     },
     {
       "name": "Cuarto oscuro",

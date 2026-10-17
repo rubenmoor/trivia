@@ -304,6 +304,11 @@
       "name": "Fórmica",
       "facet": "Marcas que se volvieron palabras",
       "known_at": 13
+    },
+    {
+      "name": "Duracell",
+      "facet": "Aseo, hogar y cuidado personal",
+      "known_at": 8
     }
   ],
   "top_ups": [
@@ -341,6 +346,56 @@
       "date": "2026-10-16",
       "added": 0,
       "unused": 28
+    },
+    {
+      "date": "2026-10-17",
+      "added": 0,
+      "unused": 28
+    },
+    {
+      "date": "2026-10-17",
+      "added": 0,
+      "unused": 28
+    },
+    {
+      "date": "2026-10-17",
+      "added": 0,
+      "unused": 28
+    },
+    {
+      "date": "2026-10-17",
+      "added": 1,
+      "unused": 29
+    },
+    {
+      "date": "2026-10-17",
+      "added": 0,
+      "unused": 21
+    },
+    {
+      "date": "2026-10-17",
+      "added": 0,
+      "unused": 21
+    },
+    {
+      "date": "2026-10-17",
+      "added": 0,
+      "unused": 21
+    },
+    {
+      "date": "2026-10-17",
+      "added": 0,
+      "unused": 21
+    },
+    {
+      "date": "2026-10-17",
+      "added": 0,
+      "unused": 21
+    },
+    {
+      "date": "2026-10-17",
+      "added": 0,
+      "unused": 21
     }
   ]
 }
