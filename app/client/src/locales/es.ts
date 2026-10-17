@@ -403,6 +403,7 @@ const es = {
       resumePlayer: "Continuar: {name}, nivel {level}",
       /** A multiplayer session: {names} cut short after two; the mode's name below. */
       resumeSession: "Continuar: {names}, nivel {level}",
+      resumeTimed: "Continuar: {names}, ronda {level}",
       new: "Nueva partida",
       /** Shortcut for `new` (case-insensitive). */
       newKey: "N",
@@ -493,6 +494,12 @@ const es = {
       timeUp: "Se acabó el tiempo",
       /** The veil while the clock is paused. */
       paused: "Pausa",
+      /** Round 12: the first correct answer wins. */
+      suddenDeath: "Muerte súbita",
+      /** Sudden death repeated after a round without a correct answer. */
+      again: "Otra ronda más: {n}",
+      /** Everyone is out (decision 280). */
+      nobody: "Nadie gana esta vez",
     },
     victory: {
       title: "¡Ganaron!",

@@ -57,6 +57,7 @@
     if (!timed) return;
     let alive = true;
     const on = () => alive;
+    if (timed.sudden_death) sfx("boom");
     if (session!.seats.some((_, i) => lost(i) > 0)) setTimeout(() => alive && sfx("glass-break"), FADE_MS + 900); // the crack in Hearts.svelte
     (async () => {
       await wait(FADE_MS + ROUND_HOLD_MS, on);
@@ -73,8 +74,13 @@
 
 {#if timed && session}
 <section class="screen round">
-  <p class="kicker">{t("screen.timed.kicker")}</p>
-  <h1 class="title big">{timed.round} <span class="of">{t("screen.level.of", { n: levels })}</span></h1>
+  {#if timed.sudden_death}
+    <h1 class="title big sudden">{t("screen.timed.suddenDeath")}</h1>
+    {#if timed.repeat > 0}<p class="kicker">{t("screen.timed.again", { n: timed.repeat + 1 })}</p>{/if}
+  {:else}
+    <p class="kicker">{t("screen.timed.kicker")}</p>
+    <h1 class="title big">{timed.round} <span class="of">{t("screen.level.of", { n: levels })}</span></h1>
+  {/if}
   <div class="seats">
     {#each session.seats as s, i (i)}
       <div class="seat-card glass-light" class:out={s.status !== "playing"}>
@@ -116,6 +122,9 @@
 <style>
   p {
     margin: 0;
+  }
+  .sudden {
+    color: var(--coral);
   }
   .milestone.again {
     color: var(--coral);

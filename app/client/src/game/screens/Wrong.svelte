@@ -29,6 +29,8 @@
   } = $props();
 
   /** rr-competitive: one seat is out, the others play on (decision 279). */
+  /** Timed: everyone is out at one round end (decision 280). */
+  const nobody = $derived(game.session?.mode === "timed");
   const knockout = $derived(game.session?.mode === "rr-competitive" && last.seat !== undefined);
 </script>
 
@@ -36,7 +38,12 @@
   <div class="columns">
     <Tower filled={blocks} {levels} small crumble />
     <div class="stack">
-      {#if knockout}
+      {#if nobody}
+        <h1 class="title bad">{t("screen.timed.nobody")}</h1>
+        <div class="muted">
+          {#each game.session!.seats as _, i (i)}<SeatTag session={game.session!} seat={i} small />{/each}
+        </div>
+      {:else if knockout}
         <h1 class="title bad">{t("screen.result.out", { name: game.session!.seats[last.seat!].player ?? last.seat! + 1 })}</h1>
         <SeatTag session={game.session!} seat={last.seat!} />
       {:else}
@@ -44,7 +51,7 @@
         {#if game.session && last.seat !== undefined}<SeatTag session={game.session} seat={last.seat} />{/if}
       {/if}
       <AnswerPanel {last} label={t("screen.result.answerWas")} />
-      {#if !knockout}<p class="consolation">{consolation(game.level, levels, game.id)}</p>{/if}
+      {#if !knockout && !nobody}<p class="consolation">{consolation(game.level, levels, game.id)}</p>{/if}
     </div>
   </div>
   {#if onnext}
@@ -60,6 +67,14 @@
   }
   .title {
     animation: arrive 0.6s var(--spring) backwards;
+  }
+  .muted {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: calc(0.6 * var(--u));
+    opacity: 0.45;
+    filter: grayscale(1);
   }
   .bad {
     color: var(--coral);

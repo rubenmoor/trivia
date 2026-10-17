@@ -448,7 +448,7 @@
     await go("level", "whoosh", () => ((game = next), (roundBefore = before)));
   }
 
-  /** Timed: the session ended (PLACEHOLDER(1452): the timed ends). */
+  /** Timed: the session ended: a winner (round 12 or last standing), else nobody wins (decision 280). */
   async function timedEnd(next: Game) {
     if (next.result === "won") await go("victory", "applause-big", () => (game = next));
     else await go("wrong", "boom", () => (game = next));
@@ -687,10 +687,10 @@
     untrack(() => watchGame(g));
   });
 
-  // Steam rich presence «Nivel 7 de 12» while playing (plan 85).
+  // Steam rich presence «Nivel 7 de 12» while playing (plan 85); none in timed: no «Ronda» token.
   let presence = "";
   $effect(() => {
-    const level = ["level", "select", "question", "correct", "next"].includes(screen) ? game?.level : undefined;
+    const level = ["level", "select", "question", "correct", "next"].includes(screen) && !game?.session?.timed ? game?.level : undefined;
     const next = level ? `${level}/${levels}` : "";
     if (!steam?.available || next === presence) return;
     presence = next;

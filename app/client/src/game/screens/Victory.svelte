@@ -5,6 +5,7 @@
   import type { Game } from "../../lib/types.ts";
   import AnswerPanel from "../AnswerPanel.svelte";
   import Fireworks from "../Fireworks.svelte";
+  import Hearts from "../Hearts.svelte";
   import Prompt from "../Prompt.svelte";
   import SeatTag from "../SeatTag.svelte";
   import Tower from "../Tower.svelte";
@@ -18,15 +19,21 @@
 
   const session = $derived(game.session);
   const competitive = $derived(session?.mode === "rr-competitive");
+  const timed = $derived(session?.mode === "timed");
   const winner = $derived(session?.seats.findIndex((x) => x.status === "won") ?? -1);
   /** Won as the last one standing, not at the top (decision 278). */
-  const standing = $derived(game.last?.correct === false);
+  const standing = $derived(timed ? !(game.last?.correct && session?.timed?.sudden_death) : game.last?.correct === false);
   const others = $derived(session?.seats.map((_, i) => i).filter((i) => i !== winner) ?? []);
 </script>
 
 <Fireworks mode="finale" />
 <section class="screen result victory">
-  {#if competitive && session && winner >= 0}
+  {#if timed && session && winner >= 0}
+    <div class="stack">
+      <Tower filled={standing ? game.level - 1 : levels} {levels} drop={!standing} />
+      <SeatTag {session} seat={winner} />
+    </div>
+  {:else if competitive && session && winner >= 0}
     <div class="stack">
       <Tower filled={seatBlocks(session, winner, levels, !standing)} {levels} drop={!standing} />
       <SeatTag {session} seat={winner} />
@@ -35,7 +42,15 @@
     <Tower filled={levels} {levels} drop />
   {/if}
   <div class="stack">
-    {#if competitive && session && winner >= 0}
+    {#if timed && session && winner >= 0}
+      <h1 class="title big gold">{t("screen.victory.winner", { name: session.seats[winner].player ?? winner + 1 })}</h1>
+      {#if standing}<p class="milestone">{t("screen.victory.standing")}</p>{/if}
+      <div class="rest">
+        {#each others as i (i)}
+          <div class="rest-seat"><SeatTag {session} seat={i} small /><Hearts lives={session.seats[i].lives ?? 0} small /></div>
+        {/each}
+      </div>
+    {:else if competitive && session && winner >= 0}
       <h1 class="title big gold">{t("screen.victory.winner", { name: session.seats[winner].player ?? winner + 1 })}</h1>
       {#if standing}<p class="milestone">{t("screen.victory.standing")}</p>{/if}
       {#if others.length}<Tracks {session} {levels} seats={others} final />{/if}
@@ -69,6 +84,18 @@
     font-weight: 700;
     color: var(--sky);
     animation: arrive 0.7s 0.9s var(--spring) backwards;
+  }
+  .rest {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: calc(0.6 * var(--u)) calc(1 * var(--u));
+    max-width: 60vw;
+  }
+  .rest-seat {
+    display: flex;
+    align-items: center;
+    gap: calc(0.5 * var(--u));
   }
   .stack {
     display: flex;
