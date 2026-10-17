@@ -83,6 +83,13 @@ const SAMPLE_FOR: Partial<Record<Cue, [Sample, ((level: number) => number)?]>> =
   "splash-right": ["escoba"],
   "splash-fade": ["susurro-papel"],
   "splash-spin": ["swoosh-sube", () => 1.2],
+  "splash-explode": ["estallido", () => 1.1],
+  "splash-rocket": ["cohete"],
+  "splash-drop": ["golpe", () => 0.8],
+  "splash-wind": ["escoba", () => 0.8],
+  "splash-blind": ["rebobinar"],
+  "splash-drain": ["silbato"],
+  "splash-pop": ["pop", () => 1.1],
   pop: ["pop", () => 0.9 + Math.random() * 0.25],
   "menu-open": ["menu-abre"],
   "menu-close": ["menu-cierra"],
@@ -459,7 +466,8 @@ export type Cue =
   | "padlock-close" | "padlock-open" | "fanfare" | "sad-trombone" | "rewind" | "menu-open" | "menu-close"
   | "unlocked" | "joker-armed" | "joker-open" | "joker-activate" | "whistle-down" | "stamp" | "shredder"
   | "heartbeat" | "tick" | "glass-break" | "rustle" | "token-back" | "claim" | "countdown"
-  | "splash-left" | "splash-right" | "splash-fade" | "splash-spin";
+  | "splash-left" | "splash-right" | "splash-fade" | "splash-spin"
+  | "splash-dissolve" | "splash-explode" | "splash-rocket" | "splash-drop" | "splash-wind" | "splash-blind" | "splash-drain" | "splash-pop";
 
 /** Play a short effect; `level` sets the pitch of "block" (the tower's height); `synth` skips the recording. */
 export function sfx(cue: Cue, level = 1, opts: { synth?: boolean } = {}) {
@@ -582,6 +590,35 @@ const RECIPES: Record<Cue, Recipe> = {
   "splash-left": (c, o, t) => noise(c, o, t, { from: 2600, to: 300, len: 0.55, q: 2, attack: 0.1, level: 0.5 }),
   "splash-right": (c, o, t) => noise(c, o, t, { from: 300, to: 2600, len: 0.55, q: 2, attack: 0.3, level: 0.5 }),
   "splash-fade": (c, o, t) => noise(c, o, t, { from: 1800, to: 600, len: 0.7, q: 0.8, attack: 0.25, level: 0.3 }),
+  "splash-dissolve": (c, o, t) => {
+    for (let i = 0; i < 14; i++) noise(c, o, t + i * 0.04, { type: "highpass", from: 3500 + Math.random() * 3000, len: 0.05, level: 0.1 });
+    noise(c, o, t, { from: 4000, to: 1500, len: 0.6, q: 0.8, attack: 0.1, level: 0.15 });
+  },
+  "splash-explode": (c, o, t) => {
+    tone(c, o, t, { from: 160, to: 50, len: 0.4, level: 0.5 });
+    noise(c, o, t, { type: "lowpass", from: 3000, to: 400, len: 0.5, level: 0.4 });
+  },
+  "splash-rocket": (c, o, t) => {
+    tone(c, o, t, { from: 400, to: 2000, len: 0.6, level: 0.05, attack: 0.1 });
+    noise(c, o, t, { type: "highpass", from: 1500, to: 4000, len: 0.65, level: 0.12, attack: 0.1 });
+  },
+  "splash-drop": (c, o, t) => {
+    tone(c, o, t, { from: 110, to: 45, len: 0.25, level: 0.6 });
+    tone(c, o, t + 0.3, { from: 90, to: 45, len: 0.2, level: 0.35 });
+    noise(c, o, t + 0.5, { from: 2000, to: 300, len: 0.2, level: 0.25 });
+  },
+  "splash-wind": (c, o, t) => noise(c, o, t, { from: 600, to: 2200, len: 0.7, q: 1.2, attack: 0.3, level: 0.4 }),
+  "splash-blind": (c, o, t) => {
+    for (let i = 0; i < 8; i++) noise(c, o, t + i * 0.06, { from: 1500 + i * 400, len: 0.04, q: 3, level: 0.3 });
+  },
+  "splash-drain": (c, o, t) => {
+    tone(c, o, t, { from: 900, to: 120, len: 0.65, level: 0.12 });
+    noise(c, o, t, { from: 1800, to: 200, len: 0.65, q: 2, level: 0.25 });
+  },
+  "splash-pop": (c, o, t) => {
+    tone(c, o, t, { from: 1400, to: 200, len: 0.1, level: 0.5 });
+    noise(c, o, t + 0.55, { from: 3000, len: 0.05, q: 2, level: 0.3 });
+  },
   "splash-spin": (c, o, t) => {
     tone(c, o, t, { from: 300, to: 1400, len: 0.6, level: 0.1, attack: 0.1 });
     noise(c, o, t, { from: 800, to: 3000, len: 0.6, q: 2, attack: 0.15, level: 0.3 });
