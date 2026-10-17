@@ -14,13 +14,14 @@ Sub-plan of [15](15-i18n.md). Translates everything on screen that isn't a quest
 - **Printable cards** (`/comodines`, JK-11) and the review tool: the cards are translated with the rest; the review tool stays Spanish/English for the author.
 - **Translation work:** Claude drafts the catalogs; a native speaker checks each launch language (playtest, not only a read-through).
 
-## Mode names (Spanish, for the catalog)
-English first (D-74); Spanish forms for `es`. Only «Solo o en grupo» is fixed; the rest are proposals for the developer.
-- `gamemaster` Gamemaster mode → «Modo anfitrión» (proposal)
-- `solo` Alone or as group → «Solo o en grupo» (fixed)
-- `rr-coop` Round-robin co-op → «Por turnos en equipo» (proposal)
-- `rr-competitive` Round-robin competitive → «Por turnos, todos contra todos» (proposal)
-- `timed` Competitive (timed) → «Contrarreloj» (proposal)
+## Mode names (reviewed, `decision 354`)
+Reviewed in the gallery by the developer (`decision 314`, `decision 329`, `decision 354`); no longer proposals. English first (D-74); `es-ES` shares `es`.
+- Screens: «¿Cómo se juega?» (`Solo o en grupo` / `Multijugador`), then the mode (single: `Estándar` group; multi: `Cooperativo` and `Competitivo` groups), then the age group
+- `gamemaster` Gamemaster mode → es «Modo anfitrión», de «Spielleitermodus»
+- `solo` Alone or as group → es «Solo o en grupo», de «Allein oder in der Gruppe»
+- `rr-coop` en «Taking turns» → es «Por turnos», de «Reihum»
+- `rr-competitive` en «Round-robin competitive» → es «Por turnos, todos contra todos», de «Reihum gegeneinander»
+- `timed` en «Compete simultaneously» → es «Todos a la vez», de «Gleichzeitig»
 
 ## Joker names
 Milestone 9 defines the joker names again (pm decision 188, pm plan 136): one symbol per joker, the same in every language, and a name made in English first to fit it. `es`, `es-ES` and `de` are translated from the English names; `es` is an exception to D-59, so the family's game gets them too. Replaces pm decisions 40–44 and 54–58 (D-89, D-91's names).

@@ -2,7 +2,7 @@
 
 **Status:** modes decided (D-74, multiplayer D-77, timed D-80); gamemaster mode specced (D-88, «select answer» setting D-105); MD-6, MD-7, MD-10 done; the three multiplayer modes (MD-8, MD-9) are `milestone 16: Local multiplayer: game modes and controls`, open
 
-Part of the Steam plan ([11](11-steam.md)). Today there is one way to play: the family as a team against the gamemaster, who knows the game and manages the jokers. A Steam player has no gamemaster, so the game itself has to set the rules. There are five modes and no "default mode" (D-74); this file defines them. Spanish names: «Solo o en grupo» fixed, the others proposals ([15a](15a-ui-translation.md) "Mode names").
+Part of the Steam plan ([11](11-steam.md)). Today there is one way to play: the family as a team against the gamemaster, who knows the game and manages the jokers. A Steam player has no gamemaster, so the game itself has to set the rules. There are five modes and no "default mode" (D-74); this file defines them. Spanish names reviewed (decision 354; [15a](15a-ui-translation.md) "Mode names").
 
 ## Modes
 Shared by every mode except gamemaster mode (D-74):
@@ -13,7 +13,7 @@ Shared by every mode except gamemaster mode (D-74):
 - Acting seat (plan 157): every game action may carry `seat` (join-order index); `actor()` refuses before any mode logic: `seat_missing` / `seat_unknown` / `seat_out` in a session, `not_your_turn` in the round-robin modes; a one-player game takes no seat or 0. `new` for a session sends `players` (names, join order; `player_twice`, `players_too_few`); `abandon` names no seat.
 - Age group: the mode never shifts the age-group window (D-38, [21](21-age-groups.md)); no change to `age-groups.json`.
 
-### Gamemaster mode (`gamemaster`, today's game; es proposal «Modo anfitrión»)
+### Gamemaster mode (`gamemaster`, today's game; es «Modo anfitrión»)
 - One team; one person, the gamemaster, holds every control (keyboard, mouse, gamepad, switchable any time).
 - "Configure game" screen with full customization before every game (MD-11).
 - Gamemaster menu (`Esc`): arbitrary cheats: manage jokers, skip, replace the current question, undo, … (MD-12; today's overlay, D-30, MD-4).
@@ -60,7 +60,7 @@ Today's overlay (`Overlay.svelte`) grows into the menu, in two visibly separate 
 ### Multiplayer modes (D-77)
 Shared by the three: no skip, no undo, no joker changes mid-game; flagging only logs (decision 60); achievements unless customized. Input per `milestone 16: Local multiplayer: game modes and controls` ([14](14-input.md) section 3): each gamepad is one player, keyboard and mouse together one player; keyboard-only sessions: one claim key per player. Built with milestone 16, each mode when its ship task lands.
 
-### Round-robin co-op (`rr-coop`; es proposal «Por turnos en equipo»)
+### Round-robin co-op (`rr-coop`; en «Taking turns», es «Por turnos»)
 - Turn order: one question per player, in join order, round after round.
 - One team, one game, one age group.
 - Jokers: one shared standard set (3 × Soplo, 1 × each other joker); any player may use what's left on their turn.
@@ -69,7 +69,7 @@ Shared by the three: no skip, no undo, no joker changes mid-game; flagging only 
 - Seen events (D-82): ≈ 1 game's (12 + the standard set's skips and swaps).
 - As built (task 1407): engine only (`newSession` in `engine/game.ts`; `BUILT_MODES` unchanged, `api.ts` `new` refuses unbuilt modes): `row.state` is the team's game, `seats[]` without `state`, `row.turn` rotates after each final answer; `HistoryEntry.seat`, `view().session`, `last.seat`; tests in `engine/session.test.ts`.
 
-### Round-robin competitive (`rr-competitive`; es proposal «Por turnos, todos contra todos»)
+### Round-robin competitive (`rr-competitive`; es «Por turnos, todos contra todos»)
 - Turn order: one question per player, in join order; each turn plays that player's own game.
 - Every player: own game, own level, own standard joker set, own age group.
 - Drop-out and win: a wrong answer ends only that player's game; first to level 12 wins.
@@ -77,7 +77,7 @@ Shared by the three: no skip, no undo, no joker changes mid-game; flagging only 
 - Seen events (D-82): ≈ N players × 1 game's; every seen event counts for the save, whichever player saw it.
 - As built (task 1408): engine only: every seat's own game in `seats[].state` (`age_groups` per seat), `row.state` the shared settings and the session's `last`; supply checked over seat × level; no card twice in a session (other seats' tables only as a fallback); a wrong answer puts the seat out, the turn skips it; first to the last level wins, and the last seat in wins at once (decision 278: Round-robin competitive: the last player standing wins at once); tests in `engine/session.test.ts`.
 
-### Competitive timed (`timed`; es proposal «Contrarreloj»; D-80, replaces D-77's timed part)
+### Competitive timed (`timed`; en «Compete simultaneously», es «Todos a la vez»; D-80, replaces D-77's timed part)
 - 12 rounds; round = level (the question's difficulty follows the round); questions per round = number of players.
 - One age group for everyone; no jokers.
 - Every question shown to all players: 30 s, a hint every 8 s; unclaimed after 30 s = next question, nothing else.
