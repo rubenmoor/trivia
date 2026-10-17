@@ -88,5 +88,63 @@ saves.crowd = withExtraPlayers(structuredClone(done));
 saves.session = newSession(structuredClone(done), data, io(), PLAYERS.slice(0, 3), { mode: "rr-coop" }).save;
 meta.session = { id: saves.session.games.at(-1).id, bound: [{ pad: 0 }, { pad: 1 }, "kbm"] };
 
+// Round-robin scenes (plans 163, 165): built with the engine's session actions, one acting seat per call.
+const gameRow = (save) => save.games.at(-1);
+const turnOf = (save) => gameRow(save).turn;
+/** The seat's own game in rr-competitive, else the shared one. */
+const seatState = (save, seat) => gameRow(save).seats[seat].state ?? gameRow(save).state;
+const rightIn = (save, seat) => {
+  const st = seatState(save, seat);
+  return st.answers.indexOf(data.byId.get(st.current).answer);
+};
+
+/** The turn seat picks card 0 and answers: right, or wrong when `rightly` is false. */
+function turnAnswers(save, rightly = true) {
+  const seat = turnOf(save);
+  ({ save } = pick(save, data, io(), 0, seat));
+  const right = rightIn(save, seat);
+  ({ save } = answer(save, data, io(), rightly ? right : (right + 1) % 4, seat));
+  return save;
+}
+
+/** A session of `n` seats; each entry of `plan` is one answer by whoever has the turn (false: wrong). */
+function session(mode, n, plan = []) {
+  let save = newSession(structuredClone(done), data, io(), PLAYERS.slice(0, n), { mode }).save;
+  for (const rightly of plan) save = turnAnswers(save, rightly);
+  return save;
+}
+
+/** The turn seat has its question on screen and keyboard and mouse (the clicks of the page) are its device; the
+ * other seats hold pads (`bound` goes to sessionStorage, plan 161). */
+function onQuestion(save) {
+  const seat = turnOf(save);
+  ({ save } = pick(save, data, io(), 0, seat));
+  const n = gameRow(save).seats.length;
+  let pad = 0;
+  return { save, meta: { id: gameRow(save).id, right: rightIn(save, seat),
+    bound: Array.from({ length: n }, (_, i) => (i === seat ? "kbm" : { pad: pad++ })) } };
+}
+/** The table of the turn seat, bound the same way. */
+function onTable(save) {
+  const n = gameRow(save).seats.length;
+  let pad = 0;
+  return { save, meta: { id: gameRow(save).id, bound: Array.from({ length: n }, (_, i) => (i === turnOf(save) ? "kbm" : { pad: pad++ })) } };
+}
+const scene = (name, { save, meta: m }) => ((saves[name] = save), (meta[name] = m));
+const rounds = (n, rightly = true) => Array(n).fill(rightly);
+
+// rr-coop: level 4 after three answers (a table: Level, Select); its question (Correct, the team's loss); the last level.
+scene("coop", onTable(session("rr-coop", 3, rounds(3))));
+scene("coop-q", onQuestion(session("rr-coop", 3, rounds(3))));
+scene("coop-q12", onQuestion(session("rr-coop", 3, rounds(11))));
+// rr-competitive: three seats, the second one out after a wrong answer; level 3 for the others.
+const mixed = [true, false, true, true, true, true];
+scene("comp", onTable(session("rr-competitive", 3, mixed)));
+scene("comp-q", onQuestion(session("rr-competitive", 3, rounds(1))));
+// Seat 0 on the last level of its own game (the others each answered 11 times).
+scene("comp-q12", onQuestion(session("rr-competitive", 3, rounds(33))));
+// Two seats: the second one's question, a wrong answer leaves the first one standing.
+scene("comp-last", onQuestion(session("rr-competitive", 2, rounds(5))));
+
 for (const s of Object.values(saves)) checkVersion(s);
 process.stdout.write(JSON.stringify({ saves, meta, players: [...PLAYERS, ...EXTRA_PLAYERS] }));

@@ -25,7 +25,7 @@ const choose = (lines: readonly string[], seed: number) => lines[Math.abs(seed) 
 /** The Level screen's line, null at most levels. */
 export function milestone(level: number, levels: number, seed: number): string | null {
   const at = milestoneAt(levels).get(level);
-  return at ? choose(variants(`copy.milestone.${at}`), seed) : null;
+  return at ? fill(choose(variants(`copy.milestone.${at}`), seed)) : null; // fill traces it for the gallery
 }
 
 export function consolation(level: number, levels: number, seed: number): string {
