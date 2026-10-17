@@ -9,6 +9,9 @@ import { makeResolver } from "../desktop/resolve.mjs";
 import { makeSaveFile } from "../desktop/save.mjs";
 import { muteReason } from "../desktop/mute.mjs";
 
+/** Demo build (decision 338): `TRIVIA_DEMO=1` at build, dev and preview time. */
+export const demo = process.env.TRIVIA_DEMO === "1";
+
 const client = fileURLToPath(new URL(".", import.meta.url));
 const repo = `${client}../../`;
 const SHIM = "/@trivia/shell.js";
@@ -72,6 +75,7 @@ function mount(app: Connect.Server, dist: string | null): void {
     data: `${repo}app/data`,
     media: process.env.TRIVIA_MEDIA || `${repo}media`,
   });
+  if (demo) console.log("trivia dev: demo");
   const save = makeSaveFile(saveDir());
   void save.dropStaleTemp();
   const muted = muteReason(process.env);
@@ -126,7 +130,7 @@ export function devServer(): Plugin {
       mount(server.middlewares, null);
     },
     configurePreviewServer(server) {
-      mount(server.middlewares, `${client}dist/`);
+      mount(server.middlewares, `${client}${demo ? "dist-demo" : "dist"}/`);
     },
     transformIndexHtml: () => [{ tag: "script", attrs: { src: SHIM }, injectTo: "head-prepend" }],
   };
