@@ -1109,3 +1109,14 @@ Template:
   - Not in scope: bundle ids, `bundles.json`'s `name`/`description`
 - Consequences: plan 149 (Python readers and `qgen rekey`, engine/client, migration, review tool and reports, mods, taxonomy on slugs, docs)
 - Supersedes / related: supersedes pm decision 165's name-as-key part; amends D-99 (bundle + slug), D-100 (slug keys); D-59, D-109; pm decisions 133, 250, 258
+
+## D-111: Overlap in drafting: a runaway alarm and cross-subcategory `already_asked`
+- Date: 2026-10-17
+- Context: from batch-9 (English drafts, international concepts) ≈ 15 % of drafts are dropped as overlaps, 90 % with a partner in another subcategory the drafter never saw; the 3 % threshold (pm decision 13) predates rater drops and stopped every batch; pm decision 350, task 1573's note
+- Decision:
+  - **Threshold:** `batch_health` 'overlap rate' max 3 % → 20 %, a runaway alarm; 'needs_work: overlap' ≤ 1 % stays the quality gate
+  - **`already_asked`** (`draw_slots`): the slot concept's questions in its subcategory plus the non-rejected pool questions of every subcategory and bundle that `overlap_candidates` finds for a probe on the concept name (rank ≤ 2)
+  - **Draft locale:** `already_asked` and "Already in the pool" (`existing_answers`) through `as_locale` (en drafts see es sources through their en translation or English keys, decision 232)
+  - **Run-wide concept tie check** (pm decision 350 c): task 1577
+- Consequences: batch-10's subcategories on the pool of 2026-10-17: 19 % of slots get a cross-subcategory entry, ≈ +57 KB of draft prompt per batch, ≈ 95 s once per run when the slots are drawn; expected overlap rate ≈ 10–11 %
+- Supersedes / related: amends D-55 (threshold number), PE-4, PE-10; pm decisions 13, 232, 350; plan 180

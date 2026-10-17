@@ -860,9 +860,14 @@ def assign_difficulties(free, fresh, weights, seed, rounds=50):
     return out
 
 
-def draw_slots(subs, pool_questions, axes_def, n, seed, bundle="base"):
+def draw_slots(subs, pool_questions, axes_def, n, seed, bundle="base", locale="es"):
     """{subcategory: slots} for a run (PE-10): a concept, a target difficulty, up to 3 axis
-    combinations and the questions already asked about the concept, per slot. Seeded."""
+    combinations and the questions already asked about the concept, per slot. Seeded. `already_asked`:
+    the subcategory's questions on the concept plus, from every subcategory and bundle, the non-rejected
+    ones a concept probe finds (overlap_candidates rank ≤ 2, decision 350); all in `locale` (as_locale)."""
+    shown = as_locale(pool_questions, locale)
+    others = [q for q in shown if q.get("of", q)["status"] != "rejected"]
+    cache = {}
     lists = {s: concepts.load(bundle, s) for s in subs}
     used = {s: concepts.uses(pool_questions, bundle, s) for s in subs}
     levels = assign_difficulties({s: n for s in subs},
@@ -886,8 +891,11 @@ def draw_slots(subs, pool_questions, axes_def, n, seed, bundle="base"):
                                           possible=possible)
             if not combos:
                 continue
-            asked = [f"{q['question']} → {q['answer']}" for q in pool_questions
-                     if categories.key(q) == (bundle, s) and q.get("concept") == c["name"]]
+            own = [q for q in shown
+                   if categories.key(q) == (bundle, s) and q.get("of", q).get("concept") == c["name"]]
+            probe = {"question": c["name"], "answer": c["name"], "concept": c["name"]}
+            found = [p for p, _, rank in overlap_candidates(probe, others, cache, locale) if rank <= 2]
+            asked = list(dict.fromkeys(f"{q['question']} → {q['answer']}" for q in own + found))
             slots.append({"slot": len(slots), "concept": c["name"], "facet": c["facet"], "target_difficulty": target,
                           "options": [{"option": i, **combo} for i, combo in enumerate(combos, 1)],
                           "already_asked": asked})
@@ -895,10 +903,11 @@ def draw_slots(subs, pool_questions, axes_def, n, seed, bundle="base"):
     return plan
 
 
-def existing_answers(pool, bundle, sub):
-    """The subcategory's own pool questions, all statuses (PE-4); merge's `duplicates()` and the
-    review's `related` list still check the whole pool."""
-    return sorted({f"{q['answer']} ({q['question'][:60]})" for q in pool["questions"] if categories.key(q) == (bundle, sub)})
+def existing_answers(pool, bundle, sub, locale="es"):
+    """The subcategory's own pool questions, all statuses (PE-4), in `locale` (as_locale); merge's
+    `duplicates()` and the review's `related` list still check the whole pool."""
+    return sorted({f"{q['answer']} ({q['question'][:60]})"
+                   for q in as_locale([q for q in pool["questions"] if categories.key(q) == (bundle, sub)], locale)})
 
 
 def cmd_draft(args):
@@ -922,13 +931,13 @@ def cmd_draft(args):
         sys.exit(f"No concept list for {', '.join(missing)}: run `qgen concepts --bundle {bundle} --subcategories ...` first.")
     pool = load_json(POOL)
     axes_def = concepts.load_axes(bundle)
+    locale = text_locale(d)
     plan = load_json(d / "slots.json")
     if plan is None:  # drawn once, so a rerun drafts the same slots
-        plan = draw_slots(subs, pool["questions"], axes_def, args.slots, args.seed, bundle)
+        plan = draw_slots(subs, pool["questions"], axes_def, args.slots, args.seed, bundle, locale)
         save_json(d / "slots.json", plan)
     drawn = Counter(sl["target_difficulty"] for slots in plan.values() for sl in slots)
     print("target difficulty: " + "  ".join(f"{lvl}×{c}" for lvl, c in sorted(drawn.items())), flush=True)
-    locale = text_locale(d)
     system = prompt("house-style", "draft", locale=locale, bundle=bundle)
     todo = [s for s in subs if plan.get(s) and not (d / "drafts" / f"{slug(s)}.json").exists()]
     progress.resumed("draft", sum(bool(plan.get(s)) for s in subs) - len(todo), len(todo), "subcategories")
@@ -936,7 +945,7 @@ def cmd_draft(args):
     def work(sub):
         slots = plan[sub]
         shown = {a: {o[a] for sl in slots for o in sl["options"]} for a in concepts.AXES}
-        avoid = "\n".join(f"- {a}" for a in existing_answers(pool, bundle, sub)) or "none yet"
+        avoid = "\n".join(f"- {a}" for a in existing_answers(pool, bundle, sub, locale)) or "none yet"
         user = (subcategory_header(bundle, sub, locale) + "\n\n## Question axes (the values in these options)\n"
                 + concepts.axes_text(axes_def, shown) + "\n\n## Slots\n" + json.dumps(slots, ensure_ascii=False)
                 + f"\n\n## Already in the pool for this subcategory (don't repeat these facts)\n{avoid}"
