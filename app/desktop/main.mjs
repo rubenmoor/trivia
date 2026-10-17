@@ -692,8 +692,10 @@ async function start() {
     saveFile = makeSaveFile(userSaveDir());
     console.error(`trivia: save ${saveFile.file}`);
     await saveFile.dropStaleTemp();
-    telemetry = makeTelemetry(telemetryDir(), { version: app.getVersion() });
-    await telemetry.start().catch(telemetryError);
+    if (!isDemo()) { // decision 337: no telemetry in the demo
+      telemetry = makeTelemetry(telemetryDir(), { version: app.getVersion() });
+      await telemetry.start().catch(telemetryError);
+    }
   } else console.error("trivia: no Steam user, progress not saved");
   if (!telemetryOn()) console.error("trivia: telemetry off");
   if (args.importSave) {
@@ -1012,7 +1014,7 @@ function reportConfig() {
 
 let reportTargetCache;
 function reportAvailable() {
-  if (!validUser) return false;
+  if (!validUser || isDemo()) return false; // decision 337: no question reports in the demo
   reportTargetCache ??= reportConfig();
   return reportTargetCache !== null;
 }
