@@ -387,9 +387,72 @@ Store texts for each shipped question bundle, one free DLC app each (decision 66
   [/list]
   ```
 
+### `spain` (Regional: España / Regional: Spain)
+- Languages: es-ES (pool: `app/data/bundles/spain/pool.json`, enter once it ships); en text drafted, **enter only once the pack's en translations exist** (`pool.en.json`); until then the DLC page lists Spanish only
+- Voice: Spanish as spoken in Spain; facts: `app/data/bundles/spain/categories.json` (14 categories), `names.es.json`, `names.en.json`; description in `app/data/names.{es,en}.json` `bundles.spain`; no Steam achievement of its own, none mentioned
+- Terms: es-ES style guide (`es-ES.md`): «vosotros», plural imperatives in «-d»; the question step is «¿Qué preguntas jugáis?» (`bundles.titleMany`)
+- Drafted 2026-10-16 (`task 1472`); approved through pm decision "DLC store texts approved? (spain)", like colombia's (`task 783: Free DLC store texts in 17a`)
+
+#### Spanish – Spain (`es-ES`)
+- **Name:** Regional: España
+- **Short description** (≤ 300):
+  > Paquete de preguntas gratis para Trivia en Familia, para quien tiene relación con España: lugares, comida, fiestas, costumbres, gente, música, deporte y palabras de aquí. Se instala aparte y viene apagado: encendedlo en el paso de paquetes de preguntas cuando queráis jugarlo.
+- **About This Content:**
+  ```
+  [h2]Preguntas de España[/h2]
+  Regional: España es un paquete de preguntas gratis para Trivia en Familia. Es para quien tiene relación con España: preguntas que aquí se saben y que fuera casi nadie sabría.
+
+  [list]
+  [*][b]Geografía y naturaleza:[/b] comunidades y provincias, ciudades, ríos, montañas, costas, islas, parques naturales y fauna
+  [*][b]Historia y personajes:[/b] de Hispania a la democracia, científicos, exploradores y españoles famosos
+  [*][b]Gastronomía:[/b] platos regionales, tapas, dulces, jamón, quesos y bebidas
+  [*][b]Fiestas, tradiciones y leyendas:[/b] fiestas populares, Navidad, Semana Santa, criaturas y supersticiones
+  [*][b]Música, arte, cine y televisión:[/b] flamenco, copla, pop, literatura, pintura, series y programas
+  [*][b]Deporte:[/b] clubes de fútbol, la Selección, deportistas y deportes tradicionales
+  [*][b]Así hablamos y vivimos en España:[/b] jerga, refranes, lenguas y acentos, marcas, colegio y símbolos
+  [/list]
+
+  [h2]Cómo se juega[/h2]
+  [list]
+  [*]Gratis; necesita el juego base Trivia en Familia
+  [*]Instalación opcional: se puede quitar y volver a poner en Steam
+  [*]Apagado por defecto: encendedlo en el paso «Paquetes de preguntas» antes de cada partida; sus preguntas se mezclan con las del paquete básico
+  [*]El paquete crece con las actualizaciones
+  [/list]
+  ```
+
+#### English (`en`) — enter once the pack's en translations exist
+- **Name:** Regional: Spain
+- **Short description** (≤ 300):
+  > A free question bundle for Living Room Trivia, for anyone with ties to Spain: its places, food, customs, people, music, sport and words. Installs separately and starts switched off: turn it on in the question bundle step whenever you want to play it.
+- **About This Content:**
+  ```
+  [h2]Questions from Spain[/h2]
+  Regional: Spain is a free question bundle for Living Room Trivia. It's for anyone with ties to Spain: questions people in Spain know and hardly anyone outside would.
+
+  [list]
+  [*][b]Geography and nature:[/b] regions and provinces, cities, rivers, mountains, coasts, islands, natural parks and wildlife
+  [*][b]History and people:[/b] from Hispania to democracy, scientists, explorers and famous Spaniards
+  [*][b]Food and drink:[/b] regional dishes, tapas, sweets, ham, cheese and drinks
+  [*][b]Festivals, traditions and legends:[/b] local fiestas, Christmas, Holy Week, creatures and superstitions
+  [*][b]Music, art, film and TV:[/b] flamenco, copla, pop, literature, painting, series and shows
+  [*][b]Sport:[/b] football clubs, the national team, athletes and traditional sports
+  [*][b]How Spain talks and lives:[/b] slang, sayings, languages and accents, brands, school and symbols
+  [/list]
+
+  [h2]How it plays[/h2]
+  [list]
+  [*]Free; needs the base game Living Room Trivia
+  [*]Optional install: remove it and add it back in Steam any time
+  [*]Off by default: turn it on in the “Question bundles” step before a game; its questions mix with the base bundle's
+  [*]The bundle grows with updates
+  [/list]
+  ```
+
 ### After approval
 - Capsules: the DLC store name equals the in-game name, so `dlc-colombia/` capsules from `task 669` stay as rendered (no re-run)
 - `germany`: `capsules.mjs` renders `dlc-germany/de/` (bundle language) now; add `en` to its `langs` map in `dlcs()` once the en text is entered
+- `spain`: `capsules.mjs` renders `dlc-spain/es-ES/` (bundle language) now; add `en` to its `langs` map in `dlcs()` once the en text is entered
 - `uk`: `capsules.mjs` renders `dlc-uk/en/` from the bundle language (en) and `names.en.json`; no script change
 - `usa`: `authoring/store/capsules.mjs` renders `dlc-usa/en/` from `bundles.json` languages (en) and the name in `names.en.json`; render with the other DLCs' capsules, approval with the capsule set
 
