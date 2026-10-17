@@ -100,7 +100,9 @@
   const left = (deadline: number, span: number) => Math.min(1, Math.max(0, (deadline - now) / span));
   const bar = $derived.by(() => {
     const d = held ? null : timedOf(game).deadline;
-    return d === null ? frozen : left(d, QUESTION_MS);
+    if (d !== null) return left(d, QUESTION_MS);
+    const c = held ? null : timedOf(game).claim;
+    return c ? c.question_left / QUESTION_MS : frozen;
   });
   $effect(() => {
     if (!held && timedOf(game).deadline !== null) frozen = bar;
