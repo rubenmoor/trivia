@@ -132,9 +132,9 @@ export async function removeSpotCheck(batch: string, id: string): Promise<null> 
   return send(`/api/spot-checks/${encodeURIComponent(batch)}/${encodeURIComponent(id)}`, { undo: true });
 }
 
-/** trivia-gallery's manifest (null before its first run) and the UI string flags (plan 100). */
-export async function fetchGallery(): Promise<{ manifest: GalleryManifest | null; flags: UiFlag[] }> {
-  return get("/api/gallery");
+/** trivia-gallery's manifest (null before its first run) or a review set's, and the UI string flags (plan 100). */
+export async function fetchGallery(set: string | null): Promise<{ manifest: GalleryManifest | null; flags: UiFlag[] }> {
+  return get(set ? `/api/gallery?${new URLSearchParams({ set })}` : "/api/gallery");
 }
 
 /** Add a flag, edit its note or remove it; returns every flag. */
