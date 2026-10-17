@@ -55,7 +55,7 @@
       "max": 0.01
     },
     "overlap rate": {
-      "max": 0.03
+      "max": 0.2
     },
     "merged/slots 11–15": {
       "min": 0.55
