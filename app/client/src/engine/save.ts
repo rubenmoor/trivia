@@ -1,6 +1,6 @@
 // The save document on disk (plan 49, PORT-4): parse/upgrade and flags.
 import { pyLen } from "./pycompat.ts";
-import { SAVE_VERSION, SPANISH, type FlagEntry, type FlagText, type GameState, type Language, type SaveData } from "./state.ts";
+import { SAVE_VERSION, SPANISH, isSeatDevice, type FlagEntry, type FlagText, type GameState, type Language, type SaveData } from "./state.ts";
 
 const isObject = (v: unknown): v is Record<string, any> => typeof v === "object" && v !== null && !Array.isArray(v);
 
@@ -44,6 +44,7 @@ function checkSession(g: Record<string, any>): void {
     if (!g.seats.every((s: Record<string, any>) => s.player_id === null || typeof s.player_id === "number"))
       throw new Error("a seat's player_id must be a number or null");
     if (!g.seats.every((s: Record<string, any>) => s.state === undefined || isObject(s.state))) throw new Error("a seat's state must be an object");
+    if (!g.seats.every((s: Record<string, any>) => s.device === undefined || isSeatDevice(s.device))) throw new Error("a seat's device is unknown");
   }
   if (g.turn !== undefined && !(Number.isInteger(g.turn) && g.turn >= 0 && g.turn < (g.seats?.length ?? 0)))
     throw new Error("turn must be an index into seats");

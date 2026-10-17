@@ -11,7 +11,7 @@ import { messageOf } from "./http.ts";
 import { language as fetchLanguage, nextLocale, read, run, type DataScope, type Route } from "./engine.ts";
 import { emit, runAfter, runBefore } from "./mods.ts";
 import { actingSeat } from "./seats.svelte.ts";
-import type { Choice, Difficulty, Flagged, Game, GameMode, JokerBudget, JokerEvent, JokerName, Language, Player, Supply } from "./types.ts";
+import type { Choice, Difficulty, Flagged, Game, GameMode, JokerBudget, JokerEvent, JokerName, Language, Player, SeatDevice, Supply } from "./types.ts";
 
 // The game's only door to the referee: the TS engine on an in-memory save, persisted by lib/store.ts (plan 50, PORT-7).
 
@@ -87,6 +87,8 @@ export interface GameActionBody {
   players?: string[];
   /** rr-competitive: one age group per player, join order. */
   age_groups?: string[];
+  /** `new` for a session: each player's device kind (plan 172). */
+  devices?: SeatDevice[];
   age_group?: string | null;
   difficulty?: Difficulty | null;
   bundles?: string[];

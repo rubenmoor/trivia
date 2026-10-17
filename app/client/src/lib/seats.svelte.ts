@@ -1,11 +1,12 @@
 // The running session's seat binding (plan 161): set by the join screen, kept in sessionStorage by game id for a
-// reload, cleared when the session ends. Outside a session `seating.view` is null: no filter, every device acts.
+// reload, cleared when the session ends; without it (a restart) keyboard seats come back from the save's device
+// kinds, pad seats wait for a pad (plan 172). Outside a session `seating.view` is null: no filter, every device acts.
 import { CLAIM_PAD } from "./gamepad.ts";
 import type { Keys } from "./input.svelte.ts";
-import { claimKeys, type Binding, type SessionView } from "./seats.ts";
+import { claimKeys, padSeat, restoredBinding, type Binding, type SessionView } from "./seats.ts";
 import type { Game } from "./types.ts";
 
-/** `binding` per seat in join order, null: unbound (a lost pad, a reload without the stored binding, decision 289). */
+/** `binding` per seat in join order, null: unbound (a lost pad, a restart's pad seat, decision 289). */
 export const seating = $state({ id: null as number | null, binding: [] as (Binding | null)[], view: null as SessionView | null });
 
 /** The seat an accepted action or click acts for, set while it runs (input.svelte.ts); game actions send it. */
@@ -21,14 +22,14 @@ function store(id: number, binding: readonly (Binding | null)[]) {
   }
 }
 
-function stored(id: number, seats: number): (Binding | null)[] {
+function stored(id: number, view: SessionView): (Binding | null)[] {
   try {
     const list: unknown = JSON.parse(sessionStorage.getItem(storeKey(id)) ?? "null");
-    if (Array.isArray(list) && list.length === seats) return list as Binding[];
+    if (Array.isArray(list) && list.length === view.seats.length) return list as Binding[];
   } catch {
     /* no storage or a broken entry: rebind */
   }
-  return Array(seats).fill(null);
+  return restoredBinding(view);
 }
 
 /** The Join screen's binding as its session starts (set by Game.svelte, plan 162). */
@@ -45,7 +46,7 @@ export function watchGame(game: Game | null) {
   if (seating.id !== game.id) {
     if (seating.id !== null) endSession();
     seating.id = game.id;
-    seating.binding = stored(game.id, game.session.seats.length);
+    seating.binding = stored(game.id, game.session);
   }
   seating.view = game.session;
 }
@@ -82,12 +83,12 @@ export function unbindPad(index: number) {
   store(seating.id, seating.binding);
 }
 
-/** The seat that needs a pad now: round-robin the turn seat; `timed` the first one still in, at once (decision 289).
- * A seat that is out never asks. */
+/** The pad seat that needs a pad now: round-robin the turn seat; `timed` the first one still in, at once (decision
+ * 289). A seat that is out never asks; a keyboard seat is never lost. */
 export function lostSeat(): number | null {
   const view = seating.view;
   if (!view || seating.id === null) return null;
-  const lost = (i: number) => seating.binding[i] === null && view.seats[i]?.status === "playing";
+  const lost = (i: number) => seating.binding[i] === null && view.seats[i]?.status === "playing" && padSeat(view, i);
   if (!view.timed) return lost(view.turn) ? view.turn : null;
   const i = view.seats.findIndex((_, at) => lost(at));
   return i < 0 ? null : i;

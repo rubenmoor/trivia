@@ -8,7 +8,7 @@ import { catKey, categoryOf, subKey, subOf } from "./pool.ts";
 import { casefold, pyLen, pySplitJoin, pyTruthy } from "./pycompat.ts";
 import * as selection from "./selection.ts";
 import type { EngineData, GameRow, GameState, Io, Outcome, SaveData, Seat, TimedState } from "./state.ts";
-import { GameError, UNLIMITED, gameLocale, newest, nextId, rowPlayers, rowStates, seatResult, transact, trial, withDefaults } from "./state.ts";
+import { GameError, UNLIMITED, gameLocale, isSeatDevice, newest, nextId, rowPlayers, rowStates, seatResult, transact, trial, withDefaults } from "./state.ts";
 
 export { GameError, UNLIMITED };
 export {
@@ -284,6 +284,8 @@ export interface ChoiceArgs extends ChoiceInput {
   jokers?: unknown;
   /** rr-competitive: one age group per player, join order; a missing entry = `age_group`. */
   age_groups?: unknown;
+  /** A session's device kind per player, join order (plan 172); an unknown entry is left out. */
+  devices?: unknown;
 }
 
 function newestGame(save: SaveData, player?: unknown): GameRow | null {
@@ -384,7 +386,7 @@ export function newSession(
   if (names.length < MIN_SEATS) throw new GameError("players_too_few", { min: MIN_SEATS });
   if (mode === "gamemaster" || mode === "solo") throw new GameError("mode_single", { mode });
   const timed = mode === "timed";
-  const { jokers: _, age_groups, ...rest } = timed ? { ...args, cards: 0 } : args;
+  const { jokers: _, age_groups, devices, ...rest } = timed ? { ...args, cards: 0 } : args;
   const choice = resolveChoice(data, rest);
   if (args.answers !== undefined) throw new GameError("gamemaster_only", { action: "answers" });
   if (timed && args.jokers !== undefined) throw new GameError("timed_no_jokers");
@@ -401,12 +403,16 @@ export function newSession(
     const game = latest(work);
     if (game && game.row.result === null) saveGame(game.row, game.state, io, "abandoned");
     const ids = seatPlayers(work, names, io);
+    const device = (i: number) => {
+      const d = Array.isArray(devices) ? devices[i] : undefined;
+      return isSeatDevice(d) ? { device: d } : {};
+    };
     const row: GameRow = {
       id: nextId(work.games), started_on: io.now, finished_on: null, result: null, player_id: null,
       ...(data.locale === "es" ? {} : { locale: data.locale }), ...(timed ? {} : { turn: 0 }),
       seats: ids.map((player_id, i) => (competitive
-        ? { player_id, state: freshState({ ...seatArgs[i], age_group: choices[i].age_group ?? undefined }, choices[i], mode as GameMode, overrides) }
-        : timed ? { player_id, lives: LIVES } : { player_id })),
+        ? { player_id, ...device(i), state: freshState({ ...seatArgs[i], age_group: choices[i].age_group ?? undefined }, choices[i], mode as GameMode, overrides) }
+        : timed ? { player_id, ...device(i), lives: LIVES } : { player_id, ...device(i) })),
       state: freshState(competitive ? { ...rest, age_group: undefined } : timed ? rest : args, choice, mode as GameMode, overrides),
     };
     work.games.push(row);
@@ -1287,7 +1293,7 @@ export function view(save: SaveData, data: EngineData, io: Io): Game | null {
         const r = seatResult(row, i);
         const status = r === "won" || r === "lost" ? r : seat.out ? ("out" as const) : ("playing" as const);
         const own = seatState(row, i);
-        const base = { player: named(seat.player_id), status, level: own.level, age_group: gameChoice(own, data).age_group ?? null, jokers_left: jokersLeft(own) };
+        const base = { player: named(seat.player_id), status, level: own.level, age_group: gameChoice(own, data).age_group ?? null, jokers_left: jokersLeft(own), ...(seat.device ? { device: seat.device } : {}) };
         if (!t) return base;
         const last_chance = result === null && !seat.out && t.round_done === t.round_size - 1 && !t.round_correct.includes(i);
         return { ...base, lives: seat.lives ?? LIVES, correct_this_round: t.round_correct.includes(i), last_chance };

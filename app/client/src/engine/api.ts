@@ -93,7 +93,7 @@ export function gameAction(save: SaveData, data: EngineData, io: Io, action: str
   Reply<{ game: Game | null; event?: JokerEvent }> {
   const index = () => pyInt("index" in body ? body.index : -1);
   const actions: Record<string, Action> = {
-    new: (s) => startable(body.mode, body.dev === true) && "players" in body ? game.newSession(s, data, io, body.players, pick(body, [...game.CHOICE_KEYS, "mode", "age_groups"]))
+    new: (s) => startable(body.mode, body.dev === true) && "players" in body ? game.newSession(s, data, io, body.players, pick(body, [...game.CHOICE_KEYS, "mode", "age_groups", "devices"]))
       : game.newGame(s, data, io, body.player, pick(body, [...game.CHOICE_KEYS, "mode"])),
     pick: (s) => game.pick(s, data, io, index(), body.seat),
     answer: (s) => game.answer(s, data, io, index(), body.seat),
