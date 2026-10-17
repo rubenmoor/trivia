@@ -30,6 +30,25 @@
   const catName = $derived(displayName("category", category));
   const subName = $derived(subcategory ? displayName("subcategory", subcategory) : null);
   const long = $derived(catName.length > 24);
+  /** Per-letter vectors for the exits that split the name (the words stay whole, so wrapping works). */
+  const words = $derived.by(() => {
+    const spec = reduced ? undefined : picked.letters;
+    if (!spec) return null;
+    const parts = catName.split(" ");
+    const total = parts.join("").length;
+    let i = 0;
+    return parts.map((w) =>
+      [...w].map((ch) => {
+        const at = i++;
+        const stagger = (spec.order ? at / Math.max(1, total - 1) : Math.random()) * spec.spread * SPLASH_EXIT_MS;
+        return {
+          ch,
+          vars: `--ld:${stagger}ms;--lx:${Math.round(Math.random() * 100 - 50)}vw;--ly:${Math.round(Math.random() * 100 - 50)}vh;--lr:${Math.round(Math.random() * 720 - 360)}deg`,
+        };
+      }),
+    );
+  });
+  const letterMs = picked.letters ? SPLASH_EXIT_MS * (1 - picked.letters.spread) : SPLASH_EXIT_MS;
   const subShift = $derived(picked.subOffsetMs);
 
   $effect(() => {
@@ -60,7 +79,13 @@
         style:--delay="{Math.max(0, -subShift)}ms"
         lang={questionLocale()}
       >
-        {catName}
+        {#if words}
+          {#each words as word, w (w)}
+            <span class="w" style:--lms="{letterMs}ms">{#each word as { ch, vars }, k (k)}<span class="l" style={vars}>{ch}</span>{/each}</span>{" "}
+          {/each}
+        {:else}
+          {catName}
+        {/if}
       </p>
       {#if subName}
         <p
@@ -141,6 +166,83 @@
   .spin {
     animation-name: spin;
     animation-timing-function: cubic-bezier(0.5, 0, 0.9, 0.6);
+  }
+  .rocket {
+    animation-name: rocket;
+    animation-timing-function: cubic-bezier(0.5, 0, 0.9, 0.5);
+  }
+  .drop {
+    animation-name: drop;
+    animation-timing-function: linear;
+  }
+  .blind {
+    animation-name: blind;
+    animation-timing-function: cubic-bezier(0.6, 0, 0.8, 0.6);
+  }
+  .drain {
+    animation-name: drain;
+    animation-timing-function: cubic-bezier(0.5, 0, 0.9, 0.7);
+  }
+  .pop {
+    animation-name: pop;
+  }
+  /* Letters: the category is spans, each with its own start (--ld) and vector */
+  .w {
+    display: inline-block;
+    white-space: nowrap;
+  }
+  .l {
+    display: inline-block;
+    animation-duration: var(--lms);
+    animation-delay: calc(var(--delay) + var(--ld));
+    animation-fill-mode: both;
+    animation-play-state: paused;
+  }
+  .go .l {
+    animation-play-state: running;
+  }
+  .dissolve .l {
+    animation-name: dissolve;
+  }
+  .explode .l {
+    animation-name: explode;
+    animation-timing-function: cubic-bezier(0.2, 0.6, 0.5, 1);
+  }
+  .wind .l {
+    animation-name: wind;
+    animation-timing-function: ease-in;
+  }
+  @keyframes dissolve {
+    to { transform: translate(calc(var(--lx) * 0.2), calc(var(--ly) * 0.2 - 4vh)) scale(0.4); filter: blur(1vw); opacity: 0; }
+  }
+  @keyframes explode {
+    to { transform: translate(var(--lx), var(--ly)) rotate(var(--lr)) scale(1.6); opacity: 0; }
+  }
+  @keyframes wind {
+    to { transform: translate(110vw, calc(var(--ly) * 0.3)) rotate(var(--lr)); opacity: 0; }
+  }
+  @keyframes rocket {
+    15% { transform: translateY(1.5vh) scaleY(0.94); }
+    to { transform: translateY(-130vh) scaleY(1.4); }
+  }
+  @keyframes drop {
+    35% { transform: translateY(26vh); animation-timing-function: ease-out; }
+    52% { transform: translateY(14vh); animation-timing-function: ease-in; }
+    65% { transform: translateY(26vh); animation-timing-function: ease-out; }
+    75% { transform: translateY(22vh); animation-timing-function: ease-in; }
+    to { transform: translateY(110vh); }
+  }
+  @keyframes blind {
+    from { clip-path: inset(-20% -5% -20% -5%); }
+    to { clip-path: inset(-20% -5% 120% -5%); transform: translateY(-3vh); }
+  }
+  @keyframes drain {
+    to { transform: translateY(22vh) rotate(720deg) scale(0); }
+  }
+  @keyframes pop {
+    70% { transform: scale(0.03); opacity: 1; animation-timing-function: ease-out; }
+    85% { transform: scale(0.2); opacity: 1; }
+    to { transform: scale(0.5); opacity: 0; }
   }
   @keyframes fly-left {
     to { transform: translateX(-120vw) skewX(12deg); opacity: 0; }
