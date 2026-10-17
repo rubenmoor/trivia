@@ -476,6 +476,22 @@ const es = {
       out: "¡Fuera, {name}!",
       completed: "Cuestionario completado",
     },
+    /** Competitive (timed) (plan 164): the round screen and the question for everyone. */
+    timed: {
+      /** The round screen's kicker above «3 de 12» (decision 296). */
+      kicker: "Ronda",
+      /** The round screen before its 3-2-1 countdown. */
+      ready: "¡Prepárense!",
+      round: "Ronda {n} de {of}",
+      question: "Pregunta {n} de {of}",
+      /** The claim control of the keyboard-and-mouse player (decision 290). */
+      claim: "Reclamar",
+      /** The banner while a player has the question. */
+      claimed: "¡{name}!",
+      correct: "¡Correcto, {name}!",
+      /** Nobody claimed in the 30 s. */
+      timeUp: "Se acabó el tiempo",
+    },
     victory: {
       title: "¡Ganaron!",
       /** rr-competitive: the winner. */

@@ -1,5 +1,5 @@
 // The Question screen's own keys (plan 44), one copy: the screen's scope and the claim-key check (decision 290).
-import type { Keys } from "../../lib/input.svelte.ts";
+import type { Intent, Keys } from "../../lib/input.svelte.ts";
 import { t } from "../../lib/i18n.ts";
 import { TOKENS } from "../jokers.ts";
 import { LETTERS } from "./Answers.svelte";
@@ -13,6 +13,9 @@ export function questionKeys(): Keys {
     [t("screen.question.peekKey").toLowerCase()]: { type: "peek", down: true },
   };
 }
+
+/** Pad (decision 9): Y/B/X/A pick by position; the Question and Timed screens. */
+export const PAD_PICKS: Record<number, Intent> = Object.fromEntries([3, 1, 2, 0].map((b, i) => [b, { type: "pick", n: i + 1 }]));
 
 /** A keyboard-only `timed` player's claim key: one letter or digit no Question key, not 1–9 or the flag key, distinct
  * from `taken` (decision 290). */

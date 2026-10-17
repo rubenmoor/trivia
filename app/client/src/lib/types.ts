@@ -182,6 +182,9 @@ export interface Game {
     fun_fact: string;
     /** In a session: the seat that gave this final answer. */
     seat?: number;
+    /** timed: the claimer's 6 s ran out; nobody claimed in the 30 s. */
+    timeout?: true;
+    unclaimed?: true;
   } | null;
   /** The multiplayer session (milestone 16); absent outside one (the frozen fixtures replay unchanged). `seats` in join order; the top-level fields are the turn seat's game
    * (a finished session: the winner's, else the last answerer's; rr-coop: the team's, so `level` and `jokers_left` repeat on every seat), `last` the session's last final answer. */
