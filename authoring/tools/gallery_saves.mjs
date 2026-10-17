@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 // trivia-gallery's demo saves (plan 100): built with the engine on the es pool, made-up players.
 // Usage: node authoring/tools/gallery_saves.mjs <ui locale> → JSON {saves: {name: save}, meta: {name: {...}}} on stdout.
-import { answer, newSession, pick, view } from "../../app/client/src/engine/game.ts";
+import { QUESTION_MS } from "../../app/client/src/engine/choice.ts";
+import { answer, claim, expire, newSession, pick, show, view } from "../../app/client/src/engine/game.ts";
 import { baseSave, EXTRA_PLAYERS, checkVersion, io, latestState, PLAYERS, playTo, rightOf, withExtraPlayers } from "./demo_saves.mjs";
 import { loadData } from "./engine_data.mjs";
 
@@ -145,6 +146,52 @@ scene("comp-q", onQuestion(session("rr-competitive", 3, rounds(1))));
 scene("comp-q12", onQuestion(session("rr-competitive", 3, rounds(33))));
 // Two seats: the second one's question, a wrong answer leaves the first one standing.
 scene("comp-last", onQuestion(session("rr-competitive", 2, rounds(5))));
+
+// Timed scenes (plans 164, 165): every action at an explicit epoch ms; `meta.now` the last one, the page clock is set
+// from it (plus the seconds a shot needs).
+let ms = Date.UTC(2026, 9, 13, 20);
+const tio = (dt) => ({ ...io(), ms: (ms += dt) });
+const timedRight = (save) => {
+  const st = gameRow(save).state;
+  return st.answers.indexOf(data.byId.get(st.current).answer);
+};
+/** The question fades in a second after the last action: its 30 s run. */
+const shown = (save) => show(save, data, tio(1000)).save;
+/** Unclaimed: its 30 s run out. */
+const timeUp = (save) => expire(shown(save), data, tio(QUESTION_MS + 1000)).save;
+/** `seat` claims after 3 s and answers a second later: right, or wrong (out) when `rightly` is false. */
+function claims(save, seat, rightly = true) {
+  save = claim(shown(save), data, tio(3000), seat).save;
+  return answer(save, data, tio(1000), (timedRight(save) + (rightly ? 0 : 1)) % 4, seat).save;
+}
+/** A timed session of `n` seats; `steps` run in order on it. */
+function timedSession(n, steps) {
+  let save = newSession(structuredClone(done), data, tio(0), PLAYERS.slice(0, n), { mode: "timed" }).save;
+  for (const step of steps) save = step(save);
+  return save;
+}
+/** Seat 0 is keyboard and mouse, the others hold pads. */
+const timedScene = (save, extra = {}) => ({
+  save, meta: { id: gameRow(save).id, now: ms, bound: gameRow(save).seats.map((_, i) => (i ? { pad: i - 1 } : "kbm")), ...extra },
+});
+const by = (seat, rightly) => (s) => claims(s, seat, rightly);
+const round = (...steps) => steps;
+
+// Four seats, round 1: Max out (wrong), Luna and Mateo right, the last question on screen: Sofía's last chance.
+scene("timed-q", timedScene(timedSession(4, round(by(3, false), by(0), by(1), shown))));
+// Three seats: Sofía on her last heart, Mateo on his last chance in round 3.
+scene("timed-heart", timedScene(timedSession(3, [
+  ...round(by(0), by(1), timeUp), ...round(by(0), by(1), timeUp), ...round(by(0), timeUp, shown),
+])));
+// Three seats on one heart each, Luna out in round 3: both left at risk on the round's last question.
+scene("timed-risk", timedScene(timedSession(3, [
+  ...round(timeUp, timeUp, timeUp), ...round(timeUp, timeUp, timeUp), ...round(by(0, false), timeUp, shown),
+])));
+// Two seats right every round up to round 12: the sudden-death round screen; its question claimed by Luna.
+const toTwelve = Array.from({ length: 11 }, () => round(by(0), by(1))).flat();
+scene("timed-12", timedScene(timedSession(2, toTwelve)));
+const last = claim(shown(saves["timed-12"]), data, tio(3000), 0).save;
+scene("timed-12-claim", timedScene(last, { right: timedRight(last) }));
 
 for (const s of Object.values(saves)) checkVersion(s);
 process.stdout.write(JSON.stringify({ saves, meta, players: [...PLAYERS, ...EXTRA_PLAYERS] }));

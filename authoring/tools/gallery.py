@@ -330,9 +330,11 @@ class Run:
         self.context = self.page = None
         (OUT / self.name).mkdir(parents=True, exist_ok=True)
 
-    def scene(self, save="base", *, raw=None, consent=False, mods="held", ready="main .start", pads=None, bound=False):
+    def scene(self, save="base", *, raw=None, consent=False, mods="held", ready="main .start", pads=None, bound=False,
+              at=None):
         """A fresh page on `save` (None: no save file). `mods`: a list config, or None (no mods bridge). `pads`: the
-        connected pads' count (ids alternate Xbox, PlayStation); `bound`: the save's session seats bound to their devices."""
+        connected pads' count (ids alternate Xbox, PlayStation); `bound`: the save's session seats bound to their devices;
+        `at`: the page clock fixed at the save's `now` + `at` s (timers still run)."""
         if self.context:
             self.context.close()
         if raw is not None:
@@ -352,12 +354,18 @@ class Run:
                "bound": {"id": self.meta[save]["id"], "binding": self.meta[save]["bound"]} if bound else None}
         self.context = self.browser.new_context(viewport={"width": self.size[0], "height": self.size[1]}, device_scale_factor=1, locale=self.ui)
         self.context.add_init_script(STUB.replace("__CFG__", json.dumps(cfg)))
+        if at is not None:
+            self.clock(save, at)
         self.page = self.context.new_page()
         self.page.goto(f"{self.server.url}/?gallery")
         if ready:
             self.wait(ready)
         self.settle(1.2)
         return self.page
+
+    def clock(self, save, at):
+        """Date.now() fixed at `save`'s `now` (epoch ms) + `at` s; Playwright takes seconds."""
+        self.context.clock.set_fixed_time(self.meta[save]["now"] / 1000 + at)
 
     def wait(self, selector, timeout=20000):
         self.page.wait_for_selector(selector, state="visible", timeout=timeout)
@@ -834,6 +842,58 @@ def round_robin(r):
     r.shot("victory-last-standing")
 
 
+def timed_on(r, save, at):
+    """A timed scene with the page clock fixed at the save's `now` + `at` s: deadlines never pass on their own."""
+    r.scene(save, pads=len(r.meta[save]["bound"]) - 1, bound=True, at=at)
+    r.click('[data-focus-id="main"]')
+    r.wait(".timed-screen .answers .answer")
+    r.settle(2.5)
+
+
+def timed(r):
+    timed_on(r, "timed-q", 10)  # one hint (8 s), 20 s left
+    r.shot("timed-question")
+    r.pad(5, 1)  # Sofía's RB: claimed at +10 s, 6 s to answer
+    r.wait(".timed-screen .banner .ring")
+    r.settle(0.6)
+    r.shot("timed-claimed")
+    r.clock("timed-q", 13.5)  # 2.5 s left: «3», ticks and the red frame
+    r.settle(0.6)
+    r.shot("timed-claim-last")
+    timed_on(r, "timed-q", 10)  # a hidden window pauses (decision 282): the veil without the Esc menu over it
+    r.page.evaluate("""() => {
+      Object.defineProperty(document, "hidden", { get: () => true, configurable: true });
+      document.dispatchEvent(new Event("visibilitychange"));
+    }""")
+    r.wait(".timed-screen .veil")
+    r.shot("timed-paused")
+    timed_on(r, "timed-q", 29)
+    r.clock("timed-q", 31)  # the client's expire settles it
+    r.wait(".timed-screen .banner.result", 10000)
+    r.shot("timed-time-up")
+    r.wait("main .screen.round", 10000)  # Sofía's cracked heart, Max out
+    r.settle(1.2)
+    r.shot("timed-round")
+    timed_on(r, "timed-heart", 10)
+    r.shot("timed-last-heart")
+    timed_on(r, "timed-risk", 10)
+    r.shot("timed-all-at-risk")
+    r.clock("timed-risk", 31)  # both lose their last heart at the round's end
+    r.wait("main .result.wrong", 30000)
+    r.settle(2.5)
+    r.shot("timed-nobody-wins")
+    r.scene("timed-12", pads=1, bound=True, at=0)
+    r.click('[data-focus-id="main"]')
+    r.wait("main .screen.round")
+    r.settle(0.6)  # before the 3-2-1 (FADE_MS + ROUND_HOLD_MS)
+    r.shot("timed-sudden-death")
+    timed_on(r, "timed-12-claim", 2)
+    r.answer(r.meta["timed-12-claim"]["right"], final=False)
+    r.wait("main .result.victory", 30000)
+    r.settle(3.5)
+    r.shot("victory-timed")
+
+
 STEPS = [
     (["language", "consent"], first_start),
     (["start", "language-from-start", "start-resume", "start-save-notice"], start),
@@ -852,6 +912,8 @@ STEPS = [
     (["start-resume-session", "menu-session"], in_session),
     (["level-rr-coop", "select-rr-coop", "correct-rr-coop", "wrong-rr-coop", "victory-rr-coop", "level-rr-competitive",
       "wrong-rr-competitive", "victory-rr-competitive", "victory-last-standing"], round_robin),
+    (["timed-question", "timed-claimed", "timed-claim-last", "timed-paused", "timed-time-up", "timed-round",
+      "timed-last-heart", "timed-all-at-risk", "timed-nobody-wins", "timed-sudden-death", "victory-timed"], timed),
 ]
 
 
