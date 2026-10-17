@@ -10174,7 +10174,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (180, 1, 'Drafting fixes after batch-10: overlap and riddles', 700, 'Implements `decision 350: Overlap rate in drafting: which changes?` (answer 1) and `decision 351: First-person riddle questions: which changes?` (answer 1 + option 7). Findings in the notes of `task 1573` and `task 1574`. Successor of `plan 15: Duplicate and drift detection` (overlap, health limits) and `plan 16: Quality control after every batch` (prompt changes from batch findings), both done.
 - Runs before the next `qgen batch` (base or `colombia`): priority 700 is above the batch tasks'' -100/-110 in the `questions` work tree.
 - The next batch''s report shows the effect: overlap rate ≈ 10–11 %, riddle share ≈ 5 %, top clue ≈ 51–53 % under 60 %.', 'Two changes to how new questions are drafted, from the batch-10 investigations: fewer drafts thrown away because they repeat a question from another topic, and first-person riddles only where the riddle form adds something.', '2026-10-17T15:42:07Z', NULL);
-INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (181, 6, 'Category splash on the question screen', NULL, 'On every new question, the question screen shows the question''s category big and centred, with its subcategory in small text below it. After ≈ 1 s both leave with an exit animation and a sound effect; one of ≈ 20 pairs is picked per question.
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (181, 6, 'Category splash on the question screen', 300, 'On every new question, the question screen shows the question''s category big and centred, with its subcategory in small text below it. After ≈ 1 s both leave with an exit animation and a sound effect; one of ≈ 20 pairs is picked per question.
 
 ## Look
 - On top of the question, choices and media; the screen underneath is fully visible and playable (`pointer-events: none`, answering and jokers aren''t blocked)
@@ -40012,8 +40012,73 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `bundles-supply-report`: the `short` save shows «Base bundle 5,000+» in `en`, no `.supply` report
 - Cause: the `en` pool grew (translations), so the demo saves in `authoring/tools/gallery_saves.mjs` (`seen`, `short`, maybe `blocked`) no longer run short in `en`; build them per locale from that locale''s pool so they stay short
 - Check: `trivia-gallery --set task-<id> --only supply-notice,bundles-supply-report,bundles-no-questions` (decision 352) passes in es, es-ES, en, de with no `failed/`; never a full run', '2026-10-17T17:54:05Z', NULL, 1581, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1585, 181, 'create tasks for plan 181: Category splash on the question screen', 'split', 'open', 1000, NULL, 'Split plan 181 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-17T18:00:00Z', NULL, NULL, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1585, 181, 'create tasks for plan 181: Category splash on the question screen', 'split', 'done', 1000, '2026-10-17, plan 181 split into tasks 1586–1590, priority 300; no files', 'Split plan 181 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-17T18:00:00Z', '2026-10-17T18:01:08Z', NULL, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1586, 181, 'Category splash: Splash.svelte, exit table, timing, wiring into Question and Timed', 'work', 'open', NULL, NULL, 'Build the splash frame of `plan 181: Category splash on the question screen` with the first 4 exits; the other 16 follow in the next two tasks.
+
+- New `app/client/src/game/question/Splash.svelte` (+ `splash.ts` for the exit table and picker if it grows):
+  - overlay over question, choices and media, `pointer-events: none`; answering and jokers stay usable
+  - category: display font, ≈ 8–10 vw, centred, outline (`-webkit-text-stroke` / `paint-order: stroke`) + drop shadow; subcategory small below, same outline/shadow, thinner
+  - names via `displayName("category" | "subcategory", …)` from `lib/names.svelte.ts`, `lang={questionLocale()}`; long names wrap or shrink, never overflow (check the longest category/subcategory names in `app/data/bundles/*/names.*.json` at 1920 × 1080 and 1280 × 800)
+  - nothing stays afterwards; Cambiazo''s topic label in `question/Card.svelte` unchanged
+- Exit table: `{ id, category exit, subcategory exit, cue }`; random pick per question, no repeat within the last 5; subcategory exits are light moves (fade, slide down, tiny shrink, blur out, drift with the category), slightly before or after the category''s
+- This task''s exits: 3 fly off left, 4 fly off right, 8 fade to transparency, 13 spin away (rotation + shrink); each with a `Cue` in `sound.svelte.ts` (synth recipe; `SAMPLE_FOR` to an existing recording where one fits, e.g. `whoosh`, `swoosh`)
+- Timing constants in `game/timing.ts` (hold ≈ 1 s, exit ≤ 0.8 s); start when the question card has flipped/faded in
+- `reducedMotion()`: plain fade, sound kept
+- Wire into `screens/Question.svelte` (solo, Gamemaster and the local multiplayer modes that use it) and `screens/Timed.svelte`; a splash per new question, also the new question after a Paso/Cambiazo swap; none on the reveal. Timed: the splash doesn''t delay the question clock''s show action (decision 296)
+- `/?efectos` (`EffectsDemo.svelte`): a "splash" section, one button per exit that plays it over a sample category/subcategory with its sound
+- `plans/04-ui-tv-display.md`: a short "Category splash" entry
+
+Done when: a game shows the splash on every new question in both screens, the 4 exits play on `/?efectos` with sound; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-17T18:01:03Z', NULL, 1585, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1587, 181, 'Category splash: exits 1, 2, 5, 6, 7, 9, 10, 11 with their sounds', 'work', 'open', NULL, NULL, 'Add 8 category exits of `plan 181: Category splash on the question screen` to the exit table in `game/question/Splash.svelte` (or `splash.ts`), built by the previous task of the plan:
+
+1. dissolve into particles
+2. explode into letters flying outwards
+5. shoot up like a rocket
+6. drop down with gravity and bounce off-screen
+7. blown away by wind (letters peel off one by one, left to right)
+9. roll up like a blind
+10. flushed down: spiral and shrink into a drain point
+11. shrink to a dot and pop
+
+- Each with a matching light subcategory exit and its own `Cue` in `sound.svelte.ts` (synth recipe; `SAMPLE_FOR` to an existing recording where one fits: `cohete`, `pop`, `whoosh`, `escoba`, `golpe`, …)
+- Per-letter exits split the name into spans (keep word wrapping and `lang`); particles via CSS/canvas, no new dependency
+- Exit ≤ 0.8 s (`game/timing.ts`); `reducedMotion()` keeps the plain fade
+- All playable on `/?efectos`
+
+Done when: the 8 exits play on `/?efectos` with sound and in a game; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-17T18:01:03Z', NULL, 1585, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1588, 181, 'Category splash: exits 12, 14–20 with their sounds', 'work', 'open', NULL, NULL, 'Add the remaining 8 category exits of `plan 181: Category splash on the question screen` to the exit table in `game/question/Splash.svelte` (or `splash.ts`):
+
+12. zoom towards the viewer and past the camera
+14. shatter like glass
+15. melt / drip down
+16. sucked into a black hole in the middle
+17. letters scatter like startled birds
+18. typewriter backspace (deleted letter by letter from the end)
+19. paper fold: folds up and flies away as a paper plane
+20. jelly wobble, then squash flat into the floor
+
+- Each with a matching light subcategory exit and its own `Cue` in `sound.svelte.ts` (synth recipe; `SAMPLE_FOR` to an existing recording where one fits: `vidrio`, `papel`, `whoosh`, `golpe`, …)
+- Exit ≤ 0.8 s (`game/timing.ts`); `reducedMotion()` keeps the plain fade
+- All 20 exits now playable on `/?efectos`; the table has all 20
+
+Done when: the 8 exits play on `/?efectos` with sound and in a game; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-17T18:01:04Z', NULL, 1585, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1589, 181, 'Category splash: recorded sounds for the exits still on synth', 'work', 'open', NULL, NULL, 'The splash exit cues of `plan 181: Category splash on the question screen` added by its earlier tasks play a synth recipe where no existing recording fit. Source recordings for them, as in `plan 32: Recorded sound effects (UI-10)`:
+
+- Kenney.nl CC0 packs first (Interface Sounds, Impact Sounds, Digital Audio, Sci-fi Sounds, …), then Freesound / OpenGameArt CC0; D-45 allowlist only (CC0 preferred, CC BY with credit; no NC/ND/unknown)
+- Pipeline as plan 32: `nix shell nixpkgs#ffmpeg-headless`, trim silence, short fade-out, `loudnorm` to the existing files'' target, mono, AAC `.m4a` in `app/client/public/audio/<spanish-name>.m4a`; ≤ 40 kB per file
+- `SAMPLE_NAMES` + `SAMPLE_FOR` entries; synth recipes stay as fallback; a cue keeps its synth only if no recording beats it (note which in `plans/04-ui-tv-display.md`, UI-10)
+- One row per new file in `app/client/public/audio/CREDITS.md`; check `app/desktop/media-budget.json` / `stage-media.mjs --check` still pass
+
+Done when: every splash cue is a recording or deliberately synth; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-17T18:01:04Z', NULL, 1585, 1, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1590, 181, 'Category splash: gallery review set and the developer''s check on the TV', 'work', 'open', NULL, NULL, 'Get the developer''s approval for `plan 181: Category splash on the question screen`.
+
+- Gallery: a shot of the question screen with the splash at hold time (solo question; also a Timed question if cheap), held via the gallery''s own mechanism (e.g. a `?gallery` hook that freezes the splash), with a long category name among them; catalog keys matched
+- `trivia-gallery --set task-<this task> --only <the splash shots>` for es, es-ES, en, de at `--size 1920x1080,1280x800` (decision 352: Gallery reviews: a review set of the touched shots, linked as /gallery?set=<name>)
+- `pm decision add` (kind `once`): link `/gallery?set=task-<id>` and `/?efectos` (all 20 exits with sound; play also a real game on the TV), list which cues are recordings and which synth; options approve / problems; make this task pending on it and stop
+- Next run: apply the feedback (larger fixes as follow-up tasks in plan 181), reshoot the set if the look changed
+
+Done when: the developer approved the decision and its feedback is applied or queued.', '2026-10-17T18:01:04Z', NULL, 1585, 0, NULL, 'app');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -46601,6 +46666,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1622, 1581, '2026-10-17T17:27:57Z', '2026-10-17T17:54:18Z', 'done', NULL, 0, '3afe363df5a4d3f497f4a729c42699852506b752', 'app', 'claude-opus-5-5', 'd066b28d-6b53-4e24-aa1c-756a6a58cca9', NULL, 25, 48, 10641, 1427607, 67459, 1.0382054000000003, 915139);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1623, 1579, '2026-10-17T17:27:57Z', NULL, 'running', NULL, NULL, '3afe363df5a4d3f497f4a729c42699852506b752', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 915139);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1624, 1584, '2026-10-17T17:54:18Z', NULL, 'running', NULL, NULL, 'eb05b863f72dc0672a21d8f6bc41db82a0ab2ec4', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 915139);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1625, 1585, '2026-10-17T18:00:00Z', '2026-10-17T18:01:17Z', 'done', NULL, 0, 'df4da5ceceb8f4b17eae8ef50dad25a607d3aba4', NULL, 'claude-opus-5-5', '31bbed89-76c9-4755-b403-2d284709e4ae', NULL, 8, 16, 6114, 314468, 42780, 0.52747759999999988, 915139);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
