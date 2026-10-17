@@ -193,6 +193,51 @@ def check(path):
     return 1 if errors else 0
 
 
+def replace():
+    """Propose the nearest full candidate for every listed id that is no candidate any more (decision 339): same
+    subcategory first, nearest difficulty, same media kind, the check still passing. Writes work/demo/replacement.{json,md};
+    the developer approves, then its ids become demo.json's."""
+    doc = load(DEMO_LIST)
+    if doc is None:
+        print(f"{DEMO_LIST}: no demo list")
+        return 1
+    pool = load(SOURCE_POOL)["questions"]
+    cands, shares = candidates(pool)
+    known = {c["id"]: c for c in cands}
+    src = {q["id"]: q for q in pool}
+    seats = doc.get("seats") or 1
+    ids = list(doc["ids"])
+    gone = [i for i in ids if i not in known]
+    taken, swaps, left = set(ids), {}, []
+    for old in gone:
+        q = src.get(old)
+        if q is None:
+            left.append(old)
+            continue
+        key = lambda c: (c["subcategory"] != q["subcategory"], abs(c["difficulty"]["es"] - q["difficulty"]),
+                         c["media"] != q["media"].get("type"), c["id"])
+        for c in sorted((c for c in cands if c["full"] and c["id"] not in taken), key=key):
+            trial = sorted({*ids, c["id"]} - {old})
+            if all(r["reserve"] for r in run("check", cands, shares, seats=seats, ids=trial)["rows"]):
+                swaps[old] = c["id"]
+                taken.add(c["id"])
+                ids = trial
+                break
+        else:
+            left.append(old)
+    DEMO_WORK.mkdir(parents=True, exist_ok=True)
+    out = {"version": 1, "seats": seats, "ids": sorted(ids), "approved": "", "replaced": swaps, "unreplaced": left}
+    (DEMO_WORK / "replacement.json").write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    md = [f"# Demo list replacements: {len(swaps)} of {len(gone)}", "",
+          *[f"- {o} ({src[o]['subcategory']}, d{src[o]['difficulty']}) → {n} ({known[n]['subcategory']}, "
+            f"d{known[n]['difficulty']['es']}, {known[n]['media'] or 'no media'})" for o, n in swaps.items() if o in src],
+          *[f"- {i}: no replacement" for i in left]]
+    (DEMO_WORK / "replacement.md").write_text("\n".join(md) + "\n", encoding="utf-8")
+    print("\n".join(md))
+    print(f"wrote {(DEMO_WORK / 'replacement.json').relative_to(REPO)}: after approval its ids replace demo.json's")
+    return 1 if left else 0
+
+
 def sizes():
     cands, shares = candidates()
     rows = run("sizes", cands, shares, max_seats=MAX_SEATS)
@@ -203,6 +248,8 @@ def sizes():
 def main(args):
     if args.sizes:
         sys.exit(sizes())
+    if args.replace:
+        sys.exit(replace())
     if args.propose:
         sys.exit(propose(args.seats))
     sys.exit(check(Path(args.check) if args.check else DEMO_LIST))

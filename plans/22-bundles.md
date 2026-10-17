@@ -66,6 +66,8 @@ The demo is a subset of `base`, not a bundle: no bundle id `demo`, no `bundles.j
 - List: `authoring/data/demo.json` (`{version: 1, ids: [...], seats, approved: <decision id>}`), picked by `qgen demo`, approved by the developer.
 - `qgen export` writes `app/data/demo/pool.json` (es) and `pool.<locale>.json` (es-ES, en, de): `base`'s entries of the listed ids, unchanged, in the locales where they play. No list: no files, stale ones removed.
 - `qgen validate`: ids exist and are `base`; `qgen demo --check` passes at the list's `seats` (also fails for an id that is no full candidate once `approved` is set; before, a warning); demo pools are the current export, none without a list.
+- Replacement: a listed id later flagged, retired, blocked or untranslatable is no candidate any more → `qgen demo --check` fails `qgen validate`. `qgen demo --replace` writes `work/demo/replacement.{json,md}`: per broken id the nearest full candidate (same subcategory first, nearest difficulty, same media kind, the check still passing). The developer approves with a `--once` decision per round; then the file's ids become `demo.json`'s, `approved` the decision id, `qgen export`, `qgen validate`.
+- Review: `/review?demo=1` (add `&locale=…` for a translation) filters to the listed ids.
 
 ## Player bundles (mods)
 Player-facing: [`modding/README.md`](../modding/README.md).

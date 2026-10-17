@@ -27,7 +27,8 @@ API:
          &run=backaudit-1                          run: a back-audit run's questions, also with sample/audit, plan 57;
          &licence=replace                          licence=replace: not rejected, a picked file to replace, plan 53;
          &played=outliers                          played=outliers: played difficulty outliers of `qgen report --played`
-                                                   (too easy / too hard, not mixed), by |Δ|, plan 109)
+                                                   (too easy / too hard, not mixed), by |Δ|, plan 109;
+         &demo=1                                   demo=1: the demo list's ids (qgen.demo_listed), plan 174)
     GET  /api/questions?locale=en&stale=1          locale (translations.LOCALES; absent = the above, the sources in any
                                                    language, each with its locale, decision 235): one item per
                                                    entry of questions.<locale>.json, the source with the translation's
@@ -99,7 +100,7 @@ import reviews  # noqa: E402  (authoring/tools/reviews.py)
 from reviews import (NoQuestion, POOL, load_pool, save_pool, set_review,  # noqa: E402
                      update_question, update_translation)
 import save_file  # noqa: E402  (authoring/tools/save_file.py)
-from qgen import PROBLEMS, audit_of, is_major, run_ids, translation_audit_of  # noqa: E402  (authoring/tools/qgen.py)
+from qgen import PROBLEMS, audit_of, demo_listed, is_major, run_ids, translation_audit_of  # noqa: E402  (authoring/tools/qgen.py)
 import spot_checks  # noqa: E402  (authoring/server/spot_checks.py)
 import targets  # noqa: E402  (authoring/tools/targets.py)
 import translations  # noqa: E402  (authoring/tools/translations.py)
@@ -180,6 +181,9 @@ def locale_questions(locale, query):
         pairs = [(t, q) for t, q in pairs if not q["media"].get("file_url")]
     if query.get("licence") == "replace":
         pairs = [(t, q) for t, q in pairs if media.to_replace(q)]
+    if query.get("demo") == "1":
+        listed = set(demo_listed())
+        pairs = [(t, q) for t, q in pairs if q["id"] in listed]
     if query.get("stale") == "1":
         pairs = [(t, q) for t, q in pairs if translations.is_stale(t, q)]
     if query.get("plays") == "1":
@@ -225,6 +229,9 @@ def source_questions(query):
         qs = [by_id[i] for i in spot_checks.sample(group) if i in by_id]
     if query.get("licence") == "replace":
         qs = [q for q in qs if media.to_replace(q)]
+    if query.get("demo") == "1":
+        listed = set(demo_listed())
+        qs = [q for q in qs if q["id"] in listed]
     if query.get("audit") == "flagged":
         qs = [q for q in qs if (a := audit_of(q)) and is_major(a)]
     data = played.review_data()
