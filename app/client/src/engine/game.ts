@@ -17,7 +17,7 @@ export {
 } from "./choice.ts";
 
 export const MODES: readonly GameMode[] = ["gamemaster", "solo", "rr-coop", "rr-competitive", "timed"];
-/** Playable so far (plan 36); the multiplayer modes come with MD-8. */
+/** Playable so far (plan 36); the multiplayer modes come with milestone 16. */
 export const BUILT_MODES: readonly GameMode[] = ["gamemaster", "solo"];
 
 /** The game's mode; missing = gamemaster (games from before plan 36). */

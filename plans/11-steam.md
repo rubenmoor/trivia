@@ -22,7 +22,7 @@ A family can install the game from Steam on Windows, Linux or the Steam Deck. Th
 |---|----------|----------------|---------------------------|----------------------------|-------------------|
 | 12 | [Client engine](12-client-engine.md) | Move the game referee from Python (`app/server/game.py`, `app/server/selection.py`) to TypeScript; storage adapters; pool export (done 2026-10-12: `app/client/src/engine/`, D-90) | No (same rules, same saves) | all of it (M7) | — |
 | 13 | [Game modes](13-game-modes.md) | Five modes (D-74): gamemaster, «Solo o en grupo», round-robin co-op, round-robin competitive, competitive timed | Only if the family opts in | joker budget MD-1..MD-4 (M8) | S2 (OQ-30, OQ-36 answered) |
-| 14 | [Input](14-input.md) | Every button clickable, controller support, couch co-op input | No | mouse IN-1 (M8) | S3 (controller); one gamepad per player + shared keyboard, no phones (D-77, D-80): IN-6 "Later" |
+| 14 | [Input](14-input.md) | Every button clickable, controller support, couch co-op input | No | mouse IN-1 (M8) | S3 (controller); one gamepad per player, keyboard and mouse one player, no phones (D-77, D-80): multiplayer controls: `milestone 16: Local multiplayer: game modes and controls` |
 | 15 | [Internationalization](15-i18n.md) | Locale model; sub-plans [15a UI](15a-ui-translation.md), [15b questions](15b-question-translation.md), [15c regional](15c-regional-questions.md) | No | LUI-1..LUI-3, RG-1, RG-2 (M9) | launch languages es, en, de (D-78) |
 | 16 | [Content target](16-content-target.md) | How many questions a release needs, how that is measured, the quality bar | No (more questions help the family too) | — | target set (D-75) |
 | 17 | [Publishing](17-publishing.md) | Media and code licenses, credits, AI disclosure, store page, Steamworks account, rating | Credits screen only | audit PUB-1..PUB-3 (M10) | licence D-102, price + account D-98, Freesound out D-103; S5 (store) |
@@ -52,7 +52,7 @@ flowchart LR
 | **S4 — Content for release** | Translated UI and questions, regional packs, reaching the content target | QT-*, RG-3..RG-5, LUI-4..LUI-6, CT-* | Every launch language (es, en, de) has 5000 approved with D-53's mix (D-75); CT-2 verifies (`qgen report --simulate`, games per player for information) |
 | **S5 — Steam** | Steamworks app, Cloud, depots, beta branch, store page, disclosures; paid $9.99 one-time, packs as free DLC, account held by the developer as a person (D-98); `LICENSE` (MIT) + `LICENSE-content.md` (D-102); Freesound picks replaced from Commons (D-103); achievements only outside gamemaster mode and customized games (`settings.mode`, `settings.customized`; D-74) | SW-6..SW-14, PUB-6..PUB-11 | Beta branch installed from Steam on a second machine and played by the family |
 | **S6 — Release** | Coming-soon page, wishlists, release, patches | ST-3..ST-5 | Released; content updates go out as patches |
-| **Later** | The three multiplayer modes (D-77): round-robin co-op, round-robin competitive, competitive timed (D-80: claiming, lives, sudden death); not in S3–S6 unless the developer adds them. More regions and languages | MD-8, MD-9, IN-6 | — |
+| **Later** | More regions and languages | — | — |
 
 S2 is decisions and can start now, alongside M7–M10. S3 needs M7 (the shell loads the client without Python). S3 ends with a developer platform test (Windows, Linux, Deck; controller only; offline): pm plan 48.
 
@@ -77,7 +77,7 @@ Logged in [`open-questions.md`](open-questions.md) (frozen 2026-10-12; questions
 - **Media licensing:** ~290 Commons files under nine license types. ShareAlike, PD-US-only and GFDL need care in a worldwide commercial release (17). Freesound: its 2 picks dropped, audio Commons only (D-103, pm decision 184).
 - **Install size:** ~1.1 GB installed (2026-10-14): media re-encoded for shipping (SW-9, D-104) 2549 → 679 MB; grows with the pool, capped by `app/desktop/media-budget.json` (`stage-media.mjs --check`, release check step `media-budget`).
 - **Engine port regressions:** the referee has subtle supply and matching rules. 12 builds fixtures from the Python engine before the port.
-- **Scope creep:** the three multiplayer modes (D-77, D-80) stay "Later". The release ships gamemaster mode and «Solo o en grupo» and doesn't wait for them.
+- **Scope creep:** the three multiplayer modes (D-77, D-80) are `milestone 16: Local multiplayer: game modes and controls`; each ships when its mode is built. The release doesn't wait for them.
 
 ## Release checklist (ST-4)
 Every public build — the launch and every later patch — passes one checklist before its build goes from `beta` to `default`: the automated `trivia-release-check` (plan 18 "Builds and depots", SW-6) plus the manual rows below, which the developer runs on the Steam-installed `beta` build. Each release candidate gets one pm decision with the result (template below); parts 4 (launch, task 269) and 6 (patches, task 270) create it, nothing else does.
