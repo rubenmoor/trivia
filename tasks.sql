@@ -39417,8 +39417,48 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Check with a hand-made stats input (throw-away, deleted after)
 
 Done when: a demo session''s answers are absent from calibration and counted under `demo`; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-17T13:32:13Z', NULL, 1548, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1551, 176, 'create tasks for plan 176: Demo on screen', 'split', 'open', 1000, NULL, 'Split plan 176 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-17T13:33:32Z', NULL, 1528, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1551, 176, 'create tasks for plan 176: Demo on screen', 'split', 'done', 1000, '2026-10-17, tasks 1552-1555 (tasks.sql only)', 'Split plan 176 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-17T13:33:32Z', '2026-10-17T13:34:13Z', 1528, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1552, 176, 'Demo line on the Start screen', 'work', 'open', NULL, NULL, 'Part of `plan 176: Demo on screen` ("Start screen"). Needs `task 1534: Demo flag in the client, engine and dev server` (`buildInfo().demo`, `decision 338: Demo flag: TRIVIA_DEMO at build, dist-demo, package.json demo, EngineData.demo`).
+
+- `app/client/src/game/screens/Start.svelte`: in a demo build (`buildInfo().demo` via `lib/build.ts` or a prop; no new global) a line under the subtitle, key `screen.start.demo`, e.g. «Versión de demostración gratuita»
+- Visible in every Start state: new game, resume, save notice
+- Quiet look: subtitle colour or a small glass pill (reuse existing CSS, `rg` first); not a button, not focusable, no buy button or nag (`decision 111: Steam only: no effort outside Steam; Steam features are the reason to buy`)
+- Wordmark and window title unchanged (title is `plan 173: Demo build switch, identity and save`''s)
+- Catalogs `app/client/src/locales/`: es, es-ES (override only if it differs), en, de; read `locales/style/<locale>.md` first
+- Fit at 1280×720, 1280×800, 1920×1080 (`plan 46: Deck layout and controller-only text entry (SW-4)`)
+- Docs: `plans/04-ui-tv-display.md` "Start": the demo line
+
+Done when: `TRIVIA_DEMO=1 npm run dev -w app/client` shows the line on Start in all four locales; without the flag Start is unchanged; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-17T13:34:08Z', NULL, 1551, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1553, 176, 'Demo base tile: name and count', 'work', 'open', NULL, NULL, 'Part of `plan 176: Demo on screen` ("Bundle screen"), per `decision 341: Demo bundle tile: its name and question count`. Needs `task 1534: Demo flag in the client, engine and dev server` and `task 1546: Demo pool in the client`.
+
+- `app/client/src/game/BundleSelector.svelte`, both modes (large Bundles screen and compact «Ajustes de la partida»): in a demo build the base tile shows the name `bundles.demoName` («Paquete de demostración», «Demo bundle», «Demopaket», style guides decide) and its count from the loaded demo pool of the UI language via the existing `countShown` (decision 267''s mod rounding: ≥ 100 to the hundred, ≥ 10 to the ten, «+» when rounded; no cap, not «5000+»); icon as base
+- Tile still toggles like every tile (`plan 151: Bundle selection on its own full screen`); off → plan 151''s start reason
+- Lone tile: no packs in the demo; if the optional area and ruler still render empty, hide both when there are no optional tiles; layout fits 1280×720, 1280×800, 1920×1080
+- Supply report stays as is; the running-out notice is `plan 175: Deterministic selection in the demo`''s, not this task''s
+- Catalogs: es, es-ES (override only if it differs), en, de; `locales/style/<locale>.md` first
+- Docs: `plans/04-ui-tv-display.md` "Bundles"; `plans/22-bundles.md` demo section: tile name and count
+
+Done when: `TRIVIA_DEMO=1 npm run dev -w app/client` shows the demo tile with its count on Bundles and in the compact selector; without the flag nothing changes; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-17T13:34:08Z', NULL, 1551, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1554, 176, 'Demo hides mods and the features decision 337 turns off', 'work', 'open', 390, NULL, 'Part of `plan 176: Demo on screen` ("Hidden in the demo"), per the answer of `decision 337: Steam features in the demo: Cloud, achievements, Workshop/mods, telemetry, question reports`. Client screens and buttons only; shell gates are `task 1539: Demo Steam feature gates: mods, Workshop, publish, achievements per decision 337` and `task 1540: Demo telemetry mark and question reports for the demo App ID per decision 337`. Hiding, not locking (`decision 111: Steam only: no effort outside Steam; Steam features are the reason to buy`).
+
+- Mods off: in a demo build the client never asks for the mod list (`fetchModList` skipped in `lib/desktop.ts` / its caller, `modList` stays null), so Start''s Mods button, the ☰ menu''s Mods entry (`Overlay.svelte`), `Mods.svelte`, its crashed-start opening (`Game.svelte` `modsOpen`, `safeStart`) and the held-off line all stay hidden through the existing null path, not per-button checks
+- Telemetry off (only if the answer says so): no consent screen at first start (`Consent.svelte`), no telemetry setting; if on: unchanged
+- Question reports off (only if the answer says so): flag dialog and flag list (`onflags`) hidden; if on: unchanged
+- Achievements, Workshop: no screens to hide beyond Mods; Credits unchanged
+- Docs: `plans/04-ui-tv-display.md`: what the demo hides
+
+Done when: `TRIVIA_DEMO=1 npm run dev -w app/client` (and `TRIVIA_DEMO=1 TRIVIA_DEV_STEAM_USER=1 trivia-desktop` once task 1539 is in) shows no Mods button or menu entry and hides what the answer turns off; without the flag nothing changes; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-17T13:34:08Z', NULL, 1551, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1555, 176, 'trivia-gallery --demo, /gallery?demo and the developer''s review', 'work', 'open', 380, NULL, 'Part of `plan 176: Demo on screen` ("Gallery and review", "No PLACEHOLDER on a demo screen"). After the plan''s other tasks (demo line, demo tile, hidden features) and `task 1537: trivia-gallery honours TRIVIA_DEMO`.
+
+- `authoring/tools/gallery.py`: `--demo` sets `TRIVIA_DEMO=1` and a demo shot set: `language` (only locales with a demo pool), `start`, `start-resume`, `start-save-notice`, `menu-start`, `bundles`, `game-settings`, `level`; scenes without pack bundles (demo saves built from demo pool ids); output `work/gallery-demo/<locale>[@WxH]/` + `work/gallery-demo/manifest.json`; `--list --demo` names the set
+- Manifest lists every PLACEHOLDER text seen on a demo shot (today `PLACEHOLDER(1453)` on Level and Timed)
+- `/gallery?demo` on `trivia-authoring` (`authoring/server/ui_flags.py`, `authoring/server/main.py`, `authoring/ui`): reads `work/gallery-demo/` and its manifest; flags work like the full gallery''s
+- Run es, es-ES, en, de at 1920×1080 and 1280×800; 0 unmatched text
+- Then `pm decision add --once "Demo start screen and bundle tile reviewed in /gallery?"` with options `approved` / `problems: …`, the `/gallery?demo` link and the PLACEHOLDER hits with their tasks in the body; this task is done when the decision is raised (the answer''s problems become tasks of whoever handles it)
+- Docs: `AGENTS.md` Commands `trivia-gallery` row (`--demo`), README gallery how-to, `plans/04-ui-tv-display.md`
+
+Done when: both resolutions in all four locales are in `work/gallery-demo/`, `/gallery?demo` shows them, the review decision is raised; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-17T13:34:08Z', NULL, 1551, 0, NULL, 'app');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -45856,7 +45896,9 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1584, 1527, '2026-10-17T13:29:21Z', '2026-10-17T13:31:48Z', 'done', NULL, 0, '7fc41e8b3e36e20d36262aa71a993508a010bc89', 'app', 'claude-opus-5-5', '58c8e8e5-9af2-4a61-8cc1-f6f91ea1759a', NULL, 17, 34, 11066, 1026778, 74966, 1.0265395999999998, 192091);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1585, 1543, '2026-10-17T13:30:12Z', NULL, 'running', NULL, NULL, '7fc41e8b3e36e20d36262aa71a993508a010bc89', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 192091);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1586, 1548, '2026-10-17T13:31:32Z', '2026-10-17T13:32:25Z', 'done', NULL, 0, '1f7ebb8c8865a21c82fa6c0a6cf99fa3354fccdf', NULL, 'claude-opus-5-5', '5931b86f-d321-48d1-bd27-a027c7b5699f', NULL, 6, 12, 3007, 201849, 32197, 0.35813379999999995, 192091);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1587, 1528, '2026-10-17T13:31:48Z', NULL, 'running', NULL, NULL, '1f7ebb8c8865a21c82fa6c0a6cf99fa3354fccdf', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 192091);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1587, 1528, '2026-10-17T13:31:48Z', '2026-10-17T13:33:45Z', 'done', NULL, 0, '1f7ebb8c8865a21c82fa6c0a6cf99fa3354fccdf', 'app', 'claude-opus-5-5', 'd947a442-57e7-4d14-888f-ee5417cbd417', NULL, 12, 24, 8790, 626848, 59783, 0.77952959999999993, 192091);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1588, 1551, '2026-10-17T13:33:35Z', '2026-10-17T13:34:19Z', 'done', NULL, 0, '3c31f53599b5e43a052b8580bf92e068a51db7b0', NULL, 'claude-opus-5-5', 'ab62d82b-03d2-4f2d-89cd-3690192f4381', NULL, 6, 12, 4463, 217881, 37974, 0.43667619999999996, 192091);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1589, 1529, '2026-10-17T13:33:45Z', NULL, 'running', NULL, NULL, '3c31f53599b5e43a052b8580bf92e068a51db7b0', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 192091);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -46401,6 +46443,8 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1538, 336);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1539, 337);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1540, 337);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1550, 337);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1554, 337);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1555, 337);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
