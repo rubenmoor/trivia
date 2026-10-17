@@ -341,7 +341,8 @@
     {
       "name": "Pasta",
       "facet": "Comidas típicas por país",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: Pasta from Italy is already asked; the options left (estimate, silhouette) would be forced."
     },
     {
       "name": "Euro",
@@ -670,7 +671,8 @@
     {
       "name": "Madagascar (película)",
       "facet": "Países en películas y juegos",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: Madagascar as the island and the film are already asked; the options left would be filler."
     },
     {
       "name": "Luca",

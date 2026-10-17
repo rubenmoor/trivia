@@ -101,7 +101,8 @@
     {
       "name": "Sereno",
       "facet": "Fenómenos meteorológicos cotidianos",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: “Sereno” (night dampness) is a Spanish-only word with no shared meaning in other languages."
     },
     {
       "name": "Cielo despejado",
@@ -910,7 +911,8 @@
     {
       "name": "Al mal tiempo, buena cara",
       "facet": "Dichos y palabras del clima",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: “Al mal tiempo, buena cara” is a Spanish proverb, and the pool already has a question about a weather saying."
     },
     {
       "name": "Después de la tormenta llega la calma",
@@ -925,7 +927,8 @@
     {
       "name": "Llover a cántaros",
       "facet": "Dichos y palabras del clima",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: “Llover a cántaros” is a Spanish idiom; other languages use different images (cats and dogs, etc.)."
     },
     {
       "name": "Lluvia de ideas",
@@ -952,7 +955,8 @@
     {
       "name": "Contra viento y marea",
       "facet": "Dichos y palabras del clima",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: “Contra viento y marea” is a Spanish idiom. Its meaning depends on the language, so it doesn't work in the base bundle."
     },
     {
       "name": "Viento en popa",

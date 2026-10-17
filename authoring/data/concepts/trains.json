@@ -997,7 +997,8 @@
     {
       "name": "Echar humo",
       "facet": "Palabras y dichos del tren",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: “Echar humo” is a Spanish saying and only works in one language."
     },
     {
       "name": "Hydrogen train",
