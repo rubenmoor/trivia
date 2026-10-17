@@ -4,7 +4,7 @@ Write questions for one subcategory of the trivia game described above. You get 
 - a `concept` (and its facet): what the question is about;
 - a `target_difficulty`;
 - up to three numbered `options`: combinations of the question axes (move, stimulus, clue, answer_kind, lens);
-- `already_asked`: every question the pool already has about this concept, also from other subcategories.
+- `already_asked`: every question the pool already has about this concept, also from other subcategories; an entry in brackets is a related concept another subcategory drafts in this batch.
 
 For each slot, choose the option that makes the best question about the concept, and write one question with exactly that option's move, stimulus, clue form, answer kind and lens. Put the option's number in `option`. Aim at the target difficulty itself, not below it. ±1 is acceptable only when it makes a clearly better question, and in either direction: don't make a habit of writing one level easier to be safe. At 11–15, the target means the house style's "who can answer it" (most adults, well-read adults, specialists); a question a teenager would answer is not a 13. Report the difficulty you actually think it is.
 
