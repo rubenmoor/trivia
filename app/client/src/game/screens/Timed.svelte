@@ -22,7 +22,7 @@
   import Media from "../question/Media.svelte";
   import type { AnswerView } from "../question/reveal.ts";
   import SeatTag from "../SeatTag.svelte";
-  import { music, sfx } from "../sound.svelte.ts";
+  import { duck, music, sfx } from "../sound.svelte.ts";
   import { cardFlip, swap } from "../swap.ts";
   import { FLIP_MS, PRELOAD_MAX_MS, TIMED_RESULT_MS, TIMED_REVEAL_MS, sleep } from "../timing.ts";
 
@@ -215,7 +215,7 @@
   function claimIt() {
     const t = timedOf(game);
     if (held || pending || t.claim || !t.shown || t.paused) return;
-    sfx("pop"); // PLACEHOLDER(1451): the claim sting
+    sfx("claim");
     void call("claim");
   }
 
@@ -257,6 +257,36 @@
     swap.active = false;
     flipping = false;
   }
+
+  // Drama (milestone 16): the open question's hearts and frame, the claim's last seconds.
+  const open = $derived(!held && !flipping && shown && timedOf(game).shown && !timedOf(game).paused);
+  const lastHeart = $derived(open && !claim && session.seats.some((s) => s.last_chance && s.status === "playing" && s.lives === 1));
+  const atRisk = $derived(open && timed.all_at_risk);
+  const ticking = $derived(open && claim !== null && claimSeconds >= 1 && claimSeconds <= 3);
+  const pulseOf = (s: SessionView["seats"][number]) =>
+    !open || s.status !== "playing" || !s.last_chance ? null : s.lives === 1 ? "last" : "chance";
+
+  // One heartbeat per beat, whatever the number of seats on their last heart.
+  $effect(() => {
+    if (!lastHeart) return;
+    sfx("heartbeat");
+    const id = setInterval(() => sfx("heartbeat"), 1200);
+    return () => clearInterval(id);
+  });
+
+  // One tick per second, louder and higher each time.
+  let ticked = 0;
+  $effect(() => {
+    if (!ticking) return void (ticked = 0);
+    if (claimSeconds !== ticked) sfx("countdown", 4 - claimSeconds);
+    ticked = claimSeconds;
+  });
+
+  // The ticks carry: the music ducks during a claim.
+  $effect(() => {
+    duck(claim !== null);
+  });
+  onDestroy(() => duck(false));
 
   function replay() {
     if (mediaEl?.replay() && !held) music(null);
@@ -322,7 +352,7 @@
         />
         {#if error}<p class="error-box">{error}</p>{/if}
       </footer>
-      <Media bind:this={mediaEl} bind:failed={mediaFailed} {question} shown={shown && !flipping} {paused} dark={!!held && !revealed} onended={() => !held && music("question")} />
+      <Media bind:this={mediaEl} bind:failed={mediaFailed} {question} shown={shown && !flipping} {paused} dark={!!held && !revealed} onended={() => !held && music("timed")} />
     {/key}
   {:else}
     <div></div>
@@ -349,6 +379,10 @@
     </div>
   {/if}
 
+  {#if ticking || atRisk}
+    <div class="frame" class:fast={ticking} aria-hidden="true"></div>
+  {/if}
+
   {#if timedOf(game).paused}
     <div class="veil" role="status"><p>{t("screen.timed.paused")}</p></div>
   {/if}
@@ -360,7 +394,7 @@
       {@const label = claimLabel(i)}
       <div class="seat glass-light" class:out class:dim={claim !== null && claim.seat !== i}>
         <SeatTag {session} seat={i} small />
-        <Hearts lives={s.lives ?? LIVES} {out} small />
+        <Hearts lives={s.lives ?? LIVES} {out} pulse={pulseOf(s)} small />
         {#if ok}
           <span class="ok"><Icon name="check" /></span>
         {:else if !out && label}
@@ -439,6 +473,32 @@
     gap: calc(1.2 * var(--u));
     padding: calc(0.8 * var(--u)) calc(1.6 * var(--u));
     animation: arrive 0.35s var(--spring) backwards;
+  }
+  .frame { /* PLACEHOLDER(1453): look */
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    box-shadow: inset 0 0 calc(6 * var(--u)) calc(1.2 * var(--u)) var(--coral);
+    animation: frame 1.8s ease-in-out infinite;
+  }
+  .frame.fast {
+    animation-duration: 1s;
+  }
+  @keyframes frame {
+    0%,
+    100% {
+      opacity: 0.25;
+    }
+    50% {
+      opacity: 0.9;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .frame {
+      animation: none;
+      opacity: 0.6;
+    }
   }
   .veil {
     position: absolute;
