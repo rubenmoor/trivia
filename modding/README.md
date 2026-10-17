@@ -157,7 +157,7 @@ export default async function setup(trivia) {
     - `trivia.screens.replace("Victory", MyVictory)`
   - `screens.dom(name, render)`: plain DOM instead of our screen; `render(el, props)` may return a cleanup
     - `trivia.screens.dom("Correct", (el, props) => { el.textContent = "Right!"; })`
-  - Screen names: `Start`, `Language`, `Player`, `Bundles`, `Choice`, `Join`, `Level`, `Select`, `Question`, `Timed`, `Correct`, `Wrong`, `Next`, `Completed`, `Victory` (`Next`, `Completed`: the results with answers off, both ours `Revealed.svelte`; `Join`: local multiplayer seats, after `Choice`; `Timed`: the question of a Competitive (timed) session, after `Level` as its round screen)
+  - Screen names: `Start`, `Language`, `Player`, `Bundles`, `Mode`, `Choice`, `Join`, `Level`, `Select`, `Question`, `Timed`, `Correct`, `Wrong`, `Next`, `Completed`, `Victory` (`Next`, `Completed`: the results with answers off, both ours `Revealed.svelte`; `Join`: local multiplayer seats, after `Choice`; `Timed`: the question of a Competitive (timed) session, after `Level` as its round screen)
   - `screens.show(render)` → `{ close() }`: a full-screen layer over the game with its own input; Esc, pad B or `props.close` close it
     - `const layer = trivia.screens.show((el, props) => { el.textContent = "Paused"; });`
   - `menu.add({ label, onselect })`: a row in the Esc menu; `label` shown as is

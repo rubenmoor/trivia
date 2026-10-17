@@ -8,7 +8,7 @@
 // --mods (plan 104, task 942) instead: the shipped modding/ examples in <userData>/mods/: loaded, theme applied, player
 // bundle offered and played, rules tweak's extra hint, no crash marker; then the conversion on top, then --no-mods.
 // --multiplayer (plan 167, decision 299) instead: rr-coop, rr-competitive, timed × 3 pads, 3 keyboard seats, 4 pads +
-// keyboard and mouse; each Choice → Join → Bundles → an end, fake pads (fake_pads.js) and trusted CDP keys and clicks.
+// keyboard and mouse; each Mode → Join → Choice → Bundles → an end, fake pads (fake_pads.js) and trusted CDP keys and clicks.
 // The middle of a session is played by the engine on the save (as the solo run swaps cards), the rest on screen; a
 // seat that may not act changes nothing; the timed pads, keyboard-only rr-coop, keyboard-only timed (claim keys) and 4 pads + keyboard and mouse timed sessions
 // quit and restart mid-session: pads rebind (decision 289), keyboard seats never ask for a pad (decision 321); after each: one games[]
@@ -232,7 +232,7 @@ async function toStart() {
   await noNotice();
 }
 
-/** Start screen → a new player → the Choice screen. */
+/** Start screen → a new player → the Mode screen. */
 async function newPlayer() {
   at("new player");
   await h.click('[data-focus-id="main"]');
@@ -254,7 +254,10 @@ async function game(dir) {
   await toStart();
   await newPlayer();
   at("mode");
+  await h.click('[data-focus-id="kind-single"]');
+  await h.click('[data-focus-id="next"]');
   await h.click('[data-focus-id="mode-solo"]');
+  await h.click('[data-focus-id="next"]');
   await h.click('[data-focus-id="group-young_teens"]');
   await h.click('[data-focus-id="next"]');
   at("bundles");
@@ -346,7 +349,10 @@ async function modsGame(dir) {
   if (got !== value.trim()) throw new Error(`${name} is "${got}", the theme sets "${value.trim()}"`);
   await newPlayer();
   at("player bundle");
+  await h.click('[data-focus-id="kind-single"]');
+  await h.click('[data-focus-id="next"]');
   await h.click('[data-focus-id="mode-solo"]');
+  await h.click('[data-focus-id="next"]');
   await h.click('[data-focus-id="group-young_teens"]');
   await h.click('[data-focus-id="next"]');
   const tb = path.join(DIR, "modding", "template-bundle");
@@ -492,9 +498,11 @@ async function setText(sel, text) {
   })()`);
 }
 
-/** Choice → mode row → Join (every seat, its device, its name) → Bundles → the session's first screen. */
+/** Mode → Join (every seat, its device, its name) → Choice (age) → Bundles → the session's first screen. */
 async function setup(r) {
-  at(`${r.label}: mode row`);
+  at(`${r.label}: mode`);
+  await h.click('[data-focus-id="kind-multi"]');
+  await h.click('[data-focus-id="next"]');
   await h.click(`[data-focus-id="mode-${r.mode}"]`);
   await h.click('[data-focus-id="next"]');
   await h.waitFor(visibleEl(".join .seat.open"), "join screen");
@@ -512,7 +520,8 @@ async function setup(r) {
     await h.click('.backdrop .new button[type="submit"]');
     await h.waitFor(`document.querySelector('[data-focus-id="seat-name-${i}"]')?.textContent.includes(${JSON.stringify(NAMES[i])})`, `seat ${i} named`);
   }
-  at(`${r.label}: bundles`);
+  at(`${r.label}: age, bundles`);
+  await h.click('[data-focus-id="next"]');
   await h.click('[data-focus-id="next"]');
   await h.click('[data-focus-id="start"]');
   const save = await saved((s) => s.games?.length && row(s).seats, "session started");

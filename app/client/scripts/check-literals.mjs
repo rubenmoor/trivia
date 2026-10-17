@@ -137,7 +137,8 @@ const CATALOGS = {
 const SCREENS = {
   question: ["joker.hint.key", "joker.skip.key", "joker.easier.key", "joker.category.key", "joker.snipe.key", "screen.question.replayKey", "screen.question.peekKey"],
   start: ["screen.start.newKey", "screen.start.languageKey"],
-  choice: ["mode.gamemasterKey", "mode.soloKey", "mode.rrCoopKey", "mode.rrCompetitiveKey", "mode.timedKey", "customize.openKey"],
+  mode: ["mode.gamemasterKey", "mode.soloKey", "mode.multiKey", "mode.rrCoopKey", "mode.rrCompetitiveKey", "mode.timedKey"],
+  choice: ["customize.openKey"],
 };
 /** Screens that show answers `A`–`D`. */
 const ANSWERS = ["question", "timed"];

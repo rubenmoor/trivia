@@ -92,25 +92,31 @@ async function gameplay(lang, saveDir, data, ui) {
   await shoot(lang, "joker-snipe");
 }
 
-/** Start → player → the Choice screen in `mode`. */
-async function toChoice(saveDir, data, ui, mode) {
+/** Start → player → the Mode screen's single-player step (`shot`: the shot of it) → the Choice screen in `mode`. */
+async function toChoice(saveDir, data, ui, mode, shot) {
   await load(saveDir, baseSave(ui, data.locale));
   await click("button.candy");
   await waitFor(visibleEl(".name-button"), "player screen");
   await sleep(800);
   await click(".name-button");
-  await waitFor(visibleEl(`[data-focus-id="mode-${mode}"]`), "choice screen");
+  await waitFor(visibleEl('[data-focus-id="kind-single"]'), "mode screen");
+  await click('[data-focus-id="kind-single"]');
+  await click('[data-focus-id="next"]');
+  await waitFor(visibleEl(`[data-focus-id="mode-${mode}"]`), "mode screen, single");
   await click(`[data-focus-id="mode-${mode}"]`);
+  if (shot) {
+    await sleep(3000);
+    await shoot(shot.lang, shot.name);
+  }
+  await click('[data-focus-id="next"]');
 }
 
 const focus = (sel) => evaluate(`document.querySelector(${JSON.stringify(sel)}).focus()`);
 
 /** The 5 informative shots (decision 79): modes, Customize game, configure screen, joker presets, bundles (the last screen before the game). */
 async function menus(lang, saveDir, data, ui) {
-  await toChoice(saveDir, data, ui, "solo");
+  await toChoice(saveDir, data, ui, "solo", { lang, name: "modes" });
   await click('[data-focus-id="group-young_teens"]');
-  await sleep(3000);
-  await shoot(lang, "modes");
 
   await click('[data-focus-id="customize"]');
   await waitFor(visibleEl(".dialog"), "customize");

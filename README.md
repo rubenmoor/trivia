@@ -9,7 +9,7 @@ Everything runs locally and offline: the game (a Svelte client with the game eng
 **The family game is done** (October 2026): a full game night on the TV with sound, jokers and the final look, played by player name without touching code.
 
 - **Questions:** about 2,140 approved (base ~2,040, «Regional: Colombia» ~100) on the shared difficulty scale 1–15 (D-38), with images, audio or video; more batches are being made.
-- **Age groups and bundles:** before each game the Bundles screen the Choice screen sets an age group (or a custom difficulty range in gamemaster mode), then the Bundles screen toggles any combination of bundles, base and regional (start needs at least one question); the game offers only the bundles of its language (milestone 5).
+- **Age groups and bundles:** before each game the Mode screens pick the mode and the Choice screen sets an age group (or a custom difficulty range in gamemaster mode), then the Bundles screen toggles any combination of bundles, base and regional (start needs at least one question); the game offers only the bundles of its language (milestone 5).
 - **Modes:** gamemaster mode (configure screen, Esc menu cheats; «Responder para avanzar» off: the padlock only reveals the answer, no win or loss) and «Solo o en grupo» (standard jokers, no skips); the three multiplayer modes are specified, not built (D-74, D-77, D-80, D-105; [`plans/13-game-modes.md`](plans/13-game-modes.md)).
 - **Engine:** the referee runs in the browser (TypeScript, `app/client/src/engine/`); the Python server only serves files and the save (D-90).
 - **UI:** every on-screen string comes from a catalog (`es`, `es-ES`, `en`, `de`); one language setting for UI and questions, picked at first start; question translations aren't shipped yet, so every language plays the Spanish questions.
@@ -39,7 +39,7 @@ Without Nix, Python 3 and Node 22 are enough to play: run `python3 app/server/ma
 trivia                   # http://127.0.0.1:8000/   (--port, --host)
 ```
 
-Open the page on the TV's browser and go fullscreen. Pick or type a player name, then the bundles, then on the Choice screen the mode and age group, and play.
+Open the page on the TV's browser and go fullscreen. Pick or type a player name, then the mode, the age group and the bundles, and play.
 
 - `Esc` (or the menu button) opens the admin menu: skip, undo, restart, fullscreen, volume, joker budget, «Ajustes de la partida» (difficulty, bundles). It links to the review tool and stats while the authoring server runs.
 - `M` (or the faint flag next to the menu button) flags the question for review: a dialog with an optional note, `Enter` flags, `Esc` cancels; on a flagged question it edits the note or unflags. The next start of `trivia-authoring` marks it «needs work» with the note; the menu's «Preguntas marcadas» lists the flags with «Copiar» for players without authoring tools.
