@@ -1,10 +1,10 @@
 // Pool media → build/media for a packaged build (plan 56): encoded under shippedName (decision 185),
 // hard links (or copies) from the encode cache work/ship-media/.
-// build/pack-media.json: per pack, the media only it uses (its DLC depot carries them, decision 66).
+// build/pack-media.json: per shipped bundle folder, the media only it uses (its DLC depot carries them, decision 66; [] without a pool).
 // --check: no encoding; build/media against the pools and media-budget.json, exit 1 on ✗.
 import { execFile, execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
-import { copyFileSync, linkSync, mkdirSync, readdirSync, readFileSync, renameSync, rmSync, statSync, writeFileSync } from "node:fs";
+import { copyFileSync, existsSync, linkSync, mkdirSync, readdirSync, readFileSync, renameSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { availableParallelism } from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -92,8 +92,8 @@ async function encode(src, name) {
 const DATA = path.join(REPO, "app", "data");
 const read = (file) => poolUrls(JSON.parse(readFileSync(file, "utf8")));
 const packs = readdirSync(path.join(DATA, "bundles"))
-  .filter((b) => statSync(path.join(DATA, "bundles", b, "pool.json"), { throwIfNoEntry: false }))
-  .map((b) => [b, read(path.join(DATA, "bundles", b, "pool.json"))]);
+  .filter((b) => statSync(path.join(DATA, "bundles", b), { throwIfNoEntry: false })?.isDirectory())
+  .map((b) => [b, existsSync(path.join(DATA, "bundles", b, "pool.json")) ? read(path.join(DATA, "bundles", b, "pool.json")) : new Set()]); // no pool yet: a pack without media
 const urls = read(path.join(DATA, "pool.json"));
 const owners = new Map();
 for (const [b, own] of packs) for (const u of own) owners.set(u, urls.has(u) || owners.has(u) ? null : b);
