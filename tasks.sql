@@ -10174,6 +10174,51 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (180, 1, 'Drafting fixes after batch-10: overlap and riddles', 700, 'Implements `decision 350: Overlap rate in drafting: which changes?` (answer 1) and `decision 351: First-person riddle questions: which changes?` (answer 1 + option 7). Findings in the notes of `task 1573` and `task 1574`. Successor of `plan 15: Duplicate and drift detection` (overlap, health limits) and `plan 16: Quality control after every batch` (prompt changes from batch findings), both done.
 - Runs before the next `qgen batch` (base or `colombia`): priority 700 is above the batch tasks'' -100/-110 in the `questions` work tree.
 - The next batch''s report shows the effect: overlap rate ≈ 10–11 %, riddle share ≈ 5 %, top clue ≈ 51–53 % under 60 %.', 'Two changes to how new questions are drafted, from the batch-10 investigations: fewer drafts thrown away because they repeat a question from another topic, and first-person riddles only where the riddle form adds something.', '2026-10-17T15:42:07Z', NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (181, 6, 'Category splash on the question screen', NULL, 'On every new question, the question screen shows the question''s category big and centred, with its subcategory in small text below it. After ≈ 1 s both leave with an exit animation and a sound effect; one of ≈ 20 pairs is picked per question.
+
+## Look
+- On top of the question, choices and media; the screen underneath is fully visible and playable (`pointer-events: none`, answering and jokers aren''t blocked)
+- Category: display font, big (≈ 8–10 vw), centred; outline (`-webkit-text-stroke` / `paint-order: stroke`) + drop shadow, readable on any image, at 1920 × 1080 and 1280 × 800
+- Subcategory: small text below it, same outline and shadow, thinner
+- Names via `displayName("category"| "subcategory", …)` in the question''s locale (`lang={questionLocale()}`); long names wrap or shrink, never overflow
+- After the splash nothing stays; Cambiazo''s topic label in `question/Card.svelte` stays as it is
+
+## Exits (≈ 20)
+- One table `{ id, category: keyframes/transition, subcategory: minor exit, sound cue }` in a new `game/question/Splash.svelte` (+ `splash.ts` if it grows); random per question, no repeat within the last 5
+- Category exits (the big one):
+  1. dissolve into particles
+  2. explode into letters flying outwards
+  3. fly off left
+  4. fly off right
+  5. shoot up like a rocket
+  6. drop down with gravity and bounce off-screen
+  7. blown away by wind (letters peel off one by one, left to right)
+  8. fade to transparency
+  9. roll up like a blind
+  10. flushed down: spiral and shrink into a drain point
+  11. shrink to a dot and pop
+  12. zoom towards the viewer and past the camera
+  13. spin away (rotation + shrink)
+  14. shatter like glass
+  15. melt / drip down
+  16. sucked into a black hole in the middle
+  17. letters scatter like startled birds
+  18. typewriter backspace (deleted letter by letter from the end)
+  19. paper fold: folds up and flies away as a paper plane
+  20. jelly wobble, then squash flat into the floor
+- Subcategory exits: a smaller set of light moves (fade, slide down, tiny shrink, blur out, slight drift with the category), picked to go with the category exit; slightly before or after it
+- Sounds: one cue per exit, added to `sound.svelte.ts` (`Cue`, synth version + `SAMPLE_FOR` recording); reuse existing samples where one fits (whoosh, estallido, vidrio, cohete, pop, …), new recordings CC0 or allowlisted (D-45), Kenney.nl packs first (UI-10), listed in `app/client/public/audio/CREDITS.md`
+
+## Timing and modes
+- Starts when the question card has flipped in; ≈ 1 s hold, exit ≤ 0.8 s; constants in `game/timing.ts`
+- `reducedMotion()`: plain fade, sound kept
+- Every screen that shows a question: solo/Gamemaster question screen and the local multiplayer modes (Timed included); not on the reveal or after a Paso/Cambiazo swap (the new question gets its own splash)
+- Muted under `PM_WORKER` / `TRIVIA_MUTE=1` as every cue
+
+## Done when
+- Each of the 20 exits can be played on `/?efectos` (`EffectsDemo.svelte`) with its sound
+- A gallery review set of the splash at hold time (`trivia-gallery --set task-<id> --only <shots>`), for each UI language
+- The developer approves the exits and sounds on the TV (pm decision, `once`)', 'When a question appears, its topic flashes up big in the middle of the screen, over the question and the answer choices, and after a moment it leaves in one of about twenty funny ways, each with its own sound. Today the family never sees which topic a question comes from, unless a joker changed it. The splash tells them at a glance and adds a bit of show to every question.', '2026-10-17T18:00:00Z', NULL);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -39967,6 +40012,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `bundles-supply-report`: the `short` save shows «Base bundle 5,000+» in `en`, no `.supply` report
 - Cause: the `en` pool grew (translations), so the demo saves in `authoring/tools/gallery_saves.mjs` (`seen`, `short`, maybe `blocked`) no longer run short in `en`; build them per locale from that locale''s pool so they stay short
 - Check: `trivia-gallery --set task-<id> --only supply-notice,bundles-supply-report,bundles-no-questions` (decision 352) passes in es, es-ES, en, de with no `failed/`; never a full run', '2026-10-17T17:54:05Z', NULL, 1581, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1585, 181, 'create tasks for plan 181: Category splash on the question screen', 'split', 'open', 1000, NULL, 'Split plan 181 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-17T18:00:00Z', NULL, NULL, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -46553,6 +46600,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1621, 1579, '2026-10-17T16:59:44Z', '2026-10-17T17:27:54Z', 'failed', 'pm run crashed: pm.FormatError: tasks.sql: schema version 28, this pm knows up to 27: update pm', NULL, '4ae0cc812ba8e2b306b6237f7ac7b191cd87addd', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 900089);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1622, 1581, '2026-10-17T17:27:57Z', '2026-10-17T17:54:18Z', 'done', NULL, 0, '3afe363df5a4d3f497f4a729c42699852506b752', 'app', 'claude-opus-5-5', 'd066b28d-6b53-4e24-aa1c-756a6a58cca9', NULL, 25, 48, 10641, 1427607, 67459, 1.0382054000000003, 915139);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1623, 1579, '2026-10-17T17:27:57Z', NULL, 'running', NULL, NULL, '3afe363df5a4d3f497f4a729c42699852506b752', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 915139);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1624, 1584, '2026-10-17T17:54:18Z', NULL, 'running', NULL, NULL, 'eb05b863f72dc0672a21d8f6bc41db82a0ab2ec4', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 915139);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
