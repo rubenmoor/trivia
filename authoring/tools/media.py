@@ -19,7 +19,7 @@ files to replace before a public release, grouped by reason (providers.licence_v
 restriction flags for information, and a tally per licence. Skips rejected questions; exits 1
 while the replacement list isn't empty.
 """
-import argparse, contextlib, hashlib, itertools, json, re, subprocess, sys, urllib.parse
+import argparse, contextlib, hashlib, itertools, json, re, subprocess, sys, urllib.error, urllib.parse
 
 from layout import CANDIDATES, SOURCE_POOL as POOL
 from download import RateLimited, cached, file_problem, http_get
@@ -231,17 +231,23 @@ def make_sheet(candidates, out, thumbs):
     grid, made with ImageMagick. Audio candidates have no picture and are left out (the review
     sees their titles). Returns the numbers on the sheet, or [] when there was nothing to show."""
     thumbs.mkdir(parents=True, exist_ok=True)
-    args, shown = [], []
+    args, shown, failed = [], [], []
     for i, c in enumerate(candidates, 1):
         if c["type"] == "audio" or not c.get("preview_url"):
             continue
         f = thumbs / (hashlib.sha1(c["preview_url"].encode("utf-8")).hexdigest()[:16] + ".img")  # not by number: a new search renumbers
         if not f.exists():
-            with progress.waiting(f"{providers.provider_of(c).NAME} preview {i}"):
-                f.write_bytes(http_get(c["preview_url"]))
+            try:
+                with progress.waiting(f"{providers.provider_of(c).NAME} preview {i}"):
+                    f.write_bytes(http_get(c["preview_url"]))
+            except (urllib.error.HTTPError, RateLimited) as e:  # one dead thumbnail doesn't stop the sheet
+                failed.append(e)
+                continue
         args += ["-label", str(i), f"{f}[0]"]
         shown.append(i)
     if not shown:
+        if failed:
+            raise failed[0]
         return []
     out.parent.mkdir(parents=True, exist_ok=True)
     r = subprocess.run(["magick", "montage", *args, "-tile", "3x", "-geometry", "400x300+6+6",
