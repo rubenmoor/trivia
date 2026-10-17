@@ -1,6 +1,6 @@
 # 15b — Question Translation
 
-**Status:** layout (D-81), pipeline (D-87) and review tool (plan 67) done; pilot and full runs open
+**Status:** layout (D-81), pipeline (D-87) and review tool (plan 67) done; pilot and full runs open; no human control per run (milestone 9, 2026-10-16)
 
 Sub-plan of [15](15-i18n.md). Translates the question pool between the four question locales `en`, `es` (Latin American), `es-ES` (Spain), `de` (D-78, D-107); Simplified Chinese, Russian and Portuguese (Brazil) later (milestone 12, on hold). This is the big one: a question is more than its text. Its difficulty, distractors, hints and image all have to work in the new language and culture, so every translated question goes through rating, fact-checking and review again.
 
@@ -21,12 +21,12 @@ Sub-plan of [15](15-i18n.md). Translates the question pool between the four ques
 ## Pipeline
 Decided: D-87 (pm plan 66). One command, `qgen batch --translate <locale>` (`authoring/RUNBOOK.md`), reusing the batch steps through the run's `locale`.
 
-- Run `tr-<locale>-<n>`: 300 sources (`TRANSLATE_SIZE`); the locale's first run is the 50-question pilot (QT-5), after which the next run exits 2 until `qgen health ack tr-<locale>-1`.
+- Run `tr-<locale>-<n>`: 300 sources (`TRANSLATE_SIZE`); the locale's first run is the 50-question pilot (QT-5), no stop: only a run failing a threshold makes the next exit 2, until `qgen health ack <run>`.
 - Locales: `es`, `es-ES`, `en`, `de`; sources in any locale but the target; `{source_language}` in the prompts; rate and factcheck for the target's market (`es`: Latin America, `es-ES`: Spain).
 - Selection: approved, translatable sources of one bundle (`base`, or `--bundle <id>`, plan 98) not in the target locale; stale translations first, then subcategories with the fewest approved translations, levels by the locale's deficit (D-84).
 - Steps: translate → rate → factcheck (changed facts only) → merge → review 1 → fix → review 2 → record → audit → export → report.
 - Prompts: `translate.md`, `translate-review.md`, `locale-<locale>.md` (spelling and usage: `en` US spelling, words US and UK share; `es` idiomatic Latin American; `es-ES` Spain; `de` as in Germany; no player location, decision 35, decision 167); a regional bundle adds `translate-region.md` (players with a link to the region, decision 167).
-- Health: decision 45's subset of the batch thresholds; native-speaker spot check per run (`authoring/QC.md`).
+- Health: decision 45's subset of the batch thresholds; the LLM translation review is the only review, no spot check per run (milestone 9, 2026-10-16; `authoring/QC.md`).
 - Cost per approved translation in each run's report and `qgen report --cost` (CT-3).
 
 ## Storage (decided: D-81)
@@ -48,7 +48,7 @@ Done (pm plan 67, RV-24..RV-26). The developer and native speakers review `quest
 - Stale translation: banner, no approve; the next `--translate` run redoes it.
 - Media: shown, not pickable; link to `/review?id=<id>` to change the source's; `bundle`, `media`, `media/search` with a locale → 400. No `media_text` flag (decision 35).
 - "Doesn't travel": source `translatable: false` (confirm, undoable); rejects its non-rejected translations ("no viaja").
-- Spot check per run: `/review?batch=tr-<locale>-<n>&locale=<locale>&sample=1`; blind as plan 16, source stays visible; items in `authoring/data/spot-checks.json` with `locale` (`authoring/QC.md`).
+- Optional sample by the developer: `/review?batch=tr-<locale>-<n>&locale=<locale>&sample=1`; blind as plan 16, source stays visible; items in `authoring/data/spot-checks.json` with `locale` (`authoring/QC.md`); not offered, not required.
 - Stats `/stats/*?locale=` (playing translations, own difficulty, locale's names); start page: a row per locale (status counts, stale, not translatable, untranslated sources) and the `tr-*` runs.
 
 ## Tasks
@@ -57,5 +57,5 @@ Done (pm plan 67, RV-24..RV-26). The developer and native speakers review `quest
 - [x] QT-2 `qgen.py translate` with `translatable: false` / region detection; prompts in `authoring/tools/prompts/`. Done 2026-10-12 (pm plan 66, D-87): `qgen batch --translate <locale>`.
 - [x] QT-3 `rate` and `factcheck` per locale. Done 2026-10-12 (pm plan 66, D-87): through `run.json` `locale`.
 - [x] QT-4 Review tool: side-by-side locale view. Done 2026-10-12 (pm plan 67): see "Review tool".
-- [ ] QT-5 Pilot: 50 questions per target locale (`tr-en-1`, `tr-de-1`, `tr-es-1`, `tr-es-ES-1`), reject rate and cost, go/no-go pm decision before the full runs. Runs: pm plan 84.
-- [ ] QT-6 Full translation per question locale: `en`, `de`, `es`, `es-ES` (D-78, D-107); native-speaker spot check; runs and QC per pm plan 84. Later: `zh-Hans`, `ru`, `pt-BR` (milestone 12).
+- [ ] QT-5 Pilot: 50 questions per target locale (`tr-en-1`, `tr-de-1`, `tr-es-1`, `tr-es-ES-1`), reject rate and cost as information for `qgen report --cost`; no go/no-go (milestone 9, 2026-10-16). Runs: pm plan 84.
+- [ ] QT-6 Full translation per question locale: `en`, `de`, `es`, `es-ES` (D-78, D-107); no native-speaker spot check (LLM review only, milestone 9); runs per pm plan 84. Later: `zh-Hans`, `ru`, `pt-BR` (milestone 12).
