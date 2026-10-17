@@ -87,6 +87,28 @@ Major findings on approved questions:
 
 - **q-2693**: media, giveaway — The facts check out: in 1914 Ford's five-dollar day cut shifts to 8 hours and roughly doubled pay from about $2.34. The problem is the media. It is an "essential" portrait, "Henry ford 1919.jpg", shown sharp with a question that isn't about a picture, so it shows the answer's face and the file name names him. It should be an illustrative image that doesn't show Ford, for example an early 1910s car factory floor, not a Model T, because hint 3 names the Model T. (http://127.0.0.1:8001/review/q-2693)
 
+## Quality control
+
+The developer's blind spot check (`/review?batch=…&sample=1`) against the LLM review and the audit (plan 16, `qgen report --qc`). Agree = both accept or both don't.
+
+- Spot check: 30 decided of 30
+- Agreement with the LLM review: 28 of 30 (93 %) ✓ (bar: ≥ 30 questions, ≥ 90 %)
+- Release bar (D-79): ✓ release-ready
+- False approve (LLM approved, human not): 0 of 30 (0 %)
+- False needs work (LLM not approved, human approved): 2 of 30 (7 %)
+- Difficulty |Δ| ≥ 2: 0 of 30 (0 %)
+- Media changed: 0 of 30 (0 %)
+- Audit/human agreement: 29 of 30 (97 %)
+
+Disagreements with the LLM review, by the human's problems:
+
+### no problem given (2)
+
+- **q-2441** LLM needs_work → human approved, audit ok (http://127.0.0.1:8001/review/q-2441)
+- **q-2301** LLM needs_work → human approved, audit ok (http://127.0.0.1:8001/review/q-2301)
+
+Changes from this QC: none
+
 ## Needs work
 
 - **q-2218** (animal-records) This shark's wide head is full of sensors that feel tiny electric signals. Which hidden animals does it use them to find under the sand? → Rays: None of the six video candidates shows a hammerhead shark: they show a Tesla cassette deck, a Ferrari, a bus stop, flies on mushrooms, bumblebees and a fly on grass. The question needs an essential clip of a hammerhead, and no new search is allowed. Supply a hammerhead video by hand (e.g. search Commons for "Sphyrna lewini" or "hammerhead shark"), or switch to an essential image of a hammerhead. No suitable picture found for this question.

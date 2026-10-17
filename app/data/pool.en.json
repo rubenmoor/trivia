@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "15d0ef1d",
+  "hash": "fcb4c022",
   "questions": [
     {
       "id": "q-0019",
@@ -2077,6 +2077,40 @@
       "background": null
     },
     {
+      "id": "q-2218",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "animal-records",
+      "bundle": "base",
+      "description": "A shark that came to the ocean with its own metal detector.",
+      "question": "A hammerhead shark's wide head is full of sensors that feel tiny electric signals. Which hidden animals does it use them to find under the sand?",
+      "answer": "Rays",
+      "wrong_answers": [
+        "Jellyfish",
+        "Sea turtles",
+        "Dolphins"
+      ],
+      "hints": [
+        "The animals it finds hide flat on the seafloor.",
+        "They are close relatives of sharks.",
+        "Some of them have a stinger on their tail."
+      ],
+      "fun_fact": "A hammerhead can use its wide head to pin a stingray to the seafloor before eating it.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Hammerhead_Shark_-_Marko_Dimitrijevic.jpg/3840px-Hammerhead_Shark_-_Marko_Dimitrijevic.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHammerhead_Shark_-_Marko_Dimitrijevic.jpg",
+        "credit": "Marko Dimitrijevic · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Marko Dimitrijevic",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-2219",
       "status": "approved",
       "difficulty": 6,
@@ -2787,6 +2821,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Patrick Roper",
         "author_url": "https://www.geograph.org.uk/profile/120958"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2242",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "architectural-styles",
+      "bundle": "base",
+      "description": "Some of the best ideas start life as lines on a big sheet of paper.",
+      "question": "What is this drawing?",
+      "answer": "A plan for a building",
+      "wrong_answers": [
+        "A treasure map",
+        "A sewing pattern",
+        "A board game"
+      ],
+      "hints": [
+        "Builders look at drawings like this before they start work.",
+        "You can see walls, doors and rooms from above.",
+        "Architects make these drawings."
+      ],
+      "fun_fact": "Old building plans were blue because they were copied with a chemical process that turned the paper blue, which is why they are called blueprints.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Floor_plan_of_Wanstead_House.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFloor_plan_of_Wanstead_House.png",
+        "credit": "Colen Campbell · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Colen Campbell",
+        "author_url": null
       },
       "background": null
     },
@@ -3705,6 +3773,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Osama Shukir Muhammed Amin FRCP(Glasg)",
         "author_url": "https://commons.wikimedia.org/wiki/User:Neuroforever"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2272",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "big-questions",
+      "bundle": "base",
+      "description": "This question was going to be asked anyway. It was always going to be.",
+      "question": "A French scientist imagined a being that knows where every atom is and so could predict the whole future. Who was he?",
+      "answer": "Pierre-Simon Laplace",
+      "wrong_answers": [
+        "Blaise Pascal",
+        "René Descartes",
+        "Isaac Newton"
+      ],
+      "hints": [
+        "He lived around the time of Napoleon.",
+        "He worked on probability and the motion of planets.",
+        "The imagined being is called his “demon”."
+      ],
+      "fun_fact": "Laplace reportedly told Napoleon that his book on the heavens had “no need” of the idea of God.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/44/North_Shore_Trip_-_Fall_2012_-_Split_Rock_Clockworks_%288061060091%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANorth_Shore_Trip_-_Fall_2012_-_Split_Rock_Clockworks_%288061060091%29.jpg",
+        "credit": "Pete Markham from Loretto, USA · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Pete Markham from Loretto, USA",
+        "author_url": "https://www.flickr.com/people/9197427@N06"
       },
       "background": null
     },
@@ -5282,6 +5384,40 @@
       "background": null
     },
     {
+      "id": "q-2322",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "cats",
+      "bundle": "base",
+      "description": "A house cat dressed up for a jungle costume party, and it never takes the costume off.",
+      "question": "This spotted pet breed, the Bengal, comes from crossing house cats with which wild cat?",
+      "answer": "Asian leopard cat",
+      "wrong_answers": [
+        "Cheetah",
+        "Serval",
+        "Ocelot"
+      ],
+      "hints": [
+        "This wild cat is small, not much bigger than a house cat.",
+        "This wild cat hunts at night and is a good climber and swimmer.",
+        "It lives in the forests of southern and eastern Asia."
+      ],
+      "fun_fact": "Many Bengal cats love water and may jump into a bath or play with a running tap.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Bengal_-_19.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABengal_-_19.jpg",
+        "credit": "CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Another one of my pictures:\n\n\n\nThis photograph was taken by Medium69 (William Crochot) and released under the license stated below. You are free to use it for any purpose as long as you credit the author (William Crochot), the Source (Wikimedia Commons) and the license (CC-BY-SA 4.0) in close relation to the image.\n\n\n\n\n\nPlease do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source RAW. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
+        "author_url": "https://commons.wikimedia.org/wiki/File:Tour_Saint-Nicolas_-_20150811_11h20_(11085).jpg"
+      },
+      "background": null
+    },
+    {
       "id": "q-2323",
       "status": "approved",
       "difficulty": 9,
@@ -5346,6 +5482,40 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Shisma",
         "author_url": "https://commons.wikimedia.org/wiki/User:Shisma"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2325",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "cheese",
+      "bundle": "base",
+      "description": "The orange brick of the dairy world, now far more famous than its tiny hometown.",
+      "question": "Cheddar cheese is named after a village famous for its caves and its gorge. In which country is that village?",
+      "answer": "England",
+      "wrong_answers": [
+        "Netherlands",
+        "Switzerland",
+        "France"
+      ],
+      "hints": [
+        "This cheese is one of the most eaten cheeses in the world.",
+        "The village lies in a green, rainy region of hills and farms.",
+        "Its capital is London."
+      ],
+      "fun_fact": "Cheese is still left to ripen inside the cool caves of Cheddar Gorge today.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Cliffs_in_Cheddar_Gorge_-_geograph.org.uk_-_4161034.jpg/3840px-Cliffs_in_Cheddar_Gorge_-_geograph.org.uk_-_4161034.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACliffs_in_Cheddar_Gorge_-_geograph.org.uk_-_4161034.jpg",
+        "credit": "Des Blenkinsopp · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Des Blenkinsopp",
+        "author_url": "https://www.geograph.org.uk/profile/43370"
       },
       "background": null
     },
@@ -5958,6 +6128,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Ichwarsnur",
         "author_url": "https://commons.wikimedia.org/wiki/User:Ichwarsnur"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2349",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Blowing across a bottle, but with much better results.",
+      "question": "Players hold this instrument sideways and blow across a hole. What is it?",
+      "answer": "A flute",
+      "wrong_answers": [
+        "A clarinet",
+        "A trumpet",
+        "A saxophone"
+      ],
+      "hints": [
+        "It's a long, thin, silvery tube.",
+        "It makes a high, sweet sound, a bit like a bird.",
+        "A tiny version of it is called a piccolo."
+      ],
+      "fun_fact": "The oldest flutes ever found are about 40,000 years old and were made from bird bones and mammoth ivory.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Great_Amber_Concert_Hall%2C_Liep%C4%81ja_Symphony_Orchestra%2C_Matthias_Manasi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGreat_Amber_Concert_Hall%2C_Liep%C4%81ja_Symphony_Orchestra%2C_Matthias_Manasi.jpg",
+        "credit": "SintaBerzins · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "SintaBerzins",
+        "author_url": "https://commons.wikimedia.org/wiki/User:SintaBerzins"
       },
       "background": null
     },
@@ -6608,6 +6812,40 @@
       "background": null
     },
     {
+      "id": "q-2371",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "consoles-and-game-companies",
+      "bundle": "base",
+      "description": "He liked one ancient board game so much that he named a company after it.",
+      "question": "The video game company Atari, maker of Pong, took its name from a word in which board game?",
+      "answer": "Go",
+      "wrong_answers": [
+        "Chess",
+        "Shogi",
+        "Mahjong"
+      ],
+      "hints": [
+        "The game is very old and comes from East Asia.",
+        "It's played with black and white stones.",
+        "In this game, “atari” warns that some of your stones are about to be captured."
+      ],
+      "fun_fact": "Nolan Bushnell also founded Chuck E. Cheese, a pizza restaurant full of arcade games.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Atari-2600-Wood-4Sw-Set.jpg/3840px-Atari-2600-Wood-4Sw-Set.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAtari-2600-Wood-4Sw-Set.jpg",
+        "credit": "Evan-Amos · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Evan-Amos",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Evan-Amos"
+      },
+      "background": null
+    },
+    {
       "id": "q-2372",
       "status": "approved",
       "difficulty": 5,
@@ -6876,6 +7114,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Rennett Stowe from USA",
         "author_url": "https://www.flickr.com/people/10393601@N08"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2380",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "continents",
+      "bundle": "base",
+      "description": "A big piece of land that looks a bit like a lopsided ice cream cone.",
+      "question": "Which continent is shown in this satellite photo?",
+      "answer": "North America",
+      "wrong_answers": [
+        "South America",
+        "Africa",
+        "Europe"
+      ],
+      "hints": [
+        "It reaches from the frozen Arctic down to warm tropical beaches.",
+        "Canada and Mexico are on it.",
+        "It is joined to South America by a thin strip of land."
+      ],
+      "fun_fact": "Greenland, the largest island in the world, is part of North America.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/North_America_topic_image_Satellite_image.jpg/3840px-North_America_topic_image_Satellite_image.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANorth_America_topic_image_Satellite_image.jpg",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA Earth Observatory (NASA Goddard Space Flight Center). Derivative work by User:Pbsouthwood",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Pbsouthwood"
       },
       "background": null
     },
@@ -7866,6 +8138,74 @@
       "background": null
     },
     {
+      "id": "q-2411",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "economy-and-stock-market",
+      "bundle": "base",
+      "description": "Villagers don't take cash, but they do love shiny green rocks.",
+      "question": "You want to craft a block of emeralds in Minecraft. How many emeralds do you need?",
+      "answer": "9",
+      "wrong_answers": [
+        "4",
+        "16",
+        "64"
+      ],
+      "hints": [
+        "Blocks like this are made by packing the items tightly together in a square.",
+        "It's the same number as for a block of gold or diamond.",
+        "You fill every slot of the 3-by-3 crafting grid."
+      ],
+      "fun_fact": "In Minecraft, emeralds are the money villagers use when they trade with you.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/df/B%C3%A9ryl_var._%C3%A9meraude_sur_gangue_%28Muzo_Mine_Boyaca_-_Colombie%29_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AB%C3%A9ryl_var._%C3%A9meraude_sur_gangue_%28Muzo_Mine_Boyaca_-_Colombie%29_2.jpg",
+        "credit": "Géry PARENT · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Géry PARENT",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:G%C3%A9ry_PARENT&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2412",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "economy-and-stock-market",
+      "bundle": "base",
+      "description": "Some characters count sheep to sleep; this one counts gold coins.",
+      "question": "Which rich cartoon character dives and swims in a giant bin full of gold coins?",
+      "answer": "Scrooge McDuck",
+      "wrong_answers": [
+        "Mr. Krabs",
+        "Wario",
+        "Mr. Burns"
+      ],
+      "hints": [
+        "He is incredibly rich, but he hates spending even one coin.",
+        "He first appeared in comics in the 1940s.",
+        "He wears a top hat and spats, and he comes from Scotland."
+      ],
+      "fun_fact": "Scrooge McDuck first appeared in a 1947 Donald Duck comic drawn by Carl Barks.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Piggy-bank-968302.jpg/3840px-Piggy-bank-968302.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APiggy-bank-968302.jpg",
+        "credit": "stevepb · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "stevepb",
+        "author_url": "https://pixabay.com/en/users/stevepb-282134/"
+      },
+      "background": null
+    },
+    {
       "id": "q-2413",
       "status": "approved",
       "difficulty": 3,
@@ -7964,6 +8304,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Ken Lund from Reno, Nevada, USA",
         "author_url": "https://www.flickr.com/people/75683070@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2416",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "famous-bridges",
+      "bundle": "base",
+      "description": "A coat hanger so big that trains and cars drive across it.",
+      "question": "A giant steel arch bridge is nicknamed “the Coathanger”. In which city does it stand?",
+      "answer": "Sydney",
+      "wrong_answers": [
+        "San Francisco",
+        "London",
+        "New York"
+      ],
+      "hints": [
+        "The city is on a big harbor in the Southern Hemisphere.",
+        "Huge New Year's fireworks are set off from this bridge.",
+        "A famous opera house with sail-shaped roofs stands right next to it."
+      ],
+      "fun_fact": "Workers climbed the Sydney Harbour Bridge to paint it, and today visitors can climb its arch too.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Steel_truss_arch_8098.jpg/3840px-Steel_truss_arch_8098.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASteel_truss_arch_8098.jpg",
+        "credit": "Chris Light · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Chris Light",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Chris_Light"
       },
       "background": null
     },
@@ -8444,6 +8818,40 @@
       "background": null
     },
     {
+      "id": "q-2432",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "famous-inventors",
+      "bundle": "base",
+      "description": "Beep beep beeeep: someone is sending you a message the old-fashioned way.",
+      "question": "“I'm a code of dots and dashes, and I carry my American inventor's name.” Who was he?",
+      "answer": "Samuel Morse",
+      "wrong_answers": [
+        "Thomas Edison",
+        "Alexander Graham Bell",
+        "Guglielmo Marconi"
+      ],
+      "hints": [
+        "The code was sent along telegraph wires.",
+        "In this code, SOS is three dots, three dashes, three dots.",
+        "His first name is Samuel, and sailors and radio operators learned his code for over a century."
+      ],
+      "fun_fact": "Samuel Morse was also a painter before he became famous for the telegraph.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Morse_Key.jpg/3840px-Morse_Key.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMorse_Key.jpg",
+        "credit": "Lauren.mcalary · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Lauren.mcalary",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Lauren.mcalary&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-2433",
       "status": "approved",
       "difficulty": 2,
@@ -8712,6 +9120,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Livioandronico2013",
         "author_url": "https://commons.wikimedia.org/wiki/User:Livioandronico2013"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2441",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "famous-logos",
+      "bundle": "base",
+      "description": "Before it painted the world's fries red, this company wanted to make your eyes water.",
+      "question": "Heinz ketchup is to tomatoes as Heinz's very first bottled product, from 1869, is to what?",
+      "answer": "Horseradish",
+      "wrong_answers": [
+        "Mustard seeds",
+        "Garlic",
+        "Ginger"
+      ],
+      "hints": [
+        "It is a root, not a fruit.",
+        "It is famous for being very hot and making your nose sting.",
+        "It is often served with roast beef, and wasabi is a close relative."
+      ],
+      "fun_fact": "Henry Heinz sold his horseradish in clear glass bottles so buyers could see it held no cheap fillers.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Ketchup_Bottles.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKetchup_Bottles.jpg",
+        "credit": "Visitor7 · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Visitor7",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Visitor7&action=edit&redlink=1"
       },
       "background": null
     },
@@ -9396,6 +9838,40 @@
       "background": null
     },
     {
+      "id": "q-2464",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "farm-animals",
+      "bundle": "base",
+      "description": "A tail that went to the hairdresser and asked for curls.",
+      "question": "Which farm animal is famous for its short, curly tail?",
+      "answer": "Pig",
+      "wrong_answers": [
+        "Sheep",
+        "Goat",
+        "Dog"
+      ],
+      "hints": [
+        "This animal loves rolling in mud.",
+        "It's often pink.",
+        "It says “oink”."
+      ],
+      "fun_fact": "A pig's tail often hangs straight when it is stressed or unwell, and curls up when it feels relaxed.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Long_Meadow_Farm_Barn_PA_05.JPG/3840px-Long_Meadow_Farm_Barn_PA_05.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALong_Meadow_Farm_Barn_PA_05.JPG",
+        "credit": "Shuvaev · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Shuvaev",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shuvaev"
+      },
+      "background": null
+    },
+    {
       "id": "q-2465",
       "status": "approved",
       "difficulty": 7,
@@ -9800,6 +10276,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Willis Lam",
         "author_url": "https://www.flickr.com/people/85567416@N03"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2477",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "food-history",
+      "bundle": "base",
+      "description": "A plant with ears that can't hear a thing.",
+      "question": "People in Mexico have made this flat, round bread from the plant in the photo for thousands of years. What is it?",
+      "answer": "Tortillas",
+      "wrong_answers": [
+        "Naan",
+        "Pita bread",
+        "Crêpes"
+      ],
+      "hints": [
+        "The plant in the photo grows tall and has yellow kernels.",
+        "It's cooked on a hot, flat pan called a comal.",
+        "You can wrap it around beans or meat to make a taco."
+      ],
+      "fun_fact": "Thousands of years ago, farmers in Mexico turned a small wild grass called teosinte into the big corn cobs we know today.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Corn_stalks_in_Benton_County%2C_Indiana.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACorn_stalks_in_Benton_County%2C_Indiana.png",
+        "credit": "Huw Williams (Huwmanbeing) · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Huw Williams (Huwmanbeing)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Huwmanbeing"
       },
       "background": null
     },
@@ -10450,6 +10960,40 @@
       "background": null
     },
     {
+      "id": "q-2497",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "french-revolution",
+      "bundle": "base",
+      "description": "A man who thought power should be cut into slices, like a cake nobody gets to eat alone.",
+      "question": "This French thinker wrote “The Spirit of the Laws” and said power should be split into three branches. Who is he?",
+      "answer": "Montesquieu",
+      "wrong_answers": [
+        "Voltaire",
+        "Rousseau",
+        "Diderot"
+      ],
+      "hints": [
+        "He was a nobleman and a judge from near Bordeaux.",
+        "His book came out in 1748, decades before the Revolution.",
+        "His idea is called the “separation of powers”, and he also wrote the satirical novel “Persian Letters”."
+      ],
+      "fun_fact": "Montesquieu's idea of separate lawmakers, government and judges went into the US Constitution and many constitutions after it.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Ch%C3%A2teau_de_La_Br%C3%A8de_en_Gironde.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACh%C3%A2teau_de_La_Br%C3%A8de_en_Gironde.jpg",
+        "credit": "Hervé Devred · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Hervé Devred",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Antonikon&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-2498",
       "status": "approved",
       "difficulty": 13,
@@ -10956,6 +11500,40 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Acediscovery",
         "author_url": "https://commons.wikimedia.org/wiki/User:Acediscovery"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2513",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "history-of-money",
+      "bundle": "base",
+      "description": "A machine with trust issues, but only about paper.",
+      "question": "Many shops keep a small machine with a purple ultraviolet light next to the cash register. What is it for?",
+      "answer": "Spotting fake banknotes",
+      "wrong_answers": [
+        "Counting coins",
+        "Printing receipts",
+        "Reading bank cards"
+      ],
+      "hints": [
+        "It looks closely at money before the shop accepts it.",
+        "Shops use it most for big notes.",
+        "Real banknotes pass, copies made at home do not."
+      ],
+      "fun_fact": "Many banknotes have hidden marks that glow only under ultraviolet light.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/%E4%BA%BA%E9%A1%9E%E3%81%AF%E6%B8%A9%E6%9A%96%E3%81%8B%E3%80%82_%2811580315163%29.jpg/3840px-%E4%BA%BA%E9%A1%9E%E3%81%AF%E6%B8%A9%E6%9A%96%E3%81%8B%E3%80%82_%2811580315163%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%E4%BA%BA%E9%A1%9E%E3%81%AF%E6%B8%A9%E6%9A%96%E3%81%8B%E3%80%82_%2811580315163%29.jpg",
+        "credit": "chinnian · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "chinnian",
+        "author_url": "https://www.flickr.com/people/77034082@N00"
       },
       "background": null
     },
@@ -11640,6 +12218,40 @@
       "background": null
     },
     {
+      "id": "q-2535",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "human-body",
+      "bundle": "base",
+      "description": "Your nose's way of shouting “Get out!” at a speck of dust.",
+      "question": "When you sneeze, what is the little cloud that shoots out of your nose and mouth made of?",
+      "answer": "Air and tiny wet drops",
+      "wrong_answers": [
+        "Only dry air",
+        "Tiny bits of dust",
+        "Smoke from the lungs"
+      ],
+      "hints": [
+        "That's why you should sneeze into your elbow.",
+        "It's a little wet.",
+        "It's mostly spit and mucus mixed with air."
+      ],
+      "fun_fact": "Your eyes close by themselves when you sneeze: it's a reflex that's very hard to stop.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/A_tissue_box.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_tissue_box.jpg",
+        "credit": "Captain MarcusL · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Captain MarcusL",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Captain_MarcusL"
+      },
+      "background": null
+    },
+    {
       "id": "q-2536",
       "status": "approved",
       "difficulty": 3,
@@ -11738,6 +12350,74 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Pierre André Leclercq",
         "author_url": "https://www.wikidata.org/wiki/Q97949455"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2539",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "insects",
+      "bundle": "base",
+      "description": "The longest line in the world, and nobody is complaining.",
+      "question": "Why do ants often walk one behind the other in a long line?",
+      "answer": "They follow a smell trail",
+      "wrong_answers": [
+        "They hold onto each other",
+        "A leader shouts directions",
+        "They follow the moon"
+      ],
+      "hints": [
+        "The first ant leaves something behind.",
+        "You can't see it, but ants can sense it.",
+        "It works through their antennae, like a nose."
+      ],
+      "fun_fact": "If you wipe a finger across an ant trail, the ants behind get lost for a moment because the smell is gone.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Close-up_photograph_of_Oecophylla_smaragdina_%28Red_weaver_ant%29.jpg/3840px-Close-up_photograph_of_Oecophylla_smaragdina_%28Red_weaver_ant%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AClose-up_photograph_of_Oecophylla_smaragdina_%28Red_weaver_ant%29.jpg",
+        "credit": "Basile Morin · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Basile Morin",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Basile_Morin"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2540",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "insects",
+      "bundle": "base",
+      "description": "Interior design for people who think glitter is too boring.",
+      "question": "Artist Jan Fabre covered a ceiling of the Royal Palace in Brussels with shiny green jewel beetle wing cases. About how many?",
+      "answer": "About 1.6 million",
+      "wrong_answers": [
+        "About 1,600",
+        "About 16,000",
+        "About 160,000"
+      ],
+      "hints": [
+        "It covers a whole large hall.",
+        "Each wing case is smaller than a fingernail.",
+        "It's more than a million."
+      ],
+      "fun_fact": "Jewel beetle wing cases keep their shine for centuries, so people in Asia have used them in jewelry and textiles for a long time.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Jewel_Beetle._Anthaxia_scutellaris%3F_Buprestidae_%2832165947221%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJewel_Beetle._Anthaxia_scutellaris%3F_Buprestidae_%2832165947221%29.jpg",
+        "credit": "gailhampshire from Cradley, Malvern, U.K · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "gailhampshire from Cradley, Malvern, U.K",
+        "author_url": "https://www.flickr.com/people/43272765@N04"
       },
       "background": null
     },
@@ -14514,6 +15194,40 @@
       }
     },
     {
+      "id": "q-2624",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "musical-instruments",
+      "bundle": "base",
+      "description": "A thin strip of plant that makes saxophones sing.",
+      "question": "This thin piece of cane vibrates when a clarinet or saxophone player blows. What is it called?",
+      "answer": "Reed",
+      "wrong_answers": [
+        "Pick",
+        "Valve",
+        "Bow"
+      ],
+      "hints": [
+        "It is made from a tall grass-like plant.",
+        "Players often wet it in their mouth before playing.",
+        "It shares its name with plants that grow by rivers and ponds."
+      ],
+      "fun_fact": "Many reeds are cut from a giant cane plant called Arundo donax, which grows in warm places like southern France.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/11/B-flat_e-flat_a-flat_reeds.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AB-flat_e-flat_a-flat_reeds.jpg",
+        "credit": "Michael Scott Cuthbert · CC BY-SA 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.5",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+        "author": "Michael Scott Cuthbert",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-2625",
       "status": "approved",
       "difficulty": 6,
@@ -15441,6 +16155,40 @@
       "background": null
     },
     {
+      "id": "q-2652",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "photography",
+      "bundle": "base",
+      "description": "A portrait so tough you could mail it in a letter and it would survive the trip.",
+      "question": "In the 1860s, cheap portraits were made in minutes on thin, black-lacquered metal plates that could be cut with shears. Which metal?",
+      "answer": "Iron",
+      "wrong_answers": [
+        "Tin",
+        "Copper",
+        "Silver"
+      ],
+      "hints": [
+        "The famous name of these photos is misleading.",
+        "This metal was cheap and could rust.",
+        "Magnets stick to it."
+      ],
+      "fun_fact": "These photos are called tintypes, even though they contain no tin at all.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/A_classic_camera_rests_on_a_polished_wooden_table%2C_surrounded_by_an_antique_typewriter_and_a_vintage_rotary_phone.jpg/3840px-A_classic_camera_rests_on_a_polished_wooden_table%2C_surrounded_by_an_antique_typewriter_and_a_vintage_rotary_phone.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_classic_camera_rests_on_a_polished_wooden_table%2C_surrounded_by_an_antique_typewriter_and_a_vintage_rotary_phone.jpg",
+        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Shixart1985",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
+      },
+      "background": null
+    },
+    {
       "id": "q-2653",
       "status": "approved",
       "difficulty": 10,
@@ -15981,6 +16729,74 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "HoremWeb",
         "author_url": "https://commons.wikimedia.org/wiki/User:HoremWeb"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2669",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "poetry",
+      "bundle": "base",
+      "description": "A man who saved so much time he didn't even bother with the word “and”.",
+      "question": "Which Roman is behind the most quoted example of asyndeton, a list with the “and” left out?",
+      "answer": "Julius Caesar",
+      "wrong_answers": [
+        "Cicero",
+        "Augustus",
+        "Nero"
+      ],
+      "hints": [
+        "The famous line is a boast about winning a battle very fast.",
+        "It has three short Latin verbs in a row.",
+        "“I came, I saw, I conquered.”"
+      ],
+      "fun_fact": "Caesar wrote “Veni, vidi, vici” in 47 BC after winning the Battle of Zela in only about five days.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/David_Roberts_%281796-1864%29_-_Ruins_of_the_Roman_Forum_-_OP212_-_Wolverhampton_Art_Gallery.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADavid_Roberts_%281796-1864%29_-_Ruins_of_the_Roman_Forum_-_OP212_-_Wolverhampton_Art_Gallery.jpg",
+        "credit": "David Roberts · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "David Roberts",
+        "author_url": "https://en.wikipedia.org/wiki/en:David_Roberts_(painter)"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2670",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "poetry",
+      "bundle": "base",
+      "description": "Poets use the alphabet like a secret code, and they only need the first few letters.",
+      "question": "In poetry, what does a rhyme scheme like “ABAB” tell you?",
+      "answer": "Which lines rhyme with each other",
+      "wrong_answers": [
+        "How many syllables each line has",
+        "Where the reader should take a breath",
+        "Which words are spoken loudest"
+      ],
+      "hints": [
+        "Each letter stands for one line of the poem.",
+        "Lines that share the same letter have something in common.",
+        "In ABAB, the first and third lines end with the same sound."
+      ],
+      "fun_fact": "A Shakespearean sonnet follows the scheme ABAB CDCD EFEF GG, ending with a rhyming pair of lines.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Bird_Feather_Feather_Paper_pen_Bird_feather_made_into_dipping_pen%2C_inkwell%2C_paper%2C_handwritten_letter%2C_inkblots%2C_etc._2505306_Edited_2020.jpg/3840px-Bird_Feather_Feather_Paper_pen_Bird_feather_made_into_dipping_pen%2C_inkwell%2C_paper%2C_handwritten_letter%2C_inkblots%2C_etc._2505306_Edited_2020.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABird_Feather_Feather_Paper_pen_Bird_feather_made_into_dipping_pen%2C_inkwell%2C_paper%2C_handwritten_letter%2C_inkblots%2C_etc._2505306_Edited_2020.jpg",
+        "credit": "Tool Dude8mm · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Tool Dude8mm",
+        "author_url": null
       },
       "background": null
     },
@@ -18816,6 +19632,40 @@
       "background": null
     },
     {
+      "id": "q-2759",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "athletics",
+      "bundle": "base",
+      "description": "A green island floating in a red sea of rubber.",
+      "question": "Which of these athletics events does NOT take place in the area inside the running track?",
+      "answer": "400 m hurdles",
+      "wrong_answers": [
+        "Javelin",
+        "Discus",
+        "High jump"
+      ],
+      "hints": [
+        "The area inside the track is called the infield.",
+        "In this event, the athletes move around the stadium in lanes.",
+        "The odd one out is a race."
+      ],
+      "fun_fact": "Discus and hammer throwers throw from inside a tall net cage, so a bad throw can't fly into the crowd.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Aerial_view_of_Poljud_Stadium_in_2024.jpg/3840px-Aerial_view_of_Poljud_Stadium_in_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAerial_view_of_Poljud_Stadium_in_2024.jpg",
+        "credit": "Quintin Soloviev · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Quintin Soloviev",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Quintinsoloviev"
+      },
+      "background": null
+    },
+    {
       "id": "q-2760",
       "status": "approved",
       "difficulty": 6,
@@ -19884,6 +20734,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "nathanmac87",
         "author_url": "https://www.flickr.com/people/72841285@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2795",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "musicals",
+      "bundle": "base",
+      "description": "A song about scrubbing floors that somehow makes you want to dance.",
+      "question": "In the musical “Annie”, who sings “It's the Hard-Knock Life” while scrubbing floors for the strict Miss Hannigan?",
+      "answer": "The orphan girls",
+      "wrong_answers": [
+        "The servants of a mansion",
+        "The newspaper sellers",
+        "The factory workers"
+      ],
+      "hints": [
+        "They are children.",
+        "They all sleep in one big room in a New York home.",
+        "Annie herself is one of them, until a rich man takes her in."
+      ],
+      "fun_fact": "Annie started as a newspaper comic strip, “Little Orphan Annie”, first printed in 1924.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Luiwagen_kop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALuiwagen_kop.jpg",
+        "credit": "Husky · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Husky",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Husky"
       },
       "background": null
     },
@@ -21720,6 +22604,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Suffolk County Council, Alexander Bliss, 2018-01-19 18:16:00",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-2852",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Nature's doorbell, except this one is telling you to leave.",
+      "question": "What sound does an angry goose make to tell you to stay away?",
+      "answer": "Hissing",
+      "wrong_answers": [
+        "Purring",
+        "Barking",
+        "Singing"
+      ],
+      "hints": [
+        "It's an angry sound.",
+        "A snake makes this sound too.",
+        "It sounds like “ssss”."
+      ],
+      "fun_fact": "Geese are so good at raising the alarm that people have used them as guards for thousands of years.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Angry_goose_%28DSC_0780%29.jpg/3840px-Angry_goose_%28DSC_0780%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAngry_goose_%28DSC_0780%29.jpg",
+        "credit": "Trougnouf (Benoit Brummer) · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Trougnouf (Benoit Brummer)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Trougnouf"
       },
       "background": null
     },
@@ -23934,6 +24852,40 @@
       "background": null
     },
     {
+      "id": "q-2918",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "board-games",
+      "bundle": "base",
+      "description": "The pie you collect slice by slice, and you can't even eat it.",
+      "question": "The board game where you fill a round token with six colored wedges was invented in 1979 by two journalists. In which country?",
+      "answer": "Canada",
+      "wrong_answers": [
+        "United States",
+        "United Kingdom",
+        "Australia"
+      ],
+      "hints": [
+        "Both inventors worked for newspapers in the same city.",
+        "The idea came when they found pieces missing from their Scrabble set.",
+        "They lived in Montreal."
+      ],
+      "fun_fact": "Chris Haney and Scott Abbott invented Trivial Pursuit, which went on to sell well over 100 million copies around the world.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Adler_Typewriter_Keyboard_Close-up.jpg/3840px-Adler_Typewriter_Keyboard_Close-up.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAdler_Typewriter_Keyboard_Close-up.jpg",
+        "credit": "Maksym Kozlenko · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Maksym Kozlenko",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Maxim75"
+      },
+      "background": null
+    },
+    {
       "id": "q-2919",
       "status": "approved",
       "difficulty": 2,
@@ -25634,6 +26586,40 @@
       "background": null
     },
     {
+      "id": "q-2969",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "rocks-and-minerals",
+      "bundle": "base",
+      "description": "A box of tiny pebbles with a very important job that nobody wants to talk about.",
+      "question": "Since the 1940s, homes all over the world have bought bags of dried clay grains. What are they mostly used for?",
+      "answer": "Cat litter",
+      "wrong_answers": [
+        "Garden fertilizer",
+        "Fish food",
+        "Road salt"
+      ],
+      "hints": [
+        "The grains soak up liquid very well.",
+        "A furry pet uses them every day.",
+        "It goes in a box that a cat visits."
+      ],
+      "fun_fact": "In 1947 Edward Lowe gave a neighbor some dried clay to use instead of sand or ashes for her cat, and that started the modern cat litter business.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Sedimentary-clay-mountain.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASedimentary-clay-mountain.jpg",
+        "credit": "puroticorico · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "puroticorico",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-2970",
       "status": "approved",
       "difficulty": 4,
@@ -26722,6 +27708,40 @@
       "background": null
     },
     {
+      "id": "q-3003",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "science",
+      "bundle": "base",
+      "description": "The invisible force that ruins every attempt to slide across the kitchen in socks.",
+      "question": "I'm the force that slows you down when you slide, and I'm weakest on smooth surfaces. Where would you slide farthest?",
+      "answer": "An ice rink",
+      "wrong_answers": [
+        "A carpet",
+        "A grass lawn",
+        "A sandy beach"
+      ],
+      "hints": [
+        "I'm called friction.",
+        "Rough surfaces make me stronger.",
+        "Skaters glide here."
+      ],
+      "fun_fact": "Without friction you couldn't even walk: your feet would just slide.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/California_Kitchen_Floor_Tiles_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACalifornia_Kitchen_Floor_Tiles_02.jpg",
+        "credit": "Stilfehler · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Stilfehler",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Stilfehler"
+      },
+      "background": null
+    },
+    {
       "id": "q-3004",
       "status": "approved",
       "difficulty": 1,
@@ -27126,6 +28146,40 @@
         "license_url": "https://creativecommons.org/licenses/by/3.0",
         "author": "NASA/JPL-Caltech/SwRI/MSSS/Alain Mirón Velázquez © CC BY",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-3016",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "solar-system",
+      "bundle": "base",
+      "description": "Twelve signs that claim to know your personality before you've even said hello.",
+      "question": "Signs like a ram, a bull and twins belong to which practice that says they shape your personality?",
+      "answer": "Astrology",
+      "wrong_answers": [
+        "Astronomy",
+        "Alchemy",
+        "Numerology"
+      ],
+      "hints": [
+        "It is not a science, even though it uses the sky.",
+        "Horoscopes in magazines come from it.",
+        "Its name sounds almost like the science of stars, but it is about fortunes."
+      ],
+      "fun_fact": "Because Earth slowly wobbles, the Sun no longer sits in the same constellations on the dates horoscopes use.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Aries_zodiac_sign%2C_Jantar_Mantar%2C_Jaipur%2C_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAries_zodiac_sign%2C_Jantar_Mantar%2C_Jaipur%2C_India.jpg",
+        "credit": "Yann Forget · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Yann Forget",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Yann"
       },
       "background": null
     },
@@ -28150,6 +29204,40 @@
       "background": null
     },
     {
+      "id": "q-3049",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "stars-and-galaxies",
+      "bundle": "base",
+      "description": "Astronomers rank stars like a race, but the winners get the smallest numbers.",
+      "question": "Calling the brightest stars “first magnitude” and the faintest “sixth” goes back to which era?",
+      "answer": "Ancient Greece",
+      "wrong_answers": [
+        "The Middle Ages",
+        "The Renaissance",
+        "The Industrial Revolution"
+      ],
+      "hints": [
+        "It's much older than the telescope.",
+        "It comes from star catalogs drawn up by eye, star by star.",
+        "Ptolemy kept the scale in his star catalog, the Almagest."
+      ],
+      "fun_fact": "The scale runs backwards: the brighter the star, the lower the number, and Sirius even has a negative magnitude.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/AT4_under_the_night_sky_%28eso-paranal-lv3%29.tiff/lossy-page1-3840px-AT4_under_the_night_sky_%28eso-paranal-lv3%29.tiff.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAT4_under_the_night_sky_%28eso-paranal-lv3%29.tiff",
+        "credit": "ESO · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "ESO",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-3050",
       "status": "approved",
       "difficulty": 8,
@@ -28486,6 +29574,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.5",
         "author": "w:User:Light current",
         "author_url": "https://en.wikipedia.org/wiki/User:Light_current"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3060",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "swimming",
+      "bundle": "base",
+      "description": "A race so long you could finish a whole film series while doing it.",
+      "question": "In an Ironman triathlon, the swim is 3.8 km (2.4 mi) and the run is a full marathon. How long is the bike ride?",
+      "answer": "180 km",
+      "wrong_answers": [
+        "90 km",
+        "120 km",
+        "250 km"
+      ],
+      "hints": [
+        "It's the middle part, between the swim and the run.",
+        "It's by far the longest of the three parts.",
+        "It's a bit less than 200 km."
+      ],
+      "fun_fact": "The first Ironman, in Hawaii in 1978, had only 15 starters, and 12 of them finished.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Swim_start_at_Bonn_Triathlon_2015.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASwim_start_at_Bonn_Triathlon_2015.jpg",
+        "credit": "Bonn Triathlon · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Bonn Triathlon",
+        "author_url": "http://www.bonn-triathlon.de"
       },
       "background": null
     },
@@ -29136,6 +30258,40 @@
       "background": null
     },
     {
+      "id": "q-3081",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "tennis",
+      "bundle": "base",
+      "description": "The only moment in tennis when you get to throw the ball at yourself.",
+      "question": "You're about to serve in a tennis match. Which of these is NOT a rule of the serve?",
+      "answer": "The ball must bounce before you hit it",
+      "wrong_answers": [
+        "You stand behind the back line",
+        "You get two tries to get it in",
+        "It must land in the box diagonally opposite"
+      ],
+      "hints": [
+        "The serve rules are the same for professionals and beginners.",
+        "To serve, you toss the ball up into the air yourself.",
+        "A serve is hit before the ball ever touches the ground."
+      ],
+      "fun_fact": "The fastest serves in men's tennis travel at more than 250 km/h (155 mph).",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Michael_Agwi_Serving.jpg/3840px-Michael_Agwi_Serving.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMichael_Agwi_Serving.jpg",
+        "credit": "Crosscourt View · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Crosscourt View",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Crosscourt_View&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-3082",
       "status": "approved",
       "difficulty": 10,
@@ -29234,6 +30390,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Chris Brown",
         "author_url": "https://500px.com/zoonabar"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3085",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "tennis",
+      "bundle": "base",
+      "description": "Boxes you can't put anything in, except a fast ball.",
+      "question": "How many service boxes does a tennis court have?",
+      "answer": "4",
+      "wrong_answers": [
+        "2",
+        "6",
+        "8"
+      ],
+      "hints": [
+        "The serve must land in one of these boxes.",
+        "They're the boxes closest to the net.",
+        "There are two on each side of the net."
+      ],
+      "fun_fact": "A serve must always land in the service box diagonally across from the server.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Tennis_racket_and_ball.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATennis_racket_and_ball.JPG",
+        "credit": "nao2g · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "nao2g",
+        "author_url": null
       },
       "background": null
     },
@@ -30088,6 +31278,40 @@
       "background": null
     },
     {
+      "id": "q-3111",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "video-games",
+      "bundle": "base",
+      "description": "A ticket that makes you climb a ladder of prizes.",
+      "question": "I'm a battle pass in Fortnite: you buy me for one season and climb my tiers by playing. What do I give you?",
+      "answer": "Cosmetic items like skins",
+      "wrong_answers": [
+        "Stronger weapons",
+        "Extra health",
+        "Faster building"
+      ],
+      "hints": [
+        "I start over every season, and my top tiers are the hardest to reach.",
+        "Players love to show off what they unlock from me.",
+        "Think outfits, emotes and backpacks."
+      ],
+      "fun_fact": "A Fortnite battle pass can pay for itself: it includes enough V-Bucks to buy the next one.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Xbox-360-Wireless-Controller-White.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AXbox-360-Wireless-Controller-White.jpg",
+        "credit": "Evan-Amos · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Evan-Amos",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Evan-Amos"
+      },
+      "background": null
+    },
+    {
       "id": "q-3112",
       "status": "approved",
       "difficulty": 4,
@@ -30641,6 +31865,40 @@
       "background": null
     },
     {
+      "id": "q-3129",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "wonders-of-the-world",
+      "bundle": "base",
+      "description": "The king of the gods needed a seat, and someone had to carve it.",
+      "question": "The giant Statue of Zeus at Olympia was one of the Seven Wonders. Which Greek sculptor made it?",
+      "answer": "Phidias",
+      "wrong_answers": [
+        "Praxiteles",
+        "Myron",
+        "Polykleitos"
+      ],
+      "hints": [
+        "He worked in Athens in the 400s BC.",
+        "He also oversaw the sculptures of the Parthenon.",
+        "His name begins with “Ph”."
+      ],
+      "fun_fact": "Archaeologists found his workshop at Olympia, including a little cup scratched with the words “I belong to Phidias”.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/The_ruins_of_the_Temple_of_Zeus_in_Olympia_on_October_14%2C_2020.jpg/3840px-The_ruins_of_the_Temple_of_Zeus_in_Olympia_on_October_14%2C_2020.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_ruins_of_the_Temple_of_Zeus_in_Olympia_on_October_14%2C_2020.jpg",
+        "credit": "George E. Koronaios · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "George E. Koronaios",
+        "author_url": "https://commons.wikimedia.org/wiki/User:George_E._Koronaios"
+      },
+      "background": null
+    },
+    {
       "id": "q-3130",
       "status": "approved",
       "difficulty": 14,
@@ -30879,6 +32137,40 @@
       "background": null
     },
     {
+      "id": "q-3137",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "wonders-of-the-world",
+      "bundle": "base",
+      "description": "A place so special, the whole world promised to look after it.",
+      "question": "This marine iguana lives only on islands that became one of the very first World Heritage Sites in 1978. Which islands?",
+      "answer": "The Galápagos Islands",
+      "wrong_answers": [
+        "Madagascar",
+        "Hawaii",
+        "Komodo Island"
+      ],
+      "hints": [
+        "They lie in the Pacific Ocean.",
+        "They lie right on the equator.",
+        "They belong to Ecuador."
+      ],
+      "fun_fact": "On UNESCO's World Heritage List, the Galápagos Islands carry the number 1.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Iguana_marina_%28Amblyrhynchus_cristatus%29%2C_Las_Bachas%2C_isla_Santa_Cruz%2C_islas_Gal%C3%A1pagos%2C_Ecuador%2C_2015-07-23%2C_DD_23.jpg/3840px-Iguana_marina_%28Amblyrhynchus_cristatus%29%2C_Las_Bachas%2C_isla_Santa_Cruz%2C_islas_Gal%C3%A1pagos%2C_Ecuador%2C_2015-07-23%2C_DD_23.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AIguana_marina_%28Amblyrhynchus_cristatus%29%2C_Las_Bachas%2C_isla_Santa_Cruz%2C_islas_Gal%C3%A1pagos%2C_Ecuador%2C_2015-07-23%2C_DD_23.jpg",
+        "credit": "Diego Delso · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Diego Delso",
+        "author_url": "https://www.wikidata.org/wiki/Q28147777"
+      },
+      "background": null
+    },
+    {
       "id": "q-3138",
       "status": "approved",
       "difficulty": 12,
@@ -31045,6 +32337,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Kham Tran from Australia",
         "author_url": "https://www.flickr.com/people/21078870@N06"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3143",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "world-cuisines",
+      "bundle": "base",
+      "description": "A bread so soft it doubles as a spoon.",
+      "question": "In which country is naan NOT a traditional bread?",
+      "answer": "Ethiopia",
+      "wrong_answers": [
+        "India",
+        "Pakistan",
+        "Afghanistan"
+      ],
+      "hints": [
+        "This country is famous for its long-distance runners.",
+        "In that country, coffee is a big part of daily life.",
+        "Its traditional bread is a big, spongy pancake called injera."
+      ],
+      "fun_fact": "Naan is often baked by slapping the dough onto the hot inside wall of a clay oven called a tandoor.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Chicken_Curry_%28490198749%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChicken_Curry_%28490198749%29.jpg",
+        "credit": "rovingI · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "rovingI",
+        "author_url": "https://www.flickr.com/people/70522326@N00"
       },
       "background": null
     },
