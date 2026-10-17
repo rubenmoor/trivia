@@ -16,10 +16,12 @@
   import Glyph from "../Glyph.svelte";
   import Hearts from "../Hearts.svelte";
   import Icon from "../Icon.svelte";
+  import { topicOf } from "../../lib/names.svelte.ts";
   import Answers from "../question/Answers.svelte";
   import Card from "../question/Card.svelte";
   import { PAD_PICKS, questionKeys } from "../question/keys.ts";
   import Media from "../question/Media.svelte";
+  import Splash from "../question/Splash.svelte";
   import type { AnswerView } from "../question/reveal.ts";
   import SeatTag from "../SeatTag.svelte";
   import { duck, music, sfx } from "../sound.svelte.ts";
@@ -355,6 +357,8 @@
         {#if error}<p class="error-box">{error}</p>{/if}
       </footer>
       <Media bind:this={mediaEl} bind:failed={mediaFailed} {question} shown={shown && !flipping} {paused} dark={!!held && !revealed} onended={() => !held && music("timed")} />
+      {@const topic = topicOf(question.id)}
+      {#if topic}<Splash {...topic} start={shown && !flipping} />{/if}
     {/key}
   {:else}
     <div></div>

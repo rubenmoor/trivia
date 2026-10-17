@@ -1,8 +1,16 @@
 <script lang="ts">
   // /?efectos: every effect, recorded and synthesized, to compare on the TV (dev aid, UI-10).
+  import Splash from "./question/Splash.svelte";
+  import { SPLASH_EXITS, type SplashExit } from "./question/splash.ts";
   import { effects, music, sfx, sound, unlock, type Cue, type Track } from "./sound.svelte.ts";
 
   const list = effects();
+  /** The splash on show: a sample category over a sample subcategory (the names fall back to the keys). */
+  let splash = $state<{ exit: SplashExit; n: number } | null>(null);
+  function playSplash(exit: SplashExit) {
+    unlock();
+    splash = { exit, n: (splash?.n ?? 0) + 1 };
+  }
   const loops: Track[] = ["normal", "question", "submitted", "timed"];
   let synth = $state(false);
 
@@ -34,6 +42,13 @@
         <td><button onclick={() => loop(sound.music === "question" ? "submitted" : "question")}>corte</button></td>
         <td><button onclick={() => loop(null)}>parar</button></td>
       </tr>
+      {#each SPLASH_EXITS as exit (exit.id)}
+        <tr>
+          <td>splash {exit.id}</td>
+          <td><button onclick={() => playSplash(exit)}>jugar</button></td>
+          <td>{exit.cue}</td>
+        </tr>
+      {/each}
       {#each list as { cue, file } (cue)}
         <tr>
           <td>{cue}</td>
@@ -44,6 +59,12 @@
     </tbody>
   </table>
 </aside>
+
+{#if splash}
+  {#key splash.n}
+    <div class="splash-stage"><Splash category="Geografía" subcategory="Capitales del mundo" start exit={splash.exit} /></div>
+  {/key}
+{/if}
 
 <style>
   .efectos {
@@ -57,6 +78,11 @@
     background: rgb(0 0 0 / 0.75);
     color: white;
     font: 0.9rem/1.2 sans-serif;
+  }
+  .splash-stage {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
   }
   td {
     padding: 0.1rem 0.4rem;

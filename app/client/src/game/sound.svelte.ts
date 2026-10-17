@@ -79,6 +79,10 @@ const SAMPLE_FOR: Partial<Record<Cue, [Sample, ((level: number) => number)?]>> =
   whoosh: ["whoosh"],
   "swoosh-up": ["swoosh-sube"],
   swoosh: ["escoba"],
+  "splash-left": ["whoosh"],
+  "splash-right": ["escoba"],
+  "splash-fade": ["susurro-papel"],
+  "splash-spin": ["swoosh-sube", () => 1.2],
   pop: ["pop", () => 0.9 + Math.random() * 0.25],
   "menu-open": ["menu-abre"],
   "menu-close": ["menu-cierra"],
@@ -454,7 +458,8 @@ export type Cue =
   | "whoosh" | "swoosh-up" | "swoosh" | "tear" | "paper" | "ready" | "boom" | "block" | "cork-pop" | "pop"
   | "padlock-close" | "padlock-open" | "fanfare" | "sad-trombone" | "rewind" | "menu-open" | "menu-close"
   | "unlocked" | "joker-armed" | "joker-open" | "joker-activate" | "whistle-down" | "stamp" | "shredder"
-  | "heartbeat" | "tick" | "glass-break" | "rustle" | "token-back" | "claim" | "countdown";
+  | "heartbeat" | "tick" | "glass-break" | "rustle" | "token-back" | "claim" | "countdown"
+  | "splash-left" | "splash-right" | "splash-fade" | "splash-spin";
 
 /** Play a short effect; `level` sets the pitch of "block" (the tower's height); `synth` skips the recording. */
 export function sfx(cue: Cue, level = 1, opts: { synth?: boolean } = {}) {
@@ -573,6 +578,14 @@ const RECIPES: Record<Cue, Recipe> = {
   whoosh: (c, o, t) => noise(c, o, t, { from: 2400, to: 300, len: 0.45, q: 2, attack: 0.15 }),
   "swoosh-up": (c, o, t) => noise(c, o, t, { from: 400, to: 3000, len: 0.45, q: 2, attack: 0.15 }), // «swoosh que sube»
   swoosh: (c, o, t) => noise(c, o, t, { from: 3000, to: 500, len: 0.5, q: 1.5, attack: 0.1, level: 0.5 }), // also «escoba»
+  // Category splash exits (plan 181)
+  "splash-left": (c, o, t) => noise(c, o, t, { from: 2600, to: 300, len: 0.55, q: 2, attack: 0.1, level: 0.5 }),
+  "splash-right": (c, o, t) => noise(c, o, t, { from: 300, to: 2600, len: 0.55, q: 2, attack: 0.3, level: 0.5 }),
+  "splash-fade": (c, o, t) => noise(c, o, t, { from: 1800, to: 600, len: 0.7, q: 0.8, attack: 0.25, level: 0.3 }),
+  "splash-spin": (c, o, t) => {
+    tone(c, o, t, { from: 300, to: 1400, len: 0.6, level: 0.1, attack: 0.1 });
+    noise(c, o, t, { from: 800, to: 3000, len: 0.6, q: 2, attack: 0.15, level: 0.3 });
+  },
   // The chosen envelope tearing open (UI-11): a short run of crackles, rising.
   tear: (c, o, t) => { // «papel rasgado»
     for (let i = 0; i < 5; i++) noise(c, o, t + i * 0.035, { from: 2200 + i * 600, len: 0.06, q: 2, level: 0.32 });

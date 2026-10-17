@@ -53,4 +53,10 @@ export const TIMED_RESULT_MS = 2200;
 export const ROUND_HOLD_MS = 1800;
 export const COUNTDOWN_STEP_MS = 900;
 
+/** Category splash (plan 181): it holds this long once the question is on screen, then leaves in at most SPLASH_EXIT_MS. */
+export const SPLASH_HOLD_MS = 1000;
+export const SPLASH_EXIT_MS = 700;
+/** The subcategory's exit may start or end this much after the category's. */
+export const SPLASH_SUB_MAX_MS = 100;
+
 export const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));

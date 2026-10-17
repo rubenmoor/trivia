@@ -7,7 +7,7 @@
   import { gameAction } from "../../lib/api.ts";
   import { errorText } from "../../lib/errors.ts";
   import { t } from "../../lib/i18n.ts";
-  import { displayName, questionLocale } from "../../lib/names.svelte.ts";
+  import { displayName, questionLocale, topicOf } from "../../lib/names.svelte.ts";
   import { focusControl, pushScope, type Action, type Dir, type Intent } from "../../lib/input.svelte.ts";
   import type { Game, JokerBudget, JokerEvent, JokerName, Jokers } from "../../lib/types.ts";
   import type { SessionView } from "../../lib/seats.ts";
@@ -26,6 +26,7 @@
   import { PAD_PICKS, questionKeys } from "../question/keys.ts";
   import Media from "../question/Media.svelte";
   import Scope from "../question/Scope.svelte";
+  import Splash from "../question/Splash.svelte";
   import SkipDialog from "../question/SkipDialog.svelte";
   import type { AnswerView } from "../question/reveal.ts";
   import Shredder from "../Shredder.svelte";
@@ -34,6 +35,7 @@
   import {
     AFTER_REVEAL_MS,
     ARM_MS,
+    FLIP_MS,
     PADLOCK_MS,
     POP_BACK_MS,
     REVEAL_WAIT_S,
@@ -479,6 +481,11 @@
   </footer>
 
   <Media bind:this={mediaEl} bind:failed={mediaFailed} {question} {shown} {paused} dark={submitted && !revealed} onended={mediaEnded} />
+
+  {#key question.id}
+    {@const topic = topicOf(question.id)}
+    {#if topic}<Splash {...topic} start={shown} delay={swappedBy ? FLIP_MS * 2 : 0} />{/if}
+  {/key}
 </div>
 
 <style>
