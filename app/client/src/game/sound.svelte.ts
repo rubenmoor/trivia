@@ -52,7 +52,8 @@ const SAMPLE_NAMES = [
   "papel", "vidrio", "sello", "golpe", "estallido", "victoria", "whoosh", "swoosh-sube", "escoba", "pop",
   "menu-abre", "menu-cierra", "desbloqueado", "hola", "comodin", "comodin-preparado", "comodin-abre", "silbato",
   "trituradora", "latido", "rebobinar", "mira-tic", "corcho", "rasgado", "susurro-papel", "ficha", "cohete",
-  "canon-confeti", "bengalas", "estrellas", "musica-normal", "musica-pregunta", "musica-enviada",
+  "canon-confeti", "bengalas", "estrellas", "disolver", "derretir", "agujero-negro", "pajaros", "gelatina",
+  "maquina-escribir", "musica-normal", "musica-pregunta", "musica-enviada",
 ] as const;
 type Sample = (typeof SAMPLE_NAMES)[number];
 const samples: Partial<Record<Sample, AudioBuffer>> = {};
@@ -93,6 +94,12 @@ const SAMPLE_FOR: Partial<Record<Cue, [Sample, ((level: number) => number)?]>> =
   "splash-zoom": ["whoosh", () => 1.3],
   "splash-shatter": ["vidrio"],
   "splash-plane": ["papel"],
+  "splash-dissolve": ["disolver"],
+  "splash-melt": ["derretir"],
+  "splash-blackhole": ["agujero-negro"],
+  "splash-birds": ["pajaros"],
+  "splash-typewriter": ["maquina-escribir"],
+  "splash-jelly": ["gelatina"],
   pop: ["pop", () => 0.9 + Math.random() * 0.25],
   "menu-open": ["menu-abre"],
   "menu-close": ["menu-cierra"],

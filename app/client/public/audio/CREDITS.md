@@ -46,3 +46,9 @@ Everything not listed here is synthesized in `app/client/src/game/sound.svelte.t
 | `musica-normal.m4a` | Music loop `normal` (8 bars, 100 bpm, F major) | `level1-step1.wav`, [Music loop variations](https://opengameart.org/content/music-loop-variations) (OpenGameArt) | obscure music | CC0 |
 | `musica-pregunta.m4a` | Music loop `question` (8 bars, 100 bpm, F minor) | `level1-step2-evil.wav`, [Music loop variations](https://opengameart.org/content/music-loop-variations) (OpenGameArt) | obscure music | CC0 |
 | `musica-enviada.m4a` | Music loop `submitted` (8 bars, 100 bpm, F minor) | `level1-step3-evil.wav`, [Music loop variations](https://opengameart.org/content/music-loop-variations) (OpenGameArt) | obscure music | CC0 |
+| `disolver.m4a` | Category splash: dissolve into particles | `forceField_002.ogg`, [Sci-fi Sounds](https://kenney.nl/assets/sci-fi-sounds) | Kenney | CC0 |
+| `derretir.m4a` | Category splash: melt / drip | `slime_000.ogg`, [Sci-fi Sounds](https://kenney.nl/assets/sci-fi-sounds) | Kenney | CC0 |
+| `agujero-negro.m4a` | Category splash: black hole (0.85 s cut) | `spaceEngineLow_002.ogg`, [Sci-fi Sounds](https://kenney.nl/assets/sci-fi-sounds) | Kenney | CC0 |
+| `pajaros.m4a` | Category splash: letters scatter like birds | `pepSound5.ogg`, [Digital Audio](https://kenney.nl/assets/digital-audio) | Kenney | CC0 |
+| `gelatina.m4a` | Category splash: jelly wobble | `phaseJump4.ogg`, [Digital Audio](https://kenney.nl/assets/digital-audio) | Kenney | CC0 |
+| `maquina-escribir.m4a` | Category splash: typewriter backspace (nine clicks, 70 ms apart) | `click_003.ogg`, [Interface Sounds](https://kenney.nl/assets/interface-sounds) | Kenney | CC0 |
