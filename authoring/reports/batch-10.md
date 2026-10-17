@@ -87,6 +87,27 @@ Major findings on approved questions:
 
 None.
 
+## Quality control
+
+The developer's blind spot check (`/review?batch=…&sample=1`) against the LLM review and the audit (plan 16, `qgen report --qc`). Agree = both accept or both don't.
+
+- Spot check: 30 decided of 30
+- Agreement with the LLM review: 29 of 30 (97 %) ✓ (bar: ≥ 30 questions, ≥ 90 %)
+- Release bar (D-79): ✓ release-ready
+- False approve (LLM approved, human not): 0 of 30 (0 %)
+- False needs work (LLM not approved, human approved): 1 of 30 (3 %)
+- Difficulty |Δ| ≥ 2: 0 of 30 (0 %)
+- Media changed: 0 of 30 (0 %)
+- Audit/human agreement: 29 of 30 (97 %)
+
+Disagreements with the LLM review, by the human's problems:
+
+### no problem given (1)
+
+- **q-3410** LLM needs_work → human approved, audit problem (http://127.0.0.1:8001/review/q-3410)
+
+Changes from this QC: none
+
 ## Needs work
 
 - **q-3161** (amazon-history-and-exploration) Caverna da Pedra Pintada, a cave near Monte Alegre in Brazil, has some of the oldest rock paintings in the Americas. About how long ago did people first live there? → About 11,000 years ago: None of the media candidates shows the Monte Alegre / Caverna da Pedra Pintada rock paintings, and no new search is allowed. The slot needs a photo of the Monte Alegre rock art or the cave (e.g. search "Pedra Pintada Monte Alegre" or "Monte Alegre rock art"). No suitable picture found for this question.
