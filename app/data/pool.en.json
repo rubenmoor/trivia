@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "8f79e613",
+  "hash": "15d0ef1d",
   "questions": [
     {
       "id": "q-0019",
@@ -4589,6 +4589,40 @@
         "license_url": null,
         "author": "Walker Evans, for the Farm Security Administration",
         "author_url": "https://en.wikipedia.org/wiki/Walker_Evans"
+      },
+      "background": null
+    },
+    {
+      "id": "q-2301",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "calendars-and-new-year",
+      "bundle": "base",
+      "description": "Two tiny letters that decide if you're late for school or way too early.",
+      "question": "I'm “a.m.”, written after times like “7:00”, and I come from Latin. What do I tell you?",
+      "answer": "That it's before noon",
+      "wrong_answers": [
+        "That it's after noon",
+        "That it's summer time",
+        "That the alarm is on"
+      ],
+      "hints": [
+        "I have a partner: “p.m.”.",
+        "My Latin words are “ante meridiem”.",
+        "“Ante” means “before”, and “meridiem” means “midday”."
+      ],
+      "fun_fact": "Noon itself is neither before nor after midday, so “12 a.m.” and “12 p.m.” confuse people all the time.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Clock_face%2C_St_Anne%27s_Aigburth.jpg/3840px-Clock_face%2C_St_Anne%27s_Aigburth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AClock_face%2C_St_Anne%27s_Aigburth.jpg",
+        "credit": "Rodhullandemu · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Rodhullandemu",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Rodhullandemu"
       },
       "background": null
     },

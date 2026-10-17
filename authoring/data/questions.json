@@ -170757,11 +170757,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-17",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T00:27:34"
       },
       "bundle": "base",
       "locale": "en",
@@ -172035,11 +172043,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-17",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T00:27:46"
       },
       "bundle": "base",
       "locale": "en",
@@ -172712,11 +172728,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-17",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T00:26:11"
       },
       "bundle": "base",
       "locale": "en",
@@ -173622,11 +173646,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-17",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T00:25:12"
       },
       "bundle": "base",
       "locale": "en",
@@ -176048,7 +176080,7 @@
     },
     {
       "id": "q-2301",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Two tiny letters that decide if you're late for school or way too early.",
       "question": "I'm “a.m.”, written after times like “7:00”, and I come from Latin. What do I tell you?",
@@ -176106,15 +176138,23 @@
       "needs_media": false,
       "batch": "batch-9",
       "review": {
-        "decision": "needs_work",
-        "feedback": "This is a base question, but it rests on the a.m./p.m. notation of the 12-hour clock. That convention belongs to English-speaking countries and parts of Latin America. Families in Germany, Spain and much of Europe use the 24-hour clock and rarely see \"a.m.\", so the question doesn't travel. Consider moving it to an English-language regional bundle or retiring it.",
-        "problems": [
-          "style"
-        ],
-        "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "decision": "approved",
+        "feedback": null,
+        "reviewed_on": "2026-10-17",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This is a base question, but it rests on the a.m./p.m. notation of the 12-hour clock. That convention belongs to English-speaking countries and parts of Latin America. Families in Germany, Spain and much of Europe use the 24-hour clock and rarely see \"a.m.\", so the question doesn't travel. Consider moving it to an English-language regional bundle or retiring it.",
+          "problems": [
+            "style"
+          ],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T00:27:01"
       },
       "bundle": "base",
       "locale": "en",
@@ -177905,11 +177945,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-17",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T00:23:57"
       },
       "bundle": "base",
       "locale": "en",
@@ -180094,11 +180142,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-17",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T00:27:41"
       },
       "bundle": "base",
       "locale": "en",
@@ -183973,11 +184029,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-17",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T00:28:00"
       },
       "bundle": "base",
       "locale": "en",
@@ -190055,11 +190119,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-17",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T00:25:56"
       },
       "bundle": "base",
       "locale": "en",
@@ -193205,11 +193277,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-17",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T00:23:08"
       },
       "bundle": "base",
       "locale": "en",
@@ -195729,11 +195809,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-17",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T00:23:22"
       },
       "bundle": "base",
       "locale": "en",
@@ -200068,11 +200156,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-17",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T00:28:13"
       },
       "bundle": "base",
       "locale": "en",
@@ -203261,11 +203357,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-17",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T00:23:15"
       },
       "bundle": "base",
       "locale": "en",
@@ -205971,11 +206075,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-17",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T00:25:27"
       },
       "bundle": "base",
       "locale": "en",
@@ -206705,11 +206817,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-17",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T00:25:48"
       },
       "bundle": "base",
       "locale": "en",
@@ -207149,11 +207269,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-17",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T00:29:00"
       },
       "bundle": "base",
       "locale": "en",
@@ -210650,11 +210778,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-17",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T00:28:45"
       },
       "bundle": "base",
       "locale": "en",
@@ -211272,11 +211408,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-17",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T00:26:50"
       },
       "bundle": "base",
       "locale": "en",
@@ -212328,11 +212472,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-17",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T00:24:32"
       },
       "bundle": "base",
       "locale": "en",
@@ -217545,11 +217697,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-17",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T00:28:31"
       },
       "bundle": "base",
       "locale": "en",
@@ -218376,11 +218536,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-17",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T00:23:52"
       },
       "bundle": "base",
       "locale": "en",
@@ -218520,11 +218688,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-17",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T00:25:34"
       },
       "bundle": "base",
       "locale": "en",
@@ -218952,11 +219128,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-17",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T00:25:38"
       },
       "bundle": "base",
       "locale": "en",
@@ -219108,11 +219292,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-17",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T00:28:25"
       },
       "bundle": "base",
       "locale": "en",
@@ -221718,11 +221910,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-17",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T00:25:00"
       },
       "bundle": "base",
       "locale": "en",
@@ -224121,11 +224321,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-17",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T00:28:55"
       },
       "bundle": "base",
       "locale": "en",
@@ -225625,11 +225833,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-17",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T00:22:53"
       },
       "bundle": "base",
       "locale": "en",
@@ -227579,11 +227795,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-17",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T00:27:54"
       },
       "bundle": "base",
       "locale": "en",
@@ -230346,11 +230570,19 @@
       "review": {
         "decision": "approved",
         "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-16",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "reviewed_on": "2026-10-17",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        },
+        "reviewed_at": "2026-10-17T00:26:16"
       },
       "bundle": "base",
       "locale": "en",

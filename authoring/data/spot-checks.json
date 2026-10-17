@@ -2998,5 +2998,371 @@
         "locale": "de"
       }
     }
+  },
+  "batch-9": {
+    "size": 30,
+    "seed": "batch-9",
+    "items": {
+      "q-2956": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          7,
+          7
+        ],
+        "media_changed": false,
+        "on": "2026-10-17"
+      },
+      "q-2524": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          9,
+          9
+        ],
+        "media_changed": false,
+        "on": "2026-10-17"
+      },
+      "q-2658": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          10,
+          10
+        ],
+        "media_changed": false,
+        "on": "2026-10-17"
+      },
+      "q-2558": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          7,
+          7
+        ],
+        "media_changed": false,
+        "on": "2026-10-17"
+      },
+      "q-2859": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          14,
+          14
+        ],
+        "media_changed": false,
+        "on": "2026-10-17"
+      },
+      "q-2324": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          8,
+          8
+        ],
+        "media_changed": false,
+        "on": "2026-10-17"
+      },
+      "q-2441": {
+        "llm": "needs_work",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          12,
+          12
+        ],
+        "media_changed": false,
+        "on": "2026-10-17"
+      },
+      "q-2778": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          8,
+          8
+        ],
+        "media_changed": false,
+        "on": "2026-10-17"
+      },
+      "q-2904": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          10,
+          10
+        ],
+        "media_changed": false,
+        "on": "2026-10-17"
+      },
+      "q-2268": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          8,
+          8
+        ],
+        "media_changed": false,
+        "on": "2026-10-17"
+      },
+      "q-2693": {
+        "llm": "approved",
+        "audit": "problem",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          10,
+          10
+        ],
+        "media_changed": false,
+        "on": "2026-10-17"
+      },
+      "q-2861": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          9,
+          9
+        ],
+        "media_changed": false,
+        "on": "2026-10-17"
+      },
+      "q-2867": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          1,
+          1
+        ],
+        "media_changed": false,
+        "on": "2026-10-17"
+      },
+      "q-2703": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          7,
+          7
+        ],
+        "media_changed": false,
+        "on": "2026-10-17"
+      },
+      "q-2483": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          5,
+          5
+        ],
+        "media_changed": false,
+        "on": "2026-10-17"
+      },
+      "q-2256": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          9,
+          9
+        ],
+        "media_changed": false,
+        "on": "2026-10-17"
+      },
+      "q-3019": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          9,
+          9
+        ],
+        "media_changed": false,
+        "on": "2026-10-17"
+      },
+      "q-2764": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          12,
+          12
+        ],
+        "media_changed": false,
+        "on": "2026-10-17"
+      },
+      "q-2301": {
+        "llm": "needs_work",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          7,
+          7
+        ],
+        "media_changed": false,
+        "on": "2026-10-17"
+      },
+      "q-2230": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          11,
+          11
+        ],
+        "media_changed": false,
+        "on": "2026-10-17"
+      },
+      "q-2353": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          8,
+          8
+        ],
+        "media_changed": false,
+        "on": "2026-10-17"
+      },
+      "q-2247": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          1,
+          1
+        ],
+        "media_changed": false,
+        "on": "2026-10-17"
+      },
+      "q-2982": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          4,
+          4
+        ],
+        "media_changed": false,
+        "on": "2026-10-17"
+      },
+      "q-2404": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          5,
+          5
+        ],
+        "media_changed": false,
+        "on": "2026-10-17"
+      },
+      "q-2616": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          11,
+          11
+        ],
+        "media_changed": false,
+        "on": "2026-10-17"
+      },
+      "q-2869": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          13,
+          13
+        ],
+        "media_changed": false,
+        "on": "2026-10-17"
+      },
+      "q-2848": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          6,
+          6
+        ],
+        "media_changed": false,
+        "on": "2026-10-17"
+      },
+      "q-2756": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          6,
+          6
+        ],
+        "media_changed": false,
+        "on": "2026-10-17"
+      },
+      "q-2936": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          2,
+          2
+        ],
+        "media_changed": false,
+        "on": "2026-10-17"
+      },
+      "q-2709": {
+        "llm": "approved",
+        "audit": "ok",
+        "human": "approved",
+        "problems": [],
+        "difficulty": [
+          2,
+          2
+        ],
+        "media_changed": false,
+        "on": "2026-10-17"
+      }
+    }
   }
 }
