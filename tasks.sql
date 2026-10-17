@@ -10259,6 +10259,80 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 - Each of the 20 exits can be played on `/?efectos` (`EffectsDemo.svelte`) with its sound
 - A gallery review set of the splash at hold time (`trivia-gallery --set task-<id> --only <shots>`), for each UI language
 - The developer approves the exits and sounds on the TV (pm decision, `once`)', 'When a question appears, its topic flashes up big in the middle of the screen, over the question and the answer choices, and after a moment it leaves in one of about twenty funny ways, each with its own sound. Today the family never sees which topic a question comes from, unless a joker changed it. The splash tells them at a glance and adds a bit of show to every question.', '2026-10-17T18:00:00Z', NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (182, 6, 'Soundtracks', 180, 'Part 6 of `plan 6: masterplan`. The music becomes a choice of soundtracks: each soundtrack is one matched set of the three loops `normal` (menu), `question`, `submitted`, with tension clearly rising at each step and a calm, relaxing menu loop (the synthesized loops are the model: chill, a clear rise on submit). Runs after `plan 33: Recorded music loops (UI-10)`: reuses its pipeline, loop points, budget conventions and `/?efectos`. Owner plan file: `plans/04-ui-tv-display.md` ("Music", "Sound assets", UI-10 note).
+
+## Binding
+- `decision 83: Recorded music loops: approve on the TV?`: plan 33''s set stays as one soundtrack, 3–4 more recorded ones, selectable in a menu, the developer picks the default on the TV
+- Milestone 6 "Soundtracks" (developer, 2026-10-17); D-45 licences only (CC0 preferred, CC BY with credit; no NC/ND/unknown); offline; no new npm or Python dependencies
+- Decision 199 (import, don''t copy): the Overlay''s row kinds, `setVolumes`'' storage pattern, `EffectsDemo.svelte`
+- UI strings: `app/client/src/locales/style/<locale>.md` read first, all four catalogs (es, es-ES, en, de)
+
+## What exists (2026-10-17)
+- `app/client/src/game/sound.svelte.ts`: `music(track)`, `startTrack()`; `MUSIC_FILE` maps `normal`/`question`/`submitted` to `musica-normal`/`-pregunta`/`-enviada`; one `LOOP_END` (19.2 s) and one `MUSIC_LEVEL` (1.6); `beatGoesOn` keeps the beat on the `question` ↔ `submitted` cut; `generate()` is the synth loop (A minor, 76/96/120 bpm, `timed` 132 bpm), used for `timed` always and as the fallback; `music(track, { synth })` forces synth (`/?efectos`)
+- Volumes: `localStorage` `trivia.volumes` (`loadVolumes`, `setVolumes`), validated on load
+- `Overlay.svelte` «Sonido» rows (`sound: true`): volume rows (←/→ steps, slider), mute, telemetry; value rows like `level`/`replace` step with ←/→
+- `/?efectos` (`EffectsDemo.svelte`): «grabado» / «sintetizado» per loop incl. `timed`, «corte», «parar»
+- `app/client/public/audio/`: flat, 2.8 MB, plan 33''s loops 707 kB together; `CREDITS.md` rows read by `app/client/credits.ts` (Credits screen) and checked by `authoring/steam/credits_check.mjs` (file ↔ row, flat folder)
+- `app/desktop/media-budget.json` has no audio key; plan 33''s 3.5 MB folder budget was a convention, not checked
+- Timed (`plan 164: Timed game screens, drama and sound`, sound tasks done): `Game.svelte` `MUSIC.timed = "timed"`, ducked during a claim; round screen keeps `normal`
+
+## Soundtracks
+- `sintetizada`: the generated loops (`generate()`), incl. its own `timed` track
+- `variaciones`: plan 33''s set (OpenGameArt «Music loop variations», obscure music, CC0), audio unchanged
+- 3–4 recorded ones, ids named by the sourcing task (ASCII, lower case, Spanish like the other files, e.g. by mood)
+- Display names: catalog keys `soundtrack.<id>` in the four catalogs, short and descriptive of the mood («Sintetizada», «Variaciones», …), not the source''s title
+
+## Sourcing (as plan 33)
+- Kenney.nl first, then OpenGameArt, Freesound; D-45 allowlist, CC0 preferred; download by hand, no pack zips committed, only the converted files
+- A matched set: one piece at three intensities, or stems that build up; same key and tempo family (ideally one tempo and loop length, so the beat goes on at the ~80 ms cut)
+- Vibe: menu calm and relaxing; `question` noticeably more tense; `submitted` clearly the most tense; no lyrics; no set that sounds like another one already in
+- Fewer than 3 good sets: a developer decision with what was found (per set: source, licence, a line on the vibe, files staged under `work/soundtracks/` to listen to), options e.g. take these, take fewer, one recording varied by rate/filter like plan 33''s decision options; the task waits on it
+- Pipeline (plan 33): `nix shell nixpkgs#ffmpeg-headless`, cut to whole bars at the loop point, loudness-normalized to plan 33''s target (−18 LUFS), AAC `.m4a`, 96–128 kbit/s, loops 20–40 s; check the seam, store the loop points
+- `CREDITS.md`: one row per file (source URL, pack, author, licence), CC0 too
+
+## File layout
+- Flat folder, `musica-<soundtrack>-<track>.m4a` with `<track>` `normal` | `pregunta` | `enviada` (as today); plan 33''s three files renamed `musica-variaciones-*.m4a` (`git mv`, audio unchanged), their `CREDITS.md` rows follow
+- `credits_check.mjs` (flat folder) and `credits.ts` need no change beyond the rows; check after the rename
+- Budget: `media-budget.json` gets `"audio": 7` (MB, the whole `app/client/public/audio/` folder: today 2.8 MB + 4 sets of ≤ 1 MB + headroom for part 7''s joker sounds); one soundtrack set ≤ 1 MB; `app/desktop/stage-media.mjs --check` checks it like `horizon` (✓/✗ line, fail over budget); raise only with the size stated; this replaces plan 33''s 3.5 MB folder note
+
+## Engine (`sound.svelte.ts`)
+- `SOUNDTRACKS`: per id the three file names (or none for `sintetizada`), `loopStart`/`loopEnd`, `level` (as `MUSIC_LEVEL`), `sameBeat` (the three loops share tempo and length: the cut continues at the old position, else starts at 0); replaces `MUSIC_FILE`, `LOOP_END`, `MUSIC_LEVEL`
+- `SAMPLE_NAMES` from the table, not by hand; decoding all sets at the unlock is fine within the budget (decode lazily per soundtrack only if the unlock gets slow on the Deck)
+- The soundtrack in `sound` state, stored in `localStorage` (`trivia.soundtrack`, next to `trivia.volumes`); an unknown or missing id → the default
+- `setSoundtrack(id)`: stores it; if a loop track (`normal`, `question`, `submitted`, `timed`) is playing, crossfade (~0.8 s, the screen fade lengths) to the same track of the new soundtrack, from 0; `roll`, `victory`, silence: nothing to do, the next `music()` picks it up
+- A recorded file missing or failing to decode: that track plays the generated loop (fallback as today)
+- `timed`: a recorded soundtrack plays its `question` loop; `sintetizada` keeps the generated `timed`; ducking during a claim unchanged
+- Unchanged: `roll`, `victory`, effects, the 600/800 ms fades, the ~80 ms cuts, ducking (04 "Music")
+- `music(track, { synth })`: the `synth` override becomes a soundtrack override for `/?efectos` (play a given soundtrack''s loop without changing the stored choice)
+- Default: `sintetizada` until the developer picks (the last task)
+- Header comment of `sound.svelte.ts`: what is recorded, what synthesized
+
+## Picker (Esc menu)
+- «Sonido» gets «Banda sonora» above the volume rows: label and the current soundtrack''s name; ←/→ (pad, keyboard) steps through the soundtracks, wrapping; Enter or a click steps forward; mouse: ‹ › arrows on the row like the volume slider''s place; `tick` on change
+- Switches live (above), so the developer can compare on the TV with the menu open: the music under the Esc menu keeps playing (check it does; if the overlay mutes or ducks it, the picker still switches what plays after)
+- Fits 1280×800 with telemetry rows shown; mod Overlay props unchanged
+- Catalog keys: `overlay.soundtrack` and `soundtrack.<id>` in es, es-ES, en, de
+
+## Audition (`/?efectos`)
+- One row per soundtrack × loop (`normal`, `pregunta`, `enviada`, and `timed` for what it maps to), «corte» per soundtrack (`question` ↔ `submitted`), «parar»; loops run long enough to hear the seam
+- The picker in the Esc menu is the TV comparison in a real game
+
+## Docs
+- `plans/04-ui-tv-display.md` "Music": soundtracks (sets, picker, live switch, `timed` mapping, default); "Sound assets": flat folder, file names, audio budget; the UI-10 note gets a line; Esc menu lines in "Admin overlay"
+- `task 150: Close UI-10 in the plans` runs after this plan and part 7 (`plan 32: Recorded sound effects (UI-10)`); its 3.5 MB check becomes the `audio` budget
+
+## Tasks (suggested split)
+1. Soundtrack engine and layout: `SOUNDTRACKS` table, rename plan 33''s files, per-soundtrack loop points/level/`sameBeat`, stored choice, `setSoundtrack` with live crossfade, `timed` mapping, fallback, default `sintetizada`; `/?efectos` per soundtrack; `"audio"` budget in `media-budget.json` + check in `stage-media.mjs`; `CREDITS.md` rows renamed; 04 "Music"/"Sound assets" lines; checked with `TRIVIA_SOUND=1` (switch while each track plays, `timed`, files removed → synth)
+2. «Banda sonora» in the Esc menu: the row (pad, keyboard, mouse), strings in four catalogs per `locales/style/<locale>.md`, 1280×800 and 1920×1080; after task 1
+3. Source and convert 3–4 matched sets (`--web`): sourcing, conversion, loop points, levels by ear-proxy (loudness, as plan 33), `CREDITS.md` rows, `SOUNDTRACKS` entries and names in four catalogs, budget check passes; fewer than 3 good sets: the decision above, the task waits on it; after task 1
+4. The default soundtrack (developer): `pm decision add` (kind once) asking the developer to listen on the TV (Esc menu «Banda sonora» in a real game, `/?efectos`), one option per soundtrack (synth first as today''s default), plus «changes: <soundtrack> → …» (level, seam, drop a set); task pending on it; then set the default, apply changes, update 04 "Music" (default named); after tasks 1–3
+
+## Done when
+- The Esc menu offers every soundtrack by name in all four languages; switching crossfades live; the choice survives a restart
+- Each recorded soundtrack: three loops, no click at the seam, credited; `timed` plays its question loop (recorded) or the generated `timed` (synth)
+- `stage-media.mjs --check` passes the `audio` budget; `credits_check.mjs` passes
+- The developer picked the default on the TV; 04 updated
+- Per commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`', 'The game plays background music that gets more tense as a question is answered. The developer liked the recorded music better than the music the game makes itself, but its mood was wrong, so instead of one set of music there will be several to choose from in the pause menu, each a calm menu tune that gets clearly more tense during a question and after an answer is locked in. The family can switch while the music plays to compare, and the developer picks which one plays by default after listening on the TV.', '2026-10-17T23:52:49Z', 1597);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -11318,14 +11392,16 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Keep the recipe where no recording is better; record which in the done note.
 
 Done when: compared via `/?efectos` and `/?fuegos=finale`; `npm run check` and `npm run build` pass.', '2026-10-12T00:36:02Z', '2026-10-13T06:40:52Z', 138, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (146, 32, 'Gamemaster check of the recorded effects on the TV', 'work', 'open', NULL, NULL, 'Close-out of plan 32.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (146, 32, 'Developer check of the three new joker sounds on the TV', 'work', 'open', NULL, NULL, 'Close-out of `plan 32: Recorded sound effects (UI-10)`, after `task 1599: Joker sounds that say what the joker does: broom, microwave bing, fairy wand`.
 
-1. Collect from the earlier tasks'' notes what was replaced and what stayed synthesized.
-2. `pm decision add` asking the gamemaster to check the effects on the TV via `/?efectos` and a real game; body: the list (replaced / kept synthesized); options e.g. «approve» / «changes: …». Make this task pending on it (`pm task-pending-decision`), stage, stop.
-3. Once answered: apply the feedback (swap or drop files, adjust rates/levels). Re-checking an effect: launch with `TRIVIA_SOUND=1` (muted under PM_WORKER otherwise).
-4. Update UI-10''s note in `plans/04-ui-tv-display.md` (what is recorded now, what stays synthesized and why) and `plans/project.md`. UI-10 stays `[~]` until plan 33 (music loops) is done.
+`decision 81: Recorded sound effects: approve on the TV?` is answered: every other effect approved; only Paso y fuera, Soplo and Hada madrina changed. Don''t re-ask about the rest.
 
-Done when: the gamemaster approved; audio folder within budget; `CREDITS.md` complete; `npm run check` and `npm run build` pass.', '2026-10-12T00:36:02Z', NULL, 138, 0, NULL, 'app');
+1. From task 1599''s done note: the three new files and cues (source, licence, what they replace).
+2. `pm decision add` asking the developer to check the three joker sounds on the TV via `/?efectos` and a real game (play Paso y fuera, Soplo, Hada madrina; launch with `TRIVIA_SOUND=1`); body: the three cues, files, sources; options «approve» / «changes: …». Make this task pending on it (`pm task-pending-decision`), stage, stop.
+3. Once answered: apply the feedback (swap files, adjust rates/levels; same pipeline and budget as the plan); a row per changed file in `app/client/public/audio/CREDITS.md`.
+4. Update UI-10''s note in `plans/04-ui-tv-display.md` (effects part: what is recorded now, the joker swaps) and `plans/project.md`. UI-10 stays `[~]`; it closes in `task 150: Close UI-10 in the plans` after the soundtracks.
+
+Done when: the developer approved the three joker sounds; audio folder within budget; `CREDITS.md` complete; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-12T00:36:02Z', NULL, 138, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (147, 33, 'Source and convert a matched set of CC0 music loops', 'work', 'done', NULL, '2026-10-13, app/client/public/audio/{musica-normal,musica-pregunta,musica-enviada}.m4a (707 kB together, folder 2.8 MB), CREDITS.md rows. Matched set found: OpenGameArt ''Music loop variations'' by obscure music, CC0 (checked on the page), 3 intensity steps x 2 flavours (good/evil), 100 bpm, 4/4; Kenney has no music loops (only Music Jingles). Picks: normal = level1-step1 (good, F major), pregunta = level1-step2-evil (F minor), enviada = level1-step3-evil (F minor); normal↔question changes key only across the 600/800 ms fades, question↔submitted share key and tempo. Loops: 19.2 s = 8 bars each (step1/step2 are 4-bar sources repeated x2; just under the 20 s minimum, kept equal so the cut can continue at position mod 19.2 s). Sources had 1 extra sample (trimmed to exact bars) and a 0.09–0.14 jump at the wrap: 5 ms fade-out at each 4-bar end fixes it (decoded wrap now ≤0.03). Gain only (no dynamic loudnorm): −18 LUFS each (redoble −17.8), TP ≤ −1.3 dBTP; AAC 96k stereo 44.1 kHz. Loop points: AAC decodes 846848 samples (128 padding at the end, start aligned, offset 0) → use loopStart 0, loopEnd 19.2 for all three. Alternative for task 149 if the gamemaster wants calmer: the good step2/step3 (F major) from the same zip, same pipeline. check, test, build, qgen validate pass.', 'First task of plan 33: find one matched set of recordings for `normal`, `question`, `submitted` and put the converted files in place (plan 33 "Sources and licences", "Pipeline"). Conversion is here, not in the wiring task: downloads live outside the repo and don''t survive between runs.
 
 - Sources: Kenney.nl CC0 first (music loops / jingles packs), then OpenGameArt CC0, Freesound CC0; D-45 allowlist only (CC0 preferred; CC BY ok with credit; no NC/ND/unknown). Download outside the repo; don''t commit zips.
@@ -40210,7 +40286,7 @@ Milestone 6 closes the leftovers of M3/M4, preloading before a screen fades in (
 
 ## Part 2: Recorded sound effects (UI-10), priority 200
 - Planned and built: `plan 32: Recorded sound effects (UI-10)`; the TV check is answered: `decision 81: Recorded sound effects: approve on the TV?` (changes for three jokers, Part 7; the other effects approved).
-- Open: `task 146: Gamemaster check of the recorded effects on the TV` applies the answer; Part 7 is that work.
+- Open: `task 146: Developer check of the three new joker sounds on the TV` applies the answer; Part 7 is that work.
 
 ## Part 3: Recorded music loops (UI-10), priority 190
 - Planned and built: `plan 33: Recorded music loops (UI-10)`; the TV check is answered: `decision 83: Recorded music loops: approve on the TV?` (the recordings sound better, the vibe is wrong: keep them as one soundtrack, add more, make it selectable; Part 6).
@@ -40238,7 +40314,7 @@ Milestone 6 closes the leftovers of M3/M4, preloading before a screen fades in (
 - Docs: `plans/04-ui-tv-display.md` ("Music", "Sound assets", UI-10 note).
 
 ## Part 7: Joker sounds that say what the joker does, priority 200
-- Not a new plan: `plan 32: Recorded sound effects (UI-10)` takes it (its revision adds the tasks; `task 146: Gamemaster check of the recorded effects on the TV` applies decision 81 or hands over to them).
+- Not a new plan: `plan 32: Recorded sound effects (UI-10)` takes it (its revision adds the tasks; `task 146: Developer check of the three new joker sounds on the TV` applies decision 81 or hands over to them).
 - What (developer, 2026-10-17, `decision 81: Recorded sound effects: approve on the TV?`):
   - Paso y fuera (Pass & Purge): a broom sweeping (today''s `escoba` doesn''t read as a broom)
   - Soplo (Hint): a microwave bell «bing»
@@ -40253,7 +40329,7 @@ Milestone 6 closes the leftovers of M3/M4, preloading before a screen fades in (
 ## Order and constraints
 - Parts are independent, except: 2 → 3 shared conventions (done); 3 → 6 (plan 33''s set and pipeline); 6 and 7 before `task 150: Close UI-10 in the plans`.
 - D-45 licences only; everything offline; no new npm or Python dependencies.', '2026-10-17T23:50:35Z', NULL, 1591, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1597, 6, 'write plan: Soundtracks', 'plan', 'open', 1000, NULL, 'Write the plan for part 6 of `plan 6: masterplan` (milestone 6: Screen polish leftovers): `pm plan add 6 "Soundtracks" --priority 180 < body.md`, then split it into tasks (or leave that to its split task). Runs after `plan 33: Recorded music loops (UI-10)` (priority 190): reuse its pipeline, loop points, budget conventions and `/?efectos`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1597, 6, 'write plan: Soundtracks', 'plan', 'done', 1000, '2026-10-17, plan 182: Soundtracks (tasks left to its split task)', 'Write the plan for part 6 of `plan 6: masterplan` (milestone 6: Screen polish leftovers): `pm plan add 6 "Soundtracks" --priority 180 < body.md`, then split it into tasks (or leave that to its split task). Runs after `plan 33: Recorded music loops (UI-10)` (priority 190): reuse its pipeline, loop points, budget conventions and `/?efectos`.
 
 Binding: `decision 83: Recorded music loops: approve on the TV?` (keep plan 33''s set as one soundtrack, add 3–4 recorded ones, selectable, the developer picks the default on the TV).
 
@@ -40270,9 +40346,9 @@ The plan covers, per the masterplan''s part 6:
 - Audition: `/?efectos` lists every soundtrack''s three loops and the cut.
 - Default: synthesized until the developer picks; last task: a developer decision (listen on the TV, options per soundtrack), then set the default and update 04 "Music".
 - Docs: `plans/04-ui-tv-display.md` ("Music", "Sound assets", UI-10 note); `task 150: Close UI-10 in the plans` runs after this plan and part 7.
-- D-45 licences only, offline, no new npm or Python dependencies.', '2026-10-17T23:51:10Z', NULL, 1594, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1598, 32, 'create tasks for plan 32: Recorded sound effects (UI-10)', 'split', 'open', 1000, NULL, 'Split plan 32 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-17T23:52:18Z', NULL, 1595, 0, NULL, NULL);
+- D-45 licences only, offline, no new npm or Python dependencies.', '2026-10-17T23:51:10Z', '2026-10-17T23:52:51Z', 1594, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1598, 32, 'create tasks for plan 32: Recorded sound effects (UI-10)', 'split', 'done', 1000, '2026-10-17, tasks.sql: task 1599 matches plan step 2; task 146 rewritten for step 3 (new decision on the three joker sounds only, runs after 1599 by priority 200 < 210); no new decisions needed', 'Split plan 32 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-17T23:52:18Z', '2026-10-17T23:52:47Z', 1595, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1599, 32, 'Joker sounds that say what the joker does: broom, microwave bing, fairy wand', 'work', 'open', 210, NULL, '`plan 32: Recorded sound effects (UI-10)`, section "Joker sounds that say what the joker does" (`decision 81: Recorded sound effects: approve on the TV?`, milestone 6).
 
 - Paso y fuera (`skip`): a broom sweeping, on the sweep (`sfx("swoosh")` in `app/client/src/game/screens/Question.svelte`)
@@ -40281,10 +40357,12 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Doña Exigente, Tiro mágico: unchanged
 - Don''t swap `escoba.m4a`, `silbato.m4a`, `susurro-papel.m4a`: the category splash (`splash-right`, `splash-wind`, `splash-drain`) and `Timed.svelte` (`whistle-down`, `rustle`) use them. New files + new cues (e.g. `barrido`, `microondas`, `varita`; ASCII), each in `SAMPLE_NAMES`/`SAMPLE_FOR` (`app/client/src/game/sound.svelte.ts`), a tiny synth recipe as fallback, listed in `/?efectos`
 - Sources, licences, pipeline, budget: the plan (Kenney.nl CC0 first, then Freesound/OpenGameArt CC0; D-45; `loudnorm` ~-16 LUFS, mono AAC 80k; ≤ 40 kB per file); a row per file in `app/client/public/audio/CREDITS.md`
-- Pick by ear-proxies (envelope, spectrum) and say so in the done note; the developer''s TV check is `task 146: Gamemaster check of the recorded effects on the TV`
+- Pick by ear-proxies (envelope, spectrum) and say so in the done note; the developer''s TV check is `task 146: Developer check of the three new joker sounds on the TV`
 - `plans/09-jokers.md`: "Sound assets" list and JK-9 note
 
 Done when: the three cues play their recordings in `/?efectos` and in a game (`TRIVIA_SOUND=1`); splash and Timed sounds unchanged; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-17T23:52:18Z', NULL, 1595, 1, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1600, 182, 'create tasks for plan 182: Soundtracks', 'split', 'open', 1000, NULL, 'Split plan 182 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-17T23:52:49Z', NULL, 1597, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -46956,6 +47034,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1650, 1595, '2026-10-17T23:51:18Z', '2026-10-17T23:52:32Z', 'done', NULL, 0, '31e9b6280adc0fb7918cca5929ac644b20f87087', NULL, 'claude-opus-5-5', '4b61b90c-8906-4d81-988a-02e1c0ea8246', NULL, 11, 22, 7178, 505246, 46372, 0.61567319999999992, 1197781);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1651, 1296, '2026-10-17T23:51:22Z', '2026-10-17T23:51:34Z', 'blocked', NULL, 0, '31e9b6280adc0fb7918cca5929ac644b20f87087', 'questions', 'claude-sonnet-5-5', 'b65b75fa-564f-48d1-9670-e605beeba578', NULL, 5, 8, 609, 141264, 35613, 0.17681080000000002, 1197781);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1652, 1035, '2026-10-17T23:51:34Z', '2026-10-17T23:51:55Z', 'blocked', NULL, 0, '31e9b6280adc0fb7918cca5929ac644b20f87087', 'questions', 'claude-opus-5-5', '93904fdd-e12d-4375-a334-bc2019381d8d', NULL, 4, 8, 901, 138890, 34411, 0.32111799999999996, 1197781);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1653, 1598, '2026-10-17T23:52:33Z', '2026-10-17T23:52:52Z', 'done', NULL, 0, 'c8c83561c14705f4b321d556eb733f7e4779507e', NULL, 'claude-opus-5-5', 'adc60f1e-d434-445f-b5bf-91018acac922', NULL, 4, 8, 1494, 125009, 31464, 0.30662580000000006, 1197781);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
