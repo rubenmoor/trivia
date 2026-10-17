@@ -2,7 +2,7 @@
   "name": "trivia-desktop",
   "private": true,
   "version": "0.1.0",
-  "reportUrl": "",
+  "reportUrl": "https://trivia-reports.trivia-question-reports.workers.dev",
   "description": "Desktop shell for ¡Trivia! (plan 54, SW-2)",
   "author": "Ruben Moor",
   "license": "MIT",

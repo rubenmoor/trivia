@@ -7,8 +7,7 @@ workers_dev = true
 [[d1_databases]]
 binding = "DB"
 database_name = "trivia-reports"
-# PLACEHOLDER(868): the id `wrangler d1 create trivia-reports` prints (not a secret).
-database_id = "00000000-0000-0000-0000-000000000000"
+database_id = "0f05920c-214a-496a-9469-2877961ad88e"  # not a secret
 migrations_dir = "migrations"
 
 [triggers]
