@@ -373,6 +373,8 @@ const es = {
     take: "Tomar su lugar",
     /** The Level screen's turn line (decision 279), above the turn player's name tag. */
     turn: "Turno de",
+    /** Over a seat's own jokers (rr-competitive), above its tag. */
+    jokers: "Comodines",
     /** Over the shared jokers in the team round-robin mode. */
     team: "Del equipo",
     /** The end of a list of names cut short («Ana, Luis y 2 más»). */
@@ -470,10 +472,16 @@ const es = {
       answerWas: "La respuesta correcta era",
       /** Answers off (D-105): after a reveal, and after the last level. */
       next: "Siguiente ronda",
+      /** rr-competitive: one seat is out, the others play on. */
+      out: "¡Fuera, {name}!",
       completed: "Cuestionario completado",
     },
     victory: {
       title: "¡Ganaron!",
+      /** rr-competitive: the winner. */
+      winner: "¡Gana {name}!",
+      /** rr-competitive: won because every other player is out. */
+      standing: "Último en pie",
       top: "¡{name} llegó a la cima!",
       /** The team round-robin mode: every player, cut short after four. */
       team: "¡{names} llegaron a la cima!",

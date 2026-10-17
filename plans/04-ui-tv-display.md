@@ -163,6 +163,7 @@ Players start at **level 1** (easiest question) and must answer **level 12** to 
 - **Repeat (09):** after a Snipe hit, the Level screen comes in with a rewind effect instead of black, no block drops, and the text reads «Nivel N de 12 — otra vez».
 - The joker tray is shown small and read-only, as a reminder of the jokers (09).
 - **Round-robin (plan 163, decision 279):** the Level screen is the turn handover, no screen of its own: «Turno de» and the turn seat's large `SeatTag` (seat colour, name, device glyph) above «Nivel N de 12»; «Seguir» in that seat's glyph, only that seat may press it; the corner HUD (Level, Select, Question) shows the turn seat's small tag. rr-coop: the team's tower, «Del equipo» over the shared joker tray. Paso y fuera, a Tiro mágico hit: same seat keeps the turn.
+- **rr-competitive (plan 163):** `Tracks.svelte` instead of the single tower: one small tower per seat in join order, its tag below (2 rows from 5 seats, narrower from 9), the turn seat glowing in its colour, an out seat a muted empty wreck, the answerer's newest block dropping after Correct; «Nivel N de 12», milestone line and joker tray (labelled «Comodines» over the turn seat's tag, on Level, Select and Question) are the turn seat's own.
 
 ### Question selection
 Four cards, each showing only a question's `description` (D-8). The players pick one.
@@ -204,7 +205,7 @@ Four cards, each showing only a question's `description` (D-8). The players pick
 - **Dark animation:** colour drains from the screen (desaturate), a vignette closes in, and the tower (shown small) crumbles, or its blocks fall away one by one with soft thuds. Rain or a slow fade to deep blue also works. It should be gentle, not scary; the players are 11 and 12 (D-6).
 - Then the **correct answer** and the `fun_fact` are shown (D-22), with a **consolation message** that names the level reached: «¡Llegaron al nivel 7! Eso es más alto que la mayoría de las torres…». There are several messages, chosen by how far the players got.
 - One button: **«Volver al inicio»** → transition → Start.
-- Round-robin: the answerer's `SeatTag`; rr-coop: the team's tower crumbles, the team lost, «Volver al inicio»; rr-competitive, one seat out: «Seguir» → Level of the next turn, or Victory for the last one standing (decision 279).
+- Round-robin: the answerer's `SeatTag`; rr-competitive's out seat: «¡Fuera, Ana!» instead of «¡Oh no!», its track crumbles, no consolation line; rr-coop: the team's tower crumbles, the team lost, «Volver al inicio»; rr-competitive, one seat out: «Seguir» → Level of the next turn, or Victory for the last one standing (decision 279).
 
 ### Next and Completed (answers off, D-105)
 - `game/screens/Revealed.svelte`, both neutral: neither success nor failure, sky-coloured title, the correct answer and `fun_fact` (`AnswerPanel`), normal music; whoosh in, no applause, no boom.
@@ -215,6 +216,7 @@ Four cards, each showing only a question's `description` (D-8). The players pick
 - After the 12th correct answer: the Level screen shows the 12th block landing, the crown on top, a long fireworks finale (all variants in sequence) and a victory jingle. Text: «¡Ganaron!».
 - «Volver al inicio» → Start.
 - rr-coop: the line under the title names every player («¡Luna, Mateo y Sofía llegaron a la cima!», after four «y n más»).
+- rr-competitive: «¡Gana Ana!», the winner's tower and tag big (crowned when it climbed to the top), the others' tracks small beside it in one row with their final levels; won as the last one standing (decision 278): the line «Último en pie» and no crown.
 
 ## Transitions
 Every change between the states above uses one transition routine with these steps:

@@ -64,7 +64,7 @@
   .tower.small {
     --base-h: calc(1.5 * var(--u));
     --block-h: calc(min(2, 18 / var(--n)) * var(--u));
-    width: calc(14 * var(--u));
+    width: var(--tower-w, calc(14 * var(--u)));
     gap: calc(min(0.15, 1.8 / var(--n)) * var(--u));
   }
   .wobble {

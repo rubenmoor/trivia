@@ -324,6 +324,8 @@ export const en = {
     take: "Take over",
     /** The Level screen's turn line (decision 279), above the turn player's name tag. */
     turn: "Your turn",
+    /** Over a seat's own jokers (rr-competitive), above its tag. */
+    jokers: "Jokers",
     /** Over the shared jokers in the team round-robin mode. */
     team: "Team",
     /** The end of a list of names cut short («Ana, Luis y 2 más»). */
@@ -413,10 +415,16 @@ export const en = {
       answerWas: "The right answer was",
       /** Answers off (D-105): after a reveal, and after the last level. */
       next: "Next round",
+      /** rr-competitive: one seat is out, the others play on. */
+      out: "{name} is out!",
       completed: "Quiz completed",
     },
     victory: {
       title: "You won!",
+      /** rr-competitive: the winner. */
+      winner: "{name} wins!",
+      /** rr-competitive: won because every other player is out. */
+      standing: "Last one standing",
       top: "{name} made it to the top!",
       /** The team round-robin mode: every player, cut short after four. */
       team: "{names} made it to the top!",

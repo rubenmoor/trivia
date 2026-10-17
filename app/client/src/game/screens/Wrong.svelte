@@ -1,6 +1,7 @@
 <script lang="ts">
   // «¡Oh no!»: the tower crumbles, the right answer, a consolation line; back to Start. In a session the
   // answerer's tag; with `onnext` (rr-competitive, one seat out, decision 279) «Seguir» instead of Start.
+  import { seatDevice } from "../../lib/gamepad.svelte.ts";
   import { t } from "../../lib/i18n.ts";
   import type { Game } from "../../lib/types.ts";
   import AnswerPanel from "../AnswerPanel.svelte";
@@ -26,20 +27,28 @@
     onhome: () => void;
     onnext?: () => void;
   } = $props();
+
+  /** rr-competitive: one seat is out, the others play on (decision 279). */
+  const knockout = $derived(game.session?.mode === "rr-competitive" && last.seat !== undefined);
 </script>
 
 <section class="screen result wrong">
   <div class="columns">
     <Tower filled={blocks} {levels} small crumble />
     <div class="stack">
-      <h1 class="title bad">{t("screen.result.wrong")}</h1>
-      {#if game.session && last.seat !== undefined}<SeatTag session={game.session} seat={last.seat} />{/if}
+      {#if knockout}
+        <h1 class="title bad">{t("screen.result.out", { name: game.session!.seats[last.seat!].player ?? last.seat! + 1 })}</h1>
+        <SeatTag session={game.session!} seat={last.seat!} />
+      {:else}
+        <h1 class="title bad">{t("screen.result.wrong")}</h1>
+        {#if game.session && last.seat !== undefined}<SeatTag session={game.session} seat={last.seat} />{/if}
+      {/if}
       <AnswerPanel {last} label={t("screen.result.answerWas")} />
-      <p class="consolation">{consolation(game.level, levels, game.id)}</p>
+      {#if !knockout}<p class="consolation">{consolation(game.level, levels, game.id)}</p>{/if}
     </div>
   </div>
   {#if onnext}
-    <button class="candy" onclick={onnext} disabled={busy} data-focus-default>{t("action.next")} <Prompt action="confirm" /></button>
+    <button class="candy" onclick={onnext} disabled={busy} data-focus-default>{t("action.next")} <Prompt action="confirm" device={game.session && game.result === null ? seatDevice(game.session.turn) : null} /></button>
   {:else}
     <button class="candy" onclick={onhome} disabled={busy} data-focus-default>{t("action.home")} <Prompt action="confirm" /></button>
   {/if}
