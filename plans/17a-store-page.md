@@ -449,10 +449,75 @@ Store texts for each shipped question bundle, one free DLC app each (decision 66
   [/list]
   ```
 
+### `mexico` (Regional: México / Regional: Mexico)
+- Languages: es (pool: `app/data/bundles/mexico/pool.json`, enter once it ships); en text drafted, **enter only once the pack's en translations exist** (`pool.en.json`); until then the DLC page lists Spanish only
+- es-ES: the `es` text unchanged (Mexican Spanish, no Spain-specific wording; «ustedes» as in `es`)
+- Voice: Spanish as spoken in Mexico; facts: `app/data/bundles/mexico/categories.json` (15 categories, incl. pre-Hispanic Mexico), `names.es.json`, `names.en.json`; description in `app/data/names.{es,en}.json` `bundles.mexico`; no Steam achievement of its own, none mentioned
+- Drafted 2026-10-16 (`task 1490`); approved through pm decision "DLC store texts approved? (mexico)", like colombia's (`task 783: Free DLC store texts in 17a`)
+
+#### Spanish (`es`, also es-ES)
+- **Name:** Regional: México
+- **Short description** (≤ 300):
+  > Paquete de preguntas gratis para Trivia en Familia, para quien tiene relación con México: lugares, comida, fiestas, costumbres, gente, música, deporte y palabras de acá. Se instala aparte y viene apagado: lo encienden en el paso de paquetes de preguntas cuando quieran jugarlo.
+- **About This Content:**
+  ```
+  [h2]Preguntas de México[/h2]
+  Regional: México es un paquete de preguntas gratis para Trivia en Familia. Es para quien tiene relación con México: preguntas que en México se saben y que afuera casi nadie sabría.
+
+  [list]
+  [*][b]Geografía y naturaleza:[/b] estados y capitales, ciudades, Pueblos Mágicos, volcanes, ríos, costas y animales
+  [*][b]Historia y México prehispánico:[/b] mexicas, mayas, la Conquista, la Independencia y la Revolución
+  [*][b]Personajes:[/b] científicos, inventores, emprendedores y mexicanos famosos
+  [*][b]Comida y bebida:[/b] antojitos, platillos regionales, pan dulce, bebidas, chiles y maíz
+  [*][b]Fiestas, mitos y leyendas:[/b] Día de Muertos, posadas, fiestas patrias, espantos y dioses prehispánicos
+  [*][b]Música, arte, cine y televisión:[/b] mariachi, banda, rock, muralistas, Época de Oro, telenovelas y El Chavo
+  [*][b]Deporte:[/b] Liga MX, la Selección, lucha libre, box y atletas olímpicos
+  [*][b]Así hablamos y vivimos en México:[/b] modismos, dichos, náhuatl, marcas, transporte y símbolos
+  [/list]
+
+  [h2]Cómo se juega[/h2]
+  [list]
+  [*]Gratis; necesita el juego base Trivia en Familia
+  [*]Instalación opcional: se puede quitar y volver a poner en Steam
+  [*]Apagado por defecto: lo encienden en el paso «Paquetes de preguntas» antes de cada partida; sus preguntas se mezclan con las del paquete básico
+  [*]El paquete crece con las actualizaciones
+  [/list]
+  ```
+
+#### English (`en`) — enter once the pack's en translations exist
+- **Name:** Regional: Mexico
+- **Short description** (≤ 300):
+  > A free question bundle for Living Room Trivia, for anyone with ties to Mexico: its places, food, customs, people, music, sport and words. Installs separately and starts switched off: turn it on in the question bundle step whenever you want to play it.
+- **About This Content:**
+  ```
+  [h2]Questions from Mexico[/h2]
+  Regional: Mexico is a free question bundle for Living Room Trivia. It's for anyone with ties to Mexico: questions people in Mexico know and hardly anyone outside would.
+
+  [list]
+  [*][b]Geography and nature:[/b] states and capitals, cities, Pueblos Mágicos, volcanoes, rivers, coasts and animals
+  [*][b]History and pre-Hispanic Mexico:[/b] the Mexica, the Maya, the Conquest, Independence and the Revolution
+  [*][b]People:[/b] scientists, inventors, entrepreneurs and famous Mexicans
+  [*][b]Food and drink:[/b] street snacks, regional dishes, sweet bread, drinks, chiles and corn
+  [*][b]Festivals, myths and legends:[/b] Day of the Dead, posadas, national holidays, ghost stories and pre-Hispanic gods
+  [*][b]Music, art, film and TV:[/b] mariachi, banda, rock, muralists, the Golden Age of cinema, telenovelas and El Chavo
+  [*][b]Sport:[/b] Liga MX, the national team, lucha libre, boxing and Olympic athletes
+  [*][b]How Mexico talks and lives:[/b] slang, sayings, Nahuatl, brands, transport and symbols
+  [/list]
+
+  [h2]How it plays[/h2]
+  [list]
+  [*]Free; needs the base game Living Room Trivia
+  [*]Optional install: remove it and add it back in Steam any time
+  [*]Off by default: turn it on in the “Question bundles” step before a game; its questions mix with the base bundle's
+  [*]The bundle grows with updates
+  [/list]
+  ```
+
 ### After approval
 - Capsules: the DLC store name equals the in-game name, so `dlc-colombia/` capsules from `task 669` stay as rendered (no re-run)
 - `germany`: `capsules.mjs` renders `dlc-germany/de/` (bundle language) now; add `en` to its `langs` map in `dlcs()` once the en text is entered
 - `spain`: `capsules.mjs` renders `dlc-spain/es-ES/` (bundle language) now; add `en` to its `langs` map in `dlcs()` once the en text is entered
+- `mexico`: `capsules.mjs` renders `dlc-mexico/es/` (bundle language) now; add `en` to its `langs` map in `dlcs()` once the en text is entered
 - `uk`: `capsules.mjs` renders `dlc-uk/en/` from the bundle language (en) and `names.en.json`; no script change
 - `usa`: `authoring/store/capsules.mjs` renders `dlc-usa/en/` from `bundles.json` languages (en) and the name in `names.en.json`; render with the other DLCs' capsules, approval with the capsule set
 
