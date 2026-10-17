@@ -255,7 +255,7 @@ test("timed: a pause shifts the question and claim deadlines and refuses play", 
   assert.equal(flow(save).claim!.at, T0 + 48000);
   assert.equal(timed(save, "expire", {}, T0 + 48000 + game.CLAIM_MS).error, "not_expired");
   const t = game.view(save, data, { ...io(1), ms: T0 + 51000 })!.session!;
-  assert.deepEqual(t.timed!.claim, { seat: 0, deadline: T0 + 48000 + game.CLAIM_MS });
+  assert.deepEqual(t.timed!.claim, { seat: 0, deadline: T0 + 48000 + game.CLAIM_MS, question_left: game.QUESTION_MS - 11000 });
   assert.deepEqual(t.seats.map((s) => s.lives), [3, 3]);
 });
 

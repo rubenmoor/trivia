@@ -1250,7 +1250,7 @@ function timedView(row: GameRow, t: TimedState, state: GameState, data: EngineDa
     round_size: t.round_size, question_in_round: Math.min(t.round_done + 1, t.round_size),
     shown: t.shown_at !== null,
     deadline: live && !paused && !t.claim && t.shown_at !== null ? t.shown_at + QUESTION_MS : null,
-    claim: live && !paused && t.claim ? { seat: t.claim.seat, deadline: t.claim.at + CLAIM_MS } : null,
+    claim: live && !paused && t.claim ? { seat: t.claim.seat, deadline: t.claim.at + CLAIM_MS, question_left: Math.max(0, QUESTION_MS - (t.claim.at - (t.shown_at ?? t.claim.at))) } : null,
     paused, hints_shown: live && !paused && q ? timedHints(t, msOf(io), q.hints.length) : null,
     all_at_risk: live && left.length > 0 && left.every((i) => row.seats![i].lives === 1 && chance(i)),
   };
