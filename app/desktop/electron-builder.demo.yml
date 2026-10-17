@@ -1,0 +1,13 @@
+# Demo build (plan 173, decision 338): the full config with the demo's names and the demo client; `trivia-desktop-build --demo`.
+extends: ./electron-builder.yml
+appId: io.github.rubenmoor.trivia.demo
+productName: Living Room Trivia Demo
+executableName: living-room-trivia-demo
+extraMetadata:
+  description: Living Room Trivia Demo
+  demo: true  # main.mjs isDemo()
+artifactName: LivingRoomTriviaDemo-${version}-${os}-${arch}.${ext}
+directories:
+  output: release/demo
+win:
+  executableName: LivingRoomTriviaDemo
