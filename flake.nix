@@ -79,7 +79,7 @@
         };
         trivia-steam = fromCheckout pkgs "trivia-steam" "authoring/steam/steam.py" [ steamcmd ];
         # Local builds for Windows and Linux (plan 56): pool check, client, staged media, electron-builder.
-        # `--dir`: also the dir target (release/{win,linux}-unpacked/, plan 89).
+        # `--dir`: also the dir target (release/{win,linux}-unpacked/, plan 89); `--demo` (after `--dir`): the demo (plan 173).
         trivia-desktop-build = pkgs.writeShellApplication {
           name = "trivia-desktop-build";
           runtimeInputs = [ pkgs.git pkgs.nodejs_22 qgen pkgs.ffmpeg-headless pkgs.libwebp ];  # stage-media encodes (decision 185)
@@ -94,6 +94,7 @@
             [ -d "$root/app/desktop/node_modules" ] || npm ci --prefix "$root/app/desktop"
             script=dist
             if [ "''${1:-}" = "--dir" ]; then script=dist:dir; shift; fi  # + unpacked folders for the Steam depots
+            if [ "''${1:-}" = "--demo" ]; then script=$script:demo; shift; fi  # demo client and names, release/demo/ (plan 173)
             exec npm run "$script" --prefix "$root/app/desktop" -- "$@"
           '';
         };

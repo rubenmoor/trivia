@@ -27,14 +27,14 @@ asarUnpack:
   - node_modules/koffi/**
   - node_modules/@koromix/**
 extraResources:
-  - from: ../client/dist
+  - from: ../client/${env.TRIVIA_CLIENT_DIST}  # dist, or dist-demo (package.json scripts)
     to: client
   - from: ../data
     to: data
   - from: build/media
     to: media
 extraFiles:
-  - from: ../client/dist/CREDITS.md
+  - from: ../client/${env.TRIVIA_CLIENT_DIST}/CREDITS.md
     to: CREDITS.md
   - from: ../../LICENSE  # D-102
     to: LICENSE
