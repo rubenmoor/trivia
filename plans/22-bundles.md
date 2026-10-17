@@ -46,6 +46,7 @@ The developer's direction (2026-10-07): a batch writes for **one bundle, chosen 
 |---|---|---|
 | Categories (ship) | `app/data/categories.json` | `app/data/bundles/<id>/categories.json` |
 | Pool (ship, `qgen export`, D-94) | `app/data/pool.json`, `pool.<locale>.json` (`base`'s questions only) | `app/data/bundles/<id>/pool.json`, `pool.<locale>.json`; missing = not offered (optional install, pm decision 66) |
+| Demo pool (ship, `qgen export`, decision 339) | `app/data/demo/pool.json`, `pool.<locale>.json`: `base`'s entries of the listed ids; no list, no files | none |
 | Names (ship) | `app/data/names.<locale>.json` | `app/data/bundles/<id>/names.<locale>.json` |
 | Media | content depot | `build/pack-media.json` lists the media only it uses (`stage-media.mjs`) |
 | Concept lists | `authoring/data/concepts/` | `authoring/data/bundles/<id>/concepts/` |
@@ -59,6 +60,12 @@ The developer's direction (2026-10-07): a batch writes for **one bundle, chosen 
 - A `base` batch keeps Colombia-only content out through the prompt alone (OQ-43); the developer moves the rest with `n`.
 
 - **One house style for every bundle** (D-44): a session mixes questions from all active bundles, so a bundle's own axes may change *what* is asked, never *how* it is written.
+
+## Demo (plan 174, decision 339)
+The demo is a subset of `base`, not a bundle: no bundle id `demo`, no `bundles.json` entry, no own taxonomy; every question stays in exactly one bundle.
+- List: `authoring/data/demo.json` (`{version: 1, ids: [...], seats, approved: <decision id>}`), picked by `qgen demo`, approved by the developer.
+- `qgen export` writes `app/data/demo/pool.json` (es) and `pool.<locale>.json` (es-ES, en, de): `base`'s entries of the listed ids, unchanged, in the locales where they play. No list: no files, stale ones removed.
+- `qgen validate`: ids exist and are `base`; `qgen demo --check` passes at the list's `seats` (also fails for an id that is no full candidate once `approved` is set; before, a warning); demo pools are the current export, none without a list.
 
 ## Player bundles (mods)
 Player-facing: [`modding/README.md`](../modding/README.md).

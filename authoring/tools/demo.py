@@ -159,26 +159,38 @@ def propose(seats):
     return 0 if not res["unmet"] else 1
 
 
-def check(path):
-    """Exit 1 when an id is no candidate any more or a configuration fails at the list's seats."""
-    doc = load(path)
-    if doc is None:
-        print(f"{path}: no demo list")
-        return 1
-    cands, shares = candidates()
+def problems(doc, pool=None):
+    """(errors, warnings, report lines) for a list: ids that aren't candidates, pending ones, failing configurations."""
+    cands, shares = candidates(pool)
     known = {c["id"]: c for c in cands}
     gone = [i for i in doc["ids"] if i not in known]
     pending = [i for i in doc["ids"] if i in known and not known[i]["full"]]
     seats = doc.get("seats") or 1
     res = run("check", cands, shares, seats=seats, ids=doc["ids"])
     failing = [r for r in res["rows"] if not r["reserve"]]
-    print(f"{path}: {res['size']} listed candidate(s), {len(pending)} pending, up to {seats} seat(s)")
+    errors, lines = [], [f"{res['size']} listed candidate(s), {len(pending)} pending, up to {seats} seat(s)"]
     if gone:
-        print(f"no longer candidates: {', '.join(gone)}")
+        errors.append(f"no longer candidates: {', '.join(gone)}")
     for r in failing:
-        print(f"fails: {r['config']} ({r['locale']}): engine {mark(r['engine'])}, reserve {r['reserve_short']} short")
-    print("OK" if not gone and not failing else "FAIL")
-    return 1 if gone or failing else 0
+        errors.append(f"fails: {r['config']} ({r['locale']}): engine {mark(r['engine'])}, reserve {r['reserve_short']} short")
+    note = f"{len(pending)} listed id(s) with missing translations: {', '.join(pending)}"
+    if pending and doc.get("approved"):
+        errors.append(note)
+    return errors, ([note] if pending and not doc.get("approved") else []), lines
+
+
+def check(path):
+    """Exit 1 when an id is no candidate any more or a configuration fails at the list's seats."""
+    doc = load(path)
+    if doc is None:
+        print(f"{path}: no demo list")
+        return 1
+    errors, warnings, lines = problems(doc)
+    print(f"{path}: {lines[0]}")
+    for m in [*errors, *warnings]:
+        print(m)
+    print("FAIL" if errors else "OK")
+    return 1 if errors else 0
 
 
 def sizes():

@@ -34,6 +34,8 @@ BUNDLES = app_paths.BUNDLES  # question bundles (D-39)
 LOCALE_POOL = app_paths.locale_pool  # app/data/pool.<locale>.json (D-81)
 POOL_FILE = app_paths.pool  # a bundle's pool per locale; a pack's in app/data/bundles/<id>/ (decision 66)
 POOL_FILES = app_paths.pool_files  # every exported pool file that exists
+DEMO_DATA = app_paths.DEMO_DATA  # app/data/demo/: the demo's pools (decision 339)
+DEMO_POOL = app_paths.demo_pool
 BUNDLE_DATA = app_paths.BUNDLE_DATA  # app/data/bundles/: a pack's files
 NAMES = app_paths.names  # app/data/[bundles/<id>/]names.<locale>.json (D-81)
 
