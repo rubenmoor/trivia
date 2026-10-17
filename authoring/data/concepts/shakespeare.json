@@ -653,7 +653,8 @@
     {
       "name": "El fénix y la tórtola",
       "facet": "Sonetos y poesía",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: Too obscure, and the only interesting fact (turtle = turtledove) is given away by the translated title."
     },
     {
       "name": "Monstruo de ojos verdes",
@@ -693,7 +694,8 @@
     {
       "name": "Uncomfortable",
       "facet": "Palabras y expresiones inventadas",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Shakespeare's coined English words only work in English, which the base bundle doesn't allow."
     },
     {
       "name": "Lackluster",
@@ -738,7 +740,8 @@
     {
       "name": "Un romeo",
       "facet": "Palabras y expresiones inventadas",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: “A Romeo” meaning a lover is a word that depends on the language, and the options don't fit it."
     },
     {
       "name": "Shakespeariano",
@@ -933,7 +936,8 @@
     {
       "name": "Balcón",
       "facet": "Objetos y símbolos de las obras",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: The balcony–Juliet link is already given away by the pool question about Juliet's courtyard in Verona; the other options would be forced at difficulty 3."
     },
     {
       "name": "Flores de Ofelia",

@@ -522,7 +522,8 @@
     {
       "name": "Rima asonante",
       "facet": "Técnica y jerga del rap",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: Assonant rhyme depends on each language's vowels and examples, so the question can't work the same in every language."
     },
     {
       "name": "Rima multisilábica",
@@ -647,7 +648,8 @@
     {
       "name": "Beat juggling",
       "facet": "DJ, tornamesas y producción",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Who invented beat juggling, and where, is disputed, and an odd-one-out about it would push the concept to the side."
     },
     {
       "name": "Headspin",

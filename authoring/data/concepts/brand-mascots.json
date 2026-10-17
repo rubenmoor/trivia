@@ -282,7 +282,8 @@
     {
       "name": "Dino de Danonino",
       "facet": "Mascotas de bebidas y jugos",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: Danonino's Dino is only known in some regions; no question works for families everywhere."
     },
     {
       "name": "Punchy de Hawaiian Punch",
@@ -894,7 +895,8 @@
     {
       "name": "Lacoste Crocodile",
       "facet": "Animales en emblemas de marca",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: René Lacoste as the answer could be worked out straight from the existing 'crocodile brand → Lacoste' question."
     },
     {
       "name": "Puma Cat",

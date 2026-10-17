@@ -873,7 +873,8 @@
     {
       "name": "IOU",
       "facet": "Préstamos, intereses y deudas",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: IOU is English wordplay (“I owe you”), so it doesn't work in other languages."
     },
     {
       "name": "Credit limit",

@@ -750,7 +750,8 @@
     {
       "name": "Pelotazo",
       "facet": "Jerga y vocabulario futbolero",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: “Pelotazo” is Spanish slang, and none of the options gives a fair base question that works in every language."
     },
     {
       "name": "Hat-trick",
@@ -760,7 +761,8 @@
     {
       "name": "Gambeta",
       "facet": "Jerga y vocabulario futbolero",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: “Gambeta” is regional Spanish slang, and none of the options fits a base question."
     },
     {
       "name": "Picadito",

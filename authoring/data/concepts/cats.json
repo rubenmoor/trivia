@@ -387,7 +387,8 @@
     {
       "name": "Pulgas",
       "facet": "Cuidados, salud y alimentación",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: Identifying the flea is already asked, and the other options don't give a different fact."
     },
     {
       "name": "Toxoplasmosis",

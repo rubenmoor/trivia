@@ -158,7 +158,8 @@
     {
       "name": "Thomas Pesquet",
       "facet": "Astronautas y cosmonautas famosos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Thomas Pesquet is mostly known in France; none of the options fits him for base."
     },
     {
       "name": "Samantha Cristoforetti",
@@ -218,7 +219,8 @@
     {
       "name": "Alexander Gerst",
       "facet": "Astronautas y cosmonautas famosos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: Alexander Gerst is mainly known in Germany, so the question needs knowledge from one country."
     },
     {
       "name": "Soyuz",
