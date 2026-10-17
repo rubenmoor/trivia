@@ -1,24 +1,34 @@
 #!/usr/bin/env node
 // Packaged smoke game (plan 89, release check step 6): the unpacked Linux build offline, clean env, temp HOME,
 // TRIVIA_DEV_STEAM_USER=1 (decision 111: saves need a valid Steam user; the switch stands in for one).
-// Usage (dev shell): node authoring/steam/smoke.mjs [app/desktop/release/linux-unpacked]; DEBUG=1 shows the shell's stderr
+// Usage (dev shell): node authoring/steam/smoke.mjs [--mods | --multiplayer] [app/desktop/release/linux-unpacked]; DEBUG=1 shows the shell's stderr
 // New player → levels 1–3 with an image, audio and video question → quit → restart resumes; no «progress needs Steam»
 // notice. Exit 1 names the step.
 // With packs (DLC depots, decision 66): once as built (packs offered), once without their files (not offered).
 // --mods (plan 104, task 942) instead: the shipped modding/ examples in <userData>/mods/: loaded, theme applied, player
 // bundle offered and played, rules tweak's extra hint, no crash marker; then the conversion on top, then --no-mods.
+// --multiplayer (plan 167, decision 299) instead: rr-coop, rr-competitive, timed × 3 pads, 3 keyboard seats, 4 pads +
+// keyboard and mouse; each Choice → Join → Bundles → an end, fake pads (fake_pads.js) and trusted CDP keys and clicks.
+// The middle of a session is played by the engine on the save (as the solo run swaps cards), the rest on screen; a
+// seat that may not act changes nothing; one quit and restart rebinds each pad (decision 289); after each: one games[]
+// row with its seats (decision 277), the mode's win achievement derived for a win (decision 285).
 import { spawn, spawnSync } from "node:child_process";
 import { accessSync, constants, existsSync, readdirSync, readFileSync } from "node:fs";
 import { cp, mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { earned } from "../../app/client/src/engine/achievements.ts";
+import { answer, claim, pick, show } from "../../app/client/src/engine/game.ts";
+import { seededRng } from "../../app/client/src/engine/rng.ts";
 import { cacheName, shippedName } from "../../app/desktop/resolve.mjs";
 import { connectPipe, pageHelpers, sleep, startXvfb, visibleEl } from "../tools/cdp.mjs";
+import { loadData } from "../tools/engine_data.mjs";
 
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
 const ARGS = process.argv.slice(2);
 const MODS = ARGS.includes("--mods");
-const BUILD = path.resolve(ARGS.find((a) => a !== "--mods") ?? path.join(REPO, "app", "desktop", "release", "linux-unpacked"));
+const MULTI = ARGS.includes("--multiplayer");
+const BUILD = path.resolve(ARGS.find((a) => !a.startsWith("--")) ?? path.join(REPO, "app", "desktop", "release", "linux-unpacked"));
 const BUNDLES = path.join("resources", "data", "bundles");
 const TYPES = ["image", "audio", "video"]; // levels 1–3
 const PLAYER = "Smoke";
@@ -68,8 +78,8 @@ const saveFile = () => path.join(home, ".config", "trivia", "save", "dev", "game
 const running = (save) => save.games.at(-1).state;
 
 /** The save on disk once `test` holds (the shell writes after each action). */
-async function saved(test, what) {
-  for (const end = Date.now() + 10000; Date.now() < end; await sleep(100)) {
+async function saved(test, what, ms = 10000) {
+  for (const end = Date.now() + ms; Date.now() < end; await sleep(100)) {
     try {
       const save = JSON.parse(await readFile(saveFile(), "utf8"));
       if (test(save)) return save;
@@ -173,6 +183,11 @@ async function main() {
     display = x.display;
     procs.push(x.proc);
     const built = packs();
+    if (MULTI) {
+      for (const [i, run] of RUNS.entries()) await multiplayer(path.join(tmp, `home-mp-${i}`), run);
+      console.log("smoke --multiplayer: ok");
+      return;
+    }
     if (!MODS) console.log(built.length ? `with packs ${built.join(", ")}` : "no packs");
     if (MODS) await modsGame(path.join(tmp, "home-mods"));
     else await game(path.join(tmp, "home"));
@@ -369,6 +384,386 @@ async function modsGame(dir) {
   const list = await modsList();
   if (!list.noMods || list.safeStart?.reason !== "flag") throw new Error(`mods.list(): noMods ${list.noMods}, safeStart ${JSON.stringify(list.safeStart)}`);
   await quit(shell);
+  page.close();
+  page = null;
+}
+
+// Local multiplayer (--multiplayer) ----------------------------------------------------------------------------------
+
+// A seat's device as the run drives it: a pad index, "kbm" (keyboard and mouse), "shared" (keyboard-only round-robin,
+// decision 273) or a keyboard-only timed seat's claim key (decision 290).
+const NAMES = [PLAYER, "Luna", "Mateo", "Sofía", "Max"];
+const BTN = { A: 0, RB: 5, RT: 7, LEFT: 14 };
+const PICK = [3, 1, 2, 0]; // answer i → Y, B, X, A (PAD_PICKS)
+const WINS = { "rr-coop": "WIN_RR_COOP", "rr-competitive": "WIN_RR_COMPETITIVE", timed: "WIN_TIMED" };
+const LOST = ".dialog[aria-labelledby='seat-lost-title']";
+const PADS3 = [0, 1, 2];
+const SHARED3 = ["shared", "shared", "shared"];
+const FIVE = [0, 1, 2, 3, "kbm"];
+const FAKE_PADS = readFileSync(path.join(REPO, "authoring", "tools", "fake_pads.js"), "utf8");
+
+const row = (save) => save.games.at(-1);
+/** A seat's own game (rr-competitive), else the session's. */
+const stateOf = (g, seat) => g.seats[seat].state ?? g.state;
+let data;
+const rightOf = (st) => st.answers.indexOf(data.byId.get(st.current).answer);
+let seed = 1;
+const io = (ms) => ({ rng: seededRng(seed++), now: new Date().toISOString().slice(0, 19), ms });
+
+/** A real (trusted) key press: the seat filter drops untrusted input only for clicks. */
+async function key(k) {
+  const named = { Enter: ["Enter", 13, "\r"], " ": ["Space", 32, " "] }[k];
+  const [code, vk, text] = named ?? [/\d/.test(k) ? `Digit${k}` : `Key${k.toUpperCase()}`, k.toUpperCase().charCodeAt(0), k];
+  await page.send("Input.dispatchKeyEvent", { type: "keyDown", key: k, code, windowsVirtualKeyCode: vk, text });
+  await page.send("Input.dispatchKeyEvent", { type: "keyUp", key: k, code, windowsVirtualKeyCode: vk });
+  await sleep(200);
+}
+
+/** A real mouse click on `sel`'s centre. */
+async function mouse(sel) {
+  await h.waitFor(visibleEl(sel), sel);
+  const [x, y] = await h.evaluate(`(() => { const r = document.querySelector(${JSON.stringify(sel)}).getBoundingClientRect();
+    return [r.x + r.width / 2, r.y + r.height / 2]; })()`);
+  await page.send("Input.dispatchMouseEvent", { type: "mouseMoved", x, y });
+  for (const type of ["mousePressed", "mouseReleased"]) await page.send("Input.dispatchMouseEvent", { type, x, y, button: "left", clickCount: 1 });
+  await sleep(200);
+}
+
+const padPress = (button, i) => h.evaluate(`window.__press(${button}, ${i})`);
+
+/** `seat` presses `what`: confirm, card (the first), answer `n`, submit, claim. Keyboard and mouse: cards and answers
+ * by mouse, the rest by keys. */
+async function press(r, seat, what, n = 0) {
+  const b = r.seats[seat];
+  if (typeof b === "number") {
+    if (what === "card") await padPress(BTN.LEFT, b); // the ring on the first card; A presses only a ringed control
+    return padPress({ confirm: BTN.A, card: BTN.A, answer: PICK[n], submit: BTN.RT, claim: BTN.RB }[what], b);
+  }
+  if (b === "kbm" && what === "card") return mouse(".cards .card");
+  if (b === "kbm" && what === "answer") return mouse(`.answers .answer:nth-child(${n + 1})`);
+  await key({ confirm: "Enter", card: "1", answer: String(n + 1), submit: "Enter", claim: b === "kbm" ? " " : b }[what]);
+}
+
+/** What is on screen, coarsely. */
+const SCREEN = `[".level .hint", ".cards .card", ".answers .answer", ".final-button.ready", ".title.good", ".title.bad",
+  ".title.gold", ${JSON.stringify(LOST)}].map((s) => ${visibleEl("__").replace('"__"', "s")}).join("")`;
+
+/** A press from `seat`, which may not act now, changes neither the save nor the screen. */
+async function refused(r, seat, what, n) {
+  at(`${r.label}: seat ${seat}'s ${what} refused`);
+  const save = await readFile(saveFile(), "utf8");
+  const screen = await h.evaluate(SCREEN);
+  await press(r, seat, what, n);
+  await sleep(1000);
+  if ((await readFile(saveFile(), "utf8")) !== save) throw new Error(`seat ${seat}'s ${what} changed the save`);
+  if ((await h.evaluate(SCREEN)) !== screen) throw new Error(`seat ${seat}'s ${what} changed the screen`);
+}
+
+/** The lost-seat dialog for `seat` (decision 289), if up: its pad's A takes it. */
+async function rebind(r, seat) {
+  await sleep(300);
+  if (!(await h.evaluate(visibleEl(LOST)))) return false;
+  const name = await h.evaluate(`document.querySelector("#seat-lost-title").textContent`);
+  if (!name.includes(NAMES[seat])) throw new Error(`lost-seat dialog "${name.trim()}", want seat ${seat} (${NAMES[seat]})`);
+  at(`${r.label}: pad ${r.seats[seat]} takes seat ${seat}`);
+  await padPress(BTN.A, r.seats[seat]);
+  await h.waitFor(`!${visibleEl(LOST)} || !document.querySelector("#seat-lost-title").textContent.includes(${JSON.stringify(NAMES[seat])})`, "seat taken");
+  return true;
+}
+
+/** A launch with `n` fake pads, at load and after every reload; the page counts as focused (the pad loop polls only then). */
+async function launchPads(n) {
+  const shell = await launch();
+  const source = `(${FAKE_PADS})(${JSON.stringify(Array(n).fill(null))})`;
+  await page.send("Page.enable");
+  await page.send("Page.addScriptToEvaluateOnNewDocument", { source });
+  await page.send("Emulation.setFocusEmulationEnabled", { enabled: true });
+  await h.evaluate(`${source}; window.__pads(${n}); true`);
+  return shell;
+}
+
+async function setText(sel, text) {
+  await h.waitFor(visibleEl(sel), sel);
+  await h.evaluate(`(() => {
+    const i = document.querySelector(${JSON.stringify(sel)});
+    i.value = ${JSON.stringify(text)};
+    i.dispatchEvent(new Event("input", { bubbles: true }));
+  })()`);
+}
+
+/** Choice → mode row → Join (every seat, its device, its name) → Bundles → the session's first screen. */
+async function setup(r) {
+  at(`${r.label}: mode row`);
+  await h.click(`[data-focus-id="mode-${r.mode}"]`);
+  await h.click('[data-focus-id="next"]');
+  await h.waitFor(visibleEl(".join .seat.open"), "join screen");
+  for (const [i, b] of r.seats.entries()) {
+    at(`${r.label}: join seat ${i} (${b})`);
+    if (typeof b === "number") await padPress(BTN.A, b);
+    else {
+      await h.click('[data-focus-id="join-keyboard"]');
+      if (b.length === 1) await setText(".key-field", b);
+    }
+    await h.waitFor(visibleEl(`[data-focus-id="seat-name-${i}"]`), `seat ${i}`);
+    if (!i) continue;
+    await h.click(`[data-focus-id="seat-name-${i}"]`);
+    await setText(".backdrop #new-player", NAMES[i]);
+    await h.click('.backdrop .new button[type="submit"]');
+    await h.waitFor(`document.querySelector('[data-focus-id="seat-name-${i}"]')?.textContent.includes(${JSON.stringify(NAMES[i])})`, `seat ${i} named`);
+  }
+  at(`${r.label}: bundles`);
+  await h.click('[data-focus-id="next"]');
+  await h.click('[data-focus-id="start"]');
+  const save = await saved((s) => s.games?.length && row(s).seats, "session started");
+  data = loadData(row(save).locale ?? "es", path.join(DIR, "resources", "data"));
+  const want = r.seats.map((b) => (typeof b === "number" ? { pad: b } : b === "kbm" || b === "shared" ? b : { key: b }));
+  const bound = await h.evaluate(`sessionStorage.getItem("trivia.seats.${row(save).id}")`);
+  if (bound !== JSON.stringify(want)) throw new Error(`seats bound ${bound}, want ${JSON.stringify(want)}`);
+}
+
+/** `expr` holds, then a moment for the screen's transition (input waits while it runs). */
+async function ready(expr, what, ms = 30000) {
+  await h.waitFor(expr, what, ms);
+  await sleep(1000);
+}
+
+/** One round-robin turn through the screens by the seat on turn: Level, the first card (`off` presses first, refused),
+ * the answer, the result and its «Seguir». */
+async function turn(r, right, off) {
+  const before = await saved((s) => { const g = row(s); return g.result === null && stateOf(g, g.turn).phase === "select"; }, "a table");
+  const seat = row(before).turn;
+  const level = stateOf(row(before), seat).level;
+  at(`${r.label}: seat ${seat}, level ${level}`);
+  await ready(visibleEl(".level .hint"), "level screen");
+  await rebind(r, seat);
+  await press(r, seat, "confirm");
+  await ready(visibleEl(".cards .card"), "cards");
+  if (off !== undefined) await refused(r, off, "card");
+  await press(r, seat, "card");
+  const st = stateOf(row(await saved((s) => stateOf(row(s), seat).phase === "question", "card picked")), seat);
+  await ready(visibleEl(".answers .answer:not(:disabled)"), "question screen");
+  const i = rightOf(st);
+  await press(r, seat, "answer", right ? i : (i + 1) % st.answers.length);
+  await h.waitFor(visibleEl(".final-button.ready"), "answer locked");
+  await press(r, seat, "submit");
+  const after = await saved((s) => stateOf(row(s), seat).history.length > st.history.length, "answered");
+  const g = row(after);
+  if (!right) {
+    await ready(visibleEl(".title.bad"), "wrong screen");
+    if (r.mode === "rr-competitive") {
+      if (!g.seats[seat].out) throw new Error(`seat ${seat} not out after a wrong answer`);
+      await press(r, seat, "confirm"); // «Seguir»: Wrong is every seat's
+      if (g.result === null) await h.waitFor(visibleEl(".level .hint"), "next turn", 30000);
+    } else if (g.result !== "lost") throw new Error(`team result ${g.result} after a wrong answer`);
+  } else if (g.result === null) {
+    await ready(visibleEl(".title.good"), "correct screen");
+    await rebind(r, g.turn);
+    await press(r, g.turn, "confirm");
+  }
+  if (g.result === "won") await h.waitFor(visibleEl(".title.gold"), "victory screen", 40000);
+  return after;
+}
+
+/** The engine plays on the save (each turn its first card, right) until `until`; the page reloads and resumes. */
+async function forward(r, until, what) {
+  at(`${r.label}: engine to ${what}`);
+  let save = await saved(() => true, "save");
+  while (!until(save)) {
+    const seat = row(save).turn;
+    ({ save } = pick(save, data, io(), 0, seat));
+    ({ save } = answer(save, data, io(), rightOf(stateOf(row(save), seat)), seat));
+  }
+  await writeFile(saveFile(), JSON.stringify(save));
+  await page.send("Page.reload", { ignoreCache: true });
+  await resume(r);
+}
+
+async function resume(r) {
+  at(`${r.label}: resume`);
+  await h.waitFor(visibleEl('[data-focus-id="main"]'), "start screen", 30000);
+  await sleep(500);
+  await h.click('[data-focus-id="main"]');
+}
+
+/** The question on screen with its clock running, the `n`th of the session. */
+async function shown(n) {
+  await saved((s) => row(s).result === null && row(s).state.history.length === n && row(s).state.timed.shown_at !== null, `question ${n + 1} shown`, 40000);
+  await h.waitFor(visibleEl(".timed-screen .answers"), "timed question", 30000);
+}
+
+/** Timed: `seat` claims the question on screen (`off` presses claim and an answer, refused) and answers right, wrong,
+ * or lets the 6 s run out. */
+async function claims(r, seat, how, off) {
+  const n = row(await saved(() => true, "save")).state.history.length;
+  await shown(n);
+  at(`${r.label}: seat ${seat} claims, ${how}`);
+  await press(r, seat, "claim");
+  const save = await saved((s) => row(s).state.timed.claim?.seat === seat, `seat ${seat}'s claim`);
+  if (off !== undefined) {
+    await refused(r, off, "claim");
+    // a key seat's answer keys act for the claimer (decision 290)
+    if (typeof r.seats[off] === "number" || r.seats[off] === "kbm") await refused(r, off, "answer", 0);
+  }
+  const i = rightOf(row(save).state);
+  if (how !== "timeout") await press(r, seat, "answer", how === "right" ? i : (i + 1) % row(save).state.answers.length);
+  const after = await saved((s) => row(s).state.history.length > n, "question ended", 15000);
+  const h0 = row(after).state.history[n];
+  if (h0.seat !== seat || h0.correct !== (how === "right") || !!h0.timeout !== (how === "timeout"))
+    throw new Error(`question ${n + 1}: ${JSON.stringify(h0)}, want seat ${seat} ${how}`);
+  if (how !== "right" && !row(after).seats[seat].out) throw new Error(`seat ${seat} not out`);
+  return after;
+}
+
+/** Timed: the engine plays on the save, each question right by a seat still without one this round, until `until`. */
+function timedForward(save, until) {
+  let ms = Math.max(Date.now() - 10000, row(save).state.timed.shown_at ?? 0);
+  const tick = () => io((ms += 50));
+  while (!until(save)) {
+    const g = row(save);
+    const t = g.state.timed;
+    if (t.shown_at === null) ({ save } = show(save, data, tick()));
+    const left = g.seats.flatMap((s, i) => (s.out ? [] : [i]));
+    const seat = left.find((i) => !t.round_correct.includes(i)) ?? left[0];
+    ({ save } = claim(save, data, tick(), seat));
+    ({ save } = answer(save, data, tick(), rightOf(row(save).state), seat));
+  }
+  return save;
+}
+
+/** The end: one games[] row with the seats in join order (decision 277), finished; the win achievement with a win
+ * (decision 285); the end screen's confirm goes to Start, no resume. */
+async function ended(r, end) {
+  at(`${r.label}: ${end}`);
+  const save = await saved((s) => row(s).result !== null && row(s).finished_on, "session over");
+  if (save.games.length !== 1) throw new Error(`${save.games.length} games[] rows, want 1`);
+  const g = row(save);
+  const names = g.seats.map((s) => save.players.find((p) => p.id === s.player_id)?.name);
+  if (names.join() !== NAMES.slice(0, r.seats.length).join()) throw new Error(`seats ${names.join(", ")}`);
+  const win = earned(save, data).includes(WINS[r.mode]);
+  if (win !== (g.result === "won")) throw new Error(`result ${g.result}, ${WINS[r.mode]} ${win ? "" : "not "}earned`);
+  await ready(`${visibleEl(".title.gold")} || ${visibleEl(".title.bad")}`, "end screen", 40000);
+  await press(r, 0, "confirm"); // the end screens are every seat's
+  await h.waitFor(visibleEl('[data-focus-id="main"]'), "start screen", 20000);
+  const label = await h.evaluate(`document.querySelector('[data-focus-id="main"]').textContent`);
+  if (label.includes(PLAYER)) throw new Error(`a resume after the end: "${label.trim()}"`);
+  console.log(`  ${r.label}: ${end}, ${g.result}${win ? `, ${WINS[r.mode]}` : ""}`);
+}
+
+const levelOf = (s, seat) => stateOf(row(s), seat).level;
+const at12 = (seat) => (s) => row(s).turn === seat && levelOf(s, seat) === 12 && stateOf(row(s), seat).phase === "select";
+
+const RUNS = [
+  {
+    mode: "rr-coop", seats: PADS3, async play(r) {
+      await turn(r, true, 1);
+      await turn(r, true, 0);
+      await forward(r, (s) => levelOf(s, 0) === 12, "level 12");
+      await turn(r, true, (row(await saved(() => true, "save")).turn + 1) % 3);
+      await ended(r, "team win");
+    },
+  },
+  {
+    mode: "rr-coop", seats: SHARED3, async play(r) {
+      await turn(r, true);
+      await turn(r, true);
+      await turn(r, false);
+      await ended(r, "team loss");
+    },
+  },
+  {
+    mode: "rr-coop", seats: FIVE, async play(r) {
+      await turn(r, true, 4); // keyboard and mouse off turn: a click on a card
+      for (let i = 1; i < 4; i++) await turn(r, true);
+      await turn(r, true, 0); // a pad while keyboard and mouse are on turn
+      await forward(r, (s) => levelOf(s, 0) === 12, "level 12");
+      await turn(r, true);
+      await ended(r, "team win");
+    },
+  },
+  {
+    mode: "rr-competitive", seats: PADS3, async play(r) {
+      await turn(r, true, 2);
+      await turn(r, false); // seat 1 out
+      await turn(r, true, 1); // an out seat's pad
+      await forward(r, at12(0), "seat 0 at level 12");
+      await turn(r, true);
+      await ended(r, "first to 12");
+    },
+  },
+  {
+    mode: "rr-competitive", seats: SHARED3, async play(r) {
+      await turn(r, false);
+      await turn(r, false);
+      await ended(r, "last standing");
+    },
+  },
+  {
+    mode: "rr-competitive", seats: FIVE, async play(r) {
+      await turn(r, true, 4);
+      for (let i = 1; i < 4; i++) await turn(r, true);
+      await turn(r, true, 3);
+      await forward(r, at12(0), "seat 0 at level 12");
+      await turn(r, true);
+      await ended(r, "first to 12");
+    },
+  },
+  {
+    mode: "timed", seats: PADS3, async play(r) {
+      await claims(r, 0, "right", 1);
+      await claims(r, 1, "timeout", 2); // the 6 s run out: out
+      const save = await claims(r, 0, "right");
+      const lives = row(save).seats.map((s) => s.lives);
+      if (lives[2] !== 2 || lives[0] !== 3) throw new Error(`lives after round 1: ${lives.join(", ")}`);
+      console.log(`  ${r.label}: round 1 lives ${lives.join(", ")}`);
+      await this.restart(r);
+      await claims(r, 2, "right", 0);
+      await ended(r, "sudden-death win");
+    },
+    /** Quit on round 2, the engine on to round 12 (sudden death), restart: resume, every pad takes its seat again. */
+    async restart(r) {
+      await h.waitFor(visibleEl("main .screen.round"), "round 2 screen", 30000);
+      at(`${r.label}: quit`);
+      await quit(r.shell);
+      const save = timedForward(JSON.parse(await readFile(saveFile(), "utf8")),
+        (s) => row(s).state.level === 12 && row(s).state.timed.round_done === 0);
+      await writeFile(saveFile(), JSON.stringify(save));
+      at(`${r.label}: restart`);
+      r.shell = await launchPads(r.seats.length);
+      await resume(r);
+      await h.waitFor(visibleEl(LOST), "lost-seat dialog", 20000);
+      for (const seat of [0, 2]) if (!(await rebind(r, seat))) throw new Error(`no lost-seat dialog for seat ${seat}`);
+      if (await h.evaluate(visibleEl(LOST))) throw new Error("lost-seat dialog for a seat that is out");
+    },
+  },
+  {
+    mode: "timed", seats: ["j", "q", "x"], async play(r) {
+      await claims(r, 0, "wrong", 1);
+      await claims(r, 1, "wrong", 2);
+      await ended(r, "last standing");
+    },
+  },
+  {
+    mode: "timed", seats: FIVE, async play(r) {
+      await claims(r, 4, "right", 0);
+      for (let i = 0; i < 4; i++) await claims(r, i, "wrong", i ? undefined : 4);
+      await ended(r, "last standing");
+    },
+  },
+];
+
+/** One session in a fresh HOME. */
+async function multiplayer(dir, r) {
+  r.label = `${r.mode} ${r.seats.map((b) => (typeof b === "number" ? "pad" : b)).join("+")}`;
+  console.log(r.label);
+  home = dir;
+  await mkdir(home);
+  seed = 1;
+  r.shell = await launchPads(r.seats.filter((b) => typeof b === "number").length);
+  await toStart();
+  await newPlayer();
+  await setup(r);
+  await r.play(r);
+  await quit(r.shell);
   page.close();
   page = null;
 }

@@ -111,44 +111,11 @@ STUB = """
     get: () => stub,
     set: (shim) => Object.assign(stub, { loadSave: shim.loadSave, writeSave: shim.writeSave, backupSave: shim.backupSave }),
   });
-  // Fake standard pads: `__pads(n, ids)` connects n (mixed Xbox/PlayStation ids), `__press(button, pad = 0)` presses and
-  // releases one (letter pickers open from the pad only); `__padOff(pad)` unplugs it. The first press connects one pad.
-  const IDS = [
-    "Xbox 360 Controller (STANDARD GAMEPAD)",
-    "Wireless Controller (STANDARD GAMEPAD Vendor: 054c Product: 09cc)",
-  ];
-  const made = (index, id) => ({
-    id, index, mapping: "standard", connected: true, timestamp: 0,
-    axes: [0, 0, 0, 0], buttons: Array.from({ length: 17 }, () => ({ pressed: false, touched: false, value: 0 })),
-  });
-  let pads = [];
-  navigator.getGamepads = () => pads;
-  const plug = (n, ids) => {
-    pads = Array.from({ length: n }, (_, i) => made(i, ids?.[i] ?? IDS[i % IDS.length]));
-    for (const g of pads) window.dispatchEvent(Object.assign(new Event("gamepadconnected"), { gamepad: g }));
-  };
-  if (cfg.pads) pads = cfg.pads.map((id, i) => made(i, id ?? IDS[i % IDS.length]));
-  window.__pads = (n, ids) => plug(n, ids);
-  window.__padOff = (i) => {
-    const g = pads[i];
-    pads[i] = null;
-    window.dispatchEvent(Object.assign(new Event("gamepaddisconnected"), { gamepad: g }));
-  };
-  window.__press = async (b, i = 0) => {
-    if (!pads.length) {
-      plug(1);
-      await new Promise((r) => setTimeout(r, 100));
-    }
-    const pad = pads[i];
-    pad.buttons[b] = { pressed: true, touched: true, value: 1 };
-    await new Promise((r) => setTimeout(r, 120));
-    pad.buttons[b] = { pressed: false, touched: false, value: 0 };
-    await new Promise((r) => setTimeout(r, 120));
-  };
+  (__PADS__)(cfg.pads); // fake_pads.js
   // A running session's seats bound (lib/seats.svelte.ts `trivia.seats.<game id>`), so the game doesn't ask for pads.
   if (cfg.bound) sessionStorage.setItem(`trivia.seats.${cfg.bound.id}`, JSON.stringify(cfg.bound.binding));
 })();
-"""
+""".replace("__PADS__", (Path(__file__).parent / "fake_pads.js").read_text(encoding="utf-8"))
 
 # Visible text nodes and aria-label/title/placeholder, on top (not under a dialog's backdrop), in the viewport.
 TEXTS = """

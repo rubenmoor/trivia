@@ -1,4 +1,5 @@
-// The engine's data for a question locale, from app/data/ on disk (data.ts's load()): store screenshots, trivia-gallery.
+// The engine's data for a question locale, from app/data/ on disk (data.ts's load()): store screenshots, trivia-gallery,
+// the packaged smoke (a build's resources/data/).
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -6,14 +7,14 @@ import { bundleFile, loadCategories, packsFor, parseAgeGroups, parseBundles, par
 import { engineData, mergeNames, namesFiles } from "../../app/client/src/engine/state.ts";
 
 const DATA = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..", "app", "data");
-const json = (file) => JSON.parse(readFileSync(path.join(DATA, file), "utf8"));
 
-/** Null if the locale has no pool. */
-export function loadData(locale) {
+/** Null if the locale has no pool; `dir`: another data directory of app/data's layout. */
+export function loadData(locale, dir = DATA) {
+  const json = (file) => JSON.parse(readFileSync(path.join(dir, file), "utf8"));
   const file = poolFile(locale);
-  if (!existsSync(path.join(DATA, file))) return null;
+  if (!existsSync(path.join(dir, file))) return null;
   const bundles = json("bundles.json");
-  const optional = (f) => (existsSync(path.join(DATA, f)) ? json(f) : null);
+  const optional = (f) => (existsSync(path.join(dir, f)) ? json(f) : null);
   const all = parseBundles(bundles);
   const packs = Object.fromEntries(packsFor(all, locale).map((b) => [b.id, optional(poolFile(locale, b.id))]));
   const { pool, bundles: parsed } = withPacks(parsePool(json(file)), all, locale, packs);
