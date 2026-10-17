@@ -20,6 +20,7 @@
   import { seatColor, type SeatDraft } from "../seats.ts";
   import Icon, { type IconName } from "../Icon.svelte";
   import Prompt from "../Prompt.svelte";
+  import { sfx } from "../sound.svelte.ts";
 
   let {
     mode,
@@ -103,6 +104,7 @@
   /** ←/→ or −/+ on a configure line (`data-step`). */
   function step(id: string, by: number) {
     if (busy || !options) return;
+    sfx("tick");
     if (id.startsWith("seat-group-")) return stepSeat(Number(id.slice(11)), by);
     const pick = stepDifficulty(options.groups, { group, custom, difficulty }, id, by);
     if (pick) ({ group, custom, difficulty } = pick);

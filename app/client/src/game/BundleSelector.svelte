@@ -49,6 +49,7 @@
   import Flags from "./Flags.svelte";
   import Icon from "./Icon.svelte";
   import Prompt from "./Prompt.svelte";
+  import { sfx } from "./sound.svelte.ts";
 
   let {
     bundles,
@@ -94,7 +95,9 @@
   });
 
   function toggle(b: Bundle) {
-    if (!busy) onchange(toggled(bundles, selected, b));
+    if (busy) return;
+    sfx("tick");
+    onchange(toggled(bundles, selected, b));
   }
 
   /** Focus follows (arrows, pad, letters, Tab): the focused tile stays in view. */

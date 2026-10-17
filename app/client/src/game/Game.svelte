@@ -246,10 +246,10 @@
   /** The transition routine (04, "Transitions"): effect, fade to black, switch, fade in, music.
    * `apply` runs behind the black: a new game state that the old screen can't show (no question
    * any more, a different `last`) must not land before the screen switches. */
-  async function go(next: Screen, effect: Cue, apply?: () => void) {
+  async function go(next: Screen, effect: Cue | null, apply?: () => void) {
     busy = true;
     music(null);
-    sfx(effect);
+    if (effect) sfx(effect);
     veil = effect === "rewind" ? "rewind" : "black";
     black = true;
     await sleep(FADE_MS);
@@ -422,7 +422,7 @@
     roundBefore = null;
     sfx("ready");
     await sleep(GREETING_MS);
-    await go("level", "ready");
+    await go("level", null); // «ready» already played with the greeting
     greeting = null;
   }
 

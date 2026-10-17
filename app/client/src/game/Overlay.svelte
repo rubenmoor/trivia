@@ -20,7 +20,7 @@
   import Prompt from "./Prompt.svelte";
   import type { Game, GameMode, JokerBudget, JokerName } from "../lib/types.ts";
   import { stepUses, TOKENS } from "./jokers.ts";
-  import { setVolumes, sound, type Volumes } from "./sound.svelte.ts";
+  import { setVolumes, sfx, sound, type Volumes } from "./sound.svelte.ts";
 
   type Item = {
     label: string;
@@ -63,6 +63,7 @@
   function change(key: Channel, by: number) {
     const v = Math.round(Math.min(1, Math.max(0, sound.volumes[key] + by)) * 10) / 10;
     setVolumes({ [key]: v } as Partial<Volumes>);
+    sfx("tick");
   }
 
   let {
@@ -186,11 +187,18 @@
     const now = leftOf(name);
     const next = stepUses(now, by);
     if (next === now) return;
+    sfx("tick");
     setBudget({ [name]: next === null ? null : used[name] + next });
   }
 
   function stepLevel(by: number) {
+    sfx("tick");
     target = ((target - 1 + by + levels) % levels) + 1;
+  }
+
+  function flipSeen() {
+    sfx("tick");
+    seen = !seen;
   }
 
   /** Opt-in telemetry (plan 108): null without a valid Steam user in the shell (no row); `null` consent shows as off. */
@@ -319,7 +327,7 @@
       confirming = null;
     } else if (by && item.volume) change(item.volume, by * STEP);
     else if (by && item.joker) stepJoker(item.joker, by);
-    else if (by && item.replace && item.enabled) seen = !seen;
+    else if (by && item.replace && item.enabled) flipSeen();
     else if (by && item.level && item.enabled) stepLevel(by);
     else if (by) across(by);
     else if (a.type === "confirm") activate(selected);
@@ -376,9 +384,9 @@
   {:else if item.level || item.replace}
     <div class="row pick" class:selected={i === selected} class:off={!item.enabled} data-item={i} role="group" onmouseenter={() => item.enabled && (selected = i)}>
       <button class="run" onclick={() => activate(i)} disabled={!item.enabled} tabindex="-1">{item.label}</button>
-      <button class="step" onclick={() => (item.level ? stepLevel(-1) : (seen = !seen))} disabled={!item.enabled} tabindex="-1" aria-label={t("overlay.less")}>‹</button>
+      <button class="step" onclick={() => (item.level ? stepLevel(-1) : flipSeen())} disabled={!item.enabled} tabindex="-1" aria-label={t("overlay.less")}>‹</button>
       <span class="value">{item.level ? target : t(seen ? "overlay.seen" : "overlay.unseen")}</span>
-      <button class="step" onclick={() => (item.level ? stepLevel(1) : (seen = !seen))} disabled={!item.enabled} tabindex="-1" aria-label={t("overlay.more")}>›</button>
+      <button class="step" onclick={() => (item.level ? stepLevel(1) : flipSeen())} disabled={!item.enabled} tabindex="-1" aria-label={t("overlay.more")}>›</button>
     </div>
   {:else if item.info}
     <p class="row readonly info">{item.label}</p>

@@ -538,6 +538,15 @@ const es = {
   copy: {
     /** A line on the Level screen at some levels (UI-14). */
     milestone: {
+      1: [
+        "¡Prepárense para la primera pregunta!",
+        "¿Ya tienen algo para picar a la mano?",
+        "¡Última pasada por la cocina antes de empezar!",
+        "¿Todos cómodos en el sofá? ¡Arrancamos!",
+        "Celulares a un lado: ¡empieza la torre!",
+        "Respiren hondo: ¡el primer bloque va en camino!",
+        "¿Alguien quiere ir al baño? ¡Es ahora o nunca!",
+      ],
       4: ["¡Cada vez más alto!", "¡La torre ya tiene forma!"],
       6: ["¡Ya van por la mitad!", "¡Mitad de la torre!"],
       8: ["¡Esto ya es un rascacielos!", "¡Desde aquí se ve todo el barrio!"],

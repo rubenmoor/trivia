@@ -12,6 +12,7 @@
   import Icon from "./Icon.svelte";
   import { spanOf, stepDifficulty } from "./difficulty.ts";
   import Prompt from "./Prompt.svelte";
+  import { sfx } from "./sound.svelte.ts";
 
   let {
     settings,
@@ -52,6 +53,7 @@
   function step(id: string, by: number) {
     if (busy || !options) return;
     error = null;
+    sfx("tick");
     if (id === "answers") return void (answers = !answers);
     const pick = stepDifficulty(options.groups, { group, custom, difficulty }, id, by);
     if (pick) ({ group, custom, difficulty } = pick);

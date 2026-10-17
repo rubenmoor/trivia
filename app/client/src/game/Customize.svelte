@@ -8,6 +8,7 @@
   import { PRESETS, presetOf, stepPreset, stepUses, TOKENS } from "./jokers.ts";
   import Icon from "./Icon.svelte";
   import Prompt from "./Prompt.svelte";
+  import { sfx } from "./sound.svelte.ts";
 
   let {
     jokers,
@@ -18,6 +19,7 @@
   let dialog = $state<HTMLDivElement>();
 
   function step(name: JokerName | "preset", by: number) {
+    sfx("tick");
     if (name === "preset") return onchange(stepPreset(jokers, by));
     const now = jokers[name];
     const next = stepUses(now, by);
