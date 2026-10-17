@@ -146,6 +146,30 @@ qgen flag --pull             # reports → needs_work reviews, then acknowledged
 
 Players send a flagged question with «Enviar» in «Preguntas marcadas»; the game posts it to the report server (`reportUrl` in `app/desktop/package.json`; `--url` overrides it). The pull needs the server's pull token: `export TRIVIA_REPORT_TOKEN=…` (e.g. in `.env.local`) or write it to `state/report-token` (gitignored); never commit it. Each report becomes a `needs_work` review with the feedback «Reporte de jugador (…)» in `/review?status=needs_work`; reports in `en`/`de` go to that translation. Pulled ids are kept in `state/reports-pulled.json`, so a repeated pull adds nothing; mod questions and unknown ids are skipped and acknowledged. Then `qgen rework` picks them up.
 
+### Run the report server locally
+
+```sh
+trivia-report-server dev     # 127.0.0.1:8787, local D1, migrations applied, prints the dev pull token
+```
+
+Fake tickets `dev-<anything>` work only here (`dev-invalid` → 401, `dev-steamdown` → 502). Point the shell at it with `TRIVIA_DEV_STEAM_USER=1 TRIVIA_REPORT_URL=http://127.0.0.1:8787`, and `qgen flag --pull --url http://127.0.0.1:8787` with the printed token. `--test-scheduled` after `dev` enables the cron at `/__scheduled`.
+
+### Deploy the report server, rotate secrets
+
+Developer only, needs `wrangler login` (Cloudflare account). The live URL is `reportUrl` in `app/desktop/package.json`.
+
+```sh
+trivia-report-server deploy            # migrations (remote), then the Worker
+trivia-report-server secret STEAM_WEB_API_KEY   # publisher Web API key; also PULL_TOKEN, HASH_SALT
+trivia-report-server tail              # live errors, no bodies
+curl "$(jq -r .reportUrl app/desktop/package.json)/health"   # {"ok":true,"api":1}
+```
+
+- `STEAM_APP_ID` in `report-server/wrangler.toml` must hold the App ID (`authoring/steam/steam.json`), else every report → 502 (copy fallback).
+- `PULL_TOKEN` (`openssl rand -base64 32 | tr '+/' '-_' | tr -d '='`): new secret, then the same value in `state/report-token` or `TRIVIA_REPORT_TOKEN`.
+- `HASH_SALT` (`openssl rand -hex 32`): rotating only resets today's per-user counts.
+- Kill switch: `REPORTS_OPEN = "0"` in `wrangler.toml`, then deploy.
+
 ### A player pasted a report
 
 Without a server (or when sending failed), players copy the report text from «Preguntas marcadas» («Copiar» / «Copiar todo») and paste it somewhere, e.g. the Steam Discussions. Paste it into `qgen flag`:
