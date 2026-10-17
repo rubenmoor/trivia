@@ -39,6 +39,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen report --played [--locale es|en|de|all] [--age-group …] [--mode …] [--since YYYY-MM-DD] [--all] [--json]
                                     # played vs. rated difficulty, outliers → /review?played=outliers (plan 109)
     qgen validate
+    qgen demo --sizes | --propose [--seats S] | --check [<file>]   # the demo's question list (plan 174)
     qgen patch-notes [<from-ref> [<to-ref>]] [--out FILE] [--json]   # counts-only notes of a content patch (plan 96)
 
 Writing steps call `claude -p --json-schema` with prompts from authoring/tools/prompts/, in the language of
@@ -76,6 +77,7 @@ import patch_notes  # authoring/tools/patch_notes.py: `qgen patch-notes` (plan 9
 import rekey  # authoring/tools/rekey.py: `qgen rekey` (plan 149)
 import translations  # authoring/tools/translations.py: translated questions (D-81)
 import reviews  # authoring/tools/reviews.py: review writes, player reports (plan 93)
+import demo  # authoring/tools/demo.py: `qgen demo` (plan 174)
 import played  # authoring/tools/played.py: opt-in telemetry → state/played/ (plan 109)
 
 # Target share per difficulty level (07, "Difficulty target", D-31): what the 12 levels'
@@ -5480,6 +5482,14 @@ def main():
     nz.add_argument("--dry-run", action="store_true", help="scan only: flagged ids, issues and a cost estimate")
     nz.add_argument("--ids", help=argparse.SUPPRESS)  # debugging: scan only these ids (new run only)
     nz.add_argument("--jobs", type=int, default=3, help=argparse.SUPPRESS)
+    dm = sub.add_parser("demo", help="the demo's question list: size, propose, check (plan 174)")
+    dm.set_defaults(fn=demo.main)
+    dmx = dm.add_mutually_exclusive_group(required=True)
+    dmx.add_argument("--sizes", action="store_true", help="per seat count 1..5: the minimum list size and what binds")
+    dmx.add_argument("--propose", action="store_true", help="write work/demo/proposal.json and proposal.md")
+    dmx.add_argument("--check", nargs="?", const="", metavar="FILE",
+                     help="check a list (default authoring/data/demo.json) at its seats; exit 1 on failure")
+    dm.add_argument("--seats", type=int, default=1, choices=range(1, 6), help="with --propose: sessions up to S seats")
     b = sub.add_parser("batch", help="the whole pipeline for one new batch (authoring/RUNBOOK.md)")
     b.set_defaults(fn=cmd_batch)
     b.add_argument("--bundle", default="base", help="write for this bundle (default base); only when the user names one")

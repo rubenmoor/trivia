@@ -16,6 +16,7 @@
         "authoring/{steam,store}/*.mjs!",
         "authoring/tools/{gallery_saves,demo_saves}.mjs!",
         "authoring/tools/supply.ts!",
+        "authoring/tools/demo.ts!",
         "authoring/tools/sim/simulate.ts!",
         "modding/examples/*/main.js!",
         "report-server/src/index.ts!",
