@@ -383,7 +383,8 @@
     {
       "name": "Ser uña y mugre",
       "facet": "Expresiones con partes del cuerpo",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: A Colombian/Latin American idiom that families elsewhere can't answer."
     },
     {
       "name": "Hablar por los codos",
@@ -403,7 +404,8 @@
     {
       "name": "Con el corazón en la mano",
       "facet": "Expresiones con partes del cuerpo",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: A Spanish-only expression; the options don't work for the base bundle."
     },
     {
       "name": "Dar el brazo a torcer",

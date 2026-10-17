@@ -290,7 +290,8 @@
     {
       "name": "Sinalefa",
       "facet": "Métrica, rima y estrofas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: Sinalefa is a Spanish-metrics term that only Spanish-language players know, so it can't be a base question."
     },
     {
       "name": "Endecasílabo",
