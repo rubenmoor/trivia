@@ -44,17 +44,15 @@ A `qgen neutralize` run (D-83) changes approved questions, so it gets the same s
 
 ## Translation runs
 
-A `qgen batch --translate <locale>` run (D-87; `es`, `es-ES`, `en`, `de`, from sources in any other locale, D-107) gets the same steps, with `tr-<locale>-<n>` in place of `<batch>`; the spot check is by a native speaker of the locale (`es`: Latin American, `es-ES`: Spain).
+A `qgen batch --translate <locale>` run (D-87; `es`, `es-ES`, `en`, `de`, from sources in any other locale, D-107) has no QC steps. The LLM translation review (D-32, D-33) is its only review (milestone 9, developer 2026-10-16): no spot check, no QC decision, no pilot go/no-go.
 
 - Report: `authoring/reports/tr-<locale>-<n>.md` (Health, Audit, Not travelling, Stale re-translated).
-- Spot check (native speaker): `http://127.0.0.1:8001/review?batch=tr-<locale>-<n>&locale=<locale>&sample=1`; source and translation side by side (plan 67).
-  - Steps as step 2: source left (its own language), translation right; LLM review, feedback, audit and the translation's status hidden until you decide.
+- Stop: a ✗ in the Health table stops the next `qgen batch --translate <locale>` (exit 2) until the developer's `qgen health ack <run> "<note>"` (decision 45); the first run (50-source pilot) is no exception, and its numbers only inform `qgen report --cost`.
+- Optional review by the developer: `http://127.0.0.1:8001/review?batch=tr-<locale>-<n>&locale=<locale>`; source and translation side by side (plan 67).
   - Stale translation: no approve (the next run redoes it); a question that only works in its source language: "doesn't travel".
-  - Recorded in `authoring/data/spot-checks.json` under the run, with `locale`; pm worker: the same decision as step 2.
-- Extra checks: faithful to the source, natural in the language, hints and wrong answers that work in it, difficulty for the locale's market; text in media is never a problem (decision 35).
-- QC report: `qgen report --qc tr-<locale>-<n>`; the trend table has a column per run.
-- Proposals: `prompts/translate.md`, `translate-review.md`, `locale-<locale>.md`, `rate.md`.
-- Pilot `tr-<locale>-1` (QT-5): the next run waits for `qgen health ack`; the go is the developer's.
+  - `&sample=1` (blind sample) still works by URL; existing records in `authoring/data/spot-checks.json` stay.
+- Player reports: `qgen flag` sets `needs_work` (below).
+- Prompt changes only in a change task: `prompts/translate.md`, `translate-review.md`, `locale-<locale>.md`, `rate.md`.
 
 ## Player reports
 
@@ -67,6 +65,6 @@ Players report questions from the game (plan 93); each report becomes a human `n
 ## Never
 
 - Change prompts, house style or `qgen.py` inside a batch run or a QC task; only in the change tasks of step 4.
-- Answer the spot-check decision or spot-check questions as an LLM; the spot check is the developer's.
+- Answer the spot-check decision or spot-check questions as an LLM; the spot check of a drafted batch is the developer's.
 - Approve or reject questions because of an audit finding; the developer decides them in the review tool.
 - Delete a question from `authoring/data/questions.json`; dropping one = status change (`rejected`), so ids are never reused; `qgen validate` fails on an id of the newest `v*` tag's pool that is gone (plan 91).

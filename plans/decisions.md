@@ -775,9 +775,9 @@ Template:
   - **Size:** `TRANSLATE_SIZE` 300 sources; the locale's first run (no `questions.<locale>.json` yet) is the pilot, `TRANSLATE_PILOT` 50 (QT-5).
   - **Steps:** translate (opus, chunks of 15 per subcategory, `prompts/translate.md` + `locale-<l>.md`; a regional bundle's run adds `translate-region.md` to every step's prompt, pm decision 167) → rate → factcheck (changed numbers, units, dates, records only) → merge → review 1 → fix → review 2 → record → audit → export → validate → report `authoring/reports/tr-<locale>-<n>.md`. No concepts, draft, media search or sheets; media stays the source's.
   - **Not travelling:** the translator says so instead of forcing it → no entry, `work/<run>/not-travelling.json`; review 1 confirms → `translatable: false` on the source (`questions.json`), else translated again next run.
-  - **Stop (exit 2, D-55):** after the pilot `tr-<locale>-1` always, and after a run failing a threshold that applies (decision 45), until `qgen health ack <run> "<note>"`.
+  - **Stop (exit 2, D-55):** only after a run failing a threshold that applies (decision 45 as amended by pm decision 313: the pilot `tr-<locale>-1` is no stop), until `qgen health ack <run> "<note>"`.
   - **Text in media** is never a problem (decision 35): no `media_text` flag, no media problem for it.
-- Consequences: RUNBOOK step 2 names `--translate`; QC adds a native-speaker spot check for `tr-*` runs (review view per locale: plan 67). Commit lines: the locale file, `pool.<locale>.json`, the report, `questions.json` when `translatable` changed.
+- Consequences: RUNBOOK step 2 names `--translate`; review view per locale (plan 67); no spot check or QC per `tr-*` run since milestone 9 (developer, 2026-10-16: LLM review only). Commit lines: the locale file, `pool.<locale>.json`, the report, `questions.json` when `translatable` changed.
 - Supersedes / related: D-36 (amends), D-55, D-56, D-79, D-81, D-84; plan 66; pm decisions 35, 45, 110, 112; amended by D-107 (sources in either locale, `es` and `es-ES` as targets)
 
 ## D-88: Gamemaster mode: configure screen fields and gamemaster menu
