@@ -74,9 +74,12 @@ saves.seen = play(structuredClone(done), PLAYERS[0], 1, { mode: "solo", bundles:
 ({ save: saves.seen } = answer(saves.seen, data, io(), (rightOf(data, saves.seen) + 1) % latestState(saves.seen).answers.length));
 saves.seen.seen.push(...data.pool.filter((q) => q.bundle === "colombia")
   .map((q) => ({ question_id: q.id, game_id: 0, seen_on: "2026-10-01T20:00:00" })));
-// Every question blocked: the supply report on Choice.
+// Every question blocked: the start reason on Bundles (no question for the choice).
 saves.blocked = structuredClone(done);
 saves.blocked.blocked = data.pool.map((q) => q.id);
+// All but a few blocked: short supply, the report on Bundles.
+saves.short = structuredClone(done);
+saves.short.blocked = data.pool.slice(40).map((q) => q.id);
 
 for (const s of Object.values(saves)) checkVersion(s);
 process.stdout.write(JSON.stringify({ saves, meta, players: PLAYERS }));

@@ -487,16 +487,17 @@ def supply(r):
     r.wait('[data-focus-id="notice-play"]')
     r.settle(0.8)
     r.shot("supply-notice")
-    r.scene("blocked")
-    r.click('[data-focus-id="main"]')
-    r.wait(".name-button")
-    r.settle(0.8)
-    r.click(".name-button")
-    r.wait('[data-focus-id="next"]:enabled')
-    r.click('[data-focus-id="next"]')
-    r.wait(".bundles-screen .supply")
-    r.settle(1.2)
-    r.shot("bundles-supply-report")
+    for save, sel, name in (("short", ".supply", "bundles-supply-report"), ("blocked", ".error", "bundles-no-questions")):
+        r.scene(save)
+        r.click('[data-focus-id="main"]')
+        r.wait(".name-button")
+        r.settle(0.8)
+        r.click(".name-button")
+        r.wait('[data-focus-id="next"]:enabled')
+        r.click('[data-focus-id="next"]')
+        r.wait(f".bundles-screen {sel}")
+        r.settle(1.2)
+        r.shot(name)
 
 
 def table(r):
@@ -651,7 +652,7 @@ STEPS = [
     (["start", "language-from-start", "start-resume", "start-save-notice"], start),
     (["player", "player-delete-confirm", "letter-picker"], player),
     (["choice-gamemaster", "choice-solo", "customize", "bundles", "greeting"], choice),
-    (["supply-notice", "bundles-supply-report"], supply),
+    (["supply-notice", "bundles-supply-report", "bundles-no-questions"], supply),
     (["level", "select", "game-settings"], table),
     (["question", "question-locked", "joker-hint-armed", "joker-hint", "joker-skip", "joker-category", "joker-snipe",
       "joker-easier"], question),
