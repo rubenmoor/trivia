@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "f99cbe5f",
+  "hash": "8e3c5916",
   "questions": [
     {
       "id": "q-0019",
@@ -35707,6 +35707,40 @@
       "background": null
     },
     {
+      "id": "q-3245",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "childrens-books",
+      "bundle": "base",
+      "description": "A green grump who has a problem with holiday cheer.",
+      "question": "In the Dr. Seuss story of how the Grinch stole Christmas, what is the name of the Grinch's dog?",
+      "answer": "Max",
+      "wrong_answers": [
+        "Buddy",
+        "Rex",
+        "Spot"
+      ],
+      "hints": [
+        "His name has just three letters.",
+        "The Grinch ties an antler to his head so he can pull the sleigh like a reindeer.",
+        "His name is also a short form of Maximilian."
+      ],
+      "fun_fact": "At the end of the story, the Grinch's heart grows three sizes in one day.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/An_artificial_Christmas_tree_in_a_Christmas_village_with_a_snowman.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAn_artificial_Christmas_tree_in_a_Christmas_village_with_a_snowman.jpg",
+        "credit": "Bim24 · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Bim24",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Bim24"
+      },
+      "background": null
+    },
+    {
       "id": "q-3246",
       "status": "approved",
       "difficulty": 9,
@@ -36115,6 +36149,40 @@
       "background": null
     },
     {
+      "id": "q-3258",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "circus",
+      "bundle": "base",
+      "description": "The circus performer the crew calls when the piano needs moving.",
+      "question": "A juggler is to balls as a circus strongman is to…",
+      "answer": "A barbell",
+      "wrong_answers": [
+        "A trapeze",
+        "A whip",
+        "A unicycle"
+      ],
+      "hints": [
+        "Think about who lifts heavy things.",
+        "He often has a big mustache and a striped or leopard-print suit.",
+        "It's a bar with a heavy weight on each end."
+      ],
+      "fun_fact": "Old strongmen's round globe barbells were often hollow, so they could be filled with sand or lead shot to change the weight.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Tent_Swing_door_Dirk_Annemans.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATent_Swing_door_Dirk_Annemans.jpg",
+        "credit": "Dirk Annemans · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Dirk Annemans",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Dirk_Annemans"
+      },
+      "background": null
+    },
+    {
       "id": "q-3259",
       "status": "approved",
       "difficulty": 3,
@@ -36251,6 +36319,40 @@
       "background": null
     },
     {
+      "id": "q-3263",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "consoles-and-game-companies",
+      "bundle": "base",
+      "description": "Five is the number, and fun is the game.",
+      "question": "The console PS5 has a short name. What does the “PS” stand for?",
+      "answer": "PlayStation",
+      "wrong_answers": [
+        "PowerScreen",
+        "PixelStar",
+        "PlaySystem"
+      ],
+      "hints": [
+        "Its maker is the company Sony.",
+        "Its controller's four buttons are marked with a triangle, circle, cross and square.",
+        "The same name has been on every Sony home console since 1994, and its logo shows a P and an S."
+      ],
+      "fun_fact": "The first PlayStation came out in Japan in 1994, so the PS5 is the fifth main console of the family.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Hands_holding_video_game_controller_%2850811892858%29.jpg/3840px-Hands_holding_video_game_controller_%2850811892858%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHands_holding_video_game_controller_%2850811892858%29.jpg",
+        "credit": "Vu Hoang · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Vu Hoang",
+        "author_url": "https://www.flickr.com/people/187794252@N03"
+      },
+      "background": null
+    },
+    {
       "id": "q-3264",
       "status": "approved",
       "difficulty": 8,
@@ -36319,6 +36421,40 @@
       "background": null
     },
     {
+      "id": "q-3266",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "crime-fiction",
+      "bundle": "base",
+      "description": "A detective who solves cases for clients with fur, feathers and scales.",
+      "question": "In which decade did Jim Carrey first star as Ace Ventura, the pet detective?",
+      "answer": "The 1990s",
+      "wrong_answers": [
+        "The 1970s",
+        "The 1980s",
+        "The 2000s"
+      ],
+      "hints": [
+        "This film made Jim Carrey a big movie star.",
+        "Jim Carrey also made “The Mask” that same year.",
+        "It was released in 1994."
+      ],
+      "fun_fact": "In the first film, Ace Ventura hunts for the missing dolphin mascot of the Miami Dolphins American football team.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/010_Atlantic_bottlenose_dolphin_jumping_at_Pelican_point_Photo_by_Giles_Laurent.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A010_Atlantic_bottlenose_dolphin_jumping_at_Pelican_point_Photo_by_Giles_Laurent.jpg",
+        "credit": "Giles Laurent · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Giles Laurent",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Giles_Laurent"
+      },
+      "background": null
+    },
+    {
       "id": "q-3267",
       "status": "approved",
       "difficulty": 13,
@@ -36349,6 +36485,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Jorge Royan",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-3268",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "crime-fiction",
+      "bundle": "base",
+      "description": "A village so peaceful you'd never guess how many crimes happen there.",
+      "question": "Which famous fictional detective lives in an English village like this one, called St. Mary Mead?",
+      "answer": "Miss Marple",
+      "wrong_answers": [
+        "Hercule Poirot",
+        "Father Brown",
+        "Jessica Fletcher"
+      ],
+      "hints": [
+        "She is an elderly lady who loves knitting and gardening.",
+        "She is an amateur: nobody pays her to solve crimes.",
+        "She was created by Agatha Christie."
+      ],
+      "fun_fact": "Agatha Christie said Miss Marple was partly inspired by her step-grandmother, who always expected the worst of people.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Cottages_in_Aldford_village_-_geograph.org.uk_-_2440703.jpg/3840px-Cottages_in_Aldford_village_-_geograph.org.uk_-_2440703.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACottages_in_Aldford_village_-_geograph.org.uk_-_2440703.jpg",
+        "credit": "Jeff Buck · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Jeff Buck",
+        "author_url": "https://www.geograph.org.uk/profile/12987"
       },
       "background": null
     },
@@ -36587,6 +36757,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Juan Carlos Fonseca Mata",
         "author_url": "https://commons.wikimedia.org/wiki/User:Juan_Carlos_Fonseca_Mata"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3277",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "deserts",
+      "bundle": "base",
+      "description": "A state so hot the cacti wear sunscreen, probably.",
+      "question": "Which US state is home to the Grand Canyon?",
+      "answer": "Arizona",
+      "wrong_answers": [
+        "Nevada",
+        "New Mexico",
+        "Utah"
+      ],
+      "hints": [
+        "It's in the hot southwest of the country.",
+        "It shares a border with Mexico.",
+        "Its capital is Phoenix."
+      ],
+      "fun_fact": "Arizona, in 1912, was the last of the 48 connected US states to join.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Desert_Cactus_at_Saguaro_NP_in_AZ_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADesert_Cactus_at_Saguaro_NP_in_AZ_2.jpg",
+        "credit": "Jeffhollett · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Jeffhollett",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Jeffhollett"
       },
       "background": null
     },
@@ -36965,6 +37169,40 @@
       "background": null
     },
     {
+      "id": "q-3289",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "drinks",
+      "bundle": "base",
+      "description": "The only fruit that goes swimming before it goes in your glass.",
+      "question": "Farmers flood the fields so these red berries float to the top for harvest. Which juice are they famous for?",
+      "answer": "Cranberry juice",
+      "wrong_answers": [
+        "Cherry juice",
+        "Raspberry juice",
+        "Pomegranate juice"
+      ],
+      "hints": [
+        "The berries are very sour when eaten raw.",
+        "The fields are called bogs, and many are in North America.",
+        "The juice is a classic with turkey dinners and is pinkish-red."
+      ],
+      "fun_fact": "Cranberries have tiny pockets of air inside, which is why they float, and ripe ones even bounce.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Cranberry_harvest%2C_Kingston_Massachusetts.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACranberry_harvest%2C_Kingston_Massachusetts.jpg",
+        "credit": "Mathcar · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Mathcar",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Mathcar&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-3290",
       "status": "approved",
       "difficulty": 8,
@@ -37097,6 +37335,40 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Anna.Massini",
         "author_url": "https://commons.wikimedia.org/wiki/User:Anna.Massini"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3294",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "earthquakes",
+      "bundle": "base",
+      "description": "A little box every family hopes to open as rarely as possible.",
+      "question": "A box marked with a cross belongs in every emergency backpack. What kind of things are kept inside it?",
+      "answer": "Bandages and medical supplies",
+      "wrong_answers": [
+        "Tools and screws",
+        "Snacks and drinks",
+        "Toys and games"
+      ],
+      "hints": [
+        "You need it when someone gets hurt.",
+        "Schools, cars and airplanes all have one.",
+        "It holds sticky strips, gauze and cream for cuts."
+      ],
+      "fun_fact": "The Red Cross symbol is the flag of Switzerland with its colors swapped.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Hiking_family_trail_subalpine_backpack_BBaccus_NPS_photo_%2823061004332%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHiking_family_trail_subalpine_backpack_BBaccus_NPS_photo_%2823061004332%29.jpg",
+        "credit": "Olympic National Park · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Olympic National Park",
+        "author_url": "https://www.flickr.com/people/131856925@N02"
       },
       "background": null
     },
@@ -38223,6 +38495,40 @@
       "background": null
     },
     {
+      "id": "q-3328",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "eurovision",
+      "bundle": "base",
+      "description": "A rap with a flute, a pink hat and a very proud family.",
+      "question": "Kalush Orchestra's winning song “Stefania” is named after someone in the singer's life. Who?",
+      "answer": "His mother",
+      "wrong_answers": [
+        "His daughter",
+        "His sister",
+        "His wife"
+      ],
+      "hints": [
+        "The singer's family and home town matter a lot in the band's songs.",
+        "The song mixes rap with old Ukrainian folk melodies.",
+        "The song thanks her for rocking him as a baby."
+      ],
+      "fun_fact": "Many people in Ukraine came to see the song as a tribute to all mothers.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Sopilka_%22Dvodentsivka%22_XIX.jpg/3840px-Sopilka_%22Dvodentsivka%22_XIX.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASopilka_%22Dvodentsivka%22_XIX.jpg",
+        "credit": "Taras r · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Taras r",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Taras_r"
+      },
+      "background": null
+    },
+    {
       "id": "q-3329",
       "status": "approved",
       "difficulty": 5,
@@ -38529,6 +38835,40 @@
       "background": null
     },
     {
+      "id": "q-3339",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "famous-bridges",
+      "bundle": "base",
+      "description": "The only traffic jam here is two grandmas stopping to chat.",
+      "question": "No cars drive on this bridge. Who is it made for?",
+      "answer": "People walking",
+      "wrong_answers": [
+        "Trains",
+        "Trucks",
+        "Airplanes"
+      ],
+      "hints": [
+        "Look at who is crossing it.",
+        "It is far too narrow for cars.",
+        "You cross it using your own two feet."
+      ],
+      "fun_fact": "When London's Millennium Bridge opened in 2000, it wobbled so much under walkers' feet that it had to close and be fixed.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Older_women_walking_with_bikes_bike-ped_pfluger_bridge_austin.jpg/3840px-Older_women_walking_with_bikes_bike-ped_pfluger_bridge_austin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOlder_women_walking_with_bikes_bike-ped_pfluger_bridge_austin.jpg",
+        "credit": "Adam Coppola · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Adam Coppola",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-3340",
       "status": "approved",
       "difficulty": 4,
@@ -38797,6 +39137,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Schekinov Alexey Victorovich",
         "author_url": "https://commons.wikimedia.org/wiki/User:Schekinov_Alexey_Victorovich"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3349",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "famous-companies",
+      "bundle": "base",
+      "description": "A drawing tablet with no battery, no screen and no undo button, except a good shake.",
+      "question": "You turn two white knobs to draw lines on a gray screen, then shake it to erase. What is this red toy called?",
+      "answer": "Etch A Sketch",
+      "wrong_answers": [
+        "View-Master",
+        "Spirograph",
+        "Play-Doh"
+      ],
+      "hints": [
+        "It has been around since about 1960.",
+        "One knob draws across, the other draws up and down.",
+        "A character based on it appears in the Toy Story films."
+      ],
+      "fun_fact": "Inside the toy, a tiny pointer scrapes away a fine aluminum powder stuck to the back of the glass.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Child_draws_in_a_notebook_at_home.jpg/3840px-Child_draws_in_a_notebook_at_home.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChild_draws_in_a_notebook_at_home.jpg",
+        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Shixart1985",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
       },
       "background": null
     },
@@ -39311,6 +39685,40 @@
       "background": null
     },
     {
+      "id": "q-3366",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "famous-quotes",
+      "bundle": "base",
+      "description": "A sneaky thief with a mask and a big sweet tooth for other people's backpacks.",
+      "question": "In “Dora the Explorer”, what kind of animal is Swiper, the sneaky thief?",
+      "answer": "A fox",
+      "wrong_answers": [
+        "A raccoon",
+        "A wolf",
+        "A cat"
+      ],
+      "hints": [
+        "Dora and her friends shout at him to stop whenever he sneaks up.",
+        "He has orange fur and a big bushy tail.",
+        "In many old stories, this animal is the sly, clever trickster."
+      ],
+      "fun_fact": "Dora's best friend is a monkey called Boots, named after his favorite red boots.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Brownsberg_jungle_path_%2833153976490%29.jpg/3840px-Brownsberg_jungle_path_%2833153976490%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABrownsberg_jungle_path_%2833153976490%29.jpg",
+        "credit": "-JvL- from Netherlands · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "-JvL- from Netherlands",
+        "author_url": "https://www.flickr.com/people/32051524@N08"
+      },
+      "background": null
+    },
+    {
       "id": "q-3367",
       "status": "approved",
       "difficulty": 13,
@@ -39447,6 +39855,40 @@
       "background": null
     },
     {
+      "id": "q-3371",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "famous-scandals",
+      "bundle": "base",
+      "description": "A bike race where the winner's trophies later rode off without him.",
+      "question": "In 2005, Lance Armstrong won the Tour de France once more. How many Tours in a row had he won by then?",
+      "answer": "7",
+      "wrong_answers": [
+        "3",
+        "5",
+        "10"
+      ],
+      "hints": [
+        "At the time, no rider had ever won more Tours in a row.",
+        "His streak beat Miguel Induráin's earlier record of five in a row.",
+        "Count the summers from 1999 to 2005."
+      ],
+      "fun_fact": "In 2012, all seven titles were taken away for doping, and the race left those years with no official winner.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Tadej_Pogacar_and_his_team_in_front_of_the_peloton_during_Simacourbe_climb_of_Tour_de_France_2024_stage_13.jpg/3840px-Tadej_Pogacar_and_his_team_in_front_of_the_peloton_during_Simacourbe_climb_of_Tour_de_France_2024_stage_13.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATadej_Pogacar_and_his_team_in_front_of_the_peloton_during_Simacourbe_climb_of_Tour_de_France_2024_stage_13.jpg",
+        "credit": "Hugo LUC · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Hugo LUC",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-3372",
       "status": "approved",
       "difficulty": 13,
@@ -39579,6 +40021,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "PattayaPatrol",
         "author_url": "https://www.flickr.com/people/PattayaPatrol/"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3376",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "famous-scandals",
+      "bundle": "base",
+      "description": "Pay real money, open a mystery box, get a purple hat. Gambling? This country said yes.",
+      "question": "In 2018, this country's gambling commission ruled that paid loot boxes in FIFA, Overwatch and Counter-Strike were illegal gambling. Which country?",
+      "answer": "Belgium",
+      "wrong_answers": [
+        "Switzerland",
+        "Austria",
+        "Denmark"
+      ],
+      "hints": [
+        "It is a fairly small European country with more than one official language.",
+        "A huge silver building shaped like an atom was built there for a world's fair in 1958.",
+        "Its capital also hosts the main offices of the European Union."
+      ],
+      "fun_fact": "Some big game makers removed paid loot boxes from their games only in that country, rather than risk breaking the law.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Xbox-360-Wireless-Controller-White.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AXbox-360-Wireless-Controller-White.jpg",
+        "credit": "Evan-Amos · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Evan-Amos",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Evan-Amos"
       },
       "background": null
     },
@@ -40297,6 +40773,40 @@
       "background": null
     },
     {
+      "id": "q-3398",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "flags",
+      "bundle": "base",
+      "description": "A tiny flag on a tall stick that waves hello to every car.",
+      "question": "Some bikes and kids' bike trailers have a small flag on a tall, thin pole. What is it for?",
+      "answer": "To help drivers see the bike",
+      "wrong_answers": [
+        "To measure the wind",
+        "To show the rider's country",
+        "To scare away birds"
+      ],
+      "hints": [
+        "It's about safety.",
+        "It sticks up high, above the rider's head.",
+        "Low bikes can be hard to spot from a car."
+      ],
+      "fun_fact": "Safety flags are especially used on low bikes and kids' trailers, which are hard to see from a car.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Cycling%2C_Gatineau_Park_%2810105786046%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACycling%2C_Gatineau_Park_%2810105786046%29.jpg",
+        "credit": "cjuneau · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "cjuneau",
+        "author_url": "https://www.flickr.com/people/15558406@N03"
+      },
+      "background": null
+    },
+    {
       "id": "q-3399",
       "status": "approved",
       "difficulty": 3,
@@ -40467,6 +40977,40 @@
       "background": null
     },
     {
+      "id": "q-3405",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "food-history",
+      "bundle": "base",
+      "description": "A drink so old it was once used as money.",
+      "question": "Long before chocolate bars, peoples of ancient America drank chocolate. Which of these peoples never drank it?",
+      "answer": "The Vikings",
+      "wrong_answers": [
+        "The Aztecs",
+        "The Maya",
+        "The Olmecs"
+      ],
+      "hints": [
+        "Chocolate comes from cacao trees, which grow in warm places.",
+        "Three of these peoples lived in what is now Mexico and Central America.",
+        "The odd one out sailed cold northern seas in longships."
+      ],
+      "fun_fact": "The Aztecs drank chocolate cold, bitter and spicy, and even used cacao beans as money.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Cacao_Tree_%28Theobroma_cacao%29_green_pods_%2817348751253%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACacao_Tree_%28Theobroma_cacao%29_green_pods_%2817348751253%29.jpg",
+        "credit": "Bernard DUPONT from FRANCE · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Bernard DUPONT from FRANCE",
+        "author_url": "https://www.flickr.com/people/65695019@N07"
+      },
+      "background": null
+    },
+    {
       "id": "q-3406",
       "status": "approved",
       "difficulty": 3,
@@ -40633,6 +41177,40 @@
         "license_url": "https://creativecommons.org/licenses/by/3.0/br/deed.en",
         "author": "Brazilian Government",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-3411",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "football-history",
+      "bundle": "base",
+      "description": "Shoes with teeth, so you don't slide across the grass like a penguin.",
+      "question": "About how many studs does the sole of a typical soccer shoe have?",
+      "answer": "About 12",
+      "wrong_answers": [
+        "About 2",
+        "About 50",
+        "About 200"
+      ],
+      "hints": [
+        "More than you have fingers on one hand.",
+        "They are spread out under the toes and the heel.",
+        "It is about the number of months in a year."
+      ],
+      "fun_fact": "Studs grip the grass so players don't slip when they turn or stop fast; soccer shoes for muddy fields have fewer but longer studs.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/DFC_5330_Two_players_battle_for_possession_during_an_evening_soccer_match_at_Klet_Kaeo_field_in_Sattahip_Chon_Buri.jpg/3840px-DFC_5330_Two_players_battle_for_possession_during_an_evening_soccer_match_at_Klet_Kaeo_field_in_Sattahip_Chon_Buri.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADFC_5330_Two_players_battle_for_possession_during_an_evening_soccer_match_at_Klet_Kaeo_field_in_Sattahip_Chon_Buri.jpg",
+        "credit": "PattayaPatrol · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "PattayaPatrol",
+        "author_url": "https://www.flickr.com/people/PattayaPatrol/"
       },
       "background": null
     },
@@ -41657,6 +42235,40 @@
       "background": null
     },
     {
+      "id": "q-3444",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "horror-films",
+      "bundle": "base",
+      "description": "A puppet that doesn't need strings, just motors and a lot of electricity.",
+      "question": "At a theme park, a pirate made of motors and rubber skin moves its eyes and sings to you. What is this kind of machine called?",
+      "answer": "An animatronic",
+      "wrong_answers": [
+        "A hologram",
+        "A marionette",
+        "A hovercraft"
+      ],
+      "hints": [
+        "It's a robot built to look alive.",
+        "The scary characters in “Five Nights at Freddy's” are this kind of machine.",
+        "Its name mixes “animation” and “electronics”."
+      ],
+      "fun_fact": "Disney's Enchanted Tiki Room, opened in 1963, was the first attraction to use its “Audio-Animatronics” singing birds.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/80/Captain_Cook%27s_Swinging_Ship_Leofoo_Village_Theme_Park.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACaptain_Cook%27s_Swinging_Ship_Leofoo_Village_Theme_Park.jpg",
+        "credit": "milst1 · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "milst1",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-3445",
       "status": "approved",
       "difficulty": 11,
@@ -42235,6 +42847,40 @@
       "background": null
     },
     {
+      "id": "q-3463",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "international-football",
+      "bundle": "base",
+      "description": "The grandparent of every soccer cup on Earth.",
+      "question": "England's FA Cup is the oldest national soccer competition in the world. In which year was it first played?",
+      "answer": "1871",
+      "wrong_answers": [
+        "1848",
+        "1888",
+        "1895"
+      ],
+      "hints": [
+        "It began in the 1800s.",
+        "Queen Victoria was on the British throne.",
+        "It was a few years after the US Civil War ended."
+      ],
+      "fun_fact": "The FA Cup is open to hundreds of clubs, so small amateur teams sometimes face famous professional ones.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/FA_Cup_Trophy_at_Manchester_National_Football_Museum_%28Ank_Kumar%29_01.jpg/3840px-FA_Cup_Trophy_at_Manchester_National_Football_Museum_%28Ank_Kumar%29_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFA_Cup_Trophy_at_Manchester_National_Football_Museum_%28Ank_Kumar%29_01.jpg",
+        "credit": "Ank Kumar · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Ank Kumar",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Ank_gsx"
+      },
+      "background": null
+    },
+    {
       "id": "q-3464",
       "status": "approved",
       "difficulty": 7,
@@ -42605,6 +43251,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Angelo.Muratore",
         "author_url": "https://commons.wikimedia.org/wiki/User:Angelo.Muratore"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3475",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "italian-food",
+      "bundle": "base",
+      "description": "A white sauce that wears a lasagna like a blanket.",
+      "question": "This smooth white sauce is made from butter, flour and which other ingredient?",
+      "answer": "Milk",
+      "wrong_answers": [
+        "Water",
+        "Egg whites",
+        "Yogurt"
+      ],
+      "hints": [
+        "It's white and comes from an animal.",
+        "Cows give it.",
+        "Many people pour it over their breakfast cereal."
+      ],
+      "fun_fact": "Italians call it “besciamella” and spread it between the layers of lasagna.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Thickening.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThickening.jpg",
+        "credit": "Oskila · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Oskila",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Oskila"
       },
       "background": null
     },
@@ -43221,6 +43901,40 @@
       "background": null
     },
     {
+      "id": "q-3495",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "knights",
+      "bundle": "base",
+      "description": "Metal fingers: very good for punching, very bad for texting.",
+      "question": "Which piece of a knight's armor is shown in this close-up?",
+      "answer": "Gauntlets",
+      "wrong_answers": [
+        "Greaves",
+        "Pauldrons",
+        "Sabatons"
+      ],
+      "hints": [
+        "This piece came in pairs.",
+        "It protected the part of the body that held the sword.",
+        "It is an armored glove."
+      ],
+      "fun_fact": "Many gauntlets had little plates over each finger joint so the knight could still grip his sword.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Left-Hand_Duelling_Gauntlet_MET_DP-12881-034.jpg/3840px-Left-Hand_Duelling_Gauntlet_MET_DP-12881-034.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALeft-Hand_Duelling_Gauntlet_MET_DP-12881-034.jpg",
+        "credit": "CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": null,
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-3496",
       "status": "approved",
       "difficulty": 7,
@@ -43353,6 +44067,40 @@
         "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
         "author": "Phyzome under the GFDL.",
         "author_url": "https://commons.wikimedia.org/wiki/User:Phyzome"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3500",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "legends-and-superstitions",
+      "bundle": "base",
+      "description": "Choosing a birthday present is hard enough without sounding like bad news.",
+      "question": "In China, a clock is an unlucky gift because of how its name sounds. Which of these is NOT an unlucky gift there?",
+      "answer": "Mandarin oranges",
+      "wrong_answers": [
+        "An umbrella",
+        "Pears",
+        "Scissors"
+      ],
+      "hints": [
+        "The answer is something you can eat.",
+        "It's given out happily at Chinese New Year.",
+        "Its golden color is said to bring wealth."
+      ],
+      "fun_fact": "In Chinese, the word for pear sounds like “separation”, so sharing a pear with a friend is avoided.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Moving_pagoda_zimingzhong_clock%2C_1700s_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMoving_pagoda_zimingzhong_clock%2C_1700s_%281%29.jpg",
+        "credit": "The wub · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "The wub",
+        "author_url": "https://commons.wikimedia.org/wiki/User:The_wub"
       },
       "background": null
     },
@@ -43833,6 +44581,40 @@
       "background": null
     },
     {
+      "id": "q-3516",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "magic",
+      "bundle": "base",
+      "description": "The one ball in sports that really, really doesn't want to be caught.",
+      "question": "Which of these is NOT true about the Golden Snitch in Harry Potter?",
+      "answer": "The Keeper tries to catch it",
+      "wrong_answers": [
+        "It has little wings",
+        "It is gold-colored",
+        "Catching it ends the game"
+      ],
+      "hints": [
+        "Harry plays in a special position in his team.",
+        "Each team has one player whose only job is to hunt it.",
+        "The player who chases it is called the Seeker, and that is Harry's job."
+      ],
+      "fun_fact": "Catching the Snitch gives 150 points, so it usually decides who wins.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Besom_%28PSF%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABesom_%28PSF%29.png",
+        "credit": "Pearson Scott Foresman · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Pearson Scott Foresman",
+        "author_url": "https://en.wikipedia.org/wiki/Pearson_Scott_Foresman"
+      },
+      "background": null
+    },
+    {
       "id": "q-3517",
       "status": "approved",
       "difficulty": 5,
@@ -43863,6 +44645,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Basile Morin",
         "author_url": "https://commons.wikimedia.org/wiki/User:Basile_Morin"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3518",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "manners-and-customs",
+      "bundle": "base",
+      "description": "A glass so fancy it insists on standing on one leg.",
+      "question": "Which of these is NOT a part of a wine glass?",
+      "answer": "The blade",
+      "wrong_answers": [
+        "The stem",
+        "The bowl",
+        "The rim"
+      ],
+      "hints": [
+        "A wine glass has a thin part you can hold it by.",
+        "The fake part would be dangerous on a glass.",
+        "Knives and swords have one, glasses don't."
+      ],
+      "fun_fact": "Good manners say to hold a wine glass by its stem, so your warm hand doesn't heat the wine.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/DZ6_2648_A_cozy_candlelit_dinner_setup_a_delicate_orchid_soft_lamp_glow_and_an_empty_wine_glass_waiting_for_the_evening_to_begin.jpg/3840px-DZ6_2648_A_cozy_candlelit_dinner_setup_a_delicate_orchid_soft_lamp_glow_and_an_empty_wine_glass_waiting_for_the_evening_to_begin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADZ6_2648_A_cozy_candlelit_dinner_setup_a_delicate_orchid_soft_lamp_glow_and_an_empty_wine_glass_waiting_for_the_evening_to_begin.jpg",
+        "credit": "PattayaPatrol · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "PattayaPatrol",
+        "author_url": "https://www.flickr.com/people/PattayaPatrol/"
       },
       "background": null
     },
@@ -43999,6 +44815,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.5",
         "author": "User:Nino Barbieri",
         "author_url": "https://commons.wikimedia.org/wiki/User:Nino_Barbieri"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3523",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "manners-and-customs",
+      "bundle": "base",
+      "description": "Planning a wedding: the moment love meets a spreadsheet.",
+      "question": "I'm a list a couple makes before their wedding, kept by a store or a website. What am I used for?",
+      "answer": "Showing guests which gifts the couple would like",
+      "wrong_answers": [
+        "Deciding where each guest will sit",
+        "Planning the food for the wedding party",
+        "Choosing the songs for the first dance"
+      ],
+      "hints": [
+        "Guests usually check me some weeks before the big day.",
+        "Guests often look at me online or ask for me at the store.",
+        "Guests can pick an item from me and buy it as a present."
+      ],
+      "fun_fact": "The wedding gift list is often said to have started at the Marshall Field's department store in Chicago in 1924.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Wedding_cake_in_arrangements_for_a_modern_wedding_at_Cotonou_town_in_Benin.jpg/3840px-Wedding_cake_in_arrangements_for_a_modern_wedding_at_Cotonou_town_in_Benin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWedding_cake_in_arrangements_for_a_modern_wedding_at_Cotonou_town_in_Benin.jpg",
+        "credit": "Adoscam · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Adoscam",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Adoscam"
       },
       "background": null
     },
@@ -44237,6 +45087,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Vsatinet",
         "author_url": "https://commons.wikimedia.org/wiki/User:Vsatinet"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3531",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "medicine-and-health",
+      "bundle": "base",
+      "description": "A painkiller that went to Mount Olympus to borrow a name.",
+      "question": "The strong painkiller morphine was named after Morpheus, the Greek god of what?",
+      "answer": "Dreams",
+      "wrong_answers": [
+        "War",
+        "The sea",
+        "Medicine"
+      ],
+      "hints": [
+        "Morpheus could take the shape of any person he liked.",
+        "In old myths, he brought people messages from the gods, looking like someone they knew.",
+        "He brings you the pictures you see while you sleep."
+      ],
+      "fun_fact": "Morphine was first taken from the opium poppy around 1804 by a young German pharmacist, Friedrich Sertürner.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Poppy_field%2C_Wendfeld.jpg/3840px-Poppy_field%2C_Wendfeld.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APoppy_field%2C_Wendfeld.jpg",
+        "credit": "Radomianin · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Radomianin",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Radomianin"
       },
       "background": null
     },
@@ -48500,6 +49384,40 @@
       "background": null
     },
     {
+      "id": "q-3660",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "famous-bridges",
+      "bundle": "base",
+      "description": "The only bridges you pay with instead of paying to cross.",
+      "question": "Every euro banknote shows a bridge on its back. What are the bridges meant to stand for?",
+      "answer": "Links between Europe's peoples",
+      "wrong_answers": [
+        "Europe's biggest rivers",
+        "Famous bridges of each country",
+        "Old Roman trade roads"
+      ],
+      "hints": [
+        "The designs were chosen for the new money that arrived in 2002.",
+        "The other side shows windows and gateways, standing for openness.",
+        "It's the same idea as the saying “to build bridges”."
+      ],
+      "fun_fact": "The Dutch town of Spijkenisse later built real copies of all seven bridges from the euro notes.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/One_stands_out_002_2025_01_01.jpg/3840px-One_stands_out_002_2025_01_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOne_stands_out_002_2025_01_01.jpg",
+        "credit": "Friedrich Haag · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Friedrich Haag",
+        "author_url": "https://commons.wikimedia.org/wiki/User:F._Riedelio"
+      },
+      "background": null
+    },
+    {
       "id": "q-3661",
       "status": "approved",
       "difficulty": 6,
@@ -48598,6 +49516,40 @@
         "license_url": null,
         "author": "photo taken by me, currency issued by ECB",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-3664",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "famous-crimes",
+      "bundle": "base",
+      "description": "The laziest member of the escape team, and still the most important one.",
+      "question": "“I was made of soap, toilet paper and real hair from the barbershop, and in June 1962 I helped three men leave Alcatraz.” What am I?",
+      "answer": "A fake head",
+      "wrong_answers": [
+        "A fake beard",
+        "A rope",
+        "A fake key"
+      ],
+      "hints": [
+        "The guards walked past the cells at night and looked inside.",
+        "I stayed behind in the cell while the men were gone.",
+        "The guards thought they saw a sleeping man's head on the pillow."
+      ],
+      "fun_fact": "The three escapees left Alcatraz on a raft made from more than 50 stolen raincoats, and they were never found.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Alcatraz_Island_aerial_view.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAlcatraz_Island_aerial_view.jpg",
+        "credit": "Ralf Baechle · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Ralf Baechle",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Ralf_Baechle&action=edit&redlink=1"
       },
       "background": null
     },
@@ -52070,6 +53022,40 @@
       "background": null
     },
     {
+      "id": "q-3771",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "pirates",
+      "bundle": "base",
+      "description": "Proof that being stuck indoors on vacation can make you rich and famous.",
+      "question": "How did the idea for Robert Louis Stevenson's novel “Treasure Island” start?",
+      "answer": "With an island map drawn with his stepson",
+      "wrong_answers": [
+        "With a real pirate's diary found in an attic",
+        "With a shipwreck he survived as a young man",
+        "With a dream he had about a talking parrot"
+      ],
+      "hints": [
+        "It started on a rainy vacation in Scotland.",
+        "It began with a picture, not with words.",
+        "It was something you'd use to find buried treasure."
+      ],
+      "fun_fact": "Stevenson first read the chapters aloud to his family, and his father made up what was inside Billy Bones's sea chest.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Robert_Louis_Stevenson_by_Sargent.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARobert_Louis_Stevenson_by_Sargent.jpg",
+        "credit": "John Singer Sargent · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "John Singer Sargent",
+        "author_url": "https://en.wikipedia.org/wiki/en:John_Singer_Sargent"
+      },
+      "background": null
+    },
+    {
       "id": "q-3772",
       "status": "approved",
       "difficulty": 12,
@@ -54110,6 +55096,40 @@
       "background": null
     },
     {
+      "id": "q-3836",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "technology",
+      "bundle": "base",
+      "description": "The invisible thing everyone in the house fights about.",
+      "question": "Your tablet at home shows a symbol like a fan of curved lines. What does that symbol stand for?",
+      "answer": "Wi-Fi",
+      "wrong_answers": [
+        "GPS",
+        "USB",
+        "Bluetooth"
+      ],
+      "hints": [
+        "It needs no cable at all.",
+        "Guests often ask for its password.",
+        "Without it, videos at home often stop loading."
+      ],
+      "fun_fact": "Wi-Fi travels by radio waves, a lot like the ones a radio uses.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Child_draws_on_tablet_while_sitting_indoors.jpg/3840px-Child_draws_on_tablet_while_sitting_indoors.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChild_draws_on_tablet_while_sitting_indoors.jpg",
+        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Shixart1985",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
+      },
+      "background": null
+    },
+    {
       "id": "q-3837",
       "status": "approved",
       "difficulty": 8,
@@ -54718,6 +55738,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Robert Cudmore",
         "author_url": "https://www.flickr.com/people/96363948@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3855",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "brain-and-mind",
+      "bundle": "base",
+      "description": "Faces are like books, if you know how to read them.",
+      "question": "Look at this child. Which feeling is the child most likely showing?",
+      "answer": "Sadness",
+      "wrong_answers": [
+        "Boredom",
+        "Surprise",
+        "Excitement"
+      ],
+      "hints": [
+        "It's not a happy feeling.",
+        "There are tears on the face.",
+        "Hugs often help with this one."
+      ],
+      "fun_fact": "Newborn babies cry a lot, but they usually don't make real tears until they are a few weeks old.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/A_child_sad_that_his_hot_dog_fell_on_the_ground.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_child_sad_that_his_hot_dog_fell_on_the_ground.jpg",
+        "credit": "David Shankbone · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "David Shankbone",
+        "author_url": "https://en.wikipedia.org/wiki/en:David_Shankbone"
       },
       "background": null
     },
@@ -56252,6 +57306,40 @@
       "background": null
     },
     {
+      "id": "q-3902",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "rivers",
+      "bundle": "base",
+      "description": "Plants that spend all day with their feet wet and never complain.",
+      "question": "For thousands of years, people have cut riverside plants like these. What have they mostly made from them?",
+      "answer": "Baskets and mats",
+      "wrong_answers": [
+        "Cooking oil",
+        "Iron tools",
+        "Glass beads"
+      ],
+      "hints": [
+        "Think of things made by hand.",
+        "Ancient Egyptians made boats from similar plants.",
+        "Their long, bendy stems are perfect for weaving."
+      ],
+      "fun_fact": "On Lake Titicaca, the Uros people live on floating islands built from totora reeds.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/df/A_reed_bed.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_reed_bed.jpg",
+        "credit": "Ilselotti · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Ilselotti",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Ilselotti&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-3903",
       "status": "approved",
       "difficulty": 4,
@@ -56626,6 +57714,40 @@
       "background": null
     },
     {
+      "id": "q-3914",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "sacred-places",
+      "bundle": "base",
+      "description": "A wall so famous, people mail it notes.",
+      "question": "The Western Wall holds up the side of Jerusalem's Temple Mount. What kind of rock is it built from?",
+      "answer": "Limestone",
+      "wrong_answers": [
+        "Granite",
+        "Basalt",
+        "Marble"
+      ],
+      "hints": [
+        "It's a sedimentary rock, made long ago at the bottom of the sea.",
+        "It's pale, creamy and soft enough to carve into huge blocks.",
+        "The White Cliffs of Dover and the stone of the Egyptian pyramids are made of the same rock."
+      ],
+      "fun_fact": "A Jerusalem rule that goes back about a hundred years says new buildings must be faced with this local pale stone, so the whole city glows gold at sunset.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Western_Wall_at_night_%2820063%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWestern_Wall_at_night_%2820063%29.jpg",
+        "credit": "Rhododendrites · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Rhododendrites",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Rhododendrites"
+      },
+      "background": null
+    },
+    {
       "id": "q-3915",
       "status": "approved",
       "difficulty": 15,
@@ -56792,6 +57914,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Billy McCrorie",
         "author_url": "https://www.geograph.org.uk/profile/22650"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3920",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "saving-and-banks",
+      "bundle": "base",
+      "description": "Three little digits that keep a very big secret.",
+      "question": "What is the short three-digit code on the back of a bank card, the CVV, for?",
+      "answer": "Proving you hold the card when paying online",
+      "wrong_answers": [
+        "Taking out cash at an ATM",
+        "Showing the year the card expires",
+        "Naming the bank branch that issued it"
+      ],
+      "hints": [
+        "It's not your PIN.",
+        "Online shops ask for it at checkout.",
+        "It shows the buyer has the physical card in hand."
+      ],
+      "fun_fact": "Card security rules forbid shops from storing your CVV after a payment, so a stolen shop database shouldn't contain it.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Viva_Wallet_bank_card%2C_Hillegersberg%2C_Rotterdam_%282023%29_02.jpg/3840px-Viva_Wallet_bank_card%2C_Hillegersberg%2C_Rotterdam_%282023%29_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AViva_Wallet_bank_card%2C_Hillegersberg%2C_Rotterdam_%282023%29_02.jpg",
+        "credit": "CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Donald Trung Quoc Don (Chữ Hán: 徵國單) - Wikimedia Commons - © CC BY-SA 4.0 International.(Want to use this image?)Original publication 📤: --Donald Trung 『徵國單』 (No Fake News 💬) (WikiProject Numismatics 💴) (Articles 📚) 20:22, 26 May 2023 (UTC)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Donald_Trung"
       },
       "background": null
     },
@@ -57102,6 +58258,40 @@
       "background": null
     },
     {
+      "id": "q-3930",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "science-fiction",
+      "bundle": "base",
+      "description": "A villain whose shopping list has only one item, and it's up in the night sky.",
+      "question": "In “Despicable Me”, Gru steals the Moon. Which gadget does he use to do it?",
+      "answer": "Shrink ray",
+      "wrong_answers": [
+        "Freeze ray",
+        "Tractor beam",
+        "Fart gun"
+      ],
+      "hints": [
+        "Gru steals it from his rival Vector.",
+        "Vector had first stolen it from a secret lab.",
+        "Gru's target ends up small enough to hold in one hand."
+      ],
+      "fun_fact": "In the film, the Moon slowly grows back to full size because the shrinking only lasts a while.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Full_moon_in_night_sky_-_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFull_moon_in_night_sky_-_India.jpg",
+        "credit": "Ksheera Piraati · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Ksheera Piraati",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Ksheera_Piraati&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-3931",
       "status": "approved",
       "difficulty": 3,
@@ -57234,6 +58424,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Iain Cameron",
         "author_url": "https://www.flickr.com/people/67872859@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-3935",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "shakespeare",
+      "bundle": "base",
+      "description": "A man who could make even a quarrelsome couple sound catchy.",
+      "question": "This American songwriter wrote the words and music of “Kiss Me, Kate”, a musical based on “The Taming of the Shrew”. Who is he?",
+      "answer": "Cole Porter",
+      "wrong_answers": [
+        "Irving Berlin",
+        "George Gershwin",
+        "Richard Rodgers"
+      ],
+      "hints": [
+        "He was a star of Broadway in the 1930s and 1940s.",
+        "He also wrote “Anything Goes”.",
+        "He also wrote the songs “Night and Day” and “I've Got You Under My Skin”."
+      ],
+      "fun_fact": "“Kiss Me, Kate” won the very first Tony Award for Best Musical, in 1949.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Zkrocen%C3%AD_zl%C3%A9_%C5%BEeny_%28MdB%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AZkrocen%C3%AD_zl%C3%A9_%C5%BEeny_%28MdB%29.jpg",
+        "credit": "Jef Kratochvil · CC BY-SA 3.0 cz · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0 cz",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/cz/deed.en",
+        "author": "Jef Kratochvil",
+        "author_url": "https://www.wikidata.org/wiki/Q12024427"
       },
       "background": null
     },
@@ -59652,6 +60876,40 @@
       "background": null
     },
     {
+      "id": "q-4010",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "toys",
+      "bundle": "base",
+      "description": "It's gooey, it's stretchy, and it will end up in your hair.",
+      "question": "Look at this close-up: what is this stretchy, gooey toy called?",
+      "answer": "Slime",
+      "wrong_answers": [
+        "Modeling clay",
+        "Kinetic sand",
+        "Bubble wrap"
+      ],
+      "hints": [
+        "Many kids make it at home with glue.",
+        "It oozes slowly through your fingers.",
+        "Kids often mix glitter into it or make it glow in the dark, and it's often green and sticky."
+      ],
+      "fun_fact": "Slime is a strange material: it flows like a liquid when you let it rest but can snap if you pull it fast.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Green_Slime_in_hand.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGreen_Slime_in_hand.JPG",
+        "credit": "Ciphers · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Ciphers",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Ciphers"
+      },
+      "background": null
+    },
+    {
       "id": "q-4011",
       "status": "approved",
       "difficulty": 1,
@@ -59784,6 +61042,40 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Thane Keller",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-4016",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "tv-series",
+      "bundle": "base",
+      "description": "A yellow family with exactly the right number of fingers: four.",
+      "question": "You line up the Simpson kids from oldest to youngest: Bart, Lisa and…",
+      "answer": "Maggie",
+      "wrong_answers": [
+        "Milhouse",
+        "Ralph",
+        "Nelson"
+      ],
+      "hints": [
+        "The youngest is still a baby.",
+        "She is almost never seen without her pacifier.",
+        "Her name starts with M, like her mother Marge."
+      ],
+      "fun_fact": "Maggie's first word, “Daddy”, was spoken in 1992 by the movie star Elizabeth Taylor.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/86/New_Orleans_French_Quarter_Apartment_Living_Room_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANew_Orleans_French_Quarter_Apartment_Living_Room_2.jpg",
+        "credit": "Corey Taratuta · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Corey Taratuta",
+        "author_url": "https://www.flickr.com/people/42406847@N07"
       },
       "background": null
     },
@@ -60507,6 +61799,40 @@
         "license_url": null,
         "author": "Photo by Jeff Vanuga, USDA Natural Resources Conservation Service.",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-4038",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "vegetables",
+      "bundle": "base",
+      "description": "Fairy tales have a serious problem with things that won't stop growing.",
+      "question": "Pinocchio is to a nose that grows as Jack, from the fairy tale, is to a … that grows.",
+      "answer": "Beanstalk",
+      "wrong_answers": [
+        "Pumpkin",
+        "Sunflower",
+        "Hair braid"
+      ],
+      "hints": [
+        "It grows overnight, all the way up to the clouds.",
+        "Jack climbs it and finds a giant at the top.",
+        "It sprang from the magic beans Jack got for his cow."
+      ],
+      "fun_fact": "In some versions, Jack brings back a hen that lays golden eggs from the giant's castle.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/West_Lodge%2C_a_whimsical_building_that_looks_like_it%27s_out_of_a_storybook_-_geograph.org.uk_-_7805514.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWest_Lodge%2C_a_whimsical_building_that_looks_like_it%27s_out_of_a_storybook_-_geograph.org.uk_-_7805514.jpg",
+        "credit": "Mick Garratt · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Mick Garratt",
+        "author_url": "https://www.geograph.org.uk/profile/343"
       },
       "background": null
     },
@@ -62148,6 +63474,40 @@
         "license_url": null,
         "author": "Ryan Hagerty",
         "author_url": "https://www.wikidata.org/wiki/Q28112513"
+      },
+      "background": null
+    },
+    {
+      "id": "q-4091",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "youtubers",
+      "bundle": "base",
+      "description": "The reason your favorite video suddenly starts talking about a phone game.",
+      "question": "I pay a YouTuber to talk about my product in the middle of their video. What am I called?",
+      "answer": "A sponsor",
+      "wrong_answers": [
+        "A subscriber",
+        "A moderator",
+        "A video editor"
+      ],
+      "hints": [
+        "Science and history channels often thank me at the start",
+        "The creator reads a short ad about me",
+        "Companies like phone-game makers or VPN services often play this role"
+      ],
+      "fun_fact": "Viewers built a free browser add-on called SponsorBlock that lets you skip the sponsored parts of YouTube videos.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Josh_Liljenquist_and_SB_Mowing_reviewing_a_camera_setup_in_Wichita%2C_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJosh_Liljenquist_and_SB_Mowing_reviewing_a_camera_setup_in_Wichita%2C_2026.jpg",
+        "credit": "Ben Steine · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Ben Steine",
+        "author_url": null
       },
       "background": null
     },
