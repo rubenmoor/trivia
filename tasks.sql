@@ -40047,7 +40047,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - All playable on `/?efectos`
 
 Done when: the 8 exits play on `/?efectos` with sound and in a game; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-17T18:01:03Z', '2026-10-17T18:10:59Z', 1585, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1588, 181, 'Category splash: exits 12, 14–20 with their sounds', 'work', 'open', NULL, NULL, 'Add the remaining 8 category exits of `plan 181: Category splash on the question screen` to the exit table in `game/question/Splash.svelte` (or `splash.ts`):
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1588, 181, 'Category splash: exits 12, 14–20 with their sounds', 'work', 'done', NULL, '2026-10-17, question/Splash.svelte, splash.ts, sound.svelte.ts, plans/04-ui-tv-display.md', 'Add the remaining 8 category exits of `plan 181: Category splash on the question screen` to the exit table in `game/question/Splash.svelte` (or `splash.ts`):
 
 12. zoom towards the viewer and past the camera
 14. shatter like glass
@@ -40062,7 +40062,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Exit ≤ 0.8 s (`game/timing.ts`); `reducedMotion()` keeps the plain fade
 - All 20 exits now playable on `/?efectos`; the table has all 20
 
-Done when: the 8 exits play on `/?efectos` with sound and in a game; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-17T18:01:04Z', NULL, 1585, 0, NULL, 'app');
+Done when: the 8 exits play on `/?efectos` with sound and in a game; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-10-17T18:01:04Z', '2026-10-17T18:12:04Z', 1585, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1589, 181, 'Category splash: recorded sounds for the exits still on synth', 'work', 'open', NULL, NULL, 'The splash exit cues of `plan 181: Category splash on the question screen` added by its earlier tasks play a synth recipe where no existing recording fit. Source recordings for them, as in `plan 32: Recorded sound effects (UI-10)`:
 
 - Kenney.nl CC0 packs first (Interface Sounds, Impact Sounds, Digital Audio, Sci-fi Sounds, …), then Freesound / OpenGameArt CC0; D-45 allowlist only (CC0 preferred, CC BY with credit; no NC/ND/unknown)
@@ -46669,6 +46669,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1625, 1585, '2026-10-17T18:00:00Z', '2026-10-17T18:01:17Z', 'done', NULL, 0, 'df4da5ceceb8f4b17eae8ef50dad25a607d3aba4', NULL, 'claude-opus-5-5', '31bbed89-76c9-4755-b403-2d284709e4ae', NULL, 8, 16, 6114, 314468, 42780, 0.52747759999999988, 915139);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1626, 1586, '2026-10-17T18:07:35Z', '2026-10-17T18:09:43Z', 'done', NULL, 0, '3a237bc7e079b1965353061c98f19c244fd917e3', 'app', 'claude-sonnet-5-5', '74dee159-3726-4b48-9b14-aa66620814ab', NULL, 17, 34, 12034, 1009210, 65437, 0.58399799999999991, 915139);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1627, 1587, '2026-10-17T18:09:44Z', '2026-10-17T18:11:04Z', 'done', NULL, 0, '6a051c5c84e18db9567c3b54892ab52cf095b579', 'app', 'claude-sonnet-5-5', '74dee159-3726-4b48-9b14-aa66620814ab', 1626, 3, 6, 7132, 248178, 12563, 0.75521759999999982, 915139);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, pid) VALUES (1628, 1588, '2026-10-17T18:11:05Z', '2026-10-17T18:12:08Z', 'done', NULL, 0, '5a9956234a8bb4a6bc262b60b822a6ea562afad2', 'app', 'claude-sonnet-5-5', '74dee159-3726-4b48-9b14-aa66620814ab', 1627, 3, 6, 4798, 283412, 10137, 0.9004399999999998, 915139);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

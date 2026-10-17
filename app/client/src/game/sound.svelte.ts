@@ -90,6 +90,9 @@ const SAMPLE_FOR: Partial<Record<Cue, [Sample, ((level: number) => number)?]>> =
   "splash-blind": ["rebobinar"],
   "splash-drain": ["silbato"],
   "splash-pop": ["pop", () => 1.1],
+  "splash-zoom": ["whoosh", () => 1.3],
+  "splash-shatter": ["vidrio"],
+  "splash-plane": ["papel"],
   pop: ["pop", () => 0.9 + Math.random() * 0.25],
   "menu-open": ["menu-abre"],
   "menu-close": ["menu-cierra"],
@@ -467,7 +470,8 @@ export type Cue =
   | "unlocked" | "joker-armed" | "joker-open" | "joker-activate" | "whistle-down" | "stamp" | "shredder"
   | "heartbeat" | "tick" | "glass-break" | "rustle" | "token-back" | "claim" | "countdown"
   | "splash-left" | "splash-right" | "splash-fade" | "splash-spin"
-  | "splash-dissolve" | "splash-explode" | "splash-rocket" | "splash-drop" | "splash-wind" | "splash-blind" | "splash-drain" | "splash-pop";
+  | "splash-dissolve" | "splash-explode" | "splash-rocket" | "splash-drop" | "splash-wind" | "splash-blind" | "splash-drain" | "splash-pop"
+  | "splash-zoom" | "splash-shatter" | "splash-melt" | "splash-blackhole" | "splash-birds" | "splash-typewriter" | "splash-plane" | "splash-jelly";
 
 /** Play a short effect; `level` sets the pitch of "block" (the tower's height); `synth` skips the recording. */
 export function sfx(cue: Cue, level = 1, opts: { synth?: boolean } = {}) {
@@ -618,6 +622,32 @@ const RECIPES: Record<Cue, Recipe> = {
   "splash-pop": (c, o, t) => {
     tone(c, o, t, { from: 1400, to: 200, len: 0.1, level: 0.5 });
     noise(c, o, t + 0.55, { from: 3000, len: 0.05, q: 2, level: 0.3 });
+  },
+  "splash-zoom": (c, o, t) => noise(c, o, t, { from: 300, to: 3500, len: 0.6, q: 2, attack: 0.4, level: 0.5 }),
+  "splash-shatter": (c, o, t) => {
+    for (let i = 0; i < 12; i++) noise(c, o, t + Math.random() * 0.35, { type: "highpass", from: 4000 + Math.random() * 3000, len: 0.04, level: 0.25 });
+  },
+  "splash-melt": (c, o, t) => {
+    tone(c, o, t, { from: 500, to: 90, len: 0.7, level: 0.12 });
+    tone(c, o, t, { from: 520, to: 100, len: 0.7, level: 0.08 });
+  },
+  "splash-blackhole": (c, o, t) => {
+    tone(c, o, t, { from: 200, to: 40, len: 0.7, level: 0.3 });
+    noise(c, o, t, { type: "lowpass", from: 1500, to: 100, len: 0.7, level: 0.3 });
+  },
+  "splash-birds": (c, o, t) => {
+    for (let i = 0; i < 6; i++) tone(c, o, t + i * 0.08 + Math.random() * 0.05, { from: 2200 + Math.random() * 1200, to: 3600, len: 0.07, level: 0.07 });
+  },
+  "splash-typewriter": (c, o, t) => {
+    for (let i = 0; i < 9; i++) noise(c, o, t + i * 0.07, { from: 2500, len: 0.025, q: 3, level: 0.3 });
+  },
+  "splash-plane": (c, o, t) => {
+    noise(c, o, t, { from: 5000, len: 0.08, q: 3, level: 0.25 });
+    noise(c, o, t + 0.2, { from: 1200, to: 3000, len: 0.5, q: 2, attack: 0.2, level: 0.3 });
+  },
+  "splash-jelly": (c, o, t) => {
+    [400, 300, 380, 150].forEach((f, i) => tone(c, o, t + i * 0.13, { from: f * 1.3, to: f, len: 0.12, level: 0.2 }));
+    noise(c, o, t + 0.55, { from: 1200, to: 200, len: 0.15, level: 0.3 });
   },
   "splash-spin": (c, o, t) => {
     tone(c, o, t, { from: 300, to: 1400, len: 0.6, level: 0.1, attack: 0.1 });

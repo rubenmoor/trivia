@@ -40,7 +40,7 @@
     return parts.map((w) =>
       [...w].map((ch) => {
         const at = i++;
-        const stagger = (spec.order ? at / Math.max(1, total - 1) : Math.random()) * spec.spread * SPLASH_EXIT_MS;
+        const stagger = (spec.order ? (spec.reverse ? total - 1 - at : at) / Math.max(1, total - 1) : Math.random()) * spec.spread * SPLASH_EXIT_MS;
         return {
           ch,
           vars: `--ld:${stagger}ms;--lx:${Math.round(Math.random() * 100 - 50)}vw;--ly:${Math.round(Math.random() * 100 - 50)}vh;--lr:${Math.round(Math.random() * 720 - 360)}deg`,
@@ -211,6 +211,70 @@
   .wind .l {
     animation-name: wind;
     animation-timing-function: ease-in;
+  }
+  .zoom {
+    animation-name: zoom;
+    animation-timing-function: cubic-bezier(0.6, 0, 0.9, 0.5);
+  }
+  .melt {
+    animation-name: melt;
+    animation-timing-function: ease-in;
+    transform-origin: top;
+  }
+  .blackhole {
+    animation-name: blackhole;
+    animation-timing-function: cubic-bezier(0.5, 0, 0.9, 0.6);
+  }
+  .plane {
+    animation-name: plane;
+    animation-timing-function: ease-in;
+  }
+  .jelly {
+    animation-name: jelly;
+    transform-origin: bottom;
+  }
+  .shatter .l {
+    animation-name: shatter;
+    animation-timing-function: ease-in;
+  }
+  .birds .l {
+    animation-name: birds;
+    animation-timing-function: cubic-bezier(0.3, 0, 0.8, 0.6);
+  }
+  .typewriter .l {
+    animation-name: typewriter;
+    animation-timing-function: step-end;
+  }
+  @keyframes zoom {
+    to { transform: scale(9); filter: blur(1.2vw); opacity: 0; }
+  }
+  @keyframes melt {
+    30% { transform: translateY(1vh) scale(1, 1.15); opacity: 1; }
+    to { transform: translateY(18vh) scale(1.05, 2.6); filter: blur(0.5vw); opacity: 0; }
+  }
+  @keyframes blackhole {
+    to { transform: scale(0) rotate(-540deg); filter: blur(0.5vw) brightness(0.2); }
+  }
+  @keyframes plane {
+    35% { transform: perspective(1200px) rotateX(55deg) scale(0.6, 0.4); opacity: 1; }
+    to { transform: translate(85vw, -70vh) rotate(-25deg) scale(0.08); opacity: 0; }
+  }
+  @keyframes jelly {
+    18% { transform: scale(1.15, 0.85); }
+    32% { transform: scale(0.9, 1.12); }
+    46% { transform: scale(1.08, 0.92); }
+    to { transform: scale(1.7, 0) translateY(2vh); opacity: 0; }
+  }
+  @keyframes shatter {
+    15% { transform: translate(calc(var(--lx) * 0.02), 0) rotate(calc(var(--lr) * 0.02)); }
+    to { transform: translate(calc(var(--lx) * 0.2), calc(55vh + var(--ly) * 0.3)) rotate(calc(var(--lr) * 0.4)); opacity: 0; }
+  }
+  @keyframes birds {
+    to { transform: translate(calc(var(--lx) * 1.3), calc(-75vh + var(--ly) * 0.4)) rotate(calc(var(--lr) * 0.2)) scale(0.3); opacity: 0; }
+  }
+  @keyframes typewriter {
+    from { opacity: 1; }
+    to { opacity: 0; }
   }
   @keyframes dissolve {
     to { transform: translate(calc(var(--lx) * 0.2), calc(var(--ly) * 0.2 - 4vh)) scale(0.4); filter: blur(1vw); opacity: 0; }
