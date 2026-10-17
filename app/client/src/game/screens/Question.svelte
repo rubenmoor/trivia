@@ -10,6 +10,7 @@
   import { displayName, questionLocale } from "../../lib/names.svelte.ts";
   import { focusControl, pushScope, type Action, type Dir, type Intent } from "../../lib/input.svelte.ts";
   import type { Game, JokerBudget, JokerEvent, JokerName, Jokers } from "../../lib/types.ts";
+  import type { SessionView } from "../../lib/seats.ts";
   import CategoryPicker from "../CategoryPicker.svelte";
   import DifficultyDial from "../DifficultyDial.svelte";
   import Hud from "../Hud.svelte";
@@ -55,6 +56,7 @@
     jokersLeft = null,
     swappedBy = null,
     answersOff = false,
+    session = null,
     play,
     onplayed,
     onanswered,
@@ -77,6 +79,8 @@
     swappedBy?: JokerEvent | null;
     /** «Select answer to advance» is off (D-105): no picks, the padlock reveals. */
     answersOff?: boolean;
+    /** The multiplayer session: the HUD shows the turn seat's tag (plan 163). */
+    session?: SessionView | null;
     /** Sends a joker to the engine (Game.svelte shows errors); null if it was refused. */
     play: (body: JokerPlay) => Promise<{ game: Game; event: JokerEvent } | null>;
     /** The joker is done on screen: Game.svelte takes the new game (and changes screen if needed). */
@@ -419,7 +423,7 @@
   onpointerleave={() => (peeking = false)}
 >
   <div class="top">
-    <Hud {level} {levels} player={playerName} />
+    <Hud {level} {levels} player={playerName} {session} />
     {#if canPeek}<span class="peek glass"><Prompt action={{ type: "peek", down: true }} /> {t("screen.question.peek")}</span>{/if}
   </div>
 

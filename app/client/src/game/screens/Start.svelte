@@ -10,6 +10,7 @@
   import Horizon from "../Horizon.svelte";
   import Icon from "../Icon.svelte";
   import Prompt from "../Prompt.svelte";
+  import { modeName, seatNames } from "../seats.ts";
 
   let {
     game,
@@ -66,9 +67,14 @@
     {:else if running}
       <button class="candy breathe" onclick={onresume} disabled={busy} data-focus-default data-focus-id="main">
         <Icon name="play" />
-        {game?.player
+        {#if game?.session}
+          <span class="resume-session">
+            {t("screen.start.resumeSession", { names: seatNames(game.session, 2), level: game.level })}
+            <small>{modeName(game.session)}</small>
+          </span>
+        {:else}{game?.player
           ? t("screen.start.resumePlayer", { name: game.player, level: game.level })
-          : t("screen.start.resume", { level: game?.level ?? 0 })}
+          : t("screen.start.resume", { level: game?.level ?? 0 })}{/if}
         <Prompt action="confirm" />
       </button>
       <button class="secondary" onclick={onnew} disabled={busy} data-focus-id="new"><Icon name="sparkle" /> {t("screen.start.new")} <Prompt action="new" /></button>
@@ -92,6 +98,15 @@
   }
   p {
     margin: 0;
+  }
+  .resume-session {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .resume-session small {
+    font-size: 0.6em;
+    opacity: 0.8;
   }
   .wordmark {
     margin: 0;

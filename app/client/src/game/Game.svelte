@@ -31,7 +31,7 @@
   import { swap } from "./swap.ts";
   import CornerButtons from "./CornerButtons.svelte";
   import { isSession, type ChoiceDraft } from "./choiceDraft.ts";
-  import type { SeatDraft } from "./seats.ts";
+  import { seatBlocks, type SeatDraft } from "./seats.ts";
   import Bundles from "./screens/Bundles.svelte";
   import Choice from "./screens/Choice.svelte";
   import Consent from "./screens/Consent.svelte";
@@ -149,10 +149,17 @@
   });
   const mode = $derived(game?.settings.mode ?? "gamemaster");
   const levels = $derived(levelsOf(game));
-  /** Blocks on the tower: correct answers in this game; answers off (D-105): the levels behind. */
-  const blocks = $derived(
-    game?.settings.answers === false ? game.level - 1 : (game?.history.filter((h) => h.correct).length ?? 0),
-  );
+  /** The multiplayer session (plan 163); null: every screen as for one player. */
+  const session = $derived(game?.session ?? null);
+  /** Blocks on the tower: correct answers in this game; answers off (D-105): the levels behind. rr-competitive:
+   * the answerer's tower on Correct and Wrong, else the turn seat's; rr-coop: the team's game, as solo. */
+  const blocks = $derived.by(() => {
+    if (session?.mode === "rr-competitive") {
+      const answered = (screen === "correct" || screen === "wrong") && game?.last?.seat !== undefined;
+      return seatBlocks(session, answered ? game!.last!.seat! : session.turn, levels);
+    }
+    return game?.settings.answers === false ? game.level - 1 : (game?.history.filter((h) => h.correct).length ?? 0);
+  });
 
   onMount(() => {
     music(MUSIC.start);
@@ -411,12 +418,24 @@
     if (!next) return;
     error = saveWarning();
     const apply = () => (game = next);
-    if (next.phase === "won") await go("victory", "applause-big", apply);
+    if (next.session) {
+      // on the answer and the session's end: rr-competitive's top level is already the next seat's game
+      if (!next.last?.correct) await go("wrong", "boom", apply);
+      else if (next.result === null) await go("correct", "applause", apply);
+      else await go("victory", "applause-big", apply);
+    } else if (next.phase === "won") await go("victory", "applause-big", apply);
     else if (next.phase === "lost") await go("wrong", "boom", apply);
     else if (next.phase === "completed") await go("completed", "whoosh", apply);
     else if (next.last?.revealed) await go("next", "whoosh", apply);
     else await go("correct", "applause", apply);
   }
+
+  /** rr-competitive's Wrong «Seguir» (one seat out, decision 279): the next turn, or the last one standing wins. */
+  async function afterOut() {
+    if (game?.result === null) await go("level", "whoosh");
+    else await go("victory", "applause-big");
+  }
+  const outGoesOn = $derived(session?.mode === "rr-competitive");
 
   async function toStart() {
     await refresh();
@@ -592,6 +611,7 @@
     else if (on === "level" && a.type === "confirm") go(table(game), "paper");
     else if (on === "select" && a.type === "pick" && a.n <= 4 && picked === null) pick(a.n - 1);
     else if ((on === "correct" || on === "next") && a.type === "confirm") toLevel();
+    else if (on === "wrong" && a.type === "confirm" && outGoesOn) afterOut();
     else if ((on === "wrong" || on === "victory" || on === "completed") && a.type === "confirm") toStart();
     else return false;
     return true;
@@ -656,6 +676,13 @@
   const LANGUAGE_KEY = t("screen.start.languageKey").toLowerCase();
 </script>
 
+{#snippet tray(g: Game)}
+  <aside class="side-tray">
+    {#if g.session?.mode === "rr-coop"}<p class="tray-label">{t("seat.team")}</p>{/if}
+    <JokerTray readonly left={g.jokers_left} />
+  </aside>
+{/snippet}
+
 <main class="game" bind:this={main}>
   <svelte:boundary onerror={screenError}>
     {#if loading}
@@ -684,13 +711,13 @@
       <S.Bundles player={chosen} {draft} {seats} {busy} {greeting} {refused} picked={bundlePick} onpick={(ids) => (bundlePick = ids)} onstart={startGame} onback={() => go(isSession(draft!.mode) ? "join" : "choice", "whoosh")} />
     {:else if screen === "level" && game}
       <Stage />
-      <div class="corner-hud"><Hud level={null} player={game.player} /></div>
-      <aside class="side-tray"><JokerTray readonly left={game.jokers_left} /></aside>
+      <div class="corner-hud"><Hud level={null} player={game.player} {session} /></div>
+      {@render tray(game)}
       <S.Level {game} {levels} {blocks} drop={previous === "correct" || previous === "next"} {busy} onnext={() => go(table(game), "paper")} />
     {:else if screen === "select" && game}
       <Stage />
-      <div class="corner-hud"><Hud level={game.level} {levels} player={game.player} /></div>
-      <aside class="side-tray"><JokerTray readonly left={game.jokers_left} /></aside>
+      <div class="corner-hud"><Hud level={game.level} {levels} player={game.player} {session} /></div>
+      {@render tray(game)}
       <S.Select {game} {picked} {fresh} {busy} onpick={pick} />
     {:else if screen === "question" && game?.question}
       {#key game.question.id}
@@ -706,6 +733,7 @@
           jokersLeft={game.jokers_left}
           {swappedBy}
           answersOff={game.settings.answers === false}
+          {session}
           play={playJokerAction}
           onplayed={jokerPlayed}
           onanswered={answered}
@@ -713,10 +741,10 @@
       {/key}
     {:else if screen === "correct" && game?.last}
       <Stage mood="correct" />
-      <S.Correct last={game.last} {busy} onnext={toLevel} />
+      <S.Correct last={game.last} {busy} onnext={toLevel} {session} />
     {:else if screen === "wrong" && game?.last}
       <Stage mood="wrong" />
-      <S.Wrong {game} last={game.last} {levels} {blocks} {busy} onhome={toStart} />
+      <S.Wrong {game} last={game.last} {levels} {blocks} {busy} onhome={toStart} onnext={outGoesOn ? afterOut : undefined} />
     {:else if screen === "next" && game?.last}
       <Stage />
       <S.Next last={game.last} completed={false} {busy} onnext={toLevel} />
@@ -816,6 +844,14 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
+  }
+  .tray-label {
+    margin: 0 0 calc(0.5 * var(--u));
+    font-family: var(--font-display);
+    font-size: calc(1 * var(--u));
+    font-weight: 700;
+    color: var(--slate-200);
+    text-align: center;
   }
   .center {
     position: absolute;

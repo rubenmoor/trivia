@@ -322,6 +322,12 @@ export const en = {
     lostTitle: "{name}'s controller disconnected",
     lostBody: "Reconnect it or use another free controller.",
     take: "Take over",
+    /** The Level screen's turn line (decision 279), above the turn player's name tag. */
+    turn: "Your turn",
+    /** Over the shared jokers in the team round-robin mode. */
+    team: "Team",
+    /** The end of a list of names cut short («Ana, Luis y 2 más»). */
+    more: { one: "1 more", other: "{n} more" },
   },
   picker: {
     letters: "ABCDEFGHIJKLMNOPQRSTUVWXYZ-'",
@@ -343,6 +349,8 @@ export const en = {
       subtitle: { one: "1 question to reach the top", other: "{n} questions in a row to reach the top" },
       resume: "Continue, level {level}",
       resumePlayer: "Continue: {name}, level {level}",
+      /** A multiplayer session: {names} cut short after two; the mode's name below. */
+      resumeSession: "Continue: {names}, level {level}",
       new: "New game",
       newKey: "N",
       language: "Language: {name}",
@@ -410,6 +418,8 @@ export const en = {
     victory: {
       title: "You won!",
       top: "{name} made it to the top!",
+      /** The team round-robin mode: every player, cut short after four. */
+      team: "{names} made it to the top!",
     },
     question: {
       topic: "Topic: {name}",

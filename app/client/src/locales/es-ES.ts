@@ -78,6 +78,7 @@ export const esES = {
     victory: {
       title: "¡Habéis ganado!",
       top: "¡{name} ha llegado a la cima!",
+      team: "¡{names} han llegado a la cima!",
     },
     question: {
       prompt: "Elegid una respuesta",

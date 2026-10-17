@@ -92,7 +92,7 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 - Game title, a short subtitle, a big «¡Jugar!» button.
 - The first click is also the **audio unlock**. Browsers block sound and autoplaying video with sound until a user gesture, so nothing plays before it. After this click, autoplay works for the rest of the session.
 - Language button top right, under ☰ (D-96, decisions 157, 186): the language's flags (`Flags.svelte`) + endonym, key per catalog (`I`/`L`/`S`), pad Y; opens the Language screen. The only place to change the language; hidden while the save notice shows.
-- If an unfinished game exists (server state, GF-4), show «Continuar» with its player and level («Continuar: Sofía, nivel 5») next to «Nueva partida».
+- If an unfinished game exists (server state, GF-4), show «Continuar» with its player and level («Continuar: Sofía, nivel 5») next to «Nueva partida»; a session: its players cut after two and the turn seat's level («Continuar: Ana, Luis y 2 más, nivel 3»), the mode's name small below (plan 163).
 - Desktop shell only (`desktop?.mods`): a `secondary` «Mods» button under play/resume (count of loaded mods when > 0); while the notice isn't accepted and mods are held off, a line «N mods found, off until you allow them» under the buttons.
 - No supply report (plan 133): the supply check is on the Bundles screen.
 
@@ -162,6 +162,7 @@ Players start at **level 1** (easiest question) and must answer **level 12** to 
 - The camera follows: the view scrolls or scales so the top of the tower and the next empty slot stay in frame.
 - **Repeat (09):** after a Snipe hit, the Level screen comes in with a rewind effect instead of black, no block drops, and the text reads «Nivel N de 12 — otra vez».
 - The joker tray is shown small and read-only, as a reminder of the jokers (09).
+- **Round-robin (plan 163, decision 279):** the Level screen is the turn handover, no screen of its own: «Turno de» and the turn seat's large `SeatTag` (seat colour, name, device glyph) above «Nivel N de 12»; «Seguir» in that seat's glyph, only that seat may press it; the corner HUD (Level, Select, Question) shows the turn seat's small tag. rr-coop: the team's tower, «Del equipo» over the shared joker tray. Paso y fuera, a Tiro mágico hit: same seat keeps the turn.
 
 ### Question selection
 Four cards, each showing only a question's `description` (D-8). The players pick one.
@@ -196,12 +197,14 @@ Four cards, each showing only a question's `description` (D-8). The players pick
 - **Fireworks overlay:** one of several animations, picked at random, drawn on a full-screen transparent `<canvas>` **over** the question screen, with the correct answer still visible underneath. Variants: classic rockets with bursts, confetti cannon from both bottom corners, a ring or heart burst, sparkler trails, a falling-stars shower. Each variant runs about 3 s. They are hand-written canvas code with no library (UI-9).
 - Then a panel shows the correct answer and the `fun_fact`.
 - Continue (click / `Enter`) → transition → Level screen, where the new block drops in. After level 12 → Victory.
+- Round-robin: the answerer's `SeatTag` (`last.seat`) under «¡Correcto!»; a session routes on `last.correct` and its end, not the top-level phase.
 
 ### Wrong
 - The game ends (D-20). The submitted music has already turned into a **sad sound** (a descending trombone "wah-wah", or a low gong) at the reveal. No music plays on this screen.
 - **Dark animation:** colour drains from the screen (desaturate), a vignette closes in, and the tower (shown small) crumbles, or its blocks fall away one by one with soft thuds. Rain or a slow fade to deep blue also works. It should be gentle, not scary; the players are 11 and 12 (D-6).
 - Then the **correct answer** and the `fun_fact` are shown (D-22), with a **consolation message** that names the level reached: «¡Llegaron al nivel 7! Eso es más alto que la mayoría de las torres…». There are several messages, chosen by how far the players got.
 - One button: **«Volver al inicio»** → transition → Start.
+- Round-robin: the answerer's `SeatTag`; rr-coop: the team's tower crumbles, the team lost, «Volver al inicio»; rr-competitive, one seat out: «Seguir» → Level of the next turn, or Victory for the last one standing (decision 279).
 
 ### Next and Completed (answers off, D-105)
 - `game/screens/Revealed.svelte`, both neutral: neither success nor failure, sky-coloured title, the correct answer and `fun_fact` (`AnswerPanel`), normal music; whoosh in, no applause, no boom.
@@ -211,6 +214,7 @@ Four cards, each showing only a question's `description` (D-8). The players pick
 ### Victory
 - After the 12th correct answer: the Level screen shows the 12th block landing, the crown on top, a long fireworks finale (all variants in sequence) and a victory jingle. Text: «¡Ganaron!».
 - «Volver al inicio» → Start.
+- rr-coop: the line under the title names every player («¡Luna, Mateo y Sofía llegaron a la cima!», after four «y n más»).
 
 ## Transitions
 Every change between the states above uses one transition routine with these steps:
