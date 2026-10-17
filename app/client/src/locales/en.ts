@@ -473,6 +473,15 @@ export const en = {
   },
   copy: {
     milestone: {
+      1: [
+        "Get ready for the first question!",
+        "Snacks at hand?",
+        "Last run to the fridge before the game starts!",
+        "Everyone comfy on the couch? Here we go!",
+        "Phones down: the tower starts now!",
+        "Deep breath: the first block is on its way!",
+        "Bathroom break? Now or never!",
+      ],
       4: ["Higher and higher!", "The tower is taking shape!"],
       6: ["Halfway there!", "Half a tower and counting!"],
       8: ["This is a skyscraper now!", "You can see the whole street from up here!"],

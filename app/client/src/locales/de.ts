@@ -472,6 +472,15 @@ export const de = {
   },
   copy: {
     milestone: {
+      1: [
+        "Gleich kommt die erste Frage!",
+        "Knabberzeug in Reichweite?",
+        "Letzter Gang zum Kühlschrank, gleich geht’s los!",
+        "Alle bequem auf dem Sofa? Los geht’s!",
+        "Handys weg: Der Turm wächst gleich!",
+        "Tief durchatmen: Der erste Block ist unterwegs!",
+        "Noch schnell aufs Klo? Jetzt oder nie!",
+      ],
       4: ["Immer höher!", "Der Turm nimmt Gestalt an!"],
       6: ["Schon die Hälfte!", "Halber Turm geschafft!"],
       8: ["Das ist schon ein Wolkenkratzer!", "Von hier oben sieht man die ganze Nachbarschaft!"],

@@ -89,6 +89,15 @@ export const esES = {
   },
   copy: {
     milestone: {
+      1: [
+        "¡Preparaos para la primera pregunta!",
+        "¿Tenéis algo para picar a mano?",
+        "¡Última pasada por la cocina antes de empezar!",
+        "¿Todos cómodos en el sofá? ¡Empezamos!",
+        "Móviles a un lado: ¡empieza la torre!",
+        "Respirad hondo: ¡el primer bloque va de camino!",
+        "¿Alguien quiere ir al baño? ¡Es ahora o nunca!",
+      ],
       6: ["¡Ya vais por la mitad!", "¡Mitad de la torre!"],
       12: ["¡Última pregunta! La corona os espera.", "¡Una más y sois leyenda!"],
     },

@@ -3,12 +3,13 @@
 import { fill, variants } from "../lib/i18n.ts";
 import { DEFAULT_LEVELS } from "./levels.ts";
 
-type Line = 4 | 6 | 8 | 10 | 12;
+type Line = 1 | 4 | 6 | 8 | 10 | 12;
 
-/** The level of `levels` that gets each line: a third, half, two thirds, three to go, the last. */
+/** The level of `levels` that gets each line: the first, a third, half, two thirds, three to go, the last. */
 function milestoneAt(levels: number): Map<number, Line> {
   const at = new Map<number, Line>([[levels, 12]]);
   if (levels - 2 >= 1 && !at.has(levels - 2)) at.set(levels - 2, 10);
+  if (!at.has(1)) at.set(1, 1);
   for (const [line, share] of [[4, 1 / 3], [6, 1 / 2], [8, 2 / 3]] as const) {
     const l = Math.round(levels * share);
     if (l > 1 && l <= levels - 3 && !at.has(l)) at.set(l, line);
